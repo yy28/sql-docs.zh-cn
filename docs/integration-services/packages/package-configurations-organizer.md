@@ -1,0 +1,68 @@
+---
+title: "包配置组织程序 | Microsoft Docs"
+ms.custom: ""
+ms.date: "08/25/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.packageconfigurationorganizer.f1"
+helpviewer_keywords: 
+  - "“包配置组织程序”对话框"
+ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
+caps.latest.revision: 39
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 39
+---
+# 包配置组织程序
+  可以使用 **“包配置组织程序”** 对话框启用包配置，查看当前包的配置列表以及指定加载这些配置的首选顺序。  
+  
+> **注意：**配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+  
+ 如果多个配置更新同一属性，则在配置列表中排列靠后的配置的值将代替在列表中排列靠前的配置的值。 最后加载到属性中的值是在包运行时将要使用的值。 而且，如果包使用直接配置（例如 XML 配置文件）和间接配置（例如环境变量）的组合，那么指向直接配置的位置的间接配置必须在列表中处于靠前位置。  
+  
+> **注意：**如果包配置按照首选顺序加载，则配置按照从“包配置组织程序”对话框中显示的列表顶部到列表底部的顺序进行加载。 但是，在运行时，包配置可能不会按照首选顺序加载。 父包配置将在其他类型的配置之后加载的情况尤其如此。  
+  
+ 在运行时，包配置将更新包对象的属性值。 加载包时，配置中的值将替换开发包时所设置的值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持不同的配置类型。 例如，您可以使用包含多个配置的 XML 文件或包含单个配置的环境变量。 有关详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
+  
+## 选项  
+ **启用包配置**  
+ 选择此选项可对包使用配置。  
+  
+ **配置名称**  
+ 查看配置的名称。  
+  
+ **配置类型**  
+ 查看存储配置的位置类型。  
+  
+ **配置字符串**  
+ 查看存储配置值的位置。 该位置可以是文件路径、环境变量的名称、父级包变量的名称、注册表项或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的名称。  
+  
+ **目标对象**  
+ 查看配置更新的对象的名称。 如果配置是 XML 配置文件或 SQL Server 表，则列为空，因为配置可以包含多个对象。  
+  
+ **目标属性**  
+ 查看配置修改的属性的名称。 如果配置类型支持多个配置，则此列为空白。  
+  
+ **添加**  
+ 通过使用包配置向导来添加配置。  
+  
+ **编辑**  
+ 通过重新运行包配置向导来编辑现有配置。  
+  
+ **删除**  
+ 选择一个配置，再单击“删除”。  
+  
+ **箭头**  
+ 在列表中选择一个配置，再使用向上键和向下键可将其上移或下移。 配置将按照在列表中的显示顺序来进行加载。  
+  
+## 另请参阅  
+ [创建包配置](../../integration-services/packages/create-package-configurations.md)  
+  
+  

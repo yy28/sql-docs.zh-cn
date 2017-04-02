@@ -1,0 +1,34 @@
+---
+title: "将读取者角色和写入者角色分配给包 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
+caps.latest.revision: 5
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 5
+---
+# 将读取者角色和写入者角色分配给包
+  可以将读取者角色和写入者角色分配给每个包。  
+  
+### 将读取者角色和写入者角色分配给包  
+  
+1.  在对象资源管理器中，找到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 连接。  
+  
+2.  展开“已存储的包”文件夹，然后展开包含要将角色分配到的包的子文件夹。  
+  
+3.  右键单击要向其分配角色的包。  
+  
+4.  在 **“包角色”** 对话框中，从 **“读取者角色”** 列表中选择一个读取者角色，并从 **“写入者角色”** 列表中选择一个写入者角色。  
+  
+5.  单击 **“确定”**。  
+  
+  

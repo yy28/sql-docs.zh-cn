@@ -1,0 +1,58 @@
+---
+title: "Azure Data Lake Store 连接管理器 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/02/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
+  - "sql14.dts.designer.afpadlscm.f1"
+ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
+caps.latest.revision: 7
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 5
+---
+# Azure Data Lake Store 连接管理器
+  **Azure Data Lake Store 连接管理器**启用了 SSIS 包，该包通过以下两种身份验证类型连接到 Azure Data Lake Store 服务：Azure AD 用户标识和 Azure AD 服务标识。  
+  
+ **Azure Data Lake Store 连接管理器**是适用于 Azure for SQL Server 2016 的 SQL Server Integration Services (SSIS) 功能包组件。 从 [此处](http://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+
+>   [!NOTE] 若要确保 Azure Data Lake Store 连接管理器和使用它的组件（即 Azure Data Lake Store 源和 Azure Data Lake Store 目标）可连接到服务，请确保在[此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 
+ 
+## <a name="configure-the-azure-data-lake-store-connection-manager"></a>配置 Azure Data Lake Store 连接管理器
+
+ 
+1.  在“添加 SSIS 连接管理器”对话框中，选择“AzureDataLake”，然后单击“添加”。  
+  
+2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机”字段中，键入 Azure Data Lake Store 主机 URL。 例如：https://test.azuredatalakestore.net or test.azuredatalakestore.net。
+  
+3.  选择相应的身份验证类型来访问 Azure Data Lake Store 数据。
+
+    1.  如果选择“Azure AD 用户标识”身份验证选项，请执行以下操作：
+        1. 为“用户名”和“密码”字段指定值。 
+    
+        2. 单击“测试连接”以测试连接。 如果你和你的租户管理员先前不同意 SSIS 访问 Azure Data Lake Store 数据，则需在弹出对话框中单击“接受”按钮，允许 SSIS 访问 Azure Data Lake Store 数据。 若要深入了解此同意体验，请参阅 [Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application)（将应用程序与 Azure Active Directory 集成）。
+    
+        >   [!NOTE] “Azure AD 用户标识”身份验证选项不支持多重身份验证和 Microsoft 帐户。
+    
+    2. 如果选择“Azure AD 服务标识”身份验证选项，请执行以下操作：
+        1. 创建 AAD 应用程序和服务主体，使其可访问 Azure Data Lake 资源。
+    
+        2. 为此 AAD 应用程序分配相应权限，以便访问 Azure Data Lake 资源。 若要深入此身份验证选项，请参阅 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)（使用门户创建可访问资源的 Active Directory 应用程序和服务主体）。
+    
+        3. 为“客户端 ID”、“密钥”和“租户名”字段指定值。
+    
+        4. 单击“测试连接”以测试连接。  
+  
+6.  单击 **“确定”** 关闭对话框。  
+  
+    你可以看到你在“属性”  窗口中创建的连接管理器的属性。  
+  
+  

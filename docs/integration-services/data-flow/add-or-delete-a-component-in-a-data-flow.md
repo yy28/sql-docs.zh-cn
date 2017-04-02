@@ -1,0 +1,58 @@
+---
+title: "在数据流中添加或删除组件 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "添加组件"
+  - "组件 [Integration Services], 数据流"
+ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
+caps.latest.revision: 42
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 42
+---
+# 在数据流中添加或删除组件
+  数据流组件是数据流中的源、目标和转换。 包中的控制流必须包含数据流任务，然后才能向数据流添加组件。  
+  
+ 下面的过程介绍如何在包的数据流中添加或删除组件。  
+  
+### 向数据流添加组件  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+  
+2.  在解决方案资源管理器中，双击该包将其打开。  
+  
+3.  单击“控制流”选项卡，然后双击包含要向其添加组件的数据流的数据流任务。  
+  
+4.  在工具箱中，展开 **“数据流源”**、 **“数据流转换”**或 **“数据流目标”**，然后将数据流项拖动到 **“数据流”** 选项卡的设计图面。  
+  
+5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
+  
+### 从数据流删除组件  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+  
+2.  在解决方案资源管理器中，双击该包将其打开。  
+  
+3.  单击“控制流”选项卡，然后双击包含要从中删除组件的数据流的数据流任务。  
+  
+4.  右键单击数据流组件，然后单击“删除”。  
+  
+5.  确认删除操作。  
+  
+6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
+  
+## 另请参阅  
+ [连接数据流中的组件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
+ [在数据流组件中配置错误输出](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [数据流](../../integration-services/data-flow/data-flow.md)  
+  
+  

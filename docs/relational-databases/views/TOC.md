@@ -1,0 +1,8 @@
+# [创建索引视图](create-indexed-views.md)
+# [视图](views.md)
+# [删除视图](delete-views.md)
+# [重命名视图](rename-views.md)
+# [通过视图修改数据](modify-data-through-a-view.md)
+# [修改视图](modify-views.md)
+# [创建视图](create-views.md)
+# [获取有关视图的信息](get-information-about-a-view.md)

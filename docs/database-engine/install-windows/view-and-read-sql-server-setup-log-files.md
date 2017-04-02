@@ -1,0 +1,173 @@
+---
+title: "查看和读取 SQL Server 安装程序日志文件 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/09/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "setup-install"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "查看日志"
+  - "显示日志文件"
+  - "安装程序 [SQL Server], 日志"
+  - "安装日志文件 [SQL Server]"
+  - "安装 SQL Server, 日志"
+  - "错误 [SQL Server], 安装程序"
+  - "日志 [SQL Server], 安装程序"
+ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
+caps.latest.revision: 54
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "jhubbard"
+caps.handback.revision: 54
+---
+# 查看和读取 SQL Server 安装程序日志文件
+  每次执行安装程序时，都会在一个带有时间戳的新日志文件夹 (%programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\) 中创建日志文件。 带有时间戳的日志文件夹的名称格式为 YYYYMMDD_hhmmss。 在无人参与模式下运行安装程序时，将在 % temp%\sqlsetup*.log 中创建日志。 日志文件夹中的所有文件将归档到各自日志文件夹的 Log\*.cab 文件中。  
+  
+ 一个典型的安装请求将经历以下三个执行阶段：  
+  
+1.  全局规则文本  
+  
+2.  组件更新  
+  
+3.  用户请求的操作  
+  
+ 在每个阶段中，安装程序都生成详细信息日志和摘要日志，并根据需要创建其他日志。 在每次执行用户请求的安装操作时安装程序至少会被调用三次。  
+  
+ 数据存储文件包含安装过程所跟踪的所有配置对象状态的快照，对于纠正配置错误来说非常有用。 XML 文件转储是为每个执行阶段的数据存储对象创建的。 它们保存在带有时间戳的日志文件夹下其自己的日志子文件夹中，如下所示：  
+  
+-   Datastore_GlobalRules  
+  
+-   Datastore_ComponentUpdated  
+  
+-   Datastore  
+  
+ 以下部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序日志文件。  
+  
+## 摘要文本  
+  
+### 概述  
+ 此文件显示在安装过程中检测到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件、操作系统环境、命令行参数值（如果已指定），以及执行的每个 MSI/MSP 的总体状态。  
+  
+ 本日志归纳为以下部分：  
+  
+-   执行的总体摘要  
+  
+-   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机的属性和配置  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品功能  
+  
+-   安装版本和安装包属性的说明  
+  
+-   安装过程中提供的运行时输入设置  
+  
+-   配置文件的位置  
+  
+-   执行结果的详细信息  
+  
+-   全局规则  
+  
+-   特定于安装方案的规则  
+  
+-   失败的规则  
+  
+-   规则报表文件的位置  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\。  
+  
+ 若要找到摘要文本文件中的错误，请使用“error”或“failed”关键字搜索该文件。  
+  
+## Summary_engine-base_YYYYMMDD_HHMMss.txt  
+  
+### 概述  
+ summary_engine 基本文件类似于摘要文件，是在主工作流中生成的。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+  
+### 概述  
+ 组件更新摘要日志文件类似于摘要文件，是在组件更新工作流中生成的。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+  
+### 概述  
+ 全局规则摘要日志文件类似于摘要文件，是在全局规则工作流中生成的。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## Detail.txt  
+  
+### 概述  
+ Detail.txt 是针对主工作流（如安装或升级）生成的，它提供有关执行的详细信息。 文件中的日志基于调用每个安装操作的时间而生成，并且显示操作的执行顺序以及其依赖项。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup  
+  
+ Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt。  
+  
+ 如果在安装过程中发生错误，则将异常或错误记录在该文件的末尾。 若要查找该文件中的错误，请首先检查文件末尾，然后在文件中搜索“错误”或“异常”关键字。  
+  
+## Detail_ComponentUpdate.txt  
+  
+### 概述  
+ Detail_ComponentUpdate.txt 文件是针对组件更新工作流而生成的，它类似于 Detail.txt。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## Detail_GlobalRules.txt  
+  
+### 概述  
+ Detail_GlobalRules.txt 是针对全局规则执行而生成的，它类似于 Detail.txt。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## MSI 日志文件  
+  
+### 概述  
+ MSI 日志文件提供安装包进程的详细信息。 它们是在安装指定的包的过程中由 MSIEXEC 生成的。  
+  
+ MSI 日志文件的类型：  
+  
+-   \<Feature>_\<Architecture>\_\<Interation>.log  
+  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+  
+-   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+  
+### 位置  
+ MSI 日志文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log。  
+  
+ 该文件的末尾是有关执行的摘要，其中包括成功状态或失败状态以及属性。 若要找到 MSI 文件中的错误，请搜索“value 3”，通常可找到的错误与此字符串接近。  
+  
+## ConfigurationFile.ini  
+  
+### 概述  
+ 本配置文件包含安装过程中提供的输入设置。 该文件可用于在无需手动输入设置的情况下重新启动安装。 但是，帐户的密码、PID 和某些参数不保存在该配置文件中。 可以将这些设置添加到该文件中，也可通过使用命令行或安装程序用户界面提供这些设置。 有关详细信息，请参阅[使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## SystemConfigurationCheck_Report.htm  
+  
+### 概述  
+ 系统配置检查报表包含有关每个执行规则的简短说明，以及执行状态。  
+  
+### 位置  
+ 此文件位于 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
+  
+## 另请参阅  
+ [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+  
+  

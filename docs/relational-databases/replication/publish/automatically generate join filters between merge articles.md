@@ -1,0 +1,84 @@
+---
+title: "在合并项目之间自动生成一组联接筛选器 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/09/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "自动联接筛选器生成"
+  - "联接筛选器"
+ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
+caps.latest.revision: 38
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# 在合并项目之间自动生成一组联接筛选器 (SQL Server Management Studio)
+  启用自动生成一组联接筛选器 **筛选表行** 新建发布向导的页面或 **筛选行** 页 **发布属性-\< 发布>** 对话框。 有关使用向导和访问对话框中的详细信息，请参阅 [创建发布](../../../relational-databases/replication/publish/create-a-publication.md) 和 [查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  
+> [!NOTE]  
+>  如果自动生成一组联接筛选器在 **发布属性-\< 发布>** 对话框中初始化对发布的订阅后，必须生成新的快照并在更改后重新初始化所有订阅。 有关属性更改要求的详细信息，请参阅 [更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+  
+ 可以手动为一组表创建联接筛选器，也可由复制根据表上定义的外键和主键的关系自动生成联接筛选器。 有关创建手动联接筛选器，请参阅 [定义和修改联接筛选器之间合并项目](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
+  
+### 在合并项目之间自动生成一组联接筛选器  
+  
+1.  在 **筛选表行** 新建发布向导的页面或 **筛选行** 页 **发布属性-\< 发布>**, ，单击 **添加**, ，然后单击 **自动生成筛选器**。  
+  
+    > [!NOTE]  
+    >  自动生成筛选器将删除发布中所有现有的行筛选器或联接筛选器。 可以在自动生成一组筛选器后添加筛选器。  
+  
+2.  按照 **“生成筛选器”** 对话框中的过程创建行筛选器。 然后通过主键和外键的关系将行筛选器扩展到与筛选的表有关的表。  
+  
+    1.  从下拉列表框中选择要筛选的表。  
+  
+    2.  在 **“筛选语句”** 文本框中创建一个筛选语句。 您可以在文本区域中直接键入，也可以从 **“列”** 列表框中拖放列。  
+  
+         **“筛选语句”** 文本区域包括默认的文本，其格式为：  
+  
+        ```  
+        SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
+        ```  
+  
+         不能更改默认文本；在 WHERE 关键字后使用标准的 SQL 语法键入静态行筛选器或参数化行筛选器的筛选器子句。 参数化行筛选器的完整筛选器子句如下所示：  
+  
+        ```  
+        SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  
+        ```  
+  
+         WHERE 子句应使用由两部分构成的命名方式，不支持由三部分和四部分构成的命名方式。  
+  
+    3.  指定筛选选项。  
+  
+         选择与订阅服务器之间共享数据的方式相匹配的选项： **“此表中的行将转到多个订阅”** 或 **“此表中的行将仅转到一个订阅”**。 如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+  
+3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+  
+     将对照 SELECT 子句中的表分析并运行指定的筛选器。 如果筛选语句有语法错误或其他问题，将会通知您编辑该筛选语句。  
+  
+     分析语句后，复制将创建必需的联接筛选器，并在 **“筛选表行”** 页或 **“筛选行”** 页的 **“筛选的表”** 窗格中显示这些联接筛选器。 如果从新建发布向导生成筛选器，并且尚未为运行此向导的发布服务器配置分发服务器，系统会提示您进行此项配置。  
+  
+4.  如果您在 **发布属性-\< 发布>** 对话框中，单击 **确定** 以保存并关闭对话框。  
+  
+### 修改自动生成的筛选器  
+  
+1.  在 **筛选表行** 新建发布向导的页面或 **筛选行** 页 **发布属性-\< 发布>**, ，选择一个筛选器中的 **筛选的表** 窗格中，然后再单击 **编辑**。  
+  
+2.  在 **“编辑筛选器”** 或 **“编辑联接”** 对话框中修改筛选器。  
+  
+3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+  
+### 删除自动生成的筛选器  
+  
+1.  在 **筛选表行** 新建发布向导的页面或 **筛选行** 页 **发布属性-\< 发布>**, ，选择一个筛选器中的 **筛选的表** 窗格中，然后再单击 **删除**。  
+  
+## 另请参阅  
+ [联接筛选器](../../../relational-databases/replication/merge/join-filters.md)   
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+  
+  

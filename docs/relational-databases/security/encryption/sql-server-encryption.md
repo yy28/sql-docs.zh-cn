@@ -1,0 +1,85 @@
+---
+title: "SQL Server 加密 | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "05/03/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "加密 [SQL Server], 关于加密"
+  - "安全性 [SQL Server], 加密"
+  - "密码系统 [SQL Server], 关于密码系统"
+ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
+caps.latest.revision: 21
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 21
+---
+# SQL Server 加密
+  加密是指通过使用密钥或密码对数据进行模糊处理的过程。 这会使数据变得毫无用处，除非使用对应的解密密钥或密码。 加密并不解决访问控制问题。 不过，它可以通过限制数据丢失来增强安全性，即使在访问控制失效的情况下。 例如，如果数据库主机配置有误且黑客获取了敏感数据，则如果数据已加密，那么被盗信息可能会毫无用处。  
+  
+ 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 下表包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密的详细信息。  
+  
+> [!IMPORTANT]  
+>  虽然加密是可帮助确保安全性的有力工具，但它并不适用于所有数据或连接。 在决定是否实现加密时，请考虑用户访问数据的方式。 如果用户通过公共网络访问数据，则可能需要使用数据加密以增强安全性。 但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 任何时候使用加密时还应包括密码、密钥和证书的维护策略。  
+  
+> [!NOTE]  
+>  有关传输级别安全 (TSL1.2) 的最新信息，请参阅 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)（对 Microsoft SQL Server 的 TLS 1.2 支持）。  
+  
+## 本节内容  
+ [加密层次结构](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ 提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的加密层次结构的信息。  
+  
+ [选择加密算法](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ 说明如何选择有效的加密算法。  
+  
+ [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ 提供有关如何以透明方式来加密数据的一般信息。  
+  
+ [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 该部分介绍如何实现和管理加密密钥。  
+  
+ [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ 确保本地数据库管理员、云数据库操作员或其他权限虽高但没有获得此方面授权的用户无法访问加密的数据。  
+  
+ [动态数据屏蔽](../../../relational-databases/security/dynamic-data-masking.md)  
+ 通过对非特权用户屏蔽敏感数据来限制敏感数据的公开。  
+  
+ [SQL Server 证书和非对称密钥](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
+ 有关如何使用公钥加密的信息。  
+  
+## 相关内容  
+ [保护 SQL Server](../../../relational-databases/security/securing-sql-server.md)  
+ 简要介绍如何帮助确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台的安全性以及如何处理用户和安全对象。  
+  
+ [加密函数 (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
+ 说明如何实现加密函数。  
+  
+ [ENCRYPTBYPASSPHRASE (Transact-SQL)](../../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
+ 说明如何使用密码来加密数据。  
+  
+ [ENCRYPTBYKEY (Transact-SQL)](../../../t-sql/functions/encryptbykey-transact-sql.md)  
+ 说明如何使用对称密钥来加密数据。  
+  
+ [ENCRYPTBYASYMKEY (Transact-SQL)](../../../t-sql/functions/encryptbyasymkey-transact-sql.md)  
+ 说明如何使用非对称密钥来加密数据。  
+  
+ [ENCRYPTBYCERT (Transact-SQL)](../../../t-sql/functions/encryptbycert-transact-sql.md)  
+ 说明如何使用证书来加密数据。  
+  
+## 外部资源  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 – 安全和保护](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ 包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
+  
+## 另请参阅  
+ [sys.key_encryptions (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
+ [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [备份和还原 Reporting Services 加密密钥](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+  
+  
