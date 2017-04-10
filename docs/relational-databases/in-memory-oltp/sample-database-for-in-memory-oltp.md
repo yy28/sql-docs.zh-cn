@@ -302,7 +302,7 @@ caps.handback.revision: 15
     -   它依赖于帮助器过程 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 来生成执行完整性检查所需的 T-SQL。  
   
 ##  <a name="a-nameperformancemeasurementsusingthedemoworkloada-performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a>使用演示工作负荷执行度量  
- Ostress 是由 [!INCLUDE[msCoName](../Token/msCoName_md.md)] CSS [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 支持团队开发的命令行工具。 此工具可以用于并行执行查询或运行存储过程。 可以配置线程数来并行运行给定 T-SQL 语句，并且可以指定应对此线程执行语句的次数；Ostress 会加快线程，对所有线程并行执行语句。 对所有线程完成执行之后，Ostress 会报告所有线程完成执行所花费的时间。  
+ Ostress 是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持团队开发的命令行工具。 此工具可以用于并行执行查询或运行存储过程。 可以配置线程数来并行运行给定 T-SQL 语句，并且可以指定应对此线程执行语句的次数；Ostress 会加快线程，对所有线程并行执行语句。 对所有线程完成执行之后，Ostress 会报告所有线程完成执行所花费的时间。  
   
 ### <a name="installing-ostress"></a>安装 Ostress  
  Ostress 作为 RML 实用工具的一部分进行安装；Ostress 没有独立安装。  
@@ -324,9 +324,9 @@ caps.handback.revision: 15
   
  在不使用任何命令行选项的情况下仅运行 ostress.exe 时，可以查看 Ostress 的命令行选项。 对此示例运行 Ostress 时要考虑的主要选项有：  
   
--   -S 要连接到的 [!INCLUDE[msCoName](../Token/msCoName_md.md)][!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 实例的名称  
+-   -S 要连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称  
   
--   -E 使用 Windows 身份验证连接（默认）；如果使用 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 身份验证，请使用选项 –U 和 –P 分别指定用户名和密码  
+-   -E 使用 Windows 身份验证连接（默认）；如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请使用选项 –U 和 –P 分别指定用户名和密码  
   
 -   -d 数据库的名称，对于此示例为 AdventureWorks2014  
   
@@ -410,7 +410,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  在一台共有 8 个物理（16 个逻辑）核心的测试服务器上，需要 41 分 25 秒。 在另一台有 24 个物理（48 个逻辑）核心的测试服务器上，需要 52 分 16 秒。  
   
- 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不阻止相互的插入，使 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 可以完全利用 CPU。  
+ 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不阻止相互的插入，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以完全利用 CPU。  
   
  在工作负荷运行期间可以观察 CPU 利用率（例如使用任务管理器）。 对于基于磁盘的表，可以看到 CPU 利用率远低于 100%。 在有 16 个逻辑处理器的测试配置中，利用率保持在 24% 左右。  
   
@@ -430,13 +430,13 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-nametroubleshootingslow-runningtestsa-troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a>解决测试运行缓慢的问题  
  测试结果通常因硬件而异，也因测试运行中使用的并发级别而异。 结果与预期不符时要了解的几个方面有：  
   
--   并发事务数：对单个线程运行工作负荷时，通过 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
+-   并发事务数：对单个线程运行工作负荷时，通过 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
   
--   可供 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]使用的核心数较少：这意味着系统中的并发级别较低，因为并发执行事务的数量不能超过可供 SQL 使用的核心数。  
+-   可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的核心数较少：这意味着系统中的并发级别较低，因为并发执行事务的数量不能超过可供 SQL 使用的核心数。  
   
     -   症状：如果对基于磁盘的表运行工作负荷时 CPU 利用率较高，则意味着不存在很多争用，说明缺乏并发性。  
   
--   日志驱动器的速度：如果日志驱动器无法跟上系统中的事务吞吐量级别，则工作负荷会在日志 IO 方面遇到瓶颈。 虽然日志记录对于 [!INCLUDE[hek_2](../Token/hek_2_md.md)]更加高效，但是如果日志 IO 是瓶颈，则性能提升的可能性有限。  
+-   日志驱动器的速度：如果日志驱动器无法跟上系统中的事务吞吐量级别，则工作负荷会在日志 IO 方面遇到瓶颈。 虽然日志记录对于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]更加高效，但是如果日志 IO 是瓶颈，则性能提升的可能性有限。  
   
     -   症状：如果对内存优化表运行工作负荷时 CPU 利用率不接近于 100% 或是非常尖峰，则可能存在日志 IO 瓶颈。 这可以通过打开资源监视器查看日志驱动器的队列长度来进行确认。  
   
@@ -446,7 +446,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="a-namememoryutilizationforthememory-optimizedtablesa-memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a>内存优化表的内存利用率  
   
 #### <a name="overall-utilization-of-the-database"></a>数据库的总体利用率  
- 以下查询可用于获取系统中 [!INCLUDE[hek_2](../Token/hek_2_md.md)] 的总体内存利用率。  
+ 以下查询可用于获取系统中 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的总体内存利用率。  
   
 ```  
 SELECT type  
@@ -514,7 +514,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 |MEMORYCLERK_XTP|默认|0|  
 |MEMORYCLERK_XTP|默认|0|  
   
- 可以看到， [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 将稍小于 8GB 的大小用于示例数据库中的内存优化表和索引。  
+ 可以看到， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将稍小于 8GB 的大小用于示例数据库中的内存优化表和索引。  
   
  在一次示例运行之后查看每个表的详细内存使用率：  
   
@@ -543,7 +543,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>演示重置之后  
  存储过程 Demo.usp_DemoReset 可以用于重置演示。 它删除表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的数据，并对原始表 SalesOrderHeader 和 SalesOrderDetail 中的数据重设种子。  
   
- 现在，即使表中的行已删除，这也不意味着会立即回收内存。 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 根据需要在后台从内存优化表中的已删除行回收内存。 可以看到，在演示重置之后（系统上没有事务工作负荷），尚未立即回收已删除行的内存：  
+ 现在，即使表中的行已删除，这也不意味着会立即回收内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据需要在后台从内存优化表中的已删除行回收内存。 可以看到，在演示重置之后（系统上没有事务工作负荷），尚未立即回收已删除行的内存：  
   
 ```  
 SELECT type  
@@ -636,7 +636,7 @@ ORDER BY state, file_type
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- 可以看到，大部分空间由预先创建的数据和差异文件使用。 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
+ 可以看到，大部分空间由预先创建的数据和差异文件使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
   
  内存优化表中的实际数据在单个数据文件中。  
   

@@ -40,7 +40,7 @@ caps.handback.revision: 25
   
 #### 从“工具”菜单启动 SQL Server Profiler  
   
-1.  在 [!INCLUDE[ssManStudioFull](。。/Token/ssManStudioFull_md。md)] **优化顾问中的** 菜单上，单击 **SQL Server Profiler**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **优化顾问中的** 菜单上，单击 **SQL Server Profiler**。  
   
 #### 从查询编辑器启动 SQL Server Profiler  
   

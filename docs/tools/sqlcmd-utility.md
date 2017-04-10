@@ -204,13 +204,13 @@ sqlcmd
  如果 **-P** 选项后有多个参数，将生成错误消息并退出程序。  
   
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
- 指定要连接的 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
+ 指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
   
- 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]。 指定要连接到该服务器计算机上 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 命名实例的 *server_name* [ **\\***instance_name* ]。 如果不指定服务器， **sqlcmd** 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
+ 指定 *server_name* 可连接到该服务器计算机上的默认实例 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定要连接到该服务器计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 *server_name* [ **\\***instance_name* ]。 如果不指定服务器， **sqlcmd** 将连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
   
  *protocol* 可以是**tcp** (TCP/IP)、**lpc**（共享内存）或 **np**（命名管道）。  
   
- 如果在启动 **sqlcmd** 时未指定 *server_name* [ **\\***instance_name* ]，[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 将检查并使用 SQLCMDSERVER 环境变量。  
+ 如果在启动 **sqlcmd** 时未指定 *server_name* [ **\\***instance_name* ]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用 SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
 >  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量；也就是说 **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰，并且旧式脚本可以继续使用。  
@@ -221,7 +221,7 @@ sqlcmd
 > [!NOTE]  
 >  OSQLUSER 环境变量可用于实现向后兼容性。 SQLCMDUSER 环境变量优先于 OSQLUSER 环境变量。 也就是说， **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰。 此外，现有的 **osql** 脚本可以继续使用。  
   
- 如果 **-U** 选项和 **-P** 选项均未指定，**sqlcmd** 将尝试使用 [!INCLUDE[msCoName](../Token/msCoName_md.md)] Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
+ 如果 **-U** 选项和 **-P** 选项均未指定，**sqlcmd** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
   
  如果 **-U** 选项与 **-E** 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
   
@@ -284,7 +284,7 @@ sqlcmd
  将错误消息输出重定向到屏幕 (**stderr**)。 如果未指定参数或指定参数为 **0**，则仅重定向严重级别为 11 或更高的错误消息。 如果指定参数为 **1**，则将重定向所有消息输出（包括 PRINT）。 如果使用 -o，将不起任何作用。 默认情况下，消息将发送到 **stdout**。  
   
  **-R**  
- 促使 **sqlcmd** 根据客户端的区域设置本地化从 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 中检索到的数字、货币、日期和时间列。 默认情况下，将使用服务器的区域设置显示这些列。  
+ 促使 **sqlcmd** 根据客户端的区域设置本地化从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中检索到的数字、货币、日期和时间列。 默认情况下，将使用服务器的区域设置显示这些列。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -401,7 +401,7 @@ sqlcmd
   
  **错误报告选项**  
   **-b**  
- 指定发生错误时，**sqlcmd** 退出并返回一个 DOS ERRORLEVEL 值。 当 **错误消息的严重级别高于 10 时，返回给 DOS ERRORLEVEL 变量的值为** 1 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] ；否则返回的值为 **0**。 如果除 **-b** 选项外还设置了 **-V** 选项，则当严重级别低于使用 **-V** 设置的值时，**sqlcmd** 将不报告错误。 命令提示符批处理文件可以测试 ERRORLEVEL 的值并相应处理错误。 **sqlcmd** 不对严重级别 10 报告错误（信息性消息）。  
+ 指定发生错误时，**sqlcmd** 退出并返回一个 DOS ERRORLEVEL 值。 当 **错误消息的严重级别高于 10 时，返回给 DOS ERRORLEVEL 变量的值为** 1 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ；否则返回的值为 **0**。 如果除 **-b** 选项外还设置了 **-V** 选项，则当严重级别低于使用 **-V** 设置的值时，**sqlcmd** 将不报告错误。 命令提示符批处理文件可以测试 ERRORLEVEL 的值并相应处理错误。 **sqlcmd** 不对严重级别 10 报告错误（信息性消息）。  
   
  如果 **sqlcmd** 脚本包含错误的注释、语法错误或缺少脚本变量，则返回的 ERRORLEVEL 为 1。  
   
@@ -418,7 +418,7 @@ sqlcmd
  需要不同大小的数据包。 此选项设置 **sqlcmd** 脚本变量 SQLCMDPACKETSIZE。 *packet_size* 必须是介于 512 和 32767 之间的值。 默认值为 4096。 如果脚本的两个 GO 命令之间包含大量 SQL 语句，则使用较大的数据包可以提高脚本执行的性能。 您可以请求更大的包大小。 但是，如果请求遭拒绝， **sqlcmd** 将对包大小使用服务器默认值。  
   
  **-c** *batch_terminator*  
- 指定批处理终止符。 默认情况下，通过单独在一行中键入“GO”来终止命令并将其发送到 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 。 重置批处理终止符时，不要使用对操作系统具有特殊意义的 [!INCLUDE[tsql](../Token/tsql_md.md)] 保留关键字或字符，即便它们前面有反斜杠也是如此。  
+ 指定批处理终止符。 默认情况下，通过单独在一行中键入“GO”来终止命令并将其发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 重置批处理终止符时，不要使用对操作系统具有特殊意义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留关键字或字符，即便它们前面有反斜杠也是如此。  
   
  **-L**[**c**]  
  列出本地配置的服务器计算机和在网络上播发的服务器计算机的名称。 此参数不能与其他参数结合使用。 可以列出的服务器的最大数目是 3000。 如果服务器列表由于缓冲区大小而被截断，则会显示错误消息。  
@@ -439,7 +439,7 @@ sqlcmd
   
  其中：  
   
- `x` = [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 处理的事务数。  
+ `x` = [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理的事务数。  
   
  `t1` = 所有事务的总时间。  
   
@@ -521,7 +521,7 @@ sqlcmd
  R/W 表示可以使用 **setvar** 命令修改值，并且后续命令将受新值的影响。  
   
 ## <a name="sqlcmd-commands"></a>sqlcmd 命令  
- 除 [!INCLUDE[tsql](../Token/tsql_md.md)] sqlcmd **中的**语句之外，还可使用以下命令：  
+ 除 [!INCLUDE[tsql](../includes/tsql-md.md)] sqlcmd **中的**语句之外，还可使用以下命令：  
   
 |||  
 |-|-|  
@@ -546,15 +546,15 @@ sqlcmd
   
 -   所有 **sqlcmd** 命令都不区分大小写。  
   
--   每个命令都必须位于单独的行中。 命令后面不能跟随 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句或其他命令。  
+-   每个命令都必须位于单独的行中。 命令后面不能跟随 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或其他命令。  
   
--   命令将被立即执行。 它们与 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句不同，不会放在执行缓冲区中。  
+-   命令将被立即执行。 它们与 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句不同，不会放在执行缓冲区中。  
   
  **编辑命令**  
   [**:**] **ED**  
- 启动文本编辑器。 该编辑器可以用来编辑当前的 [!INCLUDE[tsql](../Token/tsql_md.md)] 批处理或上次执行的批处理。 若要编辑上次执行的批处理，必须在上一批处理执行完之后立即键入 **ED** 命令。  
+ 启动文本编辑器。 该编辑器可以用来编辑当前的 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理或上次执行的批处理。 若要编辑上次执行的批处理，必须在上一批处理执行完之后立即键入 **ED** 命令。  
   
- 文本编辑器由 SQLCMDEDITOR 环境变量定义。 默认编辑器为“Edit”。 若要更改编辑器，请设置 SQLCMDEDITOR 环境变量。 例如，若要将编辑器设置为 [!INCLUDE[msCoName](../Token/msCoName_md.md)] 记事本，请在命令提示符处键入：  
+ 文本编辑器由 SQLCMDEDITOR 环境变量定义。 默认编辑器为“Edit”。 若要更改编辑器，请设置 SQLCMDEDITOR 环境变量。 例如，若要将编辑器设置为 [!INCLUDE[msCoName](../includes/msconame-md.md)] 记事本，请在命令提示符处键入：  
   
  `SET SQLCMDEDITOR=notepad`  
   
@@ -663,7 +663,7 @@ sqlcmd
   
  该错误会导致 **sqlcmd** 脚本终止并将消息 ID 50001 返回给客户端。  
   
- [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 保留了介于 -1 到 -99 之间的返回值；**sqlcmd** 定义了以下附加返回值：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留了介于 -1 到 -99 之间的返回值；**sqlcmd** 定义了以下附加返回值：  
   
 |返回值|Description|  
 |-------------------|-----------------|  
@@ -672,13 +672,13 @@ sqlcmd
 |-102|选择返回值时发生转换错误。|  
   
  **GO** [*count*]  
- GO 指示批处理的结束和任何缓存 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句的执行。该批处理分为多个不同批次进行多次执行；无法在单个批处理中声明一个变量超过一次。
+ GO 指示批处理的结束和任何缓存 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的执行。该批处理分为多个不同批次进行多次执行；无法在单个批处理中声明一个变量超过一次。
   
  **其他命令**  
   **:r \<** *filename* **>**  
- 将来自 **\<***filename***>** 指定的文件中的其他 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句和 **sqlcmd** 命令分析到语句缓存中。  
+ 将来自 **\<***filename***>** 指定的文件中的其他 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句和 **sqlcmd** 命令分析到语句缓存中。  
   
- 如果文件包含的 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
+ 如果文件包含的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
   
 > [!NOTE]  
 > 系统会相对于 **sqlcmd** 在其中运行的启动目录读取  **\<** *filename* **>**。  
@@ -692,7 +692,7 @@ sqlcmd
  列出在本地配置的服务器和在网络上广播的服务器的名称。  
   
  **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
- 连接到 [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] 的一个实例。 同时关闭当前的连接。  
+ 连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个实例。 同时关闭当前的连接。  
   
  超时选项：  
   
@@ -705,7 +705,7 @@ sqlcmd
   
  如果未指定 *timeout* ，则其默认值将为 SQLCMDLOGINTIMEOUT 变量的值。  
   
- 仅当指定了 *user_name*（作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会出现此提示。 如果既未提供选项，又未提供环境变量，则使用 Windows 身份验证模式登录。 例如，若要使用集成安全性连接到 `instance1` [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]的一个实例（如 `myserver`），则会使用以下内容：  
+ 仅当指定了 *user_name*（作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会出现此提示。 如果既未提供选项，又未提供环境变量，则使用 Windows 身份验证模式登录。 例如，若要使用集成安全性连接到 `instance1` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的一个实例（如 `myserver`），则会使用以下内容：  
   
  `:connect myserver\instance1`  
   
@@ -743,7 +743,7 @@ sqlcmd
 -   每个新的 **sqlcmd** 会话都将覆盖现有的同名文件。  
   
 ### <a name="informational-messages"></a>信息性消息  
- **sqlcmd** 将输出由服务器发送的所有信息性消息。 在以下示例中，执行 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句后会输出信息性消息。  
+ **sqlcmd** 将输出由服务器发送的所有信息性消息。 在以下示例中，执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句后会输出信息性消息。  
   
  在命令提示符下键入以下内容：  
   
@@ -798,7 +798,7 @@ sqlcmd
   
  发出 XML OFF 命令之前不应显示 GO 命令，因为 XML OFF 命令会将 **sqlcmd** 切换回面向行的输出。  
   
- XML（流形式）数据和行集数据不能混合。 如果在执行输出 XML 流的 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句之前未发出 XML ON 命令，则输出将为乱码。 如果已发出 XML ON 指令，则无法执行输出常规行集的 [!INCLUDE[tsql](../Token/tsql_md.md)] 语句。  
+ XML（流形式）数据和行集数据不能混合。 如果在执行输出 XML 流的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句之前未发出 XML ON 命令，则输出将为乱码。 如果已发出 XML ON 指令，则无法执行输出常规行集的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
 >  **:XML** 命令不支持 SET STATISTICS XML 语句。  
