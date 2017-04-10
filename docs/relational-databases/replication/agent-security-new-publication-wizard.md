@@ -1,0 +1,63 @@
+---
+title: "代理安全性（新建发布向导） | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.rep.agentsecurity.articles.f1"
+ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
+caps.latest.revision: 23
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# 代理安全性（新建发布向导）
+  可以使用 **“代理安全性”** 页指定运行以下代理的帐户，以及连接到复制拓扑中的计算机：  
+  
+-   所有发布的快照代理。  
+  
+-   所有事务发布的日志读取器代理。  
+  
+-   允许可更新订阅的事务发布的队列读取器代理。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果指定，则创建此代理的代理作业 **具有可更新订阅的事务发布** 上 **发布类型** 页上，而不考虑您使用的可更新订阅的类型。 有关可更新订阅的详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
+  
+ 有关代理要求的权限及复制安全的最佳实践的信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 和 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)。  
+  
+## 选项  
+ **快照代理**  
+ 所有发布都将显示此选项。 单击 **“安全设置”** ，可以指定 **“快照代理安全性”** 对话框中的安全设置。  
+  
+ 单击 **“快照代理安全性”** 对话框中的 **“帮助”** ，可以获得快照代理使用的帐户所需权限的详细信息。  
+  
+ **日志读取器代理**  
+ 所有事务发布都将显示此选项。 单击 **“安全设置”** ，可以指定 **“日志读取器代理安全性”** 对话框中的安全设置。  
+  
+ 单击 **“日志读取器代理安全性”** 对话框中的 **“帮助”** ，可以获得日志读取器代理使用的帐户所需权限的详细信息。  
+  
+> [!NOTE]  
+>  对于使用事务复制发布的每个数据库，都有一个日志读取器代理。 如果数据库中已经存在事务发布，则安全设置是只读的。 您可以更改 **“发布属性”** 对话框中的设置，但是此更改会影响数据库中的所有事务发布。  
+  
+ **队列读取器代理**  
+ 允许可更新订阅的事务发布都将显示此选项。 单击 **“安全设置”** ，可以指定 **“队列读取器代理安全性”** 对话框中的安全设置。 此向导完成时将创建队列读取器代理作业；而不会取决于您创建的任意排队更新订阅。 如果您不打算创建任何排队更新订阅，那么可以禁用该作业。 右键单击该作业 (窗体中名为︰ *[\< 发布服务器>]。 \< 整数>*。) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 **作业** 文件夹，，然后单击 **禁用**。  
+  
+ 单击 **“队列读取器代理安全性”** 对话框中的 **“帮助”** ，可以获得队列读取器代理使用的帐户所需权限的详细信息。  
+  
+> [!NOTE]  
+>  每个分发数据库（及其所有发布服务器）都具有一个队列读取器代理。 如果使用给定分发数据库的任意发布服务器中已存在允许排队更新订阅的事务发布，则安全设置是只读的。 可以在 **“分发服务器属性”** 对话框中更改运行队列读取器代理并建立连接的帐户，但是此更改会影响使用分发数据库的所有发布服务器中的发布。  
+  
+## 另请参阅  
+ [创建发布](../../relational-databases/replication/publish/create-a-publication.md)   
+ [创建事务发布的可更新订阅](https://msdn.microsoft.com/library/mt740635.aspx)   
+ [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [管理复制中的登录名和密码](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
+  
+  

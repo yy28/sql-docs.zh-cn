@@ -1,0 +1,1 @@
+<Token>**本主题适用于：** ![yes](../includes/media/yes.png)SQL Server（从 2014 开始）![no](../includes/media/no.png)Azure SQL 数据库![no](../includes/media/no.png)Azure SQL 数据仓库![no](../includes/media/no.png)并行数据仓库 </Token>

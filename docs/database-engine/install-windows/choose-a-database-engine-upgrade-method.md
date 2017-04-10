@@ -1,0 +1,118 @@
+---
+title: "选择数据库引擎升级方法 | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/02/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "server-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
+caps.latest.revision: 23
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# 选择数据库引擎升级方法
+  当你为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+  
+ ![Database Engine Upgrade Method Decision Tree](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
+  
+ **下载**  
+  
+-   若要下载 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，请转到**[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
+  
+-   是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016ctp2evaluationwindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的虚拟机。  
+  
+> [!NOTE]  
+>  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些主题超出了本主题的讨论范围，但可以查看此处的相关链接：[SQL Server 2016 混合云简介](../Topic/Introduction%20to%20SQL%20Server%202016%20Hybrid%20Cloud.md)、[Azure 虚拟机上的 SQL Server 概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)、[Azure SQL 数据库](https://azure.microsoft.com/en-us/services/sql-database/)以及[在 Azure 中选择 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
+  
+##  <a name="UpgradeInPlace"></a> 就地升级  
+ 使用此方法时，SQL Server 安装程序会通过将现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位替换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位来升级现有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装，然后升级每个系统和用户数据库。  就地升级方法是最简单的，需要一定的停机时间，如果需要进行回退的话，则会花费更长时间进行回退操作，且并非所有方案都支持这一方法。 有关支持和不支持就地升级方法的方案详细信息，请参阅[支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+  
+ 这种方法经常用于以下方案：  
+  
+-   不需要高可用性 (HA) 配置的开发环境。  
+  
+-   能够容忍停机时间且在最新的硬件和软件上运行的非任务关键生产的环境。 停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+  
+> [!WARNING]  
+>  在运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序时，作为运行预升级检查的一部分，将停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  
+> [!CAUTION]  
+>  在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将被覆盖，在计算机中不再存在。 因此在升级前，请备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以及与早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关的其他对象。  
+  
+ 以下图表提供了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就地升级所需步骤的高级概述。  
+  
+ ![Database Engine Upgrade Non-HA In-Place Upgrade](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Database Engine Upgrade Non-HA In-Place Upgrade")  
+  
+ 有关详细步骤，请参阅[使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)。  
+  
+##  <a name="NewInstallationUpgrade"></a> 迁移到新安装  
+ 使用此方法时，你需要在建立新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境的同时，在新硬盘上使用新版操作系统频繁地维护当前环境。 在新环境中安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，执行若干步骤来准备新环境，以便你能够从现有环境将现有的用户数据库迁移到新环境并且最小化停机时间。 这些步骤包括迁移下列对象：  
+  
+-   **系统对象：**某些应用程序依赖于单个用户数据库范围之外的信息、实体和/或对象。 通常，应用程序具有对 master 和 msdb 数据库的依赖关系，并且还具有对用户数据库的依赖关系。 用户数据库正确运行所需的存储在该数据库外部的任何内容必须在目标服务器实例上可用。 例如，应用程序的登录名作为元数据存储在 master 数据库中，你必须在目标服务器上重新创建这些登录名。 如果应用程序或数据库维护计划依赖于 SQL Server 代理作业（其元数据存储在 msdb 数据库中），则必须在目标服务器实例上重新创建这些作业。 同样，服务器级触发器的元数据存储在 master 中。  
+    将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 master 和 msdb 中重新创建依赖实体和依赖对象的所有元数据。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 master 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md)  
+  
+-   **存储在 MSDB 中的 Integration Services 包：** 如果要在 MSDB 中存储包，需要使用 [dtutil Utility](../../integration-services/dtutil-utility.md) 编写这些包的脚本或者将其重新部署到新服务器。 在新服务器上使用包之前，需要将包升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 有关详细信息，请参阅 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+  
+-   **Reporting Services 加密密匙：**报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。 有关详细信息，请参阅[备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)和[升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+  
+ 新的   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境有了与现有环境相同的系统对象后，则可立即以最小化现有系统的停机时间的方式从现有系统将用户数据库迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 使用备份和还原完成数据库迁移，或者如果你处于 SAN 环境下，则通过重构 LUN 来完成数据库迁移。 两种方法的步骤如以下图表中所述。  
+  
+> [!CAUTION]  
+>  停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+  
+ 迁移用户数据库之后，可使用多种方法中的一种将新用户指向到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如重命名服务器、使用 DNS 条目、修改连接字符串）。  与就地升级相比，新的安装方法可以降低风险和停机时间，并可有助于同时完成操作系统的升级和升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+  
+> [!NOTE]  
+>  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例环境，请转到[滚动升级](#RollingUpgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置[数据库镜像](http://msdn.microsoft.com/library/ms190941.aspx)以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](http://msdn.microsoft.com/library/hh510260.aspx)作为永久的 HA 解决方案。  
+  
+ 例如，可以使用这种方法来升级：  
+  
+-   在不受支持的操作系统上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  
+-   由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持 x86 安装，请安装 x86 的 SQL Server。  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到新硬件和/或操作系统新版本。  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结合服务器合并。  
+  
+-   由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持将 SQL Server 2005 就地升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请使用 SQL Server 2005。 有关详细信息，请参阅 [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)。  
+  
+ 新的安装升级所需的步骤根据你是否在使用连接存储或 SAN 存储而存在少许差异。  
+  
+-   **连接存储环境：** 如果你具有使用连接存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的新安装升级所需执行的步骤。  
+  
+     ![New installation upgrade method using backup and restore for attached storage](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "New installation upgrade method using backup and restore for attached storage")  
+  
+-   **SAN 存储环境：**  如果你具有使用 SAN 存储的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境，以下图表和图表内的链接可指导你完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的新安装升级所需执行的步骤。  
+  
+     ![New installation upgrade method using detach and attach for SAN storage](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "New installation upgrade method using detach and attach for SAN storage")  
+  
+##  <a name="RollingUpgrade"></a> 滚动升级  
+ 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下主题中记录了这些方案：  
+  
+-   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅[升级AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
+  
+-   故障转移群集实例：有关在此环境中执行滚动升级的详细步骤，请参阅[升级 SQL Server 故障转移群集实例](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+  
+-   镜像实例：有关在此环境中执行滚动升级的详细步骤，请参阅[升级镜像实例](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
+  
+-   日志传送实例：有关在此环境中执行滚动升级的详细步骤，请参阅[将日志传送升级至 SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+  
+-   复制环境：要了解在此环境中执行滚动升级的详细步骤，请参阅 [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+  
+-   SQL Server Reporting Services 扩展环境：有关在此环境中执行滚动升级的详细步骤，请参阅[升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
+  
+## 本文是否对你有帮助？ 我们洗耳恭听  
+ 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Choose%20a%20Database%20Engine%20Upgrade%20Method%20page)  
+  
+## 另请参阅  
+ [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+  
+  

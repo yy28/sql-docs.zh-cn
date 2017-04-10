@@ -1,0 +1,38 @@
+---
+title: "SQL Server，Memory Broker Clerk 对象 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "SQLServer：Memory Broker Clerk"
+ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
+caps.latest.revision: 4
+author: "dagiro"
+ms.author: "v-dagir"
+manager: "jhubbard"
+caps.handback.revision: 4
+---
+# SQL Server，Memory Broker Clerk 对象
+**SQLServer：Memory Broker Clerk** 性能对象提供与 Memory Broker Clerk 相关的统计信息的计数器。
+
+下表介绍了 SQL Server **Memory Broker Clerk** 性能对象。
+
+|**SQL Server Memory Broker Clerk 计数器**|Description|  
+|-------------|-----------------|  
+|**内部优势**|条目计数压力的内部内存值（毫秒/页/毫秒，乘以 100 亿并截断为整数）。|
+|**Memory Broker Clerk 大小**|Clerk 的大小（页数）。|
+|**定期逐出（页数）**|上一次定期逐出从 Broker Clerk 中逐出的页数。|
+|**压力逐出（页数/秒）**|内存压力从 Broker Clerk 中每秒逐出的页数。|
+|**模拟优势**|分配给 Clerk 的内存值（毫秒/页/毫秒，乘以 100 亿并截断为整数）。|
+|**模拟大小**|Clerk 模拟的当前大小（页数）。|
+
+有一个缓冲池和列存储对象池的计数器实例。
+
+## 另请参阅  
+[监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -1,0 +1,59 @@
+---
+title: "排除业务规则 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "master-data-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "业务规则 [Master Data Services], 排除"
+ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
+caps.latest.revision: 7
+author: "sabotta"
+ms.author: "carlasab"
+manager: "jhubbard"
+caps.handback.revision: 7
+---
+# 排除业务规则 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您不希望永久删除业务规则，而又不希望针对此规则验证数据，则可以排除该规则。  
+  
+## 先决条件  
+ 若要执行此过程：  
+  
+-   您必须有权访问 **“系统管理”** 功能区域。  
+  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+  
+### 排除业务规则  
+  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+  
+3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。  
+  
+4.  从“实体”下拉列表中选择一个实体。  
+  
+5.  从“成员类型”列表中选择一个成员类型。  
+  
+6.  在网格中，选择要排除的业务规则所对应的行并单击“编辑” 。  
+  
+7.  选中“已排除”复选框。  
+  
+8.  单击 **“保存”**。  
+  
+9. 单击“全部发布” 。  
+  
+10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“已排除”状态  ，“已排除”  列为“是” 。  
+  
+## 另请参阅  
+ [删除业务规则 (Master Data Services)](../master-data-services/delete-a-business-rule-master-data-services.md)   
+ [创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+  
+  

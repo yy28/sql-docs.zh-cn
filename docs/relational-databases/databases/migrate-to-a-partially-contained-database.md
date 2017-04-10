@@ -1,0 +1,124 @@
+---
+title: "迁移到部分包含的数据库 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "包含的数据库, 迁移到"
+ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
+caps.latest.revision: 17
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 17
+---
+# 迁移到部分包含的数据库
+  本主题讨论要更改为部分包含的数据库模型的准备工作，接着提供了迁移步骤。  
+  
+ **本主题内容：**  
+  
+-   [准备迁移数据库](#prepare)  
+  
+-   [启用包含的数据库](#enable)  
+  
+-   [将数据库转换为部分包含的数据库](#convert)  
+  
+-   [将用户迁移为包含的数据库用户](#users)  
+  
+##  <a name="prepare"></a> 准备迁移数据库  
+ 在考虑将数据库迁移到部分包含的数据库模型时，请复查以下各项。  
+  
+-   您应该了解部分包含的数据库模型。 有关详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。  
+  
+-   您应该了解部分包含的数据库所独有的风险。 有关详细信息，请参阅 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
+  
+-   包含的数据库不支持复制、变更数据结构或更改跟踪。 确认数据库没有使用这些功能。  
+  
+-   复查为了部分包含的数据库而修改的数据库功能的列表。 有关详细信息，请参阅[经过修改的功能（包含的数据库）](../../relational-databases/databases/modified-features-contained-database.md)。  
+  
+-   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。 有关详细信息，请参阅  
+  
+-   监视 ** database_uncontained_usage**XEvent 以了解何时使用非包含的功能。  
+  
+##  <a name="enable"></a> 启用包含的数据库  
+ 必须先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例上启用包含的数据库，然后才能创建包含的数据库。  
+  
+### 使用 Transact-SQL 启用包含的数据库  
+ 下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
+  
+```tsql  
+sp_configure 'contained database authentication', 1;  
+GO  
+RECONFIGURE ;  
+GO  
+```  
+  
+#### 使用 Management Studio 启用包含的数据库  
+ 下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
+  
+1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
+  
+2.  在 **“高级”** 页面上的 **“包含”** 部分中，将 **“启用包含的数据库”** 选项设置为 **“True”**。  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+##  <a name="convert"></a> 将数据库转换为部分包含的数据库  
+ 通过更改 **CONTAINMENT** 选项可以将数据库转换为包含的数据库。  
+  
+### 使用 Transact-SQL 将数据库转换为部分包含的数据库  
+ 下面的示例将名为 `Accounting` 的数据库转换为部分包含的数据库。  
+  
+```tsql  
+USE [master]  
+GO  
+ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
+GO  
+```  
+  
+### 使用 Management Studio 将数据库转换为部分包含的数据库  
+ 下面的示例将数据库转换为部分包含的数据库。  
+  
+1.  在对象资源管理器中，展开“数据库”，右键单击要转换的数据库，然后单击“属性”。  
+  
+2.  在 **“选项”** 页面上，将 **“包含类型”** 选项更改为 **“部分”**。  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+##  <a name="users"></a> 将用户迁移为包含的数据库用户  
+ 以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
+  
+```tsql  
+DECLARE @username sysname ;  
+DECLARE user_cursor CURSOR  
+    FOR   
+        SELECT dp.name   
+        FROM sys.database_principals AS dp  
+        JOIN sys.server_principals AS sp   
+        ON dp.sid = sp.sid  
+        WHERE dp.authentication_type = 1 AND sp.is_disabled = 0;  
+OPEN user_cursor  
+FETCH NEXT FROM user_cursor INTO @username  
+    WHILE @@FETCH_STATUS = 0  
+    BEGIN  
+        EXECUTE sp_migrate_user_to_contained   
+        @username = @username,  
+        @rename = N'keep_name',  
+        @disablelogin = N'disable_login';  
+    FETCH NEXT FROM user_cursor INTO @username  
+    END  
+CLOSE user_cursor ;  
+DEALLOCATE user_cursor ;  
+```  
+  
+## 另请参阅  
+ [包含的数据库](../../relational-databases/databases/contained-databases.md)   
+ [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
+ [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
+  
+  
