@@ -1,23 +1,27 @@
 ---
 title: "卸载 Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# 卸载 Power Pivot for SharePoint
+# <a name="uninstall-power-pivot-for-sharepoint"></a>卸载 Power Pivot for SharePoint
   卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装是一个由多个步骤构成的操作，包括准备卸载、从场中删除功能和解决方案以及删除程序文件和注册表设置。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -66,7 +70,7 @@ caps.handback.revision: 27
 ##  <a name="bkmk_remove"></a> 步骤 2：从 SharePoint 删除功能和解决方案  
  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具从 SharePoint 中删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务和应用程序。  
   
--   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的 **db_owner**。  
+-   你必须是场管理员、Analysis Services 实例上的服务器管理员和场的配置数据库上的 **db_owner** 。  
   
 -   使用适合 SharePoint 版本的配置工具版本。 不能对 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安装使用这两个工具。  
   
@@ -112,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  若要查找并删除已存在于队列中的部署或收回作业，请执行以下操作：  
   
-1.  对于其他所有错误，请查看 ULS 日志。 有关详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 (Power Pivot for SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)。  
+1.  对于其他所有错误，请查看 ULS 日志。 有关详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 (Power Pivot for SharePoint)](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
 2.  以管理员身份启动 SharePoint Management Shell，然后运行以下命令查看队列中的作业：  
   
@@ -130,7 +134,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  通过依次单击 **“验证”** 和 **“运行”**，在该配置工具中重试该任务。  
   
- 或者，您可以使用 PowerShell 从场中删除功能和解决方案。 有关详细信息，请参阅[针对 Power Pivot for SharePoint 的 PowerShell 参考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)。  
+ 或者，您可以使用 PowerShell 从场中删除功能和解决方案。 有关详细信息，请参阅 [针对 Power Pivot for SharePoint 的 PowerShell 参考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="bkmk_uninstall"></a> 步骤 3：运行 SQL Server 安装程序以便从本地计算机中删除程序  
  删除程序文件时，需运行 SQL Server 安装程序来卸载软件。 卸载程序将删除安装程序已创建的文件和注册表项。 您可以使用“程序和功能”页来卸载软件。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的安装是 SQL Server 安装的一部分。  
@@ -146,7 +150,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      你可以从安装程序中选择 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 实例，然后选择“Analysis Services”  和“Analysis Services SharePoint 集成”  ，这样就可以只删除该功能，而保留其他功能。  
   
 ##  <a name="bkmk_addin"></a> 步骤 4：卸载 Power Pivot for SharePoint 加载项  
- 如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署具有两个或更多服务器且您安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序，则从安装它的每个服务器卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序以完全卸载所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 文件。 有关详细信息，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+ 如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署具有两个或更多服务器且您安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序，则从安装它的每个服务器卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序以完全卸载所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 文件。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 ##  <a name="verify"></a> 步骤 5：验证卸载情况  
   
@@ -179,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  在 Secure Store Service 中，删除包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用的存储凭据的所有目标应用程序。 在你卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 时，Secure Store Service 中的某些条目（但不是全部条目）将会被删除。 为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户创建的目标应用程序以及你为数据刷新创建的所有目标应用程序仍然存在，因此必须手动删除。  
   
-     相反，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务自动生成的单独目标应用程序将在卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时被自动删除。  
+     相反， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务自动生成的单独目标应用程序将在卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时被自动删除。  
   
 4.  在控制面板中，单击 **“程序”**，然后单击 **“卸载程序”** 。卸载不再使用的任何 Analysis Services 客户端库。 卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 时，将不删除 Analysis Services ADOMD.NET 和 Microsoft SQL Server 分析管理对象。 因为这些库可能由使用 Analysis Services 数据的其他程序使用，所以，SQL Server 安装程序将不会自动卸载它们。 如果不再需要，您必须单独卸载这些客户端库。  
   
@@ -187,8 +191,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      不要卸载 Analysis Services OLE DB 访问接口。 SharePoint 将 OLE DB 访问接口作为连接到 Analysis Services 数据库的 Excel 工作簿的必备软件安装。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 将安装更新的版本，但此版本是可以向后兼容的，因此，您应该在系统上保留此版本以免以后出现数据连接问题。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Power Pivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
+

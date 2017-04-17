@@ -1,29 +1,33 @@
 ---
 title: "Stretch Database 扩展事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stretch Database 扩展事件
+# <a name="extended-events-for-stretch-database"></a>Stretch Database 扩展事件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Stretch Database 提供了一系列扩展事件以进行故障排除。  
   
-有关详细信息，请参阅[扩展事件](../../relational-databases/extended-events/extended-events.md)。 有关如何启动扩展事件会话进行故障排除的详细信息，请参阅[创建扩展事件会话](Create%20an%20Extended%20Events%20Session.md)  
+有关详细信息，请参阅 [扩展事件](../../relational-databases/extended-events/extended-events.md)。 有关如何启动扩展事件会话进行故障排除的详细信息，请参阅 [创建扩展事件会话](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
-## Stretch Database 扩展事件列表  
+## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database 扩展事件列表  
   
 事件名称|事件说明   
 ---------|---------  
@@ -80,5 +84,7 @@ stretch_table_unprovision_completed|报告为未延伸表删除本地资源完�
 stretch_table_validation_error|报告用户启用延伸时表验证完成  
 stretch_unprovision_table_start|报告延伸表取消设置开始  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [对 Stretch Database 进行管理和故障排除](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
+

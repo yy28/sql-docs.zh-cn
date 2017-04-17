@@ -1,30 +1,34 @@
 ---
-title: "步骤 1：下载示例数据（数据库内高级分析教程） | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
+title: "步骤 1：下载示例数据（数据库内高级分析教程）| Microsoft Docs"
+ms.custom: 
+ms.date: 04/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
+- TSQL
 ms.assetid: 32a5d5ad-c58a-4669-a90d-ef296b48fcd8
 caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7490bf6191aad3b51195716f947ac87cf98599f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 步骤 1：下载示例数据（数据库内高级分析教程）
+# <a name="step-1-download-the-sample-data-in-database-advanced-analytics-tutorial"></a>步骤 1：下载示例数据（数据库内高级分析教程）
 在此步骤中，将下载示例数据集和演练中使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 数据和脚本文件都可在 Github 上共享，但 PowerShell 脚本会将数据和脚本文件下载到选择的本地目录。  
   
-## 下载数据和脚本  
+## <a name="download-the-data-and-scripts"></a>下载数据和脚本  
   
 1.  打开 Windows PowerShell 命令控制台。  
   
@@ -61,16 +65,18 @@ caps.handback.revision: 10
   
     **结果：**  
   
-    ![list of files downloaded by PowerShell script](../../advanced-analytics/r-services/media/rsql-devtut-filelist.PNG "list of files downloaded by PowerShell script")  
+    ![通过 PowerShell 脚本下载的文件列表](../../advanced-analytics/r-services/media/rsql-devtut-filelist.PNG "通过 PowerShell 脚本下载的文件列表")  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
 [步骤 2：使用 PowerShell 将数据导入 SQL Server](../../advanced-analytics/r-services/step-2-import-data-to-sql-server-using-powershell.md)  
   
-## 上一步  
+## <a name="previous-step"></a>上一步  
 [适用于 SQL 开发人员的数据库内高级分析（教程）](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQL Server R Services 教程](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md)  
   
   
   
+
+

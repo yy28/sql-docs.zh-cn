@@ -1,26 +1,30 @@
 ---
 title: "WSFC 仲裁模式和投票配置 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], WSFC 群集"
-  - "仲裁 [SQL Server], AlwaysOn 和 WSFC 仲裁"
-  - "故障转移群集 [SQL Server], AlwaysOn 可用性组"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# WSFC 仲裁模式和投票配置 (SQL Server)
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 Always On 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
   
  **本主题内容：**  
@@ -47,7 +51,7 @@ caps.handback.revision: 14
 > [!IMPORTANT]  
 >  如果 WSFC 群集因为仲裁失败而被设为脱机，则需要手动干预以便将其重新联机。  
 >   
->  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  有关详细信息，请参阅： [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
 ##  <a name="QuorumModes"></a> 仲裁模式  
   “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
@@ -65,7 +69,7 @@ caps.handback.revision: 14
 -   **仅限磁盘。** 共享磁盘群集资源指定为见证，并且从任何节点到该共享磁盘的连接也作为赞成投票计数。  
   
 > [!TIP]  
->  在将非对称存储配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 时，如果您具有奇数数目的投票节点，则通常应该使用节点的大多数仲裁模式；如果您具有偶数数目的投票节点，则通常应该使用节点和文件共享的大多数仲裁模式。  
+>  在将非对称存储配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时，如果您具有奇数数目的投票节点，则通常应该使用节点的大多数仲裁模式；如果您具有偶数数目的投票节点，则通常应该使用节点和文件共享的大多数仲裁模式。  
   
 ##  <a name="VotingandNonVotingNodes"></a> 投票和非投票节点  
  默认情况下，WSFC 群集中的每个节点都作为群集仲裁的成员包括；每个节点都具有用于确定群集整体运行状况的单个投票，并且每个节点都将持续尝试建立仲裁。  到目前为止对仲裁的论述已谨慎地将对群集运行状况进行投票的一组 WSFC 群集节点划分为“投票节点”。  
@@ -125,14 +129,15 @@ caps.handback.revision: 14
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Always On 可用性组向导中的仲裁投票配置检查](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/03/13/quorum-vote-configuration-check-in-Always%20On-availability-group-wizards-andy-jing.aspx)  
+-   [Always On 可用性组向导中的仲裁投票配置检查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
 -   [Windows Server 技术：故障转移群集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [故障转移群集分步指南：配置故障转移群集中的仲裁](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
+

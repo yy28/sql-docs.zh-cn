@@ -1,25 +1,29 @@
 ---
 title: "将 MicrosoftML 包与 SQL Server R Services 配合使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 705d56003364f7fecc45efb24094651d6c963cc8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将 MicrosoftML 包与 SQL Server R Services 配合使用
-Microsoft R Server 和 SQL Server vNext CTP 1.0 随附提供的 **MicrosoftML** 包包括 Microsoft 开发的多种机器学习算法，支持多核处理和快速数据流处理。 该包还包括文本处理和特征化的转换。
+# <a name="using-the-microsoftml-package-with-sql-server-r-services"></a>将 MicrosoftML 包与 SQL Server R Services 配合使用
+Microsoft R Server 和 SQL Server vNext CTP 1.0 随附提供的 [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) 包包括 Microsoft 开发的多种机器学习算法，支持多核处理和快速数据流处理。 该包还包括文本处理和特征化的转换。
 
 ### <a name="new-machine-learning-algorithms"></a>新的机器学习算法
 
@@ -32,7 +36,7 @@ Microsoft R Server 和 SQL Server vNext CTP 1.0 随附提供的 **MicrosoftML** 
 
 - **逻辑回归。** 逻辑回归模型类似于 RevoScaleR 中的 `rxLogit` 函数，添加了对 L1 和 L2 正则化的支持。 支持二元或多类分类。
 
-- **神经网络。** 神经网络模型可用于二元分类、多类分类和回归。 支持 GPU 加速和可自定义的复杂网络。
+- **神经网络。** 神经网络模型可用于二元分类、多类分类和回归。 使用单个 GPU 支持可自定义的复杂网络和 GPU 加速。
 
 - **单类 SVM。** 异常检测模型基于可用于不均衡数据集中二元分类的 SVM 方法。
 
@@ -68,6 +72,9 @@ Microsoft R Server 和 SQL Server vNext CTP 1.0 随附提供的 **MicrosoftML** 
 
 ## <a name="see-also"></a>另请参阅
 
+[MicrosoftML 简介](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)
 
 [RevoScaleR 函数参考](https://msdn.microsoft.com/microsoft-r/scaler/scaler)
+
+
 

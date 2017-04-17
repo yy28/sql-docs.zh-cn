@@ -1,0 +1,2 @@
+  从 SQL Server 2005 开始，架构的行为发生了更改。 因此，假设架构与数据库用户等价的代码不再返回正确的结果。 包含 sysobjects 的旧目录视图不应在曾经使用任何下列 DDL 语句的数据库中使用：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在这类数据库中，必须改用新目录视图。 新的目录视图将采用在 SQL Server 2005 中引入的使主体和架构分离的方法。 有关目录视图的详细信息，请参阅[目录视图 (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。
+   

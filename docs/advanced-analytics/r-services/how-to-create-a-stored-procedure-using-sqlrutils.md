@@ -1,31 +1,35 @@
 ---
 title: "如何使用 sqlrutils 创建存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9382a155346f9166a5dfd97a6bfb988221ca7f31
+ms.lasthandoff: 04/11/2017
+
 ---
-# 如何使用 sqlrutils 创建存储过程
+# <a name="how-to-create-a-stored-procedure-using-sqlrutils"></a>如何使用 sqlrutils 创建存储过程
 本主题介绍了转换 R 代码以作为 T-SQL 存储过程运行的步骤。 为了获得最佳的可能结果，可能需要对代码进行某种程度的修改，以确保所有输入可参数化。
 
 ## <a name="step-1-format-your-r-script"></a>步骤 1. 设置 R 脚本的格式
 
 1. 将所有代码包装到单个函数。
 
-   这意味着所有用于函数的变量必须在函数内进行定义，或应定义为输入参数。 请参阅本主题中的[示例代码](#samples)。
+   这意味着所有用于函数的变量必须在函数内进行定义，或应定义为输入参数。 请参阅本主题中的 [示例代码](#samples) 。
 
 ## <a name="step-2-standardize-the-inputs-and-outputs"></a>步骤 2. 标准化输入和输出
 
@@ -39,7 +43,7 @@ caps.handback.revision: 10
     - 逻辑
     - raw
 
-- 如果输入类型不是上述类型之一，则需进行序列化并作为 *raw* 传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
+- 如果输入类型不是上述类型之一，则需进行序列化并作为 *raw*传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
 
 该函数可输出以下项之一：
 
@@ -70,11 +74,11 @@ caps.handback.revision: 10
 
 1. 如果要从 R 代码而不是 SQL Server 执行存储过程，并且存储过程要求输入，则必须设置这些输入参数，然后才能执行函数： 
     - 调用 `getInputParameters` 以获取输入参数对象的列表。
-    - 定义 `$query` 或为每个输入参数设置 `$value`。 
+    - 定义 `$query` 或为每个输入参数设置 `$value` 。 
 
 2. 使用 `executeStoredProcedure` 从 R 开发环境执行该存储过程，传递设置的输入参数对象列表。
 
-## <a name="a-name-samplesaexamples-prepare-your-code"></a><a name = "samples"></a>示例：准备代码 
+## <a name = "samples"></a>Examples: Prepare your code 
 
 在此示例中，R 代码从数据库中读取，对数据执行某些转换，并将其保存到另一个数据库。 此简单示例仅用于演示如何重新排列 R 代码，以便为存储过程转换提供较简单的接口。
 
@@ -158,4 +162,6 @@ myetl1function <- function() {
 ## <a name="see-also"></a>另请参阅
 
 [使用 sqlrutils 生成存储过程](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+
+
 

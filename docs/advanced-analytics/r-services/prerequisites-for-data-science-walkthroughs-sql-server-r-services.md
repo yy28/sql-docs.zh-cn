@@ -1,27 +1,31 @@
 ---
 title: "数据科学演练的先决条件 (SQL Server R Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04485527230988a0ef8b6eddfe76d49007bef5dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据科学演练的先决条件 (SQL Server R Services)
+# <a name="prerequisites-for-data-science-walkthroughs-sql-server-r-services"></a>数据科学演练的先决条件 (SQL Server R Services)
 我们建议在可以连接到同一网络上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 R 工作站上运行演练。 还可在同时具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 R 开发环境的计算机上运行演练。 
   
   
@@ -43,7 +47,7 @@ caps.handback.revision: 12
   
     但是，不能使用 RStudio 的通用安装或其他环境完成本教程；还必须为 Microsoft R Open 安装 R 包和连接库。 有关详细信息，请参阅 [设置数据科学客户端](https://msdn.microsoft.com/library/mt696067.aspx)。  
 
-- 安装 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 时，将默认安装 R 工具（R.exe、RTerm.exe、RScripts.exe）。 如果不想安装 IDE，可以使用这些工具。  
+- 安装 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]时，将默认安装 R 工具（R.exe、RTerm.exe、RScripts.exe）。 如果不想安装 IDE，可以使用这些工具。  
   
   
 ## <a name="get-permissions-to-connect-to-sql-server"></a>获取连接到 SQL Server 的权限  
@@ -58,3 +62,5 @@ caps.handback.revision: 12
   
   
   
+
+

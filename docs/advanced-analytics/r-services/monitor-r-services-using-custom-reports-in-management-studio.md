@@ -1,22 +1,26 @@
 ---
 title: "使用 Management Studio 中的自定义报表监视 R Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 02/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d9a72fc5dec552353329e1cc89a756fbac43349c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 Management Studio 中的自定义报表监视 R Services
+# <a name="monitor-r-services-using-custom-reports-in-management-studio"></a>使用 Management Studio 中的自定义报表监视 R Services
 为简化 SQL Server R Services 的管理，产品团队提供了大量示例自定义报表，可将其添加到 SQL Server Management Studio 以查看 R Services 的详细信息，例如：
 
 - 活动 R 会话的列表
@@ -25,7 +29,7 @@ caps.handback.revision: 9
 - R Services 的扩展事件列表
 - 当前示例上安装的 R 包列表
 
-本主题介绍了报表的安装和使用方式。 若要深入了解 Management Studio 中的自定义报表，请参阅 [Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)。
+本主题介绍了报表的安装和使用方式。 若要深入了解 Management Studio 中的自定义报表，请参阅 [Management Studio 中的自定义报表](~/ssms/object/custom-reports-in-management-studio.md)。
 
 ## <a name="how-to-install-the-reports"></a>如何安装报表
 
@@ -40,9 +44,9 @@ caps.handback.revision: 9
 
 ### <a name="step-1-download-the-reports"></a>步骤 1. 下载报表
 
-1. 打开 GitHub 存储库，其中包含了示例数据库等所有 SQL Server 产品示例。 
-   + [Microsoft/sql-server-samples](https://github.com/Microsoft/sql-server-samples)
-   + [SSMS 自定义报告](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/SSMS-Custom-Reports)
+1. 打开包含 [SQL Server 产品示例](https://github.com/Microsoft/sql-server-samples)的 GitHub 存储库，并从此页下载示例报表： 
+
+   + [SSMS 自定义报告](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/ssms-custom-reports)
       
 2. 若要下载示例，还可登录到 GitHub 并设置示例的本地分叉。 
 
@@ -59,12 +63,13 @@ caps.handback.revision: 9
 
 ### <a name="step-3-run-the-reports"></a>步骤 3. 运行报表
 
-5. 在 Management Studio 中，右键单击要在其中运行报表的示例的“数据库”节点。
-6. 单击“报表”，然后单击“自定义报表”。 
-7. 在“打开文件”对话框中，找到自定义报表文件夹。
-8. 选择某个下载的 RDL 文件，然后单击“打开”。
+5. 在 Management Studio 中，右键单击要在其中运行报表的示例的“数据库”  节点。
+6. 单击“报表” ，然后单击“自定义报表” 。 
+7. 在“打开文件”  对话框中，找到自定义报表文件夹。
+8. 选择某个下载的 RDL 文件，然后单击“打开” 。
 
-> [!IMPORTANT] 这些报表在某些计算机（例如具有高 DPI 或分辨率大于 1080p 的显示设备）或某些远程桌面会话中无法使用。 SSMS 的报表查看器控件中存在 bug，它会导致报表崩溃。  
+> [!IMPORTANT]
+> 这些报表在某些计算机（例如具有高 DPI 或分辨率大于 1080p 的显示设备）或某些远程桌面会话中无法使用。 SSMS 的报表查看器控件中存在 bug，它会导致报表崩溃。  
 
 
 ## <a name="report-list"></a>报表列表
@@ -81,7 +86,8 @@ GitHub 中的产品示例存储库目前包括下列 SQL Server R Services报表
   
   在 SQL 计算上下文中运行 R 需要隐式身份验证。为检查此项，报表将验证是否存在面向组 SQLRUserGroup 的数据库登录名。
 
-  > [!NOTE] 若要深入了解这些字段，请参阅 Hadley Wickam 编写的 [Package metadata](http://r-pkgs.had.co.nz/description.html)（包源数据）。 例如，已引入 R 运行时的“别名”字段，帮助区分不同版本。 
+  > [!NOTE]
+  > 若要深入了解这些字段，请参阅 Hadley Wickam 编写的 [Package metadata](http://r-pkgs.had.co.nz/description.html)（包源数据）。 例如，已引入 R 运行时的“别名”  字段，帮助区分不同版本。 
 
  + **R Services - 配置实例** 
 
@@ -91,12 +97,12 @@ GitHub 中的产品示例存储库目前包括下列 SQL Server R Services报表
 
   使用此报表查看 R Services 的执行统计信息。 例如，可获取执行的 R 脚本总数、并行执行数，以及最常用的 RevoScaleR 函数。
   目前，报表仅监视 RevoScaleR 包函数的统计信息。
-  单击“查看 SQL 脚本”，获取此报表的 T-SQL 代码。 
+  单击“查看 SQL 脚本”  ，获取此报表的 T-SQL 代码。 
 
 + **R Services - 扩展事件**
 
   使用此报表查看可用于监视 R 脚本执行的扩展事件列表。 
-  单击“查看 SQL 脚本”，获取此报表的 T-SQL 代码。
+  单击“查看 SQL 脚本”  ，获取此报表的 T-SQL 代码。
 
 + **R Services - 包**
 
@@ -118,3 +124,5 @@ GitHub 中的产品示例存储库目前包括下列 SQL Server R Services报表
 [监视 R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [R Services 的扩展事件](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+
+

@@ -1,25 +1,29 @@
 ---
 title: "查看群集仲裁 NodeWeight 设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], WSFC 群集"
-  - "仲裁 [SQL Server], AlwaysOn 和 WSFC 仲裁"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1bd8e579c3d75e804a552622039053b6700a352a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看群集仲裁 NodeWeight 设置
+# <a name="view-cluster-quorum-nodeweight-settings"></a>查看群集仲裁 NodeWeight 设置
   本主题说明如何查看 Windows Server 故障转移群集 (WSFC) 群集中每个成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
   
 -   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-##### 查看 NodeWeight 设置  
+##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
 1.  连接到群集中的任意 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
 2.  查询 [sys].[dm_hadr_cluster_members] 视图。  
   
-### 示例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
  以下示例查询一个系统视图以返回该实例的群集中所有节点的值。  
   
 ```tsql  
@@ -60,7 +64,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-##### 查看 NodeWeight 设置  
+##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
 1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
   
@@ -70,7 +74,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
   
 4.  以可读格式输出群集节点属性。  
   
-### 示例 (PowerShell)  
+### <a name="example-powershell"></a>示例 (PowerShell)  
  以下示例为名为“Cluster001”的群集输出一些节点属性。  
   
 ```powershell  
@@ -87,20 +91,20 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中不推荐使用 cluster.exe 实用工具。  在将来的开发工作中，请将 PowerShell 与故障转移群集结合使用。  在 Windows Server 的下一版本中，将删除 cluster.exe 实用工具。 有关详细信息，请参阅 [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)（为故障转移群集将 cluster.exe 命令映射到 Windows PowerShell Cmdlet）。  
   
-##### 查看 NodeWeight 设置  
+##### <a name="to-view-nodeweight-settings"></a>查看 NodeWeight 设置  
   
 1.  通过 **“以管理员身份运行”**启动提升的命令提示符。  
   
 2.  使用 **cluster.exe** 以返回节点状态和 NodeWeight 值  
   
-### 示例 (Cluster.exe)  
+### <a name="example-clusterexe"></a>示例 (Cluster.exe)  
  以下示例为名为“Cluster001”的群集输出一些节点属性。  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [配置群集仲裁 NodeWeight 设置](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

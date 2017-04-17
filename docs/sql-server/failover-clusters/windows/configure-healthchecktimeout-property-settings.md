@@ -1,22 +1,26 @@
 ---
 title: "配置 HealthCheckTimeout 属性设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fe45e057f3e8a9a4cd105cad16ef773c2aed0928
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置 HealthCheckTimeout 属性设置
+# <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定以毫秒表示的一段时间，在这段时间内 SQL Server 资源 DLL 应等待 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 存储过程返回的信息，之后才能将 Always On 故障转移群集实例 (FCI) 报告为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
 -   **准备工作：**[限制和局限](#Limits)、[安全性](#Security)  
@@ -26,7 +30,7 @@ caps.handback.revision: 30
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Limits"></a> 限制和局限  
- 此属性的默认值为 60,000 毫秒（60 秒）。 最小值为 15,000 毫秒（15 秒）。  
+ 此属性的默认值为 30,000 毫秒（30 秒）。 最小值为 15,000 毫秒（15 秒）。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 30
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-##### 配置 HealthCheckTimeout 设置  
+##### <a name="to-configure-healthchecktimeout-settings"></a>配置 HealthCheckTimeout 设置  
   
 1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 30
 > [!TIP]  
 >  每次打开新的 PowerShell 窗口时，都需要导入 **FailoverClusters** 模块。  
   
-### 示例 (PowerShell)  
+### <a name="example-powershell"></a>示例 (PowerShell)  
  下面的示例将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源“`SQL Server (INST1)`”上的 HealthCheckTimeout 设置更改为 60000 毫秒。  
   
 ```powershell  
@@ -57,9 +61,9 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ```  
   
-### 相关内容 (PowerShell)  
+### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx)（故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
   
 -   [故障转移群集上的 Windows PowerShell 入门](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -87,7 +91,8 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "故障转移群集疑难解答 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/21/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "疑难解答, 故障转移群集"
-  - "故障转移群集, 疑难解答"
-  - "群集疑难解答"
+title: "故障转移群集故障排除 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/21/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- troublshooting, failover clustering
+- failover clustering, troubleshooting
+- cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 故障转移群集疑难解答
+# <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
   本主题提供有关以下问题的信息：  
   
 -   故障排除的基本步骤。  
@@ -32,11 +36,11 @@ caps.handback.revision: 12
   
 -   使用扩展存储过程和 COM 对象。  
   
-## 故障排除的基本步骤  
- 第一个诊断步骤是运行最新的群集验证检查。 有关验证的详细信息，请参阅[故障转移群集分步指南：针对故障转移群集验证硬件](https://technet.microsoft.com/library/cc732035.aspx)。  这可以在不中断任何服务的情况下完成，因为它不影响任何联机的群集资源。 一旦故障转移群集功能安装完成，就可以在任何时候，包括部署群集前、创建群集期间以及群集运行时进行验证。 实际上，一旦群集处于使用状态就会执行其他测试，检查高度可用的工作负载是否遵循了最佳做法。 在这几十项测试中，只有几项会影响正在运行的群集工作负载，而这些工作负载都处于存储类别中，因此跳过这整个类别是避免破坏性测试的简便方法。  
+## <a name="basic-troubleshooting-steps"></a>故障排除的基本步骤  
+ 第一个诊断步骤是运行最新的群集验证检查。 有关验证的详细信息，请参阅 [故障转移群集分步指南：针对故障转移群集验证硬件](https://technet.microsoft.com/library/cc732035.aspx)。  这可以在不中断任何服务的情况下完成，因为它不影响任何联机的群集资源。 一旦故障转移群集功能安装完成，就可以在任何时候，包括部署群集前、创建群集期间以及群集运行时进行验证。 实际上，一旦群集处于使用状态就会执行其他测试，检查高度可用的工作负载是否遵循了最佳做法。 在这几十项测试中，只有几项会影响正在运行的群集工作负载，而这些工作负载都处于存储类别中，因此跳过这整个类别是避免破坏性测试的简便方法。  
 故障转移群集附带了内置的保护措施，以防止在验证过程中运行存储测试时出现意外故障时间。 如果在启动验证时该群集有任何联机组，并且存储测试保持选定状态，则会提示用户确认是否要要运行所有测试（会导致故障时间），或跳过所有联机组的磁盘测试以避免故障时间。 如果已从测试中排除整个存储类别，则不会显示此提示。 这可以使群集验证在没有故障时间的情况下进行。  
   
-#### 如何重新验证群集  
+#### <a name="how-to-revalidate-your-cluster"></a>如何重新验证群集  
   
 1.  在故障转移群集管理单元中，控制台树内，确保选定“故障转移群集管理”，然后在“管理”下面，单击“验证配置”。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 12
   
 -   [推荐用于基于 Windows Server 2008 的故障转移群集的修补程序和更新](https://support.microsoft.com/kb/957311)  
   
-## 从故障转移群集故障中恢复  
+## <a name="recovering-from-failover-cluster-failure"></a>从故障转移群集故障中恢复  
  通常，故障转移群集故障有以下两个原因：  
   
 -   双节点群集的一个节点出现硬件故障。 此硬件故障可能是由 SCSI 卡或操作系统中的故障造成的。  
@@ -79,15 +83,15 @@ caps.handback.revision: 12
   
      有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)和[如何：从故障转移群集失败中恢复（案例 2）](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx)。  
   
-## 解决常见问题  
+## <a name="resolving-common-problems"></a>解决常见问题  
  以下列表介绍了常见的使用问题并说明如何解决这些问题。  
   
-### 问题：不正确使用命令提示语法以安装 SQL Server  
- **问题 1：**在从命令提示符使用 **/qn** 开关时，很难诊断安装程序问题，因为 **/qn** 开关取消了所有安装程序对话框和错误消息。 如果指定了 **/qn** 开关，则所有安装程序消息（包括错误消息）都将写入安装程序日志文件。 有关日志文件的详细信息，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>问题：不正确使用命令提示语法以安装 SQL Server  
+ **问题 1：** 在从命令提示符使用 **/qn** 开关时，很难诊断安装程序问题，因为 **/qn** 开关取消了所有安装程序对话框和错误消息。 如果指定了 **/qn** 开关，则所有安装程序消息（包括错误消息）都将写入安装程序日志文件。 有关日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
  **解决方法 1**：使用 **/qb** 开关替代 **/qn** 开关。 如果使用 **/qb** 开关，将显示每个步骤中的基本 UI（包括错误消息）。  
   
-### 问题：在迁移到另一个节点之后，SQL Server 无法登录到网络  
+### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>问题：在迁移到另一个节点之后，SQL Server 无法登录到网络  
  **问题 1：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务帐户无法与域控制器取得联系。  
   
  **解决方法 1：**检查事件日志以查看是否存在网络连接问题，例如适配器故障或 DNS 问题。 验证是否能成功对域控制器运行 ping 命令。  
@@ -96,7 +100,7 @@ caps.handback.revision: 12
   
  **解决方法 2：** 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码。 如果不这样做，并且更改了其中一个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户密码，也必须更改所有其他节点上的密码。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器会自动执行此操作。  
   
-### 问题：SQL Server 无法访问群集磁盘  
+### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>问题：SQL Server 无法访问群集磁盘  
  **问题 1：** 并未在所有节点上都更新了固件或驱动程序。  
   
  **解决方法 1：** 确保所有节点都使用正确的固件版本和相同的驱动程序版本。  
@@ -105,15 +109,15 @@ caps.handback.revision: 12
   
  **解决方法 2：** 两台服务器上的群集磁盘的磁盘驱动器号必须相同。 如果不相同，请检查操作系统和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 群集服务 (MSCS) 的原始安装。  
   
-### 问题：SQL Server 服务故障导致故障转移  
+### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>问题：SQL Server 服务故障导致故障转移  
  **解决方法：** 若要防止特定服务的故障导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组进行故障转移，请使用 Windows 中的群集管理器配置这些服务，如下所示：  
   
 -   在 **“全文属性”** 对话框的 **“高级”** 选项卡中，清除 **“影响组”** 复选框。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 导致故障转移，则全文搜索服务将重新启动。  
   
-### 问题：SQL Server 不自动启动  
+### <a name="problem-sql-server-does-not-start-automatically"></a>问题：SQL Server 不自动启动  
  **解决方法：** 使用 MSCS 中的群集管理器自动启动某个故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务应该设置为手动启动，应该在 MSCS 中配置群集管理器，使其启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 有关详细信息，请参阅 [管理服务](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)。  
   
-### 问题：网络名称离线，无法使用 TCP/IP 连接到 SQL Server  
+### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>问题：网络名称离线，无法使用 TCP/IP 连接到 SQL Server  
  **问题 1：** DNS 失败，而群集资源设置为需要 DNS。  
   
  **解决方法 1：** 更正 DNS 问题。  
@@ -124,9 +128,9 @@ caps.handback.revision: 12
   
  **问题 3：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不是使用命名管道进行连接。  
   
- **解决方法 3：** 若要使用命名管道进行连接，请使用 SQL Server 配置管理器创建一个别名，以连接到适当的计算机。 例如，如果有一个群集包含两个节点（**节点 A** 和**节点 B**）和一个具有默认实例的故障转移群集实例 (**Virtsql**)，则可以执行下列步骤连接到网络名称资源已离线的服务器：  
+ **解决方法 3：** 若要使用命名管道进行连接，请使用 SQL Server 配置管理器创建一个别名，以连接到适当的计算机。 例如，如果有一个群集包含两个节点（**节点 A** 和 **节点 B**）和一个具有默认实例的故障转移群集实例 (**Virtsql**)，则可以执行下列步骤连接到网络名称资源已离线的服务器：  
   
-1.  使用群集管理器确定包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的组在哪个节点上运行。 对于本例，此节点是**节点 A**。  
+1.  使用群集管理器确定包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的组在哪个节点上运行。 对于本例，此节点是 **节点 A**。  
   
 2.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **在该计算机上启动**服务。 有关使用 **net start**的详细信息，请参阅 [手动启动 SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)。  
   
@@ -134,19 +138,19 @@ caps.handback.revision: 12
   
 4.  在客户端计算机上，启动 SQL Server 配置管理器。  
   
-5.  创建别名 SQLTEST1 以通过命名管道连接到此管道名称。 为此，请输入**节点 A** 作为服务器名称并将管道名称编辑为 \\\\.\pipe\\$$\VIRTSQL\sql\query。  
+5.  创建别名 SQLTEST1 以通过命名管道连接到此管道名称。 为此，请输入 **节点 A** 作为服务器名称并将管道名称编辑为 \\\\.\pipe\\$$\VIRTSQL\sql\query。  
   
 6.  使用别名 SQLTEST1 作为服务器名称连接到此实例。  
   
-### 问题：群集上的 SQL Server 安装程序因发生错误 11001 而失败  
- **问题：**[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] 中存在孤立的注册表项  
+### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>问题：群集上的 SQL Server 安装程序因发生错误 11001 而失败  
+ **问题：** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] 中存在孤立的注册表项  
   
  **解决方法：** 确保当前未使用 MSSQL.X 注册表配置单元，然后删除该群集项。  
   
-### 问题：群集安装错误：“安装程序没有足够的特权来访问目录 \<drive>\Microsoft SQL Server。 安装无法继续。 请以管理员身份登录，或与您的系统管理员联系”  
+### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>问题：群集安装错误：“安装程序没有足够的特权，无法访问此目录: \<drive>\Microsoft SQL Server。 安装无法继续。 请以管理员身份登录，或与您的系统管理员联系”  
  **问题：** 此错误是由于 SCSI 共享驱动器未正确分区而引起的。  
   
- **解决方法：**执行下列步骤以在该共享磁盘上重新创建一个分区：  
+ **解决方法：** 执行下列步骤以在该共享磁盘上重新创建一个分区：  
   
 1.  从群集中删除磁盘资源。  
   
@@ -160,8 +164,8 @@ caps.handback.revision: 12
   
 6.  运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-### 问题：应用程序无法在分布式事务中登记 SQL Server 资源  
- **问题：**由于在 Windows 中未完全配置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)，因此应用程序可能无法在分布式事务中登记 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源。 此问题可能会影响使用分布式事务的链接服务器、分布式查询和远程存储过程。 有关如何配置 MS DTC 的详细信息，请参阅 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>问题：应用程序无法在分布式事务中登记 SQL Server 资源  
+ **问题：** 由于在 Windows 中未完全配置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)，因此应用程序可能无法在分布式事务中登记 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源。 此问题可能会影响使用分布式事务的链接服务器、分布式查询和远程存储过程。 有关如何配置 MS DTC 的详细信息，请参阅 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)。  
   
  **解决方法：** 若要避免此类问题，必须在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和配置 MS DTC 的服务器上完全启用 MS DTC 服务。  
   
@@ -179,14 +183,15 @@ caps.handback.revision: 12
   
 6.  单击 **“应用”** 和 **“确定”** 以关闭 **“分布式事务处理协调器”** 窗口。 关闭 **“计算机管理”** 窗口。 关闭 **“管理工具”** 窗口。  
   
-## 使用扩展存储过程和 COM 对象  
- 如果在故障转移群集配置中使用扩展存储过程，所有扩展存储过程都必须安装在与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 相关的群集磁盘中。 这样做可确保当某节点发生故障转移时，仍能继续使用扩展存储过程。  
+## <a name="using-extended-stored-procedures-and-com-objects"></a>使用扩展存储过程和 COM 对象  
+ 如果在故障转移群集配置中使用扩展存储过程，所有扩展存储过程都必须安装在与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]相关的群集磁盘中。 这样做可确保当某节点发生故障转移时，仍能继续使用扩展存储过程。  
   
  如果扩展存储过程使用 COM 组件，管理员必须在群集的所有节点中都注册 COM 组件。 活动节点的注册表中必须包含加载和执行 COM 组件所需的信息，才能创建这些组件。 否则，这些信息将保留在最先注册 COM 组件的计算机的注册表中。  
   
-## 另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+## <a name="see-also"></a>另请参阅  
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [扩展存储过程的工作方式](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [扩展存储过程的执行特征](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   
   
+

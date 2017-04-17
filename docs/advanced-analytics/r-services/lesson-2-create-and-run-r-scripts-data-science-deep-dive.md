@@ -1,35 +1,39 @@
 ---
-title: "第 2 课：创建和运行 R 脚本（对数据科学的深入探讨） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
+title: "第 2 课：创建和运行 R 脚本（对数据科学的深入探讨）| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
 caps.latest.revision: 18
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43107a55e685cd5234b1acf975324b7ccdb5656c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 2 课：创建和运行 R 脚本（对数据科学的深入探讨）
-设置数据源并建立一个或多个计算上下文之后，现在可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行一些高性能的 R 脚本。  在本课程中，将使用服务器计算上下文执行一些常见的机器学习任务：  
+# <a name="lesson-2-create-and-run-r-scripts-data-science-deep-dive"></a>第 2 课：创建和运行 R 脚本（对数据科学的深入探讨）
+设置数据源并建立一个或多个计算上下文之后，现在可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行一些高性能的 R 脚本。  在本课程中，将使用服务器计算上下文执行一些常见的机器学习任务：  
   
 -   可视化数据并生成一些摘要统计信息    
 -   创建线性回归模型    
 -   创建逻辑回归模型    
 -   对新数据进行评分并创建分数直方图  
   
-## 更改服务器的计算上下文  
+## <a name="change-compute-context-to-the-server"></a>更改服务器的计算上下文  
 运行任何 R 代码前，需要指定当前或活动计算上下文。  
   
 1.  若要激活已经使用 R 定义了的计算上下文，请使用 rxSetComputeContext 函数，如下所示：  
@@ -52,7 +56,7 @@ caps.handback.revision: 18
 > [!NOTE]  
 > 指定了计算上下文后，在更改前，它将保持活动状态。 但是，任何无法在远程服务器上下文中运行的 R 脚本都将在本地运行。  
   
-## 计算摘要统计信息  
+## <a name="compute-summary-statistics"></a>计算摘要统计信息  
 若要查看计算上下文的工作原理，请尝试使用 *sqlFraudDS* 数据源生成一些摘要统计信息。  请记住，数据源对象只是定义你将使用的数据，而不会更改计算上下文。
 
 + 若要在本地执行 summary，请使用 *rxSetComputeContext* 并指定“local”关键字。
@@ -62,7 +66,7 @@ caps.handback.revision: 18
 1.  调用 *rxSummary* 函数并传递所需的参数（如公式和数据源）并将结果分配给变量 *sumOut*。  
   
     ```R  
-    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)  
+    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)  
   
     ```  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 18
  *Male   6154*    
   *Female 3846*  
   
-## 添加最大值和最小值  
+## <a name="add-maximum-and-minimum-values"></a>添加最大值和最小值  
 根据计算的摘要统计信息，你会发现一些有用的数据信息，可以将这些数据放入数据源，以备日后进一步计算使用。 例如，最小值和最大值可用于计算直方图，因此可以将高值和低值添加到 RxSqlServerData 数据源。  
   
 幸运的是，[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 包含的优化函数可以非常高效地将整数数据转换成分类因素数据。  
@@ -136,7 +140,7 @@ caps.handback.revision: 18
 3.  更新列集合后，可以应用以下语句创建之前定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的更新版本。  
   
     ```R  
-    sqlFraudDS <- RxSqlServerData(  
+    sqlFraudDS \<- RxSqlServerData(  
         connectionString = sqlConnString,   
         table = sqlFraudTable,   
         colInfo = ccColInfo,        
@@ -150,11 +154,13 @@ caps.handback.revision: 18
 > [!TIP]
 > 如果忘记了使用的是哪个计算上下文，请使用 `rxGetComputeContext()`。  如果返回值是 `RxLocalSeq Compute Context`，则使用的是本地计算上下文。
   
-## 下一步  
-[使用 R 可视化 SQL Server 数据（对数据科学的深入探讨）](../../advanced-analytics/r-services/visualize-sql-server-data-using-r-data-science-deep-dive.md)  
+## <a name="next-step"></a>下一步  
+[使用 R 可视化 SQL Server 数据（对数据科学的深入探讨）](../../advanced-analytics/r-services/lesson-2-1-visualize-sql-server-data-using-r.md)  
   
-## 上一步  
-[定义并使用计算上下文（对数据科学的深入探讨）](../../advanced-analytics/r-services/define-and-use-compute-contexts-data-science-deep-dive.md)  
+## <a name="previous-step"></a>上一步  
+[定义并使用计算上下文（对数据科学的深入探讨）](../../advanced-analytics/r-services/lesson-1-3-define-and-use-compute-contexts.md)  
   
   
   
+
+

@@ -1,24 +1,28 @@
 ---
-title: "R Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: R Services | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
 caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0faff61dffddad30d6f9d16bec4e3c94e6673b26
+ms.lasthandoff: 04/11/2017
+
 ---
-# R Services
-  Microsoft R Services 提供两个服务器平台，用于将热门的开放源代码 R 语言与业务应用程序集成，这两个平台分别为：用于与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成的 **SQL Server R Services（数据库内）**和 **Microsoft R Server**。  
+# <a name="r-services"></a>R Services
+  Microsoft R Services 提供两个服务器平台，用于将热门的开放源代码 R 语言与业务应用程序集成，这两个平台分别为：**SQL Server R Services（数据库内）**（用于与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集成）和 **Microsoft R Server**（用于在 Windows 和 Linux 服务器上进行企业级 R 部署）。  
   
 -   **R Services（数据库内）**  
   
@@ -69,3 +73,4 @@ caps.handback.revision: 20
  [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)  
   
   
+

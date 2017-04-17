@@ -1,31 +1,35 @@
 ---
 title: "SQL Server Data Tools 客户体验改善计划 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Data Tools 客户体验改善计划
+# <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 客户体验改善计划
   了解客户体验改善计划 (CEIP) 如何帮助 Microsoft 确定改善软件的方法。  可以配置工具以随时选择加入或退出。  
   
 > [!NOTE]  
 >  有关 Microsoft SQL Server 2016 版本和其他任何产品及服务的用户数据集收集和使用方式的说明，请参考 [Microsoft 隐私声明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)。  
   
-## 选择加入和退出 SQL Server Data Tools 的 CEIP  
+## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>选择加入和退出 SQL Server Data Tools 的 CEIP  
  客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择加入或退出适用于 Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) 的 CEIP。  
   
-### 对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
  适用于 Visual Studio 2015 的 SSDT 是附带 SQL Server 2016 的数据建模工具。 它使用内置于 Visual Studio 2015 的 CEIP 选项。 可以根据此 [Visual Studio 的帮助文档](http://go.microsoft.com/fwlink/?LinkId=517102)来了解有关如何在 Visual Studio 2015 中通过 CEIP 提交反馈的详细信息。  
   
  对于 SQL Server 2016 的预览版本，默认启用 CEIP。 可以按照下面的说明将其关闭，或重新打开。  
@@ -67,7 +71,7 @@ caps.handback.revision: 11
   
  有关 CEIP 收集、处理或传送的信息的详细信息，请参阅 [Microsoft 客户体验改善计划隐私声明](http://go.microsoft.com/fwlink/?LinkId=52143)。  
   
-### 对 CEIP 和 SQL Server Data Tools - BI (SSDT-BI) 的选择和控制  
+### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>对 CEIP 和 SQL Server Data Tools - BI (SSDT-BI) 的选择和控制  
  如果你在使用 SSDT-BI，安装期间将有机会参与 CEIP。 稍后，可以通过客户端工具或编辑注册表设置来更改 SSDT-BI 的 CEIP 配置。  
   
  **在适用于 Visual Studio 2013 的 SSDT 和 SSDT-BI 中**  
@@ -80,7 +84,7 @@ caps.handback.revision: 11
   
      要启用 CEIP，请单击“是，我愿意参加” 。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”**。  
   
  **使用基于注册表的策略或组策略**  
   
@@ -99,3 +103,4 @@ caps.handback.revision: 11
 -   1 表示选择加入  
   
   
+

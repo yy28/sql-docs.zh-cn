@@ -1,0 +1,1 @@
+![下载](../ssdt/media/download.png)[安装 pyodbc Python 驱动程序](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)![下载](../ssdt/media/download.png)[安装 pymssql Python 驱动程序](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

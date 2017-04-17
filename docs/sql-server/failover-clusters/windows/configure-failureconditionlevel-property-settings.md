@@ -1,27 +1,31 @@
 ---
 title: "配置 FailureConditionLevel 属性设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 46e7f2aca995373d14ce0096a4dba4204cc69ece
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置 FailureConditionLevel 属性设置
+# <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重启的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
   
--   **开始之前：**  [FailureConditionLevel 属性设置](#Restrictions)，[安全性](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
--   **若要配置 FailureConditionLevel 属性设置，请使用 **[PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要配置 FailureConditionLevel 属性设置，请使用**[PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 29
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-##### 配置 FailureConditionLevel 设置  
+##### <a name="to-configure-failureconditionlevel-settings"></a>配置 FailureConditionLevel 设置  
   
 1.  通过 **“以管理员身份运行”**启动提升的 Windows PowerShell。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 29
 > [!TIP]  
 >  每次打开新的 PowerShell 窗口时，都需要导入 **FailoverClusters** 模块。  
   
-### 示例 (PowerShell)  
+### <a name="example-powershell"></a>示例 (PowerShell)  
  下面的示例将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源“`SQL Server (INST1)`”上的 FailureConditionLevel 设置更改为在出现严重服务器错误时执行故障转移或重新启动。  
   
 ```powershell  
@@ -57,9 +61,9 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ```  
   
-### 相关内容 (PowerShell)  
+### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx)（故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
   
 -   [故障转移群集上的 Windows PowerShell 入门](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -88,8 +92,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
- [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

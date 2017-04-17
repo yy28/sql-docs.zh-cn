@@ -1,24 +1,28 @@
 ---
-title: "SQL Server R 服务的扩展事件 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server R Services 的扩展事件 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a60e753555c6d4ace7a849e930992cd5afded441
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server R 服务的扩展事件
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 提供了一套用于故障排除相关的操作的扩展事件 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 或 R 作业发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+# <a name="extended-events-for-sql-server-r-services"></a>SQL Server R 服务的扩展事件
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 提供了一组扩展事件，用于对与 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 相关的操作或发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 R 作业进行故障排除。  
   
  若要查看与 SQL Server 相关的事件的列表，请从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行以下查询。  
   
@@ -36,7 +40,7 @@ select o.name as event_name, o.description
  有关使用扩展事件的一般信息，请参阅 [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。  
 
   
-##  <a name="a-namebkmkxeventtablea-table-of-extended-events"></a><a name="bkmk_xeventtable"></a> 扩展事件表  
+##  <a name="bkmk_xeventtable"></a> 扩展事件表  
   
 |事件|说明|改用|  
 |-----------|-----------------|---------|  
@@ -48,7 +52,7 @@ select o.name as event_name, o.description
 |satellite_authentication_completion|对基于 TCP 或 Namedpipe 的连接的身份验证完成时触发。||  
 |satellite_authorization_completion|对基于 TCP 或 Namedpipe 的连接的授权完成时触发。||  
 |satellite_cleanup|卫星调用清理时触发。|仅从外部进程触发。 请参阅有关从外部进程收集事件的说明。|  
-|satellite_data_chunk_sent|卫星连接完成发送单个数据区块时触发。|此事件报告发送的行数，列数、 SNI 数据包 usedm 数和发送数据区块时以毫秒为单位已用的时间。 信息可以帮助你了解多少时间所用传递不同类型的数据，并且使用将多少个数据包。|  
+|satellite_data_chunk_sent|卫星连接完成发送单个数据区块时触发。|发送区块时，此事件报告发送的行数、列数、SNI 数据包 usedm 的数目以及所用时间（以毫秒为单位）。 这些信息可帮助你了解传递不同类型的数据时花费了多长时间，以及使用了多少个数据包。|  
 |satellite_data_receive_completion|通过卫星连接接收查询所需的所有数据时触发。|仅从外部进程触发。 请参阅有关从外部进程收集事件的说明。|  
 |satellite_data_send_completion|通过卫星连接发送会话所需的所有数据时触发。||  
 |satellite_data_send_start|数据传输开始时（就在第一个数据区块发送之前）触发。||  
@@ -71,18 +75,19 @@ select o.name as event_name, o.description
 |satellite_data_chunk_sent|卫星连接完成发送单个数据区块时触发。|包含列数、行数、数据包数量，以及发送数据区块所用的时间等信息。|  
 |satellite_sessionId_mismatch|消息的会话 ID 不匹配||  
   
-###  <a name="a-namebkmkexternaleventsa-collecting-events-from-external-processes"></a><a name="bkmk_externalevents"></a> 从外部进程收集事件  
- [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 启动在 SQL Server 进程外部运行某些服务。 若要捕获与这些外部进程相关的事件，必须创建一个事件跟踪配置文件，并将文件放在与进程的可执行文件的相同的目录中。  
+###  <a name="bkmk_externalevents"></a> Collecting Events from External Processes  
+ [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 启动在 SQL Server 进程外部运行的一些服务。 若要捕获与这些外部进程相关的事件，必须创建一个事件跟踪配置文件，并将文件放在与进程的可执行文件的相同的目录中。  
   
 -   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-     若要捕获与 Launchpad 相关的事件，请将放 *.config* SQL Server 实例的 Binn 目录中的文件。  在默认安装中，这将是︰   `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`。  
+     若要捕获与 Launchpad 相关的事件，请将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。  在默认安装中，此目录为：  `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`。  
   
--   **BXLServer** 是支持 SQL 与 R 和其他外部的脚本语言的可扩展性的附属进程。  
+-   **BXLServer** 是使用 R 及其他外部脚本语言支持 SQL 可扩展性的附属进程。  
   
-     若要捕获与 BXLServer 相关的事件，将放置 *.config* R 安装目录中的文件。  在默认安装中，这将是︰   `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
+     若要捕获与 BXLServer 相关的事件，请将 *.config* 文件放在 R 安装目录中。  在默认安装中，此目录为：  `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
   
-> [!IMPORTANT]   此配置文件的名称必须与可执行文件相同，并使用“[名称].xevents.xml”的格式。 换而言之，这些文件的名称如下所示：  
+> [!IMPORTANT]
+>   此配置文件的名称必须与可执行文件相同，并使用“[名称].xevents.xml”的格式。 换而言之，这些文件的名称如下所示：  
 >   
 > - Launchpad.xevents.xml  
 > - bxlserver.xevents.xml  
@@ -90,7 +95,7 @@ select o.name as event_name, o.description
  配置文件自身具有以下格式：  
   
 ```  
-<?xml version="1.0" encoding="utf-8"?>  
+\<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  
@@ -106,17 +111,17 @@ select o.name as event_name, o.description
   
 ```  
   
- **说明：**  
+ **注意：**  
   
--   若要配置跟踪，编辑 *会话名称* 占位符，文件名的占位符 (`[SessionName].xel`)，以及你想要捕获的事件的名称 (如 `[XEvent Name 1]`, ，`[XEvent Name 1]`)。  
+-   若要配置跟踪，请编辑 *session name* 占位符、文件名的占位符 (`[SessionName].xel`) 和要捕获的事件的名称（如 `[XEvent Name 1]`、`[XEvent Name 1]`）。  
   
--   任意数量的 `event package` 标记可能出现，而且将会收集，只要名称属性是否正确。  
+-   可能出现任意数量的 `event package` 标记，并且只要名称属性正确就会收集此标记。  
   
 ### <a name="example-capturing-launchpad-events"></a>示例：捕获 Launchpad 事件  
  下面的示例显示了 Launchpad 服务的事件跟踪定义。  
   
 ```  
-<?xml version="1.0" encoding="utf-8"?>  
+\<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -132,9 +137,9 @@ select o.name as event_name, o.description
   
 ```  
   
- **说明：**  
+ **注意：**  
   
--   位置 *.config* SQL Server 实例的 Binn 目录中的文件。  
+-   将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。  
   
 -   此文件必须命名为 *Launchpad.xevents.xml*。  
   
@@ -142,7 +147,7 @@ select o.name as event_name, o.description
  下面的示例显示了 BXLServer 可执行文件的事件跟踪定义。  
   
 ```  
-<?xml version="1.0" encoding="utf-8"?>  
+\<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -165,15 +170,16 @@ select o.name as event_name, o.description
   
 ```  
   
- **说明：**  
+ **注意：**  
   
--   位置 *.config* 与 BXLServer 可执行文件位于同一目录中的文件。  
+-   将 *.config* 文件放在与 BXLServer 可执行文件相同的目录中。  
   
 -   此文件必须命名为 *bxlserver.xevents.xml*。  
   
 ## <a name="see-also"></a>另请参阅
-[R Services 的自定义管理 Studio 报告](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)  
+[R Services 的自定义 Management Studio 报告](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
  [管理和监视 R 解决方案](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
   
   
+

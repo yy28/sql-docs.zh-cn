@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server 移动报表发布服务器</Token>
+\<Token xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server Mobile Report Publisher</Token>

@@ -1,30 +1,34 @@
 ---
 title: "SQL Server 2016 中的新增功能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "新建 sql server"
-helpviewer_keywords: 
-  - "新功能 [SQL Server]"
-  - "SQL Server 2014, 新增功能"
-  - "SQL Server 2008 新增功能"
-  - "新增功能 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "新建 sql server"
+helpviewer_keywords:
+- new features [SQL Server]
+- SQL Server, what's new
+- SQL Server 2008 what's new
+- what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 224
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-caps.handback.revision: 224
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 2016 中的新增功能
+# <a name="what39s-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
  [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 是 Microsoft 数据平台历史上的最大飞跃。 这一可缩放数据库平台内包含的内容全面（从无与伦比的内存性能、全新的安全性创新和高可用性，到可使重要应用程序智能化的高级分析），使用它可获取有关所有事务性和分析性数据的实时见解。
  
  本主题概述了详细 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 组件级别增新功能信息的链接。   
@@ -67,9 +71,11 @@ caps.handback.revision: 224
   
     
 ## <a name="see-also"></a>另请参阅    
- + [![发行说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](../Topic/SQL%20Server%202016%20Release%20Notes.md)  [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。 
+ +   [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。 
 + [SQL Server 2016 数据表](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [SQL Server各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)
- + [安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)
- + [从安装向导安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)
- [安装程序和服务安装](Setup%20and%20Servicing%20Installation.md)    
+ + [安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+ + [从安装向导安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ [安装程序和服务安装](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+
+

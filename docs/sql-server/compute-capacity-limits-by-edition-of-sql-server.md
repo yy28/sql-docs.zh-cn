@@ -1,26 +1,30 @@
 ---
-title: "Compute Capacity Limits by Edition of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processors [SQL Server], supported"
-  - "number of processors supported"
-  - "maximum number of processors supported"
+title: "按 SQL Server 版本划分的计算能力限制 | Microsoft Docs"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compute Capacity Limits by Edition of SQL Server
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   本主题讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
   
  ![符合计算机能力限制](../sql-server/media/compute-capacity-limits.gif "符合计算机能力限制")  
@@ -77,7 +81,7 @@ caps.handback.revision: 60
   
  这些限制适用于单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 它们代表单个实例将使用的最大计算能力。 它们不会限制可能部署该实例的服务器。 实际上，在同一物理服务器上部署多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例可以有效使用物理服务器的计算能力，因为更多插槽和/或内核的计算能力超出了下表中的计算能力限制。  
   
- 下表指定每个版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的单个实例的计算能力限制：  
+ 下表指定每个版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的单个实例的计算能力限制：  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|单个实例使用的最大计算能力 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|单个实例使用的最大计算能力（AS、RS）1|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
@@ -91,10 +95,12 @@ caps.handback.revision: 60
   
  如果每个虚拟处理器的性能很重要，则最好禁用超线程。 用户可以在 BIOS 设置过程中使用 BIOS 的处理器设置启用或禁用超线程，但这通常是服务器范围内的操作，该操作将影响运行在该服务器上的所有工作负荷。 这就可能要求将要运行在虚拟化环境中的工作负荷与会受益于物理操作系统环境中的超线程性能提升的工作负荷分隔开。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 的版本和组件](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 的最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [SQL Server 2016 安装快速入门](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [SQL Server 2016 安装快速入门](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

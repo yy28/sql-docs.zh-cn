@@ -1,25 +1,29 @@
 ---
 title: "如何使用 olapR 创建 MDX 查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
 caps.latest.revision: 3
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be676888e4cf90193a4992f29f6a5f60be89bbbd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 如何使用 olapR 创建 MDX 查询
+# <a name="how-to-create-mdx-queries-using-olapr"></a>如何使用 olapR 创建 MDX 查询
 ## <a name="how-to-build-an-mdx-query-from-r"></a>如何从 R 生成 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
@@ -34,7 +38,7 @@ caps.handback.revision: 3
      + `rows()` 提供要在 ON ROWS 参数中使用的度量值的名称。
      + `slicers()` 指定要作为切片器使用的字段或成员。 切片器就像应用于所有 MDX 查询数据的筛选器一样。
      
-     + `axis()` 指定要在查询中使用的附加轴的名称。 OLAP 多维数据集最多可以包含 128 个查询轴。 通常前四个轴称为“列”、“行”、“页”和“章”。 如果查询相对简单，可以使用函数 `columns`、`rows` 等生成查询。     
+     + `axis()` 指定要在查询中使用的附加轴的名称。 OLAP 多维数据集最多可以包含 128 个查询轴。 通常前四个轴称为“列”、“行”、“页”和“章”。 如果查询相对简单，可以使用函数 `columns`、 `rows`等生成查询。     
      但也可以使用带非零索引值的 `axis()` 函数，生成具有许多限定符的 MDX 查询或将额外维度添加为限定符。
 
 5. 将句柄和已完成的 MDX 查询传递到函数 `executeMD` 或 `execute2D`，具体取决于结果的外观。
@@ -121,7 +125,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 
 #### <a name="to-list-the-cubes-available-on-the-specified-connection"></a>列出指定连接上可用的多维数据集
 
-若要查看有权查看的实例上的所有多维数据集或透视，将句柄作为 `explore` 的参数提供。
+若要查看有权查看的实例上的所有多维数据集或透视，将句柄作为 `explore`的参数提供。
 请注意，最终结果不是多维数据集；TRUE 仅表示元数据操作成功。 如果参数无效，将引发错误。
 
 ```R
@@ -146,7 +150,7 @@ explore(ocs)
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs <- OlapConnection(cnnstr)
+ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
@@ -164,7 +168,7 @@ explore(ocs, "Sales")
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs <- OlapConnection(cnnstr)
+ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
@@ -182,3 +186,4 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 ## <a name="see-also"></a>另请参阅
 
 [在 R 中使用来自 OLAP 多维数据集的数据](../../advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md)
+

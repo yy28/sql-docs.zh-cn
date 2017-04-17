@@ -1,27 +1,31 @@
 ---
 title: "使用 ODBC 保存和加载 SQL Server 中的 R 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- R
 ms.assetid: 6ac2e971-6b4f-4c73-ba57-29c716abd057
 caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59d0129fe58ac12bb45fb8f425ad50a7d8863362
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 ODBC 保存和加载 SQL Server 中的 R 对象
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 保存和加载 SQL Server 中的 R 对象
 SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据需要从表中加载对象，无需重新运行 R 代码或重新定型模型。 对于一些情况来说（例如，定型并保存模型，稍后用于评分或分析），将 R 对象保存到数据库这一功能十分关键。 
 
-为了提高此关键步骤的性能，**RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 此外，可通过使用 *RxOdbcData* 调用 ODBC 连接上的这些新函数，从 R 环境直接将 R 对象保存到 SQL Server。
+为了提高此关键步骤的性能， **RevoScaleR** 包现在包括新的序列化和反序列化函数，可极大地改善性能，并且更简洁地存储对象。 此外，可通过使用 *RxOdbcData*调用 ODBC 连接上的这些新函数，从 R 环境直接将 R 对象保存到 SQL Server。
 
 ## <a name="overview"></a>概述
 
@@ -44,7 +48,7 @@ SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据�
 
 - `rxListKeys` 以键/值对的方式列出所有可用对象。 这有助于确定 R 对象的名称和版本。
 
-有关每个函数语法的详细帮助，请使用 R 帮助。 之后，可在 MSDN 的 [ScaleR 引用](https://msdn.microsoft.com/microsoft-r/scaler/scaler)中查看详细信息。
+有关每个函数语法的详细帮助，请使用 R 帮助。 之后，可在 MSDN 的 [ScaleR 引用](https://msdn.microsoft.com/microsoft-r/scaler/scaler) 中查看详细信息。
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>如何使用 ODBC 在 SQL Server 中存储 R 对象
 
@@ -118,3 +122,5 @@ SQL Server R Services 可将序列化的 R 对象存储在表中，然后根据�
 ## <a name="see-also"></a>另请参阅
 
 [R Services 功能和任务](../../advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md)
+
+

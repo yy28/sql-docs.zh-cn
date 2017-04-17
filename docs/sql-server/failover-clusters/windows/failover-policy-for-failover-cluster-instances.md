@@ -1,24 +1,28 @@
 ---
 title: "故障转移群集实例的故障转移策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "灵活的故障转移策略"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# 故障转移群集实例的故障转移策略
+# <a name="failover-policy-for-failover-cluster-instances"></a>故障转移群集实例的故障转移策略
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 依赖于基础 WSFC 服务进行故障转移检测。 因此，两个机制决定了 FCI 的故障转移行为：一个是本机 WSFC 功能，一个是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序带来的功能。  
@@ -79,7 +83,7 @@ caps.handback.revision: 45
   
  系统、资源和查询进程组件用于故障检测。 io_subsytem 和事件组件仅用于诊断目的。  
   
- 还将信息的每个行集写入 SQL Server 群集诊断日志。 有关详细信息，请参阅[查看和读取故障转移群集实例诊断日志](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)。  
+ 还将信息的每个行集写入 SQL Server 群集诊断日志。 有关详细信息，请参阅 [查看和读取故障转移群集实例诊断日志](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)。  
   
 > [!TIP]  
 >  SQL Server AlwaysOn 技术使用 sp_server_diagnostic 存储过程时，该存储过程可用于任何 SQL Server 实例以帮助检测和解决问题。  
@@ -107,7 +111,7 @@ caps.handback.revision: 45
   
  有关维护仲裁运行状况的详细信息，请参阅：[WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

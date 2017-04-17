@@ -1,26 +1,30 @@
 ---
-title: "第 4 课：生成并保存模型（数据科学端到端演练） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
+title: "第 4 课：生成并保存模型（数据科学端到端演练）| Microsoft Docs"
+ms.custom: 
+ms.date: 11/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
 caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 423b7a7a0aadd7a22e301a43721aa6d1a15802cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 4 课：生成并保存模型（数据科学端到端演练）
+# <a name="lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough"></a>第 4 课：生成并保存模型（数据科学端到端演练）
 在本课程中，你将学习如何生成机器学习模型并将该模型保存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。  
   
 ## <a name="creating-a-classification-model"></a>创建分类模型  
@@ -37,12 +41,13 @@ caps.handback.revision: 18
 -   direct_distance  
 
 ### <a name="create-the-model-using-rxlogit"></a>使用 rxLogit 创建模型  
-1.  调用包括在 **RevoScaleR** 包中的 *rxLogit* 函数，创建逻辑回归模型。  
+1.  调用包括在 *RevoScaleR* 包中的 **rxLogit** 函数，创建逻辑回归模型。  
   
     ```R  
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource))    
     ```  
-  
+    + 生成模型的调用封装在 system.time 函数中。 这样，你便可获得生成模型所需的时间。
+    
 2.  生成模型后，你需要使用 `summary` 函数检查模型，并查看系数。  
   
     ```  
@@ -90,9 +95,12 @@ caps.handback.revision: 18
 2.  调用 *rxPredict* 函数以生成结果。  
   
     ```R  
-    rxPredict(modelObject = logitObj, data = featureDataSource, outData = scoredOutput,   
-                       predVarNames = "Score", type = "response",   
-                       writeModelVars = TRUE, overwrite = TRUE)  
+    rxPredict(modelObject = logitObj, 
+        data = featureDataSource, 
+        outData = scoredOutput,   
+        predVarNames = "Score", 
+        type = "response",   
+        writeModelVars = TRUE, overwrite = TRUE)  
     ```  
 
   
@@ -114,9 +122,9 @@ caps.handback.revision: 18
   
     请注意，你还必须指定小费（尝试预测的变量）标签列和存储该预测（_评分_）列的名称。  
   
-2.  通过打开 R 图形设备，或在 RStudio 中单击“绘制”窗口查看图形。  
+2.  通过打开 R 图形设备，或在 RStudio 中单击“绘制”  窗口查看图形。  
   
-    ![ROC plot for the model](../../advanced-analytics/r-services/media/rsql-e2e-rocplot.png "ROC plot for the model")  
+    ![模型的 ROC 绘图](../../advanced-analytics/r-services/media/rsql-e2e-rocplot.png "模型的 ROC 绘图")  
 
     此图形在远程计算上下文中创建，然后返回到 R 环境。   
     
@@ -143,11 +151,11 @@ caps.handback.revision: 18
   
 3.  这两种情况都将生成以下绘图。  
   
-    ![plotting model performance using R](../../advanced-analytics/r-services/media/rsql-e2e-performanceplot.png "plotting model performance using R")  
+    ![使用 R 测绘模型性能](../../advanced-analytics/r-services/media/rsql-e2e-performanceplot.png "使用 R 测绘模型性能")  
   
 ## <a name="deploying-a-model"></a>部署模型  
 
-构建模型并确定其运行良好之后，就可对该模型进行操作。 因为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 允许使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程调用 R 模型，在客户端应用程序中使用 R 非常容易。  
+构建模型并确定其运行良好之后，就可对该模型进行操作  。 因为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 允许使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程调用 R 模型，在客户端应用程序中使用 R 非常容易。  
   
 但是，从外部应用程序中调用模型之前，必须将模型保存到用于生产的数据库中。 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中，已定型的模型以二进制形式存储在 **varbinary(max)**类型的单个列中。
 
@@ -168,7 +176,7 @@ caps.handback.revision: 18
     modelbinstr=paste(modelbin, collapse="")  
     ```  
   
-    *serialize* 函数已被纳入 R **基础**包，并为序列化提供一个到连接的简单的低级别接口。 有关详细信息，请参阅 [http://www.inside-r.org/r-doc/base/serialize](http://www.inside-r.org/r-doc/base/serialize)。  
+    *serialize* 函数已被纳入 R **基础** 包，并为序列化提供一个到连接的简单的低级别接口。 有关详细信息，请参阅 [http://www.inside-r.org/r-doc/base/serialize](http://www.inside-r.org/r-doc/base/serialize)。  
   
 ### <a name="move-the-model-to-sql-server"></a>将模型移动到 SQL Server
 
@@ -179,7 +187,7 @@ caps.handback.revision: 18
     conn <- odbcDriverConnect(connStr )  
   
     # persist model by calling a stored procedure from SQL  
-    q<-paste("EXEC PersistModel @m='", modelbinstr,"'", sep="")  
+    q\<-paste("EXEC PersistModel @m='", modelbinstr,"'", sep="")  
     sqlQuery (conn, q)    
     ```  
 
@@ -197,7 +205,8 @@ BEGIN
         insert into nyc_taxi_models (model) values (convert(varbinary(max),@m,2))  
 END   
 ```  
-> [!TIP] 建议创建 helper 函数（例如此存储过程），以便更轻松地在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中管理和更新 R 模型。  
+> [!TIP]
+> 建议创建 helper 函数（例如此存储过程），以便更轻松地在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中管理和更新 R 模型。  
   
   
 ### <a name="invoke-the-saved-model"></a>调用已保存的模型  
@@ -217,3 +226,5 @@ END
   
   
   
+
+

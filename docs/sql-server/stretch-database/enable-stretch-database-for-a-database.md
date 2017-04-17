@@ -1,27 +1,30 @@
 ---
 title: "为数据库启用 Stretch Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stretch Database, 启用数据库"
-  - "为数据库启用 Stretch Database"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为数据库启用 Stretch Database
+# <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”，以打开“为数据库启用 Stretch”向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
@@ -30,11 +33,12 @@ caps.handback.revision: 69
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
 
- >   [!NOTE] 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
+ >   [!NOTE]
+ > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
  
-## 开始操作之前  
+## <a name="before-you-get-started"></a>开始操作之前  
   
--   在为数据库配置 Stretch 之前，建议你运行 Stretch Database Advisor 以识别适合配置 Stretch 的数据库和表。 Stretch Database Advisor 也能识别阻止问题。 有关详细信息，请参阅[通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)。  
+-   在为数据库配置 Stretch 之前，建议你运行 Stretch Database Advisor 以识别适合配置 Stretch 的数据库和表。 Stretch Database Advisor 也能识别阻止问题。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  
   
 -   查看 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
   
@@ -94,7 +98,7 @@ GO
   
         -   如果通过运行向导启用 Stretch Database，则可以在那时创建凭据。  
   
-        -   如果计划通过运行 **ALTER DATABASE** 启用 Stretch Database，则必须在运行 **ALTER DATABASE** 以启用 Stretch Database 之前手动创建凭据。 
+        -   如果计划通过运行 **ALTER DATABASE**启用 Stretch Database，则必须在运行 **ALTER DATABASE** 以启用 Stretch Database 之前手动创建凭据。 
         
         下面是创建一个新凭据的示例。
   
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以启用其他表。  
   
 -   [数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 以查看数据迁移的状态。  
@@ -145,8 +149,9 @@ GO
   
 -   [还原已启用延伸的数据库](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## 另请参阅  
- [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库以及表](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>另请参阅  
+ [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

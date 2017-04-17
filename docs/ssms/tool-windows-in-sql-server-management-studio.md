@@ -1,0 +1,46 @@
+---
+title: "SQL Server Management Studio 中的工具窗口 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], tool windows
+- tool windows [SQL Server Management Studio]
+ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
+caps.latest.revision: 3
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 106bcdf98b6b7979d0fd24921fd506459748fc46
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 为所有开发和管理阶段提供了很多功能强大的工具窗口。 某些工具可用于任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 组件，而其他一些工具则只能用于某些组件。 下表标识了可以用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]组件的工具。  
+  
+|||  
+|-|-|  
+|**工具**|**用途**|  
+|[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”菜单访问该工具。|  
+|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”菜单访问该工具。|  
+|[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”菜单访问该工具。|  
+|[动态帮助](../ssms/user-assistance-in-sql-server-management-studio.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
+  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的工具可以一起工作。 例如，您可以：  
+  
+-   向对象资源管理器注册服务器。  
+  
+-   从对象资源管理器打开与具体数据库连接的“SQL 编辑器”窗口。  
+  
+## <a name="see-also"></a>另请参阅  
+[使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+  
+

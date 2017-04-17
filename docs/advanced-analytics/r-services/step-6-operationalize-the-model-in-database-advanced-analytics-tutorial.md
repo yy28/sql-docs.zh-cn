@@ -1,27 +1,31 @@
 ---
-title: "步骤 6：操作模型（数据库中的高级分析教程） | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
+title: "步骤 6：操作模型（数据库内高级分析教程）| Microsoft Docs"
+ms.custom: 
+ms.date: 04/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
+- TSQL
 ms.assetid: 52b05828-11f5-4ce3-9010-59c213a674d1
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 497e8b23e40d97ab25143bcd2b8302d7e1eecd70
+ms.lasthandoff: 04/11/2017
+
 ---
-# 步骤 6：操作模型（数据库中的高级分析教程）
+# <a name="step-6-operationalize-the-model-in-database-advanced-analytics-tutorial"></a>步骤 6：操作模型（数据库中的高级分析教程）
 在此步骤中，你将学习使用存储过程操作模型。 此存储过程可由其他应用程序直接调用，以就新的观测进行预测。  
   
 在此步骤中，你将学习从存储过程调用 R 模型的两种方法：  
@@ -32,7 +36,7 @@ caps.handback.revision: 11
   
 首先，让我们看看一般情况下评分的工作原理。  
   
-## 基本评分  
+## <a name="basic-scoring"></a>基本评分  
 存储过程 _PredictTip_ 说明了在存储过程中包装预测调用的基本语法。  
   
 ```  
@@ -64,15 +68,15 @@ GO
   
 -   SELECT 语句从数据库中获取序列化的模型，并将模型存储在 R 变量 `mod` 中以便使用 R 对其进行进一步处理。  
   
--   从 `@inquery` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet` 中。 此数据帧将被传递给 R 中的 `rxPredict` 函数，该函数将生成评分。  
+-   从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中指定的 `@inquery`查询中获得要评分的新案例，它是存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧将被传递给 R 中的 `rxPredict` 函数，该函数将生成评分。  
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,            predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`  
   
     由于数据帧可以包含单个行，你可以使用相同的代码来进行批量或单个评分。  
   
--   `rxPredict` 函数返回的值是 **float**，它表示给小费（任意数量）的概率。  
+-   `rxPredict` 函数返回的值是 **float** ，它表示给小费（任意数量）的概率。  
   
-## 使用 SELECT 查询进行批量评分  
+## <a name="batch-scoring-using-a-select-query"></a>使用 SELECT 查询进行批量评分  
 现在让我们看看批量评分的工作原理。  
   
 1.  我们先获取要处理的较小输入数据集。  
@@ -115,9 +119,9 @@ GO
 *1  280 0.7 2013-05-11 12:22:01.000   0.5598517959*  
 *1  308 0.7 2013-04-10 08:06:00.000   0.4478814362*  
   
-你将使用此查询作为存储过程 _PredictTipBatchMode_ 的输入，它作为下载的一部分提供。  
+你将使用此查询作为存储过程 _PredictTipBatchMode_的输入，它作为下载的一部分提供。  
   
-2.  首先，花点时间查看 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中存储过程 _PredictTipBatchMode_ 的代码。  
+2.  首先，花点时间查看 _中存储过程_ PredictTipBatchMode [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的代码。  
   
     ```  
     /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/  
@@ -182,14 +186,14 @@ GO
   
 4.  存储过程将返回一系列值，表示对每个“排名前 10 的行程”的预测。 回头看输入值，所有“排名前 10 的行程”都是行程距离相对较短的单乘客行程。 根据数据来看，司机很有可能不会在这类行程中获得小费。  
   
-    你可能还会返回该预测的概率评分（而不是返回有小费/无小费的结果），然后将一个 WHERE 子句应用到_分数_列的值以使用如 0.5 或 0.7 之类的阈值将评分分类为“可能会给小费”或“不可能给小费”。 此步骤不包含在存储过程中，但很容易执行。  
+    你可能还会返回该预测的概率评分（而不是返回有小费/无小费的结果），然后将一个 WHERE 子句应用到 _分数_ 列的值以使用如 0.5 或 0.7 之类的阈值将评分分类为“可能会给小费”或“不可能给小费”。 此步骤不包含在存储过程中，但很容易执行。  
   
-## 对单独的行进行评分  
+## <a name="score-individual-rows"></a>对单独的行进行评分  
 有时你想要从应用程序以单一值传递并基于这些值获取单个结果。 例如，你可以设置 Excel 工作表、Web 应用程序或 Reporting Services 报表，以调用存储过程和提供用户键入或选择的输入信息。  
   
 在本部分中，你将了解如何使用存储过程创建单个预测。  
   
-1.  花点时间查看存储过程 _PredictTipSingleMode_ 的代码，它作为下载的一部分提供。  
+1.  花点时间查看存储过程 _PredictTipSingleMode_的代码，它作为下载的一部分提供。  
   
     ```  
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,  
@@ -240,7 +244,7 @@ GO
   
     -   此存储过程将多个单一值作为输入，例如乘客计数、行程距离等。  
   
-        如果从外部应用程序调用存储过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 有关详细信息，请参阅[使用 R 数据类型](https://msdn.microsoft.com/library/mt590948.aspx)。  
+        如果从外部应用程序调用存储过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 有关详细信息，请参阅 [使用 R 数据类型](https://msdn.microsoft.com/library/mt590948.aspx)。  
   
     -   存储过程根据存储的 R 模型创建评分。  
   
@@ -264,16 +268,18 @@ GO
   
 3.  结果表明从排名前 10 的行程中获得小费的概率非常低，所有这些行程都是距离相对较短的单乘客行程。  
   
-## 结论  
+## <a name="conclusions"></a>结论  
 在本教程中，你已了解如何使用存储过程中嵌入的 R 代码。 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成使其更易于部署 R 模型以进行预测，将模型再定型合并为企业数据工作流的一部分也变得更加容易。  
   
   
-## 上一步  
+## <a name="previous-step"></a>上一步  
 [步骤 4：使用 T-SQL 创建数据功能](../../advanced-analytics/r-services/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [适用于 SQL 开发人员的数据库内高级分析（教程）](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
 [SQL Server R Services 教程](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md)  
   
   
   
+
+

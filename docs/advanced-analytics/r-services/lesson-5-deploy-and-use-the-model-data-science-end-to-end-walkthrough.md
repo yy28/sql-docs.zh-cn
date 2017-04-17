@@ -1,26 +1,30 @@
 ---
-title: "第 5 课：部署和使用模型（数据科学端到端演练） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
+title: "第 5 课：部署和使用模型（数据科学端到端演练）| Microsoft Docs"
+ms.custom: 
+ms.date: 11/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
 caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 753420824012402c14921811745693e2f1910442
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 5 课：部署和使用模型（数据科学端到端演练）
+# <a name="lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough"></a>第 5 课：部署和使用模型（数据科学端到端演练）
 在本课程中，你将通过在存储过程中包装持久化模型，在生产环境中使用 R 模型。 随后可以通过 R 或支持 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的任何应用程序编程语言（如 C#、Java、Python 等）调用存储过程，以使用模型对新的观测值进行预测。  
   
 可以通过两种不同方式来调用模型进行计分：  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
   
 ### <a name="use-the-stored-procedure-predicttipbatchmode"></a>使用存储过程 PredictTipBatchMode
 
-1. 花点时间看一下用于定义存储过程 *PredictTipBatchMode* 的脚本。 它说明了如何使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]实施模型的几个方面。  
+1. 花点时间看一下用于定义存储过程 *PredictTipBatchMode*的脚本。 它说明了如何使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]实施模型的几个方面。  
   
     ```tsql  
     CREATE PROCEDURE [dbo].[PredictTipBatchMode]   
@@ -119,7 +123,7 @@ caps.handback.revision: 17
 你可能要将特征作为参数传递给存储过程，而不是使用查询将输入值传递给保存的 R 模型。  
 
 ### <a name="use-the-stored-procedure-predicttipsinglemode"></a>使用存储过程 PredictTipSingleMode
-1.  花点时间看一下以下用于存储过程 *PredictTipSingleMode* 的代码，它应已在你的数据库中创建。  
+1.  花点时间看一下以下用于存储过程 *PredictTipSingleMode*的代码，它应已在你的数据库中创建。  
   
     ```tsql  
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,  
@@ -181,7 +185,7 @@ caps.handback.revision: 17
   
 ### <a name="call-the-stored-procedure-and-pass-parameters"></a>调用存储过程并传递参数
 
-1. 在 SQL Server Management Studio 中，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 调用存储过程，并将其传递给所需的输入。 。  
+1. 在 SQL Server Management Studio 中，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** 调用存储过程，并将其传递给所需的输入。 的脚本。  
     ```tsql  
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303   
     ```  
@@ -198,14 +202,14 @@ caps.handback.revision: 17
   
 ### <a name="generate-scores"></a>生成评分
 
-1. 调用 **RODBC** 包的 *sqlQuery* 函数，并传递连接字符串和包含存储过程调用的字符串变量。  
+1. 调用 *RODBC* 包的 **sqlQuery** 函数，并传递连接字符串和包含存储过程调用的字符串变量。  
   
     ```R  
     # predict with stored procedure in single mode  
     sqlQuery (conn, q)   
     ```  
   
-    有关 **RODBC** 的详细信息，请参阅 [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery)。  
+    有关 **RODBC**的详细信息，请参阅 [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery)。  
   
 ## <a name="conclusion"></a>结语  
 现在，你已学习了如何处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据并将已定型 R 模型保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，那么基于此数据集创建一些其他模型对于你而言应该比较容易。 例如，你可能会尝试创建类似以下这些的模型：  
@@ -216,8 +220,8 @@ caps.handback.revision: 17
 我们还建议你查看一些其他示例和资源： 
 + [数据科学方案和解决方案模板](../../advanced-analytics/r-services/data-science-scenarios-and-solution-templates.md)
 + [数据库内高级分析](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)
-+ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)（Microsoft R - 深入探究数据分析）
-+ [Additional Resources](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)（其他资源）
++ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++ [Additional Resources](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
 ## <a name="previous-lesson"></a>前一课  
 [第 4 课：生成并保存模型（数据科学端到端演练）](../../advanced-analytics/r-services/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md)  
   
@@ -226,3 +230,5 @@ caps.handback.revision: 17
   
   
   
+
+

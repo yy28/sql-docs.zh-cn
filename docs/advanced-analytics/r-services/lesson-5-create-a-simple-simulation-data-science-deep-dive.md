@@ -1,26 +1,30 @@
 ---
-title: "第 5 课：创建简单模拟（对数据科学的深入探讨） | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
+title: "第 5 课：创建简单模拟（对数据科学的深入探讨）| Microsoft Docs"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
 caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0a77be2be7944ed26cfa819eeaa19d29b603a2df
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 5 课：创建简单模拟（对数据科学的深入探讨）
+# <a name="lesson-5-create-a-simple-simulation-data-science-deep-dive"></a>第 5 课：创建简单模拟（对数据科学的深入探讨）
 目前为止，一直使用的是 SQL Server R Services 提供的专门用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和本地计算上下文之间移动数据的 R 函数。 但是，假设编写了自己的自定义 R 函数，并且想要在服务器上下文中运行它呢？  
   
 通过使用 *rxExec* 函数，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的上下文中调用任意函数。 还可以使用 rxExec 将工作显式分布给单个服务器节点中的内核。  
@@ -29,7 +33,7 @@ caps.handback.revision: 15
   
 有关更复杂的使用 rxExec 的示例，请参阅此文章：[http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)  
   
-## 创建函数  
+## <a name="create-the-function"></a>创建函数  
 常见的赌场游戏包含掷两枚骰子，规则如下：  
   
 -   如果第一次掷时掷到了 7 或 11，则胜。  
@@ -57,9 +61,9 @@ caps.handback.revision: 15
                 if (count == 1 && (roll == 7 || roll == 11))   
                 {  result <- "Win" }   
                 else if (count == 1 && (roll == 2 || roll == 3 || roll == 12))    
-                { result <- "Loss" }    
+                { result \<- "Loss" }    
                 else if (count > 1 && roll == 7 )   
-                { result <- "Loss" }    
+                { result \<- "Loss" }    
                 else if (count > 1 && point == roll)   
                 { result <- "Win" }    
                 else { count <- count + 1 }   
@@ -79,7 +83,7 @@ caps.handback.revision: 15
   
 现在看一下可如何多次运行函数，创建有助于确定获胜概率的模拟。  
   
-## 创建模拟  
+## <a name="create-the-simulation"></a>创建模拟  
 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上下文中运行任意函数，可以调用 rxExec 函数。 尽管 rxExec 也支持在服务器上下文的节点或内核之间并行分布式执行函数，但此处仅将其用于在服务器上运行自定义函数。  
   
 1.  调用自定义函数作为到 rxExec 的参数，以及修改模拟的某些其他参数。  
@@ -108,7 +112,7 @@ caps.handback.revision: 15
      *败  胜*   
      *12  8*  
   
-## 结论  
+## <a name="conclusions"></a>结论  
 通过本教程，应已熟练以下这些任务：  
   
 -   获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据用于分析  
@@ -119,15 +123,17 @@ caps.handback.revision: 15
   
 >  [!TIP]
 > 
-> 如果要使用更大的数据集（1000 万个观测值）体验这些技术，可以从 [http://packages.revolutionanalytics.com/datasets](http://packages.revolutionanalytics.com/datasets) 获取数据文件。  
+> 如果要使用更大的数据集（1000 万个观测值）体验这些技术，可以从 [http://packages.revolutionanalytics.com/datasets](http://packages.revolutionanalytics.com/datasets)获取数据文件。  
 >   
 > 若要通过更大的数据文件重新使用此演练，只需下载数据并修改数据源，如下所示：   
 >  -   将 ccFraudCsv 和 ccScoreCsv 变量设置为指向新的数据文件     
 >  -   将 sqlFraudTable 中引用的表名称更改为 ccFraud10    
 >  -   将 sqlScoreTable 中引用的表名称更改为 ccFraudScore10   
   
-## 上一步  
-[在 SQL Server 和 XDF 文件之间移动数据（对数据科学的深入探讨）](../../advanced-analytics/r-services/move-data-between-sql-server-and-xdf-file-data-science-deep-dive.md)  
+## <a name="previous-step"></a>上一步  
+[在 SQL Server 和 XDF 文件之间移动数据（对数据科学的深入探讨）](../../advanced-analytics/r-services/lesson-4-1-move-data-between-sql-server-and-xdf-file.md)  
   
   
   
+
+

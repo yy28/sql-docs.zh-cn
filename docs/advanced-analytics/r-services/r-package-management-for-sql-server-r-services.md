@@ -1,25 +1,29 @@
 ---
 title: "SQL Server R Services 的 R 包管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
+ms.custom: 
+ms.date: 04/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
 caps.latest.revision: 7
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7632c2238260b842db2646c3b58b009ffbb7887b
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server R Services 的 R 包管理
-为了更轻松地管理在 SQL Server 某实例上运行的 R 包，**RevoScaleR** 包现在包括支持 R 包的安装和管理的功能。 
+# <a name="r-package---management-for-sql-server-r-services"></a>SQL Server R Services 的 R 包管理
+为了更轻松地管理在 SQL Server 某实例上运行的 R 包， **RevoScaleR** 包现在包括支持 R 包的安装和管理的功能。 
 
 此新功能支持若干方案：
 
@@ -37,8 +41,15 @@ caps.handback.revision: 7
 - 每位数据科学家都可以安装对他人不可见的专用包，为他们提供独立的沙盒处理自己的 R 包。
 -  由于可将包的范围限制为数据库且每个用户会在每个数据库中获得独立包沙盒，因此更易于安装用法不同的相同 R 包版本。 
 
-> [!NOTE]
-> 当前，此功能仅发布供与 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 一起使用。 
+### <a name="supported-versions"></a>支持的版本
+
+**SQL Server 2016** 
+
+若要获取新的包管理功能，必须升级与 SQL Server 实例关联的 R 的实例。 这样，将安装 Microsoft R 的最新版本，还会将实例切换为使用新型生命周期策略。 有关详细信息，请参阅[使用 SqlBindR.exe 升级 R Services 的实例](https://docs.microsoft.com/sql/advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services)。
+
+**SQl Server vNext**
+
+此版本包含了包管理功能。    
 
 ## <a name="database-roles-and-database-scoping"></a>数据库角色和数据库作用域
 
@@ -133,7 +144,7 @@ caps.handback.revision: 7
 
 ### <a name="remove-a-package-from-sql-server"></a>从 SQL Server 删除包
 
-此示例将 **ggplot2** 包及其依赖项从计算上下文 *sqlServer* 删除。
+此示例将 **ggplot2** 包及其依赖项从计算上下文 *sqlServer*删除。
 
   ```R
   pkgs <- c("ggplot2")
@@ -142,4 +153,5 @@ caps.handback.revision: 7
 
 ## <a name="see-also"></a>另请参阅
 
-[如何启用或禁用 R 包管理](../../advanced-analytics/r-services/how-to-enable-or-disable-r-package-management.md)
+[如何启用或禁用 R 包管理](../../advanced-analytics/r-services/r-package-how-to-enable-or-disable.md)
+

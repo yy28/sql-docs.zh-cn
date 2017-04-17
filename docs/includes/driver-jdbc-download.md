@@ -1,0 +1,1 @@
+![下载](/Image/download.png)[下载 JDBC 驱动程序](http://go.microsoft.com/fwlink/?LinkId=245496)

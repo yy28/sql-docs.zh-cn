@@ -1,35 +1,39 @@
 ---
-title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 防火墙端口"
-  - "WMI 防火墙端口"
-  - "Windows 防火墙 [数据库引擎]"
-  - "防火墙系统, 配置"
-  - "advfirewall"
-  - "防火墙系统"
-  - "规则防火墙"
-  - "防火墙系统, 概述和端口列表"
-  - "1433 TCP 端口"
-  - "使用 netsh 打开端口"
-  - "端口 [SQL Server], TCP"
-  - "netsh to open firewall ports"
+title: "配置 Windows 防火墙以允许 SQL Server 访问 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Firewall ports
+- WMI firewall ports
+- Windows Firewall [Database Engine]
+- firewall systems, configuring
+- advfirewall
+- firewall systems
+- rules firewall
+- firewall systems, overview and port list
+- 1433 TCP port
+- portopening using netsh
+- ports [SQL Server], TCP
+- netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.lasthandoff: 04/11/2017
+
 ---
-# Configure the Windows Firewall to Allow SQL Server Access
+# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -47,7 +51,7 @@ caps.handback.revision: 48
   
 -   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
-## 主题内容  
+## <a name="in-this-topic"></a>主题内容  
  本主题包含以下部分：  
   
  [基本防火墙信息](#BKMK_basic)  
@@ -121,7 +125,7 @@ caps.handback.revision: 48
   
      “控制面板”中的 **“Windows 防火墙”** 项最适合于防火墙配置经验不足的用户以及要为非移动的计算机配置基本防火墙选项的用户。 也可以采用以下步骤通过 **run** 命令打开“控制面板”中的 **“Windows 防火墙”** 项：  
   
-    #### 打开“Windows 防火墙”项  
+    #### <a name="to-open-the-windows-firewall-item"></a>打开“Windows 防火墙”项  
   
     1.  在 **“开始”** 菜单上，单击 **“运行”**，然后输入 `firewall.cpl`。  
   
@@ -129,7 +133,7 @@ caps.handback.revision: 48
   
 -   **Microsoft 管理控制台 (MMC)**  
   
-     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。  
+     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
   
 -   **netsh**  
   
@@ -153,37 +157,37 @@ caps.handback.revision: 48
   
     -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](http://support.microsoft.com/kb/947213)  
   
-## 使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 下面几个表可有助于您确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的端口。  
+## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 下面几个表可有助于您确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的端口。  
   
-###  <a name="BKMK_ssde"></a> 数据库引擎使用的端口  
+###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  下表列出了 [!INCLUDE[ssDE](../../includes/ssde-md.md)]经常使用的端口。  
   
 |应用场景|端口|注释|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例|TCP 端口 1433|这是允许通过防火墙的最常用端口。 它适用于与默认[!INCLUDE[ssDE](../../includes/ssde-md.md)]安装或作为计算机上唯一运行实例的命名实例之间的例行连接。 （命名实例具有特殊的注意事项。 请参阅本主题后面的[动态端口](#BKMK_dynamic_ports)。）|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例|TCP 端口 1433|这是允许通过防火墙的最常用端口。 它适用于与默认 [!INCLUDE[ssDE](../../includes/ssde-md.md)]安装或作为计算机上唯一运行实例的命名实例之间的例行连接。 （命名实例具有特殊的注意事项。 请参阅本主题后面的 [动态端口](#BKMK_dynamic_ports) 。）|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例|此 TCP 端口是在启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时确定的动态端口。|请参阅下面 [动态端口](#BKMK_dynamic_ports)部分中的描述。 当使用命名实例时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务可能需要 UDP 端口 1434。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例|由管理员配置的端口号。|请参阅下面 [动态端口](#BKMK_dynamic_ports)部分中的描述。|  
 |专用管理连接|对于默认实例，为 TCP 端口 1434。 其他端口用于命名实例。 有关端口号，请查看错误日志。|默认情况下，不会启用与专用管理员连接 (DAC) 的远程连接。 若要启用远程 DAC，请使用外围应用配置器方面。 有关详细信息，请参阅 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Browser 服务|UDP 端口 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务用于侦听指向命名实例的传入连接，并为客户端提供与此命名实例对应的 TCP 端口号。 通常，只要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，就会启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服务。 如果客户端配置为连接到命名实例的特定端口，则不必启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|UDP 端口 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务用于侦听指向命名实例的传入连接，并为客户端提供与此命名实例对应的 TCP 端口号。 通常，只要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例，就会启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服务。 如果客户端配置为连接到命名实例的特定端口，则不必启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|可以在创建 HTTP 端点时指定。 对于 CLEAR_PORT 通信，默认端口为 TCP 端口 80，对于 SSL_PORT 通信，默认端口为 443。|用于通过 URL 实现的 HTTP 连接。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认实例。|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 端口 4022。 若要验证使用的端口，请执行下面的查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]，没有默认端口，不过这是联机丛书示例中使用的常规配置。|  
 |数据库镜像|管理员选择的端口。 若要确定此端口，请执行以下查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|对于数据库镜像，没有默认端口，不过联机丛书示例使用 TCP 端口 7022。 务必避免中断正在使用的镜像端点，尤其是处于带有自动故障转移功能的高安全模式下时。 防火墙配置必须避免破坏仲裁。 有关详细信息，请参阅[指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
-|复制|与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制连接使用典型的常规[!INCLUDE[ssDE](../../includes/ssde-md.md)]端口（供默认实例使用的 TCP 端口 1433 等）<br /><br /> 复制快照的 Web 同步和 FTP/UNC 访问要求在防火墙上打开其他端口。 为了将初始数据和架构从一个位置传输到另一个位置，复制可以使用 FTP（TCP 端口 21）或者通过 HTTP（TCP 端口 80）或文件共享进行的同步。 文件共享使用 UDP 端口 137 和 138，如果使用 NetBIOS，则还有 TCP 端口 139。 文件共享使用 TCP 端口 445。|对于通过 HTTP 进行的同步，复制使用 IIS 端点（其端口可配置，但默认情况下为端口 80），不过 IIS 进程通过标准端口（对于默认实例为 1433）连接到后端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 在使用 FTP 进行 Web 同步期间，FTP 传输是在 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器之间进行，而非在订阅服务器和 IIS 之间进行。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_IPsec) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅[运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
+|复制|与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制连接使用典型的常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 端口（供默认实例使用的 TCP 端口 1433 等）<br /><br /> 复制快照的 Web 同步和 FTP/UNC 访问要求在防火墙上打开其他端口。 为了将初始数据和架构从一个位置传输到另一个位置，复制可以使用 FTP（TCP 端口 21）或者通过 HTTP（TCP 端口 80）或文件共享进行的同步。 文件共享使用 UDP 端口 137 和 138，如果使用 NetBIOS，则还有 TCP 端口 139。 文件共享使用 TCP 端口 445。|对于通过 HTTP 进行的同步，复制使用 IIS 端点（其端口可配置，但默认情况下为端口 80），不过 IIS 进程通过标准端口（对于默认实例为 1433）连接到后端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 进行 Web 同步期间，FTP 传输是在 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器之间进行，而非在订阅服务器和 IIS 之间进行。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_IPsec) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
   
- 有关为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 Windows 防火墙的分步说明，请参阅[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
+ 有关为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 Windows 防火墙的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 ####  <a name="BKMK_dynamic_ports"></a> 动态端口  
- 默认情况下，命名实例（包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]）使用动态端口。 也就是说，每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，它都将确定一个可用端口并使用此端口号。 如果命名实例是安装的唯一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能使用 TCP 端口 1433。 如果还安装了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能会使用其他 TCP 端口。 由于所选端口可能会在每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时更改，因而很难配置防火墙以启用对正确端口号的访问。 因此，如果使用防火墙，则建议重新配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以每次都使用同一端口号。 这称为固定端口或静态端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure a server to listen on a specific tcp port.md)。  
+ 默认情况下，命名实例（包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]）使用动态端口。 也就是说，每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，它都将确定一个可用端口并使用此端口号。 如果命名实例是安装的唯一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能使用 TCP 端口 1433。 如果还安装了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能会使用其他 TCP 端口。 由于所选端口可能会在每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时更改，因而很难配置防火墙以启用对正确端口号的访问。 因此，如果使用防火墙，则建议重新配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以每次都使用同一端口号。 这称为固定端口或静态端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
  另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 **sqlservr.exe** 之类的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用具有高级安全性的 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”页的“本地端口”列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
   
 > [!NOTE]  
->  下面的过程将使用“控制面板”中的 **“Windows 防火墙”** 项。 高级安全 Windows 防火墙 MMC 管理单元可以配置更复杂的规则。 其中包括配置服务例外，这对于提供深度防御会非常有用。 请参阅下面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。  
+>  下面的过程将使用“控制面板”中的 **“Windows 防火墙”** 项。 高级安全 Windows 防火墙 MMC 管理单元可以配置更复杂的规则。 其中包括配置服务例外，这对于提供深度防御会非常有用。 请参阅下面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
   
-###### 使用“控制面板”中的“Windows 防火墙”项向防火墙添加程序例外。  
+###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>使用“控制面板”中的“Windows 防火墙”项向防火墙添加程序例外。  
   
 1.  在“控制面板”中的 **“Windows 防火墙”** 项的 **“例外”** 选项卡上，单击 **“添加程序”**。  
   
@@ -203,19 +207,19 @@ caps.handback.revision: 48
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTP 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 80|用于通过 URL 实现的 HTTP 连接。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置为通过 IIS/HTTPS 使用<br /><br /> （PivotTable® Service 使用 HTTP 或 HTTPS）|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。|  
   
- 如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
+ 如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
   
- 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅[将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services 使用的端口  
  下表列出了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]经常使用的端口。  
   
 |功能|端口|注释|  
 |-------------|----------|--------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服务|TCP 端口 80|用于通过 URL 实现的与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之间的 HTTP 连接。 建议不要使用预配置规则**万维网服务(HTTP)**。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 服务|TCP 端口 80|用于通过 URL 实现的与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之间的 HTTP 连接。 建议不要使用预配置规则 **万维网服务(HTTP)**。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置为通过 HTTPS 使用|TCP 端口 443|用于通过 URL 实现的 HTTPS 连接。 HTTPS 是使用安全套接字层 (SSL) 的 HTTP 连接。 建议不要使用预配置规则“安全万维网服务(HTTPS)”。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
   
- 当 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，还必须为这些服务打开相应的端口。 有关为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅[将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
+ 当 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例时，还必须为这些服务打开相应的端口。 有关为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
 ###  <a name="BKMK_ssis"></a> Integration Services 使用的端口  
  下表列出了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务经常使用的端口。  
@@ -224,16 +228,16 @@ caps.handback.revision: 48
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 远程过程调用 (MS RPC)<br /><br /> 由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时使用。|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在端口 135 上使用 DCOM。 服务控制管理器使用端口 135 执行诸如启动和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以及将控制请求传送到正在运行的服务等任务。 此端口号无法更改。<br /><br /> 仅当从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或自定义应用程序连接到远程 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服务实例时，才需要打开此端口。|  
   
- 有关为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅[为访问 SSIS 服务配置 Windows 防火墙](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md)。  
+ 有关为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置 Windows 防火墙的分步说明，请参阅 [Integration Services 服务 (SSIS 服务)](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
 ###  <a name="BKMK_additional_ports"></a> 其他端口和服务  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能依赖的一些端口和服务。  
   
 |应用场景|端口|注释|  
 |--------------|----------|--------------|  
-|Windows Management Instrumentation<br /><br /> 有关 WMI 的详细信息，请参阅 [WMI Provider for Configuration Management Concepts](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md)。|WMI 作为共享服务主机的一部分使用通过 DCOM 分配的端口运行。 WMI 可能使用 TCP 端口 135。<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器使用 WMI 列出和管理各个服务。 建议使用预配置规则组 **Windows 管理规范 (WMI)**。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
+|Windows Management Instrumentation<br /><br /> 有关 WMI 的详细信息，请参阅 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)。|WMI 作为共享服务主机的一部分使用通过 DCOM 分配的端口运行。 WMI 可能使用 TCP 端口 135。<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器使用 WMI 列出和管理各个服务。 建议使用预配置规则组 **Windows 管理规范 (WMI)**。 有关详细信息，请参阅下面的 [与其他防火墙规则的交互](#BKMK_other_rules) 部分。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC)|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)|如果应用程序使用分布式事务处理，可能必须要将防火墙配置为允许 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 在不同的 MS DTC 实例之间以及在 MS DTC 和资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间进行通信。 建议使用预配置的 **“分布式事务处理协调器”** 规则组。<br /><br /> 当在单独的资源组中为整个群集配置单个共享 MS DTC 时，应当将 sqlservr.exe 作为异常添加到防火墙。|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](http://go.microsoft.com/fwlink/?LinkId=118371)的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的浏览按钮使用 UDP 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 有关详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 端口 1434|UDP 是一种无连接协议。<br /><br /> 防火墙具有一个名为 [INetFwProfile 接口的 UnicastResponsesToMulticastBroadcastDisabled 属性](http://go.microsoft.com/fwlink/?LinkId=118371) 的设置，用于控制防火墙在对广播（或多播）UDP 请求的单播响应方面的行为。  它有以下两种行为：<br /><br /> 如果此设置为 TRUE，则根本不允许对广播进行任何单播响应。 枚举服务将失败。<br /><br /> 如果此设置为 FALSE（默认值），则允许单播响应 3 秒钟。 此时间长度不可配置。 在堵塞或长时间滞后的网络中，或者对于负载很重的服务器，尝试枚举 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可能会返回部分列表，这可能会误导用户。|  
 |<a name="BKMK_IPsec"></a> IPsec 通信|UDP 端口 500 和 UDP 端口 4500|如果域策略要求通过 IPSec 进行网络通信，还必须将 UDP 端口 4500 和 UDP 端口 500 添加到例外列表。 使用 Windows 防火墙管理单元中的“新建入站规则向导”可以选择 IPsec。 有关详细信息，请参阅下面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。|  
 |将 Windows 身份验证用于可信域|必须将防火墙配置为允许身份验证请求。|有关详细信息，请参阅 [如何为域和信任关系配置防火墙](http://support.microsoft.com/kb/179442/)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 群集|群集需要与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接相关的其他端口。|有关详细信息，请参阅 [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372)（启用网络以供群集使用）。|  
@@ -253,12 +257,12 @@ caps.handback.revision: 48
 -   [如何配置与防火墙一起使用的 RPC 动态端口分配](http://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> 与其他防火墙规则的交互  
- Windows 防火墙使用规则和规则组建立其配置。 每个规则或规则组通常与特定程序或服务相关，并且该程序和服务可以在您不知道的情况下修改或删除相应规则。 例如，规则组“万维网服务 (HTTP)”和“万维网服务 (HTTPS)”与 IIS 相关。 启用这些规则将打开端口 80 和 443，并且如果启用这些规则，则依赖端口 80 和 443 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将能正常工作。 不过，配置 IIS 的管理员可能会修改或禁用这些规则。 因此，如果您为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用端口 80 或端口 443，则应创建您自己的规则或规则组，这样可以独立于其他 IIS 规则之外维护您的所需端口配置。  
+ Windows 防火墙使用规则和规则组建立其配置。 每个规则或规则组通常与特定程序或服务相关，并且该程序和服务可以在您不知道的情况下修改或删除相应规则。 例如，规则组“万维网服务 (HTTP)”和“万维网服务 (HTTPS)”与 IIS 相关。 启用这些规则将打开端口 80 和 443，并且如果启用这些规则，则依赖端口 80 和 443 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能将能正常工作。 不过，配置 IIS 的管理员可能会修改或禁用这些规则。 因此，如果您为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用端口 80 或端口 443，则应创建您自己的规则或规则组，这样可以独立于其他 IIS 规则之外维护您的所需端口配置。  
   
  高级安全 Windows 防火墙 MMC 管理单元允许符合任何适用允许规则的所有通信。 因此，如果有两个均应用于端口 80 的规则（具有不同的参数），则符合任一规则的通信都将得到允许。 因此，如果一个规则允许来自本地子网的通过端口 80 的通信而另一个规则允许来自任意地址的通信，则实际结果是不管通信来源是什么，所有通向端口 80 的通信都将得到允许。 若要有效地管理对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的访问，管理员应定期查看服务器上启用的所有防火墙规则。  
   
 ##  <a name="BKMK_profiles"></a> 防火墙配置文件概述  
- [高级安全 Windows 防火墙入门指南](http://go.microsoft.com/fwlink/?LinkId=116080)中的**识别网络位置的主机防火墙**部分介绍了防火墙配置文件。 总之，操作系统可按照连接性、连接数和类别来识别并记住与它们连接的每个网络。  
+ [高级安全 Windows 防火墙入门指南](http://go.microsoft.com/fwlink/?LinkId=116080) 中的 **识别网络位置的主机防火墙**部分介绍了防火墙配置文件。 总之，操作系统可按照连接性、连接数和类别来识别并记住与它们连接的每个网络。  
   
  在高级安全 Windows 防火墙中有三种网络位置类型：  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  使用控制面板中的“Windows 防火墙”项仅可配置当前防火墙配置文件。  
   
-#### 使用“控制面板”中的“Windows 防火墙”项更改防火墙例外的范围  
+#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>使用“控制面板”中的“Windows 防火墙”项更改防火墙例外的范围  
   
 1.  在“控制面板”中的 **“Windows 防火墙”** 项的 **“例外”** 选项卡上，选择一个程序或端口，然后单击 **“属性”** 或 **“编辑”**。  
   
@@ -323,7 +327,7 @@ caps.handback.revision: 48
   
 -   传入连接需要 IPsec  
   
-#### 使用新建规则向导创建新防火墙规则  
+#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新建规则向导创建新防火墙规则  
   
 1.  在“开始”菜单上，单击 **“运行”**，键入 **WF.msc**，然后单击 **“确定”**。  
   
@@ -340,18 +344,19 @@ caps.handback.revision: 48
   
      若要验证哪些端口正在侦听，请使用 **netstat** 命令行实用工具。 除了显示活动 TCP 连接以外， **netstat** 实用工具还将显示多种 IP 统计信息和其他信息。  
   
-    #### 列出正在侦听的 TCP/IP 端口  
+    #### <a name="to-list-which-tcpip-ports-are-listening"></a>列出正在侦听的 TCP/IP 端口  
   
     1.  打开命令提示符窗口。  
   
     2.  在命令提示符下，键入 **netstat -n -a**。  
   
-         **-n **开关指示** netstat **以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示** netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
+         **-n** 开关指示 **netstat** 以数字方式显示活动 TCP 连接的地址和端口号。 **-a** 开关指示 **netstat** 显示计算机正在侦听的 TCP 和 UDP 端口。  
   
 -   **PortQry** 实用工具可用于报告 TCP/IP 端口的状态（正在侦听、未在侦听或已筛选）。 （对于已筛选状态，端口可能正在侦听，也可能未在侦听；此状态指示实用工具没有收到端口的响应。）**PortQry** 实用工具可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=28590)下载。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows Server 系统的服务概述和网络端口要求](http://support.microsoft.com/kb/832017)   
  [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
+

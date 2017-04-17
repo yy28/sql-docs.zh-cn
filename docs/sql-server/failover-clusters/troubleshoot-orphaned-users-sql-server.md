@@ -1,39 +1,43 @@
 ---
 title: "孤立用户故障排除 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "孤立用户 [SQL Server]"
-  - "登录名 [SQL Server], 孤立用户"
-  - "故障排除 [SQL Server], 用户帐户"
-  - "用户帐户 [SQL Server], 孤立用户"
-  - "故障转移 [SQL Server], 管理元数据"
-  - "数据库镜像 [SQL Server], 元数据"
-  - "用户 [SQL Server], 孤立"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# 孤立用户故障排除 (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   当数据库用户是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主 **数据库中的登录名，但该登录名在** 主 **数据库中已不存在时，**中会出现孤立用户。 当删除登录名，或者将数据库移动到另一台不存在该登录名的服务器时会出现这种情况。 本主题介绍如何找到孤立用户，并将它们重新映射到登录名。  
   
 > [!NOTE]  
->  为可能被移动的数据库使用包含的数据库用户可以减少形成孤立用户的可能性。 有关详细信息，请参阅[包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+>  为可能被移动的数据库使用包含的数据库用户可以减少形成孤立用户的可能性。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
-## 背景  
- 若要使用基于登录名的安全主体（数据库用户标识）连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库，则该主体必须在 **master** 数据库中拥有有效的登录名。 在身份验证过程中会使用此登录名，以验证主体身份并确定是否允许将主体连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 可在 **sys.server_principals** 目录视图和 **sys.sql_logins** 兼容性视图中查看服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
+## <a name="background"></a>背景  
+ 若要使用基于登录名的安全主体（数据库用户标识）连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库，则该主体必须在 **master** 数据库中拥有有效的登录名。 在身份验证过程中会使用此登录名，以验证主体身份并确定是否允许将主体连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sys.server_principals **目录视图和** sys.sql_logins **兼容性视图中查看服务器实例上的** 登录名。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名作为映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的“数据库用户”访问各个数据库。 此规则有三种例外情况：  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 41
   
  在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户（基于登录名）无法登录到该实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果数据库用户映射到 `master` 实例中不存在的登录名 SID，则该用户可能变为孤立用户。 在数据库还原或附加到从未创建过登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其他实例之后，数据库用户也可能变为孤立用户。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 即使重新创建该登录名，它也会具有不同的 SID，因此该数据库用户仍为孤立用户。  
   
-## 检测孤立用户  
+## <a name="to-detect-orphaned-users"></a>检测孤立用户  
 
 **对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 PDW**
 
@@ -91,9 +95,9 @@ WHERE sp.SID IS NULL
       AND authentication_type_desc = 'INSTANCE';
     ```
 
-3. 比较两个列表，以确定用户数据库 `sys.database_principals`表中是否存在与 master 数据库 `sql_logins`表中不匹配的登录名 SID。 
+3. 比较两个列表，以确定用户数据库 `sys.database_principals` 表中是否存在与 master 数据库 `sql_logins` 表中不匹配的登录名 SID。 
   
-## 解决孤立用户问题  
+## <a name="to-resolve-an-orphaned-user"></a>解决孤立用户问题  
 在 master 数据库中，使用带有 SID 选项的 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 语句以重新创建缺失的登录名，提供上一部分中获得的数据库用户的 `SID`  
   
 ```  
@@ -102,7 +106,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- 若要将孤立的用户映射到 **master** 数据库中已存在的登录名，请在用户数据库中执行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 语句，并指定登录名。  
+ 若要将孤立的用户映射到 **master**数据库中已存在的登录名，请在用户数据库中执行 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 语句，并指定登录名。  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  
@@ -119,7 +123,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  不推荐使用的过程 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) 也适用于孤立用户。 `sp_change_users_login` 不能与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]配合使用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

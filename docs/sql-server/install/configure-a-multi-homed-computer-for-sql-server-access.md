@@ -1,32 +1,36 @@
 ---
 title: "将多宿主计算机配置为允许 SQL Server 访问 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "端口 [SQL Server], 多宿主计算机"
-  - "多宿主计算机 [SQL Server] 配置端口"
-  - "防火墙系统 [Database Engine], 多宿主计算机"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multi-homed computer
+- multi-homed computer [SQL Server] configuring ports
+- firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将多宿主计算机配置为允许 SQL Server 访问
+# <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
   当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
   
 > [!NOTE]  
 >  多宿主计算机有多个网络适配器或者已配置为一个网络适配器使用多个 IP 地址。 双宿主计算机有两个网络适配器或者已配置为一个网络适配器使用两个 IP 地址。  
   
- 在继续本主题之前，你应当熟悉[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)主题中提供的信息。 本主题包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件如何与防火墙一起使用的基本信息。  
+ 在继续本主题之前，你应当熟悉 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)主题中提供的信息。 本主题包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件如何与防火墙一起使用的基本信息。  
   
  **本示例假设：**  
   
@@ -37,9 +41,9 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  IPv4 地址是一串四个数字（称为八位字节）。 每个数字小于 255，由句点分隔，例如 127.0.0.1。 IPv6 地址是一串八个十六进制数字，由冒号分隔，如 fe80:4898:23:3:49a6:f5c1:2452:b994。  
   
--   防火墙规则可能允许通过特定端口（如端口 1433）进行访问， 也可能允许访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]程序 (sqlservr.exe)。 哪个方法都不会比另一个方法更好。 因为外围网络中的服务器比 Intranet 上的服务器更容易受到攻击，本主题假设您希望进行更精确的控制并单独选择打开的端口。 出于上述原因，本主题假设您将把 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听固定端口。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用端口的详细信息，请参阅[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+-   防火墙规则可能允许通过特定端口（如端口 1433）进行访问， 也可能允许访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 程序 (sqlservr.exe)。 哪个方法都不会比另一个方法更好。 因为外围网络中的服务器比 Intranet 上的服务器更容易受到攻击，本主题假设您希望进行更精确的控制并单独选择打开的端口。 出于上述原因，本主题假设您将把 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听固定端口。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用端口的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
--   本示例使用 TCP 端口 1433 配置对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的访问。 可以使用相同的常规步骤来配置不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的其他端口。  
+-   本示例使用 TCP 端口 1433 配置对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的访问。 可以使用相同的常规步骤来配置不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的其他端口。  
   
  **本示例中的常规步骤如下：**  
   
@@ -49,10 +53,10 @@ caps.handback.revision: 23
   
 -   配置高级安全 Windows 防火墙。  
   
-## 可选过程  
+## <a name="optional-procedures"></a>可选过程  
  如果您已经知道计算机可用的 IP 地址且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用该地址，则可以跳过这些过程。  
   
-#### 确定计算机上可用的 IP 地址  
+#### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>确定计算机上可用的 IP 地址  
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，依次单击“开始”和“运行”，键入 **cmd**，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
@@ -63,11 +67,11 @@ caps.handback.revision: 23
   
 3.  请注意正在使用的 IPv4 地址和 IPv6 地址。 列表中的其他信息（例如临时地址、子网掩码和默认网关）是配置 TCP/IP 网络的重要信息。 但是在本示例中未用到这些信息。  
   
-#### 确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  单击 **“开始”**，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”**，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”**。  
   
-2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络配置”、“\<实例名称>的协议”，然后双击“TCP/IP”。  
+2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”、“\<实例名称> 的协议”，然后双击“TCP/IP”。  
   
 3.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
   
@@ -77,10 +81,10 @@ caps.handback.revision: 23
   
 6.  如果不希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用某些可用端口，则请在 **“协议”** 选项卡上将 **“全部侦听”** 值更改为 **“否”**；在 **“IP 地址”** 选项卡上，将不想使用的 IP 地址的 **“活动”** 值更改为 **“否”** 。  
   
-## 配置高级安全 Windows 防火墙  
+## <a name="configuring-windows-firewall-with-advanced-security"></a>配置高级安全 Windows 防火墙  
  知道计算机所使用的 IP 地址和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的端口后，就可以创建防火墙规则，然后为特定的 IP 地址配置这些规则。  
   
-#### 创建防火墙规则  
+#### <a name="to-create-a-firewall-rule"></a>创建防火墙规则  
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，以管理员身份登录。  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 23
 10. 在 **“操作”** 页上，查看各选项。 在本示例中，不使用防火墙强制进行安全连接。 因此，请单击 **“允许连接”**，然后单击 **“下一步”**。  
   
     > [!NOTE]  
-    >  您的环境可能要求使用安全连接。 如果选择其中一个安全连接选项，则可能必须配置证书和 **“强行加密”** 选项。 有关安全连接的详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)和[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)。  
+    >  您的环境可能要求使用安全连接。 如果选择其中一个安全连接选项，则可能必须配置证书和 **“强行加密”** 选项。 有关安全连接的详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)和[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 11. 在 **“配置文件”** 页上，为该规则选择一个或多个配置文件。 如果您不熟悉防火墙配置文件，请单击防火墙程序中的 **“了解有关配置文件的详细信息”** 链接。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 23
   
  创建完一个或多个规则后，执行下列步骤以将计算机上的每个 IP 地址配置为使用规则。  
   
-#### 为特定的 IP 地址配置防火墙规则  
+#### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>为特定的 IP 地址配置防火墙规则  
   
 1.  在“高级安全 Windows 防火墙”的“入站规则”页上，右键单击刚创建的规则，然后单击“属性”。  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
 9. 若要配置多宿主计算机上的其他 IP 地址，请使用另一 IP 地址和另一规则重复此过程。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [通过代理服务器连接到 SQL Server（SQL Server 配置管理器）](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

@@ -1,31 +1,35 @@
 ---
 title: "通过强制仲裁进行 WSFC 灾难恢复 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], WSFC 群集"
-  - "仲裁 [SQL Server], AlwaysOn 和 WSFC 仲裁"
-  - "故障转移群集 [SQL Server], AlwaysOn 可用性组"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
   仲裁故障通常由涉及 WSFC 群集中的多个节点的系统性灾难、持久性通信故障或配置错误引起的。  从仲裁故障恢复需要手动干预。  
   
 -   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **通过强制仲裁过程进行 WSFC 灾难恢复** [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 20
  强制仲裁过程假定在仲裁失败前存在运行状况正常的仲裁。  
   
 > [!WARNING]  
->  用户应熟悉 Windows Server 故障转移群集、WSFC 仲裁模型、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的概念和交互方式，以及环境特定的部署配置。  
+>  用户应熟悉 Windows Server 故障转移群集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的概念和交互方式，以及环境特定的部署配置。  
 >   
->  有关详细信息，请参阅：[Windows Server 故障转移群集 (WSFC) 与 SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) 和 [WSFC 仲裁模式和投票配置 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  有关详细信息，请参阅：  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)和 [WSFC 仲裁模式和投票配置 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 安全性  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="Main"></a> 通过强制仲裁过程进行 WSFC 灾难恢复  
- 请注意，仲裁故障将会使 WSFC 群集中的所有群集服务、SQL Server 实例和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 设为脱机，这是因为该群集的配置无法确保节点级容错。  仲裁故障意味着 WSFC 群集中的运行状况投票节点不再满足仲裁模型要求。 一些节点可能已完全失败，而另一些节点可能只是关闭了 WSFC 服务并且除失去与仲裁通信的能力之外其他方面运行状况良好。  
+ 请注意，仲裁故障将会使 WSFC 群集中的所有群集服务、SQL Server 实例和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]设为脱机，这是因为该群集的配置无法确保节点级容错。  仲裁故障意味着 WSFC 群集中的运行状况投票节点不再满足仲裁模型要求。 一些节点可能已完全失败，而另一些节点可能只是关闭了 WSFC 服务并且除失去与仲裁通信的能力之外其他方面运行状况良好。  
   
  若要使 WSFC 群集重新联机，您必须消除现有配置下仲裁故障的根源，根据需要恢复受影响的数据库，并且您可能需要在 WSFC 群集中重新配置其余的节点以反映现存的群集拓扑。  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  此类型的灾难恢复过程应包含以下步骤：  
   
-#### 从仲裁故障中恢复：  
+#### <a name="to-recover-from-quorum-failure"></a>从仲裁故障中恢复：  
   
 1.  **确定故障的范围。** 确定哪些可用性组或 SQL Server 实例是不响应的，哪些群集节点处于联机状态且可在灾后使用，并检查 Windows 事件日志和 SQL Server 系统日志。  在可行的情况下，您应保留取证数据和系统日志以供未来分析使用。  
   
     > [!TIP]  
-    >  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的响应实例上，可以通过查询 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 动态管理视图 (DMV)，获取有关在本地服务器实例上拥有可用性副本的可用性组的运行状况信息。  
+    >  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的响应实例上，可以通过查询 [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) 动态管理视图 (DMV)，获取有关在本地服务器实例上拥有可用性副本的可用性组的运行状况信息。  
   
 2.  **在单一节点上使用强制仲裁来启动 WSFC 群集。** 确定组件故障数最少的一个节点（已关闭 WSFC 群集服务的节点除外）。  确认此节点能够与其他大多数节点进行通信。  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [配置群集仲裁 NodeWeight 设置](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [使用 AlwaysOn 面板 (SQL Server Management Studio)](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Get-ClusterLog 故障转移群集 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

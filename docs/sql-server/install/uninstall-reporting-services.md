@@ -1,26 +1,30 @@
 ---
 title: "卸载 Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 卸载 Reporting Services
+# <a name="uninstall-reporting-services"></a>卸载 Reporting Services
   卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会删除您已创建的内容或已修改的配置。 但是，如果存在在卸载完成后您需要的内容，建议您首先生成内容的副本，再开始卸载过程。  
   
-## 卸载 SharePoint 模式  
+## <a name="uninstall-sharepoint-mode"></a>卸载 SharePoint 模式  
  卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式时，删除以下内容：  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务和服务代理。  
@@ -33,16 +37,16 @@ caps.handback.revision: 7
   
  以下是不删除的三个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库的示例名称。  
   
--   **报表服务器数据库：**ReportingService_7f616e2d253040e8ab5653b3c09a065e  
+-   **报表服务器数据库：** ReportingService_7f616e2d253040e8ab5653b3c09a065e  
   
--   **报表服务器临时数据库：**ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
+-   **报表服务器临时数据库：** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
--   **报表服务器警报数据库：**ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
+-   **报表服务器警报数据库：** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
-### 卸载用于 SharePoint 产品的外接程序。  
+### <a name="uninstall-the-add-in-for-sharepoint-products"></a>卸载用于 SharePoint 产品的外接程序。  
  从计算机卸载外接程序时，可以选择仅卸载这些文件或同时从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 有关卸载用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
-## 卸载本机模式  
+## <a name="uninstall-native-mode"></a>卸载本机模式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在您卸载  本机模式时，在安装后创建  或修改的所有内容都将在原地保留。 例如，数据库文件、日志文件、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件以及一些内容项（如报表和数据源文件）。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是实例功能，因此不在 Windows“控制面板”的“程序和功能”中列出。 卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式：  
@@ -61,7 +65,7 @@ caps.handback.revision: 7
   
 5.  完成向导。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

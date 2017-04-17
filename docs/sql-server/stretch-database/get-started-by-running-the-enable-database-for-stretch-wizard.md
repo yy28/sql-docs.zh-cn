@@ -1,46 +1,50 @@
 ---
-title: "通过运行“启用数据库延伸向导”开始 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "sql13.swb.stretchwizard.f1"
-  - "sql13.swb.stretchwizard.createdatabasecredentials.f1"
-  - "sql13.swb.stretchwizard.selectdatabasetables.f1"
-  - "sql13.swb.stretchwizard.validatesqlserver.f1"
-  - "sql13.swb.stretchwizard.selectazuredeployment.f1"
-  - "sql13.swb.stretchwizard.configureazuredeployment.f1"
-  - "sql13.swb.stretchwizard.Summary.f1"
-  - "sql13.swb.stretchwizard.Results.f1"
-  - "sql13.swb.stretchwizard.introduction.f1"
-helpviewer_keywords: 
-  - "Stretch Database, 向导"
-  - "启用数据库延伸向导"
+title: "通过运行“启用数据库延伸”向导开始 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- sql13.swb.stretchwizard.f1
+- sql13.swb.stretchwizard.createdatabasecredentials.f1
+- sql13.swb.stretchwizard.selectdatabasetables.f1
+- sql13.swb.stretchwizard.validatesqlserver.f1
+- sql13.swb.stretchwizard.selectazuredeployment.f1
+- sql13.swb.stretchwizard.configureazuredeployment.f1
+- sql13.swb.stretchwizard.Summary.f1
+- sql13.swb.stretchwizard.Results.f1
+- sql13.swb.stretchwizard.introduction.f1
+helpviewer_keywords:
+- Stretch Database, wizard
+- Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a40017c7e70e0af2e38485a26a96cfdcea88a345
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过运行“启用数据库延伸向导”开始
+# <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  若要为 Stretch Database 配置数据库，请运行“启用数据库延伸向导”。  本主题介绍了需要在该向导中输入的信息和做出的选择。  
   
  若要了解 Stretch Database，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。 
  
- >   [!NOTE] 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
+ > [!NOTE] 
+ > 之后如果要禁用 Stretch Database，请记住，禁用表或数据库的 Stretch Database 不会删除远程对象。 如果希望删除远程表或远程数据库，则需要使用 Azure 管理门户进行删除。 远程对象会继续产生 Azure 成本，直到手动删除它们。 
   
-## 启动向导  
+## <a name="launch-the-wizard"></a>启动向导  
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择你想在其上启用 Stretch 的数据库。  
   
@@ -54,14 +58,14 @@ caps.handback.revision: 38
  -   必须有 Microsoft Azure 订阅。
  -   你的 SQL Server 必须能够使用远程 Azure 服务器进行通信。
   
- ![Introduction page of Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-1.png "Introduction page of Stretch Database wizard")  
+ ![Stretch Database 向导的“简介”页](../../sql-server/stretch-database/media/stretch-wizard-1.png "Stretch Database 向导的“简介”页")  
   
 ##  <a name="Tables"></a> 选择表  
  选择想要为其启用 Stretch 的表。  
  
 具有大量行的表显示于已排序列表的顶端。 向导显示表的列表之前，它会对当前不受 Stretch Database 支持的数据类型对其进行分析。 
   
- ![Select tables page of Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-2.png "Select tables page of Stretch Database wizard")  
+ ![Stretch Database 向导的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 向导的“选择表”页")  
   
 |列|说明|  
 |------------|-----------------|  
@@ -73,12 +77,12 @@ caps.handback.revision: 38
 |**行**|指定表中的行数。|  
 |**大小(KB)**|指定表的大小（以 KB 为单位）。|  
   
-## 选择性地提供行筛选器  
+## <a name="optionally-provide-a-row-filter"></a>选择性地提供行筛选器  
  若想要提供筛选器函数来选择要迁移的行，请在“选择表”页执行以下操作。  
   
 1.  在“选择你想要拉伸的表”列表中，在表的行中单击“整个表”。 将打开“选择要拉伸的行”对话框。  
   
-     ![Define a date-based filter predicate](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Define a date-based filter predicate")  
+     ![定义基于日期的筛选器谓词](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定义基于日期的筛选器谓词")  
   
 2.  在“选择要拉伸的行”对话框中，选择“选择行”。  
   
@@ -88,29 +92,31 @@ caps.handback.revision: 38
   
 5.  单击“检查”以测试函数。 如果函数从表中返回结果 - 即如果存在满足条件的待迁移的行 - 该测试会报告“成功”。  
 
-    >   [!NOTE] 显示筛选器查询的文本框为只读。 无法在文本框中编辑查询。
+> [!NOTE] 
+> 显示筛选器查询的文本框为只读。 无法在文本框中编辑查询。
   
 6.  单击“完成”，返回到“选择表”页。  
 
 仅在完成该向导时，才会在 SQL Server 中创建筛选器函数。 届时你可以返回到“选择表”页更改或重命名该筛选器函数。
 
-![Select Tables page after defining a filter predicate](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Select Tables page after defining a filter predicate")
+![定义筛选器谓词后的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定义筛选器谓词后的“选择表”页")
 
 如果想要使用不同类型的筛选器函数来选择要迁移的行，请执行以下操作之一。  
   
--   退出向导并运行 ALTER TABLE 语句以对表启用 Stretch 并指定筛选器函数。 有关详细信息，请参阅[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
+-   退出向导并运行 ALTER TABLE 语句以对表启用 Stretch 并指定筛选器函数。 有关详细信息，请参阅 [为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)。  
   
--   运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关所需步骤，请参阅[运行向导后添加筛选器函数](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)。  
+-   运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关所需步骤，请参阅 [运行向导后添加筛选器函数](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)。  
   
 ##  <a name="Configure"></a> 配置 Azure  
   
 1.  使用 Microsoft 帐户登录到 Microsoft Azure。  
   
-     ![Sign in to Azure - Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-3.png "Sign in to Azure - Stretch Database wizard")  
+     ![登录到 Azure - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-3.png "登录到 Azure - Stretch Database 向导")  
   
 2.  为 Stretch Database 选择要使用的现有 Azure 订阅。 
 
->   [!NOTE] 若要在数据库上启用 Stretch，则必须具有正在使用的订阅的管理员权限。 Stretch Database 向导将只显示用户具有管理员权限的订阅。
+> [!NOTE] 
+> 若要在数据库上启用 Stretch，则必须具有正在使用的订阅的管理员权限。 Stretch Database 向导将只显示用户具有管理员权限的订阅。
   
 3.  为 Stretch Database 选择要使用的 Azure 区域。
     -   如果创建一个新服务器，则该服务器将在此区域进行创建。  
@@ -120,7 +126,7 @@ caps.handback.revision: 38
   
 4.  指定是希望使用现有服务器还是新建 Azure 服务器。  
   
-     如果 SQL Server 上的 Active Directory 与 Azure Active Directory 联合，则可以选择使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 有关此选项要求的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+     如果 SQL Server 上的 Active Directory 与 Azure Active Directory 联合，则可以选择使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 有关此选项要求的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
     -   **新建服务器**  
   
@@ -128,7 +134,7 @@ caps.handback.revision: 38
   
         2.  或者，使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。  
   
-         ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+         ![新建 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "新建 Azure 服务器 - Stretch Database 向导")  
   
     -   **现有服务器**  
   
@@ -140,18 +146,18 @@ caps.handback.revision: 38
   
             -   选择“Active Directory 集成身份验证”  ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
   
-         ![Select existing Azure server - Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-5.png "Select existing Azure server - Stretch Database wizard")  
+         ![选择现有 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有 Azure 服务器 - Stretch Database 向导")  
   
 ##  <a name="Credentials"></a> 安全凭据  
  必须有一个数据库主密钥，以保护 Stretch Database 用于连接到远程数据库的凭据。  
   
  如果数据库主密钥已存在，请对其输入密码。  
   
- ![Secure credentials page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Secure credentials page of the Stretch Database wizard")  
+ ![Stretch Database 向导的“安全凭据”页](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database 向导的“安全凭据”页")  
   
  如果数据库没有现有的主密钥，请输入一个强密码以创建数据库主密钥。  
   
- ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+ ![Stretch Database 向导的“安全凭据”页](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 向导的“安全凭据”页")  
   
  有关数据库主密钥的详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) 和[创建数据库主密钥](../../relational-databases/security/encryption/create-a-database-master-key.md)。 有关向导创建的凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
   
@@ -160,25 +166,25 @@ caps.handback.revision: 38
   
  你在此页上提供的 IP 地址（一个或多个）将告知 Azure 服务器允许通过 Azure 防火墙传递由 SQL Server 启动的传入数据、查询和管理操作。 该向导不会更改 SQL Server 上的防火墙设置中的任何内容。  
   
- ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+ ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
   
 ##  <a name="Summary"></a> 摘要  
  查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  
   
- ![Summary page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-8.png "Summary page of the Stretch Database wizard")  
+ ![Stretch Database 向导的“摘要”页](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 向导的“摘要”页")  
   
 ##  <a name="Results"></a> 结果  
  查看结果。  
   
  若要监视数据迁移的状态，请参阅[数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
- ![Results page of the Stretch Database wizard](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Results page of the Stretch Database wizard")  
+ ![Stretch Database 向导的“结果”页](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 向导的“结果”页")  
   
 ##  <a name="KnownIssues"></a> 对向导进行故障排除  
  **Stretch Database 向导失败。**  
  如果尚未在服务器级别启用 Stretch Database，而你在没有系统管理员权限的情况下运行向导以启用它，则向导将失败。 让系统管理员在本地服务器实例上启用 Stretch Database，然后再次运行该向导。 有关详细信息，请参阅 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  为 Stretch Database 启用其他表。 监视数据迁移并管理已启用 Stretch 的数据库和表。  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 以启用其他表。  
@@ -193,8 +199,9 @@ caps.handback.revision: 38
   
 -   [还原已启用延伸的数据库](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
+

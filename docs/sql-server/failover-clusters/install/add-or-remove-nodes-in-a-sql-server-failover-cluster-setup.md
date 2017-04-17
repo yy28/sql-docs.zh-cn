@@ -1,30 +1,34 @@
 ---
-title: "在 SQL Server 故障转移群集中添加或删除节点（安装程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "添加节点"
-  - "节点 [故障转移群集, 删除"
-  - "节点 [故障转移群集], 添加"
-  - "故障转移群集 [SQL Server], 节点"
-  - "删除节点"
-  - "群集维护 [SQL Server]"
-  - "删除节点"
+title: "在 SQL Server 故障转移群集中添加或删除节点（安装程序）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding nodes
+- nodes [Faillover Clustering], removing
+- nodes [Faillover Clustering], adding
+- failover clustering [SQL Server], nodes
+- deleting nodes
+- cluster maintenance [SQL Server]
+- removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d61da5ddef04a1edacf6f5b8bf98bb04b53fa5a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 SQL Server 故障转移群集中添加或删除节点（安装程序）
+# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
   使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
   
  若要更新或删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须是一名本地管理员，且具有作为服务登录到故障转移群集的所有节点的权限。 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
@@ -44,11 +48,11 @@ caps.handback.revision: 49
   
 ##  <a name="Add"></a> 添加节点  
   
-#### 向现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中添加节点  
+#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>向现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中添加节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”。 然后选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”**。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”。 然后，选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 49
   
 8.  在“群集节点配置”页上，使用下拉框指定要在此安装操作期间修改的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的名称。  
   
-9. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 对于故障转移群集安装，将基于为活动节点提供的设置，在此页上预填充帐户名和启动类型信息。 必须为每个帐户提供密码。 有关详细信息，请参阅[服务器配置 - 服务帐户](../Topic/Server%20Configuration%20-%20Service%20Accounts.md)和[配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+9. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 对于故障转移群集安装，将基于为活动节点提供的设置，在此页上预填充帐户名和启动类型信息。 必须为每个帐户提供密码。 有关详细信息，请参阅 [服务器配置 - 服务帐户](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      **安全说明** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -80,11 +84,11 @@ caps.handback.revision: 49
   
 14. 安装完成后，“完成”页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
   
-15. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的详细信息，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+15. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ##  <a name="Remove"></a> 删除节点  
   
-#### 从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点  
+#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 49
   
 7.  在删除操作期间，“删除节点进度”页会提供删除状态。  
   
-8.  “完成”页会提供指向删除节点操作摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 删除节点操作，请单击 **“关闭”**。 有关安装程序日志文件的详细信息，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+8.  “完成”页会提供指向删除节点操作摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 删除节点操作，请单击 **“关闭”**。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## 另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+## <a name="see-also"></a>另请参阅  
+ [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
