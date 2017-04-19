@@ -1,68 +1,78 @@
 ---
 title: "Microsoft R Server（独立版）入门 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "r-server"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: r-server
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
 caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 16
----
-# Microsoft R Server（独立版）入门
-  Microsoft R Server（独立版）可帮助将流行的开源 R 语言引入企业，以实现高性能分析解决方案以及与其他业务应用程序的集成。  
-  
-## Microsoft R Server 是什么？  
- Microsoft R Server（独立版）包括由 Revolution Analytics 开发的增强型 R 包，并支持与多种不同数据源的连接，例如 Hadoop、Teradata 等。 通过安装此独立服务器，你可以创建用于运行复杂、可扩展 R 作业的服务器环境。  
-  
-## 使用 Microsoft R 服务器 （独立） 的好处  
- R 是世界上最强大的用于统计计算、机器学习和图形的编程语言，而且受到蓬勃发展的全球社区的用户、开发人员和参与者的支持。 从以往来看，在企业设置中使用 R 具有一定的挑战，尤其当数据量越来越大或在你需要将解决方案部署到产品环境中时。 Microsoft R Server 解决了 R 代码的部署和操作化的问题。  
-  
- Microsoft R Server 可以安装在任何 Windows 计算机上，并包含所有的多个 R 包和连接工具来启用远程计算上下文并支持可扩展、 可并行化解决方案。  
-  
- Microsoft R 服务器 （独立） 支持这些方案︰  
-  
--   **使用中心服务器实施 R 解决方案**  
-  
-     此独立服务器可为你提供改进的 R 性能，而无需依靠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以在服务器上的便携式计算机或开发计算机上可能会受到限制的资源而被执行复杂或占用大量资源的计算。  
-  
-     您还可以集中在一起的作业，例如，如果需要针对在生产中，预测模型评分或使用 R 服务器作为 R 的单一联系点绘制，并且在报告中使用的预测。 
-     
-     我们还建议您安装 R 服务器 （独立） SQL Server 计算机上如果需要频繁地运行 SQL Server 的上下文之外的 R。
-  
--   **启用功能更加强大的数据浏览和预测建模**  
-  
-     数据科学家可以使用任何客户端工作站和任何 R 开发工具来生成 R 解决方案。 如果解决方案使用 RevoScaleR 包 API，那么可以在服务器上执行计算，通常该服务器具有更大的处理能力和内存。 因此你的解决方案可以处理更大的数据集并利用多线程、多核和多进程计算。  
-  
-## 如何获取它？  
- 有关安装说明，请参阅 [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md)。 可以使用安装的所有组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
-  
-## 安装其他 R 工具  
- 如果没有一个首选的 R 的开发环境，有很多选项。 有关详细信息，请参阅 [安装或配置 R 工具](../../advanced-analytics/r-services/setup-or-configure-r-tools.md)。 
- 
- 用于连接到 Microsoft R Server 或 SQL Server R Services 从数据科学工作站，我们建议免费 [Microsoft R Client](http://aka.ms/rclient/download) （下载）。  
-  
-## Microsoft R 服务器 （独立） 上运行 R 脚本  
- 您设置的服务器组件并安装您最喜欢的 R IDE 后，可以开始开发您的解决方案使用 RevoScaleR 包。 通过这些 API 将 R 命令发送到远程服务器执行。  
-  
--   [ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-getting-started)︰ 通过探索此集合提供高性能的可分发分析函数并缩放到 R 解决方案来开始。 包括可并行化版本的许多最受欢迎的 R 建模包，如 k 平均值聚类分析、 决策树和决策林和数据操作的工具。 您可以使用 HPC 来构建您自己的并行算法。  
-    
--   [DeployR](https://msdn.microsoft.com/microsoft-r/deployr-about)︰ 此可选框架提供了对 R 编程人员使用 Java、 JavaScript 或.Net 将集成的第三方包的输出的 R 分析工具。  
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57870cd1f1a84eb756314736a9a6cef9c574093b
+ms.lasthandoff: 04/11/2017
 
-您可以使用各种格式，包括 SAS、 SPS、 Hadoop 和文本的文件中的数据。 可以分析数据中的位置，或有效地将数据移到本地 R 开发环境使用.xdf 文件格式。  
+---
+# <a name="getting-started-with-microsoft-r-server-standalone"></a>Microsoft R Server（独立版）入门
+  Microsoft R Server（独立版）可帮助将流行的开源 R 语言引入企业，以实现高性能分析解决方案以及与其他业务应用程序的集成。  
+
   
-若要开始使用 R 服务器，请参阅 MSDN Library 中的本指南︰ [R Server-入门](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started)  
+## <a name="install-microsoft-r-server"></a>安装 Microsoft R Server 
+
+如何安装 Microsoft R Server 取决于你的应用程序中是否需要使用 SQL Server 数据。 如果需要，则应当使用 SQL Server 安装程序进行安装。 如果不使用 SQL Server 数据，或者不需要在数据库中运行 R 代码，则可以使用 SQL Server 安装程序，也可以使用新的独立安装程序。
+ 
+ 
++ 通过 SQL Server 安装程序安装 Microsoft R Server（独立版）。 将为 R Server 创建 R 二进制文件的一个单独实例，并且将通过 SQL Server Enterprise Edition 支持策略对实例进行许可。 有关详细信息，请参阅[创建独立的 R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md)。  
+
++ 使用新的独立版 Windows 安装程序创建 Microsoft R Server 的全新实例，该实例使用 Microsoft Modern Software Lifecycle 支持策略。 有关详细信息，请参阅[运行 Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)。
+
++ 如果你有想要升级的现有 R Server（独立版）或 R Services 实例，则还必须下载并运行基于 Windows 的安装程序进行更新。 有关详细信息，请参阅[运行 Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)。
   
- 有关如何使用 ScaleR 包的信息，请参阅 [25 函数中的 R 教程](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started#an-r-tutorial-in-25-functions-or-so)  
+## <a name="install-additional-r-tools"></a>安装其他 R 工具  
+
+ 我们建议你使用免费的 [Microsoft R 客户端](http://aka.ms/rclient/download)（下载）。  
+
+ 你还可以使用你喜欢的 R 开发环境来为 SQL Server R Services 或 Microsoft R Server 开发解决方案。 有关详细信息，请参阅[安装或配置 R 工具](../../advanced-analytics/r-services/setup-or-configure-r-tools.md)。 
+ 
+
+### <a name="location-of-r-server-binaries"></a>R Server 二进制文件的位置
+
+你用来安装 Microsoft R Server 的方法不同，默认位置也不同。 在开始使用你最喜欢的开发环境之前，请验证你将 R 库安装在了哪里：
+
++ 使用新的 Windows 安装程序安装的 Microsoft R Server
+
+  `C:\Program Files\Microsoft\R Server\R_SERVER`
+
++ 通过 SQL Server 安装程序安装的 R Server（独立版）
+
+  `C:\Program Files\Microsoft SQL Server\130\R_SERVER`
+
++ R Services (数据库中)
+
+  `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES`
+      
+## <a name="start-using-r-on-microsoft-r-server"></a>开始在 Microsoft R Server 上使用 R  
+
+ 在安装服务器组件并配置 R IDE 来使用 R Server 二进制文件之后，你可以开始使用新的 API（例如 RevoScaleR 包、MicrosoftML 和 olapR）来开发解决方案。
+    
+要开始使用 R Server，请参阅 MSDN 库中的以下指南：[R Server - 入门](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-node)   
   
-## 另请参阅  
- [SQL Server R Services 入门](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)  
+-   [ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-getting-started)：探究包含可分发的分析函数的这一集合，这些函数可提高 R 解决方案的性能和可伸缩性。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。 有关详细信息，请参阅[通过 25 个函数探究 R 和 ScaleR](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)  
+    
+- [MicrosoftML](https://msdn.microsoft.com/library/mt790482.aspx)：MicrosoftML 包是由 Microsoft 开发的一组可快速运行且可伸缩的新的机器学习算法和转换。 有关详细信息，请参阅 [MicrosoftML 函数](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)。
+  
+
+
+  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server R 服务入门](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)  
   
   
+

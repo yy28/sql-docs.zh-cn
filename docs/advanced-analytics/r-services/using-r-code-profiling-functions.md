@@ -1,35 +1,39 @@
 ---
-title: "使用分析函数的 R 代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 R 代码分析函数 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 333b1b97e54ffa8e4493f3215eed15ae54fcd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用分析函数的 R 代码
-除了使用 SQL Server 资源和工具监视 R 脚本执行，你可以使用提供的其他 R 包的性能工具以获取有关内部函数调用的详细信息。 本主题提供一些基本的资源，可帮助你入门的列表。 对于专家指导，我们建议章上 [性能](http://adv-r.had.co.nz/Performance.html) 簿""高级 R""，通过 Hadley Wickham 中。
+# <a name="using-r-code-profiling-functions"></a>使用 R 代码分析函数
+除了使用 SQL Server 资源和工具来监视 R 脚本执行外，还可以使用由其他 R 包提供的性能工具来获取有关内部函数调用的详细信息。 本主题提供了引导你入门的一些基本资源的列表。 若要查看专家指导，建议你参阅由 Hadley Wickham 编写的“Advanced R”一书中有关[性能](http://adv-r.had.co.nz/Performance.html)的一章。
 
 ## <a name="using-rprof"></a>使用 RPROF
 
-*rprof* 是基程序包中包含一个函数 **utils**, ，默认情况下它将被加载。 一个优点 *rprof* 是其执行采样，因此减少了从监视的性能负载。
+*rprof* 是默认加载的基础包 **utils** 中的一个函数。 *rprof* 的一个优点是它会执行采样，从而降低监视对性能造成的影响。
 
-若要使用在你的代码中进行分析的 R，则调用此函数，并指定其参数，包括将写入日志文件的位置的名称。 请参阅有关的帮助 *rprof* 有关详细信息。
+要在代码中使用 R 分析，请调用此函数并指定其参数，包括将写入的日志文件的位置名称。 有关详细信息，请参阅 *rprof* 的帮助。
 
-一般情况下， *rprof* 通过写出到文件中，指定时间间隔的调用堆栈函数工作原理。 然后，可以使用 *summaryRprof* 函数来处理输出文件。 
+通常，*rprof* 函数会以指定的间隔将调用堆栈写入到一个文件中。 然后，你可以使用 *summaryRprof* 函数来处理输出文件。 
 
-分析可以打开和关闭在代码中。 若要启用分析，挂起分析，然后再重新启动它，你将使用的一系列调用到 *rprof*:
+可以在你的代码中打开或关闭分析。 要打开分析，请暂停分析，然后重新启动它，你将使用对 *rprof* 的调用序列：
 
-1. 指定分析的输出文件。
+1. 指定分析输出文件。
 
     ```R
     varOutputFile <- "C:/TEMP/run001.log")
@@ -46,29 +50,32 @@ caps.handback.revision: 5
     ```
 
 
-> [!NOTE] 使用此功能要求在运行代码的计算机上安装 Windows Perl。 因此，我们建议您在 R 环境中，开发过程中分析代码，然后将调试的代码部署到 SQL Server。  
+> [!NOTE]
+> 若要使用此函数，需要在运行代码的计算机上安装 Windows Perl。 因此，建议你在开发过程中在 R 环境中分析代码，然后将调试后的代码部署到 SQL Server。  
 
 
 ## <a name="r-system-functions"></a>R 系统函数
 
-R 语言包括许多基本包函数用于返回系统变量的内容。 
+R 语言包括了许多用于返回系统函数的内容的基础包。 
 
-例如，作为 R 代码的一部分，你可以使用 `Sys.timezone` 若要获取当前时区，或 `Sys.Time` 来获取系统时间从。 
+例如，你可以在 R 代码中使用 `Sys.timezone` 来获取当前时区，或者使用 `Sys.Time` 来从 R 获取系统时间。 
 
-若要获取有关各个 R 系统函数的信息，请键入函数名称作为 R 的参数 `help()` 从 R 命令提示符的函数。
+若要获取有关各个 R 系统函数的信息，请在 R 命令提示符下键入函数名称作为 R `help()` 函数的参数。
 
 ```R
 help("Sys.time")
 ```
 
-## <a name="debugging-and-profiling-in-r"></a>调试和在 R 中进行分析
+## <a name="debugging-and-profiling-in-r"></a>在 R 中进行调试和分析
 
-Microsoft R Open，默认情况下安装的文档包括手动开发讨论分析和调试详细信息中的 R 语言扩展。
+默认情况下安装的 Microsoft R Open 的文档包括了一个有关为 R 语言开发扩展的手册，其中详细讨论了分析和调试。
 
-联机还有章︰ [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+还提供了该章的在线版本：[https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R 帮助文件的位置
 
-C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\doc\manual
+C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
+
+
 
 

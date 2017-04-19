@@ -1,111 +1,132 @@
 ---
 title: "性能案例研究 (R Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
 caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f52e3200989d62e142dc2b8b287e1b1510e65df
+ms.lasthandoff: 04/11/2017
+
 ---
-# 性能案例研究 (R Services)
+# <a name="performance-case-study-r-services"></a>性能案例研究 (R Services)
 
-为了演示前面各节中提供的指南的效果，运行了测试使用从航空公司数据集中的表。 
+为了演示前面部分中所述指导的效果，我们使用航班数据集中的表运行了测试。 
 
-## 测试和示例数据
+## <a name="tests-and-example-data"></a>测试和示例数据
 
-有六个表，但是有 10 米每个表中的行︰
+共有 6 个表，每个表中包含 1000 万行：
 
 | 表名 | Description |
 | ---------- | ----------- |
-| _航空公司_ | 数据从原始 xdf 文件中使用转换 *rxDataStep*。 |
-| _airlineWithIntCol_ | *DayOfWeek* 转换为一个整数，而不是字符串。 此外添加了 *rowNum* 列。 |
-| _airlineWithIndex_ | 与相同的数据 *airlineWithIntCol* 表中，但与单个聚集的索引使用 *rowNum* 列。 |
-| _airlineWithPageComp_ | 与相同的数据 *airlineWithIndex* 表中，但使用页压缩已启用。 此外添加了两个列 *CRSDepHour* 和 *Late*, ，其计算出 *CRSDepTime* 和 *ArrDelay*。 |
-| _airlineWithRowComp_ | 与相同的数据 *airlineWithIndex* 表中，但启用行压缩。 此外添加了两个列 *CRSDepHour* 和 *Late* 计算出 *CRSDepTime* 和 *ArrDelay*。 
-| _airlineColumnar_ | 纵栏式使用的单个聚集索引的存储区。 此表中填充从清理 csv 文件。 |
+| _airline_ | 使用 `rxDataStep` 从原始 xdf 文件转换的数据 |
+| _airlineWithIntCol_ | *DayOfWeek* 已转换为整数而不是字符串。 另外，添加了 *rowNum* 列。 |
+| _airlineWithIndex_ | 数据与 *airlineWithIntCol* 表相同，但使用 *rowNum* 列添加了单个聚集索引。 |
+| _airlineWithPageComp_ | 数据与 *airlineWithIndex* 表相同，但已启用页压缩。 另外，添加了基于 *CRSDepTime* 和 *ArrDelay* 计算得出的两个列：*CRSDepHour* 和 *Late*。 |
+| _airlineWithRowComp_ | 数据与 *airlineWithIndex* 表相同，但已启用行压缩。 另外，添加了基于 *CRSDepTime* 和 *ArrDelay* 计算得出的两个列：*CRSDepHour* 和 *Late*。 
+| _airlineColumnar_ | 包含单个聚集索引的纵栏表存储。 此表中填充了来自已清理的 csv 文件中的数据。 |
 
-用于执行此部分中，以及用于执行测试时，示例数据的链接中描述的测试脚本都是可用在 [https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)。
+[https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) 上提供了用于执行本部分中所述测试的脚本，以及用于测试的示例数据的链接。
 
-每个测试运行六次，第一次运行 (cold 运行，请) 的时间而被丢弃。 若要允许偶尔离群值，还删除剩余的五个运行的最长时间。 计算每个测试的平均已用运行时所花的四个剩余运行的平均值。 每个测试之前引发 R 垃圾回收。 值 *rowsPerRead* 为每个测试设置为 500000。
+每项测试运行六次，首次运行（“冷运行”）的时间已丢弃。 为了允许偶发离群值，剩余五次运行的最长时间也已丢弃。 已使用四次剩余运行的平均值来计算每项测试的平均消耗运行时。 运行每项测试之前已引发 R 垃圾回收。 每项测试的 *rowsPerRead* 值设置为 500000。
 
-## 使用压缩和纵栏式存储表时的数据大小
+## <a name="data-size-when-using-compression-and-a-columnar-store-table"></a>使用压缩和纵栏存储表时的数据大小
 
-以下是使用压缩和纵栏式表来减小数据大小的结果︰
+下面是使用压缩和纵栏表来减小数据大小的结果：
 
-| 表名 | 行 | 保留 | 数据 | index_size | 未使用 | %保存 （保留） |
+| 表名 | 行 | 保留 | 数据 | index_size | 未使用 | 节省率（保留） |
 | ---------- | ---- | -------- | ---- | ---------- | ------ | ------------------- |
-| airlineWithIndex | 10000000 | 2978816 KB | 2972160 KB | 6128 KB | 528 KB | 0 |
-| airlineWithPageComp | 10000000 | 625784 KB | 623744 KB | 1352 KB | 688 KB | 79% |
-| airlineWithRowComp | 10000000 | 1262520 KB | 1258880 KB | 2552 KB | 1088 KB | 58% |
-| airlineColumnar | 9999999 | 201992 KB | 201624 KB | n/a | 368 KB | 93% |
+| _airlineWithIndex_ | 10000000 | 2978816 KB | 2972160 KB | 6128 KB | 528 KB | 0 |
+| _airlineWithPageComp_ | 10000000 | 625784 KB | 623744 KB | 1352 KB | 688 KB | 79% |
+| _airlineWithRowComp_ | 10000000 | 1262520 KB | 1258880 KB | 2552 KB | 1088 KB | 58% |
+| _airlineColumnar_ | 9999999 | 201992 KB | 201624 KB | 不适用 | 368 KB | 93% |
 
-## 使用整数 vs。在公式中的字符串
+## <a name="using-integer-vs-string-in-formula"></a>在公式中使用整数与字符串
 
-在此实验中， `rxLinMod` 航空公司表使用 (其中 *DayOfWeek* 是一个字符串) 和 *airlineWithIndex* (其中 *DayOfWeek* 是一个整数)。 对于第一种情况， `colInfo` 用于指定因子级别 (`Monday`, ，`Tuesday`, ，...)。 为第二种 `colInfo` 未指定。 在这两种情况下，使用同一个公式。 使用的公式是 `ArrDelay ~ CRSDepTime + DayOfWeek`。 下面的结果清楚地显示出使用整数 vs 字符串的好处︰
+在此试验中，已将 `rxLinMod` 用于两个表，其中一个表包含字符串因子，另一个表包含整数因子。 
++ 对于 _airline_ 表
+
+    *DayOfWeek* 是字符串
+    
+    `colInfo` 参数用于指定因子级别（`Monday`、`Tuesday`...） 
+
++ 对于 *airlineWithIndex* 表
+
+    *DayOfWeek* 是整数 
+
+    未指定 `colInfo`
+    
+在这两种情况下，都使用了同一个公式：`ArrDelay ~ CRSDepTime + DayOfWeek`。 
+
+以下结果明确显示了使用整数而不是字符串作为因子带来的好处：
 
 | 表名 | 测试名称 | 平均时间 |
 | ---------- | --------- | ------------ |
-| 航空公司 | FactorCol | 10.72 |
-| airlineWithIntCol | IntCol | 3.4475 |
+| _airline_ | _FactorCol_ | 10.72 |
+| _airlineWithIntCol_ | _IntCol_ | 3.4475 |
 
-## 使用压缩
+## <a name="using-compression"></a>使用压缩
 
-在此实验中， `rxLinMod` 与用于 *airlineWithIndex*, ，*airlineWithPageComp*, ，和 *airlineWithRowComp* 表。 所有表都使用相同的公式和查询。 
+在此试验中，已将 `rxLinMod` 用于多个数据表：*airlineWithIndex*、*airlineWithPageComp* 和 *airlineWithRowComp*。 对所有表使用了相同的公式和查询。 
 
 | 表名 | 测试名称 | numTasks | 平均时间 |
 | ---------- | --------- | -------- | ------------ |
-| airlineWithIndex | NoCompression | 1 | 5.6775 |
+| _airlineWithIndex_ | NoCompression | 1 | 5.6775 |
 | &nbsp; | &nbsp; | 4 | 5.1775 |
-| airlineWithPageComp | PageCompression | 1 | 6.7875 |
+| _airlineWithPageComp_ | PageCompression | 1 | 6.7875 |
 | &nbsp; | &nbsp; | 4 | 5.3225 |
-| airlineWithRowComp | RowCompression | 1 | 6.1325 |
+| _airlineWithRowComp_ | RowCompression | 1 | 6.1325 |
 | &nbsp; | &nbsp; | 4 | 5.2375 |
 
-请注意该单独的压缩 (*numTasks* 设置为 1，) 似乎未帮助在此示例中，如 CPU 来处理压缩的增加来减少 IO time 补偿。 但是，测试运行时并行通过设置 *numTasks* 为 4，平均时间将缩短。 对于较大的数据集的压缩效果可能更明显。 压缩取决于数据集和值，因此可能需要试验来确定效果压缩对数据集。
+请注意，单纯使用压缩（*numTasks* 设置为 1）似乎在本示例中起不到作用，因为增大用于处理压缩的 CPU 会抵消 IO 时间的减少。 
 
-## 避免转换函数
+但是，如果将 *numTasks* 设置为 4 以便并行运行测试，则平均时间将会减少。 对于较大的数据集，压缩效果可能更明显。 压缩取决于数据集和值，因此可能需要进行试验，确定压缩对数据集产生的影响。
 
-在此实验中， `rxLinMod` 用于 airlineWithIndex 表使用或不使用转换函数。  
+## <a name="avoiding-transformation-function"></a>避免转换函数
+
+在此试验中，已将 `rxLinMod` 用于两次运行中的表 _airlineWithIndex_，其中一次运行使用转换函数，另一次运行未使用转换函数。  
 
 | 测试名称 | 平均时间 |
 | --------- | ------------ |
 | WithTransformation | 5.1675 |
 | WithoutTransformation | 4.7 |
 
-请注意，没有时间缩短不使用 （使用预计算并保留在表中的列） 的转换函数时。 如果有很多更多的转换和数据集，则较大 （> 100 米），节省的空间将会大得多。
+请注意，未使用转换函数时（换言之，使用表中预先计算并持久保存的列时），时间已得到改善。 如果还有其他许多的转换并且数据集较大 (> 100M)，则时间节省将明显得多。
 
-## 使用纵栏式应用商店
+## <a name="using-columnar-store"></a>使用纵栏表存储
 
-在此实验中， `rxLinMod` 所用的 airlineWithIndex 和 airlineColumnar 表而无需使用任何转换。 结果表明纵栏式存储可以比行存储区的更好地执行。 将大型数据集 （> 100 米） 的性能具有明显的差异。  
+在此试验中，已将 `rxLinMod` 用于两个表（_airlineWithIndex_ 和 _airlineColumnar_），并且未使用转换。 这些结果表明，纵栏表存储的表现要优于行存储。 在较大的数据集 (> 100 M) 中，产生的性能差异非常明显。  
 
 | 表名 | 测试名称 |平均时间 |
 | ---------- | --------- | ------------ |
-| airlineWithIndex | 行存储 | 4.67 |
-| airlineColumnar | ColStore | 4.555 |
+| _airlineWithIndex_ | RowStore | 4.67 |
+| _airlineColumnar_ | ColStore | 4.555 |
 
-## 多维数据集参数的效果
+## <a name="effect-of-the-cube-parameter"></a>多维数据集参数的影响
 
-在此实验中， `rxLinMod` 航空公司表使用其中 `DayOfWeek` 作为字符串存储。 使用的公式是 `ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime`。 结果清晰地表明，使用 `cube` 参数帮助提高性能。 
+在此试验中，已将 `rxLinMod` 用于 _airline_ 表，该表中的列 _DayOfWeek_ 存储为字符串。 使用的公式为 `ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime`。 结果明确显示使用 `cube` 参数有助于提高性能。 
 
-| 测试名称 | 多维数据集参数 | numTasks | 平均时间 | 对应的一行预测 (ArrDelay_Pred) |
+| 测试名称 | 多维数据集参数 | numTasks | 平均时间 | 单行预测 (ArrDelay_Pred) |
 | --------- | -------------- | -------- | ------------ | ------------------------------- |
 | CubeArgEffect | `cube = F` | 1 | 91.0725 | 9.959204 |
 | &nbsp; | &nbsp; | 4 | 44.09 | 9.959204 |
 | &nbsp; | `cube = T` | 1 | 21.1125 | 9.959204 |
 | &nbsp; | &nbsp; | 4 | 8.08 | 9.959204 |
 
-## 有关 rxDTree maxDepth 的效果
+## <a name="effect-of-maxdepth-for-rxdtree"></a>rxDTree 的 maxDepth 影响
 
-在此实验中， `rxDTree` airlineColumnar 表中使用。 几个不同值的 *maxDepth* 用来演示它如何影响运行的时的复杂性。 随着深度的增加，成指数增加的节点的总数和所用时间会显著增加。 对于此测试 *numTasks* 设置为 4。
+在此试验中，已将 `rxDTree` 用于 _airlineColumnar_ 表。 已使用 *maxDepth* 的多个不同值来演示它对运行时复杂性造成的影响。 
 
 | 测试名称 | maxDepth | 平均时间 |
 | --------- | -------- | ------------ |
@@ -115,61 +136,66 @@ caps.handback.revision: 6
 | &nbsp; | 8 | 45.5775 |
 | &nbsp; | 16 | 339.54 |
 
-## 电源选项的效果
+随着深度增大，节点总数将呈指数组增加，消耗时间也显著增加。 在此项测试中，*numTasks* 设置为 4。
 
-在此实验中， `rxLinMod` 同时，Windows 已设置为平衡以及高性能电源选项 airlineWithIntCol 表使用。 对于所有测试， *numTasks* 设置为 1。 测试运行的 6 倍，以及在这两个电源选项，以演示的可变性的结果时使用了平衡的电源选项下，两次执行。 结果显示的数字是更加一致和高性能电源选项更快。 
+## <a name="effect-of-windows-power-plan-options"></a>Windows 电源计划选项的影响
 
-__高性能__ 电源选项︰
+在此试验中，已将 `rxLinMod` 用于 _airlineWithIntCol_ 表。 Windows 电源计划已设置为“平衡”或“高性能”。 在所有测试轮次中，*numTasks* 设置为 1。 该测试运行了 6 次，并在同时使用两种电源选项的条件下执行了两次，目的是演示使用“平衡”电源选项时结果的变化。 结果表明，使用高性能电源计划时，数字更一致且更快。 
 
-| 测试名称 | 运行 # | 占用时间 | 平均时间 |
+“高性能”电源选项：
+
+| 测试名称 | “运行” # | 占用时间 | 平均时间 |
 | --------- | ----- | ------------ | ------------ |
-| IntCol | 1 | 3.57 （秒) | &nbsp; |
-| &nbsp; | 2 | 为 3.45 （秒) | &nbsp; |
-| &nbsp; | 3 | 为 3.45 （秒) | &nbsp; |
-| &nbsp; | 4 | 3.55 （秒) | &nbsp; |
-| &nbsp; | 5 | 3.55 （秒) | &nbsp; |
-| &nbsp; | 6 | 为 3.45 （秒) | &nbsp; |
+| IntCol | 1 | 3.57 秒 | &nbsp; |
+| &nbsp; | 2 | 3.45 秒 | &nbsp; |
+| &nbsp; | 3 | 3.45 秒 | &nbsp; |
+| &nbsp; | 4 | 3.55 秒 | &nbsp; |
+| &nbsp; | 5 | 3.55 秒 | &nbsp; |
+| &nbsp; | 6 | 3.45 秒 | &nbsp; |
 | &nbsp; | &nbsp; | &nbsp; | 3.475 |
-| &nbsp; | 1 | 为 3.45 （秒) | &nbsp; |
-| &nbsp; | 2 | 3.53 （秒) | &nbsp; |
-| &nbsp; | 3 | 3.63 （秒) | &nbsp; |
-| &nbsp; | 4 | 3.49 （秒) | &nbsp; |
-| &nbsp; | 5 | 3.54 （秒) | &nbsp; |
-| &nbsp; | 6 | 3.47 （秒) | &nbsp; |
+| &nbsp; | 1 | 3.45 秒 | &nbsp; |
+| &nbsp; | 2 | 3.53 秒 | &nbsp; |
+| &nbsp; | 3 | 3.63 秒 | &nbsp; |
+| &nbsp; | 4 | 3.49 秒 | &nbsp; |
+| &nbsp; | 5 | 3.54 秒 | &nbsp; |
+| &nbsp; | 6 | 3.47 秒 | &nbsp; |
 | &nbsp; | &nbsp; | &nbsp; | 3.5075 |
 
-__平衡__ 电源选项︰
+“平衡”电源选项：
 
-| 测试名称 | 运行 # | 占用时间 | 平均时间 |
+| 测试名称 | “运行” # | 占用时间 | 平均时间 |
 | --------- | ----- | ------------ | ------------ |
-| IntCol | 1 | 3.89 （秒) | &nbsp; |
-| &nbsp; | 2 | 4.15 （秒) | &nbsp; |
-| &nbsp; | 3 | 3.77 （秒) | &nbsp; |
+| IntCol | 1 | 3.89 秒 | &nbsp; |
+| &nbsp; | 2 | 4.15 秒 | &nbsp; |
+| &nbsp; | 3 | 3.77 秒 | &nbsp; |
 | &nbsp; | 4 | 5 秒 | &nbsp; |
-| &nbsp; | 5 | 3.92 （秒) | &nbsp; |
-| &nbsp; | 6 | 3.8 （秒) | &nbsp; |
+| &nbsp; | 5 | 3.92 秒 | &nbsp; |
+| &nbsp; | 6 | 3.8 秒 | &nbsp; |
 | &nbsp; | &nbsp; | &nbsp; | 3.91 |
-| &nbsp; | 1 | 3.82 （秒) | &nbsp; |
-| &nbsp; | 2 | 3.84 （秒) | &nbsp; |
-| &nbsp; | 3 | 3.86 （秒) | &nbsp; |
-| &nbsp; | 4 | 4.07 （秒) | &nbsp; |
-| &nbsp; | 5 | 4.86 （秒) | &nbsp; |
-| &nbsp; | 6 | 3.75 （秒) | &nbsp; |
+| &nbsp; | 1 | 3.82 秒 | &nbsp; |
+| &nbsp; | 2 | 3.84 秒 | &nbsp; |
+| &nbsp; | 3 | 3.86 秒 | &nbsp; |
+| &nbsp; | 4 | 4.07 秒 | &nbsp; |
+| &nbsp; | 5 | 4.86 秒 | &nbsp; |
+| &nbsp; | 6 | 3.75 秒 | &nbsp; |
 | &nbsp; | &nbsp; | &nbsp; | 3.88 |
 
-## 使用存储的模型的预测
+## <a name="prediction-using-a-stored-model"></a>使用存储模型进行预测
 
-在此实验中，一个模型是创建并存储到数据库。 然后从数据库和创建使用内存 （本地计算上下文） 中的一行数据帧的预测加载存储的模型。 定型、 保存和加载模型和预测所花费的时间如下所示。 这显然是一种更快的方式来完成预测。 测试结果显示的时间来保存该模型并将模型加载并预测所花费的时间。 
+在此试验中，已创建一个模型并将其存储到数据库。 然后从数据库加载存储的模型，并使用内存（本地计算上下文）中的单行数据框架创建预测。 下面显示了训练、保存和加载模型与预测所花费的时间。 。 
 
-| 表名 | 测试名称 | 平均时间 （以训练模型） | 若要保存/加载模型的时间 |
+| 表名 | 测试名称 | 平均时间（训练模型） | 保存/加载模型花费的时间 |
 | ---------- | --------- | ----- | ----- |
-| 航空公司 | SaveModel | 21.59 | 2.08 | 
-| &nbsp; | LoadModelAndPredict | &nbsp; |  2.09 （包括要预测的时间） |
+| airline | SaveModel | 21.59 | 2.08 | 
+| &nbsp; | LoadModelAndPredict | &nbsp; |  2.09（包括预测花费的时间） |
 
+测试结果显示了保存模型所花费的时间，以及加载模型和预测所花费的时间。 显然，这是执行预测的更快方式。 
 
-## 性能故障排除
+## <a name="performance-troubleshooting"></a>性能故障排除
 
-本部分中使用的测试生成输出文件的每次运行使用 *reportProgress* 参数，传递给具有值测试 `3`。 控制台输出定向到输出目录中的文件。 输出文件包含有关 IO、 过渡时间和计算时间中所用的时间信息。 这些时间可用于故障排除和诊断。 测试脚本处理通过运行拿出的平均时间在各种运行这些时间。 这些测试脚本和技术也可在解决问题，在使用 rx 分析函数时您 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 例如，下面的示例演示一个运行的示例时间。 感兴趣的主要计时是读取时间 （IO 时间） 的总数和过渡时间 （开销以设置用于计算的过程）。
+本部分所述的测试使用连同 `3` 值一起传递给测试的 *reportProgress* 参数为每次运行生成输出文件。 控制台输出将定向到输出目录中的某个文件。 输出文件包含有关 IO 所用时间、转换时间和计算时间的信息。 这些时间可用于故障排除和诊断。 
+
+然后，测试脚本将处理每次运行的这些时间，以提供各次运行的平均时间。  例如，下面显示了某次运行的示例时间。 主要关注的时间是“总读取时间”（IO 时间）和“转换时间”（设置计算进程所产生的开销）。
 
     Running IntCol Test. Using airlineWithIntCol table.  
         run  1  took  3.66  seconds  
@@ -187,9 +213,26 @@ __平衡__ 电源选项︰
     4      Transition time 0.5913  17.18 
     5    Total non IO time 0.3134   9.10 
  
- ## 另请参阅
- [SQL Server R 服务性能优化指南](../../advanced-analytics/r-services/sql-server-r-services-performance-tuning.md)
+ > [!TIP]
+ > 这些测试脚本和技巧也可用于排查在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中使用 rx 分析函数时遇到的问题。
  
- [R 服务的 SQL Server 配置](../../advanced-analytics/r-services/sql-server-configuration-r-services.md)
+## <a name="scripts-and-resources"></a>脚本和资源
+
++ Github：本案例研究的[示例数据和脚本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ 博客：[Reference Implementation of Credit Risk Prediction using R](https://blogs.msdn.microsoft.com/rserver/2017/02/22/credit-risk-prediction/)（使用 R 进行信用风险预测的参考实现）
+
+     一篇性能案例研究，其中包括可下载的源代码。
+       
++ [Monitoring R Services using Custom Reports](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)（使用自定义报告监视 R Services）
+ 
+     可在 SQL Server Management Studio 中查看的自定义报告。
+
+ ## <a name="see-also"></a>另请参阅
+
+ 
+ [SQL Server R Services 性能优化指南](../../advanced-analytics/r-services/sql-server-r-services-performance-tuning.md)
+ 
+ [R Services 的 SQL Server 配置](../../advanced-analytics/r-services/sql-server-configuration-r-services.md)
  
  [R 和数据优化](../../advanced-analytics/r-services/r-and-data-optimization-r-services.md)
+

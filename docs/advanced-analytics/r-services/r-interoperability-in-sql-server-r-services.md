@@ -1,65 +1,70 @@
 ---
-title: "SQL Server R 服务中的 R 互操作性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server R Services 中的 R 互操作性 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- r-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
 caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: jeannt
+ms.author: jeannt
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba2b9208960f3df60dcb4317aae26fe7489ee88b
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server R 服务中的 R 互操作性
+# <a name="r-interoperability-in-sql-server-r-services"></a>SQL Server R Services 中的 R 互操作性
 
-本主题重点介绍运行中的 R 的机制 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], ，并介绍 Microsoft R 和开放源代码 R.之间的差异有关其他组件的信息，请参阅 [SQL Server 中的新组件](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)。
+本主题重点介绍在 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 中针对 R 运行的机制，同时介绍 Microsoft R 与开源 R.之间的差异。有关其他组件的信息，请参阅 [New Components in SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)（SQL Server 中的新组件）。
 
-### 开放源代码 R 的组件
+### <a name="open-source-r-components"></a>开源 R 组件
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包括基本多个 R 包和工具的完整分发。 有关什么是附带的基本分布的详细信息，请参阅下面的默认位置中的安装过程中安装的文档︰
-`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包括基础 R 包和工具的完整发行版。 有关基础发行版包含哪些组件的详细信息，请参阅安装期间在以下默认位置安装的文档：`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
-作为安装的一部分 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], ，您必须同意 GNU 公共许可条款。 此后，可以运行标准的 R 程序包无需进一步修改，就像在任何其他开源分发为。
+在安装 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 的过程中，必须同意 GNU 公共版的许可条款。 然后，无需进一步的修改即可运行标准 R 包，就像运行 R 的其他任何开源发行版一样。
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不修改任何方式中的 R 运行时。 R 运行时执行外部 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 处理并可以独立于运行 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 但是，我们强烈建议您不要运行这些工具时 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R，若要避免资源争用。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不会以任何方式修改 R 运行时。 R 运行时在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 进程的外部执行，并且可独立于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 运行。 但是，我们强烈建议不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 时运行这些工具，以免发生资源争用。
 
-程序与特定的 R 基础程序包分发 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 可以与实例关联的文件夹中找到实例。 例如，如果在默认实例上安装 R Services，R 库位于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。
+可在与实例关联的文件夹中找到与特定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例关联的 R 基础包发行版。 例如，如果在默认实例上安装 R Services，则 R 库位于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` 中。
 
-同样，与默认实例相关联的 R 工具将位于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`,，
+同样，与默认实例关联的 R 工具位于 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin` 中。
 
-有关基本分布的详细信息，请参阅 [安装与 Microsoft R Open 的程序包](https://mran.revolutionanalytics.com/rro/installed/)
+有关基础发行版的详细信息，请参阅 [Packages installed with Microsoft R Open](https://mran.revolutionanalytics.com/rro/installed/)（随 Microsoft R Open 一起安装的包）
 
-### 其他 R 包
+### <a name="additional-r-packages"></a>其他 R 包
 
-除了基本的 R 分布， [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包含某些专有的 R 包，以及一个框架，用于并行执行的 R、 和支持在远程计算上下文中执行的 R 的库。 
+除了基础 R 发行版以外，[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 还包含一些专有 R 包、一个用于并行执行 R 的框架，以及用于支持在远程计算上下文中执行 R 的库。 
 
-R 功能-R 基分发加上 R 的增强的功能和包-此组合的集称为 **Microsoft R**。如果安装 Microsoft R Server （独立） 时，您将获得一组相同的 SQL Server R 服务 （数据库） 具有但位于不同的文件夹中安装的包。 
+R 功能的这种组合（R 基础分发版加上增强的 R 功能和包）称为 **Microsoft R**。如果安装了 Microsoft R Server（独立版），获得的包集与连同 SQL Server R Services（数据库内）一起安装的包集完全相同，但这些包安装在不同的文件夹中。 
 
-Microsoft R 包括用于只要有可能更快地数学处理英特尔数学内核库的分布。 例如，基本线性代数 (BLAS) 库用于许多加载项包也与 R 本身。 有关详细信息，请参阅以下文章︰
+Microsoft R 包含 Intel 数学内核库的发行版，每当能够加速数学处理时，就会使用该库。 例如，基本线性代数 (BLAS) 库用于许多附加包以及 R 本身。 有关详细信息，请参阅以下文章：
 
-+ [Intel 数学内核如何加快 R](http://blog.revolutionanalytics.com/2014/10/revolution-r-open-mkl.html)
-+ [链接到多线程的数学库的 R 的性能优势](http://blog.revolutionanalytics.com/2010/06/performance-benefits-of-multithreaded-r.html)
++ [How the Intel Math Kernel Speeds up R](http://blog.revolutionanalytics.com/2014/10/revolution-r-open-mkl.html)（Intel 数学内核库如何加速 R）
++ [Performance benefits of linking R to multithreaded math libraries](http://blog.revolutionanalytics.com/2010/06/performance-benefits-of-multithreaded-r.html)（将 R 链接到多线程数学库所带来的性能优势）
 
-列出了其中一些上述最重要的元素添加到 Microsoft R **RevoScaleR** 和 **RevoPemaR** 包。 这些是更好的性能很大程度上用 C 或 c + + 中编写的 R 包。
+在 Microsoft R 中，最重要的补充包是 **RevoScaleR** 和 **RevoPemaR** 包。 这些 R 包主要使用 C 或 C++ 编写，目的是提高性能。
 
-+ **RevoScaleR。** 包括各种 Api 进行数据操作和分析。 已优化的 Api 来分析数据集过大而无法放入内存，并执行计算分布在多个核心或处理器。
++ **RevoScaleR。** 包含用于数据处理和分析的各种 API。 这些 API 已经过优化，可以分析由于过大而无法装入内存的数据集，以及执行分布在多个核心或处理器之间的计算。
 
-   RevoScaleR Api 还支持更大可伸缩性使用的数据子集。 换而言之，大多数 RevoScaleR 函数可以执行数据以及使用更新到聚合结果的算法的特定块。 因此 R 解决方案基于 RevoScaleR 函数可以处理大型数据集，并且将不绑定到本地内存。
+   RevoScaleR API 还支持处理数据的子集，从而提高了可伸缩性。 换而言之，大多数 RevoScaleR 函数可针对数据区块运行，并使用更新算法来聚合结果。 因此，基于 RevoScaleR 函数的 R 解决方案可以处理极大型数据集，并且不受本地内存的约束。
 
-  RevoScaleR 包还支持。XDF 速度更快的移动和用于分析的数据存储的文件格式。 XDF 格式使用纵栏式存储、 可移植性，并且可以用于加载，然后处理来自各种来源，包括文本、 SPS 或 ODBC 连接的数据。 在本教程中提供了如何使用 XDF 格式的一个示例︰ [数据科学深入了解](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)
+  RevoScaleR 包还支持使用 .XDF 文件格式来加速移动和存储用于分析的数据。 XDF 格式使用纵栏表存储且可移植，可用于加载并处理来自各种来源（包括文本、SPSS 或 ODBC 连接）的数据。 以下教程提供了有关如何使用 XDF 格式的示例：[Data Science Deep Dive](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)（对数据科学的深入探讨）
 
 
-+ **RevoPemaR。** PEMA 代表外部内存的并行算法。  **RevoPemaR** 包提供的 Api，可用于开发您自己的并行算法。 有关详细信息，请参阅 [RevoPemaR 入门指南](https://msdn.microsoft.com/microsoft-r/rserver/rserver-pemar-getting-started)。
++ **RevoPemaR。** PEMA 是“并行外部内存算法”的缩写。 **RevoPemaR** 包提供可用于开发你自己的并行算法的 API。 有关详细信息，请参阅 [RevoPemaR Getting Started Guide](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)（RevoPemaR 入门指南）。
 
-## 另请参阅
+## <a name="see-also"></a>另请参阅
 [体系结构概述](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
 
-[SQL Server 以支持 R 服务中的新组件](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)
+[SQL Server 中用于支持 R Services 的新组件](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)
 
-[安全性概述](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md)
+[安全概述](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md)
+
+
