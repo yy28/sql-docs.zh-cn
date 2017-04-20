@@ -1,28 +1,32 @@
 ---
 title: "查看和修改分发服务器和发布服务器属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查看复制属性"
-  - "分发服务器 [SQL Server 复制], 修改"
-  - "修改复制属性, 分发服务器"
-  - "分发服务器 [SQL Server 复制], 属性"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing replication properties
+- Distributors [SQL Server replication], modifying
+- modifying replication properties, Distributors
+- Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看和修改分发服务器和发布服务器属性
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看和修改分发服务器和发布服务器属性。  
+# <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改分发服务器和发布服务器属性。  
   
  **本主题内容**  
   
@@ -51,57 +55,57 @@ caps.handback.revision: 43
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看和修改分发服务器属性  
+#### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到分发服务器，然后展开服务器节点。  
   
-2.  用鼠标右键单击 **复制** 文件夹，，然后单击 **分发服务器属性**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”**。  
   
-3.  查看和修改属性在 **分发服务器属性-\< 分发服务器>** 对话框。  
+3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。  
   
-    -   若要查看和修改分发数据库的属性，请单击属性按钮 (**...**) 上的数据库 **常规** 对话框左侧的页。  
+    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 (**...**)。  
   
-    -   若要查看和修改发布服务器与分发服务器相关联的属性，请单击属性按钮 (**...**) 发布服务器上，为 **出版商** 对话框中的页。  
+    -   若要查看和修改与分发服务器关联的发布服务器属性，请在该对话框的**“发布服务器”**页面上单击发布服务器的属性按钮 ( **...** )。  
   
     -   若要访问复制代理的配置文件，请单击此对话框的 **“常规”** 页上的 **“默认配置文件”** 按钮。 有关详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
-    -   若要更改管理存储过程在发布服务器上执行以及在分发服务器上更新信息时所用帐户的密码，请在该对话框的 **“发布服务器”** 页面上的 **“密码”** 和 **“确认密码”** 框中输入新密码。 有关详细信息，请参阅 [安全分发服务器](../../relational-databases/replication/security/secure-the-distributor.md)。  
+    -   若要更改管理存储过程在发布服务器上执行以及在分发服务器上更新信息时所用帐户的密码，请在该对话框的 **“发布服务器”** 页面上的 **“密码”** 和 **“确认密码”** 框中输入新密码。 有关详细信息，请参阅[保护分发服务器的安全](../../relational-databases/replication/security/secure-the-distributor.md)。  
   
 4.  根据需要修改属性，然后单击 **“确定”**。  
   
-#### 查看和修改发布服务器属性  
+#### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
-2.  用鼠标右键单击 **复制** 文件夹，，然后单击 **发布服务器属性**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”**。  
   
-3.  查看和修改属性在 **发布服务器属性-\< 发布服务器 >** 对话框。  
+3.  在“发布服务器属性 - <发布服务器>”对话框中查看和修改属性。  
   
-    -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库不会将发布该数据库;相反，它允许任何用户 **db_owner** 该数据库在数据库中创建一个或多个发布的固定的数据库角色。  
+    -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库并不会发布该数据库，而是允许该数据库的 **db_owner** 固定数据库角色中的任何用户在该数据库中创建一个或多个发布。  
   
 4.  根据需要修改属性，然后单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式查看发布服务器和分发服务器属性。  
   
-#### 查看分发服务器和分发数据库属性  
+#### <a name="to-view-distributor-and-distribution-database-properties"></a>查看分发服务器和分发数据库属性  
   
-1.  执行 [sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md) 来返回有关分发服务器、 分发数据库和工作目录的信息。  
+1.  执行 [sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md) 可返回有关分发服务器、分发数据库和工作目录的信息。  
   
-2.  执行 [sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) 来返回指定的分发数据库的属性。  
+2.  执行 [sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) 可返回指定的分发数据库的属性。  
   
-#### 更改分发服务器和分发数据库属性  
+#### <a name="to-change-distributor-and-distribution-database-properties"></a>更改分发服务器和分发数据库属性  
   
-1.  在分发服务器上，执行 [sp_changedistributor_property](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md) 修改分发服务器属性。  
+1.  在分发服务器上，执行 [sp_changedistributor_property](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md) 可修改分发服务器属性。  
   
-2.  在分发服务器上，执行 [sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md) 修改分发数据库属性。  
+2.  在分发服务器上，执行 [sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md) 可修改分发数据库属性。  
   
-3.  在分发服务器上，执行 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) 若要更改分发服务器密码。  
+3.  在分发服务器上，执行 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) 可更改分发服务器密码。  
   
     > [!IMPORTANT]  
     >  如果可能，请在运行时提示用户输入安全凭据。 如果必须将凭据存储在脚本文件中，请确保该文件的安全以防受到未经授权的访问。  
   
-4.  在分发服务器上，执行 [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 更改发布服务器使用分发服务器的属性。  
+4.  在分发服务器上，执行 [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) ，以便使用分发服务器更改发布服务器的属性。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本返回有关分发服务器和分发数据库的信息。  
@@ -123,51 +127,51 @@ caps.handback.revision: 43
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
-#### 查看和修改分发服务器属性  
+#### <a name="to-view-and-modify-distributor-properties"></a>查看和修改分发服务器属性  
   
-1.  通过使用创建连接到分发服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类。 传递 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步骤 1 中的对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-3.  （可选）检查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 属性以验证当前连接的服务器为分发服务器。  
+3.  （可选）检查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 属性以验证当前连接到的服务器是否为分发服务器。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法，以从服务器获取的属性。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法获取该服务器的属性。  
   
-5.  （可选）若要更改属性，请将设置一个或多个可以设置的分发服务器属性的新值 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象。  
+5.  （可选）若要更改属性，请为一个或多个可在 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象上设置的分发服务器属性设置新值。  
   
-6.  （可选）如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象设置为 **true**, ，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法，以将所做的更改提交到服务器。  
+6.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
-#### 查看和修改分发数据库属性  
+#### <a name="to-view-and-modify-distribution-database-properties"></a>查看和修改分发数据库属性  
   
-1.  通过使用创建连接到分发服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类。 指定名称属性并传递 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步骤 1 中的对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性，并传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以从服务器获取的属性。 如果此方法返回 **false**，则该服务器上不存在指定名称的数据库。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取来自服务器的属性。 如果此方法返回 **false**，则该服务器上不存在指定名称的数据库。  
   
-4.  （可选）若要更改属性，设置新的值之一的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 可以设置的属性。  
+4.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 属性中的一个设置新值。  
   
-5.  （可选）如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象设置为 **true**, ，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法，以将所做的更改提交到服务器。  
+5.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
-#### 查看和修改发布服务器属性  
+#### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
-1.  通过使用创建连接到发布服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 步骤 1 中的对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性，并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-3.  （可选）若要更改属性，设置新的值之一的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 可以设置的属性。  
+3.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 属性中的一个设置新值。  
   
-4.  （可选）如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 对象设置为 **true**, ，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法，以将所做的更改提交到服务器。  
+4.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
-#### 更改从发布服务器到分发服务器的管理连接的密码  
+#### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>更改从发布服务器到分发服务器的管理连接的密码  
   
-1.  通过使用创建连接到分发服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
   
-3.  设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为在步骤 1 中创建的连接。  
+3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法以获取该对象的属性。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法获取该对象的属性。  
   
 5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递新的密码值。  
   
@@ -176,13 +180,13 @@ caps.handback.revision: 43
   
 6.  （可选）执行下列步骤以更改每个使用该分发服务器的远程发布服务器上的密码：  
   
-    1.  通过使用创建连接到发布服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+    1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-    2.  创建的实例 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类。  
+    2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
   
-    3.  设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 6a 中创建的连接。  
+    3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 6a 中创建的连接。  
   
-    4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法以获取该对象的属性。  
+    4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> 方法获取该对象的属性。  
   
     5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递步骤 5 中的新密码值。  
   
@@ -192,17 +196,18 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  若要避免将凭据存储在代码中，应当在运行时提供新分发服务器密码。  
   
- [!code-csharp[HowTo#rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changedistpub)]  
+ [!code-cs[HowTo#rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changedistpub)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [配置分发](../../relational-databases/replication/configure-distribution.md)   
- [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [“配置分发”](../../relational-databases/replication/configure-distribution.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [分发服务器和发布服务器信息脚本](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
- [复制系统存储过程概念](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [查看信息并为发布服务器和 #40; 执行任务复制监视器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
   
   
+

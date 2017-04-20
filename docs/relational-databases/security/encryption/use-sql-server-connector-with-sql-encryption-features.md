@@ -1,25 +1,29 @@
 ---
 title: "使用具有 SQL 加密功能的 SQL Server 连接器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 连接器, 使用"
-  - "EKM, SQL Server 连接器"
+ms.custom: 
+ms.date: 04/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Connector, using
+- EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e24c6b23aeafcbeebf5cf5515803c7eb909a65db
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用具有 SQL 加密功能的 SQL Server 连接器
+# <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用由 Azure 密钥保管库保护的非对称密钥的常见 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活动包括以下三个方面。  
@@ -30,33 +34,33 @@ caps.handback.revision: 13
   
 -   通过使用 Key Vault 的非对称密钥实现列级加密  
   
- 请先完成主题[Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 I 到 IV 部分，然后执行该主题中的步骤。  
+ 请先完成主题 [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 I 到 IV 部分，然后执行该主题中的步骤。  
  
 > [!NOTE]  
->  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344)，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。  
+>  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 页面上的指南。  
   
-## 使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
  完成主题“Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）”的第 I 到 IV 部分之后，使用 Azure 密钥保管库密钥来加密使用 TDE 的数据库加密密钥。  
-你需要创建一个凭据和登录名，以及创建一个可以对数据库中的数据和日志进行加密的数据库加密密钥。 若要对数据库进行加密，需要有数据库的**CONTROL**权限。 下图显示了使用 Azure 密钥保管库时的加密密钥的层次结构。  
+你需要创建一个凭据和登录名，以及创建一个可以对数据库中的数据和日志进行加密的数据库加密密钥。 若要对数据库进行加密，需要有数据库的 **CONTROL** 权限。 下图显示了使用 Azure 密钥保管库时的加密密钥的层次结构。  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **创建要用于 TDE 的数据库引擎的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据**  
   
-     在数据库加载期间数据库引擎使用凭据来访问密钥保管库。 我们建议在第 I 部分为 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 创建另一个 Azure Active Directory **客户端 ID**和**密码**，以限制所授予的密钥保管库权限。  
+     在数据库加载期间数据库引擎使用凭据来访问密钥保管库。 我们建议在第 I 部分为 **创建另一个 Azure Active Directory** 客户端 ID **和** 密码 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，以限制所授予的密钥保管库权限。  
   
      采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用**公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云**（例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
+        - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
   
-    -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID**。在此示例中，**客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
+    -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
-        >  必须删除**客户端 ID** 中的连字符。  
+        >  必须删除 **客户端 ID**中的连字符。  
   
-    -   使用第 I 部分的**客户端密码**完成 `SECRET` 参数的第二部分。在此示例中，第 I 部分的**客户端密码**为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串*不带连字符*的字母和数字。  
+    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。  
   
     ```tsql  
     USE master;  
@@ -69,7 +73,7 @@ caps.handback.revision: 13
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
-2.  **为 TDE 创建 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名**  
+2.  **为 TDE 创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 登录名**  
   
      创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名并向其添加步骤 1 中的凭据。 此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例使用之前导入的密钥。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
     -- for the Database engine to use when it loads a database   
     -- encrypted by TDE.  
     CREATE LOGIN TDE_Login   
-    FROM ASYMMETRIC KEY ContosoRSAKey0;  
+    FROM ASYMMETRIC KEY CONTOSO_KEY;  
     GO   
   
     -- Alter the TDE Login to add the credential for use by the   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
   
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
-    ENCRYPTION BY SERVER ASYMMETRIC KEY ContosoRSAKey0;  
+    ENCRYPTION BY SERVER ASYMMETRIC KEY CONTOSO_KEY;  
     GO  
     ```  
   
@@ -136,8 +140,8 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  任何数据库只要启用 TDE 就会自动加密 `tempdb` 数据库。  
   
-## 通过使用 Key Vault 的非对称密钥加密备份文件  
- 从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 开始支持加密备份。 以下示例创建并还原了经过数据加密密钥加密的备份文件，其中该加密密钥受到 key vault 中的非加密密钥保护。  
+## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>通过使用 Key Vault 的非对称密钥加密备份文件  
+ 从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]开始支持加密备份。 以下示例创建并还原了经过数据加密密钥加密的备份文件，其中该加密密钥受到 key vault 中的非加密密钥保护。  
 在数据库加载期间 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 需要凭据来访问密钥保管库。 我们建议在第 I 部分为数据库引擎创建另一个 Azure Active Directory 客户端 ID 和密码，以限制所授予的密钥保管库权限。  
   
 1.  **创建要用于备份加密的数据库引擎的 SQL Server 凭据**  
@@ -145,15 +149,15 @@ caps.handback.revision: 13
      采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用**公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云**（例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。    
+        - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。    
   
-    -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID**。在此示例中，**客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
+    -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
-        >  必须删除**客户端 ID** 中的连字符。  
+        >  必须删除 **客户端 ID**中的连字符。  
   
-    -   使用第 I 部分的**客户端密码**完成 `SECRET` 参数的第二部分。在此示例中，第 I 部分的**客户端密码**为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串*不带连字符*的字母和数字。   
+    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。   
   
         ```tsql  
         USE master;  
@@ -167,9 +171,9 @@ caps.handback.revision: 13
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
         ```  
   
-2.  **为备份加密创建 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名**  
+2.  **为备份加密创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 登录名**  
   
-     为备份加密创建 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 所使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名，并向其添加步骤 1 中的凭据。 此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例使用之前导入的密钥。  
+     为备份加密创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所使用的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]登录名，并向其添加步骤 1 中的凭据。 此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例使用之前导入的密钥。  
   
     > [!IMPORTANT]  
     >  如果你已将该非对称密钥用于 TDE (以上示例) 或列级加密 (以下示例)，则不能将此同一个密钥用于备份加密。  
@@ -194,7 +198,9 @@ caps.handback.revision: 13
   
 3.  **备份数据库**  
   
-     备份数据库，并使用密钥保管库中存储的对称密钥指定加密。  
+     备份数据库，并使用密钥保管库中存储的非对称密钥指定加密。
+     
+     请注意，在下面的示例中，如果数据库已使用 TDE 加密，且非对称密钥 `CONTOSO_KEY_BACKUP` 不同于 TDE 非对称密钥，则会同时通过 TDE 非对称密钥和 `CONTOSO_KEY_BACKUP` 加密备份。 目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将需要两个密钥才能解密备份。
   
     ```tsql  
     USE master;  
@@ -207,6 +213,16 @@ caps.handback.revision: 13
     GO  
     ```  
   
+4.  **还原数据库**  
+    
+    若要还原使用 TDE 加密的数据库备份，目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须先对用于加密的非对称 Key Vault 密钥进行复制。 为此，可执行如下操作：  
+    
+    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：**为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为**同一 Key Vault 密钥名称**。
+    
+    - 对目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例应用步骤 1 和 2 的操作。
+    
+    - 目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例能够访问用于加密备份的非对称密钥以后，即可在服务器上还原数据库。
+    
      示例还原代码：  
   
     ```tsql  
@@ -216,15 +232,15 @@ caps.handback.revision: 13
     GO  
     ```  
   
-     有关备份选项的详细信息，请参阅[BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
+     有关备份选项的详细信息，请参阅 [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
   
-## 通过使用 Key Vault 的非对称密钥实现列级加密  
+## <a name="column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a>通过使用 Key Vault 的非对称密钥实现列级加密  
  以下示例创建了受 key vault 中非对称密钥保护的对称密钥。 然后该对称密钥用于对数据库中的数据进行加密。  
   
 > [!IMPORTANT]  
 >  如果你已将非对称密钥用于 TDE 或备份加密（以上示例），则不能将此同一个密钥用于备份加密。  
   
- 此示例使用存储在密钥保管库中的 `CONTOSO_KEY_COLUMNS` 非对称密钥，该密钥可能是以前导入或创建的，如[Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 3 部分的步骤 3 所述。 若要在 `ContosoDatabase` 数据库中使用此非对称密钥，必须再次执行 `CREATE ASYMMETRIC KEY` 语句，以便为 `ContosoDatabase` 数据库提供对该密钥的引用。  
+ 此示例使用存储在密钥保管库中的 `CONTOSO_KEY_COLUMNS` 非对称密钥，该密钥可能是以前导入或创建的，如 [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 3 部分的步骤 3 所述。 若要在 `ContosoDatabase` 数据库中使用此非对称密钥，必须再次执行 `CREATE ASYMMETRIC KEY` 语句，以便为 `ContosoDatabase` 数据库提供对该密钥的引用。  
   
 ```tsql  
 USE [ContosoDatabase];  
@@ -265,10 +281,11 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## 另请参阅  
- [使用 Azure 密钥保管库的可扩展密钥管理的设置步骤](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
+## <a name="see-also"></a>另请参阅  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [使用 Azure Key Vault 的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled 服务器配置选项](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+
