@@ -1,32 +1,36 @@
 ---
 title: "筛选已发布数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筛选器 [SQL Server 复制]"
-  - "筛选器 [SQL Server 复制], 关于筛选器"
-  - "筛选 [SQL Server 复制]"
-  - "静态行筛选器"
-  - "事务复制, 筛选已发布数据"
-  - "复制 [SQL Server], 筛选已发布数据"
-  - "筛选已发布数据 [SQL Server 复制]"
-  - "快照复制 [SQL Server], 筛选已发布数据"
-  - "列筛选器 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server replication]
+- filters [SQL Server replication], about filtering
+- filtering [SQL Server replication]
+- static row filters
+- transactional replication, filtering published data
+- replication [SQL Server], filtering published data
+- filtering published data [SQL Server replication]
+- snapshot replication [SQL Server], filtering published data
+- column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 筛选已发布数据
+# <a name="filter-published-data"></a>筛选已发布数据
   通过筛选表项目，可以为要发布的数据创建分区。 通过筛选已发布数据，可以：  
   
 -   最大程度地减少通过网络发送的数据量。  
@@ -37,7 +41,7 @@ caps.handback.revision: 50
   
 -   由于可以将不同的数据分区发送到不同的订阅服务器（没有两个订阅服务器会同时更新相同的数据值），因此可以避免或减少订阅服务器更新数据时的冲突。  
   
--   避免传输敏感数据。 行筛选器和列筛选器可以用于限制订阅服务器对数据的访问。 对于合并复制，如果使用包括 HOST_NAME() 的参数化筛选器，则需要考虑安全问题。 详细信息，请参阅"筛选使用 host_name （）"一节中 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-row-filters.md)。  
+-   避免传输敏感数据。 行筛选器和列筛选器可以用于限制订阅服务器对数据的访问。 对于合并复制，如果使用包括 HOST_NAME() 的参数化筛选器，则需要考虑安全问题。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“使用 HOST_NAME() 进行筛选”部分。  
   
  复制提供了四种筛选器：  
   
@@ -51,13 +55,13 @@ caps.handback.revision: 50
   
 -   参数化行筛选器，仅适用于合并复制。  
   
-     使用参数化行筛选器，可以选择要发布的行的子集。 与向所有订阅服务器发送相同行子集的静态筛选器不同，参数化行筛选器使用订阅服务器提供的数据值向订阅服务器发送不同的行子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)。  
+     使用参数化行筛选器，可以选择要发布的行的子集。 与向所有订阅服务器发送相同行子集的静态筛选器不同，参数化行筛选器使用订阅服务器提供的数据值向订阅服务器发送不同的行子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 -   联接筛选器，仅适用于合并复制。  
   
      使用联接筛选器，可以将行筛选器从一个已发布表扩展到另一个已发布表。 有关详细信息，请参阅 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
-## 静态行筛选器  
+## <a name="static-row-filters"></a>静态行筛选器  
  下图显示的已发布表已经过筛选，因此发布中只包括第 2、3、6 行。  
   
  ![行筛选](../../../relational-databases/replication/publish/media/repl-16.gif "行筛选")  
@@ -71,20 +75,20 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  在事务发布中使用行筛选器会显著增加开销，因为对于为已发布表写入的每个日志行，都需要计算项目筛选器子句以确定是否要复制该行。 如果每个复制节点都能支持全部数据负载，而且总体数据集相当小，则应避免在事务发布中使用行筛选器。  
   
--   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)。  
+-   对于合并复制，请使用参数化行筛选器，而不要使用静态行筛选器创建多个发布。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  若要定义或修改静态行筛选器，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-## 列筛选器  
+## <a name="column-filters"></a>列筛选器  
  下图显示了一个筛选出列 C 的发布。  
   
  ![列筛选](../../../relational-databases/replication/publish/media/repl-17.gif "列筛选")  
   
  还可以同时使用行筛选和列筛选，如下图所示。  
   
- ![行筛选和列筛选](../../../relational-databases/replication/publish/media/repl-18.gif "行筛选和列筛选")  
+ ![行和列筛选](../../../relational-databases/replication/publish/media/repl-18.gif "行和列筛选")  
   
- 创建发布后，可以使用列筛选从现有发布中删除列，但在发布服务器中的表中保留该列，也可以在发布中包括现有列。 对于其他更改（如向表添加新列，然后再将其添加到已发布项目中），请使用架构更改复制。 有关详细信息，请参阅本主题中的"添加列"和"删除列"部分 [发布数据库上进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 创建发布后，可以使用列筛选从现有发布中删除列，但在发布服务器中的表中保留该列，也可以在发布中包括现有列。 对于其他更改（如向表添加新列，然后再将其添加到已发布项目中），请使用架构更改复制。 有关详细信息，请参阅[对发布数据库进行架构更改](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)主题中的“添加列”和“删除列”这两部分。  
   
  下表列出的列类型不能从某些类型的发布中筛选出。  
   
@@ -93,17 +97,17 @@ caps.handback.revision: 50
 |主键列|主键列对于事务发布中的所有表都是必需的。 主键对于合并发布中的表并不是必需的，但如果存在主键列，则无法筛选该列。|  
 |外键列|使用新建发布向导创建的所有发布。 可以使用 Transact-SQL 存储过程来筛选外键列。 有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。|  
 |**rowguid** 列|合并发布*|  
-| **Msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
+|**msrepl_tran_version** 列|允许可更新订阅的快照或事务发布|  
 |不允许 NULL 且没有默认值或 IDENTITY 属性集的列。|允许可更新订阅的快照或事务发布|  
 |具有唯一约束或索引的列|允许可更新订阅的快照或事务发布|  
 |SQL Server 7.0 合并发布中的所有列|SQL Server 7.0 合并发布中不能筛选的列。|  
 |时间戳|允许可更新订阅的 SQL Server 7.0 快照或事务发布|  
   
- \*如果您要在合并发布中发布表，该表已包含数据类型的列 **uniqueidentifier** 与 **ROWGUIDCOL** 属性集，复制可以使用此列，而不是创建一个额外的列，名为 **rowguid**。 在这种情况下，必须发布现有列。  
+ \*如果在合并发布中发布表，且该表已包含具有 **ROWGUIDCOL** 属性集的 **uniqueidentifier** 数据类型的列，则复制可以使用此列，而不必再创建名为 **rowguid** 的列。 在这种情况下，必须发布现有列。  
   
- 若要定义或修改列筛选器，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+ 若要定义或修改列筛选器，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)中的“使用 HOST_NAME() 进行筛选”部分。  
   
-## 筛选注意事项  
+## <a name="filtering-considerations"></a>筛选注意事项  
  筛选数据时，请谨记下列注意事项：  
   
 -   行筛选器中引用的所有列必须都包括在发布中。 也就是说，不能使用列筛选器排除行筛选器中使用的列。  
@@ -120,7 +124,7 @@ caps.handback.revision: 50
   
     -   **text 和 ntext**  
   
-    -   **图像**  
+    -   **image**  
   
     -   **XML**  
   
@@ -128,9 +132,9 @@ caps.handback.revision: 50
   
 -   事务复制允许您将索引视图按视图或表来复制。 如果将视图按表复制，则无法从表中筛选列。  
   
- 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将限制执行 **sp_replcmds** （执行筛选器） 到数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 CDC （变更数据捕获） 中添加了 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]  **sp_replcmds** 逻辑填充的更改跟踪表的用户可以返回到和查询的信息。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 限制此逻辑的执行，以便恶意 **dbo** 无法劫持此执行路径。 例如，恶意 **dbo** 无法在其中然后会在用户调用的上下文下执行的 CDC 表上添加触发器 **sp_replcmds**, ，在这种情况下的日志读取器代理。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
+ 行筛选器未设计为跨数据库工作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有意将 **sp_replcmds** 的执行（执行筛选器）限制为数据库所有者 (**dbo**)。 **dbo** 不具有跨数据库权限。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中增加 CDC（变更数据捕获）后，**sp_replcmds** 逻辑将使用用户可以返回到和查询的信息填充变更跟踪表。 出于安全原因， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会限制此逻辑的执行，以使恶意的 **dbo** 无法劫持此执行路径。 例如，恶意的 **dbo** 可能在 CDC 表上添加触发器，然后这些触发器会在调用 **sp_replcmds**的用户（在这种情况下为日志读取器代理）的上下文中执行。  如果运行该代理所用的帐户具有更高权限，则恶意的 **dbo** 可以提升其权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

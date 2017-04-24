@@ -1,25 +1,29 @@
 ---
 title: "第 6 课：使用文件快照备份生成活动和备份日志 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 6 课：使用文件快照备份生成活动和备份日志
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>第 6 课：使用文件快照备份生成活动和备份日志
 在本课中，将生成 AdventureWorks2014 数据库中的活动，并定期使用文件快照备份创建事务日志备份。 有关使用文件快照备份的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要生成 AdventureWorks2014 数据库中的活动，并定期使用文件快照备份创建事务日志备份，请执行以下步骤：  
@@ -77,21 +81,21 @@ caps.handback.revision: 15
   
 5.  查看第一个脚本的输出，并注意最后的行数现在为 29,939。  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![显示了行数 29,939](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "显示了行数 29,939")  
   
 6.  查看第二个脚本的输出，并注意每执行一次 BACKUP LOG 语句，就会创建两个新文件快照，一个是日志文件的文件快照，另一个是数据文件的文件快照 — 每个数据库文件共有两个文件快照。 第二个脚本完成后，请注意现在共有 16 个文件快照，每个数据库文件有 8 个 — 一个来自 BACKUP DATABASE 语句，另一个是 BACKUP LOG 语句每次执行的结果。  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![结果窗格，其中显示了在创建日志备份时数据和日志文件的文件快照](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "结果窗格，其中显示了在创建日志备份时数据和日志文件的文件快照")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![显示了四个文件快照](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "显示了四个文件快照")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![结果窗格，其中共显示了 16 个文件快照](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "结果窗格，其中共显示了 16 个文件快照")  
   
 7.  在对象资源管理器中，连接到 Azure 存储。  
   
 8.  展开容器，展开在第 1 课中创建的容器，并确认容器中显示 7 个新备份文件和之前课程中的 blob（必要时刷新节点）。  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![Azure 容器，其中显示了 7 个日志备份 blob](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure 容器，其中显示了 7 个日志备份 blob")  
   
 **下一课：**  
   
@@ -99,3 +103,4 @@ caps.handback.revision: 15
   
   
   
+

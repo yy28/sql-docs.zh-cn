@@ -1,35 +1,39 @@
 ---
 title: "复制监视器界面概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "复制监视器"
-  - "复制监视器, 关于复制监视器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制监视器界面概述
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供以两个窗格的形式显示发布服务器为中心的视图或分发服务器为主的所有复制活动视图。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
+# <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor presents a Publisher-focused view or Distributor-focused view of all replication activity in a two pane format. 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
   
-## 查看整个拓扑的信息  
+## <a name="viewing-information-for-the-entire-topology"></a>查看整个拓扑的信息  
  复制监视器的左窗格显示  
   
 -   发布服务器组、发布服务器和发布内容。  
   
 -   分发服务器、发布服务器和发布内容。  
   
- 若要在复制监视器中查看任何信息，必须首先添加发布服务器。 有关详细信息，请参阅 [添加和从复制监视器删除发布服务器](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
+ 若要在复制监视器中查看任何信息，必须首先添加发布服务器。 有关详细信息，请参阅 [从复制监视器中添加和删除发布服务器](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)。  
   
  左窗格有助于解答下列问题：  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 41
   
      代理未在特定时间运行的原因包括：未安排其运行或出现错误。 如果出现错误，左窗格中的相应节点上将显示错误图标。 例如，如果发布的快照代理因出错而停止，发布服务器组、发布服务器和发布节点上将显示错误图标。 快照代理的摘要信息显示在该发布的 **“代理”** 选项卡中；双击此选项卡上的快照代理可查看详细的错误信息。  
   
-## 查看与分发服务器相关的信息并执行与其相关的任务  
+## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>查看与分发服务器相关的信息并执行与其相关的任务  
  复制监视器在三个选项卡上显示分发服务器的相关信息：  
   
 -   **“发布”** 选项卡  
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
 -   切换到“发布服务器组”视图。  
   
-## 查看与发布服务器相关的信息并执行与其相关的任务  
+## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>查看与发布服务器相关的信息并执行与其相关的任务  
  复制监视器在三个选项卡上显示发布服务器的相关信息：  
   
 -   **“发布”** 选项卡  
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
      此选项卡显示所有类型的复制所用代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。  
   
- 有关详细信息，请参阅 [查看信息并执行任务的发布服务器和 #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+ 有关详细信息，请参阅[为发布服务器查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
   
  复制监视器还为发布服务器节点提供了上下文菜单。 右键单击左窗格中的发布服务器，可以执行下列操作：  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 41
   
 -   与存储发布服务器信息的分发服务器连接或断开连接  
   
-## 查看与发布相关的信息并执行与其相关的任务  
+## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>查看与发布相关的信息并执行与其相关的任务  
  复制监视器在三个选项卡和多个详细信息窗口中显示发布的相关信息：  
   
 -   **“所有订阅”** 选项卡  
@@ -148,7 +152,7 @@ caps.handback.revision: 41
   
      使用此选项卡可以为代理指定警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
--   **跟踪令牌** 选项卡上 （仅事务复制）  
+-   **“跟踪令牌”** 选项卡（仅事务复制）  
   
      可以使用此选项卡衡量滞后时间，滞后时间是指从事务在发布服务器上提交到相应的事务在订阅服务器上提交之间间隔的时间。  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 41
   
          查看事务通过系统的总时间并将其与先前所用时间进行比较。  
   
-     对于运行 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更低版本的分发服务器，将不显示此选项卡。 有关跟踪令牌的详细信息，请参阅 [测量滞后时间和验证对于事务复制的连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+     对于运行 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更低版本的分发服务器，将不显示此选项卡。 有关跟踪令牌的详细信息，请参阅[为事务复制测量滞后时间和验证连接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 -   与发布关联的代理的详细信息窗口。 下列代理与发布相关联：  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 41
   
          可用的错误消息提供代理不运行的详细原因，并为解决与发布关联的代理的问题提供一个起点。  
   
- 有关详细信息，请参阅 [查看信息和发布和 #40; 执行的任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 和 [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)。  
+ 有关详细信息，请参阅[为发布查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)和[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
   
  复制监视器还为发布节点提供了上下文菜单。 右键单击左窗格中的发布，可以执行下列操作：  
   
@@ -188,26 +192,26 @@ caps.handback.revision: 41
   
 -   查看和编辑发布属性  
   
-## 查看与订阅相关的信息并执行与订阅相关的任务  
+## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>查看与订阅相关的信息并执行与订阅相关的任务  
  复制监视器在多个不同的选项卡上显示订阅的相关信息。 双击复制监视器中的订阅，可以访问详细信息窗口中的这些选项卡。 对于解答“为什么代理不运行”这个问题，所有选项卡都很有用。 可用的错误消息提供代理不运行的详细原因，并为解决与订阅关联的代理的问题提供一个起点。  
   
--   **“所有订阅”** 和 **“订阅监视列表”**  
+-   **All Subscriptions tab** and **Subscription Watch List tab.**  
   
      本主题的前面已对这两个选项卡进行了说明。  
   
--   **发布服务器到分发服务器的历史记录** 选项卡上 （仅事务复制）  
+-   **“发布服务器到分发服务器的历史记录”** 选项卡（仅事务复制）  
   
      此选项卡显示发布的日志读取器代理的信息（该选项卡与日志读取器代理详细信息窗口的作用相同）。  
   
--   **分发服务器到订阅服务器上的历史记录** 选项卡 （快照复制和事务复制）  
+-   **“分发服务器到订阅服务器的历史记录”** 选项卡（快照复制和事务复制）  
   
      此选项卡显示订阅的分发代理的信息。  
   
--   **未分发的命令** 选项卡上 （仅事务复制）  
+-   **“未分发的命令”** 选项卡（仅事务复制）  
   
      此选项卡显示分发数据库中未传递到所选订阅服务器的命令数以及传递那些命令的估计时间。 该选项卡可以帮助解答问题“我的订阅滞后多久？” 对于运行 SQL Server 2005 之前版本的分发服务器，将不显示此选项卡。  
   
--   **同步历史记录** 选项卡 （仅适用于合并复制）  
+-   **“同步历史记录”** 选项卡（仅合并复制）  
   
      此选项卡显示订阅的合并代理的信息。 此选项卡可以帮助解答下面的问题：  
   
@@ -215,16 +219,16 @@ caps.handback.revision: 41
   
          此选项卡提供同步过程中处理的每个项目的详细统计信息，包括每个处理阶段（上载更改、下载更改等）所用的时间。 该选项卡可以帮助准确定位导致减速的特定表，并且是解决合并订阅的性能问题的最佳位置。  
   
- 有关详细信息，请参阅 [查看信息和订阅和 #40; 执行的任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) 和 [查看信息并执行与订阅 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+ 有关详细信息，请参阅[为订阅查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)和[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 查看与代理配置文件相关的信息并执行与其相关的任务  
+## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>查看与代理配置文件相关的信息并执行与其相关的任务  
  复制监视器中包含多个管理代理配置文件的对话框。 代理配置文件是代理的参数集，用于确定代理的行为。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。 这些对话框包括：  
   
 -   **代理配置文件**  
   
      使用此对话框可以：更改配置文件的属性、创建和删除配置文件、指定默认配置文件，以及指定某特定类型的所有代理（如快照代理）应使用给定配置文件。  
   
--   **\< 代理配置文件名> 属性**  
+-   **\<AgentProfileName> 属性**  
   
      使用此对话框可以查看和编辑配置文件中的参数设置。  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 41
   
      使用此对话框可以创建新的配置文件，可以选择包括现有配置文件的值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

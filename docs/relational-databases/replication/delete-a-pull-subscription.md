@@ -1,28 +1,32 @@
 ---
 title: "删除请求订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除订阅"
-  - "删除订阅"
-  - "请求订阅 [SQL Server 复制], 删除"
-  - "订阅 [SQL Server 复制], 请求"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing subscriptions
+- deleting subscriptions
+- pull subscriptions [SQL Server replication], deleting
+- subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c927203ed13ec7eaf359816669ac8b85c44714f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除请求订阅
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除请求订阅。  
+# <a name="delete-a-pull-subscription"></a>删除请求订阅
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除请求订阅。  
   
  **本主题内容**  
   
@@ -35,9 +39,9 @@ caps.handback.revision: 35
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 删除发布服务器上的请求订阅 (从 **本地发布** 文件夹中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 还是订阅服务器 (从 **本地订阅** 文件夹)。 删除订阅不会从订阅中删除对象或数据，必须对其手动删除。  
+ 在发布服务器上删除请求订阅（从 **的** “本地发布” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹中），或在订阅服务器上删除请求订阅（从 **“本地订阅”** 文件夹中）。 删除订阅不会从订阅中删除对象或数据，必须对其手动删除。  
   
-#### 在发布服务器上删除请求订阅  
+#### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>在发布服务器上删除请求订阅  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -45,34 +49,34 @@ caps.handback.revision: 35
   
 3.  展开与要删除的订阅关联的发布。  
   
-4.  右键单击该订阅，然后单击 **删除**。  
+4.  右键单击该订阅，再单击 **“删除”**。  
   
 5.  在确认对话框中，选择是否连接到订阅服务器以删除订阅信息。 如果清除 **“连接到订阅服务器”** 复选框，则应在以后连接到订阅服务器以删除订阅信息。  
   
-#### 在订阅服务器上删除请求订阅  
+#### <a name="to-delete-a-pull-subscription-at-the-subscriber"></a>在订阅服务器上删除请求订阅  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到订阅服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要删除，然后单击的订阅 **删除**。  
+3.  右键单击要删除的订阅，再单击 **“删除”**。  
   
 4.  在确认对话框中，选择是否连接到发布服务器以删除订阅信息。 如果清除 **“连接到发布服务器”** 复选框，则应在以后连接到发布服务器以删除订阅信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式删除请求订阅。 所用的存储过程取决于订阅所属的发布的类型。  
   
-#### 删除对快照发布或事务发布的请求订阅  
+#### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>删除对快照发布或事务发布的请求订阅  
   
-1.  在订阅服务器上的订阅数据库上，执行 [sp_droppullsubscription & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 **@publication**, ，**@publisher**, ，和 **@publisher_db**。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@publisher**和 **@publisher_db**。  
   
-2.  在发布服务器上对发布数据库中，执行 [sp_dropsubscription & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber**。 将 **@article** 的值指定为 **all**。 （可选）如果无法访问分发服务器上，指定的值 **1** 为 **@ignore_distributor** 以删除订阅而不删除分发服务器上的相关的对象。  
+2.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber**。 将 **@article** 的值指定为 **@article**。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
   
-#### 删除对合并发布的请求订阅  
+#### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>删除对合并发布的请求订阅  
   
-1.  在订阅服务器上的订阅数据库上，执行 [sp_dropmergepullsubscription & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 **@publication**, ，**@publisher**, ，和 **@publisher_db**。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@publisher**和 **@publisher_db**。  
   
-2.  在发布服务器上对发布数据库中，执行 [sp_dropmergesubscription & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **@publication**, ，**@subscriber**, ，和 **@subscriber_db**。 将值指定为 **请求** 为 **@subscription_type**。 （可选）如果无法访问分发服务器上，指定的值 **1** 为 **@ignore_distributor** 以删除订阅而不删除分发服务器上的相关的对象。  
+2.  在发布服务器上，对发布数据库执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber**和 **@subscriber_db**文件夹中打开。 将 **@subscription_type** 的值指定为 **@subscription_type**。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例删除对事务发布的请求订阅。 第一个批处理在订阅服务器上执行，第二个批处理在发布服务器上执行。  
@@ -90,33 +94,33 @@ caps.handback.revision: 35
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可通过使用复制管理对象 (RMO) 以编程方式删除请求订阅。 用于删除请求订阅的 RMO 类由该请求订阅所订阅的发布类型决定。  
   
-#### 删除对快照发布或事务发布的请求订阅  
+#### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>删除对快照发布或事务发布的请求订阅  
   
-1.  通过创建连接到订阅服务器和发布服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器和发布服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类，并将设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, ，<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, ，<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, ，和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的订阅服务器连接设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的一个实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的订阅服务器连接来设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
   
-3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证订阅是否存在。 如果此属性的值为 **false**，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
+3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为 **false**，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 方法。  
   
-5.  创建的实例 <xref:Microsoft.SqlServer.Replication.TransPublication> 使用步骤 1 中的发布服务器连接的类。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, ，<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+5.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 **false**，则表示步骤 5 中指定的属性不正确，或者服务器中不存在发布。  
   
 7.  调用 <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A> 方法。 将订阅服务器和订阅数据库的名称分别指定给 *subscriber* 和 *subscriberDB* 参数。  
   
-#### 删除对合并发布的请求订阅  
+#### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>删除对合并发布的请求订阅  
   
-1.  通过创建连接到订阅服务器和发布服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与订阅服务器和发布服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类，并将设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, ，<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, ，<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, ，和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的连接设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的一个实例，并设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 属性。 使用步骤 1 中的连接设置 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性。  
   
-3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以验证订阅是否存在。 如果此属性的值为 **false**，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
+3.  检查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 属性以确保该订阅存在。 如果此属性的值为 **false**，则步骤 2 中所定义的订阅属性不正确或者该订阅不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 方法。  
   
-5.  创建的实例 <xref:Microsoft.SqlServer.Replication.MergePublication> 使用步骤 1 中的发布服务器连接的类。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, ，<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+5.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 **false**，则表示步骤 5 中指定的属性不正确，或者服务器中不存在发布。  
   
@@ -125,18 +129,18 @@ caps.handback.revision: 35
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  本示例将删除对事务发布的请求订阅并删除发布服务器上的订阅注册。  
   
- [!code-csharp[HowTo#rmo_DropTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpullsub)]  
+ [!code-cs[HowTo#rmo_DropTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpullsub)]  
   
  [!code-vb[HowTo#rmo_vb_DropTranPullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpullsub)]  
   
  本示例将删除对合并发布的请求订阅并删除发布服务器上的订阅注册。  
   
- [!code-csharp[HowTo#rmo_DropMergePullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropmergepullsub)]  
+ [!code-cs[HowTo#rmo_DropMergePullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_dropmergepullsub)]  
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [复制安全最佳实践](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

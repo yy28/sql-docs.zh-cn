@@ -1,46 +1,50 @@
 ---
 title: "示例：使用 OPENXML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [SQL Server 中的 XML]"
-  - "XML [SQL Server], 映射数据"
-  - "OPENXML 语句, 关于 OPENXML 语句"
-  - "XML 文档中的溢出 [SQL Server]"
-  - "映射 XML 数据 [SQL Server]"
-  - "组合以属性为中心的映射和以元素为中心的映射"
-  - "未用完的数据"
-  - "以属性为中心的映射"
-  - "列模式 [SQL Server 中的 XML]"
-  - "XML [SQL Server], 溢出处理"
-  - "行模式 [SQL Server 中的 XML]"
-  - "rowpattern [SQL Server 中的 XML]"
-  - "flags 参数"
-  - "以元素为中心的映射 [SQL Server]"
-  - "边缘表"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- XML [SQL Server], mapping data
+- OPENXML statement, about OPENXML statement
+- overflow in XML document [SQL Server]
+- mapping XML data [SQL Server]
+- combining attribute-centric and element centric mapping
+- unconsumed data
+- attribute-centric mapping
+- column patterns [XML in SQL Server]
+- XML [SQL Server], overflow handling
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- flags parameter
+- element-centric mapping [SQL Server]
+- edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：使用 OPENXML
-  本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅[在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+# <a name="examples-using-openxml"></a>示例：使用 OPENXML
+  本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
-## 示例  
+## <a name="examples"></a>示例  
  在检索数据时， *rowpattern* 可用于在确定行的 XML 文档中标识节点。 此外， *rowpattern* 是用实现 MSXML XPath 所采用的 XPath 模式语言表示的。 例如，如果模式以元素或属性结束，则为 *rowpattern*选择的每个元素或属性节点创建一行。  
   
  *flags* 值提供默认映射。 如果 *SchemaDeclaration* 中没有指定 *ColPattern*，则假定使用 *flags* 所指定的映射。 如果在 *SchemaDeclaration* 中指定了 *ColPattern* ，则忽略 *flags*值。 指定的 *ColPattern* 决定了映射是以属性为中心还是以元素为中心，还决定了在处理溢出数据和未用完数据时的行为。  
   
-### A. 使用 OPENXML 执行简单的 SELECT 语句  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. 使用 OPENXML 执行简单的 SELECT 语句  
  此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从 XML 文档中检索两列行集（**CustomerID** 和 **ContactName**）中的客户信息。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
@@ -137,9 +141,9 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 请注意，**sp_xml_preparedocument** 返回的文档句柄在批处理持续时间（而非会话持续时间）内有效。  
+ 请注意， **sp_xml_preparedocument** 返回的文档句柄在批处理持续时间（而非会话持续时间）内有效。  
   
-### B. 为行集列与 XML 属性及元素之间的映射指定 ColPattern  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 为行集列与 XML 属性及元素之间的映射指定 ColPattern  
  此示例说明如何在可选的 *ColPattern* 参数中指定 XPath 模式，以提供行集列和 XML 属性以及元素之间的映射。  
   
  此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从该 XML 文档中检索客户和订单信息作为行集（**CustomerID**、**OrderDate**、**ProdID**和 **Qty**）。  
@@ -237,8 +241,8 @@ WITH (CustomerID  varchar(10)   '../CustomerID',
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
-### C. 组合以属性为中心的映射和以元素为中心的映射  
- 在此示例中，*flags* 参数设置为 **3**，表示将应用以属性为中心的映射和以元素为中心的映射。 在这种情况下，首先应用以属性为中心的映射，然后对所有未处理的列应用以元素为中心的映射。  
+### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>C. 组合以属性为中心的映射和以元素为中心的映射  
+ 在此示例中， *flags* 参数设置为 **3** ，表示将应用以属性为中心的映射和以元素为中心的映射。 在这种情况下，首先应用以属性为中心的映射，然后对所有未处理的列应用以元素为中心的映射。  
   
 ```  
 DECLARE @docHandle int  
@@ -282,7 +286,7 @@ LILAS      Carlos Gonzlez
   
  以属性为中心的映射应用于 **CustomerID**。 在 <`Customer`> 元素中不存在 **ContactName** 属性。 因此，应用以元素为中心的映射。  
   
-### D. 指定 text() XPath 函数作为 ColPattern  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. 指定 text() XPath 函数作为 ColPattern  
  此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 <`Order`> 元素、*rowpattern* 所标识节点的父节点 ID 和元素内容的叶值字符串中检索由 **oid** 属性组成的行集。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
@@ -293,7 +297,7 @@ LILAS      Carlos Gonzlez
   
 -   *flags* 参数值设置为 **1**，表示以属性为中心的映射。 因此，XML 属性映射到 *SchemaDeclaration*中定义的行集列。  
   
--   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()** 将被指定为 *ColPattern*。 这将覆盖在 *flags* 参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
+-   在 WITH 子句的 *SchemaDeclaration* 中， **oid** 和 **amount** 行集列名与相应的 XML 属性名称相匹配。 因此，没有指定 *ColPattern* 参数。 对于行集中的 **comment** 列，XPath 函数 **text()**将被指定为 *ColPattern*。 这将覆盖在 *flags*参数中指定的以属性为中心的映射，而且列将包含元素内容的叶值字符串。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -339,7 +343,7 @@ O3    100.0         Happy Customer.
 O4    10000.0       NULL  
 ```  
   
-### E. 在 WITH 子句中指定 TableName  
+### <a name="e-specifying-tablename-in-the-with-clause"></a>E. 在 WITH 子句中指定 TableName  
  此示例在 WITH 子句中指定 *TableName* ，而不指定 *SchemaDeclaration*。 当表具有想要的结构而不具备列模式（ *ColPattern* 参数）时，这非常有用。  
   
  此示例中的 XML 文档由 <`Customer`> 和 <`Order`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**oid**、**date** 和 **amount**）中的订单信息。  
@@ -352,7 +356,7 @@ O4    10000.0       NULL
   
 -   在 WITH 子句中没有 *SchemaDeclaration* 。 而是指定了一个表名。 因此，表架构将用作行集架构。  
   
--   *flags* 参数值设置为 **1**，表示以属性为中心的映射。 因此， *rowpattern*所标识的元素属性将映射到同名的行集列。  
+-   *flags* 参数值设置为 **1** ，表示以属性为中心的映射。 因此， *rowpattern*所标识的元素属性将映射到同名的行集列。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -399,7 +403,7 @@ O3    1999-07-14 00:00:00.000     100.0
 O4    1996-01-20 00:00:00.000     10000.0  
 ```  
   
-### F. 获得边缘表格式的结果  
+### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>F. 获得边缘表格式的结果  
  在下例中，在 OPENXML 语句中未指定 WITH 子句。 因此，OPENXML 所生成的行集具有边缘表格式。 SELECT 语句将返回边缘表中的所有列。  
   
  示例中的示例 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。  
@@ -460,14 +464,14 @@ EXEC sp_xml_removedocument @docHandle
     ORDER BY localname  
     ```  
   
-### G. 指定以属性结束的 rowpattern  
+### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 指定以属性结束的 rowpattern  
  此示例中的 XML 文档由 <`Customer`>、<`Order`> 和 <`OrderDetail`> 元素组成。 OPENXML 语句从 XML 文档中检索三列行集（**ProductID**、**Quantity**和 **OrderID**）中的订单详细信息。  
   
  首先调用 **sp_xml_preparedocument** 存储过程以获得文档句柄。 此文档句柄传递给 OPENXML。  
   
  OPENXML 语句说明了以下信息：  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 以 XML 属性 **ProductID** 结束。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 以 XML 属性 **ProductID** 结尾。 在所得到的行集中，为在 XML 文档中选定的每个属性节点都创建一行。  
   
 -   在下例中未指定 *flags* 参数。 相反，由 *ColPattern* 参数指定映射。  
   
@@ -475,9 +479,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   在行集中为 **ProdID** 列指定为 *ColPattern* 的 XPath 模式 (**.**) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 <`OrderDetail`> 元素的 **ProductID** 属性。  
   
--   在行集中为 **Qty** 列指定的 *ColPattern*, **../@Quantity**，标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 **Quantity** 属性。  
+-   在行集中为 **Qty** 列指定的 *ColPattern* **../@Quantity** 用于标识上下文节点 \<ProductID> 的父节点 <`OrderDetail`> 的 **Quantity** 属性。  
   
--   同样，在行集中为 **OID** 列指定的 *ColPattern*, **../../@OrderID** 标识上下文节点的父节点的父级 <`Order`> 的 **OrderID** 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
+-   同样，在行集中为 **OID** 列指定的  *ColPattern* **../../@OrderID** 用于标识该上下文节点的父节点的父级 <`Order`> 的 **OrderID** 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
   
  SELECT 语句随后将检索 OPENXML 所提供的行集中的所有列。  
   
@@ -521,8 +525,8 @@ ProdID      Qty         OID
 72          3           10283  
 ```  
   
-### H. 指定具有多个文本节点的 XML 文档  
- 如果在 XML 文档中有多个文本节点，则包含 *ColPattern*, **text()** 的 SELECT 语句只返回第一个文本节点，而不是返回所有节点。 例如：  
+### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 指定具有多个文本节点的 XML 文档  
+ 如果在 XML 文档中有多个文本节点，则包含 *ColPattern*, **text()**的 SELECT 语句只返回第一个文本节点，而不是返回所有节点。 例如：  
   
 ```  
 DECLARE @h int  
@@ -541,7 +545,7 @@ EXEC sp_xml_removedocument @h
   
  SELECT 语句返回 **T** 作为结果，而不是返回 **TaU**。  
   
-### I. 在 WITH 子句中指定 xml 数据类型  
+### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>I. 在 WITH 子句中指定 xml 数据类型  
  在 WITH 子句中，映射到 **xml** 数据类型列的列模式（不论是类型化的还是非类型化的）必须返回一个空序列，或者元素、处理指令、文本节点和注释的序列。 数据将转换为 **xml** 数据类型。  
   
  在下例中，WITH 子句中的表架构声明包括 **xml** 类型列。  
@@ -575,7 +579,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 具体而言，是将 **xml** 类型变量 (@x) 传递给 **sp_xml_preparedocument()** 函数。  
+ 具体而言，你将一个 **xml** 类型的变量 (@x) 传递给 **sp_xml_preparedocument()** 函数。  
   
  结果如下：  
   
@@ -602,20 +606,20 @@ id  lname   xmlname                   OverFlow
   
 -   如果 WITH 子句中的列是类型化的 XML 列并且 XML 实例不符合架构，将返回错误。  
   
-### J. 从多值属性中检索单值  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 从多值属性中检索单值  
  XML 文档会含有多值属性。 例如， **IDREFS** 属性可以是多值属性。 在 XML 文档内，多值属性值被指定为一个字符串，并用空格分隔值。 在以下 XML 文档中，\<Student> 元素的 **attends** 属性与 \<Class> 的 **attendedBy** 属性都是多值属性。 从多值 XML 属性中检索单值并将每个值存储到数据库中的不同行中，这要求额外的工作。 下例显示了此过程。  
   
  此示例 XML 文档由以下元素组成：  
   
 -   \<Student>  
   
-     **id**（学生 ID）、**name** 和 **attends**属性。 **attends** 属性是多值属性。  
+     **id** （学生 ID）、 **name**和 **attends** 属性。 **attends** 属性是多值属性。  
   
 -   \<Class>  
   
-     **id**（班级 ID）、**name** 和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
+     **id** （班级 ID）、 **name**和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
   
- \<Student> 中的 **attends** 属性和 \<Class> 中的 **attendedBy** 属性表示 Student 表与 Class 表之间的一种 **m:n** 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
+ \<Student> 中的 **attends** 属性和 \<Class> 中的 **attendedBy** 属性表示 Student 表与 Class 表之间的 **m:n** 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
   
  假设希望拆分此文档，并将它保存到下列数据库中：  
   
@@ -756,7 +760,7 @@ SELECT * FROM CourseAttendance
 EXECUTE sp_xml_removedocument @h  
 ```  
   
-### K. 从 XML 中的 base64 编码数据中检索二进制数据  
+### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>K. 从 XML 中的 base64 编码数据中检索二进制数据  
  二进制数据经常包括在使用 base64 编码的 XML 中。 当使用 OPENXML 拆分此 XML 时，将接收到 base64 编码数据。 本示例说明如何将 base64 编码数据转换回二进制。  
   
 -   创建包含示例二进制数据的表。  
@@ -799,7 +803,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_xml_preparedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)   

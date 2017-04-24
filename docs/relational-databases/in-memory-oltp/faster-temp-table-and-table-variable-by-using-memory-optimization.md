@@ -1,22 +1,26 @@
 ---
 title: "通过使用内存优化获得更快的临时表和表变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过使用内存优化获得更快的临时表和表变量
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ caps.handback.revision: 19
 - 突出了内存优化的性能优势的代码示例
   
   
-## A. 内存优化表变量的基础知识  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. 内存优化表变量的基础知识  
   
 内存优化表变量使用与内存优化表相同的内存优化算法和数据结构，因此具有很高的效率。 从本机编译模块内访问表变量时，效率将最大化。  
   
@@ -42,11 +46,11 @@ caps.handback.revision: 19
 - 不涉及 tempdb 使用或争用。  
 - 可以作为表值参数 (TVP) 传递到存储过程。  
 - 必须具有至少一个索引，哈希或非聚集索引。  
-  - 对于哈希索引，理想情况下桶计数应为预期的唯一索引键数的 1-2 倍，但是估计过高的桶计数通常也没有问题（高达 10 倍）。 有关详细信息，请参阅[《Indexes for Memory-Optimized Tables》](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)（内存优化表的索引）。  
+  - 对于哈希索引，理想情况下桶计数应为预期的唯一索引键数的 1-2 倍，但是估计过高的桶计数通常也没有问题（高达 10 倍）。 有关详细信息，请参阅 [《Indexes for Memory-Optimized Tables》](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)（内存优化表的索引）。  
 
   
   
-#### 对象类型  
+#### <a name="object-types"></a>对象类型  
   
 内存 OLTP 提供以下可用于内存优化临时表和表变量的对象：  
   
@@ -55,10 +59,10 @@ caps.handback.revision: 19
 - 内存优化表变量  
   - 必须在两个步骤中（而不是以内联的方式）声明：  
     - `CREATE TYPE my_type AS TABLE ...;` ，然后  
-    - `DECLARE @mytablevariable my_type;`。  
+    - `DECLARE @mytablevariable my_type;`（内存优化表的索引）。  
   
   
-## B. 场景：替换全局 tempdb &#x23;&#x23;表  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 场景：替换全局 tempdb &#x23;&#x23;表  
   
 假设有以下全局临时表。  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 19
   
   
   
-#### B.1 步骤  
+#### <a name="b1-steps"></a>B.1 步骤  
   
 从全局临时转换为 SCHEMA_ONLY 的步骤如下：  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 19
 3. 在 T-SQL 中将所有提到的 **&#x23;&#x23;tempGlobalB** 替换为 **dbo.soGlobalB**。  
   
   
-## C. 场景：替换会话 tempdb &#x23; 表  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 场景：替换会话 tempdb &#x23; 表  
   
 替换会话临时表的准备工作包含的 T-SQL 比之前的全局临时表场景要多。 值得庆幸的是额外的 T-SQL 并不意味着需要执行更多操作来完成转换。  
   
@@ -158,8 +162,8 @@ caps.handback.revision: 19
           
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
-    “应用程序适配器” 区域）  
-        WITH  
+    )  
+        替换为  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ caps.handback.revision: 19
   
 再次，在常规的 T-SQL 代码中：  
   
-1. 清除旧会话临时表的任何 CREATE TABLE 语句。  
-2. 用新名称替换旧的表名：  
-  - _旧表名：_&#x23;tempSessionC  
-  - _新表名：_dbo.soSessionC  
+1. 将 Transact-SQL 语句中对临时表的所有引用替换为新的内存优化表：
+    - _旧表名：_&#x23;tempSessionC  
+    - _新表名：_ dbo.soSessionC  
+2. 将代码中的 `CREATE TABLE #tempSessionC` 语句替换为 `DELETE FROM dbo.soSessionC`，以确保会话不会公开到由具有同一 session_id 的以前会话插入的表内容。
+3. 从代码中删除 `DROP TABLE #tempSessionC` 语句 – 如果内存大小是一个潜在的忧患，则还可以插入一个 `DELETE FROM dbo.soSessionC` 语句
   
   
   
-## D. 场景：表变量可以将 MEMORY_OPTIMIZED 设置为 ON  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. 场景：表变量可以将 MEMORY_OPTIMIZED 设置为 ON  
   
   
 传统的表变量表示 tempdb 数据库中的一个表。 为了获得更快的性能，可以对表变量进行内存优化。  
@@ -200,11 +206,11 @@ caps.handback.revision: 19
   
   
   
-#### D.1 从内联转换为显式  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 从内联转换为显式  
   
-前面的语法是要以*内联*方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
+前面的语法是要以 *内联*方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
   
-*作用域：*在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 的作用域仅到下一个 go 分隔符并且该批处理语句结束之前。  
+*作用域：* 在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
   
   
   
@@ -228,7 +234,7 @@ caps.handback.revision: 19
   
   
   
-#### D.2 将显式磁盘转换为内存优化  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 将显式磁盘转换为内存优化  
   
 内存优化表变量不驻留在 tempdb 中。 内存优化会使速度变快，通常快 10 倍或更多。  
   
@@ -246,7 +252,7 @@ caps.handback.revision: 19
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         “应用程序适配器” 区域）  
-        WITH  
+        替换为  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,14 +261,14 @@ caps.handback.revision: 19
 完成。  
   
   
-## E. SQL Server 的先决条件 FILEGROUP  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server 的先决条件 FILEGROUP  
   
-在 Microsoft SQL Server 上，若要使用内存优化功能，数据库必须具有使用 **MEMORY_OPTIMIZED_DATA** 声明的 FILEGROUP。  
+在 Microsoft SQL Server 上，若要使用内存优化功能，数据库必须具有使用 **MEMORY_OPTIMIZED_DATA**声明的 FILEGROUP。  
   
 - Azure SQL 数据库不需要创建此 FILEGROUP。  
   
   
-*先决条件：*下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
+*先决条件：* 下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
   
 1. 必须使用可提交 T-SQL 的 SSMS.exe 或另一种工具。  
 2. 将示例 FILEGROUP T-SQL 代码粘贴到 SSMS。  
@@ -290,22 +296,22 @@ caps.handback.revision: 19
     go  
   
   
-以下脚本为你创建文件组，并配置建议的数据库设置：[enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+以下脚本为你创建文件组，并配置建议的数据库设置： [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
   
 有关针对 FILE 和 FILEGROUP 的 `ALTER DATABASE ... ADD` 的详细信息，请参阅：  
   
-- [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [内存优化的文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## F. 证明速度提高的快速测试  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. 证明速度提高的快速测试  
   
   
 本节提供的 Transact-SQL 代码用于测试并比较 INSERT-DELETE 从使用内存优化表变量中的速度提升效果。 代码由几乎一样的两部分组成，除了第一部分的表类型为内存优化。  
   
 比较测试的持续时间大约为 7 秒。 若要运行该示例：  
   
-1. *先决条件：*必须在上一节中已运行 FILEGROUP T-SQL。  
+1. *先决条件：* 必须在上一节中已运行 FILEGROUP T-SQL。  
 2. 运行以下 T-SQL INSERT-DELETE 脚本。  
   - 请注意“GO 5001”语句，该语句将重新提交 T-SQL 5001 次。 你可以调整该数字，然后重新运行。  
   
@@ -407,7 +413,7 @@ caps.handback.revision: 19
   
   
   
-## G. 预测活动内存使用  
+## <a name="g-predict-active-memory-consumption"></a>G. 预测活动内存使用  
   
 你可以通过以下资源预测内存优化表的活动内存需求：  
   
@@ -418,43 +424,45 @@ caps.handback.revision: 19
   
 如果每次访问内存优化表变量时只使用一个准确的键值，那么哈希索引是比非聚集索引更好的选择。 但是，如果不能估计出合适的 BUCKET_COUNT，非聚集索引是一个不错的第二选择。  
   
-## H. 另请参阅  
+## <a name="h-see-also"></a>H. 另请参阅  
   
-- [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [为内存优化对象定义持续性](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+CAPS Title: "通过使用内存优化获得更快的临时表和表变量"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[ALTER DATABASE 文件和文件组选项 (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[内存优化的文件组](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[资源调控器资源池](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[内存优化顾问](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[估算内存优化表的内存需求](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[内存优化表的表和行大小：示例计算](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[内存优化表的持久性](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[为内存优化对象定义持续性](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi，2016-05-02 下午 18:40 星期一  
 -->  
   
   
   
+
+

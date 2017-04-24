@@ -1,37 +1,41 @@
 ---
 title: "在 OPENXML 中指定元属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML 文档中的溢出 [SQL Server]"
-  - "元属性 [SQL Server 中的 XML]"
-  - "未用完的数据"
-  - "提取 XML 节点的信息 [SQL Server]"
-  - "OPENXML 语句, 元属性"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overflow in XML document [SQL Server]
+- metaproperties [XML in SQL Server]
+- unconsumed data
+- extracting information of XML nodes [SQL Server]
+- OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 OPENXML 中指定元属性
+# <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
   XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
   
  可以使用 *ColPattern* 参数将这些元属性映射到 OPENXML 语句中的行集列。 这些列将包含它们所映射到的元属性的值。 有关 OPENXML 语法的详细信息，请参见 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
   
- 若要访问元属性特性，应提供特定于 SQL Server 的命名空间。 此命名空间 (**urn:schemas-microsoft-com:xml-metaprop**) 使用户能够访问元属性特性。 如果 OPENXML 查询结果以边缘表的格式返回，则每个元属性特性在边缘表中都有相应的一列（ **xmltext** 元属性除外）。  
+ 若要访问元属性特性，应提供特定于 SQL Server 的命名空间。 此命名空间 ( **urn:schemas-microsoft-com:xml-metaprop** ) 使用户能够访问元属性特性。 如果 OPENXML 查询结果以边缘表的格式返回，则每个元属性特性在边缘表中都有相应的一列（ **xmltext** 元属性除外）。  
   
  有些元属性特性用于处理目的。 例如， **xmltext** 元属性特性用于溢出处理。 溢出处理针对文档中未用完/未处理的数据。 可以将 OPENXML 所生成的行集中的一列标识为溢出列。 可以通过使用 **ColPattern** 参数将该列映射到 *xmltext* 元属性来执行此操作。 然后，该列将接收溢出数据。 *flags* 参数用于确定该列是包含所有数据还是只包含未用完的数据。  
   
- 下表列出了每个经过分析的 XML 元素所具有的元属性特性。 可以使用命名空间 **urn:schemas-microsoft-com:xml-metaprop** 来访问这些元属性特性。 用户使用这些元属性在 XML 文档中直接设置的任何值均会被忽略。  
+ 下表列出了每个经过分析的 XML 元素所具有的元属性特性。 可以使用命名空间 **urn:schemas-microsoft-com:xml-metaprop**来访问这些元属性特性。 用户使用这些元属性在 XML 文档中直接设置的任何值均会被忽略。  
   
 > [!NOTE]  
 >  不能在任何 XPath 导航中引用这些元属性。  
@@ -49,24 +53,24 @@ caps.handback.revision: 23
   
 |父元属性特性|说明|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|与 **../@mp:id** 相对应|  
-|**@mp:parentlocalname**|与 **../@mp:localname** 相对应|  
-|**@mp:parentnamespacerui**|与 **../@mp:namespaceuri** 相对应|  
-|**@mp:parentprefix**|与 **../@mp:prefix** 相对应|  
+|**@mp:parentid**|与 **../@mp:id**|  
+|**@mp:parentlocalname**|与 **../@mp:localname**|  
+|**@mp:parentnamespacerui**|与 **../@mp:namespaceuri**|  
+|**@mp:parentprefix**|与 **../@mp:prefix**|  
   
-## 示例  
+## <a name="examples"></a>示例  
  下列示例说明了如何使用 OPENXML 来创建不同的行集视图。  
   
-### A. 将 OPENXML 行集列映射到元属性  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. 将 OPENXML 行集列映射到元属性  
  此示例使用 OPENXML 创建该示例 XML 文档的行集视图。 它专门显示了如何使用 *ColPattern* 参数将各种元属性特性映射到 OPENXML 语句中的行集列。  
   
  OPENXML 语句说明了以下信息：  
   
 -   **id** 列将映射到 **@mp:id** 元属性特性，表明该列包含该元素由系统生成的唯一 XML ID。  
   
--   **parent** 列将映射到 **@mp:parentid** ，表明该列包含该元素的父元素的 XML ID。  
+-   **parent** 列将映射到 **@mp:parentid**，表明该列包含该元素的父元素的 XML ID。  
   
--   **parentLocalName** 列将映射到 **@mp:parentlocalname** ，表明该列包含父元素的本地名。  
+-   **parentLocalName** 列将映射到 **@mp:parentlocalname**，表明该列包含父元素的本地名。  
   
  然后，SELECT 语句将返回由 OPENXML 生成的行集：  
   
@@ -112,7 +116,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### B. 检索整个 XML 文档  
+### <a name="b-retrieving-the-whole-xml-document"></a>B. 检索整个 XML 文档  
  在本例中，使用 OPENXML 来创建示例 XML 文档的单列行集视图。 此列 ( **Col1**) 将映射到 **xmltext** 元属性，并成为一个溢出列。 因此，此列将接收未用完的数据。 在这种情况下，它就是整个文档。  
   
  然后，SELECT 语句将返回整个行集。  
@@ -156,16 +160,16 @@ EXEC sp_xml_removedocument @idoc
   
  查询将返回带有名称根的根元素以及根元素所包含的数据。  
   
-### C. 指定 xmltext 元属性来检索列中未使用的数据  
+### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. 指定 xmltext 元属性来检索列中未使用的数据  
  此示例使用 OPENXML 创建该示例 XML 文档的行集视图。 本例显示了如何通过将 **xmltext** 元属性特性映射到 OPENXML 中的行集列来检索未用完的 XML 数据。  
   
- **comment** 列将映射到 **@mp:xmltext** 元属性，从而被标识为溢出列。 *flags* 参数将设置为 **9**（XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
+ **comment** 列被标识为溢出列（通过将其映射到 **@mp:xmltext** 元属性）。 *flags* 参数将设置为 **9** （XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
   
  然后，SELECT 语句返回由 OPENXML 生成的行集。  
   
- 在本例中，为 OPENXML 所生成行集中的 **ParentLocalName** 列设置了 **@mp:parentlocalname**元属性。 因此，此列包含父元素的本地名。  
+ 在本例中，为 OPENXML 所生成行集中的 **@mp:parentlocalname** 列设置了 **ParentLocalName**元属性。 因此，此列包含父元素的本地名。  
   
- 在行集中另外还指定了两列， **parent** 和 **comment**。 **parent** 列将映射到 **@mp:parentid** ，表明该列包含该元素的父元素的 XML ID。 comment 列将映射到 **@mp:xmltext** 元属性，从而被标识为溢出列。  
+ 在行集中另外还指定了两列， **parent** 和 **comment**。 **parent** 列将映射到 **@mp:parentid**，表明该列包含该元素的父元素的 XML ID。 comment 列将映射到 **@mp:xmltext** 元属性除外）。  
   
 ```  
 DECLARE @idoc int  
@@ -210,7 +214,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML (SQL Server)](../../relational-databases/xml/openxml-sql-server.md)  
   

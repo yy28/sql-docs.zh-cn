@@ -1,30 +1,34 @@
 ---
-title: "创建、修改和删除发布和项目（复制） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "发布 [SQL Server 复制], 创建"
-  - "项目 [SQL Server 复制], 定义"
+title: "创建、修改和删除发布和项目（复制）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], creating
+- articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e839ec6da57577fb9a6f759989ca110a1b426dea
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建、修改和删除发布和项目（复制）
+# <a name="create-modify-and-delete-publications-and-articles-replication"></a>创建、修改和删除发布和项目（复制）
   本节包含有关与创建发布和定义项目相关的任务的过程信息。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
--   [创建发布](../../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
 -   [定义项目](../../../relational-databases/replication/publish/define-an-article.md)  
   
@@ -48,21 +52,21 @@ caps.handback.revision: 36
   
 -   [设置合并发布的兼容级别](../../../relational-databases/replication/publish/set-the-compatibility-level-for-merge-publications.md)  
   
-## 快照选项  
+## <a name="snapshot-options"></a>快照选项  
   
--   [指定快照格式 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/specify-snapshot-format-sql-server-management-studio.md)  
+-   [指定快照格式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/specify-snapshot-format-sql-server-management-studio.md)  
   
--   [指定一个备用快照文件夹位置 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [指定备用快照文件夹位置 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   
--   [压缩快照文件 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [压缩快照文件 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
   
--   [配置快照属性和 #40;复制 TRANSACT-SQL 编程 & #41;](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   [配置快照属性（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
--   [应用快照之前和之后执行脚本 （& a) #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/execute scripts before and after a snapshot is applied.md)  
+-   [在应用快照之前和之后执行脚本 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/execute-scripts-before-and-after-a-snapshot-is-applied.md)  
   
 -   [通过 FTP 传递快照](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)  
   
-## 筛选数据  
+## <a name="filtering-data"></a>筛选数据  
   
 -   [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)  
   
@@ -74,27 +78,27 @@ caps.handback.revision: 36
   
 -   [定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
--   [自动生成一组合并项目 & #40; 之间的联接筛选器SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/automatically generate join filters between merge articles.md)  
+-   [在合并项目之间自动生成一组联接筛选器 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)  
   
-## 事务复制选项  
+## <a name="transactional-replication-options"></a>事务复制选项  
   
 -   [为事务项目的数据更改设置传播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)  
   
--   [允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [对事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
--   [设置排队更新冲突解决选项 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   [在事务发布 & #40; 中发布存储过程的执行SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   [在事务发布中发布存储过程的执行 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
-## 合并复制选项  
+## <a name="merge-replication-options"></a>合并复制选项  
   
 -   [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)  
   
--   [指定合并表项目 & #40; 的处理顺序复制 TRANSACT-SQL 编程 & #41;](../../../relational-databases/replication/publish/specify the processing order of merge table articles.md)  
+-   [指定合并表项目的处理顺序（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-the-processing-order-of-merge-table-articles.md)  
   
 -   [指定合并表项目仅用于下载](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)  
   
--   [指定合并项目 & #40; 不跟踪删除后应复制 TRANSACT-SQL 编程 & #41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   [为合并项目指定不应跟踪删除（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
 -   [指定合并项目的冲突跟踪和解决方法级别](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 36
   
 -   [指定合并项目的交互式冲突解决](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

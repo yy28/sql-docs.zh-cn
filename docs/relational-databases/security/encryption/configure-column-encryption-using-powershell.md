@@ -1,26 +1,30 @@
 ---
 title: "使用 PowerShell 配置列加密 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "powershell"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- powershell
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 PowerShell 配置列加密
+# <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 配置列加密
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 本文提供使用 [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) cmdlet（在 *SqlServer* PowerShell 模块中）来设置数据库列的目标 Always Encrypted 配置的步骤。 **Set-SqlColumnEncryption** cmdlet 修改目标数据库的架构和存储在选定列中的数据。 可对存储在列中的数据进行加密、重新加密或解密，具体取决于列和当前加密配置的指定目标加密设置。
-若要深入了解 SqlServer PowerShell 模块中的 Always Encrypted 支持，请参阅[使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
+若要深入了解 SqlServer PowerShell 模块中的 Always Encrypted 支持，请参阅 [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -30,13 +34,13 @@ caps.handback.revision: 6
 
 ## <a name="performance-and-availability-considerations"></a>性能和可用性注意事项
 
-为了为数据库应用指定的目标加密设置，**Set-SqlColumnEncryption** cmdlet 将以透明方式从包含目标表的列中下载所有数据，将数据上传回一组临时表（具有目标加密设置），最后将原始表替换为新版本的表。 用于 SQL Server 的基础 .NET Framework 数据提供程序将加密或/和解密下载或/和上传的数据，具体取决于目标列的当前加密配置以及目标列的指定目标加密设置。 移动数据的操作可能需要较长时间，具体取决于受影响的表中数据的大小和网络带宽。
+为了为数据库应用指定的目标加密设置， **Set-SqlColumnEncryption** cmdlet 将以透明方式从包含目标表的列中下载所有数据，将数据上传回一组临时表（具有目标加密设置），最后将原始表替换为新版本的表。 用于 SQL Server 的基础 .NET Framework 数据提供程序将加密或/和解密下载或/和上传的数据，具体取决于目标列的当前加密配置以及目标列的指定目标加密设置。 移动数据的操作可能需要较长时间，具体取决于受影响的表中数据的大小和网络带宽。
 
 **Set-SqlColumnEncryption** cmdlet 支持两种设置目标加密配置的方法：联机和脱机。
 
-使用脱机方法时，目标表（以及任何与目标表相关的表，例如，目标表与其具有外键关系的任何表）不可用于在操作期间写入事务。
+使用脱机方法时，目标表（以及任何与目标表相关的表，例如，目标表与其具有外键关系的任何表）不可用于在操作期间写入事务。 使用脱机方法时，外键约束（**CHECK** 或 **NOCHECK**）的语义会始终保留。
 
-使用联机方法时，复制和加密、解密或重新加密数据的操作将以增量方式执行。 应用程序可在数据移动操作中将数据写入到目标表或从中读取数据，除了最后一个迭代，其持续时间受到 MaxDownTimeInSeconds 参数（可自行定义）的限制。 若要检测和处理这些更改，复制数据时，应用程序可使 cmdlet 在目标数据库中启用“更改跟踪”。 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。
+使用联机方法时（需要 SSMS 17.0 或更高版本中的 SqlServer PowerShell 模块），对数据进行复制和加密、解密或重新加密的操作是以增量方式执行的。 应用程序可在数据移动操作中将数据写入到目标表或从中读取数据，除了最后一个迭代，其持续时间受到 **MaxDownTimeInSeconds** 参数（可自行定义）的限制。 为了检测和处理应用程序在复制数据时可能会做的更改，cmdlet 会在目标数据库中启用“更改跟踪”。[](https://msdn.microsoft.com/library/bb964713.aspx) 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。 默认情况下，外键约束在使用 **NOCHECK** 选项的情况下重新创建以最大限度地降低对应用程序的影响。 你可以通过指定 **KeepCheckForeignKeyConstraints** 选项强制保留外键约束的语义。
 
 下面是在脱机和联机方法之间进行选择的指导原则：
 
@@ -45,20 +49,20 @@ caps.handback.revision: 6
 - 在多个表中同时加密/解密/重新加密列。
 - 如果目标表没有主键。
 
-使用脱机方法：
-- 最小化使用数据库的应用程序的停机时间/不可用性。
+使用联机方法：
+- 最小化数据库对应用程序造成的停机时间/不可用性。
 
-## <a name="security-considerations"></a>安全注意事项
+## <a name="security-considerations"></a>需要考虑的安全性因素
 
 用于配置数据库列加密的 **Set-SqlColumnEncryption** cmdlet 可处理 Always Encrypted 密钥和存储在数据库列中的数据。 因此，必须在安全的计算机上运行该 cmdlet。 如果你的数据库在 SQL Server 中，请不要在托管 SQL Server 实例的计算机上执行 cmdlet，而是在另一台计算机上执行。 由于 Always Encrypted 的主要目的是确保加密的敏感数据的安全（即使数据库系统遭到入侵），因此执行用于处理 SQL Server 计算机上密钥和/或敏感数据的 PowerShell 脚本可减少或抵消该功能带来的益处。
 
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库   
 ---|---|---|---
-步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | “否” | 是
-步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | “否” | 是
+步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 是 | 是
+步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 是 | 是
 步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | 是 | 是
-步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | “否” | 是
-步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**注意：**此步骤可能需要较长时间。 你的应用程序可能无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 是 | 是
+步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | 是 | 是
+步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**注意：** 此步骤可能需要较长时间。 你的应用程序将无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用脱机方法加密列 - 示例
 
@@ -150,5 +154,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>其他资源
 - [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
+
 
 

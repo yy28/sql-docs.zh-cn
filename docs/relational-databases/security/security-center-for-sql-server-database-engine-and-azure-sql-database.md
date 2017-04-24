@@ -1,35 +1,39 @@
 ---
 title: "SQL Server 数据库引擎和 Azure SQL Database 的安全中心 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Security [SQL Server]"
-helpviewer_keywords: 
-  - "SQL Server, 安全性"
-  - "安全性 [SQL Server]"
-  - "数据库安全性 [SQL Server]"
-  - "数据库 [SQL Server], 安全性"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 01/31/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Security [SQL Server]
+helpviewer_keywords:
+- SQL Server, security
+- security [SQL Server]
+- database security [SQL Server]
+- databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 838a61120369a01355c60f6ef580a8fb3b1cdd7f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 数据库引擎和 Azure SQL Database 的安全中心
+# <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的安全性和保护的必要信息。  
+  本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的安全性和保护的必要信息。  
   
  **图例**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 54
 |||  
 |-|-|  
 |**谁进行身份验证？**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Windows 身份验证<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|谁进行身份验证？ （Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）<br /><br /> [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
-|**在哪里进行身份验证？**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在 master 数据库：登录名和 DB 用户<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在用户数据库：包含的 DB 用户|在 master 数据库进行身份验证（登录名和数据库用户）<br /><br /> [创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [在 Azure SQL 数据库中管理数据库和登录名](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> 在用户数据库进行身份验证<br /><br /> [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
+|**在哪里进行身份验证？**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在 master 数据库：登录名和 DB 用户<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在 User 数据库：包含的 DB 用户|在 master 数据库进行身份验证（登录名和数据库用户）<br /><br /> [创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [在 Azure SQL 数据库中管理数据库和登录名](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> 在用户数据库进行身份验证<br /><br /> [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**使用其他标识**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 凭据<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 作为另一个登录名执行<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 作为另一个数据库用户执行|[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [作为另一个登录名执行](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [作为另一个数据库用户执行](../../t-sql/statements/execute-as-transact-sql.md)|  
   
 ##  <a name="What"></a> 授权：你可以做什么？  
@@ -48,8 +52,8 @@ caps.handback.revision: 54
 |||  
 |-|-|  
 |**授予、撤消和拒绝权限**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 安全对象类<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 具体服务器权限<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 具体数据库权限|[权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [权限](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [安全对象](../../relational-databases/security/securables.md)<br /><br /> [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
-|**按角色分类的安全性**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 服务器级别角色<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 数据库级别角色|[服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)|  
-|**限制对所选数据元素的数据访问**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用视图/过程限制数据访问<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 行级安全性<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 动态数据屏蔽<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 签名的对象|使用[视图](../../relational-databases/views/views.md)和[过程](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)限制数据访问<br /><br /> [行级别安全性 (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [行级别安全性 (Azure SQL Database)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [动态数据掩码 (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [动态数据掩码 (Azure SQL Database)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [签名的对象](../../t-sql/statements/add-signature-transact-sql.md)|  
+|**按角色分类的安全性**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 服务器级别角色<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 数据库级别的角色|[服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)|  
+|**限制对所选数据元素的数据访问**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用视图/过程限制数据访问<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 行级别安全性<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 动态数据屏蔽<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 签名的对象|使用 [视图](../../relational-databases/views/views.md) 和 [过程](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)限制数据访问<br /><br /> [行级别安全性 (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [行级别安全性 (Azure SQL Database)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [动态数据掩码 (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [动态数据掩码 (Azure SQL Database)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [签名的对象](../../t-sql/statements/add-signature-transact-sql.md)|  
   
 ##  <a name="Encrypt"></a> 加密：存储机密数据  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 54
 |||  
 |-|-|  
 |**防火墙保护**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows 防火墙设置<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure 服务防火墙设置<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 数据库防火墙设置|[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL 数据库防火墙设置](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure 服务防火墙设置](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
-|**在传输过程中加密数据**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 强制的 SSL 连接<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 可选的 SSL 连接|[用于数据库引擎的安全套接字层](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)<br /><br /> [用于 SQL 数据库的安全套接字层](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [针对 Microsoft SQL Server 的 TLS 1.2 支持](https://support.microsoft.com/kb/3135244)|  
+|**在传输过程中加密数据**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 强制的 SSL 连接<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 可选的 SSL 连接|[用于数据库引擎的安全套接字层](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [用于 SQL 数据库的安全套接字层](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [针对 Microsoft SQL Server 的 TLS 1.2 支持](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="Audit"></a> 审核：记录访问  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 54
   
 -   [如何在 ASP.NET 内避免 SQL 注入](https://msdn.microsoft.com/library/ff648339.aspx)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
@@ -94,6 +98,8 @@ caps.handback.revision: 54
  [外围应用配置器](../../relational-databases/security/surface-area-configuration.md)   
  [强密码](../../relational-databases/security/strong-passwords.md)   
  [TRUSTWORTHY 数据库属性](../../relational-databases/security/trustworthy-database-property.md)   
- [数据库引擎功能和任务](../Topic/Database%20Engine%20Features%20and%20Tasks.md)  
+ [数据库引擎功能和任务](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
+ [保护 SQL Server 知识产权](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
   
+

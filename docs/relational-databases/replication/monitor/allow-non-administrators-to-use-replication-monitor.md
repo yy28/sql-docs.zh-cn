@@ -1,25 +1,29 @@
 ---
 title: "允许非管理员使用复制监视器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "复制监视器, 非管理员访问"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, non-administrators access
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
+ms.lasthandoff: 04/11/2017
+
 ---
-# 允许非管理员使用复制监视器
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中允许非管理员使用复制监视器。 属于下列角色成员的用户可以使用复制监视器：  
+# <a name="allow-non-administrators-to-use-replication-monitor"></a>允许非管理员使用复制监视器
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中允许非管理员使用复制监视器。 属于下列角色成员的用户可以使用复制监视器：  
   
 -   **sysadmin** 固定服务器角色。  
   
@@ -46,17 +50,17 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
- 若要允许非管理员使用复制监视器，属于 **sysadmin** 固定的服务器角色必须将用户添加到分发数据库并向该用户分配 **replmonitor** 角色。  
+ 若要允许非管理员使用复制监视器， **sysadmin** 固定服务器角色的成员必须将用户添加到分发数据库，并向该用户分配 **replmonitor** 角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 允许非管理员使用复制监视器  
+#### <a name="to-allow-non-administrators-to-use-replication-monitor"></a>允许非管理员使用复制监视器  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，连接到分发服务器，然后展开服务器节点。  
   
-2.  展开 **数据库**, ，展开 **系统数据库**, ，然后展开分发数据库 (名为 **分发** 默认情况下)。  
+2.  依次展开 **“数据库”**、 **“系统数据库”**和分发数据库（默认名称为 **distribution** ）。  
   
-3.  展开 **安全**, ，用鼠标右键单击 **用户**, ，然后单击 **新用户**。  
+3.  展开 **“安全性”**，右键单击 **“用户”**，然后单击 **“新建用户”**。  
   
 4.  输入用户名和用户的登录名。  
   
@@ -68,18 +72,18 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 将用户添加到 replmonitor 固定数据库角色  
+#### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>将用户添加到 replmonitor 固定数据库角色  
   
-1.  在分发数据库上分发服务器上，执行 [sp_helpuser & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)。 如果用户未列在 **用户名** 在结果集中，用户必须授予访问权限的分发数据库 using [CREATE USER & #40;Transact SQL & #41;](../../../t-sql/statements/create-user-transact-sql.md) 语句。  
+1.  在分发服务器上，对分发数据库执行 [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)。 如果未在结果集中的 **UserName** 中列出此用户，则必须使用 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 语句为用户授予对分发数据库的访问权限。  
   
-2.  在分发数据库上分发服务器上，执行 [sp_helprolemember & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), ，将值指定为 **replmonitor** 为 **@rolename** 参数。 如果在结果集中的 **MemberName** 中列出此用户，则此用户已属于此角色。  
+2.  在分发数据库上的分发服务器中，执行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，并为 **@rolename** 参数指定 **replmonitor** 值。 如果在结果集中的 **MemberName** 中列出此用户，则此用户已属于此角色。  
   
-3.  如果用户不属于 **replmonitor** 角色中，执行 [sp_addrolemember & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 在分发数据库上分发服务器上。 为 **replmonitor** 参数指定 **参数指定** 并为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows login being added 参数指定 **指定要添加的数据库用户名称或**。  
+3.  如果此用户不属于 **replmonitor** 角色，则在分发服务器的分发数据库中执行 [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。 为 **replmonitor** @rolename **@rolename** 并为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @membername **@membername**中允许非管理员使用复制监视器。  
   
-#### 从 replmonitor 固定数据库角色中删除用户  
+#### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>从 replmonitor 固定数据库角色中删除用户  
   
-1.  若要验证用户是否属于 **replmonitor** 角色中，执行 [sp_helprolemember & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) 在分发服务器上分发数据库，并将值指定为 **replmonitor** 为 **@rolename**。 如果在结果集中的 **MemberName** 中未列出此用户，则此用户当前不属于此角色。  
+1.  若要验证用户是否属于 **replmonitor** 角色，请在分发数据库上的分发服务器中执行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，并为 **@rolename** 指定 **replmonitor** 值。 如果在结果集中的 **MemberName** 中未列出此用户，则此用户当前不属于此角色。  
   
-2.  如果用户属于 **replmonitor** 角色中，执行 [sp_droprolemember & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 在分发数据库上分发服务器上。 为 **@rolename** 指定值 **replmonitor** 并为 **@membername**指定要删除的数据库用户名或 Windows 登录名。  
+2.  如果此用户属于 **replmonitor** 角色，则在分发服务器的分发数据库中执行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 为 **replmonitor** @rolename **@rolename** 并为 **@membername**中允许非管理员使用复制监视器。  
   
   

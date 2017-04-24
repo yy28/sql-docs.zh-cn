@@ -1,33 +1,37 @@
 ---
 title: "配置 IIS 以实现 Web 同步 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IIS 服务器配置 [SQL Server 复制]"
-  - "websync.log"
-  - "Web 同步, IIS 服务器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IIS server configuration [SQL Server replication]
+- websync.log
+- Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 88
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 88
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置 IIS 以实现 Web 同步
+# <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
   
--   [!包括 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
--   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程︰ [如何︰ 配置订阅以使用 Web 同步 （复制 TRANSACT-SQL 编程）](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程： [如何配置订阅以使用 Web 同步（复制 Transact-SQL 编程）](http://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [如何︰ 配置订阅以使用 Web 同步 （RMO 编程）](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO： [如何配置订阅以使用 Web 同步（RMO 编程）](http://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 5.0 版、IIS 6.0 版和 [!INCLUDE[iisver](../../includes/iisver-md.md)] 。 [!INCLUDE[iisver](../../includes/iisver-md.md)]中不支持配置 Web 同步向导。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 88
   
 1.  配置安全套接字层 (SSL)。 IIS 和所有订阅服务器之间的通信需要 SSL。  
   
-2.  安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在通过使用运行 IIS 的计算机上连接组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。 如果计划使用步骤 3 中提及的配置 Web 同步向导，那么还必须在运行 IIS 的计算机中安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+2.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导在运行 IIS 的计算机中安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接组件。 如果计划使用步骤 3 中提及的配置 Web 同步向导，那么还必须在运行 IIS 的计算机中安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 3.  为 Web 同步配置正在运行 IIS 的计算机。 可以手动配置计算机，也可以使用配置 Web 同步向导。 建议您使用该向导。  
   
@@ -56,14 +60,14 @@ caps.handback.revision: 88
   
 5.  在诊断模式下运行 Web 同步，以便测试与正在运行 IIS 的计算机的连接，并确保已正确安装 SSL 证书。  
   
-## 配置安全套接字层  
+## <a name="configuring-secure-sockets-layer"></a>配置安全套接字层  
  若要配置 SSL，请指定一个供正在运行 IIS 的计算机使用的证书。 用于合并复制的 Web 同步支持使用服务器证书，但不支持使用客户端证书。 若要为部署配置 IIS，就必须首先从证书颁发机构 (CA) 获取证书。 证书颁发机构是一个实体，负责确保属于用户、计算机或其他证书颁发机构的公共加密密钥的真实性并为其担保。 有关证书的详细信息，请参阅 IIS 文档。 安装证书后，必须使该证书与 Web 同步所用的网站相关联。  
   
-#### 为部署指定证书  
+#### <a name="to-specify-a-certificate-for-deployment"></a>为部署指定证书  
   
 1.  以管理员身份登录到正在运行 IIS 的计算机。  
   
-2.  启动 **Internet 信息服务 (IIS) 管理器**:  
+2.  启动 **“Internet Information Services(IIS)管理器”**：  
   
     1.  单击 **“启动”**，再单击 **“运行”**。  
   
@@ -71,9 +75,9 @@ caps.handback.revision: 88
   
 3.  运行 IIS 证书向导：  
   
-    1.  在 **Internet 信息服务 (IIS) 管理器**, ，展开 **本地计算机** 节点，然后展开 **网站** 文件夹。  
+    1.  在 **“Internet 信息服务(IIS)管理器”**中，展开 **“本地计算机”** 节点，然后展开 **“Web 站点”** 文件夹。  
   
-    2.  用鼠标右键单击 **Default Web Site**, ，然后单击 **属性**。  
+    2.  右键单击 **“默认的 Web 站点”**，然后单击 **“属性”**。  
   
     3.  在 **“默认的 Web 站点属性”** 对话框中的 **“目录安全性”** 选项卡上，单击 **“服务器证书”**。  
   
@@ -86,11 +90,11 @@ caps.handback.revision: 88
 > [!NOTE]  
 >  证书必须与网站相关联，该网站才能使用 SSL。 SelfSSL 自动使证书与默认网站相关联。 如果已有证书或以后从 CA 安装证书，则必须明确地使该证书与 Web 同步所使用的网站相关联。 确保只有一个与用于同步订阅的网站相关联的证书。 如果存在多个证书，订阅服务器将使用第一个可用网站。  
   
-#### 指定在 IIS 6.0 中进行测试所需的证书  
+#### <a name="to-specify-a-certificate-for-testing-in-iis-60"></a>指定在 IIS 6.0 中进行测试所需的证书  
   
 1.  以管理员身份登录到正在运行 IIS 的计算机。  
   
-2.  下载并安装 SelfSSL。 默认情况下，应用程序安装到 \<*驱动器*>: \Program Files\IIS Resources\SelfSSL。 应用程序和文档快捷方式复制到 \<*驱动器*>: \Documents and settings\all Menu\Programs\IIS Resources\SelfSSL。  
+2.  下载并安装 SelfSSL。 默认情况下，应用程序将安装到 \<*驱动器*>:\Program Files\IIS Resources\SelfSSL。 应用程序和文档快捷方式将复制到 \<*驱动器*>:\Documents and Settings\All Users\Start Menu\Programs\IIS Resources\SelfSSL。  
   
 3.  运行 SelfSSL：  
   
@@ -101,24 +105,24 @@ caps.handback.revision: 88
   
     -   若要指定一个或多个参数的值，请单击 **“开始”**，然后单击 **“运行”**。 在“打开”  框中，输入 **cmd**，然后单击“确定” 。 找到 SelfSSL 安装目录，键入 `SelfSSL`，然后指定一个或多个参数的值。 若要获得参数列表，请键入 `SelfSSL -?`。  
   
-## 安装连接组件和 SQL Server Management Studio  
+## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安装连接组件和 SQL Server Management Studio  
   
-#### 安装 SQL Server 连接组件和 SQL Server Management Studio  
+#### <a name="to-install-sql-server-connectivity-components-and-sql-server-management-studio"></a>安装 SQL Server 连接组件和 SQL Server Management Studio  
   
 1.  以管理员身份登录到正在运行 IIS 的计算机。  
   
-2.  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装磁盘中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。 有关使用此向导的详细信息，请参阅 [从安装向导与 #40; 安装 SQL Server 2016安装和 #41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)。  
+2.  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装磁盘中启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。 有关使用此向导的详细信息，请参阅[使用安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  在 **“功能选择”** 页中，选择 **“客户端工具连接”**。  
   
-4.  如果您计划使用配置 Web 同步向导，选择 **管理工具-基本**。  
+4.  如果计划使用配置 Web 同步向导，请选择 **“管理工具 – 基本”**。  
   
 5.  完成该向导，然后重新启动计算机。  
   
     > [!NOTE]  
     >  可以安装其他组件，但 Web 同步仅需要连接组件。  
   
-## 使用配置 Web 同步向导配置正在运行 IIS 的计算机  
+## <a name="configuring-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>使用配置 Web 同步向导配置正在运行 IIS 的计算机  
  使用配置 Web 同步向导或以手动方式配置 IIS 服务器。 我们建议您使用向导，但同时在下一部分中提供手动配置的步骤。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 随附的 Web 同步向导仅适用于在运行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的发布服务器上或在已经升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的发布服务器上创建的发布。 而不适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]上的发布。 该向导适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本和 [!INCLUDE[ssEWnoversion](../../includes/ssewnoversion-md.md)] 3.0 及更高版本上的订阅。  
   
  该配置有以下特征：  
@@ -128,17 +132,17 @@ caps.handback.revision: 88
     > [!NOTE]  
     >  通过指定的网站可访问 Web 同步使用的组件。 它不会提供对其他数据或网页的访问，除非将其如此配置。  
   
--   创建虚拟目录及其关联的别名。 访问 Web 同步组件时使用该别名。 例如，如果 IIS 地址是 https://*server.domain.com* 并指定了别名 websync1，访问 replisapi.dll 组件的地址是 https://*server.domain.com*/websync1/replisapi.dll。  
+-   创建虚拟目录及其关联的别名。 访问 Web 同步组件时使用该别名。 例如，如果 IIS 地址是 https://*server.domain.com* ，而您指定了别名“websync1”，那么访问 replisapi.dll 组件的地址就是 https://*server.domain.com*/websync1/replisapi.dll。  
   
--   使用基本身份验证。 建议使用基本身份验证，因为它不需要 Kerberos 委托就可以在单独的计算机上运行 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器/分发服务器（建议配置）。 将 SSL 与基本身份验证一起使用可以确保登录名、密码和所有数据都在传输中加密。 （无论使用何种类型的身份验证，都需要 SSL。）有关 Web 同步的最佳方法的详细信息，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。  
+-   使用基本身份验证。 建议使用基本身份验证，因为它不需要 Kerberos 委托就可以在单独的计算机上运行 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器/分发服务器（建议配置）。 将 SSL 与基本身份验证一起使用可以确保登录名、密码和所有数据都在传输中加密。 （无论使用何种类型的身份验证，都需要 SSL。）有关 Web 同步的最佳做法的详细信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)中的“Web 同步的最佳安全配置”。  
   
-#### 使用配置 Web 同步向导配置正在运行 IIS 的计算机  
+#### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>使用配置 Web 同步向导配置正在运行 IIS 的计算机  
   
 1.  在正在运行 IIS 的计算机上，启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 2.  连接至发布服务器，然后展开服务器节点。  
   
-3.  展开 **本地发布** 文件夹，右键单击的发布，然后单击 **配置 Web 同步**。  
+3.  展开 **“本地发布”** 文件夹，右键单击发布，然后单击 **“配置 Web 同步”**。  
   
 4.  在配置 Web 同步向导中的 **“订阅服务器类型”** 页中，选择 **SQL Server**。  
   
@@ -154,7 +158,7 @@ caps.handback.revision: 88
   
     1.  在 **“别名”** 框中输入虚拟目录别名。  
   
-    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果您输入 **websync1** 中 **别名** 框中，输入 **C:\Inetpub\wwwroot\websync1** 中 **路径** 框。 单击“下一步” 。  
+    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在“别名”框中输入 **websync1**，则在“路径”框中输入 **C:\Inetpub\wwwroot\websync1**。 单击“下一步” 。  
   
     3.  在两个对话框中，单击 **“是”**。 这指定您要创建一个新文件夹并复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 。  
   
@@ -168,9 +172,9 @@ caps.handback.revision: 88
   
 8.  在 **“目录访问”** 页中：  
   
-    1.  单击 **“添加”**，然后在 **“选择用户或组”** 对话框中添加订阅服务器在与 IIS 建立连接时将要使用的帐户。 这是您将在指定的帐户 **Web 服务器信息** 页新建订阅向导或为值 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 参数。  
+    1.  单击 **“添加”**，然后在 **“选择用户或组”** 对话框中添加订阅服务器在与 IIS 建立连接时将要使用的帐户。 你将在新建订阅向导的“Web 服务器信息”页中指定这些帐户或作为 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 参数的值指定它们。  
   
-9. 在 **“快照共享访问”** 页中，输入快照共享。 在这个共享上设置相应权限，以使订阅服务器能够访问快照文件。 有关共享的权限的详细信息，请参阅 [保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
+9. 在 **“快照共享访问”** 页中，输入快照共享。 在这个共享上设置相应权限，以使订阅服务器能够访问快照文件。 有关此共享的权限的详细信息，请参阅[保护快照文件](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 10. 在 **“完成向导”** 页中，单击 **“完成”**。  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 88
   
 11. 如果运行 IIS 的计算机是在 64 位版本的 Windows 上运行，则必须将 replisapi.dll 复制到相应目录：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在 **打开** 框中，输入 **iisreset**, ，然后单击 **确定**。  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”框中，键入 **iisreset**，然后单击“确定”。  
   
     2.  IIS 停止并重新启动后，将 replisapi.dll 从 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 复制到步骤 6b 中指定的目录。  
   
@@ -188,12 +192,12 @@ caps.handback.revision: 88
   
          **regsvr32 replisapi.dll**  
   
-## 手动配置正在运行 IIS 的计算机  
+## <a name="manually-configuring-the-computer-that-is-running-iis"></a>手动配置正在运行 IIS 的计算机  
  若要手动配置正在运行 IIS 的计算机，必须安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器，然后为将连接到 IIS 的订阅服务器配置授权。  
   
-#### 安装和配置 SQL Server 复制侦听器  
+#### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>安装和配置 SQL Server 复制侦听器  
   
-1.  在正在运行 IIS 的计算机上创建一个文件目录，用来存放 replisapi.dll。 只要您想，但我们建议您创建的目录下，您可以创建目录 \<*驱动器*>: \Inetpub 目录。 例如，创建目录 \<*驱动器*>: \Inetpub\SQLReplication\\。  
+1.  在正在运行 IIS 的计算机上创建一个文件目录，用来存放 replisapi.dll。 可在任意所需位置创建该目录，但建议将该目录创建在 \<*驱动器*>:\Inetpub 目录下。 例如，可以创建目录 \<*驱动器*>:\Inetpub\SQLReplication\\。  
   
     > [!IMPORTANT]  
     >  极力建议在 NTFS 文件系统分区中（而不是 FAT 文件系统中）创建此目录。 使用 NTFS 文件系统时，可以用 NTFS 文件系统权限来精确控制可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的用户。  
@@ -214,28 +218,28 @@ caps.handback.revision: 88
   
 6.  配置 IIS 以允许执行 replisapi.dll。 步骤 4 中分配的权限对 IIS 的早期版本足够了，但 IIS 6.0 版要求启用 Internet Server API (ISAPI) 扩展。 有关详细信息，请参阅 IIS 6.0 文档中的“配置 ISAPI 扩展”和“启用和禁用动态目录”。  
   
-#### 配置 IIS 身份验证  
+#### <a name="to-configure-iis-authentication"></a>配置 IIS 身份验证  
   
 -   当订阅方连接到 IIS 时，IIS 必须对其进行身份验证，订阅方才能访问资源和过程。 IIS 提供了三种类型的身份验证：匿名、基本和集成。 身份验证可以应用于整个网站或您创建的虚拟目录。  
   
      建议您使用带有 SSL 的基本身份验证。 无论使用何种类型的身份验证，都需要 SSL。 有关如何配置身份验证的详细信息，请参阅 IIS 文档。  
   
-## 设置 SQL Server 复制侦听器的权限  
+## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>设置 SQL Server 复制侦听器的权限  
  订阅服务器连接到正在运行 IIS 的计算机时，将使用您在配置 IIS 时指定的身份验证类型对订阅服务器进行身份验证。 IIS 对订阅服务器进行身份验证后，IIS 将检查订阅服务器是否有权调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制。 通过设置 replisapi.dll 权限可以控制能够调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的用户。 适当的权限配置对于防止在未经授权的情况下访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制而言很有必要。  
   
  若要配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器的帐户的最低权限，请完成以下过程。 该过程中的步骤适用于运行 IIS 6.0 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 。  
   
- 除了要执行下列步骤之外，请确保所需的登录名存在于发布访问列表 (PAL) 中。 有关 PAL 的详细信息，请参阅 [安全发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)。  
+ 除了要执行下列步骤之外，请确保所需的登录名存在于发布访问列表 (PAL) 中。 有关 PAL 的详细信息，请参阅[保护发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
-#### 配置帐户和权限  
+#### <a name="to-configure-the-account-and-permissions"></a>配置帐户和权限  
   
 1.  在运行 IIS 的计算机上创建一个本地帐户：  
   
-    1.  用鼠标右键单击 **我的电脑**, ，然后单击 **管理**。  
+    1.  右键单击 **“我的电脑”**，然后单击 **“管理”**。  
   
     2.  在 **“计算机管理”**中，展开 **“本地用户和组”**。  
   
-    3.  用鼠标右键单击 **用户**, ，然后单击 **新用户**。  
+    3.  右键单击 **“用户”**，然后单击 **“新建用户”**。  
   
     4.  输入用户名和强密码。  
   
@@ -245,19 +249,19 @@ caps.handback.revision: 88
   
     1.  在 **“计算机管理”**中，展开 **“本地用户和组”**，然后单击 **“组”**。  
   
-    2.  用鼠标右键单击 **IIS_WPG**, ，然后单击 **将添加到组**。  
+    2.  右键单击 **IIS_WPG**，然后单击 **“添加到组”**。  
   
-    3.  在 **IIS_WPG 属性** 对话框中，单击 **添加**。  
+    3.  在 **“IIS_WPG 属性”** 对话框中，单击 **“添加”**。  
   
     4.  在 **“选择用户、计算机或组”** 对话框中，添加在步骤 1 中创建的帐户。  
   
     5.  确保 **“从此位置”** 字段中为本地计算机（而不是域）的名称。 如果不是本地计算机的名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
-    6.  在 **选择用户** 对话框和 **IIS_WPG 属性** 对话框中，单击 **确定**。  
+    6.  在 **“选择用户”** 对话框和 **“IIS_WPG 属性”** 对话框中，单击 **“确定”**。  
   
 3.  将包含 replisapi.dll 的文件夹的最低权限授予帐户：  
   
-    1.  找到为 replisapi.dll 创建的文件夹，右键单击该文件夹，然后单击 **共享和安全**。  
+    1.  找到为 replisapi.dll 创建的文件夹，右键单击该文件夹，再单击 **“共享和安全”**。  
   
     2.  在 **“安全性”** 选项卡上，单击 **“添加”**。  
   
@@ -265,31 +269,31 @@ caps.handback.revision: 88
   
     4.  确保 **“从此位置”** 字段中为本地计算机（而不是域）的名称。 如果不是本地计算机的名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
-    5.  请确保仅授予该帐户 **读取**, ，**读取和执行**, ，和 **列出文件夹内容** 权限。  
+    5.  请确保只向该帐户授予“读取”、“读取和执行”和“列出文件夹内容”权限。  
   
     6.  选择所有不需要访问该目录的用户或组，然后单击 **“删除”**。  
   
     7.  单击“确定” 。  
   
-4.  创建应用程序池在 **Internet 信息服务 (IIS) 管理器**:  
+4.  在 **“Internet 信息服务(IIS)管理器”**中创建应用程序池：  
   
     1.  单击 **“启动”**，再单击 **“运行”**。  
   
     2.  在 **“打开”** 框中键入 **inetmgr**，然后单击 **“确定”**。  
   
-    3.  在 **Internet 信息服务 (IIS) 管理器**, ，展开 **本地计算机** 节点。  
+    3.  在 **“Internet 信息服务(IIS)管理器”**中，展开 **“本地计算机”** 节点。  
   
-    4.  用鼠标右键单击 **应用程序池**, ，指向 **新建** ，然后单击 **应用程序池**。  
+    4.  右键单击 **“应用程序池”**，指向 **“新建”** ，然后单击 **“应用程序池”**。  
   
     5.  在 **“应用程序池 ID”** 字段中，输入池的名称，然后单击 **“确定”**。  
   
 5.  将帐户与应用程序池关联：  
   
-    1.  在 **Internet 信息服务 (IIS) 管理器**, ，展开 **本地计算机** 节点，然后展开 **应用程序池**。  
+    1.  在 **“Internet 信息服务(IIS)管理器”**中，展开 **“本地计算机”** 节点，然后展开 **“应用程序池”**。  
   
-    2.  右键单击该应用程序池，您创建的然后单击 **属性**。  
+    2.  右键单击所创建的应用程序池，然后单击 **“属性”**。  
   
-    3.  在 **\< ApplicationPoolName> 属性** 对话框中，在 **标识** 选项卡上，单击 **可配置**。  
+    3.  在“\<ApplicationPoolName> 属性”对话框中的“标识”选项卡上，单击“可配置”。  
   
     4.  在 **“用户名”** 和 **“密码”** 字段中，输入在步骤 1 中创建的帐户和密码。  
   
@@ -297,18 +301,18 @@ caps.handback.revision: 88
   
 6.  将应用程序池与用于 Web 同步的虚拟目录关联：  
   
-    1.  在 **Internet 信息服务 (IIS) 管理器**, ，展开 **本机** 节点，然后展开 **网站**。  
+    1.  在 **“Internet 信息服务(IIS)管理器”**中，展开 **“本地计算机”** 节点，再展开 **“网站”**。  
   
-    2.  展开要用于 Web 同步的 Web 站点，右键单击为 Web 同步所创建的虚拟目录，然后单击 **属性**。  
+    2.  展开当前用于 Web 同步的网站，右键单击为 Web 同步所创建的虚拟目录，然后单击 **“属性”**。  
   
-    3.  在 **虚拟目录** 的选项卡上 **\< VirtualDirectoryName> 属性** 对话框中，从 **应用程序池** 下拉列表中，选择在步骤 5 中创建的应用程序池。  
+    3.  在“\<VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。  
   
-    4.  单击“确定” 。  
+    4.  单击 **“确定”**。  
   
-## 测试到 replisapi.dll 的连接  
+## <a name="testing-the-connection-to-replisapidll"></a>测试到 replisapi.dll 的连接  
  在诊断模式下运行 Web 同步，以便测试与正在运行 IIS 的计算机的连接，并确保已正确安装安全套接字层 (SSL) 证书。 若要在诊断模式下运行 Web 同步，您必须是运行 IIS 的计算机中的管理员。  
   
-#### 测试到 replisapi.dll 的连接  
+#### <a name="to-test-the-connection-to-replisapidll"></a>测试到 replisapi.dll 的连接  
   
 1.  确保订阅服务器中的局域网 (LAN) 设置正确：  
   
@@ -346,7 +350,7 @@ caps.handback.revision: 88
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在 **连接到 \< 服务器名>** 对话框框中，指定的登录名和密码，合并代理将用于连接到 IIS。 在新建订阅向导中也要指定这些凭据。  
+4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”**的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   
@@ -356,7 +360,7 @@ caps.handback.revision: 88
   
     2.  以诊断模式连接到服务器。 如果证书安装正确，就不会显示 **“安全警报”** 对话框。 如果显示了该对话框，那么合并代理试图连接到正在运行 IIS 的计算机时就会失败。 必须确保您所访问的服务器的证书已作为可信证书添加到订阅服务器的证书存储区。 有关导出证书的详细信息，请参阅 IIS 文档。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

@@ -1,33 +1,37 @@
 ---
 title: "PolyBase 故障排除 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, 故障排除"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase 故障排除
+# <a name="polybase-troubleshooting"></a>PolyBase 故障排除
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
   
-## 目录视图  
+## <a name="catalog-views"></a>目录视图  
  使用此处列出的目录视图来管理 PolyBase 操作。  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|标识外部数据源。|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|标识外部文件格式。|  
   
-## 动态管理视图  
+## <a name="dynamic-management-views"></a>动态管理视图  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## 使用 DMV 监视 PolyBase 查询  
+  PolyBase 查询拆分为 sys.dm_exec_distributed_request_steps 中的一系列步骤。 下表提供了从步骤名称到关联的 DMV 的映射。
+  
+ |PolyBase 步骤|关联的 DMV|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>使用 DMV 监视 PolyBase 查询  
  使用以下 DMV 对 PolyBase 查询进行监视和故障排除。  
   
 1.  **查找运行时间最长的查询**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## 查看 PolyBase 查询计划  
+## <a name="to-view-the--polybase-query-plan"></a>查看 PolyBase 查询计划  
   
 1.  在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询。  
   
 2.  单击“执行计划”  选项卡。  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase 查询计划](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查询计划")  
   
 3.  右键单击“远程查询运算符”，然后选择“属性”。  
   
@@ -196,21 +211,24 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## 在 PolyBase 组中监视节点  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>在 PolyBase 组中监视节点  
  在将一组计算机配置为 PolyBase 扩展组的一部分后，便可以监视计算机的状态。 有关创建扩展组的详细信息，请参阅 [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
 1.  连接到组的头节点上的 SQL Server。  
   
-2.  运行 DMV [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 以查看 PolyBase 组中的所有节点。  
+2.  运行 DMV [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 以查看 PolyBase 组中的所有节点。  
   
-3.  运行 DMV [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) 以查看 PolyBase 组中的所有节点的状态。  
+3.  运行 DMV [sys.dm_exec_compute_node_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) 以查看 PolyBase 组中的所有节点的状态。  
   
- ## 已知的限制
+ ## <a name="known-limitations"></a>已知的限制
  
  PolyBase 具有以下限制： 
- - 最大可能行大小（包括可变长度列的总长度）不能超过 32,767 个字节。
+ - 最大可能行大小（包括可变长度列的总长度）不能超过 1 MB。 
  - PolyBase 不支持 Hive 0.12+ 数据类型（即 Char()、VarChar()）   
+ - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出的列的一个子集。
+- [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
-## 错误消息和可能的解决方案
+## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
 有关解决外部表的错误，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安装错误和可能的解决方案")。
+

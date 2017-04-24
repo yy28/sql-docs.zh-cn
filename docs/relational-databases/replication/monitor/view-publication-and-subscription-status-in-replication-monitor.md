@@ -1,34 +1,38 @@
 ---
 title: "在复制监视器中查看发布和订阅状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志读取器代理, 监视"
-  - "合并代理, 监视"
-  - "队列读取器代理, 监视"
-  - "发布 [SQL Server 复制], 查看信息"
-  - "快照代理, 监视"
-  - "分发代理, 监视"
-  - "监视性能 [SQL Server 复制], 发布状态"
-  - "监视性能 [SQL Server 复制], 订阅状态"
-  - "订阅 [SQL Server 复制], 查看状态"
-  - "复制监视器、发布和订阅状态"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Log Reader Agent, monitoring
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- publications [SQL Server replication], viewing information
+- Snapshot Agent, monitoring
+- Distribution Agent, monitoring
+- monitoring performance [SQL Server replication], publication status
+- monitoring performance [SQL Server replication], subscription status
+- subscriptions [SQL Server replication], viewing status
+- Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在复制监视器中查看发布和订阅状态
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息：  
+# <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
   
 -   发布的状态由其订阅的最高优先级状态决定。 例如，如果对发布的一个订阅有错误，另一个订阅有性能问题，则显示发布的错误状态。  
   
@@ -42,74 +46,74 @@ caps.handback.revision: 34
   
 -   “严重”状态下的性能  
   
-     此状态值适用于事务复制和合并复制。 有关详细信息，请参阅 [用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+     此状态值适用于事务复制和合并复制。 有关详细信息，请参阅[使用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
 -   长时间运行的合并  
   
-     此状态值适用于合并复制。 有关详细信息，请参阅 [用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+     此状态值适用于合并复制。 有关详细信息，请参阅[使用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
  除提供发布和订阅状态外，合并复制还提供项目级统计信息，其中包括关于以下内容的详细信息：完成某个合并阶段还需要多长时间；处理某个给定项目花费的时间；订阅服务器正在使用的连接类型以及其他重要信息。 统计信息显示在复制监视器的合并代理窗口中。 快照复制和事务复制提供有关分发代理处理的详细信息。  
   
  **查看发布和订阅状态**  
   
--   复制监视器︰ [查看信息并执行任务发布 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 和 [查看信息并为订阅 & #40; 执行任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   复制监视器：[为发布查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)和[为订阅查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **查看代理的详细信息**  
   
--   复制监视器︰ [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md) 和 [查看信息并执行与订阅 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+-   复制监视器：[为与发布关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)和[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 发布状态值  
+## <a name="publication-status-values"></a>发布状态值  
  下表按优先级顺序显示了发布状态值及其对应的图标。  
   
 |状态|图标|  
 |------------|----------|  
-|错误|![UI 图标：error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI 图标：error")|  
-|“严重”状态下的性能|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI 图标：复制代理重试")|  
+|错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
+|“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
 |确定|none|  
   
-## 订阅状态值  
- 下列表按优先级顺序显示了订阅状态值及其对应的图标。 可以为一个订阅可以处于两种状态在同一时间，如 **即将过期/已过期** 和 **正在重试失败的命令**; 最高优先级状态显示。  
+## <a name="subscription-status-values"></a>订阅状态值  
+ 下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令” ；将显示最高优先级状态。  
   
- 对 status 值 **性能关键**, ，**即将过期/已过期**, ，和 **未初始化** 都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
+ 状态值“‘严重’状态下的性能” 、“即将过期/已过期” 和“未初始化”  都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
   
-### 事务订阅  
-  
-|状态|图标|  
-|------------|----------|  
-|错误|![UI 图标：error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI 图标：error")|  
-|“严重”状态下的性能|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|即将过期/已过期|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|未初始化的订阅 |![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI 图标：复制代理重试")|  
-|未运行|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI 图标：复制代理已停止")|  
-|正在运行|![UI 图标：复制代理运行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI 图标：复制代理运行")|  
-  
-### 合并订阅  
+### <a name="transactional-subscriptions"></a>事务订阅  
   
 |状态|图标|  
 |------------|----------|  
-|错误|![UI 图标：error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI 图标：error")|  
-|“严重”状态下的性能|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|长时间运行的合并|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|即将过期/已过期|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|未初始化的订阅 |![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI 图标：复制代理重试")|  
-|同步|![UI 图标：复制代理运行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI 图标：复制代理运行")|  
-|未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI 图标：复制代理已停止")|  
+|错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
+|“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|未初始化的订阅|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
+|未运行|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
+|正在运行|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
   
-### 快照订阅  
+### <a name="merge-subscriptions"></a>合并订阅  
   
 |状态|图标|  
 |------------|----------|  
-|错误|![UI 图标：error](../../../database-engine/availability-groups/windows/media/repl-icon-error.png "UI 图标：error")|  
-|即将过期/已过期|![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|未初始化的订阅 |![UI 图标：warning](../../../database-engine/availability-groups/windows/media/repl-icon-warn.png "UI 图标：warning")|  
-|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.png "UI 图标：复制代理重试")|  
-|同步|![UI 图标：复制代理运行](../../../relational-databases/replication/monitor/media/repl-icon-running.png "UI 图标：复制代理运行")|  
-|未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.png "UI 图标：复制代理已停止")|  
+|错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
+|“严重”状态下的性能|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|长时间运行的合并|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|未初始化的订阅|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
+|同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
+|未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
   
-## 另请参阅  
+### <a name="snapshot-subscriptions"></a>快照订阅  
+  
+|状态|图标|  
+|------------|----------|  
+|错误|![UI 图标：错误](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI 图标：错误")|  
+|即将过期/已过期|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|未初始化的订阅|![UI 图标：警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI 图标：警告")|  
+|正在重试失败的命令|![UI 图标：复制代理重试](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
+|同步|![UI 图标：复制代理正在运行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
+|未同步|![UI 图标：复制代理已停止](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
+  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

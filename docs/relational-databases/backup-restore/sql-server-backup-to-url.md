@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 备份到 URL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 备份到 URL
+# <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍使用 Microsoft Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 本主题介绍这些不同之处和几个代码示例。  
   
-## 要求、组件和概念  
+## <a name="requirements-components-and-concepts"></a>要求、组件和概念  
  **本节内容：**  
   
 -   [安全性](#security)  
@@ -66,10 +70,10 @@ caps.handback.revision: 41
   
  ![Azure Blob 存储](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
- **Azure 快照：** 在某一时间点创建的 Azure blob 快照。 有关详细信息，请参阅[创建 Blob 的快照](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份现在支持对 Microsoft Azure Blob 存储服务中存储的数据库文件进行 Azure 快照备份。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+ **Azure 快照：** 在某一时间点创建的 Azure blob 快照。 有关详细信息，请参阅 [创建 Blob 的快照](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份现在支持对 Microsoft Azure Blob 存储服务中存储的数据库文件进行 Azure 快照备份。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL：**URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 URL 必须指向实际 blob，而不仅仅是容器。 如果 blob 不存在，则创建它。 如果指定了现有 blob，则除非指定了“WITH FORMAT”选项以覆盖 blob 中的现有备份文件，否则备份将失败。  
+ **URL：** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 URL 必须指向实际 blob，而不仅仅是容器。 如果 blob 不存在，则创建它。 如果指定了现有 blob，则除非指定了“WITH FORMAT”选项以覆盖 blob 中的现有备份文件，否则备份将失败。  
   
  以下是一个示例 URL 值：http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS 不是必需的，但建议这样做。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 41
   
  有关如何创建共享访问签名的示例，请参阅本主题后面的 [创建共享访问签名](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 示例；有关如何创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的示例，请参阅本主题后面的 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 示例。  
   
- 有关凭据的一般信息，请参阅[凭据](http://msdn.microsoft.com/library/ms161950.aspx)  
+ 有关凭据的一般信息，请参阅 [凭据](http://msdn.microsoft.com/library/ms161950.aspx)  
   
  有关使用凭据的其他示例的信息，请参阅 [创建 SQL Server 代理的代理](http://msdn.microsoft.com/library/ms175834.aspx)。  
   
@@ -95,20 +99,19 @@ caps.handback.revision: 41
   
 -   只有在使用块 blob 以及使用共享访问签名 (SAS) 令牌（而不是存储帐户密钥）作为 SQL 凭据时才支持通过单个备份操作备份到多个 blob。  
   
--   不支持使用 **BACKUP** 指定块大小。  
+-   不支持为页 blob 指定 **BLOCKSIZE**。 
   
--   不支持指定 **MAXTRANSFERSIZE** 。  
+-   不支持为页 blob 指定 **MAXTRANSFERSIZE**。 
   
--   不支持指定备份集选项 - **RETAINDAYS** 和 **EXPIREDATE**。  
+-   不支持指定备份集选项 - **RETAINDAYS** 和 **EXPIREDATE** 。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求备份设备名称最多包含 259 个字符。 对于用于指定 URL“https://.blob.core.windows.net//.bak”所需的元素，BACKUP TO URL 占用 36 个字符，其余 223 个字符将用于帐户、容器和 Blob 名称。  
   
 ###  <a name="Support"></a> 对备份/还原语句的支持  
   
-|||||  
-|-|-|-|-|  
-|备份/还原语句|是否支持|异常|注释|  
-|BACKUP|√|不支持 BLOCKSIZE 和 MAXTRANSFERSIZE。|需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
+|备份/还原语句|是否支持|异常|注释|
+|-|-|-|-|
+|BACKUP|√|支持将 BLOCKSIZE 和 MAXTRANSFERSIZE 用于块 blob。 不支持将它们用于页 blob。 | 备份到块 blob 需要 SQL Server 凭据中保存的共享访问签名。 备份到页 blob 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中保存的存储帐户密钥，并且需要指定 WITH CREDENTIAL 参数。|  
 |RESTORE|√||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
 |RESTORE FILELISTONLY|√||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
 |RESTORE HEADERONLY|√||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
@@ -118,13 +121,12 @@ caps.handback.revision: 41
   
  有关备份语句的语法和一般信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
- 有关还原语句的语法和一般信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+ 有关还原语句的语法和一般信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
-### 对备份参数的支持  
-  
-|||||  
-|-|-|-|-|  
+### <a name="support-for-backup-arguments"></a>对备份参数的支持  
+
 |参数|是否支持|异常|注释|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 ||  
@@ -133,7 +135,7 @@ caps.handback.revision: 41
 |**WITH 选项：**||||  
 |CREDENTIAL|√||仅当使用 BACKUP TO URL 选项备份到 Microsoft Azure Blob 存储服务且使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据时，才支持 WITH CREDENTIAL|  
 |FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||当指定了 **WITH ENCRYPTION** 参数时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份会确保在执行备份之前对整个数据库进行 TDE 加密，如果是这样，请使用数据库中为 TDE 指定的算法加密文件快照备份文件本身。 如果未加密整个数据库中的所有数据，备份将失败（例如，加密过程尚未完成）。|  
+|ENCRYPTION|√||当指定了 **WITH ENCRYPTION** 参数时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份会确保在执行备份之前对整个数据库进行 TDE 加密，如果是这样，请使用数据库中为 TDE 指定的算法加密文件快照备份文件本身。 如果未加密整个数据库中的所有数据，备份将失败（例如，加密过程尚未完成）。|  
 |DIFFERENTIAL|√|||  
 |COPY_ONLY|√|||  
 |COMPRESSION&#124;NO_COMPRESSION|√|对文件快照备份不支持||  
@@ -145,9 +147,9 @@ caps.handback.revision: 41
 |NOFORMAT &#124; FORMAT|√||除非指定 **WITH FORMAT** ，否则对现有 blob 执行的备份将失败。 指定 **WITH FORMAT** 时，将覆盖现有 blob。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 FORMAT 参数以避免保留使用原始文件快照备份创建的孤立文件快照。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
 |MEDIADESCRIPTION|√|||  
 |MEDIANAME|√|||  
-|BLOCKSIZE|−|||  
+|BLOCKSIZE|√|不支持用于页 blob。 支持用于块 blob。| 建议使用 BLOCKSIZE=65536 以优化块 blob 中允许的 50,000 个块的使用。 |  
 |BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|−|||  
+|MAXTRANSFERSIZE|√|不支持用于页 blob。 支持用于块 blob。| 默认值为 1048576。 该值的最大范围为 4 MB，以 65536 字节为增量递增。</br> 建议使用 MAXTRANSFERSIZE=4194304 以优化块 blob 中允许的 50,000 个块的使用。 |  
 |NO_CHECKSUM &#124; CHECKSUM|√|||  
 |STOP_ON_ERROR | CONTINUE_AFTER_ERROR|√|||  
 |STATS|√|||  
@@ -158,15 +160,14 @@ caps.handback.revision: 41
   
  有关备份参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
-### 对还原参数的支持  
+### <a name="support-for-restore-arguments"></a>对还原参数的支持  
   
-|||||  
-|-|-|-|-|  
 |参数|是否支持|异常|注释|  
+|-|-|-|-|  
 |DATABASE|√|||  
 |LOG|√|||  
 |FROM (URL)|√||FROM URL 参数用于指定备份文件的 URL 路径。|  
-|**WITH 选项：**||||  
+|**WITH Options:**||||  
 |CREDENTIAL|√||仅当使用 RESTORE FROM URL 选项从 Microsoft Azure Blob 存储服务还原时，才支持 WITH CREDENTIAL。|  
 |PARTIAL|√|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
@@ -183,7 +184,7 @@ caps.handback.revision: 41
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
 |CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
+|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|√|||  
 |FILESTREAM|√|对快照备份不支持||  
 |STATS|√|||  
 |REWIND &#124; NOREWIND|−|||  
@@ -193,7 +194,7 @@ caps.handback.revision: 41
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
 |STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
   
- 有关还原参数的详细信息，请参阅[RESTORE 参数 (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。  
+ 有关还原参数的详细信息，请参阅[RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ##  <a name="BackupTaskSSMS"></a> 使用 SQL Server Management Studio 中的备份任务  
 可以使用 SQL Server 凭据通过 SQL Server Management Studio 中的备份任务将数据库备份到 URL。  
@@ -211,11 +212,11 @@ caps.handback.revision: 41
    
     1.  **Azure 存储容器：**用于存储备份文件的 Microsoft Azure 存储容器的名称。  从下拉列表中选择一个现有容器或手动输入该容器。 
   
-    2.  **共享访问策略：**对手动输入的容器输入共享访问签名。  如果已选择现有容器，则此字段不可用。 
+    2.  **共享访问策略：** 对手动输入的容器输入共享访问签名。  如果已选择现有容器，则此字段不可用。 
   
-    3.  **备份文件：**备份文件的名称。
+    3.  **备份文件：** 备份文件的名称。
     
-    4.  **新容器：**用于注册没有共享访问签名的现有容器。  请参阅[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    4.  **新容器：** 用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
 > [!NOTE] 
 > “添加” ****单个媒体集支持多个备份文件和存储容器。
@@ -231,13 +232,13 @@ caps.handback.revision: 41
  [创建凭据 - 向 Azure 存储进行身份验证](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
- 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure "Use the Maintenance Plan Wizard")。  
+ 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 > [!NOTE]  
->  若要使用共享访问令牌创建条带备份集、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
+>  若要使用共享访问令牌创建条带备份集、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
   
 ##  <a name="RestoreSSMS"></a> 使用 SQL Server Management Studio 从 Microsoft Azure 存储还原  
-“还原数据库”任务包括**URL**作为要从其还原的设备。  以下步骤描述如何使用还原任务从 Microsoft Azure Blob 存储服务进行还原： 
+“还原数据库”任务包括 **URL** 作为要从其还原的设备。  以下步骤描述如何使用还原任务从 Microsoft Azure Blob 存储服务进行还原： 
   
 1.  右键单击“数据库”，然后选择“还原数据库...”。 
   
@@ -249,9 +250,9 @@ caps.handback.revision: 41
 
     1.  **Azure 存储容器：**包含备份文件的 Microsoft Azure 存储容器的完全限定名称。  从下拉列表中选择一个现有容器或手动输入该完全限定容器名称。
       
-    2.  **共享访问签名：**用于输入指定容器的共享访问签名。
+    2.  **共享访问签名：**  用于输入指定容器的共享访问签名。
       
-    3.  **添加：**用于注册没有共享访问签名的现有容器。  请参阅[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    3.  **添加：**  用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
     4.  **确定：**SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 此操作将返回“选择备份设备”对话框，而单击此对话框上的“确定”将返回“还原”主对话框，从中将可完成还原。 
   
@@ -271,10 +272,10 @@ caps.handback.revision: 41
 -   [使用 STOPAT 还原到时间点](#PITR)  
   
 > [!NOTE]  
->  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
   
 ###  <a name="SAS"></a> 创建共享访问签名  
- 以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 该示例需要 Microsoft Azure Powershell。 有关安装和使用 Azure Powershell 的信息，请参阅[如何安装和配置 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ 以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 该示例需要 Microsoft Azure Powershell。 有关安装和使用 Azure Powershell 的信息，请参阅 [如何安装和配置 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
 
 > [!NOTE] 
 >  这些脚本是使用 Azure PowerShell 5.0.10586 编写的。
@@ -407,8 +408,8 @@ Write-Host $tSql
     GO  
     ```  
   
-## 另请参阅  
- [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 备份到 URL 最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
   

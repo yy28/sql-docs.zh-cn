@@ -1,33 +1,37 @@
 ---
 title: "复制快照代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "快照代理程序, 可执行文件"
-  - "代理 [SQL Server 复制], 快照代理"
-  - "命令提示符 [SQL Server 复制]"
-  - "快照代理, 参数引用"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Snapshot Agent, executables
+- agents [SQL Server replication], Snapshot Agent
+- command prompt [SQL Server replication]
+- Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b57f94d20f03f7d6d9ec0b71bba122548808c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制快照代理
+# <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
   
 > [!NOTE]  
 >  可以按任意顺序指定参数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -72,27 +76,27 @@ snapshot [ -?]
 [-UsePerArticleContentsView use_per_article_contents_view]  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher**  *server_name*[**\\***instance_name*]    
- 发布服务器的名称。 指定的默认实例 server_name [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。 指定 *server_name***\\***instance_name* 对于命名实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。  
+ **-Publisher**  *server_name*[**\\***instance_name*]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
- **-发布** *发布*  
+ **-Publication** *发布*  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
  **-70Subscribers**  
- 如果任何订阅服务器正在运行，必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版。  
+ 如果有任何订阅服务器在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，则必须使用此参数。  
   
- **-BcpBatchSize** *bcp*_ *批处理*\_ *大小*  
- 在一次大容量复制操作中发送的行数。  执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
+ **-BcpBatchSize** *bcp*_ *batch*\_ *size*  
+ 在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 **bcp** 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
   
  **-DefinitionFile** *def_path_and_file_name*  
  代理定义文件的路径。 代理定义文件中包含该代理的命令行参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- 分发服务器名称。 指定 *server_name* 的默认实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。 指定 *server_name***\\***instance_name* 对于命名实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  死锁发生时快照代理连接到分发服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
@@ -110,13 +114,13 @@ snapshot [ -?]
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时使用的密码。 。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- 指定分发服务器的安全模式。 值为 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式 （默认值），并将值 **1** 指示 Windows 身份验证模式。  
+ 指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
   
  **-DynamicFilterHostName** *dynamic_filter_host_name*  
- 用于设置的值 [HOST_NAME & #40;Transact SQL & #41;](../../../t-sql/functions/host-name-transact-sql.md) 创建动态快照时应用于筛选。 例如，如果了子集筛选器子句 `rep_id = HOST_NAME()` 指定一篇文章，并且您将设置 **DynamicFilterHostName** 属性设置为"FBJones"在调用合并代理之前仅行具有"FBJones" **rep_id** 列将被复制。  
+ 在创建动态快照时，用来为筛选中的 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 设置值。 例如，如果为项目指定了子集筛选器子句 `rep_id = HOST_NAME()` ，并且在调用合并代理之前将 **DynamicFilterHostName** 属性设置为“FBJones”，则只会复制 **rep_id** 列中具有“FBJones”的行。  
   
  **-DynamicFilterLogin** *dynamic_filter_login*  
- 用于设置的值 [SUSER_SNAME & #40;Transact SQL & #41;](../../../t-sql/functions/suser-sname-transact-sql.md)创建动态快照时应用于筛选。 例如，如果了子集筛选器子句 `user_id = SUSER_SNAME()` 指定一篇文章，并且您将设置 **DynamicFilterLogin** 属性设置为"rsmith"之前，先调用 **运行** 方法 **SQLSnapshot** 对象时，只有具有"rsmith"的行 **user_id** 列将包含在快照中。  
+ 在创建动态快照时，用来为筛选中的 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 设置值。 例如，如果为项目指定了子集筛选器子句 `user_id = SUSER_SNAME()` ，并且在调用 **SQLSnapshot** 对象的 **Run** 方法之前将 **DynamicFilterLogin** 属性设置为“rsmith”，则只将 **user_id** 列中具有“rsmith”的行包括在快照中。  
   
  **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
  应生成动态快照的位置。  
@@ -130,7 +134,7 @@ snapshot [ -?]
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
   
- 有关详细信息，请参阅 [安全概述 & #40;复制和 #41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
  **-FieldDelimiter** *field_delimiter*  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据文件中用于标记字段末尾的字符或字符序列。 默认值为 \n\<x$3>\n。  
@@ -146,39 +150,39 @@ snapshot [ -?]
 |**3**|始终插入新记录，除非它与空闲消息有关。|  
   
  **-HRBcpBlocks** *number_of_blocks*  
- 是的数 **bcp** writer 和 reader 线程之间排队的数据块。 默认值为 50。 **HRBcpBlocks** 仅用于 Oracle 发布。  
+ 在编写器线程和读取器线程之间排队的 **bcp** 数据块的数量。 默认值为 50。 **HRBcpBlocks** 仅用于 Oracle 发布。  
   
 > [!NOTE]  
->  此参数用于性能优化的 **bcp** 从 Oracle 发布服务器的性能。  
+>  此参数用于通过 Oracle 发布服务器优化 **bcp** 的性能。  
   
- -**HRBcpBlockSize***块大小*  
- 大小，以千字节 (KB) 为每个 **bcp** 数据块。 默认值为 64 KB。 **HRBcpBlocks** 仅用于 Oracle 发布。  
+ -**HRBcpBlockSize***block_size*  
+ 每个 **bcp** 数据块的大小（以 KB 为单位）。 默认值为 64 KB。 **HRBcpBlocks** 仅用于 Oracle 发布。  
   
 > [!NOTE]  
->  此参数用于性能优化的 **bcp** 从 Oracle 发布服务器的性能。  
+>  此参数用于通过 Oracle 发布服务器优化 **bcp** 的性能。  
   
  **-HRBcpDynamicBlocks**  
- 是指示是否每个大小 **bcp** 数据块可以动态增长。 **HRBcpBlocks** 仅用于 Oracle 发布。  
+ 每个 **bcp** 数据块的大小是否可以动态增长。 **HRBcpBlocks** 仅用于 Oracle 发布。  
   
 > [!NOTE]  
->  此参数用于性能优化的 **bcp** 从 Oracle 发布服务器的性能。  
+>  此参数用于通过 Oracle 发布服务器优化 **bcp** 的性能。  
   
  **-KeepAliveMessageInterval** *keep_alive_interval*  
- 以秒为单位，快照代理程序在日志记录"waiting for backend message"之前等待的时间量设置为 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 表。 默认值为 300 秒。  
+ 快照代理在向 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 表中记录“waiting for backend message”之前等待的时间（以秒为单位）。 默认值为 300 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
  登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MaxBcpThreads** *number_of_threads*  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 必须具有的值大于 **0** 并且存在任何硬编码的上限。 默认值为 **1**。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值为 **1**。  
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  是否将无关删除操作发送到订阅服务器。 无关删除操作是针对不属于订阅服务器分区的行发送到订阅服务器的 DELETE 命令。 无关删除操作不会影响数据的完整性或收敛，但它们会导致不必要的网络通信。 **MaxNetworkOptimization** 的默认值是 **0**。 将 **MaxNetworkOptimization** 设置为 **1** 可将不相关的删除操作发生的机会减至最小，从而减少网络通信，并最大程度地优化网络。 如果存在多个级别的联接筛选器和复杂子集筛选器，则将此参数设置为 **1** 还会增加元数据的存储并导致发布服务器性能下降。 您应仔细评估您的复制拓扑，仅当无关删除操作导致的网络通信高到无法接受时才应将 **MaxNetworkOptimization** 设置为 **1** 。  
   
 > [!NOTE]  
->  将此参数设置为 **1** 非常有用，只能合并发布的同步优化选项设置为 **true** ( **@keep_partition_changes** 参数 [sp_addmergepublication & #40;Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md))。  
+>  仅当合并发布的同步优化选项（[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@keep_partition_changes** 参数）设置为 **true** 时，将此参数设置为 **1** 才是有用的。  
   
- **-输出** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
@@ -191,13 +195,13 @@ snapshot [ -?]
 |**2**|输出所有错误消息和进度报告消息，这对于调试很有用。|  
   
  **-PacketSize** *packet_size*  
- 快照代理连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时使用的数据包大小（以字节为单位）。 默认值为 8192 字节。  
+ 快照代理连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用的数据包大小（以字节为单位）。 默认值为 8192 字节。  
   
 > [!NOTE]  
 >  除非您确信能够提高性能，否则不要更改数据包的大小。 对于大多数应用程序而言，默认数据包大小为最佳数值。  
   
  **-ProfileName** *profile_name*  
- 指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅 [复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-PublisherDB** *publisher_database*  
  发布数据库的名称。 Oracle 发布服务器不支持该参数。  
@@ -212,7 +216,7 @@ snapshot [ -?]
 |**1**|在发布服务器上发生死锁时，快照代理优先。|  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅 [数据库镜像和复制 & #40;SQL Server 和 #41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
+ 指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** *publisher_login*  
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时所用的登录名。  
@@ -221,7 +225,7 @@ snapshot [ -?]
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
- 指定发布服务器的安全模式。 值为 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证 （默认值），并将值 **1** 指示 Windows 身份验证模式。  
+ 指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
  查询超时前等待的秒数。 默认值为 1800 秒。  
@@ -233,19 +237,19 @@ snapshot [ -?]
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据文件中用于标记行尾的字符或字符序列。 默认值为 \n\<,@g>\n。  
   
  **-StartQueueTimeout** *start_queue_timeout_seconds*  
- 是在运行的并发动态快照进程数达到设定的限制时，快照代理等待的秒数最大数目 **@max_concurrent_dynamic_snapshots** 属性 [sp_addmergepublication & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如果在经过最大秒数之后快照代理仍在等待，快照代理将退出。 值 0 表示代理将无限期地等待，尽管可以将其取消。  
+ 当运行的并发动态快照进程数达到由 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@max_concurrent_dynamic_snapshots** 属性设置的限制值时，快照代理等待的最大秒数。 如果在经过最大秒数之后快照代理仍在等待，快照代理将退出。 值 0 表示代理将无限期地等待，尽管可以将其取消。  
   
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  已不推荐使用此参数，支持它是为了能够向后兼容。  
   
-## 注释  
+## <a name="remarks"></a>注释  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务仅可访问本地计算机。 如果将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理下运行的快照代理配置为登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则快照代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  
   
  若要启动快照代理，请从命令提示符处执行 **snapshot.exe** 。 有关信息，请参阅 [复制代理可执行文件](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

@@ -1,25 +1,29 @@
 ---
 title: "第 4 课：将数据库从 URL 还原到虚拟机 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 4 课：将数据库从 URL 还原到虚拟机
+# <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>第 4 课：将数据库从 URL 还原到虚拟机
 在本课程中，将 AdventureWorks2014 数据库还原至 Azure 虚拟机中的 SQL Server 2016 实例。  
   
 > [!NOTE]  
@@ -49,19 +53,19 @@ caps.handback.revision: 23
   
 5.  在对象资源管理器中，展开数据库节点，并确认 AdventureWorks2014 数据库已还原（必要时刷新该节点）。  
   
-    ![Adventure Works 2014 database restored to SQL Server 2016 in virtual machine](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "Adventure Works 2014 database restored to SQL Server 2016 in virtual machine")  
+    ![还原到虚拟机中的 SQL Server 2016 的 Adventure Works 2014 数据库](../relational-databases/media/311f69a6-8443-4df5-8f30-3103c2472300.JPG "还原到虚拟机中的 SQL Server 2016 的 Adventure Works 2014 数据库")  
   
 6.  在对象资源管理器中，右键单击 AdventureWorks2014，单击“属性”（完成后单击“取消”）。  
   
 7.  单击“文件”，并确认两个数据库文件的路径为指向 Azure blob 容器中的 blob 的 URL。  
   
-    ![database properties showing file path of logical data files as URL](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "database properties showing file path of logical data files as URL")  
+    ![数据库属性，其中将逻辑数据文件的文件路径显示为 URL](../relational-databases/media/cfeee576-6319-460e-9fa2-f0922e02ee23.JPG "数据库属性，其中将逻辑数据文件的文件路径显示为 URL")  
   
 8.  在对象资源管理器中，连接到 Azure 存储。  
   
 9. 展开容器。展开在第 1 课中创建的容器，并确认该容器中显示上面步骤 3 中的 AdventureWorks2014_Data.mdf 和 AdventureWorks2014_Log.ldf，还显示第 3 课的备份文件（必要时请刷新节点）。  
   
-    ![Adventure Works 2014 data and log file appear as blobs in Azure container](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Adventure Works 2014 data and log file appear as blobs in Azure container")  
+    ![Adventure Works 2014 数据和日志文件显示为 Azure 容器中的 blob](../relational-databases/media/156c7d73-44be-4754-9653-04cccb6c3066.JPG "Adventure Works 2014 数据和日志文件显示为 Azure 容器中的 blob")  
   
 **下一课：**  
   
@@ -69,3 +73,4 @@ caps.handback.revision: 23
   
   
   
+

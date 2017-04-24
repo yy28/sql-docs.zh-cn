@@ -1,33 +1,37 @@
 ---
 title: "复制到 SQL 数据库 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 数据库复制"
-  - "复制, SQL 数据库"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Database replication
+- replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1beb8c0334078c7710568a40339daf05ed0b69e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制到 SQL 数据库
+# <a name="replication-to-sql-database"></a>复制到 SQL 数据库
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制可以配置为 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+  可以将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制配置为 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
  **支持的配置：**  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行在本地或实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 云中的 Azure 虚拟机中运行。 有关详细信息，请参阅 [SQL Server on Azure Virtual Machines overview（Azure 虚拟机上的 SQL Server 概述）](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是在本地运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，或者是在云中的 Azure 虚拟机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关详细信息，请参阅 [SQL Server on Azure Virtual Machines overview（Azure 虚拟机上的 SQL Server 概述）](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的推送订阅服务器。  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 15
   
 -   支持快照和单向事务复制。 不支持对等事务复制和合并复制。  
   
-## 版本  
+## <a name="versions"></a>版本  
  发布服务器和分发服务器必须至少为以下任一版本：  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
@@ -48,13 +52,13 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 应为 SP3  
   
- 尝试配置复制，使用较旧版本可能导致错误编号 MSSQL_REPL20084 （该进程无法连接到订阅服务器。） 和 MSSQL_REPL40532 (无法打开服务器 \< 名称> 登录所请求的。 登录失败。）。  
+ 尝试使用较旧版本配置复制可能会导致出现错误代码 MSSQL_REPL20084（进程无法连接到订阅服务器。）和 MSSQL_REPL40532（无法打开登录所请求的服务器 \<名称>。 登录失败。）。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 订阅服务器必须至少是 V12 且能处于任何区域。  
   
- 若要使用的所有功能 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 您必须使用最新版本的 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 和 [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。  
+ 若要使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的所有功能，必须使用最新版本的 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 和 [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或在发布服务器上执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句配置复制。 不能使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 门户配置复制。  
   
  复制只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名以连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -63,38 +67,38 @@ caps.handback.revision: 15
   
  必须拥有现有 Azure 订阅和现有 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。  
   
- 在单个发布 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以支持这两个 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (在本地和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Azure 虚拟机) 的订阅服务器。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的单个发布可以支持 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器（本地和 Azure 虚拟机中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）。  
   
- 复制管理、 监视和故障排除必须从在本地执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 必须从本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行复制管理、监视和故障排除。  
   
  仅支持 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的推送订阅。  
   
- 仅 `@subscriber_type = 0` 中支持 **sp_addsubscription** SQL database。  
+ 用于 SQL 数据库的 `@subscriber_type = 0` 仅支持 **@subscriber_type = 0** 。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 不支持的双向、 即时、 可更新的、 或对等复制。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 不支持双向、即时、可更新或对等复制。  
   
-## 复制体系结构  
+## <a name="replication-architecture"></a>复制体系结构  
  ![replication-to-sql-database](../../relational-databases/replication/media/replication-to-sql-database.png "replication-to-sql-database")  
   
-## 方案  
+## <a name="scenarios"></a>方案  
   
-#### 典型的复制方案  
+#### <a name="typical-replication-scenario"></a>典型的复制方案  
   
-1.  对在本地创建事务复制发布 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
+1.  在本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上创建事务复制发布。  
   
-2.  在本地上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **新建订阅向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，以创建推送到订阅 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+2.  在本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用 **新建订阅向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以创建 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的推送订阅。  
   
-3.  初始数据集通常是由快照代理创建并由分发代理分发和应用的快照。 初始数据集还可以通过备份或其他方式提供，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
+3.  初始数据集通常是由快照代理创建并由分发代理分发和应用的快照。 The initial data set can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-#### 数据迁移方案  
+#### <a name="data-migration-scenario"></a>数据迁移方案  
   
-1.  使用事务复制来将数据从本地复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+1.  使用事务复制来将本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据复制到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-2.  重定向客户端或中间层应用程序来更新 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 副本。  
+2.  重定向客户端或中间层应用程序以更新 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 副本。  
   
 3.  停止更新表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本并删除发布。  
   
-## 限制  
+## <a name="limitations"></a>限制  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 订阅不支持以下选项：  
   
 -   复制文件组关联  
@@ -141,18 +145,19 @@ caps.handback.revision: 15
   
 -   SP 的序列化事务中的执行  
   
-## 示例  
+## <a name="examples"></a>示例  
  创建发布和推送订阅。 有关详细信息，请参阅：  
   
--   [创建发布](../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md) 使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 作为订阅服务器上的逻辑服务器名称 (例如 **N'azuresqldbdns.database.windows.net**) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 为目标数据库名称 (例如 **AdventureWorks**)。  
+-   通过将 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 逻辑服务器名称用作订阅服务器（例如 **N'azuresqldbdns.database.windows.net'**）并将 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 名称用作目标数据库（例如 **AdventureWorks**）来[创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
-## 另请参阅  
- [创建发布](../../relational-databases/replication/publish/create-a-publication.md)   
- [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
- [复制类型](../../relational-databases/replication/types-of-replication.md)   
- [监视和 #40;复制和 #41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
- [初始化订阅](../../relational-databases/replication/initialize-a-subscription.md)  
+## <a name="see-also"></a>另请参阅  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Types of Replication](../../relational-databases/replication/types-of-replication.md)   
+ [监视（复制）](../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
+

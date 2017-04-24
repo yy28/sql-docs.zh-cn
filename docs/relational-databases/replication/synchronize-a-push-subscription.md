@@ -1,27 +1,31 @@
 ---
 title: "同步推送订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "同步 [SQL Server 复制], 推送订阅"
-  - "订阅 [SQL Server 复制], 推送"
-  - "推送订阅 [SQL Server 复制], 同步"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], push subscriptions
+- subscriptions [SQL Server replication], push
+- push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c21b9e046bd2f5571816c21ad05ae2b67f92183
+ms.lasthandoff: 04/11/2017
+
 ---
-# 同步推送订阅
-  本主题描述如何同步推送订阅 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ，[复制代理程序](../../relational-databases/replication/agents/replication-agents-overview.md), ，或复制管理对象 (RMO)。  
+# <a name="synchronize-a-push-subscription"></a>同步推送订阅
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制代理 [或复制管理对象 (RMO) 在](../../relational-databases/replication/agents/replication-agents-overview.md)中同步推送订阅。  
   
  **本主题内容**  
   
@@ -29,16 +33,16 @@ caps.handback.revision: 43
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-     [复制代理](#ReplProg)  
+     [Replication Agents](#ReplProg)  
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。 有关指定同步计划的详细信息，请参阅 [指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
+ 订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。 有关如何指定同步计划的详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
- 从  的 **“本地发布”** 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 the **“所有订阅”** 选项卡中，按需同步订阅。 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅 [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 从  的 **“本地发布”** 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 the **All Subscriptions** tab in Replication Monitor. 不能从订阅服务器按需同步对 Oracle 发布的订阅。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
-#### 在 Management Studio 中按需同步推送订阅（在发布服务器中）  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>在 Management Studio 中按需同步推送订阅（在发布服务器中）  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -46,40 +50,40 @@ caps.handback.revision: 43
   
 3.  展开要同步其订阅的发布。  
   
-4.  右键单击你想要同步，然后单击的订阅 **查看同步状态**。  
+4.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
   
-5.  在 **查看同步状态-\< 订阅服务器上>: \< 订阅数据库>** 对话框中，单击 **启动**。 完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击 **“关闭”**。  
   
-#### 在 Management Studio 中按需同步推送订阅（在订阅服务器中）  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>在 Management Studio 中按需同步推送订阅（在订阅服务器中）  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到订阅服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击你想要同步，然后单击的订阅 **查看同步状态**。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
   
-4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定” 。  
+4.  将显示一条消息，指示建立与分发服务器的连接。 单击 **“确定”**。  
   
-5.  在 **查看同步状态-\< 订阅服务器上>: \< 订阅数据库>** 对话框中，单击 **启动**。 完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击 **“关闭”**。  
   
-#### 在复制监视器中按需同步推送订阅  
+#### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>在复制监视器中按需同步推送订阅  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器，再单击一个发布。  
   
 2.  单击 **“所有订阅”** 选项卡。  
   
-3.  右键单击你想要同步，然后单击的订阅 **开始同步**。  
+3.  右键单击要同步的订阅，然后单击 **“开始同步”**。  
   
-4.  若要查看同步进度，右键单击该订阅，然后单击 **查看详细信息**。  
+4.  若要查看同步进度，请右键单击该订阅，然后单击 **“查看详细信息”**。  
   
 ##  <a name="ReplProg"></a> 使用复制代理  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步推送订阅。 被调用的复制代理可执行文件将取决于推送订阅所属的发布的类型。  
   
-#### 启动分发代理以将推送订阅与事务发布进行同步  
+#### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>启动分发代理以将推送订阅与事务发布进行同步  
   
 1.  通过命令提示符或分发服务器中的批处理文件，执行 **distrib.exe**。 指定下列命令行参数：  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 43
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-#### 启动合并代理以将推送订阅与合并发布进行同步  
+#### <a name="to-start-the-merge-agent-to-synchronize-a-push-subscription-to-a-merge-publication"></a>启动合并代理以将推送订阅与合并发布进行同步  
   
 1.  通过命令提示符或分发服务器中的批处理文件，执行 **replmerg.exe**。 指定下列命令行参数：  
   
@@ -205,84 +209,84 @@ REM -- The following command must be supplied without line breaks.
  可以使用复制管理对象 (RMO) 和托管代码的复制代理功能访问权限以编程方式同步推送订阅。 用于同步推送订阅的类取决于订阅所属的发布的类型。  
   
 > [!NOTE]  
->  如果您要启动一个自主运行而不影响应用程序的订阅，请异步启动代理。 但是，如果您要监视同步的结果并在同步进程期间从代理处接收回调（例如，您要显示进度栏），则应当同步启动代理。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 订阅服务器，必须同步启动代理。  
+>  如果您要启动一个自主运行而不影响应用程序的订阅，请异步启动代理。 但是，如果您要监视同步的结果并在同步进程期间从代理处接收回调（例如，您要显示进度栏），则应当同步启动代理。 For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
   
-#### 将推送订阅与快照发布或事务发布进行同步  
+#### <a name="to-synchronize-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>将推送订阅与快照发布或事务发布进行同步  
   
-1.  通过使用创建连接到分发服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类并设置以下属性︰  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例并设置下列属性：  
   
-    -   为发布数据库名称 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的发布数据库名称。  
   
-    -   订阅所属的发布的名称 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的订阅所属发布的名称。  
   
-    -   订阅数据库的名称 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的订阅数据库的名称。  
   
-    -   为订阅服务器的名称 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的订阅服务器的名称。  
   
-    -   步骤 1 中创建的连接 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+    -   在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 创建的连接。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果该方法返回 **false**，则确保订阅存在。  
   
 4.  使用下列方法之一在分发服务器中启动分发代理：  
   
-    -   调用 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 方法的实例上 <xref:Microsoft.SqlServer.Replication.TransSubscription> 步骤 2 中。 该方法异步启动分发代理，并在代理作业运行时立即将控制权返回给您的应用程序。 如果值为创建订阅后，您无法调用此方法 **false** 为 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>。  
+    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 实例上调用 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 方法。 该方法异步启动分发代理，并在代理作业运行时立即将控制权返回给您的应用程序。 如果创建的订阅的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的值为 **false**，则不能调用该方法。  
   
-    -   获取实例 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 类 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 属性，然后调用 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动代理，并且控制权仍属于运行代理作业。 在执行同步期间，您可以处理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 在代理运行的事件。  
+    -   从 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 属性中获取 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动代理，并且控制权仍属于运行代理作业。 在同步执行期间，可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
-#### 将推送订阅与合并发布进行同步  
+#### <a name="to-synchronize-a-push-subscription-to-a-merge-publication"></a>将推送订阅与合并发布进行同步  
   
-1.  通过使用创建连接到分发服务器 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类。  
+1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的实例 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类，并设置以下属性︰  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例并设置下列属性：  
   
-    -   为发布数据库名称 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的发布数据库名称。  
   
-    -   订阅所属的发布的名称 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的订阅所属发布的名称。  
   
-    -   订阅数据库的名称 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的订阅数据库的名称。  
   
-    -   为订阅服务器的名称 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>。  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的订阅服务器的名称。  
   
-    -   步骤 1 中创建的连接 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+    -   在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 创建的连接。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取其他订阅属性。 如果该方法返回 **false**，则确保订阅存在。  
   
 4.  使用下列方法之一在分发服务器中启动合并代理：  
   
-    -   调用 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 方法的实例上 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 步骤 2 中。 该方法异步启动合并代理，并在代理作业运行时立即将控制权返回给您的应用程序。 如果值为创建订阅后，您无法调用此方法 **false** 为 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>。  
+    -   在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 实例上调用 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 方法。 该方法异步启动合并代理，并在代理作业运行时立即将控制权返回给您的应用程序。 如果创建的订阅的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的值为 **false**，则不能调用该方法。  
   
-    -   获取实例的 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 类 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 属性，然后调用 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动合并代理，并且控件仍属于运行代理作业。 在执行同步期间，您可以处理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 在代理运行的事件。  
+    -   从 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 属性中获取 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 类的实例，然后调用 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 该方法可以同步启动合并代理，并且控件仍属于运行代理作业。 在同步执行期间，可以在代理仍旧运行的情况下处理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   
 ###  <a name="PShellExample"></a> 示例 (RMO)  
  该示例将推送订阅与事务发布进行同步，其中，代理使用代理作业进行异步启动。  
   
- [!code-csharp[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  
   
  [!code-vb[HowTo#rmo_vb_SyncTranPushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub_withjob)]  
   
  该示例将推送订阅与事务发布进行同步，其中，代理进行同步启动。  
   
- [!code-csharp[HowTo#rmo_SyncTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
+ [!code-cs[HowTo#rmo_SyncTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_synctranpushsub)]  
   
  [!code-vb[HowTo#rmo_vb_SyncTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_synctranpushsub)]  
   
  该示例将推送订阅与合并发布进行同步，其中，代理使用代理作业进行异步启动。  
   
- [!code-csharp[HowTo#rmo_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub_withjob)]  
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub_withjob)]  
   
  该示例将推送订阅与合并发布进行同步，其中，代理进行同步启动。  
   
- [!code-csharp[HowTo#rmo_SyncMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
+ [!code-cs[HowTo#rmo_SyncMergePushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_syncmergepushsub)]  
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [同步数据](../../relational-databases/replication/synchronize-data.md)   
- [复制安全最佳实践](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

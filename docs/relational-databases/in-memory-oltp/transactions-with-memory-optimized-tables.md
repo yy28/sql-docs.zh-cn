@@ -1,25 +1,29 @@
 ---
 title: "具有内存优化表的事务 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 具有内存优化表的事务
+# <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -27,13 +31,13 @@ caps.handback.revision: 15
   
 SQL Server 中的事务隔离级别以不同的方式应用到内存优化表与基于磁盘的表，并且基础机制不同。 了解差异可帮助程序员设计高吞吐量系统。 在所有情况下，事务完整性的目标是相同的。  
 
-有关特定于内存优化表上的事务的错误条件，请跳转到[冲突检测和重试逻辑](#confdetretry34ni)一节。
+有关特定于内存优化表上的事务的错误条件，请跳转到 [冲突检测和重试逻辑](#confdetretry34ni)一节。
   
 有关一般信息，请参见 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
   
   
-#### 本文的内容：  
+#### <a name="sections-in-this-article"></a>本文的内容：  
   
 - [悲观和乐观](#pessvoptim22ni)  
 - [事务启动模式](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ SQL Server 中的事务隔离级别以不同的方式应用到内存优化表与
   
 <a name="pessvoptim22ni"/>  
   
-## 悲观和乐观  
+## <a name="pessimistic-versus-optimistic"></a>悲观和乐观  
   
 出现功能差异是因为实现事务完整性的方法包括悲观与乐观。 内存优化表使用乐观方法：  
   
@@ -65,7 +69,7 @@ SQL Server 中的事务隔离级别以不同的方式应用到内存优化表与
   
 <a name="txninitmodes24ni"/>  
   
-## 事务启动模式  
+## <a name="transaction-initiation-modes"></a>事务启动模式  
   
 SQL Server 提供以下事务启动模式：  
   
@@ -81,7 +85,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="codeexamexpmode25ni"/>  
   
-### 使用显式模式的代码示例  
+### <a name="code-example-with-explicit-mode"></a>使用显式模式的代码示例  
   
 以下解释的 Transact-SQL 脚本使用：  
   
@@ -110,13 +114,13 @@ SQL Server 提供以下事务启动模式：
       
     COMMIT TRANSACTION;  
   
-请注意，通过使用数据库选项 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`，可以不需要 `WITH (SNAPSHOT)` 提示。 如果将此选项设置为 `ON`，访问内存优化表时使用的较低隔离级别将自动提升到 SNAPSHOT 隔离。  
+请注意，通过使用数据库选项 `WITH (SNAPSHOT)` ，可以不需要 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`提示。 如果将此选项设置为 `ON`，访问内存优化表时使用的较低隔离级别将自动提升到 SNAPSHOT 隔离。  
   
     ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
   
 <a name="rowver28ni"/>  
   
-## 行版本控制  
+## <a name="row-versioning"></a>行版本控制  
   
 内存优化表使用高度复杂的行版本控制系统，即使在最严格的隔离级别 SERIALIZABLE 上，该系统也能有效地实现乐观方法。 有关详细信息，请参阅 [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)（内存优化表简介）。  
   
@@ -124,9 +128,9 @@ SQL Server 提供以下事务启动模式：
   
 <a name="confdegreeiso30ni"/>  
   
-## 隔离级别 
+## <a name="isolation-levels"></a>隔离级别 
   
-下表按照从低到高的顺序列出了可能的事务隔离级别。 有关可能发生的冲突以及用于处理这些冲突的重试逻辑的详细信息，请参阅[冲突检测和重试逻辑](#confdetretry34ni)。 
+下表按照从低到高的顺序列出了可能的事务隔离级别。 有关可能发生的冲突以及用于处理这些冲突的重试逻辑的详细信息，请参阅 [冲突检测和重试逻辑](#confdetretry34ni)。 
   
 | 隔离级别 | 说明 |   
 | :-- | :-- |   
@@ -134,14 +138,14 @@ SQL Server 提供以下事务启动模式：
 | READ COMMITTED | 仅当自动提交模式生效时，内存优化表才支持此隔离级别。 如果通过使用 WITH (SNAPSHOT) 表提示，或通过将数据库设置 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设为 ON，将会话级别 TRANSACTION ISOLATION LEVEL 设置为 READ COMMITTED，则仍有可能在 SNAPSHOT 隔离下访问内存优化表。 <br/><br/> 请注意，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，则不允许使用相同的语句在 READ COMMITTED 隔离下访问内存优化表和基于磁盘的表。 |  
 | SNAPSHOT | 受内存优化表的支持。 <br/><br/> 对于内存优化表，SNAPSHOT 本质上是要求最低的事务隔离级别。 <br/><br/> SNAPSHOT 使用的系统资源比 REPEATABLE READ 或 SERIALIZABLE 要少。 |  
 | REPEATABLE READ | 受内存优化表的支持。 REPEATABLE READ 隔离提供以下保证：在提交时，任何并发事务均未更新此事务所读取的任何行。 <br/><br/> 由于使用的是乐观模型，系统并不会阻止并发事务更新此事务所读取的行。 相反，在提交时，此事务已验证是否违反了 REPEATABLE READ 隔离。 如果已违反，此事务将回滚，并且必须重试。 | 
-| SERIALIZABLE | 受内存优化表的支持。 <br/><br/> 之所以称为 *Serializable*，是因为该隔离非常严格，以致事务有点像是串行而不是并行运行的。 | 
+| SERIALIZABLE | 受内存优化表的支持。 <br/><br/> 之所以称为 *Serializable* ，是因为该隔离非常严格，以致事务有点像是串行而不是并行运行的。 | 
 
 
 
 
 <a name="txnphaslife32ni"/>  
   
-## 事务阶段和生存期  
+## <a name="transaction-phases-and-lifetime"></a>事务阶段和生存期  
   
 如果涉及到内存优化表，事务在各个阶段经历的生存期如下图所示。  
   
@@ -149,17 +153,17 @@ SQL Server 提供以下事务启动模式：
   
 下面是阶段的描述。  
   
-#### 常规处理：第 1 阶段（共 3 个）  
+#### <a name="regular-processing-phase-1-of-3"></a>常规处理：第 1 阶段（共 3 个）  
   
 - 此阶段包括执行所有查询及查询中的 DML 语句。  
 - 在此阶段，语句从事务的逻辑开始时间起将看到内存优化表的版本。  
   
-#### 验证：第 2 阶段（共 3 个）  
+#### <a name="validation-phase-2-of-3"></a>验证：第 2 阶段（共 3 个）  
   
 - 验证阶段首先分配结束时间，从而以逻辑方式将事务标记为完成。 这将使其他事务都可以看到该事务的所有更改，从而使这些事务依赖该事务，并且无法在此事务成功提交之前进行提交。 此外，不允许存在这种依赖关系的事务向客户端返回结果集，以确保客户端只看到已成功提交到数据库的数据。  
-- 此阶段包括可重复读验证和可序列化验证。 在可重复读验证中，它将检查该事务所读取的任何行从被读取以来是否有更新。 在可序列化验证中，它将检查是否向此事务所扫描的任何数据区域插入了任何行。 请注意，按[隔离级别和冲突](#confdegreeiso30ni)中的表所述，使用 SNAPSHOT 隔离时，可能会同时发生可重复读验证和可序列化验证，以验证唯一约束和外键约束的一致性。  
+- 此阶段包括可重复读验证和可序列化验证。 在可重复读验证中，它将检查该事务所读取的任何行从被读取以来是否有更新。 在可序列化验证中，它将检查是否向此事务所扫描的任何数据区域插入了任何行。 请注意，按 [隔离级别和冲突](#confdegreeiso30ni)中的表所述，使用 SNAPSHOT 隔离时，可能会同时发生可重复读验证和可序列化验证，以验证唯一约束和外键约束的一致性。  
   
-#### 提交处理：第 3 阶段（共 3 个）  
+#### <a name="commit-processing-phase-3-of-3"></a>提交处理：第 3 阶段（共 3 个）  
   
 - 在提交阶段，对持久表的更改会写入日志，随后日志会写入磁盘。 然后，控制权将返回给客户端。  
 - 在提交处理完成后，所有依赖事务都会收到它们可以提交的通知。  
@@ -168,7 +172,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="confdetretry34ni"/>  
   
-## 冲突检测和重试逻辑 
+## <a name="conflict-detection-and-retry-logic"></a>冲突检测和重试逻辑 
 
 有两种与事务相关的错误条件会导致事务失败并回滚。 在大多数情况下，一旦发生这种故障，就需要重试事务，这类似于发生死锁时的情况。
 - 并发事务之间的冲突。 这些是更新冲突和验证失败，可能是由于发生了事务隔离级别冲突或约束冲突。
@@ -179,13 +183,13 @@ SQL Server 提供以下事务启动模式：
 | 错误代码 | 说明 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 尝试更新自从启动现有事务以来，已在其他事务中更新的行。 | 如果两个并发事务试图同时更新或删除同一行，则会发生此错误条件。 其中一个事务会收到此错误消息，并需要重试。 <br/><br/>  | 
-| **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突通常很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的[这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)。 |  
+| **41305**| 可重复读验证失败。 此事务从内存优化表中读取的行已由另一个在此事务提交前提交的事务更新。 | 如果使用 REPEATABLE READ 或 SERIALIZABLE 隔离，并且某个并发事务的操作导致外键约束冲突，则会发生此错误。 <br/><br/>这种并发的外键约束冲突通常很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误。 因此，建议始终在内存优化表中的外键列上创建索引。 <br/><br/> 有关外键冲突导致的验证失败的更多详细注意事项，请参阅 SQL Server 客户咨询团队发布的 [这篇博客文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化验证失败。 将新行插入到了现有事务之前已扫描的区域。 我们将此称为虚拟行。 | 如果使用 SERIALIZABLE 隔离，并且某个并发事务的操作导致主键约束、唯一约束或外键约束冲突，则会发生此错误。 <br/><br/> 这种并发的约束冲突通常很少见，一般表示应用程序逻辑或数据输入出现了问题。 但是，如果外键约束所涉及的列上没有索引，也会发生此错误，这一点与可重复读验证失败相似。 |  
 | **41301** | 依赖项失败：依赖另一个事务，但该事务随后无法提交。 | 此事务 (Tx1) 在另一个事务 (Tx2) 处于其验证或提交处理阶段时，通过读取该事务 (Tx2) 写入的数据依赖于 Tx2。 Tx2 随后无法提交。 Tx2 无法提交最常见的原因是可重复读 (41305) 和可序列化 (41325) 验证失败；不太常见的原因是日志 IO 失败。 |
-| **41839** | 事务超出了最大提交依赖项数目。 | 给定事务 (Tx1) 可以依赖的事务数具有限制 — 这些是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制 — 这些是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，这可能是缺少索引的征兆。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 使用跟踪标志 **9926** 可解除提交依赖项数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
+| **41839** | 事务超出了最大提交依赖项数目。 | 给定事务 (Tx1) 可以依赖的事务数具有限制 — 这些是传出依赖项。 此外，可以依赖给定事务 (Tx1) 的事务数也有限制 — 这些是传入依赖项。 两个限制均为 8。 <br/><br/> 导致此失败最常见的情况是有大量读取事务正在访问由单个写入事务写入的数据。 如果所有读取事务都在对相同数据执行大范围扫描，并且写入事务的验证或提交处理时间很长，例如，写入事务在 SERIALIZABLE 隔离下执行大范围扫描（延长了验证阶段的持续时间）或事务日志放置在慢速日志 IO 设备上（延长了提交处理的持续时间），则发生这种情况的可能性会增加。 如果读取事务正在执行大范围扫描，但只需访问几行数据，这可能是缺少索引的征兆。 同样，如果写入事务正在 SERIALIZABLE 隔离下执行大范围扫描，但只需访问几行数据，这也是缺少索引的征兆。 <br/><br/> 使用跟踪标志 **9926**可解除提交依赖项数量限制。 只有在确认不缺少索引后仍发生此错误条件时，才使用此跟踪标志，因为它可能会掩盖上述情况中的这些问题。 另需注意的是，复杂的依赖关系图会导致系统效率低下，这里的复杂是指每个事务都有大量传入和传出依赖项，并且每个事务都有许多层依赖关系。  |
  
   
-### 重试逻辑 
+### <a name="retry-logic"></a>重试逻辑 
 
 当事务由于上述任何条件失败时，应重试该事务。
   
@@ -193,7 +197,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### 重试 T-SQL 代码示例  
+#### <a name="retry-t-sql-code-example"></a>重试 T-SQL 代码示例  
   
 使用 T-SQL 的服务器端重试逻辑只能用于不向客户端返回结果集的事务，因为重试可能会意外导致向客户端返回额外的结果集。  
   
@@ -254,7 +258,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="crossconttxn38ni"/>  
   
-## 跨容器事务  
+## <a name="cross-container-transaction"></a>跨容器事务  
   
   
 如果事务符合以下条件，可将其称之为跨容器事务：  
@@ -278,7 +282,7 @@ SQL Server 提供以下事务启动模式：
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ SQL Server 提供以下事务启动模式：
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## 限制  
+## <a name="limitations"></a>限制  
   
   
 - 内存优化表不支持跨数据库事务。 如果某个事务访问内存优化表，该事务无法访问其他任何数据库，但以下数据库除外：  
@@ -314,7 +318,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="natcompstorprocs42ni"/>  
   
-## 本机编译的存储过程  
+## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
   
 - 在本机过程中，ATOMIC 块必须声明整个块的事务隔离级别，例如：  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
@@ -325,7 +329,7 @@ SQL Server 提供以下事务启动模式：
   
 <a name="othertxnlinks44ni"/>  
   
-## 其他事务链接  
+## <a name="other-transaction-links"></a>其他事务链接  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -336,23 +340,23 @@ SQL Server 提供以下事务启动模式：
 - [控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)   
   
 \<!--  
-Link Guids:  
+链接 Guid：  
 016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "内存优化表简介"  
   
 a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
   
 e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "控制事务持续性"  
   
 Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+See also XMetal articles: dn133169.aspx , "事务生存期"  
   
-Transactions with In-Memory Tables and Procedures  
+内存中表和过程的事务  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
+Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "了解内存优化表上的事务"  
   
 GeneMi , 2016-03-28 11:40am  
 -->  
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

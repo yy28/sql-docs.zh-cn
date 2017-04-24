@@ -1,35 +1,39 @@
 ---
 title: "指定参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "参数 [SQL Server], 存储过程"
-  - "存储过程 [SQL Server], 参数"
-  - "输出参数 [SQL Server]"
-  - "输入参数 [SQL Server]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [SQL Server], stored procedures
+- stored procedures [SQL Server], parameters
+- output parameters [SQL Server]
+- input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定参数
+# <a name="specify-parameters"></a>指定参数
   通过指定过程参数，调用程序可以将值传递给过程的主体。 在执行过程期间，这些值可以用于各种目的。 如果将参数标记为 OUTPUT 参数，则过程参数还可以将值返回给调用程序。  
   
  一个过程最多可以有 2100 个参数，每个参数都有名称、数据类型和方向。 还可以为参数指定默认值（可选）。  
   
  下面的章节提供有关将值传递给参数以及在过程调用期间如何使用每个参数属性的信息。  
   
-## 将值传递给参数  
- 使用过程调用提供的参数值必须为常量或变量，不能将函数名称作为参数值。 变量可以是用户定义变量或系统变量，如 @@spid。  
+## <a name="passing-values-into-parameters"></a>将值传递给参数  
+ 使用过程调用提供的参数值必须为常量或变量，不能将函数名称作为参数值。 变量可以是用户定义变量或系统变量，例如 @@spid。  
   
  下列示例演示如何将参数值传递给过程 `uspGetWhereUsedProductID`。 它们说明了如何将参数作为常量和变量进行传递，以及如何使用变量传递函数值。  
   
@@ -56,21 +60,21 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-## 指定参数名称  
+## <a name="specifying-parameter-names"></a>指定参数名称  
  创建过程并声明参数名称时，参数名称必须以单个 @ 字符开头，并且在过程范围内必须唯一。  
   
- 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 **my_proc** 应有三个参数，分别命名为 **@first**、**@second** 和 **@third**，则可以将传递到该过程的值赋给参数名称，例如： `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 **my_proc** 应有三个参数，分别命名为 **@first**、 **@second**和 **@third**，则可以将传递到该过程的值赋给参数名称，例如： `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  如果以 **@parameter =***value* 格式提供一个参数值，必须按此格式提供所有的后续参数。 如果未按格式 **@parameter =***value* 传递参数值，必须按 CREATE PROCEDURE 语句中所列的参数顺序（从左到右）提供值。  
+>  如果以 **@parameter =***value* 格式提供了一个参数值，则必须按此格式提供所有的后续参数。 如果未以 **@parameter =***value* 格式传递参数值，则必须按 CREATE PROCEDURE 语句中所列的参数顺序（从左到右）提供值。  
   
 > [!WARNING]  
->  任何采用 **@parameter =***value* 格式传入的拼写有错的参数将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误并阻止过程执行。  
+>  任何采用 **@parameter =***value* 格式传入的拼写有错的参数都将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成错误并阻止过程执行。  
   
-## 指定参数数据类型  
+## <a name="specifying-parameter-data-types"></a>指定参数数据类型  
  在 CREATE PROCEDURE 语句中声明时，必须使用数据类型定义参数。 参数的数据类型确定了在调用过程时该参数所接受值的类型和范围。 例如，如果用 **tinyint** 数据类型定义参数，则在传入该参数时只接受 0 到 255 之间的数值。 如果用与数据类型不兼容的值执行过程，将返回一个错误。  
   
-## 指定参数的默认值  
+## <a name="specifying-parameter-default-values"></a>指定参数的默认值  
  如果在声明参数时指定了默认值，则参数被视为可选的。 在过程调用中不需要为可选参数提供值。  
   
  在以下情况下使用参数的默认值：  
@@ -127,7 +131,7 @@ GO
   
  虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 但是，只要包括了第 5 个参数就不能跳过第 4 个参数，除非采用 **@parameter =***value* 格式提供参数。  
   
-## 指定参数方向  
+## <a name="specifying-parameter-direction"></a>指定参数方向  
  参数的方向可以为输入（表明将值传递给过程的主体），也可以为输出（表明过程将值返回给调用程序）。 默认为输入参数。  
   
  若要指定输出参数，必须在 CREATE PROCEDURE 语句的参数定义中指定 OUTPUT 关键字。 当过程退出时，它向调用程序返回输出参数的当前值。 执行过程时，调用程序也必须使用 OUTPUT 关键字，才能将该参数值保存到可以在调用程序中使用的变量中。  
@@ -163,7 +167,7 @@ GO
   
 ```  
   
- 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数 **@cost** 和 **@compareprices** 用于流控制语言，以便在“消息”窗口中返回消息。  
+ 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数 **@cost** 和 **@compareprices** 与流控制语言一起使用，用以在“消息”窗口中返回消息。  
   
 > [!NOTE]  
 >  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 但是，数据类型和参数定位必须匹配（除非使用 **@listprice=** *variable*）。  
@@ -201,7 +205,7 @@ Road-750 Black, 52                                 539.99
 These items can be purchased for less than $700.00.  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
