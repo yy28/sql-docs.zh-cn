@@ -1,30 +1,34 @@
 ---
 title: "删除数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库删除 [SQL Server], SQL Server Management Studio"
-  - "删除数据库"
-  - "删除数据库"
-  - "删除数据库"
-  - "数据库 [SQL Server], 删除"
-  - "数据库删除 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database removal [SQL Server], SQL Server Management Studio
+- removing databases
+- deleting databases
+- dropping databases
+- databases [SQL Server], dropping
+- database removal [SQL Server]
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17de8249b2c8117114f3bc63d9709f3b94ff048b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除数据库
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除用户定义的数据库。  
+# <a name="delete-a-database"></a>删除数据库
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除用户定义的数据库。  
   
  **本主题内容**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 31
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在删除数据库之后](#FollowUp)  
+-   **Follow Up:**  [After deleting a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -71,17 +75,17 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除数据库  
+#### <a name="to-delete-a-database"></a>删除数据库  
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，右键单击要删除的数据库，再单击“删除”。  
+2.  展开 **“数据库”**，右键单击要删除的数据库，再单击 **“删除”**。  
   
 3.  确认选择了正确数据库，然后单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除数据库  
+#### <a name="to-delete-a-database"></a>删除数据库  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -99,7 +103,7 @@ GO
 ##  <a name="FollowUp"></a> 跟进：在删除数据库之后  
  备份 **master** 数据库。 如果必须还原 **master** ，则自上次备份 **master** 之后删除的所有数据库都将仍在系统目录视图中具有引用，并且可能会导致出现错误消息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
   

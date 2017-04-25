@@ -1,38 +1,42 @@
 ---
 title: "数据库引擎查询编辑器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tsqlquery.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "查询编辑器 [数据库引擎]"
-  - "Transact-SQL 编辑器, 请参阅查询编辑器 [数据库引擎]"
-  - "数据库引擎查询编辑器, 请参阅查询编辑器 [数据库引擎]"
-  - "查询编辑器 [数据库引擎], 工具栏"
-  - "编辑器 [SQL Server Management Studio], 数据库引擎查询编辑器"
-  - "查询编辑器 [数据库引擎], 功能"
-  - "SQL Server Management Studio [SQL Server], 数据库引擎查询编辑器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Query Editor [Database Engine]
+- Transact-SQL Editor See Query Editor [Database Engine]
+- Database Engine Query Editor See Query Editor [Database Engine]
+- Query Editor [Database Engine], Toolbar
+- editors [SQL Server Management Studio], Database Engine Query Editor
+- Query Editor [Database Engine], Features
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库引擎查询编辑器 (SQL Server Management Studio)
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>数据库引擎查询编辑器 (SQL Server Management Studio)
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器可以创建和运行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的脚本。 此编辑器还支持包含 **sqlcmd** 命令的正在运行的脚本。  
   
-## Transact-SQL F1 帮助  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器支持当您选择 F1 时将您链接到特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的参考主题。 为此，突出显示 Transact-SQL 语句的名称，然后选择 F1。 接着，帮助搜索引擎将搜索具有与突出显示的字符串匹配的 F1 帮助属性的主题。  
+## <a name="transact-sql-f1-help"></a>Transact-SQL F1 帮助  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持当您选择 F1 时将您链接到特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的参考主题。 为此，突出显示 Transact-SQL 语句的名称，然后选择 F1。 接着，帮助搜索引擎将搜索具有与突出显示的字符串匹配的 F1 帮助属性的主题。  
   
  如果帮助搜索引擎找不到具有与突出显示的字符串完全匹配的 F1 帮助关键字的主题，则无法显示该主题。 在这种情况下，有两种方法可以找到所需的帮助：  
   
@@ -46,13 +50,13 @@ caps.handback.revision: 47
   
     -   系统存储过程表或视图的名称，如 sys.data_spaces 或 sp_tableoption。  
   
-## 使用数据库引擎查询编辑器  
+## <a name="working-with-the-database-engine-query-editor"></a>使用数据库引擎查询编辑器  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器是在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中实现的四个编辑器之一。 对于在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中实现的功能以及使用此编辑器可以执行的主要任务的说明，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
-## SQL 编辑器工具栏  
+## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器打开时，SQL 编辑器工具栏上显示以下按钮：  
   
- **Connect**  
+ **连接**  
  打开“连接到服务器”对话框。 此对话框用于建立与服务器的连接。  
   
  **断开连接**  
@@ -86,7 +90,7 @@ caps.handback.revision: 47
  打开“查询选项”对话框。 此对话框用于配置查询执行和查询结果的默认选项。  
   
  **IntelliSense 已启用**  
- 指定 IntelliSense 功能在[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器中是否可用。  
+ 指定 IntelliSense 功能在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中是否可用。  
   
  **包含实际的执行计划**  
  执行查询，返回查询结果和用于查询的执行计划。 这些内容在 **“执行计划”** 窗口中显示为图形查询计划。  
@@ -120,17 +124,17 @@ caps.handback.revision: 47
   
  通过依次选择 **“视图”** 菜单、 **“工具栏”**和 **“SQL 编辑器”**，还可添加 SQL 编辑器工具栏。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口时添加 SQL 编辑器工具栏，则所有按钮都不可用。  
   
-## SQL 编辑器工具栏  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口打开后，可以通过以下方法添加调试工具栏：在 **“视图”** 菜单上选择 **“工具栏”**，然后选择 **“调试”**。 如果在没有打开任何[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口的情况下添加调试工具栏，则所有按钮都不可用。  
+## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口打开后，可以通过以下方法添加调试工具栏：在 **“视图”** 菜单上选择 **“工具栏”**，然后选择 **“调试”**。 如果在没有打开任何 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的情况下添加调试工具栏，则所有按钮都不可用。  
   
  **Continue**  
- 运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口中的代码，直到遇到断点。  
+ 运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中的代码，直到遇到断点。  
   
  **全部中断**  
  将调试器设置为发生中断时中断调试器附加到的所有进程。  
   
  **停止调试**  
- 使选定的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口脱离调试模式，并还原标准执行模式。  
+ 使选定的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口脱离调试模式，并还原标准执行模式。  
   
  **显示下一语句**  
  将光标移动到要执行的下一个语句。  
@@ -147,7 +151,7 @@ caps.handback.revision: 47
  **Windows**  
  打开“断点”窗口或“即时”窗口。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "列存储索引碎片整理 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列存储索引 - 碎片整理 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列存储索引碎片整理
+# <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   对列存储索引进行碎片整理的任务。  
   
-## 使用 ALTER INDEX REORGANIZE 对列存储索引进行在线碎片整理  
+## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 对列存储索引进行在线碎片整理  
  适用于：SQL Server（从 2016 版开始）、Azure SQL Database  
   
   加载任何类型的数据之后，增量存储中会有多个较小的行组。 可以使用 ALTER INDEX REORGANIZE 将所有行组强制转到列存储中，然后将行组合并成具有更多行的较少行组。  重新组织操作还将删除已从列存储中删除的行。  
@@ -33,12 +37,12 @@ caps.handback.revision: 15
   
 -   [列存储索引和行组的合并策略](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-### 进行重新组织的建议  
+### <a name="recommendations-for-reorganizing"></a>进行重新组织的建议  
  在执行一次或多次数据加载后，为了尽快优化查询性能，需要重新组织列存储索引。 重新组织最初需要额外的 CPU 资源来压缩数据，这可能降低整体系统性能。 但是，压缩数据后，可以提高查询性能。  
   
  使用 [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) 中的示例来计算碎片。 这可帮助你确定它是否值得执行 REORGANIZE 操作。  
   
-### 示例：重新组织的工作原理  
+### <a name="example-how-reorganizing-works"></a>示例：重新组织的工作原理  
  此示例演示 ALTER INDEX REORGANIZE 如何将所有增量存储行组强制转到列存储中，然后合并行组。  
   
 1.  运行此 Transact SQL 以创建包含 300,000 行的临时表。 我们将使用它来将行批量加载到列存储索引中。  
@@ -147,7 +151,7 @@ caps.handback.revision: 15
   
      在此示例中，结果显示 8 个 OPEN 行组，每个包含 37,500 行。 OPEN 行组的数目取决于 max_degree_of_parallelism 设置。  
   
-     ![OPEN rowgroups](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN rowgroups")  
+     ![OPEN 行组](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN 行组")  
   
 5.  使用具有 COMPRESS_ALL_ROW_GROUPS 选项的 ALTER INDEX REORGANIZE 将所有行组强制压缩到列存储中。  
   
@@ -165,7 +169,7 @@ caps.handback.revision: 15
   
      结果显示 8 个 COMPRESSED 行组和 8 个 TOMBSTONE 行组。 无论行组的大小如何，都压缩到列存储中。 TOMBSTONE 行组将由系统删除。  
   
-     ![TOMBSTONE and COMPRESSED rowgroups](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE and COMPRESSED rowgroups")  
+     ![TOMBSTONE 和 COMPRESSED 行组](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE 和 COMPRESSED 行组")  
   
 6.  就查询性能而言，将小行组合并在一起会更好。  ALTER INDEX REORGANIZE 将 COMPRESSED 行组合并在一起。 将增量行组压缩到列存储中后，再次运行 ALTER INDEX REORGANIZE 以合并小的 COMPRESSED 行组。 这次不需要 COMPRESS_ALL_ROW_GROUPS 选项。  
   
@@ -182,21 +186,21 @@ caps.handback.revision: 15
   
      结果显示 8 个 COMPRESSED 行组合并成一个 COMPRESSED 行组。  
   
-     ![Combined rowgroups](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Combined rowgroups")  
+     ![合并行组](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "合并行组")  
   
 ##  <a name="rebuild"></a> 使用 ALTER INDEX REBUILD 对列存储索引进行离线碎片整理  
  在 SQL Server 2016 及更高版本中，通常不需要重新生成列存储索引，因为 REORGANIZE 以在线操作形式在后台执行重要的重新生成。  
   
  重新生成列存储索引会删除碎片，并将所有行移到列存储中。 使用 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 执行完全重新生成现有聚集列存储索引。 此外，你也可以使用 ALTER INDEX... REBUILD，用于重新生成特定分区。  
   
-### 重新生成过程  
+### <a name="rebuild-process"></a>重新生成过程  
  要重新生成列存储索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
 1.  在重新生成进行时获取表或分区上的排他锁。  数据是“离线”的，在重新生成期间不可用，即使使用 NOLOCK、RCSI 或 SI 也是如此。  
   
 2.  将所有数据重新压缩到列存储中。 在进行重新生成时存在列存储索引的两个副本。 在重新生成完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除原始列存储索引。  
   
-### 有关重新生成列存储索引的建议  
+### <a name="recommendations-for-rebuilding-a-columnstore-index"></a>有关重新生成列存储索引的建议  
  重新生成列存储索引适用于删除碎片，并且适用于将所有行移到列存储中。 请考虑以下建议：  
   
 1.  重新生成分区而不是整个表。  
@@ -213,13 +217,13 @@ caps.handback.revision: 15
   
     -   这可确保所有数据都存储于列存储中。 当并发进程在同一时间将少于 100K 行的行组加载到同一分区时，该分区可以得到多个增量存储。 重新生成会将所有增量存储行都移到列存储中。  
   
-## 另请参阅  
- [列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列存储索引数据加载](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [列存储索引版本的功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [针对数据仓库的列存储索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [列存储索引维护任务](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+## <a name="see-also"></a>另请参阅        
+[列存储索引 - 新增功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+[列存储索引 - 查询性能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+[开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+   
   
   
+

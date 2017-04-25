@@ -1,32 +1,36 @@
 ---
 title: "创建嵌套触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "递归 DML 触发器 [SQL Server]"
-  - "DML 触发器, 嵌套"
-  - "触发器 [SQL Server], 嵌套"
-  - "直接递归 [SQL Server]"
-  - "触发器 [SQL Server], 递归"
-  - "DML 触发器, 递归"
-  - "RECURSIVE_TRIGGERS 选项"
-  - "间接递归 [SQL Server]"
-  - "嵌套 DML 触发器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建嵌套触发器
+# <a name="create-nested-triggers"></a>创建嵌套触发器
   当触发器执行启动其他触发器的操作时，DML 和 DDL 触发器都是嵌套触发器。 这些操作都可以启动其他触发器等。 DML 触发器和 DDL 触发器最多可以嵌套 32 层。 可以通过 **nested triggers** 服务器配置选项来控制是否可以嵌套 AFTER 触发器。 但不管此设置是什么，都可以嵌套 INSTEAD OF 触发器（只有 DML 触发器可以为 INSTEAD OF 触发器）。  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  由于触发器在事务中执行，如果在一组嵌套触发器的任意层中发生错误，则整个事务都将取消，且所有的数据修改都将回滚。 在触发器中包含 PRINT 语句可以确定错误的发生位置。  
   
-## 递归触发器  
+## <a name="recursive-triggers"></a>递归触发器  
  AFTER 触发器不会以递归方式自行调用，除非设置了 RECURSIVE_TRIGGERS 数据库选项。  
   
  有两种不同的递归方式：  
@@ -67,7 +71,7 @@ AS
   
  当 RECURSIVE_TRIGGERS 数据库选项设置为 OFF 时，仅阻止 AFTER 触发器的直接递归。 若要禁用 AFTER 触发器的间接递归，还必须将 **nested triggers** 服务器选项设置为 **0**。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面的示例中说明使用递归触发器来解决自引用关系（也称为传递闭包）。 例如，表 `emp_mgr` 定义了以下内容：  
   
 -   一个公司中的雇员 (`emp`)。  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **设置 RECURSIVE_TRIGGERS 数据库选项**  
   
--   [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [配置 nested triggers 服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

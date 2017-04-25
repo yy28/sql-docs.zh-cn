@@ -1,31 +1,35 @@
 ---
 title: "创建非聚集索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引创建 [SQL Server], 非聚集索引"
-  - "非聚集索引 [SQL Server], 创建"
-  - "非聚集索引 [SQL Server], UNIQUE 约束"
-  - "索引 [SQL Server], 非聚集"
-  - "非聚集索引 [SQL Server], PRIMARY KEY 约束"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建非聚集索引
+# <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将[!INCLUDE[ssDE](../../includes/ssde-md.md)]指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
   
  **本主题内容**  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 41
   
 -   **索引视图的非聚集索引**  
   
-     对视图创建唯一的聚集索引后，便可以创建非聚集索引。 有关详细信息，请参阅[创建索引视图](../../relational-databases/views/create-indexed-views.md)。  
+     对视图创建唯一的聚集索引后，便可以创建非聚集索引。 有关详细信息，请参阅 [创建索引视图](../../relational-databases/views/create-indexed-views.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 41
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用表设计器创建非聚集索引  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>使用表设计器创建非聚集索引  
   
 1.  在“对象资源管理器”中，展开其中包含您要创建非聚集索引的表的数据库。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 41
   
 9. 在“文件”菜单上，单击“保存”以保存 *table_name*。  
   
-#### 使用对象资源管理器创建非聚集索引  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
 1.  在“对象资源管理器”中，展开其中包含您要创建非聚集索引的表的数据库。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 对表创建非聚集索引  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>对表创建非聚集索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

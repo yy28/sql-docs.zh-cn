@@ -1,29 +1,33 @@
 ---
 title: "Broker 事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件类, Broker 事件类别"
-  - "Broker 事件类别 [SQL Server]"
-  - "事件类 [SQL Server], Broker 事件类别"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Broker event category
+- Broker event category [SQL Server]
+- event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f0c5c0459128bde182665d39f6907bfe057db97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker 事件类别
+# <a name="broker-event-category"></a>Broker 事件类别
   **Broker** 事件类别包含一般的 Service Broker 事件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -38,9 +42,9 @@ caps.handback.revision: 17
 |[Broker:Message Drop 事件类](../../relational-databases/event-classes/broker-message-drop-event-class.md)|当 Service Broker 无法保留已收到的应传递给此实例中某个服务的消息时生成的事件。|  
 |[Broker:Remote Message Ack 事件类](../../relational-databases/event-classes/broker-remote-message-ack-event-class.md)|Service Broker 发送或接收消息确认时生成的事件。|  
   
- 还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](../../relational-databases/event-classes/audit-broker-login-event-class.md)和 [Audit Broker Conversation 事件类](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)。  
+ 还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](../../relational-databases/event-classes/audit-broker-login-event-class.md) 和 [Audit Broker Conversation 事件类](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“安全审核”事件类别](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

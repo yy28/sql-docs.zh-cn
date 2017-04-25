@@ -1,22 +1,26 @@
 ---
 title: "比较基于磁盘的表存储与内存优化的表存储 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1d68c71f727aefd0a95bb1e1c95d0a3fe77edb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 比较基于磁盘的表存储与内存优化的表存储
+# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>比较基于磁盘的表存储与内存优化的表存储
   
   
 |类别|基于磁盘的表|持久内存优化表|  
@@ -27,7 +31,7 @@ caps.handback.revision: 5
 |DML 操作|第一步是查找页，然后将其加载到缓冲池中。<br /><br /> Insert<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会按照聚集索引时的行排序在页上插入行。<br /><br /> 删除<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在页上找到要删除的行，然后将其标记为已删除。<br /><br /> Update<br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在页上查找行。 对于非键列，将会就地进行更新。 键列更新是通过删除和插入操作完成的。<br /><br /> DML 操作完成后，受影响的页会作为缓冲池策略、检查点或事务提交的一部分刷新到磁盘中，以实现具有最少日志记录的操作。 对页进行的读/写操作均导致不必要的 I/O。|对于内存优化表，由于数据驻留在内存中，因此 DML 操作直接在内存中进行。 有一个后台线程读取内存优化表的日志记录，然后这些记录在数据和差异文件中持久化。 一个更新会生成新的行版本。 但是，会将更新记录为先删除再插入。|  
 |数据碎片|数据操作碎片数据会导致部分填充的页以及逻辑上连续但磁盘上不连续的页。 这会降低数据访问的性能，需要对数据进行碎片整理。|内存优化数据不存储在页中，因此没有数据碎片。 但是，随着行的更新和删除，需要压缩数据和差异文件。 此任务是由后台 MERGE 线程基于合并策略完成的。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

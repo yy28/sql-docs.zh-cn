@@ -1,25 +1,29 @@
 ---
 title: "删除工作负荷组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作负荷组 [SQL Server], 删除"
-  - "资源调控器, 工作负荷组删除"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除工作负荷组
+# <a name="delete-a-workload-group"></a>删除工作负荷组
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
   
 -   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
@@ -80,8 +84,8 @@ caps.handback.revision: 19
   
 3.  运行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 语句。  
   
-### 示例 (Transact-SQL)  
- 下面的示例删除名为 `groupAdhoc` 的工作负荷组。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 下面的示例删除名为 `groupAdhoc`的工作负荷组。  
   
 ```  
 DROP WORKLOAD GROUP groupAdhoc;  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   

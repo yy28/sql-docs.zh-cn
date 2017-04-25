@@ -1,50 +1,54 @@
 ---
 title: "类型化的 XML 与非类型化的 XML 的比较 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml 数据类型 [SQL Server], 变量"
-  - "参数 [SQL Server 中的 XML]"
-  - "方面 [SQL Server 中的 XML]"
-  - "xml 数据类型 [SQL Server], 列"
-  - "非类型化的 XML"
-  - "xml 数据类型 [SQL Server], 类型化的 xml"
-  - "XML [SQL Server], 类型化的"
-  - "变量 [XML in SQL Server], 创建"
-  - "xml 数据类型 [SQL Server], 非类型化的 xml"
-  - "列 [SQL Server 中的 XML], 创建"
-  - "类型化的 XML"
-  - "文档模式处理 [SQL Server]"
-  - "XML [SQL Server], 非类型化的"
-  - "xml 数据类型 [SQL Server], 参数"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- parameters [XML in SQL Server]
+- facets [XML in SQL Server]
+- xml data type [SQL Server], columns
+- untyped XML
+- xml data type [SQL Server], typed xml
+- XML [SQL Server], typed
+- variables [XML in SQL Server], creating
+- xml data type [SQL Server], untyped xml
+- columns [XML in SQL Server], creating
+- typed XML
+- document mode processing [SQL Server]
+- XML [SQL Server], untyped
+- xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27533bcc63a8df64597db4529b16a26f1fb5a009
+ms.lasthandoff: 04/11/2017
+
 ---
-# 类型化的 XML 与非类型化的 XML 的比较
+# <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
   您可以创建 **xml** 类型的变量、参数和列。 您也可以将 XML 架构的集合与 **xml** 类型的变量、参数或列关联起来。 在这种情况下， **xml** 数据类型实例称作“类型化” 的实例。 否则，XML 实例称作“非类型化” 的实例。  
   
-## 格式正确的 XML 和 xml 数据类型  
+## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
  **xml** 数据类型可实现 ISO 标准的 **xml** 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
   
-## XML 架构  
+## <a name="xml-schemas"></a>XML 架构  
  XML 架构提供以下信息：  
   
 -   **验证约束。** 每当向类型化的 xml 实例赋值或修改这样的实例时，SQL Server 都将验证该实例。  
   
 -   **数据类型信息。** 架构提供有关 **xml** 数据类型实例中属性和元素的类型的信息。 与非类型化的 **xml**可以提供的操作语义相比，类型信息为实例中包含的值提供了更精确的操作语义。 例如，可以对十进制值执行十进制算术运算，而不能对字符串值执行十进制算术运算。 因此，与非类型化的 XML 相比，可以对类型化的 XML 存储进行更大程度的压缩。  
   
-## 选择类型化或非类型化的 XML  
+## <a name="choosing-typed-or-untyped-xml"></a>选择类型化或非类型化的 XML  
  在下列情况下，使用非类型化的 **xml** 数据类型：  
   
 -   您没有对应于您的 XML 数据的架构。  
@@ -61,19 +65,19 @@ caps.handback.revision: 57
   
  类型化的 XML 列、参数和变量可以存储 XML 文档或内容。 但是，在声明时必须使用标志指定是存储文档还是存储内容。 此外，必须提供 XML 架构集合。 如果每个 XML 实例都刚好有一个顶级元素，请指定 DOCUMENT。 否则，请使用 CONTENT。 查询编译器在查询编译期间的类型检查过程中使用 DOCUMENT 标志来推断单独的顶级元素。  
   
-## 创建类型化的 XML  
+## <a name="creating-typed-xml"></a>创建类型化的 XML  
  在创建类型化的 **xml** 变量、参数或列之前，必须先使用 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 注册 XML 架构集合。 接下来，您就可以将 XML 架构集合与 **xml** 数据类型的变量、参数或列关联起来。  
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
-### 示例：将架构集合与 xml 类型变量关联起来  
- 下面的示例创建一个 **xml** 类型变量并将架构集合与其关联起来。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
+ 下面的示例创建一个**xml** 类型变量并将架构集合与其关联起来。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### 示例：为 xml 类型列指定架构  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>示例：为 xml 类型列指定架构  
  下面的示例创建一个包含 **xml** 类型列的表，并为该列指定了一个架构：  
   
 ```  
@@ -82,7 +86,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### 示例：将 xml 类型参数传递给存储过程  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>示例：将 xml 类型参数传递给存储过程  
  下面的示例将 **xml** 类型参数传递给存储过程，并为该变量指定一个架构：  
   
 ```  
@@ -100,11 +104,11 @@ AS
   
 -   可以从类型化的 **xml** 数据类型转换到非类型化的 **xml** 数据类型，反之亦然。  
   
- 有关在 SQL Server 中生成 XML 的其他方法的详细信息，请参阅[创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。 生成 XML 后，可以将其赋给 **xml** 数据类型变量，也可以将其存储在 **xml** 类型列中以进行其他处理。  
+ 有关在 SQL Server 中生成 XML 的其他方法的详细信息，请参阅 [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)。 生成 XML 后，可以将其赋给 **xml** 数据类型变量，也可以将其存储在 **xml** 类型列中以进行其他处理。  
   
- 在数据类型层次结构中，**xml** 数据类型显示在 **sql_variant** 和用户定义类型之下，但显示在所有内置类型之上。  
+ 在数据类型层次结构中， **xml** 数据类型显示在 **sql_variant** 和用户定义类型之下，但显示在所有内置类型之上。  
   
-### 示例：指定用于约束类型化的 xml 列的方面  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>示例：指定用于约束类型化的 xml 列的方面  
  对于类型化的 **xml** 列，可以将列约束为仅允许存储在其中的每个实例的单独的顶层元素。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
   
 ```  
@@ -134,13 +138,13 @@ GO -- Default
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
 ```  
   
-## 文档类型定义 (DTD)  
+## <a name="document-type-definition-dtd"></a>文档类型定义 (DTD)  
  可以使用 XML 架构类型化 **xml** 数据类型列、变量和参数，但不可使用 DTD 类型化它们。 但是，内联 DTD 既可用于非类型化的 XML，也可用于类型化的 XML，以便提供默认值，并将实体引用替换为其扩展形式。  
   
  可以通过使用第三方工具将 DTD 转换为 XML 架构文档，然后将 XML 架构加载到数据库中。  
   
-## 从 SQL Server 2005 升级类型化 XML  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 对 XML 架构支持（包括对宽松验证的支持）进行了多项扩展，改进了对 **xs:date**、 **xs:time** 和 **xs:dateTime** 实例数据的处理，并新增了对列表和联合类型的支持。 大多数情况下，这些更改不会影响升级过程。 但是，如果你使用了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中允许使用 **xs:date**、**xs:time** 或 ** xs:dateTime**（或任何子类型）类型的值的 XML 架构集合，则在将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行以下升级步骤：  
+## <a name="upgrading-typed-xml-from-sql-server-2005"></a>从 SQL Server 2005 升级类型化 XML  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 对 XML 架构支持（包括对宽松验证的支持）进行了多项扩展，改进了对 **xs:date**、 **xs:time** 和 **xs:dateTime** 实例数据的处理，并新增了对列表和联合类型的支持。 大多数情况下，这些更改不会影响升级过程。 但是，如果你使用了 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中允许使用 **xs:date**、 **xs:time**或 **xs:dateTime** （或任何子类型）类型的值的 XML 架构集合，则在将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时将执行以下升级步骤：  
   
 1.  对于每个 XML 列，如果该列是使用包含特定元素或属性（这些元素或属性被类型化为 **xs:anyType**、 **xs:anySimpleType**、 **xs:date** 或其任何子类型、 **xs:time** 或其任何子类型、 **xs:dateTime** 或其任何子类型，或者属于包含上述任何类型的联合类型或列表类型）的 XML 架构集合进行类型化的，将会执行以下操作：  
   
@@ -150,11 +154,11 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
     3.  任何小于元年 1 月 1 日的 **xs:date** 或 **xs:dateTime** 值在重新生成索引或对包含该值的 XML 数据类型执行 XQuery 或 XML-DML 语句时都将导致运行时错误。  
   
-2.  **xs:date** 或 **xs:dateTime** 方面中的任何负年份或 XML 架构集合中的默认值都将自动更新为基 **xs:date** 或 **xs:dateTime** 类型允许的最小值（例如，对于** xs:dateTime**，则更新为 0001-01-01T00:00:00.0000000Z）。  
+2.  **xs:date** 或 **xs:dateTime** 方面中的任何负年份或 XML 架构集合中的默认值都将自动更新为基 **xs:date** 或 **xs:dateTime** 类型允许的最小值（例如，对于 **xs:dateTime**，则更新为 0001-01-01T00:00:00.0000000Z）。  
   
  请注意，即使 XML 数据类型包含负年份，仍可以使用简单的 SQL SELECT 语句来检索整个 XML 数据类型。 建议您用新的受支持范围内的年份替代负年份，或将相应元素或属性的类型更改为 **xs:string**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

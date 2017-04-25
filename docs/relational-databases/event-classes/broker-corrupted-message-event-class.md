@@ -1,27 +1,31 @@
 ---
-title: "Broker:Corrupted Message 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Corrupted Message 事件类"
+title: "Broker:Corrupted 事件类 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4e27bdd5ad90a537ea6562bfc730e4439b4a7616
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Corrupted Message 事件类
+# <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Broker:Corrupted Message** 事件。  
   
-## Broker:Corrupted Message 事件类的数据列  
+## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  

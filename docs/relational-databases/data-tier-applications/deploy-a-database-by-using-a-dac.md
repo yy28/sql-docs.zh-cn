@@ -1,32 +1,36 @@
 ---
 title: "使用 DAC 部署数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "部署数据库向导"
-  - "数据库部署 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 DAC 部署数据库
-  使用“将数据库部署到 SQL Azure”向导在[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例与[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间，或在两个 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间部署数据库。  
+# <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
+  使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
   
 ##  <a name="BeforeBegin"></a> 开始之前  
  该向导使用数据层应用程序 (DAC) BACPAC 存档文件部署数据库对象的数据和定义。 它从源数据库执行 DAC 导出操作，并对目标执行 DAC 导入。  
@@ -39,28 +43,28 @@ caps.handback.revision: 11
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  **“部署数据库”** 向导支持：  
   
--   将数据库从[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+-   将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
--   将数据库从 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+-   将数据库从 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 -   在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间部署数据库。  
   
- 此向导不支持在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的两个实例之间部署数据库。  
+ 此向导不支持在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的两个实例之间部署数据库。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例必须运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本才能使用此向导。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例上的数据库包含 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上不支持的对象，则无法使用该向导将数据库部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的数据库包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持的对象，则您无法使用该向导将数据库部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例必须运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本才能使用此向导。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例上的数据库包含 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]上不支持的对象，则无法使用该向导将数据库部署到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 如果 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 上的数据库包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持的对象，则您无法使用该向导将数据库部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
 ###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-#### 权限  
- 此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies** 具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
+#### <a name="permissions"></a>权限  
+ 此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
- 此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 **sa** 的内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
+ 此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用部署数据库向导  
  **使用部署数据库向导迁移数据库**  
   
-1.  连接到您要部署的数据库的位置。 只能指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器。  
+1.  连接到您要部署的数据库的位置。 只能指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器。  
   
 2.  在 **“对象资源管理器”**中，展开包含数据库的实例的节点。  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [部署设置](#Deployment_settings)  
   
-    -   [验证](#Validation)  
-  
     -   [摘要页](#Summary)  
   
+    -   [进度](#Progress)  
+    
     -   [结果](#Results)  
   
 ##  <a name="Introduction"></a> “简介”页  
@@ -87,7 +91,7 @@ caps.handback.revision: 11
   
 -   **不再显示此页。** - 选中此复选框可以停止在将来显示“简介”页。  
   
--   “下一步”- 进入“部署设置”页。  
+-   **下一步** - 进入 **“部署设置”** 页。  
   
 -   **取消** – 取消操作并关闭向导。  
   
@@ -102,9 +106,9 @@ caps.handback.revision: 11
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库设置：**  
   
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本 – 从下拉菜单中选择[!INCLUDE[ssSDS](../../includes/sssds-md.md)]的版本。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** – 从下拉菜单中选择 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的版本。  
   
--   “最大数据库大小”– 从下拉菜单中选择最大数据库大小。  
+-   **最大数据库大小** – 从下拉菜单中选择最大数据库大小。  
   
  **其他设置：**  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  单击 **“完成”** 关闭向导。  
   
-## 使用 .Net Framework 应用程序  
+## <a name="using-a-net-framework-application"></a>使用 .Net Framework 应用程序  
  **使用 .Net Framework 应用程序中的 DacStoreExport() 和 Import() 方法来部署数据库。**  
   
  若要查看代码示例，请下载有关 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  使用 **Import** 类型的 **Microsoft.SqlServer.Management.Dac.DacStore** 方法导入 BACPAC。 指定导出创建的 BACPAC 文件。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [导出数据层应用程序](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [导入 BACPAC 文件以创建新的用户数据库](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

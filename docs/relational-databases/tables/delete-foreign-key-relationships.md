@@ -1,26 +1,30 @@
 ---
 title: "删除外键关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "外键 [SQL Server], 删除"
-  - "删除外键"
-  - "删除外键"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], deleting
+- removing foreign keys
+- deleting foreign keys
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除外键关系
+# <a name="delete-foreign-key-relationships"></a>删除外键关系
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除外键约束。 删除外键约束时，将删除强制引用完整性的要求。  
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除外键约束  
+#### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
 1.  在 **“对象资源管理器”**中，展开具有约束的表，再展开 **“键”**。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除外键约束  
+#### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

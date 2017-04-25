@@ -1,25 +1,29 @@
 ---
 title: "创建工作负荷组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 工作负荷组创建"
-  - "工作负荷组 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group create
+- workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 510473a5e51a911d4a642dcc78bc3a3408f65b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建工作负荷组
+# <a name="create-a-workload-group"></a>创建工作负荷组
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建工作负荷组。  
@@ -64,8 +68,8 @@ caps.handback.revision: 15
   
 2.  运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
-### 示例 (Transact-SQL)  
- 以下示例创建一个名为 `groupAdhoc` 的工作负荷组，该组位于名为 `poolAdhoc` 的资源池中。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 以下示例创建一个名为 `groupAdhoc` 的工作负荷组，该组位于名为 `poolAdhoc`的资源池中。  
   
 ```  
 CREATE WORKLOAD GROUP groupAdhoc  
@@ -75,7 +79,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -86,3 +90,4 @@ GO
  [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)  
   
   
+

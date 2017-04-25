@@ -1,34 +1,38 @@
 ---
 title: "选择加密算法 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 算法"
-  - "加密 [SQL Server], 算法"
-  - "安全性 [SQL Server], 加密"
-  - "算法 [SQL Server 加密]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 选择加密算法
-  加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例安全的管理员可以采用的多种深度防御方法之一。  
+# <a name="choose-an-encryption-algorithm"></a>选择加密算法
+  加密是希望保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例安全的管理员可以采用的多种深度防御方法之一。  
   
  加密算法定义了未经授权的用户无法轻易逆转的数据转换。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许管理员和开发人员从多种算法中进行选择，其中包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位 RC4、DESX、128 位 AES、192 位 AES 和 256 位 AES。  
   
 > [!NOTE]  
->  从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
+>  从 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
   
  没有一种算法能够解决所有问题，有关每种算法的优势的说明不属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书的讨论范畴。 但是，下列一般原则适应于：  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   使用 ALGORITHM = TRIPLE_DES 创建的对称密钥使用的是具有 128 位密钥的 TRIPLE DES。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |使用透明数据加密对数据库文件进行加密。|[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |如何加密表中的列。|[加密数据列](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 加密](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [加密层次结构](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

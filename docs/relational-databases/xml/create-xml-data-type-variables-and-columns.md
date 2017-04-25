@@ -1,28 +1,32 @@
 ---
 title: "创建 XML 数据类型的变量和列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml 数据类型 [SQL Server], 变量"
-  - "xml 数据类型 [SQL Server], 列"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建 XML 数据类型的变量和列
-  **xml** 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，有些类似于其他内置类型（如 **int** 和 **varchar**）。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 中创建表时，可以使用 **xml** 数据类型作为列类型。  
+# <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
+  **xml** 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，有些类似于其他内置类型（如 **int** 和 **varchar**）。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 **CAST 和 CONVERT** 中创建表时，可以使用 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)数据类型作为列类型。  
   
-## 创建列和变量  
+## <a name="creating-columns-and-variables"></a>创建列和变量  
  若要创建 `xml` 类型列作为表的一部分，请使用 `CREATE TABLE` 语句，如下例所示：  
   
 ```  
@@ -49,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  可以使用 XQuery 来查询存储在列、参数或变量中的 XML 实例。 还可以使用 XML 数据操作语言 (XML DML) 对 XML 实例进行更新。 由于开发时 XQuery 标准未定义 XQuery DML，因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 [XML 数据修改语言](../../t-sql/xml/xml-data-modification-language-xml-dml.md) 扩展插件引入 XQuery。 这些扩展插件使您可以执行插入、更新和删除操作。  
   
-## 分配默认的 XML 实例  
+## <a name="assigning-defaults"></a>分配默认的 XML 实例  
  在表中，可以为 **xml** 类型的列分配默认 XML 实例。 可以通过两种方式提供默认的 XML：通过使用 XML 常量，或通过使用到 **xml** 类型的显式转换。  
   
  若要提供默认的 XML 作为 XML 常量，请使用下例所示的语法。 请注意，此字符串将显式转换为 **xml** 类型。  
@@ -71,7 +75,7 @@ CREATE TABLE T (XmlColumn xml
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## 指定约束  
+## <a name="specifying-constraints"></a>指定约束  
  创建 **xml** 类型的列时，可以定义列级或表级的约束。 在下列情况下，请使用约束：  
   
 -   无法在 XML 架构中表达业务规则。 例如，花店的交货地址必须在其营业地点周围 50 英里之内。 这可以编写为 XML 列的约束。 此约束可能涉及 **xml** 数据类型方法。  
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  除了使用约束外，还可以创建用户定义函数作为包装来包装 **xml** 数据类型方法，并在检查约束中指定用户定义函数，如下例中所示。  
   
- 在以下示例中，`Col2` 的约束指定此列中存储的每个 XML 实例都必须具有包含 `<ProductDescription>` 属性的 `ProductID` 元素。 此约束由如下用户定义函数强制执行：  
+ 在以下示例中， `Col2` 的约束指定此列中存储的每个 XML 实例都必须具有包含 `<ProductDescription>` 属性的 `ProductID` 元素。 此约束由如下用户定义函数强制执行：  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- 注意，如果实例中的 `exist()` 元素包含 `xml` 属性，则 `1` 数据类型的 `<ProductDescription>` 方法返回 `ProductID`。 否则，它将返回 `0`。  
+ 注意，如果实例中的 `exist()` 元素包含 `xml` 属性，则 `1` 数据类型的 `<ProductDescription>` 方法返回 `ProductID` 。 否则，它将返回 `0`。  
   
  现在，您就可以创建带有列级约束的表，如下所示：  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## 相同或不同的表  
+## <a name="same-or-different-table"></a>相同或不同的表  
  可以在包含其他关系列的表中，或在与主表具有外键关系的单独表中创建 **xml** 数据类型列。  
   
  当符合下列条件之一时，将在同一个表中创建 **xml** 数据类型列：  

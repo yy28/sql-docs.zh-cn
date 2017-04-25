@@ -1,29 +1,33 @@
 ---
-title: "Database 事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件类 [SQL Server], Database 事件类别"
-  - "Database 事件类别 [SQL Server]"
-  - "SQL Server 事件类, Database 事件类别"
+title: "“数据库”事件类别 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], Database event category
+- Database event category [SQL Server]
+- SQL Server event classes, Database event category
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d15a70be9212c6d19606e8408f1e4ea7bf25df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database 事件类别
+# <a name="database-event-category"></a>Database 事件类别
   **Database** 事件类别包含用于监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的事件类。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 30
 |[Log File Auto Grow 事件类](../../relational-databases/event-classes/log-file-auto-grow-event-class.md)|指示日志文件是自动增长的。 如果通过 ALTER DATABASE 使日志文件显式增长，则不会触发此事件。|  
 |[Log File Auto Shrink 事件类](../../relational-databases/event-classes/log-file-auto-shrink-event-class.md)|指示日志文件是自动增长的。 如果日志文件通过 ALTER DATABASE 而显式收缩，则不触发此事件。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

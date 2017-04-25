@@ -1,35 +1,39 @@
 ---
 title: "创建、修改和删除空间索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [SQL Server]，创建"
-  - "空间索引 [SQL Server]，删除"
-  - "空间索引 [SQL Server]，创建"
-  - "索引 [SQL Server]，删除"
-  - "索引 [SQL Server]，修改"
-  - "空间索引 [SQL Server]，修改"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], creating
+- spatial indexes [SQL Server], dropping
+- spatial indexes [SQL Server], creating
+- indexes [SQL Server], dropping
+- indexes [SQL Server], modifying
+- spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57aebfb8b20a0e6c751deb4b9914f8122b3c3cd3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建、修改和删除空间索引
+# <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
   空间索引可以更高效地对数据类型为“geometry”或“geography”的列（空间数据列）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
   
  创建空间索引时有许多限制。 有关详细信息，请参阅本主题中的 [对空间索引的限制](#restrictions) 。  
   
 > [!NOTE]  
->  有关空间索引与分区和文件组的关系的信息，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md) 中的“备注”部分。  
+>  有关空间索引与分区和文件组的关系的信息，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)中的“备注”部分。  
   
 ##  <a name="creating"></a> 创建、修改和删除空间索引  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 22
  [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
  **在 Management Studio 中使用“新建索引”对话框创建空间索引**  
- ##### 在 Management Studio 中创建空间索引  
+ ##### <a name="to-create-a-spatial-index-in-management-studio"></a>在 Management Studio 中创建空间索引  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 22
   
 7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”**。  
   
-8.  在“从 \<table name> 中选择列”对话框中，选中相应的复选框，选择类型为“geometry”或“geography”的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”**。  
+8.  在“从 \<table name> 中选择列”对话框中，通过选中相应的复选框来选择类型为“geometry”或“geography”的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”**。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
@@ -66,19 +70,18 @@ caps.handback.revision: 22
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
-     在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可以为分割方案选择 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID。 选择 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID 时，禁用级别 1、级别 2、级别 3 和级别 4 网格密度选项。  
+     在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以为分割方案选择 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID。 选择 GEOMETRY_AUTO_GRID 或 GEOGRAPHY_AUTO_GRID 时，禁用级别 1、级别 2、级别 3 和级别 4 网格密度选项。  
   
      有关这些属性的详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)。  
   
-12. 单击“确定” 。  
+12. 单击 **“确定”**中的“备注”部分。  
   
 > [!NOTE]  
 >  若要对同一空间数据列或另一个空间数据列再创建一个空间索引，请重复上述步骤。  
   
- [本主题内容](#TOP)  
   
  **在 Management Studio 中使用表设计器创建空间索引**  
- ##### 在表设计器中创建空间索引  
+ ##### <a name="to-create-a-spatial-index-in-table-designer"></a>在表设计器中创建空间索引  
   
 1.  在对象资源管理器中，右键单击要为其创建空间索引的表，然后单击“设计”。  
   
@@ -90,22 +93,20 @@ caps.handback.revision: 22
   
 4.  在 **“空间索引”** 对话框中，单击 **“添加”**。  
   
-5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md)。  
+5.  在 **“所选空间索引”** 列表中选择新的索引，然后在右侧的网格中设置空间索引的属性。 有关属性的信息，请参阅[空间索引对话框 (Visual Database Tools)](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
   
- [本主题内容](#TOP)  
   
 ###  <a name="alter"></a> 更改空间索引  
   
 -   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
     > [!IMPORTANT]  
-    >  若要更改特定于某个空间索引的选项（例如 BOUNDING_BOX 或 GRID），您可以使用 CREATE SPATIAL INDEX 语句指定 DROP_EXISTING = ON，或删除该空间索引并创建一个新的空间索引。 有关示例，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)。  
+    >  若要更改特定于某个空间索引的选项（例如 BOUNDING_BOX 或 GRID），您可以使用 CREATE SPATIAL INDEX 语句指定 DROP_EXISTING = ON，或删除该空间索引并创建一个新的空间索引。 有关示例，请参阅 [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)中的“备注”部分。  
   
 -   [修改索引](../../relational-databases/indexes/modify-an-index.md)  
   
 -   [将现有索引移动到其他文件组中](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="drop"></a> 删除空间索引  
  **使用 Transact-SQL 删除空间索引**  
@@ -115,7 +116,7 @@ caps.handback.revision: 22
  [删除索引](../../relational-databases/indexes/delete-an-index.md)  
   
  **在 Management Studio 中使用表设计器删除空间索引**  
- ##### 在表设计器中删除空间索引  
+ ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>在表设计器中删除空间索引  
   
 1.  在对象资源管理器中，右键单击具有要删除的空间索引的表，再单击“设计”。  
   
@@ -129,12 +130,11 @@ caps.handback.revision: 22
   
 4.  单击 **“删除”**。  
   
- [本主题内容](#TOP)  
   
 ##  <a name="restrictions"></a> 对空间索引的限制  
  只能对类型为 **geometry** 或 **geography**的列创建空间索引。  
   
-### 针对表和视图的限制  
+### <a name="table-and-view-restrictions"></a>针对表和视图的限制  
  只能对具有主键的表定义空间索引。 表中主键列的最大数目为 15。  
   
  索引键记录的最大大小为 895 字节。 超过此大小会引发错误。  
@@ -144,20 +144,19 @@ caps.handback.revision: 22
   
  不能对索引视图指定空间索引。  
   
-### 多空间索引限制  
+### <a name="multiple-spatial-index-restrictions"></a>多空间索引限制  
  最多可对支持的表中的任何空间数据列创建 249 个空间索引。 对同一空间数据列创建多个空间索引可能很有用，例如，在要对单个列中的不同分割参数建立索引时。  
   
  一次只能创建一个空间索引。  
   
-### 空间索引和处理并行度  
+### <a name="spatial-indexes-and-process-parallelism"></a>空间索引和处理并行度  
  索引的生成过程可以利用可用的处理并行度。  
   
-### 版本限制  
+### <a name="version-restrictions"></a>版本限制  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的空间分割方案不能复制到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中。 当要求向后与 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 数据库兼容时，您必须将 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 空间分割方案用于空间索引。  
   
- [本主题内容](#TOP)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

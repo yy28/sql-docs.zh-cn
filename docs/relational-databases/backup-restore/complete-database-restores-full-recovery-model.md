@@ -1,29 +1,33 @@
 ---
-title: "完整数据库还原（完整恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整数据库还原"
-  - "数据库还原 [SQL Server], 完整数据库"
-  - "还原数据库 [SQL Server], 完整数据库"
-  - "还原 [SQL Server], 数据库"
-  - "完整恢复模式 [SQL Server], 执行还原"
-  - "日志备份 [SQL Server]"
+title: "完整数据库还原（完整恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整数据库还原（完整恢复模式）
+# <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   数据库完整还原的目的是还原整个数据库。 整个数据库在还原期间处于脱机状态。 在数据库的任何部分变为联机之前，必须将所有数据恢复到同一点，即数据库的所有部分都处于同一时间点并且不存在未提交的事务。  
@@ -33,7 +37,7 @@ caps.handback.revision: 77
  还原数据库时，特别是在完整恢复模式或大容量日志恢复模式下，您应使用一个还原顺序。 *还原顺序* 由通过一个或多个还原阶段来移动数据的一个或多个还原操作组成。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
   
  **本主题内容：**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [相关任务](#RelatedTasks)  
   
 > [!NOTE]  
->  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 中的“兼容性支持”部分。  
+>  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
   
 ##  <a name="PointOfFailure"></a> 将数据库还原到故障点  
  通常，将数据库恢复到故障点分为下列基本步骤：  
@@ -71,10 +75,10 @@ caps.handback.revision: 77
  ![将数据库完全还原到故障的时间点](../../relational-databases/backup-restore/media/bnrr-rmfull1-db-failure-pt.gif "将数据库完全还原到故障的时间点")  
   
 > [!NOTE]  
->  计划将数据库备份还原到其它服务器实例时，请参阅[通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+>  计划将数据库备份还原到其它服务器实例时，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
- 上图中还原顺序的基本 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
+ 上图中还原顺序的基本 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 77
  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例显示了将数据库还原到故障点的还原顺序中的基本选项。 此示例将创建数据库的结尾日志备份。 接下来，此示例将还原完整数据库备份和日志备份，然后还原结尾日志备份。 此示例将在最后的单独步骤中恢复数据库。  
   
 > [!NOTE]  
->  此示例使用在[完整数据库备份 (SQL Server) ](../../relational-databases/backup-restore/full-database-backups-sql-server.md)的“在完整恢复模式下使用数据库备份”部分中创建的数据库备份和日志备份。 在备份数据库之前，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
+>  此示例使用在 [完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)中的“兼容性支持”部分。 在备份数据库之前， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
   
 ```  
 USE master;  
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> 将数据库还原到日志备份中的某个时间点  
  在完整恢复模式下，完整的数据库还原通常可恢复到日志备份中的某个时间点、标记的事务或 LSN。 但是，在大容量日志恢复模式下，如果日志备份包含大容量更改，则不能进行时点恢复。  
   
-### 时点还原方案示例  
+### <a name="sample-point-in-time-restore-scenarios"></a>时点还原方案示例  
  下例假定针对一个关键任务型数据库系统，每天午夜创建一个完整数据库备份；从星期一到星期六，每小时创建一个差异数据库备份；全天每 10 分钟创建一个事务日志备份。 若要将数据库还原到星期三凌晨 5:19 的状态， 请执行以下操作：  
   
 1.  还原星期二午夜创建的完整数据库备份。  
@@ -147,7 +151,7 @@ GO
 4.  应用星期四凌晨 3:10 创建的事务日志 备份，停止凌晨 3:04 的恢复进程。  
   
 > [!NOTE]  
->  有关时间点存储的示例，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+>  有关时间点存储的示例，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)中的“兼容性支持”部分。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
@@ -176,8 +180,8 @@ GO
   
 -   [恢复到日志序列号 (SQL Server)](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## 另请参阅  
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

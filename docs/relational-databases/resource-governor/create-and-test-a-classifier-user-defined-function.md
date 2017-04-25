@@ -1,27 +1,31 @@
 ---
 title: "创建和测试分类器用户定义函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 分类器函数创建"
-  - "分类器函数 [SQL Server], 测试"
-  - "分类器函数 [SQL Server], 创建"
-  - "资源调控器, 分类器函数测试"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建和测试分类器用户定义函数
+# <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
   本主题说明如何创建和测试分类器用户定义函数 (UDF)。 这些步骤涉及在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 语句。  
   
  下面的过程中显示的示例说明了创建非常复杂的分类器用户定义函数的可能性。  
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  分类器函数可能延长登录时间。 过于复杂的函数可能会导致登录超时或减慢快速连接速度。  
   
-### 创建分类器用户定义函数  
+### <a name="to-create-the-classifier-user-defined-function"></a>创建分类器用户定义函数  
   
 1.  创建并配置新的资源池和工作负荷组。 将每个工作负荷组分配给相应的资源池。  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 验证资源池、工作负荷组以及分类器用户定义函数  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>验证资源池、工作负荷组以及分类器用户定义函数  
   
 1.  使用以下查询获取资源池和工作负荷组配置。  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 在分类器函数中使用查找表的最佳做法  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>在分类器函数中使用查找表的最佳做法  
   
 1.  除非绝对必要，否则不要使用查找表。 如果需要使用查找表，可以将其硬编码在函数本身中；但是，这样做时需要权衡考虑分类器函数的复杂程度和动态变更。  
   
@@ -246,7 +250,7 @@ caps.handback.revision: 25
   
 3.  防止阻塞查找表。  
   
-    1.  使用 `NOLOCK` 提示防止阻塞，或在函数中使用最大值设置为 1000 毫秒的 `SET LOCK_TIMEOUT`。  
+    1.  使用 `NOLOCK` 提示防止阻塞，或在函数中使用最大值设置为 1000 毫秒的 `SET LOCK_TIMEOUT` 。  
   
     2.  表必须存在于 master 数据库中。 （master 数据库是在客户端计算机尝试连接时可确保恢复的唯一一个数据库）。  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  我们强烈建议遵循如上最佳做法。 如有任何问题妨碍您遵循这些最佳做法，我们建议您与 Microsoft 支持部门联系，以求主动防止未来出现任何问题。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

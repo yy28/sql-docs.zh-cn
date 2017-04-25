@@ -1,28 +1,32 @@
 ---
 title: "创建用户定义的数据类型别名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.userdefineddatatype.general.f1"
-  - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
-  - "别名数据类型 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.userdefineddatatype.general.f1
+- sql13.swb.new.datatype.properties.general.f1
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建用户定义的数据类型别名
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建新的用户定义数据类型别名。  
+# <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
   
  **本主题内容**  
   
@@ -47,11 +51,11 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
- 要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name* 的 ALTER 权限。 如果未指定 *schema_name*，则将应用用于确定当前用户的架构的默认名称解析规则。  
+ 要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建用户定义数据类型  
+#### <a name="to-create-a-user-defined-data-type"></a>创建用户定义数据类型  
   
 1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”。  
   
@@ -65,9 +69,9 @@ caps.handback.revision: 27
      （可选）选择要绑定到用户定义数据类型别名的规则或默认值。  
   
      **长度/精度**  
-     相应地显示数据类型的长度或精度。 **长度**适用于基于字符的用户定义数据类型；**精度**仅适用于基于数字的用户定义数据类型。 该标签会根据先前所选的数据类型而相应地改变。 如果所选数据类型的长度或精度是固定的，则不能编辑此框。  
+     相应地显示数据类型的长度或精度。 **长度** 适用于基于字符的用户定义数据类型； **精度** 仅适用于基于数字的用户定义数据类型。 该标签会根据先前所选的数据类型而相应地改变。 如果所选数据类型的长度或精度是固定的，则不能编辑此框。  
   
-     不会显示 **nvarchar(max)**、**varchar(max)**或 **varbinary(max)** 数据类型的长度。  
+     不会显示 **nvarchar(max)**、 **varchar(max)**或 **varbinary(max)** 数据类型的长度。  
   
      **名称**  
      如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须符合系统的 **sysname** 数据类型的要求。 不能编辑现有的用户定义数据类型别名的名称。  
@@ -109,9 +113,9 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建用户定义的数据类型别名  
+#### <a name="to-create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -122,7 +126,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库标识符](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)  
   

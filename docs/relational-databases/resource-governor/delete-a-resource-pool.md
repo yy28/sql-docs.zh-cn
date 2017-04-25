@@ -1,32 +1,36 @@
 ---
 title: "删除资源池 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 资源池删除"
-  - "资源池 [SQL Server], 删除"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool delete
+- resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除资源池
+# <a name="delete-a-resource-pool"></a>删除资源池
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除资源池。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要删除资源池，可使用：** [SQL Server Management Studio](#DelRPSSMS) 和 [Transact-SQL](#DelRPTSQL)  
+-   **To delete a resource pool, using:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果资源池中包含工作负荷组，则不能删除该池。  
@@ -56,8 +60,8 @@ caps.handback.revision: 9
   
 2.  运行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 语句。  
   
-### 示例 (Transact-SQL)  
- 下面的示例删除名为 `poolAdhoc` 的工作负荷组。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 下面的示例删除名为 `poolAdhoc`的工作负荷组。  
   
 ```  
 DROP RESOURCE POOL poolAdhoc;  
@@ -66,9 +70,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+## <a name="see-also"></a>另请参阅  
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
@@ -81,3 +85,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

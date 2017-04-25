@@ -1,28 +1,32 @@
 ---
 title: "删除存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除存储过程"
-  - "存储过程 [SQL Server], 删除"
-  - "删除存储过程"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing stored procedures
+- stored procedures [SQL Server], deleting
+- deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9f9d65d2521299d34188897fbbf5675b5c9eea4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除存储过程
+# <a name="delete-a-stored-procedure"></a>删除存储过程
     
-##  <a name="Top"></a> 本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除存储过程。  
+##  <a name="Top"></a> 本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除存储过程。  
   
 -   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
@@ -31,7 +35,7 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- 如果依赖对象和脚本尚未更新以反映过程的删除，则删除过程可能会导致这些对象和脚本失败。 但是，如果创建了具有相同名称和参数的新过程来替换已被删除的过程，那么引用该过程的其他对象仍能成功处理。 有关详细信息，请参阅[查看存储过程的依赖关系](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
+ 如果依赖对象和脚本尚未更新以反映过程的删除，则删除过程可能会导致这些对象和脚本失败。 但是，如果创建了具有相同名称和参数的新过程来替换已被删除的过程，那么引用该过程的其他对象仍能成功处理。 有关详细信息，请参阅 [查看存储过程的依赖关系](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 26
   
 6.  从所有依赖对象和脚本中删除对该过程的引用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建存储过程](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [修改存储过程](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [重命名存储过程](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

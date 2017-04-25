@@ -1,33 +1,37 @@
 ---
 title: "数据库标识符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "常规标识符 [SQL Server]"
-  - "标识符 [SQL Server]"
-  - "名称 [SQL Server], 标识符"
-  - "标识符 [SQL Server], 关于标识符"
-  - "SQL Server 标识符"
-  - "Transact-SQL 标识符"
-  - "数据库对象 [SQL Server], 名称"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- regular identifiers [SQL Server]
+- identifiers [SQL Server]
+- names [SQL Server], identifiers
+- identifiers [SQL Server], about identifiers
+- SQL Server identifiers
+- Transact-SQL identifiers
+- database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库标识符
-  数据库对象的名称即为其标识符。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有内容都可以有标识符。 服务器、数据库和数据库对象（例如表、视图、列、索引、触发器、过程、约束及规则等）都可以有标识符。 大多数对象要求有标识符，但对有些对象（例如约束），标识符是可选的。  
+# <a name="database-identifiers"></a>数据库标识符
+  数据库对象的名称即为其标识符。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有内容都可以有标识符。 服务器、数据库和数据库对象（例如表、视图、列、索引、触发器、过程、约束及规则等）都可以有标识符。 大多数对象要求有标识符，但对有些对象（例如约束），标识符是可选的。  
   
  对象标识符是在定义对象时创建的。 标识符随后用于引用该对象。 例如，下列语句创建一个标识符为 `TableX`的表，该表中有两列的标识符分别是 `KeyCol` 和 `Description`：  
   
@@ -43,7 +47,7 @@ CREATE TABLE TableX
 > [!NOTE]  
 >  变量的名称或函数和存储过程的参数必须符合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符的规则。  
   
-## 标识符的种类  
+## <a name="classes-of-identifiers"></a>标识符的种类  
  有两类标识符：  
   
  常规标识符  
@@ -74,7 +78,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
  常规标识符和分隔标识符包含的字符数都必须在 1 到 128 之间。 对于本地临时表，标识符最多可以有 116 个字符。  
   
-## 常规标识符规则  
+## <a name="rules-for-regular-identifiers"></a>常规标识符规则  
  变量、函数和存储过程的名称必须符合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符的规则。  
   
 1.  第一个字符必须是下列字符之一：  
@@ -83,7 +87,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   下划线 (_)、at 符号 (@) 或数字符号 (#)。  
   
-         在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，某些位于标识符开头位置的符号具有特殊意义。 以 at 符号开头的常规标识符始终表示局部变量或参数，并且不能用作任何其他类型的对象的名称。 以一个数字符号开头的标识符表示临时表或过程。 以两个数字符号 (##) 开头的标识符表示全局临时对象。 虽然数字符号或两个数字符号字符可用作其他类型对象名的开头，但是我们建议不要这样做。  
+         在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，某些位于标识符开头位置的符号具有特殊意义。 以 at 符号开头的常规标识符始终表示局部变量或参数，并且不能用作任何其他类型的对象的名称。 以一个数字符号开头的标识符表示临时表或过程。 以两个数字符号 (##) 开头的标识符表示全局临时对象。 虽然数字符号或两个数字符号字符可用作其他类型对象名的开头，但是我们建议不要这样做。  
   
          某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的名称以两个 at 符号 (@@) 开头。 为了避免与这些函数混淆，不应使用以 @@ 开头的名称。  
   
@@ -95,7 +99,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   at 符号、美元符号 ($)、数字符号或下划线。  
   
-3.  标识符必须不能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留保留字的大写和小写版本。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用标识符时，不符合这些规则的标识符必须由双引号或括号分隔。 保留字依赖于数据库兼容级别。 可通过使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) 语句设置该级别。  
+3.  标识符必须不能是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留保留字的大写和小写版本。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用标识符时，不符合这些规则的标识符必须由双引号或括号分隔。 保留字依赖于数据库兼容级别。 可通过使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 语句设置该级别。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -104,9 +108,9 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用标识符时，不符合这些规则的标识符必须由双引号或括号分隔。  
   
 > [!NOTE]  
->  一些常规标识符格式规则取决于数据库兼容级别。 该级别可以使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)设置。  
+>  一些常规标识符格式规则取决于数据库兼容级别。 该级别可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)设置。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   

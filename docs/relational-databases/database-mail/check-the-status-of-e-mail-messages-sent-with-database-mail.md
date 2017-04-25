@@ -1,40 +1,44 @@
 ---
 title: "检查使用数据库邮件发送的电子邮件的状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "电子邮件 [SQL Server], 状态信息"
-  - "邮件 [SQL Server], 状态信息"
-  - "数据库邮件 [SQL Server], 消息状态"
-  - "状态信息 [数据库邮件]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- e-mail [SQL Server], status information
+- mail [SQL Server], status information
+- Database Mail [SQL Server], message status
+- status information [Database Mail]
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 691f6b69f1921d6710eba29d85b9120f39a686c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 检查使用数据库邮件发送的电子邮件的状态
-  本主题说明在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 检查通过数据库邮件发送的电子邮件的状态。  
+# <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>检查使用数据库邮件发送的电子邮件的状态
+  本主题说明在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]检查通过数据库邮件发送的电子邮件的状态。  
   
 -   **开始之前：**  
   
--   **若要查看通过数据库邮件发送的电子邮件的状态，使用：** [Transact-SQL](#TsqlProcedure)  
+-   **To view the status of the e-mail sent using Database Mail, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 数据库邮件保留发送的电子邮件的副本，并在 **msdb** 数据库的 **sysmail_allitems**、**sysmail_sentitems**、**sysmail_unsentitems**、**sysmail_faileditems** 视图中显示它们。 数据库邮件外部程序记录活动，并通过 Windows 应用程序事件日志以及 **msdb** 数据库的 **sysmail_event_log** 视图显示日志。 若要检查电子邮件的状态，请对此视图运行查询。 电子邮件可以处于下列四种可能的状态之一：**sent**、**unsent**、**retrying** 和 **failed**。  
+ 数据库邮件保留发送的电子邮件的副本，并在 **msdb**数据库的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 视图中显示它们。 数据库邮件外部程序记录活动，并通过 Windows 应用程序事件日志以及 **msdb** 数据库的 **sysmail_event_log** 视图显示日志。 若要检查电子邮件的状态，请对此视图运行查询。 电子邮件可以处于下列四种可能的状态之一： **sent**、 **unsent**、 **retrying**和 **failed**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看通过数据库邮件发送的电子邮件的状态**  
   
-1.  从 **sysmail_allitems** 表中选择，按 **mailitem_id** 或 **sent_status** 指定要检查的邮件。  
+1.  从 **sysmail_allitems** 表中选择，按 **mailitem_id** 或 **sent_status**指定要检查的邮件。  
   
 2.  若要检查外部程序返回的电子邮件的状态，请将 **sysmail_allitems** 联接到 **sysmail_event_log** 视图中的 **mailitem_id** 列，如下所示。  
   
@@ -67,7 +71,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件日志和审核](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

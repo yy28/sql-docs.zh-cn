@@ -1,34 +1,38 @@
 ---
 title: "创建新的计划指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "创建计划指南"
-  - "计划指南 [SQL Server]。 创建"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.designer.newplanguide.f1
+helpviewer_keywords:
+- creating plan guides
+- plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建新的计划指南
+# <a name="create-a-new-plan-guide"></a>创建新的计划指南
 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，需要指定要优化的语句以及包含要使用的查询提示的 OPTION 子句。 或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
 
 计划指南将固定查询计划和/或查询提示应用于查询。
   
 ##  <a name="Restrictions"></a> 限制和局限  
   
--   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide** 的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =**，则也必须指定 **@stmt =**、**@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则也必须省略其余的参数名称并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
+-   sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =**，则也必须指定 **@stmt =**、**@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
   
 -   您可以为相同的查询和批处理或模块创建多个 OBJECT 或 SQL 计划指南。 但是，在任何给定的时间只能启用一个计划指南。  
   
@@ -100,3 +104,4 @@ caps.handback.revision: 17
  有关详细信息，请参阅 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)。  
   
   
+

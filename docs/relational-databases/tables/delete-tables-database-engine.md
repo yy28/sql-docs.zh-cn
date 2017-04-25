@@ -1,30 +1,34 @@
 ---
-title: "删除表（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表删除 [SQL Server]"
-  - "删除表"
-  - "删除表"
-  - "删除表"
+title: "删除表（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table deletions [SQL Server]
+- deleting tables
+- removing tables
+- dropping tables
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除表（数据库引擎）
+# <a name="delete-tables-database-engine"></a>删除表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中从您的数据库中删除表。  
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从您的数据库中删除表。  
   
 > [!CAUTION]  
 >  删除表之前一定要慎重考虑。 如果现有查询、视图、用户定义函数、存储过程或程序引用该表，删除操作将使这些对象无效。  
@@ -64,7 +68,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 从数据库中删除表  
+#### <a name="to-delete-a-table-from-the-database"></a>从数据库中删除表  
   
 1.  在对象资源管理器中选择要删除的表。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在查询编辑器中删除表  
+#### <a name="to-delete-a-table-in-query-editor"></a>在查询编辑器中删除表  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

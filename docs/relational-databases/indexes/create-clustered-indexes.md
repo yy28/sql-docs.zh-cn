@@ -1,31 +1,35 @@
 ---
 title: "创建聚集索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引创建 [SQL Server], 聚集索引"
-  - "聚集索引, 创建"
-  - "聚集索引, PRIMARY KEY 约束"
-  - "聚集索引, UNIQUE 约束"
-  - "索引 [SQL Server], 聚集"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建聚集索引
+# <a name="create-clustered-indexes"></a>创建聚集索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的聚集索引。 除了个别表之外，每个表都应该有聚集索引。 聚集索引除了可以提高查询性能之外，还可以按需重新生成或重新组织来控制表碎片。 也可以对视图创建聚集索引。 （[描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)主题中定义了聚集索引。）  
+  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在表中创建聚集索引。 除了个别表之外，每个表都应该有聚集索引。 聚集索引除了可以提高查询性能之外，还可以按需重新生成或重新组织来控制表碎片。 也可以对视图创建聚集索引。 （ [描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)主题中定义了聚集索引。）  
   
  **本主题内容**  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 32
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用对象资源管理器创建聚集索引  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>使用对象资源管理器创建聚集索引  
   
 1.  在“对象资源管理器”中，展开要创建聚集索引的表。  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 32
   
 7.  在 **“新建索引”** 对话框中，单击 **“确定”**。  
   
-#### 使用表设计器创建聚集索引  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>使用表设计器创建聚集索引  
   
 1.  在“对象资源管理器”中，展开要使用聚集索引创建表的数据库。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建聚集索引  
+#### <a name="to-create-a-clustered-index"></a>创建聚集索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建主键](../../relational-databases/tables/create-primary-keys.md)   
  [创建唯一约束](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

@@ -1,33 +1,37 @@
 ---
-title: "Columnstore Indexes Query Performance | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列存储索引 - 查询性能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnstore Indexes Query Performance
+# <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   有助于实现列存储索引旨在提供的快速查询性能的建议。    
     
  列存储索引对于分析和数据仓库工作负荷最多可提高 100 倍性能，并且比传统行存储索引最多可提高 10 倍的数据压缩率。   这些建议可帮助查询实现列存储索引旨在提供的快速查询性能。  结尾处提供了有关列存储性能的进一步说明。    
     
-## 提高查询性能的建议    
+## <a name="recommendations-for-improving-query-performance"></a>提高查询性能的建议    
  以下是有助于实现列存储索引旨在提供的高性能的一些建议。    
     
-### 1.组织数据使更多行组不用进行全表扫描    
+### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1.组织数据使更多行组不用进行全表扫描    
     
 -   **利用插入顺序。** 通常情况下，在传统数据仓库中，数据实际上是按时间顺序插入的，而分析是在时间维度中完成的。 例如，按季度分析销售额。 对于此类型的工作负荷，行组消除自动发生。 在 SQL Server 2016 中，可以找出在查询处理过程中跳过的数字行组。    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 22
     
 -   **利用表分区。** 你可以对列存储索引进行分区，然后使用分区排除来减少要扫描的行组数。 例如，事实数据表存储客户的购买情况，常见的查询模式是查找特定客户的季度购买情况，你可以将插入顺序与对客户列进行分区结合使用。 每个分区都将包含特定客户的按时间顺序排序的行。    
     
-### 2.计划足够的内存以便并行创建列存储索引    
+### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2.计划足够的内存以便并行创建列存储索引    
  创建列存储索引默认情况下是一种并行操作，除非内存受到约束。 并行创建索引要求比按顺序创建索引更多的内存。 在内存充足的情况下，创建列存储索引相当于在同一列上生成 B 树所用时间的 1.5 倍。    
     
  创建列存储索引所需的内存取决于列数、字符串列的数目、并行度 (DOP) 和数据特性。 例如，如果您的表具有不到 10 亿行，SQL Server 将仅使用一个线程创建列存储索引。    
@@ -44,12 +48,12 @@ caps.handback.revision: 22
     
  从 SQL Server 2016 开始，查询将始终以批处理模式运行。 在以前版本中，仅当 DOP 大于 1 时，才使用批处理执行。    
     
-## 说明的列存储性能    
+## <a name="columnstore-performance-explained"></a>说明的列存储性能    
  列存储索引通过将高速内存中批处理模式处理与可极大减少 IO 要求的技术组合使用来实现高查询性能。  由于分析查询扫描大量行，它们通常进行 IO 绑定，因此在查询执行过程中减少 IO 对于列存储索引的设计至关重要。  数据读取到内存中后，减少内存中操作的数目很重要。    
     
  列存储索引通过高数据压缩率、列存储消除、行组消除和批处理来减少 IO 和优化内存中操作。    
     
-### 数据压缩    
+### <a name="data-compression"></a>数据压缩    
  列存储索引可实现比行存储索引最多高 10 倍的数据压缩率。  这极大地减少了执行分析查询所需的 IO，并因此可以提高查询性能。    
     
 -   列存储索引从磁盘读取压缩的数据，这意味着需要将更少字节的数据读取到内存。    
@@ -60,14 +64,14 @@ caps.handback.revision: 22
     
 -   例如，如果事实数据表存储客户地址，并且有一列用于国家/地区，则可能值的总数少于 200。  其中的某些值将重复多次。  如果事实数据表具有 1 亿行，则“国家/地区”列将轻松压缩，并需要很少的存储空间。 按行压缩就不能以这种方式利用列值的相似性，并在压缩“国家/地区”列中的值时将使用更多字节。    
     
-### 列消除    
+### <a name="column-elimination"></a>列消除    
  列存储索引会跳过读取查询结果不需要的列。 这种功能（称为“列消除”）可进一步减少执行查询的 IO，因此可以提高查询性能。    
     
 -   列消除之所以可能是因为数据是按列组织和压缩的。   与此相反，当数据按行存储时，每行中的列值以物理方式存储在一起，并且不能轻松分离。 查询处理器要检索特定列值需要读取整个行，这会增加 IO，因为不必要地将额外的数据读取到内存。    
     
 -   例如，如果表有 50 列，而查询仅使用其中 5 列，列存储索引仅从磁盘中提取这 5 列。 它会跳过读取其他 45 列。 假定所有列都具有相似的大小，这可另外减少 IO 90%。  如果相同的数据以行存储形式存储，查询处理器需要读取其他 45 列。    
     
-### 行组消除    
+### <a name="rowgroup-elimination"></a>行组消除    
  在全表扫描中，大部分数据通常不匹配查询谓词条件。 列存储索引通过使用元数据能够跳过读取不包含查询结果所需数据的行组，所有这些都不需要实际 IO。  这种功能（称为“行组消除”）可减少全表扫描的 IO，因此可以提高查询性能。    
     
  **列存储索引何时需要执行全表扫描？**    
@@ -82,9 +86,9 @@ caps.handback.revision: 22
     
  为了确定要消除哪些行组，列存储索引在每个行组中使用元数据来存储每个列段的最小值和最大值。 当列段范围不满足查询谓词条件时，就会跳过整个行组而不执行任何实际 IO。 这样做之所以有效是因为数据通常是按排序顺序加载的，虽然行不一定进行排序，但相似的数据值通常位于同一行组或相邻行组中。    
     
- 有关行组的详细信息，请参阅[列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)    
+ 有关行组的详细信息，请参阅“列存储索引指南”    
     
-### 批处理模式执行    
+### <a name="batch-mode-execution"></a>批处理模式执行    
  批处理模式执行是指为提高执行效率将一组行（通常最多 900 行）一起处理。 例如，查询  `Select SUM (Sales)from SalesData` 从表 SalesData 聚合了总销售额。    以批处理模式执行时，查询执行引擎以 900 个值为一组计算聚合。  这样会将元数据（访问成本和其他类型的开销）分布到批处理的所有行中，而不是支付每行的成本，从而大大减少了代码路径。  批处理模式处理在可能的情况下会对压缩数据运行，并消除了行模式处理所用的一些交换运算符。  这可以将分析查询的执行速度提高好几个数量级。    
     
  并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。  由于列存储索引是在 SQL Server 2012 中引入的，因此需要付出不懈努力来扩展可以批处理模式执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
@@ -110,7 +114,7 @@ caps.handback.revision: 22
     
  ¹适用于 SQL Server 2016、SQL 数据库 V12 高级版和 SQL 数据仓库    
     
-### 聚合下推    
+### <a name="aggregate-pushdown"></a>聚合下推    
  聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。  尽管这提供了良好的性能，但使用 SQL Server 2016，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件    
     
 -   支持的聚合运算符是 MIN、MAX、SUM、COUNT、AVG    
@@ -135,8 +139,8 @@ SELECT  SUM(TotalProductCost)
 FROM FactResellerSalesXL_CCI    
 ```    
     
-### 字符串谓词下推    
- 目的：在设计数据仓库架构时，建议的架构建模是使用星型架构或雪花型架构，其中包括一个或多个事实数据表和多个维度表。 [事实数据表](https://en.wikipedia.org/wiki/Fact_table)存储业务度量值或事务，而[维度表](https://en.wikipedia.org/wiki/Dimension_table)存储分析事实数据需要跨越的维度。    
+### <a name="string-predicate-pushdown"></a>字符串谓词下推    
+ 目的：在设计数据仓库架构时，建议的架构建模是使用星型架构或雪花型架构，其中包括一个或多个事实数据表和多个维度表。 [事实数据表](https://en.wikipedia.org/wiki/Fact_table) 存储业务度量值或事务，而 [维度表](https://en.wikipedia.org/wiki/Dimension_table) 存储分析事实数据需要跨越的维度。    
     
  例如，事实可以是一条表示某一特定区域中某一特定产品的销售额的记录，而维度则表示一组区域、产品等。 事实数据表和维度表通过主键/外键关系进行连接。 最常用的分析查询将一个或多个维度表与事实数据表进行联接。    
     
@@ -154,13 +158,14 @@ FROM FactResellerSalesXL_CCI
     
 -   不支持评估 NULL 的表达式    
     
-## 另请参阅    
- [列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)     
- [列存储索引数据加载](../Topic/Columnstore%20Indexes%20Data%20Loading.md)     
- [列存储索引版本的功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)     
+## <a name="see-also"></a>另请参阅    
+ 列存储索引指南     
+ 列存储索引数据加载     
+ 列存储索引版本的功能摘要     
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
  [开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
- [针对数据仓库的列存储索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)     
+ 针对数据仓库的列存储索引     
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     
   
+

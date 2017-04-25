@@ -1,28 +1,32 @@
 ---
-title: "创建用户定义函数（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SCHEMABINDING 子句"
-  - "绑定到架构的函数 [SQL Server]"
-  - "用户定义的函数 [SQL Server], 创建"
-  - "CREATE FUNCTION 语句"
-  - "有效语句 [SQL Server]"
+title: "创建用户定义函数（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建用户定义函数（数据库引擎）
+# <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
   本主题介绍了如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建用户定义函数 (UDF)。  
 
   
@@ -177,7 +181,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## 更多示例  
+## <a name="more-examples"></a>更多示例  
  - [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 
   - [更改函数 (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
@@ -185,3 +189,4 @@ FROM dbo.ufn_FindReports(1);
  - [删除分区函数 (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [社区](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)中提供了更多示例
   
+

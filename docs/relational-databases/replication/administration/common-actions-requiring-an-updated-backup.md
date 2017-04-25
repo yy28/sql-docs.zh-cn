@@ -1,29 +1,33 @@
 ---
 title: "需要已更新备份的常用操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "恢复 [SQL Server 复制], 需要备份的操作"
-  - "还原 [SQL Server 复制], 需要备份的操作"
-  - "备份 [SQL Server 复制], 需要备份的操作"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 需要已更新备份的常用操作
+# <a name="common-actions-requiring-an-updated-backup"></a>需要已更新备份的常用操作
   如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，就要在修改复制架构或拓扑之后，对发布、分发、订阅、 **msdb**数据库和 **master** 数据库执行备份。  
   
-## 发布数据库  
+## <a name="publication-database"></a>发布数据库  
  在执行下列操作后备份发布数据库：  
   
 -   创建新发布。  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   对已发布的表进行架构更改。  
   
--   执行按需脚本执行与 [sp_addscriptexec & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。  
+-   使用 [sp_addscriptexec (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) 按需执行脚本。  
   
 -   更改任何项目属性。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   禁用复制。  
   
-## 分发数据库  
+## <a name="distribution-database"></a>分发数据库  
  在执行下列操作后备份分发数据库：  
   
 -   创建或修改复制代理配置文件。  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   自动标识范围管理功能指定了新标识范围。  
   
-## 订阅数据库  
+## <a name="subscription-database"></a>订阅数据库  
  在执行下列操作后备份订阅数据库：  
   
 -   更改任何订阅属性。  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
   
 -   禁用复制。  
   
-## msdb 数据库  
+## <a name="msdb-database"></a>msdb 数据库  
  在执行下列操作后，在相应节点备份 **msdb** 系统数据库：  
   
 -   启用或禁用复制。  
@@ -89,7 +93,7 @@ caps.handback.revision: 32
   
 -   添加或删除可转换订阅（在分发服务器和订阅服务器上）。  
   
-## master 数据库  
+## <a name="master-database"></a>master 数据库  
  在执行下列操作后，在相应节点备份 **master** 系统数据库：  
   
 -   启用或禁用复制。  
@@ -104,7 +108,7 @@ caps.handback.revision: 32
   
 -   在分发发布服务器上启用或禁用发布服务器（在发布服务器和分发服务器上）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

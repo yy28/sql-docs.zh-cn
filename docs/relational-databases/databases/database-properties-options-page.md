@@ -1,30 +1,34 @@
 ---
-title: "数据库属性（“选项”页） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.options.f1"
+title: "数据库属性（“选项”页）| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库属性（“选项”页）
+# <a name="database-properties-options-page"></a>数据库属性（“选项”页）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  使用此页可以查看或修改所选数据库的选项。 有关此页上可用选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 和 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+  使用此页可以查看或修改所选数据库的选项。 有关此页上可用选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 和 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
-## 页眉  
+## <a name="page-header"></a>页眉  
  **排序规则**  
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 67
  指定下列模式之一来恢复数据库：“完整”、“大容量日志”或“简单”。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容级别**  
- 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有 **SQL Server 2014 (120)**、**SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。  
+ 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)**和 **SQL Server 2008 (100)**。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
  **包含类型**  
  指定无或部分以便指定这是否为包含数据库。 有关包含的数据库的详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。 服务器属性 **“启用包含的数据库”** 必须首先设置为 **TRUE** ，然后才能将某个数据库配置为包含数据库。  
@@ -40,7 +44,7 @@ caps.handback.revision: 67
 > [!IMPORTANT]  
 >  启用部分包含数据库会将对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问控制委托给该数据库的所有者。 有关详细信息，请参阅 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
-## 自动  
+## <a name="automatic"></a>自动  
  **自动关闭**  
  指定在上一个用户退出后，数据库是否完全关闭并释放资源。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则在上一个用户注销之后，数据库会完全关闭并释放其资源。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 67
   
  将该选项设置为 **True** 不会产生任何影响，除非 **“自动更新统计信息”** 也设置为 **True**。  
   
-## 包含  
+## <a name="containment"></a>包含  
  在包含数据库中，可以在数据库级别配置通常在服务器级别配置的某些设置。  
   
  **默认全文语言 LCID**  
@@ -83,21 +87,21 @@ caps.handback.revision: 67
   
  例如，2049 的默认设置表明：作为 '3/14/49' 输入的日期将被解释为 2049 年 3 月 14 日，而作为 '3/14/50' 输入的日期则将被解释为 1950 年 3 月 14 日。 有关详细信息，请参阅 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
-## 游标  
+## <a name="cursor"></a>游标  
  **提交时关闭游标功能已启用**  
  指定在提交了打开游标的事务之后是否关闭游标。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则会关闭在提交或回滚事务时打开的游标。 如果设置为 **False**，则这些游标会在提交事务时保持打开状态。 如果设置为 **False**，则在回滚事务时会关闭所有游标（那些定义为 INSENSITIVE 或 STATIC 的游标除外）。 有关详细信息，请参阅 [SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)。  
   
  **默认游标**  
  指定默认的游标行为。 如果设置为 **True**，则游标声明默认为 LOCAL。 如果设置为 **False**，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标默认为 GLOBAL。  
   
-## 数据库作用域配置  
+## <a name="database-scoped-configurations"></a>数据库作用域配置  
  在 SQL Server 2016 和 Azure SQL 数据库中，有多个可以作用于数据库级别作用域的配置属性。 有关所有这些设置的详细信息，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。  
   
  **旧版基数估计**  
- 指定独立于数据库兼容级别的主查询优化器基数估计模型。 这与[跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413) 是等效的。  
+ 指定独立于数据库兼容级别的主查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)是等效的。  
   
  **辅助数据库的旧版基数估计**  
- 指定独立于数据库兼容级别的辅助查询优化器基数估计模型。 这与[跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413) 是等效的。  
+ 指定独立于数据库兼容级别的辅助查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)是等效的。  
   
  **Max DOP**  
  指定应用于语句的主默认 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 设置。  
@@ -117,19 +121,19 @@ caps.handback.revision: 67
  **辅助查询优化器修补程序**  
  启用或禁用辅助查询优化修补程序（如有），而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006)是等效的。  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 目录名称**  
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一：**OFF**、**READ_ONLY** 或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
+ 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
-## 杂项  
+## <a name="miscellaneous"></a>杂项  
  **ANSI NULL 默认值**  
  **CREATE TABLE** 或 **ALTER TABLE** 语句执行过程中，没有显式定义为 **NOT NULL** 的所有用户定义的数据类型或列都将默认为允许空值。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)。  
   
  **ANSI NULLS 已启用**  
- 指定等于 (`=`) 和不等于 (`<>`) 比较运算符在与 Null 值一起使用时的行为。 可能的值包括 **True**（开）和 **False**（关）。 如果设置为 **True**，则所有与 Null 值的比较求得的值均为 UNKNOWN。 如果设置为 **False**，则非 UNICODE 值与 null 值比较求得的值为 **True**（如果这两个值均为 NULL）。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
+ 指定等于 (`=`) 和不等于 (`<>`) 比较运算符在与 Null 值一起使用时的行为。 可能的值包括 **True** （开）和 **False** （关）。 如果设置为 **True**，则所有与 Null 值的比较求得的值均为 UNKNOWN。 如果设置为 **False**，则非 UNICODE 值与 null 值比较求得的值为 **True**（如果这两个值均为 NULL）。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   
  **ANSI 填充已启用**  
  指定 ANSI 填充状态是开还是关。 可能的值为 **True**（开）和 **False**（关）。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
@@ -141,7 +145,7 @@ caps.handback.revision: 67
  指定是否启用数据库的算术中止选项。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则溢出错误或被零除错误会导致查询或批处理终止。 如果错误发生在事务内，则回滚事务。 如果设置为 **False**，则会显示一条警告消息，但是会继续执行查询、批处理或事务，就像没有出错一样。 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)。  
   
  **串联的 Null 结果为 Null**  
- 指定在与 Null 值连接时的行为。 当属性值为 **True** 时，**字符串** + NULL 会返回 NULL。 如果设置为 **False**，则结果为 **string**。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
+ 指定在与 Null 值连接时的行为。 当属性值为 **True**时， **字符串** + NULL 会返回 NULL。 如果设置为 **False**，则结果为 **string**。 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。  
   
  **跨数据库所有权链接已启用**  
  该只读值指示跨数据库所有权链接是否已启用。 如果设置为 **True**，则数据库可以为跨数据库所有权链的源或目标。 使用 ALTER DATABASE 语句设置此属性。  
@@ -161,16 +165,16 @@ caps.handback.revision: 67
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字在用引号引起来时是否可以用作标识符（对象名或变量名）。 可能的值包括 **True** 和 **False**。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  **递归触发器已启用**  
- 指定触发器是否可以由其他触发器激发。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则会启用对触发器的递归激发。 如果设置为 **False**，则只禁用直接递归。 若要禁用间接递归，请使用 sp_configure 将 nested triggers 服务器选项设置为 0。 有关详细信息，请参阅[创建嵌套触发器](../../relational-databases/triggers/create-nested-triggers.md)。  
+ 指定触发器是否可以由其他触发器激发。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则会启用对触发器的递归激发。 如果设置为 **False**，则只禁用直接递归。 若要禁用间接递归，请使用 sp_configure 将 nested triggers 服务器选项设置为 0。 有关详细信息，请参阅 [创建嵌套触发器](../../relational-databases/triggers/create-nested-triggers.md)。  
   
  **可信**  
- 当显示 **True** 时，该只读选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在数据库中建立的模拟上下文内访问数据库以外的资源。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
+ 当显示 **True**时，该只读选项指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在数据库中建立的模拟上下文内访问数据库以外的资源。 可以使用 EXECUTE AS 用户语句或数据库模块上的 EXECUTE AS 子句在数据库内建立模拟上下文。  
   
  若要具有访问权限，数据库的所有者也需要具有服务器级的 AUTHENTICATE SERVER 权限。  
   
  使用此属性，还可以在数据库内创建和执行不安全的程序集和外部访问程序集。 除了将此属性设置为 **True**以外，数据库的所有者还必须拥有服务器级的 EXTERNAL ACCESS ASSEMBLY 或 UNSAFE ASSEMBLY 权限。  
   
- 默认情况下，所有用户数据库和所有系统数据库（**MSDB** 除外）都将此属性设置为 **False**。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
+ 默认情况下，所有用户数据库和所有系统数据库（ **MSDB**除外）都将此属性设置为 **False**。 对于 **model** 和 **tempdb** 数据库，不能更改此值。  
   
  每当数据库附加到服务器时，都要将 TRUSTWORTHY 设置为 **False** 。  
   
@@ -179,16 +183,16 @@ caps.handback.revision: 67
  若要设置此属性，请使用 ALTER DATABASE 语句。  
   
  **VarDecimal 存储格式已启用**  
- 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此选项为只读选项。 为 **True**时，此数据库将启用 vardecimal 存储格式。 数据库中的任何表使用 vardecimal 存储格式时，无法禁用该存储格式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，对于所有的用户数据库都将启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。  
+ 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，此选项为只读选项。 为 **True**时，此数据库将启用 vardecimal 存储格式。 数据库中的任何表使用 vardecimal 存储格式时，无法禁用该存储格式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，对于所有的用户数据库都将启用 vardecimal 存储格式。 此选项使用 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。  
   
-## 恢复  
+## <a name="recovery"></a>恢复  
  **页验证**  
- 指定用于发现和报告由磁盘 I/O 错误导致的不完整 I/O 事务的选项。 可能的值为 **None**、 **TornPageDetection**和 **Checksum**。 有关详细信息，请参阅[管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)。  
+ 指定用于发现和报告由磁盘 I/O 错误导致的不完整 I/O 事务的选项。 可能的值为 **None**、 **TornPageDetection**和 **Checksum**。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
   
  **目标恢复时间（秒）**  
  指定在发生崩溃的情况下恢复指定数据库的最长时间（秒）。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
-## State  
+## <a name="state"></a>State  
  **数据库为只读**  
  指定数据库是否为只读。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则用户只能读取数据库中的数据。 用户不能修改数据或数据库对象；不过，数据库本身可以通过使用 DROP DATABASE 语句自行删除。 在为 **“数据库为只读”** 选项指定新值时，数据库不能处于使用状态。 master 数据库是个例外，在设置该选项时，只有系统管理员才能使用 master 数据库。  
   
@@ -211,10 +215,11 @@ caps.handback.revision: 67
      只有 db_owner、dbcreator 或 sysadmin 角色的成员才能使用该数据库。  
   
  **已启用加密**  
- 设置为 **True** 时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+ 设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

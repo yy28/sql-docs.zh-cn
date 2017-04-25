@@ -1,29 +1,33 @@
 ---
-title: "为内存优化表配置内存 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "为内存优化表配置存储 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为内存优化表配置内存
+# <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
   您需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
   
-## 存储容量  
- 使用[估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于未为内存优化表保留索引，因此不包括索引大小。 确定此大小后，您需要提供大小为持久内存中表大小的四倍的磁盘空间。  
+## <a name="storage-capacity"></a>存储容量  
+ 使用 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于未为内存优化表保留索引，因此不包括索引大小。 确定此大小后，您需要提供大小为持久内存中表大小的四倍的磁盘空间。  
   
-## 存储 IOPS  
+## <a name="storage-iops"></a>存储 IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 会大大增加您的工作负荷吞吐量。 因此，确保 IO 不成为瓶颈非常重要。  
   
 -   在将基于磁盘的表迁移到内存优化表时，请确保事务日志位于可支持增加事务日志活动的存储介质上。 例如，如果存储介质以 100 MB/秒的速度支持事务日志操作，并且内存优化表产生 5 倍以上的性能，则事务日志的存储介质必须还能支持 5 倍的性能改进，从而防止事务日志活动成为性能瓶颈。  
@@ -36,10 +40,10 @@ caps.handback.revision: 7
   
 -   如果你有偶数个主轴，则与 SQL Server 2014 中不同，检查点文件将跨所有主轴均匀分布。  
   
-## 加密  
+## <a name="encryption"></a>加密  
  在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，作为在数据库上启用 TDE 的操作的一部分，将对内存优化表的存储进行加密。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

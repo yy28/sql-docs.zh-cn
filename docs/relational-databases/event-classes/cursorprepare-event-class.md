@@ -1,29 +1,33 @@
 ---
 title: "CursorPrepare 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorPrepare 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorPrepare event class
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 92c50db79b48036f846096222b66d71a2609d1e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# CursorPrepare 事件类
+# <a name="cursorprepare-event-class"></a>CursorPrepare 事件类
   **CursorPrepare** 事件类描述了应用程序编程接口 (API) 游标中发生的游标准备事件。 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将与游标关联的 SELECT 语句编译到执行计划中但不创建该游标时，就会发生游标准备事件。  
   
  **CursorPrepare** 事件类包括在记录游标性能的跟踪中。 当跟踪中包括 **CursorPrepare** 事件类时，所造成的开销数量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   
-## CursorPrepare 事件类的数据列  
+## <a name="cursorprepare-event-class-data-columns"></a>CursorPrepare 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,19 +41,19 @@ caps.handback.revision: 32
 |**Handle**|**int**|事件类的处理程序。|33|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**LoginName**|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“域\用户名”）。|11|是|  
+|**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“域\用户名”）。|11|是|  
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  
 |**RequestID**|**int**|准备了游标的请求标识。|49|是|  
-|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|事件开始的时间（如果可用）。|14|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [游标](../../relational-databases/cursors.md)  

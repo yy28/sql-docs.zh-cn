@@ -1,26 +1,30 @@
 ---
-title: "对 SQL Server 对象和版本的 DAC 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据层应用程序 [SQL Server], 支持的对象"
-  - "对象 [SQL Server], 数据层应用程序"
+title: "DAC 对 SQL Server 对象和版本的支持 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对 SQL Server 对象和版本的 DAC 支持
-  数据层应用程序 (DAC) 支持最常用的[!INCLUDE[ssDE](../../includes/ssde-md.md)]对象。  
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
+  数据层应用程序 (DAC) 支持最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对象。  
   
  **本主题内容**  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都支持导出和提取。  
   
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 和所有版本的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 都支持所有操作。  
+-   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 和所有版本的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]都支持所有操作。  
   
 -   在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 或更高版本以及 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 或更高版本上支持所有操作。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> 数据部署限制  
  请注意 SQL Server 2012 SP1 中 DAC Framework 数据部署引擎的以下这些保真度限制。 这些限制适用于以下 DAC Framework 操作：部署或发布 .dacpac 文件，以及导入 .bacpac 文件。  
   
-1.  sql_variant 列中特定条件和基类型的元数据丢失。 在受影响的情况下，你将会看到一条包含以下消息的警告：**由 DAC Framework 部署时不保留 sql_variant 列中使用的特定数据类型的特定属性。**  
+1.  sql_variant 列中特定条件和基类型的元数据丢失。 在受影响的情况下，你将会看到一条包含以下消息的警告：  **由 DAC Framework 部署时不保留 sql_variant 列中使用的特定数据类型的特定属性。**  
   
     -   MONEY、SMALLMONEY、NUMERIC、DECIMAL 基类型：不保留精度。  
   
@@ -110,11 +114,11 @@ caps.handback.revision: 19
   
 -   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 – 请参阅上述类别 3 - 但将继续显示其他警告。  
   
-     有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅[此主题](http://go.microsoft.com/fwlink/?LinkId=267087)。  
+     有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅 [此主题](http://go.microsoft.com/fwlink/?LinkId=267087)。  
   
 -   **解决方法** – 提取和导出操作将完全保真的 BCP 数据文件写入 .dacpac 或 .bacpac 文件。 若要避免限制，请使用 SQL Server BCP.exe 命令行实用工具将完全保真数据从 DAC 包部署到目标数据库。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

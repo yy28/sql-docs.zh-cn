@@ -1,23 +1,27 @@
 ---
 title: "创建由系统控制版本的临时表 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 caps.latest.revision: 20
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建由系统控制版本的临时表
+# <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   根据指定历史记录表的方式，有三种方法可创建由系统版本的临时表：  
@@ -28,7 +32,7 @@ caps.handback.revision: 20
   
 -   使用事先创建的用户定义的历史记录表创建临时表：创建最满足你的需求的历史记录表，然后在临时表创建过程中引用该表。  
   
-## 使用匿名历史记录表创建临时表  
+## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>使用匿名历史记录表创建临时表  
  使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建临时表的最简单方法，因为它不需要在 **SYSTEM_VERSIONING** 子句中指定任何参数。 在下面的示例中，将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
   
 ```  
@@ -46,11 +50,11 @@ WITH (SYSTEM_VERSIONING = ON)
 ;  
 ```  
   
-### 重要提示  
+### <a name="important-remarks"></a>重要提示  
   
--   由系统版本的临时表必须已定义主键，并且已定义且只定义了一个 **PERIOD FOR SYSTEM_TIME**（其中包含两个 datetime2 列，声明为 **GENERATED ALWAYS AS ROW START / END**）  
+-   由系统版本的临时表必须已定义主键，并且已定义且只定义了一个 **PERIOD FOR SYSTEM_TIME** （其中包含两个 datetime2 列，声明为 **GENERATED ALWAYS AS ROW START / END**）  
   
--   **PERIOD** 列始终被认为不可为 null，即使未指定是否为 null，也是如此。 如果将 **PERIOD** 列显式定义为可为 null，则 **CREATE TABLE** 语句将失败。  
+-   **PERIOD** 列始终被认为不可为 null，即使未指定是否为 null，也是如此。 如果将  **PERIOD** 列显式定义为可为 null，则 **CREATE TABLE** 语句将失败。  
   
 -   历史记录表必须在列数、列名、排序和数据类型方面始终与当前表或临时表架构一致。  
   
@@ -62,9 +66,9 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>*）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。  
   
--   若要将当前表创建为内存优化表，请参阅[系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
+-   若要将当前表创建为内存优化表，请参阅 [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
   
-## 使用默认历史记录表创建临时表  
+## <a name="creating-a-temporal-table-with-a-default-history-table"></a>使用默认历史记录表创建临时表  
  如果想要控制命名并仍依赖于系统创建具有默认配置的历史记录表，使用默认历史记录表创建临时表是一个方便的选项。 在下面的示例中，将在显式定义历史记录表的名称的情况下，创建启用了系统版本控制的新表。  
   
 ```  
@@ -85,7 +89,7 @@ WITH
 ;  
 ```  
   
-### 重要提示  
+### <a name="important-remarks"></a>重要提示  
  将使用适用于创建“匿名”历史记录表的相同规则来创建历史记录表，而以下规则专门适用于命名的历史记录表。  
   
 -   对于 **HISTORY_TABLE** 参数，架构名称是必需的。  
@@ -94,7 +98,7 @@ WITH
   
 -   如果 **HISTORY_TABLE** 参数指定的表已存在，则将根据新创建的临时表就 [schema consistency and temporal data consistency](http://msdn.microsoft.com/library/dn935015.aspx)（架构一致性和临时数据一致性）对其进行验证。 如果指定的历史记录表无效， **CREATE TABLE** 语句将失败。  
   
-## 使用用户定义的历史记录表创建临时表  
+## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>使用用户定义的历史记录表创建临时表  
  如果用户想要指定具有特定存储选项和其他索引的历史记录表，则使用用户定义的历史记录表创建临时表是一个方便的选项。 在下面的示例中，将使用与要创建的临时表一致的架构创建用户定义的历史记录表。 将为此用户定义的历史记录表创建聚集列存储索引和其他非聚集行存储（B 树）索引，以便进行点查找。 创建此用户定义的历史记录表后，将通过将用户定义的历史记录表指定为默认历史记录表，创建由系统控制版本的临时表。  
   
 ```  
@@ -127,7 +131,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
 ;  
 ```  
   
-### 重要提示  
+### <a name="important-remarks"></a>重要提示  
   
 -   如果你打算对历史数据运行使用聚合或窗口函数的分析查询，则创建聚集列存储作为主索引是强烈建议的选项，因为这样会有非常好的数据压缩和查询性能。  
   
@@ -135,7 +139,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   历史记录表不能具有一个主键、外键、唯一索引、表约束或触发器。 不能配置它以进行更改数据捕获、更改跟踪、事务复制或合并复制。  
   
-## 将非临时表更改为由系统控制版本的临时表  
+## <a name="alter-non-temporal-table-to-be-system-versioned-temporal-table"></a>将非临时表更改为由系统控制版本的临时表  
  当你需要使用现有表启用系统版本控制时，如当你希望将自定义的临时解决方案迁移到内置支持时。   
 例如，你可能有一组表使用触发器实现了版本控制。 使用临时系统版本控制并不太复杂，并提供了其他好处，包括：  
   
@@ -149,7 +153,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
  转换现有表时，请考虑使用 **HIDDEN** 子句隐藏新的 **PERIOD** 列，以免影响未设计为处理新列的现有应用程序。  
   
-### 将版本控制添加到非临时表  
+### <a name="adding-versioning-to-non-temporal-tables"></a>将版本控制添加到非临时表  
  如果你想要开始跟踪包含数据的非临时表的更改，则需要添加 **PERIOD** 定义，并可以选择为 SQL Server 将为你创建的空历史记录表提供名称：  
   
 ```  
@@ -168,7 +172,7 @@ ALTER TABLE InsurancePolicy
 ;  
 ```  
   
-#### 重要提示  
+#### <a name="important-remarks"></a>重要提示  
   
 -   将具有默认值的非 null 列添加到一张包含数据的现有表对 SQL Server Enterprise Edition（对其是一种元数据操作）以外的所有版本是一种数据大小操作。 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表来说，添加非 null 列会是代价高昂的操作。  
   
@@ -180,9 +184,9 @@ ALTER TABLE InsurancePolicy
   
 -   添加期间将对当前表执行数据一致性检查，以确保期间列的默认值有效。  
   
--   如果在启用 **SYSTEM_VERSIONING** 时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 **DATA_CONISTENCY_CHECK = OFF** 指定为一个附加参数，则可跳过此项检查。  
+-   如果在启用 **SYSTEM_VERSIONING**时指定了现有历史记录表，则将对当前表和历史记录表同时执行临时数据一致性检查。 如果你将 **DATA_CONISTENCY_CHECK = OFF** 指定为一个附加参数，则可跳过此项检查。  
   
-### 将现有表迁移到内置支持  
+### <a name="migrate-existing-tables-to-built-in-support"></a>将现有表迁移到内置支持  
  此示例演示如何基于触发器将现有解决方案迁移到内置临时支持。 对于此示例，我们假定当前自定义解决方案将当前数据和历史数据拆分为两个单独的用户表（**ProjectTaskCurrent** 和 **ProjectTaskHistory**）。 如果现有解决方案使用单个表来存储实际行和历史行，则应在执行此示例所示的此迁移步骤前将数据拆分为两个表：  
   
 ```  
@@ -200,18 +204,18 @@ ALTER TABLE ProjectTaskCurrent
 ;  
 ```  
   
-#### 重要提示  
+#### <a name="important-remarks"></a>重要提示  
   
--   引用 **PERIOD** 定义中的现有列会隐式将 generated_always_type 更改为这些列的 **AS_ROW_START** 和 **AS_ROW_END**。  
+-   引用 **PERIOD** 定义中的现有列会隐式将 generated_always_type 更改为这些列的 **AS_ROW_START** 和 **AS_ROW_END** 。  
   
 -   添加 **PERIOD** 将对当前表执行数据一致性检查，以确保期间列的现有值有效  
   
 -   强烈建议使用 **DATA_CONSISTENCY_CHECK = ON** 设置 **SYSTEM_VERSIONING** 来对现有数据强制执行数据一致性检查。  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [管理版本由系统控制的临时表中历史数据的保留期](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -223,3 +227,4 @@ ALTER TABLE ProjectTaskCurrent
  [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
 title: "创建用户定义聚合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚合函数 [SQL Server], 用户定义"
-  - "用户定义函数 [CLR 集成]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregate functions [SQL Server], user-defined
+- user-defined functions [CLR integration]
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcade160089ec8e066f830804dab88715ceffcaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建用户定义聚合
+# <a name="create-user-defined-aggregates"></a>创建用户定义聚合
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建在 CLR 程序集中进行编程的数据库对象。 能够利用由 CLR 提供的众多编程模型的数据库对象包括触发器、存储过程、函数、聚合函数和类型。  
   
- 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中提供的内置聚合函数一样，用户定义聚合函数对一组值进行计算，然后返回单个值。  
+ 与 [!INCLUDE[tsql](../../includes/tsql-md.md)]中提供的内置聚合函数一样，用户定义聚合函数对一组值进行计算，然后返回单个值。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建用户定义聚合函数包括下列步骤：  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 28
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中部署 SQL Server 项目将在为该项目指定的数据库中注册程序集。 部署项目还会在数据库中为使用 **SqlUserDefinedAggregate** 属性注释的所有类定义创建用户定义聚合。 有关详细信息，请参阅 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)。  
   
 > [!NOTE]  
->  默认情况下，关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 CLR 代码的功能。 可以创建、更改和删除将引用托管代码模块的数据库对象，但是不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用，除非使用 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 选项。  
+>  默认情况下，关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 CLR 代码的功能。 可以创建、更改和删除将引用托管代码模块的数据库对象，但是不能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用，除非使用 [sp_configure (Transact-SQL)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) 启用了 [clr enabled](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)选项。  
   
  **创建、修改或删除程序集**  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 28
   
 -   [CREATE AGGREGATE (Transact-SQL)](../../t-sql/statements/create-aggregate-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

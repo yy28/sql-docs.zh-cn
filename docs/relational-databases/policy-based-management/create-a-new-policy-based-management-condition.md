@@ -1,25 +1,29 @@
 ---
 title: "创建新的基于策略的管理条件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于策略的管理, 创建策略条件"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建新的基于策略的管理条件
-  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建基于策略的管理条件。  
+# <a name="create-a-new-policy-based-management-condition"></a>创建新的基于策略的管理条件
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建基于策略的管理条件。  
   
  **本主题内容**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建条件  
+#### <a name="to-create-a-condition"></a>创建条件  
   
 1.  在“对象资源管理器”中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
   
@@ -61,3 +65,4 @@ caps.handback.revision: 11
 9. 完成后，单击 **“确定”**。  
   
   
+

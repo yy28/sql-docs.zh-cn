@@ -1,26 +1,30 @@
 ---
 title: "创建数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库 [SQL Server], 创建"
-  - "数据库创建 [SQL Server], SQL Server Management Studio"
-  - "创建数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建数据库
+# <a name="create-a-database"></a>创建数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建数据库。  
   
  **本主题内容**  
@@ -66,7 +70,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建数据库  
+#### <a name="to-create-a-database"></a>创建数据库  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  若要更改恢复模式，请选择 **“选项”** 页，然后从列表中选择一个恢复模式。  
   
-9. 若要更改数据库选项，请选择 **“选项”** 页，然后修改数据库选项。 有关各选项的详细说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+9. 若要更改数据库选项，请选择 **“选项”** 页，然后修改数据库选项。 有关各选项的详细说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 10. 若要添加新文件组，请单击 **“文件组”** 页。 单击 **“添加”** ，然后输入文件组的值。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建数据库  
+#### <a name="to-create-a-database"></a>创建数据库  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -130,10 +134,10 @@ GO
   
  有关更多示例，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)   
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

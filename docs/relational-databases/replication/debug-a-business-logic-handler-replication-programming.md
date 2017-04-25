@@ -1,42 +1,46 @@
 ---
-title: "调试业务逻辑处理程序（复制编程） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "合并复制业务逻辑处理程序 [SQL Server 复制]"
-  - "业务逻辑处理程序 [SQL Server 复制]"
-  - "BusinessLogicModule 类"
+title: "调试业务逻辑处理程序（复制编程）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- merge replication business logic handlers [SQL Server replication]
+- business logic handlers [SQL Server replication]
+- BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 调试业务逻辑处理程序（复制编程）
-  在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅 [执行合并同步期间业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
+# <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
+  在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
  合并复制协调器 (replrec.dll) 调用包含业务逻辑的托管代码程序集。 在大多数情况下，replrec.dll 和自定义业务逻辑是在运行合并代理的计算机上执行的（对于请求订阅，在订阅服务器上执行；对于推送订阅，在分发服务器上执行）。 在 Web 同步或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器的情况下，协调器和自定义业务逻辑在 Web 服务器上执行。  
   
-### 在本地计算机上调试业务逻辑处理程序  
+### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>在本地计算机上调试业务逻辑处理程序  
   
-1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅 [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md) 和 [创建、 修改和删除发布和项目和 #40;复制和 #41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)。  
+1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)和[创建、修改和删除发布和项目（复制）](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)。  
   
 2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   
 3.  在以编程的方式同步启动合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中创建一个复制管理对象 (RMO) 项目。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
-4.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可以在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
+4.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
   
 5.  在调试模式下生成业务逻辑处理程序，并将程序集和调试符号文件 (.pdb) 部署在步骤 1 中注册的位置。  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 34
   
 8.  假定未设置任何其他断点且复制了正确的命令，则执行将在到达业务逻辑处理程序中的断点时停止。  
   
-### 在 Web 服务器上使用 Web 同步或为 SQL Server Compact 订阅服务器调试业务逻辑处理程序  
+### <a name="to-debug-a-business-logic-handler-on-a-web-server-using-web-synchronization-or-for-a-sql-server-compact-subscriber"></a>在 Web 服务器上使用 Web 同步或为 SQL Server Compact 订阅服务器调试业务逻辑处理程序  
   
 1.  配置发布和分发，创建一个发布，然后创该发布的建一个请求订阅。 该发布必须支持 Web 同步或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。  
   
 2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   
-3.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可以在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
+3.  在业务逻辑处理程序代码中，于正在调试的方法中或类构造函数中设置一个断点。 有关可在业务逻辑处理程序中实现的方法的详细信息，请参阅 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主题。  
   
 4.  在调试模式下生成业务逻辑处理程序，并将程序集和调试符号文件 (.pdb) 部署在 Web 服务器上步骤 1 中注册的位置。  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
   
 11. 假定未设置任何其他断点且复制了正确的命令，则执行将在到达业务逻辑处理程序中的断点时停止。  
   
-## 另请参阅  
- [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+## <a name="see-also"></a>另请参阅  
+ [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

@@ -1,29 +1,33 @@
 ---
 title: "创建启用了 FILESTREAM 的数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], 启用了 FILESTREAM 的数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], FILESTREAM-enabled databases
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fecfc5d5d8ac9460af07fd7cc42849aefdba2a09
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建启用了 FILESTREAM 的数据库
+# <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
   本主题说明如何创建支持 FILESTREAM 的数据库。 由于 FILESTREAM 使用一种特殊类型的文件组，因此，在创建数据库时，必须至少为一个文件组指定 CONTAINS FILESTREAM 子句。  
   
  一个 FILESTREAM 文件组可以包含多个文件。 有关演示如何创建包含多个文件的 FILESTREAM 文件组的代码示例，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
-### 创建启用了 FILESTREAM 的数据库  
+### <a name="to-create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
@@ -34,12 +38,12 @@ caps.handback.revision: 16
   
 3.  若要生成数据库，请单击 **“执行”**。  
   
-## 示例  
- 下面的代码示例创建一个名为 `Archive` 的数据库。 该数据库包含三个文件组： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是不能包含 FILESTREAM 数据的常规文件组。 `FileStreamGroup1` 是 `FILESTREAM` 文件组。  
+## <a name="example"></a>示例  
+ 下面的代码示例创建一个名为 `Archive`的数据库。 该数据库包含三个文件组： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是不能包含 FILESTREAM 数据的常规文件组。 `FileStreamGroup1` 是 `FILESTREAM` 文件组。  
   
  [!code-sql[FILESTREAM#FS_CreateDB](../../relational-databases/blob/codesnippet/tsql/create-a-filestream-enab_1.sql)]  
   
- 对于 `FILESTREAM` 文件组， `FILENAME` 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 在此示例中， `c:\data` 必须存在。 但是，在执行 `filestream1` 语句时，`CREATE DATABASE` 子文件夹不能存在。 有关语法的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 对于 `FILESTREAM` 文件组， `FILENAME` 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 在此示例中， `c:\data` 必须存在。 但是，在执行 `filestream1` 语句时， `CREATE DATABASE` 子文件夹不能存在。 有关语法的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
  在运行上面的示例后，filestream.hdr 文件和 $FSLOG 文件夹将出现在 c:\Data\filestream1 文件夹中。 filestream.hdr 文件是 FILESTREAM 容器的头文件。  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 16
   
  对于现有数据库，可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句来添加 FILESTREAM 文件组。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
   

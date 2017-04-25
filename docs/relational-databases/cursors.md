@@ -1,30 +1,34 @@
 ---
 title: "游标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "结果 [SQL Server], 游标"
-  - "Transact-SQL 游标, 关于游标"
-  - "游标 [SQL Server]"
-  - "数据访问 [SQL Server], 游标"
-  - "结果集 [SQL Server], 游标"
-  - "请求游标"
-  - "游标 [SQL Server], 关于游标"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 游标
+# <a name="cursors"></a>游标
   关系数据库中的操作会对整个行集起作用。 例如，由 SELECT 语句返回的行集包括满足该语句的 WHERE 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序，特别是交互式联机应用程序，并不总能将整个结果集作为一个单元来有效地处理。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  
   
  游标通过以下方式来扩展结果处理：  
@@ -39,7 +43,7 @@ caps.handback.revision: 29
   
 -   提供脚本、存储过程和触发器中用于访问结果集中的数据的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  
   
-## 概念  
+## <a name="concepts"></a>概念  
  游标实现  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持三种游标实现。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 29
   
  由于游标无法向后滚动，则在提取行后对数据库中的行进行的大多数更改通过游标均不可见。 当值用于确定所修改的结果集（例如更新聚集索引涵盖的列）中行的位置时，修改后的值通过游标可见。  
   
- 尽管数据库 API 游标模型将只进游标视为一种游标类型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不这样。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将只进和滚动视为可应用于静态游标、键集驱动游标和动态游标的选项。 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标支持只进静态游标、键集驱动游标和动态游标。 数据库 API 游标模型则假定静态游标、键集驱动游标和动态游标都是可滚动的。 当数据库 API 游标属性设置为只进时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将此游标作为只进动态游标实现。  
+ 尽管数据库 API 游标模型将只进游标视为一种游标类型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不这样。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将只进和滚动视为可应用于静态游标、键集驱动游标和动态游标的选项。 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标支持只进静态游标、键集驱动游标和动态游标。 数据库 API 游标模型则假定静态游标、键集驱动游标和动态游标都是可滚动的。 当数据库 API 游标属性设置为只进时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将此游标作为只进动态游标实现。  
   
  静态  
  静态游标的完整结果集是打开游标时在 **tempdb** 中生成的。 静态游标总是按照打开游标时的原样显示结果集。 静态游标在滚动期间很少或根本检测不到变化，但消耗的资源相对很少。  
@@ -77,7 +81,7 @@ caps.handback.revision: 29
  Dynamic  
  动态游标与静态游标相对。 当滚动游标时，动态游标反映结果集中所做的所有更改。 结果集中的行数据值、顺序和成员在每次提取时都会改变。 所有用户做的全部 UPDATE、INSERT 和 DELETE 语句均通过游标可见。 如果使用 API 函数（如 **SQLSetPos** ）或 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF 子句通过游标进行更新，它们将立即可见。 在游标外部所做的更新直到提交时才可见，除非将游标的事务隔离级别设为未提交读。 动态游标计划从不使用空间索引。  
   
-## 请求游标  
+## <a name="requesting-a-cursor"></a>请求游标  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种请求游标的方法：  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -98,7 +102,7 @@ caps.handback.revision: 29
   
  如果既未请求 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标也未请求 API 游标，则默认情况下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将向应用程序返回一个完整的结果集，这个结果集称为默认结果集。  
   
-## 游标进程  
+## <a name="cursor-process"></a>游标进程  
  [!INCLUDE[tsql](../includes/tsql-md.md)] 游标和 API 游标有不同的语法，但下列一般进程适用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 游标：  
   
 1.  将游标与 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的结果集相关联，并且定义该游标的特性，例如是否能够更新游标中的行。  
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  关闭游标。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [游标行为](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)[如何实现游标](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DECLARE CURSOR (Transact-SQL)](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [游标 (Transact-SQL)](../t-sql/language-elements/cursors-transact-sql.md)   
  [游标函数 (Transact-SQL)](../t-sql/functions/cursor-functions-transact-sql.md)   

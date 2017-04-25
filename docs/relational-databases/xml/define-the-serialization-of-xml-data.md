@@ -1,33 +1,37 @@
 ---
 title: "定义 XML 数据的序列化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "实体化规则 [SQL Server 中的 XML]"
-  - "序列化"
-  - "重新分析序列化的 XML 结构"
-  - "编码 [SQL Server 中的 XML]"
-  - "XML [SQL Server], 序列化"
-  - "xml 数据类型 [SQL Server], 序列化"
-  - "类型化的 XML"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entitization rules [XML in SQL Server]
+- serialization
+- reparsing serialized XML structures
+- encoding [XML in SQL Server]
+- XML [SQL Server], serialization
+- xml data type [SQL Server], serialization
+- typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 定义 XML 数据的序列化
+# <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
   将 xml 数据类型显式或隐式转换为 SQL 字符串或二进制类型时，将根据本主题中所述的规则对 xml 数据类型的内容进行序列化。  
   
-## 序列化编码  
+## <a name="serialization-encoding"></a>序列化编码  
  如果 SQL 目标类型是 VARBINARY，则将使用前面具有 UTF-16 字节顺序标记且没有 XML 声明的 UTF-16 对结果进行序列化。 如果目标类型太小，将会引发错误。  
   
  例如：  
@@ -68,10 +72,10 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
  将 XML 结果返回到客户端时，将用 UTF-16 编码发送数据。 然后，客户端提供程序将根据 API 规则显示该数据。  
   
-## XML 结构的序列化  
+## <a name="serialization-of-the-xml-structures"></a>XML 结构的序列化  
  用通常的方式对 **xml** 数据类型的内容进行序列化。 确切地说，就是将元素节点映射到元素标记，将文本节点映射到文本内容。 不过，对字符进行实体化的环境以及对类型化的原子值进行序列化的方法将在下面两节中进行介绍。  
   
-## 序列化期间 XML 字符的实体化  
+## <a name="entitization-of-xml-characters-during-serialization"></a>序列化期间 XML 字符的实体化  
  应该能够对每个序列化的 XML 结构进行重新分析。 因此，必须以实体化方式对某些字符进行序列化，从而在整个 XML 分析器的规范化阶段保留这些字符的往返能力。 不过，还必须对某些字符进行实体化，以便文档的格式正确并能够被分析。 下面是序列化期间应用的实体化规则：  
   
 -   如果字符 &、\< 和 > 出现在属性值或元素内容中，始终将它们分别实体化为 &amp;、&lt; 和 &gt;。  
@@ -109,7 +113,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
- 请注意，[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)会产生 xml 数据类型实例。 因此，将根据前面介绍的规则对转换为字符串或二进制类型的 **query()** 方法的任何结果进行实体化。 如果要获取不经过实体化的字符串值，则应改用 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)。 下面是使用 **query()** 方法的示例：  
+ 请注意， [query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md) 会产生 xml 数据类型实例。 因此，将根据前面介绍的规则对转换为字符串或二进制类型的 **query()** 方法的任何结果进行实体化。 如果要获取不经过实体化的字符串值，则应改用 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md) 。 下面是使用 **query()** 方法的示例：  
   
 ```  
 declare @x xml  
@@ -135,7 +139,7 @@ select @x.value('(/a/text())[1]', 'nvarchar(100)')
 This example contains an entitized char: <.  
 ```  
   
-## 对类型化的 xml 数据类型进行序列化  
+## <a name="serializing-a-typed-xml-data-type"></a>对类型化的 xml 数据类型进行序列化  
  类型化的 **xml** 数据类型实例包括根据其 XML 架构类型类型化的值。 根据这些值的 XML 架构类型对这些值进行序列化，使用的格式与 XQuery 转换为 xs:string 所产生的格式相同。 有关详细信息，请参阅 [XQuery 中的类型转换规则](../../xquery/type-casting-rules-in-xquery.md)。  
   
  例如，下面的示例显示了将 xs:double 值 1.34e1 序列化为 13.4：  
@@ -148,7 +152,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  将返回字符串值 13.4。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XQuery 中的类型转换规则](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

@@ -1,45 +1,49 @@
 ---
 title: "将 SQL Server 数据库部署到 Microsoft Azure 虚拟机 | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "部署数据库"
-  - "部署到 Azure VM"
-  - "迁移到 Azure"
-  - "Windows Azure 虚拟机"
-  - "迁移到 Azure VM"
-  - "迁移到云"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "部署数据库向导"
-  - "将 SQL Server 数据库部署到 Azure"
-  - "Azure VM"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
   使用“将数据库部署到 Microsoft Azure VM”向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Microsoft Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导使用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
   
  不能使用此向导进行差异备份。 此向导不会覆盖具有相同数据库名称的现有数据库。 若要替换 VM 上的现有数据库，必须先删除现有数据库或更改数据库名称。 如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
@@ -61,7 +65,7 @@ caps.handback.revision: 30
 -   [向导页](#wizard_pages)  
   
 > [!NOTE]  
->  有关此向导的详细分步演练，请参阅[将 SQL Server 数据库迁移到 Azure VM 中的 SQL Server](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)  
+>  有关此向导的详细分步演练，请参阅 [将 SQL Server 数据库迁移到 Azure VM 中的 SQL Server](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)  
   
 ##  <a name="before_you_begin"></a> 开始之前  
  若要完成此向导，您必须能够提供以下信息并准备好以下这些配置设置：  
@@ -73,7 +77,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  SQL Server 当前支持发布配置文件版本 2.0。 要下载支持的发布配置文件版本，请参阅 [下载发布配置文件 2.0](http://go.microsoft.com/fwlink/?LinkId=396421)。  
   
--   上传到 Microsoft Azure 订阅的管理证书。  使用 Powershell Cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630)) 创建管理证书。  然后将管理证书上传到 Microsoft Azure 订阅。  有关上传管理证书的详细信息，请参阅[上传 Azure 管理 API 管理证书](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)。  [Azure 云服务的证书概述](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)中用于创建管理证书的示例语法： 
+-   上传到 Microsoft Azure 订阅的管理证书。  使用 Powershell Cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633(v=wps.630))创建管理证书。  然后将管理证书上传到 Microsoft Azure 订阅。  有关上传管理证书的详细信息，请参阅 [上传 Azure 管理 API 管理证书](https://azure.microsoft.com/en-us/documentation/articles/azure-api-management-certs/)。  [Azure 云服务的证书概述](https://azure.microsoft.com/en-us/documentation/articles/cloud-services-certs-create/)中用于创建管理证书的示例语法： 
 
     ```powershell  
     $cert = New-SelfSignedCertificate -DnsName yourdomain.cloudapp.net -CertStoreLocation "cert:\LocalMachine\My"
@@ -90,9 +94,9 @@ caps.handback.revision: 30
   
 -   如果将数据库部署到现有虚拟机，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置为侦听 TCP/IP 端口。  
   
--   计划用于创建虚拟机的 Microsoft Azure 虚拟机或库映像必须已配置并正在运行 [SQL Server 的云适配器](Cloud%20Adapter%20for%20SQL%20Server.md)。  
+-   计划用于创建虚拟机的 Microsoft Azure 虚拟机或库映像必须已配置并正在运行 [SQL Server 的云适配器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 。  
   
--   必须使用专用端口 11435 在 Microsoft Azure 网关上为 [SQL Server 的云适配器](Cloud%20Adapter%20for%20SQL%20Server.md)配置开放终结点。  
+-   必须使用专用端口 11435 在 Microsoft Azure 网关上为 [SQL Server 的云适配器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 配置开放终结点。  
   
  此外，如果您计划将数据库部署到现有 Windows Azure VM 中，则必须还能够提供：  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 30
   
 -   对要部署的数据库具有备份操作员权限的凭据，它们来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的源实例。  
   
- 有关在 Microsoft Azure 虚拟机中运行 SQL Server 的详细信息，请参阅[在 Azure 门户中设置 SQL Server 虚拟机](https://msdn.microsoft.com/library/dn133141.aspx)和[将 SQL Server 数据库迁移到 Azure VM 中的 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)。  
+ 有关在 Microsoft Azure 虚拟机中运行 SQL Server 的详细信息，请参阅 [在 Azure 门户中设置 SQL Server 虚拟机](https://msdn.microsoft.com/library/dn133141.aspx) 和 [将 SQL Server 数据库迁移到 Azure VM 中的 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)。  
   
  在运行 Windows Server 操作系统的计算机上，您必须使用以下配置设置来运行此向导：  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 30
 
  针对此操作的数据库大小限制为 1 TB。  
   
- 适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的 SQL Server Management Studio 中提供了此部署功能。  
+ 适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的 SQL Server Management Studio 中提供了此部署功能。  
   
  此部署功能仅适用于用户数据库；不支持部署系统数据库。  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 30
   
 -   **配置文件结构**  
   
-    -   \< DeploymentSettings>  
+    -   \<DeploymentSettings>  
   
         -   <OtherSettings  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 30
   
 -   [Windows Azure 登录](#Azure_sign-in)  
   
--   [部署设置](#Deployment_settings)  
+-   [“部署设置”](#Deployment_settings)  
   
 -   [摘要](#Summary)  
   
@@ -247,9 +251,9 @@ caps.handback.revision: 30
 在该字段中，指定可供 Microsoft Azure VM 服务访问的共享文件夹。  
   
 ##  <a name="Azure_sign-in"></a> Windows Azure 登录  
- 使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903)和[问题疑难解答](https://technet.microsoft.com/dn197220)。  
+ 使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [问题疑难解答](https://technet.microsoft.com/dn197220)。  
   
-##  <a name="Deployment_settings"></a> 部署设置
+##  <a name="Deployment_settings"></a> “部署设置”
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
   
  **Microsoft Azure 虚拟机**  
@@ -283,8 +287,8 @@ caps.handback.revision: 30
   
  单击 **“完成”** 关闭向导。  
   
-## 另请参阅  
- [SQL Server 的云适配器](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 的云适配器](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [数据库生命周期管理](../../relational-databases/database-lifecycle-management.md)   
  [导出数据层应用程序](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [导入 BACPAC 文件以创建新的用户数据库](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ caps.handback.revision: 30
  [准备迁移到 Windows Azure 虚拟机中的 SQL Server](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

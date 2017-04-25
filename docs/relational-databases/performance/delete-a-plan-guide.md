@@ -1,25 +1,29 @@
 ---
 title: "删除计划指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "计划指南 [SQL Server], 删除"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除计划指南
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除计划指南。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，您还可以删除数据库中的所有计划指南。  
+# <a name="delete-a-plan-guide"></a>删除计划指南
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除计划指南。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，您还可以删除数据库中的所有计划指南。  
   
  **本主题内容**  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除计划指南  
+#### <a name="to-delete-a-plan-guide"></a>删除计划指南  
   
 1.  单击加号以展开要从中删除计划指南的数据库，然后单击加号以展开 **“可编程性”** 文件夹。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除单个计划指南  
+#### <a name="to-delete-a-single-plan-guide"></a>删除单个计划指南  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 7
     GO  
     ```  
   
-#### 删除数据库中的所有计划指南  
+#### <a name="to-delete-all-plan-guides-in-a-database"></a>删除数据库中的所有计划指南  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

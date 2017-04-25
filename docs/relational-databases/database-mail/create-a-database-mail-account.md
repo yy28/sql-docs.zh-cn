@@ -1,32 +1,36 @@
 ---
 title: "创建数据库邮件帐户 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库邮件 [SQL Server], 帐户"
-  - "帐户 [数据库邮件]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], accounts
+- accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建数据库邮件帐户
+# <a name="create-a-database-mail-account"></a>创建数据库邮件帐户
   使用 **“数据库邮件配置向导”** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以创建数据库邮件帐户。  
   
--   **准备工作：**  [先决条件](#Prerequisites)  
+-   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
 -   **使用以下方法创建数据库邮件帐户：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [用于配置数据库邮件的后续步骤](#FollowUp)  
+-   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

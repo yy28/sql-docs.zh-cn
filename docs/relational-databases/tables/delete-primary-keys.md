@@ -1,29 +1,33 @@
 ---
 title: "删除主键 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除主键"
-  - "删除主键"
-  - "主键 [SQL Server], 删除"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing primary keys
+- deleting primary keys
+- primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dbc3eb4968f27665df80e414a590f8b4e3df7b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除主键
+# <a name="delete-primary-keys"></a>删除主键
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除主键。 在删除主键时，也将删除相应的索引。  
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除主键。 在删除主键时，也将删除相应的索引。  
   
  **本主题内容**  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用对象资源管理器删除主键约束  
+#### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>使用对象资源管理器删除主键约束  
   
 1.  在对象资源管理器中，展开包含主键的表，再展开 **“键”**。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 15
   
 3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
   
-#### 使用表设计器删除主键约束  
+#### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>使用表设计器删除主键约束  
   
 1.  在对象资源管理器中，右键单击具有主键的表，再单击“设计”。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除主键约束  
+#### <a name="to-delete-a-primary-key-constraint"></a>删除主键约束  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

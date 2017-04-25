@@ -1,31 +1,35 @@
 ---
 title: "Database Mirroring State Change 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 数据库镜像"
-  - "数据库镜像 [SQL Server], 事件通知"
-  - "Database Mirroring State Change 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- database mirroring [SQL Server], event notifications
+- Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c17b166b850dbd10020927efb4398a91d6db81df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Database Mirroring State Change 事件类
+# <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件类
   **Database Mirroring State Change** 事件类指明镜像数据库的状态改变时间。 此事件类包括在监视镜像数据库条件的跟踪中。  
   
  当 **Database Mirroring State Change** 事件类包括在跟踪中后，相关开销会较低。 如果镜像数据库的状态增多，开销可能会上升。  
   
-## Data Database Mirroring State Change 事件类的数据列  
+## <a name="data-database-mirroring-state-change-event-class-data-columns"></a>Data Database Mirroring State Change 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,7 +41,7 @@ caps.handback.revision: 31
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
-|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
+|**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
@@ -45,7 +49,7 @@ caps.handback.revision: 31
 |**TextData**|**ntext**|状态改变说明。|1|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

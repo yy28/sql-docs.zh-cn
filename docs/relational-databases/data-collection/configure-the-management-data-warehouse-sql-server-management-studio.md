@@ -1,41 +1,45 @@
 ---
 title: "配置管理数据仓库 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "数据仓库 [SQL Server], 多个实例"
-  - "数据仓库 [SQL Server], 配置"
-  - "配置管理数据仓库向导"
-  - "管理数据仓库, 配置"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置管理数据仓库 (SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
   本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为使用其中一个系统服务帐户（Local System、Network Service 或 Local Service）运行，且创建管理数据仓库的实例与数据收集器的实例不同，则必须将收集组配置为使用代理将数据上载到管理数据仓库。  
   
-### 配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  在数据收集器安装在使用同一管理数据仓库的多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的部署中，使用代理是最佳做法。  
   
-5.  在另一个实例上打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后执行以下任意一项操作：  
+5.  在另一个实例上打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后执行以下任意一项操作：  
   
     -   使用配置管理数据仓库向导为现有的管理数据仓库配置数据收集。  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  可通过为某个登录名选中 **“映射”** 复选框来指定该登录名。  
   
- **数据库角色成员身份：***\<data warehouse name>*  
+ **以下项的数据库角色成员身份：***\<数据仓库名称>*  
  通过单击以下一个或多个选项旁边的复选框，选择登录名映射到的管理数据仓库角色：  
   
 -   **mdw_admin**  
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **关闭**  
  关闭向导。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_syscollector_enable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   

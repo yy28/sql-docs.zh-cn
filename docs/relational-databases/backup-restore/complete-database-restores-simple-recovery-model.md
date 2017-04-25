@@ -1,28 +1,32 @@
 ---
-title: "完整数据库还原（简单恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整数据库还原"
-  - "数据库还原 [SQL Server], 完整数据库"
-  - "还原数据库 [SQL Server], 完整数据库"
-  - "简单恢复模式 [SQL Server]"
-  - "还原 [SQL Server], 数据库"
+title: "完整数据库还原（简单恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- simple recovery model [SQL Server]
+- restoring [SQL Server], database
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d64038885f4344df3fc09c58038a724d5fd11aab
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整数据库还原（简单恢复模式）
+# <a name="complete-database-restores-simple-recovery-model"></a>完整数据库还原（简单恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   数据库完整还原的目的是还原整个数据库。 整个数据库在还原期间处于脱机状态。 在数据库的任何部分变为联机之前，必须将所有数据恢复到同一点，即数据库的所有部分都处于同一时间点并且不存在未提交的事务。  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
  在简单恢复模式下，数据库不能还原到特定备份中的特定时间点。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
   
  **本主题内容：**  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 58
 -   [相关任务](#RelatedTasks)  
   
 > [!NOTE]  
->  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 中的“兼容性支持”部分。  
+>  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
   
 ##  <a name="Overview"></a> 在简单恢复模式下还原数据库的概述  
- 简单恢复模式下的完整数据库还原只涉及一个或两个 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 语句，具体取决于是否需要还原差异数据库备份。 如果只使用完整数据库备份，则只需还原最近的备份，如下图所示。  
+ 简单恢复模式下的完整数据库还原只涉及一个或两个 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句，具体取决于是否需要还原差异数据库备份。 如果只使用完整数据库备份，则只需还原最近的备份，如下图所示。  
   
  ![仅还原完整数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "仅还原完整数据库备份")  
   
@@ -51,17 +55,17 @@ caps.handback.revision: 58
  ![还原完整数据库备份和差异数据库备份](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "还原完整数据库备份和差异数据库备份")  
   
 > [!NOTE]  
->  如果你计划将数据库备份还原到其它服务器实例，请参阅[通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+>  如果你计划将数据库备份还原到其它服务器实例，请参阅 [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
- 用于还原完整数据库备份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 语法是：  
+ 用于还原完整数据库备份的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语法是：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
   
 > [!NOTE]  
 >  如果还打算还原差异数据库备份，则应使用 WITH NORECOVERY。  
   
- 用于还原数据库备份的 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 语句的基本语法是：  
+ 用于还原数据库备份的 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句的基本语法是：  
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
@@ -116,8 +120,8 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## 另请参阅  
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   

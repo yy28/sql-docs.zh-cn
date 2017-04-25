@@ -1,29 +1,33 @@
 ---
 title: "为磁盘文件定义逻辑备份设备 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份设备 [SQL Server], 定义"
-  - "备份设备 [SQL Server], 磁盘"
-  - "磁盘备份设备 [SQL Server]"
-  - "数据库备份 [SQL Server], 磁盘"
-  - "备份数据库 [SQL Server], 磁盘"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], defining
+- backup devices [SQL Server], disks
+- disk backup devices [SQL Server]
+- database backups [SQL Server], disks
+- backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd550f0690603132f53452f064af24e05426398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为磁盘文件定义逻辑备份设备 (SQL Server)
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为磁盘文件定义逻辑备份设备。 逻辑设备是指向特定物理备份设备（磁盘文件或磁带机）的用户定义名称。  将备份写入备份设备后，便会初始化物理设备。  
+# <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>为磁盘文件定义逻辑备份设备 (SQL Server)
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为磁盘文件定义逻辑备份设备。 逻辑设备是指向特定物理备份设备（磁盘文件或磁带机）的用户定义名称。  将备份写入备份设备后，便会初始化物理设备。  
   
  **本主题内容**  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 为磁盘文件定义逻辑备份设备  
+#### <a name="to-define-a-logical-backup-device-for-a-disk-file"></a>为磁盘文件定义逻辑备份设备  
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -74,11 +78,11 @@ caps.handback.revision: 39
   
 6.  若要定义新设备，请单击 **“确定”**。  
   
- 若要备份至此新设备，请将该设备添加到“备份数据库”（“常规”）对话框中的“备份到：”字段。 有关详细信息，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+ 若要备份至此新设备，请将该设备添加到“备份数据库”（“常规”）对话框中的“备份到：”字段。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 为磁盘文件定义逻辑备份  
+#### <a name="to-define-a-logical-backup-for-a-disk-file"></a>为磁盘文件定义逻辑备份  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -93,7 +97,7 @@ EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   

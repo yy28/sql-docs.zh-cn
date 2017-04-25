@@ -1,28 +1,32 @@
 ---
 title: "更改系统版本控制的临时表架构 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更改系统版本控制的临时表架构
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>更改系统版本控制的临时表架构
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   使用 **ALTER TABLE** 语句添加、更改或删除列。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面是一些关于更改临时表架构的示例。  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### 重要提示  
+### <a name="important-remarks"></a>重要提示  
   
 -   若要更改临时表的架构，需要具有对当前和历史记录表的**CONTROL** 权限。  
   
@@ -62,7 +66,7 @@ ALTER TABLE dbo.Department
   
 -   如果你添加不可为 null 的列，或将现有列更改为不可为 null，则必须指定现有行的默认值。 系统将使用相同的值生成额外的默认值，并将其应用于历史记录表。 将 **DEFAULT** 添加到非空表是在所有除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition（在此版本上为元数据操作）以外的版本上的数据操作的大小。  
   
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本上，使用默认值添加 varchar(max)、nvarchar(max)、varbinary(max) 或 XML 列将被视为更新数据操作。  
+-   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本上，使用默认值添加 varchar(max)、nvarchar(max)、varbinary(max) 或 XML 列将被视为更新数据操作。  
   
 -   如果添加列后的行大小超出行大小限制，则不能联机添加新列。  
   
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [管理版本由系统控制的临时表中历史数据的保留期](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

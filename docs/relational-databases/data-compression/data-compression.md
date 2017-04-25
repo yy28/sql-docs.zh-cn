@@ -1,38 +1,42 @@
 ---
 title: "数据压缩 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "页压缩 [数据库引擎]"
-  - "索引 [SQL Server], 压缩"
-  - "压缩索引 [SQL Server]"
-  - "存储压缩 [数据库引擎]"
-  - "表 [SQL Server], 压缩"
-  - "存储 [SQL Server], 压缩"
-  - "压缩 [SQL Server]"
-  - "行压缩 [数据库引擎]"
-  - "压缩 [SQL Server], 关于压缩表和索引"
-  - "数据压缩 [数据库引擎]"
-  - "压缩表 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据压缩
+# <a name="data-compression"></a>Data Compression
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 并且 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
   
  对于行存储表和索引，使用数据压缩功能可帮助减小数据库的大小。 除了节省空间之外，数据压缩还可以帮助提高 I/O 密集型工作负荷的性能，因为数据存储在更少的页中，查询需要从磁盘读取的页更少。 但是，在与应用程序交换数据时，在数据库服务器上需要额外的 CPU 资源来压缩和解压缩数据。 您可以在以下数据库对象上配置行和页压缩：  
   
@@ -57,20 +61,20 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  此外，还可以使用 GZIP 算法格式来压缩数据。 这是一个附加步骤，最适合在存档旧数据长期存储时压缩某些部分的数据。 无法为使用 COMPRESS 函数压缩的数据创建索引。 有关详细信息，请参阅 [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)。  
   
-## 使用行压缩和页压缩时的注意事项  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>使用行压缩和页压缩时的注意事项  
  使用行压缩和页压缩时，应注意以下事项：  
   
 -   在 Service Pack 或后续版本中，有关数据压缩的详细信息如有更改，恕不另行通知。
 
--   在其中提供压缩功能 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
+-   在 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中提供压缩功能  
   
--   不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本都提供压缩功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本都提供压缩功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   压缩功能不可用于系统表。  
   
 -   通过压缩可在一页上存储更多的行，但不会更改表或索引的最大行大小。  
   
--   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1 列 **char(8000)** 和 c2 列 **char(53)** 的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
+-   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1 列**char(8000)** 和 c2 列**char(53)** 的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
   
     -   固定长度类型的更新必须始终成功。  
   
@@ -111,20 +115,20 @@ caps.handback.revision: 60
     > [!NOTE]  
     >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 vardecimal 存储格式；但是，由于行级压缩可实现同样的目标，因此不推荐使用 vardecimal 存储格式。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## 使用列存储和列存储存档压缩  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用列存储和列存储存档压缩  
   
 ||  
 |-|  
-|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。|  
   
-### 基础知识  
+### <a name="basics"></a>基础知识  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
   
 -   通过 **COLUMNSTORE_ARCHIVE** 数据压缩可使用存档压缩来压缩列存储数据。  
   
 -   使用 **COLUMNSTORE** 数据压缩可对存档压缩执行解压缩。 这样生成的数据将继续使用列存储压缩进行压缩。  
   
- 若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 。  
   
  示例：  
   
@@ -140,7 +144,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- 若要删除存档压缩并且将数据还原为列存储压缩，请使用带有 REBUILD 选项并且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 若要删除存档压缩并且将数据还原为列存储压缩，请使用带有 REBUILD 选项并且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 。  
   
  示例：  
   
@@ -166,21 +170,21 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### 性能  
+### <a name="performance"></a>性能  
  使用存档压缩对列存储索引进行压缩将导致索引执行速度慢于未进行存档压缩的列存储索引。  仅在您能够付出额外的时间和 CPU 资源来压缩和检索数据时，才使用存档压缩。  
   
  尽管执行速度放慢，但好处是用于不频繁访问的数据的存储缩小了。 例如，如果您对每个月的数据都具有一个分区，并且您的大多数活动是针对最近月份的，则可以将较早月份的数据存档以便降低存储要求。  
   
-### 元数据  
+### <a name="metadata"></a>元数据  
  下面的系统视图包含有关聚集索引的数据压缩的信息：  
   
--   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc **列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
+-   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc**列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
   
 -   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression** 和 **data_compression_desc** 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 过程不会应用在列存储索引中。  
   
-## 压缩对已分区表和已分区索引的影响  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>压缩对已分区表和已分区索引的影响  
  如果对已分区表和已分区索引使用数据压缩，则应注意以下事项：  
   
 -   如果使用 ALTER PARTITION 语句拆分分区，则两个分区均继承原始分区的数据压缩属性。  
@@ -217,10 +221,10 @@ REBUILD PARTITION = ALL WITH (
   
      若要删除聚集索引，脱机操作的执行速度很快，因为只删除较高级别的聚集索引。 如果联机删除聚集索引，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须重新生成堆两次，一次针对步骤 1，一次针对步骤 2。  
   
-## 压缩对复制的影响 
+## <a name="how-compression-affects-replication"></a>压缩对复制的影响 
 ||  
 |-|  
-|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|   
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|   
  如果将数据压缩与复制一起使用，则应注意以下事项：  
   
 -   当快照代理生成初始架构脚本时，新架构将对表及其索引使用相同的压缩设置。 不能仅对表启用压缩，而不对索引启用压缩。  
@@ -242,10 +246,10 @@ REBUILD PARTITION = ALL WITH (
 |不复制分区方案，也不压缩订阅服务器上的数据。|False|False|不对分区和压缩设置编写脚本。|  
 |如果发布服务器上的所有分区均压缩，则压缩订阅服务器上的表，但不复制分区方案。|False|True|检查是否对所有分区均启用了压缩。<br /><br /> 在表级别对压缩编写脚本。|  
   
-## 压缩对其他 SQL Server 组件的影响 
+## <a name="how-compression-affects-other-sql-server-components"></a>压缩对其他 SQL Server 组件的影响 
 ||  
 |-|  
-|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|
    
  压缩发生在存储引擎中，数据以未压缩状态呈现给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他大部分组件。 这决定了其他组件上的压缩效果仅限于以下方面：  
   
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   启用压缩可以导致查询计划更改，因为数据是用不同的页数和每页不同的行数存储的。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [行压缩的实现](../../relational-databases/data-compression/row-compression-implementation.md)   
  [页压缩的实现](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Unicode 压缩的实现](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

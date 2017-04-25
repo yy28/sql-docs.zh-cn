@@ -1,35 +1,39 @@
 ---
-title: "数据库属性（“镜像”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.mirroring.f1"
+title: "数据库属性（“镜像”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 86
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c43ec3f97cdf1ddfc325c3a2f7ca75400a54c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库属性（“镜像”页）
+# <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
   从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
   
 > **重要说明！！！** 开始镜像前必须先配置安全性。 如果镜像尚未开始，则必须使用此向导来开始。 **“镜像”** 页文本框将被禁用，直到向导完成为止。  
   
  **使用 SQL Server Management Studio 配置数据库镜像**  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## 选项  
+## <a name="options"></a>选项  
  **配置安全性**  
- 单击此按钮可以启动**配置数据库镜像安全向导。**  
+ 单击此按钮可以启动 **配置数据库镜像安全向导。**  
   
  如果向导成功完成，所采取的操作将取决于镜像是否已经开始，具体情况如下：  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 86
   
 -   *port* 是指分配给服务器实例的数据库镜像端点的端口。  
   
-     服务器必须具有数据库镜像端点，才可参与数据库镜像。 使用配置数据库镜像安全向导建立某个服务器实例的第一个镜像会话时，该向导会自动创建端点，并将其配置为使用 Windows 身份验证。 有关如何利用基于证书的身份验证来使用此向导的信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)。  
+     服务器必须具有数据库镜像端点，才可参与数据库镜像。 使用配置数据库镜像安全向导建立某个服务器实例的第一个镜像会话时，该向导会自动创建端点，并将其配置为使用 Windows 身份验证。 有关如何利用基于证书的身份验证来使用此向导的信息，请参阅 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
     >**重要说明!!**  不管要支持多少镜像会话，每个服务器实例都必须有且仅有一个数据库镜像端点。  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 86
 TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022  
 ```  
   
- 有关详细信息，请参阅[指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+ 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-> **注意：**在数据库镜像会话期间，不能更改主体服务器和镜像服务器实例；但是可以在会话期间更改见证服务器实例。 有关详细信息，请参阅本主题后面的“备注”。  
+> **注意：** 在数据库镜像会话期间，不能更改主体服务器和镜像服务器实例；但是可以在会话期间更改见证服务器实例。 有关详细信息，请参阅本主题后面的“备注”。  
   
  **开始镜像**  
  当满足以下所有条件时，单击此项可开始镜像：  
@@ -85,14 +89,14 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **暂停**或**恢复**  
  在数据库镜像会话期间，单击“暂停”以暂停会话。 此时，将显示一个提示，要求您确认；如果单击 **“是”**，则会话将暂停，并且该按钮改为 **“恢复”**。 若要恢复会话，请单击 **“恢复”**。  
   
- 有关暂停会话的影响的信息，请参阅[暂停和恢复数据库镜像 (SQL Server)](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
+ 有关暂停会话的影响的信息，请参阅 [暂停和恢复数据库镜像 (SQL Server)](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)。  
   
-> **重要说明!!** 在强制服务后，当原始的主体服务器重新连接时，镜像将挂起。 在这种情况下，恢复镜像可能会导致原始主体服务器上的数据丢失。 有关如何管理潜在数据丢失的信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+> **重要说明!!** 在强制服务后，当原始的主体服务器重新连接时，镜像将挂起。 在这种情况下，恢复镜像可能会导致原始主体服务器上的数据丢失。 有关如何管理潜在数据丢失的信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
  **取消镜像**  
- 在主体服务器实例中，单击以停止会话，并从数据库中取消镜像配置。 此时，将显示一个提示，要求您确认；如果单击 **“是”**，则会话将停止，并且取消镜像。 有关取消数据库镜像有何影响的信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
+ 在主体服务器实例中，单击以停止会话，并从数据库中取消镜像配置。 此时，将显示一个提示，要求您确认；如果单击 **“是”**，则会话将停止，并且取消镜像。 有关取消数据库镜像有何影响的信息，请参阅 [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
-> **注意：**如果这是服务器实例中唯一的镜像数据库，则会取消该监视作业。  
+> **注意：** 如果这是服务器实例中唯一的镜像数据库，则会取消该监视作业。  
   
  **故障转移**  
  单击此项可在发生故障时手动地将相关操作从主体数据库转移到镜像数据库。  
@@ -114,7 +118,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**高性能(异步)**|空(如果存在，尚未使用但会话需要仲裁)|为获得最佳性能，镜像数据库始终在某种程度上滞后于主体数据库，永远无法完全同步。 但是，数据库之间的异步间隔通常很小。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像停止。 但如果该会话没有见证服务器（推荐）或见证服务器已连接到镜像服务器，则镜像服务器将保持可作为热备用服务器访问；数据库所有者可以强制该服务镜像服务器实例（可能会造成数据丢失）。|  
 |**不带自动故障转移功能的高安全(同步)**|是|保证将所有提交的事务都写入镜像服务器的磁盘上。<br /><br /> 如果伙伴彼此连接在一起，便可进行手动故障转移。<br /><br /> 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为热备用；数据库所有者可以强制让镜像服务器实例来提供服务（但这样做可能会丢失数据）。|  
-|**带自动故障转移功能的高安全(同步)**|是（必需）|通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择“带自动故障转移功能的高安全级（同步）”选项。<br /><br /> 只要伙伴彼此连接在一起，便可进行手动故障转移。<br /><br /> **\*\*重要提示\*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步运行模式中，所有提交的事务都保证会受到保护，写入到镜像服务器的磁盘上。 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> 如果主体服务器实例变为不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
+|**带自动故障转移功能的高安全(同步)**|是（必需）|通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择“带自动故障转移功能的高安全级（同步）”选项。<br /><br /> 只要伙伴彼此连接在一起，便可进行手动故障转移。<br /><br /> **\*\* 重要提示 \*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步运行模式中，所有提交的事务都保证会受到保护，写入到镜像服务器的磁盘上。 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> 如果主体服务器实例变为不可用，则会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
  在镜像开始后，您可以更改运行模式，并可以通过单击 **“确定”**来保存更改。  
   
@@ -137,10 +141,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **刷新**  
  单击此项可更新“状态”框。  
   
-## 注释  
- 如果你不熟悉数据库镜像，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+## <a name="remarks"></a>注释  
+ 如果你不熟悉数据库镜像，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
-### 向现有会话中添加见证服务器  
+### <a name="adding-a-witness-to-an-existing-session"></a>向现有会话中添加见证服务器  
  可以向现有会话中添加见证服务器，也可以替换现有的见证服务器。 如果您知道见证服务器的服务器网络地址，则可在 **“见证服务器”** 字段中手动输入该地址。 如果您不知道见证服务器的服务器网络地址，则可使用配置数据库镜像安全向导来配置见证服务器。 当该字段中出现该地址后，请确保已选中“带自动故障转移功能的高安全(同步)”选项。  
   
  配置了新的见证服务器后，必须单击 **“确定”** 将其添加到镜像会话中。  
@@ -149,12 +153,12 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-### 删除见证服务器  
+### <a name="removing-a-witness"></a>删除见证服务器  
  若要删除见证服务器，请从 **“见证服务器”** 字段中删除它的服务器网络地址。 如果从具有自动故障转移功能的高安全性模式切换到高性能模式，则将自动清除“见证服务器”字段。  
   
  删除了见证服务器后，必须单击 **“确定”** ，才能从镜像会话中将其删除。  
   
-### 监视数据库镜像  
+### <a name="monitoring-database-mirroring"></a>监视数据库镜像  
  若要监视服务器实例中的镜像数据库，可以使用数据库镜像监视器或 sp_dbmmonitorresults 系统存储过程。  
   
  **监视镜像数据库**  
@@ -163,18 +167,18 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
- 有关详细信息，请参阅[监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
+ 有关详细信息，请参阅 [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 另请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
@@ -183,3 +187,4 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

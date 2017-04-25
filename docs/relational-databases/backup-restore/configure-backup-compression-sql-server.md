@@ -1,25 +1,29 @@
 ---
 title: "配置备份压缩 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 08c6e1ccb56a08309d2c904a8566884372dc3778
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置备份压缩 (SQL Server)
-  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅[查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
+# <a name="configure-backup-compression-sql-server"></a>配置备份压缩 (SQL Server)
+  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-## 覆盖备份压缩默认设置  
+## <a name="override-the-backup-compression-default"></a>覆盖备份压缩默认设置  
  您可以更改单个备份、备份作业或日志传送配置的备份压缩行为。  
   
 -   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -50,9 +54,8 @@ caps.handback.revision: 6
   
          您可以控制日志备份的备份压缩行为。  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   

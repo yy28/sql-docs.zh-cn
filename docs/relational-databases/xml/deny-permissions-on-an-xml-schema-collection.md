@@ -1,27 +1,31 @@
 ---
 title: "拒绝对 XML 架构集合的权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "拒绝权限 [SQL Server], XML 服务器集合"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 803150cde12790eefbeea8c8f4ef0ad32dc350fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 拒绝对 XML 架构集合的权限
+# <a name="deny-permissions-on-an-xml-schema-collection"></a>拒绝对 XML 架构集合的权限
   可以拒绝创建新 XML 架构集合或使用现有 XML 架构集合的权限。  
   
-## 拒绝创建 XML 架构集合的权限  
+## <a name="denying-permission-to-create-an-xml-schema-collection"></a>拒绝创建 XML 架构集合的权限  
  可以通过下列方式拒绝创建 XML 架构集合的权限：  
   
 -   拒绝对关系架构的 ALTER 权限。  
@@ -30,7 +34,7 @@ caps.handback.revision: 34
   
 -   拒绝对数据库的 ALTER ANY SCHEMA 权限。 在这种情况下，主体无法在数据库的任意位置创建 XML 架构集合。 请注意，拒绝对数据库的 ALTER 或 CONTROL 权限将拒绝对数据库中所有对象的所有权限。  
   
-## 拒绝对 XML 架构集合对象的权限  
+## <a name="denying-permissions-on-an-xml-schema-collection-object"></a>拒绝对 XML 架构集合对象的权限  
  下面是可以拒绝的对现有 XML 架构集合的权限及结果：  
   
 -   拒绝 ALTER 权限将拒绝主体修改 XML 架构集合内容的功能。  
@@ -43,10 +47,10 @@ caps.handback.revision: 34
   
 -   拒绝 EXECUTE 权限将拒绝主体插入或更新由 XML 架构集合类型化或受其约束的列、变量和参数中的值的功能。 还将拒绝主体查询相同 xml 类型列和变量的值的功能。  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例中的应用场景说明了 XML 架构权限的工作机制。 每个示例都创建有必需的测试数据库、关系架构和登录帐户。 这些登录帐户已授予必需的 XML 架构集合权限。 每个示例在结束时都会进行必要的清除操作。  
   
-### A. 禁止用户创建 XML 架构集合  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. 禁止用户创建 XML 架构集合  
  禁止用户创建 XML 架构集合的一个方法是拒绝对关系架构的 ALTER 权限。 下面的示例说明了这一点。  
   
  该示例创建了一个用户 `TestLogin1`和一个数据库。 除 `dbo` 架构外，它还在数据库中创建了一个关系架构。 最初， `CREATE XML SCHEMA` 权限允许用户在数据库的任何位置创建架构集合。 然后，该示例拒绝用户对其中一个关系架构拥有 `ALTER` 权限。 这就禁止了用户在该关系架构中创建 XML 架构集合。  
@@ -108,7 +112,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. 拒绝对 XML 架构集合的权限  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. 拒绝对 XML 架构集合的权限  
  下面的示例说明了如何拒绝登录名对现有 XML 架构集合拥有特定权限。 在本例中，拒绝了测试登录名对现有 XML 架构集合的 REFERENCES 权限。  
   
  该示例创建了一个用户 `TestLogin1`和一个数据库。 除 `dbo` 架构外，它还在数据库中创建了一个关系架构。 最初， `CREATE XML SCHEMA` 权限允许用户在数据库的任何位置创建架构集合。  
@@ -187,7 +191,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

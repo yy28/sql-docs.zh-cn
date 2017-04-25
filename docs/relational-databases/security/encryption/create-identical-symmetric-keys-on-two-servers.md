@@ -1,24 +1,28 @@
 ---
 title: "在两个服务器上创建相同的对称密钥 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对称密钥 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4720ac6c86fd531ec4f8b40b14d476dd15511513
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在两个服务器上创建相同的对称密钥
+# <a name="create-identical-symmetric-keys-on-two-servers"></a>在两个服务器上创建相同的对称密钥
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的两台不同的服务器上创建相同的对称密钥。 为了对密码进行解密，需要用于加密密码的密钥。 在一个数据库中同时执行加密和解密时，密钥保存在数据库中并可同时用于（取决于权限）加密和解密。 但在不同的数据库或服务器中执行加密和解密时，保存在一个数据库中的密钥不能用于另一数据库。  
   
  **本主题内容**  
@@ -46,7 +50,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在两台不同的服务器上创建相同的对称密钥  
+#### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>在两台不同的服务器上创建相同的对称密钥  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

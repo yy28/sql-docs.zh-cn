@@ -1,40 +1,44 @@
 ---
-title: "创建链接服务器（SQL Server 数据库引擎） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/20/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.linkedserver.properties.general.f1"
-  - "sql13.swb.linkedserver.properties.security.f1"
-  - "sql13.swb.linkedserver.properties.provider.f1"
-  - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
-  - "链接服务器 [SQL Server], 创建"
+title: "创建链接服务器（SQL Server 数据库引擎）| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/20/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.linkedserver.properties.general.f1
+- sql13.swb.linkedserver.properties.security.f1
+- sql13.swb.linkedserver.properties.provider.f1
+- sql13.swb.linkedserver.properties.options.f1
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建链接服务器（SQL Server 数据库引擎）
+# <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
   
 ##  <a name="Background"></a> 背景  
  链接服务器让用户可以对 OLE DB 数据源进行分布式异类查询。 在创建某一链接服务器后，可对该服务器运行分布式查询，并且查询可以联接来自多个数据源的表。 如果链接服务器定义为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，则可执行远程存储过程。  
   
- 链接服务器的功能和必需的参数可能会有很大差异。 本主题中的示例是典型示例，但并未描述所有选项。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
+ 链接服务器的功能和必需的参数可能会有很大差异。 本主题中的示例是典型示例，但并未描述所有选项。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的数据。  
   
 ##  <a name="Security"></a> 安全性  
   
-### 权限  
+### <a name="permissions"></a>权限  
  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，需要具有 **ALTER ANY LINKED SERVER** 权限，或需要具有 **setupadmin** 固定服务器角色中的成员资格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，要求具有 **CONTROL SERVER** 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  
@@ -46,17 +50,17 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-##### 使用 SQL Server Management Studio 创建与其他 SQL Server 实例的链接服务器  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建与其他 SQL Server 实例的链接服务器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开对象资源管理器，展开“服务器对象”，右键单击“链接服务器”，然后单击“新建链接服务器”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，展开 **“服务器对象”**，右键单击 **“链接服务器”**，然后单击 **“新建链接服务器”**。  
   
 2.  在 **“常规”** 页上的 **“链接服务器”** 框中，键入您链接到的 **SQL Server** 实例的名称。  
   
      **SQL Server**  
-     将链接服务器标识为 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 如果您使用此方法来定义某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 链接服务器，则在 **“链接服务器”** 中指定的名称必须是该服务器的网络名称。 另外，从该服务器上检索的所有表都来自该链接服务器上为相应登录名所定义的默认数据库。  
+     将链接服务器标识为 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 如果您使用此方法来定义某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 链接服务器，则在 **“链接服务器”** 中指定的名称必须是该服务器的网络名称。 另外，从该服务器上检索的所有表都来自该链接服务器上为相应登录名所定义的默认数据库。  
   
      **其他数据源**  
-     指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的 OLE DB 服务器类型。 单击此选项将激活其下面的选项。  
+     指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外的 OLE DB 服务器类型。 单击此选项将激活其下面的选项。  
   
      **提供程序**  
      从列表框中选择 OLE DB 数据源。 OLE DB 访问接口是使用注册表中给定的 PROGID 注册的。  
@@ -65,10 +69,10 @@ caps.handback.revision: 18
      键入要作为链接服务器添加的 OLE DB 数据源的产品名称。  
   
      **数据源**  
-     根据 OLE DB 访问接口的说明，键入数据源名称。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请提供实例名称。  
+     根据 OLE DB 访问接口的说明，键入数据源名称。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例，请提供实例名称。  
   
      **访问接口字符串**  
-     键入与数据源相对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 有关有效访问接口字符串的示例，请参阅 [sp_addlinkedserver (Transact SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
+     键入与数据源相对应的 OLE DB 访问接口的唯一编程标识符 (PROGID)。 有关有效访问接口字符串的示例，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的数据。  
   
      **位置**  
      根据 OLE DB 访问接口的说明，键入数据库的位置。  
@@ -76,7 +80,7 @@ caps.handback.revision: 18
      **目录**  
      键入在连接 OLE DB 访问接口时要使用的目录的名称。  
   
-     若要测试能否连接到链接服务器，请在对象资源管理器中，右键单击链接服务器，然后单击“测试连接”。  
+     若要测试能否连接到链接服务器，请在对象资源管理器中，右键单击链接服务器，然后单击 **“测试连接”**。  
   
     > [!NOTE]  
     >  如果该 **SQL Server** 实例是默认实例，则输入承载 **SQL Server**实例的计算机的名称。 如果该 **SQL Server** 是命名实例，则输入计算机名称和实例名称，例如 **Accounting\SQLExpress**。  
@@ -94,7 +98,7 @@ caps.handback.revision: 18
      若要使用模拟功能，配置必须满足委托的要求。  
   
      **远程用户**  
-     使用远程用户映射“本地登录”中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
+     使用远程用户映射 **“本地登录”**中未定义的用户。 **“远程用户”** 必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
   
      **远程密码**  
      指定远程用户的密码。  
@@ -115,7 +119,7 @@ caps.handback.revision: 18
      指定对于列表中未定义的登录，使用登录的当前安全上下文建立连接。 如果使用 Windows 身份验证连接到本地服务器，则使用 Windows 凭据连接到远程服务器。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到本地服务器，则在连接到远程服务器时需要使用登录名和密码。 在这种情况下，具有完全相同的名称和密码的登录必须存在于远程服务器中。  
   
      **使用此安全上下文建立连接**  
-     指定对于列表中未定义的登录，使用“远程登录”和“使用密码”框中指定的登录名和密码建立连接。 远程登录必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
+     指定对于列表中未定义的登录，使用 **“远程登录”** 和 **“使用密码”** 框中指定的登录名和密码建立连接。 远程登录必须是远程服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录。  
   
 5.  或者，若要查看或指定服务器选项，请单击 **“服务器选项”**  页。  
   
@@ -136,12 +140,12 @@ caps.handback.revision: 18
      **使用远程排序规则**  
      确定是使用远程列的排序规则还是使用本地服务器的排序规则。  
   
-     如果为 True，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用远程列的排序规则，并且非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用排序规则名称指定的排序规则。  
+     如果为 True，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用远程列的排序规则，并且非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源将使用排序规则名称指定的排序规则。  
   
      如果为 False，则分布式查询将始终使用本地服务器的默认排序规则，而排序规则名称和远程列的排序规则将被忽略。 默认值为 False。  
   
      **排序规则名称**  
-     如果“使用远程排序规则”为 True，并且数据源不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源，则指定远程数据源使用的排序规则名称。 此名称必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的排序规则之一。  
+     如果“使用远程排序规则”为 True，并且数据源不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源，则指定远程数据源使用的排序规则名称。 此名称必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的排序规则之一。  
   
      如果访问的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外的 OLE DB 数据源，但该数据源的排序规则与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某个排序规则匹配，则使用该选项。  
   
@@ -150,19 +154,19 @@ caps.handback.revision: 18
      **连接超时值**  
      连接到链接服务器时的超时值（秒）。  
   
-     如果为 0，则使用 **sp_configure** 默认[远程登录超时](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)选项值。  
+     如果为 0，则使用 **sp_configure** 默认 [远程登录超时](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) 选项值。  
   
      **查询超时值**  
      链接服务器上执行的查询的超时值（秒）。  
   
-     如果为 0，则使用 **sp_configure** 默认[远程查询超时](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)选项值。  
+     如果为 0，则使用 **sp_configure** 默认 [远程查询超时](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) 选项值。  
   
      **启用分布式事务处理的升级**  
-     使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)。  
+     使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。  
   
 6.  单击“确定” 。  
   
-##### 查看提供程序选项  
+##### <a name="to-view-the-provider-options"></a>查看提供程序选项  
   
 -   若要查看提供程序提供的选项，请单击 **“提供程序选项”** 页。  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 18
      只对访问接口调用 0 级的 OLE DB 接口。  
   
      **允许进程内**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口时，不允许更新或插入长的引用列（**text**、**ntext** 或 **image**）。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口时，不允许更新或插入长的引用列（**text**、 **ntext**或 **image**）。  
   
      **非事务更新**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许更新，即使 **ITransactionLocal** 不可用时也是如此。 如果启用此选项，对访问接口的更新将不可恢复，因为该访问接口不支持事务。  
@@ -195,9 +199,9 @@ caps.handback.revision: 18
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建链接服务器，请使用 [sp_addlinkedserver (Transact SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN (Transact SQL)](../../t-sql/statements/create-login-transact-sql.md) 和 [sp_addlinkedsrvlogin (Transact SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 语句。  
   
-##### 使用 Transact-SQL 创建与其他 SQL Server 实例的链接服务器  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>使用 Transact-SQL 创建与其他 SQL Server 实例的链接服务器  
   
-1.  在查询编辑器中，输入以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令以便链接到名为 `SRVR002\ACCTG` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例：  
+1.  在查询编辑器中，输入以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令以便链接到名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `SRVR002\ACCTG`实例：  
   
     ```tsql  
     USE [master]  
@@ -222,7 +226,7 @@ caps.handback.revision: 18
   
 ##  <a name="FollowUp"></a> 跟进：在创建链接服务器后采取的步骤  
   
-#### 测试链接服务器  
+#### <a name="to-test-the-linked-server"></a>测试链接服务器  
   
 -   执行下面的代码，测试与链接服务器的连接。 以下示例返回链接服务器上数据库的名称。  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### 编写联接来自某一链接服务器的多个表的查询  
+#### <a name="writing-a-query-that-joins-tables-from-a-linked-server"></a>编写联接来自某一链接服务器的多个表的查询  
   
 -   使用由四部分组成的名称引用链接服务器上的对象。 执行以下代码，以便返回本地服务器上所有登录名的列表及其在链接服务器上的匹配登录名。  
   
@@ -246,9 +250,10 @@ caps.handback.revision: 18
   
      如果为链接服务器登录名返回了 NULL，则意味着该登录名在链接服务器上不存在。 这些登录名将无法使用链接服务器，除非链接服务器配置为传递不同的安全上下文或者链接服务器接受匿名连接。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

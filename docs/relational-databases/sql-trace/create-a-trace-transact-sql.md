@@ -1,28 +1,32 @@
 ---
 title: "创建跟踪 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "跟踪 [SQL Server], 示例"
-  - "跟踪 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], example
+- traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b765401c07820ed80a92a2393544253106abb512
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建跟踪 (Transact-SQL)
+# <a name="create-a-trace-transact-sql"></a>创建跟踪 (Transact-SQL)
   本主题介绍了如何使用存储过程创建跟踪。  
   
-### 创建跟踪  
+### <a name="to-create-a-trace"></a>创建跟踪  
   
 1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态为 **0**）。  
   
@@ -35,8 +39,8 @@ caps.handback.revision: 19
     > [!IMPORTANT]  
     >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (**sp_trace_*xx***)，而且这些参数不支持数据类型自动转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-## 示例  
- 下面的代码演示如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建跟踪。 代码分为三部分：创建跟踪、填充跟踪文件以及停止跟踪。 通过添加要跟踪的事件来自定义跟踪。 有关事件和列的列表，请参阅 [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+## <a name="example"></a>示例  
+ 下面的代码演示如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建跟踪。 代码分为三部分：创建跟踪、填充跟踪文件以及停止跟踪。 通过添加要跟踪的事件来自定义跟踪。 有关事件和列的列表，请参阅 [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)创建跟踪。  
   
  下面的代码创建跟踪，向跟踪添加事件，随后启动跟踪：  
   
@@ -70,7 +74,7 @@ GO
   
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  现在已创建并启动跟踪，接下来执行下面的代码以便用活动填充跟踪。  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  可以随时停止和重新启动跟踪。 在本示例中，执行下面的代码以停止跟踪、关闭跟踪并删除跟踪定义。  
   
 ```  
@@ -97,10 +101,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## 示例  
- 若要检查跟踪文件，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开 SampleTrace.trc 文件。  
+## <a name="example"></a>示例  
+ 若要检查跟踪文件，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开 SampleTrace.trc 文件。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

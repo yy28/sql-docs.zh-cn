@@ -1,27 +1,31 @@
 ---
 title: "创建差异数据库备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整差异备份 [SQL Server]"
-  - "数据库备份 [SQL Server], 完整差异备份"
-  - "备份数据库 [SQL Server], 完整差异备份"
-  - "备份 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建差异数据库备份 (SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
   使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建差异数据库备份。  
   
  **本主题的内容**  
@@ -44,13 +48,13 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   不允许在显式或隐式事务中使用 BACKUP 语句。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
--   创建差异数据库备份需要有以前的完整数据库备份。 如果你的数据库从未进行过备份，则请在创建任何差异备份之前，先执行完整数据库备份。 有关详细信息，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+-   创建差异数据库备份需要有以前的完整数据库备份。 如果你的数据库从未进行过备份，则请在创建任何差异备份之前，先执行完整数据库备份。 有关详细信息，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中创建差异数据库备份。  
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -61,11 +65,11 @@ caps.handback.revision: 34
 ####  <a name="Permissions"></a> 首先检查你的权限！  
  BACKUP DATABASE 和 BACKUP LOG 权限默认为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色。  
   
- 备份设备的物理文件的所有权和权限问题将会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) **不**检查文件访问权限。 在你因尝试备份或还原而访问物理资源之前，备份设备物理文件中的权限问题并不明显。  
+ 备份设备的物理文件的所有权和权限问题将会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) **不** 检查文件访问权限。 在你因尝试备份或还原而访问物理资源之前，备份设备物理文件中的权限问题并不明显。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### 创建差异数据库备份  
+#### <a name="create-a-differential-database-backup"></a>创建差异数据库备份  
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### 创建差异数据库备份  
+#### <a name="create-a-differential-database-backup"></a>创建差异数据库备份  
   
 1.  执行 BACKUP DATABASE 语句可以创建差异数据库备份，同时指定：  
   
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [备份文件和文件组 (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

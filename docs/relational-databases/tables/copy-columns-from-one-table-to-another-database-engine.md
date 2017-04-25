@@ -1,25 +1,29 @@
 ---
 title: "将列从一个表复制到另一个表 (数据库引擎) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "复制列"
-  - "列 [SQL Server], 复制"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将列从一个表复制到另一个表 (数据库引擎)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>将列从一个表复制到另一个表 (数据库引擎)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中通过仅复制列定义或者复制定义和数据将列从一个表复制到另一个表。  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 将列定义从一个表复制到另一个表  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
 1.  右键单击相应表，然后单击“设计”，打开要复制的列所在的表以及要复制到的表。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  选择要排在插入列之后的列，然后在 **“编辑”** 菜单中，单击 **“粘贴”**。  
   
-#### 将数据从一个表复制到另一个表  
+#### <a name="to-copy-data-from-one-table-to-another"></a>将数据从一个表复制到另一个表  
   
 1.  按照以上关于复制列定义的说明执行操作。  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 将列定义从一个表复制到另一个表  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
-1.  不能通过使用 Transact-SQL 语句将单独列从一个表复制到另一个现有表。 但是，您可以通过使用 SELECT INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 有关详细信息，请参阅 [ INTO 子句 (Transact-SQL)](../Topic/INTO%20Clause%20\(Transact-SQL\).md)。  
+1.  不能通过使用 Transact-SQL 语句将单独列从一个表复制到另一个现有表。 但是，您可以通过使用 SELECT INTO 在默认文件组中创建一个新表，并将来自查询的结果行插入该表中。 有关详细信息，请参阅 [ INTO 子句 (Transact-SQL)](../../t-sql/queries/select-into-clause-transact-sql.md)。  
   
-#### 将数据从一个表复制到另一个表  
+#### <a name="to-copy-data-from-one-table-to-another"></a>将数据从一个表复制到另一个表  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

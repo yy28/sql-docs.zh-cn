@@ -1,34 +1,38 @@
 ---
 title: "配置并行索引操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引并行操作 [SQL Server]"
-  - "处理器 [SQL Server], 并行索引操作"
-  - "max degree of parallelism 选项"
-  - "MAXDOP 索引选项, 并行索引操作"
-  - "并行索引操作 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index parallel operations [SQL Server]
+- processors [SQL Server], parallel index operations
+- max degree of parallelism option
+- MAXDOP index option, parallel index operations
+- parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3e68d3b1d6d08153e24ec3afdb5102e5c1ae6c46
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置并行索引操作
+# <a name="configure-parallel-index-operations"></a>配置并行索引操作
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更高版本的多处理器计算机上，索引语句可能会像其他查询那样，使用多个处理器来执行与索引语句关联的扫描、排序和索引操作。 用于运行单个索引语句的处理器数由 [最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 配置选项、当前工作负荷以及索引统计信息决定。 max degree of parallelism 选项决定了执行并行计划时使用的最大处理器数。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]检测到系统忙，索引操作的并行度将自动降低，然后再开始执行语句。 如果非分区索引的第一个键列包含有限数量的非重复值，或者每个非重复值的出现频率变化较大，[!INCLUDE[ssDE](../../includes/ssde-md.md)]也可能会降低并行度。  
+  本主题通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义最大并行度 (max degree of parallelism) 并说明如何修改此设置。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更高版本的多处理器计算机上，索引语句可能会像其他查询那样，使用多个处理器来执行与索引语句关联的扫描、排序和索引操作。 用于运行单个索引语句的处理器数由 [最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 配置选项、当前工作负荷以及索引统计信息决定。 max degree of parallelism 选项决定了执行并行计划时使用的最大处理器数。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 检测到系统忙，索引操作的并行度将自动降低，然后再开始执行语句。 如果非分区索引的第一个键列包含有限数量的非重复值，或者每个非重复值的出现频率变化较大， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能会降低并行度。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供并行索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供并行索引操作。 有关详细信息，请参阅“SQL Server 2016 各个版本支持的功能”  
   
  **本主题内容**  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 设置索引的最大并行度  
+#### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>设置索引的最大并行度  
   
 1.  在对象资源管理器中，单击加号以展开所需的数据库，其中包含您要设置索引最大并行度的表。  
   
@@ -97,11 +101,11 @@ caps.handback.revision: 42
   
 7.  选择 **“最大并行度”**，然后输入 1 和 64 之间的某个值。  
   
-8.  单击“确定” 。  
+8.  单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 设置现有索引的最大并行度  
+#### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>设置现有索引的最大并行度  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 42
   
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-#### 设置新建索引的最大并行度  
+#### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>设置新建索引的最大并行度  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -141,3 +145,4 @@ caps.handback.revision: 42
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

@@ -1,31 +1,35 @@
 ---
 title: "创建统计信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "创建统计信息"
-  - "统计信息 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建统计信息
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为表或索引视图的一个或多个列创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息。  
+# <a name="create-statistics"></a>创建统计信息
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为表或索引视图的一个或多个列创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息。  
   
  **本主题内容**  
   
@@ -54,11 +58,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
- 要求用户是表或索引视图所有者，或者是以下角色之一的成员：**sysadmin** 固定服务器角色、**db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
+ 要求用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建统计信息  
+#### <a name="to-create-statistics"></a>创建统计信息  
   
 1.  在 **“对象资源管理器”**中，单击加号以便展开要创建新的统计信息的数据库。  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 9
   
 3.  单击加号以便展开您要创建新统计信息的表。  
   
-4.  右键单击“统计信息”**文件夹，然后选择“新建统计信息…”。  
+4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
   
      以下属性将显示在“新建表 table_name 的统计信息”对话框的“常规”页面上。  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 9
      **标识**  
      如果选中，则指示标识列。  
   
-     **允许 Null**  
+     **Allow NULLs**  
      指示列是否接受空值。  
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
@@ -142,7 +146,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建统计信息  
+#### <a name="to-create-statistics"></a>创建统计信息  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

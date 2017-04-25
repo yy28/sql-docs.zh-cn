@@ -1,23 +1,27 @@
 ---
 title: "创建内存优化表和本机编译的存储过程 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建内存优化表和本机编译的存储过程
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>创建内存优化表和本机编译的存储过程
   本主题包含一个示例，该示例介绍内存中 OLTP 的语法。  
   
  若要使应用程序可使用内存中 OLTP，需要完成以下任务：  
@@ -26,13 +30,13 @@ caps.handback.revision: 35
   
 -   创建内存优化的表和索引。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。  
   
--   在加载数据后且在创建编译的存储过程之前，将数据加载到内存优化表中并且更新统计信息。 有关详细信息，请参阅[内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。  
+-   在加载数据后且在创建编译的存储过程之前，将数据加载到内存优化表中并且更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)。  
   
 -   创建本机编译的存储过程以访问内存优化表中的数据。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。 还可以使用传统的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问内存优化表中的数据。  
   
 -   根据需要，将数据从现有表迁移到内存优化的表。  
   
- 有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建内存优化表的信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)。  
+ 有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建内存优化表的信息，请参阅 [对内存中 OLTP 的 SQL Server Management Studio 支持](../../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md)。  
   
  下面的代码示例需要名为 c:\Data 的目录。  
   
@@ -233,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP 代码示例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

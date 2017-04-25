@@ -1,25 +1,29 @@
 ---
 title: "更改表中的列顺序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [SQL Server], 更改表中的顺序"
-  - "列顺序, 更改"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], change order in a table
+- column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更改表中的列顺序
+# <a name="change-column-order-in-a-table"></a>更改表中的列顺序
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的表设计器中更改列顺序。  
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 更改列顺序  
+#### <a name="to-change-the-column-order"></a>更改列顺序  
   
 1.  在“对象资源管理器”中，右键单击包含要重新排序的列的表，再单击“设计”。  
   

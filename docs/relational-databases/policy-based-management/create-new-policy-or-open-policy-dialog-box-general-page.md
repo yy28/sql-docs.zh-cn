@@ -1,29 +1,33 @@
 ---
 title: "“创建新策略”或“打开策略”对话框，“常规”页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policy.f1"
-  - "sql13.swb.dmf.policy.filter.f1"
-  - "sql13.swb.dmf.newgroup.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policy.f1
+- sql13.swb.dmf.policy.filter.f1
+- sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
+ms.lasthandoff: 04/11/2017
+
 ---
-# “创建新策略”或“打开策略”对话框，“常规”页
+# <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>“创建新策略”或“打开策略”对话框，“常规”页
   使用此对话框可创建新的基于策略的管理策略，或者修改现有策略。 可以将 **“针对目标”** 和 **“服务器限制”** 区域作为筛选器，将策略限制为所有可能的目标的子集。 对于要用作目标筛选器的条件，必须在物理方面中对其进行定义，并且不能包含函数和 LIKE 运算符。 在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## 选项  
+## <a name="options"></a>选项  
  **名称**  
  对于新策略，请键入新策略的名称。 对于现有策略，将显示其名称。  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 42
  **检查条件**  
  选择此策略使用的基于策略的管理条件。 将列出服务器上关联的基于策略的管理方面的所有条件。 单击 **“新建条件”** 可创建新的条件。 单击省略号 (**…**) 按钮可修改条件。  
   
- **针对目标**  
+ **“针对目标”**  
  选择此方面完成筛选表达式时可使用的目标类型。  
   
  **评估模式**  
  为策略选择评估模式。 可以检查某些策略，但不能强制实施这些策略。 评估模式包括：  
   
- **按需**  
+ **“按需”**  
  只能从“评估”对话框中运行策略。  
   
  **按计划**  
@@ -65,10 +69,10 @@ caps.handback.revision: 42
  **计划**  
  此选项在选择了“按计划”评估模式的情况下显示。 键入计划的名称，单击 **“选取”** ，从列表中选择一个计划，或者单击 **“新建”** 以创建新计划。 若要启用计划区域，必须选择 **“按计划”** 。  
   
- **服务器限制**  
+ **“服务器限制”**  
  选择适用于此策略的服务器类型。 选项为 **“无”** ，或者选择一个条件以筛选可能的服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

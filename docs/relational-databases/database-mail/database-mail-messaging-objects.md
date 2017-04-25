@@ -1,30 +1,34 @@
 ---
 title: "数据库邮件消息处理对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库邮件 [SQL Server], 主机数据库"
-  - "数据库邮件 [SQL Server], 消息处理对象"
-  - "邮件主机数据库 [SQL Server]"
-  - "主机数据库 [数据库邮件]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库邮件消息处理对象
+# <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
   **msdb** 数据库是数据库邮件主机数据库。 此数据库包含数据库邮件的存储过程和消息处理对象。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中带有数据库邮件配置向导，可用来启用数据库邮件、创建和管理配置文件和帐户以及配置数据库邮件选项。  
   
-##  <a name="ComponentsAndConcepts"></a> **msdb** 数据库中的对象  
+##  <a name="ComponentsAndConcepts"></a>**msdb** 数据库中的对象  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **msdb** 。 不过，数据库邮件不使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 网络。 因此，用户不必创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点即可使用数据库邮件。 外部数据库邮件进程使用标准的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信。  
   
  如果启用了数据库邮件，它将在 **msdb** 数据库中显示下列对象。  
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**存储过程**|启动外部程序使用的 Service Broker 对象。 默认情况下将会启动这些对象。|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**存储过程**|停止外部程序使用的 Service Broker 对象。|  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

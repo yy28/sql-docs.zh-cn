@@ -1,22 +1,26 @@
 ---
-title: "CompoundCurve | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CompoundCurve | Microsoft Docs
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab465ac3e7c5fb74aade48aeca91379a86711522
+ms.lasthandoff: 04/11/2017
+
 ---
-# CompoundCurve
+# <a name="compoundcurve"></a>CompoundCurve
   **CompoundCurve** 是几何图形或地域类型的零个或多个连续 **CircularString** 或 **LineString** 实例的集合。  
   
 > [!IMPORTANT]  
@@ -28,15 +32,15 @@ caps.handback.revision: 25
   
 2.  **CircularString** 或 **LineString** 实例的序列必须是连续的。  
   
- 如果 **CompoundCurve** 包含由多个 **CircularString** 和 **LineString** 实例构成的序列，在该序列中，每个实例（最后一个实例除外）的结束端点必须是下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException`。 **CircularString** 中的点不一定必须有 Z 值或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 **CompoundCurve** 实例中的所有点要么不得有 Z 值，要么其 Z 值必须相同。  
+ 如果 **CompoundCurve** 包含由多个 **CircularString** 和 **LineString** 实例构成的序列，在该序列中，每个实例（最后一个实例除外）的结束端点必须是下一个实例的起始端点。 这意味着，如果在序列中前一个实例的结束点是 (4 3 7 2)，则该序列中的下一个实例的起始点必须是 (4 3 7 2)。 请注意，该点的 Z（标高）和 M（度量）值也必须相同。 如果这两个点之间存在差异，则将引发 `System.FormatException` 。 **CircularString** 中的点不一定必须有 Z 值或 M 值。 如果未向前一个实例的结束点提供 Z 值或 M 值，下一个实例的起始点就不能包含 Z 值或 M 值。 如果前一个序列的结束点是 (4 3)，则后一个序列的起始点必须是 (4 3)；它不能是 (4 3 7 2）。 **CompoundCurve** 实例中的所有点要么不得有 Z 值，要么其 Z 值必须相同。  
   
-## CompoundCurve 实例  
+## <a name="compoundcurve-instances"></a>CompoundCurve 实例  
  下图显示了有效的 **CompoundCurve** 类型。  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
   
-### 接受的实例  
+### <a name="accepted-instances"></a>接受的实例  
  如果**CompoundCurve** 实例是空实例或者它满足以下条件，则接受该实例。  
   
 1.  **CompoundCurve** 实例包含的所有实例都是接受的圆弧线段实例。 有关接受的圆弧线段实例的详细信息，请参阅 [LineString](../../relational-databases/spatial/linestring.md) 和 [CircularString](../../relational-databases/spatial/circularstring.md)。  
@@ -62,7 +66,7 @@ DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
   
-### 有效实例  
+### <a name="valid-instances"></a>有效实例  
  如果满足以下条件，则 **CompoundCurve** 实例有效。  
   
 1.  **CompoundCurve** 实例是接受的实例。  
@@ -79,7 +83,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ```  
   
- `@g3` 有效，因为**CircularString** 实例有效。 有关 **CircularString** 实例的有效性的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md)。  
+ `@g3` 有效，因为 **CircularString** 实例有效。 有关 **CircularString** 实例的有效性的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md)。  
   
  下面的示例显示无效的 **CompoundCurve** 实例。  
   
@@ -92,9 +96,9 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g1` 无效，因为第二个实例是无效的 LineString 实例。 `@g2` 无效，因为 **LineString** 实例无效。 `@g3` 无效，因为 **CircularString** 实例无效。 有关有效的 **CircularString** 和 **LineString** 实例的详细信息，请参阅 [CircularString](../../relational-databases/spatial/circularstring.md) 和 [LineString](../../relational-databases/spatial/linestring.md)。  
   
-## 示例  
+## <a name="examples"></a>示例  
   
-### A. 使用空的 CompoundCurve 实例化一个几何图形实例  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. 使用空的 CompoundCurve 实例化一个几何图形实例  
  下面的示例演示如何创建空的 `CompoundCurve` 实例：  
   
 ```tsql  
@@ -102,21 +106,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### B. 在同一语句中使用 CompoundCurve 声明和实例化一个几何图形实例  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. 在同一语句中使用 CompoundCurve 声明和实例化一个几何图形实例  
  下面的示例演示如何在同一语句中使用 `geometry` 声明和初始化 `CompoundCurve`实例：  
   
 ```tsql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
-### C. 使用 CompoundCurve 实例化一个地域实例  
- 下面的示例演示如何使用 `CompoundCurve` 声明和初始化 **geography** 实例：  
+### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. 使用 CompoundCurve 实例化一个地域实例  
+ 下面的示例演示如何使用 **声明和初始化** geography `CompoundCurve`实例：  
   
 ```tsql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### D. 将一个正方形存储在 CompoundCurve 实例中  
+### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. 将一个正方形存储在 CompoundCurve 实例中  
  下面的示例通过两种不同方式使用 `CompoundCurve` 实例存储一个正方形。  
   
 ```tsql  
@@ -126,9 +130,9 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');
 SELECT @g1.STLength(), @g2.STLength();  
 ```  
   
- `@g1` 和 `@g2` 的长度相同。 请注意，在该示例中 **CompoundCurve** 实例可以存储一个或多个 `LineString` 的实例。  
+ `@g1` 和 `@g2` 的长度相同。 请注意，在该示例中 **CompoundCurve** 实例可以存储一个或多个 `LineString`的实例。  
   
-### E. 使用包含多个 CircularString 的 CompoundCurve 实例化一个几何图形实例  
+### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. 使用包含多个 CircularString 的 CompoundCurve 实例化一个几何图形实例  
  下面的示例演示如何使用两个不同的 `CircularString` 实例初始化 `CompoundCurve`。  
   
 ```tsql  
@@ -139,7 +143,7 @@ SELECT @g.STLength();
   
  此示例将产生以下输出：12.566370… 等效于 4∏。 该示例中的 `CompoundCurve` 实例存储一个半径为 2 的圆。 前面的两个代码示例不一定非要使用 `CompoundCurve`。 对于第一个示例， `LineString` 实例将更为简单，对于第二个示例， `CircularString` 实例将更为简单。 然而，下一个示例显示在何种情况下 `CompoundCurve` 提供更好的替代方法。  
   
-### F. 使用 CompoundCurve 存储一个半圆  
+### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. 使用 CompoundCurve 存储一个半圆  
  下面的示例使用 `CompoundCurve` 实例存储一个半圆。  
   
 ```tsql  
@@ -148,7 +152,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2
 SELECT @g.STLength();  
 ```  
   
-### G. 将多个 CircularString 和 LineString 实例存储在一个 CompoundCurve 中  
+### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>G. 将多个 CircularString 和 LineString 实例存储在一个 CompoundCurve 中  
  下面的示例演示如何使用 `CircularString` 存储多个 `LineString` 和 `CompoundCurve`实例。  
   
 ```tsql  
@@ -157,14 +161,14 @@ SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3
 SELECT @g.STLength();  
 ```  
   
-### H. 存储具有 Z 值和 M 值的实例  
+### <a name="h-storing-instances-with-z-and-m-values"></a>H. 存储具有 Z 值和 M 值的实例  
  下面的示例演示如何使用 `CompoundCurve` 实例存储具有 Z 值和 M 值的 `CircularString` 和 `LineString` 实例的序列。  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
-### I. 说明为什么必须显式声明 CircularString 实例  
+### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>I. 说明为什么必须显式声明 CircularString 实例  
  下面的示例说明了为什么必须显式声明 `CircularString` 实例。 程序员试图将一个圆形存储在 `CompoundCurve` 实例中。  
   
 ```tsql  
@@ -183,9 +187,9 @@ Circle One11.940039…
 Circle Two12.566370…  
 ```  
   
- 圆形 2 的周长大约为 4∏，这是周长的实际值。 但是，圆形 1 的周长很不准确。 圆形 1 的 `CompoundCurve` 实例存储一个圆弧线段 (ABC) 和两条直线段（CD、DA)。 `CompoundCurve` 实例必须存储两个圆弧线段（ABC、CDA）才可以定义一个圆形。 `LineString` 实例定义圆形 1 的 `CompoundCurve` 实例中的第二组点（4 2、2 4、0 2）。 必须在 `CircularString` 内部显式声明 `CompoundCurve` 实例。  
+ 圆形 2 的周长大约为 4∏，这是周长的实际值。 但是，圆形 1 的周长很不准确。 圆形 1 的 `CompoundCurve` 实例存储一个圆弧线段 (ABC) 和两条直线段（CD、DA)。 `CompoundCurve` 实例必须存储两个圆弧线段（ABC、CDA）才可以定义一个圆形。 `LineString` 实例定义圆形 1 的 `CompoundCurve` 实例中的第二组点（4 2、2 4、0 2）。 必须在 `CircularString` 内部显式声明 `CompoundCurve`实例。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [STIsValid（geometry 数据类型）](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [STLength（geometry 数据类型）](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint（geometry 数据类型）](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
@@ -195,3 +199,4 @@ Circle Two12.566370…
  [空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [点](../../relational-databases/spatial/point.md)  
   
+

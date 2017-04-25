@@ -1,25 +1,29 @@
 ---
 title: "将具有内存优化表的数据库绑定至资源池 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca8ec6e27aebf60ba155580e505f0c338ff61348
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将具有内存优化表的数据库绑定至资源池
+# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  资源池表示可以管理的物理资源的子集。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库绑定到默认资源池并使用其中的资源。 为保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，防止一个或多个内存优化表使用其资源，以及防止其他内存使用者使用内存优化表需要的内存，建议对具有内存优化表的数据库创建单独的资源池来管理内存使用情况。  
+  资源池表示可以管理的物理资源的子集。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库绑定到默认资源池并使用其中的资源。 为保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，防止一个或多个内存优化表使用其资源，以及防止其他内存使用者使用内存优化表需要的内存，建议对具有内存优化表的数据库创建单独的资源池来管理内存使用情况。  
   
  一个数据库只能绑定至一个资源池。 不过您可以将多个数据库绑定至同一个资源池。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将没有内存优化表的数据库绑定到资源池，但它不会有任何影响。 如果在将来您想要在数据库中创建内存优化表，则可能要将数据库绑定到某一命名的资源池。  
   
@@ -27,7 +31,7 @@ caps.handback.revision: 24
   
  有关资源池的信息，请参阅 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
-## 将数据库绑定至资源池的步骤  
+## <a name="steps-to-bind-a-database-to-a-resource-pool"></a>将数据库绑定至资源池的步骤  
   
 1.  [创建数据库和资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_CreatePool)  
   
@@ -83,9 +87,9 @@ GO
  因此，您需要至少 62.5% 的可用内存量来满足您的内存优化表和索引的 16 GB 要求。  因为 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值必须是整数，所以，我们将它们设置为至少 63%。  
   
 ###  <a name="bkmk_CreateResourcePool"></a> 创建一个资源池并配置内存  
- 为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的[可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
+ 为内存优化表配置内存时，应基于 MIN_MEMORY_PERCENT 而非 MAX_MEMORY_PERCENT 完成容量规划。  有关 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的信息，请参阅 [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)。 对于内存优化表，这将提高内存可用性的可预测性，因为 MIN_MEMORY_PERCENT 会对其他资源池带来内存压力以确保其得到遵守。 为确保内存可用并帮助避免内存不足情况，MIN_MEMORY_PERCENT 与 MAX_MEMORY_PERCENT 的值应相同。 请参阅下面的 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ，以了解基于已提交内存量的可用于内存优化表的内存百分比。  
   
- 有关在虚拟机环境下工作时的详细信息，请参阅[最佳做法：在虚拟机环境中使用内存中 OLTP](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md)。  
+ 有关在虚拟机环境下工作时的详细信息，请参阅 [最佳做法：在虚拟机环境中使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
   
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码创建一个名为 Pool_IMOLTP 且可使用一半内存的资源池。  创建该池后，资源调控器重新配置为包括 Pool_IMOLTP。  
   
@@ -141,7 +145,7 @@ GO
  现在数据库已绑定至资源池。  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT  
- 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题[最佳做法：在 VM 环境下使用内存中 OLTP](../Topic/Using%20In-Memory%20OLTP%20in%20a%20VM%20Environment.md)。  
+ 如果您将附加内存添加到服务器，或者添加内存优化表更改所需的内存量，则可能需要更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 以下步骤演示了如何更改资源池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。 有关要用于 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值的指导信息，请参阅下面的部分。  有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 。  
   
 1.  使用 `ALTER RESOURCE POOL` 可更改 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 的值。  
   
@@ -162,7 +166,7 @@ GO
 ```  
   
 ##  <a name="bkmk_PercentAvailable"></a> 可用于内存优化表和索引的内存百分比  
- 如果将包含内存优化表的数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷映射到同一资源池，资源调控器会为[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 设置一个内部使用阈值，使资源池用户不产生资源使用冲突。 一般来说，[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用阈值约为资源池的 80%。 下表列出了不同内存大小的实际阈值。  
+ 如果将包含内存优化表的数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷映射到同一资源池，资源调控器会为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 设置一个内部使用阈值，使资源池用户不产生资源使用冲突。 一般来说， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 使用阈值约为资源池的 80%。 下表列出了不同内存大小的实际阈值。  
   
  在为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库创建专用资源池时，您需要在考虑行版本和数据增长后估计内存中表所需的物理内存量。 在估计所需的内存后，你将使用 DMV `sys.dm_os_sys_info` 中“committed_target_kb”列所反映的针对 SQL 实例的提交目标内存所占用的百分比，创建一个资源池（请参阅 [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)）。 例如，您可以将可供实例使用的总内存的 40% 用来创建资源池 P1。 在此 40% 之外， [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎将获取一个较小的百分比来存储 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据。  这样做是为了确保 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 不会占用来自该池的所有内存。  这个较小的百分比值依赖于目标提交内存。 下表描述在引发 OOM 错误之前在资源池（命名资源池或默认资源池）中可用于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 数据库的内存。  
   
@@ -206,13 +210,14 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  如果未将您的数据库绑定到某一命名资源池，则它将绑定到“默认”池。 由于对于大多数其他分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用默认资源池，因此，对于感兴趣的数据库，您将不能使用 DMV sys.dm_resource_governor_resource_pools 精确监视内存优化表使用的内存。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
   
   
+

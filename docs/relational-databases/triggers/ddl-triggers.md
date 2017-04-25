@@ -1,24 +1,28 @@
 ---
 title: "DDL 触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL 触发器, 关于 DDL 触发器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3a47050dc9ba3b157ac37f3fc0646492d231d47
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 触发器
+# <a name="ddl-triggers"></a>DDL 触发器
   DDL 触发器将激发，以响应各种数据定义语言 (DDL) 事件。 这些事件主要与以关键字 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对应。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
   
  如果要执行以下操作，请使用 DDL 触发器：  
@@ -32,12 +36,12 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  测试您的 DDL 触发器以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器。  
   
-## DDL 触发器的类型  
+## <a name="types-of-ddl-triggers"></a>DDL 触发器的类型  
  Transact-SQL DDL 触发器  
  用于执行一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以响应服务器范围或数据库范围事件的一种特殊类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 例如，如果执行某个语句（如 ALTER SERVER CONFIGURATION）或者使用 DROP TABLE 删除某个表，则激发 DDL 触发器。  
   
  CLR DDL 触发器  
- CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程。  
+ CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
  仅在运行触发 DDL 触发器的 DDL 语句后，DDL 触发器才会激发。 DDL 触发器无法作为 INSTEAD OF 触发器使用。 对于影响局部或全局临时表和存储过程的事件，不会触发 DDL 触发器。  
   
@@ -54,10 +58,10 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何帮助减少此威胁的详细信息，请参阅 [管理触发器安全](../../relational-databases/triggers/manage-trigger-security.md)。  
   
-## DDL 触发器作用域  
+## <a name="ddl-trigger-scope"></a>DDL 触发器作用域  
  在响应当前数据库或服务器上处理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事件时，可以触发 DDL 触发器。 触发器的作用域取决于事件。 例如，每当数据库中或服务器实例上发生 CREATE_TABLE 事件时，都会激发为响应 CREATE_TABLE 事件创建的 DDL 触发器。 仅当服务器实例上发生 CREATE_LOGIN 事件时，才能激发为响应 CREATE_LOGIN 事件创建的 DDL 触发器。  
   
- 在下面的示例中，每当数据库中发生 `safety` 或 `DROP_TABLE` 事件时，都会激发 DDL 触发器 `ALTER_TABLE`。  
+ 在下面的示例中，每当数据库中发生 `safety` 或 `DROP_TABLE` 事件时，都会激发 DDL 触发器 `ALTER_TABLE` 。  
   
 ```  
 CREATE TRIGGER safety   
@@ -95,19 +99,19 @@ GO
   
  服务器范围内的 DDL 触发器作为对象存储在 **master** 数据库中。 然而，可以通过在任何数据库上下文中查询 **sys.server_triggers** 目录视图，获取有关服务器范围内的 DDL 触发器的信息。  
   
-## 指定 Transact-SQL 语句或语句组  
+## <a name="specifying-a-transact-sql-statement-or-group-of-statements"></a>指定 Transact-SQL 语句或语句组  
   
-### 选择触发 DDL 触发器的特定 DDL 语句  
+### <a name="selecting-a-particular-ddl-statement-to-fire-a-ddl-trigger"></a>选择触发 DDL 触发器的特定 DDL 语句  
  可以安排在运行一个或多个特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句后触发 DDL 触发器。 在前面的示例中，在发生任何 `safety` 或 `DROP_TABLE` 事件后触发 `ALTER_TABLE` 触发器。 有关可指定激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的列表，请参阅 [DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
   
-### 选择触发 DDL 触发器的一组预定义的 DDL 语句  
+### <a name="selecting-a-predefined-group-of-ddl-statements-to-fire-a-ddl-trigger"></a>选择触发 DDL 触发器的一组预定义的 DDL 语句  
  可以在执行属于一组预定义的相似事件的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事件后激发 DDL 触发器。 例如，如果希望在运行 CREATE TABLE、ALTER TABLE 或 DROP TABLE 语句后触发 DDL 触发器，则可以在 CREATE TRIGGER 语句中指定 FOR DDL_TABLE_EVENTS。 运行 CREATE TRIGGER 后，事件组涵盖的事件都添加到 **sys.trigger_events** 目录视图中。  
   
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，如果对事件组创建触发器，则 **sys.trigger_events** 不包括有关该事件组的信息，而 **sys.trigger_events** 仅包括有关该组涵盖的个别事件的信息。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，**sys.trigger_events** 保留有关创建触发器的事件组的元数据，以及有关该事件组涵盖的个别事件的元数据。 因此，对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中事件组所涵盖的事件的更改并不适用于在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中对这些事件组创建的 DDL 触发器。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中，如果对事件组创建触发器，则 **sys.trigger_events** 不包括有关该事件组的信息，而 **sys.trigger_events** 仅包括有关该组涵盖的个别事件的信息。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中， **sys.trigger_events** 保留有关创建触发器的事件组的元数据，以及有关该事件组涵盖的个别事件的元数据。 因此，对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中事件组所涵盖的事件的更改并不适用于在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中对这些事件组创建的 DDL 触发器。  
   
  有关可用于 DDL 触发器的预定义 DDL 语句组、事件组所涵盖的特定语句以及可以对这些事件组进行编程的作用域的列表，请参阅 [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -117,7 +121,7 @@ GO
 |说明如何返回有关使用 EVENTDATA 函数激发 DDL 触发器的事件的信息。|[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |说明如何管理触发器安全性。|[管理触发器安全性](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [登录触发器](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  

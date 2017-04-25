@@ -1,28 +1,32 @@
 ---
 title: "删除备份设备 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库备份 [SQL Server], 删除设备"
-  - "备份设备 [SQL Server], 删除"
-  - "删除备份设备"
-  - "删除备份设备"
-  - "备份数据库 [SQL Server], 备份设备"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], deleting devices
+- backup devices [SQL Server], deleting
+- deleting backup devices
+- removing backup devices
+- backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除备份设备 (SQL Server)
+# <a name="delete-a-backup-device-sql-server"></a>删除备份设备 (SQL Server)
   本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除备份设备。  
   
  **本主题内容**  
@@ -46,7 +50,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除备份设备  
+#### <a name="to-delete-a-backup-device"></a>删除备份设备  
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -56,11 +60,11 @@ caps.handback.revision: 30
   
 4.  在 **“删除对象”** 对话框中，请验证 **“对象名称”** 列中显示正确的设备名称。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除备份设备  
+#### <a name="to-delete-a-backup-device"></a>删除备份设备  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -82,7 +86,7 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

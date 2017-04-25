@@ -1,22 +1,26 @@
 ---
 title: "删除具有活动租约的备份 Blob 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8590c7e7adbf796d44347b66a790f98c13667bc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除具有活动租约的备份 Blob 文件
+# <a name="deleting-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
   在备份到 Windows Azure 存储区或从中还原时，SQL Server 获得无限期租约以锁定对 blob 的独占访问。 当成功完成备份或还原过程时，释放租约。 如果备份或还原失败，备份过程将尝试清除所有无效 blob。 但是，如果由于持续很长时间的网络连接故障而导致备份失败，备份过程可能无法再次访问 blob 且 blob 可能保持孤立状态。 这意味着在释放租约前，不能写入或删除 blob。 本主题说明如何释放租约和删除 blob。  
   
  有关租约类型的详细信息，请阅读此 [文章](http://go.microsoft.com/fwlink/?LinkId=275664)。  
@@ -25,7 +29,7 @@ caps.handback.revision: 16
   
  如果还原失败，将不阻止后续还原，因此活动租约不会导致问题。 仅当必须覆盖或删除 blob 时，才有必要中断租约。  
   
-## 管理孤立的 Blob  
+## <a name="managing-orphaned-blobs"></a>管理孤立的 Blob  
  以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 在接下来的章节中提供了代码示例：  
   
 1.  **标识具有租约的 blob：** 如果您有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。   您还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦您标识了 blob，我们建议您查看列表，在删除 blob 前验证备份文件的有效性。  
@@ -81,7 +85,7 @@ caps.handback.revision: 16
   
      **正在中断租约**  
   
-     **\<Blob 的 URL> 上的租约是还原租约：仅当某个 blob 具有仍处于活动状态的还原租约时，才能看到此消息。**  
+     **\<Blob 的 URL> 上的租约是还原租约：仅当某个 blob 具有仍处于活动状态的还原租约时，才会看到此消息。**  
   
      **\<Blob 的 URL> 上的租约不是还原租约，正在中断 \<Blob 的 URL> 上的租约。**  
   
@@ -154,7 +158,7 @@ if($lockedBlobs.Count -gt 0)
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

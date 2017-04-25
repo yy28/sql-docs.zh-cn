@@ -1,24 +1,28 @@
 ---
 title: "创建视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "视图 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建视图
+# <a name="create-views"></a>创建视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建视图。 可以将视图用于以下用途：  
   
 -   集中、简化和自定义每个用户对数据库的认识。  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用查询和视图设计器创建视图  
+#### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>使用查询和视图设计器创建视图  
   
 1.  在 **“对象资源管理器”**中，展开要创建新视图的数据库。  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 16
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
   
-     有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)。  
+     有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建视图  
+#### <a name="to-create-a-view"></a>创建视图  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

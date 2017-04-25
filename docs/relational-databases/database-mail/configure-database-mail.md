@@ -1,59 +1,63 @@
 ---
 title: "配置数据库邮件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 配置数据库邮件
+# <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
   
 -   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **若要配置数据库邮件，使用：**  [数据库邮件配置向导](#DBWizard)和[模板](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 有关详细信息，请参阅主题 [Database Mail XPs Server 配置选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)。  
+ 使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 有关详细信息，请参阅主题 [Database Mail XPs Server 配置选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 。  
   
 ###  <a name="Restrictions"></a> 限制和局限  
  在任何数据库中启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 都需要数据库锁。 如果在 **msdb**中停用了 Service Broker，则若要启用数据库邮件，应首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，以使 Service Broker 可以获取所需的锁。  
@@ -134,7 +138,7 @@ caps.handback.revision: 13
   
  数据库邮件帐户包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向 SMTP 服务器发送电子邮件所需的信息。 每个帐户均包含一个电子邮件服务器的信息。  
   
- 数据库邮件帐户仅用于数据库邮件。 数据库邮件帐户与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户或 Microsoft Windows 帐户之间不相互对应。 可以利用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据或您提供的其他凭据发送数据库邮件，也可以用匿名方式发送。 使用基本身份验证时，数据库邮件帐户中的用户名和密码仅用于在电子邮件服务器中进行身份验证。 帐户无需与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户或运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的用户对应。  
+ 数据库邮件帐户仅用于数据库邮件。 数据库邮件帐户与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户或 Microsoft Windows 帐户之间不相互对应。 可以利用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据或您提供的其他凭据发送数据库邮件，也可以用匿名方式发送。 使用基本身份验证时，数据库邮件帐户中的用户名和密码仅用于在电子邮件服务器中进行身份验证。 帐户无需与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户或运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上的用户对应。  
   
  **帐户名**  
  键入新帐户的名称。  
@@ -143,10 +147,10 @@ caps.handback.revision: 13
  键入帐户的说明。 该说明为可选项。  
   
  **电子邮件地址**  
- 键入帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可能会通过地址 SqlAgent@Adventure-Works.com 发送电子邮件。  
+ 键入帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可能会通过地址 SqlAgent@Adventure-Works.com 发送电子邮件。  
   
  **显示名称**  
- 键入由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可能会在电子邮件上显示名称“SQL Server 代理自动发件人”。  
+ 键入由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户可能会在电子邮件上显示名称“SQL Server 代理自动发件人”。  
   
  **答复电子邮件**  
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
@@ -161,7 +165,7 @@ caps.handback.revision: 13
  使用安全套接字层加密通信。  
   
  **使用数据库引擎服务凭据的 Windows 身份验证**  
- 使用为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务配置的凭据生成指向 SMTP 服务器的连接。  
+ 使用为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务配置的凭据生成指向 SMTP 服务器的连接。  
   
  **基本身份验证**  
  指定 SMTP 服务器要求的用户名和密码。  
@@ -193,13 +197,13 @@ caps.handback.revision: 13
  查看或更新帐户的说明。 该说明为可选项。  
   
  **电子邮件地址**  
- 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址 **SqlAgent@Adventure-Works.com** 发送电子邮件。  
+ 查看或更新帐户电子邮件地址的名称。 这是发送电子邮件的电子邮件地址。 例如，Microsoft SQL Server 代理的帐户可能会通过地址 **SqlAgent@Adventure-Works.com**的计算机上的用户对应。  
   
  **显示名称**  
- 查看或更新由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如，SQL Server 代理的帐户可能会在电子邮件上显示名称 **SQL Server Agent Automated Mailer**。  
+ 查看或更新由此帐户发送的电子邮件上显示的名称。 显示名称为可选项。 这是由此帐户发送的邮件上显示的名称。 例如，SQL Server 代理的帐户可能会在电子邮件上显示名称 **SQL Server Agent Automated Mailer** 。  
   
  **答复电子邮件**  
- 查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员 **danw@Adventure-Works.com**。  
+ 查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员 **danw@Adventure-Works.com**的计算机上的用户对应。  
   
  **服务器名称**  
  查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。 如需相关帮助，请询问您的邮件管理员。  
@@ -211,7 +215,7 @@ caps.handback.revision: 13
  使用安全套接字层加密通信。  
   
  **使用数据库引擎服务凭据的 Windows 身份验证**  
- 使用为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务配置的凭据生成指向 SMTP 服务器的连接。  
+ 使用为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务配置的凭据生成指向 SMTP 服务器的连接。  
   
  **基本身份验证**  
  指定 SMTP 服务器要求的用户名和密码。  
@@ -244,16 +248,16 @@ caps.handback.revision: 13
  **SMTP 帐户**  
  为配置文件选择一个或多个帐户。 优先级设置数据库邮件使用帐户的顺序。 如果没有列出任何帐户，必须单击 **“添加”** 继续，并添加新的 SMTP 帐户。  
   
- **添加**  
+ **“添加”**  
  向配置文件中添加帐户。  
   
  **删除**  
  从配置文件中删除所选帐户。  
   
- **上移**  
+ **“上移”**  
  提高选定帐户的优先级。  
   
- **下移**  
+ **“下移”**  
  降低选定帐户的优先级。  
   
  [数据库邮件配置向导](#DBWizard)  
@@ -275,16 +279,16 @@ caps.handback.revision: 13
  **SMTP 帐户**  
  为配置文件选择一个或多个帐户。 故障转移优先级设置了在进行故障转移时数据库邮件使用帐户的顺序。  
   
- **添加**  
+ **“添加”**  
  向配置文件中添加帐户。  
   
  **删除**  
  从配置文件中删除所选帐户。  
   
- **上移**  
+ **“上移”**  
  提高所选帐户的故障转移优先级。  
   
- **下移**  
+ **“下移”**  
  降低所选帐户的故障转移优先级。  
   
  **Priority**  
@@ -293,12 +297,12 @@ caps.handback.revision: 13
  **帐户名**  
  查看帐户的名称。  
   
- **电子邮件地址**  
+ **E-mail Address**  
  查看帐户的电子邮件地址。  
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="AddAccount"></a> “将帐户添加到配置文件”页  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  使用此页可选择要添加到配置文件的帐户。 请从 **“帐户名”** 框中选择现有帐户，或单击 **“新建帐户”**。  
   
  **帐户名**  
@@ -310,7 +314,7 @@ caps.handback.revision: 13
  **服务器名称**  
  查看所选帐户的邮件服务器名称。 您不能在此页中更改服务器名称。 若要更改该帐户的服务器名称，请返回到该向导的主页，再选择 **“管理数据库邮件帐户和配置文件”** 选项。  
   
- **新建帐户**  
+ **“新建帐户”**  
  创建新帐户。  
   
  [数据库邮件配置向导](#DBWizard)  
@@ -327,7 +331,7 @@ caps.handback.revision: 13
  **创建新配置文件**  
  创建新的配置文件。  
   
- **查看、更改或删除现有配置文件。 您也可以管理与该配置文件关联的帐户。**  
+ **查看、更改或删除现有配置文件。还可以管理与该配置文件关联的帐户。**  
  更新或删除现有配置文件。 使用此选项，您还可以管理与该配置文件关联的帐户。  
   
  [数据库邮件配置向导](#DBWizard)  
@@ -342,7 +346,7 @@ caps.handback.revision: 13
  **公共**  
  选择此选项可将指定的配置文件转为公共配置文件。  
   
- **配置文件名**  
+ **Profile Name**  
  显示配置文件的名称。  
   
  **默认配置文件**  
@@ -377,7 +381,7 @@ caps.handback.revision: 13
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="SystemParameters"></a> 配置系统参数  
+###  <a name="SystemParameters"></a> AccountRetryAttempts  
  使用此页可以指定数据库邮件系统参数。 查看系统参数和每个参数的当前值。 选择某个参数可以在信息窗格中查看其简短说明。  
   
  **帐户重试次数**  
@@ -416,7 +420,7 @@ caps.handback.revision: 13
   
  [数据库邮件配置向导](#DBWizard)  
   
-###  <a name="TestEmail"></a> “发送测试电子邮件”页  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
  使用**从 *<instance_name>* 发送测试电子邮件**页，可以使用指定的数据库邮件配置文件发送电子邮件。 只有 **sysadmin** 固定服务器角色的成员才可以使用此页发送测试电子邮件。  
   
  **数据库邮件配置文件**  
@@ -434,14 +438,14 @@ caps.handback.revision: 13
  “数据库邮件测试电子邮件”对话框确认数据库邮件尝试发送的测试消息，并为测试电子邮件提供 **mailitem_id**。 请与收件人核实以确定该电子邮件是否已到达。 通常几分钟后即可接收到电子邮件，但是由于网络速度较慢、邮件服务器上的邮件积压或服务器暂时不可用，该电子邮件可能会延迟。 使用 **mailitem_id** 以进行故障排除。  
   
  **发送电子邮件**  
- 测试电子邮件的 **mailitem_id**。  
+ 测试电子邮件的 **mailitem_id** 。  
   
  **故障排除**  
- 单击可打开联机丛书的[对数据库邮件进行故障排除](http://msdn.microsoft.com/library/ms188663.aspx)主题。  
+ 单击可打开联机丛书的 [对数据库邮件进行故障排除](http://msdn.microsoft.com/library/ms188663.aspx)主题。  
   
  [数据库邮件配置向导](#DBWizard)  
   
-##  <a name="Template"></a> 使用模板  
+##  <a name="Template"></a> 模板  
  **创建数据库邮件配置脚本**  
   
 1.  在 **“视图”** 菜单上，选择 **“模板资源管理器”**。  
@@ -452,7 +456,7 @@ caps.handback.revision: 13
   
 4.  在 **“查询”** 菜单上，选择 **“指定模板参数的值”**。 将打开 **“替换模板参数”** 窗口。  
   
-5.  为 **profile_name**、**account_name**、**SMTP_servername**、**email_address** 和 **display_name** 键入值。 SQL Server Management Studio 将使用您提供的值填充模板。  
+5.  为 **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**和 **display_name**键入值。 SQL Server Management Studio 将使用您提供的值填充模板。  
   
 6.  执行脚本来创建配置。  
   

@@ -1,37 +1,41 @@
 ---
-title: "通过备份和还原来复制数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文搜索 [SQL Server], 备份和还原"
-  - "还原数据库 [SQL Server], 早期的 SQL Server 版本"
-  - "数据库还原 [SQL Server], 复制数据库"
-  - "还原数据库 [SQL Server], 到其他服务器实例"
-  - "还原 [SQL Server], 到其他服务器实例"
-  - "备份数据库 [SQL Server], 复制数据库"
-  - "数据库备份 [SQL Server], 复制数据库"
+title: "通过备份和还原复制数据库 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], back up and restore
+- restoring databases [SQL Server], previous SQL Server versions
+- database restores [SQL Server], copying databases
+- restoring databases [SQL Server], onto another server instance
+- restoring [SQL Server], onto another server instance
+- backing up databases [SQL Server], copying databases
+- database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa3c7efcaa066953595525819686c612b5a9aee5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过备份和还原来复制数据库
+# <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用**早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
   
 >**重要说明！** SQL Server 2016 使用与早期版本不同的默认路径。 因此，若要还原在早期版本的默认位置中创建的数据库备份，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 有关移动数据库文件的详细信息，请参阅本主题中后面的“移动数据库文件”。  
   
-## 使用备份和还原复制数据库的一般步骤  
+## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>使用备份和还原复制数据库的一般步骤  
  使用备份和还原将数据库复制到其他 SQL Server 实例时，源计算机和目标计算机可以是运行 SQL Server 的任何平台。  
   
  一般步骤如下：  
@@ -44,7 +48,7 @@ caps.handback.revision: 61
   
 一些可能影响此过程的其他注意事项：
   
-## 还原数据库文件之前  
+## <a name="before-you-restore-database-files"></a>还原数据库文件之前  
  还原数据库操作将自动创建还原数据库所需的数据库文件。 默认情况下，在还原过程中 SQL Server 创建的文件的名称和路径与源计算机上原始数据库中备份文件的名称和路径相同。  
   
  或者，在还原数据库时，可以指定用于还原数据库的设备映射、文件名或路径。 
@@ -63,7 +67,7 @@ caps.handback.revision: 61
   
  若要避免错误和令人不愉快的结果，在还原操作前，你可以使用 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 历史记录表确定备份中你计划还原的数据库文件和日志文件。  
   
-## 移动数据库文件  
+## <a name="moving-the-database-files"></a>移动数据库文件  
  如果无法将数据库备份中的文件还原到目标计算机上，则必须在还原这些文件时将它们移到新的位置。 例如：  
   
 -   您想要通过在早期版本的默认位置创建的备份还原数据库。  
@@ -74,31 +78,31 @@ caps.handback.revision: 61
   
  有关详细信息，请参阅本主题中后面的“将文件和文件组还原到新位置”。  
   
-## 更改数据库名称  
+## <a name="changing-the-database-name"></a>更改数据库名称  
  在将数据库还原到目标计算机时可以更改其名称，而不必先还原数据库再手动更改其名称。 例如，可能有必要将数据库名称由 **Sales** 改为 **SalesCopy** 来表示这是数据库的一个副本。  
   
  还原数据库时，显式提供的数据库名称将自动用作新的数据库名称。 由于数据库名称尚不存在，因此需使用备份中的文件创建新的数据库名称。  
   
-## 使用还原升级数据库时  
- 从早期版本中还原备份时，提前了解目标计算机上是否存在备份中每个全文目录的路径（驱动器和目录）将很有帮助。 若要列出备份中每个文件（包括目录文件）的逻辑名称和物理名称、路径名和文件名，请使用 RESTORE FILELISTONLY FROM *<backup_device>* 语句。 有关详细信息，请参阅 [RESTORE FILELISTONLY (Transact-SQL)](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)。  
+## <a name="when-upgrading-a-database-by-using-restore"></a>使用还原升级数据库时  
+ 从早期版本中还原备份时，提前了解目标计算机上是否存在备份中每个全文目录的路径（驱动器和目录）将很有帮助。 若要列出备份中每个文件（包括目录文件）的逻辑名称和物理名称、路径名和文件名，请使用 RESTORE FILELISTONLY FROM *<backup_device>* 语句。 有关详细信息，请参阅 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
  如果目标计算机上不存在相同的路径，则您可以执行下列两种操作：  
   
 -   在目标计算机上创建相同的驱动器/目录映射。  
   
--   通过在 RESTORE DATABASE 语句中使用 WITH MOVE 子句，在还原操作过程中将目录文件移动到新位置。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+-   通过在 RESTORE DATABASE 语句中使用 WITH MOVE 子句，在还原操作过程中将目录文件移动到新位置。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)备份。  
   
- 有关升级全文检索的替代选项的信息，请参阅[升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
+ 有关升级全文检索的替代选项的信息，请参阅 [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
   
-## 数据库所有权  
+## <a name="database-ownership"></a>数据库所有权  
  在其他计算机上还原数据库时，启动还原操作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录用户或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户将自动成为新数据库的所有者。 还原数据库时，系统管理员或新数据库所有者可以更改数据库所有权。 若要防止未经授权的数据库还原操作，请使用介质集或备份集密码。  
   
-## 还原到另一个服务器实例时管理元数据  
- 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md)。  
+## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>还原到另一个服务器实例时管理元数据  
+ 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
  **查看备份集中的数据文件和日志文件**  
   
--   [RESTORE FILELISTONLY (Transact-SQL)](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
  **将文件和文件组还原到新位置**  
   
@@ -132,10 +136,11 @@ caps.handback.revision: 61
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)   
- [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
+

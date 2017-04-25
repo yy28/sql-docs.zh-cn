@@ -1,26 +1,30 @@
 ---
 title: "DDL 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL 事件"
-  - "DDL 触发器, 事件"
-  - "事件 [SQL Server], DDL"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL events
+- DDL triggers, events
+- events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 411eb6c824b073818fbda216ba801d34ee5bcf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 事件
+# <a name="ddl-events"></a>DDL 事件
   下表列出了可用于激发 DDL 触发器或事件通知的 DDL 事件。 注意，每个事件都对应于一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或存储过程，并且语句语法修改为在关键字之间加入了一个下划线字符 (_)。  
   
 > [!IMPORTANT]  
@@ -46,7 +50,7 @@ caps.handback.revision: 29
 |BIND_DEFAULT（适用于 **sp_bindefault**。）|UNBIND_DEFAULT（适用于 **sp_unbindefault**。）||  
 |CREATE_EVENT_NOTIFICATION|DROP_EVENT_NOTIFICATION||  
 |CREATE_EXTENDED_PROPERTY（适用于 **sp_addextendedproperty**。）|ALTER_EXTENDED_PROPERTY（适用于 **sp_updateextendedproperty**。）|DROP_EXTENDED_PROPERTY（适用于 **sp_dropextendedproperty**。）|  
-|CREATE_FULLTEXT_CATALOG（当指定 create 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|ALTER_FULLTEXT_CATALOG（当指定 start_incremental、start_full、Stop 或 Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句，当指定 enable 时，适用于 **sp_fulltext_database**。）|DROP_FULLTEXT_CATALOG（当指定 drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|  
+|CREATE_FULLTEXT_CATALOG（当指定 create 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|ALTER_FULLTEXT_CATALOG（当指定 start_incremental、start_full、Stop 或 Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 enable 时，适用于 **sp_fulltext_database**。）|DROP_FULLTEXT_CATALOG（当指定 drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|  
 |CREATE_FULLTEXT_INDEX（当指定 create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|ALTER_FULLTEXT_INDEX（当指定 start_full、start_incremental 或stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create 或 drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）|DROP_FULLTEXT_INDEX（当指定 drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|  
 |CREATE_FULLTEXT_STOPLIST|ALTER_FULLTEXT_STOPLIST|DROP_FULLTEXT_STOPLIST|  
 |CREATE_FUNCTION|ALTER_FUNCTION|DROP_FUNCTION|  
@@ -117,3 +121,4 @@ caps.handback.revision: 29
  [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)  
   
   
+

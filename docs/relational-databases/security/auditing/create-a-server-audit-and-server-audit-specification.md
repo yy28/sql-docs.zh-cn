@@ -1,29 +1,33 @@
 ---
 title: "创建服务器审核和服务器审核规范 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.SQLAUDIT.FILTER.F1"
-  - "sql13.swb.sqlaudit.general.f1"
-  - "sql13.swb.sqlaudit.srvaudit.general.f1"
-helpviewer_keywords: 
-  - "服务器审核 [SQL Server]"
-  - "审核 [SQL Server], 规范"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.SQLAUDIT.FILTER.F1
+- sql13.swb.sqlaudit.general.f1
+- sql13.swb.sqlaudit.srvaudit.general.f1
+helpviewer_keywords:
+- server audit [SQL Server]
+- audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e33a4ff076039b03c399a0f7868bf697ca1cd8d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建服务器审核和服务器审核规范
+# <a name="create-a-server-audit-and-server-audit-specification"></a>创建服务器审核和服务器审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和服务器审核规范。 “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
@@ -60,7 +64,7 @@ caps.handback.revision: 21
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建服务器审核  
+#### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 21
      审核的名称。 这是在创建新审核时自动生成的，但是您可以对其进行编辑。  
   
      **队列延迟(毫秒)**  
-     指定在强制处理审核操作之前可以等待的时间（毫秒）。  值 0 指示同步传递。 默认的最小值为 **1000**（1 秒）。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。  
+     指定在强制处理审核操作之前可以等待的时间（毫秒）。  值 0 指示同步传递。 默认的最小值为 **1000** （1 秒）。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。  
   
      **在审核日志失败时：**  
      **Continue**  
@@ -82,19 +86,19 @@ caps.handback.revision: 21
      在写入目标的服务器实例无法将数据写入审核目标时，强制关闭服务器。 发出此命令的登录名必须具有 **SHUTDOWN** 权限。 如果该登录名没有此权限，则该函数将失败并将引发错误消息。 将不会发生审核的事件。 在审核失败可能损害系统的安全或完整性时，选择此选项。  
   
      **失败操作**  
-     在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 无法写入审核日志的情况下，如果数据库操作将导致审核的事件，则此选项将导致数据库操作失败。 将不会发生审核的事件。 不会导致审核的事件的操作可以继续。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完全访问权限更重要时，选择此选项。  
+     在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 无法写入审核日志的情况下，如果数据库操作将导致审核的事件，则此选项将导致数据库操作失败。 将不会发生审核的事件。 不会导致审核的事件的操作可以继续。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后将恢复。 在维护完整审核比对 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完全访问权限更重要时，选择此选项。  
   
     > [!IMPORTANT]  
     >  在审核处于失败状态时，专用管理员连接可继续执行审核的事件。  
   
      “审核目标”列表  
-     指定数据的审核目标。 可用选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 写入到 Windows 安全日志。 有关详细信息，请参阅[将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
+     指定数据的审核目标。 可用选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 写入到 Windows 安全日志。 有关详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
   
      **文件路径**  
      指定当“审核目标”是文件时，要将审核数据写入的文件夹所在的位置。  
   
      **省略号 (…)**  
-     打开**定位文件夹 – ***服务器_名称*对话框，以指定文件路径或创建要写入审核文件的文件夹。  
+     打开 **定位文件夹 –***服务器_名称* 对话框，以指定文件路径或创建要写入审核文件的文件夹。  
   
      **审核文件最大限制：**  
      **最大滚动更新文件数**  
@@ -119,7 +123,7 @@ caps.handback.revision: 21
   
 4.  在完成选项选择后，请单击 **“确定”**。  
   
-#### 创建服务器审核规范  
+#### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
 1.  在对象资源管理器中，右键单击加号以展开 **“安全性”** 文件夹。  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 21
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建服务器审核  
+#### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 21
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
   
-#### 创建服务器审核规范  
+#### <a name="to-create-a-server-audit-specification"></a>创建服务器审核规范  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

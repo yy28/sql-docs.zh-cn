@@ -1,27 +1,31 @@
 ---
 title: "创建、构造和查询地理实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography 数据类型 [SQL Server]"
-  - "大地测量数据类型 (SQL Server)"
-  - "geography 数据类型 [SQL Server], 关于 geography 数据类型"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建、构造和查询地理实例
-  地理空间 **geography** 数据类型表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
+# <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
+  地理空间 **geography**数据类型表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
   
  **geography** 类型已进行预定义，可在每个数据库中使用。 你可以创建 **geography** 类型的表列并对 **geography** 数据进行操作，就像使用其他系统提供的数据类型一样。  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint（geography 数据类型）](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> 维度  
- 非空 **geography** 实例可以为零维、一维或二维。 零维 **geography** 实例（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString**、**CompoundCurve** 和 **MultiLineString**）有长度。 二维实例（如 **Polygon、CurvePolygon** 和 **MultiPolygon**）有面积和长度。 空实例会报告 -1 维，并且 **GeometryCollection** 会报告其内容的最大维度。  
+ 非空 **geography** 实例可以为零维、一维或二维。 零维 **geography** 实例（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString**、 **CompoundCurve**和 **MultiLineString**）有长度。 二维实例（如 **Polygon、CurvePolygon**和 **MultiPolygon**）有面积和长度。 空实例会报告 -1 维，并且 **GeometryCollection** 会报告其内容的最大维度。  
   
  **返回实例的维度**  
  [STDimension（geography 数据类型）](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference（geography 数据类型）](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> 地域实例必须使用支持的 SRID  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 **geography** 实例的支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，在使用 **geography** 数据类型对空间数据执行计算时，结果将取决于在创建数据时使用的是哪个椭圆体，因为为每个椭圆体都分配了一个特定空间引用标识符 (SRID)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持基于 EPSG 标准的 SRID。 必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography **实例的支持** 的 SRID 执行计算或将方法用于地域空间数据。 SRID 必须与 **sys.spatial_reference_systems** 目录视图中显示的 SRID 中的一个匹配。 如前所述，在使用 **geography** 数据类型对空间数据执行计算时，结果将取决于在创建数据时使用的是哪个椭圆体，因为为每个椭圆体都分配了一个特定空间引用标识符 (SRID)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用方法时， **geography** 实例之间的关系。 如果要使用 WGS 84（或 SRID 4326）之外的某个空间引用系统中的数据，您需要确定地域空间数据的特定 SRID。  
   
 ##  <a name="examples"></a> 示例  
  以下示例说明如何添加和查询地理数据。  
   
--   第一个示例创建了带有标识列和 `geography` 列 `GeogCol1` 的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography` 实例，一行包含 `Polygon` 实例。  
+-   第一个示例创建了带有标识列和 `geography` 列 `GeogCol1`的表。 第三列将 `geography` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geography`实例，一行包含 `Polygon` 实例。  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

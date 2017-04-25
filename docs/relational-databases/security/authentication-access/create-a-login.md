@@ -1,46 +1,50 @@
 ---
-title: "创建一个登录名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.login.status.f1"
-  - "sql13.swb.login.effectivepermissions.f1"
-  - "sql13.swb.login.general.f1"
-  - "sql13.swb.login.databaseaccess.f1"
-  - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
-  - "身份验证 [SQL Server], 登录名"
-  - "登录名 [SQL Server], 创建"
-  - "使用 Management Studio 创建登录名"
-  - "创建登录名 [SQL Server]"
-  - "SQL Server 登录名"
+title: "创建登录名 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.login.status.f1
+- sql13.swb.login.effectivepermissions.f1
+- sql13.swb.login.general.f1
+- sql13.swb.login.databaseaccess.f1
+- sql13.swb.login.serverroles.f1
+helpviewer_keywords:
+- authentication [SQL Server], logins
+- logins [SQL Server], creating
+- creating logins with Management Studio
+- Create login [SQL Server]
+- SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建一个登录名
+# <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
   
 ##  <a name="Background"></a> 背景  
- 登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
+ 登录名是一个可由安全系统进行身份验证的安全主体或实体。 用户需要使用登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可基于 Windows 主体（例如，域用户或 Windows 域组）创建登录名，或者也可创建一个并非基于 Windows 主体的登录名（例如， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名）。  
   
-> **注意：**若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，[!INCLUDE[ssDE](../../../includes/ssde-md.md)]必须使用混合模式身份验证。 有关详细信息，请参阅[选择身份验证模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
+> **注意：** 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必须使用混合模式身份验证。 有关详细信息，请参阅 [选择身份验证模式](../../../relational-databases/security/choose-an-authentication-mode.md)。  
   
  可以向作为安全主体的登录名授予权限。 登录名的作用域是整个 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的特定数据库，登录名必须映射到数据库用户。 数据库内的权限是向数据库用户而不是登录名授予和拒绝授予的。 可将作用域为整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的权限（例如 **CREATE ENDPOINT** 权限）授予一个登录名。  
   
-> **注意：**当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅[包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+> **注意：** 当登录名连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，在 master 数据库验证标识。 使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 连接进行身份验证。 当使用包含的数据库用户时，登录名不是必需的。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ##  <a name="Security"></a> Security  
 
@@ -65,9 +69,9 @@ caps.handback.revision: 29
   
     3.  在“输入要选择的对象名称（示例）”下，输入你想要查找的用户或组名。 有关详细信息，请参阅 [“选择用户、计算机或组”对话框](http://technet.microsoft.com/library/cc771712.aspx)。  
   
-    4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅[选择“用户”、“计算机”或“组”对话框 - 高级页面](http://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  单击 **“高级…”** 以显示更多高级搜索选项。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](http://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  单击“确定” 。  
+    5.  单击 **“确定”**中创建登录名。  
   
 4.  若要基于 Windows 主体创建一个登录名，请选择 **“Windows 身份验证”**。 这是默认选项。  
   
@@ -95,10 +99,10 @@ caps.handback.revision: 29
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 其他选项  
+### <a name="additional-options"></a>其他选项  
  **“登录名 – 新建”** 对话框还在四个其他页面上提供了选项： **“服务器角色”**、“用户映射” 、 **“安全对象”**和“状态” 。  
   
-### “服务器角色”  
+### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
   
  “bulkadmin”复选框  
@@ -128,7 +132,7 @@ caps.handback.revision: 29
  “sysadmin”复选框  
  **sysadmin** 固定服务器角色的成员可以在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中执行任何活动。  
   
-### 用户映射  
+### <a name="user-mapping"></a>用户映射  
  **“用户映射”** 页将列出可应用于登录名的所有可能的数据库以及这些数据库上的数据库角色成员身份。 选定的数据库将确定对登录名可用的角色成员身份。 此页还将提供以下选项：  
   
  **映射到此登录名的用户**  
@@ -150,9 +154,9 @@ caps.handback.revision: 29
  只读属性，指示所选数据库是否已启用 Guest 帐户。 可使用 Guest 帐户的 **“登录属性”** 对话框的 **“状态”** 页来启用或禁用 Guest 帐户。  
   
  **数据库角色成员身份：***database_name*  
- 选择用户在指定数据库中的角色。 在每个数据库中，所有用户都是 **public** 角色的成员，并且不能被删除。 有关数据库角色的详细信息，请参阅[数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
+ 选择用户在指定数据库中的角色。 在每个数据库中，所有用户都是 **public** 角色的成员，并且不能被删除。 有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
-### 安全对象  
+### <a name="securables"></a>安全对象  
  **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。 此页还将提供以下选项：  
   
  **上部网格**  
@@ -204,7 +208,7 @@ caps.handback.revision: 29
  **拒绝**  
  选中该选项可以拒绝该登录名具有该权限。 清除该选项将撤消此权限。  
   
-### “登录属性”  
+### <a name="status"></a>“登录属性”  
  **“状态”** 页将列出可对选定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名配置的一些身份验证和授权选项。  
   
  此页还将提供以下选项：  
@@ -221,7 +225,7 @@ caps.handback.revision: 29
   
  选择此选项以启用或禁用此登录名。 此选项将 ALTER LOGIN 语句与 ENABLE 或者 DISABLE 选项配合使用。  
   
- **SQL Server 身份验证**  
+ **SQL Server Authentication**  
  仅当所选的登录名使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证进行连接并且登录名已锁定时，复选框“登录名已锁定”才可用。 该设置是只读的。 若要解除对已锁定登录名的锁定，请执行带 UNLOCK 选项的 ALTER LOGIN。  
   
 ##  <a name="TsqlProcedure"></a> 使用 T-SQL 创建使用 Windows 身份验证的登录名  
@@ -241,7 +245,7 @@ caps.handback.revision: 29
   
     ```  
   
-## 使用 SSMS 创建使用 SQL Server 身份验证的登录名  
+## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>使用 SSMS 创建使用 SQL Server 身份验证的登录名  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -264,13 +268,14 @@ caps.handback.revision: 29
 ##  <a name="FollowUp"></a> 跟进：在创建登录名后采取的步骤  
  创建登录名后，该登录名可连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，但不一定有执行任何有用工作的充分权限。 下面的列表提供了指向常见登录操作的链接。  
   
--   若要将登录名加入某一角色，请参阅[加入角色](../../../relational-databases/security/authentication-access/join-a-role.md)。  
+-   若要将登录名加入某一角色，请参阅 [加入角色](../../../relational-databases/security/authentication-access/join-a-role.md)。  
   
--   若要授权登录名使用数据库，请参阅[创建数据库用户](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
+-   若要授权登录名使用数据库，请参阅 [创建数据库用户](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
   
--   若要向登录名授予权限，请参阅[向主体授予权限](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)。  
+-   若要向登录名授予权限，请参阅 [向主体授予权限](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

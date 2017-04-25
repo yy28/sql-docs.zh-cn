@@ -1,33 +1,37 @@
 ---
 title: "数据层应用程序 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "设计 DAC"
-  - "操作指南 [DAC]"
-  - "数据层应用程序 [SQL Server]，设计"
-  - "向导 [DAC]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designing DACs
+- How to [DAC]
+- data-tier application [SQL Server], designing
+- wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据层应用程序
+# <a name="data-tier-applications"></a>数据层应用程序
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
   
  BACPAC 是一个封装数据库架构以及数据库中存储的数据的相关项目。  
   
-## 数据层应用程序的优点  
+## <a name="benefits-of-data-tier-applications"></a>数据层应用程序的优点  
  大部分数据库应用程序的生命周期涉及开发人员和 DBA 共享并交换有关应用程序更新和维护活动的脚本和临时集成说明。 尽管对于少量的数据库，这一点是可接受的，但当数据库的数量、大小和复杂性增大时，它很快会变得不可缩放。  
   
  DAC 是一种数据库生命周期管理和效率工具，可用于进行声明性数据库开发以简化部署和管理。 开发人员可以在 SQL Server Data Tools 数据库项目中创作一个数据库，然后将该数据库生成到 DACPAC 中以便提交给 DBA。 DBA 可使用 SQL Server Management Studio 将 DAC 部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的测试或生产实例中。 或者，DBA 可以使用 DACPAC 升级之前用 SQL Server Management Studio 部署的数据库。 若要完成生命周期，DBA 可将数据库提取到 DACPAC 中，再将其提交给开发人员以反映测试或生产调整，或进一步更改数据库设计以响应应用程序中的更改。  
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  DAC 还支持版本控制以帮助开发人员和 DBA 在数据库的生命周期内维护和管理数据库沿袭。  
   
-## DAC 概念  
+## <a name="dac-concepts"></a>DAC 概念  
  DAC 简化了支持应用程序的数据层元素的开发、部署和管理：  
   
 -   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 SQL Server 对象（如表、视图和实例对象）。 DAC 是 SQL Server 数据库部署的一个自包含单元，它使数据层开发人员和 DBA 能够将 SQL Server 对象打包到一个名为“DAC 包”的可移植项目或 .dacpac 文件中。  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
 -   用户必须是 dbmanager 角色的成员或分配了 CREATE DATABASE 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 dbmanager 角色的成员或分配了 DROP DATABASE 权限才能删除数据库。  
   
-## DAC 工具  
+## <a name="dac-tools"></a>DAC 工具  
  可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]附带的多个工具中无缝使用 DACPAC。 这些工具可满足将 DACPAC 用作互操作性单元的各个用户角色的需求。  
   
 -   应用程序开发人员：  
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 SQL Server Data Tools 还支持本地 DB 以进行未连接的客户端数据库应用程序开发。 开发人员可以拍摄此本地数据库的快照以创建 .dacpac 文件中包含的 DACPAC。  
   
-    -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
+    -   开发人员可单独将一个数据库项目直接发布到数据库，甚至无需生成 DACPAC。 发布操作的行为与使用其他工具执行的部署操作的行为类似。  
   
 -   数据库管理员：  
   
@@ -82,7 +86,7 @@ SQL Server Data Tools 还支持本地 DB 以进行未连接的客户端数据库
   
     -   IT 系统集成者和管理员可以使用 SqlPackage.exe 命令行工具来进行 DAC 操作。  
   
-## DAC 操作  
+## <a name="dac-operations"></a>DAC 操作  
  DAC 支持以下操作：  
   
 -   **EXTRACT** - 用户可将数据库提取到 DACPAC 中。  
@@ -95,7 +99,7 @@ SQL Server Data Tools 还支持本地 DB 以进行未连接的客户端数据库
   
 -   **UPGRADE** - 可以使用 DACPAC 升级数据库。 甚至在之前未注册为数据层应用程序的数据库上也支持升级操作，但升级操作的结果是，将隐式注册数据库。  
   
-## BACPAC  
+## <a name="bacpac"></a>BACPAC  
  BACPAC 是扩展名为 .bacpac 的 Windows 文件，用于封装数据库的架构和数据。 BACPAC 的主要用例是将数据库从一台服务器移到另一台服务器上（或[将数据库从本地服务器移到云中](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)），同时以开放格式对现有数据库进行存档。  
   
  与 DACPAC 类似，BACPAC 文件是开放的 - BACPAC 的架构内容与 DACPAC 的架构内容相同。 BACPAC 中的数据是以 JSON 格式进行存储。  
@@ -110,10 +114,10 @@ SQL Server Data Tools 还支持本地 DB 以进行未连接的客户端数据库
   
  数据库管理工具 SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
   
-## 权限  
+## <a name="permissions"></a>权限  
  用户必须是 **dbmanager** 角色的成员或分配了 **CREATE DATABASE** 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 **dbmanager** 角色的成员或分配了 **DROP DATABASE** 权限才能删除数据库。  
   
-## 数据层应用程序任务  
+## <a name="data-tier-application-tasks"></a>数据层应用程序任务  
   
 |任务|主题链接|  
 |----------------------|-----------|  
@@ -129,7 +133,8 @@ SQL Server Data Tools 还支持本地 DB 以进行未连接的客户端数据库
 |介绍如何将 DAC 包的内容放置于一个文件夹中，数据库管理员可以查看该文件夹，以便在将该 DAC 部署到生产服务器之前查看其内容。|[解压缩 DAC 包](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |介绍如何使用向导部署现有数据库。 此向导使用 DAC 执行部署。|[使用 DAC 部署数据库](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## 另请参阅  
- [对 SQL Server 对象和版本的 DAC 支持](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+## <a name="see-also"></a>另请参阅  
+ [DAC 对 SQL Server 对象和版本的支持](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
+

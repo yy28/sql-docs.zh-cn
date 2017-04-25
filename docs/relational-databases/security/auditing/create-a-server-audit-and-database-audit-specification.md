@@ -1,30 +1,34 @@
 ---
-title: "创建服务器审核规范和数据库审核规范 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlaudit.dbaudit.general.f1"
-helpviewer_keywords: 
-  - "审核 [SQL Server], 创建数据库规范"
-  - "数据库审核 [SQL Server]"
+title: "创建服务器审核和数据库审核规范 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlaudit.dbaudit.general.f1
+helpviewer_keywords:
+- audits [SQL Server], creating database specification
+- database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d5beb8f3b18bd4dd99039b0f2b38ce731140726
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建服务器审核规范和数据库审核规范
+# <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  
   
- “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范*对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建服务器审核  
+#### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 17
   
 3.  在完成选项选择后，请单击 **“确定”**。  
   
-#### 创建数据库级别审核规范  
+#### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
 1.  在“对象资源管理器”中，展开要创建审核规范的数据库。  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建服务器审核  
+#### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 17
     WITH (STATE = ON) ;  
     ```  
   
-#### 创建数据库级别审核规范  
+#### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

@@ -1,29 +1,33 @@
 ---
 title: "创建数据库架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "使用 Management Studio 创建架构"
-  - "CREATE SCHEMA [Management Studio]"
-  - "数据库架构"
-  - "架构 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建数据库架构
+# <a name="create-a-database-schema"></a>创建数据库架构
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建架构。  
   
  **本主题内容**  
@@ -44,7 +48,7 @@ caps.handback.revision: 11
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   新架构由以下数据库级别主体之一拥有：数据库用户、数据库角色或应用程序角色。 在架构内创建的对象由架构所有者拥有，这些对象在 **sys.objects** 中的 **principal_id** 为 NULL。 架构所包含对象的所有权可转让给任何数据库级主体，但架构所有者始终保留对该架构内对象的 CONTROL 权限。  
+-   新架构由以下数据库级别主体之一拥有：数据库用户、数据库角色或应用程序角色。 在架构内创建的对象由架构所有者拥有，这些对象在 **sys.objects** 中的 **principal_id**为 NULL。 架构所包含对象的所有权可转让给任何数据库级主体，但架构所有者始终保留对该架构内对象的 CONTROL 权限。  
   
 -   在创建数据库对象时，如果您将某一有效的域主体（用户或组）指定为对象所有者，则该域主体将作为架构添加到数据库中。 这个新架构将为该域主体所拥有。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-##### 创建架构  
+##### <a name="to-create-a-schema"></a>创建架构  
   
 1.  在对象资源管理器中，展开 **“数据库”** 文件夹。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 11
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 其他选项  
+### <a name="additional-options"></a>其他选项  
  **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建架构  
+#### <a name="to-create-a-schema"></a>创建架构  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

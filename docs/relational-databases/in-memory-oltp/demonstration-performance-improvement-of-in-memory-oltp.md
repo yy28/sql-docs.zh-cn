@@ -1,25 +1,29 @@
 ---
 title: "演示：内存中 OLTP 的性能改进 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 演示：内存中 OLTP 的性能改进
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题中的代码示例演示了内存优化表的快速性能。 从传统、已解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问内存优化表中的数据时，此性能改进非常明显。 从本机编译存储过程 (NCSProc) 访问内存优化表中的数据时，此性能改进甚至更明显。  
+  本主题中的代码示例演示了内存优化表的快速性能。 从传统、已解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问内存优化表中的数据时，此性能改进非常明显。 从本机编译存储过程 (NCSProc) 访问内存优化表中的数据时，此性能改进甚至更明显。  
  
 若要查看有关内存中 OLTP 潜在性能改进的更全面的演示，请参阅 [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)（内存中 OLTP 性能演示 v1.0）。 
   
@@ -27,11 +31,11 @@ caps.handback.revision: 16
   
  从 NCSProc 访问内存优化表中的数据时，将完全实现内存优化表提供的性能改进。  
   
-## 代码示例  
+## <a name="code-example"></a>代码示例  
  以下各小节介绍了每个步骤。  
   
-### 步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 此第一个小节中的步骤仅适用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行的情况，而不适用于在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中运行的情况。 请执行以下操作：  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>步骤 1a：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 此第一个小节中的步骤仅适用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行的情况，而不适用于在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中运行的情况。 请执行以下操作：  
   
 1.  使用 SQL Server Management Studio (SSMS.exe) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或也可使用任何类似于 SSMS.exe 的工具。  
   
@@ -56,8 +60,8 @@ USE imoltp;
 go  
 ```  
   
-### 步骤 1b：如果使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- 本小节仅适用于使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的情况。 请执行以下操作：  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>步骤 1b：如果使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+ 本小节仅适用于使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]的情况。 请执行以下操作：  
   
 1.  决定将用于代码示例的现有测试数据库。  
   
@@ -65,7 +69,7 @@ go
   
  如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](http://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
   
-### 步骤 2：创建内存优化表和 NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步骤 2：创建内存优化表和 NCSProc  
  此步骤创建内存优化表和本机编译的存储过程 (NCSProc)。 请执行以下操作：  
   
 1.  使用 SSMS.exe 连接到新的数据库。  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### 步骤 3：运行代码  
+### <a name="step-3-run-the-code"></a>步骤 3：运行代码  
  现在，你可以执行将演示内存优化表性能的查询。 请执行以下操作：  
   
 1.  使用 SSMS.exe 在数据库中运行以下 T-SQL。  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

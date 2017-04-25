@@ -1,27 +1,31 @@
 ---
 title: "Broker:Conversation Group 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Conversation Group 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9208fcec2046feb785e2cedfd0b3a66a851cc7d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Conversation Group 事件类
+# <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将生成 **Broker:Conversation Group** 事件。  
   
-## Broker:Conversation Group 事件类的数据列  
+## <a name="brokerconversation-group-event-class-data-columns"></a>Broker:Conversation Group 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -29,7 +33,7 @@ caps.handback.revision: 24
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对于 **Broker:Conversation Group** 始终为 **136**。|27|是|  
-|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|是|  
 |**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的进一步信息。 此列可能包含下列值：<br /><br /> **创建**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建新的会话组。<br /><br /> **删除**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除会话组。|21|是|  
 |**GUID**|**uniqueidentifier**|此事件描述的会话组的标识符。|54|是|  
 |**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  

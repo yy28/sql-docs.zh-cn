@@ -1,28 +1,32 @@
 ---
 title: "创建服务器角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "SERVER ROLE, 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建服务器角色
+# <a name="create-a-server-role"></a>创建服务器角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建新的服务器角色。  
   
  **本主题内容**  
@@ -50,7 +54,7 @@ caps.handback.revision: 13
   
 -   要求具有 CREATE SERVER ROLE 权限，或者 sysadmin 固定服务器角色中的成员身份。  
   
--   还需要针对登录名的 *server_principal* 的 IMPERSONATE 权限、针对用作 *server_principal* 的服务器角色的 ALTER 权限或用作 server_principal 的 Windows 组的成员身份。  
+-   还需要针对登录名的 *server_principal* 的 IMPERSONATE 权限、针对用作 *server_principal*的服务器角色的 ALTER 权限或用作 server_principal 的 Windows 组的成员身份。  
   
 -   使用 AUTHORIZATION 选项分配服务器角色所有权时，还需要具有下列权限：  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建新的服务器角色  
+#### <a name="to-create-a-new-server-role"></a>创建新的服务器角色  
   
 1.  在“对象资源管理器”中，展开要创建新的服务器角色的服务器。  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 13
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建新的服务器角色  
+#### <a name="to-create-a-new-server-role"></a>创建新的服务器角色  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

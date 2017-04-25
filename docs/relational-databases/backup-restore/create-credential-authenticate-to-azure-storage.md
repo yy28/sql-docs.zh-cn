@@ -1,24 +1,28 @@
 ---
 title: "创建凭据 - 向 Azure 存储进行身份验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backuptourl.createcred.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2014
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3bf85ebdf78e42466474e6c68a43219fbb546bd1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建凭据 - 向 Azure 存储进行身份验证
+# <a name="create-credential---authenticate-to-azure-storage"></a>创建凭据 - 向 Azure 存储进行身份验证
   使用 **“备份到 URL - 创建凭据”** 对话框可创建新的 SQL 凭据。  
   
  使用此对话框创建凭据时，必须提供一个添加到本地证书存储的 Windows Azure 管理证书，或一个已下载到计算机的发布配置文件，以验证订阅和存储帐户信息。  
@@ -26,7 +30,7 @@ caps.handback.revision: 7
  **SQL 凭据**  
  指定要使用的 SQL 凭据的名称。  
   
-## Windows Azure 凭据  
+## <a name="windows-azure-credentials"></a>Windows Azure 凭据  
  **管理证书**  
  可使用此选项从本地证书存储指定与 Windows Azure 管理证书匹配的证书。 有关 Windows Azure 管理证书的详细信息，请参阅 [创建并上载 Windows Azure 的管理证书](http://go.microsoft.com/fwlink/?LinkId=320781)。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 7
 > [!CAUTION]  
 >  SQL Server 当前支持发布配置文件版本 2.0。 要下载支持的发布配置文件版本，请参阅 [下载发布配置文件 2.0](http://go.microsoft.com/fwlink/?LinkId=396421)。  
   
-## 存储帐户  
+## <a name="storage-account"></a>存储帐户  
  选择要用于存储备份文件的存储帐户。  
   
   

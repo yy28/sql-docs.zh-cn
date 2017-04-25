@@ -1,41 +1,45 @@
 ---
 title: "数据库状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASESTATES.F1"
-helpviewer_keywords: 
-  - "紧急数据库状态 [SQL Server]"
-  - "验证数据库状态"
-  - "查看数据库状态"
-  - "显示数据库状态"
-  - "数据库状态 [SQL Server]"
-  - "当前数据库状态"
-  - "脱机数据库状态 [SQL Server]"
-  - "可疑数据库状态"
-  - "恢复挂起数据库状态 [SQL Server]"
-  - "状态 [SQL Server], 数据库"
-  - "联机数据库状态"
-  - "状态 [SQL Server]"
-  - "还原数据库状态 [SQL Server]"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASESTATES.F1
+helpviewer_keywords:
+- emergency database state [SQL Server]
+- verifying database states
+- viewing database states
+- displaying database states
+- database states [SQL Server]
+- current database state
+- offline database state [SQL Server]
+- suspect database state
+- recovery pending database state [SQL Server]
+- states [SQL Server], databases
+- online database state
+- states [SQL Server]
+- restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62c469f7504615a361025fd56bb4939e02c4d242
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库状态
-  数据库总是处于一个特定的状态中， 例如，这些状态包括 ONLINE、OFFLINE 或 SUSPECT。 若要确认数据库的当前状态，请选择 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 **state_desc** 列或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数中的 **Status** 属性。  
+# <a name="database-states"></a>数据库状态
+  数据库总是处于一个特定的状态中， 例如，这些状态包括 ONLINE、OFFLINE 或 SUSPECT。 若要确认数据库的当前状态，请选择 **sys.databases** 目录视图中的 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列或 **DATABASEPROPERTYEX** 函数中的 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 属性。  
   
-## 数据库状态定义  
+## <a name="database-state-definitions"></a>数据库状态定义  
  下表定义了数据库的状态。  
   
 |State|定义|  
@@ -48,7 +52,7 @@ caps.handback.revision: 20
 |SUSPECT|至少主文件组可疑或可能已损坏。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动过程中无法恢复数据库。 数据库不可用。 需要用户另外执行操作来解决问题。|  
 |EMERGENCY|用户更改了数据库，并将其状态设置为 EMERGENCY。 数据库处于单用户模式，可以修复或还原。 数据库标记为 READ_ONLY，禁用日志记录，并仅限 **sysadmin** 固定服务器角色的成员访问。 EMERGENCY 主要用于故障排除。 例如，可以将标记为“可疑”的数据库设置为 EMERGENCY 状态。 这样可以允许系统管理员对数据库进行只读访问。 只有 **sysadmin** 固定服务器角色的成员才可以将数据库设置为 EMERGENCY 状态。|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
   
  [镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
@@ -56,3 +60,4 @@ caps.handback.revision: 20
  [文件状态](../../relational-databases/databases/file-states.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "从表中删除列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [SQL Server], 删除"
-  - "删除列"
-  - "删除列"
-  - "删除列"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], deleting
+- removing columns
+- deleting columns
+- dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 从表中删除列
+# <a name="delete-columns-from-a-table"></a>从表中删除列
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除表列。  
@@ -57,7 +61,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 通过使用对象资源管理器删除列  
+#### <a name="to-delete-columns-by-using-object-explorer"></a>通过使用对象资源管理器删除列  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 16
   
  如果该列包含约束或其他依赖关系，则在 **“删除对象”** 对话框中将显示一条错误消息。 通过删除引用的约束解决该错误。  
   
-#### 通过使用表设计器删除列  
+#### <a name="to-delete-columns-by-using-table-designer"></a>通过使用表设计器删除列  
   
 1.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“设计”。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除列  
+#### <a name="to-delete-columns"></a>删除列  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

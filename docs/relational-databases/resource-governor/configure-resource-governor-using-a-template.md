@@ -1,29 +1,33 @@
 ---
 title: "使用模板配置资源调控器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 模板"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用模板配置资源调控器
+# <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
   
--   **开始之前：**  [权限](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **若要创建工作负荷组，使用：**  [模板](#ConfRGTemplate)  
+-   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  使用下列步骤可打开和修改创建资源池和资源池的工作负荷组的模板。 此外，该模板还可以创建分类器用户定义函数，以将新的连接传送到默认组或用户创建的工作负荷组。  
@@ -34,7 +38,7 @@ caps.handback.revision: 15
 ##  <a name="ConfRGTemplate"></a> 使用模板配置资源调控器  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“视图”** 菜单上，单击 **模板资源管理器**。  
   
 2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 6.  若要运行查询，请单击 **“执行”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

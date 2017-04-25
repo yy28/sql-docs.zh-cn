@@ -1,32 +1,36 @@
 ---
 title: "更改工作负荷组设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作负荷组 [SQL Server], 更改"
-  - "资源调控器, 工作负荷组更改"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], alter
+- Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ee33f07052addb06e1dd2fe56f6153498fdbc9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更改工作负荷组设置
+# <a name="change-workload-group-settings"></a>更改工作负荷组设置
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]更改工作负荷组设置。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要更改工作负荷组的设置，请使用：**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
+-   **To change the settings for a workload group, using:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## 开始之前  
+## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  您可以更改默认工作负荷组和用户定义的工作负载组的设置。  
@@ -60,8 +64,8 @@ caps.handback.revision: 15
   
 2.  运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
-### 示例 (Transact-SQL)  
- 以下示例更改名为 `groupAdhoc` 的工作负荷组的最大内存授予百分比设置。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 以下示例更改名为 `groupAdhoc`的工作负荷组的最大内存授予百分比设置。  
   
 ```  
 ALTER WORKLOAD GROUP groupAdhoc  
@@ -71,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   

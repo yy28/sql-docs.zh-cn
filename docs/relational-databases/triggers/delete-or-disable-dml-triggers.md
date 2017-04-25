@@ -1,29 +1,33 @@
 ---
 title: "删除或禁用 DML 触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DML 触发器, 禁用"
-  - "删除 DML 触发器"
-  - "禁用 DML 触发器"
-  - "删除 DML 触发器"
-  - "删除 DML 触发器"
-  - "DML 触发器, 删除"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除或禁用 DML 触发器
+# <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除或禁用 DML 触发器。  
   
  **本主题内容**  
@@ -59,29 +63,29 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除 DML 触发器  
+#### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
   
-3.  展开“触发器”，右键单击要删除的触发器，再单击“删除”。  
+3.  展开 **“触发器”**，右键单击要删除的触发器，再单击 **“删除”**。  
   
 4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”**。  
   
-#### 禁用和启用 DML 触发器  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
 2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
   
-3.  展开“触发器”，右键单击要禁用的触发器，再单击“禁用”。  
+3.  展开 **“触发器”**，右键单击要禁用的触发器，再单击 **“禁用”**。  
   
 4.  若要启用触发器，请单击 **“启用”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除 DML 触发器  
+#### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### 禁用和启用 DML 触发器  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   

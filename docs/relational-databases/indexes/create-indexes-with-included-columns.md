@@ -1,35 +1,39 @@
 ---
 title: "创建带有包含列的索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引大小 [SQL Server]"
-  - "索引键 [SQL Server]"
-  - "索引列 [SQL Server]"
-  - "大小 [SQL Server], 索引"
-  - "键列 [SQL Server]"
-  - "包含列"
-  - "非聚集索引 [SQL Server], 包含列"
-  - "设计索引 [SQL Server], 包含列"
-  - "非键列"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建带有包含列的索引
+# <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
+  本主题说明如何通过使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
   
 -   它们可以是不允许作为索引键列的数据类型。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   重新设计索引键大小较大的非聚集索引，以便只有用于搜索和查找的列为键列。 使覆盖查询的所有其他列成为非键列。 这样，将具有覆盖查询所需的所有列，但索引键本身较小，而且效率高。  
   
--   将非键列包含在非聚集索引中，以避免超过当前索引大小的限制（最大键列数为 16，最大索引键大小为 900 字节）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算索引键列数或索引键大小时，不考虑非键列。  
+-   将非键列包含在非聚集索引中，以避免超过当前索引大小的限制（最大键列数为 32，最大索引键大小为 1,700 字节，而在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 以前，最大键列数为 16，最大索引键大小为 900 字节）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算索引键列数或索引键大小时，不考虑非键列。  
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 28
   
 -   除了 **text**、 **ntext**和 **image** 之外的所有数据类型都可以用作非键列。  
   
--   精确或不精确的确定性计算列都可以是非键列。 有关详细信息，请参阅[计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
+-   精确或不精确的确定性计算列都可以是非键列。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
 -   只要允许将计算列数据类型作为非键索引列，从 **image**、 **ntext**和 **text** 数据类型派生的计算列就可以作为非键索引列。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建带有非键列的索引  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要创建带有非键列的索引的表的数据库。  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建带有非键列的索引  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>创建带有非键列的索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

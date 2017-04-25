@@ -1,25 +1,29 @@
 ---
 title: "更改资源池设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 资源池更改"
-  - "资源池 [SQL Server], 更改"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool alter
+- resource pools [SQL Server], alter
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27adde47bca4c894d044940d00bc6867e6f8e58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 更改资源池设置
+# <a name="change-resource-pool-settings"></a>更改资源池设置
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]更改资源池设置。  
@@ -58,8 +62,8 @@ caps.handback.revision: 15
   
 2.  运行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 语句。  
   
-### 示例 (Transact-SQL)  
- 以下示例更改名为 `poolAdhoc` 的资源池的最大 CPU 百分比设置。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 以下示例更改名为 `poolAdhoc`的资源池的最大 CPU 百分比设置。  
   
 ```  
 ALTER RESOURCE POOL poolAdhoc  
@@ -69,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -82,3 +86,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

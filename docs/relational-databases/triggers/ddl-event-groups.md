@@ -1,32 +1,36 @@
 ---
 title: "DDL 事件组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件组"
-  - "DDL 事件组"
-  - "DDL 触发器, 事件组"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 事件组
+# <a name="ddl-event-groups"></a>DDL 事件组
   下表列出了可用于运行 DDL 触发器或事件通知的 DDL 事件组以及它们所涵盖的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请注意事件组的内在关系。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 触发器或事件通知涵盖 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 触发器或事件通知涵盖 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 类型下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的特定系统存储过程也可以激发 DDL 触发器或事件通知。 请测试您的 DDL 触发器和事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器或事件通知。  
   
-## 事件  
+## <a name="events"></a>事件  
  DDL_DATABASE_LEVEL_EVENTS 下列出的事件在服务器（实例）或数据库级别执行。 DDL_SERVER_LEVEL_EVENTS 下列出的事件只在服务器级别执行。  
   
 ||||  
@@ -314,7 +318,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件通知](../../relational-databases/service-broker/event-notifications.md)   
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)  

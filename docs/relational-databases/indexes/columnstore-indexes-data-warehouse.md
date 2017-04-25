@@ -1,22 +1,26 @@
 ---
-title: "针对数据仓库的列存储索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列存储索引 - 数据仓库 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# 针对数据仓库的列存储索引
+# <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   列存储索引与分区结合使用对于构建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库而言必不可少。  
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   数据库兼容级别 130 的快照隔离  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>通过结合使用非聚集索引和列存储索引来提高性能  
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以在聚集列存储索引上定义非聚集索引。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以在聚集列存储索引上定义非聚集索引。  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>示例︰借助非聚集索引提高表查找的效率  
  若要提高数据仓库中表查找的效率，可以创建专用于运行查询的非聚集索引，这种查询对于表查找的效率最高。 例如，查找匹配值或返回较小范围值的查询对于 btree 索引效果更好，而不是列存储索引。 它们无需通过列存储索引进行完整表扫描，只需通过 btree 索引执行二进制搜索就可以更快地返回正确结果。  
@@ -137,11 +141,12 @@ END TRAN
  针对列存储索引的查询，使用快照隔离 (SI) 可保证事务一致性，使用读提交快照隔离 (RCSI) 可保证语句级一致性。 从而运行查询时就不会阻止数据写入程序。 这种不会产生阻止的行为也大大降低了复杂事务出现死锁的可能性。 有关详细信息，请参阅 MSDN 上的 [SQL Server 中的快照隔离](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
   
 ## <a name="see-also"></a>另请参阅  
- [列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列存储索引数据加载](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [列存储索引版本的功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ 列存储索引指南   
+ 列存储索引数据加载   
+ 列存储索引版本的功能摘要   
  [列存储索引查询性能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

@@ -1,25 +1,29 @@
 ---
 title: "创建加密的备份 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建加密的备份
-  本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的示例，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。 
+# <a name="create-an-encrypted-backup"></a>创建加密的备份
+  本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的示例，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。 
   
-## 备份到磁盘并加密  
+## <a name="backup-to-disk-with-encryption"></a>备份到磁盘并加密  
  **先决条件：**  
   
 -   有权访问本地磁盘或空间充足的存储以创建数据库备份。  
@@ -28,7 +32,7 @@ caps.handback.revision: 17
   
  按照以下步骤向本地磁盘创建数据库的加密备份。 本例使用一个名为 MyTestDB 的用户数据库。  
   
-1.  **创建 master 数据库的数据库主密钥：**选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+1.  **创建 master 数据库的数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
   
     ```  
     -- Creates a database master key.   
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  有关加密受 EKM 保护的备份的示例，请参阅[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
-### 备份到 Windows Azure 存储并加密  
- 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 若要为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置加密选项，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>备份到 Windows Azure 存储并加密  
+ 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 若要为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置加密选项，请参阅 [对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md)列中的一个值匹配。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)列中的一个值匹配。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)。  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 17
   
     ```  
   
-4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "数据库镜像连接事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Database Mirroring Connection 事件类 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c831e54b5a0c6115c0f0890d4720d099387d8da
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库镜像连接事件类
+# <a name="database-mirroring-connection-event-class"></a>数据库镜像连接事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **数据库镜像连接** 事件以便报告数据库镜像管理的传输连接的状态。  
   
-## Database Mirroring:Connection 事件类的数据列  
+## <a name="database-mirroringconnection-event-class-data-columns"></a>Database Mirroring:Connection 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -28,7 +32,7 @@ caps.handback.revision: 6
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 **DB_ID** 函数来确定数据库的值。|3|是|  
 |**错误**|**int**|事件中文本的 **sys.messages** 的消息 ID 号。 如果此事件报告错误，即是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号。|31|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对于 **数据库镜像连接** 始终为 **151**。|27|是|  
-|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|是|  
 |**EventSubClass**|**nvarchar**|此连接的连接状态。 对于此事件，子类是以下值之一：<br /><br /> **Connecting**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在启动传输连接。<br /><br /> **Connected**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立传输连接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立传输连接失败。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在关闭传输连接。<br /><br /> **Closed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已关闭传输连接。<br /><br /> **Accept**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已接受来自另一个实例的传输连接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在发送消息时遇到了传输错误。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收消息时遇到了传输错误。|21|是|  
 |**GUID**|**uniqueidentifier**|此连接的端点 ID。|54|是|  
 |**HostName**|**nvarchar**|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 **HOST_NAME** 函数。|8|是|  

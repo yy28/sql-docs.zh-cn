@@ -1,32 +1,36 @@
 ---
 title: "创建 SQL Server 代理作业以存档数据库邮件和事件日志 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存档邮件和附件 [SQL Server]"
-  - "删除邮件和附件"
-  - "数据库邮件 [SQL Server], 存档"
-  - "保存邮件和附件"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建 SQL Server 代理作业以存档数据库邮件和事件日志
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
   数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
   
 -   **开始之前：**[先决条件](#Prerequisites)、[建议](#Recommendations)、[权限](#Permissions)  
   
--   使用 [SQL Server](#Process_Overview) 代理**存档数据库邮件和日志**  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 19
 -   安排定期运行作业。  
   
   
-## 创建 SQL Server 代理作业  
+## <a name="to-create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业  
   
 1.  在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，然后单击“新建作业”。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 创建步骤以存档数据库邮件  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>创建步骤以存档数据库邮件  
   
 1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 创建步骤以存档数据库邮件附件  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>创建步骤以存档数据库邮件附件  
   
 1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 创建步骤以存档数据库邮件日志  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>创建步骤以存档数据库邮件日志  
   
 1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 创建步骤以从数据库邮件中删除已存档的行  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>创建步骤以从数据库邮件中删除已存档的行  
   
 1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 创建步骤以从数据库邮件事件日志中删除已存档的项  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>创建步骤以从数据库邮件事件日志中删除已存档的项  
   
 1.  在 **“步骤”** 页上，单击 **“新建”**。  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [概述](#Process_Overview)  
   
-## 安排定期运行作业  
+## <a name="to-schedule-the-job-to-run-periodically"></a>安排定期运行作业  
   
 1.  在 **“新建作业”** 对话框中，单击 **“计划”**。  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [概述](#Process_Overview)  
   
   
+

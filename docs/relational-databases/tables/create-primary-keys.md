@@ -1,24 +1,28 @@
 ---
 title: "创建主键 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "主键 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f799919f1b0cd1006c144eeb9afbc1d69322423b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建主键
+# <a name="create-primary-keys"></a>创建主键
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义主键。 创建主键将自动创建相应的唯一索引、聚集索引或非聚集索引。  
@@ -54,7 +58,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建主键  
+#### <a name="to-create-a-primary-key"></a>创建主键  
   
 1.  在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”。  
   
@@ -69,11 +73,11 @@ caps.handback.revision: 18
   
  如果主键由多个列组成，则其中一个列将允许重复值，但是主键中所有列的值的各种组合必须是唯一的。  
   
- 如果定义复合键，则主键中列的顺序将与表中显示的列顺序相匹配。 不过，您可以在创建主键之后更改列的顺序。 有关详细信息，请参阅[修改主键](../../relational-databases/tables/modify-primary-keys.md)。  
+ 如果定义复合键，则主键中列的顺序将与表中显示的列顺序相匹配。 不过，您可以在创建主键之后更改列的顺序。 有关详细信息，请参阅 [修改主键](../../relational-databases/tables/modify-primary-keys.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在现有表中创建主键  
+#### <a name="to-create-a-primary-key-in-an-existing-table"></a>在现有表中创建主键  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### 在新表中创建主键  
+#### <a name="to-create-a-primary-key-in-a-new-table"></a>在新表中创建主键  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -110,6 +114,6 @@ caps.handback.revision: 18
   
     ```  
   
-     有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)、[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [table_constraint (Transact-SQL)](../Topic/table_constraint%20\(Transact-SQL\).md)。  
+     有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)、[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)。  
   
 ###  <a name="TsqlExample"></a>  

@@ -1,31 +1,35 @@
 ---
 title: "创建筛选索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筛选索引 [SQL Server], 关于筛选索引"
-  - "设计索引 [SQL Server], 已筛选"
-  - "筛选索引 [SQL Server]"
-  - "非聚集索引 [SQL Server], 已筛选"
-  - "索引 [SQL Server], 已筛选"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtered indexes [SQL Server], about filtered indexes
+- designing indexes [SQL Server], filtered
+- filtered indexes [SQL Server]
+- nonclustered indexes [SQL Server], filtered
+- indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建筛选索引
+# <a name="create-filtered-indexes"></a>创建筛选索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建筛选索引。 筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建筛选索引。 筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
  筛选索引与全表索引相比具有以下优点：  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 73
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建筛选索引  
+#### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要创建筛选索引的表的数据库。  
   
@@ -120,11 +124,11 @@ caps.handback.revision: 73
   
 9. 在 **“筛选器”** 页的 **“筛选表达式”**下，输入要用于创建筛选索引的 SQL 表达式。  
   
-10. 单击“确定” 。  
+10. 单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建筛选索引  
+#### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -166,7 +170,7 @@ caps.handback.revision: 73
     GO  
     ```  
   
-#### 确保在 SQL 查询中使用筛选索引  
+#### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>确保在 SQL 查询中使用筛选索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -186,3 +190,4 @@ caps.handback.revision: 73
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

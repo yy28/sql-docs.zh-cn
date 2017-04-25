@@ -1,24 +1,28 @@
 ---
 title: "具有名称的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "名称 [SQL Server], 列带有"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# 具有名称的列
+# <a name="columns-with-a-name"></a>具有名称的列
   下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  
   
 -   列名以 @ 符号开头。  
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   一列具有不同的名称。  
   
-## 列名以 @ 符号开头  
+## <a name="column-name-starts-with-an-at-sign-"></a>列名以 @ 符号开头  
  如果列名以 @ 符号开头并且不包含斜杠标记 (/)，将创建包含相应列值的 <`row`> 元素的属性。 例如，以下查询将返回包含两列（@PmId 和 Name）的行集。 在生成的 XML 中，将向相应的 <`row`> 元素添加 **PmId** 属性并为其分配 ProductModelID 值。  
   
 ```  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## 列名不以 @ 符号开头  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 @ 符号开头  
  如果列名不以 @ 符号开头、不是某个 XPath 节点测试并且不包含斜杠标记 (/)，则将创建一个 XML 元素，该元素是行元素（默认情况下为 <`row`>）的子元素。  
   
  以下查询指定了列名 result。 因此，将向 <`row`> 元素添加 <`result`> 子元素。  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## 列名不以 @ 符号开头并包含斜杠标记 (/)  
- 如果列名不以 @ 符号开头，但包含斜杠标记 (/)，则该列名就指明了一个 XML 层次结构。 例如，列名为“Name1/Name2/Name3.../Name***n***”，其中每个 Name***i*** 表示嵌套在当前行元素 (i=1) 中的元素名称或名为 Name***i-1*** 的元素下的元素名称。 如果 Name***n*** 以 @ 开头，则它将映射到 Name***n-1*** 元素的属性。  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名不以 @ 符号开头并包含斜杠标记 (/)  
+ 如果列名不以 @ 符号开头，但包含斜杠标记 (/)，则该列名就指明了一个 XML 层次结构。 例如，列名为“Name1/Name2/Name3.../Name***n*** ”，其中每个 Name***i*** 表示嵌套在当前行元素 (i=1) 中的元素名称或名为 Name***i-1***的元素下的元素名称。 如果 Name***n*** 以 @ 开头，则它将映射到 Name***n-1*** 元素的属性。  
   
  例如，以下查询将返回雇员 ID 和表示为复杂元素 EmpName（包含名字、中间名和姓氏）的雇员名称。  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## 若干列共享同一个路径前缀  
+## <a name="several-columns-share-the-same-path-prefix"></a>若干列共享同一个路径前缀  
  如果若干后续列共享同一个路径前缀，则它们将被分组到同一名称下。 如果它们使用的是不同的命名空间前缀，则即使它们被绑定到同一命名空间，也被认为是不同的路径。 在上一个查询中，FirstName、MiddleName 和 LastName 列共享同一个 EmpName 前缀。因此，它们被添加为 <`EmpName`> 元素的子元素。 在上一个示例中创建 <`Address`> 元素时也是如此。  
   
-## 有一列具有不同的名称  
+## <a name="one-column-has-a-different-name"></a>有一列具有不同的名称  
  如果列之间出现具有不同名称的列，则该列将会打破分组，如以下修改后的查询所示。 该查询通过在 FirstName 和 MiddleName 列之间添加地址列，打破了 FirstName、MiddleName 和 LastName 的分组（如上一个查询中所指定）。  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

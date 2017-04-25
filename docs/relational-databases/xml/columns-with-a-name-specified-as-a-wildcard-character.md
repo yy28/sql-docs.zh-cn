@@ -1,25 +1,29 @@
 ---
 title: "名称指定为通配符的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "名称 [SQL Server], 列带有"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e03000db7890bd87e22799b6bf525b9a1194c2a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 名称指定为通配符的列
-  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是 **xml** 类型的列，则此列的内容将作为文本节点插入，如下例所示：  
+# <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
+  如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是**xml** 类型的列，则此列的内容将作为文本节点插入，如下例所示：  
   
 ```  
 USE AdventureWorks2012;  
@@ -70,7 +74,7 @@ GO
   
  `</row>`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

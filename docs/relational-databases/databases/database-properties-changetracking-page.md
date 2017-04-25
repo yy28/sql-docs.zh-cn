@@ -1,27 +1,31 @@
 ---
-title: "数据库属性（“更改跟踪”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.changetracking.f1"
+title: "数据库属性（“更改跟踪”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 01/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库属性（“更改跟踪”页）
+# <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
   使用此页可查看或修改所选数据库的更改跟踪设置。 有关在此页上可用选项的详细信息，请参阅[启用和禁用更改跟踪 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **更改跟踪**  
  用于启用或禁用数据库的更改跟踪。  
   
@@ -46,8 +50,9 @@ caps.handback.revision: 13
   
  启用“自动清除”会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

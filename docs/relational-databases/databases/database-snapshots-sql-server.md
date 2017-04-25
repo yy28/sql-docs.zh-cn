@@ -1,30 +1,34 @@
 ---
 title: "数据库快照 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "静态数据库视图"
-  - "快照 [SQL Server 数据库快照]"
-  - "源数据库 [SQL Server]"
-  - "快照 [SQL Server 数据库快照], 关于数据库快照"
-  - "数据库快照 [SQL Server]"
-  - "只读数据库视图"
-  - "数据库快照 [SQL Server], 关于数据库快照"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库快照 (SQL Server)
+# <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
   数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
   
  给定源数据库中可以存在多个快照。 在数据库所有者显式删除每个数据库快照之前，该快照将一直保留。  
@@ -63,7 +67,7 @@ caps.handback.revision: 54
   
 -   使用为了实现可用性目标而维护的镜像数据库来减轻报表负载。  
   
-     使用带有数据库镜像的数据库快照，使您能够访问镜像服务器上的数据以生成报表。 而且，在镜像数据库上运行查询可以释放主体数据库上的资源。 有关详细信息，请参阅[数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)。  
+     使用带有数据库镜像的数据库快照，使您能够访问镜像服务器上的数据以生成报表。 而且，在镜像数据库上运行查询可以释放主体数据库上的资源。 有关详细信息，请参阅 [数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)。  
   
 -   使数据免受管理失误所带来的影响。  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> 先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
--   服务器实例必须在支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上运行。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   服务器实例必须在支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上运行。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   源数据库必须处于联机状态，除非该数据库是数据库镜像会话中的镜像数据库。  
   
@@ -126,13 +130,13 @@ caps.handback.revision: 54
   
      当您创建一个数据库快照时，我们建议数据库同步状态是 SYNCHRONIZING 或 SYNCHRONIZED。 但是，当数据库同步状态为 NOT SYNCHRONIZING 时，可以创建数据库快照。  
   
-     有关详细信息，请参阅[含有 AlwaysOn 可用性组的数据库快照 (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)。  
+     有关详细信息，请参阅 [含有 AlwaysOn 可用性组的数据库快照 (SQL Server)](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)。  
   
 -   若要在镜像数据库中创建数据库快照，数据库必须处于 SYNCHRONIZED 镜像状态。  
   
 -   不能将源数据库配置为可缩放共享数据库。  
 
--   源数据库不得包含 MEMORY_OPTIMIZED_DATA 文件组。  有关详细信息，请参阅[内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
+-   源数据库不得包含 MEMORY_OPTIMIZED_DATA 文件组。  有关详细信息，请参阅 [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
   
 > [!NOTE]  
 >  所有恢复模式都支持数据库快照。  
@@ -193,7 +197,7 @@ caps.handback.revision: 54
     > [!NOTE]  
     >  对数据库快照执行的 SELECT 语句不能指定 FILESTREAM 列；否则，将返回如下错误消息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   当有关只读快照的统计信息丢失或变得陈旧时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
+-   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
   
 ###  <a name="DiskSpace"></a> 磁盘空间要求  
  数据库快照占用磁盘空间。 如果数据库快照用尽了磁盘空间，将被标记为可疑，必须将其删除。 （但是，源数据库不会受到影响，对其执行的操作仍能继续正常进行。）然而，与一份完整的数据库相比，快照具有高度空间有效性。 快照仅需足够存储空间来存储在其生存期中更改的页。 通常情况下，快照只会保留一段有限的时间，因此其大小不是主要问题。  
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

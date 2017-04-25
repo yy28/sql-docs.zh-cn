@@ -1,24 +1,28 @@
 ---
 title: "没有名称的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "名称 [SQL Server], 列不带有"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns without
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a011312fd15b1bce5bde0d6977568bc166b04c63
+ms.lasthandoff: 04/11/2017
+
 ---
-# 没有名称的列
+# <a name="columns-without-a-name"></a>没有名称的列
   任何没有名称的列都将成为内联列。 例如，未指定列别名的计算列或嵌套标量查询将生成没有名称的列。 如果该列属于 **xml** 类型，则将插入该数据类型实例的内容。 否则，列内容将作为文本节点插入。  
   
 ```  
@@ -62,7 +66,7 @@ GO
   
  `</row>`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

@@ -1,36 +1,40 @@
 ---
 title: "运行 TSQL 调试器之前配置防火墙规则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, 远程连接"
-  - "Windows 防火墙 [数据库引擎], Transact-SQL 调试器"
-  - "Transact-SQL 调试器, Windows 防火墙"
-  - "Transact-SQL 调试器, 配置"
-  - "端口 [SQL Server], Transact-SQL 调试器"
-  - "TCP/IP [SQL Server], 端口号"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 运行 TSQL 调试器之前配置防火墙规则
-  必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
+  必须配置 Windows 防火墙规则，以便在连接到[!INCLUDE[tsql](../../includes/tsql-md.md)]实例（运行该实例的计算机不同于运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
   
-## 配置 Transact-SQL 调试器  
+## <a name="configuring-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器包括服务器端和客户端组件。 服务器端调试器组件与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更高版本中的每个数据库引擎实例一起安装。 包括客户端调试器组件：  
   
 -   在从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本安装客户端工具时。  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  在“Windows 防火墙”中启用规则可能会导致您的计算机暴露在防火墙在设计上可以阻止的安全风险之中。 为远程调试启用规则将取消阻止在本主题中列出的端口和程序。  
   
-## 服务器上的防火墙规则  
+## <a name="firewall-rules-on-the-server"></a>服务器上的防火墙规则  
  在运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的计算机上，使用 **“高级安全 Windows 防火墙”** 可以指定以下信息：  
   
 -   为 sqlservr.exe 添加入站程序规则。 对于需要支持远程调试会话的每个实例，您必须具有一个规则。  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   如果域策略要求通过 IPSec 进行网络通信，还必须添加打开 UDP 端口 4500 和 UDP 端口 500 的入站规则。  
   
-## 客户端上的防火墙规则  
+## <a name="firewall-rules-on-the-client"></a>客户端上的防火墙规则  
  在正运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机上，SQL Server 安装程序或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 安装程序可能已将 Windows 防火墙配置为允许远程调试。  
   
  如果您在尝试打开远程调试会话时系统显示错误，则可以通过使用 **“高级安全 Windows 防火墙”** 配置防火墙规则来手动配置程序和端口例外：  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. 在 **“协议类型:”** 框中选择 **“TCP”** ，在 **“本地端口:”** 框中选择 **“RPC 动态端口”** ，单击 **“应用”**，然后单击 **“确定”**。  
   
-## 启动调试器的要求  
+## <a name="requirements-for-starting-the-debugger"></a>启动调试器的要求  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的所有尝试还必须满足以下要求：  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * 服务器需要通过 RPC 回复客户端通信。 运行 SQL Server 服务的帐户应具有对客户端的身份验证权限  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)   
  [运行 Transact-SQL 调试器](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

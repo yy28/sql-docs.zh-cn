@@ -1,28 +1,32 @@
 ---
 title: "删除视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除视图"
-  - "删除视图"
-  - "视图 [SQL Server], 删除"
-  - "删除视图"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除视图
-  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="delete-views"></a>删除视图
+  可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主题内容**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 从数据库中删除视图  
+#### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
 1.  在 **“对象资源管理器”**中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 从数据库中删除视图  
+#### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

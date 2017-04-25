@@ -1,36 +1,40 @@
 ---
 title: "创建 DML 触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], DML 触发器"
-  - "延迟名称解析, DML 触发器"
-  - "WITH ENCRYPTION 子句"
-  - "IF UPDATE"
-  - "SET 语句, DML 触发器"
-  - "DML 触发器, 编程"
-  - "测试列更改"
-  - "结果 [SQL Server], DML 触发器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建 DML 触发器
+# <a name="create-dml-triggers"></a>创建 DML 触发器
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器。  
   
 ##  <a name="Top"></a> 开始之前  
   
-### 限制和局限  
+### <a name="limitations-and-restrictions"></a>限制和局限  
  有关与创建 DML 触发器相关的限制和局限的列表，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ###  <a name="Permissions"></a> 权限  

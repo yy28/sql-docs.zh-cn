@@ -1,31 +1,35 @@
 ---
 title: "创建 XML 数据的实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "类型转换字符串实例 [SQL Server 中的 XML]"
-  - "XML [SQL Server], 类型化的"
-  - "xml 数据类型 [SQL Server], 生成实例"
-  - "转换字符串实例 [SQL Server 中的 XML]"
-  - "类型化的 XML"
-  - "生成 XML 实例 [SQL Server]"
-  - "XML [SQL Server], 生成实例"
-  - "空格 [SQL Server 中的 XML]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type casting string instances [XML in SQL Server]
+- XML [SQL Server], typed
+- xml data type [SQL Server], generating instances
+- casting string instances [XML in SQL Server]
+- typed XML
+- generating XML instances [SQL Server]
+- XML [SQL Server], generating instances
+- white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d02273b721b1b75b7bd134c8cd50c94ed2e9848d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建 XML 数据的实例
+# <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
   本主题说明了如何生成 XML 实例。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以按照下列方式生成 XML 实例：  
@@ -38,8 +42,8 @@ caps.handback.revision: 40
   
 -   使用大容量加载。  
   
-## 类型转换字符串实例和二进制实例  
- 可以将任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符串数据类型（如 [**n**][**var**]**char**、**[n]text**、**varbinary** 和 **image**）分析成 **xml** 数据类型，方法是将相应字符串以 CAST 或 CONVERT 方式转换成 **xml** 数据类型。 对非类型化的 XML 进行检查以确认其格式是否正确。 如果存在与 **xml** 类型关联的架构，也会执行验证。 有关详细信息，请参阅[类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+## <a name="type-casting-string-and-binary-instances"></a>类型转换字符串实例和二进制实例  
+ 可以将任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符串数据类型（如 [**n**][**var**]**char**、 **[n]text**、 **varbinary**和 **image**）分析成 **xml** 数据类型，方法是将相应字符串以 CAST 或 CONVERT 方式转换成 **xml** 数据类型。 对非类型化的 XML 进行检查以确认其格式是否正确。 如果存在与 **xml** 类型关联的架构，也会执行验证。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
  XML 文档可以采用不同的编码方式（例如，UTF-8、UTF-16 和 windows-1252）进行编码。 下面概述了有关字符串和二进制源类型与 XML 文档编码进行交互的方式以及分析器行为方式的规则。  
   
@@ -58,10 +62,10 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在内部以一种使用 UTF-16 编码的有效二进制表示形式来表示 XML。 用户提供的编码不会保留下来，但在分析过程中会考虑。  
   
-### 类型转换 CLR 用户定义类型  
- 如果 CLR 用户定义类型具有 XML 序列化，则该类型的实例可以显式转换为 XML 数据类型。 有关 CLR 用户定义类型的 XML 序列化的详细信息，请参[从 CLR 数据库对象进行 XML 序列化](../Topic/XML%20Serialization%20from%20CLR%20Database%20Objects.md)。  
+### <a name="type-casting-clr-user-defined-types"></a>类型转换 CLR 用户定义类型  
+ 如果 CLR 用户定义类型具有 XML 序列化，则该类型的实例可以显式转换为 XML 数据类型。 有关 CLR 用户定义类型的 XML 序列化的详细信息，请参 [从 CLR 数据库对象进行 XML 序列化](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
   
-### 类型化的 XML 中的空格处理  
+### <a name="white-space-handling-in-typed-xml"></a>类型化的 XML 中的空格处理  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果元素内容中的空格出现在一组只有空格并由标记（如开始或结束标记）分隔的字符数据中，则认为其无关紧要，因此不对其进行实体化。 （忽略 CDATA 部分。）这种空格处理方式与万维网联盟 (W3C) 发布的 XML 1.0 规格中介绍的空格处理方式不同。 这是因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器只识别有限数量的 DTD 子集（在 XML 1.0 中定义）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持的有限 DTD 子集的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
  默认情况下，在 XML 分析器将字符串数据转换为 XML 时，如果存在下列任何一种情况，则 XML 分析器将丢弃无关紧要的空格：  
@@ -92,7 +96,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 参数，或将其值设置为 0，则转换 xml DT 实例时不保留无关紧要的空格。 有关在将字符串数据转换为 xml DT 实例时如何使用 CONVERT 运算符及其 *style* 参数的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-### 示例：将字符串值转换为类型化的 xml 并将其赋给某列  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>示例：将字符串值转换为类型化的 xml 并将其赋给某列  
  下面的示例将包含 XML 片段的字符串变量转换为 **xml** 数据类型，然后将其存储在 **xml** 类型列中：  
   
 ```  
@@ -120,7 +124,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### 示例：将字符串转换为类型化的 xml 并将其赋给某个变量  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>示例：将字符串转换为类型化的 xml 并将其赋给某个变量  
  在下面的示例中，将字符串转换为 **xml** 类型并赋给 **xml** 数据类型的变量：  
   
 ```  
@@ -131,7 +135,7 @@ set @x =convert (xml, @s)
 select @x  
 ```  
   
-## 将 SELECT 语句与 FOR XML 子句结合使用  
+## <a name="using-the-select-statement-with-a-for-xml-clause"></a>将 SELECT 语句与 FOR XML 子句结合使用  
  可以在 SELECT 语句中使用 FOR XML 子句以返回 XML 形式的结果。 例如：  
   
 ```  
@@ -181,7 +185,7 @@ go
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 **xml** 数据类型实例作为不同服务器构造（例如使用 TYPE 指令或在其中使用 **xml** 数据类型从 SQL 列、变量和输出参数返回 XML 的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 访问接口请求以二进制编码形式从服务器发送此 **xml** 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将作为字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。  
   
-## 使用常量赋值  
+## <a name="using-constant-assignments"></a>使用常量赋值  
  可以在需要 **xml** 数据类型实例时使用字符串常量。 这与将字符串隐式 CAST 为 XML 相同。 例如：  
   
 ```  
@@ -201,18 +205,18 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 ```  
   
 > [!NOTE]  
->  对于类型化的 XML，是针对指定的架构来验证 XML。 有关详细信息，请参阅[类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+>  对于类型化的 XML，是针对指定的架构来验证 XML。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-## 使用大容量加载  
+## <a name="using-bulk-load"></a>使用大容量加载  
  通过增强的 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) 功能，可以在数据库中大容量加载 XML 文档。 可以将文件中的 XML 实例大容量加载到数据库的 **xml** 类型列中。 有关工作示例，请参阅[批量导入和导出 XML 文档的示例 (SQL Server);](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 有关加载 XML 文档的详细信息，请参阅[加载 XML 数据](../../relational-databases/xml/load-xml-data.md)。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
 |[检索和查询 XML 数据](../../relational-databases/xml/retrieve-and-query-xml-data.md)|介绍了当 XML 实例存储在数据库中时未保留的部分。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

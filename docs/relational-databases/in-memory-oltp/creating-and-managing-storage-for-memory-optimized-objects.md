@@ -1,26 +1,30 @@
 ---
-title: "创建和管理用于内存优化的对象的存储 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建和管理用于内存优化对象的存储 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建和管理用于内存优化的对象的存储
+# <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>创建和管理用于内存优化的对象的存储
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之中，这可让你在同一数据库中同时拥有内存优化表和（传统的）基于磁盘的表。 但是，内存优化表的存储结构不同于基于磁盘的表。  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之中，这可让你在同一数据库中同时拥有内存优化表和（传统的）基于磁盘的表。 但是，内存优化表的存储结构不同于基于磁盘的表。  
   
  基于磁盘的表的存储具有以下键属性：  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 64
   
 -   通过追加到活动文件来存储对内存优化表的所有更改。 读取和写入文件都是按顺序进行的。  
   
--   通过进行删除，然后进行插入来实现更新。 已删除的行不会立刻从存储中删除。 已删除的行将基于[内存优化表的持续性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述的策略通过名为 MERGE 的后台进程删除。  
+-   通过进行删除，然后进行插入来实现更新。 已删除的行不会立刻从存储中删除。 已删除的行将基于 [内存优化表的持续性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述的策略通过名为 MERGE 的后台进程删除。  
   
 -   与基于磁盘的表不同，内存优化表的存储不会被压缩。 在将压缩的（ROW 或 PAGE）基于磁盘的表迁移到内存优化表时，需要考虑大小的改变。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 64
   
 -   [内存优化的文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
--   [内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)  
+-   [内存优化表的持续性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)  
   
 -   [内存优化表的检查点操作](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 64
   
 -   [比较基于磁盘的表存储与内存优化的表存储](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

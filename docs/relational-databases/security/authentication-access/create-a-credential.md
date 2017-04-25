@@ -1,29 +1,33 @@
 ---
 title: "创建凭据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "凭据 [SQL Server], 创建"
-  - "身份验证 [SQL Server], 凭据"
-  - "登录名 [SQL Server], 凭据"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建凭据
+# <a name="create-a-credential"></a>创建凭据
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建凭据。  
   
- 凭据是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 外部的身份标识。 主要用于执行具有 EXTERNAL_ACCESS 权限集的程序集中的代码。 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户需要访问域资源（例如存储备份的文件位置）时，也可以使用凭据。  
+ 凭据是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部的身份标识。 主要用于执行具有 EXTERNAL_ACCESS 权限集的程序集中的代码。 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证用户需要访问域资源（例如存储备份的文件位置）时，也可以使用凭据。  
   
  可以将一个凭据同时映射到多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。 一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名一次只能映射到一个凭据。 在创建凭据之后，可以使用“登录属性”（“常规”页）将登录名映射到凭据。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 创建凭据  
+#### <a name="to-create-a-credential"></a>创建凭据  
   
 1.  在对象资源管理器中，展开“安全性”  文件夹。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建凭据  
+#### <a name="to-create-a-credential"></a>创建凭据  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

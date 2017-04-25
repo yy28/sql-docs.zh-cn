@@ -1,26 +1,30 @@
 ---
 title: "仅复制备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "仅复制备份 [SQL Server]"
-  - "COPY_ONLY 选项 [BACKUP 语句]"
-  - "备份 [SQL Server], 仅复制备份"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copy-only backups [SQL Server]
+- COPY_ONLY option [BACKUP statement]
+- backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
+ms.lasthandoff: 04/11/2017
+
 ---
-# 仅复制备份 (SQL Server)
+# <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
   *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
   
  仅复制备份的类型如下所示：  
@@ -37,12 +41,12 @@ caps.handback.revision: 47
   
      事务日志从不在仅复制备份后出现截断。  
   
- 仅复制备份记录在 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 表的 **is_copy_only** 列中。  
+ 仅复制备份记录在 **backupset** 表的 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 列中。  
   
-## 创建仅复制备份  
- 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell 创建仅复制备份。  
+## <a name="to-create-a-copy-only-backup"></a>创建仅复制备份  
+ 您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell 创建仅复制备份。  
 
-### 示例  
+### <a name="examples"></a>示例  
 ###  <a name="SSMSProcedure"></a> A.  使用 SQL Server Management Studio  
 在此示例中，`Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
 
@@ -93,9 +97,8 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
 -   [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
@@ -104,3 +107,4 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
 
   
+

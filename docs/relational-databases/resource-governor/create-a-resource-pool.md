@@ -1,25 +1,29 @@
 ---
 title: "创建资源池 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源池 [SQL Server], 创建"
-  - "资源调控器, 资源池创建"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource pools [SQL Server], create
+- Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d5262087e05342256bb46c28ea7fd5d2ce1bf54
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建资源池
+# <a name="create-a-resource-pool"></a>创建资源池
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。 若要了解资源池的主体，请参阅 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
@@ -60,8 +64,8 @@ caps.handback.revision: 19
   
 2.  运行 **ALTER RESOURCE GOVERNOR RECONFIGURE** 语句。  
   
-### 示例 (Transact-SQL)  
- 下面的示例创建名为 `poolAdhoc` 的资源池。  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
+ 下面的示例创建名为 `poolAdhoc`的资源池。  
   
 ```  
 CREATE RESOURCE POOL poolAdhoc  
@@ -71,10 +75,10 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
  [使用模板配置资源调控器](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
@@ -86,3 +90,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

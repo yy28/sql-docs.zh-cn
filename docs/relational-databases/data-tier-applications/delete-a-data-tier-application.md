@@ -1,39 +1,43 @@
 ---
 title: "删除数据层应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deletedacwizard.deletedac.f1"
-  - "sql13.swb.deletedacwizard.summary.f1"
-  - "sql13.swb.deletedacwizard.introduction.f1"
-  - "sql13.swb.deletedacwizard.choosemethod.f1"
-helpviewer_keywords: 
-  - "操作指南 [DAC], 删除"
-  - "数据层应用程序 [SQL Server], 删除"
-  - "向导 [DAC], 删除"
-  - "删除 DAC"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deletedacwizard.deletedac.f1
+- sql13.swb.deletedacwizard.summary.f1
+- sql13.swb.deletedacwizard.introduction.f1
+- sql13.swb.deletedacwizard.choosemethod.f1
+helpviewer_keywords:
+- How to [DAC], delete
+- data-tier application [SQL Server], delete
+- wizard [DAC], delete
+- delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a6c69a8bbd4fa63a427658ddc7b8fdbd79b0af3b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除数据层应用程序
+# <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
-## 开始之前  
+## <a name="before-you-begin"></a>开始之前  
  在删除某一数据层应用程序 (DAC) 实例时，您可以选择三个选项之一，这三个选项指定要对与该数据层应用程序相关联的数据库执行何种操作。 所有这三个选项都删除 DAC 定义元数据。 这些选项在如何处理与数据层应用程序相关联的数据库上有所不同。 向导并不删除与 DAC 或数据库相关联的任何实例级别的对象，例如登录名。  
   
 |选项|数据库操作|  
@@ -48,14 +52,14 @@ caps.handback.revision: 16
 |选项|如何重新生成 DAC 实例|  
 |------------|-------------------------------------|  
 |删除注册|从原来的数据库中注册一个 DAC。|  
-|分离数据库|通过使用 **sp_attachdb** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新附加数据库，然后从该数据库注册一个新的 DAC 实例。|  
+|分离数据库|通过使用 **sp_attachdb** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重新附加数据库，然后从该数据库注册一个新的 DAC 实例。|  
 |删除数据库|从在删除 DAC 前生成的完整备份还原数据库，然后从该数据库注册一个新的 DAC 实例。|  
   
 > [!WARNING]  
 >  通过从还原或重新连接的数据库注册 DAC 重新生成一个 DAC 实例时，将不会重新创建该原始 DAC 的某些部分，例如服务器选择策略。  
   
 ###  <a name="Permissions"></a> 权限  
- 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员删除 DAC，或者由数据库所有者删除。 名为 **sa** 的内置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员帐户也可以启动该向导。  
+ 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员删除 DAC，或者由数据库所有者删除。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以启动该向导。  
   
 ##  <a name="UsingDeleteDACWizard"></a> 使用“删除数据层应用程序向导”  
  **使用向导删除 DAC**  
@@ -96,13 +100,13 @@ caps.handback.revision: 16
   
  **分离数据库** - 删除用于定义数据层应用程序的元数据并且分离关联的数据库。  
   
- 数据库不再被[!INCLUDE[ssDE](../../includes/ssde-md.md)]的该实例引用，但数据和日志文件保持不变。  
+ 数据库不再被 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的该实例引用，但数据和日志文件保持不变。  
   
  **删除数据库** - 删除用于定义 DAC 的元数据并且删除关联的数据库。  
   
  数据库的数据和日志文件被永久删除。  
   
- **\< 上一步** - 返回到“简介”页。  
+ **< 上一步** - 返回到“简介”页。  
   
  “下一步 >”- 继续到“摘要”页。  
   
@@ -115,7 +119,7 @@ caps.handback.revision: 16
   
  **查看选择摘要** - 查看在该框中显示的 DAC、数据库和删除方法。 如果信息正确，则选择 **“下一步”** 或者 **“完成”** 以便删除 DAC。 如果 DAC 和数据库信息不正确，则选择 **“取消”** 并且选择正确的 DAC。 如果删除方法不正确，则选择 **“上一步”** 返回到 **“选择方法”** 页并且选择其他方法。  
   
- **\< 上一步** - 返回到“选择方法”页以便选择其他删除方法。  
+ **< 上一步** - 返回到“选择方法”页以便选择其他删除方法。  
   
  **下一步 >** - 使用你在上一页中选择的方法删除 DAC 实例，并且继续到“删除数据层应用程序”页。  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 16
   
     -   若要删除 DAC 注册并删除数据库，请使用 **Uninstall()** 方法并指定 **DropDatabase**。  
   
-### 删除 DAC 但保留数据库的示例 (PowerShell)  
+### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>删除 DAC 但保留数据库的示例 (PowerShell)  
  下面的示例通过使用 **Unmanage()** 方法删除 DAC 但保持数据库不变来删除名为 MyApplication 的 DAC。  
   
 ```  
@@ -179,7 +183,7 @@ $dacstore.Unmanage($dacName)
   
  [使用 PowerShell 删除 DAC](#DeleteDACPowerShell)  
   
-### 删除 DAC 并且分离数据库的示例 (PowerShell)  
+### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>删除 DAC 并且分离数据库的示例 (PowerShell)  
  下面的示例通过使用 **Uninstall()** 方法删除 DAC 并分离数据库来删除名为 MyApplication 的 DAC。  
   
 ```  
@@ -205,7 +209,7 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
   
  [使用 PowerShell 删除 DAC](#DeleteDACPowerShell)  
   
-### 删除 DAC 并且删除数据库的示例 (PowerShell)  
+### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>删除 DAC 并且删除数据库的示例 (PowerShell)  
  下面的示例通过使用 **Uninstall()** 方法删除 DAC 并删除数据库来删除名为 MyApplication 的 DAC。  
   
 ```  
@@ -231,7 +235,7 @@ $dacName  = "MyApplication"
   
  [使用 PowerShell 删除 DAC](#DeleteDACPowerShell)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
@@ -240,3 +244,4 @@ $dacName  = "MyApplication"
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   
+

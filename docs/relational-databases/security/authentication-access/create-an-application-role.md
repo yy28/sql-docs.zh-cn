@@ -1,26 +1,30 @@
 ---
 title: "创建应用程序角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.approle.general.f1"
-helpviewer_keywords: 
-  - "应用程序角色 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.approle.general.f1
+helpviewer_keywords:
+- application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建应用程序角色
+# <a name="create-an-application-role"></a>创建应用程序角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
   
 > [!IMPORTANT]  
@@ -47,7 +51,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-##### 创建应用程序角色  
+##### <a name="to-create-an-application-role"></a>创建应用程序角色  
   
 1.  在“对象资源管理器”中，展开要创建应用程序角色的数据库。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”**页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
   
-6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开**“定位架构”**对话框。  
+6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号 **(…)** 以打开 **“定位架构”** 对话框。  
   
 7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 27
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 其他选项  
+### <a name="additional-options"></a>其他选项  
  **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建应用程序角色  
+#### <a name="to-create-an-application-role"></a>创建应用程序角色  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

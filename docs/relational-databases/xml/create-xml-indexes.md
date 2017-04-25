@@ -1,28 +1,32 @@
 ---
 title: "创建 XML 索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [SQL Server 中的 XML]"
-  - "XML 索引 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建 XML 索引
+# <a name="create-xml-indexes"></a>创建 XML 索引
   本主题介绍如何创建主 XML 索引和辅助 XML 索引。  
   
-## 创建主 XML 索引  
+## <a name="creating-a-primary-xml-index"></a>创建主 XML 索引  
  若要创建主 XML 索引，请使用 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句。 XML 索引不完全支持可用于非 XML 索引的所有选项。  
   
  创建 XML 索引时注意下列事项：  
@@ -50,11 +54,11 @@ caps.handback.revision: 19
 -   创建 XML 索引时必须将选项 ARITHABORT 设置为 ON。 若要使用 XML 数据类型方法查询、删除、更新 XML 列中的值或向 XML 列中插入值，则必须对连接设置相同的选项。 如果没有设置，则 XML 数据类型方法将会失败。  
   
     > [!NOTE]  
-    >  有关 XML 索引的信息可以在目录视图中找到。 但是，不支持 **sp_helpindex**。 本主题后面部分提供的示例说明了如何查询目录视图以查找 XML 索引信息。  
+    >  有关 XML 索引的信息可以在目录视图中找到。 但是，不支持 **sp_helpindex** 。 本主题后面部分提供的示例说明了如何查询目录视图以查找 XML 索引信息。  
   
- 如果 XML 数据类型列包含类型为 XML 架构类型 **xs:date** 或 **xs:dateTime**（或这些类型的任何子类型）的值且这些值中的年份小于 1，则在对这样的 XML 数据类型列创建或重新创建主 XML 索引时，索引创建操作在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中将失败。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允许使用这些值，因此在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中生成的数据库中创建索引时可能会出现这种问题。 有关详细信息，请参阅[类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 如果 XML 数据类型列包含类型为 XML 架构类型 **xs:date** 或 **xs:dateTime** （或这些类型的任何子类型）的值且这些值中的年份小于 1，则在对这样的 XML 数据类型列创建或重新创建主 XML 索引时，索引创建操作在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中将失败。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允许使用这些值，因此在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中生成的数据库中创建索引时可能会出现这种问题。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### 示例：创建主 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>示例：创建主 XML 索引  
  在大多数示例中，使用的是包含非类型化的 XML 列的表 T (pk INT PRIMARY KEY, xCol XML)。 可以采用简单的方式将它们扩展为类型化的 XML。 为简化起见，针对 XML 数据实例说明了查询，如下所示：  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## 创建辅助 XML 索引  
+## <a name="creating-a-secondary-xml-index"></a>创建辅助 XML 索引  
  使用 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可创建辅助 XML 索引并且可指定所需的辅助 XML 索引的类型。  
   
  创建辅助 XML 索引时注意下列事项：  
@@ -89,7 +93,7 @@ CREATE PRIMARY XML INDEX idx_xCol on T (xCol)
   
 -   DROP_EXISTING 可以删除用户表的辅助索引并为用户表创建其他辅助索引。  
   
- 可以查询 **sys.xml_indexes** 目录视图来检索 XML 索引信息。 请注意，**sys.xml_indexes** 目录视图中的 **secondary_type_desc** 列中提供了辅助索引的类型：  
+ 可以查询 **sys.xml_indexes** 目录视图来检索 XML 索引信息。 请注意， **sys.xml_indexes** 目录视图中的 **secondary_type_desc** 列中提供了辅助索引的类型：  
   
 ```  
 SELECT  *   
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列中返回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 对于主 XML 索引而言，返回的值为 NULL。  
   
-### 示例：创建辅助 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>示例：创建辅助 XML 索引  
  下面的示例说明了如何创建辅助 XML 索引。 此示例还显示了有关您创建的 XML 索引的信息。  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

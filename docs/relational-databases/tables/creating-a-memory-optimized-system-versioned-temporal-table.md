@@ -1,29 +1,33 @@
 ---
 title: "创建系统版本控制的内存优化临时表 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 caps.latest.revision: 14
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32df29be26fb5e26217a09bbb20b9cef39539aee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建系统版本控制的内存优化临时表
+# <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>创建系统版本控制的内存优化临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   与创建基于磁盘的历史记录表类似，你可以通过多种方式创建内存优化的临时表。  
   
 > [!NOTE]  
->  若要创建内存优化表，必须首先创建[内存优化的文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。  
+>  若要创建内存优化表，必须首先创建 [内存优化的文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。  
   
  如果想要控制命名并仍依赖于系统创建具有默认配置的历史记录表，使用默认历史记录表创建临时表是一个方便的选项。 在下面的示例中，新系统版本控制的内存优化临时表链接到新的基于磁盘的历史记录表。  
   
@@ -84,10 +88,10 @@ WITH
     );  
 ```  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20Memory-Optimized%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [使用带有系统版本的内存优化临时表](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   
  [监视系统版本控制型内存优化临时表](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -98,3 +102,4 @@ WITH
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

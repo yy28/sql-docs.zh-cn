@@ -1,31 +1,35 @@
 ---
 title: "删除索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除索引"
-  - "删除索引"
-  - "删除索引"
-  - "索引 [SQL Server], 删除"
-  - "索引删除 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- dropping indexes
+- indexes [SQL Server], dropping
+- index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除索引
+# <a name="delete-an-index"></a>删除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中删除索引。  
+  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除索引。  
   
  **本主题内容**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 通过使用对象资源管理器删除索引  
+#### <a name="to-delete-an-index-by-using-object-explorer"></a>通过使用对象资源管理器删除索引  
   
 1.  在“对象资源管理器”中，展开包含您要删除索引的表的数据库。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
 6.  在 **“删除对象”** 对话框中，确认正确的索引位于 **“要重删除的对象”** 网格中，然后单击 **“确定”**。  
   
-#### 使用表设计器删除索引  
+#### <a name="to-delete-an-index-using-table-designer"></a>使用表设计器删除索引  
   
 1.  在“对象资源管理器”中，展开包含您要删除索引的表的数据库。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除索引  
+#### <a name="to-delete-an-index"></a>删除索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -108,3 +112,4 @@ caps.handback.revision: 29
  有关详细信息，请参阅 [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
   
   
+

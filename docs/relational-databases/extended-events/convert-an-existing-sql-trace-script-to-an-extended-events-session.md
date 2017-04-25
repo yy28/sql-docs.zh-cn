@@ -1,26 +1,30 @@
 ---
 title: "将现有 SQL 跟踪脚本转换为扩展事件会话 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 跟踪, 将脚本转换为扩展事件"
-  - "扩展事件 [SQL Server], 转换 SQL 跟踪脚本"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将现有 SQL 跟踪脚本转换为扩展事件会话
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   如果您具有想要转换为扩展事件会话的现有 SQL 跟踪脚本，则可以使用本主题中的过程创建等效的扩展事件会话。 通过使用 trace_xe_action_map 和 trace_xe_event_map 系统表中的信息，你可以收集进行转换所必需的信息。  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  手动创建扩展事件会话，并且使用等效的扩展事件的事件、操作和谓词（筛选器）。  
   
-## 获取跟踪 ID  
+## <a name="to-obtain-the-trace-id"></a>获取跟踪 ID  
   
 1.  在查询编辑器中打开 SQL 跟踪脚本，然后执行该脚本以便创建跟踪会话。 请注意，无需运行该跟踪会话即可完成此过程。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  跟踪 ID 1 通常指示默认跟踪。  
   
-## 确定等效的扩展事件  
+## <a name="to-determine-the-extended-events-equivalents"></a>确定等效的扩展事件  
   
 1.  若要确定等效的扩展事件的事件和操作，请运行以下查询，其中，将 *trace_id* 设置为你在之前过程中获取的跟踪 ID 的值。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 21
   
          例如，你可能使用了 SP:StmtCompleted 事件类，并且对 Duration 跟踪列名（SQL 跟踪事件类 ID 45 和 SQL 跟踪列 ID 13）指定了一个筛选器。 在此情况下，该操作名称将以 NULL 的形式出现在查询结果中。  
   
-    2.  对于您在前一步骤中标识的每个 SQL 跟踪事件类，找到等效的扩展事件的事件名称。 （如果你不确定等效的事件名称，请使用[查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主题中的查询。）  
+    2.  对于您在前一步骤中标识的每个 SQL 跟踪事件类，找到等效的扩展事件的事件名称。 （如果你不确定等效的事件名称，请使用 [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)主题中的查询。）  
   
     3.  使用下面的查询可以标识要用于您在前一步骤中标识的事件的正确的数据字段。 该查询将在“事件字段”列中显示扩展事件数据字段。 在该查询中，用前一步骤中指定的事件名称替换 *<event_name>*。  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          例如，SP:StmtCompleted 事件类映射到 sp_statement_completed 扩展事件的事件。 如果你在查询中将 sp_statement_completed 指定为事件名称，则“event_field”列将显示随该事件默认包括的字段。 在查看这些字段时，您会看到有一个“duration”字段。 若要在等效的扩展事件会话中创建筛选器，你需要添加一个谓词，例如“WHERE duration > 0”。 有关示例，请参阅本主题中的“创建扩展事件会话”过程。  
   
-## 创建扩展事件会话  
+## <a name="to-create-the-extended-events-session"></a>创建扩展事件会话  
  使用查询编辑器可以创建扩展事件会话，并且将输出写入某一文件目标。 下面的步骤描述单个查询，并且提供介绍如何生成查询的说明。 有关完整查询示例，请参阅本主题的“示例”部分。  
   
-1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换 *session_name*。  
+1.  添加语句以创建事件会话，并且使用要用于扩展事件会话的名称替换*session_name* 。  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 查看结果  
+## <a name="to-view-the-results"></a>查看结果  
   
 1.  可使用 sys.fn_xe_file_target_read_file 函数查看输出。 为此，运行以下查询，并且使用您指定的路径替换文件路径：  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

@@ -1,23 +1,27 @@
 ---
-title: "列存储索引版本的功能摘要 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "列存储索引 - 新增功能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# 列存储索引版本的功能摘要
+# <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   列存储功能汇总可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 Azure SQL 数据库 Premium Edition、Azure SQL 数据仓库和并行数据仓库。  
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   批处理的查询性能会翻倍，或者说批处理会改善查询性能，但这仅适用于并行执行查询的情况。  
   
 ## <a name="see-also"></a>另请参阅  
- [列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列存储索引数据加载](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ 列存储索引指南   
+ 列存储索引数据加载   
  [列存储索引查询性能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [针对数据仓库的列存储索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ 针对数据仓库的列存储索引   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

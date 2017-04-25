@@ -1,30 +1,34 @@
 ---
 title: "创建、构造和查询几何图形实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "平面空间数据 [SQL Server], 入门"
-  - "geometry 数据类型 [SQL Server], 入门"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- planar spatial data [SQL Server], getting started
+- geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 67afdd066ed1ecff52f4ce7fecb41d344fb6d20a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 创建、构造和查询几何图形实例
-  平面空间数据类型 **geometry** 表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中作为公共语言运行时 (CLR) 数据类型实现。  
+# <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
+  平面空间数据类型 **geometry**表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
   
  **geometry** 类型已进行预定义，可在每个数据库中使用。 您可以创建 **geometry** 类型的表列并对 **geometry** 数据进行操作，就像使用其他 CLR 类型一样。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 **geometry** 数据类型（平面）符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版。  
+ **支持的** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型（平面）符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版。  
   
  有关 OGC 规范的详细信息，请参阅以下内容：  
   
@@ -32,7 +36,7 @@ caps.handback.revision: 26
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持现有 GML 3.1 标准的一个子集，该子集在以下架构中进行了定义：[http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持现有 GML 3.1 标准的一个子集，该子集在以下架构中进行了定义： [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959)。  
   
 ##  <a name="creating"></a> 创建或构建新的几何图形实例  
   
@@ -65,7 +69,6 @@ caps.handback.revision: 26
  **创建位于现有几何图形上的任意 Point 实例**  
  [STPointOnSurface（geometry 数据类型）](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="wkt"></a> 从熟知文本输入构造几何图形实例  
  **geometry** 数据类型提供了若干种用开放地理空间联盟 (OGC) WKT 表示形式生成几何图形的内置方法。 WKT 标准是一种允许几何图形数据以文本形式交换的文本字符串。  
@@ -96,7 +99,6 @@ caps.handback.revision: 26
  **用 WKT 输入构造几何图形 GeometryCollection 实例**  
  [STGeomCollFromText（geometry 数据类型）](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="wkb"></a> 从熟知二进制输入构造几何图形实例  
  WKB 是开放地理空间联盟 (OGC) 规定的一种二进制格式，该格式允许 **geometry** 数据在客户端应用程序和 SQL 数据库之间进行交换。 以下函数接受用于构造几何图形的 WKB 输入：  
@@ -125,7 +127,6 @@ caps.handback.revision: 26
  **用 WKB 输入构造几何图形 GeometryCollection 实例**  
  [STGeomCollFromWKB（geometry 数据类型）](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="gml"></a> 用 GML 文本输入构造几何图形实例  
  **geometry** 数据类型提供了一种用 GML（几何对象的 XML 表示形式）生成 **geometry** 实例的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
@@ -133,7 +134,6 @@ caps.handback.revision: 26
  **用 GML 输入构造任意类型的几何图形实例**  
  [GeomFromGml（geometry 数据类型）](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ##  <a name="returning"></a> 从几何图形实例返回熟知文本和熟知二进制  
  可以使用以下方法返回 WKT 或 WKB 格式的 **geometry** 实例：  
@@ -152,7 +152,6 @@ caps.handback.revision: 26
  **返回几何图形实例的 GML 表示形式**  
  [AsGml（geometry 数据类型）](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ##  <a name="querying"></a> 查询几何图形实例的属性和行为  
  所有 **geometry** 实例都有很多可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的方法进行检索的属性。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
@@ -178,7 +177,6 @@ caps.handback.revision: 26
  返回几何图形集合实例中的特定几何图形  
  [STGeometryN（geometry 数据类型）](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN（geometry 数据类型）  
   
- [本主题内容](#TOP)  
   
 ###  <a name="number"></a> 点数  
  所有非空 **geometry** 实例都由“点” 组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 **geometry** 提供许多用于查询实例的点的内置方法。  
@@ -207,10 +205,9 @@ caps.handback.revision: 26
  **返回 Polygon、CurvePolygon 或 MultiPolygon 实例的几何中心点**  
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="dimension"></a> 维度  
- 非空 **geometry** 实例可以为零维、一维或二维。 零维 **geometry**（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如**LineString、CircularString、CompoundCurve** 和 **MultiLineString**）有长度。 二维实例（如 **Polygon**、**CurvePolygon** 和 **MultiPolygon**）有面积和长度。 空实例将报告为 -1 维，并且 **GeometryCollection** 将根据其内容类型报告一个面积。  
+ 非空 **geometry** 实例可以为零维、一维或二维。 零维 **geometry**（如 **Point** 和 **MultiPoint**）没有长度或面积。 一维对象（如 **LineString、CircularString、CompoundCurve**和 **MultiLineString**）有长度。 二维实例（如 **Polygon**、 **CurvePolygon**和 **MultiPolygon**）有面积和长度。 空实例将报告为 -1 维，并且 **GeometryCollection** 将根据其内容类型报告一个面积。  
   
  **返回实例的维度**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -221,7 +218,6 @@ caps.handback.revision: 26
  **返回实例的面积**  
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="empty"></a> Empty  
  空 **geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
@@ -229,7 +225,6 @@ caps.handback.revision: 26
  **确定实例是否为空**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
   
- [本主题内容](#TOP)  
   
 ###  <a name="simple"></a> Simple  
  为了使实例的 **geometry** 变得“简单” ，必须符合以下全部两个要求：  
@@ -244,7 +239,6 @@ caps.handback.revision: 26
  **确定实例是否是简单的**  
  [STIsSimple](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)。  
   
- [本主题内容](#TOP)  
   
 ###  <a name="boundary"></a> 边界、内部和外部  
  **geometry** 实例的“内部”是指由实例占用的空间，而“外部”是指未占用的空间。  
@@ -272,7 +266,6 @@ SELECT @g.STBoundary().ToString();
  **返回实例的边界**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="envelope"></a> 包络线  
  **geometry**实例的“包络线”又称为“边界框”，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
@@ -280,7 +273,6 @@ SELECT @g.STBoundary().ToString();
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="closure"></a> 闭合  
  闭合的 **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
@@ -302,7 +294,6 @@ SELECT @g.STBoundary().ToString();
  **返回多边形的指定内环**  
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ###  <a name="srid"></a> 空间引用标识符 (SRID)  
  空间引用标识符 (SRID) 是指定 **geometry** 实例所在的坐标系的标识符。 两个拥有不同 SRID 的实例是不可比的。  
@@ -312,7 +303,6 @@ SELECT @g.STBoundary().ToString();
   
  此属性可以进行修改。  
   
- [本主题内容](#TOP)  
   
 ##  <a name="rel"></a> 确定几何图形实例之间的关系  
  **geometry** 数据类型提供了许多内置方法，你可以使用这些方法确定两个 **geometry** 实例之间的关系。  
@@ -350,15 +340,14 @@ SELECT @g.STBoundary().ToString();
  **确定两个几何图形中的点之间的最短距离**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
- [本主题内容](#TOP)  
   
 ##  <a name="defaultsrid"></a> 几何图形实例默认 SRID 为零  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 **geometry** 实例的默认 SRID 为 0。 利用 **geometry** 空间数据，执行计算是不需要空间实例的指定 SRID 的；因此，实例可驻留在未定义的平面空间。 若要在 **geometry** 数据类型方法的计算中指明未定义的平面空间， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 SRID 0。  
+ **中** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认 SRID 为 0。 利用 **geometry** 空间数据，执行计算是不需要空间实例的指定 SRID 的；因此，实例可驻留在未定义的平面空间。 若要在 **geometry** 数据类型方法的计算中指明未定义的平面空间， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 SRID 0。  
   
 ##  <a name="examples"></a> 示例  
  以下两个示例显示了如何添加和查询几何图形数据。  
   
--   第一个示例创建了带有标识列和 `geometry` 列 `GeomCol1` 的表。 第三列将 `geometry` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geometry` 实例，一行包含 `Polygon` 实例。  
+-   第一个示例创建了带有标识列和 `geometry` 列 `GeomCol1`的表。 第三列将 `geometry` 列呈现为其开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，并使用 `STAsText()` 方法。 接下来将插入两行：一行包含 `LineString` 类型的 `geometry`实例，一行包含 `Polygon` 实例。  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -392,9 +381,8 @@ SELECT @g.STBoundary().ToString();
     SELECT @result.STAsText();  
     ```  
   
- [本主题内容](#TOP)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

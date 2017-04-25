@@ -1,24 +1,28 @@
 ---
 title: "为 FILESTREAM 数据创建客户端应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为 FILESTREAM 数据创建客户端应用程序
+# <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
   可以使用 Win32 在 FILESTREAM BLOB 中读取和写入数据。 您需要执行以下步骤：  
   
 -   读取 FILESTREAM 文件路径。  
@@ -28,10 +32,10 @@ caps.handback.revision: 18
 -   获取 Win32 句柄，并使用该句柄在 FILESTREAM BLOB 中读取和写入数据。  
   
 > [!NOTE]  
->  本主题中的示例需要在[创建启用 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md)和[创建表以存储 FILESTREAM 数据](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中创建的启用了 FILESTREAM 的数据库和表。  
+>  本主题中的示例需要在 [创建启用 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md) 和 [创建表以存储 FILESTREAM 数据](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)中创建的启用了 FILESTREAM 的数据库和表。  
   
 ##  <a name="func"></a> 用于使用 FILESTREAM 数据的函数  
- 使用 FILESTREAM 来存储二进制大型对象 (BLOB) 数据时，可使用 Win32 API 来处理文件。 为了支持在 Win32 应用程序中处理 FILESTREAM BLOB 数据，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下函数和 API：  
+ 使用 FILESTREAM 来存储二进制大型对象 (BLOB) 数据时，可使用 Win32 API 来处理文件。 为了支持在 Win32 应用程序中处理 FILESTREAM BLOB 数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了以下函数和 API：  
   
 -   [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) 可将路径作为标记返回给 BLOB。 应用程序可使用此标记来获取 Win32 句柄并对 BLOB 数据进行操作。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 18
 ##  <a name="steps"></a> 访问 FILESTREAM 数据的步骤  
   
 ###  <a name="path"></a> 读取 FILESTREAM 文件路径  
- FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取该路径，请在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 **varbinary(max)** 列的 **PathName** 属性。 下面的示例说明了如何读取 **varbinary(max)** 列的文件路径。  
+ FILESTREAM 表中的每个单元都具有关联的文件路径。 若要读取该路径，请在 **语句中使用** varbinary(max) **列的** PathName [!INCLUDE[tsql](../../includes/tsql-md.md)] 属性。 下面的示例说明了如何读取 **varbinary(max)** 列的文件路径。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 18
 ###  <a name="handle"></a> 获取 Win32 文件句柄  
  若要获取 Win32 文件句柄，请调用 OpenSqlFilestream API。 此 API 是从 sqlncli.dll 文件中导出的。 可以将返回的句柄传递给以下任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 下面的示例说明了如何获取 Win32 文件句柄并使用它在 FILESTREAM BLOB 中读取和写入数据。  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/create-client-applicatio_4.vb)]  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 18
   
 -   如果应用程序使用 Message Block1 (SMB1) 协议，则应以 60 KB 的倍数读取 FILESTREAM BLOB 数据以优化性能。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [避免与 FILESTREAM 应用程序中的数据库操作冲突](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

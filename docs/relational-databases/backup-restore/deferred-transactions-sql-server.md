@@ -1,31 +1,35 @@
 ---
 title: "延迟的事务 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "I/O [SQL Server], 数据库恢复"
-  - "还原页 [SQL Server]"
-  - "延迟的事务"
-  - "修改延迟的事务状态"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 延迟的事务 (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业版中，如果在数据库启动过程中回滚（撤消）所需的数据处于脱机状态，则损坏的事务可能延迟。 “延迟的事务”  是指前滚阶段结束时未提交的事务或遇到错误而无法回滚的事务。 因为无法回滚事务，所以事务将延迟。  
   
 > [!NOTE]  
->  仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中才会延迟损坏的事务。 在其他版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，事务损坏将导致启动失败。  
+>  仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中才会延迟损坏的事务。 在其他版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，事务损坏将导致启动失败。  
   
  一般来说，如果前滚数据库时遇到 I/O 错误而无法读取事务所需的页面，则将导致事务延迟。 但是，文件级的错误也会导致延迟的事务。 如果部分还原顺序在某点停止，在该点上必须对事务进行回滚而事务所需的数据处于脱机状态，这亦会导致事务延迟。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 45
 |在数据库镜像上执行的重做操作|延迟的事务|  
 |文件组脱机|延迟的事务|  
   
-## 将事务移出 DEFERRED 状态  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>将事务移出 DEFERRED 状态  
   
 > [!IMPORTANT]  
 >  延迟的事务会使事务日志保持活动状态。 在延迟的事务脱离延迟状态之前无法截断包含这些事务的虚拟日志文件。 有关日志截断的详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
@@ -71,7 +75,7 @@ caps.handback.revision: 45
     > [!IMPORTANT]  
     >  从不恢复失效的文件组。  
   
-     有关详细信息，请参阅[删除失效文件组 (SQL Server) ](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)。  
+     有关详细信息，请参阅 [删除失效文件组 (SQL Server)](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)。  
   
 -   如果由于页的错误而致使事务延迟，并且没有数据库的完好备份，请按照以下步骤修复数据库：  
   
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          有关紧急模式的信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
-    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库：[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
+    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库： [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          在遇到错误的页时，DBCC 将释放该页并修复所有相关错误。 此方法可以使数据库重新联机并处于物理上一致的状态。 但是，还可能会丢失其他数据；因此，应在不得已的情况下才使用此方法。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [删除失效文件组 (SQL Server)](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

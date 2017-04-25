@@ -1,29 +1,33 @@
 ---
-title: "数据库属性（“事务日志传送”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
+title: "数据库属性（“事务日志传送”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 数据库属性（“事务日志传送”页）
+# <a name="database-properties-transaction-log-shipping-page"></a>数据库属性（“事务日志传送”页）
   使用此页可以配置和修改数据库的日志传送属性。  
   
  有关日志传送概念的说明，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **将此数据库启用为日志传送配置中的主数据库**  
  将此数据库启用为日志传送的主数据库。 请选中该选项，然后再配置此页上的剩余选项。 如果清除此复选框，则将删除此数据库的日志传送配置。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 21
  **辅助服务器实例和数据库**  
  列出当前为此主数据库配置的辅助服务器和数据库。 突出显示某个数据库，然后单击 **“...”** 可以修改与该辅助数据库相关联的参数。  
   
- **添加**  
+ **“添加”**  
  单击“添加”可以向此主数据库的日志传送配置中添加辅助数据库。  
   
  **删除**  
@@ -51,7 +55,7 @@ caps.handback.revision: 21
  **监视服务器实例**  
  指示当前为该日志传送配置设置的监视服务器实例。  
   
- **设置**  
+ **“设置”**  
  为日志传送配置设置监视服务器实例。 单击 **“设置”** 可以配置此监视服务器实例。  
   
  **编写配置脚本**  
@@ -60,7 +64,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  在编写辅助数据库的脚本设置之前，必须调用 **“辅助数据库设置”** 对话框。 通过调用该对话框，用户可以连接到辅助服务器，并且可以检索生成该脚本所需的辅助数据库的当前设置。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [日志传送存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [日志传送表 (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   
