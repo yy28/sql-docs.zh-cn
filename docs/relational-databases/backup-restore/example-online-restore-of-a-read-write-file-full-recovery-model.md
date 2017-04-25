@@ -1,38 +1,42 @@
 ---
-title: "示例：读/写文件的联机还原（完整恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整恢复模式 [SQL Server], RESTORE 示例"
-  - "联机还原 [SQL Server], 完整恢复模式"
-  - "还原顺序 [SQL Server], 联机"
+title: "示例：读/写文件的联机还原（完整恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- online restores [SQL Server], full recovery model
+- restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4be86c808d1af35a04b10c88d5cecdd919416137
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：读/写文件的联机还原（完整恢复模式）
+# <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>示例：读/写文件的联机还原（完整恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- 在此示例中，名为 `adb` 的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  
+ 在此示例中，名为 `adb`的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  
   
  文件组 `a1` 中的文件 `A` 似乎已损坏，数据库管理员决定在数据库处于联机状态时还原该文件。  
   
 > [!NOTE]  
 >  在简单恢复模式下，不允许联机还原读/写数据。  
   
-## 还原顺序  
+## <a name="restore-sequences"></a>还原顺序  
   
 > [!NOTE]  
 >  联机还原顺序的语法与脱机还原顺序的语法完全相同。  
@@ -54,7 +58,7 @@ caps.handback.revision: 33
   
 3.  联机还原日志备份。  
   
-     管理员还原自从还原了文件备份后一直到获得最新日志备份（在步骤 2 中创建的 *log_backup3*）所进行的所有日志备份。 还原最后一个备份之后，应当恢复数据库。  
+     管理员还原自从还原了文件备份后一直到获得最新日志备份（在步骤 2 中创建的*log_backup3*）所进行的所有日志备份。 还原最后一个备份之后，应当恢复数据库。  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
@@ -65,7 +69,7 @@ caps.handback.revision: 33
   
      文件 `a1` 现处于联机状态。  
   
-## 其他示例  
+## <a name="additional-examples"></a>其他示例  
   
 -   [示例：数据库的段落还原（简单恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -79,12 +83,12 @@ caps.handback.revision: 33
   
 -   [示例：只读文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

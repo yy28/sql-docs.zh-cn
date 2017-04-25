@@ -1,29 +1,33 @@
 ---
 title: "第 3 课：将数据库备份到 URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 3 课：将数据库备份到 URL
-在本课程中，你会将本地 SQL Server 2016 实例上的 AdventureWorks2014 数据库备份到在[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)中创建的 Azure 容器。  
+# <a name="lesson-3-database-backup-to-url"></a>第 3 课：将数据库备份到 URL
+在本课程中，你会将本地 SQL Server 2016 实例上的 AdventureWorks2014 数据库备份到在 [第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)中创建的 Azure 容器。  
   
 > [!NOTE]  
-> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过[此处](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx)记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
+> 如果要将 SQL Server 2012 SP1 CU2 或更高版本数据库或 SQL Server 2014 数据库备份到此 Azure 容器，则可以通过 [此处](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 记录的已弃用语法，使用 WITH CREDENTIAL 语法备份到 URL。  
   
 若要将数据库备份到 Blob 存储，请执行以下步骤：  
   
@@ -50,9 +54,10 @@ caps.handback.revision: 16
   
 5.  展开容器，展开第 1 课中创建的容器，并验证上面步骤 3 中的备份是否出现在此容器中。  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![本地备份文件在 Azure 容器中显示为 blob](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "本地备份文件在 Azure 容器中显示为 blob")  
   
 **下一课：**  
   
 [第 4 课：将数据库从 URL 还原到虚拟机](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

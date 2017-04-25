@@ -1,25 +1,29 @@
 ---
 title: "第 8 课. 从日志备份还原为新数据库 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 281259fb737bbc41885a61e62a4fcc83b3001119
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 8 课. 从日志备份还原为新数据库
+# <a name="lesson-8-restore-as-new-database-from-log-backup"></a>第 8 课. 从日志备份还原为新数据库
 在本课程中，需将 AdventureWorks2014 数据库作为新数据库从文件快照事务日志备份进行还原。  
   
 在此方案中，是还原到不同虚拟机上的 SQL Server 实例，以便进行业务分析和报告。 还原到不同虚拟机上的不同实例可将工作负荷卸载到针对此用途调整了大小的专用虚拟机，从而从事务系统中消除资源要求。  
@@ -33,7 +37,7 @@ caps.handback.revision: 12
 2.  打开一个新查询窗口，连接到 Azure 虚拟机中数据库引擎的 SQL Server 2016 实例。  
   
     > [!NOTE]  
-    > 如果此 Azure 虚拟机与你用于以前课程的虚拟机不同，请确保执行了[第 2 课：使用共享访问签名创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)中的步骤。 如果要还原到不同容器，请针对新容器执行[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)和[第 2 课：使用共享访问签名创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)中的步骤。  
+    > 如果此 Azure 虚拟机与你用于以前课程的虚拟机不同，请确保执行了 [第 2 课：使用共享访问签名创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)中的步骤。 如果要还原到不同容器，请针对新容器执行 [第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) 和 [第 2 课：使用共享访问签名创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) 中的步骤。  
   
 3.  复制以下 Transact-SQL 脚本，然后将其粘贴到查询窗口中。 选择要使用的日志备份文件。 针对第 1 课中指定的存储帐户名称和容器适当修改 URL，提供日志备份文件名称，然后执行此脚本。  
   
@@ -55,9 +59,10 @@ caps.handback.revision: 12
   
 6.  展开容器，展开在第 1 课中创建的容器（在需要时进行刷新），验证新数据和日志文件是否随以前课程中的 blob 一起出现在容器中。  
   
-    ![Azure container showing the data and log files for the new database](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "Azure container showing the data and log files for the new database")  
+    ![显示新数据库的数据文件和日志文件的 Azure 容器](../relational-databases/media/e9705083-86bc-4309-a0bf-92c15f174c0a.JPG "显示新数据库的数据文件和日志文件的 Azure 容器")  
   
 [第 9 课：管理备份集和文件快照备份](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
   
   
   
+

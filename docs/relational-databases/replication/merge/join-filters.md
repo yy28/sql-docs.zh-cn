@@ -1,27 +1,31 @@
 ---
 title: "联接筛选器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筛选器 [SQL Server 复制], 联接"
-  - "发布 [SQL Server 复制], 联接筛选器"
-  - "合并复制联接筛选器 [SQL Server 复制]"
-  - "联接筛选器"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server replication], join
+- publications [SQL Server replication], join filters
+- merge replication join filters [SQL Server replication]
+- join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bb9bb01589869826eb5a6e33f323b0b9f171aa3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 联接筛选器
+# <a name="join-filters"></a>联接筛选器
   联接筛选器允许根据发布中相关表的筛选方式对表进行筛选。 通常用参数化筛选器筛选父表，然后采用与定义各表之间联接完全相同的方式来定义联接筛选器。 联接筛选器扩展了参数化筛选器，以便仅复制与联接筛选器子句匹配的相关表中的数据。  
   
  联接筛选器通常遵循为其应用到的表定义的主键/外键关系，但并不严格受限于主键/外键关系。 联接筛选器可以基于任何逻辑比较两表中相关数据。  
@@ -36,13 +40,13 @@ caps.handback.revision: 38
   
  这些表可用在支持移动销售队伍的应用程序中，但必须经过筛选，以使 **HumanResources.Employee** 表中的各销售人员只接收与其客户订单相关的数据。  
   
- 第一个步骤是在父表上定义参数化筛选器。本例中的父表是 **HumanResources.Employee** 表。 此表包含列 **LoginID**, ，其中包含该窗体中每个雇员的登录名 *域 \ 登录*。 若要筛选该表以使每个雇员只接收与他们相关的数据，请指定一个参数化筛选器子句：  
+ 第一个步骤是在父表上定义参数化筛选器。本例中的父表是 **HumanResources.Employee** 表。 这个表包括 **LoginID**列，该列包含 *domain\login*格式的各个雇员登录名。 若要筛选该表以使每个雇员只接收与他们相关的数据，请指定一个参数化筛选器子句：  
   
 ```  
 LoginID = SUSER_SNAME()  
 ```  
   
- 此筛选器可确保每个雇员的订阅只包含来自数据 **HumanResources.Employee** 与该员工 （这在这种情况下是单个行） 相关的表。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)。  
+ 此筛选器确保每个雇员的订阅仅包含 **HumanResources.Employee** 表中与该雇员相关的数据（这在本例中是一个单行）。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  下一步是将此筛选器扩展到各相关表，所使用的语法类似于指定两表间联接所使用的语法。 第一个联接筛选器子句是：  
   
@@ -58,9 +62,9 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
  这个子句确保订阅仅包含与每个销售人员订单数据相关的详细信息数据。 此例说明的是在各点处联接的单个表。也可以在各点联接多个表。  
   
- 通过新建发布向导和 **“发布属性”** 对话框可一次一个地添加联接筛选器，也可用编程的方式添加它们。 也可用新建发布向导自动生成联接筛选器：为一个表指定一个行筛选器，并将联接筛选器应用于所有相关表。 有关详细信息，请参阅 [定义和修改联接筛选器之间合并项目](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md), ，[自动生成设置联接筛选器之间合并项目的 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/automatically generate join filters between merge articles.md), ，和 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+ 通过新建发布向导和 **“发布属性”** 对话框可一次一个地添加联接筛选器，也可用编程的方式添加它们。 也可用新建发布向导自动生成联接筛选器：为一个表指定一个行筛选器，并将联接筛选器应用于所有相关表。 有关详细信息，请参阅[定义和修改合并项目间的联接筛选器](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)，[自动生成合并项目间的一组联接筛选器 (SQL Server Management Studio)](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)和[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-## 优化联接筛选器性能  
+## <a name="optimizing-join-filter-performance"></a>优化联接筛选器性能  
  可以按照以下指南来优化联接筛选器性能：  
   
 -   限制联接筛选器层次结构中的表数。  
@@ -85,8 +89,8 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      强烈建议在联接筛选器中而不要在子查询中表示所有这类逻辑。 如果您的应用程序要求行筛选器使用子查询，请确保子查询仅引用不发生更改的查找数据。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [为合并复制筛选已发布数据](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

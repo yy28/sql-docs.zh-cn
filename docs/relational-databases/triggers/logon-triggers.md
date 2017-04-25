@@ -1,30 +1,34 @@
 ---
 title: "登录触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "logon triggers"
-  - "login triggers"
-helpviewer_keywords: 
-  - "触发器 [SQL Server], 登录"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- logon triggers
+- login triggers
+helpviewer_keywords:
+- triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c55dff4979c50d05293c13abe86b1655027640b7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 登录触发器
+# <a name="logon-triggers"></a>登录触发器
   登录触发器将为响应 LOGON 事件而激发存储过程。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例建立用户会话时将引发此事件。 登录触发器将在登录的身份验证阶段完成之后且用户会话实际建立之前激发。 因此，来自触发器内部且通常将到达用户的所有消息（例如错误消息和来自 PRINT 语句的消息）会传送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 如果身份验证失败，将不激发登录触发器。  
   
- 可以使用登录触发器来审核和控制服务器会话，例如通过跟踪登录活动、限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登录名或限制特定登录名的会话数。 例如，在以下代码中，如果登录名 *login_test* 已经创建了三个用户会话，登录触发器将拒绝由该登录名启动的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录尝试。  
+ 可以使用登录触发器来审核和控制服务器会话，例如通过跟踪登录活动、限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录名或限制特定登录名的会话数。 例如，在以下代码中，如果登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login_test *已经创建了三个用户会话，登录触发器将拒绝由该登录名启动的* 登录尝试。  
   
 ```  
 USE master;  
@@ -47,12 +51,12 @@ IF ORIGINAL_LOGIN()= 'login_test' AND
 END;  
 ```  
   
- 请注意，LOGON 事件对应于 AUDIT_LOGIN SQL Trace 事件，该事件可在[事件通知](../../relational-databases/service-broker/event-notifications.md)中使用。 触发器与事件通知的主要区别在于触发器随事件同步引发，而事件通知是异步的。 也就是说，例如，如果要停止建立会话，则必须使用登录触发器。 AUDIT_LOGIN 事件的事件通知不能用于此目的。  
+ 请注意，LOGON 事件对应于 AUDIT_LOGIN SQL Trace 事件，该事件可在 [事件通知](../../relational-databases/service-broker/event-notifications.md)中使用。 触发器与事件通知的主要区别在于触发器随事件同步引发，而事件通知是异步的。 也就是说，例如，如果要停止建立会话，则必须使用登录触发器。 AUDIT_LOGIN 事件的事件通知不能用于此目的。  
   
-## 指定第一个和最后一个触发器  
+## <a name="specifying-first-and-last-trigger"></a>指定第一个和最后一个触发器  
  可以对 LOGON 事件定义多个触发器。 通过使用 [sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md) 系统存储过程，可以将这些触发器中的任何一个指定为针对某事件激发的第一个或最后一个触发器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保证其余触发器的执行顺序。  
   
-## 管理事务  
+## <a name="managing-transactions"></a>管理事务  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 激发登录触发器之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会创建独立于任何用户事务的隐式事务。 因此，第一个登录触发器开始激发时，事务计数为 1。 所有登录触发器完成执行后，将提交事务。 与其他类型的触发器一样，如果登录触发器完成执行后事务计数为 0， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 ROLLBACK TRANSACTION 语句将事务计数重置为 0，即使该语句在嵌套事务中执行也会如此。 COMMIT TRANSACTION 可能将事务计数递减到 0。 因此，建议不要在登录触发器中发出 COMMIT TRANSACTION 语句。  
   
  如果要在登录触发器中使用 ROLLBACK TRANSACTION 语句，请注意以下事项：  
@@ -67,10 +71,10 @@ END;
   
 -   触发器正文中出现严重级别大于 20 的错误。  
   
-## 禁用登录触发器  
- 登录触发器可以有效地阻止所有用户（包括 **sysadmin** 固定服务器角色的成员）与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的成功连接。 在登录触发器正在阻止连接时，**sysadmin** 固定服务器角色的成员可通过使用专用管理员连接，或者通过以最小配置模式 (-f) 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，来进行连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+## <a name="disabling-a-logon-trigger"></a>禁用登录触发器  
+ 登录触发器可以有效地阻止所有用户（包括 [!INCLUDE[ssDE](../../includes/ssde-md.md)] sysadmin **固定服务器角色的成员）与** 的成功连接。 在登录触发器正在阻止连接时， **sysadmin** 固定服务器角色的成员可通过使用专用管理员连接，或者通过以最小配置模式 (-f) 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，来进行连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -80,7 +84,7 @@ END;
 |说明如何返回有关登录触发器的信息。|[sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
 |说明如何捕获登录触发器事件数据。||  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)  
   
   

@@ -1,37 +1,41 @@
 ---
 title: "估算内存优化表的内存需求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
+ms.lasthandoff: 04/11/2017
+
 ---
-# 估算内存优化表的内存需求
+# <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 内存优化表要求存在足够的内存，以便将所有行和索引保留在内存中。 因为内存是有限的资源，所以了解和管理系统的内存使用情况非常重要。 本节中的主题介绍一些常见的内存使用和管理方案。
 
 无论是新建内存优化表还是将现有的磁盘表迁移至 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表，都请合理估算每个表的内存需求，以便为服务器提供充足的内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
   
-如果考虑从基于磁盘的表迁移至内存优化表，在继续阅读本主题前，请先阅读主题[确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)，了解哪类表适合迁移。 [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 下的所有主题均提供了有关从基于磁盘的表迁移至内存优化表的指导。 
+如果考虑从基于磁盘的表迁移至内存优化表，在继续阅读本主题前，请先阅读主题 [确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) ，了解哪类表适合迁移。 [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 下的所有主题均提供了有关从基于磁盘的表迁移至内存优化表的指导。 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>估计内存需求量的基本指南
 
-尽管表确实需要与内存大小相适应，但从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，内存优化表的大小已没有限制。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SCHEMA_AND_DATA 表支持的数据大小为 256GB。
+尽管表确实需要与内存大小相适应，但从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，内存优化表的大小已没有限制。  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，SCHEMA_AND_DATA 表支持的数据大小为 256GB。
 
 内存优化表的大小与数据大小加上一些行标题的开销大小之和相对应。 当将基于磁盘的表迁移到内存优化表时，内存优化表的大小将大致与原始基于磁盘的表的聚集索引或堆的大小相对应。
 
-内存优化表的索引通常比基于磁盘的表的非聚集索引小。 非聚集索引的大小按照 `[primary key size] * [row count]` 顺序排列。 哈希索引的大小为 `[bucket count] * 8 bytes`。 
+内存优化表的索引通常比基于磁盘的表的非聚集索引小。 非聚集索引的大小按照 `[primary key size] * [row count]`顺序排列。 哈希索引的大小为 `[bucket count] * 8 bytes`。 
 
 当有活动的工作负荷时，则需要更多的内存以应对行版本控制和各种操作。 在实践中需要的内存量取决于工作负荷，但为安全起见，建议以内存优化表和索引预期大小的两倍开始，并观察实践中的内存需求。 行版本控制的开销始终取决于工作负荷的特征 - 特别是长时间运行的事务会增加开销。 对于大多数使用较大数据库的工作负荷（例如 > 100GB），通常会限制开销（25% 或更少）。
 
@@ -50,7 +54,7 @@ caps.handback.revision: 32
   
 - [表增长占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="a-namebkmkexampletablea-example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>内存优化表示例  
+###  <a name="bkmk_ExampleTable"></a> 内存优化表示例  
 
 考虑以下内存优化的表架构：
   
@@ -82,7 +86,7 @@ GO
 
 我们将使用该架构来确定此内存优化表所需的最低内存。  
   
-###  <a name="a-namebkmkmemoryfortablea-memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>表占用的内存  
+###  <a name="bkmk_MemoryForTable"></a> 表占用的内存  
 
 内存优化表行包含三个部分：
   
@@ -101,7 +105,7 @@ GO
   
 根据上述计算，内存优化表中每行的大小为 24 + 32 + 200，即 256 个字节。  总共有 5 百万行，则表将占用 5,000,000 * 256 字节，共 1,280,000,000 字节 – 大约 1.28 GB。  
   
-###  <a name="a-namebkmkindexmeemorya-memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>索引占用的内存  
+###  <a name="bkmk_IndexMeemory"></a> 索引占用的内存  
 
 #### <a name="memory-for-each-hash-index"></a>每个哈希索引占用的内存  
   
@@ -130,7 +134,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 如果是创建新表，则需要估算数组大小或在部署前通过测试收集数据。  
   
-关于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表中哈希索引的工作原理，请参阅[哈希索引](../Topic/Hash%20Indexes.md)。  
+关于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表中哈希索引的工作原理，请参阅 [哈希索引](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
   
 #### <a name="setting-the-hash-index-array-size"></a>设置哈希索引数组的大小  
   
@@ -164,7 +168,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="a-namebkmkmemoryforrowversionsa-memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>行版本控制占用的内存
+###  <a name="bkmk_MemoryForRowVersions"></a> 行版本控制占用的内存
 
 为避免锁定，内存 OLTP 在更新或删除行时采用乐观并发策略。 也就是说，对某行进行更新时，将额外创建一个该行的版本。 此外，删除是逻辑性的 — 现有行会标记为已删除，但并未立即删除。 系统将保持旧的行版本（包括已删除行）可用，直至可能会用到该版本的所有事务执行完毕为止。 
   
@@ -176,20 +180,22 @@ SELECT * FRON t_hk
   
 `rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
-可通过下面的公式估算陈旧行的内存需求：陈旧行数目 * 内存优化表的行大小（参见上文的[表占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable)）。  
+可通过下面的公式估算陈旧行的内存需求：陈旧行数目 * 内存优化表的行大小（参见上文的 [表占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) ）。  
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="a-namebkmktablevariablesa-memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>表变量占用的内存
+###  <a name="bkmk_TableVariables"></a> 表变量占用的内存
   
 只有在表变量超出范围时，才能释放表变量占用的内存。 来自表变量的行（包括作为更新的一部分删除的行）不会进行垃圾回收。 在表变量退出作用域之前不会释放内存。  
   
 与过程作用域相反，用于许多事务的在大型 SQL 批处理中定义的表变量可能会占用大量内存。 因为不对它们进行垃圾回收，所以，表变量中已删除的行可能会使用大量内存并且降低性能，这是因为读取操作需要扫描已删除的行。  
   
-###  <a name="a-namebkmkmemoryforgrowtha-memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>表增长占用的内存
+###  <a name="bkmk_MemoryForGrowth"></a> 表增长占用的内存
 
 上述计算结果为表当前所需的内存。 除该内存大小外，还需对表的增长作出预测并提供充足的内存来满足增长所需。  例如，如预测表会有 10% 的增长，则需将上述结果乘以 1.1 来算出表所需的总内存。  
   
 ## <a name="see-also"></a>另请参阅
 
 [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

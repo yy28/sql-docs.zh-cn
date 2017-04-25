@@ -1,28 +1,32 @@
 ---
 title: "各种 SQL Server 数据类型的 FOR XML 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, 数据类型支持"
-  - "数据类型 [SQL Server], FOR XML 子句"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, data type support
+- data types [SQL Server], FOR XML clause
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 各种 SQL Server 数据类型的 FOR XML 支持
+# <a name="for-xml-support-for-various-sql-server-data-types"></a>各种 SQL Server 数据类型的 FOR XML 支持
   本节中的主题介绍了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中数据类型的 FOR XML 支持。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  

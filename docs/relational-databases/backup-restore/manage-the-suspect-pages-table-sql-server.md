@@ -1,37 +1,41 @@
 ---
 title: "管理 suspect_pages 表 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824（数据库引擎错误）"
-  - "还原页 [SQL Server]"
-  - "页 [SQL Server], 可疑"
-  - "页 [SQL Server], 还原"
-  - "suspect_pages 系统表"
-  - "可疑页 [SQL Server]"
-  - "还原 [SQL Server], 页"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理 suspect_pages 表 (SQL Server)
-  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 **suspect_pages** 表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表位于 [msdb 数据库](../../relational-databases/databases/msdb-database.md)中。  
+# <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
+  本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表位于 [msdb 数据库](../../relational-databases/databases/msdb-database.md)中。  
   
- 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
+ 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
   
--   由操作系统发出的循环冗余检查 (CRC) 导致的 [823 错误](../Topic/MSSQLSERVER_823.md)，如磁盘错误（某些硬件错误）  
+-   由操作系统发出的循环冗余检查 (CRC) 导致的 823 错误，如磁盘错误（某些硬件错误）  
   
--   [824 错误](../Topic/MSSQLSERVER_824.md)，如页撕裂（任何逻辑错误）  
+-   824 错误，如页撕裂（任何逻辑错误）  
   
  每个可疑页的页 ID 将记录在 **suspect_pages** 表中。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将记录在常规处理过程中发现的所有可疑页，例如在下列情况下：  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 54
   
 -   在备份操作的过程中。  
   
- 当执行还原操作、DBCC 修复操作或删除数据库操作时，**suspect_pages** 表也会根据需要进行更新。  
+ 当执行还原操作、DBCC 修复操作或删除数据库操作时， **suspect_pages** 表也会根据需要进行更新。  
   
  **本主题内容**  
   
@@ -121,21 +125,21 @@ caps.handback.revision: 54
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 管理 suspect_pages 表  
+#### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
 2.  依次展开“系统数据库” 、“msdb” 、“表” 和“系统表” 。  
   
-3.  展开“dbo.suspect_pages”，然后右键单击“编辑前 200 行”。  
+3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行” 。  
   
 4.  在查询窗口中，编辑、更新或删除所需的行。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 管理 suspect_pages 表  
+#### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages (Transact-SQL)](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

@@ -1,31 +1,35 @@
 ---
 title: "元数据可见性配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "子组件可见性 [SQL Server]"
-  - "元数据 [SQL Server], 可见性"
-  - "权限 [SQL Server], 元数据访问"
-  - "查看元数据"
-  - "对象 [SQL Server], 元数据"
-  - "显示元数据"
-  - "数据库元数据 [SQL Server]"
-  - "元数据 [SQL Server], 权限"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subcomponents visibility [SQL Server]
+- metadata [SQL Server], visibility
+- permissions [SQL Server], metadata access
+- viewing metadata
+- objects [SQL Server], metadata
+- displaying metadata
+- database metadata [SQL Server]
+- metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 元数据可见性配置
+# <a name="metadata-visibility-configuration"></a>元数据可见性配置
   元数据的可见性仅限用户所拥有的安全对象，或已授予用户某些权限的安全对象。 例如，如果用户获得了对表 `myTable`的 SELECT 或 INSERT 权限，则下面的查询将返回一行。  
   
 ```  
@@ -37,7 +41,7 @@ GO
   
  但如果用户对 `myTable`没有任何权限，则查询返回空的结果集。  
   
-## 元数据可见性配置的作用域和影响  
+## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>元数据可见性配置的作用域和影响  
  元数据可见性配置仅可应用于下列安全对象。  
   
 |||  
@@ -98,14 +102,14 @@ GO
 > [!NOTE]  
 >  您可以使用 EXECUTE AS 临时切换到调用方的安全上下文。 有关详细信息，请参阅 [EXECUTE AS (Transact SQL)](../../t-sql/statements/execute-as-transact-sql.md)。  
   
-## 元数据可见性配置的优点和限制  
+## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>元数据可见性配置的优点和限制  
  元数据可见性配置在整个安全计划中发挥着重要作用。 但在有些情况下，有经验的用户和已确定的用户可以强制公开某些元数据。 建议将元数据权限部署为多种深层防御中的一种。  
   
- 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md)。  
+ 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  下列元数据无法强制公开：  
   
--   存储在 **sys.servers** 的 **provider_string** 列中的值。 没有 ALTER ANY LINKED SERVER 权限的用户将看到此列中的值为 NULL。  
+-   存储在 **sys.servers** 的 **provider_string**列中的值。 没有 ALTER ANY LINKED SERVER 权限的用户将看到此列中的值为 NULL。  
   
 -   用户定义的对象（如存储过程或触发器）的源定义。 只有在满足下列某一种条件时，才能看到源代码：  
   
@@ -136,12 +140,12 @@ GO
   
 -   OBJECT_DEFINITION() 函数  
   
--   存储在 **sys.sql_logins** 的 password_hash 列中的值。  不具有 CONTROL SERVER 权限的用户可以看到该列中的 NULL 值。  
+-   存储在 **sys.sql_logins**的 password_hash 列中的值。  不具有 CONTROL SERVER 权限的用户可以看到该列中的 NULL 值。  
   
 > [!NOTE]  
->  内置系统过程和函数的 SQL 定义通过 **sys.system_sql_modules** 目录视图、**sp_helptext** 存储过程以及 OBJECT_DEFINITION() 函数公开可见。  
+>  内置系统过程和函数的 SQL 定义通过 **sys.system_sql_modules** 目录视图、 **sp_helptext** 存储过程以及 OBJECT_DEFINITION() 函数公开可见。  
   
-## 元数据可见性的一般原则  
+## <a name="general-principles-of-metadata-visibility"></a>元数据可见性的一般原则  
  下列是需要注意的有关元数据可见性的一般原则：  
   
 -   固定角色隐式权限  
@@ -152,23 +156,23 @@ GO
   
 -   子组件元数据的可见性  
   
-### 固定角色和隐式权限  
+### <a name="fixed-roles-and-implicit-permissions"></a>固定角色和隐式权限  
  固定角色可以访问的元数据取决于这些角色相应的隐式权限。  
   
-### 权限的作用域  
+### <a name="scope-of-permissions"></a>权限的作用域  
  某个作用域上的权限意味着可以查看该作用域和所有包含的作用域上的元数据。 例如，对架构的 SELECT 权限意味着被授权者对该架构所包含的所有安全对象都具有 SELECT 权限。 因此，授予对架构的 SELECT 权限可以使用户查看架构的元数据以及其中的所有表、视图、函数、过程、队列、同义词、类型和 XML 架构集合。 有关范围的详细信息，请参阅[权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   
-### DENY 的优先顺序  
+### <a name="precedence-of-deny"></a>DENY 的优先顺序  
  DENY 通常优先于其他权限。 例如，如果授予数据库用户对架构的 EXECUTE 权限，但是拒绝其对架构中存储过程的 EXECUTE 权限，则该用户不能查看此存储过程的元数据。  
   
  另外，如果拒绝用户对某个架构具有 EXECUTE 权限，但授予其对该架构中某个存储过程具有 EXECUTE 权限，则该用户无法查看该存储过程的元数据。  
   
  再比如，如果通过各种角色成员身份同时授予和拒绝用户对存储过程的 EXECUTE 权限，则优先执行 DENY 权限，因此，用户不能查看存储过程的元数据。  
   
-### 子组件元数据的可见性  
+### <a name="visibility-of-subcomponent-metadata"></a>子组件元数据的可见性  
  索引、检查约束和触发器这类子组件的可见性由对父级组件的权限决定。 这些子组件没有可授予的权限。 例如，如果针对表授予用户某些权限，则用户可以查看表、列、索引、检查约束、触发器以及其他此类子组件的元数据。  
   
-#### 所有数据库用户可访问的元数据  
+#### <a name="metadata-that-is-accessible-to-all-database-users"></a>所有数据库用户可访问的元数据  
  某些元数据对于特定数据库中的所有用户都必须是可访问的。 例如，文件组没有可授予的权限，因此不能授予用户查看文件组的元数据的权限。 但是，可以创建表的任何用户都必须能够访问文件组元数据，以使用 CREATE TABLE 语句的 ON *filegroup* 或 TEXTIMAGE_ON *filegroup* 子句。  
   
  所有用户均可查看由 DB_ID() 函数和 DB_NAME() 函数返回的元数据。  
@@ -186,12 +190,13 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [兼容性视图 (Transact SQL)](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)  
+ [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
+

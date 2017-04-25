@@ -1,28 +1,32 @@
 ---
-title: "示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW 模式, 请求架构示例"
-  - "RAW 模式, 使用 XMLDATA 和 XMLSCHEMA"
+title: "示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, requesting schema example
+- RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构
   下面的查询返回描述文档结构的 XML-DATA 架构。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 USE AdventureWorks2012;  
@@ -122,7 +126,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

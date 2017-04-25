@@ -1,25 +1,29 @@
 ---
 title: "管理 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 安全性"
-  - "Filetable [SQL Server], 管理访问权限"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理 FileTable
+# <a name="manage-filetables"></a>管理 FileTable
   说明用于管理 FileTable 的常见管理任务。  
   
 ##  <a name="HowToEnumerate"></a> 如何获取 FileTable 和相关对象的列表  
@@ -61,7 +65,7 @@ GO
   
      如果 ALTER DATABASE 命令被取消或因超时而结束，则不更改事务性访问级别。  
   
--   如果使用 WITH \<termination> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 调用 ALTER DATABASE 语句，则将终止所有打开的非事务性文件句柄。  
+-   如果调用带 WITH \<termination> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 的 ALTER DATABASE 语句，则将终止所有打开的非事务性文件句柄。  
   
 > [!WARNING]  
 >  终止打开的文件句柄可能会导致用户丢失未保存的数据。 此行为与文件系统自身的行为一致。  
@@ -72,17 +76,17 @@ GO
   
 -   当您将访问权限设置为 **NONE**时，将不再能够访问或看到所有 FileTable 目录及其内容。  
   
--   将访问权限设置为 **READ_ONLY** 时，所有 FileTable 目录及其内容还是只读的。  
+-   将访问权限设置为 **READ_ONLY**时，所有 FileTable 目录及其内容还是只读的。  
   
  在实例级别禁用 FILESTREAM 将会对该实例上的数据库级别目录及其下的 FileTable 目录产生下列影响：  
   
 -   如果在实例级别禁用 FILESTREAM，将看不到该实例上的任何数据库级别目录。  
   
 ###  <a name="HowToDisable"></a> 如何禁用和重新启用数据库级别的非事务性访问权限  
- 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+ 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **禁用完全非事务性访问权限**  
- 调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS 的值设置 **为 **READ_ONLY** 或 **OFF**。  
+ 调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS 的值设置** 为 **READ_ONLY** 或 **OFF**。  
   
 ```tsql  
 -- Disable write access.  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> 如何终止与 FileTable 关联的打开的文件句柄  
- 使用相应参数调用存储过程 [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md) 以终止数据库或 FileTable 中所有打开的文件句柄或终止特定句柄。  
+ 使用相应参数调用存储过程 [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 以终止数据库或 FileTable 中所有打开的文件句柄或终止特定句柄。  
   
 ```  
 USE database_name;  
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC 和 FileTable  
  可以使用 DBCC CHECKCONSTRAINTS 验证 FileTable 上的约束，包括系统定义的约束。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [FileTable 与其他 SQL Server 功能的兼容性](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL、函数、存储过程和视图](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

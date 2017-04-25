@@ -1,31 +1,35 @@
 ---
 title: "估计非聚集索引的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "空间分配 [SQL Server], 索引大小"
-  - "大小 [SQL Server], 表"
-  - "预测表的大小 [SQL Server]"
-  - "表大小 [SQL Server]"
-  - "估计表的大小"
-  - "聚集索引, 表大小"
-  - "设计数据库 [SQL Server], 估计大小"
-  - "计算表的大小"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 估计非聚集索引的大小
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
   按照下列步骤估计存储非聚集索引所需的空间大小：  
   
 1.  计算步骤 2 和步骤 3 中所用变量的值。  
@@ -36,24 +40,24 @@ caps.handback.revision: 40
   
 4.  对计算出的值求和。  
   
-## 步骤 1. 计算步骤 2 和步骤 3 中所用变量的值  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>步骤 1. 计算步骤 2 和步骤 3 中所用变量的值  
  可使用下列步骤计算所用变量的值以估计存储索引的较高级别所需的空间大小。  
   
 1.  指定表中显示的行数：  
   
-     ***Num_Rows*** = 表中的行数  
+     ***Num_Rows***  = 表中的行数  
   
 2.  指定索引键中固定长度和可变长度列的数量，并计算存储所需的空间：  
   
      索引键列可以包括固定长度和可变长度列。 若要估计内部级别索引行的大小，请计算每组列在索引行中所占据的空间。 列的大小取决于数据类型和长度规定。  
   
-     ***Num_Key_Cols*** = 总键列数（固定长度和可变长度）  
+     ***Num_Key_Cols***  = 总键列数（固定长度和可变长度）  
   
-     ***Fixed_Key_Size*** = 所有固定长度键列的总字节大小  
+     ***Fixed_Key_Size***  = 所有固定长度键列的总字节大小  
   
-     ***Num_Variable_Key_Cols*** = 可变长度键列数  
+     ***Num_Variable_Key_Cols***  = 可变长度键列数  
   
-     ***Max_Var_Key_Size*** = 所有可变长度键列的最大字节大小  
+     ***Max_Var_Key_Size***  = 所有可变长度键列的最大字节大小  
   
 3.  如果索引不是唯一的，对所需的数据行定位符说明如下：  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 40
   
      如果索引键中有可为 Null 的列（包括步骤 1.3 中所述的所有必要的聚集键列），则保留索引行的一部分，以用于 Null 位图。  
   
-     ***Index_Null_Bitmap*** = 2 + ((索引行中的列数 + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((索引行中的列数 + 7) / 8)  
   
      仅应使用上述表达式中的整数部分， 而放弃所有余数。  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 40
   
      如果索引键中有可变长度的列（包括所有必要的聚集索引键列），请确定存储索引行中的这些列需使用的空间：  
   
-     ***Variable_Key_Size*** = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
      添加到 ***Max_Var_Key_Size*** 中的字节可用于跟踪每个可变列。此公式假定所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Key_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 40
   
      因为索引行不能跨页，所以每页的索引行数应向下舍入到最接近的整数。 公式中的 2 是计算行数时引入的行大小余量。  
   
-## 步骤 2. 计算用于存储叶级中的索引信息的空间  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>步骤 2. 计算用于存储叶级中的索引信息的空间  
  可使用下列步骤估计存储叶级索引所需的空间大小。 需要使用从步骤 1 中保留的值来完成此步骤。  
   
 1.  指定叶级的固定长度列和可变长度列的数量，并计算存储这些列所需的空间：  
@@ -116,7 +120,7 @@ caps.handback.revision: 40
     >  您可以通过包含索引键列和非键列扩展非聚集索引。 这些额外的列只存储在叶级非聚集索引。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  你可以组合 **varchar**、**nvarchar**、**varbinary** 或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 **varchar**、**varbinary** 或 **sql_variant** 中的每一列，其长度不能超过 8,000 字节，对于 **nvarchar** 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
+    >  你可以组合 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 **varchar**、 **varbinary**或 **sql_variant** 中的每一列，其长度不能超过 8,000 字节，对于 **nvarchar** 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
   
      如果非聚集索引没有任何包含列，则使用步骤 1 中的值（包括在步骤 1.3 中进行的任何修改）：  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 40
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## 步骤 3. 计算用于存储非叶级中的索引信息的空间  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>步骤 3. 计算用于存储非叶级中的索引信息的空间  
  按照下列步骤估计存储索引的中间级和根级所需的空间大小。 需要使用从步骤 2 和步骤 3 中保留的值来完成此步骤。  
   
 1.  计算索引中的非叶级数：  
@@ -227,7 +231,7 @@ caps.handback.revision: 40
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## 步骤 4.  对计算出的值求和  
+## <a name="step-4-total-the-calculated-values"></a>步骤 4. 对计算出的值求和  
  对从前面两个步骤中得到的值求和：  
   
  非群集索引大小（字节）= ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   大型对象 (LOB) 值  
   
-     精确确定存储 LOB 数据类型 **varchar(max)**、**varbinary(max)**、**nvarchar(max)**、**text**、**ntext**、**xml** 和 **image** 值所用的空间量的算法非常复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
+     精确确定存储 LOB 数据类型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**和 **image** 值所用的空间量的算法非常复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
   
 -   压缩  
   
@@ -254,7 +258,7 @@ caps.handback.revision: 40
   
      有关稀疏列的空间要求的信息，请参阅 [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [创建非聚集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)   

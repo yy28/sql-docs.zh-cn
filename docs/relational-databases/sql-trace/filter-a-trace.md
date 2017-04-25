@@ -1,28 +1,32 @@
 ---
 title: "筛选跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筛选器 [SQL Server], 事件"
-  - "事件 [SQL Server], 筛选器"
-  - "筛选器 [SQL Server]"
-  - "筛选器 [SQL Server], 跟踪"
-  - "跟踪 [SQL Server], 筛选器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 筛选跟踪
+# <a name="filter-a-trace"></a>筛选跟踪
   筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
   
  并不一定要为跟踪设置筛选器。 但是，筛选器会将跟踪过程中的开销降到最低。 筛选器将返回有针对性的数据，这样会使性能分析和审核变得更容易。  
@@ -30,11 +34,11 @@ caps.handback.revision: 28
  若要筛选跟踪中捕获的事件数据，请选择跟踪事件准则（仅返回跟踪中的相关数据）。 例如，可以包括或排除监视跟踪中的特定应用程序的活动。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建跟踪时，默认情况下，将筛选出自己的活动。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 创建跟踪时，默认情况下，将筛选出自己的活动。  
   
  又如，如果监视查询以确定执行时间最长的批处理，请将跟踪事件准则设置为仅监视那些执行时间超过 30 秒的批处理（CPU 最小值为 30,000 毫秒）。  
   
-## 筛选器创建指南  
+## <a name="filter-creation-guidelines"></a>筛选器创建指南  
  通常，按照下列步骤筛选跟踪。  
   
 1.  在跟踪中标识要包括的事件。  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |关系运算符|运算符|说明|  
 |-------------------------|---------------------|-----------------|  
-|Like|LIKE|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
-|不类似于|NOT LIKE|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
+|Like|Like|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
+|不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
 |等于|=|指定跟踪事件数据必须等于输入的值。 允许使用多个值。|  
 |不等于|<>|指定跟踪事件数据不能等于输入的值。 允许使用多个值。|  
 |大于|>|指定跟踪事件数据必须大于输入的值。|  
@@ -77,7 +81,7 @@ caps.handback.revision: 28
 |**ApplicationName**|LIKE、NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
-|**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**BinaryData**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
 |**CPU**|=, <>, >=, <=|  
@@ -89,7 +93,7 @@ caps.handback.revision: 28
 |**错误**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE、NOT LIKE|  
-|**GUID**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**GUID**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**Handle**|=, <>, >=, <=|  
 |**HostName**|LIKE、NOT LIKE|  
 |**IndexID**|=, <>, >=, <=|  
@@ -99,13 +103,13 @@ caps.handback.revision: 28
 |**LineNumber**|=, <>, >=, <=|  
 |**LinkedServerName**|LIKE、NOT LIKE|  
 |**LoginName**|LIKE、NOT LIKE|  
-|**LoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**LoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**MethodName**|LIKE、NOT LIKE|  
 |**模式**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
-|**ObjectID**|=, <>, >=, <=|  
+|**Exchange Spill**|=, <>, >=, <=|  
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE、NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
@@ -123,12 +127,12 @@ caps.handback.revision: 28
 |**Severity**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
-|**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
 |**成功**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
-|**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅[使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
+|**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 筛选此数据列中的事件。 有关详细信息，请参阅 [使用 SQL Server Profiler 筛选跟踪](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
@@ -138,7 +142,7 @@ caps.handback.revision: 28
   
  \* 如果从 **osql** 实用工具或 **sqlcmd** 实用工具跟踪事件，则始终将 **%** 追加到 **TextData** 数据列上的筛选器。  
   
- SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的所有活动的用户捕获密码。  
+ SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的所有活动的用户捕获密码。  
   
  下列与安全相关的存储过程会受到监视，而不会将输出写入 **TextData** 数据列：  
   

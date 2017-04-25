@@ -1,28 +1,32 @@
 ---
 title: "master 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "master 数据库 [SQL Server], 关于"
-  - "master 数据库 [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# master 数据库
+# <a name="master-database"></a>master 数据库
   **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
   
-## master 数据库的物理属性  
+## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
  下表列出了 **master** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|文件增长|  
@@ -30,9 +34,9 @@ caps.handback.revision: 50
 |主数据|master|master.mdf|以 10% 的速度自动增长到磁盘充满为止。|  
 |日志|mastlog|mastlog.ldf|以 10% 的速度自动增长到最大 2 TB。|  
   
- 有关如何移动 **master** 数据和日志文件的信息，请参阅[移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
+ 有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   
-### 数据库选项  
+### <a name="database-options"></a>数据库选项  
  下表列出了 **master** 数据库中每个数据库选项的默认值以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 |数据库选项|默认值|是否可修改|  
@@ -52,7 +56,7 @@ caps.handback.revision: 50
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> “否”<br /><br /> 是|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|是|  
 |ENCRYPTION|OFF|是|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
-## 限制  
+## <a name="restrictions"></a>限制  
  不能在 **master** 数据库中执行下列操作：  
   
 -   添加文件或文件组。  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   将数据库或主文件组设置为 READ_ONLY。  
   
-## 建议  
+## <a name="recommendations"></a>建议  
  使用 **master** 数据库时，请考虑下列建议：  
   
 -   始终有一个 **master** 数据库的当前备份可用。  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   不要针对 **master** 数据库将 TRUSTWORTHY 选项设置为 ON。  
   
-## 当 master 不可用时怎么办  
+## <a name="what-to-do-if-master-becomes-unusable"></a>当 master 不可用时怎么办  
  如果 **master** 数据库不可用，则可以通过下列两种方式之一将该数据库返回到可用状态：  
   
 -   从当前数据库备份还原 **master** 。  
@@ -124,12 +128,12 @@ caps.handback.revision: 50
   
 -   完全重新生成 **master** 。  
   
-     如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅[重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
+     如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
   
     > [!IMPORTANT]  
     >  重新生成 **master** 将重新生成所有系统数据库。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [系统数据库](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
   
+

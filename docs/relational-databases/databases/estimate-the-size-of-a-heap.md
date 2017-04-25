@@ -1,45 +1,49 @@
 ---
 title: "估计堆的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "磁盘空间 [SQL Server], 索引"
-  - "估计堆的大小"
-  - "大小 [SQL Server], 堆"
-  - "空间 [SQL Server], 索引"
-  - "堆"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- estimating heap size
+- size [SQL Server], heap
+- space [SQL Server], indexes
+- heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67e38d5ab97529fbd912361aa16fa96587173f3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 估计堆的大小
+# <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
   可以使用以下步骤估计在堆中存储数据所需的空间量：  
   
 1.  指定表中显示的行数：  
   
-     ***Num_Rows*** = 表中的行数  
+     ***Num_Rows***  = 表中的行数  
   
 2.  指定固定长度和可变长度列的数量，并计算存储所需的空间：  
   
      计算每组列在数据行中所占据的空间。 列的大小取决于数据类型和长度规定。  
   
-     ***Num_Cols*** = 总列数（固定长度和可变长度）  
+     ***Num_Cols***  = 总列数（固定长度和可变长度）  
   
-     ***Fixed_Data_Size*** = 所有固定长度列的总字节大小  
+     ***Fixed_Data_Size***  = 所有固定长度列的总字节大小  
   
-     ***Num_Variable_Cols*** = 可变长度列数  
+     ***Num_Variable_Cols***  = 可变长度列数  
   
-     ***Max_Var_Size*** = 所有可变长度列的最大总字节大小  
+     ***Max_Var_Size***  = 所有可变长度列的最大总字节大小  
   
 3.  保留行中称为 Null 位图的部分以管理列的为空性。 计算其大小：  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 28
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合 **varchar**、**nvarchar**、**varbinary** 或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 **varchar**、**nvarchar、****varbinary** 或 **sql_variant**列，每列的长度仍不得超过 8,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  你可以组合 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 **varchar**、 **nvarchar、****varbinary**或 **sql_variant** 列，每列的长度仍不得超过 8,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 28
   
 -   大型对象 (LOB) 值  
   
-     精确确定存储 LOB 数据类型 **varchar(max)**、**varbinary(max)**、**nvarchar(max)**、**text**、**ntextxml** 和 **image** 值所用的空间量的算法非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
+     精确确定存储 LOB 数据类型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntextxml**和 **image** 值所用的空间量的算法非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
   
 -   压缩  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 28
   
      有关稀疏列的空间要求的信息，请参阅 [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [堆（没有聚集索引的表）](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)   

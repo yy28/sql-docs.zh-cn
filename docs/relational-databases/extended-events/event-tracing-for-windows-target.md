@@ -1,27 +1,31 @@
 ---
 title: "Windows 事件跟踪目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 事件跟踪目标"
-  - "ETW 目标"
-  - "目标 [SQL Server 扩展事件], Windows 目标的事件跟踪"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Windows 事件跟踪目标
+# <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
@@ -33,7 +37,7 @@ caps.handback.revision: 13
  ETW 目标是单独目标，尽管该目标可以被添加到多个会话中。 如果某事件在多个会话中被引发，则该事件在每次发生事件时仅被传播给 ETW 目标一次。 每个进程仅限一个扩展事件引擎实例。  
   
 > [!IMPORTANT]  
->  为使 ETW 目标能够工作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户必须是性能日志用户组的成员。  
+>  为使 ETW 目标能够工作， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户必须是性能日志用户组的成员。  
   
  对于 ETW 会话中存在的事件，其配置由承载扩展事件引擎的进程来控制。 该引擎控制着引发哪些事件，以及必须满足哪些条件才能引发事件。  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 13
  ETW 目标不支持来自外部 ETW 控制器（例如 Logman.exe）的控制。 若要生成 ETW 跟踪，必须使用 ETW 目标创建事件会话。 有关详细信息，请参阅 [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)。  
   
 > [!NOTE]  
->  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可以在命令提示符处运行以下命令：**logman stop XE_DEFAULT_ETW_SESSION -ets**。  
+>  启用 ETW 目标将创建一个名为 XE_DEFAULT_ETW_SESSION 的 ETW 会话。 如果名为 XE_DEFAULT_ETW_SESSION 的会话已经存在，则使用该会话而不修改现有会话的任何属性。 XE_DEFAULT_ETW_SESSION 由所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例共享。 启动了 XE_DEFAULT_ETW_SESSION 后，必须使用 ETW 控制器（如 Logman 工具）停止它。 例如，可以在命令提示符处运行以下命令： **logman stop XE_DEFAULT_ETW_SESSION -ets**。  
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
@@ -79,17 +83,17 @@ caps.handback.revision: 13
   
 -   托管对象格式 (MOF) 文件位于 *\<安装路径>*\Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](http://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
-## 将目标添加到会话  
+## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  
   
 ```  
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
- 有关说明如何使用 ETW 目标的完整示例的详细信息（包括如何查看数据），请参阅[使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
+ 有关说明如何使用 ETW 目标的完整示例的详细信息（包括如何查看数据），请参阅 [使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
   
-## 另请参阅  
- [SQL Server 扩展事件目标](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 扩展事件目标](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  

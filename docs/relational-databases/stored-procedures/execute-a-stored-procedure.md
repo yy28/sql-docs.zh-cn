@@ -1,31 +1,35 @@
 ---
 title: "执行存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "存储过程 [SQL Server], 参数"
-  - "扩展存储过程 [SQL Server], 执行"
-  - "系统存储过程 [SQL Server], 执行"
-  - "存储过程 [SQL Server], 执行"
-  - "用户定义的存储过程 [SQL Server]"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 执行存储过程
+# <a name="execute-a-stored-procedure"></a>执行存储过程
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行存储过程。  
   
  有两种不同方法执行存储过程。 第一种方法和最常见的方法供应用程序或用户调用过程。 第二种方法是将过程设置为在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时自动运行。 当应用程序或用户调用过程时，调用中显式声明了 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 关键字。 或者，如果过程是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的第一条语句，那么不使用关键字也可以调用并执行此过程。  
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
 -   执行系统存储过程  
   
-     系统过程以前缀 **sp_** 开头。 因为从逻辑意义上讲，这些过程出现在所有用户定义的数据库和系统定义的数据库中，所以可以从任何数据库执行这些过程，而不必完全限定过程名称。 但是，建议使用 **sys** 架构名称对所有系统过程名称进行架构限定，以防止名称冲突。 以下示例说明调用系统过程的推荐方法。  
+     系统过程以前缀 **sp_**开头。 因为从逻辑意义上讲，这些过程出现在所有用户定义的数据库和系统定义的数据库中，所以可以从任何数据库执行这些过程，而不必完全限定过程名称。 但是，建议使用 **sys** 架构名称对所有系统过程名称进行架构限定，以防止名称冲突。 以下示例说明调用系统过程的推荐方法。  
   
     ```tsql  
     EXEC sys.sp_who;  
@@ -72,9 +76,9 @@ caps.handback.revision: 38
   
 -   执行用户定义存储过程  
   
-     当执行用户定义的过程时，我们建议使用架构名称限定过程名称。 这种做法使性能得到小幅提升，因为[!INCLUDE[ssDE](../../includes/ssde-md.md)]不必搜索多个架构。 如果某个数据库在多个架构中具有同名过程，则这还可以防止执行错误的过程。  
+     当执行用户定义的过程时，我们建议使用架构名称限定过程名称。 这种做法使性能得到小幅提升，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不必搜索多个架构。 如果某个数据库在多个架构中具有同名过程，则这还可以防止执行错误的过程。  
   
-     以下示例说明执行用户定义过程的推荐方法。 请注意，此过程接受一个输入参数。 有关指定输入参数和输出参数的信息，请参阅[指定参数](../../relational-databases/stored-procedures/specify-parameters.md)。  
+     以下示例说明执行用户定义过程的推荐方法。 请注意，此过程接受一个输入参数。 有关指定输入参数和输出参数的信息，请参阅 [指定参数](../../relational-databases/stored-procedures/specify-parameters.md)。  
   
     ```tsql  
     USE AdventureWorks2012;  
@@ -89,7 +93,7 @@ caps.handback.revision: 38
     GO  
     ```  
   
-     如果指定了非限定的用户定义过程，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]按以下顺序搜索此过程：  
+     如果指定了非限定的用户定义过程，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 按以下顺序搜索此过程：  
   
     1.  当前数据库的 **sys** 架构。  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   自动执行存储过程  
   
-     在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行标记为自动执行的过程，并在启动过程期间中恢复 **master** 数据库。 将这些过程设置为自动执行对执行数据库维护操作或使这些过程作为后台进程连续运行很有用。 自动执行的另一个用途是使该过程执行 **tempdb**中的系统或维护任务，如创建一个全局临时表。 这将确保在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动过程中重新创建 **tempdb** 时，始终存在这样一个临时表。  
+     在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行标记为自动执行的过程，并在启动过程期间中恢复 **master** 数据库。 将这些过程设置为自动执行对执行数据库维护操作或使这些过程作为后台进程连续运行很有用。 自动执行的另一个用途是使该过程执行 **tempdb**中的系统或维护任务，如创建一个全局临时表。 这将确保在 **启动过程中重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，始终存在这样一个临时表。  
   
      自动执行的过程使用与固定服务器角色 **sysadmin** 的成员相同的权限进行操作。 该过程生成的所有错误消息都将写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。  
   
@@ -122,11 +126,11 @@ caps.handback.revision: 38
  有关详细信息，请参阅 [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 ####  <a name="Permissions"></a> 权限  
- 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md) 中的“权限”部分。  
+ 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)中执行存储过程。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 执行存储过程  
+#### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 执行存储过程  
+#### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -170,7 +174,7 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### 设置或清除过程自动执行  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>设置或清除过程自动执行  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -186,7 +190,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### 阻止过程自动执行  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>阻止过程自动执行  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定参数](../../relational-databases/stored-procedures/specify-parameters.md)   
  [配置 scan for startup procs 服务器配置选项](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

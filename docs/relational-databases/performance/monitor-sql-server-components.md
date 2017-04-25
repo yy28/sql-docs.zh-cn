@@ -1,22 +1,26 @@
 ---
 title: "监视 SQL Server 组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 监视 SQL Server 组件
+# <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
   监视操作非常重要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在动态环境中提供服务。 应用程序中的数据在变化。 用户需要的访问类型在变化。 用户连接的方式在变化。 甚至，访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序的类型也可能在变化，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动管理系统级资源（如内存和磁盘空间），以便最小化对广泛系统级手动优化的需要。 管理员可以通过监视来标识性能趋势以确定是否有必要进行更改。  
   
  有效地监视任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件：  
@@ -35,7 +39,7 @@ caps.handback.revision: 8
   
  下面将依次介绍这些步骤。  
   
-## 确定监视目标  
+## <a name="determine-your-monitoring-goals"></a>确定监视目标  
  若要有效监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须清楚地确定监视原因。 下面列出了可能的原因：  
   
 -   建立性能基线。  
@@ -60,7 +64,7 @@ caps.handback.revision: 8
   
 -   确定何时修改硬件配置。  
   
-## 选择相应工具  
+## <a name="select-the-appropriate-tool"></a>选择相应工具  
  确定监视原因后，应该为该监视类型选择相应的工具。 Windows 操作系统和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套用于在大型事务环境中监视服务器的工具。 这些工具清楚地显示 SQL Server 数据库引擎实例或 SQL Server Analysis Services 实例的状态。  
   
  Windows 提供下列工具来监视在服务器上运行的应用程序：  
@@ -93,18 +97,18 @@ caps.handback.revision: 8
   
 -   跟踪标志  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 监视工具的信息，请参阅[性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 监视工具的信息，请参阅 [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)。  
   
-## 标识要监视的组件  
+## <a name="identify-the-components-to-monitor"></a>标识要监视的组件  
  监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的第三步是标识监视组件。 例如，如果使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪服务器，则可以定义该跟踪来收集有关特定事件的数据。 还可以排除不适合您的情况的事件。  
   
-## 选择监视组件的度量指标  
+## <a name="select-metrics-for-monitored-components"></a>选择监视组件的度量指标  
  确定监视组件后，就需要确定监视组件的度量。 例如，选择跟踪中包括的事件后，可以选择只包括有关事件的特定数据。 限制只跟踪与该跟踪有关的数据可最大限度减少执行跟踪所需的系统资源。  
   
-## 监视服务器  
+## <a name="monitor-the-server"></a>监视服务器  
  若要监视服务器，请运行已配置为收集数据的监视工具。 例如，定义跟踪后，可以运行该跟踪以收集有关服务器中生成的事件的数据。  
   
-## 分析数据  
+## <a name="analyze-the-data"></a>分析数据  
  跟踪结束后，分析数据以查看是否实现了监视目标。 如果没有，请修改用于监视服务器的组件或度量。  
   
  下面概述了捕获事件数据并使用这些数据的过程。  
@@ -115,7 +119,7 @@ caps.handback.revision: 8
   
 2.  监视（捕获）事件。  
   
-     一旦启用，活动监视就从指定的应用程序、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或操作系统捕获数据。 例如，当使用系统监视器监视磁盘活动时，监视将捕获事件数据（如磁盘读取和写入）并在屏幕上显示该数据。 有关详细信息，请参阅[监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
+     一旦启用，活动监视就从指定的应用程序、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例或操作系统捕获数据。 例如，当使用系统监视器监视磁盘活动时，监视将捕获事件数据（如磁盘读取和写入）并在屏幕上显示该数据。 有关详细信息，请参阅[监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
   
 3.  保存捕获的事件数据。  
   
@@ -127,12 +131,12 @@ caps.handback.revision: 8
   
 5.  分析捕获的事件数据。  
   
-     为了进行分析，将捕获的事件数据加载到捕获该数据的应用程序中。 例如，可以将通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]捕获的跟踪重新加载到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中进行查看和分析。 有关详细信息，请参阅[使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
+     为了进行分析，将捕获的事件数据加载到捕获该数据的应用程序中。 例如，可以将通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 捕获的跟踪重新加载到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中进行查看和分析。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
   
-     对事件数据的分析包括确定所发生的事件和发生原因。 利用这些信息可以做一些更改（如根据所执行的分析类型添加更多内存、更改索引、更正使用 Transact-SQL 语句或存储过程的编码问题等）来提高性能。 例如，可以使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问分析通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]捕获的跟踪并根据结果生成索引建议。  
+     对事件数据的分析包括确定所发生的事件和发生原因。 利用这些信息可以做一些更改（如根据所执行的分析类型添加更多内存、更改索引、更正使用 Transact-SQL 语句或存储过程的编码问题等）来提高性能。 例如，可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问分析通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 捕获的跟踪并根据结果生成索引建议。  
   
 6.  重播捕获的事件数据。  
   
-     事件重播使您可以建立捕获数据时的数据库环境的测试副本，然后可以重复捕获的事件，就像最初在真实系统上捕获事件一样。 此功能仅适用于分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 可以按事件最初发生时的速度重播它们，尽可能快地重播（增加系统的压力），或者尽可能一次重播一步（每个事件发生后对系统进行分析）。 通过在测试环境中分析确切事件，可以防止对生产系统产生有害影响。 有关详细信息，请参阅[重播跟踪](../../tools/sql-server-profiler/replay-traces.md)。  
+     事件重播使您可以建立捕获数据时的数据库环境的测试副本，然后可以重复捕获的事件，就像最初在真实系统上捕获事件一样。 此功能仅适用于分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 可以按事件最初发生时的速度重播它们，尽可能快地重播（增加系统的压力），或者尽可能一次重播一步（每个事件发生后对系统进行分析）。 通过在测试环境中分析确切事件，可以防止对生产系统产生有害影响。 有关详细信息，请参阅 [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)。  
   
   

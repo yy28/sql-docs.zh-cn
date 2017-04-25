@@ -1,24 +1,28 @@
 ---
 title: "FileTable 与其他 SQL Server 功能的兼容性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 与其他功能配合使用"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable 与其他 SQL Server 功能的兼容性
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
   说明 FileTable 如何与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他功能配合使用。  
   
 ##  <a name="alwayson"></a> AlwaysOn 可用性组和 FileTable  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]支持部分 FileTable 功能。 故障转移后，FileTable 数据在主副本上是可访问的，但是在可读辅助副本上不可访问。  
   
-    > **注意：**请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
+    > **注意：**  请注意故障转移后支持所有 FILESTREAM 功能。 FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
 -   FILESTREAM 和 FileTable 函数接受或返回虚拟网络名称 (VNN)，而非计算机名称。 有关这些函数的详细信息，请参阅 [Filestream 和 FileTable 函数 (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)。  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  如果您想要使用包含的数据库的某些功能（例如包含的用户），则可以将数据库包含设置为 PARTIAL。 但在此情况下，您必须知道某些数据库设置未包含在数据库中，并且在数据库移动时不自动移动。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   
+

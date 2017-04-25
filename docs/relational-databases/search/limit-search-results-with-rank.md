@@ -1,42 +1,46 @@
 ---
 title: "使用 RANK 限制搜索结果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "行排名 [全文搜索]"
-  - "相关排名值 [全文搜索]"
-  - "全文搜索 [SQL Server], 排名"
-  - "索引排名 [全文搜索]"
-  - "排名结果 [全文搜索]"
-  - "排名 [全文搜索]"
-  - "按行排名值 [全文搜索]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row ranking [full-text search]
+- relevance ranking values [full-text search]
+- full-text search [SQL Server], rankings
+- index rankings [full-text search]
+- ranked results [full-text search]
+- rankings [full-text search]
+- per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 RANK 限制搜索结果
+# <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
   
 > [!NOTE]  
 >  CONTAINS 和 FREETEXT 谓词不会返回任何排名值。  
   
- 符合搜索条件的项通常有很多。 为防止 CONTAINSTABLE 或 FREETEXTTABLE 查询返回太多匹配项，请使用可选的 *top_n_by_rank* 参数，此参数仅返回行的子集。 *top_n_by_rank*是一个整数值 *n*，它指定仅返回 *n* 个排名值最高的匹配项，并按降序排列。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。  
+ 符合搜索条件的项通常有很多。 为防止 CONTAINSTABLE 或 FREETEXTTABLE 查询返回太多匹配项，请使用可选的 *top_n_by_rank* 参数，此参数仅返回行的子集。 *top_n_by_rank* 是一个整数值 *n*，它指定仅返回 *n* 个排名值最高的匹配项，并按降序排列。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 按排名对匹配项进行排序，并且最多只返回指定数目的行。 这样可以大幅度提高性能。 例如，对于正常情况下会从一个包含一百万行的表中返回 100,000 行的查询，如果只要求返回前 100 行，此查询的处理速度会更快。  
   
 ##  <a name="examples"></a> 使用 RANK 限制搜索结果的示例  
   
-### 示例 A：仅搜索前三个匹配项  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>示例 A：仅搜索前三个匹配项  
  下面的示例使用 CONTAINSTABLE 仅返回前三个匹配项。  
   
 ```  
@@ -66,9 +70,8 @@ RANK        Address                          City
 (3 row(s) affected)  
 ```  
   
- [本主题内容](#top)  
   
-### 示例 B：搜索前十个匹配项  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>示例 B：搜索前十个匹配项  
  下面的示例使用 CONTAINSTABLE 返回前 5 个产品的说明，其中 `Description` 列在单词“light”或“lightweight”附近包含字词“aluminum”。  
   
 ```  
@@ -89,12 +92,11 @@ FROM Production.ProductDescription AS FT_TBL INNER JOIN
 GO  
 ```  
   
- [本主题内容](#top)  
   
 ##  <a name="how"></a> 搜索查询结果如何进行排名  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文搜索可以生成可选分数（或排名值），该分数（或排名值）指示全文查询返回的数据的相关性。 对于每一行计算此排名值，并且可将此排名值用作排序条件按相关性对给定查询的结果集排序。 此排名值仅指示结果集中各行相关性的相对顺序。 实际的值并不重要，并且每次运行查询时实际值通常都不同。 此排名值在不同的查询之间没有任何意义。  
   
-### 排名统计信息  
+### <a name="statistics-for-ranking"></a>排名统计信息  
  生成索引后，将收集统计信息以用于排名。 生成全文目录的过程不会直接得出一个索引结构。 而是在对数据创建索引时，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全文引擎创建多个中间索引。 全文引擎随后会将这些索引根据需要合并为一个较大的索引。 此过程可以多次重复。 最后，全文引擎将进行“主合并”，将所有中间索引合并为一个较大的主索引。  
   
  在每个中间索引级别都会收集统计信息。 合并索引时，统计信息也将被合并。 某些统计值只有在主合并过程中才能生成。  
@@ -138,9 +140,8 @@ GO
  MaxQueryRank  
  由全文引擎返回的最大排名 1000。  
   
- [本主题内容](#top)  
   
-### 排名计算问题  
+### <a name="rank-computation-issues"></a>排名计算问题  
  计算排名的过程，取决于一系列因素。  不同语言的断字符对文本进行的词汇切分也不同。 例如，字符串“dog-house”可以被一种断字符断为“dog”和“house”而被另一种断字符断为“dog-house”。 这意味着匹配和排名将根据所指定语言而有所不同，因为不仅词不同，而且文档长度也不同。 文档长度的差异可能会影响所有查询的排名。  
   
  诸如 **IndexRowCount** 之类的统计信息可能会大不相同。 例如，如果一个目录的主索引有二十亿行，那么对一个新文档的索引将被编制为内存中的中间索引，而基于该内存中索引内的文档数对该文档的排名可能与主索引中的文档排名不同。 因此，建议在完成产生大量要创建索引或重新创建索引的行的任意填充后，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这些索引合并为一个主索引。 全文引擎也会根据参数（例如中间索引的数目和大小）自动合并索引。  
@@ -154,9 +155,8 @@ GO
   
 ```  
   
- [本主题内容](#top)  
   
-### CONTAINSTABLE 排名  
+### <a name="ranking-of-containstable"></a>CONTAINSTABLE 排名  
  [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 排名使用以下算法：  
   
 ```  
@@ -164,7 +164,7 @@ StatisticalWeight = Log2( ( 2 + IndexedRowCount ) / KeyRowCount )
 Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )  
 ```  
   
- 短语匹配项的排名方式与各个键类似，只不过要估计 **KeyRowCount**（包含该短语的行数），并且此值可能会比实际值大。  
+ 短语匹配项的排名方式与各个键类似，只不过要估计 **KeyRowCount** （包含该短语的行数），并且此值可能会比实际值大。  
   
  **NEAR 的排名**  
   
@@ -185,9 +185,8 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
   
 ```  
   
- [本主题内容](#top)  
   
-### FREETEXTTABLE 排名  
+### <a name="ranking-of-freetexttable"></a>FREETEXTTABLE 排名  
  [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 排名基于 OKAPI BM25 排名公式计算。 FREETEXTTABLE 查询将通过派生词（原始查询词的变形）向查询中添加词，这些词将被作为单独的、与派生出它们的词没有特殊联系的词来处理。 同义词库功能派生出的同义词将被当作单独的、具有同等加权值的词来处理。 查询中的每个词都会对排名产生影响。  
   
 ```  
@@ -206,9 +205,8 @@ tf is the frequency of the word in the queried property in a specific row.
 qtf is the frequency of the term in the query.   
 ```  
   
- [本主题内容](#top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)  
   
   

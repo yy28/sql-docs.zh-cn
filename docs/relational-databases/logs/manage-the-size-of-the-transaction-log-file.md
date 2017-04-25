@@ -1,24 +1,28 @@
 ---
 title: "管理事务日志文件的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务日志 [SQL Server], 大小管理"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理事务日志文件的大小
+# <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
 本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  
 
   ##  <a name="MonitorSpaceUse"></a> 监视日志空间使用情况  
@@ -30,7 +34,8 @@ caps.handback.revision: 22
 ##  <a name="ShrinkSize"></a> 收缩日志文件大小  
  若要减少物理日志文件的物理大小，则必须收缩日志文件。 当事务日志文件包含将不需要的未使用空间时，此方法很有用。仅当数据库处于联机状态并至少有一个虚拟日志文件处于空闲时，你才可以收缩日志文件。 在某些情况下，直到下一个日志截断后，才能收缩日志。  
   
-> [!NOTE]  能够延长虚拟日志文件活动时间的因素（如长时间运行的事务）可以限制甚至阻止日志收缩。 有关延迟日志截断的因素的信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+> [!NOTE]
+>  能够延长虚拟日志文件活动时间的因素（如长时间运行的事务）可以限制甚至阻止日志收缩。 有关延迟日志截断的因素的信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即*不活动的虚拟日志文件*）。 在收缩事务日志文件时，将从日志文件的末端删除足够的不活动虚拟日志文件，以便将日志减小到接近目标大小。  
   
@@ -50,7 +55,8 @@ caps.handback.revision: 22
   
 -   [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
-> [!NOTE]  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项” 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) - 使用 AUTO_SHRINK 选项。  
+> [!NOTE]
+>  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项” 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) - 使用 AUTO_SHRINK 选项。  
   
 
 ##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  
@@ -76,8 +82,9 @@ caps.handback.revision: 22
 -   若要控制日志文件的最大大小（以 KB、MB、GB 和 TB 为单位）或将增长设置为 UNLIMITED，请使用 MAXSIZE 选项。  
   
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
+

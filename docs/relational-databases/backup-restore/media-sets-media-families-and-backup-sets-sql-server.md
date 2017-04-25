@@ -1,40 +1,44 @@
 ---
-title: "介质集、介质簇和备份集 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "介质集 [SQL Server], 关于介质集"
-  - "备份介质 [SQL Server], 关于备份介质"
-  - "备份 [SQL Server], 介质集"
-  - "介质集 [SQL Server]"
-  - "介质标头 [SQL Server]"
-  - "备份集 [SQL Server], 关于备份集"
-  - "备份介质 [SQL Server], 介质集"
-  - "备份 [SQL Server], 介质簇"
-  - "备份介质 [SQL Server], 介质簇"
-  - "介质簇 [SQL Server]"
-  - "备份 [SQL Server], 备份集"
-  - "备份集 [SQL Server]"
+title: "媒体集、媒体簇和备份集 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media sets [SQL Server], about media sets
+- backup media [SQL Server], about backup media
+- backups [SQL Server], media sets
+- media sets [SQL Server]
+- media headers [SQL Server]
+- backup sets [SQL Server], about backup sets
+- backup media [SQL Server], media sets
+- backups [SQL Server], media families
+- backup media [SQL Server], media families
+- media families [SQL Server]
+- backups [SQL Server], backup sets
+- backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
+ms.lasthandoff: 04/11/2017
+
 ---
-# 介质集、介质簇和备份集 (SQL Server)
-  **本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不熟悉的读者。** 
+# <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
+  **本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不熟悉的读者。** 
   
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。  
   
->**注意！** 有关 SQL Server 备份到 Microsoft Azure Blob 存储服务的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>**注意！** 有关 SQL Server 备份到 Microsoft Azure Blob 存储服务的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
    
 ##  <a name="TermsAndDefinitions"></a> 术语  
  **介质集 (media set)**  
@@ -48,25 +52,25 @@ caps.handback.revision: 58
   
 
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒体集、媒体簇和备份集概述  
- 包含一个或多个备份介质的集合的备份构成一个介质集。 *媒体集*是*备份媒体*（磁带或磁盘文件，或者是 Azure Blob）的有序集合，一个或多个备份操作使用固定类型和数量的备份设备向其写入。 给定媒体集使用磁带驱动器，或者使用磁盘驱动器或 Azure Blob，但不能结合使用两者或以上。 
+ 包含一个或多个备份介质的集合的备份构成一个介质集。 *媒体集* 是 *备份媒体*（磁带或磁盘文件，或者是 Azure Blob）的有序集合，一个或多个备份操作使用固定类型和数量的备份设备向其写入。 给定媒体集使用磁带驱动器，或者使用磁盘驱动器或 Azure Blob，但不能结合使用两者或以上。 
  
-**例如：**与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、`\\.\TAPE1` 和 `\\.\TAPE2` 的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
+**例如：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
   
  介质集是在备份操作过程中通过格式化备份介质从而在备份介质上创建的。 有关详细信息，请参阅本主题后面的 [创建新介质集](#CreatingMediaSet)。 设置格式后，每个文件或磁带都包含介质集的介质标头，可以开始接收备份内容。 有了标头后，备份操作会将指定数据备份到为该操作指定的所有备份设备中的备份介质。  
   
-> **注意！** 可以镜像介质集，以防介质卷（磁带或磁盘文件）被破坏。 有关详细信息，请参阅[镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
+> **注意！** 可以镜像介质集，以防介质卷（磁带或磁盘文件）被破坏。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
  压缩和未压缩的备份不能在一个介质集中共存。 任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本或更高版本都可以读取压缩的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
 
   
-## 介质簇  
+## <a name="media-families"></a>介质簇  
  “介质簇” 由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。  
   
 在镜像介质集中，所有介质簇也是镜像的。 例如，如果使用六个备份设备来设置介质集的格式，其中使用了两个镜像，则有三个介质簇，每个介质簇包含两个相同的备份数据副本。 有关镜像媒体集的详细信息，请参阅[镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
   
- 介质簇中的每个磁带或磁盘都分配了“介质序列号” 。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅 [使用介质集和介质簇](#ConsiderationsForMediaSetFamilies)。  
+ 介质簇中的每个磁带或磁盘都分配了“介质序列号” 。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅本主题后面的 [介质集、介质簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)不熟悉的读者。
   
-## 介质标头  
+## <a name="the-media-header"></a>介质标头  
  备份介质（磁盘文件或磁带）的每个卷都包含介质标头，介质标头是在第一次使用磁带（或磁盘）执行备份操作时创建的。 标头在重新设置介质格式之前保持不变。  
   
  介质标头包含标识介质（磁盘文件或磁带）及其在所属介质簇中的位置所需的所有信息。 此信息包括：  
@@ -101,10 +105,10 @@ caps.handback.revision: 58
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 可以处理使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置格式的介质。  
   
-## 备份集  
+## <a name="backup-sets"></a>备份集  
  成功的备份操作将向介质集中添加一个“备份集”  。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。  
   
- 下例显示一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该语句使用三个磁带驱动器作为备份设备，为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库创建一个名为 `MyAdvWorks_MediaSet_1` 的媒体集。  
+ 下例显示一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该语句使用三个磁带驱动器作为备份设备，为 `MyAdvWorks_MediaSet_1` 数据库创建一个名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的媒体集。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -135,9 +139,9 @@ WITH
   
  如果第二个备份操作成功，将向介质集写入第二个备份集，并按以下方式分布备份内容：  
   
- ![第二个备份集分散在 3 个介质集磁带上](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "第二个备份集分散在 3 个介质集磁带上")  
+ ![分布在 3 个媒体集磁带上的第二个备份集](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "分布在 3 个媒体集磁带上的第二个备份集")  
   
- 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=***backup_set_file_number* 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、`tape1` 和 `tape2` 上。  
+ 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=***backup_set_file_number* 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -153,7 +157,7 @@ RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1',
 GO  
 ```  
   
- 历史记录表存储了媒体集及其媒体簇和备份集的相关信息，有关历史记录表的信息，请参阅[备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。  
+ 历史记录表存储了媒体集及其媒体簇和备份集的相关信息，有关历史记录表的信息，请参阅 [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)不熟悉的读者。  
   
  介质集中备份介质的数量取决于下列几个因素：  
   
@@ -164,7 +168,7 @@ GO
 -   备份集的数量  
 
   
-##  <a name="CreatingMediaSet"></a> 创建新媒体集  
+##  <a name="CreatingMediaSet"></a> Creating a new media set  
  若要创建新介质集，必须格式化备份介质（一个或多个磁带或磁盘文件）。 格式化进程会对备份介质进行以下更改：  
   
 1.  删除旧标头（如果存在），从而有效地删除备份介质中以前的内容。  
@@ -191,7 +195,7 @@ GO
 
     >  使用 BACKUP 语句中的 INIT 选项可指定覆盖现有备份集。  
   
-##  <a name="Appending"></a> 追加到现有备份集  
+##  <a name="Appending"></a> Appending to existing backup sets  
  可以将来自相同或不同数据库的、在不同时间执行的备份存储在同一个介质上。 通过将其他备份集追加到现有介质上，介质上以前的内容保持不变，新的备份在介质上最后一个备份的结尾处写入。  
   
  默认情况下, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终在介质上追加新的备份。 只能在介质的结尾处追加备份。 例如，如果介质卷包含五个备份集，则不能跳过前三个备份集而用新的备份集覆盖第四个备份集。  
@@ -203,7 +207,7 @@ GO
 > **重要说明！** 压缩和未压缩的备份不能在一个介质集中共存。 任何版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本可以读取压缩的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
  
-##  <a name="Overwriting"></a> 覆盖备份集  
+##  <a name="Overwriting"></a> Overwriting backup sets  
  使用 BACKUP 语句中的 INIT 选项可指定覆盖现有备份集。 此选项将覆盖介质上的所有备份集并保留介质标头（如果有）。 如果没有介质标头，则创建一个标头。  
   
  对于磁带标头，适当地保留标头还是很有帮助的。 对于磁盘备份介质，只覆盖备份操作中指定的备份设备所使用的文件；磁盘上的其他文件不受影响。 覆盖备份时，保留现有的所有介质标头，同时将新的备份创建为备份设备中的第一个备份。 如果没有现有的介质标头，将自动编写一个带相关介质名称和介质描述的有效介质标头。 如果现有的介质标头无效，备份操作将终止。 如果介质为空，则使用给定的 MEDIANAME、MEDIAPASSWORD 和 MEDIADESCRIPTION（如果存在）生成新的介质标头。  
@@ -213,7 +217,7 @@ GO
   
 -   介质上的现有备份尚未过期。 （如果指定 SKIP，则不检查过期。）  
   
-     过期日期将指定备份过期的日期，并可以由另一个备份覆盖。 创建备份时可以指定过期日期。 默认情况下，过期日期由 **sp_configure** 设置的 **media retention** 选项确定。 有关详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+     过期日期将指定备份过期的日期，并可以由另一个备份覆盖。 创建备份时可以指定过期日期。 默认情况下，过期日期由 **sp_configure** 设置的 **media retention**选项确定。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
 -   介质名称（如果有）与备份介质上的名称不匹配。  
   
@@ -252,7 +256,7 @@ GO
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”选项）  
   
--   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)（FORMAT 选项）  
+-   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （FORMAT 选项）  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>  
   
@@ -260,13 +264,13 @@ GO
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“追加到现有备份集”选项）  
   
--   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)（NOINIT 选项）  
+-   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （NOINIT 选项）  
   
  **覆盖所有现有备份集**  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”选项）  
   
--   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)（INIT 选项）  
+-   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （INIT 选项）  
   
  **设置过期日期**  
   
@@ -284,21 +288,22 @@ GO
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **读取备份设备上媒体的介质标头**  
   
--   [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原期间可能出现的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE REWINDONLY (Transact-SQL)](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

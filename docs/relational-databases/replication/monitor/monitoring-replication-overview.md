@@ -1,26 +1,30 @@
 ---
 title: "监视复制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "监视性能 [SQL Server 复制], 复制监视器"
-  - "复制监视器, 关于复制监视器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
+ms.lasthandoff: 04/11/2017
+
 ---
-# 监视复制
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器是一个图形工具，可用于监视复制拓扑的整体运行状况。 复制监视器提供了发布和订阅的状态和性能的详细信息，使您能够回答下列常见问题：  
+# <a name="monitoring-replication-overview"></a>监视复制概述
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor is a graphical tool that allows you to monitor the overall health of a replication topology. 复制监视器提供了发布和订阅的状态和性能的详细信息，使您能够回答下列常见问题：  
   
 -   我的复制系统是否正常？  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 37
   
  若要监视复制，用户必须是分发服务器上 **sysadmin** 固定服务器角色的成员，或者是分发数据库中 **replmonitor** 固定数据库角色的成员。 系统管理员可以将任何用户添加到 **replmonitor** 角色中，这样该用户就可以在复制监视器中查看复制活动，但不能管理复制。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  下列主题提供有关复制监视器功能的信息。  
   
  [复制监视器界面概述](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -72,19 +76,19 @@ caps.handback.revision: 37
  [在复制监视器中查看发布和订阅状态](../../../relational-databases/replication/monitor/view-publication-and-subscription-status-in-replication-monitor.md)  
  说明如何使用复制监视器查看发布或订阅的状态信息。  
   
- [查看信息并为发布服务器和 #40; 执行任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  说明如何使用复制监视器查看发布服务器的信息和执行其任务。  
   
- [查看信息并执行任务发布 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [查看发布的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  说明如何使用复制监视器查看发布的信息和执行其任务。  
   
- [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  
+ [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
  说明如何使用复制监视器查看与发布相关的代理的信息和执行其任务。  
   
- [查看信息并为订阅 & #40; 执行任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  说明如何使用复制监视器查看订阅的信息和执行其任务。  
   
- [查看信息并执行与订阅 & #40; 关联的代理任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)  
+ [查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
  说明如何使用复制监视器查看与订阅相关的代理的信息和执行其任务。  
   
   

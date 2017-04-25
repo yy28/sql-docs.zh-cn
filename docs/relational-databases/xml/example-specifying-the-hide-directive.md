@@ -1,24 +1,28 @@
 ---
 title: "示例：指定 HIDE 指令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDE 指令"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f76513d7db83b1b24f3fd5964689c47f5b96133b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：指定 HIDE 指令
+# <a name="example-specifying-the-hide-directive"></a>示例：指定 HIDE 指令
   此示例说明如何使用 **HIDE** 指令。 当希望查询返回一个属性以对该查询所返回的通用表中的行进行排序，但是不希望该属性出现在最终所得到的 XML 文档中时，该指令很有用。  
   
  以下查询将构造此 XML：  
@@ -35,7 +39,7 @@ caps.handback.revision: 11
   
  此查询将生成所需的 XML。 此查询标识列名中 Tag 值为 1 和 2 的两个列组。  
   
- 此查询使用 **xml** 数据类型的[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)来查询 **xml** 类型的 CatalogDescription 列，以便检索摘要说明。 此查询还使用 **xml** 数据类型的 [value() 方法（xml 数据类型）](../../t-sql/xml/value-method-xml-data-type.md)从 CatalogDescription 列中检索 ProductModelID 值。 所得到的 XML 中不需要此值，但对生成的行集进行排序时需要此值。 因此，列名称 `[Summary!2!ProductModelID!HIDE]`包括 **HIDE** 指令。 如果 SELECT 语句中不包括此列，您将不得不按 `[ProductModel!1!ProdModelID]` 和 `[Summary!2!SummaryDescription]` xml **类型的** 对行集进行排序，并且不能在 ORDER BY 中使用 **xml** 类型列。 因此，将另外添加一个 `[Summary!2!ProductModelID!HIDE]` 列，然后在 ORDER BY 子句中指定该列。  
+ 此查询使用 [xml](../../t-sql/xml/query-method-xml-data-type.md) 数据类型的 **query() 方法（xml 数据类型）** 来查询 **xml** 类型的 CatalogDescription 列，以便检索摘要说明。 此查询还使用 [xml](../../t-sql/xml/value-method-xml-data-type.md) 数据类型的 **value() 方法（xml 数据类型）** 从 CatalogDescription 列中检索 ProductModelID 值。 所得到的 XML 中不需要此值，但对生成的行集进行排序时需要此值。 因此，列名称 `[Summary!2!ProductModelID!HIDE]`包括 **HIDE** 指令。 如果 SELECT 语句中不包括此列，您将不得不按 `[ProductModel!1!ProdModelID]` 和 `[Summary!2!SummaryDescription]` xml **类型的** 对行集进行排序，并且不能在 ORDER BY 中使用 **xml** 类型列。 因此，将另外添加一个 `[Summary!2!ProductModelID!HIDE]` 列，然后在 ORDER BY 子句中指定该列。  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +84,7 @@ go
 </ProductModel>  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 EXPLICIT 模式与 FOR XML 一起使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

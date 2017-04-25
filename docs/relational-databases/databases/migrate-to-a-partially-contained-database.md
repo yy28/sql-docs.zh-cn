@@ -1,24 +1,28 @@
 ---
 title: "迁移到部分包含的数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "包含的数据库, 迁移到"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 迁移到部分包含的数据库
+# <a name="migrate-to-a-partially-contained-database"></a>迁移到部分包含的数据库
   本主题讨论要更改为部分包含的数据库模型的准备工作，接着提供了迁移步骤。  
   
  **本主题内容：**  
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 -   若要在数据库中查找非包含的对象或功能，请查询 [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。 有关详细信息，请参阅  
   
--   监视 ** database_uncontained_usage**XEvent 以了解何时使用非包含的功能。  
+-   监视 **database_uncontained_usage** XEvent 以了解何时使用非包含的功能。  
   
 ##  <a name="enable"></a> 启用包含的数据库  
  必须先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例上启用包含的数据库，然后才能创建包含的数据库。  
   
-### 使用 Transact-SQL 启用包含的数据库  
- 下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
+### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 启用包含的数据库  
+ 下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,7 +63,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### 使用 Management Studio 启用包含的数据库  
+#### <a name="enabling-contained-databases-using-management-studio"></a>使用 Management Studio 启用包含的数据库  
  下面的示例对[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
 1.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
@@ -71,7 +75,7 @@ GO
 ##  <a name="convert"></a> 将数据库转换为部分包含的数据库  
  通过更改 **CONTAINMENT** 选项可以将数据库转换为包含的数据库。  
   
-### 使用 Transact-SQL 将数据库转换为部分包含的数据库  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL 将数据库转换为部分包含的数据库  
  下面的示例将名为 `Accounting` 的数据库转换为部分包含的数据库。  
   
 ```tsql  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### 使用 Management Studio 将数据库转换为部分包含的数据库  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>使用 Management Studio 将数据库转换为部分包含的数据库  
  下面的示例将数据库转换为部分包含的数据库。  
   
 1.  在对象资源管理器中，展开“数据库”，右键单击要转换的数据库，然后单击“属性”。  
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## 另请参阅  
- [包含的数据库](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>另请参阅  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

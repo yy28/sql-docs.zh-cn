@@ -1,25 +1,29 @@
 ---
-title: "监视本机编译的存储过程的执行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "监视本机编译存储过程的执行 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01302febd187f0b39221a1443284334b8f961ca8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 监视本机编译的存储过程的执行
+# <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
   本主题论述如何监视本机编译的存储过程的性能  
   
-## 使用扩展事件  
+## <a name="using-extended-events"></a>使用扩展事件  
  使用 **sp_statement_completed** 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
   
  **line_number**，连同扩展事件中的 **object_id** 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
@@ -28,9 +32,9 @@ caps.handback.revision: 11
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 有关 **sp_statement_completed** 扩展事件的详细信息，请参阅[如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 有关 **sp_statement_completed** 扩展事件的详细信息，请参阅 [如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
-## 使用数据管理视图  
+## <a name="using-data-management-views"></a>使用数据管理视图  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  
   
  可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用和禁用统计信息收集。  
@@ -112,7 +116,7 @@ GO
   
  本机编译的存储过程的估计的执行计划显示过程中查询的查询运算符和表达式。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 对于本机编译的存储过程，并不支持所有 SHOWPLAN_XML 属性。 例如，与查询优化器开销相关的属性不是针对过程的 SHOWPLAN_XML 的一部分。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

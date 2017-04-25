@@ -1,34 +1,38 @@
 ---
 title: "监视 CPU 使用率 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "监视性能 [SQL Server], CPU 使用情况"
-  - "优化数据库 [SQL Server], CPU 使用情况"
-  - "处理器 [SQL Server], 监视使用情况"
-  - "数据库性能 [SQL Server], CPU 使用情况"
-  - "监视 CPU 使用率 [SQL Server]"
-  - "服务器性能 [SQL Server], CPU 使用情况"
-  - "数据库监视 [SQL Server], CPU 使用情况"
-  - "监视 [SQL Server], CPU 使用情况"
-  - "处理器 [SQL Server]"
-  - "CPU [SQL Server], 监视"
-  - "监视服务器性能 [SQL Server], CPU 使用情况"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], CPU usage
+- tuning databases [SQL Server], CPU usage
+- processors [SQL Server], monitoring usage
+- database performance [SQL Server], CPU usage
+- monitoring CPU usage [SQL Server]
+- server performance [SQL Server], CPU usage
+- database monitoring [SQL Server], CPU usage
+- monitoring [SQL Server], CPU usage
+- processors [SQL Server]
+- CPU [SQL Server], monitoring
+- monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
+ms.lasthandoff: 04/11/2017
+
 ---
-# 监视 CPU 使用率
+# <a name="monitor-cpu-usage"></a>监视 CPU 使用率
   定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  
   
  一个确定 CPU 使用率的有效方法是使用系统监视器中的 **Processor:% Processor Time** 计数器。 该计数器监视 CPU 执行非闲置线程所用的时间。 持续 80% 到 90% 的状态可能表明需要升级 CPU 或需要增加更多的处理器。 对于多处理器系统，应为每个处理器监视一个该计数器的独立实例。 这一值代表了在一个特定处理器上的处理器时间之和。 若要确定所有处理器的平均时间，请改用 **System: %Total Processor Time** 计数器。  

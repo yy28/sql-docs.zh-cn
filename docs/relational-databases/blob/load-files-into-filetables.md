@@ -1,26 +1,30 @@
 ---
 title: "将文件加载到 FileTable 中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Filetable [SQL Server], 迁移文件"
-  - "FileTable [SQL Server], 批量加载"
-  - "Filetable [SQL Server], 加载文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将文件加载到 FileTable 中
+# <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
   说明如何将文件加载或迁移到 FileTable 中。  
   
 ##  <a name="BasicsLoadNew"></a> 将文件加载或迁移到 FileTable  
@@ -43,7 +47,7 @@ caps.handback.revision: 23
 ###  <a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数帮助你实现这一目标。  
   
- 对于此示例，假定有一个现有的数据库表 **PhotoMetadata**，其中包含有关照片的数据。 该表具有 **varchar**(512) 类型的 **UNCPath** 列，其中包含指向 .jpg 文件的实际 UNC 路径。  
+ 对于此示例，假定有一个现有的数据库表 **PhotoMetadata**，其中包含有关照片的数据。 该表具有 **varchar** (512) 类型的 **UNCPath**列，其中包含指向 .jpg 文件的实际 UNC 路径。  
   
  要将图像文件从文件系统迁移到 FileTable，必须执行以下操作：  
   
@@ -117,12 +121,12 @@ UPDATE PhotoMetadata
   
     -   禁用 FileTable 命名空间并不使用 **IGNORE_CONSTRAINTS** 子句调用。 然后重新启用 FileTable 命名空间。  
   
- 有关禁用 FileTable 约束的信息，请参阅[管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
+ 有关禁用 FileTable 约束的信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
 ###  <a name="disabling"></a> 如何禁用针对大容量加载的 FileTable 约束  
- 若要在没有强制系统定义约束的开销的情况下将文件大容量加载到 FileTable 中，可以暂时禁用约束。 有关详细信息，请参阅[管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
+ 若要在没有强制系统定义约束的开销的情况下将文件大容量加载到 FileTable 中，可以暂时禁用约束。 有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Transact-SQL 访问 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [使用文件输入输出 API 访问 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

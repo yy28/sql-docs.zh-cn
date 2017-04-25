@@ -1,39 +1,43 @@
 ---
 title: "通过分离和附加来移动数据库 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库附加 [SQL Server]"
-  - "移动数据库 [SQL Server]"
-  - "数据库分离 [SQL Server]"
-  - "重新定位数据库 [SQL Server]"
-  - "分离数据库 [SQL Server]"
-  - "附加数据库 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database attaching [SQL Server]
+- moving databases [SQL Server]
+- database detaching [SQL Server]
+- relocating databases [SQL Server]
+- detaching databases [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4604a9d4da9360607e31d31b3f160bc0bff2eac
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过分离和附加来移动数据库 (Transact-SQL)
-  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](../../relational-databases/databases/move-user-databases.md)。  
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
+  本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](../../relational-databases/databases/move-user-databases.md)。  
   
 > [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
+>  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
   
-## 过程  
+## <a name="procedure"></a>过程  
   
-#### 使用分离和附加操作移动数据库  
+#### <a name="to-move-a-database-by-using-detach-and-attach"></a>使用分离和附加操作移动数据库  
   
-1.  分离数据库。 有关详细信息，请参阅[分离数据库](../../relational-databases/databases/detach-a-database.md)。  
+1.  分离数据库。 有关详细信息，请参阅 [分离数据库](../../relational-databases/databases/detach-a-database.md)。  
   
 2.  在 Windows 资源管理器或 Windows“命令提示符”窗口中，将分离的数据库文件和日志文件移至新位置。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 47
   
 3.  附加复制的文件。 有关详细信息，请参阅 [Attach a Database](../../relational-databases/databases/attach-a-database.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例创建名为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的 `MyAdventureWorks`数据库副本。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在与该服务器实例（附加该数据库副本）连接的查询编辑器窗口中执行。  
   
 1.  执行以下 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 语句以分离 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库：  
@@ -80,7 +84,7 @@ caps.handback.revision: 47
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”**。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

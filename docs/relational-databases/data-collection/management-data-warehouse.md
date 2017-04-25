@@ -1,26 +1,30 @@
 ---
 title: "管理数据仓库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据收集器 [SQL Server], 管理数据仓库"
-  - "数据仓库"
-  - "管理数据仓库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理数据仓库
+# <a name="management-data-warehouse"></a>管理数据仓库
   管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
   
  数据收集器基础结构定义了实现保留策略所需的作业和维护计划，而保留策略是由数据库管理员定义的。  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  对于此版本的数据收集器，将使用简单恢复模式创建管理数据仓库以最小化日志记录。 您应当为自己的组织采取适当的恢复模式。  
   
-## 部署和使用数据仓库  
+## <a name="deploying-and-using-the-data-warehouse"></a>部署和使用数据仓库  
  可以将管理数据仓库安装到运行数据收集器的同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上。 但是，如果在所监视的服务器上存在服务器资源或性能问题，则可以在另一台计算机上安装管理数据仓库。  
   
  当您创建管理数据仓库时，将创建预定义系统收集组所需的架构及其对象。 创建的架构包括核心架构和快照架构，当创建用户定义的收集组并且该收集组包含使用一般 T-SQL 查询收集器类型的收集项时，将创建第三个架构 custom_snapshots。  
   
-###### 核心架构  
+###### <a name="core-schema"></a>核心架构  
  核心架构描述用于组织和标识所收集数据的表、存储过程和视图。 这些表将由为各个收集器类型创建的所有数据表共享。 此架构已锁定，只有管理数据仓库数据库的所有者才可以修改。 此架构中的表的名称均包含前缀“core”。  
   
  下表介绍了核心架构中的数据库表。 这些数据库表使得数据收集器可以跟踪数据来自何处、谁插入的数据以及数据是什么时候上载至数据仓库的。  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### 快照架构  
+###### <a name="snapshots-schema"></a>快照架构  
  此快照架构描述了存储和维护由所提供的收集器类型收集的数据所需的对象。 此架构中的表已固定，在收集器类型的生存期内无需更改。 如需更改，则此架构仅可由 mdw_admin 角色的成员进行更改。 这些表是为了存储由系统数据收集组收集的数据而创建。  
   
  下表说明了“服务器活动”和“查询统计”收集组所需的管理数据仓库架构部分。  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  通过阅读有关各表相应的数据收集器存储过程的文档，您可获得有关数据库表列的数据类型和内容的详细信息。  
   
-### 最佳实践  
+### <a name="best-practices"></a>最佳实践  
  使用管理数据仓库时，建议遵循以下最佳做法：  
   
 -   除非添加新的收集器类型，否则不要更改管理数据仓库表的元数据。  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   不要直接使用表，而应使用随数据收集器提供的已记录的存储过程和函数来访问实例和应用程序数据。 表名称和表定义可以更改，在您更新该应用程序时肯定会更改，在未来的版本中也可能更改。  
   
-## 更改历史记录  
+## <a name="change-history"></a>更改历史记录  
   
 |更新内容|  
 |---------------------|  
 |向“核心架构”部分增添了 core.performance_counter_report_group_items 表。|  
 |更新了“快照架构”部分中表的列表。 增加了 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory 和 snapshots.io_virtual_file_stats。 删除了 snapshots.os_process_memory 和 snapshots.distinct_query_stats。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理数据仓库存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   

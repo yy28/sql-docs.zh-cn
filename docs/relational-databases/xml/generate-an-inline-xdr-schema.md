@@ -1,27 +1,31 @@
 ---
 title: "生成内联 XDR 架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XDR 架构 [SQL Server]"
-  - "内联 XDR 架构生成 [SQL Server]"
-  - "XMLDATA 选项"
-  - "FOR XML 子句, 内联 XDR 架构生成"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XDR schemas [SQL Server]
+- inline XDR schema generation [SQL Server]
+- XMLDATA option
+- FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c996d2aeef58a93da05c217e472f626953a0fe6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 生成内联 XDR 架构
+# <a name="generate-an-inline-xdr-schema"></a>生成内联 XDR 架构
   FOR XML 中的 **XMLDATA** 指令将返回一个内联 XDR 架构以及查询结果。 但是，XDR 架构不支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中引入的所有新数据类型和其他增强功能。 您可以改为使用 [XMLSCHEMA](../../relational-databases/xml/generate-an-inline-xsd-schema.md)指令来请求内联 XSD 架构。  
   
 > [!IMPORTANT]  

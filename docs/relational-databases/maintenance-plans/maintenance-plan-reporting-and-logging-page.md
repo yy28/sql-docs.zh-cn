@@ -1,27 +1,31 @@
 ---
-title: "维护计划（“报告和记录”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.reportinglogging.f1"
+title: "维护计划（“报告和记录”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc79574632edb6fa550c81d66c95616a452ddf38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 维护计划（“报告和记录”页）
+# <a name="maintenance-plan-reporting-and-logging-page"></a>维护计划（“报告和记录”页）
   使用 **“报告和记录”** 对话框可以配置在执行维护计划时生成的报告和日志。  
   
-## 选项  
+## <a name="options"></a>选项  
  **生成文本文件报告**  
  指定是否希望 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入文本文件报告。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 22
  **新建**  
  显示“连接属性”对话框。 用于配置在远程服务器上进行日志记录时使用的新连接信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   

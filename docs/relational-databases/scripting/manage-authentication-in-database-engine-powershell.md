@@ -1,23 +1,27 @@
 ---
 title: "在数据库引擎 PowerShell 中管理身份验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 135580dd67315ad9eb07361dcff7b1334398a0aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在数据库引擎 PowerShell 中管理身份验证
-  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件在连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时使用 Windows 身份验证。 你可以通过定义 PowerShell 虚拟驱动器，或者通过为 **Invoke-Sqlcmd** 指定 **–Username** 和 **–Password** 参数，来使用 SQL Server 身份验证。  
+# <a name="manage-authentication-in-database-engine-powershell"></a>在数据库引擎 PowerShell 中管理身份验证
+  默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时使用 Windows 身份验证。 你可以通过定义 PowerShell 虚拟驱动器，或者通过为 **Invoke-Sqlcmd** 指定 **–Username** 和 **–Password**参数，来使用 SQL Server 身份验证。  
   
 1.  **开始之前：**  [权限](#Permissions)  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 9
   
 2.  调用函数来创建具有提供的凭据的虚拟驱动器。  
   
-### 示例（虚拟驱动器）  
+### <a name="example-virtual-drive"></a>示例（虚拟驱动器）  
  此示例创建名为 **sqldrive** 的函数，您可使用该函数来创建与指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名和实例相关联的虚拟驱动器。  
   
  **sqldrive** 函数提示您输入登录名的密码，并在您键入密码时屏蔽密码。 然后，每当你使用更改目录命令 (**cd**) 来通过使用虚拟驱动器名称连接到路径时，所有操作都将通过使用你在创建驱动器时提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录凭据来执行。  
@@ -71,7 +75,7 @@ cd SQLAuth
   
 1.  使用 **–Username** 参数可以指定一个登录 ID，以及用于指定关联密码的 **–Password** 参数。  
   
-### 示例 (Invoke-Sqlcmd)  
+### <a name="example-invoke-sqlcmd"></a>示例 (Invoke-Sqlcmd)  
  此示例使用 read-host cmdlet 来提示用户输入密码，然后使用 SQL Server 身份验证进行连接。  
   
 ```  
@@ -81,7 +85,7 @@ $pwd = read-host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd cmdlet](../../powershell/invoke-sqlcmd-cmdlet.md)  

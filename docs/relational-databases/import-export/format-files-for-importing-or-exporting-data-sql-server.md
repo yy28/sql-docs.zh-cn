@@ -1,39 +1,34 @@
 ---
-title: "用来导入或导出数据的格式化文件 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "批量导出 [SQL Server]，格式化文件"
-  - "大容量导入 [SQL Server], 格式化文件"
-  - "格式化文件 [SQL Server]"
+title: "用于导入或导出数据的格式化文件 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk exporting [SQL Server], format files
+- bulk importing [SQL Server], format files
+- format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 用来导入或导出数据的格式化文件 (SQL Server)
+# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
   当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量导入数据或从该表中大容量导出数据时，可以使用格式化文件  存储大容量导入数据或大容量导出数据所需的所有格式信息。 这包括数据文件中相对于该表的各字段的格式信息。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持两种格式化文件：XML 格式化文件和非 XML 格式化文件。 XML 格式化文件和非 XML 格式化文件在一个数据文件中包含每个字段的说明，并且 XML 格式化文件还包含相应表列的说明。 通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
- **本主题内容：**  
-  
--   [格式化文件的优点](#Benefits)  
-  
--   [格式化文件的示例](#ExamplesOfFFs)  
-  
--   [何时需要使用格式化文件？](#WhenFFrequired)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> 格式化文件的优点  
   
@@ -42,13 +37,13 @@ caps.handback.revision: 39
 -   使您可以大容量导入数据，而不必添加或删除不需要的数据或者重新排列数据文件中现有数据的顺序。 当数据文件中的字段和表中的列存在不匹配的情况时，格式化文件尤其有用。  
   
 ##  <a name="ExamplesOfFFs"></a> 格式化文件的示例  
- 下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `HumanResources.myTeam` 表。 该表包含四列：`EmployeeID`、`Name`、`Title` 和 `ModifiedDate`。  
+ 下面的示例说明了非 XML 格式化文件和 XML 格式化文件的布局。 这些格式化文件对应于 `HumanResources.myTeam` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 该表包含四列：`EmployeeID`、`Name`、`Title` 和 `ModifiedDate`。  
   
 > [!NOTE]  
 >  有关该表以及如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)。  
   
-### A. 使用非 XML 格式化文件  
- 下面的非 XML 格式化文件为 `HumanResources.myTeam` 表使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据格式。 此格式化文件是用下面的 `bcp` 命令创建的。  
+### <a name="a-using-a-non-xml-format-file"></a>A. 使用非 XML 格式化文件  
+ 下面的非 XML 格式化文件为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表使用 `HumanResources.myTeam` 本机数据格式。 此格式化文件是用下面的 `bcp` 命令创建的。  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -60,11 +55,10 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- 有关详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
+ 有关详细信息，请参阅 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
- [[返回页首]](#Top)  
   
-### B. 使用 XML 格式化文件  
+### <a name="b-using-an-xml-format-file"></a>B. 使用 XML 格式化文件  
  下面的 XML 格式化文件为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表使用 `HumanResources.myTeam` 本机数据格式。 此格式化文件是用下面的 `bcp` 命令创建的。  
   
 ```  
@@ -93,7 +87,6 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="WhenFFrequired"></a> 何时需要使用格式化文件？  
  INSERT ... SELECT * FROM OPENROWSET(BULK...) 语句始终要求使用格式化文件。  
@@ -117,9 +110,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   数据文件列的终止字符或前缀长度不同。  
   
 > [!NOTE]  
->  在缺少格式化文件的情况下，如果 **bcp** 命令指定了数据格式开关（**-n**、**-c**、**-w** 或 **-N**），或者 BULK INSERT 操作指定了 DATAFILETYPE 选项，那么指定的数据格式将用作解释数据文件字段的默认方法。  
+>  在缺少格式化文件的情况下，如果 **bcp** 命令指定了数据格式开关（**-n**、 **-c**、 **-w**或 **-N**），或者 BULK INSERT 操作指定了 DATAFILETYPE 选项，那么指定的数据格式将用作解释数据文件字段的默认方法。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -133,9 +125,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

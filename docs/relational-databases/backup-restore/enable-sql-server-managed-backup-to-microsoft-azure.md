@@ -1,22 +1,26 @@
 ---
-title: "对 Microsoft Azure 启用 SQL Server 托管备份 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "启用 SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
+ms.custom: 
+ms.date: 10/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 caps.latest.revision: 25
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de5d4d788520c9fd8addc98c19be11cf2361456d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对 Microsoft Azure 启用 SQL Server 托管备份
+# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 启用 SQL Server 托管备份
   本主题介绍了如何在数据库级别和实例级别使用默认设置启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 还介绍了如何启用电子邮件通知以及如何监视备份活动。  
   
  本教程使用 Azure PowerShell。 教程开始前， [请下载并安装 Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)。  
@@ -24,9 +28,9 @@ caps.handback.revision: 25
 > [!IMPORTANT]  
 >  如果想启用高级选项或使用自定义计划，请在启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前先配置这些设置。 有关详细信息，请参阅 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
-## 使用默认设置启用并配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>使用默认设置启用并配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-#### 创建 Azure Blob 容器  
+#### <a name="create-the-azure-blob-container"></a>创建 Azure Blob 容器  
   
 1.  **注册 Azure：** 如果已经有 Azure 订阅，请转到下一步。 如果没有，可以使用 [免费试用版](http://azure.microsoft.com/pricing/free-trial/) 开始，或者浏览 [购买选项](http://azure.microsoft.com/pricing/purchase-options/)。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 25
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **生成共享访问签名 (SAS)：**要访问容器，必须创建 SAS。 使用某些工具、代码和 Azure PowerShell 可以完成此操作。 以下 `New-AzureStorageContainerSASToken` 命令为一年后过期的 `backupcontainer` Blob 容器创建 SAS 令牌。  
+4.  **生成共享访问签名 (SAS)：** 要访问容器，必须创建 SAS。 使用某些工具、代码和 Azure PowerShell 可以完成此操作。 以下 `New-AzureStorageContainerSASToken` 命令为一年后过期的 `backupcontainer` Blob 容器创建 SAS 令牌。  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
@@ -67,7 +71,7 @@ caps.handback.revision: 25
   
      将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅 [共享访问签名，第一部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
-#### 启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 1.  **创建 SAS URL 的 SQL 凭据：** 使用 SAS 令牌来创建 Blob 容器 URL 的 SQL 凭据。 在 SQL Server Management Studio 中，使用下列 Transact-SQL 查询来创建 Blob 容器 URL 的凭据，示例如下：  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 25
 4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：** 启动 SQL Server Management Studio 并连接到目标 SQL Server 实例。 在根据要求修改数据库名称、容器 URL 和保持期的值后，从查询窗口中运行以下语句：  
   
     > [!IMPORTANT]  
-    >  若要在实例级别启用托管备份，请为 `database_name` 参数指定 `NULL`。  
+    >  若要在实例级别启用托管备份，请为 `NULL` 参数指定 `database_name` 。  
   
     ```tsql  
     Use msdb;  
@@ -99,7 +103,7 @@ caps.handback.revision: 25
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。  
   
-5.  **检查扩展事件默认配置：**通过运行以下 transact-SQL 语句，检查扩展事件配置。  
+5.  **检查扩展事件默认配置：** 通过运行以下 transact-SQL 语句，检查扩展事件配置。  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -113,7 +117,7 @@ caps.handback.revision: 25
   
     2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：**从查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 7.  **在 Microsoft Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户中连接到存储帐户。 你将在指定容器中看到任何备份文件。 请注意，你会在启用数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分钟内看到数据库和日志备份。  
   
-8.  **监视运行状态：**你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+8.  **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  
@@ -171,9 +175,10 @@ caps.handback.revision: 25
   
     ```  
   
- 本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 你可以使用相同的系统存储过程来修改现有配置，并提供新值。  
+ 本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 你可以使用相同的系统存储过程来修改现有配置，并提供新值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

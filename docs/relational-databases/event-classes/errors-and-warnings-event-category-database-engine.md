@@ -1,29 +1,33 @@
 ---
-title: "Errors and Warnings 事件类别（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Errors and Warnings 事件类别 [SQL Server]"
-  - "SQL Server 事件类, Errors and Warnings 事件类别"
-  - "事件类 [SQL Server], Errors and Warnings 事件类别"
+title: "“错误和警告”事件类别（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
+- SQL Server event classes, Errors and Warnings event category
+- event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c7673b15dec984e81cc7dd8207006a0b278fe7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Errors and Warnings 事件类别（数据库引擎）
+# <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件类别（数据库引擎）
   **Errors and Warnings** 事件类别包含常规错误和警告事件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -34,7 +38,7 @@ caps.handback.revision: 28
 |[CPU Threshold Exceeded 事件类](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|指示资源调控器检测到超出指定 CPU 阈值的查询。|  
 |[ErrorLog 事件类](../../relational-databases/event-classes/errorlog-event-class.md)|指示已将错误事件记录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中。|  
 |[EventLog 事件类](../../relational-databases/event-classes/eventlog-event-class.md)|指示已将事件记录到 Windows 事件日志中。|  
-|[Exception 事件类](../../relational-databases/event-classes/exception-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中出现了异常。|  
+|[Exception 事件类](../../relational-databases/event-classes/exception-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中出现了异常。|  
 |[Exchange Spill 事件类](../../relational-databases/event-classes/exchange-spill-event-class.md)|指示并行查询计划中的通信缓冲区已写入 tempdb 数据库。|  
 |[Execution Warnings 事件类](../../relational-databases/event-classes/execution-warnings-event-class.md)|指示在执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句或存储过程期间出现了内存授予警告。|  
 |[Hash Warning 事件类](../../relational-databases/event-classes/hash-warning-event-class.md)|指示在哈希操作过程中发生哈希递归或哈希援助。|  
@@ -43,7 +47,7 @@ caps.handback.revision: 28
 |[Sort Warnings 事件类](../../relational-databases/event-classes/sort-warnings-event-class.md)|指示不适合内存的排序操作。|  
 |[User Error Message 事件类](../../relational-databases/event-classes/user-error-message-event-class.md)|显示用户可见的错误消息。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

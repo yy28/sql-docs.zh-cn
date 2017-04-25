@@ -1,38 +1,42 @@
 ---
-title: "镜像备份介质集 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "恢复 [SQL Server], 镜像备份"
-  - "镜像介质集 [SQL Server]"
-  - "备份镜像 [SQL Server]"
-  - "重复备份副本"
-  - "互换备份副本 [SQL Server]"
-  - "媒体集 [SQL Server], 镜像备份媒体集"
-  - "备份媒体 [SQL Server], 镜像媒体"
+title: "镜像备份媒体集 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 镜像备份介质集 (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>镜像备份介质集 (SQL Server)
     
 > [!NOTE]  
->  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持镜像备份介质集。  
+>  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise Edition 支持镜像备份介质集。  
   
  镜像介质集通过降低备份设备故障的影响来提高备份的可靠性。 由于备份是防止数据丢失的最后“防线”，因此备份设备出现故障的后果是非常严重的。 随着数据库大小的增加，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供冗余来提高备份的可靠性。  
   
 > [!NOTE]  
->  有关媒体集的常规信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+>  有关媒体集的常规信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise Edition 支持镜像备份介质集。  
   
  **本主题内容：**  
   
@@ -43,13 +47,13 @@ caps.handback.revision: 38
 -   [相关任务](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> 镜像介质集概述  
- 介质镜像是介质集的一个属性。 *镜像媒体集*是由媒体集的多个副本（*镜像*）组成的。 介质集包含一个或多个介质簇，其中每个介质簇对应一个备份设备。 例如，如果 BACKUP DATABASE 语句的 TO 子句列出三个设备，则 BACKUP 将数据分布在三个介质簇中，每个设备一个介质簇。 介质簇和镜像的数量在创建介质集时进行定义（使用指定了 WITH FORMAT 的 BACKUP DATABASE 语句）。  
+ 介质镜像是介质集的一个属性。 *镜像媒体集* 是由媒体集的多个副本（*镜像*）组成的。 介质集包含一个或多个介质簇，其中每个介质簇对应一个备份设备。 例如，如果 BACKUP DATABASE 语句的 TO 子句列出三个设备，则 BACKUP 将数据分布在三个介质簇中，每个设备一个介质簇。 介质簇和镜像的数量在创建介质集时进行定义（使用指定了 WITH FORMAT 的 BACKUP DATABASE 语句）。  
   
  一个镜像介质集包含两个到四个镜像。 每个镜像包含介质集中的所有介质簇。 镜像必须有相同的设备数，每个介质簇一个设备。 每个镜像要求每个介质簇都有一个单独的备份设备。 例如，包含四个介质簇、三个镜像的镜像介质集需要十二个备份设备。 所有这些设备必须是相同的。 例如，使用同一制造商提供的同一型号的磁带机。  
   
  下图显示了包含两个介质簇、两个镜像的镜像介质集示例。 每个介质簇都包含三个介质卷，这些介质卷在每个镜像中都备份一次。  
   
- ![镜像介质集：具有两个镜像的两个介质簇](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "镜像介质集：具有两个镜像的两个介质簇")  
+ ![镜像媒体集：具有两个镜像的两个媒体簇](../../relational-databases/backup-restore/media/bnr-backup-media-mirror.gif "镜像媒体集：具有两个镜像的两个媒体簇")  
   
  镜像中的对应卷都具有相同的内容。 这样，还原时它们可以互换。 例如，在上图中，tape2 的第三卷可以与 tape0 的第三卷互换。  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [备份至镜像媒体集 (Transact-SQL)](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份和还原期间可能出现的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

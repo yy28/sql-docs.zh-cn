@@ -1,34 +1,38 @@
 ---
-title: "错误和事件参考（复制） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "错误 [SQL Server 复制], 故障排除"
-  - "故障排除 [SQL Server 复制], 错误"
-  - "复制 [SQL Server], 故障排除"
-  - "错误 [SQL Server 复制]"
-  - "错误和事件参考 [SQL Server 复制]"
+title: "错误和事件参考（复制）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# 错误和事件参考（复制）
+# <a name="errors-and-events-reference-replication"></a>错误和事件参考（复制）
   本部分文档包含与复制相关的多个错误的原因和解决方法的信息。  
   
 |错误|消息|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|不能在对象中插入重复键的行 %.* ls' 具有唯一索引 ' %。\*ls'。|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|违反了 %ls 约束 '%.*ls'。 无法在对象中插入重复键 %。\*ls'。|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|不能在具有唯一索引 '%.\*ls' 的对象 '%.*ls' 中插入重复键的行。|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|违反了 %ls 约束 '%.*ls'。 不能在对象 '%.\*ls' 中插入重复键。|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|数据库 '%ls' 已还原，但在还原/删除复制时出错。 该数据库仍保留为脱机状态。 请参阅 SQL Server 联机丛书中的主题 MSSQL_ENG003165。|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|无法对 %S_MSG '%.*ls' 执行 %S_MSG，因为它正用于复制。|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|无法更改 %S_MSG '%.*ls'，因为正在为复制而发布它。|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|已设置发布 [%s] 的阈值 [%s:%s]。 请确保合并代理正在运行且符合要求。|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|已设置发布 [%s] 的阈值 [%s:%s]。 请确保合并代理正在运行且符合要求。|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|已设置发布 [%s] 的阈值 [%s:%s]。 请确保合并代理正在运行且符合要求。|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|用户登录失败 %.* ls'.%。\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|用户 '%.*ls'.%.\*ls 登录失败|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|一次只能有一个日志读取器代理或日志相关过程(sp_repldone、sp_replcmds 和 sp_replshowcmds)连接到某个数据库。 如果执行了一个日志相关过程，那么在启动日志读取器代理或者执行另一个日志相关过程之前，请删除执行第一个过程时所用的连接，或者在该连接上执行 sp_replflush。|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|复制代理在 %ld 分钟内没有记录任何进度消息。 这表明代理已停止响应或系统活动过多。 请确保正在将记录复制到目标，并且与订阅服务器、发布服务器和分发服务器的连接仍然是活动的。|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|代理关闭。 有关详细信息，请参阅作业 '%s' 的 SQL Server 代理作业历史记录。|  

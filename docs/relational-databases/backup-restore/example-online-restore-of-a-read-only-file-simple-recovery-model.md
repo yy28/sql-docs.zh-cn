@@ -1,33 +1,37 @@
 ---
-title: "示例：联机还原只读文件（简单恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "还原顺序 [SQL Server], 联机"
-  - "联机还原 [SQL Server], 简单恢复模式"
-  - "简单恢复模式 [SQL Server], RESTORE 示例"
+title: "示例：只读文件的联机还原（简单恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restore sequences [SQL Server], online
+- online restores [SQL Server], simple recovery model
+- simple recovery model [SQL Server], RESTORE examples
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54c06105b3d073c3bfa9543db4c3ff96445db536
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：联机还原只读文件（简单恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：联机还原只读文件（简单恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题针对采用简单恢复模式并包含只读文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 在简单恢复模式下，如果某个文件在最后一次变为只读时进行了备份，则可以联机还原该只读文件。  
   
- 在此示例中，名为 `adb` 的数据库包含三个文件组。 文件组 `A` 为读/写文件组，而文件组 `B` 和 `C` 是只读的。 最初，所有文件组都处于联机状态。 现在必须还原文件组 `B` 中的只读文件 `b1`。 数据库管理员可以使用在该文件变为只读状态之后获取的备份对其进行还原。 在还原过程中，文件组 `B` 将处于脱机状态，但是数据库的其余文件组仍处于联机状态。  
+ 在此示例中，名为 `adb` 的数据库包含三个文件组。 文件组 `A` 为读/写文件组，而文件组 `B` 和 `C` 是只读的。 最初，所有文件组都处于联机状态。 现在必须还原文件组 `B`中的只读文件 `b1`。 数据库管理员可以使用在该文件变为只读状态之后获取的备份对其进行还原。 在还原过程中，文件组 `B` 将处于脱机状态，但是数据库的其余文件组仍处于联机状态。  
   
-## 还原顺序  
+## <a name="restore-sequence"></a>还原顺序  
   
 > [!NOTE]  
 >  联机还原顺序的语法与脱机还原顺序的语法完全相同。  
@@ -41,7 +45,7 @@ WITH RECOVERY
   
  文件现在处于联机状态。  
   
-## 其他示例  
+## <a name="additional-examples"></a>其他示例  
   
 -   [示例：数据库的段落还原（简单恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -55,11 +59,11 @@ WITH RECOVERY
   
 -   [示例：只读文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

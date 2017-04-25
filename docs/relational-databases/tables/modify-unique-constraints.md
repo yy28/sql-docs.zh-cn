@@ -1,27 +1,31 @@
 ---
 title: "修改唯一约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "修改约束"
-  - "UNIQUE 约束 [SQL Server], 修改"
-  - "约束 [SQL Server], 修改"
-  - "约束 [SQL Server], 唯一"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying constraints
+- UNIQUE constraints [SQL Server], modifying
+- constraints [SQL Server], modifying
+- constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb829d6362e39096134906442d6c4c0adf44f2a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改唯一约束
+# <a name="modify-unique-constraints"></a>修改唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一约束。  
@@ -47,7 +51,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 修改唯一约束  
+#### <a name="to-modify-a-unique-constraint"></a>修改唯一约束  
   
 1.  在“对象资源管理器”中，右键单击包含唯一约束的表，然后选择“设计”。  
   
@@ -71,3 +75,4 @@ caps.handback.revision: 16
  若要使用 Transact-SQL 修改 UNIQUE 约束，必须首先删除现有的 UNIQUE 约束，然后用新定义重新创建。 有关详细信息，请参阅 [Delete Unique Constraints](../../relational-databases/tables/delete-unique-constraints.md) 和 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   
 ###  <a name="TsqlExample"></a>  
+

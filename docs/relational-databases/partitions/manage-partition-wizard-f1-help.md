@@ -1,38 +1,42 @@
 ---
 title: "“管理分区向导”的 F1 帮助 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.managepartition.createjob.f1"
-  - "sql13.swb.managepartition.progress.f1"
-  - "sql13.swb.managepartition.getstart.f1"
-  - "sql13.swb.managepartition.selectswitchtables.f1"
-  - "sql13.swb.managepartition.stagingtable.f1"
-  - "sql13.swb.managepartition.switchin.f1"
-  - "sql13.swb.managepartition.switchout.f1"
-  - "sql13.swb.managepartition.partitionaction.f1"
-  - "sql13.swb.managepartition.summary.f1"
-  - "sql13.swb.managepartition.selectoutput.f1"
-helpviewer_keywords: 
-  - "向导 [SQL Server Management Studio] 请参阅“管理分区向导”"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.managepartition.createjob.f1
+- sql13.swb.managepartition.progress.f1
+- sql13.swb.managepartition.getstart.f1
+- sql13.swb.managepartition.selectswitchtables.f1
+- sql13.swb.managepartition.stagingtable.f1
+- sql13.swb.managepartition.switchin.f1
+- sql13.swb.managepartition.switchout.f1
+- sql13.swb.managepartition.partitionaction.f1
+- sql13.swb.managepartition.summary.f1
+- sql13.swb.managepartition.selectoutput.f1
+helpviewer_keywords:
+- wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# “管理分区向导”的 F1 帮助
+# <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
   使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
   
-### 启动管理分区向导  
+### <a name="to-start-the-manage-partition-wizard"></a>启动管理分区向导  
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，选择数据库，右键单击要在其中创建分区的表，指向“存储”，然后单击“管理分区”。  
   
@@ -64,18 +68,18 @@ caps.handback.revision: 12
 ##  <a name="SelectPartitionAction"></a> 选择分区操作页面  
  使用 **“选择分区操作”** 页可以选择要对分区执行的操作。  
   
-### 创建临时表  
+### <a name="create-a-staging-table"></a>创建临时表  
  如果您有一个定期迁入迁出数据的已分区表，则分区切换是常见分区任务；例如，您有一个存储当前季度数据的已分区表，必须在每季度末移入新数据并归档旧数据。  
   
  该向导使用相同的分区列、表、列结构和索引来设计临时表，并将新表存储在源分区所在的文件组中。  
   
  若要创建临时表以切入或切出分区数据，请选择 **“为分区切换创建临时表”**。  
   
-### 滑动窗口应用场景  
+### <a name="sliding-window-scenario"></a>滑动窗口应用场景  
  若要管理滑动窗口应用场景中的分区，请选择“管理滑动窗口应用场景中的分区数据”。  
   
-## UIElement 列表  
- **为分区切换创建临时表**  
+## <a name="uielement-list"></a>UIElement 列表  
+ **“为分区切换创建临时表”**  
  为切入和切出现有已分区表的数据创建临时表。  
   
  **切出分区**  
@@ -87,12 +91,12 @@ caps.handback.revision: 12
  **管理滑动窗口应用场景中的分区数据**  
  将空分区追加到可用于切入数据的现有表中。 向导当前支持切入上一个分区和切出第一个分区。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="SwitchIn"></a> 选择分区切入选项页  
  使用“选择分区切入选项”页可以选择要切入到已分区表中的临时表。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **显示所有分区**  
  选择此选项可以显示所有分区，包括当前位于已分区表的分区。  
   
@@ -102,12 +106,12 @@ caps.handback.revision: 12
  **切入表**  
  选择包含您要添加到您的已分区表的分区的临时表。 必须先创建此临时表，然后才能使用“管理分区向导”来切入分区。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="SwitchOut"></a> 选择分区切出选项页  
  使用“选择分区切出选项”页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **分区网格**  
  显示所选分区的分区名称、“左边界”、“右边界”、“文件组”和“行计数”。  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 12
  **现有**  
  选择要用于从当前源表切出的分区的现有临时表。 如果现有表包含数据，这些数据将被您切出的数据覆盖。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="StagingTableOptions"></a> 选择临时表选项页  
  使用 **“选择临时表选项”** 页可以创建用于切换已分区数据的临时表。  
@@ -129,7 +133,7 @@ caps.handback.revision: 12
   
  您可以在位于源分区的临时表中创建相同的索引。 临时表会自动基于源分区的元素包含约束。 此约束通常根据源分区的边界值生成。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **临时表名**  
  为临时表创建名称，或接受编辑框中显示的默认名称。  
   
@@ -142,12 +146,12 @@ caps.handback.revision: 12
  **文件组**  
  为新表选择文件组。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="OutputOption"></a> 选择输出选项页  
  使用 **“选择输出选项”** 页，以指定您想要如何完成对分区的修改。  
   
-### 创建脚本  
+### <a name="create-script"></a>创建脚本  
  当向导完成时，它会在查询编辑器中创建脚本以修改表中的分区。 如果要查看脚本，请选择 **“创建脚本”** ，然后手动执行脚本。  
   
  **将脚本保存到文件**  
@@ -159,22 +163,22 @@ caps.handback.revision: 12
  **将脚本保存到“新建查询”窗口**  
  将脚本生成到查询编辑器窗口。 如果没有打开编辑器窗口，则将打开一个新的编辑器窗口作为脚本的目标。  
   
-### 立即运行  
- **立即运行**  
+### <a name="run-immediately"></a>立即运行  
+ **Run immediately**  
  当单击“下一步”或“完成”时，令向导完成对分区的修改。  
   
-### 计划  
+### <a name="schedule"></a>计划  
  选中此项可以在计划的日期和时间修改表分区。  
   
  **更改计划**  
  打开“新建作业计划”对话框，你可以在此对话框中选择、更改或查看计划作业的属性。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="NewJob"></a> 新建作业计划页  
  使用 **“新建作业计划”** 页可以查看和更改计划的属性。  
   
-### 选项  
+### <a name="options"></a>选项  
  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选择所需的计划类型。  
   
  **名称**  
@@ -189,7 +193,7 @@ caps.handback.revision: 12
  **已启用**  
  启用或禁用计划。  
   
-### 重复执行计划类型选项  
+### <a name="recurring-schedule-types-options"></a>重复执行计划类型选项  
  选择已计划作业的频率。  
   
  **执行**  
@@ -243,7 +247,7 @@ caps.handback.revision: 12
  **无结束日期**  
  指定计划将无限期地保持有效。  
   
-### 一次性计划类型选项  
+### <a name="one-time-schedule-types-options"></a>一次性计划类型选项  
  如果计划某个作业运行一次，您必须选择一个将来的日期和时间。  
   
  **日期**  
@@ -252,21 +256,21 @@ caps.handback.revision: 12
  **Time**  
  选择作业的计划运行时间。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **检查所做选择**  
  显示您在向导的每一页中所做的选择。 单击节点可展开和查看以前选择的选项。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
 ##  <a name="Progress"></a> “进度”页  
  使用 **“进度”** 页可以监视有关 **“管理分区向导”**操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
-### 选项  
+### <a name="options"></a>选项  
  **详细信息**  
  提供向导执行的操作所返回的操作、状态和所有消息。  
   
@@ -299,9 +303,9 @@ caps.handback.revision: 12
  **关闭**  
  关闭向导。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本节内容](#Top)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[本节内容](#Top)  
   
-## 另请参阅  
- [已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+## <a name="see-also"></a>另请参阅  
+ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

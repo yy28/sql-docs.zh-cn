@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_REPL020011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_REPL020011 错误"
+title: MSSQL_REPL020011 | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_REPL020011 error
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a00f6e4b34636b7788427ca12dcb98df8c01070
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_REPL020011
+# <a name="mssqlrepl020011"></a>MSSQL_REPL020011
     
-## 消息详细信息  
+## <a name="message-details"></a>消息详细信息  
   
 |||  
 |-|-|  
@@ -31,17 +35,17 @@ caps.handback.revision: 16
 |符号名称||  
 |消息正文|进程无法在“%2”上执行“%1”。|  
   
-## 解释  
- 处理，如当日志读取器代理执行的事务复制期间可以在许多情况下引发此错误 **sp_replcmds** (进程无法在执行 'sp_replcmds' \< 服务器名>) 或 **sp_repldone** (进程无法在执行 sp_repldone \< 服务器名>)。  
+## <a name="explanation"></a>解释  
+ 事务复制处理过程中的许多情况都可能引发此错误，例如日志读取器代理执行 **sp_replcmds**（此过程无法在 \<服务器名> 上执行“sp_replcmds”）或 **sp_repldone**（此过程无法在 \<服务器名> 上执行“sp_repldone”）时。  
   
-## 用户操作  
- 如果您只需从备份还原的数据库中会出现此错误，请确保已执行备份和还原文档，包括执行中概述的步骤 **sp_replrestart** 根据。 有关详细信息，请参阅 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
+## <a name="user-action"></a>用户操作  
+ 如果在您刚刚从备份中还原的数据库中出现此错误，请确保遵守了备份和还原文档中列出的步骤，包括在适合时执行 **sp_replrestart** 。 有关详细信息，请参阅 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
  此错误是一个内部处理错误，如果在还原之外的环境中出现此错误，则通常表示必须删除或重新配置复制。 如果无法删除复制，请与客户支持部门联系以获取帮助。  
   
-## 另请参阅  
- [错误和事件参考 & #40;复制和 #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [sp_replcmds & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+ [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_repldone (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)  
   
   

@@ -1,32 +1,36 @@
 ---
 title: "管理数据收集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "数据收集"
-helpviewer_keywords: 
-  - "数据收集 [SQL Server]"
-  - "数据收集器 [SQL Server], Transact-SQL"
-  - "数据收集器 [SQL Server], SQL Server Management Studio"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "数据收集"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理数据收集
+# <a name="manage-data-collection"></a>管理数据收集
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。  
   
-## 使用 SSMS 管理数据收集  
- 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器可以执行以下与数据收集器相关的任务：  
+## <a name="manage-data-collection-using-ssms"></a>使用 SSMS 管理数据收集  
+ 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的对象资源管理器可以执行以下与数据收集器相关的任务：  
   
 -   [配置管理数据仓库 (SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [启动或停止收集组](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [查看收集组日志 (SQL Server Management Studio)](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [查看收集组报表 (SQL Server Management Studio)](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## 使用 Transact-SQL 管理数据收集  
- 数据收集器提供了一系列内容丰富的存储过程，这些过程可用于执行任何与数据收集器相关的任务。 例如，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 执行以下任务：  
+## <a name="manage-data-collection-using-transact-sql"></a>使用 Transact-SQL 管理数据收集  
+ 数据收集器提供了一系列内容丰富的存储过程，这些过程可用于执行任何与数据收集器相关的任务。 例如，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]执行以下任务：  
   
 -   [配置数据收集参数 (Transact-SQL)](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [启动或停止收集组](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [将收集项添加到收集组中 (Transact-SQL)](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**重要说明!!** 与常规存储过程不同的是，数据收集器存储过程使用严格类型化的参数，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
- 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建和执行提供的代码示例。 有关详细信息，请参阅[对象资源管理器](../../ssms/object/object-explorer.md)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 您可以从 Windows 命令提示符处使用 **sqlcmd** 实用程序执行查询。 有关详细信息，请参阅[使用 sqlcmd 实用工具](../../relational-databases/scripting/use-the-sqlcmd-utility.md)。  
+ 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建和执行提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。 或者，您可在任何编辑器中创建查询并将其保存为文件扩展名为 .sql 的文本文件。 您可以从 Windows 命令提示符处使用 **sqlcmd** 实用程序执行查询。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
   
-### 存储过程和视图  
+### <a name="stored-procedures-and-views"></a>存储过程和视图  
  **使用数据收集器**  
   
  下表介绍了使用数据收集器时可以使用的存储过程。  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|从执行日志删除收集组条目。|  
   
-### 函数  
+### <a name="functions"></a>函数  
  下表介绍了可用于获取执行和跟踪信息的函数。  
   
 |函数名称|说明|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|为收集组或包获取执行统计信息。 此信息包含所记录的错误。|  
 |[snapshots.fn_trace_getdata (Transact-SQL)](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|获取使用一般 SQL Trace 收集器类型收集数据时记录的事件。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [使用 SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)  
   
   
+

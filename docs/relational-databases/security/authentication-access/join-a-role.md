@@ -1,27 +1,31 @@
 ---
 title: "加入角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1"
-helpviewer_keywords: 
-  - "向角色中添加成员"
-  - "加入角色"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
+helpviewer_keywords:
+- adding a member to a role
+- join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 750dc366fde98b7d1c6514a2beeae4d7fd831c6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 加入角色
+# <a name="join-a-role"></a>加入角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中向登录名和数据库用户分配角色。 可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的角色高效地管理权限。 将权限分配给角色，然后在角色中添加和删除用户以及登录名。 通过使用角色，不必针对各个用户单独维护权限。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持四种类型的角色。  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   用户定义的数据库角色  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中会自动提供固定角色。 固定角色具有完成常见任务必需的权限。 有关固定角色的详细信息，请参阅以下链接。 用户定义的角色由您创建，并可使用选择的权限进行自定义。 有关用户定义角色的详细信息，请参阅以下链接。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中会自动提供固定角色。 固定角色具有完成常见任务必需的权限。 有关固定角色的详细信息，请参阅以下链接。 用户定义的角色由您创建，并可使用选择的权限进行自定义。 有关用户定义角色的详细信息，请参阅以下链接。  
   
  **本主题内容**  
   
@@ -61,11 +65,11 @@ caps.handback.revision: 13
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
- 要求对数据库具有 **ALTER ANY ROLE** 权限、对角色具有 **ALTER** 权限或具有 **db_securityadmin** 中的成员身份。  
+ 要求对数据库具有 **ALTER ANY ROLE** 权限、对角色具有 **ALTER** 权限或具有 **db_securityadmin**中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 向固定服务器角色添加成员  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>向固定服务器角色添加成员  
   
 1.  在“对象资源管理器”中，展开要在其中编辑固定服务器角色的服务器。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 13
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### 向用户定义的数据库角色添加成员  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>向用户定义的数据库角色添加成员  
   
 1.  在“对象资源管理器”中，展开要在其中编辑用户定义的数据库角色的服务器。  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 13
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 向固定服务器角色添加成员  
+#### <a name="to-add-a-member-to-a-fixed-server-role"></a>向固定服务器角色添加成员  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 13
   
  有关详细信息，请参阅 [ALTER ROLE (Transact-SQL)](../../../t-sql/statements/alter-role-transact-sql.md)。  
   
-#### 向用户定义的数据库角色添加成员  
+#### <a name="to-add-a-member-to-a-user-defined-database-role"></a>向用户定义的数据库角色添加成员  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -135,9 +139,10 @@ caps.handback.revision: 13
   
  有关详细信息，请参阅 [sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器级别角色](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [应用程序角色](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   
+

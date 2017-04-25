@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014121 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014121 错误"
+title: MSSQL_ENG014121 | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014121 error
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a8972728183fff1e679063cf48e1e20cd7b5089
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014121
+# <a name="mssqleng014121"></a>MSSQL_ENG014121
     
-## 消息详细信息  
+## <a name="message-details"></a>消息详细信息  
   
 |||  
 |-|-|  
@@ -31,16 +35,16 @@ caps.handback.revision: 13
 |符号名称||  
 |消息正文|无法删除分发服务器 '%s'。 此分发服务器与分发数据库相关联。|  
   
-## 解释  
+## <a name="explanation"></a>解释  
  配置为分发服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例无法从分发服务器的角色中删除，因为存在与此实例相关联的分发数据库。 如果试图删除与一个或多个发布服务器相关联的分发数据库，将发生此错误。  
   
-## 用户操作  
- 若要查找的所有发布服务器和与此分发服务器相关联的分发数据库的名称，请执行 [sp_helpdistpublisher & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md) 从分发服务器上的任何数据库。  
+## <a name="user-action"></a>用户操作  
+ 若要查找与此分发服务器关联的任何发布服务器和分发数据库的名称，请从分发服务器上的任何数据库中执行 [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)。  
   
- 执行 [sp_dropdistributiondb & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) 有关与此分发服务器关联的所有分发数据库。 删除所有分发数据库关联后，才可以禁用分发。  
+ 对与此分发服务器关联的任何分发数据库，执行 [sp_dropdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)。 删除所有分发数据库关联后，才可以禁用分发。  
   
-## 另请参阅  
- [错误和事件参考 & #40;复制和 #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+## <a name="see-also"></a>另请参阅  
+ [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  
   
   

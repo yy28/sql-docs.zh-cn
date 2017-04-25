@@ -1,26 +1,30 @@
 ---
 title: "修改索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [SQL Server], 修改"
-  - "修改索引"
-  - "索引更改 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], modifying
+- modifying indexes
+- index changes [SQL Server]
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改索引
+# <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引。  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 修改索引  
+#### <a name="to-modify-an-index"></a>修改索引  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -50,13 +54,13 @@ caps.handback.revision: 19
   
 5.  在 **“索引属性”** 对话框中进行所需的更改。 例如，您可以从索引键中添加或删除列，或更改索引选项的设置。  
   
-#### 修改索引列  
+#### <a name="to-modify-index-columns"></a>修改索引列  
   
 1.  若要添加、删除或更改索引列的位置，请从 **“索引属性”** 对话框中选择 **“常规”** 页。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 修改索引  
+#### <a name="to-modify-an-index"></a>修改索引  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 19
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
-#### 修改索引列  
+#### <a name="to-modify-index-columns"></a>修改索引列  
   
 1.  若要添加、删除或更改索引列的位置，您必须删除并重新创建该索引。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
@@ -84,3 +88,4 @@ caps.handback.revision: 19
  [重命名索引](../../relational-databases/indexes/rename-indexes.md)  
   
   
+

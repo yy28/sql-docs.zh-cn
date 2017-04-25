@@ -1,37 +1,41 @@
 ---
-title: "使用基于策略的管理来监视和强制执行最佳实践 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最佳实践 [数据库引擎]"
+title: "使用基于策略的管理来监视和强制执行最佳做法 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用基于策略的管理来监视和强制执行最佳实践
-  基于策略的管理可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的最佳实践。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
+# <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
+  基于策略的管理可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的最佳实践。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
-## 用于数据库引擎的策略和规则  
- 下表列出了安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时随附的策略，并且包含有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 有关如何导入策略的详细信息，请参阅[导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
+## <a name="policy-and-rules-for-database-engine"></a>用于数据库引擎的策略和规则  
+ 下表列出了安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时随附的策略，并且包含有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)。  
   
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  
 |非对称密钥加密算法|[非对称密钥加密强度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](../Topic/Backup%20Files%20Must%20Be%20on%20Separate%20Devices%20from%20the%20Database%20Files.md)|  
+|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |数据和日志文件位置|[将数据和日志文件放到不同的驱动器上](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |数据库自动关闭|[将 AUTO_CLOSE 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |数据库自动收缩|[将 AUTO_SHRINK 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](../Topic/Set%20the%20Collation%20of%20User-defined%20Databases%20to%20Match%20Those%20of%20the%20master%20and%20model%20Databases.md)|  
+|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |数据库页验证|[将 PAGE_VERIFY 数据库选项设置为 CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |数据库页状态|[检查包含可疑页的数据库的完整性](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Guest 权限|[对用户数据库的 Guest 权限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -65,7 +69,7 @@ caps.handback.revision: 27
 |Windows 事件日志中的存储系统 I_O 超时错误|[存储系统输入输出超时](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows 事件日志中的系统故障错误|[意外的系统故障](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理方面](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

@@ -1,25 +1,29 @@
 ---
 title: "事件通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知, 关于"
-  - "事件 [SQL Server], 通知"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications, about
+- events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 事件通知
+# <a name="event-notifications"></a>事件通知
   事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
   
  事件通知可以用来执行以下操作：  
@@ -30,7 +34,7 @@ caps.handback.revision: 18
   
  可以将事件通知用作替代 DDL 触发器和 SQL 跟踪的编程方法。  
   
-## 事件通知优点  
+## <a name="event-notifications-benefits"></a>事件通知优点  
  事件通知在事务范围以外异步运行。 因此，与 DDL 触发器不同，事件通知可以用于数据库应用程序中以响应事件而无需使用中间事务定义的任何资源。  
   
  与 SQL 跟踪不同，事件通知可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内部执行操作以响应 SQL 跟踪事件。  
@@ -47,12 +51,12 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
     '8140a771-3c4b-4479-8ac0-81008ab17984';  
 ```  
   
-## 事件通知概念  
+## <a name="event-notifications-concepts"></a>事件通知概念  
  创建事件通知时，将会在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例和指定的目标服务之间打开一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话。 通常会话保持为打开状态，只要事件通知作为一个对象存在于服务器实例中。 在某些出错情况下，会话可以在删除事件通知之前关闭。 这些会话从不在事件通知之间共享。 每个事件通知都有自己的排他会话。 显式结束会话将阻止目标服务接收更多消息，下一次事件通知激发时，会话将不会重新打开。  
   
  事件信息作为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 类型的变量传递给 **xml** 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)。  
   
-### 事件通知与触发器  
+### <a name="event-notifications-vs-triggers"></a>事件通知与触发器  
  下表对触发器和事件通知进行了比较。  
   
 |触发器|事件通知|  
@@ -69,7 +73,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |可以使用 EVENTDATA 函数（返回 **xml** 数据类型）捕获 DDL 触发器事件信息。|事件通知向 Service Broker 服务发送 **xml** 事件信息。 该信息被格式化为与 EVENTDATA 函数的架构相同的架构。|  
 |有关触发器的元数据可在 **sys.triggers** 和 **sys.server_triggers** 目录视图中找到。|有关事件通知的元数据可在 **sys.event_notifications** 和 **sys.server_event_notifications** 目录视图中找到。|  
   
-### 事件通知与SQL 跟踪  
+### <a name="event-notifications-vs-sql-trace"></a>事件通知与SQL 跟踪  
  下表对使用事件通知和 SQL 跟踪监视服务器事件进行比较和对照。  
   
 |SQL 跟踪|事件通知|  
@@ -86,7 +90,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |可以使用系统存储过程实现跟踪事件。|通过组合使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 语句实现事件通知。|  
 |通过查询相应的跟踪表、分析跟踪文件或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) TraceReader 类能够以编程方式访问跟踪事件数据。|可以通过对 XML 格式的事件数据执行 XQuery 或使用 SMO 事件类，以编程方式访问事件数据。|  
   
-## 事件通知任务  
+## <a name="event-notification-tasks"></a>事件通知任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -94,7 +98,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |介绍如何为发送消息到远程服务器中 Service Broker 的事件通知配置 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。|[配置事件通知的对话安全模式](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |介绍如何返回有关事件通知的信息。|[获取有关事件通知的信息](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)   
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

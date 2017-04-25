@@ -1,25 +1,29 @@
 ---
 title: "xml 数据类型的 FOR XML 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用户定义函数 [SQL Server], XML"
-  - "xml 数据类型 [SQL Server], FOR XML 子句"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# xml 数据类型的 FOR XML 支持
+# <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
   如果 FOR XML 查询在 SELECT 子句中指定了 **xml** 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 **xml** 类型的列中的任何 XML 声明都不是序列化的。  
   
  例如，下列查询将从 **xml** 类型的 `AdditionalContactInfo` 列中检索客户联系人信息（如 `BusinessEntityID``FirstName` 和 `LastName` 列以及电话号码）。  
@@ -140,14 +144,14 @@ for xml auto;
 </root>  
 ```  
   
-## 从用户定义的函数中返回 XML  
+## <a name="returning-xml-from-a-user-defined-function"></a>从用户定义的函数中返回 XML  
  可以使用 FOR XML 查询从用户定义函数返回 XML，该函数将返回下列任意一种结果：  
   
 -   含有单个 **xml** 类型列的表  
   
 -   **xml** 类型的实例  
   
- 例如，下面的用户定义的函数返回含有单个 **xml** 类型列的表：  
+ 例如，下面的用户定义的函数返回含有单个 **xml**类型列的表：  
   
 ```  
 USE AdventureWorks2012;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [各种 SQL Server 数据类型的 FOR XML 支持](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

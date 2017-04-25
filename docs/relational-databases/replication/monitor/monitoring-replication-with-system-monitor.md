@@ -1,27 +1,31 @@
 ---
 title: "使用系统监视器监视复制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "监视性能 [SQL Server 复制], 系统监视器"
-  - "系统监视器 [SQL Server], 复制"
-  - "性能计数器 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], System Monitor
+- System Monitor [SQL Server], replication
+- performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54dd40c16f8ee720f32b6775c54e7245eb5ed978
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用系统监视器监视复制
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系统监视器可以使用图形、 图表和报告来衡量您的计算机的效率和识别和解决可能出现的问题 （如资源使用不平衡、 硬件不足或程序设计），并规划其他硬件需求。 有关详细信息，请参阅 [监视资源使用情况和 #40;系统监视器 & #41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
+# <a name="monitoring-replication-with-system-monitor"></a>使用系统监视器监视复制
+  通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系统监视器，您可以使用图形、图表和报告来测量计算机的效率，确定并解决可能的问题（如资源使用不平衡、硬件不足或程序设计有问题等），以及针对其他硬件需求制定计划。 有关详细信息，请参阅[监视资源使用情况（系统监视器）](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)。  
   
  系统监视器使用性能对象和计数器，它们提供各种进程的性能信息。 您可以通过与复制代理相关联的计数器来测量复制的性能：  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 30
 |合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Downloaded Changes/sec|每秒从发布服务器复制到订阅服务器的行数。|  
 |合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|每秒从订阅服务器复制到发布服务器的行数。|  
   
-## 另请参阅  
- [监视和 #40;复制和 #41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+## <a name="see-also"></a>另请参阅  
+ [监视（复制）](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

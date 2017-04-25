@@ -1,35 +1,39 @@
 ---
 title: "监视内存使用量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "优化数据库 [SQL Server], 内存"
-  - "监视服务器性能 [SQL Server], 内存使用量"
-  - "隔离内存 [SQL Server]"
-  - "分页率 [SQL Server]"
-  - "内存 [SQL Server], 监视使用情况"
-  - "监视 [SQL Server], 内存使用量"
-  - "内存不足的情况"
-  - "数据库监视 [SQL Server], 内存使用量"
-  - "可用内存 [SQL Server]"
-  - "页错误 [SQL Server]"
-  - "监视性能 [SQL Server], 内存使用量"
-  - "服务器性能 [SQL Server], 内存"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# 监视内存使用量
+# <a name="monitor-memory-usage"></a>监视内存使用量
   定期监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例以确认内存使用量在正常范围内。  
   
  若要监视内存不足的情况，请使用下列对象计数器：  
@@ -42,12 +46,12 @@ caps.handback.revision: 26
   
  **Available Bytes** 计数器的值低表示计算机总内存不足或应用程序没有释放内存。 **Pages/sec** 计数器的比率高表示分页过多。 监视 **Memory: Page Faults/sec** 计数器以确保磁盘活动不是由分页导致。  
   
- 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 若要确定分页过多是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是由其他进程导致，请监视用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程实例的 **Process: Page Faults/sec** 计数器。  
+ 分页率偏低（以及由此产生的页错误）是正常的，即使计算机有大量的可用内存。 Microsoft Windows 虚拟内存管理器 (VMM) 在剪裁 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他进程的工作集大小时会收走这些进程的页。 此 VMM 活动会导致页错误。 若要确定分页过多是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是由其他进程导致，请监视用于 **进程实例的** Process: Page Faults/sec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计数器。  
   
  有关解决分页过多的详细信息，请参阅 Windows 操作系统文档。  
   
-## 隔离 SQL Server 所用的内存  
- 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前不需要分配给它的内存，它会将内存释放给操作系统。 但是，你可以覆盖此选项通过使用 **minservermemory** 和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
+## <a name="isolating-memory-used-by-sql-server"></a>隔离 SQL Server 所用的内存  
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据可用系统资源动态改变其内存要求。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要更多内存，它会查询操作系统以确定是否有可用的空闲物理内存，然后使用可用内存。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前不需要分配给它的内存，它会将内存释放给操作系统。 但是，你可以覆盖此选项通过使用 **minservermemory**和 **maxservermemory** 服务器配置选项来动态使用内存。 有关详细信息，请参阅 [服务器内存选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
  若要监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的内存量，请检查下列性能计数器：  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 26
   
  如果 **TotalServerMemory (KB)** 计数器值相对于计算机的物理内存量而言一直很高，则可能表示需要更多内存。  
   
-## 确定当前内存分配  
+## <a name="determining-current-memory-allocation"></a>确定当前内存分配  
  以下查询返回有关当前分配内存的信息。  
   
 ```  

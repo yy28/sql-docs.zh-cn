@@ -1,28 +1,32 @@
 ---
 title: "使用嵌套 AUTO 模式查询生成同级 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查询 [SQL Server 中的 XML], 嵌套 AUTO 模式"
-  - "嵌套 AUTO 模式查询"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用嵌套 AUTO 模式查询生成同级
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
   以下示例显示了如何使用嵌套 AUTO 模式查询来生成同级。 生成此类 XML 的其他方式只有这一种，即使用 EXPLICIT 模式。 但是，这样做可能会很麻烦。  
   
-## 示例  
+## <a name="example"></a>示例  
  此查询将构造用于提供销售订单信息的 XML。 其中包括：  
   
 -   销售订单表头信息、 `SalesOrderID`、 `SalesPersonID`和 `OrderDate`。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 将此信息存储在 `SalesOrderHeader` 表中。  
@@ -69,9 +73,9 @@ FOR XML AUTO, TYPE
   
 -   包括两个以逗号分隔的嵌套 `SELECT` 语句。 第一个嵌套 `SELECT` 语句检索销售订单信息、表头和详细信息，第二个嵌套 `SELECT` 语句检索销售人员信息。  
   
-    -   检索 `SELECT`、`SalesOrderID` 和 `SalesPersonID` 的 `CustomerID` 语句本身包括另一个返回销售订单详细信息的嵌套 `SELECT ... FOR XML` 语句（使用 `AUTO` 模式和 `TYPE` 指令）。  
+    -   检索 `SELECT` 、 `SalesOrderID`和 `SalesPersonID`的 `CustomerID` 语句本身包括另一个返回销售订单详细信息的嵌套 `SELECT ... FOR XML` 语句（使用 `AUTO` 模式和 `TYPE` 指令）。  
   
- 检索销售人员信息的 `SELECT` 语句查询在 `SalesPerson` 子句中创建的行集 `FROM`。 若要使用 `FOR XML` 查询，必须提供在 `FROM` 子句中生成的匿名行集的名称。 在本例中，提供的名称为 `SalesPerson`。  
+ 检索销售人员信息的 `SELECT` 语句查询在 `SalesPerson`子句中创建的行集 `FROM` 。 若要使用 `FOR XML` 查询，必须提供在 `FROM` 子句中生成的匿名行集的名称。 在本例中，提供的名称为 `SalesPerson`。  
   
  下面是部分结果：  
   
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

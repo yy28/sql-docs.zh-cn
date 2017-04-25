@@ -1,25 +1,29 @@
 ---
 title: "合并复制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "合并复制 [SQL Server 复制], 关于合并复制"
-  - "合并复制 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication [SQL Server replication], about merge replication
+- merge replication [SQL Server replication]
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eaf827f2da31a125dbfad5831553c0f15894e21
+ms.lasthandoff: 04/11/2017
+
 ---
-# 合并复制
+# <a name="merge-replication"></a>合并复制
   与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始， 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  
   
  合并复制通常用于服务器到客户端的环境中。 合并复制适用于下列各种情况：  
@@ -38,7 +42,7 @@ caps.handback.revision: 34
   
  合并复制是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照代理和合并代理实现的。 如果发布未经筛选或使用静态筛选器，快照代理将创建单个快照。 如果发布使用参数化筛选器，则快照代理将为每个数据分区创建一个快照。 合并代理将初始快照应用于订阅服务器。 它还将合并自初始快照创建后发布服务器或订阅服务器上所发生的增量数据更改，并根据所配置的规则检测和解决任何冲突。  
   
- 若要跟踪更改，合并复制（和带有排队更新订阅的事务复制）必须能够唯一地标识每个已发布表中的每一行。 若要完成这一合并复制将列添加 **rowguid** 向每个表，除非表中已有的数据类型列 **uniqueidentifier** 与 **ROWGUIDCOL** 属性设置 （在这种情况下使用此列）。 如果从发布中删除表，则删除 **rowguid** 列；如果将现有列用于跟踪，则不删除该列。 筛选器不能包含复制所用的 **rowguidcol** 来标识行。  **Newid （)** 提供了函数作为默认值为 **rowguid** 列中，但是客户可以为每个行提供 guid，如果需要。 但是，未提供值 00000000-0000-0000-0000-000000000000。  
+ 若要跟踪更改，合并复制（和带有排队更新订阅的事务复制）必须能够唯一地标识每个已发布表中的每一行。 为了完成这一合并复制，需要向每个表添加列 **rowguid** ，除非表中已包含一个数据类型为 **uniqueidentifier** 且设置了 **ROWGUIDCOL** 属性的列（这种情况下将使用此列）。 如果从发布中删除表，则删除 **rowguid** 列；如果将现有列用于跟踪，则不删除该列。 筛选器不能包含复制所用的 **rowguidcol** 来标识行。 提供 **newid()** 函数，为 **rowguid** 列提供默认值，但用户可以按需为每行提供 GUID。 不过，请不要提供值 00000000-0000-0000-0000-000000000000。  
   
  下面的关系图显示了合并复制中使用的组件。  
   

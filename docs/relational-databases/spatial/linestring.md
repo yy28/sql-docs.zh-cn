@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LineString 几何图形子类型 [SQL Server]"
-  - "几何图形子类型 [SQL Server]"
+title: LineString | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
+# <a name="linestring"></a>LineString
   **LineString** 是一个一维对象，表示一系列点和连接这些点的线段。  
   
-## LineString 实例  
+## <a name="linestring-instances"></a>LineString 实例  
  下图显示了 **LineString** 实例的示例。  
   
- ![几何 LineString 实例的示例](../../relational-databases/spatial/media/linestring.png "几何 LineString 实例的示例")  
+ ![几何 LineString 实例的示例](../../relational-databases/spatial/media/linestring.gif "几何 LineString 实例的示例")  
   
  如图中所示：  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   图 4 显示的是一个闭合、不简单的 **LineString** 实例，因此不是一个环。  
   
-### 已接受的实例  
+### <a name="accepted-instances"></a>已接受的实例  
  可以将已接受的 **LineString** 实例输入到一个几何图形变量中，但它们可能不是有效的 **LineString** 实例。 必须满足以下条件， **LineString** 实例才能被接受。 该实例必须由至少两个点组成，或者该实例必须为空。 下面是一些已接受的 LineString 实例。  
   
 ```  
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### 有效实例  
+### <a name="valid-instances"></a>有效实例  
  必须满足以下条件， **LineString** 实例才是有效的。  
   
 1.  **LineString** 实例必须是已接受的实例。  
@@ -85,7 +89,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 >  **LineString** 重叠的检测基于不精确的浮点计算。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面的示例说明如何创建一个包含三个点且 SRID 为 0 的 `geometry``LineString` 实例：  
   
 ```  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [STLength（geometry 数据类型）](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint（geometry 数据类型）](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint（geometry 数据类型）](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

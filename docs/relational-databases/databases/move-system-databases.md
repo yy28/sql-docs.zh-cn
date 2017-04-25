@@ -1,39 +1,43 @@
 ---
 title: "移动系统数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移动系统数据库"
-  - "灾难恢复 [SQL Server], 移动数据库文件"
-  - "数据库文件 [SQL Server], 移动"
-  - "数据文件 [SQL Server], 移动"
-  - "tempdb 数据库 [SQL Server], 移动"
-  - "系统数据库 [SQL Server], 移动"
-  - "计划的磁盘维护 [SQL Server]"
-  - "移动数据库"
-  - "msdb 数据库 [SQL Server], 移动"
-  - "移动数据库文件"
-  - "重定位数据库文件"
-  - "计划的数据库重定位 [SQL Server]"
-  - "master 数据库 [SQL Server], 移动"
-  - "模型数据库 [SQL Server], 移动"
-  - "资源数据库 [SQL Server]"
-  - "数据库 [SQL Server], 移动"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving system databases
+- disaster recovery [SQL Server], moving database files
+- database files [SQL Server], moving
+- data files [SQL Server], moving
+- tempdb database [SQL Server], moving
+- system databases [SQL Server], moving
+- scheduled disk maintenace [SQL Server]
+- moving databases
+- msdb database [SQL Server], moving
+- moving database files
+- relocating database files
+- planned database relocations [SQL Server]
+- master database [SQL Server], moving
+- model database [SQL Server], moving
+- Resource database [SQL Server]
+- databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e452cc778a0a677b9cb71e5e60605af436a31d18
+ms.lasthandoff: 04/11/2017
+
 ---
-# 移动系统数据库
+# <a name="move-system-databases"></a>移动系统数据库
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移动系统数据库。 移动系统数据库在下列情况下可能很有用：  
@@ -44,7 +48,7 @@ caps.handback.revision: 62
   
 -   为预定的磁盘维护操作而进行的重定位。  
   
- 下列过程适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例内移动数据库文件。 若要将数据库移动另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或另一台服务器上，请使用[备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)操作。  
+ 下列过程适用于在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例内移动数据库文件。 若要将数据库移动另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或另一台服务器上，请使用 [备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 操作。  
 
  本主题中的过程需要数据库文件的逻辑名称。 若要获取该名称，请在 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 目录视图中查询名称列。  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 62
 >  如果移动系统数据库并且随后重新生成 master 数据库，则必须再次移动系统数据库，因为重新生成操作会在默认位置安装所有系统数据库。  
 
 > [!IMPORTANT]  
->  移动文件之后，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问新文件的文件夹位置中的文件。
+>  移动文件之后， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问新文件的文件夹位置中的文件。
     
   
 ##  <a name="Planned"></a> 预先安排的重定位与预定的磁盘维护过程  
@@ -64,11 +68,11 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  将文件移动到新位置。  
 
-4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)。  
+4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或服务器。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 5.  通过运行以下查询来验证文件更改。  
   
@@ -78,9 +82,9 @@ caps.handback.revision: 62
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
- 如果移动了 msdb 数据库并为[数据库邮件](../../relational-databases/database-mail/database-mail.md)配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则请完成下列附加步骤。  
+ 如果移动了 msdb 数据库并为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库邮件 [配置了](../../relational-databases/database-mail/database-mail.md)实例，则请完成下列附加步骤。  
   
-1.  通过运行以下查询，验证是否已为 msdb 数据库启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
+1.  通过运行以下查询，验证是否已为 msdb 数据库启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。  
   
     ```  
     SELECT is_broker_enabled   
@@ -88,7 +92,7 @@ caps.handback.revision: 62
     WHERE name = N'msdb';  
     ```  
   
-     有关启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+     有关启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)中移动系统数据库。  
   
 2.  通过发送测试邮件来验证数据库邮件是否正常运行。  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 62
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  对于要移动的每个文件，请使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 运行以下语句。  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     有关使用 **sqlcmd** 实用工具的详细信息，请参阅[使用 sqlcmd 实用工具](../../relational-databases/scripting/use-the-sqlcmd-utility.md)。  
+     有关使用 **sqlcmd** 实用工具的详细信息，请参阅 [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
   
 4.  退出 **sqlcmd** 实用工具或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -173,7 +177,7 @@ caps.handback.revision: 62
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   
-8.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+8.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
 9. 通过运行以下查询，验证 master 数据库的文件更改。  
   
@@ -197,17 +201,17 @@ caps.handback.revision: 62
   
 -   更改数据库默认位置。 如果指定为默认位置的驱动器盘符和路径不存在，则可能无法创建新的数据库。  
   
-#### 更改 SQL Server 代理日志路径  
+#### <a name="change-the-sql-server-agent-log-path"></a>更改 SQL Server 代理日志路径  
   
 1.  从 SQL Server Management Studio 的对象资源管理器中，展开 **“SQL Server 代理”**。  
   
-2.  右键单击“错误日志”，然后单击“配置”。  
+2.  右键单击 **“错误日志”** ，然后单击 **“配置”**。  
   
 3.  在 **“配置 SQL Server 代理错误日志”** 对话框中，指定 SQLAGENT.OUT 文件的新位置。 默认位置为：C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\。  
   
-#### 更改数据库默认位置  
+#### <a name="change-the-database-default-location"></a>更改数据库默认位置  
   
-1.  从 SQL Server Management Studio 的对象资源管理器中，右键单击 SQL Server 所在服务器，然后单击“属性”。  
+1.  从 SQL Server Management Studio 的对象资源管理器中，右键单击 SQL Server 所在服务器，然后单击 **“属性”**。  
   
 2.  在 **“服务器属性”** 对话框中，选择 **“数据库设置”**。  
   
@@ -217,7 +221,7 @@ caps.handback.revision: 62
   
 ##  <a name="Examples"></a> 示例  
   
-### A. 移动 tempdb 数据库  
+### <a name="a-moving-the-tempdb-database"></a>A. 移动 tempdb 数据库  
  作为预先安排的重定位的一部分，下面的示例将 `tempdb` 数据和日志文件移动到一个新位置。  
   
 > [!NOTE]  
@@ -257,7 +261,7 @@ caps.handback.revision: 62
   
 5.  将 `tempdb.mdf` 和 `templog.ldf` 文件从其原始位置删除。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Resource 数据库](../../relational-databases/databases/resource-database.md)   
  [tempdb 数据库](../../relational-databases/databases/tempdb-database.md)   
  [master 数据库](../../relational-databases/databases/master-database.md)   
@@ -265,8 +269,9 @@ caps.handback.revision: 62
  [model 数据库](../../relational-databases/databases/model-database.md)   
  [移动用户数据库](../../relational-databases/databases/move-user-databases.md)   
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)   
- [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)  
   
   
+

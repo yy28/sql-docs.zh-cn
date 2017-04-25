@@ -1,31 +1,35 @@
 ---
 title: "在系统版本控制的临时表中修改数据 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在系统版本控制的临时表中修改数据
+# <a name="modifying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制的临时表中修改数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   系统版本控制的临时表中的数据使用常规的 DML 语句进行修改，但有一个重要的区别：无法直接修改时间段列数据。 当数据更新时，它就是版本控制的，每个已更新行的以前版本都将插入到历史记录表中。 当删除数据时，删除是逻辑的，行将从当前表格移动到历史记录表中 - 不会被永久删除。  
   
-## 插入数据  
+## <a name="inserting-data"></a>插入数据  
  当插入新数据时，如果它们不是 **HIDDEN** ，你需要对 **PERIOD**列作出说明。 你还可以对系统版本控制的临时表使用分区切换。  
   
-### 使用可见的时间段列插入新数据  
+### <a name="insert-new-data-with-visible-period-columns"></a>使用可见的时间段列插入新数据  
  当你有如下可见的 **PERIOD** 列用来说明新的 **PERIOD** 列时，则可以构建你的 **INSERT** 语句：  
   
 -   如果你在 **INSERT** 语句中指定列列表，则可以省略 **PERIOD** 列，因为系统将为这些列自动生成值。  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
   
     ```  
   
-### 将数据插入到具有 HIDDEN 时间段列的表中  
+### <a name="insert-data-into-a-table-with-hidden-period-columns"></a>将数据插入到具有 HIDDEN 时间段列的表中  
  如果 **PERIOD** 列被指定为 HIDDEN，那么当你使用 INSERT 且没有指定列列表时，你仅需要为可见的列指定值。 不需要对你的 **INSERT** 语句中的新的 **PERIOD** 列作出说明。 此行为保证当你对从版本控制中受益的表启用系统版本控制时，你的旧版应用程序将继续工作。  
   
 ```  
@@ -74,9 +78,9 @@ VALUES  ('Headquarters', 'New York');
   
 ```  
   
-### 使用 PARTITION SWITCH 插入数据  
+### <a name="inserting-data-using-partition-switch"></a>使用 PARTITION SWITCH 插入数据  
  如果当前表已分区，可以使用分区切换作为将数据加载到空分区或并行加载到多个分区的有效机制。   
-在 **PARTITION SWITCH IN** 语句中与系统版本控制的临时表配合使用的暂存表必须定义了 **SYSTEM_TIME PERIOD**，但它不需要成为系统版本控制的临时表。    
+在 **PARTITION SWITCH IN** 语句中与系统版本控制的临时表配合使用的暂存表必须定义了 **SYSTEM_TIME PERIOD** ，但它不需要成为系统版本控制的临时表。    
 这可确保在数据插入到暂存表期间或将 SYSTEM_TIME 时间段添加到预填充的暂存表时执行了临时的一致性检查。  
   
 ```  
@@ -121,11 +125,11 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
  如果你尝试在没有时间段定义的情况下从表中执行 PARTITION SWITCH，将收到错误消息： `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
-## 更新数据  
- 用常规的 **UPDATE** 语句在当前表中更新数据。 你可以将当前表中的数据从历史记录表更新到“哎呀”方案。 但是，无法更新 **PERIOD** 列且当 **SYSTEM_VERSIONING = ON** 时不能直接在历史记录表中更新数据。   
+## <a name="updating-data"></a>更新数据  
+ 用常规的 **UPDATE** 语句在当前表中更新数据。 你可以将当前表中的数据从历史记录表更新到“哎呀”方案。 但是，无法更新 **PERIOD** 列且当 **SYSTEM_VERSIONING = ON**时不能直接在历史记录表中更新数据。   
 设置 **SYSTEM_VERSIONING = OFF** 并从当前和历史记录表中更新行，但请记住，这样的话系统将不会保留更改的历史记录。  
   
-### 更新当前表  
+### <a name="updating-the-current-table"></a>更新当前表  
  在此示例中，对 DeptID = 10 的每一行都将更新 ManagerID 列。 **PERIOD** 列不会以任何方式引用。  
   
 ```  
@@ -144,7 +148,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
   
 ```  
   
-### 从历史记录表更新当前表  
+### <a name="updating-the-current-table-from-the-history-table"></a>从历史记录表更新当前表  
  可以对当前表使用 **UPDATE** 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。  
   
 ```  
@@ -157,14 +161,14 @@ AND Department.DeptID = 10 ;
   
 ```  
   
-## 删除数据  
+## <a name="deleting-data"></a>删除数据  
  用常规的 **DELETE** 语句在当前表中删除数据。 已删除行的结束时间段列将填充底层事物的开始时间。   
-当 **SYSTEM_VERSIONING = ON** 时不能直接从历史记录表删除行。   
+当 **SYSTEM_VERSIONING = ON**时不能直接从历史记录表删除行。   
 设置 **SYSTEM_VERSIONING = OFF** 并从当前和历史记录表中删除行，但请记住，这样的话系统将不会保留更改的历史记录。   
-**SYSTEM_VERSIONING = ON** 时，不支当前表的 **TRUNCATE** 和 **SWITCH PARTITION OUT**，以及历史记录表的 **SWITCH PARTITION IN**。  
+**SYSTEM_VERSIONING = ON**时，不支当前表的 **TRUNCATE** 和 **SWITCH PARTITION OUT** ，以及历史记录表的 **SWITCH PARTITION IN**。  
   
-## 使用 MERGE 在临时表中修改数据  
- 支持**MERGE** 操作，有关 **UPDATE** 列方面的限制与 **INSERT** 和 **UPDATE** 语句的相同。  
+## <a name="using-merge-to-modify-data-in-temporal-table"></a>使用 MERGE 在临时表中修改数据  
+ 支持**MERGE** 操作，有关 **INSERT** 列方面的限制与 **INSERT** 和 **UPDATE** 语句的相同。  
   
 ```  
 CREATE TABLE DepartmentStaging (DeptId INT, DeptName varchar(50));   
@@ -185,10 +189,10 @@ WHEN NOT MATCHED THEN
   
 ```  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   
  [创建由系统控制版本的临时表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
  [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
@@ -196,3 +200,4 @@ WHEN NOT MATCHED THEN
  [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

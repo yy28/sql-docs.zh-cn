@@ -1,22 +1,26 @@
 ---
 title: "修改分区方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改分区方案
+# <a name="modify-a-partition-scheme"></a>修改分区方案
   通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  
   
  **本主题内容**  
@@ -54,7 +58,7 @@ caps.handback.revision: 10
   
  无法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行此特定操作。 若要修改某个分区方案，您必须先删除该方案，然后通过创建分区向导使用所需属性创建一个新方案。 有关详细信息，请参阅 [“创建已分区表和已分区索引”](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[下的](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) Create Partitioned Tables and Indexes **Using SQL Server Management Studio**。  
   
-#### 删除分区方案  
+#### <a name="to-delete-a-partition-scheme"></a>删除分区方案  
   
 1.  单击加号以便展开要删除分区方案的数据库。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 修改分区方案  
+#### <a name="to-modify-a-partition-scheme"></a>修改分区方案  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

@@ -1,32 +1,36 @@
 ---
-title: "用复制监视器监视性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "监视性能 [SQL Server 复制], 复制监视器"
-  - "日志读取器代理, 监视"
-  - "复制监视器, 性能"
-  - "合并代理, 监视"
-  - "队列读取器代理, 监视"
-  - "快照代理, 监视"
-  - "分发代理, 监视"
-  - "监视性能 [SQL Server 复制]"
+title: "使用复制监视器监视性能 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Log Reader Agent, monitoring
+- Replication Monitor, performance
+- Merge Agent, monitoring
+- Queue Reader Agent, monitoring
+- Snapshot Agent, monitoring
+- Distribution Agent, monitoring
+- monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae1be084b689f760b6d10db4d7d975b0489048f7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 用复制监视器监视性能
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，您可以通过以下列方式监视事务复制和合并复制性能：  
+# <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
+  通过使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，您可以通过以下列方式监视事务复制和合并复制性能：  
   
 -   设置警告和阈值  
   
@@ -38,8 +42,8 @@ caps.handback.revision: 36
   
 -   查看事务和传递时间（事务复制）  
   
-## 设置警告和阈值  
- 复制监视器允许为大量性能条件启用警告。 启用警告时，需要指定阈值。 当达到或超过该阈值时，警告将显示在 **状态** 的订阅和与其进行同步 （除非需要显示具有较高优先级的问题） 的发布的列。 除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 可以为下列性能条件启用警告：  
+## <a name="set-warnings-and-thresholds"></a>设置警告和阈值  
+ 复制监视器允许为大量性能条件启用警告。 启用警告时，需要指定阈值。 达到或超过该阈值时，在与其进行同步的订阅和发布的 **“状态”** 列中将显示警告（除非需要显示更高优先级的问题）。 除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 可以为下列性能条件启用警告：  
   
 -   超过指定的滞后时间（从事务在发布服务器上提交到相应的事务在订阅服务器上提交之间间隔的时间）。  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 36
   
 -   超出了指定的同步时间。  
   
-     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **长时间运行的合并**。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
+     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“长时间运行的合并”**。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
   
 -   在给定时间内未处理完指定的行数。  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 36
   
  有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
-## 查看性能度量值  
+## <a name="view-performance-measurements"></a>查看性能度量值  
  对于发布，复制监视器在 **“当前平均性能”** 和 **“当前最差的性能”** 列中显示事务复制和合并复制的性能质量值；对于订阅，复制监视器在 **“性能”** 列中显示这些值。 这些值有：  
   
 -   很好  
@@ -76,7 +80,7 @@ caps.handback.revision: 36
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
--   对于合并复制，性能质量是独立于任意一个阈值 (行处理阈值确定如果值为 **性能关键** 中显示 **状态** 列)。 性能质量通过将具有相同连接类型（拨号或 LAN）的发布的单个订阅性能与订阅的平均历史性能进行比较来确定。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果包含 50 或 50 多次更改的同步不到五次，或最新同步中的更改少于 50 次，复制监视器将不显示值。  
+-   对于合并复制，性能质量独立于任意一个阈值（行处理阈值确定是否在 **“状态”** 列中显示 **“‘严重’状态下的性能”** 值）。 性能质量通过将具有相同连接类型（拨号或 LAN）的发布的单个订阅性能与订阅的平均历史性能进行比较来确定。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果包含 50 或 50 多次更改的同步不到五次，或最新同步中的更改少于 50 次，复制监视器将不显示值。  
   
      下表显示了平均性能与性能质量值之间的相关性。 例如，如果在 LAN 连接上有 10 个订阅服务器以每秒 100 行的平均速率进行同步，而其中一个订阅以每秒 125 行的速率进行同步（即该订阅服务器的同步性能的平均值为 125%），则性能质量值为“好”。  
   
@@ -84,19 +88,19 @@ caps.handback.revision: 36
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- 如何查看订阅信息的详细信息，请参阅 [查看信息和订阅和 #40; 执行的任务复制监视器 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 如何查看订阅信息的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
-## 使用跟踪令牌确定滞后时间  
+## <a name="determine-latency-with-tracer-tokens"></a>使用跟踪令牌确定滞后时间  
  事务复制使您可以通过在发布数据库的事务日志中插入一个令牌（少量数据）并记录到达分发服务器和订阅服务器所用的时间，来测量系统的滞后时间。 使用令牌还可以识别数据是否未到达分发服务器或订阅服务器。 有关详细信息，请参阅 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
-## 查看合并复制的详细同步性能  
- 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 查看详细统计信息的详细信息，请参阅 [查看信息并执行任务的代理与订阅相关 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>查看合并复制的详细同步性能  
+ 对于合并复制，复制监视器会显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息的详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 查看事务及事务复制的传递时间  
- 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅 [查看信息并执行任务的代理与订阅相关 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>查看事务及事务复制的传递时间  
+ 对于事务复制，复制监视器显示分发数据库中尚未分发到订阅服务器的事务数以及分发这些事务的估计时间的信息。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [在复制监视器中设置阈值和警告](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

@@ -1,26 +1,30 @@
 ---
 title: "管理和监视服务器实例的全文搜索 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文搜索 [SQL Server], 关于"
-  - "全文搜索 [SQL Server], 服务器管理"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理和监视服务器实例的全文搜索
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
   针对服务器实例的全文管理包括：  
   
 -   诸如管理 FDHOST Launcher 服务 (MSSQLFDLauncher)、重新启动筛选器后台程序宿主进程（如果您更改服务帐户凭据）、配置服务器范围内的全文属性以及备份全文目录之类的系统管理任务。 例如，在服务器级，您可以指定在整体上与服务器实例的默认语言不同的默认全文语言。  
@@ -30,9 +34,9 @@ caps.handback.revision: 19
 -   配置用户数据库以进行全文搜索。 这涉及为数据库创建一个或多个全文目录并对每个要对其执行全文查询的表或索引视图定义一个全文索引。  
   
 ##  <a name="props"></a> 查看和更改全文搜索的服务器属性  
- 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实例的全文属性。  
+ 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例的全文属性。  
   
-#### 查看和更改全文搜索的服务器属性  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
   
 1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”。  
   
@@ -49,14 +53,14 @@ caps.handback.revision: 19
          可以选择的选项如下：  
   
          **导入**  
-         导入全文目录。 一般情况下，导入速度比重新生成速度要快很多。 例如，当仅使用一个 CPU 时，导入的运行速度比重新生成要快 10 倍左右。 不过，导入的全文目录不能使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新的和增强的断字符，因此最终可能还是要重新生成全文目录。  
+         导入全文目录。 一般情况下，导入速度比重新生成速度要快很多。 例如，当仅使用一个 CPU 时，导入的运行速度比重新生成要快 10 倍左右。 不过，导入的全文目录不能使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中引入的新的和增强的断字符，因此最终可能还是要重新生成全文目录。  
   
         > [!NOTE]  
         >  重新生成可以以多线程模式运行，如果可用的 CPU 在 10 个以上，且您允许重新生成操作使用所有这些 CPU，则重新生成操作的运行速度可能比导入更快。  
   
          如果全文目录不可用，则会重新生成关联的全文检索。 此选项仅对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库可用。  
   
-         **Rebuild**  
+         **“重新生成”**  
          使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
          **重置**  
@@ -74,9 +78,9 @@ caps.handback.revision: 19
   
 |属性|说明|函数|  
 |--------------|-----------------|--------------|  
-|**IsFullTextInstalled**|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例中。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
+|**IsFullTextInstalled**|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例中。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  
-|**LoadOSResources**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  
+|**LoadOSResources**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|指定全文引擎是否只加载已签名的二进制文件。|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> 监视全文搜索活动  

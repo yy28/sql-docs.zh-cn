@@ -1,24 +1,28 @@
 ---
 title: "启用 FileTable 的先决条件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 先决条件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 启用 FileTable 的先决条件
+# <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
   介绍如何启用创建和使用 FileTable 的先决条件。  
   
 ##  <a name="EnablePrereq"></a> 启用 FileTable 的先决条件  
@@ -37,21 +41,21 @@ caps.handback.revision: 25
     -   [在数据库级别指定 FileTable 的目录](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> 在实例级别启用 FILESTREAM  
- FileTable 扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 FILESTREAM 功能。 因此，在创建和使用 FileTable 前，必须在 Windows 级别和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上启用 FILESTREAM 用于文件 I/O 访问。  
+ FileTable 扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 FILESTREAM 功能。 因此，在创建和使用 FileTable 前，必须在 Windows 级别和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上启用 FILESTREAM 用于文件 I/O 访问。  
   
 ###  <a name="HowToFilestream"></a> 如何在实例级别启用 FILESTREAM  
- 有关如何启用 FILESTREAM 的信息，请参阅[启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
+ 有关如何启用 FILESTREAM 的信息，请参阅 [启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
- 当你通过调用 **sp_configure** 在实例级别启用 FILESTREAM 时，必须将 filestream_access_level 选项设置为 2。 有关详细信息，请参阅[文件流访问级别服务器配置选项](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
+ 当你通过调用 **sp_configure** 在实例级别启用 FILESTREAM 时，必须将 filestream_access_level 选项设置为 2。 有关详细信息，请参阅 [文件流访问级别服务器配置选项](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
   
 ###  <a name="firewall"></a> 如何允许 FILESTREAM 通过防火墙  
  有关如何允许 FILESTREAM 通过防火墙的信息，请参阅 [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)。  
   
 ##  <a name="filegroup"></a> 在数据库级别提供 FILESTREAM 文件组  
- 数据库必须首先具有 FILESTREAM 文件组，然后您才能在该数据库中创建 FileTable。 有关此先决条件的详细信息，请参阅[创建启用了 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md)。  
+ 数据库必须首先具有 FILESTREAM 文件组，然后您才能在该数据库中创建 FileTable。 有关此先决条件的详细信息，请参阅 [创建启用了 FILESTREAM 的数据库](../../relational-databases/blob/create-a-filestream-enabled-database.md)。  
   
 ##  <a name="BasicsNTAccess"></a> 在数据库级别启用非事务性访问  
- FileTable 使 Windows 应用程序可以获取 FILESTREAM 数据的 Windows 文件句柄而不需要事务。 为了允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的文件进行此非事务性访问，您必须为要包含 FileTable 的每个数据库在数据库级别上指定所需的非事务性访问级别。  
+ FileTable 使 Windows 应用程序可以获取 FILESTREAM 数据的 Windows 文件句柄而不需要事务。 为了允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件进行此非事务性访问，您必须为要包含 FileTable 的每个数据库在数据库级别上指定所需的非事务性访问级别。  
   
 ###  <a name="HowToCheckAccess"></a> 如何检查是否在数据库上启用了非事务性访问  
  查询目录视图 [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 并检查 **non_transacted_access** 和 **non_transacted_access_desc** 列。  
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   **还原数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 语句。  
+-   **还原数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -138,15 +142,15 @@ GO
   
 ###  <a name="ReqDirectory"></a> 数据库级别目录的要求和限制  
   
--   在调用 **CREATE DATABASE** 或 **ALTER DATABASE** 时，设置 **DIRECTORY_NAME** 是可选的。 如果未指定 **DIRECTORY_NAME** 的值，则目录名称仍是 Null。 但不能在数据库中创建 FileTable，直到在数据库级别指定了 **DIRECTORY_NAME** 的值。  
+-   在调用 **CREATE DATABASE** 或 **ALTER DATABASE** 时，设置 **DIRECTORY_NAME**是可选的。 如果未指定 **DIRECTORY_NAME**的值，则目录名称仍是 Null。 但不能在数据库中创建 FileTable，直到在数据库级别指定了 **DIRECTORY_NAME** 的值。  
   
 -   您提供的目录名称必须符合文件系统对有效目录名称的要求。  
   
 -   当数据库包含 FileTable 时，不能将 **DIRECTORY_NAME** 设置回为 Null 值。  
   
--   附加或还原数据库时，如果新数据库的 **DIRECTORY_NAME** 值在目标实例中已存在，则该操作失败。 调用 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 时，指定 **DIRECTORY_NAME** 的唯一值。  
+-   附加或还原数据库时，如果新数据库的 **DIRECTORY_NAME** 值在目标实例中已存在，则该操作失败。 调用 **CREATE DATABASE FOR ATTACH** 或 **RESTORE DATABASE** 时，指定 **DIRECTORY_NAME**的唯一值。  
   
--   当将现有数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，**DIRECTORY_NAME** 的值为 Null。  
+-   当将现有数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时， **DIRECTORY_NAME** 的值为 Null。  
   
 -   在数据库级别启用或禁用非事务性访问时，该操作不检查是否已指定目录名称或该名称是否唯一。  
   

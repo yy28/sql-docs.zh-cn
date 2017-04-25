@@ -1,29 +1,33 @@
 ---
 title: "启用索引和约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [SQL Server], 启用"
-  - "非聚集索引 [SQL Server], 启用已禁用的索引"
-  - "索引启用 [SQL Server]"
-  - "禁用的索引 [SQL Server], 如何启用"
-  - "约束 [SQL Server], 启用"
-  - "聚集的索引, 启用已禁用的索引"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 启用索引和约束
+# <a name="enable-indexes-and-constraints"></a>启用索引和约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中启用已禁用的索引。 索引被禁用后一直保持禁用状态，直到它重新生成或删除。  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 启用禁用的索引  
+#### <a name="to-enable-a-disabled-index"></a>启用禁用的索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要启用索引的表的数据库。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 27
   
 6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   
-#### 为表启用所有索引  
+#### <a name="to-enable-all-indexes-on-a-table"></a>为表启用所有索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要启用索引的表的数据库。  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 使用 ALTER INDEX 启用已禁用的索引  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>使用 ALTER INDEX 启用已禁用的索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 使用 CREATE INDEX 启用已禁用的索引  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>使用 CREATE INDEX 启用已禁用的索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -146,7 +150,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 使用 DBCC DBREINDEX 启用已禁用的索引  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>使用 DBCC DBREINDEX 启用已禁用的索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 使用 ALTER INDEX 启用表上的所有索引  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>使用 ALTER INDEX 启用表上的所有索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -181,7 +185,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### 使用 DBCC DBREINDEX 启用表上的所有索引  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>使用 DBCC DBREINDEX 启用表上的所有索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)、[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) 和 [DBCC DBREINDEX (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)。  
   
   
+

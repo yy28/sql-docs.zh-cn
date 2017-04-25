@@ -1,29 +1,33 @@
 ---
 title: "生成脚本 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 生成脚本 (SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用 **“生成和发布脚本向导”**为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”**菜单为单个对象或多个对象生成脚本。  
   
-1.  **选择一种方法：**  [生成和发布脚本向导](#GenPubScriptWiz)、 [对象资源管理器“编写脚本为”菜单](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **若要使用“编写脚本为”菜单：**  [编写单个对象的脚本](#ScriptSingleObject)、 [使用对象资源管理器为两个对象编写脚本](#ScriptTwoObjectsOE)、 [使用对象资源管理器详细信息为两个对象编写脚本](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## 开始之前  
+## <a name="before-you-begin"></a>开始之前  
  选择最能满足您的需求的机制。  
   
 ###  <a name="GenPubScriptWiz"></a> 生成和发布脚本向导  

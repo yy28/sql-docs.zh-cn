@@ -1,35 +1,39 @@
 ---
 title: "启用和禁用更改跟踪 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "更改跟踪 [SQL Server], 禁用"
-  - "数据更改 [SQL Server]"
-  - "更改跟踪 [SQL Server], 启用"
-  - "跟踪数据更改 [SQL Server]"
-  - "更改跟踪 [SQL Server], 配置"
-  - "数据 [SQL Server], 更改"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 启用和禁用更改跟踪 (SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>启用和禁用更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   本主题说明如何对数据库和表启用和禁用更改跟踪。  
   
-## 对数据库启用更改跟踪  
- 您必须先在数据库级别启用更改跟踪，然后才能使用更改跟踪。 下面的示例显示了如何使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)来启用更改跟踪。  
+## <a name="enable-change-tracking-for-a-database"></a>对数据库启用更改跟踪  
+ 您必须先在数据库级别启用更改跟踪，然后才能使用更改跟踪。 下面的示例显示了如何使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)来启用更改跟踪。  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 你还可以通过使用[数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md)对话框在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中启用更改跟踪。  
+ 你还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 数据库属性（“ChangeTracking”页） [数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md) 中启用更改跟踪。  
   
  可以在启用更改跟踪时指定 CHANGE_RETENTION 和 AUTO_CLEANUP 选项，并且可以在启用更改跟踪后随时更改这些值。  
   
@@ -51,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
 -   使用快照隔离是帮助确保所有更改跟踪信息保持一致的最简单方式。 因此，我们强烈建议将数据库的快照隔离设为 ON。 有关详细信息，请参阅[处理更改跟踪 (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)。  
   
-## 对表启用更改跟踪  
+## <a name="enable-change-tracking-for-a-table"></a>对表启用更改跟踪  
  对于要跟踪的每个表都必须启用更改跟踪。 启用更改跟踪后，将会为表中受 DML 操作影响的所有行保留更改跟踪信息。  
   
  下面的示例显示了如何使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)来对表启用更改跟踪。  
@@ -62,14 +66,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- 你还可以通过使用[数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md)对话框在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对表启用更改跟踪。  
+ 你还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 数据库属性（“ChangeTracking”页） [数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md) 中启用更改跟踪。  
   
- 当 TRACK_COLUMNS_UPDATED 选项设为 ON 时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会将有关哪些列已更新的额外信息存储到内部更改跟踪表中。 列跟踪使应用程序可以只同步那些已更新的列。 这可以提高效率和性能。 但是，由于保留列跟踪信息增加了一些额外的存储开销，因而默认情况下此选项设为 OFF。  
+ 当 TRACK_COLUMNS_UPDATED 选项设为 ON 时， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会将有关哪些列已更新的额外信息存储到内部更改跟踪表中。 列跟踪使应用程序可以只同步那些已更新的列。 这可以提高效率和性能。 但是，由于保留列跟踪信息增加了一些额外的存储开销，因而默认情况下此选项设为 OFF。  
   
-## 为数据库或表禁用更改跟踪  
- 必须首先为所有启用了更改跟踪的表禁用更改跟踪，然后才能将数据库的更改跟踪设为 OFF。 若要确定数据库中哪些表启用了更改跟踪，请使用 [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md) 目录视图。  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>为数据库或表禁用更改跟踪  
+ 必须首先为所有启用了更改跟踪的表禁用更改跟踪，然后才能将数据库的更改跟踪设为 OFF。 若要确定数据库中哪些表启用了更改跟踪，请使用 [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) 目录视图。  
   
- 当数据库中没有用于跟踪更改的表时，便可以禁用数据库的更改跟踪。 下面的示例显示如何使用 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)对数据库禁用更改跟踪。  
+ 当数据库中没有用于跟踪更改的表时，便可以禁用数据库的更改跟踪。 下面的示例显示如何使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)对数据库禁用更改跟踪。  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,14 +87,15 @@ ALTER TABLE Person.Contact
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库属性（“ChangeTracking”页）](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases (Transact-SQL)](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables (Transact-SQL)](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [处理变更数据 (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [管理更改跟踪 (SQL Server)](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

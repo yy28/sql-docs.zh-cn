@@ -1,28 +1,32 @@
 ---
 title: "内存优化顾问 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.memoryoptimizationwizard.f1"
-  - "sql13.swb.memoryoptimizationwizard.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.memoryoptimizationwizard.f1
+- sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存优化顾问
+# <a name="memory-optimization-advisor"></a>内存优化顾问
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  借助事务性能分析报告（请参阅[确定是否应将表或存储过程移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)），你可以了解数据库中的哪些表在移植后使用内存中 OLTP 会给你带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用 SQL Server Management Studio 中的内存优化顾问帮助你将基于磁盘的表迁移到内存优化的表中。  
+  借助事务性能分析报告（请参阅 [确定是否应将表或存储过程移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)），你可以了解数据库中的哪些表在移植后使用内存中 OLTP 会给你带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用 SQL Server Management Studio 中的内存优化顾问帮助你将基于磁盘的表迁移到内存优化的表中。  
   
  借助内存优化顾问，你可以：  
   
@@ -30,19 +34,19 @@ caps.handback.revision: 17
   
 -   将表和数据迁移到内存优化表中（如果使用的功能均受支持的话）。  
     
- 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。  
   
-## 使用内存优化顾问进行演练  
- 在“对象资源管理器”中，右键单击要转换的表，然后选择“内存优化顾问”。 这将显示 **“表内存优化顾问”**的欢迎使用页。  
+## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
+ 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”**的欢迎使用页。  
   
-### 内存优化核对清单  
- 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”**时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 “表内存优化顾问”不会修改基于磁盘的表，以便可以迁移它以使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处，“表内存优化顾问”都会显示一个链接，指向可帮助你修改基于磁盘的表的信息。  
+### <a name="memory-optimization-checklist"></a>内存优化核对清单  
+ 当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”**时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
   
  如果您想要保留这些不兼容之处的列表以便计划您的迁移，则单击 **“生成报表”** 以便生成一个 HTML 列表。  
   
- 如果你的表没有不兼容之处并且连接到了具有内存中 OLTP 的某一 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例，则单击“下一步”。  
+ 如果您的表没有不兼容之处并且连接到了具有内存中 OLTP 的某一 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例，则单击 **“下一步”**。  
   
-### 内存优化警告  
+### <a name="memory-optimization-warnings"></a>内存优化警告  
  下一页“内存优化警告”包含问题的列表，这些问题不会阻止表迁移到使用内存中 OLTP，但这些问题可能导致其他对象（例如存储过程或 CLR 函数）的行为失败或者导致意外行为。  
   
  该列表中的前几个警告仅供参考，不一定适用于您的表。 该表的右键单击列中的链接将会给您提供更多的信息。  
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
  单击 **“生成报表”** 可生成包含这些警告的 HTML 报表。 单击 **“下一步”** 继续。  
   
-### 检查优化选项  
+### <a name="review-optimization-options"></a>检查优化选项  
  下一个屏幕可用于修改用于迁移到内存中 OLTP 的选项：  
   
  内存优化的文件组  
@@ -91,12 +95,12 @@ caps.handback.revision: 17
   
  单击 **“下一步”** 继续。  
   
-### 检查主键转换  
+### <a name="review-primary-key-conversion"></a>检查主键转换  
  下一个屏幕是 **“检查主键转换”**。 内存优化顾问将检测到表中是否有一个或多个主键，并且基于主键元数据填充列的列表。 否则，如果您想要迁移到持久的内存优化表，则必须创建主键。  
   
  如果主键不存在并且该表正迁移到非持久表，则该屏幕将不会出现。  
   
- 对于文本列（类型为 **char**、**nchar**、**varchar** 和 **nvarchar** 的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](../Topic/Collations%20and%20Code%20Pages.md) 。  
+ 对于文本列（类型为 **char**、 **nchar**、 **varchar**和 **nvarchar**的列），必须选择相应的排序规则。 对于内存优化表上的列，内存中 OLTP 仅支持 BIN2 排序规则，并且不支持具有增补字符的排序规则。 有关支持的排序规则以及排序规则中更改的潜在影响的信息，请参阅 [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 。  
   
  可为主键配置以下参数：  
   
@@ -110,23 +114,23 @@ caps.handback.revision: 17
   
 -   NONCLUSTERED 索引。 此类型的索引最适合于具有许多范围查询的索引。 您可以在 **“排序列和顺序”** 列表中配置每一列的排序顺序。  
   
- 若要了解最适合你的主键的索引的类型，请参阅[哈希索引](../Topic/Hash%20Indexes.md)。  
+ 若要了解最适合你的主键的索引的类型，请参阅 [哈希索引](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
   
  在选择了您的主键后单击 **“下一步”** 。  
   
-### 检查索引转换  
+### <a name="review-index-conversion"></a>检查索引转换  
  下一页是 **“检查索引转换”**。 内存优化顾问将检测到表中是否有一个或多个索引，并且填充列的列表和数据类型。 您在 **“检查索引转换”** 页中可以配置的参数类似于前一页 **“检查主键转换”** 。  
   
  如果该表仅具有主键并且正迁移到持久表，则该屏幕将不会出现。  
   
  在确定了表中的每个索引后，单击 **“下一步”**。  
   
-### 验证迁移操作  
+### <a name="verify-migration-actions"></a>验证迁移操作  
  下一页是 **“验证迁移操作”**。 若要编写迁移操作的脚本，请单击 **“脚本”** 以便生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 然后，您可以修改并且执行该脚本。 单击 **“迁移”** 可开始表迁移。  
   
- 在完成该过程后，刷新“对象资源管理器”可查看新的内存优化表和旧的基于磁盘的表。 您可以保留旧表或者在方便时删除它。  
+ 在完成该过程后，刷新 **对象资源管理器** 可查看新的内存优化表和旧的基于磁盘的表。 您可以保留旧表或者在方便时删除它。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

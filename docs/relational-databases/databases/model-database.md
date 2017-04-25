@@ -1,26 +1,30 @@
 ---
 title: "model 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模板数据库 [SQL Server]"
-  - "模型数据库 [SQL Server]，关于模型数据库"
-  - "model 数据库 [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- template databases [SQL Server]
+- model database [SQL Server], about model databases
+- model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# model 数据库
+# <a name="model-database"></a>model 数据库
   **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
   
  新创建的用户数据库与 model 数据库使用相同的 [恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md) 。 默认值是用户可配置的。 若要了解模式的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
@@ -28,12 +32,12 @@ caps.handback.revision: 52
 > [!IMPORTANT]  
 >  如果用特定于用户的模板信息修改 **model** 数据库，我们建议您备份 **model**。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
-## model 的用法  
+## <a name="model-usage"></a>model 的用法  
  当发出 CREATE DATABASE 语句时，将通过复制 **model** 数据库中的内容来创建数据库的第一部分， 然后用空页填充新数据库的剩余部分。  
   
  如果修改 **model** 数据库，之后创建的所有数据库都将继承这些修改。 例如，可以设置权限或数据库选项或者添加对象，例如，表、函数或存储过程。 **model** 数据库的文件属性是一个例外且会被忽略（数据文件的初始大小除外）。 模型数据库数据和日志文件的默认初始大小为 8 MB。  
   
-## model 的物理属性  
+## <a name="physical-properties-of-model"></a>model 的物理属性  
  下表列出了 **model** 数据和日志文件的初始配置值。  
   
 |文件|逻辑名称|物理名称|文件增长|  
@@ -41,11 +45,11 @@ caps.handback.revision: 52
 |主数据|modeldev|model.mdf|以 64 MB 的速度自动增长到磁盘充满为止。|  
 |日志|modellog|modellog.ldf|以 64 MB 的速度自动增长到最大 2 TB。|  
   
- 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，请参阅[模型数据库](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)以了解默认的文件增长值。  
+ 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]之前的版本，请参阅 [模型数据库](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)以了解默认的文件增长值。  
   
- 若要移动 **model** 数据库或日志文件，请参阅[移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
+ 若要移动 **model** 数据库或日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   
-### 数据库选项  
+### <a name="database-options"></a>数据库选项  
  下表列出了 **model** 数据库中每个数据库选项的默认值以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 |数据库选项|默认值|是否可修改|  
@@ -84,7 +88,7 @@ caps.handback.revision: 52
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
-## 限制  
+## <a name="restrictions"></a>限制  
  不能在 **model** 数据库中执行下列操作：  
   
 -   添加文件或文件组。  
@@ -111,7 +115,7 @@ caps.handback.revision: 52
   
 -   使用 WITH ENCRYPTION 选项创建过程、视图或触发器。 加密密钥与在其中创建对象的数据库绑定在一起。 在 **model** 数据库中创建的加密对象只能用于 **model**中。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [系统数据库](../../relational-databases/databases/system-databases.md)  
   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
@@ -121,3 +125,4 @@ caps.handback.revision: 52
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
   
+

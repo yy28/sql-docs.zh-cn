@@ -1,27 +1,31 @@
 ---
 title: "修改 CHECK 约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CHECK 约束, 修改"
-  - "修改约束"
-  - "约束 [SQL Server], 检查"
-  - "约束 [SQL Server], 修改"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CHECK constraints, modifying
+- modifying constraints
+- constraints [SQL Server], check
+- constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改 CHECK 约束
+# <a name="modify-check-constraints"></a>修改 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   当您希望更改约束表达式或更改对特定条件启用或禁用约束的选项时，可通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改 CHECK 约束。  
@@ -47,7 +51,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 修改 CHECK 约束  
+#### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
 1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
   
@@ -75,6 +79,6 @@ caps.handback.revision: 18
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  
   
- 必须首先删除现有的 `CHECK` 约束，然后使用新定义重新创建，才能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 修改 `CHECK` 约束。 有关详细信息，请参阅[删除 CHECK 约束](../../relational-databases/tables/delete-check-constraints.md)和[创建 CHECK 约束](../../relational-databases/tables/create-check-constraints.md)。  
+ 必须首先删除现有的 `CHECK` 约束，然后使用新定义重新创建，才能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改 `CHECK` 约束。 有关详细信息，请参阅 [删除 CHECK 约束](../../relational-databases/tables/delete-check-constraints.md) 和 [创建 CHECK 约束](../../relational-databases/tables/create-check-constraints.md)。  
   
 ###  <a name="TsqlExample"></a>  

@@ -1,44 +1,48 @@
 ---
-title: "示例：仅对某些文件组进行段落还原（完整恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整恢复模式 [SQL Server], RESTORE 示例"
-  - "段落还原 [SQL Server], 完整恢复模式"
-  - "还原顺序 [SQL Server], 段落"
+title: "示例：仅对某些文件组进行段落还原（完整恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78208b2b401a3acaf194dc1a13e0df8a56457557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 示例：仅对某些文件组进行段落还原（完整恢复模式）
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>示例：仅对某些文件组进行段落还原（完整恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
  段落还原顺序将从主文件组和所有读写辅助文件组开始，按文件组级别分阶段还原和恢复数据库。  
   
- 在此示例中，名为 `adb` 的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  
+ 在此示例中，名为 `adb`的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  
   
  数据库 `B` 的主文件组和文件组 `adb` 显示为已损坏。 主文件组很小，可以快速还原。 数据库管理员决定使用段落还原顺序还原这些文件组。 首先，还原主文件组和后续事务日志，并恢复数据库。  
   
  完好的文件组 `A` 和 `C` 包含关键数据。 因此，接着对它们进行还原，以尽快使它们处于联机状态。 最后，还原和恢复损坏的辅助文件组 `B`。  
   
-## 还原顺序：  
+## <a name="restore-sequences"></a>还原顺序：  
   
 > [!NOTE]  
 >  联机还原顺序的语法与脱机还原顺序的语法完全相同。  
   
-1.  创建数据库 `adb` 的结尾日志备份。 此步骤对于使完好文件组 `A` 和 `C` 与数据库恢复点保持同步至关重要。  
+1.  创建数据库 `adb`的结尾日志备份。 此步骤对于使完好文件组 `A` 和 `C` 与数据库恢复点保持同步至关重要。  
   
     ```  
     BACKUP LOG adb TO tailLogBackup WITH NORECOVERY  
@@ -82,7 +86,7 @@ caps.handback.revision: 31
   
      所有文件组现在都处于联机状态。  
   
-## 其他示例  
+## <a name="additional-examples"></a>其他示例  
   
 -   [示例：数据库的段落还原（简单恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 31
   
 -   [示例：只读文件的联机还原（完整恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

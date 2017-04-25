@@ -1,26 +1,30 @@
 ---
 title: "扩展事件工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "扩展事件 [SQL Server], 使用"
-  - "扩展事件 [SQL Server], 使用选项"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], using
+- extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 923b012345d18abb393479744a65b4572cb20a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# 扩展事件工具
+# <a name="extended-events-tools"></a>扩展事件工具
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   您可以使用以下工具创建和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件会话：  
@@ -31,13 +35,13 @@ caps.handback.revision: 19
   
 -   对象资源管理器的 **“扩展事件”** 节点。 该节点可用于启动、停止或删除会话，或者用于导入和导出会话模板。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序。 这是一个强大的工具，可用于创建、更改和管理扩展事件会话。 有关详细信息，请参阅[对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序。 这是一个强大的工具，可用于创建、更改和管理扩展事件会话。 有关详细信息，请参阅 [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅[对象资源管理器](../../ssms/object/object-explorer.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
   
- 除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅[使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)。  
+ 除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅 [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)。  
   
-## DDL 语句  
+## <a name="ddl-statements"></a>DDL 语句  
  请以下 DDL 语句可以创建、更改和删除扩展事件会话。  
   
 |名称|说明|  
@@ -46,7 +50,7 @@ caps.handback.revision: 19
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|启动或停止事件会话，或更改事件会话配置。|  
 |[DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)|删除事件会话。|  
   
-## 目录视图  
+## <a name="catalog-views"></a>目录视图  
  使用下面的目录视图可获取创建事件会话时所创建的元数据。  
   
 |名称|说明|  
@@ -57,7 +61,7 @@ caps.handback.revision: 19
 |[sys.server_event_session_fields (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|对在事件和目标上显式设置的每个可自定义列都返回一行。|  
 |[sys.server_event_session_targets (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|对事件会话的每个事件目标都返回一行。|  
   
-## 动态管理视图  
+## <a name="dynamic-management-views"></a>动态管理视图  
  使用下面的动态管理视图可以获取会话元数据和会话数据。 将从目录视图中获取元数据，当启动并运行事件会话时即创建会话数据。  
   
 > [!NOTE]  
@@ -76,19 +80,20 @@ caps.handback.revision: 19
 |[sys.dm_xe_map_values (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql.md)|提供一个从内部数字键到可读文本的映射。|  
 |[sys.dm_xe_session_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md)|显示绑定到会话的对象的配置值。|  
   
-## 系统表  
+## <a name="system-tables"></a>系统表  
  使用下面的系统表可以获取与 SQL 跟踪事件类和列的扩展事件等效项有关的信息。  
   
 |名称|说明|  
 |----------|-----------------|  
-|[trace_xe_event_map (Transact-SQL)](../Topic/trace_xe_event_map%20\(Transact-SQL\).md)|映射到 SQL 跟踪事件类的每个扩展事件各占一行。|  
-|[trace_xe_action_map (Transact-SQL)](../Topic/trace_xe_action_map%20\(Transact-SQL\).md)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  
+|[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|映射到 SQL 跟踪事件类的每个扩展事件各占一行。|  
+|[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  
   
-## 另请参阅  
- [动态管理视图和函数 (Transact-SQL)](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 扩展事件表 (Transact-SQL)](../Topic/SQL%20Server%20Extended%20Events%20Tables%20\(Transact-SQL\).md)   
+ [SQL Server 扩展事件表 (Transact-SQL)](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   
   
+

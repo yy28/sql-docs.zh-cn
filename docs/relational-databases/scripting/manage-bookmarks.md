@@ -1,31 +1,35 @@
 ---
 title: "管理书签 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.BookmarkWindow"
-helpviewer_keywords: 
-  - "书签 [SQL Server Management Studio]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.BookmarkWindow
+helpviewer_keywords:
+- bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f77006d812e4ba114f5fc161f3701457f836d62
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理书签
+# <a name="manage-bookmarks"></a>管理书签
   在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  
   
  若要创建书签并在书签中导航，请单击位于“文本编辑器”工具栏上和“书签”窗口顶部的按钮。 可以添加和删除书签、激活或禁用书签以及按文件夹组织书签。 还可以从 **“书签”** 窗口的快捷菜单中使用某些命令。 若要添加或删除书签，请将插入点放到编辑器内所需的行中，再单击 **“切换书签”**。 若要激活某个书签，请在“书签”窗口中选中其复选框；若要禁用（但不删除）某个书签，请清除其复选框。  
   
-## “文本编辑器”工具栏  
+## <a name="text-editor-toolbar"></a>“文本编辑器”工具栏  
  在编辑器中打开文本文档时，会在 **“文本编辑器”** 工具栏上启用下列按钮： 若要在查询编辑器中显示 **“文本编辑器”** 工具栏，请在 **“查看”** 菜单上，指向 **“工具栏”**，再单击 **“文本编辑器”**。  
   
  **在当前行切换书签**  
@@ -43,7 +47,7 @@ caps.handback.revision: 26
 > [!CAUTION]  
 >  不能撤消此过程。 此后，必须使用 **“在当前行切换书签”** 来创建新书签。 若要禁用但不删除书签，请在 **“书签”** 窗口中清除其复选框。  
   
-## “书签”窗口  
+## <a name="bookmarks-window"></a>“书签”窗口  
  若要对书签进行组织，请在 **“书签”** 窗口中创建书签文件夹。 将书签拖放到文件夹中。 在 **“书签”** 窗口的顶部提供了以下按钮：  
   
  **在当前行切换书签。**  
@@ -76,7 +80,7 @@ caps.handback.revision: 26
  书签复选框  
  每个书签都有与其相对应的复选框。 若要激活某个现有的书签，请在 **“书签”** 窗口中选中其复选框。 若要隐藏（但不删除）某个现有的书签，请在“书签”窗口中清除其复选框。  
   
-## “书签”窗口的快捷菜单  
+## <a name="bookmarks-window-shortcut-menu"></a>“书签”窗口的快捷菜单  
  在“书签”窗口中右键单击某项时，可以从快捷菜单中使用以下命令。  
   
  **删除**  
@@ -91,7 +95,7 @@ caps.handback.revision: 26
  **禁用/启用所有书签**  
  清除或启用“书签”窗口中所有书签的复选框。 请不要删除书签，否则会更改它们标记的代码行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

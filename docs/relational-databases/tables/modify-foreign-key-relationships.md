@@ -1,28 +1,32 @@
 ---
 title: "修改外键关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "外键 [SQL Server], 修改"
-  - "修改外键"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# 修改外键关系
+# <a name="modify-foreign-key-relationships"></a>修改外键关系
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改关系的外键端。 修改表的外键会更改哪些列与主键表中的列相关。  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 修改外键  
+#### <a name="to-modify-a-foreign-key"></a>修改外键  
   
 1.  在 **“对象资源管理器”**中，展开具有外键的表，再展开 **“键”**。  
   
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  
   
- 若要使用 Transact-SQL 修改 FOREIGN KEY 约束，必须先删除现有的 FOREIGN KEY 约束，然后再用新定义重新创建该约束。 有关详细信息，请参阅 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 和 [Create Foreign Key Relationships](../../relational-databases/tables/创建外键关系.md)。  
+ 若要使用 Transact-SQL 修改 FOREIGN KEY 约束，必须先删除现有的 FOREIGN KEY 约束，然后再用新定义重新创建该约束。 有关详细信息，请参阅 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 和 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
   
 ###  <a name="TsqlExample"></a>  

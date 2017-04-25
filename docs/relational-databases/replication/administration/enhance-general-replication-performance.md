@@ -1,40 +1,44 @@
 ---
 title: "增强常规复制性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "发布 [SQL Server 复制]，设计和性能"
-  - "设计数据库 [SQL Server]，复制性能"
-  - "快照代理，性能"
-  - "快照 [SQL Server 复制]，性能注意事项"
-  - "合并复制性能 [SQL Server 复制]"
-  - "快照复制 [SQL Server]，性能"
-  - "订阅 [SQL Server 复制]，性能注意事项"
-  - "代理 [SQL Server 复制]，性能"
-  - "性能 [SQL Server 复制]，一般注意事项"
-  - "事务复制，性能"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- designing databases [SQL Server], replication performance
+- Snapshot Agent, performance
+- snapshots [SQL Server replication], performance considerations
+- merge replication performance [SQL Server replication]
+- snapshot replication [SQL Server], performance
+- subscriptions [SQL Server replication], performance considerations
+- agents [SQL Server replication], performance
+- performance [SQL Server replication], general considerations
+- transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
+ms.lasthandoff: 04/11/2017
+
 ---
-# 增强常规复制性能
+# <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
   
-## 服务器和网络  
+## <a name="server-and-network"></a>服务器和网络  
   
 -   设置分配给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的最小和最大内存量。  
   
-     默认情况下， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 根据可用的系统资源动态改变它的内存要求。 为避免在复制活动期间出现低内存可用性的问题，请使用 **min server memory** 选项设置最小可用内存。 为避免将操作系统页写入磁盘以节省内存，也可以使用 **max server memory** 选项设置最大内存量。 有关详细信息，请参阅 [内存服务器配置选项的服务器](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
+     默认情况下， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 根据可用的系统资源动态改变它的内存要求。 为避免在复制活动期间出现低内存可用性的问题，请使用 **min server memory** 选项设置最小可用内存。 为避免将操作系统页写入磁盘以节省内存，也可以使用 **max server memory** 选项设置最大内存量。 有关详细信息，请参阅[服务器内存服务器配置选项](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
   
 -   确保正确分配数据库数据文件和日志文件。 使用单独的磁盘驱动器存放复制过程中所涉及的所有数据库的事务日志。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 45
   
      网络可能是一个重要的性能瓶颈，尤其是对于事务复制而言。 通过使用每秒 100 兆位 (Mbps) 或更快的网络，可以显著提高将更改传播到订阅服务器的速度。 如果网络速度比较慢，请指定合适的网络设置和代理参数。  
   
-## 数据库设计  
+## <a name="database-design"></a>数据库设计  
   
 -   遵循数据库设计最佳实践。  
   
@@ -65,25 +69,25 @@ caps.handback.revision: 45
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     有关详细信息，请参阅 [ALTER DATABASE & #40;Transact SQL & #41;](../../../t-sql/statements/alter-database-transact-sql.md)。  
+     有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md)。  
   
 -   在触发器中慎用应用程序逻辑。  
   
      在订阅服务器中的用户定义触发器中使用业务逻辑可能会降低将更改复制到订阅服务器的速度：  
   
-    -   对于事务复制，将这种逻辑包含在用来应用复制命令的自定义存储过程中会更有效。 有关详细信息，请参阅 [指定如何为事务项目传播更改](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md)。  
+    -   对于事务复制，将这种逻辑包含在用来应用复制命令的自定义存储过程中会更有效。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-    -   对于合并复制，使用业务逻辑处理程序会更有效。 有关详细信息，请参阅 [执行合并同步期间业务逻辑](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
+    -   对于合并复制，使用业务逻辑处理程序会更有效。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
-     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅 [指定处理顺序的合并项目](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+     如果在为合并复制发布的表中使用触发器来维护引用完整性，请指定表的处理顺序，以减少合并代理所需的重试次数。 有关详细信息，请参阅[指定合并项目的处理顺序](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
   
 -   限制使用大型对象 (LOB) 数据类型。  
   
-     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 Lob，我们建议你使用的数据类型 **varchar （max)**, ，**nvarchar （max)**, ，**varbinary （max)**, 分别。  
+     LOB 比其他列数据类型需要更多的存储空间和处理。 除非应用程序需要，否则不要在项目中包括这些列。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)**。  
   
      对于事务复制，请考虑使用名为“用于 OLEDB 流式处理的分发配置文件” 的分发代理配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
-## 发布设计  
+## <a name="publication-design"></a>发布设计  
   
 -   仅发布所需的数据。  
   
@@ -95,29 +99,29 @@ caps.handback.revision: 45
   
      通过将数据子集发布到每个订阅服务器或者让应用程序将给定行的更改定向到给定的节点，可以对更改进行分区：  
   
-    -   合并复制支持对单个发布使用参数化筛选器发布数据子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)。  
+    -   合并复制支持对单个发布使用参数化筛选器发布数据子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
-    -   事务复制支持对多个发布使用静态筛选器发布数据子集。 有关详细信息，请参阅 [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
+    -   事务复制支持对多个发布使用静态筛选器发布数据子集。 有关详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
 -   灵活地使用行筛选器。  
   
      当事务发布包括一个或多个使用行筛选器的项目时，日志读取器代理在扫描事务日志时，必须将该筛选器应用到受表更新影响的每一行。 日志读取器代理的吞吐量因此受到影响。  
   
-     同样，合并复制必须计算已更改或删除的行，以确定哪些订阅服务器应接收这些行。 当利用行筛选器减少订阅服务器中要求的数据时，此处理更加复杂，并且比发布表中的所有行时更慢。 应仔细考虑降低每个订阅服务器的存储要求与获得最大吞吐量的需求之间的平衡点。 有关筛选的详细信息，请参阅 [筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
+     同样，合并复制必须计算已更改或删除的行，以确定哪些订阅服务器应接收这些行。 当利用行筛选器减少订阅服务器中要求的数据时，此处理更加复杂，并且比发布表中的所有行时更慢。 应仔细考虑降低每个订阅服务器的存储要求与获得最大吞吐量的需求之间的平衡点。 有关筛选的详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
-## 订阅注意事项  
+## <a name="subscription-considerations"></a>订阅注意事项  
   
 -   当存在大量订阅服务器时，应使用请求订阅。  
   
-     分发代理和合并代理在分发服务器中运行以实现推送订阅，在订阅服务器中运行以实现请求订阅。 使用请求订阅可以提高性能，因为它将代理处理从分发服务器移到了订阅服务器中。 有关详细信息，请参阅 [订阅的发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
+     分发代理和合并代理在分发服务器中运行以实现推送订阅，在订阅服务器中运行以实现请求订阅。 使用请求订阅可以提高性能，因为它将代理处理从分发服务器移到了订阅服务器中。 有关详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 -   如果订阅服务器滞后太多，请考虑重新初始化订阅。  
   
      当需要将大量更改发送到订阅服务器时，用新快照重新初始化这些更改可能比使用复制分别移动每个更改要快。 有关详细信息，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅 [查看信息并执行任务的代理与订阅相关 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 快照注意事项  
+## <a name="snapshot-considerations"></a>快照注意事项  
   
 -   仅在必要时和非高峰时段运行快照代理。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 45
   
 -   除非要求使用字符模式快照，否则请使用本机模式快照。  
   
-     除了非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和运行 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 的订阅服务器（它们要求使用字符模式快照）外，请为其他所有订阅服务器使用默认的本机模式快照。  
+     除了非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和运行 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]的订阅服务器（它们要求使用字符模式快照）外，请为其他所有订阅服务器使用默认的本机模式快照。  
   
 -   为一个发布使用一个快照文件夹。  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 45
   
      快照代理将按顺序将数据写入快照文件夹。 将快照文件夹放在与数据库或日志文件分开的驱动器上可以减少磁盘间的争用，并有助于快照进程更快地完成。  
   
--   在订阅服务器上创建订阅数据库时，考虑指定简单恢复模式或大容量日志恢复模式。 这允许在订阅服务器中应用快照时执行最少的大容量插入日志记录。 将快照应用于订阅数据库后，如有必要，可以更改为不同的恢复模式（复制的数据库可以使用任何恢复模式）。 有关选择恢复模式的详细信息，请参阅 [还原和恢复概述和 #40;SQL Server 和 #41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
+-   在订阅服务器上创建订阅数据库时，考虑指定简单恢复模式或大容量日志恢复模式。 这允许在订阅服务器中应用快照时执行最少的大容量插入日志记录。 将快照应用于订阅数据库后，如有必要，可以更改为不同的恢复模式（复制的数据库可以使用任何恢复模式）。 有关选择恢复模式的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   
 -   对于低带宽网络，考虑在可移动介质上使用备用快照文件夹和压缩的快照。  
   
@@ -145,24 +149,24 @@ caps.handback.revision: 45
   
 -   考虑手动初始化订阅。  
   
-     在某些方案中，如涉及大型初始数据集的方案，使用快照以外的其他方法来初始化订阅更可取。 有关详细信息，请参阅 [初始化事务订阅不使用快照](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+     在某些方案中，如涉及大型初始数据集的方案，使用快照以外的其他方法来初始化订阅更可取。 有关详细信息，请参阅[初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
   
-## 代理参数  
+## <a name="agent-parameters"></a>代理参数  
   
 -   降低复制代理的详细级别，在初始测试、监视或调试期间除外。  
   
      降低分发代理或合并代理的 **–HistoryVerboseLevel** 参数和 **–OutputVerboseLevel** 参数。 这样可以减少为跟踪代理历史记录和输出而插入的新行数。 相反，具有相同状态的以前的历史记录消息将更新为新的历史记录信息。 提高测试、监视和调试的详细级别，这样就可以获得有关代理活动的尽可能多的信息。  
   
--   使用 **– MaxBCPThreads** 的快照代理、 合并代理和分发代理程序 （指定的线程数不应超过计算机上的处理器数） 的参数。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
+-   使用快照代理、合并代理和分发代理的 **–MaxBCPThreads** 参数（指定的线程数不应超过计算机上的处理器数）。 此参数指定创建和应用快照时可以并行执行的大容量复制操作的数目。  
   
--   使用 **– UseInprocLoader** 的分发代理和合并代理 （如果已发布的表中包含 XML 列，不能使用此参数） 的参数。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
+-   使用分发代理和合并代理的 **–UseInprocLoader** 参数（如果已发布表中包含 XML 列，则无法使用此参数）。 此参数使代理在应用快照时使用 BULK INSERT 命令。  
   
  代理参数可以在代理配置文件和命令行中指定。 有关详细信息，请参阅：  
   
 -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [查看和修改复制代理命令提示符参数 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+-   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)的最小和最大内存量。  
   
   

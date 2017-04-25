@@ -1,31 +1,35 @@
 ---
 title: "维护计划 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.AG.MAINTPLAN.LEGACY.F1"
-helpviewer_keywords: 
-  - "维护计划 [SQL Server], 关于数据库维护计划"
-  - "维护计划 [SQL Server], 设计器中显示的数据库兼容级别"
-  - "维护计划 [SQL Server 代理]"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.AG.MAINTPLAN.LEGACY.F1
+helpviewer_keywords:
+- maintenance plans [SQL Server], about database maintenance plans
+- maintenance plans [SQL Server], database compatibility level displayed in designer
+- maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
+ms.lasthandoff: 04/11/2017
+
 ---
-# 维护计划
+# <a name="maintenance-plans"></a>维护计划
   维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
   
-## 维护计划的优点  
+## <a name="benefits-of-maintenance-plans"></a>维护计划的优点  
  在 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]中，维护计划将创建由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 可以按预订的时间间隔手动或自动运行维护计划。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 维护计划可提供以下功能：  
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   支持 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-## 维护计划功能  
+## <a name="maintenance-plan-functionality"></a>维护计划功能  
  可以创建维护计划来执行以下任务：  
   
 -   用新填充因子重新生成索引来重新组织数据和索引页上的数据。 用新填充因子重新生成索引会确保数据库页中包含的数据量和可用空间的平均分布。 还使得以后能够更快地增长。 有关详细信息，请参阅[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -57,15 +61,16 @@ caps.handback.revision: 44
   
  维护任务生成的结果可以作为报表写入文本文件，或写入 **msdb** 维护计划表（**sysmaintplan_log** 和 **sysmaintplan_logdetail**）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”，再单击“查看历史记录”。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  参考以下主题以开始使用维护计划。  
   
 |||  
 |-|-|  
-|**说明**|**主题**|  
+|**Description**|**主题**|  
 |配置“代理 XP”服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |对象资源管理器中可用的文档维护计划功能。|[维护计划节点（对象资源管理器）](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
+

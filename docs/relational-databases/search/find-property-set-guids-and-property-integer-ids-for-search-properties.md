@@ -1,28 +1,32 @@
 ---
 title: "查找搜索属性的属性集 GUID 和属性整数 ID | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文搜索 [SQL Server], 搜索属性列表"
-  - "搜索属性列表 [SQL Server], 配置"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查找搜索属性的属性集 GUID 和属性整数 ID
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
   本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
- 可对由 IFilter 从二进制数据 – 即从存储在 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 数据类型列中的数据中 – 提取的文档属性进行全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 可对由 IFilter 从二进制数据 – 即从存储在 **varbinary**、 **varbinary(max)** （包括 **FILESTREAM**）或 **image** 数据类型列中的数据中 – 提取的文档属性进行全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  在向属性列表添加可用属性之前，必须找到有关该属性的 2 段信息：  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 32
 |类型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
 |标题|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
   
- 为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](http://go.microsoft.com/fwlink/?LinkId=144336)（自定义文件格式的系统定义属性）。  
+ 为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](http://go.microsoft.com/fwlink/?LinkId=144336) （自定义文件格式的系统定义属性）。  
   
  特定的文件格式可能实现三种类型的属性：  
   
--   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 定义的泛型属性。  
+-   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)]定义的泛型属性。  
   
--   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 定义的特定于类别的属性。  
+-   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)]定义的特定于类别的属性。  
   
 -   由软件供应商定义的特定于应用程序的自定义属性。  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 32
 -   对于 32 位版本，请查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`。  
   
 ##  <a name="propdesc"></a> 从 Windows 属性说明查找搜索属性的值  
- 对于众所周知的 Windows 搜索属性，可以从属性说明 (**propertyDescription**) 的 **formatID** 和 **propID** 属性中获取你需要的信息。  
+ 对于众所周知的 Windows 搜索属性，可以从属性说明 ( **propertyDescription** ) 的 **formatID** 和**propID**属性中获取你需要的信息。  
   
- 下面的示例显示了典型的 Microsoft 属性说明的相关部分，在此示例中为 `System.Author` 属性的说明。 `formatID` 特性指定属性集 GUID  `F29F85E0-4FF9-1068-AB91-08002B27B3D9`，`propID` 特性指定属性整数 ID `4.`。请注意，`name` 特性指定 Windows 规范属性名称 `System.Author`。 （此示例中省略了不相关的属性描述部分。）  
+ 下面的示例显示了典型的 Microsoft 属性说明的相关部分，在此示例中为 `System.Author` 属性的说明。 `formatID` 特性指定属性集 GUID `F29F85E0-4FF9-1068-AB91-08002B27B3D9`， `propID` 特性指定属性整数 ID `4.` 。请注意， `name` 特性指定 Windows 规范属性名称 `System.Author`。 （此示例中省略了不相关的属性描述部分。）  
   
 ```  
 .  
@@ -98,9 +102,9 @@ ALTER SEARCH PROPERTY LIST PropertyList1
 GO  
 ```  
   
- 有关创建搜索属性列表并将其与全文索引相关联的详细信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 有关创建搜索属性列表并将其与全文索引相关联的详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

@@ -1,29 +1,33 @@
 ---
-title: "维护计划（“设计”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.optimizations.f1"
-  - "sql13.swb.maint.planeditor.f1"
-  - "sql13.swb.maint.subplaneditor.f1"
+title: "维护计划（“设计”选项卡）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.optimizations.f1
+- sql13.swb.maint.planeditor.f1
+- sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b12faae420e8294dc79c15e1e0f168faaa5395
+ms.lasthandoff: 04/11/2017
+
 ---
-# 维护计划（“设计”选项卡）
-  使用**维护计划（“设计”选项卡）**可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
+# <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
+  使用 **维护计划（“设计”选项卡）** 可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
   
-## 选项  
+## <a name="options"></a>选项  
  **添加子计划**  
  添加可以配置的子计划。  
   
@@ -46,10 +50,10 @@ caps.handback.revision: 27
  显示“报告和记录”对话框，用于管理关于维护计划活动的报告，并配置是在本地服务器还是在远程服务器上进行日志记录。  
   
  **服务器**  
- 显示“服务器”对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅[创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)。  
+ 显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅 [创建多服务器环境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)。  
   
  **名称**  
- 显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名”。  
+ 显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
   
  **说明**  
  查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
@@ -57,7 +61,7 @@ caps.handback.revision: 27
  **设计器图面**  
  设计和维护维护计划。 使用设计器图面，可以向计划中添加维护任务、从计划中删除任务、指定任务之间的优先链接以及指示任务分支和并行情况。  
   
- 两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务）。 通常，指定的执行结果为 **“成功”**、 **“失败”**或 **“完成”**。 维护计划设计器图面基于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器图面。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务 ）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务 ）。 通常，指定的执行结果为 **“成功”**、 **“失败”**或 **“完成”**。 维护计划设计器图面基于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器图面。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
  例如，可以将“索引碎片整理”任务指定为只在上一个“检查数据库完整性”任务成功完成之后才能执行。 使用任务优先关联功能，您还可以在计划中处理错误或失败条件。 例如，如果“检查数据库完整性”任务失败，则“通知操作员”任务可以通知用户或操作员有关失败的消息。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 27
   
  若要指定任务并行，请将两个或多个依赖任务链接到单个前置任务。 修改优先链接的属性，对于指向并行运行的依赖任务的链接，执行结果字段具有相同的值。  
   
-## 快捷菜单上可用的其他功能  
+## <a name="additional-features-available-from-the-shortcut-menu"></a>快捷菜单上可用的其他功能  
  若要查看其他选项，请在设计图面上选择一个或多个任务，再单击右键打开快捷菜单。 除了常用的 **“剪切”**、 **“复制”**、 **“粘贴”**、 **“删除”**和 **“全选”**之外，对于某些任务，还可以使用以下特殊选项：  
   
  **添加批注**  
@@ -112,7 +116,7 @@ caps.handback.revision: 27
  **缩放**  
  更改设计图面上任务的大小。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

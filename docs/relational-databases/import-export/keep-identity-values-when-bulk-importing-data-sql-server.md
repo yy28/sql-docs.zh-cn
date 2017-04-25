@@ -1,36 +1,40 @@
 ---
-title: "大容量导入数据时保留标识值 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "标识值 [SQL Server]，批量导入"
-  - "数据格式 [SQL Server]，标识值"
-  - "批量导入 [SQL Server]，标识值"
+title: "批量导入数据时保留标识值 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 09/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identity values [SQL Server], bulk imports
+- data formats [SQL Server], identity values
+- bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 大容量导入数据时保留标识值 (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
 可以将包含标识值的数据文件批量导入到 Microsoft SQL Server 的实例中。  默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。  这些唯一值基于在表创建期间指定的种子和增量值。
 
-如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。  有关详细信息，请参阅[使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)。
+如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。  有关详细信息，请参阅 [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) 。
 
 |轮廓|
 |---|
 |[保留标识值](#keep_identity)<br />[示例测试条件](#etc)<br />&emsp;&#9679;&emsp;[示例表](#sample_table)<br />&emsp;&#9679;&emsp;[示例数据文件](#sample_data_file)<br />&emsp;&#9679;&emsp;[示例非 XML 格式化文件](#nonxml_format_file)<br />[示例](#examples)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 并保留标识值](#bcp_identity)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 并保留标识值](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 bcp 和生成的标识值](#bcp_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 bcp 和生成的标识值](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 并保留标识值](#bulk_identity)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 并保留标识值](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[在不使用格式化文件的情况下使用 BULK INSERT 和生成的标识值](#bulk_default)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 BULK INSERT 和生成的标识值](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET 并保留标识值](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[在使用非 XML 格式化文件的情况下使用 OPENROWSET 和生成的标识值](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## 保留标识值 <a name="keep_identity"></a>  
-若要防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在将数据行大容量导入到表中时分配标识值，请使用相应的保留标识命令限定符。  在您指定保留标识限定符后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在该数据文件中使用标识值。  这些限定符如下：
+若要防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在将数据行大容量导入到表中时分配标识值，请使用相应的保留标识命令限定符。  在您指定保留标识限定符后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在该数据文件中使用标识值。  这些限定符如下：
 
 |Command|保留标识限定符|限定符类型|  
 |-------------|------------------------------|--------------------|  
@@ -38,16 +42,16 @@ caps.handback.revision: 22
 |BULK INSERT|KEEPIDENTITY|参数|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|表提示|  
    
- 有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)、[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)、[INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)、[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) 和[表提示 (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md)。  
+ 有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)、[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)、[INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)、[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) 和[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
 
 > [!NOTE]
->  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。
+>  要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。
  
 ## 示例测试条件<a name="etc"></a>  
 本主题中的示例基于下面定义的表、数据文件和格式化文件。
 
 ### **示例表**<a name="sample_table"></a>
-下面的脚本创建一个测试数据库和一个名为 `myIdentity` 的表。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
+下面的脚本创建一个测试数据库和一个名为 `myIdentity`的表。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -62,7 +66,7 @@ CREATE TABLE dbo.myIdentity (
 ```
  
 ### **示例数据文件**<a name="sample_data_file"></a>
-使用记事本创建一个空文件 `D:\BCP\myIdentity.bcp`，并插入下面的数据。  
+使用记事本创建一个空文件 `D:\BCP\myIdentity.bcp` ，并插入下面的数据。  
 ```
 3,Anthony,Grosse,1980-02-23
 2,Alica,Fatnowna,1963-11-14
@@ -100,7 +104,7 @@ Invoke-Item $bcpFile;
 ```
 
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
-SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  下面的命令基于 `myIdentity` 的架构使用 [bcp 实用工具](../../tools/bcp-utility.md)生成非 XML 格式化文件 `myIdentity.fmt`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据，**t,** 用于将逗号指定为[字段终止符](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，而 **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
+SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myIdentity.fmt`生成非 XML 格式化文件 `myIdentity`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **t,** 用于将逗号指定为 [字段终止符](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)，而 **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
   
 ```
 bcp TestDatabase.dbo.myIdentity format nul -c -f D:\BCP\myIdentity.fmt -t, -T
@@ -131,7 +135,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用 [bcp](../../tools/bcp-utility.md) 并保留标识值**<a name="bcp_identity_fmt"></a>
+### **Using [bcp](../../tools/bcp-utility.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
 **-E** 和 **-f** 开关。  在命令提示符处输入以下命令：
 ```
 REM Truncate table (for testing)
@@ -157,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用[ bcp](../../tools/bcp-utility.md) 和生成的标识值**<a name="bcp_default_fmt"></a>
+### **Using [bcp](../../tools/bcp-utility.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
 使用默认值和 **-f** 开关。  在命令提示符处输入以下命令：
 ```
 REM Truncate table (for testing)
@@ -189,7 +193,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 并保留标识值**<a name="bulk_identity_fmt"></a>
+### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** 和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;
@@ -225,7 +229,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和生成的标识值**<a name="bulk_default_fmt"></a>
+### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 使用默认值和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;
@@ -242,7 +246,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 并保留标识值**<a name="openrowset_identity_fmt"></a>
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** 表提示和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;
@@ -262,7 +266,7 @@ WITH (KEEPIDENTITY)
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
-### **在使用[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)的情况下使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和生成的标识值**<a name="openrowset_default_fmt"></a>
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
 使用默认值和 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;
@@ -319,11 +323,12 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [表提示 (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
+

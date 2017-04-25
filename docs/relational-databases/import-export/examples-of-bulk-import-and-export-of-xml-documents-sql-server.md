@@ -1,30 +1,34 @@
 ---
-title: "大容量导入和导出 XML 文档的示例 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "字段终止符 [SQL Server]"
-  - "批量导入 [SQL Server]，数据格式"
-  - "行终止符 [SQL Server]"
-  - "OPENROWSET 函数，XML 批量加载"
-  - "终止符 [SQL Server]"
-  - "批量导出 [SQL Server]，数据格式"
-  - "XML 大容量加载 [SQL Server]"
+title: "批量导入和导出 XML 文档的示例 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- field terminators [SQL Server]
+- bulk importing [SQL Server], data formats
+- row terminators [SQL Server]
+- OPENROWSET function, XML bulk load
+- terminators [SQL Server]
+- bulk exporting [SQL Server], data formats
+- XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 大容量导入和导出 XML 文档的示例 (SQL Server)
+# <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
     
@@ -40,29 +44,29 @@ caps.handback.revision: 65
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- **注意：**有关详细信息，请参阅 
+ **注意：** 有关详细信息，请参阅 
   - [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
    - [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
     - [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://support.microsoft.com/en-us/kb/316005)
      - [XML 架构集合 (SQL Server)](https://msdn.microsoft.com/library/ms187856.aspx)
   
-## 示例  
+## <a name="examples"></a>示例  
  下列示例说明了以下操作内容：  
   
--  [A. 以二进制字节流的形式大容量导入 XML 数据](#binary_byte_stream)  
+-  [A.以二进制字节流的形式批量导入 XML 数据](#binary_byte_stream)  
   
--  [B. 将 XML 数据大容量导入现有行中](#existing_row)  
+-  [B.将 XML 数据批量导入现有行中](#existing_row)  
   
--  [C. 从包含 DTD 的文件中大容量导入 XML 数据](#file_contains_dtd)  
+-  [C.从包含 DTD 的文件中批量导入 XML 数据](#file_contains_dtd)  
   
-- [D. 使用格式化文件显式指定字段终止符](#field_terminator_in_format_file)  
+- [D.使用格式化文件显式指定字段终止符](#field_terminator_in_format_file)  
   
--  [E. 大容量导出 XML 数据](#bulk_export_xml_data)  
+-  [E.批量导出 XML 数据](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>以二进制字节流的形式大容量导入 XML 数据  
  在从文件大容量导入 XML 数据时，如果文件中包含您要应用的编码声明，则应在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 选项。 SINGLE_BLOB 选项可确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器根据 XML 声明中指定的编码方案导入数据。  
   
-#### 示例表  
+#### <a name="sample-table"></a>示例表  
  若要测试下方的示例 A，请创建示例表 `T`。  
   
 ```  
@@ -71,11 +75,11 @@ CREATE TABLE T (IntCol int, XmlCol xml);
 GO  
 ```  
   
-#### 示例数据文件  
+#### <a name="sample-data-file"></a>示例数据文件  
  在运行示例 A 之前，必须先创建一个 UTF-8 编码文件 (`C:\SampleFolder\SampleData3.txt`)，该文件应包含指定 `UTF-8` 编码方案的以下示例实例。  
   
 ```  
-<?xml version="1.0" encoding="UTF-8"?>  
+\<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -83,7 +87,7 @@ GO
 </Root>  
 ```  
   
-#### 示例 A  
+#### <a name="example-a"></a>示例 A  
  此示例使用 `SINGLE_BLOB` 语句中的 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 选项从名为 `SampleData3.txt` 的文件中导入数据，并在包含单列的示例表 `T`中插入一个 XML 实例。  
   
 ```  
@@ -93,7 +97,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### 注释  
+#### <a name="remarks"></a>注释  
  在这个例子中，通过使用 SINGLE_BLOB，可以避免 XML 文档的编码（由 XML 编码声明所指定）与服务器隐含使用的字符串代码页不匹配的问题。  
   
  如果使用 NCLOB 或 CLOB 数据类型且遇到代码页或编码冲突，则必须执行下列操作之一：  
@@ -112,7 +116,7 @@ SELECT * FROM OPENROWSET(
 > [!NOTE]  
 >  若要运行此示例，必须先完成示例 A 中提供的测试脚本。该示例创建了 `tempdb.dbo.T` 表，并从 `SampleData3.txt`中大容量导入数据。  
   
-#### 示例数据文件  
+#### <a name="sample-data-file"></a>示例数据文件  
  示例 B 使用的是上例所使用 `SampleData3.txt` 示例数据文件的修改版本。 若要运行此示例，请按如下所示修改此文件的内容：  
   
 ```  
@@ -123,7 +127,7 @@ SELECT * FROM OPENROWSET(
 </Root>  
 ```  
   
-#### 示例 B  
+#### <a name="example-b"></a>示例 B  
   
 ```  
 -- Query before update shows initial state of XmlCol values.  
@@ -158,14 +162,14 @@ GO
   
  `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
   
-#### 示例数据文件  
+#### <a name="sample-data-file"></a>示例数据文件  
  在测试此批量导入示例之前，需要先创建一个包含以下示例实例的文件 (`C:\temp\Dtdfile.xml`)：  
   
 ```  
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
-#### 示例表  
+#### <a name="sample-table"></a>示例表  
  示例 C 使用由以下 `T1` 语句创建的 `CREATE TABLE` 示例表：  
   
 ```  
@@ -174,7 +178,7 @@ CREATE TABLE T1(XmlCol xml);
 GO  
 ```  
   
-#### 示例 C  
+#### <a name="example-c"></a>示例 C  
  此示例使用 `OPENROWSET(BULK...)` ，并在 `CONVERT` 子句中指定了 `SELECT` 选项，从而将 XML 数据从 `Dtdfile.xml` 导入到了示例表 `T1`中。  
   
 ```  
@@ -190,23 +194,23 @@ INSERT T1
 ## <a name="field_terminator_in_format_file"></a> 使用格式化文件显式指定字段终止符  
  下面的示例说明如何大容量导入 XML 文档 `Xmltable.dat`。  
   
-#### 示例数据文件  
+#### <a name="sample-data-file"></a>示例数据文件  
  `Xmltable.dat` 中的文档包含两个 XML 值，每行一个。 第一个 XML 值的编码为 UTF-16，第二个值的编码为 UTF-8。  
   
  下面的十六进制转储显示了此数据文件的内容：  
   
 ```  
-FF FE 3C 00 3F 00 78 00-6D 00 6C 00 20 00 76 00  *..<.?.x.m.l. .v.*  
+FF FE 3C 00 3F 00 78 00-6D 00 6C 00 20 00 76 00  *..\<.?.x.m.l. .v.*  
 65 00 72 00 73 00 69 00-6F 00 6E 00 3D 00 22 00  *e.r.s.i.o.n.=.".*  
 31 00 2E 00 30 00 22 00-20 00 65 00 6E 00 63 00  *1...0.". .e.n.c.*  
 6F 00 64 00 69 00 6E 00-67 00 3D 00 22 00 75 00  *o.d.i.n.g.=.".u.*  
 74 00 66 00 2D 00 31 00-36 00 22 00 3F 00 3E 00  *t.f.-.1.6.".?.>.*  
-3C 00 72 00 6F 00 6F 00-74 00 3E 00 A2 4F 9C 76  *<.r.o.o.t.>..O.v*  
+3C 00 72 00 6F 00 6F 00-74 00 3E 00 A2 4F 9C 76  *\<.r.o.o.t.>..O.v*  
 0C FA 77 E4 80 00 89 00-00 06 90 06 91 2E 9B 2E  *..w.............*  
 99 34 A2 34 86 00 83 02-92 20 7F 02 4E C5 E4 A3  *.4.4..... ..N...*  
-34 B2 B7 B3 B7 FE F8 FF-F8 00 3C 00 2F 00 72 00  *4.........<./.r.*  
+34 B2 B7 B3 B7 FE F8 FF-F8 00 3C 00 2F 00 72 00  *4.........\<./.r.*  
 6F 00 6F 00 74 00 3E 00-00 00 00 00 7A EF BB BF  *o.o.t.>.....z...*  
-3C 3F 78 6D 6C 20 76 65-72 73 69 6F 6E 3D 22 31  *<?xml version="1*  
+3C 3F 78 6D 6C 20 76 65-72 73 69 6F 6E 3D 22 31  *\<?xml version="1*  
 2E 30 22 20 65 6E 63 6F-64 69 6E 67 3D 22 75 74  *.0" encoding="ut*  
 66 2D 38 22 3F 3E 3C 72-6F 6F 74 3E E4 BE A2 E7  *f-8"?><root>....*  
 9A 9C EF A8 8C EE 91 B7-C2 80 C2 89 D8 80 DA 90  *................*  
@@ -216,7 +220,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 00 00 00 00 7A                                   *....z*  
 ```  
   
-#### 示例表  
+#### <a name="sample-table"></a>示例表  
  大容量导入或导出 XML 文档时，应当使用在任何文档中都不可能出现的 [字段终止符](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md) ；例如，在连续四个 Null (`\0`) 后紧跟字母 `z`： `\0\0\0\0z`。  
   
  此示例说明如何为 `xTable` 示例表使用此字段终止符。 若要创建此示例表，请使用下列 `CREATE TABLE` 语句：  
@@ -227,7 +231,7 @@ CREATE TABLE xTable (xCol xml);
 GO  
 ```  
   
-#### 示例格式化文件  
+#### <a name="sample-format-file"></a>示例格式化文件  
  必须在格式化文件中指定字段终止符。 示例 D 使用了一个名为 `Xmltable.fmt` 的非 XML 格式化文件，该文件包含以下内容：  
   
 ```  
@@ -238,8 +242,8 @@ GO
   
  可以使用此格式化文件并通过 `xTable` 命令、 `bcp` 语句或 `BULK INSERT` 语句将 XML 文档大容量导入到 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 表中。  
   
-#### 示例 D  
- 此示例在 `Xmltable.fmt` 语句中使用 `BULK INSERT` 格式化文件来导入 XML 数据文件 `Xmltable.dat` 中的内容。  
+#### <a name="example-d"></a>示例 D  
+ 此示例在 `Xmltable.fmt` 语句中使用 `BULK INSERT` 格式化文件来导入 XML 数据文件 `Xmltable.dat`中的内容。  
   
 ```  
 BULK INSERT xTable   
@@ -261,7 +265,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保存 XML 编码。 因此，在导出 XML 数据时，XML 字段的原始编码将不可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导出 XML 数据时，使用 UTF-16 编码。  
   
 
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT 子句 (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   
@@ -270,3 +274,4 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)  
   
   
+

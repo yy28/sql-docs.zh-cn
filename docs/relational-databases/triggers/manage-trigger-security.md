@@ -1,25 +1,29 @@
 ---
 title: "管理触发器安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "触发器 [SQL Server], 安全性"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 管理触发器安全性
-  默认情况下，在调用触发器的用户的上下文中执行 DML 和 DDL 触发器。 触发器的调用方是执行使触发器运行的语句的用户。 例如，如果用户 **Mary** 执行可以使 DML 触发器 **DML_trigMary** 运行的 DELETE 语句，则 **DML_trigMary** 中的代码将在 **Mary** 的用户特权上下文中执行。 希望向数据库或服务器实例中引入恶意代码的用户可以使用此默认行为。 例如，用户 `JohnDoe`创建以下 DDL 触发器：  
+# <a name="manage-trigger-security"></a>管理触发器安全性
+  默认情况下，在调用触发器的用户的上下文中执行 DML 和 DDL 触发器。 触发器的调用方是执行使触发器运行的语句的用户。 例如，如果用户 **Mary** 执行可以使 DML 触发器 **DML_trigMary** 运行的 DELETE 语句，则 **DML_trigMary** 中的代码将在 **Mary**的用户特权上下文中执行。 希望向数据库或服务器实例中引入恶意代码的用户可以使用此默认行为。 例如，用户 `JohnDoe`创建以下 DDL 触发器：  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
   
  此触发器的含义是：在有权执行 `GRANT CONTROL SERVER` 语句的用户（如 **sysadmin** 固定服务器角色的成员）执行 `ALTER TABLE` 语句时，为 `JohnDoe` 授予 `CONTROL SERVER` 权限。 换言之，虽然 `JohnDoe` 不能为自己授予 `CONTROL SERVER` 权限，但是他启用了授予他此权限的触发器代码以在升级特权下执行。 对于此类安全隐患，DML 和 DDL 触发器都处于打开状态。  
   
-## 保证触发器安全的最佳方法  
+## <a name="trigger-security-best-practices"></a>保证触发器安全的最佳方法  
  可以采取下列措施阻止触发器代码在升级特权下执行：  
   
 -   注意数据库和服务器实例中存在的 DML 和 DDL 触发器，方法是查询 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 和 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) 目录视图。 下面的查询将返回当前数据库中的所有 DML 触发器和数据库级别的 DDL 触发器，以及服务器实例中所有服务器级别的 DDL 触发器：  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DML 触发器](../../relational-databases/triggers/dml-triggers.md)   
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)  

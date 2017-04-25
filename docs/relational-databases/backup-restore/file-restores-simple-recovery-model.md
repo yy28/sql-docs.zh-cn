@@ -1,31 +1,35 @@
 ---
-title: "文件还原（简单恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件还原 [SQL Server]"
-  - "简单恢复模式 [SQL Server]"
-  - "还原文件 [SQL Server], Transact-SQL 还原顺序"
-  - "还原文件 [SQL Server]"
-  - "Transact-SQL 还原顺序"
-  - "还原文件 [SQL Server], 简单恢复模式"
-  - "文件还原 [SQL Server], 简单恢复模式"
-  - "文件还原 [SQL Server], Transact-SQL 还原顺序"
+title: "文件还原（简单恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- simple recovery model [SQL Server]
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- Transact-SQL restore sequence
+- restoring files [SQL Server], simple recovery model
+- file restores [SQL Server], simple recovery model
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5fdd6a65718ab54c60fcea09317146aa2342e517
+ms.lasthandoff: 04/11/2017
+
 ---
-# 文件还原（简单恢复模式）
+# <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题仅适用于至少包含一个只读辅助文件组的简单模式数据库。  
@@ -44,10 +48,10 @@ caps.handback.revision: 56
   
      在“联机文件还原” 中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
   
-     有关联机页和文件还原支持的信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
+     有关对联机页和文件还原的支持的信息，请参阅[数据库引擎功能和任务](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
   
  **本主题内容：**  
   
@@ -62,10 +66,10 @@ caps.handback.revision: 56
   
 2.  针对每个还原的文件，还原最新的差异文件备份并恢复数据库。  
   
-### 文件还原序列的 Transact-SQL 步骤（简单恢复模式）  
- 本节说明用于简单文件还原序列的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 选项。 将省略与此目的不相关的语法和详细信息。  
+### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>文件还原序列的 Transact-SQL 步骤（简单恢复模式）  
+ 本节说明用于简单文件还原序列的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 选项。 将省略与此目的不相关的语法和详细信息。  
   
- 该还原序列仅包含两个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 第一个语句还原辅助文件（即文件 `A`），这是使用 WITH NORECOVERY 还原的。 第二项操作是还原其他两个文件（`B` 和 `C`），这两个文件是使用 WITH RECOVERY 从不同的备份设备还原的：  
+ 该还原序列仅包含两个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 第一个语句还原辅助文件（即文件 `A`），这是使用 WITH NORECOVERY 还原的。 第二项操作是还原其他两个文件（ `B` 和 `C` ），这两个文件是使用 WITH RECOVERY 从不同的备份设备还原的：  
   
 1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 56
   
      WITH RECOVERY**;**  
   
-### 示例  
+### <a name="examples"></a>示例  
   
 -   [示例：只读文件的联机还原（简单恢复模式）](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
@@ -94,15 +98,15 @@ caps.handback.revision: 56
   
 -   [还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore 方法（服务器）](../Topic/SqlRestore%20Method.md)(SMO)  
+-   [Restore.SqlRestore 方法（服务器）(SMO)](http://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份和还原：互操作性和共存 (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [完整数据库还原（简单恢复模式）](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
