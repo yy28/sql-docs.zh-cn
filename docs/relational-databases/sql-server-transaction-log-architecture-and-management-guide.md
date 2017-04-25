@@ -1,24 +1,29 @@
 ---
-title: "SQL Server 事务日志体系结构和管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务日志体系结构"
+title: "SQL Server 事务日志体系结构和管理指南 | Microsoft Docs"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log architecture guide
+- guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 事务日志体系结构和管理
+# <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 事务日志是数据库的重要组件，如果系统出现故障，则可能需要使用事务日志将数据库恢复到一致状态。 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。  
@@ -60,9 +65,9 @@ caps.handback.revision: 3
 ##  <a name="physical_arch"></a> 事务日志物理体系结构  
  数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在内部将每一物理日志文件分成多个虚拟日志文件。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)]在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)]尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部将每一物理日志文件分成多个虚拟日志文件。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
   
- 只有当物理日志文件使用较小的 size 和 growth_increment 值定义时，虚拟日志文件才会影响系统性能。 size 值为日志文件的初始大小，growth_increment 值则为每次需要新空间时为文件增加的空间大小。 如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。 建议你为日志文件分配一个接近于最终所需大小的 size 值，并且还要分配一个相对较大的 growth_increment 值。 有关这些参数的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md)。  
+ 只有当物理日志文件使用较小的 size 和 growth_increment 值定义时，虚拟日志文件才会影响系统性能。 size 值为日志文件的初始大小，growth_increment 值则为每次需要新空间时为文件增加的空间大小。 如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。 建议你为日志文件分配一个接近于最终所需大小的 size 值，并且还要分配一个相对较大的 growth_increment 值。 有关这些参数的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
  事务日志是一种回绕的文件。 例如，假设有一个数据库，它包含一个分成四个虚拟日志文件的物理日志文件。 当创建数据库时，逻辑日志文件从物理日志文件的始端开始。 新日志记录被添加到逻辑日志的末端，然后向物理日志的末端扩张。 日志截断将释放记录全部在最小恢复日志序列号 (MinLSN) 之前出现的所有虚拟日志。 MinLSN 是成功进行数据库范围内回滚所需的最早日志记录的日志序列号。 示例数据库中的事务日志的外观与下图所示相似。  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 3
   
  这个循环不断重复，只要逻辑日志的末端不到达逻辑日志的始端。 如果经常截断旧的日志记录，始终为到下一个检查点前创建的所有新日志记录保留足够的空间，则日志永远不会填满。 但是，如果逻辑日志的末端真的到达了逻辑日志的始端，将发生以下两种情况之一：  
   
--   如果对日志启用了 FILEGROWTH 设置且磁盘上有可用空间，则文件就按 growth_increment 参数指定的数量增大，并且新的日志记录将添加到增大的空间中。 有关 FILEGROWTH 设置的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md)。  
+-   如果对日志启用了 FILEGROWTH 设置且磁盘上有可用空间，则文件就按 growth_increment 参数指定的数量增大，并且新的日志记录将添加到增大的空间中。 有关 FILEGROWTH 设置的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
 -   如果未启用 FILEGROWTH 设置，或保存日志文件的磁盘的可用空间比 growth_increment 中指定的数量少，则会出现 9002 错误。  
   
  如果日志包含多个物理日志文件，则逻辑日志在回绕到首个物理日志文件始端之前，将沿着所有物理日志文件移动。  
   
-### 日志截断  
+### <a name="log-truncation"></a>日志截断  
  日志截断主要用于阻止日志填充。 日志截断从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的虚拟日志文件，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。 但是，在截断日志前，必须执行检查点操作。 检查点将当前内存中已修改的页（称为“脏页”）和事务日志信息从内存写入磁盘。 执行检查点时，事务日志的不活动部分将标记为可重用。 此后，日志截断可以释放不活动的部分。 有关检查点的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
  下列各图显示了截断前后的事务日志。 第一个图显示了从未截断的事务日志。 当前，逻辑日志使用四个虚拟日志文件。 逻辑日志开始于第一个逻辑日志文件的前面，并结束于虚拟日志 4。 MinLSN 记录位于虚拟日志 3 中。 虚拟日志 1 和虚拟日志 2 仅包含不活动的日志记录。 这些记录可以截断。 虚拟日志 5 仍未使用，不属于当前逻辑日志。  
@@ -115,22 +120,22 @@ caps.handback.revision: 3
   
  若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
   
-### 日志链  
+### <a name="the-log-chain"></a>日志链  
  日志备份的连续序列称为“日志链”。 日志链从数据库的完整备份开始。 通常，仅当第一次备份数据库时，或者将恢复模式从简单恢复模式切换到完整恢复模式或大容量日志恢复模式之后，才会开始一个新的日志链。 除非在创建完整数据库备份时选择覆盖现有备份集，否则现有的日志链将保持不变。 在该日志链保持不变的情况下，便可从介质集中的任何完整数据库备份还原数据库，然后再还原相应恢复点之前的所有后续日志备份。 恢复点可以是上次日志备份的结尾，也可以是任何日志备份中的特定恢复点。 有关详细信息，请参阅[事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要将数据库还原到故障点，必须保证日志链是完整的。 也就是说，事务日志备份的连续序列必须能够延续到故障点。 此日志序列的开始位置取决于您所还原的数据备份类型：数据库备份、部分备份或文件备份。 对于数据库备份或部分备份，日志备份序列必须从数据库备份或部分备份的结尾处开始延续。 对于一组文件备份，日志备份序列必须从整组文件备份的开头开始延续。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-### 还原日志备份  
+### <a name="restore-log-backups"></a>还原日志备份  
  还原日志备份将前滚事务日志中记录的更改，使数据库恢复到开始执行日志备份操作时的状态。 还原数据库时，必须还原在所还原完整数据库备份之后创建的日志备份，或者从您还原的第一个文件备份的开始处进行还原。 通常情况下，在还原最新数据或差异备份后，必须还原一系列日志备份直到到达恢复点。 然后恢复数据库。 这将回滚所有在恢复开始时未完成的事务并使数据库联机。 恢复数据库后，不得再还原任何备份。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
 
-## 检查点和日志的活动部分  
+## <a name="checkpoints-and-the-active-portion-of-the-log"></a>检查点和日志的活动部分  
 
 检查点将脏数据页从当前数据库的缓冲区高速缓存刷新到磁盘上。 这最大限度地减少了数据库完整恢复时必须处理的活动日志部分。 在完整恢复时，需执行下列操作：
 
 * 前滚系统停止之前尚未刷新到磁盘上的日志记录修改信息。
 * 回滚与未完成的事务（如没有 COMMIT 或 ROLLBACK 日志记录的事务）相关联的所有修改。
 
-### 检查点操作
+### <a name="checkpoint-operation"></a>检查点操作
 
 检查点在数据库中执行下列过程：
 
@@ -150,7 +155,7 @@ caps.handback.revision: 3
 * 将标记检查点结束的记录写入日志文件。
 * 将这条链起点的 LSN 写入数据库引导页。
 
-#### 导致检查点的活动
+#### <a name="activities-that-cause-a-checkpoint"></a>导致检查点的活动
 
 下列情况下将出现检查点：
 
@@ -162,7 +167,7 @@ caps.handback.revision: 3
 * 进行了数据库备份。
 * 执行了需要关闭数据库的活动。 例如，AUTO_CLOSE 设置为 ON 并且关闭了数据库的最后一个用户连接，或者执行了需要重新启动数据库的数据库选项更改。
 
-### 自动检查点
+### <a name="automatic-checkpoints"></a>自动检查点
 
 SQL Server 数据库引擎生成自动检查点。 自动检查点之间的间隔基于使用的日志空间量以及自上一个检查点以来经历的时间。 如果只在数据库中进行了很少的修改，自动检查点之间的时间间隔可能变化很大并且很长。 如果修改了大量数据，自动检查点也会经常出现。
 
@@ -176,17 +181,17 @@ SQL Server 数据库引擎生成自动检查点。 自动检查点之间的间�
     * 日志已满 70%。
     * 日志记录数达到数据库引擎估计在“恢复间隔”选项指定的时间内能够处理的记录数。
 
-有关设置恢复间隔的信息，请参阅[配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。
+有关设置恢复间隔的信息，请参阅 [配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。
 
 > [!TIP]  
 >  -k SQL Server 高级设置选项允许数据库管理员基于某些检查点类型 I/O 子系统的吞吐量来调控检查点 I/O 行为。 -k 设置选项适用于自动检查点和任何未调控的检查点。 
  
-如果数据库使用的是简单恢复模式，自动检查点将截断事务日志中没有使用的部分。 但是，如果数据库使用的完整恢复模式或大容量日志恢复模式，自动检查点则不会截断日志。 有关详细信息，请参阅[事务日志](../relational-databases/logs/the-transaction-log-sql-server.md)。 
+如果数据库使用的是简单恢复模式，自动检查点将截断事务日志中没有使用的部分。 但是，如果数据库使用的完整恢复模式或大容量日志恢复模式，自动检查点则不会截断日志。 有关详细信息，请参阅 [事务日志](../relational-databases/logs/the-transaction-log-sql-server.md)。 
 
 现在，CHECKPOINT 语句提供了一个可选的 checkpoint_duration 参数，它指定完成检查点所需的秒数。 有关详细信息，请参阅 [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md)。
 
 
-### 活动日志
+### <a name="active-log"></a>活动日志
 
 日志文件中从 MinLSN 到最后写入的日志记录这一部分称为日志的活动部分，或者称为活动日志。 这是进行数据库完整恢复所需的日志部分。 永远不能截断活动日志的任何部分。 所有的日志记录都必须从 MinLSN 之前的日志部分截断。
 
@@ -196,19 +201,19 @@ SQL Server 数据库引擎生成自动检查点。 自动检查点之间的间�
 
 LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录的检查点时，Tran 1 已经提交，而 Tran 2 是唯一的活动事务。 这就使 Tran 2 的第一条日志记录成为执行最后一个检查点时处于活动状态的事务的最旧日志记录。 这使 LSN 142（Tran 2 的开始事务记录）成为 MinLSN。
 
-### 长时间运行的事务
+### <a name="long-running-transactions"></a>长时间运行的事务
 
 活动日志必须包括所有未提交事务的每一部分。 如果应用程序开始执行一个事务但未提交或回滚，将会阻止数据库引擎推进 MinLSN。 这可能会导致两种问题：
 
 * 如果系统在事务执行了许多未提交的修改后关闭，以后重新启动时，恢复阶段所用的时间将比“恢复间隔”选项指定的时间长得多。
 * 因为不能截断 MinLSN 之后的日志部分，日志可能变得很大。 即使数据库使用的是简单恢复模式，这种情况也有可能出现，在简单恢复模式下，每次执行自动检查点操作时通常都会截断事务日志。
 
-### 复制事务
+### <a name="replication-transactions"></a>复制事务
 
-日志读取器代理监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 活动日志必须包含标记为要复制但尚未传递给分发数据库的所有事务。 如果不及时复制这些事务，它们可能会阻止截断日志。 有关详细信息，请参阅[事务复制](../relational-databases/replication/transactional/transactional-replication.md)。
+日志读取器代理监视已为事务复制配置的每个数据库的事务日志，并将已设复制标记的事务从事务日志复制到分发数据库中。 活动日志必须包含标记为要复制但尚未传递给分发数据库的所有事务。 如果不及时复制这些事务，它们可能会阻止截断日志。 有关详细信息，请参阅 [事务复制](../relational-databases/replication/transactional/transactional-replication.md)。
 
   
-## 其他阅读主题  
+## <a name="additional-reading"></a>其他阅读主题  
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
  [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
@@ -216,3 +221,4 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
  [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
+

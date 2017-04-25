@@ -1,31 +1,35 @@
 ---
 title: "Showplan Text (Unencoded) 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan Text (Unencoded) 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan Text (Unencoded) event class
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 220e32e24330b8eeec2975b5b108c6f7d208cf76
+ms.lasthandoff: 04/11/2017
+
 ---
-# Showplan Text (Unencoded) 事件类
+# <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 事件类
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，将发生 Showplan Text (Unencoded) 事件类。 除了事件信息被格式化为字符串而不是二进制数据之外，此事件类与 Showplan Text 事件类相同。  
   
  所包含的信息是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件类中可用信息的子集。  
   
  Showplan Text (Unencoded) 事件类包含在跟踪中后，开销量会显著妨碍性能。 Showplan Text (Unencoded) 带来的开销没有其他 Showplan 事件类多。 若要将开销降到最低，请限制短期监视特定问题的跟踪的事件类的使用。  
   
-## Showplan Text (Unencoded) 事件类的数据列  
+## <a name="showplan-text-unencoded-event-class-data-columns"></a>Showplan Text (Unencoded) 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -41,7 +45,7 @@ caps.handback.revision: 28
 |IntegerData|**int**|与在跟踪中捕获的事件类相关的整型值。|25|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LineNumber|**int**|显示包含错误的行的编号。|5|是|  
-|LoginName|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
+|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
 |LoginSid|**image**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NestLevel|**int**|表示 @@NESTLEVEL 所返回的数据的整数。|29|是|  
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
@@ -50,15 +54,15 @@ caps.handback.revision: 28
 |ObjectName|**nvarchar**|引用的对象名。|34|是|  
 |ObjectType|**int**|表示事件中涉及的对象类型的值。 此值对应于 sys.objects 目录视图中的类型列。 有关值的信息，请参阅 [ObjectType 跟踪事件列](../../relational-databases/event-classes/objecttype-trace-event-column.md)。|28|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |TextData|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [Showplan All 事件类](../../relational-databases/event-classes/showplan-all-event-class.md)   

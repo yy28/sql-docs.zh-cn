@@ -1,29 +1,33 @@
 ---
 title: "Audit Add DB User 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Add DB User 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a0d088340be4c057b03b2e8d2c04a1fb2922f59
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Add DB User 事件类
+# <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
   将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   
-## Audit Add DB User 事件类的数据列  
+## <a name="audit-add-db-user-event-class-data-columns"></a>Audit Add DB User 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -34,11 +38,11 @@ caps.handback.revision: 31
 |**DatabaseName**|**nvarchar**|正在添加或删除用户名的数据库的名称。|35|是|  
 |**DBUserName**|**nvarchar**|颁发者在数据库中的用户名。|40|是|  
 |**EventClass**|**int**|事件类型 = 109。|27|是|  
-|**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  
+|**EventSequence**|**int**|给定事件在请求中的顺序。|51|是|  
 |**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1 = 添加<br /><br /> 2 = 删除<br /><br /> 3 = 授予数据库访问权限<br /><br /> 4 = 撤消数据库访问权限|21|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**LoginName**|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
+|**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
 |**LoginSid**|**image**|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  
@@ -51,12 +55,12 @@ caps.handback.revision: 31
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失败。 例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|是|  
 |**TargetLoginName**|**nvarchar**|已修改数据库访问权限的登录名。|42|是|  
-|**TargetLoginSid**|**图像**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的安全标识号 (SID)。|43|是|  
+|**TargetLoginSid**|**image**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的安全标识号 (SID)。|43|是|  
 |**TargetUserName**|**nvarchar**|正在添加的数据库用户的名称。|39|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   

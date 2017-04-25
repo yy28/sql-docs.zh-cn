@@ -1,31 +1,35 @@
 ---
-title: "SQL Server Broker Statistics 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "Broker Statistics 对象"
+title: "SQL Server - Broker Statistics 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Broker Statistics 对象
-  SQLServer:Broker Statistics 性能对象包含为[!INCLUDE[ssSB](../../includes/sssb-md.md)]实例报告常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 信息的性能计数器。 下表列出了此对象包含的计数器：  
+# <a name="sql-server-broker-statistics-object"></a>SQL Server Broker Statistics 对象
+  SQLServer:Broker Statistics 性能对象包含为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例报告常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)]信息的性能计数器。 下表列出了此对象包含的计数器：  
   
 |SQL Server Broker Statistics 计数器|说明|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活存储过程因出现错误而退出的次数。|  
-|**Broker Transaction Rollbacks**|包含与 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 相关的 DML 语句（如 SEND 和 RECEIVE）的已回滚事务数。|  
+|**Broker Transaction Rollbacks**|包含与 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相关的 DML 语句（如 SEND 和 RECEIVE）的已回滚事务数。|  
 |**Corrupted Messages Total**|实例收到的已损坏消息数。|  
 |**Dequeued Transmission Msgs/sec**|每秒从 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 传输队列中删除的消息数。|  
 |**Dialog timer event count**|对话协议层中处于活动状态的计时器数。 此数与活动的对话数相对应。|  
@@ -62,7 +66,7 @@ caps.handback.revision: 32
 |**SQL SEND Total**|已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 语句的总数。|  
 |**SQL SENDs/sec**|每秒执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 语句数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

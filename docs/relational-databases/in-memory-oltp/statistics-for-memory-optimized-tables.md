@@ -1,22 +1,26 @@
 ---
 title: "内存优化表的统计信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存优化表的统计信息
+# <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
@@ -27,13 +31,13 @@ caps.handback.revision: 18
   
  有关内存优化表的统计信息的注意事项：  
   
--   在 SQL Server 2016 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中启动时，如果使用至少为 130 的数据库兼容级别，则内存优化表支持自动更新统计信息。 请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)。 如果数据库中有先前使用较低兼容级别创建的表，则需要手动更新统计信息一次，以便统计信息能继续自动更新。
+-   在 SQL Server 2016 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中启动时，如果使用至少为 130 的数据库兼容级别，则内存优化表支持自动更新统计信息。 请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 如果数据库中有先前使用较低兼容级别创建的表，则需要手动更新统计信息一次，以便统计信息能继续自动更新。
   
 -   对于本机编译的存储过程，在编译该过程时对过程中查询的执行计划进行优化，该优化发生于创建时期。 当统计信息更新时，它们不会自动重新编译。 因此在创建过程之前，这些表中应包含有代表性的数据集。  
   
--   可以使用 [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) 手动重新编译本机编译的存储过程，如果数据库脱机并重新联机或者数据库故障转移或服务器重新启动，则可以进行自动重新编译。  
+-   可以使用 [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)手动重新编译本机编译的存储过程，如果数据库脱机并重新联机或者数据库故障转移或服务器重新启动，则可以进行自动重新编译。  
   
-## 在现有表中启用自动更新统计信息
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>在现有表中启用自动更新统计信息
 
 在一个兼容级别至少为 130 的数据库中创建表时，此表中的所有统计信息都将启用自动更新，且不需要额外操作。
 
@@ -47,7 +51,7 @@ caps.handback.revision: 18
 
 3. 手动重新编译本机编译的存储过程以从更新的统计信息中受益。
 
-*统计信息的一次性脚本：*对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
+*统计信息的一次性脚本：* 对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -72,7 +76,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*验证是否已启用自动更新：*以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `auto-update enabled` 列中返回 `1`。
+*验证是否已启用自动更新：* 以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `1` 列中返回 `auto-update enabled` 。
 
 ```
 SELECT 
@@ -83,10 +87,10 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## 部署表和过程的指南  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>部署表和过程的指南  
  要确保查询优化器在创建查询计划时具有最新统计信息，请执行以下四个步骤部署内存优化表以及访问这些表的本机编译存储过程：  
   
-1.  确保数据库的兼容级别至少为 130。 请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)。
+1.  确保数据库的兼容级别至少为 130。 请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
 
 2.  创建表和索引。 在 **CREATE TABLE** 语句中应该内联指定索引。  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  在加载数据后创建本机编译的存储过程可确保优化器为内存优化的表提供统计信息。 这将确保在编译过程时生成高效的查询计划。  
 
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

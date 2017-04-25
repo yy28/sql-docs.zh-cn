@@ -1,30 +1,34 @@
 ---
 title: "向数据库中添加数据文件或日志文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志 [SQL Server], 文件"
-  - "添加数据文件"
-  - "添加文件"
-  - "添加日志文件"
-  - "文件添加 [SQL Server], 步骤"
-  - "文件 [SQL Server], 添加"
-  - "数据添加 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- adding data files
+- adding files
+- adding log files
+- file additions [SQL Server], steps
+- files [SQL Server], adding
+- data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 向数据库中添加数据文件或日志文件
+# <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
   
  **本主题内容**  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 向数据库添加数据文件或日志文件  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>向数据库添加数据文件或日志文件  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 25
   
 6.  选择文件类型：数据或日志。  
   
-7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“\<新建文件组>”来创建新的文件组。 事务日志不能放在文件组中。  
+7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“\<新文件组>”来创建新的文件组。 事务日志不能放在文件组中。  
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
@@ -98,24 +102,24 @@ caps.handback.revision: 25
     > [!NOTE]  
     >  默认情况下，数据和事务日志放在相同的驱动器和路径中以适应单磁盘系统，但这对于生产环境可能并非最佳方式。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。  
   
-12. 单击“确定” 。  
+12. 单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 向数据库添加数据文件或日志文件  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>向数据库添加数据文件或日志文件  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此实例向数据库添加由两个文件组成的文件组。 此示例在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5MB 的文件添加到该文件组。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此实例向数据库添加由两个文件组成的文件组。 此示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ，然后将两个 5MB 的文件添加到该文件组。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- 有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)。  
+ 有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## 另请参阅  
- [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)   
+## <a name="see-also"></a>另请参阅  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [删除数据库中的数据文件或日志文件](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [增加数据库的大小](../../relational-databases/databases/increase-the-size-of-a-database.md)  
   

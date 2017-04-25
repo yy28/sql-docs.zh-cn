@@ -1,29 +1,33 @@
 ---
 title: "使用嵌套的 FOR XML 查询形成 XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 查询"
-  - "查询 [SQL Server 中的 XML], 嵌套 FOR XML"
-  - "XML [SQL Server], FOR XML 查询"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用嵌套的 FOR XML 查询形成 XML
+# <a name="shape-xml-with-nested-for-xml-queries"></a>使用嵌套的 FOR XML 查询形成 XML
   下面的示例查询 `Production.Product` 表以检索特定产品的 `ListPrice` 值和 `StandardCost` 值。 为使查询具有趣味性，这两个价格都在 <`Price`> 元素中返回，每个 <`Price`> 元素都有 `PriceType` 属性。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下是期望的 XML 形状：  
   
 ```  
@@ -96,7 +100,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

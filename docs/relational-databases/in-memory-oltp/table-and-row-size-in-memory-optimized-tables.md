@@ -1,22 +1,26 @@
 ---
 title: "内存优化表中的表和行大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存优化表中的表和行大小
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   内存优化表由行和索引的集合组成，其中包含行的指针。 在一个内存优化表中，行内数据的长度不得超过 8,060 个字节。 但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可创建包含多个大型列（例如，多个 varbinary(8000) 列）和 LOB 列 （即 varbinary(max)、varchar(max) 和 nvarchar(max)）的表。 超过行内数据的最大大小的列将被放在特定内部表的行外。 有关这些内部表的详细信息，请参阅 [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)。
@@ -37,7 +41,7 @@ caps.handback.revision: 28
   
  下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
- ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "内存优化表。")  
+ ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 内存优化表，由索引和行组成。  
   
  内存中的表大小（以字节为单位）计算如下：  
@@ -52,7 +56,7 @@ caps.handback.revision: 28
 [hash index size] = 8 * [actual bucket count]  
 ```  
 
- 非聚集索引的大小按照 `[row count] * [index key size]` 顺序排列。
+ 非聚集索引的大小按照 `[row count] * [index key size]`顺序排列。
   
  行大小是通过添加标题和正文计算的：  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

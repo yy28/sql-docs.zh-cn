@@ -1,22 +1,26 @@
 ---
 title: "使用内存优化表备份数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用内存优化表备份数据库
+# <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   内存优化表在定期数据库备份过程中进行备份。 对于基于磁盘的表，数据和差异文件对的 CHECKSUM 在数据库备份过程中进行验证，以检测存储损坏。  
@@ -26,9 +30,9 @@ caps.handback.revision: 18
 >   
 >  如果您没有备份，可从内存优化表和基于磁盘的表导出数据，然后在删除并重新创建数据库之后重新加载数据。  
   
- 具有一个或多个内存优化表的数据库的完整备份包括基于磁盘的表（如果有）的已分配存储、活动事务日志以及内存优化表的数据和差异文件对（也称为检查点文件对）。 但是，如[内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，内存优化表使用的存储可以比其在内存中的大小大得多，会影响数据库备份的大小。  
+ 具有一个或多个内存优化表的数据库的完整备份包括基于磁盘的表（如果有）的已分配存储、活动事务日志以及内存优化表的数据和差异文件对（也称为检查点文件对）。 但是，如 [内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，内存优化表使用的存储可以比其在内存中的大小大得多，会影响数据库备份的大小。  
   
-## 完整数据库备份  
+## <a name="full-database-backup"></a>完整数据库备份  
  此讨论侧重于只有持久内存优化表的数据库的数据库备份，因为基于磁盘的表的备份过程是相同的。 内存优化文件组中的检查点文件对可能处于各种状态。 下表介绍备份的文件部分。  
   
 |检查点文件对状态|Backup|  
@@ -43,7 +47,7 @@ caps.handback.revision: 18
   
  具有一个或多个内存优化表的数据库备份的大小通常大于其在内存中的大小，但小于其磁盘上存储。 额外大小取决于删除的行数及其他因素。  
   
-### 估计完整数据库备份的大小  
+### <a name="estimating-size-of-full-database-backup"></a>估计完整数据库备份的大小  
   
 > [!IMPORTANT]  
 >  不建议使用 BackupSizeInBytes 值来估计内存中 OLTP 的备份大小。  
@@ -52,8 +56,8 @@ caps.handback.revision: 18
   
  第二个工作负荷方案适用于频繁的插入、删除和更新操作。 在最坏的情况下，考虑已删除的行后，每个检查点文件对都已加载 50%。 数据库备份的大小至少是内存中的数据大小的 2 倍。  
   
-## 具有内存优化表的数据库的差异备份  
- 如[内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，针对内存优化表的存储由数据和差异文件构成。 具有内存优化表的数据库的差异备份包含下列数据：  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>具有内存优化表的数据库的差异备份  
+ 如 [内存优化表的持久性](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)中所述，针对内存优化表的存储由数据和差异文件构成。 具有内存优化表的数据库的差异备份包含下列数据：  
   
 -   用于存储基于磁盘的表的文件组的差异备份不会受到内存优化表是否存在的影响。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 18
   
  如果内存优化表在您的数据库大小中占据很大比例，则差异备份可显著减小数据库备份大小。 对于典型 OLTP 工作负荷，差异备份显著小于完整数据库备份。  
   
-## 另请参阅  
- [内存优化表的备份、还原和恢复](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [内存优化表的备份、还原和恢复](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

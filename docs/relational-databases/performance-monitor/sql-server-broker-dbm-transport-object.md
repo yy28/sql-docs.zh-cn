@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Broker - DBM Transport Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker / DBM Transport 对象"
-  - "SQLServer:Broker / DBM Transport"
+title: "SQL Server - Broker - DBM Transport 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker / DBM Transport object
+- SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bad82d13370dfba9e1067986d1f1789ecf006ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Broker - DBM Transport Object
+# <a name="sql-server-broker---dbm-transport-object"></a>SQL Server Broker - DBM Transport 对象
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
 |SQL Server Broker/DBM Transport 计数器|说明|  
@@ -61,7 +65,7 @@ caps.handback.revision: 34
 |**Send I/O Len Avg Base**|仅限内部使用。|
 |**Send I/Os/sec**|此计数器报告每秒已完成的传输发送 I/O 操作数。 注意，传输发送操作可能包含多个消息片段。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

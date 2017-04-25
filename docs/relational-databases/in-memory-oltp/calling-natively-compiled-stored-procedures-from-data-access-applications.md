@@ -1,22 +1,26 @@
 ---
 title: "从数据访问应用程序调用本机编译的存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 从数据访问应用程序调用本机编译的存储过程
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
   本主题提供有关从数据访问应用程序中调用本机编译的存储过程的指导。  
   
  游标无法遍历本机编译存储过程。  
@@ -79,12 +83,12 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## 使用 ODBC 执行本机编译的存储过程  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>使用 ODBC 执行本机编译的存储过程  
  此示例显示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序绑定参数和执行存储过程。  该示例编译为一个控制台应用程序，它使用直接执行来插入单个订单并使用准备的执行插入订单详细信息。  
   
  运行此示例：  
   
-1.  使用内存优化的数据文件组创建示例数据库。 有关如何使用内存优化的数据文件组创建数据库的信息，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+1.  使用内存优化的数据文件组创建示例数据库。 有关如何使用内存优化的数据文件组创建数据库的信息，请参阅 [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
 2.  创建指向该数据库的名为 PrepExecSample 的 ODBC 数据源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序。 您还可以修改该示例并使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
   
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

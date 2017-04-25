@@ -1,24 +1,28 @@
 ---
-title: "备份设备（“介质内容”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdevice.contents.f1"
+title: "备份设备（“介质内容”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份设备（“介质内容”页）
+# <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
   使用 **“备份设备”** 对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
   
  **使用 SQL Server Management Studio 查看备份设备的内容**  
@@ -27,7 +31,7 @@ caps.handback.revision: 38
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## 选项  
+## <a name="options"></a>选项  
  查看有关各个介质、介质集和备份集的信息。  
   
  **介质**  
@@ -57,7 +61,7 @@ caps.handback.revision: 38
 |标题|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|**类型**|备份对象：数据库、文件或 *\<blank>*（对于事务日志）。|  
+|**类型**|备份对象：数据库、文件或 *\<blank>*（用于事务日志）。|  
 |**组件**|执行的备份类型：完整备份、差异备份或事务日志备份。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**数据库**|已备份数据库的名称。|  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 -   [从设备还原备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

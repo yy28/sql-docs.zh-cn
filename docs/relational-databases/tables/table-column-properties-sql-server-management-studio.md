@@ -1,26 +1,30 @@
 ---
 title: "表列属性 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65558"
-  - "vdtsql.chm:69657"
-  - "vdt.ppg.columns"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65558
+- vdtsql.chm:69657
+- vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
+ms.lasthandoff: 04/11/2017
+
 ---
-# 表列属性 (SQL Server Management Studio)
+# <a name="table-column-properties-sql-server-management-studio"></a>表列属性 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   这些属性显示在表设计器的底部窗格中。 除非另行说明，否则在选定列后可以在“属性”窗口中编辑这些属性。 **“列属性”** 可以按类别或字母顺序显示。 许多属性仅针对特定的数据类型显示或有所更改。  
@@ -56,7 +60,7 @@ caps.handback.revision: 33
  展开“表设计器”部分。  
   
  **排序规则**  
- 显示当使用列值对查询结果的行进行排序时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下对列应用的排序规则顺序。 若要编辑排序规则，请选择该属性，单击属性值右侧显示的省略号 (   )，以打开“排序规则”对话框。  
+ 显示当使用列值对查询结果的行进行排序时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下对列应用的排序规则顺序。 若要编辑排序规则，请选择该属性，单击属性值右侧显示的省略号 (   )，以打开“排序规则”对话框。  
   
  **计算所得的列规范**  
  显示计算所得的列的相关信息。 该属性显示的值与“公式”  子属性的值相同，可显示计算所得的列的公式。  
@@ -100,7 +104,7 @@ caps.handback.revision: 33
  如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将设置为 **“否”** 并且无法修改。 如果您在选择 **“语言”** 前为 **“统计语义”** 选项选择 **“是”**，则 **“语言”** 列中提供的语言将限制为存在语义语言模型支持的那些语言。  
   
  **具有非 SQL Server 订户**  
- 指示是否要将列复制到非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的订阅服务器。  
+ 指示是否要将列复制到非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的订阅服务器。  
   
  **标识规范**  
  显示此列是否以及如何对其值强制唯一性的相关信息。 此属性的值指示此列是否为标识列以及是否与子属性“是标识” 的值相同。  
@@ -136,3 +140,4 @@ caps.handback.revision: 33
 >  **(max)** 数据类型的长度对于每一行都会有所不同。 **sp_help** 返回 (-1) 作为 **(max)** 列的长度。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 -1 作为列大小。  
   
   
+

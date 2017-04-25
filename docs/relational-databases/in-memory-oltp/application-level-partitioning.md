@@ -1,29 +1,33 @@
 ---
 title: "应用程序级分区 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 应用程序级分区
+# <a name="application-level-partitioning"></a>应用程序级分区
   此应用程序处理订单。 最近的订单处理量很大。 更早的订单处理量不大。 最近的订单位于内存优化的表中。 更早的订单位于基于磁盘的表中。 *hotDate* 之后的所有订单位于内存优化的表中。 *hotDate* 之前的所有订单位于基于磁盘的表中。 假定存在一个极端 OLTP 工作负荷，它包含很多并发事务。 必须实施此业务规则（内存优化的表中的最近订单），即使几个并发事务正在尝试更改 *hotDate*。  
   
  该示例未对磁盘表使用分区表，而是利用第三个表来跟踪两个表之间的显式拆分点。 拆分点可用于确保将新插入的数据始终按照日期插入到适当的表中。 此外，拆分点还可用于确定查找数据的位置。 晚到数据仍会进入适当的表中。  
   
- 相关示例，请参阅[用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)。  
+ 相关示例，请参阅 [用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)。  
   
-## 代码段  
+## <a name="code-listing"></a>代码段  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP 代码示例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

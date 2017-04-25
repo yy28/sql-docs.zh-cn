@@ -1,27 +1,31 @@
 ---
-title: "SQL Server 审核（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server 审核"
-  - "审核 [SQL Server]，SQL Server 审核"
+title: "SQL Server 审核（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 审核（数据库引擎）
+# <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
  您可以记录每个实例的服务器审核操作组，或记录每个数据库的数据库审核操作组或数据库审核操作。 在每次遇到可审核操作时，都将发生审核事件。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 从 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 开始，所有版本都支持数据库级审核。 在此之前，数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的所有版本均支持服务器级审核。 从 [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 开始，所有版本都支持数据库级审核。 在此之前，数据库级审核限制为 Enterprise、Developer 和 Evaluation 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!NOTE]  
 >  本     主题适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]的信息，请参阅 [Get started with SQL database auditing（SQL 数据库审核入门）](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)。  
@@ -38,10 +42,10 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>SQL Server 审核组件  
   “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核使用“扩展事件”以帮助创建审核。 有关扩展事件的详细信息，请参阅[扩展事件](../../../relational-databases/extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核使用“扩展事件”  以帮助创建审核。 有关扩展事件的详细信息，请参阅 [扩展事件](../../../relational-databases/extended-events/extended-events.md)。  
   
 ### <a name="sql-server-audit"></a>SQL Server 审核  
- “SQL Server 审核”对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。  
+ “SQL Server 审核”  对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。  
   
  定义审核时，将指定结果的输出位置。 这是审核的目标位置。 审核是在 *禁用* 状态下创建的，因此不会自动审核任何操作。 启用审核后，审核目标将从审核接收数据。  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 58
 ## <a name="overview-of-using-sql-server-audit"></a>使用 SQL Server 审核概述  
  可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 定义审核。 在创建并启用审核后，目标将接收各项。  
   
- 您可以使用 Windows 中的 **“事件查看器”** 实用工具来读取 Windows 事件。 对于文件目标，你可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的“日志文件查看器”或 [fn_get_audit_file](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 函数来读取目标文件。  
+ 您可以使用 Windows 中的 **“事件查看器”** 实用工具来读取 Windows 事件。 对于文件目标，你可以使用 **中的“日志文件查看器”**[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [fn_get_audit_file](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 函数来读取目标文件。  
   
  以下是创建和使用审核的一般过程。  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 58
   
 3.  启用审核。  
   
-4.  通过使用 Windows“事件查看器”、“日志文件查看器”或 fn_get_audit_file 函数来读取审核事件。  
+4.  通过使用 Windows“事件查看器” 、“日志文件查看器” 或 fn_get_audit_file 函数来读取审核事件。  
   
  有关详细信息，请参阅 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [SQL Server 审核记录](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

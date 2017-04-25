@@ -1,24 +1,28 @@
 ---
 title: "使用 Transact-SQL 访问 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 使用 T-SQL 访问文件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33eb3adc0489d8cb904fee0d47d0586a64b81445
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 Transact-SQL 访问 FileTable
+# <a name="access-filetables-with-transact-sql"></a>使用 Transact-SQL 访问 FileTable
   说明 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据操作语言 (DML) 命令如何与 FileTable 一起使用。  
   
 ##  <a name="BasicsInsert"></a> FileTable 上的 INSERT 操作  
@@ -35,7 +39,7 @@ caps.handback.revision: 13
   
 -   允许更新任何用户定义的数据。  
   
--   如果 INSERT 语句设置了 **name**、**path_locator**、**parent_path_locator** 或文件属性，则强制执行系统定义的约束。  
+-   如果 INSERT 语句设置了 **name**、 **path_locator**、 **parent_path_locator**或文件属性，则强制执行系统定义的约束。  
   
 -   可以对 **file_stream** 列中的 FILESTREAM 数据进行更新，且不会影响任何其他列（包括时间戳）。  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 13
   
     -   将强制实施父目录中名称的唯一性。  
   
--   当通过设置或更改 **path_locator** 或 **parent_path_locator** 来设置或更改文件或目录的位置时：  
+-   当通过设置或更改 **path_locator** 或 **parent_path_locator**来设置或更改文件或目录的位置时：  
   
     -   强制执行唯一性。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 13
   
 -   **last_access_time** 的值不能早于 **last_write_time** 和 **creation_time**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将文件加载到 FileTable 中](../../relational-databases/blob/load-files-into-filetables.md)   
  [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [使用文件输入输出 API 访问 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

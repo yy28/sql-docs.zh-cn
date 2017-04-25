@@ -1,28 +1,32 @@
 ---
 title: "系统数据库的备份和还原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "系统数据库 [SQL Server], 备份和还原"
-  - "还原系统数据库 [SQL Server]"
-  - "备份 [SQL Server], 系统数据库"
-  - "数据库备份 [SQL Server], 系统数据库"
-  - "服务器 [SQL Server], 备份"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- system databases [SQL Server], backing up and restoring
+- restoring system databases [SQL Server]
+- backing up [SQL Server], system databases
+- database backups [SQL Server], system databases
+- servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b2e9a63f334206750961a39403daed7e3608ce0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 系统数据库的备份和还原 (SQL Server)
+# <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
@@ -40,7 +44,7 @@ caps.handback.revision: 57
   
  *若要了解模式的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 或 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
-## 对还原系统数据库的限制  
+## <a name="limitations-on-restoring-system-databases"></a>对还原系统数据库的限制  
   
 -   只能从在服务器实例当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上创建的备份中还原系统数据库。 例如，若要还原在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 上运行的服务器实例上的系统数据库，则必须使用在服务器实例升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 之后所创建的数据库备份。  
   
@@ -52,12 +56,12 @@ caps.handback.revision: 57
   
     -   完全重新生成 **master** 。  
   
-         如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅[重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
+         如果由于 **master** 严重损坏而无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须重新生成 **master**。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
   
         > [!IMPORTANT]  
         >  重新生成 **master** 将重新生成所有系统数据库。  
   
--   某些情况下，恢复模型数据库时发生的问题可能需要重新生成系统数据库或替换模型数据库的 mdf 和 ldf 文件。 有关详细信息，请参阅[重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
+-   某些情况下，恢复模型数据库时发生的问题可能需要重新生成系统数据库或替换模型数据库的 mdf 和 ldf 文件。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 57
   
 -   [移动系统数据库](../../relational-databases/databases/move-system-databases.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [分发数据库](../../relational-databases/replication/distribution-database.md)   
  [master 数据库](../../relational-databases/databases/master-database.md)   
  [msdb 数据库](../../relational-databases/databases/msdb-database.md)   

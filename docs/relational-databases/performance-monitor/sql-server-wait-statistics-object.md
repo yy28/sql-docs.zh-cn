@@ -1,25 +1,29 @@
 ---
-title: "SQL Server Wait Statistics 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Wait Statistics 对象"
-  - "SQLServer:Wait Statistics"
+title: "SQL Server - Wait Statistics 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Wait Statistics 对象
+# <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
   **SQLServer:Wait Statistics** 性能对象包含报告有关等待状态的性能计数器。  
   
  下表列出了 Wait Statistics 对象包含的计数器。  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**正在进行的等待数**|当前正在等待的以下类型的进程数。|  
 |**每秒启动的等待数**|每秒启动的所选类型等待的等待数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

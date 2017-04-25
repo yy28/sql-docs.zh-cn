@@ -1,36 +1,40 @@
 ---
 title: "在复制监视器中设置阈值和警告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "警报 [SQL Server 复制]"
-  - "合并代理, 阈值和警告"
-  - "分发代理, 阈值和警告"
-  - "阈值 [SQL Server 复制]"
-  - "复制监视器, 阈值和警告"
-  - "监视性能 [SQL Server 复制], 阈值和警告"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在复制监视器中设置阈值和警告
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息。 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
   
  启用警告时，需要指定阈值。 达到或超过该阈值时，将显示警告（除非需要显示更高优先级的问题）。 除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 您可以为下列情况启用警告：  
   
 -   订阅即将过期  
   
-     这种情况适用于所有类型的复制。 如果达到或超过指定的阈值，订阅状态将显示为 **即将过期/已过期**。  
+     这种情况适用于所有类型的复制。 如果达到或超过指定的阈值，订阅状态会显示为 **“即将过期/已过期”**。  
   
 -   超过指定的滞后时间（从事务在发布服务器上提交到相应的事务在订阅服务器上提交之间间隔的时间）。  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   超出了指定的同步时间。  
   
-     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **长时间运行的合并**。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
+     这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“长时间运行的合并”**。 您可以为拨号连接和局域网 (LAN) 连接指定不同的阈值。  
   
 -   在给定时间内未处理完指定的行数。  
   
      这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”**。 可以为拨号连接和 LAN 连接指定不同的阈值。  
   
- 有关详细信息警告 **性能关键** 和 **长时间运行的合并**, ，请参阅 [用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+ 有关“‘严重’状态下的性能”和“长时间运行的合并”警告的详细信息，请参阅[使用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
  **本主题内容**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  单击 **“保存更改”**。  
   
-#### 为阈值配置警报  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>为阈值配置警报  
   
 1.  单击 **“配置警报”**。  
   
 2.  在 **“配置复制警报”** 对话框中，选择一个警报，然后单击 **“配置”**。  
   
-     此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅 [复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
+     此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在设置选项 **\< AlertName> 警报属性** 对话框中︰  
+3.  在“\<AlertName> 警报属性”对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
-    -   在 **响应** 页上，指定是否应发送一封电子邮件和/或应执行作业。  
+    -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  单击 **“保存更改”**。  
   
-#### 为阈值配置警报  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>为阈值配置警报  
   
 1.  单击 **“配置警报”**。  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。  
   
-3.  在设置选项 **\< AlertName> 警报属性** 对话框中︰  
+3.  在“\<AlertName> 警报属性”对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
-    -   在 **响应** 页上，指定是否应发送一封电子邮件和/或应执行作业。  
+    -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  单击 **“保存更改”**。  
   
-#### 为阈值配置警报  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>为阈值配置警报  
   
 1.  单击 **“配置警报”**。  
   
 2.  在 **“配置复制警报”** 对话框中，选择一个警报，然后单击 **“配置”**。  
   
-     此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅 [复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
+     此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在设置选项 **\< AlertName> 警报属性** 对话框中︰  
+3.  在“\<AlertName> 警报属性”对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
-    -   在 **响应** 页上，指定是否应发送一封电子邮件和/或应执行作业。  
+    -   在 **“响应”** 页上，指定是否应发送电子邮件和/或是否应执行作业。  
   
     -   在 **“选项”** 页上，自定义响应文本。  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  单击 **“关闭”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

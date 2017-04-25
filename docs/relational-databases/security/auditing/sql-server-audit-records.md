@@ -1,24 +1,28 @@
 ---
 title: "SQL Server 审核记录 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "审核记录 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 审核记录
+# <a name="sql-server-audit-records"></a>SQL Server 审核记录
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  审核由零个或多个审核操作项组成，这些操作项会记录到审核“ 目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素。  
@@ -52,10 +56,10 @@ caps.handback.revision: 19
 |**语句**|TSQL 语句（如果有）|**nvarchar(4000)**|是|  
 |**additional_information**|有关此事件的其他任何信息，存储为 XML。|**nvarchar(4000)**|是|  
   
-## 注释  
+## <a name="remarks"></a>注释  
  某些操作不填充列的值，这是因为它可能不适用于此操作。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时，**sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 该过程如下所示：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 该过程如下所示：  
   
 -   **statement** 列分为 4000 个字符。  
   
@@ -65,9 +69,9 @@ caps.handback.revision: 19
   
 -   此过程将一直重复，直至记录了所有数据为止。  
   
- 可以使用 **sequence_no** 值按顺序读取行以及 **event_Time**、**action_id** 和 **session_id** 列来连接数据，从而标识操作。  
+ 可以使用 **sequence_no** 值按顺序读取行以及 **event_Time**、 **action_id** 和 **session_id** 列来连接数据，从而标识操作。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [CREATE SERVER AUDIT (Transact-SQL)](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT (Transact-SQL)](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

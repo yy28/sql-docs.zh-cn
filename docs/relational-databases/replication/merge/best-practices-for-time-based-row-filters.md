@@ -1,31 +1,35 @@
 ---
-title: "基于时间的行筛选器的最佳实践 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最佳实践"
+title: "基于时间的行筛选器的最佳做法 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
+ms.lasthandoff: 04/11/2017
+
 ---
-# 基于时间的行筛选器的最佳实践
-  应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用查询中包含 **getdate （） 函数** 函数来实现此目的。 请考虑以下行筛选器语句：  
+# <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
+  应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 **GETDATE()** 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 (有关使用筛选 **Host_name （)**, ，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-row-filters.md)。)但是，合并复制只复制并清除自上次同步以来发生更改的数据，而不考虑如何定义数据的行筛选器。  
+ 使用此类型的筛选器时，通常假定合并代理运行时始终发生两件事情：满足此筛选器的行复制到订阅服务器中；从订阅服务器中清除不再满足此筛选器的行。 （有关如何使用 **HOST_NAME()** 进行筛选的详细信息，请参阅[参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。）但是，合并复制只复制并清除自上次同步以来发生更改的数据，而不考虑如何定义数据的行筛选器。  
   
  要使合并复制处理某一行，该行中的数据必须满足行筛选器，并且该行自上次同步以来必须已发生更改。 对于 **SalesOrderHeader** 表，插入行时将输入 **OrderDate** 。 由于插入是一种数据更改，因此各行将如预期的那样被复制到订阅服务器中。 但是，如果订阅服务器中存在不再满足此筛选器的行（这些行是早于七天前的订单中的行），除非由于某种原因更新这些行，否则不会从订阅服务器中将其删除。  
   
@@ -43,9 +47,9 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   如果发布不使用预计算分区，则在合并代理运行时对筛选器求值。  
   
- 有关预计算分区的详细信息，请参阅 [使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md)。 对筛选器求值的时间会影响什么数据满足筛选器。 例如，如果发布使用预计算分区，并且每两天同步一次数据，则销售人员的数据子集可能包括比预期时间早两天的行。  
+ 有关预计算分区的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 对筛选器求值的时间会影响什么数据满足筛选器。 例如，如果发布使用预计算分区，并且每两天同步一次数据，则销售人员的数据子集可能包括比预期时间早两天的行。  
   
-## 使用基于时间的行筛选器时的建议  
+## <a name="recommendations-for-using-time-based-row-filters"></a>使用基于时间的行筛选器时的建议  
  下面的方法提供了基于时间进行筛选的强大而直接的途径：  
   
 -   向表中添加数据类型为 **bit**的一列。 此列用来指示是否应复制行。  
@@ -54,7 +58,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   创建一个 SQL Server 代理作业（通过另一种机制计划的作业），该作业在合并代理计划运行之前更新列。  
   
- 这种方法处理的使用不足 **getdate （） 函数** 或另一种基于时间的方法，并可避免的问题，无需确定何时为分区计算筛选器。 考虑 **Events** 表的以下示例：  
+ 此方法解决了使用 **GETDATE()** 或其他基于时间的方法时的缺点，并避免了必须确定何时为分区对筛选器求值的问题。 考虑 **Events** 表的以下示例：  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -89,9 +93,9 @@ GO
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   
-## 另请参阅  
- [GETDATE & #40;Transact SQL & #41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [执行作业](../../../ssms/agent/implement-jobs.md)   
- [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+## <a name="see-also"></a>另请参阅  
+ [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
+ [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

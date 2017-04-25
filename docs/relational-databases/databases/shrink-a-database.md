@@ -1,30 +1,34 @@
 ---
 title: "收缩数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkdatabase.f1"
-helpviewer_keywords: 
-  - "收缩数据库"
-  - "数据库 [SQL Server], 收缩"
-  - "减小数据库大小"
-  - "数据库收缩 [SQL Server]"
-  - "减小数据库大小"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkdatabase.f1
+helpviewer_keywords:
+- shrinking databases
+- databases [SQL Server], shrinking
+- decreasing database size
+- database shrinking [SQL Server]
+- reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc33c918c6817d9c242b6e52617c00845195f7d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 收缩数据库
+# <a name="shrink-a-database"></a>收缩数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用对象收缩数据库。  
   
  收缩数据文件通过将数据页从文件末尾移动到更靠近文件开头的未占用的空间来恢复空间。 在文件末尾创建足够的可用空间后，可以取消对文件末尾的数据页的分配并将它们返回给文件系统。  
@@ -78,7 +82,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 收缩数据库  
+#### <a name="to-shrink-a-database"></a>收缩数据库  
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
@@ -86,7 +90,7 @@ caps.handback.revision: 42
   
 3.  指向 **“任务”**，指向 **“收缩”**，然后单击 **“数据库”**。  
   
-     **数据库**  
+     **“数据库”**  
      显示所选数据库的名称。  
   
      **当前分配的空间**  
@@ -101,11 +105,11 @@ caps.handback.revision: 42
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 收缩数据库  
+#### <a name="to-shrink-a-database"></a>收缩数据库  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 42
 ##  <a name="FollowUp"></a> 跟进：在收缩数据库之后  
  被移动用来收缩文件的数据可以分布到文件的任何可用位置。 这将导致索引碎片并使搜索索引范围的查询变慢。 若要消除碎片，请考虑在收缩后重新生成文件的索引。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [收缩文件](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

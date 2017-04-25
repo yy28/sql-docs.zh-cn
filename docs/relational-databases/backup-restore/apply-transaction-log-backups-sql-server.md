@@ -1,28 +1,32 @@
 ---
 title: "应用事务日志备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "还原 [SQL Server], 日志备份"
-  - "事务日志备份 [SQL Server], 应用备份"
-  - "联机还原 [SQL Server], 日志备份"
-  - "事务日志备份 [SQL Server], 还原顺序所需的数量"
-  - "备份 [SQL Server], 日志备份"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# 应用事务日志备份 (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
   本主题只与完整恢复模式或大容量日志恢复模式相关。  
   
  本主题介绍在还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库过程中应用事务日志备份。  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> 还原事务日志备份的要求  
  若要应用事务日志备份，必须满足下列要求：  
   
--   **为还原顺序准备足够的日志备份：** 您必须备份足够的日志记录才能完成还原顺序。 必要的日志备份（需要时包含[结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)）必须在还原顺序开始之前可用。  
+-   **为还原顺序准备足够的日志备份：** 您必须备份足够的日志记录才能完成还原顺序。 必要的日志备份（需要时包含 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) ）必须在还原顺序开始之前可用。  
   
 -   **正确的还原顺序：**  必须先还原紧位于前面的完整数据库备份或差异数据库备份。 然后，在完整数据库备份或差异数据库备份后创建的所有事务日志必须按时间顺序还原。 如果此事务日志链中的事务日志备份丢失或损坏，则您只能还原丢失的事务日志之前的事务日志。  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 38
   
  例如，一系列事务日志备份包含一个运行时间长的事务。 该事务的起点记录在第一个事务日志备份中，终点记录在第二个事务日志备份中。 第一个事务日志备份中没有任何关于提交或回滚操作的记录。 如果在应用第一个事务日志备份后运行恢复操作，则运行时间长的事务被视为未完成，并且将回滚事务的第一个事务日志备份中记录的数据修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许在此点后应用第二个事务日志备份。  
   
-> **注意：**某些情况下可以在日志还原期间显式添加文件。  
+> **注意：** 某些情况下可以在日志还原期间显式添加文件。  
   
 ##  <a name="PITrestore"></a> 使用日志备份来还原到故障点  
  假设有下列事件顺序。  
@@ -70,7 +74,7 @@ caps.handback.revision: 38
   
  **备选过程 2：使用较早的完整数据库备份还原数据库**  
   
-> **注意：**如果因某个问题而无法使用下午 6:00 的完整数据库备份，则此备选过程很有用。 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
+> **注意：** 如果因某个问题而无法使用下午 6:00 的完整数据库备份，则此备选过程很有用。 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
   
 1.  失败时创建当前活动事务日志的结尾日志备份。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 38
   
      此备选过程指出了冗余安全性，该安全性通过维护一系列完整数据库备份中的事务日志链备份来获得。  
   
-> **注意：**某些情况下，还可以使用事务日志将数据库还原到特定的时间点。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+> **注意：** 某些情况下，还可以使用事务日志将数据库还原到特定的时间点。 有关详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **应用事务日志备份**  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **还原到恢复点**  
   
--   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [恢复数据库但不还原数据 (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

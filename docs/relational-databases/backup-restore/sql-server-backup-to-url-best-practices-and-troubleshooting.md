@@ -1,22 +1,26 @@
 ---
-title: "SQL Server 备份到 URL 最佳实践和故障排除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 备份到 URL 最佳做法和故障排除 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 备份到 URL 最佳实践和故障排除
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 管理备份  
+## <a name="managing-backups"></a>管理备份  
  下表列出了管理备份的一般建议：  
   
 -   建议为每个备份使用唯一文件名以防止意外覆盖 blob。  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   在备份期间使用 **WITH COMPRESSION** 选项可以最大程度降低存储成本和存储事务成本。 它也会减少完成备份过程所需的时间。  
   
-## 处理大型文件  
+## <a name="handling-large-files"></a>处理大型文件  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Windows Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 Azure [SLA for Storage](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 限制了 blob 的最大处理时间，你需要考虑这个限制。  
   
 -   使用在 **管理备份** 部分中建议的 **WITH COMPRESSION** 选项，在备份大型文件时这一点非常重要。  
   
-## 备份到 URL 或从 URL 还原故障排除  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
  以下内容提供了在备份到 Windows Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
   
- 要避免由于不支持的选项或限制导致的错误，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)一文，查看限制列表以及 BACKUP 和 RESTORE 命令的支持信息。  
+ 要避免由于不支持的选项或限制导致的错误，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 一文，查看限制列表以及 BACKUP 和 RESTORE 命令的支持信息。  
   
  **身份验证错误：**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 26
   
     ```  
   
--   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有**更改任意凭据**权限的登录帐户。  
+-   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 **更改任意凭据** 权限的登录帐户。  
   
 -   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与您在备份和还原操作中使用的 Windows Azure 存储帐户的属性值匹配。  
   
@@ -94,8 +98,8 @@ caps.handback.revision: 26
   
 -   从压缩备份中还原时，您可能看到以下错误：  
   
-    -   **发生 SqlException 3284。 严重性：16 状态：5**  
-        **设备 “https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak”上的消息文件标记未对齐。 使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
+    -   **发生 SqlException 3284。严重性：16 状态：5**  
+        **设备“https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak”上的消息文件标记未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
   
          要解决此错误，请重新发布指定了 **BLOCKSIZE = 65536** 的 **BACKUP** 语句。  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
-## 代理错误  
+## <a name="proxy-errors"></a>代理错误  
  如果您使用代理服务器访问 Internet，可能会发现以下问题：  
   
  **代理服务器限制连接：**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  使用以下 xml 创建一个名为 BackuptoURL.exe.config 的配置文件：  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
 2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，可将该配置文件置于以下位置：*C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn*。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [从 Microsoft Azure 中存储的备份还原](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

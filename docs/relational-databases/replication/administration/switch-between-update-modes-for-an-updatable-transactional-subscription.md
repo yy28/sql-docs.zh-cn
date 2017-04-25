@@ -1,27 +1,31 @@
 ---
-title: "切换可更新事务性订阅的更新模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务复制, 可更新订阅"
-  - "可更新订阅, 更新模式"
-  - "订阅 [SQL Server 复制], 可更新"
+title: "切换可更新事务订阅的更新模式 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, update modes
+- subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.lasthandoff: 04/11/2017
+
 ---
-# 切换可更新事务性订阅的更新模式
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中切换可更新事务订阅的更新模式。 可以使用新建订阅向导，为可更新的订阅指定模式。 有关使用此向导设置模式的信息，请参阅 [查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+# <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切换可更新事务性订阅的更新模式
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中切换可更新事务订阅的更新模式。 可以使用新建订阅向导，为可更新的订阅指定模式。 有关使用此向导时设置模式的信息，请参阅[查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
  **本主题内容**  
   
@@ -45,46 +49,46 @@ caps.handback.revision: 38
   
 ###  <a name="Recommendations"></a> 建议  
   
--   当对事务发布的更新订阅支持从一种更新模式故障转移到另一种更新模式时，可通过编程方式切换更新模式以应对连接发生短暂变化的情况。 可以使用复制存储过程，以编程方式并根据需要设置更新模式。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
+-   当对事务发布的更新订阅支持从一种更新模式故障转移到另一种更新模式时，可通过编程方式切换更新模式以应对连接发生短暂变化的情况。 可以使用复制存储过程，以编程方式并根据需要设置更新模式。 有关详细信息，请参阅 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)中切换可更新事务订阅的更新模式。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  若要更改的更新模式，在创建订阅后 **update_mode** 属性必须设置为 **故障转移** （它允许从立即更新到的交换机排队更新） 或 **排队故障转移** （允许从排队更新到立即更新切换） 时创建订阅。 在新建订阅向导中，这些属性是自动设置的。  
+>  若要在创建订阅后更改更新模式，必须在创建订阅时将 **update_mode** 属性设置为 **failover** （允许从立即更新切换到排队更新）或 **queued failover** （允许从排队更新切换到立即更新）。 在新建订阅向导中，这些属性是自动设置的。  
   
-#### 设置推送订阅的更新模式  
+#### <a name="to-set-the-updating-mode-for-a-push-subscription"></a>设置推送订阅的更新模式  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中连接到订阅服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击您要为其设置更新模式，然后单击的订阅 **设置更新方法**。  
+3.  右键单击要为其设置更新模式的订阅，然后单击 **“设置更新方法”**。  
   
-4.  在 **设置更新方法-\< 订阅服务器上>: \< 订阅数据库>** 对话框中，选择 **即时更新** 或 **排队更新**。  
+4.  在“设置更新方法 - \<订阅服务器>: \<订阅数据库>”对话框中，选择“立即更新”或“排队更新”。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### 设置请求订阅的更新模式  
+#### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>设置请求订阅的更新模式  
   
-1.  在 **订阅属性-\< 发布服务器>: \< 发布数据库>** 对话框中，选择一个值的 **立即复制更改** 或 **对更改进行排队** 为 **订阅服务器更新方法** 选项。  
+1.  在“订阅属性 - \<发布服务器>: \<发布数据库>”对话框中，为“订阅服务器更新方法”选项选择“立即复制所做的更改”或“排队更改”的值。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 有关访问 **订阅属性-\< 发布服务器>: \< 发布数据库>** 对话框中，请参阅 [查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+ 有关访问“订阅属性 - \<发布服务器>: \<发布数据库>”对话框的详细信息，请参阅[查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 切换更新模式  
+#### <a name="to-switch-between-update-modes"></a>切换更新模式  
   
-1.  验证订阅支持故障转移，通过执行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) 对于请求订阅或 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) 对于推送订阅。 如果结果集中 **update mode** 的值为 **3** 或 **4**，则支持故障转移。  
+1.  通过对请求订阅执行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) 或对推送订阅执行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) ，验证订阅是否支持故障转移。 如果结果集中 **update mode** 的值为 **3** 或 **4**，则支持故障转移。  
   
-2.  在订阅服务器上的订阅数据库上，执行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher**, ，**@publisher_db**, ，**@publication**, ，以及下列其中一项值为 **@failover_mode**:  
+2.  在订阅服务器上，对订阅数据库执行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher**、 **@publisher_db**、 **@publication**并为 **@failover_mode**指定以下值之一：  
   
-    -   **排入队列** -故障转移到排队更新时已暂时失去连接。  
+    -   **queued** - 在短暂断开连接时将故障转移到排队更新。  
   
-    -   **立即** -故障转移到立即更新，当恢复连接。  
+    -   **immediate** - 在恢复连接后将故障转移到立即更新。  
   
-## 另请参阅  
- [事务复制的可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+## <a name="see-also"></a>另请参阅  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

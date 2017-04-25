@@ -1,33 +1,37 @@
 ---
 title: "同步数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "同步 [SQL Server 复制], 关于同步"
-  - "合并复制同步 [SQL Server 复制]"
-  - "脚本 [SQL Server 复制], 同步和"
-  - "同步 [SQL Server 复制]"
-  - "快照复制 [SQL Server], 同步"
-  - "事务复制, 同步"
-  - "订阅 [SQL Server 复制], 同步"
-  - "按需执行脚本"
-  - "复制 [SQL Server 复制], 同步"
-  - "脚本 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], about synchronization
+- merge replication synchronization [SQL Server replication]
+- scripts [SQL Server replication], synchronization and
+- synchronization [SQL Server replication]
+- snapshot replication [SQL Server], synchronization
+- transactional replication, synchronization
+- subscriptions [SQL Server replication], synchronizing
+- on demand script execution
+- replication [SQL Server], synchronization
+- scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.lasthandoff: 04/11/2017
+
 ---
-# 同步数据
+# <a name="synchronize-data"></a>同步数据
   同步数据是指在订阅服务器上应用初始快照后，在发布服务器和订阅服务器之间传播数据和架构更改的过程。 同步可按下列方式发生：  
   
 -   连续，这是事务复制的典型方式。  
@@ -46,7 +50,7 @@ caps.handback.revision: 36
   
 -   合并复制。 同步是指合并代理从订阅服务器向发布服务器上载更改，然后再从发布服务器向订阅服务器下载更改。 将检测并解决冲突（如果有）。 数据被收敛，发布服务器和所有订阅服务器将最终达到相同的数据值。 如果检测到冲突并解决了冲突，则一些用户已提交的工作将更改为根据您定义的策略来解决冲突。  
   
- 每次发生同步时，快照发布都会彻底刷新订阅服务器上的架构，因此所有架构更改都会应用到订阅服务器。 事务复制和合并复制还支持最常见的架构更改。 有关详细信息，请参阅 [发布数据库上进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 每次发生同步时，快照发布都会彻底刷新订阅服务器上的架构，因此所有架构更改都会应用到订阅服务器。 事务复制和合并复制还支持最常见的架构更改。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
  若要同步推送订阅，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
@@ -56,18 +60,18 @@ caps.handback.revision: 36
   
  **查看和解决同步冲突**  
   
--   [!包括 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!包括 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
-## 在同步过程中执行代码  
+## <a name="executing-code-during-synchronization"></a>在同步过程中执行代码  
  复制支持两种在同步过程中执行代码的方法  
   
--   事务复制和合并复制支持按需脚本执行。 使用按需脚本执行，可以指定要在同步过程中运行的 SQL 脚本。 将该脚本复制到订阅服务器，并在同步进程开始时用 **sqlcmd** 执行该脚本。 在将复制的更改应用到订阅服务器时，该脚本不能访问这些复制的更改。 有关详细信息，请参阅 [执行脚本期间同步 & #40;复制 TRANSACT-SQL 编程 & #41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
+-   事务复制和合并复制支持按需脚本执行。 使用按需脚本执行，可以指定要在同步过程中运行的 SQL 脚本。 将该脚本复制到订阅服务器，并在同步进程开始时用 **sqlcmd** 执行该脚本。 在将复制的更改应用到订阅服务器时，该脚本不能访问这些复制的更改。 有关详细信息，请参阅[在同步期间执行脚本（复制 Transact-SQL 编程）](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
   
--   合并复制支持业务逻辑处理程序。 使用业务逻辑处理程序框架，可以编写一个在合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 有关详细信息，请参阅 [执行合并同步期间业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
+-   合并复制支持业务逻辑处理程序。 使用业务逻辑处理程序框架，可以编写一个在合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 有关详细信息，请参阅[合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
-## 另请参阅  
- [检测并解决合并复制冲突](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)  
+## <a name="see-also"></a>另请参阅  
+ [检测并解决合并复制冲突](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

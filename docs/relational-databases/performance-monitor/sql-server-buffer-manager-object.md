@@ -1,25 +1,29 @@
 ---
-title: "SQL Server Buffer Manager 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Buffer Manager 对象"
-  - "SQLServer:Buffer Manager"
+title: "SQL Server - Buffer Manager 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Buffer Manager object
+- SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Buffer Manager 对象
+# <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
   **Buffer Manager** 对象提供了计数器，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用以下项：  
   
 -   存储数据页的内存。  
@@ -36,7 +40,7 @@ caps.handback.revision: 36
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要从磁盘读取数据的频率。 与其他操作（例如内存访问）相比，物理 I/O 会消耗大量时间。 尽可能减少物理 I/O 可以提高查询性能。  
   
-## 缓冲区管理器性能对象  
+## <a name="buffer-manager-performance-objects"></a>缓冲区管理器性能对象  
  下表描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 性能对象。  
   
 |SQL Server Buffer Manager 计数器|Description|  
@@ -66,7 +70,7 @@ caps.handback.revision: 36
 |**Target Pages**|缓冲池中理想的页数。|
 
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server Plan Cache 对象](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

@@ -1,26 +1,30 @@
 ---
-title: "存储过程（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "将程序存储为存储过程"
-  - "存储过程 [SQL Server], 关于存储过程"
+title: "存储过程（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- storing programs as stored procedures
+- stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14cb04aa946bed3cace30379ca2d78b3cd045b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 存储过程（数据库引擎）
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
+# <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的存储过程是由一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用构成的一个组。 过程与其他编程语言中的构造相似，这是因为它们都可以：  
   
 -   接受输入参数并以输出参数的格式向调用程序返回多个值。  
   
@@ -92,6 +96,6 @@ caps.handback.revision: 35
 |介绍如何在存储过程中使用参数。|[参数](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>相关内容  
- [CLR 存储过程](../Topic/CLR%20Stored%20Procedures.md)  
+ [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
   
   

@@ -1,32 +1,36 @@
 ---
 title: "SQL Server XTP 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP 数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP 数据库
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP 数据库
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-**SQL Server XTP 数据库**性能对象提供内存中 OLTP 特定于数据库的计数器。
+**SQL Server XTP 数据库** 性能对象提供内存中 OLTP 特定于数据库的计数器。
 
 > [!NOTE]
->  SQL Server XTP 数据库计数器当前从 sys.dm_os_performance_counters 中不可见。  可以通过[系统监视器](../../relational-databases/performance/start-system-monitor-windows.md)查看这些计数器。
+>  SQL Server XTP 数据库计数器当前从 sys.dm_os_performance_counters 中不可见。  可以通过 [系统监视器](../../relational-databases/performance/start-system-monitor-windows.md)查看这些计数器。
 
-下表说明了 **SQL Server XTP 数据库**计数器。
+下表说明了 **SQL Server XTP 数据库** 计数器。
 
 |计数器|Description| 
 |-------------|-----------------|  
@@ -64,5 +68,5 @@ caps.handback.revision: 3
 |**结尾缓存页面计数峰值**|在结尾缓存中分配的最大页数。 此为非常低级的计数器，不适合客户使用。|
 
 
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQL Server XTP（内存中 OLTP）性能计数器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

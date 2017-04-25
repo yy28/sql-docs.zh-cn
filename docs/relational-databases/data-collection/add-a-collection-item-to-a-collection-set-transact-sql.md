@@ -1,30 +1,34 @@
 ---
 title: "将收集项添加到收集组中 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "收集项 [SQL Server]"
-  - "收集组 [SQL Server], 添加项"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection items [SQL Server]
+- collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90261ca03da94b15b003da029f07d8804aaa1805
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将收集项添加到收集组中 (Transact-SQL)
+# <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>将收集项添加到收集组中 (Transact-SQL)
   可以使用随数据收集器一起提供的存储过程将收集项添加到现有收集组中。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查询编辑器执行以下步骤。  
   
-### 将收集项添加到收集组中  
+### <a name="add-a-collection-item-to-a-collection-set"></a>将收集项添加到收集组中  
   
 1.  通过运行 **sp_syscollector_stop_collection_set** 存储过程停止要向其中添加收集项的收集组。 例如，若要停止名为“Test Collection Set”的收集组，请运行下列语句：  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 21
     ```  
   
     > [!NOTE]  
-    >  还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器来停止收集组。 有关详细信息，请参阅[启动或停止收集组](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)。  
+    >  还可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的对象资源管理器来停止收集组。 有关详细信息，请参阅 [启动或停止收集组](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)。  
   
 2.  声明要向其中添加收集项的收集组。 下面的代码提供了一个演示如何声明收集组 ID 的示例。  
   
@@ -96,8 +100,8 @@ caps.handback.revision: 21
   
      收集组和它们的收集项都显示在 **“结果”** 选项卡中。  
   
-## 另请参阅  
- [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

@@ -1,28 +1,32 @@
 ---
 title: "备份和还原：互操作性和共存 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件还原 [SQL Server], 相关功能"
-  - "还原 [SQL Server], 文件"
-  - "还原文件 [SQL Server], 相关功能"
-  - "备份 [SQL Server], 文件或文件组"
-  - "文件备份 [SQL Server], 相关功能"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份和还原：互操作性和共存 (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
@@ -64,19 +68,19 @@ caps.handback.revision: 45
  本节仅与包含多个文件组的完整模式数据库有关。  
   
 > [!NOTE]  
->  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
+>  后续版本的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
   
  “数据库镜像”是一种提高数据库可用性的解决方案。 镜像基于每个数据库实现，并且只适用于使用完整恢复模式的数据库。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 > [!NOTE]  
 >  若要分发数据库中部分文件组的副本，请使用复制：仅复制文件组中您要复制到其他服务器的那些对象。 有关复制的详细信息，请参阅 [SQL Server 复制](../../relational-databases/replication/sql-server-replication.md)。  
   
-### 创建镜像数据库  
- 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+### <a name="creating-the-mirror-database"></a>创建镜像数据库  
+ 镜像数据库是通过还原 (WITH NORECOVERY) 镜像服务器上主体数据库的备份创建的。 还原后的数据库必须保持相同的数据库名称。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中若干功能的备份和还原注意事项。  
   
  您可以使用段落还原顺序在支持镜像数据库的地方创建镜像数据库。 但是，在开始镜像之前，必须还原所有文件组后才能，通常还必须还原日志备份以保证镜像数据库的时间与原始数据库的时间足够接近。 有关详细信息，请参阅[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   
-### 镜像期间备份和还原的限制  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>镜像期间备份和还原的限制  
  数据库镜像会话活动时，将应用以下限制：  
   
 -   不允许备份和还原镜像数据库。  
@@ -91,9 +95,9 @@ caps.handback.revision: 45
  全文索引存储在数据库文件组中，受段落还原的影响。 如果全文索引与任何关联的表数据位于同一文件组中，则段落还原将按预期的方式工作。  
   
 > [!NOTE]  
->  若要查看包含全文索引的文件组的文件组 ID，请选择 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 的 data_space_id 列。  
+>  若要查看包含全文索引的文件组的文件组 ID，请选择 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)的 data_space_id 列。  
   
-### 全文索引和表在不同的文件组中  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>全文索引和表在不同的文件组中  
  如果全文索引与所有关联的表数据位于不同的文件组中，则段落还原的行为取决于哪个文件组首先还原并变为联机：  
   
 -   如果包含全文索引的文件组先于包含关联表数据的文件组还原并变为联机，则在全文索引联机后，全文搜索将按预期的方式工作。  
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [活动次要副本：次要副本备份 \(AlwaysOn 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

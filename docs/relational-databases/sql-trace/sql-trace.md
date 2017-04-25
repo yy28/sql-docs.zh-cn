@@ -1,36 +1,40 @@
 ---
 title: "SQL 跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 037db169bd49c589ca039546dcf13d322e1f1a41
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL 跟踪
-  在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序中的跟踪信息。  
+# <a name="sql-trace"></a>SQL 跟踪
+  在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
   
-## SQL 跟踪的优点  
+## <a name="benefits-of-sql-trace"></a>SQL 跟踪的优点  
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程来创建对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的跟踪。 可以不使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，而使用这些系统存储过程从您自己的应用程序中手动创建跟踪。 这样，您就可以针对企业的特定需求编写自定义应用程序。  
   
-## SQL 跟踪结构  
+## <a name="sql-trace-architecture"></a>SQL 跟踪结构  
  事件源可以是生成跟踪事件（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理）或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件（例如死锁）的任何源。 有关事件的详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 事件发生后，如果该事件类已经包含在跟踪定义中，则跟踪将收集该事件信息。 如果已经在跟踪定义中为该事件类定义筛选器，则将应用这些筛选器并将跟踪事件信息传递到队列。 从队列中，跟踪信息或者被写入文件，或者由应用程序（例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]）中的 SMO 使用。 以下关系图显示了在跟踪期间 SQL 跟踪如何收集事件。  
   
  ![数据库引擎事件跟踪进程](../../relational-databases/sql-trace/media/tracarch.gif "数据库引擎事件跟踪进程")  
   
-## SQL 跟踪的术语  
+## <a name="sql-trace-terminology"></a>SQL 跟踪的术语  
  下列词汇介绍了 SQL 跟踪的重要概念。  
   
  **事件**  
@@ -45,16 +49,16 @@ caps.handback.revision: 13
  **事件类别**  
  一组相关的事件类。  
   
- **跟踪**（名词）  
+ **跟踪** （名词）  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]返回的事件和数据的集合。  
   
- **跟踪**（动词）  
- 收集并监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的事件。  
+ **跟踪** （动词）  
+ 收集并监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中的事件。  
   
  **跟踪定义**  
  事件类、数据列和筛选器的集合，用于标识跟踪过程中收集的事件的类型。  
   
- **筛选**  
+ **ActualRebinds**  
  限制跟踪中收集的事件的条件。  
   
  **跟踪文件**  
@@ -64,12 +68,12 @@ caps.handback.revision: 13
  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，用来定义要在跟踪中收集的事件类和数据列的文件。  
   
  **跟踪表**  
- 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中，将跟踪保存到表时创建的表。  
+ 在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，将跟踪保存到表时创建的表。  
   
-## 使用数据列描述返回的事件  
+## <a name="use-data-columns-to-describe-returned-events"></a>使用数据列描述返回的事件  
  跟踪运行时，SQL 跟踪使用跟踪输出中的数据列来描述返回的事件。 下表说明了 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列（这些数据列与 SQL 跟踪使用的数据列相同），并指示默认情况下选择的列。  
   
-|数据列|列号|说明|  
+|数据列|列号|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
 |**BigintData1**|52|值（**bigint** 数据类型），取决于跟踪中指定的事件类。|  
@@ -78,7 +82,7 @@ caps.handback.revision: 13
 |**ClientProcessID***|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
 |**CPU**|18|事件使用的 CPU 时间（毫秒）。|  
-|**数据库 ID***|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
+|**Database ID***|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName***|40|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。|  
 |**Duration**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间”  列值。|  
@@ -98,13 +102,13 @@ caps.handback.revision: 13
 |**LineNumber**|5|包含存在错误的行的行号。 对于涉及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的事件（如 **SP:StmtStarting**）， **LineNumber** 包含存储过程或批查询中语句的行号。|  
 |**LinkedServerName**|45|链接服务器的名称。|  
 |**LoginName**|11|用户的登录名（SQL Server 安全登录名或 Windows 登录凭据，格式为“域/用户名”）。|  
-|**LoginSid***|41|已登录的用户的安全标识符 (SID)。 可以在**master** 数据库的 **sys.server_principals** 视图中找到此信息。 服务器中的每个登录名都具有唯一的 ID。|  
+|**LoginSid***|41|已登录的用户的安全标识符 (SID)。 可以在 **master** 数据库的 **sys.server_principals** 视图中找到此信息。 服务器中的每个登录名都具有唯一的 ID。|  
 |**MethodName**|47|OLEDB 方法的名称。|  
 |**模式**|32|一个整数，各种事件都使用它来描述事件要请求或已接收的状态。|  
 |**NestLevel**|29|一个整数，表示 @@NESTLEVEL 返回的数据。|  
 |**NTDomainName***|7|用户所属的 Microsoft Windows 域。|  
 |**NTUserName***|6|Windows 用户名。|  
-|**ObjectID**|22|系统分配的对象 ID。|  
+|**Exchange Spill**|22|系统分配的对象 ID。|  
 |**ObjectID2**|56|相关对象或实体（如果存在）的 ID。|  
 |**ObjectName**|34|被引用对象的名称。|  
 |**ObjectType***\*|28|表示事件中涉及的对象类型的值。 该值对应于 **sysobjects** 中的 **type**列。|  
@@ -140,7 +144,7 @@ caps.handback.revision: 13
   
  \*\*有关 **ObjectType** 数据列的详细信息，请参阅 [ObjectType 跟踪事件列](../../relational-databases/event-classes/objecttype-trace-event-column.md)。  
   
-## SQL 跟踪任务  
+## <a name="sql-trace-tasks"></a>SQL 跟踪任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -157,9 +161,9 @@ caps.handback.revision: 13
 |介绍如何将跟踪引起的性能损失降到最低。|[优化 SQL 跟踪](../../relational-databases/sql-trace/optimize-sql-trace.md)|  
 |介绍如何筛选跟踪以将跟踪过程中的开销降到最低。|[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)|  
 |介绍如何将跟踪收集的数据量降至最低。|[限制跟踪文件和表的大小](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
-|介绍在 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中计划跟踪的两种方法。|[安排跟踪](../../relational-databases/sql-trace/schedule-traces.md)|  
+|介绍在 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中计划跟踪的两种方法。|[安排跟踪](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

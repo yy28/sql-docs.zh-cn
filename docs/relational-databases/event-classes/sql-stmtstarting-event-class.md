@@ -1,27 +1,31 @@
 ---
 title: "SQL:StmtStarting 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtStarting 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30ff970e6dddcde5e23d0aaaf8848d9a18f87db1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL:StmtStarting 事件类
+# <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 事件类
   SQL:StmtStarting 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已启动。  
   
-## SQL:StmtStarting 事件类的数据列  
+## <a name="sqlstmtstarting-event-class-data-columns"></a>SQL:StmtStarting 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -36,15 +40,15 @@ caps.handback.revision: 32
 |IntegerData2|**int**|正在执行的语句的终止偏移量（字节）。|55|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LineNumber|**int**|正在执行的语句的行号。|5|是|  
-|LoginName|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
+|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
 |LoginSid|**image**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NestLevel|**int**|如果曾在存储过程中运行 SQL 语句，则为存储过程的嵌套级别。|29|是|  
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  
 |Offset|**int**|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
+|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |State|**int**|指示在重新编译后是否执行语句。<br /><br /> 1 = 已重新编译|30|是|  
@@ -52,7 +56,7 @@ caps.handback.revision: 32
 |TransactionID|**bigint**|该语句在事务中运行时的事务 ID。|4|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

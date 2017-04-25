@@ -1,30 +1,34 @@
 ---
 title: "强密码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "登录名 [SQL Server], 密码"
-  - "密码 [SQL Server], 强"
-  - "符号 [SQL Server]"
-  - "安全性 [SQL Server], 密码"
-  - "密码 [SQL Server], 符号"
-  - "字符 [SQL Server], 密码策略"
-  - "强密码 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server], passwords
+- passwords [SQL Server], strong
+- symbols [SQL Server]
+- security [SQL Server], passwords
+- passwords [SQL Server], symbols
+- characters [SQL Server], password policies
+- strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e58e590b2b57c96a18b8752b33d7b559b375d028
+ms.lasthandoff: 04/11/2017
+
 ---
-# 强密码
+# <a name="strong-passwords"></a>强密码
   在服务器安全部署中，密码可能是最薄弱的一个环节。 请务必在选择密码时保持高度谨慎。 强密码有以下特征：  
   
 -   长度至少有 8 个字符。  
@@ -51,9 +55,9 @@ caps.handback.revision: 30
   
 -   以 $ 或 @ 字符开头。  
   
- 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! @. 这些字符用于初始化连接或分隔连接值。  
+ 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! @。 这些字符用于初始化连接或分隔连接值。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [密码策略](../../relational-databases/security/password-policy.md)  
   
   

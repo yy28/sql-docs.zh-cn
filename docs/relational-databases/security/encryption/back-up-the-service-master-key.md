@@ -1,25 +1,29 @@
 ---
 title: "备份服务主密钥 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "服务主密钥 [SQL Server], 导出"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 630f9c3ecdf47e6cb7a5d9f2a7970bea99d330a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份服务主密钥
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
+# <a name="back-up-the-service-master-key"></a>备份服务主密钥
+  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
   
  **本主题内容**  
   
@@ -46,9 +50,9 @@ caps.handback.revision: 18
   
 ##  <a name="Procedure"></a> 使用 Transact-SQL  
   
-#### 备份服务主密钥  
+#### <a name="to-back-up-the-service-master-key"></a>备份服务主密钥  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，连接到包含需要备份的服务主密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
+1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，连接到包含需要备份的服务主密钥的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
 2.  选择要用于在备份介质上加密服务主密钥的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../../relational-databases/security/password-policy.md)。  
   

@@ -1,26 +1,30 @@
 ---
-title: "SQLServer，Workload Group Stats 对象 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Workload Group Stats 对象"
-  - "SQLServer: Workload Group Stats"
+title: "SQL Server - Workload Group Stats 对象 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Workload Group Stats object
+- 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQLServer，Workload Group Stats 对象
+# <a name="sql-server-workload-group-stats-object"></a>SQLServer，Workload Group Stats 对象
   SQLServer:Workload Group Stats 对象包含报告资源调控器工作负荷组统计相关信息的性能计数器。  
   
  每个活动工作负荷组都创建一个 SQLServer:Workload Group Stats 性能对象实例，实例的名称与资源调控器工作负荷组的名称相同。 下表介绍了此实例支持的计数器。  
@@ -45,9 +49,10 @@ caps.handback.revision: 14
 |**Requests completed/sec**|此工作负荷组中已完成的请求数。 此数值可累计。|  
 |**Suboptimal plans/sec**|每秒此工作负荷组中生成的非最优计划数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server，Resource Pool Stats 对象](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)  
   
   
+

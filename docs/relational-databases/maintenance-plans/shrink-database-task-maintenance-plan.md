@@ -1,28 +1,32 @@
 ---
-title: "“收缩数据库”任务（维护计划） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Shrink Database Task"
-  - "Shrink Database(s) Task"
-  - "sql13.swb.maint.shrink.f1"
-helpviewer_keywords: 
-  - "“‘收缩数据库’任务”对话框"
+title: "“收缩数据库”任务（维护计划）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Shrink Database Task
+- Shrink Database(s) Task
+- sql13.swb.maint.shrink.f1
+helpviewer_keywords:
+- Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
+ms.lasthandoff: 04/11/2017
+
 ---
-# “收缩数据库”任务（维护计划）
+# <a name="shrink-database-task-maintenance-plan"></a>“收缩数据库”任务（维护计划）
   使用 **“‘收缩数据库’任务”** 对话框可以创建一个任务，尝试减小所选数据库的大小。 使用下面的选项可以确定数据库收缩后在数据库中保留的未使用空间量（该百分比越大，数据库可收缩的量越小）。 该数值取决于数据库中实际数据的百分比。 例如，某个 100 MB 数据库包含 60 MB 的数据和 40 MB 的可用空间，当可用空间百分比为 50% 时，则将保留 60 MB 的数据和 30 MB 的可用空间（因为 60 MB 的 50% 是 30 MB）。 只会去除数据库中的多余空间。 有效值为 0 到 100。  
   
  收缩数据文件通过将数据页从文件末尾移动到更靠近文件开头的未占用的空间来恢复空间。 在文件末尾创建足够的可用空间后，可以取消对文件末尾的数据页的分配并将它们返回给文件系统。  
@@ -32,7 +36,7 @@ caps.handback.revision: 28
   
  此任务执行 DBCC SHRINKDATABASE 语句。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接**  
  选择执行此任务时使用的服务器连接。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  当受影响的对象很多时，可能需要相当长的时间才可显示。  
   
-## “新建连接”对话框  
+## <a name="new-connection-dialog-box"></a>“新建连接”对话框  
  **连接名称**  
  输入新连接的名称。  
   
@@ -87,10 +91,10 @@ caps.handback.revision: 28
  指定如何对服务器进行身份验证。  
   
  **使用 Windows NT 集成安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
@@ -98,7 +102,7 @@ caps.handback.revision: 28
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   

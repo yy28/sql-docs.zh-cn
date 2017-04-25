@@ -1,29 +1,33 @@
 ---
 title: "设置 SQL Server 数据库警报 (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "警报 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eabe827b89c3931523bda848e01471853cbde6b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 设置 SQL Server 数据库警报 (Windows)
+# <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
   通过使用系统监视器可以创建一个在达到系统监视器计数器的阈值时发出的警报。 作为对警报的响应，系统监视器会启动一个应用程序，例如为处理警报情况而编写的自定义应用程序。 例如，您可以创建在死锁数超过特定值时将会引发的警报。  
   
- 此外，还可以使用 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定义警报。 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
+ 此外，还可以使用 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来定义警报。 有关详细信息，请参阅 [“警报”](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)。  
   
-### 设置 SQL Server 数据库警报  
+### <a name="to-set-up-a-sql-server-database-alert"></a>设置 SQL Server 数据库警报  
   
 1.  在“性能”窗口的导航树中，展开 **“性能日志和警报”**。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 23
   
 10. 在 **“计划”** 选项卡上，设置警报扫描的开始和停止计划。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 SQL Server 数据库警报](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   

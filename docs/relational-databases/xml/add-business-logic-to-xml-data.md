@@ -1,24 +1,28 @@
 ---
 title: "将业务逻辑添加到 XML 数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "业务逻辑 [XML]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将业务逻辑添加到 XML 数据
+# <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
   
 -   您可以编写行或列约束，以在插入和修改 XML 数据时强制实施特定于域的约束。  
@@ -29,8 +33,8 @@ caps.handback.revision: 18
   
 -   您可以编写 Transact-SQL 存储过程和函数，对 XML 列进行处理以满足业务需要。  
   
-## 示例：应用 XSL 转换  
- 考虑一个 CLR 函数 **TransformXml()**，该函数接受 **xml** 数据类型实例和存储在文件中的 XSL 转换，并对 XML 数据应用转换，然后在结果中返回转换的 XML。 以下是用 C# 编写的主干函数：  
+## <a name="example-applying-xsl-transformation"></a>示例：应用 XSL 转换  
+ 考虑一个 CLR 函数 **TransformXml()** ，该函数接受 **xml** 数据类型实例和存储在文件中的 XSL 转换，并对 XML 数据应用转换，然后在结果中返回转换的 XML。 以下是用 C# 编写的主干函数：  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  
@@ -50,7 +54,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- 注册程序集并创建用户定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数之后（**SqlXslTransform()** 对应于 **TransformXml()**），便可从 Transact-SQL 中调用该函数，如以下查询所示：  
+ 注册程序集并创建用户定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数之后（ **SqlXslTransform()** 对应于 **TransformXml()**），便可从 Transact-SQL 中调用该函数，如以下查询所示：  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

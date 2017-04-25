@@ -1,27 +1,31 @@
 ---
 title: "Broker:Remote Message Ack 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Remote Message Ack 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 747d421d4a9e6a86295ce843aa6c2b943bf006cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Remote Message Ack 事件类
+# <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送或接收消息确认时， **将生成** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
   
-## Broker:Remote Message Ack 事件类的数据列  
+## <a name="brokerremote-message-ack-event-class-data-columns"></a>Broker:Remote Message Ack 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -31,7 +35,7 @@ caps.handback.revision: 29
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID。 如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对于 **Broker:Message Ack** 始终是 **149**。|27|是|  
-|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|是|  
 |**EventSubClass**|**nvarchar**|事件子类的类型，提供有关每个事件类的详细信息。 此列可能包含以下值：<br /><br /> **已发送带有确认的消息**：<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已将确认作为已编序的正常消息的一部分发送。<br /><br /> **已发送确认**：<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已发送确认，但该确认不包括在已编序的正常消息内。<br /><br /> **已收到带有确认的消息**：<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已收到确认，该确认包括在已编序的正常消息内。<br /><br /> **已收到确认**：<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 已收到确认，但该确认不在已编序的正常消息内。|21|是|  
 |**GUID**|**uniqueidentifier**|对话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|是|  
 |**HonorBrokerPriority**|**Int**|数据库 HONOR_BROKER_PRIORITY 选项的当前值：0 = OFF、1 = ON。|32|是|  

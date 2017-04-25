@@ -1,33 +1,37 @@
 ---
 title: "使用基于策略的管理来管理服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "方面，请参阅方面"
-  - "声明性管理框架，请参阅基于策略的管理。"
-  - "外围应用配置 [SQL Server], 基于策略的管理"
-  - "基于策略的管理"
-  - "方面 [基于策略的管理]"
-  - "基于策略的管理, 管理"
-  - "条件 [基于策略的管理]"
-  - "Facet [基于策略的管理], 关于 Facet"
-  - "PolicyAdministratorRole 角色"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用基于策略的管理来管理服务器
-   基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 用于创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
+# <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
+   基于策略的管理是一个基于策略的系统，用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 用于创建包含条件表达式的条件。 然后创建一些策略，将这些条件应用于数据库目标对象。  
 
 例如，作为数据库管理员，你可能希望确保某些服务器没有启用数据库邮件，因此，可创建设置该服务器选项的条件和策略。 
    
@@ -45,9 +49,9 @@ caps.handback.revision: 76
   
  对于失败的策略，对象资源管理器以红色图标的形式指示严重运行状态警告，此图标位于该目标以及对象资源管理器树中此目标上面的节点旁边。  
   
-> **注意：**在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **注意：** 在系统计算某一策略的对象集时，默认情况下将排除系统对象。  例如，如果该策略的对象集引用所有表，则该策略将不适用于系统表。 如果用户想要评估针对系统对象的策略，可以显式向对象集添加系统对象。 但是，尽管 **“按计划检查”** 评估模式支持所有策略，但出于性能原因， **“更改时检查”** 并不支持具有任意对象集的所有策略。 有关详细信息，请参阅 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## 三个基于策略的管理组件  
+## <a name="three-policy-based-management-components"></a>三个基于策略的管理组件  
  基于策略的管理包含以下三个组件：  
   
 -   策略管理。 策略管理员创建策略。  
@@ -68,7 +72,7 @@ caps.handback.revision: 76
   
      在未启用自动策略时，基于策略的管理不会影响系统性能。  
   
-## 术语  
+## <a name="terms"></a>术语  
  **基于策略的管理目标** 
  基于策略的管理所管理的实体，例如，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例、数据库、表或索引。 服务器实例中的所有目标构成了目标层次结构。 目标集是将一组目标筛选器应用于目标层次结构后得到的一组目标，例如，HumanResources 架构所拥有的数据库中的所有表。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 76
   
 -   目标或目标祖先之一订阅了包含此策略的策略组。  
   
-## 特定任务的链接 
+## <a name="links-to-specific-tasks"></a>特定任务的链接 
 
  - [存储基于策略的管理策略。](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [配置警报以通知策略管理员策略失败情况](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ caps.handback.revision: 76
  - [使用基于策略的管理来监视和强制执行最佳实践](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## 示例
+ ## <a name="examples"></a>示例
  - [创建 Off By Default 策略](https://msdn.microsoft.com/library/bb500172.aspx)
   - [将服务器配置为运行 Off By Default 策略](https://msdn.microsoft.com/library/bb522470.aspx)
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

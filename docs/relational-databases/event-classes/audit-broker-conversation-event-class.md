@@ -1,27 +1,31 @@
 ---
 title: "Audit Broker Conversation 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker Conversation 事件类
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建了 **Audit Broker Conversation** 事件以报告与 Service Broker 对话安全有关的审核消息。  
   
-## Audit Broker Conversation 事件类的数据列  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Invalid Signature|Broker 无法使用发送方证书中的公钥来验证发送方所提供的消息签名。 这可能表示消息已损坏、消息被篡改、远程服务和本地服务没有配置相同的用户证书的或者证书已过期。|  
 |4|Run As Target Failure|目标用户不具有对目标队列的接收权限。 为了防止未经授权的用户接收消息，如果目标用户无法接收消息队列，则无论初始用户是否有权将消息排队，Service Broker 都不会将消息排队。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

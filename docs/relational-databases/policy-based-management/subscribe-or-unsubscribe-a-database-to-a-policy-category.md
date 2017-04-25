@@ -1,24 +1,28 @@
 ---
 title: "建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
+# <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅。  
   
  **本主题内容**  
@@ -42,7 +46,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅  
+#### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅  
   
 1.  在 **“对象资源管理器”**中，单击加号以展开包含您要管理类别订阅的数据库的服务器。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 建立数据库对某个策略类别的订阅  
+#### <a name="to-subscribe-a-database-to-a-policy-category"></a>建立数据库对某个策略类别的订阅  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
   
  有关详细信息，请参阅 [sp_syspolicy_subscribe_to_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)。  
   
-#### 取消数据库对某个策略类别的订阅  
+#### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>取消数据库对某个策略类别的订阅  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

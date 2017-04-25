@@ -1,49 +1,53 @@
 ---
-title: "始终加密的加密 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "始终加密, 加密系统"
+title: "Always Encrypted 加密 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee5419dc374c545daa1249f2e6f76d8d13ac4695
+ms.lasthandoff: 04/11/2017
+
 ---
-# 始终加密的加密
+# <a name="always-encrypted-cryptography"></a>始终加密的加密
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本文档介绍加密算法和机制，以派生在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 中[始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能中使用的加密材料。  
+  本文档介绍加密算法和机制，以派生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的加密材料。  
   
-## 密钥、密钥存储和密钥加密算法  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>密钥、密钥存储和密钥加密算法  
  始终加密使用两种类型的密钥：列主密钥和列加密密钥。  
   
- 列主密钥 (CMK) 是密钥加密密钥（即用来加密其他密钥的密钥），它会始终处于客户端的控制之下并存储在外部密钥存储区中。 启用了始终加密的客户端驱动程序通过 CMK 存储提供程序与密钥存储进行交互，提供程序可以是驱动程序库（[!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system 提供程序）或客户端应用程序（自定义提供程序）的一部分。 客户端驱动程序库目前包括 [Windows 证书存储](https://msdn.microsoft.com/library/windows/desktop/aa388160)的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 密钥存储提供程序和硬件安全模块 (HSM)。  （有关提供程序的当前列表信息，请参阅 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)。）应用程序开发人员可以为任意存储提供自定义提供程序。  
+ 列主密钥 (CMK) 是密钥加密密钥（即用来加密其他密钥的密钥），它会始终处于客户端的控制之下并存储在外部密钥存储区中。 启用了始终加密的客户端驱动程序通过 CMK 存储提供程序与密钥存储进行交互，提供程序可以是驱动程序库（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system 提供程序）或客户端应用程序（自定义提供程序）的一部分。 客户端驱动程序库目前包括 [Windows 证书存储](https://msdn.microsoft.com/library/windows/desktop/aa388160)的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 密钥存储提供程序和硬件安全模块 (HSM)。  （有关提供程序的当前列表信息，请参阅 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)。）应用程序开发人员可以为任意存储提供自定义提供程序。  
   
  列加密密钥 (CEK) 是受 CMK 保护的内容加密密钥（即用来保护数据的密钥）。  
   
  所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存储提供程序通过将 RSA 与具有节 A.2.1 中由 RFC 3447 指定的默认参数的最佳非对称加密填充 (RSA-OAEP) 配合使用来加密 CEK。 这些默认参数使用 SHA-1 哈希函数和具有 SHA-1 的 MGF1 掩码生成函数。  
   
-## 数据加密算法  
+## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** 派生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 中的规范草案。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** 派生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)中的规范草案。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
   
- 为了隐藏模式，**AEAD_AES_256_CBC_HMAC_SHA_256** 将使用操作的密码块链 (CBC) 模式，其中初始值送入了名为初始化向量 (IV) 的系统。 可以在 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) 找到 CBC 模式的完整说明。  
+ 为了隐藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用操作的密码块链 (CBC) 模式，其中初始值送入了名为初始化向量 (IV) 的系统。 可以在 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)找到 CBC 模式的完整说明。  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用下列步骤计算给定纯文本值的密码文本值。  
   
-### 步骤 1：生成初始化向量 (IV)  
- 始终加密支持 **AEAD_AES_256_CBC_HMAC_SHA_256** 的两种变体：  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>步骤 1：生成初始化向量 (IV)  
+ 始终加密支持 **AEAD_AES_256_CBC_HMAC_SHA_256**的两种变体：  
   
 -   具有随机性  
   
@@ -72,7 +76,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  与其他同类方法相比（如使用预定义 IV 值），确定加密在隐藏模式下更有效。  
   
-### 步骤 2：计算 AES_256_CBC 密码文本  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>步骤 2：计算 AES_256_CBC 密码文本  
  计算 IV 后，将生成 **AES_256_CBC** 已加密文本：  
   
 ```  
@@ -85,7 +89,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### 步骤 3：计算 MAC  
+### <a name="step-3-computing-mac"></a>步骤 3：计算 MAC  
  随后，使用以下算法计算 MAC：  
   
 ```  
@@ -99,14 +103,14 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### 步骤 4：串联  
+### <a name="step-4-concatenation"></a>步骤 4：串联  
  最后，只需串联算法版本字节、MAC、IV 和 AES_256_CBC 密码文本，便可生成加密值：  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
 ```  
   
-## 密码文本长度  
+## <a name="ciphertext-length"></a>密码文本长度  
  **AEAD_AES_256_CBC_HMAC_SHA_256** 已加密文本的特定组件的长度是（以字节为单位）：  
   
 -   versionbyte：1  
@@ -115,7 +119,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 -   IV：16  
   
--   aes_256_cbc_ciphertext：`(FLOOR (DATALENGTH(cell_data)/ block_size) + 1)* block_size`，其中：  
+-   aes_256_cbc_ciphertext： `(FLOOR (DATALENGTH(cell_data)/ block_size) + 1)* block_size`，其中：  
   
     -   block_size 为 16 字节  
   
@@ -174,11 +178,12 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**varchar**|不定。 使用上面的公式。|  
 |**xml**|N/A（不支持）|  
   
-## .NET 参考  
- 有关本文档中讨论的算法的详细信息，请参阅 [.NET 参考](http://referencesource.microsoft.com/)中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 **SqlColumnEncryptionCertificateStoreProvider.cs** 文件。  
+## <a name="net-reference"></a>.NET 参考  
+ 有关本文档中讨论的算法的详细信息，请参阅 **.NET 参考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)文件。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted（客户端开发）](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

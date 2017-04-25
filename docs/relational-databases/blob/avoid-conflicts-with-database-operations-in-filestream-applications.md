@@ -1,27 +1,31 @@
 ---
 title: "避免与 FILESTREAM 应用程序中的数据库操作冲突 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32 和 Transact-SQL 冲突"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 避免与 FILESTREAM 应用程序中的数据库操作冲突
+# <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免与 FILESTREAM 应用程序中的数据库操作冲突
   使用 SqlOpenFilestream() 打开 Win32 文件句柄以读取或写入 FILESTREAM BLOB 数据的应用程序可能会遇到与在通用事务中管理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的冲突错误。 这包括花很长时间才能完成执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 MARS 查询。 为了有助于避免这些类型的冲突，必须精心设计应用程序。  
   
- 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或应用程序尝试打开 FILESTREAM BLOB 时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会检查关联事务上下文。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据打开操作是在处理 DDL 语句、DML 语句，在检索数据还是在管理事务，从而允许或拒绝请求。 下表显示[!INCLUDE[ssDE](../../includes/ssde-md.md)]如何根据事务中打开的文件的类型来确定是允许还是拒绝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+ 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或应用程序尝试打开 FILESTREAM BLOB 时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会检查关联事务上下文。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据打开操作是在处理 DDL 语句、DML 语句，在检索数据还是在管理事务，从而允许或拒绝请求。 下表显示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何根据事务中打开的文件的类型来确定是允许还是拒绝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 |Transact-SQL 语句|打开以进行读取|打开以进行写入|  
 |------------------------------|---------------------|----------------------|  
@@ -34,10 +38,10 @@ caps.handback.revision: 16
   
  \* 取消事务，并且事务上下文的打开句柄无效。 应用程序必须关闭所有打开句柄。  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 FILESTREAM Win32 访问是如何导致冲突的。  
   
-### A. 打开 FILESTREAM BLOB 以进行写访问  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. 打开 FILESTREAM BLOB 以进行写访问  
  下例显示打开文件以仅进行写访问的效果。  
   
 ```  
@@ -60,7 +64,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### B. 打开 FILESTREAM BLOB 以进行读访问  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. 打开 FILESTREAM BLOB 以进行读访问  
  下例显示打开文件以仅进行读访问的效果。  
   
 ```  
@@ -78,7 +82,7 @@ CloseHandle(dstHandle);
 //SELECT statements will be allowed.  
 ```  
   
-### C. 打开和关闭多个 FILESTREAM BLOB 文件  
+### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>C. 打开和关闭多个 FILESTREAM BLOB 文件  
  如果打开多个文件，则会使用限制性最强的规则。 下例打开了两个文件。 打开第一个文件以进行读取，打开第二个文件以进行写入。 DML 语句将被拒绝，直到第二个文件打开为止。  
   
 ```  
@@ -109,7 +113,7 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### D. 无法关闭游标  
+### <a name="d-failing-to-close-a-cursor"></a>D. 无法关闭游标  
  下例显示的是未关闭的语句游标如何阻止 `OpenSqlFilestream()` 打开 BLOB 进行写访问。  
   
 ```  
@@ -139,7 +143,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

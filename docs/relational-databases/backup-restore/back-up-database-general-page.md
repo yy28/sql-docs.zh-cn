@@ -1,24 +1,28 @@
 ---
-title: "备份数据库（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: "备份数据库（“常规”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份数据库（“常规”页）
+# <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
   使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
   
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   对于部分备份，必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句和 PARTIAL 选项。  
   
-## 选项  
+## <a name="options"></a>选项  
   
-### 数据源  
+### <a name="source"></a>数据源  
  可通过 **“源”** 面板中的选项标识数据库并指定备份操作的备份类型和组件。  
   
  **数据库**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**数据库**|指定备份整个数据库。|  
 |**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定” 后，所选内容将显示在“文件组和文件”  框中。|  
   
-### 目标  
+### <a name="destination"></a>目标  
  “目标”  面板中的选项允许您为备份操作指定备份设备的类型，并查找现有的逻辑或物理备份设备。  
   
 > [!NOTE]  
@@ -92,8 +96,8 @@ caps.handback.revision: 64
   
  显示的下一组选项会取决于所选目标的类型。 如果您选择“磁盘”或“磁带”，则会显示以下选项。  
   
- **添加**  
- 将文件或设备添加到“备份到”列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
+ **“添加”**  
+ 将文件或设备添加到“备份到”列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
  
  
   
@@ -126,9 +130,9 @@ caps.handback.revision: 64
 
 *
   **新建容器：**  
-用于注册没有共享访问签名的现有容器。  请参阅[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [备份文件和文件组 (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [为磁盘文件定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ caps.handback.revision: 64
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

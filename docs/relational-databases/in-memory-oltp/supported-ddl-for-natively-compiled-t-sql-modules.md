@@ -1,28 +1,32 @@
 ---
-title: "对于本机编译的 T-SQL 模块支持的 DDL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "本机编译的 T-SQL 模块支持的 DDL | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6468568f12555425cb038ce6293f8777e0a3689
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对于本机编译的 T-SQL 模块支持的 DDL
+# <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>对于本机编译的 T-SQL 模块支持的 DDL
   本主题列出了对于本机编译的 T-SQL 模块支持的 DDL，例如存储过程、标量 UDF、内联 TVF 和触发器。  
   
- 有关功能和可用作本机编译的 T-SQL 模块一部分的 T-SQL 外围应用的信息，请参阅[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
+ 有关功能和可用作本机编译的 T-SQL 模块一部分的 T-SQL 外围应用的信息，请参阅 [本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
- 有关不支持的构造的信息，请参阅[内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 有关不支持的构造的信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
  支持以下各项：  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 12
   
      有关详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md) 和 [DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

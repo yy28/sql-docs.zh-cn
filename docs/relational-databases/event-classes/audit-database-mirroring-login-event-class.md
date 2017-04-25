@@ -1,29 +1,33 @@
 ---
 title: "Audit Database Mirroring Login 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 数据库镜像"
-  - "Audit Database Mirroring Login 事件类"
-  - "数据库镜像 [SQL Server], 事件通知"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Database Mirroring Login 事件类
+# <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Audit Database Mirroring Login** 事件来报告与数据库镜像传输安全性相关的审核消息。  
   
-## Audit Database Mirroring Login 事件类的数据列  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -31,7 +35,7 @@ caps.handback.revision: 16
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对 **Audit Database Mirroring Login** 来说始终是 **154**。|27|是|  
-|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|是|  
 |**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|是|  
 |**FileName**|**nvarchar**|在远程数据库镜像端点上配置支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> <br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 使用 NTLM 或端点证书进行身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 使用 Kerberos 或端点证书进行身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 使用端点证书进行身份验证，或由 Windows 协商身份验证方法。|36|是|  
 |**HostName**|**nvarchar**|在此事件类中未使用。|8|是|  
@@ -61,7 +65,7 @@ caps.handback.revision: 16
 |5|Authentication Failure|Authentication Failure 事件报告数据库镜像端点由于错误而无法对连接执行身份验证。 对于 Windows 身份验证，此事件报告数据库镜像端点无法使用 Windows 身份验证。 对于基于证书的身份验证，此事件报告数据库镜像端点无法访问证书。|  
 |6|Authorization Failure|Authorization Failure 事件报告数据库镜像端点拒绝为连接授权。 对于 Windows 身份验证，此事件报告连接的安全标识符与数据库用户不匹配。 对于基于证书的身份验证，此事件报告消息中传递的公钥与 **master** 数据库中的证书不对应。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

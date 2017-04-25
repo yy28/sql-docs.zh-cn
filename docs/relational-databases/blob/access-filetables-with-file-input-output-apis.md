@@ -1,24 +1,28 @@
 ---
-title: "使用文件输入输出 API 访问 FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 使用文件 API 访问文件"
+title: "使用文件输入/输出 API 访问 FileTable | Microsoft Docs"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用文件输入输出 API 访问 FileTable
+# <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
   说明如何在 FileTable 上执行文件系统 I/O。  
   
 ##  <a name="accessing"></a> 开始使用文件 I/O API 访问 FileTable  
@@ -37,7 +41,7 @@ caps.handback.revision: 16
   
 -   对于文件，流数据存储在 **file_stream** 列中；对于目录，此列为 Null。  
   
--   对于文件，**is_directory** 列包含 **false**。 对于目录，此列包含 **true**。  
+-   对于文件， **is_directory** 列包含 **false**。 对于目录，此列包含 **true**。  
   
 -   当多个并发文件 I/O 操作或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作影响层次结构中的同一个文件或目录时，将强制执行访问共享和并发。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 16
 ###  <a name="trans"></a> 事务性语义  
  当使用文件 I/O API 访问 FileTable 中的文件时，这些操作不与任何用户事务关联，并且具有以下其他特性：  
   
--   由于对 FileTable 中 FILESTREAM 数据的非事务性访问不与任何事务关联，因此它不具有任何特定的隔离语义。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用内部事务来对 FileTable 数据强制执行锁定或并发语义。 这种类型的任何内部事务都采用“已提交读”隔离模式来执行。  
+-   由于对 FileTable 中 FILESTREAM 数据的非事务性访问不与任何事务关联，因此它不具有任何特定的隔离语义。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用内部事务来对 FileTable 数据强制执行锁定或并发语义。 这种类型的任何内部事务都采用“已提交读”隔离模式来执行。  
   
 -   对于 FILESTREAM 数据的这些非事务性操作，没有 ACID 担保。 一致性担保类似于应用程序在文件系统中进行文件更新时的担保。  
   
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**安全性**|是|实施 Windows 共享级安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表以及列级安全性。|  
 |**USN 日志**|是|对 FileTable 中的文件和目录的元数据更改是对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 DML 操作。 因此，将它们记录在相应的数据库日志文件中。 但是，不将它们记录在 NTFS USN 日志（对大小的更改除外）中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改跟踪功能可用于捕获类似的信息。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将文件加载到 FileTable 中](../../relational-databases/blob/load-files-into-filetables.md)   
- [在 FileTable 中使用目录和路径](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [使用 Transact-SQL 访问 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL、函数、存储过程和视图](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

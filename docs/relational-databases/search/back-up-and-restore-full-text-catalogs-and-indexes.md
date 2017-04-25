@@ -1,35 +1,39 @@
 ---
 title: "备份和还原全文目录和索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文索引 [SQL Server], 备份"
-  - "全文搜索 [SQL Server], 备份和还原"
-  - "恢复 [全文搜索]"
-  - "备份 [SQL Server], 全文索引"
-  - "全文索引 [SQL Server], 还原"
-  - "还原操作 [全文搜索]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份和还原全文目录和索引
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>备份和还原全文目录和索引
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何备份和还原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的全文索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文目录是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的全文目录，必须识别包含属于该目录的全文索引的每个文件组。 然后您必须逐个备份这些文件组。  
+  本主题说明如何备份和还原在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的全文索引。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，全文目录是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的全文目录，必须识别包含属于该目录的全文索引的每个文件组。 然后您必须逐个备份这些文件组。  
   
 > [!IMPORTANT]  
->  可以在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库时导入全文目录。 每个导入的全文目录在其自身的文件组中都是一个数据库文件。 若要备份导入的目录，只需备份其文件组即可。 有关详细信息，请参阅 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 联机丛书中的[备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkID=121052)。  
+>  可以在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库时导入全文目录。 每个导入的全文目录在其自身的文件组中都是一个数据库文件。 若要备份导入的目录，只需备份其文件组即可。 有关详细信息，请参阅 [联机丛书中的](http://go.microsoft.com/fwlink/?LinkID=121052)备份和还原全文目录 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 ##  <a name="backingup"></a> 备份全文目录的全文索引  
   
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [本主题内容](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> 查找包含全文索引的文件组或文件  
  创建全文索引时，该全文索引将放在以下某个位置：  
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [本主题内容](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> 备份包含全文索引的文件组  
  在找到包含全文目录索引的文件组后，您需要备份找到的每个文件组。 在备份过程中，不会删除或添加全文目录。  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
- [本主题内容](#top)  
   
 ##  <a name="Restore_FTI"></a> 还原全文索引  
  还原备份的文件组将还原全文索引文件，以及此文件组中的其他文件。 默认情况下，文件组将还原至该文件组在备份时所在的磁盘位置。  
@@ -100,11 +101,10 @@ GO
   
 -   [将文件还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [本主题内容](#top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)  
   

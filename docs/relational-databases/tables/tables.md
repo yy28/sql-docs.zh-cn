@@ -1,25 +1,29 @@
 ---
 title: "表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表 [SQL Server]"
-  - "表组件 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server]
+- table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
+ms.lasthandoff: 04/11/2017
+
 ---
-# 表
+# <a name="tables"></a>表
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   表是包含数据库中所有数据的数据库对象。 数据在表中的逻辑组织方式与在电子表格中相似，都是按行和列的格式组织的。 每一行代表一条唯一的记录，每一列代表记录中的一个字段。 例如，在包含公司雇员数据的表中，每一行代表一名雇员，各列分别代表该雇员的信息，如雇员编号、姓名、地址、职位以及家庭电话号码等。  
@@ -30,20 +34,20 @@ caps.handback.revision: 30
   
 -   可对表中的数据按行或页进行压缩。 通过数据压缩，可在页上存储更多的行。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
-## 表的类型  
- 除了基本用户定义表的标准角色以外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还提供了下列类型的表，这些表在数据库中起着特殊的作用。  
+## <a name="types-of-tables"></a>表的类型  
+ 除了基本用户定义表的标准角色以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还提供了下列类型的表，这些表在数据库中起着特殊的作用。  
   
  已分区表  
  已分区表是将数据水平划分为多个单元的表，这些单元可以分布到数据库中的多个文件组中。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 默认情况下， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持多达 15,000 个分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  临时表  
- 临时表存储在 **tempdb** 中。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例断开连接时将被删除。  
+ 临时表存储在 **tempdb**中。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。  
   
  系统表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](../Topic/System%20Views%20\(Transact-SQL\).md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
  宽表  
- 宽表使用[稀疏列](../../relational-databases/tables/use-sparse-columns.md)，从而将表可以包含的总列数增大为 30,000 列。 稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 宽表已定义了一个 [列集](../../relational-databases/tables/use-column-sets.md)，列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 索引数和统计信息数也分别增大为 1,000 和 30,000。 宽表行的最大大小为 8,019 个字节。 因此，任何特定行中的大部分数据都应为 NULL。 宽表中非稀疏列和计算列的列数之和仍不得超过 1,024。  
+ 宽表使用 [稀疏列](../../relational-databases/tables/use-sparse-columns.md) ，从而将表可以包含的总列数增大为 30,000 列。 稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 宽表已定义了一个 [列集](../../relational-databases/tables/use-column-sets.md)，列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 索引数和统计信息数也分别增大为 1,000 和 30,000。 宽表行的最大大小为 8,019 个字节。 因此，任何特定行中的大部分数据都应为 NULL。 宽表中非稀疏列和计算列的列数之和仍不得超过 1,024。  
   
  宽表具有下列性能影响。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 30
   
 -   用于更新宽表中特定列的更新游标应在 FOR UPDATE 子句中显式列出这些列。 这将有助于优化使用游标时的性能。  
   
-## 公用表任务  
+## <a name="common-table-tasks"></a>公用表任务  
  下表提供指向与创建或修改表相关的常见任务的链接。  
   
 |表任务|主题|  
@@ -84,7 +88,7 @@ caps.handback.revision: 30
 |介绍如何在表中创建计算列。|[指定表中的计算列](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |介绍如何指定列的默认值。 如果未提供其他值，则使用此值。|[指定列的默认值](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

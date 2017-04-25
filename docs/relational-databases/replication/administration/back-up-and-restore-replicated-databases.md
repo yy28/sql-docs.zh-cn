@@ -1,37 +1,41 @@
 ---
 title: "备份和还原复制的数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份 [SQL Server 复制]"
-  - "管理复制, 还原"
-  - "备份复制的数据库"
-  - "备份 [SQL Server 复制], 关于备份"
-  - "还原复制的数据库 [SQL Server 复制]"
-  - "恢复 [SQL Server 复制], 关于恢复"
-  - "还原数据库 [SQL Server], 复制数据库"
-  - "备份数据库 [SQL Server], 复制数据库"
-  - "还原 [SQL Server 复制], 关于还原"
-  - "恢复 [SQL Server 复制]"
-  - "复制 [SQL Server], 管理"
-  - "分发数据库 [SQL Server 复制], 备份"
-  - "还原 [SQL Server 复制]"
-  - "管理复制, 备份"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication]
+- administering replication, restoring
+- backing up replicated databases
+- backups [SQL Server replication], about backups
+- restoring replicated databases [SQL Server replication]
+- recovery [SQL Server replication], about recovery
+- restoring databases [SQL Server], replicated databases
+- backing up databases [SQL Server], replicated databases
+- restoring [SQL Server replication], about restoring
+- recovery [SQL Server replication]
+- replication [SQL Server], administering
+- distribution databases [SQL Server replication], backing up
+- restoring [SQL Server replication]
+- administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71772228e0d4f3e20982ed08e1d60b24fae76eb7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份和还原复制的数据库
+# <a name="back-up-and-restore-replicated-databases"></a>备份和还原复制的数据库
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   对于复制的数据库，需要特别注意与备份和还原数据有关的信息。 本主题介绍了适用于各种复制类型的备份和还原策略，并提供了其详细信息的链接。  
@@ -39,7 +43,7 @@ caps.handback.revision: 40
  复制支持将复制的数据库还原到从中创建备份的同一服务器和数据库。 如果将复制数据库的备份还原到其他服务器或数据库，则无法保留复制设置。 在这种情况下，您必须在还原备份后重新创建所有发布和订阅。  
   
 > [!NOTE]  
->  如果正在使用日志传送，则可以将复制数据库还原到备用服务器。 有关详细信息，请参阅 [日志传送以及复制和 #40;SQL Server 和 #41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
+>  如果正在使用日志传送，则可以将复制数据库还原到备用服务器。 有关详细信息，请参阅[日志传送和复制 (SQL Server)](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)。  
   
  应定期备份复制数据库及其关联系统数据库。 备份下列数据库：  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 40
   
  如果执行定期日志备份，则在日志备份中应捕获所有与复制相关的更改。 如果不执行日志备份，则当与复制相关的设置发生更改时，应执行备份。 有关详细信息，请参阅 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)。  
   
-## 备份和还原策略  
+## <a name="backup-and-restore-strategies"></a>备份和还原策略  
  复制拓扑中每个节点的备份和还原策略都因所用复制类型的不同而有所差异。 有关每种复制的备份和还原策略的信息，请参阅下列主题：  
   
 -   [快照复制和事务复制的备份和还原策略](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
@@ -62,8 +66,8 @@ caps.handback.revision: 40
   
  作为任何恢复策略的一部分，请始终将当前复制设置的脚本保存在安全的位置。 在服务器出现故障或需要设置测试环境时，可以通过更改服务器名称引用来修改脚本，并用该脚本帮助重新创建复制设置。 除了编写当前复制设置的脚本之外，还应编写启用和禁用复制的脚本。 有关编写复制对象脚本的信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [复制管理最佳实践](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

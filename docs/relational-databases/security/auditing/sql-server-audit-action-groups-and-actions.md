@@ -1,33 +1,37 @@
 ---
 title: "SQL Server 审核操作组和操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "审核操作 [SQL Server]"
-  - "审核 [SQL Server], 组"
-  - "服务器级审核操作 [SQL Server]"
-  - "SQL Server 审核"
-  - "审核级审核操作 [SQL Server]"
-  - "数据库级审核操作 [SQL Server]"
-  - "审核操作组 [SQL Server]"
-  - "审核 [SQL Server], 操作"
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 审核操作组和操作
+# <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能，你可以对服务器级别和数据库级别事件组以及各个事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核包括零个或多个审核操作项目。 这些审核操作项目可以是一组操作，例如 Server_Object_Change_Group，也可以是单个操作，例如对表的 SELECT 操作。  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  最初创建时会禁用所有审核。  
   
-## 服务器级别审核操作组  
+## <a name="server-level-audit-action-groups"></a>服务器级别审核操作组  
  服务器级别审核操作组是类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全审核事件类的操作。 有关详细信息，请参阅 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  下表介绍了服务器级审核操作组，并提供了适用的等效 SQL Server 事件类。  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|每当使用 ALTER USER 语句更改包含数据库用户的密码时，都会引发此事件。|  
 |USER_DEFINED_AUDIT_GROUP|此组监视器事件通过使用 [sp_audit_write (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) 引发。 通常，触发器或存储过程包括对 **sp_audit_write** 的调用以便实现对重要事件的审核。|  
   
-### 注意事项  
+### <a name="considerations"></a>注意事项  
  服务器级别操作组涵盖了整个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的操作。 例如，如果将相应操作组添加到服务器审核规范中，则将记录任何数据库中的任何架构对象访问检查。 在数据库审核规范中，仅记录该数据库中的架构对象访问。  
   
  服务器级别的操作不允许对数据库级别的操作进行详细筛选。 实现详细操作筛选需要数据库级别的审核，例如，对 Employee 组中登录名的 Customers 表执行的 SELECT 操作进行的审核。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
   
-## 数据库级别审核操作组  
+## <a name="database-level-audit-action-groups"></a>数据库级别审核操作组  
  数据库级别审核操作组是类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全审核事件类的操作。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
  下表介绍了数据库级别审核操作组，并提供了适用的等效 SQL Server 事件类。  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|每当使用 ALTER USER 语句更改包含数据库用户的密码时，都会引发此事件。|  
 |USER_DEFINED_AUDIT_GROUP|此组监视器事件通过使用 [sp_audit_write (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) 引发。|  
   
-## 数据库级别审核操作  
+## <a name="database-level-audit-actions"></a>数据库级别审核操作  
  数据库级别的操作支持直接对数据库架构以及架构对象（例如表、视图、存储过程、函数、扩展存储过程、队列、同义词）进行的特定操作进行审核。 不审核类型、XML 架构集合、数据库和架构。 架构对象的审核可以在架构和数据库上配置，这意味着指定架构或数据库包含的所有架构对象上的事件都将被审核。 下表介绍了数据库级别的审核操作。  
   
 |操作|说明|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|发出 RECEIVE 语句时将引发此事件。|  
 |REFERENCES|检查 REFERENCES 权限时将引发此事件。|  
   
-### 注意事项  
+### <a name="considerations"></a>注意事项  
 *  数据库级别的审核操作不适用于列。  
   
 *  当查询处理器对查询进行参数化时，审核事件日志中会出现参数而不是查询的列值。 
  
 *  不会记录 RPC 语句。 
   
-## 审核级别的审核操作组  
+## <a name="audit-level-audit-action-groups"></a>审核级别的审核操作组  
  您也可以对审核过程中的操作进行审核。 这些操作可以是服务器范围或数据库范围的操作。 如果在数据库范围内，则仅针对数据库审核规范而进行。 下表介绍了审核级别的审核操作组。  
   
 |操作组名称|说明|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [创建服务器审核规范和数据库审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

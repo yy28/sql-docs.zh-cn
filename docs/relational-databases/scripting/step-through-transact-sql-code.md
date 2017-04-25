@@ -1,33 +1,37 @@
 ---
 title: "逐句通过 Transact-SQL 代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器，调试代码"
-  - "Transact-SQL 调试器，单步跳过"
-  - "Transact-SQL 调试器，单步跳出"
-  - "Transact-SQL 调试器，单步跳入"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# 逐句通过 Transact-SQL 代码
+# <a name="step-through-transact-sql-code"></a>逐句通过 Transact-SQL 代码
   使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可以控制在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口中运行哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句。 可在各个语句上暂停调试器，然后查看该位置的代码元素的状态。  
   
-## 断点  
- 断点表示调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行。 有关断点的详细信息，请参阅“使用 Transact-SQL 断点”。  
+## <a name="breakpoints"></a>断点  
+ 断点表示调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行。 有关断点的详细信息，请参阅 [Transact-SQL 断点](../../relational-databases/scripting/transact-sql-breakpoints.md)。  
   
-## 控制语句执行  
+## <a name="controlling-statement-execution"></a>控制语句执行  
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器中，可以指定从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的当前语句开始执行的以下选项：  
   
 -   运行到下一个断点。  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |跳出模块|在  “调试”菜单上单击“单步跳出”  。<br /><br /> 在“调试”  工具栏上单击“单步跳出”  按钮。<br /><br /> 按 Shift+F11。|  
 |运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”。<br /><br /> 按 Ctrl+F10。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

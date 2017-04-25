@@ -1,29 +1,33 @@
 ---
 title: "备份压缩 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志传送 [SQL Server], 备份压缩"
-  - "备份压缩 [SQL Server], 关于备份压缩"
-  - "压缩 [SQL Server], 备份压缩"
-  - "备份 [SQL Server], 压缩"
-  - "备份 [SQL Server], 备份压缩"
-  - "备份压缩 [SQL Server]"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份压缩 (SQL Server)
+# <a name="backup-compression-sql-server"></a>备份压缩 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的压缩，包括限制、压缩备份时的性能折中、备份压缩的配置以及压缩率。  以下 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支持备份压缩：企业版、标准版和开发人员版。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的每个版本和更高版本都可以还原已压缩的备份。 
  
   
@@ -45,21 +49,21 @@ caps.handback.revision: 51
   
   
 ##  <a name="PerfImpact"></a> 压缩备份的性能影响  
- 默认情况下，压缩会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 可能会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受[资源调控器](../../relational-databases/resource-governor/resource-governor.md)限制。 有关详细信息，请参阅[使用资源调控器限制备份压缩的 CPU 使用率 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)。  
+ 默认情况下，压缩会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 可能会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受[资源调控器](../../relational-databases/resource-governor/resource-governor.md)限制。 有关详细信息，请参阅本主题后面的 [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制。  
   
  若要很好地了解备份 I/O 的性能表现，可以通过评估以下类型的性能计数器来分别考察进入设备或来自设备的备份 I/O：  
   
 -   Windows I/O 性能计数器，例如物理磁盘计数器  
   
--   [SQLServer:备份设备](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)对象的**设备吞吐量（字节/秒）**计数器  
+-   **SQLServer:备份设备** 对象的 [设备吞吐量（字节/秒）](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) 计数器  
   
--   [SQLServer:数据库](../../relational-databases/performance-monitor/sql-server-databases-object.md)对象的**备份/还原吞吐量/秒**计数器  
+-   **SQLServer:数据库** 对象的 [备份/还原吞吐量/秒](../../relational-databases/performance-monitor/sql-server-databases-object.md) 计数器  
   
- 有关 Windows 计数器的信息，请参阅 Windows 帮助。 有关如何使用 SQL Server 计数器的信息，请参阅[使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
+ 有关 Windows 计数器的信息，请参阅 Windows 帮助。 有关如何使用 SQL Server 计数器的信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
    
 ##  <a name="CompressionRatio"></a> 计算压缩的备份的压缩率  
- 若要计算备份的压缩率，请使用 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 历史记录表的 **backup_size** 列和 **compressed_backup_size** 列中有关此备份的值，如下所示：  
+ 若要计算备份的压缩率，请使用 **backupset** 历史记录表的 **backup_size** 列和 [compressed_backup_size](../../relational-databases/system-tables/backupset-transact-sql.md) 列中有关此备份的值，如下所示：  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [跟踪标志 (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

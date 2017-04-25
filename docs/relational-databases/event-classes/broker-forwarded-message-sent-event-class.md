@@ -1,27 +1,31 @@
 ---
 title: "Broker:Forwarded Message Sent 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Sent 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0462975232b9391c8cd57bc6811934f82ea5cdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Forwarded Message Sent 事件类
+# <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当 Service Broker 转发消息时，会生成 Broker:Forwarded Message Sent 事件。  
   
-## Broker:Forwarded Message Sent 事件类的数据列  
+## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Broker:Forwarded Message Sent 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  

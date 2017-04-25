@@ -1,25 +1,29 @@
 ---
 title: "快照复制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "快照复制 [SQL Server], 关于快照复制"
-  - "快照复制 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# 快照复制
+# <a name="snapshot-replication"></a>快照复制
   快照复制完全按照数据在特定时刻的状态分发数据，而不监视数据是否更新。 发生同步时，将生成完整的快照并将其发送到订阅服务器。  
   
 > [!NOTE]  
@@ -59,7 +63,7 @@ caps.handback.revision: 34
  ![快照复制组件和数据流](../../relational-databases/replication/media/snapshot.gif "快照复制组件和数据流")  
   
 ##  <a name="SnapshotAgent"></a> 快照代理  
- 对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，在生成快照取决于发布属性设置 **immediate_sync**。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE (默认值时使用 **sp_addpublication**)，仅当自上次快照代理运行; 以来已添加新的订阅生成快照订阅服务器必须等待快照代理程序完成才能实现同步。  
+ 对于合并复制，每当运行快照代理时都会生成快照。 对于事务复制，是否生成快照取决于发布属性 **immediate_sync**的设置。 如果该属性设置为 TRUE（使用新建发布向导时的默认设置），则每当运行快照代理时都会生成快照，而且可以随时将其应用到订阅服务器。 如果该属性设置为 FALSE（使用 **sp_addpublication**时的默认设置），则仅当自上次快照代理运行以来添加了新订阅时，才会生成快照；订阅服务器必须等待快照代理完成，才能实现同步。  
   
  快照代理执行以下操作：  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  从发布服务器上已发布的表中复制数据，然后将数据写入快照文件夹。 快照将以一组大容量复制程序 (BCP) 文件的形式生成。  
   
-4.  对于快照复制和事务发布，快照代理程序会附加行定向到 **MSrepl_commands** 和 **MSrepl_transactions** 分发数据库中的表。 中的条目 **MSrepl_commands** 表是命令指示.sch 和.bcp 文件和任何其他快照文件，对任何前或快照后脚本的引用的位置。 中的条目 **MSrepl_transactions** 表没有与同步订阅服务器上相关的命令。  
+4.  对于快照发布和事务发布，快照代理将向分发数据库的 **MSrepl_commands** 表和 **MSrepl_transactions** 表中追加行。 **MSrepl_commands** 表中包含的是命令，这些命令指示 .sch 和 .bcp 文件、其他快照文件以及对快照前或快照后脚本的引用的位置。 **MSrepl_transactions** 表中包含的是与同步订阅服务器相关的命令。  
   
      对于合并发布，快照代理还执行其他操作。  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  与分发服务器建立连接。  
   
-2.  检查 **MSrepl_commands** 和 **MSrepl_transactions** 分发服务器上的分发数据库中的表。 代理从第一个表中读取快照文件的位置，并从这两个表中读取订阅服务器同步命令。  
+2.  检查分发服务器上分发数据库中的 **MSrepl_commands** 和 **MSrepl_transactions** 表。 代理从第一个表中读取快照文件的位置，并从这两个表中读取订阅服务器同步命令。  
   
 3.  将架构和命令应用于订阅数据库。  
   

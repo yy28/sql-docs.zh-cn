@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表 [SQL Server], 备份数据"
-  - "备份 [SQL Server]"
-  - "数据库备份 [SQL Server]"
-  - "备份类型 [SQL Server]"
-  - "数据备份 [SQL Server]"
-  - "备份表 [SQL Server]"
-  - "数据库还原 [SQL Server], 备份"
-  - "备份 [SQL Server], 关于备份"
-  - "还原 [SQL Server], 备份类型"
-  - "备份 [SQL Server], 关于"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "备份概述 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
   
   
-## 术语
+## <a name="terms"></a>术语
  
  **备份 [动词] (back up)**  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
@@ -46,7 +50,7 @@ caps.handback.revision: 84
  **[还原 (restore)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  一种包括多个阶段的过程，用于将指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份中的所有数据和日志页复制到指定数据库，然后通过应用记录的更改使该数据在时间上向前移动，以前滚备份中记录的所有事务。  
   
- ## 备份类型  
+ ## <a name="types-of-backups"></a>备份类型  
   
  **[仅复制备份 (copy-only backup)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
  独立于正常 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份序列的特殊用途备份。  
@@ -74,10 +78,10 @@ caps.handback.revision: 84
  **[部分备份 (partial backup)](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  仅包含数据库中部分文件组的数据（包含主要文件组、每个读/写文件组以及任何可选指定的只读文件中的数据）。  
   
-## 备份介质术语和定义  
+## <a name="backup-media-terms-and-definitions"></a>备份介质术语和定义  
   
  **[备份设备 (backup device)](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Microsoft Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Microsoft Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  **[备份介质](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  备份操作限制 
  可以在数据库在线并且正在使用时进行备份。 但是，存在下列限制。  
   
-### 无法备份脱机数据  
+### <a name="cannot-back-up-offline-data"></a>无法备份脱机数据  
  隐式或显式引用脱机数据的任何备份操作都会失败。 一些典型示例包括：  
   
 -   您请求完整数据库备份，但是数据库的一个文件组脱机。 由于所有文件组都隐式包含在完整数据库备份中，因此，此操作将会失败。  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  通常，即使一个或多个数据文件不可用，日志备份也会成功。 但如果某个文件包含大容量日志恢复模式下所做的大容量日志更改，则所有文件都必须都处于联机状态才能成功备份。  
   
-### 并发限制   
+### <a name="concurrency-restrictions"></a>并发限制   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用联机备份过程来备份数据库。 在备份过程中，可以进行多个操作；例如：在执行备份操作期间允许使用 INSERT、UPDATE 或 DELETE 语句。 但是，如果在正在创建或删除数据库文件时尝试启动备份操作，则备份操作将等待，直到创建或删除操作完成或者备份超时。  
   
  在数据库备份或事务日志备份的过程中无法执行的操作包括：  
@@ -147,7 +151,7 @@ caps.handback.revision: 84
   
 -   [从设备还原备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **创建备份**  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [在备份或还原期间启用或禁用备份校验和 (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [指定备份或还原操作在遇到错误后是继续还是停止 (SQL Server)](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [指定备份或还原操作在遇到错误后是继续还是停止 (SQL Server)](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 以及更多！ 
+## <a name="and-more"></a>以及更多！ 
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

@@ -1,44 +1,31 @@
 ---
 title: "备份加密 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份加密
+# <a name="backup-encryption"></a>备份加密
   本主题概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的加密选项。 其中详细介绍备份期间加密的用法、优点和推荐做法。  
   
- **本主题内容：**  
-  
--   [概述](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [优点](#Benefits)  
-  
--   [先决条件](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [限制](#Restrictions)  
-  
--   [权限](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [备份加密方法](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [推荐做法](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 概述  
- 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，SQL Server 可在创建备份时加密数据。 通过在创建备份时指定加密算法和加密程序（证书或非对称密钥），可创建加密的备份文件。 所有存储目标：支持本地和 Windows Azure 存储。 此外，可为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 操作配置加密选项，这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引入的一项新功能。  
+ 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SQL Server 可在创建备份时加密数据。 通过在创建备份时指定加密算法和加密程序（证书或非对称密钥），可创建加密的备份文件。 所有存储目标：支持本地和 Windows Azure 存储。 此外，可为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 操作配置加密选项，这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中引入的一项新功能。  
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
   
@@ -59,13 +46,12 @@ caps.handback.revision: 16
   
 2.  加密还可用于使用 TDE 加密的数据库。  
   
-3.  由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 进行的备份支持加密，这样可提高站点外备份的安全性。  
+3.  由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]进行的备份支持加密，这样可提高站点外备份的安全性。  
   
 4.  此功能支持多个最高 AES 256 位的加密算法。 这样可选择符合要求的算法。  
   
 5.  可将加密密钥与扩展密钥管理 (EKM) 提供程序集成。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  以下是有关加密备份的先决条件：  
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   加密的备份不支持追加到现有的备份集选项。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="Permissions"></a> 权限  
  **若要加密备份或从加密的备份还原：**  
@@ -99,16 +84,16 @@ caps.handback.revision: 16
 >  不需要访问 TDE 证书即可备份或还原受 TDE 保护的数据库。  
   
 ##  <a name="Methods"></a> 备份加密方法  
- 以下各节简要介绍在备份期间加密数据的步骤。 有关使用 Transact-SQL 加密备份的不同步骤的完整演练，请参阅[创建加密的备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)。  
+ 以下各节简要介绍在备份期间加密数据的步骤。 有关使用 Transact-SQL 加密备份的不同步骤的完整演练，请参阅 [创建加密的备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)。  
   
-### 使用 SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在以下任何对话框中，可在创建数据库的备份时加密备份。  
   
 1.  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)在“备份选项”页上，可以选择“加密”，并指定加密算法和证书或非对称密钥以用于加密。  
   
 2.  [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在“定义备份()任务”页的“选项”选项卡上，选择“备份加密”，并指定加密算法和证书或密钥以用于加密。  
   
-### 使用 Transact SQL  
+### <a name="using-transact-sql"></a>使用 Transact SQL  
  以下是示例 Transact-SQL 语句以加密备份文件：  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  有关完整 Transact-SQL 语法，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
-### 使用 PowerShell  
+### <a name="using-powershell"></a>使用 PowerShell  
  此示例创建加密选项并在 **Backup-SqlDatabase** cmdlet 中将它作为参数值以创建加密的备份。  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[创建加密的备份](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|介绍创建加密的备份所需的基本步骤|  
 |[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|提供了创建受 Azure 密钥保管库中的密钥保护的加密备份的示例。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

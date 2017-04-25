@@ -1,40 +1,44 @@
 ---
 title: "使用 WITH XMLNAMESPACES 将命名空间添加到查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL 指令"
-  - "添加命名空间"
-  - "XSINIL 指令"
-  - "默认的命名空间"
-  - "查询 [SQL Server 中的 XML], WITH XMLNAMESPACES 子句"
-  - "预定义的命名空间 [SQL Server 中的 XML]"
-  - "FOR XML 子句, WITH XMLNAMESPACES 子句"
-  - "命名空间 [SQL Server 中的 XML]"
-  - "xml 数据类型 [SQL Server], WITH XMLNAMESPACES 子句"
-  - "WITH XMLNAMESPACES 子句"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 WITH XMLNAMESPACES 将命名空间添加到查询
-  [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) 按以下方式提供对命名空间 URI 支持：  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 将命名空间添加到查询
+  [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) 按以下方式提供对命名空间 URI 支持：  
   
 -   在 [使用 FOR XML 查询构造 XML](../../relational-databases/xml/for-xml-sql-server.md) 时，它可以使命名空间前缀到 URI 的映射可用。  
   
 -   它使命名空间到 URI 的映射对 [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)的静态命名空间上下文可用。  
   
-## 在 FOR XML 查询中使用 WITH XMLNAMESPACES  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>在 FOR XML 查询中使用 WITH XMLNAMESPACES  
  WITH XMLNAMESPACES 允许您在 FOR XML 查询中包含 XML 命名空间。 例如，考虑下列 FOR XML 查询：  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## 使用 XSINIL 指令  
+## <a name="using-the-xsinil-directive"></a>使用 XSINIL 指令  
  如果使用的是 ELEMENTS XSINI 指令，则无法在 WITH XMLNAMESPACES 子句中定义 xsi 前缀。 但是，在使用 ELEMENTS XSINIL 时会自动添加该前缀。 下列查询使用了生成以元素为中心的 XML 的 ELEMENTS XSINIL 指令，在此 XML 中 Null 值映射到将 **xsi:nil** 属性设置为 True 的元素。  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## 指定默认的命名空间  
+## <a name="specifying-default-namespaces"></a>指定默认的命名空间  
  可以使用 DEFAULT 关键字声明默认的命名空间来代替声明命名空间前缀。 在 FOR XML 查询中，这会将默认的命名空间绑定到所得到的 XML 中的 XML 节点。 在下列示例中，WITH XMLNAMESPA 定义了两个和默认的命名空间一起定义的命名空间前缀。  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## 使用预定义的命名空间  
+## <a name="using-predefined-namespaces"></a>使用预定义的命名空间  
  当使用预定义命名空间时（若 ELEMENTS XSINIL 时，则不包括 xml 命名空间和 xsi 命名空间），必须使用 WITH XMLNAMESPAC 显式指定命名空间绑定。 下列查询为预定义命名空间 (`urn:schemas-microsoft-com:xml-sql`) 显式定义了命名空间前缀到 URI 的绑定。  
   
 ```  
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## 将 WITH XMLNAMESPACES 与 xml 数据类型方法结合使用  
- 所有在 SELECT 查询中或在 UPDATE 中（当使用 **modify()** 方法时）指定的 [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)都必须在它们的 prolog 中重复命名空间的声明。 这可能要花很长时间。 例如，下列查询将检索目录说明中确实包含规范的产品型号 ID。 即存在 <`Specifications`> 元素。  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>将 WITH XMLNAMESPACES 与 xml 数据类型方法结合使用  
+ 所有在 SELECT 查询中或在 UPDATE 中（当使用 [modify()](../../t-sql/xml/xml-data-type-methods.md) 方法时）指定的 **xml 数据类型方法** 都必须在它们的 prolog 中重复命名空间的声明。 这可能要花很长时间。 例如，下列查询将检索目录说明中确实包含规范的产品型号 ID。 即存在 <`Specifications`> 元素。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +227,7 @@ WHERE CatalogDescription.exist('
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
- 此外，您也可以先声明 WITH XMLNAMESPACE，然后在查询中使用命名空间前缀。 这样，**query()** 和 **exist()** 方法便不必在它们的 prolog 中包含命名空间声明。  
+ 此外，您也可以先声明 WITH XMLNAMESPACE，然后在查询中使用命名空间前缀。 这样， **query()** 和 **exist()** 方法便不必在它们的 prolog 中包含命名空间声明。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -241,10 +245,10 @@ Go
   
  请注意，XQuery prolog 中的显式声明可覆盖在 WITH 子句中定义的命名空间前缀和默认的元素命名空间。  
   
-## 另请参阅  
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>另请参阅  
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

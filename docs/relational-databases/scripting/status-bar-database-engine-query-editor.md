@@ -1,29 +1,33 @@
 ---
-title: "状态栏（数据库引擎查询编辑器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "状态栏（数据库引擎查询编辑器）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.lasthandoff: 04/11/2017
+
 ---
-# 状态栏（数据库引擎查询编辑器）
+# <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
-1.  **开始之前：**  [状态栏颜色](#StatusBarColors)  
+1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
   
-2.  **在以下项中设置服务器状态颜色：**  [对象资源管理器](#SetOEServerColor)、 [已注册服务器](#SetRegServerColor)  
+2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
   
-3.  **使用状态颜色：**  [使用服务器颜色打开查询编辑器](#OpenServerColor)、 [打开查询编辑器并且指定状态颜色](#OpenSpecColor)  
+3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 状态栏颜色  
  您可以在 **“对象资源管理器”** 或 **“已注册服务器”**中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
@@ -84,7 +88,7 @@ caps.handback.revision: 7
   
 -   填写其余连接信息，然后选择 **“连接”** 按钮。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

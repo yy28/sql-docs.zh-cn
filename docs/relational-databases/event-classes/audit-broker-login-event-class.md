@@ -1,27 +1,31 @@
 ---
 title: "Audit Broker Login 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Login 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b3ba2426634e4cd405d91318cd92de93bfa2c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker Login 事件类
+# <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 **Audit Broker Login** 事件以报告与 Service Broker 传输安全相关的审核消息。  
   
-## Audit Broker Login 事件类的数据列  
+## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 事件类的数据列  
   
 |数据列|类型|说明|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -29,7 +33,7 @@ caps.handback.revision: 30
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**EventClass**|**int**|捕获的事件类的类型。 对于 **Audit Broker Login** 始终为 **159**。|27|是|  
-|**EventSequence**|**int**|此事件的序列号。|51|否|  
+|**EventSequence**|**int**|此事件的序列号。|51|是|  
 |**EventSubClass**|**int**|事件子类的类型，提供有关每个事件类的进一步信息。 下表列出了此事件的事件子类值。|21|是|  
 |**FileName**|**nvarchar**|远程 broker 身份验证级别。 在远程 broker 端点上配置的支持的身份验证方法。 如果有多种可用方法，则接受（目标）端点将确定先试用哪种方法。 可能的值有：<br /><br /> **无**。 未配置任何身份验证方法。<br /><br /> **NTLM**。 要求使用 NTLM 身份验证。<br /><br /> **KERBEROS**。 要求使用 Kerberos 身份验证。<br /><br /> **NEGOTIATE**。 由 Windows 协商身份验证方法。<br /><br /> **CERTIFICATE**。 要求使用为端点配置的证书，该证书存储在 **master** 数据库中。<br /><br /> **NTLM、CERTIFICATE**。 接受 NTLM 或 SSL 证书身份验证。<br /><br /> **KERBEROS、CERTIFICATE**。 接受 Kerberos 或端点证书身份验证。<br /><br /> **NEGOTIATE、CERTIFICATE**。 由 Windows 协商身份验证方法，或者使用端点证书进行身份验证。<br /><br /> **CERTIFICATE、NTLM**。 使用端点证书或 NTLM 进行身份验证。<br /><br /> **CERTIFICATE、KERBEROS**。 使用端点证书或 Kerberos 进行身份验证。<br /><br /> **CERTIFICATE、NEGOTIATE**。 接受端点证书进行身份验证，或由 Windows 协商身份验证方法。|36|是|  
 |**HostName**|**nvarchar**|在此事件类中未使用。|8|是|  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |5|Authentication Failure|Authentication Failure 事件报告由于错误 Service Broker 无法对连接执行身份验证。 对于 Windows 身份验证，此事件报告 Service Broker 无法使用 Windows 身份验证。 对于基于证书的身份验证，此事件报告 Service Broker 无法访问证书。|  
 |6|Authorization Failure|Authorization Failure 事件报告 Service Broker 已拒绝连接的身份验证。 对于 Windows 身份验证，此事件报告连接的安全标识符与数据库用户不匹配。 对于基于证书的身份验证，此事件报告在消息中传递的公钥并不响应数据库中的证书。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

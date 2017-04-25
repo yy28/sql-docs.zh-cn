@@ -1,45 +1,49 @@
 ---
 title: "备份历史记录和标头信息 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份标头 [SQL Server]"
-  - "历史记录表 [SQL Server]"
-  - "文件还原 [SQL Server], 状态信息"
-  - "备份集 [SQL Server], 状态信息"
-  - "列出备份的数据库"
-  - "状态信息 [SQL Server], 备份"
-  - "备份 [SQL Server], 查看备份集"
-  - "还原 [SQL Server], 历史记录表"
-  - "还原数据库 [SQL Server], 状态信息"
-  - "备份 [SQL Server], 状态信息"
-  - "标头 [SQL Server]"
-  - "介质标头 [SQL Server]"
-  - "备份历史记录表 [SQL Server]"
-  - "查看备份信息"
-  - "还原文件 [SQL Server], 查看备份信息"
-  - "还原数据库 [SQL Server], 历史记录表"
-  - "显示备份信息"
-  - "还原文件 [SQL Server], 状态信息"
-  - "历史信息 [SQL Server], 备份"
-  - "数据库还原 [SQL Server], 历史记录表"
-  - "还原历史记录表 [SQL Server]"
-  - "列出已备份文件"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# 备份历史记录和标头信息 (SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
   服务器实例上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原操作的完整历史记录存储在 **msdb** 数据库中。 本主题介绍备份和还原历史记录表以及用于访问备份历史记录的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本主题还讨论何时列出数据库和事务日志文件有用，以及何时使用介质标头信息与何时使用备份标头信息的比较。  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |信息语句|备份历史记录表|说明|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|返回一个结果集，其中包含一个列出了指定备份集中包含的数据库和日志文件的列表。<br /><br /> 有关详细信息，请参阅本主题后面的“列出数据库文件和事务日志文件”部分。|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|在特定的备份设备上检索所有备份集的所有备份标头信息。 执行 RESTORE HEADERONLY 的结果是一个结果集。<br /><br /> 有关详细信息，请参阅本主题后面的“查看备份标头信息”部分。|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|返回一个结果集，其中包含有关指定备份设备中的备份介质的信息。<br /><br /> 有关详细信息，请参阅本主题后面的“查看介质标头信息”部分。|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|返回一个结果集，其中包含一个列出了指定备份集中包含的数据库和日志文件的列表。<br /><br /> 有关详细信息，请参阅本主题后面的“列出数据库文件和事务日志文件”部分。|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|在特定的备份设备上检索所有备份集的所有备份标头信息。 执行 RESTORE HEADERONLY 的结果是一个结果集。<br /><br /> 有关详细信息，请参阅本主题后面的“查看备份标头信息”部分。|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|返回一个结果集，其中包含有关指定备份设备中的备份介质的信息。<br /><br /> 有关详细信息，请参阅本主题后面的“查看介质标头信息”部分。|  
   
 ##  <a name="ListDbTlogFiles"></a> 数据库和事务日志文件  
  列出备份中的数据库文件和事务日志文件时，显示的信息包括逻辑名称、物理名称、文件类型（数据库文件或日志文件）、文件组成员资格、文件大小（字节）、允许的文件最大大小和预定义的文件增长大小（字节）。 在下列情况下，这些信息对于在还原数据库备份之前确定数据库备份中文件的名称很有用：  
@@ -109,17 +113,17 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  查看介质标头的速度很快。  
   
- 有关详细信息，请参阅本主题后面的[介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
+ 有关详细信息，请参阅本主题后面的 [介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
   
 ##  <a name="BackupHeader"></a> 备份标头信息  
- 查看备份标头时，将显示有关介质上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集的信息。 显示的信息包括使用的备份设备类型、备份类型（数据库备份、事务备份、文件备份还是差异数据库备份）以及备份开始和停止的日期/时间。 这些信息对确定还原磁带上的哪个备份集或确定介质上包含哪些备份很有用。  
+ 查看备份标头时，将显示有关介质上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份集的信息。 显示的信息包括使用的备份设备类型、备份类型（数据库备份、事务备份、文件备份还是差异数据库备份）以及备份开始和停止的日期/时间。 这些信息对确定还原磁带上的哪个备份集或确定介质上包含哪些备份很有用。  
   
 > [!NOTE]  
 >  查看备份标头信息时需要扫描整个介质以显示有关介质上每个备份的信息，因此对高容量磁带可能需要很长时间。  
   
- 有关详细信息，请参阅本主题后面的[介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
+ 有关详细信息，请参阅本主题后面的 [介质标头信息和备份标头信息的比较](#CompareMediaHeaderBackupHeader)。  
   
-### 要还原的备份集  
+### <a name="which-backup-set-to-restore"></a>要还原的备份集  
  可以使用备份标头中的信息来标识要还原的备份集。 数据库引擎将对备份介质上的每个备份集进行编号。 这样，您就可以通过备份集在介质中的位置标识要还原的备份集。 例如，下面的介质包含三个备份集。  
   
  ![包含 SQL Server 备份集的备份介质](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "包含 SQL Server 备份集的备份介质")  
@@ -129,7 +133,7 @@ caps.handback.revision: 54
 ##  <a name="CompareMediaHeaderBackupHeader"></a> 介质标头信息和备份标头信息的比较  
  可以下图为例了解备份标头和介质标头信息在查看方法上的区别。 获取介质标头信息只需要从磁带开头检索信息。 获取备份标头信息则需要扫描整个磁带以查看每个备份集的标头。  
   
- ![包含三个 SQL Server 备份集的介质集](../../relational-databases/backup-restore/media/bnr-media-label.gif "包含三个 SQL Server 备份集的介质集")  
+ ![包含三个 SQL Server 备份集的媒体集](../../relational-databases/backup-restore/media/bnr-media-label.gif "包含三个 SQL Server 备份集的媒体集")  
   
 > [!NOTE]  
 >  使用包含多个介质簇的介质集时，介质标头和备份集都写入所有介质簇中。 因此，只需为这些报表操作提供单个介质簇即可。  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **查看备份集中的数据文件和日志文件**  
   
--   [RESTORE FILELISTONLY (Transact-SQL)](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **查看介质标头信息**  
   
--   [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **查看备份标头信息**  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [查看备份磁带或文件的内容 (SQL Server)](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **查看介质标头信息**  
   
--   [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **查看备份标头信息**  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [查看备份磁带或文件的内容 (SQL Server)](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [查看备份集中的数据文件和日志文件 (SQL Server)](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **验证备份**  
   
--   [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

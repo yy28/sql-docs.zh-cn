@@ -1,27 +1,31 @@
 ---
 title: "“高级编辑”（条件）对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.condition.advancededit.f1"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
+ms.lasthandoff: 04/11/2017
+
 ---
-# “高级编辑”（条件）对话框
+# <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
   “高级编辑”对话框用于为基于策略的管理条件创建复杂表达式。  
   
-## 选项  
+## <a name="options"></a>选项  
  **单元值**  
  在创建用于单元值的函数或表达式时，显示相应的函数或表达式。 单击 **“确定”**以后，在 **“常规”** 页的 **“创建新条件”** 对话框或 **“打开条件”** 对话框中，单元值就会出现在条件表达式框的 **“字段”** 单元或 **“值”** 单元。  
   
@@ -31,7 +35,7 @@ caps.handback.revision: 44
  **详细信息**  
  使用以下格式显示函数和属性的相关信息：函数签名、函数说明、返回值以及示例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
  有效表达式必须采用以下格式：  
   
  `{property | function | constant}`  
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
  `{property | function | constant}`  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面是一些有效表达式示例：  
   
 -   Property1> 5  
@@ -51,11 +55,11 @@ caps.handback.revision: 44
   
 -   *Sometext* IN *Property1*  
   
--   Property1\< Fn(Property2)  
+-   Property1< Fn(Property2)  
   
 -   BitwiseAnd(Property1,Property2)= 0  
   
-## 其他函数信息  
+## <a name="additional-function-information"></a>其他函数信息  
  以下各节提供某些函数的附加信息，这些函数可用于为基于策略的管理条件创建复杂表达式。  
   
 > **重要说明！** 可用于创建基于策略的管理条件的函数并不总是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法。 请务必遵从示例语法。 例如，如果使用 **DateAdd** 函数或 **DatePart** 函数，则必须用单引号将 *datepart* 参数括起来。  
@@ -69,13 +73,13 @@ caps.handback.revision: 44
 |**BitwiseOr()**|Numeric BitwiseOr (Numeric expression1, Numeric expression2)|在两个指定的整数值之间执行“逻辑位或”运算。|expression1 和 expression2 – 整数数据类型类别的任意数据类型的任意有效表达式。|返回整数数据类型类别的值。|`BitwiseOr(Property1, Property2)`|  
 |**Concatenate()**|String Concatenate (String string1, String string2)|串联两个字符串。|string1 和 string2 - 要串联的两个字符串。 可以是任何有效的非空字符串。|串联的字符串，并且 *string1* 后跟有 *string2*。|`Concatenate("Hello", " World` `")` 返回“`Hello World`”。|  
 |**Count()**|Numeric Count (VarArgs)|返回参数列表中的项数。|VarArgs – 任意类型（**text**、**image** 和 **ntext** 除外）的表达式。|返回整数数据类型类别的值。|`Count(1.0, 2.0, 3.0, 4.0, 5.0)` 返回 `5` 。|  
-|**DateAdd()**|DateTime DateAdd (String datepart, Numeric number, DateTime date)|返回一个新 **datetime** 值，它是在指定日期的基础上加上一个时间间隔之后得到的结果。|datepart - 指定需要对日期中的哪一部分返回新值的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEADD (Transact-SQL)](../../t-sql/functions/dateadd-transact-sql.md)。<br /><br /> number - 用于增加 datepart 的值。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|新 **datetime** 值是在指定日期的基础上加上一个时间间隔之后得到的结果。|**例如：** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` 返回 `'2007-08-27 14:21:50'` 。<br /><br /> 下列为此函数支持的 *dateparts* 和缩写形式：<br /><br /> **year**：yy、yyyy<br /><br /> **month**：mm、m<br /><br /> **dayofyear**：dy、y<br /><br /> **day**：dd、d<br /><br /> **week**：wk、ww<br /><br /> **weekday**：dw、w<br /><br /> **hour**：hh<br /><br /> **minute**：mi、n<br /><br /> **second**：ss、s<br /><br /> **millisecond**：ms|  
+|**DateAdd()**|DateTime DateAdd (String datepart, Numeric number, DateTime date)|返回一个新 **datetime** 值，它是在指定日期的基础上加上一个时间间隔之后得到的结果。|datepart - 指定需要对日期中的哪一部分返回新值的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEADD (Transact-SQL)](../../t-sql/functions/dateadd-transact-sql.md)。<br /><br /> number - 用于增加 datepart 的值。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|新 **datetime** 值是在指定日期的基础上加上一个时间间隔之后得到的结果。|**Example:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` returns `'2007-08-27 14:21:50'` in this example.<br /><br /> 下列为此函数支持的 *dateparts* 和缩写形式：<br /><br /> **year**：yy、yyyy<br /><br /> **month**：mm、m<br /><br /> **dayofyear**：dy、y<br /><br /> **day**：dd、d<br /><br /> **week**：wk、ww<br /><br /> **weekday**：dw、w<br /><br /> **hour**：hh<br /><br /> **minute**：mi、n<br /><br /> **second**：ss、s<br /><br /> **millisecond**：ms|  
 |**DatePart()**|Numeric DatePart (String datepart, DateTime date)|返回表示指定日期的指定 *datepart* 的整数。|datepart -指定返回的日期部分的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEPART (Transact-SQL)](../../t-sql/functions/datepart-transact-sql.md)。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|返回一个整数数据类型类别的值，表示指定日期的指定 *datepart* 。|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))` 返回 `8` 。|  
 |**DateTime()**|DateTime DateTime (String dateString)|根据字符串创建一个 datetime 值。|dateString - 字符串形式的 datetime 值。|返回一个根据输入字符串创建的 datatime 值。|`DateTime('3/12/2006')`|  
-|**Divide()**|Numeric Divide (Numeric expression_dividend, Numeric expression_divisor)|用一个数除以另一个数。|expression_dividend - 被除数的数值表达式。 被除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。<br /><br /> expression_divisor - 除数的数值表达式。 除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。|返回优先级高的参数的数据类型。|**例如：** `Divide(Property1, 2)`<br /><br /> 注意：这是一个双精度运算。 若要进行整数比较，必须将结果与 `Round()`结合。 例如：`Round(Divide(10, 3), 0) = 3`。|  
+|**Divide()**|Numeric Divide (Numeric expression_dividend, Numeric expression_divisor)|用一个数除以另一个数。|expression_dividend - 被除数的数值表达式。 被除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。<br /><br /> expression_divisor - 除数的数值表达式。 除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。|返回优先级高的参数的数据类型。|**例如：** `Divide(Property1, 2)`<br /><br /> 注意：这是一个双精度运算。 若要进行整数比较，必须将结果与 `Round()`结合。 例如： `Round(Divide(10, 3), 0) = 3`。|  
 |**Enum()**|Numeric Enum (String enumTypeName, String enumValueName)|根据字符串创建枚举值。|enumTypeName - 枚举类型的名称。<br /><br /> enumValueName - 枚举的值。|返回数值类型的枚举值。|`Enum('CompatibilityLevel','Version100')`|  
 |**Escape()**|String Escape (String replaceString, String stringToEscape, String escapeString)|使用给定的转义字符串将输入字符串的子字符串转义。|*replaceString* – 输入字符串。<br /><br /> *stringToEscape* – *replaceString*的子字符串。 这是您要在前面添加转义字符串的字符串。<br /><br /> *escapeString* – 您要在每个 *stringToEscape*实例的前面添加的转义字符串。|返回修改的 *replaceString* ，其中 *stringToEscape* 的每个实例的前面都有 *escapeString*。|`Escape("Hello", "l", "[")` 返回“`He[l[lo`”。|  
-|**ExecuteSQL()**|Variant ExecuteSQL (String returnType, String sqlQuery)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`设置用户帐户 ：<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../Topic/sys.schemas%20\(Transact-SQL\).md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
+|**ExecuteSQL()**|Variant ExecuteSQL (String returnType, String sqlQuery)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`设置用户帐户 ：<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string returnType , string namespace, string wql)|对提供的命名空间执行 WQL 脚本。 Select 语句只能包含一个返回列。 如果提供多个列，则会引发错误。|returnType - 指定 WQL 返回的数据的返回类型。 有效文字为 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> namespace - 要对其执行脚本的 WMI 命名空间。<br /><br /> wql - 包含要执行的 WQL 的字符串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|返回布尔值 FALSE。|无|返回布尔值 FALSE。|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|返回系统日期。|无|返回 DateTime 类型的系统日期。|`@DateLastModified = GetDate()`|  
@@ -92,8 +96,9 @@ caps.handback.revision: 44
 |**True()**|Bool TRUE()|返回布尔值 TRUE。||返回布尔值 TRUE。|`IsDatabaseMailEnabled = True()`|  
 |**Upper()**|String Upper (String_expression)|将所有小写字符转换为大写后返回字符串。|expression - 源字符串表达式。|返回一个字符串，它表示所有小写字符都已经转换为大写的源字符串表达式。|`Upper('HeLlO')` 返回 `'HELLO'` 。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
+

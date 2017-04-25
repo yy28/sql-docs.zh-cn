@@ -1,22 +1,26 @@
 ---
 title: "本机编译的 T-SQL 模块支持的功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 本机编译的 T-SQL 模块支持的功能
+# <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,7 +46,7 @@ caps.handback.revision: 44
 
  如需了解不支持构造的完整信息以及如何解决本机编译模块中不支持某些功能的问题，请参阅 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)。 有关不支持的功能的详细信息，请参阅 [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
 
-##  <a name="a-nameqsancspa-query-surface-area-in-native-modules"></a><a name="qsancsp"></a>本机模块中的查询外围应用  
+##  <a name="qsancsp"></a> 本机模块中的查询外围应用  
 
 支持以下查询构造：  
 
@@ -64,9 +68,9 @@ SELECT 子句：
 
 FROM 子句：  
 
--   FROM \<memory optimized table or table variable>  
+-   FROM \<内存优化表或表变量>  
 
--   FROM \<natively compiled inline TVF>  
+-   FROM \<本机编译的内联 TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。  
 
@@ -79,19 +83,19 @@ WHERE 子句：
 -   AND、OR、NOT、IN、EXISTS、BETWEEN  
 
 
-[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) 子句：
+[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：
 
 - AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM 聚合函数。  
 
 - 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。  
 
-[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) 子句：
+[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) 子句：
 
 
 - **ORDER BY** 子句中不支持 **DISTINCT** 。
 
 
-- 如果 ORDER BY 列表中的表达式逐字出现在 GROUP BY 列表中，将受 [GROUP BY (Transact-SQL)](../Topic/GROUP%20BY%20\(Transact-SQL\).md) 支持。
+- 如果 ORDER BY 列表中的表达式逐字出现在 GROUP BY 列表中，将受 [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md) 支持。
   - 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
 
 
@@ -123,7 +127,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 这些本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 上的限制不适用于内存优化表上解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问。  
 
 
-##  <a name="a-namedmla-data-modification"></a><a name="dml"></a>数据修改  
+##  <a name="dml"></a> 数据修改  
 
 支持以下 DML 语句。  
 
@@ -135,7 +139,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE 和 DELETE 语句支持 WHERE。  
 
-##  <a name="a-namecofa-control-of-flow-language"></a><a name="cof"></a>控制流语言  
+##  <a name="cof"></a> 控制流语言  
  支持以下控制流语言构造。  
 
 -   [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -154,12 +158,12 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)  
 
--   BEGIN ATOMIC（存储过程的外层）。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/本机过程中的-atomic-块.md)。  
+-   BEGIN ATOMIC（存储过程的外层）。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
 
-##  <a name="a-namesoa-supported-operators"></a><a name="so"></a>支持的运算符  
+##  <a name="so"></a> 支持的运算符  
  支持下列运算符。  
 
--   [比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)（例如，>、\<、>=、和<=）  
+-   [比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)（例如，>、\<、>= 和 <=）  
 
 -   一元运算符（+、-）。  
 
@@ -172,10 +176,10 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。
 
-##  <a name="a-namebfncspa-built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a>本机编译模块中的内置函数  
+##  <a name="bfncsp"></a> 本机编译模块中的内置函数  
  内存优化表的约束中以及本机编译的 T-SQL 模块中支持以下函数。  
 
 -   所有[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -183,7 +187,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   恒等函数：SCOPE_IDENTITY  
@@ -193,7 +197,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
@@ -204,15 +208,15 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   可以嵌套本机模块的执行。
 
-##  <a name="a-nameauditinga-auditing"></a><a name="auditing"></a>审核  
+##  <a name="auditing"></a> 审核  
  在本机编译存储过程中支持过程级审核。  
 
  有关审核的详细信息，请参阅 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
 
-##  <a name="a-nametqha-table-and-query-hints"></a><a name="tqh"></a>表提示和查询提示  
+##  <a name="tqh"></a> 表提示和查询提示  
  支持以下各项：  
 
--   INDEX、FORCESCAN 和 FORCESEEK 提示，位于表提示语法或查询的 [OPTION Clause (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md) 中。 有关详细信息，请参阅[表提示 (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md)。  
+-   INDEX、FORCESCAN 和 FORCESEEK 提示，位于表提示语法或查询的 [OPTION Clause (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md) 中。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
 
 -   FORCE ORDER  
 
@@ -220,12 +224,12 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   OPTIMIZE FOR  
 
- 有关详细信息，请参阅[查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)。  
+ 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
 
-##  <a name="a-namelosa-limitations-on-sorting"></a><a name="los"></a>排序限制  
- 可以在使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 和 [ORDER BY 子句 (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md)，[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
+##  <a name="los"></a>排序限制  
+ 可以在使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
 
- 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>*，行 *\<lineNumber>* TOP 运算符最多可返回 8192 行；已请求 *\<number>*。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>*、行 *\<lineNumber>*，TOP 运算符最多可返回 8192 行；已请求 *\<number>*。**  
 
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
 
@@ -284,4 +288,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [本机编译存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+
+
 

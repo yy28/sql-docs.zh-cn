@@ -1,34 +1,38 @@
 ---
-title: "始终加密（数据库引擎） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 始终加密"
-  - "始终加密"
-  - "TCE 始终加密"
-  - "始终加密, 关于"
-  - "SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1"
+title: "Always Encrypted（数据库引擎）| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], Always Encrypted
+- Always Encrypted
+- TCE Always Encrypted
+- Always Encrypted, about
+- SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 始终加密（数据库引擎）
+# <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- 始终加密功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]（[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
+ 始终加密功能旨在保护 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储的敏感数据，如信用卡号或身份证号（例如美国社会安全号）。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] （[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。 始终加密确保本地数据库管理员、云数据库操作员或其他高特权但未经授权的用户无法访问加密的数据，使客户能够放心地将敏感数据存储在不受其直接控制的区域。 这样，组织便可以静态加密数据并利用 Azure 中的存储，将本地数据库的管理权限委托给第三方，或者降低其自身 DBA 员工的安全核查要求。  
   
  始终加密使向加密对应用程序透明。 安装在客户端计算机上的启用始终加密的驱动程序通过在客户端应用程序中对敏感数据进行加密和解密来实现此目标。 该驱动程序先对敏感列中的数据进行加密，然后再将该数据传递到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，并且自动重写查询以便保留应用程序的语义。 同样，该驱动程序以透明方式对存储在加密数据库列（包含在查询结果中）中的数据进行解密。  
   
@@ -37,10 +41,10 @@ caps.handback.revision: 57
 ## <a name="typical-scenarios"></a>典型方案  
   
 ### <a name="client-and-data-on-premises"></a>客户端和数据都在本地  
- 客户在营业地本地运行客户端应用程序和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 客户想要委托外部供应商来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 为了保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存储的敏感数据，客户使用始终加密来确保数据库管理员与应用程序管理员的职责分离。 客户在客户端应用程序可以访问的受信任密钥存储中存储始终加密密钥的纯文本值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员无权访问密钥，因此，无法解密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中存储的敏感数据。  
+ 客户在营业地本地运行客户端应用程序和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 客户想要委托外部供应商来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 为了保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存储的敏感数据，客户使用始终加密来确保数据库管理员与应用程序管理员的职责分离。 客户在客户端应用程序可以访问的受信任密钥存储中存储始终加密密钥的纯文本值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员无权访问密钥，因此，无法解密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存储的敏感数据。  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>客户端在本地，数据在 Azure 中  
- 客户在营业地运行本地客户端应用程序。 应用程序操作 Azure 中托管的数据库中存储的敏感数据（Microsoft Azure 上虚拟机中运行的 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）。 客户使用始终加密功能并在本地托管的受信任密钥存储中存储始终加密密钥，以确保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 云管理员无权访问敏感数据。  
+ 客户在营业地运行本地客户端应用程序。 应用程序操作 Azure 中托管的数据库中存储的敏感数据（Microsoft Azure 上虚拟机中运行的[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ）。 客户使用始终加密功能并在本地托管的受信任密钥存储中存储始终加密密钥，以确保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 云管理员无权访问敏感数据。  
   
 ### <a name="client-and-data-in-azure"></a>客户端和数据都在 Azure 中  
  客户在 Microsoft Azure 中托管了一个客户端应用程序（例如辅助角色或 Web 角色），该应用程序对在 Azure 中托管的数据库中（在 Microsoft Azure 的虚拟机上运行的 SQL 数据库或 SQL Server）存储的敏感数据进行操作。 由于数据和密钥对托管客户端层的平台的云管理员是公开的，因此“始终加密”功能不提供针对云管理员的完全数据隔离，但是客户仍将从降低安全攻击范围中受益（数据库中的数据始终是加密的）。  
@@ -59,7 +63,7 @@ caps.handback.revision: 57
 
  客户端驱动程序使用列主密钥存储提供程序与包含列主密钥的密钥存储进行交互，列主密钥存储提供程序是一个客户端软件组件，用于封装包含列主密钥的密钥存储。 常见类型的密钥存储的提供程序在 Microsoft 的客户端驱动程序库中提供，或作为单独的软件下载。 你也可以实现自己的提供程序。 包括内置的列主密钥存储提供程序的“始终加密”功能因驱动程序库及其版本的不同而有所不同。 
 
-有关如何使用具有特定的客户端驱动程序的“始终加密”功能开发应用程序的详细信息，请参阅[《Always Encrypted (client development)》](../../../relational-databases/security/encryption/always-encrypted-client-development.md)（始终加密（客户端开发））。
+有关如何使用具有特定的客户端驱动程序的“始终加密”功能开发应用程序的详细信息，请参阅 [《Always Encrypted (client development)》](../../../relational-databases/security/encryption/always-encrypted-client-development.md)（始终加密（客户端开发））。
 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>选择确定性加密或随机加密  
@@ -70,7 +74,7 @@ caps.handback.revision: 57
 - 随机加密使用更不可预测的方式来加密数据。 随机加密更加安全，但不支持对加密列进行搜索、分组、索引和联接。
 
 针对要用作搜索参数或分组参数（例如政府身份证号）的列使用确定性加密。 针对不会与其他记录分组在一起且不会用来联接表的数据（例如机密的调查注解）使用随机加密。
-有关“始终加密”的加密算法的详细信息，请参阅[《Always Encrypted Cryptography》](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)（“始终加密”密码学）。 
+有关“始终加密”的加密算法的详细信息，请参阅 [《Always Encrypted Cryptography》](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)（“始终加密”密码学）。 
 
 
 ## <a name="configuring-always-encrypted"></a>配置“始终加密”功能
@@ -79,10 +83,10 @@ caps.handback.revision: 57
 
 |任务|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|用户帐户控制|是|
-|在数据库中创建密钥元数据。|是|用户帐户控制|是|
-|创建具有加密列的新表|是|用户帐户控制|是|
-|对选定的数据库列中的现有数据进行加密|是|用户帐户控制|是|
+|预配列主密钥、列加密密钥、加密列加密密钥及其相应的列主密钥。|是|是|是|
+|在数据库中创建密钥元数据。|是|是|是|
+|创建具有加密列的新表|是|是|是|
+|对选定的数据库列中的现有数据进行加密|是|是|是|
 
 > [!NOTE]
 > 请确保在安全环境中，在非托管数据库的计算机上运行密钥预配或数据加密工具。 否则，敏感数据或密钥可能会泄漏给服务器环境，这将减少使用“始终加密”功能的好处。  
@@ -93,20 +97,20 @@ caps.handback.revision: 57
 
 ## <a name="getting-started-with-always-encrypted"></a>始终加密入门
 
-使用[始终加密向导](../../../relational-databases/security/encryption/always-encrypted-wizard.md)可以快速开始使用“始终加密”功能。 该向导将预配所需的密钥，并配置所选列的加密设置。 如果要为其设置加密的列已包含一些数据，则该向导将对数据进行加密。 以下示例演示了加密列的过程。
+使用 [始终加密向导](../../../relational-databases/security/encryption/always-encrypted-wizard.md) 可以快速开始使用“始终加密”功能。 该向导将预配所需的密钥，并配置所选列的加密设置。 如果要为其设置加密的列已包含一些数据，则该向导将对数据进行加密。 以下示例演示了加密列的过程。
 
 > [!NOTE]  
->  有关该向导用法的视频，请参阅[《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
+>  有关该向导用法的视频，请参阅 [《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
 
-1.  连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的**对象资源管理器**加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
-2.  右键单击数据库，指向“任务”，然后单击“加密列”打开“始终加密向导”。
-3.  查看“简介”页，然后单击“下一步”。
-4.  在“列选择”页上展开表，然后选择要加密的列。 
-5.  对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。
-6.  对于选择进行加密的每个列，选择“加密密钥”。 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。
-7.  在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。
-8.  在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。
-9.  在“摘要”页上，查看你选择的选项，然后单击“完成”。 完成后关闭向导。
+1.    连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的 **对象资源管理器** 加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
+2.    右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。
+3.    查看“简介”页，然后单击“下一步”。
+4.    在“列选择”页上展开表，然后选择要加密的列。 
+5.    对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。
+6.    对于选择进行加密的每个列，选择“加密密钥”。 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 
+7.    在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。
+8.    在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。
+9.    在“摘要”页上，查看你选择的选项，然后单击“完成”。 完成后关闭向导。
 
   
 ## <a name="feature-details"></a>功能详细信息  
@@ -118,10 +122,12 @@ caps.handback.revision: 57
 -   列加密密钥最多可以包含两个不同的加密值，每个值是使用不同的列主密钥加密的。 这样便于轮换列主密钥。  
   
 -   确定性加密要求列有一个 [*binary2* 排序规则](../../../relational-databases/collations/collation-and-unicode-support.md)。  
+
+-   更改已加密对象的定义之后，需执行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)，以更新该对象的 Always Encrypted 元数据。
   
- 具有以下特征的列不支持始终加密（例如，如果某个列存在以下任何情况，则不能在 **CREATE TABLE/ALTER TABLE** 中针对该列使用 *Encrypted WITH* 子句）：  
+ 具有以下特征的列不支持始终加密（例如，如果某个列存在以下任何情况，则不能在 *CREATE TABLE/ALTER TABLE* 中针对该列使用 **Encrypted WITH** 子句）：  
   
--   使用以下任一数据类型的列：**xml**、**timestamp**/**rowversion**、**image**、**ntext**、**text**、**sql_variant**、**hierarchyid**、**geography**、**geometry**、别名、用户定义类型。  
+-   使用以下任一数据类型的列： **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、别名、用户定义类型。  
   
 - FILESTREAM 列  
   
@@ -159,21 +165,21 @@ caps.handback.revision: 57
 
 工具要求
 
-- 如果在“连接到服务器”对话框的“其他属性”选项卡中的“列加密设置”为启用状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
+- 如果在“连接到服务器”  对话框的“其他属性”  选项卡中的“列加密设置”为启用  状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
 
-- `sqlcmd` 中的加密连接至少需要 13.1 版本（可从[下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取）。
+- `sqlcmd` 中的加密连接至少需要 13.1 版本（可从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取）。
 
   
 ## <a name="database-permissions"></a>数据库权限  
  “始终加密”功能需要有四个权限：  
   
-*  `ALTER ANY COLUMN MASTER KEY`（创建和删除列主密钥所需的权限。）  
+*  `ALTER ANY COLUMN MASTER KEY` （创建和删除列主密钥所需的权限。）  
   
-*  `ALTER ANY COLUMN ENCRYPTION KEY`（创建和删除列加密密钥所需的权限。） 
+*  `ALTER ANY COLUMN ENCRYPTION KEY` （创建和删除列加密密钥所需的权限。） 
   
-*  `VIEW ANY COLUMN MASTER KEY DEFINITION`（访问和读取列主密钥的元数据以管理密钥或查询加密列所需的权限。）  
+*  `VIEW ANY COLUMN MASTER KEY DEFINITION` （访问和读取列主密钥的元数据以管理密钥或查询加密列所需的权限。）  
   
-*  `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`（访问和读取列加密密钥的元数据以管理密钥或查询加密列所需的权限。）  
+*  `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` （访问和读取列加密密钥的元数据以管理密钥或查询加密列所需的权限。）  
   
  下表总结了常见的操作所需的权限。  
   
@@ -184,13 +190,13 @@ caps.handback.revision: 57
   
  **重要说明：**  
   
--   这些权限适用于使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]（对话框和向导）或 PowerShell 的操作。  
+-   这些权限适用于使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] （对话框和向导）或 PowerShell 的操作。  
   
 -   选择加密列时需要这两个 *VIEW* 权限，即使用户没有权限来解密这些列。  
   
--   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，向固定的数据库角色 `public` 默认授予这两个 *VIEW* 权限。 数据库管理员可以选择撤消（或拒绝）`public` 角色的 *VIEW* 权限，并将该权限授予特定的角色或用户来实现更严格的控制。  
+-   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，向固定的数据库角色 *默认授予这两个* VIEW `public` 权限。 数据库管理员可以选择撤消（或拒绝） *角色的* VIEW `public` 权限，并将该权限授予特定的角色或用户来实现更严格的控制。  
   
--   在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中，不会向固定的数据库角色 `public` 默认授予 *VIEW* 权限。 这可以使某些现有的旧工具（使用旧版本的 DacFx）能够正常工作。 因此，若要使用加密列（即使不对其进行解密），数据库管理员必须显式授予这两个 *VIEW* 权限。  
+-   在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中，不会向固定的数据库角色 *默认授予* VIEW `public` 权限。 这可以使某些现有的旧工具（使用旧版本的 DacFx）能够正常工作。 因此，若要使用加密列（即使不对其进行解密），数据库管理员必须显式授予这两个 *VIEW* 权限。  
 
   
 ## <a name="example"></a>示例  
@@ -230,19 +236,21 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-*  [创建列主密钥 (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
-*  [创建列加密密钥 (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
-*  [创建表 (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md)   
-*  [column_definition (Transact-SQL)](../Topic/column_definition%20\(Transact-SQL\).md)   
-*  [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
-*  [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
-*  [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
-*  [sys.columns (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
-*  [始终加密向导](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-*  [迁移通过“始终加密”保护的敏感数据](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
-*  [始终加密（客户端开发）](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
-*  [“始终加密”密码系统](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
-* [使用 SSMS 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-* [使用 PowerShell 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+[CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+[CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md)   
+[column_definition (Transact-SQL)](../../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
+[sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+[sys.columns (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+[始终加密向导](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[迁移通过“始终加密”保护的敏感数据](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)   
+[Always Encrypted（客户端开发）](../../../relational-databases/security/encryption/always-encrypted-client-development.md)   
+[“始终加密”密码系统](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
+[使用 SSMS 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+[使用 PowerShell 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
+[sp_refresh_parameter_encryption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
+

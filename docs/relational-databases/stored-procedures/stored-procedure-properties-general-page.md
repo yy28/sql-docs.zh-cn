@@ -1,28 +1,32 @@
 ---
-title: "存储过程属性（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.spassistededitor.storedprocedure.f1"
-  - "sql13.swb.spproperties.general.f1"
+title: "存储过程属性（“常规”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.spassistededitor.storedprocedure.f1
+- sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc478edecbc7f64655d9fefe0943e99080b3ebde
+ms.lasthandoff: 04/11/2017
+
 ---
-# 存储过程属性（“常规”页）
+# <a name="stored-procedure-properties-general-page"></a>存储过程属性（“常规”页）
   显示有关存储过程的信息。 所有信息均为只读。  
   
-## 选项  
+## <a name="options"></a>选项  
  **数据库**  
  包含此存储过程的数据库的名称。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 13
  **重新编译**  
  指示创建对象时是否选择了“RECOMPILE”选项。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [存储过程（数据库引擎）](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)  

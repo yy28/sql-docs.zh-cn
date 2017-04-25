@@ -1,22 +1,26 @@
 ---
 title: "用于对内存优化表进行分区的应用程序模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 用于对内存优化表进行分区的应用程序模式
+# <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常，这是基于 **datetime** 键存储数据的方案。  
@@ -35,14 +39,14 @@ caps.handback.revision: 20
   
 -   添加活动分区。  
   
- ![分区切换。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "分区切换。")  
+ ![分区切换。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
 活动数据维护  
   
  从删除 ActiveOrder 开始的操作需要在维护时段中完成，以避免在删除数据与切入临时表之间的时间内发生缺少数据的查询。  
   
- 有关示例，请参阅[应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)。  
+ 有关示例，请参阅 [应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)。  
   
-## 代码示例  
+## <a name="code-sample"></a>代码示例  
  下例展示如何将内存优化表与经过分区的基于磁盘的表一起使用。 常用的数据存储在内存中。 若要将数据保存到磁盘，请新建一个分区，然后将数据复制到经过分区的表。  
   
  本例的第一部分创建数据库和必要的对象。 本例的第二部分展示如何将数据从内存优化表移至经过分区的表。  
@@ -210,7 +214,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

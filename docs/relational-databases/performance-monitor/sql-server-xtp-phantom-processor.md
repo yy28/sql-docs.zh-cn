@@ -1,27 +1,31 @@
 ---
 title: "SQL Server XTP 虚拟处理器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 722137db4fdddd79f8ed4bfe8d5a7c3ed4531738
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP 虚拟处理器
+# <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虚拟处理器
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   SQL Server XTP 虚拟处理器性能对象包含与内存中 OLTP 引擎的虚拟处理子系统相关的计数器。 此组件用于检测在 SERIALIZABLE 隔离级别运行的事务中的虚拟行和并发方案中的约束验证。  
   
- 下表介绍了 **SQL Server XTP 虚拟处理器**计数器。  
+ 下表介绍了 **SQL Server XTP 虚拟处理器** 计数器。  
   
 |计数器|说明|  
 |-------------|-----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 7
 |**接触的虚拟行数/秒**|虚拟扫描每秒接触的行数（平均值）。|  
 |**启动的虚拟扫描数/秒**|每秒启动的虚拟扫描数（平均值）。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server XTP（内存中 OLTP）性能计数器](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

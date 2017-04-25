@@ -1,22 +1,26 @@
 ---
 title: "SQL Server 中扩展事件的目标数据的高级查看功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/04/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/04/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 中扩展事件的目标数据的高级查看功能
+# <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标数据的高级查看功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -29,7 +33,7 @@ caps.handback.revision: 4
 
 
 
-### 先决条件
+### <a name="prerequisites"></a>先决条件
 
 本文假定你已了解如何创建和启动事件会话。 有关如何创建事件会话的说明之前在下面的文章中已演示：
 
@@ -42,7 +46,7 @@ caps.handback.revision: 4
 
 
 
-### 与 Azure SQL 数据库之间的差异
+### <a name="differences-with-azure-sql-database"></a>与 Azure SQL 数据库之间的差异
 
 
 Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实现与功能方面具有很大程度的一致性。 但仍存在一些差异会影响 SSMS UI（用户界面）。
@@ -66,7 +70,7 @@ Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实
 
 
 
-## A. 常规选项
+## <a name="a-general-options"></a>A. 常规选项
 
 
 通常，通过以下方式访问高级选项：
@@ -79,7 +83,7 @@ Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实
 
 
 
-## B. 将目标数据引入 SSMS 进行显示
+## <a name="b-bring-target-data-into-ssms-for-display"></a>B. 将目标数据引入 SSMS 进行显示
 
 
 有多种方法可以将 event_file 目标数据引入 SSMS UI。 当指定 event_file 目标时，将设置它的文件路径和名称：
@@ -88,7 +92,7 @@ Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实
 
 
 - 每次启动该事件会话时，系统会在新的文件名中嵌入一个非常大的整数，以使文件名唯一，且不同于以前启动会话时用的数字。
-  - *示例：*Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *示例：* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - .XEL 中的内容不是可以使用 Notepad.exe 来查看的纯文本。
@@ -98,10 +102,10 @@ Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实
 
 SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显示也有所不同：
 
-- *event_file：*可以很好地显示来自 event_file 目标的数据，并且具有丰富的功能。
+- *event_file：* 可以很好地显示来自 event_file 目标的数据，并且具有丰富的功能。
 
 
-- *ring_buffer：*来自 ring-buffer 目标的数据显示为原始 XML 文件。
+- *ring_buffer：* 来自 ring-buffer 目标的数据显示为原始 XML 文件。
 
 
 - 对于其他目标，显示的能力介于 event_file 和 ring_buffer 之间。
@@ -112,7 +116,7 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-### B.1 通过菜单“文件”>“打开”>“文件”打开 .XEL
+### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 通过菜单“文件”>“打开”>“文件”打开 .XEL
 
 
 你可以通过标准菜单“文件” > “打开” > “文件”打开单个 .XEL 文件。
@@ -121,7 +125,7 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-### B.2 查看目标数据
+### <a name="b2-view-target-data"></a>B.2 查看目标数据
 
 
 **查看目标数据**选项显示到目前为止已捕获的数据。
@@ -138,11 +142,12 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 ![你的目标 > 查看目标数据](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **查看目标数据**显示指定事件会话的多个 .XEL 文件的累积数据。 每个**启动**-**停止**周期都将创建一个文件，并且在文件名中嵌入由时间转换而来的整数，但是每个文件共享相同的根名称。
+> [!NOTE] 
+> **查看目标数据**显示指定事件会话的多个 .XEL 文件的累积数据。 每个**启动**-**停止**周期都将创建一个文件，并且在文件名中嵌入由时间转换而来的整数，但是每个文件共享相同的根名称。
 
 
 
-#### B.3 查看实时数据
+#### <a name="b3-watch-live-data"></a>B.3 查看实时数据
 
 
 当事件会话当前处于活动状态时，你可能想要在目标接收数据的同时查看实时的事件数据。
@@ -160,7 +165,7 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-### B.4 使用 sys.fn_xe_file_target_read_file 函数查看 .XEL
+### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 使用 sys.fn_xe_file_target_read_file 函数查看 .XEL
 
 
 对于批处理，以下系统函数可为 .XEL 文件中的记录生成 XML：
@@ -169,7 +174,7 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-## C. 导出目标数据
+## <a name="c-export-the-target-data"></a>C. 导出目标数据
 
 
 在 SSMS 中拥有目标数据之后，可以通过以下操作将数据导出为各种格式：
@@ -185,21 +190,21 @@ SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显�
 
 
 
-## D. 操作显示中的数据
+## <a name="d-manipulate-data-in-the-display"></a>D. 操作显示中的数据
 
 
 SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 
 
-### D.1 数据显示中的上下文菜单
+### <a name="d1-context-menus-in-the-data-display"></a>D.1 数据显示中的上下文菜单
 
 
 右键单击时，数据显示中的不同位置的上下文菜单各不相同。
 
 
 
-#### D.1.1 右键单击数据单元格
+#### <a name="d11-right-click-a-data-cell"></a>D.1.1 右键单击数据单元格
 
 
 以下屏幕截图显示右键单击数据显示中的单元格时获得的内容菜单。 该屏幕截图中还显示了“复制”菜单项的扩展项。
@@ -209,7 +214,7 @@ SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 
 
-#### D.1.2 右键单击列标题
+#### <a name="d12-right-click-a-column-header"></a>D.1.2 右键单击列标题
 
 
 以下屏幕截图显示右键单击“时间戳”标题时获得的上下文菜单。
@@ -222,7 +227,7 @@ SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 
 
-### D.2 选择列，合并列
+### <a name="d2-choose-columns-merge-columns"></a>D.2 选择列，合并列
 
 
 可以使用“选择列”选项控制哪些数据列显示，哪些不显示。 你可以在不同位置找到“选择列”菜单项：
@@ -239,7 +244,7 @@ SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 
 
-#### D.2.1 合并列
+#### <a name="d21-merge-columns"></a>D.2.1 合并列
 
 
 “选择列”对话框中有一部分专门用于将多个列合并为一个列，以用于：
@@ -249,14 +254,14 @@ SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 
 
-### D.3 筛选器
+### <a name="d3-filters"></a>D.3 筛选器
 
 
 在扩展事件的区域中可以指定两种主要类型的筛选器：
 
-- *目标前筛选器：*可减少事件引擎发送到目标的数据量的筛选器。
+- *目标前筛选器：* 可减少事件引擎发送到目标的数据量的筛选器。
 
-- *目标后筛选器：*在 SSMS UI 中可选择的筛选器，用于隐藏某些目标记录。
+- *目标后筛选器：* 在 SSMS UI 中可选择的筛选器，用于隐藏某些目标记录。
 
 
 SSMS 显示筛选器如下所示：
@@ -272,14 +277,14 @@ SSMS 显示筛选器如下所示：
 
 
 
-### D.4 分组和聚合
+### <a name="d4-grouping-and-aggregation"></a>D.4 分组和聚合
 
 
 通过匹配指定列的值将行组合在一起是对数据进行聚合的第一步。
 
 
 
-#### D.4.1 分组
+#### <a name="d41-grouping"></a>D.4.1 分组
 
 
 在扩展事件工具栏中，“分组”按钮可启动一个对话框，你可以在该对话框中按给定的列对显示数据进行分组。 下面的屏幕截图显示了按“名称”列进行分组的对话框。
@@ -292,7 +297,7 @@ SSMS 显示筛选器如下所示：
 
 
 
-#### D.4.2 聚合
+#### <a name="d42-aggregation"></a>D.4.2 聚合
 
 
 在对显示数据进行分组后，可以继续使用其他列对数据进行聚合。  以下屏幕截图显示了按“计数”对分组数据进行聚合。
@@ -305,11 +310,13 @@ SSMS 显示筛选器如下所示：
 
 
 
-### D.5 查看运行时查询计划
+### <a name="d5-view-run-time-query-plan"></a>D.5 查看运行时查询计划
 
 
 使用 **Query_post_execution_showplan** 事件可以查看 SSMS UI 中的实际查询计划。 当显示“详细信息”窗格时，可以在“查询计划”选项卡中看到查询计划图。 将鼠标悬停在查询计划的一个节点上方时，可以看到该节点的属性名称及其值的列表。
 
 
 ![查询计划及一个节点的属性列表](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
+
 

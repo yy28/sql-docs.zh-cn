@@ -1,35 +1,39 @@
 ---
 title: "添加 Transact-SQL 代码段 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 添加 Transact-SQL 代码段
-  您可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包括的一组预定义的代码段中。  
+# <a name="add-transact-sql-snippets"></a>添加 Transact-SQL 代码段
+  您可以将自己的 Transact-SQL 代码段添加到在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括的一组预定义的代码段中。  
   
-## 创建 Transact-SQL 代码段文件  
+## <a name="creating-a-transact-sql-snippet-file"></a>创建 Transact-SQL 代码段文件  
  创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的第一步是创建具有您的代码段文本的 XML 文件。 该文件必须具有 .snippet 文件扩展名，并且必须满足 [代码段架构](http://go.microsoft.com/fwlink/?LinkId=207504)的要求。 将代码段语言设置为 SQL。  
   
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 随附的预定义代码段作为示例。 若要找到预定义的代码段，请打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“工具”菜单，然后单击“代码段管理器”。 在 **“语言”** 列表框中选择 **SQL** ，指向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段的路径将显示在 **“位置”** 框中。  
   
-## 注册代码段  
+## <a name="registering-the-code-snippet"></a>注册代码段  
  在创建代码段文件后，使用代码段管理器向 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]注册该代码段。 您可以添加包含多个代码段的文件夹，或者将单独的代码段导入到 **“我的代码段”** 文件夹中。  
   
-## 过程  
+## <a name="procedures"></a>过程  
   
-#### 添加代码段文件夹  
+#### <a name="adding-a-snippet-folder"></a>添加代码段文件夹  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 9
   
 4.  导航到包含您的代码段的文件夹，然后单击 **“选择文件夹”** 按钮。  
   
-#### 导入代码段  
+#### <a name="importing-a-snippet"></a>导入代码段  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -49,8 +53,8 @@ caps.handback.revision: 9
   
 4.  导航到包含您的代码段的文件夹，单击 .snippet 文件，然后单击 **“打开”** 按钮。  
   
-## 示例  
- 以下示例将创建一个 **TRY-CATCH** 外侧代码段，然后将其导入到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。  
+## <a name="examples"></a>示例  
+ 以下示例将创建一个 **TRY-CATCH** 外侧代码段，然后将其导入到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   
 1.  将以下代码粘贴到记事本，然后将其另存为名为 TryCatch.snippet 的文件。  
   
@@ -109,7 +113,7 @@ caps.handback.revision: 9
   
 5.  导航到包含 TryCatch.snippet 的文件夹，单击该 TryCatch.snippet 文件，然后单击 **“打开”** 按钮。 您不应在 **“我的代码段”** 文件夹中具有 TryCatch 代码段。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [插入外侧 Transact-SQL 代码段](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

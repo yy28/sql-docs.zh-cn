@@ -1,31 +1,35 @@
 ---
 title: "收缩文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "收缩文件"
-  - "减少文件大小"
-  - "数据库 [SQL Server], 收缩"
-  - "减少文件大小"
-  - "大小 [SQL Server], 文件"
-  - "文件大小 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# 收缩文件
+# <a name="shrink-a-file"></a>收缩文件
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中收缩数据或日志文件。  
   
  收缩数据文件通过将数据页从文件末尾移动到更靠近文件开头的未占用的空间来恢复空间。 在文件末尾创建足够的可用空间后，可以取消对文件末尾的数据页的分配并将它们返回给文件系统。  
@@ -63,11 +67,11 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 收缩数据或日志文件  
+#### <a name="to-shrink-a-data-or-log-file"></a>收缩数据或日志文件  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”，再右键单击要收缩的数据库。  
+2.  展开 **“数据库”** ，再右键单击要收缩的数据库。  
   
 3.  依次指向 **“任务”**和 **“收缩”**，再单击 **“文件”**。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 25
      选择文件的文件类型。 可用的选项包括 **“数据”** 和 **“日志”** 文件。 默认选项为 **“数据”**。 选择不同的文件组类型，其他字段中的选项会相应地发生更改。  
   
      **文件组**  
-     在与以上所选的“文件类型”相关联的文件组列表中选择文件组。 选择不同的文件组，其他字段中的选项会相应地发生更改。  
+     在与以上所选的 **“文件类型”** 相关联的文件组列表中选择文件组。 选择不同的文件组，其他字段中的选项会相应地发生更改。  
   
      **文件名**  
      从所选文件组和文件类型的可用文件列表中选择文件。  
@@ -98,7 +102,7 @@ caps.handback.revision: 25
      **在释放未使用的空间前重新组织页**  
      等效于执行用于指定目标文件大小的 DBCC SHRINKFILE。 选中此选项时，用户必须在 **“将文件收缩到”** 框中指定目标文件的大小。  
   
-     **将文件收缩到**  
+     **“将文件收缩到”**  
      为收缩操作指定目标文件的大小。 此大小值不得小于当前分配的空间或大于为文件分配的全部区的大小。 如果输入的值超出最小值或最大值，那么一旦焦点改变或单击工具栏上的按钮时，数值将恢复到最小值或最大值。  
   
      **通过将数据迁移到同一文件组中的其他文件来清空文件**  
@@ -120,11 +124,11 @@ caps.handback.revision: 25
   
      选中此选项后，将指定文件中的所有数据移至同一文件组中的其他文件中。 然后就可以删除空文件。 此选项与执行包含 EMPTYFILE 选项 DBCC SHRINKFILE 相同。  
   
-9. 单击“确定” 。  
+9. 单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 收缩数据或日志文件  
+#### <a name="to-shrink-a-data-or-log-file"></a>收缩数据或日志文件  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [收缩数据库](../../relational-databases/databases/shrink-a-database.md)   
  [删除数据库中的数据文件或日志文件](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

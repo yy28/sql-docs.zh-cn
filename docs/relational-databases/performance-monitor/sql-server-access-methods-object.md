@@ -1,25 +1,29 @@
 ---
-title: "SQL Server Access Methods 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Access Methods 对象"
-  - "SQLServer:Access Methods"
+title: "SQL Server - Access Methods 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Access Methods 对象
+# <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
   **中的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供用于监视如何访问数据库中的逻辑数据的计数器。 用 **Buffer Manager** 计数器监视对磁盘上的数据库页的物理访问。 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 **Access Methods** 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。 索引的碎片过多会降低性能。  
   
  有关数据卷、碎片和用法的详细信息，请使用下列动态管理视图：  
@@ -55,8 +59,8 @@ caps.handback.revision: 36
 |**Deferred Dropped rowsets**|等待由负责清除延迟删除的行集的后台任务删除的、由于联机索引生成操作中止而创建的行集数。|  
 |**Dropped rowset cleanups/sec**|负责清除延迟删除的行集的后台任务每秒成功删除的、由于联机索引生成操作中止而创建的行集数。|  
 |**Dropped rowsets skipped/sec**|负责清除延迟删除的行集的后台任务每秒跳过的、由于联机索引生成操作中止而创建的行集数。|  
-|**Extent Deallocations/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有数据库中每秒释放的区数。|  
-|**Extents Allocated/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有数据库中每秒分配的区数。|  
+|**Extent Deallocations/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有数据库中每秒释放的区数。|  
+|**Extents Allocated/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有数据库中每秒分配的区数。|  
 |**Failed AU cleanup batches/sec**|每秒失败并需要由负责清除延迟删除的分配单元的后台任务重试的批处理数。 失败可能是由于内存或磁盘空间不足、硬件故障和其他原因。|  
 |**Failed leaf page cookie**|在索引搜索期间，自叶级页上发生更改以来无法使用叶级页 cookie 的次数。 Cookie 用于加快索引搜索。|  
 |**Failed tree page cookie**|在索引搜索期间，自树页的父页上发生更改以来无法使用树页 cookie 的次数。 Cookie 用于加快索引搜索。|  
@@ -72,11 +76,11 @@ caps.handback.revision: 36
 |**LobSS Provider Destroy Count**|已破坏的 LobSSP 计数。|  
 |**LobSS Provider Truncation Count**|已截断的 LobSSP 计数。|  
 |**Mixed page allocations/sec**|每秒从混合区分配的页数。 这些页可用于存储 IAM 页和分配给某个分配单元的前八页。|  
-|**Page compression attempts/sec**|对页级别压缩计算的页数。 因为可以极大地节省空间，所以将包括未压缩的页。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有对象。 有关特定对象的信息，请参阅 [sys.dm_db_index_operational_stats (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)。|  
-|**Page Deallocations/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有数据库中每秒释放的页数。 其中包括来自混合区和统一区的页。|  
+|**Page compression attempts/sec**|对页级别压缩计算的页数。 因为可以极大地节省空间，所以将包括未压缩的页。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中的所有对象。 有关特定对象的信息，请参阅 [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)实例的所有数据库中每秒释放的区数。|  
+|**Page Deallocations/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有数据库中每秒释放的页数。 其中包括来自混合区和统一区的页。|  
 |**Page Splits/sec**|每秒由于索引页溢出而发生的页拆分数。|  
-|**Pages Allocated/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有数据库中每秒分配的页数。 这些页包括从混合区和统一区中分配的页。|  
-|**Pages compressed/sec**|使用 PAGE 压缩压缩的数据页数。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有对象。 有关特定对象的信息，请参阅 [sys.dm_db_index_operational_stats (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)。|  
+|**Pages Allocated/sec**|在此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有数据库中每秒分配的页数。 这些页包括从混合区和统一区中分配的页。|  
+|**Pages compressed/sec**|使用 PAGE 压缩压缩的数据页数。 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中的所有对象。 有关特定对象的信息，请参阅 [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)实例的所有数据库中每秒释放的区数。|  
 |**Probe Scans/sec**|每秒内用于直接在索引或基本表中查找最多一个限定行的探测扫描数。|  
 |**Range Scans/sec**|每秒通过索引进行的限定范围的扫描数。|  
 |**Scan Point Revalidations/sec**|每秒必须重新验证扫描点才能继续扫描的次数。|  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Worktables From Cache Base**|仅限内部使用。|  
 |**Worktables From Cache Ratio**|其前两页虽未分配但可从工作表缓存中直接使用的已创建的工作表的百分比。 （工作表被删除后，这两页可能会保持分配状态并返回到工作表缓存中。 这将提高性能。）|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

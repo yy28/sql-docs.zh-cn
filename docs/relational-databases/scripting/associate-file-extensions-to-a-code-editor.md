@@ -1,31 +1,35 @@
 ---
 title: "将文件扩展名与代码编辑器关联 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "文件扩展名 [SQL Server]"
-  - "关联文件扩展名 [SQL Server]"
-  - "查询编辑器 [SQL Server Management Studio], 关联文件扩展名"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file extensions [SQL Server]
+- associating file extensions [SQL Server]
+- Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac76f08879c6fabae99b4ff7dc5bb0cffa74b0fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将文件扩展名与代码编辑器关联
-  将文件扩展名与特定代码编辑器相关联使您可以通过在 Windows 资源管理器中双击文件，使用相应的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器打开文件。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的常用扩展名（例如 .sql 和 .mdx）是在安装过程中关联的。 新的文件扩展名也必须在文件系统中与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相关联。 使用此功能可以打开通过其他编辑器创建的文件，也可以打开重命名的文件，例如重命名为 .bak 的 .sql 文件的备份。  
+# <a name="associate-file-extensions-to-a-code-editor"></a>将文件扩展名与代码编辑器关联
+  将文件扩展名与特定代码编辑器相关联使您可以通过在 Windows 资源管理器中双击文件，使用相应的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器打开文件。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的常用扩展名（例如 .sql 和 .mdx）是在安装过程中关联的。 新的文件扩展名也必须在文件系统中与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相关联。 使用此功能可以打开通过其他编辑器创建的文件，也可以打开重命名的文件，例如重命名为 .bak 的 .sql 文件的备份。  
   
  关联过程分为两步。 首先将扩展名与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]相关联，然后将扩展名与特定代码编辑器相关联。  
   
-### 将新的文件扩展名与 SQL Server Management Studio 相关联  
+### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>将新的文件扩展名与 SQL Server Management Studio 相关联  
   
 1.  在 **“开始”** 菜单中，指向 **“所有程序”**，指向 **“附件”**，再单击 **“Windows 资源管理器”**。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 23
   
 7.  单击 **“关闭”** 关闭 **“文件夹选项”** 对话框，然后关闭 Windows 资源管理器。  
   
-### 在 SQL Server Management Studio 中将新文件扩展名与代码编辑器相关联  
+### <a name="to-associate-a-new-file-extension-with-a-code-editor-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中将新文件扩展名与代码编辑器相关联  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 23
   
 4.  在 **“编辑器”** 框中，单击要用于打开此文件类型的代码编辑器，单击 **“添加”**，再单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Ssms 实用工具](../../tools/sql-server-management-studio/ssms-utility.md)  
   
   
