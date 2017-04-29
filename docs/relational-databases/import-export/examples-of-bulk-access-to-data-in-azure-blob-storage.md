@@ -2,7 +2,7 @@
 title: "批量访问 Azure Blob 存储中数据的示例 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:

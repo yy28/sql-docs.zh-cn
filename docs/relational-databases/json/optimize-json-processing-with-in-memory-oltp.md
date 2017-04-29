@@ -2,7 +2,7 @@
 title: "使用内存中 OLTP 优化 JSON 处理 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:

@@ -15,9 +15,9 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
 ms.openlocfilehash: ece9880006acba925cd10acf8d17e96be8607d84
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="database-features"></a>数据库功能
