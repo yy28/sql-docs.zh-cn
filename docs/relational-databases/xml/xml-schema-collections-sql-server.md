@@ -1,33 +1,37 @@
 ---
 title: "XML 架构集合 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 架构 [SQL Server]"
-  - "xml_schema_namespace 函数"
-  - "XML 架构集合 [SQL Server]，关于 XML 架构集合"
-  - "元数据 [SQL Server]，XML 架构集合"
-  - "查询 [SQL Server 中的 XML]，XML 架构集合"
-  - "架构集合 [SQL Server]"
-  - "架构 [SQL Server]，XML"
-  - "XML [SQL Server]，架构集合"
-  - "XML 架构集合 [SQL Server]"
-  - "架构集合 [SQL Server]，关于 XML 架构集合"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- xml_schema_namespace function
+- XML schema collections [SQL Server], about XML schema collections
+- metadata [SQL Server], XML schema collections
+- queries [XML in SQL Server], XML schema collections
+- schema collections [SQL Server]
+- schemas [SQL Server], XML
+- XML [SQL Server], schema collections
+- XML schema collections [SQL Server]
+- schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 架构集合 (SQL Server)
+# <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
   如主题 [xml (Transact-SQL) ](../../t-sql/xml/xml-transact-sql.md)中所述，SQL Server 使用 **xml** 数据类型对 XML 数据进行本机存储。 您可以选择通过 XML 架构集合将 XSD 架构与 **xml** 类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
   
 -   验证 XML 实例  
@@ -42,7 +46,7 @@ caps.handback.revision: 31
   
  此外，SQL Server 使用相关联的 XML 架构集合（在类型化的 **xml**的情况下）来验证 XML 实例。 如果 XML 实例符合架构，则数据库允许该实例存储在包含其类型信息的系统中。 否则，它将拒绝该实例。  
   
- 可以使用内部函数 XML_SCHEMA_NAMESPACE 检索数据库中存储的架构集合。 有关详细信息，请参阅[查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
+ 可以使用内部函数 XML_SCHEMA_NAMESPACE 检索数据库中存储的架构集合。 有关详细信息，请参阅 [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
  还可以使用 XML 架构集合类型化 XML 变量、参数和列。  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 31
   
  以上架构显示了可以存储在数据库中的不同类型的组件。 其中包括 `SomeAttribute`、 `SomeType`、 `OrderType`、 `CustomerType`、 `Customer`、 `Order`、 `CustomerID`、 `OrderID`、 `OrderDate`、 `RequiredDate`以及 `ShippedDate`。  
   
-### 组件类别  
+### <a name="component-categories"></a>组件类别  
  数据库中存储的架构组件分为下列类别：  
   
 -   ELEMENT  
@@ -118,7 +122,7 @@ caps.handback.revision: 31
   
 -   **Customer** 是 ELEMENT 组件。  
   
- 将架构导入数据库时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会存储架构本身。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会存储各种不同的组件。 也就是说，不存储 \<Schema> 标记，仅存储在其中定义的组件。 不存储所有的架构元素。 如果 \<Schema> 标记包含指定其组件默认行为的属性，则在导入过程中，将把这些属性移动到其中的架构组件，如下表所示。  
+ 将架构导入数据库时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会存储架构本身。 相反， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会存储各种不同的组件。 也就是说，不存储 \<Schema> 标记，仅保存在其中定义的组件。 不存储所有的架构元素。 如果 \<Schema> 标记包含指定其组件默认行为的属性，则在导入过程中，将把这些属性移动到其中的架构组件，如下表所示。  
   
 |属性名称|行为|  
 |--------------------|--------------|  
@@ -160,7 +164,7 @@ caps.handback.revision: 31
 ##  <a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数 **XML_SCHEMA_NAMESPACE**（*schemaName、XmlSchemacollectionName、namespace-uri*）生成 **xml** 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数 **XML_SCHEMA_NAMESPACE**（ *schemaName、XmlSchemacollectionName、namespace-uri*）生成 **xml** 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   
@@ -170,7 +174,7 @@ caps.handback.revision: 31
   
  这些在下列示例中进行了说明。  
   
-### 示例：枚举 XML 架构集合中的 XML 命名空间  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>示例：枚举 XML 架构集合中的 XML 命名空间  
  对 XML 架构集合“myCollection”使用下面的查询：  
   
 ```  
@@ -180,16 +184,16 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### 示例：枚举 XML 架构集合的内容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>示例：枚举 XML 架构集合的内容  
  以下语句枚举关系架构 dbo 中的 XML 架构集合“myCollection”的内容。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml** 数据类型实例。 下面的示例说明了这一点。  
+ 可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
-### 示例：从 XML 架构集合输出指定的架构  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
  以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“http://www.microsoft.com/books”的 XML 架构。  
   
 ```  
@@ -197,14 +201,14 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',
 N'http://www.microsoft.com/books')  
 ```  
   
-### 查询 XML 架构  
+### <a name="querying-xml-schemas"></a>查询 XML 架构  
  可以按下列方式查询加载到 XML 架构集合的 XML 架构：  
   
 -   编写对 XML 架构命名空间的目录视图的 Transact-SQL 查询。  
   
 -   创建包含 **xml** 数据类型列的表以存储 XML 架构并将它们加载到 XML 类型系统。 可以使用 **xml** 数据类型方法查询 XML 列。 另外，还可以对此列生成 XML 索引。 但是，使用此方法时，应用程序必须保持 XML 列中存储的 XML 架构和 XML 类型系统之间的一致性。 例如，如果从 XML 类型系统中删除 XML 架构命名空间，还必须从表中删除它以保持一致性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [预处理架构以便合并包括的架构](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

@@ -1,29 +1,33 @@
 ---
-title: "Security Audit 事件类别 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Security Audit 事件类别 [SQL Server]"
-  - "事件列 [SQL Server], Security Audit 事件类别"
-  - "SQL Server 事件列, Security Audit 事件类别"
+title: "“安全审核”事件类别 (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Security Audit 事件类别 (SQL Server Profiler)
+# <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 事件类别 (SQL Server Profiler)
   **Security Audit** 事件类别包含安全审核事件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -51,14 +55,14 @@ caps.handback.revision: 36
 |[Audit DBCC 事件类](../../relational-databases/event-classes/audit-dbcc-event-class.md)|指示已发出 DBCC 命令。|  
 |[审核全文事件类](../../relational-databases/event-classes/audit-fulltext-event-class.md)|指示全文事件已发生。|  
 |[Audit Login Change Password 事件类](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|指示用户已更改其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码。|  
-|[Audit Login Change Property 事件类](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、**sp_defaultlanguage** 或 ALTER LOGIN 修改登录属性。|  
+|[Audit Login Change Property 事件类](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|指示已使用 **sp_defaultdb**、 **sp_defaultlanguage**或 ALTER LOGIN 修改登录属性。|  
 |[Audit Login 事件类](../../relational-databases/event-classes/audit-login-event-class.md)|指示用户已成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[Audit Login Failed 事件类](../../relational-databases/event-classes/audit-login-failed-event-class.md)|指示用户尝试登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但是失败。|  
+|[Audit Login Failed 事件类](../../relational-databases/event-classes/audit-login-failed-event-class.md)|指示用户尝试登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但是失败。|  
 |[Audit Login GDR 事件类](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|指示已添加或删除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录权限。|  
 |[Audit Logout 事件类](../../relational-databases/event-classes/audit-logout-event-class.md)|指示用户已注销 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[Audit Object Derived Permission 事件类](../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)|指示已针对对象发出 CREATE、ALTER 或 DROP。|  
 |[Audit Schema Object Access 事件类](../../relational-databases/event-classes/audit-schema-object-access-event-class.md)|指示已使用对象权限（如 SELECT）。|  
-|[Audit Schema Object GDR 事件类](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|指示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用户已针对架构对象权限发出 GRANT、REVOKE 或 DENY。|  
+|[Audit Schema Object GDR 事件类](../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)|指示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中用户已针对架构对象权限发出 GRANT、REVOKE 或 DENY。|  
 |[Audit Schema Object Management 事件类](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)|指示已创建、更改或删除服务器对象。|  
 |[Audit Schema Object Take Ownership 事件类](../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md)|指示已检查更改架构对象所有者的权限。|  
 |[Audit Server Alter Trace 事件类](../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)|指示已检查 ALTER TRACE 权限。|  
@@ -72,7 +76,7 @@ caps.handback.revision: 36
 |[Audit Server Starts and Stops 事件类](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|指示已修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务状态。|  
 |[Audit Statement Permission 事件类](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|指示已使用语句权限。|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

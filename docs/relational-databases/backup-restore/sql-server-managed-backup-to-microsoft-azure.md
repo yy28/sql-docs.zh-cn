@@ -1,22 +1,26 @@
 ---
-title: "Microsoft Azure 的 SQL Server 托管备份 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server Managed Backup to Microsoft Azure | Microsoft Docs
+ms.custom: 
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure 的 SQL Server 托管备份
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure 的 SQL Server 托管备份
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理并自动执行将 SQL Server 备份到 Microsoft Azure Blob 存储。 你可以选择允许 SQL Server 基于你的数据库的事务工作负荷确定备份计划。 或者可以使用高级选项来定义计划。 保留期设置可确定备份存储在 Azure Blob 存储上的时间。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。  
@@ -26,7 +30,7 @@ caps.handback.revision: 42
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建议用于在 Microsoft Azure 虚拟机上运行的 SQL Server 实例。  
   
-## 优势  
+## <a name="benefits"></a>优势  
  目前，自动备份多个数据库需要制定备份策略、编写自定义代码并安排备份。 使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，你可以通过仅指定保持期和存储位置来创建备份计划。 虽然可以使用高级设置，但并非必需。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可安排、执行并维护备份。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可以在数据库级别或 SQL Server 实例级别进行配置。 在实例级别进行配置时，任何新数据库也将自动备份。 在数据库级别的设置可用于在个别情况下重写实例级别默认设置。  
@@ -44,7 +48,7 @@ caps.handback.revision: 42
 |**共享访问签名 (SAS)**|对目标容器的访问由共享访问签名 (SAS) 控制。 有关 SAS 的概述，请参阅 [Shared Access Signatures, Part 1: Understanding the SAS Model（共享访问签名，第 1 部分：了解 SAS 模型）](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 可以使用 **New-AzureStorageContainerSASToken** PowerShell 命令在代码中创建一个 SAS 令牌。 有关简化此过程的 PowerShell 脚本，请参阅 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）。 SAS 令牌可以存储在 **SQL 凭据** 中，供 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用。|  
 |**SQL Server 代理**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 必须运行 SQL Server 代理以进行工作。 考虑将启动选项设置为自动。|  
   
-## Components  
+## <a name="components"></a>Components  
  Transact-SQL 是与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]交互的主要界面。 系统存储过程用于启用、配置和监视 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 系统函数用于检索现有配置设置、参数值和备份文件信息。 扩展事件用于呈现错误和警告。 警报机制通过 SQL 代理作业和 SQL Server 基于策略的管理启用。 以下列表列出了与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相关的对象及其功能的说明。  
   
  也有 PowerShell cmdlet 可用于配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 SQL Server Management Studio 支持还原由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 使用 **“还原数据库”** 任务创建的备份  
@@ -52,7 +56,7 @@ caps.handback.revision: 42
 |||  
 |-|-|  
 |系统对象|说明|  
-|**MSDB**|存储由[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的所有备份的元数据和备份历史记录。|  
+|**MSDB**|存储由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的所有备份的元数据和备份历史记录。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |[managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置高级设置，如加密。|  
 |[managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)|为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建自定义计划。|  
@@ -67,15 +71,15 @@ caps.handback.revision: 42
 |[managed_backup.fn_get_current_xevent_settings (Transact-SQL)](../../relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md)|返回当前扩展事件设置。|  
 |[managed_backup.fn_get_health_status (Transact-SQL)](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)|返回由指定期间扩展事件记录的合计错误数。|  
   
-## 备份策略  
+## <a name="backup-strategy"></a>备份策略  
   
-### 备份计划  
- 你可以使用系统存储过程 [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 指定自定义备份计划。 如果没有指定自定义计划，则安排的备份类型和备份频率将根据数据库的工作负载确定。 保持期设置用于决定应在存储中保留备份文件的时间长度以及能否将数据库恢复到保留期内的某个时间点。  
+### <a name="backup-scheduling"></a>备份计划  
+ 你可以使用系统存储过程 [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)。 如果没有指定自定义计划，则安排的备份类型和备份频率将根据数据库的工作负载确定。 保持期设置用于决定应在存储中保留备份文件的时间长度以及能否将数据库恢复到保留期内的某个时间点。  
   
-### 备份文件命名约定  
+### <a name="backup-file-naming-conventions"></a>备份文件命名约定  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 使用你指定的容器，因此你可以控制容器的名称。 对于备份文件，按照以下约定命名非可用性数据库：使用数据库名称的前 40 个字符、不含“-”的数据库 GUID 以及时间戳创建名称。 在各段之间插入下划线字符作为分隔符。 完整备份使用 **.bak** 文件扩展名，日志备份使用 **.log** 。 对于可用性组数据库，除了上方所述的文件命名约定之外，还在 40 个字符的数据库名称后添加可用性组数据库 GUID。 可用性组数据库 GUID 值为 sys.databases 中 group_database_id 的值。  
   
-### 完整数据库备份  
+### <a name="full-database-backup"></a>完整数据库备份  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 代理便会安排一次完整数据库备份。  
   
 -   初次为数据库启动 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，或在实例级使用默认设置启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时。  
@@ -86,7 +90,7 @@ caps.handback.revision: 42
   
 -   日志链中断。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 会定期进行检查，通过比较备份文件的第一个和最后一个 LSN 确定日志链是否完整。 如果日志链因为任何原因而存在中断，则 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 会安排一次完整数据库备份。 日志链断裂的最常见原因可能是使用 Transact-SQL 或通过 SQL Server Management Studio 中的备份任务发出了备份命令。  其他常见的情况包括意外删除了备份文件或意外的备份覆盖。  
   
-### 事务日志备份  
+### <a name="transaction-log-backup"></a>事务日志备份  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 安排一次日志备份：  
   
 -   找不到日志备份历史记录。 在首次启动 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 时通常存在这种情况。  
@@ -97,12 +101,12 @@ caps.handback.revision: 42
   
 -   事务日志备份滞后于完整备份数据库时。 目标是使日志链保持在完整备份之前。  
   
-## 保持期设置  
+## <a name="retention-period-settings"></a>保持期设置  
  在启用备份时，必须以天为单位设置保持期：最短为 1 天，最长为 30 天。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 根据保持期设置评估能否恢复到指定的时间点，以决定要保留什么备份文件并找出要删除的备份文件。 备份的 backup_finish_date 用于确定和匹配由保持期设置指定的时间。  
   
-## 重要注意事项  
+## <a name="important-considerations"></a>重要注意事项  
  对于数据库，如果现有完整数据库备份作业正在运行，则 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 将等待当前作业完毕，然后对该数据库进行另一次完整数据库备份。 同样，给定时间只能运行一个事务日志备份。 但是，完整数据库备份和事务日志备份可以同时运行。 失败会记录为扩展事件。  
   
  如果安排了超过 10 个并发的完整数据库备份，则会通过扩展事件的调试渠道发出一个警告。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 随后针对其余需要备份的数据库保留一个优先级队列，直到安排并完成所有备份。  
@@ -122,7 +126,7 @@ caps.handback.revision: 42
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 可能有一些限制。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 - [对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [配置 SQL Server Managed Backup to Microsoft Azure 的高级选项](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [对 Microsoft Azure 禁用 SQL Server 托管备份](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
@@ -130,3 +134,4 @@ caps.handback.revision: 42
 - [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
+

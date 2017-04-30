@@ -1,22 +1,26 @@
 ---
 title: "内存中 OLTP 不支持的 Transact-SQL 构造 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存中 OLTP 不支持的 Transact-SQL 构造
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   内存优化表、本机编译的存储过程和用户定义函数不支持由基于磁盘的表、解释 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和用户定义函数所支持的完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外围应用。 尝试使用某个不支持的功能时，服务器返回错误。  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |功能|ON|内存优化的表不能放置在文件组或分区方案上。 从 **CREATE TABLE** 语句删除 ON 子句。<br /><br /> 所有的内存优化表都映射到内存优化文件组。|  
 |数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅 [内存中 OLTP 支持的数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|功能|计算列|内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。|  
+|功能|计算列|内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。|  
 |功能|复制|内存优化表不支持复制。|  
 |功能|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 从列定义中删除 **FILESTREAM** 关键字。|  
 |功能|SPARSE|内存优化的表列不能定义为 SPARSE。 从列定义中删除 **SPARSE** 关键字。|  
@@ -83,7 +87,7 @@ caps.handback.revision: 51
 |功能|筛选索引|内存优化的表不支持筛选的索引。 从索引定义中省略 **WHERE** 子句。|  
 |功能|包含列|指定包含列不是内存优化表所必需的。 内存优化表的所有列都隐式包含在每个内存优化索引中。|  
 |运算|DROP INDEX|不支持删除内存优化的表的索引。 可使用 ALTER TABLE 删除索引。<br /><br /> 有关详细信息，请参阅 [更改内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。|  
-|索引选项|索引选项|仅支持一个索引选项 – BUCKET_COUNT for HASH 索引。|  
+|索引选项|*Index option*|仅支持一个索引选项 – BUCKET_COUNT for HASH 索引。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非聚集哈希索引  
  下表列出可在涉及非聚集哈希索引的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
@@ -107,7 +111,7 @@ caps.handback.revision: 51
 |功能|COMPUTE|不支持 **COMPUTE** 子句。 从查询中删除它。|  
 |功能|SELECT INTO|**INTO** 语句不支持 **SELECT** 子句。 将查询重写为 **p INTO***Table***SELECT**。|  
 |功能|不完整的插入列列表|一般情况下，在 INSERT 语句中，必须为表中的所有列指定值。<br /><br /> 但是，我们支持内存优化表上的 DEFAULT 约束和 IDENTITY(1,1) 列。 可以将这些列（如果为 IDENTITY 列，则必须）从 INSERT 列列表中忽略。|  
-|功能|函数|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|功能|*Function*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |功能|CASE|本机编译的存储过程内的查询中不支持 **CASE** 语句。 创建每个情况的查询。 有关详细信息，请参阅 [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
 |功能|INSERT EXECUTE|删除引用。|  
 |功能|在运行 CREATE 语句前执行|仅支持执行本机编译存储过程和用户定义函数。|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |运算符|OFFSET|不支持此运算符。 从本机编译的存储过程中删除 **OFFSET** 。|  
 |运算符|INTERSECT|不支持此运算符。 从本机编译的存储过程中删除 **INTERSECT** 。 在某些情况下，可以使用 INNER JOIN 获得相同的结果。|  
 |运算符|EXCEPT|不支持此运算符。 从本机编译的存储过程中删除 **EXCEPT** 。|  
-|运算符|APPLY|不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。|  
+|运算符|APPLY|不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。|  
 |运算符|PIVOT|不支持此运算符。 从本机编译的存储过程中删除 **PIVOT** 。|  
 |运算符|UNPIVOT|不支持此运算符。 从本机编译的存储过程中删除 **UNPIVOT** 。|  
 |运算符|CONTAINS|不支持此运算符。 从本机编译的存储过程中删除 **CONTAINS** 。|  
@@ -144,7 +148,7 @@ caps.handback.revision: 51
 |运算符|TSEQUAL|不支持此运算符。 从本机编译的存储过程中删除 **TSEQUAL** 。|  
 |运算符|LIKE|不支持此运算符。 从本机编译的存储过程中删除 **LIKE** 。|  
 |运算符|NEXT VALUE FOR|不能在本机编译的存储过程内引用序列。 使用解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]获取值，然后将它传递到本机编译的存储过程。 有关详细信息，请参阅 [在内存优化表中实现 IDENTITY](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)。|  
-|Set 选项|选项|在本机编译的存储过程内无法更改 SET 选项。 可以使用 BEGIN ATOMIC 语句设置某些选项。 有关详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)中有关原子块的章节。|  
+|Set 选项|*option*|在本机编译的存储过程内无法更改 SET 选项。 可以使用 BEGIN ATOMIC 语句设置某些选项。 有关详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)中有关原子块的章节。|  
 |操作数|TABLESAMPLE|不支持此运算符。 从本机编译的存储过程中删除 **TABLESAMPLE** 。|  
 |选项|RECOMPILE|在创建时编译本机编译的存储过程。 从过程定义中删除 **RECOMPILE** 。<br /><br /> 可以对本机编译存储过程执行 sp_recompile，使其在下一次执行时进行重新编译。|  
 |选项|ENCRYPTION|不支持此选项。 从过程定义中删除 **ENCRYPTION** 。|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |选项|FOR XML|不支持此选项。 从本机编译的存储过程中删除 **FOR XML** 。|  
 |选项|FOR BROWSE|不支持此选项。 从本机编译的存储过程中删除 **FOR BROWSE** 。|  
 |联接提示|HASH、MERGE|本机编译的存储过程仅支持嵌套的循环联接。 不支持哈希和合并联接。 删除联接提示。|  
-|查询提示|查询提示|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)。|  
+|查询提示|*Query hint*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。|  
 |选项|PERCENT|**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **PERCENT** 。|  
 |选项|WITH TIES|**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **WITH TIES** 。|  
-|聚合函数|聚合函数|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
-|排名函数|排名函数|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
-|函数|函数|不支持此函数。 从本机编译的存储过程中删除它。|  
-|语句|语句|不支持此语句。 从本机编译的存储过程中删除它。|  
+|聚合函数|*Aggregate function*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|排名函数|*Ranking function*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
+|函数|*Function*|不支持此函数。 从本机编译的存储过程中删除它。|  
+|。|*Statement*|不支持此语句。 从本机编译的存储过程中删除它。|  
 |功能|MIN 和 MAX 用于二进制和字符串|聚合函数 **MIN** 和 **MAX** 不能用于本机编译的存储过程中的字符和二进制字符串值。|  
 |功能|GROUP BY ALL|在本机编译的存储过程中，不能将 ALL 与 GROUP BY 子句一起使用。 从 GROUP BY 子句中删除 ALL。|  
 |功能|GROUP BY ()|不支持按空列表分组。 删除 GROUP BY 子句，或在分组列表中加入列。|  
 |功能|ROLLUP|在本机编译的存储过程中，**ROLLUP** 不能与 **GROUP BY** 子句一起使用。 从过程定义中删除 **ROLLUP** 。|  
 |功能|CUBE|在本机编译的存储过程中，**CUBE** 不能与 **GROUP BY** 子句一起使用。 从过程定义中删除 **CUBE** 。|  
 |功能|GROUPING SETS|在本机编译的存储过程中，**GROUPING SETS** 不能与 **GROUP BY** 子句一起使用。 从过程定义中删除 **GROUPING SETS** 。|  
-|功能|BEGIN TRANSACTION、COMMIT TRANSACTION 和 ROLLBACK TRANSACTION|使用 ATOMIC 块控制事务和错误处理。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/本机过程中的-atomic-块.md)。|  
+|功能|BEGIN TRANSACTION、COMMIT TRANSACTION 和 ROLLBACK TRANSACTION|使用 ATOMIC 块控制事务和错误处理。 有关详细信息，请参阅 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。|  
 |功能|内联表变量声明。|表变量必须引用显式定义的内存优化表类型。 应创建内存优化的表类型并将该类型用于变量声明，而不应在行内指定类型。|  
 |功能|基于磁盘的表|无法从本机编译的存储过程中访问基于磁盘的表。 从本机编译的存储过程中删除对基于磁盘的表的引用。 或者，将基于磁盘的表转换为内存优化的表。|  
 |功能|视图|无法从本机编译的存储过程中访问视图。 不引用视图，改为引用底层基表。|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

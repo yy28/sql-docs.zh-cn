@@ -1,28 +1,32 @@
 ---
 title: "将 AUTO 模式与 FOR XML 一起使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, AUTO 模式"
-  - "ELEMENTS 选项"
-  - "FOR XML AUTO 模式"
-  - "AUTO FOR XML 模式"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将 AUTO 模式与 FOR XML 一起使用
-  如 [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md) 中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是，[将 EXPLICIT 模式与 FOR XML 一起使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)和[将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  
+# <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
+  如 [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是， [将 EXPLICIT 模式与 FOR XML 一起使用](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 和 [将 PATH 模式与 FOR XML 一起使用](../../relational-databases/xml/use-path-mode-with-for-xml.md) 在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  
   
  在 FROM 子句内，每个在 SELECT 子句中至少有一列被列出的表都表示为一个 XML 元素。 如果在 FOR XML 子句中指定了可选的 ELEMENTS 选项，SELECT 子句中列出的列将映射到属性或子元素。  
   
@@ -128,7 +132,7 @@ FOR XML AUTO, ELEMENTS
   
  如果 SELECT 子句中指定了星号 (*) 通配符，则以前面所述的方式根据查询引擎所返回的行的顺序确定嵌套。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  下面的主题提供有关 AUTO 模式的更多信息：  
   
 -   [使用 BINARY BASE64 选项](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [示例：使用 AUTO 模式](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   

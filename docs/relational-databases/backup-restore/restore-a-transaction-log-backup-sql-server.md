@@ -1,31 +1,35 @@
 ---
 title: "还原事务日志备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "还原日志"
-  - "备份事务日志 [SQL Server]，还原"
-  - "事务日志备份 [SQL Server]，还原"
-  - "还原事务日志 [SQL Server]，还原备份"
-  - "事务日志还原 [SQL Server]，SQL Server Management Studio"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 还原事务日志备份 (SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原事务日志备份。  
@@ -68,7 +72,7 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  一般的还原过程需要在“还原数据库”对话框中同时选择日志备份以及数据和差异备份。  
   
-#### 还原事务日志备份  
+#### <a name="to-restore-a-transaction-log-backup"></a>还原事务日志备份  
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -101,12 +105,12 @@ caps.handback.revision: 36
     |------------|-----------|  
     |**还原**|如果复选框处于选中状态，则指示要还原相应的备份集。|  
     |**名称**|备份集的名称。|  
-    |**组件**|已备份的组件：**数据库**、**文件**或 \<空白>（对于事务日志）。|  
+    |**组件**|已备份的组件：**数据库**、**文件**或 \<blank>（用于事务日志）。|  
     |**数据库**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间（按客户端的区域设置显示）。|  
     |**完成日期**|备份操作完成的日期和时间（按客户端的区域设置显示）。|  
-    |**第一个 LSN**|备份集中第一个事务的日志序列号。 对于文件备份为空。|  
-    |**最后一个 LSN**|备份集中最后一个事务的日志序列号。 对于文件备份为空。|  
+    |**“第一个 LSN”**|备份集中第一个事务的日志序列号。 对于文件备份为空。|  
+    |**“最后一个 LSN”**|备份集中最后一个事务的日志序列号。 对于文件备份为空。|  
     |**检查点 LSN**|创建备份时最后一个检查点的日志序号。|  
     |**完整 LSN**|最近的数据库完整备份的日志序列号。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
@@ -129,9 +133,9 @@ caps.handback.revision: 36
   
          下表列出了网格的列标题并对列值进行了说明。  
   
-        |标题|值|  
+        |标题|“值”|  
         |------------|-----------|  
-        |\<空白>|显示一个用于选择标记的复选框。|  
+        |\<blank>|显示一个用于选择标记的复选框。|  
         |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
         |**日期**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
         |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
@@ -149,7 +153,7 @@ caps.handback.revision: 36
   
          此选项只能与“回退未提交的事务，使数据库处于可以使用的状态...”选项（等效于使用 **RECOVERY** 选项还原备份，将在后面予以介绍）一起使用。  
   
-         选择此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 语句中使用 **KEEP_REPLICATION** 选项。  
+         选择此选项等效于在 **RESTORE** 语句中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**KEEP_REPLICATION** 选项。  
   
     -   **还原每个备份之前进行提示**  
   
@@ -161,19 +165,19 @@ caps.handback.revision: 36
   
     -   **限制对还原数据库的访问(WITH RESTRICTED_USER)**  
   
-         使还原的数据库仅供 **db_owner**、**dbcreator** 或 **sysadmin** 的成员使用。  
+         使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
   
-         选择此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 语句中使用 **RESTRICTED_USER** 选项。  
+         选择此选项等效于在 **RESTORE** 语句中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** 选项。  
   
 10. 对于 **“恢复状态”** 选项，请指定还原操作之后的数据库状态。  
   
-    -   **回滚未提交的事务，使数据库处于可以使用的状态。 无法还原其他事务日志。 (RESTORE WITH RECOVERY)**  
+    -   **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
   
          恢复数据库。 此选项等效于 **RESTORE** 语句中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RECOVERY** 选项。  
   
          请仅在没有要还原的日志文件时选择此选项。  
   
-    -   **不对数据库执行任何操作，不回滚未提交的事务。 可以还原其他事务日志。 (RESTORE WITH NORECOVERY)**  
+    -   **不对数据库执行任何操作，不回退未提交的事务。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**  
   
          使数据库处于未恢复的 **RESTORING** 状态。 此选项等效于在 **RESTORE** 语句中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**NORECOVERY** 选项。  
   
@@ -182,7 +186,7 @@ caps.handback.revision: 36
         > [!IMPORTANT]  
         >  对于镜像或辅助数据库，应始终选择此选项。  
   
-    -   **使数据库处于只读模式。 撤消未提交的事务，但将撤消操作保存在文件中，以便可使恢复效果逆转。 (RESTORE WITH STANDBY)**  
+    -   **使数据库处于只读模式。撤消未提交的事务，但将撤消操作保存在文件中，以便可使恢复效果逆转。(RESTORE WITH STANDBY)**  
   
          使数据库处于备用状态。 此选项等效于在 **RESTORE** 语句中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**STANDBY** 选项。  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  我们建议您在每个 RESTORE 语句中显式指定 WITH NORECOVERY 或 WITH RECOVERY 以消除混淆。 在编写脚本时，这样做尤其重要。  
   
-#### 还原事务日志备份  
+#### <a name="to-restore-a-transaction-log-backup"></a>还原事务日志备份  
   
 1.  执行 RESTORE LOG 语句应用事务日志备份，同时指定：  
   
@@ -236,13 +240,13 @@ caps.handback.revision: 36
     >  如果要创建镜像数据库，则省略恢复步骤。 镜像数据库必须仍处于 RESTORING 状态。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 默认情况下，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库使用简单恢复模式。 以下示例要求修改数据库以使用完整恢复模式，如下所示：  
+ 默认情况下， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库使用简单恢复模式。 以下示例要求修改数据库以使用完整恢复模式，如下所示：  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### A. 应用单个事务日志备份  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. 应用单个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例应用名为 `AdventureWorks2012_log`备份设备上的第一个事务日志备份。 最后，该示例恢复数据库。  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### B. 应用多个事务日志备份  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. 应用多个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例逐一使用名为 `AdventureWorks2012_log`备份设备上的前三个事务日志备份。 最后，该示例恢复数据库。  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [将数据库还原到标记的事务 (SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## 另请参阅  
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

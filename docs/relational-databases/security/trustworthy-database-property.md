@@ -1,25 +1,29 @@
 ---
 title: "TRUSTWORTHY 数据库属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TRUSTWORTHY 数据库属性"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database property
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6ed457ecf38494c5fc333aad53969372764e2c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# TRUSTWORTHY 数据库属性
-  TRUSTWORTHY 数据库属性用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否信任该数据库以及其中的内容。 默认情况下，此设置为 OFF，但是可以使用 ALTER DATABASE 语句将其设置为 ON。 例如，`ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`。  
+# <a name="trustworthy-database-property"></a>TRUSTWORTHY 数据库属性
+  TRUSTWORTHY 数据库属性用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否信任该数据库以及其中的内容。 默认情况下，此设置为 OFF，但是可以使用 ALTER DATABASE 语句将其设置为 ON。 例如， `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`。  
   
 > [!NOTE]  
 >  必须是 **sysadmin** 固定服务器角色的成员才能设置此选项。  
@@ -34,7 +38,7 @@ caps.handback.revision: 22
   
  因为无法立即信任附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库，所以不允许数据库访问超出数据库范围的资源，直到数据库已显式标记为可信。 此外，旨在访问数据库以外资源的模块和带有 EXTERNAL_ACCESS 或 UNSAFE 权限设置的程序集还需要其他条件才能成功运行。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  

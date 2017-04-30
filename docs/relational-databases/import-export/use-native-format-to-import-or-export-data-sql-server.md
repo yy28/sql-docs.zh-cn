@@ -1,29 +1,33 @@
 ---
 title: "使用本机格式导入或导出数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "本机数据格式 [SQL Server]"
-  - "数据格式 [SQL Server], 本机"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用本机格式导入或导出数据 (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
 当使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用本机格式。  
 
 > [!NOTE]
->  若要使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据，应使用 Unicode 本机格式。 有关详细信息信息，请参阅[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。
+>  若要使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据，应使用 Unicode 本机格式。 有关详细信息信息，请参阅 [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。
 
 本机格式保留数据库的本机数据类型。 本机格式适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表之间的高速数据传输。 如果使用格式化文件，则源表和目标表不必相同。 数据传输分为两个步骤：  
   
@@ -61,14 +65,14 @@ caps.handback.revision: 43
   
 -   非字符数据  
   
-     [bcp 实用工具](../../tools/bcp-utility.md)使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式将表中的非字符数据写入数据文件中。  
+     [bcp 实用工具](../../tools/bcp-utility.md) 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式将表中的非字符数据写入数据文件中。  
   
 -   [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 数据或 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 数据  
   
      在每个 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 字段或 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 字段的开头， [bcp](../../tools/bcp-utility.md) 都添加前缀长度。  
   
     > [!IMPORTANT]
-    >  使用本机模式时，默认情况下，[bcp 实用工具](../../tools/bcp-utility.md)先将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字符转换为 OEM 字符，然后将这些字符复制到数据文件中。 [bcp 实用工具](../../tools/bcp-utility.md)先将数据文件中的字符转换为 ANSI 字符，然后将这些字符批量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。
+    >  使用本机模式时，默认情况下， [bcp 实用工具](../../tools/bcp-utility.md) 先将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字符转换为 OEM 字符，然后将这些字符复制到数据文件中。 [bcp 实用工具](../../tools/bcp-utility.md) 先将数据文件中的字符转换为 ANSI 字符，然后将这些字符批量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。
   
 -   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据  
   
@@ -90,10 +94,10 @@ caps.handback.revision: 43
 |OPENROWSET|N/A|必须使用格式化文件|
 
   
- \*若要将本机 (**-n**) 数据加载到与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式，请使用 **-V** 开关。 有关详细信息，请参阅[导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要将本机 (**-n**) 数据加载到与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
 > [!NOTE]
->  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅[用于导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
+>  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
   
 
 ## 示例测试条件<a name="etc"></a>  
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
-SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  下面的命令基于 `myNative` 的架构使用 [bcp 实用工具](../../tools/bcp-utility.md)生成非 XML 格式化文件 `myNative.fmt`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据，**T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
+SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myNative.fmt`生成非 XML 格式化文件 `myNative`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -233,8 +237,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 另请参阅  
- [bcp 实用工具](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)   
@@ -243,3 +247,4 @@ SELECT * FROM TestDatabase.dbo.myNative;
  [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+

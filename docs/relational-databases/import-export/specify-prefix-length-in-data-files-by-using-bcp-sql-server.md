@@ -1,31 +1,35 @@
 ---
 title: "使用 bcp 指定数据文件中的前缀长度 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp 实用工具 [SQL Server]，前缀长度"
-  - "前缀长度 [SQL Server]"
-  - "长度 [SQL Server]，前缀字符"
-  - "数据格式 [SQL Server]，前缀长度"
+ms.custom: 
+ms.date: 07/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server], prefix length
+- prefix length [SQL Server]
+- lengths [SQL Server], prefix characters
+- data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 bcp 指定数据文件中的前缀长度 (SQL Server)
+# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
   
-## bcp 的前缀长度提示  
- 如果交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
+## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 的前缀长度提示  
+ 如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -34,8 +38,8 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
-## 前缀长度概述  
- 若要存储字段的前缀长度，您需要有足够的字节来表示字段的最大长度。 另外，所需的字节数还取决于文件存储类型、列是否可以为 Null 以及数据是以本机格式还是字符格式存储在数据文件中。 例如， **text** 或 **image** 数据类型需要四个前缀字符存储字段长度，而 **varchar** 数据类型需要两个字符。 在数据文件中，这些长度前缀字符以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部二进制数据格式存储。  
+## <a name="overview-of-prefix-length"></a>前缀长度概述  
+ 若要存储字段的前缀长度，您需要有足够的字节来表示字段的最大长度。 另外，所需的字节数还取决于文件存储类型、列是否可以为 Null 以及数据是以本机格式还是字符格式存储在数据文件中。 例如， **text** 或 **image** 数据类型需要四个前缀字符存储字段长度，而 **varchar** 数据类型需要两个字符。 在数据文件中，这些长度前缀字符以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的内部二进制数据格式存储。  
   
 > [!IMPORTANT]  
 >  使用本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能会与终止符相冲突，因为本机格式数据文件是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部二进制数据格式存储的。  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |**ntext***|4|4|4|4|  
 |**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**图像***|4|4|4|4|  
+|**image***|4|4|4|4|  
 |**datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
@@ -77,19 +81,19 @@ caps.handback.revision: 30
 |**timestamp**|1|1|1|1|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
-|**UDT**（用户定义的数据类型）|8|8|8|8|  
+|**UDT** （用户定义的数据类型）|8|8|8|8|  
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)**、**varchar(max)** 和 **varbinary(max)**。  
+ \***的未来版本中将删除**ntext **、**text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)**和 **varbinary(max)** 。  
   
 ##  <a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  
   
 > [!NOTE]  
->  若要在不是使用 **bcp** 创建的数据文件中指定前缀长度，请使用本主题前面的[批量导出时的前缀长度](#PrefixLengthsExport)中介绍的长度。  
+>  若要在不是使用 **bcp**创建的数据文件中指定前缀长度，请使用本主题前面的 [批量导出时的前缀长度](#PrefixLengthsExport)中介绍的长度。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [使用 bcp 指定字段长度 (SQL Server)](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
@@ -97,3 +101,4 @@ caps.handback.revision: 30
  [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "将现有索引移动到其他文件组中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移动表"
-  - "切换索引的文件组"
-  - "移动索引"
-  - "索引 [SQL Server], 移动"
-  - "文件组 [SQL Server], 切换"
+title: "将现有索引移动到其他文件组 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将现有索引移动到其他文件组中
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将现有索引从其当前文件组移动到其他文件组。  
@@ -47,7 +51,7 @@ caps.handback.revision: 44
   
 -   如果表具有聚集索引，则将此聚集索引移动到新文件组的同时也会将表移动到该文件组。  
   
--   不能通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来移动使用 UNIQUE 或 PRIMARY KEY 约束创建的索引。 若要移动这些索引，请在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 语句以及 (DROP_EXISTING=ON) 选项。  
+-   不能通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]来移动使用 UNIQUE 或 PRIMARY KEY 约束创建的索引。 若要移动这些索引，请在 [中使用](../../t-sql/statements/create-index-transact-sql.md) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]语句以及 (DROP_EXISTING=ON) 选项。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用表设计器将现有索引移到其他文件组  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>使用表设计器将现有索引移到其他文件组  
   
 1.  在“对象资源管理器”中，单击加号以展开包含该特定表的数据库，该表包含您要移动的索引。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 44
   
 9. 在“文件”菜单上，选择“保存”以保存 *table_name*。  
   
-#### 在“对象资源管理器”中将现有索引移到其他文件组  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>在“对象资源管理器”中将现有索引移到其他文件组  
   
 1.  在“对象资源管理器”中，单击加号以展开包含该特定表的数据库，该表包含您要移动的索引。  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 44
   
      如果要移动聚集索引，则可以使用联机处理。 联机处理使并发用户可以在索引操作期间访问基础数据和非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 有关并行索引操作的详细信息，请参阅[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多处理器计算机上，可以通过指定最大的并行度值来配置用于执行索引语句的处理器数。 并非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均提供并行索引操作功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅“SQL Server 2016 各个版本支持的功能”。 有关并行索引操作的详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 8.  单击“确定” 。  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 44
  显示有关列的数据类型信息。  
   
 > [!NOTE]  
->  如果表列是计算列，则“列数据类型”显示为“计算列”。  
+>  如果表列是计算列，则 **“列数据类型”** 显示为“计算列”。  
   
  **允许在移动索引时在线处理 DML 语句**  
  在索引操作过程中，允许用户访问基础表或聚集索引数据以及任何相关联的非聚集索引。  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 将现有索引移动到其他文件组中  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>将现有索引移动到其他文件组中  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
   
+

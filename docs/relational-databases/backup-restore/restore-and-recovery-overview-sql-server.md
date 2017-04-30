@@ -1,32 +1,36 @@
 ---
 title: "还原与恢复概述 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "还原表 [SQL Server]"
-  - "备份 [SQL Server], 还原方案"
-  - "数据库备份 [SQL Server], 还原方案"
-  - "数据库还原 [SQL Server]"
-  - "还原 [SQL Server]"
-  - "还原 [SQL Server]"
-  - "表还原 [SQL Server]"
-  - "还原数据库 [SQL Server], 关于还原数据库"
-  - "数据库还原 [SQL Server], 方案"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring tables [SQL Server]
+- backups [SQL Server], restore scenarios
+- database backups [SQL Server], restore scenarios
+- database restores [SQL Server]
+- restoring [SQL Server]
+- restores [SQL Server]
+- table restores [SQL Server]
+- restoring databases [SQL Server], about restoring databases
+- database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e04261e1d43b3ca49c1c3d005d7c3ef683964ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 还原与恢复概述 (SQL Server)
+# <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要从故障中恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，数据库管理员必须按照逻辑正确并且有意义的还原顺序还原一组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原和恢复支持从整个数据库、数据文件或数据页的备份还原数据，如下所示：  
@@ -43,7 +47,7 @@ caps.handback.revision: 46
   
      在完整恢复模式或大容量日志恢复模式下，可以还原单个数据库。 可以对任何数据库执行页面还原，而不管文件组数为多少。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效。 有关支持的操作系统的信息，请参阅[安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 中的“兼容性支持”部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原对所有支持的操作系统都有效。 有关支持的操作系统的信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
   
  **本主题内容：**  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 46
   
  无论以何种方式还原数据，在恢复数据库前， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会保证整个数据库在逻辑上的一致性。 例如，若要还原一个文件，则必须将该文件前滚足够长度，以便与数据库保持一致，才能恢复该文件并使其联机。  
   
-### 文件还原或页面还原的优点  
+### <a name="advantages-of-a-file-or-page-restore"></a>文件还原或页面还原的优点  
  只还原和恢复个别文件或页面（而非整个数据库）的方法具有以下优点：  
   
 -   还原少量数据可以缩短复制和恢复数据的时间。  
@@ -91,14 +95,14 @@ caps.handback.revision: 46
 |时点还原|日志备份所涵盖的任何时间。|日志备份包含任何大容量日志更改时不允许。|不提供支持。|  
 |文件还原 **\***|完全支持。|不完全支持。**\*\***|仅对只读辅助文件可用。|  
 |页面还原 **\***|完全支持。|不完全支持。**\*\***|无。|  
-|段落（文件组级）还原**\***|完全支持。|不完全支持。**\*\***|仅对只读辅助文件可用。|  
+|段落（文件组级）还原 **\***|完全支持。|不完全支持。**\*\***|仅对只读辅助文件可用。|  
   
  **\*** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  **\*\*** 对于所需条件，请参阅本主题后面的 [简单恢复模式下的还原限制](#RMsimpleScenarios)。  
   
 > [!IMPORTANT]  
->  无论数据库的恢复模式如何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
+>  无论数据库的恢复模式如何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
   
 ##  <a name="RMsimpleScenarios"></a> 简单恢复模式下的还原方案  
  简单恢复模式对还原操作有下列限制：  
@@ -109,10 +113,10 @@ caps.handback.revision: 46
   
 -   不支持时点还原。  
   
- 如果这些限制中有任何不适合于恢复要求的内容，我们建议您考虑使用完整恢复模式。 有关详细信息，请参阅[备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
+ 如果这些限制中有任何不适合于恢复要求的内容，我们建议您考虑使用完整恢复模式。 有关详细信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
 > [!IMPORTANT]  
->  无论数据库的恢复模式如何，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
+>  无论数据库的恢复模式如何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份都无法从早于创建该备份的版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本还原。  
   
 ##  <a name="RMblogRestore"></a> 在大容量日志恢复模式下进行还原  
  本节讨论特定于大容量日志恢复模式的还原注意事项，大容量日志恢复模式专门用于补充完整恢复模式。  
@@ -122,10 +126,10 @@ caps.handback.revision: 46
   
  通常，大容量日志恢复模式与完整恢复模式相似，针对完整恢复模式的说明信息对两者都适用。 但是，大容量日志恢复模式对时点恢复和联机还原存在影响。  
   
-### 对时点恢复的限制  
+### <a name="restrictions-for-point-in-time-recovery"></a>对时点恢复的限制  
  如果在大容量恢复模式下执行的日志备份包含大容量日志更改，则不允许时点恢复。 试图对包含大容量更改的日志备份执行时点恢复将导致还原操作失败。  
   
-### 对联机还原的限制  
+### <a name="restrictions-for-online-restore"></a>对联机还原的限制  
  仅在满足下列条件时，联机还原顺序才有效：  
   
 -   在启动还原顺序之前必须执行所有必要的日志备份。  
@@ -144,9 +148,9 @@ caps.handback.revision: 46
 ##  <a name="DRA"></a> 数据库恢复顾问 (SQL Server Management Studio)  
  数据库恢复顾问简化了制定还原计划的过程，可以很轻松地实现最优的正确还原顺序。 很多已知数据库还原问题和客户所要求的增强功能已得到解决。 数据库恢复顾问引入的主要增强功能包括：  
   
--   **还原计划算法：**用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更高。  
+-   **还原计划算法：**  用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
   
--   **时间点还原：**数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **时间点还原：**  数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   
@@ -157,7 +161,7 @@ caps.handback.revision: 46
 ##  <a name="RelatedContent"></a> 相关内容  
  无。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

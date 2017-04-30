@@ -1,33 +1,37 @@
 ---
 title: "使用正则表达式搜索文本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "正则表达式 [SQL Server Management Studio]"
-  - "查询编辑器 [SQL Server Management Studio]，正则表达式搜索"
-  - "搜索 [SQL Server Management Studio]，正则表达式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用正则表达式搜索文本
+# <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
   
-#### 使用正则表达式进行查找  
+#### <a name="to-find-using-regular-expressions"></a>使用正则表达式进行查找  
   
 1.  若要在“快速查找”、“在文件中查找”、“快速替换”或“在文件中替换”操作过程中，在“查找内容”字段中启用正则表达式，请选中“查找选项”下的“使用”，然后选择“正则表达式”。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 25
   
 |表达式|语法|说明|  
 |----------------|------------|-----------------|  
-|任何单个字符|。|匹配除换行符外的所有单一字符。|  
+|任何单个字符|中提供的正则表达式进行了说明。|匹配除换行符外的所有单一字符。|  
 |零个或更多|*|匹配零或更多前导表达式的匹配项，执行所有可能的匹配。|  
 |一个或更多|+|匹配至少一个前导表达式的匹配项。|  
 |行首|^|仅匹配行首位置的字符串。|  
@@ -51,7 +55,7 @@ caps.handback.revision: 25
 |在集合中的任何一个字符|[]|匹配 [] 中的任何一个字符。 若要指定字符范围，请列出起始字符和结束字符，并用短划线 (-) 分隔，如 [a-z]。|  
 |不在集合中的任何一个字符|[^...]|匹配不在 ^ 之后的字符集中的任何一个字符。|  
 |或|&#124;|匹配“或”符号 (&#124;) 两旁的任一表达式。 常用于组中。 例如，(sponge&#124;mud) bath 可以匹配“sponge bath”和“mud bath”。|  
-|Escape|\|将反斜杠 (\\) 后的字符作为文字匹配。 此表达式允许您搜索正则表达式标记中使用的符号，如 { 和 ^。 例如，\\^ 可用于查找字符 ^。|  
+|Escape|\|将反斜杠 (\\) 后的字符作为文字匹配。 此表达式允许您搜索正则表达式标记中使用的符号，如 { 和 ^。 例如， \\^ 可用于查找字符 ^。|  
 |标记表达式|{}|匹配用括起来的表达式内的文本。|  
 |C/C++ 标识符|:i|匹配表达式 ([a-zA-Z_$][a-zA-Z0-9_$]*)。|  
 |用引号括起来的字符串|:q|匹配表达式 (("[^"]*")&#124;('[^']\*'))。|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Katakana|:Ka|匹配片假名字符。|  
 |象形/汉字/日文汉字|:Id|匹配象形字符，如汉字和日文汉字。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
  [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

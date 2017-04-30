@@ -1,25 +1,29 @@
 ---
 title: "使用 EVENTDATA 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA 函数"
-  - "DDL 触发器, EVENTDATA 函数"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 EVENTDATA 函数
+# <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
   使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 **xml** 值。 XML 架构包括下列信息：  
   
 -   事件时间。  
@@ -48,7 +52,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 通过对 EVENTDATA 生成的 **xml** 数据使用 XQuery 语句以及检索 \<CommandText>元素来实现此操作。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
+ DDL 触发器中的 `EVENTDATA()` 语句将捕获不允许使用的 `CREATE TABLE` 语句文本。 通过对 EVENTDATA 生成的 **xml** 数据使用 XQuery 语句以及检索 \<CommandText> 元素来实现此操作。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!CAUTION]  
 >  EVENTDATA 将捕获 CREATE_SCHEMA 事件的数据以及相应 CREATE SCHEMA 定义的 <schema_element>（如果存在）。 此外，EVENTDATA 将 <schema_element> 定义识别为单独的事件。 因此，针对 CREATE_SCHEMA 事件和由 CREATE_SCHEMA 定义的 <schema_element> 表示的事件创建的 DDL 触发器可能两次返回相同的事件数据，如 `TSQLCommand` 数据。 例如，针对 CREATE_SCHEMA 事件和 CREATE_TABLE 事件创建的 DDL 触发器，将运行下列批处理：  
@@ -59,7 +63,7 @@ AS
 >   
 >  如果应用程序检索 CREATE_TABLE 事件的 `TSQLCommand` 数据，则注意，此数据可能出现两次：一次是在 CREATE_SCHEMA 事件发生时，另一次是在 CREATE_TABLE 事件发生时。 应避免同时针对 CREATE_SCHEMA 事件和任何相应 CREATE SCHEMA 定义的 <schema_element> 文本创建 DDL 触发器，或者将逻辑置于应用程序中，这样，就不会将同一事件处理两次了。  
   
-## ALTER TABLE 和 ALTER DATABASE 事件  
+## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE 和 ALTER DATABASE 事件  
  ALTER_TABLE 和 ALTER_DATABASE 事件的事件数据还包括以下内容：受 DDL 语句影响的其他对象的名称和类型以及对这些对象执行的操作。 ALTER_TABLE 事件数据包括以下内容：受 ALTER TABLE 语句影响的列、约束或触发器的名称以及对受影响的对象执行的操作（创建、更改、删除、启用或禁用）。 ALTER_DATABASE 事件数据包括以下内容：受 ALTER DATABASE 语句影响的任何文件或文件组的名称以及对受影响的对象执行的操作（创建、更改或删除）。  
   
  例如，在 AdventureWorks 示例数据库中创建以下 DDL 触发器：  
@@ -83,7 +87,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
  DDL 触发器中的 EVENTDATA() 语句将捕获不允许使用的 `ALTER TABLE` 语句的文本。  
   
-## 示例  
+## <a name="example"></a>示例  
  您可以使用 EVENTDATA 函数来创建事件日志。 在下面的示例中，创建了一个表来存储事件信息。 然后，针对当任何数据库级 DDL 事件发生时，使用以下信息填充表的当前数据库创建 DDL 触发器：  
   
 -   事件时间（使用 GETDATE 函数）。  
@@ -128,7 +132,7 @@ GO
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击 **ddlDatabseTriggerLog** 并选择“编写数据库触发器脚本为”。 默认情况下，DDL 触发器 **ddlDatabseTriggerLog** 处于禁用状态。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   
  [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)  
   

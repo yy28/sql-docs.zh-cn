@@ -1,29 +1,33 @@
 ---
-title: "对内存中 OLTP 的 SQL Server Management Studio 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Management Studio 对内存中 OLTP 的支持 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对内存中 OLTP 的 SQL Server Management Studio 支持
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工具。 有关详细信息，请参阅 [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)  
+# <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工具。 有关详细信息，请参阅 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  
   
  本主题中的任务说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理内存优化的表、内存优化的表的索引、本机编译的存储过程以及用户定义的内存优化的表类型。  
   
- 有关如何以编程方式创建内存优化表的信息，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+ 有关如何以编程方式创建内存优化表的信息，请参阅 [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-### 使用内存优化的数据文件组创建数据库  
+### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>使用内存优化的数据文件组创建数据库  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例，然后展开该实例。  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
      有关如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建新数据库的更多信息，请参阅[创建数据库](../../relational-databases/databases/create-a-database.md)。  
   
-### 创建内存优化的表  
+### <a name="to-create-a-memory-optimized-table"></a>创建内存优化的表  
   
 1.  在“对象资源管理器”中，右键单击数据库的**Tables**“表”节点，单击“新建”，然后单击“内存优化的表”。  
   
@@ -43,11 +47,11 @@ caps.handback.revision: 31
   
 2.  若要替换模板参数，请单击 **“指定模板参数的值”** （在 **“查询”** 菜单上）。  
   
-     有关如何使用模板的更多信息，请参阅 [Template Explorer](../../ssms/template/template-explorer.md)。  
+     有关如何使用模板的更多信息，请参阅 [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  
   
 3.  在“对象资源管理器”中，表先按基于磁盘的表，然后按内存优化表的顺序排序。 使用 **“对象资源管理器详细信息”** 可以查看按名称排序的所有表。  
   
-### 创建本机编译的存储过程  
+### <a name="to-create-a-natively-compiled-stored-procedure"></a>创建本机编译的存储过程  
   
 1.  在“对象资源管理器”中，右键单击数据库的“存储过程”节点，单击“新建”，然后单击“本机编译的存储过程”。  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 31
   
      有关如何创建新存储过程的更多信息，请参阅 [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)。  
   
-### 创建用户定义的内存优化表类型  
+### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>创建用户定义的内存优化表类型  
   
 1.  在“对象资源管理器”中，展开数据库的“类型”节点，右键单击“用户定义的表类型”节点，单击“新建”，然后单击“用户定义的内存优化表类型”。  
   
@@ -67,15 +71,15 @@ caps.handback.revision: 31
   
      有关如何创建新存储过程的更多信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。  
   
-## 内存监视  
+## <a name="memory-monitoring"></a>内存监视  
   
-#### 查看内存优化对象的内存使用情况报表  
+#### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>查看内存优化对象的内存使用情况报表  
   
 -   在“对象资源管理器”中，右键单击数据库，然后依次单击“报表”、“标准报表”、“内存优化对象的内存使用情况”。  
   
      该报表提供数据库中的内存优化对象占用的内存空间详细数据。  
   
-#### 查看为表、数据库分配和使用的内存的属性  
+#### <a name="view-properties-for-allocated-and-used-memory-for-a-table-database"></a>查看为表、数据库分配和使用的内存的属性  
   
 1.  获取有关内存使用情况的信息：  
   
@@ -83,12 +87,12 @@ caps.handback.revision: 31
   
     -   在“对象资源管理器”中，右键单击数据库，单击“属性”，然后单击“常规”页。 “分配给内存优化对象的内存”属性的值指示分配给数据库中内存优化对象的内存。 “内存优化对象使用的内存”属性的值指示数据库中内存优化对象使用的内存。  
   
-## 中支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>中支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持具有内存优化的数据文件组、内存优化的表、索引和本机编译的存储过程的数据库上数据库引擎所支持的功能和操作。  
   
  对于数据库、表、存储过程、用户定义的表类型或索引对象，以下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已得到更新或扩展，以便支持内存中 OLTP。  
   
--   对象资源管理器  
+-   “对象资源管理器”  
   
     -   上下文菜单  
   
@@ -125,13 +129,13 @@ caps.handback.revision: 31
   
         -   生成脚本。  
   
-             在 **“生成和发布脚本向导”**中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果“检查对象是否存在”脚本编写选项的值在向导的“设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE \<过程名称> AS”和“ALTER PROCEDURE \<过程名称> \<过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
+             在 **“生成和发布脚本向导”**中， **“检查对象是否存在”** 脚本编写选项的默认值是 FALSE。 如果“检查对象是否存在”脚本编写选项的值在向导的“设置脚本编写选项”屏幕中设置为 TRUE，则生成的脚本将包含“CREATE PROCEDURE <过程名称> AS”和“ALTER PROCEDURE <过程名称> <过程定义>”。 在执行时，生成的脚本将返回错误，因为在本机编译的存储过程中不支持 ALTER PROCEDURE。  
   
              更改每个本机编译的存储过程的生成的脚本：  
   
-            1.  在“CREATE PROCEDURE \<过程名称> AS”中，使用“\<过程定义>”替换“AS”。  
+            1.  在“CREATE PROCEDURE <过程名称> AS”中，使用“<过程定义>”替换“AS”。  
   
-            2.  删除“ALTER PROCEDURE \<过程名称> \<过程定义>”。  
+            2.  删除“ALTER PROCEDURE <过程名称> <过程定义>”。  
   
         -   复制数据库。 对于具有内存优化的对象的数据库，将不在事务内执行在目标服务器上创建数据库以及传输数据。  
   
@@ -147,14 +151,14 @@ caps.handback.revision: 31
   
 -   “对象资源管理器详细信息”窗格  
   
--   模板资源管理器  
+-   Template Explorer  
   
-## 中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 对于内存中 OLTP 对象，数据库引擎不支持的功能和操作，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  
+## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ 对于内存中 OLTP 对象，数据库引擎不支持的功能和操作， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  
   
- 有关不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的详细信息，请参阅[内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 有关不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的详细信息，请参阅 [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 对内存中 OLTP 的支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

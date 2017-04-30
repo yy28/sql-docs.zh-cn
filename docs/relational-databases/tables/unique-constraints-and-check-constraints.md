@@ -1,25 +1,29 @@
 ---
 title: "唯一约束和 CHECK 约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "约束 [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], 约束"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 唯一约束和 CHECK 约束
+# <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  
@@ -51,8 +55,8 @@ caps.handback.revision: 20
 > [!CAUTION]  
 >  包括隐式或显式数据类型转换的约束可能会导致某些操作失败。 例如，为表定义的作为分区切换的源的此类约束可能会导致 ALTER TABLE...SWITCH 操作失败。 在约束定义中避免数据类型转换。  
   
-### CHECK 约束的限制  
- CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设对指定 **MyColumn** 只能包含值 10（即 **MyColumn=10**）的 **int** 列 **MyColumn** 应用一个约束。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
+### <a name="limitations-of-check-constraints"></a>CHECK 约束的限制  
+ CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设对指定 **MyColumn** 只能包含值 10（即 **MyColumn=10** ）的 **int** 列**MyColumn**应用一个约束。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
   
  如果 CHECK 约束检查的条件对于表中的任何行都不是 FALSE，它将返回 TRUE。 CHECK 约束在行级执行。 如果刚创建的表没有任何行，则此表的任何 CHECK 约束都视为有效。 这种情况可能会产生意外结果，如下面的示例所示。  
   

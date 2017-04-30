@@ -1,25 +1,29 @@
 ---
 title: "用户定义函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用户定义函数 [SQL Server], 组件"
-  - "user-defined functions [SQL Server], about user-defined functions"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], components
+- user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 用户定义函数
+# <a name="user-defined-functions"></a>用户定义函数
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
    
 ##  <a name="Benefits"></a> 用户定义函数  
@@ -50,10 +54,10 @@ caps.handback.revision: 23
  用户定义的表值函数返回 **table** 数据类型。 对于内联表值函数，没有函数主体；表是单个 SELECT 语句的结果集。 **[示例。](https://msdn.microsoft.com/library/bb386954(v=vs.110).aspx)**
   
 **系统函数**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多系统函数，可用于执行各种操作。 这些函数不能修改。 有关详细信息，请参阅[内置函数 (Transact-SQL)](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)、[系统存储函数 (Transact-SQL)](../Topic/System%20Stored%20Functions%20\(Transact-SQL\).md) 和[动态管理视图和函数 (Transact-SQL)](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多系统函数，可用于执行各种操作。 这些函数不能修改。 有关详细信息，请参阅[内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)、[系统存储函数 (Transact-SQL)](~/relational-databases/system-functions/system-functions-for-transact-sql.md) 和[动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
-##  <a name="Guidelines"></a> 指导原则  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 在函数中，将会区别处理导致语句被删除并继续执行模块（如触发器或存储过程）中的下一个语句的错误。 在函数中，上述错误会导致停止执行函数。 接下来该操作导致取消调用该函数的语句。  
+##  <a name="Guidelines"></a> 准则  
+ 在函数中，将会区别处理导致语句被取消并继续执行模块（如触发器或存储过程）中的下一个语句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。 在函数中，上述错误会导致停止执行函数。 接下来该操作导致取消调用该函数的语句。  
   
  BEGIN...END 块中的语句不能有任何副作用。 函数副作用是指对具有函数外作用域（例如数据库表的修改）的资源状态的任何永久性更改。 函数中的语句唯一能做的更改是对函数上的局部对象（如局部游标或局部变量）的更改。 不能在函数中执行的操作包括：对数据库表的修改，对不在函数上的局部游标进行操作，发送电子邮件，尝试修改目录，以及生成返回至用户的结果集。  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 23
   
 -   EXECUTE 语句，该语句调用扩展存储过程。  
   
-### 内置系统函数  
+### <a name="built-in-system-functions"></a>内置系统函数  
  下列具有不确定性的内置函数可以在 Transact-SQL 用户定义函数中使用。  
   
 |||  
@@ -125,11 +129,15 @@ caps.handback.revision: 23
 |**任务说明**|**主题**|  
 |介绍如何创建 Transact-SQL 用户定义函数。|[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |介绍如何创建 CLR 函数。|[创建 CLR 函数](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|介绍如何创建用户定义聚合函数。|[创建用户定义聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
-|介绍如何修改 Transact-SQL 用户定义函数。|[修改用户定义函数](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
-|介绍如何删除用户定义函数。|[删除用户定义函数](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
-|介绍如何执行用户定义函数。|[执行用户定义函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|介绍如何重命名用户定义函数。|[重命名用户定义函数](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
-|介绍如何查看用户定义函数的定义。|[查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
+|介绍如何创建用户定义聚合函数。|[创建用户定义的聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
+|介绍如何修改 Transact-SQL 用户定义函数。|[修改用户定义的函数](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
+|介绍如何删除用户定义函数。|[删除用户定义的函数](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
+|介绍如何执行用户定义函数。|[执行用户定义的函数](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
+|介绍如何重命名用户定义函数。|[重命名用户定义的函数](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|介绍如何查看用户定义函数的定义。|[查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
+
+
+

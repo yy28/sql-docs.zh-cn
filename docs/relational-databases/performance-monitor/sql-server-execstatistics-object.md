@@ -1,25 +1,29 @@
 ---
-title: "SQL Server ExecStatistics 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:ExecStatistics"
-  - "ExecStatistics 对象"
+title: "SQL Server - ExecStatistics 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:ExecStatistics
+- ExecStatistics object
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 709d44983ef7010b36de6238ce99b2d20397017a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server ExecStatistics 对象
+# <a name="sql-server-execstatistics-object"></a>SQL Server ExecStatistics 对象
   Microsoft SQL Server 中的 **SQLServer:ExecStatistics** 对象提供了用于监视各种执行的计数器。  
   
  下表介绍了 SQL Server **Exec Statistics** 计数器。  
@@ -40,7 +44,7 @@ caps.handback.revision: 14
 |**正在进行的执行数**|正在进行的所选执行类型的执行数。|  
 |**每秒启动的执行数**|每秒启动的所选执行类型的执行数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

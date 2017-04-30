@@ -1,29 +1,33 @@
 ---
 title: "查看资源调控器属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "资源调控器, 属性"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看资源调控器属性
+# <a name="view-resource-governor-properties"></a>查看资源调控器属性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
   
  ##  <a name="BeforeYouBegin"></a> 相关主题 
  除了查看资源调控器实体的属性外，还可以使用 **“资源调控器属性”** 页执行多个配置任务。 有关详细信息，请参阅以下主题：  
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 4.  若要保存任何更改，请单击 **“确定”**。  
   
-##  <a name="RGProp"></a> 资源调控器属性  
+##  <a name="RGProp"></a> Resource Governor properties  
  **分类器函数名称**  
  通过从列表中选择来指定分类器函数。  
   
@@ -115,18 +119,19 @@ caps.handback.revision: 28
   
  有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。  
   
-## 使用 Transact-SQL 查看资源调控器属性  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>使用 Transact-SQL 查看资源调控器属性  
  **使用 Transact-SQL 查看资源调控器属性**  
   
 1.  若要查看资源调控器实体的定义，请使用[资源调控器目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。  
   
 2.  若要查看资源调控器实体的当前配置，请使用[与资源调控器相关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。  
   
-## 详细信息
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="more-information"></a>详细信息
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [资源调控器分类器函数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

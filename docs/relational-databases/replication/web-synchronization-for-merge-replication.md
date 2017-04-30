@@ -1,29 +1,33 @@
 ---
 title: "合并复制的 Web 同步 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "合并复制同步 [SQL Server 复制]"
-  - "Internet [SQL Server 复制], 同步"
-  - "同步 [SQL Server 复制], Web 同步"
-  - "Web 发布 [SQL Server 复制], 同步"
-  - "Web 同步, 关于"
-  - "Web 同步"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication synchronization [SQL Server replication]
+- Internet [SQL Server replication], synchronization
+- synchronization [SQL Server replication], Web Synchronization
+- Web publishing [SQL Server replication], synchronization
+- Web synchronization, about
+- Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cc2d5200c154a9857f2e634dcf91aef57c278c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 合并复制的 Web 同步
+# <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
   对过进行合并复制的 Web 同步，可以使用 HTTPS 协议复制数据，这对于以下情况非常有用：  
   
 -   通过 Internet 同步移动用户数据。  
@@ -34,12 +38,12 @@ caps.handback.revision: 45
   
  因此， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 的 IT 部门为每台便携式计算机配置了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并启用了合并复制以便使用 Web 同步。 每台便携式计算机上的合并代理都有一个 Internet URL，它指向运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 的计算机上所安装的复制组件。 这些组件用于使订阅服务器与发布服务器同步。 现在，每个代表能够通过任何可用的 Internet 连接进行连接而无须使用远程拨号，能够上载和下载合适的数据。 Internet 连接使用安全套接字层 (SSL)，所以不需要虚拟专用网络 (VPN)。  
   
- 有关如何配置 Web 同步所必需的组件的信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md), ，[为 Web 同步配置 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md), ，和 [为 Web 同步配置 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
+ 有关如何配置 Web 同步所需的组件的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)、[配置 IIS 以实现 Web 同步](../../relational-databases/replication/configure-iis-for-web-synchronization.md)和[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)。  
   
 > [!NOTE]  
 >  Web 同步的设计目的是为了与便携式计算机、手持设备以及其他客户端同步数据， Web 同步并不适于大容量服务器对服务器应用程序。  
   
-## Web 同步的工作机制概述  
+## <a name="overview-of-how-web-synchronization-works"></a>Web 同步的工作机制概述  
  使用 Web 同步时，借助 HTTPS 协议，将订阅服务器上的更新按 XML 消息打包并发送给运行 IIS 服务器的计算机。 然后，运行 IIS 的计算机将命令以二进制格式发送给发布服务器（通常使用 TCP/IP）。 发布服务器上的更新将被发送给运行 IIS 的计算机，然后按 XML 消息打包，以便传递给订阅服务器。  
   
  下图显示了合并复制的 Web 同步中涉及的一些组件。  
@@ -50,9 +54,9 @@ caps.handback.revision: 45
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (Replisapi.dll) 在运行 IIS 的计算机上配置，负责处理从发布服务器和订阅服务器发送给服务器的消息。 拓扑中的每个节点都使用合并复制协调器 (Replrec.dll) 处理 XML 数据流。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
+ 对于所有参与 Web 同步的计算机，均需要[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本。  
   
-### 同步过程  
+### <a name="synchronization-process"></a>同步过程  
  同步过程包括以下步骤：  
   
 1.  合并代理在订阅服务器上启动。 该代理将执行下列操作：  
@@ -79,8 +83,8 @@ caps.handback.revision: 45
   
 3.  然后，订阅服务器上的合并代理将接受 HTTPS 响应，并将下载更改应用于订阅数据库。  
   
-## 另请参阅  
- [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)   
- [Web 同步的拓扑](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+## <a name="see-also"></a>另请参阅  
+ [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

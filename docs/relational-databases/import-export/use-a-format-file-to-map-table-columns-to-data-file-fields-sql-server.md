@@ -1,26 +1,30 @@
 ---
 title: "使用格式化文件将表列映射到数据文件字段 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "在导入过程中将列映射到字段 [SQL Server]"
-  - "格式文件 [SQL Server], 将列映射到字段"
+ms.custom: 
+ms.date: 09/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mapping columns to fields during import [SQL Server]
+- format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用格式化文件将表列映射到数据文件字段 (SQL Server)
-数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  有关其他信息，请查看[创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。
+# <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
+数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 
 |轮廓|
 |---|
@@ -33,7 +37,7 @@ caps.handback.revision: 40
 本主题中修改的格式化文件示例基于下面定义的表和数据文件。
 
 ### 示例表<a name="sample_table"></a>
-下面的脚本创建一个测试数据库和一个名为 `myRemap` 的表。  在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
+下面的脚本创建一个测试数据库和一个名为 `myRemap`的表。  在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -49,7 +53,7 @@ CREATE TABLE myRemap
 ```
 
 ### 示例数据文件<a name="sample_data_file"></a>
-下面的数据按照与表 `myRemap` 中的呈现顺序相反的顺序来呈现 `FirstName` 和 `LastName`。  使用记事本创建一个空文件 `D:\BCP\myRemap.bcp` 并插入以下数据：
+下面的数据按照与表 `FirstName` 中的呈现顺序相反的顺序来呈现 `LastName` 和 `myRemap`。  使用记事本创建一个空文件 `D:\BCP\myRemap.bcp` 并插入以下数据：
 ```
 1,Grosse,Anthony,M
 2,Fatnowna,Alica,F
@@ -66,13 +70,13 @@ CREATE TABLE myRemap
 用于创建格式化文件的最简单方法是使用 [bcp 实用工具](../../tools/bcp-utility.md)。  首先，从现有表创建基本格式化文件。  其次，修改基本格式化文件以反映实际数据文件。
 
 ### 创建非 XML 格式化文件<a name="nonxml_format_file"></a>
-有关详细信息，请查看[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。 下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md)基于 `myRemap` 的架构生成非 xml 格式化文件 `myRemap.fmt`。  此外，限定符 `c` 用于指定字符数据，`t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
+有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。 下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myRemap.fmt`的架构生成非 xml 格式化文件 `myRemap`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### 修改非 XML 格式化文件 <a name="modify_nonxml_format_file"></a>
-有关术语，请参阅[非 XML 格式化文件的结构](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure)。  在记事本中打开 `D:\BCP\myRemap.fmt` 并执行以下修改：
-1) 重新排列格式化文件行的顺序，以便这些行的顺序与 `myRemap.bcp` 中的数据相同。
+有关术语，请参阅 [非 XML 格式化文件的结构](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 。  在记事本中打开 `D:\BCP\myRemap.fmt` 并执行以下修改：
+1) 重新排列格式化文件行的顺序，以便这些行的顺序与 `myRemap.bcp`中的数据相同。
 2) 确保主机文件字段顺序值是顺序的。
 3) 确保最后一个格式化文件行后面有一个回车符。
 
@@ -81,20 +85,20 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **After**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 修改的格式化文件现在可反映：
@@ -104,12 +108,12 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 * `myRemap.bcp` 中的第四个数据字段映射到第四列， ` myRemap.. Gender`
 
 ### 创建 XML 格式化文件 <a name="xml_format_file"></a>  
-有关详细信息，请查看 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md)基于 `myRemap` 的架构创建 xml 格式化文件 `myRemap.xml`。  此外，限定符 `c` 用于指定字符数据，`t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  `x` 限定符必须用于生成基于 XML 的格式化文件。  在命令提示符处输入以下命令：
+有关详细信息，请查看 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myRemap.xml`的架构创建 xml 格式化文件 `myRemap`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  `x` 限定符必须用于生成基于 XML 的格式化文件。  在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### 修改 XML 格式化文件 <a name="modify_xml_format_file"></a>
-有关术语，请参阅 [XML 格式化文件的架构语法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs)。  在记事本中打开 `D:\BCP\myRemap.xml` 并执行以下修改：
+有关术语，请参阅 [XML 格式化文件的架构语法](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 。  在记事本中打开 `D:\BCP\myRemap.xml` 并执行以下修改：
 1) 在格式化文件中声明 \<FIELD> 元素的顺序是这些字段在数据文件中的显示顺序，因此颠倒具有 ID 属性 2 和 3 的 \<FIELD> 元素的顺序。
 2) 确保 \<FIELD> ID 属性值是顺序的。
 3) \<ROW> 元素中 \<COLUMN> 元素的顺序定义了其在批量操作中返回的顺序。  XML 格式化文件为每个 \<COLUMN> 元素分配了一个本地名称，该名称与批量导入操作的目标表中的列没有关系。  \<COLUMN> 元素的顺序与 \<RECORD> 定义中的 \<FIELD> 元素的顺序无关。  每个 \<COLUMN> 元素对应一个 \<FIELD> 元素（其 ID 在 \<COLUMN> 元素的 SOURCE 属性中指定）。  因此，\<COLUMN> SOURCE 的值是需要修订的唯一属性。  颠倒 \<COLUMN> SOURCE 属性 2 和 3 的顺序。
@@ -117,37 +121,37 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 比较更改  
 **早于**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **After**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
@@ -161,7 +165,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ## 使用格式化文件导入数据以将表列映射到数据文件字段<a name="import_data"></a>
 以下示例中使用上面创建的数据库、数据文件和格式化文件。
 
-### 使用 [bcp](../../tools/bcp-utility.md) 和[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
+### 使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.fmt -T
@@ -173,7 +177,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.fmt -T
 bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 ```
 
-### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
+### 使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;  
@@ -205,7 +209,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和[非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 
+### 使用 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 在 Microsoft SQL Server Management Studio (SSMS) 中执行以下 Transact-SQL：
 ```tsql
 USE TestDatabase;
@@ -245,9 +249,10 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## 另请参阅  
-[bcp 实用工具](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+[bcp Utility](../../tools/bcp-utility.md)   
  [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   
+

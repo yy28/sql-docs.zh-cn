@@ -1,25 +1,29 @@
 ---
 title: "通配符组成部分和内容验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "通配符组成部分 [XML]"
-  - "内容验证 [XML]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通配符组成部分和内容验证
+# <a name="wildcard-components-and-content-validation"></a>通配符组成部分和内容验证
   通配符组成部分用于更加灵活地在内容模型中显示内容。 在 XSD 语言中按照以下方式支持这些组成部分：  
   
 -   元素通配符组成部分。 这些组成部分通过 **\<xsd:any>** 元素表示。  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   **lax** 值指定仅对具有可用架构定义的元素和属性进行验证。  
   
-## 宽松验证与 xs:anyType 元素  
+## <a name="lax-validation-and-xsanytype-elements"></a>宽松验证与 xs:anyType 元素  
  XML 架构规范对 **anyType** 类型的元素进行 **宽松** 验证。 因为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 不支持宽松验证，所以对 **anyType**类型的元素进行严格验证。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，支持宽松验证。 **anyType** 类型的元素的内容将使用宽松验证方式进行验证。  
   
  下面的示例说明了宽松验证。 架构元素 `e` 属于 **anyType** 类型。 此示例创建了类型化的 **xml** 变量并说明了 **anyType** 类型的元素的宽松验证。  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

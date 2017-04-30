@@ -1,27 +1,31 @@
 ---
 title: "Transact-SQL 调试器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, 简介"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 调试器
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器通过调查代码的运行时行为可以帮助您查找 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的错误。 将[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口设置为调试模式后，可在特定的代码行上暂停执行，并检查那些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用和返回的信息和数据。  
+# <a name="transact-sql-debugger"></a>Transact-SQL 调试器
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器通过调查代码的运行时行为可以帮助您查找 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的错误。 将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口设置为调试模式后，可在特定的代码行上暂停执行，并检查那些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句使用和返回的信息和数据。  
   
-## 单步执行 Transact-SQL 代码  
+## <a name="stepping-through-transact-sql-code"></a>单步执行 Transact-SQL 代码  
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口处于调试模式时，可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器提供的以下选项逐个导航 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 代码：  
   
 -   在各个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句上设置断点。  
@@ -38,12 +42,12 @@ caps.handback.revision: 16
   
      如果要调试一个存储过程或函数，则可单步执行模块。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 会打开一个由模块源代码填充的新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，将该窗口置于调试模式，并暂停对模块中第一个语句的执行。 然后，您就可以在模块代码中导航，例如通过设置断点或逐句通过代码。  
   
- 有关如何通过调试器浏览代码的详细信息，请参阅[ Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+ 有关如何通过调试器浏览代码的详细信息，请参阅 [Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
   
-## 查看调试器信息  
+## <a name="viewing-debugger-information"></a>查看调试器信息  
  每当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以都使用以下调试器窗口来查看当前执行状态：  
   
--   **局部变量**和**监视**。 这些窗口显示当前分配的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持查看引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数或名称以 @@ 开头的内置函数的表达式。 这些窗口还显示当前分配给表达式的数据值。  
+-   **Locals** and **Watch.** 这些窗口显示当前分配的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持查看引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数或名称以 @@ 开头的内置函数的表达式。 这些窗口还显示当前分配给表达式的数据值。  
   
 -   **快速监视。** 此窗口显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式的值，还可将该表达式保存到 **监视** 窗口。  
   
@@ -53,18 +57,18 @@ caps.handback.revision: 16
   
 -   **输出。** 此窗口显示各种消息和程序数据，如来自调试器的系统消息。  
   
--   **结果**和**消息**。 “查询编辑器”窗口上的这些选项卡显示以前执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果。  
+-   **Results** and **Messages.** “查询编辑器”窗口上的这些选项卡显示以前执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果。  
   
-## Transact-SQL 调试器任务  
+## <a name="transact-sql-debugger-tasks"></a>Transact-SQL 调试器任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |介绍如何配置 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器以用于远程调试。|[运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |介绍如何启动、停止和控制调试器的操作。|[运行 Transact-SQL 调试器](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句通过代码。|[逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
+|介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句通过代码。|[Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |介绍如何使用调试器查看 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据，例如参数、变量和系统信息。|[Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

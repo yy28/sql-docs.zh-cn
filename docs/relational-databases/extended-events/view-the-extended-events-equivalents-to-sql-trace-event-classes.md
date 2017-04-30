@@ -1,34 +1,38 @@
 ---
 title: "查看与 SQL 跟踪事件类等效的扩展事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 跟踪, 扩展事件等效项"
-  - "扩展事件 [SQL Server], SQL 跟踪等效项"
-  - "扩展事件 [SQL Server], 用户可配置事件"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看与 SQL 跟踪事件类等效的扩展事件
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   如果您想要使用扩展事件来收集与 SQL 跟踪事件类和列等效的事件数据，则理解 SQL 跟踪事件映射到扩展事件的事件和操作的方式将很有用。  
   
  您可以使用以下过程查看与各 SQL 跟踪事件及其关联列等效的扩展事件的事件和操作。  
   
-## 使用查询编辑器查看与 SQL 跟踪事件等效的扩展事件  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>使用查询编辑器查看与 SQL 跟踪事件等效的扩展事件  
   
 -   从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查询编辑器中，运行以下查询：  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   对于用户可配置 SQL 跟踪事件类（UserConfigurable:1 到 UserConfigurable:9），扩展事件使用单个事件来代替它们。 该事件名为 user_event。 该事件通过使用 sp_trace_generateevent 引发，与 SQL 跟踪所使用的相同的存储过程。 无论哪一事件 ID 传递到该存储过程，都会返回 user_event 事件。 但是，event_id 字段作为事件数据的一部分返回。 这使您可以生成基于事件 ID 的谓词。 例如，如果你在代码中使用 UserConfigurable:0（事件 ID = 82），则可以将 user_event 事件添加到会话，并且指定谓词“event_id = 82”。 因此，你不必更改代码，因为 sp_trace_generateevent 存储过程生成扩展事件 user_event 事件以及等效的 SQL 跟踪事件类。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

@@ -1,34 +1,38 @@
 ---
 title: "对复制代理事件使用警报 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查看警报"
-  - "队列读取器代理, 警报"
-  - "警报 [SQL Server 复制]"
-  - "预定义的复制警报 [SQL Server 复制]"
-  - "日志读取器代理, 警报"
-  - "分发代理, 警报"
-  - "合并代理, 警报"
-  - "代理 [SQL Server 复制], 警报"
-  - "显示警报"
-  - "快照代理, 警报"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing alerts
+- Queue Reader Agent, alerts
+- alerts [SQL Server replication]
+- predefined replication alerts [SQL Server replication]
+- Log Reader Agent, alerts
+- Distribution Agent, alerts
+- Merge Agent, alerts
+- agents [SQL Server replication], alerts
+- displaying alerts
+- Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对复制代理事件使用警报
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括的可配置为执行某项任务和/或通知操作员的复制代理的一组预定义的警报。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
+# <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
   
  将计算机配置为分发服务器时，会安装下列警报：  
   
@@ -44,24 +48,24 @@ caps.handback.revision: 39
 |20578|**复制：代理自定义关闭**|||  
 |22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
   
- 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅 [创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
+ 除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
  **配置预定义的复制警报**  
   
--   [!包括 [ssManStudioFull] (.../ Token/ssManStudioFull_md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
-## 直接查看应用程序日志  
+## <a name="viewing-the-application-log-directly"></a>直接查看应用程序日志  
  若要查看 Windows 应用程序日志，请使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件查看器。 应用程序日志包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息以及计算机上其他许多活动的消息。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误日志不同，新的应用程序日志不是在每次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时创建（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会话都会在现有应用程序日志中写入新事件）；但是，您可以指定已记录事件的保留时间。 查看 Windows 应用程序日志时，可以筛选特定事件的日志。 有关详细信息，请参阅 Windows 文档。  
   
-## 自动生成警报响应  
- 复制为未通过数据验证的订阅提供了响应作业，同时还提供了用于创建其他自动警报响应的框架。 响应作业的标题为 **“数据验证失败时重新初始化订阅”** ，它存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 **代理的** “作业” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]文件夹中。 有关启用此响应作业的信息，请参阅 [配置预定义复制警报 （&) #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。 如果事务发布中的项目未通过验证，响应作业将只重新初始化那些未通过验证的项目。 如果合并发布中的项目未通过验证，响应作业将重新初始化发布中的所有项目。  
+## <a name="automating-a-response-to-an-alert"></a>自动生成警报响应  
+ 复制为未通过数据验证的订阅提供了响应作业，同时还提供了用于创建其他自动警报响应的框架。 响应作业的标题为 **“数据验证失败时重新初始化订阅”** ，它存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 **代理的** “作业” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]文件夹中。 有关启用此响应作业的信息，请参阅[配置预定义的复制警报 (SQL Server Management Studio)](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)。 如果事务发布中的项目未通过验证，响应作业将只重新初始化那些未通过验证的项目。 如果合并发布中的项目未通过验证，响应作业将重新初始化发布中的所有项目。  
   
-### 用于自动生成响应的框架  
+### <a name="framework-for-automating-responses"></a>用于自动生成响应的框架  
  通常，当发生警报时，能够帮助您理解引起警报的原因以及应采取的适当措施的唯一信息就包含在警报消息中。 分析此信息的过程是一个易出错且费时的过程。 复制在 **sysreplicationalerts** 系统表中提供了有关警报的其他信息，从而使自动生成响应变得更容易，因为系统表中提供的信息已按自定义程序易于使用的格式进行了分析。  
   
  例如，如果订阅服务器 A 上的 **Sales.SalesOrderHeader** 表中的数据未通过验证， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以激发消息 20574，通知您未通过验证。 您收到的消息是：“订阅服务器‘A’上对发布‘MyPublication’中项目‘SalesOrderHeader’的订阅未通过数据验证”。  
   
- 如果基于该消息创建响应，必须手动分析该消息中的订阅服务器名称、项目名称、发布名称和错误。 但是，因为分发代理和合并代理程序编写该相同的信息写入 **sysreplicationalerts** （连同代理类型、 警报、 发布数据库、 订阅服务器数据库的时间和发布类型等的详细信息） 响应作业可以直接查询表中的相关信息。 虽然无法将确切的行与警报的特定实例相关联，但是该表中有一个 **status** 列，可用于跟踪所服务的条目。 此表中的条目会一直保留到历史记录保持期结束。  
+ 如果基于该消息创建响应，必须手动分析该消息中的订阅服务器名称、项目名称、发布名称和错误。 但是，因为分发代理和合并代理将相同的信息写入了 **sysreplicationalerts** （同时写入的还有代理类型、警报时间、发布数据库、订阅服务器数据库和发布类型等详细信息），所以响应作业可以直接从该表中查询相关的信息。 虽然无法将确切的行与警报的特定实例相关联，但是该表中有一个 **status** 列，可用于跟踪所服务的条目。 此表中的条目会一直保留到历史记录保持期结束。  
   
  例如，如果要在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中创建一个为警报消息 20574 服务的响应作业，则可以使用下列逻辑：  
   
@@ -85,9 +89,9 @@ close hc
 deallocate hc  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [复制管理最佳实践](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [监视和 #40;复制和 #41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [监视（复制）](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

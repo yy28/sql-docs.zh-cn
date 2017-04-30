@@ -1,30 +1,34 @@
 ---
 title: "在应用程序代码中使用 FOR XML 结果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 子句, 应用程序代码用法"
-  - "XML [SQL Server], FOR XML 子句"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], FOR XML 数据"
-  - "ADO [SQL Server]"
-  - "XML 数据岛 [SQL Server]"
-  - "数据岛 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在应用程序代码中使用 FOR XML 结果
+# <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
   
 -   查询 SQL 表中 [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md) 值的实例  
@@ -33,7 +37,7 @@ caps.handback.revision: 23
   
  本主题介绍了说明这些方法的示例。  
   
-## 用 ADO 和 XML 数据岛检索 FOR XML 数据  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>用 ADO 和 XML 数据岛检索 FOR XML 数据  
  使用 FOR XML 查询时，支持 COM **IStream** 接口的 ADO **Stream** 对象或其他对象 [例如，Active Server Page (ASP) **Request** 和 **Response** 对象] 可用于包含结果。  
   
  例如，以下 ASP 代码显示在 AdventureWorks 示例数据库的 Sales.Store 表中查询 **xml** 数据类型列 Demographics 的结果。 确切地说，该查询在 CustomerID 等于 3 的行中查找此列的实例值。  
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  此示例 ASP 页包含使用 ADO 执行 FOR XML 查询并在 XML 数据岛 (MyDataIsle) 中返回 XML 结果的服务器端 VBScript。 然后，在浏览器中返回此 XML 数据岛以进行其他客户端处理。 其他客户端 VBScript 代码用于处理 XML 数据岛的内容。 先将这些内容显示为产生的 DHTML 的一部分并打开消息框来显示 XML 数据岛的预处理内容，再执行此过程。  
   
-#### 测试此示例  
+#### <a name="to-test-this-example"></a>测试此示例  
   
 1.  验证是否安装了 IIS 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 AdventureWorks 示例数据库。  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  您所看到的生成的 HTML 页结果与以下示例输出类似：  
   
-##### 服务器端处理  
+##### <a name="server-side-processing"></a>服务器端处理  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI；  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  将 XML 推送到客户端进行处理  
   
-##### XML 文档 MyDataIsle 的客户端处理  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文档 MyDataIsle 的客户端处理  
   
 -   **AnnualSales：** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## 用 ASP.NET 和 .NET Framework 检索 FOR XML 数据  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>用 ASP.NET 和 .NET Framework 检索 FOR XML 数据  
  与上一个示例一样，以下 ASP.NET 代码显示在 AdventureWorks 示例数据库的 Sales.Store 表中查询 **xml** 数据类型列 Demographics 的结果。 同样与上一个示例相似，该查询在 CustomerID 等于 3 的行中查找此列的实例值。  
   
  在此示例中，以下 Microsoft .NET Framework 托管 API 用于完成返回并呈现 FOR XML 查询结果：  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### 测试此示例  
+#### <a name="to-test-this-example"></a>测试此示例  
   
 1.  验证是否安装了 IIS 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 AdventureWorks 示例数据库。  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  您所看到的生成的 HTML 页结果与以下示例输出类似：  
   
-##### 服务器端处理  
+##### <a name="server-side-processing"></a>服务器端处理  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -289,9 +293,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 数据类型支持，你可以通过指定 [TYPE 指令](../../relational-databases/xml/type-directive-in-for-xml-queries.md)要求将 FOR XML 查询的结果作为 **xml** 数据类型返回，而不是作为字符串或图像类型化数据返回。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与[在应用程序中使用 XML 数据](../../relational-databases/xml/use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
+>  利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 数据类型支持，你可以通过指定 **TYPE 指令** 要求将 FOR XML 查询的结果作为 [xml](../../relational-databases/xml/type-directive-in-for-xml-queries.md)数据类型返回，而不是作为字符串或图像类型化数据返回。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与 [在应用程序中使用 XML 数据](../../relational-databases/xml/use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

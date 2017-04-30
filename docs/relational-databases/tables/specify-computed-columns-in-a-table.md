@@ -1,24 +1,28 @@
 ---
 title: "指定表中的计算列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "计算列, 定义"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定表中的计算列
+# <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为计算列指定表达式。  
@@ -56,7 +60,7 @@ caps.handback.revision: 19
   
 1.  在 **“对象资源管理器”**中，展开要添加新计算列的表。 右键单击“列”，再选择“新建列”。  
   
-2.  输入列名并接受默认数据类型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 **money** 的列和一个类型为 **int**的列，则计算列的类型将为 **money** ，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+2.  输入列名并接受默认数据类型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 **money** 的列和一个类型为 **int**的列，则计算列的类型将为 **money** ，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 3.  在 **“列属性”** 选项卡中，展开 **“计算所得的列规范”** 属性。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 19
   
 6.  在“文件”菜单上，单击“保存”以保存表名。  
   
-#### 将计算列定义添加到现有列中  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中  
   
 1.  在“对象资源管理器”中，右键单击该表以及你要对其更改和展开“列”文件夹的列。  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 创建表时添加计算列  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>创建表时添加计算列  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### 将新计算列定义添加到现有表中  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>将新计算列定义添加到现有表中  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### 将现有列更改为计算列  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>将现有列更改为计算列  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

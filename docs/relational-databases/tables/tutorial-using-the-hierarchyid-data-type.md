@@ -1,30 +1,34 @@
 ---
 title: "教程：使用 hierarchyid 数据类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "教程 [hierarchyid]"
-  - "hierarchyid [数据库引擎], 教程"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tutorials [hierarchyid]
+- hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 75d192eeaec8e8c84551f5d4b40e8c8a32bf420f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 教程：使用 hierarchyid 数据类型
-本教程面向有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用经验但对 **hierarchyid** 数据类型还很陌生的用户。  
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>教程：使用 hierarchyid 数据类型
+本教程面向有 [!INCLUDE[tsql](../../includes/tsql-md.md)]使用经验但对 **hierarchyid** 数据类型还很陌生的用户。  
   
-## 学习内容  
+## <a name="what-you-will-learn"></a>学习内容  
 本教程分为两课：  
   
 [第 1 课：将表转换为层次结构](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
@@ -33,7 +37,7 @@ caps.handback.revision: 14
 [第 2 课：创建和管理层次结构表中的数据](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 本课程通过使用 **hierarchyid** 数据类型创建表来表示层次结构。 然后，您通过使用分层方法处理表中的数据。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 您的系统必须安装以下软件：  
   
 -   任何版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
@@ -42,12 +46,13 @@ caps.handback.revision: 14
   
 -   Internet Explorer 6 或更高版本。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[hierarchyid 数据类型方法引用](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
+[hierarchyid 数据类型方法引用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid (Transact-SQL)](../Topic/hierarchyid%20(Transact-SQL).md)  
+[hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
   
+

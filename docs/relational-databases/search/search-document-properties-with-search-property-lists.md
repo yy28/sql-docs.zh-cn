@@ -1,37 +1,41 @@
 ---
 title: "使用搜索属性列表搜索文档属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全文搜索 [SQL Server], 搜索属性列表"
-  - "全文搜索 [SQL Server], 属性"
-  - "搜索属性列表 [SQL Server]"
-  - "属性搜索 [SQL Server], 关于"
-  - "全文索引 [SQL Server], 搜索属性列表"
-  - "搜索属性列表 [SQL Server], 关于"
-  - "属性搜索 [SQL Server]"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- full-text search [SQL Server], properties
+- search property lists [SQL Server]
+- property searching [SQL Server], about
+- full-text indexes [SQL Server], search property lists
+- search property lists [SQL Server], about
+- property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用搜索属性列表搜索文档属性
+# <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 二进制数据列中支持的文档类型，你可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
   
  关联的[筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) 确定能否针对指定的文档类型进行属性搜索。 对于某些文档类型，关联的 IFilter 提取为该类型文档定义的某些或所有属性，以及文档正文的内容。 您可以对全文索引进行配置，以便仅对全文索引期间 IFilter 提取的属性支持属性搜索。 在提取若干文档属性的 IFilter 中，包括用于提取 Microsoft Office 文档类型（如 .docx、.xlsx 和.pptx）的 IFilter。 另一方面，XML IFilter 不发出属性。  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> 全文搜索如何与搜索属性一起使用  
   
-### 内部属性 ID  
+### <a name="internal-property-ids"></a>内部属性 ID  
  全文引擎任意向每个注册的属性分配一个内部属性 ID，这个 ID 在该特定搜索列表中唯一标识属性并且特定于该搜索属性列表。 因此，如果某个属性添加到多个搜索属性列表中，则其内部属性 ID 很可能在不同列表之间是不同的。  
   
  在向某个搜索列表注册某一属性时，全文引擎向该属性任意分配一个内部属性 ID。 该内部属性 ID 是在该搜索属性列表中唯一标识该属性的整数。  
@@ -42,7 +46,7 @@ caps.handback.revision: 49
   
  内部属性 ID 很可能不同于该属性的属性整数标识符。 如果为多个搜索属性列表注册给定属性，则可能会为每个搜索属性列表指定不同的内部属性 ID。 例如，内部属性 ID 在一个搜索属性列表中可以是 4，在另一个列表中可以是 1，在其他列表中可以是 3，依此类推。 相反，属性整数标识符是属性所有固有的，并且无论在哪里使用该属性其属性标识符都保持相同。  
   
-### 已注册属性的索引  
+### <a name="indexing-of-registered-properties"></a>已注册属性的索引  
  在某个全文索引与搜索属性列表相关联后，必须重新填充该索引以便对特定于属性的搜索词建立索引。 在全文索引期间，所有属性的内容都与其他内容一起存储于全文索引中。 但是，在对在某个已注册属性中找到的搜索词建立索引时，全文索引器还将相应的内部属性 ID 与该搜索词一起存储。 相反，如果未注册某个属性，则该属性将存储于全文索引中，就像它是文档正文的一部分，并且对于内部属性 ID，该属性的值为零。  
   
  下图显示一个逻辑视图，说明搜索词如何出现在与上图中所示的搜索属性列表相关联的全文索引中。 示例文档 Document 1 包含三个属性（Title、Author 和 Keywords）以及文档正文。 对于在搜索属性列表中指定的属性 Title 和 Keywords，搜索词与其在全文索引中的相应内部属性 ID 相关联。 相反，将对 Author 属性的内容建立索引，就像它是文档正文的一部分。 这意味着，注册某一属性将在一定程度上增加全文索引的大小，具体取决于属性中存储的内容量。  
@@ -65,7 +69,7 @@ caps.handback.revision: 49
   
  使用 [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md) 语句并至少提供该列表中的一个名称。  
   
-##### 在 Management Studio 中创建搜索属性列表  
+##### <a name="to-create-a-search-property-list-in-management-studio"></a>在 Management Studio 中创建搜索属性列表  
   
 1.  在对象资源管理器中，展开服务器。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 49
   
     -   **从现有搜索属性列表创建**  
   
-     有关详细信息，请参阅 [New Search Property List](../Topic/New%20Search%20Property%20List.md)。  
+     有关详细信息，请参阅 [New Search Property List](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -161,7 +165,7 @@ SELECT column_name FROM table_name
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
   
- 例如，下面的查询在 `Title` 数据库的 `Document` 表的 `Production.Document` 列中搜索索引属性 `AdventureWorks`。 该查询仅返回其 `Title` 属性包含字符串 `Maintenance` 或 `Repair`  
+ 例如，下面的查询在 `Title`数据库的 `Document` 表的 `Production.Document` 列中搜索索引属性 `AdventureWorks` 。 该查询仅返回其 `Title` 属性包含字符串 `Maintenance` 或 `Repair`  
   
 ```  
 USE AdventureWorks  
@@ -180,7 +184,7 @@ GO
   
  使用 [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句添加或删除搜索属性。  
   
-##### 查看和更改 Management Studio 中的搜索属性列表  
+##### <a name="to-view-and-change-a-search-property-list-in-management-studio"></a>查看和更改 Management Studio 中的搜索属性列表  
   
 1.  在对象资源管理器中，展开服务器。  
   
@@ -198,7 +202,7 @@ GO
   
     2.  若要添加某个文档属性，请在该列表底部的空行中单击，然后在 **\***右侧为这个新属性输入值。  
   
-         有关这些值的信息，请参阅 [搜索属性列表编辑器](../Topic/Search%20Property%20List%20Editor.md)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
+         有关这些值的信息，请参阅 [搜索属性列表编辑器](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +213,7 @@ GO
   
  使用 [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md)语句。  
   
-##### 删除 Management Studio 中的搜索属性列表  
+##### <a name="to-delete-a-search-property-list-in-management-studio"></a>删除 Management Studio 中的搜索属性列表  
   
 1.  在对象资源管理器中，展开服务器。  
   
@@ -221,8 +225,8 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
- [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+## <a name="see-also"></a>另请参阅  
+ [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

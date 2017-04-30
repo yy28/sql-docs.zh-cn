@@ -1,43 +1,47 @@
 ---
 title: "查看或更改数据库的恢复模式 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库备份 [SQL Server], 恢复模式"
-  - "恢复 [SQL Server], 恢复模式"
-  - "备份数据库 [SQL Server], 恢复模式"
-  - "恢复模式 [SQL Server], 切换"
-  - "恢复模式 [SQL Server], 查看"
-  - "数据库还原 [SQL Server], 恢复模式"
-  - "修改数据库恢复模式"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- recovery [SQL Server], recovery model
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], switching
+- recovery models [SQL Server], viewing
+- database restores [SQL Server], recovery models
+- modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看或更改数据库的恢复模式 (SQL Server)
+# <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查看或更改数据库。 
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]查看或更改数据库。 
   
   “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
   
-  有关[恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/)（SQL Server 恢复模式）！
+  有关 [恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)（SQL Server 恢复模式）！
   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 
--   在从[完整恢复模式或大容量日志恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)切换**前**，请[备份事务日志](https://msdn.microsoft.com/library/ms179478.aspx)。  
+-   在从[完整恢复模式或大容量日志恢复模式](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
   
 -   时点恢复在大容量日志模式下不可能进行。 在需要事务日志还原的大容量日志恢复模式下运行事务可能会导致事务丢失数据。 若要在灾难恢复方案中最大程度地恢复数据，则仅在以下条件下切换到大容量日志恢复模式：  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看或更改恢复模式  
+#### <a name="to-view-or-change-the-recovery-model"></a>查看或更改恢复模式  
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 40
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看恢复模式  
+#### <a name="to-view-the-recovery-model"></a>查看恢复模式  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -88,13 +92,13 @@ GO
   
 ```  
   
-#### 更改恢复模式  
+#### <a name="to-change-the-recovery-model"></a>更改恢复模式  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何使用 `model` ALTER DATABASE `FULL` 语句的 `SET RECOVERY` 选项将 [数据库中的恢复模式更改为](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何使用 `model` ALTER DATABASE `FULL` 语句的 `SET RECOVERY` 选项将 [数据库中的恢复模式更改为](../../t-sql/statements/alter-database-transact-sql-set-options.md) 。  
   
 ```tsql  
 USE master ;  
@@ -109,13 +113,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
     -   在从大容量日志恢复模式切换回完整恢复模式后，备份日志。  
   
-        >**注意：**备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
+        >**注意：** 备份策略保持不变：继续执行定期数据库备份、日志备份和差异备份。  
   
 -   **从简单恢复模式切换之后**  
   
     -   切换到完整恢复模式或大容量日志恢复模式之后，立即进行完整数据库备份或差异数据库备份以启动日志链。  
   
-        >**注意：**到完整或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
+        >**注意：** 到完整或大容量日志恢复模式的切换仅在第一个数据备份之后才生效。  
   
     -   计划安排定期日志备份并相应地更新还原计划。  
   
@@ -133,15 +137,15 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [创建作业](../../ssms/agent/create-a-job.md)  
+-   [创建作业](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [启用或禁用作业](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [启用或禁用作业](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [数据库维护计划](http://msdn.microsoft.com/library/ms187658.aspx)（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
+-   [数据库维护计划](http://msdn.microsoft.com/library/ms187658.aspx) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -149,3 +153,4 @@ ALTER DATABASE model SET RECOVERY FULL ;
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

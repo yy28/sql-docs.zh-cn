@@ -1,24 +1,28 @@
 ---
 title: "在 FileTable 中使用目录和路径 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 目录"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 FileTable 中使用目录和路径
+# <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
   说明 FileTable 中用于存储文件的目录结构。  
   
 ##  <a name="HowToDirectories"></a> 如何在 FileTable 中使用目录和路径  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |通过提供路径，获取 FileTable 中指定文件或目录的路径定位器 ID 值。|[GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 如何使用相对路径编写可移植代码  
- 若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact SQL )](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
+ 若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```tsql  
 USE database_name;  
@@ -62,9 +66,9 @@ GO
   
 1.  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级别进行 FILESTREAM 文件 I/O 访问启用的共享区。  
   
-2.  在数据库级别指定的 **DIRECTORY_NAME**。  
+2.  在数据库级别指定的 **DIRECTORY_NAME** 。  
   
-3.  在 FileTable 级别指定的 **FILETABLE_DIRECTORY**。  
+3.  在 FileTable 级别指定的 **FILETABLE_DIRECTORY** 。  
   
  生成的层次结构如下所示：  
   
@@ -81,7 +85,7 @@ GO
   
 -   在创建新的数据库时，数据库级别 **DIRECTORY_NAME** 默认为 Null。 管理员可以通过使用 **ALTER DATABASE** 语句设置或更改此名称。 此名称在该实例中必须唯一（不区分大小写比较时）。  
   
--   在创建 FileTable 时，通常提供 **FILETABLE_DIRECTORY** 名称作为**CREATE TABLE** 语句的一部分。 您可以通过使用 **ALTER TABLE** 命令来更改此名称。  
+-   在创建 FileTable 时，通常提供 **FILETABLE_DIRECTORY** 名称作为 **CREATE TABLE** 语句的一部分。 您可以通过使用 **ALTER TABLE** 命令来更改此名称。  
   
 -   不能通过文件 I/O 操作来重命名这些根目录。  
   
@@ -92,11 +96,11 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **值**|*file_stream* **值**|**行为**|  
+|*is_directory* **value**|*file_stream* **value**|**行为**|  
 |FALSE|NULL|这是将被系统定义的约束捕获的无效组合。|  
-|FALSE|\< 值>|该项表示一个文件。|  
+|FALSE|\<value>|该项表示一个文件。|  
 |TRUE|NULL|该项表示一个目录。|  
-|TRUE|\< 值>|这是将被系统定义的约束捕获的无效组合。|  
+|TRUE|\<value>|这是将被系统定义的约束捕获的无效组合。|  
   
 ##  <a name="alwayson"></a> 将虚拟网络名称 (VNN) 用于 AlwaysOn 可用性组  
  在包含 FILESTREAM 或 FileTable 数据的数据库属于某一 AlwaysOn 可用性组时：  
@@ -105,10 +109,11 @@ GO
   
 -   通过文件系统 API 对 FILESTREAM 或 FileTable 数据进行的所有访问都应该使用 VNN，而非计算机名称。 有关详细信息，请参阅 [FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用 FileTable 的先决条件](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [创建、更改和删除 FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [使用 Transact-SQL 访问 FileTable](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [使用文件输入输出 API 访问 FileTable](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

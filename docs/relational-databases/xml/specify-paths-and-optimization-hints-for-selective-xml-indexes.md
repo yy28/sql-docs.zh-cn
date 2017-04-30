@@ -1,22 +1,26 @@
 ---
 title: "为选择性 XML 索引指定路径和优化提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为选择性 XML 索引指定路径和优化提示
+# <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
   本主题介绍如何在创建或更改选择性 XML 索引时，如何指定要建立索引的节点路径以及用于索引的优化提示。  
   
  您可以在以下语句之一中同时指定节点路径和优化提示：  
@@ -25,7 +29,7 @@ caps.handback.revision: 11
   
 -   在 **ALTER** 语句的 **ADD** 子句中。 有关详细信息，请参阅 [ALTER INDEX（选择性 XML 索引）](../../t-sql/statements/alter-index-selective-xml-indexes.md)。  
   
- 有关选择性 XML 索引的详细信息，请参阅[选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
+ 有关选择性 XML 索引的详细信息，请参阅 [选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解非类型化 XML 中的 XQuery 和 SQL Server 类型  
  选择性 XML 索引支持两种类型系统：XQuery 类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
@@ -44,7 +48,7 @@ caps.handback.revision: 11
   
 -   XQuery 浮点数据类型支持 +/- 零和 +/- 无穷大的特殊值。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浮点数据类型中不支持这些特殊值。  
   
-### 非类型化 XML 中的 XQuery 类型  
+### <a name="xquery-types-in-untyped-xml"></a>非类型化 XML 中的 XQuery 类型  
   
 -   XQuery 类型匹配 XML 数据类型的所有方法（包括 value() 方法）中的 XQuery 表达式。  
   
@@ -105,7 +109,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
-### 非类型化 XML 中的 SQL Server 类型  
+### <a name="sql-server-types-in-untyped-xml"></a>非类型化 XML 中的 SQL Server 类型  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型匹配 value() 方法的返回值。  
   
@@ -121,7 +125,7 @@ SELECT T.record,
 FROM myXMLTable T  
 ```  
   
- 该指定的查询从打包到 NVARCHAR(200) 数据类型中的路径 `/a/b/d` 返回一个值，因此，要为该节点指定的数据类型十分明显。 但是，没有用于在非类型化 XML 中指定节点基数的架构。 若要指定节点 `d` 在其父节点 `b` 下最多出现一次，请创建一个选择性 XML 索引，该索引使用 SINGLETON 优化提示，如下所示：  
+ 该指定的查询从打包到 NVARCHAR(200) 数据类型中的路径 `/a/b/d` 返回一个值，因此，要为该节点指定的数据类型十分明显。 但是，没有用于在非类型化 XML 中指定节点基数的架构。 若要指定节点 `d` 在其父节点 `b`下最多出现一次，请创建一个选择性 XML 索引，该索引使用 SINGLETON 优化提示，如下所示：  
   
 ```tsql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
@@ -132,7 +136,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 )  
 ```  
   
- [本主题内容](#top)  
   
 ##  <a name="typed"></a> 了解对类型化 XML 的选择性 XML 索引支持  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的类型化 XML 是与某一给定 XML 文档相关联的架构。 该架构定义文档的整体结构以及节点的类型。 如果某一架构存在，则在用户提升路径时选择性 XML 索引将应用该架构结构，因此，无需为路径指定 XQUERY 类型。  
@@ -211,7 +214,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ##  <a name="paths"></a> 指定路径  
  通过选择性 XML 索引，您可以从您预期要运行的查询相关的已存储 XML 数据仅对节点的子集建立索引。 在相关节点的子集远小于 XML 文档中节点的总数时，选择性 XML 索引将仅存储相关节点。 为了从选择性 XML 索引中受益，请标识要建立索引的正确的节点子集。  
   
-### 选择要建立索引的节点  
+### <a name="choosing-the-nodes-to-index"></a>选择要建立索引的节点  
  您可以使用以下两个简单的原则来标识要添加到选择性 XML 索引的正确的节点子集。  
   
 1.  **原则 1**：若要评估某一给定的 XQuery 表达式，请对需要检查的所有节点建立索引。  
@@ -247,7 +250,7 @@ FOR
 )  
 ```  
   
-### 对完全相同的路径建立索引  
+### <a name="indexing-identical-paths"></a>对完全相同的路径建立索引  
  您不能将基于不同路径名称的完全相同的路径提升为相同的数据类型。 例如，以下查询将会引发错误，因为 `pathOne` 和 `pathTwo` 完全相同：  
   
 ```tsql  
@@ -270,7 +273,7 @@ FOR
 )  
 ```  
   
-### 示例  
+### <a name="examples"></a>示例  
  下面是其他一些示例，说明如何为不同的 XQuery 类型选择要建立索引的正确节点。  
   
  **示例 1**  
@@ -343,7 +346,6 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/f**|在 FLWOR 子句中为节点 `f` 的值进行求值。|  
 |**/a/b/c/d/e/g**|通过 exist() 方法为存在的节点 `g` 进行求值。|  
   
- [本主题内容](#top)  
   
 ##  <a name="hints"></a> 指定优化提示  
  您可以使用可选的优化提示为按选择性 XML 索引建立索引的节点指定附加的映射详细信息。 例如，可以指定节点的数据类型和基数，以及与数据结构有关的某些信息。 这些附加信息支持更好的映射。 它还可以导致改进性能和/或节约存储空间。  
@@ -352,7 +354,7 @@ WHERE T.xmldata.exist('
   
  某些优化提示（例如 SINGLETON 提示）会引入针对您的数据的约束。 在某些情况下，在未满足这些约束时可能会引发错误。  
   
-### 优化提示的好处  
+### <a name="benefits-of-optimization-hints"></a>优化提示的好处  
  下表标识支持更高效的存储或改进的性能的优化提示。  
   
 |优化提示|更高效的存储|改进的性能|  
@@ -362,7 +364,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|是|是|  
 |**MAXLENGTH**|是|是|  
   
-### 优化提示和数据类型  
+### <a name="optimization-hints-and-data-types"></a>优化提示和数据类型  
  您可以将节点作为 XQuery 数据类型或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型建立索引。 下表显示了每种数据类型支持的优化提示。  
   
 |优化提示|XQuery 数据类型|SQL 数据类型|  
@@ -372,7 +374,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|是|是|  
 |**MAXLENGTH**|是|是|  
   
-### node() 优化提示  
+### <a name="node-optimization-hint"></a>node() 优化提示  
  适用于：XQuery 数据类型  
   
  您可以使用 node() 优化指定其值无需用于对典型查询进行求值的节点。 在典型查询仅需要为存在的节点进行求值时，此提示可降低存储要求。 （默认情况下，选择性 XML 查询将存储几乎所有提升的节点的值，只有复杂节点类型除外。）  
@@ -390,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
  如果某个查询要求已使用 node() 提示建立索引的节点值，则不能使用选择性 XML 索引。  
   
-### SINGLETON 优化提示  
+### <a name="singleton-optimization-hint"></a>SINGLETON 优化提示  
  适用于：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
   
  SINGLETON 优化提示指定节点的基数。 此提示将改进查询性能，因为提前知道节点在其父节点或祖先节点内最多出现一次。  
@@ -401,21 +403,20 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
  如果已指定 SINGLETON 提示，但某一节点在其父节点或祖先节点内出现多次，则在您创建索引（为现有数据）或运行查询（为新数据）时将引发错误。  
   
-### DATA TYPE 优化提示  
+### <a name="data-type-optimization-hint"></a>DATA TYPE 优化提示  
  适用于：XQuery 数据类型  
   
  通过 DATA TYPE 优化提示，您可以为已建立索引的节点指定 XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 该数据类型用于与选择性 XML 索引的数据表中与已建立索引的节点相对应的列。  
   
  在将现有值转换为指定的数据类型失败时，插入操作（插入到索引中）不会失败；但是，一个 null 值将插入到索引的数据表中。  
   
-### MAXLENGTH 优化提示  
+### <a name="maxlength-optimization-hint"></a>MAXLENGTH 优化提示  
  适用于：XQuery 数据类型  
   
  通过 MAXLENGTH 优化提示，您可以限制 xs:string 数据的长度。 MAXLENGTH 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不相关，因为您在指定 VARCHAR 或 NVARCHAR 日期类型时指定长度。  
   
  在现有字符串长于指定的 MAXLENGTH 时，将该值插入到索引中将失败。  
   
- [本主题内容](#top)  
   
 ##  <a name="sample"></a> 针对示例的示例 XML 文档  
  下面的示例 XML 文档在本主题的示例中引用：  
@@ -434,9 +435,8 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 </a>  
 ```  
   
- [本主题内容](#top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择性 XML 索引 (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [创建、更改和删除选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

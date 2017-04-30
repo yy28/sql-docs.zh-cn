@@ -1,27 +1,31 @@
 ---
-title: "SQL Server，Deprecated Features 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Deprecated Features"
-  - "性能计数器 [SQL Server], 已弃用的功能"
-  - "弃用 [SQL Server], 性能计数器"
-  - "Deprecated Features 对象"
+title: "SQL Server - Deprecated Features 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server，Deprecated Features 对象
+# <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
@@ -41,10 +45,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
  下表描述了 SQL Server Deprecated Features 计数器实例。  
   
-|SQL Server Deprecated Features 计数器实例|说明|  
+|SQL Server Deprecated Features 计数器实例|Description|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
-|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *\< function_name>*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
+|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
 |“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 @ 或 @@ 开头的标识符。 请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|遇到不推荐使用的功能 sp_addumpdevice'**tape**'。 请改用 sp_addumpdevice'**disk**'。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
@@ -60,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|遇到带有 WITH APPEND 子句的 CREATE TRIGGER 语句。 请改为重新创建整个触发器。 每次在 DDL 语句中使用时发生。|  
 |CREATE_DROP_DEFAULT|遇到 CREATE DEFAULT 或 DROP DEFAULT 语法。 请使用 CREATE TABLE 或 ALTER TABLE 的 DEFAULT 选项重写该命令。 每次编译时发生。|  
 |CREATE_DROP_RULE|遇到 CREATE RULE 语法。 请使用约束重写该命令。 每次编译时发生。|  
-|数据类型：text、ntext 或 image|遇到 **text**、 **ntext**或 **image** 数据类型。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、**ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
+|数据类型：text、ntext 或 image|遇到 **text**、 **ntext**或 **image** 数据类型。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 ||数据库兼容级别更改为 80 的总次数。 计划在下一版本发布前升级数据库和应用程序。 在启动兼容级别为 80 的数据库时也会发生。|  
 |数据库兼容级别 100、110。 120|更改数据库兼容级别的总次数。 计划为未来版本升级数据库和应用程序。 在启动不推荐使用的兼容级别的数据库时也会发生。|  
 |DATABASE_MIRRORING|遇到对数据库镜像功能的引用。 计划升级到 AlwaysOn 可用性组，或者，如果正在运行不支持 AlwaysOn 可用性组的 SQL Server 版本，则计划迁移到日志传送。|  
@@ -112,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |不包含 COUNT_BIG(*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (*)。|  
 |INDEX_OPTION|遇到选项两侧没有括号的 CREATE TABLE、ALTER TABLE 或 CREATE INDEX 语法。 请重写语句以使用当前语法。 每次查询时发生。|  
 |INDEXKEY_PROPERTY|遇到 INDEXKEY_PROPERTY 语法。 请重写语句以查询 sys.index_columns。 每次编译时发生。|  
-|间接 TVF 提示|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
+|间接 TVF 提示|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除对通过视图执行的多语句表值函数 (TVF) 调用的间接应用表提示。|  
 |将 NULL 插入 TIMESTAMP 列|NULL 值已插入到 TIMESTAMP 列。 请改用默认值。 每次编译时发生。|  
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。|  
@@ -264,10 +268,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|遇到对 sysusers 的引用。 请改用 sys.database_principals。 每次编译时发生。|  
 |不带 WITH 的表提示|遇到使用表提示但不使用 WITH 关键字的语句。 请修改语句以包括单词 WITH。 每次编译时发生。|  
 |text in row 表选项|遇到对“text in row”表选项的引用。 请改用 sp_tableoption 'large value types out of row'。 每次查询时发生。|  
-|TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、**ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
-|TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、**ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
+|TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
+|TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |TIMESTAMP|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
-|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、**ntext** 和 **image** 数据类型语法。 每次查询时发生。|  
+|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |USER_ID|遇到对 USER_ID 函数的引用。 请改用 DATABASE_PRINCIPAL_ID 函数。 每次编译时发生。|  
 |对链接服务器使用 OLEDB||  
 |vardecimal 存储格式|遇到 **vardecimal** 存储格式的使用。 请改用数据压缩。|  
@@ -277,13 +281,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_loginconfig|遇到 xp_loginconfig 过程。 请改用 SERVERPROPERTY 的 IsIntegratedSecurityOnly 参数。 每次查询时发生。|  
 |xp_revokelogin|遇到 xp_revokelogin 过程。 请改用 ALTER LOGIN DISABLE 或 DROP LOGIN。 每次编译时发生。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中不推荐使用的数据库引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 中不推荐使用的全文搜索功能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 事件类](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 事件类](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016 中废弃的全文搜索功能](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [SQL Server 2016 中废弃的全文搜索功能](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

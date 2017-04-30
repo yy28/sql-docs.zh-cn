@@ -1,26 +1,30 @@
 ---
 title: "使用稀疏列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "稀疏列, 所述"
-  - "null 列"
-  - "稀疏列"
+ms.custom: 
+ms.date: 03/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, described
+- null columns
+- sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用稀疏列
+# <a name="use-sparse-columns"></a>使用稀疏列
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。 稀疏列和列集是通过使用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 语句定义的。  
@@ -29,15 +33,15 @@ caps.handback.revision: 47
   
 -   列集  
   
-     INSERT、UPDATE 和 DELETE 语句可以通过名称来引用稀疏列。 但是，您也可以查看并处理表中组合为一个 XML 列的所有稀疏列。 此列称为列集。 有关列集的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)。  
+     INSERT、UPDATE 和 DELETE 语句可以通过名称来引用稀疏列。 但是，您也可以查看并处理表中组合为一个 XML 列的所有稀疏列。 此列称为列集。 有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
 -   筛选索引  
   
      因为稀疏列有许多 Null 值行，所以尤其适用于筛选索引。 稀疏列的筛选索引可以仅仅对已填充值的行编制索引。 这会创建一个更小、更有效的索引。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
- 稀疏列和筛选索引使应用程序（如 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]）可以通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有效地存储和访问大量的用户定义属性。  
+ 稀疏列和筛选索引使应用程序（如 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]）可以通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]有效地存储和访问大量的用户定义属性。  
   
-## 稀疏列的属性  
+## <a name="properties-of-sparse-columns"></a>稀疏列的属性  
  稀疏列具有以下特征：  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用列定义中的 SPARSE 关键字来优化该列中的值的存储。 因此，当表中的任意行的列值为 NULL 时，该值将不需要存储。  
@@ -54,7 +58,7 @@ caps.handback.revision: 47
   
     -   对于插入操作，所有位都将设置为 1。  
   
-     有关列集的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)。  
+     有关列集的详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。  
   
  下面的数据类型不能指定为 SPARSE：  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 47
 |**图像**|**用户定义数据类型**|  
 |**ntext**||  
   
-## 按数据类型所估算的空间节省量  
+## <a name="estimated-space-savings-by-data-type"></a>按数据类型所估算的空间节省量  
  相对于未标记为 SPARSE 的相同数据所需的空间，稀疏列在存储非 Null 值时需要的存储空间更多。 下表说明了每种数据类型的空间使用情况。 **NULL 百分比** 列指示数据必须有多少比例为 NULL，才能实现 40% 的净空间节省。  
   
  **固定长度的数据类型**  
@@ -113,15 +117,15 @@ caps.handback.revision: 47
   
  *长度等于该类型中包含的数据的平均长度再多出 2 个或 4 个字节。  
   
-## 更新稀疏列所需的内存中开销  
+## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>更新稀疏列所需的内存中开销  
  当使用稀疏列设计表时，请记住，在更新行时，表中的每个非 NULL 值稀疏列需要 2 个字节的额外开销。 由于此额外的内存要求，当总的行大小（包括此内存开销）超过 8019 但没有列可以推送到行外时，更新可能意外失败，错误为 576。  
   
  以具有 600 个 bigint 类型的稀疏列的表为例。 如果有 571 个非 Null 列，则磁盘上的总大小为 571 * 12 = 6852 字节。 在包含额外行开销和稀疏列标题之后，这会导致增加大约 6895 个字节。 在磁盘上，该页仍有约 1124 字节可用。 这可以给出其他列可以成功更新的印象。 但是，在更新过程中，内存中有额外开销，此开销为 2\*(非 NULL 值的稀疏列数目)。 在此示例中，包含额外开销 – 2 \* 571 = 1142 字节 – 将磁盘上的行大小增加到约 8037 个字节。 该大小超过最大允许的 8019 个字节。 由于所有列都是固定长度的数据类型，所以无法将其推送到行外。 因此，更新将会失败，错误为 576。  
   
-## 使用稀疏列的限制  
+## <a name="restrictions-for-using-sparse-columns"></a>使用稀疏列的限制  
  稀疏列可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，其行为与任何其他列类似，但有以下限制：  
   
--   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不可以是以下数据类型：**text**、**ntext**、**image**、**timestamp**、用户定义的数据类型、**geometry** 或 **geography**；或者有 FILESTREAM 属性。  
+-   稀疏列必须可为 Null，并且不能有 ROWGUIDCOL 或 IDENTITY 属性。 稀疏列不可以是以下数据类型： **text**、 **ntext**、 **image**、 **timestamp**、用户定义的数据类型、 **geometry**或 **geography**；或者有 FILESTREAM 属性。  
   
 -   稀疏列不能有默认值。  
   
@@ -154,7 +158,7 @@ caps.handback.revision: 47
   
 -   将将非稀疏列改为稀疏列时，稀疏列将占用更多的空间来存储非 Null 值。 当行接近行大小的最大值限制时，操作将失败。  
   
-## 支持稀疏列的 SQL Server 技术  
+## <a name="sql-server-technologies-that-support-sparse-columns"></a>支持稀疏列的 SQL Server 技术  
  本部分介绍下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术如何支持稀疏列：  
   
 -   事务复制  
@@ -179,7 +183,7 @@ caps.handback.revision: 47
   
 -   复制表时，不保留列的稀疏属性。  
   
-## 示例  
+## <a name="examples"></a>示例  
  在本示例中，文档表包含具有 `DocID` 和 `Title`列的公共集合。 生产组希望所有生产文档都有一个 `ProductionSpecification` 列和一个 `ProductionLocation` 列。 市场组希望所有市场文档都有一个 `MarketingSurveyGroup` 列。 本示例中的代码创建一个使用稀疏列的表，向该表中插入两行，然后从该表中选择数据。  
   
 > [!NOTE]  
@@ -234,10 +238,11 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用列集](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
+

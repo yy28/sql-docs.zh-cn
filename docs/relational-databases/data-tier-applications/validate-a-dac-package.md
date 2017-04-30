@@ -1,34 +1,38 @@
 ---
 title: "验证 DAC 包 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据层应用程序 [SQL Server], 验证"
-  - "数据层应用程序 [SQL Server], 比较"
-  - "验证 DAC"
-  - "比较 DAC"
-  - "数据层应用程序 [SQL Server], 查看"
-  - "查看 DAC"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# 验证 DAC 包
+# <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **开始之前：**  [先决条件](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [比较 DAC](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  使用 **GetDatabaseChanges()** 方法检索 **ChangeResults** 对象，并且将该对象通过管道传递给某个文本文件，以便生成新的、已删除和已更改的对象的简单报表。  
   
-### 查看数据库更改示例 (PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>查看数据库更改示例 (PowerShell)  
  **查看数据库更改示例 (PowerShell)**  
   
  下面的示例报告已在名为 MyApplicaiton 的已部署 DAC 中进行的所有数据库更改。  
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  关闭用于读取 DAC 包文件的文件流。  
   
-### 查看升级操作示例 （PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>查看升级操作示例 （PowerShell)  
  **查看升级操作示例 （PowerShell)**  
   
  以下示例报告一些 Transact-SQL 语句，为了将名为 MyApplicaiton 的 DAC 升级到 MyApplicationVNext.dacpac 文件中定义的架构将运行这些语句。  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> 比较 DAC  
+##  <a name="CompareDACs"></a> Compare DACs  
  在升级 DAC 之前，最好检查当前 DAC 和新 DAC 之间数据库和实例级别对象中的差别。 如果您对于当前 DAC 没有该包的副本，则可以从当前数据库中提取一个包。  
   
  如果您在 SQL Server 开发工具中将两个 DAC 包都导入 DAC 项目中，则可以使用架构比较工具来分析这两个 DAC 之间的差别。  
   
  或者，将 DAC 解压缩到单独的文件夹。 然后，可以使用 WinDiff 实用工具之类的差异工具分析这些差异。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [升级数据层应用程序](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

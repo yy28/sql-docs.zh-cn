@@ -1,44 +1,48 @@
 ---
 title: "空间数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography 数据类型 [SQL Server], 空间存储设计"
-  - "平面空间数据 [SQL Server], 设计"
-  - "空间数据类型 [SQL Server]"
-  - "测量空间数据 [SQL Server]"
-  - "geometry 数据类型 [SQL Server], 空间存储设计"
-  - "空间存储 [SQL Server]"
-  - "测量空间数据 [SQL Server], 设计"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server], spatial storage design
+- planar spatial data [SQL Server], designing
+- spatial data types [SQL Server]
+- geodetic spatial data [SQL Server]
+- geometry data type [SQL Server], spatial storage design
+- spatial storage [SQL Server]
+- geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
+ms.lasthandoff: 04/11/2017
+
 ---
-# 空间数据 (SQL Server)
+# <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   空间数据表示有关几何对象的物理位置和形状的信息。 这些对象可以是点位置或更复杂的对象，例如国家/地区、公路或湖泊。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种空间数据类型：**geometry** 数据类型和 **geography** 数据类型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种空间数据类型： **geometry** 数据类型和 **geography** 数据类型。  
   
 -   **Geometry** 类型表示欧几里得（平面）坐标系中的数据。  
   
 -   **Geography** 类型表示圆形地球坐标系中的数据。  
   
- 这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
+ 这两种数据类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中都是作为 .NET 公共语言运行时 (CLR) 数据类型实现的。  
   
 > [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的空间功能的详细说明和示例，请下载白皮书 [SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例，请下载白皮书 [SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ##  <a name="reltasks"></a> 相关任务  
  [创建、构造和查询几何图形实例](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
  [创建、修改和删除空间索引](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  提供有关创建、更改和删除空间索引的信息。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)  
  介绍空间数据类型。  
   

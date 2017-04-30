@@ -1,33 +1,37 @@
 ---
 title: "使用内存优化表的要求 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用内存优化表的要求
+# <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   若要了解如何在 Azure DB 中使用内存中 OLTP，请参阅 [Get started with In-Memory in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/)（在 SQL 数据库中使用内存中功能入门）。  
   
- 除了需要满足 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)外，还要满足以下使用内存中 OLTP 的要求：  
+ 除了需要满足 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)外，还要满足以下使用内存中 OLTP 的要求：  
   
 -   SQL Server 2016 SP1（或更高版本），任何版本。 对于 SQL Server 2014 和 SQL Server 2016 RTM（SP1 预览版），需要 Enterprise、Developer 或 Evaluation 版。
     - 注意：内存中 OLTP 要求 64 位版本的 SQL Server。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要有足够的内存来保留内存优化表和索引中的数据，以及额外的内存来支持联机工作负荷。 有关详细信息，请参阅 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要有足够的内存来保留内存优化表和索引中的数据，以及额外的内存来支持联机工作负荷。 有关详细信息，请参阅 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 。  
 
 -   在虚拟机 (VM) 中运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，请确保有足够的内存分配给 VM 以提供内存优化表和索引所需的内存。 用于保证 VM 内存分配的配置选项可称为“内存预留”或“最小 RAM”（使用动态内存时），具体取决于 VM 主机应用程序。 请确保这些设置足以满足 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据库需求。
   
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      要安装报表生成（[确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] （通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器管理内存中 OLTP）， [请下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的重要说明  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的重要说明  
   
 -   启动 SQL Server 2016 时，对内存优化表的大小没有限制（不同于可用内存）。 SQL Server 2014 数据库中所有持久表的内存中总大小不应超过 250 GB。 有关详细信息，请参阅 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)。  
     - 注意：从 SQL Server 2016 SP1 开始，Standard 和 Express 版本支持内存中 OLTP，但它们对可用于给定数据库中内存优化表的内存量设置了配额。 在 Standard 版本中，每个数据库的配额是 32GB；在 Express 版本中，每个数据库的配额是 352MB。 
@@ -52,3 +56,4 @@ caps.handback.revision: 65
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

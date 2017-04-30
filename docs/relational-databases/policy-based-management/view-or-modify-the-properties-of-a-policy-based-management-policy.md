@@ -1,26 +1,30 @@
 ---
 title: "查看或修改基于策略的管理策略的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于策略的管理, 修改策略"
-  - "基于策略的管理, 查看策略"
+ms.custom: 
+ms.date: 10/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, modify policies
+- Policy-Based Management, view policies
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 485dca1df0b2d62fb71b1c51b86fe30e449b7ccf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看或修改基于策略的管理策略的属性
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看或修改基于策略的管理策略的属性。  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>查看或修改基于策略的管理策略的属性
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理策略的属性。  
   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -31,13 +35,13 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看对象的所有策略的属性  
+#### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
 1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 有关“查看策略 – *object_name*”对话框中的可用选项的详细信息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成后，单击“关闭”。  
   
-#### 查看或修改特定策略的属性  
+#### <a name="to-view-or-modify-a-specific-policys-properties"></a>查看或修改特定策略的属性  
   
 1.  在“对象资源管理器”中，单击加号以便展开包含你要查看或修改的基于策略的管理策略的服务器。  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看策略属性  
+#### <a name="to-view-a-policys-properties"></a>查看策略属性  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -76,3 +80,4 @@ caps.handback.revision: 9
  有关详细信息，请参阅 [syspolicy_policies (Transact-SQL)](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md)。  
   
   
+

@@ -1,25 +1,29 @@
 ---
 title: "Web 同步的拓扑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Web 同步, 拓扑"
-  - "IIS 服务器配置 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Web synchronization, topologies
+- IIS server configuration [SQL Server replication]
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2045d5c7485207c52d6cf45229c3d2bd6d7c94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Web 同步的拓扑
+# <a name="topologies-for-web-synchronization"></a>Web 同步的拓扑
   可以从多种 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步复制拓扑中进行选择。 配置 Web 同步的常用方法包括：  
   
 -   单台服务器  
@@ -28,9 +32,9 @@ caps.handback.revision: 31
   
 -   多个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 系统和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新发布  
   
- 有关配置 Web 同步的信息，请参阅 [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  
+ 有关配置 Web 同步的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  
   
-## 单台服务器  
+## <a name="single-server"></a>单台服务器  
  在这种最简单的拓扑中，IIS、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器都驻留在一台服务器中。 通过连接到发布服务器中的 IIS 来同步订阅服务器。 发布服务器可位于防火墙后。  
   
 > [!NOTE]  
@@ -38,12 +42,12 @@ caps.handback.revision: 31
   
  ![使用单个服务器的 Web 同步](../../relational-databases/replication/media/web-sync02.gif "使用单个服务器的 Web 同步")  
   
-## 两台服务器  
+## <a name="two-servers"></a>两台服务器  
  可以将 IIS 放置在一台服务器中，而将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器和分发服务器配置在另一台服务器中。 运行 IIS 的服务器可以用防火墙与 Internet 隔离。 通过连接到 IIS 来同步订阅服务器。  
   
  ![使用两个服务器的 Web 同步](../../relational-databases/replication/media/web-sync03.gif "使用两个服务器的 Web 同步")  
   
-## 多个 IIS 系统和 SQL Server 重新发布  
+## <a name="multiple-iis-systems-and-sql-server-republishing"></a>多个 IIS 系统和 SQL Server 重新发布  
  如果需要支持很多同时进行同步的订阅服务器，您可以将此工作分配于多台运行 IIS 的计算机。  
   
  ![使用多个 IIS 服务器的 Web 同步](../../relational-databases/replication/media/web-sync04.gif "使用多个 IIS 服务器的 Web 同步")  
@@ -55,8 +59,8 @@ caps.handback.revision: 31
   
  ![使用重新发布的 Web 同步](../../relational-databases/replication/media/web-sync05.gif "使用重新发布的 Web 同步")  
   
-## 另请参阅  
- [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)   
- [合并复制的 Web 同步](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+## <a name="see-also"></a>另请参阅  
+ [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

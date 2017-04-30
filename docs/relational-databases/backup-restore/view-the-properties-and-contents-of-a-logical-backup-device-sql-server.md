@@ -1,32 +1,36 @@
 ---
 title: "查看逻辑备份设备的属性和内容 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "显示备份内容"
-  - "查看备份内容"
-  - "数据库备份 [SQL Server], 查看内容"
-  - "备份数据库 [SQL Server], 查看内容"
-  - "备份数据库 [SQL Server], 属性"
-  - "显示备份属性"
-  - "备份设备 [SQL Server], 查看信息"
-  - "查看备份属性"
-  - "数据库备份 [SQL Server], 属性"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying backup content
+- viewing backup content
+- database backups [SQL Server], viewing content
+- backing up databases [SQL Server], viewing content
+- backing up databases [SQL Server], properties
+- displaying backup properties
+- backup devices [SQL Server], viewing information
+- viewing backup properties
+- database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e0a3fad1cc54f9367d95ac36c903deeede0814b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看逻辑备份设备的属性和内容 (SQL Server)
+# <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>查看逻辑备份设备的属性和内容 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看 [!INCLUDE[tsql](../../includes/tsql-md.md)]中逻辑备份设备的属性和内容。  
@@ -46,14 +50,14 @@ caps.handback.revision: 22
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Security"></a> 安全性  
- 有关安全性的信息，请参阅 [RESTORE LABELONLY (Transact SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)。  
+ 有关安全性的信息，请参阅 [RESTORE LABELONLY (Transact SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)。  
   
 ####  <a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，获取有关备份集或备份设备的信息要求具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看逻辑备份设备的属性和内容  
+#### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -78,17 +82,17 @@ caps.handback.revision: 22
 7.  **“备份集”** 网格显示了有关介质集内容的信息。  
   
 > [!NOTE]  
->  有关详细信息，请参阅[媒体内容页](../../relational-databases/backup-restore/backup-device-media-contents-page.md)。  
+>  有关详细信息，请参阅 [媒体内容页](../../relational-databases/backup-restore/backup-device-media-contents-page.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看逻辑备份设备的属性和内容  
+#### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  使用 [RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md) 语句。 此示例返回有关 `AdvWrks2008R2Backup` 逻辑备份设备的信息。  
+3.  使用 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 语句。 此示例返回有关 `AdvWrks2008R2Backup` 逻辑备份设备的信息。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -98,7 +102,7 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -1,29 +1,33 @@
 ---
-title: "分别保存 Showplan XML 事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan XML 事件"
-  - "保存 Showplan XML 事件"
-  - "事件 [SQL Server]，显示计划 XML"
+title: "单独保存 Showplan XML 事件 (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92884b770e55cbd1b34203d7979041ee3821159
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分别保存 Showplan XML 事件 (SQL Server Profiler)
+# <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>分别保存 Showplan XML 事件 (SQL Server Profiler)
   本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 您可以在 **中打开** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件文件，从中可以查看每个事件的以图形表示的执行计划。  
   
-### 分别保存 Showplan XML 事件  
+### <a name="to-save-showplan-xml-events-separately"></a>分别保存 Showplan XML 事件  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 25
   
 11. 若要在 SQL Server Management Studio 中查看 **Showplan XML** 事件文件，请在 **“文件”** 菜单上指向 **“打开”**，然后单击 **“文件”**。 导航到保存 **Showplan XML** 事件文件的目录，选择一个文件并打开它。 **Showplan XML** 事件文件带有 .SQLPlan 文件扩展名。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

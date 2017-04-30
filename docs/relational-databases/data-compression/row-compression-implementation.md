@@ -1,25 +1,29 @@
 ---
 title: "行压缩的实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "压缩 [SQL Server], 行"
-  - "行压缩 [数据库引擎]"
+ms.custom: 
+ms.date: 06/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- compression [SQL Server], row
+- row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad6f5f97c0bd57fa4b9dc97d204a87fb865d31eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 行压缩的实现
+# <a name="row-compression-implementation"></a>行压缩的实现
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现行压缩的。 此摘要提供了有助于您规划数据所需存储空间的基本信息。  
@@ -28,15 +32,15 @@ caps.handback.revision: 19
   
 -   减少了与记录相关联的元数据开销。 此元数据为有关列、列长度和偏移量的信息。 在某些情况下，元数据开销可能大于旧的存储格式。  
   
--   它对于数值类型（例如，**integer**、**decimal** 和 **float**）和基于数值的类型（例如，**datetime** 和 **money**）使用可变长度存储格式。  
+-   它对于数值类型（例如， **integer**、 **decimal**和 **float**）和基于数值的类型（例如， **datetime** 和 **money**）使用可变长度存储格式。  
   
 -   它通过使用不存储空字符的可变长度格式来存储定长字符串。  
   
 > [!NOTE]  
 >  将对所有数据类型的 NULL 和 0 值进行优化，从而使它们不占用任何字节。  
   
-## 行压缩影响存储的方式  
- 下表介绍了行压缩是如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中的现有类型的。 此表不包括通过使用页压缩可以节省的空间。  
+## <a name="how-row-compression-affects-storage"></a>行压缩影响存储的方式  
+ 下表介绍了行压缩是如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的现有类型的。 此表不包括通过使用页压缩可以节省的空间。  
   
 |数据类型|是否影响存储？|说明|  
 |---------------|--------------------------|-----------------|  
@@ -75,8 +79,9 @@ caps.handback.revision: 19
 |用户定义类型|是|这在内部表示为 **varbinary**。|  
 |FILESTREAM|是|这在内部表示为 **varbinary**。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据压缩](../../relational-databases/data-compression/data-compression.md)   
  [页压缩的实现](../../relational-databases/data-compression/page-compression-implementation.md)  
   
   
+

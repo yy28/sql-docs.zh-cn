@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 扩展事件会话 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "会话"
-  - "扩展事件 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 扩展事件会话
+# <a name="sql-server-extended-events-sessions"></a>SQL Server 扩展事件会话
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   会话内容和特征。 扩展事件会话的内容（例如目标和事件）以及这些对象在某个会话中或多个会话间的关系。  
   
-## 会话状态  
+## <a name="session-states"></a>会话状态  
  下图说明了扩展事件会话的不同状态。  
   
  ![扩展事件会话状态](../../relational-databases/extended-events/media/xesessionstate.gif "扩展事件会话状态")  
@@ -47,7 +51,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  ALTER EVENT SESSION 和 DROP EVENT SESSION 均可应用于元数据或者应用于活动会话与元数据。  
   
-## 会话内容和特征  
+## <a name="session-content-and-characteristics"></a>会话内容和特征  
  扩展事件会话包括隐含的边界，因为一个会话的配置不会更改另一个会话的配置。 但是，这些边界不会阻止在多个会话中同时使用某个事件或目标。  
   
  下图说明了会话内容以及包和会话之间的关系。  
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  扩展事件体系结构提供了一个灵活的系统，允许同时使用多个对象以解决特定的问题。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

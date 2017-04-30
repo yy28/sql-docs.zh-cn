@@ -1,26 +1,30 @@
 ---
 title: "排除全文索引故障 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引 [全文搜索]"
-  - "故障排除 [SQL Server], 全文搜索"
-  - "故障排除 [全文搜索]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [full-text search]
+- troubleshooting [SQL Server], full-text search
+- troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 排除全文索引故障
+# <a name="troubleshoot-full-text-indexing"></a>排除全文索引故障
      
 ##  <a name="failure"></a> 排除全文索引故障  
  填充或维护全文索引时，由于下面描述的原因，全文索引器可能无法对一个或多个行编制索引。 这些行级别的错误不会干扰填充的进行。 索引器会跳过这些行，这意味着您无法查询这些行中包含的内容。  
@@ -45,20 +49,18 @@ caps.handback.revision: 43
   
  在任何重要的全文索引填充操作结束时，或在发现填充未完成时，应当查看爬网日志。  
   
-### 未签名的组件  
+### <a name="unsigned-components"></a>未签名的组件  
  默认情况下，全文索引器要求它所加载的筛选器和断字符经过签名。 如果它们未经过签名（这种情况有时是在安装自定义组件时造成的），则必须将全文索引器配置为忽略签名验证。  
   
 > [!IMPORTANT]  
 >  忽略签名验证将降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的安全性。 我们建议您对所实现的所有组件进行签名，或确保您获得的所有组件都经过签名。 有关对组件进行签名的信息，请参阅 [sp_fulltext_service (Transact SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  
   
- [本主题内容](#top)  
   
 ##  <a name="state"></a> 对事务日志进行还原后全文索引处于不一致状态  
- 还原数据库的事务日志时可能会看到一条警告，指示全文索引处于不一致状态。 导致不一致的原因是在备份数据库之后，针对表的全文索引被修改了。 若要使全文索引处于一致状态，必须对表执行完全填充（爬网）。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。  
+ 还原数据库的事务日志时可能会看到一条警告，指示全文索引处于不一致状态。 导致不一致的原因是在备份数据库之后，针对表的全文索引被修改了。 若要使全文索引处于一致状态，必须对表执行完全填充（爬网）。 有关详细信息，请参阅 [填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
- [本主题内容](#top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)  
   

@@ -1,27 +1,31 @@
 ---
 title: "tempdb 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "临时表 [SQL Server]，tempdb 数据库"
-  - "tempdb 数据库 [SQL Server]，关于 tempdb"
-  - "临时存储过程 [SQL Server]"
-  - "tempdb 数据库 [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary tables [SQL Server], tempdb database
+- tempdb database [SQL Server], about tempdb
+- temporary stored procedures [SQL Server]
+- tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.lasthandoff: 04/11/2017
+
 ---
-# tempdb 数据库
+# <a name="tempdb-database"></a>tempdb 数据库
   **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
   
 -   显式创建的临时用户对象，例如全局或局部临时表、临时存储过程、表变量或游标。  
@@ -32,9 +36,9 @@ caps.handback.revision: 66
   
 -   由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
- **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时都会重新创建 **tempdb**，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 **tempdb** 中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 **tempdb**进行备份和还原操作。  
+ **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 每次启动**时都会重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 **tempdb** 中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 **tempdb**进行备份和还原操作。  
   
-## tempdb 的物理属性  
+## <a name="physical-properties-of-tempdb"></a>tempdb 的物理属性  
  下表列出了 **tempdb** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|初始大小|文件增长|  
@@ -46,7 +50,7 @@ caps.handback.revision: 66
  \* 文件数取决于计算机上的（逻辑）内核数。 值为内核数或 8（取二者中较低的数字）。   
 数据文件数的默认值遵循 [KB 2154845](https://support.microsoft.com/en-us/kb/2154845/)中的一般准则。  
   
-## tempdb 的性能提高  
+## <a name="performance-improvements-in-tempdb"></a>tempdb 的性能提高  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **tempdb** 性能以下列方式进行提高：  
   
 -   可能缓存临时表和表变量。 缓存允许删除和创建临时对象的操作非常快速地执行，并减少页分配的争用问题。  
@@ -63,10 +67,10 @@ caps.handback.revision: 66
   
 -   对于主文件组，AUTOGROW_ALL_FILES 属性已启用，且不能修改此属性。  
   
-### 移动 tempdb 数据和日志文件  
- 若要移动 **tempdb** 数据和日志文件，请参阅[移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
+### <a name="moving-the-tempdb-data-and-log-files"></a>移动 tempdb 数据和日志文件  
+ 若要移动 **tempdb** 数据和日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   
-### 数据库选项  
+### <a name="database-options"></a>数据库选项  
  下表列出了 **tempdb** 数据库中每个数据库选项的默认值，以及是否可以修改该选项。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 |数据库选项|默认值|是否可修改|  
@@ -86,7 +90,7 @@ caps.handback.revision: 66
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> “否”<br /><br /> 是|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|是|  
 |ENCRYPTION|OFF|是|  
@@ -101,9 +105,9 @@ caps.handback.revision: 66
 |Service Broker 选项|ENABLE_BROKER|是|  
 |TRUSTWORTHY|OFF|是|  
   
- 有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+ 有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
-## 限制  
+## <a name="restrictions"></a>限制  
  不能对 **tempdb** 数据库执行以下操作：  
   
 -   添加文件组。  
@@ -136,10 +140,10 @@ caps.handback.revision: 66
   
 -   将数据库或主文件组设置为 READ_ONLY。  
   
-## 权限  
+## <a name="permissions"></a>权限  
  任何用户都可以在 tempdb 中创建临时对象。 用户只能访问自己的对象，除非他们获得更多的权限。 可以撤消对 tempdb 的连接权限以阻止用户使用 tempdb，但是不建议这样做，因为一些例行操作需要使用 tempdb。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
   
  [系统数据库](../../relational-databases/databases/system-databases.md)  
@@ -150,7 +154,8 @@ caps.handback.revision: 66
   
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SQL Server 2005 中使用 tempdb](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "解压缩 DAC 包 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "向导 [DAC], 解压缩"
-  - "数据层应用程序 [SQL Server], 解压缩"
-  - "如何 [DAC], 解压缩"
-  - "解压缩 DAC"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# 解压缩 DAC 包
+# <a name="unpack-a-dac-package"></a>解压缩 DAC 包
   使用“解压缩数据层应用程序”对话框可以从数据层应用程序 (DAC) 包解压缩脚本和文件。 这些脚本和文件放置在一个文件夹中，您可以在使用该 DAC 包将 DAC 部署到生产系统中之前查看该文件夹。 一个 DAC 的内容也可与解压缩到其他文件夹中的其他包的内容进行比较。  
   
 1.  **开始之前：**  [安全性](#Security)  
@@ -29,7 +33,7 @@ caps.handback.revision: 11
 2.  **若要解压缩 DAC，请使用：**[“解压缩数据层应用程序”对话框](#UnpackDACDial)、[检查 DAC 包的内容](#ExamDACPack)  
   
 ##  <a name="Security"></a> 安全性  
- 建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的 DAC 之前，请将其部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的一个独立的测试实例中，解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。  
+ 建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的 DAC 之前，请将其部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的一个独立的测试实例中，解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。  
   
 ##  <a name="UnpackDACDial"></a> “解压缩数据层应用程序”对话框  
  **解压缩 DAC 包文件**  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
  有关详细信息，请参阅 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [升级数据层应用程序](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

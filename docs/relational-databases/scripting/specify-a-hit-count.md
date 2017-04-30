@@ -1,29 +1,33 @@
 ---
 title: "指定命中计数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.hitcount"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, 断点命中计数"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.hitcount
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定命中计数
+# <a name="specify-a-hit-count"></a>指定命中计数
   断点命中计数是每次到达断点时由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器递增的计数器。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
   
-## 命中计数注意事项  
+## <a name="hit-count-considerations"></a>命中计数注意事项  
  默认情况下，每次到达断点时即中断执行。 您可以在下面的选项之间进行选择：  
   
 -   总是中断（默认值）。  
@@ -38,9 +42,9 @@ caps.handback.revision: 6
   
  如果您想要跟踪命中断点的次数，但不执行断点中断，请将命中计数指定为一个非常高的值，以便断点永远不会中断。  
   
- 当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 有关指定其它操作的信息，请参阅[指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)。  
+ 当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 有关指定其它操作的信息，请参阅 [指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)。  
   
-#### 指定命中计数  
+#### <a name="to-specify-a-hit-count"></a>指定命中计数  
   
 1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 6
   
 3.  单击 **“确定”** 实施更改，或单击 **“取消”** 退出而不应用更改。  
   
-#### 查看或重置当前命中计数  
+#### <a name="to-view-or-reset-the-current-hit-count"></a>查看或重置当前命中计数  
   
 1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 6
   
 4.  单击 **“确定”** 或 **“取消”** 以退出对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定断点条件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
   
   

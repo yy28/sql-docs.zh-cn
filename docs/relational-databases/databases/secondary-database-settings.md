@@ -1,29 +1,33 @@
 ---
 title: "辅助数据库设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 辅助数据库设置
+# <a name="secondary-database-settings"></a>辅助数据库设置
   使用此对话框可以配置和修改日志传送配置中辅助数据库的属性。  
   
- 有关日志传送概念的说明，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+ 有关日志传送概念的说明，请参阅 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **辅助服务器实例**  
  显示日志传送配置中当前配置为辅助服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
@@ -44,14 +48,14 @@ caps.handback.revision: 32
   
  单击此按钮将打开 **“还原选项”** 对话框。 在该对话框中，可以指定非默认文件夹的路径，用于驻留辅助数据库及其日志。 如果指定其中的一个文件夹，则必须指定这两个路径。  
   
- 这些路径必须引用辅助服务器上的本地驱动器。 另外，这些路径必须以本地驱动器号和冒号开头（例如，`C:`）。 映射的驱动器号或网络路径无效。  
+ 这些路径必须引用辅助服务器上的本地驱动器。 另外，这些路径必须以本地驱动器号和冒号开头（例如， `C:`）。 映射的驱动器号或网络路径无效。  
   
  如果单击 **“还原选项”** 按钮后决定使用默认文件夹，建议取消 **“还原选项”** 对话框。 如果已经指定非默认位置，但现在要使用默认位置，请再次单击 **“还原选项”** ，清除文本框，再单击“确定”。  
   
  **是，将主数据库的现有备份还原到辅助数据库**  
  让 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用主数据库的现有备份初始化辅助数据库。 在 **“备份文件”** 框中键入该备份的位置。 如果在“辅助数据库”框中输入新的数据库名称，数据库将作为还原操作的一部分进行创建。  
   
- **备份文件**  
+ **“备份文件”**  
  如果选择“是，将主数据库的现有备份还原到辅助数据库”选项，请键入要用于初始化辅助数据库的完整数据库备份的路径和文件名。  
   
  **还原选项**  
@@ -75,7 +79,7 @@ caps.handback.revision: 32
  **计划**  
  显示用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理复制作业的当前计划。 通过单击 **“计划...”**可以修改此计划。  
   
- **计划...**  
+ **“计划...”**  
  修改用于将事务日志备份从主服务器复制到辅助服务器的 SQL Server 代理作业的参数。  
   
  **禁用此作业**  
@@ -108,13 +112,13 @@ caps.handback.revision: 32
  **计划**  
  显示用于将事务日志备份还原到辅助数据库的 SQL Server 代理作业的当前计划。 通过单击 **“计划...”**可以修改此选项。  
   
- **计划...**  
+ **“计划...”**  
  修改与 SQL Server 代理还原作业相关联的参数。  
   
  **禁用此作业**  
  挂起对辅助数据库的还原操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

@@ -1,27 +1,31 @@
 ---
 title: "对扩展事件使用 PowerShell 提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server]，xevent"
-  - "扩展事件 [SQL Server]，PowerShell"
-  - "PowerShell [SQL Server]，扩展事件"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对扩展事件使用 PowerShell 提供程序
+# <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件。 XEvent 子文件夹位于 SQLSERVER 驱动器下。 您可以使用以下任意一种方法访问该文件夹：  
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序是一种非常强大的工具，您可以用其创建、更改和管理扩展事件会话。 下面一节提供将 PowerShell 脚本与扩展事件结合使用的一些基本示例。  
   
-## 示例  
+## <a name="examples"></a>示例  
  在下面的示例中，请注意以下事项：  
   
 -   脚本必须从 PS SQLSERVER:\\> 提示符（可在命令提示符下键入 **sqlps** 来打开该提示符）下运行。  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## 安全性  
+## <a name="security"></a>安全性  
  若要创建、更改或删除扩展事件会话，您必须拥有 ALTER ANY EVENT SESSION 权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [扩展事件工具](../../relational-databases/extended-events/extended-events-tools.md)  

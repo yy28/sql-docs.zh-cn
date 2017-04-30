@@ -1,25 +1,29 @@
 ---
 title: "将数据库恢复到数据库快照 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库快照 [SQL Server], 恢复到"
-  - "恢复数据库"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将数据库恢复到数据库快照
+# <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
   如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
   
 -   **开始之前：**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [安全性](#Security)  
   
--   **将数据库恢复到数据库快照，使用：**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 58
     > [!NOTE]  
     >  如果数据库已损坏，您将需要从备份中还原它。 有关详细信息，请参阅[完整数据库还原（简单恢复模式）](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)或[数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。  
   
--   标识在发生错误之前新近创建的快照。 有关详细信息，请参阅[查看数据库快照 (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)。  
+-   标识在发生错误之前新近创建的快照。 有关详细信息，请参阅 [查看数据库快照 (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
--   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅[删除数据库快照 (Transact SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)。  
+-   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 58
  **将数据库恢复到数据库快照**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
-1.  标识要将数据库恢复到的数据库快照。 你可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的一个数据库上查看快照（请参阅[查看数据库快照 (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)）。 此外，还可以在 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的**source_database_id** 列中找到某个视图的源数据库。  
+1.  标识要将数据库恢复到的数据库快照。 你可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的一个数据库上查看快照（请参阅 [查看数据库快照 (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)）。 此外，还可以在 **sys.databases (Transact-SQL)** 目录视图的 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列中找到某个视图的源数据库。  
   
 2.  删除其他任何数据库快照。  
   
-     有关删除快照的信息，请参阅[删除数据库快照 (Transact SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)。 如果数据库使用完整恢复模式，则在执行恢复之前，应先备份日志。 有关详细信息，请参阅[备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 或[在数据库损坏时备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)。  
+     有关删除快照的信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). 如果数据库使用完整恢复模式，则在执行恢复之前，应先备份日志。 有关详细信息，请参阅[备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 或[在数据库损坏时备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)。  
   
 3.  执行恢复操作。  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 58
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     其中，*database_name* 是源数据库的名称，*database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
+     其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   
-     有关详细信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+     有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  在恢复操作过程中，快照和源数据库都不可用。 源数据库和快照都标记为“还原中”。 如果在恢复操作期间发生错误，则数据库在重新启动后，将尝试完成恢复操作。  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   B. [恢复 Sales 数据库的快照](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. 恢复 AdventureWorks 数据库的快照  
- 此示例假定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库当前只存在一个快照。 有关在此创建数据库要恢复到的快照的示例，请参阅[创建数据库快照 (SQL Server)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)。  
+ 此示例假定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库当前只存在一个快照。 有关在此创建数据库要恢复到的快照的示例，请参阅 [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -135,13 +139,13 @@ GO
 ```  
   
 ####  <a name="Reverting_Sales"></a> B. 恢复 Sales 数据库的快照  
- 此示例假定在 **Sales** 数据库当前存在两个快照：**sales_snapshot0600** 和 **sales_snapshot1200**。 此示例删除了较旧的快照并将数据库恢复到较新的快照。  
+ 此示例假定在 **Sales** 数据库当前存在两个快照： **sales_snapshot0600** 和 **sales_snapshot1200**。 此示例删除了较旧的快照并将数据库恢复到较新的快照。  
   
  有关用于创建此示例所基于的示例数据库和快照的代码，请参阅：  
   
 -   有关 **Sales** 数据库和 **sales_snapshot0600** 快照，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 中的“使用文件组创建数据库”和“创建数据库快照”。  
   
--   有关 **sales_snapshot1200** 快照，请参阅[创建数据库快照 (Transact-SQL&)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md) 中的“创建 Sales 数据库的快照”。  
+-   有关 **sales_snapshot1200** 快照，请参阅 [创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

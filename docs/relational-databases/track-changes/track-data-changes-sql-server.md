@@ -1,34 +1,38 @@
 ---
 title: "跟踪数据更改 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "变更数据捕获 [SQL Server]，与更改跟踪相比较"
-  - "变更数据捕获与更改跟踪"
-  - "变更数据捕获 [SQL Server]，数据类型行为"
-  - "Sync Services for ADO.NET"
-  - "更改跟踪 [SQL Server]，ADO.NET 的同步服务"
-  - "更改跟踪 [SQL Server]"
-  - "变更数据捕获 [SQL Server]，安全性"
-  - "变更数据捕获 [SQL Server]，其他 SQL Server 功能和"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change data capture [SQL Server], compared to change tracking
+- change data capture vs. change tracking
+- change data capture [SQL Server], data type behaviors
+- Sync Services for ADO.NET
+- change tracking [SQL Server], Sync Services for ADO.NET
+- change tracking [SQL Server]
+- change data capture [SQL Server], security
+- change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 43a09d1469e62f83b699ca1f4062f0cc2d556427
+ms.lasthandoff: 04/11/2017
+
 ---
-# 跟踪数据更改 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 支持更改跟踪。
+# <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。
   
-## 使用变更数据捕获或更改跟踪的好处  
+## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用变更数据捕获或更改跟踪的好处  
  对于某些注重效能的应用程序来说，查询数据库中已更改的数据的能力是一项很重要的要求。 通常，为了确定数据更改，应用程序开发人员必须在其应用程序中使用触发器、时间戳列和其他表的组合来实现自定义跟踪方法。 创建这些应用程序通常涉及多项工作，导致架构更新，并且通常带来较高的性能开销。  
   
  在应用程序中使用变更数据捕获或更改跟踪而不开发自定义解决方案来跟踪数据库中的更改具有以下好处：  
@@ -47,7 +51,7 @@ caps.handback.revision: 39
   
 -   提供可用于配置和管理的标准工具。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供标准的 DDL 语句、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、目录视图和安全权限。  
   
-## 变更数据捕获与更改跟踪之间的功能差异  
+## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>变更数据捕获与更改跟踪之间的功能差异  
  下表列出了变更数据捕获与更改跟踪之间的功能差异。 变更数据捕获中的跟踪机制涉及从事务日志中异步捕获更改，因此，可以在执行 DML 操作后获得更改信息。 更改跟踪中的跟踪机制涉及在执行 DML 操作的同时同步跟踪更改，因此，可以立即获得更改信息。  
   
 |功能|变更数据捕获|更改跟踪|  
@@ -59,14 +63,14 @@ caps.handback.revision: 39
 |是否更改了列|是|是|  
 |DML 类型|是|是|  
   
-##  <a name="Capture"></a> 变更数据捕获  
+##  <a name="Capture"></a> Change Data Capture  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
   
  正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)变更数据捕获 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，可以方便且系统地使用更改数据。  
   
  ![变更数据捕获的概念图示](../../relational-databases/track-changes/media/cdcart1.gif "变更数据捕获的概念图示")  
   
-### 安全模式  
+### <a name="security-model"></a>安全模式  
  本部分说明了变更数据捕获安全模式。  
   
  **配置和管理**  
@@ -78,9 +82,9 @@ caps.handback.revision: 39
  若要获取对与捕获实例关联的更改数据的访问，必须为用户授予关联源表中的所有捕获列的选择访问权限。 此外，如果在创建捕获实例时指定了访问控制角色，调用者还必须是指定访问控制角色的成员。 所有数据库用户可通过 public 角色访问用于访问元数据的其他常规变更数据捕获功能，但返回的元数据访问通常也是使用基础源表的选择访问权限以及任何定义的访问控制角色成员控制的。  
   
  **对启用了变更数据捕获的源表执行的 DDL 操作**  
- 为表启用变更数据捕获后，只能由固定服务器角色 **sysadmin**、**database role db_owner** 成员或 **database role db_ddladmin** 成员将 DDL 操作应用于该表。 如果为用户显式授予了对表执行 DDL 操作的权限，这些用户在尝试执行这些操作时将收到错误 22914。  
+ 为表启用变更数据捕获后，只能由固定服务器角色 **sysadmin**、 **database role db_owner**成员或 **database role db_ddladmin**成员将 DDL 操作应用于该表。 如果为用户显式授予了对表执行 DDL 操作的权限，这些用户在尝试执行这些操作时将收到错误 22914。  
   
-### 变更数据捕获的数据类型注意事项  
+### <a name="data-type-considerations-for-change-data-capture"></a>变更数据捕获的数据类型注意事项  
  变更数据捕获支持所有基列类型。 下表列出了几个列类型的行为和限制。  
   
 |列类型|在更改表中捕获更改|限制|  
@@ -88,10 +92,10 @@ caps.handback.revision: 39
 |稀疏列|是|不支持在使用列集时捕获更改。|  
 |计算列|是|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
 |XML|是|不跟踪对单个 XML 元素的更改。|  
-|时间戳|是|更改表中的数据类型将转换为 binary。|  
+|timestamp|是|更改表中的数据类型将转换为 binary。|  
 |BLOB 数据类型|是|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
   
-### 变更数据捕获和其他 SQL Server 功能  
+### <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能  
  本节说明下列功能如何与变更数据捕获交互：  
   
 -   数据库镜像  
@@ -100,7 +104,7 @@ caps.handback.revision: 39
   
 -   数据库还原或附加  
   
-#### 数据库镜像  
+#### <a name="database-mirroring"></a>数据库镜像  
  可以对启用变更数据捕获的数据库进行镜像。 为确保捕获和清除操作可在镜像服务器上自动发生，请执行以下步骤：  
   
 1.  确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在镜像上运行。  
@@ -109,22 +113,22 @@ caps.handback.revision: 39
   
  有关数据库镜像的详细信息，请参阅[数据库镜像 (SQL Server) ](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
-#### 事务复制  
- 变更数据捕获和事务复制可以共存于同一数据库中，但在启用这两项功能后，更改表的填充处理方式将发生变化。 变更数据捕获和事务复制始终使用相同的过程 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 从事务日志读取更改。 当单独启用变更数据捕获时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业会调用 **sp_replcmds**。 在同一数据库中启用这两项功能时，日志读取器代理会调用 **sp_replcmds**。 此代理将填充更改表和分发数据库表。 有关详细信息，请参阅 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
+#### <a name="transactional-replication"></a>事务复制  
+ 变更数据捕获和事务复制可以共存于同一数据库中，但在启用这两项功能后，更改表的填充处理方式将发生变化。 变更数据捕获和事务复制始终使用相同的过程 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)从事务日志读取更改。 当单独启用变更数据捕获时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业会调用 **sp_replcmds**。 在同一数据库中启用这两项功能时，日志读取器代理会调用 **sp_replcmds**。 此代理将填充更改表和分发数据库表。 有关详细信息，请参阅 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
   
  假设为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库启用了变更数据捕获，并为捕获启用了两个表。 为了填充更改表，捕获作业将调用 **sp_replcmds**。 此外，还为该数据库启用了事务复制，并会创建发布。 此时，将为该数据库创建日志读取器代理，并删除捕获作业。 日志读取器代理继续从提交到更改表的最后一个日志序列号开始扫描日志。 这样将确保更改表中的数据一致性。 如果在此数据库中禁用事务复制，则会删除日志读取器代理，并重新创建捕获作业。  
   
 > [!NOTE]  
 >  当日志读取器代理同时用于变更数据捕获和事务复制时，复制的更改将首先写入分发数据库。 然后，捕获的更改会写入更改表。 两项操作会一起提交。 如果在写入分发数据库时有任何滞后时间，则在更改显示在更改表中之前，将有对应的滞后时间。  
   
-#### 还原或附加启用了变更数据捕获的数据库  
+#### <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a>还原或附加启用了变更数据捕获的数据库  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下逻辑确定还原或附加数据库后变更数据捕获是否继续保持启用状态：  
   
 -   如果数据库以同一数据库名称还原到同一服务器，变更数据捕获将保持启用状态。  
   
 -   如果数据库还原到其他服务器，默认情况下将禁用变更数据捕获，并删除所有相关的元数据。  
   
-     若要保留变更数据捕获，请在还原数据库时使用 **KEEP_CDC** 选项。 有关此选项的详细信息，请参阅 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+     若要保留变更数据捕获，请在还原数据库时使用 **KEEP_CDC** 选项。 有关此选项的详细信息，请参阅 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
 -   如果数据库在分离后附加到同一服务器或其他服务器，变更数据捕获将保持启用状态。  
   
@@ -134,27 +138,27 @@ caps.handback.revision: 39
   
  可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 从还原或附加的数据库中删除变更数据捕获。  
   
-##  <a name="Tracking"></a> 更改跟踪  
+##  <a name="Tracking"></a> Change Tracking  
  更改跟踪捕获更改了表行这一事实，但不会捕获更改的数据。 这样，应用程序就可以确定使用从用户表中直接获取的最新行数据更改的行。 因此，与变更数据捕获相比，更改跟踪可以解答的历史问题比较有限。 但是，对于不需要历史信息的那些应用程序，更改跟踪产生的存储开销要小得多，因为它不需要捕获更改的数据。 它使用同步跟踪机制来跟踪更改。 此功能旨在最大限度地减少 DML 操作开销。  
   
  下图显示了从使用更改跟踪中受益的同步方案。 在此方案中，应用程序需要以下信息：在上次表同步后更改的所有表行以及仅当前行数据。 由于使用同步机制来跟踪更改，因此，应用程序可以执行双向同步，并且可靠地检测到可能发生的任何冲突。  
   
- ![变更跟踪的概念图示](../../relational-databases/track-changes/media/cdcart2.gif "变更跟踪的概念图示")  
+ ![更改跟踪的概念图示](../../relational-databases/track-changes/media/cdcart2.gif "更改跟踪的概念图示")  
   
-### ADO.NET 的更改跟踪和同步服务  
+### <a name="change-tracking-and-sync-services-for-adonet"></a>ADO.NET 的更改跟踪和同步服务  
  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 支持数据库之间的同步，并且提供了一个直观且灵活的 API，使您能够生成面向脱机和协作应用场景的应用程序。 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 提供了一个 API 用于同步更改，但并不实际跟踪服务器或对等数据库中的更改。 您可以创建自定义的更改跟踪系统，但这通常会大大增加复杂性和性能开销。 若要跟踪服务器或对等数据库中的更改，建议您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的更改跟踪功能，因为它易于配置并提供高性能的跟踪操作。  
   
- 有关更改跟踪和 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 的详细信息，请使用以下链接：  
+ 有关更改跟踪和 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)]的详细信息，请使用以下链接：  
   
 -   [关于更改跟踪 (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
-     介绍更改跟踪，提供更改跟踪工作方式的概要说明，并描述更改跟踪如何与其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]功能进行交互。  
+     介绍更改跟踪，提供更改跟踪工作方式的概要说明，并描述更改跟踪如何与其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能进行交互。  
   
 -   [Microsoft Sync Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=108054)  
   
      提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文档中，“如何使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
   
-## 相关任务（必需）  
+## <a name="related-tasks-required"></a>相关任务（必需）  
   
 |||  
 |-|-|  
@@ -168,11 +172,13 @@ caps.handback.revision: 39
 |介绍如何管理更改跟踪、配置安全性和确定使用更改跟踪时对存储和性能的影响。|[管理更改跟踪 (SQL Server)](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |介绍使用更改跟踪的应用程序如何获取跟踪的更改、将这些更改应用到其他数据存储区和更新源数据库。 此主题还介绍了在发生故障转移且必须从备份还原数据库时，角色更改跟踪如何进行。|[处理更改跟踪 (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [变更数据捕获函数 (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [变更数据捕获表 (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [与变更数据捕获相关的动态管理视图 (Transact-SQL)](../Topic/Change%20Data%20Capture%20Related%20Dynamic%20Management%20Views%20\(Transact-SQL\).md)  
+ [与变更数据捕获相关的动态管理视图 (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
+
+

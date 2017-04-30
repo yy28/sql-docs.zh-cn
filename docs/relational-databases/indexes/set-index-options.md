@@ -1,35 +1,39 @@
 ---
 title: "设置索引选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALLOW_ROW_LOCKS 选项"
-  - "SORT_IN_TEMPDB 选项"
-  - "DROP_EXISTING 子句"
-  - "大型数据, 索引"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "MAXDOP 索引选项, 设置"
-  - "索引选项 [SQL Server]"
-  - "MAXDOP 索引选项"
-  - "IGNORE_DUP_KEY 选项"
-  - "ALLOW_PAGE_LOCKS 选项"
-  - "ONLINE"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# 设置索引选项
+# <a name="set-index-options"></a>设置索引选项
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的属性。  
@@ -63,7 +67,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 在表设计器中修改索引的属性  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>在表设计器中修改索引的属性  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要修改索引属性的表的数据库。  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 44
   
 8.  在“文件”菜单上，选择“保存”以保存 *table_name*。  
   
-#### 在对象资源管理器中修改索引的属性  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要修改索引属性的表的数据库。  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看表中所有索引的属性  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>查看表中所有索引的属性  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### 设置索引的属性  
+#### <a name="to-set-the-properties-of-an-index"></a>设置索引的属性  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

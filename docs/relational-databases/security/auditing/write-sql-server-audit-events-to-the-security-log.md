@@ -1,32 +1,36 @@
 ---
 title: "将 SQL Server 审核事件写入安全日志 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志 [SQL Server], 安全日志"
-  - "服务器审核 [SQL Server]"
-  - "审核 [SQL Server], 写入安全日志"
-  - "安全日志 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将 SQL Server 审核事件写入安全日志
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志
   在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
   
  将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器审核写入 Windows 安全日志有两个关键要求：  
   
--   必须配置审核对象访问设置以捕获事件。 审核策略工具 (`auditpol.exe`) 公开了**审核对象访问**类别中的多种子策略设置。 若要允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核对象访问，请配置 **应用程序生成的** 设置。  
+-   必须配置审核对象访问设置以捕获事件。 审核策略工具 (`auditpol.exe`) 公开了 **审核对象访问** 类别中的多种子策略设置。 若要允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核对象访问，请配置 **应用程序生成的** 设置。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在其下运行的帐户必须拥有 **生成安全审核** 权限才能写入 Windows 安全日志。 默认情况下，LOCAL SERVICE 和 NETWORK SERVICE 帐户拥有此权限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在其中一个帐户下运行，则不需要此步骤。  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  关闭安全策略工具。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

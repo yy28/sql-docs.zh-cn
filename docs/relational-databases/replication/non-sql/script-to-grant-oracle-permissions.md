@@ -1,30 +1,34 @@
 ---
 title: "授予 Oracle 权限的脚本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 发布 [SQL Server 复制], 授予权限的脚本"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 授予 Oracle 权限的脚本
-  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 此脚本也位于以下目录在安装之后︰ *\< 驱动器>*:\\files\microsoft SQL Server\\*\< 实例名>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅 [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+# <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本
+  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  该脚本包含 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`语句，事务复制所用的触发器需要这个语句。 如果您仅使用快照复制，请将该行从脚本中删除。  
   
- **若要运行该脚本从 Oracle SQL\*Plus 实用工具**  
+ **从 Oracle SQL\*Plus 实用工具运行脚本**  
   
 1.  在 SQL Server 分发服务器中，打开一个命令提示符窗口。  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     在此示例中，使用内置 Oracle 帐户 **系统** 用于连接到网络名称为"orcl"的 Oracle 数据库。  
+     在此示例中，使用内置 Oracle 帐户 **system** 连接到网络名称为“orcl”的 Oracle 数据库。  
   
 3.  在得到提示后，请指定用户名称、用户密码和默认的表空间。  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

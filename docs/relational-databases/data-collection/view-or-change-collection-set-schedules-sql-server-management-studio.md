@@ -1,32 +1,36 @@
 ---
 title: "查看或更改收集组计划 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "收集组 [SQL Server], 更改计划"
-  - "计划 [SQL Server], 更改收集组"
-  - "收集组 [SQL Server], 查看计划"
-  - "计划 [SQL Server], 查看收集组"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看或更改收集组计划 (SQL Server Management Studio)
-  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看或更改收集组计划。  
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>查看或更改收集组计划 (SQL Server Management Studio)
+  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查看或更改收集组计划。  
   
  收集模式（缓存或非缓存）决定变更计划的方式。 缓存模式使用不同的计划进行收集和上载。 非缓存模式使用同一计划进行收集和上载。 每个系统数据收集组的收集模式类型如下：  
   
@@ -36,13 +40,13 @@ caps.handback.revision: 26
   
 -   **“服务器活动”** 使用缓存收集模式。  
   
-### 查看收集组计划  
+### <a name="to-view-collection-set-schedules"></a>查看收集组计划  
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
 2.  右键单击收集组名称，然后单击“属性”以便打开 [](#CollectionSet)“数据收集组属性”对话框。  
   
-### 更改缓存模式收集组的计划  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>更改缓存模式收集组的计划  
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
          将打开 **“为作业选取计划”** 对话框。 可用的计划以表的形式出现。  
   
-    3.  单击包含所需计划的行。 例如，若要将计划更改为每隔 5 分钟运行一次，请单击其中的计划名称为 **CollectorSchedule_Every_5min** 的行。  
+    3.  单击包含所需计划的行。 例如，若要将计划更改为每隔 5 分钟运行一次，请单击其中的计划名称为 **CollectorSchedule_Every_5min**的行。  
   
         > [!NOTE]  
         >  可以单击 **“属性”** 打开选定计划的 **“作业计划属性”** 对话框，以查看和编辑该计划的属性。 可使用此对话框来更改计划信息，例如频率。  
@@ -75,7 +79,7 @@ caps.handback.revision: 26
   
 5.  单击 **“确定”** 以保存对收集频率和上载计划所做的更改，并关闭 **“数据收集组属性”** 对话框。  
   
-### 更改非缓存模式收集组的计划  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>更改非缓存模式收集组的计划  
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 26
   
      将打开 **“为作业选取计划”** 对话框。 可用的计划以表的形式显示。  
   
-4.  单击包含所需计划的行。 例如，若要将计划更改为每隔 5 分钟运行一次，请单击其中的计划名称为 **CollectorSchedule_Every_5min** 的行。  
+4.  单击包含所需计划的行。 例如，若要将计划更改为每隔 5 分钟运行一次，请单击其中的计划名称为 **CollectorSchedule_Every_5min**的行。  
   
     > [!NOTE]  
     >  可以单击 **“属性”** 打开选定计划的 **“作业计划属性”** 对话框，以查看和编辑该计划的属性。 可使用此对话框来更改计划信息，例如频率。  
@@ -111,8 +115,8 @@ caps.handback.revision: 26
   
 |||  
 |-|-|  
-|**不缓存。 按照相同的计划收集和上载数据。**|选择此选项后，请指定以下选项之一：<br /><br /> **计划**。 按计划收集和上载数据。 单击 **“选取”** 可从预定义的计划列表中进行选择，或单击 **“新建”** 创建新计划。<br /><br /> **按需**。 按需收集和上载数据。|  
-|**已缓存。 按照一组收集频率收集数据并对其进行缓存。 按照单独的计划上载缓存的数据。**|按照指定的收集频率收集数据并对其进行缓存。 按照单独的计划上载收集的数据。|  
+|**不缓存。按照相同的计划收集和上载数据。**|选择此选项后，请指定以下选项之一：<br /><br /> **计划**。 按计划收集和上载数据。 单击 **“选取”** 可从预定义的计划列表中进行选择，或单击 **“新建”** 创建新计划。<br /><br /> **按需**。 按需收集和上载数据。|  
+|**已缓存。按照一组收集频率收集数据并对其进行缓存。按照单独的计划上载缓存的数据。**|按照指定的收集频率收集数据并对其进行缓存。 按照单独的计划上载收集的数据。|  
   
  **收集项**  
  显示收集组中的收集项。 以下是针对每个收集项提供的信息：  
@@ -121,7 +125,7 @@ caps.handback.revision: 26
   
 -   **收集器类型**  
   
--   **收集频率**（秒）。 如果将 **“数据收集和上载”** 配置为缓存，则可以编辑此字段。 双击此单元格可设置收集频率。  
+-   **收集频率** （秒）。 如果将 **“数据收集和上载”** 配置为缓存，则可以编辑此字段。 双击此单元格可设置收集频率。  
   
  **输入参数**  
  显示用于收集组的输入参数。  
@@ -160,8 +164,8 @@ caps.handback.revision: 26
   
  使用此页可以查看此属性页引用的收集组的说明。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

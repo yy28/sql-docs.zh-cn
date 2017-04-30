@@ -1,34 +1,38 @@
 ---
-title: "使用 SQL ServerPowerShell 路径 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 SQL Server PowerShell 路径 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 SQL ServerPowerShell 路径
+# <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
   在您导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
   
 1.  [开始之前](#BeforeYouBegin)  
   
-2.  **使用路径节点：**  [列出方法和属性](#ListPropMeth)， [使用方法和属性](#UsePropMeth)  
+2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 在导航到[!INCLUDE[ssDE](../../includes/ssde-md.md)]提供程序路径中的节点之后，可以执行两种类型的操作：  
+ 在导航到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径中的节点之后，可以执行两种类型的操作：  
   
 -   可以运行作用于节点的 Windows PowerShell cmdlet，如 **Rename-Item**。  
   
--   可以调用相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的方法，如 SMO。 例如，如果你导航到路径中的 Databases 节点，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类的方法和属性。  
+-   可以调用相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型中的方法，如 SMO。 例如，如果导航到路径中的 Databases 节点，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类的方法和属性。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序用于管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的对象， 而不能用于处理数据库中的数据。 如果您已经导航到表或视图，则不能使用该提供程序选择、插入、更新或删除数据。 可以使用 **Invoke-Sqlcmd** cmdlet 来查询或更改 Windows PowerShell 环境内表和视图中的数据。 有关详细信息，请参阅 [Invoke-Sqlcmd cmdlet](../../powershell/invoke-sqlcmd-cmdlet.md)。  
   
@@ -37,8 +41,8 @@ caps.handback.revision: 11
   
  若要查看可供特定对象或对象类使用的方法和属性，请使用 **Get-Member** cmdlet。  
   
-### 示例：列出方法和属性  
- 下面的示例将 Windows PowerShell 变量设置为 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 类并列出其方法和属性：  
+### <a name="examples-listing-methods-and-properties"></a>示例：列出方法和属性  
+ 此示例将 Windows PowerShell 变量设置为 SMO <xref:Microsoft.SqlServer.Management.Smo.Database> 类并列出其方法和属性：  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
@@ -46,7 +50,7 @@ $MyDBVar | Get-Member –Type Methods
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
- 还可以使用 **Get-Member **列出与 Windows PowerShell 路径的结束节点相关联的方法和属性。  
+ 还可以使用 **Get-Member** 列出与 Windows PowerShell 路径的结束节点相关联的方法和属性。  
   
  下面的示例导航到 SQLSERVER: 路径中的 Databases 节点，并列出集合属性：  
   
@@ -67,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  若要从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供程序路径对对象执行操作，您可以使用 SMO 方法和属性。  
   
-### 示例：使用方法和属性  
+### <a name="examples-using-methods-and-properties"></a>示例：使用方法和属性  
  下面的示例使用 SMO **Schema** 属性，从 AdventureWorks2012 中的 Sales 架构中获取表的列表：  
   
 ```  
@@ -94,7 +98,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [导航 SQL ServerPowerShell 路径](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)   
  [将 URN 转换为 SQL Server 提供程序路径](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

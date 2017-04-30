@@ -1,28 +1,32 @@
 ---
 title: "序列号 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "序列号对象, 概述"
-  - "序列 [数据库引擎]"
-  - "自动编号, 序列"
-  - "序列号 [SQL Server]"
-  - "序列号对象"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 序列号
+# <a name="sequence-numbers"></a>序列号
   序列是一种用户定义的架构绑定对象，它根据创建该序列时采用的规范生成一组数值。 这组数值以定义的间隔按升序或降序生成，并且可根据要求循环（重复）。 序列不与表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便接收其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用某一序列对象并且跨多行和表协调值键。  
   
  序列是通过使用 **CREATE SEQUENCE** 语句独立于表来创建的。 其选项使您可以控制增量、最大值和最小值、起始点、自动重新开始功能和缓存以便改进性能。 有关这些选项的信息，请参阅 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。  
@@ -31,7 +35,7 @@ caps.handback.revision: 31
   
  序列可定义为任何整数数据类型。 如果未指定数据类型，则序列将默认为 **bigint**。  
   
-## 使用序列  
+## <a name="using-sequences"></a>使用序列  
  在以下情况下将使用序列，而非标识列：  
   
 -   应用程序要求在插入到表中之前有一个数值。  
@@ -46,7 +50,7 @@ caps.handback.revision: 31
   
 -   您需要更改序列的规范，例如增量值。  
   
-## 限制  
+## <a name="limitations"></a>限制  
  与不能更改其值的标识列不同，在插入到表后不自动保护序列值。 若要防止更改序列值，请对表使用更新触发器以便回滚更改。  
   
  对于序列值不自动强制唯一性。 按照设计能够重复使用序列值。 如果某个表中的序列值要求唯一，则对列创建唯一索引。 如果要求表中的序列值在一组表之间唯一，则创建触发器以免更新语句或序列号循环导致的重复项。  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
  如果在单个 **NEXT VALUE FOR** 语句中有多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的实例指定同一序列生成器，则所有这些实例返回该 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句独立于表来创建的。 此行为与 ANSI 标准保持一致。  
   
-## 典型用法  
+## <a name="typical-use"></a>典型用法  
  若要创建从 -2,147,483,648 到 2,147,483,647 且增量为 1 的整数序列号，请使用以下语句。  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## 管理序列  
+## <a name="managing-sequences"></a>管理序列  
  有关序列的信息，请查询 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)。  
   
-## 示例  
+## <a name="examples"></a>示例  
  请在 [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)、[NEXT VALUE FOR (Transact-SQL)](../../t-sql/functions/next-value-for-transact-sql.md) 和 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 主题查看其他示例。  
   
-### A. 在单个表中使用序列号  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 在单个表中使用序列号  
  下面的示例创建一个名为 Test 的架构、一个名为 Orders 的表以及一个名为 CountBy1 的序列，然后使用 NEXT VALUE FOR 函数将行插入到该表中。  
   
 ```  
@@ -125,7 +129,7 @@ GO
   
  `3        Brake   1`  
   
-### B. 在插入某一行之前调用 NEXT VALUE FOR  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. 在插入某一行之前调用 NEXT VALUE FOR  
  下面的示例通过使用在示例 A 中创建的 `Orders` 表，声明一个名为 `@nextID`的变量，然后使用 NEXT VALUE FOR 函数将该变量设置为下一个可用的序列号。 假定应用程序对订单执行某种处理，例如向客户提供其潜在订单的 `OrderID` 号，然后验证该订单。 无论这一处理时间有多长，或者在这个处理过程中添加了多少其他订单，原始编号都保留供此连接使用。 最后， `INSERT` 语句将该订单添加到 `Orders` 表。  
   
 ```  
@@ -138,7 +142,7 @@ GO
   
 ```  
   
-### C. 在多个表中使用序列号  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>C. 在多个表中使用序列号  
  此示例假定一个生产线监视进程接收在车间中发生的事件的通知。 每个事件都接收一个唯一且单调递增的 `EventID` 号。 所有事件都使用相同的 `EventID` 序列号，因此，汇总了所有事件的报表可唯一标识各事件。 但是，事件数据根据事件的类型存储于三个不同的表中。 该代码示例创建一个名为 `Audit`的架构、一个名为 `EventCounter`的序列以及三个表，这三个表都使用 `EventCounter` 序列作为默认值。 然后，该示例向这三个表添加行并且查询结果。  
   
 ```  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### D. 在结果集中生成重复序列号  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. 在结果集中生成重复序列号  
  下面的示例演示序列号的两个功能：循环以及在 select 语句中使用 `NEXT VALUE FOR` 。  
   
 ```  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### E. 通过使用 OVER 子句为结果集生成序列号  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>E. 通过使用 OVER 子句为结果集生成序列号  
  下面的示例使用 `OVER` 子句在其添加序列号列之前按 `Name` 对结果集进行排序。  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### F. 重置序列号  
+### <a name="f-resetting-the-sequence-number"></a>F. 重置序列号  
  示例 E 使用了前 79 个 `Samples.IDLabel` 序列号。 （您的版本的 `AdventureWorks2012` 可能会返回不同数目的结果。）执行以下语句以便使用接下来的 79 个序列号（80 到 158）。  
   
 ```  
@@ -287,7 +291,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### G. 将表从标识更改为序列  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>G. 将表从标识更改为序列  
  下面的示例创建一个包含该示例的三行的架构和表。 然后，该示例添加一个新列并且删除旧列。  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 `SELECT *` 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY（属性）(Transact-SQL)](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

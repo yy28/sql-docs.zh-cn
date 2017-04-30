@@ -1,23 +1,27 @@
 ---
 title: "临时表注意事项和限制 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 临时表注意事项和限制
+# <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   由于系统版本控制的特性，在使用临时表时，有一些应考虑的注意事项和限制。  
@@ -34,9 +38,9 @@ caps.handback.revision: 17
   
 -   如果当前表已分区，则历史记录表在默认文件组上创建，因为不会自动将分区配置从当前表复制到历史记录表。  
   
--   由于 **FILETABLE** 和 **FILESTREAM** 允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部进行数据操作，所以临时表和历史记录表不能为 **FILETABLE**，且可以包含 **FILESTREAM** 以外的任何受支持的数据类型的列，因此系统版本控制不能得到保证。  
+-   由于 **FILETABLE** 和 **FILESTREAM** 允许在 **外部进行数据操作，所以临时表和历史记录表不能为** FILETABLE **，且可以包含** FILESTREAM [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的任何受支持的数据类型的列，因此系统版本控制不能得到保证。  
   
--   尽管临时表支持 Blob 数据类型，如 **(n)varchar(max)**、**varbinary(max)**、**(n)text** 和 **image**，但由于其大小，会导致产生巨大的存储成本，并可能对性能产生影响。 因此在设计系统的过程中，应慎重使用这些数据类型。  
+-   尽管临时表支持 Blob 数据类型，如 **(n)varchar(max)**、**varbinary(max)**、 **(n)text** 和 **image**，但由于其大小，会导致产生巨大的存储成本，并可能对性能产生影响。 因此在设计系统的过程中，应慎重使用这些数据类型。  
   
 -   必须在与当前表相同的数据库中创建历史记录表。 不支持对 **Linked Server** 的临时查询。  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 17
   
 -   不允许直接修改历史记录表中的数据。  
   
--   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id*），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的 *referenced_object_id*）。 如果主键表是临时表而引用表为非临时表，则不存在此类限制。  
+-   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id* ），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的  *referenced_object_id* ）。 如果主键表是临时表而引用表为非临时表，则不存在此类限制。  
   
 -   在当前表或历史记录表上均不允许使用**INSTEAD OF** 触发器，以避免导致 DML 逻辑失效。 仅在当前表上允许**AFTER** 触发器。 这些触发器在历史记录表上会被阻止，以避免导致 DML 逻辑失效。  
   
@@ -93,10 +97,10 @@ caps.handback.revision: 17
   
 -   在历史记录表链中，无法将历史记录表配置为当前表。  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [临时表系统一致性检查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -107,3 +111,4 @@ caps.handback.revision: 17
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

@@ -1,38 +1,42 @@
 ---
 title: "使用全文索引向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.fulltextindexingwizard.welcome.f1"
-  - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
-  - "sql13.swb.fulltextindexingwizard.progress.f1"
-  - "sql13.swb.fulltextindexingwizard.selectchangetracking.f1"
-  - "sql13.swb.fulltextindexingwizard.selectacatalog.f1"
-  - "sql13.swb.fulltextindexingwizard.selectatableorview.f1"
-  - "sql13.swb.fulltextindexingwizard.selectanindex.f1"
-  - "sql13.swb.fulltextindexingwizard.summary.f1"
-  - "sql13.swb.fulltextindexingwizard.selecttablecolumns.f1"
-helpviewer_keywords: 
-  - "全文索引向导"
-  - "全文搜索 [SQL Server], 全文索引向导"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.fulltextindexingwizard.welcome.f1
+- sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
+- sql13.swb.fulltextindexingwizard.progress.f1
+- sql13.swb.fulltextindexingwizard.selectchangetracking.f1
+- sql13.swb.fulltextindexingwizard.selectacatalog.f1
+- sql13.swb.fulltextindexingwizard.selectatableorview.f1
+- sql13.swb.fulltextindexingwizard.selectanindex.f1
+- sql13.swb.fulltextindexingwizard.summary.f1
+- sql13.swb.fulltextindexingwizard.selecttablecolumns.f1
+helpviewer_keywords:
+- Full-Text Indexing Wizard
+- full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用全文索引向导
+# <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
   SSMS 中的全文索引向导可引导你完成一系列步骤，以帮助你创建全文索引。  
   
-## 创建全文索引 
+## <a name="create-a--full-text-index"></a>创建全文索引 
 
 1. 在对象资源管理器中，右键单击要对其创建全文索引的表，指向“全文索引”，然后单击“定义全文索引”。 此操作将在一个单独的窗口中启动向导。
    单击“下一步” 
@@ -71,15 +75,15 @@ caps.handback.revision: 24
      
      单击“下一步”
   
-## 目录、索引文件组和非索引字表   
+## <a name="catalog-index-filegroup-and-stoplist"></a>目录、索引文件组和非索引字表   
   
 9.  **选择全文目录**  
 
-     **选择目录：**从列表中选择全文目录。 默认情况下，数据库的默认目录为该列表中选定的项。 如果没有可用的目录，则该列表将处于禁用状态，并且 **“创建新目录”** 复选框将处于选中状态并被禁用。  
+     **选择目录：** 从列表中选择全文目录。 默认情况下，数据库的默认目录为该列表中选定的项。 如果没有可用的目录，则该列表将处于禁用状态，并且 **“创建新目录”** 复选框将处于选中状态并被禁用。  
   
   或
   
- 10. **创建新目录**
+ 10. **“创建新目录”**
  - 选择全文目录。  
   
     a. **名称**  
@@ -97,7 +101,7 @@ caps.handback.revision: 24
      e. 选择值：  
     |“值”|说明|  
     |-----------|-----------------|
-      |**\<默认>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
+      |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
       |**PRIMARY**|选择此值可将主文件组用于新全文索引。|
              *用户指定的默认文件组*|如果存在用户定义的默认非索引字表，请从列表选择其名称，可将该文件组用于新全文索引。|  
   
@@ -109,10 +113,10 @@ caps.handback.revision: 24
   
      选择下列值之一：  
   
-   |值|说明|  
+   |“值”|说明|  
     |-----------|-----------------|  
-    |**\<系统>**|选择此值将对新全文索引使用系统非索引字表。 这是默认值。|  
-    |**\<关闭>**|选择此值将禁用新全文索引的非索引字表。|  
+    |**<system>**|选择此值将对新全文索引使用系统非索引字表。 这是默认值。|  
+    |**<off>**|选择此值将禁用新全文索引的非索引字表。|  
     |*用户定义的非索引字表名称*|该列表显示已对数据库创建的用户定义的每个非索引字表（如果有）的名称。 选择任何要用于新全文索引的用户定义的非索引字表。|  
   
   单击“下一步”
@@ -140,3 +144,4 @@ caps.handback.revision: 24
      当执行完所有操作以后，单击此按钮可以访问所执行操作的报告。 您可以查看该报告，将其打印为文件，复制到剪贴板，或用电子邮件发送该报告。  
   
   
+

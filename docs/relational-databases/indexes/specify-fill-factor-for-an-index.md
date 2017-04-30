@@ -1,28 +1,32 @@
 ---
 title: "为索引指定填充因子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "填充因子 [SQL Server]"
-  - "页拆分 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fill factor [SQL Server]
+- page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60356d04463b7905e092ddb8ccc6374fe410719b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 为索引指定填充因子
+# <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中指定索引的填充因子值。  
+  本主题说明什么是填充因子以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填充因子值。  
   
  提供填充因子选项是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便在每一页上保留一些剩余空间作为以后扩展索引的可用空间。 例如，指定填充因子的值为 80 表示每个叶级页上将有 20% 的空间保留为空，以便随着向基础表中添加数据而为扩展索引提供空间。 在索引行之间保留可用空间，而不是在索引的末尾保留。  
   
@@ -49,12 +53,12 @@ caps.handback.revision: 45
   
 ###  <a name="Performance"></a> 性能注意事项  
   
-#### 页拆分  
- 正确选择填充因子值可提供足够的空间，以便随着向基础表中添加数据而扩展索引，从而降低页拆分的可能性。如果向已满的索引页添加新行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将把大约一半的行移到新页中，以便为该新行腾出空间。 这种重组称为页拆分。 页拆分可为新记录腾出空间，但是执行页拆分可能需要花费一定的时间，此操作会消耗大量资源。 此外，它还可能造成碎片，从而导致 I/O 操作增加。 如果经常发生页拆分，可通过使用新的或现有的填充因子值来重新生成索引，从而重新分发数据。 有关详细信息，请参阅[重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+#### <a name="page-splits"></a>页拆分  
+ 正确选择填充因子值可提供足够的空间，以便随着向基础表中添加数据而扩展索引，从而降低页拆分的可能性。如果向已满的索引页添加新行， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将把大约一半的行移到新页中，以便为该新行腾出空间。 这种重组称为页拆分。 页拆分可为新记录腾出空间，但是执行页拆分可能需要花费一定的时间，此操作会消耗大量资源。 此外，它还可能造成碎片，从而导致 I/O 操作增加。 如果经常发生页拆分，可通过使用新的或现有的填充因子值来重新生成索引，从而重新分发数据。 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
  虽然采用较小的非零填充因子值可减少随着索引的增长而拆分页的需求，但是索引将需要更多的存储空间，并且会降低读取性能。 即使对于面向许多插入和更新操作的应用程序，数据库的读取次数一般也会超过数据库写入次数的 5 到 10 倍。 因此，指定一个不同于默认值的填充因子会降低数据库的读取性能，而降低量与填充因子设置的值成反比。 例如，当填充因子的值为 50 时，数据库的读取性能会降低两倍。 读取性能降低是因为索引包含较多的页，因此增加了检索数据所需的磁盘 I/O 操作。  
   
-#### 将数据添加到表的末尾  
+#### <a name="adding-data-to-the-end-of-the-table"></a>将数据添加到表的末尾  
  如果新数据在表中均匀分布，则不是 0 或 100 的非零填充因子对性能有利。 但是，如果所有数据都添加到表的末尾，则不会填充索引页中的可用空间。 例如，如果索引键列是 IDENTITY 列，则新行的键将总是增加，并且索引行在逻辑意义上将添加到索引的末尾。 如果将用加长行的大小的数据来更新现有行，则请使用小于 100 的填充因子。 每页上的额外字节将有助于把行中的额外长度造成的页拆分降低到最小限度。  
   
 ###  <a name="Security"></a> 安全性  
@@ -64,7 +68,7 @@ caps.handback.revision: 45
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用表设计器指定填充因子  
+#### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>使用表设计器指定填充因子  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 45
   
 8.  在“文件”菜单上，选择“保存”以保存 *table_name*。  
   
-#### 使用对象资源管理器为索引指定填充因子  
+#### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要指定索引填充因子的表的数据库。  
   
@@ -98,11 +102,11 @@ caps.handback.revision: 45
   
 7.  在 **“填充因子”** 行中，输入所需的填充因子。  
   
-8.  单击“确定” 。  
+8.  单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在现有索引中指定填充因子  
+#### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>在现有索引中指定填充因子  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 45
     GO  
     ```  
   
-#### 为索引指定填充因子的其他方法  
+#### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>为索引指定填充因子的其他方法  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -144,3 +148,4 @@ caps.handback.revision: 45
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

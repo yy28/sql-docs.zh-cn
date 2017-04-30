@@ -1,27 +1,31 @@
 ---
-title: "查看收集组报表 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.reporthistory.calendar.f1"
-helpviewer_keywords: 
-  - "收集组 [SQL Server], 查看报表"
-  - "报表 [SQL Server], 查看收集组"
+title: "查看收集组报告 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.reporthistory.calendar.f1
+helpviewer_keywords:
+- collection sets [SQL Server], viewing reports
+- reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: accee6b8a77439781776f82d179a2260d3aa2895
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看收集组报表 (SQL Server Management Studio)
+# <a name="view-a-collection-set-report-sql-server-management-studio"></a>查看收集组报表 (SQL Server Management Studio)
   配置了管理数据仓库后，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看收集组报表。 针对安装过程中安装的系统数据收集组提供了报表。 这些报表包括：  
   
 -   磁盘使用情况摘要  
@@ -32,7 +36,7 @@ caps.handback.revision: 24
   
  此过程会显示 **“磁盘使用情况”** 收集组的报表。 您可以使用同样的常规过程来查看其他系统数据收集组的报表。  
   
-### 查看收集组报表  
+### <a name="to-view-a-collection-set-report"></a>查看收集组报表  
   
 1.  首次上载收集的数据时会为报表创建表。 如果尝试在首次上载之前查看报表，则将出现错误并且不会显示报表。 若要上传磁盘使用情况收集组的数据，请在对象资源管理器中依次展开“管理”文件夹、“数据收集”和“系统数据收集组”，右键单击“磁盘使用情况”收集组，然后单击“立即收集并上传”。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 24
     > [!NOTE]  
     >  有些报告可能会在数据收集时间线下显示日历按钮。 单击此按钮可访问 **“数据收集报告日历”**。  
   
-#### “数据收集报告日历”  
+#### <a name="data-collection-report-calendar"></a>“数据收集报告日历”  
  使用该对话框可指定要报告的数据的开始日期、开始时间和持续时间。 例如，可能要报告上星期三某特定 12 小时内服务器的磁盘使用活动。  
   
  **开始日期**  
@@ -53,9 +57,9 @@ caps.handback.revision: 24
  **Duration**  
  指定在报表中要包括的时间范围。 默认值为 240 分钟。 可从以下值中进行选择：15 分钟、60 分钟、240 分钟（4 小时）、720 分钟（12 小时）和 1440 分钟（24 小时）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)   
+ [Management Studio 中的自定义报表](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)   
  [配置管理数据仓库 (SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
   

@@ -1,22 +1,26 @@
 ---
 title: "选择性 XML 索引 (SXI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 选择性 XML 索引 (SXI)
+# <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
   选择性 XML 索引是除了普通 XML 索引之外可供您使用的另外一种 XML 索引类型。 选择性 XML 索引功能的目标如下：  
   
 -   改进对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的 XML 数据的查询性能。  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  无需更新应用程序即可享有选择性 XML 索引所带来的好处。  
   
- [本主题内容](#top)  
   
 ##  <a name="compare"></a> 选择性 XML 索引和主 XML 索引  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   您要为未知元素或文档结构内未知位置中的元素支持查询。  
   
- [本主题内容](#top)  
   
 ##  <a name="example"></a> 选择性 XML 索引的简单示例  
  请将下面的 XML 片段视为由大约 500,000 行构成的表中的一个 XML 文档：  
@@ -98,9 +100,8 @@ FOR
   
  有关这些元素的详细信息，请参阅 [相关任务](#reltasks)。  
   
- [本主题内容](#top)  
   
-## 支持的功能、先决条件和限制  
+## <a name="supported-features-prerequisites-and-limitations"></a>支持的功能、先决条件和限制  
   
 ###  <a name="features"></a> 支持的 XML 功能  
  选择性 XML 索引在 exist()、value() 和 nodes() 方法内支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支持的 XQuery。  
@@ -113,7 +114,6 @@ FOR
   
 -   对于 modify() 方法，选择性 XML 索引不用于更新 XML 文档。  
   
- [本主题内容](#top)  
   
 ###  <a name="unsupported"></a> 不支持的 XML 功能  
  选择性 XML 索引不支持在 XML 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实现中支持的以下功能：  
@@ -130,7 +130,6 @@ FOR
   
 -   通过使用 id() 函数为节点指定和检索标识符。  
   
- [本主题内容](#top)  
   
 ###  <a name="prereq"></a> 先决条件  
  必须首先满足以下先决条件，然后才能对用户表中的 XML 列创建选择性 XML 索引：  
@@ -141,7 +140,6 @@ FOR
   
 -   在用于选择性 XML 索引时，用户表的聚集键限制为 15 列。  
   
- [本主题内容](#top)  
   
 ###  <a name="limits"></a> 限制  
  **一般要求和限制**  
@@ -174,9 +172,9 @@ FOR
   
  在任何给定行中支持的非 Null 列的最大数目依赖于列中的数据大小：  
   
--   在最佳情形下，在所有列的类型均为 **bit** 时支持 1024 个非 Null 列。  
+-   在最佳情形下，在所有列的类型均为 **bit**时支持 1024 个非 Null 列。  
   
--   在最差情形下，在所有列均为 **varchar** 类型的大型对象时仅支持 236 个非 Null 列。  
+-   在最差情形下，在所有列均为 **varchar**类型的大型对象时仅支持 236 个非 Null 列。  
   
  选择性 XML 索引为建立索引的每个节点路径在内部使用一到四个列。 可建立索引的节点总数从 60 个节点到几百个节点不等，具体数目取决于已建立索引的路径中数据的实际大小。  
   
@@ -194,7 +192,6 @@ FOR
   
 -   在数据库优化顾问中不支持选择性 XML 索引和辅助选择性 XML 索引。  
   
- [本主题内容](#top)  
   
 ##  <a name="reltasks"></a> 相关任务  
   
@@ -205,6 +202,5 @@ FOR
 |创建、更改或删除选择性 XML 索引。|[创建、更改和删除选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |创建、更改或删除辅助选择性 XML 索引。|[创建、更改和删除辅助选择性 XML 索引](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [本主题内容](#top)  
   
   

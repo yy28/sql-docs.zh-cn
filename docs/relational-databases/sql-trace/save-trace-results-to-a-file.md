@@ -1,22 +1,26 @@
 ---
 title: "将跟踪结果保存到文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6f62cfaeeb3be67b2a8e9bcf03b95464738a67c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 将跟踪结果保存到文件
+# <a name="save-trace-results-to-a-file"></a>将跟踪结果保存到文件
   可以将跟踪结果保存到文件中。 跟踪文件是写入跟踪结果的文件。 跟踪文件可以位于本地目录（如 C:\\foldername\\filename.trc）中，也可以位于在网络目录（如 \\\computername\sharename\filename.trc）中。  
   
  可以使用跟踪文件执行下列操作：  
@@ -33,16 +37,16 @@ caps.handback.revision: 6
   
 -   执行查询优化  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为存储过程 **sp_trace_create** 的 **@tracefile** 参数指定路径和文件名后，将跟踪结果保存到文件中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为存储过程 **@tracefile** 的 **@tracefile**参数指定路径和文件名后，将跟踪结果保存到文件中。  
   
 > [!NOTE]  
->  如果为存储过程 **sp_trace_create** 指定路径用来保存跟踪文件，则服务器必须可以访问该目录。 同时注意，如果为 **sp_trace_create** 指定本地目录，则该目录应是服务器上的本地目录。  
+>  如果为存储过程 **sp_trace_create** 指定路径用来保存跟踪文件，则服务器必须可以访问该目录。 同时注意，如果为 **sp_trace_create**指定本地目录，则该目录应是服务器上的本地目录。  
   
- 如果使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，则可以将跟踪结果保存到文件或表中。 将跟踪结果保存到表中后，可以与将跟踪保存到文件中后一样进行访问，另外还可以查询表以搜索特定事件。  
+ 如果使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，则可以将跟踪结果保存到文件或表中。 将跟踪结果保存到表中后，可以与将跟踪保存到文件中后一样进行访问，另外还可以查询表以搜索特定事件。  
   
  有关保存跟踪结果的详细信息，请参阅 [将跟踪结果保存到表 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md) 和 [将跟踪结果保存到文件 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  

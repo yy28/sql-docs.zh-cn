@@ -1,26 +1,30 @@
 ---
 title: "查看或修改基于策略的管理条件的属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于策略的管理, 查看策略条件"
-  - "基于策略的管理, 修改策略条件"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, view policy conditions
+- Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cac543a91282a6329e44c297d56a9550b18f4681
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看或修改基于策略的管理条件的属性
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看或修改基于策略的管理条件的属性。  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>查看或修改基于策略的管理条件的属性
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或修改基于策略的管理条件的属性。  
   
 
   
@@ -33,7 +37,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看或修改条件的属性  
+#### <a name="to-view-or-modify-a-conditions-properties"></a>查看或修改条件的属性  
   
 1.  在 **“对象资源管理器”**中，单击加号以展开包含要查看或修改的条件的服务器。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看条件的属性  
+#### <a name="to-view-a-conditions-properties"></a>查看条件的属性  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -74,3 +78,4 @@ caps.handback.revision: 11
  有关详细信息，请参阅 [syspolicy_conditions (Transact-SQL)](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)。  
   
   
+

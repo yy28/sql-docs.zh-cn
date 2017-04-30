@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: "教程：所有权链和上下文切换 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 > [!NOTE]  
-> 若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 有关混合模式安全性的详细信息，请参阅[选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
+> 若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
-## 应用场景  
+## <a name="scenario"></a>应用场景  
 在此应用场景中，两个用户需要帐户访问存储在 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中的采购订单数据。 要求如下：  
   
 -   第一个帐户 (TestManagerUser) 必须能够查看每个采购订单中的所有详细信息。  
@@ -48,7 +52,7 @@ caps.handback.revision: 16
   
 本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
   
-## 1.配置环境  
+## <a name="1-configure-the-environment"></a>1.配置环境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2012` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
   
 ```  
@@ -98,7 +102,7 @@ GO
   
 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](../relational-databases/stored-procedures/stored-procedures-database-engine.md)。 有关所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 权限的海报，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
   
-## 2.创建存储过程以访问数据  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2.创建存储过程以访问数据  
 若要切换数据库内的上下文，请使用 EXECUTE AS 语句。 EXECUTE AS 需要 IMPERSONATE 权限。  
   
 使用以下代码中的 `EXECUTE AS` 语句将上下文更改为 `TestManagerUser` ，并创建一个仅显示 `TestEmployeeUser`需要的数据的存储过程。 为了满足这些要求，存储过程接受一个代表采购订单号的变量并且不显示财务信息，WHERE 子句则将结果限制为部分货物。  
@@ -156,7 +160,7 @@ GO
   
 有关 REVERT 语句的详细信息，请参阅 [REVERT (Transact-SQL)](../t-sql/statements/revert-transact-sql.md)。  
   
-## 3.通过存储过程访问数据  
+## <a name="3-access-data-through-the-stored-procedure"></a>3.通过存储过程访问数据  
 `TestEmployeeUser` 除了拥有一个登录名以及分配给公共数据库角色的权限之外，对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库对象没有其他权限。 如果 `TestEmployeeUser` 试图访问基表，以下代码在将返回一个错误。  
   
 ```  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4.重置环境  
+## <a name="4-reset-the-environment"></a>4.重置环境  
 以下代码使用 `REVERT` 命令将当前帐户的上下文返回至 `dbo`，然后重置环境。  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

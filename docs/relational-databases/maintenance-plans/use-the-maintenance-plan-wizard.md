@@ -1,45 +1,49 @@
 ---
 title: "使用维护计划向导 | Microsoft Docs"
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ag.maintwiz.integrity.f1"
-  - "sql13.ag.maintwiz.order.f1"
-  - "sql13.ag.maintwiz.report.f1"
-  - "sql13.ag.maintwiz.updatestats.f1"
-  - "sql13.ag.maintwiz.indexdefrag.f1"
-  - "sql13.ag.maintwiz.progress.f1"
-  - "sql13.ag.maintwiz.maintcleanup.f1"
-  - "sql13.ag.maintwiz.backupfull.f1"
-  - "sql13.ag.maintwiz.task.f1"
-  - "sql13.ag.maintwiz.server.f1"
-  - "sql13.ag.maintwiz.shrinkdb.f1"
-  - "sql13.ag.maintwiz.execagentjob.f1"
-  - "sql13.ag.maintwiz.summary.f1"
-  - "sql13.ag.maintwiz.welcome.f1"
-  - "sql13.ag.maintwiz.planprop.f1"
-  - "sql13.ag.maintwiz.reindex.f1"
-  - "sql13.ag.maintwiz.histcleanup.f1"
-  - "sql13.ag.maintwiz.backuplog.f1"
-  - "sql13.ag.maintwiz.backupdiff.f1"
-helpviewer_keywords: 
-  - "维护计划向导"
-  - "数据库维护计划向导"
-  - "数据库维护计划向导，启动"
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ag.maintwiz.integrity.f1
+- sql13.ag.maintwiz.order.f1
+- sql13.ag.maintwiz.report.f1
+- sql13.ag.maintwiz.updatestats.f1
+- sql13.ag.maintwiz.indexdefrag.f1
+- sql13.ag.maintwiz.progress.f1
+- sql13.ag.maintwiz.maintcleanup.f1
+- sql13.ag.maintwiz.backupfull.f1
+- sql13.ag.maintwiz.task.f1
+- sql13.ag.maintwiz.server.f1
+- sql13.ag.maintwiz.shrinkdb.f1
+- sql13.ag.maintwiz.execagentjob.f1
+- sql13.ag.maintwiz.summary.f1
+- sql13.ag.maintwiz.welcome.f1
+- sql13.ag.maintwiz.planprop.f1
+- sql13.ag.maintwiz.reindex.f1
+- sql13.ag.maintwiz.histcleanup.f1
+- sql13.ag.maintwiz.backuplog.f1
+- sql13.ag.maintwiz.backupdiff.f1
+helpviewer_keywords:
+- Maintenance Plan Wizard
+- Database Maintenance Plan Wizard
+- Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用维护计划向导
+# <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
   本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
     
  
@@ -52,7 +56,7 @@ caps.handback.revision: 43
 若要防止在运行维护计划、数据收集组和其它 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时提升特权，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为具有有限特权的代理帐户，或仅将 **sysadmin** 成员添加到 **db_ssisadmin** 和 **dc_admin** 角色。  
 
 ##  <a name="Prerequisite"></a> 先决条件 
-必须启用[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
+必须启用 [“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -143,22 +147,22 @@ caps.handback.revision: 43
   
     > **注意：**如果你在上面的“选择计划属性”页中选择了“每项任务单独计划”，则无法在此页上更改维护任务的顺序。  
   
-## 定义数据库检查完整性 (CHECKDB)  
+## <a name="define-database-check-integrity-checkdb"></a>定义数据库检查完整性 (CHECKDB)  
   
  在 **“定义数据库检查完整性任务”** 页中，选择将检查用户和系统表以及索引的分配和结构完整性的数据库。 通过运行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该任务可确保报告数据库中存在的所有完整性问题，以便系统管理员或数据库所有者能够在以后加以解决。 有关详细信息，请参阅[DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。完成后，单击“下一步”。  
   
 此页还提供以下选项：  
   
- “数据库”**列表  
+ “数据库”列表  
  指定受此任务影响的数据库。  
   
  -  **所有数据库**  
   
-生成的维护计划将对除 **tempdb** 之外的所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行此任务。  
+生成的维护计划将对除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases except **tempdb**.  
   
 **系统数据库**  
   
-  - 生成的维护计划将对除 **tempdb** 和用户创建的数据库之外的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据库运行此任务。  
+  - 生成的维护计划将对除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **和用户创建的数据库之外的** 系统数据库运行此任务。  
   
  **所有用户数据库(master、model、msdb、tempdb 除外)**  
   
@@ -177,7 +181,7 @@ caps.handback.revision: 43
 **Tablock**  
  - 使 DBCC CHECKDB 获取锁，而不使用内部数据库快照。 这包括一个短期数据库排他 (X) 锁。 使用此选项可帮助 DBCC CHECKDB 在负荷较重的数据库上运行得更快，但会在 DBCC CHECKDB 运行的同时降低数据库上的并发性。  
   
-## 定义数据库收缩任务  
+## <a name="define-database-shrink-tasks"></a>定义数据库收缩任务  
   
 1.  在 **“定义收缩数据库任务”** 页上，使用 `DBCC SHRINKDATABASE` 语句以及 `NOTRUNCATE` 或 `TRUNCATEONLY` 选项，可以创建一个任务，以尝试减小所选数据库的大小。 有关详细信息，请参阅 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。 完成后，单击 **“下一步”**。  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 43
   
      此页还提供以下选项：  
   
-     “数据库”**列表  
+     “数据库”列表  
      指定受此任务影响的数据库。 有关此列表上可用选项的详细信息，请参阅上述步骤 9。  
   
      “当数据库大小超过指定值时收缩数据库”框  
@@ -200,13 +204,13 @@ caps.handback.revision: 43
      **将释放的空间归还给操作系统**  
      将数据库精简为连续页，并将这些页释放回操作系统，以供其他程序使用。 此数据库文件将尽可能地收缩。 这将使用 TRUNCATEONLY 选项。 这是默认选项。  
   
-## 定义索引任务  
+## <a name="define-the-index-tasks"></a>定义索引任务  
   
 1.  在 **“定义重新组织索引任务”** 页上，选择用来移动索引页以提高搜索顺序效率的服务器。 此任务使用 `ALTER INDEX … REORGANIZE` 语句。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。 完成后，单击 **“下一步”**。  
   
      此页还提供以下选项：  
   
-     “数据库”**列表  
+     “数据库”列表  
      指定受此任务影响的数据库。 有关此列表上可用选项的详细信息，请参阅上述步骤 9。  
   
      “对象”列表  
@@ -222,7 +226,7 @@ caps.handback.revision: 43
   
      此页还提供以下选项：  
   
-     “数据库”**列表  
+     “数据库”列表  
      指定受此任务影响的数据库。 有关此列表上可用选项的详细信息，请参阅上述步骤 9。  
   
      “对象”列表  
@@ -254,18 +258,18 @@ caps.handback.revision: 43
   
      选中此选项还可激活“使用低优先级”（其使用 `WAIT_AT_LOW_PRIORITY` 选项）。 联机索引重新生成操作将等待低优先级锁 `MAX_DURATION` 分钟，从而允许其他操作在联机索引生成操作正在等待的同时继续进行。  
   
-    > **注意：**在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+    > **注意：** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      “MAXDOP”复选框  
      对于 DBCC CHECKDB，替代 sp_configure 的最大并行度配置选项。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
-#### 定义更新统计信息任务  
+#### <a name="define-the-update-statistics-task"></a>定义更新统计信息任务  
   
 1.  在 **“定义更新统计信息任务”** 页上，定义将对其进行更新表和索引统计信息的数据库。 此任务使用 `UPDATE STATISTICS` 语句。 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。完成后，单击“下一步”  
   
      此页还提供以下选项：  
   
-     “数据库”**列表  
+     “数据库”列表  
      指定受此任务影响的数据库。 有关此列表上可用选项的详细信息，请参阅上述步骤 9。  
   
      “对象”列表  
@@ -292,7 +296,7 @@ caps.handback.revision: 43
      **抽样依据**  
      指定在收集较大型的表或视图的统计信息时要抽样的表或索引视图的百分比或者行数。  
   
-#### 定义清除历史记录任务  
+#### <a name="define-the-history-cleanup-task"></a>定义清除历史记录任务  
   
 1.  在 **“定义清除历史记录任务”** 页上，选择您要删除旧的任务历史记录的数据库。 该任务使用 `EXEC sp_purge_jobhistory`、 `EXEC sp_maintplan_delete_log`和 `EXEC sp_delete_backuphistory` 语句从 **msdb** 表中删除历史记录信息。 完成后，单击 **“下一步”**。  
   
@@ -313,11 +317,11 @@ caps.handback.revision: 43
      **删除历史数据，如果其保留时间超过**  
      指定要删除项的保留时间。 你可以指定“小时”、“天”、“周”（默认值）、“月”或“年”  
   
-#### 定义执行代理作业任务  
+#### <a name="define-the-execute-agent-job-task"></a>定义执行代理作业任务  
   
 1.  在 **“定义执行代理作业任务”** 页的 **“可用的 SQL Server 代理作业”**下面，选中要运行的作业。 如果没有 SQL 代理作业，此选项将不可用。 此任务使用 `EXEC sp_start_job` 语句。 有关详细信息，请参阅 [sp_start_job (Transact SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)。完成后，单击“下一步”。  
   
-#### 定义备份任务。  
+#### <a name="define-backup-tasks"></a>定义备份任务。  
   
 1.  在“定义备份数据库（完整）任务”页上，选择要对其运行完整备份的数据库。 此任务使用 `BACKUP DATABASE` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 完成后，单击 **“下一步”**。  
   
@@ -326,7 +330,7 @@ caps.handback.revision: 43
      “备份类型”列表  
      显示要执行的备份类型。 这是只读的。  
   
-     “数据库”**列表  
+     “数据库”列表  
      指定受此任务影响的数据库。 有关此列表上可用选项的详细信息，请参阅上述步骤 9。  
   
      **备份组件**  
@@ -365,13 +369,13 @@ caps.handback.revision: 43
      **SQL 凭据**  
      选择用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
-    > **重要说明!!** 单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅[创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)主题中的示例代码，使用 Transact-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”**和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
+    > **重要说明!!** 单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 主题中的示例代码，使用 Transact-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”**和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
      **Azure 存储容器**  
      指定 Windows Azure 存储容器的名称  
   
      **URL 前缀：**  
-     这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 我们建议你不要编辑此字段中的信息，除非你使用的域采用 **\<storage account>.blob.core.windows.net** 以外的格式。  
+     这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 我们建议你不要编辑此字段中的信息，除非你使用的域采用 **\<存储帐户>.blob.core.windows.net** 以外的格式。  
   
      “备份文件扩展名”框  
      指定备份文件要使用的扩展名。 默认为 .bak。  
@@ -411,19 +415,19 @@ caps.handback.revision: 43
      指定 SQL Server 和备份媒体之间的最大传输单元（以字节为单位）。  
   
      “设置备份压缩”列表  
-     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）中，选择以下[备份压缩 ](../../relational-databases/backup-restore/backup-compression-sql-server.md)值之一：  
+     在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] （或更高版本）中，选择以下 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md) 值之一：  
   
     |||  
     |-|-|  
-    |**使用默认服务器设置**|单击此选项可使用服务器级别默认值。 此默认值可通过 **backup compression default** 服务器配置选项进行设置。 有关如何查看此选项当前设置的信息，请参阅[查看或配置 backup compression default 服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-    |**压缩备份**|单击此选项可压缩备份，而不考虑服务器级别默认值。<br /><br /> **\*\*重要说明\*\***默认情况下，压缩会大大提高 CPU 使用率，并且压缩进程占用的额外 CPU 可能会对并发操作造成不利影响。 因此，您可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受资源调控器限制。 有关详细信息，请参阅[使用资源调控器限制备份压缩的 CPU 使用率 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)。|  
+    |**使用默认服务器设置**|单击此选项可使用服务器级别默认值。 此默认值可通过 **backup compression default** 服务器配置选项进行设置。 有关如何查看此选项当前设置的信息，请参阅 [查看或配置 backup compression default 服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+    |**压缩备份**|单击此选项可压缩备份，而不考虑服务器级别默认值。<br /><br /> **\*\* 重要说明 \*\*** 默认情况下，压缩会大大提高 CPU 使用率，并且压缩进程占用的额外 CPU 可能会对并发操作造成不利影响。 因此，您可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受资源调控器限制。 有关详细信息，请参阅本主题后面的 [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制。|  
     |**不压缩备份**|单击此选项可创建未压缩的备份，而不考虑服务器级别默认值。|  
   
 2.  在“定义备份数据库（差异）任务”页上，选择要对其运行部分备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP DATABASE … WITH DIFFERENTIAL` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  完成后，单击 **“下一步”**。  
   
 3.  在“定义备份数据库（事务日志）任务”页上，选择要对事务日志运行备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP LOG` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 完成后，单击 **“下一步”**。  
   
-#### 定义清除维护任务  
+#### <a name="define-maintenance-cleanup-tasks"></a>定义清除维护任务  
   
 1.  在 **“定义清除维护任务”** 页上，指定要作为维护计划的一部分删除的文件类型，包括由维护计划文件和数据库备份文件创建的文本报告。 此任务使用 `EXEC xp_delete_file` 语句。 完成后，单击 **“下一步”**。  
   
@@ -464,7 +468,7 @@ caps.handback.revision: 43
      **删除文件，如果其保留时间超过**  
      通过提供数字和时间单位（“小时”、“天”、“周”、“月”或“年”），指定要删除的文件所保留的最短时间。 保留时间长于指定时间长度的文件将被删除。  
   
-#### 选择报告选项  
+#### <a name="select-report-options"></a>选择报告选项  
   
 1.  在 **“选择报告选项”** 页中，选择对维护计划操作报表进行保存或分发的选项。 此任务使用 `EXEC sp_notify_operator` 语句。 有关详细信息，请参阅 [sp_notify_operator (Transact SQL)](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)。完成后，单击“下一步”。  
   
@@ -485,7 +489,7 @@ caps.handback.revision: 43
      **邮件配置文件**  
      指定定义电子邮件发件人的配置文件。  
   
-#### 完成该向导  
+#### <a name="complete-the-wizard"></a>完成该向导  
   
 1.  在 **“完成该向导”** 页上，验证在先前页上所做的选择，然后单击 **“完成”**。  
   
@@ -517,7 +521,9 @@ caps.handback.revision: 43
      **将报告复制到剪贴板**  
      将向导的进度报告结果复制到剪贴板。  
   
-     **将报告作为电子邮件发送**  
+     **“将报告作为电子邮件发送”**  
      将向导的进度报告结果复制到电子邮件。  
   
   
+
+

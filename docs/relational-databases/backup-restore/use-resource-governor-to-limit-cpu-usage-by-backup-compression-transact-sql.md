@@ -1,31 +1,35 @@
 ---
-title: "使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份压缩 [SQL Server], 资源调控器"
-  - "备份压缩 [SQL Server], CPU 使用量"
-  - "压缩 [SQL Server], 备份压缩"
-  - "备份 [SQL Server], 压缩"
-  - "资源调控器, 备份压缩"
+title: "使用资源调控器限制备份压缩的 CPU 使用率 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  默认情况下，使用压缩进行备份会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，当发生 CPU 争用时，此备份的 CPU 使用率受 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 限制。 本主题介绍了这样一种方案：通过将特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的会话映射到限制 CPU 使用的资源调控器工作负荷组，来对这些会话进行分类。  
+  默认情况下，使用压缩进行备份会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，当发生 CPU 争用时，此备份的 CPU 使用率受[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 限制。 本主题介绍了这样一种方案：通过将特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的会话映射到限制 CPU 使用的资源调控器工作负荷组，来对这些会话进行分类。  
   
 > [!IMPORTANT]  
 >  在具体的资源调控器方案中，会话分类可能基于用户名、应用程序名称或者可以区分连接的其他任何因素。 有关详细信息，请参阅 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) 和 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)。  
@@ -45,7 +49,7 @@ caps.handback.revision: 25
   
  下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)”。  
   
-### 设置用于对会话进行分类的登录名和数据库用户  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>设置用于对会话进行分类的登录名和数据库用户  
   
 1.  创建一个用于创建低优先级压缩备份的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 25
   
      有关详细信息，请参阅 [GRANT 数据库主体权限 (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)。  
   
-### 示例 A：设置登录名和用户 (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>示例 A：设置登录名和用户 (Transact-SQL)  
  只有当您选择为低优先级备份创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和用户时，下面的示例才对您有意义。 或者，如果存在适当的登录名和用户，也可以使用现有的登录名和用户。  
   
 > [!IMPORTANT]  
@@ -104,7 +108,7 @@ GO
 ##  <a name="configure_RG"></a> 配置资源调控器以限制 CPU 使用  
   
 > [!NOTE]  
->  确保资源调控器已启用。 有关详细信息，请参阅[启用 Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)。  
+>  确保资源调控器已启用。 有关详细信息，请参阅 [启用 Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)。  
   
  在本资源调控器方案中，配置过程包括以下基本步骤：  
   
@@ -112,7 +116,7 @@ GO
   
 2.  创建并配置一个使用该池的资源调控器工作负荷组。  
   
-3.  创建一个*分类器函数*，它是一个用户定义函数 (UDF)，其返回值供 Resource Governor 用来对会话进行分类，以便将它们路由到适当的工作负荷组。  
+3.  创建一个 *分类器函数*，它是一个用户定义函数 (UDF)，其返回值供 Resource Governor 用来对会话进行分类，以便将它们路由到适当的工作负荷组。  
   
 4.  将分类器函数注册到资源调控器。  
   
@@ -131,7 +135,7 @@ GO
   
 -   [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### 配置用于限制 CPU 使用的资源调控器 (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>配置用于限制 CPU 使用的资源调控器 (Transact-SQL)  
   
 1.  发出 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 语句以创建资源池。 此过程的示例使用以下语法：  
   
@@ -170,7 +174,7 @@ GO
     -   [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)  
   
         > [!IMPORTANT]  
-        >  SUSER_NAME 仅仅是可用在分类器函数中的几个系统函数中的一个。 有关详细信息，请参阅[创建和测试分类器用户定义函数](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)。  
+        >  SUSER_NAME 仅仅是可用在分类器函数中的几个系统函数中的一个。 有关详细信息，请参阅 [创建和测试分类器用户定义函数](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)。  
   
     -   [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### 示例 B：配置资源调控器 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>示例 B：配置资源调控器 (Transact-SQL)  
  下例在一个事务内执行下列步骤：  
   
 1.  创建 `pMAX_CPU_PERCENT_20` 资源池。  
@@ -262,7 +266,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> 使用具有有限 CPU 的会话压缩备份  
  要在限定了最大 CPU 的会话中创建压缩备份，应当以分类器函数中指定的用户身份登录。 在备份命令中，指定 WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 或选择**压缩备份** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])。 若要创建压缩数据库备份，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
-### 示例 C：创建压缩备份 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  
  下面的 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 示例在一个采用新格式的备份文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中创建 `Z:\SQLServerBackups\AdvWorksData.bak`数据库的压缩完整备份。  
   
 ```tsql  
@@ -278,8 +282,8 @@ GO
   
  [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和测试分类器用户定义函数](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

@@ -1,25 +1,29 @@
 ---
 title: "事务复制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务复制, 关于事务复制"
-  - "事务复制"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, about transactional replication
+- transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 事务复制
+# <a name="transactional-replication"></a>事务复制
   事务复制通常从发布数据库对象和数据的快照开始。 创建了初始快照后，接着在发布服务器上所做的数据更改和架构修改通常在修改发生时（几乎实时）便传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器，因此，在发布内部可以保证事务的一致性。  
   
  事务复制通常用于服务器到服务器环境中，在以下各种情况下适合采用事务复制：  
@@ -32,7 +36,7 @@ caps.handback.revision: 38
   
 -   发布服务器有大量的插入、更新和删除活动。  
   
--   发布服务器或订阅服务器不是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（例如，Oracle）。  
+-   发布服务器或订阅服务器不是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（例如，Oracle）。  
   
  默认情况下，事务发布的订阅服务器应视为只读，因为更改不会传播回发布服务器。 但是，事务复制确实提供了允许在订阅服务器上进行更新的选项。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 38
   
  在向订阅服务器分发并应用快照时，只有那些等待初始快照的订阅服务器才会受到影响。 该发布的其他订阅服务器（已经初始化的订阅服务器）不会受到影响。  
   
-## 并发快照处理  
+## <a name="concurrent-snapshot-processing"></a>并发快照处理  
  在快照生成期间，快照复制会在作为复制的一部分发布的所有表上放置共享锁。 这样可以防止更新正在发布的表。 并发快照处理（事务复制的默认方式）在整个快照生成过程中并不保留共享锁，因而允许用户在复制创建初始快照文件时继续工作，而不会被打断。  
   
 ##  <a name="SnapshotAgent"></a> 快照代理  
@@ -73,9 +77,9 @@ caps.handback.revision: 38
  生成快照文件后，可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 资源管理器在快照文件夹中查看这些快照文件。  
   
 ##  <a name="LogReaderAgent"></a> 修改数据修改与日志读取器代理  
- 日志读取器代理在分发服务器中运行；它通常连续运行，但也可以按照您制定的计划运行。 执行日志读取器代理时，它首先读取发布事务日志（该日志与执行一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库引擎操作期间用于事务跟踪和恢复的数据库日志相同），并标识任何 INSERT、UPDATE 以及 DELETE 语句，或者对已标记为要复制的事务进行的其他数据修改。 然后，该代理将这些事务批量复制到分发服务器中的分发数据库中。 日志读取器代理使用内部存储的过程 **sp_replcmds** 获取下一个标记为复制日志中的命令集。 这样，分发数据库就成为一个存储-转发队列，从该队列中将更改发送到订阅服务器中。 只有已提交的事务才能发送到分发数据库中。  
+ 日志读取器代理在分发服务器中运行；它通常连续运行，但也可以按照您制定的计划运行。 执行日志读取器代理时，它首先读取发布事务日志（该日志与执行一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库引擎操作期间用于事务跟踪和恢复的数据库日志相同），并标识任何 INSERT、UPDATE 以及 DELETE 语句，或者对已标记为要复制的事务进行的其他数据修改。 然后，该代理将这些事务批量复制到分发服务器中的分发数据库中。 日志读取器代理使用内部存储过程 **sp_replcmds** 从日志中获取标记为要复制的下一个命令集。 这样，分发数据库就成为一个存储-转发队列，从该队列中将更改发送到订阅服务器中。 只有已提交的事务才能发送到分发数据库中。  
   
- 当整批事务都成功写入分发数据库之后，将提交这批事务。 以下命令传输到分发服务器上每个批的提交后，日志读取器代理调用 **sp_repldone** 以标记最终完成复制的。 最后，代理在事务日志中标记可以清除的行。 仍在等待复制的行不会被清除。  
+ 当整批事务都成功写入分发数据库之后，将提交这批事务。 在每一批命令都提交到分发服务器后，日志读取器代理将调用 **sp_repldone** 以标记最终完成复制的位置。 最后，代理在事务日志中标记可以清除的行。 仍在等待复制的行不会被清除。  
   
  事务命令在传播到所有订阅服务器或达到最大分发保持期之前，一直存储在分发数据库中。 订阅服务器按事务在发布服务器中应用的相同顺序接收事务。  
   

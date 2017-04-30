@@ -1,32 +1,36 @@
 ---
 title: "Transact-SQL 调试器信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器,“局部变量”窗口"
-  - "Transact-SQL 调试器,“监视”窗口"
-  - "Transact-SQL 调试器,“线程”窗口"
-  - "Transact-SQL 调试器,“调用堆栈”窗口"
-  - "Transact-SQL 调试器, 快速监视"
-  - "Transact-SQL 调试器, 查看信息"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, Locals Window
+- Transact-SQL debugger, Watch Window
+- Transact-SQL debugger, Threads Window
+- Transact-SQL debugger, Call Stack Window
+- Transact-SQL debugger, QuickWatch
+- Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 706952bff0744cb88d12a624ba4c68363cb85652
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 调试器信息
+# <a name="transact-sql-debugger---information"></a>Transact-SQL 调试器 - 信息
   每次当调试器对特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句暂停执行时，您可以使用不同调试器窗口来查看当前执行状态。  
   
-## 调试器窗口  
+## <a name="debugger-windows"></a>调试器窗口  
  在调试器模式下，调试器会在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主窗口底部打开两个窗口。 调试器在这两个窗口中显示其所有信息。 每个调试器窗口都有选项卡，可选择这些选项卡以控制在窗口中显示哪些信息。 左侧调试器窗口包含 **“局部变量”**、 **“监视1”**、 **“监视2”**、 **“监视3”**和 **“监视4”** 选项卡。 右侧调试器窗口包含 **“调用堆栈”**、 **“线程”**、 **“断点”**、 **“命令窗口”**和 **“输出”** 选项卡。  
   
 > [!NOTE]  
@@ -38,7 +42,7 @@ caps.handback.revision: 15
   
 -   在 **“调试”** 工具栏上，单击 **“断点”**，然后选择所需窗口。  
   
-## Transact-SQL 表达式  
+## <a name="transact-sql-expressions"></a>Transact-SQL 表达式  
  表达式是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子句，其计算结果为单个标量值，例如变量或参数。 左侧的调试器窗口可以显示当前赋给表达式的数据值，这些值最多可在 5 个选项卡或窗口中显示： **“局部变量”、“监视1”**、 **“监视2”**、 **“监视3”**和 **“监视4”**。  
   
  **“局部变量”** 窗口显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器当前作用域中局部变量的信息。 调试器在代码的不同部分运行时， **“局部变量”** 窗口中列出的表达式集也会发生变化。  
@@ -63,10 +67,10 @@ caps.handback.revision: 15
   
  在调试模式中，当您将鼠标指针移至某个标识符上方时，将弹出 **“快速信息”** ，显示表达式的名称及其当前值。 有关详细信息，请参阅[快速信息 (IntelliSense)](../../relational-databases/scripting/quick-info-intellisense.md)。  
   
-## 断点  
- 可以使用 **“断点”** 窗口来查看和管理当前设置的断点。 有关详细信息，请参阅[逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
+## <a name="breakpoints"></a>断点  
+ 可以使用 **“断点”** 窗口来查看和管理当前设置的断点。 有关详细信息，请参阅 [逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)。  
   
-## 调用堆栈  
+## <a name="call-stacks"></a>调用堆栈  
  “调用堆栈”窗口显示当前执行位置，以及关于执行如何从原始编辑器窗口开始，通过所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块（函数、存储过程或触发器），到达当前执行位置的信息。 **“调用堆栈”** 窗口中的每一行称为一个堆栈帧，表示以下任何一项：  
   
 -   当前的执行位置。  
@@ -89,19 +93,19 @@ caps.handback.revision: 15
   
  当你右键单击某个堆栈帧并选择“转到源代码”时，该帧的代码会显示在“查询编辑器”窗口中。 但是，该帧不会成为当前帧， **“局部变量”**、 **“监视”**和 **“快速监视”** 窗口中的内容也不会更改。  
   
-## 系统信息和 Transact-SQL 结果  
+## <a name="system-information-and-transact-sql-results"></a>系统信息和 Transact-SQL 结果  
  调试器在 **“输出”** 窗口中列出其状态和事件消息。 其中包括调试器何时附加到其他进程或调试器线程何时结束等信息。  
   
  处于调试模式下时， **“结果”** 和 **“消息”** 选项卡在查询编辑器中仍处于活动状态。 **“结果”** 选项卡继续显示调试会话过程中执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果集。 **“消息”** 选项卡继续显示系统消息，例如 *xx* 行受影响，以及 PRINT 和 RAISERROR 语句的输出。  
   
-## 另请参阅  
- [“局部变量”窗口](../../relational-databases/scripting/locals-window.md)   
- [“监视”窗口](../../relational-databases/scripting/watch-window.md)   
- [“快速监视”对话框](../../relational-databases/scripting/quickwatch-dialog-box.md)   
- [“断点”窗口](../../relational-databases/scripting/breakpoints-window.md)   
- [“调用堆栈”窗口](../../relational-databases/scripting/call-stack-window.md)   
- [“线程”窗口](../../relational-databases/scripting/threads-window.md)   
- [输出窗口](../../relational-databases/scripting/output-window.md)   
+## <a name="see-also"></a>另请参阅  
+ [“局部变量”窗口](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
+ [“监视”窗口](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
+ [“快速监视”对话框](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
+ [“断点”窗口](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
+ [“调用堆栈”窗口](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [“线程”窗口](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
+ [输出窗口](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

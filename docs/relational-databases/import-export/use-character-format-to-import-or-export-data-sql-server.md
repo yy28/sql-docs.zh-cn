@@ -1,31 +1,35 @@
 ---
 title: "使用字符格式导入或导出数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据格式 [SQL Server]，字符"
-  - "字符格式 [SQL Server]"
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], character
+- character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用字符格式导入或导出数据 (SQL Server)
+# <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
 将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
 
 采用字符格式后，所有列均应用字符数据格式。 如果要将数据用于其他程序（如电子表格程序），或需要通过其他数据库供应商（如 Oracle）将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，则以字符格式存储信息会非常有用。  
   
 > [!NOTE]
->  当你在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间批量传输数据，且数据文件包含 Unicode 字符数据，但不包含任何扩展字符或 DBCS 字符时，请使用 Unicode 字符格式。 有关详细信息，请参阅[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。
+>  当你在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间批量传输数据，且数据文件包含 Unicode 字符数据，但不包含任何扩展字符或 DBCS 字符时，请使用 Unicode 字符格式。 有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。
   
 |本主题内容：|
 |---|
@@ -51,7 +55,7 @@ caps.handback.revision: 42
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   
--   存储在字符格式文件中的所有 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 当数据导入到 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 列中时，该数据是以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式导入的。 而导入到数据类型不是 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 的列中时，数据将通过隐式转换从 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+-   存储在字符格式文件中的所有 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式。 当数据导入到 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 列中时，该数据是以 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)格式导入的。 而导入到数据类型不是 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 的列中时，数据将通过隐式转换从 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
 -   [bcp 实用工具](../../tools/bcp-utility.md)将 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值作为字符格式数据文件导出时，该数据文件小数点后保留四位数字且不带诸如逗号分隔符之类的任何数字分组符号。 例如，包含值 1,234,567.123456 的 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 列将以字符串 1234567.1235 的形式批量导出到数据文件中。  
   
@@ -66,10 +70,10 @@ caps.handback.revision: 42
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
 |OPENROWSET|N/A|必须使用格式化文件|
   
- \*若要将字符 (**-c**) 数据加载到与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式中，请使用 **-V** 开关。 有关详细信息，请参阅[导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要将字符 (**-c**) 数据加载到与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式中，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
    
 > [!NOTE]
->  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅[用于导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
+>  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
 
 ## 示例测试条件<a name="etc"></a>  
 本主题中的示例基于下面定义的表和格式化文件。
@@ -101,7 +105,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
-SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  下面的命令基于 `myChar` 的架构使用 [bcp 实用工具](../../tools/bcp-utility.md)生成非 XML 格式化文件 `myChar.fmt`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据，**T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
+SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myChar.fmt`生成非 XML 格式化文件 `myChar`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
@@ -208,11 +212,12 @@ SELECT * FROM TestDatabase.dbo.myChar;
   
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 另请参阅  
- [bcp 实用工具](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
+

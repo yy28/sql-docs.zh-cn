@@ -1,25 +1,29 @@
 ---
 title: "设置或更改列排序规则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tempdb 数据库 [SQL Server], 排序规则"
-  - "排序规则 [SQL Server], 列"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tempdb database [SQL Server], collations
+- collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2329cf91fb56aaefe0180d0862f8b4d127cd9489
+ms.lasthandoff: 04/11/2017
+
 ---
-# 设置或更改列排序规则
+# <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
   可以覆盖 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**和 **ntext** 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
   
 -   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)的 COLLATE 子句。 例如：  
@@ -35,9 +39,9 @@ caps.handback.revision: 29
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 COLLATE 子句。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
--   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中的 **Column.Collation** 属性。  
+-   使用 **管理对象 (SMO) 中的** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性。  
   
  如果下列其中之一当前正在引用一个列，则无法更改该列的排序规则。  
   
@@ -51,15 +55,15 @@ caps.handback.revision: 29
   
 -   FOREIGN KEY 约束  
   
- 使用 **tempdb** 时，[COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb** 的排序规则。  
+ 使用 **tempdb**时， [COLLATE](~/t-sql/statements/collations.md) 子句包括了 *database_default* 选项，以此来指定对于该连接，临时表中的列使用当前用户数据库的默认排序规则而非 **tempdb**的排序规则。  
   
-## 排序规则和文本列  
+## <a name="collations-and-text-columns"></a>排序规则和文本列  
  如果 **text** 列的排序规则不同于数据库默认排序规则的代码页，则可以在该列中插入值或更新该列中的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会隐式地将这些值转换为该列的排序规则。  
   
-## 排序规则和 tempdb  
+## <a name="collations-and-tempdb"></a>排序规则和 tempdb  
  每次启动 **时，都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。该数据库与 **model** 数据库具有相同的默认排序规则。 这通常与实例的默认排序规则相同。 如果为创建的用户数据库指定的默认排序规则与 **model**的排序规则不同，则该用户数据库与 **tempdb**的默认排序规则也不同。 所有临时存储过程或临时表都创建和存储在 **tempdb**中。 这意味着临时表中的所有隐式列以及临时存储过程中的所有强制默认常量、变量和参数都具有与可比较对象（在永久表和存储过程中创建）不同的排序规则。  
   
- 这将导致用户定义的数据库和系统数据库对象之间的排序规则出现互相不匹配的问题。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用 Latin1_General_CS_AS 排序规则，而您执行以下语句：  
+ 这将导致用户定义的数据库和系统数据库对象之间的排序规则出现互相不匹配的问题。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用 Latin1_General_CS_AS 排序规则，而您执行以下语句：  
   
 ```  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
@@ -67,7 +71,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- 在此系统中，**tempdb** 数据库使用代码页 1252 的 Latin1_General_CS_AS 排序规则，`TestDB` 和 `TestPermTab.Col1` 使用代码页 1257 的 `Estonian_CS_AS` 排序规则。 例如：  
+ 在此系统中， **tempdb** 数据库使用代码页 1252 的 Latin1_General_CS_AS 排序规则， `TestDB` 和 `TestPermTab.Col1` 使用代码页 1257 的 `Estonian_CS_AS` 排序规则。 例如：  
   
 ```  
 USE TestDB;  
@@ -80,7 +84,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- 在上述示例中，**tempdb** 数据库使用 Latin1_General_CS_AS 排序规则，`TestDB` 和 `TestTab.Col1` 使用 `Estonian_CS_AS` 排序规则。 例如：  
+ 在上述示例中， **tempdb** 数据库使用 Latin1_General_CS_AS 排序规则， `TestDB` 和 `TestTab.Col1` 使用 `Estonian_CS_AS` 排序规则。 例如：  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
@@ -108,9 +112,10 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [设置或更改数据库排序规则](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

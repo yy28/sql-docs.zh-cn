@@ -1,25 +1,29 @@
 ---
-title: "SQL Server 代理中的 JobSteps 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "JobSteps 对象"
-  - "SQLAgent:JobSteps"
+title: "SQL Server 代理 - JobSteps 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- JobSteps object
+- SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61884b4353e065c60f9489eca33a8979cf7d782f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 代理中的 JobSteps 对象
+# <a name="sql-server-agent-jobsteps-object"></a>SQL Server 代理中的 JobSteps 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中的 **JobSteps** 性能对象包含用于报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的信息的性能计数器。 下表列出了此对象包含的计数器。  
   
  下表列出了 **SQLAgent:JobSteps** 计数器。  
@@ -46,11 +50,11 @@ caps.handback.revision: 23
 |**PowerShell**|有关使用 **PowerShell** 子系统的作业步骤的信息。|  
 |**QueueReader**|有关使用 **QueueReader** 子系统的作业步骤的信息。|  
 |**快照**|有关使用 **Snapshot** 子系统的作业步骤的信息。|  
-|**TSQL**|有关执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的作业步骤的信息。|  
+|**TSQL**|有关执行 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤的信息。|  
   
-## 另请参阅  
- [管理作业步骤](../../ssms/agent/manage-job-steps.md)   
- [使用性能对象](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [管理作业步骤](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
+ [使用性能对象](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,33 +1,37 @@
 ---
 title: "使用插入的和删除的表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "插入的表"
-  - "UPDATE 语句 [SQL Server], DML 触发器"
-  - "DELETE 语句 [SQL Server], DML 触发器"
-  - "INSTEAD OF 触发器"
-  - "删除的表"
-  - "INSERT 语句 [SQL Server], DML 触发器"
-  - "DML 触发器, 删除或插入的表"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserted tables
+- UPDATE statement [SQL Server], DML triggers
+- DELETE statement [SQL Server], DML triggers
+- INSTEAD OF triggers
+- deleted tables
+- INSERT statement [SQL Server], DML triggers
+- DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用插入的和删除的表
+# <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
   DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
   
- 在 DML 触发器中，inserted 和 deleted 表主要用于执行以下操作：    
+ 在 DML 触发器中，inserted 和 deleted 表主要用于执行以下操作：  
   
 -   扩展表之间的引用完整性。  
   
@@ -46,9 +50,9 @@ caps.handback.revision: 35
  在设置触发器条件时，应使用激发触发器的操作相应的插入的和删除的表。 尽管在测试 INSERT 时引用删除的表或在测试 DELETE 时引用插入的表不会导致任何错误，但在这些情况下，这些触发器测试表将不包含任何行。  
   
 > [!NOTE]  
->  如果触发器操作取决于一个数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
+>  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、**ntext** 或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)**、 **nvarchar(max)**和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在触发器中使用插入的表以强制实施业务规则的示例**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 35
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
-## 在 INSTEAD OF 触发器中使用插入的和删除的表  
+## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>在 INSTEAD OF 触发器中使用插入的和删除的表  
  传递给为表定义的 INSTEAD OF 触发器的插入的和删除的表与传递给 AFTER 触发器的插入的和删除的表遵守相同的规则。 插入的和删除的表的格式与在其上定义 INSTEAD OF 触发器的表的格式相同。 插入的和删除的表中的每一列都直接映射到基表中的列。  
   
  以下是关于引用带 INSTEAD OF 触发器的表的 INSERT 或 UPDATE 语句何时必须提供列值的规则，当引用的表不带 INSTEAD OF 触发器时也一样：  
@@ -71,7 +75,7 @@ caps.handback.revision: 35
   
 -   对于除计算列、标识列或 **timestamp** 列以外的任何列，任何允许空值的列或具有 DEFAULT 定义的 NOT NULL 列的值都是可选的。  
   
- 当 INSERT、UPDATE 或 DELETE 语句引用具有 INSTEAD OF 触发器的视图时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将调用该触发器，而不是对任何表采取任何直接操作。 即使插入的和删除的表中为该视图生成的信息格式不同于基表中的数据格式，触发器也必须使用插入的和删除的表中的信息来生成实现基表中请求的操作所需的任何语句。  
+ 当 INSERT、UPDATE 或 DELETE 语句引用具有 INSTEAD OF 触发器的视图时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将调用该触发器，而不是对任何表采取任何直接操作。 即使插入的和删除的表中为该视图生成的信息格式不同于基表中的数据格式，触发器也必须使用插入的和删除的表中的信息来生成实现基表中请求的操作所需的任何语句。  
   
  传递给为视图定义的 INSTEAD OF 触发器的插入的和删除的表的格式与为该视图定义的 SELECT 语句的选择列表的格式一致。 例如：  
   
@@ -86,7 +90,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 此视图的结果集有三列：一个 **int** 列和两个 **nvarchar** 列。 传递给视图上定义的 INSTEAD OF 触发器的插入和删除的表也有一个名为 `BusinessEntityID` 的 **int** 列、一个名为 `LName` 的 **nvarchar** 列和一个名为 `FName` 的 **nvarchar** 列。  
+ 此视图的结果集有三列：一个 **int** 列和两个 **nvarchar** 列。 传递给视图上定义的 INSTEAD OF 触发器的插入和删除的表也有一个名为 **的** int `BusinessEntityID`列、一个名为 **的** nvarchar `LName`列和一个名为 **的** nvarchar `FName`列。  
   
  视图的选择列表还可以包含不直接映射到单个基表列的表达式。 一些视图表达式（例如常量调用或函数调用）可能不引用任何列，并且这些表达式会被忽略。 复杂的表达式会引用多个列，但在插入的和删除的表中，每个插入的行仅有一个相应的值。 如果视图中的简单表达式引用包含复杂表达式的计算列，则这些简单表达式也有同样的问题。 视图上的 INSTEAD OF 触发器必须处理这些类型的表达式。  
   

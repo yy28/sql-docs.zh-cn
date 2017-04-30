@@ -1,31 +1,35 @@
 ---
-title: "从存储过程中返回数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存储过程 [SQL Server], 返回数据"
-  - "从存储过程中返回数据"
+title: "从存储过程返回数据 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], returning data
+- returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.lasthandoff: 04/11/2017
+
 ---
-# 从存储过程中返回数据
+# <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
   有两种方法可以将结果集或数据从过程返回给调用程序：输出参数和返回代码。 本主题提供了有关这两种方法的信息。  
   
-## 使用输出参数返回数据  
+## <a name="returning-data-using-an-output-parameter"></a>使用输出参数返回数据  
  如果在过程定义中为参数指定 OUTPUT 关键字，则过程在退出时可将该参数的当前值返回给调用程序。 若要将参数值保存在可在调用程序中使用的变量中，调用程序在执行过程时必须使用 OUTPUT 关键字。 有关可用作输出参数的数据类型的详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
-### 输出参数的示例  
+### <a name="examples-of-output-parameter"></a>输出参数的示例  
  以下示例显示有一个输入参数和一个输出参数的过程。 `@SalesPerson` 参数将接收由调用程序指定的输入值。 SELECT 语句使用传递给输入参数的值来获取正确的 `SalesYTD` 值。 SELECT 语句还将该值赋给 `@SalesYTD` 输出参数，该参数在过程退出时将值返回给调用程序。  
   
 ```  
@@ -69,13 +73,13 @@ GO
   
  如果在调用过程时为参数指定 OUTPUT，而在过程定义中该参数又不是用 OUTPUT 定义的，那么将收到一条错误消息。 但是，在执行过程时，可以执行带有输出参数的过程而不指定 OUTPUT。 这样不会返回错误，但将无法在调用程序中使用输出值。  
   
-### 在 OUTPUT 参数中使用 cursor 数据类型  
+### <a name="using-the-cursor-data-type-in-output-parameters"></a>在 OUTPUT 参数中使用 cursor 数据类型  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程只能将 **cursor** 数据类型用于 OUTPUT 参数。 如果为某个参数指定了 **cursor** 数据类型，在过程定义中必须为该参数指定 VARYING 和 OUTPUT 关键字。 可以将参数指定为仅限 OUTPUT，但是如果在参数声明中指定了 VARYING 关键字，则数据类型必须为 **cursor** 并且也必须指定 OUTPUT 关键字。  
   
 > [!NOTE]  
->  **cursor** 数据类型不能通过数据库 API（例如 OLE DB、ODBC、ADO 和 DB-Library）绑定到应用程序变量上。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行过程，所以带有 **cursor** OUTPUT 参数的过程不能通过数据库 API 调用。 只有将 **cursor** OUTPUT 变量分配给 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部 **cursor** 变量时，才可以通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、过程或触发器调用这些过程。  
+>  **cursor** 数据类型不能通过数据库 API（例如 OLE DB、ODBC、ADO 和 DB-Library）绑定到应用程序变量上。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行过程，所以带有 **cursor** OUTPUT 参数的过程不能通过数据库 API 调用。 只有将 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **OUTPUT 变量分配给** 局部 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **变量时，才可以通过** 批处理、过程或触发器调用这些过程。  
   
-### cursor 输出参数的规则  
+### <a name="rules-for-cursor-output-parameters"></a>cursor 输出参数的规则  
  在执行过程时，以下规则适用于 **cursor** 输出参数：  
   
 -   对于只进游标，游标的结果集中返回的行只是那些过程执行结束时处于或超出游标位置的行，例如：  
@@ -102,8 +106,8 @@ GO
     > [!NOTE]  
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
-### cursor 输出参数的示例  
- 在下面的示例中，创建了使用 **cursor** 数据类型指定输出参数 `@currency`_`cursor` 的过程。 然后在批处理中调用该过程。  
+### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
+ 在下面的示例中，创建了使用 `@currency`cursor`cursor` 数据类型指定输出参数 **_** 的过程。 然后在批处理中调用该过程。  
   
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   
@@ -143,8 +147,8 @@ GO
   
 ```  
   
-## 使用返回代码返回数据  
- 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，数据类型 **int** 的赋值变量 `@result` 用于存储来自过程 `my_proc` 的返回代码，如：  
+## <a name="returning-data-using-a-return-code"></a>使用返回代码返回数据  
+ 过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，数据类型 `@result` int **的赋值变量** 用于存储来自过程 `my_proc`的返回代码，如：  
   
 ```  
 DECLARE @result int;  
@@ -153,7 +157,7 @@ EXECUTE @result = my_proc;
   
  返回代码通常用在过程内的控制流块中，以便为每种可能的错误情况设置返回代码值。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句后使用 @@ERROR 函数，来检测该语句执行过程中是否有错误发生。  
   
-### 返回代码的示例  
+### <a name="examples-of-return-codes"></a>返回代码的示例  
  下面的示例显示了带有错误处理设置（为各种错误设置特殊返回代码值）的 `usp_GetSalesYTD` 过程。 下表显示了由过程分配给每个可能错误的整数值，以及每个值的相应含义。  
   
 |返回代码值|含义|  
@@ -252,7 +256,7 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

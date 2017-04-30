@@ -1,31 +1,35 @@
 ---
-title: "使用带有系统版本的内存优化临时表 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用系统版本控制的内存优化临时表 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用带有系统版本的内存优化临时表
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>使用带有系统版本的内存优化临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题介绍了使用带有系统版本的内存优化临时表与使用带有系统版本的基于磁盘的临时表有何不同。  
   
 > [!NOTE]  
->  内存优化临时表仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+>  内存优化临时表仅适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，而不适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-## 发现元数据  
+## <a name="discovering-metadata"></a>发现元数据  
  若要发现带有系统版本的内存优化临时表的元数据，你需要合并 [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 和 [sys.internal_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 中的信息。 带有系统版本的临时表会显示为内部内存中历史记录表的 parent_object_id。  
   
  此示例展示了如何查询和联接这些表。  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## 修改数据  
+## <a name="modifying-data"></a>修改数据  
  可以通过本机编译的存储过程来修改带有系统版本的内存优化临时表，这样你就能将非内存优化临时表转换成带有系统版本的内存优化临时表，并保留现有的本机存储过程。  
   
  此示例展示了如何在本机编译模块中修改以前创建的表。  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [创建系统版本控制的内存优化临时表](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [监视系统版本控制型内存优化临时表](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

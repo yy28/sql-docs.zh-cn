@@ -1,28 +1,32 @@
 ---
 title: "查看或更改数据库的属性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "显示数据库"
-  - "数据库查看 [SQL Server]"
-  - "数据库 [SQL Server]，查看"
-  - "查看数据库"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying databases
+- database viewing [SQL Server]
+- databases [SQL Server], viewing
+- viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看或更改数据库的属性
+# <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的属性。 更改数据库属性后，修改内容将立即生效。  
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看或更改数据库的属性  
+#### <a name="to-view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性  
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 40
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  Transact-SQL 提供了许多用于查看和更改数据库属性的不同方法。 若要查看数据库属性，可以使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数和 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。 若要更改数据库属性，可以使用适用于你环境的 ALTER DATABASE 语句版本：[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要查看数据库范围属性，使用 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图；若要更改数据库范围属性，则使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 语句。  
   
-#### 使用 DATABASEPROPERTYEX 函数查看数据库属性  
+#### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>使用 DATABASEPROPERTYEX 函数查看数据库属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 40
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
-#### 通过查询 sys.databases 查看数据库的属性  
+#### <a name="to-view-the-properties-of-a-database-by-querying-sysdatabases"></a>通过查询 sys.databases 查看数据库的属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
@@ -90,13 +94,13 @@ caps.handback.revision: 40
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### 通过查询 sys.databases_scoped_configuration 查看数据库范围的配置的属性  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>通过查询 sys.databases_scoped_configuration 查看数据库范围的配置的属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例通过查询 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图来查看当前数据库的多个属性。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例查询 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图来查看当前数据库的多个属性。  
   
     ```tsql  
     SELECT configuration_id, name, value, value_for_secondary  
@@ -105,7 +109,7 @@ caps.handback.revision: 40
   
      有关更多示例，请参阅 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
   
-#### 使用 ALTER DATABASE 更改 SQL Server 2016 数据库的属性  
+#### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>使用 ALTER DATABASE 更改 SQL Server 2016 数据库的属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 40
   
      [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
-#### 使用 ALTER DATABASE SCOPED CONFIGURATION 更改数据库范围的属性  
+#### <a name="to-change-the-database-scoped-properties-using-alter-database-scoped-configuration"></a>使用 ALTER DATABASE SCOPED CONFIGURATION 更改数据库范围的属性  
   
 1.  连接到 SQL Server 实例中的数据库。  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 40
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -143,3 +147,4 @@ caps.handback.revision: 40
 
   
   
+

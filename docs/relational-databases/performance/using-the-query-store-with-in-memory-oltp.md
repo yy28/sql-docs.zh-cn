@@ -1,25 +1,29 @@
 ---
-title: "通过内存中 OLTP 使用查询存储 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查询存储, 内存中"
+title: "通过内存中 OLTP 使用 Query Store | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# 通过内存中 OLTP 使用查询存储
+# <a name="using-the-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 使用查询存储
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储让你可以监视运行内存中 OLTP 的工作负荷的本机编译代码的性能。  
@@ -52,9 +56,9 @@ caps.handback.revision: 10
   
 -   [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 范围内的内存授予度量值并不会填充本机编译查询；它们的值始终是 0。 内存授予列有：avg_query_max_used_memory、last_query_max_used_memory、min_query_max_used_memory、max_query_max_used_memory 和 stdev_query_max_used_memory。  
   
-## 通过内存中 OLTP 启用并使用查询存储  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>通过内存中 OLTP 启用并使用查询存储  
  下面的简单示例演示了在端到端用户方案中，通过内存中 OLTP 使用查询存储。 在此示例中，我们假定为内存中 OLTP 启用了一个数据库 (`MemoryOLTP`)。  
-    有关内存优化表必备组件的详细信息，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
+    有关内存优化表必备组件的详细信息，请参阅 [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
 ```  
 USE MemoryOLTP;  
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## 另请参阅  
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>另请参阅  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

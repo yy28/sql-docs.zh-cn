@@ -1,33 +1,37 @@
 ---
 title: "使用更改跟踪 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "更改跟踪 [SQL Server], 进行更改"
-  - "更改跟踪 [SQL Server 复制], 故障排除"
-  - "更新数据 [SQL Server]"
-  - "故障排除 [SQL Server], 更改跟踪"
-  - "数据更改 [SQL Server]"
-  - "跟踪数据更改 [SQL Server]"
-  - "数据 [SQL Server], 更改"
-  - "更改跟踪 [SQL Server], 数据还原"
-  - "更改跟踪 [SQL Server], 确保获得一致的结果"
-  - "更改跟踪 [SQL Server], 处理所做的更改"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用更改跟踪 (SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   使用更改跟踪的应用程序必须能够获取跟踪的更改，将这些更改应用到其他数据存储区并更新源数据库。 本主题介绍了如何执行这些任务，以及在发生故障转移且必须从备份还原数据库时，角色更改跟踪如何进行。  
@@ -35,7 +39,7 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> 通过使用更改跟踪函数获取更改  
  介绍如何使用更改跟踪功能来获取更改以及有关对数据库所做的更改的信息。  
   
-### 关于更改跟踪函数  
+### <a name="about-the-change-tracking-functions"></a>关于更改跟踪函数  
  应用程序可以使用以下函数来获取在数据库中所做的更改以及有关这些更改的信息：  
   
  CHANGETABLE(CHANGES …) 函数  
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
      下图说明了如何使用 CHANGETABLE(CHANGES …) 获取更改。  
   
-     ![变更跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "变更跟踪查询输出的示例")  
+     ![更改跟踪查询输出的示例](../../relational-databases/track-changes/media/queryoutput.gif "更改跟踪查询输出的示例")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 函数  
  用于获取当前版本，以供下次查询更改时使用。 该版本表示上次提交的事务的版本。  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  CHANGE_TRACKING_MIN_VALID_VERSION() 函数  
  用于获取客户端能够具有的并且仍能从 CHANGETABLE() 获取有效结果的最低有效版本。 客户端应将上次同步版本与此函数返回的值进行对照检查。 如果上次同步版本低于此函数返回的版本，客户端将无法从 CHANGETABLE() 获取有效结果，而必须重新进行初始化。  
   
-### 获取初始数据  
+### <a name="obtaining-initial-data"></a>获取初始数据  
  在应用程序第一次获取更改之前，应用程序必须发送查询以获取初始数据和同步版本。 应用程序必须直接从表中获取相应的数据，然后使用 CHANGE_TRACKING_CURRENT_VERSION() 获取初始版本。 第一次获取更改时，会将此版本传递给 CHANGETABLE(CHANGES …)。  
   
  下面的示例说明了如何获取初始同步版本和初始数据集。  
@@ -73,7 +77,7 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### 使用更改跟踪函数获取更改  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用更改跟踪函数获取更改  
  若要获取表中更改的行以及有关这些更改的信息，请使用 CHANGETABLE(CHANGES…)。 例如，下面的查询获取 `SalesLT.Product` 表的更改。  
   
 ```tsql  
@@ -125,10 +129,10 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### 版本号  
+### <a name="version-numbers"></a>版本号  
  启用了更改跟踪的数据库具有一个版本计数器；在对启用了更改跟踪的表进行更改时，该计数器会随之递增。 每个更改的行都有一个关联的版本号。 将请求发送到应用程序以查询更改时，将调用一个函数以提供版本号。 该函数返回在该版本之后所做的所有更改的相关信息。 从某种意义上讲，更改跟踪版本在概念上与 **rowversion** 数据类型类似。  
   
-### 验证上次同步版本  
+### <a name="validating-the-last-synchronized-version"></a>验证上次同步版本  
  更改的相关信息将保留有限的一段时间。 时间长度是由 CHANGE_RETENTION 参数控制的，可以将该参数指定为 ALTER DATABASE 的一部分。  
   
  请注意，为 CHANGE_RETENTION 指定的时间决定了所有应用程序必须每隔多长时间从数据库中请求一次更改。 如果应用程序使用的 *last_synchronization_version* 值早于表的最低有效同步版本，该应用程序将无法执行有效的更改枚举。 这是因为，可能已清除了某些更改信息。 在应用程序使用 CHANGETABLE(CHANGES …) 获取更改之前，该应用程序必须验证计划传递给 CHANGETABLE(CHANGES …) 的 *last_synchronization_version* 值。 如果 *last_synchronization_version* 的值无效，则该应用程序必须重新初始化所有数据。  
@@ -158,14 +162,14 @@ BEGIN
 END  
 ```  
   
-### 使用列跟踪  
+### <a name="using-column-tracking"></a>使用列跟踪  
  通过使用列跟踪，应用程序可以仅获取已更改的列数据，而不是获取整个行。 例如，请考虑以下情况：某个表包含一个或多个较大但很少更改的列，并且还包含其他经常更改的列。 如果未使用列跟踪，应用程序只能确定某一行已更改并且必须同步所有数据（包括大型列数据）。 但是，通过使用列跟踪，应用程序可以确定是否更改了大型列数据，并且仅同步已更改的数据。  
   
  列跟踪信息出现在 CHANGETABLE(CHANGES …) 函数返回的 SYS_CHANGE_COLUMNS 列中。  
   
  可以使用列跟踪，以便为未更改的列返回 NULL。 如果可以将列更改为 NULL，则必须返回一个单独的列以指示是否更改了该列。  
   
- 在下面的示例中，如果 `CT_ThumbnailPhoto` 列未更改，则为该列返回 `NULL`。 该列本身也可能为 `NULL`，因为已将其更改为 `NULL`；应用程序可以使用 `CT_ThumbNailPhoto_Changed` 列来确定是否更改了该列。  
+ 在下面的示例中，如果 `CT_ThumbnailPhoto` 列未更改，则为该列返回 `NULL` 。 该列本身也可能为 `NULL` ，因为已将其更改为 `NULL` ；应用程序可以使用 `CT_ThumbNailPhoto_Changed` 列来确定是否更改了该列。  
   
 ```tsql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### 获得一致且正确的结果  
+### <a name="obtaining-consistent-and-correct-results"></a>获得一致且正确的结果  
  若要获取更改的表数据，您需要执行多个步骤。 请注意，如果没有考虑到并处理某些问题，可能会返回不一致或错误的结果。  
   
  例如，若要获取对 Sales 和 SalesOrders 表所做的更改，应用程序应执行以下步骤：  
@@ -220,7 +224,7 @@ ON
   
  若要解决上面列出的难题，建议您使用快照隔离。 这有助于确保更改信息的一致性，并避免出现与后台清除任务有关的争用情况。 如果没有使用快照事务，在开发使用更改跟踪的应用程序时，可能需要增加很多工作量。  
   
-#### 使用快照隔离  
+#### <a name="using-snapshot-isolation"></a>使用快照隔离  
  从设计上，更改跟踪可以很好地与快照隔离配合使用。 必须为数据库启用快照隔离。 获取更改所需的所有步骤必须包含在快照事务中。 这可确保快照事务中的查询看不见在获取更改时对数据所做的所有更改。  
   
  若要获取快照事务中的数据，请执行以下步骤：  
@@ -264,12 +268,12 @@ COMMIT TRAN
   
  有关快照事务的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
-#### 使用快照隔离的替代方法  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>使用快照隔离的替代方法  
  使用快照隔离有一些替代方法，但它们需要完成更多的工作以确保满足所有应用程序要求。 若要确保 *last_synchronization_version* 有效，并且清除进程在获取更改之前没有删除数据，请执行以下操作：  
   
-1.  调用 CHANGETABLE() 后检查 *last_synchronization_version*。  
+1.  调用 CHANGETABLE() 后检查 *last_synchronization_version* 。  
   
-2.  在使用 CHANGETABLE() 获取更改的每个查询中检查 *last_synchronization_version*。  
+2.  在使用 CHANGETABLE() 获取更改的每个查询中检查 *last_synchronization_version* 。  
   
  在为下次枚举获取同步版本后，可能会发生数据更改。 可以使用两种方法来处理这种情况。 所使用的选项取决于应用程序及其处理每种方法的副作用的方式：  
   
@@ -309,10 +313,10 @@ COMMIT TRAN
   
      应用程序可以使用此子句来存储上下文数据。  
   
-### 检查冲突  
+### <a name="checking-for-conflicts"></a>检查冲突  
  在双向同步方案中，客户端应用程序必须确定在应用程序上次获取更改后某一行是否有更新。  
   
- 下面的示例说明了如何使用 CHANGETABLE(VERSION …) 函数以最有效的方式检查冲突，而不是使用单独的查询。 在该示例中，`CHANGETABLE(VERSION …)` 确定 `SYS_CHANGE_VERSION` 所指定的行的 `@product id`。 `CHANGETABLE(CHANGES …)` 可以获取相同的信息，但效率较低。 如果该行的 `SYS_CHANGE_VERSION` 值大于 `@last_sync_version`值，则说明有冲突。 如果有冲突，则不会更新该行。 `ISNULL()` 检查是必需的，因为该行可能没有可用的更改信息。 如果在启用更改跟踪或清除更改信息后没有更新该行，则不存在任何更改信息。  
+ 下面的示例说明了如何使用 CHANGETABLE(VERSION …) 函数以最有效的方式检查冲突，而不是使用单独的查询。 在该示例中， `CHANGETABLE(VERSION …)` 确定 `SYS_CHANGE_VERSION` 所指定的行的 `@product id`。 `CHANGETABLE(CHANGES …)` 可以获取相同的信息，但效率较低。 如果该行的 `SYS_CHANGE_VERSION` 值大于 `@last_sync_version`值，则说明有冲突。 如果有冲突，则不会更新该行。 `ISNULL()` 检查是必需的，因为该行可能没有可用的更改信息。 如果在启用更改跟踪或清除更改信息后没有更新该行，则不存在任何更改信息。  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### 设置上下文信息  
+### <a name="setting-context-information"></a>设置上下文信息  
  通过使用 WITH CHANGE_TRACKING_CONTEXT 子句，应用程序可以将上下文信息与更改信息存储在一起。 可随后从 CHANGETABLE(CHANGES  ) 返回的 SYS_CHANGE_CONTEXT 列中获取此信息。  
   
  上下文信息通常用于确定更改源。 如果可以确定更改源，数据存储区在重新同步时可使用该信息来避免获取更改。  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### 确保获得一致且正确的结果  
+### <a name="ensuring-consistent-and-correct-results"></a>确保获得一致且正确的结果  
  在验证 @last_sync_version 值时，应用程序必须考虑清除过程。 这是因为，在调用 CHANGE_TRACKING_MIN_VALID_VERSION() 后但在进行更新之前，可能已将数据删除。  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   当客户端查询更改时，会在服务器上为每个客户端记录上次同步的版本号。 如果数据有问题，则上次同步的版本号将不匹配。 这表明需要进行重新初始化。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [管理更改跟踪 (SQL Server)](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

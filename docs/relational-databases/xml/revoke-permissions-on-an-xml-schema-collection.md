@@ -1,24 +1,28 @@
 ---
 title: "撤消对 XML 架构集合的权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "撤消权限 [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 撤消对 XML 架构集合的权限
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤消对 XML 架构集合的权限
   可以使用下列一种方法撤消创建 XML 架构集合的权限：  
   
 -   撤消对关系架构的 ALTER 权限。 这样，主体就不能在关系架构中创建 XML 架构集合。 但是，主体仍然可以在同一数据库的其他关系架构中执行此操作。  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   撤消主体对数据库的 CREATE XML SCHEMA COLLECTION 或 ALTER XML SCHEMA COLLECTION 权限。 这样，主体就无法在数据库中导入 XML 架构集合。 撤消对数据库的 ALTER 或 CONTROL 权限效果相同。  
   
-## 撤消对现有 XML 架构集合对象的权限  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>撤消对现有 XML 架构集合对象的权限  
  下列是可以对 XML 架构集合撤消的权限及相应结果：  
   
 -   ALTER 权限，撤消后，主体无法修改 XML 架构集合的内容。  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   EXECUTE 权限，撤消后，主体无法在通过 XML 集合类型化或约束的列、变量和参数中插入或更新值。 它还撤消了查询这类 **xml** 类型列、变量或参数的功能。  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例中的应用场景说明 XML 架构权限的工作机制。 每个示例都创建有必需的测试数据库、关系架构和登录帐户。 这些登录帐户已授予必需的 XML 架构集合权限。 每个示例在结束时都会进行必要的清除操作。  
   
-### A. 撤消创建 XML 架构集合的权限  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. 撤消创建 XML 架构集合的权限  
  该示例创建了一个登录帐户和一个示例数据库。 并在数据库中添加了一个关系架构。 首先，为登录帐户授予对两个关系架构的 ALTER 权限和其他所需权限，以创建 XML 架构集合。 然后，该示例撤消了对数据库中一个关系架构的 ALTER 权限。 这使得登录帐户无法创建 XML 架构集合。  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

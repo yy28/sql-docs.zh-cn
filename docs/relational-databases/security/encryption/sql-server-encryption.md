@@ -1,27 +1,31 @@
 ---
 title: "SQL Server 加密 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加密 [SQL Server], 关于加密"
-  - "安全性 [SQL Server], 加密"
-  - "密码系统 [SQL Server], 关于密码系统"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], about encryption
+- security [SQL Server], encryption
+- cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 加密
+# <a name="sql-server-encryption"></a>SQL Server 加密
   加密是指通过使用密钥或密码对数据进行模糊处理的过程。 这会使数据变得毫无用处，除非使用对应的解密密钥或密码。 加密并不解决访问控制问题。 不过，它可以通过限制数据丢失来增强安全性，即使在访问控制失效的情况下。 例如，如果数据库主机配置有误且黑客获取了敏感数据，则如果数据已加密，那么被盗信息可能会毫无用处。  
   
  您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 下表包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密的详细信息。  
@@ -32,9 +36,9 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  有关传输级别安全 (TSL1.2) 的最新信息，请参阅 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)（对 Microsoft SQL Server 的 TLS 1.2 支持）。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [加密层次结构](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
- 提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的加密层次结构的信息。  
+ 提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密层次结构的信息。  
   
  [选择加密算法](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  说明如何选择有效的加密算法。  
@@ -43,7 +47,7 @@ caps.handback.revision: 21
  提供有关如何以透明方式来加密数据的一般信息。  
   
  [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
- 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 该部分介绍如何实现和管理加密密钥。  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密密钥包括一组用来保护敏感数据的公钥、私钥和对称密钥。 该部分介绍如何实现和管理加密密钥。  
   
  [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  确保本地数据库管理员、云数据库操作员或其他权限虽高但没有获得此方面授权的用户无法访问加密的数据。  
@@ -54,7 +58,7 @@ caps.handback.revision: 21
  [SQL Server 证书和非对称密钥](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
  有关如何使用公钥加密的信息。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [保护 SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  简要介绍如何帮助确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台的安全性以及如何处理用户和安全对象。  
   
@@ -73,13 +77,14 @@ caps.handback.revision: 21
  [ENCRYPTBYCERT (Transact-SQL)](../../../t-sql/functions/encryptbycert-transact-sql.md)  
  说明如何使用证书来加密数据。  
   
-## 外部资源  
+## <a name="external-resources"></a>外部资源  
  [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 – 安全和保护](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
  包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.key_encryptions (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server 和数据库加密密钥（数据库引擎）](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [备份和还原 Reporting Services 加密密钥](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [备份和还原 Reporting Services 加密密钥](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
+

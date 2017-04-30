@@ -1,28 +1,32 @@
 ---
 title: "资源调控器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 概述"
-  - "资源调控器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# 资源调控器
+# <a name="resource-governor"></a>资源调控器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 您可使用资源调控器指定传入应用程序请求可以使用的 CPU、物理 IO 和内存的数量限制。  
   
-## 资源调控器的优势  
+## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
   
  在相同服务器上存在多个不同工作负荷的环境中，使用资源调控器可以区分这些工作负荷并能根据指定的限制在请求时分配共享资源。 这些资源是 CPU、物理 IO 和内存。  
@@ -37,7 +41,7 @@ caps.handback.revision: 41
   
 -   为资源使用退款添加细粒度资源跟踪，并且对服务器资源的使用者提供可预测的计费。  
   
-## 资源调控器约束  
+## <a name="resource-governor-constraints"></a>资源调控器约束  
  此资源调控器版本存在以下约束：  
   
 -   资源管理仅限于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 资源调控器不能用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -50,7 +54,7 @@ caps.handback.revision: 41
   
 -   您不能对内部资源池设置 IO 阈值。  
   
-## 资源概念  
+## <a name="resource-concepts"></a>资源概念  
  下面的三个概念是了解和使用资源调控器的基础：  
   
 -   **资源池。** 资源池表示服务器的物理资源。 您可以将池看作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内部的一个虚拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，会创建两个资源池（内部资源池和默认资源池）。 资源调控器还支持用户定义的资源池。 有关详细信息，请参阅 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
@@ -64,7 +68,7 @@ caps.handback.revision: 41
   
  在资源调控器的上下文中，您可以将前面的概念视为组件。 下图显示了这些组件及其在数据库引擎环境中相互之间的关系。 从处理的角度，简化的流程如下所示：  
   
--   会话有传入的连接（Session 1，共 *n* 个）。  
+-   会话有传入的连接（Session 1，共 *n*个）。  
   
 -   会话已分类（分类）。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
  ![资源调控器功能组件](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "资源调控器功能组件")  
   
-## 资源调控器任务  
+## <a name="resource-governor-tasks"></a>资源调控器任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -88,7 +92,7 @@ caps.handback.revision: 41
 |说明如何使用模板配置资源调控器。|[使用模板配置资源调控器](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |说明如何查看资源调控器属性。|[查看资源调控器属性](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库引擎实例 (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

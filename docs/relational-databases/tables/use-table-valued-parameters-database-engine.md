@@ -1,32 +1,36 @@
 ---
-title: "使用表值参数（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表值参数"
-  - "表值参数, 关于表值参数"
-  - "参数 [SQL Server], 表值"
-  - "TVP，请参阅表值参数"
+title: "使用表值参数（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用表值参数（数据库引擎）
+# <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
   
- 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
+ 表值参数与 OLE DB 和 ODBC 中的参数数组类似，但具有更高的灵活性，且与 [!INCLUDE[tsql](../../includes/tsql-md.md)]的集成更紧密。 表值参数的另一个优势是能够参与基于数据集的操作。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 通过引用向例程传递表值参数，以避免创建输入数据的副本。 可以使用表值参数创建和执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程，并且可以使用任何托管语言从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码、托管客户端以及本机客户端调用它们。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 31
   
 -   使客户端可以指定排序顺序和唯一键。  
   
--   在用于存储过程时像临时表一样被缓存。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，对于参数化查询，表值参数也被缓存。  
+-   在用于存储过程时像临时表一样被缓存。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，对于参数化查询，表值参数也被缓存。  
   
 ##  <a name="Restrictions"></a> 限制  
  表值参数有下面的限制：  
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

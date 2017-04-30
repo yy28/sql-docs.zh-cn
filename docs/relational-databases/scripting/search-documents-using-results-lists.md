@@ -1,30 +1,34 @@
 ---
 title: "使用结果列表搜索文档 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "搜索 [SQL Server Management Studio], 结果列表"
-  - "结果列表搜索 [SQL Server Management Studio]"
-  - "搜索 [SQL Server Management Studio], 多个文件"
-  - "查询编辑器 [SQL Server Management Studio], 搜索多个文件"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], result lists
+- result list searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], multiple files
+- Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用结果列表搜索文档
+# <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
   使用 **“查找和替换”** 对话框，可以搜索和替换项目或解决方案中或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  
   
-### 在多个文件中搜索  
+### <a name="to-search-in-multiple-files"></a>在多个文件中搜索  
   
 1.  在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“在文件中查找”**。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 22
   
  在默认情况下，搜索匹配项将显示在“查找结果 1”窗口中。 可以通过双击“查找结果 1”窗口中的每个条目浏览搜索匹配项。 若要在新窗口中查看搜索结果，请选择 **“在查找 2 中显示”**。  
   
-#### 在多个文件或文件夹中替换  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>在多个文件或文件夹中替换  
   
 1.  在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“在文件中替换”**。  
   
@@ -57,11 +61,11 @@ caps.handback.revision: 22
      选择 **“全部替换”** 以使用 **“替换为”** 框中的文本替换所有匹配项。 若要在其他时间撤消某些替换，请选择 **“在全部替换后使已修改文件保持打开状态”** 。  
   
     > [!NOTE]  
-    > 如果选择 **“全部替换”** ，则系统将替换所有搜索匹配项，包括已使用 **“跳过文件”** 或 **“查找下一个”**跳过的那些搜索匹配项。 只能针对在替换操作完成后仍保持打开状态的文件中进行的替换使用 **“撤消”** 操作。  
+    >  如果选择**“全部替换”** ，则系统将替换所有搜索匹配项，包括已使用 **“跳过文件”** 或 **“查找下一个”**跳过的那些搜索匹配项。 只能针对在替换操作完成后仍保持打开状态的文件中进行的替换使用 **“撤消”** 操作。  
   
  默认情况下，替换信息将显示在“查找结果 1”窗口中。 可以通过双击“查找结果 1”窗口中的各个条目来浏览替换项。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
  [交互式搜索文档](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)   

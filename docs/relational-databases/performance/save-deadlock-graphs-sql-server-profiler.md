@@ -1,29 +1,33 @@
 ---
-title: "保存死锁图形（SQL Server 事件探查器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "死锁 [SQL Server], 保存死锁图形"
-  - "图形 [SQL Server]"
-  - "保存死锁图形"
+title: "保存死锁图形 (SQL Server Profiler) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deadlocks [SQL Server], saving deadlock graphs
+- graphs [SQL Server]
+- saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c89c0ed24b52d89c36fb1f1cce29717988a0d798
+ms.lasthandoff: 04/11/2017
+
 ---
-# 保存死锁图形（SQL Server 事件探查器）
+# <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形（SQL Server 事件探查器）
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]保存 Deadlock Graph 事件。 Deadlock Graph 事件以 XML 文件形式保存。  
   
-### 分别保存 Deadlock Graph 事件  
+### <a name="to-save-deadlock-graph-events-separately"></a>分别保存 Deadlock Graph 事件  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 26
   
  保存死锁文件后，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开该文件。 有关详细信息，请参阅[如何打开、查看和打印死锁文件 (SQL Server Management Studio)](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Profiler 分析死锁](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

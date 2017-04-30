@@ -1,66 +1,73 @@
 ---
 title: "服务器级别角色 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.Security.NT_AUTHORITY.SYSTEM"
-  - "sql13.Security.BUILTIN.administrators"
-helpviewer_keywords: 
-  - "角色 [SQL Server]，服务器级别"
-  - "主体 [SQL Server]，服务器级别"
-  - "CONTROL SERVER 权限"
-  - "固定服务器角色 [SQL Server]"
-  - "凭据 [SQL Server]，角色"
-  - "sysadmin 固定服务器角色"
-  - "服务器级别角色 [SQL Server]"
-  - "身份验证 [SQL Server]，角色"
+ms.custom: 
+ms.date: 12/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.Security.NT_AUTHORITY.SYSTEM
+- sql13.Security.BUILTIN.administrators
+helpviewer_keywords:
+- roles [SQL Server], server-level
+- principals [SQL Server], server-level
+- CONTROL SERVER permission
+- fixed server roles [SQL Server]
+- credentials [SQL Server], roles
+- sysadmin fixed server role
+- server-level roles [SQL Server]
+- authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8850c5e74e5e77ecad1b847f6176713c0af9b537
+ms.lasthandoff: 04/11/2017
+
 ---
-# 服务器级别角色
+# <a name="server-level-roles"></a>服务器级别角色
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供服务器级角色以帮助你管理服务器上的权限。 这些角色是可组合其他主体的安全主体。 服务器级角色的权限作用域为服务器范围。 （“角色”类似于 Windows 操作系统中的“组”。）  
   
  提供固定服务器角色是为了方便使用和向后兼容。 应尽可能分配更具体的权限。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九种固定服务器角色。 无法更改授予固定服务器角色的权限。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 开始，您可以创建用户定义的服务器角色，并将服务器级权限添加到用户定义的服务器角色。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九种固定服务器角色。 无法更改授予固定服务器角色的权限。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以创建用户定义的服务器角色，并将服务器级权限添加到用户定义的服务器角色。  
   
  你可以将服务器级主体（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名、Windows 帐户和 Windows 组）添加到服务器级角色。 固定服务器角色的每个成员都可以将其他登录名添加到该同一角色。 用户定义的服务器角色的成员则无法将其他服务器主体添加到角色。  
+>  [!NOTE]
+>  服务器级权限不适用于 SQL 数据库或 SQL 数据仓库。 有关 SQL 数据库的详细信息，请参阅[控制和授予数据库访问权限](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
   
-## 服务器级的固定角色  
+## <a name="fixed-server-level-roles"></a>服务器级的固定角色  
  下表显示了服务器级的固定角色及其权限。  
   
 |服务器级的固定角色|说明|  
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |serveradmin|serveradmin 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
-|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **\*\*安全说明\*\*** 能够授予 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
-|processadmin|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中运行的进程。|  
-|setupadmin|固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （在使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 时需要 sysadmin 成员资格。）|  
+|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **\*\* 安全说明 \*\*** 能够授予 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
+|processadmin|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中运行的进程。|  
+|setupadmin|固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （在使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]时需要 sysadmin 成员资格。）|  
 |bulkadmin|bulkadmin 固定服务器角色的成员可以运行 BULK INSERT 语句。|  
 |diskadmin|diskadmin 固定服务器角色用于管理磁盘文件。|  
 |dbcreator|dbcreator 固定服务器角色的成员可以创建、更改、删除和还原任何数据库。|  
 |public|每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名都属于 public 服务器角色。 如果未向某个服务器主体授予或拒绝对某个安全对象的特定权限，该用户将继承授予该对象的 public 角色的权限。 只有在希望所有用户都能使用对象时，才在对象上分配 Public 权限。 你无法更改具有 Public 角色的成员身份。<br /><br /> 注意：public 角色的实现方式与其他角色不同。 但是，可以从 public 授予、拒绝或撤销权限。|  
   
-## 固定服务器角色的权限  
- 每个固定服务器角色都被分配了特定的权限。 有关分配给服务器角色的权限的图表，请参阅 [数据库引擎固定服务器和固定数据库角色](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
+## <a name="permissions-of-fixed-server-roles"></a>固定服务器角色的权限  
+ 每个固定服务器角色都被分配了特定的权限。 下图显示了分配给服务器角色的权限。   
+![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-server-role-permissions.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 权限与 **sysadmin** 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， **CONTROL SERVER** 不表示 **sysadmin** 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 **DBCC** 命令和许多系统过程要求 **sysadmin** 固定服务器角色的成员身份。 对于需要 **sysadmin** 成员资格的 171 个系统存储过程的列表，请参阅 Andreas Wolter 的以下博客帖子：[CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)（CONTROL SERVER 与 sysadmin/sa：权限、系统过程、DBCC、自动创建架构和特权升级 - 注意事项）。  
+>  **CONTROL SERVER** 权限与 **sysadmin** 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， **CONTROL SERVER** 不表示 **sysadmin** 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 **DBCC** 命令和许多系统过程要求 **sysadmin** 固定服务器角色的成员身份。 对于需要 **sysadmin** 成员资格的 171 个系统存储过程的列表，请参阅 Andreas Wolter 的以下博客帖子： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)（CONTROL SERVER 与 sysadmin/sa：权限、系统过程、DBCC、自动创建架构和特权升级 - 注意事项）。  
   
-## 服务器级权限  
+## <a name="server-level-permissions"></a>服务器级权限  
  只能向用户定义的服务器角色中添加服务器级权限。 若要列出服务器级权限，请执行下面的语句。 服务器级权限如下：  
   
 ```tsql  
@@ -69,7 +76,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
  有关权限的详细信息，请参阅[权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md) 和 [sys.fn_builtin_permissions (Tansact SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)。  
   
-## 使用服务器级角色  
+## <a name="working-with-server-level-roles"></a>使用服务器级角色  
  下表介绍了可以用于服务器级角色的命令、视图和功能。  
   
 |功能|类型|说明|  
@@ -86,7 +93,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[DROP SERVER ROLE (Transact-SQL)](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|删除用户定义的服务器角色。|  
 |[IS_SRVROLEMEMBER (Transact-SQL)](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|函数|确定服务器角色的成员关系。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库级别的角色](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [安全性目录视图 (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)   
@@ -97,3 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [创建服务器角色](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
+

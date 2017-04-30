@@ -1,27 +1,31 @@
 ---
 title: "教程：使用证书为存储过程签名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "为存储过程签名教程 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 教程：使用证书为存储过程签名
-本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成的证书对存储过程进行签名。  
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教程：使用证书为存储过程签名
+本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
 > [!NOTE]  
 > 若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 应用场景  
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
   
-## 1.配置环境  
+## <a name="1-configure-the-environment"></a>1.配置环境  
 若要设置示例的初始上下文，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中打开一个新的查询，然后运行以下代码以打开 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 此代码将数据库上下文更改为 `AdventureWorks2012` 并创建一个新的使用密码的服务器登录名和数据库用户帐户 (`TestCreditRatingUser`)。  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 有关 CREATE USER 语句的详细信息，请参阅 [CREATE USER (Transact-SQL)](../t-sql/statements/create-user-transact-sql.md)。 有关 CREATE LOGIN 语句的详细信息，请参阅 [CREATE LOGIN (Transact-SQL)](../t-sql/statements/create-login-transact-sql.md)。  
   
-## 2.创建证书  
+## <a name="2-create-a-certificate"></a>2.创建证书  
 您可以在使用 master 数据库或用户数据库作为上下文的服务器中创建证书，也可以在同时使用上述两者作为上下文的服务器中创建证书。 有多种选项用于保护证书。 有关证书的详细信息，请参阅 [CREATE CERTIFICATE (Transact-SQL)](../t-sql/statements/create-certificate-transact-sql.md)。  
   
 运行此代码以创建数据库证书并使用密码对其进行保护。  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3.创建存储过程并使用证书对存储过程进行签名  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3.创建存储过程并使用证书对存储过程进行签名  
 使用以下代码创建一个存储过程，该存储过程从 `Vendor` 数据库架构的 `Purchasing` 表中选择数据，并只允许信用等级为 1 的公司访问。 请注意，存储过程的第一部分显示运行该存储过程的用户帐户的上下文，它仅用于说明概念。 不必满足此要求。  
   
 ```  
@@ -114,7 +118,7 @@ GO
   
 有关对存储过程签名的详细信息，请参阅 [ADD SIGNATURE (Transact-SQL)](../t-sql/statements/add-signature-transact-sql.md)。  
   
-## 4.使用证书创建证书帐户  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4.使用证书创建证书帐户  
 运行此代码通过证书创建一个数据库用户 (`TestCreditRatingcertificateAccount`)。 该帐户没有服务器登录名，并将最终控制对基础表的访问权限。  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5.向证书帐户授予数据库权限  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5.向证书帐户授予数据库权限  
 运行此代码，向 `TestCreditRatingcertificateAccount` 授予对基表和存储过程的访问权限。  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 有关授予对象的权限的详细信息，请参阅 [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md)。  
   
-## 6.显示访问权限上下文  
+## <a name="6-display-the-access-context"></a>6.显示访问权限上下文  
 若要显示与存储过程访问有关的权限，请运行以下代码向 `TestCreditRatingUser` 用户授予运行存储过程的权限。  
   
 ```  
@@ -173,7 +177,7 @@ GO
 > [!NOTE]  
 > 使用 EXECUTE AS 在数据库中切换上下文。  
   
-## 7.重置环境  
+## <a name="7-reset-the-environment"></a>7.重置环境  
 以下代码使用 `REVERT` 语句将当前帐户的上下文返回至 dbo 并重置环境。  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

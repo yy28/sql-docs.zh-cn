@@ -1,33 +1,37 @@
 ---
-title: "SQL Server，Resource Pool Stats 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reosurce Pool Stats 对象"
-  - "SQLServer: Resource Pool Stats 对象"
+title: "SQL Server - Resource Pool Stats 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server，Resource Pool Stats 对象
+# <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
   SQLServer:Resource Pool Stats 对象包含报告资源调控器资源池统计相关信息的性能计数器。  
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  
   
 |计数器名称|Description|  
 |------------------|-----------------|  
-|**Active memory grant amount (KB)**|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md) 中获得。| 
-|**Active memory grants count**|当前内存授予总数。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md) 中获得。|  
+|**Active memory grant amount (KB)**|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中获得。| 
+|**Active memory grants count**|当前内存授予总数。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中获得。|  
 |**Avg Disk Read IO (ms)**|从磁盘进行读取操作的平均时间（毫秒）。|  
 |**Avg Disk Read IO (ms) Base**|仅限内部使用。|
 |**Avg Disk Write IO (ms)**|对磁盘进行写入操作的平均时间（毫秒）。|  
@@ -52,13 +56,13 @@ caps.handback.revision: 14
 |**Max memory (KB)**|资源池基于资源池设置和服务器状态可获得的最大内存量，以千字节 (KB) 为单位。| 
 |**Memory grant timeouts/sec**|每秒内存授予超时数。|
 |**Memory grants/sec**|每秒此资源池中发生的内存授予数。| 
-|**Pending memory grant count**|队列中挂起的内存授予请求数。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md) 中获得。|
-|**Query exec memory target (KB)**|查询执行内存授予的当前内存代理目标值，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md) 中获得。|  
+|**Pending memory grant count**|队列中挂起的内存授予请求数。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中获得。|
+|**Query exec memory target (KB)**|查询执行内存授予的当前内存代理目标值，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中获得。|  
 |**Target memory (KB)**|资源池基于资源池设置和服务器状态尝试获得的目标内存量，以千字节 (KB) 为单位。|   
 |**Used memory (KB)**|用于资源池的内存量，以千字节 (KB) 为单位。|  
 
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQLServer，Workload Group Stats 对象](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)  

@@ -1,40 +1,44 @@
 ---
 title: "搜索和替换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "匹配大小写 [SQL Server]"
-  - "撤消操作"
-  - "搜索 [SQL Server Management Studio]"
-  - "替换文本"
-  - "快速搜索和替换 [SQL Server Management Studio]"
-  - "查询编辑器 [SQL Server Management Studio], 撤消"
-  - "查询编辑器 [SQL Server Management Studio], 搜索"
-  - "正则表达式 [SQL Server Management Studio]"
-  - "查找文本 [SQL Server Management Studio]"
-  - "文本 [SQL Server], 搜索和替换操作"
-  - "查找 [SQL Server Management Studio]"
-  - "找到文本"
-  - "查询编辑器 [SQL Server Management Studio], 替换文本"
-  - "“查找和替换”对话框"
-  - "通配符选项 [SQL Server Management Studio]"
-  - "全字匹配 [SQL Server]"
-  - "搜索 [SQL Server Management Studio], 替换"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- match case [SQL Server]
+- undo operations
+- searches [SQL Server Management Studio]
+- replacing text
+- quick search and replaces [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], undo
+- Query Editor [SQL Server Management Studio], searching
+- regular expressions [SQL Server Management Studio]
+- finding text [SQL Server Management Studio]
+- text [SQL Server], search and replace operations
+- finding [SQL Server Management Studio]
+- locating text
+- Query Editor [SQL Server Management Studio], replacing text
+- Find and Replace dialog box
+- wildcard options [SQL Server Management Studio]
+- match whole word [SQL Server]
+- searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d590c437733827916e41e9299ed7a6d3df48574
+ms.lasthandoff: 04/11/2017
+
 ---
-# 搜索和替换
+# <a name="search-and-replace"></a>搜索和替换
   您可以采用几种不同的方法来查找和替换文本。 在 **“编辑”** 菜单上， **“查找和替换”** 提供了四个选项： **“快速查找”**、 **“快速替换”**、 **“在文件中查找”**或 **“在文件中替换”**。 每个选项均可以打开不同版本的 **“查找和替换”** 对话框。 您还可以通过使用渐进式搜索键盘快捷键在没有对话框的情况下进行搜索。 通过这些技术，您可以控制查找和替换的范围，并选择查看搜索匹配项和替换项的方法。  
   
  搜索和替换文本时应注意以下事项：  
@@ -47,7 +51,7 @@ caps.handback.revision: 21
   
  通常，您无法搜索包含图形视图的项。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [增量搜索活动文档](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [交互式搜索文档](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用结果列表搜索文档](../../relational-databases/scripting/search-documents-using-results-lists.md)   

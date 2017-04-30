@@ -1,29 +1,33 @@
 ---
 title: "TSQL 事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件类, TSQL 事件类别"
-  - "TSQL 事件类别 [SQL Server]"
-  - "事件类 [SQL Server], TSQL 事件类别"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, TSQL event category
+- TSQL event category [SQL Server]
+- event classes [SQL Server], TSQL event category
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b092e525c81dd9458f764929f4ab8d664595dd85
+ms.lasthandoff: 04/11/2017
+
 ---
-# TSQL 事件类别
+# <a name="tsql-event-category"></a>TSQL 事件类别
   **TSQL** 事件类别包含一般的 TSQL 事件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -37,7 +41,7 @@ caps.handback.revision: 28
 |[Unprepare SQL 事件类](../../relational-databases/event-classes/unprepare-sql-event-class.md)|指示 SqlClient、ODBC、OLE DB 或 DB-Library 删除了已准备好的一条或多条 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
 |[XQuery Static Type 事件类](../../relational-databases/event-classes/xquery-static-type-event-class.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 XQuery 表达式时出现。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

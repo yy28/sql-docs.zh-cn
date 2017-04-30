@@ -1,24 +1,28 @@
 ---
-title: "SQL Server，FileTable 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:FileTable"
+title: "SQL Server - FileTable 对象 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 321ed2db9195a957f10982fe07f1da7b8cb01c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server，FileTable 对象
+# <a name="sql-server-filetable-object"></a>SQL Server，FileTable 对象
 **SQLServer:FileTable** 性能对象提供与 FileTable 和非事务性访问相关的统计信息的计数器。
 
 下表介绍了 SQL Server **FileTable** 性能对象。
@@ -55,5 +59,6 @@ caps.handback.revision: 3
 |**获取 FileTable 项的基准时间**|仅限内部使用。|
 |**更新 FileTable 项的基准时间**|仅限内部使用。| 
  
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

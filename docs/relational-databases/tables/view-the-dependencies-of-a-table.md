@@ -1,27 +1,31 @@
 ---
 title: "查看表的依赖关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表依赖项 [SQL Server]"
-  - "依赖项 [SQL Server], 表"
-  - "显示依赖项"
-  - "查看依赖项"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table dependencies [SQL Server]
+- dependencies [SQL Server], tables
+- displaying dependences
+- viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查看表的依赖关系
+# <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看表的依赖关系。  
@@ -47,19 +51,19 @@ caps.handback.revision: 24
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 查看表的依赖关系  
+#### <a name="to-view-the-dependencies-of-a-table"></a>查看表的依赖关系  
   
 1.  在 **“对象资源管理器”**中，展开 **“数据库”**，再展开其中的某个数据库，然后展开 **“表”**。  
   
 2.  右键单击某个表，然后单击“查看依赖关系”。  
   
-3.  在“对象依赖关系 *\<object name>*”对话框中，选择“依赖于 *\<object name>* 的对象”或“*\<object name>* 依赖的对象”。  
+3.  在“对象依赖关系 \<对象名称>”对话框中，选择“依赖于 \<对象名称> 的对象”或“\<对象名称> 依赖的对象”。  
   
 4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 查看依赖于表的对象  
+#### <a name="to-view-the-objects-that-depend-on-a-table"></a>查看依赖于表的对象  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 24
   
     ```  
   
-#### 查看表依赖的对象  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>查看表依赖的对象  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

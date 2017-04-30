@@ -1,31 +1,35 @@
 ---
 title: "复制类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "复制 [SQL Server], 类型"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], types
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e73bdd657a12e4eda65ce7cc16f2e9d139ce9913
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制类型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下类型的复制以用于分布式应用程序：  
+# <a name="types-of-replication"></a>复制类型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
--   事务复制。 有关详细信息，请参阅 [事务复制](../../relational-databases/replication/transactional/transactional-replication.md)。  
+-   事务复制。 有关详细信息，请参阅[事务复制](../../relational-databases/replication/transactional/transactional-replication.md)。  
   
--   合并复制。 有关详细信息，请参阅 [合并复制](../../relational-databases/replication/merge/merge-replication.md)。  
+-   合并复制。 有关详细信息，请参阅[合并复制](../../relational-databases/replication/merge/merge-replication.md)。  
   
--   快照复制。 有关详细信息，请参阅 [快照复制](../../relational-databases/replication/snapshot-replication.md)。  
+-   快照复制。 有关详细信息，请参阅[快照复制](../../relational-databases/replication/snapshot-replication.md)。  
   
  为应用程序选择的复制类型取决于多种因素，其中包括实际复制环境、要复制的数据类型和数量，以及是否在订阅服务器上更新数据等等。 实际环境包括复制中所涉及的计算机数量和位置，以及这些计算机是客户端（工作站、便携式电脑或手持设备）还是服务器。  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 38
   
  不会跟踪快照复制的数据更改；每次应用快照时，都将完全覆盖现有数据。 事务复制通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志跟踪更改，而合并复制则通过触发器和元数据表跟踪更改。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

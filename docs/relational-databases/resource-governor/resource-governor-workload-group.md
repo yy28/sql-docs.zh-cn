@@ -1,29 +1,33 @@
 ---
 title: "资源调控器工作负荷组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 工作负荷组"
-  - "工作负荷组 [SQL Server]"
-  - "工作负荷组 [SQL Server], 概述"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group
+- workload groups [SQL Server]
+- workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f67e0fd5de601ceb4d808f42fa710c02fa23d3d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 资源调控器工作负荷组
+# <a name="resource-governor-workload-group"></a>资源调控器工作负荷组
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，工作负荷组充当具有相似分类标准的会话请求的容器。 工作负荷允许对会话进行聚合监视，并定义会话的策略。 每个工作负荷组均位于一个资源池中，它表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的策略和为资源池定义的资源运行。  
   
-## 工作负荷组概念  
+## <a name="workload-group-concepts"></a>工作负荷组概念  
  工作负荷组是会话请求的容器，根据应用于每个请求的分类标准这些会话被认为是相似的。 利用工作负荷组可对资源占用进行聚合监视并可将统一策略应用至组中的所有请求。 组为其成员定义策略。  
   
 > [!NOTE]  
@@ -39,7 +43,7 @@ caps.handback.revision: 6
   
  资源调控器还提供了用于创建、更改和删除工作负荷组的 DDL 语句。  
   
-## 工作负荷组任务  
+## <a name="workload-group-tasks"></a>工作负荷组任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -47,7 +51,7 @@ caps.handback.revision: 6
 |说明如何更改工作负荷组设置。|[更改工作负荷组设置](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |说明如何删除工作负荷组。|[删除工作负荷组](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

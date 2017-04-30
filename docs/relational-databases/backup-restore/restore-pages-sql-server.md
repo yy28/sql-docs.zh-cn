@@ -1,34 +1,38 @@
 ---
 title: "还原页 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "还原页 [SQL Server]"
-  - "页 [SQL Server], 还原"
-  - "数据库 [SQL Server], 已损坏"
-  - "页面还原 [SQL Server]"
-  - "页 [SQL Server], 已损坏"
-  - "还原 [SQL Server], 页"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# 还原页 (SQL Server)
+# <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 **msdb** 数据库的 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中进行了标识。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 数据库的 **suspect_pages** 表中进行了标识。  
   
  **本主题内容**  
   
@@ -92,9 +96,9 @@ caps.handback.revision: 67
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机页面还原，但它们在数据库当前处于脱机状态时将使用脱机还原。 在大多数情况下，可以在数据库（包括页面要还原到的文件组）保持联机状态时还原损坏的页。 在主文件组处于联机状态时，即使有一个或多个辅助文件组处于脱机状态，页面还原也通常联机执行。 但有时候，损坏的页可能需要脱机还原。 例如，某些重要的页发生损坏可能会使数据库无法启动。  
   
     > [!WARNING]  
-    >  如果损坏的页存储了重要的数据库元数据，则在联机页面还原尝试过程中对元数据的必需的更新可能失败。 在此情况下，你可以执行脱机页面还原，但首先，你必须创建一个[结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)（通过使用 RESTORE WITH NORECOVERY 备份事务日志）。  
+    >  如果损坏的页存储了重要的数据库元数据，则在联机页面还原尝试过程中对元数据的必需的更新可能失败。 在此情况下，你可以执行脱机页面还原，但首先，你必须创建一个 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) （通过使用 RESTORE WITH NORECOVERY 备份事务日志）。  
   
--   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”）可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
+-   页面还原利用了改进的页级错误报告（包含页校验和）和跟踪。 通过校验和或残缺写操作检测为已损坏的页（“损坏页”） 可以通过页还原操作进行还原。 仅还原显式指定的页。 每个指定页都被来自指定数据备份的页的副本替换。  
   
      在您还原随后的日志备份时，它们将仅适用于包含要还原的至少一页的数据库文件。 必须将不中断的日志备份链应用于最后一次完整或差异还原，以便让包含该页的文件组前进到当前的日志文件。 与文件还原中一样，每次传递日志重做，前滚集都会前进一步。 为了成功还原页，已还原的页必须恢复到与数据库一致的状态。  
   
@@ -108,25 +112,25 @@ caps.handback.revision: 67
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 开始， 支持页面还原。  
   
-#### 还原页  
+#### <a name="to-restore-pages"></a>还原页  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]连接到相应的 实例，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
 2.  展开“数据库”。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击该数据库，指向“任务”，再指向“还原”，然后单击“页”，这将打开“还原页”对话框。  
+3.  右键单击该数据库，指向 **“任务”**，再指向 **“还原”**，然后单击 **“页”** ，这将打开“还原页”对话框。  
   
      **还原**  
-     此部分执行的功能与[还原数据库（常规页）](../../relational-databases/backup-restore/restore-database-general-page.md)上的“还原到”的功能相同。  
+     此部分执行的功能与 **还原数据库（常规页）** 上的“还原到” [](../../relational-databases/backup-restore/restore-database-general-page.md)的功能相同。  
   
      **数据库**  
-     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
+     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
   
     > [!WARNING]  
-    >  若要还原带有密码保护的备份，必须使用 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 语句。  
+    >  若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  
   
      **结尾日志备份**  
-     在“备份设备”中输入或选择一个文件名，将在其中存储数据库的结尾日志备份。  
+     在“备份设备”  中输入或选择一个文件名，将在其中存储数据库的结尾日志备份。  
   
      **备份集**  
      此部分显示参与还原的备份集。  
@@ -134,7 +138,7 @@ caps.handback.revision: 67
     |标题|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |**组件**|已备份的组件：**数据库**、**文件**或**\<空白>**（表示事务日志）。|  
+    |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  
     |**类型**|执行的备份类型有： **“完整”**、 **“差异”**或 **“事务日志”**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**数据库**|备份操作中涉及的数据库的名称。|  
@@ -149,16 +153,16 @@ caps.handback.revision: 67
     |**用户名**|执行备份操作的用户的名称。|  
     |**过期日期**|备份集的过期日期和时间。|  
   
-     单击“验证”以检查执行页还原操作所需的备份文件的完整性。  
+      单击“验证”以检查执行页还原操作所需的备份文件的完整性。  
   
-4.  若要标识已损坏的页，则在 **“数据库”**框中选择了正确的数据库的情况下，单击“检查数据库页”。 此操作将运行较长时间。  
+4.   若要标识已损坏的页，则在 **“数据库”**框中选择了正确的数据库的情况下，单击“检查数据库页”。 此操作将运行较长时间。  
   
     > [!WARNING]  
-    >  若要还原未损坏的特定页，请单击“添加”，然后输入要还原的页的“文件 ID”和“页 ID”。  
+    >  若要还原未损坏的特定页，请单击“添加”  ，然后输入要还原的页的“文件 ID”  和“页 ID”  。  
   
-5.  页网格用于标识要还原的页。 最初，此网格将从 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md)系统表填充。  若要从该网格添加或删除页，请单击 **“添加”**或“删除”。 有关详细信息，请参阅[管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)。  
+5.  页网格用于标识要还原的页。 最初，此网格将从 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系统表填充。  若要从该网格添加或删除页，请单击 **“添加”**或“删除”。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
   
-6.  **“备份集”** 网格将列出默认还原计划中的备份集。 或者，单击“验证”可验证备份是否可读取以及备份集是否完整而无需还原。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)。  
+6.  **“备份集”** 网格将列出默认还原计划中的备份集。 或者，单击“验证”可验证备份是否可读取以及备份集是否完整而无需还原。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
      **页**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- 有关 PAGE 选项的参数的详细信息，请参阅 [RESTORE Arguments (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。 有关 RESTORE DATABASE 语法的详细信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+ 有关 PAGE 选项的参数的详细信息，请参阅 [RESTORE Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。 有关 RESTORE DATABASE 语法的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
-#### 还原页  
+#### <a name="to-restore-pages"></a>还原页  
   
 1.  获取要还原的损坏页的页 ID。 校验和或残缺写错误将返回页 ID，并提供指定页所需的信息。 若要查找损坏页的页 ID，请使用下列任一来源。  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |错误日志|[查看 SQL Server 错误日志 (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |事件跟踪|[监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |事件跟踪|[监视事件和响应事件](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI 提供程序|[WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  此顺序与文件还原顺序类似。 事实上，页面还原和文件还原都可以在相同的顺序中执行。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 以下示例使用 `B` 还原文件 `NORECOVERY` 的四个损坏页。 随后，将使用 `NORECOVERY` 应用两个日志备份，然后是结尾日志备份（使用 `RECOVERY` 还原）。 此示例执行联机还原。 此示例中，文件 `B` 的文件 ID 为 `1`，损坏的页的页 ID 分别为 `57`、`202`、`916` 和 `1016`。  
+ 以下示例使用 `B` 还原文件 `NORECOVERY`的四个损坏页。 随后，将使用 `NORECOVERY`应用两个日志备份，然后是结尾日志备份（使用 `RECOVERY`还原）。 此示例执行联机还原。 此示例中，文件 `B` 的文件 ID 为 `1`，损坏的页的页 ID 分别为 `57`、 `202`、 `916`和 `1016`。  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## 另请参阅  
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

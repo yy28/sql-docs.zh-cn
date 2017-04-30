@@ -1,36 +1,40 @@
 ---
 title: "安全对象 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.selectobject.f1"
-helpviewer_keywords: 
-  - "安全对象 [SQL Server]"
-  - "架构 [SQL Server], 安全对象"
-  - "数据库安全对象 [SQL Server]"
-  - "层次结构 [SQL Server], 安全对象"
-  - "服务器安全对象 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.selectobject.f1
+helpviewer_keywords:
+- securables [SQL Server]
+- schemas [SQL Server], securables
+- database securables [SQL Server]
+- hierarchies [SQL Server], securables
+- server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51db5d7a36569601e7d21d5fc50d16230b85ea5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 安全对象
+# <a name="securables"></a>安全对象
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  
   
-## 安全对象范围：服务器  
+## <a name="securable-scope-server"></a>安全对象范围：服务器  
  **服务器** 安全对象范围包含以下安全对象：  
   
 -   可用性组  
@@ -43,7 +47,7 @@ caps.handback.revision: 41
   
 -   数据库  
   
-## 安全对象范围：数据库  
+## <a name="securable-scope-database"></a>安全对象范围：数据库  
  **数据库** 安全对象范围包含以下安全对象：  
   
 -   应用程序角色  
@@ -78,7 +82,7 @@ caps.handback.revision: 41
   
 -   用户  
   
-## 安全对象范围：架构  
+## <a name="securable-scope-schema"></a>安全对象范围：架构  
  **架构** 安全对象范围包含以下安全对象：  
   
 -   类型  
@@ -103,13 +107,13 @@ caps.handback.revision: 41
     
     -   外部表 
   
-## 控制对安全对象的访问  
+## <a name="controlling-access-to-a-securable"></a>控制对安全对象的访问  
  接收对安全对象的权限的实体称为主体。 最常见的主体是登录名和数据库用户。 对安全对象的访问通过授予或拒绝权限进行控制，或者通过将登录名和用户添加到有权访问的角色进行控制。 有关控制权限的信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)、[REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)、[DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)、[sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
   
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)  
@@ -125,3 +129,4 @@ caps.handback.revision: 41
  [sys.sql_logins (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
 title: "指定断点操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.action"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, 断点操作"
-  - "Transact-SQL 调试器, 断点命中条件操作"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.action
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint action
+- Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 指定断点操作
+# <a name="specify-a-breakpoint-action"></a>指定断点操作
   断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 操作注意事项  
@@ -41,13 +45,13 @@ caps.handback.revision: 10
   
     4.  $FUNCTION 返回在其中设置断点的存储过程或用户定义函数的名称。 如果在编辑器窗口中设置断点，$FUNCTION 将返回正在编辑的脚本文件的名称。  
   
-    5.  $PID 和 $PNAME 返回正在运行数据库引擎实例（其中正在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)]）的操作系统进程的 ID 和名称。 $PID 返回与 SERVERPROPERTY(‘ProcessID’) 相同的 ID，但 $PID 是一个十六进制值，而 SERVERPROPERTY(‘ProcessID’) 是一个十进制值。  
+    5.  $PID 和 $PNAME 返回正在运行数据库引擎实例（其中正在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] ）的操作系统进程的 ID 和名称。 $PID 返回与 SERVERPROPERTY(‘ProcessID’) 相同的 ID，但 $PID 是一个十六进制值，而 SERVERPROPERTY(‘ProcessID’) 是一个十进制值。  
   
-    6.  $TID 和 $TNAME 返回运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的操作系统线程的 ID 和名称。 该线程是一个与运行数据库引擎实例的进程关联的线程。 $TID 返回的值与 SELECT kpid FROM sys.sysprocesses WHERE spid = @ @ SPID 返回的值相同，但 $TID 是一个十六进制值，而 kpid 是一个十进制值。  
+    6.  $TID 和 $TNAME 返回运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的操作系统线程的 ID 和名称。 该线程是一个与运行数据库引擎实例的进程关联的线程。 $TID 返回的值与 SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID 返回的值相同，不同的是 $TID 是一个十六进制值，而 kpid 是一个十进制值。  
   
--   还可以使用反斜杠字符 (\\) 作为转义字符，以允许在消息中使用大括号和反斜杠：\\{、\\} 和 \\\\。  
+-   还可以使用反斜杠字符 (\\) 作为转义字符，以允许在消息中使用大括号和反斜杠： \\{、 \\} 和 \\\\。  
   
-#### 指定命中条件操作  
+#### <a name="to-specify-a-when-hit-action"></a>指定命中条件操作  
   
 1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 10
   
 3.  单击 **“确定”** 实施更改，或单击 **“取消”** 退出而不应用更改。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定断点条件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)  
   

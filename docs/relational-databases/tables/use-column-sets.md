@@ -1,25 +1,29 @@
 ---
 title: "使用列集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/30/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "稀疏列, 列集"
-  - "列集"
+ms.custom: 
+ms.date: 07/30/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, column sets
+- column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用列集
+# <a name="use-column-sets"></a>使用列集
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   使用稀疏列的表可以指定一个列集以返回表中的所有稀疏列。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列组合成为一种结构化的输出。 列集与计算列的相似之处在于，列集并不是物理地存储在表中。 列集与计算列的不同之处在于，列集可直接更新。  
@@ -28,7 +32,7 @@ caps.handback.revision: 28
   
  若要定义列集，请在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 语句中使用 *<column_set_name>* FOR ALL_SPARSE_COLUMNS 关键字。  
   
-## 列集的使用准则  
+## <a name="guidelines-for-using-column-sets"></a>列集的使用准则  
  使用列集时，请考虑以下准则：  
   
 -   稀疏列和列集可以作为同一语句的一部分添加。  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
 -   有关 COLUMNS_UPDATED 函数返回的数据的信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## 从列集中选择数据的准则  
+## <a name="guidelines-for-selecting-data-from-a-column-set"></a>从列集中选择数据的准则  
  从列集中选择数据时，请考虑下面的准则：  
   
 -   从概念上讲，列集是一种可更新的 XML 计算列，它将一组基础关系列聚合为一种 XML 表示形式。 列集仅仅支持 ALL_SPARSE_COLUMNS 属性。 此属性用于聚合特定行的所有稀疏列中的所有非 null 值。  
@@ -91,7 +95,7 @@ caps.handback.revision: 28
 > [!WARNING]  
 >  添加列集会更改 SELECT * 查询的行为。 此查询会将列集作为 XML 列返回，而不返回单个稀疏列。 架构设计人员和软件开发人员必须小心，不要破坏现有应用程序。  
   
-## 在列集中插入或修改数据  
+## <a name="inserting-or-modifying-data-in-a-column-set"></a>在列集中插入或修改数据  
  可以通过以下方法来执行稀疏列的数据操作：使用单个列的名称，或者引用列集的名称并使用列集的 XML 格式来指定列集的值。 稀疏列可以按任何顺序出现在 XML 列中。  
   
  当使用 XML 列集插入或更新稀疏列值时，插入基础稀疏列的值将从 **xml** 数据类型隐式转换为另一种类型。 对于数值列，数值列的 XML 中的空白值将转换为空字符串。 这会导致在数值列中插入零，如下面的示例所示。  
@@ -105,9 +109,9 @@ SELECT i FROM t;
 GO  
 ```  
   
- 在本示例中，没有为 `i` 列指定值，但插入了 `0` 值。  
+ 在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
-## 使用 sql_variant 数据类型  
+## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 数据类型  
  **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int****char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
 |数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|小数位数|  
@@ -126,7 +130,7 @@ GO
   
  ** 不适用 = 在针对列集的选择操作期间不会为这些属性输出值。 当调用方在插入或更新操作期间使用为列集提供的 XML 表达形式为该属性指定值时，会生成错误。  
   
-## 安全性  
+## <a name="security"></a>安全性  
  列集的安全模式的工作原理类似于表与列之间存在的安全模式。 可以将列集视为一个小型表，选择操作类似于针对该微型表的 SELECT * 操作。 但是，列集与稀疏列之间的关系是分组关系，而不是严格意义上的容器关系。 安全模式检查列集列的安全性，并允许对基础稀疏列执行 DENY 操作。 安全模式的其他特征有：  
   
 -   可以为列集列授予安全权限，也可以撤消这一权限，这与表中的其他任何列类似。  
@@ -137,10 +141,10 @@ GO
   
 -   对稀疏列或列集执行 REVOKE 语句会默认将安全性设置为其父对象的安全性。  
   
-## 示例  
+## <a name="examples"></a>示例  
  在下面的示例中，文档表包含列 `DocID` 和 `Title`的通用集。 生产组希望所有生产文档都有一个 `ProductionSpecification` 列和一个 `ProductionLocation` 列。 市场组希望所有市场文档都有一个 `MarketingSurveyGroup` 列。  
   
-### A. A. 创建具有列集的表  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. A. 创建具有列集的表  
  下面的示例创建使用稀疏列并包括列集 `SpecialPurposeColumns`的表。 该示例在表中插入两行，然后从表中选择数据。  
   
 > [!NOTE]  
@@ -161,7 +165,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### B. 使用稀疏列的名称向表中插入数据  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. 使用稀疏列的名称向表中插入数据  
  下面的示例向示例 A 中创建的表插入两行。这些示例使用稀疏列的名称，而不引用列集。  
   
 ```  
@@ -174,7 +178,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### C. 使用列集的名称向表中插入数据  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. 使用列集的名称向表中插入数据  
  下面的示例向示例 A 中创建的表插入第三行。这一次不使用稀疏列的名称， 而是使用列集的名称，插入操作以 XML 格式为四个稀疏列中的两列提供值。  
   
 ```  
@@ -183,7 +187,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### D. 观察使用 SELECT * 时的列集结果  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. 观察使用 SELECT * 时的列集结果  
  下面的示例从包含列集的表中选择所有列。 它返回具有稀疏列的组合值的 XML 列， 而不是单独返回每个稀疏列。  
   
 ```  
@@ -200,7 +204,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### E. 观察按名称选择列集的结果  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. 观察按名称选择列集的结果  
  因为生产部门对市场数据不感兴趣，所以本示例添加 `WHERE` 子句以限制输出。 本示例使用列集的名称。  
   
 ```  
@@ -217,7 +221,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### F. 观察按名称选择稀疏列的结果  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. 观察按名称选择稀疏列的结果  
  当表包含列集时，您仍然可以使用各列名称来查询表，如下例所示。  
   
 ```  
@@ -234,7 +238,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### G. 使用列集来更新表  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>G. 使用列集来更新表  
  下面的示例用第三个记录所在行使用的两个稀疏列的新值来更新该记录。  
   
 ```  
@@ -247,7 +251,7 @@ GO
 > [!IMPORTANT]  
 >  使用列集的 UPDATE 语句更新表中的所有稀疏列。 未引用的稀疏列将更新为 NULL。  
   
- 下面的示例更新第三个记录，但仅仅指定两个已填充列的其中一列的值。 在 `ProductionLocation` 语句中未包括第二列 `UPDATE`，所以该列更新为 NULL。  
+ 下面的示例更新第三个记录，但仅仅指定两个已填充列的其中一列的值。 在 `ProductionLocation` 语句中未包括第二列 `UPDATE` ，所以该列更新为 NULL。  
   
 ```  
 UPDATE DocumentStoreWithColumnSet  
@@ -256,7 +260,8 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)  
   
   
+

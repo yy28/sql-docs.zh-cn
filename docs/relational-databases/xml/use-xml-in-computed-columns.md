@@ -1,29 +1,33 @@
 ---
 title: "在计算列中使用 XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "计算列, XML"
-  - "XML [SQL Server], 计算列"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在计算列中使用 XML
+# <a name="use-xml-in-computed-columns"></a>在计算列中使用 XML
   XML 实例可作为计算列的源或计算列的类型出现。 本主题中的示例演示如何将 XML 用于计算列。  
   
-## 从 XML 列创建计算列  
- 在以下 `CREATE TABLE` 语句中，通过 `xml` 计算 `col2` 类型列 (`col1`)：  
+## <a name="creating-computed-columns-from-xml-columns"></a>从 XML 列创建计算列  
+ 在以下 `CREATE TABLE` 语句中，通过 `xml` 计算`col2`类型列 ( `col1`)：  
   
 ```  
 CREATE TABLE T(col1 varchar(max), col2 AS CAST(col1 AS xml) )    
@@ -55,7 +59,7 @@ FROM T
   
 ```  
   
- 与上一个示例相同，以下示例定义函数以便针对计算列返回 **xml** 类型实例。 在函数内部，`query()` 数据类型的 `xml` 方法从 `xml` 类型参数检索值。  
+ 与上一个示例相同，以下示例定义函数以便针对计算列返回 **xml** 类型实例。 在函数内部， `query()` 数据类型的 `xml` 方法从 `xml` 类型参数检索值。  
   
 ```  
 CREATE FUNCTION my_udf(@var xml)   
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- 在以下 `CREATE TABLE` 语句中，`Col2` 是使用由以下函数返回的 XML 数据（`<Features>` 元素）的计算列：  
+ 在以下 `CREATE TABLE` 语句中， `Col2` 是使用由以下函数返回的 XML 数据（`<Features>` 元素）的计算列：  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### 本节内容  
+### <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  

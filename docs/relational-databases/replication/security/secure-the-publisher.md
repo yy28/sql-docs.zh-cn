@@ -1,29 +1,33 @@
 ---
-title: "保护发布服务器的安全 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "登录名 [SQL Server 复制], 发布访问列表"
-  - "发布 [SQL Server 复制], 发布访问列表"
-  - "发布访问列表 (PAL)"
-  - "PAL（发布访问列表）"
-  - "发布服务器 [SQL Server 复制], 安全"
-  - "发布 [SQL Server 复制], 安全"
+title: "保护发布服务器 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- Publishers [SQL Server replication], security
+- publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e04431c75b87188f6b476b9d23e5b482730881
+ms.lasthandoff: 04/11/2017
+
 ---
-# 保护发布服务器的安全
+# <a name="secure-the-publisher"></a>保护发布服务器的安全
   以下复制代理将连接到发布服务器：  
   
 -   日志读取器代理  
@@ -38,13 +42,13 @@ caps.handback.revision: 48
   
  除适当地管理登录名和密码外，还应了解发布访问列表 (PAL) 的角色。 PAL 用于启用登录名以访问发布数据，同时限制对发布服务器中的数据库进行即席访问。  
   
-## 发布访问列表  
+## <a name="publication-access-list"></a>发布访问列表  
  PAL 是用于保护发布服务器中发布的主要机制。 PAL 的功能与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的访问控制列表相似。 创建发布时，复制将为该发布创建 PAL。 可把 PAL 配置为包含被授权访问发布的登录名和组的列表。 当一个代理连接到发布服务器或分发服务器并请求访问某个发布时，PAL 中的身份验证信息将与此代理提供的发布服务器登录名进行比较。 此过程为发布服务器提供了额外的安全性，方法是：阻止客户端工具使用发布服务器和分发服务器登录名在发布服务器中直接进行修改  
   
 > [!NOTE]  
->  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 该角色窗体中有一个名称 **Msmerge_***\< PublicationID>* 用于合并复制和 **MSReplPAL_***\< PublicationDatabaseID>***_***\< PublicationID>* 事务复制和快照复制。  
+>  复制操作在发布服务器中为每个发布创建一个角色，强制应用 PAL 成员身份。 对于合并复制，该角色的名称采用 **Msmerge_***\<PublicationID>* 的形式；对于事务性复制和快照复制，该角色的名称采用 **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* 的形式。  
   
- 默认情况下，PAL 中包括的登录名是： **sysadmin** 固定服务器角色在创建发布时的成员，以及用于创建发布的登录名。 默认情况下，所有登录名都属于 **sysadmin** 固定的服务器角色或 **db_owner** 的发布数据库上的固定的数据库角色可以订阅发布，而不用显式添加到 PAL。  
+ 默认情况下，PAL 中包括的登录名是： **sysadmin** 固定服务器角色在创建发布时的成员，以及用于创建发布的登录名。 默认情况下，发布数据库中属于 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员的所有登录名都可订阅发布，而不用显式添加到 PAL 中。  
   
  使用 PAL 时，请考虑以下原则：  
   
@@ -56,23 +60,23 @@ caps.handback.revision: 48
   
 -   如果 PAL 包含 Windows 帐户并且域使用 Active Directory，则运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的帐户必须具有对 Active Directory 的读取权限。 如果遇到与 Windows 帐户有关的问题，请确保运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的帐户具有足够的权限。 有关详细信息，请参阅 Windows 文档。  
   
- 若要管理 PAL，请参阅 [管理发布访问列表中的登录名](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)。  
+ 若要管理 PAL，请参阅[管理发布访问列表中的登录名](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)。  
   
-## 快照代理  
+## <a name="snapshot-agent"></a>快照代理  
  每个发布拥有一个快照代理。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
-## FTP 快照传递  
- 如果指定应通过 FTP 共享而非 UNC 共享使快照可用，则配置 FTP 访问时必须指定登录名和密码。 有关详细信息，请参阅 [提供快照通过 FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
+## <a name="ftp-snapshot-delivery"></a>FTP 快照传递  
+ 如果指定应通过 FTP 共享而非 UNC 共享使快照可用，则配置 FTP 访问时必须指定登录名和密码。 有关详细信息，请参阅[通过 FTP 传递快照](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
-## 日志读取器代理  
+## <a name="log-reader-agent"></a>日志读取器代理  
  对于使用事务复制发布的每个数据库，都有一个日志读取器代理。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
-## 队列读取器代理  
- 与给定的分发服务器关联的所有发布服务器和发布（允许排队更新订阅）都拥有一个队列读取器代理。 有关详细信息，请参阅 [对于事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。  
+## <a name="queue-reader-agent"></a>队列读取器代理  
+ 与给定的分发服务器关联的所有发布服务器和发布（允许排队更新订阅）都拥有一个队列读取器代理。 有关详细信息，请参阅[允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
-## 另请参阅  
- [启用加密的连接到数据库引擎 & #40;SQL Server 配置管理器和 #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
- [复制安全最佳实践](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全和保护与 #40;复制和 #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>另请参阅  
+ [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [安全性和保护（复制）](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

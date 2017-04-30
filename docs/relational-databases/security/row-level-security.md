@@ -1,32 +1,36 @@
 ---
 title: "行级安全性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "访问控制谓词"
-  - "行级别安全性"
-  - "安全性 [SQL Server], 基于访问控制的谓词"
-  - "所述的行级别安全性"
-  - "基于谓词的安全性"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# 行级安全性
+# <a name="row-level-security"></a>行级安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![“行级安全性”图](../../relational-databases/security/media/row-level-security-graphic.png "“行级安全性”图")  
   
  行级别安全性使客户可以基于执行查询的用户的特性（例如，组成员身份或执行上下文）来控制对数据库表进行的访问。  
   
@@ -34,32 +38,11 @@ caps.handback.revision: 47
   
  访问限制逻辑位于数据库层中，而不是在另一个应用层中远离数据。 数据库系统会在每次尝试从任何层进行数据访问时应用访问限制。 这样，你的安全系统可以通过减少安全系统的外围应用来更加可靠和强健。  
   
- 可使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及作为[内联表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)创建的谓词来实现 RLS。  
+ 可使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及作为 [内联表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)创建的谓词来实现 RLS。  
   
-||  
-|-|  
-|**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。|  
+**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] （[获取](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
-##  <a name="Top"></a> 主题内容  
-  
--   [说明](#Description)  
-  
--   [用例](#UseCases)  
-  
--   [权限](#Permissions)  
-  
--   [最佳实践](#Best)  
-  
--   [安全说明：旁路攻击](#SecNote)  
-  
--   [跨功能兼容性](#Limitations)  
-  
--   [代码示例](#CodeExamples)  
-  
-    -   [A. 针对直接连接用户的方案](#Typical)  
-  
-    -   [B. 中间层应用程序方案](#MidTier)  
-  
+
 ##  <a name="Description"></a> 说明  
  RLS 支持两种类型的安全谓词。  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  对表中的行级数据的访问将受到定义为内联表值函数的安全谓词的限制。 随后调用该函数，并由安全策略进行实施。 对于筛选器谓词，不会向应用程序指示已从结果集筛选了行；如果筛选了所有行，则将返回空集。 对于阻止谓词，违反该谓词的任何操作将失败并出错。  
   
- 从基表中读取数据时会应用筛选器谓词，它会影响所有获取操作：**SELECT**，**DELETE**（即 用户无法删除筛选的行）和 **UPDATE**（即 用户无法更新筛选的行，尽管可以采用随后筛选行的这样一种方式来更新它们）。 阻止谓词影响所有写入操作。  
+ 从基表中读取数据时会应用筛选器谓词，它会影响所有获取操作： **SELECT**， **DELETE** （即 用户无法删除筛选的行）和 **UPDATE** （即 用户无法更新筛选的行，尽管可以采用随后筛选行的这样一种方式来更新它们）。 阻止谓词影响所有写入操作。  
   
 -   AFTER INSERT 和 AFTER UPDATE 谓词可以防止用户将行更新为违反该谓词的值。  
   
@@ -79,13 +62,13 @@ caps.handback.revision: 47
   
  筛选器和阻止谓词以及安全策略具有以下行为：  
   
--   你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON` 创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果使用 `SCHEMABINDING = OFF` 创建安全策略，则用户将需要针对这些附加表和函数的 **SELECT** 或 **EXECUTE** 权限，以便查询目标表。  
+-   你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果使用 `SCHEMABINDING = OFF`创建安全策略，则用户将需要针对这些附加表和函数的 **SELECT** 或 **EXECUTE** 权限，以便查询目标表。  
   
      你可以定义与另一个表联接和/或调用函数的谓词函数。 该联接/函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。  
   
 -   你可以针对已定义但禁用安全谓词的表发出查询。 不会影响已筛选或阻止的任何行。  
   
--   如果 dbo 用户、**db_owner** 角色的成员或表所有者针对已定义并启用安全策略的表进行查询，将根据安全策略的定义来筛选或阻止行。  
+-   如果 dbo 用户、 **db_owner** 角色的成员或表所有者针对已定义并启用安全策略的表进行查询，将根据安全策略的定义来筛选或阻止行。  
   
 -   尝试更改架构绑定安全策略绑定的表的架构会导致错误。 但是，可以更改谓词未引用的列。  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   批量操作 API（包括 BULK INSERT）未发生变化。 这意味着，阻止谓词 AFTER INSERT 将应用于批量插入操作，就像普通的插入操作一样。  
   
- [顶部](#Top)  
   
 ##  <a name="UseCases"></a> 用例  
  下面是有关如何使用 RLS 的设计示例：  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  用更正式的术语来说，RLS 引入了基于谓词的访问控制。 它采用灵活的、基于谓词的集中式评估，可以考虑元数据或管理员根据需要确定的任何其他条件。 谓词用作一个条件，以便基于用户属性来确定用户是否具有合适的数据访问权限。 可以使用基于谓词的访问控制来实现基于标签的访问控制。  
   
- [顶部](#Top)  
   
 ##  <a name="Permissions"></a> 权限  
  创建、更改或删除安全策略需要 **ALTER ANY SECURITY POLICY** 权限。 创建或删除安全策略需要针对架构的 **ALTER** 权限。  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  安全策略应用于所有用户（包括数据库中的 dbo 用户）。 Dbo 用户可以更改或删除安全策略，但是可以审核他们对安全策略进行的更改。 如果高特权用户（例如 sysadmin 或 db_owner）需要查看所有行以进行故障排除或验证数据，则必须编写安全策略来允许该操作。  
   
- 如果使用 `SCHEMABINDING = OFF` 创建安全策略，则若要查询目标表，用户必须具有针对谓词函数及在其中使用的任何其他表、视图或函数的 **SELECT** 或 **EXECUTE** 权限。 如果使用 `SCHEMABINDING = ON` 创建安全策略（默认值），则当用户查询目标表时，会绕过这些权限检查。  
+ 如果使用 `SCHEMABINDING = OFF`创建安全策略，则若要查询目标表，用户必须具有针对谓词函数及在其中使用的任何其他表、视图或函数的  **SELECT** 或 **EXECUTE** 权限。 如果使用 `SCHEMABINDING = ON` 创建安全策略（默认值），则当用户查询目标表时，会绕过这些权限检查。  
   
- [顶部](#Top)  
   
 ##  <a name="Best"></a> 最佳实践  
   
@@ -153,7 +133,7 @@ caps.handback.revision: 47
   
 -   避免在谓词函数中使用过多表联接以便使性能最大化。  
   
- 避免使用依赖于会话特定的 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md) 的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 **SET** 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
+ 避免使用依赖于会话特定的 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 **SET** 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
   
 -   谓词函数不应将字符串隐式转换为 **date**、**smalldatetime****datetime****datetime2** 或 **datetimeoffset**，也不应执行相反的转换，因为这些转换受 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 选项的影响。 应改用 **CONVERT** 函数并显式指定样式参数。  
   
@@ -162,18 +142,16 @@ caps.handback.revision: 47
 -   谓词函数不应依赖于在出错（例如溢出或被零除）时返回 **NULL** 的算术或聚合表达式，因为这种行为受 [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)、[SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 和 [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md) 选项的影响。  
   
 -   谓词函数不应将串联字符串与 **NULL** 进行比较，因为这种行为受 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 选项的影响。  
-  
- [顶部](#Top)  
+   
   
 ##  <a name="SecNote"></a> 安全说明：旁路攻击  
  **恶意安全策略管理员：** 观察到以下这点十分重要：具有足够权限来基于敏感列创建安全策略并且有权创建或更改内联表值函数的恶意安全策略管理员可以与另一个对表具有选择权限的用户串通，通过恶意创建旨在使用旁路攻击推断数据的内联表值函数来泄漏数据。 此类攻击需要进行串通（或向恶意用户授予过多权限），并且可能需要多次反复修改策略（需要删除谓词以便中断架构绑定的权限）、修改内联表值函数并重复对目标表运行选择语句。 强烈建议根据需要限制权限，并监视任何可疑活动（如不断更改与行级别安全性相关的策略和内联表值函数）。  
   
- **精心设计的查询：** 通过使用精心设计的查询可能会造成信息泄露。 例如，`SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 会让恶意用户知道 John Doe 的薪金是 100000 美元。 即使采用安全谓词来防止恶意用户直接查询其他人的薪金，用户仍然可以确定查询何时返回被零除异常。  
-  
- [顶部](#Top)  
+ **精心设计的查询：** 通过使用精心设计的查询可能会造成信息泄露。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 会让恶意用户知道 John Doe 的薪金是 100000 美元。 即使采用安全谓词来防止恶意用户直接查询其他人的薪金，用户仍然可以确定查询何时返回被零除异常。  
+   
   
 ##  <a name="Limitations"></a> 跨功能兼容性  
- 一般情况下，行级别安全性将按预期对各种功能正常运行。 但存在几种例外情况。 本部分介绍对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些其他功能使用行级别安全性的说明和注意事项。  
+ 一般情况下，行级别安全性将按预期对各种功能正常运行。 但存在几种例外情况。 本部分介绍对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的某些其他功能使用行级别安全性的说明和注意事项。  
   
 -   **DBCC SHOW_STATISTICS** 报告有关未筛选数据的的统计信息，因此可能会泄漏在其他情况下受安全策略保护的信息。 出于此原因，若要查看具有行级别安全性策略的表的统计信息对象，用户必须是表所有者，或者是 sysadmin 固定服务器角色、db_owner 固定服务器角色或 db_ddladmin 固定数据库角色的成员。  
   
@@ -181,15 +159,15 @@ caps.handback.revision: 47
   
 -   **Polybase** RLS 与 Polybase 不兼容。  
   
--   **内存优化表**必须使用 `WITH NATIVE_COMPILATION` 选项定义在内存优化表中用作安全谓词的内联表值函数。 使用此选项时，内存优化表不支持的语言功能将被禁止，并在创建时发出相应的错误。 有关详细信息，请参阅[内存优化表简介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)中的**内存优化表中的行级别安全性**部分。  
+-   **内存优化表**必须使用 `WITH NATIVE_COMPILATION` 选项定义在内存优化表中用作安全谓词的内联表值函数。 使用此选项时，内存优化表不支持的语言功能将被禁止，并在创建时发出相应的错误。 有关详细信息，请参阅 **内存优化表简介** 中的 [内存优化表中的行级别安全性](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)部分。  
   
 -   **索引视图** 一般情况下，可以在视图顶层创建安全策略，可以在安全策略绑定的表顶层创建视图。 但是，不能在具有安全策略的表顶层创建索引视图，因为通过索引执行的行查找将跳过策略。  
   
--   **更改数据捕获**更改数据捕获可能会将要筛选的整行透露给 **db_owner** 的成员，或者在为表启用 CDC 时指定的“选通”角色的成员用户（注意：可以显式将此项设置为 **NULL**，使所有用户都能访问更改数据）。 实际上，**db_owner** 和此选通角色的成员可以看到对表所做的所有数据更改，即使表中存在安全策略。  
+-   **更改数据捕获** 更改数据捕获可能会将要筛选的整行透露给 **db_owner** 的成员，或者在为表启用 CDC 时指定的“选通”角色的成员用户（注意：可以显式将此项设置为 **NULL** ，使所有用户都能访问更改数据）。 实际上， **db_owner** 和此选通角色的成员可以看到对表所做的所有数据更改，即使表中存在安全策略。  
   
 -   **更改跟踪** 更改跟踪可能会将要筛选的行的主键透露给具有 **SELECT** 和 **VIEW CHANGE TRACKING** 权限的用户。 实际数据值不会泄漏；只会透露已更新/插入/删除具有 B 主键的行的列 A 这一事实。 如果主键包含机密元素（如社会安全号码），这会产生问题。 但是，在实践中，此 **CHANGETABLE** 几乎始终与原始表联接以获取最新数据。  
   
--   **全文搜索**对于使用以下全文搜索和语义搜索函数的查询，预期到性能会下降，因为引入了附加的联接来应用行级别安全性，并避免泄露应筛选的行的主键：**CONTAINSTABLE**、**FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
+-   **全文搜索** 对于使用以下全文搜索和语义搜索函数的查询，预期到性能会下降，因为引入了附加的联接来应用行级别安全性，并避免泄露应筛选的行的主键： **CONTAINSTABLE**、 **FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
   
 -   **列存储索引** RLS 与聚集和非聚集列存储索引兼容。 但是，由于行级别安全性应用了一个函数，优化器可能会修改查询计划，从而不会使用批处理模式。  
   
@@ -197,7 +175,6 @@ caps.handback.revision: 47
   
 -   **临时表** 与 RLS 兼容。 但是，当前表中的安全谓词不会自动复制到历史记录表。 若要将安全策略应用到当前表和历史记录表，必须单独在每个表中添加安全谓词。  
   
- [顶部](#Top)  
   
 ##  <a name="CodeExamples"></a> 示例  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  创建将演示不同访问功能的三个用户帐户。  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,7 +273,6 @@ WITH (STATE = OFF);
   
  现在 Sales1 和 Sales2 用户可以看到所有 6 行。  
   
- [顶部](#Top)  
   
 ###  <a name="MidTier"></a> B. 用户通过中间层应用程序连接到数据库的方案  
  此示例演示一个中间层应用程序如何实现连接筛选，其中应用程序用户（或租户）共享同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户（应用程序）。 应用程序连接到数据库之后在 [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md) 中设置当前应用程序用户 ID，然后安全策略以透明方式筛选不应对此 ID 可见的行，同时阻止用户插入错误用户 ID 的行。 无需进行任何其他应用更改。  
@@ -352,7 +328,7 @@ AS
 GO  
 ```  
   
- 创建一个安全策略，用于将此函数添加为 `Sales`上的筛选器谓词和阻止谓词。 阻止谓词只需要 **AFTER INSERT**，因为 **BEFORE UPDATE** 和 **BEFORE DELETE** 已筛选；不需要 **AFTER UPDATE**，因为 `AppUserId` 列不能更新为其他值，原因是前面设置了列权限。  
+ 创建一个安全策略，用于将此函数添加为 `Sales`上的筛选器谓词和阻止谓词。 阻止谓词只需要 **AFTER INSERT**，因为 **BEFORE UPDATE** 和 **BEFORE DELETE** 已筛选；不需要 **AFTER UPDATE** ，因为 `AppUserId` 列不能更新为其他值，原因是前面设置了列权限。  
   
 ```  
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- 在 **SESSION_CONTEXT** 中设置不同的用户 ID 后，可以通过从 `Sales` 表进行选择，来模拟连接筛选。 在实践中，应用程序负责在打开连接后在 **SESSION_CONTEXT** 中设置当前用户 ID。  
+ 在 `Sales` SESSION_CONTEXT **中设置不同的用户 ID 后，可以通过从**表进行选择，来模拟连接筛选。 在实践中，应用程序负责在打开连接后在 **SESSION_CONTEXT** 中设置当前用户 ID。  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

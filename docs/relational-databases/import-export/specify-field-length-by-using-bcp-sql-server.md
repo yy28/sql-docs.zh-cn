@@ -1,31 +1,35 @@
 ---
 title: "使用 bcp 指定字段长度 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "本机数据格式 [SQL Server]"
-  - "默认字段长度"
-  - "字段长度 [SQL Server]"
-  - "数据格式 [SQL Server]，字段长度"
-  - "bcp 实用工具 [SQL Server]，字段长度"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- default field lengths
+- field length [SQL Server]
+- data formats [SQL Server], field length
+- bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 bcp 指定字段长度 (SQL Server)
+# <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如， **int** 数据类型占 4 个字节。 如果指示前缀长度为 0，则 **bcp** 命令会提示输入字段长度、默认字段长度以及字段长度对包含 **char** 数据的数据文件中数据存储的影响。  
   
-## bcp 提示输入字段长度  
+## <a name="the-bcp-prompt-for-field-length"></a>bcp 提示输入字段长度  
  如果某个交互式 **bcp** 命令包含不带格式化文件开关 (**-f**) 或数据格式开关（**-n**、**-c**、**-w** 或 **-N**）的 **in** 或 **out** 选项，则该命令会提示输入每个数据字段的字段长度，如下所示：  
   
  `Enter length of field <field_name> [<default>]:`  
@@ -43,15 +47,15 @@ caps.handback.revision: 27
   
 -   如果文件存储类型为非字符类型，则 **bcp** 命令不会提示输入字段长度。 数据将以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机数据表示形式（本机格式）存储。  
   
-## 使用默认字段长度  
- 通常，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 会建议你接受 **bcp** 建议的默认字段长度值。 如果已创建了字符模式数据文件，则使用默认字段长度可确保数据不会被截断，并且不会发生数字溢出错误。  
+## <a name="using-default-field-lengths"></a>使用默认字段长度  
+ 通常， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 会建议你接受 **bcp**建议的默认字段长度值。 如果已创建了字符模式数据文件，则使用默认字段长度可确保数据不会被截断，并且不会发生数字溢出错误。  
   
  如果指定的字段长度不正确，可能会发生问题。 例如，当复制数字数据并且为该数据指定的字段长度过短时， **bcp** 实用工具将显示一条溢出消息而不复制数据。 另外，当导出 **datetime** 数据并且为该字符串指定的字段长度少于 26 个字节时， **bcp** 实用工具将截断数据而不显示任何错误消息。  
   
 > [!IMPORTANT]  
->  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常情况下，当使用 **money** 和 **datetime** 数据类型而数据文件中只出现了所需字段的一部分时，就会发生此类错误；例如指定了 *mm*/*dd*/*yy* 格式中的 **datetime** 值而没有指定时间部分，因而该值少于以 **char** 格式表示 **datetime** 值所需的 24 个字符。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
+>  使用默认大小选项时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要读取整个字符串。 在某些情况下，使用默认字段长度可能导致“意外的文件结尾”错误。 通常情况下，当使用 **money** 和 **datetime** 数据类型而数据文件中只出现了所需字段的一部分时，就会发生此类错误；例如指定了 **mm** dd *yy*/*格式中的*/*datetime* 值而没有指定时间部分，因而该值少于以 **char** 格式表示 **datetime** 值所需的 24 个字符。 若要避免此类错误，请使用字段终止符或具有固定长度的数据字段，或者通过指定其他值来更改默认字段长度。  
   
-### 字符文件存储的默认字段长度  
+### <a name="default-field-lengths-for-character-file-storage"></a>字符文件存储的默认字段长度  
  下表列出了要存储为字符文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同。  
   
 |数据类型|默认长度（字符数）|  
@@ -91,7 +95,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  类型为 **tinyint** 的列的值介于 0 到 255 之间；表示该范围内的任意数值所需的最大字符数是三（用于表示 100 到 255 之间的值）。  
   
-### 本机文件存储的默认字段长度  
+### <a name="default-field-lengths-for-native-file-storage"></a>本机文件存储的默认字段长度  
  下表列出了要存储为本机文件存储类型的数据的默认字段长度。 可为空值的数据与非空数据的长度相同，并且字符数据始终以字符格式存储。  
   
 |数据类型|默认长度（字符数）|  
@@ -119,7 +123,7 @@ caps.handback.revision: 27
   
  在上述所有情况中，若要创建日后要重新加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据文件并使存储空间保持最小，请使用长度前缀，以及默认文件存储类型和默认字段长度。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

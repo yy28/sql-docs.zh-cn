@@ -1,50 +1,54 @@
 ---
 title: "运行 Transact-SQL 调试器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, sysadmin 要求"
-  - "Transact-SQL 调试器, 受支持的版本"
-  - "查询编辑器 [数据库引擎], 右键单击菜单"
-  - "调试 [SQL Server], T-SQL 调试器"
-  - "Transact-SQL 调试器, 查询编辑器快捷菜单"
-  - "Transact-SQL 调试器, 停止"
-  - "Transact-SQL 调试器, 调试菜单"
-  - "调试 [SQL Server]"
-  - "Transact-SQL 调试器, 调试工具栏"
-  - "Transact-SQL 调试器, 键盘快捷方式"
-  - "Transact-SQL 调试器, 启动"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 运行 Transact-SQL 调试器
+# <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
   在打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
   
-## 启动和停止调试器  
+## <a name="starting-and-stopping-the-debugger"></a>启动和停止调试器  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的要求如下：  
   
--   如果您的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器连接到其他计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅[运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。  
+-   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器连接到其他计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则必须配置调试器进行远程调试。 有关详细信息，请参阅 [运行 TSQL 调试器之前配置防火墙规则](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。  
   
  我们建议在测试服务器上调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，而不要在生产服务器上调试，原因如下：  
   
--   调试是一项需要高特权的操作。 因此只允许 sysadmin 固定服务器角色成员在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行调试。  
+-   调试是一项需要高特权的操作。 因此只允许 sysadmin 固定服务器角色成员在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中进行调试。  
   
 -   当您调查多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的运行时，调试会话通常会运行很长时间。 会话获取的锁（如更新锁）可能会持有很长时间，直到终止会话或者提交或回滚事务。  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  也可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] “调试” **菜单上单击** “全部分离” **，以停止调试模式，但允许剩余的** 语句完成执行。  
   
-## 控制调试器  
+## <a name="controlling-the-debugger"></a>控制调试器  
  可以使用以下命令、工具栏和快捷方式控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的运行方式：  
   
 -   **“调试”** 菜单和 **“调试”** 工具栏。 在焦点放到打开的查询编辑器窗口中之前， **“调试”** 菜单和 **“调试”** 工具栏处于不活动状态。 它们将保持活动状态，直到关闭当前项目。  
@@ -77,7 +81,7 @@ caps.handback.revision: 8
   
 |调试菜单命令|编辑器快捷方式命令|工具栏按钮|键盘快捷键|操作|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
-|**窗口/断点**|不可用|**断点**|Ctrl+Alt+B|显示 **“断点”** 窗口，您可在其中查看和管理断点。|  
+|**窗口/断点**|不可用|**“断点”**|Ctrl+Alt+B|显示 **“断点”** 窗口，您可在其中查看和管理断点。|  
 |**窗口/监视/监视1**|不可用|**断点/监视/监视1**|CTRL+ALT+W, 1|显示 **“监视1”** 窗口。|  
 |**窗口/监视/监视2**|不可用|**断点/监视/监视2**|CTRL+ALT+W, 2|显示 **“监视2”** 窗口。|  
 |**窗口/监视/监视3**|不可用|**断点/监视/监视3**|CTRL+ALT+W, 3|显示 **“监视3”** 窗口。|  
@@ -86,10 +90,10 @@ caps.handback.revision: 8
 |**窗口/调用堆栈**|不可用|**断点/调用堆栈**|Ctrl+Alt+C|显示 **“调用堆栈”** 窗口。|  
 |**窗口/线程**|不可用|**断点/线程**|Ctrl+Alt+H|显示 **“线程”** 窗口。|  
 |**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前，**“继续”** 处于不活动状态。|  
-|**“调试”**|不可用|**启动调试**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”**替代。|  
+|**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”**替代。|  
 |**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
-|**停止调试**|不可用|**停止调试**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
-|**全部分离**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
+|**“停止调试”**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
+|**菜单上单击**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
 |**逐语句**|不可用|**逐语句**|F11|运行下一个语句，如果下一个语句运行存储过程、触发器或函数，还将打开处于调试模式的新查询编辑器窗口。|  
 |**逐过程**|不可用|**逐过程**|F10|与 **“逐语句”**相同，只不过它不会调试函数、存储过程或触发器。|  
 |**跳出**|不可用|**跳出**|Shift+F11|执行触发器、函数或存储过程中的剩余代码，而不在任何断点处暂停。 当控件返回到调用该模块的代码时，常规调试模式恢复。|  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**禁用所有断点**|不可用|不可用|不可用|禁用所有断点。|  
 |不可用|**添加监视**|不可用|不可用|将选定的表达式添加到 **“监视”** 窗口中。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)   
  [逐句通过 Transact-SQL 代码](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)   

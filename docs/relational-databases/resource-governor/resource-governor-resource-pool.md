@@ -1,31 +1,35 @@
 ---
 title: "资源调控器资源池 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器，资源池"
-  - "资源池 [SQL Server]，概述"
-  - "资源池 [SQL Server]"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 资源调控器资源池
+# <a name="resource-governor-resource-pool"></a>资源调控器资源池
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，资源池表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 通过资源调控器，您可以指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。 每个资源池均可包含一个或多个工作负荷组。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的资源运行。  
   
-## 资源池概念  
+## <a name="resource-pool-concepts"></a>资源池概念  
  资源池或池表示服务器的物理资源。 您可以将池看作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内部的一个虚拟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 池有两个部分。 一部分不与其他池重叠，这使得资源预留最少。 另一部分与其他池共享，支持最大可能的资源消耗。 通过为每个资源（CPU、内存和物理 IO）指定以下一个或多个设置定义池资源：  
   
 -   **MIN_CPU_PERCENT 和 MAX_CPU_PERCENT**  
@@ -68,7 +72,7 @@ caps.handback.revision: 17
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |内部|0|100|100|0|有效 MAX 百分比和共享百分比不适用于内部池。|  
 |默认值|0|100|30|30|有效 MAX 值的计算如下：min(100,100-(20+50)) = 30。 计算的共享百分比为有效 MAX - MIN = 30。|  
-|池 1|20|100|50|30|有效 MAX 值的计算方式为：min(100,100-50) = 50。 共享百分比的计算方式为：有效 MAX - MIN = 30。|  
+|池 1|20|100|50|30|有效 MAX 值的计算方式为：min(100,100-50) = 50。 计算的共享百分比为有效 MAX - MIN = 30。|  
 |池 2|50|70|70|20|有效 MAX 值的计算方式为：min(70,100-20) = 70。 共享百分比的计算方式为：有效 MAX - MIN = 20。|  
   
  以上表为示例，我们可以进一步说明创建其他池时进行的调整。 此池为池 3，MIN 百分比设置为 5。  
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  用户定义的资源池是在您的环境中为特定的工作负荷创建的资源池。 资源调控器提供用于创建、更改和删除资源池的 DDL 语句。  
   
-## 资源池任务  
+## <a name="resource-pool-tasks"></a>资源池任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |说明如何更改资源池设置。|[更改资源池设置](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |说明如何删除资源池。|[删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [资源调控器分类器函数](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [查看资源调控器属性](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

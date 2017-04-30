@@ -1,28 +1,32 @@
 ---
 title: "使用 Unicode 本机格式导入或导出数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Unicode [SQL Server]，批量导入和导出"
-  - "数据格式 [SQL Server]，Unicode 本机"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode [SQL Server], bulk importing and exporting
+- data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdd63f41c8a567bde4fcadab2802a2c0b6f468cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 Unicode 本机格式导入或导出数据 (SQL Server)
+# <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 本机格式导入或导出数据 (SQL Server)
 当必须将信息从一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制到另一个时，Unicode 本机格式将非常有用。 为非字符数据使用本机格式可以节省时间，并消除与字符格式之间不必要的数据类型转换。 在使用不同代码页的服务器之间大容量传输数据时，为所有字符数据使用 Unicode 字符格式可以防止丢失任何扩展字符。 可以通过任何批量导入方法读取 Unicode 本机格式的数据文件。  
   
- 通过使用包含扩展字符或 DBCS 字符的数据文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例之间大容量传输数据时，建议使用 Unicode 本机格式。 对于非字符数据，Unicode 本机格式使用本机（数据库）数据类型。 对于字符数据（如 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、[varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、[nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)），Unicode 本机格式使用 Unicode 字符数据格式。  
+ 通过使用包含扩展字符或 DBCS 字符的数据文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例之间大容量传输数据时，建议使用 Unicode 本机格式。 对于非字符数据，Unicode 本机格式使用本机（数据库）数据类型。 对于字符数据（如 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)和 [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)），Unicode 本机格式使用 Unicode 字符数据格式。  
   
  在 Unicode 本机格式数据文件中存储为 SQLVARIANT 的 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 数据的运算方式与在本机格式数据文件中的运算方式相同，只是 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 和 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 值需转换为 [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 和 [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，这使得受影响列所需的存储量加倍。 这些值的原始元数据被保留，当批量导入到表列时，这些值将转换回其原始的 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 和 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 数据类型。  
  
@@ -40,12 +44,12 @@ caps.handback.revision: 32
   
 |Command|选项|说明|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|使 **bcp** 实用工具使用 Unicode 本机格式，将为所有非字符数据使用本机（数据库）数据类型，为所有字符（**char**、**nchar**、**varchar**、**nvarchar**、**text** 和 **ntext**）数据使用 Unicode 字符数据格式。|  
+|bcp|**-N**|使 **bcp** 实用工具使用 Unicode 本机格式，将为所有非字符数据使用本机（数据库）数据类型，为所有字符（**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**和 **ntext**）数据使用 Unicode 字符数据格式。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|批量导入数据时使用 Unicode 本机格式。|  
 |OPENROWSET|N/A|必须使用格式化文件|
     
 > [!NOTE]
->  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅[用于导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
+>  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
   
 ## 示例测试条件<a name="etc"></a>  
 本主题中的示例基于下面定义的表和格式化文件。
@@ -77,7 +81,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
-SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  下面的命令基于 `myWidenative` 的架构使用 [bcp 实用工具](../../tools/bcp-utility.md)生成非 XML 格式化文件 `myWidenative.fmt`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据，**T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
+SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myWidenative.fmt`生成非 XML 格式化文件 `myWidenative`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
 ```
 bcp TestDatabase.dbo.myWidenative format nul -f D:\BCP\myWidenative.fmt -T -N
@@ -181,10 +185,11 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
   
 -   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
-## 另请参阅  
- [bcp 实用工具](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>另请参阅  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
+

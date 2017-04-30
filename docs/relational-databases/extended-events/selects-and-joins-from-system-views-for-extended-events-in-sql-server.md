@@ -1,23 +1,27 @@
 ---
 title: "SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,16 +36,16 @@ caps.handback.revision: 6
 
 
 
-## A. 基本信息
+## <a name="a-foundational-information"></a>A. 基本信息
 
 
 扩展事件有两组系统视图：
 
 
-#### 目录视图：
+#### <a name="catalog-views"></a>目录视图：
 
 - 这些视图用于存储由 [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) 或 SSMS UI 中的对等功能创建的所有事件会话的定义信息。 但是，这些视图不知道曾经是否启动运行了任何会话。
-    - 例如，如果 SSMS 的**对象资源管理器**显示未定义任何事件会话，则针对视图 *sys.server_event_session_targets* 的 SELECT 语句将不返回任何行。
+    - 例如，如果 SSMS 的 **对象资源管理器** 显示未定义任何事件会话，则针对视图 *sys.server_event_session_targets* 的 SELECT 语句将不返回任何行。
 
 
 - 名称前缀为：
@@ -49,7 +53,7 @@ caps.handback.revision: 6
     - sys.database\_event\_session\* 是 SQL 数据库上的名称前缀。
 
 
-#### 动态管理视图 (DMV)：
+#### <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV)：
 
 - 用于存储正在运行的事件会话的当前活动信息。 但是这些 DMV 对会话定义知之甚少。
     - 即使所有事件会话当前已停止，针对视图 *sys.dm_xe_packages* 的 SELECT 语句仍将返回行，因为各种包已加载到服务器启动的活动内存。
@@ -57,11 +61,11 @@ caps.handback.revision: 6
 
 
 - 扩展事件的 DMV 的名称前缀为：
-    - sys.dm\_xe\_\* 是 SQL Server 上的名称前缀。
-    - sys.dm\_xe\_database\_\* 通常是 SQL 数据库上的名称前缀。
+    - *sys.dm\_xe\_\** 是 SQL Server 上的名称前缀。
+    - *sys.dm\_xe\_database\_\** 通常是 SQL 数据库上的名称前缀。
 
 
-#### 权限：
+#### <a name="permissions"></a>权限：
 
 
 要对系统视图执行 SELECT 语句，需要以下权限：
@@ -72,12 +76,12 @@ caps.handback.revision: 6
 
 <a name="section_B_catalog_views"></a>
 
-## B. 目录视图
+## <a name="b-catalog-views"></a>B. 目录视图
 
 
-本部分针对相同定义的事件会话匹配和关联三种不同的技术角度。 已在 SQL Server Management Studio (SSMS.exe) 的**对象资源管理器**中定义并显示会话，但是该会话当前未运行。
+本部分针对相同定义的事件会话匹配和关联三种不同的技术角度。 已在 SQL Server Management Studio (SSMS.exe) 的 **对象资源管理器** 中定义并显示会话，但是该会话当前未运行。
 
-每月[安装 SSMS 的最新更新](http://msdn.microsoft.com/library/mt238290.aspx)是明智之举，以避免意外故障。
+每月 [安装 SSMS 的最新更新](http://msdn.microsoft.com/library/mt238290.aspx)是明智之举，以避免意外故障。
 
 
 有关扩展事件的目录视图的参考文档位于 [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)（扩展事件目录视图 (Transact-SQL)）。
@@ -87,7 +91,7 @@ caps.handback.revision: 6
 
 
 
-#### B 部分的内容顺序
+#### <a name="the-sequence-in-this-section-b"></a>B 部分的内容顺序
 
 
 - [B.1 SSMS UI 角度](#section_B_1_SSMS_UI_perspective)
@@ -108,10 +112,10 @@ caps.handback.revision: 6
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### B.1 SSMS UI 角度
+### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 角度
 
 
-在 SSMS 的“对象资源管理器”中你可以打开“新建会话”对话框，方法是展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”。
+在 SSMS 的“对象资源管理器”中，可以通过展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”打开“新建会话”对话框。
 
 在“新建会话”的大对话框中标记为“常规”的第一部分中，我们看到已选中选项“在服务器启动时启动事件会话”。
 
@@ -125,7 +129,7 @@ caps.handback.revision: 6
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-接下来，还是在“事件” > “配置”部分，我们看到 [**resource_type** 已设置为 **PAGE**](#resource_type_dmv_actual_row)。 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
+接下来，还是在“事件” > “配置”部分中，我们看到 [**resource_type** 已设置为 **PAGE**](#resource_type_dmv_actual_row)。 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
 
 另外我们还看到数据库名称和计数器的谓词筛选器。
 
@@ -147,12 +151,12 @@ caps.handback.revision: 6
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### B.2 Transact-SQL 角度
+### <a name="b2-transact-sql-perspective"></a>B.2 Transact-SQL 角度
 
 
 不管如何创建事件会话定义，都可以在 SSMS UI 中将会话反向工程为完全匹配的 Transact-SQL 脚本。 你可以检查前面的“新建会话”屏幕截图，将图中显示的设置与下面生成的 T-SQL **CREATE EVENT SESSION** 脚本中的子句进行比较。
 
-若要对事件会话进行反向工程，在“对象资源管理器”中右键单击会话节点，然后选择“为会话创建脚本为” > “CREATE 到” > “剪贴板”。
+若要对事件会话进行反向工程，在“对象资源管理器”中右键单击会话节点，然后选择“编写会话脚本为” > “创建到” > “剪贴板”。
 
 下面的 T-SQL 脚本通过使用 SSMS 进行反向工程创建。 然后仅通过空格的策略性操作手动修饰该脚本。
 
@@ -205,7 +209,7 @@ CREATE EVENT SESSION [event_session_test3]
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### B.3 目录视图 SELECT JOIN UNION 角度
+### <a name="b3-catalog-view-select-join-union-perspective"></a>B.3 目录视图 SELECT JOIN UNION 角度
 
 
 别害怕！ 以下 T-SQL SELECT 语句很长只是因为它 UNION 了几个小的 SELECT 语句。 任何一个小的 SELECT 语句都可以自己运行。 这些小的 SELECT 语句显示如何将各种系统目录视图 JOIN 在一起。
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 
 下面是运行上述 SELECT JOIN UNION 的实际输出结果。 输出参数名称和值与前面的 CREATE EVENT SESSION 语句中的平面文本格式的输出相对应。
@@ -373,13 +377,13 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## C. 动态管理视图 (DMV)
+## <a name="c-dynamic-management-views-dmvs"></a>C. 动态管理视图 (DMV)
 
 
 现在我们过渡到 DMV。 本部分提供了几个具有特定业务用途的 Transact-SQL SELECT 语句。 此外，这些 SELECT 语句演示了如何针对你需要的新用途将 DMV JOIN 在一起。
 
 
-相关 DMV 的参考文档可从[《Extended Events Dynamic Management Views》](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)（扩展事件动态管理视图）中获取
+相关 DMV 的参考文档可从 [《Extended Events Dynamic Management Views》](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)（扩展事件动态管理视图）中获取
 
 
 在本文中，以下 SELECT 语句的任何实际输出行都来自 SQL Server 2016，除非另行指定。
@@ -400,7 +404,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_1_list_packages"></a>
 
-### C.1 列出所有包
+### <a name="c1-list-of-all-packages"></a>C.1 列出所有包
 
 
 可以在扩展事件区域中使用的所有对象均来自加载到系统的包。 本节将列出所有包及其说明。
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 以下是包的列表。
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### C.2 统计每个对象类型的数量
+### <a name="c2-count-of-every-object-type"></a>C.2 统计每个对象类型的数量
 
 
 本节将告诉我们事件包包含的对象类型。 将显示 sys.dm\_xe\_objects 中的所有对象类型的完整列表以及每个类型的计数。
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 下面是每个对象类型的对象的计数。 大约有 1915 个对象。
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### C.3 使用 SELECT 语句查询所有可用项，按类型排序
+### <a name="c3-select-all-available-items-sorted-by-type"></a>C.3 使用 SELECT 语句查询所有可用项，按类型排序
 
 
 以下 SELECT 语句返回大约 1915 个行，每一行针对一个对象。
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 为了激发你的兴趣，下面是前面的 SELECT 语句返回的对象的任意采样。
 
@@ -566,7 +570,7 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### C.4 查询可用于你的事件的数据字段
+### <a name="c4-data-fields-available-for-your-event"></a>C.4 查询可用于你的事件的数据字段
 
 
 以下 SELECT 语句将返回特定于事件类型的所有数据字段。
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,7 +607,7 @@ SELECT  -- C.4
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 以下行由前面的 SELECT 语句返回，其中 `o.name = 'lock_deadlock'`：
 
@@ -642,7 +646,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### C.5 *sys.dm_xe_map_values* 和事件字段
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件字段
 
 
 下面的 SELECT 语句包括对名为 sys.dm_xe_map_values 的复杂视图的联接。
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,11 +695,11 @@ SELECT  --C.5
 ```
 
 
-#### 输出
+#### <a name="output"></a>输出
 
 <a name="resource_type_dmv_actual_row"></a>
 
-接下来是前面的 T-SQL SELECT 语句的实际的 153 行输出采样。 **resource_type** 这一行与本文中别处的 **event_session_test3** 示例中使用的谓词筛选[相关](#resource_type_PAGE_cat_view)。
+接下来是前面的 T-SQL SELECT 语句的实际的 153 行输出采样。 **resource_type** 这一行与本文中别处的 [event_session_test3](#resource_type_PAGE_cat_view) 示例中使用的谓词筛选 **相关** 。
 
 
 ```
@@ -719,7 +723,7 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### C.6 查询目标的参数
+### <a name="c6-parameters-for-targets"></a>C.6 查询目标的参数
 
 
 以下 SELECT 语句将返回目标的每个参数。 每个参数都标记了是否为必选参数。 为参数指定的值将影响目标的行为。
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### “输出”
+#### <a name="output"></a>“输出”
 
 以下参数行是由前面的 SQL Server 2016 中的 SELECT 语句所返回内容的子集。
 
@@ -784,7 +788,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### C.7 使用 DMV SELECT 语句将 target_data 列转换为 XML
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 使用 DMV SELECT 语句将 target_data 列转换为 XML
 
 
 此 DMV SELECT 语句将返回活动事件会话目标的数据行。 数据被转换为 XML 格式，使其返回的单元格可单击，从而可在 SSMS 中轻松显示。
@@ -804,11 +808,11 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### 输出，唯一行，包括其 XML 单元格
+#### <a name="output-the-only-row-including-its-xml-cell"></a>输出，唯一行，包括其 XML 单元格
 
 下面是上述 SELECT 语句输出的唯一行。 列 XML-Cast 包含的 SSMS 理解的字符串为 XML 格式。 因此 SSMS 知道这可以使 XML-Cast 单元格可单击。
 
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### 输出中，单击单元格后显示完美的 XML
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>输出中，单击单元格后显示完美的 XML
 
 
 单击 XML-Cast 单元格后，将显示以下完美的内容。
@@ -852,7 +856,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### C.8 针对函数执行 SELECT 语句，以检索磁盘驱动器中的 event_file 数据
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 针对函数执行 SELECT 语句，以检索磁盘驱动器中的 event_file 数据
 
 
 假设事件会话收集了一些数据，之后停止了。 如果会话定义为使用 event_file 目标，则仍可以通过调用函数 sys.fn_xe_target_read_file 来检索数据。
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### 输出，针对函数执行 SELECT 语句返回的行
+#### <a name="output-rows-returned-by-select-from-the-function"></a>输出，针对函数执行 SELECT 语句返回的行
 
 
 以下是上面的针对函数执行 SELECT 语句返回的行。 最右端的 XML 列包含专门针对发生的事件的数据。
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### 输出，一个 XML 单元格
+#### <a name="output-one-xml-cell"></a>输出，一个 XML 单元格
 
 
 以下是前面返回的行集的第一个 XML 单元格的内容。
@@ -915,4 +919,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
+
 

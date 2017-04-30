@@ -1,30 +1,34 @@
 ---
 title: "资源调控器分类器函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 分类器函数"
-  - "用户定义函数 [SQL Server], 分类器函数"
-  - "分类器函数 [SQL Server]"
-  - "分类器函数 [SQL Server], 概述"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# 资源调控器分类器函数
+# <a name="resource-governor-classifier-function"></a>资源调控器分类器函数
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。  
   
-## 分类  
+## <a name="classification"></a>分类  
  资源调控器支持对传入会话的分类。 分类基于函数中包含的一组用户编写的条件。 函数逻辑的结果使资源调控器可以将会话归入现有工作负荷组类。  
   
 > [!NOTE]  
@@ -62,9 +66,9 @@ caps.handback.revision: 7
 -   分类器函数返回的工作负荷组位于架构绑定限制的作用域之外。 例如，不能删除表，但可以删除工作负荷组。  
   
 > [!IMPORTANT]  
->  建议在服务器上启用专用管理员连接 (DAC)。 DAC 不进行资源调控器分类，因此可用于监视分类器函数并排除其故障。 有关详细信息，请参阅[用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如果没有 DAC 可用来进行故障排除，则另一个选择是在单用户模式下重新启动系统。 虽然单用户模式不进行分类，但是它使您无法在资源调控器分类运行时对它进行诊断。  
+>  建议在服务器上启用专用管理员连接 (DAC)。 DAC 不进行资源调控器分类，因此可用于监视分类器函数并排除其故障。 有关详细信息，请参阅 [用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如果没有 DAC 可用来进行故障排除，则另一个选择是在单用户模式下重新启动系统。 虽然单用户模式不进行分类，但是它使您无法在资源调控器分类运行时对它进行诊断。  
   
-### 分类过程  
+### <a name="classification-process"></a>分类过程  
  在资源调控器上下文中，会话的登录过程包含下列步骤：  
   
 1.  登录身份验证  
@@ -76,15 +80,15 @@ caps.handback.revision: 7
  分类启动时，资源调控器执行分类器函数，并使用函数返回的值将请求发送到相应的工作负荷组。  
   
 > [!NOTE]  
->  在 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 中公开有关分类器函数和 LOGON 触发器的执行信息。  
+>  在 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中公开有关分类器函数和 LOGON 触发器的执行信息。  
   
-## 分类函数任务  
+## <a name="classification-function-tasks"></a>分类函数任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |说明如何创建和测试分类器用户定义函数。|[创建和测试分类器用户定义函数](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
