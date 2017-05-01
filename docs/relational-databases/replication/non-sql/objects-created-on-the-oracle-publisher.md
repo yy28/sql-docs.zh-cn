@@ -1,30 +1,34 @@
 ---
 title: "在 Oracle 发布服务器上创建的对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 发布 [SQL Server replication], 创建的对象"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 Oracle 发布服务器上创建的对象
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制将数据库对象安装在 Oracle 发布服务器，以启用更改跟踪和转发 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会安装在 Oracle 发布服务器上的任何二进制文件)。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
+# <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 发布服务器上创建的对象
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication installs database objects on the Oracle Publisher to enable change tracking and forwarding ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not install any binary files on the Oracle Publisher). 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
 |Object Name|对象类型|说明|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|表|更改跟踪表，当对已发布的表中进行了更改时，可使用此表存储更改信息。 为每个已发布的表创建一个更改跟踪表。|  
-|HREPL_Changes|表|Xactset 作业内部用来确定等待分配给事务集的更改数量的表。 有关此作业的详细信息，请参阅 [对于 Oracle 发布服务器的性能优化](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)。|  
+|HREPL_Changes|表|Xactset 作业内部用来确定等待分配给事务集的更改数量的表。 有关此作业的详细信息，请参阅 [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)（Oracle 发布服务器的性能优化）。|  
 |HREPL_Distributor|表|分发服务器状态表，用于维护与 Oracle 发布服务器相关联的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器的信息。|  
 |HREPL_Event|表|事件表，用于同步快照和行计数请求。|  
 |HREPL_Mutex|表|用于确保 Oracle 包过程 PopulatePollTable 未由日志读取器代理和数据库作业并发执行的表。|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|视图|为每个已发布表创建的、用于查询已发布表的视图。|  
 |HREPL_Log_I_J_K|视图|为每个已发布表创建的、用于查询更改跟踪表的视图。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle 发布的术语词汇表](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [有关 Oracle 发布的术语词汇表](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

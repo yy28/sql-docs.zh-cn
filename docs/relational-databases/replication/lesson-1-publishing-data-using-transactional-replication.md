@@ -1,29 +1,33 @@
 ---
 title: "第 1 课：使用事务复制发布数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "复制 [SQL Server], 教程"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021ff6838de18ea03a50aae661d543061088ae87
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 1 课：使用事务复制发布数据
-在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布 **Product** 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程[准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
+在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 **示例数据库中发布** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
-### 创建发布和定义项目  
+### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 14
   
 14. 创建发布后，单击“关闭”完成该向导。  
   
-### 查看快照的生成状态  
+### <a name="to-view-the-status-of-snapshot-generation"></a>查看快照的生成状态  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 14
   
 3.  将显示该发布的快照代理作业的当前状态。 继续下一课之前，请确保快照作业已成功完成。  
   
-### 将分发代理登录名添加到 PAL  
+### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>将分发代理登录名添加到 PAL  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -79,13 +83,14 @@ caps.handback.revision: 14
   
 4.  \在“添加发布访问项”对话框中，选择 *<Machine_Name>***\repl_distribution**，再单击“确定”。 单击 **“确定”**。  
   
-## 后续步骤  
-您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅[第 2 课：创建事务发布的订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
+## <a name="next-steps"></a>后续步骤  
+您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建事务发布的订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)  
 [定义项目](../../relational-databases/replication/publish/define-an-article.md)  
 [创建并应用快照](../../relational-databases/replication/create-and-apply-the-snapshot.md)  
   
   
   
+

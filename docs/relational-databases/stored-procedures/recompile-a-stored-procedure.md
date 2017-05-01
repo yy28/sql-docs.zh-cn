@@ -1,28 +1,32 @@
 ---
 title: "重新编译存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sp_recompile"
-  - "WITH RECOMPILE 子句"
-  - "重新编译存储过程"
-  - "存储过程 [SQL Server], 重新编译"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sp_recompile
+- WITH RECOMPILE clause
+- recompiling stored procedures
+- stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2c8f7940c224d22fc93eea4d2c269658e97f266
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新编译存储过程
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 重新编译存储过程。 完成此项工作有三种方法：过程定义中的 **WITH RECOMPILE** 选项，或在调用过程时，各个语句上的 **RECOMPILE** 查询提示，或者使用 **sp_recompile** 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
+# <a name="recompile-a-stored-procedure"></a>重新编译存储过程
+  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 完成此项工作有三种方法：过程定义中的 **WITH RECOMPILE** 选项，或在调用过程时，各个语句上的 **RECOMPILE** 查询提示，或者使用 **sp_recompile** 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
   
  **本主题内容**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 37
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有对过程执行语句级重新编译的特点。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新编译存储过程时，只编译导致重新编译的语句，而不编译整个过程。  
   
--   如果过程的中某些查询定期使用非典型值或临时值，则可通过使用这些查询中的 RECOMPILE 查询提示来改善过程性能。 由于仅使用此查询提示的查询将进行重新编译，而不是整个过程进行重新编译，因此将模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句级重新编译行为。 但除了使用过程的当前参数值外，RECOMPILE 查询提示还在编译该语句时使用存储过程中本地变量的值。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)。  
+-   如果过程的中某些查询定期使用非典型值或临时值，则可通过使用这些查询中的 RECOMPILE 查询提示来改善过程性能。 由于仅使用此查询提示的查询将进行重新编译，而不是整个过程进行重新编译，因此将模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句级重新编译行为。 但除了使用过程的当前参数值外，RECOMPILE 查询提示还在编译该语句时使用存储过程中本地变量的值。 有关详细信息，请参阅 [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 37
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 使用 WITH RECOMPILE 选项重新编译存储过程  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -94,7 +98,7 @@ AS
   
 ```  
   
-#### 使用 WITH RECOMPILE 选项重新编译存储过程  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -112,9 +116,9 @@ GO
   
 ```  
   
-#### 使用 sp_recompile 重新编译存储过程  
+#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>使用 sp_recompile 重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -130,7 +134,7 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建存储过程](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [修改存储过程](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [重命名存储过程](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

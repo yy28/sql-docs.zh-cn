@@ -1,32 +1,36 @@
 ---
-title: "“重新生成索引”任务（维护计划） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reindex"
-  - "sql13.swb.maint.reindex.f1"
-helpviewer_keywords: 
-  - "“‘重新生成索引’任务”对话框"
+title: "“重新生成索引”任务（维护计划）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reindex
+- sql13.swb.maint.reindex.f1
+helpviewer_keywords:
+- Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3d8dd428e1aded14e6e75c338b12c8b04cf722a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# “重新生成索引”任务（维护计划）
+# <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
   使用“重新生成索引任务”对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
   
  **“‘重新生成索引’任务”** 使用 ALTER INDEX 语句。 有关此页所述选项的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接**  
  选择执行此任务时使用的服务器连接。  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 42
  使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  **不要重新生成索引 | 重新脱机生成索引**  
  指定要对无法重新联机生成的索引类型执行的操作。  
@@ -89,7 +93,7 @@ caps.handback.revision: 42
  选择此选项，以等待低优先级锁。  
   
  **等待后中止**  
- 指定要在**最大持续时间**过后执行的操作。  
+ 指定要在 **最大持续时间** 过后执行的操作。  
   
  **最大持续时间**  
  指定低优先级锁的等待时间。  
@@ -100,7 +104,7 @@ caps.handback.revision: 42
 > [!NOTE]  
 >  当受影响的对象很多时，可能需要相当长的时间才可显示。  
   
-## “新建连接”对话框  
+## <a name="new-connection-dialog-box"></a>“新建连接”对话框  
  **连接名称**  
  输入新连接的名称。  
   
@@ -114,10 +118,10 @@ caps.handback.revision: 42
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Windows 身份验证连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例。  
+ 使用 Windows 身份验证连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
@@ -125,7 +129,7 @@ caps.handback.revision: 42
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC DBREINDEX (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
@@ -135,3 +139,4 @@ caps.handback.revision: 42
  [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
   
   
+

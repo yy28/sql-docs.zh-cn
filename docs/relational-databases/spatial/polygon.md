@@ -1,36 +1,40 @@
 ---
-title: "多边形 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "几何图形子类型 [SQL Server]"
-  - "多边形几何图形子类型 [SQL Server]"
+title: Polygon | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# 多边形
+# <a name="polygon"></a>多边形
   **Polygon** 是存储为一系列点的二维表面，这些点定义一个外部边界环和零个或多个内部环。  
   
-## Polygon 实例  
+## <a name="polygon-instances"></a>Polygon 实例  
  可以从至少具有三个不同点的环中构建一个 **Polygon** 实例。 **Polygon** 实例也可以为空。  
   
  **Polygon** 的外部环和任意内部环定义了其边界。 环内部的空间定义了 **Polygon**的内部。  
   
  下图显示了 **Polygon** 实例的示例。  
   
- ![几何 Polygon 实例的示例](../../relational-databases/spatial/media/polygon.png "几何 Polygon 实例的示例")  
+ ![几何 Polygon 实例的示例](../../relational-databases/spatial/media/polygon.gif "几何 Polygon 实例的示例")  
   
  如图中所示：  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 27
   
 3.  图 3 是一个有效的 **Polygon** 实例，因为其内部环在单个切点处相交。  
   
-### 接受的实例  
+### <a name="accepted-instances"></a>接受的实例  
  已接受的 **Polygon** 实例是可以在不引发异常的情况下存储到 **geometry** 或 **geography** 变量中的实例。 下面是一些已接受的 **Polygon** 实例：  
   
 -   空的 **Polygon** 实例  
@@ -67,7 +71,7 @@ DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
   
  `@g4` 和 `@g5` 显示接受的 **Polygon** 实例可能不是有效的 **Polygon** 实例。 `@g5` 还显示 Polygon 实例只需包含一个具有任意四个点的环便可以被接受。  
   
- 下面的示例引发 `System.FormatException`，因为 **Polygon** 实例未被接受。  
+ 下面的示例引发 `System.FormatException` ，因为 **Polygon** 实例未被接受。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### 有效实例  
+### <a name="valid-instances"></a>有效实例  
  **Polygon** 的内部环在单个切点处既可与自身接触也可彼此接触，但如果 **Polygon** 的内部环交叉，则该实例无效。  
   
  下面的示例显示有效的 **Polygon** 实例。  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 无效，因为两个内部环在多个连续点接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面的示例创建了一个带有孔和 SRID 为 10 的简单 `geometry``Polygon` 实例。  
   
 ```  
@@ -114,7 +118,7 @@ DECLARE @g geometry;
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- 可能输入无效的实例并转换为有效的 `geometry` 实例。 在下列 `Polygon` 示例中，内部环和外部环重叠且该实例无效。  
+ 可能输入无效的实例并转换为有效的 `geometry` 实例。 在下列 `Polygon`示例中，内部环和外部环重叠且该实例无效。  
   
 ```  
 DECLARE @g geometry;  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- 上面返回的几何图形实例是 `Point(1 3)`。  如果给出的 `Polygon` 是 `POLYGON((1 3, 1 5, 1 3, 1 3))`，则 `MakeValid()` 将返回 `LINESTRING(1 3, 1 5)`。  
+ 上面返回的几何图形实例是 `Point(1 3)`。  如果给出的 `Polygon` 是 `POLYGON((1 3, 1 5, 1 3, 1 3))` ，则 `MakeValid()` 将返回 `LINESTRING(1 3, 1 5)`。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [STArea（geometry 数据类型）](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing（geometry 数据类型）](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing（geometry 数据类型）](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

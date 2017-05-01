@@ -1,25 +1,29 @@
 ---
 title: "查询处理体系结构指南 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "指南，查询处理体系结构"
-  - "查询处理体系结构指南"
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, query processing architecture
+- query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查询处理体系结构指南
+# <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 数据库引擎可处理对多种数据存储体系结构（例如，本地表、已分区表以及分布在多个服务器上的表）执行的查询。 下面的主题介绍了 SQL Server 如何处理查询并通过执行计划缓存来优化查询重用。
@@ -36,23 +40,23 @@ caps.handback.revision: 5
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 语句只定义以下内容：  
-* 结果集的格式。 它通常在选择列表中指定。 然而，其他子句（如 `ORDER BY` 和 `GROUP BY`）也会影响结果集的最终格式。
+* 结果集的格式。 它通常在选择列表中指定。 然而，其他子句（如 `ORDER BY` 和 `GROUP BY` ）也会影响结果集的最终格式。
 * 包含源数据的表。 此表在 `FROM` 子句中指定。
-* 就 `SELECT` 语句而言，表之间的逻辑关系。 这在联接规范中定义，联接规范可出现在 `FROM` 子句后的 `WHERE` 子句或 `ON` 子句中。
+* 就 `SELECT` 语句而言，表之间的逻辑关系。 这在联接规范中定义，联接规范可出现在 `WHERE` 子句后的 `ON` 子句或 `FROM`子句中。
 * 为了符合 `SELECT` 语句的要求，源表中的行所必须满足的条件。 这些条件在 `WHERE` 和 `HAVING` 子句中指定。
 
 
 查询执行计划定义： 
 
 * 访问源表的顺序。  
-  数据库服务器一般可以按许多不同的序列访问基表以生成结果集。 例如，如果 `SELECT` 语句引用三个表，数据库服务器可以先访问 `TableA`，使用 `TableA` 中的数据从 `TableB` 中提取匹配的行，然后使用 `TableB` 中的数据从 `TableC` 中提取数据。 数据库服务器访问表的其他顺序包括：  
-  `TableC`、`TableB`、`TableA` 或  
-  `TableB`、`TableA`、`TableC` 或  
-  `TableB`、`TableC`、`TableA` 或  
-  `TableC`、`TableA`、`TableB`  
+  数据库服务器一般可以按许多不同的序列访问基表以生成结果集。 例如，如果 `SELECT` 语句引用三个表，数据库服务器可以先访问 `TableA`，使用 `TableA` 中的数据从 `TableB`中提取匹配的行，然后使用 `TableB` 中的数据从 `TableC`中提取数据。 数据库服务器访问表的其他顺序包括：  
+  `TableC`、 `TableB`、 `TableA`或  
+  `TableB`、 `TableA`、 `TableC`或  
+  `TableB`、 `TableC`、 `TableA`或  
+  `TableC`、 `TableA`、 `TableB`  
 
 * 从每个表析取数据的方法。  
-  访问每个表中的数据一般也有不同的方法。 如果只需要有特定键值的几行，数据库服务器可以使用索引。 如果需要表中的所有行，数据库服务器则可以忽略索引并执行表扫描。 如果需要表中的所有行，而有一个索引的键列在 `ORDER BY` 中，则执行索引扫描而非表扫描可能会省去对结果集的单独排序。 如果表很小，则对该表的几乎所有访问来说，表扫描可能都是最有效的方法。 
+  访问每个表中的数据一般也有不同的方法。 如果只需要有特定键值的几行，数据库服务器可以使用索引。 如果需要表中的所有行，数据库服务器则可以忽略索引并执行表扫描。 如果需要表中的所有行，而有一个索引的键列在 `ORDER BY`中，则执行索引扫描而非表扫描可能会省去对结果集的单独排序。 如果表很小，则对该表的几乎所有访问来说，表扫描可能都是最有效的方法。 
 
 
 从潜在的多个可能的计划中选择一个执行计划的过程称为“优化”。 查询优化器是 SQL 数据库系统的最重要组件之一。 虽然查询优化器在分析查询和选择计划时要使用一些开销，但当查询优化器选择了有效的执行计划时，这一开销将节省数倍。 例如，两家建筑公司可能拿到一所住宅的相同设计图。 如果一家公司开始时先花几天时间规划如何建造这所住宅，而另一家公司不做任何规划就开始施工，则花了时间规划项目的那家公司很可能首先完工。
@@ -77,13 +81,13 @@ SQL Server 处理单个 SELECT 语句的基本步骤包括如下内容：
 
 #### <a name="processing-other-statements"></a>处理其他语句
 
-上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、`UPDATE` 和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT 语句，该语句提供要更新或插入的数据值。
+上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT 语句，该语句提供要更新或插入的数据值。
 
 即使像 `CREATE PROCEDURE` 或 `ALTER TABL`E 这样的数据定义语言 (DDL) 语句也被最终解析为系统目录表上的一系列关系操作，而有时则根据数据表解析（如 `ALTER TABLE ADD COLUMN`）。
 
 ### <a name="worktables"></a>工作表
 
-关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、`ORDER BY` 或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 `tempdb` 中生成，并在不再需要时自动删除。
+关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 `tempdb` 中生成，并在不再需要时自动删除。
 
 ### <a name="view-resolution"></a>视图解析
 
@@ -153,11 +157,11 @@ FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
 ```
 
-查询将失败，因为在展开视图 `Person.AddrState` 时此查询中应用于该视图的提示 `SERIALIZABLE` 传播到了该视图中的表 `Person.Address` 和 `Person.StateProvince`。 但是，展开视图还将显示 `Person.Address` 上的 `NOLOCK` 提示。 由于 `SERIALIZABLE` 提示和 `NOLOCK` 提示冲突，所以得到的查询不正确。 
+查询将失败，因为在展开视图 `SERIALIZABLE` 时此查询中应用于该视图的提示 `Person.AddrState` 传播到了该视图中的表 `Person.Address` 和 `Person.StateProvince` 。 但是，展开视图还将显示 `NOLOCK` 上的 `Person.Address`提示。 由于 `SERIALIZABLE` 提示和 `NOLOCK` 提示冲突，所以得到的查询不正确。 
 
-`PAGLOCK`、`NOLOCK`、`ROWLOCK`、`TABLOCK` 或 `TABLOCKX` 表提示相互冲突，`HOLDLOCK`、`NOLOCK`、`READCOMMITTED`、`REPEATABLEREAD`、`SERIALIZABLE` 表提示也一样。
+`PAGLOCK`、 `NOLOCK`、 `ROWLOCK`、 `TABLOCK`或 `TABLOCKX` 表提示相互冲突， `HOLDLOCK`、 `NOLOCK`、 `READCOMMITTED`、 `REPEATABLEREAD`、 `SERIALIZABLE` 表提示也一样。
 
-提示可以通过不同级别的嵌套视图传播。 例如，假设查询对视图 `v1` 应用了 `HOLDLOCK` 提示。 当扩展 `v1` 时，我们发现视图 `v2` 是其定义的一部分。 `v2` 的定义包括其一个基表的 `NOLOCK` 提示。 但此表也从视图 `v1` 上的查询继承了 `HOLDLOCK` 提示。 由于 `NOLOCK` 提示和 `HOLDLOCK` 提示冲突，所以查询将失败。
+提示可以通过不同级别的嵌套视图传播。 例如，假设查询对视图 `HOLDLOCK` 应用了 `v1`提示。 当扩展 `v1` 时，我们发现视图 `v2` 是其定义的一部分。 `v2`的定义包括其一个基表的 `NOLOCK` 提示。 但此表也从视图 `HOLDLOCK` 上的查询继承了 `v1`提示。 由于 `NOLOCK` 提示和 `HOLDLOCK` 提示冲突，所以查询将失败。
 
 当在包含视图的查询中使用 `FORCE ORDER` 提示时，视图中表的联接顺序将由有序构造中视图的位置决定。 例如，下面的查询将从三个表和一个视图中进行选择：
 
@@ -169,7 +173,7 @@ WHERE Table1.Col1 = Table2.Col1
 OPTION (FORCE ORDER);
 ```
 
-另外，`View1` 的定义显示如下：
+另外， `View1` 的定义显示如下：
 
 ```
 CREATE VIEW View1 AS
@@ -177,7 +181,7 @@ SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
 ```
 
-查询计划中的联接顺序为 `Table1`、`Table2`、`TableA`、`TableB`、`Table3`。
+查询计划中的联接顺序为 `Table1`、 `Table2`、 `TableA`、 `TableB`、 `Table3`。
 
 ### <a name="resolving-indexes-on-views"></a>解析视图的索引
 
@@ -205,7 +209,7 @@ WHERE TableA.ColZ = TableB.Colz;
 * 查询中引用（直接或通过展开视图访问其基础表）的且与索引视图中的表引用相对应的每个表在该查询中都必须具有应用于表的相同提示集。
 
 > [!NOTE] 
-。 在此上下文中，不管当前事务隔离级别如何，`READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示始终被认为是不同的提示。
+子句中。 在此上下文中，不管当前事务隔离级别如何， `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示始终被认为是不同的提示。
  
 除 `SET` 选项和表提示的要求外，查询优化器也使用上述规则确定表索引是否包含查询。 不必在查询中指定其他内容即可使用索引视图。
 
@@ -219,9 +223,9 @@ WHERE TableA.ColZ = TableB.Colz;
 
 `EXPAND VIEWS` 选项指定对于整个查询，查询优化器不应使用任何视图索引。 
 
-当为视图指定了 `NOEXPAND` 时，查询优化器将考虑使用为视图定义的任何索引。 通过可选的 `INDEX()` 子句指定的 `NOEXPAND`，可强制查询优化器使用指定索引。 只能为索引视图指定 `NOEXPAND`，而不能为还未创建索引的视图指定。
+当为视图指定了 `NOEXPAND` 时，查询优化器将考虑使用为视图定义的任何索引。 通过可选的`NOEXPAND` 子句指定的 `INDEX()` ，可强制查询优化器使用指定索引。 只能为索引视图指定`NOEXPAND` ，而不能为还未创建索引的视图指定。
 
-如果在包含视图的查询中既未指定 `NOEXPAND` 也未指定 `EXPAND VIEWS`，则展开该视图以访问基础表。 如果组成视图的查询包含表提示，则这些提示将传播到基础表。 （“视图解析”中详细说明了此过程。）只要视图的基础表中的提示集彼此相同，查询就可以与索引视图进行匹配。 在大部分情况下，这些提示彼此匹配，因为它们直接从视图继承而来。 但是，如果查询引用表而不是引用视图，且直接应用于这些表的提示并不相同，则这类查询就无法与索引视图进行匹配。 如果在视图展开后，`INDEX`、`PAGLOCK`、`ROWLOCK`、`TABLOCKX`、`UPDLOCK` 或 `XLOCK` 提示应用于查询中引用的表，则查询不适用于索引视图匹配。
+如果在包含视图的查询中既未指定 `NOEXPAND` 也未指定 `EXPAND VIEWS` ，则展开该视图以访问基础表。 如果组成视图的查询包含表提示，则这些提示将传播到基础表。 （“视图解析”中详细说明了此过程。）只要视图的基础表中的提示集彼此相同，查询就可以与索引视图进行匹配。 在大部分情况下，这些提示彼此匹配，因为它们直接从视图继承而来。 但是，如果查询引用表而不是引用视图，且直接应用于这些表的提示并不相同，则这类查询就无法与索引视图进行匹配。 如果在视图展开后， `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示应用于查询中引用的表，则查询不适用于索引视图匹配。
 
 如果形式为 `INDEX (index_val[ ,...n] )` 的表提示引用了查询中的视图，而你还没有指定 `NOEXPAND` 提示，则忽略该索引提示。 若要指定使用特定索引，请使用 `NOEXPAND。 
 
@@ -315,7 +319,7 @@ SELECT * FROM Person.Person;
 
 数据库引擎使用资源监视器和用户线程从过程缓存中释放内存，以响应内存不足。 资源监视器和用户线程可以检查并发运行的执行计划以降低每个未使用执行计划的当前开销。 如果存在全局内存不足的情况，资源监视器将会从过程缓存中删除执行计划。 它释放内存以强制实施系统内存、进程内存、资源池内存和所有缓存最大大小的策略。 
 
-所有缓存的最大大小是缓存池大小的一个函数，不能超出最大服务器内存的大小。 有关配置最大服务器内存的详细信息，请参阅 `sp_configure` 中的 `max server memory` 设置。 
+所有缓存的最大大小是缓存池大小的一个函数，不能超出最大服务器内存的大小。 有关配置最大服务器内存的详细信息，请参阅 `max server memory` 中的 `sp_configure`设置。 
 
 当存在单一高速缓存不足的情况时，用户线程将会从过程缓存中删除执行计划。 它们强制实施最大单一缓存大小和最大单一缓存条目数的策略。 
 
@@ -349,26 +353,26 @@ SELECT * FROM Person.Person;
 
 SQL Server Profiler `SP:Recompile` 跟踪事件报告语句级重新编译。 此跟踪事件仅报告 SQL Server 2000 中的批处理重新编译。 此外，将填充此事件的 `TextData` 列。 因此，不再需要 SQL Server 2000 中必须跟踪 `SP:StmtStarting` 或 `SP:StmtCompleted` 以获取导致重新编译的 Transact-SQL 文本的做法。
 
-`SQL:StmtRecompile` 跟踪事件报告语句级重新编译。 此跟踪事件可用于跟踪和调试重新编译。 `SP:Recompile` 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批查询、使用 `sp_executesql` 执行的批处理、预定义查询和动态 SQL 生成。
+`SQL:StmtRecompile` 跟踪事件报告语句级重新编译。 此跟踪事件可用于跟踪和调试重新编译。 `SP:Recompile` 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批查询、使用 `sp_executesql`执行的批处理、预定义查询和动态 SQL 生成。
 
-`SP:Recompile` 和 `SQL:StmtRecompile` 的 `EventSubClass` 列包含一个整数代码，指示重新编译的原因。 下表包含每个代码号的意思。
+`EventSubClass` 和 `SP:Recompile` 的 `SQL:StmtRecompile` 列包含一个整数代码，指示重新编译的原因。 下表包含每个代码号的意思。
 
 |EventSubClass 值    |Description    |
 |----|----|
-|1  |架构已更改。    |
-|2  |统计信息已更改。    |
-|3  |编译已延迟。  |
-|4  |SET 选项已更改。    |
-|5  |临时表已更改。   |
-|6  |远程行集已更改。 |
-|7  |`FOR BROWSE` 权限已更改。   |
-|8  |查询通知环境已更改。    |
-|9  |分区视图已更改。  |
-|10 |游标选项已更改。    |
-|11 |`OPTION (RECOMPILE)` 已请求 |
+|1    |架构已更改。    |
+|2    |统计信息已更改。    |
+|3    |编译已延迟。    |
+|4    |SET 选项已更改。    |
+|5    |临时表已更改。    |
+|6    |远程行集已更改。    |
+|7    |`FOR BROWSE` 权限已更改。    |
+|8    |查询通知环境已更改。    |
+|9    |分区视图已更改。    |
+|10    |游标选项已更改。    |
+|11    |`OPTION (RECOMPILE)` 已请求    |
 
 > [!NOTE]
-> 当 `AUTO_UPDATE_STATISTICS` 数据库选项 `SET` 为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项 `SET`为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 SQL Server 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
+> 当 `AUTO_UPDATE_STATISTICS` 数据库选项 `SET` 为 `ON`时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项 `SET` 为 `OFF`时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 SQL Server 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
  
 
 ### <a name="parameters-and-execution-plan-reuse"></a>重用参数和执行计划
@@ -376,7 +380,7 @@ SQL Server Profiler `SP:Recompile` 跟踪事件报告语句级重新编译。 �
 使用参数（包括 ADO、OLE DB 和 ODBC 应用程序中的参数标记）有助于重用执行计划。
 
 > [!WARNING] 
-> 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、`EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
+> 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、 `EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
  
 下面两个 `SELECT` 语句之间的唯一区别是 `WHERE` 子句中比较的值不同：
 
@@ -429,7 +433,7 @@ WHERE ProductSubcategoryID = 4;
 
 * 设计使用参数的存储过程。
 
-如果不将参数显式生成到应用程序的设计中，则还可以依赖 SQL Server 查询优化器通过使用简单参数化的默认行为自动参数化某些查询。 另外，也可以通过将 `ALTER DATABASE` 语句的 `PARAMETERIZATION` 选项设置为 `FORCED`，强制查询优化器考虑将数据库中的所有查询参数化。
+如果不将参数显式生成到应用程序的设计中，则还可以依赖 SQL Server 查询优化器通过使用简单参数化的默认行为自动参数化某些查询。 另外，也可以通过将 `PARAMETERIZATION` 语句的 `ALTER DATABASE` 选项设置为 `FORCED`，强制查询优化器考虑将数据库中的所有查询参数化。
 
 启用强制参数化后，仍会发生简单参数化。 例如，根据强制参数化规则，无法将以下查询参数化：
 
@@ -445,7 +449,7 @@ WHERE AddressID = 1 + 2;
 在 SQL Server 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 SQL 语句与现有的、以前编译的执行计划相匹配的能力。
 
 > [!WARNING] 
-> 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、`EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
+> 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、 `EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
 
 如果执行不带参数的 SQL 语句，SQL Server 将在内部对该语句进行参数化以增加将其与现有执行计划相匹配的可能性。 此过程称为简单参数化。 在 SQL Server 2000 中，该过程被称为自动参数化。
 
@@ -472,26 +476,26 @@ WHERE ProductSubcategoryID = 4;
 > [!NOTE]
 > 当使用 +、-、*、/ 或 % 算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，SQL Server 将应用特定规则以计算表达式结果的类型和精度。 但这些规则各不相同，取决于查询是否被参数化。 因此，在某些情况下，查询中的相似表达式可能会产生不同的结果。
 
-在简单参数化的默认行为下，SQL Server 只对相对较少的一些查询进行参数化。 但是，可以通过将 `ALTER DATABASE` 命令的 `PARAMETERIZATION` 选项设置为 `FORCED`，来指定对数据库中的所有查询都进行参数化（但受到某些限制）。 对于存在大量并发查询的数据库，这样做可以减少查询编译的频率，从而提高数据库的性能。
+在简单参数化的默认行为下，SQL Server 只对相对较少的一些查询进行参数化。 但是，可以通过将 `PARAMETERIZATION` 命令的 `ALTER DATABASE` 选项设置为 `FORCED`，来指定对数据库中的所有查询都进行参数化（但受到某些限制）。 对于存在大量并发查询的数据库，这样做可以减少查询编译的频率，从而提高数据库的性能。
 
 您也可以指定对单个查询以及其他在语法上等效，只有参数值不同的查询进行参数化。 
 
 
 ### <a name="forced-parameterization"></a>强制参数化
 
-通过指定将数据库中的所有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句参数化，可以覆盖 SQL Server 的默认简单参数化行为（但会受到某些限制）。 通过在 `ALTER DATABASE` 语句中将 `PARAMETERIZATION` 选项设置为 `FORCED` 可以启用强制参数化。 强制参数化通过降低查询编译和重新编译的频率，可以提高某些数据库的性能。 能够通过强制参数化受益的数据库通常是需要处理来自源（例如，销售点应用程序）的大量并发查询的数据库。
+通过指定将数据库中的所有 `SELECT`、 `INSERT`、 `UPDATE`和 `DELETE` 语句参数化，可以覆盖 SQL Server 的默认简单参数化行为（但会受到某些限制）。 通过在 `PARAMETERIZATION` 语句中将 `FORCED` 选项设置为 `ALTER DATABASE` 可以启用强制参数化。 强制参数化通过降低查询编译和重新编译的频率，可以提高某些数据库的性能。 能够通过强制参数化受益的数据库通常是需要处理来自源（例如，销售点应用程序）的大量并发查询的数据库。
 
-当 `PARAMETERIZATION` 选项设置为 `FORCED` 时，`SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句中出现的任何文本值（无论以什么形式提交）都将在查询编译期间转换为参数。 但下列查询构造中出现的文本例外： 
+当 `PARAMETERIZATION` 选项设置为 `FORCED`时， `SELECT`、 `INSERT`、 `UPDATE`或 `DELETE` 语句中出现的任何文本值（无论以什么形式提交）都将在查询编译期间转换为参数。 但下列查询构造中出现的文本例外： 
 
 * `INSERT...EXECUTE` 语句。
 * 存储过程、触发器或用户定义函数的正文中包含的语句。 SQL Server 已对这些例程重用了查询计划。
 * 已在客户端应用程序中参数化的预定义语句。
-* 包含 XQuery 方法调用的语句，此方法将出现在其参数通常都会被参数化的上下文（例如，`WHERE` 子句）中。 如果在方法所在的上下文中方法的参数不参数化，则语句的其余部分将参数化。
-* Transact-SQL 游标内的语句。 （API 游标内的 `SELECT` 语句将参数化。）
+* 包含 XQuery 方法调用的语句，此方法将出现在其参数通常都会被参数化的上下文（例如， `WHERE` 子句）中。 如果在方法所在的上下文中方法的参数不参数化，则语句的其余部分将参数化。
+* Transact-SQL 游标内的语句。 （API 游标内的`SELECT` 语句将参数化。）
 * 不推荐使用的查询构造。
 * 在 `ANSI_PADDING` 或 `ANSI_NULLS` 上下文中运行的任何语句都设置为 `OFF`。
 * 包含 2,097 个以上的可参数化文字的语句。
-* 引用变量的语句，例如，`WHERE T.col2 >= @bb`。
+* 引用变量的语句，例如， `WHERE T.col2 >= @bb`。
 * 包含 `RECOMPILE` 查询提示的语句。
 * 包含 `COMPUTE` 子句的语句。
 * 包含 `WHERE CURRENT OF` 子句的语句。
@@ -499,9 +503,9 @@ WHERE ProductSubcategoryID = 4;
 另外，未参数化下面的查询子句。 注意，在这些情况下只有子句未参数化。 同一个查询中的其他子句或许可以进行强制参数化。
 
 * 任何 `SELECT` 语句的 <select_list>。 这包括子查询的 `SELECT` 列表和 `INSERT` 语句内的 `SELECT` 列表。
-* `IF` 语句中出现的子查询 `SELECT` 语句。
-* 查询的 `TOP`、`TABLESAMPLE`、`HAVING`、`GROUP BY`、`ORDER BY`、`OUTPUT...INTO` 或 `FOR XM`L 子句。
-* `OPENROWSET`、`OPENQUERY`、`OPENDATASOURCE`、`OPENXML` 或任意 `FULLTEXT` 运算符的参数（直接或作为子表达式）。
+* `SELECT` 语句中出现的子查询 `IF` 语句。
+* 查询的 `TOP`、 `TABLESAMPLE`、 `HAVING`、 `GROUP BY`、 `ORDER BY`、 `OUTPUT...INTO`或 `FOR XM`L 子句。
+* `OPENROWSET`、 `OPENQUERY`、 `OPENDATASOURCE`、 `OPENXML`或任意 `FULLTEXT` 运算符的参数（直接或作为子表达式）。
 * `LIKE` 子句的模式和 escape_character 参数。
 * `CONVERT` 子句的样式参数。
 * `IDENTITY` 子句中的整数常量。
@@ -509,7 +513,7 @@ WHERE ProductSubcategoryID = 4;
 * 可折叠常量表达式，它们是 +、-、*、/ 和 % 运算符的参数。 考虑是否能够进行强制参数化时，在以下条件之一成立时，SQL Server 将认为表达式是可折叠常量表达式：  
   * 表达式中没有列、变量、或子查询。  
   * 表达式包含 `CASE` 子句。  
-* 查询提示子句的参数。 这些参数包括 `FAST` 查询提示的 `number_of_rows` 参数、`MAXDOP` 查询提示的 `number_of_processors` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
+* 查询提示子句的参数。 这些参数包括 `number_of_rows` 查询提示的 `FAST` 参数、 `number_of_processors` 查询提示的 `MAXDOP` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
 
 
 参数化在单条 Transact-SQL 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，则参数的名称和数据类型将出现在此列中已提交的批的文本前面，例如 (@1 tinyint)。
@@ -533,16 +537,16 @@ WHERE ProductSubcategoryID = 4;
 
 当把 `PARAMETERIZATION` 选项设置为 FORCED 时考虑以下事项：
 
-* 强制参数化实际上是在对查询进行编译时将查询中的文本常量更改为参数。 因此，查询优化器可能会选择不太理想的查询计划。 尤其是查询优化器不太可能将查询与索引视图或计算列索引相匹配。 它还可能会选择对分区表和分布式分区视图执行的不太理想的查询计划。 强制参数化不能用于高度依赖索引视图和计算列索引的环境。 通常，`PARAMETERIZATION FORCED` 选项应仅供有经验的数据库管理员在确定这样做不会对性能产生负面影响之后使用。
-* 一旦（上下文中正在执行查询的）数据库中的 `PARAMETERIZATION` 选项设置为 `FORCED`，则引用了多个数据库的分布式查询即可进行强制参数化。
+* 强制参数化实际上是在对查询进行编译时将查询中的文本常量更改为参数。 因此，查询优化器可能会选择不太理想的查询计划。 尤其是查询优化器不太可能将查询与索引视图或计算列索引相匹配。 它还可能会选择对分区表和分布式分区视图执行的不太理想的查询计划。 强制参数化不能用于高度依赖索引视图和计算列索引的环境。 通常， `PARAMETERIZATION FORCED` 选项应仅供有经验的数据库管理员在确定这样做不会对性能产生负面影响之后使用。
+* 一旦（上下文中正在执行查询的）数据库中的 `PARAMETERIZATION` 选项设置为 `FORCED` ，则引用了多个数据库的分布式查询即可进行强制参数化。
 * 将 `PARAMETERIZATION` 选项设置为 `FORCED` 将刷新数据库的计划缓存中的所有查询计划，当前正在编译、重新编译或执行的查询除外。 在设置更改时正在编译或执行的查询计划将在下次执行时参数化。
 * 设置 `PARAMETERIZATION` 选项是一项联机操作，它不需要数据库级别的排他锁。
-* 在重新附加或还原数据库时，`PARAMETERIZATION` 选项的当前设置将保留。
+* 在重新附加或还原数据库时， `PARAMETERIZATION` 选项的当前设置将保留。
 
-您可以指定对单个查询和其他语法相同只有参数值不同的查询进行简单参数化，以覆盖强制参数化行为。 相反，即使数据库中禁用了强制参数化，您也可以指定仅对一组语法相同的查询进行强制参数化。 [计划指南](../relational-databases/performance/plan-guides.md)具有此用途。
+您可以指定对单个查询和其他语法相同只有参数值不同的查询进行简单参数化，以覆盖强制参数化行为。 相反，即使数据库中禁用了强制参数化，您也可以指定仅对一组语法相同的查询进行强制参数化。 [计划指南](../relational-databases/performance/plan-guides.md) 具有此用途。
 
 > [!NOTE]
-> 当 `PARAMETERIZATION` 选项设置为 `FORCED` 时，错误消息的报告可能与简单参数化有所区别：对于同样的情况，在简单参数化下可能报告的消息较少，而现在则可能报告多条错误消息，并且可能无法准确报告出现错误的行号。
+> 当 `PARAMETERIZATION` 选项设置为 `FORCED`时，错误消息的报告可能与简单参数化有所区别：对于同样的情况，在简单参数化下可能报告的消息较少，而现在则可能报告多条错误消息，并且可能无法准确报告出现错误的行号。
  
 
 ### <a name="preparing-sql-statements"></a>准备 SQL 语句
@@ -592,7 +596,7 @@ WHERE ProductID = 63;
 
 SQL Server 为具有多个微处理器 (CPU) 的计算机提供了并行查询，以优化查询执行和索引操作。 由于 SQL Server 可以使用多个操作系统线程并行执行查询或索引操作，因此，可以快速有效地完成操作。
 
-在查询优化过程中，SQL Server 将查找可能会受益于并行执行的查询或索引操作。 对于这些查询，SQL Server 会将交换运算符插入查询执行计划中，以便为查询的并行执行做准备。 交换运算符是在查询执行计划中提供进程管理、数据再分发和流控制的运算符。 交换运算符包含作为子类型的 `Distribute Streams`、`Repartition Streams` 和 `Gather Streams` 逻辑运算符，其中的一个或多个运算符会出现在并行查询的查询计划的显示计划输出中。 
+在查询优化过程中，SQL Server 将查找可能会受益于并行执行的查询或索引操作。 对于这些查询，SQL Server 会将交换运算符插入查询执行计划中，以便为查询的并行执行做准备。 交换运算符是在查询执行计划中提供进程管理、数据再分发和流控制的运算符。 交换运算符包含作为子类型的 `Distribute Streams`、 `Repartition Streams`和 `Gather Streams` 逻辑运算符，其中的一个或多个运算符会出现在并行查询的查询计划的显示计划输出中。 
 
 插入交换运算符之后，结果便为并行查询执行计划。 并行查询执行计划可以使用多个线程。 非并行查询使用的串行执行计划仅使用一个线程来实现执行。 并行查询使用的实际线程数在查询计划执行初始化时确定，并由计划的复杂程度和并行度确定。 并行度确定要使用的最大 CPU 数；它并不表示要使用的线程数。 并行度的值在服务器级别设置，并可使用 sp_configure 系统存储过程进行修改。 通过指定 `MAXDOP` 查询提示或 `MAXDOP` 索引选项，可以针对单个查询语句或索引语句覆盖此值。 
 
@@ -614,7 +618,7 @@ SQL Server 自动检测每个并行查询执行或索引数据定义语言 (DDL)
   每个查询或索引操作均要求一定线程数才能执行。 执行并行计划比执行串行计划需要更多的线程，所需线程数会随着并行度的提高而增加。 当无法满足特定并行度的并行计划的线程要求时，数据库引擎将自动减少并行度或完全放弃指定的工作负荷上下文中的并行计划。 然后执行串行计划（一个线程）。 
 
 3. 所执行的查询或索引操作的类型。  
-  创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，数据库引擎将比较执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。 虽然不推荐，但用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将默认值更改为 5。 
+  创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，数据库引擎将比较执行查询或索引操作的估计开销与 [并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 。 虽然不推荐，但用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)将默认值更改为 5。 
 
 4. 待处理的行数是否足够。  
   如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
@@ -634,7 +638,7 @@ SQL Server 自动检测每个并行查询执行或索引数据定义语言 (DDL)
 
 #### <a name="overriding-degrees-of-parallelism"></a>覆盖并行度
 
-你可以使用[最大并行度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)服务器配置选项（[!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)）来限制并行计划执行中使用的处理器数。 通过指定 MAXDOP 查询提示或 MAXDOP 索引选项，可以用单独查询和索引操作语句来覆盖最大并行度选项。 MAXDOP 提供对单独查询和索引操作的详细控制。 例如，您可以使用 MAXDOP 选项来控制（扩展或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。 将最大并行度选项设置为 0，将允许 SQL Server 在执行并行计划时使用所有可用的处理器（最大可达 64 个处理器）。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 SQL Server 在执行并行计划时针对给定的查询或索引使用所有可用的处理器（最大可达 64 个处理器）。
+你可以使用 [最大并行度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 服务器配置选项（[上的](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ALTER DATABASE SCOPED CONFIGURATION [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ）来限制并行计划执行中使用的处理器数。 通过指定 MAXDOP 查询提示或 MAXDOP 索引选项，可以用单独查询和索引操作语句来覆盖最大并行度选项。 MAXDOP 提供对单独查询和索引操作的详细控制。 例如，您可以使用 MAXDOP 选项来控制（扩展或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。 将最大并行度选项设置为 0，将允许 SQL Server 在执行并行计划时使用所有可用的处理器（最大可达 64 个处理器）。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 SQL Server 在执行并行计划时针对给定的查询或索引使用所有可用的处理器（最大可达 64 个处理器）。
 
 
 ### <a name="parallel-query-example"></a>并行查询示例
@@ -712,13 +716,13 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 
 上图显示按并行度等于 4 执行且包括一个双表联接的查询优化器计划。
 
-这个并行计划包含三个 `Parallelism` 运算符。 会并行执行 `o_datkey_ptr` 索引的 `Index Seek` 运算符和 `l_order_dates_idx` 索引的 `Index Scan` 运算符。 将生成若干排他流。 这可以分别通过 `Index Scan` 和 `Index Seek` 运算符上面最接近的 Parallelism 运算符来确定。 二者都在对交换类型重新分区。 即它们正在流之间重新组织数据并生成与输入数量相同的输出流。 这个流数等于并行度。
+这个并行计划包含三个 `Parallelism` 运算符。 会并行执行 `Index Seek` 索引的 `o_datkey_ptr` 运算符和 `Index Scan` 索引的 `l_order_dates_idx` 运算符。 将生成若干排他流。 这可以分别通过 `Index Scan` 和 `Index Seek` 运算符上面最接近的 Parallelism 运算符来确定。 二者都在对交换类型重新分区。 即它们正在流之间重新组织数据并生成与输入数量相同的输出流。 这个流数等于并行度。
 
-`l_order_dates_idx` `Index Scan` 运算符上面的 `Parallelism ` 运算符正在使用 `L_ORDERKEY` 的值作为键对其输入流进行重新分区。 这样，`L_ORDERKEY` 的相同值将得到相同的输出流。 同时，输出流维护 `L_ORDERKEY` 列上的顺序以满足 `Merge Join` 运算符的输入要求。
+`Parallelism ` `l_order_dates_idx` `Index Scan` operator is repartitioning its input streams using the value of `L_ORDERKEY` as a key. 这样， `L_ORDERKEY` 的相同值将得到相同的输出流。 同时，输出流维护 `L_ORDERKEY` 列上的顺序以满足 `Merge Join` 运算符的输入要求。
 
-`Index Seek` 运算符上面的 `Parallelism` 运算符正在使用 `O_ORDERKEY` 的值对其输入流进行重新分区。 由于其输入没有按照 `O_ORDERKEY` 列的值进行排序，而且这是 `Merge Join` 运算符中的联接列，所以 `Parallelism` 和 `Merge Join` 运算符之间的 Sort 运算符确保为联接列上的 `Merge Join` 运算符进行输入排序。 与 `Merge Join` 运算符一样，`Sort` 运算符也是并行执行的。
+`Parallelism` 运算符上面的 `Index Seek` 运算符正在使用 `O_ORDERKEY`的值对其输入流进行重新分区。 由于其输入没有按照 `O_ORDERKEY` 列的值进行排序，而且这是 `Merge Join` 运算符中的联接列，所以 `Parallelism` 和 `Merge Join` 运算符之间的 Sort 运算符确保为联接列上的 `Merge Join` 运算符进行输入排序。 与 `Sort` 运算符一样， `Merge Join` 运算符也是并行执行的。
 
-最上面的 `Parallelism` 运算符将若干流中的结果收集成一个流。 之后，该 `Parallelism` 运算符下方的 `Stream Aggregate` 运算符所执行的部分聚合被聚集到单个的 `SUM` 值中，这个 SUM 值是该 `Parallelism` 运算符上方的 `Stream Aggregate` 运算符中每个不同的 `O_ORDERPRIORITY` 值之和。 因为此计划有两个交换部分，且并行度等于 4，所以它使用了八个线程。
+最上面的 `Parallelism` 运算符将若干流中的结果收集成一个流。 之后，该 `Stream Aggregate` 运算符下方的 `Parallelism` 运算符所执行的部分聚合被聚集到单个的 `SUM` 值中，这个 SUM 值是该 `O_ORDERPRIORITY` 运算符上方的 `Stream Aggregate` 运算符中每个不同的 `Parallelism` 值之和。 因为此计划有两个交换部分，且并行度等于 4，所以它使用了八个线程。
 
 
 ### <a name="parallel-index-operations"></a>并行索引操作
@@ -763,7 +767,7 @@ Microsoft SQL Server 支持两种用于在 Transact-SQL 语句中引用异类 OL
    也可以在 `OPENQUERY` 语句中指定链接服务器名称以从 OLE DB 数据源打开一个行集。 之后，可以在 Transact-SQL 语句中像引用表一样引用该行集。 
 
 * 即席连接器名称  
-  在很少引用数据源时，`OPENROWSET` 或 `OPENDATASOURCE` 函数是用连接到链接服务器所需的信息指定的。 之后，可以在 Transact-SQL 语句中使用与引用表相同的方法引用行集： 
+  在很少引用数据源时， `OPENROWSET` 或 `OPENDATASOURCE` 函数是用连接到链接服务器所需的信息指定的。 之后，可以在 Transact-SQL 语句中使用与引用表相同的方法引用行集： 
   
   ```
   SELECT *
@@ -778,7 +782,7 @@ SQL Server 使用 OLE DB 在关系引擎和存储引擎之间通信。 关系引
 
 对于每个作为链接服务器访问的 OLE DB 数据源，运行 SQL Server 的服务器上必须存在 OLE DB 提供程序。 在特定 OLE DB 数据源上可执行哪些 Transact-SQL 操作取决于 OLE DB 提供程序的功能。
 
-对于每个 SQL Server 实例，`sysadmin` 固定服务器角色的成员可以使用 SQL Server `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 SQL 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问，`sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 SQL Server OLE DB 提供程序启用即席访问，而对所有其他的 OLE DB 提供程序禁用即席访问。
+对于每个 SQL Server 实例， `sysadmin` 固定服务器角色的成员可以使用 SQL Server `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 SQL 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 SQL Server OLE DB 提供程序启用即席访问，而对所有其他的 OLE DB 提供程序禁用即席访问。
 
 分布式查询可允许用户使用运行 SQL Server 服务的 Microsoft Windows 帐户的安全上下文来访问其他数据源（例如，文件、非关系数据源 [如 Active Directory] 等）。 SQL Server 可以正确模拟 Windows 登录名，但不能模拟 SQL Server 登录名。 这样，就有可能使分布式查询用户能够访问自己本没有访问权限、但运行 SQL Server 服务的帐户有访问权限的另一数据源。 使用 `sp_addlinkedsrvlogin` 定义被授权访问相应链接服务器的特定登录名。 此控制对即席名称无效，所以对 OLE DB 访问接口启用即席访问时要小心。
 
@@ -796,35 +800,35 @@ SQL Server 2008 改进了许多并行计划的已分区表的查询处理性能�
 
 ### <a name="new-partition-aware-seek-operation"></a>新增的可识别分区的查找操作
 
-在 SQL Server 中，已分区表的内部表示形式已发生变化，确保呈现给查询处理器的表为多列索引（`PartitionID` 作为起始列）。 `PartitionID` 是一个内部使用的隐藏计算列，用于表示包含特定行的分区的 `ID`。 例如，假设一个定义为 `T(a, b, c)` 的表 T 在 a 列进行了分区，并在 b 列有聚集索引。 在 SQL Server 中，此已分区表在内部被视为一个具有架构 `T(PartitionID, a, b, c)` 和具有组合键 `(PartitionID, b)` 的聚集索引的未分区表。 这样查询优化器便可以基于 `PartitionID` 对任何已分区表或索引执行查找操作。 
+在 SQL Server 中，已分区表的内部表示形式已发生变化，确保呈现给查询处理器的表为多列索引（ `PartitionID` 作为起始列）。 `PartitionID` 是一个内部使用的隐藏计算列，用于表示包含特定行的分区的 `ID` 。 例如，假设一个定义为 `T(a, b, c)`的表 T 在 a 列进行了分区，并在 b 列有聚集索引。 在 SQL Server 中，此已分区表在内部被视为一个具有架构 `T(PartitionID, a, b, c)` 和具有组合键 `(PartitionID, b)`的聚集索引的未分区表。 这样查询优化器便可以基于 `PartitionID` 对任何已分区表或索引执行查找操作。 
 
 现在，分区的排除任务已在此查找操作中完成。
 
-此外，查询优化器的功能也得以扩展，可以针对 `PartitionID`（作为逻辑首列）以及其他可能的索引键列执行某一条件下的查找或扫描操作，然后，对于符合第一级查找操作的条件的每个不同值，再针对一个或多个其他列执行不同条件下的二级查找。 也就是说，这种称为“跳跃扫描”的操作允许查询优化器基于某一条件来执行查找或扫描操作以确定要访问的分区，然后在该运算符内执行一个二级索引查找操作以返回这些分区中符合另一个不同条件的行。 例如，请考虑以下查询。
+此外，查询优化器的功能也得以扩展，可以针对 `PartitionID` （作为逻辑首列）以及其他可能的索引键列执行某一条件下的查找或扫描操作，然后，对于符合第一级查找操作的条件的每个不同值，再针对一个或多个其他列执行不同条件下的二级查找。 也就是说，这种称为“跳跃扫描”的操作允许查询优化器基于某一条件来执行查找或扫描操作以确定要访问的分区，然后在该运算符内执行一个二级索引查找操作以返回这些分区中符合另一个不同条件的行。 例如，请考虑以下查询。
 
 ```
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
-对于本示例，假设定义为 `T(a, b, c)` 的表 T 在 a 列进行了分区，并在 b 列有聚集索引。 表 T 的分区边界由以下分区函数定义：
+对于本示例，假设定义为 `T(a, b, c)`的表 T 在 a 列进行了分区，并在 b 列有聚集索引。 表 T 的分区边界由以下分区函数定义：
 
 ```
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
-为求解该查询，查询处理器将执行第一级查找操作以查找包含符合条件 `T.a < 10` 的行的每个分区。 这将标识要访问的分区。 然后，在标识的每个分区内，处理器将针对 b 列的聚集索引执行一个二级查找以查找符合条件 `T.b = 2` 和 `T.a < 10` 的行。 
+为求解该查询，查询处理器将执行第一级查找操作以查找包含符合条件 `T.a < 10`的行的每个分区。 这将标识要访问的分区。 然后，在标识的每个分区内，处理器将针对 b 列的聚集索引执行一个二级查找以查找符合条件 `T.b = 2` 和 `T.a < 10`的行。 
 
-下图所示为跳跃扫描操作的逻辑表示形式， 其中显示了在 a 列和 b 列中包含数据的表 T。 分区编号为 1 到 4，分区边界由垂直虚线表示。 对分区执行的第一级查找操作（图中未显示）已确定分区 1、2 和 3 符合查找条件（由为该表定义的分区和 a 列的谓词指示）。 即 `T.a < 10`。 曲线指示了跳跃扫描操作的二级查找部分所遍历的路径。 实际上，跳跃扫描操作将在这些分区的每个分区中查找符合条件 `b = 2` 的行。 跳跃扫描操作的总开销等于三个单独索引查找之和。   
+下图所示为跳跃扫描操作的逻辑表示形式， 其中显示了在 a 列和 b 列中包含数据的表 T。 分区编号为 1 到 4，分区边界由垂直虚线表示。 对分区执行的第一级查找操作（图中未显示）已确定分区 1、2 和 3 符合查找条件（由为该表定义的分区和 a 列的谓词指示）。 即 `T.a < 10`。 曲线指示了跳跃扫描操作的二级查找部分所遍历的路径。 实际上，跳跃扫描操作将在这些分区的每个分区中查找符合条件 `b = 2`的行。 跳跃扫描操作的总开销等于三个单独索引查找之和。   
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 Transact-SQL `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 SQL Server Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”可以显示编译时执行计划，单击“包括实际的执行计划”可以显示运行时计划。 
+可以使用 Transact-SQL `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 SQL Server Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 
-* 访问已分区表或已分区索引的操作，如 `scans`、`seeks`、`inserts`、`updates`、`merges` 和 `deletes`。
+* 访问已分区表或已分区索引的操作，如 `scans`、 `seeks`、 `inserts`、 `updates`、 `merges`和 `deletes` 。
 * 查询访问的分区。 例如，运行时执行计划中包含所访问分区的总计数以及所访问的连续分区的范围。
 * 何时在查找或扫描操作中使用跳跃扫描操作以便从一个或多个分区中检索数据。
 
@@ -832,11 +836,11 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 SQL Server 为编译时执行计划和运行时执行计划都提供增强的分区信息。 现在，执行计划可以提供以下信息：
 
-* 一个可选的 `Partitioned` 属性，它指示对某已分区表执行某个运算符（例如 `seek`、`scan`、`insert`、`update`、`merge` 或 `delete`）。  
-* 一个新增的 `SeekPredicateNew` 元素，它带有 `SeekKeys` 子元素，其中包含 `PartitionID`（作为第一个索引键列）和筛选条件（指定针对 `PartitionID` 的查找范围）。 如果存在两个 `SeekKeys` 子元素，则表明对 `PartitionID` 使用了跳跃扫描操作。   
+* 一个可选的 `Partitioned` 属性，它指示对某已分区表执行某个运算符（例如 `seek`、 `scan`、 `insert`、 `update`、 `merge`或 `delete`）。  
+* 一个新增的 `SeekPredicateNew` 元素，它带有 `SeekKeys` 子元素，其中包含 `PartitionID` （作为第一个索引键列）和筛选条件（指定针对 `PartitionID`的查找范围）。 如果存在两个 `SeekKeys` 子元素，则表明对 `PartitionID` 使用了跳跃扫描操作。   
 * 用于提供所访问分区的总计的摘要信息。 只有在运行时计划中才有此信息。 
 
-为演示此信息在图形执行计划输出和 XML 显示计划输出中的显示方式，请考虑对已分区表 `fact_sales` 的以下查询。 此查询将更新两个分区中的数据。 
+为演示此信息在图形执行计划输出和 XML 显示计划输出中的显示方式，请考虑对已分区表 `fact_sales`的以下查询。 此查询将更新两个分区中的数据。 
 
 ```
 UPDATE fact_sales
@@ -849,7 +853,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 属性
 
-对已分区表或已分区索引执行某个运算符（例如 `Index Seek`）时，`Partitioned` 属性将出现在编译时和运行时计划中并设置为 `True` (1)。 设为 `False` (0) 时将不会显示该属性。
+对已分区表或已分区索引执行某个运算符（例如 `Index Seek` ）时， `Partitioned` 属性将出现在编译时和运行时计划中并设置为 `True` (1)。 设为 `False` (0) 时将不会显示该属性。
 
 `Partitioned` 属性可以出现在以下物理和逻辑运算符中：  
 * `Table Scan`  
@@ -860,17 +864,17 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * `Delete`  
 * `Merge`  
 
-如上图所示，该属性显示在包含其定义的运算符的属性中。 在 XML 显示计划输出中，该属性在包含其定义的运算符的 `RelOp` 节点中显示为 `Partitioned="1"`。
+如上图所示，该属性显示在包含其定义的运算符的属性中。 在 XML 显示计划输出中，该属性在包含其定义的运算符的 `Partitioned="1"` 节点中显示为 `RelOp` 。
 
 #### <a name="new-seek-predicate"></a>新增的 Seek 谓词
 
-在 XML 显示计划输出中，`SeekPredicateNew` 元素出现在包含其定义的运算符中。 它最多可以包含两个 `SeekKeys` 子元素实例。 第一个 `SeekKeys` 实例项指定位于逻辑索引的分区 ID 级别的第一级查找操作。 也就是说，该查找操作将确定为满足查询条件而必须访问的分区。 第二个 `SeekKeys` 实例项指定在第一级查找中所标识的每个分区中进行的跳跃扫描操作的二级查找部分。 
+在 XML 显示计划输出中， `SeekPredicateNew` 元素出现在包含其定义的运算符中。 它最多可以包含两个 `SeekKeys` 子元素实例。 第一个 `SeekKeys` 实例项指定位于逻辑索引的分区 ID 级别的第一级查找操作。 也就是说，该查找操作将确定为满足查询条件而必须访问的分区。 第二个 `SeekKeys` 实例项指定在第一级查找中所标识的每个分区中进行的跳跃扫描操作的二级查找部分。 
 
 #### <a name="partition-summary-information"></a>分区摘要信息
 
 在运行时执行计划中，分区摘要信息提供了所访问分区的计数以及所访问的实际分区的标识。 您可以使用此信息来验证查询中所访问的分区是否正确以及所有其他分区是否均排除在外。
 
-提供以下信息：`Actual Partition Count` 和 `Partitions Accessed`。 
+提供以下信息： `Actual Partition Count`和 `Partitions Accessed`。 
 
 `Actual Partition Count` 是查询所访问的分区总数。
 
@@ -889,11 +893,11 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="displaying-partition-information-by-using-other-showplan-methods"></a>使用其他显示计划方法来显示分区信息
 
-显示计划方法 `SHOWPLAN_ALL`、`SHOWPLAN_TEXT` 和 `STATISTICS PROFILE` 并不报告本主题中所述的分区信息，但以下情况例外。 作为 `SEEK` 谓词的一部分，要访问的分区由表示该分区 ID 的计算列上的范围谓词标识。 下面的示例演示 `Clustered Index Seek` 运算符的 `SEEK` 谓词。 访问的分区是分区 2 和 3，并且该查找运算符将筛选符合条件 `date_id BETWEEN 20080802 AND 20080902` 的行。
+显示计划方法 `SHOWPLAN_ALL`、 `SHOWPLAN_TEXT`和 `STATISTICS PROFILE` 并不报告本主题中所述的分区信息，但以下情况例外。 作为 `SEEK` 谓词的一部分，要访问的分区由表示该分区 ID 的计算列上的范围谓词标识。 下面的示例演示 `SEEK` 运算符的 `Clustered Index Seek` 谓词。 访问的分区是分区 2 和 3，并且该查找运算符将筛选符合条件 `date_id BETWEEN 20080802 AND 20080902`的行。
 ```
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]), 
 
-        SEEK:([PtnId1000] >= (2) AND [PtnId1000] <= (3) 
+        SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3) 
 
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802) 
 
@@ -913,7 +917,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 使用相同或等效的分区函数对两个表进行分区并且在查询的联接条件中指定了来自联接两侧的分区依据列时就会发生联接并置。 查询优化器可以生成一个计划，其中具有相等分区 ID 的每个表的分区将分别联接在一起。 并置联接可能比非并置联接的执行速度快，因为前者可以只需较少的内存和处理时间。 优化器会基于成本估计来选择非并置计划或并置计划。
 
-在并置计划中，`Nested Loops` 联接从内侧读取一个或多个联接表或索引分区。 `Constant Scan` 运算符内的数字表示分区号。 
+在并置计划中， `Nested Loops` 联接从内侧读取一个或多个联接表或索引分区。 `Constant Scan` 运算符内的数字表示分区号。 
 
 为已分区表或已分区索引生成并置联接的并行计划时，在 `Constant Scan` 和 `Nested Loops` 联接运算符之间会出现一个 Parallelism 运算符。 在此情况下，在联接外侧的多个线程会各自在不同的分区上进行读取和操作。 
 
@@ -933,12 +937,12 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再举一个例子，假设表在 A 列上有四个分区，边界点为 (10, 20, 30)，在 B 列上有一个索引，并且查询有谓词子句 `WHERE B IN (50, 100, 150)`。 由于表分区基于 A 的值，因此 B 的值可以出现在任何表分区中。 这样，查询处理器将分别在四个表分区中查找三个 B 值 (50, 100, 150) 中的每一个值。 查询处理器将按比例分配线程，以便它可以并行执行 12 个查询扫描中的每一个扫描。
 
-|基于 A 列的表分区 |在每个表分区中查找 B 列 |
+|基于 A 列的表分区    |在每个表分区中查找 B 列 |
 |----|----|
-|表分区 1：A \< 10   |B=50, B=100, B=150 |
-|表分区 2：A >= 10 AND A \< 20   |B=50, B=100, B=150 |
-|表分区 3：A >= 20 AND A \< 30   |B=50, B=100, B=150 |
-|表分区 4：A >= 30  |B=50, B=100, B=150 |
+|表分区 1：A < 10     |B=50, B=100, B=150 |
+|表分区 2：A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|表分区 3：A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|表分区 4：A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳实践
 
@@ -1021,3 +1025,4 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+

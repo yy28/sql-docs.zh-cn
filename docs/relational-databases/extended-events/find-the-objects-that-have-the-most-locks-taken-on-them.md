@@ -1,28 +1,32 @@
 ---
 title: "查找具有最多锁定的对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对象 [SQL Server], 扩展事件"
-  - "xe"
-  - "扩展事件 [SQL Server], 锁"
-  - "对象 [SQL Server], 锁"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- objects [SQL Server], extended events
+- xe
+- extended events [SQL Server], locks
+- objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查找具有最多锁定的对象
+# <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>查找具有最多锁定的对象
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   数据库管理员通常需要识别影响数据库性能的锁定来源。  
@@ -31,7 +35,7 @@ caps.handback.revision: 15
   
  为此，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查询编辑器。  
   
-### 查找占用最多锁定的对象  
+### <a name="to-find-the-objects-that-have-the-most-locks"></a>查找占用最多锁定的对象  
   
 1.  在查询编辑器中发出以下语句：  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 15
   
 -   lock_count  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

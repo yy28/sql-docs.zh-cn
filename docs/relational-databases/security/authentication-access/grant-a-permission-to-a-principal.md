@@ -1,24 +1,28 @@
 ---
 title: "向主体授予权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "向主体授予权限"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# 向主体授予权限
+# <a name="grant-a-permission-to-a-principal"></a>向主体授予权限
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中对主体授予权限。  
   
  **本主题内容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 向主体授予权限  
+#### <a name="to-grant-permission-to-a-principal"></a>向主体授予权限  
   
 1.  在“对象资源管理器”中，展开包含您要授予权限的对象的数据库。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 12
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 向主体授予权限  
+#### <a name="to-grant-permission-to-a-principal"></a>向主体授予权限  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  有关详细信息，请参阅 [GRANT (Transact-SQL)](../../../t-sql/statements/grant-transact-sql.md) 和 [GRANT 对象权限 (Transact-SQL)](../../../t-sql/statements/grant-object-permissions-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [主体（数据库引擎）](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

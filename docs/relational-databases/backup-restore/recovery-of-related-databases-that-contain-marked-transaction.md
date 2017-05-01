@@ -1,37 +1,41 @@
 ---
 title: "包含标记的事务的相关数据库的恢复 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事务日志 [SQL Server], 标记"
-  - "STOPBEFOREMARK 选项 [RESTORE 语句]"
-  - "STOPATMARK 选项 [RESTORE 语句]"
-  - "时点恢复 [SQL Server]"
-  - "还原数据库 [SQL Server], 时点"
-  - "恢复 [SQL Server], 数据库"
-  - "还原 [SQL Server], 时点"
-  - "事务 [SQL Server], 恢复到标记"
-  - "数据库恢复 [SQL Server]"
-  - "标记的事务 [SQL Server], 还原"
-  - "数据库还原 [SQL Server], 时点"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], marks
+- STOPBEFOREMARK option [RESTORE statement]
+- STOPATMARK option [RESTORE statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
+- recovery [SQL Server], databases
+- restoring [SQL Server], point in time
+- transactions [SQL Server], recovering to a mark
+- database recovery [SQL Server]
+- marked transactions [SQL Server], restoring
+- database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8848fbbe73b377a329c8b3af29c8a6a32881f50b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 包含标记的事务的相关数据库的恢复
+# <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记的事务的相关数据库的恢复
   本主题仅适用于那些包含标记事务和使用完整或大容量日志恢复模式的数据库。  
   
- 有关还原到特定恢复点的要求的详细信息，请参阅[将 SQL Server 数据库还原到某个时点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+ 有关还原到特定恢复点的要求的详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将命名标记插入到事务日志中，以便恢复到该特定标记。 日志标记因事务而异，并且只有在提交与其关联的事务时才会插入。 因此可将标记绑定到特定的工作上，而且可恢复到包含或排除此工作的点。  
   
@@ -41,24 +45,24 @@ caps.handback.revision: 37
   
 -   标记的事务提交之后，在 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) 的 **logmarkhistory**表中插入一行。  
   
--   如果一个标记的事务跨同一数据库服务器或不同服务器上的多个数据库，这些标记将记录在所有受影响的数据库的日志内。 有关详细信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)。  
+-   如果一个标记的事务跨同一数据库服务器或不同服务器上的多个数据库，这些标记将记录在所有受影响的数据库的日志内。 有关详细信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 > [!NOTE]  
->  有关如何标记事务的信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)。  
+>  有关如何标记事务的信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
-## 在事务日志中插入命名标记的 Transact-SQL 语法  
+## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>在事务日志中插入命名标记的 Transact-SQL 语法  
  若要将标记插入到事务日志中，请使用 [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) 语句和 WITH MARK [*description*] 子句。 标记的名称与事务的名称相同。 可选的 *description* 是标记的文本说明而不是标记名。 例如，在以下 `BEGIN TRANSACTION` 语句中创建的事务和标记的名称均为 `Tx1`：  
   
 ```wmimof  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 事务日志记录了标记名（事务名）、说明、数据库、用户、**datetime** 信息和日志序列号 (LSN)。 **datetime** 信息与标记名一起用于唯一地标识标记。  
+ 事务日志记录了标记名（事务名）、说明、数据库、用户、 **datetime** 信息和日志序列号 (LSN)。 **datetime** 信息与标记名一起用于唯一地标识标记。  
   
- 有关如何将标记插入跨多个数据库的事务的信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)。  
+ 有关如何将标记插入跨多个数据库的事务的信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
-## 恢复到某个标记的 Transact-SQL 语法  
- 使用[RESTORE LOG](../Topic/RESTORE%20\(Transact-SQL\).md)语句将某个标记的事务作为目标时，可以使用以下子句之一在标记处或在紧邻其之前的位置处停止：  
+## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>恢复到某个标记的 Transact-SQL 语法  
+ 使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)语句将某个标记的事务作为目标时，可以使用以下子句之一在标记处或在紧邻其之前的位置处停止：  
   
 -   使用 WITH STOPATMARK = **'***<mark_name>***'** 子句将标记事务指定为恢复点。  
   
@@ -79,9 +83,9 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  [将数据库还原到标记的事务 (SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-### 为日志备份做准备  
+### <a name="preparing-the-log-backups"></a>为日志备份做准备  
  在此示例中，适合这两个相关数据库的备份策略如下：  
   
 1.  对于这两个数据库，使用完整恢复模式。  
@@ -90,14 +94,14 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      可以按顺序或同时备份数据库。  
   
-3.  备份事务日志之前，标记在所有数据库中执行的事务。 有关如何创建标记事务的详细信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)。  
+3.  备份事务日志之前，标记在所有数据库中执行的事务。 有关如何创建标记事务的详细信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 4.  备份每个数据库中的事务日志。  
   
-### 将数据库恢复到标记事务  
+### <a name="recovering-the-database-to-a-marked-transaction"></a>将数据库恢复到标记事务  
  **还原备份**  
   
-1.  如有可能，创建未损坏的数据库的[结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+1.  如有可能，创建未损坏的数据库的 [结尾日志备份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 。  
   
 2.  还原每个数据库最近的完整数据库备份。  
   
@@ -109,11 +113,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  恢复每个数据库。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)   
+ [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [计划和执行还原顺序（完整恢复模式）](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

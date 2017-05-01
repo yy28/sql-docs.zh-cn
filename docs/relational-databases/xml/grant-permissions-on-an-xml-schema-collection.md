@@ -1,28 +1,32 @@
 ---
 title: "授予对 XML 架构集合的权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "授予权限 [SQL Server], XML 架构集合"
-  - "ALTER 权限"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 授予对 XML 架构集合的权限
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>授予对 XML 架构集合的权限
   您可以授予创建 XML 架构集合的权限，也可以授予对 XML 架构集合对象的某些操作权限。  
   
-## 授予创建 XML 架构集合的权限  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>授予创建 XML 架构集合的权限  
  若要创建 XML 架构集合，必须具有下列权限：  
   
 -   主体必须具有数据库级的 CREATE XML SCHEMA COLLECTION 权限。  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  关系架构的所有者将变成在该架构中创建的 XML 架构集合的所有者。 这样，此所有者就可以完全控制 XML 架构集合。 因此，此所有者就可以修改 XML 架构集合、类型化 xml 列或删除 XML 架构集合。  
   
-## 授予对 XML 架构集合对象的某些操作权限  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>授予对 XML 架构集合对象的某些操作权限  
  允许对 XML 架构集合具有下列权限：  
   
 -   当使用 ALTER XML SCHEMA COLLECTION 语句修改现有 XML 架构集合的内容时，必须具有 ALTER 权限。  
@@ -62,10 +66,10 @@ caps.handback.revision: 32
   
 -   若要验证主体针对类型化或约束 **xml** 类型列、变量和参数的 XML 架构集合插入或更新的值，必须具有 EXECUTE 权限。 当查询存储在这些列和变量中的 XML 时，也必须具有此权限。  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例中的应用场景说明 XML 架构权限的工作机制。 每个示例都创建有必需的测试数据库、关系架构和登录帐户。 这些登录帐户已授予必需的 XML 架构集合权限。 每个示例均在结束时进行了必要的清除。  
   
-### A. 授予创建 XML 架构集合的权限  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. 授予创建 XML 架构集合的权限  
  下面的示例显示如何授予权限以便主体能够创建 XML 架构集合。 此示例将创建一个示例数据库和一个测试用户 `TestLogin1`。 `TestLogin1` 针对关系架构的 `ALTER` 权限和针对数据库的 `CREATE XML SCHEMA COLLECTION` 权限。 有了这些权限， `TestLogin1` 便可以成功创建示例 XML 架构集合。  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### B. 授予使用现有 XML 架构集合的权限  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. 授予使用现有 XML 架构集合的权限  
  以下示例将进一步显示针对 XML 架构集合的权限模式。 该示例将显示创建和使用 XML 架构集合时需要哪些不同的权限。  
   
  此示例将创建一个测试数据库和一个登录帐户 `TestLogin1`。 `TestLogin1` 将在该数据库中创建一个 XML 架构集合。 然后，此登录帐户将创建一个表并使用 XML 架构集合创建一个类型化的 xml 列。 用户随后将插入数据并查询该数据。 所有这些步骤都需要必要的架构权限，如代码中所示。  
@@ -236,7 +240,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### C. 授予对 XML 架构集合的 ALTER 权限  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. 授予对 XML 架构集合的 ALTER 权限  
  要修改数据库中的现有 XML 架构集合，用户必须具有 ALTER 权限。 下面的示例显示如何授予 `ALTER` 权限。  
   
 ```  
@@ -311,12 +315,12 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### D. 授予对 XML 架构集合的 TAKE OWNERSHIP 权限  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. 授予对 XML 架构集合的 TAKE OWNERSHIP 权限  
  下面的示例显示如何将 XML 架构的所有权从一个用户传递到另一个用户。 为了使此示例更加生动，此示例中的用户在不同的默认关系架构中工作。  
   
  此示例将执行下列操作：  
   
--   创建一个带有两个关系架构（`dbo` 和 `myOtherDBSchema`）的数据库。  
+-   创建一个带有两个关系架构（ `dbo` 和 `myOtherDBSchema`）的数据库。  
   
 -   创建两个用户，即 `TestLogin1` 和 `TestLogin2`。 `TestLogin2` 成为 `myOtherDBSchema` 关系架构的所有者。  
   
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### E. 授予对 XML 架构集合的 VIEW DEFINITION 权限  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. 授予对 XML 架构集合的 VIEW DEFINITION 权限  
  下面的示例显示如何授予对 XML 架构集合的 VIEW DEFINITION 权限。  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

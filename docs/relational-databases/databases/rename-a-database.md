@@ -1,26 +1,30 @@
 ---
 title: "重命名数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库 [SQL Server], 重命名"
-  - "重命名数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], renaming
+- renaming databases
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名数据库
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
+# <a name="rename-a-database"></a>重命名数据库
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
   
  **本主题内容**  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 19
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在重命名数据库之后](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 重命名数据库  
+#### <a name="to-rename-a-database"></a>重命名数据库  
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 重命名数据库  
+#### <a name="to-rename-a-database"></a>重命名数据库  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -83,7 +87,7 @@ GO
 ##  <a name="FollowUp"></a> 跟进：在重命名数据库之后  
  在重命名任何数据库后，备份 **master** 数据库。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [数据库标识符](../../relational-databases/databases/database-identifiers.md)  
   

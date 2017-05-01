@@ -1,26 +1,30 @@
 ---
-title: "用条件性删除跟踪优化合并复制的性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "条件性删除跟踪 [SQL Server 复制]"
-  - "合并复制 [SQL Server 复制], 条件性删除跟踪"
-  - "项目 [SQL Server 复制], 条件性删除跟踪"
+title: "使用条件性删除跟踪优化合并复制性能 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional delete tracking [SQL Server replication]
+- merge replication [SQL Server replication], conditional delete tracking
+- articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 用条件性删除跟踪优化合并复制的性能
+# <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>用条件性删除跟踪优化合并复制的性能
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -45,9 +49,9 @@ caps.handback.revision: 23
   
  **指定不应跟踪删除**  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程︰ [指定，将删除应不会跟踪为合并项目 & #40;复制 TRANSACT-SQL 编程 & #41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[为合并项目指定不应跟踪删除（复制 Transact-SQL 编程）](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并复制的项目选项](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [使用仅下载项目优化合并复制的性能](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   

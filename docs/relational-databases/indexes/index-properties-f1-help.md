@@ -1,30 +1,34 @@
 ---
-title: "“索引属性”对话框的 F1 帮助 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "索引属性 F1 帮助 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# “索引属性”对话框的 F1 帮助
+# <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题中的这部分引用了使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框提供的各种索引属性。  
@@ -63,28 +67,28 @@ caps.handback.revision: 38
  如果在 **“索引类型”** 字段中选择 **“空间”** ，则 **“唯一”** 复选框呈灰色。  
   
  **索引键列**  
- 向“索引键列”网格中添加所需的列。 如果添加多列，则必须以所需的顺序列出这些列。 索引中的列顺序对索引的性能具有很大影响。  
+ 向 **“索引键列”** 网格中添加所需的列。 如果添加多列，则必须以所需的顺序列出这些列。 索引中的列顺序对索引的性能具有很大影响。  
   
  单个组合索引不能超过 16 列。 如果超过 16 列，请参阅本文末尾的“包含列”。  
   
- 只能对包含空间数据类型（*空间列*）的单个列定义空间索引。  
+ 只能对包含空间数据类型（ *空间列*）的单个列定义空间索引。  
   
  **名称**  
  显示组成索引键的列的名称。  
   
  **排序顺序**  
- 指定所选索引列的排序方向，“升序”或“降序”。  
+ 指定所选索引列的排序方向， **“升序”** 或 **“降序”**。  
   
 > [!NOTE]  
->  如果索引类型为“主 XML”或“空间”，则表中将不显示此列。  
+>  如果索引类型为 **“主 XML”** 或 **“空间”**，则表中将不显示此列。  
   
  **数据类型**  
  显示数据类型信息。  
   
 > [!NOTE]  
->  如果表列为计算列，则“数据类型”显示“计算列”。  
+>  如果表列为计算列，则 **“数据类型”** 显示“计算列”。  
   
- **Size**  
+ **大小**  
  显示存储列数据类型所需的最大字节数。 对于空间列或 XML 列，显示零 (0)。  
   
  **标识**  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **添加**  
- 向索引键添加列。 从单击“添加”时出现的“从 *\<table name>* 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 从单击“添加”时出现的“从 \<table name> 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -127,10 +131,10 @@ caps.handback.revision: 38
  列的大小（字节）。  
   
  **标识**  
- 对于标识列显示“是”；如果该列不是标识列，则显示“否”。  
+ 对于标识列显示 **“是”** ；如果该列不是标识列，则显示 **“否”** 。  
   
  **允许 Null 值**  
- 如果表定义允许该列包含 Null 值，则显示“是”。 如果表定义不允许该列包含 Null 值，则显示 **“否”** 。  
+ 如果表定义允许该列包含空值，则显示 **“是”** 。 如果表定义不允许该列包含 Null 值，则显示 **“否”** 。  
   
 ##  <a name="Storage"></a> 存储页选项  
  使用此页可查看或修改所选索引的文件组或分区方案属性。 仅显示与索引类型相关的选项。  
@@ -161,7 +165,7 @@ caps.handback.revision: 38
  显示有关列的数据类型信息。  
   
 > [!NOTE]  
->  如果表列是计算列，则“列数据类型”显示为“计算列”。  
+>  如果表列是计算列，则 **“列数据类型”** 显示为“计算列”。  
   
  **允许在移动索引时在线处理 DML 语句**  
  在索引操作过程中，允许用户访问基础表或聚集索引数据以及任何相关联的非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
@@ -178,25 +182,25 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> 空间页索引选项  
  使用 **“空间”** 页，可以查看或指定空间属性的值。 有关详细信息，请参阅[空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
-### 边界框  
- “边界框”为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
+### <a name="bounding-box"></a>边界框  
+ “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 面板将显示边界框的**（***X-min***、***Y-min***）** 和**（***X-max***、***Y-max***）**坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的 **（***X-min***、***Y-min***）** 和 **（***X-max***、***Y-max***）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
- **X 最小值**  
+ **X-min**  
  边界框左下角的 X 坐标。  
   
- **Y 最小值**  
+ **Y-min**  
  边界框左下角的 Y 坐标。  
   
- **X 最大值**  
+ **X-max**  
  边界框右上角的 X 坐标。  
   
- **Y 最大值**  
+ **Y-max**  
  边界框右上角的 Y 坐标。  
   
-### 常规  
- **分割方案**  
+### <a name="general"></a>常规  
+ **“分割方案”**  
  指示索引的分割方案。 支持的分割方案如下所示。  
   
  **几何图形网格**  
@@ -205,7 +209,7 @@ caps.handback.revision: 38
  **几何自动网格**  
  在数据库兼容级别设置为 110 或更高时，将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用此选项。  
   
- **地理网格**  
+ **“地理网格”**  
  指定“地理网格”分割方案，它适用于 **geography** 数据类型的列。  
   
  **地理自动网格**  
@@ -216,10 +220,10 @@ caps.handback.revision: 38
  **每个对象的单元格数**  
  指示可用于索引中单个空间对象的每个对象的分割单元格数。 该数字可以是 1 和 8192 之间（含 1 和 8192）的任何整数。 当数据库兼容级别设置为 110 或更高时，默认值为 16，并且对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本为 8。  
   
- 在顶级，如果对象包含的单元格多于 *n* 指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 在这种情况下，最大数量即为顶级网格创建的单元格数，这取决于“级别 1”的密度。  
+ 在顶级，如果对象包含的单元格多于 *n*指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 这种情况下，最大数量即为顶级网格创建的单元格数，这取决于 **“级别 1”** 的密度。  
   
-### 网格  
- 此面板显示分割方案的每个级别上网格的密度。 密度可指定为 **“低”**、 **“中”**或 **“高”**三个级别。 默认值为 **“中”**。 “低”表示 4x4 网格（16 个单元格）、“中”表示 8x8 网格（64 个单元格）而“高”表示 16x16 网格（256 个单元格）。 在选择 **“几何自动网格”** 或 **“地理自动网格”** 分割选项时，这些选项将不可用。  
+### <a name="grids"></a>网格  
+ 此面板显示分割方案的每个级别上网格的密度。 密度可指定为 **“低”**、 **“中”**或 **“高”**三个级别。 默认值为 **“中”**。 **“低”** 表示 4x4 网格（16 个单元格）、 **“中”** 表示 8x8 网格（64 个单元格）而 **“高”** 表示 16x16 网格（256 个单元格）。 在选择 **“几何自动网格”** 或 **“地理自动网格”** 分割选项时，这些选项将不可用。  
   
  **级别 1**  
  第一级（顶级）网格的密度。  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **筛选表达式**  
  定义要将哪些数据行包含在筛选索引中。 例如： `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置索引选项](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

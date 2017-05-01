@@ -1,26 +1,30 @@
 ---
 title: "OLE 自动化返回代码和错误信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "返回代码 [SQL Server]"
-  - "OLE 自动化 [SQL Server], 返回代码"
-  - "OLE 自动化 [SQL Server], 错误"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE 自动化返回代码和错误信息
+# <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
   OLE 自动化系统存储过程返回一个 **int** 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码，其形式为十六进制 0x800*nnnnn*，但是当作为存储过程返回代码中的一个 **int** 值返回时，HRESULT 的形式为 214*nnnnnnn*。  
   
  例如，向 sp_OACreate 传递一个无效的对象名 (SQLDMO.Xyzzy) 会导致该过程返回一个值为 2147221005 的 **int** HRESULT，该值用十六进制表示则为 0x800401f3。  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [sp_OAGetErrorInfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

@@ -1,29 +1,33 @@
 ---
 title: "确定表或存储过程是否应移植到内存中 OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分析、迁移和报告"
-  - "AMR"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 确定表或存储过程是否应移植到内存中 OLTP
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的事务性能分析报表，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。 该报表还能够指明在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 帮助你迁移表。 同样， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。 有关迁移方法的信息，请参阅[内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
+  通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的事务性能分析报表，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。 该报表还能够指明在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。 有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  事务性能分析报表将直接对生产数据库或具有类似于生产工作负载的活动工作负载的测试数据库运行。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 39
   
  安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或 [下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。  
   
-## 事务性能分析报表  
+## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
  通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
   
  表的详细报告包含三个部分：  
@@ -97,7 +101,7 @@ caps.handback.revision: 39
   
  要详细了解如何将存储过程转换为本机编译存储过程，请使用本机编译顾问。  
   
-## 生成内存中 OLTP 迁移清单  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>生成内存中 OLTP 迁移清单  
  迁移清单识别内存优化表或本机编译存储过程不支持的任何表或存储过程功能。 内存优化和本机编译顾问可为基于单个磁盘的表或解释 T-SQL 存储过程生成一个清单。 还有可能为数据库中的多个表和存储过生成迁移清单。  
   
  使用“生成内存中 OLTP 迁移清单”命令或使用 PowerShell，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中生成迁移清单。  
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   <object_name> 的迁移清单报表是 folder_path2 所指定位置的唯一报表。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

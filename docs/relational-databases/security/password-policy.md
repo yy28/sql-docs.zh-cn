@@ -1,52 +1,56 @@
 ---
 title: "密码策略 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALTER LOGIN 语句"
-  - "密码 [SQL Server], 策略实施"
-  - "登录名 [SQL Server], 密码"
-  - "CHECK_EXPIRATION 选项"
-  - "复杂密码 [SQL Server]"
-  - "密码 [SQL Server], 过期"
-  - "重置手动错误密码计数"
-  - "MUST_CHANGE 选项"
-  - "过期 [SQL Server]"
-  - "过期密码 [SQL Server]"
-  - "符号 [SQL Server]"
-  - "NetValidatePasswordPolicy() API"
-  - "密码 [SQL Server]"
-  - "密码策略 [SQL Server]"
-  - "重置错误密码计数"
-  - "安全性 [SQL Server], 密码"
-  - "CHECK_POLICY 选项"
-  - "密码 [SQL Server], 符号"
-  - "错误的密码计数"
-  - "密码 [SQL Server], 复杂性"
-  - "字符 [SQL Server], 密码策略"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 密码策略
+# <a name="password-policy"></a>密码策略
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows 密码策略机制。 密码策略应用于使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名，并且应用于具有密码的包含数据库用户。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部使用的密码应用在 Windows 中使用的相同复杂性策略和过期策略。 此功能取决于 `NetValidatePasswordPolicy` API。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 强制实施密码复杂性。 密码过期和策略实施部分不适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-## 密码复杂性  
+## <a name="password-complexity"></a>密码复杂性  
  密码复杂性策略通过增加可能密码的数量来阻止强力攻击。 实施密码复杂性策略时，新密码必须符合以下原则：  
   
 -   密码不得包含用户的帐户名。  
@@ -65,11 +69,11 @@ caps.handback.revision: 41
   
  密码可最长为 128 个字符。 使用的密码应尽可能长，尽可能复杂。  
   
-## 密码过期  
+## <a name="password-expiration"></a>密码过期  
  密码过期策略用于管理密码的使用期限。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实施密码过期策略，则系统将提醒用户更改旧密码，并禁用带有过期密码的帐户。  
   
-## 策略实施  
- 可为每个 SQL Server 登录名单独配置密码策略实施。 使用 [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md) 来配置 SQL Server 登录名的密码策略选项。 配置密码策略实施时，适用以下规则：  
+## <a name="policy-enforcement"></a>策略实施  
+ 可为每个 SQL Server 登录名单独配置密码策略实施。 使用 [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) 来配置 SQL Server 登录名的密码策略选项。 配置密码策略实施时，适用以下规则：  
   
 -   如果 CHECK_POLICY 改为 ON，则将出现以下行为：  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  可以在 Windows 中设置安全策略，也可以从域接收安全策略。 若要查看计算机上的密码策略，请使用本地安全策略 MMC 管理单元 (**secpol.msc**)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [强密码](../../relational-databases/security/strong-passwords.md)  
   
   
+

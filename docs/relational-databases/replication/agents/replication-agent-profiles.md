@@ -1,35 +1,39 @@
 ---
 title: "复制代理配置文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分发代理, 配置文件"
-  - "复制 [SQL Server], 代理和配置文件"
-  - "复制代理配置文件 [SQL Server]"
-  - "合并代理, 配置文件"
-  - "代理 [SQL Server 复制], 配置文件"
-  - "队列读取器代理, 配置文件"
-  - "配置文件 [SQL Server], 复制代理"
-  - "快照代理, 配置文件"
-  - "日志读取器代理, 配置文件"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, profiles
+- replication [SQL Server], agents and profiles
+- replication agent profiles [SQL Server]
+- Merge Agent, profiles
+- agents [SQL Server replication], profiles
+- Queue Reader Agent, profiles
+- profiles [SQL Server], replication agents
+- Snapshot Agent, profiles
+- Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a11a7821231d4c7fa3a8719a05bdd1a7bc49ff47
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制代理配置文件
+# <a name="replication-agent-profiles"></a>复制代理配置文件
   在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 对于使用 Web 同步的合并订阅，配置文件会下载并存储在订阅服务器中。 如果配置文件发生了更改，订阅服务器中的配置文件将在合并代理下次运行时更新。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
- 复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值 ( **-QueryTimeout** 参数)，您可以更新这些快照代理程序使用的配置文件和该类型的所有代理将都开始使用新值自动的下次运行。  
+ 复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值（ **-QueryTimeout** 参数），则可以更新这些快照代理使用的配置文件，这样该此类型的所有代理将在下次运行时自动开始使用新值。  
   
  您也可能对代理的不同实例拥有不同的配置文件。 例如，以拨号连接方式连接到发布服务器和分发服务器的合并代理可以通过使用“慢速链接”  配置文件而采用一组更适合慢速通信链接的参数。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 44
   
 -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-## 快照代理配置文件  
+## <a name="snapshot-agent-profiles"></a>快照代理配置文件  
  下表显示了快照代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)。  
   
 ||默认值|  
@@ -50,7 +54,7 @@ caps.handback.revision: 44
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
   
-## 日志读取器代理配置文件  
+## <a name="log-reader-agent-profiles"></a>日志读取器代理配置文件  
  下表显示了日志读取器代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
   
 ||默认值|详细历史记录|  
@@ -62,7 +66,7 @@ caps.handback.revision: 44
 |**-QueryTimeout**|1800|1800|  
 |**-ReadBatchSize**|500|500|  
   
-## 分发代理配置文件  
+## <a name="distribution-agent-profiles"></a>分发代理配置文件  
  下表显示了分发代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
 ||默认值|详细历史记录|Windows 同步管理器|出现数据一致性错误时继续|OLEDB 流的分发配置文件|  
@@ -83,7 +87,7 @@ caps.handback.revision: 44
 |**-TransactionsPerHistory**|100|100|100|100|100|  
 |**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
   
-## 合并代理配置文件  
+## <a name="merge-agent-profiles"></a>合并代理配置文件  
  下表显示了合并代理的配置文件中定义的参数。 表中的每一列都表示一个已命名的配置文件。 有关这些参数的详细信息，请参阅 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
 ||默认值|详细历史记录|Windows 同步管理器|行计数验证|行计数和校验和验证|慢速链接|高卷服务器对服务器|  
@@ -114,7 +118,7 @@ caps.handback.revision: 44
 |**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
-## 队列读取器代理配置文件  
+## <a name="queue-reader-agent-profiles"></a>队列读取器代理配置文件  
  下表显示了队列读取器代理的默认配置文件中定义的参数。 有关这些参数的详细信息，请参阅 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)。  
   
 ||默认值|  
@@ -124,9 +128,9 @@ caps.handback.revision: 44
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
- [查看和修改复制代理命令提示符参数 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)   
- [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
+ [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

@@ -1,28 +1,32 @@
 ---
 title: "计算列上的索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "计算列, 索引创建"
-  - "索引创建 [SQL Server], 计算列"
-  - "不精确的列"
-  - "持久化计算列"
-  - "精确 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, index creation
+- index creation [SQL Server], computed columns
+- imprecise columns
+- persisted computed columns
+- precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d41339f5e014e4f957000734d8019b0703f8d42
+ms.lasthandoff: 04/11/2017
+
 ---
-# 计算列上的索引
+# <a name="indexes-on-computed-columns"></a>计算列上的索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   只要满足下列要求就可以为计算列定义索引：  
@@ -37,14 +41,14 @@ caps.handback.revision: 41
   
 -   SET 选项要求  
   
- **所有权要求**  
+ **Ownership Requirements**  
   
  计算列中的所有函数引用必须与表具有相同的所有者。  
   
- **确定性要求**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
->  如果对于一组指定的输入表达式始终返回相同的结果，则说明表达式具有确定性。 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) 函数的 **IsDeterministic** 属性报告 *computed_column_expression* 是否具有确定性。  
+>  如果对于一组指定的输入表达式始终返回相同的结果，则说明表达式具有确定性。 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性报告 *computed_column_expression* 是否具有确定性。  
   
  *Computed_column_expression* 必须具有确定性。 如果下列一项或多项为真，则 *computed_column_expression* 具有确定性：  
   
@@ -59,13 +63,13 @@ caps.handback.revision: 41
  任何包含公共语言运行时 (CLR) 表达式的计算列都必须具有确定性并标记为 PERSISTED，这样才能为该列创建索引。 允许在计算列定义中使用 CLR 用户定义类型的表达式。 类型为 CLR 用户定义类型的计算列只要其类型是可比较的，就可以在该列上创建索引。 有关详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 > [!NOTE]  
->  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的 [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 同样，在表达式 `DATEADD(mm,3,'2000-12-01')` 中，[!INCLUDE[ssDE](../../includes/ssde-md.md)]基于 DATEFORMAT 设置解释字符串 `'2000-12-01'`。  
+>  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的 [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 同样，在表达式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 基于 DATEFORMAT 设置解释字符串 `'2000-12-01'` 。  
 >   
 >  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性，除非兼容级别设置为 80 或更低。  
 >   
 >  当数据库兼容级别设置为 90 时，不能对包含这些表达式的计算列创建索引。 但在已升级的数据库中，包含这些表达式的现有计算列是可以维护的。 如果使用包含字符串到日期的隐式转换的索引计算列，则为了避免损坏索引，请确保数据库和应用程序中的 LANGUAGE 和 DATEFORMAT 设置一致。  
   
- **精度要求**  
+ **Precision Requirements**  
   
  *computed_column_expression* 必须精确。 如果下列一项或多项为真，则 *computed_column_expression* 是精确的：  
   
@@ -85,17 +89,17 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  任何 **float** 或 **real** 表达式都被认为是不精确的，不能作为索引键； **float** 或 **real** 表达式可以在索引视图中使用，但不能作为键使用。 对于计算列同样如此。 如果任何函数、表达式或用户定义函数包含任何 **float** 或 **real** 表达式，则被认为是不精确的。 这也包括逻辑表达式（比较）。  
   
- COLUMNPROPERTY 函数的 **IsPrecise**属性报告 *computed_column_expression* 是否精确。  
+ COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
   
- **数据类型要求**  
+ **Data Type Requirements**  
   
--   为计算列定义的 *computed_column_expression* 不能求值为 **text**、**ntext** 或 **image** 数据类型。  
+-   为计算列定义的 *computed_column_expression* 不能求值为 **text**、 **ntext**或 **image** 数据类型。  
   
--   只要计算列的数据类型可以作为索引键列，从 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 和 **xml** 数据类型派生的计算列上就可以创建索引。  
+-   只要计算列的数据类型可以作为索引键列，从 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**和 **xml** 数据类型派生的计算列上就可以创建索引。  
   
--   只要计算列的数据类型可以作为非键索引列，从 **image**、**ntext** 和 **text** 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
+-   只要计算列的数据类型可以作为非键索引列，从 **image**、 **ntext**和 **text** 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
   
- **SET 选项要求**  
+ **SET Option Requirements**  
   
 -   执行定义计算列的 CREATE TABLE 或 ALTER TABLE 语句时，必须将 ANSI_NULLS 连接级选项设置为 ON。 [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) 函数通过 **IsAnsiNullsOn** 属性报告此选项是否设置为 ON。  
   
@@ -117,10 +121,11 @@ caps.handback.revision: 41
   
      当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
-##  <a name="BKMK_persisted"></a> 为持久化计算列创建索引  
+##  <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
  如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不能准确证明返回计算列表达式的函数（特别是在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中创建的 CLR 函数）是否既具有确定性又精确时，使用此选项可以对计算列创建索引。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)  
   
   
+

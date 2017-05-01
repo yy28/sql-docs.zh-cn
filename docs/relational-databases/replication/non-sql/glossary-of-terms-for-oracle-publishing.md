@@ -1,28 +1,32 @@
 ---
-title: "Oracle 发布的术语词汇表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 发布 [SQL Server 复制], 词汇表"
+title: "有关 Oracle 发布的术语词汇表 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6050bf02c897e14ba643bb170423b1614cf0207
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle 发布的术语词汇表
+# <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 发布的术语词汇表
   在配置和管理 Oracle 发布时，应熟悉下列 Oracle 术语。 有关 Oracle 术语的完整列表，请参阅 Oracle 联机文档。  
   
  索引组织表 (IOT)  
- 其数据以物理方式排序在磁盘中的索引顺序; 一个表它相当于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有一个聚集索引的表。 将 IOT 作为带有聚集索引的表复制到订阅服务器。  
+ 即数据在磁盘上按索引顺序进行物理排序的表。它类似于带有聚集索引的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 将 IOT 作为带有聚集索引的表复制到订阅服务器。  
   
  实例  
  Oracle 数据库是与实例相关联的。 实例由为数据库提供支持的内存和后台进程组成。 Oracle 实例总是映射到单个数据库，而一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例则可包含多个数据库。 有些情况下，Oracle 数据库可以具有多个实例。  
@@ -36,16 +40,16 @@ caps.handback.revision: 32
  序列  
  用于生成唯一编号的数据库对象。 复制使用序列来为已发布表的更改排序。  
   
- SQL\*加上  
+ SQL\*Plus  
  用于访问和查询 Oracle 数据库的应用程序。 它类似于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**。  
   
  同义词  
- 对象的别名。 配置 Oracle 发布服务器时自动创建特殊公共同义词 **MSSQLSERVERDISTRIBUTOR** 。 该同义词引用 **HREPL_Distributor** 表，并提供指向的逻辑指针 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务发布服务器上的分发服务器。  
+ 对象的别名。 配置 Oracle 发布服务器时自动创建特殊公共同义词 **MSSQLSERVERDISTRIBUTOR** 。 该同义词引用 **HREPL_Distributor** 表，并提供一个逻辑指针指向为发布服务器服务的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器。  
   
  在发布 Oracle 数据库之后，再尝试将此发布服务器配置成使用不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器就会失败，因为此公共同义词识别的分发服务器已配置为服务于发布服务器。  
   
  表空间  
- 数据库存储单元，大致等同于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的文件组。  
+ 数据库存储单元，大致等同于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的文件组。  
   
  TNS 服务名称  
  TNS（透明网络底层）是 Oracle 数据库使用的通信层。 在网络上使用 TNS 服务名称来辨别 Oracle 数据库实例。 TNS 服务名称是在配置与 Oracle 数据库的连接时分配的。 复制使用 TNS 服务名称来识别发布服务器和建立连接。  
@@ -53,10 +57,10 @@ caps.handback.revision: 32
  用户架构  
  可以将用户架构看作拥有特定数据库对象集的用户。 复制管理用户架构拥有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制进程在 Oracle 数据库中创建的所有对象，但 **MSSQLSERVERDISTRIBUTOR** 公共同义词除外。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [在 Oracle 发布服务器上创建的对象](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [非 SQL Server 发布服务器](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

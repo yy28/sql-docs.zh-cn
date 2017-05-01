@@ -1,29 +1,33 @@
 ---
 title: "OLEDB Errors 事件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Errors 事件类"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ef942bc5dffeaf14275c6e36ce148571b1a576
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Errors 事件类
+# <a name="oledb-errors-event-class"></a>OLEDB Errors 事件类
   如果在调用 OLE DB 访问接口时出错，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就会发生 OLEDB Errors 事件类。 请在跟踪中包括此事件类，以便查看 OLE DB 访问接口中失败的 HRESULT。  
   
  当跟踪中包含 OLEDB Errors 事件类时，开销量取决于跟踪过程中 OLE DB 访问接口针对数据库发生错误的频率。 如果此类错误频繁发生，跟踪的性能可能会显著降低。  
   
-## OLEDB Errors 事件类的数据列  
+## <a name="oledb-errors-event-class-data-columns"></a>OLEDB Errors 事件类的数据列  
   
 |数据列名称|数据类型|说明|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,20 +42,20 @@ caps.handback.revision: 33
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LinkedServerName|**nvarchar**|链接服务器的名称。|45|是|  
-|LoginName|**nvarchar**|用户的登录名（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
+|LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
 |LoginSid|**image**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |MethodName|**nvarchar**|OLE DB 方法的名称。|47|是|  
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  
 |ProviderName|**nvarchar**|OLE DB 访问接口的名称。|46|是|  
 |RequestID|**int**|包含该语句的请求的 ID。|49|是|  
-|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |TextData|**nvarchar**|在 OLE DB 调用中发送和接收的参数。|1|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-SQL 中的 OLE 自动化对象](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   

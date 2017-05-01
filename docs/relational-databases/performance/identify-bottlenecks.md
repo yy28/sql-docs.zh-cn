@@ -1,33 +1,37 @@
 ---
 title: "识别瓶颈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源瓶颈 [SQL Server]"
-  - "数据库监视 [SQL Server], 瓶颈"
-  - "性能 [SQL Server], 瓶颈"
-  - "优化数据库 [SQL Server], 瓶颈"
-  - "监视服务器性能 [SQL Server], 瓶颈"
-  - "监视性能 [SQL Server], 瓶颈"
-  - "数据库性能 [SQL Server], 瓶颈"
-  - "服务器性能 [SQL Server], 瓶颈"
-  - "瓶颈 [SQL Server]"
-  - "识别瓶颈 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource bottlenecks [SQL Server]
+- database monitoring [SQL Server], bottlenecks
+- performance [SQL Server], bottlenecks
+- tuning databases [SQL Server], bottlenecks
+- monitoring server performance [SQL Server], bottlenecks
+- monitoring performance [SQL Server], bottlenecks
+- database performance [SQL Server], bottlenecks
+- server performance [SQL Server], bottlenecks
+- bottlenecks [SQL Server]
+- identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20ff22698486f5537fc974a91905b9837792aa5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 识别瓶颈
+# <a name="identify-bottlenecks"></a>识别瓶颈
   对共享资源同时访问会导致瓶颈。 通常，每一软件系统都不可避免地存在瓶颈。 然而，对共享资源的过多需求将导致响应时间过长，因此必须进行识别和优化。  
   
  导致瓶颈的原因包括：  
@@ -40,7 +44,7 @@ caps.handback.revision: 18
   
 -   资源配置不正确。  
   
-## 分析瓶颈  
+## <a name="analyzing-bottlenecks"></a>分析瓶颈  
  如果有多个事件的持续时间都过长，则表明存在能被优化的瓶颈。  
   
  例如：  
@@ -59,7 +63,7 @@ caps.handback.revision: 18
 |用户连接|可能有太多用户同时访问服务器，从而导致性能下降。|  
 |阻塞锁|应用程序设计不合理可能导致锁定或妨碍并发，因而导致更长的响应时间和更低的事务吞吐速度。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视 CPU 使用率](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [监视磁盘使用情况](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [监视内存使用量](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

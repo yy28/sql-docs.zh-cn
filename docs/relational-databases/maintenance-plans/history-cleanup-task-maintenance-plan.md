@@ -1,31 +1,35 @@
 ---
-title: "“清除历史记录”任务（维护计划） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "“‘清除历史记录’任务”对话框"
+title: "“清除历史记录”任务（维护计划）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# “清除历史记录”任务（维护计划）
-  使用 **“清除历史记录”** 对话框，可以放弃 msdb 数据库表中旧的历史信息。 此任务支持删除备份和还原历史记录、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录和维护计划历史记录。  
+# <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
+  使用 **“清除历史记录”** 对话框，可以放弃 msdb 数据库表中旧的历史信息。 此任务支持删除备份和还原历史记录、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录和维护计划历史记录。  
   
  此语句使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 语句。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **连接**  
  选择执行此任务时使用的服务器连接。  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  当受影响的对象很多时，可能需要相当长的时间才可显示。  
   
-## “新建连接”对话框  
+## <a name="new-connection-dialog-box"></a>“新建连接”对话框  
  **连接名称**  
  输入新连接的名称。  
   
@@ -64,10 +68,10 @@ caps.handback.revision: 21
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Microsoft Windows 身份验证连接到 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+ 使用 Microsoft Windows 身份验证连接到 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  
   
  **使用特定用户名和密码**  
- 使用 SQL Server 身份验证连接到 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。 此选项不可用。  
+ 使用 SQL Server 身份验证连接到 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
@@ -75,7 +79,7 @@ caps.handback.revision: 21
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

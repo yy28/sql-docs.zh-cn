@@ -1,28 +1,32 @@
 ---
 title: "主键和外键约束 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "外键 [SQL Server]，级联引用完整性"
-  - "FOREIGN KEY 约束"
-  - "外键 [SQL Server]"
-  - "外键 [SQL Server]，关于外键约束"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], cascading referential integrity
+- FOREIGN KEY constraints
+- foreign keys [SQL Server]
+- foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d9a08e9dab4377688b994c024c67df607c14879
+ms.lasthandoff: 04/11/2017
+
 ---
-# 主键和外键约束
+# <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。  
@@ -31,7 +35,7 @@ caps.handback.revision: 20
   
  [主键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [相关任务](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 20
   
  如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 **ProductVendor** 表中的每个行都具有 **ProductID** 和 **VendorID**的一个唯一组合。 这样可以防止插入重复的行。  
   
- ![组合 PRIMARY KEY 约束](../../relational-databases/tables/media/fund04.gif "组合 PRIMARY KEY 约束")  
+ ![组合主键约束](../../relational-databases/tables/media/fund04.gif "组合主键约束")  
   
 -   一个表只能包含一个主键约束。  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 20
   
 -   如果在 CLR 用户定义类型的列中定义主键，则该类型的实现必须支持二进制排序。  
   
-##  <a name="FKeys"></a> 外键约束  
+##  <a name="FKeys"></a> Foreign Key Constraints  
  外键 (FK) 是用于在两个表中的数据之间建立和加强链接的一列或多列的组合，可控制可在外键表中存储的数据。 在外键引用中，当包含一个表的主键值的一个或多个列被另一个表中的一个或多个列引用时，就在这两个表之间创建了链接。 这个列就成为第二个表的外键。  
   
  例如，因为销售订单和销售人员之间存在一种逻辑关系，所以 **Sales.SalesOrderHeader** 表含有一个指向 **Sales.SalesPerson** 表的外键链接。 **SalesOrderHeader** 表中的 **SalesPersonID** 列与 **SalesPerson** 表中的主键列相对应。 **SalesOrderHeader** 表中的 **SalesPersonID** 列是指向 **SalesPerson** 表的外键。 通过创建此外键关系，如果 **SalesPerson** 表中不存在外键关系，则 **SalesPersonID** 的值将无法插入到 **SalesOrderHeader** 表。  
@@ -69,23 +73,23 @@ caps.handback.revision: 20
   
 -   列存储索引、内存优化表、Stretch Database 或已分区外键表暂不支持进行超过 253 个外键引用。  
   
-### 外键约束的索引  
+### <a name="indexes-on-foreign-key-constraints"></a>外键约束的索引  
  与主键约束不同，创建外键约束不会自动创建对应的索引。 但是由于以下原因，对外键手动创建索引通常是有用的：  
   
 -   当在查询中组合相关表中的数据时，经常在联接条件中使用外键列，方法是将一个表的外键约束中的一列或多列与另一个表中的主键列或唯一键列匹配。 索引使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以在外键表中快速查找相关数据。 但是，创建此索引并不是必需的。 即使没有对两个相关表定义主键或外键约束，也可以对来自这两个表中的数据进行组合，但两个表间的外键关系说明已用其键作为条件对其进行了优化，以便组合到查询中。  
   
 -   对主键约束的更改可由相关表中的外键约束检查。  
   
-### 引用完整性  
+### <a name="referential-integrity"></a>引用完整性  
  尽管外键约束的主要目的是控制可以存储在外键表中的数据，但它还可以控制对主键表中数据的更改。 例如，如果在 **Sales.SalesPerson** 表中删除一个销售人员行，而这个销售人员的 ID 由 **Sales.SalesOrderHeader** 表中的销售订单使用，则这两个表之间关联的完整性将被破坏； **SalesOrderHeader** 表中删除的销售人员的销售订单因为与 **SalesPerson** 表中的数据没有链接而变得孤立了。  
   
  外键约束防止这种情况发生。 如果主键表中数据的更改使之与外键表中数据的链接失效，则这种更改将无法实现，从而确保了引用完整性。 如果试图删除主键表中的行或更改主键值，而该主键值与另一个表的外键约束中的值相对应，则该操作将失败。 若要成功更改或删除外键约束中的行，必须先在外键表中删除或更改外键数据，这会将外键链接到不同的主键数据。  
   
-#### 级联引用完整性  
+#### <a name="cascading-referential-integrity"></a>级联引用完整性  
  通过使用级联引用完整性约束，您可以定义当用户试图删除或更新现有外键指向的键时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行的操作。 可以定义以下级联操作。  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，此时将回滚对父表中行的删除或更新操作。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，此时将回滚对父表中行的删除或更新操作。  
   
  CASCADE  
  如果在父表中更新或删除了一行，则将在引用表中更新或删除相应的行。 如果 **timestamp** 列是外键或被引用键的一部分，则不能指定 CASCADE。 不能为带有 INSTEAD OF DELETE 触发器的表指定 ON DELETE CASCADE。 对于带有 INSTEAD OF UPDATE 触发器的表，不能指定 ON UPDATE CASCADE。  
@@ -98,12 +102,12 @@ caps.handback.revision: 20
   
  可将 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 在相互存在引用关系的表上进行组合。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 遇到 NO ACTION，它将停止并回滚相关的 CASCADE、SET NULL 和 SET DEFAULT 操作。 如果 DELETE 语句导致 CASCADE、SET NULL、SET DEFAULT 和 NO ACTION 操作的组合，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 检查所有 NO ACTION 前，将应用所有 CASCADE、SET NULL 和 SET DEFAULT 操作。  
   
-### 触发器和级联引用操作  
+### <a name="triggers-and-cascading-referential-actions"></a>触发器和级联引用操作  
  级联引用操作按下列方式激发 AFTER UPDATE 或 AFTER DELETE 触发器：  
   
 -   首先执行由原始 DELETE 或 UPDATE 直接导致的所有级联引用操作。  
   
--   如果为受影响的表定义了任何 AFTER 触发器，则在执行完所有级联操作后激发这些触发器。 这些触发器将按与级联操作相反的顺序激发。 如果单个表中存在多个触发器，它们将按随机顺序激发，除非专门为表指定了第一个或最后一个触发器。 此顺序是使用 [sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md) 指定的。  
+-   如果为受影响的表定义了任何 AFTER 触发器，则在执行完所有级联操作后激发这些触发器。 这些触发器将按与级联操作相反的顺序激发。 如果单个表中存在多个触发器，它们将按随机顺序激发，除非专门为表指定了第一个或最后一个触发器。 此顺序是使用 [sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)指定的。  
   
 -   如果多个级联链源自作为 UPDATE 或 DELETE 操作的直接目标的表，则这些链激发各自的触发器的顺序是不定的。 但是，只有当一条链激发其所有的触发器之后，另一条链才开始激发。  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 20
 |说明如何创建主键。|[创建主键](../../relational-databases/tables/create-primary-keys.md)|  
 |说明如何删除主键。|[删除主键](../../relational-databases/tables/delete-primary-keys.md)|  
 |说明如何修改主键。|[修改主键](../../relational-databases/tables/modify-primary-keys.md)|  
-|说明如何创建外键关系|[创建外键关系](../../relational-databases/tables/创建外键关系.md)|  
+|说明如何创建外键关系|[创建外键关系](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |说明如何修改外键关系。|[修改外键关系](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |说明如何删除外键关系。|[删除外键关系](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |说明如何查看外键属性。|[查看外键属性](../../relational-databases/tables/view-foreign-key-properties.md)|  
@@ -133,3 +137,4 @@ caps.handback.revision: 20
 |说明如何在 INSERT 或 UPDATE 语句执行过程中禁用外键约束。|[使用 INSERT 和 UPDATE 语句禁用外键约束](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   
+

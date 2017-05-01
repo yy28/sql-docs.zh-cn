@@ -1,37 +1,41 @@
 ---
 title: "在文件中查找 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.findreplace.findinfiles"
-  - "vs.findinfiles"
-helpviewer_keywords: 
-  - "“在文件中查找”对话框"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.findreplace.findinfiles
+- vs.findinfiles
+helpviewer_keywords:
+- Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c244de67ea8d955987083fb6a06036958d341c93
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在文件中查找
+# <a name="find-in-files"></a>在文件中查找
   使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   
  以下部分列出了 **“在文件中查找”** 选项卡上可用的控件。  
   
-## 查找内容  
+## <a name="find-what"></a>查找内容  
  使用 **“在文件中查找”** 选项卡上的这些控件，可以指定要匹配的字符串或表达式。  
   
- **查找内容**  
+ **Find what**  
  键入要搜索的文本。 对话框会尝试使用在打开该对话框前用光标选择的文本、光标附近的文本或以前搜索过的文本，来填充可能的搜索文本。 通过从此下拉列表中选择字符串，可以重用最近搜索过的 20 个字符串之一。  
   
  **[带有通配符的字符串]**  
@@ -43,13 +47,13 @@ caps.handback.revision: 21
  **表达式生成器**  
  如果选中“查找选项”中的“使用”复选框，则“查找内容”框旁边的三角形按钮变为可用状态。 单击此按钮将显示通配符或正则表达式列表，具体情况取决于所选的 **“使用”** 选项。 从此列表中选择任何项都会将所选项添加到 **“查找内容”** 字符串。  
   
-## 查找范围  
+## <a name="look-in"></a>查找范围  
  从“查找范围”下拉列表中选择的选项将确定“在文件中查找”是仅在当前活动文件中搜索，还是在特定文件夹内存储的所有文件中搜索。 请从列表中选择搜索范围，键入文件夹路径，或单击 **“浏览”** 按钮以显示 **“自定义目录集”** 对话框，然后选择要搜索的文件夹集。  
   
 > [!NOTE]  
 >  如果选择的“查找范围”选项会对已从源代码管理中签出的文件进行搜索，则将只搜索已下载到本地计算机的文件版本。  
   
- **查找范围**  
+ **Look in**  
  从此列表中选择预定义的搜索范围，或使用“自定义目录集”对话框输入你自己的目录集。  
   
  **当前文档**  
@@ -70,7 +74,7 @@ caps.handback.revision: 21
  **浏览**  
  单击此按钮将显示“自定义目录集”对话框，在其中可以汇编、编辑、保存和选择要输入到“查找范围”框中的命名目录集。  
   
-## 查找选项  
+## <a name="find-options"></a>查找选项  
  您可以展开或折叠 **“查找选项”** 部分。 您可以选中或清除下列选项：  
   
  **匹配大小写**  
@@ -79,14 +83,14 @@ caps.handback.revision: 21
  **全字匹配**  
  选中此复选框后，“查找结果”窗口将仅显示与“查找内容”中指定的字符串全字匹配的字符串实例。 例如，搜索 **MyObject** 将返回“MyObject”，而不会返回“CMyObject”或“MyObjectC”。  
   
- **改用**  
+ **“使用”**  
  指示如何解释“查找内容”或“替换为”文本框中输入的特殊字符。 选项包括 **“通配符”** 和 **“正则表达式”**。  
   
- **正则表达式**  
- 定义文本匹配模式的特殊表示法。 有关列表，请参阅[使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
+ **“正则表达式”**  
+ 定义文本匹配模式的特殊表示法。 有关列表，请参阅 [使用正则表达式搜索文本](../../relational-databases/scripting/search-text-with-regular-expressions.md)。  
   
- **通配符**  
- 用于表示一个或多个字符特殊字符，如星号 (`*`) 和问号 (`?`)。 有关列表，请参阅[使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+ **“通配符”**  
+ 用于表示一个或多个字符特殊字符，如星号 (`*`) 和问号 (`?`)。 有关列表，请参阅 [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  **查找以下文件类型**  
  此列表指示要在“查找范围”中指定的目录中搜索的文件的类型。 如果此字段保留为空，将搜索 **“查找范围”** 中指定的目录中的所有文件。  
@@ -103,7 +107,7 @@ caps.handback.revision: 21
   
  选择列表中的任意项，以输入将查找特定类型文件的预配置搜索字符串。  
   
-## “结果选项”  
+## <a name="result-options"></a>“结果选项”  
  确定单击 **“查找全部”**后查找结果的位置。 您可以展开或折叠 **“结果选项”** 部分。 您可以选中或清除下列选项：  
   
  **“查找结果 1”窗口**  
@@ -113,7 +117,7 @@ caps.handback.revision: 21
  如果选中此复选框，则当前搜索的结果将追加到“查找结果 2”窗口内容的末尾。 此窗口将自动打开，以显示搜索结果。 若要手动打开此窗口，请在“视图”  菜单上，单击“其他窗口”  ，再单击“查找结果 2” 。  
   
  **只显示文件名**  
- 在“查找结果 1”或“查找结果 2”窗口中，对于包含搜索匹配内容的每个文件将显示一项，而不是每个搜索匹配内容均显示一项。 此选项在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中不可用。  
+ 在“查找结果 1”或“查找结果 2”窗口中，对于包含搜索匹配内容的每个文件将显示一项，而不是每个搜索匹配内容均显示一项。 此选项在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中不可用。  
   
  **全部替换后保持将已修改的文件打开**  
  如果选中，则所有替换过的文件都保持打开状态，以便您可以撤消操作或保存更改。 内存方面的制约可能会限制在替换操作之后可以保持打开的文件数。  
@@ -121,7 +125,7 @@ caps.handback.revision: 21
 > [!CAUTION]  
 >  只能对保持打开状态以供编辑的文件使用 **“撤消”** 选项。 如果未选择此选项，则尚未打开以供编辑的文件继续处于关闭状态，并且在这些文件中 **“撤消”** 选项不可用。  
   
-## “查找和替换”视图  
+## <a name="find-and-replace-views"></a>“查找和替换”视图  
  “查找和替换”窗口顶部的选项卡包含 **“视图”** 菜单。 使用这些菜单，可以选择在活动窗格中显示的不同字段。 您可以将“查找和替换”窗口停靠在方便的位置，然后在各个选项卡之间以及各个视图之间进行切换，以执行任意类型的查找或替换操作。  
   
  **切换到快速查找**  
@@ -133,7 +137,7 @@ caps.handback.revision: 21
  **切换到查找符号**  
  使用此工具栏选项卡，将把对话框更改为“在符号中查找”对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

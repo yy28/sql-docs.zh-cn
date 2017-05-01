@@ -1,25 +1,29 @@
 ---
 title: "内存优化表的索引 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存优化表的索引
+# <a name="indexes-for-memory-optimized-tables"></a>内存优化表的索引
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,13 +34,13 @@ caps.handback.revision: 14
 - 解释每种类型的内存优化索引的最佳使用场合。  
   
   
-一篇内容与哈希索引[密切相关的文章](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)中对*哈希*索引进行了更详尽地探讨和介绍。  
+一篇内容与哈希索引*密切相关的文章* 中对 [哈希](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)索引进行了更详尽地探讨和介绍。  
   
   
-[另一篇文章](Columnstore%20Indexes%20Guide.xml)介绍了 *Columnstore* 索引。  
+*另一篇文章* 介绍了 [Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)索引。  
   
   
-## A. 内存优化索引的语法  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>A. 内存优化索引的语法  
   
 内存优化表的每个 CREATE TABLE 语句必须包含 1 到 8 子句来声明索引。 索引必须是以下类型之一：  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 14
   
   
   
-### A.1 语法的代码示例  
+### <a name="a1-code-sample-for-syntax"></a>A.1 语法的代码示例  
   
 本小节包含一个 Transact-SQL 代码块，用于演示在内存优化表中创建各种索引时使用的语法。 代码将演示以下操作：  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 14
   
   
   
-## B. 内存优化索引的性质  
+## <a name="b-nature-of-memory-optimized-indexes"></a>B. 内存优化索引的性质  
   
 在内存优化表中，每个索引也经过内存优化。 内存优化索引中的索引与基于磁盘的表中的传统索引在以下几个方面不同。  
   
@@ -139,13 +143,13 @@ caps.handback.revision: 14
   
 - 它们不会在页面内累积典型的碎片类型，因而不具有填充因子。  
   
-## C. 重复的索引键值
+## <a name="c-duplicate-index-key-values"></a>C. 重复的索引键值
 
 重复的索引键值可能会影响对内存优化表的操作的性能。 大量的重复项（例如，100+）会导致索引维护作业效率低下，因为必须针对大多数索引操作遍历重复链。 其影响可见之于对内存优化表的 INSERT、UPDATE 和 DELETE 操作。 对于哈希索引，此问题更加明显，因为对于哈希索引，每个操作成本更低，加之大型重复链会对哈希冲突链产生干扰。 若要减少索引中的重复，可以使用非聚集索引并将其他列（例如主键中的列）添加到索引键末尾，以减少重复项的数量。
 
 可以试想一个例子，一个 Customers 表，其 CustomerId 上存在主键且 CustomerCategoryID 列上存在索引。 通常，一个给定的类别中会有许多客户，因此 CustomerCategoryID 列上的索引中的给定键会有许多重复值。 在这种情况下，最佳做法是在 (CustomerCategoryID, CustomerId) 上使用非聚集索引。 此索引可用于某些查询，这些查询使用涉及“CustomerCategoryID”的谓词，且索引不含重复内容，因此不会导致索引维护效率低下。
 
-下面的查询显示表 `Sales.Customers` 中的 `CustomerCategoryID` 索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) 中。
+下面的查询显示表 `CustomerCategoryID` 中的 `Sales.Customers`索引的平均重复索引键值数，该表位于示例数据库 [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)中。
 
 ```Transact-SQL
     SELECT AVG(row_count) FROM
@@ -156,7 +160,7 @@ caps.handback.revision: 14
 
 若要计算自己的表和索引的平均索引键重复项数，请将 `Sales.Customers` 替换为自己的表名，将 `CustomerCategoryID` 替换为索引键列的列表。
 
-## D. 每个索引类型的使用时机比较  
+## <a name="d-comparing-when-to-use-each-index-type"></a>D. 每个索引类型的使用时机比较  
   
   
 特定查询的性质决定了哪种类型的索引是最佳选择。  
@@ -164,7 +168,7 @@ caps.handback.revision: 14
 在现有应用程序中实现内存优化表时，常规建议是从使用非聚集索引开始，因为其功能更接近于传统聚集索引和基于磁盘的表上的非聚集索引。 
   
   
-### D.1 非聚集索引的优势  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 非聚集索引的优势  
   
   
 在以下情况下，非聚集索引比哈希索引更有优势：  
@@ -196,10 +200,10 @@ caps.handback.revision: 14
   
   
   
-### D.2 哈希索引的优势  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 哈希索引的优势  
   
   
-在以下情况下，[哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)比非聚集索引更有优势：  
+在以下情况下， [哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 比非聚集索引更有优势：  
   
 - 查询通过对所有索引键列使用完全相同的 WHERE 子句来测试索引列，如下所示：  
   
@@ -210,19 +214,19 @@ caps.handback.revision: 14
   
   
   
-### D.3 比较索引优势的摘要表  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 比较索引优势的摘要表  
   
   
 下表列出了不同索引类型支持的所有操作。  
   
   
-| 运算 | 内存优化， <br/> 哈希 | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
+| 运算 | 内存优化， <br/> 密切相关的文章 | 内存优化， <br/> 非聚集 | 基于磁盘， <br/> （非）聚集 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 索引扫描，检索所有表行。 | 是 | 用户帐户控制 | 是 |  
+| 索引扫描，检索所有表行。 | 是 | 是 | 是 |  
 | 采用相等谓词 (=) 的索引查找。 | 是 <br/> （需要完整键。） | 是  | 是 |  
-| 采用不相等和范围谓词 <br/> （>、<、\<=、>=、BETWEEN）的索引查找。 | 是 <br/> （索引扫描中的结果。） | 是 | 是 |  
-| 按与索引定义匹配的排序顺序检索行。 | 是 | 用户帐户控制 | 是 |  
-| 按与索引定义相反的排序顺序检索行。 | 是 | “否” | 是 |  
+| 采用不相等和范围谓词 <br/> （>、<、\<=、>=、BETWEEN）的索引查找。 | “否” <br/> （索引扫描中的结果。） | 是 | 是 |  
+| 按与索引定义匹配的排序顺序检索行。 | 是 | 是 | 是 |  
+| 按与索引定义相反的排序顺序检索行。 | 是 | 是 | 是 |  
   
   
 在表中，“是”表示索引能够有效地为请求提供服务，“否”表示索引无法有效地满足请求。  
@@ -231,20 +235,23 @@ caps.handback.revision: 14
   
   
 \<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
+Indexes_for_Memory-Optimized_Tables.md，这是...  
 CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
 mt670614.aspx  
   
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
+Application-Level%20Partitioning.xml，{162d1392-39d2-4436-a4d9-ee5c47864c5a}  
   
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
+/Image/hekaton_tables_23d.png，fbc511a0-304c-42f7-807d-d59f3193748f  
   
   
-Replaces dn511012.aspx , which is....  
+替换 dn511012.aspx，该项是....  
 CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
   
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
+GeneMi  ,  2016-05-05  Thursday  17:25pm  (哈希内容已移到新的子项目 e922cc3a-3d6e-453b-8d32-f4b176e98488。)  
 -->  
   
   
   
+
+
+

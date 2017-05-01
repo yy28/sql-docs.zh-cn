@@ -1,25 +1,29 @@
 ---
 title: "生成脚本向导支持的对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4f4804fbc59d9744eaa819ba8f39e1be79de647
+ms.lasthandoff: 04/11/2017
+
 ---
-# 生成脚本向导支持的对象
+# <a name="objects-supported-by-the-generate-scripts-wizard"></a>生成脚本向导支持的对象
   “生成和发布脚本向导”支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所支持的对象的一个子集。  
   
-## 支持的对象  
+## <a name="supported-objects"></a>支持的对象  
  下表列出“生成和发布脚本向导”支持的可发布对象。  
   
 ||||||  

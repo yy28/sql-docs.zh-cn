@@ -1,26 +1,30 @@
 ---
-title: "重命名列（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [SQL Server], 名称"
-  - "重命名列"
-  - "列名 [SQL Server]"
+title: "重命名列（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], names
+- renaming columns
+- column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名列（数据库引擎）
+# <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表列。  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用对象资源管理器重命名列  
+#### <a name="to-rename-a-column-using-object-explorer"></a>使用对象资源管理器重命名列  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 17
   
 3.  键入新的列名称。  
   
-#### 使用表设计器重命名列  
+#### <a name="to-rename-a-column-using-table-designer"></a>使用表设计器重命名列  
   
 1.  在“对象资源管理器”中，右键单击要为其重命名列的表，再选择“设计”。  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 17
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **重命名列**  
   
-#### 重命名列  
+#### <a name="to-rename-a-column"></a>重命名列  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

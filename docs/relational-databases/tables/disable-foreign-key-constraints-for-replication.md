@@ -1,26 +1,30 @@
 ---
 title: "对复制禁用外键约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "约束 [SQL Server], 外键"
-  - "外键 [SQL Server], 禁用约束"
-  - "禁用约束"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16bd86b4a8b0d333b9b88752d702d783ba180cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对复制禁用外键约束
+# <a name="disable-foreign-key-constraints-for-replication"></a>对复制禁用外键约束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对复制禁用外键约束。 如果正在从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布数据，这很有用。  
@@ -49,7 +53,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 对复制禁用外键约束  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>对复制禁用外键约束  
   
 1.  在 **“对象资源管理器”**中，展开具有要修改的外键约束的表，再展开 **“键”** 文件夹。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 对复制禁用外键约束  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>对复制禁用外键约束  
   
 1.  若要在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行此任务，请删除外键约束。 然后添加一个新外键约束，并指定 NOT FOR REPLICATION 选项。  
   

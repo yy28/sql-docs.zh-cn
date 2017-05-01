@@ -1,29 +1,33 @@
 ---
 title: "第 2 课：准备快照文件夹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "复制 [SQL Server], 教程"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9b63fa28f53724adce16bedda14e11cd3a750b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 2 课：准备快照文件夹
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 课：准备快照文件夹
 在本课中，将学习如何配置用于创建和存储发布快照的快照文件夹。  
   
-### 为快照文件夹创建共享并分配权限  
+### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>为快照文件夹创建共享并分配权限  
   
 1.  在 Windows 资源管理器中，定位到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件夹。 默认位置为 C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data。  
   
@@ -51,11 +55,12 @@ caps.handback.revision: 20
   
 10. 单击“确定”关闭“repldata 属性”对话框，并创建 repldata 共享。  
   
-## 后续步骤  
-您已经成功为快照文件夹配置了共享。 接下来，您将配置分发。 请参阅[第 3 课：配置分发](../../relational-databases/replication/lesson-3-configuring-distribution.md)。  
+## <a name="next-steps"></a>后续步骤  
+您已经成功为快照文件夹配置了共享。 接下来，您将配置分发。 请参阅 [第 3 课：配置分发](../../relational-databases/replication/lesson-3-configuring-distribution.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [保护快照文件夹的安全](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   
   
+

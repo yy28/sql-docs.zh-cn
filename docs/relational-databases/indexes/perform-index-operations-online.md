@@ -1,32 +1,36 @@
 ---
 title: "联机执行索引操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "索引联机操作 [SQL Server]"
-  - "联机索引操作"
-  - "ONLINE 选项"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index online operations [SQL Server]
+- online index operations
+- ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.lasthandoff: 04/11/2017
+
 ---
-# 联机执行索引操作
+# <a name="perform-index-operations-online"></a>联机执行索引操作
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中联机创建、重新生成或删除索引。 ONLINE 选项允许并发用户在执行这些索引操作期间访问基础表或聚集索引数据和任何关联非聚集索引。 例如，一个用户正在重新生成聚集索引时，该用户和其他用户可以继续更新和查询基础数据。 当脱机执行数据定义语言 (DDL) 操作（例如，生成或重新生成聚集索引）时，这些操作对基础数据和关联索引持有排他锁。 这样可以防止在索引操作未完成时对基础数据进行修改和查询。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关详细信息，请参阅“SQL Server 2016 各个版本支持的功能”。  
   
  **本主题内容**  
   
@@ -56,9 +60,9 @@ caps.handback.revision: 31
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)  
   
-    -   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)（使用 CLUSTERED 索引选项添加或删除 UNIQUE 约束或 PRIMARY KEY 约束）  
+    -   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) （使用 CLUSTERED 索引选项添加或删除 UNIQUE 约束或 PRIMARY KEY 约束）  
   
--   有关联机创建、重新生成或删除索引的更多限制和局限性，请参阅[联机索引操作指南](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。  
+-   有关联机创建、重新生成或删除索引的更多限制和局限性，请参阅 [联机索引操作指南](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 联机重新生成索引  
+#### <a name="to-rebuild-an-index-online"></a>联机重新生成索引  
   
 1.  在“对象资源管理器”中，单击加号以便展开包含您要联机重新生成索引的表的数据库。  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 联机创建、重新生成或删除索引  
+#### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -107,10 +111,11 @@ caps.handback.revision: 31
     GO  
     ```  
   
-     以下示例使用 `NewGroup` 子句联机删除一个聚集索引并将生成表（堆）移动到文件组 `MOVE TO`。 在移动之前和之后，将查询 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目录视图，以验证索引和表在文件组中的位置。  
+     以下示例使用 `NewGroup` 子句联机删除一个聚集索引并将生成表（堆）移动到文件组 `MOVE TO` 。 在移动之前和之后，将查询 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目录视图，以验证索引和表在文件组中的位置。  
   
      [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

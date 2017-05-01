@@ -1,30 +1,34 @@
 ---
 title: "ObjectType 跟踪事件列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件类，对象类型列的值"
-  - "事件 [SQL Server]，对象类型列的值"
-  - "事件类 [SQL Server]，对象类型列的值"
-  - "Object Type 列值 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# ObjectType 跟踪事件列
+# <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
   ObjectType 跟踪事件列用在各种跟踪事件中。 本主题说明此列的可能值以及其相关定义。  
   
-## ObjectType 列值  
+## <a name="object-type-column-values"></a>ObjectType 列值  
   
 |值|定义|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XMLSchema|  
 |22868|类型|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -1,27 +1,31 @@
 ---
 title: "优化 SQL 跟踪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "时间 [SQL Server], 跟踪"
-  - "SQL 跟踪, 性能"
-  - "跟踪 [SQL Server], 性能"
-  - "性能 [SQL Server], 跟踪"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time [SQL Server], traces
+- SQL Trace, performance
+- traces [SQL Server], performance
+- performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 优化 SQL 跟踪
+# <a name="optimize-sql-trace"></a>优化 SQL 跟踪
   尽管运行 SQL 跟踪会导致性能损失（因为它使用系统资源收集数据），但是您可以通过多种方法将性能损失降到最低。 若要将跟踪引起的性能损失降到最低，可以尝试下列解决方法：  
   
 -   请考虑使用命令提示运行跟踪。 使用图形用户界面会影响性能。 有关详细信息，请参阅 [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。  
@@ -40,9 +44,9 @@ caps.handback.revision: 25
   
 -   限制跟踪结果的大小。 您可以将跟踪结果的大小限制为最大文件大小。 此策略可以确保在达到文件大小限制时停止性能损失（如果未启用文件滚动更新）。  
   
--   限制返回的事件数。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，可以通过将跟踪保存到表并设置最大行数来限制返回的事件数。 达到最大行数后，跟踪结果仍会返回到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]屏幕，但不再有将结果记录到表的开销。  
+-   限制返回的事件数。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，可以通过将跟踪保存到表并设置最大行数来限制返回的事件数。 达到最大行数后，跟踪结果仍会返回到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 屏幕，但不再有将结果记录到表的开销。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

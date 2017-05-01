@@ -1,28 +1,32 @@
 ---
 title: "使用 INSERT 和 UPDATE 语句禁用外键约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "约束 [SQL Server], 外键"
-  - "外键 [SQL Server], 禁用约束"
-  - "禁用约束"
-  - "UPDATE 语句 [SQL Server], 外键约束"
-  - "INSERT 语句 [SQL Server], 外键约束"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
+- UPDATE statement [SQL Server], foreign key constraints
+- INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用 INSERT 和 UPDATE 语句禁用外键约束
+# <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>使用 INSERT 和 UPDATE 语句禁用外键约束
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 INSERT 和 UPDATE 事务期间禁用外键约束。 如果您知道新数据将与现有约束冲突或者如果约束仅适用于数据库中已有的数据，则可选择此选项。  
@@ -53,7 +57,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 对 INSERT 和 UPDATE 语句禁用外键约束  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>对 INSERT 和 UPDATE 语句禁用外键约束  
   
 1.  在 **“对象资源管理器”**中，展开具有约束的表，再展开 **“键”** 文件夹。  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 对 INSERT 和 UPDATE 语句禁用外键约束  
+#### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>对 INSERT 和 UPDATE 语句禁用外键约束  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

@@ -1,24 +1,28 @@
 ---
-title: "属性参考（复制） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "F1 帮助 [SQL Server 复制]"
+title: "属性参考（复制）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c15f108757b6e644251e897290c98956d379117
+ms.lasthandoff: 04/11/2017
+
 ---
-# 属性参考（复制）
+# <a name="properties-reference-replication"></a>属性参考（复制）
   本节提供有关以下复制向导和复制对话框的信息：  
   
 -   [配置分发向导](../../relational-databases/replication/configure-distribution-wizard.md)  
@@ -29,15 +33,15 @@ caps.handback.revision: 19
   
 -   [订阅服务器属性](../../relational-databases/replication/subscriber-properties.md)  
   
--   [新建发布向导](../../relational-databases/replication/new-publication-wizard.md)  
+-   [New Publication Wizard](../../relational-databases/replication/new-publication-wizard.md)  
   
--   [发布属性-& #60;发布 & #62;](../../relational-databases/replication/publication-properties-publication.md)  
+-   [发布属性 - <发布>](../../relational-databases/replication/publication-properties-publication.md)  
   
--   [项目属性-& #60;文章 & #62;](../../relational-databases/replication/article-properties-article.md)  
+-   [项目属性 - <项目>](../../relational-databases/replication/article-properties-article.md)  
   
--   [新建订阅向导 & #40;用户界面参考 & #41;](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
+-   [新建订阅向导（UI 参考）](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
   
--   [订阅属性-& #60;订阅 & #62;](../../relational-databases/replication/subscription-properties-subscription.md)  
+-   [订阅属性 - <订阅>](../../relational-databases/replication/subscription-properties-subscription.md)  
   
 -   [配置对等拓扑向导](../../relational-databases/replication/configure-peer-to-peer-topology-wizard.md)  
   

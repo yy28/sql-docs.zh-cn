@@ -1,25 +1,29 @@
 ---
 title: "导入基于策略的管理策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于策略的管理, 导入策略"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, import policy
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 导入基于策略的管理策略
-  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中导入基于策略的管理策略实例。  
+# <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中导入基于策略的管理策略实例。  
   
  **本主题内容**  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 12
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附带可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中未安装这些策略；不过，可以从默认安装位置 C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附带可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中未安装这些策略；不过，可以从默认安装位置 C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 导入策略实例  
+#### <a name="to-import-a-policy-instance"></a>导入策略实例  
   
 1.  在“对象资源管理器” 中，单击加号以展开新导入的策略实例要存储到的服务器。  
   

@@ -1,28 +1,32 @@
 ---
 title: "引用内置 XML 架构集合 (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sys XML 架构集合 [SQL Server]"
-  - "架构集合 [SQL Server], 预定义"
-  - "预定义 XML 架构集合 [SQL Server]"
-  - "XML 架构集合 [SQL Server], 预定义"
-  - "内置 XML 架构集合 [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 引用内置 XML 架构集合 (sys)
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>引用内置 XML 架构集合 (sys)
   创建的每个数据库在 **sys** 关系架构中都有一个预定义的 **sys** XML 架构集合。 数据库将保留这些预定义架构，这些架构可以从任何其他用户创建的 XML 架构集合进行访问。 这些预定义架构中使用的前缀在 XQuery 中是有意义的。 只有 **xml** 是保留前缀。  
   
 ```  
@@ -36,7 +40,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- 注意，**sqltypes** 命名空间包含可以从任何用户创建的 XML 架构集合引用的组件。 可以从 **Microsoft Web site** 下载 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)架构。 内置组件包括：  
+ 注意， **sqltypes** 命名空间包含可以从任何用户创建的 XML 架构集合引用的组件。 可以从 **Microsoft Web site** 下载 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)架构。 内置组件包括：  
   
 -   XSD 类型  
   
@@ -148,7 +152,7 @@ GO
   
  由于 <`root`> 元素值的类型是根据与 `@var` 变量关联的架构从 **varchar** 中派生，因此，`instance of sqltypes:varchar?` 表达式返回 TRUE。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

@@ -1,36 +1,40 @@
 ---
 title: "显示估计的执行计划 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "显示比例 [SQL Server]"
-  - "估计的执行计划 [SQL Server]"
-  - "显示执行计划"
-  - "查看执行计划"
-  - "执行计划 [SQL Server], 显示"
-  - "自定义执行计划的显示方式 [SQL Server]"
-  - "修改执行计划的显示方式"
-  - "自定义显示比例 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- zoom [SQL Server]
+- estimated execution plan [SQL Server]
+- displaying execution plans
+- viewing execution plans
+- execution plans [SQL Server], displaying
+- customizing execution plan display [SQL Server]
+- modifying execution plan display
+- custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab88419f449c00dae258d7cf101d08df56f26d2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 显示估计的执行计划
+# <a name="display-the-estimated-execution-plan"></a>显示估计的执行计划
   本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]生成图形化的估计的执行计划。 生成估计的执行计划时， [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批处理并不执行。 生成的执行计划显示的是如果实际执行查询 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 最有可能使用的查询执行计划。  
   
  为了使用此功能，用户必须具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（为其生成图形执行计划）的相应权限，并且用户必须获得了对查询引用的所有数据库的 SHOWPLAN 权限。  
   
-### 显示查询的估计的执行计划  
+### <a name="to-display-the-estimated-execution-plan-for-a-query"></a>显示查询的估计的执行计划  
   
 1.  在工具栏上，单击 **“数据库引擎查询”**。 通过单击 **“打开文件”** 工具栏按钮，再定位到该现有查询，也可以打开一个现有查询并显示估计的执行计划。  
   

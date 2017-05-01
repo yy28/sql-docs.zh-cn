@@ -1,28 +1,32 @@
 ---
-title: "计划和执行还原顺序（完整恢复模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "还原顺序 [SQL Server], 规划"
-  - "完整恢复模式 [SQL Server], 规划还原顺序"
+title: "计划和执行还原顺序（完整恢复模式）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restore sequences [SQL Server], planning for
+- full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 92fca3a74586d7c7adbe135422283342db36a204
+ms.lasthandoff: 04/11/2017
+
 ---
-# 计划和执行还原顺序（完整恢复模式）
+# <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>计划和执行还原顺序（完整恢复模式）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何为通常使用完整恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库计划和执行一个还原顺序。 “还原顺序”  是一个或多个 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 语句的顺序。 通常，还原顺序会初始化要还原的数据库、文件和/或页的内容（数据复制阶段），前滚记录的事务（重做阶段）以及回滚未提交的事务（撤消阶段）。  
+  本主题说明如何为通常使用完整恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库计划和执行一个还原顺序。 “还原顺序”  是一个或多个 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句的顺序。 通常，还原顺序会初始化要还原的数据库、文件和/或页的内容（数据复制阶段），前滚记录的事务（重做阶段）以及回滚未提交的事务（撤消阶段）。  
   
  在简单情况下，还原操作只需要一个完整数据库备份、一个差异数据库备份和后续日志备份。 在这些情况下，很容易构造一个正确的还原顺序。 例如，若要将整个数据库还原到故障点，请首先备份活动事务日志（日志的尾部）。 然后，按备份的创建顺序还原最新的完整数据库备份、最新的差异备份（如果有）以及所有后续日志备份。  
   
@@ -31,20 +35,20 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  恢复路径是使数据库到达特定时间点（称为恢复点）的一组数据和日志备份。 恢复路径是一组特定的转换，这些转换随着时间的变化对数据库进行演变并保持数据库的一致性。 恢复路径描述从“起点”(LSN,GUID) 到“终点”(LSN,GUID) 的一组 LSN。 恢复路径中的 LSN 可以从起点到终点遍历一个或多个恢复分支。  
   
-## 计划还原顺序  
+## <a name="to-plan-a-restore-sequence"></a>计划还原顺序  
  启动还原顺序之前，请执行下列步骤：  
   
 1.  创建数据库的结尾日志备份（如果可以）。 有关详细信息，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 2.  确定目标恢复点。  
   
-     目标恢复点可以是事务日志备份中的任何时间点或标记。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)或[使用标记的事务一致恢复相关数据库（完全恢复模式）](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)。  
+     目标恢复点可以是事务日志备份中的任何时间点或标记。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)或[使用标记的事务一致恢复相关数据库（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
-3.  确定要执行的还原类型。 有关详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
+3.  确定要执行的还原类型。 有关详细信息，请参阅 [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   
 4.  标识您需要的备份，并确保必要的介质集和备份设备可用。 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)和[媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
-## 执行还原顺序  
+## <a name="to-perform-a-restore-sequence"></a>执行还原顺序  
  若要执行还原顺序，请执行下列步骤：  
   
 1.  若要启动该顺序，请还原一个或多个数据备份（例如数据库备份、部分备份、一个或多个文件备份）。  
@@ -59,10 +63,10 @@ caps.handback.revision: 33
   
     -   对于时点还原，您可能不需要最新的日志备份。 如果使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，数据库恢复顾问确保仅选择需要恢复到指定时点的那些备份。 这些备份构成了为您的时点还原建议的还原计划。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
-## 重新启动还原顺序  
+## <a name="restarting-a-restore-sequence"></a>重新启动还原顺序  
  如果还原顺序的结果有问题，则可以退出，并从头开始重新启动还原顺序。 例如，如果意外还原了过多的日志备份并超过了想要的恢复点，则必须重新开始还原顺序，直至包含目标恢复点的日志备份。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

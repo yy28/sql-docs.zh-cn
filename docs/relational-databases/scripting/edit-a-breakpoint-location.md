@@ -1,32 +1,36 @@
 ---
 title: "编辑断点位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.breakpt.location.file"
-helpviewer_keywords: 
-  - "Transact-SQL 调试器, 断点位置"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.breakpt.location.file
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9c5d21e7d9aef00e7c096a4759e3f53afe24cae
+ms.lasthandoff: 04/11/2017
+
 ---
-# 编辑断点位置
+# <a name="edit-a-breakpoint-location"></a>编辑断点位置
   断点位置指定断点在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件中所处的行和字符位置。 您可以编辑断点位置以将断点移至脚本的其他位置，或移至其他脚本。  
   
-## 编辑位置  
+## <a name="editing-a-location"></a>编辑位置  
  编辑断点位置时，断点将移至新的位置，并携带所有现有属性一起移动，例如命中计数或条件。  
   
-#### 编辑断点位置  
+#### <a name="to-edit-a-breakpoint-location"></a>编辑断点位置  
   
 1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”。  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 8
   
      **“允许源代码与原始版本不同”** 选项在调试 [!INCLUDE[tsql](../../includes/tsql-md.md)]时不起作用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)   
  [指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [指定断点条件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   

@@ -1,28 +1,32 @@
 ---
 title: "开始使用列存储适进行实时运行分析 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
+ms.lasthandoff: 04/11/2017
+
 ---
-# 开始使用列存储适进行实时运行分析
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   SQL Server 2016 引入了实时运行分析，可以同时对同一个数据库表运行分析和 OLTP 工作负载。 除了实时运行分析以外，你还不需要使用 ETL 和数据仓库。  
   
-## 实时运行分析介绍  
+## <a name="real-time-operational-analytics-explained"></a>实时运行分析介绍  
  在传统上，企业为操作工作负载（例如OLTP）和分析工作负载使用不同的系统。 对于此类系统，提取、转换和加载 (ETL) 作业会定期将数据从操作存储转移到分析存储。 分析数据通常存储在专用于运行分析查询的数据仓库或数据市场中。 尽管这种解决方案已成为标准，但在以下三个方面存在很大问题：  
   
 -   **复杂性。** 实施 ETL 可能需要编码相当多的代码，尤其是只想要加载修改的行时。 识别哪些行已被修改是一个复杂的过程。  
@@ -31,7 +35,7 @@ caps.handback.revision: 39
   
 -   **数据滞后时间。** 实施 ETL 会增大运行分析的时间延迟。 例如，如果在每个工作日结束时运行 ETL 作业，则分析查询至少需要针对一天的数据运行。 对于许多企业来说，这种延迟不可接受，因为企业依赖于实时分析数据。 例如，欺诈检测需要实时分析操作数据。  
   
- ![real-time operational analytics overview](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
+ ![实时运行分析概述](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "实时运行分析概述")  
   
  实时运行分析为这些难题提供了解决方案。   
         对同一个基础表运行分析和 OLTP 工作负载时不会出现时间延迟。   对于使用实时分析的方案，成本和复杂性将大大降低，因为不需要使用 ETL，并且不需要采购和维护独立的数据仓库。  
@@ -41,7 +45,7 @@ caps.handback.revision: 39
   
  实时分析使用行存储表中的可更新列存储索引。  列存储索引维护数据的副本，因此 OLTP 和分析工作负载可针对数据的独立副本运行。 这可以最大程度地降低对同时运行的两个工作负载的性能影响。  SQL Server 自动维护索引更改，因此，要分析的 OLTP 更改始终是最新的。 使用这种设计，能够有效地对最新的数据运行实时分析。 这适用于基于磁盘的表和内存优化表。  
   
-## 入门示例  
+## <a name="get-started-example"></a>入门示例  
  若要开始使用实时分析，请执行以下操作：  
   
 1.  识别操作架构中包含需要用于分析的数据的表。  
@@ -85,7 +89,7 @@ caps.handback.revision: 39
   
  现在，你无需对应用程序进行任何更改，就能运行实时操作分析。  分析查询将针对列存储索引运行，OLTP 操作将针对 OLTP btree 索引不断运行。 OLTP 工作负载将继续执行，但维护列存储索引会产生更多的开销。 请参阅下一部分中有关性能优化的信息。  
   
-## 博客文章  
+## <a name="blog-posts"></a>博客文章  
  若要了解有关实时运行分析的详细信息，请阅读 Sunil Agarwal 的博客文章。  如果你先阅读这些博客文章，则可以更容易理解性能提示部分。  
   
 -   [实时运行分析的企业用例](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
@@ -108,7 +112,7 @@ caps.handback.revision: 39
   
 -   [列存储索引和行组的合并策略](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## 性能提示 #1：使用筛选索引提高查询性能  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>性能提示 #1：使用筛选索引提高查询性能  
  运行实时运行分析可能会影响 OLTP 工作负载的性能。  这种影响应该很小。 以下示例演示如何使用筛选索引来最大程度地降低事务工作负载上非聚集列存储索引的影响，同时仍能提供实时分析。  
   
  为了尽量减少维护操作工作负载上非聚集列存储索引的开销，你可以使用筛选条件，以便只对 *暖* 数据或缓慢变化的数据创建非聚集列存储索引。 例如，在订单管理应用程序中，可以针对已发货的订单创建非聚集列存储索引。 订单在发货后，就很少会发生变化，因此被视为暖数据。 使用筛选索引时，非聚集列存储索引中的数据只需少量的更新，因此可降低对事务工作负载的影响。  
@@ -118,10 +122,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  只有基于磁盘的表才支持筛选的非聚集列存储索引。 内存优化表不支持此类索引  
   
-### 示例 A：从 btree 索引访问热数据，从列存储索引访问暖数据  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>示例 A：从 btree 索引访问热数据，从列存储索引访问暖数据  
  此示例使用筛选条件 (accountkey > 0) 来确定要将哪些行放在列存储索引中。 目的是设计筛选条件和后续查询，以便从 btree 索引访问经常变化的“热”数据，从列存储索引访问更稳定的“暖”数据。  
   
- ![Combined indexes for warm and hot data](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
+ ![用于暖数据和热数据的组合索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "用于暖数据和热数据的组合索引")  
   
 > [!NOTE]  
 >  查询优化器将考虑但不是总是选择列存储索引用于查询计划。 当查询优化器选择筛选的列存储索引时，将以透明方式合并来自列存储索引的行以及不符合筛选条件的行，以便能够进行实时分析。 这不同于常规的非聚集筛选索引，后者只能在将自身限制为索引中存在的行的查询中使用。  
@@ -164,14 +168,14 @@ Group By customername
   
  分析查询将配合以下查询计划执行。 你可以看到，不符合筛选条件的行是通过聚集 btree 索引访问的。  
   
- ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
+ ![查询计划](../../relational-databases/indexes/media/query-plan-columnstore.png "查询计划")  
   
  有关 [筛选的聚集列存储索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)的详细信息，请参阅博客  
   
-## 性能提示 #2：将分析负载转移到 AlwaysOn 可读次要副本  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>性能提示 #2：将分析负载转移到 AlwaysOn 可读次要副本  
  尽管你可以使用筛选列存储索引来尽量减少列存储索引维护，但分析查询可能仍需要大量计算资源（CPU、IO、内存），这会影响操作工作负载的性能。 对于大多数任务关键型工作负载，我们建议使用 AlwaysOn 配置。 在这种配置，你可以通过将运行中的分析负载转移到可读辅助副本来消除影响。  
   
-## 性能提示 #3：通过在增量行组中保存热数据来减少索引碎片  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>性能提示 #3：通过在增量行组中保存热数据来减少索引碎片  
  如果工作负载更新/删除了已压缩的行，则包含列存储索引的表可能会出现大量碎片（例如已删除的行）。 有碎片的列存储索引会导致内存/存储利用效率下降。 除了资源的低效利用以外，还会对分析查询性能造成负面影响，因为需要额外的 IO，并且需要从结果集中筛选出已删除的行。  
   
  在使用 REORGANIZE 命令运行索引碎片整理或者在整个表或受影响的分区上重新生成列存储索引之前，已删除的行实际上并未删除。 REORGANIZE 和索引 REBUILD 是高开销的操作，会占用本应提供给工作负载的资源。 此外，如果过早压缩行，可能会由于更新而需要重新压缩多次，从而导致压缩开销的浪费。  
@@ -201,7 +205,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **插入/查询工作负载：**如果工作负载主要是插入数据和查询数据，则建议将 COMPRESSION_DELAY 的默认值设置为 0。 在单个增量行组中插入 100 万行后，新插入的行将被压缩。  
     此类工作负载的某些示例包括：(a) 传统的 DW 工作负载 (b) 需要分析 Web 应用程序中的点击模式时执行的点击流分析。  
   
--   **OLTP 工作负载：**如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于你的工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
+-   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于你的工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
   
  我们预计大多数客户不需要采取任何措施。 COMPRESSION_DELAY 选项的默认值应可满足需要。  
 对于高级用户，我们建议运行以下查询并收集过去 7 天已删除的行的百分比。  
@@ -218,12 +222,12 @@ ORDER BY created_time DESC
   
  如果压缩行组中已删除的行数超过 20%，则平整变化率小于 5% 的旧行组（称为冷行组）会将 COMPRESSION_DELAY 设置为 (youngest_rowgroup_created_time – current_time)。 请注意，这种方法最适合用于稳定且性质相对统一的工作负载。  
   
-## 另请参阅  
- [列存储索引指南](../Topic/Columnstore%20Indexes%20Guide.md)   
- [列存储索引数据加载](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [列存储索引版本的功能摘要](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+## <a name="see-also"></a>另请参阅  
+ [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)   
+ [列存储索引数据加载](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [针对数据仓库的列存储索引](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ [针对数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

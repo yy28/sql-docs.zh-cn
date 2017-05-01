@@ -1,29 +1,33 @@
 ---
-title: "Objects 事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件类, Objects 事件类别"
-  - "Objects 事件类别 [SQL Server]"
-  - "事件类 [SQL Server], Objects 事件类别"
+title: "“对象”事件类别 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Objects event category
+- Objects event category [SQL Server]
+- event classes [SQL Server], Objects event category
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07e7fdcde7a417ef2e0e6c2d50002103d2f89338
+ms.lasthandoff: 04/11/2017
+
 ---
-# Objects 事件类别
+# <a name="objects-event-category"></a>Objects 事件类别
   **Objects** 事件类别包含一般的对象事件。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 26
 |[Object:Created 事件类](../../relational-databases/event-classes/object-created-event-class.md)|指示已创建对象，例如已使用 CREATE INDEX 语句、CREATE TABLE 语句或 CREATE DATABASE 语句创建。|  
 |[Object:Deleted 事件类](../../relational-databases/event-classes/object-deleted-event-class.md)|指示已删除对象，例如已使用 DROP INDEX 语句或 DROP TABLE 语句删除。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

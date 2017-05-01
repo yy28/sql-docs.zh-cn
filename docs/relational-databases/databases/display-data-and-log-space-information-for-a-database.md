@@ -1,31 +1,35 @@
 ---
 title: "显示数据库的数据和日志空间信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志 [SQL Server], 空间"
-  - "状态信息 [SQL Server], 空间"
-  - "显示空间信息"
-  - "磁盘空间 [SQL Server], 显示"
-  - "数据库 [SQL Server], 已用空间"
-  - "查看空间信息"
-  - "空间分配 [SQL Server], 显示"
-  - "数据空间 [SQL Server]"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], space
+- status information [SQL Server], space
+- displaying space information
+- disk space [SQL Server], displaying
+- databases [SQL Server], space used
+- viewing space information
+- space allocation [SQL Server], displaying
+- data space [SQL Server]
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81963fea993101e8483d8a00a45bf72e822bb1b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 显示数据库的数据和日志空间信息
+# <a name="display-data-and-log-space-information-for-a-database"></a>显示数据库的数据和日志空间信息
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中显示数据库的数据和日志空间信息。  
 
   
@@ -38,7 +42,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 若要显示数据库的数据和日志空间信息  
+#### <a name="to-display-data-and-log-space-information-for-a-database"></a>若要显示数据库的数据和日志空间信息  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -48,9 +52,9 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 使用 sp_spaceused 显示数据库的数据和日志空间信息  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>使用 sp_spaceused 显示数据库的数据和日志空间信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -63,9 +67,9 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### 通过查询 sys.database_files 显示数据库的数据和日志空间信息  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>通过查询 sys.database_files 显示数据库的数据和日志空间信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -80,7 +84,7 @@ GO
   
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
@@ -88,3 +92,4 @@ GO
  [删除数据库中的数据文件或日志文件](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
   
   
+

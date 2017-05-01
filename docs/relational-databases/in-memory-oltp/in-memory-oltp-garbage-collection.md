@@ -1,23 +1,27 @@
 ---
 title: "内存中 OLTP 垃圾回收 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 167a464de760b5eef4c5c2beebde2eab3c3cf69e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 内存中 OLTP 垃圾回收
-  如果数据行已被一个不再活动的事务删除，则该数据行被视为是陈旧的。 可对陈旧的行进行垃圾回收。 下面是[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 中垃圾收集的特征：  
+# <a name="in-memory-oltp-garbage-collection"></a>内存中 OLTP 垃圾回收
+  如果数据行已被一个不再活动的事务删除，则该数据行被视为是陈旧的。 可对陈旧的行进行垃圾回收。 下面是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中垃圾收集的特征：  
   
 -   不产生阻塞。 垃圾收集随着时间推移进行分布，对工作负荷的影响极小。  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 5
   
  在用户事务提交后，它识别与它在其上运行的计划程序相关联的所有排队项，然后释放内存。 如果计划程序上的垃圾收集队列为空，则它会搜索当前 NUMA 节点中的任何非空队列。 如果存在较少事务活动或者有内存压力，则主垃圾收集线程可访问任何队列的垃圾收集行。 如果在删除大量行后（举例）没有事务活动并且没有内存压力，则在事务活动恢复或有内存压力之前，不会对删除的行进行垃圾收集。  
   
-## 另请参阅  
- [管理内存中 OLTP 的内存](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)  
+## <a name="see-also"></a>另请参阅  
+ [管理内存中 OLTP 的内存](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
   
   

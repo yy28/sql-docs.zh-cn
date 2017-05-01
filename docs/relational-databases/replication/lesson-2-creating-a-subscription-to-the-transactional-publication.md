@@ -1,29 +1,33 @@
 ---
 title: "第 2 课：创建事务发布的订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "复制 [SQL Server], 教程"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2065387bdf7d23b372f70058c509855e0b0f0792
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 2 课：创建事务发布的订阅
-在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个订阅。 本课程要求已完成上一课，[第 1 课：使用事务复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)。  
+# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
+在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个订阅。 本课程要求已完成上一课， [第 1 课：使用事务复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)。  
   
-### 创建订阅  
+### <a name="to-create-the-subscription"></a>创建订阅  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 13
   
 9. 单击“完成”以接受其余页中的默认值并完成向导。  
   
-### 在订阅服务器上设置数据库权限  
+### <a name="setting-database-permissions-at-the-subscriber"></a>在订阅服务器上设置数据库权限  
   
 1.  连接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的订阅服务器，依次展开“数据库”、“ProductReplica”和“安全性”，右键单击“用户”，然后选择“新建用户”。  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 13
   
 4.  在“成员资格”页的“数据库角色成员资格”区域中，选择“db_owner”，然后单击“确定”以创建用户。  
   
-### 查看订阅的同步状态  
+### <a name="to-view-the-synchronization-status-of-the-subscription"></a>查看订阅的同步状态  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -65,11 +69,12 @@ caps.handback.revision: 13
   
 3.  如果订阅未在“AdvWorksProductTrans”下出现，请按 F5 刷新列表。  
   
-## 后续步骤  
-您已经成功创建了对事务发布的订阅。 因为此订阅的分发代理持续运行，所以订阅一经创建就进行了初始化。 接下来，您将用跟踪令牌来验证更改是否已复制到订阅服务器并确定滞后时间。 请参阅[第 3 课：验证订阅和测量滞后时间](../../relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md)。  
+## <a name="next-steps"></a>后续步骤  
+您已经成功创建了对事务发布的订阅。 因为此订阅的分发代理持续运行，所以订阅一经创建就进行了初始化。 接下来，您将用跟踪令牌来验证更改是否已复制到订阅服务器并确定滞后时间。 请参阅 [第 3 课：验证订阅和测量滞后时间](../../relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)  
 [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
   
+

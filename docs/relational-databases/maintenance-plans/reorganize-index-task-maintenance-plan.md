@@ -1,29 +1,33 @@
 ---
-title: "“重新组织索引”任务（维护计划） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.defrag.f1"
-helpviewer_keywords: 
-  - "“‘重新组织索引’任务”对话框"
+title: "“重新组织索引”任务（维护计划）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.defrag.f1
+helpviewer_keywords:
+- Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# “重新组织索引”任务（维护计划）
+# <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
   使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接**  
  选择执行此任务时使用的服务器连接。  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  当受影响的对象很多时，可能需要相当长的时间才可显示。  
   
-## “新建连接”对话框  
+## <a name="new-connection-dialog-box"></a>“新建连接”对话框  
  **连接名称**  
  输入新连接的名称。  
   
@@ -78,10 +82,10 @@ caps.handback.revision: 33
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的实例。  
   
  **使用特定用户名和密码**  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例。 此选项不可用。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
@@ -89,7 +93,7 @@ caps.handback.revision: 33
  **密码**  
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG (Transact-SQL)](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

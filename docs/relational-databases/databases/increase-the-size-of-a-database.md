@@ -1,27 +1,31 @@
 ---
 title: "增加数据库的大小 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库 [SQL Server], 大小"
-  - "增加数据库大小"
-  - "数据库大小 [SQL Server], 增加"
-  - "大小 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], size
+- increasing database size
+- database size [SQL Server], increasing
+- size [SQL Server], databases
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66895e3c9a74b60e570ccc6b451023da0d93da40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 增加数据库的大小
+# <a name="increase-the-size-of-a-database"></a>增加数据库的大小
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中增加数据库的大小。 通过增加现有数据或日志文件的大小或向数据库添加新文件，可以扩展数据库。  
   
  **本主题内容**  
@@ -51,7 +55,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 增加数据库的大小  
+#### <a name="to-increase-the-size-of-a-database"></a>增加数据库的大小  
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
@@ -63,24 +67,24 @@ caps.handback.revision: 30
   
 5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 增加数据库的大小  
+#### <a name="to-increase-the-size-of-a-database"></a>增加数据库的大小  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例可增加文件 `test1dat3` 的大小。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例可增加文件 `test1dat3`的大小。  
   
  [!code-sql[DatabaseDDL#AlterDatabase5](../../relational-databases/databases/codesnippet/tsql/increase-the-size-of-a-d_1.sql)]  
   
- 有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)。  
+ 有关更多示例，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## 另请参阅  
- [向数据库中添加数据文件或日志文件](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
+## <a name="see-also"></a>另请参阅  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [收缩数据库](../../relational-databases/databases/shrink-a-database.md)  
   
   

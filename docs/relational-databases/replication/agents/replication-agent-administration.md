@@ -1,34 +1,38 @@
 ---
 title: "复制代理管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "快照代理, 管理"
-  - "日志读取器代理, 管理"
-  - "队列读取器代理, 管理"
-  - "共享代理 [SQL Server 复制]"
-  - "合并代理, 管理"
-  - "分发代理, 管理"
-  - "代理 [SQL Server 复制], 管理"
-  - "复制清除作业 [SQL Server]"
-  - "管理复制, 代理"
-  - "复制 [SQL Server], 管理"
-  - "独立代理 [SQL Server 复制]"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Snapshot Agent, administering
+- Log Reader Agent, administering
+- Queue Reader Agent, administering
+- shared agents [SQL Server replication]
+- Merge Agent, administering
+- Distribution Agent, administering
+- agents [SQL Server replication], administering
+- replication cleanup jobs [SQL Server]
+- administering replication, agents
+- replication [SQL Server], administering
+- independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0ddd687702068508c54ea60a533fc3c5c75b10
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制代理管理
+# <a name="replication-agent-administration"></a>复制代理管理
   复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
   
 > [!IMPORTANT]  
@@ -48,16 +52,16 @@ caps.handback.revision: 48
   
  **运行代理和运行维护作业**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器︰ [启动和停止复制代理 & #40;SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器：[启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   复制编程︰ [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   复制编程：[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-## 代理配置文件  
+## <a name="agent-profiles"></a>代理配置文件  
  在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
- 如何直接指定命令行参数的信息，请参阅 [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
+ 有关如何直接指定命令行参数的信息，请参阅[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-## 监视复制代理  
+## <a name="monitoring-replication-agents"></a>监视复制代理  
  复制监视器使您可以查看信息和执行与每个复制代理关联的任务。 以下列表列出了每个代理、可以在其中找到代理的选项卡（位于复制监视器中）以及指向说明如何访问这些选项卡的主题的链接：  
   
 -   以下代理与复制监视器中的发布相关联：  
@@ -68,7 +72,7 @@ caps.handback.revision: 48
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。 有关详细信息，请参阅 [查看信息并执行任务的代理相关联的发布 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。 有关详细信息，请参阅[查看与发布关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -76,12 +80,12 @@ caps.handback.revision: 48
   
     -   合并代理  
   
-     访问信息和与这些代理通过下列选项卡相关联的任务︰ **订阅监视列表** （适用于每个发布服务器） 或 **所有订阅** （适用于每个发布） 选项卡。 有关详细信息，请参阅 [查看信息并执行任务的代理与订阅相关 & #40;复制监视器 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+     通过下列选项卡访问与这些代理相关联的信息和任务： **“订阅监视列表”** （每个发布服务器都提供）或 **“所有订阅”** 选项卡（所有发布都提供）。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
-## 独立代理和共享代理  
- 独立代理是为一个订阅提供服务的代理。 共享代理为多个订阅提供服务；如果使用同一共享代理的多个订阅需要同步，则在默认情况下，它们会排队等候，共享代理一次为一个订阅提供服务。 使用独立代理会减少滞后时间，因为只要订阅需要同步，独立代理就可以为其提供服务。 合并复制始终使用独立代理，而事务复制在默认情况下为在新建发布向导中创建的发布使用独立代理（在早期的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中，事务复制在默认情况下使用共享代理）。  
+## <a name="independent-and-shared-agents"></a>独立代理和共享代理  
+ 独立代理是为一个订阅提供服务的代理。 共享代理为多个订阅提供服务；如果使用同一共享代理的多个订阅需要同步，则在默认情况下，它们会排队等候，共享代理一次为一个订阅提供服务。 使用独立代理会减少滞后时间，因为只要订阅需要同步，独立代理就可以为其提供服务。 合并复制始终使用独立代理，而事务复制在默认情况下为在新建发布向导中创建的发布使用独立代理（在早期的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中，事务复制在默认情况下使用共享代理）。  
   
-## 复制维护作业  
+## <a name="replication-maintenance-jobs"></a>复制维护作业  
  复制使用下列作业来执行计划维护和按需维护。  
   
 |清除作业|说明|默认计划|  
@@ -93,7 +97,8 @@ caps.handback.revision: 48
 |复制代理检查|检测未积极记录历史信息的复制代理。 如果作业步骤失败，它将写入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件日志。|每十分钟运行一次。|  
 |分发的复制监视刷新器|刷新复制监视器所使用的缓存的查询。|连续运行。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
+

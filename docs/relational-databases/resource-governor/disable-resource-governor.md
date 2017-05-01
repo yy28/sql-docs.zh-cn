@@ -1,24 +1,28 @@
 ---
 title: "禁用资源调控器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "资源调控器, 禁用"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 禁用资源调控器
+# <a name="disable-resource-governor"></a>禁用资源调控器
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 禁用资源调控器。  
   
 -   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
@@ -69,7 +73,7 @@ caps.handback.revision: 7
   
 1.  运行 **ALTER RESOURCE GOVERNOR DISABLE** 语句。  
   
-### 示例 (Transact-SQL)  
+### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
  以下示例启用资源调控器。  
   
 ```  
@@ -77,7 +81,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

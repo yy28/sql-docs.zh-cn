@@ -1,31 +1,35 @@
 ---
-title: "权限层次结构（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.server.permissions.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "安全性 [SQL Server]，拒绝访问"
-  - "层次结构 [SQL Server]，权限"
-  - "安全对象 [SQL Server]"
-  - "安全性 [SQL Server], 权限"
-  - "权限 [SQL Server]，层次结构"
-  - "安全性 [SQL Server]，授予访问权限"
+title: "权限层次结构（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.server.permissions.f1--May use common.permissions
+helpviewer_keywords:
+- security [SQL Server], denying access
+- hierarchies [SQL Server], permissions
+- securables [SQL Server]
+- security [SQL Server], permissions
+- permissions [SQL Server], hierarchy
+- security [SQL Server], granting access
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d62db97488a8aefee7d878fb72159907315deb6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 权限层次结构（数据库引擎）
+# <a name="permissions-hierarchy-database-engine"></a>权限层次结构（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象” 。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。  
@@ -36,15 +40,15 @@ caps.handback.revision: 37
   
  ![数据库引擎权限层次结构的关系图](../../relational-databases/security/media/wj-security-layers.gif "数据库引擎权限层次结构的关系图")  
   
-## SQL Server 权限图表  
+## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
  有关 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
   
-## 使用权限  
+## <a name="working-with-permissions"></a>使用权限  
  可以使用常见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询 GRANT、DENY 和 REVOKE 来操作权限。 有关权限的信息，可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 和 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目录视图中看到。 也可以使用内置函数来查询权限信息。  
   
  有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [安全对象](../../relational-databases/security/securables.md)   
@@ -58,3 +62,4 @@ caps.handback.revision: 37
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

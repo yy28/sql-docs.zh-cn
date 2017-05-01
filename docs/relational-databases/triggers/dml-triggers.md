@@ -1,29 +1,33 @@
 ---
 title: "DML 触发器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "触发器 [SQL Server], 关于触发器"
-  - "DML 触发器, 关于 DML 触发器"
-  - "触发器 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML 触发器
+# <a name="dml-triggers"></a>DML 触发器
   DML 触发器为特殊类型的存储过程，可在发生数据操作语言 (DML) 事件时自动生效，以便影响触发器中定义的表或视图。 DML 事件包括 INSERT、UPDATE 或 DELETE 语句。 DML 触发器可用于强制业务规则和数据完整性、查询其他表并包括复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将触发器和触发它的语句作为可在触发器内回滚的单个事务对待。 如果检测到错误（例如，磁盘空间不足），则整个事务即自动回滚。  
   
-## DML 触发器的优点  
+## <a name="dml-trigger-benefits"></a>DML 触发器的优点  
  DML 触发器类似于约束，因为可以强制实体完整性或域完整性。 一般情况下，实体完整性总应在最低级别上通过索引进行强制，这些索引应是 PRIMARY KEY 和 UNIQUE 约束的一部分，或者是独立于约束而创建的。 域完整性应通过 CHECK 约束进行强制，而引用完整性 (RI) 则应通过 FOREIGN KEY 约束进行强制。 当约束支持的功能无法满足应用程序的功能要求时，DML 触发器非常有用。  
   
  下面的列表比较 DML 触发器和约束，并在 DML 触发器优于约束时进行标识。  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   如果触发器表上存在约束，则在 INSTEAD OF 触发器执行后但在 AFTER 触发器执行前检查这些约束。 如果违反了约束，则回滚 INSTEAD OF 触发器操作并且不执行 AFTER 触发器。  
   
-## DML 触发器的类型  
+## <a name="types-of-dml-triggers"></a>DML 触发器的类型  
  AFTER 触发器  
  在执行 INSERT、UPDATE、MERGE 或 DELETE 语句的操作之后执行 AFTER 触发器。 如果违反了约束，则永远不会执行 AFTER 触发器；因此，这些触发器不能用于任何可能防止违反约束的处理。 对于在 MERGE 语句中指定的每个 INSERT、UPDATE 或 DELETE 操作，将为每个 DML 操作触发相应的触发器。  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 27
 |级联引用|无任何限制条件|不允许在作为级联引用完整性约束目标的表上使用 INSTEAD OF UPDATE 和 DELETE 触发器。|  
 |执行|晚于：<br /><br /> 约束处理<br /><br /> 声明性引用操作<br /><br /> 创建**插入的** 和 **删除的** 表<br /><br /> 触发操作|之前：约束处理<br /><br /> 代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
 |执行顺序|可指定第一个和最后一个执行|不适用|  
-|**插入的**和**删除的**表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 列引用|Allowed|Allowed|  
+|**插入的**和 **删除的**表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 列引用|Allowed|Allowed|  
 |**插入的**和 **删除的**表中的 **text** 、 **ntext** 和 **image** 列引用。|不允许|Allowed|  
   
  CLR 触发器  
  CLR 触发器可以是 AFTER 触发器或 INSTEAD OF 触发器。 CLR 触发器还可以是 DDL 触发器。 CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |说明如何删除或禁用 DML 触发器。|[删除或禁用 DML 触发器](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |说明如何管理触发器安全性。|[管理触发器安全性](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   

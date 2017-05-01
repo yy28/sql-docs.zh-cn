@@ -1,23 +1,27 @@
 ---
-title: "删除实用工具控制点（SQL Server 实用工具） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "删除实用工具控制点（SQL Server 实用工具）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b38f97d5d0dacb8222faf67387c97b33d2dd5de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 删除实用工具控制点（SQL Server 实用工具）
-  本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中删除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实用工具控制点 (UCP)。  
+# <a name="remove-a-utility-control-point-sql-server-utility"></a>删除实用工具控制点（SQL Server 实用工具）
+  本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中删除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例中的 [!INCLUDE[tsql](../../includes/tsql-md.md)]实用工具控制点 (UCP)。  
   
  **本主题内容**  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 10
 ###  <a name="Restrictions"></a> 限制和局限  
  在使用此过程从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除该 UCP 之前，请注意以下要求。 存储过程将在删除过程中运行先决条件检查。  
   
--   在运行此过程前，必须从该 UCP 中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例。 请注意，该 UCP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。 有关详细信息，请参阅[从 SQL Server 实用工具中删除 SQL Server 的实例](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
+-   在运行此过程前，必须从该 UCP 中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例。 请注意，该 UCP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例。 有关详细信息，请参阅 [从 SQL Server 实用工具中删除 SQL Server 的实例](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
 -   该过程必须在作为 UCP 的计算机上运行。  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除实用工具控制点  
+#### <a name="to-remove-a-utility-control-point"></a>删除实用工具控制点  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 10
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [使用实用工具资源管理器管理 SQL Server 实用工具](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server 实用工具故障排除](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

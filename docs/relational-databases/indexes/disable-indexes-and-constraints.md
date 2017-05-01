@@ -1,35 +1,39 @@
 ---
 title: "禁用索引和约束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "禁用的索引 [SQL Server], 索引操作"
-  - "非聚集索引 [SQL Server], 禁用"
-  - "禁用的索引 [SQL Server], 指导原则"
-  - "聚集索引, 禁用"
-  - "约束 [SQL Server], 禁用"
-  - "禁用的索引 [SQL Server], 查看"
-  - "FOREIGN KEY 约束, 禁用"
-  - "统计信息 [SQL Server], 索引"
-  - "索引禁用 [SQL Server]"
-  - "索引视图 [SQL Server], 禁用的索引"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# 禁用索引和约束
+# <a name="disable-indexes-and-constraints"></a>禁用索引和约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用索引或约束。 禁用索引可以防止用户访问索引，而对于聚集索引，则可以防止用户访问基础表数据。 索引定义保留在元数据中，非聚集索引的索引统计信息仍保留。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用表的聚集索引可以防止对数据的访问，数据仍保留在表中，但在删除或重新生成索引之前，无法对这些数据执行数据操作语言 (DML) 操作。  
@@ -70,7 +74,7 @@ caps.handback.revision: 28
   
 -   不能访问已禁用的聚集索引的数据行，但可以删除或重新生成该聚集索引。  
   
--   表中没有已禁用的聚集索引时，可以联机重新生成已禁用的非聚集索引。 但是，如果使用 ALTER INDEX REBUILD 语句或 CREATE INDEX WITH DROP_EXISTING 语句，则务必脱机重新生成已禁用的聚集索引。 有关联机索引操作的详细信息，请参阅[联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)。  
+-   表中没有已禁用的聚集索引时，可以联机重新生成已禁用的非聚集索引。 但是，如果使用 ALTER INDEX REBUILD 语句或 CREATE INDEX WITH DROP_EXISTING 语句，则务必脱机重新生成已禁用的聚集索引。 有关联机索引操作的详细信息，请参阅 [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
 -   无法对包含已禁用的聚集索引的表成功执行 CREATE STATISTICS 语句。  
   
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 禁用索引  
+#### <a name="to-disable-an-index"></a>禁用索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要禁用索引的表的数据库。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。  
   
-#### 禁用表的所有索引  
+#### <a name="to-disable-all-indexes-on-a-table"></a>禁用表的所有索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要禁用索引的表的数据库。  
   
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 禁用索引  
+#### <a name="to-disable-an-index"></a>禁用索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### 禁用表的所有索引  
+#### <a name="to-disable-all-indexes-on-a-table"></a>禁用表的所有索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
   
+

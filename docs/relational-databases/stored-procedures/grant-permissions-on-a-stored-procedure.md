@@ -1,24 +1,28 @@
 ---
 title: "授予对存储过程的权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存储过程 [SQL Server], 权限"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], permissions
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c18a425db4969c7ca75a02737c8b64e3360557c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 授予对存储过程的权限
+# <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]授予对存储过程的权限。 可以为数据库中的现有用户、数据库角色或应用程序角色授予权限。  
   
  **本主题内容**  
@@ -44,11 +48,11 @@ caps.handback.revision: 23
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
- 授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 需要拥有对该过程所属架构的 ALTER 权限，或对该过程的 CONTROL 权限。 有关详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)。  
+ 授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 需要拥有对该过程所属架构的 ALTER 权限，或对该过程的 CONTROL 权限。 有关详细信息，请参阅 [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)授予对存储过程的权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 授予对存储过程的权限  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 授予对存储过程的权限  
+#### <a name="to-grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -85,7 +89,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [创建存储过程](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

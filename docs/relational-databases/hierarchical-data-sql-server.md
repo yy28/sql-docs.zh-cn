@@ -1,29 +1,33 @@
 ---
 title: "层次结构数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "层次结构 [SQL Server], 要支持的表"
-  - "hierarchyid [数据库引擎], 概念"
-  - "层次结构表 [数据库引擎]"
-  - "SqlHierarchyId"
-  - "hierarchyid [数据库引擎]"
-  - "分层查询 [SQL Server], 使用 hierarchyid 数据类型"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hierarchies [SQL Server], tables to support
+- hierarchyid [Database Engine], concepts
+- hierarchical tables [Database Engine]
+- SqlHierarchyId
+- hierarchyid [Database Engine]
+- hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.lasthandoff: 04/11/2017
+
 ---
-# 层次结构数据 (SQL Server)
+# <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
   内置的 **hierarchyid** 数据类型使存储和查询层次结构数据变得更为容易。 针对表示树（最常见的层次结构数据类型）对**hierarchyid** 进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   网页间链接图  
   
- 使用 [hierarchyid](../Topic/hierarchyid%20\(Transact-SQL\).md) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](../t-sql/data-types/hierarchyid-data-type-method-reference.md) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
+ 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
   
 ##  <a name="keyprops"></a> hierarchyid 的关键属性  
  **hierarchyid** 数据类型的值表示树层次结构中的位置。 **hierarchyid** 的值具有以下属性：  
@@ -55,7 +59,6 @@ caps.handback.revision: 39
   
      使用 [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) 方法，始终可以在任意给定节点的右侧、左侧或任意两个同级节点之间生成同级节点。 在层次结构中插入或删除任意数目的节点时，该比较属性保持不变。 大多数插入和删除操作都保留了紧凑性属性。 但是，对于在两个节点之间执行的插入操作，所产生的 hierarchyid 值的表示形式在紧凑性方面将稍微降低。  
   
- [本主题内容](#top)  
   
 ##  <a name="limits"></a> hierarchyid 的局限性  
  该 **hierarchyid** 数据类型具有以下局限性：  
@@ -66,7 +69,6 @@ caps.handback.revision: 39
   
 -   由 **hierarchyid** 值表示的层次结构关系不是像外键关系那样强制实现的。 可能会出现下面这种层次结构关系而且有时这种关系是合理的：A 具有子级 B，然后删除了 A，导致 B 与一条不存在的记录之间存在关系。 如果这种行为不可接受，应用程序在删除父级之前必须先查询其是否有后代。  
   
- [本主题内容](#top)  
   
 ##  <a name="alternatives"></a> 何时使用 hierarchyid 的替代项  
  用于表示层次结构数据的两个 **hierarchyid** 替代项为：  
@@ -77,7 +79,7 @@ caps.handback.revision: 39
   
  **hierarchyid** 通常优于这些替代项。 但是，在下面详述的特定情况下，使用这些替代项可能更好。  
   
-### 父/子  
+### <a name="parentchild"></a>父/子  
  使用父/子方法时，每一行都包含对父级的引用。 下表定义了一个用于在父/子关系中包含父行和子行的典型表：  
   
 ```  
@@ -99,13 +101,13 @@ GO
   
 -   使用 **hierarchyid**进行直接后代查询时速度稍慢。  
   
--   使用 **hierarchyid** 移动非叶节点时速度明显减慢。  
+-   使用 **hierarchyid**移动非叶节点时速度明显减慢。  
   
--   使用 **hierarchyid** 插入非叶节点和插入或移动叶节点具有相同的复杂度。  
+-   使用 **hierarchyid**插入非叶节点和插入或移动叶节点具有相同的复杂度。  
   
  当存在以下情况时，使用父/子可能更好：  
   
--   键的大小非常重要。 在节点数相同的情况下，**hierarchyid** 值等于或大于整型系列（**smallint**、**int**、**bigint**）的值。 这只是在很少情况下使用父/子的一个原因，因为 **hierarchyid** 在 I/O 局部实用性和 CPU 复杂性方面明显优于使用父/子结构时所需的公用表表达式。  
+-   键的大小非常重要。 在节点数相同的情况下， **hierarchyid** 值等于或大于整型系列（**smallint**、 **int**、 **bigint**）的值。 这只是在很少情况下使用父/子的一个原因，因为 **hierarchyid** 在 I/O 局部实用性和 CPU 复杂性方面明显优于使用父/子结构时所需的公用表表达式。  
   
 -   很少跨层次结构的不同部分执行查询。 也就是说，通常仅对层次结构中的单个点进行查询。 在这些情况下，存储在一起并不重要。 例如，如果组织表仅用于为各个雇员处理工资单，则使用父/子更好。  
   
@@ -121,9 +123,8 @@ GO
     GO  
     ```  
   
- [本主题内容](#top)  
   
-### XML  
+### <a name="xml"></a>XML  
  XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML hierarchyid 函数dex is created, **hierarchyid** values are used hierarchyid 函数ternally to represent the position hierarchyid 函数 the hierarchy.  
   
  当满足以下所有条件时，使用 XML 数据类型会更好：  
@@ -145,7 +146,6 @@ CREATE TABLE XMLOrg
 GO  
 ```  
   
- [本主题内容](#top)  
   
 ##  <a name="indexing"></a> 层次结构数据的索引策略  
  用于对层次结构数据进行索引的策略有两种：  
@@ -164,9 +164,8 @@ GO
   
  采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
- [本主题内容](#top)  
   
-### 创建索引  
+### <a name="creating-indexes"></a>创建索引  
  GetLevel() 方法可用于创建广度优先排序。 在下例中，既创建了广度优先索引，又创建了深度优先索引：  
   
 ```wmimof  
@@ -190,11 +189,10 @@ ON Organization(BusinessEntityID) ;
 GO  
 ```  
   
- [本主题内容](#top)  
   
-## 示例  
+## <a name="examples"></a>示例  
   
-### 简单示例  
+### <a name="simple-example"></a>简单示例  
  以下示例特意进行了简化，以帮助您入门。 首先创建一个表以保存一些地理数据。  
   
 ```  
@@ -270,9 +268,8 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相关任务  
   
 ###  <a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用 **hierarchyid** 的表的最简单方法是，使用临时列或临时表来跟踪各个层次结构级别的节点数。 有关迁移父/子表的示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用 **hierarchyid** 的表的最简单方法是，使用临时列或临时表来跟踪各个层次结构级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
- [本主题内容](#top)  
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
  尽管 **hierarchyid** 列不一定表示树，但应用程序可以很容易地确保此列表示树。  
@@ -289,9 +286,8 @@ VALUES ('/', 'Earth', 'Planet');
   
     -   确定每个新子节点的唯一性，并将其作为可序列化事务的一部分插入。  
   
- [本主题内容](#top)  
   
-#### 使用错误检测的示例  
+#### <a name="example-using-error-detection"></a>使用错误检测的示例  
  在下例中，示例代码计算新子级的 **EmployeeId** 值，接着检测有无键冲突，然后返回 **INS_EMP** 标记以便重新计算新行的 **EmployeeId** 值：  
   
 ```  
@@ -324,10 +320,9 @@ END ;
 GO  
 ```  
   
- [本主题内容](#top)  
   
-#### 使用可序列化事务的示例  
- **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child**。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
+#### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
+ 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **@last_child** 。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
   
 ```  
 CREATE TABLE Org_T2  
@@ -377,7 +372,6 @@ EmployeeId LastChild EmployeeName
 0x5AC0    NULL       Mary  
 ```  
   
- [本主题内容](#top)  
   
 ###  <a name="BKMK_EnforcingTrees"></a> 强制表示树  
  以上示例说明了应用程序如何确保树得到维护。 若要通过使用约束强制表示树，创建定义各节点父级的计算列时可以为它创建一个反过来约束主键 ID 的外键。  
@@ -396,7 +390,6 @@ GO
   
  当用于维护层次结构树的不可信代码对表拥有直接 DML 访问权限时，将优先采用这种强制关系的方法。 但是，这种方法可能会降低性能，因为必须针对每个 DML 操作检查约束。  
   
- [本主题内容](#top)  
   
 ###  <a name="findclr"></a> 使用 CLR 查找祖先  
  查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 可以用 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR 编写此操作，因为它们都提供 **hierarchyid** 类型。 建议用 CLR，因为用它时查找速度会更快。  
@@ -436,7 +429,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 若要在以下 [!INCLUDE[tsql](../includes/tsql-md.md)] 示例中使用**ListAncestor** 和 **CommonAncestor** 方法，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中通过执行如下代码生成 DLL 并创建 **HierarchyId_Operations** 程序集：  
+ 若要在以下 **示例中使用** ListAncestor **和** CommonAncestor [!INCLUDE[tsql](../includes/tsql-md.md)] 方法，请在 **中通过执行如下代码生成 DLL 并创建** HierarchyId_Operations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序集：  
   
 ```  
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -444,7 +437,6 @@ FROM '<path to DLL>\ListAncestors.dll'
 GO  
 ```  
   
- [本主题内容](#top)  
   
 ###  <a name="ancestors"></a> 列出祖先  
  创建节点的祖先列表是一项常用操作，例如可用于显示组织中的职位。 此操作的其中一种实现方式就是使用表值函数和上面定义的 **HierarchyId_Operations** 类：  
@@ -474,7 +466,6 @@ JOIN ListAncestors(@h) AS A
 GO  
 ```  
   
- [本主题内容](#top)  
   
 ###  <a name="lowestcommon"></a> 查找级别最低的共同祖先  
  使用上面定义的 **HierarchyId_Operations** 类创建以下 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数，以便查找涉及层次结构中两个节点的最低级别的共同祖先：  
@@ -507,10 +498,9 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
  最终得到的节点为 /1/1/  
   
- [本主题内容](#top)  
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程采用 **@oldMgr** 的子树作为参数，使其（包括 **@oldMgr**）成为 **@newMgr** 的子树。  
+ 另一项常用操作是移动子树。 下面的过程采用 **@oldMgr** 的子树作为参数，使其（包括 **@oldMgr**）成为 **@newMgr**进行子树查询时速度明显加快。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -535,11 +525,10 @@ END ;
 GO  
 ```  
   
- [本主题内容](#top)  
   
-## 另请参阅  
- [hierarchyid 数据类型方法引用](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
- [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
- [hierarchyid (Transact-SQL)](../Topic/hierarchyid%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>另请参阅  
+ [hierarchyid 数据类型方法引用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

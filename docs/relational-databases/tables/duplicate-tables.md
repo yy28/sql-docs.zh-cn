@@ -1,30 +1,34 @@
 ---
 title: "复制表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "复制表"
-  - "表 [SQL Server], 复制"
-  - "复制表"
-  - "表复制 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying tables
+- tables [SQL Server], duplicating
+- duplicating tables
+- table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制表
+# <a name="duplicate-tables"></a>复制表
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，通过创建新表后从现有表复制列信息，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中复制现有表。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，通过创建新表后从现有表复制列信息，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中复制现有表。  
   
 > [!IMPORTANT]  
 >  此操作仅复制表的结构，不复制任何表行。  
@@ -50,7 +54,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 复制表  
+#### <a name="to-duplicate-a-table"></a>复制表  
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 在查询编辑器中复制表  
+#### <a name="to-duplicate-a-table-in-query-editor"></a>在查询编辑器中复制表  
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   

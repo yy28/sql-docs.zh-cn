@@ -1,38 +1,42 @@
 ---
 title: "完整数据库备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整备份 [SQL Server]"
-  - "备份 [SQL Server], 数据库"
-  - "备份数据库 [SQL Server], 完整备份"
-  - "估计数据库备份大小"
-  - "备份 [SQL Server], 备份大小"
-  - "数据库备份 [SQL Server], 完整备份"
-  - "大小 [SQL Server], 备份"
-  - "数据库备份 [SQL Server], 关于备份数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整数据库备份 (SQL Server)
+# <a name="full-database-backups-sql-server"></a>完整数据库备份 (SQL Server)
   完整数据库备份可对整个数据库进行备份。 这包括对部分事务日志进行备份，以便在还原完整数据库备份之后，能够恢复完整数据库备份。 完整数据库备份表示备份完成时的数据库。  
   
 > [!TIP]  
 >  随着数据库不断增大，完整备份需花费更多时间才能完成，并且需要更多的存储空间。 因此，对于大型数据库而言，您可以用一系列“差异数据库备份” 来补充完整数据库备份。 有关详细信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!IMPORTANT]  
->  针对数据库备份，TRUSTWORTHY 设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+>  针对数据库备份，TRUSTWORTHY 设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  **本主题内容：**  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 64
   
  ![显示数据库备份之间的工作丢失风险](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "显示数据库备份之间的工作丢失风险")  
   
-### 例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。  
   
 ```  
@@ -63,12 +67,12 @@ GO
 ##  <a name="DbBuRMf"></a> 完整恢复模式下的数据库备份  
  对于使用完整恢复模式和大容量日志恢复模式的数据库而言，数据库备份是必需的，但并不足够。 还需要事务日志备份。 下图显示了在完整恢复模式下可以使用的复杂性最小的备份策略。  
   
- ![序列完整数据库备份和日志备份](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "序列完整数据库备份和日志备份")  
+ ![系列完整数据库备份和日志备份](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "系列完整数据库备份和日志备份")  
   
  有关如何创建日志备份的信息，请参阅[事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
-### 例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
- 下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。 然后，此示例将备份事务日志。 在现实情况下，您必须执行一系列的定期日志备份。 在此示例中，[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
+### <a name="example-includetsqlincludestsql-mdmd"></a>例如 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+ 下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。 然后，此示例将备份事务日志。 在现实情况下，您必须执行一系列的定期日志备份。 在此示例中， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
   
 ```  
 USE master;  
@@ -100,7 +104,7 @@ GO
   
  [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

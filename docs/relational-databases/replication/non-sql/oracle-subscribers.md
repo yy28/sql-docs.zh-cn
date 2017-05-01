@@ -1,31 +1,35 @@
 ---
 title: "Oracle 订阅服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据类型 [SQL Server 复制], 非 SQL Server 订阅服务器"
-  - "Oracle 订阅服务器 [SQL Server 复制]"
-  - "非 SQL Server 订阅服务器, Oracle"
-  - "异类订阅服务器, Oracle"
-  - "映射数据类型 [SQL Server 复制]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server replication], non-SQL Server Subscribers
+- Oracle Subscribers [SQL Server replication]
+- non-SQL Server Subscribers, Oracle
+- heterogeneous Subscribers, Oracle
+- mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle 订阅服务器
+# <a name="oracle-subscribers"></a>Oracle 订阅服务器
   从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可通过 Oracle 提供的 Oracle OLE DB 访问接口支持到 Oracle 的推送订阅。  
   
-## 配置 Oracle 订阅服务器  
+## <a name="configuring-an-oracle-subscriber"></a>配置 Oracle 订阅服务器  
  若要配置 Oracle 订阅服务器，请按照以下步骤进行：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装和配置 Oracle 客户端网络软件和 Oracle OLE DB 访问接口，以便分发服务器可以连接到 Oracle 订阅服务器。 Oracle 客户端网络软件应是可用的最新版本。 Oracle 建议用户安装最新版本的客户端软件。 因此，客户端软件的版本通常比数据库软件更高。 安装此软件的最直接方法是使用 Oracle Client 光盘上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您需要提供以下信息：  
@@ -47,12 +51,12 @@ caps.handback.revision: 55
     |选择网络协议|选择要支持的相应协议。 大多数应用程序使用 TCP。|  
     |指定主机信息以标识数据库侦听器|主机是正在运行 Oracle 侦听器的计算机的名称或 DNS 别名，该计算机通常是该数据库所驻留的计算机。 对于某些协议，必须提供其他信息。 例如，如果选择 TCP，则必须提供相应的端口，以便侦听器侦听针对目标数据库的连接请求。 默认 TCP 配置使用 1521 端口。|  
   
-3.  创建快照发布或事务发布，为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
-### 设置目录权限  
+### <a name="setting-directory-permissions"></a>设置目录权限  
  分发服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务运行所用的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。  
   
-### 测试 SQL Server 分发服务器和 Oracle 发布服务器之间的连接  
+### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>测试 SQL Server 分发服务器和 Oracle 发布服务器之间的连接  
  在 Net Configuration Assistant 快要结束的时候，可能会出现一个用于测试到 Oracle 订阅服务器的连接的选项。 在测试连接之前，请确保 Oracle 数据库实例已联机，并且 Oracle 侦听器正在运行。 如果测试不成功，请与负责所要连接的数据库的 Oracle DBA 联系。  
   
  成功连接到 Oracle 订阅服务器后，尝试使用为订阅的分发代理配置的同一帐户和密码登录到该数据库：  
@@ -69,7 +73,7 @@ caps.handback.revision: 55
   
 4.  如果网络配置成功，将成功登录，并显示 `SQL` 提示符。  
   
-### Oracle 主目录注意事项  
+### <a name="considerations-for-oracle-home"></a>Oracle 主目录注意事项  
  Oracle 支持并行安装应用程序二进制文件，但是，在给定时间复制过程只能使用一组二进制文件。 每组二进制文件都与一个 Oracle 主目录关联。二进制文件位于 %ORACLE_HOME%\bin 目录中。 当复制连接到 Oracle 订阅服务器时，必须确保使用正确的二进制文件组（特别是客户端网络软件的最新版本）。  
   
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务所使用的帐户登录到分发服务器，并设置相应的环境变量。 应将 %ORACLE_HOME% 变量设置为引用在安装客户端网络软件时所指定的安装点。 %PATH% 必须包括 %ORACLE_HOME% \bin 目录作为所遇到的第一个 Oracle 项。 有关设置环境变量的信息，请参阅 Windows 文档。  
@@ -77,20 +81,20 @@ caps.handback.revision: 55
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上有不止一个 Oracle 主目录，请确保分发代理使用的是最新的 Oracle OLE DB 访问接口。 在某些情况中，当您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上更新客户端组件时，Oracle 默认不更新 OLE DB 访问接口。 请卸载旧的 OLE DB 访问接口并安装最新的 OLE DB 访问接口。 有关安装和卸载该访问接口的详细信息，请参阅 Oracle 文档。  
   
-## Oracle 订阅服务器注意事项  
- 本主题中涉及除了注意事项之外 [非 SQL Server 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), ，复制到 Oracle 订阅服务器时，请考虑以下问题︰  
+## <a name="considerations-for-oracle-subscribers"></a>Oracle 订阅服务器注意事项  
+ 当复制到 Oracle 订阅服务器时，除了主题 [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中介绍的注意事项外，还需考虑以下问题：  
   
 -   Oracle 将空字符串和 NULL 值均视为 NULL。 这在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列定义为 NOT NULL 并将该列复制到 Oracle 订阅服务器时很重要。 将更改应用到 Oracle 订阅服务器时，为避免失败，必须执行以下操作之一：  
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 **-SkipErrors** 参数。 指定 Oracle 错误代码 1400年 (**-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 **-SkipErrors** 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
   
-    -   修改生成的创建表脚本，从可能包含关联的任何字符列中删除 NOT NULL 属性为空字符串，并将修改后的脚本作为项目使用的 @creation_script 参数的自定义创建脚本提供 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
+    -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   
--   Oracle 订阅服务器支持 0x4071 架构选项。 有关架构选项的详细信息，请参阅 [sp_addarticle & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
+-   Oracle 订阅服务器支持 0x4071 架构选项。 有关架构选项的详细信息，请参阅 [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
   
-## 将数据类型从 SQL Server 映射到 Oracle  
+## <a name="mapping-data-types-from-sql-server-to-oracle"></a>将数据类型从 SQL Server 映射到 Oracle  
  下表显示将数据复制到运行 Oracle 的订阅服务器时使用的数据类型映射。  
   
 |SQL Server 数据类型|Oracle 数据类型|  
@@ -102,27 +106,27 @@ caps.handback.revision: 55
 |**char(1-2000)**|CHAR(1-2000)|  
 |**char(2001-4000)**|VARCHAR2(2001-4000)|  
 |**char(4001-8000)**|CLOB|  
-|**DATE**|DATE|  
+|**date**|DATE|  
 |**datetime**|DATE|  
 |**datetime2(0-7)**|TIMESTAMP(7)（对于 Oracle 9 和 Oracle 10）；VARCHAR(27)（对于 Oracle 8）|  
 |**datetimeoffset(0-7)**|TIMESTAMP(7) WITH TIME ZONE（对于 Oracle 9 和 Oracle 10）；VARCHAR(34)（对于 Oracle 8）|  
-|**十进制 (1-38，0-38)**|NUMBER(1-38, 0-38)|  
+|**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**float(53)**|FLOAT|  
-|**FLOAT**|FLOAT|  
+|**float**|FLOAT|  
 |**地理**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
-|**图像**|BLOB|  
+|**image**|BLOB|  
 |**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
 |**nchar(1001-4000)**|NCLOB|  
 |**ntext**|NCLOB|  
-|**数字 (1-38，0-38)**|NUMBER(1-38, 0-38)|  
+|**numeric(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**REAL**|REAL|  
+|**real**|REAL|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
@@ -141,8 +145,8 @@ caps.handback.revision: 55
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## 另请参阅  
- [非 SQL Server 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+## <a name="see-also"></a>另请参阅  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

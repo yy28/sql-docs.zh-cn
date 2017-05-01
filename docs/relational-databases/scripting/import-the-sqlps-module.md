@@ -1,29 +1,33 @@
 ---
 title: "导入 SQLPS 模块 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 39b5b945994c9531deb3d545dbb438657b1914fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 导入 SQLPS 模块
-  从 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建议方法是将 **sqlps** 模块导入到 Windows PowerShell 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  从 Windows PowerShell 3.0 开始，在命令中使用模块的任意 cmdlet 或函数时会自动导入该模块。 此功能对目录中的任何模块均有效，该目录包含在 PSModulePath 环境变量的值中。  有关其他信息，请参阅[导入 PowerShell 模块](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
+# <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
+  从 PowerShell 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的建议方法是将 **sqlps** 模块导入到 Windows PowerShell 环境中。 该模块将加载并注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理单元和可管理性程序集。  从 Windows PowerShell 3.0 开始，在命令中使用模块的任意 cmdlet 或函数时会自动导入该模块。 此功能对目录中的任何模块均有效，该目录包含在 PSModulePath 环境变量的值中。  有关其他信息，请参阅 [导入 PowerShell 模块](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
-1.  **开始之前：**  [安全性](#Security)  
+1.  **Before You Begin:**  [Security](#Security)  
   
-2.  **若要加载模块，请执行以下操作：**  [加载 sqlps 模块](#LoadSqlps)  
+2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
   
-## 开始之前  
+## <a name="before-you-begin"></a>开始之前  
  在将 **sqlps** 模块导入到 Windows PowerShell 后，您可以：  
   
 -   以交互方式运行 Windows PowerShell 命令。  
@@ -47,9 +51,9 @@ caps.handback.revision: 11
   
 1.  使用 **Set-ExecutionPolicy** cmdlet 设置相应的脚本执行策略。  
   
-2.  使用 **Import-Module** cmdlet 导入 sqlps 模块。 如果你想要不显示与 **Encode-Sqlname** 和 **Decode-Sqlname** 有关的警告，请指定 **DisableNameChecking** 参数。  
+2.  使用 **Import-Module** cmdlet 导入 sqlps 模块。 如果你想要不显示与 **Encode-Sqlname** 和 **Decode-Sqlname** 有关的警告，请指定 **DisableNameChecking**参数。  
   
-### 示例  
+### <a name="example"></a>示例  
  此示例加载 **sqlps** 模块并且禁用了名称检查。  
   
 ```powershell 
@@ -63,9 +67,9 @@ Get-Module -ListAvailable -Name Sqlps;
 > [!NOTE]  
 >  如果 **sqlps** 模块不在你的路径下，请更改为模块的位置或在脚本中使用完整路径（在路径中对文件夹使用双引号，其中包含空格）。 **sqlps** 模块位于 SQL Server 实例的 Tools\Powershell 文件夹中。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [[返回页首]](#Intro)  
+ ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[[页首]]()  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [使用数据库引擎 cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
@@ -73,3 +77,4 @@ Get-Module -ListAvailable -Name Sqlps;
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   
   
+

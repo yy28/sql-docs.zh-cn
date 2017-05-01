@@ -1,45 +1,49 @@
 ---
 title: "重新组织和重新生成索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "大型对象碎片整理"
-  - "索引 [SQL Server], 重新组织"
-  - "索引重组 [SQL Server]"
-  - "重新组织索引"
-  - "对大型对象数据类型进行碎片整理"
-  - "索引碎片 [SQL Server]"
-  - "索引重新生成 [SQL Server]"
-  - "重新生成索引"
-  - "索引 [SQL Server], 重新生成"
-  - "对索引进行碎片整理"
-  - "非聚集索引 [SQL Server], 碎片整理"
-  - "碎片整理 [SQL Server]"
-  - "索引碎片整理 [SQL Server]"
-  - "LOB 数据 [SQL Server], 碎片整理"
-  - "聚集索引, 碎片整理"
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新组织和重新生成索引
+# <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  
+  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  
   
  您可以通过重新组织或重新生成索引来修复索引碎片。 对于基于分区方案生成的已分区索引，可以在完整索引或索引的单个分区上使用下列方法之一。 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 ALL，将删除表中的所有索引，然后在单个事务中重新生成。 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 70
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Fragmentation"></a> 检测碎片  
- 决定使用哪种碎片整理方法的第一步是分析索引以确定碎片程度。 通过使用系统函数 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)，你可以检测特定索引中的碎片、表或索引视图的所有索引、某个数据库中的所有索引或所有数据库中的所有索引。 对于已分区索引，**sys.dm_db_index_physical_stats** 还提供每个分区的碎片信息。  
+ 决定使用哪种碎片整理方法的第一步是分析索引以确定碎片程度。 通过使用系统函数 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)，你可以检测特定索引中的碎片、表或索引视图的所有索引、某个数据库中的所有索引或所有数据库中的所有索引。 对于已分区索引， **sys.dm_db_index_physical_stats** 还提供每个分区的碎片信息。  
   
  由 **sys.dm_db_index_physical_stats** 函数返回的结果集包含以下列。  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 70
   
 |**avg_fragmentation_in_percent** 值|修复语句|  
 |-----------------------------------------------|--------------------------|  
-|> 5% 且 \< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% 且 < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
@@ -103,7 +107,7 @@ caps.handback.revision: 70
 -   对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。
   
 > [!NOTE]
->  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。
+>  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建统计信息。 相反，查询优化器使用默认采样算法来生成统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 CREATE STATISTICS 或 UPDATE STATISTICS 以及 FULLSCAN 子句。
   
 ###  <a name="Security"></a> 安全性  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureFrag"></a> 使用 SQL Server Management Studio  
   
-#### 检查索引的碎片  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
 1.  在“对象资源管理器”中，展开其中包含您要检查索引碎片的表的数据库。  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 70
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要检查碎片的索引，然后选择“属性”。  
+5.  右键单击要检查碎片的索引，然后选择 **“属性”**。  
   
 6.  在 **“选择页”**下，选择 **“碎片”**。  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> 使用 Transact-SQL  
   
-#### 检查索引的碎片  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
@@ -207,7 +211,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureReorg"></a> 使用 SQL Server Management Studio  
   
-#### 重新组织或重新生成索引  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>重新组织或重新生成索引  
   
 1.  在“对象资源管理器”中，展开包含您要重新组织索引的表的数据库。  
   
@@ -217,15 +221,15 @@ caps.handback.revision: 70
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要重新组织的索引，然后选择“重新组织”。  
+5.  右键单击要重新组织的索引，然后选择 **“重新组织”**。  
   
 6.  在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”** 网格中，然后单击 **“确定”**。  
   
-7.  选中“压缩大型对象列数据”复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
+7.  选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
   
-8.  单击“确定” **。**  
+8.  单击 **“确定”**。  
   
-#### 重新组织表中的所有索引  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>重新组织表中的所有索引  
   
 1.  在“对象资源管理器”中，展开包含您要重新组织索引的表的数据库。  
   
@@ -233,15 +237,15 @@ caps.handback.revision: 70
   
 3.  展开要为其重新组织索引的表。  
   
-4.  右键单击“索引”文件夹，然后选择“全部重新组织”。  
+4.  右键单击 **“索引”** 文件夹，然后选择 **“全部重新组织”**。  
   
 5.  在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”**中。 若要从 **“要重新组织的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
-6.  选中“压缩大型对象列数据”复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
+6.  选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
   
-7.  单击“确定” **。**  
+7.  单击 **“确定”**。  
   
-#### 重新生成索引  
+#### <a name="to-rebuild-an-index"></a>重新生成索引  
   
 1.  在“对象资源管理器”中，展开包含您要重新组织索引的表的数据库。  
   
@@ -251,17 +255,17 @@ caps.handback.revision: 70
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要重新组织的索引，然后选择“重新组织”。  
+5.  右键单击要重新组织的索引，然后选择 **“重新组织”**。  
   
 6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   
-7.  选中“压缩大型对象列数据”复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
+7.  选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。  
   
 8.  单击“确定” **。**  
   
 ##  <a name="TsqlProcedureReorg"></a> 使用 Transact-SQL  
   
-#### 重新组织碎片索引  
+#### <a name="to-reorganize-a-defragmented-index"></a>重新组织碎片索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### 重新组织表中的所有索引  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>重新组织表中的所有索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### 重新生成碎片索引  
+#### <a name="to-rebuild-a-defragmented-index"></a>重新生成碎片索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### 重新生成表中的所有索引  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>重新生成表中的所有索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft SQL Server 2000 索引碎片整理最佳实践](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

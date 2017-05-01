@@ -1,30 +1,34 @@
 ---
 title: "生成内联 XSD 架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 架构 [SQL Server]"
-  - "XMLSCHEMA 选项"
-  - "架构 [SQL Server], XML"
-  - "XDR 架构"
-  - "FOR XML 子句, 内联 XSD 架构生成"
-  - "内联 XSD 架构生成 [SQL Server]"
-  - "XMLDATA 选项"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# 生成内联 XSD 架构
+# <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
   在 FOR XML 子句中，可以请求在查询返回查询结果的同时返回一个内联架构。 如果需要 XDR 架构，可以在 FOR XML 子句中使用 XMLDATA 关键字。 如果需要 XSD 架构，可以使用 XMLSCHEMA 关键字。  
   
  本主题将介绍 XMLSCHEMA 关键字并解释所产生的内联 XSD 架构的结构。 下面是您请求返回内联架构时的一些限制：  
@@ -81,7 +85,7 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## 实体元素  
+## <a name="entity-elements"></a>实体元素  
  为了讨论为查询结果生成的 XSD 架构结构的详细信息，必须首先介绍实体元素。  
   
  由 FOR XML 查询返回的 XML 数据中的实体元素是从表而不是从列生成的。 例如，下列 FOR XML 查询将返回 `Person` 数据库的 `AdventureWorks2012` 表中的联系人信息。  
@@ -159,7 +163,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>、<`ProductID`> 和 <`OrderQty`> 不是实体元素，因为它们映射到一些列。 由于指定了 ELEMENTS 指令，列数据将作为 XML 中的元素返回。 它们被映射到实体元素的复杂类型的本地元素。 请注意，如果没有指定 ELEMENTS 指令，则 `SalesOrderID`、 `ProductID` 和 `OrderQty` 值将被映射到相应实体元素的复杂类型的本地属性。  
   
-## 属性名称冲突  
+## <a name="attribute-name-clashes"></a>属性名称冲突  
  下面的论述基于 `CustOrder` 和 `CustOrderDetail` 表。 若要测试下列示例，请创建这些表并添加自己的示例数据：  
   
 ```  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## 元素名称冲突  
+## <a name="element-name-clashes"></a>元素名称冲突  
  在 FOR XML 中，同一个名称可以用来表示两个子元素。 例如，下面的查询将检索产品的 ListPrice 和 DealerPrice 值，但为这两列指定了同一别名 (Price)。 因此，产生的行集将具有名称相同的两列。  
   
-### 情况 1：两个子元素是相同类型的非键列而且可以为 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>情况 1：两个子元素是相同类型的非键列而且可以为 NULL  
  在下面的查询中，两个子元素是相同类型的非键列而且可以为 NULL。  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### 情况 2：相同类型的一个键列和一个非键列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>情况 2：相同类型的一个键列和一个非键列  
  下面的查询说明了相同类型的一个键列和一个非键列。  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意，在内联 XSD 架构中，对应于 Col2 的 <`Col`> 元素的 minOccurs 被设置为 0。  
   
-### 情况 3：两个不同类型的元素而且对应的列可以为 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>情况 3：两个不同类型的元素而且对应的列可以为 NULL  
  对情况 2 中显示的示例表进行下面的查询：  
   
 ```  

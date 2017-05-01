@@ -1,34 +1,38 @@
 ---
 title: "分发服务器信息，代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分发服务器信息，代理
+# <a name="distributor-information-agents"></a>分发服务器信息，代理
   **“代理”** 选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
   
  在分发服务器视图中分发服务器的 **“代理”** 选项卡中可用的代理包括在发布服务器的 **“代理”** 选项卡中可用的所有代理。 不过，分发服务器视图中分发服务器的 **“代理”** 选项卡还包括一个分发服务器代理和一个合并代理。  
   
  有关快照代理、日志读取器代理和队列读取器代理的详细信息，请参阅 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)。 请注意，当您查看分发服务器的 **“代理”** 选项卡上的代理信息时，将提供快照代理和日志读取器代理的发布服务器信息。 不过，在分发服务器视图中分发服务器的 **“代理”** 选项卡中，您还可以选择 **“分发服务器代理”** 和 **“合并代理”**。  
   
-## 选项  
+## <a name="options"></a>选项  
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
-### 分发服务器代理  
+### <a name="distributor-agent"></a>“分发服务器代理”  
  **状态**  
  此代理的状态。 下面列出了可能的状态值：  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  与此代理关联的发布的名称。  
   
  **订阅**  
- 订阅，请在窗体的名称: [*SubscriberName*]。 [*数据库*]。  
+ 订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
  **类型**  
  复制的类型：推送、请求或匿名。  
@@ -69,16 +73,16 @@ caps.handback.revision: 13
  **滞后时间**  
  从在发布数据库中提交最近的更改到在分发数据库中提交对应的命令经过的时间，以秒为单位。  
   
- **#Trans**  
+ **事务数**  
  在此代理最近一次运行期间分发数据库中提交的事务数。  
   
- **#传送的命令**  
+ **命令数**  
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令与一次数据更改（如一次更新）相同。  
   
- **Avg. #传送的命令**  
+ **平均命令数**  
  在此代理最近一次运行期间平均每个事务的命令数。  
   
-### 合并代理  
+### <a name="merge-agent"></a>“合并代理”  
  **状态**  
  此代理的状态。 下面列出了可能的状态值：  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  与此代理关联的发布的名称。  
   
  **订阅**  
- 订阅，请在窗体的名称: [*SubscriberName*]。 [*数据库*]。  
+ 订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
  **类型**  
  复制的类型：推送、请求或匿名。  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **订阅服务器冲突**  
  合并过程中订阅服务器上发生的冲突数。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看信息并为发布服务器和 #40; 执行任务复制监视器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

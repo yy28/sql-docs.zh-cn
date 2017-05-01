@@ -1,27 +1,31 @@
 ---
-title: "“方面属性”对话框，“常规”页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.facet.f1"
+title: "“方面属性”对话框 -“常规”页 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f24b841c847197059229eebc521037f03c1e582
+ms.lasthandoff: 04/11/2017
+
 ---
-# “方面属性”对话框，“常规”页
+# <a name="facet-properties-dialog-box-general-page"></a>“方面属性”对话框，“常规”页
   此对话框用于查看基于策略的管理方面的属性。 每个方面可应用于一个或多个目标类型，例如，服务器、数据库或表。 可以使用此页来查看与此方面有关的目标类型。 方面属性是在创建方面时定义的，无法使用此页来更改这些属性。  
   
-## 选项  
+## <a name="options"></a>选项  
  **说明**  
  提供方面的常规说明。  
   
@@ -31,7 +35,7 @@ caps.handback.revision: 21
  **属性**  
  显示每个方面属性的名称和说明。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

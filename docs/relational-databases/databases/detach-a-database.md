@@ -1,28 +1,32 @@
 ---
 title: "分离数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "数据库分离 [SQL Server]"
-  - "分离数据库 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.detachdatabase.f1
+helpviewer_keywords:
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分离数据库
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中分离数据库。 分离的文件将会予以保留，并且可以使用带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项的 CREATE DATABASE 重新附加它们。 这些文件可以移动并附加到其他服务器上。  
+# <a name="detach-a-database"></a>分离数据库
+  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中分离数据库。 分离的文件将会予以保留，并且可以使用带有 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 选项的 CREATE DATABASE 重新附加它们。 这些文件可以移动并附加到其他服务器上。  
   
  **本主题内容**  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- 有关限制和局限的列表，请参阅[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
+ 有关限制和局限的列表，请参阅 [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)中分离数据库。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 36
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 分离数据库  
+#### <a name="to-detach-a-database"></a>分离数据库  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
      **要分离的数据库**  
      列出要分离的数据库。  
   
-     **数据库名称**  
+     **Database Name**  
      显示要分离的数据库的名称。  
   
      **删除连接**  
@@ -74,13 +78,13 @@ caps.handback.revision: 36
      默认情况下，分离操作将在分离数据库时保留过期的优化统计信息；若要更新现有的优化统计信息，请单击此复选框。  
   
      **保留全文目录**  
-     默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除它们，请清除“保留全文目录”复选框。 只有从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级数据库时，才会显示此选项。  
+     默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **状态**  
-     显示以下状态之一：“就绪”或“未就绪”。  
+     显示以下状态之一： **“就绪”** 或 **“未就绪”**。  
   
      **消息**  
-     “消息”列可显示关于数据库的如下信息：  
+     **“消息”** 列可显示关于数据库的如下信息：  
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 分离数据库  
+#### <a name="to-detach-a-database"></a>分离数据库  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 36
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

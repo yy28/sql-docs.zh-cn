@@ -1,27 +1,31 @@
 ---
 title: "段落还原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部分更新 [SQL Server]"
-  - "分阶段还原 [SQL Server]"
-  - "段落还原 [SQL Server]"
-  - "还原 [SQL Server], 段落还原方案"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 段落还原 (SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
   本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
  有关段落还原和内存优化表的信息，请参阅[对具有内存优化表的数据库进行段落还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
@@ -38,7 +42,7 @@ caps.handback.revision: 74
   
  执行段落还原的精确要求取决于数据库的恢复模式。 有关详细信息，请参阅本主题后面的“简单恢复模式下的段落还原”和“完整恢复模式下的段落还原”。  
   
-## 段落还原方案  
+## <a name="piecemeal-restore-scenarios"></a>段落还原方案  
  所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都支持脱机段落还原。 在 Enterprise Edition 中，段落还原可以联机进行也可以脱机进行。 脱机和联机段落还原的含义如下：  
   
 -   脱机段落还原方案  
@@ -49,16 +53,16 @@ caps.handback.revision: 74
   
      在进行联机段落还原时，数据库在部分还原顺序后处于联机状态，并且主文件组和所有已恢复的辅助文件组都处于可用状态。 尚未还原的文件组保持脱机状态，但是在数据库保持联机状态时，可以根据需要还原这些文件组。  
   
-     联机段落还原可能引起事务延迟。 如果仅还原了一部分文件组，则数据库中依赖联机文件组的事务可能会延迟。 这是正常现象，因为整个数据库必须一致。 有关详细信息，请参阅[延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
+     联机段落还原可能引起事务延迟。 如果仅还原了一部分文件组，则数据库中依赖联机文件组的事务可能会延迟。 这是正常现象，因为整个数据库必须一致。 有关详细信息，请参阅 [延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)中删除失效的文件组。  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 段落还原方案  
   
-     有关内存中 OLTP 数据库的段落还原信息，请参阅[对具有内存优化表的数据库进行段落备份和还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
+     有关内存中 OLTP 数据库的段落还原信息，请参阅 [对具有内存优化表的数据库进行段落备份和还原](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)。  
   
-## 限制  
+## <a name="restrictions"></a>限制  
  如果部分还原顺序不包括任何 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) 文件组，则不支持时间点还原。 可以强制该还原顺序以继续执行操作。 但在 RESTORE 语句中省略的 FILESTREAM 文件组将永远无法还原。 若要强制执行时点还原，请指定 CONTINUE_AFTER_ERROR 选项以及 STOPAT、STOPATMARK 或 STOPBEFOREMARK 选项，还必须在随后的 RESTORE LOG 语句中指定后面的三个选项。 如果指定 CONTINUE_AFTER_ERROR，则部分还原顺序将成功，但 FILESTREAM 文件组将不可恢复。  
   
-## 简单恢复模式下的段落还原  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>简单恢复模式下的段落还原  
  在简单恢复模式下，段落还原顺序必须从完整数据库备份或部分备份开始。 随后，如果还原的备份为差异基准，则接着还原最新差异备份。  
   
  在第一个部分还原顺序期间，如果您仅还原读/写文件组的一个子集，当您恢复部分还原的数据库时，未还原的文件组会失效。 从部分还原顺序中省略一个读/写文件组仅适用于下列情况：  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   完整备份是在数据库使用简单恢复模式时进行的，但恢复点却位于数据库使用完整恢复模式的某个时刻。 有关详细信息，请参阅本主题后面的“执行已从简单恢复模式切换到完整恢复模式的数据库段落还原”。  
   
-### 简单恢复模式下的段落还原要求  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>简单恢复模式下的段落还原要求  
  在简单恢复模式下，初始阶段还原并恢复主文件组和所有读/写辅助文件组。 在初始阶段结束后，如果恢复的文件有效并且与数据库一致，则恢复的文件将直接变为联机状态。  
   
  随后，可以在一个或多个其他阶段中还原只读文件组。  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   从备份开始直到包含主文件组的备份完成为止，辅助文件组必须始终为只读，才能使只读文件的备份与主文件组保持一致。 如果差异文件备份是在文件组变为只读状态之后进行的，则可以使用差异文件备份。  
   
-### 段落还原阶段（简单恢复模式）  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>段落还原阶段（简单恢复模式）  
  段落还原方案包括下列阶段：  
   
 -   初始阶段（还原并恢复主文件组和所有读/写文件组）  
@@ -116,13 +120,13 @@ caps.handback.revision: 74
   
     -   恢复文件之前，必须先还原已损坏的或与数据库不一致的文件。  
   
-### 示例  
+### <a name="examples"></a>示例  
   
 -   [示例：数据库的段落还原（简单恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [示例：仅对某些文件组进行段落还原（简单恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## 完整恢复模式下的段落还原  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>完整恢复模式下的段落还原  
  在完整恢复模式或大容量日志恢复模式下，任何包含多个文件组的数据库都可以使用段落还原，并且可以将数据库还原到任何时间点。 段落还原的还原顺序如下：  
   
 -   部分还原顺序  
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      在 Enterprise Edition 中，当数据库保持联机状态时，可还原和恢复任何脱机辅助文件组。 如果特定只读文件未损坏且与数据库一致，则该文件无需还原。 有关详细信息，请参阅[恢复数据库而不还原数据 (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
-### 应用日志备份  
+### <a name="applying-log-backups"></a>应用日志备份  
  如果在文件备份创建之前，只读文件组就已处于只读状态，则该文件组无需应用日志备份，并且文件还原会跳过日志备份的应用过程。 如果文件组是读/写文件组，则必须将未中断的日志备份链应用于上一次完整还原或差异还原，文件组才能前进到当前的日志文件。  
   
-### 示例  
+### <a name="examples"></a>示例  
   
 -   [示例：数据库的段落还原（完整恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [示例：仅对某些文件组进行段落还原（完整恢复模式）](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## 执行已从简单恢复模式切换到完整恢复模式的数据库段落还原  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>执行已从简单恢复模式切换到完整恢复模式的数据库段落还原  
  可以对自完整或部分数据库备份后已从简单恢复模式切换到完整恢复模式的数据库执行段落还原。 例如，假设要对某个数据库执行下列步骤：  
   
 1.  创建简单模式数据库的一个部分备份 (backup_1)。  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  后面跟有在原始段落还原顺序中还原的用于将数据还原到原始恢复点的任何其他备份的差异备份。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [计划和执行还原顺序（完整恢复模式）](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

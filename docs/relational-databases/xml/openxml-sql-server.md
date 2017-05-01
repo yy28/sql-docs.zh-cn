@@ -1,35 +1,39 @@
 ---
-title: "OPENXML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [SQL Server 中的 XML]"
-  - "OPENXML 语句, 关于 OPENXML 语句"
-  - "编写 XML, OPENXML 语句"
-  - "OPENXML 语句, 查询 XML"
-  - "以属性为中心的映射"
-  - "SELECT 语句 [SQL Server], OPENXML 关键字"
-  - "列模式 [SQL Server 中的 XML]"
-  - "行模式 [SQL Server 中的 XML]"
-  - "rowpattern [SQL Server 中的 XML]"
-  - "查询 [SQL Server 中的 XML], OPENXML 语句"
-  - "XML [SQL Server], OPENXML 语句"
-  - "以元素为中心的映射 [SQL Server]"
+title: OPENXML (SQL Server) | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- OPENXML statement, about OPENXML statement
+- writing XML, OPENXML statement
+- OPENXML statement, querying XML
+- attribute-centric mapping
+- SELECT statement [SQL Server], OPENXML keyword
+- column patterns [XML in SQL Server]
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- queries [XML in SQL Server], OPENXML statement
+- XML [SQL Server], OPENXML statement
+- element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
+ms.lasthandoff: 04/11/2017
+
 ---
-# OPENXML (SQL Server)
+# <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
   
  无论行集提供程序（视图或 OPENROWSET）可以在何处作为源出现，都可以在 SELECT 和 SELECT INTO 语句中使用 OPENXML。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
@@ -43,17 +47,17 @@ caps.handback.revision: 43
   
  下图说明了该过程。  
   
- ![Parsing XML with OPENXML](../../relational-databases/xml/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![使用 OPENXML 分析 XML](../../relational-databases/xml/media/xmlsp.gif "使用 OPENXML 分析 XML")  
   
- 请注意，要理解 OPENXML，需要熟悉 XPath 查询并理解 XML。 有关 SQL Server 中 XPath 支持的详细信息，请参阅[在 SQLXML 4.0 中使用 XPath 查询](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)。  
+ 请注意，要理解 OPENXML，需要熟悉 XPath 查询并理解 XML。 有关 SQL Server 中 XPath 支持的详细信息，请参阅 [在 SQLXML 4.0 中使用 XPath 查询](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)。  
   
 > [!NOTE]  
 >  OPENXML 允许将行和列的 XPath 模式参数化为变量。 如果程序员向外部用户公开参数化（例如通过外部调用的存储过程提供参数），这种参数化可能会导致引入 XPath 表达式。 为了避免这种潜在的安全问题，建议切勿向外部调用方公开 XPath 参数。  
   
-## 示例  
+## <a name="example"></a>示例  
  `OPENXML` 下面的示例说明了如何在 `INSERT` 语句和 `SELECT` 语句中使用 。 `<Customers>` 示例 XML 文档包含 `<Orders>` 和  元素。  
   
- 首先，`sp_xml_preparedocument` 存储过程分析 XML 文档。 分析后的文档是 XML 文档中各节点（元素、属性、文本和注释）的树状表示形式。 `OPENXML` 然后， 引用此经过分析的 XML 文档，并提供此 XML 文档全部或部分内容的行集视图。 `INSERT` 使用 `OPENXML` 的  语句可将数据从这样的行集插入数据库表中。 `OPENXML` 可以使用多个  调用来提供 XML 文档中各部分的行集视图，并对它们进行处理，例如，将它们插入不同的表中。 此过程也称为“将 XML 拆分到表中”。  
+ 首先， `sp_xml_preparedocument` 存储过程分析 XML 文档。 分析后的文档是 XML 文档中各节点（元素、属性、文本和注释）的树状表示形式。 `OPENXML` 然后， 引用此经过分析的 XML 文档，并提供此 XML 文档全部或部分内容的行集视图。 `INSERT` 使用 `OPENXML` 的  语句可将数据从这样的行集插入数据库表中。 `OPENXML` 可以使用多个  调用来提供 XML 文档中各部分的行集视图，并对它们进行处理，例如，将它们插入不同的表中。 此过程也称为“将 XML 拆分到表中”。  
   
  `<Customers>` 在下面的示例中，拆分 XML 文档的方式是使用两个 `Customers` 语句，将 `<Orders>` 元素存储在 `Orders` 表中，将 `INSERT` 元素存储在  表中。 `SELECT` 另外，此例还说明了 `OPENXML` 语句如何使用 `CustomerID` 从 XML 文档中检索 `OrderDate` 和 。 `sp_xml_removedocument`该过程的最后一步是调用 。 这样做是为了释放已分配的内存，以包含在分析阶段创建的内部 XML 树表示形式。  
   
@@ -97,7 +101,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  ![经过分析的 XML 树](../../relational-databases/xml/media/xmlparsedtree.gif "经过分析的 XML 树")  
   
-## OPENXML 参数  
+## <a name="openxml-parameters"></a>OPENXML 参数  
  OPENXML 的参数包括：  
   
 -   XML 文档句柄 (*idoc*)  
@@ -108,18 +112,18 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   行集列和 XML 节点之间的映射  
   
-### XML 文档句柄 (idoc)  
+### <a name="xml-document-handle-idoc"></a>XML 文档句柄 (idoc)  
  **sp_xml_preparedocument** 存储过程返回该文档句柄。  
   
-### 标识要处理的节点的 XPath 表达式 (rowpattern)  
+### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
   
  XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。  例如，如果 *rowpattern*以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
   
-### 对要生成的行集的说明  
+### <a name="description-of-the-rowset-to-be-generated"></a>对要生成的行集的说明  
  OPENXML 使用行集架构来生成结果行集。 指定行集架构时，可以使用下列选项。  
   
-#### 使用边缘表格式  
+#### <a name="using-the-edge-table-format"></a>使用边缘表格式  
  应使用边缘表格式来指定行集架构。 请勿使用 WITH 子句。  
   
  否则，OPENXML 将以边缘表格式返回行集。 边缘表这种称谓源于已分析的 XML 文档树中的每个边缘都映射到行集中的一行。  
@@ -148,18 +152,18 @@ EXEC sp_xml_removedocument @docHandle;
 |**prev**|**bigint**|前一个同级元素的 XML ID。 如果前面没有同级元素，则为 NULL。|  
 |**text**|**ntext**|包含文本形式的属性值或元素内容。 如果边缘表项不需要值则为 NULL。|  
   
-#### 使用 WITH 子句指定现有表  
+#### <a name="using-the-with-clause-to-specify-an-existing-table"></a>使用 WITH 子句指定现有表  
  可以使用 WITH 字句指定现有表的名称。 若要执行此操作，只需指定现有的表名称，OPENXML 可以使用该表的架构生成行集。  
   
-#### 使用 WITH 子句指定架构  
+#### <a name="using-the-with-clause-to-specify-a-schema"></a>使用 WITH 子句指定架构  
  可以使用 WITH 子句指定完整架构。 在指定行集架构时，可指定列名、它们的数据类型，以及它们到 XML 文档的映射。  
   
  可以使用 SchemaDeclaration 中的 ColPattern 参数来指定列模式。 指定的列模式用于将行集列映射到 rowpattern 标识的 XML 节点并确定映射类型。  
   
  *flags* 如果没有为列指定 ColPattern，则行集列根据  参数指定的映射来映射到具有相同名称的 XML 节点。 *flags* 但是，如果在 WITH 子句中将 ColPattern 指定为架构描述的一部分，则它将覆盖在  参数中指定的映射。  
   
-### 行集列和 XML 节点之间的映射  
- 在 OPENXML 语句中，可以选择指定行集列和 *rowpattern* 标识的 XML 节点之间的映射类型（如以属性为中心或以元素为中心）。 此信息用于 XML 节点和行集列之间的转换。  
+### <a name="mapping-between-the-rowset-columns-and-the-xml-nodes"></a>行集列和 XML 节点之间的映射  
+ 在 OPENXML 语句中，可以选择指定行集列和 *rowpattern*标识的 XML 节点之间的映射类型（如以属性为中心或以元素为中心）。 此信息用于 XML 节点和行集列之间的转换。  
   
  可以采用下列两种方式之一来指定映射，也可以同时采用来指定映射：  
   
@@ -171,31 +175,31 @@ EXEC sp_xml_removedocument @docHandle;
   
      *ColPattern*是 XPath 表达式，被指定为 WITH 子句中的 *SchemaDeclaration* 的一部分。  在 *ColPattern* 中指定的映射覆盖 flags 参数指定的映射。  
   
-     *ColPattern* 可以用于指定映射类型（如以属性为中心或以元素为中心），以覆盖或增强 *flags* 指定的默认映射。  
+     *ColPattern* 可以用于指定映射类型（如以属性为中心或以元素为中心），以覆盖或增强 *flags*指定的默认映射。  
   
       在下列情况下指定 ColPattern：  
   
     -   行集中的列名不同于它映射到的元素名称或属性名称。  在这种情况下，ColPattern 用于标识行集列映射到的 XML 元素名称和属性名称。  
   
-    -   希望将元属性特性映射到列。  在这种情况下，ColPattern 用于标识行集列映射到的元属性。 有关如何使用元属性的详细信息，请参阅[在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+    -   希望将元属性特性映射到列。  在这种情况下，ColPattern 用于标识行集列映射到的元属性。 有关如何使用元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
  *flags* 和 *ColPattern* 参数都是可选的。 如果未指定映射，则采用以属性为中心的映射。 以属性为中心的映射是 *flags* 参数的默认值。  
   
-#### 以属性为中心的映射  
- 将 OPENXML 中的 *flags* 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。 如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
+#### <a name="attribute-centric-mapping"></a>以属性为中心的映射  
+  将 OPENXML 中的 **flags** 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。 如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
   
   如果列名不同于它映射到的属性名称，则必须指定 ColPattern。  
   
  如果 XML 属性具有命名空间限定符，则行集中的列名也必须有该限定符。  
   
-#### 以元素为中心的映射  
- 将 OPENXML 中的 *flags* 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。 除了下列差异外，它与“以属性为中心”的映射相似：  
+#### <a name="element-centric-mapping"></a>以元素为中心的映射  
+  将 OPENXML 中的 **flags** 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。  除了下列差异外，它与“以属性为中心”的映射相似：  
   
 -   除非指定列级模式，否则映射的名称对应（例如，映射到具有相同名称的 XML 元素的列）选择不复杂的子元素。 在检索过程中，如果子元素复杂（因为它包含其他子元素），则将列设置为 NULL。 然后忽略子元素的属性值。  
   
 -   对于具有相同名称的多个子元素，将返回第一个节点。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_xml_preparedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)   

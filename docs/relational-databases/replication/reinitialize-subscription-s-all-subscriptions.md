@@ -1,29 +1,33 @@
 ---
 title: "重新初始化订阅 - 所有订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.reinit.all.f1"
-helpviewer_keywords: 
-  - "“重新初始化订阅”对话框"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.reinit.all.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c59e203ad41b511bb82c066d11575006711965d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重新初始化订阅 - 所有订阅
-   **重新初始化订阅** 对话框中，您可以将标记为要重新初始化发布的所有订阅。 重新初始化涉及向每个订阅服务器应用快照；对于事务发布的订阅，这是由分发代理执行的，而对于合并发布的订阅，这是由合并代理执行的。  
+# <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化订阅 - 所有订阅
+  使用 **“重新初始化订阅”** 对话框，可以将发布的所有订阅都标记为需要重新初始化。 重新初始化涉及向每个订阅服务器应用快照；对于事务发布的订阅，这是由分发代理执行的，而对于合并发布的订阅，这是由合并代理执行的。  
   
-## 选项  
+## <a name="options"></a>选项  
  **使用当前快照**  
  选择此选项可以在下一次为订阅运行分发代理或合并代理时将当前快照应用于每个订阅服务器。 如果无法获得有效快照，将无法选定此选项。  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
  **标记为要重新初始化**  
  单击此项可以将每个订阅标记为需要重新初始化。 在可以获得有效快照后，下次为订阅运行分发代理或合并代理时，该快照将应用在订阅服务器上。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [重新初始化订阅](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

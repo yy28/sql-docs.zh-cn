@@ -1,29 +1,33 @@
 ---
 title: "第 1 课：使用合并复制发布数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "复制 [SQL Server], 教程"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b1bbad6626f6270ab555c18b49d436eadfd0dff
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 1 课：使用合并复制发布数据
-在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布 **Employee**、**SalesOrderHeader** 和 **SalesOrderDetail** 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程，[准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)的学习。  
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 课：使用合并复制发布数据
+在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 **示例数据库中发布**Employee **、**SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)的学习。  
   
-### 创建发布和定义项目  
+### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -84,13 +88,13 @@ caps.handback.revision: 20
   
 21. 选中“立即创建快照”，清除“计划在以下时间运行快照代理”，然后单击“下一步”。  
   
-22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 <Machine_Name>**\repl_snapshot**，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
+22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 \<*Machine_Name>***\repl_snapshot**，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
   
 23. 在“完成该向导”页的“发布名称”框中，输入 **AdvWorksSalesOrdersMerge**，然后单击“完成”。  
   
 24. 创建发布后，单击“关闭”。  
   
-### 查看快照的生成状态  
+### <a name="to-view-the-status-of-snapshot-generation"></a>查看快照的生成状态  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 20
   
 3.  将显示该发布的快照代理作业的当前状态。 继续下一课之前，请确保快照作业已成功完成。  
   
-### 将合并代理登录名添加到 PAL  
+### <a name="to-add-the-merge-agent-login-to-the-pal"></a>将合并代理登录名添加到 PAL  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后依次展开服务器节点和“复制”文件夹。  
   
@@ -110,13 +114,14 @@ caps.handback.revision: 20
   
 4.  在“添加发布访问项”对话框中，选择 Machine_Name**\repl_merge**，然后单击“确定”。 单击 **“确定”**。  
   
-## 后续步骤  
-您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅[第 2 课：创建合并发布订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
+## <a name="next-steps"></a>后续步骤  
+您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建合并发布订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)  
-[参数化行筛选器](../../relational-databases/replication/merge/parameterized-row-filters.md)  
+[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [定义项目](../../relational-databases/replication/publish/define-an-article.md)  
   
   
   
+

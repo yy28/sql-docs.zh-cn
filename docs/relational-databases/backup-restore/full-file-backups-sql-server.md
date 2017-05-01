@@ -1,31 +1,35 @@
 ---
 title: "完整文件备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "完整备份 [SQL Server]"
-  - "备份 [SQL Server], 文件或文件组"
-  - "备份 [SQL Server], 文件或文件组"
-  - "完整恢复模式 [SQL Server], 完整文件备份"
-  - "文件备份 [SQL Server], 完整"
-  - "文件 [SQL Server], 备份"
-  - "文件组 [SQL Server], 备份"
-  - "文件备份 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backing up [SQL Server], files or filegroups
+- backups [SQL Server], files or filegroups
+- full recovery model [SQL Server], full file backups
+- file backups [SQL Server], full
+- files [SQL Server], backing up
+- filegroups [SQL Server], backing up
+- file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
+ms.lasthandoff: 04/11/2017
+
 ---
-# 完整文件备份 (SQL Server)
+# <a name="full-file-backups-sql-server"></a>完整文件备份 (SQL Server)
   本主题适用于包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
  可以分别备份和还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的文件。 此外，可以指定整个文件组，而不是逐个指定每个构成文件。 请注意，如果文件组中的任何文件脱机（例如，由于正在还原该文件），则整个文件组均将脱机并且无法备份。  
@@ -72,10 +76,10 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  单个文件可以从数据库备份中还原；但与从文件备份中还原相比，从数据库备份中找到和还原文件所需的时间更长。  
   
-### 文件备份和简单恢复模式  
+### <a name="file-backups-and-the-simple-recovery-model"></a>文件备份和简单恢复模式  
  在简单恢复模式下，必须一起备份所有读/写文件。 这样可以确保将数据库还原到一致的时点。 请使用 READ_WRITE_FILEGROUPS 选项，而不是逐个指定每个读/写文件或文件组。 此选项用于备份数据库中的所有读/写文件组。 通过指定 READ_WRITE_FILEGROUPS 创建的备份称为部分备份。 有关详细信息，请参阅[部分备份 (SQL Server)](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
   
-### 文件备份和完全恢复模式  
+### <a name="file-backups-and-the-full-recovery-model"></a>文件备份和完全恢复模式  
  在完整恢复模式下，必须备份事务日志，不用考虑备份策略的其余部分。 一整套完整文件备份与涵盖从第一个文件备份开始的所有文件备份的足够日志备份合起来等同于完整数据库备份。  
   
  仅使用文件备份和日志备份还原数据库的操作可能比较复杂。 因此，如果可能，最好执行完整数据库备份并在第一个文件备份开始之前开始日志备份。 下图显示了在创建数据库（在 t0 时间）之后立即执行完整数据库备份（在 t1 时间）的策略。 创建了第一个数据库备份之后，便可开始执行事务日志备份。 事务日志备份计划按设置的间隔执行。 文件备份以最适合数据库业务要求的间隔执行。 此图显示了四个文件组，每次备份其中的一个文件组。 它们的备份顺序（A、C、B、A）反映了数据库的业务要求。  
@@ -83,7 +87,7 @@ caps.handback.revision: 62
  ![合并数据库、文件和日志备份的策略](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "合并数据库、文件和日志备份的策略")  
   
 > [!NOTE]  
->  在完整恢复模式下，必须在还原读/写文件备份时前滚事务日志，以确保该文件与数据库的其余部分保持一致。 若要避免前滚大量事务日志备份，请考虑使用差异文件备份。 有关详细信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+>  在完整恢复模式下，必须在还原读/写文件备份时前滚事务日志，以确保该文件与数据库的其余部分保持一致。 若要避免前滚大量事务日志备份，请考虑使用差异文件备份。 有关详细信息，请参阅 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **创建文件或文件组备份**  
@@ -95,7 +99,7 @@ caps.handback.revision: 62
 > [!NOTE]  
 >  维护计划向导不支持文件备份。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [备份和还原：互操作性和共存 (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

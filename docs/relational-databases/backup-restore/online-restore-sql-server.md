@@ -1,25 +1,29 @@
 ---
 title: "联机还原 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "联机还原 [SQL Server]"
-  - "联机还原 [SQL Server], 关于联机还原"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online restores [SQL Server]
+- online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66c1f5169f8978d05f34b19536af54964c3057d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 联机还原 (SQL Server)
+# <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
  数据库联机时还原数据的过程称为“联机还原” 。 只要主文件组处于联机状态，就将数据库视为联机，即使有一个或多个辅助文件组处于脱机状态。 在任何恢复模式下，您都可以在数据库联机时还原处于脱机状态的文件。 在完整恢复模式下，您还可以在数据库联机时还原页。  
@@ -44,9 +48,9 @@ caps.handback.revision: 45
 >  如果创建备份时有多个设备连接到服务器，则联机还原期间，可用设备数必须相同。  
   
 > [!CAUTION]  
->  使用快照备份时，不能执行 **Online Restore**。 有关**快照备份**的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+>  使用快照备份时，不能执行 **Online Restore**。 有关 **快照备份**的详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
-## 联机还原所需的日志备份  
+## <a name="log-backups-for-online-restore"></a>联机还原所需的日志备份  
  对于联机还原，恢复点就是要恢复的数据最后一次变为脱机或只读时的点。 截止到该恢复点（包括该恢复点）的事务日志备份都必须是可用的。 通常在该点后都需要日志备份，以覆盖文件的恢复点。 唯一的例外情况是在使用当数据变为只读后执行的数据备份对只读数据进行联机还原的时候。 在这种情况下，不必准备日志备份。  
   
  通常，即使在启动还原顺序之后，您也可以在数据库联机时执行事务日志备份。 上次日志备份的时间取决于要还原的文件的属性：  
@@ -56,7 +60,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  以上信息也适用于所有脱机文件。  
   
--   值得注意的特殊情况是这样一种读写文件：在执行第一个还原语句时处于联机状态，然后被该还原语句自动变为脱机的读写文件。 在这种情况下，必须在第一个*还原顺序*（用于还原、前滚和恢复数据的一个或多个 RESTORE 语句的顺序）期间执行日志备份。 通常，必须在还原所有完整备份之后并在恢复数据之前执行日志备份。 但是，如果特定的文件组有多个文件备份，则最小的日志备份点为文件组脱机的时候。 这个数据还原后的日志备份将捕获文件变为脱机时的点。 数据还原后的日志备份是必要的，因为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]无法将联机日志用于联机还原。  
+-   值得注意的特殊情况是这样一种读写文件：在执行第一个还原语句时处于联机状态，然后被该还原语句自动变为脱机的读写文件。 在这种情况下，必须在第一个 *还原顺序* （用于还原、前滚和恢复数据的一个或多个 RESTORE 语句的顺序）期间执行日志备份。 通常，必须在还原所有完整备份之后并在恢复数据之前执行日志备份。 但是，如果特定的文件组有多个文件备份，则最小的日志备份点为文件组脱机的时候。 这个数据还原后的日志备份将捕获文件变为脱机时的点。 数据还原后的日志备份是必要的，因为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 无法将联机日志用于联机还原。  
   
     > [!NOTE]  
     >  或者，也可以在开始还原顺序前手动使文件脱机。 有关详细信息，请参阅本主题后面的“使数据库或文件脱机”。  
@@ -74,7 +78,7 @@ caps.handback.revision: 45
   
  只要数据库保持脱机状态，所有还原就都是脱机还原。  
   
-## 示例  
+## <a name="examples"></a>示例  
   
 > [!NOTE]  
 >  联机还原顺序的语法与脱机还原顺序的语法完全相同。  
@@ -105,7 +109,7 @@ caps.handback.revision: 45
   
 -   [删除失效文件组 (SQL Server)](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   

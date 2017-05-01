@@ -1,24 +1,28 @@
 ---
 title: "发布服务器信息，代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 发布服务器信息，代理
+# <a name="publisher-information-agents"></a>发布服务器信息，代理
   **“代理”** 选项卡显示与发布服务器关联的代理和维护作业的相关信息：  
   
 -   快照代理，为所有发布显示。  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   过期的订阅清除  
   
- 有关这些作业的详细信息，请参阅 [复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
+ 有关这些作业的详细信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
-## 选项  
- 若要显示有关代理或作业的信息，请选择从 **代理和作业类型** 下拉菜单。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
+## <a name="options"></a>选项  
+ 若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  以下各节说明了此选项卡上为每个代理或作业显示的数据。  
   
-### 快照代理  
+### <a name="snapshot-agent"></a>快照代理  
  **状态**  
  此代理的状态。 下面列出了可能的状态值：  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **传送速率**  
  在此代理最近一次运行期间分发数据库中提交初始化命令的速率，以每秒的命令数表示。  
   
- **#Trans**  
+ **事务数**  
  在此代理最近一次运行期间分发数据库中提交的事务数。  
   
- **#传送的命令**  
+ **命令数**  
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
-### 日志读取器代理  
+### <a name="log-reader-agent"></a>日志读取器代理  
  **状态**  
  此代理的状态。 下面列出了可能的状态值：  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **滞后时间**  
  从在发布数据库中提交最近的更改到在分发数据库中提交对应的命令经过的时间，以秒为单位。  
   
- **#Trans**  
+ **事务数**  
  在此代理最近一次运行期间分发数据库中提交的事务数。  
   
- **#传送的命令**  
+ **命令数**  
  在此代理最近一次运行期间分发数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
- **Avg. #传送的命令**  
+ **平均命令数**  
  在此代理最近一次运行期间平均每个事务的命令数。  
   
-### 队列读取器代理  
+### <a name="queue-reader-agent"></a>队列读取器代理  
  **状态**  
  此代理的状态。 下面列出了可能的状态值：  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **滞后时间**  
  从在订阅数据库中提交最近的更改到在发布数据库中提交对应的命令经过的时间，以秒为单位。  
   
- **#Trans**  
+ **事务数**  
  在此代理最近一次运行期间发布数据库中提交的事务数。  
   
- **#传送的命令**  
+ **命令数**  
  在此代理最近一次运行期间发布数据库中提交的命令数。 一个命令相当于一次数据更改，如一次更新。  
   
- **Avg. #传送的命令**  
+ **平均命令数**  
  在此代理最近一次运行期间平均每个事务的命令数。  
   
-### 维护作业  
+### <a name="maintenance-jobs"></a>维护作业  
  **状态**  
  每个作业的状态。 下面列出了可能的状态值：  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **上一操作**  
  在此作业最近一次运行的过程中最后执行的操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看信息并为发布服务器和 #40; 执行任务复制监视器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [查看发布服务器的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

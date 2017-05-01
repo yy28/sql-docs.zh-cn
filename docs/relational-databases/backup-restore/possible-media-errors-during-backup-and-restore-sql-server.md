@@ -1,47 +1,44 @@
 ---
 title: "在备份和还原期间可能的介质错误 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "介质错误 [SQL Server]"
-  - "CONTINUE_AFTER_ERROR 选项"
-  - "错误 [SQL Server], 备份"
-  - "备份 [SQL Server], 错误"
-  - "RESTORE VERIFYONLY 语句"
-  - "备份介质 [SQL Server], 错误管理"
-  - "页校验和 [SQL Server]"
-  - "备份校验和 [SQL Server]"
-  - "备份 [SQL Server], 介质错误"
-  - "RESTORE 语句, 介质错误"
-  - "NO_CHECKSUM 选项"
-  - "校验和 [SQL Server]"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media errors [SQL Server]
+- CONTINUE_AFTER_ERROR option
+- errors [SQL Server], backups
+- backups [SQL Server], errors
+- RESTORE VERIFYONLY statement
+- backup media [SQL Server], error management
+- page checksums [SQL Server]
+- backup checksums [SQL Server]
+- backing up [SQL Server], media errors
+- RESTORE statement, media errors
+- NO_CHECKSUM option
+- checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在备份和还原期间可能的介质错误 (SQL Server)
+# <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 允许您在恢复数据库时不必顾及检测到的错误。 一个重要的新错误检测机制是创建备份校验和（可选），可以通过备份操作创建并通过还原操作验证。 您可以控制操作是否检查错误，以及遇到错误时是停止操作还是继续操作。 如果备份包含备份校验和，则 RESTORE 和 RESTORE VERIFYONLY 语句可以检查错误。  
   
 > [!NOTE]  
->  镜像备份最多提供 4 个介质集的副本（镜像），提供备用副本以便从损坏介质导致的错误中恢复。 有关详细信息，请参阅[镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
+>  镜像备份最多提供 4 个介质集的副本（镜像），提供备用副本以便从损坏介质导致的错误中恢复。 有关详细信息，请参阅 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
   
- **本主题内容：**  
-  
--   [备份校验和](#BckChecksums)  
-  
--   [在备份或还原操作过程中响应页校验和错误](#ResponsetoPageChecksumErrors)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="BckChecksums"></a> 备份校验和  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持三种校验和：页校验和、日志块校验和以及备份校验和。 生成备份校验和时，BACKUP 将验证从数据库读取的数据是否与数据库中存在的任意校验和或页残缺指示一致。  
@@ -59,15 +56,15 @@ caps.handback.revision: 36
      如果备份操作在验证过程中遇到页错误，备份将失败。  
   
     > [!NOTE]  
-    >  有关页校验和及页残缺检测的详细信息，请参阅 ALTER DATABASE 语句的 PAGE_VERIFY 选项。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)。  
+    >  有关页校验和及页残缺检测的详细信息，请参阅 ALTER DATABASE 语句的 PAGE_VERIFY 选项。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 2.  无论是否存在页校验和，BACKUP 都会为备份流生成一个单独的备份校验和。 还原操作可使用（可选）备份校验和来验证该备份是否损坏。 备份校验和存储在备份介质上，而不是存储在数据库页上。 备份校验还可根据需要在还原时使用。  
   
-3.  备份集标记为包含备份校验和（在 **msdb..backupset** 的 **has_backup_checksums** 列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  备份集标记为包含备份校验和（在 **msdb..backupset** 的 **has_backup_checksums**列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
   
  在还原操作过程中，如果备份介质中存在备份校验和，则默认情况下，RESTORE 和 RESTORE VERIFYONLY 语句都将验证备份校验和及页校验和。 如果不存在备份校验和，则这两种还原操作直接执行，而不会进行验证；这是因为没有备份校验和，还原无法可靠地验证页校验和。  
   
-## 在备份或还原操作过程中响应页校验和错误  
+## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>在备份或还原操作过程中响应页校验和错误  
  默认情况下，在遇到页校验和错误后，BACKUP 或 RESTORE 操作将失败，而 RESTORE VERIFYONLY 操作将继续。 但是，您可以控制某一给定操作在遇到错误时是失败还是尽可能继续。  
   
  如果 BACKUP 操作在遇到错误后将继续，则该操作将执行以下步骤：  
@@ -76,7 +73,7 @@ caps.handback.revision: 36
   
 2.  记录 SQL Server 错误日志中的错误。  
   
-3.  将备份集标记为包含此类型的错误（在 **msdb.backupset** 的 **is_damaged** 列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
+3.  将备份集标记为包含此类型的错误（在 **msdb.backupset** 的 **is_damaged**列中）。 有关详细信息，请参阅 [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)。  
   
 4.  发出一条消息，说明已成功生成备份，但备份中包含页错误。  
   
@@ -87,14 +84,14 @@ caps.handback.revision: 36
   
  **控制备份操作期间的错误响应**  
   
--   [指定备份或还原操作在遇到错误后是继续还是停止 (SQL Server)](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [指定备份或还原操作在遇到错误后是继续还是停止 (SQL Server)](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

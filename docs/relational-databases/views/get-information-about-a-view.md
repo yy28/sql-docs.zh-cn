@@ -1,33 +1,37 @@
 ---
 title: "获取有关视图的信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "视图 [SQL Server], 状态信息"
-  - "元数据 [SQL Server], 视图"
-  - "依赖项 [SQL Server], 视图"
-  - "显示视图信息"
-  - "视图 [SQL Server], 元数据"
-  - "查看视图信息"
-  - "状态信息 [SQL Server], 视图"
-  - "查看依赖关系"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# 获取有关视图的信息
+# <a name="get-information-about-a-view"></a>获取有关视图的信息
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关视图的定义或属性的信息。 您可能需要查看视图定义以了解数据从源表中的提取方式，或查看视图所定义的数据。  
   
 > [!IMPORTANT]  
@@ -54,7 +58,7 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用对象资源管理器获取视图属性  
+#### <a name="get-view-properties-by-using-object-explorer"></a>使用对象资源管理器获取视图属性  
   
 1.  在 **“对象资源管理器”**中，单击包含要查看属性的视图的数据库旁边的加号，然后单击加号以展开 **“视图”** 文件夹。  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **架构已绑定**  
      指示视图是否绑定到架构。 值为 True 和 False。 有关绑定到架构的视图的信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 的 SCHEMABINDING 部分。  
   
-#### 使用视图设计器工具获取视图属性  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>使用视图设计器工具获取视图属性  
   
 1.  在 **“对象资源管理器”**中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 30
      显示所有列是否都由所选视图返回。 这是在创建视图时设置的。  
   
      **SQL 注释**  
-     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)**。 您的注释可以包含视图使用者和使用时间等信息。  
+     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含视图使用者和使用时间等信息。  
   
      **Top 规范**  
      展开此项可显示“Top”、“表达式”、“百分比”和“等同值”属性的属性。  
@@ -164,7 +168,7 @@ caps.handback.revision: 30
      **Check 选项**  
      指示当打开此视图并修改“结果”窗格时，数据源检查添加或修改的数据是否满足视图定义的 **WHERE** 子句的要求。 如果您的修改不满足 **WHERE** 子句的要求，将看到一个包含详细信息的错误。  
   
-#### 获取视图的依赖关系  
+#### <a name="to-get-dependencies-on-the-view"></a>获取视图的依赖关系  
   
 1.  在 **“对象资源管理器”**中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
@@ -176,7 +180,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 获取视图的定义和属性  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>获取视图的定义和属性  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  有关详细信息，请参阅 [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)、[OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md) 和 [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)。  
   
-#### 获取视图的依赖关系  
+#### <a name="to-get-the-dependencies-of-a-view"></a>获取视图的依赖关系  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

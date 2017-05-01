@@ -1,30 +1,34 @@
 ---
 title: "HumanResources.myTeam 示例表 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "myTeam 示例表 [SQL Server]"
-  - "批量导入 [SQL Server], 示例"
-  - "批量导出 [SQL Server], 示例"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- myTeam sample table [SQL Server]
+- bulk importing [SQL Server], examples
+- bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd4e971fa001faeafd26468a80e9a95f18dc261e
+ms.lasthandoff: 04/11/2017
+
 ---
-# HumanResources.myTeam 示例表 (SQL Server)
-  [导入和导出大容量数据](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)中的许多代码示例都需要一个名为 **myTeam** 的具有特殊用途的测试表。 您必须在 **数据库的** HumanResources **架构中创建** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表，才能运行这些示例。  
+# <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 示例表 (SQL Server)
+  [导入和导出大容量数据](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 中的许多代码示例都需要一个名为 **myTeam**的具有特殊用途的测试表。 您必须在 **数据库的** HumanResources **架构中创建** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表，才能运行这些示例。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的一个示例数据库。  
+>  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的一个示例数据库。  
   
  **myTeam** 表包含以下几列。  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 35
     > [!NOTE]  
     >  这些语句跳过第四列，即 `Background`列。 这样会有默认值。 跳过该列使 `INSERT` 语句将该列保留为空。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

@@ -1,25 +1,29 @@
 ---
 title: "重命名视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "视图 [SQL Server], 重命名"
-  - "重命名视图"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名视图
+# <a name="rename-views"></a>重命名视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名视图。  
   
 > [!WARNING]  
@@ -53,11 +57,11 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 重命名视图  
+#### <a name="to-rename-a-view"></a>重命名视图  
   
 1.  在 **“对象资源管理器”**中，展开包含要重命名的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要重命名的视图，然后选择“重命名”。  
+2.  右键单击要重命名的视图，然后选择 **“重命名”**。  
   
 3.  输入视图的新名称。  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 17
   
  有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 和 [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md)。  
   
-##  <a name="FollowUp"></a> 跟进：在重命名视图之后   
+##  <a name="FollowUp"></a> 跟进：在重命名视图之后  
  确保引用视图的旧名称的所有对象、脚本和应用程序现在都使用新名称。  
   
   

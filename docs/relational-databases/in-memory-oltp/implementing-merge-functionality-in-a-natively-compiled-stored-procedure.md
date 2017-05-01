@@ -1,22 +1,26 @@
 ---
 title: "在本机编译的存储过程中实现 MERGE 功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0465daf504277e1a221d0fd553dd60617eb067a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在本机编译的存储过程中实现 MERGE 功能
+# <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 MERGE 功能
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -151,3 +155,4 @@ caps.handback.revision: 8
  [内存中 OLTP 不支持的 Transact-SQL 构造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
+

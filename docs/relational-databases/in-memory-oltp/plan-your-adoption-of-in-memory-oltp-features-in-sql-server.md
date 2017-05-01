@@ -1,22 +1,26 @@
 ---
 title: "在 SQL Server 中计划内存中 OLTP 功能的应用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在 SQL Server 中计划内存中 OLTP 功能的应用
+# <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -24,7 +28,7 @@ caps.handback.revision: 3
 
 
 
-## A. 内存中 OLTP 功能的采用
+## <a name="a-adoption-of-in-memory-oltp-features"></a>A. 内存中 OLTP 功能的采用
 
 
 以下小节介绍在采用和实现计划内存中功能时必须考虑的因素。 若要了解详细的说明性信息，请访问：
@@ -33,7 +37,7 @@ caps.handback.revision: 3
 
 
 
-### A.1 先决条件
+### <a name="a1-prerequisites"></a>A.1 先决条件
 
 使用内存中功能的一个先决条件涉及 SQL 产品的版本或服务层。 有关此先决条件和其他先决条件的信息，请参阅：
 
@@ -42,31 +46,31 @@ caps.handback.revision: 3
     - [SQL 数据库定价层建议](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
-### A.2 预测活动内存量
+### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 预测活动内存量
 
 系统是否有足够的活动内存来支持新的内存优化表？
 
-#### Microsoft SQL Server
+#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
 包含 200 GB 数据的内存优化表需要超过 200 GB 的活动内存专用于支持。 实现包含大量数据的内存优化表之前，必须预测可能需要添加到服务器计算机的其他活动内存量。 有关估算指导，请参阅：
 
 - [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
-#### Azure SQL Database
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 对于 Azure SQL 数据库云服务中托管的数据库，所选的服务层会影响允许数据库使用的活动内存量。 应计划使用警报监视数据库的内存使用。 有关详细信息，请参阅：
 
 - [监视内存中 OLTP 存储](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
-#### 内存优化表变量
+#### <a name="memory-optimized-table-variables"></a>内存优化表变量
 
 声明为内存优化的表变量有时要优于驻留在 **tempdb** 数据库中的传统 #TempTable。 此类表变量可显著提高性能，而无需使用大量活动内存。
 
-### A.3 表必须处于脱机状态以转换为内存优化
+### <a name="a3-table-must-be-offline-to-convert-to-memory-optimized"></a>A.3 表必须处于脱机状态以转换为内存优化
 
 某些 ALTER TABLE 功能可用于内存优化表。 但无法发出 ALTER TABLE 语句将基于磁盘的表转换为内存优化表。 相反，必须使用一组手动程度更高的步骤。 下面是可将基于磁盘的表转换为内存优化表的各种方法。
 
-#### 手动编写脚本
+#### <a name="manual-scripting"></a>手动编写脚本
 
 将基于磁盘的表转换为内存优化表的一种方法是自己编写 Transact-SQL 步骤。
 
@@ -88,7 +92,7 @@ caps.handback.revision: 3
 8. 继续应用程序活动。
 
 
-#### 内存优化顾问
+#### <a name="memory-optimization-advisor"></a>内存优化顾问
 
 内存优化顾问工具可生成脚本来帮助实现将基于磁盘的表转换为内存优化表。 作为 SQL Server Data Tools (SSDT) 的一部分，对此工具进行安装。
 
@@ -96,7 +100,7 @@ caps.handback.revision: 3
 - [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
 
 
-#### .dacpac 文件
+#### <a name="dacpac-file"></a>.dacpac 文件
 
 可通过使用.dacpac 文件就地更新由 SSDT 管理的数据库。 在 SSDT 中，可指定在 .dacpac 文件中编码的架构进行的更改。
 
@@ -106,7 +110,7 @@ caps.handback.revision: 3
 
 
 
-### A.4 有关内存中 OLTP 功能是否适合应用程序的指南
+### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 有关内存中 OLTP 功能是否适合应用程序的指南
 
 有关内存中功能是否可以改善特定应用程序的性能的指南，请参阅：
 
@@ -114,7 +118,7 @@ caps.handback.revision: 3
 
 
 
-## B. 不支持的功能
+## <a name="b-unsupported-features"></a>B. 不支持的功能
 
 有关在某些内存中方案中不支持的功能，请参阅：
 
@@ -124,9 +128,9 @@ caps.handback.revision: 3
 以下各小节突出显示了一些更重要的不受支持的功能。
 
 
-### B.1 数据库的快照
+### <a name="b1-snapshot-of-a-database"></a>B.1 数据库的快照
 
-第一次在给定数据库中创建任何内存优化表或模块之后，千万不要拍摄数据库[快照](../../relational-databases/databases/database-snapshots-sql-server.md)。 具体原因有以下几点：
+第一次在给定数据库中创建任何内存优化表或模块之后，千万不要拍摄数据库 [快照](../../relational-databases/databases/database-snapshots-sql-server.md) 。 具体原因有以下几点：
 
 - 第一个内存优化项使我们无法从内存优化的文件组删除最后一个文件；以及
 - 任何在内存优化的文件组中具有文件的数据库均不支持快照。
@@ -134,47 +138,47 @@ caps.handback.revision: 3
 通常情况下快照可以非常方便地快速测试迭代。
 
 
-### B.2 跨数据库查询
+### <a name="b2-cross-database-queries"></a>B.2 跨数据库查询
 
-内存优化表不支持[跨数据库](../../relational-databases/in-memory-oltp/cross-database-queries.md)事务。 不能从也访问某一内存优化表的相同事务或相同查询访问其他数据库。
+内存优化表不支持 [跨数据库](../../relational-databases/in-memory-oltp/cross-database-queries.md) 事务。 不能从也访问某一内存优化表的相同事务或相同查询访问其他数据库。
 
-表变量不是事务性的。 因此，可将[内存优化表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)用于跨数据库查询。
+表变量不是事务性的。 因此，可将 [内存优化表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) 用于跨数据库查询。
 
 
-### B.3 READPAST 表提示
+### <a name="b3-readpast-table-hint"></a>B.3 READPAST 表提示
 
-任何查询均不可将 READPAST [表提示](Table%20Hints%20%28Transact-SQL%29.md)应用于任何内存优化表。
+任何查询均不可将 READPAST [表提示](../../t-sql/queries/hints-transact-sql-table.md) 应用于任何内存优化表。
 
 在多个会话正在逐个访问和修改一小组相同的行时（例如，在处理队列时），READPAST 提示可提供帮助。
 
 
-### B.4 RowVersion、SEQUENCE
+### <a name="b4-rowversion-sequence"></a>B.4 RowVersion、SEQUENCE
 
-- 不可将内存优化表上的任何列标记为 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md)。
+- 不可将内存优化表上的任何列标记为 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 。
 
 
 - 不能将 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 对象用于任何内存优化表。
 
 
-## C. 管理维护
+## <a name="c-administrative-maintenance"></a>C. 管理维护
 
 
 本部分介绍使用内存优化表的数据库管理方面的差异。
 
 
-### C.1 标识种子重置，增量 > 1
+### <a name="c1-identity-seed-reset-increment--1"></a>C.1 标识种子重置，增量 > 1
 
 为重设种子 IDENTITY 列，不能将 [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) 用于内存优化表。
 
 对于内存优化表上的 IDENTITY 列，将增量值限定为 1。
 
 
-### C.2 DBCC CHECKDB 无法验证内存优化表
+### <a name="c2-dbcc-checkdb-cannot-validate-memory-optimized-tables"></a>C.2 DBCC CHECKDB 无法验证内存优化表
 
-其目标为内存优化表时，[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 命令不执行任何操作。 以下步骤可解决此问题：
+其目标为内存优化表时， [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 命令不执行任何操作。 以下步骤可解决此问题：
 
 
-1. [备份事务日志](Back%20Up%20a%20Transaction%20Log%20%28SQL Server%29.md)。
+1. [备份事务日志](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。
 
 2. 将内存优化文件组 (FILEGROUP)中的文件备份到空设备中。 备份过程将调用校验和验证。
 
@@ -190,12 +194,12 @@ caps.handback.revision: 3
 
 
 
-## D. 性能
+## <a name="d-performance"></a>D. 性能
 
 本部分介绍内存优化表在完全利用潜力时达到卓越性能的情况。
 
 
-### D.1 索引注意事项
+### <a name="d1-index-considerations"></a>D.1 索引注意事项
 
 由与表相关的语句 CREATE TABLE 和 ALTER TABLE 创建和管理内存优化表上的所有索引。 无法使用 CREATE INDEX 语句将内存优化表作为目标。
 
@@ -208,7 +212,7 @@ caps.handback.revision: 3
 - [内存优化表的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)
 
 
-#### 哈希索引
+#### <a name="hash-indexes"></a>哈希索引
 
 在使用“**=**”运算符按其确切的主键值访问特定行时，哈希索引是速度最快的格式。
 
@@ -220,12 +224,12 @@ caps.handback.revision: 3
     - [内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
-#### 非聚集列存储索引
+#### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引
 
-内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理或 OLTP。 列存储索引提供高吞吐量的聚合和称为 Analytics 的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的**混合解决方案**：提供基于内存优化表的列存储索引。
+内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理或 OLTP。 列存储索引提供高吞吐量的聚合和称为 Analytics 的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的 **混合解决方案** ：提供基于内存优化表的列存储索引。
 
 
-- 可在基于磁盘的表中生成[列存储索引](Columnstore%20Indexes%20Guide.md)，甚至是聚集索引。 但不能在内存优化表上聚集列存储索引。
+- 可在基于磁盘的表中生成 [列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md) ，甚至是聚集索引。 但不能在内存优化表上聚集列存储索引。
 
 
 - 内存优化表的 LOB 或行外列阻止在表上创建列存储索引。
@@ -236,7 +240,7 @@ caps.handback.revision: 3
 
 
 
-### D.2 LOB 和行外列
+### <a name="d2-lob-and-off-row-columns"></a>D.2 LOB 和行外列
 
 大型对象 (LOB) 是 varchar (**max**) 等类型的列。 内存优化表中有几列 LOB 列并不会严重损害性能。 但请避免 LOB 列的数目超出数据需要。 此建议同样适用于行外列。 如果 varchar(512) 已足够，则不要将某列定义为 nvarchar(3072)。
 
@@ -248,7 +252,7 @@ caps.handback.revision: 3
 
 
 
-## E. 本机过程的限制
+## <a name="e-limitations-of-native-procs"></a>E. 本机过程的限制
 
 
 本机编译的存储过程中不支持 Transact-SQL 的特定元素。
@@ -258,14 +262,14 @@ caps.handback.revision: 3
 - [本机编译的存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 
-### E.1 本机过程中不存在 CASE
+### <a name="e1-no-case-in-a-native-proc"></a>E.1 本机过程中不存在 CASE
 
 Transact-SQL 中的 CASE 表达式不能用于本机过程中。 可使用以下方式解决此问题：
 
 - [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
 
 
-### E.2 本机过程中不存在 MERGE
+### <a name="e2-no-merge-in-a-native-proc"></a>E.2 本机过程中不存在 MERGE
 
 
 Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) 与通常所说的 upsert 功能相似。 本机过程不能使用 MERGE 语句。 但是，通过结合使用 SELECT、UPDATE 和 INSERT 语句可实现与 MERGE 相同的功能。 代码示例所在位置：
@@ -274,7 +278,7 @@ Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) �
 
 
 
-### E.3 本机过程中的 UPDATE 或 DELETE 语句中没有联接
+### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 本机过程中的 UPDATE 或 DELETE 语句中没有联接
 
 本机过程中的 Transact-SQL 语句仅可访问内存优化表。 在 UPDATE 和 DELETE 语句中，无法联接任何表。 本机过程中的尝试失败，并提示 Msg 12319 这样的消息来说明：
 
@@ -290,7 +294,7 @@ Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) �
 方案：TabProjectEmployee 表具有以下两列的唯一键：ProjectId 和 EmployeeId。 每行表示将一个员工分配到某个活动项目中。 某个员工离开公司时，必须从 TabProjectEmployee 表删除员工。
 
 
-#### 无效的 T-SQL、DELETE...JOIN
+#### <a name="invalid-t-sql-deletejoin"></a>无效的 T-SQL、DELETE...JOIN
 
 
 本机过程不能执行如下所示的 DELETE...JOIN。
@@ -309,7 +313,7 @@ DELETE pe
 ```
 
 
-#### 有效的解决方法，手动删除...联接
+#### <a name="valid-work-around-manual-deletejoin"></a>有效的解决方法，手动删除...联接
 
 接下为解决此问题的代码示例，分两部分：
 
@@ -364,7 +368,7 @@ END;
 ```
 
 
-### E.4 本机过程的查询计划限制
+### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 本机过程的查询计划限制
 
 
 查询计划的某些类型不可用于本机过程。 有关详细信息的介绍，请参阅：
@@ -372,18 +376,18 @@ END;
 - [内存优化表查询处理指南](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 
-#### 本机过程中不进行并行处理
+#### <a name="no-parallel-processing-in-a-native-proc"></a>本机过程中不进行并行处理
 
 并行处理不属于本机过程的任何查询计划。 本机过程始终采用单线程的方式执行。
 
 
-#### 联接类型
+#### <a name="join-types"></a>联接类型
 
 
 哈希联接和合并联接都不属于本机过程的任何查询计划。 使用嵌套的循环联接。
 
 
-#### 无哈希聚合
+#### <a name="no-hash-aggregation"></a>无哈希聚合
 
 本机过程的查询计划需要聚合阶段时，仅可用流聚合。 本机过程的查询计划不支持哈希聚合。
 
@@ -391,7 +395,7 @@ END;
 
 
 
-## F. 应用程序设计：事务和重试逻辑
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. 应用程序设计：事务和重试逻辑
 
 涉及内存优化表的事务可能会依赖于涉及同一个表的另一个事务。 如果依赖事务的数量超过允许的最大值，则所有依赖事务都失败。
 
@@ -408,7 +412,9 @@ SQL Server 2016 中：
 
 
 
-## 相关链接
+## <a name="related-links"></a>相关链接
 
 - [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
+
 

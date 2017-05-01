@@ -1,26 +1,30 @@
 ---
 title: "获取有关 DDL 触发器的信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "元数据 [SQL Server], 触发器"
-  - "状态信息 [SQL Server], DDL 触发器"
-  - "DDL 触发器, 元数据"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [SQL Server], triggers
+- status information [SQL Server], DDL triggers
+- DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
+ms.lasthandoff: 04/11/2017
+
 ---
-# 获取有关 DDL 触发器的信息
+# <a name="get-information-about-ddl-triggers"></a>获取有关 DDL 触发器的信息
   本节列出的目录视图可用于获取有关 DDL 触发器的信息。  
   
  **获取有关 DDL 触发器可触发的事件或事件组的信息。**  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
   
 -   [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## 数据库范围内的 DDL 触发器  
+## <a name="database-scoped-ddl-triggers"></a>数据库范围内的 DDL 触发器  
  **获取有关数据库范围内的触发器的信息**  
   
 -   [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)  
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 -   [sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
-## 服务器范围内的 DDL 触发器  
+## <a name="server-scoped-ddl-triggers"></a>服务器范围内的 DDL 触发器  
  **获取有关服务器范围内的触发器的信息**  
   
 -   [sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)  
@@ -69,7 +73,7 @@ caps.handback.revision: 31
   
 -   [sys.server_assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)  
   
   

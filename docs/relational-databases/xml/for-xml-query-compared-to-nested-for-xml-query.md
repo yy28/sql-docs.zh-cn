@@ -1,28 +1,32 @@
 ---
 title: "FOR XML 查询与嵌套 FOR XML 查询的比较 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 查询"
-  - "查询 [SQL Server 中的 XML], 比较查询类型"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML 查询与嵌套 FOR XML 查询的比较
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 查询与嵌套 FOR XML 查询的比较
   本主题将单个 FOR XML 查询与嵌套 FOR XML 查询进行了比较。 使用嵌套 FOR XML 查询的好处之一就是可以为查询结果指定一个以属性为中心和以元素为中心的 XML 的组合。 此示例演示了这种好处。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下 `SELECT` 查询检索 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的产品类别和子类别信息。 该查询中没有嵌套 FOR XML。  
   
 ```  
@@ -115,9 +119,9 @@ FOR XML AUTO, TYPE
   
  请注意上述查询的以下方面：  
   
--   内部 `FOR XML` 查询检索产品子类别信息。 将 `ELEMENTS` 指令添加到内部 `FOR XML`，以生成以元素为中心的 XML（它将添加到由外部查询生成的 XML）。 默认情况下，外部查询生成的是以属性为中心的 XML。  
+-   内部 `FOR XML` 查询检索产品子类别信息。 将 `ELEMENTS` 指令添加到内部 `FOR XML` ，以生成以元素为中心的 XML（它将添加到由外部查询生成的 XML）。 默认情况下，外部查询生成的是以属性为中心的 XML。  
   
--   在内部查询中，指定 `TYPE` 指令以使结果为 **xml** 类型。 如果未指定 `TYPE`，则结果作为 **nvarchar(max)** 类型返回，XML 数据作为实体返回。  
+-   在内部查询中，指定 `TYPE` 指令以使结果为 **xml** 类型。 如果未指定 `TYPE` ，则结果作为 **nvarchar(max)** 类型返回，XML 数据作为实体返回。  
   
 -   外部查询也指定 `TYPE` 指令。 因此，此查询的结果将作为 **xml** 类型返回到客户端。  
   
@@ -199,7 +203,7 @@ FOR XML AUTO, TYPE
   
  如果从生成产品子类别的嵌套 `ELEMENTS` 查询中删除 `FOR XML` 指令，则整个结果均以属性为中心。 然后便可以编写没有嵌套的查询。 添加 `ELEMENTS` 会使 XML 部分以属性为中心、部分以元素为中心。 此结果无法通过单一级别的 FOR XML 查询生成。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

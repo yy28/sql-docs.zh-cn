@@ -1,24 +1,28 @@
 ---
 title: "对表或索引禁用压缩功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据压缩 [SQL Server], 禁用"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 342baf08233852778ca7caaf5a528d0362490de6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 对表或索引禁用压缩功能
+# <a name="disable-compression-on-a-table-or-index"></a>对表或索引禁用压缩功能
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引禁用压缩功能。  
   
  **本主题内容**  
@@ -39,7 +43,7 @@ caps.handback.revision: 8
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   如果表是堆，ONLINE 模式的重新生成操作将在单个线程内完成。 请为多线程堆重新生成操作使用 OFFLINE 模式。 有关数据压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
+-   如果表是堆，ONLINE 模式的重新生成操作将在单个线程内完成。 请为多线程堆重新生成操作使用 OFFLINE 模式。 有关数据压缩的详细信息，请参阅 [数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
 -   若要评估更改压缩状态将对表、索引或分区有何影响，请使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 存储过程。  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 对表禁用压缩功能  
+#### <a name="to-disable-compression-on-a-table"></a>对表禁用压缩功能  
   
 1.  在对象资源管理器中，展开包含要对其禁用压缩功能的表的数据库，然后展开 **“表”** 文件夹。  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 8
      **分区号**  
      列出表或索引中的每个分区。 此列为只读。  
   
-     **压缩类型**  
+     **“压缩类型”**  
      为每个分区选择压缩选项。 在选中 **“对所有分区使用相同压缩类型”** 的情况下此选项不可用。 列表选项为 **“无”**、 **“Row”**和 **“Page”**。  
   
      **边界**  
@@ -181,14 +185,14 @@ caps.handback.revision: 8
      **将报告复制到剪贴板**  
      将向导的进度报告结果复制到剪贴板。  
   
-     **将报告作为电子邮件发送**  
+     **“将报告作为电子邮件发送”**  
      将向导的进度报告结果复制到电子邮件。  
   
      完成时，单击“关闭” 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 对表禁用压缩功能  
+#### <a name="to-disable-compression-on-a-table"></a>对表禁用压缩功能  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 8
     GO  
     ```  
   
-#### 对索引禁用压缩功能  
+#### <a name="to-disable-compression-on-an-index"></a>对索引禁用压缩功能  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

@@ -1,29 +1,33 @@
 ---
 title: "重命名索引 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "重命名索引"
-  - "索引名称 [SQL Server]"
-  - "索引 [SQL Server], 重命名"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming indexes
+- index names [SQL Server]
+- indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59c77e43b02e26626c280f6325cdb67a11021db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名索引
+# <a name="rename-indexes"></a>重命名索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1** 的索引，但同一表中不能有两个名为 **XPK_1** 的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
+  本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1**的索引，但同一表中不能有两个名为 **XPK_1**的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  
   
  **本主题内容**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 使用表设计器重命名索引  
+#### <a name="to-rename-an-index-by-using-the-table-designer"></a>使用表设计器重命名索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要重命名索引的表的数据库。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 8.  在“文件”菜单上，单击“保存”以保存 *table_name*。  
   
-#### 通过使用对象资源管理器重命名索引  
+#### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要重命名索引的表的数据库。  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 重命名索引  
+#### <a name="to-rename-an-index"></a>重命名索引  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
@@ -105,3 +109,4 @@ caps.handback.revision: 27
  有关详细信息，请参阅 [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)。  
   
   
+

@@ -1,30 +1,34 @@
 ---
-title: "查询存储的数据收集方法 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Query Store, 数据收集"
+title: "Query Store 的数据收集方式 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查询存储的数据收集方法
+# <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   查询存储的作用是作为 **数据记录器** 不断地收集与运行和计划相关的编译和运行时信息。 与查询相关的数据将永久保存在内部表中，并通过一组视图向用户显示。  
   
-## 视图  
+## <a name="views"></a>视图  
  下图显示了查询存储视图及其逻辑关系，以及显示为蓝色实体的编译时间信息：  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|显示执行查询所依据的影响计划设置的独特组合。 由于 `context_settings_id` 是查询键的一部分，因此不同影响计划设置执行的相同查询文本将在查询存储中生成单独的查询条目。|  
 |**sys.query_store_query**|在查询存储中单独进行跟踪和强制执行的查询条目。 如果在不同的上下文设置下执行，或在不同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块（存储过程、触发器等）内外执行，则单个查询文本会产生多个查询条目。|  
 |**sys.query_store_plan**|显示具有编译时间统计信息的查询估计计划。 存储计划相当于一个可以通过使用 `SET SHOWPLAN_XML ON`获取的计划。|  
-|**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由配置选项“统计信息收集间隔”（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）或 `INTERVAL_LENGTH_MINUTES` 使用 [ALTER DATABASE SET Options (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 进行控制。|  
+|**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由配置选项“统计信息收集间隔”（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）或 `INTERVAL_LENGTH_MINUTES` 使用 [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 进行控制。|  
 |**sys.query_store_runtime_stats**|执行计划的聚合运行时统计信息。 所有捕获的度量值以 4 种统计函数形式表示：平均值、最小值、最大值和标准偏差。|  
   
  有关查询存储视图的其他详细信息，请参阅 **使用查询存储来监视性能** 中的 [相关视图、函数和过程](https://msdn.microsoft.com/library/dn817826.aspx)部分。  
   
-## 查询处理  
+## <a name="query-processing"></a>查询处理  
  查询存储在以下关键点与查询处理管道进行交互：  
   
 1.  第一次编译查询时，会将查询文本和初始计划发送到查询存储。  
@@ -68,9 +72,10 @@ caps.handback.revision: 10
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## 另请参阅  
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>另请参阅  
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

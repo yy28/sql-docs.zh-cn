@@ -1,29 +1,33 @@
 ---
-title: "Performance 事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 事件类, Performance 事件类别"
-  - "Performance 事件类别 [SQL Server]"
-  - "事件类 [SQL Server], Performance 事件类别"
+title: "“性能”事件类别 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Performance event category
+- Performance event category [SQL Server]
+- event classes [SQL Server], Performance event category
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c74104068ce59f26b98d30b9e5af31704347d14a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Performance 事件类别
+# <a name="performance-event-category"></a>Performance 事件类别
   使用 **Performance** 事件类别可以监视 **Showplan** 事件类以及在执行 SQL 数据操作语言 (DML) 运算符时生成的事件类。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |主题|说明|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 32
 |[Plan Guide Successful 事件类](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为计划指南中包含的查询或批处理生成执行计划。|  
 |[Plan Guide Unsuccessful 事件类](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法为计划指南中包含的查询或批处理生成执行计划。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

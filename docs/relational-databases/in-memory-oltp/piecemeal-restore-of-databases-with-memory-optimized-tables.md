@@ -1,23 +1,27 @@
 ---
 title: "使用内存优化表的数据库的段落还原 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 使用内存优化表的数据库的段落还原
-  使用内存优化表的数据库支持段落还原，但有一个限制（参见下文）。 有关段落备份和还原的详细信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 和[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>使用内存优化表的数据库的段落还原
+  使用内存优化表的数据库支持段落还原，但有一个限制（参见下文）。 有关段落备份和还原的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 和[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。  
   
  内存优化文件组必须同主文件组一起备份和还原：  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   使用页修复可通过指定要还原的页来修复页损坏。 有关详细信息，请参阅[还原页 (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)。  
   
-## 示例  
+## <a name="samples"></a>示例  
  示例使用下面的架构：  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### 备份  
+### <a name="backup"></a>备份  
  该示例演示如何备份主文件组和内存优化文件组。 必须同时指定主文件组和内存优化文件组。  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### 还原  
+### <a name="restore"></a>还原  
  下面的示例演示如何同时还原主文件组和内存优化文件组。  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## 另请参阅  
- [内存优化表的备份、还原和恢复](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>另请参阅  
+ [内存优化表的备份、还原和恢复](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

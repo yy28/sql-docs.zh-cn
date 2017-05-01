@@ -1,38 +1,33 @@
 ---
 title: "差异备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "差异备份"
-  - "差异备份, 关于"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- differential backups
+- differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
+ms.lasthandoff: 04/11/2017
+
 ---
-# 差异备份 (SQL Server)
+# <a name="differential-backups-sql-server"></a>差异备份 (SQL Server)
   此备份和还原主题与所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
  差异备份所基于的是最近一次的完整数据备份。 差异备份仅捕获自该次完整备份后发生更改的数据。 差异备份所基于的完整备份称为差异的“基准”  。 完整备份（仅复制备份除外）可以用作一系列差异备份的基准，包括数据库备份、部分备份和文件备份。 文件差异备份的基准备份可以包含在完整备份、文件备份或部分备份中。  
   
- **本主题内容：**  
-  
--   [优点](#Benefits)  
-  
--   [差异备份概述](#Overview)  
-  
--   [对只读数据库进行差异备份](#ReadOnlyDbs)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> 优点  
   
@@ -43,7 +38,7 @@ caps.handback.revision: 58
 -   在完整恢复模式下，使用差异备份可以减少必须还原的日志备份的数量。  
   
 ##  <a name="Overview"></a> 差异备份概述  
- 差异备份捕获在创建差异基准和创建差异备份之间发生更改的任何*盘区*（物理上连续的八个页的集合）的状态。 这意味着，给定差异备份的大小取决于自建立差异基准后更改的数据量。 通常，差异基准越旧，新的差异备份就越大。 在一系列差异备份中，频繁更新的区可能在每个差异备份中包含不同的数据。  
+ 差异备份捕获在创建差异基准和创建差异备份之间发生更改的任何 *盘区* （物理上连续的八个页的集合）的状态。 这意味着，给定差异备份的大小取决于自建立差异基准后更改的数据量。 通常，差异基准越旧，新的差异备份就越大。 在一系列差异备份中，频繁更新的区可能在每个差异备份中包含不同的数据。  
   
  下图显示的是差异备份的工作原理。 该图显示了二十四个数据区，其中的六个已发生更改。 差异备份只包含这六个数据区。 差异备份操作取决于位图页，此页针对每个区包含一位。 对于自建立差异基准后更新的每个区，该位在位图中设置为 1。  
   
@@ -58,15 +53,15 @@ caps.handback.revision: 58
   
  在还原过程中，还原差异备份之前，必须先还原其基准。 然后只需还原最新的差异备份，即可将数据库前滚到创建差异备份的时间。 通常，应该先还原最新的完整备份，然后再还原基于该完整备份的最新差异备份。  
   
-## 具有内存优化表的数据库的差异备份  
- 有关具有内存优化表的数据库的差异备份的详细信息，请参阅[备份具有内存优化表的数据库](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)。  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>具有内存优化表的数据库的差异备份  
+ 有关具有内存优化表的数据库的差异备份的详细信息，请参阅 [备份具有内存优化表的数据库](../../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md)。  
   
 ##  <a name="ReadOnlyDbs"></a> 对只读数据库进行差异备份  
- 对于只读数据库，单独使用完整备份比同时使用完整备份和差异备份更容易管理。 当数据库为只读时，备份和其他操作无法更改文件中包含的元数据。 因此，差异备份所要求的元数据（如差异备份开始的日志序列号，即差异基准 LSN）存储在 **master** 数据库中。 如果在数据库只读时采用的是差异基准，则差异位图指示的更改多于在基准备份之后实际发生的更改。 额外的数据由备份读取，但不会写入到备份中，因为存储在 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 系统表中的 **differential_base_lsn** 用于确定在基准之后是否实际更改了数据。  
+ 对于只读数据库，单独使用完整备份比同时使用完整备份和差异备份更容易管理。 当数据库为只读时，备份和其他操作无法更改文件中包含的元数据。 因此，差异备份所要求的元数据（如差异备份开始的日志序列号，即差异基准 LSN）存储在 **master** 数据库中。 如果在数据库只读时采用的是差异基准，则差异位图指示的更改多于在基准备份之后实际发生的更改。 额外的数据由备份读取，但不会写入到备份中，因为存储在 **backupset** 系统表中的 [differential_base_lsn](../../relational-databases/system-tables/backupset-transact-sql.md) 用于确定在基准之后是否实际更改了数据。  
   
  重新构建、还原只读数据库或者分离再重新附加只读数据库后，会丢失差异基准信息。 这是因为 **master** 数据库与用户数据库不同步。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 无法检测或防止此问题的出现。 所有后续差异备份都不是基于最新的完整备份，从而可能会出现出人意料的结果。 若要建立新的差异基准，建议先创建完整数据库备份。  
   
-### 对只读数据库进行差异备份的最佳方法  
+### <a name="best-practices-for-using-differential-backups-with-a-read-only-database"></a>对只读数据库进行差异备份的最佳方法  
  创建只读数据库的完整数据库备份之后，如果要创建后续差异备份，则请备份 **master** 数据库。  
   
  如果 **master** 数据库丢失，请在还原用户数据库的任何差异备份之前，将其还原。  
@@ -79,9 +74,8 @@ caps.handback.revision: 58
   
 -   [还原差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

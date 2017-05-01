@@ -1,27 +1,31 @@
 ---
-title: "重命名表（数据库引擎） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表重命名 [SQL Server]"
-  - "表名 [SQL Server]"
-  - "表 [SQL Server], Visual Database Tools"
-  - "重命名表"
+title: "重命名表（数据库引擎）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table renaming [SQL Server]
+- table names [SQL Server]
+- tables [SQL Server], Visual Database Tools
+- renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d65c475509d57577f691e656157c7754c7d8549f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名表（数据库引擎）
+# <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表。  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 重命名表  
+#### <a name="to-rename-a-table"></a>重命名表  
   
 1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”。  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 重命名表  
+#### <a name="to-rename-a-table"></a>重命名表  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   

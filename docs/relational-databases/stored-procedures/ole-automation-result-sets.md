@@ -1,29 +1,33 @@
 ---
 title: "OLE 自动化结果集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据类型 [SQL Server], OLE 自动化"
-  - "二维数组"
-  - "一维数组"
-  - "结果集 [SQL Server], OLE 自动化"
-  - "OLE 自动化 [SQL Server], 结果集"
-  - "数组 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server], OLE Automation
+- two-dimensional arrays
+- one-dimensional arrays
+- result sets [SQL Server], OLE Automation
+- OLE Automation [SQL Server], result sets
+- arrays [SQL Server]
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b3cf49bb4116a3cbf8bf58c327cdb6af5c11468
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE 自动化结果集
+# <a name="ole-automation-result-sets"></a>OLE 自动化结果集
   如果 OLE 自动化属性或方法返回的数据是一维或二维数组，则该数组将作为结果集返回到客户端：  
   
 -   一维数组作为单行结果集返回给客户端，其中的列数与数组中的元素数相等。 例如，array(10) 作为 10 列单行返回。  
@@ -44,7 +48,7 @@ caps.handback.revision: 21
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [OLE 自动存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
  [Ole Automation Procedures 服务器配置选项](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  

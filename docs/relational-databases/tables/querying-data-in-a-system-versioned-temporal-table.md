@@ -1,28 +1,32 @@
 ---
 title: "在系统版本控制临时表中查询数据 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: 7
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
+ms.lasthandoff: 04/11/2017
+
 ---
-# 在系统版本控制临时表中查询数据
+# <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制临时表中查询数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   如果想要获取临时表中数据的最新（实际）状态，完全可以像查询非临时表一样进行查询。 如果 PERIOD 列未隐藏，其值将出现在 SELECT \* 查询中。 如果已将 **PERIOD** 列指定为隐藏，其值将不会出现在 SELECT \* 查询中。 当 **PERIOD** 列隐藏时，可在 SELECT 子句中明确引用 **PERIOD** 列以返回这些列的值。  
   
- 若要执行任何一种基于时间的分析，请将新的 **FOR SYSTEM_TIME** 子句和四个特定于临时表的子子句结合使用，以便跨当前表和历史记录表查询数据。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)  
+ 若要执行任何一种基于时间的分析，请将新的  **FOR SYSTEM_TIME** 子句和四个特定于临时表的子子句结合使用，以便跨当前表和历史记录表查询数据。 有关这些子句的详细信息，请参阅[临时表](../../relational-databases/tables/temporal-tables.md)和 [FROM (Transact SQL)](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <date_time>  
   
@@ -34,10 +38,10 @@ caps.handback.revision: 7
   
 -   ALL  
   
- 可以在查询中为每个表单独指定 **FOR SYSTEM_TIME**。 它可以在公用表表达式、表值函数和存储过程内使用。  
+ 可以在查询中为每个表单独指定**FOR SYSTEM_TIME** 。 它可以在公用表表达式、表值函数和存储过程内使用。  
   
-## 使用 AS OF 子子句查询特定时间  
- 当你因为数据处于过去的任意特定时间而需要重新构造数据状态时，可使用 **AS OF** 子子句。  你可以使用 **PERIOD** 列定义中指定的 datetime2 类型的精度来重新构造数据。    
+## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 子子句查询特定时间  
+ 当你因为数据处于过去的任意特定时间而需要重新构造数据状态时，可使用**AS OF** 子子句。  你可以使用 **PERIOD** 列定义中指定的 datetime2 类型的精度来重新构造数据。    
 **AS OF** 子子句可以与常量文字或变量结合使用，从而允许你动态指定时间条件。 所提供的值解释为 UTC 时间。  
   
  第一个示例返回 dbo.Department 表从过去某个特定日期起的状态。  
@@ -65,11 +69,11 @@ JOIN [Department] AS D ON  D_1_Ago.[DeptID] = [D].[DeptID]
 AND D_1_Ago.[DeptID] BETWEEN 1 and 5 ;  
 ```  
   
-### 在临时查询中将视图与 AS-OF 子子句结合使用  
+### <a name="using-views-with-as-of-sub-clause-in-temporal-queries"></a>在临时查询中将视图与 AS-OF 子子句结合使用  
  在需要进行复杂时间点分析的情况下，使用视图非常有用。   
 常见的示例是使用上个月的值生成现在的业务报表。   
 通常情况下，客户会有一个规范化的数据库模型，该模型涉及多个具有外键关系的表。 如何让该规范化模型中的数据看上去像处于过去的某个时间点，要回答这个问题可能非常难，因为所有表都按自己的频率独立进行更改。   
-在这种情况下，最好的选择是创建一个视图并将 **AS OF** 子子句应用于整个视图。 利用此方法，你可以将数据访问层建模从时间点分析分离，因为 SQL Server 会将 **AS OF** 子句透明地应用于参与视图定义的所有临时表。 此外，你还可以将临时表和非临时表组合在同一个视图中，**AS OF** 将仅应用于临时表。 如果视图不引用任何临时表，那么，对其应用临时查询子句将失败并出现错误。  
+在这种情况下，最好的选择是创建一个视图并将 **AS OF** 子子句应用于整个视图。 利用此方法，你可以将数据访问层建模从时间点分析分离，因为 SQL Server 会将 **AS OF** 子句透明地应用于参与视图定义的所有临时表。 此外，你还可以将临时表和非临时表组合在同一个视图中， **AS OF** 将仅应用于临时表。 如果视图不引用任何临时表，那么，对其应用临时查询子句将失败并出现错误。  
   
 ```  
 /* Create view that joins three temporal tables: Department, CompanyLocation, LocationDepartments */   
@@ -93,12 +97,12 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
   
 ```  
   
-## 查询一段时间内特定行的更改  
+## <a name="query-for-changes-to-specific-rows-over-time"></a>查询一段时间内特定行的更改  
  如果想要执行数据审核，即，需要获取当前表中特定行的所有历史更改，临时子子句 **FROM...TO**, **BETWEEN...AND** 和 **CONTAINED IN** 将非常有用。   
 前两个子子句返回与指定时间段重叠的行版本（即，在给定时间段之前启动并在其之后结束的行版本），CONTAINED IN 则仅返回指定时间段边界内存在的行版本。  
   
 > [!IMPORTANT]  
->  如果仅搜索非当前行版本，建议使用 **CONTAINED IN**，因为它仅对历史记录表有效，所以将提供最佳的查询性能。 如果需要在没有任何限制的情况下查询当前数据和历史数据，则使用 **ALL** 。  
+>  如果仅搜索非当前行版本，建议使用 **CONTAINED IN** ，因为它仅对历史记录表有效，所以将提供最佳的查询性能。 如果需要在没有任何限制的情况下查询当前数据和历史数据，则使用 **ALL** 。  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  
@@ -132,10 +136,10 @@ ORDER BY [DeptID], [SysStartTime] Desc
   
 ```  
   
-## 本文是否对你有帮助？ 我们洗耳恭听  
+## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [临时表](../../relational-databases/tables/temporal-tables.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
  [创建由系统控制版本的临时表](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   
@@ -144,3 +148,4 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

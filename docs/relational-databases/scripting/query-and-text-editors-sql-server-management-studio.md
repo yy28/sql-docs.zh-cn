@@ -1,45 +1,49 @@
 ---
 title: "查询和文本编辑器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TextEditor"
-helpviewer_keywords: 
-  - "查询编辑器 [SQL Server Management Studio]"
-  - "代码编辑器 [SQL Server Management Studio]，关于查询编辑器"
-  - "查询编辑器 [SQL Server Management Studio]，全屏模式"
-  - "查询编辑器 [数据库引擎]，模板"
-  - "全屏模式 [SQL Server Management Studio]"
-  - "SQL Server Management Studio [SQL Server]，模板"
-  - "编写脚本"
-  - "修改脚本"
-  - "SQL Server Management Studio [SQL Server]，查询编辑器"
-  - "查询编辑器 [SQL Server Management Studio]，关于查询编辑器"
-  - "编写查询"
-  - "SQL Server Management Studio [SQL Server]，编辑器"
-  - "脚本 [SQL Server]，SQL Server Management Studio"
-  - "查询 [SQL Server]，SQL Server Management Studio"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TextEditor
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio]
+- Code Editor [SQL Server Management Studio], about Query Editor
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- full screen mode [SQL Server Management Studio]
+- SQL Server Management Studio [SQL Server], templates
+- writing scripts
+- modifying scripts
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio], about Query Editor
+- writing queries
+- SQL Server Management Studio [SQL Server], editor
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
+ms.lasthandoff: 04/11/2017
+
 ---
-# 查询和文本编辑器 (SQL Server Management Studio)
-  您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  
+# <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
+  您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  
   
-## SQL Server Management Studio 编辑器  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 编辑器  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的四种编辑器共享共同的体系结构。 文本编辑器可实现基本功能，而且可用作文本文件的基本编辑器。 其他三个编辑器（或查询编辑器）可通过加入语言服务（用于定义 SQL Server 支持的其中一种语言的语法），对此基本功能进行扩展。 查询编辑器还可以对编辑器功能（如 IntelliSense 和调试）实现不同级别的支持。 查询编辑器包括用于生成包含 Transact-SQL 和 XQuery 语句的脚本的数据库引擎查询编辑器，用于 MDX 语言的 MDX 编辑器，用于 DMX 语言的 DMX 编辑器和用于 XML for Analysis 语言的 XML/A 编辑器。  
   
-## 常见组件  
+## <a name="common-components"></a>常见组件  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的所有编辑器共享以下组件：  
   
  **代码窗格**  
@@ -59,7 +63,7 @@ caps.handback.revision: 53
  **自动换行**  
  将较长的文本行或代码行以多行显示，以便您查看行中的所有内容。 在执行或打印文本时，自动换行选项不会影响文本的显示方式。 可以从 **“工具”**、 **“选项”** 对话框（位于“文本编辑器”页、“所有语言”页、“常规”页或特定编辑器页上）中打开自动换行。  
   
-## 代码编辑器组件  
+## <a name="code-editor-components"></a>代码编辑器组件  
  除了与文本和 XML 编辑器共享的功能之外，代码编辑器还包含以下功能：  
   
  **结果**  
@@ -83,7 +87,7 @@ caps.handback.revision: 53
  **状态栏**  
  显示与查询编辑器窗口相关的系统信息，例如查询编辑器连接到哪个实例。  
   
-## 数据库引擎查询编辑器组件  
+## <a name="database-engine-query-editor-components"></a>数据库引擎查询编辑器组件  
  以下组件仅在数据库引擎查询编辑器中提供：  
   
  **调试器**  
@@ -102,18 +106,18 @@ caps.handback.revision: 53
  当您在数据库引擎查询编辑器中添加语句时，可用作起点的模板。 您可以插入随 SQL Server 一起提供的预定义代码段，也可以添加您自己的代码段。  
   
  **SQLCMD 模式**  
- 运行包含 sqlcmd 实用工具所支持的命令集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅 [sqlcmd 操作指南主题](../Topic/sqlcmd%20How-to%20Topics.md)。  
+ 运行包含 sqlcmd 实用工具所支持的命令集的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅 [sqlcmd 操作指南主题](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)。  
   
-## 编辑器任务  
+## <a name="editor-tasks"></a>编辑器任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|介绍如何查看和使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器的基本功能。|[数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|介绍如何查看和使用 MDX 查询编辑器的基本功能。|[MDX 查询编辑器（Analysis Services - 多维数据）](../Topic/MDX%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|  
-|介绍如何查看和使用 DMX 查询编辑器的基本功能。|[DMX 查询编辑器（Analysis Services - 数据挖掘）](../Topic/DMX%20Query%20Editor%20\(Analysis%20Services%20-%20Data%20Mining\).md)|  
+|介绍如何查看和使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的基本功能。|[数据库引擎查询编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
+|介绍如何查看和使用 MDX 查询编辑器的基本功能。|[MDX 查询编辑器（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|介绍如何查看和使用 DMX 查询编辑器的基本功能。|[DMX 查询编辑器（Analysis Services - 数据挖掘）](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |介绍如何查看和使用 XML/A 编辑器的基本功能。|[XML 编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |介绍如何配置各种编辑器的选项，如行编号和 IntelliSense 选项。|[配置编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
-|介绍可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开编辑器的各种方法。|[打开编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
+|介绍可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开编辑器的各种方法。|[打开编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
 |介绍如何管理视图模式，如自动换行功能、拆分窗口或选项卡。|[管理编辑器和视图模式](../../relational-databases/scripting/manage-the-editor-and-view-mode.md)|  
 |介绍如何设置格式设置选项，如隐藏文本或缩进。|[管理代码格式](../../relational-databases/scripting/manage-code-formatting.md)|  
 |介绍如何通过如“渐进式搜索”或“转至”功能在编辑器窗口中导航文本内容。|[代码和文本定位](../../relational-databases/scripting/navigate-code-and-text.md)|  
@@ -123,13 +127,13 @@ caps.handback.revision: 53
 |介绍如何执行全局搜索和替换，例如在更改列名称时所要用到的全局搜索和替换。|[搜索和替换](../../relational-databases/scripting/search-and-replace.md)|  
 |介绍如何设置书签，以便更容易地查找重要代码片段。|[管理书签](../../relational-databases/scripting/manage-bookmarks.md)|  
 |介绍如何打印窗口或网格中的脚本或结果。|[打印代码和结果](../../relational-databases/scripting/print-code-and-results.md)|  
-|介绍如何使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器中的 sqlcmd 功能。|[使用查询编辑器编辑 SQLCMD 脚本](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 sqlcmd 功能。|[使用查询编辑器编辑 SQLCMD 脚本](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |介绍如何使用 IntelliSense 功能，如在键入对象时自动完成对象名称或确保断点置于有效位置上。|[IntelliSense (SQL Server Management Studio)](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|介绍如何使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-SQL 代码段](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的代码段。 代码段是常用语句或语句块的模板，可以自定义或扩展以包含特定站点代码段。|[Transact-SQL 代码段](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。|[Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)|  
-|介绍如何为不同[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例设置自定义颜色，并将这些颜色设置为[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口中状态栏的背景。|[状态栏（数据库引擎查询编辑器）](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
+|介绍如何为不同 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例设置自定义颜色，并将这些颜色设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中状态栏的背景。|[状态栏（数据库引擎查询编辑器）](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "发布信息，代理（事务发布） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1"
+title: "发布信息，代理（事务发布）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1e666793719f1a277fffe23d02d4a6630585f61
+ms.lasthandoff: 04/11/2017
+
 ---
-# 发布信息，代理（事务发布）
+# <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
   **“代理”** 选项卡显示所选发布的代理的摘要信息。 为所有事务发布显示有关快照代理和日志读取器代理的信息。 对于那些为排队更新订阅启用的事务发布，将显示有关队列读取器代理的信息。  
   
-## 选项  
+## <a name="options"></a>选项  
  有关代理的详细信息及相关任务，请右键单击相应代理所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  
@@ -48,7 +52,7 @@ caps.handback.revision: 23
 -   已完成  
   
  **代理**  
- 与该发布关联的各个复制代理的名称。 分发代理与此发布的订阅关联。 有关详细信息，请参阅 [查看信息并执行任务的代理与订阅相关 & #40;复制监视器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)。  
+ 与该发布关联的各个复制代理的名称。 分发代理与此发布的订阅关联。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
  **上次启动时间**  
  代理上次启动的时间。  
@@ -59,10 +63,10 @@ caps.handback.revision: 23
  **上一操作**  
  在此代理最近一次运行的过程中最后执行的操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [查看信息并执行任务发布 & #40;复制监视器 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [查看信息并执行与发布 & #40; 关联的代理任务复制监视器 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [查看发布的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

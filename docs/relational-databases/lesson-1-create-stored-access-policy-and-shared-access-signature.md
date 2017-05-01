@@ -1,25 +1,29 @@
 ---
-title: "第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 1 课：创建存储访问策略和共享访问签名 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f2c8af4701b9a01ee21613fe7e093a89f1d8f990
+ms.lasthandoff: 04/11/2017
+
 ---
-# 第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名
+# <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>第 1 课：创建存储访问策略和共享访问签名
 本课程将介绍如何通过使用存储访问策略使用 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 脚本在 Azure blob 容器上创建共享访问签名。  
   
 > [!NOTE]  
@@ -57,7 +61,7 @@ caps.handback.revision: 22
 2.  编辑，然后执行以下脚本。  
   
     ```  
-    <#   
+    \<#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -70,7 +74,7 @@ caps.handback.revision: 22
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    <#   
+    \<#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -96,7 +100,7 @@ caps.handback.revision: 22
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    <#  
+    \<#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  
@@ -143,9 +147,11 @@ caps.handback.revision: 22
   
 ## <a name="see-also"></a>另请参阅  
 [共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)（创建容器）  
-[Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)（设置容器 ACL）  
-[Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)（获取容器 ACL）  
+[Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
+[Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  
   
   
   
+
+

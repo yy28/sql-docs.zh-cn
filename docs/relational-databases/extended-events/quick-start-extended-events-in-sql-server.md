@@ -1,23 +1,27 @@
 ---
 title: "快速入门：SQL Server 中的扩展事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 09/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 快速入门：SQL Server 中的扩展事件
+# <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -45,25 +49,25 @@ caps.handback.revision: 10
 在博客和其他非正式对话中，有时将扩展事件简称为 *xevents*。
 
 
-> [AZURE.NOTE] 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> [!NOTE]
+> 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
-## 演示前的准备工作
+## <a name="preparations-before-demo"></a>演示前的准备工作
 
 
 实际执行即将进行的演示时，需做好以下准备工作。
 
-
 1. [下载 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
-    - 每个月应安装 SSMS 最新的每月更新。
+  - 每个月应安装 SSMS 最新的每月更新。
 2. 登录到 Microsoft SQL Server 2014 或更高版本，或登录到 Azure SQL 数据库（`SELECT @@version` 将返回一个值，该值的第一个节点为 12 或更高版本）。
 3. 确保你的帐户具有**更改任意事件会话**[服务器权限](../../t-sql/statements/grant-server-permissions-transact-sql.md)。
-    - 如果有兴趣了解有关扩展事件的相关安全性和权限的更多详细信息，请参阅本文末尾的[附录](#appendix1)。
+  - 如果有兴趣了解有关扩展事件的相关安全性和权限的更多详细信息，请参阅本文末尾的[附录](#appendix1)。
 
 
 
 
-## SSMS 集成演示
+## <a name="demo-of-ssms-integration"></a>SSMS 集成演示
 
 
 SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出色，是因为许多用户通过使用 Transact-SQL 或面向扩展事件的动态管理视图 (DMV)，便无需参与到扩展事件中。
@@ -71,7 +75,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 在本节中，你不仅可以看到创建扩展事件所需执行的 UI 步骤，还可以看到它报告的数据。 在完成这些步骤后，你可以更深入地了解步骤中涉及的概念。
 
 
-### 演示步骤
+### <a name="steps-of-demo"></a>演示步骤
 
 
 即使你决定不执行这些操作，也可以试着了解一下。 此演示将启动“新建会话”对话框。 我们将处理其四个页面，分别为：
@@ -87,13 +91,9 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 
 1. 与 SSMS 连接。
 
-2. 在对象资源管理器中，依次单击“管理” > “扩展事件” > “新建会话”。
-    -  “新建会话”对话框优于“新建会话向导”，虽然两者非常相似。
+2. 在对象资源管理器中，依次单击“管理” > “扩展事件” > “新建会话”。 “新建会话”对话框优于“新建会话向导”，虽然两者非常相似。
 
-    ![SSMS 对象资源管理器、管理、扩展事件、新建会话。](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d05%2dgeneral%2dssms%2drightclick%2dnot%2dwizard%2epng)
-
-3. 在左上角，单击“常规”页。 然后在“会话名称”文本框中，键入 *YourSession* 或者任何你喜欢的名称。
-    - 暂时*不要*按“确定”按钮，该按钮要在演示结束时按。
+3. 在左上角，单击“常规”页。 然后在“会话名称”文本框中，键入 *YourSession* 或者任何你喜欢的名称。 暂时*不要*按“确定”按钮，该按钮要在演示结束时按。
 
     ![新建会话 > 常规 > 会话名称](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -114,10 +114,11 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 7. 单击“筛选器(谓词)”选项卡。 接下来，单击“单击此处可添加子句”，以便捕获所有具有 HAVING 子句的 SQL SELECT 语句。
 
 8. 在“字段”下拉列表中，选择“sqlserver.sql_text”。
-  - 在“运算符”中，选择 LIKE 运算符。
-  - 在“值”中，键入 **%SELECT%HAVING%**。
+   - 在“运算符”中，选择 LIKE 运算符。
+   - 在“值”中，键入 **%SELECT%HAVING%**。
 
-    > [AZURE.NOTE] 在这个由两部分组成的名称中，*sqlserver* 是包名称，*sql_text* 是字段名称。 我们之前选择的事件 *sql_statement_completed* 必须与我们选择的字段位于相同的包中。
+    > [!NOTE]
+    > 在这个由两部分组成的名称中，*sqlserver* 是包名称，*sql_text* 是字段名称。 我们之前选择的事件 *sql_statement_completed* 必须与我们选择的字段位于相同的包中。
 
 9. 在左上角，单击“数据存储”页。
 
@@ -142,13 +143,13 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
     ![名为 YourSession 的新*事件会话*的节点，在对象资源管理器中，在“管理”>“扩展事件”>“会话”下面](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
 
-#### 编辑事件会话
+#### <a name="edit-your-event-session"></a>编辑事件会话
 
 
 在 SSMS 的**对象资源管理器**中，可以通过右键单击事件会话的节点来编辑该会话，然后单击“属性”。 此时将显示相同的多页对话框。
 
 
-### 事件会话的相应 T-SQL
+### <a name="corresponding-t-sql-for-your-event-session"></a>事件会话的相应 T-SQL
 
 
 你之前使用 SSMS UI 生成了一个创建事件会话的 T-SQL 脚本。 你可以看到生成的脚本，如下所示：
@@ -157,7 +158,7 @@ SSMS.exe 为扩展事件提供一个出色的用户界面 (UI)。 之所以出�
 - 粘贴到任意文本编辑器中。
 
 
-下面是 *YourSession* 的 T-SQL CREATE EVENT SESSION 语句，该语句是通过在 UI 中单击生成的：
+下面是 *YourSession*的 T-SQL CREATE EVENT SESSION 语句，该语句是通过在 UI 中单击生成的：
 
 
 ```tsql
@@ -189,12 +190,13 @@ GO
 ```
 
 
-> [AZURE.NOTE] 对于 Azure SQL 数据库，在上述 CREATE EVENT SESSION 语句中，ON SERVER 子句将改为 ON DATABASE。
+> [!NOTE]
+> 对于 Azure SQL 数据库，在上述 CREATE EVENT SESSION 语句中，ON SERVER 子句将改为 ON DATABASE。
 > 
 > 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的详细信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
-#### 事件会话的预删除
+#### <a name="pre-drop-of-the-event-session"></a>事件会话的预删除
 
 
 在 CREATE EVENT SESSION 语句之前，你可能想要在名称已存在的情况下有条件地发出 DROP EVENT SESSION。
@@ -214,7 +216,7 @@ go
 ```
 
 
-#### 使用 ALTER 启动和停止事件会话
+#### <a name="alter-to-start-and-stop-the-event-session"></a>使用 ALTER 启动和停止事件会话
 
 
 在创建事件会话时，默认为不自动开始运行该会话。 你可以随时使用以下 T-SQL ALTER EVENT SESSION 语句启动或停止事件会话。
@@ -233,7 +235,7 @@ ALTER EVENT SESSION [YourSession]
 - SSMS UI 在“新建会话” > “常规”页上提供相应的复选框。
 
 
-## 测试事件会话
+## <a name="test-your-event-session"></a>测试事件会话
 
 
 通过执行以下这些简单步骤来测试事件会话：
@@ -288,13 +290,14 @@ trace_event_id         3
 
 <a name="select-the-full-results-xml-37"/>
 
-### 使用 SELECT 查看 XML 形式的完整结果
+### <a name="select-the-full-results-as-xml"></a>使用 SELECT 查看 XML 形式的完整结果
 
 
 在 SSMS 中，运行以下 T-SQL SELECT 以返回结果，其中每行提供一个事件实例的相关数据。 通过 CAST AS XML 可以轻松查看结果。
 
 
-> [AZURE.NOTE] 事件系统始终向你指定的 *.xel* event_file 文件名追加一长串数字。 必须先复制系统提供的完整名称并将其粘贴到 SELECT 中，才能从该文件运行以下 SELECT。
+> [!NOTE]
+> 事件系统始终向你指定的 *.xel* event_file 文件名追加一长串数字。 必须先复制系统提供的完整名称并将其粘贴到 SELECT 中，才能从该文件运行以下 SELECT。
 
 
 ```tsql
@@ -322,10 +325,10 @@ SELECT
 - 从 **event_data** 列的单元格中复制长 XML 字符串。 粘贴到任意简单的文本编辑器中，如 Notepad.exe，并将字符串保存在扩展名为 .XML 的文件中。 然后使用浏览器打开该 .XML 文件。
 
 
-#### 显示一个事件的结果
+#### <a name="display-of-results-for-one-event"></a>显示一个事件的结果
 
 
-我们下面看到的是结果的一部分，其格式为 XML。 此处的 XML 经过编辑，已将其缩短以便于显示。 请注意，`<data name="row_count">` 显示值 `6`，这与前面显示的 6 行结果匹配。 我们可以看到整个 SELECT 语句。
+我们下面看到的是结果的一部分，其格式为 XML。 此处的 XML 经过编辑，已将其缩短以便于显示。 请注意， `<data name="row_count">` 显示值 `6`，这与前面显示的 6 行结果匹配。 我们可以看到整个 SELECT 语句。
 
 
 ```xml
@@ -372,7 +375,7 @@ SELECT
 ```
 
 
-## 使用 SSMS 显示结果
+## <a name="ssms-to-display-results"></a>使用 SSMS 显示结果
 
 
 你可以使用 SSMS UI 中的多项高级功能来查看从扩展事件捕获的数据。 有关详细信息，请参阅：
@@ -383,7 +386,7 @@ SELECT
 先从基础的开始，即，标为“查看目标数据”和“查看实时数据”的上下文菜单选项。
 
 
-### 查看目标数据
+### <a name="view-target-data"></a>查看目标数据
 
 
 在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点下的目标节点。 在上下文菜单中单击“查看目标数据”。 SSMS 将显示数据。
@@ -394,7 +397,7 @@ SELECT
 ![查看目标数据，在 SSMS 中，管理 > 扩展事件 > 会话 > YourSession > package0.event_file，右键单击](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
 
 
-### 查看实时数据
+### <a name="watch-live-data"></a>查看实时数据
 
 
 在 SSMS 的**对象资源管理器**中，可以右键单击事件会话节点。 在上下文菜单中单击“查看实时数据”。 SSMS 将在传入数据持续实时到达时显示这些数据。
@@ -403,7 +406,7 @@ SELECT
 ![查看实时数据，在 SSMS 中，管理 > 扩展事件 > 会话 > YourSession，右键单击](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
 
-## 方案
+## <a name="scenarios"></a>方案
 
 
 在大量应用场景中，可以有效使用扩展事件。 以下文章提供了一些示例应用场景，这些场景涉及查询期间持有的锁。
@@ -414,10 +417,10 @@ SELECT
 - [查找具有最多锁定的对象](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此应用场景使用目标 package0.histogram，该目标会将原始事件数据处理后再向你显示。
 - [确定持有锁的查询](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此应用场景使用[目标 package0.pair_matching](Event%20Pairing%20Target.md)，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
+  - 此应用场景使用 [目标 package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
 
 
-## 扩展事件中的术语和概念
+## <a name="terms-and-concepts-in-extended-events"></a>扩展事件中的术语和概念
 
 
 下表列出了用于扩展事件的术语，并描述了它们的含义。
@@ -425,15 +428,15 @@ SELECT
 
 | 术语 | 说明 |
 | :--- | :---------- |
-| 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为*会话*，但前提是上下文表明了它指的是*事件会话*。 <br/> <br/> 以下文章介绍了有关事件会话的更多详细信息：[SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
-| 事件 | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如，*sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
+| 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为 *会话*，但前提是上下文表明了它指的是 *事件会话*。 <br/> <br/> 以下文章介绍了有关事件会话的更多详细信息： [SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
+| 事件 | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如， *sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
 | target | 从捕获的事件接收输出数据的项。 目标会向你显示数据。 <br/> <br/> 示例包括 *event_file*，以及它非常方便的轻量级同类 — 内存 *ring_buffer*。 更加高级的 *histogram* 目标可在显示数据之前对其进行一些处理。 <br/> <br/> 任何目标均可用于任何事件会话。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)。 |
-| action | 事件已知的字段。 该字段中的数据将发送到目标。 操作字段与*谓词筛选器*密切相关。 |
-| 谓词筛选器 | 对事件字段中数据的测试，通过使用该筛选器，可以仅将相关的一部分事件实例发送到目标。 <br/> <br/> 例如，筛选器可以只包含那些 T-SQL 语句含字符串 *HAVING* 的 *sql_statement_completed* 事件实例。 |
+| action | 事件已知的字段。 该字段中的数据将发送到目标。 操作字段与 *谓词筛选器*密切相关。 |
+| 谓词筛选器 | 对事件字段中数据的测试，通过使用该筛选器，可以仅将相关的一部分事件实例发送到目标。 <br/> <br/> 例如，筛选器可以只包含那些 T-SQL 语句含字符串 *HAVING* 的 *sql_statement_completed*事件实例。 |
 | 包 | 一种名称限定符，它附加到以事件核心为中心的一组项中的每个项。 <br/> <br/> 例如，包可能包含与 T-SQL 文本有关的事件。 一个事件可能与某个 GO 分隔批处理中的所有 T-SQL 有关。 同时，另一个更狭窄的事件与单个 T-SQL 语句有关。 此外，任何一个 T-SQL 语句都有开始事件和已完成事件。 <br/> <br/> 适用于事件的字段也位于事件所在的包中。 大多数目标位于 *package0* 中，可与其他许多包中的事件一起使用。 |
 
 
-## 如何发现包中的可用事件
+## <a name="how-to-discover-the-available-events-in-packages"></a>如何发现包中的可用事件
 
 
 以下 T-SQL SELECT 语句将为每个名称中包含“sql”（由三个字符组成的字符串）的可用事件返回一行。 当然，你可以编辑 LIKE 值，以搜索不同的事件名称。 该行还会指定包含该事件的包。
@@ -474,21 +477,21 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 ```
 
 
-#### 使用 SSMS UI 进行搜索
+#### <a name="ssms-ui-for-search"></a>使用 SSMS UI 进行搜索
 
 
 另一个搜索选项是使用 SSMS UI 的“新建会话” > “事件” > “事件库”对话框（如前面的屏幕截图所示）。
 
 
 
-#### SQL 跟踪事件类与扩展事件
+#### <a name="sql-trace-event-classes-with-extended-events"></a>SQL 跟踪事件类与扩展事件
 
 
-以下文章介绍了如何将扩展事件与 SQL 跟踪事件类和列配合使用：[查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+以下文章介绍了如何将扩展事件与 SQL 跟踪事件类和列配合使用： [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
-#### Windows 事件跟踪 (ETW) 与扩展事件
+#### <a name="event-tracing-for-windows-etw-with-extended-events"></a>Windows 事件跟踪 (ETW) 与扩展事件
 
 
 以下文章介绍了如何将扩展事件与 Windows 事件跟踪 (ETW) 配合使用：
@@ -502,13 +505,13 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 
 
 
-## 其他项
+## <a name="additional-items"></a>其他项
 
 
 本节简要介绍几个杂项。
 
 
-### 随 SQL Server 安装的事件会话
+### <a name="event-sessions-installed-with-sql-server"></a>随 SQL Server 安装的事件会话
 
 
 SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 SQL 系统启动时启动。 这些事件会话收集的数据在发生系统错误时可能有用。 与所有扩展事件一样，它们占用的资源极少，因此，Microsoft 建议不干涉它们的运行。
@@ -521,20 +524,20 @@ SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 S
 
 
 
-### 用于扩展事件的 PowerShell 提供程序
+### <a name="powershell-provider-for-extended-events"></a>用于扩展事件的 PowerShell 提供程序
 
 
-你可以使用 SQL Server PowerShell 提供程序来管理 SQL Server 扩展事件。 有关详细信息，请参阅：[对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+你可以使用 SQL Server PowerShell 提供程序来管理 SQL Server 扩展事件。 有关详细信息，请参阅： [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
-### 扩展事件的系统视图
+### <a name="system-views-for-extended-events"></a>扩展事件的系统视图
 
 
 扩展事件的系统视图包括：
 
-- *目录视图：*提供已由 CREATE EVENT SESSION 定义的事件会话的相关信息。
+- *目录视图：* 提供已由 CREATE EVENT SESSION 定义的事件会话的相关信息。
 
-- *动态管理视图 (DMV)：*提供目前正在运行的事件会话的相关信息。
+- *动态管理视图 (DMV)：* 提供目前正在运行的事件会话的相关信息。
 
 
 [SQL Server 中扩展事件系统视图中的 SELECT 和 JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) — 提供以下内容的相关信息：
@@ -553,7 +556,7 @@ SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 S
 
 
 <a name="appendix1"></a>
-## 附录：使用 SELECT 提前确定权限所有者
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>附录：使用 SELECT 提前确定权限所有者
 
 
 本文中提到的权限包括：
@@ -565,7 +568,7 @@ SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 S
 以下 Transact-SQL SELECT 语句可以报告拥有这些权限的人员。
 
 
-#### UNION 直接权限加上角色派生的权限
+#### <a name="union-direct-permissions-plus-role-derived-permissions"></a>UNION 直接权限加上角色派生的权限
 
 
 以下 SELECT...UNION ALL 语句返回的行显示了具有为扩展事件创建事件会话和查询系统目录视图所需的权限的人员。
@@ -621,12 +624,12 @@ SELECT
 ```
 
 
-#### HAS_PERMS_BY_NAME 函数
+#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 函数
 
 
 以下 SELECT 将报告你的权限。 它依赖于内置函数 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。
 
-此外，如果你有权暂时*模拟*其他帐户，则可以取消注释 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) 和 REVERT 语句，以便查询其他帐户。
+此外，如果你有权暂时 *模拟* 其他帐户，则可以取消注释 [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) 和 REVERT 语句，以便查询其他帐户。
 
 
 ```tsql
@@ -639,22 +642,24 @@ SELECT HAS_PERMS_BY_NAME(
 ```
 
 
-#### 安全性链接
+#### <a name="security-links"></a>安全性链接
 
 下面是与这些 SELECT 和权限相关的文档的链接：
 
-- 内置函数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md) 的详细信息
+- 内置函数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的详细信息
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)（尤其适用于 Azure SQL 数据库）
-- 博客：[Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
-- PDF 形式的可缩放[海报](http://go.microsoft.com/fwlink/?LinkId=229142)，显示所有 SQL Server 权限的层次结构。
+- 博客： [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
+- PDF 形式的可缩放 [海报](http://go.microsoft.com/fwlink/?LinkId=229142)，显示所有 SQL Server 权限的层次结构。
 
 
 
-## 支持信息链接
+## <a name="links-to-supporting-information"></a>支持信息链接
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
+
+
 

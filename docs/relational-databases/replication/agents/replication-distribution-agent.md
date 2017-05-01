@@ -1,33 +1,37 @@
 ---
 title: "复制分发代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分发代理，可执行文件"
-  - "代理 [SQL Server 复制]，分发代理"
-  - "分发代理，参数引用"
-  - "命令提示符 [SQL Server 复制]"
+ms.custom: 
+ms.date: 02/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, executables
+- agents [SQL Server replication], Distribution Agent
+- Distribution Agent, parameter reference
+- command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 复制分发代理
+# <a name="replication-distribution-agent"></a>复制分发代理
   复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
   
 > [!NOTE]  
 >  可以按任意顺序指定参数。 如果未指定可选参数，将使用本地计算机上预定义的注册表设置中的值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -85,18 +89,18 @@ distrib [-?]
 [-UseOledbStreaming]  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher** *server_name*[**\\***我**nstance_name*]  
- 发布服务器的名称。 指定 *server_name* 的默认实例为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。 指定 *server_name***\\***instance_name* 对于命名实例的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。  
+ **-Publisher** *server_name*[**\\***i**nstance_name*]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** *publisher_database*  
  发布服务器数据库的名称。  
   
- **-订户** *server_name*[**\\***instance_name*]  
- 订阅服务器的名称。 指定 *server_name* 的默认实例为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。 指定 *server_name***\\***instance_name* 对于命名实例的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在该服务器上。  
+ **-Subscriber** *server_name*[**\\***instance_name*]  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-SubscriberDB** *subscriber_database*  
  订阅服务器数据库的名称。  
@@ -119,7 +123,7 @@ distrib [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** *分发服务器*  
+ **-Distributor** *distributor*  
  分发服务器名称。 对于分发服务器（推送）分发，该名称默认为本地分发服务器的名称。  
   
  **-DistributorLogin** *distributor_login*  
@@ -129,7 +133,7 @@ distrib [-?]
  分发服务器密码。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- 指定分发服务器的安全模式。 值为 0，表示为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式，值为 1，表示为 Windows 身份验证模式（默认）。  
+ 指定分发服务器的安全模式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值为 0，表示为  身份验证模式，值为 1，表示为 Windows 身份验证模式（默认）。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  分发代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
@@ -140,7 +144,7 @@ distrib [-?]
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
   
- 有关详细信息，请参阅 [安全概述 & #40;复制和 #41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
  **-ErrorFile** *error_path_and_file_name*  
  分发代理生成的错误文件的路径和文件名。 在订阅服务器上应用复制事务时，在故障发生位置生成此文件；在发布服务器或分发服务器上出现的错误不记录在此文件中。 此文件包含失败的复制事务和相关的错误消息。 如果没有指定，则在分发代理的当前目录中生成此错误文件。 错误文件名为分发代理的名称，扩展名为 .err。 如果指定的文件名已存在，会将错误消息追加到该文件中。 此参数最多可包含 256 个 Unicode 字符。  
@@ -149,7 +153,7 @@ distrib [-?]
  为扩展事件 XML 配置文件指定路径和文件名。 通过该扩展事件 XML 配置文件，您可以配置会话并且启用事件跟踪。  
   
  **-FileTransferType** [ **0**| **1**]  
- 指定文件传输类型。 值为 **0** 表示 UNC （通用命名约定） 的值 **1** 表示 FTP （文件传输协议）。  
+ 指定文件传输类型。  值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
   
  **-FtpAddress** *ftp_address*  
  分发服务器的 FTP 服务网络地址。  未指定该参数时，使用 DistributorAddress。  如果未指定 **DistributorAddress** ，将使用 Distributor。  
@@ -183,9 +187,9 @@ distrib [-?]
  登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MaxBcpThreads** *number_of_threads*  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 必须具有的值大于 **0** 并且存在任何硬编码的上限。  默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。  默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
   
- **了-MaxDeliveredTransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** *number_of_transactions*  
  一次同步期间应用于订阅服务器的推送事务或请求事务的最大数量。  值为 0，表示最大值为无穷多个事务。 订阅服务器可使用其他值缩短从发布服务器请求的同步的持续时间。  
   
 > [!NOTE]  
@@ -203,11 +207,11 @@ distrib [-?]
  **-OledbStreamThreshold** *oledb_stream_threshold*  
  指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 **–UseOledbStreaming** 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
   
- **-输出** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。 如果详细级别为 **2** （默认值），所有错误消息和进度报告消息都打印，这对于调试很有用。  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-PacketSize** *packet_size*  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
@@ -216,9 +220,9 @@ distrib [-?]
  对分发数据库进行已复制事务查询的频率（以秒计）。 默认值为 5 秒。  
   
  **-ProfileName** *profile_name*  
- 指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅 [复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
- **-发布**  *发布*  
+ **-Publication**  *publication*  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -231,16 +235,16 @@ distrib [-?]
  以冒号分隔的列表，指定此代理要跳过的错误号。  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
- 如果是对 Jet 数据库 （.mdb 文件） 的路径 **SubscriberType** 是 **2** （允许与 Jet 数据库而无需 ODBC 数据源名称 (DSN) 的连接）。  
+ 如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  
   
  **-SubscriberLogin** *subscriber_login*  
- 订阅服务器登录名。 如果 **SubscriberSecurityMode** 是 **0** (对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证)，必须指定此参数。  
+ 订阅服务器登录名。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
  **-SubscriberPassword** *subscriber_password*  
- 订阅服务器密码。 如果 **SubscriberSecurityMode** 是 **0** (对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证)，必须指定此参数。  
+ 订阅服务器密码。 如果 **SubscriberSecurityMode** 为 **0** （对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证），则必须指定此参数。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- 指定订阅服务器的安全模式。 值为 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，并将值 **1** 指示 Windows 身份验证模式 （默认值）。  
+ 指定订阅服务器的安全模式。  值为 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，表示为  身份验证，值为 1，表示为 Windows 身份验证模式（默认）。  
   
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定分发代理使用的订阅服务器连接类型。  
@@ -252,49 +256,50 @@ distrib [-?]
 |**3**|OLE DB 数据源|  
   
  **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
- 每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于  发布服务器，支持介于 1 到 64 之间的值。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 只有当发布服务器和分发服务器均在  或更高版本上运行时，才支持此参数。 对于非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器或对等订阅，不支持此参数或者参数必须为 0。  
+ 每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于  发布服务器，支持介于 1 到 64 之间的值。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 只有当发布服务器和分发服务器均在  或更高版本上运行时，才支持此参数。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对于非  订阅服务器或对等订阅，不支持此参数或者参数必须为 0。  
   
 > [!NOTE]  
 >  如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
 > [!IMPORTANT]  
->  当指定值为 2 或更高的 **-SubscriptionStreams**, ，在其中事务在订阅服务器接收的顺序可能不同于创建发布服务器上的顺序。 如果此行为在同步期间导致约束冲突，则应使用 NOT FOR REPLICATION 选项禁止在同步期间强制执行约束。 有关详细信息，请参阅 [控制行为的触发器和约束在同步 & #40;复制 TRANSACT-SQL 编程 & #41;](../../../relational-databases/replication/control behavior of triggers and constraints in synchronization.md)。  
+>  将 **-SubscriptionStreams**的值指定为 2 或更大的数字时，订阅服务器接收事务的顺序可能与发布服务器提交事务的顺序不同。 如果此行为在同步期间导致约束冲突，则应使用 NOT FOR REPLICATION 选项禁止在同步期间强制执行约束。 有关详细信息，请参阅[控制同步期间触发器和约束的行为（复制 Transact-SQL 编程）](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]订阅流不适用于配置为传递  的项目。 若要使用订阅流，请改将项目配置为传递存储过程调用。  
   
  **-SubscriptionTableName** *subscription_table*  
- 在给定订阅服务器上生成或使用的订阅表的名称。 如果未指定， [MSreplication_subscriptions & #40;Transact SQL & #41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 使用表。 可将此选项用于不支持长文件名的数据库管理系统 (DBMS)。  
+ 在给定订阅服务器上生成或使用的订阅表的名称。 如果未指定，将使用 [MSreplication_subscriptions (Transact-SQL)](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 表。 可将此选项用于不支持长文件名的数据库管理系统 (DBMS)。  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  指定分发的订阅类型。  值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 请参见前面的 **–MessageInterval**参数。  
+ 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  必须指定为允许数据转换的发布的参数。  
   
- **-UseInprocLoader **  
- 通过让分发代理在将快照文件应用于订阅服务器时使用 BULK INSERT 命令，提高初始快照的性能。 不推荐使用此参数，因为它与 XML 数据类型不兼容。 如果不复制 XML 数据，则可以使用此参数。 此参数不可用于字符模式快照或非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果使用此参数，订阅服务器上的  服务帐户必须具有快照 .bcp 数据文件所在目录的读取权限。 如果不使用此参数，代理（对于非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器）或代理加载的 ODBC 驱动程序（对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器）从文件中读取数据，因此不使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文。  
+ **-UseInprocLoader**  
+ 通过让分发代理在将快照文件应用于订阅服务器时使用 BULK INSERT 命令，提高初始快照的性能。 不推荐使用此参数，因为它与 XML 数据类型不兼容。 如果不复制 XML 数据，则可以使用此参数。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 此参数不可用于字符模式快照或非  订阅服务器。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果使用此参数，订阅服务器上的  服务帐户必须具有快照 .bcp 数据文件所在目录的读取权限。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果不使用此参数，代理（对于非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器）或代理加载的 ODBC 驱动程序（对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器）从文件中读取数据，因此不使用  服务帐户的安全上下文。  
   
  **-UseOledbStreaming**  
- 指定此参数时，可以将二进制大型对象数据作为流进行绑定。 使用 **-OledbStreamThreshold** 以指定的大小，以字节为单位，超出该使用流。 **UseOledbStreaming** 默认为启用状态。 **UseOledbStreaming** 写入 **C:\Program Files\Microsoft SQL Server\\< 版本\>\COM** 文件夹。  
+ 指定此参数时，可以将二进制大型对象数据作为流进行绑定。 使用 **-OledbStreamThreshold** 指定大小（按字节计），超过此大小时将使用流。 **UseOledbStreaming** 默认为启用状态。 **UseOledbStreaming** 写入到 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 文件夹。  
   
-## 注释  
+## <a name="remarks"></a>注释  
   
 > [!IMPORTANT]  
->  如果安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理以在本地系统帐户而非域用户帐户（默认）下运行，则服务只能访问本地计算机。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果将以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理身份运行的分发代理配置为在登录到  实例时使用 Windows 身份验证模式，则分发代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)有关更改安全帐户的详细信息，请参阅。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果安装了  代理以在本地系统帐户而非域用户帐户（默认）下运行，则服务只能访问本地计算机。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如果将以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理身份运行的分发代理配置为在登录到  实例时使用 Windows 身份验证模式，则分发代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)有关更改安全帐户的详细信息，请参阅。  
   
- 若要启动分发代理，请从命令提示符下执行 **distrib.exe** 。 有关信息，请参阅 [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
+ 若要启动分发代理，请从命令提示符下执行 **distrib.exe** 。 有关信息，请参阅[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
-## 更改历史记录  
+## <a name="change-history"></a>更改历史记录  
   
-|更新的内容|  
+|更新内容|  
 |---------------------|  
-|添加 **-ExtendedEventConfigFile** 参数。|  
+| 添加了 -ExtendedEventConfigFile 参数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
+

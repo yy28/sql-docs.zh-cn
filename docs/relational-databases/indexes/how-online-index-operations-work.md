@@ -1,34 +1,38 @@
 ---
 title: "联机索引操作的工作方式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "联机索引操作"
-  - "源索引 [SQL Server]"
-  - "预先存在索引 [SQL Server]"
-  - "目标索引 [SQL Server]"
-  - "临时映射索引 [SQL Server]"
-  - "临时映射索引 [SQL Server]"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# 联机索引操作的工作方式
+# <a name="how-online-index-operations-work"></a>联机索引操作的工作方式
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   本主题将定义联机索引操作中存在的结构，并显示与这些结构相关联的活动。  
   
-## 联机索引结构  
+## <a name="online-index-structures"></a>联机索引结构  
  为了在索引数据定义语言 (DDL) 操作期间允许执行并发用户活动，在在线索引操作期间使用了以下结构：源和预先存在的索引、目标以及一个临时映射索引（用于在线重新生成堆或删除聚集索引）。  
   
 -   **源和预先存在的索引**  
@@ -39,7 +43,7 @@ caps.handback.revision: 28
   
 -   **Target**  
   
-     目标是指正在创建或重新生成的新索引（或堆）或一组新索引。 在索引操作期间，用户对源的插入、更新和删除操作是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]应用到目标的。 例如，如果联机索引操作正在重新生成一个聚集索引，则目标就是重新生成的聚集索引， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在聚集索引重新生成后不会重新生成非聚集索引。  
+     目标是指正在创建或重新生成的新索引（或堆）或一组新索引。 在索引操作期间，用户对源的插入、更新和删除操作是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 应用到目标的。 例如，如果联机索引操作正在重新生成一个聚集索引，则目标就是重新生成的聚集索引， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在聚集索引重新生成后不会重新生成非聚集索引。  
   
      提交索引操作之前，在处理 SELECT 语句时不搜索目标索引。 在内部，索引被标记为只写。  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      用于创建、删除或重新生成聚集索引的联机索引操作还需要用到临时映射索引。 此临时索引由并发事务用来确定当更新或删除了基础表中的行以后，要从正在生成的新索引中删除哪些记录。 此非聚集索引是在创建新聚集索引（或堆）的步骤中创建的，不需要执行单独的排序操作。 并发事务还会在它们的所有插入、更新和删除操作中维护临时映射索引。  
   
-## 联机索引活动  
+## <a name="online-index-activities"></a>联机索引活动  
  在简单的联机索引操作 [例如对非索引表（堆）创建聚集索引] 期间，源和目标将经历三个阶段：准备阶段、生成阶段和最后阶段。  
   
  下图显示了联机创建初始聚集索引的过程。 源对象（即堆）没有其他索引。 图中分别显示了每个阶段的源结构活动和目标结构活动；另外还显示了并发的用户选择、插入、更新和删除操作。 准备、生成和最后阶段均与每个阶段使用的锁模式一起指明。  
   
  ![在联机索引操作期间执行的活动](../../relational-databases/indexes/media/online-index.gif "在联机索引操作期间执行的活动")  
   
-## 源结构活动  
+## <a name="source-structure-activities"></a>源结构活动  
  下表列出了索引操作每个阶段中涉及源结构的活动以及相应的锁定策略。  
   
 |阶段|源活动|源锁|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  上一个表显示了在涉及单个索引的联机索引操作生成阶段获取的单个共享锁（S 锁）。 当在单个联机索引操作中（例如，在为包含一个或多个非聚集索引的表创建初始聚集索引的过程中）生成或重新生成聚集索引和非聚集索引后，在生成阶段将获取两个短期 S 锁，然后再获取长期意向共享 (IS) 锁。 首先获取一个 S 锁以创建聚集索引，当完成聚集索引的创建后，再获取第二个短期 S 锁以创建非聚集索引。 创建完非聚集索引后，S 锁会降级为 IS 锁，直到联机索引操作的最后阶段。  
   
-### 目标结构活动  
+### <a name="target-structure-activities"></a>目标结构活动  
  下表列出了索引操作每个阶段中涉及目标结构的活动以及相应的锁定策略。  
   
 |阶段|目标活动|目标锁|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  为联机索引操作所涉及的表声明的游标仅在联机索引阶段有效。 更新游标在每个阶段均无效。 只读游标在最后阶段之后才失效。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

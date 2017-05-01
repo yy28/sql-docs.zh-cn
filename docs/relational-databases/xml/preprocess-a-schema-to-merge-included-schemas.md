@@ -1,31 +1,35 @@
 ---
 title: "预处理架构以便合并包括的架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "测试预处理器工具"
-  - "xsd:include"
-  - "XML 架构集合 [SQL Server], 预处理器工具"
-  - "包括元素"
-  - "XML 架构 [SQL Server], 预处理"
-  - "架构集合 [SQL Server], 预处理器工具"
-  - "预处理器工具 [XML 架构]"
-  - "XML 架构 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 预处理架构以便合并包括的架构
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>预处理架构以便合并包括的架构
   W3C XSD **include** 元素支持架构模块性，通过功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  
   
  一种解决方法是，可以预处理包括 \<xsd:include> 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 以下 C# 代码可用于预处理。 代码前面部分的注释提供了有关如何使用代码的信息。  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## 测试预处理器工具  
+## <a name="testing-the-preprocessor-tool"></a>测试预处理器工具  
  您可以使用以下 XSD 架构来测试预处理器工具：  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

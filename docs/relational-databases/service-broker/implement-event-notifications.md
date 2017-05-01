@@ -1,33 +1,37 @@
 ---
 title: "实现事件通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件通知 [SQL Server], 目标服务"
-  - "目标服务 [SQL Server]"
-  - "事件通知 [SQL Server], 创建"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], target service
+- target service [SQL Server]
+- event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 实现事件通知
+# <a name="implement-event-notifications"></a>实现事件通知
   若要实现事件通知，必须先创建目标服务以接收事件通知，然后再创建事件通知。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。 必须根据完全安全模式手动配置对话安全设置。  
   
-## 创建目标服务  
- 无需创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 启动服务，因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包含以下特定的事件通知消息类型和约定：  
+## <a name="creating-the-target-service"></a>创建目标服务  
+ 无需创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)]启动服务，因为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包含以下特定的事件通知消息类型和约定：  
   
 ```  
 http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
@@ -40,7 +44,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  创建队列以接收消息。  
   
     > [!NOTE]  
-    >  队列接收下列消息类型：`http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
+    >  队列接收下列消息类型： `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
   
 2.  在引用事件通知约定的队列上创建服务。  
   
@@ -66,7 +70,7 @@ ADDRESS = 'LOCAL';
 GO  
 ```  
   
-## 创建事件通知  
+## <a name="creating-the-event-notification"></a>创建事件通知  
  事件通知使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION 语句创建，使用 DROP EVENT NOTIFICATION STATEMENT 删除。 若要修改事件通知，必须先删除事件通知，然后再重新创建。  
   
  下面的示例将创建事件通知 `CreateDatabaseNotification`。 该通知将服务器中发生的 `CREATE_DATABASE` 事件的相关消息发送到先前创建的 `NotifyService` 服务。  
@@ -95,7 +99,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [获取有关事件通知的信息](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

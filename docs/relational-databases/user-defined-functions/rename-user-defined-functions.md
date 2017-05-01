@@ -1,23 +1,27 @@
 ---
 title: "重命名用户定义函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6af95b4d0b4bc3b8e652fd40fa1427cd156c1514
+ms.lasthandoff: 04/11/2017
+
 ---
-# 重命名用户定义函数
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的用户定义函数。  
+# <a name="rename-user-defined-functions"></a>重命名用户定义函数
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。  
   
  **本主题内容**  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 重命名用户定义函数  
+#### <a name="to-rename-user-defined-functions"></a>重命名用户定义函数  
   
 1.  在 **“对象资源管理器”**中，单击包含您要重命名的函数的数据库旁边的加号，然后  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 7
   
  有关详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 和 [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [查看用户定义函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   

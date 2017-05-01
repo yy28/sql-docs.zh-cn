@@ -1,30 +1,34 @@
 ---
-title: "准备大容量导入数据 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "批量导入 [SQL Server]，关于批量导入"
-  - "BULK INSERT 语句，准则"
-  - "BULK INSERT 语句，限制"
-  - "bcp 实用工具 [SQL Server]，准则"
-  - "bcp 实用工具 [SQL Server]，限制"
-  - "隐藏字符"
-  - "OPENROWSET 函数，BCP 准则"
+title: "准备批量导入数据 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# 准备大容量导入数据 (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>准备大容量导入数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   只能使用 **bcp** 命令、BULK INSERT 语句或 OPENROWSET(BULK) 函数从数据文件批量导入数据。  
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      许多实用工具和文本编辑器都会显示隐藏字符，这些隐藏字符通常位于数据文件末尾。 在大容量导入操作期间，ASCII 数据文件中的隐藏字符会导致问题，这些问题会引发“发现意外空字符”错误。 查找并删除所有隐藏字符有助于避免此问题。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 实用工具](../../tools/bcp-utility.md)   

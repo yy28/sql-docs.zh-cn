@@ -1,30 +1,34 @@
 ---
 title: "分发服务器和发布服务器信息脚本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "发布服务器 [SQL Server 复制], 信息脚本"
-  - "分发服务器 [SQL Server 复制], 信息脚本"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], information scripts
+- Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 分发服务器和发布服务器信息脚本
+# <a name="distributor-and-publisher-information-script"></a>分发服务器和发布服务器信息脚本
   此脚本使用系统表和复制存储过程回答有关分发服务器和发布服务器上的对象的常见问题。 此脚本可按原样使用，也可以作为自定义脚本的基础。 此脚本可能需要做两处修改才能在您的环境中运行：  
   
 -   将 `use AdventureWorks2012` 一行更改为使用您的发布数据库的名称。  
   
--   移除注释 (`--`) 从行 `exec sp_helparticle @publication='<PublicationName>'` 和替换 \< 发布名称> 与发布的名称。  
+-   从 `exec sp_helparticle @publication='<PublicationName>'` 一行中删除注释 (`--`) 并用发布的名称替换 \<PublicationName>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -94,23 +98,23 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## 另请参阅  
- [复制管理员常见问题](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [sp_get_distributor & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
- [sp_helparticle & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helpdistributiondb & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpdistpublisher & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [sp_helpdistributor & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpmergearticle & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sp_helpmergepublication & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [sp_helppublication & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_helpreplicationdboption & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
- [sp_helpsubscriberinfo & #40;Transact SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sys.columns & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.databases & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.procedures & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [sys.servers & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
- [sys.tables & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.views & #40;Transact SQL & #41;](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
+## <a name="see-also"></a>另请参阅  
+ [复制管理员常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [sp_get_distributor (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helpdistributiondb (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistributor (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helppublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helpreplicationdboption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
+ [sp_helpsubscriberinfo (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.procedures (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
+ [sys.servers (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
+ [sys.tables (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.views (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

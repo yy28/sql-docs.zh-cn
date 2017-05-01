@@ -1,24 +1,28 @@
 ---
 title: "从 SQL Server 实用工具中删除 SQL Server 实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.utility.remove.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.utility.remove.f1
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0deccd96e577ceb352ba108e5799cc3e849f08c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 从 SQL Server 实用工具中删除 SQL Server 实例
+# <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>从 SQL Server 实用工具中删除 SQL Server 实例
   使用以下步骤从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。 此过程从 UCP 列表视图中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具数据收集将停止。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不卸载。  
   
 > [!IMPORTANT]  
@@ -32,7 +36,7 @@ caps.handback.revision: 9
   
 4.  若要确认该操作，请单击 **“确定”**。 若要退出该操作，请单击 **“取消”**。  
   
-## 手动从 SQL Server 实用工具中删除 SQL Server 的托管实例  
+## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>手动从 SQL Server 实用工具中删除 SQL Server 的托管实例  
  此过程从 UCP 列表视图中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例并且停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具数据收集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不卸载。  
   
  使用 PowerShell 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例。 此脚本执行以下操作：  
@@ -56,7 +60,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
- 请注意，在引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称时，此名称务必与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的名称完全相同。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的区分大小写的实例上，您必须使用与 @@SERVERNAME 返回的完全一致的大小写来指定实例名称。 若要获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的实例名称，请对该托管实例运行以下查询：  
+ 请注意，在引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称时，此名称务必与在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的名称完全相同。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的区分大小写的实例上，必须使用与 @@SERVERNAME 返回的完全一致的大小写来指定实例名称。 若要获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例的实例名称，请对该托管实例运行以下查询：  
   
 ```  
 select @@SERVERNAME AS instance_name  
@@ -64,8 +68,8 @@ select @@SERVERNAME AS instance_name
   
  此时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例将从 UCP 完全删除。 在您下次刷新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的数据时，该托管实例将从列表视图中消失。 此状态完全等同于用户成功在 SSMS 用户界面中完成删除托管实例操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用实用工具资源管理器管理 SQL Server 实用工具](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server 实用工具故障排除](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

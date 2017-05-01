@@ -1,50 +1,51 @@
 ---
-title: "权限（数据库引擎） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES 权限"
-  - "权限 [SQL Server]"
-  - "安全性 [SQL Server], 权限"
-  - "命名约定 [SQL Server]"
+title: "权限（数据库引擎）| Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 权限（数据库引擎）
+# <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的权限在分配给登录名和服务器角色的服务器级别，以及分配给数据库用户和数据库角色的数据库级别进行管理。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的模型拥有与数据库权限相同的系统，但服务器级别权限不可用。 本主题包含权限的完整列表。 有关典型的权限实现，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的权限总数是 236。 大多数权限适用于所有平台，但有些则不适用。 例如，无法对 SQL 数据库授予服务器级别权限，并且有几个权限仅在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上有意义。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些是最新版本中的新增主题。 下图显示了权限以及它们彼此之间的关系。 多次列出了某些更高级别的权限（如 `CONTROL SERVER`）。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的权限总数是 237。 大多数权限适用于所有平台，但有些则不适用。 例如，无法对 SQL 数据库授予服务器级别权限，并且有几个权限仅在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]上有意义。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些是最新版本中的新增主题。 下图显示了权限以及它们彼此之间的关系。 多次列出了某些更高级别的权限（如 `CONTROL SERVER`）。 单击图像下载 pdf 格式的**数据库引擎权限文章**。  
   
-![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> 作为本主题的一部分，海报太小了，因此无法查看。 请从 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)下载数据库引擎权限海报。  
-
-了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、[REVOKE](../../t-sql/statements/revoke-transact-sql.md) 和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
+了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
-有关计划权限系统的相关提示，请参阅[数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
+有关计划权限系统的相关提示，请参阅 [数据库引擎权限入门](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a>权限命名约定  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  下面介绍命名权限时遵循的一般约定：  
   
 -   CONTROL  
@@ -55,11 +56,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      授予更改特定安全对象的属性（所有权除外）的权限。 当授予对某个范围的 ALTER 权限时，也授予更改、创建或删除该范围内包含的任何安全对象的权限。 例如，对架构的 ALTER 权限包括在该架构中创建、更改和删除对象的权限。  
   
--   ALTER ANY \<服务器安全对象>，其中“服务器安全对象”可为任何服务器安全对象。  
+-   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
   
      授予创建、更改或删除“服务器安全对象” 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
--   ALTER ANY \<数据库安全对象>，其中“数据库安全对象”可为数据库级别上的任何安全对象。  
+-   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
   
      授予创建、更改或删除“数据库安全对象” 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
@@ -75,15 +76,15 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      允许被授权者模拟该用户。  
   
--   CREATE \<*Server Securable*>  
+-   CREATE \<*服务器安全对象*>  
   
      授予被授权者创建“服务器安全对象” 的权限。  
   
--   CREATE \<*Database Securable*>  
+-   CREATE \<*数据库安全对象*>  
   
      授予被授权者创建“数据库安全对象” 的权限。  
   
--   CREATE \<*Schema-contained Securable*>  
+-   CREATE \<*包含架构的安全对象*>  
   
      授予创建包含在架构中的安全对象的权限。 但是，若要在特定架构中创建安全对象，必须对该架构具有 ALTER 权限。  
   
@@ -100,7 +101,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
  有关 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a>适用于特定安全对象的权限  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
 |权限|适用于|  
@@ -122,7 +123,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a>SQL Server 权限  
+##  <a name="_permissions"></a> SQL Server Permissions  
  下表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的完整列表。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 权限仅适用于受支持的基本安全对象。 不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授予服务器级别权限，但是在某些情况下，可改为授予数据库权限。  
   
 |基础安全对象|对基础安全对象的粒度权限|权限类型代码|包含基础安全对象的安全对象|对容器安全对象的权限隐含着对基础安全对象的粒度权限|  
@@ -160,25 +161,25 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
 |DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|更改任何安全策略|ALSP<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|更改任何安全策略|ALSP<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -216,18 +217,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
-|DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
+|DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
+|DATABASE|Insert|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）。|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （至[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 当前版本）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -263,7 +264,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
 |OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
-|OBJECT|INSERT|IN|SCHEMA|INSERT|  
+|OBJECT|Insert|IN|SCHEMA|Insert|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
@@ -293,7 +294,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
 |SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
-|SCHEMA|INSERT|IN|DATABASE|INSERT|  
+|SCHEMA|Insert|IN|DATABASE|Insert|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
@@ -364,7 +365,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>权限检查算法摘要  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  检查权限可能很复杂。 权限检查算法包括重叠的组成员关系和所有权链接、显式和隐式权限，并且会受包含安全实体的安全类的权限影响。 该算法的一般过程是收集所有相关权限。 如果未找到阻止性 DENY，该算法将搜索提供足够访问权限的 GRANT。 该算法包含三个基本元素： **安全上下文**、 **权限空间**和 **必需的权限**。  
   
 > [!NOTE]  
@@ -426,7 +427,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 表上的 DENY 被列中的 GRANT 替代。 但是，表上的后续 DENY 将删除 GRANT 列。 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a>示例  
+##  <a name="_examples"></a> Examples  
  本节中的以下示例说明如何检索权限信息。  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 返回可授予权限的完整列表  
@@ -454,7 +455,7 @@ GO
 ```  
   
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 返回适用于指定对象的权限  
- 以下示例将返回适用于名为 `Yttrium`的对象的权限。 请注意，使用了内置函数 `OBJECT_ID` 来检索对象 `Yttrium` 的 ID。  
+ 以下示例将返回适用于名为 `Yttrium`的对象的权限。 请注意，使用了内置函数 `OBJECT_ID` 来检索对象 `Yttrium`的 ID。  
   
 ```tsql  
 SELECT * FROM sys.database_permissions   
@@ -467,3 +468,4 @@ GO
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+
