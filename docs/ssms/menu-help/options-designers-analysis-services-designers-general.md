@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>选项（“设计器”-“Analysis Services 设计器”-“常规”）
-使用“设计器”、“维护计划”、“Analysis Services”和“常规”页可以确定 Analysis Services 设计器的默认行为。  
+使用“设计器”****、“维护计划”****、“Analysis Services”****和“常规”****页可以确定 Analysis Services 设计器的默认行为。  
   
 ## <a name="connectivity"></a>连接  
 查询超时值  

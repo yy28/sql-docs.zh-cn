@@ -36,10 +36,10 @@ ms.lasthandoff: 04/11/2017
   
  只读文件组的文件备份可以与部分备份一起使用。 部分备份包括所有读/写文件组以及可选的一个或多个只读文件组。 有关详细信息，请参阅[部分备份 (SQL Server)](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
   
- 文件备份可以用作差异文件备份的“差异基准  ”。 有关详细信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+ 文件备份可以用作差异文件备份的“差异基准 ** ”。 有关详细信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  除了在与“差异文件备份”明确进行比较的时候，完整文件备份通常称为文件备份。  
+>  除了在与“差异文件备份”**明确进行比较的时候，完整文件备份通常称为文件备份**。  
   
  **本主题内容：**  
   

@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 -   使用大容量日志恢复模式。  
   
-     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+     此原则适用于使用完整恢复模式的数据库。 对无索引表（“堆”**）执行批量操作时，大容量日志恢复模式非常有用。 使用大容量日志恢复有助于防止事务日志出现空间不足的情况，因为大容量日志恢复不会插入日志行。 有关大容量日志恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
      建议您在执行大容量导入操作之前，先将数据库改为使用大容量日志恢复模式。 之后应立即将数据库重设为完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   

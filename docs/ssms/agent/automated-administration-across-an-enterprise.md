@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
-跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的自动化管理称为“多服务器管理”。 使用多服务器管理可以执行下列操作：  
+跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的自动化管理称为“多服务器管理”**。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   

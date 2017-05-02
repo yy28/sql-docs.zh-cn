@@ -53,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
  与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，不能将 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 之类的函数用于查询有关 DDL 触发器的元数据。 请改用目录视图。  
   
- 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
+ 服务器范围的 DDL 触发器显示在 SQL Server Management Studio 对象资源管理器的“触发器”****文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在“数据库触发器”****文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
   
 > [!IMPORTANT]  
 >  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何帮助减少此威胁的详细信息，请参阅 [管理触发器安全](../../relational-databases/triggers/manage-trigger-security.md)。  

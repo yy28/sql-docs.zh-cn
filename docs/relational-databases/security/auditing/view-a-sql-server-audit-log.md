@@ -58,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  
               **
-              **右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器” *server_name* 对话框。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+              **右键单击要查看的审核日志，然后选择“查看审核日志”。 这将打开“日志文件查看器” *****server_name* 对话框。 有关详细信息，请参阅 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.  完成后，单击 **“关闭”**。  
   

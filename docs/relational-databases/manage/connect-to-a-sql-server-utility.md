@@ -33,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击 **“视图”** ，然后单击 **“实用工具资源管理器”**。  
   
-4.  在实用工具资源管理器导航窗格中，单击 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”。  
+4.  在实用工具资源管理器导航窗格中，单击 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")“连接到实用工具”****。  
   
 5.  在 **“连接到服务器”** 对话框中，指定 UCP 实例名称，再单击 **“连接”**。  
   

@@ -23,10 +23,10 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
-可使用“Windows Azure 存储连接”对话框指定存储帐户并验证与 Windows Azure 的连接。  
+可使用“Windows Azure 存储连接”****对话框指定存储帐户并验证与 Windows Azure 的连接。  
   
 ## <a name="options"></a>选项  
-指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”继续。  
+指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”****继续。  
   
 1.  **存储帐户** - 指定存储帐户名称。  
   

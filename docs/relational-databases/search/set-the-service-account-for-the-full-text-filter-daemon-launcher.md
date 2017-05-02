@@ -34,13 +34,13 @@ SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它�
 
 ##  <a name="setting"></a> 设置服务帐户  
   
-1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。  
+1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。************  
   
-2.  在“SQL Server 配置管理器”中，单击“SQL Server 服务”，右键单击“SQL 全文筛选器后台程序启动器”**（***实例名称***）**，然后单击“属性”。  
+2.  在“SQL Server 配置管理器”****中，单击“SQL Server 服务”****，右键单击“SQL 全文筛选器后台程序启动器”**（***实例名称***）**，然后单击“属性”****。  
   
-3.  单击此对话框的“登录”选项卡，选择或输入一个帐户，该帐户用于运行由 SQL 全文筛选器后台程序启动器服务启动的每个进程。  
+3.  单击此对话框的“登录”****选项卡，选择或输入一个帐户，该帐户用于运行由 SQL 全文筛选器后台程序启动器服务启动的每个进程。  
   
-4.  关闭此对话框之后，单击“重新启动”以重新启动 SQL 全文筛选器后台程序启动器服务。  
+4.  关闭此对话框之后，单击“重新启动”****以重新启动 SQL 全文筛选器后台程序启动器服务。  
   
 ![SQL 全文筛选器后台程序启动器进程属性](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   

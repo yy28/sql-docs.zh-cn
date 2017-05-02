@@ -56,11 +56,11 @@ ms.lasthandoff: 04/11/2017
 -   出于性能方面的考虑，我们建议您不要将这些函数应用于参数化行筛选器子句（如 `LEFT([MyColumn]) = SUSER_SNAME()`）中的列名。 如果在筛选子句中使用 HOST_NAME 并覆盖 HOST_NAME 值，则可能需要使用 CONVERT 转换数据类型。 有关此情况的最佳实践的详细信息，请参阅主题 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“覆盖 HOST_NAME() 值”一节。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除参数化行筛选器。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”****页或“发布属性 - \<发布>”****对话框的“筛选行”****页上定义、修改和删除参数化行筛选器。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>定义参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，单击“添加”，然后单击“添加筛选器”。  
+1.  在新建发布向导的“筛选表行”****页或“发布属性 - \<发布>”****的“筛选行”****页上，单击“添加”****，然后单击“添加筛选器”****。  
   
 2.  在 **“添加筛选器”** 对话框中，从下拉列表框中选择要筛选的表。  
   
@@ -90,11 +90,11 @@ ms.lasthandoff: 04/11/2017
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+6.  如果处于“发布属性 - \<发布>”****对话框中，请单击“确定”****以保存并关闭该对话框。  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>修改参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。  
+1.  在新建发布向导的“筛选表行”****页或“发布属性 - \<发布>”****的“筛选行”****页上，在“筛选的表”****窗格中选择筛选器，然后单击“编辑”****。  
   
 2.  在 **“编辑筛选器”** 对话框中，修改筛选器。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>删除参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。  
+1.  在新建发布向导的“筛选表行”****页或“发布属性 - \<发布>”****的“筛选行”****页上，在“筛选的表”****窗格中选择筛选器，然后单击“删除”****。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式创建和修改参数化行筛选器。  

@@ -58,11 +58,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
   
-     授予创建、更改或删除“服务器安全对象” 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
+     授予创建、更改或删除“服务器安全对象” **的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
 -   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
   
-     授予创建、更改或删除“数据库安全对象” 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
+     授予创建、更改或删除“数据库安全对象” **的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
 -   TAKE OWNERSHIP  
   
@@ -78,11 +78,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   CREATE \<*服务器安全对象*>  
   
-     授予被授权者创建“服务器安全对象” 的权限。  
+     授予被授权者创建“服务器安全对象” **的权限。  
   
 -   CREATE \<*数据库安全对象*>  
   
-     授予被授权者创建“数据库安全对象” 的权限。  
+     授予被授权者创建“数据库安全对象” **的权限。  
   
 -   CREATE \<*包含架构的安全对象*>  
   

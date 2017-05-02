@@ -113,7 +113,7 @@ ms.lasthandoff: 04/11/2017
   
  若要清除语句缓存，请键入 **:RESET**。 键入 **^C** 可使 **sqlcmd** 退出。 在发出**^C** 命令后，还可以用 **^C** 停止语句缓存的执行。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **提示符中输入** :ED **sqlcmd** 提示符）。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入“GO”以运行修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **提示符中输入** :ED **sqlcmd** 提示符）。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入“GO”****以运行修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 ## <a name="quoted-strings"></a>带引号的字符串  
  用引号引起来的字符无需任何额外的预处理即可使用。例外，输入两个连续的引号可以将引号插入字符串中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将这种字符序列视作一个引号。 （但在服务器上会进行转换。）当脚本变量出现在字符串中时，不会展开它们。  

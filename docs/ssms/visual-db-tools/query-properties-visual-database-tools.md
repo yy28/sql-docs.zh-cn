@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>选项  
 **标识类别**  
-展开此项可显示“名称”属性。  
+展开此项可显示“名称”****属性。  
   
 **名称**  
 显示当前查询的名称。 无法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中更改。  
@@ -69,18 +69,18 @@ ms.lasthandoff: 04/11/2017
 显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本的数据库。）  
   
 **Top 规范类别**  
-展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  
+展开此项可显示“Top”****、“百分比”****、“表达式”****和“With Ties”****属性的属性。  
   
 **(最前面)**  
-指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n 行。 默认情况下，查询将在结果集中返回前 10 行。  
+指定查询将包括 TOP 子句，该子句只返回结果集中的前 n ** 行或前百分之 n **行。 默认情况下，查询将在结果集中返回前 10 行。  
   
 使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或更高版本。）  
   
 **表达式**  
-指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将返回的行数或行数百分比。 如果将“百分比”****设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”****设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **百分比**  
-指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将只返回结果集中的前百分之 n** 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **With Ties**  
 指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  

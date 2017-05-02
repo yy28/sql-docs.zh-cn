@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
 |**Duration**|**bigint**|扩展文件所需的时间长度（毫秒）。|13|是|  
-|**EndTime**|**datetime**|日志文件自动增长  的结束时间。|18|是|  
+|**EndTime**|**datetime**|日志文件自动增长 **** 的结束时间。|18|是|  
 |**EventClass**|**int**|事件类型 = 93。|27|是|  
 |**EventSequence**|**int**|**CursorClose** 事件类在批处理中的顺序。|51|是|  
 |**Filename**|**nvarchar**|扩展的文件的逻辑名称。|36|是|  

@@ -44,13 +44,13 @@ ms.lasthandoff: 04/11/2017
 -   更改高级属性配置。  
   
 > [!NOTE]  
->  “SQL Server 扩展事件向导”不支持事件会话修改。  
+>  “SQL Server 扩展事件向导”****不支持事件会话修改。  
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>如何使用 SQL Server 扩展事件向导更改扩展事件会话  
   
 -   在对象资源管理器中，依次展开 **“管理”**、 **“扩展事件”**和 **“会话”**。  
   
--   右键单击要更改的会话，然后单击“属性”。  
+-   右键单击要更改的会话，然后单击“属性”****。  
   
 -   在 **“属性”** 对话框中进行相应的更改，然后单击 **“确定”**。  
   

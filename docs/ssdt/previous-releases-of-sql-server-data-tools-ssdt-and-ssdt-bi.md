@@ -28,7 +28,7 @@ SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库
 SSDT 可向后兼容，这意味着你始终都可使用 [最新的 SSDT](https://msdn.microsoft.com/library/mt204009.aspx) 来设计和部署面向较早版本 SQL Server 的数据库、模型、报表和包。 你还可以使用下面列出的任何以前发布的版本。  
   
 > [!NOTE]  
-> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只是添加了缺少的模板。  
+> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” ****、“SQL Server Data Tools-Business Intelligence” ****和“Business Intelligence Development Studio” ****。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只是添加了缺少的模板。  
 
 ## <a name="recent-downloads"></a>最近下载
 

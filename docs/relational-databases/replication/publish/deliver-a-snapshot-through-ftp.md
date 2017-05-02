@@ -61,11 +61,11 @@ ms.lasthandoff: 04/11/2017
  如果可能，请在运行时提示用户输入其凭据。 如果将凭据存储在脚本文件中，则必须确保此文件的安全。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 配置 FTP 服务器后，请在“发布属性 \<发布>”对话框中为该服务器指定目录和安全信息。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 配置 FTP 服务器后，请在“发布属性 \<发布>”对话框中为该服务器指定目录和安全信息。**** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-ftp-information"></a>指定 FTP 信息  
   
-1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。  
+1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。********  
   
     -   **“FTP 快照”** 页，用于快照发布和事务发布以及运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的发布服务器的合并发布。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  为 **“FTP 服务器名称”**、 **“端口号”**、 **“从 FTP 根文件夹开始的路径”**、 **“登录名”**和 **“密码”**指定值。  
   
-     例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。  
+     例如，如果 FTP 服务器的根目录是 \\\ftpserver\home，但你想将快照存储在 \\\ftpserver\home\snapshots，请为“从 FTP 根文件夹开始的路径”属性指定 \snapshots\ftp（复制在创建快照文件时将“ftp”追加到快照文件夹路径）。****  
   
 3.  指定快照代理应将快照文件写入在步骤 2 中指定的目录。 例如，若要让快照代理将快照文件写入 \\\ftpserver\home\snapshots\ftp，必须在下面两个位置之一指定路径 \\\ftpserver\home\snapshots：  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
     -   发布的备用快照文件夹位置。 如果压缩快照，则需要指定备用位置。  
   
-         在“发布属性 - \<发布>”对话框的快照页上，在“将文件放入下列文件夹”文本框中输入该路径。 有关备用快照文件夹位置的详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
+         在“发布属性 - \<发布>”对话框的快照页上，在“将文件放入下列文件夹”文本框中输入该路径。******** 有关备用快照文件夹位置的详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

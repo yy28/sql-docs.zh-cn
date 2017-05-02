@@ -68,7 +68,7 @@ ms.lasthandoff: 04/11/2017
 除了可以向“结果”窗格中复制行之外，您还可以添加新记录或者修改或删除现有记录。 有关详细信息，请参阅[在“结果”窗格中添加新行 (Visual Database Tools)](../../ssms/visual-db-tools/add-new-rows-in-the-results-pane-visual-database-tools.md)、[在“结果”窗格中删除行 (Visual Database Tools)](../../ssms/visual-db-tools/delete-rows-in-the-results-pane-visual-database-tools.md) 和[在“结果”窗格中编辑行 (Visual Database Tools)](../../ssms/visual-db-tools/edit-rows-in-the-results-pane-visual-database-tools.md)。  
   
 ## <a name="tips-for-working-with-null-values-and-empty-cells"></a>关于处理 NULL 值和空单元格的提示  
-单击一个空行以添加新记录时，所有列的初始值均为 NULL。 如果列允许空值，则可将保留空值。  
+单击一个空行以添加新记录时，所有列的初始值均为 NULL**。 如果列允许空值，则可将保留空值。  
   
 若要使用空值替换非空值，请键入大写字母的 NULL。 “结果”窗格将对该词应用倾斜格式，以表示它将被识别为空值而不是字符串。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="what-can-not-be-represented-fully"></a>不能完全呈现的内容  
 从数据库返回“结果”窗格的内容很大程度上受您所使用的数据源的提供程序控制。 “结果”窗格并不总是能转换所有数据库管理系统中的数据。 在以下情况下便是如此。  
   
--   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由 <Binary data> 或 Null 表示。  
+-   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由 <Binary data> 或 Null 表示****。  
   
 -   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据的数据类型的精度比这个值大，数据可能会截断或可能由 *<Unable to read data>*表示。  
   

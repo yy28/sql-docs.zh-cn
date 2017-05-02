@@ -58,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
--   右键单击“SQL Server 代理”，然后单击“属性”。  
+-   右键单击“SQL Server 代理”****，然后单击“属性”****。  
   
 -   单击 **“警报系统”**。  
   

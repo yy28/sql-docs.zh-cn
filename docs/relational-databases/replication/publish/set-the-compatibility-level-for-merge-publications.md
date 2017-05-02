@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在新建发布向导的 **“订阅服务器类型”** 页上设置兼容级别。 有关访问本向导的详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中设置合并发布的兼容级别。 创建了发布快照后，可以提高兼容级别但不能降低兼容级别。 在“发布属性 - \<发布>”对话框的“常规”页上提高兼容性级别。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 如果要提高发布兼容级别，则运行该兼容级别的早期版本的服务器上的所有现有订阅都将不能同步。  
+ 在新建发布向导的 **“订阅服务器类型”** 页上设置兼容级别。 有关访问本向导的详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中设置合并发布的兼容级别。 创建了发布快照后，可以提高兼容级别但不能降低兼容级别。 在“发布属性 - \<发布>”****对话框的“常规”****页上提高兼容性级别。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 如果要提高发布兼容级别，则运行该兼容级别的早期版本的服务器上的所有现有订阅都将不能同步。  
   
 > [!NOTE]  
 >  由于兼容级别具有其他发布属性的含义，并且项目属性对这些含义有效。因此，请不要使用同一个对话框更改兼容级别和其他属性。 应该在更改属性后重新生成发布的快照。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>提高发布兼容级别  
   
--   在“发布属性 - \<发布>”对话框的“常规”页上，选择**兼容性级别**。  
+-   在“发布属性 - \<发布>”****对话框的“常规”****页上，选择**兼容性级别**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以在创建发布时以编程方式设置合并发布的兼容级别，或者以后以编程方式进行修改。 可使用复制存储过程来设置或更改此发布属性。  

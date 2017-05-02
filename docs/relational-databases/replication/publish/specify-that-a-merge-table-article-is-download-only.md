@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
 -   如果在初始化订阅后指定项目仅用于下载，则所有收到该项目的客户端订阅必须重新初始化。 服务器订阅不必重新初始化。 有关属性更改的影响的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在新建发布向导的“项目”页或“项目属性 - \<项目>”对话框的“属性”选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - \<发布>”对话框中提供了该对话框。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在新建发布向导的“项目”****页或“项目属性 - \<项目>”****对话框的“属性”****选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - \<发布>”****对话框中提供了该对话框。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>在“项目”页上指定项目仅用于下载  
   
@@ -54,17 +54,17 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>在“项目属性 - \<项目>”对话框的“属性”选项卡上指定项目仅用于下载  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。  
+1.  在新建发布向导或“发布属性 - \<发布>”****对话框的“项目”****页上，选择一个表，然后单击“项目属性”****。  
   
 2.  单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“目标对象”部分中，为“同步方向”指定以下值之一：  
+3.  在“项目属性 - \<项目>”****对话框的“属性”****选项卡的“目标对象”****部分中，为“同步方向”****指定以下值之一：  
   
     -   **下载到订阅服务器，禁止订阅服务器更改**  
   
     -   **下载到订阅服务器，允许订阅服务器更改**  
   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+4.  如果处于“发布属性 - \<发布>”****对话框中，请单击“确定”****以保存并关闭该对话框。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -53,9 +53,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-disable-smb"></a>禁用 SMB  
   
-1.  在“开始”菜单中，指向“设置”，然后单击“网络和拨号连接”。  
+1.  在“开始”****菜单中，指向“设置”****，然后单击“网络和拨号连接”****。  
   
-     右键单击面向 Internet 的连接，然后单击“属性”。  
+     右键单击面向 Internet 的连接，然后单击“属性”****。  
   
 2.  选中 **“Microsoft Networks 客户端”** 复选框，然后单击 **“卸载”**。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>在可通过 Internet 访问的服务器上禁用 SMB  
   
--   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”对话框删除“Microsoft 网络的文件和打印共享”和“Microsoft 网络客户端”。  
+-   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”****对话框删除“Microsoft 网络的文件和打印共享”****和“Microsoft 网络客户端”****。  
   
 ## <a name="endpoints"></a>端点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用管理员必须从端点的目录视图中获得的端点 ID。  

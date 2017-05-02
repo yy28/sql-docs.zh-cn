@@ -114,7 +114,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="support_limits"></a> 可支持性  
  以下内容支持特定于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的限制和注意事项：  
   
--   支持备份“主”、“模型”和“msdb”系统数据库。 不支持备份“tempdb”。 
+-   支持备份“主”****、“模型”****和“msdb”****系统数据库。 不支持备份“tempdb”****。 
   
 -   对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，所有恢复模式（完整、大容量日志和简单）均受支持。  
   

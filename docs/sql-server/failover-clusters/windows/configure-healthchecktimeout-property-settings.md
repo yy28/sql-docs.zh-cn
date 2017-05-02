@@ -76,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 2.  展开 **“服务和应用程序”** ，然后选择 FCI。  
   
-3.  右键单击“其他资源”下的“SQL Server 资源”，然后从右键菜单中选择“属性”。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
+3.  右键单击“其他资源”****下的“SQL Server 资源”****，然后从右键菜单中选择“属性”****。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   

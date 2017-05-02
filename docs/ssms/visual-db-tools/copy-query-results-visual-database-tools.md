@@ -23,13 +23,13 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>复制查询结果 (Visual Database Tools)
-可以从“结果”窗格中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  
+可以从“结果”窗格****中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>从结果窗格中复制结果集文本  
   
 1.  运行含有要复制数据的查询或视图。  
   
-2.  若要选择整个结果集，请在“结果”窗格中单击左上方的空单元。  
+2.  若要选择整个结果集，请在“结果”窗格****中单击左上方的空单元。  
   
 3.  选择行：  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
     会突出显示所选单元格。  
   
-5.  右键单击并选择“复制”。  
+5.  右键单击并选择“复制”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用“结果”窗格中的数据 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

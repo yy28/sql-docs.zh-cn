@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”****按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
   
 ## <a name="options"></a>选项  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 |||  
 |-|-|  
-|**After**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择“属性”；然后，单击“服务器属性”对话框的“数据库设置”页。|  
+|**After**|指定在多少天后此备份集才会过期，从而可被覆盖。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。<br /><br /> 备份过期时间的默认值是在“默认备份介质保持期(天)”****选项中设置的值。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，再选择****“属性”；然后，单击****“服务器属性”对话框的****“数据库设置”页。|  
 |**On**|指定备份集过期从而可被覆盖的具体日期。|  
   
 ### <a name="compression"></a>压缩  

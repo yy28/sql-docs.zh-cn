@@ -40,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化订阅的过程由两个部分组成：  
   
-1.  将对发布的单个或所有订阅“标记”  为重新初始化。 在 **“重新初始化订阅”** 对话框中将订阅标记为要重新初始化，该对话框可以在  的 **“本地发布”** 文件夹和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
+1.  将对发布的单个或所有订阅“标记” ** 为重新初始化。 在 **“重新初始化订阅”** 对话框中将订阅标记为要重新初始化，该对话框可以在 **** 的 **“本地发布”** 文件夹和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 也可以从 **“所有订阅”** 选项卡和复制监视器中的发布节点中对订阅进行标记。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 将订阅标记为要重新初始化时，可以选择下列选项之一：  
   
      **使用当前快照**  
      选择此项可以在分发代理或合并代理下一次运行时将当前快照应用于订阅服务器。 如果无法获得有效快照，将无法选定此选项。  

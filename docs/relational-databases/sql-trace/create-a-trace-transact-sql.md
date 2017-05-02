@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-a-trace"></a>创建跟踪  
   
-1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态为 **0**）。  
+1.  执行带所需参数的 **sp_trace_create** 以创建新的跟踪。 新的跟踪将处于停止状态（状态**为 **0**）。  
   
 2.  执行带所需参数的 **sp_trace_setevent** 以选择要跟踪的事件和列。  
   

@@ -86,7 +86,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，再右键单击要收缩的数据库。  
+2.  展开****“数据库”，再右键单击要收缩的数据库。  
   
 3.  指向 **“任务”**，指向 **“收缩”**，然后单击 **“数据库”**。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   

@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  如果条件要基于的列不在“条件”窗格[](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，请添加该列。 （大多数情况下，该条件所涉及的列已经是组或汇总列。）不能使用未包含在聚合函数或 GROUP BY 子句中的列。  
   
-3.  在“筛选器”列中，指定要对组应用的条件。  
+3.  在“筛选器”****列中，指定要对组应用的条件。  
   
     [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将自动在“SQL 窗格”[](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的语句中创建 HAVING 子句，如下例所示：  
   

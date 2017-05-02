@@ -77,10 +77,10 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="peer-to-peer-replication"></a>对等复制  
  **True**  
- 仅适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定发布是否支持对等复制。 将此选项设置为 **True** 可将其他发布属性设置为支持对等复制。 如果存在订阅，此选项为只读。 如果“允许立即更新订阅”  、“允许排队更新订阅”  或“允许非 SQL Server 订阅服务器” 设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
+ 仅适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本。 确定发布是否支持对等复制。 将此选项设置为 **True** 可将其他发布属性设置为支持对等复制。 如果存在订阅，此选项为只读。 如果“允许立即更新订阅” **** 、“允许排队更新订阅” **** 或“允许非 SQL Server 订阅服务器” ****设置为 **True** ，则不能将此选项设置为 **True**。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  **允许对等冲突检测**  
- 仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定是否为此发布启用冲突检测。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本；且必须为所有节点启用检测。 若要使用冲突检测，还必须为“对等发起方 ID” 指定一个值。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
+ 仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定是否为此发布启用冲突检测。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本；且必须为所有节点启用检测。 若要使用冲突检测，还必须为“对等发起方 ID” ****指定一个值。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
  **对等发起方 ID**  
  仅适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。 指定对等拓扑中某个节点的 ID。 如果 **“允许对等冲突检测”** 设置为 **True**，此 ID 将用于冲突检测。 请指定拓扑中从未使用过的非零、正值 ID。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。  

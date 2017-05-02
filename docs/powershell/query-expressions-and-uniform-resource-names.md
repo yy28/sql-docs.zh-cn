@@ -70,7 +70,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  @*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性的名称必须以字符 @ 作为前缀。 例如，为 **Database** 类的 **IsAnsiNull** 属性指定 @IsAnsiNull。  
+ 指定与**“对象”中指定的对象相关联的类的其中一个属性的名称。 属性的名称必须以字符 @ 作为前缀。 例如，为 **Database** 类的 **IsAnsiNull** 属性指定 @IsAnsiNull。  
   
  @*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  

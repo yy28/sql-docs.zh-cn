@@ -63,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
+2.  展开“SQL Server 代理”****，创建一个新作业或右键单击一个现有作业，再单击“属性”****。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页面，再单击 **“新建”**。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
+2.  展开“SQL Server 代理”****，创建一个新作业或右键单击一个现有作业，再单击“属性”****。 有关创建作业的详细信息，请参阅[创建作业](../../ssms/agent/create-jobs.md)。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   

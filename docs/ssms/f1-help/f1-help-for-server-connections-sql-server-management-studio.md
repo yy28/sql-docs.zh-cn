@@ -27,7 +27,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>服务器连接的 F1 帮助 (SQL Server Management Studio)
-本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“连接到服务器”对话框页的 F1 帮助。  
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“连接到服务器”****对话框页的 F1 帮助。  
   
 [查找服务器（本地服务器）](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

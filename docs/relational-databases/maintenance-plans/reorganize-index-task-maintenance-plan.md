@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
-  使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
+  使用“‘重新组织索引’任务”****对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
 ## <a name="options"></a>选项  
  **连接**  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
      生成的维护计划将只对所选数据库运行维护任务。 如果选择此选项，则必须至少在列表中选择一个数据库。  
   
  **对象**  
- 将“选择”网格限制为显示表、显示视图或同时显示两者。  
+ 将“选择”****网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
  指定受此任务影响的表或索引。 在 **“对象”** 框中选择 **“表和视图”** 时不可用。  

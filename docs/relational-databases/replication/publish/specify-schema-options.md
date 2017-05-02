@@ -56,26 +56,26 @@ ms.lasthandoff: 04/11/2017
 -   有关架构选项的完整列表，请参阅 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 **@schema_option** 参数。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定架构选项，例如是否将约束和触发器复制到订阅服务器。 此选项卡可在新建发布向导和“发布属性 - \<发布>”对话框中获得。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定架构选项，例如是否将约束和触发器复制到订阅服务器。******** 此选项卡可在新建发布向导和“发布属性 - \<发布>”对话框中获得。**** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>指定架构选项  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个项目，然后单击“项目属性”。  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个项目，然后单击“项目属性”。************  
   
 2.  选择要将架构选项更改应用于哪些项目：  
   
-    -   单击“设置突出显示的 \<对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。  
+    -   单击“设置突出显示的 \<对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。************  
   
-    -   单击“设置所有 \<对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。  
+    -   单击“设置所有 \<对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。************  
   
         > [!NOTE]  
-        >  在“所有 \<对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。 例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
+        >  在“所有 \<对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。******** 例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“将对象和设置复制到订阅服务器”和“目标对象”部分中，为各选项指定值。  
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“将对象和设置复制到订阅服务器”和“目标对象”部分中，为各选项指定值。****************  
   
 4.  根据需要修改属性，然后单击 **“确定”**。  
   
-5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  架构选项指定为十六进制值，该值为一个或多个选项的 [|（位或）](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 结果。 有关详细信息，请参阅 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。  

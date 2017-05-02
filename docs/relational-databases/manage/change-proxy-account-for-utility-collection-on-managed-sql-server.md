@@ -31,11 +31,11 @@ ms.lasthandoff: 04/11/2017
   
     -   在 SSMS 的 **“实用工具资源管理器”** 中，单击 **“托管实例”** 节点。  
   
-    -   在“实用工具资源管理器”列表视图中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“删除托管实例…”。 有关详细信息，请参阅[从 SQL Server 实用工具中删除 SQL Server 的实例](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
+    -   在“实用工具资源管理器”****列表视图中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“删除托管实例…”****。 有关详细信息，请参阅[从 SQL Server 实用工具中删除 SQL Server 的实例](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
 2.  再次在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
-    -   在 SSMS 的“实用工具资源管理器”中，右键单击“托管实例”节点，然后选择“添加托管实例…”。  
+    -   在 SSMS 的“实用工具资源管理器”****中，右键单击“托管实例”****节点，然后选择“添加托管实例…”****。  
   
     -   按照提示完成向导并且指定新的代理帐户。  
   

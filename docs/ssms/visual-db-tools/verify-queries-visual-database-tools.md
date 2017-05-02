@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 在验证查询时应谨记以下几点：  
   
--   即使无法在“关系图”窗格和“条件”窗格中表示某个语句，该语句也可能是有效的，因此可以通过验证。  
+-   即使无法在“关系图”****窗格和“条件”****窗格中表示某个语句，该语句也可能是有效的，因此可以通过验证。  
   
 -   SQL 验证可检测某些 SQL 错误，但不能检测所有 SQL 错误。 如果查询包含在 SQL 验证过程中未检测到的错误，则在运行该查询时，数据库将检测到该错误。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-verify-an-sql-statement"></a>验证 SQL 语句  
   
--   右键单击“SQL 窗格”，然后从快捷菜单中选择“验证 SQL 语法”。  
+-   右键单击“SQL 窗格”****，然后从快捷菜单中选择“验证 SQL 语法”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行查询 (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  

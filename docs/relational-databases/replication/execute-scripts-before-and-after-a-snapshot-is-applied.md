@@ -25,14 +25,14 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied"></a>在应用快照之前和之后执行脚本
-  在“发布属性 - \<发布>”对话框的“快照”页上，指定在应用快照前后执行的可选脚本。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 - \<发布>****”对话框的“快照”****页上，指定在应用快照前后执行的可选脚本。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 > [!NOTE]  
 >  如果 **“快照格式”** 选项的设置为 **“字符”**，则这些选项不可用。  
   
 ### <a name="to-execute-a-script-before-or-after-a-snapshot-is-applied"></a>在应用快照前后执行脚本  
   
-1.  在“发布属性 - \<发布>”对话框的“快照”页上：  
+1.  在“发布属性 - \<发布>”****对话框的“快照”****页上：  
   
     -   若要指定在应用快照之前执行的脚本，请单击 **“浏览”** 导航到该脚本，或者在 **“应用快照之前执行此脚本”** 文本框中输入该脚本的路径。  
   

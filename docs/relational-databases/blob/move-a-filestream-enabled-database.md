@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以打开查询编辑器。  
   
-2.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。  此脚本显示 FILESTREAM 数据库所使用的物理数据库文件的位置。  
+2.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。 **** 此脚本显示 FILESTREAM 数据库所使用的物理数据库文件的位置。  
   
     ```tsql  
     USE Archive  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/11/2017
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。  此代码使 `Archive` 数据库脱机。  
+3.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。 **** 此代码使 `Archive` 数据库脱机。  
   
     ```tsql  
     USE master  
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  创建文件夹 `C:\moved_location`，然后将步骤 2 中列出的文件和文件夹移动到该文件夹中。  
   
-5.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。  此脚本将 `Archive` 数据库设置为脱机。  
+5.  将以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本复制到查询编辑器中，然后单击“执行”。 **** 此脚本将 `Archive` 数据库设置为脱机。  
   
     ```tsql  
     CREATE DATABASE Archive ON  

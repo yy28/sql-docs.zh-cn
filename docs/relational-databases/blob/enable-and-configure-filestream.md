@@ -31,17 +31,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-2.  在服务列表中，右键单击“SQL Server 服务”，然后单击“打开”。  
+2.  在服务列表中，右键单击“SQL Server 服务”****，然后单击“打开”****。  
   
-3.  在“SQL Server 配置管理器”管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+3.  在“SQL Server 配置管理器”****管理单元中，找到要在其中启用 FILESTREAM 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-4.  右键单击该实例，然后单击“属性”。  
+4.  右键单击该实例，然后单击“属性”****。  
   
 5.  在 **“SQL Server 属性”** 对话框中，单击 **“FILESTREAM”** 选项卡。  
   
-6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”复选框。  
+6.  选中“针对 Transact-SQL 访问启用 FILESTREAM”****复选框。  
   
-7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
+7.  如果要在 Windows 中读取和写入 FILESTREAM 数据，请单击“针对文件 I/O 流访问启用 FILESTREAM”****。 在 **“Windows 共享名”** 框中输入 Windows 共享的名称。  
   
 8.  如果远程客户端必须访问存储在此共享中的 FILESTREAM 数据，请选择 **“允许远程客户端针对 FILESTREAM 数据启用流访问”**。  
   

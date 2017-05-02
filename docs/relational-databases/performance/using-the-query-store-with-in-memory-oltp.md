@@ -50,7 +50,7 @@ ms.lasthandoff: 04/11/2017
     
 -   当你使用混合工作负荷在数据库中运行查询存储，可以使用 [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中的 **is_natively_compiled** 快速查找由本机代码编译生成的查询计划。  
   
--   查询存储捕获模式（**ALTER TABLE** 语句中的 QUERY_CAPTURE_MODE 参数）不会对来自本机编译模块的查询产生影响，因为无论配置值为何，始终都会捕获它们。 这包括设置 `QUERY_CAPTURE_MODE = NONE`。  
+-   查询存储捕获模式（**ALTER TABLE** 语句中的 QUERY_CAPTURE_MODE** 参数）不会对来自本机编译模块的查询产生影响，因为无论配置值为何，始终都会捕获它们。 这包括设置 `QUERY_CAPTURE_MODE = NONE`。  
   
 -   查询存储捕获的查询编译的持续时间仅包括在生成本机代码之前，查询优化所用的时间。 更确切地说，持续时间不包括 C 代码编译的时间，以及 C 代码生成所需的内部结构生成的时间。  
   

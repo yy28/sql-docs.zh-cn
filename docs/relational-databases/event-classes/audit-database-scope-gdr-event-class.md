@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件类
-  每当  中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据库操作，例如针对某个数据库授予权限），都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  
+  每当 **** 中的用户发出针对语句权限的 GRANT、REVOKE 或 DENY 时（仅限于数据库操作，例如针对某个数据库授予权限），都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for database-only actions such as granting permissions on a database.  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR 事件类的数据列  
   

@@ -45,15 +45,15 @@ ms.lasthandoff: 04/11/2017
   
 2.  在左窗格中展开 **“服务和应用程序”** 节点，然后单击 FCI。  
   
-3.  在右窗格的“服务器名称”类别下，右键单击该 SQL Server 实例，然后选择“属性”选项以打开“属性”对话框。  
+3.  在右窗格的****“服务器名称”类别下，右键单击该 SQL Server 实例，然后选择****“属性”选项以打开****“属性”对话框。  
   
 4.  在 **“常规”** 选项卡上更改 IP 地址资源。  
   
 5.  单击 **“确定”** 关闭对话框。  
   
-6.  在右侧窗格中，右键单击“SQL IP Address1”（故障转移群集实例名称）并选择“脱机”。 将会看到 SQL IP Address1（故障转移群集实例名称）、SQL Network Name（故障转移群集实例名称）和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的状态从联机更改为脱机挂起，然后再更改为脱机。  
+6.  在右侧窗格中，右键单击“SQL IP Address1”（故障转移群集实例名称）并选择****“脱机”。 将会看到 SQL IP Address1（故障转移群集实例名称）、SQL Network Name（故障转移群集实例名称）和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的状态从联机更改为脱机挂起，然后再更改为脱机。  
   
-7.  在右侧窗格中，右键单击 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，然后选择“联机”。 将会看到 SQL IP Address1（故障转移群集实例名称）、SQL Network Name（故障转移群集实例名称）和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的状态从脱机更改为联机挂起，然后再更改为联机。  
+7.  在右侧窗格中，右键单击 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，然后选择****“联机”。 将会看到 SQL IP Address1（故障转移群集实例名称）、SQL Network Name（故障转移群集实例名称）和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的状态从脱机更改为联机挂起，然后再更改为联机。  
   
 8.  关闭故障转移群集管理器管理单元。  
   

@@ -55,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，选择要显示其属性的表。  
   
-2.  右键单击该表，然后从快捷菜单中选择“属性”。 有关详细信息，请参阅 [表属性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
+2.  右键单击该表，然后从快捷菜单中选择“属性”****。 有关详细信息，请参阅 [表属性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -27,10 +27,10 @@ ms.lasthandoff: 04/11/2017
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>数据迁移的监视与故障排除 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”以监视 Stretch Database 监视器中的数据迁移。  
+  在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”****以监视 Stretch Database 监视器中的数据迁移。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>检查 Stretch Database 监视器中数据迁移的状态  
- 在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”以打开 Stretch Database 监视器并监视数据迁移。  
+ 在 SQL Server Management Studio 中选择数据库的“任务 | Stretch | 监视”****以打开 Stretch Database 监视器并监视数据迁移。  
   
 -   此监视器的上半部分显示有关已启用拉伸的 SQL Server 数据库和远程 Azure 数据库的常规信息。  
   

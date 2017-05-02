@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Access_SSMS"></a> 从 SQL Server Management Studio 访问“代理配置文件”对话框  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”。  
+1.  在“分发服务器属性 - \<分发服务器>”对话框的“常规”页上，单击“配置文件默认值”************。  
   
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>从复制监视器访问“代理配置文件”对话框  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击配置文件旁边的属性按钮 (**...**)。  
   
-3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值。  
+3.  查看“\<ProfileName> 配置文件属性”对话框中的参数和值****。  
   
     -   用户定义配置文件中的参数可以编辑，但预定义系统配置文件中的参数不可编辑。  
   

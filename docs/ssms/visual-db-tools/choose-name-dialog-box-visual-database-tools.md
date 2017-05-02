@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
-从“文件”菜单中选择“保存 \<TableName>”、“保存 <DiagramName>”或“保存 <ViewName>”时，该对话框随即出现。  
+从“文件”****菜单中选择“保存 \<TableName>”****、“保存 <DiagramName>”****或“保存 <ViewName>”****时，该对话框随即出现。  
   
 **输入表、关系图或视图的名称。**  
 提供一个文本框，您可以在其中为表、关系图或视图键入名称。  

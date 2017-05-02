@@ -146,7 +146,7 @@ ms.lasthandoff: 04/11/2017
   
 -   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
   
--   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
+-   计算列** - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
     - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/11/2017
   
 -   *默认约束* – 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
   
--   计算列 - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
+-   计算列** - 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   

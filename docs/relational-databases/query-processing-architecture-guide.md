@@ -824,7 +824,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 Transact-SQL `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 SQL Server Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
+可以使用 Transact-SQL `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 SQL Server Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划” ** 可以显示编译时执行计划，单击“包括实际的执行计划” **可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 

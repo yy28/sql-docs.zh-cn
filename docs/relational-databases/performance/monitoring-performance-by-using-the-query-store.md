@@ -36,14 +36,14 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查询存储页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性” ****。  
   
     > [!NOTE]  
     >  至少需要 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
-2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
+2.  在“数据库属性” **** 对话框中，选择“查询存储” **** 页。  
   
-3.  在  “操作模式（按请求）”对话框中，选择 “开”。  
+3.  在 **** “操作模式（按请求）”对话框中，选择 ****“开”。  
   
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句  
   
@@ -91,15 +91,15 @@ JOIN sys.query_store_query_text AS Txt
  
   
 ##  <a name="Regressed"></a> Use the Regressed Queries Feature  
- 在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
+ 在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储” **** 部分。  
   
  ![对象资源管理器中的 Query Store 树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "对象资源管理器中的 Query Store 树")  
   
- 选择“回归查询”  ，以在 **中打开“回归查询”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框以基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+ 选择“回归查询” **** ，以在 **中打开“回归查询”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框以基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
   
  ![对象资源管理器中的回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "对象资源管理器中的回归查询")  
   
- 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
+ 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” ****。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
  
   
 ##  <a name="Options"></a> Configuration Options  
@@ -256,7 +256,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  或者，你可以只清理临时查询数据，因为此数据与查询优化和计划分析的相关性更低，但却占用了大量空间。  
   
-  “删除临时查询”会删除只执行了一次且已超过 24 小时的查询。  
+ **** “删除临时查询”会删除只执行了一次且已超过 24 小时的查询。  
   
 ```  
 DECLARE @id int  

@@ -23,11 +23,11 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>对查询中的多个列进行排序 (Visual Database Tools)
-通过使用[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中的“排序顺序”列，可以指定使用各列对数据进行排序时所依据的顺序。  
+通过使用[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中的“排序顺序”****列，可以指定使用各列对数据进行排序时所依据的顺序。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>依据多个列对查询结果进行排序  
   
-1.  在“条件”窗格中，单击排序要依据的列的“排序顺序”字段。  
+1.  在“条件”****窗格中，单击排序要依据的列的“排序顺序”****字段。  
   
 2.  键入一个整数或从下拉列表中选择一个整数，以指示此列在排序列中的位置。  
   

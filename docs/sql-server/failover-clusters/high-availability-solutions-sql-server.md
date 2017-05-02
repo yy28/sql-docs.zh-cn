@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 >  **注意！** FCI 可利用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 提供数据库级别的远程灾难恢复。 有关详细信息，请参阅[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。    
     
 *  数据库镜像。 **注意！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建议改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。     
-数据库镜像是一种解决方案，可提供几乎是瞬时的故障转移，以提高数据库的可用性。 数据库镜像可以用来维护相应生产数据库（称为“主体数据库 ”）的单个备用数据库（或“镜像数据库 ”）。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。    
+数据库镜像是一种解决方案，可提供几乎是瞬时的故障转移，以提高数据库的可用性。 数据库镜像可以用来维护相应生产数据库（称为“主体数据库 **”）的单个备用数据库（或“镜像数据库 **”）。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。    
     
 *  日志传送    
  与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和数据库镜像一样，日志传送是数据库级操作。 可以使用日志传送来维护单个生产数据库（称为*主数据库*）的一个或多个温备用数据库（称为*辅助数据库*）。 有关日志传送的详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。    

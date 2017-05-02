@@ -256,7 +256,7 @@ WHERE session_id > 50;
 GO  
 ```  
   
- 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话。  
+ 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话****。  
   
 > [!NOTE]  
 >  有关此 SELECT 语句调用的动态管理视图的信息，请参阅 [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  

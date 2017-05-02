@@ -29,9 +29,9 @@ ms.lasthandoff: 04/11/2017
 |||  
 |-|-|  
 |**工具**|**用途**|  
-|[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”菜单访问该工具。|  
-|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”菜单访问该工具。|  
-|[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”菜单访问该工具。|  
+|[对象资源管理器](../ssms/object/object-explorer.md)|浏览服务器、创建和定位对象、管理数据源以及查看日志。 可以从“视图”****菜单访问该工具。|  
+|[解决方案资源管理器](../ssms/solution/solution-explorer.md)|在称为 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本的项目中存储并组织脚本及相关连接信息。 可以将几个 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 脚本存储为解决方案，并使用源代码管理工具管理随时间演进的脚本。 可以从“视图”****菜单访问该工具。|  
+|[模板资源管理器](../ssms/template/template-explorer.md)|基于现有模板创建查询。 还可以创建自定义查询，或改变现有模板以使它适合您自己的需要。 可以从“视图”****菜单访问该工具。|  
 |[动态帮助](../ssms/user-assistance-in-sql-server-management-studio.md)|单击组件或类型代码时，显示相关帮助主题的列表。|  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的工具可以一起工作。 例如，您可以：  

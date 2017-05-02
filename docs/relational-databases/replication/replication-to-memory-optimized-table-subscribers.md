@@ -45,26 +45,26 @@ ms.lasthandoff: 04/11/2017
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
-3.  在项目属性窗口中，将“启用内存优化”  设置为“true” 。  
+3.  在项目属性窗口中，将“启用内存优化” **** 设置为“true” ****。  
   
 4.  启动快照代理作业以为此发布生成初始快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
-5.  此时，创建新订阅。 在“新建订阅向导”  中，将“内存优化订阅”  设置为“true” 。  
+5.  此时，创建新订阅。 在“新建订阅向导” **** 中，将“内存优化订阅” **** 设置为“true” ****。  
   
  内存优化表现在应该开始从发布服务器接收更新。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>重新配置现有的事务复制  
   
-1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true” 。 只有在重新初始化订阅之后，系统才会应用这些更改。  
+1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅” **** 设置为“true” ****。 只有在重新初始化订阅之后，系统才会应用这些更改。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 **@memory_optimized** 存储过程的 **@memory_optimized** 参数设置为“true”。  
   
-2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化”  设置为“true”。  
+2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化” **** 设置为“true”。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
-3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引”  设置为“true”。  
+3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引” **** 设置为“true”。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为  **0x0000080000000000**及更高版本支持此功能。  
   

@@ -138,7 +138,7 @@ ms.lasthandoff: 04/11/2017
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 **DownloadGenerationsPerBatch** 和 **UploadGenerationsPerBatch** 参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“ **代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 **DownloadGenerationsPerBatch** 和 **UploadGenerationsPerBatch** 参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

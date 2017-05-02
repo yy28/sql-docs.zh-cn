@@ -27,9 +27,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>订阅 Finance 策略类别  
   
-1.  在对象资源管理器中，展开“数据库”，右键单击“Finance”，指向“策略”，然后单击“类别”。  
+1.  在对象资源管理器中，展开“数据库”****，右键单击“Finance”****，指向“策略”****，然后单击“类别”****。  
   
-2.  选中“Finance”类别的“已订阅”复选框。  
+2.  选中“Finance”****类别的“已订阅”****复选框。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-apply-the-policy-to-the-whole-server"></a>将策略应用于整个服务器  
   
-1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”，右键单击“策略管理”，然后单击“管理类别”。  
+1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”****，右键单击“策略管理”****，然后单击“管理类别”****。  
   
-2.  在“管理策略类别”对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”复选框。  
+2.  在“管理策略类别”****对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”****复选框。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 现在，Finance 类别会应用于所有数据库，但创建的条件会将 Finance Name 策略限定为 Finance 数据库。 这说明了如何使用复杂的条件组合限定策略目标，以便按适当的方式在多个服务器上正确应用策略。  
   

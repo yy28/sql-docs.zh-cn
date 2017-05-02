@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
-  使用“将数据库部署到 Microsoft Azure VM”向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Microsoft Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导使用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
+  使用“将数据库部署到 Microsoft Azure VM”****向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Microsoft Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此向导使用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
   
  不能使用此向导进行差异备份。 此向导不会覆盖具有相同数据库名称的现有数据库。 若要替换 VM 上的现有数据库，必须先删除现有数据库或更改数据库名称。 如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
   
@@ -110,9 +110,9 @@ ms.lasthandoff: 04/11/2017
   
  在运行 Windows Server 操作系统的计算机上，您必须使用以下配置设置来运行此向导：  
   
--   禁用增强安全性配置：使用“服务器管理器”>“本地服务器”将 Internet Explorer 增强安全性配置 (ESC) 设置为“OFF”。  
+-   禁用增强安全性配置：使用“服务器管理器”>“本地服务器”将 Internet Explorer 增强安全性配置 (ESC) 设置为“OFF”****。  
   
--   启用 JavaScript：“Internet Explorer”>“Internet 选项”>“安全性”>“客户级别”>“脚本”>“活动脚本”：“启用”。  
+-   启用 JavaScript：“Internet Explorer”>“Internet 选项”>“安全性”>“客户级别”>“脚本”>“活动脚本”：“启用”****。  
   
 ###  <a name="limitations"></a> 限制和局限  
 此部署功能只用于通过服务管理（经典）部署模型创建的 Azure 存储帐户。 关于 Azure 部署模型的详细信息，请参阅 [Azure Resource Manager vs. classic deployment](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/)（Azure 资源管理器与经典部署）。
@@ -206,7 +206,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **对象资源管理器**中，展开该实例名称，然后展开 **“数据库”** 节点。  
   
-3.  右键单击要部署的数据库，选择“任务”，然后选择“将数据库部署到 Microsoft Azure VM…”。  
+3.  右键单击要部署的数据库，选择“任务”****，然后选择“将数据库部署到 Microsoft Azure VM…”****。  
   
 ##  <a name="wizard_pages"></a> 向导页  
  下面各部分提供了有关部署设置的其他信息以及有关此操作的配置详细信息。  
@@ -224,13 +224,13 @@ ms.lasthandoff: 04/11/2017
 -   [结果](#Results)  
   
 ##  <a name="Introduction"></a> 简介 
- 此页介绍了“将数据库部署到 Microsoft Azure VM”向导。  
+ 此页介绍了“将数据库部署到 Microsoft Azure VM”****向导。  
   
 -   **不再显示此页。**  
   单击此复选框可以停止在以后显示简介页。  
   
 -   **Next**  
-进入“源设置”页。  
+进入“源设置”****页。  
   
 -   **取消**  
   取消操作并关闭向导。  
@@ -242,7 +242,7 @@ ms.lasthandoff: 04/11/2017
  使用此页可连接到承载要部署到 Microsoft Azure VM 的数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 还将指定在将从本地计算机保存的文件传输到 Microsoft Azure 之前用于将其保存的临时位置。 这可以是共享网络位置。  
  
 - **SQL Server**    
-单击“连接”，然后为承载要部署的数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定连接详细信息。  
+单击“连接”****，然后为承载要部署的数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定连接详细信息。  
   
 -   **选择数据库**  
 使用下拉列表来指定要部署的数据库。  
@@ -278,7 +278,7 @@ ms.lasthandoff: 04/11/2017
 指定或确认新数据库的名称。 如果数据库名称在目标 SQL Server 实例上已存在，建议您修改该名称。  
   
 ##  <a name="Summary"></a> 摘要
- 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  单击“完成”会启动“部署进度”页。  还可以从位于 `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` 的日志文件查看进度。
+ 使用此页可查看操作的指定设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  单击“完成”****会启动“部署进度”****页。  还可以从位于 `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"` 的日志文件查看进度。
   
  将数据库详细信息部署到 Windows Azure VM 上的 SQL Server 数据库可能需要手动步骤。 将为您详细说明这些步骤。  
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
   
 -   当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务使用本地系统帐户运行时，仅当主服务器和目标服务器位于同一台计算机上时，才支持主服务器 - 目标服务器操作。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下信息：  
   
-    “请确保 <target_server_computer_name> 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
+    “请确保 <target_server_computer_name>** 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
   
     您可以忽略此信息性消息。 登记操作将成功完成。  
   

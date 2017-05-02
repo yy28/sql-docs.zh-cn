@@ -127,7 +127,7 @@ ms.lasthandoff: 04/11/2017
  建议根据发布数据库的备份计划执行验证。 例如，如果发布数据库有一个每周执行一次的完整备份，则可以在每周完成备份后运行一次验证。 有关详细信息，请参阅[验证已复制的数据](../../../relational-databases/replication/validate-replicated-data.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>如果有必要，使用代理配置文件更改代理参数  
- 代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接”  配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 代理配置文件为设置复制代理参数提供了一个便利的方法。 也可以在代理命令行上指定参数，但通常更适合使用预定义的代理配置文件或创建新的配置文件（如果需要更改参数值）。 例如，如果使用合并复制并且订阅服务器从宽带连接转为拨号连接，这时可考虑使用合并代理的“慢速链接” **** 配置文件，此配置文件使用一组更适合慢速通信链接的参数。 有关详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>如果有必要，调整发布和分发保持期  
  事务复制和合并复制分别使用保持期确定事务在分发数据库中的存储时间以及订阅必须同步的频率。 建议开始时使用默认设置，但要监视拓扑以确定是否需要调整默认设置。 例如，在合并复制中，发布保持期（默认为 14 天）决定元数据在系统表中的存储时间。 如果订阅总是在五天内同步，请考虑将该设置调整为较小的数字，这样可以减少元数据，还可能提供更好的性能。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  

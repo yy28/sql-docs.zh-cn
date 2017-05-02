@@ -38,11 +38,11 @@ ms.lasthandoff: 04/11/2017
   
 -   文件存储类型  
   
-     “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。 用户定义的数据类型将按其基类型导出。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。  
+     “文件存储类型” ** 说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。 用户定义的数据类型将按其基类型导出。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。  
   
 -   前缀长度  
   
-     当以本机格式将数据批量导出到数据文件时，为使文件存储空间最为紧凑， **bcp** 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符” 。 有关详细信息，请参阅[使用 bcp 指定数据文件中的前缀长度 (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
+     当以本机格式将数据批量导出到数据文件时，为使文件存储空间最为紧凑， **bcp** 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符” **。 有关详细信息，请参阅[使用 bcp 指定数据文件中的前缀长度 (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
   
 -   字段长度  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 -   字段终止符  
   
-     对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”）以及每行的结尾（使用“行终止符”）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+     对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”**）以及每行的结尾（使用“行终止符”**）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
   
 ##  <a name="FieldSpecificPrompts"></a> 字段特定的提示概述  

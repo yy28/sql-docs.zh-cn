@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="browse-for-servers-local-servers"></a>查找服务器（本地服务器）
-当连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的确切名称时，请在“服务器名称”框中单击“浏览更多”，以打开“查找服务器”对话框。  
+当连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的确切名称时，请在“服务器名称”****框中单击“浏览更多”****，以打开“查找服务器”****对话框。  
   
 ## <a name="options"></a>选项  
 **选择要连接的服务器**  

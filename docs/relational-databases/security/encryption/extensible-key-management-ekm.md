@@ -25,9 +25,9 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用“Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用**“Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
- 随着法规遵从性和数据隐私问题方面的需求不断增长，组织正利用加密方法来提供“深度防御”解决方案。 如果仅使用数据库加密管理工具，则这种方法通常是不切实际的。 硬件供应商通过使用“硬件安全模块”(HSM) 来提供能解决企业密钥管理的产品。 HSM 设备在硬件或软件模块上存储加密密钥。 由于加密密钥与加密数据分开存储，因此这是一种更安全的解决方案。  
+ 随着法规遵从性和数据隐私问题方面的需求不断增长，组织正利用加密方法来提供“深度防御”解决方案。 如果仅使用数据库加密管理工具，则这种方法通常是不切实际的。 硬件供应商通过使用**“硬件安全模块”(HSM) 来提供能解决企业密钥管理的产品。 HSM 设备在硬件或软件模块上存储加密密钥。 由于加密密钥与加密数据分开存储，因此这是一种更安全的解决方案。  
   
  许多供应商提供 HSM 来解决密钥管理和加密加速问题。 HSM 设备对服务器进程使用硬件接口作为应用程序与 HSM 之间的媒介。 供应商还在他们的模块（可能是硬件或软件）上实施 MSCAPI 访问接口。 MSCAPI 通常只提供由 HSM 提供的功能子集。 供应商也可以针对 HSM、密钥配置和密钥访问提供管理软件。  
   
@@ -90,7 +90,7 @@ GO
  EKM 模块可以支持多种类型的身份验证。 每个访问接口只向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]公开一种身份验证类型，也就是说，如果模块支持“基本”或“其他”身份验证类型，则接口将公开这两种类型中的一种，而不会同时公开这两种类型。  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>使用用户名/密码的 EKM 设备特定的基本身份验证  
- 对于那些支持使用用户名/密码对的基本身份验证的 EKM 模块，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供使用凭据的透明身份验证。 有关凭据的详细信息，请参阅[凭据（数据库引擎）](../../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
+ 对于那些支持使用**用户名/密码对的基本身份验证的 EKM 模块，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供使用凭据的透明身份验证。 有关凭据的详细信息，请参阅[凭据（数据库引擎）](../../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  可以为 EKM 访问接口创建凭据并将其映射到登录名（Windows 帐户和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帐户），以便根据每个登录名访问 EKM 模块。 凭据的 *Identify* 字段包含用户名； *secret* 字段包含连接到 EKM 模块的密码。  
   
@@ -99,7 +99,7 @@ GO
  一个登录帐户可以映射多个凭据，只要它们用于不同的 EKM 访问接口即可。 每个 EKM 访问接口的每个登录名只能存在一个映射的凭据。 相同的凭据可以映射到其他登录名。  
   
 #### <a name="other-types-of-ekm-device-specific-authentication"></a>其他类型的 EKM 设备特定的身份验证  
- 对于身份验证不是采用 Windows 或用户/密码组合的 EKM 模块，必须单独从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 执行身份验证。  
+ 对于身份验证不是采用 Windows 或**用户/密码组合的 EKM 模块，必须单独从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 执行身份验证。  
   
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>通过 EKM 设备的加密和解密  
  下述功能和特性可用于通过对称和非对称密钥来加密和解密数据：  

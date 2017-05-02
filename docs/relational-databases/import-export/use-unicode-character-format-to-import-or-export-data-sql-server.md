@@ -61,7 +61,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 * 数据文件中的第一个字段是非字符
 
-考虑以下任意解决方法是否适用于特定情况：
+考虑以下任意解决方法是否适用于特定**情况：
 * 请勿使用格式化文件。  下面提供了此解决方法的一个示例，请参阅 [在不使用格式化文件的情况下使用 bcp 和 Unicode 字符格式导入数据](#bcp_widechar_import)，
 
 * 使用 **-c** 切换而不是 **-w**，

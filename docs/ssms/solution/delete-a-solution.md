@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 资源管理器中，找到并选择与要删除的解决方案关联的文件。  
   
-4.  在“文件”菜单上，单击“删除”。  
+4.  在“文件”****菜单上，单击“删除”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

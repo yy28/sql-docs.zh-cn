@@ -25,11 +25,11 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="specify-an-alternate-snapshot-folder-location-sql-server-management-studio"></a>指定备用快照文件夹位置 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”对话框的“快照”页上指定备用快照位置。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 - \<发布>”****对话框的“快照”****页上指定备用快照位置。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-specify-an-alternate-snapshot-location"></a>指定备用快照位置  
   
-1.  在“发布属性 - \<发布>”对话框的“快照”页上：  
+1.  在“发布属性 - \<发布>”****对话框的“快照”****页上：  
   
     1.  选择 **“将文件放入下列文件夹”**，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   

@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
   
 -   ALTER PARTITION FUNCTION 只能用于将一个分区拆分为两个，或将两个分区合并为一个。 若要更改表或索引的分区方式（例如，从 10 个分区变为 5 个分区），可以使用下列选项之一：  
   
-    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“管理分区向导”将旧表中的数据插入新表。  
+    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的****“管理分区向导”将旧表中的数据插入新表。  
   
     -   为堆创建分区聚集索引。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“分区函数”** 文件夹。  
   
-3.  右键单击要删除的分区函数，然后选择“删除”。  
+3.  右键单击要删除的分区函数，然后选择****“删除”。  
   
 4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”**。  
   

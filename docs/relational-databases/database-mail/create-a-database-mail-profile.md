@@ -119,7 +119,7 @@ ms.lasthandoff: 04/11/2017
   
      *@profile_name* = '*配置文件的名称*'  
   
-     *@ principal_name* = '数据库用户或角色的名称'  
+     *@ principal_name* = '数据库用户或角色的名称**'  
   
      *@is_default* = '*默认配置文件状态*'  
   

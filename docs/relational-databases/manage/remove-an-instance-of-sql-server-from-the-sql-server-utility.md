@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的实用工具资源管理器中，单击 **“托管实例”**。 观察实用工具资源管理器内容窗格中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例的列表视图。  
   
-2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择“删除托管实例…”。  
+2.  在该列表视图的 **“SQL Server 实例名称”** 列中，选择要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 右键单击要删除的实例，然后选择****“删除托管实例…”。  
   
 3.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例指定具有管理员权限的凭据：单击 **“连接…”**，验证 **“连接到服务器”** 对话框中的信息，然后单击 **“连接”**。 您将在 **“删除托管实例”** 对话框中看到登录信息。  
   

@@ -52,7 +52,7 @@ ms.lasthandoff: 04/11/2017
   
  若要指定列应将数据存储在文件系统中，请对 **varbinary(max)** 列指定 FILESTREAM 属性。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
   
- FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组是包含文件系统目录而非文件本身的专用文件组。 这些文件系统目录称为“数据容器” 。 数据容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储与文件系统存储之间的接口。  
+ FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组是包含文件系统目录而非文件本身的专用文件组。 这些文件系统目录称为“数据容器” **。 数据容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储与文件系统存储之间的接口。  
   
  使用 FILESTREAM 存储时，请考虑以下内容：  
   

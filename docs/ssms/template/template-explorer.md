@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="benefits-of-templates"></a>模板的优点  
 模板适用于解决方案、项目和各种类型的代码编辑器。 模板可用于创建对象，如数据库、表、视图、索引、存储过程、触发器、统计信息和函数。 此外，通过创建用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的扩展属性、链接服务器、登录名、角色、用户和模板，有些模板还可以帮助您管理服务器。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”对话框可以将值插入到脚本中。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”****对话框可以将值插入到脚本中。  
   
 为频繁执行的任务创建自定义模板。 将自定义脚本组织到现有文件夹中，或创建一个新的文件夹结构。  
   

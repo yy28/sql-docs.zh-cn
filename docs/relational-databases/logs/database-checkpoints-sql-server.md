@@ -36,13 +36,13 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
-  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
+ ** “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
  
   
 ##  <a name="Overview"></a> 概述   
-出于性能方面的考虑， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反，[!INCLUDE[ssDE](../../includes/ssde-md.md)]定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页” ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
+出于性能方面的考虑， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反，[!INCLUDE[ssDE](../../includes/ssde-md.md)]定期发出对每个数据库的检查点命令。 ** “检查点”将当前内存中已修改的页（称为“脏页” **）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持几种类型的检查点：自动、间接、手动和内部。 下表总结了“检查点”的类型：
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持几种类型的检查点：自动、间接、手动和内部。 下表总结了“检查点”****的类型：
   
 |Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|说明|  
 |----------|----------------------------------|-----------------|  
@@ -70,9 +70,9 @@ ms.lasthandoff: 04/11/2017
 |>0|不适用。|间接检查点，其目标恢复时间由 TARGET_RECOVERY_TIME 设置确定，以秒为单位。|  
   
 ##  <a name="AutomaticChkpt"></a> 自动检查点  
- 每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 
+ 每当日志记录数达到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 估计在“恢复间隔”****服务器配置选项中指定的时间内可以处理的数量时，便会生成一个自动检查点。 
  
- 在没有用户定义的目标恢复时间的每个数据库中，[!INCLUDE[ssDE](../../includes/ssde-md.md)]生成自动检查点。 频率取决于“恢复间隔”高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
+ 在没有用户定义的目标恢复时间的每个数据库中，[!INCLUDE[ssDE](../../includes/ssde-md.md)]生成自动检查点。 频率取决于“恢复间隔”****高级服务器配置选项，该选项指定给定的服务器实例在系统重新启动期间应用于恢复数据库的最长时间。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将估计它可在恢复间隔内处理的最大日志记录数。 使用自动检查点的数据库达到此最大日志记录数后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将对该数据库分发一个检查点。 
  
  自动检查点之间的时间间隔可以变化 **很大** 。 具有大量事务工作负荷的数据库的检查点生成频率将高于主要用于只读操作的数据库的检查点生成频率。 在简单恢复模式下，如果日志填充 70％，则自动检查点还将排队。  
   

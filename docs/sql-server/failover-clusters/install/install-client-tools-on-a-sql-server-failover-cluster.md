@@ -36,11 +36,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根安装文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  在“安装”页上，单击“全新”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
+2.  在“安装”****页上，单击“全新”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立安装或向现有安装添加功能**。 请勿单击“新建”**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集安装**。  
   
 3.  系统配置检查器将验证计算机的系统状态，然后安装程序继续运行。  
   
-4.  在“安装类型”页上，单击“执行全新安装”**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**。  
+4.  在“安装类型”****页上，单击“执行全新安装”**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**。  
   
 5.  在 **“功能选择”** 页上，选择需要安装的工具，然后按照安装过程的剩余步骤操作。  
   

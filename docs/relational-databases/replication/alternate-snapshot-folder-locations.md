@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
  如果要指定一个备用快照文件夹位置或压缩快照文件，请创建发布但不立即创建初始快照，为该快照位置设置发布属性，然后为该发布运行快照代理。 如果在创建初始快照后更改了备用位置，则为该发布生成的任何快照的位置都不会重定位到新的备用位置。 在这种情况下，根据发布设置的不同，合并代理或分发代理可能找不到新备用位置的快照文件。  
   
 > [!NOTE]  
->  请不要（使用“发布属性”对话框或 [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)）指定与默认快照文件夹位置相同的备用位置。  
+>  请不要（使用“发布属性”****对话框或 [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)）指定与默认快照文件夹位置相同的备用位置。  
   
 > [!CAUTION]  
 >  不要同时使用 WebSync 和备用快照文件夹位置。  

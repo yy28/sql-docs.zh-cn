@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  打开一个视图或创建一个新查询以打开查询和视图设计器。  
   
-2.  在“查询设计器”菜单中，指向“窗格”，再单击要打开的窗格名称。  
+2.  在“查询设计器”****菜单中，指向“窗格”****，再单击要打开的窗格名称。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

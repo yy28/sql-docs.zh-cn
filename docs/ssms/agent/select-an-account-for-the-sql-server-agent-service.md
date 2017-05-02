@@ -39,12 +39,12 @@ ms.lasthandoff: 04/11/2017
     -   **Local System** 帐户。 此帐户的名称是 NT AUTHORITY\System。 它是一个功能强大的帐户，可以不受限制地访问所有本地系统资源。 它是本地计算机上 Windows **管理员**组的成员，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **sysadmin** 固定服务器角色的成员。  
   
         > [!IMPORTANT]  
-        > 提供“Local System 帐户”选项只是为了向后兼容。 本地系统帐户具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理不需要的权限。 避免使用本地系统帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理。 为了提高安全性，请使用具有下面部分“Windows 域帐户权限”中所列出权限的 Windows 域帐户。  
+        > 提供“Local System 帐户”****选项只是为了向后兼容。 本地系统帐户具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理不需要的权限。 避免使用本地系统帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理。 为了提高安全性，请使用具有下面部分“Windows 域帐户权限”中所列出权限的 Windows 域帐户。  
   
 -   **本帐户**。 使您可以指定运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务的 Windows 域帐户。 建议选择非 Windows **管理员** 组成员的 Windows 用户帐户。 但是，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务帐户不是本地 **管理员** 组的成员时，在使用多服务器管理时存在限制。 有关详细信息，请参阅本主题后面的“支持的服务帐户类型”。  
   
 ## <a name="windows-domain-account-permissions"></a>Windows 域帐户权限  
-为了提高安全性，可以选择“本帐户”来指定 Windows 域帐户。 指定的 Windows 域帐户必须具有下列权限：  
+为了提高安全性，可以选择“本帐户”****来指定 Windows 域帐户。 指定的 Windows 域帐户必须具有下列权限：  
   
 -   在所有 Windows 版本中，作为服务登录的权限 (SeServiceLogonRight)  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：针对多服务器管理使用本地系统帐户  
 仅当主服务器和目标服务器位于同一台计算机中，并在本地系统帐户下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服务时，才支持多服务器管理。 如果使用此配置，则在将目标服务器登记到主服务器时返回以下消息：  
   
-“请确保 <target_server_computer_name> 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
+“请确保 <target_server_computer_name>** 的代理启动帐户拥有以 targetServer 身份登录的权限”。  
   
 您可以忽略此信息性消息。 登记操作将成功完成。 有关详细信息，请参阅 [创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)。  
   

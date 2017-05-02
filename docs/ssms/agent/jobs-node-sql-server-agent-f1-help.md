@@ -21,6 +21,6 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>作业节点（SQL Server 代理的 F1 帮助）
-本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中对象资源管理器的“作业”节点的 F1 帮助。  
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中对象资源管理器的“作业”****节点的 F1 帮助。  
   
 

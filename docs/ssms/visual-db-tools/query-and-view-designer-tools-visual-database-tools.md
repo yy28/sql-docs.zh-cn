@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 可以通过在任意一个窗格中进行操作来创建查询或视图：通过以下方法可以指定要显示的列，在“关系图”窗格中选择该列，在“条件”窗格中输入该列，或者在 SQL 窗格中使其成为 SQL 语句的一部分。  
   
 ## <a name="displaying-and-hiding-panes"></a>显示和隐藏窗格  
-若要隐藏窗格或显示不可见的窗格，请右键单击设计图面，指向“窗格”，再单击窗格的名称。 如果在查询设计器模式下打开了查询和视图设计器，则不会显示“结果”窗格。  
+若要隐藏窗格或显示不可见的窗格，请右键单击设计图面，指向“窗格”****，再单击窗格的名称。 如果在查询设计器模式下打开了查询和视图设计器，则不会显示“结果”****窗格。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

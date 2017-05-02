@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  自动或手动创建外部联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) 或[手动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)。  
   
-2.  在“关系图”窗格中选择联接线，然后在“查询设计器”菜单中选择“选择 <tablename> 中的全部行”，选择包含要包含其中更多行的表的命令。  
+2.  在“关系图”窗格中选择联接线，然后在“查询设计器”****菜单中选择“选择 <tablename> 中的全部行”****，选择包含要包含其中更多行的表的命令。  
   
     -   选择第一个表可以创建左外部联接。  
   

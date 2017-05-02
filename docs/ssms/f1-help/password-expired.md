@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="password-expired"></a>密码已过期
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证连接到带有 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的服务器，并且所提供的密码正确但已过期时，会出现此对话框。 通过一个新帐户（使用“用户下次登录时须更改密码”选项创建）连接到服务器时，也会出现此对话框。 使用“密码已过期”对话框，可以更改此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录名的密码。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证连接到带有 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的服务器，并且所提供的密码正确但已过期时，会出现此对话框。 通过一个新帐户（使用“用户下次登录时须更改密码”****选项创建）连接到服务器时，也会出现此对话框。 使用“密码已过期”****对话框，可以更改此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录名的密码。  
   
 ## <a name="options"></a>选项  
 **登录**  

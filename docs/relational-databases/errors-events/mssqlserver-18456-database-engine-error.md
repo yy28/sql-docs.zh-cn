@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
 |7|登录已禁用，密码不正确。|  
 |8|密码不正确。|  
 |9|密码无效。|  
-|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。****|  
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/11/2017
   
 如果错误指示状态 1，请与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员联系。  
   
-如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。 在连接后，将您的 Windows 用户作为单独的登录名添加。  
+如果您尝试使用您的管理员凭据进行连接，则通过使用“以管理员身份运行”选项启动您的应用程序。**** 在连接后，将您的 Windows 用户作为单独的登录名添加。  
   
 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]支持包含的数据库，请确认在迁移到包含的数据库用户后未删除登录名。  
   

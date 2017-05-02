@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 -   语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。  
   
--   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
+-   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不**支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
   
  以下是 ALTER TABLE 语句上 ADD、DROP 和 ALTER INDEX 字句的语法。  
   

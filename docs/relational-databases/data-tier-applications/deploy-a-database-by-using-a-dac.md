@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
-  使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
+  使用“将数据库部署到 SQL Azure” **** 向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
   
 ##  <a name="BeforeBegin"></a> 开始之前  
  该向导使用数据层应用程序 (DAC) BACPAC 存档文件部署数据库对象的数据和定义。 它从源数据库执行 DAC 导出操作，并对目标执行 DAC 导入。  

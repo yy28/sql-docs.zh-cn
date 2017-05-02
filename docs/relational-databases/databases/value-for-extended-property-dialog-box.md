@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="value-for-extended-property-dialog-box"></a>“扩展属性的值”对话框
-  使用“*属性名称> 的值”\<*对话框可输入或查看值。 这是一个可以从多个位置打开的公共对话框。  
+  使用“*属性名称> 的值”****\<*对话框可输入或查看值。 这是一个可以从多个位置打开的公共对话框。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **扩展属性名称**  

@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>指定合并订阅类型和冲突解决优先级
   可以在新建订阅向导的 **“订阅类型”** 页上指定合并订阅类型和冲突解决优先级。 有关使用此向导的详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
   
- 创建订阅后订阅类型无法修改，但对于“订阅属性 - \<发布服务器>: \<发布数据库>”对话框中的服务器订阅类型来说，优先级可以更改。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+ 创建订阅后订阅类型无法修改，但对于“订阅属性 - \<发布服务器>: \<发布数据库>”****对话框中的服务器订阅类型来说，优先级可以更改。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>指定合并订阅类型和冲突解决优先级  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>修改冲突解决优先级  
   
-1.  在发布服务器的“订阅属性 - \<发布服务器>: \<发布数据库>”中，输入“优先级”选项的值（0.00 到 99.99）。  
+1.  在发布服务器的“订阅属性 - \<发布服务器>: \<发布数据库>”****中，输入“优先级”****选项的值（0.00 到 99.99）。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

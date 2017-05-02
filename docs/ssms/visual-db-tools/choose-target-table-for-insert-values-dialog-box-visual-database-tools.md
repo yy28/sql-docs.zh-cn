@@ -24,9 +24,9 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>“选择插入值的目标表”对话框 (Visual Database Tools)
-使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”窗格中显示了多个表，则将显示此对话框。  
+使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”****窗格中显示了多个表，则将显示此对话框。  
   
-选择要向其中添加数据的表，再单击“确定”。  
+选择要向其中添加数据的表，再单击“确定”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建“插入值”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-values-queries-visual-database-tools.md)  

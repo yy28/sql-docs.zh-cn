@@ -24,11 +24,11 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>设置排队更新冲突解决选项 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 - \<发布>”****对话框的“订阅选项”****页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>设置排队更新冲突解决选项  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“冲突解决策略”选项选择以下值之一：  
+1.  在“发布属性 - \<发布>”****对话框的“订阅选项”****页上，为“冲突解决策略”****选项选择以下值之一：  
   
     -   **保留发布服务器更改**  
   

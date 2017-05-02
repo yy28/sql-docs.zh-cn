@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
  此窗口用于查看查询结果。 该窗口可以在网格或文本中显示结果，或者可将结果定向到某个文件。 结果网格能以单独的选项卡式窗口的形式显示。  
   
  **IntelliSense**  
- 在编辑器的“编辑”菜单上，指向“IntelliSense”，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
+ 在编辑器的“编辑”****菜单上，指向“IntelliSense”****，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
   
  **颜色编码**  
  为每种类型的语法元素显示不同颜色，以提高复杂语句的可读性。  

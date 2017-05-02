@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  选择要调整大小的表。  
   
-2.  右键单击选定的表，再从快捷菜单中选择“自动调整选定的表大小”。  
+2.  右键单击选定的表，再从快捷菜单中选择“自动调整选定的表大小”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
      这适用于合并复制。 如果达到或超过指定的阈值，状态将显示为 **“‘严重’状态下的性能”**。 可以为拨号连接和 LAN 连接指定不同的阈值。  
   
- 有关“‘严重’状态下的性能”和“长时间运行的合并”警告的详细信息，请参阅[使用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
+ 有关“‘严重’状态下的性能”和“长时间运行的合并”********警告的详细信息，请参阅[使用复制监视器监视性能](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)。  
   
  **本主题内容**  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/11/2017
   
      此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在“\<AlertName> 警报属性”对话框中设置选项：  
+3.  在“\<AlertName> 警报属性”****对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 04/11/2017
   
      此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。  
   
-3.  在“\<AlertName> 警报属性”对话框中设置选项：  
+3.  在“\<AlertName> 警报属性”****对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 04/11/2017
   
      此对话框将显示所有发布类型的警报，包括与监视阈值无关的警报。 有关详细信息，请参阅[对复制代理事件使用警报](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)。  
   
-3.  在“\<AlertName> 警报属性”对话框中设置选项：  
+3.  在“\<AlertName> 警报属性”****对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   

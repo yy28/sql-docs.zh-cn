@@ -164,7 +164,7 @@ ms.lasthandoff: 04/11/2017
      **启用分布式事务处理的升级**  
      使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。  
   
-6.  单击“确定” 。  
+6.  单击“确定” ****。  
   
 ##### <a name="to-view-the-provider-options"></a>查看提供程序选项  
   

@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-stop-a-query"></a>停止查询  
   
--   右键单击[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”，再单击“清除结果”。  
+-   右键单击[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”****，再单击“清除结果”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [清除查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  

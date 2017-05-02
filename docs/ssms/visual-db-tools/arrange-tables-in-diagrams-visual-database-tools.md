@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  右键单击“数据库关系图”窗口的空白区域。  
   
-2.  在快捷菜单中，单击“排列表”。  
+2.  在快捷菜单中，单击“排列表”****。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

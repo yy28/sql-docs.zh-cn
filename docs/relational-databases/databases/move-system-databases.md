@@ -149,17 +149,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”**和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
-2.  在“SQL Server 服务”节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”。  
+2.  在“SQL Server 服务”****节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”****。  
   
-3.  在“SQL Server (*instance_name*) 属性”对话框中，单击“启动参数”选项卡。  
+3.  在“SQL Server (*instance_name*) 属性”********对话框中，单击“启动参数”****选项卡。  
   
-4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件。 单击 **“更新”** 以保存更改。  
+4.  在“现有参数”****框中，选择 –d 参数以移动 master 数据文件。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”****框中，将该参数更改为 master 数据库的新路径。  
   
-5.  在“现有参数”框中，选择 –l 参数以移动 master 日志文件。 单击 **“更新”** 以保存更改。  
+5.  在“现有参数”****框中，选择 –l 参数以移动 master 日志文件。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”****框中，将该参数更改为 master 数据库的新路径。  
   
      数据文件的参数值必须跟在 `-d` 参数的后面，日志文件的参数值必须跟在 `-l` 参数的后面。 下面的示例显示用于 master 数据文件默认位置的参数值。  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 04/11/2017
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  通过右键单击实例名称并选择“停止”来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+6.  通过右键单击实例名称并选择“停止”****来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 04/11/2017
     GO  
     ```  
 
-10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID 类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
+10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID** 类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
 
   
 ##  <a name="Resource"></a> 移动 Resource 数据库  

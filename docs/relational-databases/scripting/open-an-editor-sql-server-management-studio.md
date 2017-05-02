@@ -69,12 +69,12 @@ ms.lasthandoff: 04/11/2017
 ### <a name="using-object-explorer"></a>使用对象资源管理器  
  在 **“对象资源管理器”**中：  
   
--   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
+-   右键单击连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的服务器节点，然后选择“新建查询”****。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下设置为登录帐户的默认数据库。  
   
--   右键单击一个数据库节点，然后选择“新建查询”。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
+-   右键单击一个数据库节点，然后选择“新建查询”****。 这将打开一个连接到同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口，并将该窗口的数据库上下文设置为同一数据库。  
   
 ### <a name="using-solution-explorer"></a>使用解决方案资源管理器  
- 在“解决方案资源管理器”中，展开一个文件夹，右键单击该文件夹中的某一项，再单击“打开”，也可双击该项或文件。  
+ 在****“解决方案资源管理器”中，展开一个文件夹，右键单击该文件夹中的某一项，再单击****“打开”，也可双击该项或文件。  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>使用模板浏览器打开数据库引擎查询编辑器  
   
@@ -82,6 +82,6 @@ ms.lasthandoff: 04/11/2017
   
 -   右窗格中将出现 **“模板浏览器”** 窗口。  
   
--   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开“SQL Server 模板”文件夹，再打开“数据库”文件夹，然后双击“创建数据库”。  
+-   双击一个模板以打开“数据库引擎查询”窗口，窗口中显示该模板的文本。 例如，若要打开 CREATE DATABASE 模板，请打开****“SQL Server 模板”文件夹，再打开****“数据库”文件夹，然后双击****“创建数据库”。  
   
   

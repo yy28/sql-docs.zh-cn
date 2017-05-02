@@ -24,7 +24,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中执行计划的管理任务，即“作业”。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中执行计划的管理任务，即“作业”**。  
   
 **本主题内容**  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
 ### <a name="jobs"></a>作业  
-“作业”  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理执行的一系列指定操作。 使用作业可以定义一个能执行一次或多次的管理任务，并能监视执行结果是成功还是失败。 作业可以在一个本地服务器上运行，也可以在多个远程服务器上运行。  
+“作业” ** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理执行的一系列指定操作。 使用作业可以定义一个能执行一次或多次的管理任务，并能监视执行结果是成功还是失败。 作业可以在一个本地服务器上运行，也可以在多个远程服务器上运行。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 故障转移群集实例上发生故障转移事件时正在运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业在故障转移到其他故障转移群集节点后不恢复。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 在 Hyper-V 节点暂停时，如果该暂停导致故障转移到其他节点，则正在运行的代理作业不恢复。 已开始但由于故障转移事件而未能完成的作业在日志中记录为已开始，但不提供附加的条目来指明完成或失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业好像永远不会结束。  
@@ -59,12 +59,12 @@ ms.lasthandoff: 04/11/2017
   
 -   通过执行 sp_start_job 存储过程。  
   
-作业中的每个操作都是一个“作业步骤” 。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
+作业中的每个操作都是一个“作业步骤” **。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql_md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
 ### <a name="schedules"></a>计划  
-“计划”  指定了作业运行的时间。 多个作业可以根据一个计划运行，多个计划也可以应用到一个作业。 计划可以为作业运行的时间定义下列条件：  
+“计划” ** 指定了作业运行的时间。 多个作业可以根据一个计划运行，多个计划也可以应用到一个作业。 计划可以为作业运行的时间定义下列条件：  
   
 -   每当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理启动时。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 04/11/2017
 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
 ### <a name="alerts"></a>警报  
-“警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
+“警报” ** 是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
 警报可以响应下列任一条件：  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
 有关详细信息，请参阅 [“警报”](../../ssms/agent/alerts.md)。  
   
 ### <a name="operators"></a>运算符  
-“操作员”  定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员既不包含安全信息，也不会定义安全主体。  
+“操作员” ** 定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员既不包含安全信息，也不会定义安全主体。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
   

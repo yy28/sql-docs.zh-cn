@@ -38,11 +38,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
   
-1.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
+1.  在“开始” **** 菜单上，依次指向“所有程序” ****、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ****，然后单击“SQL Server 配置管理器” ****。  
   
     -   使用 **“SQL Server 服务”** 区域可以启动组件并配置自动启动选项。  
   
-    -   使用“SQL Server 网络配置”区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
+    -   使用“SQL Server 网络配置”****区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
   
  有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。 此外，远程连接还取决于是否对防火墙进行了正确配置。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的组件。  
   
-2.  在对象资源管理器中，右键单击服务器，然后单击“方面”。  
+2.  在对象资源管理器中，右键单击服务器，然后单击“方面”****。  
   
-3.  在“查看方面”对话框中，展开“方面”列表，然后选择相应的“外围应用配置器”方面（“外围应用配置器”、“Analysis Services 的外围应用配置器”或“Reporting Services 的外围应用配置器”）。  
+3.  在“查看方面”****对话框中，展开“方面”****列表，然后选择相应的“外围应用配置器”****方面（“外围应用配置器”****、“Analysis Services 的外围应用配置器”****或“Reporting Services 的外围应用配置器”****）。  
   
 4.  在 **“方面属性”** 区域，选择要用于每个属性的值。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/11/2017
   
  也可以使用 **sp_configure** 存储过程来设置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 选项。 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- 若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs-md.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递”  属性和“Web 服务和 HTTP 访问”  属性，请编辑 **RSReportServer.config** 配置文件。  
+ 若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs-md.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递” **** 属性和“Web 服务和 HTTP 访问” **** 属性，请编辑 **RSReportServer.config** 配置文件。  
   
 ## <a name="command-prompt-options"></a>命令提示符选项  
  使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet 可以调用外围应用配置器策略。 有关详细信息，请参阅 [使用数据库引擎 cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)。  

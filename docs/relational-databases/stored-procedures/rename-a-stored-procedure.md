@@ -69,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  [确定存储过程的依赖关系](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)。  
   
-4.  展开“存储过程”，右键单击要重命名的过程，再单击“重命名”。  
+4.  展开“存储过程”****，右键单击要重命名的过程，再单击“重命名”****。  
   
 5.  修改过程名称。  
   

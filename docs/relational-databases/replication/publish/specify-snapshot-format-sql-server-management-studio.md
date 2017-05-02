@@ -24,11 +24,11 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="specify-snapshot-format-sql-server-management-studio"></a>指定快照格式 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”对话框的“快照”页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  在“发布属性 - \<发布>”****对话框的“快照”****页上指定快照格式。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-specify-snapshot-format"></a>指定快照格式  
   
-1.  在“发布属性 - \<发布>”对话框的“快照”页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”。  
+1.  在“发布属性 - \<发布>”****对话框的“快照”****页上，选择“本机 SQL Server - 所有订阅服务器都必须是运行 SQL Server 的服务器”****或“字符 - 如果发布服务器或订阅服务器没有运行 SQL Server，则需要此项”****。  
   
     > [!NOTE]  
     >  建议选择本机格式，除非此发布必须支持对 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 数据库或非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的订阅。  

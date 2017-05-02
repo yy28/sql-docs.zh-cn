@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
 |类型|名称|解决方法|  
 |----------|----------|----------------|  
 |功能|ON|内存优化的表不能放置在文件组或分区方案上。 从 **CREATE TABLE** 语句删除 ON 子句。<br /><br /> 所有的内存优化表都映射到内存优化文件组。|  
-|数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅 [内存中 OLTP 支持的数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
+|数据类型|数据类型名称**|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅 [内存中 OLTP 支持的数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
 |功能|计算列|内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。|  
 |功能|复制|内存优化表不支持复制。|  
 |功能|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 从列定义中删除 **FILESTREAM** 关键字。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |运算|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
 |运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。|  
-|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
+|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table** 删除所有行，或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|在架构之间传输安全对象。|  
 |运算|DBCC CHECKTABLE|内存优化的表不支持 DBCC CHECKTABLE。|  

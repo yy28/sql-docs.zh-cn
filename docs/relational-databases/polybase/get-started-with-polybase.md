@@ -347,7 +347,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
     ```  
   
 ## <a name="managing-polybase-objects-in-ssms"></a>在 SSMS 中管理 PolyBase 对象  
- 在 SSMS 中，外部表在单独的文件夹“外部表” 中显示。 外部数据源和外部文件格式位于“外部资源” 下的子文件夹中。  
+ 在 SSMS 中，外部表在单独的文件夹“外部表” ****中显示。 外部数据源和外部文件格式位于“外部资源” ****下的子文件夹中。  
   
  ![SSMS 中的 PolyBase 对象](../../relational-databases/polybase/media/polybase-management.png "SSMS 中的 PolyBase 对象")  
   

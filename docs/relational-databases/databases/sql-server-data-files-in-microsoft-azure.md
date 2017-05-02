@@ -133,7 +133,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
  使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。**************** 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理对象支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  

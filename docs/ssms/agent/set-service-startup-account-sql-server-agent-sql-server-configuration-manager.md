@@ -68,15 +68,15 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“本地服务器组”** 文件集。  
   
-3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”。  
+3.  右键单击要设置服务启动帐户的服务器实例，然后选择“SQL Server 配置管理器…”****。  
   
 4.  在 **“用户帐户控制”** 对话框中，请单击 **“是”**。  
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”**。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理 (server_name)”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理实例的名称），然后选择“属性”。  
+6.  在详细信息窗格中，右键单击“SQL Server 代理 (server_name)”******（其中 server_name **是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理实例的名称），然后选择“属性”****。  
   
-7.  在“SQL Server 代理 (server_name)”的“属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
+7.  在“SQL Server 代理 (server_name)”******的“属性”****对话框的“登录”****选项卡中，选择“登录身份”****下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](http://msdn.microsoft.com/library/ms191543.aspx)。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
         1.  在 **“帐户名称”** 框中，输入将用来运行 SQL Server 代理的帐户。 或者，单击 **“浏览”** 打开 **“选择用户或组”** 对话框并选择要使用的帐户。  
   
-        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”框中重新输入密码。  
+        2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”****框中重新输入密码。  
   
 8.  单击 **“确定”**。  
   

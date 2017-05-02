@@ -67,9 +67,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要查看的操作员，然后选择“属性”。  
+4.  右键单击要查看的操作员，然后选择“属性”****。  
   
-    有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
+    有关“operator_name 属性”******对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性 - 新建操作员（“常规”页）](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

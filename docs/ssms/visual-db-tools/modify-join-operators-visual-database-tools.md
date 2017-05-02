@@ -29,11 +29,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-modify-join-operators"></a>修改联接运算符  
   
-1.  在[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，右键单击要修改的联接线，再从快捷菜单中选择“属性”。  
+1.  在[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)中，右键单击要修改的联接线，再从快捷菜单中选择“属性”****。  
   
-2.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的省略号 (…)。  
+2.  在“属性”窗口中，单击“联接条件和类型”****，再单击该属性右侧的省略号 (…)****。  
   
-3.  在“联接”对话框中，选择一个新运算符。  
+3.  在“联接”****对话框中，选择一个新运算符。  
   
 ## <a name="see-also"></a>另请参阅  
 [自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  

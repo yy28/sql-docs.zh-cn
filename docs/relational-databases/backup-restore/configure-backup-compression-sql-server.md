@@ -21,7 +21,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="configure-backup-compression-sql-server"></a>配置备份压缩 (SQL Server)
-  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
+  安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由****“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
 ## <a name="override-the-backup-compression-default"></a>覆盖备份压缩默认设置  
  您可以更改单个备份、备份作业或日志传送配置的备份压缩行为。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
      有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例查看或配置备份压缩默认值选项的信息，请参阅[查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-     你可以通过在以下任意对话框中指定“压缩备份”或“不压缩备份”以在创建备份时覆盖服务器备份压缩默认值：  
+     你可以通过在以下任意对话框中指定****“压缩备份”或****“不压缩备份”以在创建备份时覆盖服务器备份压缩默认值：  
   
     -   [备份数据库（“选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   

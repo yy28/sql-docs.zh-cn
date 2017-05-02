@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件**和 XML 格式化文件**。  
   
  **本主题内容：**  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/11/2017
   
  ![标识非 XML 格式化文件的字段](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "标识非 XML 格式化文件的字段")  
   
-  “版本”和  “列数”字段仅出现一次。 下表对其意义进行了说明。  
+ **** “版本”和 **** “列数”字段仅出现一次。 下表对其意义进行了说明。  
   
 |格式化文件字段|说明|  
 |------------------------|-----------------|  

@@ -116,11 +116,11 @@ ms.lasthandoff: 04/11/2017
     GO  
     ```  
   
-     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，通过对象资源管理器连接到数据库来确认是否已启用 TDE。 右键单击数据库，指向“任务”，然后单击“管理数据库加密”。  
+     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，通过对象资源管理器连接到数据库来确认是否已启用 TDE。 右键单击数据库，指向****“任务”，然后单击****“管理数据库加密”。  
   
      ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
-     在“管理数据库加密”对话框中，确认 TDE 处于打开状态，以及使用哪个非对称密钥对 DEK 进行加密。  
+     在“管理数据库加密”****对话框中，确认 TDE 处于打开状态，以及使用哪个非对称密钥对 DEK 进行加密。  
   
      ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   

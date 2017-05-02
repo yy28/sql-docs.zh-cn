@@ -273,8 +273,8 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 
 **source_type** 参数是控制 histogram 目标的关键：
 
-- **source_type = 0** - 表示为事件字段收集数据）。
-- **source_type = 1** - 表示为操作收集数据）。
+- **source_type = 0** - 表示为事件字段**收集数据）。
+- **source_type = 1** - 表示为操作**收集数据）。
     - 1 为默认值。
 
 
@@ -283,7 +283,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 例如，slots=59 四舍五入为 = 64。
 
 
-### <a name="action-example-for-histogram"></a>histogram 的“操作”示例
+### <a name="action-example-for-histogram"></a>histogram 的“操作”**示例
 
 
 在其 TARGET...SET 子句上，以下 Transact-SQL CREATE EVENT SESSION 语句指定 **source_type=1** 的目标参数赋值。 1 表示 histogram 目标跟踪某项操作。
@@ -352,7 +352,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### <a name="event-field-example-for-histogram"></a>histogram 的事件“字段”示例
+### <a name="event-field-example-for-histogram"></a>histogram 的事件“字段”**示例
 
 
 以下示例设置 **source_type=0**。 分配给 **source=** 的值就是事件字段（而非操作）。

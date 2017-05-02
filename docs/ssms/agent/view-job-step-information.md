@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  依次展开“SQL Server 代理”和“作业”，右键单击包含要查看的作业步骤的作业，再单击“属性”。  
+2.  依次展开“SQL Server 代理”****和“作业”****，右键单击包含要查看的作业步骤的作业，再单击“属性”****。  
   
 3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页。  
   

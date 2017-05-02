@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
  查看现有逻辑备份设备的名称，或指定新逻辑备份设备的名称。  
   
  **磁带**  
- 在“磁带”列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的计算机附连有磁带机时，此选项才可用。  
+ 在“磁带”****列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的计算机附连有磁带机时，此选项才可用。  
   
 > [!NOTE]  
 >  远程计算机中的磁带备份设备不是有效的备份目标。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
     >  通过网络备份数据时可能会出现网络错误；因此，建议您在完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 ## <a name="remarks"></a>注释  
- 包含一个或多个备份设备的集合的备份构成一个介质集。 “介质集”  是“备份介质”（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入一个或多个备份操作。 有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
+ 包含一个或多个备份设备的集合的备份构成一个介质集。 “介质集” ** 是“备份介质”（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入一个或多个备份操作。 有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
  将介质集中的第一个备份写入逻辑备份设备时，将对与逻辑备份设备对应的物理备份设备进行初始化。 如果物理备份设备是尚不存在的文件，则此时将创建该文件。  
   

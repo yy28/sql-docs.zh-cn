@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR 事件类
-  每当  中的任何用户对架构对象权限发出 GRANT、REVOKE 或 DENY 时，都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  每当 **** 中的任何用户对架构对象权限发出 GRANT、REVOKE 或 DENY 时，都会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Audit Schema Object GDR Event 事件类的数据列  
   

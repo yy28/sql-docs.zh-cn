@@ -41,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
 -   PowerShell 脚本文件可用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 PowerShell 作业步骤的输入，这些步骤按预订的时间间隔或者作为对系统事件的响应来运行脚本。  
   
--   用于启动 PowerShell 和导入 **模块的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 然后，您可以执行该模块支持的所有操作。 可以在命令提示符中启动 **sqlps** 实用工具，也可以通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 对象资源管理器树中右键单击节点并选择“启动 PowerShell”来启动 sqlps 实用工具。  
+-   用于启动 PowerShell 和导入 **模块的** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 然后，您可以执行该模块支持的所有操作。 可以在命令提示符中启动 **sqlps** 实用工具，也可以通过在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 对象资源管理器树中右键单击节点并选择“启动 PowerShell”****来启动 sqlps 实用工具。  
   
 ## <a name="database-engine-queries"></a>数据库引擎查询  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询脚本包含三种类型的元素：  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询脚本文件通常是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中以交互方式进行编码的。 之后，可在下面的某个环境中打开此文件：  
   
--   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“文件”/“打开”菜单在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中打开此文件。  
+-   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“文件”****/“打开”****菜单在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中打开此文件。  
   
 -   通过 **sqlcmd** 实用工具使用 **-i***input_file* 参数运行此文件。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤按计划的时间间隔或作为对系统事件的响应来运行脚本。  
   
- 此外，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成脚本向导来生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击对象，然后选择“生成脚本”菜单项。 **“生成脚本”** 会启动向导，指导您完成创建脚本的过程。  
+ 此外，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成脚本向导来生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击对象，然后选择“生成脚本”****菜单项。 **“生成脚本”** 会启动向导，指导您完成创建脚本的过程。  
   
 ## <a name="database-engine-scripting-tasks"></a>数据库引擎脚本任务  
   

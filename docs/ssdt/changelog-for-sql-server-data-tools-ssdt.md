@@ -35,8 +35,8 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="connection-improvements"></a>连接改进
 
-* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。 如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
-* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。
+* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。**** 如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
+* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。****
 
 ### <a name="sqlpackage-and-dacfx-api-improvements"></a>SqlPackage 和 DacFx API 改进
 
@@ -358,7 +358,7 @@ SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQ
   
 -   **SSIS 包项目模板**。 SSIS 目录性能改进：针对非 SSIS 管理员用户的大多数 SSIS 目录视图的性能都得到了改进。  
   
--   **SSAS 项目模板**包括对 Analysis Services 中表格模型项目的增强功能。 可以使用“查看代码”命令查看 JSON 中的模型定义。 如果你现在使用的不是完整功能版的 Visual Studio 2015，那么你将需要这个版本来获得 JSON 编辑器。 可以免费下载 [Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
+-   **SSAS 项目模板**包括对 Analysis Services 中表格模型项目的增强功能。 可以使用“查看代码”命令查看 JSON 中的模型定义。**** 如果你现在使用的不是完整功能版的 Visual Studio 2015，那么你将需要这个版本来获得 JSON 编辑器。 可以免费下载 [Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
   
 ## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月预览版  
   

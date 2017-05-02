@@ -42,10 +42,10 @@ ms.lasthandoff: 04/11/2017
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”或“管理工具 - 高级”，或 [下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。  
+ 安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时选择“管理工具 - 基本”****或****“管理工具 - 高级”，或 [下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 时，事物性能分析报表和迁移顾问会作为 SQL Server Management Studio (SSMS) 的部分安装。  
   
 ## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
- 通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
+ 通过右键单击数据库，然后依次选择“报表”****、“标准报表”****、“事务性能分析概述”****，可以在“对象资源管理器”****中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
   
  表的详细报告包含三个部分：  
   
@@ -104,31 +104,31 @@ ms.lasthandoff: 04/11/2017
 ## <a name="generating-in-memory-oltp-migration-checklists"></a>生成内存中 OLTP 迁移清单  
  迁移清单识别内存优化表或本机编译存储过程不支持的任何表或存储过程功能。 内存优化和本机编译顾问可为基于单个磁盘的表或解释 T-SQL 存储过程生成一个清单。 还有可能为数据库中的多个表和存储过生成迁移清单。  
   
- 使用“生成内存中 OLTP 迁移清单”命令或使用 PowerShell，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中生成迁移清单。  
+ 使用“生成内存中 OLTP 迁移清单”****命令或使用 PowerShell，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中生成迁移清单。  
   
  **使用 UI 命令生成迁移清单**  
   
-1.  在“对象资源管理器”中，右键单击除系统数据库以外的数据库，单击“任务”，然后单击“生成内存中 OLTP 迁移清单”。  
+1.  在“对象资源管理器”****中，右键单击除系统数据库以外的数据库，单击“任务”****，然后单击“生成内存中 OLTP 迁移清单”****。  
   
-2.  在“生成内存中 OLTP 迁移清单”对话框中，单击“下一步”以导航到“配置清单生成选项”页。 在该页上，执行下列操作。  
+2.  在“生成内存中 OLTP 迁移清单”对话框中，单击“下一步”以导航到“配置清单生成选项”****页。 在该页上，执行下列操作。  
   
-    1.  在“将清单保存到”  框中，输入文件夹路径。  
+    1.  在“将清单保存到” **** 框中，输入文件夹路径。  
   
-    2.  验证“为特定的表和存储过程生成清单”  处于选中状态。  
+    2.  验证“为特定的表和存储过程生成清单” **** 处于选中状态。  
   
-    3.  展开选择框中的“表”  和“存储过程”  节点。  
+    3.  展开选择框中的“表” **** 和“存储过程” **** 节点。  
   
     4.  在选择框中选择几个对象。  
   
-3.  单击“下一步”  并确认任务列表列表与“配置清单生成选项”  页上的设置一致。  
+3.  单击“下一步” **** 并确认任务列表列表与“配置清单生成选项” **** 页上的设置一致。  
   
-4.  单击“完成” ，然后确认仅为选定的对象生成迁移清单报表。  
+4.  单击“完成” ****，然后确认仅为选定的对象生成迁移清单报表。  
   
  将这些报表与内存优化顾问工具和本机编译顾问工具生成的报表进行比较，验证这些报表的准确性。 有关详细信息，请参阅 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 和 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
  **使用 SQL Server PowerShell 生成迁移清单**  
   
-1.  在“对象资源管理器” 中，单击数据库，然后单击“启动 PowerShell” 。 验证出现了下面的提示。  
+1.  在“对象资源管理器” ****中，单击数据库，然后单击“启动 PowerShell” ****。 验证出现了下面的提示。  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

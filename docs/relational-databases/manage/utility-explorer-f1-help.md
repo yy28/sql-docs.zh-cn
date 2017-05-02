@@ -33,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   下面各部分介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具功能和关联的操作。  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
- 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”。  
+ 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”****。  
   
  有关如何创建实用工具控制点的详细信息点，请参阅 [创建 SQL Server 实用工具控制点（SQL Server 实用工具）](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的详细信息，请参阅 [注册 SQL Server 实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
  若要创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序的筛选视图，请在实用工具面板中单击其滑动指示器旁的使用率类别链接。 例如，如果您在 **“实用工具资源管理器内容”** 窗格中单击 **“使用过度的实例 CPU”** ，则 SSMS 将基于当前策略设置创建具有使用过度的 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例的筛选后列表视图。  
   
- 请注意，在你单击某一使用率类别链接时，实用工具资源管理器导航窗格中的相应节点将追加“(已筛选)”- 也就是说，“托管实例”将标记为“托管实例(已筛选)”。 若要查看筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”，然后单击“筛选设置”。 若要清除筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”，然后单击“删除筛选器”。  
+ 请注意，在你单击某一使用率类别链接时，实用工具资源管理器导航窗格中的相应节点将追加“(已筛选)”****- 也就是说，“托管实例”****将标记为“托管实例(已筛选)”****。 若要查看筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”****，然后单击“筛选设置”****。 若要清除筛选设置，请在导航窗格中右键单击该节点，选择“筛选器”****，然后单击“删除筛选器”****。  
   
  有关查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例的运行状况的详细信息，或者有关查看或更改策略配置设置的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”节点，然后选择“筛选器”。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”节点将标记为“已部署的数据层应用程序 (已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“已部署的数据层应用程序”****节点，然后选择“筛选器”****。 实现筛选设置后，实用工具资源管理器中的“已部署的数据层应用程序”****节点将标记为“已部署的数据层应用程序 (已筛选)”。**** 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
   
  默认情况下，下面的列将显示与每个数据层应用程序有关的运行状态信息。  
   
@@ -141,11 +141,11 @@ ms.lasthandoff: 04/11/2017
   
 -   应用程序 CPU - 显示此数据层应用程序的处理器使用率的运行状态。 根据为数据层应用程序设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
-     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”选项卡。  
+     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”****选项卡。  
   
 -   计算机 CPU - 显示计算机处理器使用率的运行状态。 根据为计算机设置的 CPU 使用策略以及易失性资源评估策略的配置设置，确定此参数的运行状态。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
-     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”选项卡。  
+     若要查看此数据层应用程序的处理器使用率历史记录，或者查看或更改策略限制，请单击“CPU 使用率”****选项卡。  
   
 -   文件空间 - 为每个数据层应用程序显示文件空间使用率的运行状态的摘要。  
   
@@ -275,7 +275,7 @@ ms.lasthandoff: 04/11/2017
   
  可以通过将列表视图中的列向左或向右拖动，更改这些列在列表视图中的顺序。 可通过右键单击列标题并选择或取消选择列，添加或删除列表视图中的列。 右键单击菜单还提供了排序选项。 还可以通过单击列名称的顶部激活排序。  
   
- 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”节点，然后选择“筛选器”。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”节点将标有“托管实例(已筛选)”。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要访问实用工具列表视图的筛选器选项，请右键单击实用工具资源管理器导航窗格中的“托管实例”****节点，然后选择“筛选器”****。 在实现了筛选器设置后，实用工具资源管理器中的“托管实例”****节点将标有“托管实例(已筛选)”****。 有关详细信息，请参阅[筛选设置（对象资源管理器和实用工具资源管理器）](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
   
  默认情况下，下面的列将显示与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个托管实例有关的运行状态信息。  
   
@@ -429,7 +429,7 @@ ms.lasthandoff: 04/11/2017
   
 -   处理器使用率的默认最小值是 0%。  
   
- 何时应用程序会用尽文件空间？ 若要更改数据文件或日志文件空间使用率的策略，请使用策略说明右侧的控件，然后单击“应用” 。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
+ 何时应用程序会用尽文件空间？ 若要更改数据文件或日志文件空间使用率的策略，请使用策略说明右侧的控件，然后单击“应用” ****。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
   
 -   文件空间使用率的默认最大值是 70%。  
   
@@ -480,7 +480,7 @@ ms.lasthandoff: 04/11/2017
  要作为实用工具管理员，您必须对 SQL Server 的实例具有 sysadmin 权限。 若要添加或更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 的用户帐户，请使用 SSMS 中的对象资源管理器将该用户添加到 SQL Server 的 UCP 实例的服务器登录名中。 有关详细信息，请参阅 [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)。  
   
  
-“数据仓库”选项卡 - 为实用工具管理数据仓库显示配置详细信息。  
+“数据仓库”****选项卡 - 为实用工具管理数据仓库显示配置详细信息。  
   
  数据保持期  
  针对为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例收集的使用率信息，指定数据保持期。 默认保持期为 1 年。 最小值为 1 个月。 支持的最长的值是 2 年。  
@@ -497,7 +497,7 @@ ms.lasthandoff: 04/11/2017
 > **注意：** 可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
  返回到出厂默认值  
- 若要将此选项卡上的设置重置为默认值，请单击“还原默认设置”按钮，然后单击“应用”。  
+ 若要将此选项卡上的设置重置为默认值，请单击****“还原默认设置”按钮，然后单击****“应用”。  
  
   
 ## <a name="reference"></a>参考  

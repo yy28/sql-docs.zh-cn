@@ -25,7 +25,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
-若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
+若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，右键单击“作业”****，单击“新建作业”****，选择“步骤”****页，再单击“新建”****。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”****，选择“步骤”****页，再依次单击“新建”****、“插入”****或“编辑”****。  
   
 ## <a name="options"></a>选项  
 **步骤名称**  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/11/2017
 设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
 **运行身份**  
-为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”。  
+为作业步骤设置代理帐户。 sysadmin 固定服务器角色的成员还可以指定“SQL 代理服务帐户”****。  
   
 **数据库**  
 设置在其中运行作业步骤的数据库。 此选项并不适用于所有作业步骤类型。  
@@ -217,13 +217,13 @@ ms.lasthandoff: 04/11/2017
 -   **SSIS 包存储区**  
   
 **Server**  
-键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
+键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”****指定了 **SQL Server** 或“SSIS 包存储区”****时，此选项才可用。  
   
 **使用 Windows 身份验证**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
 **使用 SQL Server 身份验证**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”和“密码”。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”****和“密码”****。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
@@ -232,7 +232,7 @@ ms.lasthandoff: 04/11/2017
 键入包的位置。  
   
 > [!IMPORTANT]  
-> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”选项卡，在“包密码”对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业将失败。  
+> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”****选项卡，在“包密码”****对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业将失败。  
   
 ### <a name="configurations-tab"></a>“配置”选项卡  
 为 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包指定配置选项。 选择此选项卡后，以下选项可用：  

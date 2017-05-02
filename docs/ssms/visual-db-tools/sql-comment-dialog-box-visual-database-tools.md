@@ -23,7 +23,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>“SQL 注释”对话框 (Visual Database Tools)
-此对话框提供了一个可编辑区域，您可以在其中编写查询的详细说明。 若要访问此对话框，请在查询和视图设计器中打开查询或视图，然后在“属性”窗口中选择“SQL 注释”，再单击该属性字段右侧的省略号 (**…**)。  
+此对话框提供了一个可编辑区域，您可以在其中编写查询的详细说明。 若要访问此对话框，请在查询和视图设计器中打开查询或视图，然后在“属性”****窗口中选择“SQL 注释”****，再单击该属性字段右侧的省略号 (**…**)。  
   
 ## <a name="see-also"></a>另请参阅  
 [显示查询属性 (Visual Database Tools)](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

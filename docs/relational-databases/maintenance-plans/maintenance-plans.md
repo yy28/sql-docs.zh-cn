@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 这可以用来创建可执行各种操作的作业以及运行这些作业的维护计划。  
   
- 维护任务生成的结果可以作为报表写入文本文件，或写入 **msdb** 维护计划表（**sysmaintplan_log** 和 **sysmaintplan_logdetail**）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”，再单击“查看历史记录”。  
+ 维护任务生成的结果可以作为报表写入文本文件，或写入 **msdb** 维护计划表（**sysmaintplan_log** 和 **sysmaintplan_logdetail**）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”****，再单击“查看历史记录”****。  
   
 ## <a name="related-tasks"></a>相关任务  
  参考以下主题以开始使用维护计划。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
 |||  
 |-|-|  
 |**Description**|**主题**|  
-|配置“代理 XP”服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
+|配置“代理 XP”****服务器配置选项以启用 SQL Server 代理扩展存储过程。|[“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建维护计划。|[创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |说明如何使用维护计划设计图面创建维护计划。|[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |对象资源管理器中可用的文档维护计划功能。|[维护计划节点（对象资源管理器）](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  

@@ -420,7 +420,7 @@ ms.lasthandoff: 04/11/2017
 - [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [内存优化表的表和行大小：示例计算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-对于较大的表变量，非聚集索引所使用的内存大于它们对内存优化表所使用的内存。 行数和索引键越大，这种差别就越大。  
+对于较大的表变量，非聚集索引所使用的内存大于它们对内存优化表所使用的内存。** 行数和索引键越大，这种差别就越大。  
   
 如果每次访问内存优化表变量时只使用一个准确的键值，那么哈希索引是比非聚集索引更好的选择。 但是，如果不能估计出合适的 BUCKET_COUNT，非聚集索引是一个不错的第二选择。  
   

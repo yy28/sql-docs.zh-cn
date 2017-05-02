@@ -36,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件的优点  
- 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”和“新建会话”），以便创建、修改、显示和分析你的会话数据。  
+ 扩展事件是使用非常少的性能资源的轻型性能监视系统。 扩展事件提供两个图形用户界面（“新建会话向导”****和“新建会话”****），以便创建、修改、显示和分析你的会话数据。  
   
 ## <a name="extended-events-concepts"></a>扩展事件概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件 (Extended Events) 是在现有概念（例如事件或事件使用者）的基础上建立的，它使用了 Windows 事件跟踪的概念并引入了新概念。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 -   扩展事件引擎是不识别事件的。 因此，该引擎可以将任何事件绑定到任何目标，因为该引擎不受事件内容约束。 有关扩展事件引擎的详细信息，请参阅 [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)。  
   
--    事件与事件使用者不同，后者在扩展事件中称为“目标”。 也就是说任何目标可以接收任何事件。 此外，引发的任何事件均可供目标自动使用，这样可以记录或提供额外的事件上下文。 有关详细信息，请参阅 [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
+-   ** 事件与事件使用者不同，后者在扩展事件中称为“目标”。 也就是说任何目标可以接收任何事件。 此外，引发的任何事件均可供目标自动使用，这样可以记录或提供额外的事件上下文。 有关详细信息，请参阅 [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
   
 -   事件不同于在事件发生时要执行的操作。 因此，任何操作可以与任何事件相关联。  
   

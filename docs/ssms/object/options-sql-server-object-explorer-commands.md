@@ -33,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
     在 Visual Database Tools 中打开填充了 200 行数据的表。  
   
-可使用“常规脚本选项”对话框更改要打开的行数。  
+可使用“常规脚本选项”****对话框更改要打开的行数。  
   
 ## <a name="general-scripting-options"></a>常规脚本选项  
 **“选择前 <n> 条审核记录”命令的值**  

@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
 |**Log Flush Write Time (ms)**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
 |**Log Flushes/sec**|每秒日志刷新数目。|  
 |**Log Growths**|数据库事务日志增长的总次数。|  
-|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
+|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”**是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
 |**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
 |**Log Pool Hash Deletes/sec**|从日志池删除原始哈希条目的速率。|
 |**Log Pool Hash Inserts/sec**|原始哈希条目插入日志池的速率。|

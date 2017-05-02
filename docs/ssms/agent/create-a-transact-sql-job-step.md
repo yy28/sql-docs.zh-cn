@@ -60,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
   
-5.  在“类型”列表中，单击“Transact-SQL 脚本 (TSQL)”。  
+5.  在“类型”****列表中，单击“Transact-SQL 脚本 (TSQL)”****。  
   
 6.  在 **“命令”** 框中，键入 [!INCLUDE[tsql](../../includes/tsql_md.md)] 批命令，或者单击 **“打开”** ，选择一个 [!INCLUDE[tsql](../../includes/tsql_md.md)] 文件用作命令。  
   

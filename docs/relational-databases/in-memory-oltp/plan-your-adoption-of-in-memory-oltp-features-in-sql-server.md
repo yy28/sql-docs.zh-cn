@@ -104,7 +104,7 @@ ms.lasthandoff: 04/11/2017
 
 可通过使用.dacpac 文件就地更新由 SSDT 管理的数据库。 在 SSDT 中，可指定在 .dacpac 文件中编码的架构进行的更改。
 
-在类型为数据库的 Visual Studio 项目的上下文中，处理 .dacpac 文件。
+在类型为数据库的** Visual Studio 项目的上下文中，处理 .dacpac 文件。
 
 - [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)和 .dacpac 文件
 
@@ -220,13 +220,13 @@ ms.lasthandoff: 04/11/2017
 
 - 如果键值重复率变得过高，则哈希索引可能不是最佳选择。
 
-- 请勿低估哈希索引可能需要的 bucket 的数量，以避免在单个 bucket 内出现长链。 有关详细信息，请参阅：
+- 请勿低估哈希索引可能需要的 bucket** 的数量，以避免在单个 bucket 内出现长链。 有关详细信息，请参阅：
     - [内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引
 
-内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理或 OLTP。 列存储索引提供高吞吐量的聚合和称为 Analytics 的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的 **混合解决方案** ：提供基于内存优化表的列存储索引。
+内存优化表提供高吞吐量的典型业务事务数据，在范例中，调用联机事务处理**或 OLTP**。 列存储索引提供高吞吐量的聚合和称为 Analytics** 的类似处理。 过去几年，可用于满足 OLTP 和 Analytics 需求的最好的方法是提供具有大量数据移动和一定程度数据重复的单独的表。 现可采用更简单的 **混合解决方案** ：提供基于内存优化表的列存储索引。
 
 
 - 可在基于磁盘的表中生成 [列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md) ，甚至是聚集索引。 但不能在内存优化表上聚集列存储索引。
@@ -272,7 +272,7 @@ Transact-SQL 中的 CASE 表达式不能用于本机过程中。 可使用以下
 ### <a name="e2-no-merge-in-a-native-proc"></a>E.2 本机过程中不存在 MERGE
 
 
-Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) 与通常所说的 upsert 功能相似。 本机过程不能使用 MERGE 语句。 但是，通过结合使用 SELECT、UPDATE 和 INSERT 语句可实现与 MERGE 相同的功能。 代码示例所在位置：
+Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) 与通常所说的 upsert** 功能相似。 本机过程不能使用 MERGE 语句。 但是，通过结合使用 SELECT、UPDATE 和 INSERT 语句可实现与 MERGE 相同的功能。 代码示例所在位置：
 
 - [在本机编译的存储过程中实现 MERGE 功能](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
 
@@ -291,7 +291,7 @@ Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) �
 - 通过一组实现删除联接的 Transact-SQL 语句解决此问题。
 
 
-方案：TabProjectEmployee 表具有以下两列的唯一键：ProjectId 和 EmployeeId。 每行表示将一个员工分配到某个活动项目中。 某个员工离开公司时，必须从 TabProjectEmployee 表删除员工。
+方案：**TabProjectEmployee 表具有以下两列的唯一键：ProjectId 和 EmployeeId。 每行表示将一个员工分配到某个活动项目中。 某个员工离开公司时，必须从 TabProjectEmployee 表删除员工。
 
 
 #### <a name="invalid-t-sql-deletejoin"></a>无效的 T-SQL、DELETE...JOIN
@@ -405,7 +405,7 @@ SQL Server 2016 中：
 - 错误号为 41839。 （SQL Server 2014 中的错误号是 41301。）
 
 
-通过将重试逻辑添加到脚本中，可使 Transact-SQL 脚本更可靠（针对可能的事务错误）。 频繁调用 UPDATE 和 DELETE 时，或者另一个表的外键引用内存优化表时，重试逻辑很有可能会有帮助。 有关详细信息，请参阅：
+通过将重试逻辑**添加到脚本中，可使 Transact-SQL 脚本更可靠（针对可能的事务错误）。 频繁调用 UPDATE 和 DELETE 时，或者另一个表的外键引用内存优化表时，重试逻辑很有可能会有帮助。 有关详细信息，请参阅：
 
 - [具有内存优化表的事务](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
 - [内存优化表的事务依赖限制 – 错误 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)

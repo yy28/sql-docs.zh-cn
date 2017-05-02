@@ -68,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      STOPATMARK 前滚到标记处，并在前滚中包含标记的事务。  
   
--   使用 WITH STOPBEFOREMARK = **'**<mark_name>**'** 子句将紧邻标记之前的日志记录指定为恢复点。  
+-   使用 WITH STOPBEFOREMARK = **'**<mark_name>****'** 子句将紧邻标记之前的日志记录指定为恢复点。  
   
      STOPBEFOREMARK 前滚到标记处，但在前滚中不包含标记的事务。  
   

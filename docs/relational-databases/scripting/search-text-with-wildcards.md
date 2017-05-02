@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
-  以下表达式可以替换“查找和替换”对话框的“查找内容”字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
+  以下表达式可以替换“查找和替换”****对话框的“查找内容”****字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   

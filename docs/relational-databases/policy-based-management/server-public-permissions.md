@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
  请勿为服务器 public 角色授予服务器权限。  
   
 > [!IMPORTANT]  
->  安装完成后， **PUBLIC** 角色在“专用管理员连接”  之外的所有端点上具有 **CONNECT**权限。 这很正常，通常不应更改。 （通过使用 **CONNECT SQL** 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
+>  安装完成后， **PUBLIC** 角色在“专用管理员连接” **** 之外的所有端点上具有 **CONNECT**权限。 这很正常，通常不应更改。 （通过使用 **CONNECT SQL** 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
   
 ### <a name="for-more-information"></a>有关详细信息，请参阅：  
  [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)  

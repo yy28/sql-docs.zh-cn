@@ -61,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 -   访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
--   “将 **MERGE INTO***目标*用于*目标*”是内存优化表。 内存优化表支持 **MERGE USING** 源。  
+-   “将 **MERGE INTO***目标*用于*目标*”是内存优化表。 内存优化表支持 **MERGE USING** 源**。  
   
 -   不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   

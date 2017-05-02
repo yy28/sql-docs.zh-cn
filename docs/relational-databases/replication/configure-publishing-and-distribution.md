@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
  有关详细信息，请参阅[保护部署（复制）](../../relational-databases/replication/security/secure-deployment-replication.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”对话框中的属性。 如果要配置分发服务器以使 **db_owner** 固定数据库角色的成员可以创建发布，或者要配置一个非发布服务器的远程分发服务器，请使用配置分发向导。  
+ 可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”****对话框中的属性。 如果要配置分发服务器以使 **db_owner** 固定数据库角色的成员可以创建发布，或者要配置一个非发布服务器的远程分发服务器，请使用配置分发向导。  
   
 #### <a name="to-configure-distribution"></a>配置分发  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  随着配置分发向导执行下列操作：  
   
-    -   选择分发服务器。 若要使用本地分发服务器，请选择“\<ServerName> 将充当自己的分发服务器；SQL Server 将创建分发数据库和日志”。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”**，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
+    -   选择分发服务器。 若要使用本地分发服务器，请选择“\<ServerName> 将充当自己的分发服务器；SQL Server 将创建分发数据库和日志”****。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”**，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
   
          如果选择远程分发服务器，则必须在 **“管理密码”** 页上输入从发布服务器连接到分发服务器的密码。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。  
   

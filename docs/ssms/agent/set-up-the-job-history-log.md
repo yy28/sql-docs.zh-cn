@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”，然后单击“属性”。  
+2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
   
 3.  在 **“SQL Server 代理属性”** 对话框中，选择 **“历史记录”** 页。  
   

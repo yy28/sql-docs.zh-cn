@@ -116,9 +116,9 @@ EXEC sp_xml_removedocument @docHandle;
  **sp_xml_preparedocument** 存储过程返回该文档句柄。  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
-  指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
+ ** 指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
   
- XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。  例如，如果 *rowpattern*以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
+ XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。 ** 如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。 ** 例如，如果 *rowpattern*以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
   
 ### <a name="description-of-the-rowset-to-be-generated"></a>对要生成的行集的说明  
  OPENXML 使用行集架构来生成结果行集。 指定行集架构时，可以使用下列选项。  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值为 0。 保留负的 ID 值。|  
-|**parentid**|**bigint**|标识节点的父节点。 此 ID 标识的父节点不一定是父元素。 但具体情况取决于此 ID 所标识节点的子节点的节点类型。 例如，如果节点为文本节点，则其父节点可能是一个属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  
+|**parentid**|**bigint**|标识节点的父节点。 此 ID 标识的父节点不一定是父元素。 但具体情况取决于此 ID 所标识节点的子节点的节点类型。 例如，如果节点为文本节点，则其父节点可能是一个属性节点。<br /><br /> **** 如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  
 |**节点类型**|**int**|标识节点类型，是对应于 XML 对象模型 (DOM) 节点类型编号的一个整数。<br /><br /> 下列值是可以显示在此列中以指明节点类型的值：<br /><br /> **1** = 元素节点<br /><br /> **2** = 属性节点<br /><br /> **3** = 文本节点<br /><br /> **4** = CDATA 部分节点<br /><br /> **5** = 实体引用节点<br /><br /> **6** = 实体节点<br /><br /> **7** = 处理指令节点<br /><br /> **8** = 注释节点<br /><br /> **9** = 文档节点<br /><br /> **10** = 文档类型节点<br /><br /> **11** = 文档片段节点<br /><br /> **12** = 表示法节点<br /><br /> 有关详细信息，请参阅 Microsoft XML (MSXML) SDK 中的“节点类型属性”主题。|  
 |**localname**|**nvarchar(max)**|给出元素或属性的本地名称。 如果 DOM 对象没有名称，则为 NULL。|  
 |**prefix**|**nvarchar(max)**|节点名称的命名空间前缀。|  
@@ -167,33 +167,33 @@ EXEC sp_xml_removedocument @docHandle;
   
  可以采用下列两种方式之一来指定映射，也可以同时采用来指定映射：  
   
--    通过使用 flags 参数  
+-   ** 通过使用 flags 参数  
   
-      由 flags 参数指定的映射采用名称对应，即 XML 节点映射到具有相同名称的对应行集列。  
+     ** 由 flags 参数指定的映射采用名称对应，即 XML 节点映射到具有相同名称的对应行集列。  
   
--    通过使用 ColPattern 参数  
+-   ** 通过使用 ColPattern 参数  
   
-     *ColPattern*是 XPath 表达式，被指定为 WITH 子句中的 *SchemaDeclaration* 的一部分。  在 *ColPattern* 中指定的映射覆盖 flags 参数指定的映射。  
+     *ColPattern*是 XPath 表达式，被指定为 WITH 子句中的 *SchemaDeclaration* 的一部分。 ** 在 *ColPattern* 中指定的映射覆盖 flags 参数指定的映射。  
   
      *ColPattern* 可以用于指定映射类型（如以属性为中心或以元素为中心），以覆盖或增强 *flags*指定的默认映射。  
   
-      在下列情况下指定 ColPattern：  
+     ** 在下列情况下指定 ColPattern：  
   
-    -   行集中的列名不同于它映射到的元素名称或属性名称。  在这种情况下，ColPattern 用于标识行集列映射到的 XML 元素名称和属性名称。  
+    -   行集中的列名不同于它映射到的元素名称或属性名称。 ** 在这种情况下，ColPattern 用于标识行集列映射到的 XML 元素名称和属性名称。  
   
-    -   希望将元属性特性映射到列。  在这种情况下，ColPattern 用于标识行集列映射到的元属性。 有关如何使用元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
+    -   希望将元属性特性映射到列。 ** 在这种情况下，ColPattern 用于标识行集列映射到的元属性。 有关如何使用元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
  *flags* 和 *ColPattern* 参数都是可选的。 如果未指定映射，则采用以属性为中心的映射。 以属性为中心的映射是 *flags* 参数的默认值。  
   
 #### <a name="attribute-centric-mapping"></a>以属性为中心的映射  
-  将 OPENXML 中的 **flags** 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。 如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
+ ** 将 OPENXML 中的 **flags** 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。 如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
   
-  如果列名不同于它映射到的属性名称，则必须指定 ColPattern。  
+ ** 如果列名不同于它映射到的属性名称，则必须指定 ColPattern。  
   
  如果 XML 属性具有命名空间限定符，则行集中的列名也必须有该限定符。  
   
 #### <a name="element-centric-mapping"></a>以元素为中心的映射  
-  将 OPENXML 中的 **flags** 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。  除了下列差异外，它与“以属性为中心”的映射相似：  
+ ** 将 OPENXML 中的 **flags** 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。 **** 除了下列差异外，它与“以属性为中心”的映射相似：  
   
 -   除非指定列级模式，否则映射的名称对应（例如，映射到具有相同名称的 XML 元素的列）选择不复杂的子元素。 在检索过程中，如果子元素复杂（因为它包含其他子元素），则将列设置为 NULL。 然后忽略子元素的属性值。  
   

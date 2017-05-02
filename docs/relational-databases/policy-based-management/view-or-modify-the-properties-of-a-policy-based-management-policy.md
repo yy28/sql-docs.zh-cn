@@ -37,13 +37,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”，然后选择“查看”。 有关“查看策略 – *object_name*”对话框中的可用选项的详细信息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”****，然后选择“查看”****。 有关“查看策略 – *object_name*”****对话框中的可用选项的详细信息，请参阅[“查看策略”对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
-2.  完成后，单击“关闭”。  
+2.  ****完成后，单击“关闭”。  
   
 #### <a name="to-view-or-modify-a-specific-policys-properties"></a>查看或修改特定策略的属性  
   
-1.  在“对象资源管理器”中，单击加号以便展开包含你要查看或修改的基于策略的管理策略的服务器。  
+1.  在“对象资源管理器”****中，单击加号以便展开包含你要查看或修改的基于策略的管理策略的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要查看或修改的策略，然后选择“属性”。 有关“打开策略 - *policy_name*”对话框中的可用选项的详细信息，请参阅[“创建新策略”或“打开策略”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[“创建新策略”或“打开策略”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  右键单击要查看或修改的策略，然后选择“属性”****。 有关“打开策略 - *policy_name*”****对话框中的可用选项的详细信息，请参阅[“创建新策略”或“打开策略”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[“创建新策略”或“打开策略”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

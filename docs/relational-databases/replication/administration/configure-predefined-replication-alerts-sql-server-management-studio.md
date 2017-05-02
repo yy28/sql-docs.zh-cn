@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **复制：代理自定义关闭**  
   
- 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 在 **** 中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 有关访问此选项卡的详细信息，请参阅[查看订阅的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击一个复制警报，然后单击 **“属性”**。  
   
-4.  在“\<AlertName> 警报属性”对话框中设置选项：  
+4.  在“\<AlertName> 警报属性”****对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“配置复制警报”** 对话框中，选择一个警报，然后单击 **“配置”**。  
   
-3.  在“\<AlertName> 警报属性”对话框中设置选项：  
+3.  在“\<AlertName> 警报属性”****对话框中设置选项：  
   
     -   在 **“常规”** 页上，单击 **“启用”**，指定应用此警报的数据库。  
   

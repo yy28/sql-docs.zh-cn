@@ -117,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     其中，source_database_name 是源数据库，logical_file_name 是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name 是创建该文件时操作系统使用的路径和文件名，database_snapshot_name 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+     其中，****source_database_name 是源数据库，**logical_file_name 是引用该文件时在 SQL Server 中使用的逻辑名称，**os_file_name 是创建该文件时操作系统使用的路径和文件名，**database_snapshot_name 是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
     > [!NOTE]  
     >  创建数据库快照时，CREATE DATABASE 语句中不允许有日志文件、脱机文件、还原文件和不起作用的文件。  

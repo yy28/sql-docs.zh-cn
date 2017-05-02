@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor is designed to efficiently monitor a large number of computers in a production system. 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
   
- 缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” 进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
+ 缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” ****进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
   
 -   如果上次创建缓存后，代理历史记录有更改，则等待时间是以下时间中的最小值：4 秒或创建上一个缓存所用的时间。  
   

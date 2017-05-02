@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
 从列表中选择结果行要添加到其中的表的名称。 只能为“插入结果”查询指定一个表。  
   
 > [!NOTE]  
-> 可以在“属性”窗口中更改要在其中插入行的表。  
+> 可以在“属性”****窗口中更改要在其中插入行的表。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建“插入结果”查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  

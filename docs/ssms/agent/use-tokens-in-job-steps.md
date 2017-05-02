@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 > 对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记已被禁用。 这些标记包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**和 **WMI(***property***)**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
-> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
+> 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”****页上选择“为警报的所有作业响应替换标记”****以启用这些标记。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记替换简单且有效： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 在这种情况下，不会执行已插入的语句 `SELECT @@VERSION`。 相反，多余的单引号会导致服务器将已插入语句作为字符串进行分析。 如果标记替换字符串不包含单引号，则不会转义任何字符，并且包含此标记的作业步骤会按预期方式执行。  
   
-若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”对话框的“高级”页指定作业步骤输出文件或表。  
+若要在作业步骤中调试标记使用，请使用 `PRINT N'$(ESCAPE_SQUOTE(SQLDIR))'` 之类的输出语句并将作业步骤输出保存到文件或表。 可以使用“作业步骤属性”****对话框的“高级”****页指定作业步骤输出文件或表。  
   
 ## <a name="sql-server-agent-tokens-and-macros"></a>SQL Server 代理标记和宏  
 下列各表列出并说明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理支持的标记和宏。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/11/2017
 |**(TIME)**|当前时间（以 HHMMSS 格式表示）。|  
 |**(STRTTM)**|作业开始执行的时间（以 HHMMSS 格式表示）。|  
 |**(STRTDT)**|作业开始执行的日期（以 YYYYMMDD 格式表示）。|  
-|**(WMI(**property**))**|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
+|**(WMI(**property**))****|对于为响应 WMI 警报而运行的作业，属性值由 property **指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 04/11/2017
   
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 知识库文章 915845： [在 SQL Server 2005 Service Pack 1 中使用标记的 SQL Server 代理作业步骤将失败](http://support.microsoft.com/kb/915845)提供的脚本。可以使用此脚本通过 **ESCAPE_NONE** 宏更新所有使用标记的作业步骤。 使用此脚本之后，我们建议你尽快查看使用标记的作业步骤，并将 **ESCAPE_NONE** 宏替换为适用于作业步骤上下文的转义宏。  
   
-下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，然后在“警报系统”页上选中或清除“为警报的所有作业响应替换标记”复选框。  
+下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，然后在“警报系统”****页上选中或清除“为警报的所有作业响应替换标记”****复选框。  
   
 |标记语法|启用警报标记替换|禁用警报标记替换|  
 |----------------|------------------------------|-------------------------------|  

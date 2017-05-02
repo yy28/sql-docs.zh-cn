@@ -34,12 +34,12 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="view-the-windows-application-log"></a>查看 Windows 应用程序日志  
   
-1.  在“搜索栏”中，键入“事件查看器”，然后选择“事件查看器”桌面应用。
+1.  在“搜索栏”****中，键入“事件查看器”****，然后选择“事件查看器”桌面应用。
   
-2.  在“事件查看器”中，打开“应用程序和服务日志”。    
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$***<instance_name>* 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$**\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
+2.  在“事件查看器”中，打开“应用程序和服务日志”****。    
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件由“源”****列中的 **MSSQLSERVER** 项（命名实例以 **MSSQL$***<instance_name>* 标识）标识。 SQL Server 代理事件由 SQLSERVERAGENT 项标识（对于已命名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件由 **SQLAgent$**\<*instance_name*> 标识）。 Microsoft Search 服务事件由 **Microsoft Search**项标识。  
   
-4.  若要查看另一台计算机的日志，请右键单击“事件查看器(本地)”，选择“连接到另一台计算机”，并完成“选择计算机”对话框。  
+4.  若要查看另一台计算机的日志，请右键单击“事件查看器(本地)”****，选择“连接到另一台计算机”****，并完成“选择计算机”****对话框。  
   
 5.  另外，若要仅显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件，请在 **“查看”** 菜单上单击 **“筛选器”**，并在 **“事件源”** 列表中，选择 **MSSQLSERVER**。 若要仅查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件，请在 **“事件源”** 列表中选择 **SQLSERVERAGENT** 。  
   

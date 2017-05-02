@@ -26,15 +26,15 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>向查询中添加派生表 (Visual Database Tools)
-派生表是结果集，在查询中用作表源。 可以在“关系图”窗格中将派生表添加到查询。  
+派生表是结果集，在查询中用作表源。 可以在“关系图”窗格****中将派生表添加到查询。  
   
 ### <a name="to-add-a-derived-table-to-a-query"></a>将派生表添加到查询  
   
 1.  打开现有查询或创建新查询。  
   
-2.  右键单击“关系图”窗格并选择“添加新派生表”。  
+2.  右键单击“关系图”窗格****并选择“添加新派生表”****。  
   
-    将添加一个名为 derivedtbl_N 的新表，派生表的 SELECT 语句会添加到查询的 FROM 子句。  
+    将添加一个名为 derivedtbl_N** 的新表，派生表的 SELECT 语句会添加到查询的 FROM 子句。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

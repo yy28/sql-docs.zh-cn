@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  
   
- “ 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ “** 审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
  **本主题内容**  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
-1.   在对象资源管理器中，展开“安全性”文件夹。  
+1.  **** 在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”。 有关详细信息，请参阅 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  右键单击“审核”****文件夹，然后选择“新建审核…”****。 有关详细信息，请参阅 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  在完成选项选择后，请单击 **“确定”**。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“安全性”** 文件夹。  
   
-3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”。  
+3.  右键单击“数据库审核规范”****文件夹，然后选择“新建数据库审核规范…”****。  
   
      **“创建数据库审核规范”** 对话框中提供了以下选项。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/11/2017
      指定要捕获的数据库级别审核操作组和审核操作。 有关数据库级别审核操作组和审核操作的列表以及它们所包含事件的说明，请参阅 [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
      **对象架构**  
-     显示具有指定“对象名称”的对象的架构。  
+     显示具有指定“对象名称”****的对象的架构。  
   
      **Object Name**  
      要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  

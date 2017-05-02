@@ -54,8 +54,8 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要查看其属性的方面，然后选择“属性”。 有关“方面属性 –”*facet_name* 对话框中可用选项的详细信息，请参阅[“方面属性”对话框，“常规”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[“方面属性”对话框，“依赖策略”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和[“方面属性”对话框，“依赖条件”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  右键单击要查看其属性的方面，然后选择****“属性”。 有关****“方面属性 –”*facet_name* 对话框中可用选项的详细信息，请参阅[“方面属性”对话框，“常规”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[“方面属性”对话框，“依赖策略”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和[“方面属性”对话框，“依赖条件”页](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
-6.  完成后，单击“关闭”。  
+6.  ****完成后，单击“关闭”。  
   
   
