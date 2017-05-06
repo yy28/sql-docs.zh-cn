@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
+索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
     
- 本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](http://msdn.microsoft.com/library/ms175049.aspx)。  
+本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](http://msdn.microsoft.com/library/ms175049.aspx)。  
   
   
 ##  <a name="Basics"></a> 索引设计基础知识  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   将插入或修改尽可能多的行的查询写入单个语句内，而不要使用多个查询更新相同的行。 仅使用一个语句，就可以利用优化的索引维护。  
   
--   评估查询类型以及如何在查询中使用列。 例如，在完全匹配查询类型中使用的列就适合用于非聚集索引或聚集索引。  
+-   评估查询类型以及如何在查询中使用列。 例如，在完全匹配查询类型中使用的列就适合用于非聚集索引或聚集索引。
   
 ### <a name="column-considerations"></a>列注意事项  
  设计索引时，应考虑以下列准则：  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
- [使用 SQL Server 2008 索引视图提高性能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[使用 SQL Server 2008 索引视图提高性能](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 
