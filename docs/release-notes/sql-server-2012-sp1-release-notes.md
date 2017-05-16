@@ -13,9 +13,10 @@ caps.latest.revision: 49
 author: byham
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 47cba5e99626a7b378c29a9dde4923963fae09da
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/11/2017
 3.  单击 **“PowerPivot 库”**。  
   
 ### <a name="22-to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>2.2 若要将 PowerPivot for Excel 与 Excel 2013 一起使用，您必须使用与 Excel 一起安装的外接程序  
-**问题：** 对于 Office 2010，PowerPivot for Excel 是可从 [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)(#http://www.microsoft.com/bi/powerpivot.aspx) 下载的独立外接程序。 也可以从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意，有两个可供下载的 PowerPivot 外接程序版本：一个是 SQL Server 2008 R2 随附的版本，另一个是 SQL Server 2012 随附的版本。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
+问题：对于 Office 2010，PowerPivot for Excel 是可从[http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)下载的独立外接程序。 也可以从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意，有两个可供下载的 PowerPivot 外接程序版本：一个是 SQL Server 2008 R2 随附的版本，另一个是 SQL Server 2012 随附的版本。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
   
 **解决方法：**若要使用 PowerPivot for Excel 2013，则必须启用 COM 外接程序。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。 从“**管理**”下拉框中，选择“**COM 外接程序**”，然后单击“**执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/11/2017
   
 -   “连接字符串属性‘用户标识’不支持值‘SharePoint 主体’。”  
   
-**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=286266) 下载此功能包。  
+**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从[!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的[SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)下载此功能包。  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 在执行预定的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
 **问题**：在 PowerPivot for SharePoint 外接程序中，对包含 Power View 的工作簿使用“ **计划的数据刷新** ”将删除所有 Power View 工作表。  

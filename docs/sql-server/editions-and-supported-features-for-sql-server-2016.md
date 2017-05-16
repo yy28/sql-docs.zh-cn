@@ -17,9 +17,10 @@ caps.latest.revision: 175
 author: sabotta
 ms.author: carlasab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9b9db3ca911b8fd8eed6304b9d3a8f51e9e9ba2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
     
  > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)**启动已安装 SQL Server 2016 的虚拟机[](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**    
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)    
     
 **开发人员版和评估版**  
  有关开发人员版和评估版支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 功能。

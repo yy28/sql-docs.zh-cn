@@ -23,9 +23,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -121,13 +122,13 @@ WHERE
 ```  
   
 ## <a name="how-multiple-and-and-or-clauses-are-represented-in-the-criteria-pane"></a>在“条件”窗格中如何表示多个 AND 和 OR 子句  
-查询和视图设计器可以在“条件”窗格 [](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中显示搜索条件。 但是，在需要用 AND 和 OR 链接多个子句的某些情况下，“条件”窗格中的表示形式可能会与预期形式不一样。 另外，如果在“条件”窗格或 [“关系图”](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)窗格中修改查询，你可能会发现生成的 SQL 语句与输入的语句不同。  
+查询和视图设计器可以在“[条件](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)”窗格中显示搜索条件。 但是，在需要用 AND 和 OR 链接多个子句的某些情况下，“条件”窗格中的表示形式可能会与预期形式不一样。 另外，如果在“条件”窗格或 [“关系图”](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)窗格中修改查询，你可能会发现生成的 SQL 语句与输入的语句不同。  
   
 一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
--   所有用 AND 链接的条件都显示在“筛选器”****网格列中或同一个“或...”****列中。  
+-   所有用 AND 链接的条件都显示在“筛选器”网格列中或同一个“或...”列中。  
   
--   所有用 OR 链接的条件都显示在不同的“或...”****列中。  
+-   所有用 OR 链接的条件都显示在不同的“或...”列中。  
   
 -   如果 AND 和 OR 子句组合的逻辑结果是将 AND 分布到多个 OR 子句中，则“条件”窗格将根据需要重复 AND 子句以明确地表示结果。  
   

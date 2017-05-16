@@ -4,7 +4,7 @@
 ## [使用 NEAR 搜索与另一个词邻近的词](search-for-words-close-to-another-word-with-near.md)  
 ## [使用 RANK 限制搜索结果](limit-search-results-with-rank.md)  
 ## [改进全文查询的性能](improve-the-performance-of-full-text-queries.md)  
-## 使用搜索属性列表搜索文[档属性](search-document-properties-with-search-property-lists.md)  
+## [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)  
 ## [查找搜索属性的属性集 GUID 和属性整数 ID](find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
 ## [创建和管理全文索引目录](create-and-manage-full-text-catalogs.md)  
 ## [创建和管理全文索引](create-and-manage-full-text-indexes.md)  
