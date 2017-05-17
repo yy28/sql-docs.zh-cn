@@ -21,9 +21,10 @@ caps.latest.revision: 77
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  还原最新完整数据库备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-3.  如果存在差异备份，则还原最新的差异备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *differential_backup_device* WITH NORECOVERY).。  
+3.  如果存在差异备份，则还原最新的差异备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *differential_backup_device* WITH NORECOVERY)。  
   
      还原最新差异备份可减少必须还原的日志备份数。  
   
