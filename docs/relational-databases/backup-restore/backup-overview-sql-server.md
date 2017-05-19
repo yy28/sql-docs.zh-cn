@@ -26,9 +26,10 @@ caps.latest.revision: 84
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,10 +39,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="terms"></a>术语
  
- **备份 [动词] (back up)**  
+ 备份 [动词] \(back up)  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
   
-**备份 [名词] (backup)**  
+备份 [名词] \(backup)  
  可用于在失败后还原或恢复数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据副本。 在数据库级别以及针对数据库的一个或多个文件或文件组创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的备份。 不能创建表级备份。 除了数据备份之外，完整恢复模式要求创建事务日志的备份。  
   
 **[恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
   
  **[差异备份 (differential backup)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（**差异基准），仅包含自差异基准以来发生了更改的数据区。  
+ 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（差异基准），仅包含自差异基准以来发生了更改的数据区。  
   
  部分差异备份仅记录自上一次部分备份（称为“差异基准”）以来文件组中发生更改的数据区。  
   
