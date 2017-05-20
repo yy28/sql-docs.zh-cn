@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
  **示例 1：创建一个唯一索引、全文索引和语义索引**  
   
- 以下示例创建一个默认全文目录 **ft**.。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
+ 以下示例创建一个默认全文目录 **ft**。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
   
 ```tsql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
@@ -117,7 +118,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列” ****页为每个要创建语义索引的列启用“统计语义”**** 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -146,7 +147,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”****对话框的“全文索引列”****页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -160,7 +161,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-若要仅从一个或多个列删除语义索引，请使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS****选项调用 ALTER FULLTEXT INDEX** 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+若要仅从一个或多个列删除语义索引，请使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** **选项调用 ALTER FULLTEXT INDEX** 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```tsql  
 USE database_name  
@@ -185,7 +186,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”****对话框的“全文索引列”****页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -238,7 +239,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”****。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   
@@ -249,7 +250,7 @@ GO
 > [!IMPORTANT]  
 >  语义索引比全文索引支持的语言少。 因此，您可以对某些列编制索引以进行全文搜索，但不能进行语义搜索。  
   
- 查询目录视图 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).。  
+ 查询目录视图 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
 ```tsql  
 SELECT * FROM sys.fulltext_semantic_languages  
@@ -272,7 +273,7 @@ GO
 |西班牙语|3082|  
   
 ###  <a name="doctypes"></a> 确定可对哪些文档类型编制索引  
- 查询目录视图 [sys.fulltext_document_types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).。  
+ 查询目录视图 [sys.fulltext_document_types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)。  
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   

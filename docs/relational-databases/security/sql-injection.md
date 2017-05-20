@@ -17,14 +17,15 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sql-injection"></a>SQL 注入
-  SQL 注入是一种攻击方式，在这种攻击方式中，恶意代码被插入到字符串中，然后将该字符串传递到 SQL Server 的实例以进行分析和执行。 构成 SQL 语句的任何过程都应进行注入漏洞审阅，因为 SQL Server 将执行其接收到的所有语法有效的查询。 一个有经验的、坚定的攻击者甚至可以操作参数化数据。  
+  SQL 注入是一种攻击方式，这种攻击方式是将恶意代码插入字符串，然后将该字符串传递到 SQL Server 的实例以进行分析和执行。 构成 SQL 语句的任何过程都应进行注入漏洞审阅，因为 SQL Server 将执行其接收到的所有语法有效的查询。 一个有经验的、坚定的攻击者甚至可以操作参数化数据。  
   
 ## <a name="how-sql-injection-works"></a>SQL 注入工作原理  
  SQL 注入的主要形式包括直接将代码插入到与 SQL 命令串联在一起并使其得以执行的用户输入变量。 一种间接的攻击会将恶意代码注入要在表中存储或作为元数据存储的字符串。 在存储的字符串随后串连到一个动态 SQL 命令中时，将执行该恶意代码。  

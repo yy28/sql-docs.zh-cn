@@ -15,9 +15,10 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/11/2017
   
 -   验证“SharePoint 管理”服务是否正在运行。  
   
-1.  **运行配置文件：** 注意，仅当 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装在本地服务器上时，才会列出这些配置工具。请在“开始” **** 菜单上，指向“所有程序” ****，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ****，然后单击以下项之一：  
+1.  **运行配置文件：** 注意，仅当 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装在本地服务器上时，才会列出这些配置工具。请在“开始”  菜单上，指向“所有程序” ，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击以下项之一：  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置**  
   
@@ -88,9 +89,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  检查任务列表中的每个操作，了解每个操作的作用。  
   
-     在“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”****中，你可以选择删除与服务应用程序相关联的应用程序数据。 应用程序数据是随服务应用程序创建的 SQL Server 数据库，目的在于存储数据刷新计划、数据库实例信息、使用情况数据，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他数据。 它并不存储用户文件，如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 除非您有特定原因要保留应用程序数据（例如，您有与数据刷新或数据访问相关的数据保留策略），否则您可以删除应用程序数据库，而不删除 SharePoint 用户创建或保存的任何文件。  
+     在“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”中，你可以选择删除与服务应用程序相关联的应用程序数据。 应用程序数据是随服务应用程序创建的 SQL Server 数据库，目的在于存储数据刷新计划、数据库实例信息、使用情况数据，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他数据。 它并不存储用户文件，如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 除非您有特定原因要保留应用程序数据（例如，您有与数据刷新或数据访问相关的数据保留策略），否则您可以删除应用程序数据库，而不删除 SharePoint 用户创建或保存的任何文件。  
   
-     若要删除该数据库，请选择“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”****，然后选择“删除与此服务应用程序相关联的应用程序数据”****。  
+     若要删除该数据库，请选择“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”，然后选择“删除与此服务应用程序相关联的应用程序数据”。  
   
 5.  或者，检查 **“输出”** 选项卡或 **“脚本”** 选项卡中的详细信息。  
   
@@ -141,34 +142,34 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  可以卸载部分安装而不影响已安装的其他 SQL Server 实例（或同一实例中的功能）。 例如，可以卸载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而保留安装的其他组件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或数据库引擎。  
   
-1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”****。  
+1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”。  
   
-2.  单击“卸载/更改”****.。  
+2.  单击“卸载/更改”。  
   
 3.  单击 **“删除”**。 这将启动 SQL Server 安装程序。  
   
-     你可以从安装程序中选择 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 实例，然后选择“Analysis Services” **** 和“Analysis Services SharePoint 集成” **** ，这样就可以只删除该功能，而保留其他功能。  
+     你可以从安装程序中选择 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 实例，然后选择“Analysis Services”  和“Analysis Services SharePoint 集成”  ，这样就可以只删除该功能，而保留其他功能。  
   
 ##  <a name="bkmk_addin"></a> 步骤 4：卸载 Power Pivot for SharePoint 加载项  
  如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署具有两个或更多服务器且您安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序，则从安装它的每个服务器卸载 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 外接程序以完全卸载所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 文件。 有关详细信息，请参阅 [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 ##  <a name="verify"></a> 步骤 5：验证卸载情况  
   
-1.  在管理中心的“管理服务器上的服务” ****中，连接到卸载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器。  
+1.  在管理中心的“管理服务器上的服务” 中，连接到卸载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器。  
   
-2.  -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”****不再显示在列表中。  
+2.  -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”不再显示在列表中。  
   
-    -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，请验证“SQL Server Analysis Services”****和“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”****不再显示在列表中。  
+    -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，请验证“SQL Server Analysis Services”和“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”不再显示在列表中。  
   
 3.  卸载场中的最后一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器后，请执行以下操作：  
   
-    1.  在“应用程序管理”的“管理服务应用程序” ****中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”不再显示在列表中。  
+    1.  在“应用程序管理”的“管理服务应用程序” 中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”不再显示在列表中。  
   
-    2.  在“系统设置”的“管理场功能” ****中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 集成功能”不再出现在该页上。 在“管理场解决方案” ****中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案不再出现在该页上。  
+    2.  在“系统设置”的“管理场功能” 中，验证“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 集成功能”不再出现在该页上。 在“管理场解决方案” 中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案不再出现在该页上。  
   
-    3.  在“监视”的“配置诊断日志记录” **** 和“配置使用情况和运行状况数据收集” ****中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件类别不再出现。  
+    3.  在“监视”的“配置诊断日志记录”  和“配置使用情况和运行状况数据收集” 中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件类别不再出现。  
   
-    4.  在“常规应用程序设置”中，验证“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板”****不再出现在该页上。  
+    4.  在“常规应用程序设置”中，验证“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板”不再出现在该页上。  
   
 ##  <a name="bkmk_post"></a> 步骤 6：卸载后一览表  
  使用下表删除在卸载过程中未删除的软件和文件。  
