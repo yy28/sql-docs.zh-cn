@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 63d2fb21ddbbea23fc29df9e3cc732d1ad887c5b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。. (Antimatter 列值为 VALUE。)|  
+|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)，页 PG_ID，行 R_ID。 DBCC 检测到来自联机索引生成操作的不完全清除。 (Antimatter 列值为 VALUE。)|  
   
 ## <a name="explanation"></a>解释  
 检测到对象 *O_ID*、索引 *I_ID* 和分区 *PN_ID* 存在未完成的联机索引生成。 这将由行 *R_ID* 上存在的 antimatter 列进行显示。 在联机索引生成过程中协调来自多个源的记录时，将使用 antimatter 列。 此错误消息还指出 antimatter 列的值。  
