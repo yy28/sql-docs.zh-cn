@@ -14,9 +14,10 @@ caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  [Microsoft Azure 价格计算器](http://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
   
- **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅 **定价详细信息** 文章中的“数据管理” [](http://go.microsoft.com/fwlink/?LinkId=277059) 一节。  
+ **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅[定价详细信息](http://go.microsoft.com/fwlink/?LinkId=277059)文章中的“数据管理”  一节。  
   
  **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   

@@ -23,9 +23,10 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
  收集模式（缓存或非缓存）决定变更计划的方式。 缓存模式使用不同的计划进行收集和上载。 非缓存模式使用同一计划进行收集和上载。 每个系统数据收集组的收集模式类型如下：  
   
--   ****“磁盘使用情况”使用非缓存收集模式。  
+-   “磁盘使用情况”使用非缓存收集模式。  
   
 -   **“查询统计信息”** 使用缓存收集模式。  
   
@@ -44,17 +45,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
-2.  右键单击收集组名称，然后单击****“属性”以便打开 [](#CollectionSet)“数据收集组属性”对话框。  
+2.  右键单击收集组名称，然后单击“属性”[以便打开](#CollectionSet)“数据收集组属性”对话框。  
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>更改缓存模式收集组的计划  
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
-2.  右键单击使用缓存模式的收集组（如****“查询统计信息”），然后单击****“属性”以便打开 [](#CollectionSet)“数据收集组属性”对话框。  
+2.  右键单击使用缓存模式的收集组（如“查询统计信息”），然后单击“属性”以便打开“[数据收集组属性](#CollectionSet)”对话框。  
   
 3.  可以在 **“常规”** 页上更改收集频率。 为此，请按照下列步骤进行操作：  
   
-    1.  在详细信息窗格中，双击****“收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
+    1.  在详细信息窗格中，双击“收集项”表中的**Collection items**“收集频率(秒)”列中显示的数字。  
   
     2.  若要提高或降低收集频率，请键入一个更小或更大的数字，然后按 Enter 存储这个新值。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
-2.  右键单击使用非缓存模式的收集组（如****“磁盘使用情况”），然后单击****“属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
+2.  右键单击使用非缓存模式的收集组（如“磁盘使用情况”），然后单击“属性”以便打开[数据收集组属性](#CollectionSet)对话框。  
   
      **“数据收集组属性”** 对话框将显示收集组属性的分页视图。  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 04/11/2017
  使用此页可以为由此收集组收集的数据配置上载计划。  
   
 > [!NOTE]  
->  仅当已为**** “数据收集和上传”配置了****“已缓存”选项时才启用此选项卡。  
+>  仅当已为 “数据收集和上传”配置了“已缓存”选项时才启用此选项卡。  
   
  **Server**  
  显示承载管理数据仓库的服务器的名称。 有关详细信息。请参阅[配置管理数据仓库 (SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)。  
