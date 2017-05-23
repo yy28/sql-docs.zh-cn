@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4129f5324f4b93efb98e9bd437571daa0bc404a1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,10 +68,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击加号以展开要使用到其 SQL Server 代理服务的连接进行设置的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 sever_name”****** 对话框中，在“选择页”下****，单击“连接”****。  
+3.  在“SQL Server 代理属性 sever_name” 对话框中，在“选择页”下，单击“连接”。  
   
-4.  在“SQL Server 连接”****下，选择“使用 Windows 身份验证”****以启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，从而使用[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 及更高版本数据库的连接需要 Windows 身份验证。  
+4.  在“SQL Server 连接”下，选择“使用 Windows 身份验证”以启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，从而使用[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例。 与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 及更高版本数据库的连接需要 Windows 身份验证。  
   
 
