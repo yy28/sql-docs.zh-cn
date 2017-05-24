@@ -24,9 +24,10 @@ caps.latest.revision: 69
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
  参数化筛选器在单个表中使用，通常与联接筛选器配合使用来将筛选扩展到相关表。 有关详细信息，请参阅 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
- 若要定义或修改参数化行筛选器，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 若要定义或修改参数化行筛选器，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 ## <a name="how-parameterized-filters-work"></a>参数化筛选器的工作机制  
  参数化行筛选器使用 WHERE 子句来选择要发布的适当数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：SUSER_SNAME() 和 HOST_NAME()。 也可以使用用户定义函数，但是函数主体中必须包含 SUSER_SNAME() 或 HOST_NAME()，或者计算这些系统函数之一（如 `MyUDF(SUSER_SNAME()`）。 如果用户定义函数的主体中包含 SUSER_SNAME() 或 HOST_NAME()，则无法向该函数传递参数。  
@@ -134,7 +135,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |分区中的数据不重叠，并且数据由所有订阅共享。 订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**不重叠，由所有订阅共享**|**2**|  
 |分区中的数据不重叠，每个分区只有一个订阅。 订阅服务器无法更新参数化筛选器中引用的列。**|**此表中的行将仅转到一个订阅**|**不重叠，一个订阅**|**3**|  
   
- \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。************  
+ \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。  
   
  **如果你指定此选项，则相应项目中的每个数据分区只能有一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   
