@@ -19,9 +19,10 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 建议  
   
--   当使用参数化筛选器时，可通过在创建发布时指定 **use partition groups** 或 **keep partition changes** 选项来控制合并复制处理筛选器的方式。 通过将其他元数据存储在发布数据库中，上述选项可提高具有已筛选项目的发布的同步性能。 通过在创建项目时设置 **partition options** ，您可以控制在订阅服务器之间共享数据的方式。 有关这些要求的详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+-   当使用参数化筛选器时，可通过在创建发布时指定 **use partition groups** 或 **keep partition changes** 选项来控制合并复制处理筛选器的方式。 通过将其他元数据存储在发布数据库中，上述选项可提高具有已筛选项目的发布的同步性能。 通过在创建项目时设置 **partition options** ，您可以控制在订阅服务器之间共享数据的方式。 有关这些要求的详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
      使用 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 订阅服务器时，keep_partition_changes 必须设置为 true 以确保正确传播删除操作。 设置为 false 时，订阅服务器可能有比预期更多的行。  
   
@@ -52,21 +53,21 @@ ms.lasthandoff: 04/11/2017
  以下设置可用于优化参数化行筛选器：  
   
  **Partition Options**  
- 可在“项目属性 - \<项目>”对话框中的“属性”页上，或在“添加筛选器”对话框中设置此选项。************ 这两个对话框都可在新建发布向导和“发布属性 - \<发布>”对话框中获得。**** 通过“项目属性 - \<项目>”对话框可以为此选项指定在“添加筛选器”对话框中不可用的其他值。 ********  
+ 可在“项目属性 - \<项目>”对话框中的“属性”页上，或在“添加筛选器”对话框中设置此选项。 这两个对话框都可在新建发布向导和“发布属性 - \<发布>”对话框中获得。 通过“项目属性 - \<项目>”对话框可以为此选项指定在“添加筛选器”对话框中不可用的其他值。   
   
  **预计算分区**  
- 如果发布中的项目符合一组要求，则此选项在默认情况下将设置为 **True** 。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 可在“发布属性 - \<发布>”对话框的“订阅选项”页上修改此选项。********  
+ 如果发布中的项目符合一组要求，则此选项在默认情况下将设置为 **True** 。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 可在“发布属性 - \<发布>”对话框的“订阅选项”页上修改此选项。  
   
  **优化同步**  
- 仅当 **“预计算分区”** 设置为 **False** 时此选项才应设置为 **True**。 可在“发布属性 - \<发布>”对话框的“订阅选项”页上设置此选项。********  
+ 仅当 **“预计算分区”** 设置为 **False** 时此选项才应设置为 **True**。 可在“发布属性 - \<发布>”对话框的“订阅选项”页上设置此选项。  
   
- 有关如何使用新建发布向导和如何访问“发布属性 - \<发布>”对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。****  
+ 有关如何使用新建发布向导和如何访问“发布属性 - \<发布>”对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>在“添加筛选器”或“编辑筛选器”对话框中设置分区选项。  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上，单击“添加”，然后单击“添加筛选器”。********************  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上，单击“添加”，然后单击“添加筛选器”。  
   
-2.  创建参数化筛选器。 有关详细信息，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+2.  创建参数化筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 3.  选择指示订阅服务器之间如何共享数据的选项：  
   
@@ -74,19 +75,19 @@ ms.lasthandoff: 04/11/2017
   
     -   **此表中的行将仅转到一个订阅**  
   
-     如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 #### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>在“项目属性 - \<项目>”对话框中设置分区选项  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。************  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。  
   
 2.  单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“目标对象”部分中，为“分区选项”指定以下值之一：****************  
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“目标对象”部分中，为“分区选项”指定以下值之一：  
   
     -   **重叠**  
   
@@ -96,15 +97,15 @@ ms.lasthandoff: 04/11/2017
   
     -   **不重叠，由所有订阅共享**  
   
-     有关这些选项以及它们与 **“添加筛选器”** 和 **“编辑筛选器”** 对话框中选项的关系的详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)的“设置‘分区选项’”部分。  
+     有关这些选项以及它们与 **“添加筛选器”** 和 **“编辑筛选器”** 对话框中选项的关系的详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)的“设置‘分区选项’”部分。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 #### <a name="to-set-precompute-partitions"></a>设置预计算分区  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“预计算分区”选项选择值。************ 在以下情况下，则此属性为只读：  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“预计算分区”选项选择值。 在以下情况下，则此属性为只读：  
   
     -   发布不满足对预计算分区的要求。  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-set-optimize-synchronization"></a>设置优化同步  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值“True”。****************  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值“True”。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
