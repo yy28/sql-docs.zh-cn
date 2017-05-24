@@ -19,9 +19,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51b454f90cca8cc944d79136b954378444fe9452
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/11/2017
 -   可以为一组表手动创建联接筛选器，或者复制可以基于表上定义的外键和主键之间的关系自动生成筛选器。 有关自动生成一组联接筛选器的详细信息，请参阅[在合并项目之间自动生成一组联接筛选器 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除联接筛选器。************ 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除联接筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>定义联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择现有行筛选器或联接筛选器。****************  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择现有行筛选器或联接筛选器。  
   
 2.  单击 **“添加”**，再单击 **“添加联接以扩展所选筛选器”**。  
   
@@ -90,11 +91,11 @@ ms.lasthandoff: 04/11/2017
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 #### <a name="to-modify-a-join-filter"></a>修改联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。********************  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。  
   
 2.  在 **“编辑联接”** 对话框中，修改筛选器。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-delete-a-join-filter"></a>删除联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。******************** 如果删除的联接筛选器自身是由其他联接扩展而成的，则也将删除那些联接。  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。 如果删除的联接筛选器自身是由其他联接扩展而成的，则也将删除那些联接。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  这些过程显示了父项目上的参数化筛选器以及该项目和相关子项目间的联接筛选器。 可以使用复制存储过程，以编程方式定义和修改联接筛选器。  
@@ -143,8 +144,8 @@ ms.lasthandoff: 04/11/2017
  [更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [为合并复制筛选已发布数据](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [如何定义和修改合并项目间的联接筛选器 (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
+ [复制系统存储过程概念](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [定义合并表项目间的逻辑记录关系](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

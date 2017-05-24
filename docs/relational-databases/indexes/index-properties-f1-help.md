@@ -22,9 +22,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -98,7 +99,7 @@ ms.lasthandoff: 04/11/2017
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **添加**  
- 向索引键添加列。 从单击“添加”****时出现的“从 \<table name> 选择列”******对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 从单击“添加”时出现的“从 \<table name> 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 04/11/2017
  在索引键网格中向下移动所选列。  
   
  **列存储列**  
- 单击“添加”****可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
+ 单击“添加”可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含列**  
  在非聚集索引中包含非键列。 使用此选项，您可以将列作为非键列添加到非聚集索引的叶级别中，从而跳过当前对索引键总大小的索引限制以及对构成索引键的最大列数的索引限制。 有关详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
@@ -174,7 +175,7 @@ ms.lasthandoff: 04/11/2017
 >  此选项对 XML 索引不可用，或者如果索引为禁用的聚集索引，此选项也不可用。  
   
  **设置最大并行度**  
- 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+ 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [设置最大并行度选项以获取最佳性能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
   
 > [!NOTE]  
 >  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
@@ -183,7 +184,7 @@ ms.lasthandoff: 04/11/2017
  使用 **“空间”** 页，可以查看或指定空间属性的值。 有关详细信息，请参阅[空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ### <a name="bounding-box"></a>边界框  
- “边界框” ** 为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
+ “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
  面板将显示边界框的 **（***X-min***、***Y-min***）** 和 **（***X-max***、***Y-max***）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
