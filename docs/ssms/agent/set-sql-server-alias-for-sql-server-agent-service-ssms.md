@@ -66,9 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例，再展开该实例。  
   
-2.  右键单击“SQL Server 代理”，然后单击“属性”。  
+2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
   
-3.  在“SQL Server 代理属性 server_name”对话框的“选择页”下，选择“连接”，然后  
+3.  在“SQL Server 代理属性 server_name”******对话框的“选择页”****下，选择“连接”****，然后  
   
 4.  在 **“本地主机服务器别名”** 框中，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理应连接到的服务器别名的类型。  
   
