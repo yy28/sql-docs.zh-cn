@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 017e0e7937cd076da1cd700da7db298a1f289035
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,11 +38,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  为查询指定组。 有关详细信息，请参阅[对查询结果中的行进行分组 (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)。  
   
-2.  如果条件要基于的列不在“条件”窗格[](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，请添加该列。 （大多数情况下，该条件所涉及的列已经是组或汇总列。）不能使用未包含在聚合函数或 GROUP BY 子句中的列。  
+2.  如果条件要基于的列不在“[条件](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)”窗格中，请添加该列。 （大多数情况下，该条件所涉及的列已经是组或汇总列。）不能使用未包含在聚合函数或 GROUP BY 子句中的列。  
   
-3.  在“筛选器”****列中，指定要对组应用的条件。  
+3.  在“筛选器”列中，指定要对组应用的条件。  
   
-    [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将自动在“SQL 窗格”[](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)的语句中创建 HAVING 子句，如下例所示：  
+    [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将自动在“[SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)”的语句中创建 HAVING 子句，如下例所示：  
   
     ```  
     SELECT pub_id, AVG(price)  
