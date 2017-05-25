@@ -15,16 +15,17 @@ caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82ca8698bdefad9764b03b19a885b098c8421400
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>系统版本控制临时表与内存优化表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  用于 [](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](http://msdn.microsoft.com/library/mt631669.aspx) 。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。  
+  用于 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) 的系统版本控制临时表旨在为以下情形提供经济高效的解决方案：需要基于使用内存中 OLTP 工作负荷收集的数据进行 [数据审核和时间点分析](http://msdn.microsoft.com/library/mt631669.aspx) 。 它们不仅提供高事务吞吐量和无锁并发，还能存储大量可轻松查询的历史记录数据。  
   
 ## <a name="overview"></a>概述  
  系统版本控制临时表自动保留完整的数据更改历史记录，并公开了一些实用的 Transact-SQL 扩展以用于时间点分析。 在典型方案中，即使是不定期查询的数据历史记录，也会保留很长时间（数月甚至数年）。  
