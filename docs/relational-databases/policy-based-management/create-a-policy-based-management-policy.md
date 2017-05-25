@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,13 +47,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-policy"></a>创建策略  
   
-1.  在“对象资源管理器”****中，单击加号以展开你要在其中创建新的基于策略的管理策略的服务器。  
+1.  在“对象资源管理器”中，单击加号以展开你要在其中创建新的基于策略的管理策略的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
 3.  单击加号以便展开 **“策略管理”**。  
   
-4.  右键单击“策略”****文件夹，然后选择“新建策略”****。  
+4.  右键单击“策略”文件夹，然后选择“新建策略”。  
   
 5.  在 **“创建新策略”** 对话框的 **“名称”** 框中，键入新策略的名称。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 11. 若要将策略限制为目标类型的子集，请在 **“服务器限制”** 框中选择限制条件，或者创建一个新条件。  
   
-     有关 **“创建新策略”** 对话框中的可用选项的详细信息，请参阅 [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 或 [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+     有关 **“创建新策略”** 对话框中的可用选项的详细信息，请参阅 [“创建新策略”或“打开策略”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 或 [“创建新策略”或“打开策略”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 12. 完成后，单击 **“确定”**。  
   
