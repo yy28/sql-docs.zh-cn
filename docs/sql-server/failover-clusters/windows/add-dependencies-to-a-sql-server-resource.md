@@ -19,9 +19,10 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **准备工作：**[限制和局限](#Restrictions)、[先决条件](#Prerequisites)  
   
--   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
+-   **向 SQL Server 资源添加依赖项，使用：** [Windows 故障转移群集管理器](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
