@@ -17,14 +17,15 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 807e2b855264f77959faa4699d761739af3e5137
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  **本主题内容**  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。********  
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
   
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
