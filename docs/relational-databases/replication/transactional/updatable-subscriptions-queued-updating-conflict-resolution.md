@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   复制 Transact-SQL 编程： [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   复制 Transact-SQL 编程： [允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。  
   
  **查看数据冲突**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  使用订阅服务器入选策略下的冲突检测意味着要更新发布服务器的最后一项订阅服务器事务入选。 在这种情况下，如果检测到冲突，将仍使用订阅服务器发送的事务，并更新发布服务器。 此策略适用于此类更改不会危及数据完整性的应用程序。  
   
 ## <a name="see-also"></a>另请参阅  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [事务复制的可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

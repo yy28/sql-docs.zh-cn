@@ -23,9 +23,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,9 +42,9 @@ ms.lasthandoff: 04/11/2017
   
 -   指定默认的基于优先级的解决机制，还是指定项目冲突解决程序。 项目冲突解决程序可以是：  
   
-    -   以托管代码编写的 ** 业务逻辑处理程序。  
+    -   以托管代码编写的  业务逻辑处理程序。  
   
-    -   基于 COM 的自定义冲突解决程序 **。  
+    -   基于 COM 的自定义冲突解决程序 。  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供的基于 COM 的冲突解决程序。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  有关详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
- 若要指定项目的冲突跟踪和解决方法级别，请参阅 [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)。  
+ 若要指定项目的冲突跟踪和解决方法级别，请参阅 [为合并项目指定冲突跟踪和解决方法级别](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)。  
   
 ## <a name="conflict-resolution"></a>冲突解决  
  检测到冲突后，合并代理将启动选定的冲突解决程序，并使用该冲突解决程序来确定冲突解决入选方。 入选行将应用到发布服务器和订阅服务器，而落选行中的数据将写入冲突表。 除非选择交互解决冲突，否则冲突解决程序一经执行就会立即解决冲突。  
