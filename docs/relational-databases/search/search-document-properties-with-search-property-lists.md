@@ -22,14 +22,15 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
-  文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 二进制数据列中支持的文档类型，你可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” **。  
+  文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 二进制数据列中支持的文档类型，你可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
   
  关联的[筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) 确定能否针对指定的文档类型进行属性搜索。 对于某些文档类型，关联的 IFilter 提取为该类型文档定义的某些或所有属性，以及文档正文的内容。 您可以对全文索引进行配置，以便仅对全文索引期间 IFilter 提取的属性支持属性搜索。 在提取若干文档属性的 IFilter 中，包括用于提取 Microsoft Office 文档类型（如 .docx、.xlsx 和.pptx）的 IFilter。 另一方面，XML IFilter 不发出属性。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="internal-property-ids"></a>内部属性 ID  
  全文引擎任意向每个注册的属性分配一个内部属性 ID，这个 ID 在该特定搜索列表中唯一标识属性并且特定于该搜索属性列表。 因此，如果某个属性添加到多个搜索属性列表中，则其内部属性 ID 很可能在不同列表之间是不同的。  
   
- 在向某个搜索列表注册某一属性时，全文引擎向该属性任意分配一个内部属性 ID**。 该内部属性 ID 是在该搜索属性列表中唯一标识该属性的整数。  
+ 在向某个搜索列表注册某一属性时，全文引擎向该属性任意分配一个内部属性 ID。 该内部属性 ID 是在该搜索属性列表中唯一标识该属性的整数。  
   
  下图显示一个搜索属性列表的逻辑视图，该搜索属性列表指定两个属性：Title 和 Keywords。 Keywords 的属性列表名称是“Tags”。 这些属性属于其 GUID 为 F29F85E0-4FF9-1068-AB91-08002B27B3D9 的相同属性集。 属性整数标识符对于 Title 为 2，对于 Tags (Keywords) 为 5。 全文引擎任意将每个属性映射到在搜索属性列表中唯一的内部属性 ID。 Title 属性的内部属性 ID 为 1，Tags 属性的内部属性 ID 为 2。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，然后展开要在其中创建搜索属性列表的数据库。  
   
-3.  展开“存储”****，然后右键单击“搜索属性列表”****。  
+3.  展开“存储”，然后右键单击“搜索属性列表”。  
   
 4.  选择 **“新建搜索属性列表”**。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/11/2017
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ###  <a name="adding"></a> 将属性添加到搜索属性列表  
- 属性搜索要求创建“搜索属性列表” ** 并且指定您希望可供搜索的一个或多个属性。 在您向搜索属性列表添加某一属性时，将向该特定列表注册该属性。 若要向搜索属性列表添加属性，您需要以下值：  
+ 属性搜索要求创建“搜索属性列表”  并且指定您希望可供搜索的一个或多个属性。 在您向搜索属性列表添加某一属性时，将向该特定列表注册该属性。 若要向搜索属性列表添加属性，您需要以下值：  
   
 -   属性集 GUID  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 04/11/2017
   
  **获取搜索属性列表的值**  
   
- 请参阅 [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。  
+ 请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。  
   
  **使用 Transact-SQL 将属性添加到搜索属性列表中**  
   
@@ -155,7 +156,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **使用 Management Studio 将搜索属性列表与全文索引相关联**  
   
- 在“全文索引属性”****对话框的“常规”****页上，为“搜索属性列表”****指定一个值。  
+ 在“全文索引属性”对话框的“常规”页上，为“搜索属性列表”指定一个值。  
   
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
  针对属性范围的全文查询的基本 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 语法如下：  
@@ -194,7 +195,7 @@ GO
   
 4.  展开 **“搜索属性列表”** 以显示搜索属性列表。  
   
-5.  右键单击该属性列表，然后选择“属性”****。  
+5.  右键单击该属性列表，然后选择“属性”。  
   
 6.  在 **“搜索属性列表编辑器”** 对话框中，使用“属性”网格添加或删除搜索属性：  
   
@@ -221,12 +222,12 @@ GO
   
 3.  展开 **“存储”**，然后展开 **“搜索属性列表”** 节点。  
   
-4.  右键单击要删除的属性列表，然后单击“删除”****。  
+4.  右键单击要删除的属性列表，然后单击“删除”。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   
