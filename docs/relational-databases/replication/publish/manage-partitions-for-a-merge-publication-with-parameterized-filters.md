@@ -18,9 +18,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/11/2017
 -   如果发布具有的参数化筛选器可生成带有非重叠分区的订阅，并且如果特定订阅丢失并需要重新创建，则您必须执行以下操作：删除曾订阅的分区，重新创建订阅，然后重新创建该分区。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。 生成发布创建脚本时，复制会为现有订阅服务器分区生成创建脚本。 有关详细信息，请参阅 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”对话框的“数据分区”页上管理分区。******** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
+ 可在“发布属性 - \<发布>”对话框的“数据分区”页上管理分区。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
   
 #### <a name="to-create-a-partition"></a>创建分区  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。************  
+1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。  
   
 2.  在 **“添加数据分区”** 对话框中，输入与要创建的分区相关联的 **HOST_NAME()** 和/或 **SUSER_SNAME()** 的值。  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **@host_name** - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
   
-2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>删除分区  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
- 若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
+ 若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
   
 -   分区所基于的值和筛选函数。  
   
