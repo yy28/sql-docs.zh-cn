@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
   
--   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[资源调控器属性](#DelWGRGProp)和 [](#DelWGTSQL)  
+-   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[资源调控器属性](#DelWGRGProp)和 [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果工作负荷组中包含活动会话，则不能删除该组。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 -   等待受影响组的所有会话均断开连接，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。  
   
--   使用 KILL 命令显式停止受影响的组中的会话，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。 如果决定不打算在使用“删除”****之后同时在停止活动会话之前显式停止会话，请使用原始名称重新创建组并将组移至原始资源池。  
+-   使用 KILL 命令显式停止受影响的组中的会话，然后重新运行 ALTER RESOURCE GOVERNOR RECONFIGURE 语句。 如果决定不打算在使用“删除”之后同时在停止活动会话之前显式停止会话，请使用原始名称重新创建组并将组移至原始资源池。  
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在包含要删除的工作负荷组的资源池中，依次逐步展开 **“资源池”** 节点直至其中包含 **“工作负荷组”** 节点。  
   
-3.  右键单击工作负荷组，然后单击“删除”****。  
+3.  右键单击工作负荷组，然后单击“删除”。  
   
 4.  在 **“删除对象”** 窗口的 **“要删除的对象”** 列表中，将列出工作负荷组。 若要删除工作负荷组，请单击 **“确定”**。  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次向下展开 **“管理”** 节点直至其中包括 **“资源池”**。  
   
-2.  右键单击包含要删除的工作负荷组的资源池，然后单击“属性”****。 这将打开 **“资源调控器属性”** 页。  
+2.  右键单击包含要删除的工作负荷组的资源池，然后单击“属性”。 这将打开 **“资源调控器属性”** 页。  
   
-3.  在**“资源池的工作负荷组”**窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”****。  
+3.  在**“资源池的工作负荷组”**窗口中，单击要删除的工作负荷组所在的行，再右键单击该行左侧的向右箭头，然后单击“删除”。  
   
 4.  若要删除工作负荷组，请单击 **“确定”**。  
   
