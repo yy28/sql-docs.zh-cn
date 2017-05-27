@@ -16,9 +16,10 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
     
 [![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
     
-[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![下载 SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS：**若要获取最新版本的 SQL Server Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**。   
     
  有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)（SQL Server 2016 的新增功能）。
     
-##  <a name="bkmk_top"></a> Sections In this topic:    
+##  <a name="bkmk_top"></a> 本主题的内容：    
 
 -   [SQL Server 2016 Service Pack 1 (SP1) 可用](#bkmk_2016sp1)    
 -   [SQL Server 2016 正式发布版 (GA)](#bkmk_2016_ga) 
@@ -128,9 +129,9 @@ ms.lasthandoff: 04/11/2017
     
  ![管理 SQL Server 的帮助设置](../sql-server/media/docs-sql2016-managehelpsettings.png "管理 SQL Server 的帮助设置")    
     
--   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。 ****    
+-   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。     
     
--   使用选项“联机安装内容”并下载 SQL Server 2014 Content。 ****    
+-   使用选项“联机安装内容”并下载 SQL Server 2014 Content。     
     
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中按 F1 时，将在浏览器中显示 F1 帮助主题的联机版本。 即使已安装本地帮助也是如此。    
      
@@ -156,9 +157,9 @@ ms.lasthandoff: 04/11/2017
     
  ![管理 SQL Server 的帮助设置](../sql-server/media/docs-sql2016-managehelpsettings.png "管理 SQL Server 的帮助设置")    
     
--   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。 ****    
+-   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。     
     
--   使用选项“联机安装内容”并下载 SQL Server 2014 Content。 ****    
+-   使用选项“联机安装内容”并下载 SQL Server 2014 Content。     
     
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中按 F1 时，将在浏览器中显示 F1 帮助主题的联机版本。 即使已安装本地帮助也是如此。    
      
@@ -179,7 +180,7 @@ ms.lasthandoff: 04/11/2017
     
  **解决方法**    
     
--   卸载 PolyBase。 在“控制面板”中，依次单击“卸载程序”、“Microsoft SQL Server 2016”、“删除”。**************** 在“删除 SQL Server 2016”向导中，选择其 PolyBase 安装失败的实例，然后单击“下一步”。**** 在“功能”中，单击“针对外部数据的 PolyBase 查询服务”。 **** 不需要删除已成功安装的其他功能。 完成删除 SQL Server 2016 的步骤。    
+-   卸载 PolyBase。 在“控制面板”中，依次单击“卸载程序”、“Microsoft SQL Server 2016”、“删除”。 在“删除 SQL Server 2016”向导中，选择其 PolyBase 安装失败的实例，然后单击“下一步”。 在“功能”中，单击“针对外部数据的 PolyBase 查询服务”。  不需要删除已成功安装的其他功能。 完成删除 SQL Server 2016 的步骤。    
     
 -   重新安装 PolyBase。 运行安装程序，并在相同的 SQL Server 实例上添加 PolyBase 功能。    
     

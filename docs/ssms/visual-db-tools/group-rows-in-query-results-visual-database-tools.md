@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b615606f07f283037fdd3c41055ee2a6a2a77694
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,9 +58,9 @@ GROUP BY pub_id, type
   
 1.  通过将要汇总的表添加到“关系图”窗格中来启动查询。  
   
-2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”****。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”****列。  
+2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”列。  
   
-3.  将要分组的一列或多列添加到“条件”窗格中。 如果希望列显示在查询输出中，请确保为输出选中了“输出”****列。  
+3.  将要分组的一列或多列添加到“条件”窗格中。 如果希望列显示在查询输出中，请确保为输出选中了“输出”列。  
   
     查询和视图设计器将在 SQL 窗格内的语句中添加 GROUP BY 子句。 例如，SQL 语句可能类似以下形式：  
   
@@ -71,7 +72,7 @@ GROUP BY pub_id, type
   
 4.  将要聚合的一列或多列添加到“条件”窗格中。 确保将该列标记为输出。  
   
-5.  在要进行聚合的列的“分组依据”****网格单元格中，选择适当的聚合函数。  
+5.  在要进行聚合的列的“分组依据”网格单元格中，选择适当的聚合函数。  
   
     查询及视图设计器将自动为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅 [创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   

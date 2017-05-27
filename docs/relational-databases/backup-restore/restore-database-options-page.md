@@ -41,7 +41,7 @@ ms.lasthandoff: 04/11/2017
  若要修改还原操作行为的各个方面，请使用使用 **“还原选项”** 面板中的选项。  
   
  **覆盖现有数据库 [WITH REPLACE]**  
- 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。******** 即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
+ 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。 即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
   
 > [!CAUTION]  
 >  只有在仔细考虑后，才能使用此选项。 有关详细信息，请参阅 [RESTORE Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/11/2017
  **保留复制设置 [WITH KEEP_REPLICATION]**  
  将已发布的数据库还原到创建该数据库的服务器之外的服务器时，保留复制设置。 此选项只适用于在创建备份时对数据库进行了复制的情况。  
   
- 仅在选择“回滚未提交的事务，使数据库处于可以使用的状态”****选项（在本表的后面部分中说明）时，此选项才可用，其功能等效于使用 RECOVERY 选项还原备份。  
+ 仅在选择“回滚未提交的事务，使数据库处于可以使用的状态”选项（在本表的后面部分中说明）时，此选项才可用，其功能等效于使用 RECOVERY 选项还原备份。  
   
  选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中使用 KEEP_REPLICATION 选项。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/11/2017
  若要在完成存储操作后确定数据库的状态，则必须选择 **“恢复状态”** 面板中的选项之一。  
   
  **RESTORE WITH RECOVERY**  
- 在还原了在“常规”[](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”****网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 在还原了在“常规”[](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整恢复模式或大容量日志恢复模式下，只有在需要还原所有日志文件时才选择此选项。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="prompt"></a>提示  
  **还原每个备份之前进行提示**  
- 指定在还原了每个备份之后，将显示“继续还原”****对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
+ 指定在还原了每个备份之后，将显示“继续还原”对话框，询问你是否要继续还原顺序。 该对话框将显示下一个介质集（如果已知）的名称以及下一个备份集的名称和说明。  
   
  此选项允许您在还原了任何备份后暂停还原顺序。 如果必须为不同介质集更换磁带，例如在服务器仅具有一个磁带设备时，此选项非常有用。 准备就绪后，请单击 **“确定”**以继续。  
   

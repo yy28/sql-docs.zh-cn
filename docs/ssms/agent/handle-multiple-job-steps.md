@@ -20,14 +20,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c7474d555c03a9ce9d02afaf613146e7d638ba8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
-如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为流控制**。** 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
+如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为流控制。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
 ![SQL Server 代理作业步骤控制流](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
   

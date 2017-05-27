@@ -17,9 +17,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- 若要最大程度减少 I/O 开销，新的数据是在内存中捕获的。 写入操作排队，并稍后将其刷新到磁盘。 以最低的延迟刷新查询和计划信息（下图中的计划存储）。 运行时统计信息 (Runtime Stats) 会在内存中保留一段时间，该时间用 `SET QUERY_STORE` 语句的 `DATA_FLUSH_INTERVAL_SECONDS` 选项定义。 “SSMS 查询存储”对话框允许输入“数据刷新间隔(分钟)”****，它将转换为秒。  
+ 若要最大程度减少 I/O 开销，新的数据是在内存中捕获的。 写入操作排队，并稍后将其刷新到磁盘。 以最低的延迟刷新查询和计划信息（下图中的计划存储）。 运行时统计信息 (Runtime Stats) 会在内存中保留一段时间，该时间用 `SET QUERY_STORE` 语句的 `DATA_FLUSH_INTERVAL_SECONDS` 选项定义。 “SSMS 查询存储”对话框允许输入“数据刷新间隔(分钟)”，它将转换为秒。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
