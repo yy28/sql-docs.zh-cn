@@ -46,10 +46,10 @@ ms.lasthandoff: 04/11/2017
  如果希望允许订阅服务器请求快照的生成和应用程序，请选择此选项。 如果订阅服务器在第一次同步时对其分区没有可用的快照，则订阅服务器可能要求设置此选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [创建发布](../../relational-databases/replication/publish/create-a-publication.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [带有参数化筛选器的合并发布的快照](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
