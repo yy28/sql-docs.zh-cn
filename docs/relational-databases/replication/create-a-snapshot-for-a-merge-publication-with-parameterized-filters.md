@@ -18,9 +18,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 975801baee969fa3afea20be96606a816083260c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,12 +46,12 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 建议  
   
--   在使用参数化筛选器为合并发布生成快照时，必须先生成一个包含所有已发布数据和订阅的订阅服务器元数据的标准（架构）快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。 创建完架构快照后，便可生成包含特定于订阅服务器的已发布数据分区的快照。  
+-   在使用参数化筛选器为合并发布生成快照时，必须先生成一个包含所有已发布数据和订阅的订阅服务器元数据的标准（架构）快照。 有关详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。 创建完架构快照后，便可生成包含特定于订阅服务器的已发布数据分区的快照。  
   
 -   如果发布中对一个或多个项目的筛选生成了对每个订阅具有唯一性的非重叠分区，则每当运行合并代理时都会清除元数据。 这意味着分区快照会过期得更快。 使用此选项时，应考虑允许订阅服务器启动快照的生成和传递。 有关筛选选项的详细信息，请参阅[包含参数化筛选器的合并发布的快照](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)的“设置‘分区选项’”部分。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“发布属性 - \<发布>”对话框的“数据分区”页上为分区生成快照。******** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 可以允许订阅服务器启动快照生成及传送和/或生成快照。  
+ 在“发布属性 - \<发布>”对话框的“数据分区”页上为分区生成快照。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 可以允许订阅服务器启动快照生成及传送和/或生成快照。  
   
  生成一个或多个分区的快照之前，必须：  
   
@@ -66,19 +67,19 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。********  
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
   
      快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>允许订阅服务器启动快照的生成和传递  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，选择“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”。************  
+1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，选择“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>生成和刷新快照  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。************  
+1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。  
   
 2.  为与要为其创建快照的分区关联的 **HOST_NAME()** 和/或 **SUSER_SNAME()** 输入一个值。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  接受默认的快照刷新计划，或者单击 **“更改”** 以指定其他计划。  
   
-4.  单击“确定”，这会使你返回“发布属性 - \<发布>”对话框。********  
+4.  单击“确定”，这会使你返回“发布属性 - \<发布>”对话框。  
   
 5.  在属性网格中选择分区，然后单击 **“立即生成所选快照”**。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 04/11/2017
   
     -   （可选）将 **@max_concurrent_dynamic_snapshots**。 如果正在运行的进程数达到了最大值，并且订阅服务器尝试生成快照，则该进程将被置于队列中。 默认情况下，并发进程的数量不受限制。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 创建发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 创建发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password**。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password**。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -172,7 +173,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  如果将基于该参数化行筛选器筛选其他项目，请执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 定义项目间的联接或逻辑记录关系。 必须对要定义的每个关系执行一次此存储过程。 有关详细信息，请参阅 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-5.  启动快照作业或从命令提示符下运行复制快照代理，以生成标准快照架构及其他文件。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+5.  启动快照作业或从命令提示符下运行复制快照代理，以生成标准快照架构及其他文件。 有关详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 6.  再次从命令提示符下运行复制快照代理以生成大容量复制 (.bcp) 文件，为 **-DynamicSnapshotLocation** 指定分区快照的位置，同时指定用于定义分区的以下一个或两个属性：  
   
@@ -312,7 +313,7 @@ PAUSE
   
 7.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值为 **false**，请调用 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 为此发布创建初始快照代理作业。  
   
-8.  调用在步骤 4 中创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 对象的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法。 这将启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+8.  调用在步骤 4 中创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 对象的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法。 这将启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 9. （可选）检查 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 属性的值是否为 **true**，确定初始快照何时可以使用。  
   
@@ -326,7 +327,7 @@ PAUSE
   
 3.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值为 **false**，请调用 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 为此发布创建快照代理作业。  
   
-4.  调用在步骤 1 中创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 对象的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法。 此方法启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+4.  调用在步骤 1 中创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 对象的 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法。 此方法启动生成初始快照的代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 5.  检查 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 属性的值是否为 **true**，确定初始快照何时可以使用。  
   
@@ -364,7 +365,7 @@ PAUSE
   
 2.  使用 <xref:Microsoft.SqlServer.Replication.MergeArticle> 属性将项目添加到发布。为至少一个项目指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性以定义参数化筛选器，然后创建任何 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 对象以定义项目之间的联接筛选器。 有关详细信息，请参阅 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)。  
   
-3.  生成初始快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+3.  生成初始快照。 有关详细信息，请参阅 [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 4.  创建 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 类的实例，并设置以下所需属性：  
   
