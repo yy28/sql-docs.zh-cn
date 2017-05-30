@@ -19,9 +19,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-display-properties-for-a-query"></a>显示查询的属性  
   
--   在查询和视图设计器中打开查询后，在“视图”****菜单中，单击“属性窗口”****。  
+-   在查询和视图设计器中打开查询后，在“视图”菜单中，单击“属性窗口”。  
   
-此时，将会在“属性”****窗口中显示该查询的属性。  
+此时，将会在“属性”窗口中显示该查询的属性。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

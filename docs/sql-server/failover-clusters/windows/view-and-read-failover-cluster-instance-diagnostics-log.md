@@ -14,9 +14,10 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看诊断日志文件：**  
   
-1.  从“文件”****菜单，选择“打开文件”********，然后选择要查看的诊断日志文件。  
+1.  从“文件”菜单，选择“打开文件”，然后选择要查看的诊断日志文件。  
   
 2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name**和 **timestamp** 这两列。  
   

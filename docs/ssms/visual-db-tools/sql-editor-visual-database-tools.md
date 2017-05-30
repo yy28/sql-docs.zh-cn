@@ -25,9 +25,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ SQL 编辑器提供了许多有用的 SQL 文本编辑功能，包括：
   
 -   提供有用的编辑功能，包括剪切、复制、粘贴和拖动操作。  
   
--   更改编辑器的行为（在“工具”****菜单中选择“选项”****）以修改虚空格、自动换行、行号和制表符大小。  
+-   更改编辑器的行为（在“工具”菜单中选择“选项”）以修改虚空格、自动换行、行号和制表符大小。  
   
 -   帮助管理调试断点。  
   

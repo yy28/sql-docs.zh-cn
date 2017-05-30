@@ -24,9 +24,10 @@ caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/11/2017
 -   在出现故障（硬件故障、操作系统故障、应用程序或服务故障）时自动进行故障转移  
   
     > [!IMPORTANT]  
-    >  在可用性组中，不支持从 FCI 到可用性组中其他节点的自动故障转移。 这意味着，如果自动故障转移是高可用性解决方案的一个重要组成部分，则 FCI 和独立节点不应在某一可用性组中结合在一起使用。 ** 不过，对于灾难恢复解决方案而言，可以进行此类结合使用。  
+    >  在可用性组中，不支持从 FCI 到可用性组中其他节点的自动故障转移。 这意味着，如果自动故障转移是高可用性解决方案的一个重要组成部分，则 FCI 和独立节点不应在某一可用性组中结合在一起使用。  不过，对于灾难恢复解决方案而言，可以进行此类结合使用。  
   
 -   支持多种存储解决方案，包括 WSFC 群集磁盘（iSCSI、光纤信道等）和服务器消息块 (SMB) 文件共享。  
   

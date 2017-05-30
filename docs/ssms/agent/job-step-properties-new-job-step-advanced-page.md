@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ea8ecf39a23a0db715c95bb4041c802a382822fa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”****即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”****即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/11/2017
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”****即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -140,7 +141,7 @@ ms.lasthandoff: 04/11/2017
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”****即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  

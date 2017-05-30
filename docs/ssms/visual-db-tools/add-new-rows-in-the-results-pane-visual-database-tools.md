@@ -21,9 +21,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  定位到“结果”窗格底部，此处有一个可用于添加新数据行的空白行。  
   
-    所有列的初始值都将为 NULL**。  
+    所有列的初始值都将为 NULL。  
   
     > [!TIP]  
     > 若要直接转到第一个空行，请使用“结果”窗格底部的导航栏。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     > 如果所粘贴的一行或多行无法提交到数据库，则您将收到消息，指示哪些行不能提交。  
   
-3.  为新行输入数据。 如果要粘贴数据，请从“编辑”****菜单中选择“粘贴”****。  
+3.  为新行输入数据。 如果要粘贴数据，请从“编辑”菜单中选择“粘贴”。  
   
 4.  离开该行可以将其提交到数据库。  
   

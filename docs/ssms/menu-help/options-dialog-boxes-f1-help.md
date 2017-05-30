@@ -17,14 +17,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-dialog-boxes-f1-help"></a>选项对话框的 F1 帮助
-本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“工具”****菜单上“选项”****调用的对话框的 F1 帮助。  
+本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“工具”菜单上“选项”调用的对话框的 F1 帮助。  
   
 [选项（“设计器”-“Analysis Services 设计器”-“常规”）](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

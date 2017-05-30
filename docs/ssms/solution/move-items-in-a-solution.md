@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0140646e92871aa5d3ab2acbb95b417ab38d28b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在解决方案资源管理器中，选择要移动的项。  
   
-2.  在“编辑”****菜单上，单击“剪切”****。  
+2.  在“编辑”菜单上，单击“剪切”。  
   
 3.  在解决方案资源管理器中，选择目标位置。  
   
-4.  在“编辑” ****菜单上，单击“粘贴”****。  
+4.  在“编辑” 菜单上，单击“粘贴”。  
   
 可以通过在解决方案资源管理器中拖动查询和杂项文件来移动项。 拖动可使您看到拖动操作的结果。 将查询从一个项目类型移动到另一个项目类型可能会导致查询在目标项目中被视为杂项文件。  
   

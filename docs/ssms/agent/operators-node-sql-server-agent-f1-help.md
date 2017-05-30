@@ -14,13 +14,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30cbb7fdfa42c543187fadea82785261801ef7cc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>操作员节点（SQL Server 代理的 F1 帮助）
-本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“对象资源管理器”的“操作员”****节点的 F1 帮助。  
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“对象资源管理器”的“操作员”节点的 F1 帮助。  
   
 

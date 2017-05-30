@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3a888bf925f0deec6b774891d13da7548d1fe28f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,9 +51,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要将其事件转发到其他服务器的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 – server_name”******对话框中，在“选择页面”****下，选择“高级”****。  
+3.  在“SQL Server 代理属性 – server_name”对话框中，在“选择页面”下，选择“高级”。  
   
 4.  在 **“SQL Server 事件转发”**下，选中 **“将事件转发到其他服务器”** 复选框。  
   

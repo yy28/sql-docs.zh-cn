@@ -21,9 +21,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e16ffa25dd18b3dd32b9c8aa3f36ceeb50af1817
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，展开“作业”****，右键单击要编辑的作业，再选择“属性”****。  
+2.  展开“SQL Server 代理”，展开“作业”，右键单击要编辑的作业，再选择“属性”。  
   
 3.  在 **“作业属性”** 对话框中，选择 **“通知”** 页。  
   
-4.  如果想通过电子邮件通知操作员，请选中“电子邮件”****，再从列表中选择操作员，然后选择下列选项之一：  
+4.  如果想通过电子邮件通知操作员，请选中“电子邮件”，再从列表中选择操作员，然后选择下列选项之一：  
   
     -   **当作业成功时** - 在作业成功完成后通知操作员。  
   

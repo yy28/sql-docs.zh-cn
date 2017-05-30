@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 680d6c30478ce63730be06eede01e344141080e9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在解决方案资源管理器中，选择想要复制的项。  
   
-2.  在“编辑”****菜单上，单击“复制”****。  
+2.  在“编辑”菜单上，单击“复制”。  
   
 3.  在解决方案资源管理器中，选择目标项目。  
   
-4.  在“编辑” ****菜单上，单击“粘贴”****。  
+4.  在“编辑” 菜单上，单击“粘贴”。  
   
 > [!NOTE]  
 > 不能在项目之间复制连接。 将具有关联连接的查询复制到另一个项目时，其关联的连接不会复制到目标项目中。 必须在目标项目中手动创建连接。  

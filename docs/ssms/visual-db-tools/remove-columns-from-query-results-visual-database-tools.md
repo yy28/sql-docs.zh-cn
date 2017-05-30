@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ef92982f0b86b25fad049f444416ed5afb43fd85
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-remove-a-column-from-the-query-output"></a>从查询输出中移除列  
   
--   在“条件”****窗格中，对于要删除的数据列，清除“输出”****列中的复选框。 （如果希望将该列添加回查询输出中，可再次选中“输出”****列。）  
+-   在“条件”窗格中，对于要删除的数据列，清除“输出”列中的复选框。 （如果希望将该列添加回查询输出中，可再次选中“输出”列。）  
   
     - 或 -  
   

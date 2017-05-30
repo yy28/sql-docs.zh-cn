@@ -24,9 +24,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f5a329a77be5b7b18183e09cb3701232646d9563
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要启用的警报，然后选择“启用”****。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”****。  
+4.  右键单击要启用的警报，然后选择“启用”。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”。  
   
 5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。 完成后，单击 **“关闭”**。  
   

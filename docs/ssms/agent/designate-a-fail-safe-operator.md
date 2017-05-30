@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f5dd000cda03eaac79a198ba5103652db2bf892d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,17 +60,17 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-designate-a-fail-safe-operator"></a>指定防故障操作员  
   
-1.  在“对象资源管理器”****中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
+1.  在“对象资源管理器”中，单击加号以展开服务器，该服务器包含要指定为防故障操作员的 SQL Server 代理操作员。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 – server_name”******对话框中，在“选择页面”****下，选择“警报系统”****。  
+3.  在“SQL Server 代理属性 – server_name”对话框中，在“选择页面”下，选择“警报系统”。  
   
-4.  在“防故障操作员”****下，选中“启用防故障操作员”****。  
+4.  在“防故障操作员”下，选中“启用防故障操作员”。  
   
-5.  在“操作员”****列表中，选择想要执行防故障的操作员。  
+5.  在“操作员”列表中，选择想要执行防故障的操作员。  
   
-6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”****、“寻呼程序”****或“Net send”****。  
+6.  选中以下任何或所有复选框以指定通知操作员的方法：“电子邮件”、“寻呼程序”或“Net send”。  
   
 7.  完成后，单击 **“确定”**。  
   

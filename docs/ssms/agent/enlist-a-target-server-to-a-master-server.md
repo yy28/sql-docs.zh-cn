@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 61fb82bcd0f3ac4308e023e31338f8142614488d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，展开配置为主服务器的服务器。 ****  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后单击“添加目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后单击“添加目标服务器”。  
   
 3.  完成目标服务器向导，它将指导您完成该进程。  
   

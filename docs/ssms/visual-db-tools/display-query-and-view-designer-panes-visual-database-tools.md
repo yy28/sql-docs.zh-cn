@@ -21,9 +21,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23f1d17f062613ef9c75ee8d7748d3ed72d8d375
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  打开一个视图或创建一个新查询以打开查询和视图设计器。  
   
-2.  在“查询设计器”****菜单中，指向“窗格”****，再单击要打开的窗格名称。  
+2.  在“查询设计器”菜单中，指向“窗格”，再单击要打开的窗格名称。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建查询 (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

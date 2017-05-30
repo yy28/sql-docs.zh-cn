@@ -22,9 +22,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 069eef224bc8c26acc17fff49c609a2dca1443a0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在该数据库下展开“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”****。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
   
     这将升级存储在数据库中的关系图。  
   

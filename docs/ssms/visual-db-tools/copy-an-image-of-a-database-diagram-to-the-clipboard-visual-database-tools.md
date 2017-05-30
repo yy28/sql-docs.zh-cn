@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     > 只有数据库关系图的所有者或数据库的 db_owner 角色成员才能打开关系图。  
   
-2.  右键单击空白区域，然后选择“将关系图复制到剪贴板”****。  
+2.  右键单击空白区域，然后选择“将关系图复制到剪贴板”。  
   
     现在，整个数据库关系图的图像便已复制到系统剪贴板中。  
   

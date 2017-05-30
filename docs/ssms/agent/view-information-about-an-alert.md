@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5bfe05dde95b8fdb47893ea17802b0798de9762a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,9 +59,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击包含要查看的信息的警报，然后选择“属性”****。  
+4.  右键单击包含要查看的信息的警报，然后选择“属性”。  
   
-    有关 alert_name**“警报属性”****对话框中包含的可用选项的详细信息，请参阅：  
+    有关 alert_name“警报属性”对话框中包含的可用选项的详细信息，请参阅：  
   
     -   [警报属性 - 新建警报（“常规”页）](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2eb9fd6d0a542c4b9636edb1b65b146b0c043e2d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,9 +34,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  创建主查询。  
   
-2.  在 SQL 窗格中选择 SQL 语句，然后使用“复制”****将该查询移动到剪贴板中。  
+2.  在 SQL 窗格中选择 SQL 语句，然后使用“复制”将该查询移动到剪贴板中。  
   
-3.  启动新查询，然后使用“粘贴”****将第一个查询移动到新查询的 WHERE 或 FROM 子句中。  
+3.  启动新查询，然后使用“粘贴”将第一个查询移动到新查询的 WHERE 或 FROM 子句中。  
   
     例如，假设有两个表（`products` 和 `suppliers`），您希望创建显示瑞典供应商的所有产品的查询。 在 `suppliers` 表中创建第一个查询以查找所有的瑞典供应商：  
   

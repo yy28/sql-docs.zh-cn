@@ -22,9 +22,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e34da1cc7395a20132d808039834262d66c50887
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要删除的操作员，然后选择“删除”****。  
+4.  右键单击要删除的操作员，然后选择“删除”。  
   
 5.  在 **“删除对象”** 对话框中，确保已选择正确的操作员，然后单击 **“确定”**。 如果希望其他操作员收到发送给已删除操作员的警报和作业，请选择 **“重新分配给”** ，然后在列表中选择一个操作员。  
   

@@ -15,9 +15,10 @@ caps.latest.revision: 21
 author: byham
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 08b3cca7b4f22423177eaa0dbaed48715dbeaed2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在“组件服务”窗口中，导航到“**控制台根节点**” -> “**组件服务**” -> “**计算机**” -> “**我的电脑**” -> “**Dconfig**” ->“**DReplayController**”。  
   
-4.  右键单击“DReplayController”****，然后单击“属性”****。  
+4.  右键单击“DReplayController”，然后单击“属性”。  
   
 5.  在 **“DReplayController 属性”** 窗口中的 **“安全性”** 选项卡上，单击 **“启动和激活权限”** 部分的 **“编辑”** 。  
   
@@ -211,7 +212,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 2.  安装必备组件并进行系统验证之后，安装程序会显示“ **SQL Server 安装中心** ”页。  
   
-3.  单击左侧导航区域中的“维护” **** ，然后单击“修复” **** 启动修复操作。 如果使用“ **开始** ”菜单启动了安装中心，则需要在此时提供安装介质的位置。  
+3.  单击左侧导航区域中的“维护”  ，然后单击“修复”  启动修复操作。 如果使用“ **开始** ”菜单启动了安装中心，则需要在此时提供安装介质的位置。  
   
 4.  将运行安装程序支持规则和文件例程，以确保您的系统上安装了必备组件，并且计算机能够通过安装程序验证规则。 单击 **“确定”** 或 **“安装”** 以继续操作。  
   

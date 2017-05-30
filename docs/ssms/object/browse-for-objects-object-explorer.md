@@ -17,14 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 343cdc53d15a8a1729053029f6650d7799c345f3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="browse-for-objects-object-explorer"></a>查找对象（对象资源管理器）
-显示所选类型的对象的列表。 通过选中相应的复选框可以从该列表中选择一个或多个对象。 “查找对象”框****只显示适用于操作的项，并且只显示用户有权查看的项。  
+显示所选类型的对象的列表。 通过选中相应的复选框可以从该列表中选择一个或多个对象。 “查找对象”框只显示适用于操作的项，并且只显示用户有权查看的项。  
   
 ## <a name="options"></a>选项  
 **复选框**  

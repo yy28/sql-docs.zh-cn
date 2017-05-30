@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8f3a338899b6e04c839d692fe691873ed97c017b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
 列出附加到计划的作业编号。 单击编号可以查看相应作业的属性。  
   
 **属性**  
-启动“作业计划属性”****对话框，可以在该对话框中查看该计划的有关信息。  
+启动“作业计划属性”对话框，可以在该对话框中查看该计划的有关信息。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

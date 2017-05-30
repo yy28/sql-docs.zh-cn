@@ -16,13 +16,14 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 51793a269a149be9d05ba49ffd787dee1f74a589
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="go-to-line-dialog-box"></a>“转到行”对话框
-若要移动到代码编辑器窗口中的某个位置，请键入行号，然后单击“确定”****。  
+若要移动到代码编辑器窗口中的某个位置，请键入行号，然后单击“确定”。  
   
 

@@ -24,9 +24,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **引号** 不能将数字放在引号内。  
   
--   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”****对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
+-   **非数字字符** 除小数点分隔符（在 Windows 控制面板的“区域设置”对话框中定义）和负号 (-) 之外，不能包含非数字字符。 不能包含数字分组符号（如千位间的逗号）或货币符号。  
   
 -   **小数点标记** 如果输入整数，则可以包含小数点标记，无论所搜索的值是整数还是实数。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
 查询和视图设计器可以使用以下日期格式：  
   
--   **区域设置特定** 在“Windows 区域设置属性”****对话框中指定的日期格式。  
+-   **区域设置特定** 在“Windows 区域设置属性”对话框中指定的日期格式。  
   
 -   **数据库特定** 数据库可以理解的任何格式。  
   

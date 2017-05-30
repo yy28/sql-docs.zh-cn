@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d24f986e0274592b8984c9bf5d493261781b8f77
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，展开配置为主服务器的服务器。 ****  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“管理目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
   
 3.  单击 **“发布指令”**，然后在 **“指令类型”** 列表中选择 **“脱离”**。  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e287e48b3185904eb2fb5b24920aa3dca433fcff
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,9 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后选择“管理目标服务器”****。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后选择“管理目标服务器”。  
   
-3.  右键单击某一目标服务器，再选择“属性”****。  
+3.  右键单击某一目标服务器，再选择“属性”。  
   
 4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
   

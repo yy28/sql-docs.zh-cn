@@ -18,22 +18,23 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 407863b783be38aa9342361778cc22914f805033
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”****，以打开“为 Stretch 启用表”****向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
+  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”，以打开“为 Stretch 启用表”向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
   
 -   如果在单独的表中存储冷数据，则可以迁移整个表。  
   
 -   如果表中同时包含热数据和冷数据，则可以指定筛选器函数以选择要迁移的行。    
  
- **先决条件**。 如果你为表选择“Stretch | 启用”****且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本主题中的步骤。  
+ **先决条件**。 如果你为表选择“Stretch | 启用”且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本主题中的步骤。  
   
  **权限**。 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在表上启用 Stretch Database 还需具有表的 ALTER 权限。  
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
  **启动向导**  
  1.  在 SQL Server Management Studio 的对象资源管理器中，选择要在其上启用 Stretch 的表。  
   
-2.  右键单击并选择“Stretch”****，然后选择“启用”****，以启动向导。  
+2.  右键单击并选择“Stretch”，然后选择“启用”，以启动向导。  
   
  **简介**  
  查看向导和必备组件的用途。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
  ALTER TABLE 语法将在本主题的后面进行介绍。  
   
  **摘要**  
- 查看你输入的值和你在该向导中选择的选项。 然后选择“完成” **** 以启用 Stretch。  
+ 查看你输入的值和你在该向导中选择的选项。 然后选择“完成”  以启用 Stretch。  
   
  **结果**  
  查看结果。  

@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 960865a8bb263a2089dc51a75304e3e6e40b85bf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Restrictions"></a>限制和局限  
-多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”****。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业” **** 。  
+多服务器类别仅存在于主服务器上。 主服务器上仅提供了一个默认作业类别：“[未分类(多服务器)]”。 下载多服务器作业后，其类别将在目标服务器上更改为“来自 MSX 的作业”  。  
   
 ### <a name="Security"></a>Security  
 有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
@@ -63,15 +64,15 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别” *****server_name* 对话框中，单击“添加” ****。  
+4.  在“管理作业类别” *server_name* 对话框中，单击“添加” 。  
   
 5.  在新对话框的 **“名称”** 框中，输入新作业类别的名称。  
   
 6.  选中 **“显示所有作业”** 复选框。 通过选中作业对应的框来为新类别选择一个或多个作业。  
   
-7.  单击“确定” ****。  
+7.  单击“确定” 。  
   
-8.  在“管理作业类别” *****server_name* 对话框中，单击“刷新” **** 以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
+8.  在“管理作业类别” *server_name* 对话框中，单击“刷新”  以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   
 有关这些对话框的详细信息，请参阅 [作业类别 - 管理作业类别](../../ssms/agent/job-categories-manage-job-categories.md) 和 [作业类别属性 - 新建作业类别](../../ssms/agent/job-categories-properties-new-job-category.md)。  
   

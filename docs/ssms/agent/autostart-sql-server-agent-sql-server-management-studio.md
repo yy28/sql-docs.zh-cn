@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d04f69be267c374559c65638d09d24ac6ef4822d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击加号以展开要将 SQL Server 代理配置为自动重新启动的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
 3.  在 **“常规”** 页上，选中 **“SQL Server 代理意外停止时自动重新启动”**。  
   

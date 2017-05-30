@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4cba4325958e8f96f524889acaee6f1cbb89bdfb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,6 +30,6 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>选项  
 **保存文本文件**  
-显示“另存为”****对话框，提示指定用于保存列出错误信息的文本文件的位置。 此文件包含已成功保存的数据库更改的记录以及由于错误而未能保存的数据库更改的记录。  
+显示“另存为”对话框，提示指定用于保存列出错误信息的文本文件的位置。 此文件包含已成功保存的数据库更改的记录以及由于错误而未能保存的数据库更改的记录。  
   
 

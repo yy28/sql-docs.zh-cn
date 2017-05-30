@@ -26,9 +26,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e99e3aff2a9e1225aff4388f33eb4e9da8c34174
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要启用或禁用的操作员，选择“属性”****，然后单击“常规”****选项卡。  
+4.  右键单击要启用或禁用的操作员，选择“属性”，然后单击“常规”选项卡。  
   
-5.  在“operator_name 属性”******对话框中，选中或清除“启用”****复选框。  
+5.  在“operator_name 属性”对话框中，选中或清除“启用”复选框。  
   
 6.  单击 **“确定”**。  
   

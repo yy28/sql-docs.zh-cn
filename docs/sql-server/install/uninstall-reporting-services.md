@@ -15,9 +15,10 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
  从计算机卸载外接程序时，可以选择仅卸载这些文件或同时从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 有关卸载用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
 ## <a name="uninstall-native-mode"></a>卸载本机模式  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在您卸载 **** 本机模式时，在安装后创建 **** 或修改的所有内容都将在原地保留。 例如，数据库文件、日志文件、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件以及一些内容项（如报表和数据源文件）。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在您卸载  本机模式时，在安装后创建  或修改的所有内容都将在原地保留。 例如，数据库文件、日志文件、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件以及一些内容项（如报表和数据源文件）。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是实例功能，因此不在 Windows“控制面板”的“程序和功能”中列出。 卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式：  
   

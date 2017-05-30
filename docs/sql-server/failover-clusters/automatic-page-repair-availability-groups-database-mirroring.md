@@ -19,9 +19,10 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ffb0714b75265db7e2188a39d1e8ada568ef3160
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
  在主体/主数据库中，仅当数据库处于 SYNCHRONIZED 状态且主体/主数据库仍向镜像/辅助数据库发送数据库日志记录时，才会尝试自动页修复。 自动页修复尝试中操作的基本顺序如下：  
   
-1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” **。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
+1.  当主体/主数据库中的数据页上发生读取错误时，主体/主数据库将使用相应的错误状态在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 表中插入一行。 对于数据库镜像，主体服务器将从镜像服务器请求该页的副本。 对于 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主体数据库将向所有辅助数据库广播请求，并且从第一个响应中获取该页。 此请求指定当前在刷新日志末尾的页 ID 和 LSN。 此页将标记为“还原已挂起” 。 这将使它在自动页修复尝试期间不可访问。 修复尝试期间对此页的访问尝试将失败，并显示错误 829（还原已挂起）。  
   
 2.  收到页请求后，镜像/辅助数据库将等待，直到将日志重做到请求中指定的 LSN 处。 然后，镜像/辅助数据库将在其数据库副本中尝试访问此页。 如果可以访问此页，则镜像/辅助数据库将此页的副本发送到主体/主数据库。 否则，镜像/辅助数据库将向主体/主数据库返回错误，并且自动页修复失败。  
   

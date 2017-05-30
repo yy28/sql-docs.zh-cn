@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c801801c96b4abf82745278e1b28b9b88309a2d6
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,16 +31,16 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-permanently-delete-a-query"></a>永久删除查询  
   
-1.  在“视图”****菜单中，选择“解决方案资源管理器”。  
+1.  在“视图”菜单中，选择“解决方案资源管理器”。  
   
 2.  在解决方案资源管理器中，选择要永久删除的查询。  
   
-3.  右键单击该查询，然后在快捷菜单中单击“删除”****。  
+3.  右键单击该查询，然后在快捷菜单中单击“删除”。  
   
-4.  在“Microsoft SQL Server Management Studio”****对话框中，单击“删除”****。  
+4.  在“Microsoft SQL Server Management Studio”对话框中，单击“删除”。  
   
 > [!NOTE]  
-> 如果希望从项目中移除查询而不删除它，请单击“移除”****。 可以在以后右键单击查询文件夹然后选择“添加项”****来查找并重新添加该查询。  
+> 如果希望从项目中移除查询而不删除它，请单击“移除”。 可以在以后右键单击查询文件夹然后选择“添加项”来查找并重新添加该查询。  
   
 ## <a name="see-also"></a>另请参阅  
 [清除查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  

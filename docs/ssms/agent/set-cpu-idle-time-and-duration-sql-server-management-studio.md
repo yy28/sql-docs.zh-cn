@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96c5e3d4a011b83cc9d0fff0edfbd740a5b34fd1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,13 +36,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，再单击“属性”****，然后选择“高级”****页。  
+2.  右键单击“SQL Server 代理”，再单击“属性”，然后选择“高级”页。  
   
 3.  在 **“空闲 CPU 条件”**下，执行下列操作：  
   
     -   选中 **“定义空闲 CPU 条件”**。  
   
-    -   在“CPU 平均使用率低于”****（对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
+    -   在“CPU 平均使用率低于”（对于所有 CPU 而言）框中指定百分比。 此选项设置 CPU 必须低于什么使用率级别才能变为空闲状态。  
   
     -   在 **“并且保持低于此级别”** 框中指定秒数。 此选项设置 CPU 最小使用率必须保持多长时间 CPU 才能变为空闲状态。  
   

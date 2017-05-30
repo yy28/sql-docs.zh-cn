@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b3f92a8f199bf03ff3a9c0cff4aedfb8a138ebec
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,11 +36,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  将该线条拖回所选的表。  
   
-3.  释放鼠标按钮。 此时，将显示“表和列”****对话框。  
+3.  释放鼠标按钮。 此时，将显示“表和列”对话框。  
   
 4.  选择外键列以及要与之建立关系的主键表和列。  
   
-5.  选择“确定”****两次以创建关系。  
+5.  选择“确定”两次以创建关系。  
   
 如果对表运行查询，则可使用自反关系创建自联接。 有关使用联接查询表的信息，请参阅[使用联接进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)。  
   

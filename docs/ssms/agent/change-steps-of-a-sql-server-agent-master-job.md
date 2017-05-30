@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 599646177ad22cb5131b0c57dc07206db66153a2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,15 +58,15 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要修改步骤的作业，然后选择“属性”****。  
+4.  右键单击要修改步骤的作业，然后选择“属性”。  
   
-5.  在“作业属性 – job_name”******对话框中的“选择页”****下，选择“步骤”****。  
+5.  在“作业属性 – job_name”对话框中的“选择页”下，选择“步骤”。  
   
-6.  单击“编辑”****以便打开“作业步骤属性 - job_step_name**”****对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击“编辑”以便打开“作业步骤属性 - job_step_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成后，单击 **“确定”**。  
   
-8.  在 “作业属性 - job_name**”****对话框中，单击“确定”****。  
+8.  在 “作业属性 - job_name”对话框中，单击“确定”。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   

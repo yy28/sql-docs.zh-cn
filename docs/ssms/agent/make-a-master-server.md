@@ -25,9 +25,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 99f55a30de01a0f9848b8f1c1f4f75e3d3c3fe3c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -74,9 +75,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“将其设置为主服务器”****。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
+2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“将其设置为主服务器”。 **主服务器向导** 将引导您完成设置主服务器和添加目标服务器的过程。  
   
-3.  从“主服务器操作员”****中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理所在的服务器上运行 Messenger 服务。  
+3.  从“主服务器操作员”中，配置主服务器的操作员。若要通过电子邮件或寻呼程序向操作员发送通知，必须配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以发送电子邮件。 若要使用 **net send**向操作员发送通知，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理所在的服务器上运行 Messenger 服务。  
   
     **电子邮件地址**  
     设置操作员的电子邮件地址。  

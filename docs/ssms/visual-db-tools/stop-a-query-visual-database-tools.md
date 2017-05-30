@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 77ca92438e8ccab3b0e367253ba8a193fc407d6c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-stop-a-query"></a>停止查询  
   
--   右键单击[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”****，再单击“清除结果”****。  
+-   右键单击[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的任意位置，在显示的快捷菜单中指向“窗格”，再单击“清除结果”。  
   
 ## <a name="see-also"></a>另请参阅  
 [清除查询结果 (Visual Database Tools)](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  

@@ -22,16 +22,17 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 86ffe880e225a5673d35be3f7c42d862d145274c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="manage-events"></a>管理事件
-可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。 这称为“事件转发”**。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  
+可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。 这称为“事件转发”。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  
   
-如果一台服务器收到另外一组服务器的事件，则接收事件的服务器称为“警报管理服务器”**。 在多服务器环境下，可以将主服务器指定为警报管理服务器。  
+如果一台服务器收到另外一组服务器的事件，则接收事件的服务器称为“警报管理服务器”。 在多服务器环境下，可以将主服务器指定为警报管理服务器。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警报管理服务器的优点  
 设置警报管理服务器的优势包括：  

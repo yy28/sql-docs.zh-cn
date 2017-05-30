@@ -22,9 +22,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cef300f5851e64620787d1dec2ca0b2d6fe114f9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  按 Delete。  
   
-3.  在要求确认的消息框中单击“是”****。  
+3.  在要求确认的消息框中单击“是”。  
   
 > [!CAUTION]  
 > 以这种方式删除的行将从数据库中永久移除并且不能恢复。  

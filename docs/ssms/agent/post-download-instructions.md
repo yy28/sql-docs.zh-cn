@@ -16,9 +16,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd82f10ad1b997b8e14080e030079d6179d6b848
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 查看下载指令的说明。  
   
 **轮询间隔**  
-设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”****指令。  
+设置目标服务器的轮询间隔。 仅适用于“设置轮询间隔”指令。  
   
 **所有目标服务器**  
 选择此选项可以将下载指令发布到所有目标服务器。  

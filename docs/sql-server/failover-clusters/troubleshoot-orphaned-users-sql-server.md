@@ -22,9 +22,10 @@ caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名与数据库用户的映射关系的信息存储在数据库中。 其中包括数据库用户的名称以及对应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的 SID。 该数据库用户的权限用于在数据库中进行授权。  
   
- 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户（基于登录名）无法登录到该实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 如果数据库用户映射到 `master` 实例中不存在的登录名 SID，则该用户可能变为孤立用户。 在数据库还原或附加到从未创建过登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其他实例之后，数据库用户也可能变为孤立用户。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 即使重新创建该登录名，它也会具有不同的 SID，因此该数据库用户仍为孤立用户。  
+ 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户（基于登录名）无法登录到该实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 如果数据库用户映射到 `master` 实例中不存在的登录名 SID，则该用户可能变为孤立用户。 在数据库还原或附加到从未创建过登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其他实例之后，数据库用户也可能变为孤立用户。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 即使重新创建该登录名，它也会具有不同的 SID，因此该数据库用户仍为孤立用户。  
   
 ## <a name="to-detect-orphaned-users"></a>检测孤立用户  
 

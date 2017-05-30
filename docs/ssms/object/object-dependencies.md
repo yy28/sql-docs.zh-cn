@@ -31,10 +31,10 @@ ms.lasthandoff: 04/11/2017
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
-“依赖 <selected object> 的对象”  
+“依赖 <selected object> 的对象”**  
 单击此按钮将列出依赖于所选对象的对象，以及依赖关系跟踪所涉及的对象。  
   
-“<selected object> 依赖的对象”  
+“<selected object> 依赖的对象”****  
 单击此按钮将列出所选对象所依赖的并且依赖关系跟踪涉及的对象。  
   
 **依赖关系**  

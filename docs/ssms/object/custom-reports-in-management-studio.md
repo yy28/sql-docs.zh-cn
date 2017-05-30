@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b1292293885329df9b38dfcf94cd8ee1c5ca5238
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,9 +36,9 @@ ms.lasthandoff: 04/11/2017
 ## <a name="running-a-custom-report"></a>运行自定义报表  
 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中通过以下方式运行自定义报表：  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”****，再左键单击“自定义报表”****。 在“打开文件”****对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”，再左键单击“自定义报表”。 在“打开文件”对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”****，再指向“自定义报表”****，然后从最近打开的文件列表中选择一个自定义报表。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”，再指向“自定义报表”，然后从最近打开的文件列表中选择一个自定义报表。  
   
 ## <a name="limitations"></a>限制  
 在使用自定义报表时，请注意以下限制：  

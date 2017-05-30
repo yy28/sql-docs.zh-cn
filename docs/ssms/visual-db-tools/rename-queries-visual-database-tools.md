@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 84829e727653973598485a88c4a6806c75330c8b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-rename-a-query"></a>重命名查询  
   
-1.  在“视图”****菜单中，选择“解决方案资源管理器”****。  
+1.  在“视图”菜单中，选择“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”****。  
+2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”。  
   
 3.  为该查询键入一个新名称，再按 Enter。  
   

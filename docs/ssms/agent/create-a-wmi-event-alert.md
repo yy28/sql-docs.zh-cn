@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 97694f2029532a172f0b0f895dfc95ebc5a8a729
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“警报”****并选择“新建警报”****。  
+3.  右键单击“警报”并选择“新建警报”。  
   
 4.  在 **“新建警报”** 对话框的 **“名称”** 框中，输入此警报的名称。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **“类型”** 列表中，选择 **“WMI 事件警报”**。  
   
-7.  在“WMI 事件警报定义”****下的“命名空间”****框中，为标识触发该警报的 WMI 事件的 WMI 查询语言 (WQL) 语句指定 WMI 命名空间。  
+7.  在“WMI 事件警报定义”下的“命名空间”框中，为标识触发该警报的 WMI 事件的 WMI 查询语言 (WQL) 语句指定 WMI 命名空间。  
   
 8.  在 **“查询”** 框中，指定标识该警报所响应事件的 WQL 语句。  
   

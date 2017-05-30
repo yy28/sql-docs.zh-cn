@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4ce8f5339b5221f1888106ed032fe84c1922fa08
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,9 +30,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-view-join-properties"></a>查看联接属性  
   
-1.  在“关系图”****窗格中右键单击相应的联接。  
+1.  在“关系图”窗格中右键单击相应的联接。  
   
-2.  在快捷菜单上单击“属性”****。  
+2.  在快捷菜单上单击“属性”。  
   
     此时，将在“属性”窗口中显示该联接的属性。  
   

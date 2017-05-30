@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9ddd31f4745227986112ccd86d0a35e8a5ce4f76
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,17 +32,17 @@ ms.lasthandoff: 04/11/2017
   
 2.  将所选列拖动到相关的表中。  
   
-3.  显示两个对话框：“外键关系”****对话框和前景中显示的“表和列”****对话框。  
+3.  显示两个对话框：“外键关系”对话框和前景中显示的“表和列”对话框。  
   
-4.  “关系名”****使用系统提供的名称，其格式为 FK_*localtable*_*foreigntabl*。 您可以更改此值。  
+4.  “关系名”使用系统提供的名称，其格式为 FK_*localtable*_*foreigntabl*。 您可以更改此值。  
   
-5.  验证“主键表”****是否指定了正确的表。  
+5.  验证“主键表”是否指定了正确的表。  
   
 6.  网格列出了本地列及与其匹配的外部列。 您可以添加或删除表列或者更改映射。  
   
-7.  选择“确定”****。  
+7.  选择“确定”。  
   
-    此时将出现“外键关系”****对话框。 “选定的关系”****中显示了已创建的关系。  
+    此时将出现“外键关系”对话框。 “选定的关系”中显示了已创建的关系。  
   
 8.  在网格中更改关系的属性。  
   

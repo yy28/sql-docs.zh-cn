@@ -17,14 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="general-user-interface-elements"></a>常规用户界面元素
-“编辑器”****、“属性”****窗口以及“工具箱”****是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的一些基本元素。  
+“编辑器”、“属性”窗口以及“工具箱”是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的一些基本元素。  
   
 ## <a name="in-this-section"></a>本节内容  
 [“关于”对话框](../ssms/about-dialog-box.md)  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
 介绍 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 如何在文档窗口中承载 Web 浏览器。  
   
 [外部工具对话框](../ssms/external-tools-dialog-box.md)  
-允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的工具添加到“工具”****菜单中。  
+允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 的工具添加到“工具”菜单中。  
   
 [属性窗口 (Management Studio)](../ssms/properties-window-management-studio.md)  
 允许用户查看编辑器和设计器中所选对象的属性和事件。 还允许用户编辑和查看文件、项目和解决方案的属性。 在“属性”窗口中可以对某些属性进行编辑。  

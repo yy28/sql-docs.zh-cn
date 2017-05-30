@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64c4f182e369f8e51a4b1381c5774c951ea5e738
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”****网格列中，顺序输入 NOT 运算符和搜索值。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”网格列中，顺序输入 NOT 运算符和搜索值。  
   
 例如，若要在 `products` 表中查找产品代码列中的值以“A”之外的其他字符开头的所有行，则可以输入如下搜索条件：  
   

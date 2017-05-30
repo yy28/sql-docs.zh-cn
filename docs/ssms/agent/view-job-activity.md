@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 48c5a7cff0b48fa137d6c39d4e08b1cf713d88f2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“作业活动监视器”****，然后单击“查看作业活动”****。  
+3.  右键单击“作业活动监视器”，然后单击“查看作业活动”。  
   
 4.  在 **作业活动监视器**中，可以查看为此服务器定义的每个作业的详细信息。  
   

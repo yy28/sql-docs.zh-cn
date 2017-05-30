@@ -16,14 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6fb56fc5fbbc30517abf66cc8b29fea7609675ff
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-designers---maintenance-plans-page"></a>选项（“设计器” - “维护计划”页）
-使用“选项”****对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”****菜单上，单击“选项”****，展开“设计器”****，再选择“维护计划”****。  
+使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **将新形状连接到默认选中的形状**  

@@ -17,14 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 514b5f4e9e5df63f745e7f2e6a9465cddd6c4628
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
-参数是在从“工具”****菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”****对话框将外部工具（如记事本）添加到“工具”****菜单。  
+参数是在从“工具”菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  
   
 下表列出了外部工具的参数。  
   

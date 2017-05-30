@@ -20,9 +20,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c1ec545f2175067a3e4d6f9f625356607cb0eb4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
     FROM dbo.Gloves;  
     ```  
   
-3.  在“查询设计器”****菜单中，单击“执行 SQL”****以运行该查询。  
+3.  在“查询设计器”菜单中，单击“执行 SQL”以运行该查询。  
   
     UNION 查询现在由查询设计器进行格式设置。  
   

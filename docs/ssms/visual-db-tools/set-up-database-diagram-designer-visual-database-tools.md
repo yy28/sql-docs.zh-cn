@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9afcf20de2220aee5d9be2763a0b274ec738e48c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开该数据库连接下的“数据库关系图”节点。  
   
-3.  如果希望设置数据库关系图，请在出现提示时选择“是”****。  
+3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
   
     > [!NOTE]  
     > 这将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库上创建数据库关系图表、系统存储过程和一个系统函数。  

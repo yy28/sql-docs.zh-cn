@@ -24,9 +24,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5197a38da57e041039dab93d037064bba79db7ff
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,8 +40,8 @@ ms.lasthandoff: 04/11/2017
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|默认|**SQLAgent：**对象**：计数器**|  
-|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：**对象**：计数器**|  
+|默认|**SQLAgent：**对象：计数器**|  
+|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：**对象：计数器**|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的下列性能对象。  
   

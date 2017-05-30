@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -117,9 +118,9 @@ Cheryl Carson       Abraham Bennet
   
     查询和视图设计器将通过为表名添加一个顺序号来为第二个实例分配别名。 此外，查询和视图设计器会在“关系图”窗格内表或表值对象的两个实例之间创建一条联接线。  
   
-3.  右键单击联接线，再从快捷菜单中选择“属性”****。  
+3.  右键单击联接线，再从快捷菜单中选择“属性”。  
   
-4.  在“属性”窗口中，单击“联接条件和类型”****，再单击该属性右侧的“省略号(…)”****。  
+4.  在“属性”窗口中，单击“联接条件和类型”，再单击该属性右侧的“省略号(…)”。  
   
 5.  在[“联接”对话框](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，根据需要更改两个主键间的比较运算符。 例如，可将运算符更改为小于 (<)。  
   

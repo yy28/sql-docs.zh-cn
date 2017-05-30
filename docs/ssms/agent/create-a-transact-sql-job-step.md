@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30d692969db247383010a268c9dd58ee5d2bd3ea
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
   
-5.  在“类型”****列表中，单击“Transact-SQL 脚本 (TSQL)”****。  
+5.  在“类型”列表中，单击“Transact-SQL 脚本 (TSQL)”。  
   
 6.  在 **“命令”** 框中，键入 [!INCLUDE[tsql](../../includes/tsql_md.md)] 批命令，或者单击 **“打开”** ，选择一个 [!INCLUDE[tsql](../../includes/tsql_md.md)] 文件用作命令。  
   

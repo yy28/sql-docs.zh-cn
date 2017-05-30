@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2c0a85b70906a7784093ba1fb6905c27278176fa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“安全性”**，然后展开 **“登录名”**。  
   
-3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”****。  
+3.  右键单击要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理固定数据库角色的登录帐户，然后选择“属性”。  
   
 4.  在 **“登录属性”** 对话框的 **“用户映射”** 页上，选择包含 **msdb**的行。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”****，再选择“新建代理”****。  
+3.  右键单击“代理”，再选择“新建代理”。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅 [如何创建凭据 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/c1e77e91-2a69-40d9-b8b3-97cffc710586) 和 [创建凭据 (Transact-SQL)](http://msdn.microsoft.com/en-us/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
   

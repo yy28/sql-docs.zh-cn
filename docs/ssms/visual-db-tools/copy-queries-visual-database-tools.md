@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-copy-a-query"></a>复制查询  
   
-1.  在“视图”****菜单中，单击“解决方案资源管理器”。  
+1.  在“视图”菜单中，单击“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”****。  
+2.  在解决方案资源管理器中，右键单击要复制的查询，然后从快捷菜单中选择“打开”。  
   
 3.  在 SQL 窗格中复制所需的查询部分。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
   
 5.  将光标定位到要添加 SQL 代码的位置。  
   
-6.  右键单击，然后在快捷菜单中单击“粘贴”****。  
+6.  右键单击，然后在快捷菜单中单击“粘贴”。  
   
 ## <a name="see-also"></a>另请参阅  
 [重命名查询 (Visual Database Tools)](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  

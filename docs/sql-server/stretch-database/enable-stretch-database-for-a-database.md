@@ -18,18 +18,19 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”****，以打开“为数据库启用 Stretch”****向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
+  若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”，以打开“为数据库启用 Stretch”向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
   
- 如果你为单个表选择“任务 | Stretch | 启用”****，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请遵循本主题中的步骤，而非 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
+ 如果你为单个表选择“任务 | Stretch | 启用”，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请遵循本主题中的步骤，而非 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="EnableTSQLServer"></a> 先决条件：在服务器上启用 Stretch Database  
  必须先在本地服务器上启用 Stretch Database，然后才能在数据库或表上启用它。 此操作需要 sysadmin 或 serveradmin 权限。  
   
--   如果你拥有必要的管理权限，“为数据库启用 Stretch”****向导将会为服务器配置 Stretch。  
+-   如果你拥有必要的管理权限，“为数据库启用 Stretch”向导将会为服务器配置 Stretch。  
   
 -   如果你没有必要的权限，在你运行向导之前，管理员必须通过运行 **sp_configure** 来手动启用该选项，否则便需由管理员运行该向导。  
   

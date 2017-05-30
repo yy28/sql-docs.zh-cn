@@ -17,32 +17,33 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d5353c0732833516e95cc734a2d7bbe0f1258554
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>选项（SQL Server 对象资源管理器 -“脚本”页）
 使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
   
--   用于用户表和视图的“编辑”****命令。  
+-   用于用户表和视图的“编辑”命令。  
   
--   用于用户创建对象的“生成 <object> 脚本”****命令。  
+-   用于用户创建对象的“生成 <object> 脚本”命令。  
   
--   用于用户创建对象的“修改”****命令。  
+-   用于用户创建对象的“修改”命令。  
   
--   本页也可用于设置“生成 SQL Server 脚本向导”****的脚本选项默认值。  
+-   本页也可用于设置“生成 SQL Server 脚本向导”的脚本选项默认值。  
   
 ## <a name="remarks"></a>注释  
-“编辑”****和“修改”****命令产生的结果可能与相同选项设置的“生成 <object> 脚本”****命令产生的结果不同。 “编辑”****和“修改”****命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”****命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
+“编辑”和“修改”命令产生的结果可能与相同选项设置的“生成 <object> 脚本”命令产生的结果不同。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 <object> 脚本”命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
 ## <a name="options"></a>选项  
 通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  
 **分隔各条语句**  
-使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句。 若要更改**查询编辑器**，选择“工具”****/“选项”****/“查询执行”****/“SQL Server”****/“常规”****/“批处理分隔符”****。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](http://msdn.microsoft.com/en-us/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
+使用批处理分隔符分隔各条 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句。 若要更改**查询编辑器**，选择“工具”/“选项”/“查询执行”/“SQL Server”/“常规”/“批处理分隔符”。 默认值为 False。 有关详细信息，请参阅 [GO (Transact-SQL)](http://msdn.microsoft.com/en-us/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
   
 **包含说明性标头**  
 通过将每个对象的脚本分隔为多个部分以向脚本添加说明性注释。 默认值为 True。 有关详细信息，请参阅 [/*...*/ (Comment) (Transact-SQL)](http://msdn.microsoft.com/en-us/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)。  

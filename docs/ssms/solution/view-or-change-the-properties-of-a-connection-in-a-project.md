@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 87382ace072e21384546b8785a9aa61cb71f20f4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>更改项目中的连接属性  
   
-1.  在解决方案资源管理器中，右键单击某个连接，再单击“属性窗口”****。  
+1.  在解决方案资源管理器中，右键单击某个连接，再单击“属性窗口”。  
   
-2.  在“属性”窗口中查看连接属性。 可以更改“执行超时值”****、“数据库”****和“登录超时值”****属性。  
+2.  在“属性”窗口中查看连接属性。 可以更改“执行超时值”、“数据库”和“登录超时值”属性。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

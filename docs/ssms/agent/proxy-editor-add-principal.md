@@ -16,9 +16,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 171707ed9dad6a642ed4e1d72dd716689a8ec699
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 列出所选类型的主体服务器。  
   
 **名称**  
-选择主体的名称以便向其授予访问权限，或者选择“名称”****以便向该列表中的所有主体授予访问权限。  
+选择主体的名称以便向其授予访问权限，或者选择“名称”以便向该列表中的所有主体授予访问权限。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建 SQL Server 代理的代理帐户](../../ssms/agent/create-a-sql-server-agent-proxy.md)  

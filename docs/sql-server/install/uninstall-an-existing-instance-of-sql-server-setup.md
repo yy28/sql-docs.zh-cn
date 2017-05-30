@@ -21,9 +21,10 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 548949bad71213430b987383fd221a91bddcfdff
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”**。  
   
-2.  右键单击“SQL Server 2016”****，然后选择“卸载”****。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
+2.  右键单击“SQL Server 2016”，然后选择“卸载”。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
   
      将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”**。  
   

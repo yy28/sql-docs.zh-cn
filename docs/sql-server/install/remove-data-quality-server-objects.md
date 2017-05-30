@@ -14,9 +14,10 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 07a9b670a58f8ec0d6fcc0159b6237b7fc32dcbd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 -   来自 master 数据库的 DQInitDQS_MAIN 存储过程。  
   
- 你可以通过右键单击对象，然后在快捷菜单中单击“删除”****，在 SQL Server Management Studio 中删除这些对象。  
+ 你可以通过右键单击对象，然后在快捷菜单中单击“删除”，在 SQL Server Management Studio 中删除这些对象。  
   
 > [!IMPORTANT]  
 >  如果通过命令提示符使用 `–uninstall` 命令行参数从 SQL Server 实例中仅卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，则在卸载过程中将删除所有 DQS 对象。 您不必在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之后手动删除它们。 若要从命令提示符处卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，请在命令提示符处键入以下命令，然后按 ENTER：   

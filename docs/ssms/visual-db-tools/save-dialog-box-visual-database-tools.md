@@ -17,9 +17,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>选项  
 **表受到影响时警告**  
-指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”****对话框中重新选择该选项。  
+指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”对话框中重新选择该选项。  
   
 **保存文本文件**  
-显示“另存为”****对话框，提示你指定用于保存列出受影响表的文本文件的位置。 此文件包含受您所做更改影响的表的列表。  
+显示“另存为”对话框，提示你指定用于保存列出受影响表的文本文件的位置。 此文件包含受您所做更改影响的表的列表。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计表 (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  

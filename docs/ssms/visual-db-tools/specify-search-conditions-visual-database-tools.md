@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30a1677cec766fd17fb80447548341fc73f99edc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,9 +41,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到“条件”窗格中。  
   
-    如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”****列，以将其从输出列中删除。  
+    如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”列，以将其从输出列中删除。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”****列中输入搜索条件。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”列中输入搜索条件。  
   
     > [!NOTE]  
     > 如果不输入运算符，则查询和视图设计器将自动插入相等运算符“=”。  

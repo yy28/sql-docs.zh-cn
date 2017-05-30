@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,11 +31,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-delete-a-database-diagram"></a>删除数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”****文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
   
 2.  右键单击要删除的数据库关系图。  
   
-3.  从快捷菜单中选择“删除”****。  
+3.  从快捷菜单中选择“删除”。  
   
 4.  此时，将显示一条消息，提示您确认删除。 选择 **“是”**。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
  若要使 WSFC 群集重新联机，您必须消除现有配置下仲裁故障的根源，根据需要恢复受影响的数据库，并且您可能需要在 WSFC 群集中重新配置其余的节点以反映现存的群集拓扑。  
   
- ** 您可以在 WSFC 群集节点上使用“强制仲裁”过程来覆盖使该群集脱机的安全控制。  这样做可有效地通知 WSFC 群集挂起仲裁投票检查，并使您能够在该群集中的任意节点上将 WSFC 群集资源和 SQL Server 重新联机。  
+  您可以在 WSFC 群集节点上使用“强制仲裁”过程来覆盖使该群集脱机的安全控制。  这样做可有效地通知 WSFC 群集挂起仲裁投票检查，并使您能够在该群集中的任意节点上将 WSFC 群集资源和 SQL Server 重新联机。  
   
  此类型的灾难恢复过程应包含以下步骤：  
   

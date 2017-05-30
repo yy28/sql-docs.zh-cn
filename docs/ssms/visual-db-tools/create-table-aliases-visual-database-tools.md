@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d76ede0538ac5fb723e35fb32f045f3b14cd86ca
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,9 +39,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  将表或表值对象添加到查询中。  
   
-2.  在“关系图”****窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”****。  
+2.  在“关系图”窗格中，右键单击要为其创建别名的对象，然后从快捷菜单中选择“属性”。  
   
-3.  在“属性”****窗口的“别名”****字段中输入别名。  
+3.  在“属性”窗口的“别名”字段中输入别名。  
   
 ## <a name="see-also"></a>另请参阅  
 [向查询中添加表 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  

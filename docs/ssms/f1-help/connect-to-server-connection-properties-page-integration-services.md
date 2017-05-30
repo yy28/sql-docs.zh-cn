@@ -17,14 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 734f14076b65d0ea7e4c26c95c463a3554828587
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>连接到服务器（“连接属性”页）(Integration Services)
-当连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 或在“已注册的服务器”****中注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”****和“选项”****。 注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，此对话框中仅显示“测试”****和“保存”****。  
+当连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
 ## <a name="options"></a>选项  
 **端口号**  
@@ -46,9 +47,9 @@ ms.lasthandoff: 04/11/2017
 单击此项可更改对话框并隐藏其他服务器连接选项，例如记住密码。  
   
 **测试**  
-在“已注册的服务器”****中注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，单击此选项可以测试连接。  
+在“已注册的服务器”中注册 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 时，单击此选项可以测试连接。  
   
 **保存**  
-保存“已注册的服务器”****中的设置。  
+保存“已注册的服务器”中的设置。  
   
 

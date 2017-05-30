@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 60a46ce2fd6a12645870d9a025b82e4ab23762a9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,13 +60,13 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别” *****server_name* 对话框中，选择要编辑的作业类别，然后单击“查看作业” ****。  
+4.  在“管理作业类别” *server_name* 对话框中，选择要编辑的作业类别，然后单击“查看作业” 。  
   
 5.  选中 **“显示所有作业”** 复选框。  
   
 6.  若要向类别中添加作业，请在主网格中选中与作业对应的 **“选择”** 列中的复选框。 若要从类别中删除作业，请清除该框。 完成后，单击 **“确定”**。  
   
-7.  关闭“管理作业类别” *****server_name* 对话框。  
+7.  关闭“管理作业类别” *server_name* 对话框。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

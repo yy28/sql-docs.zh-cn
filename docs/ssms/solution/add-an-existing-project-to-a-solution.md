@@ -20,9 +20,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,9 +34,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在解决方案资源管理器中，选择解决方案。  
   
-2.  在“文件”****菜单中，指向“添加”****，再单击“现有项目”****。  
+2.  在“文件”菜单中，指向“添加”，再单击“现有项目”。  
   
-3.  在“添加现有项目”****对话框中，找到要添加的项目，选择该项目文件，再单击“打开”****。  
+3.  在“添加现有项目”对话框中，找到要添加的项目，选择该项目文件，再单击“打开”。  
   
     该项目即添加到选定的解决方案中。  
   

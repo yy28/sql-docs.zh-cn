@@ -20,9 +20,10 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 569d906147784f951d340c3773efb5a619040298
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击加号以展开包含要将执行跟踪消息写入到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理错误日志的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“属性”****。  
+2.  右键单击“SQL Server 代理”，然后选择“属性”。  
   
-3.  在“SQL Server 代理属性 – server_name”******对话框中，在“常规”****页的“错误日志”****下，选中“包含执行跟踪消息”****复选框。  
+3.  在“SQL Server 代理属性 – server_name”对话框中，在“常规”页的“错误日志”下，选中“包含执行跟踪消息”复选框。  
   
 4.  单击 **“确定”**。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fc35f81488bd4717bc12366421564b2022f66e78
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
 > 提供的凭据名称必须是一个现有凭据的名称。 有关创建凭据的详细信息，请参阅 [如何创建代理 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/c1e77e91-2a69-40d9-b8b3-97cffc710586)。  
   
 **...**  
-启动“选择凭据”****对话框。  
+启动“选择凭据”对话框。  
   
 **Description**  
 键入代理的说明。  

@@ -14,20 +14,21 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 13745947a33fbe51bddb69f4bb35165fd26c1867
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
-使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“视图”****菜单打开对象资源管理器。 使用“工具”****菜单上的“选项”****配置对象资源管理器选项。  
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  
-默认情况下，[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”****菜单上单击“对象资源管理器”****。  
+默认情况下，[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”菜单上单击“对象资源管理器”。  
   
 ## <a name="configuring-object-explorer-options"></a>配置对象资源管理器选项  
-若要配置对象资源管理器设置，请在“工具”****菜单中单击“选项”****，然后单击“SQL Server 对象资源管理器”****。  
+若要配置对象资源管理器设置，请在“工具”菜单中单击“选项”，然后单击“SQL Server 对象资源管理器”。  
   
 ## <a name="see-also"></a>另请参阅  
 [对象资源管理器](../../ssms/object/object-explorer.md)  

@@ -16,9 +16,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 884ed5fdf244272e5f46dc3d2faf0a8d1ee8a9b2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,19 +46,19 @@ ms.lasthandoff: 04/11/2017
 启用作业。 虽然可以使用 **sp_start_job** 存储过程启动作业，但是如果不启用作业，作业将不会响应计划或警报。  
   
 **数据源**  
-显示作业的主服务器。 仅在“作业属性”-“常规”****页上可用。  
+显示作业的主服务器。 仅在“作业属性”-“常规”页上可用。  
   
 **创建时间**  
-显示作业的创建日期和时间。 仅在“作业属性”-“常规”****页上可用。  
+显示作业的创建日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **上次修改时间**  
-显示上次修改作业的日期和时间。 仅在“作业属性”-“常规”****页上可用。  
+显示上次修改作业的日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **上次执行时间**  
-显示上次执行作业的日期和时间。 仅在“作业属性”-“常规”****页上可用。  
+显示上次执行作业的日期和时间。 仅在“作业属性”-“常规”页上可用。  
   
 **查看作业历史记录**  
-查看作业的历史记录。 仅在“作业属性”-“常规”****页上可用。  
+查看作业的历史记录。 仅在“作业属性”-“常规”页上可用。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  

@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,13 +29,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-a-new-database-diagram"></a>创建新的数据库关系图  
   
-1.  在对象资源管理器中，右键单击“数据库关系图”****文件夹或该文件夹中的任何关系图。  
+1.  在对象资源管理器中，右键单击“数据库关系图”文件夹或该文件夹中的任何关系图。  
   
-2.  在快捷菜单上选择“新建数据库关系图”****。  
+2.  在快捷菜单上选择“新建数据库关系图”。  
   
-    此时将显示“添加表”****对话框。  
+    此时将显示“添加表”对话框。  
   
-3.  在“表”****列表中选择所需的表，再单击“添加”****。  
+3.  在“表”列表中选择所需的表，再单击“添加”。  
   
     这些表将以图形方式显示在新的数据库关系图中。  
   

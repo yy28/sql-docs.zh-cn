@@ -23,9 +23,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9c5fea6e228188ad87cc3a6f6a448bc65f04a68a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,14 +56,14 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
   
 1.  将要更新的表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”****菜单中，指向“更改类型”****，再单击“插入值”****。  
+2.  在“查询设计器”菜单中，指向“更改类型”，再单击“插入值”。  
   
     > [!NOTE]  
     > 如果启动“插入值”查询时“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“选择插入值的目标表”对话框](../../ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md)，以提示你输入要更新的表名。  
   
 3.  在“关系图”窗格中，单击要为其提供新值的每个列的复选框。 这些列将显示在“条件”窗格中。 列只有在添加到查询后才能更新。  
   
-4.  在“条件”窗格的“新建值”****列中，为列输入新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
+4.  在“条件”窗格的“新建值”列中，为列输入新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
   
     > [!CAUTION]  
     > 查询和视图设计器无法检查值是否适合要插入的列的长度。 如果所提供的值太长，那么可能会在不提出警告的情况下截断该值。 例如，如果 `name` 列的长度为 20 个字符，但您指定的插入值为 25 个字符，那么可能会截断后 5 个字符。  

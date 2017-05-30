@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 275f2120bd76147916f1ba6d24d59dc450ed7c8b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 添加所选的一个或多个表。  
   
 > [!NOTE]  
-> 如果希望将多个表添加到关系图中，可以将其全部选定，再单击“添加”****。 或者，也可以双击要添加的每个表，然后在完成后单击“关闭”****。  
+> 如果希望将多个表添加到关系图中，可以将其全部选定，再单击“添加”。 或者，也可以双击要添加的每个表，然后在完成后单击“关闭”。  
   
 **关闭**  
 关闭对话框而不再添加表。  

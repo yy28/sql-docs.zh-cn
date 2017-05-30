@@ -24,14 +24,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 618e199812a39ec29e032f8371419ec6184c713f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="automated-administration-across-an-enterprise"></a>企业范围的自动化管理
-跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的自动化管理称为“多服务器管理”**。 使用多服务器管理可以执行下列操作：  
+跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的自动化管理称为“多服务器管理”。 使用多服务器管理可以执行下列操作：  
   
 -   管理两台或多台服务器。  
   

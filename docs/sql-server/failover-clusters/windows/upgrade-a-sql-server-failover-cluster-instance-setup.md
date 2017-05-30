@@ -20,9 +20,10 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 13. 在升级操作开始之前，系统配置检查器将运行多组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能验证您的计算机配置。  
   
-14. “群集升级报告”页显示故障转移群集实例中的节点列表和每个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件的实例版本信息。 它显示数据库脚本状态和复制脚本状态。 此外，还会显示有关单击 **“下一步”**时会发生的情况的信息性消息。 根据已升级的故障转移群集节点数和节点总数，安装程序会显示你单击“下一步” ****时发生的故障转移行为。 如果您尚未安装必备组件，还会就潜在的不必要停机时间向您发出警告。  
+14. “群集升级报告”页显示故障转移群集实例中的节点列表和每个节点上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件的实例版本信息。 它显示数据库脚本状态和复制脚本状态。 此外，还会显示有关单击 **“下一步”**时会发生的情况的信息性消息。 根据已升级的故障转移群集节点数和节点总数，安装程序会显示你单击“下一步” 时发生的故障转移行为。 如果您尚未安装必备组件，还会就潜在的不必要停机时间向您发出警告。  
   
 15. “准备升级”页显示您在安装过程中指定的安装选项的树视图。 若要继续，请单击 **“升级”**。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将首先安装所选功能的必备组件，然后安装所选功能。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8af59d37d3d028cf3d37feb7f621f21771e0ce60
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,6 +32,6 @@ ms.lasthandoff: 04/11/2017
   
 1.  将具有关系的表添加到数据库关系图中。  
   
-2.  右键单击该表，再从快捷菜单中单击“添加相关表”****。  
+2.  右键单击该表，再从快捷菜单中单击“添加相关表”。  
   
 

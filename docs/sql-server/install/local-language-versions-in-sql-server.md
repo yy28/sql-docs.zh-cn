@@ -14,9 +14,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 067307bd3c91b8ac52c7e30f37aa816ca5ca06d9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -77,9 +78,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  安装与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本匹配的操作系统 MUI（如果尚未安装）。  
   
-2.  在控制面板中，打开“区域和语言选项” ****。  
+2.  在控制面板中，打开“区域和语言选项” 。  
   
-3.  在“高级” **** 选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” ****选择一个值。  
+3.  在“高级”  选项卡上，从列表中为“选择一种语言来匹配要使用的非 Unicode 程序的语言版本” 选择一个值。  
   
      此设置将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择最佳默认排序规则。  
   

@@ -18,16 +18,17 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8e258a6b81a9061c08ba4df098afa4e67c74df3a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="connection-properties-dialog-box"></a>“连接属性”对话框
-使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”****时，可以使用此对话框。 此页上显示的属性是只读的。  
+使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”时，可以使用此对话框。 此页上显示的属性是只读的。  
   
-若要更改属性（如“数据库”****），请在打开“连接属性”****对话框之前，使用“对象资源管理器”连接到所需的数据库。  
+若要更改属性（如“数据库”），请在打开“连接属性”对话框之前，使用“对象资源管理器”连接到所需的数据库。  
   
 请注意，SQL Azure 的查询超时期限是 30 分钟。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 用于连接身份验证的登录的用户名。  
   
 ## <a name="connection-category"></a>连接类别  
-查看当前连接的连接属性。 大多数连接属性都是在连接过程中，在“连接到服务器”****对话框的“连接属性”****选项卡上选择的。  
+查看当前连接的连接属性。 大多数连接属性都是在连接过程中，在“连接到服务器”对话框的“连接属性”选项卡上选择的。  
   
 **数据库**  
 当前连接到的数据库的名称。 若要更改此名称，请使用 SQL 编辑器工具栏。  

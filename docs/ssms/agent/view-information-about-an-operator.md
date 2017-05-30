@@ -21,9 +21,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要查看的操作员，然后选择“属性”****。  
+4.  右键单击要查看的操作员，然后选择“属性”。  
   
-    有关“operator_name 属性”******对话框包含的可用选项的详细信息，请参阅：  
+    有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性 - 新建操作员（“常规”页）](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

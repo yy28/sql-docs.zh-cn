@@ -17,9 +17,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f50e2c3733c636d04fa69ed4226ffeef2685874a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,10 +31,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  创建查询。  
   
-2.  从“文件”****菜单上单击“保存 <query_name>”****。  
+2.  从“文件”菜单上单击“保存 <query_name>”。  
   
     > [!NOTE]  
-    > 将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”****。  
+    > 将为新创建的查询分配系统名称。 若要自行选择查询名称，请选择“将 <query_name> 另存为”。  
   
 3.  查询将保存到解决方案资源管理器中项目的“查询”文件夹中。  
   

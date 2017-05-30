@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a6da7992bd9767f4a5b05c307c85af694b074729
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,9 +70,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“错误日志”****文件夹，然后选择“配置”****。  
+3.  右键单击“错误日志”文件夹，然后选择“配置”。  
   
-4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”****对话框。  
+4.  在 **“配置 SQL Server 代理错误日志”** 对话框的 **“错误日志文件”** 框中，输入错误日志的新文件路径和文件名称。 或者，单击省略号 **(...)** 以打开“指定代理错误日志位置”对话框。  
   
 5.  完成后，单击 **“确定”**。  
   

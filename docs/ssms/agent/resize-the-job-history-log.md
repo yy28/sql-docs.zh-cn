@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82aede2ce0a0f0a0271e73361292628049f97875
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,9 +50,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
-3.  选择“历史记录”****页，然后确认已选中“限制作业历史记录日志的大小”****。  
+3.  选择“历史记录”页，然后确认已选中“限制作业历史记录日志的大小”。  
   
 4.  在 **“作业历史记录日志的最大大小”** 框中，输入作业历史记录日志允许的最大行数。  
   
@@ -61,10 +62,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
+2.  右键单击“SQL Server 代理”，然后单击“属性”。  
   
 3.  选择 **“历史记录”** 页，然后单击 **“自动删除代理历史记录”**。  
   
-4.  选择适当的“天”****、“周”****或“月”****数。  
+4.  选择适当的“天”、“周”或“月”数。  
   
 

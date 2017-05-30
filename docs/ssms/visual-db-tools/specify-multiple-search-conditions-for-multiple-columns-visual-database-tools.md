@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 041d9a3c2a204d8413d755ec69946859195b5c0a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,9 +43,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个列的“筛选器”****列中，指定第一个条件。  
+2.  在要搜索的第一个列的“筛选器”列中，指定第一个条件。  
   
-3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”****列保留为空白。  
+3.  在要搜索的第二个数据列的 **Or...** 列中，指定第二个条件，将“筛选器”列保留为空白。  
   
     查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -58,15 +59,15 @@ ms.lasthandoff: 04/11/2017
 4.  对每个要添加的其他条件重复第 2 和第 3 步。 对每个新条件使用不同的 **Or...** 列。  
   
 ## <a name="specifying-an-and-condition"></a>指定 AND 条件  
-若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”****列中。  
+若要使用由 AND 链接的条件搜索不同的数据列，请将所有条件都放在网格的“筛选器”列中。  
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
 1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在要搜索的第一个数据列的“筛选器”****列中，指定第一个条件。  
+2.  在要搜索的第一个数据列的“筛选器”列中，指定第一个条件。  
   
-3.  在第二个数据列的“筛选器”****列中，指定第二个条件。  
+3.  在第二个数据列的“筛选器”列中，指定第二个条件。  
   
     查询和视图设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c988c7f2cf6128c0ddab4c126d4424aaead11deb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  打开或创建要运行的查询。  
   
-2.  右键单击查询窗口中的任意位置，然后从快捷菜单中选择“执行 SQL”****。  
+2.  右键单击查询窗口中的任意位置，然后从快捷菜单中选择“执行 SQL”。  
   
     - 或 -  
   

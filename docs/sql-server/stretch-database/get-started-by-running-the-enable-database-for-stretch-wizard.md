@@ -28,9 +28,10 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a40017c7e70e0af2e38485a26a96cfdcea88a345
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 SQL Server Management Studio 的对象资源管理器中，选择你想在其上启用 Stretch 的数据库。  
   
-2.  右键单击并选择“任务”****，再选择“Stretch”****，然后选择****“启用”以启动向导。  
+2.  右键单击并选择“任务”，再选择“Stretch”，然后选择“启用”以启动向导。  
   
 ##  <a name="Intro"></a> 简介  
  查看向导和必备组件的用途。  
@@ -78,26 +79,26 @@ ms.lasthandoff: 04/11/2017
 |**大小(KB)**|指定表的大小（以 KB 为单位）。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>选择性地提供行筛选器  
- 若想要提供筛选器函数来选择要迁移的行，请在“选择表”****页执行以下操作。  
+ 若想要提供筛选器函数来选择要迁移的行，请在“选择表”页执行以下操作。  
   
-1.  在****“选择你想要拉伸的表”列表中，在表的行中单击“整个表”****。 将打开****“选择要拉伸的行”对话框。  
+1.  在“选择你想要拉伸的表”列表中，在表的行中单击“整个表”。 将打开“选择要拉伸的行”对话框。  
   
      ![定义基于日期的筛选器谓词](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定义基于日期的筛选器谓词")  
   
-2.  在“选择要拉伸的行”****对话框中，选择“选择行”****。  
+2.  在“选择要拉伸的行”对话框中，选择“选择行”。  
   
-3.  在“名称字段”****中，为筛选器函数提供一个名称。  
+3.  在“名称字段”中，为筛选器函数提供一个名称。  
   
 4.  在 **Where** 子句中，选择表中的某列，然后选择一个运算符并提供一个值。  
   
-5.  单击“检查”****以测试函数。 如果函数从表中返回结果 - 即如果存在满足条件的待迁移的行 - 该测试会报告“成功”****。  
+5.  单击“检查”以测试函数。 如果函数从表中返回结果 - 即如果存在满足条件的待迁移的行 - 该测试会报告“成功”。  
 
 > [!NOTE] 
 > 显示筛选器查询的文本框为只读。 无法在文本框中编辑查询。
   
-6.  单击“完成”，返回到“选择表”****页。  
+6.  单击“完成”，返回到“选择表”页。  
 
-仅在完成该向导时，才会在 SQL Server 中创建筛选器函数。 届时你可以返回到“选择表”****页更改或重命名该筛选器函数。
+仅在完成该向导时，才会在 SQL Server 中创建筛选器函数。 届时你可以返回到“选择表”页更改或重命名该筛选器函数。
 
 ![定义筛选器谓词后的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2b.png "定义筛选器谓词后的“选择表”页")
 
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  为 Stretch Database 选择要使用的 Azure 区域。
     -   如果创建一个新服务器，则该服务器将在此区域进行创建。  
-    -   如果你在所选区域中有现有的服务器，则当你选择****“现有服务器”时，向导会将其列出。
+    -   如果你在所选区域中有现有的服务器，则当你选择“现有服务器”时，向导会将其列出。
   
      为了尽量减少延迟，请选择 SQL Server 所在的 Azure 区域。 有关区域的详细信息，请参阅 [Azure 区域](https://azure.microsoft.com/regions/)。  
   
@@ -142,9 +143,9 @@ ms.lasthandoff: 04/11/2017
   
         2.  选择身份验证方法。  
   
-            -   如果选择“SQL Server 身份验证”****，请提供管理员登录名和密码。  
+            -   如果选择“SQL Server 身份验证”，请提供管理员登录名和密码。  
   
-            -   选择“Active Directory 集成身份验证” **** ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
+            -   选择“Active Directory 集成身份验证”  ，以使用 SQL Server 的联合服务帐户与远程 Azure 服务器进行通信。 如果所选服务器未与 Azure Active Directory 集成，则此选项不会出现。
   
          ![选择现有 Azure 服务器 - Stretch Database 向导](../../sql-server/stretch-database/media/stretch-wizard-5.png "选择现有 Azure 服务器 - Stretch Database 向导")  
   
@@ -169,7 +170,7 @@ ms.lasthandoff: 04/11/2017
  ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
   
 ##  <a name="Summary"></a> 摘要  
- 查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成” **** 以启用 Stretch。  
+ 查看你输入的值和你在该向导中选择的选项以及 Azure 上的预估成本。 然后选择“完成”  以启用 Stretch。  
   
  ![Stretch Database 向导的“摘要”页](../../sql-server/stretch-database/media/stretch-wizard-8.png "Stretch Database 向导的“摘要”页")  
   

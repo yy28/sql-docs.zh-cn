@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 107326506a643f18e238954041534d464ed1cc00
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“警报”****并选择“新建警报”****。  
+3.  右键单击“警报”并选择“新建警报”。  
   
 4.  在 **“新建警报”** 对话框的 **“名称”** 框中，输入此警报的名称。  
   

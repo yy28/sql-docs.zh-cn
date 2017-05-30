@@ -20,9 +20,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a23a522ebf0c1d506cc55ef5923a583a19b64434
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,11 +67,11 @@ ms.lasthandoff: 04/11/2017
   
 4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”****，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”****，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”****，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”，以便无论完成状态如何，都记录作业状态。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理对象  
 **将作业状态写入 Windows 应用程序日志**  

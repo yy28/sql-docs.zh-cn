@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1153704ae4f345436c05a37cae98a522ef991ba1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -41,10 +42,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，使用对象资源管理器连接至 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]实例。  
   
-2.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”****。  
+2.  在对象资源管理器中，右键单击服务器名称，然后单击“属性”。  
   
-3.  在“安全性”****页上的“登录名审核”****下，单击所需选项，然后关闭“服务器属性”****页。  
+3.  在“安全性”页上的“登录名审核”下，单击所需选项，然后关闭“服务器属性”页。  
   
-4.  在对象资源管理器中，右键单击服务器名称，然后单击“重启”****。  
+4.  在对象资源管理器中，右键单击服务器名称，然后单击“重启”。  
   
 

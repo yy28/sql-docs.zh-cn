@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6bf3f6c31cb92aa86c8e2ac3d04beab51d00db13
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  关闭数据库关系图或表设计窗口。  
   
-2.  此时，将显示一条消息提示您保存更改。 请选择“否”****。  
+2.  此时，将显示一条消息提示您保存更改。 请选择“否”。  
   
     > [!CAUTION]  
     > 如果有其他打开的数据库关系图或表设计窗口连接到同一个数据库，请也关闭这些关系图或窗口而不保存更改。  

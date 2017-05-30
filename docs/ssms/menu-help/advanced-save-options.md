@@ -18,14 +18,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6f4ea7bfac8a9f8ed532f35588eecbc0e5761fc7
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”****对话框，在“文件”****菜单上，单击“<query name>.sql 另存为”********，打开“文件另存为”****对话框，再单击“保存”****按钮上的向下箭头，然后单击“编码保存”****。  
+使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”对话框，在“文件”菜单上，单击“<query name>.sql 另存为”，打开“文件另存为”对话框，再单击“保存”按钮上的向下箭头，然后单击“编码保存”。  
   
 ## <a name="options"></a>选项  
 **编码**  

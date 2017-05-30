@@ -19,9 +19,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f134aea8903ab0c31c3790c90d07f062ff292055
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,11 +31,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-rename-a-database-diagram"></a>重命名数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”****文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
   
 2.  右键单击要重命名的数据库关系图。  
   
-3.  从快捷菜单中选择“重命名”****。  
+3.  从快捷菜单中选择“重命名”。  
   
     此时，将在对象资源管理器中的关系图名称附近打开一个编辑框。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af137c019a7f96769b801d01f882e1d98b0da2ea
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击加号以展开要管理 SQL Server 代理服务的服务器。  
   
-2.  右键单击“SQL Server 代理”****，然后选择“启动”****、“停止”****或“重启”****。  
+2.  右键单击“SQL Server 代理”，然后选择“启动”、“停止”或“重启”。  
   
 3.  在 **“用户帐户控制”** 对话框中，请单击 **“是”**。  
   

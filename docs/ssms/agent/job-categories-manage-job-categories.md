@@ -18,14 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d13d885423f24a28fd70085f207d0ecc7546e2dd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="job-categories---manage-job-categories"></a>作业类别 - 管理作业类别
-使用“作业类别”****对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
+使用“作业类别”对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
   
 ## <a name="options"></a>选项  
 **名称**  
@@ -35,10 +36,10 @@ ms.lasthandoff: 04/11/2017
 为此类别定义的作业数。  
   
 **查看作业**  
-打开所选类别的“属性”****对话框，列出当前为该类别定义的所有作业。  
+打开所选类别的“属性”对话框，列出当前为该类别定义的所有作业。  
   
 **“添加”**  
-打开“新建作业类别”****对话框，添加新的作业类别。  
+打开“新建作业类别”对话框，添加新的作业类别。  
   
 **删除**  
 删除所选作业类别。 只用于用户定义的作业类别。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>访问“作业类别”对话框  
   
-1.  在“对象资源管理器”****中，展开“SQL Server 代理”****，右键单击“作业”****，再单击“管理作业类别”****。  
+1.  在“对象资源管理器”中，展开“SQL Server 代理”，右键单击“作业”，再单击“管理作业类别”。  
   
 

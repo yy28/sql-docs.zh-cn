@@ -16,14 +16,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: acc46cf8d6af75c2c4719dcd30e6766ab8756512
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
-可通过选择“打印”****对话框中的选项来指定打印文档的方式。  
+可通过选择“打印”对话框中的选项来指定打印文档的方式。  
   
 ## <a name="printer"></a>打印机  
 **名称**  
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 只打印当前所选内容。 在选择文档的部分或全部内容之前该选项始终不可用。  
   
 **页**  
-打印在“页”****框中所键入的页。  
+打印在“页”框中所键入的页。  
   
 ## <a name="copies"></a>副本  
 **份数**  

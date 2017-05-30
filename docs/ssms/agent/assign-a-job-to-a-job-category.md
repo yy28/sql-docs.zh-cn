@@ -21,9 +21,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5529f7d3664e669893ccdf34e3dd58c9722176de
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要编辑的作业，然后选择“属性”****。  
+4.  右键单击要编辑的作业，然后选择“属性”。  
   
-5.  在“作业属性 - job_name”******对话框的“类别”****列表中，选择要分配给作业的作业类别。  
+5.  在“作业属性 - job_name”对话框的“类别”列表中，选择要分配给作业的作业类别。  
   
 6.  单击 **“确定”**。  
   

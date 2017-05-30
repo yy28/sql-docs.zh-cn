@@ -16,9 +16,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ebacb7a14c17d78eb39e135b907507a233ec8cae
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,10 +28,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>选项  
 **上次警报的日期**  
-显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”****。  
+显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”。  
   
 **上次响应的日期**  
-显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”****。  
+显示警报上次响应该事件的日期，或者如果自从创建警报后从未发生该事件则显示“(从未响应)”。  
   
 **发生次数**  
 自从创建警报后或从上次重置计数后，该事件发生的总次数。  

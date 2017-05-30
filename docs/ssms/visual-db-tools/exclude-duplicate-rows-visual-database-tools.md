@@ -21,9 +21,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bad0e2729b2a0bfa0728d9257194c4adb10a885e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,9 +33,9 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-exclude-duplicate-rows-from-the-result-set"></a>从结果集中排除重复行  
   
-1.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“属性”****。  
+1.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“属性”。  
   
-2.  在“属性”窗口，单击“DISTINCT 值”****，再将其值设置为“是”****。  
+2.  在“属性”窗口，单击“DISTINCT 值”，再将其值设置为“是”。  
   
     查询和视图设计器将在 SQL 语句中显示列的列表之前插入关键字 DISTINCT。  
   

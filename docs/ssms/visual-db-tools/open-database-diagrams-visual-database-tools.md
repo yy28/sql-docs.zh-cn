@@ -18,9 +18,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 54c012b6648c2c35395b22489d3f2f3493f189fe
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,13 +30,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”****文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
   
 2.  双击要打开的数据库关系图的名称。  
   
     - 或 -  
   
-    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”****。  
+    右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”。  
   
 此时，将在数据库关系图设计器中打开该数据库关系图，您可以在其中编辑关系图。  
   

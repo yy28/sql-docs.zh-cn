@@ -18,9 +18,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a3e071ed87ccd53b805b5132c861cb3dc8b530ea
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,9 +59,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”****，再展开“作业”****，右键单击某个作业，然后单击“属性”****。  
+2.  展开“SQL Server 代理”，再展开“作业”，右键单击某个作业，然后单击“属性”。  
   
-3.  在“作业属性****”对话框中，选择“目标”****页，然后单击“目标为本地服务器”****或“目标为多台服务器”****。  
+3.  在“作业属性”对话框中，选择“目标”页，然后单击“目标为本地服务器”或“目标为多台服务器”。  
   
     如果选择 **“目标为多台服务器”**，请选中服务器名称左边的框将其指定为作业的目标服务器。 验证未选中不作为作业的目标服务器旁的复选框。  
   

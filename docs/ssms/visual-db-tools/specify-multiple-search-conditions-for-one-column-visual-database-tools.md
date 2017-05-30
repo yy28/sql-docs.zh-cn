@@ -20,9 +20,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a7b140acf1b00f31df0d8c948cdeca8ff6703726
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,9 +49,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在[“条件窗格”](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”****列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”列中，指定第一个条件。  
   
-3.  在同一数据列的“或...”****列中，指定第二个条件。  
+3.  在同一数据列的“或...”列中，指定第二个条件。  
   
 查询和视图设计器将创建包含 OR 条件的 WHERE 子句，如下所示：  
   
@@ -70,11 +71,11 @@ WHERE (salary < 30000) OR (salary > 100000)
   
 1.  在“条件”窗格中，添加要搜索的列。  
   
-2.  在刚刚添加的数据列的“筛选器”****列中，指定第一个条件。  
+2.  在刚刚添加的数据列的“筛选器”列中，指定第一个条件。  
   
 3.  将同一数据列再次添加到“条件”窗格中，将其放在网格的空行中。  
   
-4.  在数据列的第二个实例的“筛选器”****列中，指定第二个条件。  
+4.  在数据列的第二个实例的“筛选器”列中，指定第二个条件。  
   
 查询设计器将创建包含 AND 条件的 WHERE 子句，如下所示：  
   

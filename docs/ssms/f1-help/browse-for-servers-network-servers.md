@@ -16,14 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0dfaef0364cf72e994b0fe5de778adc8a18bd715
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="browse-for-servers-network-servers"></a>查找服务器（网络服务器）
-如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的确切名称，请在“服务器名称”****框中单击“浏览更多”****，以打开“查找服务器”****对话框。  
+如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的确切名称，请在“服务器名称”框中单击“浏览更多”，以打开“查找服务器”对话框。  
   
 将通过服务器计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Browser 服务填充此对话框。 列表中未显示实例名称的原因有多种：  
   

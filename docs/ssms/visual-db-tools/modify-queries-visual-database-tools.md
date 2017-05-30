@@ -17,9 +17,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ba1aeadc84bf4ffb5ecc019eec496b0bd2db084d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,11 +29,11 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-open-a-query"></a>打开查询  
   
-1.  在“视图”****菜单中，单击“解决方案资源管理器”****。  
+1.  在“视图”菜单中，单击“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要打开的查询，再单击“打开”****。  
+2.  在解决方案资源管理器中，右键单击要打开的查询，再单击“打开”。  
   
-3.  若要在查询设计器中修改查询，请突出显示相应的 SQL 语句，右键单击突出显示区域，再选择“在编辑器中设计查询”****。  
+3.  若要在查询设计器中修改查询，请突出显示相应的 SQL 语句，右键单击突出显示区域，再选择“在编辑器中设计查询”。  
   
 查询设计器随即打开，您便可以进行修改了。  
   

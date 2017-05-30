@@ -19,9 +19,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,11 +40,11 @@ ms.lasthandoff: 04/11/2017
   
 向“条件”窗格的“筛选器”列中输入搜索条件时，查询和视图设计器将遵循以下规则：  
   
--   如果没有显示网格的“分组依据”****列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
+-   如果没有显示网格的“分组依据”列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
   
--   如果已在聚合查询中，并在“分组依据”****列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
+-   如果已在聚合查询中，并在“分组依据”列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
   
--   如果“分组依据”****列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
+-   如果“分组依据”列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
   
 ## <a name="using-the-having-and-where-clauses"></a>使用 HAVING 和 WHERE 子句  
 以下原则描述如何在聚合查询的搜索条件中引用列。 通常，可以在搜索条件中使用列来筛选要汇总的行（WHERE 子句）或确定要在最终输出中显示的分组结果（HAVING 子句）。  

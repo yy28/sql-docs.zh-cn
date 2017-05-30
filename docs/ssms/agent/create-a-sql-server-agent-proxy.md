@@ -16,9 +16,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以展开 **“SQL Server 代理”**。  
   
-3.  右键单击“代理”****文件夹，然后选择“新建代理”****。  
+3.  右键单击“代理”文件夹，然后选择“新建代理”。  
   
 4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页中，在 **“代理名称”** 框中输入代理帐户的名称。  
   

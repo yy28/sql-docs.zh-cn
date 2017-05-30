@@ -18,9 +18,10 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 630593a904b4fb28e39e94a81e02481c0e6a8e1d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,12 +37,12 @@ ms.lasthandoff: 04/11/2017
 -   SQL 语句有效但包含特定于所使用数据连接的语法。  
   
 > [!TIP]  
-> 可以使用“查询”****工具栏上的“验证 SQL 语句”****按钮来检查语句是否有效。  
+> 可以使用“查询”工具栏上的“验证 SQL 语句”按钮来检查语句是否有效。  
   
 该对话框将显示一条消息，指示不能显示 SQL 语句的原因，并询问如何继续。  
   
 > [!NOTE]  
-> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”****对话框。  
+> 如果已经隐藏了“关系图”窗格和“条件”窗格，则不会显示“查询定义不同”对话框。  
   
 ## <a name="options"></a>选项  
 **“忽略”按钮**  

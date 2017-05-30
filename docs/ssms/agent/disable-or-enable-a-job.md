@@ -19,9 +19,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 63ab17f3ac8fb0de122b8553d2f5ce536ef3701c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“SQL Server 代理”**。  
   
-3.  展开“作业”****，然后右键单击要禁用或启用的作业。  
+3.  展开“作业”，然后右键单击要禁用或启用的作业。  
   
 4.  若要禁用作业，请单击 **“禁用”**。 若要启用作业，请单击 **“启用”**。  
   

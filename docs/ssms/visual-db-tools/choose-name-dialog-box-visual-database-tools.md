@@ -18,14 +18,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 423802c1515af50d30772bc7792dc54426fafc6b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
-从“文件”****菜单中选择“保存 \<TableName>”****、“保存 <DiagramName>”****或“保存 <ViewName>”****时，该对话框随即出现。  
+从“文件”菜单中选择“保存 \<TableName>”、“保存 <DiagramName>”或“保存 <ViewName>”时，该对话框随即出现。  
   
 **输入表、关系图或视图的名称。**  
 提供一个文本框，您可以在其中为表、关系图或视图键入名称。  

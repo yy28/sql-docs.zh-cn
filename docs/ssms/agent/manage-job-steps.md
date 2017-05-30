@@ -28,9 +28,10 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f9ecad6fcec2596f26351839311cc8b647e094e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -193,7 +194,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
-请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”****选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
 有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)。  
   
