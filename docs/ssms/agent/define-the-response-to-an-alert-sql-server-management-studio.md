@@ -25,7 +25,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
+# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定义对警报的响应 (SQL Server Management Studio)
 本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报的响应方式。  
   
 **本主题内容**  
@@ -67,13 +67,13 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要对其定义响应的警报，然后选择“属性”****。  
+4.  右键单击要对其定义响应的警报，然后选择“属性”。  
   
-5.  在“alert_name 警报属性”******对话框的“选择页”****下，选择“响应”****。  
+5.  在“alert_name 警报属性”对话框的“选择页”下，选择“响应”。  
   
-6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”**来创建新的作业。 也可以单击 **“查看作业”**查看有关作业的详细信息。 有关“新建作业”****和“作业属性 job_name”******对话框中的可用选项的详细信息，请参阅[作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
+6.  选中 **“执行作业”** 复选框，然后从 **“执行作业”** 复选框下的列表中选择出现警报时执行的作业。 您可以单击 **“新建作业”**来创建新的作业。 也可以单击 **“查看作业”**查看有关作业的详细信息。 有关“新建作业”和“作业属性 job_name”对话框中的可用选项的详细信息，请参阅[作业](../../ssms/agent/create-a-job.md)和[查看作业](../../ssms/agent/view-a-job.md)。  
   
-7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”****列表中，选择以下用于通知操作员的一个或多个方法：“电子邮件”****、“寻呼程序”****或“Net Send”****。 您可以单击 **“新建操作员”**创建新的操作员。 也可以单击 **“查看操作员”**查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
+7.  如果要在激活警报时通知操作员，请选中 **“通知操作员”** 复选框。 在“操作员”列表中，选择以下用于通知操作员的一个或多个方法：“电子邮件”、“寻呼程序”或“Net Send”。 您可以单击 **“新建操作员”**创建新的操作员。 也可以单击 **“查看操作员”**查看有关操作员的详细信息。 有关 **“新建操作员”** 和 **“查看操作员属性”** 对话框中的可用选项的详细信息，请参阅 [Create an Operator](../../ssms/agent/create-an-operator.md) 和 [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)。  
   
 8.  完成后，单击 **“确定”**。  
   
