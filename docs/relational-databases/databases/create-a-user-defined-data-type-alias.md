@@ -19,9 +19,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-user-defined-data-type"></a>创建用户定义数据类型  
   
-1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”********************。  
+1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”。  
   
      **允许 Null**  
      指定用户定义数据类型是否可以接受 Null 值。 不能编辑现有的用户定义数据类型的为 NULL 性。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 04/11/2017
   
      不会显示 **nvarchar(max)**、**varchar(max)**或 **varbinary(max)** 数据类型的存储。  
   
-2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构********。  
+2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构。  
   
 3.  在 **“名称”** 框中，键入新数据类型别名的名称。  
   

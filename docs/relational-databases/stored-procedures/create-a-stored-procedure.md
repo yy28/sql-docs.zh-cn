@@ -18,9 +18,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  依次展开 **“数据库”**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库和 **“可编程性”**。  
   
-3.  右键单击“存储过程”****，再单击“新建存储过程”****。  
+3.  右键单击“存储过程”，再单击“新建存储过程”。  
   
 4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  单击“确定” ****。  
+6.  单击“确定” 。  
   
 7.  在 **“查询编辑器”**中，使用以下语句替换 SELECT 语句：  
   
@@ -83,11 +84,11 @@ ms.lasthandoff: 04/11/2017
   
 9. 若要创建该过程，请在 **“查询”** 菜单上单击 **“执行”**。 该过程作为数据库中的对象创建。  
   
-10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”****，然后选择“刷新”****。  
+10. 若要查看在对象资源管理器中列出的过程，请右键单击“存储过程”，然后选择“刷新”。  
   
-11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”****。  
+11. 若要运行该过程，请在对象资源管理器中右键单击存储过程名称 **HumanResources.uspGetEmployeesTest**，然后选择“执行存储过程”。  
   
-12. 在“执行过程”****窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
+12. 在“执行过程”窗口中，输入 Margheim 作为参数 @LastName 的值，并输入值 Diane 作为参数 @FirstName 的值。  
   
 > [!WARNING]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  

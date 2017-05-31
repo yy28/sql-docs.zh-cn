@@ -18,9 +18,10 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 087070d0e19d777b6ac2d457303e9e9962073ead
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,11 +35,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-condition"></a>指定条件  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”。  
   
      - 或 -  
   
-     在“断点”****窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”****。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“条件”。  
   
 2.  在 **“断点条件”** 对话框中，在 **“条件”** 框中输入一个有效的布尔表达式。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要删除的计划指南，然后选择“删除”****。  
+3.  右键单击要删除的计划指南，然后选择“删除”。  
   
 4.  在 **“删除对象”** 对话框中，确保已选择正确的计划指南，然后单击 **“确定”**。  
   

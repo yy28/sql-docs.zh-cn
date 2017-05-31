@@ -20,9 +20,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f568f9e74e17bce1d2e5af044e8820e49203a210
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击 **“本地订阅”** 文件夹，再单击 **“新建订阅”**。  
   
-4.  在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。****************  
+4.  在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。****  
   
 5.  在 **“连接到服务器”** 对话框中连接到发布服务器。  
   

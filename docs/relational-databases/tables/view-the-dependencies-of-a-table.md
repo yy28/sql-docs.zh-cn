@@ -19,9 +19,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8359eccee9aeda470c962793d13c85819ef9fe49
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开 **“数据库”**，再展开其中的某个数据库，然后展开 **“表”**。  
   
-2.  右键单击某个表，然后单击“查看依赖关系”****。  
+2.  右键单击某个表，然后单击“查看依赖关系”。  
   
-3.  在“对象依赖关系 \<对象名称>”******对话框中，选择“依赖于 \<对象名称> 的对象”******或“\<对象名称> 依赖的对象”**********。  
+3.  在“对象依赖关系 \<对象名称>”对话框中，选择“依赖于 \<对象名称> 的对象”或“\<对象名称> 依赖的对象”。  
   
-4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”****框中。  
+4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

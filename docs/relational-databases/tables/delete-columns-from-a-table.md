@@ -19,9 +19,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”****中，右键单击要从其中删除列的表，然后选择“删除”****。  
+2.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>通过使用表设计器删除列  
   
-1.  在“对象资源管理器”****中，右键单击要从其中删除列的表，然后选择“设计”****。  
+1.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“设计”。  
   
-2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”****。  
+2.  右键单击要删除的列，然后从快捷菜单上选择“删除列”。  
   
 3.  如果该列参与了关系（FOREIGN KEY 或 PRIMARY KEY），则将显示一条消息，提示您确认删除所选列及其关系。 选择 **“是”**。  
   

@@ -18,16 +18,17 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a3834548fba6eb52e57836eefdb9f8917cb35d0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="snapshot-agent-security"></a>快照代理安全性
   可以使用 **“快照代理安全性”** 对话框指定以下内容：  
   
--   用于在分发服务器上运行快照代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 Windows 帐户也称为“进程帐户 **”，因为代理进程是在此帐户下运行。  
+-   用于在分发服务器上运行快照代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 Windows 帐户也称为“进程帐户 ”，因为代理进程是在此帐户下运行。  
   
 -   快照代理与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器建立连接时所处的上下文。 通过模拟 Windows 帐户，或在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户的上下文中可以进行连接。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 -   对快照共享具有写权限。  
   
- **** 和“确认密码” ****  
+  和“确认密码” ****  
  输入 Windows 帐户的密码。  
   
  **连接到发布服务器**  

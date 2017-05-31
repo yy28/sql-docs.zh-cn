@@ -20,9 +20,10 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3d68cd7bdf48e838c060705166f3714eaa7db581
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“服务器对象”**，然后展开 **“备份设备”**。  
   
-3.  右键单击要删除的设备，然后单击“删除”****。  
+3.  右键单击要删除的设备，然后单击“删除”。  
   
 4.  在 **“删除对象”** 对话框中，请验证 **“对象名称”** 列中显示正确的设备名称。  
   

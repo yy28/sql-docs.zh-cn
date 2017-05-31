@@ -24,14 +24,15 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
-  可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用**邻近词 **NEAR** 来搜索相互邻近的字词或短语。 
+  可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 **NEAR** 来搜索相互邻近的字词或短语。 
   
 ##  <a name="Custom_NEAR"></a> NEAR 概述  
 **NEAR** 具有以下功能：  
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 
 -   你可以按任意顺序搜索词或短语，也可以按特定顺序搜索词或短语。
   
--   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离**，以作为构成匹配项的条件。  
+-   可以指定第一个搜索词与最后一个搜索词之间存在的非搜索词的最大数目或最大距离，以作为构成匹配项的条件。  
 
 -   如果指定词的最大数目，还可以指定搜索词必须以指定顺序出现在匹配项中。
 

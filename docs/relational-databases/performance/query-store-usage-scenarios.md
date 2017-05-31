@@ -17,9 +17,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,9 +46,9 @@ ms.lasthandoff: 04/11/2017
   
 -   确定在你所关注的时间段内（过去一小时、昨天、上周等）其执行度量值已降级的所有查询。 在 **中使用** 回归查询 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 加快分析速度。  
   
--   在回归查询中，很容易找到那些有多个计划的查询，以及由于计划选择错误而降级的查询。 使用“回归查询”****中的“计划摘要”****窗格来显示回归查询的所有计划及其在某个时间段的查询性能。  
+-   在回归查询中，很容易找到那些有多个计划的查询，以及由于计划选择错误而降级的查询。 使用“回归查询”中的“计划摘要”窗格来显示回归查询的所有计划及其在某个时间段的查询性能。  
   
--   强制实施历史记录中的旧计划（如果该计划证明更好）。 使用“回归查询”****中的“强制计划”****按钮，强制实施针对查询选择的计划。  
+-   强制实施历史记录中的旧计划（如果该计划证明更好）。 使用“回归查询”中的“强制计划”按钮，强制实施针对查询选择的计划。  
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
@@ -99,11 +100,11 @@ ms.lasthandoff: 04/11/2017
   
     1.  打开“数据库总体使用情况”以确定对整个数据库的影响 ****  
   
-    2.  打开“资源使用排名靠前的查询”****（或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 运行你自己的分析），以便分析所做的更改对最重要查询的影响。  
+    2.  打开“资源使用排名靠前的查询”（或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 运行你自己的分析），以便分析所做的更改对最重要查询的影响。  
   
 5.  决定是保留所做的更改，还是在无法接受新性能的情况下进行回退。  
   
- 下图显示了如何在创建缺失索引的情况下进行 Query Store 分析（步骤 4）。 打开“资源使用排名靠前的查询”****/“计划摘要”窗格，此时将显示会受索引创建操作影响的查询的该视图：  
+ 下图显示了如何在创建缺失索引的情况下进行 Query Store 分析（步骤 4）。 打开“资源使用排名靠前的查询”/“计划摘要”窗格，此时将显示会受索引创建操作影响的查询的该视图：  
   
  ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
@@ -133,13 +134,13 @@ ms.lasthandoff: 04/11/2017
 4.  使用 Query Store 进行分析并解决回归问题：大多数情况下，新查询优化器会生成更好的计划。 不过，Query Store 可以让你轻松地识别计划选择回归并使用计划强制机制对其进行修复。  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>识别并提高即席工作负荷  
- 某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对大量的各个不同的查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”****（[强烈建议](https://msdn.microsoft.com/library/mt604821.aspx)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
+ 某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对大量的各个不同的查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](https://msdn.microsoft.com/library/mt604821.aspx)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
   
- 你可以通过“资源使用排名靠前的查询”****视图，首先了解到工作负荷的即席性质：  
+ 你可以通过“资源使用排名靠前的查询”视图，首先了解到工作负荷的即席性质：  
   
  ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
- 可以通过“执行计数”****度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 你可以从上图中看到，90% 的“资源使用排名靠前的查询”仅执行一次。 ****  
+ 可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 你可以从上图中看到，90% 的“资源使用排名靠前的查询”仅执行一次。 ****  
   
  此外，你还可以通过运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来获取系统中查询文本、查询和计划的总数，并可通过比较 query_hash 和 plan_hash 来确定其差异：  
   

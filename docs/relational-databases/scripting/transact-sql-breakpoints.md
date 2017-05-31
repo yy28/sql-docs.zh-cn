@@ -16,9 +16,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41f54315c2d72e6bd73fd7499aafa94517fa5908
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 |说明如何指定一个条件，该条件定义断点是否基于指定 Transact-SQL 表达式的计算结果而中断。|[指定断点条件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)|  
 |说明如何指定一个命中计数，该命中计数仅在包含断点的语句已执行了指定次数时才会导致断点中断。|[指定命中计数](../../relational-databases/scripting/specify-a-hit-count.md)|  
 |说明如何指定一个筛选器，该筛选器使断点仅对于指定的进程或线程才会中断。|[指定断点筛选器](../../relational-databases/scripting/specify-a-breakpoint-filter.md)|  
-|说明如何指定一个“命中条件”操作，该“命中条件” **** 操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
+|说明如何指定一个“命中条件”操作，该“命中条件”  操作是一种在执行断点语句时执行的自定义操作。 示例将打印一条消息。|[指定断点操作](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
 |说明如何编辑断点的位置。|[编辑断点位置](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>另请参阅  

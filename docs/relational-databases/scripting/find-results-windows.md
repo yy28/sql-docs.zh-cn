@@ -20,9 +20,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
  转到下一个匹配项所在的行。  
   
  **全部清除**  
- 从“结果”****列表中删除所有匹配项。  
+ 从“结果”列表中删除所有匹配项。  
   
 ## <a name="shortcut-keys"></a>快捷键  
  使用以下快捷键，可以帮助快速浏览找到的匹配项。  

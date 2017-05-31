@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c409fd3fc46ce2612290737bf658dd4358280495
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要导出的策略，然后选择“导出策略”****。  
+5.  右键单击要导出的策略，然后选择“导出策略”。  
   
 6.  在 **“导出策略”** 对话框中，在地址栏中键入文件的路径和名称。 或者，在对话框的导航窗格中找到文件的合适位置，然后在 **“文件名”** 框中键入 XML 文件的名称。  
   

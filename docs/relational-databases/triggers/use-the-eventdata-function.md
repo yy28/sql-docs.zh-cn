@@ -17,9 +17,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -130,7 +131,7 @@ GO
 > [!NOTE]  
 >  如果需要返回事件数据，我们建议使用 XQuery **value()** 方法而不是 **query()** 方法。 **query()** 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 **value()** 方法无法在输出中呈现 CRLF 实例。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击 **ddlDatabseTriggerLog** 并选择“编写数据库触发器脚本为”****。 默认情况下，DDL 触发器 **ddlDatabseTriggerLog** 处于禁用状态。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击 **ddlDatabseTriggerLog** 并选择“编写数据库触发器脚本为”。 默认情况下，DDL 触发器 **ddlDatabseTriggerLog** 处于禁用状态。  
   
 ## <a name="see-also"></a>另请参阅  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   

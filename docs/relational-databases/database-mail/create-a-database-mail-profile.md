@@ -18,9 +18,10 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -119,7 +120,7 @@ ms.lasthandoff: 04/11/2017
   
      *@profile_name* = '*配置文件的名称*'  
   
-     *@ principal_name* = '数据库用户或角色的名称**'  
+     *@ principal_name* = '数据库用户或角色的名称'  
   
      *@is_default* = '*默认配置文件状态*'  
   

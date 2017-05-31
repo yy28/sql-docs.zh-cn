@@ -17,9 +17,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 60356d04463b7905e092ddb8ccc6374fe410719b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -74,9 +75,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要指定索引的填充因子的表，然后选择“设计”****。  
+3.  右键单击你要指定索引的填充因子的表，然后选择“设计”。  
   
-4.  在“表设计器”****菜单上，单击“索引/键”****。  
+4.  在“表设计器”菜单上，单击“索引/键”。  
   
 5.  选择您要指定填充因子的索引。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/11/2017
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”****菜单上，选择“保存”****以保存 *table_name*。  
+8.  在“文件”菜单上，选择“保存”以保存 *table_name*。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要指定填充因子的索引，然后选择“属性”****。  
+5.  右键单击要指定填充因子的索引，然后选择“属性”。  
   
 6.  在 **“选择页”**下，选择 **“选项”**。  
   

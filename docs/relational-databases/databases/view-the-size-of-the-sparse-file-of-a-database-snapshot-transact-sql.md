@@ -21,9 +21,10 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76e79c5662019c197c2cb11785ca250ac4ba2d0b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
  若要查看磁盘上每个快照稀疏文件当前使用的字节数，请查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 动态管理视图的 **size_on_disk_bytes** 列。  
   
- 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”****，然后查看“占用空间”****值。  
+ 若要查看稀疏文件占用的磁盘空间，在 Microsoft Windows 中右键单击文件，再单击“属性”，然后查看“占用空间”值。  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>查看稀疏文件的最大大小  
  稀疏文件最大只能增长到创建快照时相应的源数据库文件的大小。 若要了解此大小，可以使用下列方法之一：  

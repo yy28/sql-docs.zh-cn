@@ -22,9 +22,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
-2.  右键单击所需数据库，指向“任务”****，再指向“还原”****，然后单击“文件和文件组”****。  
+2.  右键单击所需数据库，指向“任务”，再指向“还原”，然后单击“文件和文件组”。  
   
 3.  在 **“常规”** 页上的 **目标数据库** 列表框中，输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **“选择页”** 窗格中，单击 **“选项”** 页。  
   
-7.  在“还原选项”****面板中，选择“覆盖现有数据库 (WITH REPLACE)”****。 还原操作将会覆盖所有现有数据库及其相关文件，即使已存在同名的其他数据库或文件。  
+7.  在“还原选项”面板中，选择“覆盖现有数据库 (WITH REPLACE)”。 还原操作将会覆盖所有现有数据库及其相关文件，即使已存在同名的其他数据库或文件。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

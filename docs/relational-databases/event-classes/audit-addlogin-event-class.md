@@ -16,14 +16,15 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: defdcbd68e38e097908dbded5dd28448f09f17fd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件类
-  当添加或删除了 **** 登录名时，会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
+  当添加或删除了  登录名时，会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
   
  如果在添加了登录帐户后设置其他属性，例如，默认数据库，会在此事件的 **TextData** 列中找到有关这些属性的信息。 如果在添加登录帐户时设置这些属性，就不会发生 **Audit Login Change Property** 事件。  
   

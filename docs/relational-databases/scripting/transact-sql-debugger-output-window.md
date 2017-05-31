@@ -19,9 +19,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b72555e4286f74f7fc369c076af8d27721b2b3a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  显示要查看的输出窗格的列表。 可能会有多个信息窗格可用，取决于哪些工具已经使用 **“输出”** 窗口将信息传递给用户。  
   
  **输出窗格**  
- 显示“输出窗格列表”****中所选窗格的输出结果。  
+ 显示“输出窗格列表”中所选窗格的输出结果。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)  

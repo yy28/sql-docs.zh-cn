@@ -18,9 +18,10 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6eb24cf562396f61af07735fa741e50d447a4b50
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,11 +59,11 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
   
-3.  展开“存储过程”****，右键单击要修改的过程，再单击“修改”****。  
+3.  展开“存储过程”，右键单击要修改的过程，再单击“修改”。  
   
 4.  修改存储过程的文本。  
   
-5.  若要测试语法，请在“查询” **** 菜单上单击“分析” ****。  
+5.  若要测试语法，请在“查询”  菜单上单击“分析” 。  
   
 6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”**。  
   

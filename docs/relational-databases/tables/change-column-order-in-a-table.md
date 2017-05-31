@@ -17,9 +17,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-change-the-column-order"></a>更改列顺序  
   
-1.  在“对象资源管理器”****中，右键单击包含要重新排序的列的表，再单击“设计”****。  
+1.  在“对象资源管理器”中，右键单击包含要重新排序的列的表，再单击“设计”。  
   
 2.  选择要重新排序的列名称左侧的框。  
   

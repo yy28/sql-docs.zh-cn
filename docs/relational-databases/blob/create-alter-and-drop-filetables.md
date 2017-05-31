@@ -18,9 +18,10 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 -   目录名称。 在 FileTable 文件夹层次结构中，此表级目录将成为在数据库级别指定的数据库目录的子级以及在表中存储的文件或目录的父级。  
   
--   要用于 FileTable 的“名称” **** 列中文件名的排序规则名称。  
+-   要用于 FileTable 的“名称”  列中文件名的排序规则名称。  
   
 -   要用于 3 个主键的名称和自动创建的唯一约束。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
     -   如果您创建 FileTable 时没有提供目录名称，则 FileTable 自身的名称将用作目录名称。  
   
-2.  **FILETABLE_COLLATE_FILENAME**。 指定要应用于 FileTable 的“名称” **** 列的排序规则名称。  
+2.  **FILETABLE_COLLATE_FILENAME**。 指定要应用于 FileTable 的“名称”  列的排序规则名称。  
   
     1.  指定的排序规则必须**不区分大小写**，以符合 Windows 文件命名语义。  
   
@@ -87,7 +88,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建 FileTable**  
- 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”****文件夹，选择“新建 FileTable”****。  
+ 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”文件夹，选择“新建 FileTable”。  
   
  此选项将打开一个新的脚本窗口，其中包含一个 Transact-SQL 脚本模板，您可以自定义和运行此模板以创建 FileTable。 使用 **“查询”** 菜单上的 **“指定模板参数的值”** 选择可轻松指定脚本。  
   
@@ -123,7 +124,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。******** 在 **FileTable** 页上，为 **“FileTable 目录名称”**输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。**** 在 **FileTable** 页上，为 **“FileTable 目录名称”**输入新值。  
   
 ###  <a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   

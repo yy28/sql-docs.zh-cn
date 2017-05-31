@@ -16,23 +16,24 @@ caps.latest.revision: 89
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ac731905f16f406cafd6402ebb647cddbae83005
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="restore-database-general-page"></a>还原数据库（“常规”页）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  使用“常规”****页，可以指定数据库还原操作的目标数据库和源数据库的有关信息。  
+  使用“常规”页，可以指定数据库还原操作的目标数据库和源数据库的有关信息。  
     
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [为磁带驱动器定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定还原任务时，可以通过单击“脚本”****，再为脚本选择一个目标，生成相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定还原任务时，可以通过单击“脚本”，再为脚本选择一个目标，生成相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 脚本。  
   
 ## <a name="permissions"></a>权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果该数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及该数据库的所有者 (**dbo**)。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 04/11/2017
 ## <a name="options"></a>选项  
   
 ### <a name="source"></a>数据源  
- “还原自” ****面板中的选项可标识数据库的备份集的位置以及要还原的备份集。  
+ “还原自” 面板中的选项可标识数据库的备份集的位置以及要还原的备份集。  
   
 |术语|定义|  
 |----------|----------------|  
 |**数据库**|从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。|  
-|**设备**|选择包含要还原的一个或多个备份的逻辑或物理备份设备（磁带、URL 或文件）。 如果在另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行数据库备份，则此选项是必需的。<br /><br /> 若要选择一个或多个逻辑或物理备份设备，请单击浏览按钮，这将打开 **“选择备份设备”** 对话框。 在此，最多可以选择属于一个介质集的 64 个设备。 磁带机必须与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机进行物理连接。 备份文件可以位于本地或远程磁带设备上。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)实例上执行数据库备份，则此选项是必需的。 还可以选择 **“URL”** 作为 Windows Azure 存储中所存储备份文件的设备类型。<br /><br /> 退出“选择备份设备”****对话框时，选择的设备将在“设备”****列表中显示为只读值。|  
-|**数据库**|从下拉列表中选择要从其还原备份的数据库名称。<br /><br /> 注意：此列表仅在选择了“设备” **** 时才可用。 只有已在所选设备上备份的数据库才可用。|  
+|**设备**|选择包含要还原的一个或多个备份的逻辑或物理备份设备（磁带、URL 或文件）。 如果在另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行数据库备份，则此选项是必需的。<br /><br /> 若要选择一个或多个逻辑或物理备份设备，请单击浏览按钮，这将打开 **“选择备份设备”** 对话框。 在此，最多可以选择属于一个介质集的 64 个设备。 磁带机必须与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机进行物理连接。 备份文件可以位于本地或远程磁带设备上。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)实例上执行数据库备份，则此选项是必需的。 还可以选择 **“URL”** 作为 Windows Azure 存储中所存储备份文件的设备类型。<br /><br /> 退出“选择备份设备”对话框时，选择的设备将在“设备”列表中显示为只读值。|  
+|**数据库**|从下拉列表中选择要从其还原备份的数据库名称。<br /><br /> 注意：此列表仅在选择了“设备”  时才可用。 只有已在所选设备上备份的数据库才可用。|  
   
 ### <a name="destination"></a>目标  
  **“还原到”** 面板中的选项可标识数据库和还原点。  
@@ -72,13 +73,13 @@ ms.lasthandoff: 04/11/2017
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用与早期版本不同的默认路径。 因此，若要还原在早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的默认位置创建的数据库，必须使用 MOVE 选项。  
   
- 在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”****服务器属性的设置。 如果将升级选项设置为“导入”****或“重新生成”****，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”****时，如果全文目录不可用，将重新生成关联的全文检索。  
+ 在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于“全文升级选项”服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。  
   
 ## <a name="restoring-from-an-encrypted-backup"></a>从加密备份还原  
  还原要求在要还原到的实例上具有最初用于创建备份的证书或非对称密钥。 执行还原的帐户应对证书或非对称密钥具有 **VIEW DEFINITIONS** 权限。 不应续订或更新用于加密备份的证书。  
   
 ## <a name="restoring-from-microsoft-azure-storage"></a>从 Microsoft Azure 存储还原  
-从“备份媒体类型”****中选择 **URL**：“选择备份设备”****对话框中的下拉列表。  然后单击“添加”****打开“选择备份文件位置”****对话框，在其中你可以选择现有 SQL Server 凭据/Azure 存储容器、添加具有共享访问签名的新 Azure 存储容器或为现有存储容器生成共享访问签名和 SQL Server 凭据。 连接到存储帐户后，将在“在 Microsoft Azure 上定位备份文件”****对话框中显示备份文件，从中可选择用于还原的文件。  另请参阅，[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+从“备份媒体类型”中选择 **URL**：“选择备份设备”对话框中的下拉列表。  然后单击“添加”打开“选择备份文件位置”对话框，在其中你可以选择现有 SQL Server 凭据/Azure 存储容器、添加具有共享访问签名的新 Azure 存储容器或为现有存储容器生成共享访问签名和 SQL Server 凭据。 连接到存储帐户后，将在“在 Microsoft Azure 上定位备份文件”对话框中显示备份文件，从中可选择用于还原的文件。  另请参阅，[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
 ## <a name="see-also"></a>另请参阅  
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

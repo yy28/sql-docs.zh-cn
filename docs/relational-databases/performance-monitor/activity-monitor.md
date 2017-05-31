@@ -16,19 +16,20 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e519667f9c91eb05274624e8c8d6eefdea0a1fa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="activity-monitor"></a>活动监视器
   活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例。  
   
- 活动监视器是一个选项卡式文档窗口，它包含以下可展开和可折叠窗格：“概述”****、“活动用户任务”****、“资源等待”****、“数据文件 I/O”****和“最近耗费大量资源的查询”****。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
+ 活动监视器是一个选项卡式文档窗口，它包含以下可展开和可折叠窗格：“概述”、“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近耗费大量资源的查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
  
  ## <a name="customize-columns"></a>自定义列 
- 对于在“活动用户任务”****、“资源等待”****、“数据文件 I/O”****和“最近耗费大量资源的查询”****窗格中包括的列，用以下方式自定义显示内容：  
+ 对于在“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近耗费大量资源的查询”窗格中包括的列，用以下方式自定义显示内容：  
   
 1.  若要重排列的顺序，请单击列标题，并将其拖到标题功能区中的另一位置。  
   

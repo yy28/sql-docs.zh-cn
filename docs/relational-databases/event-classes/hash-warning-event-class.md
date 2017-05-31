@@ -16,9 +16,10 @@ caps.latest.revision: 39
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 322018e04193b8cabd7354719b85f230b11b2d26
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,10 +43,10 @@ ms.lasthandoff: 04/11/2017
  创建或更新联接涉及的列上的统计信息是减少发生哈希递归或哈希释放次数最有效的方法。  
   
 > [!NOTE]  
->  另外，“Grace 哈希联接”**和“递归哈希联接”**两词也用于描述哈希释放。  
+>  另外，“Grace 哈希联接”和“递归哈希联接”两词也用于描述哈希释放。  
   
 > [!IMPORTANT]  
->  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符” **，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
+>  若要确定查询优化器生成执行计划时 Hash Warning 事件发生的位置，还应在跟踪中收集一个 Showplan 事件类。 可以选择除了 Showplan Text 和 Showplan Text (Unencoded) 事件类（不会返回节点 ID）以外的任何 Showplan 事件类。 Showplan 中的节点 ID 标识查询优化器在生成查询执行计划时执行的每个运算。 这些运算称为“运算符” ，Showplan 中的每个运算符都有一个节点 ID。 Hash Warning 事件的 ObjectID 列与 Showplan 中的节点 ID 对应，因此可确定哪个运算符或运算导致错误。  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning 事件类的数据列  
   

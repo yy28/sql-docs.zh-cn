@@ -16,9 +16,10 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bbc752ab48b3295047876f7957aa83abd166facc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
  选中标记指示当前启用了策略。 如果未启用策略，则为空。  
   
  **历史记录**  
- 单击“查看历史记录”****超链接可显示执行历史记录报表。  
+ 单击“查看历史记录”超链接可显示执行历史记录报表。  
   
  **创建时间**  
  策略的创建日期。  

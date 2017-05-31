@@ -19,9 +19,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,11 +54,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-when-hit-action"></a>指定命中条件操作  
   
-1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
   
      - 或 -  
   
-     在“断点”****窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”****。  
+     在“断点”窗口中，右键单击断点符号，然后在快捷菜单上单击“命中条件”。  
   
 2.  在 **“当命中断点时”** 对话框中，选择您需要的行为：  
   

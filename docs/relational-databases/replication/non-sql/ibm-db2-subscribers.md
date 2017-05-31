@@ -20,9 +20,10 @@ caps.latest.revision: 74
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -168,7 +169,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** 和 **nvarchar** 复制到 DB2 的 CHAR 和 VARCHAR 时，复制为 DB2 类型使用的长度说明符与为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类型的长度相同。 但是，数据类型长度对于生成的 DB2 表而言可能太小。  
   
-     在某些 DB2 环境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 数据项并不限于单字节字符，对于 CHAR 或 VARCHAR 项的长度，必须考虑到这一点。 如果需要，还必须考虑到“移入” ** 字符和“移出” ** 字符。 如果要复制包含 **nchar** 和 **nvarchar** 列的表，您可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
+     在某些 DB2 环境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 数据项并不限于单字节字符，对于 CHAR 或 VARCHAR 项的长度，必须考虑到这一点。 如果需要，还必须考虑到“移入”  字符和“移出”  字符。 如果要复制包含 **nchar** 和 **nvarchar** 列的表，您可能需要在自定义创建脚本中为数据类型指定更大的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   
 ## <a name="see-also"></a>另请参阅  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

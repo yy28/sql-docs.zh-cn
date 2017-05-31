@@ -21,9 +21,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要启用的索引，然后选择****“重新生成”。  
+5.  右键单击要启用的索引，然后选择“重新生成”。  
   
 6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开您要启用索引的表。  
   
-4.  右键单击****“索引”文件夹，然后选择****“全部重新生成”。  
+4.  右键单击“索引”文件夹，然后选择“全部重新生成”。  
   
 5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   

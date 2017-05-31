@@ -19,9 +19,10 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 45e63d53b65730136bbc0a4f20ad5d4215020c58
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,18 +47,18 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="toolbar"></a>工具栏
 
-在标准工具栏上，单击“活动监视器”图标****。 该图标位于中间，就在“撤消/重做”按钮的右边。
+在标准工具栏上，单击“活动监视器”图标。 该图标位于中间，就在“撤消/重做”按钮的右边。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”****对话框。
+如果尚未连接到想要监视的 SQL Server 的实例，请完成“连接到服务器”对话框。
   
 ## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>在启动时启动活动监视器和对象资源管理器
   
 1.  从 **“工具”** 菜单中，单击 **“选项”**。  
   
-2.  在“选项”对话框中，展开“环境”，再选择“启动”。************  
+2.  在“选项”对话框中，展开“环境”，再选择“启动”。****  
   
-3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。********  
+3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。****  
 
 4.  单击 **“确定”**。
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 1.   打开活动监视器。  
   
-2.   右键单击“概述”****，选择“刷新间隔”****，然后选择活动监视器获取新实例信息所用的间隔。  
+2.   右键单击“概述”，选择“刷新间隔”，然后选择活动监视器获取新实例信息所用的间隔。  
   
   
 

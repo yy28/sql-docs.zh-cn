@@ -18,9 +18,10 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9f9d65d2521299d34188897fbbf5675b5c9eea4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
   
-3.  展开****“存储过程”，右键单击要删除的过程，再单击****“删除”。  
+3.  展开“存储过程”，右键单击要删除的过程，再单击“删除”。  
   
 4.  若要查看依赖于过程的对象，请单击 **“显示依赖关系”**。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -26,7 +27,7 @@ ms.lasthandoff: 04/11/2017
   快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
   
 > [!NOTE]  
->  用户帐户控制 (UAC) 可帮助管理员管理其提升的用户权限（有时称为“特权”） **。 在启用 UAC 的操作系统上运行时，管理员并不使用其管理权限。 相反，他们以标准（非管理）用户的身份执行大多数操作，仅在必要时临时采用其管理权限。 UAC 可以防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。  
+>  用户帐户控制 (UAC) 可帮助管理员管理其提升的用户权限（有时称为“特权”） 。 在启用 UAC 的操作系统上运行时，管理员并不使用其管理权限。 相反，他们以标准（非管理）用户的身份执行大多数操作，仅在必要时临时采用其管理权限。 UAC 可以防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。  
   
  当通过配置分发向导或新建发布向导来配置分发服务器时，快照文件夹默认为指向本地路径：X:\Program Files\Microsoft SQL Server\\*\<实例*\MSSQL\ReplData。 如果使用远程分发服务器或请求订阅，则必须指定 UNC 网络共享路径（如 \\\\<*computername>*\snapshot），而非本地路径。  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
  有关为本地路径和网络共享设置权限的详细信息，请参阅 Windows 文档。  
   
 > [!NOTE]  
->  如果删除发布，复制将尝试在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中删除快照文件夹。 如果此帐户没有足够的权限，请用具有足够权限的帐户登录，然后手动删除文件夹。 如果文件夹为本地路径，则删除文件夹需要“修改” **** 权限；如果文件夹为网络路径，则删除文件夹需要“完全控制” **** 权限。  
+>  如果删除发布，复制将尝试在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中删除快照文件夹。 如果此帐户没有足够的权限，请用具有足够权限的帐户登录，然后手动删除文件夹。 如果文件夹为本地路径，则删除文件夹需要“修改”  权限；如果文件夹为网络路径，则删除文件夹需要“完全控制”  权限。  
   
 ## <a name="delivering-snapshots-through-ftp"></a>通过 FTP 传递快照  
  建议您采用最安全的方法：将快照存储在 UNC 共享目录中。但也可以将快照存储在 FTP 共享目录中，然后再通过 FTP 传递给订阅服务器。 配置 FTP 服务器时，请确保虚拟目录公开一个基本 UNC 共享目录，该共享目录允许用于发布的快照代理进行写访问。  

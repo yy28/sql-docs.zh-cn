@@ -16,9 +16,10 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="options"></a>选项  
  **数据源**  
- 指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”****对话框。  
+ 指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”对话框。  
   
  **“文件”**  
  键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 (**...**) 选择文件。  

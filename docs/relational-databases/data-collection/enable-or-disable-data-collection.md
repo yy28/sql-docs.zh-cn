@@ -17,9 +17,10 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a69e9cee1b62ec953b3be3c984cc712a3f0e55d2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,13 +52,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-2.  右键单击“数据收集”****，然后单击“启用数据收集”****。  
+2.  右键单击“数据收集”，然后单击“启用数据收集”。  
   
 #### <a name="to-disable-the-data-collector"></a>禁用数据收集器  
   
 1.  在对象资源管理器中，展开 **“管理”** 节点。  
   
-2.  右键单击“数据收集”，然后单击“禁用数据收集”********。  
+2.  右键单击“数据收集”，然后单击“禁用数据收集”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

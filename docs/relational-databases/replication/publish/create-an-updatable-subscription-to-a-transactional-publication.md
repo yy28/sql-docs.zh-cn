@@ -17,9 +17,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 94a6afee0fbc828b7c3036cfc4d1282b71674384
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  此功能在从 2012 到 2016 的 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 版本中仍然受支持。  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
-可以在“新建订阅向导”的“可更新订阅”页上配置可更新订阅。******** 只有为可更新订阅启用了事务发布，此页才可用。 有关启用可更新订阅的详细信息，请参阅[为事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
+可以在“新建订阅向导”的“可更新订阅”页上配置可更新订阅。**** 只有为可更新订阅启用了事务发布，此页才可用。 有关启用可更新订阅的详细信息，请参阅[为事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。   
   
 ## <a name="to-configure-an-updatable-subscription-from-the-publisher"></a>从发布服务器配置可更新订阅  
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
 
 4. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
 
-5. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。************
+5. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。****
 
 6. 从“在发布服务器提交”下拉列表中选择一个选项：****
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 
 3. 右键单击 **“本地订阅”** 文件夹，再单击 **“新建订阅”**。
 
-4. 在“新建订阅向导”的“发布”页上，从“发布服务器”下拉列表中选择“查找 SQL Server 发布服务器”。****************
+4. 在“新建订阅向导”的“发布”页上，从“发布服务器”下拉列表中选择“查找 SQL Server 发布服务器”。****
 
 5. 在 **“连接到服务器”** 对话框中连接到发布服务器。
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
 
 7. 按照向导中的页，为订阅指定选项，如分发代理应在何处运行。
 
-8. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。********
+8. 在“新建订阅向导”的“可更新订阅”页上，确保已选中“复制”。****
 
 9. 从“在发布服务器提交”下拉列表中选择一个选项：****
 

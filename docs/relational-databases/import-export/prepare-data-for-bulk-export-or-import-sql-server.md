@@ -20,9 +20,10 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
 -   数据文件中的每个字段都必须与目标表中的对应列兼容。 例如，不能将 **int** 字段加载到 **datetime** 列。 有关详细信息，请参阅[用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   
     > [!NOTE]  
-    >  若要指定从数据文件导入的行子集而并非整个文件，可以使用带有 **-F** *first_row* 开关和/或 **-L** *last_row*开关的 **bcp** 命令。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
+    >  若要指定从数据文件导入的行子集而并非整个文件，可以使用带有 **-F** *first_row* 开关和/或 **-L** *last_row* 开关的 **bcp** 命令。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   
 -   若要从包含固定长度或固定宽度字段的数据文件导入数据，请使用格式化文件。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   

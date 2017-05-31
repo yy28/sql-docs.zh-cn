@@ -20,9 +20,10 @@ caps.latest.revision: 42
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1bee07ba4b378dca877f7c204d9f764e666171d8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>将数据库引擎查询编辑器窗口切换到 SQLCMD 模式  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“新建查询”****以打开新的[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“新建查询”以打开新的[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口。  
   
 2.  在 **“查询”** 菜单中，单击 **“SQLCMD 模式”**。  
   

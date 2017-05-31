@@ -16,9 +16,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0903ac5f3e339bf884b3b5704bfd7ef5e1b02938
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要删除的策略，然后选择“删除”****。  
+5.  右键单击要删除的策略，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
   

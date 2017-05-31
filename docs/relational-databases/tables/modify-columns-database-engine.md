@@ -18,9 +18,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 736b83dffa241040cf08e7f7d9410eaab80649af
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,13 +56,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在“对象资源管理器”****中，右键单击要更改其小数位数的列所在的表，再单击“设计”****。  
+1.  在“对象资源管理器”中，右键单击要更改其小数位数的列所在的表，再单击“设计”。  
   
 2.  选择要修改其数据类型的列。  
   
-3.  在“列属性”****选项卡中，单击“数据类型”****属性的网格单元格，再从下拉列表中选择新的数据类型。  
+3.  在“列属性”选项卡中，单击“数据类型”属性的网格单元格，再从下拉列表中选择新的数据类型。  
   
-4.  在“文件”****菜单上，单击“保存”****以保存表名**。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 > [!NOTE]  
 >  当您修改列的数据类型时，即使已为所选数据类型指定其他长度，表设计器也会使用该数据类型的默认长度。 在指定数据类型之后，始终需要将数据类型长度设置为所需的值。  

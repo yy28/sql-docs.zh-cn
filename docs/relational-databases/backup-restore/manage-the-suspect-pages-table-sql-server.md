@@ -22,9 +22,10 @@ caps.latest.revision: 54
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -129,9 +130,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
   
-2.  依次展开“系统数据库” ****、“msdb” ****、“表” ****和“系统表” ****。  
+2.  依次展开“系统数据库” 、“msdb” 、“表” 和“系统表” 。  
   
-3.  展开“dbo.suspect_pages” **** ，然后右键单击“编辑前 200 行” ****。  
+3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行” 。  
   
 4.  在查询窗口中，编辑、更新或删除所需的行。  
   

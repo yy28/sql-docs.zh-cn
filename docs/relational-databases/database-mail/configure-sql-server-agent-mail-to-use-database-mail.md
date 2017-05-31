@@ -17,9 +17,10 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fd14545a30d307845af1ce55be28334d4d8a25cc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
--   右键单击“SQL Server 代理”****，然后单击“属性”****。  
+-   右键单击“SQL Server 代理”，然后单击“属性”。  
   
 -   单击 **“警报系统”**。  
   

@@ -21,14 +21,15 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c34c1db9c36da6e23375df861ed5a3ad6d2bd12f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
-  以下表达式可以替换“查找和替换”****对话框的“查找内容”****字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
+  以下表达式可以替换“查找和替换”对话框的“查找内容”字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   

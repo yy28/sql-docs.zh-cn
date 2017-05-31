@@ -18,9 +18,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,9 +39,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”****。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”。  
   
-2.  在“服务器属性”****对话框中，单击“高级”****页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
+2.  在“服务器属性”对话框中，单击“高级”页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
   
     -   **默认全文语言**  
   

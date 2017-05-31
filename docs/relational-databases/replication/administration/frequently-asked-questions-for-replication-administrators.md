@@ -17,9 +17,10 @@ caps.latest.revision: 59
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b7fd50c53405ab0866e5eca50275531687c7b171
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/11/2017
  否。 可以创建 DTS 包，把登录名和密码从发布服务器传输到一个或多个订阅服务器。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>什么是架构，如何复制架构？  
- 从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ** 有两种含义：  
+ 从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)],  有两种含义：  
   
 -   对象的定义，如 CREATE TABLE 语句。 默认情况下，复制把所有已复制对象的定义都复制到订阅服务器。  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/11/2017
   
     -   执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将参数**sp_changearticle**的值指定为“pre_creation_cmd”(**sp_changemergearticle**) 或“pre_creation_command”( **@property** )，并将参数 **@value**。  
   
-    -   在“项目属性- \<项目>”对话框的“目标对象”部分中，选择“保留现有对象保持不变”和“删除数据”。**************如果项目有行筛选器，则仅删除与该筛选器匹配的数据。** 或者为“名称已被使用时的操作”选择“截断现有对象中的所有数据”。******** 有关访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+    -   在“项目属性- \<项目>”对话框的“目标对象”部分中，选择“保留现有对象保持不变”和“删除数据”。**如果项目有行筛选器，则仅删除与该筛选器匹配的数据。** 或者为“名称已被使用时的操作”选择“截断现有对象中的所有数据”。**** 有关访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ## <a name="database-maintenance"></a>数据库维护  
   

@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,11 +70,11 @@ ms.lasthandoff: 04/11/2017
   
     -   Aggregate 函数  
   
-4.  右键单击要修改的函数，然后单击“修改”****。  
+4.  右键单击要修改的函数，然后单击“修改”。  
   
 5.  在查询窗口中，对 ALTER FUNCTION 语句进行必要的更改。  
   
-6.  在“文件”****菜单上，点击“保存”****function_name**。  
+6.  在“文件”菜单上，点击“保存”function_name。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

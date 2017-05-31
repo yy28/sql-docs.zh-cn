@@ -18,9 +18,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 84668538d8c13c4317eec610afabcdf39d457899
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
  **更改表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”****。  
+-   右键单击表达式，然后选择“编辑值”。  
   
 ## <a name="columns"></a>列  
  **名称**  

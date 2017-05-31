@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开要创建新视图的数据库。  
   
-2.  右键单击“视图”文件夹，然后单击“新建视图...”********。  
+2.  右键单击“视图”文件夹，然后单击“新建视图...”。  
   
 3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **“条件窗格”**中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”****菜单上，单击“保存”****以保存*视图名称*。  
+7.  在“文件”菜单上，单击“保存”以保存*视图名称*。  
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
   

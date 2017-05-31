@@ -18,9 +18,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
  **注意** 只能对兼容级别设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
  **对象**  
- 将“选择”****网格限制为显示表、显示视图或同时显示两者。  
+ 将“选择”网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
  指定受此任务影响的表或索引。 在“对象”框中选择 **“表和视图”** 时不可用。  

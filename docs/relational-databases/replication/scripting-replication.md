@@ -21,9 +21,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
 5.  在多个订阅服务器上运行脚本，以生成所需的请求订阅。  
   
 ## <a name="script-replication-objects"></a>脚本复制对象  
- 从复制向导或 **** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
+ 从复制向导或  的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 如果从向导编写脚本，则可以选择创建对象并为其编写脚本，也可以选择仅编写脚本。  
   
 > [!IMPORTANT]  
 >  所有密码的脚本被编写为 NULL。 如果可能，请在运行时提示用户输入安全凭据。 如果将凭据存储在脚本文件中，则必须确保文件的安全以防受到未经授权的访问。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击某个发布或订阅，然后单击 **“生成脚本”**。  
   
-4.  在“生成 SQL 脚本 - \<复制对象>”****对话框中指定选项。  
+4.  在“生成 SQL 脚本 - \<复制对象>”对话框中指定选项。  
   
 5.  单击 **“将脚本保存到文件”**。  
   

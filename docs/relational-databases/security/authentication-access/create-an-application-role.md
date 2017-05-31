@@ -18,9 +18,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0778c9ac00e6d9c06161ccc8429e0eb9ae4d846d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  展开 **“角色”** 文件夹。  
   
-4.  右键单击“应用程序角色”****文件夹，然后选择“新建应用程序角色…”****。  
+4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
   
 5.  在 **“应用程序角色 – 新建”** 对话框的 **“常规”**页中，在 **“角色名称”** 框中输入新的应用程序角色的新名称。  
   

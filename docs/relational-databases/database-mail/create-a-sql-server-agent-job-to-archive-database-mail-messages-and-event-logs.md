@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,9 +52,9 @@ ms.lasthandoff: 04/11/2017
   
     1.  将所有邮件从数据库邮件表中复制到一个格式为 **DBMailArchive_***<year_month>* 且用上一个月份命名的新表中。  
   
-    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_**<year_month>** 且用上一个月份命名的新表中。  
+    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_**<year_month> 且用上一个月份命名的新表中。  
   
-    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_**<year_month>** 且用上一个月份命名的新表中。  
+    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_**<year_month> 且用上一个月份命名的新表中。  
   
     4.  从数据库邮件表中删除已传输邮件项的记录。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="to-create-a-sql-server-agent-job"></a>创建 SQL Server 代理作业  
   
-1.  在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”****，然后单击“新建作业”****。  
+1.  在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，然后单击“新建作业”。  
   
 2.  在 **“新建作业”** 对话框的 **“名称”** 框中，键入 **“存档数据库邮件”**。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件项”**。  
   
-3.  在“类型”****框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件附件”**。  
   
-3.  在“类型”****框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“步骤名称”** 框中，键入 **“复制数据库邮件日志”**。  
   
-3.  在“类型”****框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件中删除行”**。  
   
-3.  在“类型”****框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“数据库”** 框中，选择 **msdb**。  
   
@@ -184,7 +185,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“步骤名称”** 框中，键入 **“从数据库邮件事件日志中删除行”**。  
   
-3.  在“类型”****框中，选择“Transact-SQL 脚本 (T-SQL)”****。  
+3.  在“类型”框中，选择“Transact-SQL 脚本 (T-SQL)”。  
   
 4.  在 **“命令”** 框中，键入以下语句以从数据库邮件事件日志中删除早于当前月份的行：  
   
@@ -210,7 +211,7 @@ ms.lasthandoff: 04/11/2017
   
 5.  在 **“频率”** 区域中，选择相应的选项以便定期运行该作业，比如每月一次。  
   
-6.  在“每天频率”****区域中，选择“在 \<时间> 执行一次”****。  
+6.  在“每天频率”区域中，选择“在 \<时间> 执行一次”。  
   
 7.  验证其他选项已按您希望的那样进行了配置，然后单击 **“确定”** 保存计划。  
   

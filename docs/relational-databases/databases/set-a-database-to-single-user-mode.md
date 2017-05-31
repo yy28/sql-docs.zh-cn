@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 600766dbf1449ead6dce5d1e9d4c33d808ef4567
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  右键单击要更改的数据库，再单击“属性”****。  
+2.  右键单击要更改的数据库，再单击“属性”。  
   
 3.  在 **“数据库属性”** 对话框中，单击 **“选项”** 页。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8eabe827b89c3931523bda848e01471853cbde6b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在“性能”窗口的导航树中，展开 **“性能日志和警报”**。  
   
-2.  右键单击“警报”****，再单击“新建警报设置”****。  
+2.  右键单击“警报”，再单击“新建警报设置”。  
   
 3.  在 **“新建警报设置”** 对话框中，输入新警报的名称，再单击 **“确定”**。  
   
@@ -43,9 +44,9 @@ ms.lasthandoff: 04/11/2017
   
 6.  若要为警报添加计数器，请单击 **“添加”**。 您可以继续添加计数器，也可以单击 **“关闭”** 返回到新建警报对话框。  
   
-7.  在新建警报对话框的“将触发警报，如果值是：”****列表中，单击“超过”****或“低于”****，然后在“限制”****中输入一个阈值。  
+7.  在新建警报对话框的“将触发警报，如果值是：”列表中，单击“超过”或“低于”，然后在“限制”中输入一个阈值。  
   
-     当计数器的值大于或小于阈值时（取决于单击的是“超过”****还是“低于”****），将生成警报。  
+     当计数器的值大于或小于阈值时（取决于单击的是“超过”还是“低于”），将生成警报。  
   
 8.  在 **“数据采样间隔”** 框中，设置采样频率。  
   

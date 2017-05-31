@@ -19,9 +19,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,12 +62,12 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要删除的视图，然后单击“删除”****。  
+2.  右键单击要删除的视图，然后单击“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”****对话框中的“显示依赖关系”****，打开**“view_name 依赖关系”****对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  单击“删除对象”对话框中的“显示依赖关系”，打开“view_name 依赖关系”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -20,9 +20,10 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2447173bd6b35b977fe69aa8f811d3d0198123f9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开  **“约束”**。  
   
-3.  右键单击该约束，然后单击“删除”****。  
+3.  右键单击该约束，然后单击“删除”。  
   
 4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   

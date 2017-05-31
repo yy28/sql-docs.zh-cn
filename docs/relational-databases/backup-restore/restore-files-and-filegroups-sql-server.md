@@ -21,9 +21,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**。 ****根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击数据库，指向“任务”****，再单击“还原”****。  
+3.  右键单击数据库，指向“任务”，再单击“还原”。  
   
 4.  单击 **“文件和文件组”**，将打开 **“还原文件和文件组”** 对话框。  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 04/11/2017
      选择此选项需要您指定一个备用文件。  
   
      **回滚撤消文件**  
-     在“回滚撤消文件”****文本框中指定备用文件名称。 如果使数据库处于只读模式 (RESTORE WITH STANDBY)，则必须选中此选项。  
+     在“回滚撤消文件”文本框中指定备用文件名称。 如果使数据库处于只读模式 (RESTORE WITH STANDBY)，则必须选中此选项。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

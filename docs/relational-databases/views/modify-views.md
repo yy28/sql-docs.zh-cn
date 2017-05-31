@@ -19,9 +19,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,17 +64,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，单击视图所在的数据库旁边的加号，然后单击 **“视图”** 文件夹旁边的加号。  
   
-2.  右键单击要修改的视图，然后选择“设计”****。  
+2.  右键单击要修改的视图，然后选择“设计”。  
   
 3.  在查询设计器的关系图窗格中，通过以下一种或多种方式更改视图：  
   
     1.  选中或清除要添加或删除的任何元素的复选框。  
   
-    2.  在关系图窗格中右键单击，选择“添加表…”****，然后从“添加表”****对话框选择要添加到视图的其他列。  
+    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列。  
   
-    3.  右键单击要删除的表的标题栏，然后选择“删除”****。  
+    3.  右键单击要删除的表的标题栏，然后选择“删除”。  
   
-4.  在“文件”****菜单上，单击“保存”****以保存*视图名称*。  
+4.  在“文件”菜单上，单击“保存”以保存*视图名称*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

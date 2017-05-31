@@ -16,9 +16,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
  数据库用户  
  通过在数据库中创建数据库用户并将该数据库用户映射到登录名来授予登录名对数据库的访问权限。 通常，数据库用户名与登录名相同，尽管它不必要相同。 每个数据库用户均映射到单个登录名。 一个登录名只能映射到数据库中的一个用户，但可以映射为多个不同数据库中的数据库用户。  
   
- 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户” **。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+ 也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户” 。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  有 12 种类型的用户，它们在如何进行身份验证以及所表示的人员方面略有差异。 若要查看用户列表，请参阅 [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)。  
   
@@ -127,7 +128,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   如果管理员未正确执行 `DENY SELECT ON OBJECT::OrderStatus TO Sales;` ，则 Ted 作为 Sales 角色的成员将被拒绝 `SELECT` 权限，因为对 Sales 的 `DENY` 将覆盖其个人  `GRANT`。  
   
 > [!NOTE]  
->  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”****。 选择“权限”页 **** 。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
+>  可以使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]配置权限。 在对象资源管理器中查找安全对象，右键单击该安全对象，然后单击“属性”。 选择“权限”页  。 有关使用权限页的帮助，请参阅 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)。  
   
 ## <a name="permission-hierarchy"></a>权限层次结构  
  权限具有父/子层次结构。 也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对数据库中所有（子）架构的 `SELECT` 权限。 如果你授予对架构的 `SELECT` 权限，则该权限包括对架构中所有（子）表和视图的 `SELECT` 权限。 权限是可传递的；也就是说，如果你授予对数据库的 `SELECT` 权限，则该权限包括对所有（子级）架构和所有（孙级）表和视图的 `SELECT` 权限。  

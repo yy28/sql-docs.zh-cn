@@ -16,16 +16,17 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a8e5888afba843d601f6dc85395c52b08b9b597
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
-  若要立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。******** 
+  若要立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。**** 
   
- 连接由在订阅服务器上激发的触发器使用，这些触发器将更改传播到发布服务器。 即使在“可更新订阅”页上选择了“对更改进行排队并在可能时提交”，此帐户也是必需的。******** 默认情况下，“新建订阅向导”会为排队更新配置在需要时切换到立即更新的能力。  
+ 连接由在订阅服务器上激发的触发器使用，这些触发器将更改传播到发布服务器。 即使在“可更新订阅”页上选择了“对更改进行排队并在可能时提交”，此帐户也是必需的。**** 默认情况下，“新建订阅向导”会为排队更新配置在需要时切换到立即更新的能力。  
   
 > **重要说明!!** 对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限。 不应向其授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_***\<HexadecimalNumber>*），请将其权限授予在每个订阅服务器上配置的帐户。  
   

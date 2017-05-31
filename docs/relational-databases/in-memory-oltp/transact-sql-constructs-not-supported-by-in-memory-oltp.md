@@ -14,9 +14,10 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 |运算|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
 |运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。|  
-|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table** 删除所有行，或删除并重新创建该表。|  
+|运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|在架构之间传输安全对象。|  
 |运算|DBCC CHECKTABLE|内存优化的表不支持 DBCC CHECKTABLE。|  

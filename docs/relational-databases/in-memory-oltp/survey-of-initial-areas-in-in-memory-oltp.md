@@ -14,9 +14,10 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82286b0d52ff37697ad9197b88c45935137a8dae
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,9 +72,9 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
 有两种主要方案：  
   
-- “批操作分析”** 是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
+- “批操作分析” 是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
   - [Azure SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也与批操作分析相关。  
-- “实时操作分析”** 是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
+- “实时操作分析” 是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
   
   
 本文重点介绍 OLTP，而不是介绍相关分析。 有关列存储索引如何将分析引入 SQL 的信息，请参阅：  

@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2abba76ac65025fe1f2c2d23a9d5b094eafb8980
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,31 +48,31 @@ ms.lasthandoff: 04/11/2017
 -   在编辑复制生成的任何快照文件时，都必须谨慎。 必须测试和支持自定义存储过程中的自定义逻辑。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 不支持自定义逻辑。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定传播方法，该对话框可以在新建发布向导和“发布属性 - \<发布>”对话框中找到。************ 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定传播方法，该对话框可以在新建发布向导和“发布属性 - \<发布>”对话框中找到。**** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-the-propagation-method"></a>指定传播方法  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。************  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。****  
   
 2.  单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，使用“INSERT 传递格式”、“UPDATE 传递格式”和“DELETE 传递格式”菜单为每个操作指定传播方法。************************  
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，使用“INSERT 传递格式”、“UPDATE 传递格式”和“DELETE 传递格式”菜单为每个操作指定传播方法。****  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。****  
   
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>生成和使用自定义存储过程  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。************  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。****  
   
 2.  单击 **“设置突出显示的表项目的属性”**。  
   
-     在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，从适当的传递格式菜单（“INSERT 传递格式”、“UPDATE 传递格式”或“DELETE 传递格式”）中选择 CALL 语法，然后键入要在“INSERT 存储过程”、“DELETE 存储过程”或“UPDATE 存储过程”中使用的过程名称。************************************ 若要详细了解如何使用存储过程，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的“存储过程的调用语法”。  
+     在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，从适当的传递格式菜单（“INSERT 传递格式”、“UPDATE 传递格式”或“DELETE 传递格式”）中选择 CALL 语法，然后键入要在“INSERT 存储过程”、“DELETE 存储过程”或“UPDATE 存储过程”中使用的过程名称。**** 若要详细了解如何使用存储过程，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的“存储过程的调用语法”。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。********  
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。****  
   
 5.  发布的快照生成后，将包含上一步骤中指定的过程。 这些过程将使用指定的 CALL 语法，但将包含复制使用的默认逻辑。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **@del_cmd** - 指定 **CALL sp_MSdel_*article_name*** 或 **XCALL sp_MSdel_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name***或 **MCALL sp_MSupd_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name* **或 **MCALL sp_MSupd_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  

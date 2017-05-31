@@ -16,9 +16,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/11/2017
 
   使用此页可以查看所选列的属性。  
   
- 此页上的信息为只读信息。 若要修改列，请关闭“列属性”****对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”****。  
+ 此页上的信息为只读信息。 若要修改列，请关闭“列属性”对话框，然后在对象资源管理器中展开表和列，右键单击该列，再单击“设计”。  
   
 ## <a name="options"></a>选项  
  **名称**  
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
  指示标识列的初始行值。  
   
  **标识增量**  
- “标识增量”****属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
+ “标识增量”属性指定在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为插入的行生成标识值时，在现有的最大行标识值基础上所加的值。  
   
  **默认值绑定**  
  绑定到该列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认值。 如果未绑定默认值，此选项为空白。  

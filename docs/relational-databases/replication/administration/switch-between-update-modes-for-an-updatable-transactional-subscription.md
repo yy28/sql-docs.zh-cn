@@ -18,9 +18,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,17 +65,17 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击要为其设置更新模式的订阅，然后单击 **“设置更新方法”**。  
   
-4.  在“设置更新方法 - \<订阅服务器>: \<订阅数据库>”****对话框中，选择“立即更新”****或“排队更新”****。  
+4.  在“设置更新方法 - \<订阅服务器>: \<订阅数据库>”对话框中，选择“立即更新”或“排队更新”。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>设置请求订阅的更新模式  
   
-1.  在“订阅属性 - \<发布服务器>: \<发布数据库>”****对话框中，为“订阅服务器更新方法”****选项选择“立即复制所做的更改”****或“排队更改”****的值。  
+1.  在“订阅属性 - \<发布服务器>: \<发布数据库>”对话框中，为“订阅服务器更新方法”选项选择“立即复制所做的更改”或“排队更改”的值。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 有关访问“订阅属性 - \<发布服务器>: \<发布数据库>”****对话框的详细信息，请参阅[查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+ 有关访问“订阅属性 - \<发布服务器>: \<发布数据库>”对话框的详细信息，请参阅[查看和修改请求订阅属性](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

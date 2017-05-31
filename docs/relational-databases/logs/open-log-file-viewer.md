@@ -16,9 +16,10 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 902e26657bb71799af5e006c9a1842edda4f783d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,45 +60,45 @@ ms.lasthandoff: 04/11/2017
   
 2.  执行下列任一操作：  
   
-    -   右键单击“SQL Server 日志”****，指向“查看”****，然后单击“SQL Server 日志”****或“SQL Server 和 Windows 日志”****。  
+    -   右键单击“SQL Server 日志”，指向“查看”，然后单击“SQL Server 日志”或“SQL Server 和 Windows 日志”。  
   
-    -   展开“SQL Server 日志”****，右键单击任何日志文件，然后单击“查看 SQL Server 日志”****。 还可以双击任何日志文件。  
+    -   展开“SQL Server 日志”，右键单击任何日志文件，然后单击“查看 SQL Server 日志”。 还可以双击任何日志文件。  
   
      这些日志包括 **“数据库邮件”**、 **“SQL Server”**、 **“SQL Server 代理”**和 **“Windows NT”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>查看与作业相关的日志  
   
--   在对象资源管理器中，展开“SQL Server 代理”****，右键单击“作业”****，然后单击“查看历史记录”****。  
+-   在对象资源管理器中，展开“SQL Server 代理”，右键单击“作业”，然后单击“查看历史记录”。  
   
      这些日志包括 **“数据库邮件”**、 **“作业历史记录”**和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>查看与维护计划相关的日志  
   
--   在对象资源管理器中，展开“管理”****，右键单击“维护计划”****，然后单击“查看历史记录”****。  
+-   在对象资源管理器中，展开“管理”，右键单击“维护计划”，然后单击“查看历史记录”。  
   
      这些日志包括 **“数据库邮件”**、 **“作业历史记录”**、 **“维护计划”**、 **“远程维护计划”**和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>查看与数据收集相关的日志  
   
--   在对象资源管理器中，展开“管理”****，右键单击“数据收集”****，然后单击“查看日志”****。  
+-   在对象资源管理器中，展开“管理”，右键单击“数据收集”，然后单击“查看日志”。  
   
      这些日志包括 **“数据收集”**、 **“作业历史记录”**和 **“SQL Server 代理”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>查看与数据库邮件相关的日志  
   
--   在对象资源管理器中，展开“管理”****，右键单击“数据库邮件”****，然后单击“查看数据库邮件日志”****。  
+-   在对象资源管理器中，展开“管理”，右键单击“数据库邮件”，然后单击“查看数据库邮件日志”。  
   
      这些日志包括 **“数据库邮件”**、“作业历史记录”、 **“维护计划”**、 **“远程维护计划”**、 **“SQL Server”**、 **“SQL Server 代理”**和 **“Windows NT”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   
--   在对象资源管理器中，依次展开“安全性”****和“审核”****，右键单击一个审核，然后单击“查看审核日志”****。  
+-   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
   
      这些日志包括 **“审核集合”** 和 **“Windows NT”**。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>查看与审核集合相关的日志  
   
--   在对象资源管理器中，依次展开“安全性”****和“审核”****，右键单击一个审核，然后单击“查看审核日志”****。  
+-   在对象资源管理器中，依次展开“安全性”和“审核”，右键单击一个审核，然后单击“查看审核日志”。  
   
      这些日志包括 **“审核集合”** 和 **“Windows NT”**。  
   

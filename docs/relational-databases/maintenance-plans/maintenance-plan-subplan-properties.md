@@ -17,14 +17,15 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
-  使用“维护计划(子计划属性)”****对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”****选项卡上单击“子计划属性”****，或者在设计器网格中双击某子计划可显示此对话框。  
+  使用“维护计划(子计划属性)”对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
   
 ## <a name="options"></a>选项  
  **名称**  

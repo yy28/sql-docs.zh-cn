@@ -30,9 +30,10 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,13 +48,13 @@ ms.lasthandoff: 04/11/2017
  还可以使用 GUI 查看由 **dta** 命令行实用工具生成的优化输出。  
   
 > [!NOTE]  
->  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”****菜单上的“打开文件”****，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
+>  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”菜单上的“打开文件”，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化建议  
   
 1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化建议，请双击“会话监视器”****窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化建议，请双击“会话监视器”窗口中的会话名称将会话打开。  
   
      在新的优化会话完成之后或工具加载了现有会话之后，将显示 **“建议”** 页。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  在 **“分区建议”** 或 **“索引建议”** 窗格中，使用滚动条来查看网格中显示的所有信息。  
   
-5.  取消选中 **“建议”** 选项卡式页面底部的 **“显示现有对象”** 。 这将导致网格仅显示建议中引用的那些数据库对象。 使用底部滚动条来查看建议网格中最右侧的列，再单击“定义”****列中的某一项来查看或复制在数据库中创建该对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
+5.  取消选中 **“建议”** 选项卡式页面底部的 **“显示现有对象”** 。 这将导致网格仅显示建议中引用的那些数据库对象。 使用底部滚动条来查看建议网格中最右侧的列，再单击“定义”列中的某一项来查看或复制在数据库中创建该对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
   
 6.  若要将此建议中创建或删除所有数据库对象的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本另存为一个脚本文件，请单击 **“操作”** 菜单上的 **“保存建议”** 。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”****窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
   
 3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“报告”** 选项卡。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 请确保在优化工作负荷时选中 **“常规”** 选项卡上的 **“保存优化日志”** 。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”****窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
   
 3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“进度”** 选项卡。 **“优化日志”** 窗格将显示日志的内容。 日志包含有关数据库引擎优化顾问无法分析的工作负荷事件的信息。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令提示符实用工具来优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要在现有的优化会话中实施优化建议，请在“会话监视器”****中双击会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要在现有的优化会话中实施优化建议，请在“会话监视器”中双击会话名称将会话打开。  
   
 3.  在新的优化会话完成之后，或者在工具加载了现有会话之后，在 **“操作”** 菜单上，单击 **“应用建议”** 。  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 评估优化建议  
   
-1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”****中双击该会话。  
+1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”中双击该会话。  
   
 2.  在 **“建议”** 选项卡上，清除那些已列出但您不想使用的物理设计结构。  
   
@@ -149,13 +150,13 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>使用 dta 命令行实用工具从数据库引擎优化顾问 GUI 导出假设分析的优化会话结果  
   
-1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”****中双击该会话。  
+1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”中双击该会话。  
   
 2.  在 **“文件”** 菜单上，单击 **“导出会话结果”** ，然后将其保存为 XML 文件。  
   
 3.  在您最喜爱的 XML 编辑器、文本编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开在步骤 2 中创建的 XML 文件。 向下滚动到 **Configuration** 元素。 复制 **Configuration** 元素部分并将其粘贴到 XML 输入文件模板中的 **TuningOptions** 元素之后。 保存此 XML 输入文件。  
   
-4.  在步骤 3 中创建的新 XML 输入文件中，指定 **TuningOptions** 元素中所需的任何优化选项，编辑“配置”****元素部分（根据分析需要，添加或删除物理设计结构），保存文件并根据数据库引擎优化顾问 XML 架构验证该文件。 有关编辑此 XML 文件的详细信息，请参阅 [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+4.  在步骤 3 中创建的新 XML 输入文件中，指定 **TuningOptions** 元素中所需的任何优化选项，编辑“配置”元素部分（根据分析需要，添加或删除物理设计结构），保存文件并根据数据库引擎优化顾问 XML 架构验证该文件。 有关编辑此 XML 文件的详细信息，请参阅 [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 5.  将在步骤 4 中创建的 XML 文件用作 **dta** 命令行实用工具的输入。 有关通过此工具使用 XML 输入文件的信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
   
@@ -168,7 +169,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  将 [XML 输入文件示例用户指定配置 (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) 复制并粘贴到你的 XML 编辑器或文本编辑器。 使用此示例为您的优化会话创建 XML 输入文件。 有关执行此任务的信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的“创建 XML 输入文件”部分。  
   
-3.  编辑示例 XML 输入文件中的 **TuningOptions** 和 **Configuration** 元素。 在 **TuningOptions** 元素中，指定希望数据库引擎优化顾问在优化会话期间考虑的物理设计结构。 在 **Configuration** 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关哪些属性和子元素可与**TuningOptions** 和“配置”****父元素一起使用的信息，请参阅 [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+3.  编辑示例 XML 输入文件中的 **TuningOptions** 和 **Configuration** 元素。 在 **TuningOptions** 元素中，指定希望数据库引擎优化顾问在优化会话期间考虑的物理设计结构。 在 **Configuration** 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关哪些属性和子元素可与 **TuningOptions** 和“配置”父元素一起使用的信息，请参阅 [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 4.  保存该输入文件，以 **.xml** 为扩展名。  
   
@@ -209,7 +210,7 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>评估现有优化会话  
   
-1.  启动数据库引擎优化顾问后，双击“会话监视器”****上半部分中的优化会话，这会将会话信息加载到数据库引擎优化顾问中。  
+1.  启动数据库引擎优化顾问后，双击“会话监视器”上半部分中的优化会话，这会将会话信息加载到数据库引擎优化顾问中。  
   
 2.  单击 **“进度”** 选项卡查看优化日志，该日志包含有关数据库引擎优化顾问不能优化的工作负荷中的所有事件的错误信息。 这些信息可以帮助您评估工作负荷的影响。  
   
@@ -232,7 +233,7 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>通过克隆现有会话创建新的优化会话  
   
-1.  启动数据库引擎优化顾问后，双击“会话监视器”****上半部分中的优化会话，这会将会话信息加载到数据库引擎优化顾问中。  
+1.  启动数据库引擎优化顾问后，双击“会话监视器”上半部分中的优化会话，这会将会话信息加载到数据库引擎优化顾问中。  
   
 2.  在 **“操作”** 菜单上，单击 **“克隆会话”**。  
   
@@ -265,13 +266,13 @@ ms.lasthandoff: 04/11/2017
  受建议影响的分区函数或分区方案。 此列中的图标反映对删除或添加 **“建议目标”** 的建议，以及该建议是分区函数还是分区方案。  
   
  **详细信息**  
- “建议目标”****的说明。 其值可能是一个范围（对于分区函数），或为空（对于分区方案）。  
+ “建议目标”的说明。 其值可能是一个范围（对于分区函数），或为空（对于分区方案）。  
   
  **分区数**  
  由建议的分区函数定义的分区数。 当此函数与方案一起使用并应用于表时，该值就是表中的数据被划分的分区数。  
   
  **“定义”**  
- “建议目标”****的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
+ “建议目标”的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
   
 ##### <a name="index-recommendations"></a>“索引建议”  
  **数据库名称**  
@@ -287,7 +288,7 @@ ms.lasthandoff: 04/11/2017
  受建议影响的索引或视图。 此列中的图标反映对删除或添加 **“建议目标”**的建议。  
   
  **详细信息**  
- “建议目标”****的说明。 其值可能为聚集索引视图或者为空（表示非聚集索引）。 还指示索引是否是唯一的。  
+ “建议目标”的说明。 其值可能为聚集索引视图或者为空（表示非聚集索引）。 还指示索引是否是唯一的。  
   
  **分区方案**  
  如果建议了分区，则在此列中提供分区方案。  
@@ -296,7 +297,7 @@ ms.lasthandoff: 04/11/2017
  所建议的新对象的预期大小。 如果此列空白，请单击 **“有关现有对象的大小，请参阅‘报告’”**。  
   
  **“定义”**  
- “建议目标”****的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
+ “建议目标”的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
   
  **“建议”**  
  选择此项可以在网格中显示所有现有对象，即使数据库引擎优化顾问没有提供与对象相关的建议。  

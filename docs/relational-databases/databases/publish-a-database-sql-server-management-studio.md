@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b86537401dc8866f271472e7fa6c1b4eb33d8827
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>将数据库发布到 Web 服务  
   
-1.  在对象资源管理器中，展开“数据库”****，右键单击某个数据库，指向“任务”****，然后单击“生成和发布脚本”****。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
+1.  在对象资源管理器中，展开“数据库”，右键单击某个数据库，指向“任务”，然后单击“生成和发布脚本”。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
   
 2.  在 **“选择对象”** 页上，选择要发布到 Web 宿主服务的对象。  
   
