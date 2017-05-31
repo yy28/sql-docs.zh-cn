@@ -20,9 +20,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7dbc7ae9097c4bd8e6083a9d392b6ae8fc562f4b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,11 +39,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-live-query-statistics"></a>查看实时查询统计信息  
   
-1.  若要查看实时查询执行计划，请在工具菜单上单击“实时查询统计信息” **** 图标。  
+1.  若要查看实时查询执行计划，请在工具菜单上单击“实时查询统计信息”  图标。  
   
      ![工具栏上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatstoolbar.png "工具栏上的“实时查询统计信息”按钮")  
   
-     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息” ****。  
+     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息” 。  
   
      ![弹出菜单上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsmenu.png "弹出菜单上的“实时查询统计信息”按钮")  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
      ![显示计划中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsplan.png "显示计划中的“实时查询统计信息”按钮")  
   
- 此外，可以通过右键单击“消耗资源的活动查询” **** 表中的查询，从“活动监视器” **** 中访问实时执行计划。  
+ 此外，可以通过右键单击“消耗资源的活动查询”  表中的查询，从“活动监视器”  中访问实时执行计划。  
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
  > 不支持本机编译的存储过程。  
   
 ## <a name="permissions"></a>权限  
- 需要数据库级别 **SHOWPLAN** 权限来填充“实时查询统计信息” **** 结果页，需要服务器级别 **VIEW SERVER STATE** 权限来查看实时统计信息，还需要执行查询所需的所有权限。  
+ 需要数据库级别 **SHOWPLAN** 权限来填充“实时查询统计信息”  结果页，需要服务器级别 **VIEW SERVER STATE** 权限来查看实时统计信息，还需要执行查询所需的所有权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

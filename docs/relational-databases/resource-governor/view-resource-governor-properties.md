@@ -18,9 +18,10 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”****，然后单击“属性”****，这将打开“资源调控器属性”页****。  
+2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
   
 3.  有关该页中的字段的说明，请参阅 [资源调控器属性](#RGProp)。  
   

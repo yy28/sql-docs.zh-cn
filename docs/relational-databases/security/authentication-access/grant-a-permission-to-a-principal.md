@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,9 +67,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  展开 **“存储过程”** 文件夹。  
   
-4.  右键单击某一存储过程，然后选择“属性”****。  
+4.  右键单击某一存储过程，然后选择“属性”。  
   
-5.  在“存储过程属性 – *****stored_procedure_name”*对话框中，在“选择页”下，选择“权限”****。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
+5.  在“存储过程属性 – *stored_procedure_name”*对话框中，在“选择页”下，选择“权限”。 使用此页可以将用户或角色添加到存储过程以及指定这些用户或角色所具有的权限。  
   
 6.  完成后，单击 **“确定”**。  
   

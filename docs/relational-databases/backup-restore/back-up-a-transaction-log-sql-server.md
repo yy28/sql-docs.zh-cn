@@ -18,9 +18,10 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”****，再单击“备份”****。 将出现 **“备份数据库”** 对话框。  
+3.  右键单击数据库，指向“任务”，再单击“备份”。 将出现 **“备份数据库”** 对话框。  
   
 4.  在 **“数据库”** 列表框中，验证数据库名称。 您也可以从列表中选择其他数据库。  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **“备份类型”** 列表框中，选择 **“事务日志”**。  
   
-7.  还可以根据需要选择“仅复制备份”****创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
+7.  还可以根据需要选择“仅复制备份”创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
-    >** 注意！**选择“差异”****选项时，无法创建仅复制备份。  
+    >** 注意！**选择“差异”选项时，无法创建仅复制备份。  
   
 8.  可以接受 **“名称”** 文本框中建议的默认备份集名称，也可以为备份集输入其他名称。  
   
@@ -71,9 +72,9 @@ ms.lasthandoff: 04/11/2017
   
 10. 指定备份集的过期时间：  
   
-    -   若要使备份集在特定天数后过期，请单击“之后”****（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
+    -   若要使备份集在特定天数后过期，请单击“之后”（默认选项），并输入备份集从创建到过期所需的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在“服务器属性”****对话框（位于“数据库设置”****页上）的“默认备份媒体保持期(天)”****选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择“数据库设置”****页。  
+         默认值在“服务器属性”对话框（位于“数据库设置”页上）的“默认备份媒体保持期(天)”选项中设置。 若要访问此对话框，请在对象资源管理器中右键单击服务器名称，选择“属性”，再选择“数据库设置”页。  
   
     -   若要使备份集在特定日期过期，请单击 **“在”**，并输入备份集的过期日期。  
   
@@ -109,13 +110,13 @@ ms.lasthandoff: 04/11/2017
   
     -   对于例行的日志备份，请保留默认选项 **“通过删除不活动的条目截断事务日志”**。  
   
-    -   若要备份日志尾部（即活动的日志），请选中“备份日志尾部，并使数据库处于还原状态”****。  
+    -   若要备份日志尾部（即活动的日志），请选中“备份日志尾部，并使数据库处于还原状态”。  
   
          备份日志尾部失败后执行结尾日志备份，以防丢失所做的工作。 在失败之后且在开始还原数据库之前，或者在故障转移到辅助数据库时，备份活动日志（结尾日志备份）。 选择此选项等效于在 Transact-SQL BACKUP LOG 语句中指定 NORECOVERY 选项。 有关结尾日志备份的详细信息，请参阅[结尾日志备份 (SQL Server) ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
-16. 如果备份到磁带驱动器（如同“常规”****页的“目标”****部分指定的一样），则“备份后卸载磁带”****选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
+16. 如果备份到磁带驱动器（如同“常规”页的“目标”部分指定的一样），则“备份后卸载磁带”选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中“压缩备份”****来压缩备份，并且可以通过选中“不压缩备份”****来防止压缩备份。  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中“压缩备份”来压缩备份，并且可以通过选中“不压缩备份”来防止压缩备份。  
   
      **查看当前备份压缩默认值**  
   

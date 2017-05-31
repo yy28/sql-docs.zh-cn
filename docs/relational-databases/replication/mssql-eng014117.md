@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,9 +39,9 @@ ms.lasthandoff: 04/11/2017
 ## <a name="explanation"></a>解释  
  如果下列之一或两者均为 True，则会出现此错误：  
   
--   msdb..MSdistributiondbs ****中缺少指定分发数据库的条目。  
+-   msdb..MSdistributiondbs 中缺少指定分发数据库的条目。  
   
--   在 master **** 数据库中没有本地服务器入口，或者存在的入口不正确。  
+-   在 master  数据库中没有本地服务器入口，或者存在的入口不正确。  
   
      复制要求一个拓扑中的所有服务器都使用具有可选实例名称的计算机名称（如果为群集实例，则为具有可选实例名称的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟服务器名称）来注册。 `SELECT @@SERVERNAME` 为拓扑中每个服务器返回的值必须与具有可选实例名称的计算机名称或虚拟服务器名称相匹配，复制才能正常运行。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
      如果 @@SERVERNAME 的值对于某个群集实例是不正确的，则必须使用群集管理器更改该名称。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs ****中列出。 如果未列出：  
+ 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs 中列出。 如果未列出：  
   
 1.  请编写分发配置的脚本。 有关详细信息，请参阅 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)。  
   

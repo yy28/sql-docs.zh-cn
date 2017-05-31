@@ -15,9 +15,10 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4a8b3f4dabec4d46813c570e1a04fd469075a66
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
   
 -   语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。  
   
--   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不**支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
+-   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
   
  以下是 ALTER TABLE 语句上 ADD、DROP 和 ALTER INDEX 字句的语法。  
   

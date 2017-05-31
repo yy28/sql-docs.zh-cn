@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,12 +67,12 @@ ms.lasthandoff: 04/11/2017
   
     -   Aggregate 函数  
   
-4.  右键单击要删除的函数，然后选择“删除”****。  
+4.  右键单击要删除的函数，然后选择“删除”。  
   
 5.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”****对话框中的“显示依赖关系”****，打开“*function_name* 依赖关系”****对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  单击“删除对象”对话框中的“显示依赖关系”，打开“*function_name* 依赖关系”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

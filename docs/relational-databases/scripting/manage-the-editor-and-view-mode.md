@@ -24,9 +24,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 364c8e7db9d336df91b984d62aaf62cff19da4ac
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击 **“文本编辑器”**。  
   
-3.  打开相应的语言文件夹（或打开“所有语言”****以使操作对所有语言生效）。  
+3.  打开相应的语言文件夹（或打开“所有语言”以使操作对所有语言生效）。  
   
 4.  选择 **“自动换行”**。  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击 **“文本编辑器”**。  
   
-3.  打开相应的语言文件夹（或打开“所有语言”****以使操作对所有语言生效）。  
+3.  打开相应的语言文件夹（或打开“所有语言”以使操作对所有语言生效）。  
   
 4.  选择 **“启用虚拟空间”**。  
   

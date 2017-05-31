@@ -21,9 +21,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,9 +69,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开要在其中创建新数据库架构的数据库。  
   
-3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”************。  
+3.  右键单击“安全性”文件夹，指向“新建”，并选择“架构”。  
   
-4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称************。  
+4.  在“架构 - 新建”对话框中的“常规”页上，在“架构名称”框中输入新架构的名称。  
   
 5.  在 **“架构所有者”** 框中，输入要拥有该架构的数据库用户或角色的名称。 或者，单击 **“搜索”** 以打开 **“搜索角色和用户”** 对话框。  
   

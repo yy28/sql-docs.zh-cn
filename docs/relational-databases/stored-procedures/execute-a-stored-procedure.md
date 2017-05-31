@@ -23,9 +23,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -136,7 +137,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开所需的数据库，然后依次展开 **“可编程性”**和 **“存储过程”**。  
   
-3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”****。  
+3.  右键单击所需的用户定义存储过程，然后单击“执行存储过程”。  
   
 4.  在 **“执行过程”** 对话框中，为每个参数指定一个值以及它是否应传递 Null 值。  
   

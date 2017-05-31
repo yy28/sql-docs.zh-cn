@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d4bcec1331a7878bf261aea8923fa8f8e66e7299
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,14 +50,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器” ****，再单击“启用” ****。  
+2.  右键单击“资源调控器” ，再单击“启用” 。  
   
 ##  <a name="RGOnProp"></a> 使用资源调控器属性启用资源调控器  
  **使用“资源调控器属性”页启用资源调控器**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器” **** ，然后单击“属性” ****，这将打开“资源调控器属性”页 **** 。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”**。  
   

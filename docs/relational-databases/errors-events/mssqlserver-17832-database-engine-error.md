@@ -19,9 +19,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 29d2c1f1af2ccd6f04c16d5152458010a5f5bc7e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,11 +59,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-2.  键入 **regedit**，然后单击“确定”。**** （如果此时出现“用户帐户控制”对话框，请单击“继续”。）********  
+2.  键入 **regedit**，然后单击“确定”。**** （如果此时出现“用户帐户控制”对话框，请单击“继续”。）****  
   
 3.  导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
-4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。************ 将注册表项命名为 **MaxTokenSize**。  
+4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。**** 将注册表项命名为 **MaxTokenSize**。  
   
 5.  右键单击 **MaxTokenSize**，然后单击“修改”。****  
   

@@ -19,14 +19,15 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业版中，如果在数据库启动过程中回滚（撤消）所需的数据处于脱机状态，则损坏的事务可能延迟。 “延迟的事务” ** 是指前滚阶段结束时未提交的事务或遇到错误而无法回滚的事务。 因为无法回滚事务，所以事务将延迟。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业版中，如果在数据库启动过程中回滚（撤消）所需的数据处于脱机状态，则损坏的事务可能延迟。 “延迟的事务”  是指前滚阶段结束时未提交的事务或遇到错误而无法回滚的事务。 因为无法回滚事务，所以事务将延迟。  
   
 > [!NOTE]  
 >  仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中才会延迟损坏的事务。 在其他版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，事务损坏将导致启动失败。  

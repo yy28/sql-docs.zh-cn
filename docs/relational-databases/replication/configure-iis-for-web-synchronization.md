@@ -18,9 +18,10 @@ caps.latest.revision: 88
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
     4.  完成 Web 服务器证书向导。  
   
-4.  单击“确定” ****。  
+4.  单击“确定” 。  
   
  如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=30958)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkId=46229)。  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 04/11/2017
         > [!NOTE]  
         >  默认情况下，SelfSSL 安装的证书有效期为七天。  
   
-    -   若要指定一个或多个参数的值，请单击 **“开始”**，然后单击 **“运行”**。 在“打开” **** 框中，输入 **cmd**，然后单击“确定” ****。 找到 SelfSSL 安装目录，键入 `SelfSSL`，然后指定一个或多个参数的值。 若要获得参数列表，请键入 `SelfSSL -?`。  
+    -   若要指定一个或多个参数的值，请单击 **“开始”**，然后单击 **“运行”**。 在“打开”  框中，输入 **cmd**，然后单击“确定” 。 找到 SelfSSL 安装目录，键入 `SelfSSL`，然后指定一个或多个参数的值。 若要获得参数列表，请键入 `SelfSSL -?`。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安装连接组件和 SQL Server Management Studio  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 04/11/2017
   
     1.  在 **“别名”** 框中输入虚拟目录别名。  
   
-    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在“别名”框中输入 **websync1**，则在“路径”框中输入 **C:\Inetpub\wwwroot\websync1**。******** 单击“下一步” ****。  
+    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在“别名”框中输入 **websync1**，则在“路径”框中输入 **C:\Inetpub\wwwroot\websync1**。**** 单击“下一步” 。  
   
     3.  在两个对话框中，单击 **“是”**。 这指定您要创建一个新文件夹并复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 。  
   
@@ -182,11 +183,11 @@ ms.lasthandoff: 04/11/2017
   
 11. 如果运行 IIS 的计算机是在 64 位版本的 Windows 上运行，则必须将 replisapi.dll 复制到相应目录：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”框中，键入 **iisreset**，然后单击“确定”。********  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”框中，键入 **iisreset**，然后单击“确定”。****  
   
     2.  IIS 停止并重新启动后，将 replisapi.dll 从 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 复制到步骤 6b 中指定的目录。  
   
-    3.  单击 **“启动”**，再单击 **“运行”**。 在“打开” **** 框中，输入 **cmd**，然后单击“确定” ****。  
+    3.  单击 **“启动”**，再单击 **“运行”**。 在“打开”  框中，输入 **cmd**，然后单击“确定” 。  
   
     4.  在步骤 6b 指定的目录中，执行以下命令：  
   
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  注册 replisapi.dll：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开” **** 框中，输入 **cmd**，然后单击“确定” ****。  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”  框中，输入 **cmd**，然后单击“确定” 。  
   
     2.  在步骤 1 创建的目录中，执行以下命令：  
   
@@ -269,11 +270,11 @@ ms.lasthandoff: 04/11/2017
   
     4.  确保 **“从此位置”** 字段中为本地计算机（而不是域）的名称。 如果不是本地计算机的名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
-    5.  请确保只向该帐户授予“读取”、“读取和执行”和“列出文件夹内容”权限。************  
+    5.  请确保只向该帐户授予“读取”、“读取和执行”和“列出文件夹内容”权限。****  
   
     6.  选择所有不需要访问该目录的用户或组，然后单击 **“删除”**。  
   
-    7.  单击“确定” ****。  
+    7.  单击“确定” 。  
   
 4.  在 **“Internet 信息服务(IIS)管理器”**中创建应用程序池：  
   
@@ -293,11 +294,11 @@ ms.lasthandoff: 04/11/2017
   
     2.  右键单击所创建的应用程序池，然后单击 **“属性”**。  
   
-    3.  在“\<ApplicationPoolName> 属性”对话框中的“标识”选项卡上，单击“可配置”。************  
+    3.  在“\<ApplicationPoolName> 属性”对话框中的“标识”选项卡上，单击“可配置”。****  
   
     4.  在 **“用户名”** 和 **“密码”** 字段中，输入在步骤 1 中创建的帐户和密码。  
   
-    5.  单击“确定” ****。  
+    5.  单击“确定” 。  
   
 6.  将应用程序池与用于 Web 同步的虚拟目录关联：  
   
@@ -305,7 +306,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  展开当前用于 Web 同步的网站，右键单击为 Web 同步所创建的虚拟目录，然后单击 **“属性”**。  
   
-    3.  在“\<VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。************  
+    3.  在“\<VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。****  
   
     4.  单击 **“确定”**。  
   
@@ -324,7 +325,7 @@ ms.lasthandoff: 04/11/2017
   
     4.  如果使用了代理服务器，请选择 **“为 LAN 使用代理服务器”** 和 **“对于本地地址不使用代理服务器”**。  
   
-    5.  单击“确定” ****。  
+    5.  单击“确定” 。  
   
 2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：https://server.domain.com/directory/replisapi.dll?diag。  
   

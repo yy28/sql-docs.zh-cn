@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要查看其属性的计划指南，然后选择“属性”****。  
+3.  右键单击要查看其属性的计划指南，然后选择“属性”。  
   
      **“计划指南属性”** 对话框显示以下属性。  
   

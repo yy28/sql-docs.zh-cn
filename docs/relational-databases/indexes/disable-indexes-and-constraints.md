@@ -27,9 +27,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要禁用的索引，然后选择****“禁用”。  
+5.  右键单击要禁用的索引，然后选择“禁用”。  
   
 6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开您要禁用索引的表。  
   
-4.  右键单击****“索引”文件夹，然后选择****“全部禁用”。  
+4.  右键单击“索引”文件夹，然后选择“全部禁用”。  
   
 5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 04/11/2017
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：****“聚集”、****“非聚集”、****“空间”或 ****”XML”。  
+ 显示索引的类型：“聚集”、“非聚集”、“空间”或 ”XML”。  
   
  **状态**  
  显示禁用操作的状态。 执行之后可能的值包括：  

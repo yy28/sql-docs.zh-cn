@@ -17,9 +17,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29b1764e30fe28153f6f86731f5b6fc520dc9027
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
 |**Extension pages writes/sec**|每秒向缓冲池扩展文件中写入的页数。|  
 |**Free list stalls/sec**|指示每秒必须等待空闲页面的请求数量。|  
 |**Integral Controller Slope**|缓冲池的集成控制器上次使用的斜率，乘以 -100 亿。| 
-|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”**是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
+|**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
 |**Page life expectancy**|指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。|  
 |**Page lookups/sec**|指示每秒要求在缓冲池中查找页的请求数。|  
 |**Page reads/sec**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  

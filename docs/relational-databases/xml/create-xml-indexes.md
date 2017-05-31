@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 -   主 XML 索引名称与视图名称有相同的限制。  
   
- 不能对视图中的 **xml** 类型列、 **xml** 类型列的 **** 表值变量或 **xml** 类型变量创建 XML 索引。  
+ 不能对视图中的 **xml** 类型列、 **xml** 类型列的  表值变量或 **xml** 类型变量创建 XML 索引。  
   
 -   若要使用 ALTER TABLE ALTER COLUMN 选项将 **xml** 类型列从非类型化的 XML 更改为类型化的 XML，或者从类型化的 XML 更改为非类型化的 XML，则列不应存在 XML 索引。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 15f92d683eb518aba0955c7eb7cc23dcd8521d49
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,13 +37,13 @@ ms.lasthandoff: 04/11/2017
   
  可以使用以下任一过程使某个堆栈帧成为当前帧：  
   
--   右键单击该堆栈帧，然后单击“切换到帧”****。  
+-   右键单击该堆栈帧，然后单击“切换到帧”。  
   
 -   双击该堆栈帧。  
   
  **查看当前帧以外的帧的源**  
   
--   右键单击该堆栈帧，然后单击“转到源代码”****。  
+-   右键单击该堆栈帧，然后单击“转到源代码”。  
   
 ## <a name="stack-frames"></a>堆栈帧  
  **“调用堆栈”** 窗口中的每一行称为一个堆栈帧，表示一个从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件到模块的调用或从一个模块到另一个模块的调用。 所显示的最下面的堆栈帧指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中最先调用此堆栈的行。 最上面一行指示调试器暂停执行时所在的行，由该窗口左边距中的黄色箭头标出。 中间的每一行指示调用下一个更高堆栈帧的模块和源代码的行号。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
  **名称**  
  显示有关调用堆栈中某个模块的信息。  
   
- 对于调用堆栈中最下面的一行， **“名称”** 列出查询编辑器源窗口和最先调用此堆栈的行的行号。 对于其他行，“名称”****具有 **Module(Instance.Database)(ParmList) LineNumber** 格式。  
+ 对于调用堆栈中最下面的一行， **“名称”** 列出查询编辑器源窗口和最先调用此堆栈的行的行号。 对于其他行，“名称”具有 **Module(Instance.Database)(ParmList) LineNumber** 格式。  
   
  **模块**  
  存储过程、函数或调用下一个帧的存储过程的名称。  

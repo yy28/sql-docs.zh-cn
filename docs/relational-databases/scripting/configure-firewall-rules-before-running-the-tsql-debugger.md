@@ -25,9 +25,10 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
 -   为 sqlservr.exe 添加入站程序规则。 对于需要支持远程调试会话的每个实例，您必须具有一个规则。  
   
-    1.  在“高级安全 Windows 防火墙”****的左窗格中，右键单击“入站规则”****，然后在操作窗格中选择“新建规则”****。  
+    1.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中选择“新建规则”。  
   
     2.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/11/2017
   
 -   添加针对 svchost.exe 的入站程序规则，以便启用从远程调试器会话的 DCOM 通信。  
   
-    1.  在“高级安全 Windows 防火墙”****的左窗格中，右键单击“入站规则”****，然后在操作窗格中选择“新建规则”****。  
+    1.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中选择“新建规则”。  
   
     2.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/11/2017
   
 -   为 svchost 添加程序条目:  
   
-    1.  在“高级安全 Windows 防火墙”****的左窗格中，右键单击“入站规则”****，然后在操作窗格中选择“新建规则”****。  
+    1.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中选择“新建规则”。  
   
     2.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 04/11/2017
   
 -   为承载 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的应用程序添加程序条目。 如果您需要在同一台计算机上从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 都打开远程调试会话，则必须为这两者都添加一个程序规则：  
   
-    1.  在“高级安全 Windows 防火墙”****的左窗格中，右键单击“入站规则”****，然后在操作窗格中选择“新建规则”****。  
+    1.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中选择“新建规则”。  
   
     2.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   

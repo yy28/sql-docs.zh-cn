@@ -19,9 +19,10 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,13 +53,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在将要创建备份文件的计算机上打开**本地安全策略**应用程序 (`secpol.msc`)。  
   
-2.  在左侧窗格中，展开“本地策略” ****，然后单击“用户权限指派” ****。  
+2.  在左侧窗格中，展开“本地策略” ，然后单击“用户权限指派” 。  
   
-3.  在右侧窗格中，双击“执行卷维护任务”****。  
+3.  在右侧窗格中，双击“执行卷维护任务”。  
   
-4.  单击“添加用户或组” **** ，添加用于备份的任何用户帐户。  
+4.  单击“添加用户或组”  ，添加用于备份的任何用户帐户。  
   
-5.  单击“应用” ****，然后关闭所有“本地安全策略” **** 对话框。  
+5.  单击“应用” ，然后关闭所有“本地安全策略”  对话框。  
   
 ### <a name="security-considerations"></a>需要考虑的安全性因素  
  因为只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，未授权的主体可能会访问删除的内容。 当数据库文件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE_MANAGE_VOLUME_NAME 的用户或服务访问。 在备份数据库时，也存在类似风险。 如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。  

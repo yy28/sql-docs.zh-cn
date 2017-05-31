@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4760109e6bd360e008dc962639880091d916ec3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要删除的条件，然后选择“删除”****。  
+5.  右键单击要删除的条件，然后选择“删除”。  
   
 6.  在 **“删除对象”** 对话框中，确保已选择正确的条件，然后单击 **“确定”**。  
   

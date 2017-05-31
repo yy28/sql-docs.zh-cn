@@ -21,9 +21,10 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b315b0bc0d56cf0e618869f1eef69278fc0d6988
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击该数据库，再单击“属性”****，这将打开“数据库属性”****对话框。  
+3.  右键单击该数据库，再单击“属性”，这将打开“数据库属性”对话框。  
   
 4.  在 **“选择页”** 窗格中，单击 **“文件”**。  
   

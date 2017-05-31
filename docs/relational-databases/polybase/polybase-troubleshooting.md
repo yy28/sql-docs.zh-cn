@@ -20,9 +20,10 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -142,13 +143,13 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>查看 PolyBase 查询计划  
   
-1.  在 SSMS 中，启用“包含实际的执行计划”****(Ctrl+M)，并运行查询。  
+1.  在 SSMS 中，启用“包含实际的执行计划”(Ctrl+M)，并运行查询。  
   
-2.  单击“执行计划” **** 选项卡。  
+2.  单击“执行计划”  选项卡。  
   
      ![PolyBase 查询计划](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 查询计划")  
   
-3.  右键单击“远程查询运算符”****，然后选择“属性”****。  
+3.  右键单击“远程查询运算符”，然后选择“属性”。  
   
 4.  将远程查询值复制并粘贴到文本编辑器中，以查看 XML 远程查询计划。  以下是一个示例。  
   

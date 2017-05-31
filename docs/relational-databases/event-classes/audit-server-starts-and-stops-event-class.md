@@ -16,14 +16,15 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5cef418a16ddcf70cf1254238ed7f87d3406a709
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-server-starts-and-stops-event-class"></a>Audit Server Starts and Stops 事件类
-  当修改 **** 服务状态时，将发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service state is modified.  
+  当修改  服务状态时，将发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service state is modified.  
   
 ## <a name="audit-server-starts-and-stops-event-class-data-columns"></a>Audit Server Starts and Stops 事件类的数据列  
   

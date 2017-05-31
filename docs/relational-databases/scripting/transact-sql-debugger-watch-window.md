@@ -18,9 +18,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b0722b0bd77b33ddb170bb1c2f510f28b74dd82
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
  **更改表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”****。  
+-   右键单击表达式，然后选择“编辑值”。  
   
 ## <a name="columns"></a>列  
  **名称**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/11/2017
 -   返回单个值的 Transact-SQL 语句，如 SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1。  
   
  **Value**  
- 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”****中指定的表达式求值后所返回的值。  
+ 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器对“名称”中指定的表达式求值后所返回的值。  
   
  如果表达式的长度超过了 **“值”** 列的宽度，则将指针移动到该表达式的 **“值”** 单元格上方可显示一条工具提示，指示该表达式的完整值。  
   

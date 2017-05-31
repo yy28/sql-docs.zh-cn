@@ -19,9 +19,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c15031eb2b01a47a933d899c045db6a7123676a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,13 +41,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在发布服务器上为复制代理创建本地 Windows 帐户  
   
-1.  在发布服务器上，从“控制面板”的“管理工具”****中打开“计算机管理”****。  
+1.  在发布服务器上，从“控制面板”的“管理工具”中打开“计算机管理”。  
   
-2.  在“系统工具”****中，展开“本地用户和组”****。  
+2.  在“系统工具”中，展开“本地用户和组”。  
   
-3.  右键单击“用户”****，然后单击“新建用户”****。  
+3.  右键单击“用户”，然后单击“新建用户”。  
   
-4.  在“用户名”****框中，输入 **repl_snapshot**，提供密码和其他相关信息，然后单击“创建”****来创建 repl_snapshot 帐户。  
+4.  在“用户名”框中，输入 **repl_snapshot**，提供密码和其他相关信息，然后单击“创建”来创建 repl_snapshot 帐户。  
   
 5.  重复上述步骤创建 repl_logreader、repl_distribution 和 repl_merge 帐户。  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>在订阅服务器上为复制代理创建本地 Windows 帐户  
   
-1.  在订阅服务器上，从“控制面板”的“管理工具”****中打开“计算机管理”****。  
+1.  在订阅服务器上，从“控制面板”的“管理工具”中打开“计算机管理”。  
   
-2.  在“系统工具”****中，展开“本地用户和组”****。  
+2.  在“系统工具”中，展开“本地用户和组”。  
   
-3.  右键单击“用户”****，然后单击“新建用户”****。  
+3.  右键单击“用户”，然后单击“新建用户”。  
   
-4.  在“用户名”****框中，输入 **repl_distribution**，提供密码和其他相关信息，然后单击“创建”****来创建 repl_distribution 帐户。  
+4.  在“用户名”框中，输入 **repl_distribution**，提供密码和其他相关信息，然后单击“创建”来创建 repl_distribution 帐户。  
   
 5.  重复上述步骤创建 repl_merge 帐户。  
   

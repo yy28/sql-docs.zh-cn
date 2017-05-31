@@ -21,9 +21,10 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -103,14 +104,14 @@ ms.lasthandoff: 04/11/2017
 >  有关该向导用法的视频，请参阅 [《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
 
 1.    连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的 **对象资源管理器** 加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
-2.    右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。********
-3.    查看“简介”页，然后单击“下一步”。********
+2.    右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。****
+3.    查看“简介”页，然后单击“下一步”。****
 4.    在“列选择”页上展开表，然后选择要加密的列。 ****
-5.    对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。********
+5.    对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。**
 6.    对于选择进行加密的每个列，选择“加密密钥”。**** 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 ****
-7.    在“主密钥配置”****页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”****。
-8.    在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。********
-9.    在“摘要”页上，查看你选择的选项，然后单击“完成”。******** 完成后关闭向导。
+7.    在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。
+8.    在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。****
+9.    在“摘要”页上，查看你选择的选项，然后单击“完成”。**** 完成后关闭向导。
 
   
 ## <a name="feature-details"></a>功能详细信息  
@@ -165,7 +166,7 @@ ms.lasthandoff: 04/11/2017
 
 工具要求
 
-- 如果在“连接到服务器” ** 对话框的“其他属性” **** 选项卡中的“列加密设置”为启用 **** 状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
+- 如果在“连接到服务器”  对话框的“其他属性”  选项卡中的“列加密设置”为启用  状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
 
 - `sqlcmd` 中的加密连接至少需要 13.1 版本（可从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取）。
 

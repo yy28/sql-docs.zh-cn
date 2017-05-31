@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c7181877fcc1fa7553b5e11508bc1c9425166ccd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
 |安装 Microsoft® Windows PowerShell Extensions for Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，将默认安装 PowerShell 模块。  可以通过从 Microsoft® SQL Server® 2016 功能包中安装以下组件来手动安装 PowerShell Extensions for SQL Server 2016：<br/>     Microsoft® System CLR Types for Microsoft SQL Server® 2016 (SQLSysClrTypes.msi)<br/>Microsoft® SQL Server® 2016 共享管理对象 (SharedManagementObjects.msi)<br/> Microsoft® Windows PowerShell Extensions for Microsoft SQL Server® 2016 (PowerShellTools.msi)|[Microsoft® SQL Server® 2016 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=52676)。   | 
 |介绍用于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件、打开 PowerShell 会话和加载 **sqlps** 模块的首选机制。 **sqlps** 模块在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet 以及该提供程序和 cmdlet 使用的 SQL Server 管理对象 (SMO) 程序集中加载。|[导入 SQLPS 模块](../../relational-databases/scripting/import-the-sqlps-module.md)|  
 |介绍如何仅加载 SMO 程序集而不加载提供程序或 cmdlet。|[在 Windows PowerShell 中加载 SMO 程序集](../../relational-databases/scripting/load-the-smo-assemblies-in-windows-powershell.md)|  
-|介绍如何通过右键单击“对象资源管理器”****中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 **sqlps** 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](../../relational-databases/scripting/run-windows-powershell-from-sql-server-management-studio.md)|  
+|介绍如何通过右键单击“对象资源管理器”中的节点来运行 Windows PowerShell 会话。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 启动 Windows PowerShell 会话，加载 **sqlps** 模块，并将 SQL Server 提供程序路径设置为选定的对象。|[从 SQL Server Management Studio 中运行 Windows PowerShell](../../relational-databases/scripting/run-windows-powershell-from-sql-server-management-studio.md)|  
 |介绍如何创建运行 Windows PowerShell 脚本的 SQL Server 代理作业步骤。 然后，可以将作业安排在特定时间或响应事件时运行。|[在 SQL Server 代理中运行 Windows PowerShell 步骤](../../relational-databases/scripting/run-windows-powershell-steps-in-sql-server-agent.md)|  
 |介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序浏览 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的层次结构。|[SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)|  
 |介绍如何使用指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作（如运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 脚本）的 [!INCLUDE[tsql](../../includes/tsql-md.md)] cmdlet。|[使用数据库引擎 cmdlet](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)|  

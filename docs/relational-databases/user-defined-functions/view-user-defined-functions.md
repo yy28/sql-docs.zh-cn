@@ -22,9 +22,10 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16f1c2ed871db93259f87bc2e26dba634a0602d6
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,9 +70,9 @@ ms.lasthandoff: 04/11/2017
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”****。  
+4.  右键单击要查看其属性的函数，然后选择“属性”。  
   
-     以下属性将显示在“函数属性 – *function_name*”****对话框。  
+     以下属性将显示在“函数属性 – *function_name*”对话框。  
   
      **数据库**  
      包含此函数的数据库的名称。  

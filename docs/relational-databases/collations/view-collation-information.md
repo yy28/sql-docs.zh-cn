@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eebc43acb7df6cf2d63dbc6d8e0d1c4f25fa9476
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,13 +39,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  右键单击该实例，然后选择“属性”****。  
+2.  右键单击该实例，然后选择“属性”。  
   
  **使用对象资源管理器查看数据库的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”****，右键单击数据库，然后选择“属性”****。  
+2.  展开“数据库”，右键单击数据库，然后选择“属性”。  
   
  **使用对象资源管理器查看列的排序规则设置**  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  展开包含该列的表，然后展开 **“列”**。  
   
-4.  右键单击该列并选择“属性”****。 如果排序规则属性为空，则该列不是字符数据类型。  
+4.  右键单击该列并选择“属性”。 如果排序规则属性为空，则该列不是字符数据类型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看服务器的排序规则设置**  

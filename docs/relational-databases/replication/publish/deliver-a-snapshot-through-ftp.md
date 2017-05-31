@@ -18,9 +18,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93f5c6bc367bf8e38a5683cb542a1345c7a275e5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-ftp-information"></a>指定 FTP 信息  
   
-1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。********  
+1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。****  
   
     -   **“FTP 快照”** 页，用于快照发布和事务发布以及运行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的发布服务器的合并发布。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
     -   发布的备用快照文件夹位置。 如果压缩快照，则需要指定备用位置。  
   
-         在“发布属性 - \<发布>”对话框的快照页上，在“将文件放入下列文件夹”文本框中输入该路径。******** 有关备用快照文件夹位置的详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
+         在“发布属性 - \<发布>”对话框的快照页上，在“将文件放入下列文件夹”文本框中输入该路径。**** 有关备用快照文件夹位置的详细信息，请参阅 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

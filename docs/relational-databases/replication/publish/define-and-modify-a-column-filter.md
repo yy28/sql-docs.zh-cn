@@ -19,9 +19,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9c556f82f888c3237fcc77e6264aaefb2d67adb9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以在新建发布向导的 **“项目”** 页上定义列筛选器。 有关使用新建发布向导的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在“发布属性 - \<发布>”对话框的“项目”页上定义和修改列筛选器。******** 有关发布和项目属性的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“发布属性 - \<发布>”对话框的“项目”页上定义和修改列筛选器。**** 有关发布和项目属性的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-column-filter"></a>定义列筛选器  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-column-filtering"></a>修改列筛选  
   
-1.  在“发布属性 - \<发布>”对话框的“项目”页上，在“要发布的对象”窗格中展开要筛选的表。************  
+1.  在“发布属性 - \<发布>”对话框的“项目”页上，在“要发布的对象”窗格中展开要筛选的表。****  
   
 2.  清除要筛选的每个列旁边的复选框，并确保选中每个应包含在项目中的列的复选框。  
   

@@ -17,18 +17,19 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 071b248f621d1a63a0b09158f6e24cc457c91fd3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>压缩快照文件 (SQL Server Management Studio)
-  指定应在“发布属性 - \<发布>”****对话框的“快照”****页上压缩文件。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  指定应在“发布属性 - \<发布>”对话框的“快照”页上压缩文件。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="to-compress-snapshot-files"></a>压缩快照文件  
   
-1.  在“发布属性 - \<发布>”****对话框的“快照”****页上：  
+1.  在“发布属性 - \<发布>”对话框的“快照”页上：  
   
     1.  选择 **“将文件放入下列文件夹”**，然后单击 **“浏览”** 定位到某个目录，或者输入用于存储快照文件的目录的路径。  
   

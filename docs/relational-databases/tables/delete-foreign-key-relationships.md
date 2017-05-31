@@ -18,9 +18,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开具有约束的表，再展开 **“键”**。  
   
-2.  右键单击该约束，然后单击“删除”****。  
+2.  右键单击该约束，然后单击“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   

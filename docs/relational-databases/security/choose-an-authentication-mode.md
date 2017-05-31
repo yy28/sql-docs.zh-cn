@@ -27,9 +27,10 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-2.  在“运行”****对话框中，键入 **secpol.msc**，然后单击“确定”****。  
+2.  在“运行”对话框中，键入 **secpol.msc**，然后单击“确定”。  
   
 3.  在 **“本地安全设置”** 应用程序中，依次展开 **“安全设置”**、 **“帐户策略”**，然后单击 **“密码策略”**。  
   

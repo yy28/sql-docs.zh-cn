@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8d01bfd262dd88a501e619e2618f1e88b4c8257f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
 |消息正文|无法绑定由多个部分组成的标识符 "%.*ls"。|  
   
 ## <a name="explanation"></a>解释  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实体的名称称为其“标识符”**。 在引用实体（例如在查询中指定列名和表名）时可以使用标识符。 由多个部分组成的标识符包含一个或多个作为标识符前缀的限定符。 例如，表标识符可能以诸如包含表的数据库和架构的名称之类的限定符作为前缀，而列标识符可能以诸如表名称或表别名之类的限定符作为前缀。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实体的名称称为其“标识符”。 在引用实体（例如在查询中指定列名和表名）时可以使用标识符。 由多个部分组成的标识符包含一个或多个作为标识符前缀的限定符。 例如，表标识符可能以诸如包含表的数据库和架构的名称之类的限定符作为前缀，而列标识符可能以诸如表名称或表别名之类的限定符作为前缀。  
   
 错误 4104 表示无法将指定的由多个部分组成的标识符映射到现有实体。 在以下情况下可能会返回此错误：  
   

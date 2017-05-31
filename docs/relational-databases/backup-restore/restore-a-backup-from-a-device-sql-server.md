@@ -19,9 +19,10 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1330611f9a861079182566365b7425e7dacbbea3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,9 +61,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击数据库，指向“任务”****，再单击“还原”****。  
+3.  右键单击数据库，指向“任务”，再单击“还原”。  
   
-4.  单击所需的还原操作类型（“数据库”****、“文件和文件组”****或“事务日志”****）。 这将打开相应的还原对话框。  
+4.  单击所需的还原操作类型（“数据库”、“文件和文件组”或“事务日志”）。 这将打开相应的还原对话框。  
   
 5.  在 **“常规”** 页的 **“还原的源”** 部分，单击 **“源设备”**。  
   

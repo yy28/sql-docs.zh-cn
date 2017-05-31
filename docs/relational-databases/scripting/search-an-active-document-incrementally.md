@@ -18,16 +18,17 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
   您可以通过输入文字来对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  
   
- 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”****对话框跨多个文件执行搜索，并选择“大小写匹配”****，然后执行渐进式搜索，则此搜索将区分大小写。  
+ 对于 **“大小写匹配”** 选项，渐进式搜索将使用上一次搜索的条件。 例如，如果使用“在文件中查找”对话框跨多个文件执行搜索，并选择“大小写匹配”，然后执行渐进式搜索，则此搜索将区分大小写。  
   
 ### <a name="to-search-incrementally"></a>执行渐进式搜索  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cb839fc8929f20c0ac7ca72dc90f364382bc33d0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -100,7 +101,7 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
 始终选择可用于全文唯一键的最小唯一索引。 （最好是 4 个字节、基于整数的索引。）这将显著减少文件系统中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 服务所需要的资源。 如果主键较大（超过 100 个字节），可以考虑选择表中的另一个唯一索引（或创建另一个唯一索引）来作为全文唯一键。 否则，如果全文唯一键的大小超过所允许的最大值（900 个字节），全文填充将无法继续进行。  
  
 ### <a name="associate-a-stoplist"></a>关联非索引字表   
-  “非索引字表” ** 是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 也可以创建和使用你自己的非索引字表。   
+  “非索引字表”  是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 也可以创建和使用你自己的非索引字表。   
   
  例如，下面的 [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可通过从系统非索引字表进行复制来创建名为 myStoplist 的新全文非索引字表：  
   

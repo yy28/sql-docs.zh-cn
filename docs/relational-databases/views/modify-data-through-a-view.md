@@ -18,9 +18,10 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,11 +45,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开包含视图的数据库，然后展开 **“视图”**。  
   
-2.  右键单击该视图，然后选择“编辑前 200 行”****。  
+2.  右键单击该视图，然后选择“编辑前 200 行”。  
   
 3.  可能需要在 **SQL** 窗格中修改 SELECT 语句以返回要修改的行。  
   
-4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”****。 若要更改一个或多个列中的数据，请修改列中的数据。  
+4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”。 若要更改一个或多个列中的数据，请修改列中的数据。  
   
     > **重要说明!!** 如果视图引用多个基表，则不能删除行。 只能更新属于单个基表的列。  
   

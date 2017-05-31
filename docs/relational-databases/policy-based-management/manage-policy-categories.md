@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”****，然后选择“管理类别”****。  
+3.  右键单击“策略管理”，然后选择“管理类别”。  
   
      在 **“管理策略类别”** 对话框中提供以下信息：  
   

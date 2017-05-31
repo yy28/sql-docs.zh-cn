@@ -19,9 +19,10 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -196,7 +197,7 @@ replmerg [-?]
  指定应为行计数验证使用何种行计数计算类型。 值 **1** （默认值）表示快速方法。 值 **0** 表示完全行计数方法。  
   
  **-FileTransferType** [**0**|**1**]  
- 指定文件传输类型。 **** 值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
+ 指定文件传输类型。  值为 **0** ，表示 UNC（通用命名约定），值为 1，表示 FTP（文件传输协议）。  
   
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
@@ -263,7 +264,7 @@ replmerg [-?]
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将合并代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- 登录超时前等待的秒数。 **** 默认值为 15 秒。  
+ 登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  等待创建生成或更改批的秒数或下载到客户端的秒数。 默认值为 **1** 秒。  
@@ -286,7 +287,7 @@ replmerg [-?]
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 指定输出是否应提供详细内容。 ****如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。 **** 如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 **1**，则输出所有的进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  指定合并代理是否应并行处理上载到发布服务器和下载到订阅服务器的更改，这对于具有高带宽的大容量环境很有用。 如果 **ParallelUploadDownload** 为 **1**，则启用并行处理。  

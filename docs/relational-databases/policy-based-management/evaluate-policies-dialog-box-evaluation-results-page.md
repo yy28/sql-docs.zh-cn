@@ -16,9 +16,10 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3801000fb37d133ca0bf7c5197c939188e4e59a4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
  针对此目标进行策略评估。  
   
  **目标详细信息: 详细信息**  
- 链接到显示策略评估详细信息的****“结果详细视图”对话框。  
+ 链接到显示策略评估详细信息的“结果详细视图”对话框。  
   
  **目标详细信息: 消息**  
  出现错误时可以链接到有关信息。  

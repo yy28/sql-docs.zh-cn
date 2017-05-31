@@ -14,9 +14,10 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4fb8ea7bd2ca4a09f0758c175b9eb2781f2ed5b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，性能监视器可以使用它们来监视内存中 OLTP 活动。 这些对象和计数器在计算机上给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的所有实例之间共享，从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]启动。  
   
- 对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”****中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
+ 对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
   
 -   **SQL Server** *\<version>* **XTP 游标**  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,18 +57,18 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="install-using-the-installation-wizard"></a>使用安装向导进行安装  
   
-1.  运行“SQL Server 安装中心”****。 插入 SQL Server 安装介质，然后双击“Setup.exe”****。  
+1.  运行“SQL Server 安装中心”。 插入 SQL Server 安装介质，然后双击“Setup.exe”。  
   
-2.  单击“安装”****，然后单击“全新独立 SQL Server 安装或添加功能”****。  
+2.  单击“安装”，然后单击“全新独立 SQL Server 安装或添加功能”。  
   
-3.  在功能选择页上，选择“针对外部数据的 PolyBase 查询服务” ****。  
+3.  在功能选择页上，选择“针对外部数据的 PolyBase 查询服务” 。  
   
-4.  在服务器配置页上，将“SQL Server PolyBase 引擎服务”****和“SQL Server PolyBase 数据移动服务”配置为在同一帐户下运行。  
+4.  在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一帐户下运行。  
   
     > **重要说明!!** 在 PolyBase 扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。  
     > 请参阅“扩展 PolyBase”。  
   
-5.  在“PolyBase 配置页” ****上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)（PolyBase 扩展组）。  
+5.  在“PolyBase 配置页” 上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)（PolyBase 扩展组）。  
   
     -   将 SQL Server 实例用作已启用 PolyBase 的独立实例。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
   
          选择此选项还将启用 Microsoft 分布式事务处理协调器 (MSDTC) 防火墙连接并修改 MSDTC 注册表设置。  
   
-6.  在“PolyBase 配置页” ****上，指定具有至少六个端口的端口范围。 SQL Server 安装程序将分配该范围中的前六个可用端口。  
+6.  在“PolyBase 配置页” 上，指定具有至少六个端口的端口范围。 SQL Server 安装程序将分配该范围中的前六个可用端口。  
   
 ##  <a name="installing"></a> 使用命令提示符进行安装  
  使用此表中的值来创建安装脚本。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 数据移动服务** 这两项服务必须在同一帐户下运行。 在 PolyBase 扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
@@ -132,13 +133,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 #### <a name="to-enable-the-firewall-rules"></a>启用防火墙规则的步骤  
   
--   打开“控制面板” ****。  
+-   打开“控制面板” 。  
   
--   单击“系统和安全” ****，然后单击“Windows 防火墙” ****。  
+-   单击“系统和安全” ，然后单击“Windows 防火墙” 。  
   
--   单击“高级设置” ****，然后单击“入站规则” ****。  
+-   单击“高级设置” ，然后单击“入站规则” 。  
   
--   右键单击已禁用的规则，然后单击“启用规则”****。  
+-   右键单击已禁用的规则，然后单击“启用规则”。  
   
 ### <a name="polybase-service-accounts"></a>PolyBase 服务帐户
 若要更改的 PolyBase 引擎和 PolyBase 数据移动服务的服务帐户，请卸载并重新安装 PolyBase 功能。

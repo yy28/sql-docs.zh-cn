@@ -26,9 +26,10 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  单击与该查询对应的 **SQL:BatchStarting** 事件。  
   
-5.  右键单击并选择“提取事件数据”****。  
+5.  右键单击并选择“提取事件数据”。  
   
     > [!IMPORTANT]  
     >  不要尝试通过从事件探查器跟踪窗口的下窗格中选中批处理文本来复制它。 这可能会导致所创建的计划指南与原始批处理不匹配。  
@@ -86,7 +87,7 @@ EXEC sp_create_plan_guide
 ## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>使用 SQL Server Profiler 测试计划指南  
  若要验证计划指南是否与查询匹配，请执行以下步骤：  
   
-1.  启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪，确保已选中 **Showplan XML** 事件类型（位于“性能”****节点下）。  
+1.  启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪，确保已选中 **Showplan XML** 事件类型（位于“性能”节点下）。  
   
 2.  使应用程序运行查询。  
   

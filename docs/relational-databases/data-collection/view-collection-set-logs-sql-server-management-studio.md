@@ -17,9 +17,10 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0284c5bf7db8c629300fc1154a2e0b6a2f031e89
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，展开 **“管理”** 文件夹。  
   
-2.  右键单击“数据收集”****，然后单击“查看日志”****。  
+2.  右键单击“数据收集”，然后单击“查看日志”。  
   
-     将会打开“日志文件查看器”****。每个收集组的所有日志文件都会在该查看器的“数据收集”****节点下列出并预先选中。  
+     将会打开“日志文件查看器”。每个收集组的所有日志文件都会在该查看器的“数据收集”节点下列出并预先选中。  
   
 3.  若要查看特定的收集组日志，请清除您不希望查看其日志的各收集组旁边的复选框。 针对该收集组的日志信息将会从 **“日志文件查看器”** 的详细信息窗格中删除。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，展开 **“管理”** 文件夹，然后展开 **“数据收集”**。  
   
-2.  右键单击要查看其日志的收集组，然后单击“查看日志”****。  
+2.  右键单击要查看其日志的收集组，然后单击“查看日志”。  
   
      将打开 **“日志文件查看器”** ，其中仅显示所选收集组的日志文件。  
   

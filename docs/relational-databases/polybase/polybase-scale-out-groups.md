@@ -19,9 +19,10 @@ caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -81,19 +82,19 @@ ms.lasthandoff: 04/11/2017
   
     -   PQTH4A-CMP02  
   
-2.  域帐户：**PQTH4A\PolybaseUser  
+2.  域帐户：PQTH4A\PolybaseUser  
   
 #### <a name="step-1-install-sql-server-with-polybase-on-all-machines"></a>第 1 步：在所有机器上安装具有 PolyBase 的 SQL Server  
   
 1.  运行 setup.exe。  
   
-2.  在“功能选择”页中，选择“针对外部数据的 PolyBase 查询服务” ****。  
+2.  在“功能选择”页中，选择“针对外部数据的 PolyBase 查询服务” 。  
   
 3.  在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用**域账户** PQTH4A\PolybaseUser。  
   
-4.  在 PolyBase 配置页中，选择“将 SQL Server 实例用作 PolyBase 扩展组的一部分”****选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。  
+4.  在 PolyBase 配置页中，选择“将 SQL Server 实例用作 PolyBase 扩展组的一部分”选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。  
   
-5.  安装完成后，运行“services.msc” ****。 验证 SQL Server、PolyBase 引擎和 PolyBase 数据移动服务是否在运行。  
+5.  安装完成后，运行“services.msc” 。 验证 SQL Server、PolyBase 引擎和 PolyBase 数据移动服务是否在运行。  
   
      ![PolyBase 服务](../../relational-databases/polybase/media/polybase-services.png "PolyBase 服务")  
   

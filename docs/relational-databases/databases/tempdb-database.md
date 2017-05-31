@@ -19,9 +19,10 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   减少了 **tempdb** 的日志开销。 从而减少了 **tempdb** 日志文件上的磁盘 I/O 带宽消耗。  
   
--   在新的实例安装过程中，安装程序会添加多个 tempdb 数据文件。 可以使用“数据库引擎配置”****部分中新增的 UI 输入控件和命令行参数 /SQLTEMPDBFILECOUNT 来完成此任务。 默认情况下，安装程序添加的 tempdb 文件数为 CPU 计数或 8（取二者中较低的数字）。  
+-   在新的实例安装过程中，安装程序会添加多个 tempdb 数据文件。 可以使用“数据库引擎配置”部分中新增的 UI 输入控件和命令行参数 /SQLTEMPDBFILECOUNT 来完成此任务。 默认情况下，安装程序添加的 tempdb 文件数为 CPU 计数或 8（取二者中较低的数字）。  
   
 -   如果有多个 **tempdb** 数据文件，那么所有文件都会同时自动增长相同的量，具体取决于增长设置。  不再需要跟踪标志 1117。  
   

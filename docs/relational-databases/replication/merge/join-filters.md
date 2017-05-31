@@ -19,9 +19,10 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bb9bb01589869826eb5a6e33f323b0b9f171aa3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,9 +72,9 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      联接筛选器可关联的表数目不限，但有大量表的筛选器会严重影响合并处理过程的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须在订阅中分区的表之间使用联接筛选器。  
   
--   在适当处将“联接唯一键” **** 选项设置为 **True** 。  
+-   在适当处将“联接唯一键”  选项设置为 **True** 。  
   
-     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键” **** 选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
+     如果父级中的联接列是唯一的，则合并进程的性能有较大的优化空间。 如果联接条件是依据某个唯一列，请为联接筛选器设置“联接唯一键”  选项。 有关设置此选项的详细信息，请参阅前一部分中列出的操作指南主题。  
   
 -   确保为联接筛选器中引用的列建立索引。  
   

@@ -21,9 +21,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e2d16b6082708a23bb83de101bc6d8d16251027
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,10 +43,10 @@ ms.lasthandoff: 04/11/2017
   
 1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的对象资源管理器组件连接到 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
   
-2.  右键单击数据库，指向“任务”****，然后单击“加密列”****。  
+2.  右键单击数据库，指向“任务”，然后单击“加密列”。  
   
 ## <a name="column-selection-page"></a>列选择页  
- 找到表和列，然后选择加密类型（确定性的或随机的）和已选择列的加密密匙。 若要解密当前已加密的列，选择“纯文本” ****。 若要旋转列加密密匙，请选择不同的加密密匙，向导将解密列并使用新密钥重新加密列。 （ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持加密临时表和内存中表，但不能通过此向导进行配置。）  
+ 找到表和列，然后选择加密类型（确定性的或随机的）和已选择列的加密密匙。 若要解密当前已加密的列，选择“纯文本” 。 若要旋转列加密密匙，请选择不同的加密密匙，向导将解密列并使用新密钥重新加密列。 （ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持加密临时表和内存中表，但不能通过此向导进行配置。）  
   
 ## <a name="master-key-configuration-page"></a>主密匙配置页  
  在 Windows 证书商店或 Azure 密匙保管库中创建新的列主密匙。 有关详细信息，请参阅下面位于密匙存储下的链接。  

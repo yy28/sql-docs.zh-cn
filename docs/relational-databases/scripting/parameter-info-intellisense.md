@@ -19,9 +19,10 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b76a63705473437b283e104414f3729166ce2338
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,6 +52,6 @@ ms.lasthandoff: 04/11/2017
  有关详细信息，请参阅[配置 IntelliSense (SQL Server Management Studio)](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)。  
   
 > [!NOTE]  
->  “参数信息”****选项仅可用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和 XML 查询编辑器。  
+>  “参数信息”选项仅可用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器和 XML 查询编辑器。  
   
   

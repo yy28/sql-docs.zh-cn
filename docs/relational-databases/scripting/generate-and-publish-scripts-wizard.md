@@ -46,14 +46,15 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
-  你可以使用“生成和发布脚本向导”****创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
+  你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
   
 1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
@@ -102,11 +103,11 @@ ms.lasthandoff: 04/11/2017
 ###  <a name="Introduction"></a> “简介”页  
  本页介绍用于生成或发布脚本的步骤。  
   
- **不再显示此页** - 下次启动“生成和发布脚本向导”****时跳过此页。  
+ **不再显示此页** - 下次启动“生成和发布脚本向导”时跳过此页。  
   
- “下一步 >”**** - 进入“选择方法”****页。  
+ “下一步 >” - 进入“选择方法”页。  
   
- “取消”**** - 结束向导，而不从数据库中生成或发布脚本。  
+ “取消” - 结束向导，而不从数据库中生成或发布脚本。  
   
 ###  <a name="ChooseObjects"></a> “选择对象”页  
  使用此页可选择要包含在该向导生成的脚本中的对象。 在以下向导页中，您可以选择将这些脚本保存到您选择的位置，或者使用它们将数据库对象和数据发布到安装了 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)的远程 Web 宿主提供程序。  
@@ -175,11 +176,11 @@ ms.lasthandoff: 04/11/2017
   
 -   **脚本绑定** - 为绑定默认值和规则对象生成脚本。 默认值为 **False**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)。  
   
--   “编写排序规则脚本”**** - 在脚本中包括排序规则信息。 默认值为 **False**。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+-   “编写排序规则脚本” - 在脚本中包括排序规则信息。 默认值为 **False**。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 -   **编写默认值脚本** - 在表列中包括用于设置默认值的默认对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)。  
   
--   “编写 DROP 和 CREATE 脚本”**** - 值为“编写脚本”****时，将包括[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”**时，将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”**时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”**。  
+-   “编写 DROP 和 CREATE 脚本” - 值为“编写脚本”时，将包括[!INCLUDE[tsql](../../includes/tsql-md.md)]语句以创建对象。 值为 **“编写 DROP 脚本”**时，将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以删除对象。 值为 **“编写 DROP 和 CREATE 脚本”**时，对于为其编写脚本的每个对象，脚本中将包括 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 语句，随后是 CREATE 语句。 默认值为 **“编写 CREATE 脚本”**。  
   
 -   **编写扩展属性脚本** - 如果对象具有扩展属性，则在脚本中包括扩展属性。 默认值为 **True**。  
   
@@ -193,9 +194,9 @@ ms.lasthandoff: 04/11/2017
   
 -   **编写统计信息脚本** - 设置为 **“编写统计信息脚本”**时，此选项将包括 **CREATE STATISTICS** 语句以在对象上重新创建统计信息。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
--   “编写 USE DATABASE 脚本”**** - 在脚本中添加 **USE DATABASE** 语句。 若要确保在正确的数据库中创建数据库对象，请包含 **USE DATABASE** 语句。 如果预计脚本将在其他数据库中使用，请选择 **False** 以省略 **USE DATABASE** 语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)。  
+-   “编写 USE DATABASE 脚本” - 在脚本中添加 **USE DATABASE** 语句。 若要确保在正确的数据库中创建数据库对象，请包含 **USE DATABASE** 语句。 如果预计脚本将在其他数据库中使用，请选择 **False** 以省略 **USE DATABASE** 语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)。  
   
--   “要编写脚本的数据的类型”**** - 选择应对其编写脚本的目标：“仅限数据”****、“仅限架构”****或同时针对这两者。 默认值为 **“仅限架构”**。  
+-   “要编写脚本的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“仅限架构”**。  
   
  **表/视图选项** - 下列选项仅应用于表或视图的脚本。  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **编写 CHECK 约束脚本** – 在脚本中添加 **CHECK** 约束。 默认值为 **True**。 **CHECK** 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
--   “编写数据压缩选项的脚本”**** - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 **False**。  
+-   “编写数据压缩选项的脚本” - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 **False**。  
   
 -   **编写外键脚本** - 将外键添加到脚本中。 默认值为 **True**。 外键可指示和强制保持表间的关系。  
   
@@ -247,7 +248,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  **发布默认值** - 在表列中包括用于设置默认值的默认对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)。  
   
-4.  “发布依赖对象”**** - 发布在执行所选对象的脚本时必须存在的任何对象。 默认值为 **True**。  
+4.  “发布依赖对象” - 发布在执行所选对象的脚本时必须存在的任何对象。 默认值为 **True**。  
   
 5.  **发布扩展属性** - 如果对象具有扩展属性，则在发送到提供程序以供发布的脚本中包含扩展属性。 默认值为 **True**。  
   
@@ -257,13 +258,13 @@ ms.lasthandoff: 04/11/2017
   
 8.  **发布统计信息** - 设置为 **“发布统计信息”**时，将包括 **CREATE STATISTICS** 语句以重新创建有关对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
-9. “发布 Vardecimal 选项”**** - 在源数据库表上启用该选项时，将在目标数据库表上启用 **vardecimal** 表格式。 默认值为 **True**。  
+9. “发布 Vardecimal 选项” - 在源数据库表上启用该选项时，将在目标数据库表上启用 **vardecimal** 表格式。 默认值为 **True**。  
   
 10. **架构限定对象名称** - 在创建的对象的名称中包括架构名称。 默认值为 **True**。  
   
 11. **脚本绑定** - 在发送到提供程序以供发布的脚本中包括默认值和规则对象。 默认值为 **True**。 有关详细信息，请参阅 [CREATE DEFAULT (Transact SQL)](../../t-sql/statements/create-default-transact-sql.md) 和 [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)。  
   
-12. “要发布的数据的类型”**** - 选择应对其编写脚本的目标：“仅限数据”****、“仅限架构”****或同时针对这两者。 默认值为 **“架构和数据”**。  
+12. “要发布的数据的类型” - 选择应对其编写脚本的目标：“仅限数据”、“仅限架构”或同时针对这两者。 默认值为 **“架构和数据”**。  
   
  **发布选项** – 指定是否在发布到 Web 主机提供商时使用事务。  
   
@@ -287,7 +288,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  **发布更改跟踪** - 如果在源数据库或源数据库中的表上启用了“发布更改跟踪”选项，则在发布过程中包括更改跟踪。 默认值为 **False**。 有关详细信息，请参阅[关于更改跟踪 (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
-9. “发布数据压缩选项”**** - 如果在源数据库或源数据库中的表上配置了发布数据压缩选项，则在发布过程中包括数据压缩选项。 默认值为 **True**。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+9. “发布数据压缩选项” - 如果在源数据库或源数据库中的表上配置了发布数据压缩选项，则在发布过程中包括数据压缩选项。 默认值为 **True**。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
 ###  <a name="ProvConfig"></a> “提供程序配置”页  
  使用此对话框可以查看或修改宿主提供程序设置。 可以使用此对话框执行以下操作：  
@@ -308,7 +309,7 @@ ms.lasthandoff: 04/11/2017
   
  **保存密码** - 进行加密，并将密码保存在本地计算机上。  
   
- “可用数据库”**** - 为宿主提供程序配置的数据库以升序列出，格式为： *server_name*。*database_name*.  
+ “可用数据库” - 为宿主提供程序配置的数据库以升序列出，格式为： *server_name*。*database_name*.  
   
  **新建** - 打开 **“数据库”** 配置对话框，然后添加一个新的数据库。  
   
@@ -336,7 +337,7 @@ ms.lasthandoff: 04/11/2017
   
  **取消** - 单击此项可在完成处理前或出错时关闭向导。  
   
- “完成”**** - 单击此项可在完成处理后或出错时关闭向导。  
+ “完成” - 单击此项可在完成处理后或出错时关闭向导。  
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>在 Azure SQL 数据仓库上生成脚本  
 
@@ -346,23 +347,23 @@ ms.lasthandoff: 04/11/2017
 
 为了使用 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 语法编写对象脚本，请按下列步骤将默认脚本选项设置为 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]：  
 
-1. 单击“工具”****，然后单击“选项”****。  
-2. 在“常规脚本选项”****中设置：  
+1. 单击“工具”，然后单击“选项”。  
+2. 在“常规脚本选项”中设置：  
     1. 数据库引擎类型脚本：**Microsoft Azure SQL 数据库**。  
     2. 数据库引擎版本脚本：**Microsoft Azure SQL 数据仓库版本**。  
-3. 单击“确定” ****。
+3. 单击“确定” 。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>当 SQL 数据仓库不是默认脚本选项时如何为其生成脚本  
 
 如果你按以上所示的步骤将 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 设置为默认脚本选项，则可以忽略这些说明。 但是，如果选择使用不同的默认脚本选项，则可能遇到错误。 要避免错误，请执行以下步骤以便为 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]生成和发布脚本：  
 
 1. 右键单击 SQL 数据仓库数据库。  
-2. 选择“生成脚本...”****。  
+2. 选择“生成脚本...”。  
 3. 选择你要为其编写脚本的对象。  
-4. 在“脚本选项”****中，单击“高级”****。 在“常规”****下设置：  
+4. 在“脚本选项”中，单击“高级”。 在“常规”下设置：  
     1. 数据库引擎类型脚本：**Microsoft Azure SQL 数据库**。  
     2. 数据库引擎版本脚本：**Microsoft Azure SQL 数据仓库版本**。  
-5. 单击“保存或发布脚本”****，然后单击“完成”****。  
+5. 单击“保存或发布脚本”，然后单击“完成”。  
 
 步骤 4 中设置的选项将不会被记住。 如果想要记住这些选项，请按照 **如何将默认脚本选项设置为 SQL 数据仓库**中的说明进行操作。  
   

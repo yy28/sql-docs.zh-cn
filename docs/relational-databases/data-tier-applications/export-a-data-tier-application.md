@@ -29,9 +29,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击数据库名称。  
   
-4.  单击“任务” ****，然后选择“导出数据层应用程序…”****  
+4.  单击“任务” ，然后选择“导出数据层应用程序…”****  
   
 5.  完成向导对话框：  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
  **不再显示此页。** - 选中此复选框可以停止在将来显示“简介”页。  
   
- **下一步** - 继续到“选择 DAC 包”****页。  
+ **下一步** - 继续到“选择 DAC 包”页。  
   
  **取消** – 取消操作并关闭向导。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/11/2017
  若要指定要导出的表的子集，请使用 **“高级”** 选项。  
   
 ##  <a name="Validation"></a> “验证”页  
- 使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”****确保验证成功。  
+ 使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”确保验证成功。  
   
  若要继续，请单击 **“下一步”**。  
   

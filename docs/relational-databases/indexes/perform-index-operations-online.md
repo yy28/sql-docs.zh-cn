@@ -18,9 +18,10 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7be8dd139a8c377d67259df538b097f1337821ca
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -81,15 +82,15 @@ ms.lasthandoff: 04/11/2017
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要联机重新生成的索引，然后选择“属性”****。  
+5.  右键单击要联机重新生成的索引，然后选择“属性”。  
   
 6.  在 **“选择页”**下，选择 **“选项”**。  
   
 7.  选择 **“允许联机 DML 处理”**，然后从列表中选择 **True** 。  
   
-8.  单击“确定” ****。  
+8.  单击“确定” 。  
   
-9. 右键单击要联机重新生成的索引，然后选择“重新生成”****。  
+9. 右键单击要联机重新生成的索引，然后选择“重新生成”。  
   
 10. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   

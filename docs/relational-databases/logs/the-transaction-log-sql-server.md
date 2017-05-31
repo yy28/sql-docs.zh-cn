@@ -18,9 +18,10 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/11/2017
 |1|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个虚拟日志文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截断事务日志前，需要进行日志备份。 （仅限完整恢复模式或大容量日志恢复模式）<br /><br /> 完成下一个日志备份后，一些日志空间可能变为可重复使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|数据备份或还原正在进行（所有恢复模式）。<br /><br /> 如果数据备份阻止了日志截断，则取消备份操作可能有助于解决备份直接导致的此问题。|  
-|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）：<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下事务日志一般在每个自动检查点截断。<br /><br /> 延迟事务。 “延迟的事务 ** ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。<br /> <br /> 长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（`SELECT` 查询），也可能会以用户事务的名义创建和使用内部对象， 然后就会填充 tempdb 事务日志。|  
+|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）：<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下事务日志一般在每个自动检查点截断。<br /><br /> 延迟事务。 “延迟的事务  ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。<br /> <br /> 长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（`SELECT` 查询），也可能会以用户事务的名义创建和使用内部对象， 然后就会填充 tempdb 事务日志。|  
 |5|DATABASE_MIRRORING|数据库镜像暂停，或者在高性能模式下，镜像数据库明显滞后于主体数据库。 （仅限完整恢复模式）<br /><br /> 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |6|REPLICATION|在事务复制过程中，与发布相关的事务仍未传递到分发数据库。 （仅限完整恢复模式）<br /><br /> 有关事务复制的信息，请参阅 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)。|  
 |7|DATABASE_SNAPSHOT_CREATION|正在创建数据库快照。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/11/2017
 |14|OTHER_TRANSIENT|当前未使用此值。|  
   
 ##  <a name="MinimallyLogged"></a>可尽量减少日志量的操作  
- 最小日志记录**是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+ 最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > **注意！！** 内存优化表不支持最小日志记录。  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 04/11/2017
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 操作。  
   
-        > **不推荐**使用“DBCC DBREINDEX 语句”****；请不要在新的应用程序中使用该语句。  
+        > **不推荐**使用“DBCC DBREINDEX 语句”；请不要在新的应用程序中使用该语句。  
   
     -   DROP INDEX 新堆重新生成（如果适用）。 （ [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作期间将 **始终** 完整记录索引页的释放操作。）
   

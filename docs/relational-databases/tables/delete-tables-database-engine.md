@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中选择要删除的表。  
   
-2.  右键单击该表，再从快捷菜单中选择“删除”****。  
+2.  右键单击该表，再从快捷菜单中选择“删除”。  
   
 3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”**。  
   

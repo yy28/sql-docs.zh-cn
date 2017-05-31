@@ -17,9 +17,10 @@ caps.latest.revision: 62
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f6b52a9fc10c8dae7a0b01a6a615076bcc257104
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -242,7 +243,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   
-4.  单击“确定” ****。  
+4.  单击“确定” 。  
   
  **删除 Oracle 发布服务器 (Transact-SQL)**  
   

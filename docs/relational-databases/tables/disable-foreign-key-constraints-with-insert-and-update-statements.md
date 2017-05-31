@@ -20,9 +20,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a72cfad873d2fe891c9f10c3c5f8c0ede3a68ff2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开具有约束的表，再展开 **“键”** 文件夹。  
   
-2.  右键单击该约束，再选择“修改”****。  
+2.  右键单击该约束，再选择“修改”。  
   
-3.  在“表设计器”****下的网格中，单击****“强制外键约束”，然后从下拉菜单中选择****“否”。  
+3.  在“表设计器”下的网格中，单击“强制外键约束”，然后从下拉菜单中选择“否”。  
   
 4.  单击 **“关闭”**。  
   

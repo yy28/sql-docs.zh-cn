@@ -16,9 +16,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46ce2a01967b75aa0fec969d24cf6ad320932ace
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/11/2017
   
  有关同时使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函数的信息，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”****，再单击“新建序列”****，或者右键单击现有序列，再单击“属性”****。 如果右键单击现有序列，再单击“属性”****，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
+ 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”，再单击“新建序列”，或者右键单击现有序列，再单击“属性”。 如果右键单击现有序列，再单击“属性”，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
   
 ## <a name="options"></a>选项  
  **序列名称**  
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
 -   基于这些类型之一的任何用户定义数据类型（别名类型）。  
   
  **精度**  
- 对于“十进制”**decimal**或“数值”****数据类型，请指定精度。 （小数位数始终为 0。）  
+ 对于“十进制”**decimal**或“数值”数据类型，请指定精度。 （小数位数始终为 0。）  
   
  **起始值**  
  将由序列对象返回的第一个值。 **START** 值必须是小于或等于序列对象的最大值并大于或等于其最小值的值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  

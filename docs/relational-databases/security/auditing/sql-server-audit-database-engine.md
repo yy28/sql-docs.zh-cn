@@ -19,16 +19,17 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
 ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  “审核”**[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
+  “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的审核级别有若干种，具体取决于您的安装的政府要求或标准要求。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核提供若干必需的工具和进程，用于启用、存储和查看对各个服务器和数据库对象的审核。  
   
@@ -40,26 +41,26 @@ ms.lasthandoff: 04/29/2017
 >  本     主题适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]的信息，请参阅 [Get started with SQL database auditing（SQL 数据库审核入门）](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)。  
   
 ## <a name="sql-server-audit-components"></a>SQL Server 审核组件  
- ** “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
+  “审核”是将若干元素组合到一个包中，用于执行一组特定服务器操作或数据库操作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的组件组合生成的输出就称为审核，就如同报表定义与图形和数据元素组合生成报表一样。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核使用“扩展事件” ** 以帮助创建审核。 有关扩展事件的详细信息，请参阅 [扩展事件](../../../relational-databases/extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核使用“扩展事件”  以帮助创建审核。 有关扩展事件的详细信息，请参阅 [扩展事件](../../../relational-databases/extended-events/extended-events.md)。  
   
 ### <a name="sql-server-audit"></a>SQL Server 审核  
- “SQL Server 审核” ** 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。  
+ “SQL Server 审核”  对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。  
   
  定义审核时，将指定结果的输出位置。 这是审核的目标位置。 审核是在 *禁用* 状态下创建的，因此不会自动审核任何操作。 启用审核后，审核目标将从审核接收数据。  
   
 ### <a name="server-audit-specification"></a>服务器审核规范  
- “服务器审核规范” ** 对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。  
+ “服务器审核规范”  对象属于审核。 您可以为每个审核创建一个服务器审核规范，因为它们都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例范围内创建的。  
   
- 服务器审核规范可收集许多由扩展事件功能引发的服务器级操作组。 您可以在服务器审核规范中包括“审核操作组” ** 。 审核操作组是预定义的操作组，它们是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中发生的原子事件。 这些操作将发送到审核，审核将它们记录到目标中。  
+ 服务器审核规范可收集许多由扩展事件功能引发的服务器级操作组。 您可以在服务器审核规范中包括“审核操作组”  。 审核操作组是预定义的操作组，它们是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]中发生的原子事件。 这些操作将发送到审核，审核将它们记录到目标中。  
   
  [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主题介绍了服务器级别审核操作组。  
   
 ### <a name="database-audit-specification"></a>数据库审核规范  
- “数据库审核规范” ** 对象也属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核。 针对每个审核，您可以为每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库创建一个数据库审核规范。  
+ “数据库审核规范”  对象也属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核。 针对每个审核，您可以为每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库创建一个数据库审核规范。  
   
- 数据库审核规范可收集由扩展事件功能引发的数据库级审核操作。 你可以向数据库审核规范添加审核操作组或审核事件。 *审核事件* 是可以由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎审核的原子操作。 ** “审核操作组”是预定义的操作组。 它们都位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库作用域。 这些操作将发送到审核，审核将它们记录到目标中。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
+ 数据库审核规范可收集由扩展事件功能引发的数据库级审核操作。 你可以向数据库审核规范添加审核操作组或审核事件。 *审核事件* 是可以由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎审核的原子操作。  “审核操作组”是预定义的操作组。 它们都位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库作用域。 这些操作将发送到审核，审核将它们记录到目标中。 在用户数据库审核规范中不要包括服务器范围的对象，例如系统视图。  
   
  [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主题介绍了数据库级别的审核操作组和审核操作。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/29/2017
 > [!IMPORTANT]  
 >  任何经过身份验证的用户可以读取和写入到 Windows 应用程序事件日志。 应用程序事件日志要求的权限比 Windows 安全事件日志低，安全性低于 Windows 安全事件日志。  
   
- 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功” **** 和“失败” **** 均必须启用“审核对象访问” ****安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，可通过使用审核策略程序 ( **AuditPol.exe)** 从命令行设置更详细的**应用程序生成**策略。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](http://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
+ 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008 中，可通过使用审核策略程序 ( **AuditPol.exe)** 从命令行设置更详细的**应用程序生成**策略。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](http://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](http://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/29/2017
   
 3.  启用审核。  
   
-4.  通过使用 Windows“事件查看器” ****、“日志文件查看器” ****或 fn_get_audit_file 函数来读取审核事件。  
+4.  通过使用 Windows“事件查看器” 、“日志文件查看器” 或 fn_get_audit_file 函数来读取审核事件。  
   
  有关详细信息，请参阅 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/29/2017
  有关服务启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ### <a name="attaching-a-database-with-an-audit-defined"></a>将数据库附加到已定义的审核  
- 如果附加的数据库具有审核规范并且指定的 GUID 在服务器上不存在，则将导致“ ** 孤立”审核规范。 因为服务器实例上不存在具有匹配 GUID 的审核，所以将不记录审核事件。 若要更正此情况，请使用 ALTER DATABASE AUDIT SPECIFICATION 命令将孤立审核规范连接到现有服务器审核。 或者，使用 CREATE SERVER AUDIT 命令创建一个具有指定 GUID 的新服务器审核。  
+ 如果附加的数据库具有审核规范并且指定的 GUID 在服务器上不存在，则将导致“  孤立”审核规范。 因为服务器实例上不存在具有匹配 GUID 的审核，所以将不记录审核事件。 若要更正此情况，请使用 ALTER DATABASE AUDIT SPECIFICATION 命令将孤立审核规范连接到现有服务器审核。 或者，使用 CREATE SERVER AUDIT 命令创建一个具有指定 GUID 的新服务器审核。  
   
  您可以将定义了审核规范的数据库连接到不支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的另一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本，如 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] ，但它不会记录审核事件。  
   

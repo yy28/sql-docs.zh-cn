@@ -16,9 +16,10 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -85,7 +86,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定非事务性访问的级别**  
- 可以在“数据库属性”****对话框的“选项”****页的“FILESTREAM 非事务性访问”****字段中指定非事务性访问的级别。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../../relational-databases/databases/database-properties-options-page.md)。  
+ 可以在“数据库属性”对话框的“选项”页的“FILESTREAM 非事务性访问”字段中指定非事务性访问的级别。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../../relational-databases/databases/database-properties-options-page.md)。  
   
 ##  <a name="BasicsDirectory"></a> 在数据库级别指定 FileTable 的目录  
  在数据库级别启用对文件的非事务性访问时，可以选择使用 **DIRECTORY_NAME** 选项同时提供一个目录名称。 如果启用非事务性访问时没有提供目录名称，则在以后必须提供它，这样才能在数据库中创建 FileTable。  
@@ -129,7 +130,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 指定 FileTable 的目录**  
- 可以在“数据库属性”****对话框的“选项”****页的“FILESTREAM 目录名称”****字段中指定目录名称。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../../relational-databases/databases/database-properties-options-page.md)。  
+ 可以在“数据库属性”对话框的“选项”页的“FILESTREAM 目录名称”字段中指定目录名称。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../../relational-databases/databases/database-properties-options-page.md)。  
   
 ###  <a name="viewnames"></a> 如何查看实例的现有目录名称  
  若要查看该实例的现有目录名称的列表，可查询目录视图 [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 并查看 **filestream_database_directory_name** 列。  

@@ -14,9 +14,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ef76460f1f77ea9622bbc2465857946bf463b96
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,10 +32,10 @@ ms.lasthandoff: 04/11/2017
  键入策略说明。  
   
  **更多帮助超链接: 要显示的文本**  
- 在执行策略时，将在“结果详细视图”****页中显示更多帮助超链接。 键入要显示为超链接的文本。  
+ 在执行策略时，将在“结果详细视图”页中显示更多帮助超链接。 键入要显示为超链接的文本。  
   
  **更多帮助超链接: 地址**  
- 键入在用户单击“结果详细视图”****页中显示的超链接文本时打开的网页的超链接。  
+ 键入在用户单击“结果详细视图”页中显示的超链接文本时打开的网页的超链接。  
   
  **更多帮助超链接: 测试链接**  
  单击可打开超链接以测试链接的有效性。  

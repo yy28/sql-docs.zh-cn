@@ -22,9 +22,10 @@ caps.latest.revision: 47
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e951423b908dacc56729ede2fcca7339ce83acf0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要查看环境变量，请在“控制面板”****中打开“系统”****，然后单击“高级”****选项卡。  
+>  若要查看环境变量，请在“控制面板”中打开“系统”，然后单击“高级”选项卡。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隐式设置脚本变量  
  使用具有相关 **sqlcmd** 变量的选项启动 **sqlcmd** 时， **sqlcmd** 变量将被隐式设置为使用该选项指定的值。 在下面的示例中，启动 `sqlcmd` 时使用了 `-l` 选项。 这会隐式设置 SQLLOGINTIMEOUT 变量。  
@@ -190,7 +191,7 @@ ms.lasthandoff: 04/11/2017
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 中使用用户级环境变量  
- 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%`，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”****中双击“系统”****。 单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+ 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%`，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”中双击“系统”。 单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
   
  下列代码位于输入文件 `c:\testscript.txt`:  
   

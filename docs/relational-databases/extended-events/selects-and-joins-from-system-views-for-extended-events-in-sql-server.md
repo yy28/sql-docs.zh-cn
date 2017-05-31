@@ -56,9 +56,9 @@ ms.lasthandoff: 04/11/2017
 
 #### <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV)：
 
-- 用于存储正在运行的事件会话的当前活动**信息。 但是这些 DMV 对会话定义知之甚少。
+- 用于存储正在运行的事件会话的当前活动信息。 但是这些 DMV 对会话定义知之甚少。
     - 即使所有事件会话当前已停止，针对视图 *sys.dm_xe_packages* 的 SELECT 语句仍将返回行，因为各种包已加载到服务器启动的活动内存。
-    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行。****
+    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行。**
 
 
 - 扩展事件的 DMV 的名称前缀为：
@@ -116,33 +116,33 @@ ms.lasthandoff: 04/11/2017
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 角度
 
 
-在 SSMS 的“对象资源管理器”中，可以通过展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”打开“新建会话”对话框。************************
+在 SSMS 的“对象资源管理器”中，可以通过展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”打开“新建会话”对话框。****
 
-在“新建会话”的大对话框中标记为“常规”的第一部分中，我们看到已选中选项“在服务器启动时启动事件会话”。************
+在“新建会话”的大对话框中标记为“常规”的第一部分中，我们看到已选中选项“在服务器启动时启动事件会话”。****
 
 ![新建会话 > 常规，在服务器启动时启动事件会话。](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-接下来在“事件”****部分中，我们看到已选中 **lock_deadlock** 事件。 对于该事件，我们看到已选择三个**操作**。 这意味着已单击“配置”****按钮，该按钮单击后变成灰色。
+接下来在“事件”部分中，我们看到已选中 **lock_deadlock** 事件。 对于该事件，我们看到已选择三个**操作**。 这意味着已单击“配置”按钮，该按钮单击后变成灰色。
 
 ![新建会话 > 事件，全局字段 (操作)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-接下来，还是在“事件” > “配置”部分中，我们看到 [resource_type 已设置为 PAGE](#resource_type_dmv_actual_row)。**************** 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
+接下来，还是在“事件” > “配置”部分中，我们看到 [resource_type 已设置为 PAGE](#resource_type_dmv_actual_row)。**** 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
 
 另外我们还看到数据库名称和计数器的谓词筛选器。
 
 ![新建会话 > 事件，筛选谓词字段 (操作)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-接下来在“数据存储”****部分中，我们看到已选择 **event_file** 作为目标。 此外，我们看到已选中“启用文件滚动更新”****选项。
+接下来在“数据存储”部分中，我们看到已选择 **event_file** 作为目标。 此外，我们看到已选中“启用文件滚动更新”选项。
 
 ![新建会话 > 数据存储，eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最后，在“高级”****部分中，我们看到“最大调度滞后时间”****的值已减少到 4 秒。
+最后，在“高级”部分中，我们看到“最大调度滞后时间”的值已减少到 4 秒。
 
 ![新建会话 > 高级，最大调度滞后时间](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -157,7 +157,7 @@ ms.lasthandoff: 04/11/2017
 
 不管如何创建事件会话定义，都可以在 SSMS UI 中将会话反向工程为完全匹配的 Transact-SQL 脚本。 你可以检查前面的“新建会话”屏幕截图，将图中显示的设置与下面生成的 T-SQL **CREATE EVENT SESSION** 脚本中的子句进行比较。
 
-若要对事件会话进行反向工程，在“对象资源管理器”****中右键单击会话节点，然后选择“编写会话脚本为”**** > “创建到”**** > “剪贴板”****。
+若要对事件会话进行反向工程，在“对象资源管理器”中右键单击会话节点，然后选择“编写会话脚本为” > “创建到” > “剪贴板”。
 
 下面的 T-SQL 脚本通过使用 SSMS 进行反向工程创建。 然后仅通过空格的策略性操作手动修饰该脚本。
 
@@ -612,8 +612,8 @@ SELECT  -- C.4
 
 以下行由前面的 SELECT 语句返回，其中 `o.name = 'lock_deadlock'`：
 
-- 每一行代表针对 sqlserver.lock_deadlock** 事件的可选筛选器。
-- 以下显示中忽略了 \[Column-Description\]** 列。 它的值通常为 NULL。
+- 每一行代表针对 sqlserver.lock_deadlock 事件的可选筛选器。
+- 以下显示中忽略了 \[Column-Description\] 列。 它的值通常为 NULL。
 
 
 ```
@@ -729,7 +729,7 @@ you could put:
 
 以下 SELECT 语句将返回目标的每个参数。 每个参数都标记了是否为必选参数。 为参数指定的值将影响目标的行为。
 
-- 请注意 WHERE 子句项：object_type = 'customizable'**。
+- 请注意 WHERE 子句项：object_type = 'customizable'。
 - 此外，你需要编辑 WHERE 子句 o.name = 的值。**
 
 
@@ -820,8 +820,8 @@ SELECT  --C.7
 
 对于该运行：
 
-- s.name = 的值已设为 checkpoint_begin 事件的事件会话。****
-- 目标为 ring_buffer**。
+- s.name = 的值已设为 checkpoint_begin 事件的事件会话。**
+- 目标为 ring_buffer。
 
 
 ```XML
@@ -860,7 +860,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 针对函数执行 SELECT 语句，以检索磁盘驱动器中的 event_file 数据
 
 
-假设事件会话收集了一些数据，之后停止了。 如果会话定义为使用 event_file 目标，则仍可以通过调用函数 sys.fn_xe_target_read_file** 来检索数据。
+假设事件会话收集了一些数据，之后停止了。 如果会话定义为使用 event_file 目标，则仍可以通过调用函数 sys.fn_xe_target_read_file 来检索数据。
 
 - 在运行该 SELECT 语句之前必须编辑该函数调用的参数的路径和文件名称。
     - 不用在意每次重新启动会话时 SQL 系统在实际的 XEL 文件名称中嵌入的额外的数字。 只需指定一般的根名称和扩展名。

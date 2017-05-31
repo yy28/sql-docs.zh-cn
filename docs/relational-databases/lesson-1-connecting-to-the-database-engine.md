@@ -14,9 +14,10 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efa0929341a017bb82136a84427a32118167c504
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/11/2017
 -   [授权其他连接](#additional)  
   
 ## <a name="tools"></a>入门工具  
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”****菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了多种工具。 本主题说明您首先需要的工具，并帮助选择适合于作业工具。 所有工具都可以从“开始”菜单上访问。 默认情况下不会安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之类的一些工具。 必须在安装过程中将这些工具选择为客户端组件的一部分。 有关下面所述工具的完整说明，请在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机图书中进行搜索。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 仅包含其中的一部分工具。  
   
 ### <a name="basic-tools"></a>基本工具  
   
@@ -47,13 +48,13 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio  
   
-- 在 Windows 的当前版本中，在“开始”****页键入 SSMS，然后单击“Microsoft SQL Server Management Studio”****。  
--   使用较旧版本的 Windows 时，在“开始”****菜单上，依次指向“所有程序”****、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”****。  
+- 在 Windows 的当前版本中，在“开始”页键入 SSMS，然后单击“Microsoft SQL Server Management Studio”。  
+-   使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”。  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
   
-- 在当前版本的 Windows 中，在“开始”****菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”******。   
--   使用较旧版本的 Windows 时，在“开始”****菜单上，依次指向“所有程序”****、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”****，然后单击“SQL Server 配置管理器”****。  
+- 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”****。   
+-   使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
   
 ## <a name="connect"></a>使用 Management Studio 进行连接  
 如果知道实例名并且以计算机上的本地管理员组成员身份进行连接，则可以使用同一台计算机上运行的工具轻松连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 必须在承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的同一台计算机上执行下面的过程。  
@@ -67,29 +68,29 @@ ms.lasthandoff: 04/11/2017
   
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”**。  
   
-3.  如果未显示“已注册的服务器”，请在“视图”****菜单中，单击“已注册的服务器”****。  
+3.  如果未显示“已注册的服务器”，请在“视图”菜单中，单击“已注册的服务器”。  
   
-4.  在“已注册的服务器”工具栏中选择“数据库引擎”****后，展开“数据库引擎”****，右键单击“本地服务器组”****，指向“任务”****，然后单击“注册本地服务器”****。 将显示计算机上安装的所有[!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>*\sqlexpress。  
+4.  在“已注册的服务器”工具栏中选择“数据库引擎”后，展开“数据库引擎”，右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。 将显示计算机上安装的所有[!INCLUDE[ssDE](../includes/ssde-md.md)]实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>*\sqlexpress。  
   
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>验证数据库引擎是否正在运行  
   
 1.  在“已注册的服务器”中，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称中有绿色的点并在名称旁边有白色箭头，则表示 [!INCLUDE[ssDE](../includes/ssde-md.md)] 正在运行，无需执行其他操作。  
   
-2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称中有红色的点并在名称旁边有白色正方形，则表示[!INCLUDE[ssDE](../includes/ssde-md.md)]已停止。 右键单击 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名称，单击“服务控制”****，然后单击“开始”****。 出现确认对话框之后，[!INCLUDE[ssDE](../includes/ssde-md.md)]应启动，圆圈应变为绿色且带有白色箭头。  
+2.  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称中有红色的点并在名称旁边有白色正方形，则表示[!INCLUDE[ssDE](../includes/ssde-md.md)]已停止。 右键单击 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的名称，单击“服务控制”，然后单击“开始”。 出现确认对话框之后，[!INCLUDE[ssDE](../includes/ssde-md.md)]应启动，圆圈应变为绿色且带有白色箭头。  
   
 ##### <a name="to-connect-to-the-database-engine"></a>连接到数据库引擎  
 
 安装 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 时，至少选中了一个管理员帐户。 以管理员身份登录到 Windows 时，执行以下步骤。
   
-1.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“文件”****菜单上，单击“连接对象资源管理器”****。  
+1.  在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“文件”菜单上，单击“连接对象资源管理器”。  
   
-    将打开“连接到服务器”****对话框。 “服务器类型”****框中将显示上次使用的组件的类型。  
+    将打开“连接到服务器”对话框。 “服务器类型”框中将显示上次使用的组件的类型。  
   
-2.  选择“数据库引擎”****。  
+2.  选择“数据库引擎”。  
 
     ![object-explorer](../relational-databases/media/object-explorer.png)
   
-3.  在“服务器名称”****框中，键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 <computer_name>\\<instance_name>********，如 **ACCTG_SRVR\SQLEXPRESS**。 以下屏幕截图显示连接到名为“PracticeComputer”的计算机上 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。 
+3.  在“服务器名称”框中，键入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。 对于默认的 SQL Server 实例，服务器名称即计算机名称。 对于 SQL Server 的命名实例，服务器名称为 <computer_name>\\<instance_name>，如 **ACCTG_SRVR\SQLEXPRESS**。 以下屏幕截图显示连接到名为“PracticeComputer”的计算机上 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的默认（未命名）实例。 已登录到 Windows 的用户是 Contoso 域中的 Mary。 使用 Windows 身份验证时，无法更改用户名称。 
 
     ![connect-to-server](../relational-databases/media/connect-to-server.png)
   
@@ -106,23 +107,23 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="create-a-windows-authentication-login"></a>创建 Windows 身份验证登录名  
   
-1.  在上一个任务中，您使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 连接到了[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 在对象资源管理器中，依次展开服务器实例、“安全性”****，右键单击“登录名”****，再单击“新建登录名”****。  
+1.  在上一个任务中，您使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 连接到了[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 在对象资源管理器中，依次展开服务器实例、“安全性”，右键单击“登录名”，再单击“新建登录名”。  
   
-    将显示“登录名 - 新建”****对话框。  
+    将显示“登录名 - 新建”对话框。  
   
-2.  在“常规”****页中的“登录名”****框中，键入以下格式的 Windows 登录名：`<domain>\\<login>`
+2.  在“常规”页中的“登录名”框中，键入以下格式的 Windows 登录名：`<domain>\\<login>`
   
     ![new-login](../relational-databases/media/new-login.png)
   
-3.  在“默认数据库”****框中，选择 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]（如果有）。 否则选择“master”****。  
+3.  在“默认数据库”框中，选择 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]（如果有）。 否则选择“master”。  
   
-4.  在“服务器角色”****页中，如果新建登录名要成为管理员，则单击“sysadmin”****，否则保留此项为空白。  
+4.  在“服务器角色”页中，如果新建登录名要成为管理员，则单击“sysadmin”，否则保留此项为空白。  
   
-5.  在“用户映射”****页中，针对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库（如果有）选择“映射”****。 否则选择“master”****。 注意，“用户”****框使用该登录名进行填充。 关闭后，该对话框将在数据库中创建此用户。  
+5.  在“用户映射”页中，针对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库（如果有）选择“映射”。 否则选择“master”。 注意，“用户”框使用该登录名进行填充。 关闭后，该对话框将在数据库中创建此用户。  
   
-6.  在“默认架构”****框中，键入 **dbo** 将登录名映射到数据库所有者架构。  
+6.  在“默认架构”框中，键入 **dbo** 将登录名映射到数据库所有者架构。  
   
-7.  接受“安全对象”****和“状态”****框的默认设置，然后单击“确定”****创建登录名。  
+7.  接受“安全对象”和“状态”框的默认设置，然后单击“确定”创建登录名。  
   
 > [!IMPORTANT]  
 > 这是基本的入门信息。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了丰富的安全环境，而安全显然是数据库操作的一个重要方面。  

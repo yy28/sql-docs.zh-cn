@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: df3ba2fe80e7e6cb2f1a9a7834dc6d64b2e0cf42
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,31 +36,31 @@ ms.lasthandoff: 04/11/2017
   
 2.  在实用工具资源管理器导航窗格中，单击 **“实用工具管理”** 以便查看或修改全局监视策略，然后在实用工具资源管理器内容窗格中单击 **“策略”** 选项卡。  
   
-3.  在实用工具资源管理器内容窗格中，通过单击箭头或策略说明，选择“设置全局数据层监视策略”****或“设置全局托管的实例监视策略”****。  
+3.  在实用工具资源管理器内容窗格中，通过单击箭头或策略说明，选择“设置全局数据层监视策略”或“设置全局托管的实例监视策略”。  
   
 4.  使用策略说明右侧的控件可以设置使用过度或使用不足策略阈值。  
   
-5.  根据需要使用“应用” ****、“放弃” ****或“还原默认设置” **** 按钮。 策略更改可能需要最多 15 分钟的时间，以便传播回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板和列表视图详细信息。  
+5.  根据需要使用“应用” 、“放弃” 或“还原默认设置”  按钮。 策略更改可能需要最多 15 分钟的时间，以便传播回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板和列表视图详细信息。  
   
-6.  若要刷新数据，请在实用工具资源管理器导航窗格中右键单击“实用工具管理”****节点，然后选择“刷新”****。  
+6.  若要刷新数据，请在实用工具资源管理器导航窗格中右键单击“实用工具管理”节点，然后选择“刷新”。  
   
 #### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>在 SQL Server 实用工具中为单独的数据层应用程序或 SQL Server 的单独托管实例修改资源运行状况策略定义。  
   
 1.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 UCP。  
   
-2.  在实用工具资源管理器导航窗格中，单击“已部署的数据层应用程序”****或者单击“托管实例”****，以便查看或修改用于单独数据层应用程序或托管实例的监视策略。  
+2.  在实用工具资源管理器导航窗格中，单击“已部署的数据层应用程序”或者单击“托管实例”，以便查看或修改用于单独数据层应用程序或托管实例的监视策略。  
   
-3.  在实用工具资源管理器内容窗格列表视图中，单击数据层应用程序或你要修改其策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后单击“策略详细信息”****选项卡。  
+3.  在实用工具资源管理器内容窗格列表视图中，单击数据层应用程序或你要修改其策略的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后单击“策略详细信息”选项卡。  
   
 4.  通过单击箭头或策略说明，选择要查看或修改的策略。 默认情况下将选择全局策略。  
   
-5.  选择单选按钮“覆盖全局策略”****可覆盖全局策略，并为指定的数据层应用程序实现单独的策略定义。  
+5.  选择单选按钮“覆盖全局策略”可覆盖全局策略，并为指定的数据层应用程序实现单独的策略定义。  
   
 6.  使用策略说明右侧的控件可以设置使用过度或使用不足策略阈值。  
   
-7.  根据需要使用“应用” ****、“放弃” ****或“还原默认设置” **** 按钮。 策略更改可能需要最多 15 分钟的时间，以便传播回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板和列表视图详细信息。  
+7.  根据需要使用“应用” 、“放弃” 或“还原默认设置”  按钮。 策略更改可能需要最多 15 分钟的时间，以便传播回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板和列表视图详细信息。  
   
-8.  若要刷新数据，请在实用工具资源管理器导航窗格中右键单击“已部署的数据层应用程序”****节点，然后选择“刷新”****。  
+8.  若要刷新数据，请在实用工具资源管理器导航窗格中右键单击“已部署的数据层应用程序”节点，然后选择“刷新”。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

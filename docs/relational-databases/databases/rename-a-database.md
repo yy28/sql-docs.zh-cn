@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: edde7181074e6d5145cc957fa3ce10fa9b311887
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  确保没有任何用户正在使用数据库，然后[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。  
   
-3.  展开“数据库”****，右键单击要重命名的数据库，然后单击“重命名”****。  
+3.  展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”。  
   
 4.  输入新的数据库名称，然后单击 **“确定”**。  
   

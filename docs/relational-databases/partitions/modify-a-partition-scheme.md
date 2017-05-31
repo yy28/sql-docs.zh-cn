@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开 **“分区方案”** 文件夹。  
   
-4.  右键单击要删除的分区方案，然后选择“删除”****。  
+4.  右键单击要删除的分区方案，然后选择“删除”。  
   
 5.  在 **“删除对象”** 对话框中，确保已选择正确的分区方案，然后单击 **“确定”**。  
   

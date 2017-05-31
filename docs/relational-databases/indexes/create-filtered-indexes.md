@@ -20,9 +20,10 @@ caps.latest.revision: 73
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -112,15 +113,15 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开您要创建筛选索引的表。  
   
-4.  右键单击“索引”****文件夹，指向“新建索引”****，然后选择“非群集索引…”****。  
+4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
 6.  在 **“索引键列”**下，单击 **“添加…”**。  
   
-7.  在“从 table_name** 选择列”****对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定” ****。  
+8.  单击“确定” 。  
   
 9. 在 **“筛选器”** 页的 **“筛选表达式”**下，输入要用于创建筛选索引的 SQL 表达式。  
   

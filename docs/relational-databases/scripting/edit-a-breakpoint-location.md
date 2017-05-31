@@ -18,9 +18,10 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e9c5d21e7d9aef00e7c096a4759e3f53afe24cae
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,11 +33,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-edit-a-breakpoint-location"></a>编辑断点位置  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“位置”。  
   
      - 或 -  
   
-     在“断点”****窗口中，右键单击断点符号，然后单击快捷菜单的“位置”****。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单的“位置”。  
   
 2.  在 **“文件断点”** 对话框中，编辑 **“文件”** 以指定新的文件，编辑 **“行”** 以指定新行，或者编辑 **“字符”** 以指定该行内的新位置。 如果您指定的新文件已经在查询编辑器窗口中打开，则断点会移至该编辑器窗口。 如果文件未打开，则会打开新的编辑器窗口，并在其中载入文件，断点随即移至新的位置。  
   

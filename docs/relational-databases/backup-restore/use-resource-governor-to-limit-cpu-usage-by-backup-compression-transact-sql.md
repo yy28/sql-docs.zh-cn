@@ -20,9 +20,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -256,7 +257,7 @@ WHERE session_id > 50;
 GO  
 ```  
   
- 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话****。  
+ 在“结果”窗格中，“名称”列应列出你在分类器函数中指定的工作负荷组名称的一个或多个会话。  
   
 > [!NOTE]  
 >  有关此 SELECT 语句调用的动态管理视图的信息，请参阅 [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 和 [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)。  

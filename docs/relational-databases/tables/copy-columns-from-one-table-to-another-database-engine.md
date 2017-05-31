@@ -17,9 +17,10 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
-1.  右键单击相应表，然后单击“设计”****，打开要复制的列所在的表以及要复制到的表。  
+1.  右键单击相应表，然后单击“设计”，打开要复制的列所在的表以及要复制到的表。  
   
 2.  单击包含要复制的列的表的选项卡，然后选择这些列。  
   
@@ -75,13 +76,13 @@ ms.lasthandoff: 04/11/2017
   
 2.  打开一个新的查询编辑器窗口。 
 
-3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”****。 
+3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”。 
 
-4.  在“添加表”****对话框中，选择源和目标表，单击“添加”****，然后关闭“添加表”****对话框。 
+4.  在“添加表”对话框中，选择源和目标表，单击“添加”，然后关闭“添加表”对话框。 
 
-5.  右键单击查询编辑器的打开区域，指向“更改类型”****，然后单击“插入结果”****。  
+5.  右键单击查询编辑器的打开区域，指向“更改类型”，然后单击“插入结果”。  
 
-6.  在“选择插入结果的目标表”****对话框中，选择目标表。 
+6.  在“选择插入结果的目标表”对话框中，选择目标表。 
 
 7.  在查询设计器的上半部分，单击源表中的源列。
 

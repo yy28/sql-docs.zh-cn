@@ -17,9 +17,10 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b417655cd22cefd4c872b7eb4fb75eac3fb201df
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,21 +68,21 @@ ms.lasthandoff: 04/11/2017
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>在表设计器中创建外键关系 
 ####  <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio    
     
-1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”****。    
+1.  在对象资源管理器中，右键单击将位于关系的外键方的表，再单击“设计”。    
     
      此时，将在 **表设计器**中打开该表。    
     
 2.  在 **表设计器** 菜单上，单击 **“关系”**。    
     
-3.  在“外键关系”****对话框中，单击“添加”****。    
+3.  在“外键关系”对话框中，单击“添加”。    
     
-     “选定的关系”****列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。    
+     “选定的关系”列表中将以系统提供的名称显示关系，格式为 FK_\<*tablename*>_\<*tablename*>，其中 *tablename* 是外键表的名称。    
     
 4.  在 **“选定的关系”** 列表中单击该关系。    
     
-5.  单击右侧网格中的“表和列规范” ****，再单击该属性右侧的省略号 (**…**)。    
+5.  单击右侧网格中的“表和列规范” ，再单击该属性右侧的省略号 (**…**)。    
     
-6.  在“表和列”****对话框中，从“主键”****下拉列表中选择要位于关系主键方的表。    
+6.  在“表和列”对话框中，从“主键”下拉列表中选择要位于关系主键方的表。    
     
 7.  在下方的网格中，选择要分配给表的主键的列。 在每列左侧的相临网格单元格中，选择外键表的相应外键列。    
     

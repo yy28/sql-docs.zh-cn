@@ -16,14 +16,15 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 094a1bfe3229cb32fafab91d7e05055d2fe07f51
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 事件类
-  只要用户更改了其 **** 登录密码，就会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.  
+  只要用户更改了其  登录密码，就会发生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Audit Login Change Password 事件类的数据列  
   

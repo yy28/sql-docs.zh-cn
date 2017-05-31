@@ -14,9 +14,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -138,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  在对象资源管理器中，右键单击您要报告的数据库。  
   
-3.  在上下文菜单中，选择“报表”**** -> “标准报表”**** -> “内存优化对象的内存使用情况”****  
+3.  在上下文菜单中，选择“报表” -> “标准报表” -> “内存优化对象的内存使用情况”****  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

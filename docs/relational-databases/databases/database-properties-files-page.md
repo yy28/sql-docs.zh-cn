@@ -16,9 +16,10 @@ caps.latest.revision: 42
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,14 +45,14 @@ ms.lasthandoff: 04/11/2017
  **文件类型**  
  从列表中选择文件类型。 文件类型可以为 **“数据”**、 **“日志”**或 **“Filestream 数据”**。 您无法修改现有文件的文件类型。  
   
- 如果要将文件（容器）添加到内存优化文件组，请选择“Filestream 数据”****。  
+ 如果要将文件（容器）添加到内存优化文件组，请选择“Filestream 数据”。  
   
  要将文件（容器）添加到 Filestream 数据文件组，必须启用 FILESTREAM。 可以通过 [服务器属性（“高级”页）](../../database-engine/configure-windows/server-properties-advanced-page.md) 对话框启用 FILESTREAM。  
   
  **文件组**  
- 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 通过选择 **\<<新文件组>**，然后在“新建文件组”****对话框中输入有关文件组的信息，可以创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
+ 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 通过选择 **\<<新文件组>**，然后在“新建文件组”对话框中输入有关文件组的信息，可以创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
   
- 将文件（容器）添加到内存优化文件组时，“文件组”****字段将填充数据库的内存优化文件组的名称。  
+ 将文件（容器）添加到内存优化文件组时，“文件组”字段将填充数据库的内存优化文件组的名称。  
   
  **初始大小**  
  输入或修改文件的初始大小 (MB)。 默认情况下，这是 **model** 数据库的值。  

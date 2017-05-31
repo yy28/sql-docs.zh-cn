@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5de443574ba279fb695f8e6aee9e9238eaae7afc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
     可以使用用户数据库代替 AdventureWorks2012，并相应地修改 tsql 语法。  
   
--   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”****权限的 **db_backup 操作员**数据库角色。  
+-   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”权限的 **db_backup 操作员**数据库角色。  
   
 ### <a name="additional-reading"></a>其他阅读主题  
 以下是一些建议阅读的主题，便于了解概念以及在将 Azure Blob 存储服务用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份时的最佳做法。  

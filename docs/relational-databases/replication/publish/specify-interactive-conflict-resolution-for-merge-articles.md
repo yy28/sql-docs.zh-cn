@@ -19,9 +19,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d488371a34cefb0ecf73824e362137243c115926
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,21 +53,21 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-enable-interactive-conflict-resolution-for-an-article"></a>为项目启用交互式冲突解决方法  
   
-1.  在新建发布向导或“发布属性 - \<发布>”****对话框的“项目”****页上，选择一个表。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”****或“项目属性 - \<项目类型>”****页上，单击“冲突解决程序”****选项卡。  
+3.  在“项目属性 - \<项目>”或“项目属性 - \<项目类型>”页上，单击“冲突解决程序”选项卡。  
   
 4.  选择 **“允许订阅服务器在按需同步时交互式解决冲突”**。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”****对话框中，请单击“确定”****以保存并关闭该对话框。  
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”****对话框中，为“交互式解决冲突”****选项指定“True”****值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”对话框中，为“交互式解决冲突”选项指定“True”值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

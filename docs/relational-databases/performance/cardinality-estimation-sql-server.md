@@ -18,9 +18,10 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6ef57f8467e87b97024fc08b4916ac4f8e7752b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -73,7 +74,7 @@ SELECT  name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
   
- **查询存储：**从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 开始，查询存储是用于检查查询性能的一种方便的工具。  在 SQL Server Management Studio (SSMS.exe) 中的**对象资源管理器**的数据库节点下方，当查询存储设为“开”时，将显示“查询存储”****节点。  
+ **查询存储：**从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 开始，查询存储是用于检查查询性能的一种方便的工具。  在 SQL Server Management Studio (SSMS.exe) 中的**对象资源管理器**的数据库节点下方，当查询存储设为“开”时，将显示“查询存储”节点。  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -92,7 +93,7 @@ ALTER DATABASE <yourDatabase>
     SET QUERY_STORE CLEAR;  
 ```  
   
- 提示：**我们建议每个月安装 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) 的最新版本。  
+ 提示：我们建议每个月安装 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) 的最新版本。  
   
  跟踪 CE 的基数预测的另一种方法是使用名为 **query_optimizer_estimate_cardinality** 的扩展事件。  以下 T-SQL 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。 它将 .xel 文件写入 C:\Temp\（尽管可以更改路径）。 在 SSMS 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
   
@@ -148,11 +149,11 @@ go
   
 4.  运行重要的查询。  
   
-5.  在结果窗格的“消息”****选项卡上，记下实际受影响的行数。  
+5.  在结果窗格的“消息”选项卡上，记下实际受影响的行数。  
   
-6.  在结果窗格的“结果”****选项卡上，双击包含 XML 格式的统计信息的单元格。 将显示图形查询计划。  
+6.  在结果窗格的“结果”选项卡上，双击包含 XML 格式的统计信息的单元格。 将显示图形查询计划。  
   
-7.  在图形查询计划的第一个框中右键单击，然后单击“属性”****。  
+7.  在图形查询计划的第一个框中右键单击，然后单击“属性”。  
   
 8.  针对后面的与不同配置的比较，请记下以下属性的值：  
   
@@ -160,11 +161,11 @@ go
   
     -   **估计的行数**。  
   
-    -   **估计的 I/O 成本**，以及一些涉及实际性能而不是行数预测的类似的估计**属性。  
+    -   **估计的 I/O 成本**，以及一些涉及实际性能而不是行数预测的类似的估计属性。  
   
-    -   **逻辑操作**和**物理操作**。 **“并行”是一个不错的选择。  
+    -   **逻辑操作**和**物理操作**。 “并行”是一个不错的选择。  
   
-    -   **实际执行模式**。 **“批处理”是一个不错的选择，优于“行”**。  
+    -   **实际执行模式**。 “批处理”是一个不错的选择，优于“行”。  
   
 9. 将估计的行数与实际行数进行比较。 CE 的不准确率偏高或偏低 1% 还是 10%？  
   
@@ -208,7 +209,7 @@ go
   
 - 执行 **sp_query_store_force_plan**。  
   
-- 在 SSMS 中，展开“查询存储”****节点，右键单击“资源使用排名靠前的节点”****，然后单击“查看资源使用排名靠前的节点”****。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。********  
+- 在 SSMS 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。****  
   
  有关查询存储的详细信息，请参阅[《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
   

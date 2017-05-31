@@ -41,7 +41,7 @@ ms.lasthandoff: 04/11/2017
  若要修改还原操作行为的各个方面，请使用使用 **“还原选项”** 面板中的选项。  
   
  **覆盖现有数据库 [WITH REPLACE]**  
- 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。 即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
+ 还原操作将覆盖当前使用你指定的数据库名称（在“还原数据库”对话框中“[常规](../../relational-databases/backup-restore/restore-database-general-page.md)”页上“还原到”字段中指定）的任何数据库文件。**** 即使将备份从其他数据库还原到现有的数据库名称，现有数据库的文件也将被覆盖。 选择此选项等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中使用 REPLACE 选项。  
   
 > [!CAUTION]  
 >  只有在仔细考虑后，才能使用此选项。 有关详细信息，请参阅 [RESTORE Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  

@@ -21,9 +21,10 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2017cde2a11a05d47774c6b817b3e10d0785fdab
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 3.  更改字体、大小、显示项、前景和背景颜色。  
   
 > [!NOTE]  
->  单击“使用默认值”****恢复为默认设置。  
+>  单击“使用默认值”恢复为默认设置。  
   
  编辑器只有一个字体设置，它会影响 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的所有编辑器。 您可以根据文本类型更改颜色 （例如注释和语句）。 等宽字体以粗体显示于“字体”列表中，您可以在每个文本类型基础上应用粗体设置。 例如，可以将注释和运算符的格式设置为粗体，而其他文本类型不受影响。  
   

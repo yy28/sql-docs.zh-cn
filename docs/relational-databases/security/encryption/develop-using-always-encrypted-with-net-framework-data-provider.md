@@ -14,9 +14,10 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > 特定 .NET Framework 版本对始终加密的支持级别有所不同。 有关详细信息，请参阅下面的“始终加密 API 参考”一节。 
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>为应用程序查询启用始终加密
-若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”****。
+若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”。
 
 以下是启用始终加密的连接字符串示例：
 ```
@@ -393,11 +394,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 若要控制单个查询的始终加密行为，需使用  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 的此构造函数和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)。 下面是一些有用的指导原则：
 - 如果客户端应用程序通过数据库连接发送的大多数查询访问的是加密列，则可执行以下操作：
-    - 将“列加密设置”****连接字符串关键字设置为“已启用”**。
+    - 将“列加密设置”连接字符串关键字设置为“已启用”。
     - 对于不访问任何加密列的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Disabled**。 这将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。
     - 对于其参数不需要加密但会从加密列检索数据的单个查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 - 如果客户端应用程序通过数据库连接发送的大多数查询不访问加密列，则可执行以下操作：
-    - 将“列加密设置”****连接字符串关键字设置为“已禁用”****。
+    - 将“列加密设置”连接字符串关键字设置为“已禁用”。
     - 对于有参数需要加密的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Enabled**。 这将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
     - 对于其参数不需要加密但会从加密列检索数据的查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 
@@ -447,7 +448,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>对遭到入侵的 SQL Server 启用附加保护
 
-默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序**依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
+默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
 
 ### <a name="forcing-parameter-encryption"></a>强制实施参数加密 
 

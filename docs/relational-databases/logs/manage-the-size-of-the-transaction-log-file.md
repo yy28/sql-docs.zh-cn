@@ -16,9 +16,10 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/11/2017
 -   [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
 > [!NOTE]
->  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项”**** 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) - 使用 AUTO_SHRINK 选项。  
+>  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项” 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) - 使用 AUTO_SHRINK 选项。  
   
 
 ##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  

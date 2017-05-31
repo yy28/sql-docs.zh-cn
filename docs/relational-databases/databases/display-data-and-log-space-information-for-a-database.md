@@ -23,9 +23,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 81963fea993101e8483d8a00a45bf72e822bb1b1
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**。  
   
-3.  右键单击某数据库，依次指向“报表”****和“标准报表”****，然后单击“磁盘使用情况”****。  
+3.  右键单击某数据库，依次指向“报表”和“标准报表”，然后单击“磁盘使用情况”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

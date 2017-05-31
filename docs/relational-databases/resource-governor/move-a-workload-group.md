@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,11 +47,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”****，然后单击“属性”****，这将打开“资源调控器属性”页****。  
+2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
   
 3.  在 **“资源池”** 窗口中，单击包含要移动的工作负荷组的资源池。 此时， **“工作负荷组”** 窗口会列出该资源池中的工作负荷组。  
   
-4.  在“工作负荷组”****窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”****。 这将显示 **“移动工作负荷组”** 窗口。  
+4.  在“工作负荷组”窗口中，右键单击要移动的工作负荷组左侧的向右箭头，然后单击“移到”。 这将显示 **“移动工作负荷组”** 窗口。  
   
 5.  在窗口中显示可用的资源池。 单击要将工作负荷组移动到的资源池的名称，然后单击 **“确定”** 执行此操作。  
   

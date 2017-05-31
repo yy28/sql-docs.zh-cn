@@ -18,9 +18,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  展开该索引所属的表，再展开 **“索引”**。  
   
-4.  右键单击要修改的索引，然后单击“属性”****。  
+4.  右键单击要修改的索引，然后单击“属性”。  
   
 5.  在 **“索引属性”** 对话框中进行所需的更改。 例如，您可以从索引键中添加或删除列，或更改索引选项的设置。  
   

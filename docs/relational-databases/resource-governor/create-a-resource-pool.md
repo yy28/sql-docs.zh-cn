@@ -17,9 +17,10 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3d5262087e05342256bb46c28ea7fd5d2ce1bf54
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -47,11 +48,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”**。  
   
-2.  右键单击“Resource Governor”****，再单击“属性”****。  
+2.  右键单击“Resource Governor”，再单击“属性”。  
   
 3.  在 **“资源池”** 网格中，单击空行中的第一列。 此列标记有星号 (*)。  
   
-4.  双击“名称”****列中的空单元格。 键入要用于该资源池的名称。  
+4.  双击“名称”列中的空单元格。 键入要用于该资源池的名称。  
   
 5.  在行中单击或双击要更改的任何其他单元，然后输入新值。  
   

@@ -18,9 +18,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a87a33ea63725ae2db48d61d557ff4bf91704490
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  打开想要搜索的项。  
   
-2.  在“编辑”****菜单上，指向“查找和替换”****，再单击“快速查找”****。  
+2.  在“编辑”菜单上，指向“查找和替换”，再单击“快速查找”。  
   
 3.  在 **“查找和替换”** 文本框中，输入要搜索的文本。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>在所有活动文件中交互式替换  
   
-1.  在“编辑”****菜单上，指向“查找和替换”****，再单击“快速替换”****。  
+1.  在“编辑”菜单上，指向“查找和替换”，再单击“快速替换”。  
   
 2.  在 **“查找内容”** 框中，输入要搜索的文本。  
   

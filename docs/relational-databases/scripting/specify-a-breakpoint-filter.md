@@ -18,9 +18,10 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52893c5409981b492e10ff1706def0257367c494
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,11 +33,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
   
-1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”****。  
+1.  在“编辑器”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
   
      - 或 -  
   
-     在“断点”****窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”****。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“筛选器”。  
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   

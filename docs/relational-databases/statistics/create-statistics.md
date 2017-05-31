@@ -22,9 +22,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击加号以便展开您要创建新统计信息的表。  
   
-4.  右键单击“统计信息”****文件夹，然后选择“新建统计信息…”****。  
+4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
   
-     以下属性将显示在“新建表**** table_name 的统计信息”**对话框的“常规”****页面上。  
+     以下属性将显示在“新建表 table_name 的统计信息”对话框的“常规”页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -116,12 +117,12 @@ ms.lasthandoff: 04/11/2017
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建表**** table_name 的统计信息”**对话框的“筛选器”****页面上。  
+     以下属性将显示在“新建表 table_name 的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表**** table_name 的统计信息”**对话框中，在“常规”****页面上，单击“添加”****。  
+5.  在“新建表 table_name 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 04/11/2017
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
   
-7.  在“新建表**** table_name 的统计信息”**对话框中，单击“确定”****。  
+7.  在“新建表 table_name 的统计信息”对话框中，单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

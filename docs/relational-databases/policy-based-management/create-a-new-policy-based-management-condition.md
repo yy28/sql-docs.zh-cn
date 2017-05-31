@@ -16,9 +16,10 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-condition"></a>创建条件  
   
-1.  在“对象资源管理器”****中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
+1.  在“对象资源管理器”中，单击加号以展开你要在其中创建基于策略的管理条件的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”****。  
+5.  右键单击要在其中创建新条件的方面，然后选择“新建条件”。  
   
 6.  在 **“创建新条件”** 对话框的 **“名称”** 框中，键入新条件的名称。  
   

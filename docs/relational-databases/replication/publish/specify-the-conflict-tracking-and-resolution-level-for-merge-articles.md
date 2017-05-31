@@ -18,9 +18,10 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18b5650ce77b40deb101a16ebd1379600394dcbf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,17 +51,17 @@ ms.lasthandoff: 04/11/2017
 -   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性”****对话框的“属性“****选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”****对话框中找到。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”对话框中找到。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)以及[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-row--or-column-level-tracking"></a>指定行级或列级跟踪  
   
-1.  在新建发布向导或“发布属性 - \<发布>”****对话框的“项目”****页上，选择一个表。  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。  
   
 2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。  
   
-3.  在“项目属性 \<项目>”****对话框的“属性”****选项卡上，为“跟踪级别”****属性选择以下值之一：“行级跟踪”****或“列级跟踪”****。  
+3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：“行级跟踪”或“列级跟踪”。  
   
-4.  如果处于“发布属性 - \<发布>”****对话框中，请单击“确定”****以保存并关闭该对话框。  
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

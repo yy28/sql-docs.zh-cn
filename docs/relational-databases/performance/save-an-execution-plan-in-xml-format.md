@@ -20,9 +20,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,29 +67,29 @@ ms.lasthandoff: 04/11/2017
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  在“结果”****窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”****，然后单击“将结果另存为”****。  
+4.  在“结果”窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”，然后单击“将结果另存为”。  
   
-5.  在“保存 \<网格或文本> 结果”********对话框中的“保存类型”****框中，单击“所有文件(\*.\*)”****。  
+5.  在“保存 \<网格或文本> 结果”对话框中的“保存类型”框中，单击“所有文件(\*.\*)”。  
   
-6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”************。  
+6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
 1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]生成估计的执行计划或实际的执行计划。 有关详细信息，请参阅[显示估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)或[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
   
-2.  在“结果”窗格的“执行计划”****选项卡上，右键单击图形执行计划，然后选择“将执行计划另存为”****。  
+2.  在“结果”窗格的“执行计划”选项卡上，右键单击图形执行计划，然后选择“将执行计划另存为”。  
   
      此外，还可以在 **“文件”** 菜单上选择 **“将执行计划另存为”** 。  
   
-3.  在“另存为”****对话框中，确保将“保存类型”****设置为“执行计划文件(\*.sqlplan)”****。  
+3.  在“另存为”对话框中，确保将“保存类型”设置为“执行计划文件(\*.sqlplan)”。  
   
-4.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”************。  
+4.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“文件”** 菜单上，选择 **“打开”**，然后单击 **“文件”**。  
   
-2.  在“打开文件”****对话框中，将“文件类型”****设置为“执行计划文件(\*.sqlplan)”****，以筛选出保存的 XML 查询计划文件的列表。  
+2.  在“打开文件”对话框中，将“文件类型”设置为“执行计划文件(\*.sqlplan)”，以筛选出保存的 XML 查询计划文件的列表。  
   
 3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”**。  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c18a425db4969c7ca75a02737c8b64e3360557c5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
   
-3.  展开“存储过程”****，右键单击要针对其授予权限的过程，再单击“属性”****。  
+3.  展开“存储过程”，右键单击要针对其授予权限的过程，再单击“属性”。  
   
 4.  在 **“存储过程属性”**中，选择 **“权限”** 页。  
   

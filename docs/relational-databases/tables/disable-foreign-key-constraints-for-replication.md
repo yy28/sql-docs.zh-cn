@@ -18,9 +18,10 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e16bd86b4a8b0d333b9b88752d702d783ba180cc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，展开具有要修改的外键约束的表，再展开 **“键”** 文件夹。  
   
-2.  右键单击外键约束，再单击“修改”****。  
+2.  右键单击外键约束，再单击“修改”。  
   
 3.  在 **“外键关系”** 对话框，针对 **“强制用于复制”** 选择 **“否”**值。  
   

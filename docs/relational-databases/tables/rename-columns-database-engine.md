@@ -18,9 +18,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e02a5d26a0a04d5afa1c4ddfcc9c06c503b6bd2c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,17 +60,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”****中，右键单击要重命名其中的列的表，再选择“重命名”****。  
+2.  在“对象资源管理器”中，右键单击要重命名其中的列的表，再选择“重命名”。  
   
 3.  键入新的列名称。  
   
 #### <a name="to-rename-a-column-using-table-designer"></a>使用表设计器重命名列  
   
-1.  在“对象资源管理器”****中，右键单击要为其重命名列的表，再选择“设计”****。  
+1.  在“对象资源管理器”中，右键单击要为其重命名列的表，再选择“设计”。  
   
 2.  在 **“列名”**下，选择要更改的名称，并键入新名称。  
   
-3.  在“文件”****菜单上，单击“保存”****以保存表名**。  
+3.  在“文件”菜单上，单击“保存”以保存表名。  
   
 > [!NOTE]  
 >  您也可以在 **“列属性”** 选项卡中更改列名。 选择要更改名称的列，并为 **“名称”**键入新值。  

@@ -14,9 +14,10 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5757bcb84f441e81f3da7b91e6acf449696cc30
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,12 +33,12 @@ ms.lasthandoff: 04/11/2017
   
 2.  从 **“选择空间列”** 列表中选择要查看的列。 如果表中只有一个空间列，则此列是列表中的默认选项。  
   
-3.  从“选择标签列”****列表中选择要用作数据标签的非空间列。  
+3.  从“选择标签列”列表中选择要用作数据标签的非空间列。  
   
 4.  从 **“选择投影”** 列表中选择地域数据所需的投影。 默认投影为 Equirectangular；其他可用投影为 Mercator、Robinson 或 Bonne。  
   
     > [!NOTE]  
-    >  如果空间列中包含几何图形数据，则“选择投影”**** 不可用。  
+    >  如果空间列中包含几何图形数据，则“选择投影” 不可用。  
   
 5.  调整 **“缩放”** 滑块可增加映射元素的可视大小。 对于多边形形状，仅当形状大到能够容纳标签文本时，标签才可见。  
   

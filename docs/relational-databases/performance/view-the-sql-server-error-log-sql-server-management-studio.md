@@ -20,9 +20,10 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4acdc87a3317c38b5b19235dae681bce426244e3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,11 +37,11 @@ ms.lasthandoff: 04/11/2017
 >**打开** 对象资源管理器的步骤：键盘快捷方式为 **F8**。 或者，在顶部菜单中单击“视图”/“对象资源管理器” ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
 
 
-2.  在“对象资源管理器”****中，连接到某个 SQL Server 实例，然后展开该实例。
+2.  在“对象资源管理器”中，连接到某个 SQL Server 实例，然后展开该实例。
   
-3.  找到并展开“管理”****部分（假设你有权查看它）。
+3.  找到并展开“管理”部分（假设你有权查看它）。
 
-4.  右键单击“SQL Server 日志”****，选择“查看”，然后选择“查看 SQL Server 日志”****。
+4.  右键单击“SQL Server 日志”，选择“查看”，然后选择“查看 SQL Server 日志”。
  ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5.  将显示日志文件查看器（可能需要一分钟），其中包含一个日志列表供你查看。

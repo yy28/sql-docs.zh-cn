@@ -19,9 +19,10 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要禁用或启用的计划指南，然后选择“禁用”****或“启用”****。  
+3.  右键单击要禁用或启用的计划指南，然后选择“禁用”或“启用”。  
   
 4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  单击加号以便展开您要禁用或启用计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”****文件夹，然后选择“全部启用”****或“全部禁用”****。  
+2.  右键单击“计划指南”文件夹，然后选择“全部启用”或“全部禁用”。  
   
 3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
   

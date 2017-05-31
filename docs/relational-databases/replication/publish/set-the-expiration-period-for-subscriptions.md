@@ -19,9 +19,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95b1733f7b2953f8fc5088c6d0b2a5bbdca3d754
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 建议  
   
--   订阅过期期限也称为“发布保持期” **。 合并复制元数据的清除依赖于此设置：  
+-   订阅过期期限也称为“发布保持期” 。 合并复制元数据的清除依赖于此设置：  
   
     -   在到达保持期之前，复制无法清除发布数据库和订阅数据库中的元数据。 在为保持期指定较大值时务必谨慎，因为这可能对复制性能产生负面影响。 如果能很有把握地预测出所有订阅服务器都将在该时间段内定期同步，则建议使用较低的设置。  
   
@@ -53,11 +54,11 @@ ms.lasthandoff: 04/11/2017
     -   可以指定订阅永不过期，但是强烈建议您不要使用此值，因为这样将无法清除元数据。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”****对话框的“常规”****页上设置订阅的过期期限。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在“发布属性 - \<发布>”对话框的“常规”页上设置订阅的过期期限。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限  
   
-1.  在“发布属性 - \<发布>”****对话框的“常规”****页上的“订阅过期”****部分中，指定订阅是否应过期。  
+1.  在“发布属性 - \<发布>”对话框的“常规”页上的“订阅过期”部分中，指定订阅是否应过期。  
   
 2.  如果它们应该过期，请指定一个过期时间段。  
   

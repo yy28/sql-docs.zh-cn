@@ -23,9 +23,10 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,9 +54,9 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
   
-3.  右键单击“触发器”，然后选择“新建触发器”********。  
+3.  右键单击“触发器”，然后选择“新建触发器”。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”****对话框。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”对话框。  
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|从列表中删除 UPDATE 和 DELETE。|  
   
-6.  单击“确定” ****。  
+6.  单击“确定” 。  
   
 7.  在 **“查询编辑器”**中，使用以下语句替换注释 `-- Insert statements for trigger here` ：  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 04/11/2017
   
 9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”**。 该 DML 触发器作为数据库中的对象创建。  
   
-10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”********。  
+10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”。  
   
  [开始之前](#Top)  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” ****。 此示例将创建与上面相同的存储的 DML 触发器。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建与上面相同的存储的 DML 触发器。  
   
     ```  
     -- Trigger valid for multirow and single row inserts  

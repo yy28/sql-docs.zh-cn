@@ -19,9 +19,10 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，并选择要分离的用户数据库的名称。  
   
-3.  右键单击数据库名称，指向“任务”****，再单击“分离”****。 将出现 **“分离数据库”** 对话框。  
+3.  右键单击数据库名称，指向“任务”，再单击“分离”。 将出现 **“分离数据库”** 对话框。  
   
      **要分离的数据库**  
      列出要分离的数据库。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接时，则“状态”****为“未就绪”****，“消息”****列将显示“*<number_of_active_connections>* 个活动连接”****，例如：“1 个活动连接”****。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
+    -   当数据库有一个或多个活动连接时，则“状态”为“未就绪”，“消息”列将显示“*<number_of_active_connections>* 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   

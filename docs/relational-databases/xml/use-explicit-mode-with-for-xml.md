@@ -18,9 +18,10 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
  因为将所需的 XML 描述为 EXPLICIT 模式查询的一部分，所以必须确保生成的 XML 格式正确且有效。  
   
 ## <a name="rowset-processing-in-explicit-mode"></a>EXPLICIT 模式下的行集处理  
- EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表 ****），以便处理逻辑随后可以生成所需的 XML。  
+ EXPLICIT 模式会将由查询执行生成的行集转换为 XML 文档。 为使 EXPLICIT 模式生成 XML 文档，行集必须具有特定的格式。 这需要您编写 SELECT 查询以生成具有特定格式的行集（通用表 ），以便处理逻辑随后可以生成所需的 XML。  
   
  首先，查询必须生成下列两个元数据列：  
   

@@ -17,9 +17,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -194,11 +195,11 @@ ms.lasthandoff: 04/11/2017
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接时，则“状态”****为“未就绪”****，“消息”****列将显示“*<number_of_active_connections>* 个活动连接”****，例如：“1 个活动连接”****。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
+    -   当数据库有一个或多个活动连接时，则“状态”为“未就绪”，“消息”列将显示“*<number_of_active_connections>* 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”**断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
-2.  单击“确定” ****。  
+2.  单击“确定” 。  
   
 3.  使用 Window 资源管理器，将数据库文件从源服务器移动到或复制到目标服务器上的相同位置。  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”**下，单击 **“添加”**。  
   
-9. 在“定位数据库文件 - *server_name*”****对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”****。  
+9. 在“定位数据库文件 - *server_name*”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   

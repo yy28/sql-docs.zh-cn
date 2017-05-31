@@ -18,9 +18,10 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   
-1.  在“对象资源管理器”****中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
+1.  在“对象资源管理器”中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”****，然后选择“属性”****。  
+3.  右键单击“策略管理”，然后选择“属性”。  
   
      在 **“策略管理属性”** 对话框中提供以下选项。  
   

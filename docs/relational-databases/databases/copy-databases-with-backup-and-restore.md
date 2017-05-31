@@ -22,9 +22,10 @@ caps.latest.revision: 61
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3c7efcaa066953595525819686c612b5a9aee5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,11 +41,11 @@ ms.lasthandoff: 04/11/2017
   
  一般步骤如下：  
   
-1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”****。  
+1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”。  
   
-2.  在要存放复制的数据库的计算机（“目标计算机”****）上，连接到计划为其还原数据库的 SQL Server 实例。 如果需要，在“目标”****服务器实例上创建与“源”****数据库备份设备相同的设备。  
+2.  在要存放复制的数据库的计算机（“目标计算机”）上，连接到计划为其还原数据库的 SQL Server 实例。 如果需要，在“目标”服务器实例上创建与“源”数据库备份设备相同的设备。  
   
-3.  在“目标”****计算机上还原“源”****数据库的备份。 还原数据库操作将自动创建所有数据库文件。  
+3.  在“目标”计算机上还原“源”数据库的备份。 还原数据库操作将自动创建所有数据库文件。  
   
 一些可能影响此过程的其他注意事项：
   

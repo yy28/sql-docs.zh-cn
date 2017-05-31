@@ -18,9 +18,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c1bb8755f37215f0fd42b44f26d1bc260adb391e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/11/2017
   
  **更改“快速监视”表达式的值**  
   
--   右键单击表达式，然后选择“编辑值”****。  
+-   右键单击表达式，然后选择“编辑值”。  
   
 ## <a name="options"></a>选项  
  **表达式列表**  

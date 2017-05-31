@@ -16,9 +16,10 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ SQL Server 中的 [Query Store](../../relational-databases/performance/how-query
   
 <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>如何在数据库引擎优化顾问 GUI 中优化 Query Store 的工作负荷
 ---
-在 DTA GUI 中的“常规”窗格内选中“Query Store”单选按钮以启用此功能（参阅下图）。********
+在 DTA GUI 中的“常规”窗格内选中“Query Store”单选按钮以启用此功能（参阅下图）。****
 ![Query Store 中的 DTA 工作负荷](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
 <a name="how-to-tune-a-workload-from-query-store-in-dtaexe-command-line-utility"></a>如何在 dta.exe 命令行实用工具中优化 Query Store 的工作负荷

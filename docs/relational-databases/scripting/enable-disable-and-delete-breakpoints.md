@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
  可以使用以下方式之一禁用单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“禁用断点”****。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“禁用断点”。  
   
 -   在“断点”窗口中，清除断点左侧的复选框。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
  可以使用以下方式之一启用单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“启用断点”****。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“启用断点”。  
   
 -   在“断点”窗口中，单击断点左侧的框。  
   
@@ -80,9 +81,9 @@ ms.lasthandoff: 04/11/2017
   
  可以使用以下方式之一删除单个断点：  
   
--   在查询编辑器窗口中，右键单击所需断点，然后单击“删除断点”****。  
+-   在查询编辑器窗口中，右键单击所需断点，然后单击“删除断点”。  
   
--   在断点窗口中，右键单击所需断点，然后在快捷菜单上单击“删除”****。  
+-   在断点窗口中，右键单击所需断点，然后在快捷菜单上单击“删除”。  
   
 -   在“断点”窗口中，选择所需断点，然后按 Delete。  
   

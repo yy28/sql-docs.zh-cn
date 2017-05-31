@@ -17,9 +17,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
 ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/29/2017
 
 ---
@@ -266,7 +267,7 @@ FROM sys.database_query_store_options;
   
 -   根据需要将查询参数化，例如，将查询包装在存储过程中。  
   
--   如果查询包含许多一次性使用的即席批处理且查询计划各不相同，则可使用“针对即席工作负荷进行优化” **** 选项。  
+-   如果查询包含许多一次性使用的即席批处理且查询计划各不相同，则可使用“针对即席工作负荷进行优化”  选项。  
   
     -   将不同 query_hash 值的数目与 sys.query_store_query 中项的总数进行比较。 如果该比率接近 1，则说明你的即席工作负荷生成了不同的查询。  
   
@@ -276,7 +277,7 @@ FROM sys.database_query_store_options;
   
     -   如果工作负荷中不同查询计划的数目很小，则为数据库配置 FORCED PARAMETERIZATION。 （当不同 query_hash 的计数与 sys.query_store_query 中项的总数之比远小于 1 时。）  
   
--   将“查询捕获模式”设置为“AUTO”即可自动筛选掉资源消耗小的即席查询 **** 。  
+-   将“查询捕获模式”设置为“AUTO”即可自动筛选掉资源消耗小的即席查询  。  
   
 ##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  Query Store 会将查询条目与包含对象（存储过程、函数和触发器）相关联。  重新创建包含对象时，将会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种问题，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。  

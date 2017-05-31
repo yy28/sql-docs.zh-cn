@@ -17,9 +17,10 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fca31288577f6905b99ac2c76e018ed134f10171
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,9 +60,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要更新的统计信息对象，然后选择****“属性”。  
+5.  右键单击要更新的统计信息对象，然后选择“属性”。  
   
-6.  在“统计信息属性 – statistics_name”******对话框中，选中“更新这些列的统计信息”****复选框，然后单击“确定”****。  
+6.  在“统计信息属性 – statistics_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -25,9 +25,10 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/11/2017
 |确定|none|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
- 下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期” **** 和“正在重试失败的命令” ****；将显示最高优先级状态。  
+ 下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令” ；将显示最高优先级状态。  
   
- 状态值“‘严重’状态下的性能” ****、“即将过期/已过期” ****和“未初始化” **** 都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
+ 状态值“‘严重’状态下的性能” 、“即将过期/已过期” 和“未初始化”  都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
   
 ### <a name="transactional-subscriptions"></a>事务订阅  
   

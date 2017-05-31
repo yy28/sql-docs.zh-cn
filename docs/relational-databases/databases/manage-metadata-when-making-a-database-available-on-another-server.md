@@ -38,9 +38,10 @@ caps.latest.revision: 84
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4c895c6dc04db18f8360f72a714b6c91b9e502ef
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -128,7 +129,7 @@ ms.lasthandoff: 04/11/2017
   
   
 ##  <a name="encrypted_data"></a> Encrypted Data  
- 如果在其他服务器实例上可用的数据库包含加密数据，并且数据库主密钥由原始服务器上的服务主密钥保护，则最好重新进行服务主密钥加密。 “数据库主密钥 ** ”是一种对称密钥，用于在加密数据库中保护证书的私钥和非对称密钥的私钥。 当创建数据库主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。  
+ 如果在其他服务器实例上可用的数据库包含加密数据，并且数据库主密钥由原始服务器上的服务主密钥保护，则最好重新进行服务主密钥加密。 “数据库主密钥  ”是一种对称密钥，用于在加密数据库中保护证书的私钥和非对称密钥的私钥。 当创建数据库主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。  
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
@@ -259,7 +260,7 @@ ms.lasthandoff: 04/11/2017
   
 
 ##  <a name="logins"></a> 登录名  
- 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证主体是否可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 当数据库还原、附加或复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例之后，数据库用户便可变为孤立用户。  
+ 登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证主体是否可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户”  。 当数据库还原、附加或复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他实例之后，数据库用户便可变为孤立用户。  
   
  若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写登录脚本”** 选项设置为 **True**。  
   
@@ -276,7 +277,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>对系统对象的 GRANT、REVOKE 和 DENY 权限  
  对系统对象（例如存储过程、扩展存储过程、函数和视图）的权限存储在 **master** 数据库中，并且必须在目标服务器实例上进行配置。  
   
- 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”****对话框中将“编写对象级权限脚本”****选项设置为 **True**。  
+ 若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在“选择脚本选项”对话框中将“编写对象级权限脚本”选项设置为 **True**。  
   
 > **重要说明!!** 如果编写登录脚本，则不编写密码的脚本。 如果登录名使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须在目标上修改脚本。  
   
@@ -288,7 +289,7 @@ ms.lasthandoff: 04/11/2017
  有关更多详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>证书或非对称密钥的服务器级权限  
- 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名 ** ”或“非对称密钥映射登录名 **”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
+ 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名 ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
   
 > **注意：** 映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
   

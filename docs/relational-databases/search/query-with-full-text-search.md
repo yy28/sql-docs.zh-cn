@@ -21,9 +21,10 @@ caps.latest.revision: 80
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5034ce123455c63718fb41b02450c14ca2f68a0b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -139,8 +140,8 @@ GO
 | |谓词<br/>CONTAINS/FREETEXT|函数<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**用法**|在 SELECT 语句的 WHERE 或 HAVING 子句中使用全文**谓词** CONTAINS 和 FREETEXT。|在 SELECT 语句的 FROM 子句中使用全文**函数** CONTAINSTABLE 和 FREETEXTTABLE，就像使用普通的表名一样。|
-|**更多查询选项**|可将这些函数与 LIKE 和 BETWEEN 等其他任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词结合使用。<br/><br/>可以指定要搜索的表中的单个列、一组列或所有列。<br/><br/>此外，还可以指定语言，以便全文查询使用此语言的资源进行断字和词干分析、同义词库查找以及干扰词删除。|使用其中的任一函数时，必须指定要搜索的基表。 与谓词一样，可以指定搜索表中的单个列、一组列或所有列；此外，还可以指定给定的全文查询将使用的资源的语言。<br/><br/>通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 为此，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（唯一键列****）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
-|**结果**|CONTAINS 和 FREETEXT 谓词返回 TRUE 或 FALSE 值，指示给定的行是否与全文查询匹配。 匹配的行在结果集中返回。|这些函数返回与全文查询匹配的、包含零行、一行或多行的表。 返回的表只包含与该函数的全文搜索条件中指定的选择条件相匹配的基表的行。<br/><br/>使用这些函数之一的查询还针对返回的每个行返回相关性排名值 (RANK) 和全文键 (KEY)，如下所示<br/><ul><li>**KEY** 列 KEY 列返回所返回行的唯一值。 可使用 KEY 列指定选择条件。</li><li>**RANK** 列 RANK 列返回每一行的排名值 ** ，此值指示该行与选择条件相匹配的程度。 行中文本或文档的排名值越高，该行与给定的全文查询的相关性就越高。 请注意，不同行的排名可以相同。 可以通过指定可选的 top_n_by_rank** 参数限制返回的匹配项的数目。 有关详细信息，请参阅 [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)。</li></ul>|
+|**更多查询选项**|可将这些函数与 LIKE 和 BETWEEN 等其他任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词结合使用。<br/><br/>可以指定要搜索的表中的单个列、一组列或所有列。<br/><br/>此外，还可以指定语言，以便全文查询使用此语言的资源进行断字和词干分析、同义词库查找以及干扰词删除。|使用其中的任一函数时，必须指定要搜索的基表。 与谓词一样，可以指定搜索表中的单个列、一组列或所有列；此外，还可以指定给定的全文查询将使用的资源的语言。<br/><br/>通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 为此，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（唯一键列）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
+|**结果**|CONTAINS 和 FREETEXT 谓词返回 TRUE 或 FALSE 值，指示给定的行是否与全文查询匹配。 匹配的行在结果集中返回。|这些函数返回与全文查询匹配的、包含零行、一行或多行的表。 返回的表只包含与该函数的全文搜索条件中指定的选择条件相匹配的基表的行。<br/><br/>使用这些函数之一的查询还针对返回的每个行返回相关性排名值 (RANK) 和全文键 (KEY)，如下所示<br/><ul><li>**KEY** 列 KEY 列返回所返回行的唯一值。 可使用 KEY 列指定选择条件。</li><li>**RANK** 列 RANK 列返回每一行的排名值  ，此值指示该行与选择条件相匹配的程度。 行中文本或文档的排名值越高，该行与给定的全文查询的相关性就越高。 请注意，不同行的排名可以相同。 可以通过指定可选的 top_n_by_rank 参数限制返回的匹配项的数目。 有关详细信息，请参阅 [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)。</li></ul>|
 |**其他选项**|可以在 CONTAINS 或 FREETEXT 谓词中使用由四部分组成的名称对链接服务器上的目标表的全文索引列进行查询。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。|N/A|
 |**详细信息**|有关这些谓词的语法和参数的详细信息，请参阅 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)。|有关这些函数的语法和参数的详细信息，请参阅 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。|
 
@@ -160,7 +161,7 @@ GO
 ## <a name="examples_specific"></a>特定搜索类型的示例
 
 ###  <a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
- 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的“ProductReview”****表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的“ProductReview”表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```tsql
 USE AdventureWorks2012  

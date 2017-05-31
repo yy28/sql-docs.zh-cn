@@ -14,9 +14,10 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -97,7 +98,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 本节中所述的列主密钥轮换工作流可以确保安全管理员和 DBA 之间的角色分离。
 
 > [!IMPORTANT]
-> 在执行以下表格中的“访问纯文本密钥/密钥存储” **=**是** 的任意步骤之前（访问纯文本密钥或密钥存储的步骤），请确保在另一台安全的非托管数据库的计算机上运行 PowerShell 环境。 有关详细信息，请参阅 [密钥管理的安全注意事项](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+> 在执行以下表格中的“访问纯文本密钥/密钥存储” =**是** 的任意步骤之前（访问纯文本密钥或密钥存储的步骤），请确保在另一台安全的非托管数据库的计算机上运行 PowerShell 环境。 有关详细信息，请参阅 [密钥管理的安全注意事项](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
 
 ### <a name="part-1-dba"></a>第 1 部分：DBA

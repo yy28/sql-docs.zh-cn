@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
 -   如果发布中对一个或多个项目的筛选生成了对每个订阅具有唯一性的非重叠分区，则每当运行合并代理时都会清除元数据。 这意味着分区快照会过期得更快。 使用此选项时，应考虑允许订阅服务器启动快照的生成和传递。 有关筛选选项的详细信息，请参阅[包含参数化筛选器的合并发布的快照](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)的“设置‘分区选项’”部分。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“发布属性 - \<发布>”对话框的“数据分区”页上为分区生成快照。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 可以允许订阅服务器启动快照生成及传送和/或生成快照。  
+ 在“发布属性 - \<发布>”对话框的“数据分区”页上为分区生成快照。**** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 可以允许订阅服务器启动快照生成及传送和/或生成快照。  
   
  生成一个或多个分区的快照之前，必须：  
   
@@ -67,19 +67,19 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。  
   
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。****  
   
      快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>允许订阅服务器启动快照的生成和传递  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，选择“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”。  
+1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，选择“在新订阅服务器尝试同步时，根据需要自动定义分区并生成快照”。****  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>生成和刷新快照  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。  
+1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。****  
   
 2.  为与要为其创建快照的分区关联的 **HOST_NAME()** 和/或 **SUSER_SNAME()** 输入一个值。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  接受默认的快照刷新计划，或者单击 **“更改”** 以指定其他计划。  
   
-4.  单击“确定”，这会使你返回“发布属性 - \<发布>”对话框。  
+4.  单击“确定”，这会使你返回“发布属性 - \<发布>”对话框。****  
   
 5.  在属性网格中选择分区，然后单击 **“立即生成所选快照”**。  
   

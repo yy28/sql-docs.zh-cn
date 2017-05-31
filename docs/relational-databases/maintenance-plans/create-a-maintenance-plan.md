@@ -16,9 +16,10 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”****文件夹，然后选择“维护计划向导”****。  
+3.  右键单击“维护计划”文件夹，然后选择“维护计划向导”。  
   
 4.  按照向导中显示的步骤创建维护计划。 有关详细信息，请参阅 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”****文件夹，然后选择“新建维护计划”****。  
+3.  右键单击“维护计划”文件夹，然后选择“新建维护计划”。  
   
 4.  按照[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)中的步骤创建维护计划。  
   

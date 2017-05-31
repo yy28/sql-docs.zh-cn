@@ -16,9 +16,10 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e92832844968d82686efdcc696294c9ce8ff75f2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/11/2017
  单击超链接可显示执行历史记录报表。  
   
  **评估**  
- 单击超链接可打开“评估策略”****对话框以执行策略。  
+ 单击超链接可打开“评估策略”对话框以执行策略。  
   
  **上次执行**  
  上次运行策略的日期和时间。  

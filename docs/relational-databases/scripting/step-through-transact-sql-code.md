@@ -19,9 +19,10 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,11 +55,11 @@ ms.lasthandoff: 04/11/2017
   
 |操作|执行操作：|  
 |------------|---------------------|  
-|运行当前语句到下一个断点之间的所有语句|在 **** “调试”菜单上单击“继续 **** ”。<br /><br /> 在 **** “调试”工具栏上单击“继续” **** 按钮。|  
-|单步执行下一个语句或模块|在 **** “调试”菜单上单击“单步跳入” **** 。<br /><br /> 在“调试” **** 工具栏上单击“单步跳入” **** 按钮。<br /><br /> 按 F11。|  
-|逐过程执行下一个语句或模块|在 **** “调试”菜单上单击“单步跳过” **** 。<br /><br /> 在“调试” **** 工具栏上单击“单步跳过” **** 按钮。<br /><br /> 按 F10。|  
-|跳出模块|在 **** “调试”菜单上单击“单步跳出” **** 。<br /><br /> 在“调试” **** 工具栏上单击“单步跳出” **** 按钮。<br /><br /> 按 Shift+F11。|  
-|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”****。<br /><br /> 按 Ctrl+F10。|  
+|运行当前语句到下一个断点之间的所有语句|在  “调试”菜单上单击“继续  ”。<br /><br /> 在  “调试”工具栏上单击“继续”  按钮。|  
+|单步执行下一个语句或模块|在  “调试”菜单上单击“单步跳入”  。<br /><br /> 在“调试”  工具栏上单击“单步跳入”  按钮。<br /><br /> 按 F11。|  
+|逐过程执行下一个语句或模块|在  “调试”菜单上单击“单步跳过”  。<br /><br /> 在“调试”  工具栏上单击“单步跳过”  按钮。<br /><br /> 按 F10。|  
+|跳出模块|在  “调试”菜单上单击“单步跳出”  。<br /><br /> 在“调试”  工具栏上单击“单步跳出”  按钮。<br /><br /> 按 Shift+F11。|  
+|运行到当前光标位置|右键单击查询编辑器窗口，然后单击“运行至光标处”。<br /><br /> 按 Ctrl+F10。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器信息](../../relational-databases/scripting/transact-sql-debugger-information.md)  

@@ -17,9 +17,10 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17a8348b6d4f3b89668128d28e3bca27fbc468b5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/11/2017
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> 复制  
- 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”****对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
+ 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](http://go.microsoft.com/fwlink/?LinkId=103810)。  

@@ -27,9 +27,10 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,11 +65,11 @@ ms.lasthandoff: 04/11/2017
 
   
 ## <a name="media-families"></a>介质簇  
- “介质簇” **由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。  
+ “介质簇” 由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。  
   
 在镜像介质集中，所有介质簇也是镜像的。 例如，如果使用六个备份设备来设置介质集的格式，其中使用了两个镜像，则有三个介质簇，每个介质簇包含两个相同的备份数据副本。 有关镜像媒体集的详细信息，请参阅[镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)。  
   
- 介质簇中的每个磁带或磁盘都分配了“介质序列号” **。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅本主题后面的 [介质集、介质簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)不熟悉的读者。
+ 介质簇中的每个磁带或磁盘都分配了“介质序列号” 。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅本主题后面的 [介质集、介质簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)不熟悉的读者。
   
 ## <a name="the-media-header"></a>介质标头  
  备份介质（磁盘文件或磁带）的每个卷都包含介质标头，介质标头是在第一次使用磁带（或磁盘）执行备份操作时创建的。 标头在重新设置介质格式之前保持不变。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 可以处理使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置格式的介质。  
   
 ## <a name="backup-sets"></a>备份集  
- 成功的备份操作将向介质集中添加一个“备份集” ** 。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。  
+ 成功的备份操作将向介质集中添加一个“备份集”  。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。  
   
  下例显示一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该语句使用三个磁带驱动器作为备份设备，为 `MyAdvWorks_MediaSet_1` 数据库创建一个名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的媒体集。  
   
@@ -254,7 +255,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相关任务  
  **创建新媒体集**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”****选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （FORMAT 选项）  
   
@@ -262,13 +263,13 @@ GO
   
  **在现有媒体上追加新的备份**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“追加到现有备份集”****选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“追加到现有备份集”选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （NOINIT 选项）  
   
  **覆盖所有现有备份集**  
   
--   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”****选项）  
+-   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”选项）  
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md) （INIT 选项）  
   

@@ -21,9 +21,10 @@ caps.latest.revision: 79
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 24b4e22249ec7a175dc3ae239dea329c4d18208f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 ###  <a name="Restrictions"></a> 索引视图所需的 SET 选项  
  如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 CONCAT_NULL_YIELDS_NULL 设置为 ON 后，表达式 **'**abc**'** + NULL 会返回值 NULL。 但将 CONCAT_NULL_YIEDS_NULL 设置为 OFF 后，同一表达式会生成 **'**abc**'**。  
   
- 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”****列中显示的值：  
+ 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”列中显示的值：  
   
 -   创建视图和视图上的后续索引。  
   

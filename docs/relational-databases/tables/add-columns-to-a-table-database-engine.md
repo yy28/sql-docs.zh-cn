@@ -18,9 +18,10 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1bdb75de2db0eba015500fa9a80ef44937727c7
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>用表设计器向表中插入列  
   
-1.  在“对象资源管理器”****中，右键单击要为其添加列的表，再选择“设计”****。  
+1.  在“对象资源管理器”中，右键单击要为其添加列的表，再选择“设计”。  
   
 2.  单击 **“列名”** 列中的第一个空单元。  
   
@@ -52,14 +53,14 @@ ms.lasthandoff: 04/11/2017
 4.  按 Tab 键转到 **“数据类型”** 单元格，再从下拉列表中选择数据类型。 它是必需设置的值，如果你没有作出选择，它将被赋以默认值。  
   
     > [!NOTE]  
-    >  可以在“选项”****对话框中的“数据库工具”****之下更改默认值。  
+    >  可以在“选项”对话框中的“数据库工具”之下更改默认值。  
   
 5.  在 **“列属性”** 选项卡上继续定义任何其他列属性。  
   
     > [!NOTE]  
-    >  列属性的默认值在你创建新列时添加，但你可以在“列属性”****选项卡中更改这些值。  
+    >  列属性的默认值在你创建新列时添加，但你可以在“列属性”选项卡中更改这些值。  
   
-6.  在你添加完列后，从“文件” ****菜单中，选择“保存” *****table name*。  
+6.  在你添加完列后，从“文件” 菜单中，选择“保存” *table name*。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

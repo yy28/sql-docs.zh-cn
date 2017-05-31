@@ -19,9 +19,10 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66895e3c9a74b60e570ccc6b451023da0d93da40
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,11 +60,11 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开****“数据库”，右键单击要扩展的数据库，再单击****“属性”。  
+2.  展开“数据库”，右键单击要扩展的数据库，再单击“属性”。  
   
 3.  在 **“数据库属性”**中，选择 **“文件”** 页。  
   
-4.  若要增加现有文件的大小，请增加文件的****“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
+4.  若要增加现有文件的大小，请增加文件的“初始大小 (MB)”列中的值。 数据库的大小必须至少增加 1 MB。  
   
 5.  若要通过添加新文件增加数据库大小，请单击 **“添加”** ，然后输入新文件的值。 有关详细信息，请参阅 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   

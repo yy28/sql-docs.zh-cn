@@ -14,9 +14,10 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="PShellJob"></a> 创建 PowerShell 作业步骤  
  **创建 PowerShell 作业步骤**  
   
-1.  展开“SQL Server 代理”****，创建一个新作业或右键单击一个现有作业，再单击“属性”****。 有关创建作业的详细信息，请参阅 [创建作业](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)。  
+1.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)。  
   
 2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="CmdExecJob"></a> 创建命令提示作业步骤  
  **创建 CmdExec 作业步骤**  
   
-1.  展开“SQL Server 代理”****，创建一个新作业或右键单击一个现有作业，再单击“属性”****。 有关创建作业的详细信息，请参阅 [创建作业](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)。  
+1.  展开“SQL Server 代理”，创建一个新作业或右键单击一个现有作业，再单击“属性”。 有关创建作业的详细信息，请参阅 [创建作业](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)。  
   
 2.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
   

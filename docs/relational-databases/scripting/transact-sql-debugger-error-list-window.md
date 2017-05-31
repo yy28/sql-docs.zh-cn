@@ -21,9 +21,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa7ebae3445240303352026f7cdb99a06b2d61ca
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/11/2017
  有时候错误会同时在上述两个位置列出。 例如，某脚本文件可能存在已在 **“错误列表”**中列出的语法错误。 如果在纠正此错误之前执行了该脚本，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析器会检测到相同的错误情形并在 **“消息”** 选项卡中返回此错误消息。  
   
 > [!NOTE]  
->  “错误列表”****仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”****选项卡中。  
+>  “错误列表”仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”选项卡中。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **“错误列表”** 后，将在以下列中显示相关信息：  

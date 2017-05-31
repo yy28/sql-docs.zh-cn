@@ -17,9 +17,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   如果“默认值”****字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。  
+-   如果“默认值”字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。  
   
 -   若要输入文本字符串，请用单引号 (') 将值括起来；不要使用双引号 (")，因为双引号已保留用于带引号的标识符。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>指定列的默认值  
   
-1.  在“对象资源管理器”****中，右键单击要更改其小数位数的列所在的表，再单击“设计”****。  
+1.  在“对象资源管理器”中，右键单击要更改其小数位数的列所在的表，再单击“设计”。  
   
 2.  选择要为其指定默认值的列。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。  
   
-4.  在“文件”****菜单上，单击“保存”****以保存表名**。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

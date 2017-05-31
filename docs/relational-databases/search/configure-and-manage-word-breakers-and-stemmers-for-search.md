@@ -24,9 +24,10 @@ caps.latest.revision: 89
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5023aeceed2edd6170b58500edafb7342c21ba28
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -34,9 +35,9 @@ ms.lasthandoff: 04/11/2017
 
 断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析执行下述两项操作：
 
--   **查找词边界（断字）**。 “断字符”**根据语言的词法规则确定词的边界位置，从而标识各个词。 每个词（也称为标记**）使用压缩表示形式插入全文索引以减少其大小。
+-   **查找词边界（断字）**。 “断字符”根据语言的词法规则确定词的边界位置，从而标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。
 
--   **组合动词（词干分析）**。 词干分析器**根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。
+-   **组合动词（词干分析）**。 词干分析器根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>断字符和词干分析器特定于语言
 
@@ -74,7 +75,7 @@ GO
 ##  <a name="default"></a> 设置默认的全文语言选项  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  
   
- 创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项****“默认全文语言”的值。  
+ 创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项“默认全文语言”的值。  
   
 > [!NOTE]  
 >  在单个全文查询函数子句中列出的所有列必须使用同一语言，除非在查询中指定了 LANGUAGE 选项。 所查询的用于全文索引列的语言确定了对全文查询谓词（[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)）以及函数（[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)）的参数执行的语言分析。  

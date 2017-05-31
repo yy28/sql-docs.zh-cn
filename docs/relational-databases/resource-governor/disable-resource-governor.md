@@ -16,9 +16,10 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 47091df9ec1318e7bb66ef1a32346c7445b4abd6
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -57,14 +58,14 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”****，再单击“禁用”****。  
+2.  右键单击“资源调控器”，再单击“禁用”。  
   
 ##  <a name="RGOffProp"></a> 使用资源调控器属性禁用资源调控器  
  **使用“资源调控器属性”页禁用资源调控器**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”****，然后单击“属性”****，这将打开“资源调控器属性”页****。  
+2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
   
 3.  单击 **“启用资源调控器”** 复选框，确保未选中该框，然后单击 **“确定”**。  
   

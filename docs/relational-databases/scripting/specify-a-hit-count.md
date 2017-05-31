@@ -18,9 +18,10 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 07a60dfe673b6aba231958324b4e9094fc3dcb38
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -46,11 +47,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-specify-a-hit-count"></a>指定命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
      -或-  
   
-     在“断点”****窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
 2.  在 **“断点命中计数”** 对话框中，从 **“命中断点时”** 框中选择所需行为。  
   
@@ -60,11 +61,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-view-or-reset-the-current-hit-count"></a>查看或重置当前命中计数  
   
-1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+1.  在编辑器窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
      -或-  
   
-     在“断点”****窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”****。  
+     在“断点”窗口中，右键单击断点符号，然后单击快捷菜单上的“命中计数”。  
   
 2.  在 **“断点命中计数”** 对话框中， **“当前命中计数:”** 显示在 **“重置”** 按钮的正上方。  
   

@@ -26,9 +26,10 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -70,17 +71,17 @@ ms.lasthandoff: 04/11/2017
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，单击“新建项目”。******** 此时将显示“新建项目” **** 对话框。  
+2.  在“文件”菜单中，单击“新建项目”。**** 此时将显示“新建项目”  对话框。  
   
-3.  在“项目类型”对话框中，选择“Visual C# 项目”。******** 在“模板”窗格中，选择“Windows 应用程序”。********  
+3.  在“项目类型”对话框中，选择“Visual C# 项目”。**** 在“模板”窗格中，选择“Windows 应用程序”。****  
   
 4.  （可选）在“名称”中，键入新应用程序的名称。****  
   
 5.  单击“确定”加载 Visual C# Windows 模板。****  
   
-6.  在“项目”菜单中，选择“添加引用”项。******** 此时将显示“添加引用”对话框。****  
+6.  在“项目”菜单中，选择“添加引用”项。**** 此时将显示“添加引用”对话框。****  
   
-7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。********  
+7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。****  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。********  
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。****  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”**。  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  启动 Visual Studio。  
   
-2.  在“文件”菜单中，选择“新建项目”。******** 此时将显示“新建项目” **** 对话框。  
+2.  在“文件”菜单中，选择“新建项目”。**** 此时将显示“新建项目”  对话框。  
   
 3.  在“项目类型”窗格中，选择“Visual Basic”。**** 在“模板”窗格中，选择“Windows 应用程序”。****  
   
@@ -118,9 +119,9 @@ ms.lasthandoff: 04/11/2017
   
 5.  单击“确定”加载 Visual Basic Windows 模板。****  
   
-6.  在“项目”菜单中，选择“添加引用”。******** 此时将显示“添加引用”对话框。****  
+6.  在“项目”菜单中，选择“添加引用”。**** 此时将显示“添加引用”对话框。****  
   
-7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。********  
+7.  从“.NET”选项卡上的列表中选择以下程序集，然后单击“确定”。****  
   
     -   Microsoft.SqlServer.Replication .NET Programming Interface  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。********  
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。****  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”**。  
   

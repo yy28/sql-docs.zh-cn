@@ -19,9 +19,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56805de308b7824cbfb948de432131c139db9df0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
-1.  在“对象资源管理器”**** 中，右键单击包含 CHECK 约束的表，然后选择“设计”****。  
+1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
   
 2.  在 **“表设计器”** 菜单上，单击 **“CHECK 约束…”**。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 5.  单击 **“关闭”**。  
   
-6.  在“文件”****菜单上，单击“保存”****以保存表名**。  
+6.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  

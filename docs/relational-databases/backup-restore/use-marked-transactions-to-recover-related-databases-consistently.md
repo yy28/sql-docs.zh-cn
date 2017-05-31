@@ -24,9 +24,10 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 937eb729c5252b09a82576805102d3cdcbceeb21
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- 在对两个或更多数据库（“相关数据库” **）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
+ 在对两个或更多数据库（“相关数据库” ）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
   
  在每个相关数据库中定期标记相关事务将在数据库中建立一系列公用恢复点。 事务标记将记录在事务日志中并包括在日志备份中。 发生灾难时，可以将各数据库还原到相同的事务标记，从而将它们恢复到一致的点。  
   

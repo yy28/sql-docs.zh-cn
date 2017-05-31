@@ -18,9 +18,10 @@ caps.latest.revision: 46
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
  **目标 (target)**  
  支持数据收集的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关支持的版本的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)的“可管理性”部分。  
   
- “目标根目录 ** ”定义目标层次结构中的子树。 “目标集 ** ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
+ “目标根目录  ”定义目标层次结构中的子树。 “目标集  ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。  
   
 **目标类型 (target type)**  
  目标的类型，它具有某些特征和行为。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例目标具有与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库目标不同的特征。  

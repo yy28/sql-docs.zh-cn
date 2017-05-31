@@ -17,9 +17,10 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 248ff4e6c29eb8412898d964cfac1cb85ef338d3
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/11/2017
 |运算|本机|Unicode 本机|字符|Unicode 字符|  
 |---------------|------------|--------------------|---------------|-----------------------|  
 |使用不包含任何扩展字符或双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。 除非使用格式化文件，否则这些表的定义必须相同。|是*|—|—|—|  
-|对于“sql_variant” **** 列，最好使用本机数据格式，因为本机数据格式可以保留每一个 **sql_variant** 值的元数据，这一点不同于字符格式或 Unicode 格式。|是|—|—|—|  
+|对于“sql_variant”  列，最好使用本机数据格式，因为本机数据格式可以保留每一个 **sql_variant** 值的元数据，这一点不同于字符格式或 Unicode 格式。|是|—|—|—|  
 |使用包含扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|—|是|—|—|  
 |大容量导入其他程序生成的文本文件中的数据。|—|—|是|—|  
 |将数据大容量导出到要在其他程序中使用的文本文件中。|—|—|是|—|  

@@ -18,9 +18,10 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f431402a937407f00d054e6ad488ea92f0b5a647
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
     -   在 **“编辑”** 菜单上，指向 **“IntelliSense”**，然后单击 **“插入代码段”**。  
   
-    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”****命令。  
+    -   单击鼠标右键，然后从快捷菜单中选择“插入代码段”命令。  
   
 3.  双击代码段，或从代码段选择器中选择代码段，然后按 Tab 或 Enter。  
   

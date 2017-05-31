@@ -16,9 +16,10 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/11/2017
  将此数据库启用为日志传送的主数据库。 请选中该选项，然后再配置此页上的剩余选项。 如果清除此复选框，则将删除此数据库的日志传送配置。  
   
  **备份设置**  
- 单击“备份设置”****可以配置备份计划、位置、警报和存档参数。  
+ 单击“备份设置”可以配置备份计划、位置、警报和存档参数。  
   
  **备份计划**  
  显示当前为主数据库选择的备份计划。 单击 **“备份设置”** 可修改这些设置。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
  列出当前为此主数据库配置的辅助服务器和数据库。 突出显示某个数据库，然后单击 **“...”** 可以修改与该辅助数据库相关联的参数。  
   
  **“添加”**  
- 单击“添加”****可以向此主数据库的日志传送配置中添加辅助数据库。  
+ 单击“添加”可以向此主数据库的日志传送配置中添加辅助数据库。  
   
  **删除**  
  从此日志传送配置中删除所选数据库。 首先选择该数据库，再单击 **“删除”**。  

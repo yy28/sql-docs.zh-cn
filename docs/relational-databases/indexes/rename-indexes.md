@@ -18,9 +18,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 59c77e43b02e26626c280f6325cdb67a11021db9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,17 +62,17 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要重命名索引的表，然后选择“设计”****。  
+3.  右键单击你要重命名索引的表，然后选择“设计”。  
   
-4.  在“表设计器”****菜单上，单击“索引/键”****。  
+4.  在“表设计器”菜单上，单击“索引/键”。  
   
-5.  在“选定的主/唯一键或索引”****文本框中，选择你要重命名的索引。  
+5.  在“选定的主/唯一键或索引”文本框中，选择你要重命名的索引。  
   
 6.  在网格中，单击 **“名称”** 并在文本框中键入新名称。  
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”****菜单上，单击“保存”****以保存 *table_name*。  
+8.  在“文件”菜单上，单击“保存”以保存 *table_name*。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>通过使用对象资源管理器重命名索引  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要重命名的索引，然后选择“重命名”****。  
+5.  右键单击要重命名的索引，然后选择“重命名”。  
   
 6.  键入索引的新名称，再按 Enter。  
   

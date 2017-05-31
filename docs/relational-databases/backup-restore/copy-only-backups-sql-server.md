@@ -18,9 +18,10 @@ caps.latest.revision: 48
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/11/2017
 ###  <a name="SSMSProcedure"></a> A.  使用 SQL Server Management Studio  
 在此示例中，`Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
 
-1.  在“对象资源管理器”****中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
-2.  展开“数据库”****，右键单击 `Sales`，然后指向“任务”****，再单击“备份...”****。
+2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
 
-3.  在“常规”****页的“源”****部分中，选中“仅复制备份”****复选框。
+3.  在“常规”页的“源”部分中，选中“仅复制备份”复选框。
 
 4.  单击 **“确定”**。
 

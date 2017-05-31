@@ -19,9 +19,10 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 **“查找范围”** 列表中，单击 **“所有打开的文档”**、 **“当前项目”**、 **“整个解决方案”**，或者键入目录路径。  
   
-4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 改用 \*\* 可以在****“查找范围”下拉列表所列目录中的所有文件中进行搜索。  
+4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 改用 \*\* 可以在“查找范围”下拉列表所列目录中的所有文件中进行搜索。  
   
 5.  选择其余搜索选项以提高搜索的准确性。  
   

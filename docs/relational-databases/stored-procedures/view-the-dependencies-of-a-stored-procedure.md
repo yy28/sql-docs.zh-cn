@@ -18,9 +18,10 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43bd4ec5070a9174a0cfd488157dd043dc4084bf
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
   
-3.  展开****“存储过程”，右键单击此过程，再单击****“查看依赖关系”。  
+3.  展开“存储过程”，右键单击此过程，再单击“查看依赖关系”。  
   
 4.  查看依赖于过程的对象的列表。  
   

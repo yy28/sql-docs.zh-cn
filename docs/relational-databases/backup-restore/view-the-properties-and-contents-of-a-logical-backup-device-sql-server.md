@@ -24,9 +24,10 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e0a3fad1cc54f9367d95ac36c903deeede0814b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“服务器对象”**，然后展开 **“备份设备”**。  
   
-3.  单击设备并右键单击“属性”****，将打开“备份设备”****对话框。  
+3.  单击设备并右键单击“属性”，将打开“备份设备”对话框。  
   
 4.  **“常规”** 页将显示设备名称和目标，目标为磁带设备或者文件路径。  
   

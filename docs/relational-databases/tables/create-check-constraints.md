@@ -20,9 +20,10 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,9 +55,9 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-new-check-constraint"></a>创建新的 CHECK 约束  
   
-1.  在****“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击****“约束”，然后单击****“新建约束”。  
+1.  在“对象资源管理器”中，展开要为其添加 CHECK 约束的表，右键单击“约束”，然后单击“新建约束”。  
   
-2.  在 ****“CHECK 约束”对话框中，单击****“表达式”字段，然后单击省略号 **(…)**。  
+2.  在 “CHECK 约束”对话框中，单击“表达式”字段，然后单击省略号 **(…)**。  
   
 3.  在 **“CHECK 约束表达式”** 对话框中，键入 CHECK 约束的 SQL 表达式。 例如，若要将 `SellEndDate` 表的 `Product` 列中的条目限制为大于等于 `SellStartDate` 列中的日期的值，或者为 NULL 值，则键入：  
   
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  确保将任何非数字约束值包含在单引号 (') 中。  
   
-4.  单击“确定” ****。  
+4.  单击“确定” 。  
   
-5.  在****“标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
+5.  在“标识”类别中，您可以更改 CHECK 约束的名称并且为该约束添加说明（扩展属性）。  
   
 6.  在 **“表设计器”** 类别中，您可以设置何时强制约束。  
   

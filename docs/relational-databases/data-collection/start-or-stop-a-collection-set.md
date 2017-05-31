@@ -17,9 +17,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
-2.  右键单击要启动的收集组，然后单击“启动数据收集组”****。  
+2.  右键单击要启动的收集组，然后单击“启动数据收集组”。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的绿色箭头指示收集组已经启动。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在对象资源管理器中，依次展开 **“管理”** 节点、 **“数据收集”**和 **“系统数据收集组”**。  
   
-2.  右键单击要停止的收集组，然后单击“停止数据收集组”****。  
+2.  右键单击要停止的收集组，然后单击“停止数据收集组”。  
   
      将出现一个消息框，显示此操作的结果，收集组图标上的红色圆圈指示收集组已经停止。  
   

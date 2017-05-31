@@ -18,9 +18,10 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 602fe4a40a45b404ec56386548f6fae36c1098b6
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
     -   对于 Oracle，一个服务器最多只有一个数据库，因此不必指定数据库。  
   
-    -   对于 IBM DB2，该数据库是在 DB2 连接字符串的“初始目录” **** 属性中指定的，DB2 连接字符串可以在此过程后面介绍的 **“其他连接选项”** 字段中输入。  
+    -   对于 IBM DB2，该数据库是在 DB2 连接字符串的“初始目录”  属性中指定的，DB2 连接字符串可以在此过程后面介绍的 **“其他连接选项”** 字段中输入。  
   
 8.  在 **“分发代理安全性”** 页上，单击订阅服务器旁边的属性按钮 (**...**) 来打开 **“分发代理安全性”** 对话框。  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/11/2017
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理” **** 选项设置为 **False**。 需要为“初始目录” **** 选项指定一个值以标识订阅数据库。  
+         字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。  
   
 10. 在 **“同步计划”** 页上，从 **“代理计划”** 菜单中为分发代理选择一个计划（计划通常为 **“连续运行”**）。  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  右键单击发布，再单击 **“查看快照代理状态”**。  
   
-3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。********  
+3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。****  
   
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   

@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，选择 **“连接”** 按钮，然后选择 **“数据库引擎…”**。  
   
-2.  在“连接到服务器”对话框上，选择“选项 >>”********。  
+2.  在“连接到服务器”对话框上，选择“选项 >>”。  
   
 3.  选中 **“使用自定义颜色”** 复选框。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="OpenServerColor"></a> 使用服务器颜色打开编辑器  
  **使用服务器颜色打开编辑器窗口**  
   
--   右键单击“对象资源管理器”或“已注册服务器”中的服务器节点，然后选择“新建查询”************。  
+-   右键单击“对象资源管理器”或“已注册服务器”中的服务器节点，然后选择“新建查询”。  
   
 -   或者，突出显示服务器节点，然后选择 **“新建查询”** 工具栏按钮。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
 -   打开 **“文件”** 菜单，选择 **“新建”**，然后选择 **“数据库引擎查询”**。  
   
--   在“连接到服务器”对话框上，选择“选项 >>”********。  
+-   在“连接到服务器”对话框上，选择“选项 >>”。  
   
 -   选中 **“使用自定义颜色”** 复选框。  
   

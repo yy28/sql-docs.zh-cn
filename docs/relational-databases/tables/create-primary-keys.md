@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f799919f1b0cd1006c144eeb9afbc1d69322423b
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,11 +61,11 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-primary-key"></a>创建主键  
   
-1.  在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”****。  
+1.  在对象资源管理器中，右键单击要为其添加唯一约束的表，然后单击“设计”。  
   
 2.  在 **“表设计器”**中，单击要定义为主键的数据库列的行选择器。 若要选择多个列，请在单击其他列的行选择器时按住 Ctrl 键。  
   
-3.  右键单击该列的行选择器，然后选择“设置主键”****。  
+3.  右键单击该列的行选择器，然后选择“设置主键”。  
   
 > [!CAUTION]  
 >  若要重新定义主键，则必须首先删除与现有主键之间的任何关系，然后才能创建新主键。 此时，将显示一条消息警告您：作为该过程的一部分，将自动删除现有关系。  

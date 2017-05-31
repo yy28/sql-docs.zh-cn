@@ -26,9 +26,10 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
      ***Max_Var_Size*** = 所有可变长度列的最大字节大小  
   
-3.  如果聚集索引不唯一，则请说明“唯一标识符 ** ”列：  
+3.  如果聚集索引不唯一，则请说明“唯一标识符  ”列：  
   
      唯一标识符是可为 Null 的可变长度列。 在具有非唯一键值的行中，它非 Null 而且大小为 4 个字节。 此值是索引键的一部分，用于确保每一行都具有唯一的键值。  
   

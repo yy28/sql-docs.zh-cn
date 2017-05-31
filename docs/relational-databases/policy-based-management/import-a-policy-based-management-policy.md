@@ -16,9 +16,10 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f55d3c5e57dfbd0d80e02d5c2fcb0fc6aa9ae81d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,15 +52,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-import-a-policy-instance"></a>导入策略实例  
   
-1.  在“对象资源管理器” ****中，单击加号以展开新导入的策略实例要存储到的服务器。  
+1.  在“对象资源管理器” 中，单击加号以展开新导入的策略实例要存储到的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
 3.  单击加号以便展开 **“策略管理”**。  
   
-4.  右键单击“策略”****文件夹，然后选择“导入策略”****。  
+4.  右键单击“策略”文件夹，然后选择“导入策略”。  
   
-5.  在“导入”****对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
+5.  在“导入”对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
   
 6.  完成后，单击 **“确定”**。  
   

@@ -27,9 +27,10 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -178,7 +179,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
  下面的系统视图包含有关聚集索引的数据压缩的信息：  
   
--   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc**列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
+-   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc** 列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
   
 -   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression** 和 **data_compression_desc** 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   

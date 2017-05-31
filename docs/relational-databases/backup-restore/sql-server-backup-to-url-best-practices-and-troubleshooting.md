@@ -14,9 +14,10 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -138,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
  **未选择默认代理设置：**  
   
- 有时，可能由于没有选择默认设置而导致如下代理验证错误：*在文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak”上发生不可恢复的 I/O 错误:“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(407)*****“必须进行代理身份验证”。  
+ 有时，可能由于没有选择默认设置而导致如下代理验证错误：*在文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak”上发生不可恢复的 I/O 错误:“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(407)*“必须进行代理身份验证”。  
   
  若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   

@@ -16,9 +16,10 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec5710e412a5e29399f897cf4e6e1c5ca3c88ce4
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
  查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
  **“浏览”按钮**  
- 单击“值”****后面的“浏览(…)”按钮可打开“扩展属性对话框的值”****对话框。 在这一较大的范围中键入或查看扩展属性的值。  
+ 单击“值”后面的“浏览(…)”按钮可打开“扩展属性对话框的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。  
   
  **删除**  
  删除所选扩展属性。  

@@ -16,9 +16,10 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击加号以展开 **“数据库”** 文件夹。  
   
-3.  右键单击要管理类别订阅的数据库，指向“策略”****，然后选择“类别”****  
+3.  右键单击要管理类别订阅的数据库，指向“策略”，然后选择“类别”****  
   
      在 **“类别”** 对话框中提供了以下选项：  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/11/2017
      **历史记录**  
      单击“查看历史记录”超链接可打开日志文件查看器，从而可以查看策略历史记录。  
   
-4.  若要订阅某个基于策略的管理类别，请选中“已订阅”****列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
+4.  若要订阅某个基于策略的管理类别，请选中“已订阅”列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
   
 5.  完成后，单击 **“确定”**。  
   

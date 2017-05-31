@@ -16,9 +16,10 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8bd8881f2c7ed11141091e117cefa037818f7ea
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,9 +55,9 @@ ms.lasthandoff: 04/11/2017
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要评估其计划的策略，然后选择“属性”****。  
+5.  右键单击要评估其计划的策略，然后选择“属性”。  
   
-6.  在“打开策略 -*policy_name*”****对话框的“评估模式”****列表中，选择“按计划”****。  
+6.  在“打开策略 -*policy_name*”对话框的“评估模式”列表中，选择“按计划”。  
   
 7.  在 **“计划”**中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
   

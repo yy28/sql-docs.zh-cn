@@ -22,9 +22,10 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]查看或更改数据库。 
   
-  “恢复模式”**是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
+  “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
   
   有关 [恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)（SQL Server 恢复模式）！
   
@@ -64,13 +65,13 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击该数据库，再单击“属性”****，这将打开“数据库属性”****对话框。  
+3.  右键单击该数据库，再单击“属性”，这将打开“数据库属性”对话框。  
   
 4.  在 **“选择页”** 窗格中，单击 **“选项”**。  
   
 5.  当前恢复模式显示在 **“恢复模式”** 列表框中。  
   
-6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”****、“大容量日志”****或“简单”****。  
+6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”、“大容量日志”或“简单”。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

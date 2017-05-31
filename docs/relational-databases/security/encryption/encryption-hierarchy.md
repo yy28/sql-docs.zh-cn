@@ -20,9 +20,10 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/11/2017
   
 -   有效期。 这是指证书被认为有效的时间长度。  
   
-     证书只有在指定的有效期内有效，每个证书都包含一个“有效期始于” **** 和“有效期至” **** 日期。 这两个日期设置了有效期的界限。 证书超过有效期后，必须由已过期证书的主体请求一个新证书。  
+     证书只有在指定的有效期内有效，每个证书都包含一个“有效期始于”  和“有效期至”  日期。 这两个日期设置了有效期的界限。 证书超过有效期后，必须由已过期证书的主体请求一个新证书。  
   
 -   颁发者标识符信息。  
   

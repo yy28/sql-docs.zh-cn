@@ -20,9 +20,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -54,15 +55,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-create-a-unique-constraint"></a>创建唯一约束  
   
-1.  在“对象资源管理器”****中，右键单击要为其添加唯一约束的表，再单击“设计”****。  
+1.  在“对象资源管理器”中，右键单击要为其添加唯一约束的表，再单击“设计”。  
   
-2.  在“表设计器”****菜单上，单击“索引/键”****。  
+2.  在“表设计器”菜单上，单击“索引/键”。  
   
-3.  在“索引/键”****对话框中，单击“添加”****。  
+3.  在“索引/键”对话框中，单击“添加”。  
   
-4.  在“常规”****下的网格中，单击“类型”****，然后从该属性右侧的下拉列表框中选择“唯一键”****。  
+4.  在“常规”下的网格中，单击“类型”，然后从该属性右侧的下拉列表框中选择“唯一键”。  
   
-5.  在“文件”****菜单上，单击“保存”****以保存表名**。  
+5.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

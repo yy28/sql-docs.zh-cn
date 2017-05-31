@@ -14,9 +14,10 @@ caps.latest.revision: 55
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/11/2017
   
 -   访问内存优化表的查询上的键集和动态游标。 这些游标将降级为静态和只读的。  
   
--   “将 **MERGE INTO***目标*用于*目标*”是内存优化表。 内存优化表支持 **MERGE USING** 源**。  
+-   “将 **MERGE INTO***目标*用于*目标*”是内存优化表。 内存优化表支持 **MERGE USING** 源。  
   
 -   不支持 ROWVERSION (TIMESTAMP) 数据类型。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   

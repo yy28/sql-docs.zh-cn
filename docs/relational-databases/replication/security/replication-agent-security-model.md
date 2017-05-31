@@ -24,9 +24,10 @@ caps.latest.revision: 72
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd28e489fac2690ed2333d23b663b0531da52851
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -80,11 +81,11 @@ ms.lasthandoff: 04/11/2017
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
- \*对于 Oracle 发布的推送订阅，作业名称为“\<发布服务器>-\<发布服务器>”****而不是“\<发布服务器>-\<发布数据库>”****。  
+ \*对于 Oracle 发布的推送订阅，作业名称为“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”。  
   
- \*\*对于 Oracle 发布的请求订阅，作业名称为“\<发布服务器>-\<分发数据库>”****而不是“\<发布服务器>-\<发布数据库>”****。  
+ \*\*对于 Oracle 发布的请求订阅，作业名称为“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”。  
   
- 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理 **”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
+ 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理 ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   
 -   首先使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 语句将帐户映射到凭据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。  
   

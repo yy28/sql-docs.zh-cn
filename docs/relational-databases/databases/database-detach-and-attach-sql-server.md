@@ -31,9 +31,10 @@ caps.latest.revision: 98
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f95cd17c64efff4731b77ba42df3b5dc656f2cf9
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/11/2017
   
   
 ###  <a name="Metadata"></a> 附加数据库时的元数据更改  
- 分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准” ** 是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息，**master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+ 分离再重新附加只读数据库后，会丢失有关当前差异基准的备份信息。 “差异基准”  是数据库或其文件或文件组子集中所有数据的最新完整备份。 如果没有基准备份信息，**master** 数据库会变得与只读数据库不同步，这样之后进行的差异备份可能会产生意外结果。 因此，如果对只读数据库使用差异备份，在重新附加数据库后，应通过进行完整备份来建立新的差异基准。 有关差异备份的信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
  附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 此外，附加数据库时，TRUSTWORTHY 均设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
