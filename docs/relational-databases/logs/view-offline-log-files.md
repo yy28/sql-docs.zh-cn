@@ -17,9 +17,10 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 339787b7252b5604a08770d417fe39d5b63aca70
+ms.contentlocale: zh-cn
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  打开 WMI 控制管理单元。 为此，请根据所用操作系统执行以下操作之一：  
   
-    -   单击“开始”，在“开始搜索”框中键入 **wmimgmt.msc**，然后按 Enter。********  
+    -   单击“开始”，在“开始搜索”框中键入 **wmimgmt.msc**，然后按 Enter。  
   
     -   依次单击 **“开始”**、 **“运行”**，键入 **wmimgmt.msc**，然后按 Enter。  
   
@@ -71,13 +72,13 @@ ms.lasthandoff: 04/11/2017
   
      如果您想要连接到远程计算机，请执行以下步骤：  
   
-    1.  右键单击“WMI 控制(本地)” ****，然后单击“连接到另一台计算机” ****。  
+    1.  右键单击“WMI 控制(本地)” ，然后单击“连接到另一台计算机” 。  
   
     2.  在 **“更改被管理的计算机”** 对话框中，单击 **“另一台计算机”**。  
   
     3.  输入远程计算机名称，然后单击 **“确定”**。  
   
-3.  右键单击“WMI 控制(本地)”****或“WMI 控制(***RemoteComputerName***)”****，然后单击“属性”****。  
+3.  右键单击“WMI 控制(本地)”或**“WMI 控制(***RemoteComputerName***)”**，然后单击“属性”。  
   
 4.  在 **“WMI 控制属性”** 对话框中，单击 **“安全”** 选项卡。  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-view-log-files-for-instances-that-are-offline"></a>查看脱机实例的日志文件  
   
-1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”********。  
+1.  如果您要查看本地实例的脱机日志文件，请确保使用提升的权限启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要这样做，请在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，右键单击“SQL Server Management Studio”，然后单击“以管理员身份运行”。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
   
@@ -104,22 +105,22 @@ ms.lasthandoff: 04/11/2017
   
 4.  执行以下操作之一：  
   
-    -   如果实例位于“本地服务器组”下，则展开“本地服务器组”，展开服务器组（如果实例是组的成员），右键单击该实例，然后单击“查看 SQL Server 日志”************。  
+    -   如果实例位于“本地服务器组”下，则展开“本地服务器组”，展开服务器组（如果实例是组的成员），右键单击该实例，然后单击“查看 SQL Server 日志”。  
   
-    -   如果实例是中央管理服务器本身，则展开“中央管理服务器”，右键单击该实例，指向“中央管理服务器操作”，然后单击“查看 SQL Server 日志”************。  
+    -   如果实例是中央管理服务器本身，则展开“中央管理服务器”，右键单击该实例，指向“中央管理服务器操作”，然后单击“查看 SQL Server 日志”。  
   
-    -   如果实例位于“中央管理服务器”下，则展开“中央管理服务器”，展开中央管理服务器，右键单击该实例（或展开服务器组并右键单击该实例），然后单击“查看 SQL Server 日志”************。  
+    -   如果实例位于“中央管理服务器”下，则展开“中央管理服务器”，展开中央管理服务器，右键单击该实例（或展开服务器组并右键单击该实例），然后单击“查看 SQL Server 日志”。  
   
 5.  如果您要连接到本地实例，则使用当前用户凭据建立连接。  
   
-     如果你要连接到远程实例，请在“日志文件查看器 - 连接为” **** 对话框中，执行以下操作之一：  
+     如果你要连接到远程实例，请在“日志文件查看器 - 连接为”  对话框中，执行以下操作之一：  
   
     -   若要以当前用户身份进行连接，请确保清除 **“以其他用户身份连接”** 复选框，然后单击 **“确定”**。  
   
-    -   若要以其他用户身份连接，请选中 **“以其他用户身份连接”** 复选框，然后单击 **“设置用户”**。 出现提示后，输入用户凭据（以 *domain_name*\\*user_name* 格式输入用户名称），单击“确定”，然后再次单击“确定”以进行连接********。  
+    -   若要以其他用户身份连接，请选中 **“以其他用户身份连接”** 复选框，然后单击 **“设置用户”**。 出现提示后，输入用户凭据（以 *domain_name*\\*user_name* 格式输入用户名称），单击“确定”，然后再次单击“确定”以进行连接。  
   
     > [!NOTE]  
-    >  如果日志文件加载时间过长，你可以单击日志文件查看器工具栏上的“停止”****。  
+    >  如果日志文件加载时间过长，你可以单击日志文件查看器工具栏上的“停止”。  
   
 ## <a name="see-also"></a>另请参阅  
  [日志文件查看器](../../relational-databases/logs/log-file-viewer.md)  
