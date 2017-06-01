@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
   
--   **若要禁用资源调控器，请使用：**[对象资源管理器](#RGOffObjEx)、[资源调控器属性](#RGOffProp)和 [Transact-SQL](#RGOffTSQL)  
+-   **若要禁用资源调控器，请使用：** [对象资源管理器](#RGOffObjEx)、[资源调控器属性](#RGOffProp)和 [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  禁用资源调控器会产生下列结果：  
