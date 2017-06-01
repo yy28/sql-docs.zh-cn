@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   选择逻辑记录级跟踪时，如果对多个复制节点的同一逻辑记录中的任意行进行更改（相应行中受影响的列不必相同），则此更改视为冲突。  
   
- 有关详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
+ 有关详细信息，请参阅 [检测并解决逻辑记录中的冲突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
  若要指定项目的冲突跟踪和解决方法级别，请参阅 [为合并项目指定冲突跟踪和解决方法级别](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)。  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 04/11/2017
   
 -   基于 COM 的自定义冲突解决程序  
   
-     合并复制提供了 API，通过该 API 可以用各种语言（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）将冲突解决程序编写为 COM 对象。 有关详细信息，请参阅 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
+     合并复制提供了 API，通过该 API 可以用各种语言（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）将冲突解决程序编写为 COM 对象。 有关详细信息，请参阅 [基于 COM 的自定义冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供的基于 COM 的冲突解决程序  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. 有关详细信息，请参阅 [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括许多基于 COM 的冲突解决程序。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
  有关如何选择适当类型的冲突解决程序的信息，请参阅[选择冲突解决程序](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md)。  
   
@@ -100,10 +100,10 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>交互式冲突解决程序  
- 复制提供了一个交互式冲突解决程序用户界面，它可以与默认的基于优先级的冲突解决程序或项目冲突解决程序一起使用。 通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器执行按需同步时，交互式冲突解决程序在运行时显示冲突数据，并让用户选择解决冲突的方式。 有关如何启用交互式解决方法并启动交互式冲突解决程序的详细信息，请参阅 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
+ 复制提供了一个交互式冲突解决程序用户界面，它可以与默认的基于优先级的冲突解决程序或项目冲突解决程序一起使用。 通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器执行按需同步时，交互式冲突解决程序在运行时显示冲突数据，并让用户选择解决冲突的方式。 有关如何启用交互式解决方法并启动交互式冲突解决程序的详细信息，请参阅 [交互式冲突解决](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
 ## <a name="viewing-conflicts"></a>查看冲突  
  查看冲突最简单的方法是使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 提供的复制冲突查看器（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供了可以查询冲突表的存储过程）。 冲突查看器和交互式冲突解决程序是类似的工具，但交互式冲突解决程序使用户可以在同步发生时解决冲突，而冲突查看器则用于查看已解决的冲突。 如果冲突元数据仍存在于系统表中（默认情况下，冲突元数据保留 14 天），则可以覆盖冲突查看器中的冲突解决结果，但如果需要定期对其进行直接干预，则请考虑使用交互式冲突解决程序。  
