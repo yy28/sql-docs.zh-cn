@@ -51,13 +51,13 @@ ms.lasthandoff: 04/11/2017
 -   要创建一个可在多个表中使用的自动递增数字或者可以从应用程序中调用而不引用任何表的自动递增数字，请参阅[序列号](../../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“项目属性 - \<项目>”对话框的“属性”选项卡上指定标识列管理选项。**** 有关使用此向导的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。 在新建发布向导中：  
+ 可在新建发布向导的“项目属性 - \<项目>”对话框的“属性”选项卡上指定标识列管理选项。 有关使用此向导的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)。 在新建发布向导中：  
   
 -   如果在 **“发布类型”** 页上选择 **“合并发布”** 或 **“带有更新订阅的事务发布”** ，那么请选择自动或手动标识范围管理（建议使用默认值自动）。 在发布表后不能修改该属性，但可以修改其他相关属性。  
   
 -   如果选择其他的发布类型，则应将标识范围管理设置为手动。  
   
- 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定标识范围和阈值，该对话框可以在“发布属性 - \<发布>”对话框中找到。**** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定标识范围和阈值，该对话框可以在“发布属性 - \<发布>”对话框中找到。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>指定标识列管理选项  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  单击 **“项目属性”**，再单击 **“设置突出显示的表项目的属性”**。  
   
-4.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“标识范围管理”部分，将“自动管理标识范围”属性设置为“自动”或“手动”（对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器），或者设置为“True”或“False”（对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的发布服务器）。****  
+4.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“标识范围管理”部分，将“自动管理标识范围”属性设置为“自动”或“手动”（对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器），或者设置为“True”或“False”（对于运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的发布服务器）。  
   
 5.  如果在步骤 4 中选择了 **“自动”** 或 **True** ，请输入下表中列出的选项值。 有关如何使用这些设置的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的“指定标识范围”部分。  
   
@@ -84,15 +84,15 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>发布表后修改标识范围和阈值  
   
-1.  在“发布属性 - \<发布>”对话框的“项目”页上，选择一个具有标识列的表。****  
+1.  在“发布属性 - \<发布>”对话框的“项目”页上，选择一个具有标识列的表。  
   
 2.  单击 **“项目属性”**，再单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“标识范围管理”部分中，输入一个或多个以下属性的值：“发布服务器范围大小”、“订阅服务器范围大小”和“范围阈值百分比”。****  
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“标识范围管理”部分中，输入一个或多个以下属性的值：“发布服务器范围大小”、“订阅服务器范围大小”和“范围阈值百分比”。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  在“发布属性 - \<发布>”对话框中单击“确定”。****  
+5.  在“发布属性 - \<发布>”对话框中单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  创建项目时，可使用复制存储过程来指定标识范围管理选项。  

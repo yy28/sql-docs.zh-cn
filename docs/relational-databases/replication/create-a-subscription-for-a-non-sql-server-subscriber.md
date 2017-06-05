@@ -49,7 +49,7 @@ ms.lasthandoff: 04/11/2017
   
          在为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布之后，再创建快照，这样可以确保快照代理生成适合非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的快照和初始化脚本。  
   
-3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。**** 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 。  
+3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 。  
   
 4.  使用新建订阅向导创建订阅。 本主题提供了有关此步骤的详细信息。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  右键单击发布，再单击 **“查看快照代理状态”**。  
   
-3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。****  
+3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
   
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   

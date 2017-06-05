@@ -57,7 +57,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>识别并优化资源使用排名靠前的查询  
  虽然你的工作负荷可能会生成数千个查询，但通常情况下，使用大部分系统资源的实际上只是其中一部分查询，因此你只需要注意这部分查询。 通常情况下，在资源使用排名靠前的查询中，你会发现有些查询是回归性查询，有些查询则可在进一步优化后获得性能改善。  
   
- 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  用户界面分成三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。 **** 此外，你还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
+ 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  用户界面分成三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，你还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  对 #1 和 #3 的结果进行比较。  
   
-    1.  打开“数据库总体使用情况”以确定对整个数据库的影响 ****  
+    1.  打开“数据库总体使用情况”以确定对整个数据库的影响   
   
     2.  打开“资源使用排名靠前的查询”（或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 运行你自己的分析），以便分析所做的更改对最重要查询的影响。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/11/2017
   
  ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
- 可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 你可以从上图中看到，90% 的“资源使用排名靠前的查询”仅执行一次。 ****  
+ 可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 你可以从上图中看到，90% 的“资源使用排名靠前的查询”仅执行一次。   
   
  此外，你还可以通过运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来获取系统中查询文本、查询和计划的总数，并可通过比较 query_hash 和 plan_hash 来确定其差异：  
   
@@ -194,7 +194,7 @@ EXEC sp_create_plan_guide
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
   
- 应用任何此类步骤之后，即可通过“资源使用排名靠前的查询”从另一个角度来了解你的工作负荷。 ****  
+ 应用任何此类步骤之后，即可通过“资源使用排名靠前的查询”从另一个角度来了解你的工作负荷。   
   
  ![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   

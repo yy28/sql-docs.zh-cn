@@ -58,11 +58,11 @@ ms.lasthandoff: 04/11/2017
 -   ALTER TABLE … DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。**** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>禁用对架构更改的复制  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。****  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

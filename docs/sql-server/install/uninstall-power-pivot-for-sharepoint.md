@@ -144,7 +144,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  从程序列表中选择“Microsoft SQL Server 2014 (64 位)”。  
   
-2.  单击“卸载/更改”。****  
+2.  单击“卸载/更改”。  
   
 3.  单击 **“删除”**。 这将启动 SQL Server 安装程序。  
   

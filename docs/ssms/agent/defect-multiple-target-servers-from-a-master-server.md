@@ -35,7 +35,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>使多台目标服务器脱离主服务器  
   
-1.  在对象资源管理器中，展开配置为主服务器的服务器。 ****  
+1.  在对象资源管理器中，展开配置为主服务器的服务器。   
   
 2.  右键单击“SQL Server 代理”，指向“多服务器管理”，再单击“管理目标服务器”。  
   

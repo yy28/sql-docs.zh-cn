@@ -40,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 
 #### <a name="this-action-launches-the-helpviewer"></a>（此操作将启动 HelpViewer）
 
-4. 在 HelpViewer 中，选择默认安装源：“联机”**** 
+4. 在 HelpViewer 中，选择默认安装源：“联机” 
 5. 单击要安装的文档旁边的“添加”。
 6. 单击屏幕右下端的“更新”按钮以下载并安装所选文档。
 ![加载脱机内容](../sql-server/media/load-offline-content.png) 

@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
 
   ## <a name="how-to-view-the-logs"></a>如何查看日志
-1.  在 SSMS 中，选择“对象资源管理器”****
+1.  在 SSMS 中，选择“对象资源管理器”
 
 >**打开** 对象资源管理器的步骤：键盘快捷方式为 **F8**。 或者，在顶部菜单中单击“视图”/“对象资源管理器” ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
 

@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列” ****页为每个要创建语义索引的列启用“统计语义”**** 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”****对话框的“全文索引列”****页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -186,7 +186,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”****对话框的“全文索引列”****页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -239,7 +239,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”****。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   

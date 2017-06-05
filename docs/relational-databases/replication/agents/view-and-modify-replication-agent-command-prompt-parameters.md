@@ -45,9 +45,9 @@ ms.lasthandoff: 04/11/2017
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|[复制分发代理](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|[复制队列读取器代理](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”****  
+ \*对于 Oracle 发布的推送订阅，它是“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”  
   
- \*\* 对于 Oracle 发布的请求订阅，它是“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”****  
+ \*\* 对于 Oracle 发布的请求订阅，它是“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>从 Management Studio 中查看和修改复制代理命令行参数  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  右键单击订阅，然后单击 **“查看详细信息”**。  
   
-4.  在“订阅 <SubscriptionName>”窗口中，单击“操作”，然后单击“\<AgentName> 作业属性”。****  
+4.  在“订阅 <SubscriptionName>”窗口中，单击“操作”，然后单击“\<AgentName> 作业属性”。  
   
 5.  在“作业属性 - \<作业>”对话框的“步骤”页上，选择步骤“运行代理”，然后单击“编辑”。  
   

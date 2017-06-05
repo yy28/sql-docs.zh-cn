@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
--   “订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中获取。****  
+-   “订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中获取。  
   
 -   **“所有订阅”** 选项卡，该选项卡可以从复制监视器中找到。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   

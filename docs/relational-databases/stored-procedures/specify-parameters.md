@@ -168,7 +168,7 @@ GO
   
 ```  
   
- 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数 **@cost** 和 **@compareprices** 与流控制语言一起使用，用以在“消息”窗口中返回消息。****  
+ 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数 **@cost** 和 **@compareprices** 与流控制语言一起使用，用以在“消息”窗口中返回消息。  
   
 > [!NOTE]  
 >  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 但是，数据类型和参数定位必须匹配（除非使用 **@listprice=** *variable*）。  

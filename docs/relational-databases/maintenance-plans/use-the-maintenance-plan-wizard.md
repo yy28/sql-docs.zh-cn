@@ -266,7 +266,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="define-the-update-statistics-task"></a>定义更新统计信息任务  
   
-1.  在 **“定义更新统计信息任务”** 页上，定义将对其进行更新表和索引统计信息的数据库。 此任务使用 `UPDATE STATISTICS` 语句。 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。完成后，单击“下一步”****  
+1.  在 **“定义更新统计信息任务”** 页上，定义将对其进行更新表和索引统计信息的数据库。 此任务使用 `UPDATE STATISTICS` 语句。 有关详细信息，请参阅 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)。完成后，单击“下一步”  
   
      此页还提供以下选项：  
   
@@ -316,7 +316,7 @@ ms.lasthandoff: 04/11/2017
      使用此历史记录有助于排除失败的维护计划作业的故障，或者确定数据库操作发生的原因。  
   
      **删除历史数据，如果其保留时间超过**  
-     指定要删除项的保留时间。 你可以指定“小时”、“天”、“周”（默认值）、“月”或“年”****  
+     指定要删除项的保留时间。 你可以指定“小时”、“天”、“周”（默认值）、“月”或“年”  
   
 #### <a name="define-the-execute-agent-job-task"></a>定义执行代理作业任务  
   

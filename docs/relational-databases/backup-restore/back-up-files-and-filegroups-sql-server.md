@@ -142,8 +142,8 @@ ms.lasthandoff: 04/11/2017
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
-    |FILE **=**logical_file_name**|指定要包含在文件备份中的文件的逻辑名称。|  
-    |FILEGROUP **=**logical_filegroup_name**|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
+    |FILE **=**logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
+    |FILEGROUP **=**logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
     |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。|  

@@ -148,7 +148,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  选择想要显示在 **“工具箱”**中的工具，然后单击 **“确定”**。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅  “启动维护计划向导”下的[使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。****  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”**中。 有关上述各个任务的详细信息，请参阅  “启动维护计划向导”下的[使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 8.  定义各任务之间的工作流：  
   

@@ -39,10 +39,10 @@ ms.lasthandoff: 04/11/2017
   
 ## <a name="terms"></a>术语
  
- 备份 [动词]\(back up)****  
+ 备份 [动词]\(back up)  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
   
-备份 [名词]\(backup)****  
+备份 [名词]\(backup)  
  可用于在失败后还原或恢复数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据副本。 在数据库级别以及针对数据库的一个或多个文件或文件组创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的备份。 不能创建表级备份。 除了数据备份之外，完整恢复模式要求创建事务日志的备份。  
   
 **[恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  

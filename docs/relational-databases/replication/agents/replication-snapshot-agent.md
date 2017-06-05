@@ -205,7 +205,7 @@ snapshot [ -?]
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-PublisherDB** *publisher_database*  
- 发布数据库的名称。 Oracle 发布服务器不支持该参数。**  
+ 发布数据库的名称。 Oracle 发布服务器不支持该参数。  
   
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  死锁发生时快照代理连接到发布服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  

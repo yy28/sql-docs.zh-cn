@@ -26,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 调试器 -“断点”窗口
-  **“断点”** 窗口列出在当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中设置的所有断点。 若要管理断点，请使用“断点”窗口中的工具栏。 **** 断点是代码中的某些位置，在调试模式下执行在这些位置暂停，以便您可以查看调试数据。  
+  **“断点”** 窗口列出在当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中设置的所有断点。 若要管理断点，请使用“断点”窗口中的工具栏。  断点是代码中的某些位置，在调试模式下执行在这些位置暂停，以便您可以查看调试数据。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“断点”窗口**  

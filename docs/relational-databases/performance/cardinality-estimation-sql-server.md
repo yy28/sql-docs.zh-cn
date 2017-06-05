@@ -201,7 +201,7 @@ go
   
 可以使用 LEGACY_CARDINALITY_ESTIMATION 使整个数据库使用较旧 CE，同时保留查询优化器中的改进。  
   
-最好的控制方式是强制 SQL 系统在测试期间使用通过较旧 CE 生成的计划。** 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。** 该方法将在后面详细说明。  
+最好的控制方式是强制 SQL 系统在测试期间使用通过较旧 CE 生成的计划。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。 该方法将在后面详细说明。  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>如何强制使用特定的查询计划  
   
@@ -209,7 +209,7 @@ go
   
 - 执行 **sp_query_store_force_plan**。  
   
-- 在 SSMS 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。****  
+- 在 SSMS 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。  
   
  有关查询存储的详细信息，请参阅[《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
   
@@ -220,7 +220,7 @@ go
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>示例 A. CE 认为最大值可能大于最近收集统计信息时的值  
   
-如果 OrderAddedDate 的最大值为 2016-04-30，则假设为 OrderTable 收集统计信息的最近日期为 2016-04-30。 兼容性级别为 120（和更高级别）的 CE 认为数据按升序排序的 OrderTable 中的列的值可能大于由统计信息记录的最大值。** 这种假设改进了 SQL SELECT 语句的查询计划，如下所示。  
+如果 OrderAddedDate 的最大值为 2016-04-30，则假设为 OrderTable 收集统计信息的最近日期为 2016-04-30。 兼容性级别为 120（和更高级别）的 CE 认为数据按升序排序的 OrderTable 中的列的值可能大于由统计信息记录的最大值。 这种假设改进了 SQL SELECT 语句的查询计划，如下所示。  
   
 ```tsql  
 SELECT CustomerId, OrderAddedDate  

@@ -43,7 +43,7 @@ ms.lasthandoff: 04/11/2017
      [复制管理对象 (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。**** 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 在“订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框（可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 访问该对话框）中，可以从发布服务器或订阅服务器查看请求订阅属性。 可以从订阅服务器中查看更多属性，并且可以在订阅服务器上修改属性。 也可以从发布服务器的 **“所有订阅”** 选项卡上查看属性信息，此选项卡可以通过复制监视器访问。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>从 Management Studio 中的发布服务器查看请求订阅属性  
   

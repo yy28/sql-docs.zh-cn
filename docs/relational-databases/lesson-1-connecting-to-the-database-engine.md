@@ -53,7 +53,7 @@ ms.lasthandoff: 04/11/2017
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
   
-- 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”****。   
+- 在当前版本的 Windows 中，在“开始”菜单上，键入 **Configuration Manager**，然后单击“SQL Server 版本配置管理器”。   
 -   使用较旧版本的 Windows 时，在“开始”菜单上，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]、“配置工具”，然后单击“SQL Server 配置管理器”。  
   
 ## <a name="connect"></a>使用 Management Studio 进行连接  

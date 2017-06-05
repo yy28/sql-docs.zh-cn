@@ -86,7 +86,7 @@ ms.lasthandoff: 04/11/2017
 |**(TIME)**|当前时间（以 HHMMSS 格式表示）。|  
 |**(STRTTM)**|作业开始执行的时间（以 HHMMSS 格式表示）。|  
 |**(STRTDT)**|作业开始执行的日期（以 YYYYMMDD 格式表示）。|  
-|**(WMI(**property**))****|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
+|**(WMI(**property**))**|对于为响应 WMI 警报而运行的作业，属性值由 property 指定。 例如，`$(WMI(DatabaseName))` 为导致警报运行的 WMI 事件提供 **DatabaseName** 属性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 代理转义宏  
   

@@ -124,7 +124,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。**** 在 **FileTable** 页上，为 **“FileTable 目录名称”**输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”**输入新值。  
   
 ###  <a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   

@@ -45,20 +45,20 @@ ms.lasthandoff: 04/11/2017
 
 #### <a name="catalog-views"></a>目录视图：
 
-- 这些视图用于存储由 [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) 或 SSMS UI 中的对等功能创建的所有事件会话的定义信息。** 但是，这些视图不知道曾经是否启动运行了任何会话。
+- 这些视图用于存储由 [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) 或 SSMS UI 中的对等功能创建的所有事件会话的定义信息。 但是，这些视图不知道曾经是否启动运行了任何会话。
     - 例如，如果 SSMS 的 **对象资源管理器** 显示未定义任何事件会话，则针对视图 *sys.server_event_session_targets* 的 SELECT 语句将不返回任何行。
 
 
 - 名称前缀为：
-    - sys.server\_event\_session\* 是 SQL Server 上的名称前缀。**
-    - sys.database\_event\_session\* 是 SQL 数据库上的名称前缀。**
+    - sys.server\_event\_session\* 是 SQL Server 上的名称前缀。
+    - sys.database\_event\_session\* 是 SQL 数据库上的名称前缀。
 
 
 #### <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV)：
 
 - 用于存储正在运行的事件会话的当前活动信息。 但是这些 DMV 对会话定义知之甚少。
     - 即使所有事件会话当前已停止，针对视图 *sys.dm_xe_packages* 的 SELECT 语句仍将返回行，因为各种包已加载到服务器启动的活动内存。
-    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行。**
+    - 出于同一原因，sys.dm_xe_objects sys.dm_xe_object_columns 也仍将返回行。
 
 
 - 扩展事件的 DMV 的名称前缀为：
@@ -116,9 +116,9 @@ ms.lasthandoff: 04/11/2017
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 角度
 
 
-在 SSMS 的“对象资源管理器”中，可以通过展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”打开“新建会话”对话框。****
+在 SSMS 的“对象资源管理器”中，可以通过展开“管理” > “扩展事件”，然后右键单击“会话” > “新建会话”打开“新建会话”对话框。
 
-在“新建会话”的大对话框中标记为“常规”的第一部分中，我们看到已选中选项“在服务器启动时启动事件会话”。****
+在“新建会话”的大对话框中标记为“常规”的第一部分中，我们看到已选中选项“在服务器启动时启动事件会话”。
 
 ![新建会话 > 常规，在服务器启动时启动事件会话。](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 04/11/2017
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-接下来，还是在“事件” > “配置”部分中，我们看到 [resource_type 已设置为 PAGE](#resource_type_dmv_actual_row)。**** 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
+接下来，还是在“事件” > “配置”部分中，我们看到 [resource_type 已设置为 PAGE](#resource_type_dmv_actual_row)。 这意味着如果 **resource_type** 的值是除 **PAGE** 以外的任何值，那么事件数据不会从事件引擎发送到目标。
 
 另外我们还看到数据库名称和计数器的谓词筛选器。
 
@@ -464,7 +464,7 @@ XtpRuntime     Extended events for the XTP Runtime
 ### <a name="c2-count-of-every-object-type"></a>C.2 统计每个对象类型的数量
 
 
-本节将告诉我们事件包包含的对象类型。 将显示 sys.dm\_xe\_objects 中的所有对象类型的完整列表以及每个类型的计数。**
+本节将告诉我们事件包包含的对象类型。 将显示 sys.dm\_xe\_objects 中的所有对象类型的完整列表以及每个类型的计数。
 
 
 ```tsql
@@ -576,8 +576,8 @@ type           package0       xml                           Well formed XML frag
 
 以下 SELECT 语句将返回特定于事件类型的所有数据字段。
 
-- 请注意 WHERE 子句项：column_type = 'data'。**
-- 此外，你需要编辑 WHERE 子句 o.name = 的值。**
+- 请注意 WHERE 子句项：column_type = 'data'。
+- 此外，你需要编辑 WHERE 子句 o.name = 的值。
 
 
 ```tsql
@@ -650,7 +650,7 @@ sqlserver   lock_deadlock   transaction_id
 ### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件字段
 
 
-下面的 SELECT 语句包括对名为 sys.dm_xe_map_values 的复杂视图的联接。**
+下面的 SELECT 语句包括对名为 sys.dm_xe_map_values 的复杂视图的联接。
 
 该 SELECT 语句的目的是显示可以为事件会话选择的许多字段。 可采用两种方式使用事件字段：
 
@@ -730,7 +730,7 @@ you could put:
 以下 SELECT 语句将返回目标的每个参数。 每个参数都标记了是否为必选参数。 为参数指定的值将影响目标的行为。
 
 - 请注意 WHERE 子句项：object_type = 'customizable'。
-- 此外，你需要编辑 WHERE 子句 o.name = 的值。**
+- 此外，你需要编辑 WHERE 子句 o.name = 的值。
 
 
 ```tsql
@@ -795,7 +795,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 此 DMV SELECT 语句将返回活动事件会话目标的数据行。 数据被转换为 XML 格式，使其返回的单元格可单击，从而可在 SSMS 中轻松显示。
 
 - 如果事件会话已停止，则 SELECT 语句将不返回任何行。
-- 你需要编辑 WHERE 子句 o.name = 的值。**
+- 你需要编辑 WHERE 子句 o.name = 的值。
 
 
 ```tsql
@@ -815,12 +815,12 @@ SELECT  --C.7
 
 #### <a name="output-the-only-row-including-its-xml-cell"></a>输出，唯一行，包括其 XML 单元格
 
-下面是上述 SELECT 语句输出的唯一行。 列 XML-Cast 包含的 SSMS 理解的字符串为 XML 格式。** 因此 SSMS 知道这可以使 XML-Cast 单元格可单击。
+下面是上述 SELECT 语句输出的唯一行。 列 XML-Cast 包含的 SSMS 理解的字符串为 XML 格式。 因此 SSMS 知道这可以使 XML-Cast 单元格可单击。
 
 
 对于该运行：
 
-- s.name = 的值已设为 checkpoint_begin 事件的事件会话。**
+- s.name = 的值已设为 checkpoint_begin 事件的事件会话。
 - 目标为 ring_buffer。
 
 

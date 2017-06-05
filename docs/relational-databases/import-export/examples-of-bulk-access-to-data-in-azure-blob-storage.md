@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 下面的所有示例都需要一个引用共享访问签名的数据库范围凭据。   
 
 >  [!IMPORTANT]
->  必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。**** 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
+>  必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
  
 使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用 Azure 门户中的机密。 例如：  
 

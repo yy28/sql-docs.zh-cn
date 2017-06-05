@@ -61,7 +61,7 @@ ms.lasthandoff: 04/11/2017
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 服务器，对于使用 Web 同步的请求订阅  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 注册冲突解决程序之后，在“项目属性 - \<项目>”对话框（可在新建发布向导和“发布属性 - \<发布>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。**** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 注册冲突解决程序之后，在“项目属性 - \<项目>”对话框（可在新建发布向导和“发布属性 - \<发布>”对话框中使用）的“冲突解决程序”选项卡上指定项目应使用该冲突解决程序。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-a-resolver"></a>指定冲突解决程序  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  单击 **“项目属性”**，再单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”页上，单击“冲突解决程序”选项卡。****  
+3.  在“项目属性 - \<项目>”页上，单击“冲突解决程序”选项卡。  
   
 4.  选择 **“使用自定义冲突解决程序（已在分发服务器上注册）”**，然后在列表中单击冲突解决程序。  
   

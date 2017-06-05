@@ -27,7 +27,7 @@ ms.lasthandoff: 04/11/2017
 
 [始终加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能使用两种类型的加密密钥来保护数据 - 一个密钥用于加密数据，另一个密钥对加密数据的密钥进行加密。 列加密密钥对数据进行加密，列主密钥对列加密密钥进行加密。 本文提供了有关管理这些加密密钥的详细概述。
 
-讨论“始终加密”密钥和密钥管理时，了解实际的加密密钥之间的区别和用于描述这些密钥的元数据对象很重要。** 我们使用术语**列加密密钥**和**列主密钥**来指代实际的加密密钥，以及使用**列加密密钥元数据**和**列主密钥元数据**来指代数据库中的“始终加密”密钥说明。
+讨论“始终加密”密钥和密钥管理时，了解实际的加密密钥之间的区别和用于描述这些密钥的元数据对象很重要。 我们使用术语**列加密密钥**和**列主密钥**来指代实际的加密密钥，以及使用**列加密密钥元数据**和**列主密钥元数据**来指代数据库中的“始终加密”密钥说明。
 
 - ***列加密密钥***是用于加密数据的内容加密密钥。 正如其名称所暗示的，列加密密钥用于加密数据库列中的数据。 可以使用相同的列加密密钥对一个或多个列进行加密，或者可以根据应用程序的要求使用多个列加密密钥。 列加密密钥本身也被加密，只有列加密密钥的加密的值存储在数据库中（作为列加密密钥元数据的一部分）。 列加密密钥元数据存储在 [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目录视图中。 使用 AES-256 算法的列加密密钥的长度为 256 位。
 

@@ -40,7 +40,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 安装语义搜索  
- 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。****  
+ 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。  
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
   

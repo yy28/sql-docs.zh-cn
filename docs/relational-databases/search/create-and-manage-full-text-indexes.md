@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
     |**列**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文索引属性（“列”页面）](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
     |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文索引属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）相关联。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。****  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
   
 ##  <a name="props"></a> 查看索引表和列的属性  
  一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
