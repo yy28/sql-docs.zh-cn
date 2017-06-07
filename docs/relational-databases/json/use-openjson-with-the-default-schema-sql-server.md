@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---return-each-property-of-an-object"></a>示例 - 返回对象的各个属性  
  **Query**  
   
-```tsql  
+```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
@@ -50,7 +50,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 ## <a name="example---return-each-element-of-an-array"></a>示例 - 返回数组的各个元素  
  **Query**  
   
-```tsql  
+```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
@@ -68,7 +68,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 ## <a name="example---convert-json-to-a-temporary-table"></a>示例 - 将 JSON 转换成临时表  
  以下查询返回 **info** 对象的所有属性。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json=N'{  
@@ -99,7 +99,7 @@ FROM OPENJSON(@json,N'lax $.info')
 ## <a name="example---combine-relational-data-and-json-data"></a>示例 - 合并关系数据和 JSON 数据  
  在下面的示例中，SalesOrderHeader 表中有 SalesReason 文本列，其中包含 JSON 格式的 SalesOrderReasons 数组。 SalesOrderReasons 对象包含“Manufacturer”和“Quality”等属性。 此示例创建了一个报表，通过扩展销售原因的 JSON 数组，将每个销售订单行与相关的销售原因联接，就如同将销售原因存储在单独的子表中一样。  
   
-```tsql  
+```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
 FROM Sales.SalesOrderHeader
 CROSS APPLY OPENJSON(SalesReasons)

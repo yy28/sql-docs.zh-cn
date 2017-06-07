@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>示例 - 使用 WITH 子句设置输出格式  
  以下查询返回下表中显示的结果。 请注意 AS JSON 子句是如何让值作为 JSON 对象（而不是标量值）在 col5 和 array_element 中返回的。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>示例 - 将 JSON 加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
  下面的示例展示了将整个 JSON 对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  

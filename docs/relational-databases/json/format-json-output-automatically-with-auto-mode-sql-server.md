@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 如果查询中仅使用了一个表，则 FOR JSON AUTO 子句的结果类似于 FOR JSON PATH 的结果。 在这种情况下，FOR JSON AUTO 不会创建嵌套对象。 唯一的区别是 FOR JSON AUTO 会将以点分隔的别名（例如以下示例中的 `Info.MiddleName`）输出为带有点的键，而不是输出为嵌套对象。  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -88,7 +88,7 @@ SELECT TOP 5
   
  联接表时，第一个表中的列会作为根对象的属性生成。 第二个表中的列会作为嵌套对象的属性生成。 第二个表的表名或别名（例如以下示例中的 `D`）用作嵌套数组的名称。  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber,  
         OrderDate,  
         UnitPrice,  
@@ -123,7 +123,7 @@ FOR JSON AUTO
  **查询 3**  
  你可以在 SELECT 语句中嵌套 FOR JSON PATH 子查询，而不使用 FOR JSON AUTO，如以下示例中所示。 此示例输出与上一示例相同的结果。  
   
-```tsql  
+```sql  
 SELECT TOP 2  
     SalesOrderNumber,  
     OrderDate,  

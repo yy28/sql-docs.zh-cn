@@ -29,7 +29,7 @@ SQL Server 和 Azure SQL 数据库允许使用 JSON 格式的文本。 为了提
 ## <a name="store-json-in-memory-optimized-tables"></a>在内存优化表中存储 JSON
 下面的示例演示了包含两个 JSON 列（`Tags` 和 `Data`）的 `Product` 内存优化表：
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ CREATE TABLE xtp.Product(
 ## <a name="validate-json-columns"></a>验证 JSON 列
 SQL Server 和 Azure SQL 数据库允许添加本机编译的 CHECK 约束，用于验证字符串列中存储的 JSON 文档的内容，如下面的示例中所示。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 可在包含 JSON 列的现有表中添加本机编译的 CHECK 约束：
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ ALTER TABLE xtp.Product
 -   制造产品的国家/地区。
 -   产品制造成本。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ CREATE TABLE xtp.Product(
 ## <a name="index-values-in-json-columns"></a>为 JSON 列中的值编制索引
 SQL Server 和 Azure SQL 数据库允许使用内存优化索引为 JSON 列中的值编制索引。 必须使用计算列公开和强类型化要编制索引的 JSON 值，如下面的示例中所示。
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ ALTER TABLE Product
 ## <a name="native-compilation-of-json-queries"></a>本机编译 JSON 查询
 最后，使用 JSON 函数本机编译包含查询的 Transact-SQL 过程、函数和触发器可以提高查询性能，减少执行这些过程所需的 CPU 周期。 下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程。
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

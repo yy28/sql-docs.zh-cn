@@ -48,7 +48,7 @@ JSON 对象的每个属性或数组的每个元素将以单独的行返回。
 下面是使用具有默认架构的 **OPENJSON** 的快捷示例，该示例为显示 JSON 对象的每个属性返回一行。  
  
 **示例**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ FROM OPENJSON(@json);
   
 **示例**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

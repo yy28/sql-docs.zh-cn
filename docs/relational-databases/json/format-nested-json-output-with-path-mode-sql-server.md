@@ -42,7 +42,7 @@ FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称
 
  **查询**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -93,7 +93,7 @@ SELECT TOP 5
   
  **查询**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

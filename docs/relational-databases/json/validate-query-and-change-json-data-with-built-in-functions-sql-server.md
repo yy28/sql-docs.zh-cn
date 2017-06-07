@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  如果列包含有效 JSON，则下面的示例将返回 JSON 文本。  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  下面的示例将 JSON 属性的值提取到本地变量。  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  下面的示例演示了如何在查询结果中返回 JSON 片段。  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>示例 1 - 返回标准列和 JSON 数据  
  下面的查询返回将返回标准关系列以及 JSON 列的值。  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>示例 2 - 聚合和筛选 JSON 值  
  下面的查询将按客户名称（存储在 JSON 中）和状态（存储在普通列中）来汇总小计。 然后将按市/县（存储在 JSON 中）和 OrderDate（存储在普通列中）来筛选结果。  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  以下示例将更新包含 JSON 的变量中的属性的值。  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   
