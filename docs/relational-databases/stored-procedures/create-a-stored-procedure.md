@@ -19,13 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c0095707730da9b840ebf444bdf7500cb634ad3
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
+
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx)（创建存储过程）。
+
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。  
   
 ##  <a name="Top"></a>   

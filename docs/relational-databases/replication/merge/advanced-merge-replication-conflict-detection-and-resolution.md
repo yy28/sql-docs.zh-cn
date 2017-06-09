@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/11/2017
   
  若要指定合并订阅类型和冲突解决优先级，请参阅  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程和复制管理对象 (RMO) 编程： [创建请求订阅](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [创建推送订阅](../../../relational-databases/replication/create-a-push-subscription.md)  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 04/11/2017
   
  **查看冲突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[查看和解决合并发布的数据冲突 (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：[查看合并发布的冲突信息（复制 Transact-SQL 编程）](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   

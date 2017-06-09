@@ -1,7 +1,7 @@
 ---
 title: "重新组织和重新生成索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/29/2016
+ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -35,40 +35,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 8f0efc0281809b6547a86d708e4596666f10e0c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[重新组织和重新生成索引](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx)。
+
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  
   
  您可以通过重新组织或重新生成索引来修复索引碎片。 对于基于分区方案生成的已分区索引，可以在完整索引或索引的单个分区上使用下列方法之一。 重新生成索引将会删除并重新创建索引。 这将根据指定的或现有的填充因子设置压缩页来删除碎片、回收磁盘空间，然后对连续页中的索引行重新排序。 如果指定 ALL，将删除表中的所有索引，然后在单个事务中重新生成。 使用最少系统资源重新组织索引。 通过对叶级页以物理方式重新排序，使之与叶节点的从左到右的逻辑顺序相匹配，进而对表和视图中的聚集索引和非聚集索引的叶级进行碎片整理。 重新组织还会压缩索引页。 压缩基于现有的填充因子值。  
   
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [检测碎片](#Fragmentation)  
-  
-     [限制和局限](#Restrictions)  
-  
-     [安全性](#Security)  
-  
--   **若要检查索引的碎片，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedureFrag)  
-  
-     [Transact-SQL](#TsqlProcedureFrag)  
-  
--   **若要重新组织或重新生成索引，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedureReorg)  
-  
-     [Transact-SQL](#TsqlProcedureReorg)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -188,8 +169,10 @@ ms.lasthandoff: 04/11/2017
     -- Find the average fragmentation percentage of all indexes  
     -- in the HumanResources.Employee table.   
     SELECT a.index_id, name, avg_fragmentation_in_percent  
-    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
-        JOIN sys.indexes AS b ON a.object_id = b.object_id AND a.index_id = b.index_id;   
+    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), 
+          OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
+        JOIN sys.indexes AS b 
+          ON a.object_id = b.object_id AND a.index_id = b.index_id;   
     GO  
     ```  
   
@@ -256,7 +239,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  展开 **“索引”** 文件夹。  
   
-5.  右键单击要重新组织的索引，然后选择 **“重新组织”**。  
+5.  右键单击要重新组织的索引，然后选择“重新生成”。  
   
 6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
   
@@ -277,9 +260,11 @@ ms.lasthandoff: 04/11/2017
     ```  
     USE AdventureWorks2012;   
     GO  
-    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode index on the HumanResources.Employee table.   
+    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
+    -- index on the HumanResources.Employee table.   
   
-    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode ON HumanResources.Employee  
+    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode 
+      ON HumanResources.Employee  
     REORGANIZE ;   
     GO  
     ```  
@@ -324,7 +309,6 @@ ms.lasthandoff: 04/11/2017
  有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft SQL Server 2000 索引碎片整理最佳实践](http://technet.microsoft.com/library/cc966523.aspx)  
-  
+  [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
   
 

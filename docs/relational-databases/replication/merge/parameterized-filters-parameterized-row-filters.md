@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
@@ -104,7 +104,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  使用下列方法之一覆盖 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)（对于推送订阅）或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（对于请求订阅）的 **@hostname** 参数指定一个值。  
   
@@ -135,7 +135,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |分区中的数据不重叠，并且数据由所有订阅共享。 订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**不重叠，由所有订阅共享**|**2**|  
 |分区中的数据不重叠，每个分区只有一个订阅。 订阅服务器无法更新参数化筛选器中引用的列。**|**此表中的行将仅转到一个订阅**|**不重叠，一个订阅**|**3**|  
   
- \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。****  
+ \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。  
   
  **如果你指定此选项，则相应项目中的每个数据分区只能有一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   

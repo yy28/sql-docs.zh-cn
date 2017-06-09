@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何配置订阅以使用 Web 同步 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程： [如何配置订阅以使用 Web 同步（复制 Transact-SQL 编程）](http://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  通过指定的网站可访问 Web 同步使用的组件。 它不会提供对其他数据或网页的访问，除非将其如此配置。  
   
--   创建虚拟目录及其关联的别名。 访问 Web 同步组件时使用该别名。 例如，如果 IIS 地址是 https://*server.domain.com* ，而您指定了别名“websync1”，那么访问 replisapi.dll 组件的地址就是 https://*server.domain.com*/websync1/replisapi.dll。  
+-   创建虚拟目录及其关联的别名。 访问 Web 同步组件时使用该别名。 例如，如果 IIS 地址是 `https://server.domain.com`，而你指定了别名“websync1”，那么访问 replisapi.dll 组件的地址就是 `https://server.domain.com/websync1/replisapi.dll`。  
   
 -   使用基本身份验证。 建议使用基本身份验证，因为它不需要 Kerberos 委托就可以在单独的计算机上运行 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器/分发服务器（建议配置）。 将 SSL 与基本身份验证一起使用可以确保登录名、密码和所有数据都在传输中加密。 （无论使用何种类型的身份验证，都需要 SSL。）有关 Web 同步的最佳做法的详细信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)中的“Web 同步的最佳安全配置”。  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 04/11/2017
   
     1.  在 **“别名”** 框中输入虚拟目录别名。  
   
-    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在“别名”框中输入 **websync1**，则在“路径”框中输入 **C:\Inetpub\wwwroot\websync1**。**** 单击“下一步” 。  
+    2.  在 **“路径”** 框中输入虚拟目录的路径。 例如，如果在“别名”框中输入 **websync1**，则在“路径”框中输入 **C:\Inetpub\wwwroot\websync1**。 单击“下一步” 。  
   
     3.  在两个对话框中，单击 **“是”**。 这指定您要创建一个新文件夹并复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 。  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 04/11/2017
   
 8.  在 **“目录访问”** 页中：  
   
-    1.  单击 **“添加”**，然后在 **“选择用户或组”** 对话框中添加订阅服务器在与 IIS 建立连接时将要使用的帐户。 你将在新建订阅向导的“Web 服务器信息”页中指定这些帐户或作为 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 参数的值指定它们。****  
+    1.  单击 **“添加”**，然后在 **“选择用户或组”** 对话框中添加订阅服务器在与 IIS 建立连接时将要使用的帐户。 你将在新建订阅向导的“Web 服务器信息”页中指定这些帐户或作为 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* 参数的值指定它们。  
   
 9. 在 **“快照共享访问”** 页中，输入快照共享。 在这个共享上设置相应权限，以使订阅服务器能够访问快照文件。 有关此共享的权限的详细信息，请参阅[保护快照文件](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 04/11/2017
   
 11. 如果运行 IIS 的计算机是在 64 位版本的 Windows 上运行，则必须将 replisapi.dll 复制到相应目录：  
   
-    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”框中，键入 **iisreset**，然后单击“确定”。****  
+    1.  单击 **“启动”**，再单击 **“运行”**。 在“打开”框中，键入 **iisreset**，然后单击“确定”。  
   
     2.  IIS 停止并重新启动后，将 replisapi.dll 从 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 复制到步骤 6b 中指定的目录。  
   
@@ -270,7 +270,7 @@ ms.lasthandoff: 04/11/2017
   
     4.  确保 **“从此位置”** 字段中为本地计算机（而不是域）的名称。 如果不是本地计算机的名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
-    5.  请确保只向该帐户授予“读取”、“读取和执行”和“列出文件夹内容”权限。****  
+    5.  请确保只向该帐户授予“读取”、“读取和执行”和“列出文件夹内容”权限。  
   
     6.  选择所有不需要访问该目录的用户或组，然后单击 **“删除”**。  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  右键单击所创建的应用程序池，然后单击 **“属性”**。  
   
-    3.  在“\<ApplicationPoolName> 属性”对话框中的“标识”选项卡上，单击“可配置”。****  
+    3.  在“\<ApplicationPoolName> 属性”对话框中的“标识”选项卡上，单击“可配置”。  
   
     4.  在 **“用户名”** 和 **“密码”** 字段中，输入在步骤 1 中创建的帐户和密码。  
   
@@ -306,7 +306,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  展开当前用于 Web 同步的网站，右键单击为 Web 同步所创建的虚拟目录，然后单击 **“属性”**。  
   
-    3.  在“\<VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。****  
+    3.  在“\<VirtualDirectoryName> 属性”对话框的“虚拟目录”选项卡上，从“应用程序池”下拉列表中选择在步骤 5 中创建的应用程序池。  
   
     4.  单击 **“确定”**。  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  单击“确定” 。  
   
-2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：https://server.domain.com/directory/replisapi.dll?diag。  
+2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
   
 3.  如果 Windows 操作系统不能识别您为 IIS 指定的证书，则会显示 **“安全警报”** 对话框。 如果该证书是测试证书或是由 Windows 不能识别的证书颁发机构 (CA) 颁发的证书，便会显示该警报。  
   
@@ -351,7 +351,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。**** 在新建订阅向导中也要指定这些凭据。  
+4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”**的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   

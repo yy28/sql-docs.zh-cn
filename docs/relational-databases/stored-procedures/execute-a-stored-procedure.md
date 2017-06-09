@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
+
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[执行存储过程](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx)。
+
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行存储过程。  
   
  有两种不同方法执行存储过程。 第一种方法和最常见的方法供应用程序或用户调用过程。 第二种方法是将过程设置为在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时自动运行。 当应用程序或用户调用过程时，调用中显式声明了 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 关键字。 或者，如果过程是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的第一条语句，那么不使用关键字也可以调用并执行此过程。  

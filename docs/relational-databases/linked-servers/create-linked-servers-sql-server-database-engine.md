@@ -23,13 +23,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
+
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[创建链接服务器（SQL Server 数据库引擎）](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)。
+
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
   
 ##  <a name="Background"></a> 背景  

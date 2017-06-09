@@ -18,14 +18,17 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01dfceee2f0d4fb1e0c475333be49e6dacec1c3f
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[描述的聚集索引和非聚集索引](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)。
+
 
   索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地查找与键值关联的行。  
   

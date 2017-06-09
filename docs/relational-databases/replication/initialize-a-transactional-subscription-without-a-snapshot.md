@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>初始化事务订阅（不使用快照）
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
  若要使用备份初始化订阅，首先必须在创建发布时启用此选项，然后在创建订阅时为多个选项指定值。 可以通过新建发布向导或以编程方式启用发布。 但是，订阅选项所需的值只能用编程方式指定。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[使用备份来初始化事务发布 (SQL Server Management Studio)](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   复制 Transact-SQL 编程：[从备份初始化事务订阅（复制 Transact-SQL 编程）](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   

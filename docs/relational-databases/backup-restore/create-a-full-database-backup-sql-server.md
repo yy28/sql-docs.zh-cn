@@ -20,13 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f18989ee04ccb28ab9b37a5912328de60cbde885
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
+
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[创建完整数据库备份 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)。
+
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建完整数据库备份。  
   
 >  有关 SQL Server 备份到 Windows Azure Blob 存储服务的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
@@ -65,29 +68,29 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="back-up-a-database"></a>备份数据库  
   
-1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。****  
+1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例之后，在“对象资源管理器”中，单击服务器名称以展开服务器树。  
   
-2.  展开“数据库”，选择用户数据库，或展开“系统数据库”，选择系统数据库。****  
+2.  展开“数据库”，选择用户数据库，或展开“系统数据库”，选择系统数据库。  
   
 3.  右键单击数据库，指向“任务”，再单击“备份”。 将出现 **“备份数据库”** 对话框。  
 
   #### <a name="general-page"></a>**“常规”页**
   
-4.  在“数据库”列表中，确认数据库名称。**** 或者从列表中选择其他数据库。  
+4.  在“数据库”列表中，确认数据库名称。 或者从列表中选择其他数据库。  
   
-5.  “恢复模式”文本框仅供参考。****  可以对任意恢复模式（**FULL**、**BULK_LOGGED** 或 **SIMPLE**）执行数据库备份。  
+5.  “恢复模式”文本框仅供参考。  可以对任意恢复模式（**FULL**、**BULK_LOGGED** 或 **SIMPLE**）执行数据库备份。  
   
-6.  从“备份类型”下拉列表中，选择“完整”。****  
+6.  从“备份类型”下拉列表中，选择“完整”。  
   
      请注意，创建了完整数据库备份后，可以创建差异数据库备份；有关详细信息，请参阅 [创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。  
   
 7.  还可以选择“仅复制备份”复选框创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  仅复制备份不可用于**差异**备份类型。  
 
-8.  对于**备份组件**，请选择“数据库”单选按钮。****  
+8.  对于**备份组件**，请选择“数据库”单选按钮。  
   
-9. 在“目标”部分中，使用“备份到”下拉列表选择备份目标。**** 单击“添加”可添加其他备份对象和/或目标。****
+9. 在“目标”部分中，使用“备份到”下拉列表选择备份目标。 单击“添加”可添加其他备份对象和/或目标。
   
-     若要删除备份目标，请选择该备份目标并单击 **“删除”**。 若要查看现有备份目标的内容，请选择该备份目标并单击“内容”。****  
+     若要删除备份目标，请选择该备份目标并单击 **“删除”**。 若要查看现有备份目标的内容，请选择该备份目标并单击“内容”。  
 
   #### <a name="media-options-page"></a>**介质选项页**  
 10. 若要查看或选择介质选项，请在 **“选择页”** 窗格中单击 **“介质选项”** 。   
@@ -95,7 +98,7 @@ ms.lasthandoff: 04/11/2017
 11. 可以通过单击以下选项之一来选择 **“覆盖介质”** 选项： 
 
     > [!IMPORTANT]  
-    >  如果在“常规”页中选择了“URL”作为备份目标，则禁用“覆盖介质”选项。**** 有关详细信息，请参阅[备份数据库（媒体选项页）](../../relational-databases/backup-restore/back-up-database-media-options-page.md)。  
+    >  如果在“常规”页中选择了“URL”作为备份目标，则禁用“覆盖介质”选项。 有关详细信息，请参阅[备份数据库（媒体选项页）](../../relational-databases/backup-restore/back-up-database-media-options-page.md)。  
 
 
   -   **备份到现有介质集**  
@@ -123,15 +126,15 @@ ms.lasthandoff: 04/11/2017
 
 15. 除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分处于不活动状态。  
       
-16. 在“磁带驱动器”部分中，如果备份到磁带驱动器（如同“常规”页的“目标”部分指定的一样），则“备份后卸载磁带”选项处于活动状态。**** 单击此选项可以激活 **“卸载前倒带”** 选项。   
+16. 在“磁带驱动器”部分中，如果备份到磁带驱动器（如同“常规”页的“目标”部分指定的一样），则“备份后卸载磁带”选项处于活动状态。 单击此选项可以激活 **“卸载前倒带”** 选项。   
 
   #### <a name="backup-options-page"></a>**备份选项页**  
 
 17. 若要查看或选择备份选项，请在 **“选择页”** 窗格中单击 **“备份选项”** 。  
   
-18. 在“名称”文本框中可以接受默认的备份集名称，也可以为备份集输入其他名称。****  
+18. 在“名称”文本框中可以接受默认的备份集名称，也可以为备份集输入其他名称。  
   
-19. 可以在“说明”文本框中，输入备份集的说明。****  
+19. 可以在“说明”文本框中，输入备份集的说明。  
   
 20. 指定备份集何时过期以及何时可以覆盖备份集而不用显式跳过过期数据验证：  
   
@@ -143,11 +146,11 @@ ms.lasthandoff: 04/11/2017
   
          有关备份过期日期的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
-21. 在“压缩”部分中，使用“设置备份压缩”下拉列表选择所需的压缩级别。****  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中“压缩备份”来压缩备份，并且可以通过选中“不压缩备份”来防止压缩备份。  
+21. 在“压缩”部分中，使用“设置备份压缩”下拉列表选择所需的压缩级别。  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中“压缩备份”来压缩备份，并且可以通过选中“不压缩备份”来防止压缩备份。  
   
      有关备份压缩设置的详细信息，请参阅[查看或配置备份压缩默认服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  
   
-22. 在“加密”部分中，使用“加密备份”复选框来决定是否对备份使用加密。**** 使用“算法”下拉列表选择一种加密算法。****  使用“证书”或“非对称密钥”下拉列表选择现有证书或非对称密钥。**** SQL Server 2014 或更高版本中支持加密。 有关加密选项的详细信息，请参阅 [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
+22. 在“加密”部分中，使用“加密备份”复选框来决定是否对备份使用加密。 使用“算法”下拉列表选择一种加密算法。  使用“证书”或“非对称密钥”下拉列表选择现有证书或非对称密钥。 SQL Server 2014 或更高版本中支持加密。 有关加密选项的详细信息，请参阅 [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
   
   
 你可以使用 [维护计划向导](https://msdn.microsoft.com/library/ms191002.aspx) 来创建数据库备份。 
@@ -167,13 +170,13 @@ ms.lasthandoff: 04/11/2017
 
 2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
 
-3.  在“常规”页的“目标”部分中，从“备份到:”下拉列表中选择“磁盘”。****
+3.  在“常规”页的“目标”部分中，从“备份到:”下拉列表中选择“磁盘”。
 
-4.  单击“删除”，直到删除所有现有备份文件。****
+4.  单击“删除”，直到删除所有现有备份文件。
 
 5.  单击“添加”“选择备份目标”对话框。
 
-6.  在“文件名”文本框中输入 `E:\MSSQL\BAK\Sales_20160801.bak`。****
+6.  在“文件名”文本框中输入 `E:\MSSQL\BAK\Sales_20160801.bak`。
 
 7.  单击 **“确定”**。
 
@@ -185,13 +188,13 @@ ms.lasthandoff: 04/11/2017
 
 2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
 
-3.  在“介质选项”页的“覆盖介质”部分中，选择“备份到新介质集，并清除所有现有备份集”。****
+3.  在“介质选项”页的“覆盖介质”部分中，选择“备份到新介质集，并清除所有现有备份集”。
 
-4.  在“备份选项”页的“加密”部分中，选择“加密备份”复选框。****
+4.  在“备份选项”页的“加密”部分中，选择“加密备份”复选框。
 
-5.  从“算法”下拉列表中选择“AES 256”。****
+5.  从“算法”下拉列表中选择“AES 256”。
 
-6.  从“证书”或“非对称密钥”下拉列表中选择 `MyCertificate`。****
+6.  从“证书”或“非对称密钥”下拉列表中选择 `MyCertificate`。
 
 7.  单击 **“确定”**。
 
@@ -202,7 +205,7 @@ ms.lasthandoff: 04/11/2017
 
 2.  展开“数据库”，右键单击 `Sales`，然后指向“任务”，再单击“备份...”。
 
-3.  在“目标”部分中的“常规”页上，从“备份到：”下拉列表中选择“URL”****
+3.  在“目标”部分中的“常规”页上，从“备份到：”下拉列表中选择“URL”
 
 4.  单击“添加”“选择备份目标”对话框。
 
@@ -256,14 +259,14 @@ ms.lasthandoff: 04/11/2017
   
      BACKUP DATABASE *database*  
   
-     TO backup_device [ **,**...*n* ]  
+     TO backup_device [ **,**...n ]  
   
      [ WITH with_options [ **,**...*o* ] ] ;  
   
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|要备份的数据库。|  
-    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
+    |backup_device [ **,**...n ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项 *o*。 有关某些基本 WITH 选项的信息，请参阅步骤 2。|  
   
 2.  （可选）指定一个或多个 WITH 选项。 下面描述了几个基本 WITH 选项。 有关所有 WITH 选项的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
