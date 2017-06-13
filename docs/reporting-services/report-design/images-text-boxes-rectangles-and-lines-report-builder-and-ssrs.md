@@ -1,29 +1,34 @@
 ---
-title: "图像、文本框、矩形和线条（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "图像、 文本框、 矩形和线条 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffa83524ea9761dfa4df66b4d47fd049dd63035a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 图像、文本框、矩形和线条（报表生成器和 SSRS）
-  除了如表、矩阵和图表这样的数据区域外，[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表还可以使用如图像、文本框和矩形等其他报表项增添视觉吸引力、突出显示关键信息或提供相关信息。 您可以更改报表项的格式设置。 例如，可以添加边框或填充、更改初始可见性或方向，或指定报表项的准确大小和位置。  
+# <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>图像、文本框、矩形和线条（报表生成器和 SSRS）
+  除了如表、矩阵和图表这样的数据区域外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表还可以使用如图像、文本框和矩形等其他报表项增添视觉吸引力、突出显示关键信息或提供相关信息。 您可以更改报表项的格式设置。 例如，可以添加边框或填充、更改初始可见性或方向，或指定报表项的准确大小和位置。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  文本框可以放在报表上的任何位置，可以包含标签、字段或计算数据。 使用表达式可以定义查看报表时显示在文本框中的值。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
  [图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  图像用于显示报表中的二进制图像数据。 您为图像提供源。 源可以是对存储在 Web 服务器中的图像的 URL 引用、对嵌入的图像数据的引用，也可以是对数据库中二进制图像数据的引用。 报表生成器和报表设计器支持 .bmp、.jpeg、.gif 和 .png 文件。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

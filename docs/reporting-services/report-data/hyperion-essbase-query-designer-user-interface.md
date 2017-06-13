@@ -1,32 +1,37 @@
 ---
-title: "Hyperion Essbase 查询设计器用户界面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10013"
-  - "sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1"
-helpviewer_keywords: 
-  - "Hyperion Essbase 查询设计器"
-  - "数据源 [Reporting Services], Hyperion Essbase"
-  - "多维数据 [Reporting Services]"
-  - "查询设计器 [Reporting Services]"
-  - "Hyperion Essbase [Reporting Services], 查询设计器"
+title: "Hyperion Essbase 查询设计器用户界面 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10013"
+- sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
+helpviewer_keywords:
+- Hyperion Essbase Query Designer
+- data sources [Reporting Services], Hyperion Essbase
+- multidimensional data [Reporting Services]
+- query designers [Reporting Services]
+- Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68a0a5da224c0f6f78eca8df1ae766e85d7750f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Hyperion Essbase 查询设计器用户界面
+# <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  
   
 > [!IMPORTANT]  
@@ -36,12 +41,12 @@ caps.handback.revision: 23
   
  本节介绍每种模式的图形查询设计器中的工具栏按钮和查询设计器窗格。  
   
-## 设计模式下的图形查询设计器  
+## <a name="graphical-query-designer-in-design-mode"></a>设计模式下的图形查询设计器  
  为使用 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 数据源的数据集编辑 MDX 查询时，图形查询设计器将在设计模式下打开。  
   
  下图列出了设计模式的窗格。  
   
- ![用于 Hyperion Essbase 数据源的查询设计器](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "用于 Hyperion Essbase 数据源的查询设计器")  
+ ![Hyperion Essbase 数据源的查询设计器](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 数据源的查询设计器")  
   
  下表列出了设计模式下的窗格。  
   
@@ -57,26 +62,26 @@ caps.handback.revision: 23
   
  在“筛选器”窗格中，可以选择维度值来限制从数据源检索的数据。 在设计模式下的筛选器中定义的值显示在查询模式下的 MDX Where 子句中。  
   
-### 设计模式下的图形查询设计器工具栏  
+### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>设计模式下的图形查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表显示这些按钮并介绍了它们的功能。  
   
 |按钮|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
-|![Refresh dataset fields](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|刷新数据源的元数据。|  
-|![添加计算成员](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "添加计算成员")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
-|![切换显示空单元](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "切换显示空单元")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
-|![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
-|![删除](../../reporting-services/report-data/media/rsqdicon-delete.png "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|  
-|![运行查询](../../reporting-services/report-data/media/rsqdicon-run.png "运行查询")|运行查询并在“数据”窗格中显示结果。|  
-|![Cancel the query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
-|![切换到设计模式](../../reporting-services/media/rsqdicon-designmode.png "切换到设计模式")|在设计模式和查询模式之间切换。|  
+|![刷新数据集字段](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "刷新数据集字段")|刷新数据源的元数据。|  
+|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
+|![显示空单元格的切换](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "显示空单元格的切换")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
+|![删除](../../reporting-services/report-data/media/rsqdicon-delete.gif "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|  
+|![运行查询](../../reporting-services/report-data/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
+|![取消查询](../../reporting-services/report-data/media/rsqdicon-cancel.gif "取消的查询")|取消查询。|  
+|![切换到设计模式](../../reporting-services/media/rsqdicon-designmode.gif "切换到设计模式")|在设计模式和查询模式之间切换。|  
   
-## 查询模式下的图形查询设计器  
+## <a name="graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器  
  若要将图形查询设计器更改为查询模式，请单击工具栏上的 **“设计模式”** 切换按钮。 下图列出了查询模式下查询设计器的各个部分。  
   
- ![用于 Hyperion 的查询模式的查询设计器](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "用于 Hyperion 的查询模式的查询设计器")  
+ ![查询设计器在查询模式下 Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "Hyperion 查询在查询模式下的设计器")  
   
  下表介绍了每个窗格的功能。  
   
@@ -89,18 +94,18 @@ caps.handback.revision: 23
   
  通过“元数据”窗格，可以将度量值和维度从 **“元数据”** 选项卡拖到“MDX 查询”窗格。 还可以将函数从 **“函数”** 选项卡拖到“MDX 查询”窗格。 当执行查询时，“结果”窗格将显示当前 MDX 查询的结果。  
   
-### 查询模式下的图形查询设计器工具栏  
+### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>查询模式下的图形查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 工具栏按钮在设计模式和查询模式下是相同的，但是下列按钮在查询模式下不可用：  
   
 -   **编辑为文本**  
   
--   **添加计算成员** (![添加计算成员](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "添加计算成员"))  
+-   **添加计算成员** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **显示空单元** (![切换显示空单元](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "切换显示空单元"))  
+-   **显示空单元格**(![显示空单元格的切换](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "显示空单元格的切换"))  
   
--   **自动执行** (![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "自动执行查询"))  
+-   **自动执行**(![自动执行查询](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "自动执行查询"))  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   

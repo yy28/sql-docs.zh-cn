@@ -1,26 +1,31 @@
 ---
-title: "向表或矩阵添加交互式排序（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10121"
-  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
+title: "将交互式排序添加到表或矩阵 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10121"
+- sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 向表或矩阵添加交互式排序（报表生成器和 SSRS）
+# <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
   添加交互式排序按钮可以让用户能够更改表和矩阵中行和列的排序顺序。 只有支持用户交互的呈现格式（例如 HTML）才支持此功能。  
   
  创建交互式排序按钮时，必须指定要排序的对象、排序依据以及要应用排序的作用域。 例如，可以按客户姓氏对详细信息行进行排序，按销售额对类别组中的子类别组值进行排序，或者按总计对类别和子类别组值的组合进行排序。  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 ##  <a name="SortingDetailRows"></a> 对不具有组的表的详细信息行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表中的详细信息行进行排序。  
   
-#### 将交互式排序按钮添加到列标题以按值对表进行排序  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>将交互式排序按钮添加到列标题以按值对表进行排序  
   
 1.  在报表设计视图中，在不具有组的表中，右键单击要向其添加交互式排序按钮的列标题中的文本框，再单击“文本框属性”。  
   
@@ -62,12 +67,12 @@ caps.handback.revision: 7
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> 对表或矩阵的顶级父行组进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并按该列中显示的值对表或矩阵中的父组行进行排序。 子组的顺序保持不变。  
   
-#### 将交互式排序按钮添加到列标题以对组进行排序  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>将交互式排序按钮添加到列标题以对组进行排序  
   
 1.  在报表设计视图中的表或矩阵中，右键单击要向其添加交互式排序按钮的组的列标题中的文本框，再单击“文本框属性”。  
   
@@ -86,12 +91,12 @@ caps.handback.revision: 7
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> 对组的子组或详细信息行进行排序  
  将交互式排序按钮添加到组头行，可使用户能够对父组中的子组的值进行排序，或者对最内部的子组的详细信息行进行排序。  
   
-#### 将交互式排序按钮添加到组行标题中的文本框以对子组或详细信息行进行排序  
+#### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>将交互式排序按钮添加到组行标题中的文本框以对子组或详细信息行进行排序  
   
 1.  在报表设计视图中，右键单击要向其添加交互式排序按钮的组头行中的文本框，然后单击“文本框属性”。  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 7
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 基于复杂组表达式对行进行排序  
  将交互式排序按钮添加到列标题，可使用户能够单击列标题并对组合的父组和子组进行排序。 若要获得此效果，必须将组表达式更改为两个组的组合。 例如，假定用一个矩阵显示某个商店中按颜色和大小分组的商品的库存总计。 若要基于颜色和大小的组合对行进行排序，而不是让颜色和大小各有单独的组，则可以基于颜色和大小的组合来定义组。 有关定义组表达式的详细信息，请参阅[组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
@@ -118,7 +123,7 @@ caps.handback.revision: 7
   
  通常，基于多个组对行进行排序时，希望看到排序行的总计，而不考虑列组。 在此过程中，不使用任何列组。 开始将添加矩阵并删除默认列组。 另外，开始也可以添加表并删除详细信息组。  
   
-#### 将交互式排序按钮添加到列标题以对多个组进行排序  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-multiple-groups"></a>将交互式排序按钮添加到列标题以对多个组进行排序  
   
 1.  在报表设计视图中，添加一个矩阵。  
   
@@ -166,14 +171,14 @@ caps.handback.revision: 7
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> 同步多个数据区域的排序顺序  
  添加交互式排序按钮，可使用户能够单击一个排序按钮并对多个数据区域进行排序。 创建交互式排序按钮时，可以指定是否基于相同报表数据集同步多个数据区域的排序。 例如，报表可能包括以图形方式显示数据的矩阵和图表。 用户更改矩阵中行的排序顺序时，图表将自动显示相同的排序顺序。  
   
  若要同步排序顺序，必须为要排序的数据区域或组使用相同的排序表达式，并将排序的作用预定义为两个数据区域的共同祖先。 共同祖先可以是两个数据区域都链接到的数据集，也可以是两个数据区域都显示在其中的包含数据区域。 例如，假定一个报表同时具有显示相同数据集的数据和包含在列表中的矩阵和图表。 若要同步排序操作，必须对该矩阵的列指定交互式排序，并将作用域设置为该列表。 用户对矩阵进行排序时，也将对图表进行排序。  
   
-#### 将矩阵数据区域上交互式排序按钮的排序顺序与图表同步  
+#### <a name="to-synchronize-sort-order-with-a-chart-for-an-interactive-sort-button-on-a-matrix-data-region"></a>将矩阵数据区域上交互式排序按钮的排序顺序与图表同步  
   
 1.  在报表设计视图中，向报表中添加一个矩阵。  
   
@@ -215,9 +220,9 @@ caps.handback.revision: 7
   
  若要验证排序操作，请单击 **“运行”** 以预览报表，然后单击交互式排序按钮。 矩阵将按组表达式的组合值进行排序，但每个值分别显示在其各自的列中。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
+ ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[返回页首](#BackToTop)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [交互式排序（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

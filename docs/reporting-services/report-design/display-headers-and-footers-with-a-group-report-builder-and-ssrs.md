@@ -1,26 +1,31 @@
 ---
-title: "与组一起显示组头和组尾（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "显示标头和组尾与组 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 与组一起显示组头和组尾（报表生成器和 SSRS）
+# <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  
   
- 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅[在多个页中显示行标题和列标题（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd207045.aspx)。  
+ 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅 [在多个页中显示行标题和列标题（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd207045.aspx)。  
   
  若要控制与嵌套组相关联的动态行和列的呈现行为，或者与标签或小计相关联的静态行和列的呈现行为，必须设置 Tablix 成员的属性。 一个 Tablix 成员表示一个静态或动态的行或列。 每个静态成员重复一次。 例如，总计行就是一个静态行。 一个动态成员针对每个组实例重复一次。 例如，一个与具有组表达式 [Territory] 的组相关联的行针对每个唯一地区值重复一次。 有关 Tablix 成员的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 使静态行和一组与行组关联的动态行一起显示  
+### <a name="to-keep-a-static-row-with-a-set-of-dynamic-rows-associated-with-a-row-group"></a>使静态行和一组与行组关联的动态行一起显示  
   
 1.  在设计图面上，单击 Tablix 数据区域中的任意位置以将其选定。 “分组”窗格将显示数据区域的行组和列组。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  （可选）预览报表。 如果可能，报表呈现器使该成员与指定行组成员一起显示。  
   
-### 使静态列和一组与列组关联的动态列一起显示  
+### <a name="to-keep-a-static-column-with-a-set-of-dynamic-columns-associated-with-a-column-group"></a>使静态列和一组与列组关联的动态列一起显示  
   
 1.  在设计图面上，单击 Tablix 数据区域中的任意位置以将其选定。 “分组”窗格将显示数据区域的行组和列组。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 5.  （可选）预览报表。 如果可能，报表呈现器使该成员与指定列组成员一起显示。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd220587.aspx)   
  
   

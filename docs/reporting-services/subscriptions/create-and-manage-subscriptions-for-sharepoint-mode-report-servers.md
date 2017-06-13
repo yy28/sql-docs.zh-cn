@@ -1,27 +1,32 @@
 ---
-title: "创建和管理 SharePoint 模式报表服务器的订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "订阅 [Reporting Services], 创建"
-  - "订阅 [Reporting Services], 删除"
-  - "订阅 [Reporting Services], 管理"
+title: "创建和管理 SharePoint 模式报表服务器的订阅 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], creating
+- subscriptions [Reporting Services], deleting
+- subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建和管理 SharePoint 模式报表服务器的订阅
+# <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
   你可以创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以便从与 SharePoint 模式报表服务器集成的 SharePoint Web 应用程序传递报表。 订阅可以将报表传递到文档库、文件夹或作为电子邮件传递。 本主题概述了创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的要求和步骤。  
   
 ||  
@@ -34,7 +39,7 @@ caps.handback.revision: 19
   
 -   **文件夹：** 可以将基于原始报表的文档传递到文件系统上的共享文件夹中。 必须选择可通过网络连接进行访问的现有文件夹。  
   
--   **电子邮件：**如果将报表服务器配置为使用报表服务器电子邮件传递扩展插件，则可以创建一个订阅，将报表或导出的报表文件（以输出格式保存）发送到收件箱。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
+-   **电子邮件：** 如果将报表服务器配置为使用报表服务器电子邮件传递扩展插件，则可以创建一个订阅，将报表或导出的报表文件（以输出格式保存）发送到收件箱。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
   
  **本主题内容：**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 19
   
 9. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 如果所选报表不包含参数，则“参数”部分在此页上不可见。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 如果所选报表不包含参数，则“参数”部分在此页上不可见。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> 为共享文件夹传递创建订阅  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 19
   
 11. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-12. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+12. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_subscription_for_email"></a> 为报表服务器电子邮件传递创建订阅  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 19
   
 9. 在 **“传递事件”**中，指定会导致订阅运行的计划或事件。 您可以创建自定义计划，选择共享计划（如果可用），或者在使用快照数据运行的报表的数据被刷新时运行订阅。 有关计划和数据处理的详细信息，请参阅[设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
-10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md)。  
+10. 在 **“参数”**中，如果所创建的是参数化报表的订阅，请指定处理订阅时要在该报表中使用的值。 有关参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ###  <a name="bkmk_to_modify_subscription"></a> 删除或修改订阅  
   
@@ -156,11 +161,11 @@ caps.handback.revision: 19
   
 3.  单击订阅旁的复选框，然后单击 **“删除”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services 中的文件共享传递](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的 SharePoint 库传递](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/zh-cn/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

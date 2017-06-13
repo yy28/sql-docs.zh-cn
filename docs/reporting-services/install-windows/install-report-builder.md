@@ -1,42 +1,47 @@
 ---
-title: "安装报表生成器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "安装报表生成器 |Microsoft 文档"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 安装报表生成器
+# <a name="install-report-builder"></a>安装报表生成器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
   
  通常，由管理员安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、授予从 Web 门户下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的权限，以及管理文件夹与对报表、报表部件和保存到报表服务器的共享数据集的权限。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
-## 从 Web 门户或 SharePoint 库安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>从 Web 门户或 SharePoint 库安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
   
- 可以从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅[启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+ 可以从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
   
-### 与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  在与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点上，如果“新建文档”  菜单未列出“报表生成器报表” 、“报表生成器模型” 和“报表数据源” ，则需要将其内容类型添加到 SharePoint 库中。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
  
-## 使用 System Center Configuration Manager 安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
   
  管理员还可以使用 System Center Configuration Manager 等软件将程序推送到你的计算机上。 若要了解如何使用特定软件安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，请查阅该软件的文档。 有关详细信息，请参阅 [System Center Configuration Manager 站点](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager)。  
   
 > [!IMPORTANT]  
 >  Windows Vista 和 Windows 7 安全功能需要提升权限以运行命令行操作，并将提示您提供运行命令行的权限。 安装不是静默的。 若要进行静默安装，您需要以管理员身份运行命令行。  
   
-## 系统要求
+## <a name="system-requirements"></a>系统要求
   
  请参阅 Microsoft 下载中心上 **报表生成器下载页** 的“系统要求” [](http://go.microsoft.com/fwlink/?LinkID=734968) 部分。
   
@@ -57,17 +62,17 @@ caps.handback.revision: 20
   
 5.  单击“安装”  以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]的安装。  
   
-## 从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-a-share"></a>从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
 1.  请与管理员联系，以获得在本地计算机上安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 所要运行的 ReportBuilder3.msi 的位置。  
   
-2.  浏览找到 ReportBuilder3.msi（[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的 Windows 安装程序包 (MSI)），然后单击它。  
+2.  浏览找到 ReportBuilder3.msi（ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]的 Windows 安装程序包 (MSI)），然后单击它。  
   
      此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 向导。  
   
 3.  完成 [To install Report Builder from the download site](#download)中的剩余步骤。  
   
-## 从命令行安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>从命令行安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
 
  还可以执行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 的命令行安装，并提供参数以自定义安装。 除了标准的 MSI 内部参数以外，还可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]的根安装文件夹。 REPORTSERVERURL 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 用于在服务器上保存报表的默认报表服务器。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
 7.  若要运行命令，请按 ENTER。  
   
-## 设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 默认值。  
+## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 默认值。  
   
 -   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]后，可以设置一些默认选项。 单击“文件” > “选项”。  
   
@@ -103,8 +108,9 @@ caps.handback.revision: 20
   
      如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”  对话框，并单击 **底部的“连接”**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ，以连接到服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   
  [卸载报表生成器](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
+

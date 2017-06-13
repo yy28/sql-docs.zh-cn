@@ -1,25 +1,30 @@
 ---
-title: "设置报表项的格式（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10444"
+title: "报表项 （报表生成器和 SSRS） 进行格式设置 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 设置报表项的格式（报表生成器和 SSRS）
+# <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
   对报表中的项进行格式设置可以使报表更赏心悦目并增强其可读性。 在报表设计模式下，可以对文本框、文本框中的各项、图像、表达式以及数据进行格式设置。  
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  介绍如何设置文本的格式以及如何自定义文本框中不同文本块的格式选项。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
  介绍如何在报表中插入和使用 HTML。  
   
  [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的标准和自定义格式设置字符串。  
+ 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的标准和自定义格式设置字符串。  
   
  [设置线条、颜色和图像的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  介绍如何设置报表项和数据区域中的线条、网格线、颜色和图像的格式。  
@@ -53,7 +58,7 @@ caps.handback.revision: 7
  [设置报表或文本框的区域设置 (Reporting Services)](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  描述如何更改按语言和区域而不同的数据显示格式的设置，例如日期、货币和数值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

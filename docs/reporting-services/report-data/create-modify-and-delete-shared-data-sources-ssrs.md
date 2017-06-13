@@ -1,36 +1,41 @@
 ---
-title: "创建、修改和删除共享数据源 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "修改数据源属性"
-  - "共享数据源 [Reporting Services]"
-  - "删除共享数据源"
-  - "角色 [Reporting Services]，共享数据源"
-  - "数据源 [Reporting Services]，共享"
-  - "数据源 [Reporting Services]，修改属性"
-  - "删除共享数据源"
+title: "创建、 修改和删除共享的数据源 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建、修改和删除共享数据源 (SSRS)
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
   共享数据源是一组可供在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上运行的多个报表、模型和数据驱动订阅引用的数据源连接属性。  共享数据源为随时间推移经常发生变化的数据源属性的管理提供了一种简单的方法。 如果用户帐户或密码发生更改，或者如果将数据库移到其他服务器，则可在一个位置对连接信息进行更新。  
   
  下面的图标表示报表管理器文件夹层次结构中的共享数据源：  
   
- ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 共享数据源图标  
   
  对于报表和数据驱动订阅，共享数据源是可选的，但对于报表模型，共享数据源是必需的。 如果计划将报表模型用于特别报告，则必须创建和维护一个共享数据源项才能为此模型提供连接信息。  
@@ -42,17 +47,17 @@ caps.handback.revision: 53
 |名称|名称用于在报表服务器文件夹层次结构中标识该项。|  
 |Description|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
 |连接类型|与数据源一起使用的数据处理扩展插件。 您只能使用部署在报表服务器上的数据处理扩展插件。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的数据处理扩展插件的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
-|连接字符串|数据库的连接字符串。 有关详细信息和常用数据源的连接字符串示例，请参阅[数据连接、数据源以及连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
+|连接字符串|数据库的连接字符串。 有关详细信息和常用数据源的连接字符串示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
   
  共享数据源不包含用于检索数据的查询信息。 查询始终保存在报表定义中。  
   
-## 创建和修改共享数据源  
+## <a name="creating-and-modifying-shared-data-sources"></a>创建和修改共享数据源  
  若要创建共享数据源或修改其属性，必须对报表服务器拥有 **管理数据源** 的权限。 如果报表服务器在本机模式下运行，则可使用报表管理器创建和配置共享数据源。 如果报表服务器在 SharePoint 集成模式下运行，则可使用 SharePoint 站点上的应用程序页。 对于任何报表服务器，不管其模式如何，均可在报表设计器中创建共享数据源，然后将该数据源发布到目标服务器。  
   
  在报表服务器上创建共享数据源后，可通过创建角色分配来控制对该共享数据源的访问、将该共享数据源移到其他位置、对其重命名，或使之脱机以防止在对外部数据源执行维护操作时处理报表。 如果您在报表服务器文件夹层次结构中对共享数据源项重命名，或将其移到其他位置，则引用该共享数据源的所有报表或订阅中的路径信息都会相应更新。 如果使共享数据源脱机，则直到您重新启用该数据源后所有报表、模型和订阅才会运行。  
   
- 有关如何控制对报表服务器文件夹层次结构中的共享数据源的访问的详细信息，请参阅[保护共享数据源项](../../reporting-services/security/secure-shared-data-source-items.md)。  
+ 有关如何控制对报表服务器文件夹层次结构中的共享数据源的访问的详细信息，请参阅 [保护共享数据源项](../../reporting-services/security/secure-shared-data-source-items.md)。  
   
  **在报表设计器中创建共享数据源**  
   
@@ -77,13 +82,13 @@ caps.handback.revision: 53
   
  **在报表管理器中创建共享数据源**  
   
-1.  启动[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页。  
   
 3.  单击 **“新建数据源”**。 此时，将打开 **“新建数据源”** 页。  
   
-4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : @ & = + , $ / * \< > | " /.  
+4.  为相应项键入一个名称。 名称必须包含至少一个字符并且必须以字母开头。 它也可以包括特定的一些符号，但不能包括空格或以下字符：; ? : @ & = + , $ / * < > | " /.  
   
 5.  根据需要，可以键入说明，向用户提供相关的连接信息。 此说明将显示在报表管理器的 **“内容”** 页中。  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 53
   
 3.  修改数据源，再单击 **“应用”**。  
   
-## 删除共享数据源  
+## <a name="deleting-shared-data-sources"></a>删除共享数据源  
  可使用与从报表服务器删除任何项完全相同的方式来删除共享数据源。  
   
  **删除共享数据源**  
@@ -151,7 +156,7 @@ caps.handback.revision: 53
   
  删除共享数据源后没有“撤消”操作可用。 不过，如果您意外删除了一个共享数据源，则可以使用与删除的共享数据源相同的属性值来创建一个新的共享数据源。 您必须打开每个报表、模型和数据驱动订阅才能将该共享数据源重新绑定到使用该共享数据源的项，但是只要这些数据源属性和以前的数据源属性相同，这些报表、模型和订阅便可像以前一样正常使用。  
   
-## 导入共享数据源  
+## <a name="importing-shared-data-sources"></a>导入共享数据源  
  **在报表设计器中导入现有数据源**  
   
 1.  在解决方案资源管理器中，右键单击报表服务器项目中的“共享数据源”文件夹，然后单击“添加现有项”。 此时将打开 **“添加现有项”** 对话框。  
@@ -160,7 +165,7 @@ caps.handback.revision: 53
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## SharePoint 中的共享数据源  
+## <a name="shared-data-sources-in-sharepoint"></a>SharePoint 中的共享数据源  
  从 SharePoint 库运行报表时，可以在报表或链接至报表的外部文件中定义连接信息。 如果连接信息嵌入在报表中，则该信息称为自定义数据源。 如果连接信息在外部文件中进行定义，则该信息称为共享数据源。 外部文件可以是报表服务器数据源 (.rsds) 文件，也可以是 Office 数据连接 (.odc) 文件。  
   
  .rsds 文件与 .rds 文件类似，但它具有不同的架构。 若要创建 .rsds 文件，可以从报表设计器或模型设计器向 SharePoint 库发布一个 .rds 文件（将从该原始 .rds 文件创建一个新的 .rsds 文件）。 也可以在 SharePoint 站点上的库中创建新文件。  
@@ -182,7 +187,7 @@ caps.handback.revision: 53
   
 4.  在 **“数据源类型”**中，从列表中选择数据源的类型。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-5.  在 **“连接字符串”**中，指定指向数据源的指针和建立外部数据源连接所必需的任何其他设置。 您所使用的数据源类型决定了连接字符串的语法。 有关详细信息和示例，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+5.  在 **“连接字符串”**中，指定指向数据源的指针和建立外部数据源连接所必需的任何其他设置。 您所使用的数据源类型决定了连接字符串的语法。 有关详细信息和示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 6.  在 **“凭据”**中，指定报表服务器如何获取访问外部数据源的凭据。 凭据可通过存储、提示、集成或配置方式用于无人参与的报表处理。  
   
@@ -215,7 +220,7 @@ caps.handback.revision: 53
   
  删除报表模型时要特别小心。 如果删除模型，则将无法在报表生成器中打开和修改任何基于该模型的报表。 如果由于疏忽删除了现有报表使用的模型，则必须重新生成该模型、重新创建和保存使用该模型的任何报表，并重新指定要使用的任何模型项安全性。 不能仅重新生成模型然后将其附加到现有报表。  
   
-## 依赖项  
+## <a name="dependent-items"></a>依赖项  
  若要查看使用数据源的报表和模型的列表，请打开相应共享数据源的“依赖项”页。 在报表管理器或 SharePoint 应用程序页中打开该数据源后即可访问此页。 请注意“依赖项”页不显示数据驱动订阅。 如果共享数据源是由订阅使用，则该订阅将不会显示在依赖项列表中。  
   
  **查看 SharePoint 中的依赖项**  
@@ -228,14 +233,15 @@ caps.handback.revision: 53
   
      对于报表模型，依赖项列表将显示在报表生成器中创建的报表。 对于共享数据源，依赖项列表可以包括报表和报表模型。  
   
-## 另请参阅  
- [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>另请参阅  
+ [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [“数据源”属性页（报表管理器）](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [创建、删除或修改共享数据源（报表管理器）](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [“数据源”属性页（报表管理器）](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "表达式中的数据类型（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "表达式 （报表生成器和 SSRS） 中的数据类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 表达式中的数据类型（报表生成器和 SSRS）
+# <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  
   
- 有关显示格式的详细信息，请参阅[设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)。  
+ 有关显示格式的详细信息，请参阅 [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 报表定义语言 (RDL) 数据类型和公共语言运行时 (CLR) 数据类型  
+## <a name="report-definition-language-rdl-data-types-and-common-language-runtime-clr-data-types"></a>报表定义语言 (RDL) 数据类型和公共语言运行时 (CLR) 数据类型  
  在 RDL 文件中指定的值必须是 RDL 数据类型。 在编译和处理该报表时，RDL 数据类型将转换为 CLR 数据类型。 下表将显示标记为默认值的转换：  
   
 |RDL 类型|CLR 类型|  
@@ -40,7 +45,7 @@ caps.handback.revision: 9
 |VariantArray|Variant 的数组|  
 |可序列化|标记有“可序列化”或者实现 ISerializable 的变量或类型。|  
   
-## 理解数据类型和编写表达式  
+## <a name="understanding-data-types-and-writing-expressions"></a>理解数据类型和编写表达式  
  编写的表达式用于比较或组合值（例如，定义组或筛选表达式，或者计算聚合）时，了解数据类型是非常重要的。 比较和计算都只在数据类型相同的项之间才有效。 如果数据类型不匹配，必须使用表达式显式转换报表项中的数据类型。  
   
  下面列出可能需要将数据转换为其他数据类型的情况：  
@@ -55,10 +60,10 @@ caps.handback.revision: 9
   
 -   将从数据源检索的值从一种数据类型转换为另一种数据类型。  
   
-## 确定报表数据的数据类型  
- 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果将显示用于表示 `MyField` 的 CLR 数据类型，例如 **System.String** 或 **System.DateTime**。  
+## <a name="determining-the-data-type-of-report-data"></a>确定报表数据的数据类型  
+ 若要确定报表项的数据类型，可以编写一个返回报表项数据类型的表达式。 例如，若要显示字段 `MyField`的数据类型，可在表单元中添加以下表达式： `=Fields!MyField.Value.GetType().ToString()`。 结果将显示用于表示 `MyField`的 CLR 数据类型，例如 **System.String** 或 **System.DateTime**。  
   
-## 将数据集字段转换为其他数据类型  
+## <a name="converting-dataset-fields-to-a-different-data-type"></a>将数据集字段转换为其他数据类型  
  在报表中使用数据集字段之前，还可以对这些字段进行转换。 下面列出可用于转换现有数据集字段的方法：  
   
 -   修改数据集查询，以添加含有已转换数据的新查询字段。 对于关系数据源或多维数据源，将使用数据源资源来执行转换。  
@@ -67,13 +72,13 @@ caps.handback.revision: 9
   
 -   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
-## 了解参数数据类型  
+## <a name="understanding-parameter-data-types"></a>了解参数数据类型  
  报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
   
 > [!NOTE]  
 >  DateTime 数据类型的报表参数不支持毫秒。 尽管可以创建基于包含毫秒值的参数，但是不能从包含具有毫秒的 Date 或 Time 值的可用值下拉列表中选择值。  
   
-## 编写用于转换数据类型或提取部分数据的表达式  
+## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>编写用于转换数据类型或提取部分数据的表达式  
  使用连接操作符 (&) 组合文本和数据集字段时，公共语言运行时 (CLR) 通常提供默认格式。 需要将数据集字段或参数显式转换为特定数据类型时，必须使用 CLR 方法或 Visual Basic 运行时库函数来转换数据。  
   
  下表提供了转换数据类型的示例。  
@@ -89,22 +94,22 @@ caps.handback.revision: 9
 |只需 DateTimeOffset 值的 DateTime 部分|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |只需 DateTimeOffset 值的 Offset 部分|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅[函数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)。  
+ 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅 [函数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)。  
   
-## 高级示例  
+## <a name="advanced-examples"></a>高级示例  
  使用不对数据源中所有数据类型提供转换支持的数据访问接口连接到数据源时，不支持的数据源类型的默认数据类型为 String。 下面的示例提供针对作为字符串返回的特定数据类型的解决方案。  
   
-### 串联 String 和 CLR DateTimeOffset 数据类型  
+### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>串联 String 和 CLR DateTimeOffset 数据类型  
  对于大多数数据类型，CLR 提供默认转换，因此您可以使用 & 运算符将不同数据类型的值串联到一个字符串中。 例如，下面的表达式将文本“The date and time are: ”与数据集字段 StartDate（这是一个 <xref:System.DateTime> 值）相串联：`="The date and time are: " & Fields!StartDate.Value`。  
   
- 对于某些数据类型，可能需要包含 ToString 函数。 例如，下面的表达式使用 CLR 数据类型 <xref:System.DateTimeOffset> 演示相同示例，该数据类型包括日期、时间和相对于 UTC 时区的时区偏移量：`="The time is: " & Fields!StartDate.Value.ToString()`。  
+ 对于某些数据类型，可能需要包含 ToString 函数。 例如，以下表达式显示相同的示例中使用 CLR 数据类型<xref:System.DateTimeOffset>，其中包括日期、 时间和时区相对于 UTC 时区偏移量： `="The time is: " & Fields!StartDate.Value.ToString()`。  
   
-### 将 String 数据类型转换为 CLR DateTime 数据类型  
- 如果数据处理扩展插件不支持对某一数据源定义的所有数据类型，则其中的数据可能会作为文本来检索。 例如，**datetimeoffset(7)** 数据类型值可能会作为 String 数据类型来检索。 在澳大利亚的珀斯（Perth）市，2008 年 7 月 1 日上午 6:05:07.9999999 的字符串值 如下：  
+### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>将 String 数据类型转换为 CLR DateTime 数据类型  
+ 如果数据处理扩展插件不支持对某一数据源定义的所有数据类型，则其中的数据可能会作为文本来检索。 例如， **datetimeoffset(7)** 数据类型值可能会作为 String 数据类型来检索。 在澳大利亚的珀斯（Perth）市，2008 年 7 月 1 日上午 6:05:07.9999999 的字符串值 如下：  
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例，此值已放入名为 `MyDateTime.Value` 的**字符串**字段中。  
+ 此示例演示的是日期（2008 年 7 月 1 日），后跟 7 位精度的时间（上午 6:05:07.9999999），再跟以小时和分钟表示的 UTC 时区偏移量（加 8 小时、0 分钟）。 对于以下示例，此值已放入名为 **的** 字符串 `MyDateTime.Value`字段中。  
   
  可以使用下列策略之一将此数据转换为一个或多个 CLR 值：  
   
@@ -116,7 +121,7 @@ caps.handback.revision: 9
   
     -   下面的表达式将该字符串转换为日期和时间值： `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 **DateTime** 值：`2007-07-06 04:07:07 PM`（2007 年 7 月 6 日下午 4:07）。  
+         如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 **DateTime** 值： `2007-07-06 04:07:07 PM` （2007 年 7 月 6 日下午 4:07）。  
   
  有关将字符串转换为 **DateTime** 数据类型的详细信息，请参阅 MSDN 上的 [分析日期和时间字符串](http://go.microsoft.com/fwlink/?LinkId=89703)、 [针对特定区域性格式化日期和时间](http://go.microsoft.com/fwlink/?LinkId=89704)、 and [Choosing Between DateTime、 DateTimeOffset、 and TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) （在 DateTime、DateTimeOffset 和 TimeZoneInfo 之间进行选择）。  
   
@@ -142,7 +147,7 @@ caps.handback.revision: 9
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)中的 [Analysis Services 中的数据类型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "删除目录项 (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.deleteitems.f1"
+title: "删除目录项 (Management Studio) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 删除目录项 (Management Studio)
+# <a name="delete-catalog-items-management-studio"></a>删除目录项 (Management Studio)
   使用此页可以删除共享计划和角色定义。  
   
  如果删除由多个报表和订阅使用的共享计划，报表服务器将为以前使用该共享计划的每个报表和订阅都创建一个计划。 每个新计划都将包含已在共享计划中指定的日期、时间和重复执行模式。 请注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不提供对于各个计划的集中管理。 如果删除共享计划，您现在将需要维护每一项的计划信息。 在删除共享计划之前，请使用 [“报表”页](../../reporting-services/tools/schedule-properties-reports-page.md) 确定当前哪些报表正在使用该共享计划。  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  不能撤消删除操作。 若要恢复已删除的项，必须重新创建该项或还原报表服务器数据库的备份副本。  
   
-## 选项  
+## <a name="options"></a>选项  
  **名称**  
  指定要删除的项的名称。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 16
  **错误**  
  如果在删除项的过程中出现错误，则显示错误代码。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除项 (Management Studio)](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  

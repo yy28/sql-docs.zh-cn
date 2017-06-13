@@ -1,23 +1,28 @@
 ---
-title: "在移动报表中按列或行对数据进行分组 | Reporting Service | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在移动报表中的行或列中的数据分组 |Reporting Services |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在移动报表中按列或行对数据进行分组 | Reporting Service
-在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中的许多类型的图表中，可以按列或按行来组织数据。 按照此分步说明执行操作。
+# <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>在移动报表中按列或行对数据进行分组 | Reporting Service
+在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中的许多类型的图表中，可以按列或按行来组织数据。 按照此分步说明执行操作。
 
 在时间图、总计图、饼图和漏斗图，可以按行或按列来组织数据。 
 * 如果表包含几列要进行比较的数据，则按列进行组织会很有用。 
@@ -35,7 +40,7 @@ caps.handback.revision: 6
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   “比较系列”也是同样情况  --  **Comparison1** 到 **Comparison5** 处于选择状态。
+   “比较系列”也是同样情况   -- **Comparison1** 到 **Comparison5** 处于选择状态。
    
 4. 选择“预览”。
 
@@ -51,7 +56,7 @@ caps.handback.revision: 6
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
-8.  在“数据属性”窗格中，现在有一个“类别列”框，其中列出了 SimulatedTable 中的“类别”列。 在“主系列”中，可以选取要用于值的列。 默认情况下，[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 会为“主系列”选择 Metric5 到 Metric1，为“比较系列”选择 Comparison1 到 Comparison5。 
+8.  在“数据属性”窗格中，现在有一个“类别列”框，其中列出了 SimulatedTable 中的“类别”列。 在“主系列”中，可以选取要用于值的列。 默认情况下， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 会为“主系列”选择 Metric5 到 Metric1，为“比较系列”选择 Comparison1 到 Comparison5。 
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
@@ -61,5 +66,5 @@ caps.handback.revision: 6
 
    现在图表中的每条都表示“类别”列中每种类别的值。
 
-### 另请参阅
+### <a name="see-also"></a>另请参阅
 * [Reporting Services 移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

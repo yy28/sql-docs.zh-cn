@@ -1,23 +1,28 @@
 ---
-title: "显示页码或其他报表属性（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "显示页码或其他报表属性 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 显示页码或其他报表属性（报表生成器和 SSRS）
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
   
 -   执行时间  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 添加页码或其他报表属性  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>添加页码或其他报表属性  
   
 1.  在“报表数据”窗格中，展开“内置字段”文件夹。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  将添加一个包含简单表达式 [&PageNumber] 的文本框。  
   
-### 在页码前添加单词 "Page"  
+### <a name="to-add-the-word-page-before-the-page-number"></a>在页码前添加单词 "Page"  
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 在页码后面添加总页数  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>在页码后面添加总页数  
   
 1.  右键单击包含表达式的文本框，然后单击 **“表达式”**。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [设置文本框中文本的格式（报表生成器和 SSRS）](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
