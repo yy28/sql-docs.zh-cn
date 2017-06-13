@@ -22,13 +22,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 548949bad71213430b987383fd221a91bddcfdff
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
+
+ > 与以前版本的 SQL Server 相关的内容，请参阅[卸载现有的 SQL Server 实例 （安装程序）](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)。
+
   本文介绍如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 使用本主题中提供的步骤，您还可以准备系统以便重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 >**重要说明！** 若要卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，您必须是拥有“作为服务登录”权限的本地管理员。  
@@ -110,7 +113,7 @@ ms.lasthandoff: 04/11/2017
 2.  如果无法修复卸载失败的原因，可与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支持部门联系。 在某些情况下（如无意间删除了重要文件），则在计算机上重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，可能需要重新安装操作系统。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
 

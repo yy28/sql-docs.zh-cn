@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd4ac1d2f93c1fa776473cdc7b1b99a07b5f8164
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
@@ -100,11 +100,11 @@ ms.lasthandoff: 04/11/2017
      指定对其创建全文索引的文件组。  
   
      e. 选择值：  
-    |“值”|说明|  
-    |-----------|-----------------|
-      |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
+      |“值”|说明|  
+      |-----------|-----------------|
+      |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果已分区表或视图，使用主文件组|
       |**PRIMARY**|选择此值可将主文件组用于新全文索引。|
-             *用户指定的默认文件组*|如果存在用户定义的默认非索引字表，请从列表选择其名称，可将该文件组用于新全文索引。|  
+      *用户指定的默认文件组*|如果存在用户定义的默认非索引字，从要将该文件组用于新全文索引的列表中选择其名称。|   
   
      
  11. **选择全文非索引字表**  

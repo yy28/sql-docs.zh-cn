@@ -1,1 +1,1 @@
-**本主题适用于：**![是](media/yes.png)SQL Server 2016![是](media/yes.png)SQL Server Reporting Services 中 2017 年 1 月的 Power BI 技术预览版报表
+**本主题适用于：**![是](media/yes.png)SQL Server 2016![是](media/yes.png)Power BI 报表服务器

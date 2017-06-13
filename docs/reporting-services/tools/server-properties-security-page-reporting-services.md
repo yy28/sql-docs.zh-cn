@@ -1,26 +1,31 @@
 ---
-title: "服务器属性（“安全性”页）- Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.security.f1"
+title: "服务器属性 （安全页）-Reporting Services |Microsoft 文档"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8da36c90d2eb22600ad6560a37367e68de933971
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 服务器属性（“安全性”页）- Reporting Services
-  使用 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 中的此 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
+# <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
+  使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的此 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
   
  若要打开此页，请执行以下操作：
  1) 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
@@ -28,7 +33,7 @@ caps.handback.revision: 11
  3) 右键单击报表服务器名称，然后选择“属性”。 
  4) 单击 **“安全性”** 将此页打开。  
   
-## 选项  
+## <a name="options"></a>选项  
  **对报表数据源启用 Windows 集成安全性**  
  指定是否可以使用请求报表的用户的 Windows 安全令牌与报表数据源建立连接。  
   
@@ -41,10 +46,11 @@ caps.handback.revision: 11
   
  如果关闭此选项，则会缓解恶意用户通过用 **LoadReportDefinition** 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
+

@@ -1,30 +1,35 @@
 ---
-title: "设置报表生成器的默认选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10427"
+title: "设置报表生成器的默认选项 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 设置报表生成器的默认选项
+# <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  
   
 -   在报表生成器中，单击“文件” > “选项”。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **默认使用此报表服务器或 SharePoint 站点**  
  您的管理员可能已配置了此选项。 此值可以为以 http:// 或 https:// 开头的格式正确的 URL。 此设置决定了默认情况下在表/矩阵和图表向导中显示哪些数据源连接。 另外，报表将在此服务器上进行处理，并且您可以引用此服务器上的资源。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
  **清除所有最近的项列表**  
  清除最近访问的站点、服务器、共享数据集、共享数据源连接和文档的当前列表。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)  
   
   

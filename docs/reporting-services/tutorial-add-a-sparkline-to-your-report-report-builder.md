@@ -1,55 +1,40 @@
 ---
-title: "教程：向报表添加迷你图（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将迷你图添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加迷你图（报表生成器）
-在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 的本教程中，使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中的迷你图创建基本表。   
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
+
+在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]的本教程中，使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中的迷你图创建基本表。   
   
 迷你图和数据条是较小的简单图表，可以在很小的空间中传递很多信息，常常出现在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表的表格和矩阵中。 下图所示报表和你要创建的报表类似。  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>学习内容  
-在本教程中，您将了解如何执行下列操作：  
-  
-1. [创建含有表的报表](#CreateTable)  
-  
-2. [在表或矩阵向导中创建查询和表布局](#Query)
- 
-    2a. （可选）[将数据格式设置为货币](#FormatCurrency)  
-  
-    2b. （可选）[将数据格式设置为日期](#FormatDates)  
-  
-3. [向表中添加迷你图](#Sparkline)  
-  
-4. [沿水平方向和垂直方向对齐迷你图](#AlignSparklines)  
-  
-### 其他可选步骤  
-7. [更改列宽](#Width)  
-  
-8. [添加报表标题](#Title)  
-  
-9. [保存报表](#Save)  
-  
+     
 本教程的预计学时：30 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="CreateTable"></a>1.创建含有表的报表  
@@ -67,7 +52,7 @@ caps.handback.revision: 16
 4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。 将打开“选择数据源的连接”页面。  
   
     > [!NOTE]  
-    > 本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
+    > 本教程不需要特定的数据;它只要求与 SQL Server 数据库的连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 5.  单击 **“新建”**。 此时将打开 **“数据源属性”** 对话框。  
   
@@ -101,7 +86,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 在表向导中创建查询和表布局 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>在表向导中创建查询和表布局 
   
 1.  在“设计查询”页中，关系查询设计器处于打开状态。 在本教程中，您将使用基于文本的查询设计器。  
   
@@ -178,13 +163,13 @@ caps.handback.revision: 16
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：**Product**。 “列组”窗格显示一个列组：**SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：**Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. 单击 **“运行”** 以预览报表。  
 
-### <a name="FormatCurrency"></a>2a. 将数据格式设置为货币格式  
+### <a name="FormatCurrency"></a>2a. 将数据格式设置为货币  
 默认情况下，“Sales”字段的汇总数据显示为常规数字。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”以将格式化的文本框和占位符文本显示为示例值。  
   
 1.  单击 **“设计”** 切换到设计视图。  
@@ -212,7 +197,7 @@ caps.handback.revision: 16
      
 4.  单击 **“运行”** 以预览报表。  
   
-**SalesDate** 值显示为默认日期格式，**Sales** 的汇总值显示为货币格式。   
+**SalesDate** 值显示为默认日期格式， **Sales** 的汇总值显示为货币格式。   
   
 ## <a name="Sparkline"></a>3.添加迷你图    
   
@@ -280,7 +265,7 @@ caps.handback.revision: 16
   
 若要减少每个行占用的垂直空间量，请扩展列宽以容纳单个行的列中的文本框的预计内容。  
   
-### 更改列宽  
+### <a name="to-change-the-width-of-columns"></a>更改列宽  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -295,7 +280,7 @@ caps.handback.revision: 16
   
 通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 添加报表标题  
+### <a name="to-add-a-report-title"></a>添加报表标题  
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
@@ -312,7 +297,7 @@ caps.handback.revision: 16
 ## <a name="Save"></a>9.保存报表  
 将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -328,7 +313,7 @@ caps.handback.revision: 16
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
-### 将报表保存到计算机上  
+### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -338,10 +323,11 @@ caps.handback.revision: 16
   
 4.  单击 **“保存”**。  
   
-## 后续步骤  
-用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+## <a name="next-steps"></a>后续步骤  
+
+用于创建具有迷你图的表报表的教程到此结束。 有关迷你图的详细信息，请参阅[迷你图和数据条](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

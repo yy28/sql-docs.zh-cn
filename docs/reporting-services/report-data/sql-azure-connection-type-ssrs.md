@@ -1,23 +1,28 @@
 ---
-title: "SQL Azure 连接类型 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Azure 连接类型 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 02/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d105eb2a7bacb70f93b3237c9a9134695cd13b59
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Azure 连接类型 (SSRS)
+# <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。  
   
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。  
@@ -25,11 +30,11 @@ caps.handback.revision: 14
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 类似于内部部署的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，并且从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中获取数据与从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中获取数据几乎是相同的（有少数例外）。  
   
 > [!NOTE]  
->  打开到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的连接时，将连接超时值设置为 30 秒。  
+>  打开到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的连接时，将连接超时值设置为 30 秒。  
   
- 有关详细信息，请参阅 [MSDN 上的 Windows Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=206770)。  
+ 有关详细信息，请参阅[docs.microsoft.com 上的 Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)类型的报表数据源的数据集。  
   
 ##  <a name="Connection"></a> 连接字符串  
  连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，也会连接到云中的数据库对象。 正如现场数据库一样，托管数据库可能具有包含多个表、视图和存储过程的不同架构。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。  
@@ -42,10 +47,10 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  此外，使用 **“数据源属性”** 对话框还可以提供凭据，如用户名和密码。 `User Id` 和 `Password` 选项自动追加到连接字符串；您无需将它们作为连接字符串的一部分键入其中。  
   
- 有关连接字符串示例的详细信息，请参阅[报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+ 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 凭据  
- 不支持 Windows 身份验证（集成安全性）。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时，用户都必须提供凭据（登录名和密码）。  
+ 不支持 Windows 身份验证（集成安全性）。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，用户都必须提供凭据（登录名和密码）。  
   
  凭据必须具有足够的权限访问数据库。 根据要执行的查询，您可能需要具有其他权限，例如运行存储过程和访问表和视图的足够权限。 外部数据源的所有者必须配置相应的凭据，使这些凭据足以提供对所需数据库对象的只读访问。  
   
@@ -55,9 +60,8 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+ 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Query"></a> 查询  
  查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 如果查询返回多个结果集，则报表仅处理查询所检索的第一个结果集。 尽管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]之间存在一些差别（如所支持的数据库大小），但根据 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]编写查询类似于根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库编写查询。 有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 BACKUP）在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中不受支持，但在报表查询中是不会使用这些语句的。 有关详细信息，请参阅 [SQL Server 连接类型 (SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)。  
@@ -96,7 +100,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 单击工具栏上的“运行”按钮 (**!**) 可以运行查询并显示结果集。  
+ 单击工具栏上的 **“运行”** 按钮 (**!**) 可以运行查询并显示结果集。  
   
  若要参数化此查询，请添加一个查询参数。 例如，将 WHERE 子句更改为下面的内容：  
   
@@ -106,7 +110,6 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  运行查询时，会自动创建与查询参数对应的报表参数。 有关详细信息，请参阅本主题后面的 [查询参数](#Parameters) 。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ###  <a name="QueryStoredProcedure"></a> 使用 StoredProcedure 查询类型  
  您可以采用以下方式之一为数据集查询指定存储过程：  
@@ -115,7 +118,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
 -   在关系查询设计器中的“数据库视图”窗格中，选择存储过程或表值函数。  
   
--   在基于文本的查询设计器中，从工具栏中选择 **StoredProcedure**。  
+-   在基于文本的查询设计器中，从工具栏中选择 **StoredProcedure** 。  
   
  选择存储过程或表值函数之后，就可以运行查询。 系统将提示您提供输入参数的值。 运行查询时，会自动创建与输入参数对应的报表参数。 有关详细信息，请参阅本主题后面的 [查询参数](#Parameters) 。  
   
@@ -123,9 +126,8 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  如果某个存储过程带有具有默认值的参数，则您可以访问该值，方法是使用 DEFAULT 关键字作为该参数的值。 如果该查询参数链接到某个报表参数，用户可以在报表参数的输入框中键入或选择单词 DEFAULT。  
   
- 有关存储过程的详细信息，请参阅 msdn.microsoft.com 上 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335)中的“存储过程（数据库引擎）”。  
+ 有关存储过程的详细信息，请参阅 msdn.microsoft.com 上 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335) 中的“存储过程（数据库引擎）”。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Parameters"></a> Parameters  
  如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。  
@@ -138,21 +140,19 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)类型的报表数据源的数据集。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Remarks"></a> 注释  
   
-###### 备用数据扩展插件  
+###### <a name="alternate-data-extensions"></a>备用数据扩展插件  
  您还可以通过使用 ODBC 数据源类型从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据。 不支持使用 OLE DB 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。  
   
  有关详细信息，请参阅 [ODBC 连接类型 (SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md)。  
   
-###### 平台和版本信息  
+###### <a name="platform-and-version-information"></a>平台和版本信息  
  有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
@@ -163,7 +163,6 @@ WHERE EmployeeID = (@EmpID)
   
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
@@ -171,7 +170,7 @@ WHERE EmployeeID = (@EmpID)
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -183,11 +182,13 @@ WHERE EmployeeID = (@EmpID)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
+[Docs.microsoft.com 上的 Microsoft Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)  
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
+

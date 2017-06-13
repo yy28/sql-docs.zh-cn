@@ -1,24 +1,29 @@
 ---
-title: "教程：向报表添加柱形图（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将一个柱形图添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加柱形图（报表生成器）
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
 本教程中将创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，该报表包含一个柱形图，将序列显示为一组按类别分组的垂直条。 
 
 柱形图对以下方面很有用：  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
 本教程的预计学时：15 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.使用图表向导创建图表报表  
@@ -44,7 +49,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建图表报表  
+### <a name="to-create-a-chart-report"></a>创建图表报表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 16
 ## <a name="ChartType"></a>2.选择图表类型  
 可从几种预定义的图表类型中进行选择，完成向导后可修改图表。  
   
-### 添加柱形图  
+### <a name="to-add-a-column-chart"></a>添加柱形图  
   
 1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击“下一步” 。  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 16
   
 通过旋转标签和指定间隔，可以自定义标签显示方式。  
   
-## 4.在水平轴上旋转轴标签  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.在水平轴上旋转轴标签  
   
 1.  切换到报表设计视图。  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8.在水平 (x) 轴上显示所有标签
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.在水平 (x) 轴上显示所有标签
 
 你会注意到 x 轴上仅显示了部分标签。 在本部分中，可在“属性”窗格设置属性以显示所有标签。
 
@@ -230,7 +235,7 @@ caps.handback.revision: 16
 
     ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
-    该图表看上去同设计视图中一样。 
+    该图表同设计视图中一样。 
     
 5.  单击 **“运行”** 以预览报表。
 
@@ -260,7 +265,7 @@ caps.handback.revision: 16
   
 9. 单击 **“运行”** 以预览报表。  
   
-图表将显示一条线条，它按日期显示销售总计的移动平均线，每隔四天计算一次平均值。 阅读更多有关[向图表添加移动平均线](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)的信息。 
+图表将显示一条线条，它按日期显示销售总计的移动平均线，每隔四天计算一次平均值。 阅读更多有关 [向图表添加移动平均线](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)的信息。 
 
 ![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
@@ -274,7 +279,7 @@ caps.handback.revision: 16
   
     **Sales Chart**  
   
-    **2015 年 1 月到 12 月**  
+    **January to December 2015**  
   
 4.  选择“Sales Chart”，然后转至“主文件夹”选项卡 > “字体”部分 > “粗体”。  
   
@@ -288,7 +293,7 @@ caps.handback.revision: 16
   
 ## <a name="Save"></a>11.保存报表  
   
-### 保存报表  
+### <a name="to-save-the-report"></a>保存报表  
   
 1.  切换到报表设计视图。  
   
@@ -300,10 +305,12 @@ caps.handback.revision: 16
   
 4.  单击 **“保存”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 -    [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

@@ -1,27 +1,32 @@
 ---
-title: "第 7 课：在父报表上添加钻取操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 7 课： 在父报表上添加钻取操作 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 7 课：在父报表上添加钻取操作
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 课：在父报表上添加钻取操作
 向网站应用程序添加 ReportViewer 控件后，接下来要在父报表上添加钻取操作。  
   
-### 在父报表上添加钻取操作  
+### <a name="to-add-drillthrough-action-on-the-parent-report"></a>在父报表上添加钻取操作  
   
 1.  转到父报表。  
   
@@ -33,7 +38,8 @@ caps.handback.revision: 12
   
 5.  在“指定报表”部分中输入子报表的名称。  
   
-    > [!NOTE] 请勿包括报表名称的文件扩展名。  
+    > [!NOTE]
+    > 请勿包括报表名称的文件扩展名。  
   
 6.  在“使用这些参数运行报表”部分下，单击“添加”。  
   
@@ -41,8 +47,10 @@ caps.handback.revision: 12
   
 8.  单击“确定”完成操作。  
   
-## 下一个任务  
-您已成功地在父报表上添加了钻取操作。 接下来，将创建一个数据筛选器，用于为子报表定义的数据表。 请参阅[第 8 课：创建数据筛选器](../reporting-services/lesson-8-create-a-data-filter.md)。  
+## <a name="next-task"></a>下一个任务  
+您已成功地在父报表上添加了钻取操作。 接下来，将创建一个数据筛选器，用于为子报表定义的数据表。 请参阅 [第 8 课：创建数据筛选器](../reporting-services/lesson-8-create-a-data-filter.md)。  
   
   
   
+
+

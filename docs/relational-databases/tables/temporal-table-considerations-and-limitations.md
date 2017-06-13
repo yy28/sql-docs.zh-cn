@@ -2,7 +2,7 @@
 title: "临时表注意事项和限制 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   不允许直接修改历史记录表中的数据。  
   
--   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id* ），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的  *referenced_object_id* ）。 如果主键表是临时表而引用表为非临时表，则不存在此类限制。  
+-   当前表上不允许**ON DELETE CASCADE** 和 **ON UPDATE CASCADE** 。 换言之，当临时表引用外键关系中的表时（对应于 sys.foreign_keys 中的 *parent_object_id* ），将不允许 CASCADE 选项。 若要解除此限制，请使用应用程序逻辑或 after 触发器，以在主键表中进行删除时保持一致性（对应于 sys.foreign_keys 中的  *referenced_object_id* ）。 如果主键表是临时表而引用表为非临时表，则不存在此类限制。 
+
+    **注意：**此限制仅适用于 SQL Server 2016。 中支持 CASCADE 选项[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]和 SQL Server 2017 从 CTP 2.0 开始。  
   
 -   在当前表或历史记录表上均不允许使用**INSTEAD OF** 触发器，以避免导致 DML 逻辑失效。 仅在当前表上允许**AFTER** 触发器。 这些触发器在历史记录表上会被阻止，以避免导致 DML 逻辑失效。  
   

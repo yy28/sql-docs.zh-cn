@@ -1,24 +1,29 @@
 ---
-title: "教程：向报表添加条形图（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将条形图添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加条形图（报表生成器）
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 
 
 条形图以水平方式显示类别数据。 这有助于：  
@@ -31,35 +36,13 @@ caps.handback.revision: 13
   
 ![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
   
-## <a name="BackToTop"></a>学习内容  
-在本教程中，你将学习：  
-  
-1.  [使用图表向导创建图表](#Chart)  
-  
-2.  [选择图表类型](#ChartType)  
-  
-3.  [在垂直轴上显示所有类别值](#AllValues)  
-  
-4.  [更改垂直轴上的排序顺序](#Sort)  
-  
-5.  [移动图例](#Legend)  
-  
-6.  [设置图表的标题](#ChartTitle)  
-  
-7.  [设置水平轴的格式和标签](#Horizontal)  
-  
-8.  [添加筛选器以显示前五个值](#Filter)  
-  
-9. [添加报表标题](#Title)  
-  
-10. [保存报表](#Save)  
-  
+ 
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、创建数据集和选择数据源的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.使用图表向导创建图表报表  
@@ -68,11 +51,11 @@ caps.handback.revision: 13
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-1.  从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户、从 SharePoint 集成模式下的报表服务器，或从计算机 [启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  从[Web 门户、从 SharePoint 集成模式下的报表服务器，或从计算机](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal, 启动报表生成器 report server in SharePoint integrated mode, or from your computer.  
   
      此时将显示 **“入门”** 对话框。  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![报表生成器开始](../reporting-services/media/rb-getstarted.png "报表生成器入门")  
   
      如果看不到“入门”对话框中，单击“文件” >“新建”。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。 
       
@@ -122,7 +105,7 @@ caps.handback.revision: 13
   
 3.  将 LastName 拖动到“类别”窗格。  
   
-4.  将 SalesYear2015 拖动到“值”窗格。 SalesYear2015 表示每个销售人员在 2015 年的销售总额。 “值”窗格显示 `[Sum(SalesYear2015)]`，因为该图表显示的是每个产品的销售总额。  
+4.  将 SalesYear2015 拖动到“值”窗格。 SalesYear2015 表示每个销售人员在 2015 年的销售总额。 “值”窗格显示 `[Sum(SalesYear2015)]` ，因为该图表显示的是每个产品的销售总额。  
   
 5.  将 SalesYear2014 拖动到 SalesYear2015 下的“值”窗格。 SalesYear2014 表示每个销售人员在 2014 年的销售总额。  
   
@@ -199,12 +182,12 @@ caps.handback.revision: 13
   
 10. 单击 **“运行”** 以预览报表。  
   
-水平轴上的姓名按 2015 年销售额从大到小的顺序排列，**Zeng** 位于顶部。  
+水平轴上的姓名按 2015 年销售额从大到小的顺序排列， **Zeng** 位于顶部。  
   
 ## <a name="Legend"></a>5.移动图例  
 为了提高图表值的可读性，可能需要移动图表图例。 例如，在水平显示图条的条形图中，可以更改图例的位置，将其放置在图表区的上方或下方。 这可为图条提供更大的水平空间。  
   
-#### 在条形图的图表区下方显示图例  
+#### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>在条形图的图表区下方显示图例  
   
 1.  切换到报表设计视图。  
   
@@ -318,10 +301,12 @@ caps.handback.revision: 13
   
 4.  单击 **“保存”**。   
   
-## 后续步骤  
-您已成功完成“向报表添加条形图”教程的学习。 若要了解有关图表的详细信息，请参阅[图表](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[条形图](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
+## <a name="next-steps"></a>后续步骤  
+您已成功完成“向报表添加条形图”教程的学习。 若要了解有关图表的详细信息，请参阅 [图表](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 和 [条形图](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

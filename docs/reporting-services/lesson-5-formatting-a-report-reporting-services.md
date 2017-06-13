@@ -1,30 +1,35 @@
 ---
-title: "Lesson 5: Formatting a Report (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 5 课： 格式设置报表 (Reporting Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
   
 ## <a name="bkmk_format_date"></a>设置日期格式  
 默认情况下，Date 字段显示日期和时间信息。 您可以设置其格式，使其只显示日期。  
   
-#### 设置日期字段格式  
+#### <a name="to-format-a-date-field"></a>设置日期字段格式  
   
 1.  单击 **“设计”** 选项卡。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 20
 ## <a name="bkmk_format_currency"></a>设置货币格式  
 LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币形式的数字。  
   
-#### 设置货币字段格式  
+#### <a name="to-format-a-currency-field"></a>设置货币字段格式  
   
 1.  右键单击带有 `[LineTotal]` 字段表达式的单元格，然后单击“文本框属性”。  
   
@@ -66,28 +71,30 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
 ## <a name="bkmk_change_textstyle"></a>更改文本样式和列宽  
 还可以更改标题行的格式设置，以使其与报表中的数据行区分开来。 最后，您将调整列的宽度。  
   
-#### 设置标题行和表列的格式  
+#### <a name="to-format-header-rows-and-table-columns"></a>设置标题行和表列的格式  
   
 1.  单击表，以便在此表的上方和旁边显示列控点和行控点。 沿此表的上方和一侧显示的灰色条状物就是列控点和行控点。  
        
   
 2.  指向列控点之间的行，使光标变为双箭头。 拖动列，调整到所需大小。
- ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.gif)   
+ ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)   
   
 3.  选择包含列标题标签的行，从 **“格式”** 菜单中，指向 **“字体”** ，然后单击 **“加粗”**。  
   
 4.  若要预览报表，请单击 **“预览”** 选项卡。 其外观应与下图相似：  
   
-    ![带有以粗体显示的列标题的表预览](../reporting-services/media/rs-basictabledetailsformattedpreview.gif "带有以粗体显示的列标题的表预览")  
+    ![具有以粗体显示的列标题的表的预览](../reporting-services/media/rs-basictabledetailsformattedpreview.png "具有以粗体显示的列标题的表的预览")  
   
 5.  在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [设置数字和日期格式（报表生成器和 SSRS）](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
 [呈现行为（报表生成器和 SSRS）](../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
   
+
+

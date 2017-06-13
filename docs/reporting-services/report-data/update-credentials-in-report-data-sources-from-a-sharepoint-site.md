@@ -1,30 +1,35 @@
 ---
-title: "从 SharePoint 站点更新报表数据源的凭据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "更新报表数据源从 SharePoint 站点中的凭据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 从 SharePoint 站点更新报表数据源的凭据
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>从 SharePoint 站点更新报表数据源的凭据
   本主题介绍如何更新报表中嵌入的数据源和保存在 SharePoint 文档库中的共享数据源。  
   
  许多报表可能包含数据源或使用配置为使用 Windows 身份验证的共享数据源。 在某些情况下（如在保存到 SharePoint 文档库的报表上创建数据警报），您需要将数据源凭据更新到存储的凭据或不需要凭据。  
   
- 若要在报表中使用存储的凭据，您可能会决定创建并使用一个新的 SQL Server 登录名。 有关详细信息，请参阅[创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)。  
+ 若要在报表中使用存储的凭据，您可能会决定创建并使用一个新的 SQL Server 登录名。 有关详细信息，请参阅 [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)。  
   
-### 更新嵌入的数据源以使用存储的凭据  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>更新嵌入的数据源以使用存储的凭据  
   
 1.  转到保存该报表的 SharePoint 文档库。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据连接到数据源时**。  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”**。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 更新共享的数据源以使用存储的凭据  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>更新共享的数据源以使用存储的凭据  
   
 1.  转到保存共享数据源的 SharePoint 文档库。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  键入用户名和密码。  
   
-    -   如果帐户是 Windows 域用户帐户，请按照以下格式指定该帐户：\<域>\\<帐户\>，然后选择“在与数据源建立连接时用作 Windows 凭据”。  
+    -   如果帐户是 Windows 域用户帐户，指定按以下格式：\<域 >\\< 帐户\>，然后选择**用作 Windows 凭据连接到数据源时。**  
   
     -   如果用户名和密码是数据库凭据，请不要选择 **“在与数据源建立连接时用作 Windows 凭据”**。 如果数据库服务器支持模拟或委托，则可选择 **“设置此帐户的执行上下文”**。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

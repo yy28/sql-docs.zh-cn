@@ -1,24 +1,29 @@
 ---
-title: "教程：创建自由格式的报表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 创建自由格式的报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：创建自由格式的报表（报表生成器）
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ caps.handback.revision: 16
   
 完成本教程的预计学时：20 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="BlankReport"></a>1.创建空白报表、数据源和数据集  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建空白报表  
+### <a name="to-create-a-blank-report"></a>创建空白报表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 16
  
 3.  在右窗格中，单击 **“空白报表”**。  
   
-### 创建新数据源  
+### <a name="to-create-a-new-data-source"></a>创建新数据源  
   
 1.  在“报表数据”窗格中，单击“新建” > “数据源”。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 16
   
 6.  单击 **“确定”**。  
   
-### 新建数据集  
+### <a name="to-create-a-new-dataset"></a>新建数据集  
   
 1.  在“报表数据”窗格中，单击“新建” > “数据集”。  
   
@@ -119,11 +124,11 @@ caps.handback.revision: 16
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="List"></a>2.添加并配置列表  
-在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，列表数据区域是创建自由格式报表的理想工具。 它以及表和矩阵均基于 *tablix* 数据区域。 有关详细信息，请参阅[创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，列表数据区域是创建自由格式报表的理想工具。 它以及表和矩阵均基于 *tablix* 数据区域。 有关详细信息，请参阅 [创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
 将使用一个列表在格式类似新闻稿的报表中显示销售区域的销售信息。 这些信息按地区分组。 您将添加一个按地区对数据进行分组的新行组，然后删除内置的“详细信息”行组。  
   
-### 添加列表  
+### <a name="to-add-a-list"></a>添加列表  
   
 1.  在“插入”>“数据区域” > “列表”选项卡上。 
 
@@ -146,17 +151,17 @@ caps.handback.revision: 16
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 添加新行组和删除“详细信息”组  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>添加新行组和删除“详细信息”组  
   
 1.  在“行组”窗格中，右键单击“详细信息”组，指向“添加组”，然后单击“父组”。  
   
     ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
-2.  在“分组依据”列表中，选择 `[Territory].`  
+2.  在**分组依据**列表中，选择`[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    一个包含单元“`[Territory]`”的列会添加到列表中。
+    一个包含单元“ `[Territory]` ”的列会添加到列表中。
   
 4.  右键单击列表中的“Territory”列，然后单击“删除列”。  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 16
 ## <a name="Graphics"></a>3.添加图形元素  
 列表数据区域的好处之一是，可以将矩形和文本框之类的报表项添加到任何地方，而不会被限制为表格布局。 您将通过添加图形（用颜色填充的矩形）增强报表的外观。  
   
-### 向报表添加图形元素  
+### <a name="to-add-graphic-elements-to-the-report"></a>向报表添加图形元素  
   
 1.  在“插入”选项卡上，选择“矩形”。 
 
@@ -196,7 +201,7 @@ caps.handback.revision: 16
 ## <a name="Text"></a>4.添加自由格式的文本  
 可以添加文本框，用于显示在每个报表页上都重复的静态文本，以及数据字段。  
   
-### 向报表添加文本  
+### <a name="to-add-text-to-the-report"></a>向报表添加文本  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -204,9 +209,9 @@ caps.handback.revision: 16
   
 3.  将光标置于文本框中，然后键入 **Newsletter for** 。 在“for”一词后包括一个空格，以将文本与将要在下一步中添加的字段分隔开来。   
   
-    ![添加新闻稿标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
+    ![添加时事通讯标题文本](../reporting-services/media/tutorial-newsletterfor.png "添加时事通讯标题文本")  
   
-4.  将“`[Territory]`”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Newsletter for ”后面。  
+4.  将“ `[Territory]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Newsletter for ”后面。  
   
     ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
   
@@ -220,7 +225,7 @@ caps.handback.revision: 16
   
 9. 将光标置于步骤 3 中键入的文本下方，然后键入 **Hello** 并在该词后面加一个空格，以将文本与将要在下一步中添加的字段分隔开来。  
  
-10. 将“`[FullName]`”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Hello ”后面，然后键入一个逗号 (,)。  
+10. 将“ `[FullName]` ”字段从“报表数据”窗格的“ListDataSet”拖到文本框中，将它放在“Hello ”后面，然后键入一个逗号 (,)。  
    
 11. 选择在之前步骤中添加的文本。
   
@@ -288,11 +293,11 @@ caps.handback.revision: 16
 ## <a name="Table"></a>5.添加一个表以显示销售详细信息  
 使用新建表和矩阵向导可以将表添加到自由格式的报表。 完成向导后，您将手动添加一个合计行。  
   
-### 添加表  
+### <a name="to-add-a-table"></a>添加表  
   
 1.  在“插入”选项卡上，依次单击“数据区域”区域和“表” > “表向导”。  
   
-2.  在“选择数据集”页上，单击“ListDataset” > “下一步”。  
+2.  上**选择的数据集**页上，单击**ListDataset** > **下一步**。  
   
 4.  在“排列字段”页上，将“Product”字段从“可用字段”拖到“值”中。  
   
@@ -336,7 +341,7 @@ caps.handback.revision: 16
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -352,7 +357,7 @@ caps.handback.revision: 16
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
-### 将报表保存到计算机上  
+### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -365,11 +370,11 @@ caps.handback.revision: 16
 ## <a name="Line"></a>7.（可选）添加线条以便分隔报表区域  
 添加线条可以分隔报表的可编辑区域和详细信息区域。  
   
-### 添加线条  
+### <a name="to-add-a-line"></a>添加线条  
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“插入”选项卡上，单击“报表项” > “线条”。  
+2.  上**插入**选项卡 >**报表项** > **行。**  
   
 3.  在第 4 课中添加的文本框下方画一条线。  
   
@@ -380,21 +385,21 @@ caps.handback.revision: 16
 ## <a name="Visualization"></a>8.（可选）添加汇总数据可视化  
 矩形有助于控制报表的呈现方式。 将饼图和柱形图放置于矩形内，可以确保报表以您所需的方式呈现。  
   
-### 添加矩形  
+### <a name="to-add-a-rectangle"></a>添加矩形  
   
 1.  单击 **“设计”** 返回设计视图。  
   
-2.  在“插入”选项卡上，单击“报表项” >  “矩形”。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
+2.  上**插入**选项卡 >**报表项** >  **矩形**。 将列表框内的矩形拖到表的右侧，将矩形设为约 2.25 英寸宽，7.9 英寸高。  
   
-3.  选中新矩形，在“属性”窗格中，将**边框颜色设为浅灰色**、**边框样式设为纯色**以及**边框宽度设为 2 磅**。 
+3.  选中新矩形，在“属性”窗格中，将 **边框颜色设为浅灰色**、 **边框样式设为纯色**以及 **边框宽度设为 2 磅**。 
 
 4. 将矩形的顶部和表的顶部对齐。  
   
-## 添加饼图  
+## <a name="to-add-a-pie-chart"></a>添加饼图  
   
 1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”。  
   
-2.  在“选择数据集”页上，单击“ListDataset” > “下一步”。  
+2.  上**选择的数据集**页上，单击**ListDataset** > **下一步**。  
   
 3.  单击“饼图” > “下一步”。  
   
@@ -425,7 +430,7 @@ caps.handback.revision: 16
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## 添加柱形图  
+## <a name="to-add-a-column-chart"></a>添加柱形图  
   
 1.  在“插入”选项卡上，单击“数据可视化” > “图表” > “图表向导”。  
   
@@ -461,12 +466,12 @@ caps.handback.revision: 16
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 选择图表轴，然后在“主文件夹”*选项卡上单击“数字”** > “货币”**。
+12. 选择图表轴，然后在*主页** 选项卡 >**数** > **货币**。
 
 13. 选择“减少小数位数”两次，以便数字仅显示美元，而不显示美分。      
-### 确认图表位于矩形内  
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>确认图表位于矩形内  
 
-可以使用矩形作为报表页上其他项的容器。 阅读有关[矩形作为容器](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)的详细信息。
+可以使用矩形作为报表页上其他项的容器。 阅读有关 [矩形作为容器](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)的详细信息。
   
 1.  选择之前在本课中创建的并将图表添加到其中的矩形。  
   
@@ -485,7 +490,7 @@ caps.handback.revision: 16
     > [!NOTE]  
     > 如果这些图表不位于矩形内，则呈现的报表不会一起显示这些图表。  
   
-### 使图表具有相同大小  
+### <a name="to-make-the-charts-the-same-size"></a>使图表具有相同大小  
   
 1.  选择饼图，按下 Ctrl 键，然后选择柱形图。  
   
@@ -500,7 +505,7 @@ caps.handback.revision: 16
   
 
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 有关如何创建自由格式报表的教程到此结束。  
   
 有关列表的详细信息，请参阅： 
@@ -508,8 +513,10 @@ caps.handback.revision: 16
 * [创建带列表的发票和表单](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-有关查询设计器的详细信息，请参阅[查询设计器（报表生成器）](../Topic/Query%20Designers%20(Report%20Builder).md)和[基于文本的查询设计器用户界面（报表生成器）](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
+有关查询设计器的详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)和[基于文本的查询设计器用户界面（报表生成器）](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
   
+
+

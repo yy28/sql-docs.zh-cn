@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/11/2017
   
 2.  展开“管理”节点，然后展开“数据层应用程序”节点。  
   
-3.  右键单击要升级的 DAC 的节点，然后选择“升级数据层应用程序…”****  
+3.  右键单击要升级的 DAC 的节点，然后选择“升级数据层应用程序…”  
   
 4.  完成向导对话框：  
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/11/2017
 7.  关闭用于读取 DAC 包文件的文件流。  
   
 ### <a name="example-powershell"></a>示例 (PowerShell)  
- 下面的示例使用 MyApplicationVNext.dacpac 包中的新的 DAC 版本，将名为 MyApplication 的 DAC 升级到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的默认实例。  
+ 以下示例将升级的默认实例名为 MyApplication 的 DAC [!INCLUDE[ssDE](../../includes/ssde-md.md)]，使用新的 DAC 版本 MyApplication2017.dacpac 包中。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -264,7 +264,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

@@ -1,36 +1,41 @@
 ---
-title: "MSReportServer_ConfigurationSetting 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "WMI 提供程序 [Reporting Services], MSReportServer_ConfigurationSetting 类"
-  - "MSReportServer_ConfigurationSetting 类"
+title: "MSReportServer_ConfigurationSetting 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# MSReportServer_ConfigurationSetting 类
+# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 类
   表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。  
   
  有关此类型所有成员的列表，请参阅 [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## 线程安全  
- 此类型的任何公共静态（[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的 **Shared**）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
+## <a name="thread-safety"></a>线程安全  
+ 此类型的任何公共静态（**中的** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）成员在多线程操作中是安全的。 不能保证任何实例成员都是线程安全的。  
   
-## 示例  
- 若要运行下面的代码，请添加服务器名称来取代每个 \<*servername*>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
+## <a name="example"></a>示例  
+ 若要运行下面的代码，添加你的服务器名称代替每\< *servername*>。 如果不是默认位置，请将路径更新为指向安装位置的路径。 下面的代码示例会遍历 *MSReportServer_ConfigurationSetting* 类的每个属性，并向控制台输出每个属性的名称及其属性值。  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **平台:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

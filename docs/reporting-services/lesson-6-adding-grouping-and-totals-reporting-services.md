@@ -1,24 +1,29 @@
 ---
-title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 6 课： 添加分组和总计 (Reporting Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 56
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
   
   
@@ -28,21 +33,21 @@ caps.handback.revision: 56
   
 2.  如果看不到“行组”窗格，则右键单击设计图面，然后单击“查看”，再单击“分组”。  
   
-3.  从 **“报表数据”** 窗格将 **Date** 字段拖到 **“行组”** 窗格， 并将其放置到名为 **(Details)** 的行上面。
+3.  从 **“报表数据”** 窗格将 **Date** 字段拖到 **“行组”** 窗格， 并将其放置到名为 **(Details)**的行上面。
   
     请注意，行控点中现在有一个方括号，用于显示组。 表现在在垂直点线的两侧各有一个 Date 列。  
   
-    ![](../reporting-services/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
+    ![添加日期组](../reporting-services/media/rs-basictablegroups1design.png "添加日期组")  
   
-4.  从 **“报表数据”** 窗格将 **Order** 字段拖到 **“行组”** 窗格， 并将其放置到 Date 下面和 **(Details)** 上面。
+4.  从 **“报表数据”** 窗格将 **Order** 字段拖到 **“行组”** 窗格， 并将其放置到 Date 下面和 **(Details)**上面。
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
     Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
   
-5.  删除两根线条**右侧**的原始 **Date** 和 **Order** 列。 这将删除该单个记录值，以便仅显示组值。 选择并右键单击两个列的列句柄，然后单击“删除列”。  
+5.  删除两根线条 **右侧** 的原始 **Date** 和 **Order** 列。 这将删除该单个记录值，以便仅显示组值。 选择并右键单击两个列的列句柄，然后单击“删除列”。  
   
-    ![选择要删除的列](../reporting-services/media/rs-basictablegroupsdeletecols.gif "选择要删除的列")  
+    ![选择要删除列](../reporting-services/media/rs-basictablegroupsdeletecols.gif "选择要删除列")  
   
 6.  若要设置新的日期列的格式，右键单击带有 `[Date]` 字段表达式的单元，然后单击“文本框属性”。  
   
@@ -50,10 +55,10 @@ caps.handback.revision: 56
   
 8.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]。  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]的行上面。  
   
 10.  切换到 **“预览”** 选项卡以预览报表。 其外观应与下图类似：  
-    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.gif) 
+    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
   
 ## <a name="bkmk_addtotals"></a>向报表中添加总计  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 56
   
 6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”**和 **“确定”**。  
   
-    ![设计视图：带订单总计的基本表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "设计视图：带订单总计的基本表")  
+    ![设计视图： 基本表与订单总额](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "设计视图： 与总订单的基本表")  
   
 ## <a name="bkmk_adddailytotal"></a>向报表添加每日总计  
   
@@ -101,13 +106,13 @@ caps.handback.revision: 56
   
 4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅蓝色”**和 **“确定”**。  
   
-    ![设计视图：基本表中的总计](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "设计视图：基本表中的总计")  
+    ![设计视图： 基本表中的总计](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "设计视图： 基本表中的总计")  
   
-5.  单击“预览”。  
+5.  单击 **“预览”**的行上面。  
   
     最后一页的外观应该如下图所示。 在工具栏中，单击“最后一页” ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)按钮。   
   
-    ![预览：带总计的基本表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "预览：带总计的基本表")  
+    ![预览： 基本表与总计](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "预览： 具有总计的基本表")  
   
 ## <a name="bkmk_publishreport"></a>将报表发布到报表服务器（可选）  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 56
   
     浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户 URL。   
     **注意：**门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
-    - `http://<server name>/reports`。  
+    - `http://<server name>/reports`的行上面。  
      - `http://localhost/reports` 如果你的设计报表在报表服务器上，则使用。  
   
 8.  浏览到包含该报表的文件夹。 默认名称是教程，是项目的名称或在项目属性中的“TargetReportFolder fiedl”中键入的名称。   
@@ -154,10 +159,12 @@ caps.handback.revision: 56
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 这样，您就成功完成了对“创建基本表报表”教程的学习。**  
+* * 您已经成功完成创建基本表报表 tutorial.* *  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
+
+

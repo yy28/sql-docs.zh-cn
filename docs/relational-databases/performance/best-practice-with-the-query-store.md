@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
+ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/29/2017
   
  如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值 (100 MB) 可能不够大。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -67,14 +67,14 @@ FROM sys.database_query_store_options;
   
  以下脚本将设置新的“最大大小(MB)”：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **统计信息收集间隔：** 定义已收集的运行时统计信息的粒度级别（默认值为 1 小时）。 如果你需要更细的粒度或更短的时间来检测问题和解决问题，则可考虑使用更低的值，但请记住，这会直接影响 Query Store 数据的大小。 使用 SSMS 或 Transact-SQL 为“统计信息收集间隔”设置不同的值：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -83,7 +83,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
  避免保留你不计划使用的历史数据。 这样可以减少变为只读状态的次数。 Query Store 数据的大小以及检测问题和解决问题的时间将会变得更可预测。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或以下脚本配置基于时间的清理策略：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -92,7 +92,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  强烈建议你激活基于大小的清理功能，确保 Query Store 始终以读写模式运行并收集最新数据。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -107,7 +107,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  以下脚本将“查询捕获模式”设置为“Auto”：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -119,7 +119,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  按上一节的说明通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来启用 Query Store，或者执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -140,19 +140,30 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |SSMS 视图|应用场景|  
 |---------------|--------------|  
 |回归查询|查明哪些查询的执行度量值最近进行了回归（即变得更糟）。 <br />使用此视图将应用程序中观察到的性能问题与需要进行修复或改进的实际查询关联起来。|  
-|资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
-|跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|  
 |总体资源消耗|针对任意执行度量值分析数据库的总资源消耗量。<br />使用此视图可以确定资源模式（白天工作负荷与夜间工作负荷的比较），并优化数据库的总体消耗。|  
+|资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
+|具有强制计划的查询|以前强制计划使用查询存储的列表。 <br />使用此视图可以快速访问所有当前强制的计划。|  
+|具有高的变体的查询|分析高执行变体的查询，因为它与任何可用的维度，例如所需的时间间隔内的持续时间、 CPU 时间、 IO 和内存使用情况。<br />使用此视图可以标识具有广泛 variant 可以将会影响用户体验跨应用程序的性能的查询。|  
+|跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]  
 >  如需详细了解如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来确定资源使用排名靠前的查询并修复那些因计划选择变化而导致回归的查询，请参阅 [@Azure 博客中的查询存储](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
- 如果确定某个查询的性能不够理想，则可根据问题性质进行操作。  
+ 当你确定某个查询的性能不够理想时，你的操作取决于问题的性质。  
   
 -   如果所执行的查询具有多个计划，而最后一个计划明显不如前面的计划，则可通过计划强制机制来强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在今后执行查询时始终使用最佳计划。  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> 上面的图可能功能不同的形状，对于特定查询计划，其每个可能状态的含义如下：<br />  
+> |形状|含义|  
+> |-------------------|-------------|
+> |Circle|查询已完成 （正则执行成功完成）|
+> |Square|取消 （启动的客户端已中止执行）|
+> |Triangle|失败 （中止的异常执行）|
+> 此外，形状的大小反映在指定的时间间隔内，使用更多的执行的大小在增加查询执行计数。  
+
 -   你可以认为，你的查询因为缺少索引而无法达到最佳执行效果。 此信息显示在查询执行计划中。 使用 Query Store 创建缺失的索引并检查查询性能。  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -166,7 +177,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  Query Store 可通过无提示方式更改操作模式。 你应该定期监视 Query Store 的状态以确保 Query Store 正常运行，并采取相应措施，避免那些本来可以避免的因素造成故障。 执行以下查询，以便确定操作模式并查看最相关的参数：  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -187,13 +198,13 @@ FROM sys.database_query_store_options;
   
 -   使用以下语句清理 Query Store 数据：  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  在应用这两项步骤或其中一项步骤时，可以执行以下语句，通过显式方式将操作模式改回为读写：  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -209,7 +220,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>错误状态  
  若要恢复 Query Store，可尝试显式设置读写模式，然后再次检查实际状态。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -221,9 +232,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 如果问题仍然存在，则表明磁盘上的 Query Store 数据已永久损坏。 在请求读写模式之前，需清除 Query Store。  
+ 如果问题仍然存在，它表示的查询存储的数据会保留在磁盘的损坏。
+ 
+ 可以通过执行恢复 query Store **sp_query_store_consistency_check**存储内受影响的数据库的过程。
+ 
+ 如果没有帮助的你可以尝试请求读写模式之前清除查询存储。  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -285,7 +300,7 @@ FROM sys.database_query_store_options;
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会通过回退来重新编译查询，并在 [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中显示实际的强制失败原因。 以下查询返回强制计划的相关信息：  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -307,6 +322,5 @@ WHERE is_forced_plan = 1;
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   
 

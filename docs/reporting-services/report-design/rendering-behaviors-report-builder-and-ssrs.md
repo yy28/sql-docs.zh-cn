@@ -1,23 +1,28 @@
 ---
-title: "呈现行为（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "呈现行为 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 呈现行为（报表生成器和 SSRS）
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
   根据选择的呈现器，呈现报表时，将针对表体及其内容应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  
   
 -   呈现规则。  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## HTML、MHTML、Word 和 Excel（软分页呈现器）的一般行为  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>HTML、MHTML、Word 和 Excel（软分页呈现器）的一般行为  
  使用 HTML 和 MHTML 格式导出的报表针对基于计算机屏幕的体验进行了优化，其中的页面可以是各种长度。 仅在表体内的近似位置垂直插入分页符。 这些近似位置由“属性”窗格中的交互高度设置来确定。 例如，假定交互高度设置为 5 英寸。 呈现报表时，页面高度大约为 5 英寸长。 Word 和 Excel 基于逻辑分页符进行分页，并且忽略交互高度设置。  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   不应用页边距。  
   
-## PDF、图像和打印（硬分页呈现器）的一般行为  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>PDF、图像和打印（硬分页呈现器）的一般行为  
  使用 PDF 和图像导出的报表针对书状或打印体验进行了优化，其中的页面大小保持一致。 在表体内的特定位置垂直和水平插入分页符。 这些特定位置由页面宽度和页面高度设置来确定。  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  交互宽度设置不用于硬分页呈现器。  
   
-## 报表项间的最小间距  
+## <a name="minimum-spacing-between-report-items"></a>报表项间的最小间距  
  报表项可以在表体内增大以容纳其内容。 例如，呈现报表时，矩阵数据区域通常在页面内向下扩展，并且文本框的高度可随表达式返回的数据进行调整。  
   
  呈现器会在报表项间保留一个最小的间距，该间距在报表布局中定义。 在报表布局上将报表项相邻放置时，报表项间的距离在报表水平或垂直增长时将变成必须保持的最小距离。 例如，如果您向报表添加一个矩阵数据区域，然后在矩阵的右侧 0.25 英寸处添加一个矩形，则在矩阵增长时将保持最小间距。 每个项向右移动以便与其左侧的项之间保持最小距离。  
   
-## 页眉和页脚  
+## <a name="page-headers-and-footers"></a>页眉和页脚  
  页眉和页脚显示在每个呈现的页面的顶部和底部。 您可以设置页眉和页脚的格式，使其具有边框颜色、边框样式和边框宽度。 此外，还可以添加背景色或背景图像。 根据所选格式，这些格式选项都会呈现出来。  
   
  以 HTML 或 MHTML 呈现格式呈现时，以下规则适用于页眉和页脚：  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   当报表呈现为子报表时，在原始 RDL 文件中定义的表头和表尾不会呈现出来。  
   
-## 逻辑分页符  
+## <a name="logical-page-breaks"></a>逻辑分页符  
  逻辑分页符是在报表项或组之前或之后插入的分页符。 分页符有助于确定报表内容适合报表页的方式，以便在呈现或导出报表时获得最佳查看效果。  
   
  呈现逻辑分页符时应用以下规则：  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   对表或矩阵单元中的项定义的逻辑分页符将不保留。 此逻辑分页符将不应用于列表中的项。  
   
-## 另请参阅  
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>另请参阅  
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [以 HTML 格式呈现（报表生成器和 SSRS）](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

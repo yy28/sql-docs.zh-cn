@@ -1,31 +1,36 @@
 ---
-title: "更新资源（报表管理器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "更新资源"
-  - "资源 [Reporting Services], 更新"
+title: "更新资源 （报表管理器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating resources
+- resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 更新资源（报表管理器）
+# <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
   通过将资源替换为新资源，可以更新资源。 资源是存储在报表服务器上的项，包含您上载的文件中的内容。 通过向现有资源中导入新的文件内容或其他文件内容，即可替换现有资源。 通过更新资源，可以在保留资源的现有属性和安全设置的同时更新内容。  
   
-### 更新资源  
+### <a name="to-update-a-resource"></a>更新资源  
   
-1.  启动[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航或搜索到要更新的资源。  
   
@@ -43,10 +48,10 @@ caps.handback.revision: 17
   
  如果正在更新的资源包含某个报表中所使用的图像，则需要刷新该报表，才可以看到更新后的图像。  
   
-## 另请参阅  
- [“内容”页（报表管理器）](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [“上传文件”页（报表管理器）](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>另请参阅  
+ [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [报表管理器的 F1 帮助](../Topic/Report%20Manager%20F1%20Help.md)  
+ [报表管理器的 F1 帮助](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

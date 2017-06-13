@@ -1,24 +1,29 @@
 ---
-title: "教程：向报表添加 KPI（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将 KPI 添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加 KPI（报表生成器）
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
 
 KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别进行的销售汇总为 KPI。 可以使用颜色、仪表和指示器来显示 KPI 的当前状态。
@@ -26,38 +31,19 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 下图与将要创建的报表类似。  
   
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
-  
-## <a name="BackToTop"></a>学习内容  
-在本教程中，将学习如何通过基于单元值设置表单元的背景色来添加 KPI，以及添加和配置仪表和指示器。 还将学习如何编写设置表单元的背景色的表达式。  
-  
-本教程包含下列过程：  
-  
-1.  [使用表向导或矩阵向导创建表报表和数据集](#Table)  
-  
-2.  [在表或矩阵向导中组织数据并选择布局](#CompleteWizard)  
-  
-3.  [使用背景色显示 KPI](#BackgroundColors)  
-  
-4.  [使用仪表显示 KPI](#Gauge)  
-  
-5.  [使用指示器显示 KPI](#Indicator)  
-  
-6.  [添加报表标题](#Title)  
-  
-7.  [保存报表](#Save)  
-  
+    
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Table"></a>1.使用表向导或矩阵向导创建表报表和数据集  
 在本部分中，选择共享数据源，创建嵌入数据集，并在表中显示数据。  
  
-### 创建具有嵌入数据集的表  
+### <a name="to-create-a-table-with-an-embedded-dataset"></a>创建具有嵌入数据集的表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -124,7 +110,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 表或矩阵向导提供一个初始设计以在其中显示数据。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
-### 将数据组织到组中并选择布局 
+### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>将数据组织到组中并选择布局 
   
 1.  在“排列字段”页上，将 Product 拖到“值”中。  
   
@@ -168,7 +154,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 ![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
     
-### 设置日期和货币的格式
+### <a name="format-dates-and-currency"></a>设置日期和货币的格式
 将列加宽，并设置日期和货币的格式。
 
 1. 单击“设计”返回“设计”视图。
@@ -177,7 +163,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 
 3. 按 Ctrl 键，然后选择包含 [Sum(Sales)] 的 4 个单元。
 
-4. 在“主页”选项卡中，转至“数字” > “货币”。 单元会更改为显示已设置好格式的货币。
+4. On the **Home** tab > **Number** > **Currency**. 单元会更改为显示已设置好格式的货币。
 
    如果区域设置为“英语(美国)”，则默认示例文本为 [$12,345.00]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。
     
@@ -198,7 +184,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="BackgroundColors"></a>3.使用背景色显示 KPI  
 可将背景色设置为运行报表时计算的表达式。  
   
-### 使用背景色显示 KPI 的当前状态  
+### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>使用背景色显示 KPI 的当前状态  
   
 1.  在表中，右键单击第二个 `[Sum(Sales)]` 单元（在显示子类别的销售额的小计行中），然后单击“文本框属性”。 
 
@@ -223,7 +209,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="Gauge"></a>4.使用仪表显示 KPI  
 仪表显示数据集中的单个值。 本教程使用水平线性仪表，因为即使是在该仪表较小或在表单元内使用的情况下，其形状和简便性也使其易于读取。 有关详细信息，请参阅[仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
-### 使用仪表显示 KPI 的当前状态  
+### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>使用仪表显示 KPI 的当前状态  
   
 1.  切换回“设计”视图。  
   
@@ -278,13 +264,13 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="Indicator"></a>5.使用指示器显示 KPI  
 指示器是以直观的形式传递数据值的小巧而简单的仪表。 由于指示器尺寸较小且具有简便性，其经常被用于表和矩阵中。 有关详细信息，请参阅[指示器（报表生成器和 SSRS）](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
-### 使用指示器显示 KPI 的当前状态  
+### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>使用指示器显示 KPI 的当前状态  
   
 1.  切换到“设计”视图。  
   
 2.  在表中，右键单击“Linear KPI”列的列句柄，此列在上一个过程中通过选择“插入列” > “右侧插入”添加。 此时将向表添加一个新列。  
   
-3.  在列标题中键入 **Stoplight KPI**。  
+3.  在列标题中键入 **Stoplight KPI** 。  
   
 4.  单击子类别小计的单元格（上一个过程中添加的线性仪表旁）。  
   
@@ -315,7 +301,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 添加报表标题  
+### <a name="to-add-a-report-title"></a>添加报表标题  
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
@@ -328,7 +314,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ## <a name="Save"></a>7.保存报表  
 将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -344,7 +330,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
-### 将报表保存到计算机上  
+### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -357,12 +343,14 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 2.  单击 **“保存”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 您已成功完成“向报表添加 KPI”教程的学习。 有关详细信息，请参阅：
 *  [仪表](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [指示器](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 * [报表生成器教程](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

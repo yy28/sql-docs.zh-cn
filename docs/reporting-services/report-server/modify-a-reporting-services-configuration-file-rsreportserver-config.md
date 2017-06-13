@@ -1,29 +1,34 @@
 ---
-title: "修改 Reporting Services 配置文件 (RSreportserver.config) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改 Reporting Services 配置文件 (RSreportserver.config) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 修改 Reporting Services 配置文件 (RSreportserver.config)
+# <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>修改 Reporting Services 配置文件 (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将应用程序设置存储在一组配置文件中。 安装程序会为您安装的每个报表服务器实例创建配置文件。 每个文件中的值要么在安装过程中设置，要么在您使用工具和应用程序将服务器配置为执行某个操作时设置。 在某些情况下，必须直接修改文件来添加或配置高级设置。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。  
   
  某些配置设置只能通过工具来设置。 包含加密值的设置必须通过 Reporting Services 配置工具、安装程序或 **rsconfig** 命令行实用工具来修改。 若要运行这些工具，您必须是本地 Administrators 组的成员。  
   
 > [!IMPORTANT]  
->  在修改配置文件时一定要格外小心。 如果要修改供内部使用而保留的设置，则可能会禁用您的安装。 通常，除非试图解决的是特定问题，否则建议您不要修改配置设置。 有关可安全更改的设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)或 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 有关配置文件的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档。  
+>  在修改配置文件时一定要格外小心。 如果要修改供内部使用而保留的设置，则可能会禁用您的安装。 通常，除非试图解决的是特定问题，否则建议您不要修改配置设置。 有关可安全更改的设置的详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 或 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 有关配置文件的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档。  
   
  本主题内容：  
   
@@ -59,13 +64,24 @@ caps.handback.revision: 7
     -   **RSReportServer.config** 位于以下文件夹中：  
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
         ```  
+        
+        ||  
+        |-|  
+        |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server Reporting Services 中 2017 年 1 月的 Power BI 技术预览版报表|
+        
+        ```  
+        C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
+        ```
   
     -   **RSReportServerServices.exe.config** 位于以下文件夹中：  
+    
+        > [!NOTE] 
+        > 这不是适用于 2017 年 1 月 Power BI 技术预览中 SQL Server Reporting Services 的报表。
   
         ```  
-        C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer\bin  
+        C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
         ```  
   
     -   **RSReportDesigner.config** 位于以下文件夹中：  
@@ -82,22 +98,22 @@ caps.handback.revision: 7
   
     -   [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [配置报表管理器以便传递自定义身份验证 Cookie](../Topic/Configure%20Report%20Manager%20to%20Pass%20Custom%20Authentication%20Cookies.md)  
+    -   [配置 Web 门户来传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  保存该文件。  
   
-6.  检查跟踪日志文件，确认没有错误发生。 如果看到错误情况，则说明错误地指定了某个设置或它的值。 请检查 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)，了解引起错误的任何设置的有效值。 有关查看跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
+6.  检查跟踪日志文件，确认没有错误发生。 如果看到错误情况，则说明错误地指定了某个设置或它的值。 请检查 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ，了解引起错误的任何设置的有效值。 有关查看跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 配置文件](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [部署数据处理扩展插件](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署传递扩展插件](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [部署呈现扩展插件](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [如何部署自定义报表项](../Topic/How%20to:%20Deploy%20a%20Custom%20Report%20Item.md)   
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
+

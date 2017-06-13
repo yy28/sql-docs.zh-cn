@@ -2,7 +2,7 @@
 title: "Always Encrypted（数据库引擎）| Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f848c5ebf1233d6b34dcf00bb7084adcebc95ea1
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
@@ -104,14 +104,14 @@ ms.lasthandoff: 04/11/2017
 >  有关该向导用法的视频，请参阅 [《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
 
 1.    连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的 **对象资源管理器** 加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
-2.    右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。****
-3.    查看“简介”页，然后单击“下一步”。****
-4.    在“列选择”页上展开表，然后选择要加密的列。 ****
-5.    对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。**
-6.    对于选择进行加密的每个列，选择“加密密钥”。**** 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 ****
+2.    右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。
+3.    查看“简介”页，然后单击“下一步”。
+4.    在“列选择”页上展开表，然后选择要加密的列。 
+5.    对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。
+6.    对于选择进行加密的每个列，选择“加密密钥”。 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 
 7.    在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。
-8.    在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。****
-9.    在“摘要”页上，查看你选择的选项，然后单击“完成”。**** 完成后关闭向导。
+8.    在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。
+9.    在“摘要”页上，查看你选择的选项，然后单击“完成”。 完成后关闭向导。
 
   
 ## <a name="feature-details"></a>功能详细信息  
@@ -126,33 +126,32 @@ ms.lasthandoff: 04/11/2017
 
 -   更改已加密对象的定义之后，需执行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)，以更新该对象的 Always Encrypted 元数据。
   
- 具有以下特征的列不支持始终加密（例如，如果某个列存在以下任何情况，则不能在 *CREATE TABLE/ALTER TABLE* 中针对该列使用 **Encrypted WITH** 子句）：  
+具有以下特征的列不支持始终加密（例如，如果某个列存在以下任何情况，则不能在 *CREATE TABLE/ALTER TABLE* 中针对该列使用 **Encrypted WITH** 子句）：  
   
 -   使用以下任一数据类型的列： **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、别名、用户定义类型。  
-  
 - FILESTREAM 列  
-  
-- 具有 ROWGUIDCOL 属性的列
-- 采用非 bin2 排序规则的字符串（varchar、char 等）
-- 用作使用随机加密列作为键列的非聚集索引的键的列（可以是确定性加密列）
-- 用作使用随机加密列作为键列的聚集索引的键的列（可以是确定性加密列）
-- 用作包含随机和确定性加密列的全文索引的键的列
-- 计算列引用的列（当表达式针对始终加密执行不受支持的操作时）
-- 稀疏列集
-- 统计信息引用的列
-- 使用别名类型的列
-- 分区列
-- 包含默认约束的列
-- 使用随机加密时 unique 约束引用的列（支持确定性加密）
-- 使用随机加密时的主键列（支持确定性加密）
-- 使用随机加密或确定性加密时引用外键约束中的列（如果被引用和引用列使用不同的键或算法）
-- check 约束引用的列
-- 使用变更数据捕获的表中的列
-- 具有更改跟踪的表中的主键列
-- 屏蔽的列（使用动态数据屏蔽）
-- Stretch Database 表中的列。 （无法为延伸启用其列已使用始终加密加密的表。）
-- 外部 (PolyBase) 表中的列（注意：支持在同一查询中使用外部表和列已加密的表）
-- 不支持针对加密列使用的表值参数。
+- 具有标识属性的列  
+- 具有 ROWGUIDCOL 属性的列  
+- 采用非 bin2 排序规则的字符串（varchar、char 等）  
+- 用作使用随机加密列作为键列的非聚集索引的键的列（可以是确定性加密列）  
+- 用作使用随机加密列作为键列的聚集索引的键的列（可以是确定性加密列）  
+- 用作包含随机和确定性加密列的全文索引的键的列  
+- 计算列引用的列（当表达式针对始终加密执行不受支持的操作时）  
+- 稀疏列集  
+- 统计信息引用的列  
+- 使用别名类型的列  
+- 分区列  
+- 包含默认约束的列  
+- 使用随机加密时 unique 约束引用的列（支持确定性加密）  
+- 使用随机加密时的主键列（支持确定性加密）  
+- 使用随机加密或确定性加密时引用外键约束中的列（如果被引用和引用列使用不同的键或算法）  
+- check 约束引用的列  
+- 使用变更数据捕获的表中的列  
+- 具有更改跟踪的表中的主键列  
+- 屏蔽的列（使用动态数据屏蔽）  
+- Stretch Database 表中的列。 （无法为延伸启用其列已使用始终加密加密的表。）  
+- 外部 (PolyBase) 表中的列（注意：支持在同一查询中使用外部表和列已加密的表）  
+- 不支持针对加密列使用的表值参数。  
 
 不能对加密的列使用以下子句：
 

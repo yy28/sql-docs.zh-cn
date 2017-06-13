@@ -1,25 +1,30 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 2 课： 修改报表数据源属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 2: Modifying the Report Data Source Properties
-在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，你会使用 Web 门户来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)教程中创建的 **Sales Order** 报表。  在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用**已存储凭据**访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，你会使用 Web 门户来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。  在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
   
 您还将修改数据集和报表以便使用参数来筛选 `[Order]` 上的报表，这样，订阅可为特定的顺序和呈现格式输出不同的报表实例。  
   
@@ -30,10 +35,10 @@ caps.handback.revision: 43
 2.    浏览到 Web 门户 URL。  例如：   
     `http://<server name>/reports`。  
     `http://localhost/reports`
- **注意：**Web 门户 URL 为“Reports”，而非“Reportserver”的报告服务器 URL。  
+ **注意：** web*门户*URL 为"Reports"，不报告*服务器*"Reportserver"的 URL。  
 3.  浏览到包含 **Sales Orders** 报表的文件夹，在该报表的上下文菜单中，单击 **“管理”**。  
  
- ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.gif)
+ ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
 3.  在左窗格中单击“数据源”。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 43
 10. 单击 **“保存”**。
 11. 单击“取消”  
   
-11. 查看报表以验证报表是否以指定的凭据运行。 。  
+11. 查看报表以验证报表是否以指定的凭据运行。 报表。  
   
 ## <a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset  
  在以下步骤中，你将修改数据集以使用参数基于订单号筛选数据集。
@@ -87,7 +92,7 @@ caps.handback.revision: 43
 ## <a name="bkmk_add_reportparameter"></a>添加报表参数并重新发布报表  
   
 1.  在“报表数据”窗格中，展开参数文件夹，然后双击“Ordernumber”参数。  它在上一步中向数据集添加参数时自动创建。 单击“新建”，然后单击“参数...”  
- ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.gif) 
+ ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  验证“名称”是否为 `OrderNumber`。  
   
 3.  验证“提示”是否为 `OrderNumber`。  
@@ -103,7 +108,7 @@ caps.handback.revision: 43
     -   在不使用参数的情况下单击“查看报表”以便看到完整的报表。  
   
     -   取消选择“Null”选项并输入订单号，例如 so71949，然后单击“查看报表”以便只在报表中查看这一个订单。  
-    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif) 
+    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
 ## <a name="bkmk_redeploy"></a>重新部署报表  
@@ -112,11 +117,11 @@ caps.handback.revision: 43
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 + 你已成功地将报表配置为使用已存储凭据获取数据，并且可以使用参数筛选数据。 
-+ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅[第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
++ 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅 [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [管理报表数据源](../reporting-services/report-data/manage-report-data-sources.md)  
 [为报表数据源指定凭据和连接信息](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [创建数据驱动订阅（SSRS 教程）](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
@@ -124,3 +129,5 @@ caps.handback.revision: 43
   
   
   
+
+

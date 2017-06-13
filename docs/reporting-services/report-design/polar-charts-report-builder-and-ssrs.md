@@ -1,33 +1,38 @@
 ---
-title: "极坐标图（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "极坐标图 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 369ab4b047ef4f9b9f73265f974a52c2c0197a79
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 极坐标图（报表生成器和 SSRS）
-  极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅[图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
+# <a name="polar-charts-report-builder-and-ssrs"></a>极坐标图（报表生成器和 SSRS）
+  极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 变体  
+## <a name="variations"></a>变体  
   
 -   **雷达图**。 雷达图将序列显示为环形线条或区域。 与极坐标图不同的是，雷达图不是以极坐标的形式显示数据。  
   
-## 极坐标图的数据注意事项  
+## <a name="data-considerations-for-polar-charts"></a>极坐标图的数据注意事项  
   
 -   雷达图在比较多个类别数据序列方面很有用。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   在同一图表区中，极坐标图不能与任何其他图表类型结合使用。  
   
-## 示例  
+## <a name="example"></a>示例  
  下例说明了如何使用雷达图。 下表提供了雷达图的示例数据。  
   
 |名称|Sales|  
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
  ![雷达图](../../reporting-services/report-design/media/rs-radarchart.gif "雷达图")  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   

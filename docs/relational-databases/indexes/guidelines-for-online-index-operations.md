@@ -1,7 +1,7 @@
 ---
 title: "联机索引操作准则 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/09/2017
+ms.date: 04/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
@@ -38,6 +38,7 @@ ms.lasthandoff: 04/11/2017
 -   如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
   
 -   无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
+- 可以从发生意外故障，数据库故障转移后停止中恢复索引或**暂停**命令。 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能是在公共预览版中的 SQL Server 自 2017 年。
 
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -89,6 +90,30 @@ ms.lasthandoff: 04/11/2017
 ## <a name="transaction-log-considerations"></a>事务日志注意事项  
  脱机或联机执行大范围的索引操作，会生成大型数据负载，这些负载会造成事务日志快速填充。 为确保索引操作可以回滚，事务日志直到索引操作完成后才可以截断，但是，可以在索引操作过程中备份日志。 因此，事务日志必须具有足够的空间来存储索引操作事务和所有的并发用户事务，以满足索引操作过程的需要。 有关详细信息，请参阅 [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)。  
 
+## <a name="resumable-index-rebuild-considerations"></a>可恢复索引重新生成注意事项
+
+> [!NOTE]
+> 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能是在公共预览版中的 SQL Server 自 2017 年。
+>
+
+当你执行恢复的挂起的联机索引重新生成以下准则将适用：
+-    管理、 规划和扩展索引维护时段。 你可以暂停和重新启动索引重新生成操作多次以适合你维护时段。
+- 从索引重新生成故障中 （如数据库故障转移或磁盘空间不足） 恢复。
+- 索引操作已暂停时，原始的索引和新创建的一个需要磁盘空间并需要在 DML 操作期间更新。
+
+- 使截断日志截断 （对正则联机索引操作，就不能执行此操作） 执行索引重新生成操作的过程。
+- SORT_IN_TEMPDB = ON 选项不支持
+
+> [!IMPORTANT]
+> 可恢复的重新生成不需要你以使保持打开状态的长时间运行的截断，允许在此操作，并更好的日志空间管理过程中日志截断。 与新的设计中，我们管理将必要的数据保留在数据库以及重新启动可恢复操作所需的所有引用。
+>
+
+通常情况下，可恢复和非可恢复的联机索引重新生成之间没有性能差异。 当更新可恢复的索引，而索引重新生成操作已暂停：
+- 对于读取主要工作负荷对性能的影响是无意义。 
+- 对于大量更新工作负荷，你可能会遇到某些吞吐量下降 （我们测试显示小于 10%下降）。
+
+通常情况下，可恢复和非可恢复的联机索引重新生成碎片整理质量上没有差异。
+ 
 ## <a name="related-content"></a>相关内容  
  [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

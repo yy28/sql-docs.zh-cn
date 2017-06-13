@@ -1,28 +1,33 @@
 ---
-title: "XML 连接类型 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML 连接类型 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# XML 连接类型 (SSRS)
+# <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
   
  此数据扩展插件支持参数和与连接字符串分开管理的凭据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)类型的报表数据源的数据集。  
   
 ##  <a name="Connection"></a> 连接字符串  
  连接字符串必须为指向 Web 服务、基于 Web 的应用程序或可通过 HTTP 使用的 XML 文档的 URL。 XML 文档必须具有 XML 扩展名。 还可以对数据集查询中嵌入的 XML 数据使用空连接字符串。  
@@ -35,7 +40,7 @@ caps.handback.revision: 9
 |XML 文档|`http://localhost/XML/Customers.xml`|  
 |嵌入的 XML 文档|*Empty*|  
   
- 有关更多连接字符串的示例，请参阅[报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+ 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。  
@@ -50,7 +55,7 @@ caps.handback.revision: 9
   
  不支持存储的凭据和提示的凭据。 注意，如果禁用 Windows 集成安全性，则无法使用它来检索数据。 如果指定了存储凭据或提示凭据，则会在执行时发生错误。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+ 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ##  <a name="Query"></a> 查询  
  查询指定了要为报表数据集检索哪些数据。 查询的结果集中的列填充数据集的字段集合。 报表仅处理查询检索的第一个结果集。  
@@ -119,12 +124,12 @@ caps.handback.revision: 9
   
  有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](http://go.microsoft.com/fwlink/?LinkId=81654)。  
   
-### 检索 XML Web 服务数据的要求  
+### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  
   
- 对于 Web 服务，可以提供用于指定调用方法或 SOAP 操作的 \<**查询**> 元素。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
+ 对于 Web 服务时，你可以提供\<**查询**> 元素，指定到调用或 SOAP 操作的方法。 如果 XML 数据源具有可产生要用于报表的数据的层次结构，则可以将查询留空并使用默认查询。 查询运行时检索的 XML 元素节点值和属性将映射到在报表中使用的数据集字段。  
   
-### 检索 XML 文档数据的要求  
+### <a name="requirements-for-retrieving-xml-document-data"></a>检索 XML 文档数据的要求  
  使用 http 协议时，服务器必须返回 XML 数据，或者 XML 数据必须嵌入 XML **Query** 元素中。 如果您使用 http 协议直接引用 XML 文档，则文档的扩展名必须为 .xml。  
   
  您必须了解如何创建 XML 查询来检索所需的所有数据。 如果不指定元素路径，则默认的 XML 文档分析行为是选择 XML 文档中指向叶节点集合的第一个可用路径。 如果 XML 文档包括指向其他同级叶节点集合的其他路径，则除非在查询中指定一个路径，否则将忽略这些节点。  
@@ -136,7 +141,7 @@ caps.handback.revision: 9
 ##  <a name="Parameters"></a> Parameters  
  系统不会对查询进行分析以标识参数。  
   
- 若要添加参数，必须通过“ **数据集属性** ”对话框中的 [“参数”](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) 页手动创建参数。  
+ 若要添加参数，必须通过“ **数据集属性** ”对话框中的 [“参数”](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 页手动创建参数。  
   
 ##  <a name="Remarks"></a> 注释  
  XML 数据扩展插件支持基于 XML 数据（表格格式且不分层）生成报表。 有关详细信息，请参阅[从外部数据源中添加数据 (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)  
@@ -158,7 +163,7 @@ caps.handback.revision: 9
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -170,7 +175,7 @@ caps.handback.revision: 9
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

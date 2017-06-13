@@ -1,27 +1,32 @@
 ---
-title: "Prepare data for Reporting Services mobile reports | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "为 Reporting Services 移动报表准备数据 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Prepare data for Reporting Services mobile reports
+# <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 支持大量复杂的数据操作，包括筛选、聚合和时间切分。 本文介绍了准备数据时需要牢记的几个要点。 预先聚合数据可以优化移动报表的创建和使用，并且某些移动报表设计也需要它。   
   
-## 日期和时间格式 
+## <a name="date-and-time-formats"></a>日期和时间格式 
 当处理日期和时间间隔以便用于移动报表，尤其是处理 TimeNavigator 时，正确设置日期/时间列的格式至关重要，以便 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以根据此设置进行识别。 以下是有效的日期/时间格式的示例：  
   
     05/01/2009    
@@ -35,9 +40,9 @@ caps.handback.revision: 15
   
 在大多数情况下，基于日期和时间的数据集都可以采用一个或多个日期/时间间隔进行描述，例如，每小时、每天、每月、每季度和每年。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以组合多个具有不同粒度的表并将其显示在单个移动报表中。 但要记住原始数据集中的相关间隔时间，因为这将有助于确定向最终移动报表中的用户显示何种日期/时间筛选器选项。  
 
-[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 多维和表格模型中的数据字段可能在共享数据集中丢失其日期格式。 有关保留其格式的解决方案，请参阅[保留移动报表中 Analysis Services 数据的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)。
+[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 多维和表格模型中的数据字段可能在共享数据集中丢失其日期格式。 有关保留其格式的解决方案，请参阅 [保留移动报表中 Analysis Services 数据的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 。
   
-## 准备筛选数据 ##  
+## <a name="preparing-filter-data"></a>准备筛选数据 ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 可以根据日期/时间字段和键字段筛选数据。 虽然键字段可以是数字，但在大多数情况下，它们要么是一个 ID，要么是一个字符串值。 若要准备与导航元素（如选择列表）配合使用的筛选器字段，筛选键在数据表中应为单列。 这样你便可以根据筛选器列中的值对表中的各行进行分组。 使多个列包含不同的筛选键或筛选条件，可以使具有多个筛选导航器的移动报表分层次地一起进行使用或单独使用。  
   
 | 行业  | 国家/地区   | 地区    |  
@@ -83,10 +88,12 @@ caps.handback.revision: 15
 | 技术硬件和设备   | 信息技术 |  
 | 电信服务 |信息技术 |  
   
-### 另请参阅  
+### <a name="see-also"></a>另请参阅  
 - [为 Reporting Services 移动报表准备 Excel 数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [保留移动报表中 Analysis Services 数据的日期格式](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [使用 SQL Server 移动报表发布服务器创建移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   
   
+
+

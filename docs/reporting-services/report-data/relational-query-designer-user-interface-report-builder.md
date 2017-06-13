@@ -1,30 +1,35 @@
 ---
-title: "关系查询设计器用户界面（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10012"
-helpviewer_keywords: 
-  - "查询设计器"
-  - "访问数据, 查询设计器"
-  - "关系查询设计器"
+title: "关系查询设计器用户界面 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10012"
+helpviewer_keywords:
+- query designers
+- accessing data, query designer
+- relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 关系查询设计器用户界面（报表生成器）
-  报表生成器和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 关系数据库以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
+# <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
+  报表生成器和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
   
 > [!NOTE]  
 >  在报表生成器中，必须使用基于文本的查询设计器才能为 Oracle、OLE DB、ODBC 和 Teradata 等数据源类型指定查询。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
@@ -32,7 +37,7 @@ caps.handback.revision: 23
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  
   
-## 图形查询设计器  
+## <a name="graphical-query-designer"></a>图形查询设计器  
  在图形查询设计器中，您可以浏览数据库表和视图，还可以交互式生成 SQL SELECT 语句，以便指定要从中检索数据集数据的数据库表和列。 您可以选择要包括在数据集中的字段，或者指定限制数据集中数据的筛选器。 可以指定将筛选器作为参数并在运行时提供筛选器的值。 如果选择多个相关表，则查询设计器将描述由两个表构成的集合之间的关系。  
   
  图形查询设计器分为三个区域。 根据查询是使用表/视图还是存储过程/表值函数，查询设计器的布局有所不同。  
@@ -42,11 +47,11 @@ caps.handback.revision: 23
   
  下图显示了用于表或视图的图形查询设计器。  
   
- ![用于查询的图形设计器](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "用于查询的图形设计器")  
+ ![图形设计器中的为查询](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "图形设计器中的为查询")  
   
  下图显示了用于存储过程或表值函数的图形查询设计器。  
   
- ![图形查询设计器中的存储过程](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "图形查询设计器中的存储过程")  
+ ![在图形查询设计器中存储过程](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "图形查询设计器中存储过程")  
   
  下表介绍了每个窗格的功能。  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 23
   
  显示下列选项：  
   
--   **所选字段**：显示为表或视图选择的数据库字段，或者为存储过程或表值函数选择的输入参数。 此窗格中显示的字段将成为报表数据集的字段集合。  
+-   **所选字段** ：显示为表或视图选择的数据库字段，或者为存储过程或表值函数选择的输入参数。 此窗格中显示的字段将成为报表数据集的字段集合。  
   
      使用“报表数据”窗格可查看报表数据集的字段集合。 这些字段表示当您查看报表时可在表、图表及其他报表项中显示的数据。  
   
@@ -84,12 +89,12 @@ caps.handback.revision: 23
   
 -   **删除字段** ：删除所选的字段。  
   
-#### 分组和聚合  
+#### <a name="group-and-aggregate"></a>分组和聚合  
  查询包含大表的数据库时可能会返回很多数据行，这些数据行由于数量过多以至于在报表中没有什么用处，此外，这种查询对于传输大量数据的网络和处理报表的报表服务器的性能会造成负面影响。 为了限制数据行的数量，查询可以包含对数据库服务器中的数据进行汇总的 SQL 聚合。 SQL 聚合不同于客户端聚合，它在呈现报表时应用。  
   
  聚合功能可对数据进行汇总，并且数据也会进行分组，以支持传递汇总数据的聚合。 在查询中使用聚合时，查询返回的其他字段将自动进行分组，并且查询包括 SQL GROUP BY 子句。 可以通过仅在 **“分组和聚合”** 列表中使用 **“分组依据”** 选项来汇总数据，而不必添加聚合。 许多聚合都包括使用 DISTINCT 关键字的版本。 包括 DISTINCT 可消除重复的值。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. SQL 语言的这两种分支都支持查询设计器提供的子句、关键字和聚合。  
   
  有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 23
 ###  <a name="FunctionParameters"></a> “函数参数”窗格  
  “函数参数”窗格显示存储过程或表值函数的参数。 显示以下列：  
   
--   **参数名称**：显示由存储过程或表值函数定义的参数名称。  
+-   **参数名称** ：显示由存储过程或表值函数定义的参数名称。  
   
 -   **值** 在查询运行以检索在设计时在“查询结果”窗格中显示的数据时用于查询参数的值。 当报表在运行时运行时不使用此值。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 23
   
  显示下列选项：  
   
--   **自动检测**：切换可自动在表之间创建关系的自动检测功能。 如果启用自动检测，则查询设计器将根据表中的外键创建关系；否则，您必须手动创建关系。 当您在 **“数据库视图”** 窗格中选择表时，自动检测将尝试自动创建关系。 如果您在手动创建联接后启用自动检测，则这些联接将被丢弃。  
+-   **自动检测** ：切换可自动在表之间创建关系的自动检测功能。 如果启用自动检测，则查询设计器将根据表中的外键创建关系；否则，您必须手动创建关系。 当您在 **“数据库视图”** 窗格中选择表时，自动检测将尝试自动创建关系。 如果您在手动创建联接后启用自动检测，则这些联接将被丢弃。  
   
     > [!IMPORTANT]  
     >  与 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 一起使用时，由于不会提供创建联接所需的元数据，因此无法自动检测到关系。 如果您的查询从 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]中检索数据，则必须手动创建所有表联接。  
@@ -159,7 +164,7 @@ caps.handback.revision: 23
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   
--   **联接字段**：列出联接字段对，如果某个关系具有多个联接条件，则各个联接字段对用逗号 (,) 分隔。  
+-   **联接字段** ：列出联接字段对，如果某个关系具有多个联接条件，则各个联接字段对用逗号 (,) 分隔。  
   
 ###  <a name="AppliedFilters"></a> “应用的筛选器”窗格  
  “应用的筛选器”窗格显示用于限定在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 SQL WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
@@ -181,7 +186,7 @@ caps.handback.revision: 23
   
  结果集中的排序顺序取决于从数据源检索数据的顺序。 可以通过修改查询来更改排序顺序，也可以在为报表检索数据后更改。  
   
-### 图形查询设计器工具栏  
+### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
 |按钮|Description|  
@@ -190,13 +195,13 @@ caps.handback.revision: 23
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
   
-## 了解自动生成的查询  
+## <a name="understanding-automatically-generated-queries"></a>了解自动生成的查询  
  当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”**。  
   
-## 基于文本的查询设计器  
+## <a name="text-based-query-designer"></a>基于文本的查询设计器  
  若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
-## 另请参阅  
- [查询设计器（报表生成器）](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>另请参阅  
+ [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

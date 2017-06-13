@@ -1,7 +1,7 @@
 ---
 title: "从表中删除列 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”中，右键单击要从其中删除列的表，然后选择“删除”。  
+2.  在**对象资源管理器**，查找从中想要删除列，并展开公开的列名称的表。 
+
+3.  右键单击你想要删除，并且选择的列**删除**。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  有关其他示例，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ##  <a name="FollowUp"></a>  
+

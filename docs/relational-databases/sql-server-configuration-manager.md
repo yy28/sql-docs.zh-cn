@@ -27,13 +27,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0710ebf98d2d0260208b594f3260266ddc0ca8c
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
+
+ > 与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 配置管理器](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)。
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (**mmc.exe**) 使用 **SQLServerManager\<version>.msc** 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 **SQLServerManager13.msc**）打开配置管理器。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
   
 |||  

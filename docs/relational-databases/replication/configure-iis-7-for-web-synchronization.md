@@ -18,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80239c8fbf3111d0161dece677b369aea30d9060
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题中的过程将从头到尾指导你手动配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 版本 7 及更高版本以便与用于合并复制的 Web 同步一起使用。 
+  本主题中的过程将指导你手动配置[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet 信息服务 (IIS) 7 和更高的版本与 Web 同步用于合并复制。 
   
- 配置 IIS 7 或更高版本是启用 Web 同步所需的三个步骤中的第一个。  
+ 配置 IIS 7 或更高版本是启用 Web 同步所需的三个步骤的第一个。  
   
  有关整个配置过程的概述，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  对于“别名” ，请输入 **SQLReplication**。  
   
-    3.  对于“物理路径”，输入 **\<驱动器>:\Inetpub\SQLReplication\\**，然后单击“确定”。****  
+    3.  对于“物理路径”，输入 **\<驱动器>:\Inetpub\SQLReplication\\**，然后单击“确定”。  
   
 7.  配置 IIS 以允许执行 replisapi.dll。  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  从 **“模块”** 下拉列表中，选择 **“IsapiModule”**。  
   
-    6.  对于“可执行文件”，输入 **\<驱动器>:\Inetpub\SQLReplication\replisapi.dll**。****  
+    6.  对于“可执行文件”，输入 **\<驱动器>:\Inetpub\SQLReplication\replisapi.dll**。  
   
     7.  对于“名称” ，请输入 **Replisapi**。  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  在 **在ternet 在formation Services (IIS) Manager**中，单击 **“默认网站”.**  
   
-2.  从“操作”窗格中，单击“浏览 \*:443(https)”。****  
+2.  从“操作”窗格中，单击“浏览 \*:443(https)”。  
   
 3.  Internet Explorer 随即打开并显示一条消息“此网站的安全证书有问题。”。 此警告向您表明关联的证书不是由认可的 CA 颁发的，因此可能不值得信任。 这个警告在意料之中，只需单击 **“继续浏览此网站(不推荐)”**。  
   
@@ -224,11 +224,11 @@ ms.lasthandoff: 04/11/2017
   
     2.  在 **“安全性”** 选项卡上，单击 **“编辑”**。  
   
-    3.  在“\<文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。****  
+    3.  在“\<文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。  
   
     4.  确保 **“从此位置”** 显示的是本地计算机（而不是域）的名称。 如果此字段不显示本地计算机名称，请单击 **“位置”**。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”**。  
   
-    5.  验证是否仅向该帐户授予了“读取”、“读取和执行”和“列出文件夹内容”权限。****  
+    5.  验证是否仅向该帐户授予了“读取”、“读取和执行”和“列出文件夹内容”权限。  
   
     6.  选择所有不需要访问该目录的用户或组，然后依次单击 **“删除”**和 **“确定”**。  
   
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/11/2017
   
     4.  如果使用了代理服务器，请单击 **“为 LAN 使用代理服务器”** 和 **“对于本地地址不使用代理服务器”**，然后单击 **“确定”**。  
   
-2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如：**https://server.domain.com/directory/replisapi.dll?diag**。  
+2.  在订阅服务器上的 Internet Explorer 中，用向 replisapi.dll 的地址追加 `?diag` 的方法以诊断模式连接到服务器。 例如： `https://server.domain.com/directory/replisapi.dll?diag`。  
   
     > [!NOTE]  
     >  在上例中， **server.domain.com** 应原样替换为在 IIS 管理器的 **“服务器证书”** 部分中列出的 **“颁发给”** 名称。  
@@ -313,7 +313,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。**** 在新建订阅向导中也要指定这些凭据。  
+4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”**的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   

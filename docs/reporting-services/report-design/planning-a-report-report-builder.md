@@ -1,31 +1,36 @@
 ---
-title: "规划报表 (报表生成器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "入门"
-  - "报表设计"
+title: "规划报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- getting started
+- report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 19
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 19
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 规划报表 (报表生成器)
+# <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的分页报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  
   
 -   **要以何种格式显示报表？**  
   
-     可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web 门户等浏览器中联机呈现报表，也可以将它们导出为 Excel、Word 或 PDF 等其他格式。 报表采用的最终格式是需要考虑的重要因素，因为并非所有功能在所有导出格式中都可用。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+     可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web 门户等浏览器中联机呈现报表，也可以将它们导出为 Excel、Word 或 PDF 等其他格式。 报表采用的最终格式是需要考虑的重要因素，因为并非所有功能在所有导出格式中都可用。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
 -   **希望在报表中用何种结构来呈现数据？**  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 19
   
      报表生成器提供了许多报表项，您可以将其添加到报表中以使报表更易于阅读、突出显示关键信息、帮助用户导航报表等。 了解要如何显示报表才能确定是否需要文本框、矩形、图像和线条等报表项。 您还可能希望显示或隐藏项，添加文档结构图（包括钻取报表或子报表），或者链接到其他报表。 有关详细信息，请参阅[图像、文本框、矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)和[交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
--   **希望读者看到哪些数据？ 是否应针对不同用户筛选数据或格式？**  
+-   **希望读者看到哪些数据？应数据或格式筛选为不同受众？**  
   
-     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 -   **是否需要创建自己的计算？**  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 19
   
      您可以将报表保存到本地计算机，并继续在本地使用它或运行它，供自己参考。 但是，若要与其他人共享报表，需要将报表保存到配置为本机模式的报表服务器或 SharePoint 集成模式下的报表服务器。 将报表保存到服务器可允许其他人在需要时运行报表。 另外，报表服务器管理员可以设置对报表的订阅，或者设置通过电子邮件向他人传递报表。 您可以根据需要以特定导出格式传递报表。 有关详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)  

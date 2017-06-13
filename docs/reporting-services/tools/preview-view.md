@@ -1,31 +1,36 @@
 ---
-title: "“预览”视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "“预览”视图 [Reporting Services]"
+title: "预览视图 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords:
+- Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# “预览”视图
+# <a name="preview-view"></a>“预览”视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## 选项  
+## <a name="options"></a>选项  
  使用工具栏可以管理预览功能。  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -84,8 +89,9 @@ caps.handback.revision: 36
  **(18) 查找下一个**  
  选择此选项可以对搜索文本的下一个实例进行搜索。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 + [预览报表](../../reporting-services/reports/previewing-reports.md)
 + [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
+

@@ -1,26 +1,31 @@
 ---
-title: "性能、快照、缓存 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "性能 [Reporting Services]"
-  - "Reporting Services, 性能"
+title: "性能、 快照、 缓存 (Reporting Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance [Reporting Services]
+- Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c752ea8a5f05a1dc861b0297b7a1c0eaca5cfc88
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 性能、快照、缓存 (Reporting Services)
+# <a name="performance-snapshots-caching-reporting-services"></a>性能、快照、缓存 (Reporting Services)
   报表服务器性能受各种组合因素的影响，这些因素包括硬件、访问报表的并发用户的数量、报表中的数据量和输出格式。 若要了解影响您的安装的具体性能因素以及哪个补救办法将生成所需的结果，您将需要获得基准数据并运行测试。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容： [Reporting Services 性能优化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 和 [使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](http://go.microsoft.com/fwlink/?LinkID=77519)。  
   
  下面是需要考虑的总原则：  
@@ -35,11 +40,11 @@ caps.handback.revision: 20
   
 -   如果所有报表在以特定格式处理（例如，以 PDF 格式呈现）时都慢，请考虑使用文件共享传递、添加更多的内存或者选择其他格式。  
   
--   若要确定处理报表所需的时间以及其他使用情况指标，请检查报表服务器的执行日志。 有关详细信息，请参阅[报表服务器 ExecutionLog 和 ExecutionLog3 视图](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
+-   若要确定处理报表所需的时间以及其他使用情况指标，请检查报表服务器的执行日志。 有关详细信息，请参阅 [报表服务器 ExecutionLog 和 ExecutionLog3 视图](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
--   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅[为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
+-   有关如何通过优化内存管理配置设置来缓解性能问题的详细信息，请参阅 [为报表服务器应用程序配置可用内存](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [监视报表服务器性能](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  介绍可用来跟踪服务器上的处理负载的性能对象。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 20
  [为报表和共享数据集处理设置超时值 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  介绍如何针对查询和报表处理设置超时值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)   
  [验证报表运行情况](../../reporting-services/report-server/verifying-a-report-run.md)  
   

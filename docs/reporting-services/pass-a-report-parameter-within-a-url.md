@@ -1,26 +1,31 @@
 ---
-title: "在 URL 内传递报表参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL 访问 [Reporting Services], 传递参数"
-  - "传递参数 [Reporting Services]"
+title: "将报表参数在 URL 内的传递 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在 URL 内传递报表参数
+# <a name="pass-a-report-parameter-within-a-url"></a>在 URL 内传递报表参数
   您可以通过在报表 URL 中包含报表参数，将它们传递到报表。 这些 URL 参数不带前缀，因为它们被直接传递到报表处理引擎。  
   
 > [!IMPORTANT]  
@@ -78,7 +83,7 @@ SalesOrderNumber:isnull=true
  要传递 **Boolean** 值，请使用 0 表示 False，使用 1 表示 True。 要传递 **Float** 值，请包含服务器区域设置的小数分隔符。  
   
 > [!NOTE]  
->  如果报表包含的某个报表参数具有默认值，并且 **Prompt** 属性的值为 **false**（即，在报表管理器中未选择 Prompt User 属性），则无法在 URL 中为该报表参数传递值。 这向管理员提供了一个选项，以防止最终用户添加或修改某些报表参数的值。  
+>  如果报表包含的某个报表参数具有默认值，并且 **Prompt** 属性的值为 **false** （即，在报表管理器中未选择 Prompt User 属性），则无法在 URL 中为该报表参数传递值。 这向管理员提供了一个选项，以防止最终用户添加或修改某些报表参数的值。  
   
 ##  <a name="bkmk_examples"></a> 其他示例  
  以下 URL 示例包含空格和多个参数  
@@ -105,7 +110,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
   

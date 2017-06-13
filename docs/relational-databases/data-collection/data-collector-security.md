@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/service/integration-services-roles-ssis-service.md)。  
+ 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 ### <a name="dcproxy-role"></a>dc_proxy 角色  
  **dc_proxy** 角色的成员对数据收集器收集组和收集器级别的属性拥有读取访问权限。 此角色的成员还可以执行它们所拥有的作业和创建以现有代理帐户运行的作业步骤。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/service/integration-services-roles-ssis-service.md)。  
+ 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../integration-services/security/integration-services-roles-ssis-service.md)。  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>用于配置和使用管理数据仓库的权限  
  用户必须是为访问管理数据仓库而提供的一个或多个固定数据库角色的成员，具体的角色取决于任务。 按照从最高特权访问到最低特权访问的顺序，角色如下所示：  

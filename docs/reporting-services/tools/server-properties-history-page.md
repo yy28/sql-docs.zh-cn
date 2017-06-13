@@ -1,26 +1,31 @@
 ---
-title: "服务器属性（“历史记录”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.history.f1"
+title: "服务器属性 （历史记录页） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 30
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66744654fac383f2390109a01f8d4cb7b502bf7a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 服务器属性（“历史记录”页）
-  在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 中使用此 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 页可设置要保留的报表历史记录副本数的默认值。 该默认值为所有报表提供建立报表历史记录限制的初始设置。 可以针对不同的报表采用不同的设置。  
+# <a name="server-properties-history-page"></a>服务器属性（“历史记录”页）
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中使用此 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 页可设置要保留的报表历史记录副本数的默认值。 该默认值为所有报表提供建立报表历史记录限制的初始设置。 可以针对不同的报表采用不同的设置。  
   
  报表历史记录是一系列报表快照，这些快照中包括创建快照时报表的数据和布局。 可以使用报表历史记录来保留报表在特定日期或时间的副本。 可以为在处于本机模式的报表服务器上或配置了 SharePoint 集成模式的报表服务器上运行的单个报表创建和管理报表历史记录。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 30
  3) 右键单击报表服务器名称，然后选择“属性”。
  4) 单击 **“历史记录”** 将此页打开。  
   
-## 选项  
+## <a name="options"></a>选项  
  **不限制报表历史记录中保留的快照数**  
  保留所有的报表历史记录快照。 要减少报表历史记录的大小，必须手动删除快照。  
   
@@ -41,9 +46,10 @@ caps.handback.revision: 30
   
  如果以后限制报表历史记录，则在现有的报表历史记录超出您指定的限制时，报表服务器将减少现有的报表历史记录以符合新限制。 首先删除最旧的报表快照。 如果报表历史为空或者低于限制，则添加新的报表快照。 到达限制后，将在添加新的报表快照时删除时间最早的快照。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
+

@@ -1,24 +1,29 @@
 ---
-title: "教程：表达式简介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 引入表达式 |Microsoft 文档"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：表达式简介
+# <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
 将编写表达式，这些表达式用于连接名称值、在单独的数据集中查找值和基于字段值显示不同的颜色等。  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
   
 本教程的预计学时：30 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Setup"></a>1.使用表向导或矩阵向导创建表报表和数据集  
@@ -40,7 +45,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建表报表  
+### <a name="to-create-a-table-report"></a>创建表报表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 14
   
 ## <a name="UpdateNames"></a>2.更新数据源和数据集的默认名称  
   
-### 更新数据源的默认名称  
+### <a name="to-update-the-default-name-of-the-data-source"></a>更新数据源的默认名称  
   
 1.  在“报表数据”窗格中，展开“数据源”文件夹。  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 14
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 更新数据集的默认名称  
+### <a name="to-update-the-default-name-of-the-dataset"></a>更新数据集的默认名称  
   
 1.  在“报表数据”窗格中，展开“数据集 ”文件夹。  
   
@@ -197,7 +202,7 @@ caps.handback.revision: 14
 ## <a name="DateFormat"></a>（可选）设置日期列、货币列和标题行的格式  
 在此部分中，设置“Last Purchase”列和“YTDPurchase”列的格式，此两列分别包含日期和货币。 同样设置标题行的格式。  
   
-### 设置日期列的格式  
+### <a name="to-format-the-date-column"></a>设置日期列的格式  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -211,11 +216,11 @@ caps.handback.revision: 14
 
     现可看到所选格式设置的示例。 
   
-### 设置货币列的格式
+### <a name="to-format-the-currency-column"></a>设置货币列的格式
 
 - 选择“YTDPurchase”列中的数据单元格，然后在“数字”部分，选择“货币符号”。
  
-### 设置列标题的格式
+### <a name="to-format-the-column-headers"></a>设置列标题的格式
 
 1. 选择列标题所在行。
 
@@ -236,7 +241,7 @@ caps.handback.revision: 14
 将该报表制作为镶边报表时，若要保留在该表单元格中使用的颜色，添加一个矩形，然后向该矩形添加背景色。  
     
  
-### 添加 M/F 列  
+### <a name="to-add-an-mf-column"></a>添加 M/F 列  
   
 1.  右键单击“Name”列，指向“插入列”，然后单击“左”。  
   
@@ -244,7 +249,7 @@ caps.handback.revision: 14
   
 2.  单击新列的标题，然后键入 **M/F**。  
   
-### 添加矩形  
+### <a name="to-add-a-rectangle"></a>添加矩形  
   
 1.   在“插入”选项卡上，单击“矩形”，然后单击“M/F”列的数据单元。  
   
@@ -256,7 +261,7 @@ caps.handback.revision: 14
 
     ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
-### 使用颜色显示性别  
+### <a name="to-use-color-to-show-gender"></a>使用颜色显示性别  
   
 1.  右键单击“M/F”列的数据单元中的矩形，然后单击“矩形属性”。  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 14
 
 13. 在其后键入一个右括号 **)**。 
   
-    完成的表达式：`=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
+    完成的表达式： `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
     ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
@@ -296,7 +301,7 @@ caps.handback.revision: 14
 
     ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
-### 设置彩色矩形的格式
+### <a name="to-format-the-color-rectangles"></a>设置彩色矩形的格式
 
 1. 单击 **“设计”** 返回设计视图。  
 
@@ -315,13 +320,13 @@ caps.handback.revision: 14
 ## <a name="Lookup"></a>5.查找 CountryRegion 名称  
 在此部分，创建 CountryRegion 数据集，使用 **Lookup** 函数显示国家/地区的名称，而非国家/地区的标识符。  
   
-### 创建 CountryRegion 数据集  
+### <a name="to-create-the-countryregion-dataset"></a>创建 CountryRegion 数据集  
   
 1.  单击 **“设计”** 返回设计视图。  
   
 2.  在“报表数据”窗格中，单击“新建”，然后单击“数据集”。  
   
-3.  在“数据集”属性中，单击“使用在我的报表中嵌入的数据集”。  
+3.  在 * * 数据集属性，单击**使用我的报表中嵌入的数据集**。  
   
 4.  在“数据源”列表中，选择“ExpressionsDataSource”。  
   
@@ -358,7 +363,7 @@ caps.handback.revision: 14
 
      现在，“报表数据”列有了第二个数据集。
   
-### 查找 CountryRegion 数据集中的值  
+### <a name="to-look-up-values-in-the-countryregion-dataset"></a>查找 CountryRegion 数据集中的值  
   
 1.  单击“Country Region ID”列标题并删除文本：**ID**，因此它会读作“Country Region”。  
   
@@ -372,7 +377,7 @@ caps.handback.revision: 14
   
 6.  在“类别”列表中，单击“字段(表达式)”，然后在“值”列表中，再次双击“CountryRegionID”。  
   
-8.  立即将光标放在 `CountryRegionID.Value` 后，然后键入 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
+8.  立即将光标放在 `CountryRegionID.Value`后，然后键入 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
   
     完成的表达式： `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -385,7 +390,7 @@ caps.handback.revision: 14
 ## <a name="Count"></a>6.计算自上次采购后的天数  
 在本部分中，添加一列，然后使用 **Now** 函数或 `ExecutionTime` 内置全局变量计算客户自上次采购至今的天数。  
   
-### 添加 Days Ago 列  
+### <a name="to-add-the-days-ago-column"></a>添加 Days Ago 列  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -410,9 +415,9 @@ caps.handback.revision: 14
 13. 在“类别”列表中，再次单击“日期和时间”，然后在“项”列表中，双击“现在”。  
   
     > [!WARNING]  
-    > 在生产报表中，不应在报表呈现过程中会多次计算的表达式中（例如，在报表的详细信息行中）使用 **Now** 函数。 **Now** 的值随行变化，不同的值会影响表达式的计算结果，这将导致结果略微不一致。 相反，使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的 `ExecutionTime` 全局变量。  
+    > 在生产报表中，不应在报表呈现过程中会多次计算的表达式中（例如，在报表的详细信息行中）使用 **Now** 函数。 **Now** 的值随行变化，不同的值会影响表达式的计算结果，这将导致结果略微不一致。 相反，使用 `ExecutionTime` 提供的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全局变量。  
   
-15. 删除 `Now(` 后的左括号，然后键入右括号 **)**  
+15. 删除 `Now(`后的左括号，然后键入右括号 **)**  
   
     完成的表达式： `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -427,7 +432,7 @@ caps.handback.revision: 14
   
 需通过几个步骤配置指示器及其状态。 如果需要，可以跳过“配置指示器”过程，将已完成的表达式从本教程复制/粘贴到“表达式”对话框。  
   
-### 添加 + or - AVG Sales 列  
+### <a name="to-add-the--or---avg-sales-column"></a>添加 + or - AVG Sales 列  
   
 1.  右键单击“YTD Purchase”列，指向“插入列”，然后单击“右”。  
   
@@ -435,7 +440,7 @@ caps.handback.revision: 14
   
 2.  单击列标题，然后键入 **+ or - AVG Sales**  
   
-### 添加指示器  
+### <a name="to-add-an-indicator"></a>添加指示器  
   
 1.  在“插入”选项卡上，单击“指示器”，然后在 **+ or - AVG Sales** 列的数据单元中单击。  
   
@@ -447,7 +452,7 @@ caps.handback.revision: 14
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 配置指示器  
+### <a name="to-configure-the-indicator"></a>配置指示器  
   
 1.  右键单击指示器，单击“指示器属性”，然后单击“值和状态”。  
   
@@ -507,7 +512,7 @@ caps.handback.revision: 14
   
 34. 单击“结束”值的文本框右侧的 **fx** 按钮。  
   
-35. 在“表达式”对话框中，删除 **100** 并创建表达式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在**表达式**对话框中，删除**100**和创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -520,7 +525,7 @@ caps.handback.revision: 14
 ## <a name="GreenBar"></a>8.制作镶边报表  
 创建参数以便报表读者可指定要应用于报表的交替行的颜色，使报表成为镶边报表。  
   
-### 添加参数  
+### <a name="to-add-a-parameter"></a>添加参数  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -564,9 +569,9 @@ caps.handback.revision: 14
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 将交替颜色应用于详细信息行  
+### <a name="to-apply-alternating-colors-to-detail-rows"></a>将交替颜色应用于详细信息行  
   
-1.   选择数据行中的所有单元格，**M/F** 列中具有自己的背景色的单元格除外。  
+1.   选择数据行中的所有单元格， **M/F** 列中具有自己的背景色的单元格除外。  
 
      ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
@@ -598,7 +603,7 @@ caps.handback.revision: 14
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 运行报表  
+### <a name="run-the-report"></a>运行报表  
   
 1.  在“主页”选项卡上，单击**“运行”**。  
 
@@ -617,7 +622,7 @@ caps.handback.revision: 14
 ## <a name="Title"></a>（可选）添加报表标题  
 为报表添加标题。  
   
-### 添加报表标题  
+### <a name="to-add-a-report-title"></a>添加报表标题  
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
@@ -638,7 +643,7 @@ caps.handback.revision: 14
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-to-a-report-server"></a>将报表保存到报表服务器  
   
 1.  在“文件”菜单上，转至“另存为”。  
   
@@ -657,7 +662,7 @@ caps.handback.revision: 14
 ![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [表达式（报表生成器和 SSRS）](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [表达式示例（报表生成器和 SSRS）](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [指示器（报表生成器和 SSRS）](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
@@ -667,3 +672,5 @@ caps.handback.revision: 14
   
   
   
+
+

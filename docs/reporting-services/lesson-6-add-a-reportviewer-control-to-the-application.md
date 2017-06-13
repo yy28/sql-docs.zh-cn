@@ -1,27 +1,32 @@
 ---
-title: "第 6 课：将 ReportViewer 控件添加到应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 6 课： 将 ReportViewer 控件添加到应用程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 914d8abf2ad7b72b5ce1035da2867c47b67dfa14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 6 课：将 ReportViewer 控件添加到应用程序
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：将 ReportViewer 控件添加到应用程序
 使用报表向导设计子报表后，接下来要向网站应用程序添加 ReportViewer 控件。 如果使用 ASP.NET 报表网站，它将添加 ReportViewer 控件到 default.aspx 页。   
   
-### 向应用程序添加 ReportViewer 控件  
+### <a name="to-add-a-reportviewer-control-to-the-application"></a>向应用程序添加 ReportViewer 控件  
   
 1.  在“解决方案资源管理器”中，右键单击 **Default.aspx**，然后单击“视图设计器”。  
   
@@ -39,6 +44,8 @@ caps.handback.revision: 7
   
     随后将编译报表，并将在“错误列表”区域中显示任何错误，如报表表达式中的语法错误。 单击 Visual Studio 窗口底部的“错误列表”以显示“错误列表”区域。  
   
-## 下一个任务  
-您已成功地将 ReportViewer 控件添加到网站应用程序。 接下来，将在父报表上添加钻取操作。 请参阅[第 7 课：在父报表上添加钻取操作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)。  
+## <a name="next-task"></a>下一个任务  
+您已成功地将 ReportViewer 控件添加到网站应用程序。 接下来，将在父报表上添加钻取操作。 请参阅 [第 7 课：在父报表上添加钻取操作](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)。  
   
+
+

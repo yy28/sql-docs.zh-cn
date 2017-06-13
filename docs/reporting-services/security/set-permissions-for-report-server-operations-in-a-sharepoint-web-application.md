@@ -1,30 +1,35 @@
 ---
-title: "在 SharePoint Web 应用程序中设置报表服务器操作的权限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "权限 [Reporting Services], SharePoint 集成模式"
-  - "SharePoint 集成 [Reporting Services], 权限"
-  - "SharePoint 集成 [报表生成器]"
-  - "安全 [Reporting Services], SharePoint 集成模式"
-  - "Report Builder 1.0, SharePoint 集成"
-  - "模型项安全性 [Reporting Services]"
+title: "在 SharePoint Web 应用程序中设置报表服务器操作的权限 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在 SharePoint Web 应用程序中设置报表服务器操作的权限
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 应用程序中设置报表服务器操作的权限
   对于在 SharePoint 集成模式下运行的报表服务器而言，在 SharePoint 站点定义的安全设置将决定您查看和管理报表、报表模型以及共享数据源的方式。 如果使用的是默认 SharePoint 组、权限级别和权限分配，则可以使用当前安全设置来处理报表和其他文档。  
   
  如果默认安全设置未提供所需访问级别，则可以使用以下各部分提供的信息来了解特定操作需要哪些权限：  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  如果使用的是预定义权限级别，则无需执行任何操作，因为上述权限已经包含在“完全控制”、“设计”、“参与讨论”、“读取”和“有限访问”中。 但是，如果使用自定义权限级别或对分配给特定用户或组的权限进行编辑，则必须手动添加此权限。  
   
- 利用“浏览用户信息”权限，报表服务器可以返回有关项目创建者和最后修改项目的用户的信息。 如果无此权限，报表服务器将返回以下错误。 对于浏览操作，错误为：“报表服务器遇到 SharePoint 错误。 ---> System.UnauthorizedAccessException：拒绝访问。” 对于发布操作，错误为“为用户‘\<域>\\<用户\>授予的权限不足，无法执行此操作。”  
+ 利用“浏览用户信息”权限，报表服务器可以返回有关项目创建者和最后修改项目的用户的信息。 如果无此权限，报表服务器将返回以下错误。 对于浏览操作，错误为：“报表服务器遇到 SharePoint 错误。 ---> System.UnauthorizedAccessException：拒绝访问。” 有关发布操作，错误为:"用户授予的权限\<域 >\\< 用户\>不足以执行此操作。"  
   
 ##  <a name="permissionReports"></a> 查看和管理报表的权限  
  报表定义权限是通过包含报表的库的列表权限来定义的，但如果要限制访问，则可以对单个报表设置权限。 下表提供了任务列表以及支持每个任务的权限列表。  
@@ -84,9 +89,9 @@ caps.handback.revision: 17
 |启动报表生成器。|没有显式用来控制对报表生成器的使用的权限。 如果配置了报表服务器集成并拥有将项添加到库的权限，则可以使用报表生成器。 若要从库的 **“新建”** 菜单中启动报表生成器，则必须注册报表生成器内容类型。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |上载模型或共享数据源。|对将要包含文件的库拥有“添加项” 权限。|  
 |查看模型或依赖的共享数据源。|对包含文件的库拥有“查看项” 权限。<br /><br /> 如果模型包含模型项安全设置，则用户还必须拥有该模型的“枚举权限”。 |  
-|从共享数据源中生成模型。|对包含共享数据源 (.rsds) 文件（从中生成模型）的库拥有“添加项”权限。|  
-|在模型内设置对特定模型项的权限。|对包含库和报表模型 (.smdl) 文件的站点拥有“管理权限”权限。|  
-|在报表生成器中加载模型。|对报表模型 (.smdl) 文件拥有“编辑项”权限。|  
+|从共享数据源中生成模型。|对包含共享数据源 (.rsds) 文件（从中生成模型）的库拥有“添加项” 权限。|  
+|在模型内设置对特定模型项的权限。|对包含库和报表模型 (.smdl) 文件的站点拥有“管理权限” 权限。|  
+|在报表生成器中加载模型。|对报表模型 (.smdl) 文件拥有“编辑项” 权限。|  
 |在报表生成器中创建报表定义并将报表保存到库中。|拥有将文件保存到库的“添加项” 权限。|  
 |在报表生成器中编辑报表。|对报表定义文件拥有“编辑项” 权限。|  
   
@@ -126,12 +131,12 @@ caps.handback.revision: 17
 |将共享数据源 (.rsds) 用于报表。|对报表或包含报表的库拥有“编辑项” 权限。 在报表上设置数据源属性包括选择共享数据源。|  
 |从共享数据源中生成报表模型。|对将要包含报表模型的库拥有“添加项” 权限。|  
 |删除报表模型。|对包含报表模型的库或对报表模型本身拥有“删除项” 权限。|  
-|在模型内设置对特定模型项的权限。|对包含库和报表模型 (.smdl) 文件的站点拥有“管理权限”权限。|  
+|在模型内设置对特定模型项的权限。|对包含库和报表模型 (.smdl) 文件的站点拥有“管理权限” 权限。|  
   
 > [!NOTE]  
 >  没有编辑报表模型的权限。 尽管可以生成或删除报表模型，但不能在 SharePoint 站点内编辑这些报表模型。 编辑报表模型要求使用模型设计器，这是一种不受 SharePoint 中所设置的权限影响的客户端创作工具。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

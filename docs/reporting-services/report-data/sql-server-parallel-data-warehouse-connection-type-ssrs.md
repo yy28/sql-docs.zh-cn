@@ -1,26 +1,33 @@
 ---
-title: "SQL Server Parallel Data Warehouse 连接类型 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 并行数据仓库连接类型 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server Parallel Data Warehouse 连接类型 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行分布式处理和数据存储。  
+
+# <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
+
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]使用 SQL Server 数据库进行分布式处理和数据存储。  
   
- 该工具可跨多个物理节点对大型数据库表进行分区，每个节点运行自己的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例。 当报表连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例，都没有任何区别。  
+ 跨多个物理节点，每个节点运行自己的 SQL Server 实例设备分区大型数据库表。 当报表连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 以检索报表数据时，它将连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点，该节点负责管理查询处理。 建立连接后，无论是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境内部还是外部的 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 实例，都没有任何区别。  
   
  若要在报表中包含来自 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的数据，您必须拥有一个基于类型为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并行数据仓库数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]并从中检索数据。  
   
@@ -28,7 +35,7 @@ caps.handback.revision: 9
   
  有关详细信息，请参阅网站 [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)类型的报表数据源的数据集。  
   
 ##  <a name="Connection"></a> 连接字符串  
  连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]时，也会连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的数据库对象。 可在查询设计器中指定要使用的数据库对象。 如果未在连接字符串中指定数据库，则将连接到管理员为您分配的默认数据库。 请联系数据库管理员，获取连接信息以及用于连接到数据源的凭据。 下面的连接字符串示例指定 **工具中的**CustomerSales [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 示例数据库：  
@@ -39,7 +46,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  此外，可以使用 **“数据源属性”** 对话框提供用户名和密码等凭据。系统会自动将 `User Id` 和 `Password` 选项追加到连接字符串中，您无需将它们作为连接字符串的一部分键入。 用户界面还提供了相关选项，用于指定 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 工具中的控制节点的 IP 地址及端口号。 默认情况下，该端口为 17000。 该端口可由管理员配置，您的连接字符串可能会使用不同的端口号。  
   
- 有关连接字符串示例的详细信息，请参阅[报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)。  
+ 有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 凭据  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 提供其自己的安全技术，以实现和存储用户名和密码。 不能使用 Windows 身份验证。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ，则会发生错误。  
@@ -52,9 +59,8 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+ 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Query"></a> 查询  
  查询指定了要为报表数据集检索哪些数据。  
@@ -69,11 +75,11 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)和[基于文本的查询设计器用户界面（报表生成器）](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
- 基于文本的查询设计器支持[文本](#QueryText)模式，在此模式下，可以键入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令，选择来自数据源的数据。  
+ 基于文本的查询设计器支持 [文本](#QueryText) 模式，在此模式下，可以键入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令，选择来自数据源的数据。  
   
 -   [Text](#QueryText)  
   
- 在 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 中，使用 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ；在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中，使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
+ 你使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]与[!INCLUDE[ssDW](../../includes/ssdw-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]与 SQL Server。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
   
  如果不对数据进行聚合和汇总以减少查询返回的行数，从大型数据库（包括 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]等数据仓库）检索报表数据的查询所生成的结果集就可能会包含大量的行。 您可以使用图形查询设计器或基于文本的查询设计器，编写包括聚合和分组的查询。  
   
@@ -99,7 +105,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- 单击工具栏上的“运行”按钮 (**!**) 可以运行查询并显示结果集。  
+ 单击工具栏上的 **“运行”** 按钮 (**!**) 可以运行查询并显示结果集。  
   
  若要参数化此查询，请添加一个查询参数。 例如，将 WHERE 子句更改为下面的内容：  
   
@@ -107,7 +113,6 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  运行查询时，会自动创建与查询参数对应的报表参数。 有关详细信息，请参阅本主题后面的 [查询参数](#Parameters) 。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Parameters"></a> Parameters  
  如果查询文本包含查询变量或具有输入参数的存储过程，则将自动生成数据集的对应查询参数和报表的报表参数。 查询文本不得包含针对每个查询变量的 DECLARE 语句。  
@@ -120,16 +125,14 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)类型的报表数据源的数据集。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Remarks"></a> 注释  
   
-###### 平台和版本信息  
+###### <a name="platform-and-version-information"></a>平台和版本信息  
  有关平台和版本支持的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
@@ -140,7 +143,6 @@ WHERE EmployeeID = (@EmpID)
   
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
@@ -148,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -159,12 +161,11 @@ WHERE EmployeeID = (@EmpID)
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
-  
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
-  
-## 另请参阅  
- [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>后续步骤
+
+[报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+[筛选器、 组和数据进行排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[表达式](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

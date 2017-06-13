@@ -1,37 +1,43 @@
 ---
-title: "使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查看和浏览本机模式报表使用的 SharePoint Web 部件 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再支持从本机模式报表服务器上使用本机模式 (RSWebParts.cab) Web 部件访问 SharePoint 站点上的报表服务器内容。 而是使用 [SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)。  
+>  SQL Server Reporting Services 不再支持在从本机模式报表服务器的 SharePoint 站点上使用本机模式 (RSWebParts.cab) 以访问报表服务器内容的 web 部件。 而是使用 [SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) 。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了多个 Web 部件，可用于特定版本的报表服务器，特别是部署模式。  
   
 -   **本机模式：** 如果希望从本机模式报表服务器访问 SharePoint 站点上的报表服务器内容，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的 SharePoint 2.0 Web 部件报表资源管理器和报表查看器。 本主题提供了有关安装和使用 2.0 Web 部件的说明。  
   
--   **SharePoint 模式：**如果希望访问在 SharePoint 模式下运行的报表服务器，请使用用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件。 有关外接程序的详细信息，请参阅[在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **SharePoint 模式：** 如果希望访问在 SharePoint 模式下运行的报表服务器，请使用用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件。 有关外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 > [!NOTE]  
 >  用于本机模式的报表查看器 Web 部件 (SPViewer.dwp) 是一种与用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件 (ReportViewer.dwp) 不同的 Web 部件。 这两种 Web 部件具有不同的架构和实现方式，但它们可以一起安装在同一个 SharePoint 场中。 可以通过以下特征直观地区分这两种 Web 部件：通过外接程序安装的报表查看器 Web 部件在工具栏上有一个“操作”菜单。  
   
- 有关报表服务器模式的详细信息，请参阅 [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-报表服务器.md)。  
+ 有关报表服务器模式的详细信息，请参阅 [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)。  
   
  本主题内容：  
   
@@ -61,7 +67,7 @@ caps.handback.revision: 9
   
 -   支持的 SharePoint 产品和技术版本包括：  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007。  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
   
@@ -71,14 +77,14 @@ caps.handback.revision: 9
   
 -   必须安装报表管理器。  
   
- 报表资源管理器和报表查看器 Web 部件通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的 CAB (.cab) 文件分发。 本主题以下各部分提供了有关安装、配置和使用 Web 部件的说明。  
+ 报表资源管理器和报表查看器 Web 部件通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的 CAB (.cab) 文件分发。 本主题以下各部分提供了有关安装、配置和使用 Web 部件的说明。  
   
 ##  <a name="bkmk_installingwebparts"></a> 安装 Web 部件  
  Web 部件作为 CAB (.cab) 文件传递到 SharePoint 服务器。 从命令行针对 .cab 文件运行 SharePoint Stsadm.exe 工具以安装 Web 部件。 若要了解有关该工具和 Web 部件部署的详细信息，请参阅您的 SharePoint 文档。  
   
-#### 使用 PowerShell 安装 Web 部件  
+#### <a name="install-web-parts-using-powershell"></a>使用 PowerShell 安装 Web 部件  
   
-1.  将 **RSWebParts.cab** 复制到 SharePoint 服务器上的某个文件夹。 您可以将该文件复制到 SharePoint 服务器上的任意文件夹，然后在安装 Web 部件后将其删除。 默认情况下， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将 RSWebParts.cab 文件安装到以下文件夹中：  
+1.  将 **RSWebParts.cab** 复制到 SharePoint 服务器上的某个文件夹。 您可以将该文件复制到 SharePoint 服务器上的任意文件夹，然后在安装 Web 部件后将其删除。 默认情况下 SQL Server 2014 Reporting Services 和更早版本将 RSWebParts.cab 文件安装到以下文件夹：  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -102,7 +108,7 @@ caps.handback.revision: 9
   
      有关使用 PowerShell 的详细信息，请参阅 [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
   
-#### 使用 STSADM.exe 安装 Web 部件  
+#### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安装 Web 部件  
   
 1.  将 **RSWebParts.cab** 文件复制到与本文的 PowerShell 部分中所述 SharePoint 服务器上的相同位置。  
   
@@ -125,7 +131,7 @@ caps.handback.revision: 9
   
  下面的过程将向一个网页中添加这两种 Web 部件，然后一起连接报表资源管理器和报表查看器，这样，当您在报表资源管理器中单击某一报表时，该报表将显示在报表查看器内。  
   
-#### 添加报表查看器  
+#### <a name="add-report-viewer"></a>添加报表查看器  
   
 1.  在“站点操作”中，单击 **“编辑页面”**。  
   
@@ -142,13 +148,13 @@ caps.handback.revision: 9
   
 6.  当页面处于编辑模式时，在报表查看器 Web 部件中单击 **“编辑 Web 部件”** 。  
   
-7.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法：**http://\<servername>/reports**。  
+7.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法： **http://\<服务器名 > / 报表**。  
   
-8.  在 **“报表路径”**中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products** 中。  
+8.  在 **“报表路径”**中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
   
 9. 单击 **“确定”**。  
   
-#### 添加报表资源管理器和连接到报表查看器  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>添加报表资源管理器和连接到报表查看器  
   
 1.  在该页的另一个区域中，单击 **“添加 Web 部件”** ，从杂项文件夹中单击 **“报表资源管理器”** ，然后单击 **“添加”**。  
   
@@ -156,7 +162,7 @@ caps.handback.revision: 9
   
 3.  在 **“报表管理器 URL”**中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。  
   
-4.  （可选）设置 **“开始路径”**。 开始路径是报表服务器文件夹层次结构中的文件夹。 如果希望默认页面是深入文件夹层次结构的某个文件夹，则可以指定开始路径。 该路径必须以正斜杠开头。 您必须指定从报表服务器文件夹层次结构根节点开始的完整路径，但不包含服务器名称或报表管理器虚拟目录。 例如，若要打开紧邻根节点下名为 Adventure Works 的文件夹，请在“开始路径”中指定 **/Adventure Works**。  
+4.  （可选）设置 **“开始路径”**。 开始路径是报表服务器文件夹层次结构中的文件夹。 如果希望默认页面是深入文件夹层次结构的某个文件夹，则可以指定开始路径。 该路径必须以正斜杠开头。 您必须指定从报表服务器文件夹层次结构根节点开始的完整路径，但不包含服务器名称或报表管理器虚拟目录。 例如，若要打开紧邻根节点下名为 Adventure Works 的文件夹，请在“开始路径”中指定 **/Adventure Works** 。  
   
 5.  单击 **“确定”**。  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  单击 **“在以下位置显示报表”**。  
   
     3.  单击 **“报表查看器”**。  
-  
-## 另请参阅  
- [报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Reporting Services 报表服务器（SharePoint 模式）](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

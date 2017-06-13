@@ -1,25 +1,32 @@
 ---
-title: "报表设计器中的报表部件 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: "报表部件在报表设计器 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表设计器中的报表部件 (SSRS)
+
+# <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
+
   在报表设计器中，在你创建了表、图表和项目中的其他分页报表项后，可以将它们作为“报表部件”发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便你和他人可以在其他报表中重复使用它们。  
   
  通常，报表部件在报表设计器中和报表生成器中以相同的方式工作。 若要了解基本功能，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -27,7 +34,7 @@ caps.handback.revision: 11
  但在报表设计器中，报表部件在工作方式上还存在一些基本差异。 一个主要的差异就是工作流。 报表生成器支持协作创作：我创建了一个报表部件并发布它。 您可以重复使用、修改和重新发布该报表部件。 在报表设计器中，发布是单向的：我可以从报表设计器发布一个报表部件，而您可以重复使用该部件。 但是，我不能在报表设计器中在报表中重复使用现有的报表部件。 本主题首先快速介绍一下报表部件，然后详细阐述这些差异。  
   
 ##  <a name="ComponentWorkflow"></a> 报表部件发布的生命周期  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  在报表设计器中，人员 A 创建一个含报表的项目，而报表中的图表依赖于某一嵌入数据集。  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  人员 B 在报表生成器中创建一个空白报表，然后向其添加该图表。 该图表现在是人员 B 的报表部件，同时嵌入数据集也是报表部件。 人员 B 可以修改位于报表中的该图表和数据集的实例。 这将不会对报表服务器上图表和数据集的实例产生影响，并且不会破坏报表和报表服务器上实例之间的关系。  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  在报表设计器中，人员 A 修改原始报表中的图表。  
   
@@ -66,7 +73,7 @@ caps.handback.revision: 11
   
 -   列表  
   
- 如果您要发布显示数据（例如表、矩阵或图表）的某一报表部件，则可以将该报表部件基于某一共享数据集；否则，在您发布该报表部件时，它所依赖的数据集将作为嵌入数据集保存。 嵌入数据集可以基于嵌入数据源，但凭据不存储于嵌入数据源中。 因此，如果您的报表部件依赖于使用某一嵌入数据源的嵌入数据集，则重复使用此报表部件的任何人都将需要为该嵌入数据源提供凭据。 若要避免这种情况，请将您的嵌入数据集和共享数据集基于具有存储的凭据的共享数据源。 有关详细信息，请参阅[报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
+ 如果您要发布显示数据（例如表、矩阵或图表）的某一报表部件，则可以将该报表部件基于某一共享数据集；否则，在您发布该报表部件时，它所依赖的数据集将作为嵌入数据集保存。 嵌入数据集可以基于嵌入数据源，但凭据不存储于嵌入数据源中。 因此，如果您的报表部件依赖于使用某一嵌入数据源的嵌入数据集，则重复使用此报表部件的任何人都将需要为该嵌入数据源提供凭据。 若要避免这种情况，请将您的嵌入数据集和共享数据集基于具有存储的凭据的共享数据源。 有关详细信息，请参阅 [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
   
  在报表设计器中发布报表部件的过程分为以下两步：  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  部署报表。  
   
- 在您部署报表时，报表部件将发布到某一 SharePoint 站点或报表服务器，并且其他人可以重复使用它。 若要发布某一报表部件，在部署报表时，您必须具有与某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器的连接并且对其具有足够的权限。  
+ 在您部署报表时，报表部件将发布到某一 SharePoint 站点或报表服务器，并且其他人可以重复使用它。 若要发布报表部件，你必须具有足够的权限并连接到报表服务器上部署报表时。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> 重复使用报表部件  
  与报表生成器中不同，如果某一项目并非您在其中创建了报表部件的项目，则不能在该项目中搜索和重复使用该报表部件。  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  您可以修改报表部件，然后将其重新发布到网站或服务器上。 对于将该报表部件添加到某一报表中的报表生成器报表作者，系统将在他们下次打开该报表时向他们通知所做更改。 他们可以选择接受或拒绝您的更改。  
   
  您还可以选择将已经发布的报表部件作为新报表部件发布。 在“发布报表部件”对话框中，单击“作为新报表部件发布”。 此新报表部件具有新的唯一 ID，并与旧的报表部件没有关系。  
-  
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
-  
-## 另请参阅  
- [管理报表部件](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>后续步骤
+
+[管理报表部件](../../reporting-services/report-design/managing-report-parts.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

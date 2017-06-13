@@ -1,26 +1,31 @@
 ---
-title: "打印报表（SharePoint 模式下的 Reporting Services） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "打印报表, SharePoint Web 应用程序"
-  - "打印报表"
+title: "打印报表 (Reporting Services SharePoint 模式下) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing reports, SharePoint Web application
+- printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 打印报表（SharePoint 模式下的 Reporting Services）
+# <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>打印报表（SharePoint 模式下的 Reporting Services）
   对于在 SharePoint 模式下运行的报表服务器，可使用三种方法从 SharePoint Web 应用程序打印报表：  
   
 -   **从 SharePoint 站点** 从打开报表时显示在报表工具栏中的 **“操作”** 菜单中选择 **“打印”** 。 这将提供 Reporting Services 打印功能，其中包括用于选择打印机、指定页面和边距以及预览报表的标准 **“打印”** 对话框。 此打印功能旨在替代浏览器“文件”菜单中的“打印”命令。 通过这种方式打印报表时，报表的打印效果与其设计样式相同，只是不包含在网页打印输出中看到的额外元素。  
@@ -36,7 +41,7 @@ caps.handback.revision: 11
   
  报表作者可以专门针对打印输出或特定的应用程序格式来设计报表。 请注意，由于不同应用程序格式的分页方式不同，因此对于所有报表的每种导出格式，您可能无法都获得最佳的打印输出效果。 与针对打印输出而设计的报表相比，在屏幕上显示的报表页面的设计宗旨是容纳可变数量的数据。 例如，对于包括矩阵的报表，根据您扩展行和列的方式，报表页可能会在水平方向和垂直方向同时扩展。 打印大小可变的报表时，不扩展矩阵的用户与扩展矩阵的用户获得的打印效果将会不同。 对于大多数的导出报表，报表打印输出包括报表上的所有可见内容，与用户在计算机监视器上看到的内容没有分别。  
   
-### 如何从“操作”菜单打印报表  
+### <a name="how-to-print-reports-from-the-actions-menu"></a>如何从“操作”菜单打印报表  
   
 1.  打开该报表。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 11
   
      若要在打印前查看报表，请单击 **“预览”** 按钮。 这将在单独的预览窗口中打开报表的首页。 如果报表已呈现在报表服务器上，则可以预览其他页。 预览的报表以 EMF 格式呈现。 在到达最后一页（此时会禁用 **“下一页”** 按钮）之前，您可以导航到上一页或下一页。 若要在预览页中修改打印边距，请单击 **“边距”** 按钮。 将显示 **“边距”** 对话框。 配置上、下、左、右边距，然后单击 **“确定”**。 此时，该对话框将关闭，并且修改后的设置会存储下来，以用于呈现预览和打印。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启用和禁用 Reporting Services 的客户端打印](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

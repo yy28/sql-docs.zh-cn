@@ -1,23 +1,28 @@
 ---
-title: "设置和配置度量单位（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "设置和配置度量单位 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 设置和配置度量单位（报表生成器和 SSRS）
+# <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>设置和配置度量单位（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器使用以下两个度量单位之一：百分比或数值。   
     
   默认情况下，指示器配置为使用百分比作为度量单位。 这意味着分配给指示器集中各图标的指示器值由百分比范围确定。 百分比范围在指示器集中的各图标上平均划分。 每个图标都表示一个指示器状态。 您可以通过指定不同的开始和结束百分比，更改指示器集中每个图标的百分比。 指示器还自动检测数据中的最小值和最大值。  
@@ -26,7 +31,7 @@ caps.handback.revision: 8
   
  可以通过使用表达式设置度量单位之类的选项。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
-## 使用数字状态度量单位  
+## <a name="to-use-the-numeric-state-measurement-unit"></a>使用数字状态度量单位  
   
 1.  右键单击要更改的指示器，然后单击“指示器属性”。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 8
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 使用百分比度量单位  
+## <a name="to-use-the-percentage-measurement-unit"></a>使用百分比度量单位  
   
 1.  右键单击要更改的指示器，然后单击“指示器属性”。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 8
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

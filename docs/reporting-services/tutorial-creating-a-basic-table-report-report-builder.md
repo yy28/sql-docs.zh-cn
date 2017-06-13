@@ -1,62 +1,43 @@
 ---
-title: "教程：创建基本表报表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 创建基本表报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 021a980dee9f6cd72f663475ba084962fa543cd4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：创建基本表报表（报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
-## <a name="BackToTop"></a>学习内容  
-在本教程中，您将了解如何执行下列操作：  
-  
-1.  [使用向导创建报表](#CreateTable)  
-  
-    1.  [在表向导中指定数据连接](#DataConnection)  
-  
-    2.  [在表向导中创建查询](#Query)  
-  
-    3.  [在表向导中将数据组织到组中](#Groups)  
-  
-    4.  [在表向导中添加小计行和合计行](#Subtotals)  
-  
-2.  [将数据格式设置为货币格式](#FormatCurrency)  
-  
-3.  [将数据格式设置为日期格式](#FormatDate)  
-  
-4.  [更改列宽](#Width)  
-  
-5.  [添加报表标题](#Title)  
-  
-6.  [保存报表](#Save)  
-  
-7.  [导出报表](#Export)  
-  
+
 完成本教程的预计学时：20 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="CreateTable"></a>1.使用向导创建报表  
 使用表或矩阵向导创建表报表。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
   
-### 创建报表  
+### <a name="to-create-a-report"></a>创建报表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -73,7 +54,7 @@ caps.handback.revision: 15
   
 在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-### 创建嵌入数据源  
+### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
   
 1.  在“选择数据集”页上，选择“创建数据集”，然后单击“下一步”。 将打开“选择数据源的连接”页面。  
   
@@ -109,7 +90,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建查询  
+### <a name="to-create-a-query"></a>创建查询  
   
 1.  在“设计查询”页中，关系查询设计器处于打开状态。 在本教程中，您将使用基于文本的查询设计器。  
   
@@ -162,7 +143,7 @@ caps.handback.revision: 15
 ## <a name="Groups"></a>1c. 在表向导中将数据组织到组中  
 在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
   
-### 将数据组织到组中  
+### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
   
 1.  在“排列字段”页上，将 Product 拖到“值”中。  
   
@@ -189,7 +170,7 @@ caps.handback.revision: 15
 ## <a name="Subtotals"></a>1d. 在表向导中添加小计行和合计行  
 创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
-### 添加小计和总计  
+### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
   
 1.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
@@ -213,10 +194,10 @@ caps.handback.revision: 15
   
 表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
   
-## <a name="FormatCurrency"></a>2.将数据格式设置为货币格式  
+## <a name="FormatCurrency"></a>2.将数据格式设置为货币  
 默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。   
   
-### 设置货币字段格式  
+### <a name="to-format-a-currency-field"></a>设置货币字段格式  
   
 1.  若要在设计视图中将格式化文本框和占位符文本视为示例值，请在“主文件夹”选项卡上的“数字”组中，单击“占位符样式”图标旁边的箭头 >“示例值”。  
   
@@ -233,7 +214,7 @@ Sales 的汇总值会以货币形式显示。
 ## <a name="FormatDate"></a>3.将数据格式设置为日期格式  
 默认情况下，SalesDate 字段会同时显示日期和时间。 您可以设置其格式，使其只显示日期。  
   
-### 将日期字段设置为默认格式  
+### <a name="to-format-a-date-field-as-the-default-format"></a>将日期字段设置为默认格式  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -247,7 +228,7 @@ Sales 的汇总值会以货币形式显示。
   
 SalesDate 值将以默认日期格式显示。  
   
-### 将日期格式更改为自定义格式  
+### <a name="to-change-the-date-format-to-a-custom-format"></a>将日期格式更改为自定义格式  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -274,7 +255,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 若要减少每个行占用的垂直空间量，请扩展列宽以容纳单个行的列中的文本框的预计内容。  
   
-### 更改表的列宽  
+### <a name="to-change-the-width-of-table-columns"></a>更改表的列宽  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -291,7 +272,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
   
-### 添加报表标题  
+### <a name="to-add-a-report-title"></a>添加报表标题  
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
@@ -312,7 +293,7 @@ SalesDate 值将显示月份名而非月份数字。
 ## <a name="Save"></a>6.保存报表  
 将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  单击“文件” > “另存为”。  
   
@@ -328,7 +309,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
-### 将报表保存到计算机上  
+### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
 1.  单击“文件” > “另存为”。  
   
@@ -343,7 +324,7 @@ SalesDate 值将显示月份名而非月份数字。
   
 在本教程中，您将报表导出为 Excel 格式，并设置报表的属性以便为工作簿选项卡提供自定义名称。  
   
-### 指定工作簿选项卡名称  
+### <a name="to-specify-the-workbook-tab-name"></a>指定工作簿选项卡名称  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -355,7 +336,7 @@ SalesDate 值将显示月份名而非月份数字。
     > 如果“属性”窗格不可见，请在 **“视图”** 选项卡上选择 **“属性”**。  
     > 如果未在属性窗格中看到属性，请尝试选择窗格顶部的“按字母顺序”按钮，将所有属性按字母顺序排序。   
   
-### 将报表导出为 Excel 格式  
+### <a name="to-export-a-report-to-excel"></a>将报表导出为 Excel 格式  
   
 1.  单击 **“运行”** 以预览报表。  
   
@@ -371,16 +352,18 @@ SalesDate 值将显示月份名而非月份数字。
   
 6.  单击 **“保存”**。  
   
-### 在 Excel 中查看报表  
+### <a name="to-view-the-report-in-excel"></a>在 Excel 中查看报表  
   
 1.  打开保存该工作簿的文件夹，并双击 **Product_Sales_Excel.xlsx**。  
   
 2.  验证工作簿选项卡的名称是否为 **Product Sales Excel**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何创建基本表格报表的演练。 有关表的详细信息，请参阅[表、矩阵和列表（报表生成器和 SSRS）](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

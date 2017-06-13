@@ -1,33 +1,38 @@
 ---
-title: "预加载缓存（报表管理器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "缓存 [Reporting Services]"
-  - "预加载缓存"
+title: "预加载缓存 （报表管理器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 预加载缓存（报表管理器）
+# <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
   您可以通过为共享数据集创建缓存刷新计划，为共享数据集预加载缓存。  
   
  您可以通过以下两种方式为报表预加载缓存：  
   
 1.  为报表创建缓存刷新计划。 这是首选方法。  
   
-2.  使用数据驱动订阅可以用参数化报表的实例预加载缓存。 这也是在早于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本中预加载缓存的唯一方法。 有关详细信息，请参阅[缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)。  
+2.  使用数据驱动订阅可以用参数化报表的实例预加载缓存。 这也是在早于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本中预加载缓存的唯一方法。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
  必须首先满足以下条件才能缓存报表或共享数据集：  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   必须运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。  
   
-### 通过创建缓存刷新计划预加载缓存  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>通过创建缓存刷新计划预加载缓存  
   
-1.  启动[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要缓存的项。  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 35
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 通过使用数据驱动订阅将用户特定报表预加载到缓存中  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>通过使用数据驱动订阅将用户特定报表预加载到缓存中  
   
-1.  启动[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要为其创建订阅的报表。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 35
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  单击“下一步” 。  
+8.  单击 **“下一步”**版本中预加载缓存的唯一方法。  
   
 9. 指定检索订阅服务器数据的查询或命令。 对于处理时间很长的查询，可以根据需要延长超时期限。 例如：  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      若要创建自定义计划，请单击 **“根据为此订阅创建的计划”** ，再单击 **“下一步”**。 配置计划，再单击 **“完成”**。  
   
     > [!NOTE]  
-    >  为确保订阅服务器能接收到最新的报表，所配置的计划应与为订阅服务器定义的报表传递计划相一致。 有关详细信息，请参阅[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+    >  为确保订阅服务器能接收到最新的报表，所配置的计划应与为订阅服务器定义的报表传递计划相一致。 有关详细信息，请参阅[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 14. 按照下面的步骤为报表配置执行选项。 在报表页上，单击 **“属性”** 选项卡。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. 单击 **“应用”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [性能、快照、缓存 (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

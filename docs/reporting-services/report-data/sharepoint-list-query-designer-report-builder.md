@@ -1,31 +1,36 @@
 ---
-title: "SharePoint 列表查询设计器（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: "SharePoint 列表查询设计器 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint 列表查询设计器（报表生成器）
+# <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 列表查询设计器（报表生成器）
   报表生成器和报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助你创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
   
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  
   
-## 图形查询设计器  
+## <a name="graphical-query-designer"></a>图形查询设计器  
  在图形查询设计器中，您可以浏览 SharePoint 站点，也可以交互方式生成用于为数据集检索 SharePoint 列表数据的命令。 您可以选择要包括在数据集中的字段，或者指定限制数据集中数据的筛选器。 可以指定将筛选器作为参数并在运行时提供筛选器的值。  
   
  SharePoint 列表包含大量 SharePoint 特定的字段，而将这些字段包括在报表中可能并不起什么作用。 查询设计器提供了一个用于隐藏这些字段的选项，从而能够更加轻松、更加快速地确定要使用的字段。  
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  结果集中的排序顺序取决于从数据源检索数据的顺序。 可以通过修改查询来更改排序顺序，也可以在为报表检索数据后更改。  
   
-### 图形查询设计器工具栏  
+### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
 |按钮|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
 |**显示隐藏字段**|在显示字段还是隐藏字段之间切换，这些字段是由 SharePoint 自动生成的（如用于 SharePoint 链接项的 ProgId 和 Level），但通常不在报表中使用。 隐藏这些字段可使字段列表更短且易于使用。|  
   
-## 另请参阅  
- [查询设计器（报表生成器）](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>另请参阅  
+ [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "图表中的位置标签（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将标签放置在图表 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 图表中的位置标签（报表生成器和 SSRS）
+# <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>图表中的位置标签（报表生成器和 SSRS）
   由于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中的每种图表类型都具有不同的形状，因此应将数据点标签放在最佳位置上以免对图表产生干扰。 标签的默认位置因图表类型而异：  
   
 -   在堆积图中，标签只能位于序列内部。  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 更改点标签在饼图中的位置  
+## <a name="to-change-the-position-of-point-labels-in-a-pie-chart"></a>更改点标签在饼图中的位置  
   
 1.  创建一个饼图。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
 6.  为 PieLabelStyle 属性选择一个值。  
   
-## 更改点标签在漏斗图或棱锥图中的位置  
+## <a name="to-change-the-position-of-point-labels-in-a-funnel-or-pyramid-chart"></a>更改点标签在漏斗图或棱锥图中的位置  
   
 1.  创建一个漏斗图或棱锥图。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  当此属性设置为 **OutsideInColumn**值时，标签会绘制在垂直图柱中。 列的位置无法更改。  
   
-## 更改点标签在条形图中的位置  
+## <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>更改点标签在条形图中的位置  
   
 1.  创建一个条形图。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
  当条形图标签样式设置为 **Outside**时，只要图表区放得下，标签就将位于图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将位于最靠近图条末尾的图条内。  
   
-## 更改点标签在面积图、柱形图、折线图或散点图中的位置  
+## <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>更改点标签在面积图、柱形图、折线图或散点图中的位置  
   
 1.  创建一个面积图、柱形图、折线图或散点图。  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 8
   
 6.  为 Position 属性选择一个值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
  [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

@@ -1,7 +1,7 @@
 ---
 title: "为 SQL Server 代理服务选择帐户 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b8ea899dbbf5b94205ba7cfa0afee4aad262d79a
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
     -   调整进程的内存配额的权限 (SeIncreaseQuotaPrivilege)  
   
-    -   使用批登录类型登录的权限 (SeBatchLogonRight)  
+    -   从网络 (SeNetworkLogonRight) 访问此计算机的权限  
   
 > [!NOTE]  
 > 如果帐户不具有支持代理帐户所需的权限，则只有 **sysadmin** 固定服务器角色的成员才可创建作业。  

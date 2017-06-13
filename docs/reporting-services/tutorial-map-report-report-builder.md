@@ -1,25 +1,30 @@
 ---
-title: "教程：地图报表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 地图报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：地图报表（报表生成器）
-在本[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
+# <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
+在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
   
 地图以空间数据为基础，这些数据通常包含点、线条和多边形。 例如，多边形可以表示国家/地区轮廓，线条可以表示道路，而点则可以表示市县所在位置。 各种类型的空间数据作为一组地图元素显示在单独的地图层上。  
   
@@ -34,15 +39,15 @@ caps.handback.revision: 18
   
 本教程的预计学时：30 分钟。  
   
-## 要求  
-对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅[计划地图报表支持](http://msdn.microsoft.com/zh-cn/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
+## <a name="requirements"></a>要求  
+对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅[计划地图报表支持](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 有关其他要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Map"></a>1.通过地图向导使用多边形层创建地图  
 在本部分中，从地图库向报表中添加地图。 该地图具有一个层，此层显示了纽约州中的各个县。 各县的形状为根据地图库中的地图内嵌入的空间数据得出的多边形。  
   
-### 使用地图向导在新报表中添加地图  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用地图向导在新报表中添加地图  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -117,17 +122,17 @@ caps.handback.revision: 18
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 基于 SQL Server 空间查询添加点层  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>基于 SQL Server 空间查询添加点层  
   
 1.  在“运行”上单击“设计”以切换回“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")。 
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**新建层向导**按钮![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”。  
   
-4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集” > “下一步”。  
+4.  上**选择具有 SQL Server 空间数据的数据集**页上，单击**添加具有 SQL Server 空间数据的新数据集** > **下一步**。  
   
 5.  在“选择与 SQL Server 空间数据源的连接”页上，选择一个现有数据源，或浏览到报表服务器并选择一个数据源。  
 
@@ -233,11 +238,11 @@ caps.handback.revision: 18
 ## <a name="LineLayer"></a>3.添加地图线条层以显示路线  
 使用地图层向导添加一个显示两个商店间路线的地图层。 本教程中，通过三个商店位置创建路径。 在业务应用程序中，路径可能是两个商店间的最佳路线。  
   
-### 向地图添加线条层  
+### <a name="to-add-a-line-layer-to-map"></a>向地图添加线条层  
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**新建层向导**按钮![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”。  
   
@@ -278,7 +283,7 @@ caps.handback.revision: 18
   
      地图显示一个空间数据源类型为“DataRegion”的新线条层。 在本例中，空间数据来自数据源，但没有分析数据与此线条关联。  
 
-## 调整缩放比例
+## <a name="adjust-the-zoom"></a>调整缩放比例
 1. 如果看不到整个纽约州，可以调整缩放比例。 选中地图，在“属性窗格”中可以看到“MapViewport”属性。 
 
 15. 展开“视图”部分，然后展开“视图”，此时可以看到“缩放”属性。 将它设置为“125”。 
@@ -292,7 +297,7 @@ caps.handback.revision: 18
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏中，单击“添加层”![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**添加层** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
 3.  从下拉列表中，单击“图块层”。  
   
@@ -361,7 +366,7 @@ caps.handback.revision: 18
 ### <a name="ColorRules"></a>6b. 为多边形指定颜色规则  
 若要创建根据商店销售额改变每个县颜色的规则，必须指定范围值、要显示的范围的划分数以及要使用的颜色。  
   
-#### 为具有关联数据的所有多边形指定颜色规则  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>为具有关联数据的所有多边形指定颜色规则  
   
 1.  切换到“设计”视图。  
   
@@ -429,7 +434,7 @@ caps.handback.revision: 18
 ### <a name="NoData"></a>6f. 更改没有数据的县的颜色  
 可以为层上所有地图元素设置默认显示选项。 颜色规则优先于这些显示选项。  
   
-#### 为层上的所有元素设置显示属性  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>为层上的所有元素设置显示属性  
   
 1.  切换到“设计”视图。  
   
@@ -456,7 +461,7 @@ caps.handback.revision: 18
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“添加层”![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")，然后单击“点层”。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**添加层**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然后单击**点层**。    
   
     将向地图添加一个新点层。 默认情况下，该点层的空间数据类型为“嵌入”。  
   
@@ -539,14 +544,16 @@ caps.handback.revision: 18
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何向报表添加地图的演练。  
   
 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [地图向导和地图层向导（报表生成器和 SSRS）](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+

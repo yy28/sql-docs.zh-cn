@@ -1,37 +1,42 @@
 ---
-title: "报表服务器内容管理（SSRS 本机模式） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "管理 Reporting Services"
-  - "已发布报表 [Reporting Services], 管理"
-  - "报表服务器 [Reporting Services], 内容管理"
-  - "内容管理 [Reporting Services]"
+title: "报表服务器内容管理 （SSRS 本机模式） |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表服务器内容管理（SSRS 本机模式）
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 开始，提供了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户。 本文将介绍报表管理器和新的 Web 门户体验。  
+# <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。 从 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 开始，提供了  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户。 本文将介绍报表管理器和新的 Web 门户体验。  
   
 > [!NOTE]  
 >  内容管理不同于报表服务器管理。 有关如何管理报表服务器运行环境的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
  内容管理包括以下任务：  
   
--   通过应用随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的基于角色的安全设置，确保报表服务器站点和项的安全。  
+-   通过应用随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于角色的安全设置，确保报表服务器站点和项的安全。  
   
 -   通过添加、修改和删除文件夹创建报表服务器文件夹层次结构。  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 50
   
 |图标|可移动项|  
 |----------|-------------------|  
-|![报表图标](../../reporting-services/report-server/media/hlp-16doc.png "报表图标")|报告|  
-|![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.png "链接报表图标")|链接报表|  
-|![文件夹图标](../../reporting-services/report-server/media/hlp-16folder.png "文件夹图标")|文件夹|  
-|![通用资源图标](../../reporting-services/report-server/media/hlp-16file.png "通用资源图标")|一般资源|  
+|![报表图标](../../reporting-services/report-server/media/hlp-16doc.gif "报表图标")|报告|  
+|![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.gif "链接报表图标")|链接报表|  
+|![文件夹图标](../../reporting-services/report-server/media/hlp-16folder.gif "文件夹图标")|文件夹|  
+|![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "通用资源图标")|一般资源|  
 |![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")|共享数据源|  
 ||共享数据集|  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 50
   
  文件夹是您通过报表管理器或浏览器到报表服务器的连接访问的已发布项的虚拟容器。 实际上，文件夹及其内容都不在文件系统中， 它们存储在报表服务器数据库中，用户可通过报表服务器 Web 服务端点对其进行访问。 报表服务器文件夹命名空间是一种包括根节点、预定义文件夹和用户定义文件夹的层次结构。 命名空间唯一标识存储在报表服务器上的项。 它提供了在 URL 中指定项的寻址方案。 选择报表或定位到某个报表时，文件夹路径将包含在该报表的 URL 中。  
   
- 使用文件夹的方式取决于用户角色分配中的任务。 如果使用默认安全性，则“内容管理员”和“发布者”可以创建和管理文件夹。 如果您使用自定义角色分配，角色分配必须包括支持管理文件夹的任务。 有关角色分配和任务的详细信息，请参阅[授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)和[任务和权限](../../reporting-services/security/tasks-and-permissions.md)。  
+ 使用文件夹的方式取决于用户角色分配中的任务。 如果使用默认安全性，则“内容管理员”和“发布者”可以创建和管理文件夹。 如果您使用自定义角色分配，角色分配必须包括支持管理文件夹的任务。 有关角色分配和任务的详细信息，请参阅 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 和 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)。  
   
  报表服务器文件夹可以包含以下各项：  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   其他文件夹  
   
-### 保留文件夹  
+### <a name="reserved-folders"></a>保留文件夹  
  预定义的文件夹是 Reporting Services 的保留文件夹；您不能移动、重命名或删除它们。 用户定义文件夹包含由特定用户或报表服务器管理员创建的所有文件夹，这些用户或管理员需要具有向文件夹添加项的权限。  
   
  下表对支撑文件夹层次结构并为多种功能提供框架的预定义文件夹进行了说明：  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |用户|在您启用了“我的报表”功能时，将显示此文件夹。 它包含使用“我的报表”功能的所有用户的子文件夹，只有报表服务器管理员才可以访问该文件夹。 每个子文件夹的名称都与相应用户的名称匹配。|  
 |我的报表|为每个用户提供个人工作区。|  
   
-### 创建文件夹  
+### <a name="creating-folders"></a>创建文件夹  
  可以在层次结构内的任何可用文件夹中创建文件夹。  
   
  如果创建文件夹的目的是限制对特定报表和模型的访问权限，则应该指定允许用户浏览但不允许他们查看文件夹路径中父文件夹内容的角色分配。  
   
-### 修改文件夹属性  
- 创建文件夹之后，您可以通过修改属性来重命名文件夹、添加或修改说明，或将文件夹移至其他位置。 这些属性显示在文件夹的“常规属性”页中。 有关设置授予文件夹访问权限的属性的详细信息，请参阅[保护文件夹](../../reporting-services/security/secure-folders.md)。  
+### <a name="modifying-folder-properties"></a>修改文件夹属性  
+ 创建文件夹之后，您可以通过修改属性来重命名文件夹、添加或修改说明，或将文件夹移至其他位置。 这些属性显示在文件夹的“常规属性”页中。 有关设置授予文件夹访问权限的属性的详细信息，请参阅 [保护文件夹](../../reporting-services/security/secure-folders.md)。  
   
-### 删除文件夹和文件夹内容  
+### <a name="deleting-folders-and-folder-contents"></a>删除文件夹和文件夹内容  
  删除文件夹时，会删除其中包含的所有项。 删除文件夹之前，您应该检查其中的内容，确定它是否包含文件夹层次结构中另外部分的其他项可能引用或使用的项。 引用的项包括支持链接报表、共享数据源和资源的报表定义。  
   
  如果删除一个或多个链接报表所引用的报表，链接报表将在删除该报表后失效。 您无法事先确定受影响的链接报表，因为报表并不包含基于它的链接报表的有关信息。 不过，您可以检查链接报表的属性，确定它所基于的报表。 相比之下，共享数据源项则可以列出当前使用该项的所有报表，这样您可以很容易判断出相应的连接信息是否正在使用中。 有关详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。 最后，报表所用的资源并不能标识这些报表。  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> Resources  
  资源是指存储在报表服务器上但不由报表服务器处理的托管项。 通常，资源为报表用户提供外部内容。 例如描述报表中所使用业务规则的 .jpg 文件、包含空间数据的 ESRI 形状文件或 HTML 文件中的图像。 JPG、SHP 或 HTML 文件存储在报表服务器上，但报表服务器会将文件直接传递到浏览器，而不会首先对其进行处理。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)以及[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)中的“向地图添加数据”一节。  
   
-### 添加和查看资源  
+### <a name="adding-and-viewing-a-resource"></a>添加和查看资源  
  若要向报表服务器中添加资源，请上载或发布文件：  
   
 |运算|文件类型|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  报表用户是否可以查看资源取决于浏览器的查看功能。 由于报表服务器不对资源进行处理，因此浏览器必须提供用于呈现特定 MIME 类型的查看功能。 如果浏览器无法呈现资源的内容，则查看资源的用户只能看到资源的常规属性。  
   
-### 保护资源的安全和管理资源  
+### <a name="securing-and-managing-a-resource"></a>保护资源的安全和管理资源  
  在报表服务器文件夹层次结构中，资源与报表、共享数据源、共享计划和文件夹都以命名项的形式显示在一起。 您可以搜索、查看、保护资源和设置资源属性，就像对报表服务器上存储的任何其他项一样。 若要查看或管理资源，您的角色分配中必须拥有查看资源或管理资源的任务。  
   
-### 从报表引用图像资源  
+### <a name="referencing-an-image-resource-from-a-report"></a>从报表引用图像资源  
  资源可以包含报表中引用的图像。 如果报表要求包括使用外部图像，则可以考虑将图像存储为资源的以下好处：  
   
 -   在报表服务器数据库中集中存储。 如果将报表服务器数据库及其内容移到其他计算机，则外部图像会与报表保存在一起。 无需跟踪不同计算机的磁盘上存储的图像文件。  
@@ -152,7 +157,7 @@ caps.handback.revision: 50
   
  若要在报表中使用某个图像资源，请将该图像文件添加到项目，并与报表一起发布。 发布图像之后，可以更新报表中的图像引用，使之指向报表服务器上的相应资源，然后只需重新发布该报表即可保存所做的更改。 随后，即可通过重新发布资源来独立更新报表的图像。 报表将使用报表服务器上可用的最新版本的图像。  
   
- 有关详细信息，请参阅[更新资源（报表管理器）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
+ 有关详细信息，请参阅 [更新资源（报表管理器）](../../reporting-services/report-server/update-a-resource-report-manager.md)。  
   
 ##  <a name="bkmk_MyReports"></a> 我的报表  
  “我的报表”文件夹是使用有效域帐户登录到报表服务器中的用户的个人工作区。 此专用文件夹为制作中的报表、不准备大范围分发的报表或为特定需要定制的报表提供了存储区域。 您不能限制“我的报表”文件夹中存储的项数量或大小，也不能将“我的报表”文件夹配置为在多个用户间共享。  
@@ -171,13 +176,13 @@ caps.handback.revision: 50
 |---------------|------------------|-------------|  
 |（空格）|[ ]|Firstname Lastname 将变为 Firstname[ ]Lastname|  
 |\（反斜杠）|替换为一个空格字符|DomainName\Username 将变为 DomainName Username|  
-|@（@ 符号）|[at]|username@hotmail.com 将变为 username[at]hotmail.com|  
+|@（@ 符号）|[at]|*用户名*@hotmail.com变得*用户名*[at]hotmail.com|  
 |&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com|  
 |$（美元符号）|[dollar]|User $Name 将变为 User[ ][dollar]Name|  
   
- “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅[启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅[保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
+ “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   
-## “任务”  
+## <a name="tasks"></a>“任务”  
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [创建、删除或修改文件夹（报表管理器）](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
  [角色和权限 (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services 报表 (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

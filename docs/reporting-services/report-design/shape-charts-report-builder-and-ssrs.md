@@ -1,39 +1,44 @@
 ---
-title: "形状图（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "形状图 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 形状图（报表生成器和 SSRS）
+# <a name="shape-charts-report-builder-and-ssrs"></a>形状图（报表生成器和 SSRS）
   形状图将值数据显示为整体的百分比。 形状图通常用于显示数据集中不同值之间的比例比较结果。 类别由各个形状段来表示。 形状段的大小由值来决定。 形状图与饼图的用法类似，但前者是按从最大到最小的顺序来排列类别。  
   
- 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何向漏斗图添加数据的详细信息，请参阅[图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
+ 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何向漏斗图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
  下图显示的是漏斗图示例。  
   
- ![漏斗图](../../reporting-services/report-design/media/rs-funnelchart.png "漏斗图")  
+ ![漏斗图](../../reporting-services/report-design/media/rs-funnelchart.gif "漏斗图")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 变体  
+## <a name="variations"></a>变体  
   
 -   **棱锥图**。 棱锥图显示的是成比例数据，以便图表看起来像一个棱锥。  
   
-## 形状图的数据注意事项  
+## <a name="data-considerations-for-shape-charts"></a>形状图的数据注意事项  
   
 -   形状图的视觉效果较好，因此常用于报表中。 但是，形状图是一种非常简单化的图表类型，可能无法最好地表示数据。 仅当数据聚合成七个数据点或更少数据点时，才考虑使用形状图。 通常，在使用形状图时应当对每个数据区域仅显示一种类别。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   您可以在饼图和圆环图中应用其他绘制样式以增加视觉效果。 有关详细信息，请参阅[设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [图表中的空白和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

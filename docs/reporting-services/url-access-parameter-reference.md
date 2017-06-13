@@ -1,28 +1,33 @@
 ---
-title: "URL 访问参数引用 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "报表 [Reporting Services], 显示选项"
-  - "URL 访问 [Reporting Services], 报表显示参数"
+title: "URL 访问参数引用 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL 访问参数引用
-  可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅[在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
+# <a name="url-access-parameter-reference"></a>URL 访问参数引用
+  可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
 >  对于 SharePoint 模式来说，非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。 有关示例，请参阅 [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)。  
@@ -44,7 +49,7 @@ caps.handback.revision: 48
                   显示或隐藏工具栏。 如果此参数的值为 **false**，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值为 **true**。  
   
     > [!IMPORTANT]  
-    > rc:Toolbar **=**false** 不适用于使用 IP 地址（而非域名）以针对驻留在 SharePoint 站点上的报表的 URL 访问字符串。  
+    >  =**false** 不适用于使用 IP 地址（而非域名）以针对驻留在 SharePoint 站点上的报表的 URL 访问字符串。  
   
 -   *Parameters* ：显示或隐藏工具栏的参数区域。 如果将此参数设置为 **true**，将显示工具栏的参数区域。 如果此参数设置为 **false**，则不显示参数区域，用户也不能显示参数区域。 如果此参数设置为 **Collapsed**值，则不会显示参数区域，但最终用户可以对参数区域进行切换。 此参数的默认值为 **true**。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* ：设置报表缩放值，缩放值以整数百分比或字符串常量表示。 标准字符串值包括 **Page Width** 和 **Whole Page**。 早于 Internet Explorer 5.0 的 Internet Explorer 版本和所有非 [!INCLUDE[msCoName](../includes/msconame-md.md)] 浏览器忽略此参数。 此参数的默认值为 **100**。  
+-   *Zoom* ：设置报表缩放值，缩放值以整数百分比或字符串常量表示。 标准字符串值包括 **Page Width** 和 **Whole Page**。 早于 Internet Explorer 5.0 的 Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 浏览器忽略此参数。 此参数的默认值为 **100**。  
   
      例如在 **Native** 模式中：  
   
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      默认值是 **HTML5**秒。 有关详细信息，请参阅 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
   
-     有关完整列表，请参阅报表服务器 rsreportserver.config 文件的 **\<Render>** 扩展部分。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+     完整列表，请参阅**\<呈现 >**的报表服务器的 rsreportserver.config 文件的扩展节。  有关在何处查找文件的信息，请参阅 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
      例如，若要直接从 **Native** 模式报表服务器获取报表的 PDF 副本：  
   
@@ -250,7 +255,7 @@ caps.handback.revision: 48
     http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* ：基于报表历史记录快照呈现报表。 有关详细信息，请参阅[使用 URL 访问呈现报表历史记录快照](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
+-   *Snapshot* ：基于报表历史记录快照呈现报表。 有关详细信息，请参阅 [使用 URL 访问呈现报表历史记录快照](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
   
      例如在 **Native** 模式中，请检索日期为 2003-04-07 且时间戳为 13:40:02 的报表历史记录快照：  
   
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
- [使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)  
+ [导出报表使用 URL 访问](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

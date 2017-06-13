@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ ms.lasthandoff: 04/11/2017
 |11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
+|38, 46|找不到请求的用户的数据库。|
+|102 - 111|AAD 失败。|
+|122 - 124|由于空的用户名或密码导致的失败。|
+|126|由用户请求的数据库不存在。|
+|132 - 133|AAD 失败。|
   
 存在其他错误状态，并表示一个意外的内部处理错误。  
   

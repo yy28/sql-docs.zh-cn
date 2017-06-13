@@ -1,27 +1,32 @@
 ---
-title: "第 4 课：定义用于子报表的数据连接和数据表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 4 课： 定义子报表的数据连接和数据表 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 4 课：定义用于子报表的数据连接和数据表
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 课：定义用于子报表的数据连接和数据表
 设计父报表后，接下来要创建用于子报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2014 数据库。  
   
-### 通过添加 DataSet 定义数据连接和 DataTable（用于子报表）  
+### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>通过添加 DataSet 定义数据连接和 DataTable（用于子报表）  
   
 1.  在“网站”菜单上，选择“添加新项”。  
   
@@ -64,12 +69,14 @@ caps.handback.revision: 7
     > [!WARNING]  
     > 务必取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”  
   
-    配置 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable**，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
+    配置 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 作为报表的数据源现已完毕。 在 Visual Studio 中的“数据集设计器”页上，应看到所添加的 **DataTable** ，其中列出在查询中指定的列。 DataSet2 由根据查询从 PurhcaseOrderDetail 表获得的数据组成。  
   
 11. 保存该文件。  
   
 12. 若要预览数据，请在“数据”菜单上选择“预览数据”，然后选择“预览”。  
   
-## 下一个任务  
-您已成功创建了用于子报表的数据连接和数据表。 接下来，将使用报表向导设计子报表。 请参阅[第 5 课：使用报表向导设计子报表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)。  
+## <a name="next-task"></a>下一个任务  
+您已成功创建了用于子报表的数据连接和数据表。 接下来，将使用报表向导设计子报表。 请参阅 [第 5 课：使用报表向导设计子报表](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)。  
   
+
+

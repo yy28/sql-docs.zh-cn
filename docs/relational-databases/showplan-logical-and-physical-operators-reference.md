@@ -1,7 +1,7 @@
 ---
 title: "Showplan 逻辑运算符和物理运算符参考 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 05/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -140,10 +140,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5b8af0e5293ff06927c043b2fb3aded1fab7591
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: f9a7d0d8023cac77ef0a2d9e7308a419a4518931
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
@@ -183,18 +183,19 @@ ms.lasthandoff: 04/11/2017
 ## <a name="operator-descriptions"></a>操作说明  
  本节介绍了各个逻辑运算符和物理运算符。  
   
-|图形执行计划图标|Showplan 运算符|说明|  
+|图形执行计划图标|Showplan 运算符|Description|  
 |-----------------------------------|-----------------------|-----------------|  
-|无|**Aggregate**|**Aggregate** 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 **Aggregate** 既是一个逻辑运算符，也是一个物理运算符。|  
+|![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "自适应加入运算符图标")|**自适应联接**|**自适应联接**运算符，哈希联接或嵌套的循环联接方法的选择会推迟到在扫描的第一个输入完。 | 
+|InclusionThresholdSetting|**Aggregate**|**Aggregate** 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 **Aggregate** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Arithmetic Expression 运算符图标](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 运算符图标")|**Arithmetic Expression**|**Arithmetic Expression** 运算符根据行中的现有值计算新值。 **中未使用** 算术表达式 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|  
 |![Assert 运算符图标](../relational-databases/media/assert-32x.gif "Assert 运算符图标")|**ActualRebinds**|**Assert** 运算符用于验证条件。 例如，验证引用完整性或确保标量子查询返回一行。 对于每个输入行， **Assert** 运算符都要计算执行计划的 **Argument** 列中的表达式。 如果此表达式的值为 NULL，则通过 **Assert** 运算符传递该行，并且查询执行将继续。 如果此表达式的值非 Null，则将产生相应的错误。 **Assert** 运算符是一个物理运算符。|  
 |![Assign 语言元素图标](../relational-databases/media/assign-32.gif "Assign 语言元素图标")|**Assign**|**Assign** 运算符将表达式的值或常量分配给变量。 **Assign** 是一个语言元素。|  
-|无|**Asnyc Concat**|**Asnyc Concat** 运算符仅用于远程查询中（分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 **Asnyc Concat** 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。|  
+|无|**Asnyc Concat**|**Asnyc Concat** 运算符仅用于远程查询中（分布式查询）。 它具有*n*子级和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 **Asnyc Concat** 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。|  
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 **Bitmap** 运算符来实现并行查询计划中的位图筛选。 在将行传递给另一个运算符（如 **Parallelism** 运算符）之前，通过消除无法生成任何联接记录的键值的行，位图筛选可提高查询的执行速度。 位图筛选器使用运算符树某部分的表中一组值的简洁表示形式来筛选位于该树另一部分的第二张表中的行。 通过在查询中预先删除不必要的行，后续运算符将处理较少的行，从而提高查询的整体性能。 优化器将确定位图的选择性何时可满足使用条件以及在哪些运算符上应用筛选器。 **Bitmap** 是一个物理运算符。|  
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap Create**|**Bitmap Create** 运算符出现在创建位图的显示计划输出中。 **Bitmap Create** 是一个逻辑运算符。|  
 |![Bookmark Lookup 运算符图标](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|**Bookmark Lookup**|**Bookmark Lookup** 运算符使用书签（行 ID 或聚集键）在表或聚集索引中查找相应的行。 **Argument** 列包含书签标签，用于在表或聚集索引内查找行。 **Argument** 列还包含要查找的行所在的表或聚集索引的名称。 如果 **Argument** 列中出现 WITH PREFETCH 子句，则表示查询处理器已决定在表或聚集索引中查找书签时将使用异步预提取（预读）作为最佳选择。<br /><br /> **Bookmark Lookup** 中不使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 而由 **Clustered Index Seek** 和 **RID Lookup** 提供书签查找功能。 **Key Lookup** 运算符也提供此功能。|  
 |无|**Branch Repartition**|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 **Parallelism** 迭代器称为 **Branch Repartition**。 两个这样的区域边界上的 **Parallelism** 迭代器称为 **Segment Repartition**。 **Branch Repartition** 和 **Segment Repartition** 是逻辑运算符。|  
-|无|**Broadcast**|**Broadcast** 有一个子节点和 *n* 个父节点。 **Broadcast** 根据使用者的请求将其输入行发送给多个使用者。 每个使用者都将获得所有行。 例如，如果所有使用者都是哈希联接的生成端，则将生成 *n* 份哈希表。|  
+|无|**Broadcast**|**广播**有一个子节点和* n *父节点。 **Broadcast** 根据使用者的请求将其输入行发送给多个使用者。 每个使用者都将获得所有行。 例如，如果所有使用者都生成端于哈希联接，则*n*将生成的哈希表的副本。|  
 |![Build Hash 运算符图标](../relational-databases/media/build-hash.gif "Build Hash 运算符图标")|**Build Hash**|指示为 xVelocity 内存优化的列存储索引生成批处理哈希表。|  
 |无|**Cache**|**Cache** 是一个专门的 **Spool** 运算符。 它仅存储一行数据。 **Cache** 是一个逻辑运算符。 **中不使用** Cache [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
 |![Clustered Index Delete 运算符图标](../relational-databases/media/clustered-index-delete-32x.gif "Clustered Index Delete 运算符图标")|**Clustered Index Delete**|**Clustered Index Delete** 运算符从查询执行计划的 Argument 列中指定的聚集索引中删除行。 如果 Argument 列中存在 WHERE:() 谓词，则仅删除满足该谓词的行。**Clustered Index Delete** 是一个物理运算符。|  
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/11/2017
 |![Split 运算符图标](../relational-databases/media/split-32x.gif "Split 运算符图标")|**Split**|**Split** 运算符用于优化更新处理。 它将每个更新操作拆分成删除和插入操作。 **Split** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Spool 运算符图标](../relational-databases/media/spool-32x.gif "Spool 运算符图标")|**Spool**|**Spool** 运算符将中间查询结果保存到 **tempdb** 数据库中。|  
 |![Stream Aggregate 运算符图标](../relational-databases/media/stream-aggregate-32x.gif "Stream Aggregate 运算符图标")|**Stream Aggregate**|**Stream Aggregate** 运算符按一列或多列对行分组，然后计算由查询返回的一个或多个聚合表达式。 此运算符的输出可供查询中的后续运算符引用和/或返回到客户端。 **Stream Aggregate** 运算符要求输入在组中按列进行排序。 如果由于前面的 **Sort** 运算符或已排序的索引查找或扫描导致数据尚未排序，则优化器将在此运算符前面使用一个 **Sort** 运算符。 在 SHOWPLAN_ALL 语句或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划中，GROUP BY 谓词中的列会列在 **Argument** 列中，而聚合表达式则列在 **Defined Values** 列中。 **Stream Aggregate** 是一个物理运算符。|  
-|![Switch 运算符图标](../relational-databases/media/switch-32x.gif "Switch 运算符图标")|**开关**|**Switch** 是一种特殊类型的串联迭代器，它具有 *n* 个输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值（在 0 到 *n*-1 之间）， **Switch** 将适当的输入流复制到输出流中。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
+|![Switch 运算符图标](../relational-databases/media/switch-32x.gif "Switch 运算符图标")|**开关**|**交换机**是一种特殊类型的串联迭代器具有* n *输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值 (介于 0 和*n*-1)，**交换机**将适当的输入的流复制到输出流。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Table Delete 运算符图标](../relational-databases/media/table-delete-32x.gif "Table Delete 运算符图标")|**Table Delete**|**Table Delete** 物理运算符删除查询执行计划的 **Argument** 列中所指定表中的行。|  
 |![Table Insert 运算符图标](../relational-databases/media/table-insert-32x.gif "Table Insert 运算符图标")|**Table Insert**|**Table Insert** 运算符将输入的行插入到在查询执行计划的 **Argument** 列指定的表中。 **Argument** 列还包含一个 SET:() 谓词，用于指示为每一列设置的值。 如果 **Table Insert** 的插入值没有子项，插入的行则来自 Insert 运算符本身。 **Table Insert** 是一个物理运算符。|  
 |![Table Merge 运算符](../relational-databases/media/table-merge-32x.gif "Table Merge 运算符")|**Table Merge**|**Table Merge** 运算符可将合并数据流应用到堆。 该运算符可在其 **Argument** 列中所指定的表中删除、更新或插入行。 执行的实际操作取决于该运算符的 **Argument** 列中指定的 **ACTION** 列的运行时值。 **Table Merge** 是一个物理运算符。|  
@@ -295,3 +296,4 @@ ms.lasthandoff: 04/11/2017
 |![Table Spool 运算符图标](../relational-databases/media/table-spool-32x.gif "Table Spool 运算符图标")|**Window Spool**|**Window Spool** 运算符将每个行扩展为表示与行关联的窗口的行集。 在查询中，OVER 子句定义查询结果集内的窗口和窗口函数，然后计算窗口中的每个行的值。 **Window Spool** 既是一个逻辑运算符，也是一个物理运算符。|  
   
   
+

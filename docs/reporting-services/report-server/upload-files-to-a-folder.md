@@ -1,31 +1,36 @@
 ---
-title: "将文件上载到文件夹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "发布报表 [Reporting Services], 上载文件"
-  - "报表 [Reporting Services], 发布"
-  - "上载报表 [Reporting Services]"
-  - "上载文件 [Reporting Services]"
-  - "文件 [Reporting Services], 上载"
-  - "文件 [Reporting Services]"
-  - "文件夹 [Reporting Services], 将文件上载到"
+title: "将文件上载到文件夹 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 将文件上载到文件夹
+# <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
   您可以从文件系统上载文件，然后将其作为托管项存储在报表服务器数据库中。 上载文件时的情况因文件类型而异。  
   
 -   上载 .rdl 文件相当于发布报表。  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  上载到报表服务器数据库的文件将使用以下图标直观地显示在文件夹层次结构中：  
   
- ![报表图标](../../reporting-services/report-server/media/hlp-16doc.png "报表图标")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 报表图标  
   
- ![模型图标](../../reporting-services/report-server/media/model-icon.png "模型图标")  
+ ![模型图标](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 报表模型图标  
   
- ![通用资源图标](../../reporting-services/report-server/media/hlp-16file.png "通用资源图标")  
+ ![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 通用资源图标  
   
  上载文件时，文件将始终放入当前所选的文件夹。 您可以首先定位到要包含项的文件夹，也可以先上载文件再将其移至最终位置。  
@@ -58,8 +63,8 @@ caps.handback.revision: 42
 |将任何文件作为二进制对象上载|管理资源|  
 |查看文件夹的内容|查看资源，查看报表|  
   
-## 另请参阅  
- [报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>另请参阅  
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
  [上传文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

@@ -1,61 +1,39 @@
 ---
-title: "用于 Reporting Services SharePoint 模式的 PowerShell cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "用于 Reporting Services SharePoint 模式的 PowerShell cmdlet |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
-  在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式时，会安装 PowerShell cmdlet，以便支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
+
+在安装 SQL Server 2016 Reporting Services SharePoint 模式时，会安装 PowerShell cmdlet 以支持在 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共享服务和代理的安装。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序和关联代理的设置和管理。  
   
 -   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，例如扩展插件和加密密钥。  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
-  
- **本主题包含以下内容：**  
-  
--   [Cmdlet 摘要](#bkmk_cmdlet_sum)  
-  
--   [共享服务和代理 Cmdlet](#bkmk_sharedservice_cmdlets)  
-  
--   [服务应用程序和代理 Cmdlet](#bkmk_serviceapp_cmdlets)  
-  
--   [Reporting Services 自定义功能 Cmdlet](#bkmk_ssrsfeatures_cmdlets)  
-  
--   [Reporting Services PowerShell 基本示例](#bkmk_basic_samples)  
-  
--   [Reporting Services PowerShell 详细示例](#bkmk_detailedsamples)  
-  
-    -   [创建 Reporting Services 服务应用程序和代理](#bkmk_example_create_service_application)  
-  
-    -   [查看和更新 Reporting Services 传递扩展插件](#bkmk_example_delivery_extension)  
-  
-    -   [获取并设置 Reporting Services 应用程序数据库的属性](#bkmk_example_db_properties)  
-  
-    -   [列出 Reporting Services 数据扩展插件](#bkmk_example_list_data_extensions)  
-  
-    -   [更改和列出 Reporting Services 订阅所有者](#bkmk_change_subscription_owner)  
-  
+
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 摘要  
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅[在 Windows Server 上启动 Windows PowerShell](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅[在 Windows Server 上启动 Windows PowerShell](http://technet.microsoft.com/library/hh847814.aspx)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
@@ -72,9 +50,9 @@ caps.handback.revision: 31
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 有关详细信息，请参阅[使用 Windows PowerShell 管理 SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx)。  
+ 有关详细信息请参阅[使用 Windows PowerShell 管理 SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)。  
   
-#### 打开 SharePoint Management Shell 并运行 cmdlet  
+#### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>打开 SharePoint Management Shell 并运行 cmdlet  
   
 1.  单击 **“开始”** 按钮  
   
@@ -113,7 +91,7 @@ caps.handback.revision: 31
 |Mount-SPRSDatabase|装入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的数据库。|  
 |New-SPRSDatabase|为指定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序创建新的服务应用程序数据库。|  
 |Get-SPRSDatabaseCreationScript|将数据库创建脚本输出到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的屏幕。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
-|Get-SPRSDatabase|获取一个或多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序数据库。 使用命令来获取服务应用程序数据库的 ID，以便使用 Set-SPRSDatabase cmdlet 来修改属性，例如 `querytimeout`。 请参阅本主题中的示例：[获取和设置 Reporting Service 应用程序数据库的属性](#bkmk_example_db_properties)。|  
+|Get-SPRSDatabase|获取一个或多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序数据库。 使用命令来获取服务应用程序数据库的 ID，以便使用 Set-SPRSDatabase cmdlet 来修改属性，例如 `querytimeout`。 请参阅本主题中的示例： [获取和设置 Reporting Service 应用程序数据库的属性](#bkmk_example_db_properties)。|  
 |Get-SPRSDatabaseRightsScript|将数据库权限脚本输出到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的屏幕。 系统会提示所需的用户和数据库，然后返回您可以运行以修改权限的 Transact SQL。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
 |Get-SPRSDatabaseUpgradeScript|将数据库升级脚本输出到此屏幕。 该脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序数据库升级到当前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的数据库版本。|  
   
@@ -176,7 +154,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  向默认代理组添加代理  
   
-3.  授予服务应用程序对端口 80 Web 应用程序的内容数据库的访问权限。 该脚本假设网站“http://sitename”已存在。  
+3.  授予服务应用程序对端口 80 Web 应用程序的内容数据库的访问权限。 该脚本假设站点`http://sitename`已存在。  
   
 ```  
 # Create service application and service application proxy  
@@ -195,7 +173,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a> 查看和更新 Reporting Services 传递扩展插件  
- 以下 PowerShell 脚本示例更新了名为 `My RS Service App` 的服务应用程序的报表服务器电子邮件传递扩展插件的配置。 更新 SMTP 服务器 (`<email server name>`) 的值和 FROM 电子邮件别名 (`<your FROM email address>`)。  
+ 以下 PowerShell 脚本示例更新了名为 `My RS Service App`的服务应用程序的报表服务器电子邮件传递扩展插件的配置。 更新 SMTP 服务器 (`<email server name>`) 的值和 FROM 电子邮件别名 (`<your FROM email address>`)。  
   
 ```  
 $app=get-sprsserviceapplication -Name "My RS Service App"  
@@ -297,13 +275,13 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
      `SHAREPOINTLIST          Data`  
   
 ###  <a name="bkmk_change_subscription_owner"></a> 更改和列出 Reporting Services 订阅所有者  
- 请参阅 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)。  
+ 请参阅 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
-## 另请参阅  
- [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
- [核对清单：使用 PowerShell 验证 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
- [获取 SQL Server PowerShell 帮助](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
- [CodePlex SharePoint Management PowerShell 脚本](http://sharepointpsscripts.codeplex.com/)   
- [如何使用 PowerShell 管理 SSRS](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  
+## <a name="next-steps"></a>后续步骤
+
+[使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[清单： 使用 PowerShell 验证 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[获取 SQL Server PowerShell 帮助](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[CodePlex SharePoint 管理 PowerShell 脚本](http://sharepointpsscripts.codeplex.com/)   
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

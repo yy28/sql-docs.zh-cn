@@ -1,21 +1,29 @@
 ---
-title: "使用 Reporting Services 中的 KPI | Microsoft Docs"
-ms.date: "02/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 Reporting Services 中的 Kpi |Microsoft 文档"
+ms.date: 05/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用 Reporting Services 中的 KPI
+# <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 关键绩效指标 (KPI) 是一个视觉提示，用于传达某个目标的进度量。  关键绩效指标对于团队、经理和企业很有价值，可快速评估针对可度量的目标所进行的工作进度。   
   
 通过使用 SQL Server 2016 Reporting Services 中的 KPI，你可以轻松地将以下问题的答案可视化：  
@@ -26,16 +34,16 @@ caps.handback.revision: 8
   
 -   我最少已经完成了多少？  
   
-## 创建数据集  
+## <a name="creating-a-dataset"></a>创建数据集  
 KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的数据位于第一行上。 若要创建共享数据集，可以使用报表生成器或 SQL Server Data Tools。  
   
 > **注意**：该 KPI 的数据集不必位于相同文件夹中。  
   
-## KPI 的位置  
+## <a name="placement-of-kpis"></a>KPI 的位置  
   
 可以在报表服务器中的任何文件夹中创建 KPI。  创建 KPI 前，需要考虑 KPI 的正确放置位置。 建议将它放在用户可见、同时可与周围其他报表和 KPI 相关的文件夹中。  
   
-## 添加 KPI  
+## <a name="adding-a-kpi"></a>添加 KPI  
   
 在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI”。  
   
@@ -65,7 +73,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  在数据框中选择 **省略号 (…)** 。 此时会弹出“选择数据集”  屏幕。  
+2.  选择**省略号 （...）**在数据中。 此时会弹出“选择数据集”  屏幕。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -83,11 +91,11 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## 删除 KPI  
+## <a name="removing-a-kpi"></a>删除 KPI  
   
 若要删除 KPI，可以执行以下操作。  
   
-1.  选择想要删除的 KPI 的 **省略号 (…)** 。 选择“管理” 。  
+1.  选择**省略号 （...）**你想要删除的 kpi。 选择“管理” 。  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -95,41 +103,13 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## 刷新 KPI  
+## <a name="refreshing-a-kpi"></a>刷新 KPI  
   
-若要刷新 KPI，则需要为共享数据集配置 **缓存刷新计划** 。 目前，你不能在 Web 门户网站配置缓存刷新计划。 建议转到旧报表管理器执行此操作。   
+若要刷新 KPI，你将需要配置共享数据集缓存。 有关详细信息缓存刷新计划，请参阅[处理共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
-这将演示如何设置缓存刷新计划的一些基本设置。 有关缓存刷新计划的详细信息，请参阅 [缓存刷新选项（报表管理器）](Cache%20Refresh%20Options%20(Report%20Manager).xml)。  
+## <a name="next-steps"></a>后续步骤
   
-1.  打开报表管理器，找到你要为其配置缓存刷新计划属性的共享数据集。   
-  
-2.  悬停在该报表或共享数据集之上，然后选择下拉箭头。  
-  
-3.  在下拉列表中，选择“管理” 。 将打开“常规属性”  页。  
-  
-4.  单击“缓存刷新选项”  选项卡。  
-  
-5.  若要创建新的缓存计划，请选择“新建缓存刷新计划” 。  
-  
-    ![rsRefreshKPI1](../reporting-services/media/rsrefreshkpi1.png)  
-  
-6.  你将收到一条消息，询问你是否为此项目以默认选项启用缓存。 选择“确定” 。  
-  
-    > **注意**：必须启用并启动 SQL Server 代理服务，才能创建缓存刷新计划。  
-  
-7.  可以选择特定的计划，或选择共享的计划（如果有）。  
-  
-8.  缓存刷新计划的计划运行时，KPI 的值将更新。  
-  
-    ![rsRefreshKPI2](../reporting-services/media/rsrefreshkpi2.png)  
-  
-## 另请参阅  
-  
-- [Web 门户（SSRS 本机模式）](../reporting-services/web-portal-ssrs-native-mode.md)  
-  
-- [缓存刷新选项（报表管理器）](Cache%20Refresh%20Options%20(Report%20Manager).xml)  
-  
-    
-  
-  
-  
+[Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
+[使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

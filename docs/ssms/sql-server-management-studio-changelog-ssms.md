@@ -15,13 +15,200 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2144751277bb10897e0ed39ee24dbad8a32b4ce
+ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
+ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
+
+## <a name="ssms-171-release"></a>SSMS 17.1 版本
+正式版 |内部版本号： 14.0.17119.0
+
+### <a name="enhancements"></a>增强功能
+
+- 探查器： 帮助 > 大约现在显示发行版本号 （例如 17.1）
+- 分析服务用户可以为 1200年刷新其数据源的凭据 TM 模型和更高版本在数据源的上下文菜单
+- 内置 SSIS 报告现在显示日志从 SSIS 横向扩展执行在 CTP 2.1
+- SSIS 横向扩展管理应用程序
+  - 查看有关横向扩展主数据的基本信息。
+  - 轻松地将工作人员添加到横向扩展部署。
+  - 查看所有的横向扩展辅助进程和基本信息，并可以还启用或禁用它们轻松。
+
+### <a name="bug-fixes"></a>Bug 修复
+- Alwayson:
+  - 修复了问题其中可用性副本的属性始终显示为"自动故障转移"模式为 WSFC 承载个可用性组。
+  - 修复了问题，只读路由列表已覆盖更新可用性组时
+- 始终加密： 修复了问题生成的日志文件位置缺少 DacFx 生成的信息。
+- ShowPlan： 在问题中修复其中 UI 已始终显示实际联接类型属性的非自适应联接运算符。
+- 安装程序：
+  - 修复了问题 SSMS 17.0 Visual Studio 2013 [连接项 3133479] 中断 SSDT
+  - 修复了问题，单击"重新启动"末尾的安装程序已不重启的计算机
+- 尝试通过禁用该选项脚本删除时不会意外删除 Azure 数据库对象脚本： 暂时阻止 SSMS。  正确的修补程序将在即将发布的版本的 SSMS。
+- 对象资源管理器： 修复了其中"的数据库"节点已连接到 Azure 的数据库，使用"AS 复制"创建时未展开
+
+## <a name="ssms-170-release"></a>SSMS 17.0 版本
+正式版 |内部版本号： 14.0.17099.0
+
+### <a name="enhancements"></a>增强功能 
+
+- 升级包和 Windows 软件更新服务 (WSUS) 
+    - 将来 17.X 版本包括较小的累积更新包 
+  - 更新包还将发布到 WSUS 目录  
+- 图标更新
+    - 已更新图标与 VS Shell 提供图标保持一致和支持高 DPI 的解决方法
+    - 新增了 SSMS 和探查器程序图标，用于区分 16.X 和 17.X 版本
+- SQL PowerShell 模块
+  - SQL Server PowerShell 模块从 SSMS 中删除，并且现在附带通过 PowerShell 库 （PowerShell 5.0 现在支持所需模块版本控制）
+  - 向"演示文稿"（格式） 的 （例如数据库现在显示的大小和可用空间以及表显示行计数和空间使用情况） 某些 SMO 对象的其他改进
+  - 从的"启动 PowerShell"菜单中 OE 调用 PowerShell 命令提示符时添加的着色
+  - 向 AG cmdlet（New-SqlAvailabilityGroup、Join-SqlAvailabilityGroup 和 Set-SqlAvailabilityGroup cmdlet）添加了 -ClusterType 和 -RequiredCopiesToCommit 参数
+  - 向 Add-SqlAzureAuthenticationContext cmdlet 添加了 -ActiveDirectoryAuthority 和 -AzureKeyVaultResourceId 参数
+  - 添加的 Revoke SqlAvailabilityGroupCreateAnyDatabase、 授予 SqlAvailabilityGroupCreateAnyDatabase 和集 SqlAvailabilityReplicaRoleToSecondary cmdlet
+  - 添加到 Set-sqlavailabilityreplica 和 New-sqlavailabilityreplica cmdlet 的-SeedingMode 参数
+  - Get SqlDatabase 添加-ConnectionString 参数
+- Linux 上的 SQL Server
+    - 全面改进和修复了日志传送
+  - 添加了对本机 Linux 路径附加支持、 还原和备份数据库
+  - 添加了对审核日志目标文件夹的本机 Linux 路径支持
+- Analysis Services
+  - DAX 查询窗口：
+    - 在编辑器中匹配的括号
+    - 定义度量值和定义 VAR 语法支持
+    - 各种的 Intellisense 改进
+  - 通用的身份验证
+    - 允许用户指定用户名和不使用密码和 Azure 登录对话框将处理连接
+  - SSMS PQ 集成： 
+    - 脚本的结构化的数据源工作原理 
+    - 查看和编辑 PQ UI 中的结构化的数据源
+- 新增了“添加唯一约束”模板
+- Showplan
+    - 在运行时间的属性窗口中显示线程最大值（而非总和）
+    - 公开了新的内存授予操作符属性
+    - 在实时查询统计信息中启用了“编辑查询”按钮
+    - 支持交错执行
+  - "分析实际执行计划"的新选项
+  - 显示计划比较的一般改进
+  - 引入中显示计划比较功能，以查找基数预测中的两个查询计划的匹配节点之间的重大差异并执行基本的可能的根本原因分析的功能
+- 从已注册的服务器资源管理器中删除了配置管理器
+- 支持从 Azure Blob 存储中读取审核日志
+- 添加了“始终加密的参数化”，有关详细信息请参阅[本页](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) 
+- AAD 通用身份验证连接到 Azure SQL DB 支持自定义租户 ID 
+- 为 Azure SQL 数据库生成脚本，现在为全文、规则和数据库编写脚本
+- 解决了 SSMS 和探查器的初始屏幕的外观方案问题
+- 从 SSMS 删除了实用工具控制点 UI
+- SSMS 现在可以创建"PremiumRS"版 SQL Azure 数据库
+- Always On 可用性组
+  - 添加对新的群集类型支持： 外部和 NONE
+    - 在 Linux 上添加对 SQL Server 的支持
+    - 添加自动种子设定，作为初始数据同步的选项
+    - 固定一些缺陷，例如终结点 URL 的处理，DB 刷新和 UI 布局
+    - 已删除的 Azure 副本相关功能
+  - 改进的几个可用性组关键字智能感知
+- 活动监视器
+  - 到 SSMS 输出窗口中添加新的"活动监视器"窗格
+  - 更改要记录信息以输出窗口而不是一条弹出消息的连接错误/超时消息
+  - 在概述部分中，删除的空图表 （第五个图表）
+  - "（暂停）"如果添加到概述标题暂停活动监视器数据收集
+  - 到 SQL Server 的关系图节点和边缘表的新图标的图形节点和边缘表的关系图扩展将显示在关系图表文件夹下-模板来创建关系图的节点和边缘表可用
+- 演示模式
+    - 新增了 3 个可通过快速启动 (Ctr-Q) 执行的任务
+    - PresentOn - 打开演示模式
+    - PresentEdit - 编辑演示模式的演示字号。  对查询编辑器使用“文本编辑器字体”。  对其他组件使用“环境字体”。
+    - RestoreDefaultFonts - 还原默认设置。
+    - *注意：暂无 PresentOff 命令。请使用 RestoreDefaultFonts 关闭演示模式*
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- 修复了问题 SSMS 其中损坏时通过 surfacebook 触摸板滚动显示计划
+- 修复了问题 SSMS 其中用于长时间挂起获取数据库正在还原或脱机的属性时的时间 
+- 修复了问题，其中"帮助查看器"无法打开在 RC 版本中，
+- "维护计划任务工具箱"项可能缺少在 SSMS 中修复问题。
+- 在 SSMS 用户已经无法收缩数据库时的数据库名称包含大括号中修复的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- 修复了问题 SSMS 已尝试脚本删除的 Azure 数据库实际上会导致数据库本身的删除。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- 解决了没有为用户定义的表类型编写默认值的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
+- 对索引中的上下文菜单进行了另一轮性能改进。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
+- 解决了将鼠标悬停在执行计划缺少的索引之上时，闪烁次数过多的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
+- 解决了编写脚本时 SSMS 导致 DB 脱机的问题 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
+- 对本地化（非英语）版本的 SSMS 进行了其他 UI 修复。
+- 解决了定位 SQL 2016 SP1 标准版时没有“Always Encrypted 密钥”节点的问题。
+- 始终加密
+    - 定位 SQL 2016 RTM 标准版或任意 SQL 2014（及更低版本）服务器时，“Always Encrypted”菜单未正确启用
+    - 解决了使用 CREATE OR ALTER 语法时 IntelliSense 报告错误的问题
+    - 解决了当 CMK/CEK 包含应转义的字符（即用括号括住）时无法加密的问题
+    - 当 SSMS 中发生内存不足异常时，用户会看到一个错误消息，建议其改用本机（64 位）PowerShell。
+    - 解决了在用户使用资源组管理器订阅（而不是经典 Azure 订阅）时，AE 向导无法运行的问题
+    - 解决了在用户对任何订阅都没有权限，或对任何订阅都没有 Azure Key Vault 时，AE 向导显示不正确错误消息的问题。
+    - 解决了在有多个 AAD 的情况下，AE 向导中的 Azure Key Vault 登录页不显示 Azure 订阅的问题
+    - 解决了 AE 向导中的 Azure Key Vault 登录页不显示用户有权读取的 Azure 订阅的问题
+  - 修复了问题其中资源文件可能不能够正确加载，从而导致不准确的错误消息
+- 改进了 SSMS 安装页上的超链接对比度
+- 解决了连接 SQL Server Express (2016 SP1) 时看不到 PolyBase 节点的问题
+- 修复了问题 SSMS 是无法将 Azure DB 兼容性级别更改为 v140
+- 改进了展开 Azure 数据库列表时的对象资源管理器性能 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
+- 解决了对非关系服务器类型 (AS\RS\IS) 错误显示“查看 SQL Server 日志”上下文菜单项的问题 
+- 解决了使用 SQL 身份验证查看 Analysis Services 分区查询的语法时看到登录失败消息的问题
+- 解决了在 SSMS 中无法重命名预览 1400 兼容性级别 AS 表格模型的问题
+- 解决了在模型保存失败后还原本地更改的极少数情况下，尝试在 AS 服务器上执行无效操作后可能看到“无法对模型执行操作”错误消息的问题
+- 更正了 Analysis Services 同步数据库弹出式对话框中的错别字
+- 在多个监视器设置中，备份/还原容器对话框出现在屏幕外。 
+- 如果目标对象的名称中有 ]，则无法创建 SecurityPolicy。
+- SSMS 2016 的“打开最近的文件”菜单不显示最近保存的文件。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- 删除了 VS Shell 更新后用户设置的重置。
+- 修复了已禁止该用户能够更改 SQL Server 2017 年 1 上的数据库的兼容性级别的问题。
+- 使用 AAD 通用身份验证的查询窗口在一小时后无法刷新查询。
+- 从 SSMS 删除了实用工具控制点 UI。
+- 初始令牌过期后，AD 通用身份验证连接无法查询数据。
+- 无法从 Azure SQL DB 将规则脚本编写到 Azure SQL DB。
+- 解决了 SQL PowerShell 无法连接旧 SQL 实例（2014 或更早版本）的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- 解决了无法导入已注册的服务器时导致 SSMS 崩溃的问题。
+- 解决了在用户具有数据库特定权限的情况下导致 SSMS 崩溃的问题。 
+- SSMS - 查看视图时表从设计图面消失。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- 表滚动条不允许用户滚动表内容，仅向上/向下键允许此操作。 在尝试使用滚动条滚动（而这是一个 Bug）时，有可能滚动表内容。 [连接项](
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+- 刷新根节点后，已注册的服务器不显示图标。
+- Azure v12 服务器上的“创建数据库”脚本按钮执行脚本，然后显示消息“没有要编写脚本的操作”。
+- “SSMS 连接到服务器”对话框不为每个新连接清除“附加属性”选项卡。
+- 生成任务脚本不会为 Azure SQL DB 生成“创建数据库”脚本。
+- 视图设计器中的滚动条显示为已禁用。
+- 始终加密 AVK 密钥路径不包括版本 ID。
+- 减少查询窗口中引擎版本查询的数量。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- 错误处理加密后，刷新模块出现“始终加密”错误。
+- 更改 OLTP 和 OLAP 的默认连接超时，将其从 15 秒更改为 30 秒，以修复一类被忽略的连接故障。 
+- 解决了启动自定义报表时 SSMS 崩溃的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
+- 解决了 Azure SQL 数据库的 “生成脚本…”的问题。
+- 解决了“编写脚本为”和“生成脚本向导”问题，避免在对象脚本编写（如存储过程）时添加额外的换行符。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
+- SQLAS PowerShell 提供程序：向 Dimension 和 MeasureGroup 文件夹添加 LastProcessed 属性。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
+- 实时查询统计信息：解决了在批处理中仅显示第一个查询的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Showplan：在属性窗口中显示线程的最大值而非总和。
+- 查询存储：使用高执行变体在查询中添加新报表。
+- 对象资源管理器性能问题：[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
+    - 表的上下文菜单暂时挂起
+    - 右键单击表的索引（通过远程 (Internet) 连接）时，SSMS 运行缓慢。 
+    - 避免发出在服务器上排序的表查询
+- 从 SSMS 删除 Azure 部署向导（向 Azure VM 部署数据库）
+- 解决了 SSMS 的执行计划中不显示丢失的索引的问题[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
+- 解决了 SSMS 中常见的崩溃关闭问题
+- 解决了对象资源管理器中，在 Polybase|扩展组节点上调用上下文菜单时出错的问题[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- 解决了尝试显示数据库上的权限时 SSMS 可能崩溃的问题
+- 查询存储：查询存储报表的结果网格的上下文菜单项中的常规功能增强
+- 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
+- 为现有数据库配置“始终加密”功能时，多个架构无法正常运行。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- 由于数据库包含引用系统视图的视图，“始终加密、已加密列”向导失败。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 使用“始终加密”功能进行加密时，错误处理加密后刷新模块出现错误。
+- 解决了“新建服务器注册”对话框中的 UI 截断问题
+- 解决了 DMF 条件 UI 无法正确更新带有其中包含引号的字符串常量值的表达式的问题
+- 解决了在运行自定义报表时有可能导致 SSMS 崩溃的问题
+- 将“在扩展中执行…”菜单项 添加到文件夹节点
+- 解决了与 Azure SQL DB 防火墙白名单 IP 地址功能问题
+- 固定时编辑为多维分区的源后，这将导致对象引用的 SSMS 中的问题将不设置异常
+- 固定时从多维 AS 删除客户程序集后，这将导致对象引用的 SSMS 中的问题将不设置异常服务器
+- 修复了问题其中重命名 AS 表格 1400年数据库失败
+- 修复了问题脚本 1400 compat 级别作为表格数据源连接属性对话框
+- 删除表中的作为 1400 compat 级别模型具有至少一个分区的假设
+- Ctrl R 现在切换 SSMS DAX 查询编辑器中的结果窗格
+
 
 ## <a name="ssms-1653-release"></a>SSMS 16.5.3 版本
 公开发布 | 内部版本号 ：13.0.16106.4
@@ -40,7 +227,7 @@ ms.lasthandoff: 04/11/2017
 
 * 使用“始终加密”功能进行加密时，错误处理加密后刷新模块出现错误。
 
-* “打开最近的文件”菜单不显示最近保存的文件。** [连接 ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+* “打开最近的文件”菜单不显示最近保存的文件。 [连接 ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * 右键单击表的索引（通过远程 (Internet) 连接）时，SSMS 运行缓慢。 [连接 ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
  
@@ -568,12 +755,4 @@ ms.lasthandoff: 04/11/2017
  * **对新的 Azure SQL Database 服务层（基本、标准、高级）的导入/导出向导支持。**  
    
  * **大量 Bug 修复（脚本方案、为 SQL 数据库启用更改跟踪等）。**   
-     
-  
-  
-  
-  
-  
-  
-    
 

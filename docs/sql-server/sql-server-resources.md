@@ -20,10 +20,10 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-resources"></a>SQL Server 资源
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
  了解 SQL Server 中的新增功能
  - [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
- - [SQL Server vNext 中的新增功能](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [什么是 SQL Server 自 2017 年中的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 是 Microsoft 在数据平台历史记录方面所取得的最大进步，主要体现在实时运营分析、移动设备上丰富的可视化功能、内置的高级分析、新的高级安全技术以及新的混合云方案。 其他好处包括增强的内存中性能、OLTP 数据延伸到 Microsoft Azure 和简化的关系数据和非关系数据管理。  
   

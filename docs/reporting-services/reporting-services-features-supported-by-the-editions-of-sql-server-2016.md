@@ -1,34 +1,41 @@
 ---
-title: "SQL Server 2016 各个版本支持的 Reporting Services 功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Reporting Services 的 SQL Server 2016 各个版本支持的功能 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: 3
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 3
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 2016 各个版本支持的 Reporting Services 功能
-本主题提供有关不同版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]所支持的功能的详细信息。  
+
+# <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 各个版本支持的 Reporting Services 功能
+
+本主题提供支持的不同版本的 SQL Server 2016 功能的详细的信息。  
   
  可在 180 天的试用期内使用 SQL Server 评估版。  
   
- 有关最新的发行说明，请参阅 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)。 有关新增功能的最新信息，请参阅 [Reporting Services 中的新增功能 (SSRS)](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)。
+ 有关最新的发行说明，请参阅 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)。 有关新增功能的最新信息，请参阅 [Reporting Services 中的新增功能 (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
     
  **试用 SQL Server 2016！**    
     
- > [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png) **[启动已安装 SQL Server 2016 的虚拟机](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)**启动已安装 SQL Server 2016 的虚拟机[](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 有关评估版和开发人员版支持的功能，请参阅 SQL Server 企业版。
 
@@ -51,7 +58,7 @@ caps.handback.revision: 3
 |基于角色的安全性|是|是|是|是|||是|  
 |导出到 Excel、PowerPoint、Word、PDF 和图像|是|是|是|是|||是|  
 |增强的仪表和图表|是|是|是|是|||是|  
-|将报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板|是|是|是|是|||是|  
+|将报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]仪表板|是|是|是|是|||是|  
 |自定义身份验证|是|是|是|是|||是|  
 |作为数据馈送的报表|是|是|是|是|||是|  
 |模型支持|是|是|是||||是|  
@@ -70,11 +77,11 @@ caps.handback.revision: 3
 |警报<sup>2</sup>|是||||||是|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是||||||是|  
   
- <sup>1</sup> 有关 SQL Server 2016 Reporting Services (SSRS) 支持的数据源的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ <sup>1</sup>支持的数据源中 SQL Server 2016 Reporting Services (SSRS) 的详细信息，请参阅[支持的 Reporting Services &#40; 数据源SSRS &#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup> 在 SharePoint 模式下需要 Reporting Services。 有关详细信息，请参阅[安装 Reporting Services SharePoint 模式](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ <sup>2</sup> 在 SharePoint 模式下需要 Reporting Services。 有关详细信息，请参阅 [安装 Reporting Services SharePoint 模式](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
-## 报表服务器数据库的服务器版本要求  
+## <a name="report-server-database-server-edition-requirements"></a>报表服务器数据库的服务器版本要求  
  创建报表服务器数据库时，并非所有版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 均可用来承载数据库。 下表显示了可用于特定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本。  
   
 |对于此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 版本|使用此版本的数据库引擎实例来承载数据库|  
@@ -95,11 +102,14 @@ caps.handback.revision: 3
 |用于移动设备的 Power BI 应用（iOS、Windows 10、Android）(.rsmobile)|是||||||是|  
   
 > [!NOTE]  
-> 1.  上表标识了启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些工具可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上托管的数据。  
+> 1.  上表标识了启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些工具可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上托管的数据。  
 > 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 是创建移动报表的单一点。 连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器来访问数据源并创建报表。 然后将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器以供组织中其他人访问（在服务器上或在移动设备上）。 你还可以单独与本地数据源使用 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]  
-> 3.  无论使用本地的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 和/或云中的 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 作为报表传递解决方案，都只需要一个移动应用便可访问移动设备上的仪表板和移动报表。 可从 Windows、iOS 或 Android 应用商店下载 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 应用。  
+> 3.  无论使用本地的  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 和/或云中的 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 作为报表传递解决方案，都只需要一个移动应用便可访问移动设备上的仪表板和移动报表。 可从 Windows、iOS 或 Android 应用商店下载 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 应用。  
 
-## 另请参阅  
- [SQL Server 2016 各个版本支持的功能](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [SQL Server 2016 的产品规格](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
- [安装 SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+## <a name="next-steps"></a>后续步骤
+
+[SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+[SQL Server 2016 的产品规格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[安装 SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

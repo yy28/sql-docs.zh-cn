@@ -2,7 +2,7 @@
 title: "数据库级别的角色 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="fixed-database-roles"></a>固定数据库角色
   
- 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限。   
+ 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 除**公共**不能更改数据库角色，分配给固定数据库角色的权限。   
   
 |固定数据库角色名|Description|  
 |-------------------------------|-----------------|  
@@ -87,9 +87,9 @@ ms.lasthandoff: 04/11/2017
 
 无法更改分配给固定数据库角色的权限。 下图显示了分配给固定数据库角色的权限：
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a> [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 |msdb 角色名称|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|这些数据库角色的成员可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 从早期版本升级的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可能包含使用 Data Transformation Services (DTS)（而不是 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]）命名的旧版本角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../../integration-services/service/integration-services-roles-ssis-service.md)。|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|这些数据库角色的成员可以管理和使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 从早期版本升级的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可能包含使用 Data Transformation Services (DTS)（而不是 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]）命名的旧版本角色。 有关详细信息，请参阅 [Integration Services Roles（SSIS 服务）](../../../integration-services/security/integration-services-roles-ssis-service.md)。|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|这些数据库角色的成员可以管理和使用数据收集器。 有关详细信息，请参阅 [Data Collection](../../../relational-databases/data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 数据库角色的成员可以对基于策略的管理策略和条件执行所有配置和维护活动。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|这些数据库角色的成员可以管理和使用注册的服务器组。|  

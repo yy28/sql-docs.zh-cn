@@ -1,26 +1,31 @@
 ---
-title: "设置处理选项（SharePoint 集成模式下的 Reporting Services） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint 集成 [Reporting Services], 内容管理"
-  - "快照 [Reporting Services], 创建"
+title: "设置处理选项 (Reporting Services SharePoint 集成模式下) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 设置处理选项（SharePoint 集成模式下的 Reporting Services）
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
   可以对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表设置处理选项，以决定何时进行数据处理。 还可以为报表处理设置超时值和用于决定是否为当前报表启用报表历史记录的选项。  
   
 -   您可以按报表快照形式运行报表，以防止报表在任意时间运行（例如，在执行计划备份期间）。 报表快照通常按计划创建并在随后进行刷新，因此您可以精确地设定进行报表和数据处理的时间。 如果报表所基于的查询需要很长的运行时间，或查询使用的数据来自您需要在特定时间无人访问的数据源，则应以快照形式运行报表。  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **本主题内容：**  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  使用 Windows PowerShell 设置 SharePoint 报表服务器的数据库超时。 有关详细信息，请参阅 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)中的“获取并设置报表服务应用程序数据库的属性”一节。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [为报表和共享数据集处理设置超时值 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

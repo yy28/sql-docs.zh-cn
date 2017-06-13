@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>用户定义函数
@@ -44,7 +44,8 @@ ms.lasthandoff: 04/11/2017
   
      基于某种无法用单一标量的表达式表示的复杂约束来过滤数据的操作，可以表示为函数。 然后，此函数便可以在 WHERE 子句中调用，以减少发送至客户端的数字或行数。  
   
-> **注意：**查询中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数只能针对单个线程执行（串行执行计划）。  
+> [!NOTE]
+> 查询中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数只能针对单个线程执行（串行执行计划）。  
   
 ##  <a name="FunctionTypes"></a> 函数类型  
 **标量函数**  
@@ -62,12 +63,13 @@ ms.lasthandoff: 04/11/2017
   
  BEGIN...END 块中的语句不能有任何副作用。 函数副作用是指对具有函数外作用域（例如数据库表的修改）的资源状态的任何永久性更改。 函数中的语句唯一能做的更改是对函数上的局部对象（如局部游标或局部变量）的更改。 不能在函数中执行的操作包括：对数据库表的修改，对不在函数上的局部游标进行操作，发送电子邮件，尝试修改目录，以及生成返回至用户的结果集。  
   
-> **注意：**如果 CREATE FUNCTION 语句对在发出 CREATE FUNCTION 语句时不存在的资源产生副作用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行该语句。 但在调用函数时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行此函数。  
+> [!NOTE]
+> 如果 CREATE FUNCTION 语句对在发出 CREATE FUNCTION 语句时不存在的资源产生副作用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行该语句。 但在调用函数时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行此函数。  
   
  在查询中指定的函数的实际执行次数在优化器生成的执行计划间可能不同。 示例为 WHERE 子句中的子查询调用的函数。 子查询及其函数执行的次数会因优化器选择的访问路径的不同而异。  
   
 ##  <a name="ValidStatements"></a> 函数中的有效语句  
- 函数中的有效语句的类型包括：  
+函数中的有效语句的类型包括：  
   
 -   DECLARE 语句，该语句可用于定义函数局部的数据变量和游标。  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SchemaBound"></a> 绑定到架构的函数  
  CREATE FUNCTION 支持 SCHEMABINDING 子句，后者可将函数绑定到它引用的任何对象（如表、视图和其他用户定义函数）的架构。 尝试更改或删除绑定到架构的函数所引用的任何对象失败。  
   
- 必须满足以下条件才能在 [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx) 中指定 SCHEMABINDING：  
+ 必须满足以下条件才能在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 SCHEMABINDING：  
   
 -   该函数引用的所有视图和用户定义函数必须是绑定到架构的视图和函数。  
   
@@ -138,7 +140,4 @@ ms.lasthandoff: 04/11/2017
 |介绍如何查看用户定义函数的定义。|[查看用户定义的函数](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

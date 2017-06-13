@@ -1,27 +1,32 @@
 ---
-title: "第 5 课：使用报表向导设计子报表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 5 课： 设计子报表使用报表向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 285ade0eaf63fee0733fcfcb9e8f627e8c666a6b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 5 课：使用报表向导设计子报表
-创建用于子报表的数据连接和数据表后，接下来要使用报表设计器中的报表向导设计子报表。 有关报表设计器的详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../reporting-services/tools/design-reports-with-report-designer-ssrs.md)。  
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 课：使用报表向导设计子报表
+创建用于子报表的数据连接和数据表后，接下来要使用报表设计器中的报表向导设计子报表。 有关报表设计器的详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
-### 使用报表向导设计子报表  
+### <a name="to-design-the-child-report-using-the-report-wizard"></a>使用报表向导设计子报表  
   
 1.  确保在“解决方案资源管理器”中选择顶级网站。  
   
@@ -59,8 +64,10 @@ caps.handback.revision: 8
   
 9. 保存 .rdlc 文件。  
   
-## 下一个任务  
-您已成功地使用报表向导设计了子报表。 接下来，将向网站应用程序添加 ReportViewer 控件。 请参阅[第 6 课：将 ReportViewer 控件添加到应用程序](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)。  
+## <a name="next-task"></a>下一个任务  
+您已成功地使用报表向导设计了子报表。 接下来，将向网站应用程序添加 ReportViewer 控件。 请参阅 [第 6 课：将 ReportViewer 控件添加到应用程序](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)。  
   
   
   
+
+

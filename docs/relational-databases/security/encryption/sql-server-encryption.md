@@ -2,7 +2,7 @@
 title: "SQL Server 加密 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
   加密是指通过使用密钥或密码对数据进行模糊处理的过程。 这会使数据变得毫无用处，除非使用对应的解密密钥或密码。 加密并不解决访问控制问题。 不过，它可以通过限制数据丢失来增强安全性，即使在访问控制失效的情况下。 例如，如果数据库主机配置有误且黑客获取了敏感数据，则如果数据已加密，那么被盗信息可能会毫无用处。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 下表包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密的详细信息。  
-  
+
 > [!IMPORTANT]  
 >  虽然加密是可帮助确保安全性的有力工具，但它并不适用于所有数据或连接。 在决定是否实现加密时，请考虑用户访问数据的方式。 如果用户通过公共网络访问数据，则可能需要使用数据加密以增强安全性。 但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 任何时候使用加密时还应包括密码、密钥和证书的维护策略。  
   
 > [!NOTE]  
 >  有关传输级别安全 (TSL1.2) 的最新信息，请参阅 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)（对 Microsoft SQL Server 的 TLS 1.2 支持）。  
-  
-## <a name="in-this-section"></a>本节内容  
+
+您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 以下主题包含有关中的加密的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+
  [加密层次结构](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密层次结构的信息。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  说明如何使用证书来加密数据。  
   
 ## <a name="external-resources"></a>外部资源  
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 – 安全和保护](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 安全和保护](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>另请参阅  

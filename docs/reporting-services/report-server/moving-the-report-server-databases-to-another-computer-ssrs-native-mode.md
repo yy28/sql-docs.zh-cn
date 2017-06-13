@@ -1,26 +1,33 @@
 ---
-title: "将报表服务器数据库移至其他计算机（SSRS 本机模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将报表服务器数据库移到另一台计算机 （SSRS 本机模式） |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 将报表服务器数据库移至其他计算机（SSRS 本机模式）
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
+
   可以将安装中使用的报表服务器数据库移至其他计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  移动数据库不会影响当前为报表服务器项定义的计划操作。  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  当重新定位报表服务器数据库是对现有安装的唯一更改时，建议执行本主题中提供的步骤。 若要迁移整个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装（即，移动数据库并更改使用该数据库的报表服务器 Windows 服务的标识），需要重新配置连接并重置加密密钥。  
   
-## 分离和附加报表服务器数据库  
- 如果可使报表服务器脱机，则可分离数据库，以将其移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此方法将保留数据库中的权限。 如果在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库，则必须将其移至另一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 移动数据库后，必须重新配置报表服务器与报表服务器数据库的连接。 如果您运行的是扩展部署，则必须为部署中的每个报表服务器重新配置报表服务器数据库连接。  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>分离和附加报表服务器数据库  
+ 如果可使报表服务器脱机，则可分离数据库，以将其移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 此方法将保留数据库中的权限。 如果你使用的 SQL Server 数据库，必须将其移到另一个 SQL Server 实例。 移动数据库后，必须重新配置报表服务器与报表服务器数据库的连接。 如果您运行的是扩展部署，则必须为部署中的每个报表服务器重新配置报表服务器数据库连接。  
   
  请使用下列步骤来移动数据库：  
   
@@ -58,7 +65,7 @@ caps.handback.revision: 10
   
 8.  单击 **“添加”** 以选择要附加的报表服务器数据库 .mdf 和 .ldf 文件。 对报表服务器临时数据库重复此步骤。  
   
-9. 附加数据库后，请验证 **RSExecRole** 是否为报表服务器数据库和临时数据库中的数据库角色。 **RSExecRole** 必须对报表服务器数据库表具有选择、插入、更新、删除和引用的权限，并且对存储过程具有执行权限。 有关详细信息，请参阅[创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
+9. 附加数据库后，请验证 **RSExecRole** 是否为报表服务器数据库和临时数据库中的数据库角色。 **RSExecRole** 必须对报表服务器数据库表具有选择、插入、更新、删除和引用的权限，并且对存储过程具有执行权限。 有关详细信息，请参阅 [创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
   
 10. 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并打开与报表服务器的连接。  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. 重新启动报表服务器服务。  
   
-## 备份和还原报表服务器数据库  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>备份和还原报表服务器数据库  
  如果不能使报表服务器脱机，则可使用备份和还原来重新定位报表服务器数据库。 您必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行备份和还原。 还原数据库后，必须将报表服务器配置为使用新服务器实例上的数据库。 有关详细信息，请参阅本主题结尾的说明。  
   
-### 使用 BACKUP 和 COPY_ONLY 备份报表服务器数据库  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>使用 BACKUP 和 COPY_ONLY 备份报表服务器数据库  
  备份数据库时，请设置 COPY_ONLY 参数。 请确保备份数据库和日志文件。  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### 使用 RESTORE 和 MOVE 重新定位报表服务器数据库  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>使用 RESTORE 和 MOVE 重新定位报表服务器数据库  
  还原数据库时，请务必包括 MOVE 参数，以便指定路径。 使用 NORECOVERY 参数执行初始还原；此操作可使数据库保持 RESTORING 状态，给您留出时间来检查日志备份，以确定要还原的备份。 最后一步是重复包含 RECOVERY 参数的 RESTORE 操作。  
   
  MOVE 参数使用数据文件的逻辑名称。 若要找到逻辑名称，请执行下列语句： `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,33 +204,34 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### 如何配置报表服务器数据库连接  
+### <a name="how-to-configure-the-report-server-database-connection"></a>如何配置报表服务器数据库连接  
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器。  
   
-2.  在“数据库”页上，单击 **“更改数据库”**。 单击“下一步” 。  
+2.  在“数据库”页上，单击 **“更改数据库”**。 单击 **“下一步”**。  
   
-3.  单击 **“选择现有报表服务器数据库”**。 单击“下一步” 。  
+3.  单击 **“选择现有报表服务器数据库”**。 单击 **“下一步”**。  
   
-4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”**。 单击“下一步” 。  
+4.  选择现在承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并单击 **“测试连接”**。 单击 **“下一步”**。  
   
-5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击“下一步” 。  
+5.  在“数据库名称”中，选择要使用的报表服务器数据库。 单击 **“下一步”**。  
   
-6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击“下一步” 。  
+6.  在“凭据”中，指定报表服务器用来连接到报表服务器数据库的凭据。 单击 **“下一步”**。  
   
 7.  单击 **“下一步”** ，然后单击 **“完成”**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例包含 **RSExecRole** 角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅[访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
-  
-## 另请参阅  
- [创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例包含 **RSExecRole** 角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
+
+## <a name="next-steps"></a>后续步骤
+
+[创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[配置无人参与的执行帐户](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[rsconfig 实用工具](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[配置和管理加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[报表服务器数据库](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

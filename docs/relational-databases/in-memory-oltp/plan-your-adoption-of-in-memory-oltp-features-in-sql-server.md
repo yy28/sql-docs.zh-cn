@@ -1,7 +1,7 @@
 ---
 title: "在 SQL Server 中计划内存中 OLTP 功能的应用 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/05/2016
+ms.date: 05/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4404ee4d70ed16ddaad5d0600f5d37225897d455
+ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
+ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
@@ -61,6 +61,7 @@ ms.lasthandoff: 04/11/2017
 
 对于 Azure SQL 数据库云服务中托管的数据库，所选的服务层会影响允许数据库使用的活动内存量。 应计划使用警报监视数据库的内存使用。 有关详细信息，请参阅：
 
+- 查看的内存中 OLTP 存储限制你[定价层](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [监视内存中 OLTP 存储](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>内存优化表变量
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 有关内存中 OLTP 功能是否适合应用程序的指南
 
-有关内存中功能是否可以改善特定应用程序的性能的指南，请参阅：
+有关内存中 OLTP 功能是否可以提高性能的特定应用程序的指南，请参阅：
 
 - [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="b-unsupported-features"></a>B. 不支持的功能
 
-有关在某些内存中方案中不支持的功能，请参阅：
+在介绍的某些内存中 OLTP 方案中不受支持的功能：
 
 - [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -158,7 +159,7 @@ ms.lasthandoff: 04/11/2017
 - 不可将内存优化表上的任何列标记为 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 。
 
 
-- 不能将 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 对象用于任何内存优化表。
+- A[序列](../../t-sql/statements/create-sequence-transact-sql.md)不能用于内存优化表中的约束。 例如，你不能使用 NEXT VALUE FOR 子句创建默认约束。 序列可以用于 INSERT 和 UPDATE 语句。
 
 
 ## <a name="c-administrative-maintenance"></a>C. 管理维护

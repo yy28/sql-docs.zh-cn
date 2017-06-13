@@ -1,7 +1,7 @@
 ---
-title: "管理事务日志文件的大小 | Microsoft Docs"
+title: "管理事务日志文件大小 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/14/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,28 +17,28 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5736ae436f7b07bbc7eda9eda301c41969a69cc9
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
-本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  
+本主题介绍如何监视[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事务日志大小、 收缩事务日志、 添加或扩大事务日志文件、 优化**tempdb**事务日志增长率以及控制事务日志文件的增长。  
 
   ##  <a name="MonitorSpaceUse"></a> 监视日志空间使用情况  
-使用 DBCC SQLPERF (LOGSPACE) 监视日志空间使用情况。 此命令返回有关当前使用的日志空间量的信息，并指示何时需要截断事务日志。 有关详细信息，请参阅 [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 若要了解有关日志文件的当前大小、最大大小以及此文件的自动增长选项的信息，还可以在 **sys.database_files** 中针对此日志文件使用 **size**、**max_size** 和 **growth** 等列。 有关详细信息，请参阅 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。  
+使用监视日志空间使用情况[DBCC SQLPERF (LOGSPACE)](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)。 此命令返回有关当前使用的日志空间量的信息，并指示何时需要截断事务日志。 有关详细信息，请参阅[DBCC SQLPERF TRANSACT-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 有关当前日志文件大小、 其最大大小和该文件的自动增长选项的信息，还可以使用**大小**， **max_size**，和**增长**该日志文件中的列**sys.database_files**。 有关详细信息，请参阅 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。  
   
 **重要说明！** 避免日志磁盘重载！  
 
   
 ##  <a name="ShrinkSize"></a> 收缩日志文件大小  
- 若要减少物理日志文件的物理大小，则必须收缩日志文件。 当事务日志文件包含将不需要的未使用空间时，此方法很有用。仅当数据库处于联机状态并至少有一个虚拟日志文件处于空闲时，你才可以收缩日志文件。 在某些情况下，直到下一个日志截断后，才能收缩日志。  
+ 若要减少物理日志文件的物理大小，则必须收缩日志文件。 当你知道事务日志文件包含未使用的空间时，这非常有用。 仅当数据库处于联机状态，并且没有至少一个虚拟日志文件时，您可以收缩日志文件。 在某些情况下，直到下一个日志截断后，才能收缩日志。  
   
 > [!NOTE]
 >  能够延长虚拟日志文件活动时间的因素（如长时间运行的事务）可以限制甚至阻止日志收缩。 有关延迟日志截断的因素的信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
- 收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即*不活动的虚拟日志文件*）。 在收缩事务日志文件时，将从日志文件的末端删除足够的不活动虚拟日志文件，以便将日志减小到接近目标大小。  
+ 收缩日志文件可删除一个或多个不包含逻辑日志任何部分的虚拟日志文件（即*不活动的虚拟日志文件*）。 事务日志文件收缩时，从要将日志减小到接近目标大小的日志文件的末尾删除不活动虚拟日志文件。  
   
  **收缩日志文件（而不收缩数据库文件）**  
   
@@ -57,11 +57,11 @@ ms.lasthandoff: 04/11/2017
 -   [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
 > [!NOTE]
->  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项” 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) - 使用 AUTO_SHRINK 选项。  
+>  你可以将日志文件自动收缩设置。 但是，我们建议不使用自动收缩，且 **autoshrink** 数据库属性默认情况下设置为 FALSE。 如果 **autoshrink** 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改 **autoshrink** 属性设置的信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) - 在 “选项” 页面使用 **Auto Shrink** 属性 - 或 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) - 使用 AUTO_SHRINK 选项。  
   
 
 ##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  
- 可以通过扩大现有的日志文件（如果磁盘空间允许）或将日志文件添加至数据库（尤其是其他磁盘上的数据库）来获得空间。  
+ 你可以通过扩大现有的日志文件 （如果磁盘空间允许） 或通过将日志文件添加到数据库，通常在不同的磁盘来获得空间。  
   
 -   若要将日志文件添加至数据库，请使用 ALTER DATABASE 语句的 ADD LOG FILE 子句。 添加日志文件可以使日志获得空间。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/11/2017
   
   
 ##  <a name="ControlGrowth"></a> 控制事务日志文件的增长  
- 可使用 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句管理事务日志文件的增长。 请注意以下事项：  
+ 使用[ALTER DATABASE (Transact SQL)](../../t-sql/statements/alter-database-transact-sql.md)语句管理事务日志文件的增长。 请注意以下事项：  
   
 -   若要更改当前文件大小（以 KB、MB、GB 和 TB 为单位），请使用 SIZE 选项。  
   -   若要更改增量，请使用 FILEGROWTH 选项。 如果值为 0，则表明自动增长已设置为关闭，且不允许增加空间。 日志文件的小幅度自动增长量可能降低性能。 因此，为了避免经常向日志文件中扩充内容，应该采用足够大的文件增量。 通常，采用 10% 的默认增量较为合适。  
@@ -84,8 +84,8 @@ ms.lasthandoff: 04/11/2017
   
   
 ## <a name="see-also"></a>另请参阅  
- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [解决事务日志已满的问题（SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+ [备份 (Transact SQL)](../../t-sql/statements/backup-transact-sql.md)   
+ [解决已满事务日志 （SQL Server 错误 9002）](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
   
 

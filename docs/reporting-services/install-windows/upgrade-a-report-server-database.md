@@ -1,34 +1,42 @@
 ---
-title: "升级报表服务器数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "升级数据库"
-  - "报表服务器数据库"
-  - "升级 Reporting Services"
+title: "升级报表服务器数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- report server database
+- upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 升级报表服务器数据库
-  报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  
+
+# <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
+
+报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  
   
  **本机模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式中，报表服务器数据库实际包含两个数据库，其默认名称分别为“ReportServer”和“ReportServerTempDB”。  
   
- **SharePoint 模式：** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式中，报表服务器数据库实际上是为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的每个实例创建的数据库的集合。  
-  
-## 如何升级本机模式报表服务器数据库  
+ **SharePoint 模式：**在 SQL Server 2016 Reporting Services SharePoint 模式下，报表服务器数据库是实际的集合的数据库的每个实例创建[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序。  
+
+## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>如何升级本机模式报表服务器数据库
+
  以下列表指出了升级报表服务器数据库的各种情况：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序升级报表服务器的单个实例。 在服务启动并且报表服务器确定数据库架构版本与服务器版本不匹配之后，将自动升级报表服务器数据库架构。  
@@ -41,7 +49,7 @@ caps.handback.revision: 44
   
  架构更新后，无法再将升级回滚到以前的版本。 请务必备份报表服务器数据库，以备需要重新创建先前安装。  
   
-## 如何更新架构、元数据和报表服务器内容  
+## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>如何更新架构、元数据和报表服务器内容  
  升级报表服务器数据库需分三个步骤：  
   
 1.  在安装并启动服务后，或者您在较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器数据库后，架构将自动升级。 此外，报表服务器服务会在启动时检查数据库版本。 如果报表服务器连接到早期版本的数据库，则报表服务器将在启动过程中更新该数据库。  
@@ -52,7 +60,7 @@ caps.handback.revision: 44
   
  除了报表服务器数据库外，报表服务器还会使用临时数据库。 升级报表服务器数据库时，会自动升级临时数据库。  
   
-## 升级报表服务器数据库所需的权限  
+## <a name="permissions-required-to-upgrade-a-report-server-database"></a>升级报表服务器数据库所需的权限  
  如果要升级的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装包含报表服务器数据库，而没有足够的权限执行数据库升级，您可能会看到一条错误消息。 默认情况下，安装程序会使用运行安装程序的用户的安全令牌连接到远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并更新架构。 如果你拥有对承载报表服务器数据库的数据库服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 权限，将会成功升级数据库。 同样，如果从命令提示符运行安装程序，并为拥有 **sysadmin** 权限来修改远程计算机上的架构的帐户指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 参数，也将成功升级数据库。  
   
  但是，如果您没有对远程计算机上的数据库的 **sysadmin** 权限，则系统将拒绝连接，并出现以下错误：  
@@ -61,14 +69,15 @@ caps.handback.revision: 44
   
  此时，报表服务器程序文件将被升级，但报表服务器数据库将为早期版本的格式。 报表服务器将不可用，直到通过手动升级数据库来完成升级过程为止。  
   
-#### 使用脚本升级本机模式数据库  
- 您可以生成 WMI 脚本来升级报表服务器数据库。 有关详细信息，请参阅 [GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md)  
+#### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>使用脚本升级本机模式数据库  
+ 您可以生成 WMI 脚本来升级报表服务器数据库。 有关详细信息，请参阅 [GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)  
   
-## 另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/create-a-report-server-database-ssrs-configuration-manager.md)   
- [更改数据库向导（配置管理器）](../Topic/Change%20Database%20Wizard%20\(Configuration%20Manager\).md)   
- [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+## <a name="next-steps"></a>后续步骤
+
+[Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[创建报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+[更改数据库向导](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[迁移 Reporting Services 安装](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

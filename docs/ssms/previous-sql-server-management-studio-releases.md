@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>以前的 SQL Server Management Studio 版本
   
 提供以下以前版本的 SQL Server Management Studio。
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.5 版](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 版本](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**版本信息**  
+  
+*此版本的 SSMS 使用 Visual Studio 2015 独立 shell。*  
+版本号：16.5.3  
+此版本的内部版本号为：13.0.16106.4
+
+## <a name="changelog"></a>更改日志  
+
+16.5.3
+
+此版本已解决以下问题：
+
+* 解决了 SSMS 16.5.2 中引入的问题，即当表具有多个稀疏列时，导致“表”节点扩展。
+
+* 用户可以部署包含 OData 连接管理器的 SSIS 包，这些包连接到 SSIS 目录的 Microsoft Dynamics AX / CRM Online 资源。 有关详细信息，请参阅 [OData 连接管理器](https://msdn.microsoft.com/library/dn584133.aspx)。
+
+* 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接 ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* 为现有数据库配置“始终加密”功能时，多个架构无法正常运行。 [连接 ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* 由于数据库包含引用系统视图的视图，“始终加密、已加密列”向导失败。 [连接 ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* 使用“始终加密”功能进行加密时，错误处理加密后刷新模块出现错误。
+
+* “打开最近的文件”菜单不显示最近保存的文件。 [连接 ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* 右键单击表的索引（通过远程 (Internet) 连接）时，SSMS 运行缓慢。 [连接 ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* 解决了 SQL 设计器滚动条的问题。 [连接 ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* 表的上下文菜单暂时挂起 
+ 
+* SSMS 偶尔在活动监视器中引发异常和崩溃。 [连接 ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* SSMS 2016 崩溃，显示错误“由于在 IP 71AF8579 (71AE0000) 的 .NET 运行时出现内部错误，进程终止，退出代码 80131506”
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.5 版](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **版本信息**  
   
@@ -67,7 +105,7 @@ ms.lasthandoff: 04/11/2017
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1（2016 年 9 月）版本](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1（2016 年 9 月）版本](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **版本信息**  
   
@@ -179,7 +217,7 @@ ms.lasthandoff: 04/11/2017
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.3（2016 年 8 月）版本](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.3（2016 年 8 月）版本](http://go.microsoft.com/fwlink/?LinkID=824938)
  2016 年 8 月 15 日 | 版本号：13.0.15700.28
 
 **功能**  
@@ -245,7 +283,7 @@ ms.lasthandoff: 04/11/2017
 [可在 SSMS 更改日志中获取有关修复的详细信息。](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 修补程序更新版本（2016 年 7 月）](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 修补程序更新版本（2016 年 7 月）](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 2016 年 7 月 13 日 | 版本号：13.0.15600.2
 
@@ -299,7 +337,7 @@ ms.lasthandoff: 04/11/2017
 [可在 SSMS 更改日志中获取详细信息及更多 Bug 修复程序。](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [2016 年 6 月发行的 SQL Server Management Studio 版本](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [2016 年 6 月发行的 SQL Server Management Studio 版本](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 2016 年 6 月 1 日 | 版本号：13.0.15000.23
 
@@ -331,7 +369,7 @@ ms.lasthandoff: 04/11/2017
 6. “始终加密”体验的 Bug 修复。 修复了“始终加密”菜单项未正确针对延伸数据库启用的 Bug。 还修复了“始终加密”向导中未正确使用 SafeNet (Luna SA) HSM 提供程序的 Bug。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 2015 年 5 月 14 日 | 版本号：12.0.4100.1
 
@@ -352,7 +390,7 @@ N/A
 7. 尝试刷新任务栏上的 SSMS 窗口图标时 SSMS 可能会出现故障（[Microsoft Connect 项目 #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)）。
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 2015 年 11 月 21 日 | 版本号：11.0.6020.0
 
@@ -368,7 +406,7 @@ N/A
 2. 还原 SSMS 中的差异备份时出现“由于 LSN 链接断开，无法创建还原计划”错误
 
 ---
-### <a name="additional-downloads"></a>其他下载  
+## <a name="additional-downloads"></a>其他下载  
 有关所有 SQL Server Management Studio 下载的列表，请搜索 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)。  
   
 有关最新版本的 SQL Server Management Studio 的信息，请参阅 [下载 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)。  

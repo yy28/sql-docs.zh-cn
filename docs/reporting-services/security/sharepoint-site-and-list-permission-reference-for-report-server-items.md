@@ -1,28 +1,33 @@
 ---
-title: "报表服务器项的 SharePoint 站点和列表权限参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "权限 [Reporting Services], SharePoint 集成模式"
-  - "SharePoint 集成 [Reporting Services], 权限"
-  - "安全 [Reporting Services], SharePoint 集成模式"
-  - "权限集 [Reporting Services]"
+title: "SharePoint 站点和列表权限参考为报表服务器项 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表服务器项的 SharePoint 站点和列表权限参考
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
   本主题提供了 SharePoint 中的权限参考，对于在 SharePoint 集成模式下运行的报表服务器，可使用这些权限来授予对报表服务器操作的访问权限。 如果要创建自定义权限级别，本主题可帮助您选择要使用何种权限。  
   
  SharePoint 提供了三十三种可用于控制对内容和操作的访问的权限。 其中有些但并非所有权限均可应用于涉及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的文档和操作。 可以通过本文中的权限参考表查找支持特定报表任务的权限。  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | SharePoint 2010 和 SharePoint 2013。|  
   
-## 列表权限  
+## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  
   
 |权限|Description|F|C|V|报表服务器操作|  
@@ -58,21 +63,21 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  其他列表权限包括“覆盖签出”、“批准项”和“查看应用程序页面”。 报表服务器不会评估这些权限。 报表服务器不会处理这些操作。  
   
-## 网站权限  
+## <a name="site-permissions"></a>网站权限  
  网站权限决定对与存储在特定库中的项不直接相关的报表服务器操作的访问。 例如，此类操作包括创建和管理共享计划（可由多个库中的项使用）以及配置报表查看器 Web 部件（可在整个网站内使用）。  
   
 |权限|Description|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理权限|创建和更改网站上的权限级别，并为用户和组分配权限。|X|||可以更改针对所有报表服务器项和操作的权限。 可以设置模型项安全性。|  
 |管理网站|执行网站的所有管理任务并管理内容。|X|||创建、更改和删除共享计划。|  
-|添加和自定义网页|添加、更改或删除 HTML 页或 Web 部件页，以及使用与 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 兼容的编辑器编辑网站。|X|||添加或删除报表查看器 Web 部件。|  
+|添加和自定义网页|添加、更改或删除 HTML 页或 Web 部件页，以及使用与 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]兼容的编辑器编辑网站。|X|||添加或删除报表查看器 Web 部件。|  
 |浏览用户信息|查看有关网站用户的信息。|X|X|X|浏览不同网站、库和文件夹中的报表以及其他项目。 将报表以及其他项目发布到库中。|  
 |枚举权限|枚举对网站、列表、文件夹、文档或列表项的权限。|X|||读取所有报表服务器项的权限。 查看使用包含模型项安全设置的报表模型的点击链接型报表。|  
 |管理警报|管理网站中所有用户的通知。|X|||创建、更改和删除网站上的任何订阅。|  
 |使用远程接口|使用 SOAP、Web DAV 或 SharePoint Designer 接口访问网站。|X|X|X|用于调用报表服务器的 URL 代理端点。|  
 |打开|打开网站、列表或文件夹以访问相应容器中的项。|X|X|X|读取计划和项属性。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
