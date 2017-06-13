@@ -1,28 +1,33 @@
 ---
-title: "配置报表服务器以进行远程管理 | Microsoft Docs"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 配置工具"
-  - "WMI 提供程序 [Reporting Services], 远程配置"
-  - "配置管理 [WMI]"
-  - "报表服务器 [Reporting Services], 配置"
-  - "远程服务器管理 [Reporting Services]"
+title: "配置报表服务器以进行远程管理 |Microsoft 文档"
+ms.date: 09/14/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Configuration tool
+- WMI provider [Reporting Services], remote configuration
+- configuration management [WMI]
+- report servers [Reporting Services], configuring
+- remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 配置报表服务器以进行远程管理
+# <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以通过本地或远程方式配置报表服务器实例。 若要配置远程报表服务器实例，可以使用 Reporting Services 配置工具或编写使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序的自定义代码。 Reporting Services 配置工具为 WMI 提供程序提供了一个图形界面，这样您便可以直接配置报表服务器，而不必编写代码。 启动该工具时，可以指定要连接的远程服务器。  
   
  在可以使用该工具配置远程报表服务器之前，必须按照本主题中的说明在 Windows 防火墙中启用端口、启用远程连接并启用远程 WMI 请求。  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要修改防火墙设置，必须从本地登录，并且您必须是本地 Administrators 组的成员。 不能通过远程连接来修改远程计算机的 Windows 防火墙设置。  
   
  如果要为非管理员用户启用远程管理，则必须为该帐户授予对分布式组件对象模型 (DCOM) 的远程激活权限。 本主题提供了有关配置服务器以供非管理员访问的说明。  
@@ -42,7 +47,7 @@ caps.handback.revision: 11
   
  有关详细信息，请参阅 MSDN 上 Platform SDK 文档中的 [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) （通过 Windows 防火墙连接）。  
   
-## “任务”  
+## <a name="tasks"></a>“任务”  
  启用远程报表服务器配置的任务包括：  
   
 -   在 Windows 防火墙中启用端口以允许报表服务器和 SQL Server 数据库引擎实例所使用的端口的请求。  请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 和 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
@@ -57,7 +62,7 @@ caps.handback.revision: 11
   
  本主题中提供了有关如何执行这些任务的说明。  
   
-### 配置与报表服务器数据库的远程连接  
+### <a name="to-configure-remote-connections-to-the-report-server-database"></a>配置与报表服务器数据库的远程连接  
   
 1.  单击 **“开始”**，依次指向 **“程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 11
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
-### 在 Windows 防火墙中启用远程管理  
+### <a name="to-enable-remote-administration-in-windows-firewall"></a>在 Windows 防火墙中启用远程管理  
   
 1.  以本地管理员身份登录要启用远程管理功能的计算机。  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
   
 5.  重新启动计算机。  
   
-### 设置 DCOM 权限为非管理员启用远程 WMI 访问  
+### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>设置 DCOM 权限为非管理员启用远程 WMI 访问  
   
 1.  在“开始”菜单中，指向 **“管理工具”**，单击 **“组件服务”**。  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 11
   
 9. 键入您的用户帐户名，然后单击 **“确定”**。  
   
-10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”。  
+10. 在**权限\<用户或组 >**中**允许**列中，选择**远程启动**和**远程激活**，然后单击**确定**。  
   
-### 为非管理员设置报表服务器 WMI 命名空间的权限  
+### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   
 1.  在“开始”菜单中，指向 **“管理工具”**，单击 **“计算机管理”**。  
   
@@ -139,7 +144,8 @@ caps.handback.revision: 11
   
 13. 在 **“允许”** 列中，选择 **“启用帐户”**、 **“远程启用”**和 **“读取安全”**，然后单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
+

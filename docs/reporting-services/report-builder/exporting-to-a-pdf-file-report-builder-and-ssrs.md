@@ -1,23 +1,28 @@
 ---
-title: "导出到 PDF 文件（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "导出到 PDF 文件 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 导出到 PDF 文件（报表生成器和 SSRS）
+# <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>导出到 PDF 文件（报表生成器和 SSRS）
   PDF 呈现扩展插件可将 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表呈现为可在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开的文件。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 11.0 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。  
   
  PDF 呈现扩展插件支持 ANSI 字符，并且可以从日语、朝鲜语、繁体中文、简体中文、西里尔语、希伯来语和阿拉伯语转换 Unicode 字符，但存在一些限制。 有关该限制的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
@@ -43,14 +48,13 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  即使条件满足，还会有一种 PDF 文件未嵌入字体的情况。 如果所用字体包含在 PDF 规范（常称作 standard type 1 字体或十四个基础字体）中，则对于 ANSI 内容，将不嵌入字体。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-### 客户端计算机上的字体  
+### <a name="fonts-on-the-client-computer"></a>客户端计算机上的字体  
  如果在 PDF 文件中嵌入了字体，则用于查看报表的计算机（客户端计算机）不必安装字体即可正确显示报表。  
   
  如果 PDF 文件中没有嵌入字体，则客户端计算机必须安装正确的字体才能正确显示报表。 如果客户端计算机上没有安装字体，则对于不支持的字符，PDF 文件将显示问号字符 (?)。  
   
-### 验证 PDF 文件中的字体  
+### <a name="verifying-fonts-in-a-pdf-file"></a>验证 PDF 文件中的字体  
  PDF 输出差异通常在报表中使用不支持非拉丁字符的字体并随后将非拉丁字符添加到报表时发生。 应在报表服务器和客户端计算机上测试 PDF 呈现输出，以验证报表是否正常呈现。  
   
  请勿依赖在预览模式下查看报表或导出到 HTML，这是因为报表会因图形设计界面或 Microsoft Internet Explorer 分别执行的自动字体替换而正确显示。 如果服务器上缺少 Unicode 标志符号，您可能会看到字符被替换为问号 (?)。 如果客户端上缺少字体，你可能会看到字符被替换为方框 (□)。  
@@ -69,29 +73,27 @@ caps.handback.revision: 12
 |**创建器**|呈现扩展插件的名称和版本。|  
 |**CreationDate**|报表执行时间，以 PDF **datetime** 格式表示。|  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Interactivity"></a> 交互  
  PDF 支持一些交互元素。 下面是对一些特定行为的说明。  
   
-### 显示和隐藏  
+### <a name="show-and-hide"></a>显示和隐藏  
  PDF 不支持动态显示和隐藏元素。 呈现 PDF 文档是为了与报表中任意项的当前状态相匹配。 例如，如果在报表初次运行时显示了某项，则会呈现该项。 如果可切换的图像在导出报表时隐藏，则不会呈现这些图像。  
   
-### 文档结构图  
+### <a name="document-map"></a>文档结构图  
  如果报表中存在任何文档结构图标签，则会将文档大纲添加到 PDF 文件。 每个文档结构图标签在文档大纲中显示为一个条目，显示顺序与其在报表中的显示顺序相同。 在 Acrobat 中，仅当目标书签所在的页呈现出来时，才会将该标签添加到文档大纲中。  
   
  如果仅呈现单个页，则不添加文档大纲。 文档结构图是分层排列的，以反映报表中的嵌套级别。 文档大纲可通过 Acrobat 中的“书签”选项卡进行访问。 如果单击文档大纲内的条目，则会使文档转至标有书签的位置。  
   
-### 书签  
+### <a name="bookmarks"></a>书签  
  PDF 呈现不支持书签。  
   
-### 钻取链接  
+### <a name="drillthrough-links"></a>钻取链接  
  在 PDF 呈现中不支持钻取链接。 钻取链接不呈现为可单击链接，并且钻取报表不能连接到钻取的目标。  
   
-### 超链接  
+### <a name="hyperlinks"></a>超链接  
  报表中的超链接在 PDF 文件中呈现为可单击的链接。 单击超链接时，Acrobat 将打开默认的客户端浏览器并导航到超链接 URL。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Compression"></a> 压缩  
  图像压缩基于图像的原始文件类型。 默认情况下，PDF 呈现扩展插件会压缩 PDF 文件。  
@@ -101,18 +103,17 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  PDF 文件不支持嵌入 PNG 图像。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置。 有关详细信息，请参阅 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
+

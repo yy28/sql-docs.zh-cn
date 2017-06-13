@@ -1,37 +1,42 @@
 ---
-title: "创建、删除或修改文件夹（Web 门户） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建、 删除或修改文件夹 （web 门户） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建、删除或修改文件夹（Web 门户）
+# <a name="create-delete-or-modify-a-folder-web-portal"></a>创建、删除或修改文件夹（Web 门户）
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
   
-#### 创建文件夹  
+#### <a name="to-create-a-folder"></a>创建文件夹  
   
-1.  启动[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在 Web 门户中，选择“新建”下拉菜单中的“文件夹”。 或者，若要在现有文件夹中创建文件夹，请导航到该文件夹，并在“新建”下拉菜单中选择“文件夹”。  
   
      “在其中创建一个新文件夹”对话框将打开。  
   
-3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * \< > |。 : @ & = + , $ / * \< > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
+3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * < > |。 : @ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
   
 4.  选择“创建”。  
   
-#### 修改或删除文件夹  
+#### <a name="to-modify-or-delete-a-folder"></a>修改或删除文件夹  
   
 1.  在 Web 门户中，导航到“主页”页，然后找到要修改的项。  
   
@@ -49,7 +54,8 @@ caps.handback.revision: 6
   
 6.  单击 **“应用”** 以保存更改。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

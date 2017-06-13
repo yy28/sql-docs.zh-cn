@@ -1,23 +1,28 @@
 ---
-title: "规划地图报表（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "规划地图报表 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 规划地图报表（报表生成器和 SSRS）
+# <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
 好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，可将地图添加到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  
   
 > [!NOTE]  
@@ -51,7 +56,7 @@ caps.handback.revision: 9
   
  在确定需要的空间数据之后，您必须为此数据找到源。  
   
-### 查找空间数据的源  
+### <a name="find-a-source-for-spatial-data"></a>查找空间数据的源  
  若要找到要在地图中使用的空间数据，可以使用以下源：  
   
 -   ESRI 形状文件，包括您可以在 Internet 上搜索的、向公众提供的形状文件。  
@@ -70,18 +75,18 @@ caps.handback.revision: 9
   
  在找到所需的数据后，可以将数据嵌入到报表定义中，或者在处理报表时自动检索此数据。 有关详细信息，请参阅本主题后面的 [在报表定义大小与报表处理时间之间达到平衡](#Embedding) 。  
   
-### 确定空间数据和空间数据匹配字段  
+### <a name="determine-the-spatial-data-and-the-spatial-data-match-fields"></a>确定空间数据和空间数据匹配字段  
  若要在地图上显示分析数据并改变大小、颜色或标记类型，必须指定使空间数据与分析数据相关的字段。  
   
  空间数据必须包含以下字段：  
   
--   **空间数据的第三方站点。** 一个空间数据字段，它具有一系列坐标来定义每个点、线条或多边形。  
+-   **Spatial data.** 一个空间数据字段，它具有一系列坐标来定义每个点、线条或多边形。  
   
 -   **匹配字段。** 一个或多个唯一标识每个空间数据字段的字段。 例如，对于表示商店位置的点，可以使用商店的名称。 如果商店名称在空间数据中不唯一，则可以包含市县的名称以及商店名称。  
   
  匹配字段用于使空间数据与分析数据相关。  
   
-### 确定分析数据和分析数据匹配字段  
+### <a name="determine-the-analytical-data-and-the-analytical-data-match-fields"></a>确定分析数据和分析数据匹配字段  
  在确定空间数据之后，必须确定分析数据。 分析数据可以来自以下源：  
   
 -   现有报表数据集。 可以将字段指定为简单字段表达式，例如 [Sales] 或 =Fields!Sales.Value。  
@@ -107,18 +112,18 @@ caps.handback.revision: 9
   
 |向导图标|层样式|层类型|说明和选项|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.png "rs_MapType_Polygon_Basic")|基本图|多边形|只显示区域的地图，例如，销售区域。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。 调色板是一组预定义的颜色。 当分配完调色板中的所有颜色后，将分配颜色的阴影。|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.png "rs_MapType_Polygon_ColorAnalytical")|颜色分析图|多边形|一个按变化的颜色显示分析数据的地图，例如，按区域列出的销售数据。|  
-|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.png "rs_MapType_Polygon_Bubble")|气泡图|多边形|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.png "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
-|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.png "rs_MapType_Line_Analytical")|分析线条图|线条|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
-|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.png "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
-|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.png "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
-|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.png "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本图|多边形|只显示区域的地图，例如，销售区域。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。 调色板是一组预定义的颜色。 当分配完调色板中的所有颜色后，将分配颜色的阴影。|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|颜色分析图|多边形|一个按变化的颜色显示分析数据的地图，例如，按区域列出的销售数据。|  
+|![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|多边形|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
+|![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
+|![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
+|![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|气泡标记地图|点|对每个位置显示一个气泡且气泡大小按一个分析数据字段变化的地图，例如，按市县列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变气泡颜色以及指定颜色规则。|  
+|![rs_MapType_Marker_Analytical](../../reporting-services/report-design/media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析标记地图|点|在每个位置显示一个标记且标记颜色、大小和类型随分析数据发生变化的地图，例如，最畅销的产品、利润范围和折扣策略。<br /><br /> 选项：通过一个分析字段改变标记类型，通过第二个分析字段改变标记大小，通过第三个分析字段改变标记颜色，以及指定颜色规则。|  
   
  在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关该向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
- 可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅 [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
   
 ##  <a name="Legend"></a> 规划图例  
  为了帮助用户解释地图，可以添加多个地图图例、一个色阶和一个距离刻度。 当您设计地图时，请规划要在何处显示图例。 可以指定有关每个图例的以下信息：  
@@ -135,7 +140,7 @@ caps.handback.revision: 9
   
  默认情况下，所有层都在第一个地图图例中显示规则的结果。 您可以创建多个图例，然后对于每个规则，指定使用哪个图例来显示结果。  
   
- 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)和[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)和[更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
 ##  <a name="Embedding"></a> 在报表定义大小与报表处理时间之间达到平衡  
  针对地图的良好报表设计要求您在控制报表性能和报表定义大小的选项之间达到平衡。 基于空间数据或 Bing 地图图块的地图元素可以是静态的且可嵌入到报表定义中；它们也可以是动态的，而在每次处理报表时创建。 必须在静态或动态地图数据之间进行折衷，并找出适合您所在环境的平衡点。 在制定这一决策时，请考虑以下信息：  
@@ -150,7 +155,7 @@ caps.handback.revision: 9
   
  若要使用动态空间数据，空间数据源必须位于报表服务器上。 当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设计报表时，可以将空间数据源添加到项目，并将其以及报表定义一起发布到报表服务器。 如果您使用报表生成器来设计报表，必须首先将空间数据上载到报表服务器，然后在向导或层属性中，为该地图层指定此空间数据源。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)   
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

@@ -1,24 +1,29 @@
 ---
-title: "配置 URL（SSRS 配置管理器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL 访问 [Reporting Services], 语法"
+title: "配置 URL （SSRS 配置管理器） |Microsoft 文档"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 配置 URL（SSRS 配置管理器）
+# <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
   
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来配置 URL。 URL 的所有部分均在此工具中定义。 与早期版本不同，Internet Information Services (IIS) 网站不再提供对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更高版本中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 应用程序的访问。  
@@ -29,13 +34,13 @@ caps.handback.revision: 13
   
 -   为报表服务器 Web 服务创建 URL。  
   
--   为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 创建 URL。  
+-   为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]创建 URL。  
   
 -   设置高级 URL 属性以定义其他 URL。  
   
- 有关如何存储和维护 URL 或有关互操作性问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[关于 URL 保留项和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 和 [并行安装 Reporting Services 和 Internet 信息服务（SSRS 本机模式）](../../reporting-services/install-windows/install reporting and internet information services side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
+ 有关如何存储和维护 URL 或有关互操作性问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[关于 URL 保留项和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 和 [并行安装 Reporting Services 和 Internet 信息服务（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  在创建或修改 URL 之前，请注意以下几点：  
   
 -   您必须是报表服务器计算机上本地 Administrators 组的成员。  
@@ -46,9 +51,9 @@ caps.handback.revision: 13
   
 -   选择一个报表活动较少的时间。 每次 URL 保留项发生更改时，都可能会回收报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的应用程序域。  
   
--   有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 URL 构造和用法的概述，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
+-   有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中 URL 构造和用法的概述，请参阅 [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)创建 URL。  
   
-### 为报表服务器 Web 服务配置 URL  
+### <a name="to-configure-a-url-for-the-report-server-web-service"></a>为报表服务器 Web 服务配置 URL  
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到某个本地报表服务器实例。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 13
   
     -   **::1** 是 IPv6 格式的环回地址。  
   
-    -   此列表中还显示特定 IP 地址。 IP 地址可以采用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 32 位 IPv4 地址。 IPv6 地址为 128 位，包含八个由冒号分隔的 4 字节字段：\<前缀>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   此列表中还显示特定 IP 地址。 IP 地址可以采用 IPv4 和 IPv6 格式。 *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 32 位 IPv4 地址。 IPv6 地址为 128 位，具有八个由冒号分隔的 4 字节字段：\<前缀 >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          如果有多个网络适配器，或者如果网络同时支持 IPv4 和 IPv6 地址，则会看到多个 IP 地址。 如果只选择一个 IP 地址，则会将应用程序限制为只能访问该 IP 地址（以及域名服务器映射到该地址的任何主机名）。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。 如果选择此值，则通常是因为您要配置多个还指定显式 IP 地址或主机名的 URL 保留项（例如，一个针对用于 Intranet 连接的网络适配器，另一个用于 Extranet 连接）。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 13
   
          `netstat –anp tcp`  
   
-    -   查阅 Microsoft 支持文章[关于 TCP/IP 端口分配的信息](http://support.microsoft.com/kb/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
+    -   查阅 Microsoft 支持文章 [关于 TCP/IP 端口分配的信息](http://support.microsoft.com/kb/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
   
     -   如果您正在使用 Windows 防火墙，则必须打开该端口。 有关说明，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 13
   
 9. 单击 **“应用”** 创建 URL。  
   
-10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)。  
+10. 通过单击页面 **URL** 部分中的链接来测试该 URL。 请注意，必须先创建并配置报表服务器数据库，然后才能测试 URL。 有关指导，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
 > [!NOTE]  
 >  如果您已有 SSL 绑定和 URL 保留项且要更改 SSL 绑定，例如使用不同的证书或主机标头，则建议按顺序完成以下步骤：  
@@ -107,7 +112,7 @@ caps.handback.revision: 13
 >   
 >  为了解决此问题，请删除所有绑定，然后使用唯一设置创建新的绑定，或使用通配符配置 Reporting Services URL 注册。
   
-### 为 Web 门户创建 URL 保留项 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>为 Web 门户创建 URL 保留项 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器实例。  
   
@@ -123,12 +128,12 @@ caps.handback.revision: 13
   
 6.  通过单击页面 **URL** 部分中的链接来测试该 URL。  
   
-## 设置高级属性以指定其他 URL  
+## <a name="setting-advanced-properties-to-specify-additional-urls"></a>设置高级属性以指定其他 URL  
  你可以通过指定不同的端口或主机名（域名服务器可以解析为分配给计算机的 IP 地址的 IP 地址或主机标头名称）为报表服务器 Web 服务或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留多个 URL。 通过创建多个 URL，可以为同一个报表服务器实例设置不同的访问路径。 例如，若要启用报表服务器的 Intranet 和 Extranet 访问，可以为 Intranet 访问使用默认 URL，并为 Extranet 访问使用另一个完全限定的主机名：  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`  
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  不能为同一个应用程序实例设置多个虚拟目录名称。 每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序实例只能映射到一个虚拟目录名称。 如果同一台计算机上有多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，则应用程序的虚拟目录名称应包含实例名称以确保每个请求都能到达其预期目标。  
  
@@ -145,15 +150,15 @@ caps.handback.revision: 13
   
  指定为其注册证书的完全限定的计算机名称。 指定的名称必须与为其注册证书的名称相同。  
   
- 必须先安装证书，才能使用此选项。 还必须修改 RSReportServer.config 文件中的 UrlRoot 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 必须先安装证书，才能使用此选项。 还必须修改 RSReportServer.config 文件中的 UrlRoot 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-### 设置 URL 的高级属性  
+### <a name="to-set-advanced-properties-on-a-url"></a>设置 URL 的高级属性  
   
 1.  在“Web 服务 URL”或“Web 门户 URL”页上，单击“高级”。  
   
 2.  单击 **“添加”**。  
   
-3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果指定可以公共使用的域名，请包含整个 URL，包括 http://www。  
+3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果您在指定公开提供的域名，包括整个 URL，包括`http://www`。  
   
 4.  指定端口。 如果指定自定义端口，则应用程序的 URL 必须始终包含该端口号。  
   
@@ -161,38 +166,39 @@ caps.handback.revision: 13
   
 6.  通过打开浏览器窗口并输入 URL 来测试 URL。  
   
-## 同一台计算机上多个报表服务器实例的 URL  
- 如果为多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例保留 URL，则应遵循下列命名约定以避免命名冲突。 有关详细信息，请参阅[多实例报表服务器部署的 URL 保留项（SSRS 配置管理器）](../../reporting-services/install-windows/url reservations for multi-instance report server deployments.md)。  
+## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>同一台计算机上多个报表服务器实例的 URL  
+ 如果为多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例保留 URL，则应遵循下列命名约定以避免命名冲突。 有关详细信息，请参阅[多实例报表服务器部署的 URL 保留项（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)。  
   
 ##  <a name="URLExamples"></a> URL 配置示例  
  下面列出了报表服务器 URL 的某些可能样式示例：  
   
--   http://localhost/reportserver  
+-   `http://localhost/reportserver`  
   
--   http://localhost/reportserver_SQLEXPRESS  
+-   `http://localhost/reportserver_SQLEXPRESS`  
   
--   http://sales01/reportserver  
+-   `http://sales01/reportserver`  
   
--   http://sales01:8080/reportserver  
+-   `http://sales01:8080/reportserver`  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
- 用来访问 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL 也具有类似的格式，并通常在托管报表服务器的同一网站下创建。 唯一的不同之处是虚拟目录名称（在此例中为 **reports**，但你可以将其配置为需要的任意名称）：  
+ 用来访问 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL 也具有类似的格式，并通常在托管报表服务器的同一网站下创建。 唯一的不同之处是虚拟目录名称（在此例中为 **reports** ，但你可以将其配置为需要的任意名称）：  
   
--   http://localhost/reports  
+-   `http://localhost/reports`  
   
--   http://localhost/reports_SQLEXPRESS  
+-   `http://localhost/reports_SQLEXPRESS`  
   
--   http://sales01/reports  
+-   `http://sales01/reports`  
   
--   http://sales01:8080/reports  
+-   `http://sales01:8080/reports`  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+

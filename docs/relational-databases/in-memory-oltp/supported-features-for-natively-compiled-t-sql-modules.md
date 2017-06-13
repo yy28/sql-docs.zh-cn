@@ -1,7 +1,7 @@
 ---
 title: "本机编译的 T-SQL 模块支持的功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 支持以下查询构造：  
 
+CASE 表达式： 可以在任何语句或允许使用有效表达式的子句中使用大小写。
+   - **适用于：** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+    开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，CASE 语句现在均支持本机编译的 T-SQL 模块。
+
 SELECT 子句：  
 
 -   列名和别名（使用 AS 或 = 语法）。  
 
--   标量子查询  
+-   标量子查询
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译的模块中支持 DISTINCT 运算符。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
 
@@ -73,15 +83,22 @@ FROM 子句：
 
 -   FROM \<本机编译的内联 TVF>  
 
--   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。  
+-   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持联接。
 
--   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
+-   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译的模块中现在支持子查询。
 
 WHERE 子句：  
 
 -   筛选器谓词 IS [NOT] NULL  
 
--   AND、OR、NOT、IN、EXISTS、BETWEEN  
+-   和之间  
+-   OR、 NOT、 在中，EXISTS
+    - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
+      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，OR/NOT/中/EXISTS 运算符现在支持在本机编译模块中。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：

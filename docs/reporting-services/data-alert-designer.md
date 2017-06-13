@@ -1,32 +1,43 @@
 ---
-title: "数据警报设计器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "编辑, 数据警报"
-  - "更新, 数据警报"
-  - "编辑, 警报"
-  - "更新, 警报"
-  - "创建, 数据警报"
-  - "创建, 警报"
+title: "数据警报设计器 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editing, data alerts
+- updating, data alerts
+- editing, alerts
+- updating, alerts
+- creating, data alerts
+- creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 21
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 38277ce132202ea9f112dce0ec0777598a93d39d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 数据警报设计器
-  使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
-  
+# <a name="data-alert-designer"></a>数据警报设计器
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
+
+> [!NOTE]
+> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+
  若要创建警报定义，您需要执行许多相关任务：  
   
 -   选择包含您要使用的数据的报表和报表数据馈送。  
@@ -42,7 +53,7 @@ caps.handback.revision: 21
 -   提供要在警报消息中包括的警报说明。  
   
 > [!NOTE]  
->  因为只有在 SharePoint 模式下安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 后，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能才可用，所以，你想要对其创建警报的报表必须保存、部署或上传到 SharePoint 文档库中。  
+>  因为只有在 SharePoint 模式下安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 后， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能才可用，所以，你想要对其创建警报的报表必须保存、部署或上传到 SharePoint 文档库中。  
 >   
 >  不能针对使用 Windows 集成身份验证或提示输入凭据的报表创建数据警报。 报表必须使用已存储的凭据。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
@@ -51,11 +62,10 @@ caps.handback.revision: 21
 ##  <a name="AlertDesigner"></a> 数据警报设计器用户界面  
  数据警报设计器分为若干区域。 其中包括用于选择报表数据馈送的区域、通过向条件添加规则来创建简单或复杂条件的区域等区域。 下图显示数据警报设计器中的区域。  
   
- ![“警报设计器”用户界面中的区域](../reporting-services/media/rs-alertdesigner.gif "“警报设计器”用户界面中的区域")  
+ ![在警报设计器用户界面的区域](../reporting-services/media/rs-alertdesigner.gif "在警报设计器用户界面的区域")  
   
- ![用于“返回首页”链接的箭头图标](../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-### 警报数据  
+### <a name="alert-data"></a>警报数据  
  在打开数据警报设计器时，它将从报表生成所有数据馈送并使它们变得可用，并且“报表数据名称”下拉列表将包含各个馈送的名称。 在您创建警报定义时数据馈送将缓存在内存中，并且当您在数据馈送之间切换以便浏览报表数据时将快速填充显示数据馈送数据的表。  
   
  创建数据警报定义的第一步是选择包含您希望监视警报的数据的报表数据馈送。 报表可以有零个或多个数据馈送。 如果某个报表没有数据馈送，则无法对其创建警报。 数据馈送可由任何数据区域生成，包括所有类型的图表、仪表、指示器以及表、矩阵和列表。  
@@ -68,12 +78,12 @@ caps.handback.revision: 21
   
  某些报表具有数百万行数据。 该表仅显示数据馈送中的前 100 行数据。  
   
-### 警报名称  
+### <a name="alert-name"></a>警报名称  
  默认情况下，警报定义具有与报表相同的名称。 您可以将此警报名称更改为更有意义的名称。 这便于您管理警报，以及确定要用于更新、删除等操作的警报。  
   
- 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅[向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)和[在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
+ 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅 [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
-### 规则和子句  
+### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  
   
 -   **任何数据具有**— 数据中至少一个值符合该条件指定的规则。  
@@ -144,7 +154,7 @@ caps.handback.revision: 21
   
  数据警报消息中包含规则和子句。  
   
-### 计划设置  
+### <a name="schedule-settings"></a>计划设置  
  您为数据警报定义的计划将定义用于发送数据警报消息的重复执行模式以及何时开始和停止发送警报消息。 该模式为：一次、每分钟、每天和每周。 尽管一个警报只有一个计划，但您可以通过使用这些时间间隔创建满足大多数业务需要的复杂的重复执行模式。 下面是在计划中常用的重复执行模式的示例：  
   
 -   **每天，每隔 10 天** - 将警报一天发送一次，每隔 10 天。  
@@ -162,10 +172,10 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  建议您不要以高于每天一次的频率使用重复执行模式，除非有重要的业务原因需要这么做。 不支持实时处理数据警报定义。 过于频繁地处理数据警报定义会影响报表服务器和总体 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 部署的性能。  
   
-### 电子邮件设置  
+### <a name="email-settings"></a>电子邮件设置  
  在“收件人”选项中，指定通过电子邮件接收数据警报消息的收件人的电子邮件地址。 多个电子邮件地址由分号分隔，与在 Microsoft Office Outlook 电子邮件中的操作方式相同。 还可以指定分发组作为收件人，以便更容易和更有效地管理收件人列表。 如果在您创建警报定义时 SharePoint 可以确定您的电子邮件地址，则您的电子邮件地址将自动添加到收件人列表中；否则，您需要显式将您自己作为收件人添加。  
   
- 电子邮件的默认主题为“\<警报名称>的数据警报”。 您可以更改主题以适合您的需要。  
+ 电子邮件的默认使用者是**数据警报的\<警报名称 >**。 您可以更改主题以适合您的需要。  
   
  还可以提供一个说明以包含在 **“说明”** 选项的数据警报消息中。 包含说明（尤其如果您具有类似的数据警报）将帮助您快速区分和了解您的警报消息。 除了在报表服务器满足指定规则时发送的警报消息之外，在发生错误时还向所有收件人发送一条警报消息。 有关详细信息，请参阅 [Data Alert Messages](../reporting-services/data-alert-messages.md)。  
   
@@ -174,11 +184,10 @@ caps.handback.revision: 21
 ##  <a name="CreateAlert"></a> 创建数据警报定义  
  如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对该报表进行参数化，则您可能需要使用不同的参数值来运行该报表，以便确保您感兴趣的数据出现在该报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
- ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+ ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "打开警报的设计器从 SharePoint 库")  
   
- 有关详细信息，请参阅[在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
+ 有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
- ![用于“返回首页”链接的箭头图标](../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="SaveAlert"></a> 保存数据警报定义  
  数据警报设计器显示将保存数据警报定义的站点的 URL。 数据警报定义始终作为报表保存到相同的站点。  
@@ -186,20 +195,18 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  您选择运行报表的参数值保存在警报定义中，并在作为处理警报定义的一个步骤重新运行报表时使用。 若要使用不同的参数值，您必须创建一个新的警报定义。  
   
- 在保存警报定义前，要对该定义进行验证。 您必须首先纠正所有错误，然后才能成功保存警报定义。 有关详细信息，请参阅[在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
+ 在保存警报定义前，要对该定义进行验证。 您必须首先纠正所有错误，然后才能成功保存警报定义。 有关详细信息，请参阅 [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)。  
   
- ![用于“返回首页”链接的箭头图标](../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="EditAlert"></a> 编辑数据警报定义  
  在保存数据警报定义后，可以在数据警报设计器中重新打开和编辑该定义。 您可以添加、更改或删除规则和子句以及更改计划和电子邮件设置。 如果警报使用的报表数据馈送已更改，并且不再提供警报规则引用的字段，或者这些字段的数据类型或其他元数据已更改，则该警报定义将不再有效，您必须纠正错误后才能重新保存它。 如果您要使用不同的数据馈送，则必须创建一个新的警报定义。  
   
  若要编辑数据警报定义，请在警报管理器中右键单击，然后单击 **“编辑”**。 下图显示了数据警报管理器中数据警报上的上下文菜单。  
   
- ![通过单击“编辑”打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "通过单击“编辑”打开数据警报设计器")  
+ ![通过单击编辑打开数据警报设计器](../reporting-services/media/rs-alertmanageriwopendesigner.gif "打开数据警报设计器通过单击编辑")  
   
- 有关详细信息，请参阅[在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+ 有关详细信息，请参阅 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
- ![用于“返回首页”链接的箭头图标](../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 相关任务  
  本节列出的过程介绍如何创建和编辑警报。  
@@ -207,11 +214,10 @@ caps.handback.revision: 21
 -   [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
-  
- ![用于“返回首页”链接的箭头图标](../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
-  
-## 另请参阅  
- [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)   
- [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
+
+## <a name="see-also"></a>另请参阅
+
+[Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)   
+[管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

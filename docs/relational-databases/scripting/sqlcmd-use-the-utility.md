@@ -1,7 +1,7 @@
 ---
 title: "使用 sqlcmd 实用工具 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 06/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0da3877ee499ec318f386b875f6e3caa7ff3d4ea
+ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
+ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
-# <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
+# <a name="sqlcmd---use-the-utility"></a>sqlcmd-使用该实用程序
   **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
--   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户输入[!INCLUDE[tsql](../../includes/tsql-md.md)]的方式与在命令提示符下类似的语句。 结果将显示在命令提示符处。 若要打开命令提示符窗口，输入"cmd"，在 Windows 搜索中，单击**命令提示符**以打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
--   用户通过下列方式提交 **sqlcmd** 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可以显示在命令提示符处。  
+-   用户通过下列方式提交 **sqlcmd** 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可以在命令提示符下显示。  
   
 -   [查询编辑器中的](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
@@ -42,20 +42,16 @@ ms.lasthandoff: 04/11/2017
 -   SQL Server 代理 CmdExec 作业。  
   
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
- 最常用的选项如下：  
   
--   用于标识**-S**连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器选项 ( **-S** )。  
+-   服务器选项 (**-S**) 标识的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到**sqlcmd**连接。  
   
--   身份验证选项（**-E**、**-U** 和 **-P**），用于指定 **sqlcmd** 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据。  
+-   身份验证选项 (**-E**， **-U**，和**-P**) 指定的凭据， **sqlcmd**用于连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **注意：**选项**-E**是默认设置，并且无需指定。  
   
-    > **注意：****-E** 选项为默认选项，毋须指定。  
+-   输入选项 (**-Q**， **-q**，和**-i**) 标识的输入的位置**sqlcmd**。  
   
--   输入选项（**-Q**、**-q** 和 **-i**），用于标识 **sqlcmd** 输入的位置。  
+-   输出选项 (**-o**) 在其中指定的文件**sqlcmd**是将其输出。  
   
--   输出选项 (**-o**)，用于指定 **sqlcmd** 输出所在的文件。  
-  
-## <a name="connecting-to-the-sqlcmd-utility"></a>连接到 sqlcmd 实用工具  
- 以下是 **sqlcmd** 实用工具的常见用法：  
+## <a name="connect-to-the-sqlcmd-utility"></a>连接到 sqlcmd 实用工具  
   
 -   使用 Windows 身份验证连接到默认实例，以交互方式运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -103,7 +99,7 @@ ms.lasthandoff: 04/11/2017
   
     > **提示！！** 若要查看 **sqlcmd** 实用工具所支持选项的列表，请运行： `sqlcmd -?`。  
   
-## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以交互方式运行 Transact-SQL 语句  
+## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以交互方式运行 TRANSACT-SQL 语句  
  你可以使用 **sqlcmd** 实用工具以交互方式在命令提示符窗口中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **以交互方式执行**语句，请在未使用 **-Q**、 **-q**、 **-Z**或 **-i** 选项指定任何输入文件或查询的情况下运行实用工具。 例如：  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
@@ -131,7 +127,7 @@ ms.lasthandoff: 04/11/2017
   
  `Length: 5" 7'`  
   
-## <a name="strings-that-span-multiple-lines"></a>跨多行的字符串  
+## <a name="strings-that-span-multiple-lines"></a>跨多个行的字符串  
  **sqlcmd** 支持包含跨多行的字符串的脚本。 例如，下面的 `SELECT` 语句跨多行，但键入 `GO`并按 Enter 键后，将执行单个字符串。  
   
  `SELECT First line`  
@@ -207,7 +203,7 @@ ms.lasthandoff: 04/11/2017
   
  行 `3> GO` 后的几行内容为 `SELECT` 语句的输出。 生成输出后， `sqlcmd` 重置 `sqlcmd` 提示符并显示 `1>`。 在 `EXIT` 行输入 `1>`后，命令提示符窗口显示第一次打开时显示的行。 它指示 `sqlcmd` 已退出会话。 现在可以再键入一个 `EXIT` 命令关闭命令提示符窗口。  
   
-## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件  
+## <a name="running-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 TRANSACT-SQL 脚本文件  
  可以使用 **sqlcmd** 执行数据库脚本文件。 脚本文件是一些文本文件，它们同时包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、 **sqlcmd** 命令和脚本变量。 有关如何使用脚本变量的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 **sqlcmd** 与脚本文件中语句、命令和脚本变量的配合方式类似于它与交互输入的语句和命令的配合方式。 主要区别在于 **sqlcmd** 从输入文件连续读取内容，而不是等待用户输入语句、命令和脚本变量。  
   
  可以通过几种不同的方式创建数据库脚本文件：  
@@ -561,7 +557,7 @@ SQLCMD –E –N –C
   
  如果访问接口指定了 `ForceProtocolEncryption = True` ，则启用加密，即使连接字符串中具有 `Encrypt=No` 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="more-about-sqlcmd"></a>有关 sqlcmd 的详细信息  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
  [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [使用查询编辑器编辑 SQLCMD 脚本](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   

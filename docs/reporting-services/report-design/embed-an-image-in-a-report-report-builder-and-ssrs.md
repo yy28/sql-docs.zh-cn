@@ -1,26 +1,31 @@
 ---
-title: "在报表中嵌入图像（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.embeddedimages.f1"
-  - "10060"
+title: "在报表 （报表生成器和 SSRS） 中嵌入图像 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.embeddedimages.f1
+- "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在报表中嵌入图像（报表生成器和 SSRS）
+# <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在报表中嵌入图像（报表生成器和 SSRS）
   报表中可以包含嵌入图像。 嵌入图像可确保图像对报表始终可用，但会影响报表定义（即定义报表的文件）的大小。 报表中嵌入的图像在“报表数据”窗格中列出。  
   
  您最好将某一图像嵌入到报表定义中，然后将该图像添加到设计图面。 有关详细信息，请参阅[添加背景图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)。  
@@ -28,7 +33,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 在报表中嵌入图像  
+### <a name="to-embed-an-image-in-a-report"></a>在报表中嵌入图像  
   
 1.  在报表设计视图的 **“插入”** 选项卡上，单击 **“图像”**。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  MIME 类型（如 bmp）是导入图像时自动派生得来的。 若要更改 MIME 类型，请参见下一个过程。  
   
-### （可选）更改导入图像的 MIME 类型  
+### <a name="optional-to-change-the-mime-type-of-an-imported-image"></a>（可选）更改导入图像的 MIME 类型  
   
 1.  在“设计”视图中打开报表。  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 8
   
 3.  在 **MIMEType** 属性旁边的文本框内单击，并从下拉列表中选择一个新 MIME 类型。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [图像（报表生成器和 SSRS）](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [添加数据绑定图像（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [“图像属性”对话框 -&gt;“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

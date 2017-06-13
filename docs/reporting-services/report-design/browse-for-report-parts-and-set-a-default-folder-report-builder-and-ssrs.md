@@ -1,30 +1,35 @@
 ---
-title: "浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查找报表部件和设置默认文件夹 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
+# <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表的最简单方式是从报表部件库将现有报表部件（如表和图表）添加到你的报表。 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何报表部件都依赖于数据集，即对某数据源的查询和连接。 将报表部件添加到报表后，可以根据需要进行修改。  
   
  您可以设置一个默认文件夹，以便将报表部件发布到报表服务器或者与报表服务器相集成的 SharePoint 站点。  
   
- 有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
-## 查找报表部件  
+## <a name="to-browse-for-report-parts"></a>查找报表部件  
   
 1.  在 **“插入”** 菜单上，单击 **“报表部件”**。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  对于“创建者”和“上次修改者”值，搜索用户的用户名，正如它在报表服务器上显示的那样。  
   
-## 为报表部件设置默认文件夹  
+## <a name="to-set-a-default-folder-for-report-parts"></a>为报表部件设置默认文件夹  
   
 1.  单击 **“报表生成器”**，然后单击 **“选项”**。  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 8
   
  不需要重新启动报表生成器，此设置就能生效。  
   
-## 另请参阅  
- [检查更新或关闭更新（报表生成器和 SSRS）](http://msdn.microsoft.com/zh-cn/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+## <a name="see-also"></a>另请参阅  
+ [检查更新或关闭更新（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/zh-cn/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [发布和重新发布报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

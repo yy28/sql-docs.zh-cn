@@ -1,67 +1,41 @@
 ---
-title: "教程：向报表添加参数（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将参数添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加参数（报表生成器）
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。 
-  
-## <a name="BackToTop"></a>学习内容  
-在本教程中，将了解以下内容：  
-  
-1.  [在表或矩阵向导中创建矩阵报表和数据集](#Setup)  
-  
-2.  [在向导中组织数据并选择布局](#CompleteWizard)  
-  
-3.  [添加查询参数以创建报表参数](#Query)  
-  
-4.  [更改报表参数的默认数据类型和其他属性](#ChangeDefaultProperties)  
-  
-    1.  [添加数据集以提供可用值和显示名称](#AddDataset)  
-  
-    2.  [指定要显示在列表中的可用值](#AvailableValues)  
-  
-    3.  [指定默认值](#DefaultValues)  
-  
-    4.  [查找名称/值对](#NameValue)  
-  
-5.  [在报表中显示所选参数值](#Expression)  
-  
-6.  [在筛选器中使用报表参数](#Filter)  
-  
-7.  [更改报表参数以接受多个值](#Multivalued)  
-  
-8.  [为条件可见性添加布尔参数](#Boolean)  
-  
-9. [添加报表标题](#Title)  
-  
-10. [保存报表](#Save)  
-  
+   
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：25 分钟。  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Setup"></a>1.在表或矩阵向导中创建矩阵报表和数据集  
@@ -70,7 +44,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 > 在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建新的矩阵报表  
+### <a name="to-create-a-new-matrix-report"></a>创建新的矩阵报表  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -112,7 +86,7 @@ caps.handback.revision: 11
     FROM CTE  
     ```  
   
-    此查询在一个公用表表达式中组合了若干 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT 语句的结果，以指定基于来自 Contoso 示例数据库的简化相机销售数据的值。 子类别有数码相机、数码单反 (SLR) 相机、摄像机和附件。  
+    此查询在一个公用表表达式中组合了若干 [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT 语句的结果，以指定基于来自 Contoso 示例数据库的简化相机销售数据的值。 子类别有数码相机、数码单反 (SLR) 相机、摄像机和附件。  
   
 11. 在查询设计器工具栏中，单击“运行”(**!**) 来查看数据。   
   
@@ -125,7 +99,7 @@ caps.handback.revision: 11
 ## <a name="CompleteWizard"></a>2.在向导中组织数据并选择布局  
 该向导提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
-### 将数据组织到组中  
+### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
   
 1.  在“排列字段”页上，将 Subcategory 拖到“行组”中。  
   
@@ -156,15 +130,15 @@ caps.handback.revision: 11
 10. 单击 **“运行”** 以预览报表。  
   
 报表将在报表服务器上运行并显示标题以及进行报表处理的时间。  
-  
-![ssRB_ParamTut__Preview1](../reporting-services/media/ssrb-paramtut-preview1.png)  
+
+![ssRB_ParamTut__Preview1](../reporting-services/media/ssrb-paramtut-preview1.png)
   
 到目前为止，列标题显示的是商店标识符而不是商店名称。 接下来，您将添加表达式以便在包含商店标识符/商店名称对的数据集中查找商店名称。  
   
 ## <a name="Query"></a>3.添加查询参数以创建报表参数  
 当向查询添加查询参数时，报表生成器将自动创建单值报表参数，其中名称、提示符和数据类型使用默认属性。  
   
-### 添加查询参数  
+### <a name="to-add-a-query-parameter"></a>添加查询参数  
   
 1.  单击“设计”切换回设计视图。  
   
@@ -176,9 +150,9 @@ caps.handback.revision: 11
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **WHERE** 子句将检索的数据限制为由查询参数 @StoreID 指定的商店标识符。  
+    **其中**子句限制检索的数据与由查询参数指定的应用商店标识符 *@StoreID* 。  
   
-4.  在查询设计器工具栏中，单击“运行”(**!**)。 此时将打开“定义查询参数”对话框，提示为查询参数 @StoreID 输入值。  
+4.  在查询设计器工具栏中，单击“运行”(**!**)。 **定义查询参数**对话框将打开，并提示输入查询参数的值 *@StoreID* 。  
   
 5.  在“参数值”中，键入 **200**。  
   
@@ -190,7 +164,7 @@ caps.handback.revision: 11
   
 8.  在“报表数据”窗格中，展开“参数”文件夹。  
   
-请注意，现在有一个名为 @StoreID 的报表参数，一个可在其中排放报表参数的“参数”窗格。   
+注意有现在是一个名为的报表参数 *@StoreID* ，和可以布局报表参数的其中一个参数窗格。   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -199,11 +173,11 @@ caps.handback.revision: 11
 ## <a name="ChangeDefaultProperties"></a>4.更改报表参数的默认数据类型和其他属性  
 创建报表参数之后，可以调整属性的默认值。  
   
-### 更改报表参数的默认数据类型  
+### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>更改报表参数的默认数据类型  
   
 默认情况下，创建的参数数据类型为 **Text**。 由于商店标识符是一个整数，因此可将数据类型更改为 Integer。  
   
-1.  在“报表数据”窗格的“参数”节点中，右键单击“@StoreID”，然后单击“参数属性”。  
+1.  下的报表数据窗格中**参数**节点，右键单击 *@StoreID* ，然后单击**参数属性**。  
   
 2.  在“提示符”下，键入 **Store identifier?** 当您运行报表时，此文本出现在报表查看器工具栏上。  
   
@@ -213,7 +187,7 @@ caps.handback.revision: 11
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  单击 **“运行”** 以预览报表。 报表查看器将显示 @StoreID 的提示 **Store Identifier?**。  
+6.  单击 **“运行”** 以预览报表。 报表查看器显示提示符**商店标识符？**为 *@StoreID* 。  
   
 7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”。  
   
@@ -222,7 +196,7 @@ caps.handback.revision: 11
 ## <a name="AddDataset"></a>4a. 添加数据集以提供可用值和显示名称  
 若要确保报表读者仅对参数键入有效值，可以创建一个从中选择值的下拉列表。 值可以来自于您指定的数据集或列表。 可用值必须由具有查询的数据集提供，该查询不包含对参数的引用。  
   
-### 为参数创建有效值数据集  
+### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>为参数创建有效值数据集  
   
 1.  单击“设计”切换到设计视图。  
   
@@ -252,9 +226,9 @@ caps.handback.revision: 11
 ## <a name="AvailableValues"></a>4b. 指定要显示在列表中的可用值 
 创建数据集以提供可用值后，更改报表属性，以指定将哪个数据集和哪个字段用于填充报表查看器工具栏上的有效值下拉列表。  
   
-### 为参数提供数据集中的可用值  
+### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
   
-1.  在“报表数据”窗格中，右键单击参数“@StoreID”，然后单击“参数属性”。  
+1.  在报表数据窗格中，右键单击参数 *@StoreID* ，然后单击**参数属性**。  
   
 2.  单击“可用值”，然后单击“从查询中获取值”。  
   
@@ -268,7 +242,7 @@ caps.handback.revision: 11
   
 7.  在“提示符”中，将 **Store Identifer?** 更改为 **Store name?**  
   
-    报表读者现在将从商店名称列表而非商店标识符列表中进行选择。 请注意，参数数据类型保持为 **Integer**，因为参数是基于商店标识符而不是商店名称。  
+    报表读者现在将从商店名称列表而非商店标识符列表中进行选择。 请注意，参数数据类型保持为 **Integer** ，因为参数是基于商店标识符而不是商店名称。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,16 +252,16 @@ caps.handback.revision: 11
   
 10. 从下拉列表中，选择“Contoso Catalog Store”，然后单击“查看报表”。  
   
-报表显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
+报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="DefaultValues"></a>4c. 指定默认值 
 可以为每个参数指定默认值，以便自动运行报表。  
   
-### 从数据集中指定默认值  
+### <a name="to-specify-a-default-value-from-a-dataset"></a>从数据集中指定默认值  
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击“@StoreID”，然后单击“参数属性”。  
+2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
   
 3.  单击“默认值”，然后单击“从查询中获取值”。  
   
@@ -295,32 +269,32 @@ caps.handback.revision: 11
   
 5.  在“值字段”中，从下拉列表单击“StoreID”。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  预览报表。  
   
-对于 @StoreID，报表查看器显示值“Contoso North America Online Store”，因为它是数据集 **Stores** 的结果集的第一个值 。 报表显示了标识符为 **199** 的商店销售的数码相机数量。  
+有关 *@StoreID* ，报表查看器显示的值"Contoso 北部 America 在线商店"，因为它是从结果集中为数据集的第一个值**存储**。 报表显示了标识符为 **199**的商店销售的数码相机数量。  
   
-### 指定自定义默认值  
+### <a name="to-specify-a-custom-default-value"></a>指定自定义默认值  
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击“@StoreID”，然后单击“参数属性”。  
+2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
   
 3.  单击“默认值” > “指定值” > “添加”。 此时将添加一个新的值行。  
   
 4.  在“值”中，键入 **200**。  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  预览报表。  
   
-对于 @StoreID，报表查看器显示“Contoso Catalog Store”，因为它是标识符为 **200** 的商店的显示名称。 报表显示了标识符为 **200** 的商店销售的附件、摄像机和数码 SLR 相机数量。  
+有关 *@StoreID* ，报表查看器显示"Contoso 目录存储"，因为它是存储标识符的显示名称**200**。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
 ## <a name="NameValue"></a>4d. 查找名称/值对  
 数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
   
-### 从数据集查找值  
+### <a name="to-look-up-a-value-from-a-dataset"></a>从数据集查找值  
   
 1.  切换到“设计”视图。  
   
@@ -342,7 +316,7 @@ caps.handback.revision: 11
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Store 列标题包含复杂表达式的显示文本：**Expr**。  
+    Store 列标题包含复杂表达式的显示文本： **Expr**。  
   
 8.  预览报表。  
   
@@ -351,13 +325,13 @@ caps.handback.revision: 11
 ## <a name="Expression"></a>5.在报表中显示所选参数值  
 当报表读者对报表有疑问时，此操作可帮助用户获知他们选择的参数值。 可以在报表中保留用户为每个参数的选定的值。 实现这一点的一种方式是在页脚的文本框中显示参数。  
   
-### 在页脚中显示所选参数值和标签  
+### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>在页脚中显示所选参数值和标签  
   
 1.  切换到“设计”视图。  
   
 2.  右键单击“页脚” > 单击“插入” > “文本框”。 拖动带时间戳的文本框旁边的文本框。 抓住该文本框的侧手柄并扩展宽度。  
   
-3.  从“报表数据”窗格中，将参数 @StoreID 拖到文本框。 文本框显示 `[@StoreID]`。  
+3.  从报表数据窗格中，将参数拖 *@StoreID* 到文本框中。 文本框显示 `[@StoreID]`。  
   
 4.  若要显示参数标签，请在文本框中单击，直到插入游标出现在现有表达式之后，键入一个空格，然后从“报表数据”窗格将参数的另一个副本拖到文本框。 文本框显示 `[@StoreID] [@StoreID]`。  
   
@@ -365,14 +339,14 @@ caps.handback.revision: 11
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    文本显示：`[@StoreID.Label] [@StoreID]`。  
+    文本显示： `[@StoreID.Label] [@StoreID]`。  
   
 7.  预览报表。  
   
 ## <a name="Filter"></a>6.在筛选器中使用报表参数  
 筛选器可帮助控制在从外部数据源检索到数据后在报表中使用哪些数据。 为了让报表读者能够控制他们要看到的数据，可以在矩阵的筛选器中包含报表参数。  
   
-### 在矩阵筛选器中指定参数  
+### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>在矩阵筛选器中指定参数  
   
 1.  切换到“设计”视图。  
   
@@ -401,11 +375,11 @@ caps.handback.revision: 11
 ## <a name="Multivalued"></a>7.更改报表参数以接受多个值  
 若要将一个参数从单值参数更改为多值参数，则必须更改查询和包含对该参数的引用的所有表达式（包括筛选器）。 多值参数是一个值数组。 在数据集查询中，查询语法必须一个值是否包含在一组值中。 在报表表达式中，表达式语法必须访问一个值数组而不是单个值。  
   
-### 将一个参数从单值参数更改为多值参数  
+### <a name="to-change-a-parameter-from-single-to-multivalued"></a>将一个参数从单值参数更改为多值参数  
   
 1.  切换到“设计”视图。  
   
-2.  在“报表数据”窗格中，右键单击“@StoreID”，然后单击“参数属性”。  
+2.  在报表数据窗格中，右键单击 *@StoreID* ，然后单击**参数属性**。  
   
 3.  选择“允许多个值”。  
   
@@ -460,7 +434,7 @@ caps.handback.revision: 11
  
 ## <a name="Boolean"></a>8.为条件可见性添加布尔参数  
   
-### 添加布尔参数  
+### <a name="to-add-a-boolean-parameter"></a>添加布尔参数  
   
 1.  在设计图面上，在“报表数据”窗格中右键单击“参数”，再单击“添加参数”。  
   
@@ -478,7 +452,7 @@ caps.handback.revision: 11
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 基于布尔参数设置可见性  
+### <a name="to-set-visibility-based-on-a-boolean-parameter"></a>基于布尔参数设置可见性  
   
 1.  在设计图面上，右键单击页脚中用于显示参数值的文本框，然后单击“文本框属性”。  
   
@@ -504,7 +478,7 @@ caps.handback.revision: 11
   
 ## <a name="Title"></a>9.添加报表标题  
   
-### 添加报表标题  
+### <a name="to-add-a-report-title"></a>添加报表标题  
 
 1.  切换到“设计”视图。  
    
@@ -514,7 +488,7 @@ caps.handback.revision: 11
   
 ## <a name="Save"></a>10.保存报表  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -530,10 +504,11 @@ caps.handback.revision: 11
   
 报表即已保存至报表服务器。 您连接的报表服务器将显示在窗口底部的状态栏中。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 到此为止，我们结束了有关如何向报表添加参数的演练。 要了解有关参数的详细信息，请参阅[报表参数（报表生成器和报表设计器）](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 * [报表生成器教程](../reporting-services/report-builder-tutorials.md)
 * [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-*  [Lookup 函数](../reporting-services/report-design/lookup-function-report-builder-and-ssrs.md)   
+*  [Lookup 函数](../reporting-services/report-design/report-builder-functions-lookup-function.md)   
+

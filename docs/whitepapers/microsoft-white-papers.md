@@ -15,15 +15,13 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd0753457b002558f164f1e5f1c16730463ca25f
+ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
+ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="microsoft-white-papers"></a>Microsoft 白皮书
-[用于存储、移动和转换数据的 Microsoft 技术介绍](https://msdn.microsoft.com/library/mt639326.aspx)  
-[在 AlwaysOn 环境中安装 Master Data Services](https://msdn.microsoft.com/library/mt761778.aspx)  
+# <a name="microsoft-white-papers"></a>Microsoft 白皮书 
 [Server 2016 的 SQL Server 内存中 OLTP 内部组件](https://msdn.microsoft.com/library/mt764316.aspx)
   
   

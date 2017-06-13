@@ -1,23 +1,28 @@
 ---
-title: "词汇表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "词汇表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 词汇表（报表生成器）
+# <a name="glossary-report-builder"></a>词汇表（报表生成器）
   
   
 |术语|定义|  
@@ -76,7 +81,7 @@ caps.handback.revision: 8
 |颜色规则 (color rules)|自动将颜色分配给地图层上各地图元素的算法。|  
 |色阶 (color scale)|用于解释地图上表示的颜色的地图图例的类型。|  
 |公共语言运行时 (common language runtime)|位于托管代码执行核心的引擎。 该运行时为托管代码提供跨语言集成、代码访问安全性、对象生存期管理以及调试和事件探查支持等服务。|  
-|复杂表达式 (complex expression)|不能表示为单个内置字段引用且在设计图面上显示为 <\<Expr>> 的表达式。|  
+|复杂表达式 (complex expression)|不能表示为一个单个的内置字段引用，并为设计图面上显示的表达式 <\<Expr >>。|  
 |串联 (concatenation)|将两个或更多个字符串或表达式组合成一个字符串或表达式，或者将两个或更多个二进制字符串或表达式组合成一个二进制字符串或表达式。|  
 |并发|使多个用户能够同时访问和更改共享数据的进程。 SQL Server 使用锁定功能来使多个用户能够同时访问和更改共享数据而彼此之间不发生冲突。|  
 |配置文件 (config file)|请参阅另一术语：配置文件 (configuration file)|  
@@ -358,7 +363,7 @@ caps.handback.revision: 8
 |用户实例 (user instance)|由父实例代表用户生成的 SQL Server Express 实例。|  
 |值 (y) 轴 (value (y) axis)|用于在图表中显示数字数据值的轴。 通常是垂直轴。 例外：在条形图中，轴被颠倒，因此 y 轴显示分组数据。|  
 |值表达式 (value expression)|将返回值的多维表达式 (MDX)。 值表达式可以对集、元组、成员、级别、数字或字符串进行运算。|  
-|变量|1.在 Integration Services 中，用来存储可在脚本、表达式和属性表达式中使用以设置列值和包对象属性的值。 <br />2.分配了值的已定义实体。 局部变量是使用 DECLARE@localvariable 语句定义的，并使用 SELECT 或 SET@localvariable 语句在声明该变量的语句批处理内为其分配初始值。|  
+|变量|1.在 Integration Services 中，用来存储可在脚本、表达式和属性表达式中使用以设置列值和包对象属性的值。 <br />2.分配了值的已定义实体。 使用定义的本地变量DECLARE@localvariable语句并分配在声明该使用 SELECT 语句批处理中的初始值或SET@localvariable语句。|  
 |可变间隔 (variable interval)|Reporting Services 图表上的一个选项，指定此选项可以根据图表的宽度或高度自动计算能够在轴上放置的最佳标签数。|  
 |可视化 (visualization)|在地图、图表和仪表中，用户为展现分析数据而选择的方式。|  
 |Web 服务|是指 Reporting Services 中的一种服务，它通过 HTTP 使用简单对象访问协议 (SOAP) 并用作客户端程序和报表服务器之间的通信接口。|  
@@ -369,7 +374,7 @@ caps.handback.revision: 8
 |x 轴 (x-axis)|请参阅另一术语：类别 (x) 轴 (category (x) axis)|  
 |y 轴 (y-axis)|请参阅另一术语：值 (y) 轴 (value (y) axis)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "通过添加条带线突出显示图表数据（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过添加条带线 （报表生成器和 SSRS） 突出显示图表数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 通过添加条带线突出显示图表数据（报表生成器和 SSRS）
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>通过添加条带线突出显示图表数据（报表生成器和 SSRS）
   条带线（或条带）是按固定或自定义间隔使图表背景带有阴影的水平或垂直区域。 可以使用条带线执行以下操作：  
   
 -   提高在图表上查找各个值时的可读性。 指定固定间隔的条带线有助于读取该图表时分离数据点。  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 在图表上按固定间隔显示交错条带线  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>在图表上按固定间隔显示交错条带线  
   
 1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 3.  （可选）使用相邻的“颜色”下拉列表指定带状线的颜色。  
   
-### 在图表上按自定义间隔显示交错条带线  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>在图表上按自定义间隔显示交错条带线  
   
 1.  若要显示水平带状线，请右键单击垂直图表轴，然后单击“垂直轴属性”。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  默认情况下，Interval 设置为“自动”，这表示图表将不计算自定义带状线的间隔。 仅当设置间隔值后图表才计算条带线的间隔。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [向图表添加移动平均线（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

@@ -1,35 +1,40 @@
 ---
-title: "在矩阵和图表上显示相同数据（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在矩阵和图表 （报表生成器） 上显示相同的数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在矩阵和图表上显示相同数据（报表生成器）
+# <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
   如果希望在矩阵和图表中显示相同数据，则必须将两个数据区域的属性都设置为指定相同数据集，而且还要为筛选器、组、排序和数据指定相同表达式。  
   
  由于两个数据区域的数据将有相同的祖先（报表数据集），因此在向矩阵添加交互式排序按钮之后，当用户单击该按钮时它会同时更改矩阵和图表的排序顺序。 有关详细信息，请参阅[将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
  若要使用矩阵列组值作为图表的图例，必须指定图表上序列数据的颜色，然后使用与填充颜色相同的颜色作为用于显示组值的矩阵单元中文本框的背景色。 有关详细信息，请参阅[对多个形状图指定一致的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)。  
   
- 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅[将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+ 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅 [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 添加矩阵和图表以显示相同数据  
+### <a name="to-add-a-matrix-and-chart-to-display-the-same-data"></a>添加矩阵和图表以显示相同数据  
   
 1.  在设计视图中打开报表。  
   
@@ -95,9 +100,9 @@ caps.handback.revision: 6
   
 25. 预览结果。 矩阵行组和列组将显示与图表序列组和类别组相同的数据。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+ [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

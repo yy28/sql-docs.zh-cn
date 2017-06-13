@@ -1,24 +1,29 @@
 ---
-title: "教程：向报表添加饼图（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 将饼形图添加到报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：向报表添加饼图（报表生成器）
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
 
 饼图和圆环图将数据显示为整体的一定比例。 它们没有轴。 在饼图上添加某数值字段后，该图表将计算每个值相对总计的百分比。  
@@ -28,30 +33,13 @@ caps.handback.revision: 13
 ![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
   
 如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在这种情况下，请考虑将多个小切片组合成一个更大的切片。 将数据聚合到少量数据点之后，饼图更具可读性。  
-  
-## <a name="BackToTop"></a>学习内容  
-在本教程中，你将学习：  
-  
-1.  [使用图表向导创建饼图](#Chart)  
-  
-2.  [选择图表类型](#ChartType)  
-  
-3.  [在每个切片中显示百分比](#Percentages)  
-  
-4.  [将多个小型切片合并为一个切片](#CombineSlices)  
-  
-5.  [从顶部开始绘制饼图值](#DrawingEffect)  
-  
-6.  [添加报表标题](#Title)  
-  
-7.  [保存报表](#Save)  
-  
+ 
 > [!NOTE]  
 > 在本教程中，将向导的多个步骤合并为两个过程。 有关如何浏览到报表服务器、添加数据源和添加数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：10 分钟  
   
-## 要求  
+## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.使用图表向导创建饼图  
@@ -135,7 +123,7 @@ caps.handback.revision: 13
   
 4.  在“标签数据”框中，选择“#PERCENT”。  
     
-5.  （可选）若要指定标签显示的小数位数，在“标签数据”框的“#PERCENT”后面键入 **{Pn}**，其中 n 为要显示的小数位数。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
+5.  （可选）若要指定多少小数将标签置于所示，在**标记数据**后框中**#PERCENT**，类型**{Pn}**其中 *n* 是要显示的小数数字。 例如，若不显示小数位数，请键入 **#PERCENT{P0}**。  
 
 6.  若要将值显示为百分比，则 UseValueAsLabel 属性必须为 false。 如果系统提示设置此值，请在“确认操作”对话框中单击“是”。  
   
@@ -219,7 +207,7 @@ caps.handback.revision: 13
   
 ## <a name="Save"></a>7.保存报表  
   
-### 保存报表  
+### <a name="to-save-the-report"></a>保存报表  
   
 1.  切换到报表设计视图。  
   
@@ -231,10 +219,12 @@ caps.handback.revision: 13
   
 报表将保存在报表服务器上。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 这样，您就成功完成了“向报表添加饼图”教程的学习。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

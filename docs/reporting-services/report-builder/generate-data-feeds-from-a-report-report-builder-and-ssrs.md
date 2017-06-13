@@ -1,24 +1,31 @@
 ---
-title: "从报表生成数据馈送（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "从报表 （报表生成器和 SSRS） 生成数据馈送 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 从报表生成数据馈送（报表生成器和 SSRS）
-  你可以从分页报表生成与 Atom 兼容的数据馈送，然后在可利用数据馈送的应用程序（例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）中使用数据馈送。  
+
+# <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
+
+你可以从分页报表生成 Atom 兼容数据馈送，然后使用应用程序，如 Power Pivot 中的数据馈送或 Power BI 中，可以使用数据源。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送。 该文档为报表中的每个数据区域至少列出一个数据馈送。 根据数据区域的类型以及数据区域显示的数据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以自数据区域生成多个数据馈送。  
   
@@ -29,7 +36,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 生成 Atom 服务文档  
+### <a name="to-generate-an-atom-service-document"></a>生成 Atom 服务文档  
   
 1.  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户中，导航到想要生成数据馈送的报表。  
   
@@ -54,7 +61,7 @@ caps.handback.revision: 11
   
 8.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atomsvc 文件。  
   
-### 查看与 Atom 兼容的数据馈送  
+### <a name="to-view-an-atom-compliant-data-feed"></a>查看与 Atom 兼容的数据馈送  
   
 1.  如果 Atom 服务文档尚未打开，则找到该文档并在 Internet Explorer 之类的浏览器中打开它。  
   
@@ -80,8 +87,9 @@ caps.handback.revision: 11
 7.  确认文档类型为 **“ATOM 文件”**，然后单击 **“保存”**。  
   
 8.  或者，在浏览器或者文本编辑器或 XML 编辑器中打开该 .atom 文件。  
-  
-## 另请参阅  
- [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>后续步骤
+
+[导出报表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

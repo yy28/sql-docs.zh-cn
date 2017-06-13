@@ -15,3 +15,4 @@
 # [安装 SQL Server 2016 BI 功能](install-sql-server-business-intelligence-features.md)
 # [配置 Windows 防火墙以允许 SQL Server 访问](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [将多宿主计算机配置为允许 SQL Server 访问](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [安装向导帮助](instance-configuration.md)

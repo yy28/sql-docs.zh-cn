@@ -1,29 +1,34 @@
 ---
-title: "使用调色板定义图表上的颜色（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用调色板 （报表生成器和 SSRS） 在图表上定义颜色 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c244f75603ae96dad15c98411bffe223b2857b56
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用调色板定义图表上的颜色（报表生成器和 SSRS）
+# <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
   您可以通过选择预定义调色板或定义自定义调色板来更改图表的调色板。 自定义调色板是针对具体报表而言。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 使用内置调色板更改图表的颜色  
+### <a name="to-change-the-colors-on-the-chart-using-a-built-in-color-palette"></a>使用内置调色板更改图表的颜色  
   
 1.  打开“属性”窗格。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 6
     > [!NOTE]  
     >  您无法更改预定义调色板中的颜色或顺序。  
   
-### 使用自定义调色板定义自己的图表颜色  
+### <a name="to-define-your-own-colors-on-the-chart-using-a-custom-color-palette"></a>使用自定义调色板定义自己的图表颜色  
   
 1.  打开“属性”窗格。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
  如果使用自定义调色板，可更改颜色顺序以调整图表中不同序列的颜色。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

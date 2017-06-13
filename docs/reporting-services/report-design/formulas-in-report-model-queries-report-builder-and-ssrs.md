@@ -1,25 +1,30 @@
 ---
-title: "报表模型查询中的公式（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10151"
+title: "在报表中的公式模拟查询 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表模型查询中的公式（报表生成器和 SSRS）
+# <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 当你为报表模型数据源定义查询时，可以在报表模型查询设计器的“定义公式”对话框中定义公式。  公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  
   
  公式不是 RDL 表达式，不以等号 (=) 开头。 有关 RDL 表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## References  
+## <a name="references"></a>References  
  引用是字段名称。 它可以是实体中现有的字段名称，也可以是已创建并添加到“字段”列表中的计算字段名称。 引用为报表生成器提供要在公式中使用的值或数据的查找位置。 可以在一个公式中引用当前上下文实体中的字段和其他实体中的字段，也可以在多个公式中使用同一字段中的值。  
   
  在使用引用时，报表处理器将对字段中的每个值运行公式。 例如，假设某个字段包含过去五年中的年度总销售额。 此字段包含五个值，每个值表示给定年份的总销售额。 如果公式包含对此字段的引用，则该公式将使用每个值来计算新的值。  
   
-## 运算符  
+## <a name="operators"></a>运算符  
  运算符指定要对公式中的值执行的计算类型。 有三种不同类型的运算符：算术运算符、比较运算符和文本运算符。 使用符号（例如加号 (+)）表示运算符。  
   
  **算术运算符。** 算术运算符用于执行基本的数学运算（例如加法、减法或乘法）、组合数字以及生成数值结果。  

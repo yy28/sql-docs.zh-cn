@@ -1,23 +1,28 @@
 ---
-title: "从外部数据源中添加数据 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "从外部数据源 (SSRS) 中添加数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 76e09d1f90d7eb2f3d91aef60e4ce2a9c671ab13
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 从外部数据源中添加数据 (SSRS)
+# <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
   若要从外部数据源中检索数据，您需要使用数据连接。 数据连接信息通常由外部数据源的所有者提供，该所有者负责授予权限并指定要使用的凭据类型。 数据连接信息另存为报表数据源。 数据源类型指定要用于检索数据的数据扩展插件。  
   
  有关数据源类型的详细信息，请参阅 [本节内容](#InThisSection)。  
@@ -33,14 +38,14 @@ caps.handback.revision: 11
   
     -   **数据集和字段集合** 报表定义中包括查询、字段集合和字段数据类型的那一部分。  
   
--   **Reporting Services 数据扩展插件**随报表生成器一起安装的内置数据扩展插件。 数据扩展插件提供用于处理身份验证、服务器聚合和多值参数的功能。  
+-   **Reporting Services 数据扩展插件** 随报表生成器一起安装的内置数据扩展插件。 数据扩展插件提供用于处理身份验证、服务器聚合和多值参数的功能。  
   
 -   **数据访问接口** 用于管理与外部数据源连接并从中检索数据的软件。 数据访问接口定义连接字符串语法。 大部分数据扩展插件都是构建在数据访问接口层之上的。  
   
 -   **外部数据源** 要从中检索报表数据的位置，例如，数据库、文件、多维数据集或 Web 服务。  
   
 > [!NOTE]  
->  在您未连接到报表服务器时，您可以从随报表生成器一起安装的数据扩展插件中进行选择。 您作为单个用户使用您计算机上的凭据访问数据。 在您连接到报表服务器时，您可以从报表服务器上安装的数据扩展插件中进行选择。 您以运行报表的多个用户中的一个用户名义访问数据，并且您使用的是报表服务器上的凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)。  
+>  在您未连接到报表服务器时，您可以从随报表生成器一起安装的数据扩展插件中进行选择。 您作为单个用户使用您计算机上的凭据访问数据。 在您连接到报表服务器时，您可以从报表服务器上安装的数据扩展插件中进行选择。 您以运行报表的多个用户中的一个用户名义访问数据，并且您使用的是报表服务器上的凭据。 有关详细信息，请参阅 [在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ##  <a name="ReportData"></a> 了解报表数据  
  用最简单的形式来说，报表将来自报表数据集的数据显示在报表页上的数据区域中，即，显示在单个表、图表、矩阵或其他类型的报表数据区域中。 报表数据集中的数据来自于单个查询命令返回的第一个结果集，该查询命令是通过对外部数据源进行只读访问运行的。 可以根据需要扩展每个数据区域以显示数据集中的所有数据。  
@@ -59,12 +64,10 @@ caps.handback.revision: 11
   
 -   支持递归数据。 一个包含递归数据层次结构的结果集会包括有关矩形结果集中分层结构的所有信息。 例如，公司中的上下级结构可用一个包含“员工”和“经理”两列的表来表示。 每位经理同时也是另一位经理的员工。 总经理通常包含一个 null 或某个其他指示该员工没有经理的标识符。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="DataTypes"></a> 使用数据类型  
- 创建数据集后，字段的数据类型将从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 映射到公共语言运行时 (CLR) 数据类型的子集。 无法清晰映射的数据类型以字符串的形式返回。 有关使用字段数据类型的详细信息，请参阅[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。 创建参数后，数据类型必须是受支持的报表定义数据类型。 有关将数据类型从数据提供程序映射到报表参数的详细信息，请参阅[表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
+ 创建数据集后，字段的数据类型将从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]映射到公共语言运行时 (CLR) 数据类型的子集。 无法清晰映射的数据类型以字符串的形式返回。 有关使用字段数据类型的详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。 创建参数后，数据类型必须是受支持的报表定义数据类型。 有关将数据类型从数据提供程序映射到报表参数的详细信息，请参阅[表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
@@ -75,7 +78,6 @@ caps.handback.revision: 11
   
  [向数据集添加筛选器（报表生成器和 SSRS）](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="InThisSection"></a> 本节内容  
  下列主题提供有关每个内置数据扩展插件的信息。  
@@ -95,7 +97,6 @@ caps.handback.revision: 11
 |[XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
 |[报表模型连接 (SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)|.smdl 模型|  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
@@ -103,16 +104,15 @@ caps.handback.revision: 11
 |主题|Description|  
 |-----------|-----------------|  
 |[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|提供访问报表数据的概述。|  
-|[报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)|提供有关数据连接和数据源的信息。|  
+|[报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|提供有关数据连接和数据源的信息。|  
 |[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供有关嵌入数据集和共享数据集的信息。|  
 |[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|提供有关查询生成的数据集字段集合的信息。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。|提供有关每个数据扩展插件的平台和版本支持的详细信息。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312) 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[数据处理扩展插件概述](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)。|为高级用户提供有关数据扩展插件的详细信息。|  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [查询设计器（报表生成器）](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

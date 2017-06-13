@@ -1,41 +1,46 @@
 ---
-title: "订阅和传递 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "订阅 [Reporting Services], 报表分发"
-  - "报表 [Reporting Services], 分发"
-  - "分发报表 [Reporting Services]"
-  - "发布的报表 [Reporting Services], 分发"
-  - "发送报表"
-  - "共享报表"
-  - "传递报表 [Reporting Services]"
-  - "分发报表 [Reporting Services], 订阅"
-  - "订阅 [Reporting Services], 关于订阅"
-  - "订阅 [Reporting Services]"
+title: "订阅和传递 (Reporting Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], report distribution
+- reports [Reporting Services], distributing
+- distributing reports [Reporting Services]
+- published reports [Reporting Services], distributing
+- sending reports
+- sharing reports
+- delivering reports [Reporting Services]
+- distributing reports [Reporting Services], subscriptions
+- subscriptions [Reporting Services], about subscriptions
+- subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 订阅和传递 (Reporting Services)
+# <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅是一种配置，它在特定时间或为响应某个事件，以指定的文件格式传递报表。 例如，每周三将 MonthlySales.rdl 报表作为 Microsoft Word 文档保存至文件共享。 订阅可以用于对报表的传递（以特定报表参数值集）进行计划并使其自动完成。  
   
  你可以为单个报表创建多个订阅，以便使用不同的订阅选项；例如，可以指定不同的参数值来生成三个报表版本，如西部地区销售报表、东部地区销售和全部销售。  
   
- ![ssrs 订阅流示例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "ssrs 订阅流示例")  
+ ![示例 ssrs 订阅流](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "示例 ssrs 订阅流")  
   
- 并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  **本主题内容：**  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 56
   
 -   [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md) 介绍到 SharePoint 库的订阅传递。  
   
--   [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)提供有关使用数据驱动订阅自定义运行时报表输出的信息。  
+-   [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md) 提供有关使用数据驱动订阅自定义运行时报表输出的信息。  
   
 -   [监视 Reporting Services 订阅](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
--   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> 订阅和传递应用场景  
  针对每个订阅，可以配置传递选项且可用选项由所选择的传递扩展插件决定。 传递扩展插件是支持某种分发方式的模块。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件，传递扩展插件可以由第三方供应商提供。  
@@ -88,7 +93,7 @@ caps.handback.revision: 56
 |数据驱动的报表|使用数据驱动的订阅可以在运行时自定义报表输出、传递选项和报表参数设置。 订阅使用查询在运行时从数据源获取输入值。 您可以使用数据驱动订阅执行邮件合并操作，将报表发送到在处理订阅时确定的一组订户。|  
   
 ##  <a name="bkmk_standard_and_datadriven"></a> 标准订阅和数据驱动订阅  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持两种类型的订阅：**标准订阅**和**数据驱动订阅**。 标准订阅由各个用户创建和管理。 标准订阅由静态值组成，这些值在订阅处理期间不能改变。 每个标准订阅都有一组报表显示选项、传递选项和报表参数。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持两种类型的订阅： **标准订阅** 和 **数据驱动订阅**。 标准订阅由各个用户创建和管理。 标准订阅由静态值组成，这些值在订阅处理期间不能改变。 每个标准订阅都有一组报表显示选项、传递选项和报表参数。  
   
  数据驱动订阅通过查询外部数据源（提供用于指定收件人、报表参数或应用程序格式的值）来获取运行时订阅信息。 如果收件人列表非常大，或希望每位收件人的报表输出都不相同，则可以使用数据驱动订阅。 若要使用数据驱动订阅，必须具备生成查询的专业知识并了解如何使用参数。 通常，由报表服务器管理员创建和管理这些订阅。 有关详细信息，请参见以下内容：  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 56
 |要求|Description|  
 |-----------------|-----------------|  
 |Permissions|您必须对报表具有访问权限。 在订阅报表之前，您必须具有查看该报表的权限。<br /><br /> 对于本机模式报表服务器，以下角色分配会影响订阅：<br /><br /> -   通过“管理单独的订阅”任务，用户可以创建、修改和删除特定报表的订阅。 在预定义的角色中，“浏览器”和“报表生成器”角色包括此任务。 包括此任务的角色分配只允许用户管理自己创建的那些订阅。<br />-   通过“管理所有订阅”任务，用户可以访问和修改所有订阅。 此任务是创建数据驱动订阅所必需的。 在预定义的角色中，只有“内容管理员”角色包括此任务。|  
-|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用**“预定的事件和报表传递”** 。 有关详细信息，请参阅[（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/zh-cn/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
+|已存储凭据|若要创建订阅，报表必须使用已存储的凭据或不使用任何凭据在运行时检索数据。 不能订阅配置为使用当前用户的模拟凭据或委托凭据连接到外部数据源的报表。 已存储的凭据可以是 Windows 帐户或数据库用户帐户。 有关详细信息，请参阅 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必须拥有查看报表和创建单个订阅的权限。 必须对报表服务器启用**“预定的事件和报表传递”** 。 有关详细信息，请参阅 [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
 |报表中的用户依赖值|仅在标准订阅情况下，如果报表在筛选器中使用用户帐户信息或将此信息以文本形式显示在报表上，则可以对这些报表创建订阅。 在报表中，通过解析为当前用户的 **User!UserID** 表达式指定用户帐户名。 创建订阅时，将把创建订阅的用户视为当前用户。|  
 |无模型项安全性|不能订阅将包含模型项安全设置的模型用作数据源的报表生成器报表。 此限制仅适用于使用模型项安全性的报表。|  
 |参数值|如果报表使用参数，则必须由报表自己或在所定义的订阅中指定参数值。 如果报表中已定义了默认值，则可以将参数值设置为使用默认值。|  
@@ -146,15 +151,15 @@ caps.handback.revision: 56
   
  该传递扩展插件将以在该订阅中定义的格式呈现报表，再将报表或通知传递到指定的目标。 如果不能传递报表，则将在报表服务器日志文件中记录一个条目。 如果您希望支持重试操作，则可以对报表服务器进行配置，使其在第一次传递尝试失败后重新尝试。  
   
-### 处理标准订阅  
+### <a name="processing-a-standard-subscription"></a>处理标准订阅  
  标准订阅可以生成报表的一个实例。 报表将传递到一个共享文件夹或在订阅中指定的电子邮件地址。 报表的布局和数据不发生更改。 如果报表使用参数，在处理标准订阅时报表中的每个参数都将使用单一的值。  
   
-### 处理数据驱动订阅  
+### <a name="processing-a-data-driven-subscription"></a>处理数据驱动订阅  
  数据驱动订阅可以生成可传递到多个目标的许多报表实例。 报表布局不发生改变，但如果参数值是从订阅服务器结果集传入的，报表中的数据可能会有所差异。 如果值是从行集传入的，则影响报表呈现方式的传递选项，以及确定是将报表附加在电子邮件中还是链接到电子邮件中的传递选项会因订阅服务器而异。  
   
  数据驱动订阅可以生成大量的传递。 报表服务器会为从订阅查询返回的行集中的每一行创建一个传递。  
   
-### 报表传递的特点  
+### <a name="report-delivery-characteristics"></a>报表传递的特点  
  通过标准订阅传递的报表通常呈现为静态报表。 这些报表或基于最新的报表执行快照，或生成为静态报表的形式以完成传递。 如果在按需运行报表的订阅中选择 **“包括链接”** 选项，则当您单击相应的超链接时，报表服务器将运行该报表。  
   
 > [!NOTE]  
@@ -162,7 +167,7 @@ caps.handback.revision: 56
   
  在处理订阅时，可能会重新生成通过数据驱动订阅传递的报表。 报表服务器不会锁定报表的特定实例或其数据集来完成数据驱动订阅。 如果订阅针对不同的订阅者使用不同的参数值，则报表服务器将重新生成报表，以得到所需的结果。 如果在创建和传递第一个报表副本之后更新了基础数据，则在此过程中稍后获得报表的用户可能会看到基于不同结果集的数据。 您可使用以快照形式运行的报表，以确保向所有订阅者发送同一个报表实例。 然而，如果在处理订阅过程中对快照进行了计划的更新，用户仍然可能会在其报表中获得不同的数据。  
   
-### 触发订阅处理  
+### <a name="triggering-subscription-processing"></a>触发订阅处理  
  报表服务器使用两种事件来触发订阅处理：一种是在计划中指定的时间驱动事件，另一种是快照更新事件。  
   
  时间驱动的触发器使用报表特定的计划或共享计划来指定订阅何时运行。 对于按需运行的报表和缓存报表而言，计划是唯一的触发选项。  
@@ -172,7 +177,7 @@ caps.handback.revision: 56
 ##  <a name="bkmk_code"></a> 对订阅进行编程控制  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对象模型允许你以编程方式审核和控制订阅和订阅处理。  请参阅下面的示例和快速入门︰  
   
--   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   有关如何使用 PowerShell 来启用和禁用订阅的示例，请参阅 [Disable or Pause Report and Subscription Processing](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。  
   
@@ -180,10 +185,11 @@ caps.handback.revision: 56
   
 -   有关运行 PowerShell 脚本以列出所有配置为使用“文件共享帐户”的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的示例，请参阅[订阅设置和文件共享帐户 (Configuration Manager)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [计划](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [监视 Reporting Services 订阅](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
+

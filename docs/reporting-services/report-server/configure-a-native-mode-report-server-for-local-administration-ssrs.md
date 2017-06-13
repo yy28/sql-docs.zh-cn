@@ -1,31 +1,36 @@
 ---
-title: "为本地管理配置本机模式报表服务器 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UAC"
-  - "安装 Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "windows server 2008"
-  - "Vista"
+title: "配置本机模式报表服务器以进行本地管理 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 为本地管理配置本机模式报表服务器 (SSRS)
-  如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2016（设置）](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
+  如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2016（设置）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
 ||  
 |-|  
@@ -62,7 +67,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_configuraiton_overview"></a> 配置更改概述  
  下面的配置更改对服务器进行配置，以便您可以使用标准用户权限管理报表服务器内容和操作：  
   
--   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 添加到受信任站点。 默认情况下，在上列操作系统上运行的 Internet Explorer 是以“保护模式”运行的，此功能可阻止浏览器请求到达运行在同一计算机上的高级别进程。 通过将报表服务器应用程序添加为受信任站点，可以禁用这些应用程序的保护模式。  
+-   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 添加到受信任站点。 默认情况下，在上列操作系统上运行的 Internet Explorer 是以 **“保护模式”**运行的，此功能可阻止浏览器请求到达运行在同一计算机上的高级别进程。 通过将报表服务器应用程序添加为受信任站点，可以禁用这些应用程序的保护模式。  
   
 -   创建角色分配，授予您（报表服务器管理员）管理内容和操作的权限而无需使用 Internet Explorer 中的 **“以管理员的身份运行”** 功能。 通过为您的 Windows 用户帐户创建角色分配，并通过显式角色分配替换 Reporting Services 创建的预定义的内置角色分配，您将获得对报表服务器的访问权限（包括内容管理员和系统管理员权限）。  
   
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> 浏览器中“受信任的站点”设置  
   
-1.  使用“以管理员的身份运行”权限打开一个浏览器窗口。 从“开始”菜单上，单击“所有程序”，右键单击 **Internet Explorer**，然后选择“以管理员的身份运行”。  
+1.  使用“以管理员的身份运行”权限打开一个浏览器窗口。 从 **“开始”** 菜单上，单击 **“所有程序”**，右键单击 **Internet Explorer**，然后选择 **“以管理员的身份运行”**。  
   
 2.  单击 **“允许”** 以继续。  
   
-3.  在 URL 地址中，输入报表管理器 URL。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)。  
+3.  在 URL 地址中，输入报表管理器 URL。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 4.  单击 **“工具”**。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 9. 添加 `http://<your-server-name>`。  
   
-10. 如果不将 HTTPS 用于默认站点，请清除“对该区域中的所有站点要求服务器验证(https:)”复选框。  
+10. 如果不将 HTTPS 用于默认站点，请清除 **“对该区域中的所有站点要求服务器验证(https:)”** 复选框。  
   
 11. 单击 **“添加”**。  
   
@@ -132,20 +137,20 @@ caps.handback.revision: 20
   
 8.  关闭报表管理器。  
   
-9. 重新在 Internet Explorer 中打开报表管理器，但不使用“以管理员的身份运行”。  
+9. 重新在 Internet Explorer 中打开报表管理器，但不使用 **“以管理员的身份运行”**。  
   
 ##  <a name="bkmk_configure_ssms"></a> 为本地报表服务器管理配置 SQL Server Management Studio (SSMS)  
  默认情况下，您不能访问在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的所有报表服务器属性，除非您使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   从“开始”菜单上，依次单击“所有程序”和“SQL Server 2014”，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然后单击“以管理员的身份运行”。  
+-   从 **“开始”** 菜单上，依次单击 **“所有程序”**和 **SQL Server 2014**，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然后单击 **“以管理员的身份运行”**。  
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   
 -   在 **“安全性”** 节点中，单击 **“系统角色”**。  
   
--   右键单击“系统管理员”，然后单击“属性”。  
+-   右键单击 **“系统管理员”** ，然后单击 **“属性”**。  
   
 -   在 **“系统角色属性”** 页中，选择 **“查看报表服务器属性”**。 选择您要与系统管理员角色的成员相关联的任何其他属性。  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> 其他信息  
  与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相关的一个附加的常见配置步骤是在 Windows 防火墙中打开端口 80，以便允许访问报表服务器计算机。 有关说明，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

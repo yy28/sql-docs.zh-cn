@@ -1,3 +1,4 @@
+# [SQL Server Management Studio 菜单帮助](sql-server-management-studio-menu-help.md)
 # [“属性”窗口的 F1 帮助 (Management Studio)](properties-window-f1-help-management-studio.md)
 # [选项（“环境”-“字体和颜色”页）](options-environment-fonts-and-colors-page.md)
 # [选项（“环境”-“帮助”-“常规”页）](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [Windows 对话框（Microsoft 文档资源管理器的帮助）](windows-dialog-box-microsoft-document-explorer-help.md)
 # [高级保存选项](advanced-save-options.md)
 # [另存为](save-as.md)
-# [SQL Server Management Studio 菜单帮助](sql-server-management-studio-menu-help.md)
 # [自定义（“工具栏”页）](customize-toolbars-page.md)
 # [选项（“设计器” - “维护计划”页）](options-designers-maintenance-plans-page.md)
 # [“选择搜索文件夹”对话框 (Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

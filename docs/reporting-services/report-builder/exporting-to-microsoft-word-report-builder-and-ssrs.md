@@ -1,24 +1,31 @@
 ---
-title: "导出到 Microsoft Word（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "导出到 Microsoft Word （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 23
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 导出到 Microsoft Word（报表生成器和 SSRS）
-  Word 呈现扩展插件将分页报表呈现为 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 格式为 Office Open XML。  
+
+# <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
+
+  Word 呈现扩展插件将分页报表呈现为  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 格式为 Office Open XML。  
   
  此呈现器生成的文件的内容类型为 **application/vnd.openxmlformats-officedocument.wordprocessingml.document**，并且文件扩展名为 .docx。  
   
@@ -41,10 +48,10 @@ caps.handback.revision: 23
   
  此呈现器仅支持逻辑分页符。  
   
-### 确定页大小  
+### <a name="page-sizing"></a>确定页大小  
  报表呈现时，将通过以下 RDL 属性设置 Word 页高和页宽：纸张大小（高和宽）、左右页边距以及顶部和底部页边距。  
   
-### 页宽  
+### <a name="page-width"></a>页宽  
  Word 支持最大为 22 英寸的页宽。 如果报表的页宽超过 22 英寸，呈现器仍将呈现报表；不过，Word 不会在页面视图中或在读取版式视图时显示报表内容。 若要查看数据，请切换到普通视图或 Web 版式视图。 在这些视图中，Word 将减少空格数量，从而显示更多的报表内容。  
   
  呈现时，报表将根据需要增加宽度（最大为 22 英寸）以便显示内容。 报表的最小宽度基于“属性”窗格中的 RDL Width 属性。  
@@ -80,28 +87,28 @@ caps.handback.revision: 23
 ##  <a name="Interactivity"></a> 交互  
  Word 中支持一些交互元素。 下面是对一些特定行为的说明。  
   
-### 显示和隐藏  
+### <a name="show-and-hide"></a>显示和隐藏  
  Word 呈现器根据报表呈现时的状态呈现报表项。 如果某个报表项处于隐藏状态，则该报表项将不呈现在 Word 文档中。 如果某个报表项处于显示状态，则该报表项将呈现在 Word 文档中。 Word 中不支持切换功能。  
   
-### 文档结构图  
+### <a name="document-map"></a>文档结构图  
  如果报表中存在任何文档结构图标签，它们将呈现为各个报表项和组的 Word 目录 (TOC) 标签。 文档结构图标签用作 TOC 标签的标签文本。 目标链接位于对其设置标签的项的旁边。 如果 Word 文档中没有为您创建 TOC，则可以使用报表中呈现的文档结构图标签生成您自己的 TOC。  
   
-### 超链接和钻取链接  
+### <a name="hyperlink-and-drillthrough-links"></a>超链接和钻取链接  
  文本框和图像报表项的超链接和钻取链接在 Word 文档中呈现为超链接。 单击超链接时，将打开默认 Web 浏览器并导航到相应的 URL。 单击钻取超链接时，将访问发起报表服务器。  
   
-### 交互式排序  
+### <a name="interactive-sorting"></a>交互式排序  
  报表内容根据它们当前在报表数据区域内的排序方式呈现。 Word 不支持交互式排序。 报表呈现后，您可以应用 Word 内的表排序。  
   
-### 书签  
+### <a name="bookmarks"></a>书签  
  报表中的书签呈现为 Word 书签。 书签链接呈现为指向文档内的书签标签的超链接。 书签标签的长度不得超过 40 个字符。 唯一可以在书签标签中使用的特殊字符是下划线 (_)。 不支持的特殊字符将从书签标签名称中去除，如果名称长度超过 40 个字符，名称将被截断。 如果报表中有重复的书签名称，Word 将不呈现这些书签。  
   
 ##  <a name="WordStyleRendering"></a> Word 样式呈现  
  下面简要说明了 Word 中样式的呈现方式。  
   
-### 调色板  
+### <a name="color-palette"></a>调色板  
  报表中呈现的颜色呈现在 Word 文档中。  
   
-### 边框  
+### <a name="border"></a>边框  
  报表项的边框（页边框除外）呈现为 Word 表单元边框。  
   
 ##  <a name="SquigglyLines"></a> 导出的报表中的波浪线  
@@ -140,7 +147,7 @@ caps.handback.revision: 23
 ##  <a name="WordBenefits"></a> 使用 Word 呈现器的优点  
  除了使 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 文件中的新增功能可用于导出的报表之外，导出的报表的 *.docx 文件往往更小。 通过使用 Word 呈现器导出的报表通常显著小于通过使用 Word 2003 呈现器导出的相同报表。  
   
-## 导出的报表的向后兼容性  
+## <a name="backward-compatibility-of-exported-reports"></a>导出的报表的向后兼容性  
  您可以选择 Word 兼容性模式并设置兼容性选项。 Word 呈现器在创建文档时会启用兼容性模式。 因此，重新保存禁用了兼容性模式的文档可能会影响文档的布局。  
   
  如果您禁用了兼容性模式，然后重新保存报表，该报表布局可能会意外更改。  
@@ -148,19 +155,19 @@ caps.handback.revision: 23
 ##  <a name="AvailabilityWord"></a> Word 2003 呈现器  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)。  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容。 有关详细信息，请参阅[用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](http://go.microsoft.com/fwlink/?LinkID=205622)。  
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](http://go.microsoft.com/fwlink/?LinkID=205622)。  
   
- 与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word**，并且文件的文件扩展名为 .doc。  
+ 与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，并且文件的文件扩展名为 .doc。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，默认的 Word 呈现器是呈现为 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx) 的版本。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 中“导出”菜单列出的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
+ 在 SQL Server Reporting Services，默认 Word 呈现器是版本上呈现[!INCLUDE[ofprword](../../includes/ofprword-md.md)](.docx) 格式。 这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 中“导出”菜单列出的 **Word** 选项。 仅与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的早期版本现在命名为 Word 2003，并且使用该名称在菜单上列出。 **Word 2003** 菜单选项默认不可见，但是，管理员可以通过更新 RSReportServer 配置文件使该选项可见。 若要使用 Word 2003 呈现器从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 导出报表，请更新 RSReportDesigner 配置文件。 但是，使 Word 2003 呈现器可见并不会使其可用于所有方案中。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。 如果在断开连接或本地模式中使用工具或产品，则使 Word 2003 呈现器可见没有任何影响。 **Word 2003** 菜单选项保持不可用。 如果在 RSReportDesigner 配置文件中使 Word 2003 呈现器可见，则 **Word 2003** 菜单选项在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 报表预览中始终可用。  
   
  **Word 2003** 菜单选项在以下方案中始终不可见：  
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。  
   
--   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式和连接模式报表对比（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)  
+-   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式和连接模式报表对比（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果 **Word 2003** 呈现器配置为可见，则 **Word** 和 **Word 2003** 菜单选项可用于以下方案中：  
   
@@ -180,19 +187,20 @@ caps.handback.revision: 23
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 文件的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)和 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
+ WORDOPENXML 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 文件的 Word 呈现器。 WORD 扩展插件定义 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 指示 Word 2003 呈现器处于隐藏状态。 有关详细信息，请参阅 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
   
-### Word 呈现器和 Word 2003 呈现器之间的差异  
+### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word 呈现器和 Word 2003 呈现器之间的差异  
  使用 Word 呈现器或 Word 2003 呈现器呈现的报表往往从外观上无法区分。 但是，您可以在 Word 或 Word 2003 格式之间注意到这两者之间的细微差异。  
   
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  通过更改设备信息设置，可以更改此呈现器的某些默认设置，例如忽略超链接和钻取链接，或者展开可以切换的所有项（不管报表呈现时该项的原始状态如何）。 有关详细信息，请参阅 [Word Device Information Settings](../../reporting-services/word-device-information-settings.md)。  
-  
-## 另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>后续步骤
+
+[Reporting Services 中的分页](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+[呈现行为](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+[不同报表呈现扩展插件的交互功能](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+[呈现报表项](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+[表、 矩阵和列表](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

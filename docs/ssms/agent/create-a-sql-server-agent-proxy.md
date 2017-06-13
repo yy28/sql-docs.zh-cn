@@ -1,7 +1,7 @@
 ---
 title: "创建 SQL Server 代理程序代理 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/06/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>创建 SQL Server 代理的代理帐户
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 -   如果没有凭据，那么在创建代理之前必须先创建凭据。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须对正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机具有“以批处理作业登录”权限。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须具有计算机上的"从网络访问此计算机"权限 (SeNetworkLogonRight)[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在运行。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理检查代理帐户的子系统访问权限，并在每次运行作业步骤时向代理帐户授予访问权限。 如果代理对子系统不再具有访问权限，则作业步骤将失败。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将模拟代理帐户中指定的用户并运行作业步骤。  
   

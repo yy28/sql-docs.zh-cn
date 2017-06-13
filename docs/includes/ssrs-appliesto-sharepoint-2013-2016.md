@@ -1,1 +1,1 @@
-![是](media/yes.png)SharePoint 2013![是](media/yes.png)SharePoint 2016
+![是](media/yes.png)SharePoint 集成模式下

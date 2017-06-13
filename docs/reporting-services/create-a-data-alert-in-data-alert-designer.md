@@ -1,27 +1,38 @@
 ---
-title: "在数据警报设计器中创建数据警报 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在数据警报设计器中创建数据警报 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在数据警报设计器中创建数据警报
-  您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅[在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)和[在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
-  
-### 创建数据警报定义  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 和 [在警报设计器中编辑数据警报](../reporting-services/edit-a-data-alert-in-alert-designer.md)。
+
+> [!NOTE]
+> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+
+## <a name="create-a-data-alert-definition"></a>创建数据警报定义
+ 
 1.  找到包含您要为其创建数据警报定义的报表的 SharePoint 库。  
   
 2.  单击该报表。  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      下图显示该 **“操作”** 菜单。  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![从 SharePoint 库打开警报设计器](../reporting-services/media/rs-openalertdesigneriw.gif "打开警报的设计器从 SharePoint 库")  
   
      数据警报设计器将打开，并且显示报表在表中生成的第一个数据馈送的前 100 行。  
   
@@ -70,7 +81,7 @@ caps.handback.revision: 13
   
 10. 键入比较值。  
   
-11. 也可以再次单击省略号 **(…)**。  
+11. 也可以再次单击省略号 **(…)** 。  
   
      省略号 **(…)** 将显示在包含第一个子句的行中。  
   
@@ -97,7 +108,7 @@ caps.handback.revision: 13
      默认情况下，警报消息没有停止日期。  
   
     > [!NOTE]  
-    >  停止警报消息并不会删除警报定义。 停止警报消息之后，可以通过更新开始日期和停止日期来重新启动警报消息。 有关删除警报定义的信息，请参阅[在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
+    >  停止警报消息并不会删除警报定义。 停止警报消息之后，可以通过更新开始日期和停止日期来重新启动警报消息。 有关删除警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
 18. 还可以清除 **“仅当结果更改时才发送消息”** 复选框。  
   
@@ -109,15 +120,16 @@ caps.handback.revision: 13
   
 20. 或者，在 **“主题”** 文本框中，更新警报消息的“主题”行。  
   
-     默认“主题”为“\<data alert name> 的数据警报”。  
+     默认使用者是**数据警报的\<数据警报名称 >**。  
   
 21. 还可以在 **“说明”** 文本框中键入对警报消息的说明。  
   
 22. 单击 **“保存”**。  
-  
-## 另请参阅  
- [数据警报设计器](../reporting-services/data-alert-designer.md)   
- [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>另请参阅
+
+[数据警报设计器](../reporting-services/data-alert-designer.md)   
+[向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

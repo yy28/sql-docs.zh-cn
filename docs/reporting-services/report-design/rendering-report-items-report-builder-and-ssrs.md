@@ -1,29 +1,34 @@
 ---
-title: "呈现报表项（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "呈现报表项 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 呈现报表项（报表生成器和 SSRS）
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
   报表项的数量、大小和位置会影响呈现器对表体的分页方式。 下面说明了各种报表项的呈现方式。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 重叠报表项  
+## <a name="overlapping-report-items"></a>重叠报表项  
  在 HTML、MHTML、Word、Excel、预览模式或报表查看器中不支持重叠报表项。 如果存在重叠项，则会移动它们。 以下规则应用于重叠报表项：  
   
 -   如果报表项的垂直重叠较多，则其中一个重叠项将向右移动。 最左侧的项保持在原位置。  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  硬分页格式（包括打印）支持重叠报表项。  
   
-## 可见性与报表项  
+## <a name="visibility-and-report-items"></a>可见性与报表项  
  默认情况下可以隐藏或显示报表项，也可以使用表达式按条件隐藏或显示报表项。 或者，可以通过单击其他报表项来切换可见性。  
   
  呈现报表项时应用下列可见性规则：  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   如果可通过单击其他报表项来切换报表项及其内容的可见性，则仅当报表项最初显示时，才会更改分页来容纳该报表项及其内容。  
   
-## 将报表项显示在一页中  
+## <a name="keeping-report-items-together-on-a-single-page"></a>将报表项显示在一页中  
  通过设置分组显示或显示在一起属性，可以显式或隐式地将报表内的许多报表项显示在一页中。 如果报表项没有任何逻辑分页符并且其大小小于可用页面区域，则报表项始终会呈现在同一页中。 如果报表项不能完全适合以通常方式开始的页面，则会在报表项之前插入硬分页符，强制将其显示在下一页。 对于软分页符呈现器，页面会增大以容纳该报表项。  
   
  当报表项始终隐藏时，将忽略将项显示在一起的规则。  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   可在 Tablix 数据区域中切换的报表项。  
   
-### 优先级顺序  
+### <a name="priority-order"></a>优先级顺序  
  由于页面大小的限制，在将报表项显示在一起的规则之间可能会发生冲突。 发生冲突时，以下优先级顺序用于在呈现时将项显示在一起：  
   
 -   线条、图表和图像。  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   Tablix 数据区域，其显式 KeepTogether 属性设置为 **true**。  
   
-### 子报表  
+### <a name="subreports"></a>子报表  
  子报表呈现为一个包含在单独的报表 .rdl 文件中定义的另一报表的矩形。 子报表文件必须先发布到报表服务器，之后才能由父报表进行访问。  
   
  呈现子报表时应用以下规则：  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  有关子报表的详细信息，请参阅[子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

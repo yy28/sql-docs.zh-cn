@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
@@ -126,7 +126,7 @@ ON
  本节介绍在 Azure 存储中存储 SQL Server 数据文件时可使用的工具和编程参考库。  
   
 ### <a name="powershell-support"></a>PowerShell 支持  
- 通过引用 Blob 存储 URL 路径而不是文件路径，可以使用 PowerShell cmdlet 将 SQL Server 数据文件存储在 Azure Blob 存储服务中。 使用以下 URL 格式访问 Blob`: http://storageaccount.blob.core.windows.net/<container>/<blob>` 。  
+ 通过引用 Blob 存储 URL 路径而不是文件路径，可以使用 PowerShell cmdlet 将 SQL Server 数据文件存储在 Azure Blob 存储服务中。 使用以下 URL 格式访问 Blob: `http://storageaccount.blob.core.windows.net/<container>/<blob>` 。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 对象和性能计数器支持  
  从 SQL Server 2014 起，增加了一个与“Azure 存储中的 SQL Server 数据文件”功能结合使用的新 SQL Server 对象。 这个新的 SQL Server 对象称为 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 。系统监视器可使用它在用 Windows Azure 存储运行 SQL Server 时监视活动。  
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
  使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。**** 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理对象支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  

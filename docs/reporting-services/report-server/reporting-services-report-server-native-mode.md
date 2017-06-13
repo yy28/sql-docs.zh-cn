@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services 报表服务器（本机模式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "管理 Reporting Services"
-  - "管理 [Reporting Services]"
-  - "Reporting Services, 管理"
+title: "Reporting Services 报表服务器 （本机模式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 报表服务器（本机模式）
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
   
  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器来管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表。 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可在本机模式下管理报表服务器。  
@@ -59,11 +64,11 @@ caps.handback.revision: 24
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表、模型、文件夹、资源和共享数据源的管理。 通过属性和安全设置，所有这些项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
   
 > [!NOTE]  
->  内容管理不同于报表服务器管理。 有关如何管理报表服务器运行环境的详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)。  
+>  内容管理不同于报表服务器管理。 有关如何管理报表服务器运行环境的详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
  内容管理包括以下任务：  
   
--   通过应用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的基于角色的安全设置，确保报表服务器站点和项的安全。  
+-   通过应用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于角色的安全设置，确保报表服务器站点和项的安全。  
   
 -   通过添加、修改和删除文件夹构建报表服务器文件夹的层次结构。  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  若要在报表中使用某个图像资源，请将该图像文件添加到项目，并与报表一起发布。 发布图像之后，可以更新报表中的图像引用，使之指向报表服务器上的相应资源，然后只需重新发布该报表即可保存所做的更改。 随后，即可通过重新发布资源来独立更新报表的图像。 报表将使用报表服务器上可用的最新版本的图像。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [排除 Reporting Services 安装故障](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

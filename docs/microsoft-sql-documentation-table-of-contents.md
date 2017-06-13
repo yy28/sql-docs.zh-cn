@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fbfb58c3cadb58914371a4947426dad5756be9c
+ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
+ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Microsoft SQL 文档
@@ -25,5 +25,6 @@ ms.lasthandoff: 04/11/2017
 
 - 左侧的目录是 SQL Server 及几个相关技术。
 - 更大的一组 SQL 技术的目录（包括 Azure SQL）在我们的 [SQL 中心页](sql-hub-menu.md)上提供。
+-  与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 2014 产品文档](http://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)。 
 
 **另请参阅**：其他 Azure 数据库技术，如 [DocumentDB 和数据工厂](/azure/#pivot=services&panel=databases)。  

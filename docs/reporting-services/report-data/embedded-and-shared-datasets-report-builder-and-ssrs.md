@@ -1,23 +1,28 @@
 ---
-title: "嵌入数据集和共享数据集（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "嵌入和共享数据集 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 嵌入数据集和共享数据集（报表生成器和 SSRS）
+# <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>嵌入数据集和共享数据集（报表生成器和 SSRS）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 数据集依赖于包含有关外部数据源的信息的数据连接。 数据本身并不包含在报表定义中。 数据集包含查询命令、字段集合、参数、筛选器以及数据选项（包括区分大小写和排序规则）。 有两种类型的数据集：  
   
 -   **共享数据集。** 共享数据集发布在报表服务器上，可由多个报表使用。 共享数据集必须基于共享数据源。 可以通过创建缓存刷新计划来对共享数据集进行缓存和计划。  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 共享数据集  
+## <a name="shared-datasets"></a>共享数据集  
  使用共享数据集可以提供可由多个报表使用的查询。 共享数据集存储在报表服务器上，并与报表或共享数据源分开管理。 例如，报表服务器管理员可能会更新查询，以便利用改进的索引或其他查询性能优化。  
   
  建议您尽量使用共享数据集。 您可以优化查询或缓存查询结果，以提高报表性能。 共享数据集使数据访问更易于管理，并有助于提高报表和报表所访问数据集的访问安全性和性能。  
@@ -53,17 +58,17 @@ caps.handback.revision: 7
     |字段|来自查询命令的字段<br /><br /> 计算字段不是数据集定义的一部分|查看字段，但无法对其进行更改<br /><br /> 字段集合是静态的，它基于您向报表中添加共享数据集时所使用的查询。 若要进行更新，请单击 **“数据集属性”** 对话框中的 **“刷新字段”** 。 实际的字段集合可以是定义中当前查询返回的任何集合。<br /><br /> 添加计算字段|  
     |数据集|数据选项，如区分大小写|覆盖实例中的数据选项|  
   
-## 嵌入的数据集  
+## <a name="embedded-datasets"></a>嵌入的数据集  
  当您希望从外部数据源获取将只在一个报表中使用的数据时，使用嵌入数据集。 当您希望创建没有其他依赖项且不需要用于多个报表的查询时，嵌入数据集非常有用。  
   
  若要创建或编辑嵌入数据集，请使用“报表数据”窗格。 在创建数据集后，您可以在 **“数据集属性”** 对话框中配置属性。  
   
-## 另请参阅  
- [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>另请参阅  
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

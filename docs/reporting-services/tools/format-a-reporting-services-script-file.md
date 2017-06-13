@@ -1,26 +1,31 @@
 ---
-title: "设置 Reporting Services 脚本文件的格式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "脚本 [Reporting Services], 格式"
-  - "格式 [Reporting Services], 脚本文件"
+title: "设置 Reporting Services 脚本文件的格式 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Reporting Services], formats
+- formats [Reporting Services], script files
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 设置 Reporting Services 脚本文件的格式
+# <a name="format-a-reporting-services-script-file"></a>设置 Reporting Services 脚本文件的格式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本是用来定义 Reporting Services SOAP API 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 代码文件，该文件是针对基于 Web 服务描述语言 (WSDL) 构建的代理编写的。 脚本文件以 Unicode 或 UTF-8 文本文件形式存储，扩展名为 .rss。  
   
  脚本文件充当 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 模块，以包含用户定义的过程和模块级变量。 为了使脚本文件成功运行，其中必须包含 Main 过程。 Main 过程是脚本文件运行时访问的第一个过程。 在 Main 过程中，可以添加您的 Web 服务操作并运行您的用户定义子过程。 下面的代码将创建一个 Main 过程：  
@@ -52,7 +57,7 @@ End Sub
   
  有关脚本示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
  [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  

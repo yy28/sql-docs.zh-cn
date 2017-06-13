@@ -2,7 +2,7 @@
 title: "PolyBase 入门 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 入门
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题包含有关运行 PolyBase 的基础知识。 有关详细信息，请参阅 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
+  本主题包含有关在 SQL Server 实例上运行 PolyBase 的基础知识。
   
  运行下面的步骤之后，你将：  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   获得使用 PolyBase 对象的查询示例  
   
 ## <a name="prerequisites"></a>先决条件  
- [SQL Server（64 位）](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)实例。  
+ 实例[SQL Server （64 位）](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)替换为以下：  
   
 -   Microsoft .NET Framework 4.5。  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   最小内存：4GB  
   
--   最小硬盘空间：2GB  
-  
+-   最小硬盘空间：2GB    
 -   必须启用 TCP/IP 连接。 （请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。）  
   
+ 
  外部数据源，以下项之一：  
   
 -   Hadoop 群集。 有关支持版本的信息，请参阅 [配置 PolyBase](#supported)。  
 
--   Azure Blob 存储。 
-
--   如果你打算对 Hadoop 使用计算下推功能，你将需要确保目标 Hadoop 群集具有核心组件 HDFS、Yarn/MapReduce 并且启用了 JobHistory Server。 PolyBase 通过 MapReduce 提交下推查询，并且从 JobHistory Server 提取状态。 如果缺少上述任一组件，查询都将失败并显示错误消息。 
+-   Azure Blob 存储
 
 > [!NOTE]
-> HDInsight 群集使用 Azure Blob 存储作为文件系统来实现其永久存储。 可以使用 PolyBase 查询 HDInsight 群集管理的文件。 为此，请创建外部数据源以引用配置为 HDInsight 群集的存储的 blob。 
-  
+>   如果你打算对 Hadoop 使用计算下推功能，你将需要确保目标 Hadoop 群集具有核心组件 HDFS、Yarn/MapReduce 并且启用了 JobHistory Server。 PolyBase 通过 MapReduce 提交下推查询，并且从 JobHistory Server 提取状态。 不带任一部分查询会失败。 
+
 ## <a name="install-polybase"></a>安装 PolyBase  
- 如果尚未安装 PolyBase，请参阅 [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md)。  
+ 如果你尚未安装 PolyBase，请参阅[PolyBase 安装](../../relational-databases/polybase/polybase-installation.md)。  
   
 ### <a name="how-to-confirm-installation"></a>如何确认安装  
  安装完成后，运行以下命令以确认已成功安装 PolyBase。 如果已安装 PolyBase，则返回 1；否则返回 0。  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- 安装后，必须配置 SQL Server，以使用你的 Hadoop 版本或 Azure Blob 存储。 PolyBase 支持两个 Hadoop 提供程序：Hortonwork 的数据平台 (HDP) 和 Cloudera 的 CDH。 可以在 Windows 或 Linux 计算机上运行 Hortonworks，这也是配置的一部分。  支持的外部数据源包括：  
+ 安装后，你必须配置 SQL Server 以使用是 Hadoop 版本或 Azure Blob 存储。 PolyBase 支持两个 Hadoop 提供程序，Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。  支持的外部数据源包括：  
   
 -   Linux/Windows Server 上的 Hortonworks HDP 1.3  
   
--   Linux 上的 Hortonworks HDP 2.1 – 2.5
+-   在 Linux 上的 Hortonworks HDP 2.1 – 2.6
 
 -   Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Linux 上的 Cloudera CDH 5.1 – 5.5、5.9、5.10  
+-   Cloudera CDH 5.1 – 5.5，在 Linux 上的 5.9 5.11  
   
 -   Azure Blob 存储  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>外部数据源配置  
   
 1.  运行 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ 并设置适当的值。 默认情况下，hadoop 连接设置为 7。 若要查找值，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  有关详细信息，请参阅 [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
 ## <a name="create-t-sql-objects"></a>创建 T-SQL 对象  
- 根据外部数据源（Hadoop 或 Azure 存储）创建对象。  
+ 创建根据外部数据源，Hadoop 或 Azure 存储的对象。  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

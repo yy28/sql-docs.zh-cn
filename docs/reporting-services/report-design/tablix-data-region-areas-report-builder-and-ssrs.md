@@ -1,23 +1,28 @@
 ---
-title: "Tablix 数据区域（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Tablix 数据区域 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Tablix 数据区域（报表生成器和 SSRS）
+# <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，Tablix 数据区域有四个包含 tablix 单元的区域：   
 * 角  
 * 行组区  
@@ -28,7 +33,7 @@ caps.handback.revision: 7
   
 在设计图面上，用点线表示选定 Tablix 数据区域中的上述四个区域。 下图显示了 Tablix 区域的相应区域，该 Tablix 区域具有基于 Category 和 Subcategory 的嵌套行组、基于 Geography 和 Country/Region 的嵌套列组，以及基于 Year 的相邻列组。  
   
- ![Tablix 数据区域](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix 数据区域")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  下表对各区域进行了说明：  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 7
   
  下图在预览中显示 Tablix 数据区域。  
   
- ![Tablix 角、行组和列组、正文的预览](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Tablix 角、行组和列组、正文的预览")  
+ ![预览、 Tablix 角、 行和列组、 正文](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "预览、 Tablix 角、 行和列组、 正文")  
   
  行组区显示 Clothing 和 Components 的两个类别组实例。 列组显示 North America 的地理组实例，其中包括 Canada (CA) 和 United States (US) 两个嵌套国家/地区组实例。 此外，相邻列显示 2003 和 2004 的两个年份组实例。 Total 列显示行总计；总计 (totals) 行重复用于显示子类别总计的类别组，而总计 (grand total) 行对数据区域显示一次类别总计。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
  [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

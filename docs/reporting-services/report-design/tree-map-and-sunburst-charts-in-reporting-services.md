@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services 中的树形图和旭日图 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "树形图和旭日图 Reporting Services 中的 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 中的树形图和旭日图
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树形图和旭日图
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树形图和旭日图可视化非常适合用于以可视方式表示分层数据。   本主题将概述如何将树形图或旭日图添加到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表中。 本主题还包括示例 Adventureworks 查询，帮助您入门。  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### 插入树形图与配置示例 Adventureworks 数据  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>插入树形图与配置示例 Adventureworks 数据  
  **注意** ：在向报表添加图表前，请创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
-     选择树形图 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     选择树状图![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -66,7 +71,6 @@ caps.handback.revision: 16
   
 7.  字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值的数目。  若要查看更多标签，请将 LineTotal 标签字体属性更改为 10 磅，而不是默认的 8 磅。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本主题内容](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> 旭日图  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,12 +79,12 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### 插入旭日图与配置示例 Adventureworks 数据  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>插入旭日图与配置示例 Adventureworks 数据  
  **注意** ：在向报表添加图表前，请创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
-     选择旭日图 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     选择旭日图![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -104,7 +108,6 @@ caps.handback.revision: 16
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本主题内容](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> 示例 AdventureWorks 数据  
  本部分包括一个示例查询和在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建数据源和数据集的基本步骤。 如果你的报表已包含数据源和数据集，可以跳过本部分。  
@@ -113,7 +116,7 @@ caps.handback.revision: 16
   
 1.  **获取数据︰**  
   
-     本部分中的查询基于 Adventureworks 数据库，可从 [Adventure Works 2014 完整数据库备份](https://msftdbprodsamples.codeplex.com/releases/view/125550)中下载。  
+     本部分中的查询基于 Adventureworks 数据库，可从  [Adventure Works 2014 完整数据库备份](https://msftdbprodsamples.codeplex.com/releases/view/125550)中下载。  
   
      有关如何安装数据库的详细信息，请参阅 [如何安装 Adventure Works 2014 示例 Databases.pdf](https://msftdbprodsamples.codeplex.com/releases/view/125550)。  
   
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      有关创建数据集的详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [本主题内容](#bkmk_top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [共享数据集设计视图（报表生成器）](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [教程︰Power BI 中的树形图](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

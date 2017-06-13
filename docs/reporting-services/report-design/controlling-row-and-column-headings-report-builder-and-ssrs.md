@@ -1,23 +1,28 @@
 ---
-title: "控制行标题和列标题（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "控制行和列标题 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 控制行标题和列标题（报表生成器和 SSRS）
+# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
   表、矩阵或列表数据区域可以水平或垂直跨多页。 您可以指定是否在每页上重复显示行标题或列标题。 在交互式呈现器（如报表管理器）或报表预览中，还可以指定是否冻结行标题或列标题，以便在滚动报表时始终显示标题。 在表或矩阵中，第一行通常包含列标题，用来为每列中的数据加上标签；第一列通常包含行标题，用来为每行中的数据加上标签。 对于嵌套组，您可能需要重复显示包含组标签的初始行标题集和列标题集。 默认情况下，列表数据区域不包含标题。  
   
  控制是否重复或冻结标题的方式取决于以下因素：  
@@ -35,7 +40,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 了解 Tablix 数据区域中的行和列  
+## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>了解 Tablix 数据区域中的行和列  
  表或矩阵是基础 tablix 数据区域的模板。 Tablix 数据区域可能具有四个区域：行组区（控制报表中向下扩展的行）、列组区（控制报表中横向扩展的列）、正文区（显示数据）和角区。 若要了解在何处设置属性来控制重复或冻结标题，首先应了解 tablix 数据区域有两种表示形式：  
   
 -   **在报表定义中** Tablix 数据区域定义中的每行或每列都是特定行组或列组的 tablix 成员。 Tablix 成员是静态成员或动态成员。 静态 tablix 成员包含标签或小计，每组重复一次。 动态 tablix 成员包含组值，每个唯一组值（也称为组实例）重复一次。  
@@ -62,11 +67,11 @@ caps.handback.revision: 8
 ###  <a name="Matrix"></a> 矩阵  
  默认情况下，简单矩阵具有一个行组和一个列组。 下图显示的矩阵具有一个基于 Category 的行组和一个基于 Geography 的列组：  
   
- ![“矩阵”、“类别”行和“地域”列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "“矩阵”、“类别”行和“地域”列组")  
+ ![矩阵、 类别行和 Geography 列组](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "矩阵，类别行和 Geography 列组")  
   
  虚线显示四个 tablix 区域。 行组区域具有一个控制第一列中类别标签的行组头。 同样，列组区域具有一个控制第一行中地理标签的列组头。 在预览中，当矩阵跨页展开时，第一行会显示列标题，如下图所示：  
   
- ![呈现的矩阵（具有扩展组）预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现的矩阵（具有扩展组）预览")  
+ ![展开的组与呈现矩阵的预览](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "呈现矩阵展开的组的预览")  
   
  若要重复或冻结第一行中的列标题，请设置 tablix 数据区域中列标题的属性。 将自动包含嵌套列组的列标题。  
   
@@ -77,19 +82,19 @@ caps.handback.revision: 8
 ###  <a name="TableNoGroups"></a> 没有行组的表  
  默认情况下，没有组的简单表包含详细信息组。 下图所示的表显示了类别、订单号和销售数据：  
   
- ![设计，具有一个静态行、一个动态行的表](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "设计，具有一个静态行、一个动态行的表")  
+ ![设计，具有一个静态表，一个动态行](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "设计，具有一个静态表，一个动态行")  
   
  因为该表只有 tablix 正文区，所以没有虚线。 第一行显示列标题，表示一个未与组关联的静态 tablix 成员。 第二行显示详细信息数据，表示一个与详细信息组关联的动态 tablix 成员。 下图在预览中显示此表：  
   
- ![预览，具有一个静态行、一个动态���的表](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "预览，具有一个静态行、一个动态���的表")  
+ ![预览、 具有一个静态表、 一个动态行](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "预览、 具有一个静态表、 一个动态行")  
   
  若要重复或冻结列标题，请设置某一静态行（该静态行是 tablix 数据区域定义一部分）的 tablix 成员的属性。 若要选择静态行，必须使用“分组”窗格的高级模式。 下图显示的是“行组”窗格：  
   
- ![行组，具有一个静态行、一个动态行的表](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "行组，具有一个静态行、一个动态行的表")  
+ ![行组、 表 1 静态、 动态的第 1 行](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "行组，表 1 静态、 动态的第 1 行")  
   
  在高级模式中，下图显示了表中行组的静态 tablix 成员和动态 tablix 成员：  
   
- ![行组，默认表的高级模式](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "行组，默认表的高级模式")  
+ ![行组、 默认表的高级](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "默认表的行组，高级")  
   
  若要重复或冻结 tablix 成员的列标题，请选择已标记 (**Static**) 的静态行。 “属性”窗格将显示所选 tablix 成员的属性。 通过设置此 tablix 成员的属性，您可以控制如何重复或始终显示第一行。  
   
@@ -98,21 +103,21 @@ caps.handback.revision: 8
 ###  <a name="TableRowGroupsGroupHeader"></a> 具有行组和行组区域的表  
  如果向简单表中添加行组，将向设计图面上的表添加一个行组区域。 下图显示的表具有一个基于 Category 的行组：  
   
- ![设计，具有一个行组和详细信息的表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "设计，具有一个行组和详细信息的表")  
+ ![设计、 具有一个行组和详细信息表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "设计，具有一个行组和详细信息表")  
   
  虚线显示 tablix 行组区和 tablix 正文区。 行组区有行组头，但没有列组头。 下图在预览中显示此表：  
   
- ![预览，具有一个行组和详细信息的表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "预览，具有一个行组和详细信息的表")  
+ ![预览、 具有一个行组和详细信息表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "预览版中，具有一个行组和详细信息表")  
   
  若要重复或冻结列标题，请使用前面示例中的相同方法。 下图显示“行组”窗格的默认视图：  
   
- ![行组，具有动态成员的默认组](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "行组，具有动态成员的默认组")  
+ ![行组，默认情况下动态成员](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "行组的动态成员的默认值")  
   
  使用“行组”窗格的 **“高级”** 模式显示 tablix 成员，如下图所示：  
   
  ![行组，具有静态成员的高级模式](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行组，具有静态成员的高级模式")  
   
- 列出的 tablix 成员包括：**Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
+ 列出的 tablix 成员包括： **Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
@@ -125,25 +130,25 @@ caps.handback.revision: 8
   
  下图所示的表在设计图面上具有行组但没有行组区域：  
   
- ![设计，具有行组但无组头的表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "设计，具有行组但无组头的表")  
+ ![设计，表具有行组但没有组头](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "设计，表具有行组但没有组头")  
   
  该表有三行。 第一行包含列标题。 第二行包含组值和小计。 第三行包含详细信息数据。 因为只有 tablix 正文区，所以没有虚线。 下图在预览中显示此表：  
   
- ![预览，具有行组但无组头的表](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "预览，具有行组但无组头的表")  
+ ![预览版中，表具有行组但没有组头](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "预览版中，表具有行组但没有组头")  
   
  若要控制如何重复或始终显示行，必须设置每一行 tablix 成员的属性。 在默认模式下，此示例与具有行组和组头的表的上一示例没有差别。 下图显示的是默认模式下此表的“分组”窗格：  
   
- ![行组，具有动态成员的默认组](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "行组，具有动态成员的默认组")  
+ ![行组，默认情况下动态成员](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "行组的动态成员的默认值")  
   
  但是，在高级模式中，此布局结构显示一组不同的 tablix 成员。 下图显示的是高级模式中此表的“分组”窗格：  
   
- ![行组、高级、无组头。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行组、高级、无组头。")  
+ ![行组、 高级、 没有组头。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行组、 高级、 没有组头。")  
   
  在“行组”窗格中列出了以下 tablix 成员：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
-## 呈现器对重复或冻结标题的支持  
+## <a name="renderer-support-for-repeating-or-freezing-headers"></a>呈现器对重复或冻结标题的支持  
  不同呈现器对重复或冻结标题的支持有所不同。  
   
  使用物理页（PDF、图像和打印稿）的呈现器支持以下功能：  
@@ -160,7 +165,7 @@ caps.handback.revision: 8
   
  有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

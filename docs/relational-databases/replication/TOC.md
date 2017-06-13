@@ -73,7 +73,7 @@
 ### [在订阅服务器上验证数据](validate-data-at-the-subscriber.md)  
 ## [编写复制脚本](scripting-replication.md)  
 
-# [开发人员概念](concepts/index.md)
+# [开发人员概念](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [技术参考](technical-reference-replication.md)  
 ## [属性参考](properties-reference-replication.md)  
@@ -83,8 +83,8 @@
 #### [分发数据库属性](distribution-database-properties.md)  
 ### [发布服务器属性](publisher-properties.md)  
 #### [发布服务器属性 - 分发服务器](publisher-properties-distributor.md)  
-#### [发布服务器属性 - 发布服务器 - 常规](publisher-properties-publisher-general.md)  
-#### [发布服务器属性 - 发布服务器 - 发布数据库](publisher-properties-publisher-publication-databases.md)  
+#### [发布服务器属性 - 发布服务器，常规](publisher-properties-publisher-general.md)  
+#### [发布服务器属性 - 发布服务器，发布数据库](publisher-properties-publisher-publication-databases.md)  
 #### [发布服务器属性 - 发布服务器 - 订阅服务器](publisher-properties-publisher-subscribers.md)  
 ### [订阅服务器属性](subscriber-properties.md)  
 ### [发布属性 - <Publication>](publication-properties-publication.md)  

@@ -1,25 +1,30 @@
 ---
-title: "报表的嵌入数据集和共享数据集（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10420"
+title: "报表的嵌入数据集和共享数据集 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
+# <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
   
  有两种类型的数据集：  
@@ -38,13 +43,13 @@ caps.handback.revision: 16
   
 3.  **查询命令** 查询设计器可帮助您生成查询命令。 命令语法由数据访问接口确定。  
   
-4.  **数据扩展插件/数据访问接口**对数据的连接可通过多个数据访问层。  
+4.  **数据扩展插件/数据访问接口** 对数据的连接可通过多个数据访问层。  
   
 5.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表、Web 服务或报表模型的数据。  
   
 6.  **查询结果** 您可以运行查询并查看示例结果集。 您必须拥有设计时凭据才能运行查询。  
   
-7.  **来自架构的元数据** 数据访问接口将架构查询命令与检索数据集字段集合的元数据的查询分开运行。 例如，[!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** 语句返回数据库表的列名称。 使用“报表数据”窗格展开数据集以查看数据集字段集合。  
+7.  **来自架构的元数据** 数据访问接口将架构查询命令与检索数据集字段集合的元数据的查询分开运行。 例如， [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** 语句返回数据库表的列名称。 使用“报表数据”窗格展开数据集以查看数据集字段集合。  
   
  通过使用预定义的共享数据集和报表部件，也可以将数据包含在报表中。 这些项已具有您所需的数据连接信息。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 和[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
@@ -56,9 +61,9 @@ caps.handback.revision: 16
 ##  <a name="Overview"></a> 了解报表数据集和查询  
  报表数据集包含在外部数据源上运行并且指定要检索的数据的查询命令。 为了生成该查询命令，您使用与外部数据源的数据扩展插件相关联的查询设计器。 在查询设计器中，您可以运行该查询命令并查看结果集。 该结果集是一个矩形行集，它具有列名以及在每一行中值的数目都相同的行。 不支持层次结构数据（也称作“不规则层次结构” ）。 列名以数据集字段列表的形式保存在报表定义中。  
   
- 在您向报表中添加数据集后，在“报表数据”窗格中将字段从其字段集合拖到表、图表以及用于设计报表布局的其他报表项中。 有关使用字段的详细信息，请参阅[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 在您向报表中添加数据集后，在“报表数据”窗格中将字段从其字段集合拖到表、图表以及用于设计报表布局的其他报表项中。 有关使用字段的详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
-### 了解报表数据集数据  
+### <a name="understanding-data-from-a-report-dataset"></a>了解报表数据集数据  
  根据数据扩展插件，报表数据集可以由以下类型的数据组成：  
   
 -   来自关系数据库的结果集，它可以是运行数据库命令、存储过程或用户定义函数的结果。 如果通过单个查询检索到多个结果集，则仅处理第一个结果集，并忽略所有其他结果集。 例如，在基于文本的查询设计器中运行以下查询时，只有 `Production.Product` 的结果集出现在结果窗格中：  
@@ -79,9 +84,9 @@ caps.handback.revision: 16
   
  当在运行时处理报表时，查询返回的实际结果集可能有零行或更多行。 在查询中定义的列也有可能已从数据源中丢失。 来自数据源的 Null 值映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
- 有关数据集字段的详细信息，请参阅[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 有关数据集字段的详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
-### 数据集查询  
+### <a name="dataset-query"></a>数据集查询  
  在设计时，当在查询设计器中运行数据集查询时，将看到显示示例数据的来自数据源的行集。 在运行时，当用户查看报表时，数据集查询可能产生不同的值，因为数据源的数据已经更改。 每次处理报表时，都可能出现新数据。  
   
  当您定义每个数据集时，报表生成器将打开与数据源类型相对应的查询设计器，以便帮助您设计查询。 例如，若要为来自 SQL Server 关系数据库的数据定义一个查询，表/矩阵、图表和地图向导将打开一个简单的图形界面来帮助您生成查询，您需要执行的所有工作就是选择您希望位于数据集中的字段。  
@@ -106,9 +111,9 @@ caps.handback.revision: 16
   
 -   基于数据库字段创建新的自定义字段，并提供自定义格式。  
   
- 有关详细信息，请参阅[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)。  
   
-### 为数据集导入现有查询  
+### <a name="importing-existing-queries-for-a-dataset"></a>为数据集导入现有查询  
  创建数据集时，可以创建新的查询，也可以从文件或从另一个报表导入现有查询。 从另一个报表导入查询时，可以从此报表内数据集的列表中选择要导入哪个查询。  
   
  仅支持 .sql 和 .rdl 文件类型。 多维表达式 (MDX) 查询、数据挖掘预测 (DMX) 查询和模型查询 (SMQL) 只能由关联的查询设计器生成。  
@@ -120,17 +125,17 @@ caps.handback.revision: 16
   
  在您向报表中添加共享数据集时，数据集字段集合将更新为报表服务器上的当前定义。 在对报表服务器进行更改时，您不会收到更新通知。 若要将字段集合的本地副本与对报表服务器上共享数据集定义的更改保持同步，必须刷新本地字段集合。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
- 已发布的报表项包含它们所依赖的嵌入数据集和共享数据集。 有关详细信息，请参阅[报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
+ 已发布的报表项包含它们所依赖的嵌入数据集和共享数据集。 有关详细信息，请参阅 [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)。  
   
  嵌入数据源和共享数据源的区别在于创建、存储和管理它们的方式不同。 下表总结了嵌入数据源和共享数据源之间的差异：  
   
 |Description|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
 |-----------------|------------------------------|----------------------------|  
-|数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.png "可用")||  
-|指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.png "可用")|  
-|在报表服务器上管理|![可用](../../reporting-services/report-data/media/greencheck.png "可用")|![可用](../../reporting-services/report-data/media/greencheck.png "可用")|  
-|对于共享数据集，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.png "可用")|  
-|对于组件，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.png "可用")|  
+|数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|在报表服务器上管理|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|对于共享数据集，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
+|对于组件，要求这么做||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
   
  在报表设计器中，您可以将共享数据集作为报表项目的一部分创建，并且控制是否将这些共享数据集部署到报表服务器。 您不能通过浏览报表服务器来选择某个共享数据集以添加到您的报表中。  
   
@@ -158,25 +163,25 @@ caps.handback.revision: 16
   
  有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
-### 筛选数据集中的数据  
+### <a name="filtering-data-in-a-dataset"></a>筛选数据集中的数据  
  筛选器是报表中数据集定义的一部分。 使用数据集筛选器可以指定数据集中的哪些数据将包含在报表中。 对某一数据集指定筛选器后，基于该数据集的所有数据区域都将只显示经过数据集筛选器筛选后的数据。  
   
  筛选器是共享数据集定义的一部分。 共享数据集筛选器会影响包含共享数据集的所有报表。 在您将共享数据集添加到报表后，或者添加具有相关共享数据集的组件后，可以创建其他数据集筛选器。 您创建的筛选器仅用于您的报表中，它们不是报表服务器上共享数据集定义的一部分。  
   
  可以对数据区域或数据区域组设置附加筛选器。 还可以使用参数和筛选器的组合，使用户能够选择他们要在报表中看到的数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-### 对数据集中的数据进行排序  
+### <a name="sorting-data-in-a-dataset"></a>对数据集中的数据进行排序  
  在数据集中，数据的顺序就是从外部数据源检索数据的顺序。 此顺序就是您在查询设计器中运行查询时看到的顺序。 如果查询命令语法支持排序，则您可以在数据作为报表数据返回前，编辑查询以便对源中的数据进行排序。 例如，对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，ORDER BY 语句控制排序顺序。  
   
  若要在数据返回到报表后对数据进行排序，请对数据区域和数据区域组定义排序表达式。 有关详细信息，请参阅针对特定数据区域类型的主题，例如[表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
  还可以使用参数和排序表达式的组合，使用户能够选择为报表中的数据选择排序顺序。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
-### 对数据集中的数据进行分组  
- 不能对数据集中的数据进行分组。 若要聚合数据集中的数据，您可以编辑查询命令以便在为报表检索数据前计算聚合。 这些聚合值称为“服务器聚合” 。 在表达式中，若要将这些值标识为预先计算的聚合，请使用聚合函数。 有关详细信息，请参阅 [Aggregate 函数（报表生成器和 SSRS）](../../reporting-services/report-design/aggregate-function-report-builder-and-ssrs.md)。  
+### <a name="grouping-data-in-a-dataset"></a>对数据集中的数据进行分组  
+ 不能对数据集中的数据进行分组。 若要聚合数据集中的数据，您可以编辑查询命令以便在为报表检索数据前计算聚合。 这些聚合值称为“服务器聚合” 。 在表达式中，若要将这些值标识为预先计算的聚合，请使用聚合函数。 有关详细信息，请参阅 [Aggregate 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 ##  <a name="Parameters"></a> 使用参数和数据集  
- 对于包含查询变量的嵌入数据集查询，可以自动创建查询参数和相应的报表参数。 在报表运行时，报表参数的值将链接到数据集查询参数。 这样，在外部数据源上运行的查询命令将包括为报表参数指定的值。 通过报表参数，用户可以选择他们要在报表中看到的数据。 可以在[“数据集属性”对话框 ->“参数”（报表生成器）](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)页中查看查询参数和报表参数是如何链接的。  
+ 对于包含查询变量的嵌入数据集查询，可以自动创建查询参数和相应的报表参数。 在报表运行时，报表参数的值将链接到数据集查询参数。 这样，在外部数据源上运行的查询命令将包括为报表参数指定的值。 通过报表参数，用户可以选择他们要在报表中看到的数据。 可以在[“数据集属性”对话框 ->“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)页中查看查询参数和报表参数是如何链接的。  
   
  对于共享数据集，查询参数是可以在独立于报表的报表服务器上管理的共享数据集定义的一部分。 下表描述对查询参数值的支持：  
   
@@ -188,14 +193,14 @@ caps.handback.revision: 16
   
 -   不能包括对表示报表参数的内置 Parameters 集合的引用。  
   
- 若要为共享数据集配置查询参数值，请在数据集设计模式中，浏览到并打开报表服务器中的共享数据集，并且设置[“数据集属性”对话框 ->“参数”（报表生成器）](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)页上的选项。 有关详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
+ 若要为共享数据集配置查询参数值，请在数据集设计模式中，浏览到并打开报表服务器中的共享数据集，并且设置[“数据集属性”对话框 ->“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)页上的选项。 有关详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
  对于某些多维数据源，例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，可以利用图形查询设计器来指定查询筛选器和选择要用于创建相应查询参数的选项。 在您选择该参数选项时，数据扩展插件将自动创建一个单独的报表数据集，以便为该参数的下拉列表提供可用值。 默认情况下，这些隐藏的数据集不显示在“报表数据”窗格中。  
   
  链接到查询参数的报表参数有助于在从外部数据源返回数据前筛选数据。 您还可以通过创建作为报表定义的一部分的筛选器，对报表中的数据进行筛选。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
-### 显示隐藏的数据集  
- 为某些多维数据源创建参数化查询时，将自动创建为参数提供有效值的数据集。 在某些查询设计器上，通过指定筛选器然后选择用于创建参数的选项，创建上述数据集。 默认情况下，这些数据集不显示在“报表数据”窗格中，但可以显示它们。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)。  
+### <a name="displaying-hidden-datasets"></a>显示隐藏的数据集  
+ 为某些多维数据源创建参数化查询时，将自动创建为参数提供有效值的数据集。 在某些查询设计器上，通过指定筛选器然后选择用于创建参数的选项，创建上述数据集。 默认情况下，这些数据集不显示在“报表数据”窗格中，但可以显示它们。 有关详细信息，请参阅[为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 ##  <a name="Maps"></a> 使用地图和数据集  
  如果您在报表中包括地图，则必须提供空间数据。 空间数据可来自报表数据集、地图库中的地图或 ESRI 形状文件。 来自报表或 ESRI 形状文件的空间数据在“报表数据”窗格中不作为数据集出现。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
@@ -209,9 +214,9 @@ caps.handback.revision: 16
   
 -   可以使用数据集提供报表参数的可用值或默认值的下拉列表。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
--   通过对钻取报表或子报表使用参数，可以链接多个数据集中的相关数据。 例如，销售报表可以显示所有商店的摘要数据，而钻取链接可以指定商店标识符作为具有以下数据集查询的报表的参数：检索指定商店各销售量的数据集查询。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)和[子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
+-   通过对钻取报表或子报表使用参数，可以链接多个数据集中的相关数据。 例如，销售报表可以显示所有商店的摘要数据，而钻取链接可以指定商店标识符作为具有以下数据集查询的报表的参数：检索指定商店各销售量的数据集查询。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)和[子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
   
--   不能在单个数据区域中显示来自多个数据集的详细信息数据。 但是，可以在一个数据区域中显示多个数据集的聚合或内置函数值。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)。 如果需要将来自多个数据集的详细信息数据组合到一个数据区域中，则必须重写查询，以作为单个数据集检索数据。  
+-   不能在单个数据区域中显示来自多个数据集的详细信息数据。 但是，可以在一个数据区域中显示多个数据集的聚合或内置函数值。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。 如果需要将来自多个数据集的详细信息数据组合到一个数据区域中，则必须重写查询，以作为单个数据集检索数据。  
   
 ##  <a name="NoRows"></a> 在没有数据行可用时显示消息  
  在报表处理期间，当运行对数据集的查询时，结果集可能不包含任何行。 在呈现的报表中，链接到空数据集的数据区域将显示为空数据区域。 可以指定要在呈现的报表中代替空数据区域的显示文本。 还可以为子报表指定消息，以便如果在运行时对所有数据集的查询没有产生任何数据，则显示该消息。 有关详细信息，请参阅[为数据区域设置“无数据”消息（报表生成器和 SSRS）](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
@@ -219,9 +224,9 @@ caps.handback.revision: 16
 ##  <a name="Options"></a> 设置数据集选项  
  对于支持国际数据的数据源，可能需要调整那些影响排序顺序、国际字符属性以及是否区分大小写的数据集属性。 这些属性包括大小写、假名类型、宽度、重音和排序规则。 有关详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335)中的“数据库和数据库引擎应用程序的国际化注意事项”和“使用排序规则”。 有关如何设置这些属性的详细信息，请参阅[“数据集属性”对话框 ->“选项”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

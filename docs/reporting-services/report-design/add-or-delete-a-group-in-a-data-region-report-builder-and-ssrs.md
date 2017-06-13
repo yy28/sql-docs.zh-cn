@@ -1,26 +1,31 @@
 ---
-title: "在数据区域中添加或删除组（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加或删除数据区域 （报表生成器和 SSRS） 中的组 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在数据区域中添加或删除组（报表生成器和 SSRS）
+# <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在数据区域中添加或删除组（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，如果你希望在显示或计算时根据特定值或表达式集来组织数据，可向数据区域添加组。 组具有标识该组所包含的数据集数据的名称和表达式。 有关组的详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
- 在 Tablix 数据区域中，单击表、矩阵或列表可以显示“分组”窗格。 将数据集字段拖到“行组”和“列组”窗格可以创建父组或子组。 右键单击现有组可以添加相邻组。 根据定义，详细信息组是最内部的组，并且只能作为子组添加。 右键单击现有组可以删除它。 显示组值的行和列是自动添加的。 有关详细信息，请参阅[表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+ 在 Tablix 数据区域中，单击表、矩阵或列表可以显示“分组”窗格。 将数据集字段拖到“行组”和“列组”窗格可以创建父组或子组。 右键单击现有组可以添加相邻组。 根据定义，详细信息组是最内部的组，并且只能作为子组添加。 右键单击现有组可以删除它。 显示组值的行和列是自动添加的。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
  在图表数据区域中，单击图表以显示放置区。 通过将数据集字段拖到类别和序列放置区来创建组。 若要添加嵌套组，请向放置区添加多个字段。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 向 Tablix 数据区域添加父/子行组或父/子列组  
+## <a name="to-add-a-parent-or-child-row-or-column-group-to-a-tablix-data-region"></a>向 Tablix 数据区域添加父/子行组或父/子列组  
   
 1.  将字段从 **“报表数据”** 窗格拖到 **“行组”** 窗格或 **“列组”** 窗格。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
      添加的组具有默认名称、组表达式和基于字段名称的排序表达式。  
   
-## 向 Tablix 数据区域添加相邻的行组或列组  
+## <a name="to-add-an-adjacent-row-or-column-group-to-a-tablix-data-region"></a>向 Tablix 数据区域添加相邻的行组或列组  
   
 1.  在“分组”窗格中，右键单击要添加的组的对等组。 单击 **“添加组”**，然后单击 **“前面相邻”** 或 **“后面相邻”** 以指定组的添加位置。 此时将打开 **“Tablix 组”** 对话框。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 10
   
      新组即被添加到“分组”窗格，显示组值的行或列则被添加到设计图面上的 Tablix 数据区域中。  
   
-## 向 tablix 数据区域添加详细信息组  
+## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>向 tablix 数据区域添加详细信息组  
   
 1.  在“分组”窗格中，右键单击作为最内部的子组的组，而非“详细信息”组。 单击 **“添加组”**，然后单击 **“子组”**。 此时将打开 **“Tablix 组”** 对话框。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 10
   
      新的详细信息组作为子组添加到“分组”窗格，在步骤 1 中选择的组的行控点显示详细信息组图标。 有关控点的详细信息，请参阅 [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
-## 在 Tablix 数据区域中编辑行组或列组  
+## <a name="to-edit-a-row-or-column-group-in-a-tablix-data-region"></a>在 Tablix 数据区域中编辑行组或列组  
   
 1.  在报表设计图面上，单击 Tablix 数据区域中的任意位置以将其选中。 “分组”窗格随即显示行组和列组。  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 10
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 删除 Tablix 数据区域中的组  
+## <a name="to-delete-a-group-from-a-tablix-data-region"></a>删除 Tablix 数据区域中的组  
   
 1.  在“分组”窗格中，右键单击组，然后单击“删除组”。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 10
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 删除 Tablix 数据区域中的详细信息组  
+## <a name="to-delete-a-details-group-from-a-tablix-data-region"></a>删除 Tablix 数据区域中的详细信息组  
   
 1.  在“分组”窗格中，右键单击详细信息组，然后单击“删除组”。  
   
@@ -117,8 +122,8 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  验证在删除详细信息行之后，每个单元中的表达式视具体情况指定聚合表达式。 如有必要，请编辑表达式以便根据需要指定聚合函数。  
   
-## 另请参阅  
- [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另请参阅  
+ [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

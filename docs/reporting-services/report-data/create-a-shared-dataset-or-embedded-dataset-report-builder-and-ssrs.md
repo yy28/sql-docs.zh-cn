@@ -1,23 +1,28 @@
 ---
-title: "创建共享数据集或嵌入数据集（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建共享数据集或嵌入数据集 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建共享数据集或嵌入数据集（报表生成器和 SSRS）
+# <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  
   
  使用“报表生成器”执行以下任务：  
@@ -36,12 +41,12 @@ caps.handback.revision: 9
   
 3.  也可以将共享数据集和共享数据源与报表一起部署。 对于每种类型的项，使用“项目属性”可以指定指向报表服务器或 SharePoint 站点上的文件夹的路径。  
   
- 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 打开报表生成器和创建共享数据集  
+## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>打开报表生成器和创建共享数据集  
   
 1.  打开报表生成器。 **“新建报表或数据集”** 窗格将打开，如下图所示：  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 9
   
 7.  若要退出报表生成器，请单击 **“报表生成器”**，然后单击 **“退出报表生成器”**。 若要处理报表，请单击 **“报表生成器”**，然后单击 **“新建”** 或 **“打开”**。  
   
-## 设置查询参数选项  
+## <a name="to-set-query-parameter-options"></a>设置查询参数选项  
   
 1.  打开报表生成器。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 9
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
-## 从 SQL Server 关系数据库创建数据集  
+## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>从 SQL Server 关系数据库创建数据集  
   
 1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击“添加数据集”。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
   
@@ -110,11 +115,12 @@ caps.handback.revision: 9
   
      数据集及其字段集合显示在“报表数据”窗格的数据源节点下。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [数据连接、数据源和连接字符串（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

@@ -1,45 +1,44 @@
 ---
-title: "启用和禁用 Reporting Services 的客户端打印 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "查看器"
-  - "reportviewer"
-  - "工具栏"
+title: "启用和禁用 Reporting Services 的客户端打印 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 启用和禁用 Reporting Services 的客户端打印
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>启用和禁用 Reporting Services 的客户端打印
+
   报表查看器工具栏上的打印按钮使用可移植文档格式 (PDF) 以实现客户端打印在浏览器中查看的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表。 新的远程打印体验使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]附带的 PDF 呈现扩展插件，以便以 PDF 格式呈现报表。 你可以下载 PDF 格式的报表，或者如果安装了用于查看 .PDF 文件的应用程序，则打印按钮会针对页面一般配置项目显示打印对话框，例如 .PDF 文件的页面大小、方向和预览。 虽然默认情况下将启用客户端打印功能，但是您也可以将其禁用，以禁止使用该功能。  
   
- 以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控件，该控件需要从报表服务器下载到客户端计算机上。 如果将报表服务器升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则打印控件不会从报表服务器或客户端计算机上删除。  
-  
-##  <a name="bkmk_top"></a> 本主题内容  
-  
--   [打印体验](#bkmk_clientside_printexpereince)  
-  
--   [客户端打印故障排除](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [启用与禁用客户端打印](#bkmk_enable)  
-  
+ 以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控件，该控件需要从报表服务器下载到客户端计算机上。 如果您的报表服务器升级到 SQL Server 2016 打印控件则不删除从报表服务器或客户端计算机。  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> 打印体验  
- 单击报表查看器工具栏上的打印 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 按钮时，体验根据客户端计算机上安装的 .PDF 查看应用程序以及使用的浏览器而有所不同。   你可以下载 PDF 文件或从对话框中配置打印选项，或者采用两种方法，具体取决于客户端计算机。  
+ 当你单击打印![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print")按钮在报表查看器工具栏上，体验根据内容而异。PDF 查看应用程序安装在客户端电脑和你使用的浏览器。   你可以下载 PDF 文件或从对话框中配置打印选项，或者采用两种方法，具体取决于客户端计算机。  
   
- ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "报表工具栏")  
+ ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "报表工具栏")  
   
 |||  
 |-|-|  
@@ -51,7 +50,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 客户端打印故障排除  
  如果报表查看器工具栏上的打印按钮被禁用，请检查以下事项：  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中禁用了报表服务器的客户端打印功能。 请参阅本主题中的[启用与禁用客户端打印](#bkmk_enable)部分。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中禁用了报表服务器的客户端打印功能。 请参阅本主题中的  [启用与禁用客户端打印](#bkmk_enable) 部分。  
   
 -   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] PDF 呈现扩展插件被禁用。 查看 `<Extension Name="PDF"` rsreportserver.config **文件的** 部分。  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  下面的示例脚本说明了一种禁用客户端打印功能的方法。 编译并运行以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 代码，以将 **EnableClientPrinting** 属性设置为 **False**。 在运行代码后，请重新启动 IIS。  
   
-### 示例脚本  
+### <a name="sample-script"></a>示例脚本  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

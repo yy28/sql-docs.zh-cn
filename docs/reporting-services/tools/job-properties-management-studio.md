@@ -1,25 +1,30 @@
 ---
-title: "作业属性 (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: "作业属性 (Management Studio) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 作业属性 (Management Studio)
+# <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
   使用“作业属性”页可以在取消正在执行的报表或订阅之前查看相关信息。  
   
  若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器，然后打开 **“作业”** 文件夹。 右键单击正在运行的作业，然后单击“属性”。  
@@ -27,7 +32,7 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
   
-## “任务”  
+## <a name="tasks"></a>“任务”  
  必须刷新该页以检索有关报表服务器上当前正在运行的作业的信息，才能查看有关作业的信息：  
   
 1.  打开报表服务器文件夹。  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 3.  如果列出了某个作业，请右键单击它，再单击“属性”。  
   
-## 选项  
+## <a name="options"></a>选项  
  **作业 ID**  
  分配给正在处理的作业的 GUID。 该值是在每次运行报表或订阅时随机生成的。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **用户名**  
  对于由用户启动的进程，此列显示用户名。 对于系统作业，这是报表服务器的名称。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  

@@ -1,24 +1,29 @@
 ---
-title: "添加或删除指示器（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加或删除指示器 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 添加或删除指示器（报表生成器和 SSRS）
-  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器是以直观的形式提供单个数据值的状态的最小化仪表。 有关它们的详细信息，请参阅[指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
+  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，指示器是以直观的形式提供单个数据值的状态的最小化仪表。 有关它们的详细信息，请参阅 [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)。  
   
  指示器通常放在表或矩阵的单元中，但您也可以通过其自身、与仪表并排或嵌入到仪表中来使用指示器。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  根据数据值的列宽和长度，表或矩阵单元中的文本可以换行并在多行上显示文本。 在发生此情况时，指示器图标可能会拉长和更改形状。 这可能会降低指示器图标的可读性。 将指示器放置于矩形内可以确保其图标永远不会拉长。  
   
-## 向表或矩阵添加指示器  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>向表或矩阵添加指示器  
   
 1.  打开一个现有报表，或者创建一个新报表（其中包含具有要显示的数据的表或矩阵）。 有关详细信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)或[矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 8
   
      此指示器配置为使用默认值。 默认情况下，指示器配置为使用百分比作为度量单位，并且百分比范围均匀分布在指示器的各成员之间，指示器提供的值使用最近组的作用域。  
   
-## 从表或矩阵删除指示器  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>从表或矩阵删除指示器  
   
 1.  右键单击要删除的指示器，然后单击“删除”。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 2.  单击 **“删除”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

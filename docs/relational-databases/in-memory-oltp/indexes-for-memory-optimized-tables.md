@@ -3,7 +3,7 @@ title: "内存优化表的索引 | Microsoft Docs"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>内存优化表的索引
@@ -225,34 +225,10 @@ ms.lasthandoff: 04/11/2017
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 索引扫描，检索所有表行。 | 是 | 是 | 是 |  
 | 采用相等谓词 (=) 的索引查找。 | 是 <br/> （需要完整键。） | 是  | 是 |  
-| 采用不相等和范围谓词 <br/> （>、<、\<=、>=、BETWEEN）的索引查找。 | “否” <br/> （索引扫描中的结果。） | 是 | 是 |  
+| 采用不相等和范围谓词 <br/> （>、<、<=、>=、BETWEEN）的索引查找。 | 是 <br/> （索引扫描中的结果。） | 是 | 是 |  
 | 按与索引定义匹配的排序顺序检索行。 | 是 | 是 | 是 |  
 | 按与索引定义相反的排序顺序检索行。 | 是 | 是 | 是 |  
   
   
 在表中，“是”表示索引能够有效地为请求提供服务，“否”表示索引无法有效地满足请求。  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md，这是...  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml，{162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png，fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-替换 dn511012.aspx，该项是....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (哈希内容已移到新的子项目 e922cc3a-3d6e-453b-8d32-f4b176e98488。)  
--->  
-  
-  
-  
-
-
 

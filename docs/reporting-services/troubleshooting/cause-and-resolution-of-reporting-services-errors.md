@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services 错误的原因和解决方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "消息 [Reporting Services]"
-  - "错误 [Reporting Services]"
-  - "故障排除 [Reporting Services], 错误"
+title: "原因和解决方法的 Reporting Services 错误 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- messages [Reporting Services]
+- errors [Reporting Services]
+- troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 错误的原因和解决方法
+# <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
   本主题包含与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相关的多个错误的原因和解决方法信息。 本节中的错误消息主题提供对错误消息、可能的原因以及为更正问题可以采取的所有措施的说明。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 |错误|消息|  
 |-----------|-------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 17
 |[rrRenderingError - Reporting Services 错误](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|呈现报表时出错。 (rrRenderingError) %1。|  
 |[报表服务器 Windows 服务 (MSSQLServer) 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|报表服务器 Windows 服务 (MSSQLSERVER) 无法与报表服务器数据库建立连接。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

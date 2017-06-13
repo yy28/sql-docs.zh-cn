@@ -1,23 +1,28 @@
 ---
-title: "在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加、 编辑和刷新报表数据窗格 （报表生成器和 SSRS） 中的字段 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）
+# <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）
   数据集字段是在对外部数据源运行数据集查询时返回的表示数据的字段名称的内置集合。  
   
  对于嵌入数据集，数据集字段是您生成查询并关闭查询设计器窗格后创建的字段以及创建的计算字段。  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 添加查询字段  
+### <a name="to-add-a-query-field"></a>添加查询字段  
   
 1.  在“报表数据”窗格中，右键单击数据集，再单击“添加查询字段”。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 添加计算字段  
+### <a name="to-add-a-calculated-field"></a>添加计算字段  
   
 1.  在“报表数据”窗格中，右键单击数据集，再单击“添加计算字段”。  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 编辑查询字段或数据集字段  
+### <a name="to-edit-a-query-field-or-a-dataset-field"></a>编辑查询字段或数据集字段  
   
 1.  在“报表数据”窗格中，右键单击字段，然后单击“字段属性”。  
   
@@ -75,13 +80,13 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 删除查询字段或计算字段  
+### <a name="to-delete-a-query-field-or-a-calculated-field"></a>删除查询字段或计算字段  
   
 1.  在“报表数据”窗格中，展开数据集以显示字段集合。  
   
 2.  右键单击要删除的字段，再单击“删除”。  
   
-### 为共享数据集刷新“报表数据”窗格中的字段集合  
+### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>为共享数据集刷新“报表数据”窗格中的字段集合  
   
 1.  在“报表数据”窗格中，右键单击该数据集，然后单击“查询”。  
   
@@ -89,11 +94,11 @@ caps.handback.revision: 7
   
      在报表服务器上，运行共享数据集查询并返回当前的字段集合。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Reporting Services 查询设计器](../Topic/Reporting%20Services%20Query%20Designers.md)   
- [查询设计器（报表生成器）](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Reporting Services 查询设计器](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

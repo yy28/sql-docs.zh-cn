@@ -1,29 +1,34 @@
 ---
-title: "添加分页符（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加分页符 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81f305fdb34231a14c53d376ed9c4535ce6b9f53
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 添加分页符（报表生成器和 SSRS）
+# <a name="add-a-page-break-report-builder-and-ssrs"></a>添加分页符（报表生成器和 SSRS）
   您可以向数据区域内的矩形、数据区域或组添加分页符，以控制每个页面中的信息量。 添加分页符能够提高已发布报表的性能，因为在您查看报表时，系统只需处理每个页面中的项。 如果整个报表位于一个页面中，则您只能在所有项都得到处理后才能查看报表。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 向数据区域添加分页符  
+### <a name="to-add-a-page-break-to-a-data-region"></a>向数据区域添加分页符  
   
 1.  在设计图面上，右键单击数据区域的角部控点，然后单击“Tablix 属性”。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
     -   **如有可能，调整表的大小以显示在同一页上**。 当您希望将数据保留在同一页面时可选择此选项。  
   
-### 向矩形添加分页符  
+### <a name="to-add-a-page-break-to-a-rectangle"></a>向矩形添加分页符  
   
 1.  在设计图面上，右键单击要添加分页符的矩形，然后单击“矩形属性”。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
     -   **如有可能，将内容显示在一页中**。 当您希望将矩形中的内容保留在同一页面时可选择此选项。  
   
-### 将分页符添加到表、矩阵或列表中的行组  
+### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>将分页符添加到表、矩阵或列表中的行组  
   
 1.  在“分组”窗格中，右键单击行组，然后单击“组属性”。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 3.  此外，还可以选择 **“同样在组的开头”** 或 **“同样在组的结尾”** ，指定为组在表中的开始位置或结束位置添加分页符。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

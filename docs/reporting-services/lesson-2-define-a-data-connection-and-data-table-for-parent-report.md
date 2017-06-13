@@ -1,27 +1,32 @@
 ---
-title: "第 2 课：定义用于父报表的数据连接和数据表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 2 课： 定义父报表的数据连接和数据表 |Microsoft 文档"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 第 2 课：定义用于父报表的数据连接和数据表
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 课：定义用于父报表的数据连接和数据表
 使用 Visual C# 的 ASP.NET 网站模板创建新网站项目后，接下来要创建用于父报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2014 数据库。  
   
-## 通过添加 DataSet 定义数据连接和 DataTable（用于父报表）  
+## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>通过添加 DataSet 定义数据连接和 DataTable（用于父报表）  
   
 1.  在“网站”菜单上，选择“添加新项”。  
   
@@ -72,6 +77,8 @@ caps.handback.revision: 8
   
 13. 若要预览数据，请在“数据”菜单上选择“预览数据”，然后选择“预览”。  
   
-## 下一个任务  
-您已成功创建了用于父报表的数据连接和数据表。 接下来，将使用报表向导设计父报表。 请参阅[第 3 课：使用报表向导设计父报表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
+## <a name="next-task"></a>下一个任务  
+您已成功创建了用于父报表的数据连接和数据表。 接下来，将使用报表向导设计父报表。 请参阅 [第 3 课：使用报表向导设计父报表](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)。  
   
+
+

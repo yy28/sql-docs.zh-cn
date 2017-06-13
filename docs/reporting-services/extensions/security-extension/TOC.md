@@ -1,0 +1,5 @@
+# [Reporting Services 中的身份验证](authentication-in-reporting-services.md)
+# [Reporting Services 中的授权](authorization-in-reporting-services.md)
+# [如何安装自定义安全扩展插件](how-to-install-custom-security-extensions.md)
+# [实现安全扩展插件](implementing-a-security-extension.md)
+# [安全扩展插件概述](security-extensions-overview.md)

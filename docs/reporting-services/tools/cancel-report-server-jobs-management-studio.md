@@ -1,25 +1,30 @@
 ---
-title: "取消报表服务器作业 (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.cancelreportserverjobs.f1"
+title: "取消报表服务器作业 (Management Studio) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 取消报表服务器作业 (Management Studio)
+# <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
   使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
   
  可以取消用户作业和系统作业。  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
   
-## 选项  
+## <a name="options"></a>选项  
  **名称**  
  显示报表的名称。 订阅通过其各自的说明进行标识。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 14
  **确定**  
  取消一个或多个作业。 作业会立即取消，并且不能恢复。 如果错误地取消了某个作业，则必须再次请求报表或订阅功能以启动新作业。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  

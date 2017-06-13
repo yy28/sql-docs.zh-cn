@@ -2,7 +2,7 @@
 title: "临时表使用方案 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>临时表使用方案
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   临时表通常适用于需要跟踪数据更改历史记录的方案。    
-建议你在碰到以下情况时考虑使用临时表，因为这有巨大的效率优势：  
-  
--   [数据审核](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [时间点分析（时程）](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [异常检测](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [维度缓慢变化](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [修复行级数据损坏](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+我们建议你考虑主要工作效率优势以下用例中的临时表。  
   
 ## <a name="data-audit"></a>数据审核  
  对存储关键信息的表使用临时系统版本控制，你需要跟踪对这些信息所做的更改和更改发生的时间，以及在任何时间点进行数据取证。    

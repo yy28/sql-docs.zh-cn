@@ -15,18 +15,150 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8798c5319cdce7b68f71868722aacfbf4cb34d9f
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
-此更改日志适用于随 [SQL Server 2016](https://msdn.microsoft.com/library/ms130214.aspx) 一起发布的 [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
+此更改日志为[SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-有关新增功能和已更改功能的详细文章，请访问 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)。  
+有关有关新增和更改的详细文章，请访问[SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
 
-## <a name="ssdt-165-for-sql-server-2016"></a>SSDT 16.5（适用于 SQL Server 2016）
+## <a name="ssdt-171"></a>SSDT 17.1
+内部版本号： 14.0.61705.170
+
+### <a name="whats-new"></a>新增功能
+**AS 项目：**
+- 用户可以设置编码 1400年模型上的用户界面中的列上的提示
+- 模型无关 IntelliSense 现在是在脱机模式下可用
+- 表格模型资源管理器现在包含一个对应节点来表示整个模型 （1400 compat 级别表格模型） 提供的命名的 M 表达式
+- Azure Active Directory 的人员选取器类似于 Microsoft Azure 门户的 IAM 现已推出时设置在表格模型中的角色成员
+
+**数据库项目：**
+- 更新为 DacFx 17.1
+
+### <a name="bug-fixes"></a>Bug 修复
+- 修复了其中的商业智能设计器组名称 VS2017 中的 Visual Studio 选项中未正确显示
+- 修复了的问题崩溃可能生成报表项目的解决方案代码图或作为项目的位置
+- 解决许多问题与 Analysis Services 1400 compat 级别表格模型的 PowerQuery 集成
+- 固定其中赋值运算符不能在单独一行定义度量值时的工具窗口的新的 DAX 编辑器中的问题
+- 修复了阻止表格的度量值显示更新重命名透视中的度量值时的问题
+- 更新 Analysis Services 集成的工作区引擎和修复导致在包含翻译上失败的 1200年表格项目的回归的表格对象模型将部署到 SQL Server 2016 Analysis Services 服务器
+- 修复了进行 creation\deletion 新 1400年表格数据源速度很慢的性能问题
+- 修复了问题其中多维模型中的数据源视图关系图可以停止呈现，如果更改快速之间不同 Dsv 的视图
+
+## <a name="dacfx-171"></a>DacFx 17.1
+- 修复了问题时加密具有内存优化表使用其他标识列的列
+- SQLDOM 支持用于创建数据库的 CATALOG_COLLATION 选项
+
+## <a name="dacfx-1701"></a>DacFx 17.0.1 
+- 使用 hsm 的非对称密钥使用 EKM 提供程序与数据库的问题的修复[Connect 项](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 （支持到 SQL Server 自 2017 年）
+内部版本号： 14.0.61704.140
+
+### <a name="whats-new"></a>新增功能
+**数据库项目：**
+- 修改视图的聚集的索引将不会再阻止部署
+- 与列加密相关的架构比较字符串将使用恰当的名称，而非实例名称。   
+- 向 SqlPackage 添加了新的命令行选项：ModelFilePath。  这将提供高级用户指定用于导入、 发布和执行脚本操作的外部 model.xml 文件选项   
+- DacFx API 了扩展以支持 Azure AD 通用的身份验证和多因素身份验证 (MFA)
+
+**IS 项目：**
+- SSIS OData 源和 OData 连接管理器现支持连接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 源。
+- SSIS 项目现在支持"SQL Server 自 2017 年 1"的目标服务器的版本 
+- CDC 控制任务，CDC 拆分器和 CDC 源面向 SQL Server 2017 时支持。 
+
+**AS 项目：**
+- Analysis Services PowerQuery 集成 （1400 compat 级别表格模型）：
+    - DirectQuery 不能用于 SQL Oracle 和 Teradata 如果用户已经安装了第三方驱动程序
+    - 通过在 PowerQuery 的示例中添加列
+    - 数据访问 1400年模型 （M 引擎使用的模型级别属性） 中的选项
+        - 启用快速合并 （默认值为 false-当设置为 true，混合应用程序引擎将忽略数据源的隐私级别合并数据时）
+        - 启用旧版将重定向 （当设置为 true，混合应用程序引擎将按照是可能不安全的 HTTP 重定向，默认值将为 false –。  例如，从 HTTPS 重定向到的 HTTP URI）  
+        - 返回为 Null 的错误值 （设置为级别错误的单元格为 true，将返回为 null 时，默认值将为 false –。 为 false 时，将引发异常是单元格包含错误)  
+    - 使用 PowerQuery 的其他数据源 （文件数据源）
+        - Excel 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - 文件夹 
+        - Access 数据库 
+        - Azure Blob 存储 
+    - 本地化的 PowerQuery 用户界面
+- DAX 编辑器工具窗口
+    - 改进了的 DAX 编辑体验度量值、 计算的列和通过的视图，SSDT 中的其他窗口菜单提供的详细信息行表达式
+    - 对 DAX parser\Intellisense 的改进
+
+
+**RS 项目：**
+- 现在，可使用可嵌入的 RVC 控件以支持 SSRS 2016
+
+### <a name="bug-fixes"></a>Bug 修复
+**AS 项目：**
+- 解决了 BI 项目的模板优先级问题，使其不在 VS 新项目类别的最上面显示
+- 修复了在打开 SSIS、SSAS 或 SSRS 解决方案时极少数情况下发生的 VS 故障
+- 表格：针对 DAX 分析和公式栏的多种增强和性能修复。
+- 表格：如果没有打开 SSAS 表格项目，则不显示表格模型资源管理器。
+- 多维：解决了高 DPI 计算机上处理对话框不可用的问题。
+- 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表格：解决了在 1103 模式下层次结构未正确保存到 bim 文件的问题。[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 表格：解决了尽管不支持，但仍能在 32 位计算机上允许集成工作区模式的问题。
+- 表格：解决了在准选择模式下单击任何内容（例如键入 DAX 表达式，但单击一个度量值）可能导致崩溃的问题。
+- 表格：解决了部署向导将模型的 .Name 属性重置为“模型”的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 表格：解决了在 TME 中选择层次结构时，即使未选择关系图视图也应显示属性的问题。
+- 表格：解决了从某些应用程序中粘贴时，粘贴到 DAX 公式栏的操作将粘贴图像或其他内容（而非文本）的问题。
+- 表格：解决了由于存在具有特定定义的度量值，无法打开 1103 中某些旧模型的问题。
+- 表格：解决了无法删除 XEvent 会话的问题。
+- 解决了无法使用 devenv.com 生成 AS“smproj”文件的问题
+- 解决了在 AS 表格模型工作表标签标题中使用朝鲜语输入法时，文本更改过于频繁的问题
+- 解决了 DAX Related() 函数的 IntelliSense 无法正常显示其他表中列的问题
+- 通过对 AS 数据库的列表进行排序，改进了从数据库对话框执行的 AS 表格项目导入操作
+- 解决了在 AS 表格模型中创建计算表时，表达式中没有将表列为建议对象的问题
+- 解决了在查看代码后尝试使用集成工作区服务器打开预览 1400 AS 模型时遇到的问题
+- 解决了在某些情况下一些数据源（不支持初始目录）无法正常运行的问题 
+- 即使启用了保留分区的选项，部署向导也应向计算表分区应用更改
+- 解决了只有在重新选择现有 AS 连接的“高级属性”对话框后，才能看到完整列表的问题
+- 在某些本地化版本中出现的剪切 UI 字符串的固定一些问题
+- 解决了问题的与若干 PowerQuery 集成 1400 compat 级别中表格模型
+- 解决了与未显示正确的报表向导样式模板问题
+- 解决了与报表向导，请从 SQL 版本更改为 AS 时可能会导致不正确的数据源设置问题
+- 修复了从命令行 (devenv.com\exe) 导致 Analysis Services （表格） 项目生成失败的问题
+- 解决了与 DAX 度量值分析器以字母之前启动时显示突出显示和正确的文本颜色问题: =
+- 修复了触发 ObjectRefException，如果路径太长试图在集成的工作区模式下的表格项目的显示所有文件的问题
+- 修复了与数据源设计器出现不可用的 Compact 4.0 客户端数据提供程序
+- 修复了导致尝试浏览挖掘模型中 VS2017 作为错误的问题
+- 固定为 VS2017 DSV 关系图停止呈现更改视图之后，遇到异常时然后中的多维模型的中的问题
+- 修复了使用 AS 连接失败 VS2017 中预览报表的问题
+ 
+
+**RS 项目：**
+- 解决了在 SSDT 中设计报表时多数更改会导致参数、数据源和数据集的树状视图发生折叠的问题 
+- 解决了“保存”应该保存 RDL 的版本而非最新版本的问题。
+- 解决了当备份已关闭时，SSDT RS 备份文件的问题以及一些其他问题。
+- 解决了在报表生成器中单击“拆分单元格”时将显示错误的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- 解决了缓存可能导致报表数据不正确的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+
+**IS 项目：**
+- 解决了 run64bitruntime 设置不粘滞的问题。
+- 解决了 DataViewer 不保存所显示的列的问题。
+- 解决了包部件隐藏注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- 解决了包部件放弃数据流布局和注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- 解决了从 SQL 服务器导入项目时 SSDT 崩溃的问题。
+- 修复了问题 Hadoop 文件系统任务 TimeoutInMinutes 默认为 10 后打开已保存 SSIS 包并在运行时。
+
+**数据库项目：**
+- SSDT DACPAC 重新部署并添加 IgnoreColumnOrder 设置 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
+- SSDT 在使用 STRING_SPLIT 的情况下会编译失败 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- 解决了 DeploymentContributors 有权访问公共模型，但支持架构尚未初始化的问题 [Github 问题](https://github.com/Microsoft/DACExtensions/issues/8)
+- FILEGROUP 位置的 DacFx 临时修补程序
+- 修复了外部同义词的“未解析的引用”错误。 
+- Always Encrypted：联机加密无法禁用对取消项进行更改跟踪，并且如果在开始加密前尚未清除更改跟踪，联机加密也无法正常运行
+
+
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 （最多可 SQL Server 2016 的支持）
 发布日期：2016 年 10 月 20日
 
 内部版本号：14.0.61021.0
@@ -36,8 +168,8 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="connection-improvements"></a>连接改进
 
-* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。**** 如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
-* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。****
+* “浏览”选项卡中的新搜索框可帮助你筛选本地服务器、网络服务器和 Azure SQL 数据库。 如果这些列表中显示了大量的服务器或数据库，此功能将十分有用。
+* “历史记录”选项卡中包含右键菜单选项用于固定/取消固定收藏项目，并提供一个新选项用于从历史记录中删除连接。
 
 ### <a name="sqlpackage-and-dacfx-api-improvements"></a>SqlPackage 和 DacFx API 改进
 
@@ -359,7 +491,7 @@ SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQ
   
 -   **SSIS 包项目模板**。 SSIS 目录性能改进：针对非 SSIS 管理员用户的大多数 SSIS 目录视图的性能都得到了改进。  
   
--   **SSAS 项目模板**包括对 Analysis Services 中表格模型项目的增强功能。 可以使用“查看代码”命令查看 JSON 中的模型定义。**** 如果你现在使用的不是完整功能版的 Visual Studio 2015，那么你将需要这个版本来获得 JSON 编辑器。 可以免费下载 [Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
+-   **SSAS 项目模板**包括对 Analysis Services 中表格模型项目的增强功能。 可以使用“查看代码”命令查看 JSON 中的模型定义。 如果你现在使用的不是完整功能版的 Visual Studio 2015，那么你将需要这个版本来获得 JSON 编辑器。 可以免费下载 [Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
   
 ## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月预览版  
   

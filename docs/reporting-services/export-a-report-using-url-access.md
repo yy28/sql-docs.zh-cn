@@ -1,25 +1,30 @@
 ---
-title: "使用 URL 访问导出报表 | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "格式 [Reporting Services], URL 呈现"
-  - "URL 访问 [Reporting Services], 呈现格式"
+title: "将报表使用 URL 访问导出 |Microsoft 文档"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- formats [Reporting Services], URL rendering
+- URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 使用 URL 访问导出报表
+# <a name="export-a-report-using-url-access"></a>使用 URL 访问导出报表
   可以选择使用 *rs:Format* URL 参数指定呈现报表的格式。  HTML4.0 和 HTM5 格式（呈现扩展插件）将呈现在浏览器中，对于其他格式，浏览器将会提示将报告输出保存到本地文件。  
   
  例如，若要直接从本机模式报表服务器获取报表的 PDF 副本：  
@@ -44,7 +49,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
  如果未在 URL 中纳入 *Format* 参数，则报表服务器将检测浏览器，并将相应报表呈现为合适的 HTML 格式。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
   

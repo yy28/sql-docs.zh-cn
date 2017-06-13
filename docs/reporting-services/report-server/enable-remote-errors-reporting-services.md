@@ -1,27 +1,32 @@
 ---
-title: "启用远程错误 (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "远程数据源 [Reporting Services]"
-  - "EnableRemoteError 服务器属性"
+title: "启用远程错误 (Reporting Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote data source [Reporting Services]
+- EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 启用远程错误 (Reporting Services)
-  可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表服务器系统属性](../Topic/Report%20Server%20System%20Properties.md)。  
+# <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
+  可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  本主题内容：  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_sharepoint"></a> 为 SharePoint 模式启用远程错误  
  可以通过两个不同的过程为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式启用远程错误。 对于两个不同的报表服务器体系结构，过程是不同的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本中引入的基于较新的 SharePoint 服务的体系结构利用可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置的设置。 较旧的体系结构利用单一站点级别的设置。  
   
-#### 为 Reporting Services 服务应用程序启用远程错误  
+#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>为 Reporting Services 服务应用程序启用远程错误  
   
 1.  对于随 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或较新版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的 SharePoint 模式报表服务器，启用服务应用程序设置 **“启用远程错误”**。 可为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序配置该设置。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 12
   
 6.  单击 **“确定”**。  
   
-#### 为 SharePoint 站点启用远程错误  
+#### <a name="enable-remote-errors-for-a-sharepoint-site"></a>为 SharePoint 站点启用远程错误  
   
 1.  对于随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本安装的 SharePoint 模式报表服务器，启用站点设置 **“启用本地模式下的远程错误”**。  
   

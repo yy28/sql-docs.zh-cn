@@ -1,23 +1,28 @@
 ---
-title: "添加筛选器（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加筛选器 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 添加筛选器（报表生成器和 SSRS）
+# <a name="add-a-filter-report-builder-and-ssrs"></a>添加筛选器（报表生成器和 SSRS）
   如果您希望在计算或显示时包含或排除特定值，可向数据集、数据区域或组添加筛选器。 在运行时应用筛选器的顺序为：先对数据集，再对数据区域，最后对组，并按照组层次结构自上而下的顺序。 在表、矩阵或列表中，对行组、列组和相邻组分别应用各自的筛选器。 在图表中，对类别组和序列组分别应用各自的筛选器。  
   
  若要添加筛选器，必须指定一个或多个筛选器公式。 筛选器公式由标识了要筛选的数据的表达式、运算符和要比较的值组成。 所筛选数据的数据类型和值必须匹配。 不支持筛选数据集或数据区域的聚合值。  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 对数据区域设置筛选器  
+### <a name="to-set-a-filter-on-a-data-region"></a>对数据区域设置筛选器  
   
 1.  在 **“设计”** 视图中打开报表。  
   
-2.  在设计图面上选择数据区域，然后右键单击“\<data region>属性”。 对于仪表，选择 **“仪表面板属性”**。 将打开“\<data region>属性”对话框。  
+2.  选择设计图面上的数据区域，然后右键单击*\<数据区域 >***属性**。 对于仪表，选择 **“仪表面板属性”**。 *\<数据区域 >***属性**对话框随即打开。  
   
     > [!NOTE]  
     >  在 Tablix 数据区域上，右键单击角部单元格或行或列的控点，然后单击“Tablix 属性”。  
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 对 Tablix 行或列组设置筛选器  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>对 Tablix 行或列组设置筛选器  
   
 1.  在 **“设计”** 视图中打开报表。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 对图表类别组设置筛选器  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>对图表类别组设置筛选器  
   
 1.  在 **“设计”** 视图中打开报表。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 对图表序列组设置筛选器  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>对图表序列组设置筛选器  
   
 1.  在 **“设计”** 视图中打开报表。  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
- [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>另请参阅  
+ [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

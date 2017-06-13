@@ -1,28 +1,33 @@
 ---
-title: "向移动报表添加数据网格 | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加到移动报表的数据网格 |Reporting Services |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 caps.latest.revision: 4
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 4
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 向移动报表添加数据网格 | Reporting Services
+# <a name="add-data-grids-to-mobile-reports--reporting-services"></a>向移动报表添加数据网格 | Reporting Services
 有时最佳可视化对象是数据本身。 了解用于在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中显示数据的三种数据网格（或表）：
 * 简单数据网格
 * 指示器数据网格
 * 图表数据网格
 
-## 简单数据网格
+## <a name="simple-data-grid"></a>简单数据网格
 最基本的简单数据网格可以通过自定义格式和标头显示多个列的数据。 
 
 ![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
@@ -38,7 +43,7 @@ caps.handback.revision: 4
 4. 在“列”窗格下，选择所需列。 重新排列和重命名它们，并设置其格式和聚合。 
 
  
-##  指示器数据网格
+##  <a name="indicator-data-grid"></a>指示器数据网格
 可以向指示器数据网格添加具有仪表的列。
 
 ![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
@@ -53,7 +58,7 @@ caps.handback.revision: 4
 
 数据网格会自动向仪表仅馈送特定于该数据网格行的数据。  
 
-## 图表数据网格
+## <a name="chart-data-grid"></a>图表数据网格
 可以向图表数据网格中添加具有仪表或图表的列。 
 
 ![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
@@ -77,10 +82,11 @@ caps.handback.revision: 4
    * “目标查找”是“图表可视化效果的引用数据”中的数据表中的字段。 将在这两个字段对每个行中的图表数据进行联接。   
    * “图表数据字段”决定了“图表可视化效果的引用数据”数据表中的哪个度量值要用作 Y 轴值或图表中每行中的系列。  
 
-## 另请参阅 
+## <a name="see-also"></a>另请参阅 
 * [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的导航器](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的可视化效果](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Reporting Services 移动报表中的仪表](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
+

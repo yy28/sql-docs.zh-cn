@@ -1,57 +1,39 @@
 ---
-title: "教程：创建矩阵报表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "教程： 创建矩阵报表 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 06/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：创建矩阵报表（报表生成器）
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
 你还可以创建相邻列组、设置列的格式和旋转文本。 下图显示与您将创建的报表类似的报表。  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
-  
-## <a name="BackToTop"></a>学习内容  
-在本教程中，你将学习：  
-  
-1.  [使用新的表或矩阵向导创建矩阵报表和数据集](#CreateMatrix)  
-  
-2.  [使用新的表或矩阵向导组织数据并选择布局](#Groups)  
-  
-3.  [设置数据格式](#FormatData)  
-  
-4.  [添加相邻列组](#AdjacentGroup)  
-  
-5.  [更改列宽](#Width)  
-  
-6.  [合并矩阵单元](#MergeCells)  
-  
-7.  [添加报表表头和报表标题](#HeaderTitle)  
-  
-8.  [保存报表](#Save)  
-  
-### 可选步骤  
-  
-1.  [旋转文本框 270 度](#RotateTextBox)  
-  
+   
 完成本教程的预计学时：20 分钟。  
   
-## 要求  
-有关要求的信息，请参阅[教程先决条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
+## <a name="requirements"></a>要求  
+有关要求的信息，请参阅 [教程先决条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
   
 ## <a name="CreateMatrix"></a>1.使用新的表或矩阵向导创建矩阵报表和数据集  
 在本部分中，选择共享数据源，创建嵌入数据集，并在矩阵报表中显示数据。  
@@ -59,7 +41,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 > 在本教程中，由于查询已经包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
-### 创建矩阵  
+### <a name="to-create-a-matrix"></a>创建矩阵  
   
 1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
@@ -118,7 +100,7 @@ caps.handback.revision: 14
   
 10. （可选）单击运行图标 (!) 以运行查询并查看数据。
 
-11. 单击“下一步” 。  
+11. 单击 **“下一步”**。  
   
 ## <a name="Groups"></a>2.使用新的表或矩阵向导组织数据并选择布局  
 使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
@@ -174,13 +156,13 @@ caps.handback.revision: 14
 ## <a name="FormatData"></a>3.设置数据格式  
 默认情况下，Sales 字段的汇总数据显示一般数字，而 SalesDate 字段则显示日期和时间信息。 在本节中，设置 Sales 字段格式以便将数字显示为货币，并且设置 SalesDate 字段格式以便只显示日期。 切换“占位符样式”以将格式化的文本框和占位符文本显示为示例值。  
   
-### 设置字段格式  
+### <a name="to-format-fields"></a>设置字段格式  
   
 1.  单击 **“设计”** 切换到设计视图。  
   
 2.  按 Ctrl 键，然后选择包含 `[Sum(Sales)]` 的九个单元。  
   
-3.  在“主页”选项卡中，转至“数字” > “货币”。 单元会更改为显示已设置好格式的货币。  
+3.  On the **Home** tab > **Number** > **Currency**. 单元会更改为显示已设置好格式的货币。  
   
     如果区域设置为“英语(美国)”，则默认示例文本为 [**$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
     
@@ -201,7 +183,7 @@ caps.handback.revision: 14
   
 在本节中，添加与 Subcategory 列组相邻的列组，复制单元以便填充这个新的列组，然后使用表达式创建该列组标题的值。  
   
-### 添加相邻列组  
+### <a name="to-add-an-adjacent-column-group"></a>添加相邻列组  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -240,12 +222,12 @@ caps.handback.revision: 14
 ![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> 如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题 **Sales** 以及按地区统计的销售总额。  
+> 如果数据包括了其他天，则报表也将包括这些天的相应列。 每个列都具有列标题 **Sales**以及按地区统计的销售总额。  
   
 ## <a name="Width"></a>5.更改列宽  
 包括矩阵的报表填充以水平方式展开，并且在运行时以垂直方式展开。 如果您计划将数据导出到用于打印报表的格式（例如 Microsoft Word 或 Adobe PDF），则控制水平展开将特别重要。 如果报表跨多页水平展开，则打印报表将很难理解。 为了尽量缩小水平展开，您可以将列的大小调整为宽度仅供无需换行就可以显示数据。 您还可以重命名列，以便其标题适合显示数据所需的宽度。  
   
-### 重命名列和调整列的大小  
+### <a name="to-rename-and-resize-the-columns"></a>重命名列和调整列的大小  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -274,7 +256,7 @@ caps.handback.revision: 14
 ## <a name="MergeCells"></a>6.合并矩阵单元  
 角区域是矩阵的左上角。 根据矩阵中行组和列组的数目，角区域中单元的数目将有所不同。 在本教程中内置的矩阵在其角区域中具有四个单元。 单元按两行和两列排列，反映行和列组层次结构的深度。 这四个单元并不用于此报表，并且您要将它们合并为一个单元。  
   
-### 合并矩阵单元  
+### <a name="to-merge-matrix-cells"></a>合并矩阵单元  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -286,7 +268,7 @@ caps.handback.revision: 14
   
 5.  右键单击新合并的单元，然后单击“文本框属性”。  
   
-6.  在“边框”选项卡中，转至“预设” > “无”。
+6.  On the **Border** tab > **Presets** > **None**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -297,7 +279,7 @@ caps.handback.revision: 14
 ## <a name="HeaderTitle"></a>7.添加报表表头和报表标题  
 报表标题将出现在报表的顶部。 您可以将报表标题放在表头中，或者如果报表不使用表头，也可以将其放在表体顶部的文本框中。 在本教程中，您将删除报表顶部的文本框，并向表头中添加主题。  
   
-### 添加报表表头和报表标题  
+### <a name="to-add-a-report-header-and-report-title"></a>添加报表表头和报表标题  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -324,7 +306,7 @@ caps.handback.revision: 14
   
 在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
   
-### 将报表保存到报表服务器  
+### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -340,7 +322,7 @@ caps.handback.revision: 14
   
 报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
-#### 将报表保存到计算机上  
+#### <a name="to-save-the-report-on-your-computer"></a>将报表保存到计算机上  
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
@@ -355,7 +337,7 @@ caps.handback.revision: 14
   
 文本框还可以将文本显示为竖排（从上到下）。 有关详细信息，请参阅[文本框（报表生成器和 SSRS）](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)。  
   
-### 旋转文本框 270 度  
+### <a name="to-rotate-text-box-270-degrees"></a>旋转文本框 270 度  
   
 1.  单击 **“设计”** 返回设计视图。  
   
@@ -378,14 +360,16 @@ caps.handback.revision: 14
   
 地区名称垂直书写，从下到上。 Territory 行组的高度由地区名称的长度决定。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 有关如何创建矩阵报表的教程到此结束。 有关矩阵报表的详细信息，请参阅： 
 -    [表、矩阵和列表](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [创建矩阵](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
 -    [Tablix 数据区域](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Tablix 数据区域单元、行和列](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

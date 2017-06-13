@@ -1,46 +1,51 @@
 ---
-title: "更改地图图例、色阶和关联的规则（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
-  - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
-  - "10512"
-  - "10539"
-  - "10533"
-  - "sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1"
-  - "10534"
-  - "10516"
-  - "sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1"
-  - "10514"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1"
-  - "10513"
-  - "sql13.rtp.rptdesigner.shared.mapruleslegend.f1"
-  - "sql13.rtp.rptdesigner.shared.embeddedlabels.f1"
-  - "10510"
-  - "10509"
-  - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
-  - "10540"
-  - "10517"
+title: "更改地图图例颜色缩放关联规则在报表生成器 SSRS |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
+- sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
+- sql13.rtp.rptdesigner.shared.maprulesdistribution.f1
+- "10512"
+- "10539"
+- "10533"
+- sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1
+- "10534"
+- "10516"
+- sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1
+- "10514"
+- sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1
+- "10513"
+- sql13.rtp.rptdesigner.shared.mapruleslegend.f1
+- sql13.rtp.rptdesigner.shared.embeddedlabels.f1
+- "10510"
+- "10509"
+- sql13.rtp.rptdesigner.maplegendproperties.general.f1
+- "10540"
+- "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
+# <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  
   
  图例包括地图的以下各部分：  
@@ -55,13 +60,13 @@ caps.handback.revision: 12
   
 ##  <a name="Viewport"></a> 更改图例相对于视区的位置  
   
-#### 更改图例相对于视区的位置  
+#### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>更改图例相对于视区的位置  
   
-1.  在“设计”视图中，右键单击图例，然后打开“\<报表项> 属性”页。  
+1.  在设计视图中，右键单击图例，然后打开*\<报表项 >***属性**页。  
   
 2.  在 **“位置”**中，通过单击指定图例要在视区中显示的相对位置。  
   
-3.  若要在视区之外显示图例，请选择“在视区外显示 \<报表项>”。  
+3.  若要显示在视区外的图例，请选择**显示\<报表项 > 视区外**。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegend"></a> 更改地图图例的布局  
   
-#### 更改地图图例的布局  
+#### <a name="to-change-the-layout-of-a-map-legend"></a>更改地图图例的布局  
   
 1.  在“设计”视图中，右键单击图例并打开“图例属性”页。  
   
@@ -80,30 +85,30 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegendTitle"></a> 显示或隐藏地图图例标题  
   
-#### 显示或隐藏地图图例标题  
+#### <a name="to-show-or-hide-a-map-legend-title"></a>显示或隐藏地图图例标题  
   
 -   右键单击设计图面上的地图图例，然后单击“显示图例标题”。  
   
 ##  <a name="ColorScaleTitle"></a> 显示或隐藏色阶标题  
   
-#### 显示或隐藏色阶标题  
+#### <a name="to-show-or-hide-a-color-scale-title"></a>显示或隐藏色阶标题  
   
 -   右键单击设计图面上的色阶，然后单击“显示色阶标题”。  
   
 ##  <a name="MoveItems"></a> 将项目移出第一个图例  
  根据需要创建任意数量的附加图例，然后更新每一地图层的规则，以指定要在其中显示规则结果的图例。  
   
-#### 创建新图例  
+#### <a name="to-create-a-new-legend"></a>创建新图例  
   
 -   在“设计”视图中，于地图视区之外右键单击地图，然后单击“添加图例”。  
   
      一个新的图例将出现在地图上。  
   
-#### 在图例中显示规则结果  
+#### <a name="to-display-rule-results-in-a-legend"></a>在图例中显示规则结果  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击具有的数据，你想，然后单击层*\<映射元素类型 >***颜色规则**。  
   
 3.  单击 **“图例”**。  
   
@@ -113,11 +118,11 @@ caps.handback.revision: 12
   
 ##  <a name="TemplateStyle"></a> 基于模板样式改变地图元素颜色  
   
-#### 基于模板样式改变地图元素颜色  
+#### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>基于模板样式改变地图元素颜色  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击具有的数据，你想，然后单击层*\<映射元素类型 >***颜色规则**。  
   
 3.  单击 **“应用模板样式”**。  
   
@@ -127,11 +132,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorPalette"></a> 基于调色板改变地图元素颜色  
   
-#### 基于调色板改变地图元素颜色  
+#### <a name="to-vary-map-element-colors-based-on-color-palette"></a>基于调色板改变地图元素颜色  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***颜色规则**。  
   
 3.  单击 **“使用调色板实现数据的可视化效果”**。  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorRanges"></a> 基于颜色范围改变地图元素颜色  
   
-#### 基于颜色范围改变地图元素颜色  
+#### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>基于颜色范围改变地图元素颜色  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***颜色规则**。  
   
 3.  单击 **“使用颜色范围实现数据的可视化效果”**。  
   
@@ -167,11 +172,11 @@ caps.handback.revision: 12
   
 ##  <a name="CustomColors"></a> 基于自定义颜色改变地图元素颜色  
   
-#### 基于自定义颜色改变地图元素颜色  
+#### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>基于自定义颜色改变地图元素颜色  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***颜色规则**。  
   
 3.  单击 **“使用自定义颜色实现数据的可视化效果”**。  
   
@@ -185,13 +190,13 @@ caps.handback.revision: 12
   
 ##  <a name="DistributionOptions"></a> 为图例设置分布选项  
   
-#### 为图例设置分布选项  
+#### <a name="to-set-distribution-options-for-a-legend"></a>为图例设置分布选项  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***颜色规则**。  
   
-3.  选择“使用 \<规则类型> 实现数据的可视化效果”选项。 若要使用分布选项，必须根据与层关联的分析数据，在 **“分布”** 页上创建范围。  
+3.  选择**实现数据可视化效果使用**\<规则类型 > 选项。 若要使用分布选项，必须根据与层关联的分析数据，在 **“分布”** 页上创建范围。  
   
 4.  单击 **“分布”**。  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 12
   
     -   **自定义**： 指定您自己的范围数以控制值的分布。  
   
-     有关分布选项的详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)。  
+     有关分布选项的详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 6.  在 **“子范围的数目”**中，键入要使用的子范围数。 当分布类型为 **“最佳”**时，将自动计算子范围的数量。  
   
@@ -217,13 +222,13 @@ caps.handback.revision: 12
   
 ##  <a name="RuleLegend"></a> 更改规则图例的内容  
   
-#### 更改颜色、大小、宽度或标记类型图例的内容  
+#### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>更改颜色、大小、宽度或标记类型图例的内容  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***规则**。  
   
-3.  验证是否选中了“使用  \<规则类型> 实现数据的可视化效果”。  
+3.  验证**实现数据可视化效果使用** \<*规则类型*> 选择。  
   
 4.  在 **“数据字段”**中，验证选择了您要该层上实现可视化的分析数据。  
   
@@ -238,13 +243,13 @@ caps.handback.revision: 12
   
 ##  <a name="ColorScale"></a> 更改色阶的内容  
   
-#### 更改色阶或颜色图例的内容  
+#### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>更改色阶或颜色图例的内容  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 颜色规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***颜色规则**。  
   
-3.  选择要使用的颜色规则选项。 若要在地图图例或色阶中显示项，必须选择“使用 \<规则类型> 实现数据的可视化效果”选项之一。  
+3.  选择要使用的颜色规则选项。 若要在地图图例或颜色刻度显示项，必须选择一个**实现数据可视化效果使用**\<规则类型 > 选项。  
   
 4.  在 **“数据字段”**中，验证选择了您要该层上实现可视化的分析数据。  
   
@@ -259,11 +264,11 @@ caps.handback.revision: 12
   
 ##  <a name="HideItems"></a> 从图例中删除所有项目  
   
-#### 基于规则隐藏项目  
+#### <a name="to-hide-items-based-on-a-rule"></a>基于规则隐藏项目  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***规则**。  
   
 3.  单击 **“图例”**。  
   
@@ -272,19 +277,19 @@ caps.handback.revision: 12
 ##  <a name="ChangeFormatItems"></a> 更改图例中内容的格式  
  为与地图图例关联的规则设置图例选项。  
   
-#### 更改图例中内容的格式  
+#### <a name="to-change-the-format-of-content-in-a-legend"></a>更改图例中内容的格式  
   
 1.  在“设计”视图中，单击地图直到出现“地图”窗格。  
   
-2.  右键单击具有所需数据的层，然后单击“\<地图元素类型> 规则”。  
+2.  右键单击层具有的数据，然后单击*\<映射元素类型 >***规则**。  
   
 3.  单击 **“图例”**。  
   
-4.  **“图例文本”** 显示指定要在图例中显示的数据的关键字。 使用地图关键字和自定义格式可帮助控制图例文本的格式。 例如，#FROMVALUE {C2} 指定一个具有两个小数位的货币格式。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)。  
+4.  **“图例文本”** 显示指定要在图例中显示的数据的关键字。 使用地图关键字和自定义格式可帮助控制图例文本的格式。 例如，#FROMVALUE {C2} 指定一个具有两个小数位的货币格式。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

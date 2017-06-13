@@ -1,23 +1,28 @@
 ---
-title: "在仪表面板中包括指示器和仪表（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在仪表面板 （报表生成器和 SSRS） 中包括指示器和仪表 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 在仪表面板中包括指示器和仪表（报表生成器和 SSRS）
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在仪表面板中包括指示器和仪表（报表生成器和 SSRS）
   仪表面板是包含一个或多个仪表和指示器的顶级容器。 指示器可以嵌入在仪表中或在仪表面板放置于仪表旁。  
   
  如果指示器和仪表在仪表面板中相邻并且显示来自不同字段的数据，则您最好添加标签，以便清楚地表明仪表和指示器提供的数据。  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 将指示器嵌入在仪表中  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>将指示器嵌入在仪表中  
   
 1.  打开一个现有报表，或者创建一个新报表（其中包含具有要显示的数据的表或矩阵）。   
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 并排显示指示器和仪表  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>并排显示指示器和仪表  
   
 1.  打开一个现有报表，或者创建一个新报表（其中包含具有要显示的数据的表或矩阵）。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 8
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

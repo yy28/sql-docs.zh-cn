@@ -1,23 +1,28 @@
 ---
-title: "交互式排序（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "交互式排序 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 交互式排序（报表生成器和 SSRS）
+# <a name="interactive-sort-report-builder-and-ssrs"></a>交互式排序（报表生成器和 SSRS）
   对于表中的行或矩阵中的行和列，可以添加交互式排序按钮，以便用户能够在升序和降序顺序之间切换。 交互式排序最常见的用途是向每一个列标题添加一个排序按钮。 这样，用户就可以选择要按哪个列排序。  
   
  但是，您不仅可以向列标题添加交互式排序按钮，还可以向任何文本框添加这种按钮。 例如，对于行组外部的行中的文本框，可以为父组行或列、为子组行或列或者为详细信息行或列指定排序。 还可以将多个字段组合成单个组表达式，然后按多个字段排序。  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
   
 -   **是否对多个数据区域同步排序：** 可以设计一个报表，使得在用户切换排序顺序时具有同一祖先的其他数据区域也进行排序。  
   
- 有关分步说明，请参阅[将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 有关分步说明，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
  下表总结了通过使用交互式排序按钮可以取得的效果。  
   
@@ -49,14 +54,14 @@ caps.handback.revision: 7
 |对表中的多个行组的行以及详细信息行进行排序|组，但您必须重新定义组表达式|列标题|要作为排序依据的数据集字段的聚合|数据区域|  
 |对多个数据区域同步排序顺序|组|通常是列标题|组表达式|数据集|  
   
- 在应用所有数据区域和组排序表达式后，报表处理器会应用交互式排序。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 在应用所有数据区域和组排序表达式后，报表处理器会应用交互式排序。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
-## 为多个组添加交互式排序  
+## <a name="adding-interactive-sort-for-multiple-groups"></a>为多个组添加交互式排序  
  如果一个表具有嵌套的行组，且每个行组都基于单个数据集字段，则可以在该表中添加对父组值、子组值或详细信息行进行排序的交互式排序按钮。 但是，您可能需要向用户提供这样的功能：无需多次单击，即可同时按父组值和子组值对表进行排序。  
   
- 为此，您必须重新设计该表，以按组合了多个字段的表达式进行分组。 例如，对于包含库存计数的数据集，如果原始表先按大小、再按颜色进行分组，则您可以使用由大小和颜色组合而成的组表达式指定单个组。 有关详细信息，请参阅[将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 为此，您必须重新设计该表，以按组合了多个字段的表达式进行分组。 例如，对于包含库存计数的数据集，如果原始表先按大小、再按颜色进行分组，则您可以使用由大小和颜色组合而成的组表达式指定单个组。 有关详细信息，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  

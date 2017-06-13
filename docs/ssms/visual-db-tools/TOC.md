@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [“添加表”对话框（查询和视图设计器）(Visual Database Tools)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [“保存更改脚本”对话框 (Visual Database Tools)](save-change-script-dialog-box-visual-database-tools.md)
 # [协调多个用户所做的更改 (Visual Database Tools)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [在查询和视图设计器中导航 (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [在聚合查询中使用列 (Visual Database Tools)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Visual Database Tools](visual-database-tools.md)
 # [选择与值不匹配的行 (Visual Database Tools)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [“保存后的通知”对话框 (Visual Database Tools)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [保存查询 (Visual Database Tools)](save-queries-visual-database-tools.md)

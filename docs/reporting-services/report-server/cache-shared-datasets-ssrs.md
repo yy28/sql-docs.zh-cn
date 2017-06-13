@@ -1,23 +1,28 @@
 ---
-title: "缓存共享数据集 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "缓存共享数据集 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 缓存共享数据集 (SSRS)
+# <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  
   
  一个共享数据集可以包含在多个报表中或作为组件定义的一部分。 通过缓存该共享数据集，可为使用它的所有报表提供一组一致的数据，还可以减少数据集查询对外部数据源的运行次数。  
@@ -48,14 +53,14 @@ caps.handback.revision: 6
   
  如果用户选择的报表参数值不同于为缓存的结果集指定的默认值，则数据集查询将主动运行，并且缓存的结果不用于该查询。  
   
-## 缓存共享数据集  
+## <a name="caching-shared-datasets"></a>缓存共享数据集  
  若要为某一共享数据集启用缓存，您必须对该共享数据集选择缓存选项。 启用缓存后，共享数据集的查询结果将在首次使用时复制到缓存中。 如果该共享数据集具有参数，则参数的每个组合将在缓存中创建一个新条目。  
   
  在特定参数组合的查询结果处于缓存中时，为进行处理而启动且包括对使用这些参数值的共享数据集的引用的每个报表都将使用缓存的数据。  
   
- 您可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[共享数据集的“缓存”属性页（报表管理器）](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md)。  
+ 您可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[共享数据集的“缓存”属性页（报表管理器）](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
   
-## 预加载缓存  
+## <a name="preloading-the-cache"></a>预加载缓存  
  您可以通过创建缓存刷新计划预加载缓存。 使用刷新计划，您可以通过特定于项的计划或共享计划来指定刷新缓存的频率。 为了避免同一项有多个缓存条目，您指定的计划应该允许有足够的时间来对外部数据源执行查询处理。 例如，如果查询需要 20 分钟来运行，则刷新计划应大于 20 分钟。 有关更多信息，请参见 [Schedules](../../reporting-services/subscriptions/schedules.md)。  
   
  若要为共享数据集创建缓存刷新计划，以下条件适用。  
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 -   对于共享数据集，您必须具有 ReadPolicy 和 UpdatePolicy 权限。  
   
- 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅[缓存刷新选项（报表管理器）](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md)。  
+ 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅[缓存刷新选项（报表管理器）](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)。  
   
-## 导致缓存过期的条件  
+## <a name="conditions-that-cause-cache-expiration"></a>导致缓存过期的条件  
  以下条件可能导致共享数据集缓存失效。  
   
 -   计划条件到期。 缓存超时或者已到到期时间。  
@@ -95,7 +100,7 @@ caps.handback.revision: 6
   
  对共享数据集的缓存刷新计划的更新不会影响已在处理的报表。 更新缓存刷新计划仅影响引用共享数据集的报表的将来启动。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "键盘快捷键（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "键盘快捷键"
-  - "快捷键"
+title: "键盘快捷方式 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 键盘快捷键（报表生成器）
+# <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   在报表生成器中创建和编辑分页的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  
   
  您可以在“报表生成器”窗口中进行导航，或在不同的对话框中选择和更改选项，而无需使用鼠标。  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  键盘快捷键可以包含 Shift、Alt 和/或 Ctrl 键与字母的不同组合形式，也可以使用功能键。 例如，按 F1 即可打开报表生成器帮助文件。  
   
-## 报表生成器中的键盘快捷键  
+## <a name="keyboard-shortcuts-in-report-builder"></a>报表生成器中的键盘快捷键  
   
 |Description|键组合|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |在选择地图视区时缩小地图视图区域。|Ctrl + 减号 (-)|  
 |在选择地图视区时平移并放大地图视区的快捷键模式。|Ctrl+左键单击|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [词汇表（报表生成器）](../../reporting-services/report-builder/glossary-report-builder.md)  

@@ -1,40 +1,45 @@
 ---
-title: "添加、更改或删除地图或地图层（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
-  - "10526"
-  - "sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1"
-  - "10529"
-  - "10525"
-  - "10535"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.layerfilters.f1"
-  - "sql13.rtp.rptdesigner.maplinelayerproperties.general.f1"
-  - "10524"
-  - "sql13.rtp.rptdesigner.maptilelayerproperties.general.f1"
-  - "10532"
-  - "sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
-  - "10528"
-  - "10527"
-  - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
+title: "添加、 更改或删除地图或地图层 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.maplayerproperties.general.f1
+- "10526"
+- sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1
+- "10529"
+- "10525"
+- "10535"
+- sql13.rtp.rptdesigner.mappointlayerproperties.general.f1
+- sql13.rtp.rptdesigner.shared.layerfilters.f1
+- sql13.rtp.rptdesigner.maplinelayerproperties.general.f1
+- "10524"
+- sql13.rtp.rptdesigner.maptilelayerproperties.general.f1
+- "10532"
+- sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
+- "10528"
+- "10527"
+- sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 添加、更改或删除地图或地图层（报表生成器和 SSRS）
+# <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
   
  若要添加、删除或更改层的选项，最简单的方法是使用地图层向导。 还可以从“地图”窗格中手动更改选项。 若要显示 **“地图”** 窗格，请单击报表设计图面中的地图。 下图显示该窗格的各个部分：  
@@ -47,16 +52,16 @@ caps.handback.revision: 14
   
 |符号|Description|何时使用|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")|地图层向导|若要使用向导添加层，请单击 **“新建层向导”**。|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")|添加层|若要手动添加层，请单击 **“添加层”**，然后单击要添加的地图层类型。|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.png "rs_IconMapPolygonLayer")|多边形层|添加显示基于一组多边形坐标的区域或形状的地图层。|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.png "rs_IconMapLineLayer")|线条层|添加显示基于一组线条坐标的路径或路线的地图层。|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.png "rs_IconMapPointLayer")|点层|添加显示基于一组点坐标的位置的地图层。|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.png "rs_IconMapTileLayer")|图块层|添加显示 Bing 地图图块的一个地图层，这些图块对应于由视区定义的当前地图视图区域。|  
+|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|地图层向导|若要使用向导添加层，请单击 **“新建层向导”**。|  
+|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|添加层|若要手动添加层，请单击 **“添加层”**，然后单击要添加的地图层类型。|  
+|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|多边形层|添加显示基于一组多边形坐标的区域或形状的地图层。|  
+|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|线条层|添加显示基于一组线条坐标的路径或路线的地图层。|  
+|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|点层|添加显示基于一组点坐标的位置的地图层。|  
+|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|图块层|添加显示 Bing 地图图块的一个地图层，这些图块对应于由视区定义的当前地图视图区域。|  
   
  “地图”窗格的底部是“地图”视图区域。 若要更改地图的中心或缩放选项，请使用箭头键来调整视图中心和使用滑块来调整缩放级别。  
   
- 有关层的详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
+ 有关层的详细信息，请参阅 [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -65,13 +70,13 @@ caps.handback.revision: 14
   
 -   从“功能区”的 **“插入”** 菜单上，单击 **“地图”**，然后单击 **“地图” Wizard.** 。通过该向导可以向现有地图添加层。 地图向导和地图层向导的大多数向导页是相同的。  
   
-     有关详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
 ##  <a name="ChangeLayer"></a> 使用地图层向导更改层的选项  
   
--   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在“地图”窗格中，右键单击该层，然后在工具栏上单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard"))。  
+-   运行地图层向导。 此向导允许您更改使用地图层向导创建的层的选项。 在地图窗格中，右键单击该层，，然后在工具栏上，单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-     有关详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [地图向导和地图层向导（报表生成器和 SSRS）](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
 ##  <a name="AddVectorLayer"></a> 从“地图”窗格工具栏添加点、线条或多边形层  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 14
 2.  在工具栏上单击“添加层”按钮，从下拉列表中单击要添加的层类型：“点”、“线条”或“多边形”。  
   
     > [!NOTE]  
-    >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要从“地图”窗格工具栏启动该向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard"))。  
+    >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要启动该向导从地图窗格工具栏，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
 3.  右键单击该层，然后单击“层数据”。  
   
@@ -116,9 +121,9 @@ caps.handback.revision: 14
   
 1.  选择 **“地图点属性”** 对话框中的 **“常规”** 可以更改以下地图元素的标签、工具提示和标记类型选项：  
   
-    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点的选项，请使用 [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) 页。  
+    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点的选项，请使用 [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
   
-    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md)页。  
+    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
   
 ##  <a name="Embedded"></a> 指定嵌入数据作为空间数据的源  
   
@@ -148,7 +153,7 @@ caps.handback.revision: 14
 4.  在 **“文件名”**中，键入 ESRI 形状文件的位置，或单击 **“浏览”** 以选择 ESRI 形状文件。  
   
     > [!NOTE]  
-    >  如果该形状文件位于本地计算机上，则将空间数据嵌入报表定义中。 若要在处理报表时动态检索数据，必须将 ESRI .shp 文件及其 .dbf 支持文件上载到报表服务器。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的“如何上传文件或报表（报表管理器）”。  
+    >  如果该形状文件位于本地计算机上，则将空间数据嵌入报表定义中。 若要在处理报表时动态检索数据，必须将 ESRI .shp 文件及其 .dbf 支持文件上载到报表服务器。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“如何上传文件或报表（报表管理器）”。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 14
 2.  在工具栏上单击“添加层”按钮，然后从下拉列表中单击“图块层”。  
   
     > [!NOTE]  
-    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371)。  
   
 3.  右键单击“地图”窗格中的该图块层，然后单击“图块属性”。  
   
@@ -250,7 +255,7 @@ caps.handback.revision: 14
   
      还可以有条件隐藏层。 有关详细信息，请参阅[隐藏项（报表生成器和 SSRS）](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

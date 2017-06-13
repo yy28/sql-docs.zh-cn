@@ -1,23 +1,28 @@
 ---
-title: "报表设计提示（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "报表设计提示 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 报表设计提示（报表生成器和 SSRS）
+# <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
   以下提示可帮助你设计 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。  
   
 > [!NOTE]  
@@ -76,9 +81,9 @@ caps.handback.revision: 12
   
     -   **箭头键** ：移动所选报表项。  
   
-    -   **Ctrl+箭头键**：轻微移动所选报表项。  
+    -   **Ctrl+箭头键** ：轻微移动所选报表项。  
   
-    -   **Ctrl+Shift+箭头键**：增大或减小所选报表项的大小。  
+    -   **Ctrl+Shift+箭头键** ：增大或减小所选报表项的大小。  
   
 -   若要向矩形添加项，请用鼠标的左上尖端指向该项在矩形容器中的初始位置。 使用键盘快捷键可帮助定位所选对象。 矩形自动展开，以容纳所含项的大小。  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 12
   
     -   若要在 Tablix 数据区域中处理行组和列组，请从“分组”窗格中选择所需组。  
   
- 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的报表设计器中，您可以从“属性”窗格工具栏的对象下拉列表中进行选择，也可以从“文档大纲”窗口的报表项层次结构视图中进行选择。 您可以在此窗格中选择项，然后查看在设计图面上选定了哪个项。 若要打开“文档大纲”窗口，请在 **“视图”** 菜单中指向 **“其他窗口”**，然后单击 **“文档大纲”**。  
+ 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的报表设计器中，您可以从“属性”窗格工具栏的对象下拉列表中进行选择，也可以从“文档大纲”窗口的报表项层次结构视图中进行选择。 您可以在此窗格中选择项，然后查看在设计图面上选定了哪个项。 若要打开“文档大纲”窗口，请在 **“视图”** 菜单中指向 **“其他窗口”**，然后单击 **“文档大纲”**。  
   
 ##  <a name="ReportItems"></a> 使用特定类型的报表项  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 12
   
 -   如果计划将报表另存为 .pdf 文件，必须将报表宽度显式设置为某个值，以便获得导出文件格式的预期效果。 例如，将报表页宽度设置为确切等于 7.9375 英寸，并将左边距和右边距设置为 0.5 英寸。  
   
--   使用报表查看器工具栏上的“打印布局”和“页面设置”在打印兼容的视图中呈现报表。 执行以下操作有助于删除多余的水平页面：  
+-   使用报表查看器工具栏上的 **“打印布局”** 和 **“页面设置”** 在打印兼容的视图中呈现报表。 执行以下操作有助于删除多余的水平页面：  
   
     1.  删除数据区域之间以及报表边缘上的所有多余空白。  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 12
   
  通过将此行为、报表项的宽度和高度属性、表体的大小、页面高度和页面宽度定义、父报表的边距设置、呈现器对于分页的特定支持等组合起来，可共同确定哪些报表项适合一起呈现在页面上。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)  

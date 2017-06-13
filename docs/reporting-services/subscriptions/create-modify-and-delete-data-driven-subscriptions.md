@@ -1,28 +1,33 @@
 ---
-title: "创建、修改和删除数据驱动订阅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "基于查询的订阅 [Reporting Services]"
-  - "查询 [Reporting Services], 数据驱动订阅"
-  - "订阅 [Reporting Services], 数据驱动"
-  - "数据驱动订阅"
+title: "创建、 修改和删除数据驱动订阅 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- query-based subscriptions [Reporting Services]
+- queries [Reporting Services], data-driven subscriptions
+- subscriptions [Reporting Services], data-driven
+- data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建、修改和删除数据驱动订阅
+# <a name="create-modify-and-delete-data-driven-subscriptions"></a>创建、修改和删除数据驱动订阅
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  
   
  若要创建新的数据驱动订阅或修改现有订阅，请使用报表管理器中的“创建数据驱动订阅”页。 这些页面将引导您完成创建或修改订阅的每一个步骤。 若要在创建订阅后访问该订阅，请使用“我的订阅”页和报表的“订阅”列表。 若要了解如何创建数据驱动订阅，请参阅[创建数据驱动的订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
@@ -38,38 +43,38 @@ caps.handback.revision: 51
 -   [运行订阅](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
- 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅[（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/zh-cn/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。  
+ 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅[（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。  
   
  若要删除数据驱动订阅，请从“我的订阅”页或报表的“订阅”页中选定该订阅，再单击“删除”。  
   
- 有关如何取消数据驱动订阅的说明，请参阅[管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
+ 有关如何取消数据驱动订阅的说明，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。  
   
 ##  <a name="bkmk_create_and_modify"></a> 创建和修改数据驱动订阅  
  若要创建数据驱动订阅，请选择一个使用存储的凭据或不使用任何凭据的报表。 在您创建数据驱动订阅时，请考虑将命名约定用于说明字段，以便可以轻松地将标准说明与数据驱动说明区分开来。  
   
-#### 创建数据驱动订阅（本机模式）  
+#### <a name="to-create-a-data-driven-subscription-native-mode"></a>创建数据驱动订阅（本机模式）  
   
 1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”**。  
   
 2.  单击 **“订阅”** 选项卡。  
   
-3.  单击“新建数据驱动订阅”按钮。  
+3.  单击 **“新建数据驱动订阅”** 按钮。  
   
-#### 创建数据驱动订阅（SharePoint 模式）  
+#### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>创建数据驱动订阅（SharePoint 模式）  
   
 1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”**。  
   
-2.  单击“添加数据驱动订阅”。  
+2.  单击 **“添加数据驱动订阅”**。  
   
-#### 修改现有的数据驱动订阅（本机模式）  
+#### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>修改现有的数据驱动订阅（本机模式）  
   
 1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”**。  
   
 2.  单击 **“订阅”** 选项卡。 也可以单击报表管理器顶部的 **“我的订阅”** 链接  
   
-3.  选择要修改的订阅。 以下图标表示数据驱动订阅： ![数据驱动订阅图标](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.png "数据驱动订阅图标")  
+3.  选择要修改的订阅。 下面的图标表示数据驱动订阅：![数据驱动订阅图标](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "数据驱动订阅图标")  
   
-#### 修改现有的数据驱动订阅（SharePoint 模式）  
+#### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>修改现有的数据驱动订阅（SharePoint 模式）  
   
 1.  在 SharePoint 文档库中，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理订阅”**。  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 51
   
 -   **数据要求**。 必须具有包含订阅服务器数据的可访问外部数据源。  
   
--   **用户要求**。 订阅的作者必须具有“管理报表”和“管理所有订阅”的权限。 有关项级任务权限的详细信息，请参阅[任务和权限](../../reporting-services/security/tasks-and-permissions.md)。 作者还须具有访问包含订阅服务器数据的外部数据源所需的凭据。  
+-   **用户要求**。 订阅的作者必须具有“管理报表”和“管理所有订阅”的权限。 有关项级任务权限的详细信息，请参阅 [任务和权限](../../reporting-services/security/tasks-and-permissions.md)。 作者还须具有访问包含订阅服务器数据的外部数据源所需的凭据。  
   
 ##  <a name="bkmk_define_query"></a> 定义用于检索订阅信息的查询  
  数据驱动订阅必须指定一个用于检索订阅服务器数据的查询或命令。 查询应为每个订阅服务器生成一行。 如果使用的是电子邮件传递扩展插件，则查询应为每个订阅服务器返回一个有效的电子邮件别名。 所执行的传递的数量取决于查询所返回的行数。 如果行集中包含 10,000 行，则该订阅将传递 10,000 个报表。  
@@ -100,12 +105,12 @@ caps.handback.revision: 51
 ##  <a name="bkmk_run_subscription"></a> 运行订阅  
  必须指定处理订阅的条件。 可以指定一个计划，也可以触发该订阅以便与对报表执行快照的更新保持一致。 处理数据驱动订阅的方式与处理标准订阅的方式相同。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [报表管理器（SSRS 本机模式）](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/zh-cn/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [“订阅”页（报表管理器）](../Topic/Subscriptions%20Page%20\(Report%20Manager\).md)   
- [“我的订阅”页（报表管理器）](../Topic/My%20Subscriptions%20Page%20\(Report%20Manager\).md)  
+ [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [“订阅”页（报表管理器）](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [“我的订阅”页（报表管理器）](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

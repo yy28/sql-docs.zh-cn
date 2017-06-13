@@ -1,47 +1,42 @@
 ---
-title: "RS.exe 实用工具 (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自动报表服务器任务"
-  - "rs 实用工具"
-  - "命令提示实用工具 [Reporting Services]"
-  - "报表服务器 [Reporting Services]，自动化任务"
-  - "命令提示实用工具 [SQL Server]，rs"
-  - "脚本 [Reporting Services]，命令提示"
-  - "部署报表 [Reporting Services]"
+title: "RS.exe 实用工具 (SSRS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- automatic report server tasks
+- rs utility
+- command prompt utilities [Reporting Services]
+- report servers [Reporting Services], automating tasks
+- command prompt utilities [SQL Server], rs
+- scripts [Reporting Services], command prompt
+- deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# RS.exe 实用工具 (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，配置为 SharePoint 集成模式的报表服务器以及配置为本机模式的服务器均支持 **rs** 实用工具。 以前的版本仅支持本机模式配置。  
   
- **本主题内容：**  
-  
--   [文件位置](#bkmk_filelocation)  
-  
--   [参数](#bkmk_arguments)  
-  
--   [Permissions](#bkmk_permissions)  
-  
--   [示例](#bkmk_examples)  
-  
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -102,9 +97,9 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 全局变量以给定的名称命名，并设置为提供的值。 例如，**-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 "**2**" 的变量 **b**。  
+ 全局变量以给定的名称命名，并设置为提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 将生成一个名为 **a** 且值为 "**1**" 的变量，以及一个值为 " **2** " 的变量**b**。  
   
- 全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 (**\\"**) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线开头，并包含字母字符、数字或下划线。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder-and-ssrs.md)。  
+ 全局变量可用于脚本中的所有函数。 反斜杠与英文引号连用 (**\\"**) 将解释为一个英文双引号。 仅当字符串中包含空格时才需要使用英文引号。 变量名必须对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]有效；变量名必须以字母字符或下划线开头，并包含字母字符、数字或下划线。 不能将保留字用作变量名。 有关使用全局变量的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **-t**  
  （可选）将错误信息输出到跟踪日志中。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
@@ -119,22 +114,22 @@ rs {-?}
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 有关详细示例，请参阅[用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ 有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
  有关其他示例，请参阅 [运行 Reporting Services 脚本文件](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## 注释  
+## <a name="remarks"></a>注释  
  可以定义脚本来设置系统属性，发布报表，等等。 所创建的脚本可以包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 有关可以使用的方法和属性的详细信息，请参阅 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)。  
   
  必须用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 代码编写脚本，并存储在文件扩展名为 .rss 的 Unicode 或 UTF-8 文本文件中。 不能使用 **rs** 实用工具调试脚本。 若要调试脚本，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中运行代码。  
   
 > [!TIP]  
->  有关详细示例，请参阅[用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+>  有关详细示例，请参阅 [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
-## 另请参阅  
- [运行 Reporting Services 脚本文件](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [使用 rs.exe 实用工具和 Web 服务编写脚本](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+## <a name="see-also"></a>另请参阅  
+- [运行 Reporting Services 脚本文件](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [脚本部署和管理任务](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [使用 rs.exe 实用工具和 Web 服务的脚本](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [报表服务器命令提示实用工具 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

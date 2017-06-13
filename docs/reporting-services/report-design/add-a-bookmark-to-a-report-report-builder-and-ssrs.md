@@ -1,35 +1,40 @@
 ---
-title: "向报表添加书签（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "向报表 （报表生成器和 SSRS） 添加书签 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 向报表添加书签（报表生成器和 SSRS）
+# <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  
   
  创建书签后，可以添加用户通过单击即可转到书签的报表项。 这些项通常为文本框或图像。  
   
  例如，如果报表显示按颜色分组的表，则可以向组头中添加基于组表达式的书签。 然后，即可在报表的开头处添加带有显示颜色值的单个文本框的表，并在该文本框上设置书签链接。 单击某种颜色时，报表就会跳至显示具有该颜色的组头行的页。  
   
- 可以向任何报表项添加书签，也可以向具有 **“操作”** 属性的任何项添加书签链接，例如文本框、图像或图表中的计算序列。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)。  
+ 可以向任何报表项添加书签，也可以向具有 **“操作”** 属性的任何项添加书签链接，例如文本框、图像或图表中的计算序列。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 添加书签  
+### <a name="to-add-a-bookmark"></a>添加书签  
   
 1.  在报表设计视图中，选择要向其添加书签的文本框、图像、图表或其他报表项。 所选项的属性将显示在“属性”窗格中。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  书签可以为任意字符串，但在报表中必须是唯一的。 如果书签不是唯一的，则指向该书签的链接将跳至第一个匹配书签。  
   
-### 添加书签链接  
+### <a name="to-add-a-bookmark-link"></a>添加书签链接  
   
 1.  在“设计”视图中，右键单击要向其添加链接的文本框、图像或图表，然后单击“属性”。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 7.  若要测试该链接，请单击 **“运行”** 以预览报表，然后单击对其设置此链接的报表项。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

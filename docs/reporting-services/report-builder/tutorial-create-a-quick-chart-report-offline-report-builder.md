@@ -1,65 +1,72 @@
 ---
-title: "教程：脱机创建快速图表报表（报表生成器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "报表, 创建"
-  - "教程, 入门"
-  - "创建报表"
+title: "教程： 创建快速图表报表脱机 （报表生成器） |Microsoft 文档"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports, creating
+- tutorials, getting started
+- creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 31
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 27
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 教程：脱机创建快速图表报表（报表生成器）
+
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
+
   在本教程中，你可以使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
   
 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图类似的饼图：  
   
- ![Report Builder New Chart Run](../../reporting-services/report-builder/media/rb-newchartrun.png "Report Builder New Chart Run")  
+ ![报表生成器快速饼图](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "报表生成器快速饼形图")  
   
-## 先决条件  
- 无论你是使用 XML 数据还是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，都需要有权访问 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 不管你是使用 XML 数据或[!INCLUDE[tsql](../../includes/tsql-md.md)]查询，你需要有权访问报表生成器。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 用于完成本教程的两种方法  
   
 -   [使用 XML 数据创建饼图](#CreatePieChartXML)  
   
--   [使用包含数据的 Transact\-SQL 查询创建饼图](#CreatePieQueryData)  
+-   [使用 TRANSACT-SQL 查询包含的数据创建饼图](#CreatePieQueryData)  
   
-### 使用本教程的 XML 数据  
- 通过复制本主题中的 XML 数据并粘贴到向导中，可以使用本主题中的 XML 数据。 不需要连接到处于本机模式或 SharePoint 集成模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，也不需要访问 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的实例。  
+### <a name="using-xml-data-for-this-tutorial"></a>使用本教程的 XML 数据  
+ 通过复制本主题中的 XML 数据并粘贴到向导中，可以使用本主题中的 XML 数据。 无需连接到[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器在本机模式或 SharePoint 集成模式下，而且也无需访问 SQL Server 的实例。  
   
  [使用 XML 数据创建饼图](#CreatePieChartXML)  
   
-### 使用包含此教程数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询  
- 可以复制本主题中包含数据的查询，并将其粘贴到向导中。 将需要 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的名称以及足以对任何数据库进行只读访问的凭据。 本教程中的数据集查询使用文字数据，但必须由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例处理查询以返回报表数据集所必需的元数据。  
+### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>使用包含此教程数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询  
+ 可以复制本主题中包含数据的查询，并将其粘贴到向导中。 你将需要 SQL Server 和凭据的实例的名称能够满足对任何数据库的只读访问权限。 本教程中的数据集查询使用文字数据，但必须由要返回的元数据所需的报表数据集的 SQL Server 实例处理查询。  
   
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的优势在于，其他所有 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 教程均使用相同的方法，这样，在你学习其他教程时，你已经提前知道了该做什么。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询要求满足一些其他前提条件。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
- [使用包含数据的 Transact\-SQL 查询创建饼图](#CreatePieQueryData)  
+ [使用 TRANSACT-SQL 查询包含的数据创建饼图](#CreatePieQueryData)  
   
 ##  <a name="CreatePieChartXML"></a> 使用 XML 数据创建饼图  
   
-1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 SharePoint 集成模式下的报表服务器，或从计算机 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+1.  从[Web 门户或从 SharePoint 集成模式下的报表服务器，或从计算机](../../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
      此时将显示 **“入门”** 对话框。  
   
-     ![Report Builder Get Started](../../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![报表生成器开始](../../reporting-services/media/rb-getstarted.png "报表生成器入门")  
   
-     如果没有出现“**入门**”对话框，请单击“**文件**”\>“**新建**”。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。  
+     如果**入门**对话框中未出现，则单击**文件** >**新建**。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -106,46 +113,46 @@ caps.handback.revision: 27
     </Query>  
     ```  
   
-11. \(可选\)单击“**运行**”按钮 \(**\!**\)，查看要用于图表的数据。  
+11. （可选）单击**运行**按钮 (**！**) 以查看你的图表将基于的数据。  
   
-     ![Report Builder Design Query](../../reporting-services/report-builder/media/rb-designquery.png "Report Builder Design Query")  
+     ![报表生成器设计查询](../../reporting-services/report-builder/media/rb-designquery.png "报表生成器设计查询")  
   
 12. 单击“下一步” 。  
   
 13. 在 **“选择图表类型”** 页中，单击 **“饼图”**，然后单击 **“下一步”**。  
   
-14. 在“**排列图表字段**”页中，在“**可用字段**”框中双击 **Sales** 字段。  
+14. 在**排列图表字段**页上，双击**销售**字段**可用字段**框。  
   
      注意，它将自动移动到 **“值”** 框，因为它是数字值。  
   
-     ![Report Builder Wizard Arrange Fields](../../reporting-services/report-builder/media/rb-wizarrangefields.png "Report Builder Wizard Arrange Fields")  
+     ![报表生成器向导排列字段](../../reporting-services/report-builder/media/rb-wizarrangefields.png "报表生成器向导排列字段")  
   
-15. 将 **FullName** 字段从“**可用字段**”框拖到“**类别**”框\(或双击它，它将转到“**类别**”框\)，然后单击“**下一步**”。  
+15. 拖动**FullName**字段从**可用字段**到框中**类别**框 (或双击该快捷方式; 它会转到**类别**框)，然后单击**下一步**。  
   
      “预览”页上将显示带表述性数据的新饼图。 图例读取 Full Name 1、Full Name 2 等，而不是销售人员的名字，并且饼图切片的大小不准确。 这只用于展示报表的外观。  
   
-     ![Report Builder New Chart Preview](../../reporting-services/report-builder/media/rb-newchartpreview.png "Report Builder New Chart Preview")  
+     ![报表生成器新图表预览](../../reporting-services/report-builder/media/rb-newchartpreview.png "报告生成器新图表预览")  
   
 16. 单击 **“完成”**。  
   
      现在你将在设计视图中看到新的饼图，以及表述性数据。  
   
-     ![Report Builder New Pie in Design View](../../reporting-services/report-builder/media/rb-newpiedesign.png "Report Builder New Pie in Design View")  
+     ![报表生成器在设计视图中的新饼图](../../reporting-services/report-builder/media/rb-newpiedesign.png "报表生成器在设计视图中的新饼图")  
   
 17. 若要看见实际的饼图，请在功能区的 **“主文件夹”** 选项卡上单击 **“运行”** 。  
   
-     ![Report Builder New Chart Run](../../reporting-services/report-builder/media/rb-newchartrun.png "Report Builder New Chart Run")  
+     ![报表生成器新图表运行](../../reporting-services/report-builder/media/rb-newchartrun.png "报告生成器新图表运行")  
   
 18. 若要继续修改饼图，请转到本文的 [运行向导之后](#AfterWizard) 一节。  
   
 ##  <a name="CreatePieQueryData"></a> 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询创建饼图  
   
-1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户、从 SharePoint 集成模式下的报表服务器，或从计算机 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+1.  从[Web 门户、从 SharePoint 集成模式下的报表服务器，或从计算机](../../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, 启动报表生成器 report server in SharePoint integrated mode, or from your computer.  
   
      此时将显示 **“入门”** 对话框。  
   
     > [!NOTE]  
-    >  如果没有出现“**入门**”对话框，请单击“**文件**”\>“**新建**”。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。  
+    >  如果**入门**对话框中未出现，则单击**文件** >**新建**。 “新建报表或数据集”  对话框的内容与“入门”  对话框的内容大致相同。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -170,17 +177,17 @@ caps.handback.revision: 27
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  \(可选\)单击“运行”按钮 \(**\!**\)，查看要用于图表的数据。  
+8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 10. 在 **“选择图表类型”** 页中，单击 **“饼图”**，然后单击 **“下一步”**。  
   
-11. 在“**排列图表字段**”页中，在“**可用字段**”框中双击 **Sales** 字段。  
+11. 在**排列图表字段**页上，双击**销售**字段**可用字段**框。  
   
      注意，它将自动移动到 **“值”** 框，因为它是数字值。  
   
-12. 将 **FullName** 字段从“**可用字段**”框拖到“**类别**”框\(或双击它，它将转到“**类别**”框\)，然后单击“**下一步**”。  
+12. 拖动**FullName**字段从**可用字段**到框中**类别**框 (或双击该快捷方式; 它会转到**类别**框)，然后单击**下一步**。  
   
 13. 单击 **“完成”**。  
   
@@ -191,46 +198,47 @@ caps.handback.revision: 27
 ##  <a name="AfterWizard"></a> 运行向导之后  
  现在您便拥有了饼图报表，从而可以对其进行操作。 在功能区的 **“运行”** 选项卡上，单击 **“设计”**，这样可以继续修改它。  
   
-## 放大图表  
+## <a name="make-the-chart-bigger"></a>放大图表  
  您可能希望放大饼图。 
  
 *  单击图表（但不要单击图表中的任何元素）以选择它，并拖动右下角以调整它的大小。  
 
 注意在你拖动时设计图面会变大。
   
-## 添加报表标题  
+## <a name="add-a-report-title"></a>添加报表标题  
 1. 选择图表顶部的词语 **“图表标题”** ，然后键入标题，例如 **Sales Pie Chart**。  
-2. 选择标题后，在“属性”窗格中，将“**颜色**”更改为“**黑色**”并将“**字体**”更改为“**12 pt**”。
+2. 在属性窗格中选择的标题将更改**颜色**到**黑色**和**FontSize**到**12pt**。
   
-## 添加百分比  
+## <a name="add-percentages"></a>添加百分比  
  
-1.  在饼图上右键单击，并选择“**显示数据标签**”。 数据标签将显示在饼图上的每个切片上。  
+1.  右键单击饼图并选择**显示数据标签**。 数据标签将显示在饼图上的每个切片上。  
   
-2.  在标签上右键单击，并选择“**序列标签属性**”。 此时将显示 **“序列标签属性”** 对话框。  
+2.  右键单击标签并选择**序列标签属性**。 此时将显示 **“序列标签属性”** 对话框。  
   
-3.  在“**标签数据**”框中键入 **\#PERCENT{P0}**。  
+3.  在**标记数据**框中，键入**#PERCENT {P0}**。  
   
-     **{P0}** 提供没有小数位的百分比。 如果只是键入 **\#PERCENT**，则数字将有两位小数。 **\#PERCENT** 是执行计算或函数的关键字，还有很多这样的关键字。  
+     **{P0}** 提供没有小数位的百分比。 如果你只需键入**#PERCENT**，编号将具有两位小数。 **#PERCENT**是一个关键字，为你执行计算或函数; 还有许多其他。  
      
-4. 单击“**是**”确认你想要将 **UseValueAsLabel** 设置为 **False**。
+4. 单击“ **是** ”确认你想要将 **UseValueAsLabel** 设置为 **False**。
 
-5. 在“**字体**”选项卡上，选择“**粗体**”并将“**颜色**”更改为“**白色**”。
+5. 在“ **字体** ”选项卡上，选择“ **粗体** ”并将“ **颜色** ”更改为“ **白色**”。
 
-单击 **“确定”**。     
+6. 单击 **“确定”**。     
   
- 有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/change-the-text-of-a-legend-item-report-builder-and-ssrs.md)。  
+ 有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步是什么？  
  现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，需要拥有通过“连接字符串” （它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
   
- 若要完成其他教程，需要 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的名称以及足以对任何数据库进行只读访问的凭据。 系统管理员也可以为您设置该权限。  
+ 若要通过其他教程，你需要的 SQL Server 凭据的实例的名称能够满足对任何数据库的只读访问权限。 系统管理员也可以为您设置该权限。  
   
  最后，若要将报表保存到报表服务器或与报表服务器集成的 SharePoint 站点，需要具有 URL 和相应权限。 可以直接从您的计算机运行您创建的任何报表，但如果从报表服务器或 SharePoint 站点运行报表，则报表会有更多功能。 您需要有一定权限才能运行您的报表或报表服务器或 SharePoint 站点上发布的其他报表。 请与系统管理员联系以获取访问权限。  
   
  在入门之前，可能有必要了解一些概念和术语。 请参阅[报表创作概念&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 而且，在创建第一个报表之前，应当花一些时间进行规划。 这将需要较长时间。 请参阅[规划报表&#40;报表生成器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
-   
-## 另请参阅  
- [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
- [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-  
+
+## <a name="next-steps"></a>后续步骤
+
+[报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
+[SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

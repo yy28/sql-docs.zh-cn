@@ -1,30 +1,35 @@
 ---
-title: "将多值参数添加到报表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "向报表添加多值参数 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 将多值参数添加到报表
+# <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
   可以将参数添加到报表，以允许用户为参数选择多个值。  
   
- 您可以在报表 URL 中将多个参数值传递给报表。 有关包含多值参数的 URL 示例，请参阅[在 URL 内传递报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+ 您可以在报表 URL 中将多个参数值传递给报表。 有关包含多值参数的 URL 示例，请参阅 [在 URL 内传递报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
- 有关如何将多个参数值传递给存储过程的信息，请参阅 mssqltips.com 上的[使用 SSRS 报表的多选参数](http://go.microsoft.com/fwlink/?LinkId=321529)。  
+ 有关如何将多个参数值传递给存储过程的信息，请参阅 mssqltips.com 上的 [使用 SSRS 报表的多选参数](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
   
-## 添加多值参数  
+## <a name="to-add-a-multi-value-parameter"></a>添加多值参数  
   
 1.  在报表生成器中，打开您希望将多值参数添加到其中的报表。  
   
@@ -52,9 +57,9 @@ caps.handback.revision: 7
   
      可用值列表将限制用户只能选择参数的有效值。 对于多值参数，列表的顶部具有一个 **“全选”** 功能，因此用户只需一次单击即可选中或取消选中所有值。 如果您选择从数据集查询中获取报表参数的可用值，请确保选择不包含与同一报表参数关联的查询变量的数据集。  
   
-     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md)。  
+     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
-## 添加多值参数  
+## <a name="to-add-a-multi-value-parameter"></a>添加多值参数  
   
 1.  在报表生成器中，打开您希望将多值参数添加到其中的报表。  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 7
   
      可用值列表将限制用户只能选择参数的有效值。 对于多值参数，列表的顶部具有一个 **“全选”** 功能，因此用户只需一次单击即可选中或取消选中所有值。 如果您选择从数据集查询中获取报表参数的可用值，请确保选择不包含与同一报表参数关联的查询变量的数据集。  
   
-     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add, change, or delete available values for a report parameter.md)。  
+     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [向报表添加级联参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

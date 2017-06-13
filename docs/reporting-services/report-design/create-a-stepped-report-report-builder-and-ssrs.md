@@ -1,26 +1,31 @@
 ---
-title: "创建递阶报表（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建递阶的报表 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 创建递阶报表（报表生成器和 SSRS）
-递阶报表是一种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
+# <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
+递阶报表是一种  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表，可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
   
- ![呈现的递阶报表](../../reporting-services/report-design/media/steppedreportrendered.gif "呈现的递阶报表")  
+ ![呈现递阶的报表](../../reporting-services/report-design/media/steppedreportrendered.gif "Rendered 递阶报表")  
   
  传统的表报表将父组放置在报表中的相邻列中。 利用新的 tablix 数据区域，可以向同一列添加组和详细信息行或子组。 若要将组行与详细信息行或子组行区分开来，可以应用格式设置（如字体颜色）或缩进详细信息行。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 创建递阶报表  
+## <a name="to-create-a-stepped-report"></a>创建递阶报表  
   
 1.  创建一个表报表。 例如，插入一个 tablix 数据区域，然后向数据行中添加字段。  
   
@@ -48,15 +53,15 @@ caps.handback.revision: 8
   
      现在即创建了一个基本表格报表。 此报表呈现时，您将看到一列组实例值，以及一列或多列分组的详细信息数据。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "带有组的表数据区域")  
+     ![与组的表数据区域](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "与组的表数据区域")  
   
      下图显示了您查看报表时所呈现的数据区域可能的外观。  
   
-     ![呈现的分组报表](../../reporting-services/report-design/media/tablereportrendered.gif "呈现的分组报表")  
+     ![呈现分组的报表](../../reporting-services/report-design/media/tablereportrendered.gif "Rendered 分组报表")  
   
 3.  对于递阶报表，不需要用于显示组实例的第一列。 相反，需要先复制组头单元中的值，再删除组列，然后将该值粘贴到组头行的第一个文本框中。 若要删除组列，请右键单击相应的组列或单元，然后单击“删除列”。 下图显示了该数据区域在设计图面上可能的外观。  
   
-     ![带有组头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "带有组头行的数据区域")  
+     ![具有组头行的数据区域](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "具有组头行的数据区域")  
   
 4.  若要使同一列中组头行下方的详细信息行缩进显示，请更改详细信息数据单元的空白大小。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 8
   
      在 **“主文件夹”** 选项卡上，单击 **“运行”**。 报表将根据子组值的缩进级别显示组。  
   
-## 创建包含多个组的递阶报表  
+## <a name="to-create-a-stepped-report-with-multiple-groups"></a>创建包含多个组的递阶报表  
   
 1.  按照前面步骤中所述创建一个报表。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 8
   
 3.  更改用于显示组数据的单元的填充值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

@@ -1,23 +1,28 @@
 ---
-title: "导出到 CSV 文件（报表生成器和 SSRS） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "导出到 CSV 文件 （报表生成器和 SSRS） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/13/2017
+
 ---
-# 导出到 CSV 文件（报表生成器和 SSRS）
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现分页报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
   
  CSV 呈现扩展插件使用字符串分隔符来分隔字段和行，字符串分隔符可以配置为逗号之外的其他字符。 生成的文件可以用电子表格程序（如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ）打开，也可以用作其他程序的导入格式。 所导出的报表会变为 .csv 文件，并返回 MIME 类型的 **text/csv**。  
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  可通过更改设备信息设置将字段分隔符更改为任何所需的字符，包括 TAB。 有关详细信息，请参阅 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
--   记录分隔符字符串是回车符和换行符 (\<cr>\<lf>)。  
+-   记录分隔符字符串是回车符和换行符 (\<cr >\<lf >)。  
   
 -   文本限定符字符串是引号 (")。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
 |地图|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
   
-### 分层数据和分组数据  
+### <a name="hierarchical-and-grouped-data"></a>分层数据和分组数据  
  分层数据和分组数据必须进行平展才能以 CSV 格式表示。  
   
  呈现扩展插件可将报表平展为用于表示数据区域中嵌套组的树结构。 要平展报表：  
@@ -94,14 +99,13 @@ caps.handback.revision: 8
   
 -   对等数据区域是一些共享一个公共数据区域或动态祖先的数据区域或动态组。 对等数据通过平展后的树的分支进行标识。  
   
- 有关详细信息，请参阅[表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> 呈现器模式  
  CSV 呈现扩展插件可在两种模式下运行：一种模式针对 Excel 进行了优化，另一种模式针对要求严格遵守 RFC 4180 中的 CSV 规范的第三方应用程序进行了优化。 根据所用模式的不同，对等数据区域的处理方式也有所不同。  
   
-### 默认模式  
+### <a name="default-mode"></a>默认模式  
  默认模式针对 Excel 进行了优化。 使用默认模式呈现时，报表将呈现为带多个以 CSV 格式呈现的数据部分的 CSV 文件。 每个对等数据区域均由一个空行分隔。 表体中的各对等数据区域呈现为 CSV 文件中的独立数据块。 呈现结果为 CSV 文件，在该 CSV 文件中：  
   
 -   表体中的各个文本框均作为 CSV 文件中的第一个数据块呈现，只呈现一次。  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   嵌套数据区域会沿对角线呈现到同一数据块中。  
   
-#### 格式设置  
+#### <a name="formatting"></a>格式设置  
  数值按照其格式化后的状态呈现。 Excel 可识别经过格式化的数值（例如货币、百分比和日期），并可在导入 CSV 文件时对单元进行合适的格式化。  
   
-### 兼容模式  
+### <a name="compliant-mode"></a>兼容模式  
  兼容模式针对第三方应用程序进行了优化。  
   
-#### 数据区域  
+#### <a name="data-regions"></a>数据区域  
  只有文件的第一行包含列标题，并且每一行均具有数目相同的列。  
   
-#### 格式设置  
+#### <a name="formatting"></a>格式设置  
  值未经过格式化。  
   
 ##  <a name="Interactivity"></a> 交互  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   书签  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改相应呈现器的某些默认设置，包括呈现使用的模式、用作分隔符的字符以及用作文本限定符默认字符串的字符。 有关详细信息，请参阅 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)。  
   
- ![用于“返回首页”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.png "用于“返回首页”链接的箭头图标") [返回页首](#BackToTop)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
