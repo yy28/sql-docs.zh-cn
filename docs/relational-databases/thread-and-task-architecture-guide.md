@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
@@ -51,7 +51,6 @@ affinity mask 选项通过使用 [ALTER SERVER CONFIGURATION](../t-sql/statement
 如果将轻型池的值设为 1，则可能会略微提高这些系统的性能。
 
 我们建议您不要使用纤程模式计划日常操作。 这是因为它会抑制上下文切换优点的正常发挥，从而降低性能，并且因为 SQL Server 的某些组件在纤程模式下不能正常工作。 有关详细信息，请参阅轻型池。
-
 
 ## <a name="thread-and-fiber-execution"></a>线程和纤程的执行
 
@@ -94,15 +93,14 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 
 可以通过暂时将数据库的恢复模式设置为大容量日志恢复模式或简单恢复模式，以在具有许多 CPU 的计算机上改进索引操作（如创建或重新创建索引）的性能。 这些索引操作可以生成重大的日志活动和日志争用，从而影响 SQL Server 所做的最佳并行度 (DOP) 选择。
 
-此外，请考虑调整这些操作的最大并行度 (MAXDOP) 设置。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
+此外，考虑调整**最大并行度 (MAXDOP) 度**这些操作的服务器配置选项。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
 
 * 对于完整恢复模式，将最大并行度选项的值设置为 8 或更小。   
 * 对于大容量日志恢复模式或简单恢复模式，应考虑将最大并行度选项的值设置为大于 8。   
 * 对于配置了 NUMA 的服务器，最大并行度不应超过分配给每个 NUMA 节点的 CPU 数目。 这是因为查询更可能使用 1 个 NUMA 节点的本地内存，这可以缩短内存访问时间。  
-* 对于启用了超线程且在 2009 年或更早制造的服务器，MAXDOP 值不应超过物理处理器的数目。  
+* 有关 狝竟超线程已启用并已在 2009年制造或 （在超线程的功能也已经过改进） 前，更早版本，MAXDOP 值不应超过的物理处理器，而不是逻辑处理器数。
 
-
-有关最大并行度选项的详细信息，请参阅 [设置最大并行度选项](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。
+Max degree of parallelism 选项有关的详细信息，请参阅[配置 max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>设置最大工作线程数
 
@@ -120,17 +118,17 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 
 下表列出了 SQL Server 组件，并指示它们是否可以使用超过 64 个 CPU。
 
-|进程名称    |可执行程序    |是否可使用超过 64 个 CPU |  
+|进程名称   |可执行程序 |是否可使用超过 64 个 CPU |  
 |----------|----------|----------|  
-|SQL Server 数据库引擎    |Sqlserver.exe    |是 |  
-|Reporting Services    |Rs.exe    |“否” |  
-|Analysis Services    |As.exe    |“否” |  
-|Integration Services    |Is.exe    |“否” |  
-|Service Broker    |Sb.exe    |“否” |  
-|全文搜索    |Fts.exe    |“否” |  
-|SQL Server 代理    |Sqlagent.exe    |“否” |  
-|SQL Server Management Studio    |Ssms.exe    |“否” |  
-|SQL Server 安装程序    |Setup.exe    |“否” |  
+|SQL Server 数据库引擎 |Sqlserver.exe  |是 |  
+|Reporting Services |Rs.exe |“否” |  
+|Analysis Services  |As.exe |“否” |  
+|Integration Services   |Is.exe |“否” |  
+|Service Broker |Sb.exe |“否” |  
+|全文搜索   |Fts.exe    |“否” |  
+|SQL Server 代理   |Sqlagent.exe   |“否” |  
+|SQL Server Management Studio   |Ssms.exe   |“否” |  
+|SQL Server 安装程序   |Setup.exe  |“否” |  
 
 
 
