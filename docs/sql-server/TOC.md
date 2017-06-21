@@ -21,6 +21,7 @@
 ## [SQL Server 2012 发行说明](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP3 发行说明](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
@@ -37,5 +38,4 @@
 
 # 关于文档
 ## [SQL Server 资源](sql-server-resources.md)
-## [SQL Server 文档脱机访问](sql-server-documentation-offline-access.md)
 ## [帮助查看器](../release-notes/sql-server-help-installation.md)
