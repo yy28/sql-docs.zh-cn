@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/29/2017
 >
 
 当你执行恢复的挂起的联机索引重新生成以下准则将适用：
--    管理、 规划和扩展索引维护时段。 你可以暂停和重新启动索引重新生成操作多次以适合你维护时段。
+-   管理、 规划和扩展索引维护时段。 你可以暂停和重新启动索引重新生成操作多次以适合你维护时段。
 - 从索引重新生成故障中 （如数据库故障转移或磁盘空间不足） 恢复。
 - 索引操作已暂停时，原始的索引和新创建的一个需要磁盘空间并需要在 DML 操作期间更新。
 

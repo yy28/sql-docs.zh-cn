@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>第 4 课：将数据库从 URL 还原到虚拟机

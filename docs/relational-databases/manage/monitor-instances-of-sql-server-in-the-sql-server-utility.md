@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43a8e4d946a7d5943c8edb1d07a7e6c85cea2fde
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>在 SQL Server 实用工具中监视 SQL Server 的实例

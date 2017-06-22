@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** 是最初单节点群集安装期间配置的虚拟 IP 群集资源。
 
-7.    **删除过程**。 如果需要从群集中删除节点，请使用 **ha-cluster-remove** 启动脚本。 有关详细信息，请参阅[启动脚本概述](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)。  
+7.  **删除过程**。 如果需要从群集中删除节点，请使用 **ha-cluster-remove** 启动脚本。 有关详细信息，请参阅[启动脚本概述](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)。  
 

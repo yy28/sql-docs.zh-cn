@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中的数据库文件的文件快照备份

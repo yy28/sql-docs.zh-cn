@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用反馈收集的本地审核
@@ -28,9 +28,9 @@ SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功�
 ## <a name="audit-feature-usage-data"></a>审核功能使用情况数据
 
 若要查看 SSMS 收集的功能使用情况数据，请执行以下操作：
-1.    启动 SSMS。
-2.    单击“查看”，然后单击主菜单中的“输出”以显示“输出”窗口。 
-3.    看到“输出”窗口后，选择“显示输出来源:”菜单中的“遥测”。
+1.  启动 SSMS。
+2.  单击“查看”，然后单击主菜单中的“输出”以显示“输出”窗口。 
+3.  看到“输出”窗口后，选择“显示输出来源:”菜单中的“遥测”。
 
 使用 SSMS 与数据库进行交互时，“输出”窗口显示收集的数据。
 

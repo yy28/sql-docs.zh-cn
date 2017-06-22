@@ -70,7 +70,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##    <a name="enable-alwaysonhealth-event-session"></a>启用 AlwaysOn_health 事件会话 
+##  <a name="enable-alwaysonhealth-event-session"></a>启用 AlwaysOn_health 事件会话 
 
 可选择性地启用特定于 AlwaysOn 可用性组的扩展事件，在故障排查可用性组时帮助诊断根本原因。
 

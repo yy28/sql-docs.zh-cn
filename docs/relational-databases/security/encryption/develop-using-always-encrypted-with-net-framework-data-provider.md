@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
@@ -262,7 +262,7 @@ cmd.ExecuteNonQuery();
 
 用于获取列加密密钥的过程：
 
-1.    如果为查询启用了始终加密，则用于 SQL Server 的 .NET Framework 数据提供程序会以透明方式调用 **sys.sp_describe_parameter_encryption** 来检索面向加密列的参数的加密元数据（如果查询具有参数）。 对于查询结果中包含的加密数据，SQL Server 会自动附加加密元数据。 有关列主密钥的信息包括：
+1.  如果为查询启用了始终加密，则用于 SQL Server 的 .NET Framework 数据提供程序会以透明方式调用 **sys.sp_describe_parameter_encryption** 来检索面向加密列的参数的加密元数据（如果查询具有参数）。 对于查询结果中包含的加密数据，SQL Server 会自动附加加密元数据。 有关列主密钥的信息包括：
     - 密钥存储提供程序的名称，该提供程序可封装包含列主密钥的密钥存储。 
     - 指定列主密钥在密钥存储中的位置的密钥路径。
     
@@ -270,8 +270,8 @@ cmd.ExecuteNonQuery();
 
     - 列加密密钥的加密值。
     - 用于加密列加密密钥的算法的名称。
-2.    用于 SQL Server 的 .NET Framework 数据提供程序使用列主密钥存储提供程序的名称在内部数据结构中查找提供程序对象（一个派生自 SqlColumnEncryptionKeyStoreProvider 类的类实例）。
-3.    为了解密列加密密钥，用于 SQL Server 的 .NET Framework 数据提供程序会调用 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey 方法（传递列主密钥路径、列加密密钥的加密值以及用于生成加密列加密密钥的加密算法的名称）。
+2.  用于 SQL Server 的 .NET Framework 数据提供程序使用列主密钥存储提供程序的名称在内部数据结构中查找提供程序对象（一个派生自 SqlColumnEncryptionKeyStoreProvider 类的类实例）。
+3.  为了解密列加密密钥，用于 SQL Server 的 .NET Framework 数据提供程序会调用 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey 方法（传递列主密钥路径、列加密密钥的加密值以及用于生成加密列加密密钥的加密算法的名称）。
 
 
 

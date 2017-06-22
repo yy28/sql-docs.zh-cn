@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
@@ -41,8 +41,8 @@ SqlServer PowerShell 模块提供用于在 Azure SQL 数据库和 SQL Server 201
 
 加载 SqlServer 模块：
 
-1.    使用 **Set-ExecutionPolicy** cmdlet 设置相应的脚本执行策略。
-2.    使用 **Import-Module** cmdlet 导入 SqlServer 模块。
+1.  使用 **Set-ExecutionPolicy** cmdlet 设置相应的脚本执行策略。
+2.  使用 **Import-Module** cmdlet 导入 SqlServer 模块。
 
 此示例将加载 SqlServer 模块。
 
@@ -126,26 +126,26 @@ $database | Get-SqlColumnMasterKey
 
 以下 PowerShell cmdlet 可供 Always Encrypted 使用：
 
-|CMDLET    |说明
+|CMDLET |说明
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |执行 Azure 身份验证，获取身份验证令牌。
-|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |为数据库中的现有列加密密钥对象添加新的加密值。
-|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |完成列主密钥的轮换
-|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |返回数据库中定义的所有列加密密钥对象，或返回一个具有指定名称的列加密密钥对象。
-|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |返回数据库中定义的列主密钥对象，或返回一个具有指定名称的列主密钥对象。
-|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |启动列主密钥的轮换。
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在 Azure 密钥保管库中的非对称密钥。
-|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在支持下一代加密技术 (CNG) API 的密钥存储中的非对称密钥。
-|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |在数据库中创建列加密密钥对象。
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |生成列加密密钥的加密值。
-|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |创建 SqlColumnEncryptionSettings 对象，封装有关单个列的加密，包括 CEK 和加密类型信息。
-|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |在数据库中创建列主密钥对象。
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |执行 Azure 身份验证，获取身份验证令牌。
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |为数据库中的现有列加密密钥对象添加新的加密值。
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**   |完成列主密钥的轮换
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)** |返回数据库中定义的所有列加密密钥对象，或返回一个具有指定名称的列加密密钥对象。
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)** |返回数据库中定义的列主密钥对象，或返回一个具有指定名称的列主密钥对象。
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**   |启动列主密钥的轮换。
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**   |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在 Azure 密钥保管库中的非对称密钥。
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**   |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在支持下一代加密技术 (CNG) API 的密钥存储中的非对称密钥。
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)** |在数据库中创建列加密密钥对象。
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)** |生成列加密密钥的加密值。
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**   |创建 SqlColumnEncryptionSettings 对象，封装有关单个列的加密，包括 CEK 和加密类型信息。
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)** |在数据库中创建列主密钥对象。
 |**[新 SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|使用指定的提供程序和密钥路径为列主密钥创建 SqlColumnMasterKeySettings 对象。
-|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在带有加密服务提供程序 (CSP)（支持加密 API (CAPI)）的密钥存储中的非对称密钥。
-|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |从数据库删除列加密密钥对象。
-|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |从数据库的现有列加密对象中删除加密值。
-|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |从数据库删除列主密钥对象。
-|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |加密、解密或重新加密数据库中的指定列。
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**   |创建一个 SqlColumnMasterKeySettings 对象，该对象描述存储在带有加密服务提供程序 (CSP)（支持加密 API (CAPI)）的密钥存储中的非对称密钥。
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**   |从数据库删除列加密密钥对象。
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)** |从数据库的现有列加密对象中删除加密值。
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**   |从数据库删除列主密钥对象。
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**   |加密、解密或重新加密数据库中的指定列。
 
 
 
