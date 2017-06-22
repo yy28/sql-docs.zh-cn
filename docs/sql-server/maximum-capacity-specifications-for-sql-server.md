@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 复制对象||最大大小/数量 SQL Server（64 位）|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|项目（合并发布）||256|  
+|项目（合并发布）||2048|  
 |项目（快照发布或事务发布）||32,767|  
 |表中的列数*（合并发布）||246|  
 |表中的列数**（[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 快照发布或事务发布）||1,000|  
 |表中的列数**（Oracle 快照发布或事务发布）||995|  
 |行筛选器中使用的列的字节数（合并发布）||1,024|  
 |行筛选器中使用的列的字节数（快照发布或事务发布）||8,000|  
-  
+
  *如果将行跟踪用于冲突检测（默认设置），则基表最多可以包含 1,024 列，但必须从项目中对这些列进行筛选，以便最多可发布 246 列。 如果使用列跟踪，则基表最多可包含 246 列。  
   
  **基表可以包含发布数据库中允许的最大数量的列（在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中为 1,024），但如果这些列的数目超过为发布类型指定的最大值，则必须从项目中筛选这些列。  

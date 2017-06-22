@@ -1,1 +1,1 @@
-![下载](../ssdt/media/download.png)[下载 .Net 驱动程序](https://msdn.microsoft.com/vstudio/aa496123.aspx)
+![下载](../ssdt/media/download.png)[下载 .Net 驱动程序](http://www.microsoft.com/net/download/)

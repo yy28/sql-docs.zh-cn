@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
@@ -35,24 +35,6 @@ SQL Server 中的事务隔离级别以不同的方式应用到内存优化表与
 有关特定于内存优化表上的事务的错误条件，请跳转到 [冲突检测和重试逻辑](#confdetretry34ni)一节。
   
 有关一般信息，请参见 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>本文的内容：  
-  
-- [悲观和乐观](#pessvoptim22ni)  
-- [事务启动模式](#txninitmodes24ni)  
-  - [使用显式模式的代码示例](#codeexamexpmode25ni)  
-- [行版本控制](#rowver28ni)  
-- [事务隔离级别](#confdegreeiso30ni)  
-- [事务阶段和生存期](#txnphaslife32ni)  
-- [冲突检测和重试逻辑](#confdetretry34ni)  
-  - [重试 T-SQL 代码示例](#retrytsqlcodeexam35ni)  
-- [跨容器事务](#crossconttxn38ni)  
-- [限制](#limitations40ni)  
-- [本机编译的存储过程](#natcompstorprocs42ni)  
-- [其他事务链接](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

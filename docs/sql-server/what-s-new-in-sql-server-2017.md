@@ -1,7 +1,7 @@
 ---
 title: "什么 &#39; s SQL Server 自 2017 年中的新增功能 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>什么 &#39; s SQL Server 自 2017 年中的新增功能
@@ -67,8 +67,8 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
 - CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 CLR 程序集使用创建`PERMISSION_SET = SAFE`可能能够访问外部系统资源、 调用非托管的代码，并获取 sysadmin 权限。 开头[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]、`sp_configure`选项调用`clr strict security`引入的增强 CLR 程序集的安全性。 `clr strict security`默认情况下，启用并将`SAFE`和`EXTERNAL_ACCESS`程序集就像它们被标记`UNSAFE`。 `clr strict security`选项可禁用为了向后兼容，但不是建议这样做。 Microsoft 建议所有程序集进行签名的证书或非对称密钥与相应的登录名已被授予`UNSAFE ASSEMBLY`master 数据库中的权限。 有关详细信息，请参阅[CLR 严格的安全](../database-engine/configure-windows/clr-strict-security.md)。  
 - 用于多对多关系建模的图形数据库功能。 这包括新[CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)创建节点和边缘表，以及关键字的语法[匹配](../t-sql/queries/match-sql-graph.md)的查询。 有关详细信息，请参阅[图形处理与 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
 - 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解，它可以提出解决方案并自动解决已标识的问题。 自动优化[!INCLUDE[ssnoversion](../includes/ssnoversion.md)]，无论何时潜在的性能问题检测到，并使你能够应用的纠正措施，通知你，或允许[!INCLUDE[ssde](../includes/ssde-md.md)]自动修复性能问题。 有关详细信息，请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。  
--    用于改进计划质量的批处理模式自适应联接（数据库兼容级别为 140）。
--    用于改进计划质量的多语句 T-SQL TVF 交错执行（数据库兼容级别为 140）。
+-   用于改进计划质量的批处理模式自适应联接（数据库兼容级别为 140）。
+-   用于改进计划质量的多语句 T-SQL TVF 交错执行（数据库兼容级别为 140）。
 - 查询存储现在还可以跟踪等待统计摘要信息。 跟踪等待统计信息类别，每个查询存储中的查询使性能疑难解答的体验，并提供更多深入了解工作负荷性能和其瓶颈，同时保留关键的 Query Store 优势的下一个级别。
 - 在属于可用性组的数据库（包括属于同一实例的数据库）中，针对所有跨数据库事务的 AlwaysOn 可用性组的 DTC 支持。 有关详细信息，请参阅[事务的 Alwayson 可用性组和数据库镜像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - 新建一列**modified_extent_page_count**中引入[sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)来跟踪中的数据库的每个数据库文件差异更改。
@@ -76,7 +76,6 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
 - SQL Server 安装程序支持最多指定初始 tempdb 文件大小**256 GB (262144 MB)**每个文件以及一条警告如果文件大小设置为值大于**1 GB**和如果 IFI 未启用。
 - 新的动态管理视图 (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)引入来跟踪每个数据库版本存储使用情况。
 - 新 DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)引入来公开类似于 DBCC LOGINFO VLF 信息。
-- DBCC CLONEDATABASE 将在克隆时刷新运行时统计信息，避免遗漏数据库克隆中的查询存储运行时统计信息。 此外，进一步增强了 DBCC CLONEDATABASE 以支持和克隆全文索引。
 - 系统版本控制临时表现在支持级联删除和级联更新。
 - 此 CTP 包含对数据库引擎的 bug 修复。
 - 有关自 2017 年 1 的详细列表 CTP 增强功能在以前的 CTP 版本，请参阅[What's New in SQL Server 2017 （数据库引擎）](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。   
