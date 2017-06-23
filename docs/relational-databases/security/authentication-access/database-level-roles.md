@@ -46,7 +46,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a> [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。
 

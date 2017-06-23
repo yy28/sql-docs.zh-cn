@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造

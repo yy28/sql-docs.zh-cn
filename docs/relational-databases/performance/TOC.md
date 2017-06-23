@@ -1,3 +1,4 @@
+# [自适应查询处理](adaptive-query-processing.md)
 # [自动优化](../automatic-tuning/automatic-tuning.md)
 # [基数估计](cardinality-estimation-sql-server.md)  
 

@@ -7,6 +7,8 @@
 # [解决方案资源管理器 +](../ssms/solution/solution-explorer.md)
 # [模板 +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [注册服务器 +](../ssms/register-servers/register-servers.md)
+# [教程 +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [什么是 SSMS？](sql-server-management-studio-ssms.md)
 # [SSMS 更改日志](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [在“工具”菜单中添加外部工具 (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [配置登录审核 (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [使用工具箱](use-the-toolbox.md)
+
+# [Ssms 实用工具](ssms-utility.md)  
+# [SQL Server Management Studio 键盘快捷键](sql-server-management-studio-keyboard-shortcuts.md)  
+
