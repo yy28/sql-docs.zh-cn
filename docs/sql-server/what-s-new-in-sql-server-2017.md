@@ -1,5 +1,5 @@
 ---
-title: "什么 &#39; s SQL Server 自 2017 年中的新增功能 |Microsoft 文档"
+title: "什么是 SQL Server 自 2017 年中的新增功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>什么 &#39; s SQL Server 自 2017 年中的新增功能
+# <a name="what39s-new-in-sql-server-2017"></a>什么是 SQL Server 自 2017 年中的新增功能
 SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使 SQL Server 成为一个提供开发语言、数据类型、本地开发和云端开发，以及跨操作系统开发选项的平台。
 
 本主题概括了最新社区技术预览版 (CTP) 发行版中的新增功能，并提供了相关链接供详细了解特定功能领域的新增内容信息。
