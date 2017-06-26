@@ -22,13 +22,19 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 若要设置`REQUIRED_COPIES_TO_COMMIT`为 0，运行：
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+（SLES 上）使用 crm 的等效命令为：
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 若要还原为默认计算值，请运行：
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]

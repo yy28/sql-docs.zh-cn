@@ -1,7 +1,7 @@
 ---
 title: "内存中 OLTP 支持的数据类型 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>内存中 OLTP 支持的数据类型
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>标识 LOB 和其他行外列
 
-从 SQL Server 2016 开始，内存优化表支持行外列，允许一个表行要大于 8060 个字节。 以下 Transact-SQL SELECT 语句报告了内存优化表中的所有行外列。 注意：
+自 SQL Server 2016 起，内存优化表[支持行外列](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)，即允许一个表行大于 8060 个字节。 以下 Transact-SQL SELECT 语句报告了内存优化表中的所有行外列。 注意：
 
 - 所有索引键列均存储于行内。
   - 现在，允许在内存优化表上的非唯一索引键中包含可为 NULL 的列。
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>另请参阅  
  [对内存中 OLTP 的 Transact-SQL 支持](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [在内存优化的表中实现 SQL_VARIANT](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [内存优化表中的表和行大小](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

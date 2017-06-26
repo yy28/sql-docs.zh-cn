@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82d13af37ad323a642ae84fab6973429a0a084c2
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
@@ -503,8 +503,10 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>本机过程的文档指南  
-  
-  
+
+以下文章及其在目录 (TOC) 中的子文章详细介绍了本机编译的存储过程。
+
+- [本机编译的存储过程](natively-compiled-stored-procedures.md)
   
 <a name="related-links-43f"></a>  
   

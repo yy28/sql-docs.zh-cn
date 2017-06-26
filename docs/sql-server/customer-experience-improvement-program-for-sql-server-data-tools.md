@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 客户体验改善计划
@@ -28,8 +28,50 @@ ms.lasthandoff: 04/11/2017
 >  有关 Microsoft SQL Server 2016 版本和其他任何产品及服务的用户数据集收集和使用方式的说明，请参考 [Microsoft 隐私声明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)。  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>选择加入和退出 SQL Server Data Tools 的 CEIP  
- 客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择加入或退出适用于 Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) 的 CEIP。  
+ 客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择启用或禁用适用于 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) CEIP。  
+
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>选择和控制适用于 Visual Studio 2017 的 CEIP 和 SQL Server Data Tools  
+ 适用于 Visual Studio 2017 的 SSDT 是 SQL Server 2017 随附的数据建模工具。 它使用 Visual Studio 2017 中内置的 CEIP 选项。 可以参阅这篇 [Visual Studio 帮助文档](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback)，详细了解如何在 Visual Studio 2017 中通过 CEIP 提交反馈。  
   
+ 对于 SQL Server 2017 预览版本，CEIP 默认启用。 可以按照下面的说明将其关闭，或重新打开。  
+  
+ **在 Visual Studio 中（适用于 Visual Studio 2017 的完整语言安装）**  
+  
+ 如果在已有 Visual Studio 的计算机上运行 SSDT 安装程序，将仅添加 SQL Server 和 Business Intelligence 项目模板。 对于此方案，Visual Studio 提供的客户反馈选项可用于选择加入或退出 CEIP。  
+  
+1.  启动 Visual Studio。  
+  
+2.  在“帮助”菜单中，选择“发送反馈” > “设置”。  
+  
+3.  若要禁用 CEIP，请单击“否，我不想参加”，然后单击“确定”。  
+  
+     若要启用 CEIP，请单击“是，我愿意参加”，然后单击“确定”。  
+  
+
+  
+ **使用基于注册表的策略或组策略**  
+  
+ 如果在没有安装 Visual Studio 2017 的计算机上运行 SSDT 安装程序，只会安装 Visual Studio Shell。 Shell 中不提供客户反馈选项。 在这种情况下，注册表更新是唯一的选项来配置 CEIP  
+  
+ 企业客户可以设置适用于 SQL Server 2017 的注册表策略，从而构造用于选择启用或禁用的组策略。  
+  
+ 相关注册表项和设置如下所示：  
+  
+ Key = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
+  
+ RegEntry name = OptIn  
+  
+ 注册表项类型 DWORD：  
+  
+-   0 表示选择不加入  
+  
+-   1 表示选择加入  
+  
+> [!CAUTION]  
+>  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
+  
+ 有关 CEIP 收集、处理或传送的信息的详细信息，请参阅 [Microsoft 客户体验改善计划隐私声明](http://go.microsoft.com/fwlink/?LinkId=52143)。  
+ 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
  适用于 Visual Studio 2015 的 SSDT 是附带 SQL Server 2016 的数据建模工具。 它使用内置于 Visual Studio 2015 的 CEIP 选项。 可以根据此 [Visual Studio 的帮助文档](http://go.microsoft.com/fwlink/?LinkId=517102)来了解有关如何在 Visual Studio 2015 中通过 CEIP 提交反馈的详细信息。  
   

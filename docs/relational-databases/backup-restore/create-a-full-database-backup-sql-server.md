@@ -1,7 +1,7 @@
 ---
 title: "创建完整数据库备份 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[创建完整数据库备份 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)。
+ > 对于 SQL Server 2014，请转到[创建完整数据库备份 (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)。
 
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建完整数据库备份。  
   
->  有关 SQL Server 备份到 Windows Azure Blob 存储服务的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+>  若要了解如何将 SQL Server 备份到 Azure Blob 存储服务，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前！ 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> 建议  
   
--   随着数据库不断增大，完整备份需花费更多时间才能完成，并且需要更多的存储空间。 对于大型数据库而言，你可以用一系列“差异数据库备份”来补充完整数据库备份。 有关详细信息，请参阅[ (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md) 和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+-   随着数据库不断增大，完整数据库备份的完成时间会延长，并且需要占用更多存储空间。 对于大型数据库，请考虑使用一系列[不同的数据库备份]((../../relational-databases/backup-restore/differential-backups-sql-server.md)补充完整数据库备份。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
   
 -   使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 系统存储过程估计完整数据库备份的大小。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 06/05/2017
 
 7.  单击 **“确定”**。
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.备份到 Microsoft Azure Blob 存储服务**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.备份到 Azure Blob 存储服务**
 #### <a name="common-steps"></a>**一般步骤**  
 以下三个示例向 Microsoft Azure Blob 存储服务执行完整的 `Sales` 数据库备份。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前四个步骤，之后所有示例将从 **步骤 5** 开始。
 1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/05/2017
     **D1.已存在到 URL 和 SQL Server 凭据的条带备份**  
 已经创建具有读取、写入和表权限的存储访问策略。  已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 。  
 *
-    5.    从“Azure 存储容器：”文本框中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
+    5.  从“Azure 存储容器：”文本框中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
 
     6.  在“备份文件”文本框中输入 `Sales_stripe1of2_20160601.bak`。
 
@@ -247,7 +247,7 @@ ms.lasthandoff: 06/05/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>创建完整数据库备份  
+### <a name="create-a-full-database-backup"></a>创建完整数据库备份  
   
 1.  执行 BACKUP DATABASE 语句可以创建完整数据库备份，同时指定：  
   
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A.备份到磁盘设备**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A.备份到磁盘设备**  
  下面的示例通过使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建新的介质集，将整个 `FORMAT` 数据库备份到磁盘。  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B.备份到磁带设备**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B.备份到磁带设备**  
  下面的示例将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到磁带上，并将该备份追加到以前的备份中。  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C.备份到逻辑磁带设备**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C.备份到逻辑磁带设备**  
  下例为某个磁带驱动器创建一个逻辑备份设备， 然后将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到该设备上。  
   
 ```tsql  

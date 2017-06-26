@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 发行说明 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 发行说明
@@ -57,6 +57,9 @@ ms.lasthandoff: 06/22/2017
     
 5. **非英语版 SSMS 安装可能需要安装其他安全包。**  
 如果安装在以下系统中，则非英语本地化版本的 SSMS [需要 KB 2862966 安全更新程序包](https://support.microsoft.com/en-us/kb/2862966) ：Windows 8、Windows 7、Windows Server 2012 和 Windows Server 2008 R2。
+
+5. **无法通过单击“帮助”或按 F1 打开帮助**  
+单击“帮助”或按 F1 可能会在一些环境中看到以下错误消息：“必须有新应用，才能打开 ms-xhelp”。 此错误为已知问题，将在即将发布的版本中得到修复。
   
 ## <a name="feedback"></a>反馈  
   

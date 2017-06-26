@@ -18,10 +18,10 @@ author: pelopes
 ms.author: harinid
 manager: 
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: d81eabfa1bdb5736bbf6f53ed34c2e1ac157e782
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
@@ -30,9 +30,27 @@ ms.lasthandoff: 05/25/2017
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]post 迁移步骤是非常重要的协调任何数据准确性和完整性，以及发现与工作负荷的性能问题。
 
 # <a name="common-performance-scenarios"></a>常见的性能方案 
-以下是一些常见的性能方案在迁移到后遇到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]平台和如何解决这些问题。 其中包括的方案是到 specifdic[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移 （较旧版本中的较新版本），以及外的平台 （例如 Oracle、 DB2、 MySQL 和 Sybase） 到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移。
+以下是一些常见的性能方案在迁移到后遇到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]平台和如何解决这些问题。 其中包括从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（从较低版本迁移到较高版本），以及从外部平台（如 Oracle、DB2、MySQL 和 Sybase）迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的方案。
 
-## <a name="Parameter Sniffing"></a>参数探查的敏感性
+## <a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
+
+适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+
+从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新级别时，工作负载可能会面临性能回归风险。
+
+这是因为，自 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 起，所有查询优化器更改都会绑定到最新的[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)，因此计划不会在升级后立即更改，而是在用户将 `COMPATIBILITY_LEVEL` 数据库更改为最新版本后更改。 利用此功能和 Query Store，你可以在升级过程中对查询性能进行精确的控制。 
+
+若要详细了解 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中引入的查询优化器变更，请参阅[使用 SQL Server 2014 基数估算器优化查询计划](http://msdn.microsoft.com/library/dn673537.aspx)。
+
+### <a name="steps-to-resolve"></a>若要解决的步骤
+
+将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)更改为源版本，并遵循下图中推荐的升级工作流：
+
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+
+有关本主题的详细信息，请参阅[在升级到更高版本 SQL Server 的过程中保持性能稳定性](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。
+
+## <a name="ParameterSniffing"></a>参数探查的敏感性
 
 **适用于：**外的平台 （例如 Oracle、 DB2、 MySQL 和 Sybase） 到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移。
 
@@ -40,20 +58,20 @@ ms.lasthandoff: 05/25/2017
 > 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移，如果此问题已在源中存在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 迁移到较新版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]作为-将不满足这种方案。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过使用探查输入数据分布在第一个编译，生成参数化且可重复使用计划，针对进行了优化的输入的参数的存储过程的编译查询计划。 即使不存储过程，生成普通计划的大多数语句将参数化。 第一次缓存某一计划后，任何将来的执行将映射到以前缓存的计划。
-当该首次编译可能不具有用于参数的最常见集常用工作负荷时，将出现的潜在问题。 不同的参数相同的执行计划变得效率低下。
+当该首次编译可能不具有用于参数的最常见集常用工作负荷时，将出现的潜在问题。 不同的参数相同的执行计划变得效率低下。 有关本主题的详细信息，请参阅[参数探查](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
 
 ### <a name="steps-to-resolve"></a>若要解决的步骤
 
-1.    使用`RECOMPILE`提示。 每次改写，以便为每个参数的值，都会计算计划。
-2.    重写存储的过程以使用选项`(OPTIMIZE FOR(<input parameter> = <value>))`。 决定要使用它的值适合大多数相关的工作负荷，创建和维护变得有效的参数化值的一个计划。
-3.    重写使用过程中的本地变量的存储的过程。 现在，优化器将用于估计，导致相同的计划而不考虑的参数值的密度向量。
-4.    重写存储的过程以使用选项`(OPTIMIZE FOR UNKNOWN)`。 使用本地变量的方法相同的效果。
-5.    重写查询以使用提示`DISABLE_PARAMETER_SNIFFING`。 相同效果与使用本地变量技术通过完全禁用参数探查，除非`OPTION(RECOMPILE)`，`WITH RECOMPILE`或`OPTIMIZE FOR <value>`使用。
+1.  使用`RECOMPILE`提示。 每次改写，以便为每个参数的值，都会计算计划。
+2.  重写存储的过程以使用选项`(OPTIMIZE FOR(<input parameter> = <value>))`。 决定要使用它的值适合大多数相关的工作负荷，创建和维护变得有效的参数化值的一个计划。
+3.  重写使用过程中的本地变量的存储的过程。 现在，优化器将用于估计，导致相同的计划而不考虑的参数值的密度向量。
+4.  重写存储的过程以使用选项`(OPTIMIZE FOR UNKNOWN)`。 使用本地变量的方法相同的效果。
+5.  重写查询以使用提示`DISABLE_PARAMETER_SNIFFING`。 相同效果与使用本地变量技术通过完全禁用参数探查，除非`OPTION(RECOMPILE)`，`WITH RECOMPILE`或`OPTIMIZE FOR <value>`使用。
 
 > [!TIP] 
 > 利用[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]计划分析功能来快速确定这是否是问题。 可用的详细信息[此处](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)。
 
-## <a name="Missing indexes"></a>缺失索引
+## <a name="MissingIndexes"></a>缺失索引
 
 **适用于：**外的平台 （如 Oracle、 DB2、 MySQL 和 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移。
 
@@ -63,15 +81,15 @@ ms.lasthandoff: 05/25/2017
 
 ### <a name="steps-to-resolve"></a>若要解决的步骤
 
-1.    利用任何缺少的索引引用的图形执行计划。
-2.    索引生成的建议[数据库引擎优化顾问](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
-3.    利用[缺失索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或通过[SQL Server 性能仪表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
-4.    利用预先存在可以使用现有的 Dmv 来深入了解任何缺少、 重复、 冗余、 极少使用和完全未使用的索引，但还如果任何索引引用为提示/硬编码到你的数据库中现有的过程和函数的脚本。 
+1.  利用任何缺少的索引引用的图形执行计划。
+2.  索引生成的建议[数据库引擎优化顾问](../tools/dta/tutorial-database-engine-tuning-advisor.md)。
+3.  利用[缺失索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)或通过[SQL Server 性能仪表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
+4.  利用预先存在可以使用现有的 Dmv 来深入了解任何缺少、 重复、 冗余、 极少使用和完全未使用的索引，但还如果任何索引引用为提示/硬编码到你的数据库中现有的过程和函数的脚本。 
 
 > [!TIP] 
 > 此类预先存在的脚本的示例包括[索引创建](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation)和[索引信息](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information)。 
 
-## <a name="Inability to use predicates"></a>无法使用谓词以筛选数据
+## <a name="InabilityPredicates"></a>无法使用谓词以筛选数据
 
 **适用于：**外的平台 （如 Oracle、 DB2、 MySQL 和 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移。
 
@@ -97,9 +115,9 @@ ms.lasthandoff: 05/25/2017
   -   基于列式数据 – 的复杂表达式的计算结果需要改为创建持久化计算的列，可编制索引;
 
 > [!NOTE] 
-> 上述所有事项，可以进行 programmaticaly。
+> 可以编程方式完成上述所有操作。
 
-## <a name="Table Valued Functions"></a>使用表值函数 (多语句 vs 内联)
+## <a name="TableValuedFunctions"></a>使用表值函数 (多语句 vs 内联)
 
 **适用于：**外的平台 （如 Oracle、 DB2、 MySQL 和 Sybase） 和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]迁移。
 
@@ -112,7 +130,7 @@ ms.lasthandoff: 05/25/2017
 > 由于在编译时，不创建输出表的 MSTVF （多语句表值函数），因此[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查询优化器依赖于启发式技术，并不是实际统计信息，并确定行估计。 即使索引添加到基表，这不要帮助。 有关 MSTVFs，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 1 的固定的估计的行数应为应该由 MSTVF (开头[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]修复估计是 100 行)。
 
 ### <a name="steps-to-resolve"></a>若要解决的步骤
-1.    多语句 TVF 是否仅在单个语句，将转换为内联 TVF。
+1.  多语句 TVF 是否仅在单个语句，将转换为内联 TVF。
 
     ```tsql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
@@ -142,7 +160,7 @@ ms.lasthandoff: 05/25/2017
     )
     ```
 
-2.    如果更复杂，请考虑使用存储在内存优化表或临时表中的中间结果。
+2.  如果更复杂，请考虑使用存储在内存优化表或临时表中的中间结果。
 
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9debfb35bdf0458a34dfc5933fd3601e731f037
-ms.openlocfilehash: 3a11180d35ec0a67eed18e03cfe5f0e82d0cc180
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -29,9 +29,9 @@ ms.lasthandoff: 05/30/2017
 
   本主题概述使用 Query Store 处理工作负荷的最佳实践。  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> 使用最新版 SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计各种用户界面的目的是方便用户对查询存储进行配置和使用收集的工作负荷数据。  
-下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的网址：[https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+单击[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
  有关如何使用查询存储进行方案故障排除的快速说明，请参阅 [@Azure博客中的查询存储](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
@@ -42,7 +42,8 @@ ms.lasthandoff: 05/30/2017
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>将 Query Store 与弹性池数据库配合使用
 可以毫无顾忌地在所有数据库中使用 Query Store，甚至是在密集打包的池中。 与过多资源使用（为弹性池中的大量数据库启用了 Query Store 时可能会遇到这种情况）相关的所有问题都已得到了解决。
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> 始终根据工作负载调整查询存储  
  根据工作负荷和性能故障排除要求来配置 Query Store。   
 默认参数适用于快速启动，但你应该监视 Query Store 在一定时段内的行为表现，并对其配置进行相应的调整：  
   
@@ -143,7 +144,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |总体资源消耗|针对任意执行度量值分析数据库的总资源消耗量。<br />使用此视图可以确定资源模式（白天工作负荷与夜间工作负荷的比较），并优化数据库的总体消耗。|  
 |资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
 |具有强制计划的查询|以前强制计划使用查询存储的列表。 <br />使用此视图可以快速访问所有当前强制的计划。|  
-|具有高的变体的查询|分析高执行变体的查询，因为它与任何可用的维度，例如所需的时间间隔内的持续时间、 CPU 时间、 IO 和内存使用情况。<br />使用此视图可以标识具有广泛 variant 可以将会影响用户体验跨应用程序的性能的查询。|  
+|具有高的变体的查询|分析高执行变体的查询，因为它与任何可用的维度，例如所需的时间间隔内的持续时间、 CPU 时间、 IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
 |跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]  
@@ -273,32 +274,33 @@ FROM sys.database_query_store_options;
 |筛选掉不相关的查询。|将“查询捕获模式”配置为“Auto”。|  
 |达到最大大小时，删除不太相关的查询。|激活基于大小的清理策略。|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- 在不是绝对需要的情况下使用非参数化查询（例如，在即席分析时使用）不符合最佳实践规范。  不能重复使用缓存的计划，因为这会强制查询优化器在碰到每个唯一的查询文本时都进行查询编译。  
+##  <a name="Parameterize"></a> 避免使用非参数化查询  
+ 根据最佳做法，仅在绝对必要时（例如，临时分析时），才使用非参数化查询。  不能重复使用缓存的计划，因为这会强制查询优化器在碰到每个唯一的查询文本时都进行查询编译。 有关本主题的详细信息，请参阅[强制参数化使用指南](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
   此外，Query Store 可能会很快超过大小配额，因为可能会存在大量不同的查询文本，结果会出现大量不同的执行计划，而查询形状是类似的。  
 结果就是，工作负荷性能无法优化，Query Store 可能会切换为只读模式，或者可能会不断删除数据以应对传入的查询。  
   
  请考虑下列选项：  
+
+  -   适用时，将查询参数化（例如，在存储过程或 sp_executesql 中包装查询）。 有关本主题的详细信息，请参阅[参数和执行计划重用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
--   根据需要将查询参数化，例如，将查询包装在存储过程中。  
-  
--   如果查询包含许多一次性使用的即席批处理且查询计划各不相同，则可使用“针对即席工作负荷进行优化”  选项。  
+-   如果工作负载包含许多一次性使用的临时批处理且查询计划各不相同，请使用“[针对临时工作负载进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”选项。  
   
     -   将不同 query_hash 值的数目与 sys.query_store_query 中项的总数进行比较。 如果该比率接近 1，则说明你的即席工作负荷生成了不同的查询。  
   
--   如果不同查询计划的数目不大，则可对数据库或部分查询应用 FORCED PARAMETERIZATION。  
+-   如果不同查询计划的数量不多，请对数据库或部分查询应用“[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)”。  
   
-    -   遵照计划指南，仅对所选查询强制实施参数化操作。  
+    -   请参阅[计划指南](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)，仅对选定查询强制执行参数化操作。  
   
-    -   如果工作负荷中不同查询计划的数目很小，则为数据库配置 FORCED PARAMETERIZATION。 （当不同 query_hash 的计数与 sys.query_store_query 中项的总数之比远小于 1 时。）  
+    -   如果工作负载中不同查询计划的数量不多（即唯一 query_hash 数量与 sys.query_store_query 中条目总数的比 1 小得多时），将强制参数化配置为使用[参数化数据库选项](../../relational-databases/databases/database-properties-options-page.md#miscellaneous)命令。  
   
 -   将“查询捕获模式”设置为“AUTO”即可自动筛选掉资源消耗小的即席查询  。  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a> 维护查询的包含对象时，避免使用 DROP 和 CREATE 模式  
  Query Store 会将查询条目与包含对象（存储过程、函数和触发器）相关联。  重新创建包含对象时，将会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种问题，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- 可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会通过回退来重新编译查询，并在 [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中显示实际的强制失败原因。 以下查询返回强制计划的相关信息：  
+##  <a name="CheckForced"></a> 定期检查强制计划的状态  
+
+ 可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -311,16 +313,19 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 有关原因的完整列表，请参阅 [sys.query_store_plan (Transact SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 **query_store_plan_forcing_failed** XEvent 来跟踪故障排除计划强制失败情况。  
+ 有关原因的完整列表，请参阅 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 你还可以使用 **query_store_plan_forcing_failed** XEvent 来跟踪故障排除计划强制失败情况。  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- 执行计划通过由三个部分组成的名称 (`database.schema.object`) 来引用对象。   
+##  <a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库  
+
+ 执行计划使用由三个部分组成的名称 `database.schema.object` 来引用对象。   
+
 如果重命名数据库，计划强制就会失败，导致在执行所有后续的查询时都需要重新编译。  
   
 ## <a name="see-also"></a>另请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)  
   
 
