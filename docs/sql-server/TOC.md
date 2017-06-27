@@ -2,7 +2,7 @@
 
 # 概述
 ## [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)
-## [什么是 SQL Server 自 2017 年中的新增功能](what-s-new-in-sql-server-2017.md)
+## [SQL Server 2017 的新增功能](what-s-new-in-sql-server-2017.md)
 ## [版本和 SQL Server 支持的功能](editions-and-components-of-sql-server-2016.md)
 ## [SQL Server 的最大容量规范](maximum-capacity-specifications-for-sql-server.md)
 ## [按 SQL Server 版本划分的计算能力限制](compute-capacity-limits-by-edition-of-sql-server.md)
