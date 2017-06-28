@@ -1,7 +1,7 @@
 ---
 title: "唯一约束和 CHECK 约束 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |介绍如何查看 CHECK 约束的属性。|[唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+
