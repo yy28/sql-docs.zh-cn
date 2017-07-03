@@ -1,3 +1,5 @@
+# [报表服务器 Web 服务方法](report-server-web-service-methods.md)
+
 # [授权方法](authorization-methods.md)
 # [数据源和连接方法](data-sources-and-connection-methods.md)
 # [链接的报表方法](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [报表参数方法](report-parameters-methods.md)
 # [报表服务器 Namespace 管理方法](report-server-namespace-management-methods.md)
 # [报表服务器 Web 服务终结点](report-server-web-service-endpoints.md)
-# [报表服务器 Web 服务方法](report-server-web-service-methods.md)
 # [计划方法](scheduling-methods.md)
 # [Subscription and Delivery Methods](subscription-and-delivery-methods.md)

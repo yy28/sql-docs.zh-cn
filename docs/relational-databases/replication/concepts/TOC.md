@@ -1,6 +1,6 @@
-# [开发人员指南：操作指南主题（复制）](developer-s-guide-how-to-topics-replication.md)
-# [复制代理可执行文件概念](replication-agent-executables-concepts.md)
 # [复制开发人员文档](replication-developer-documentation.md)
+# [开发人员指南：操作指南主题（复制）](developer-s-guide-how-to-topics-replication.md)
+# [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)
 # [复制管理对象概念](replication-management-objects-concepts.md)
 # [复制编程概念](replication-programming-concepts.md)
 # [复制系统存储过程概念](replication-system-stored-procedures-concepts.md)

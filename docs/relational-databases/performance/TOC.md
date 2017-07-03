@@ -1,3 +1,7 @@
+
+# [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [配置具有 NVDIMM-N 回写式缓存的存储空间](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [自适应查询处理](adaptive-query-processing.md)
 # [自动优化](../automatic-tuning/automatic-tuning.md)
 # [基数估计](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [升级后验证计划指南](validate-plan-guides-after-upgrade.md)  
 ## [删除计划指南](delete-a-plan-guide.md)  
 ## [启用或禁用计划指南](enable-or-disable-a-plan-guide.md)  
-
-# [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [配置具有 NVDIMM-N 回写式缓存的存储空间](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md) 

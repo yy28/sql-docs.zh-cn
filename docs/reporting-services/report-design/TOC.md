@@ -1,5 +1,5 @@
 # [规划报表](planning-a-report-report-builder.md)  
-## [报表设计提示](report-design-tips-report-builder-and-ssrs.md)  
+# [报表设计提示](report-design-tips-report-builder-and-ssrs.md)  
 # [报表创作概念](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [报表、 报表部件和报表定义](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [数据区域和地图](data-regions-and-maps-report-builder-and-ssrs.md)  

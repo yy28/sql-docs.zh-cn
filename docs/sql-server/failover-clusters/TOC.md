@@ -1,4 +1,6 @@
 # [SQL Server 故障转移群集安装](install/sql-server-failover-cluster-installation.md)  
+
+# 设计
 ## [安装故障转移群集前的准备工作](install/before-installing-failover-clustering.md)  
 ## [创建新的 SQL Server 故障转移群集（安装程序）](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [在 SQL Server 故障转移群集中添加或删除节点（安装程序）](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

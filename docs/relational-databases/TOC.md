@@ -1,4 +1,6 @@
-# [概述](database-features.md)
+# [数据库功能](database-features.md)
+
+# 概述
 ## [数据库引擎跨实例功能](database-engine-cross-instance-features.md)
 ## [技术参考](technical-reference-database-engine.md)  
 ## [功能参考](feature-reference-database-engine.md)   
@@ -31,18 +33,18 @@
 # [数据库](../relational-databases/databases/databases.md)
 
 # 开发客户端
-## [CLR 集成](../relational-databases/clr-integration/assemblies-database-engine.md)
-## [扩展存储过程编程](../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)
+## [CLR 集成](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+## [扩展存储过程编程](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
 ## [扩展存储过程参考](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
-## [Express Localdb 错误消息](../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)
-## [Express Localdb 实例 API](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)
-## [本机客户端](../relational-databases/native-client/finding-more-sql-server-native-client-information.md)
-## [Server 管理对象 (SMO)](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md)
+## [Express Localdb 错误消息](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
+## [Express Localdb 实例 API](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
+## [本机客户端](../relational-databases/native-client/sql-server-native-client-programming.md)
+## [Server 管理对象 (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
 ## WMI (Windows Management Instrumentation) 提供程序
-### [WMI 提供程序配置](../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)
-### [WMI 提供程序配置类](../relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property.md)
-### [WMI 提供程序服务器事件](../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
+### [WMI 提供程序配置](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
+### [WMI 提供程序配置类](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
+### [WMI 提供程序服务器事件](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
 # [错误和事件](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [事件类](../relational-databases/event-classes/sql-server-event-class-reference.md)
