@@ -3,9 +3,22 @@
 # [复制的向后兼容性](replication-backward-compatibility.md)  
 ## [SQL Server 复制中不推荐使用的功能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server 复制中的重大更改](breaking-changes-in-sql-server-replication.md)  
+
+# 复制区域
+## [复制管理](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [开发人员概念](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [监视复制](./monitor/monitoring-replication.md)
+## [非 SQL 异类数据库复制](./non-sql/heterogeneous-database-replication.md)
+## [发布数据和数据库对象](./publish/publish-data-and-database-objects.md)
+## [复制安全性](./security/security-overview-replication.md)
+
 # [复制功能和任务](replication-features-and-tasks.md)  
 ## [复制类型](types-of-replication.md)  
 ### [快照复制](snapshot-replication.md)  
+### [合并复制](./merge/merge-replication.md)
+### [事务复制](./transactional/transactional-replication.md) 
+
 ## [复制到内存优化表订阅服务器](replication-to-memory-optimized-table-subscribers.md)  
 ## [复制到 SQL 数据库](replication-to-sql-database.md)  
 ## [重新发布数据](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [验证合并订阅服务器的分区信息](validate-partition-information-for-a-merge-subscriber.md)  
 ### [在订阅服务器上验证数据](validate-data-at-the-subscriber.md)  
 ## [编写复制脚本](scripting-replication.md)  
-
-# [开发人员概念](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [技术参考](technical-reference-replication.md)  
 ## [属性参考](properties-reference-replication.md)  

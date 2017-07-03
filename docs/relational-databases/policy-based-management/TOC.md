@@ -1,4 +1,6 @@
 # [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)  
+
+# 基于策略的管理
 ## [基于策略的管理存储](policy-based-management-storage.md)  
 ## [配置基于策略的管理的常规属性](configure-the-general-properties-of-policy-based-management.md)  
 ## [配置警报以通知策略管理员策略失败情况](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -61,16 +63,18 @@
 ### [“创建新策略”或“打开策略”对话框 -“常规”页](create-new-policy-or-open-policy-dialog-box-general-page.md)  
 ### [“创建新策略”或“打开策略”对话框 -“说明”页](create-new-policy-or-open-policy-dialog-box-description-page.md)  
 ### [“查看策略”对话框](view-policies-dialog-box.md)  
-### [“评估策略”对话框 -“策略选择”页](evaluate-policies-dialog-box-policy-selection-page.md)  
-### [“评估策略”对话框 -“评估结果”页](evaluate-policies-dialog-box-evaluation-results-page.md)  
-### [“方面属性”对话框 -“常规”页](facet-properties-dialog-box-general-page.md)  
-### [“方面属性”对话框 -“依赖策略”页](facet-properties-dialog-box-dependent-policies-page.md)  
-### [“方面属性”对话框 -“依赖条件”页](facet-properties-dialog-box-dependent-conditions-page.md)  
+### [“评估策略”对话框，“策略选择”页](evaluate-policies-dialog-box-policy-selection-page.md)  
+### [“评估策略”对话框，“评估结果”页](evaluate-policies-dialog-box-evaluation-results-page.md)  
+### [“方面属性”对话框，“常规”页](facet-properties-dialog-box-general-page.md)  
+### [“方面属性”对话框，“依赖策略”页](facet-properties-dialog-box-dependent-policies-page.md)  
+### [“方面属性”对话框，“依赖条件”页](facet-properties-dialog-box-dependent-conditions-page.md)  
 ### [“结果详细视图”对话框](results-detailed-view-dialog-box.md)  
 ### [“查看方面”对话框](view-facets-dialog-box.md)  
 ### [“选择源”对话框](select-source-dialog-box.md)  
 ### [“导出为策略”对话框](export-as-policy-dialog-box.md)  
 ### [“导入策略”对话框](import-policies-dialog-box.md)  
+
+
 # [教程：使用基于策略的管理来管理服务器](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [第 1 课：创建并应用 Off By Default 策略](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [第 1-1 课 - 创建 Off By Default 策略](lesson-1-1-create-the-off-by-default-policy.md)  

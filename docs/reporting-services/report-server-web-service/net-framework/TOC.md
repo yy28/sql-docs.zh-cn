@@ -1,17 +1,8 @@
-
-# 异常处理 +
-## [Reporting Services 中的异常处理](../../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-## [引入了 Reporting Services 中的异常处理](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-
-
-# Soap 标头 +
-## [批处理方法](../../report-server-web-service-net-framework-soap-headers/batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [标识执行状态](../../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [设置项 Namespace GetProperties 方法](../../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [使用 Reporting Services SOAP 标头](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-
-
 # [使用 Web 服务和.NET Framework 构建应用程序](building-applications-using-the-web-service-and-the-net-framework.md)
+
+# [引入了 Reporting Services 中的异常处理 +](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+# [使用 Reporting Services SOAP 标头 +](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+
 # [调用 Web 服务方法](calling-web-service-methods.md)
 # [创建 Web 服务代理](creating-the-web-service-proxy.md)
 # [省略可选的 Web 服务对象的值](omitting-values-for-optional-web-service-objects.md)
