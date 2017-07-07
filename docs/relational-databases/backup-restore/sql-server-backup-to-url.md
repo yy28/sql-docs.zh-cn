@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
@@ -253,7 +253,7 @@ ms.lasthandoff: 04/11/2017
       
     2.  **共享访问签名：**  用于输入指定容器的共享访问签名。
       
-    3.  **添加：**  用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+    3.  **添加：**  用于注册没有共享访问签名的现有容器。  请参阅[连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
       
     4.  **确定：**SQL Server 使用所提供的 SQL 凭据信息连接到 Microsoft Azure 存储，然后打开“在 Microsoft Azure 上定位备份文件”对话框。 此页上显示位于存储容器中的备份文件。 选择要用于还原的文件，然后单击 **“确定”**。 此操作将返回“选择备份设备”对话框，而单击此对话框上的“确定”将返回“还原”主对话框，从中将可完成还原。 
   

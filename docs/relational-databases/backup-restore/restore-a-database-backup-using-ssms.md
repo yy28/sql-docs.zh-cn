@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
@@ -218,61 +218,61 @@ ms.lasthandoff: 04/11/2017
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.从 Microsoft Azure 存储服务还原备份**
 #### <a name="common-steps"></a>**一般步骤**
 下面的两个示例执行从位于 Microsoft Azure 存储服务中的备份还原 `Sales` 。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  出于简洁的目的，在此处一次列出前六个步骤，所有示例将从**步骤 7** 开始。
-1.    在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
-2.    右键单击“数据库”，然后选择“还原数据库...”。
+2.  右键单击“数据库”，然后选择“还原数据库...”。
 
-3.    在“常规”页上，在“源”部分下选择“设备”。
+3.  在“常规”页上，在“源”部分下选择“设备”。
 
-4.    单击“浏览 (...)”按钮以打开“选择备份设备”对话框。  
-5.    从“备份媒体类型:”下拉列表中选择 **URL**。
+4.  单击“浏览 (...)”按钮以打开“选择备份设备”对话框。  
+5.  从“备份媒体类型:”下拉列表中选择 **URL**。
 
-6.    单击“添加”可打开“选择备份文件位置”对话框。
+6.  单击“添加”可打开“选择备份文件位置”对话框。
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1. 在现有数据库上还原条带备份，并存在共享的访问签名。**
     已经创建具有读取、写入、删除和列表权限的存储访问策略。  已经为容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`创建与存储访问策略相关联的共享访问签名。  如果已存在 SQL Server 凭据，则步骤几乎一样。  数据库 `Sales` 当前在服务器上。  备份文件为 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
 *  
-    7.    如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。
+    7.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。
     
-    8.    在“共享访问签名:”富文本框中输入共享访问签名。
-       9.    单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。
-    10.    展开“容器”并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+    8.  在“共享访问签名:”富文本框中输入共享访问签名。
+       9.   单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。
+    10. 展开“容器”并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
     
-    11.    按住 ctrl 并选择文件 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-    12.    单击“确定” 。
-    13.    单击“确定”以返回到“常规”页。
-    14.    在“选择页”窗格中单击“选项”。
-    15.    在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。
-    16.    在“结尾日志备份”部分中，取消选中“还原前执行结尾日志备份”。
-    17.    在“服务器连接”部分，选中“关闭目标数据库的现有连接”。
-    18.    单击 **“确定”**。
+    11. 按住 ctrl 并选择文件 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
+    12. 单击“确定” 。
+    13. 单击“确定”以返回到“常规”页。
+    14. 在“选择页”窗格中单击“选项”。
+    15. 在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。
+    16. 在“结尾日志备份”部分中，取消选中“还原前执行结尾日志备份”。
+    17. 在“服务器连接”部分，选中“关闭目标数据库的现有连接”。
+    18. 单击 **“确定”**。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. 共享访问签名不存在**
     在本示例中数据库 `Sales` 当前不在服务器上。
-    7.    单击“添加”将打开“连接到 Microsoft 订阅”对话框。  
+    7.  单击“添加”将打开“连接到 Microsoft 订阅”对话框。  
     
-    8.    完成“连接到 Microsoft 订阅”对话框，然后单击“确定”，返回到“选择备份文件位置”对话框。  有关其他信息，请参阅[《Connect to a Microsoft Azure Subscription》](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)（连接到 Microsoft Azure 订阅）。
-    9.    单击“选择备份文件位置”对话框中单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。
-    10.    展开“容器”并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-    11.    选择备份文件，再单击“确定”。
-    12.    单击“确定”以返回到“常规”页。
-    13.    单击 **“确定”**。
+    8.  完成“连接到 Microsoft 订阅”对话框，然后单击“确定”，返回到“选择备份文件位置”对话框。  有关其他信息，请参阅[《Connect to a Microsoft Azure Subscription》](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)（连接到 Microsoft Azure 订阅）。
+    9.  单击“选择备份文件位置”对话框中单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。
+    10. 展开“容器”并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+    11. 选择备份文件，再单击“确定”。
+    12. 单击“确定”以返回到“常规”页。
+    13. 单击 **“确定”**。
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.  将本地备份还原到 Microsoft Azure 存储 (URL)**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. 将本地备份还原到 Microsoft Azure 存储 (URL)**
 将从位于 `Sales` 的备份中将 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 数据库还原到 Microsoft Azure 存储容器 `E:\MSSQL\BAK`。  已创建 Azure 容器的 SQL Server 凭据。  必须已存在目标容器的 SQL Server 凭据，因为不能通过创建 **还原** 任务创建该凭据。  `Sales` 数据库当前不在服务器上。
-1.    在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
+1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
-2.    右键单击“数据库”，然后选择“还原数据库...”。
-3.    在“常规”页上，在“源”部分下选择“设备”。
-4.    单击“浏览 (...)”按钮以打开“选择备份设备”对话框。  
-5.    从“备份媒体类型:”下拉列表中选择“文件”。
-6.    单击“添加”将打开“定位备份文件”对话框。
-7.    导航到 `E:\MSSQL\BAK`，选择备份文件，再单击“确定”。
-8.    单击“确定”以返回到“常规”页。
-9.    在“选择页”窗格中，单击“文件”。
-10.    选中“将所有文件重新定位到文件夹”复选框。
-11.    在“数据文件文件夹:”和“日志文件文件夹:”的文本框中输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-12.    单击“确定” 。
+2.  右键单击“数据库”，然后选择“还原数据库...”。
+3.  在“常规”页上，在“源”部分下选择“设备”。
+4.  单击“浏览 (...)”按钮以打开“选择备份设备”对话框。  
+5.  从“备份媒体类型:”下拉列表中选择“文件”。
+6.  单击“添加”将打开“定位备份文件”对话框。
+7.  导航到 `E:\MSSQL\BAK`，选择备份文件，再单击“确定”。
+8.  单击“确定”以返回到“常规”页。
+9.  在“选择页”窗格中，单击“文件”。
+10. 选中“将所有文件重新定位到文件夹”复选框。
+11. 在“数据文件文件夹:”和“日志文件文件夹:”的文本框中输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+12. 单击“确定” 。
 
 
 ## <a name="see-also"></a>另请参阅    

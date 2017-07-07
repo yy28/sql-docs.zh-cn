@@ -17,10 +17,10 @@ caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 091625c7e502ac131bd045546ca4c587b754e366
+ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
+ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="always-encrypted-client-development"></a>始终加密（客户端开发）
@@ -31,8 +31,8 @@ ms.lasthandoff: 06/22/2017
 有关开发使用受“始终加密”技术保护的数据库的应用程序以及哪些客户端驱动程序和哪些驱动程序版本支持“始终加密”的详细信息，请参阅：
 
 - [对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [对 JDBC 驱动程序使用始终加密](https://msdn.microsoft.com/library/mt591987.aspx)
-- [对 Windows ODBC 驱动程序使用始终加密](https://msdn.microsoft.com/library/mt637351.aspx)
+- [对 JDBC 驱动程序使用始终加密](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
+- [对 Windows ODBC 驱动程序使用始终加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 
 
 
