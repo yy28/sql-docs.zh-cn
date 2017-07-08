@@ -1,1 +1,1 @@
-![下载](../ssdt/media/download.png)[下载 ODBC 驱动程序](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)
+![下载](../ssdt/media/download.png)[下载 ODBC 驱动程序](../connect/odbc/download-odbc-driver-for-sql-server.md)
