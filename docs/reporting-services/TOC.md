@@ -2,6 +2,7 @@
 
 # 概述
 ## [什么是 Reporting Services 中的新增功能](what-s-new-in-sql-server-reporting-services-ssrs.md) 
+## [新的和最近更新的文章](new-updated-reporting-services.md)
 ## [Reporting Services 概念 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 功能和任务](reporting-services-features-and-tasks-ssrs.md)   
 ## [后向兼容性](reporting-services-backward-compatibility.md)  
