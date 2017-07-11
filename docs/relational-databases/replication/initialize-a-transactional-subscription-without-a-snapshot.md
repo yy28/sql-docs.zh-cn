@@ -25,14 +25,18 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>初始化事务订阅（不使用快照）
+<a id="initialize-a-transactional-subscription-without-a-snapshot" class="xliff"></a>
+
+# 初始化事务订阅（不使用快照）
   默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  
   
 -   指定备份。 还原订阅服务器上的备份，然后分发代理将复制任何所需的复制元数据和系统过程。 使用备份进行初始化是向订阅服务器传递数据最快的方法，而且也很方便，因为如果在启用发布以使用备份进行初始化之后取得备份，则可以使用任何最近的备份。  
   
 -   通过用其他机制（如附加数据库）向订阅服务器复制初始数据集。 必须确保订阅服务器上的数据和架构是正确的，然后分发代理将复制任何所需的元数据和系统过程。  
   
-## <a name="initializing-a-subscription-with-a-backup"></a>用备份初始化订阅  
+<a id="initializing-a-subscription-with-a-backup" class="xliff"></a>
+
+## 用备份初始化订阅  
  备份包含整个数据库；因此，初始化每个订阅数据库时，它将包含发布数据库的完整副本：  
   
 -   备份包括未指定为发布项目的表。  
@@ -55,7 +59,9 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  如果初始化订阅时不使用快照，在发布服务器上运行 SQL Server 服务的帐户必须具有分发服务器上快照文件夹的写权限。 有关权限的详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-### <a name="ensuring-the-suitability-of-a-backup"></a>确保备份的适用性  
+<a id="ensuring-the-suitability-of-a-backup" class="xliff"></a>
+
+### 确保备份的适用性  
  如果在执行备份后发生的所有事务都存储在分发服务器上，则备份适用于初始化订阅服务器。 如果备份不适用，复制将显示一条错误消息。  
   
  若要帮助确保备份适用，请按下列规则执行：  
@@ -70,14 +76,18 @@ ms.lasthandoff: 06/22/2017
   
 -   必须将还原数据库中的订阅时间戳列转换为 **binary(8)** 列：将包含时间戳列的表的内容复制到具有匹配架构（除了用 **binary(8)** 列替代时间戳列之外）的新表，删除原始表，然后使用与原始表相同的名称重命名新表。  
   
-## <a name="initializing-a-subscription-with-an-alternative-method"></a>使用其他方法初始化订阅  
+<a id="initializing-a-subscription-with-an-alternative-method" class="xliff"></a>
+
+## 使用其他方法初始化订阅  
  可以使用任何能够将发布数据库架构和数据复制到订阅服务器的方法初始化订阅，例如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 用其他方法初始化订阅服务器时，复制支持将对象复制到订阅服务器。  
   
  与使用备份进行初始化不同，您或您的应用程序必须确保数据和架构在添加订阅时正确同步。 例如，如果从将数据和架构复制到订阅服务器到添加订阅这一时间段内，发布服务器上进行了某一活动，则此活动导致的更改可能不会复制到订阅服务器。  
   
  若要使用其他方法初始化订阅，请参阅 [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md)。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [初始化订阅](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
