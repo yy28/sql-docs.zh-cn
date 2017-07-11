@@ -24,14 +24,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc454960a271c4fdfeb5e04337b2fb8ab1790127
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
+<a id="specify-file-storage-type-by-using-bcp-sql-server" class="xliff"></a>
+
+# 使用 bcp 指定文件存储类型 (SQL Server)
   “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。 用户定义的数据类型将按其基类型导出。  
   
-## <a name="the-bcp-prompt-for-file-storage-type"></a>用于文件存储类型的 bcp 提示符  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
+<a id="the-bcp-prompt-for-file-storage-type" class="xliff"></a>
+
+## 用于文件存储类型的 bcp 提示符  
+ 如果某个交互式 bcp 命令包含不带格式化文件开关 (-f) 或数据格式开关（-n、-c、-w 或 -N）的 in 或 out 选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -81,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      \*\***的未来版本中将删除**ntext **、**text **和** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 请改用 **nvarchar(max)**、 **varchar(max)**和 **varbinary(max)** 。  
   
-## <a name="native-file-storage-types"></a>本机文件存储类型  
+<a id="native-file-storage-types" class="xliff"></a>
+
+## 本机文件存储类型  
  在格式化文件中，每种本机文件存储类型都记录为相应的宿主文件数据类型。  
   
 |文件存储类型|宿主文件数据类型|  
@@ -117,7 +123,9 @@ ms.lasthandoff: 04/11/2017
   
  \*\*你无法将数据批量导入到具有 DEFAULT 值的 **text**、 **ntext**和 **image** 列。  
   
-## <a name="additional-considerations-for-file-storage-types"></a>文件存储类型的其他注意事项  
+<a id="additional-considerations-for-file-storage-types" class="xliff"></a>
+
+## 文件存储类型的其他注意事项  
  当您将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出到数据文件时：  
   
 -   您始终可以指定 **char** 作为文件存储类型。  
@@ -129,7 +137,9 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[ 非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [bcp 实用工具](../../tools/bcp-utility.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [使用 bcp 指定字段长度 (SQL Server)](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

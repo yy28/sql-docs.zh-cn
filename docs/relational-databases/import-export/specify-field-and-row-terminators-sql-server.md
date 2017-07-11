@@ -24,16 +24,20 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 42c2ee3fe98d6c6fc35d2417469bc3eec9fddd8c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
+<a id="specify-field-and-row-terminators-sql-server" class="xliff"></a>
+
+# 指定字段终止符和行终止符 (SQL Server)
   对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
   
 > [!IMPORTANT]  
 >  使用本机格式或 Unicode 本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能与终止符冲突，因为本机格式的数据文件是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式存储的。  
   
-## <a name="characters-supported-as-terminators"></a>可用作终止符的字符  
+<a id="characters-supported-as-terminators" class="xliff"></a>
+
+## 可用作终止符的字符  
  **bcp** 命令、BULK INSERT 语句和 OPENROWSET 大容量行集提供程序支持多种字符作为字段终止符或行终止符，并始终查找每个终止符的第一个实例。 下表列出了支持的终止符字符。  
   
 |终止字符|表示方法|  
@@ -53,13 +57,17 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  如果数据中出现终止符字符，则它被视为终止符（而非数据），并且该字符后的数据被视为属于下一个字段或记录。 因此，请仔细选择您的终止符，以确保它们从未出现在您的数据中。 例如，如果数据中包含某个低代理项，则低代理项字段终止符并不是一个好的选择。  
   
-## <a name="using-row-terminators"></a>使用行终止符  
+<a id="using-row-terminators" class="xliff"></a>
+
+## 使用行终止符  
  行终止符可以与最后一个字段的终止符相同。 但是，通常来说，非重复的终止符是很有用的。 例如，若要生成表格格式的输出，可用换行符 (\n) 终止每行的最后一个字段，并用制表符 (\t) 终止所有其他字段。 若要将每个数据记录放置在数据文件中的各自的行上，请指定 \r\n 组合作为行终止符。  
   
 > [!NOTE]  
 >  交互使用 **bcp** 并指定 \n（换行符）作为行终止符时， **bcp** 将自动以 \r（回车符）作为前缀，从而形成行终止符 \r\n。  
   
-## <a name="specifying-terminators-for-bulk-export"></a>指定大容量导出的终止符  
+<a id="specifying-terminators-for-bulk-export" class="xliff"></a>
+
+## 指定大容量导出的终止符  
  大容量导出 **char** 或 **nchar** 数据，并且希望使用非默认终止符时，必须向 **bcp** 命令指定终止符。 可以用下列任一方式指定终止符：  
   
 -   使用格式化文件逐个字段指定终止符。  
@@ -74,9 +82,9 @@ ms.lasthandoff: 04/11/2017
     -   使用字符格式开关**-c** 或 **-w**（而不是 **-t** 开关）将字段终止符设置为制表符 \t。 这与指定 **-t**\t 的作用相同。  
   
         > [!NOTE]  
-        >  如果指定了 **-n** （本机数据）或 **-N** （Unicode 本机）开关，则不会插入终止符。  
+        >  如果指定了 -n（本机数据）或 -N（Unicode 本机）开关，则不会插入终止符。  
   
-    -   如果交互 **bcp** 命令包含 **in** 或 **out** 选项，而不包含格式化文件开关 (**-f**) 或数据格式开关（**-n**、 **-c**、 **-w**或 **-N**），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
+    -   如果交互 bcp 命令包含 in 或 out 选项，而不包含格式化文件开关 (-f) 或数据格式开关（-n、-c、-w 或 -N），并且选择不指定前缀长度和字段长度，则每个字段的字段终止符的命令提示符默认为无：  
   
          `Enter field terminator [none]:`  
   
@@ -85,7 +93,9 @@ ms.lasthandoff: 04/11/2017
         > [!NOTE]  
         >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)。  
   
-### <a name="guidelines-for-using-terminators"></a>使用终止符指南  
+<a id="guidelines-for-using-terminators" class="xliff"></a>
+
+### 使用终止符指南  
  在某些情况下，终止符对 **char** 或 **nchar** 数据字段是很有用的。 例如：  
   
 -   对于数据文件中包含 null 值的数据列，将不会被导入到不能理解前缀长度信息的程序中。  
@@ -96,7 +106,9 @@ ms.lasthandoff: 04/11/2017
   
      在这种情况下，指定一个终止符可以最大限度地减少存储空间，同时可以将字段视为可变长度字段。  
   
-### <a name="examples"></a>示例  
+<a id="examples" class="xliff"></a>
+
+### 示例  
  此示例使用字符格式将 `AdventureWorks.HumanResources.Department` 表中的数据批量导出至 `Department-c-t.txt` 数据文件，其中将逗号用作字段终止符，将换行符 (\n) 用作行终止符。  
   
  **bcp** 命令包含以下开关。  
@@ -105,7 +117,7 @@ ms.lasthandoff: 04/11/2017
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
 |**-t** `,`|指定逗号 (,) 作为字段终止符。|  
-|**-r** \n|指定行终止符作为换行符。 这是默认的行终止符，因此将其指定为可选。|  
+|-r \n|指定行终止符作为换行符。 这是默认的行终止符，因此将其指定为可选。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
  有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
@@ -118,7 +130,9 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
  这创建了 `Department-c-t.txt`，其中包含 16 条记录，每条记录有四个字段。 这些字段由逗号分隔。  
   
-## <a name="specifying-terminators-for-bulk-import"></a>为大容量导入指定终止符  
+<a id="specifying-terminators-for-bulk-import" class="xliff"></a>
+
+## 为大容量导入指定终止符  
  当大容量导入 **char** 或 **nchar** 数据时，大容量导入命令必须识别数据文件中使用的终止符。 如何指定终止符依赖于大容量导入命令，如下所示：  
   
 -   **bcp**  
@@ -142,7 +156,9 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      有关 OPENROWSET BULK 子句的详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   
-### <a name="examples"></a>示例  
+<a id="examples" class="xliff"></a>
+
+### 示例  
  本部分的示例将字符数据从上述示例中创建的 `Department-c-t.txt` 数据文件大容量导入到 `myDepartment` 示例数据库的 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 表中。 必须先创建此表，才能运行这些示例。 若要在 **dbo** 架构下创建此表，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中执行以下代码：  
   
 ```tsql  
@@ -158,7 +174,9 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>A. 使用 bcp 交互指定终止符  
+<a id="a-using-bcp-to-interactively-specify-terminators" class="xliff"></a>
+
+#### A. 使用 bcp 交互指定终止符  
  以下示例使用 `Department-c-t.txt` 命令大容量导入 `bcp` 数据文件。 该命令与大容量导出命令使用相同的命令开关。 有关详细信息，请参阅本主题前面的“为大容量导出指定终止符”。  
   
  在 Windows 命令提示符下输入：  
@@ -167,7 +185,9 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 交互指定终止符  
+<a id="b-using-bulk-insert-to-interactively-specify-terminators" class="xliff"></a>
+
+#### B. 使用 BULK INSERT 交互指定终止符  
  以下示例使用 `Department-c-t.txt` 语句大容量导入 `BULK INSERT` 数据文件，该语句使用了下表中所示的限定符。  
   
 |选项|Attribute|  
@@ -190,7 +210,9 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   

@@ -23,13 +23,17 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="search-documents-using-results-lists"></a>使用结果列表搜索文档
+<a id="search-documents-using-results-lists" class="xliff"></a>
+
+# 使用结果列表搜索文档
   使用 **“查找和替换”** 对话框，可以搜索和替换项目或解决方案中或文件系统文件夹中的所有文件中的文本（即使这些文件未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开）。 使用 **“查找和替换”** 对话框执行的搜索返回的匹配项将显示在“查找结果 1”和“查找结果 2”窗口中。这样，您可以查看包含匹配项的行中的完全匹配文本。  
   
-### <a name="to-search-in-multiple-files"></a>在多个文件中搜索  
+<a id="to-search-in-multiple-files" class="xliff"></a>
+
+### 在多个文件中搜索  
   
 1.  在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“在文件中查找”**。  
   
@@ -37,7 +41,7 @@ ms.lasthandoff: 04/11/2017
   
 3.  在 **“查找范围”** 列表中，单击 **“所有打开的文档”**、 **“当前项目”**、 **“整个解决方案”**，或者键入目录路径。  
   
-4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 改用 \*\* 可以在“查找范围”下拉列表所列目录中的所有文件中进行搜索。  
+4.  在 **“文件类型”** 列表中，选择一个列出的文件扩展名组，或输入要搜索的文件类型的扩展名（由分号分隔）。 使用 \*.\* 可以搜索在“查找范围”下拉列表中列出的目录中的所有文件。  
   
 5.  选择其余搜索选项以提高搜索的准确性。  
   
@@ -45,7 +49,9 @@ ms.lasthandoff: 04/11/2017
   
  在默认情况下，搜索匹配项将显示在“查找结果 1”窗口中。 可以通过双击“查找结果 1”窗口中的每个条目浏览搜索匹配项。 若要在新窗口中查看搜索结果，请选择 **“在查找 2 中显示”**。  
   
-#### <a name="to-replace-across-multiple-files-or-folders"></a>在多个文件或文件夹中替换  
+<a id="to-replace-across-multiple-files-or-folders" class="xliff"></a>
+
+#### 在多个文件或文件夹中替换  
   
 1.  在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“在文件中替换”**。  
   
@@ -66,7 +72,9 @@ ms.lasthandoff: 04/11/2017
   
  默认情况下，替换信息将显示在“查找结果 1”窗口中。 可以通过双击“查找结果 1”窗口中的各个条目来浏览替换项。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [搜索和替换](../../relational-databases/scripting/search-and-replace.md)   
  [交互式搜索文档](../../relational-databases/scripting/search-documents-interactively.md)   
  [使用通配符搜索文本](../../relational-databases/scripting/search-text-with-wildcards.md)   

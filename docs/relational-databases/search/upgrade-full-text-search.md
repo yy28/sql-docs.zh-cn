@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>升级全文搜索
+<a id="upgrade-full-text-search" class="xliff"></a>
+
+# 升级全文搜索
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
   
   
@@ -83,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      升级期间的导入或重新生成操作会占用很多 CPU 资源，这会延迟其余服务器实例的升级和联机。 如果使服务器实例尽快处于联机状态非常重要，并且希望在升级后运行手动填充，则适合 **“重置”** 。  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>导入全文索引后确保查询结果的一致性  
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
+
+## 导入全文索引后确保查询结果的一致性  
  如果在将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时导入了全文目录，则由于旧断字符和新断字符的行为略有差异，可能会出现查询和全文检索内容不匹配。 在这种情况下，若要保证查询和全文检索内容之间的完全匹配，请选择以下选项之一：  
   
 -   重新生成包含全文检索的全文目录 ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
  有关断字符的详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>将干扰词文件升级到非索引字表  
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
+
+## 将干扰词文件升级到非索引字表  
 将数据库从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]后，将不再使用干扰词文件。 然而，旧的干扰词文件存储在 FTDATA\ FTNoiseThesaurusBak 文件夹中，您可以稍后在更新或生成相应的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 非索引字表时使用它们。  
   
  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级后：  
@@ -112,7 +118,9 @@ ms.lasthandoff: 04/11/2017
   
      STOPLIST OFF 子句删除非索引字筛选，并触发对表的填充，而不会筛选任何视为干扰词的词语。  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>备份和导入全文目录  
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
+
+## 备份和导入全文目录  
  对于在升级期间重新生成或重置的全文目录（以及对于新的全文目录），全文目录只是一个逻辑概念，并不驻留在文件组中。 因此，若要备份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的全文目录，必须逐个识别包含目录全文检索的每个文件组并将它们一一备份。 有关详细信息，请参阅 [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)。  
   
  对于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]导入的全文目录，该全文目录在其自己的文件组中仍然是数据库文件。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中除不存在 MSFTESQL 服务以外，全文目录的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份进程仍然适用。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 进程的信息，请参阅 SQL Server 2005 联机丛书中的 [备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
@@ -124,7 +132,7 @@ ms.lasthandoff: 04/11/2017
   
  **更改服务器实例的全文升级行为**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 **upgrade\_option** 操作  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **：**使用“服务器属性”对话框的“全文升级选项”。 有关详细信息，请参阅 [管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
@@ -155,7 +163,9 @@ ms.lasthandoff: 04/11/2017
   
 -   [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>示例  
+<a id="example" class="xliff"></a>
+
+### 示例  
  以下示例在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中使用 MOVE 子句，还原名为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 `ftdb1`数据库。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库、日志和目录文件将被移动到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上的新位置，如下所示：  
   
 -   数据库文件 `ftdb1.mdf`移动到 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
@@ -180,7 +190,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  有关分离和附加数据库的详细信息，请参阅[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)、[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)、[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 和 [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)   
  [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

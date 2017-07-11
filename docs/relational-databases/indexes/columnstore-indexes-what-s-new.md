@@ -2,7 +2,7 @@
 title: "列存储索引 - 新增功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 11/17/2016
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,13 +16,15 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/29/2017
 
 ---
-# <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
+<a id="columnstore-indexes---what39s-new" class="xliff"></a>
+
+# 列存储索引 - 新增功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   列存储功能汇总可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 Azure SQL 数据库 Premium Edition、Azure SQL 数据仓库和并行数据仓库。  
@@ -30,39 +32,52 @@ ms.lasthandoff: 06/22/2017
  >[!NOTE]
  > 对于 Azure SQL 数据库，列存储索引仅在 Premium Edition 中可用。
  
-## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
+<a id="feature-summary-for-product-releases" class="xliff"></a>
+
+## 产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
 
   
-|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|  
-|多线程查询的批处理执行|是|是|是|是|是|  
-|单线程查询的批处理执行|||是|是|是|  
-|存档压缩选项。||是|是|是|是|  
-|快照隔离和读提交快照隔离|||是|是|是|  
-|创建表时，请指定列存储索引。|||是|是|是|  
-|AlwaysOn 支持列存储索引。|是|是|是|是|是|  
-|AlwaysOn 可读次要副本支持只读非聚集列存储索引|是|是|是|是|是|  
-|AlwaysOn 可读次要副本支持可更新列存储索引。|||是|||  
-|堆或 b 树上的只读非聚集列存储索引。|是|是|是*|是*|是*|  
-|堆或 b 树上的可更新非聚集列存储索引|||是|是|是|  
-|允许在使用非聚集列存储索引的堆或 b 树上实施额外的 b 树索引。|是|是|是|是|是|  
-|可更新的聚集列存储索引。||是|是|是|是|  
-|基于聚集列存储索引的 B 树索引。|||是|是|是|  
-|基于内存优化表的列存储索引。|||是|是|是|  
-|非聚集列存储索引定义支持使用筛选的条件。|||是|是|是|  
-|CREATE TABLE 和 ALTER TABLE 中的列存储索引的压缩延迟选项。|||是|是|是|   
+|列存储索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|多线程查询的批处理执行|是|是|是|是|是|是| 
+|单线程查询的批处理执行|||是|是|是|是|  
+|存档压缩选项。||是|是|是|是|是|  
+|快照隔离和读提交快照隔离|||是|是|是|是| 
+|创建表时，请指定列存储索引。|||是|是|是|是|  
+|AlwaysOn 支持列存储索引。|是|是|是|是|是|是| 
+|AlwaysOn 可读次要副本支持只读非聚集列存储索引|是|是|是|是|是|是|  
+|AlwaysOn 可读次要副本支持可更新列存储索引。|||是|是|||  
+|堆或 b 树上的只读非聚集列存储索引。|是|是|是*|是*|是*|是*|  
+|堆或 b 树上的可更新非聚集列存储索引|||是|是|是|是|  
+|允许在使用非聚集列存储索引的堆或 b 树上实施额外的 b 树索引。|是|是|是|是|是|是|  
+|可更新的聚集列存储索引。||是|是|是|是|是|  
+|基于聚集列存储索引的 B 树索引。|||是|是|是|是|  
+|基于内存优化表的列存储索引。|||是|是|是|是|  
+|非聚集列存储索引定义支持使用筛选的条件。|||是|是|是|是|  
+|CREATE TABLE 和 ALTER TABLE 中的列存储索引的压缩延迟选项。|||是|是|是|是|
+|列存储索引具有一个非持久化计算列。||||是|||   
   
  *若要创建可读取的非聚集列存储索引，请将索引存储在只读的文件组中。  
-  
+
+## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
+ [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 将添加这些新功能。
+
+<a id="functional" class="xliff"></a>
+
+### 功能
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引中不支持持久化列。无法创建关于具有计算列的列存储索引的非聚集索引。 
+
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这样可以增强数据仓库方案的效果，并启用实时运行分析。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并启用实时运行分析。  
   
-### <a name="functional"></a>功能  
+<a id="functional" class="xliff"></a>
+
+### 功能  
   
 -   一个行存储表可以有一个可更新的非聚集列存储索引。 以前，非聚集列存储索引是只读的。  
   
--   非聚集列存储索引定义支持使用筛选的条件。 使用此功能，可以仅基于可操作工作负荷的冷数据创建非聚集列存储索引。 这样做可以尽量减少针对 OLTP 表建立列存储索引的性能影响。  
+-   非聚集列存储索引定义支持使用筛选的条件。 若要尽量减少在 OLTP 表中添加列存储索引的性能影响，请使用筛选条件，以便创建仅关于运行工作负荷冷数据的非聚集列存储索引。 
   
 -   一个内存中表可以有一个列存储索引。 你可以在创建表时创建它，也可以稍后使用 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) 来添加。 以前，仅基于磁盘的表可以有列存储索引。  
   
@@ -70,9 +85,11 @@ ms.lasthandoff: 06/22/2017
   
 -   支持主键和外键，即可通过使用 b 树索引在聚集列存储索引上强制实施这些约束。  
   
--   列存储索引有一个压缩延迟选项，该选项可以最大限度地减少事务工作负荷对实时运行分析的影响。  此选项允许通过频繁地更改行来保持稳定，然后再将这些行压缩到列存储中。 有关详细信息，请参阅 [CREATE COLUMNSTORE INDEX (Transact SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[开始使用列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
+-   列存储索引有一个压缩延迟选项，该选项可以最大限度地减少事务工作负荷对实时运行分析的影响。  此选项允许通过频繁地更改行来保持稳定，然后再将这些行压缩到列存储中。 有关详细信息，请参阅[创建列存储索引 (Transact SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[开始使用列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-### <a name="performance-for-database-compatibility-level-120-or-130"></a>数据库兼容级别 120 或 130 的性能  
+<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
+
+### 数据库兼容级别 120 或 130 的性能  
   
 -   列存储索引支持读提交快照隔离级别 (RCSI) 和快照隔离 (SI)。 这样可以在无锁的情况下进行事务一致性分析查询。  
   
@@ -84,7 +101,9 @@ ms.lasthandoff: 06/22/2017
   
 -   谓词下推可加快查询在比较 [v]char 或 n[v]char 类型的字符串时的速度。 这适用于常用的比较运算符，包括 LIKE 这样的使用位图筛选器的运算符。 这适用于 SQL Server 支持的所有排序规则。  
   
-### <a name="performance-for-database-compatibility-level-130"></a>数据库兼容级别 130 的性能  
+<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
+
+### 数据库兼容级别 130 的性能  
   
 -   对于使用任何下述操作的查询，新提供了批处理模式执行支持：  
   
@@ -102,7 +121,9 @@ ms.lasthandoff: 06/22/2017
   
 -   内存优化表查询可以有 SQL 互操作模式的并行计划，不管是按行存储索引方式还是按列存储索引方式访问数据  
   
-### <a name="supportability"></a>可支持性  
+<a id="supportability" class="xliff"></a>
+
+### 可支持性  
  以下系统视图是针对列存储的新视图：  
   
 -   [sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -133,7 +154,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [sys.dm_db_xtp_table_memory_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-### <a name="limitations"></a>限制  
+<a id="limitations" class="xliff"></a>
+
+### 限制  
   
 -   针对聚集列存储索引定义 b 树索引时，会禁用 MERGE。  
   
@@ -141,7 +164,9 @@ ms.lasthandoff: 06/22/2017
   
 -   对于内存中表，基于列存储索引的查询仅在互操作模式下运行，不在内存中本机模式下运行。 支持并行执行。  
   
-## <a name="sql-server-2014"></a>SQL Server 2014  
+<a id="sql-server-2014" class="xliff"></a>
+
+## SQL Server 2014  
  SQL Server 2014 引入了聚集列存储索引作为主存储格式。 这样就可以进行常规加载以及更新、删除和插入操作。  
   
 -   表可以使用聚集列存储索引作为主表存储。 不允许在表上使用其他索引，但可对聚集列存储索引进行更新，因此可执行常规加载并对各个行进行更改。  
@@ -154,7 +179,9 @@ ms.lasthandoff: 06/22/2017
   
 -   对于多线程查询来说，以下运算符以批处理模式运行：scan、filter、project、join、group by 和 union all。  
   
-## <a name="sql-server-2012"></a>SQL Server 2012  
+<a id="sql-server-2012" class="xliff"></a>
+
+## SQL Server 2012  
  SQL Server 2012 引入了非聚集列存储索引作为另一基于行存储表的索引类型，并为基于列存储数据的查询引入了批处理。  
   
 -   一个行存储表可以有一个非聚集列存储索引。  
@@ -165,10 +192,12 @@ ms.lasthandoff: 06/22/2017
   
 -   批处理的查询性能会翻倍，或者说批处理会改善查询性能，但这仅适用于并行执行查询的情况。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  列存储索引指南   
  列存储索引数据加载   
- [列存储索引查询性能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+ [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  针对数据仓库的列存储索引   
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  

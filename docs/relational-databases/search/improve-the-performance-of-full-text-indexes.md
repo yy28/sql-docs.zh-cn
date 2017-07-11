@@ -25,14 +25,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
+<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
+
+# 改进全文索引的性能
 本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
   
 ##  <a name="causes"></a> Common causes of performance issues
-### <a name="hardware-resource-issues"></a>硬件资源问题
+<a id="hardware-resource-issues" class="xliff"></a>
+
+### 硬件资源问题
 硬件资源（例如内存、磁盘速度、CPU 速度和计算机体系结构）会影响全文索引和全文查询的性能。  
 
 导致全文索引性能降低的主要原因是硬件资源的限制。  
@@ -46,14 +50,18 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文引擎可以使用 AWE 内存，因为全文引擎是 sqlservr.exe 进程的一部分。  
 
-### <a name="full-text-batching-issues"></a>全文批处理问题
+<a id="full-text-batching-issues" class="xliff"></a>
+
+### 全文批处理问题
  如果系统没有硬件瓶颈，则全文搜索的索引性能主要取决于以下因素：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建全文批次花费的时间。  
   
 -   筛选器后台程序能以多快的速度处理这些批次。  
 
-### <a name="full-text-index-population-issues"></a>全文索引填充问题
+<a id="full-text-index-population-issues" class="xliff"></a>
+
+### 全文索引填充问题
 -   **填充类型**。 与完全填充不同，增量、手动和自动更改跟踪填充的设计目的并不是为了最大程度地利用硬件资源以获得更高速度。 因此，如果全文索引使用增量、手动或自动更改跟踪填充，则本主题中的优化建议可能不会增强全文索引的性能。  
   
 -   **主索引合并**。 填充完成后，将触发最终的合并过程，以便将索引碎片合并为一个主全文索引。 由于只需要查询主索引而不需要查询大量索引碎片，因此这将提高查询性能，并且可以使用更好的计分统计信息来得出相关性排名。 但是，由于合并索引片断时必须读取和写入大量的数据，主索引合并可能会耗费大量 I/O，但不会阻塞传入的查询。  
@@ -74,7 +82,9 @@ ms.lasthandoff: 04/11/2017
 -   如果使用基于时间戳列的增量填充，请对 **timestamp** 列生成辅助索引来提高增量填充的性能。  
   
 ##  <a name="full"></a>排查完全填充性能问题  
-### <a name="review-the-full-text-crawl-logs"></a>查看全文爬网日志
+<a id="review-the-full-text-crawl-logs" class="xliff"></a>
+
+### 查看全文爬网日志
  若要帮助诊断性能问题，请查看全文爬网日志。
  
 如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 默认情况下，给定实例（在此示例中为默认实例）的爬网日志文件位于 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 文件夹中。
@@ -84,13 +94,15 @@ ms.lasthandoff: 04/11/2017
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 爬网日志文件名的可变部分如下。
--   <**DatabaseID**> - 数据库的 ID。 <**dbid**> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 <**catid**>是一个带有前导零的五位数。  
--   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
+-   <**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 <catid>是一个带有前导零的五位数。  
+-   <n> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
 
-### <a name="check-physical-memory-usage"></a>检查物理内存用量  
+<a id="check-physical-memory-usage" class="xliff"></a>
+
+### 检查物理内存用量  
  在全文填充期间，fdhost.exe 或 sqlservr.exe 的内存有可能不足。
 -   如果全文爬网日志显示 fdhost.exe 正在反复重新启动，或系统返回错误代码 8007008，则意味着这些进程中的某一个进程内存不足。
 -   如果 fdhost.exe 在生成转储（特别是在大型多 CPU 计算机上），则该进程的内存可能不足。  
@@ -108,7 +120,9 @@ ms.lasthandoff: 04/11/2017
 
 -   **分页问题**。 页文件大小不足也会导致 fdhost.exe 或 sqlservr.exe 的内存不足，例如在具有增长受限的较小页文件的系统上。 如果爬网日志未指示存在任何与内存相关的故障，则很可能是因为过度分页导致性能下降。  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量  
+<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
+
+### 估计筛选器后台程序宿主进程 (fdhost.exe) 的内存需求量  
  进行填充时 fdhost.exe 进程需要的内存量主要取决于它使用的全文爬网范围数、入站共享内存 (ISM) 的大小以及最大 ISM 实例数。  
   
  可以使用下面的公式粗略估算筛选器后台程序宿主占用的内存量（以字节为单位）：  
@@ -143,7 +157,9 @@ ms.lasthandoff: 04/11/2017
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>示例：估计 fdhost.exe 的内存需求量  
+<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
+
+ #### 示例：估计 fdhost.exe 的内存需求量  
   
  此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值*F*。 爬网范围数是 `8`。  
   
@@ -153,7 +169,9 @@ ms.lasthandoff: 04/11/2017
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>示例：设置最大服务器内存  
+<a id="example-setting-max-server-memory" class="xliff"></a>
+
+ #### 示例：设置最大服务器内存  
   
  此示例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将 **最大服务器内存** 设置为上一个示例中计算得到的 *M* 的值， `7052`：  
   
@@ -168,7 +186,9 @@ GO
   
 有关服务器内存选项的信息，请参阅[服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
   
-### <a name="check-cpu-usage"></a>检查 CPU 使用率  
+<a id="check-cpu-usage" class="xliff"></a>
+
+### 检查 CPU 使用率  
 当平均 CPU 占用率低于大约 30% 时完全填充的性能不是最佳的。 本部分讨论影响 CPU 占用率的一些因素。  
   
 -   长时间等待页面  
@@ -211,7 +231,9 @@ GO
   
 若要解决该问题，必须将容器文档（在本示例中为 Word 文档）的筛选器标记为单线程筛选器。 若要将筛选器标记为单线程筛选器，请将筛选器的 **ThreadingModel** 注册表值设置为 **Apartment Threaded**。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](http://go.microsoft.com/fwlink/?LinkId=209159)。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range 服务器配置选项](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)   

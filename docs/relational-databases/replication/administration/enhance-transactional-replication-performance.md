@@ -29,19 +29,25 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="enhance-transactional-replication-performance"></a>增强事务复制性能
+<a id="enhance-transactional-replication-performance" class="xliff"></a>
+
+# 增强事务复制性能
   在考虑 [增强常规复制性能](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于事务复制的其他几个方面。  
   
-## <a name="database-design"></a>数据库设计  
+<a id="database-design" class="xliff"></a>
+
+## 数据库设计  
   
 -   在应用程序设计中，最大限度地减小事务大小。  
   
      默认情况下，事务复制根据事务边界传播更改。 如果事务越小，则分发代理因网络问题而重新发送事务的可能性就越小。 如果重新发送事务需要代理，则发送的数据量会较小。  
   
-## <a name="distributor-configuration"></a>分发服务器配置  
+<a id="distributor-configuration" class="xliff"></a>
+
+## 分发服务器配置  
   
 -   在专用服务器上配置分发服务器。  
   
@@ -51,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
      在系统承受典型负载的情况下对复制进行测试，以确定存储命令需要多少空间。 确保数据库足以存储命令，而无需频繁地自动增大。 有关更改数据库大小的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md)。  
   
-## <a name="publication-design"></a>发布设计  
+<a id="publication-design" class="xliff"></a>
+
+## 发布设计  
   
 -   在对已发布的表进行批更新时，复制存储过程执行。  
   
@@ -61,7 +69,9 @@ ms.lasthandoff: 04/11/2017
   
      如果不能使用 **-SubscriptionStreams** 参数（将在本主题的后面部分进行介绍），请考虑创建多个发布。 将项目分布在这些发布上使复制可以并行地将更改应用到订阅服务器。  
   
-## <a name="subscription-considerations"></a>订阅注意事项  
+<a id="subscription-considerations" class="xliff"></a>
+
+## 订阅注意事项  
   
 -   如果在相同的发布服务器中拥有多个发布（这是新建发布向导中的默认情况），则使用独立代理而非共享代理。  
   
@@ -69,9 +79,11 @@ ms.lasthandoff: 04/11/2017
   
      将代理设置为连续运行而不是创建频繁的计划（如每分钟）会提高复制性能，因为代理不必启动和停止。 将分发代理设置为连续运行后，以低滞后时间将更改传播到拓扑中连接的其他服务器。 有关详细信息，请参阅：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步计划](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## <a name="distribution-agent-and-log-reader-agent-parameters"></a>分发代理和日志读取器代理参数  
+<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
+
+## 分发代理和日志读取器代理参数  
   
 -   要解决意外、一次性瓶颈，请使用日志读取器代理的 **–MaxCmdsInTran** 参数。  
   
@@ -102,7 +114,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [处理复制代理配置文件](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [查看和修改复制代理命令提示符参数 (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [查看和修改复制代理命令提示符参数 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   

@@ -32,10 +32,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="populate-full-text-indexes"></a>填充全文索引
+<a id="populate-full-text-indexes" class="xliff"></a>
+
+# 填充全文索引
   创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
   
 ##  <a name="types"></a> Types of population  
@@ -44,7 +46,9 @@ ms.lasthandoff: 04/11/2017
 -   基于**更改跟踪**的自动或手动填充
 -   基于**时间戳**的增量填充
   
-## <a name="full-population"></a>完全填充  
+<a id="full-population" class="xliff"></a>
+
+## 完全填充  
  在完全填充期间，为表或索引视图的所有行生成索引条目。 全文索引的完全填充为基表或索引视图的所有行生成索引条目。  
   
 默认情况下，一旦创建新的全文索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会对其进行完全填充。
@@ -53,7 +57,9 @@ ms.lasthandoff: 04/11/2017
 
 若要创建全文索引但不立即填充该索引，请在 `CREATE FULLTEXT INDEX` 语句中指定 `CHANGE_TRACKING OFF, NO POPULATION` 子句。 如果指定 `CHANGE_TRACKING MANUAL`，则在你使用 `START FULL POPULATION` 或 `START INCREMENTAL POPULATION` 子句执行 `ALTER FULLTEXT INDEX` 语句之前，全文引擎不会填充新的全文索引。 
 
-### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>示例 - 创建全文索引但不运行完全填充  
+<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
+
+### 示例 - 创建全文索引但不运行完全填充  
  以下示例对 `Production.Document` 示例数据库的 `AdventureWorks` 表创建全文索引。 此示例使用 `WITH CHANGE_TRACKING OFF, NO POPULATION` 来延迟初始完全填充。  
   
 ```tsql
@@ -72,7 +78,9 @@ GO
   
 ```  
   
-### <a name="example---run-a-full-population-on-a-table"></a>示例 - 对表运行完全填充  
+<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
+
+### 示例 - 对表运行完全填充  
  以下示例对 `Production.Document` 示例数据库的 `AdventureWorks` 表运行完全填充。  
   
 ```tsql
@@ -80,7 +88,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-## <a name="population-based-on-change-tracking"></a>基于更改跟踪的填充
+<a id="population-based-on-change-tracking" class="xliff"></a>
+
+## 基于更改跟踪的填充
  或者，您可以在对全文索引进行初始完全填充之后使用更改跟踪对其进行维护。 将出现与更改跟踪关联的较小开销，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护它用来跟踪自上次填充后对基表所做更改的表。 当你使用更改跟踪时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会维护基表或索引视图中已通过更新、删除或插入进行过修改的行的记录。 通过 WRITETEXT 和 UPDATETEXT 所做的数据更改不会反映到全文索引中，也不能使用更改跟踪方法拾取。  
   
 > [!NOTE]  
@@ -88,7 +98,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  如果你在创建索引期间启用更改跟踪，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在新全文索引创建之后立即对其进行完全填充。 其后，将跟踪更改并将更改传播到全文索引。
 
-### <a name="enable-change-tracking"></a>启用更改跟踪
+<a id="enable-change-tracking" class="xliff"></a>
+
+### 启用更改跟踪
 有两种类型的更改跟踪：
 -   自动（`CHANGE_TRACKING AUTO` 选项）。 自动更改跟踪为默认行为。
 -   手动（`CHANGE_TRACKING MANUAL` 选项）。   
@@ -149,14 +161,18 @@ ALTER FULLTEXT INDEX ON Production.Document
     GO  
     ```
    
-### <a name="disable-change-tracking"></a>禁用更改跟踪 
+<a id="disable-change-tracking" class="xliff"></a>
+
+### 禁用更改跟踪 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-## <a name="incremental-population-based-on-a-timestamp"></a>基于时间戳的增量填充  
+<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
+
+## 基于时间戳的增量填充  
  增量填充是手动填充全文索引的一种替代机制。 如果对表进行大量插入操作，则使用增量填充会较使用手动填充有效。
  
  您可以对 CHANGE_TRACKING 设置为 MANUAL 或 OFF 的全文索引运行增量填充。 
@@ -170,7 +186,9 @@ ALTER FULLTEXT INDEX ON Production.Document
 -   如果全文索引的第一个填充是增量填充，它将对所有行编制索引并使其等效于完全填充。 
 -   如果影响表全文索引的任意元数据自上次填充以来发生了变化，则增量填充请求将作为完全填充来执行。 这包括更改任何列、索引或全文索引定义所引起的元数据更改。 
 
-### <a name="run-an-incremental-population"></a>运行增量填充
+<a id="run-an-incremental-population" class="xliff"></a>
+
+### 运行增量填充
   
  若要运行增量填充，请使用 `START INCREMENTAL POPULATION` 子句执行 `ALTER FULLTEXT INDEX` 语句。  
   
@@ -219,13 +237,15 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 爬网日志文件名的可变部分如下。
--   <**DatabaseID**> - 数据库的 ID。 <**dbid**> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 <**catid**>是一个带有前导零的五位数。  
--   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
+-   <**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 <catid>是一个带有前导零的五位数。  
+-   <n> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
 
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
  [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

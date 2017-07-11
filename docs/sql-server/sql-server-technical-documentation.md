@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 技术文档 |Microsoft 文档"
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>SQL Server 技术文档
+<a id="sql-server-technical-documentation" class="xliff"></a>
+
+# SQL Server 技术文档
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > 与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)。
 
  用于帮助安装、配置和使用 SQL Server 2016 的文档。 内容包括端到端示例、代码示例和视频。 有关 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+
+还可以使用帮助查看器来脱机查看 SQL Server 文档。 有关详细信息，请参阅 [SQL Server 的帮助查看器和脱机内容](../release-notes/sql-server-help-installation.md)。
 
 **SQL Server 自 2017 年 1**
 
@@ -51,7 +55,9 @@ ms.lasthandoff: 06/22/2017
  - **[加速已安装有 SQL Server 2016 的虚拟机](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[下载 SQL Server Management Studio 的最新版本](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>SQL Server 技术    
+<a id="sql-server-technologies" class="xliff"></a>
+
+## SQL Server 技术    
     
 |||    
 |-|-|    
@@ -65,7 +71,9 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services 提供企业级的 Web 报表功能，从而使您可以创建从多个数据源提取数据的表，发布各种格式的表，以及集中管理安全性和订阅。|    
 
     
-## <a name="earlier-sql-server-versions"></a>早期 SQL Server 版本
+<a id="earlier-sql-server-versions" class="xliff"></a>
+
+## 早期 SQL Server 版本
 - [联机丛书的 SQL Server 2014 联机丛书](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [安装 SQL Server 2014 Express 和其他较旧的 SQL Server 版本](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)。 （**感谢你参与 [Scott Hanselman](http://www.hanselman.com/) 的演讲，了解如何将所有安装程序包链接收集到一个地方！**）  
 - [SQL Server 2012 技术文档](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +86,9 @@ ms.lasthandoff: 06/22/2017
 - [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [GitHub 上的 SQL Server 示例](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>详细信息   
+<a id="more-information" class="xliff"></a>
+
+ ## 详细信息   
 + [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 链接和有关所有受支持版本的信息 
 + [安装 SQL Server 数据库引擎](../database-engine/install-windows/install-sql-server-database-engine.md) 

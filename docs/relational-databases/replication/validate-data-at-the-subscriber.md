@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="validate-data-at-the-subscriber"></a>在订阅服务器上验证数据
+<a id="validate-data-at-the-subscriber" class="xliff"></a>
+
+# 在订阅服务器上验证数据
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中验证订阅服务器上的数据。  
   
  验证数据分为三个部分：  
@@ -66,7 +68,9 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>验证事务发布的订阅的数据 (Management Studio)  
+<a id="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio" class="xliff"></a>
+
+#### 验证事务发布的订阅的数据 (Management Studio)  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
   
-#### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>验证合并发布的单个订阅的数据 (Management Studio)  
+<a id="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio" class="xliff"></a>
+
+#### 验证合并发布的单个订阅的数据 (Management Studio)  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -114,7 +120,9 @@ ms.lasthandoff: 04/11/2017
   
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
   
-#### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>验证合并发布的所有订阅的数据 (Management Studio)  
+<a id="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio" class="xliff"></a>
+
+#### 验证合并发布的所有订阅的数据 (Management Studio)  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
@@ -134,7 +142,9 @@ ms.lasthandoff: 04/11/2017
   
      如果未显示有关验证的任何消息，则说明该代理已记录了后续消息。 在这种情况下，请在复制监视器中查看验证结果。 有关详细信息，请参阅本主题中有关复制监视器相关操作的过程。  
   
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor"></a>验证事务发布的所有推送订阅的数据（复制监视器）  
+<a id="to-validate-data-for-all-push-subscriptions-to-a-transactional-publication-replication-monitor" class="xliff"></a>
+
+#### 验证事务发布的所有推送订阅的数据（复制监视器）  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。  
   
@@ -160,7 +170,9 @@ ms.lasthandoff: 04/11/2017
   
     3.  在 **“所选会话中的操作”** 文本区域中的 **“分发服务器到订阅服务器的历史记录”** 选项卡中，查看信息。  
   
-#### <a name="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor"></a>验证合并发布的单个推送订阅的数据（复制监视器）  
+<a id="to-validate-data-for-a-single-push-subscription-to-a-merge-publication-replication-monitor" class="xliff"></a>
+
+#### 验证合并发布的单个推送订阅的数据（复制监视器）  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器，再单击一个发布。  
   
@@ -184,7 +196,9 @@ ms.lasthandoff: 04/11/2017
   
     3.  查看 **“同步历史记录”** 选项卡 **“所选会话的最后消息”** 文本区域中的信息。  
   
-#### <a name="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor"></a>验证合并发布的所有推送订阅的数据（复制监视器）  
+<a id="to-validate-data-for-all-push-subscriptions-to-a-merge-publication-replication-monitor" class="xliff"></a>
+
+#### 验证合并发布的所有推送订阅的数据（复制监视器）  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。  
   
@@ -206,7 +220,9 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>验证事务发布中所有项目的数据  
+<a id="to-validate-data-for-all-articles-in-a-transactional-publication" class="xliff"></a>
+
+#### 验证事务发布中所有项目的数据  
   
 1.  在发布服务器上，对发布数据库执行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** 并为 **@rowcount_only**指定以下值之一：  
   
@@ -221,7 +237,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  检查代理输出以获取验证结果。 有关详细信息，请参阅[验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)。  
   
-#### <a name="to-validate-data-for-a-single-article-in-a-transactional-publication"></a>验证事务发布中单个项目的数据  
+<a id="to-validate-data-for-a-single-article-in-a-transactional-publication" class="xliff"></a>
+
+#### 验证事务发布中单个项目的数据  
   
 1.  在发布服务器上，对发布数据库执行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication**、为 **@article**指定项目名称并为 **@rowcount_only**指定以下值之一：  
   
@@ -236,7 +254,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  检查代理输出以获取验证结果。 有关详细信息，请参阅[验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)。  
   
-#### <a name="to-validate-data-for-a-single-subscriber-to-a-transactional-publication"></a>验证订阅事务发布的单个订阅服务器的数据  
+<a id="to-validate-data-for-a-single-subscriber-to-a-transactional-publication" class="xliff"></a>
+
+#### 验证订阅事务发布的单个订阅服务器的数据  
   
 1.  在发布服务器的发布数据库中，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 打开一个显式事务。  
   
@@ -261,7 +281,9 @@ ms.lasthandoff: 04/11/2017
   
 8.  检查代理输出以获取验证结果。 有关详细信息，请参阅 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>验证合并发布的所有订阅中的数据  
+<a id="to-validate-data-in-all-subscriptions-to-a-merge-publication" class="xliff"></a>
+
+#### 验证合并发布的所有订阅中的数据  
   
 1.  在发布服务器上，对发布数据库执行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** 并为 **@level**指定以下值之一：  
   
@@ -275,7 +297,9 @@ ms.lasthandoff: 04/11/2017
   
 3.  检查代理输出以获取验证结果。 有关详细信息，请参阅 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
-#### <a name="to-validate-data-in-selected-subscriptions-to-a-merge-publication"></a>验证订阅合并发布的所选订阅中的数据  
+<a id="to-validate-data-in-selected-subscriptions-to-a-merge-publication" class="xliff"></a>
+
+#### 验证订阅合并发布的所选订阅中的数据  
   
 1.  在发布服务器上，对发布数据库执行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication**指定发布，为 **@subscriber**指定订阅服务器的名称，为 **@subscriber_db**指定项目名称并为 **@level**指定以下值之一：  
   
@@ -294,7 +318,9 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  通过在运行 **Replication Merge Agent** 时指定 [-Validate](../../relational-databases/replication/agents/replication-merge-agent.md)参数还可以在同步结束时验证对合并发布的订阅。  
   
-#### <a name="to-validate-data-in-a-subscription-using-merge-agent-parameters"></a>使用合并代理参数验证订阅中的数据  
+<a id="to-validate-data-in-a-subscription-using-merge-agent-parameters" class="xliff"></a>
+
+#### 使用合并代理参数验证订阅中的数据  
   
 1.  通过以下方式之一从命令提示符下启动订阅服务器（请求订阅）或分发服务器（推送订阅）上的合并代理。  
   
@@ -310,7 +336,9 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  有关示例，请参阅本节后面的 [示例 (RMO)](#RMOExample)。  
   
-#### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>验证事务发布中所有项目的数据  
+<a id="to-validate-data-for-all-articles-in-a-transactional-publication" class="xliff"></a>
+
+#### 验证事务发布中所有项目的数据  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
@@ -330,7 +358,9 @@ ms.lasthandoff: 04/11/2017
   
 5.  如果尚未运行，则启动分发代理以同步每个订阅。 有关详细信息，请参阅 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) 或 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。 验证操作的结果将写入代理历史记录。 有关详细信息，请参阅 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   
-#### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>验证合并发布的所有订阅中的数据  
+<a id="to-validate-data-in-all-subscriptions-to-a-merge-publication" class="xliff"></a>
+
+#### 验证合并发布的所有订阅中的数据  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
@@ -342,7 +372,9 @@ ms.lasthandoff: 04/11/2017
   
 5.  对每个订阅运行合并代理以开始验证，或者等待下一个计划的代理运行。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 和 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。 验证操作的结果将写入代理的历史记录，您可以使用复制监视器查看。 有关详细信息，请参阅 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   
-#### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>验证合并发布的单个订阅中的数据  
+<a id="to-validate-data-in-a-single-subscription-to-a-merge-publication" class="xliff"></a>
+
+#### 验证合并发布的单个订阅中的数据  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
