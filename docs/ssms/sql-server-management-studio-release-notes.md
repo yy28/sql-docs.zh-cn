@@ -21,7 +21,9 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 发行说明
+<a id="sql-server-management-studio----release-notes" class="xliff"></a>
+
+# SQL Server Management Studio - 发行说明
 欢迎使用我们的 SQL Server Management Studio 公开发布版本！  此版本的 SQL Server Management Studio (SSMS) 是 SQL Server 版本外部的独立安装。 我们的目标是频繁更新其新功能、修复程序以及对 SQL Server 和 Azure SQL Database 中最新功能的支持。  
   
 若要安装最新版本的 SQL Server Management Studio，请参阅 [下载 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)。  
@@ -61,11 +63,15 @@ ms.lasthandoff: 06/23/2017
 5. **无法通过单击“帮助”或按 F1 打开帮助**  
 单击“帮助”或按 F1 可能会在一些环境中看到以下错误消息：“必须有新应用，才能打开 ms-xhelp”。 此错误为已知问题，将在即将发布的版本中得到修复。
   
-## <a name="feedback"></a>反馈  
+<a id="feedback" class="xliff"></a>
+
+## 反馈  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 客户端工具论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [在 Microsoft Connect 中提出问题或建议](https://connect.microsoft.com/SQLServer/Feedback)。  
   
-## <a name="see-also"></a>另请参阅  
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅  
 [SQL Server Management Studio 教程](../ssms/use-sql-server-management-studio.md)  
 [下载 SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [以前的 SQL Server Management Studio 版本](../ssms/previous-sql-server-management-studio-releases.md)  
