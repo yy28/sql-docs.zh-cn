@@ -2,7 +2,7 @@
 title: "Web 门户 （SSRS 本机模式） |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,26 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68cdac26293a2025a7a2cf8833d2d0f2f4f6ff8c
+ms.translationtype: MT
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Web 门户（SSRS 本机模式）
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services web 门户是一种基于 web 的体验，可用于查看报表、 移动报表，Kpi，并浏览您的报表服务器实例中的元素。 你可以使用 web 门户来管理单个报表服务器实例。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-## <a name="what-is-the-web-portal"></a>什么是 web 门户
+<a id="what-is-the-web-portal" class="xliff"></a>
+
+## 什么是 web 门户
 
 您可以使用 web 门户执行以下任务：
 
@@ -68,13 +72,17 @@ Web 门户仅用于在纯模式下运行的报表服务器。 配置为 SharePoi
 > [!NOTE]
 > 如果浏览至服务器正在其上运行的本地计算机上的 Web 门户，你可能会看到一条消息指示你不能查看此文件夹。 这是由于通用访问控制 (UAC) 以及你未以管理员身份运行浏览器的原因造成的。 你不能以管理员身份运行 Edge。 你将需要使用 Internet Explorer。 你可以远程浏览至服务器，或以管理员身份启动 Internet Explorer 并浏览至 Web 门户。 如果想要远程使用 Web 门户，则需要给为你的帐户授予文件夹的内容管理者权限。  
 
-## <a name="start-and-use-the-web-portal"></a>启动和使用 Web 门户
+<a id="start-and-use-the-web-portal" class="xliff"></a>
+
+## 启动和使用 Web 门户
 
 Web 门户是一个 web 应用程序，通过键入打开[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]在浏览器窗口的地址栏中的 URL。 启动 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]时，基于你在报表服务器中拥有的权限，所看到的页面、链接和选项会有所不同。 若要执行某项任务，必须为自己分配包括该任务的角色。  如果为某用户分配了具有完整权限的角色，则该用户可以访问用来管理报表服务器的所有应用程序菜单和页。 如果为某用户分配的角色具有查看和运行报表的权限，则该用户只能看到支持这些活动的菜单和页。 对于不同的报表服务器，甚至对于存储在单个报表服务器上的不同报表和文件夹，每个用户可以具有不同的角色分配。
 
 有关角色的详细信息，请参阅 [授予对本机模式报表服务器的权限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。
 
-### <a name="start-the-web-portal"></a>启动 web 门户
+<a id="start-the-web-portal" class="xliff"></a>
+
+### 启动 web 门户
 
 若要从浏览器中启动 web 门户，请执行以下操作：
 
@@ -84,9 +92,11 @@ Web 门户是一个 web 应用程序，通过键入打开[!INCLUDE[ssRSWebPortal
 
     默认情况下，该 URL 为 *http://[ComputerName]/reports*。
 
-    报表服务器可能已配置为使用特定的端口。 例如， *http://[ComputerName]:80/reports*或*http://[ComputerName]:8080/reports*。
+    报表服务器可能已配置为使用特定的端口。 例如， *http://[ComputerName]:80/reports* 或 *http://[ComputerName]:8080/reports*。
 
-## <a name="grouping-by-categories"></a>按类别分组
+<a id="grouping-by-categories" class="xliff"></a>
+
+## 按类别分组
 
 Web 门户将分组到不同的类别的项。 可用类别如下。
 
@@ -105,7 +115,9 @@ Web 门户将分组到不同的类别的项。 可用类别如下。
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Power BI 桌面报表和 Excel 工作薄
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
+
+### Power BI 桌面报表和 Excel 工作薄
 
 可以上传、组织和管理 Power BI 桌面报表和 Excel 工作薄的权限。 它们会在 Web 门户中被分组到一起。
 
@@ -113,13 +125,17 @@ Web 门户将分组到不同的类别的项。 可用类别如下。
 
 与其他资源文件类似，文件将存储在 Reporting Services 内。 选择其中一项会将它们下载到本地桌面。 可以通过将它们上传到报表服务器来保存已做的更改。
 
-## <a name="search-for-items"></a>搜索项目
+<a id="search-for-items" class="xliff"></a>
+
+## 搜索项目
 
 可以输入搜索术语，然后你将看到你可以访问的所有内容。 结果分为 KPI、报表、数据集和其他项。 然后可以对结果进行交互并将它们添加到你的收藏夹。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-## <a name="web-portal-tasks"></a>Web 门户任务
+<a id="web-portal-tasks" class="xliff"></a>
+
+## Web 门户任务
 
 [设置 Web 门户的品牌](../reporting-services/branding-the-web-portal.md)
 
@@ -127,7 +143,9 @@ Web 门户将分组到不同的类别的项。 可用类别如下。
 
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>另请参阅
+<a id="see-also" class="xliff"></a>
+
+## 另请参阅
 
 [使用 SQL Server 移动报表发布服务器创建移动报表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [配置 URL（SSRS 配置管理器）](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
