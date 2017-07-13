@@ -1,7 +1,7 @@
 ---
 title: "安装 Reporting 和 Internet 信息服务的并行 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,24 +17,28 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1818a4b076dd6e1c81c0a9b39b781516bdf718e0
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>安装 Reporting 和 Internet 信息服务的并行
+# 安装 Reporting 和 Internet 信息服务的并行
+<a id="install-reporting-and-internet-information-services-side-by-side" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  你可以安装和在同一台计算机上运行 SQL Server Reporting Services (SSRS) 和 Internet 信息服务 (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+你可以安装和在同一台计算机上运行 SQL Server Reporting Services (SSRS) 和 Internet 信息服务 (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
 |IIS 版本|问题|说明|  
 |-----------------|------------|-----------------|  
 |8.0，8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 保留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 保留相对于另一个应用程序的 URL 保留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 保留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
   
-## <a name="precedence-rules-for-url-reservations"></a>URL 保留的优先规则  
+## URL 保留的优先规则
+<a id="precedence-rules-for-url-reservations" class="xliff"></a>  
  必须了解 URL 保留优先规则，才能解决 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之间的互操作性问题。 优先规则可以归纳为如下表述：具有更明确定义值的 URL 保留将首先收到与该 URL 相匹配的请求。  
   
 -   指定了虚拟目录的 URL 保留将比忽略了虚拟目录的 URL 保留更为明确。  
@@ -55,7 +59,8 @@ ms.lasthandoff: 06/22/2017
   
  端口冲突的一个迹象是看到以下错误消息：“System.IO.FileLoadException: 进程无法访问该文件，因为它正在被其他进程使用。 (HRESULT 异常: 0x80070020)”。  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、 8.5 与 SQL Server Reporting Services 的 URL 保留项  
+## IIS 8.0、 8.5 与 SQL Server Reporting Services 的 URL 保留项
+<a id="url-reservations-for-iis-80-85-with-sql-server-reporting-services" class="xliff"></a>  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 保留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
 |应用程序|URL 保留|说明|请求接收情况|  
@@ -64,7 +69,8 @@ ms.lasthandoff: 06/22/2017
 |Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]接收到 http:// 的所有请求\<计算机名 > / 报表。|  
 |IIS|`http://*:80/`|针对端口 80 使用弱通配符。|接收端口 80 上尚未由其他应用程序接收的所有剩余请求。|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>通过并行部署的 IIS 8.0、 8.5 上的 SQL Server Reporting Services
+## 通过并行部署的 IIS 8.0、 8.5 上的 SQL Server Reporting Services
+<a id="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85" class="xliff"></a>
 
  当 IIS 网站的虚拟目录名与 Reporting Services 所使用的虚拟目录名相同时，IIS 和 Reporting Services 之间会出现互操作性问题。 例如，假设您具有以下配置：  
   
@@ -82,7 +88,8 @@ ms.lasthandoff: 06/22/2017
   
 -   对于手动配置的安装，请在所配置的 URL 中使用默认的命名约定。 如果以命名实例形式安装 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ，请在创建虚拟目录时包括实例名称。  
 
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
 
 [配置报表服务器 Url](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [配置 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

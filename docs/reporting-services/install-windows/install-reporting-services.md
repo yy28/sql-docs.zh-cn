@@ -2,7 +2,7 @@
 title: "安装 Reporting Services |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f54a27cbe1553291095e8124bac55941d4eb326
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="install-reporting-services"></a>安装 Reporting Services
+# 安装 Reporting Services
+<a id="install-reporting-services" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装涉及用于存储报表项、呈现报表和处理订阅和其他报表服务的服务器组件。  对于本机模式报表服务器与 SharePoint 模式报表服务器，服务器安装的步骤各不相同。 本部分包括有关安装和验证核心 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 方案的详细主题。
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+SQL Server Reporting Services 安装涉及用于存储报表项、 呈现报表和处理订阅和其他报表服务的服务器组件。  对于本机模式报表服务器与 SharePoint 模式报表服务器，服务器安装的步骤各不相同。 本部分包括有关安装和验证核心 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 方案的详细主题。
 
 > [!NOTE]
 > 查找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
@@ -47,7 +50,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > SQL Server 2016 中不包含 SQL Server Data Tools (SSDT)。 [下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
 
 [支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

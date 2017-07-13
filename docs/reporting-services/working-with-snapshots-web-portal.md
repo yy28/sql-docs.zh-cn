@@ -1,7 +1,7 @@
 ---
 title: "使用快照 （web 门户） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>使用快照（web 门户）
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# 使用快照（web 门户）
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 你可以控制如果为报表创建快照，应选择**省略号 （...）**的报表，请选择**管理**并选择**Caching**或**历史记录快照**。  
   
@@ -32,7 +34,8 @@ ms.lasthandoff: 06/22/2017
    
 可以创建缓存快照，以便可以更快地加载特定执行属性。 还可以使用历史记录快照捕获时间点。  
   
-## <a name="creating-a-cache-snapshot"></a>创建缓存快照  
+## 创建缓存快照
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 可以通过执行以下操作来创建快照。  
   
@@ -44,7 +47,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  如果要立即创建缓存快照，请选择“当我在此页面上单击‘应用’时创建缓存快照”。 如果仅选择此选项，则不会刷新快照。  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>创建、修改和删除历史记录快照  
+## 创建、修改和删除历史记录快照
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 若要使用历史记录快照，请管理报表并选择“历史记录快照”。  
   
@@ -62,7 +66,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  可以选择历史记录快照以查看它。 报表历史记录中显示的快照只能通过创建的日期和时间来区分。 无法通过直观方式判断出某个快照是为响应计划而生成的还是为响应某个手动操作而生成的。  
   
-### <a name="schedule-and-settings"></a>计划和设置  
+### 计划和设置
+<a id="schedule-and-settings" class="xliff"></a>  
   
 选择“计划和设置”将提供附加选项，用于计划和控制保持已创建快照的保留。  
   
@@ -76,7 +81,8 @@ ms.lasthandoff: 06/22/2017
   
 选择此项可以根据报表执行属性将生成的报表快照添加到报表历史记录中。 您可以设置报表执行属性以便从生成的快照运行报表。 设置此报表历史记录属性后，您可以将一段时间内生成的所有报表快照的副本放置在报表历史记录中，以跟踪这些报表快照。
 
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
 
 [Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用分页报表](working-with-paginated-reports-web-portal.md)  

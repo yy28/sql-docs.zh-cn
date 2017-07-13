@@ -2,7 +2,7 @@
 title: "Reporting Services 和 Power View 的浏览器支持 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,22 +26,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a1f9f1dd348561e46c4e01dc4f635ef83f28193
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
+# Reporting Services 和 Power View 的浏览器支持
+<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 了解有关哪些浏览器版本受支持的用于管理和查看 SQL Server Reporting Services，ReportViewer 控件和 Power View。
 
 > [!NOTE]
 > 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
 
-## <a name="browser-requirements-for-the-web-portal"></a>Web 门户的浏览器要求
+## Web 门户的浏览器要求
+<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
 
 下面是支持的 web 门户网站的浏览器的当前列表。
 
@@ -71,7 +73,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公开发布的版本
 
-## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>ReportViewer Web 控件 (2015) 的浏览器要求
+## ReportViewer Web 控件 (2015) 的浏览器要求
+<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
 
  以下是 ReportViewer Web 控件 (2015) 当前支持的浏览器的列表。 报表查看器支持从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户和 SharePoint 库中查看报表。  
 
@@ -90,9 +93,10 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公开发布的版本
 
- 如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 相集成的 SharePoint 产品，请参阅[在 SharePoint 2016 中计划浏览器支持](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
+ 如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]相集成的 SharePoint 产品，请参阅  [在 SharePoint 2016 中计划浏览器支持](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 
-### <a name="authentication-requirements"></a>身份验证要求
+### 身份验证要求
+<a id="authentication-requirements" class="xliff"></a>
 
  浏览器支持必须由报表服务器处理的特定身份验证方案，以使客户端请求获得成功。 下表标识 Windows 操作系统上运行的各浏览器支持的默认身份验证类型。
 
@@ -106,7 +110,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公开发布的版本
 
-### <a name="script-requirements-for-viewing-reports"></a>查看报表的脚本要求
+### 查看报表的脚本要求
+<a id="script-requirements-for-viewing-reports" class="xliff"></a>
 
  若要使用报表查看器，请将浏览器配置为可以运行脚本。
 
@@ -119,7 +124,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > 报表工具栏是 HTML 查看器组件的一部分。 默认情况下，该工具栏显示在浏览器窗口中呈现的每个报表的返回页首。 报表查看器提供的功能包括能够在报表中搜索信息、滚动到特定的页以及调整页大小以便查看。 有关报表工具栏或 HTML 查看器的详细信息，请参阅 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)。
 
-## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Visual Studio 中 ReportViewer Web 服务器控件的浏览器支持
+## Visual Studio 中 ReportViewer Web 服务器控件的浏览器支持
+<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
 
  ReportViewer Web 服务器控件用于在 ASP.NET Web 应用程序中嵌入报表功能。 这些控件随 Visual Studio 一起提供，并且支持与本主题中所述的其他组件不同的浏览器和浏览器版本。 用于查看应用程序的浏览器类型确定您可以在应用程序中提供的 ReportViewer 功能类型。 使用本主题中提供的表确定哪些支持的浏览器受报表功能的限制以及支持的平台。  
 
@@ -135,7 +141,8 @@ ms.lasthandoff: 06/22/2017
 
  **(+)** 最新公开发布的版本
 
-## <a name="power-view-browser-support"></a>Power View 浏览器支持
+## Power View 浏览器支持
+<a id="power-view-browser-support" class="xliff"></a>
 
 **Microsoft Windows**  
 *Windows 7、8.1、10；Windows Server 2008 R2、2012、2012 R2*
@@ -152,7 +159,8 @@ ms.lasthandoff: 06/22/2017
 
  有关 SharePoint 2016 浏览器支持的详细信息，请参阅 [在 SharePoint 2013 中计划浏览器支持](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
 
 [查找和 web 门户中查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  

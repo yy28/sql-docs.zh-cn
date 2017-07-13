@@ -1,6 +1,6 @@
 ---
 title: "使用 Reporting Services 中的 Kpi |Microsoft 文档"
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# 使用 Reporting Services 中的 KPI
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 关键绩效指标 (KPI) 是一个视觉提示，用于传达某个目标的进度量。  关键绩效指标对于团队、经理和企业很有价值，可快速评估针对可度量的目标所进行的工作进度。   
   
@@ -34,16 +36,19 @@ ms.lasthandoff: 06/22/2017
   
 -   我最少已经完成了多少？  
   
-## <a name="creating-a-dataset"></a>创建数据集  
+## 创建数据集
+<a id="creating-a-dataset" class="xliff"></a>  
 KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的数据位于第一行上。 若要创建共享数据集，可以使用报表生成器或 SQL Server Data Tools。  
   
 > **注意**：该 KPI 的数据集不必位于相同文件夹中。  
   
-## <a name="placement-of-kpis"></a>KPI 的位置  
+## KPI 的位置
+<a id="placement-of-kpis" class="xliff"></a>  
   
 可以在报表服务器中的任何文件夹中创建 KPI。  创建 KPI 前，需要考虑 KPI 的正确放置位置。 建议将它放在用户可见、同时可与周围其他报表和 KPI 相关的文件夹中。  
   
-## <a name="adding-a-kpi"></a>添加 KPI  
+## 添加 KPI
+<a id="adding-a-kpi" class="xliff"></a>  
   
 在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI”。  
   
@@ -91,7 +96,8 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>删除 KPI  
+## 删除 KPI
+<a id="removing-a-kpi" class="xliff"></a>  
   
 若要删除 KPI，可以执行以下操作。  
   
@@ -103,11 +109,13 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>刷新 KPI  
+## 刷新 KPI
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 若要刷新 KPI，你将需要配置共享数据集缓存。 有关详细信息缓存刷新计划，请参阅[处理共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)。  
   
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
   
 [Web 门户](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共享数据集](../reporting-services/work-with-shared-datasets-web-portal.md)

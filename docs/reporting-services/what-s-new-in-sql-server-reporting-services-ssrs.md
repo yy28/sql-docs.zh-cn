@@ -1,6 +1,6 @@
 ---
-title: "新增功能; 的 Reporting Services (SSRS) 中的新增功能 |Microsoft 文档"
-ms.date: 05/30/2017
+title: "Reporting Services (SSRS) 中的新增 |Microsoft 文档"
+ms.date: 07/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,13 +20,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7428fd46c73c7e32814928ae95085a704167544d
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="what39s-new-in-sql-server-reporting-services-ssrs"></a>什么 &#39; s 新中 SQL Server Reporting Services (SSRS)
+
+# SQL Server Reporting Services (SSRS) 中的新增功能
+<a id="whats-new-in-sql-server-reporting-services-ssrs" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
+
 了解有关 SQL Server 中的新增[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 这包括主要功能区域，在发布新项时进行更新。
   
   有关什么是新 SQL Server 的其他区域中的信息，请参阅[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)或[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)。
@@ -43,7 +48,8 @@ ms.lasthandoff: 06/22/2017
 
 有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>报表生成器和 SQL Server Data Tools 中现提供对 DAX 的查询设计器支持
+## 报表生成器和 SQL Server Data Tools 中现提供对 DAX 的查询设计器支持
+<a id="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools" class="xliff"></a>
 
 在最新版本的报表生成器和 SQL Server Data Tools（候选发布）中，现可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 可以在这两个工具中使用查询设计器，以拖放所需字段并代为生成 DAX 查询，而不是自行编写。  
  
@@ -54,9 +60,11 @@ ms.lasthandoff: 06/22/2017
 
 > **请注意**： 你只能使用查询设计器为 DAX 与内置在 SQL Server 2016 + SSAS 表格数据源。
  
-## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
+## SQL Server 2016 中的新增功能
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
   
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
+<a id="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a>  
  新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 已推出。 这是一个经过更新的新式门户，综合了 KPI、移动报表、分页报表、Excel 和 Power BI Desktop 文件。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代了以前版本中的报表管理器。 你还可以从 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 下载移动报表发布服务器和报表生成器，无需使用 ClickOnce 技术。
  
  若要创建移动报表，则需使用 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)]。  
@@ -65,12 +73,14 @@ ms.lasthandoff: 06/22/2017
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 的自定义品牌 
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 的自定义品牌
+<a id="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
   你可以通过品牌包使用组织的徽标和颜色来自定义 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
   有关自定义品牌的详细信息，请参阅[设置 Web 门户的品牌](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中的关键绩效指标 (KPI) 
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中的关键绩效指标 (KPI)
+<a id="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
 
 你可以在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中直接创建与你所在的文件夹有上下文关系的 KPI。 在创建 KPI 时，可以选择数据集字段并汇总这些值。 还可以选择相关内容以钻取到更多详细信息。
   
@@ -79,25 +89,29 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅 [使用 Web 门户中的 KPI](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
- ### <a name="mobile-reports"></a>移动报表
+ ### 移动报表
+<a id="mobile-reports" class="xliff"></a>
  
 Reporting Services 移动报表是针对各种外形规格进行了优化的专用报表，可以在用户访问移动设备上的报表时为其提供最佳体验。 移动报表提供各式各样的可视化效果：从时间表、类别图表和比较图表，到树状图和自定义地图。 将移动报表连接到各种数据源，包括本地 SQL Server Analysis Services 多维数据和表格数据。 在网格行和列可调整且移动报表元素灵活的设计图面上设计移动报表，这些报表可轻松缩放至任何屏幕大小。 然后，将这些移动报表保存到 Reporting Service 服务器，并在 iPad、iPhone、Android 手机和 Windows 10 设备上的浏览器或 Power BI 移动应用中进行查看和交互。
   
-#### <a name="mobile-report-publisher"></a>移动报表发布服务器  
+#### 移动报表发布服务器
+<a id="mobile-report-publisher" class="xliff"></a>  
  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]允许你创建 SQL Server 移动报表并将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
  有关详细信息，请参阅 [使用 SQL Server 移动报表发布服务器创建移动报表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
   
-#### <a name="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app"></a>在 Reporting Services 中托管的 SQL Server 移动报表可以在 Power BI 移动应用中使用  
+#### 在 Reporting Services 中托管的 SQL Server 移动报表可以在 Power BI 移动应用中使用
+<a id="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app" class="xliff"></a>  
  在 iPad 和 iPhone 上使用的 iOS 版 Power BI 移动应用现在可以显示在本地报表服务器上托管的 SQL Server 移动报表。  
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
  默认情况下，如果没有进行某些配置更改，你将无法进行连接。 有关如何才能让 Power BI 移动应用连接到报表服务器的详细信息，请参阅 [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)。
   
-### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>SharePoint 模式和 SharePoint 2016 的支持  
+### SharePoint 模式和 SharePoint 2016 的支持
+<a id="support-of-sharepoint-mode-and-sharepoint-2016" class="xliff"></a>  
  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
  
 有关详细信息，请参阅：  
@@ -108,10 +122,12 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
   
 -   [安装 Reporting Services SharePoint 模式](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
-### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4 支持  
+### Microsoft .NET Framework 4 支持
+<a id="microsoft-net-framework-4-support" class="xliff"></a>  
  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持最新版本的 Microsoft .NET Framework 4。 包括 4.0 版和 4.5.1 版。 如果没有安装任何版本的 .Net Framework 4.x， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序会在功能安装步骤安装 .NET 4.0。  
 
-### <a name="report-improvements"></a>报表改进
+### 报表改进
+<a id="report-improvements" class="xliff"></a>
 
 **HTML 5 呈现引擎：** 新的 HTML5 呈现引擎，面向“完整”Web 标准模式和新式浏览器。  新的呈现引擎不再依赖于一些老式浏览器使用的 Quirks 模式。
   
@@ -145,7 +161,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
-### <a name="subscription-improvements"></a>订阅改进  
+### 订阅改进
+<a id="subscription-improvements" class="xliff"></a>  
  
 |功能|支持的服务器模式|  
 |-------------|---------------------------|  
@@ -154,10 +171,12 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**更改订阅所有者**。 增强的用户界面，可以快速更改订阅的所有者。 旧版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 允许管理员使用脚本来更改订阅所有者。 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 版本开始，你可以使用用户界面或脚本更改订阅所有者。 当用户离开组织或者更改其在组织中的角色时，就需要更改订阅所有者，这是一项常规管理任务。|SharePoint 和本机模式|  
 |**文件共享订阅的共享凭据**。 现在，两个工作流与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 文件共享订阅共存：<br /><br /> 使用此版本中的新增功能， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 管理员可以配置单个文件共享帐户，用于一到多个订阅。 文件共享帐户在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式配置管理器的“指定文件共享帐户”中配置，然后用户即可在订阅配置页中选择“用户文件共享帐户”。<br /><br /> 使用目标文件共享的特定凭据配置单独的订阅。<br /><br /> 你还可以混合使用这两种方法，使一些文件共享订阅使用中央文件共享帐户，而其他订阅使用特定的凭据。|本机模式|  
 
-### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
+### SQL Server Data Tools (SSDT)
+<a id="sql-server-data-tools-ssdt" class="xliff"></a>  
  新版 SSDT 包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的以下项目模板：报表服务器项目向导和报表服务器项目。 有关如何下载 SSDT 的信息，请参阅 [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542)（适用于 Visual Studio 2015 的 SQL Server Data Tools）。  
 
-### <a name="report-builder-improvements"></a>报表生成器改进
+### 报表生成器改进
+<a id="report-builder-improvements" class="xliff"></a>
 
 **新的报表生成器用户界面：** 核心 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 用户界面现在使用简化的 UI 元素，给你一种现代化的观感。  
   
@@ -177,7 +196,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [高 DPI 和 Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
 
-## <a name="next-steps"></a>后续步骤
+## 后续步骤
+<a id="next-steps" class="xliff"></a>
 
 [Analysis Services 中的新增功能](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SSRS 中的 Power BI 技术预览版报表 - 发行说明](../reporting-services/reporting-services-release-notes.md)  

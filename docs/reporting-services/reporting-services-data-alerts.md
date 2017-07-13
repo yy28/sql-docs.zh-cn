@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services 数据警报 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,26 +16,30 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 86cf02b246cc8ca11e7ed490cfb6082c2c6c7760
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
+# Reporting Services 数据警报
+<a id="reporting-services-data-alerts" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向您通知令您感兴趣或对您重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。  
-  
- 数据警报消息是通过电子邮件发送的。 根据信息的重要程度，您可以选择发送消息的频率以及仅当结果变化时才发送。 您可以指定多个电子邮件收件人，这可让他人知情以改善效率和协作。  
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services 数据警报是一种数据驱动警报解决方案，可帮助你了解报表数据感兴趣或重要给您，并在恰当的时间。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。
+
+数据警报消息是通过电子邮件发送的。 根据信息的重要程度，您可以选择发送消息的频率以及仅当结果变化时才发送。 您可以指定多个电子邮件收件人，这可让他人知情以改善效率和协作。
 
 > [!NOTE]
 > 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
-  
-##  <a name="AlertingWF"></a> 数据警报体系结构和工作流  
- 下面概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报的主要方面：  
-  
+
+##  <a name="AlertingWF"></a> 数据警报体系结构和工作流
+
+下面概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报的主要方面：
+
 -   **定义和保存数据警报定义**：您运行一个报表，创建标识感兴趣的数据值的规则，定义用于发送数据警报消息的重复执行模式，并且指定警报消息的收件人。  
   
 -   **运行数据警报定义**：警报服务在计划的时间处理警报定义，检索报表数据，基于警报定义中的规则创建数据警报实例。  
@@ -54,7 +58,8 @@ ms.lasthandoff: 06/22/2017
   
  ![在 Reporting Services 警报的工作流](../reporting-services/media/rs-alertingworkflow.gif "在 Reporting Services 警报的工作流")  
   
-### <a name="reports-supported-by-data-alerts"></a>数据警报支持的报表  
+### 数据警报支持的报表
+<a id="reports-supported-by-data-alerts" class="xliff"></a>  
  您可以针对以报表定义语言 (RDL) 编写并在报表设计器或报表生成器中创建的所有类型的专业报表创建数据警报。 包含数据区域（如表和图表）的报表、具有子报表的报表以及具有多个并行列组和嵌套数据区域的复杂报表。 唯一要求是该报表至少包含一个任何类型的数据区域，并且报表数据源配置为使用存储凭据或没有凭据。 如果在报表中没有数据区域，则无法对其创建警报。  
   
  您不能对使用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]创建的报表创建数据警报。  
@@ -69,29 +74,34 @@ ms.lasthandoff: 06/22/2017
   
 -   [针对报表服务器的身份验证](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### <a name="run-reports"></a>运行报表  
+### 运行报表
+<a id="run-reports" class="xliff"></a>  
  创建数据警报定义的第一步是在 SharePoint 库中查找所需的报表，然后运行该报表。 如果在您运行报表时报表中不包含任何数据，则无法在该时间对报表创建警报。  
   
  如果报表已参数化，则指定运行此报表时要使用的参数值。 参数值将保存在针对报表创建的数据警报定义中。 在重新运行报表时，将作为处理数据警报定义的步骤使用这些值。 如果您要更改参数值，则需要使用这些参数值重新运行此报表，并针对该报表的版本创建一个警报定义。  
   
-### <a name="create-data-alert-definitions"></a>创建数据警报定义  
+### 创建数据警报定义
+<a id="create-data-alert-definitions" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报功能包括用于创建数据警报定义的数据警报设计器。  
   
  若要创建数据警报定义，请运行此报表，然后从 SharePoint 报表查看器的 **“操作”** 菜单中打开数据警报设计器。 将为报表生成报表数据馈送，并且数据馈送中的前 100 行将显示在数据警报设计器的数据预览表中。 只要您在数据警报设计器中处理警报定义，来自某个报表的所有数据馈送都将缓存。 缓存使您可以在数据馈送之间快速切换。 当您在数据警报设计器中重新打开警报定义时，将刷新数据馈送。  
   
  数据警报定义由以下各项构成：规则和子句，报表数据必须满足该条件才能触发数据警报消息；计划，用于定义发送警报消息的频率以及开始和停止发送警报消息的日期（可选）；诸如主题行及要包含在警报消息中的说明的信息；消息的收件人。 在创建警报定义后，将其保存到 SQL Server 警报数据库中。  
   
-### <a name="save-data-alert-definitions-and-alerting-metadata"></a>保存数据警报定义和警报元数据  
+### 保存数据警报定义和警报元数据
+<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
  当您在 SharePoint 集成模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，将自动创建 SQL Server 警报数据库。  
   
  数据警报定义和警报元数据保存在警报数据库中。 默认情况下，此数据库称为 ReportingServices\<GUID > _Alerting。  
   
  当您保存数据警报定义时，警报功能将为该警报定义创建一个 SQL Server 代理作业。 作业包含一个作业计划。 该计划基于您在警报定义中定义的重复执行模式。 运行该作业将启动数据警报定义的处理。  
   
-### <a name="process-data-alert-definitions"></a>处理数据警报定义  
+### 处理数据警报定义
+<a id="process-data-alert-definitions" class="xliff"></a>  
  在 SQL Server 代理作业的计划启动该警报定义的处理时，运行该报表以便刷新报表数据馈送。 警报服务将读取数据馈送，并将数据警报定义指定的规则应用于数据值。 如果一个或多个数据值符合规则，则将创建一个数据警报实例，并通过电子邮件将数据警报消息及警报结果发送给所有收件人。 结果是在创建警报实例时满足所有规则的报表数据行。 为了避免多个警报消息具有相同结果，您可以指定仅当结果更改时才发送消息。 在此情况下，创建一个警报实例，并将其保存到警报数据库中，但不生成警报消息。 如果出现错误，则也将警报实例保存到警报数据库中，并且将具有错误详细信息的警报消息发送给收件人。 本主题后面的诊断和日志记录部分包含有关日志记录和故障排除的详细信息。  
   
-### <a name="send-data-alert-messages"></a>发送数据警报消息  
+### 发送数据警报消息
+<a id="send-data-alert-messages" class="xliff"></a>  
  数据警报消息是通过电子邮件发送的。  
   
  **“从”** 行包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 电子邮件传递配置所提供的值。 **“收件人”** 行列出当您在数据警报设计器中创建该警报时指定的收件人。  
@@ -145,7 +155,8 @@ ms.lasthandoff: 06/22/2017
   
  默认情况下，MaxRetries 和 SecondsBeforeRetry 设置应用于数据警报激发的所有事件。 如果要更精细地控制重试次数和重试延迟，可为任何事件处理程序以及所有事件处理程序添加指定不同 MaxRetries 和 SecondsBeforeRetry 值的元素。  
   
-### <a name="event-handlers-and-retry"></a>事件处理程序和重试  
+### 事件处理程序和重试
+<a id="event-handlers-and-retry" class="xliff"></a>  
  事件处理程序如下所示：  
   
 |事件处理程序|Description|  
@@ -216,7 +227,8 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="DiagnosticsLogging"></a> 诊断和日志记录  
  数据警报提供了多种方法来帮助信息工作者和管理员跟踪警报以及了解警报失败的原因，并帮助管理员利用日志来了解哪些警报消息已发送给谁以及已发送的警报实例的数目等等。  
   
-### <a name="data-alert-manager"></a>数据警报管理器  
+### 数据警报管理器
+<a id="data-alert-manager" class="xliff"></a>  
  数据警报管理器列出警报定义以及帮助信息工作者和管理员了解发生故障的原因的错误信息。 失败的一些常见原因包括：  
   
 -   报表数据馈送发生了更改并且在数据警报定义规则中使用的列不再包括在数据馈送中。  
@@ -225,12 +237,14 @@ ms.lasthandoff: 06/22/2017
   
 -   基础数据源中的数据类型发生了更改并且警报定义将不再有效。  
   
-### <a name="logs"></a>日志  
+### 日志
+<a id="logs" class="xliff"></a>  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供若干日志，有助于您了解在处理数据警报定义、创建的数据警报实例等时运行的报表的详细信息。 三个日志特别有用：警报执行日志、报表服务器执行日志和报表服务器跟踪日志。  
   
  有关其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 日志的信息，请参阅 [Reporting Services 日志文件和源](../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
-#### <a name="alerting-execution-log"></a>警报执行日志  
+#### 警报执行日志
+<a id="alerting-execution-log" class="xliff"></a>  
  警报运行时服务在警报数据库的 ExecutionLogView 表中写入条目。 您可以查询表或运行以下存储过程，获取与保存到警报数据库的数据警报有关的更丰富的诊断信息。  
   
 -   ReadAlertData  
@@ -251,10 +265,12 @@ ms.lasthandoff: 06/22/2017
   
  可以使用 SQL 代理来按计划运行存储过程。 有关详细信息，请参阅 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)。  
   
-#### <a name="report-server-execution-log"></a>报表服务器执行日志  
+#### 报表服务器执行日志
+<a id="report-server-execution-log" class="xliff"></a>  
  运行报表以生成数据警报定义所基于的数据馈送。 报表服务器数据库中的报表服务器执行日志在每次运行报表时捕获信息。 你可以在数据库中的 ExecutionLog2 视图中查询详细信息。 有关详细信息，请参阅 [报表服务器 ExecutionLog 和 ExecutionLog3 视图](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
-#### <a name="report-server-trace-log"></a>报表服务器跟踪日志  
+#### 报表服务器跟踪日志
+<a id="report-server-trace-log" class="xliff"></a>  
  报表服务器跟踪日志包含报表服务器服务操作的非常详细的信息，包括由报表服务器 Web 服务和后台处理执行的操作。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。 有关详细信息，请参阅 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)。  
   
 ##  <a name="PerformanceCounters"></a> 性能计数器  
@@ -318,7 +334,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [向用户和警报管理员授予权限](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>另请参阅
+## 另请参阅
+<a id="see-also" class="xliff"></a>
 
 [数据警报设计器](../reporting-services/data-alert-designer.md)   
 [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

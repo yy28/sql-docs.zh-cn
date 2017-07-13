@@ -1,7 +1,7 @@
 ---
 title: "使用共享数据集 （web 门户） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>使用共享数据集的 web 门户
+# 使用共享数据集的 web 门户
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 使用共享数据集，你可以单独管理数据集的设置，使其和报表以及使用它的其他目录项分开。 共享数据集可以与分页报表、移动报表和 KPI 一起使用。
 
 你可以查看和管理 Web 门户中共享数据集的属性。 Web 门户可以将你启动到报表生成器中，以创建或编辑共享数据集。
 
-## <a name="create-a-shared-dataset"></a>创建共享数据集
+## 创建共享数据集
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 若要创建新的共享数据集，你可以执行以下操作。  
   
@@ -47,7 +49,8 @@ ms.lasthandoff: 06/22/2017
   
 6.  生成数据集，然后选择左上方的“保存”图标将数据集保存回报表服务器。  
   
-## <a name="manage-an-existing-shared-dataset"></a>管理现有共享数据集
+## 管理现有共享数据集
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 若要管理现有共享数据集，你可以执行以下操作。  
   
@@ -62,13 +65,15 @@ ms.lasthandoff: 06/22/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>属性
+## 属性
+<a id="properties" class="xliff"></a>
   
 在属性屏幕中，你可以更改数据集的“名称”和“描述”。 也可以“删除”、“移动”、“在报表生成器中编辑”、“下载”或“替换”。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Caching
+## Caching
+<a id="caching" class="xliff"></a>
   
 缓存数据集的数据时，你有多个选项。 只需进行简单选择即可开始操作。  
   
@@ -82,7 +87,8 @@ ms.lasthandoff: 06/22/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>缓存过期  
+### 缓存过期
+<a id="cache-expiration" class="xliff"></a>  
   
 你可以控制是要在某段时间后针对共享数据集使缓存过期，还是希望按计划使缓存过期。 你可以使用共享计划。  
   
@@ -91,7 +97,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > 设置过期时间并不会刷新缓存。 如果没有缓存刷新计划，将在下次执行数据集时刷新数据。  
   
-### <a name="cache-refresh-plans"></a>缓存刷新计划  
+### 缓存刷新计划
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 可以使用“缓存刷新计划”创建使用共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 不能覆盖标记为只读的参数值。 可以创建和使用多个刷新计划。   
   
