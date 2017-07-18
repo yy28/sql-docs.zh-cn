@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>视图  
  下图显示了查询存储视图及其逻辑关系，以及显示为蓝色实体的编译时间信息：  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **查看描述**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  发生系统崩溃时，查询存储可能会丢失不超过按照 `DATA_FLUSH_INTERVAL_SECONDS`定义的运行时数据数量。 默认值 900 秒（15 分钟）是查询捕获性能和数据可用性之间的最佳平衡。  
 如果出现内存压力，运行时统计信息会在按照 `DATA_FLUSH_INTERVAL_SECONDS`所定义的时间之前刷新到磁盘。  
-读取查询存储过程中，内存中数据和磁盘上的数据以透明方式统一。  
+读取查询存储过程中，内存中数据和磁盘上的数据以透明方式统一。
+如果会话终止或客户端应用程序重启/故障，将不会记录查询统计信息。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

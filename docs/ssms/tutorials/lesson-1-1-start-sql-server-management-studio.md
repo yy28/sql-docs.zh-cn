@@ -1,7 +1,7 @@
 ---
 title: "启动 SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: c472ec73a5b0b24f47b5bc59121eda206e285ac9
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>课程 1-1 - 启动 SQL Server Management Studio
@@ -31,8 +31,8 @@ ms.lasthandoff: 06/23/2017
 #### <a name="to-open-sql-server-management-studio"></a>打开 SQL Server Management Studio  
   
 1.  如何启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] (SSMS) 取决于操作系统。  
-* 对于具有“开始页”的较新的 Windows，在“开始页”中键入“[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]”，可显示该程序。 单击该程序以打开 SSMS。 你可能想要右键单击该程序，并将其固定到“开始页”。   
-* 对于较旧版本的 Windows，在“开始”菜单上，指向“所有程序”，再指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”。 或者在“运行”对话框中，键入“SSMS.exe”，然后单击“确定”。  
+  * 对于具有“开始页”的较新版本的 Windows，在“开始页”中键入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，可显示该程序。 单击该程序以打开 SSMS。 你可能想要右键单击该程序，并将其固定到“开始页”。   
+  * 对于较旧版本的 Windows，在“开始”菜单上，指向“所有程序”，再指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”。 或者在“运行”对话框中，键入“SSMS.exe”，然后单击“确定”。  
   
     > [!NOTE]  
     >  如果未显示 SSMS，则可能未成功安装 SSMS。 从 [下载中心](https://msdn.microsoft.com/library/mt238290.aspx)安装 SSMS。 SSMS 不会随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 自动安装。 使用最新版本访问所有功能。  
@@ -40,11 +40,14 @@ ms.lasthandoff: 06/23/2017
 2.  在下一步中，使用 SSMS 的**对象资源管理器**组件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未显示“对象资源管理器”窗格，请在“视图”菜单上，单击“对象资源管理器”。 在“对象资源管理器”菜单上，单击“连接”按钮，再单击“数据库引擎”。 此时应显示“连接到服务器”对话框。 （如果之前已安装 SSMS，那么用户设置可能使“连接到服务器”对话框自动显示。）  
   
 3.  在“连接到服务器”对话框中，完成“服务器名称”框的输入。 可以连接到三种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个。 每种类型的“服务器名称”框的格式略有不同。 选择以下格式之一：  
---  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例：在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未命名默认实例或命名实例。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例，请插入计算机的名称。 例如，如果在名为 Accounting 的计算机上运行 SSMS，并且连接到在该计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，则在“服务器名称”框中键入“Accounting”。  
---  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例：在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间，可以指定实例的名称；例如，在名为“Accounting”的计算机上，可以指定名为“Receivables”的命名实例。 若要连接到命名实例，请在“服务器名称”框中键入计算机名反斜杠实例名；例如 **Accounting\Receivables**。  
---  **Azure SQL 数据库：** SQL 数据库的服务器名称的格式为 SQL_Server_name.database.windows.net，例如 **mydb2.database.windows.net**。 如果在为服务器命名时遇到问题，请访问 Azure 门户以获取创建连接字符串的帮助。  
+  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例：**在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例为默认实例（未命名实例）或命名实例。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，请插入计算机的名称。 例如，如果在名为 Accounting 的计算机上运行 SSMS，并且连接到在该计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，则在“服务器名称”框中键入“Accounting”。  
+  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例：在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间，可以指定实例的名称；例如，在名为“Accounting”的计算机上，可以指定名为“Receivables”的命名实例。 若要连接到命名实例，请在“服务器名称”框中键入计算机名反斜杠实例名；例如 **Accounting\Receivables**。  
+  -  **Azure SQL 数据库：**SQL 数据库的服务器名称的格式为 SQL_Server_name.database.windows.net，例如 **mydb2.database.windows.net**。 如果在为服务器命名时遇到问题，请访问 Azure 门户以获取创建连接字符串的帮助。  
   
-4. 在“身份验证”区域  
+4. 在“身份验证”区域中，选择一种身份验证方法。  
+  - 如果你是计算机管理员，并且只安装了 SQL Server，请尝试使用 Windows 身份验证。  此方法也适用于配置为有权访问 SQL Server 的域用户。 由于登录尝试使用用于登录 Windows 的凭据，因此，“用户名”和“密码”框为灰显。 
+  -  如果你知道用户帐户的名称和密码，请选择“SQL Server身份验证”，然后提供用户名和密码。
+  - 如果你有最新版本的 SSMS，则拥有 3 个以上的选项可供选择，从“Active Directory 身份验证”开始。 有关这些更高级选项的信息，请参阅[使用 SQL 数据库和 SQL 数据仓库进行通用身份验证（MFA 的 SSMS 支持）](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-ssms-mfa-authentication)。  
   
 ## <a name="management-studio-components"></a>Management Studio 组件  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在专用于特定信息类型的窗口中显示信息。 数据库信息显示在对象资源管理器和文档窗口中。  
@@ -65,5 +68,6 @@ ms.lasthandoff: 06/23/2017
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [与已注册的服务器和对象资源管理器连接](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+
   
 

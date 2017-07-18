@@ -1,7 +1,7 @@
 ---
 title: "联机索引操作准则 | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
   
 -   无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 可以从发生意外故障，数据库故障转移后停止中恢复索引或**暂停**命令。 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能是在公共预览版中的 SQL Server 自 2017 年。
+- 可以从发生意外故障，数据库故障转移后停止中恢复索引或**暂停**命令。 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能为 SQL Server 2017 和 Azure SQL 数据库的公共预览版。
 
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可恢复索引重新生成注意事项
 
 > [!NOTE]
-> 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能是在公共预览版中的 SQL Server 自 2017 年。
+> 请参阅[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 此功能为 SQL Server 2017 和 Azure SQL 数据库的公共预览版。
 >
 
 当你执行恢复的挂起的联机索引重新生成以下准则将适用：

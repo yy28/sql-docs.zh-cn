@@ -1,7 +1,7 @@
 ---
 title: "以前的 SQL Server Management Studio 版本 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>以前的 SQL Server Management Studio 版本
   
 提供以下以前版本的 SQL Server Management Studio。
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![下载](../ssdt/media/download.png) [ SQL Server Management Studio 17.0 版本](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**版本信息**  
+  
+*此版本的 SSMS 使用 Visual Studio 2015 独立 shell。*  
+版本号：17.0  
+此版本的内部版本号为：14.0.17099.0
+
+## <a name="changelog"></a>更改日志  
+
+请参阅 [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release)。
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![下载](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 版本](http://go.microsoft.com/fwlink/?LinkID=840946)
 

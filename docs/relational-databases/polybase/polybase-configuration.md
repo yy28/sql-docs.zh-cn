@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 配置 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 配置
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/23/2017
   使用以下过程配置 PolyBase。  
   
 ## <a name="external-data-source-configuration"></a>外部数据源配置  
- 必须确保从 SQL Server 到外部数据源的连接。 连接类型会显著影响预期的查询性能。 例如，10Gbit 以太网链接将使 PolyBase 查询的查询响应时间比 1Gbit 以太网链接更快。  
+ 必须确保从 SQL Server 到外部数据源的连接。 连接类型会显著影响查询性能。 例如，10Gbit 以太网链接将使 PolyBase 查询的查询响应时间比 1Gbit 以太网链接更快。  
   
  必须使用 **sp_configure**配置 SQL Server，以连接到你的 Hadoop 版本或 Azure Blob 存储。 PolyBase 支持两种 Hadoop 分发：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。  有关受支持的外部数据源的完整列表的详细信息，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
  

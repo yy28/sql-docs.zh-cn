@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase 安装
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   最小硬盘空间：2GB  
   
--   必须启用 TCP/IP 连接。 （请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。）  
+-   必须启用 TCP/IP 连接。 （请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。）默认情况下，使用 SQL Server Developer 版和 Express 版禁用 TCP/IP 连接。 这种情况下，必须手动启用才能使 Polybase 正常工作。
   
  **说明**  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一帐户下运行。  
   
-    > **重要说明!!** 在 PolyBase 扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。  
+    > **重要说明！** 在 PolyBase 扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。  
     > 请参阅“扩展 PolyBase”。  
   
 5.  在“PolyBase 配置页” 上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md)（PolyBase 扩展组）。  
