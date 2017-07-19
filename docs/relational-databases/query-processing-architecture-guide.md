@@ -17,17 +17,17 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]可处理对多种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
 ## <a name="sql-statement-processing"></a>SQL 语句处理
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/05/2017
 
 `SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
 
-在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示：![query_processor_io](../relational-databases/media/query-processor-io.gif)
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 语句期间查询优化器的输入和输出如下图中所示： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 语句只定义以下内容：  
 * 结果集的格式。 它通常在选择列表中指定。 然而，其他子句（如 `ORDER BY` 和 `GROUP BY` ）也会影响结果集的最终格式。
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/05/2017
 
 从潜在的多个可能的计划中选择一个执行计划的过程称为“优化”。 查询优化器是 SQL 数据库系统的最重要组件之一。 虽然查询优化器在分析查询和选择计划时要使用一些开销，但当查询优化器选择了有效的执行计划时，这一开销将节省数倍。 例如，两家建筑公司可能拿到一所住宅的相同设计图。 如果一家公司开始时先花几天时间规划如何建造这所住宅，而另一家公司不做任何规划就开始施工，则花了时间规划项目的那家公司很可能首先完工。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 就所使用的计算资源量而言，每个可能的执行计划都具有相关成本。 查询优化器必须分析可能的计划并选择一个预计成本最低的计划。 有些复杂的 `SELECT` 语句有成千上万个可能的执行计划。 在这些情况下，查询优化器不会分析所有可能的组合， 而是使用复杂的算法查找一个执行计划：其成本合理地接近最低可能成本。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 就所使用的计算资源量而言，每个可能的执行计划都具有相关成本。 查询优化器必须分析可能的计划并选择一个预计成本最低的计划。 有些复杂的 `SELECT` 语句有成千上万个可能的执行计划。 在这些情况下，查询优化器不会分析所有的可能组合， 而是使用复杂的算法查找一个执行计划：其成本合理地接近最低可能成本。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器不只选择资源成本最低的执行计划，还选择能将结果最快地返回给用户且资源成本合理的计划。 例如，与串行处理查询相比，并行处理查询使用的资源一般更多但完成查询的速度更快。 因此如果不对服务器的负荷产生负面影响，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器将使用并行执行计划返回结果。
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/05/2017
 
 1. 分析器扫描 `SELECT` 语句并将其分解成逻辑单元（如关键字、表达式、运算符和标识符）。
 2. 生成查询树（有时称为“序列树”），以描述将源数据转换成结果集需要的格式所用的逻辑步骤。
-3. 查询优化器分析访问源表的不同方法。 然后选择返回结果速度最快且使用资源最少的一系列步骤。 更新查询树以确切地记录这些步骤。 查询树的最终、优化的版本称为“执行计划”。
+3. 查询优化器分析访问源表的不同方法， 然后选择返回结果速度最快且使用资源最少的一系列步骤。 更新查询树以确切地记录这些步骤。 查询树的最终、优化的版本称为“执行计划”。
 4. 关系引擎开始执行计划。 在处理需要基表中数据的步骤时，关系引擎请求存储引擎向上传递从关系引擎请求的行集中的数据。
 5. 关系引擎将存储引擎返回的数据处理成为结果集定义的格式，然后将结果集返回客户端。
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/05/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器用于决定何时使用索引视图的逻辑与用于决定何时对表使用索引的逻辑相似。 如果索引视图中的数据包括所有或部分 SQL 语句，而且查询优化器确定视图的某个索引是低成本的访问路径，则不论查询中是否引用了该视图的名称，查询优化器都将选择此索引。
 
-SQL 语句引用非索引视图时，分析器和查询优化器将分析 SQL 语句的源和视图的源，然后将它们解析为单个执行计划。 没有单独用于 SQL 语句或视图的计划。
+当 SQL 语句引用非索引视图时，分析器和查询优化器将分析 SQL 语句的源和视图的源，然后将它们解析为单个执行计划。 没有单独用于 SQL 语句或视图的计划。
 
 例如，请看下面的视图：
 
@@ -204,25 +204,25 @@ WHERE TableA.ColZ = TableB.Colz;
   * 聚合函数
   * `GROUP BY` 子句
   * 表引用
-* 在查询优化器考虑使用的所有访问机制中，使用索引的估计成本最低。 
+* 估计的索引使用成本是查询优化器考虑使用的所有访问机制中的最低成本。 
 * 查询中引用（直接或通过展开视图访问其基础表）的且与索引视图中的表引用相对应的每个表在该查询中都必须具有应用于表的相同提示集。
 
 > [!NOTE] 
 > 在此上下文中，不管当前事务隔离级别如何， `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示始终被认为是不同的提示。
  
-除 `SET` 选项和表提示的要求外，查询优化器也使用上述规则确定表索引是否包含查询。 不必在查询中指定其他内容即可使用索引视图。
+除 `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 不必在查询中指定其他内容即可使用索引视图。
 
-查询不必在 `FROM` 子句中显式引用索引视图，查询优化器即可使用该索引视图。 如果查询所引用的基表中的列也同时存在于索引视图中，并且查询优化器估计使用索引视图可提供最低成本的访问机制，则查询优化器会选择索引视图，其方式类似于当查询中未直接引用基表索引时选择基表索引。 当视图中包含查询未引用的列时，只要视图提供包含一个或多个查询中所指定列的最低成本选项，查询优化器即可能选择该视图。
+查询不必在 `FROM` clause for the Query Optimizer to use the indexed view. 如果查询所引用的基表中的列也同时存在于索引视图中，并且，查询优化器估计使用索引视图将提供最低成本的访问机制，则查询优化器会选择索引视图，其方式类似于当查询中不直接引用基表索引时选择基表索引。 当视图中包含非查询所引用的列时，只要视图提供包含一个或多个查询中所指定列的最低成本选项，查询优化器即可能选择该视图。
 
-查询优化器将 `FROM` 子句中引用的索引视图视为标准视图。 查询优化器在优化进程开始时将视图的定义展开至查询中。 然后，执行索引视图匹配。 可以将索引视图用于查询优化器选择的最终执行计划中，或该计划可以通过访问视图引用的基表来具体化视图中的必要数据。 查询优化器会选择成本最低的方式。
+The Query Optimizer treats an indexed view referenced in the `FROM` 子句中引用的索引视图视为标准视图。 查询优化器在优化进程开始时将视图的定义展开至查询中。 然后，执行索引视图匹配。 可以将索引视图用于查询优化器选择的最终执行计划中，或该计划可以通过访问视图引用的基表来具体化视图中的必要数据。 查询优化器会选择成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>将提示用于索引视图
 
 可以通过使用 `EXPAND VIEWS` 查询提示防止将视图索引用于查询，也可以使用 `NOEXPAND` 表提示强制将索引用于查询的 `FROM` 子句指定的索引视图。 但应该让查询优化器动态确定用于每个查询的最佳访问方法。 只在经测试证实 `EXPAND` 和 `NOEXPAND` 可显著提高性能的特定情形中使用它们。
 
-`EXPAND VIEWS` 选项指定对于整个查询，查询优化器不应使用任何视图索引。 
+`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-为视图指定了 `NOEXPAND` 时，查询优化器将考虑使用为视图定义的任何索引。 通过可选的 `NOEXPAND` 子句指定的 `INDEX()`，可强制查询优化器使用指定索引。 只能为索引视图指定`NOEXPAND` ，而不能为还未创建索引的视图指定。
+当为视图指定了 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. 通过可选的`NOEXPAND` 子句指定的 `INDEX()` clause forces the Query Optimizer to use the specified indexes. 只能为索引视图指定`NOEXPAND` ，而不能为还未创建索引的视图指定。
 
 如果在包含视图的查询中既未指定 `NOEXPAND` 也未指定 `EXPAND VIEWS` ，则展开该视图以访问基础表。 如果组成视图的查询包含表提示，则这些提示将传播到基础表。 （“视图解析”中详细说明了此过程。）只要视图的基础表中的提示集彼此相同，查询就可以与索引视图进行匹配。 在大部分情况下，这些提示彼此匹配，因为它们直接从视图继承而来。 但是，如果查询引用表而不是引用视图，且直接应用于这些表的提示并不相同，则这类查询就无法与索引视图进行匹配。 如果在视图展开后， `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示应用于查询中引用的表，则查询不适用于索引视图匹配。
 
@@ -239,7 +239,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成智能的动态计划，以便有效地利用分布式查询访问远程成员表中的数据： 
 
 * 查询处理器首先使用 OLE DB 从每个成员表中检索 CHECK 约束定义。 这样，查询处理器就可以在各成员表之间映射键值的分布。
-* 查询处理器将 SQL 语句 `WHERE` 子句中指定的键范围与用于显示行在成员表中如何分布的映射进行比较。 然后查询处理器生成查询执行计划，该计划使用分布式查询只检索那些完成 SQL 语句所需的远程行。 也可以采用这种方式生成执行计划：任何对远程成员表数据或元数据的访问，都被延迟到需要这些信息时。
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 子句中指定的键范围与显示行在成员表中如何分布的映射进行比较。 然后查询处理器生成查询执行计划，该计划使用分布式查询只检索那些完成 SQL 语句所需的远程行。 也可以采用这种方式生成执行计划：任何对远程成员表数据或元数据的访问，都被延迟到需要这些信息时。
 
 例如，有这样一个系统：其中的客户表在 Server1（`CustomerID` 从 1 到 3299999）、Server2（`CustomerID` 从 3300000 到 6599999）和 Server3（`CustomerID` 从 6600000 到 9999999）间进行分区。
 
@@ -370,7 +370,7 @@ SELECT * FROM Person.Person;
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
 
-### <a name="parameters-and-execution-plan-reuse"></a>重用参数和执行计划
+### <a name="PlanReuse"></a>参数和执行计划的重复使用
 
 使用参数（包括 ADO、OLE DB 和 ODBC 应用程序中的参数标记）有助于重用执行计划。 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 但根据简单参数化规则，可以将该查询参数化。 尝试强制参数化失败后，仍将接着尝试简单参数化。
 
-### <a name="simple-parameterization"></a>简单参数化
+### <a name="SimpleParam"></a>简单参数化
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 SQL 语句与现有的、以前编译的执行计划相匹配的能力。
 
@@ -474,7 +474,7 @@ WHERE ProductSubcategoryID = 4;
 
 您也可以指定对单个查询以及其他在语法上等效，只有参数值不同的查询进行参数化。 
 
-### <a name="forced-parameterization"></a>强制参数化
+### <a name="ForcedParam"></a>强制参数化
 
 通过指定将数据库中的所有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 语句参数化，可以覆盖 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认简单参数化行为（但会受到某些限制）。 通过在 `PARAMETERIZATION` 语句中将 `FORCED` 选项设置为 `ALTER DATABASE` 可以启用强制参数化。 强制参数化通过降低查询编译和重新编译的频率，可以提高某些数据库的性能。 能够通过强制参数化受益的数据库通常是需要处理来自源（例如，销售点应用程序）的大量并发查询的数据库。
 
@@ -525,7 +525,7 @@ WHERE ProductSubcategoryID = 4;
 * 如果二进制文本在 8,000 字节以内，将参数化为 varbinary(8000)。 如果多于 8,000 字节，则转换为 varbinary(max)。
 * Money 类型的文本，将参数化为 money。
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>强制参数化使用指南
+#### <a name="ForcedParamGuide"></a>强制参数化使用指南
 
 当把 `PARAMETERIZATION` 选项设置为 FORCED 时考虑以下事项：
 
@@ -538,7 +538,7 @@ WHERE ProductSubcategoryID = 4;
 您可以指定对单个查询和其他语法相同只有参数值不同的查询进行简单参数化，以覆盖强制参数化行为。 相反，即使数据库中禁用了强制参数化，您也可以指定仅对一组语法相同的查询进行强制参数化。 [计划指南](../relational-databases/performance/plan-guides.md) 具有此用途。
 
 > [!NOTE]
-> 当 `PARAMETERIZATION` 选项设置为 `FORCED`时，错误消息的报告可能与简单参数化有所区别：对于同样的情况，在简单参数化下可能报告的消息较少，而现在则可能报告多条错误消息，并且可能无法准确报告出现错误的行号。
+> `PARAMETERIZATION` 选项设置为 `FORCED` 时，错误消息的报告可能与 `PARAMETERIZATION` 选项设置为 `SIMPLE` 时不一样：在强制参数化下可以报告多条错误消息，而在简单参数化下可能报告的消息条数较少，因此可能无法准确报告出现错误的行号。
 
 ### <a name="preparing-sql-statements"></a>准备 SQL 语句
 
@@ -580,7 +580,7 @@ WHERE ProductID = 63;
 * 准备/执行模型可移植到其他数据库，包括早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
  
-### <a name="parameter-sniffing"></a>参数截取
+### <a name="ParamSniffing"></a>参数截取
 “参数探查”指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在编译或重新编译期间“探查”当前参数值，并将其传递给查询优化器，以便将这些参数值用于生成可能更高效的查询执行计划的这一过程。
 
 在编译或重新编译期间，将针对以下类型的批处理对参数值进行探查：
@@ -606,7 +606,7 @@ WHERE ProductID = 63;
 * 对于特定的查询，认为串行执行计划快于任何可能的并行执行计划。
 * 查询包含无法并行运行的标量运算符或关系运算符。 某些运算符可能会导致查询计划的一部分以串行模式运行，或者导致整个计划以串行模式运行。
 
-### <a name="degree-of-parallelism"></a>并行度
+### <a name="DOP"></a>并行度
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自动检测每个并行查询执行或索引数据定义语言 (DDL) 操作实例的最佳并行度。 此操作所依据的条件如下： 
 
@@ -620,7 +620,7 @@ WHERE ProductID = 63;
   创建索引、重新生成索引或删除聚集索引等索引操作，以及大量占用 CPU 周期的查询最适合采用并行计划。 例如，大型表的联接、大型的聚合和大型结果集的排序等都很适合采用并行计划。 对于简单查询（常用于事务处理应用程序）而言，执行并行查询所需的额外协调工作会大于潜在的性能提升。 为了区别能够从并行计划中受益的查询和不能从中受益的查询，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]会将执行查询或索引操作的估计开销与[并行的开销阈值](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)进行比较。 虽然不推荐，但用户可以使用 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)将默认值更改为 5。 
 
 4. 待处理的行数是否足够。  
-  如果查询优化器确定行数太少，则不会引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
+  如果查询优化器确定行数太少，则不引入交换运算符来分发行。 结果，运算符将串行执行。 以串行计划执行运算符可避免出现这样的情况：启动、分发和协调的开销超过并行执行运算符所获得的收益。
 
 5. 当前的分发内容统计信息是否可用。  
   如果不能达到最高并行度，则在放弃并行计划之前会考虑较低的并行度。  
@@ -639,9 +639,9 @@ WHERE ProductID = 63;
 
 可以使用[最大并行度](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) 服务器配置选项（[!INCLUDE[ssSDS_md](../includes/sssds-md.md)] 上的 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)）来限制并行计划执行中使用的处理器数。 通过指定 MAXDOP 查询提示或 MAXDOP 索引选项，可以用单独查询和索引操作语句来覆盖最大并行度选项。 MAXDOP 提供对单独查询和索引操作的详细控制。 例如，可以使用 MAXDOP 选项来控制（增加或减少）联机索引操作的专用处理器数。 通过这种方式，您就可以在并发用户间平衡索引操作所使用的资源。 
 
-将最大并行度选项设置为 0（默认），将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中使用所有可用的处理器（最多可达 64 个处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
+将“最大并行度”选项设置为 0 (默认值) 可使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在执行并行计划时使用所有可用的处理器（最多可达 64 台处理器）。 尽管 MAXDOP 选项设置为 0 时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将运行时目标设置为 64 个逻辑处理器，但如果需要，可以手动设置不同的值。 针对查询和索引将 MAXDOP 选项设置为 0 时，将允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在并行计划执行中针对给定的查询或索引使用所有可用的处理器（最多可达 64 个处理器）。 MAXDOP 并不是所有并行查询的强制值，而是所有符合并行性要求的查询的暂定目标值。 这意味着如果在运行时没有足够的可用工作线程，查询可能会以比 MAXDOP 服务器配置选项更低的并行度执行。
 
-请参阅 [Microsoft 支持文章](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
+请参阅 [Microsoft 支持文章](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)，了解有关配置 MAXDOP 的最佳实践。
 
 ### <a name="parallel-query-example"></a>并行查询示例
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-假定对 lineitem 和 orders 表定义了下列索引：
+假设以下索引在 `lineitem` 和 `orders` 表中进行定义：
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ Index Seek 运算符上面的 parallelism 运算符正在使用 `O_ORDERKEY` 的
 
 个别 `CREATE TABLE` 或 `ALTER TABLE` 语句可以有多个要求创建索引的约束。 这些多个索引创建操作连续执行，但每个单独的索引创建操作可以是具有多个 CPU 的计算机上的并行操作。
 
-## <a name="distributted-query-architecture"></a>分布式查询体系结构
+## <a name="distributed-query-architecture"></a>分布式查询体系结构
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用于在 Transact-SQL 语句中引用异类 OLE DB 数据源的方法：
 
@@ -791,7 +791,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>关于已分区表和索引的查询处理增强功能
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 改进了许多并行计划的已分区表的查询处理性能，更改了并行和串行计划的表示方式，并增强了编译时和运行时执行计划中所提供的分区信息。 本主题将说明这些改进并提供有关如何解释已分区表和索引的查询执行计划的指南，此外还将提供改进已分区对象的查询性能的最佳方法。 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 改进了许多并行计划的已分区表的查询处理性能，更改了并行和串行计划的表示方式，并增强了编译时和运行时执行计划中所提供的分区信息。 本主题将说明这些改进并提供有关如何解释已分区表和索引的查询执行计划的指南，此外还将提供改进已分区对象的查询性能的最佳方法。 
 
 > [!NOTE]
 > 只有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition 和 Evaluation Edition 支持已分区表和已分区索引。
@@ -802,7 +802,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
 
 现在，分区的排除任务已在此查找操作中完成。
 
-此外，查询优化器的功能也得以扩展，可以针对 `PartitionID`（作为逻辑首列）以及其他可能的索引键列执行某一条件下的查找或扫描操作，然后，对于符合第一级查找操作的条件的每个不同值，再针对一个或多个其他列执行不同条件下的二级查找。 也就是说，这种称为“跳跃扫描”的操作允许查询优化器基于某一条件来执行查找或扫描操作以确定要访问的分区，然后在该运算符内执行一个二级索引查找操作以返回这些分区中符合另一个不同条件的行。 例如，请考虑以下查询。
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` （作为逻辑首列）以及其他可能的索引键列执行某一条件下的查找或扫描操作，然后，对于符合第一级查找操作的条件的每个不同值，再针对一个或多个其他列执行不同条件下的二级查找。 也就是说，这种称为“跳跃扫描”的操作允许查询优化器基于某一条件来执行查找或扫描操作以确定要访问的分区，然后在该运算符内执行一个二级索引查找操作以返回这些分区中符合另一个不同条件的行。 例如，请考虑以下查询。
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 为求解该查询，查询处理器将执行第一级查找操作以查找包含符合条件 `T.a < 10`的行的每个分区。 这将标识要访问的分区。 然后，在标识的每个分区内，处理器将针对 b 列的聚集索引执行一个二级查找以查找符合条件 `T.b = 2` 和 `T.a < 10`的行。 
 
-下图所示为跳跃扫描操作的逻辑表示形式， 其中显示了在 a 列和 b 列中包含数据的表 T。 分区编号为 1 到 4，分区边界由垂直虚线表示。 对分区执行的第一级查找操作（图中未显示）已确定分区 1、2 和 3 符合查找条件（由为该表定义的分区和 a 列的谓词指示）。 即 `T.a < 10`。 曲线指示了跳跃扫描操作的二级查找部分所遍历的路径。 实际上，跳跃扫描操作将在这些分区的每个分区中查找符合条件 `b = 2`的行。 跳跃扫描操作的总开销等于三个单独索引查找之和。   
+下图所示为跳跃扫描操作的逻辑表示形式， 其中显示了在 `T` 列和 `a` 列中包含数据的表 `b`。 分区编号为 1 到 4，分区边界由垂直虚线表示。 对分区执行的第一级查找操作（图中未显示）已确定分区 1、2 和 3 符合查找条件（由为该表定义的分区和 `a` 列的谓词指示）， 即 `T.a < 10`。 曲线指示了跳跃扫描操作的二级查找部分所遍历的路径。 实际上，跳跃扫描操作将在这些分区的每个分区中查找符合条件 `b = 2`的行。 跳跃扫描操作的总开销等于三个单独索引查找之和。   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -943,24 +943,24 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 再举一个例子，假设表在 A 列上有四个分区，边界点为 (10, 20, 30)，在 B 列上有一个索引，并且查询有谓词子句 `WHERE B IN (50, 100, 150)`。 由于表分区基于 A 的值，因此 B 的值可以出现在任何表分区中。 这样，查询处理器将分别在四个表分区中查找三个 B 值 (50, 100, 150) 中的每一个值。 查询处理器将按比例分配工作线程，以便它可以并行执行 12 个查询扫描中的每一个扫描。
 
-|基于 A 列的表分区    |在每个表分区中查找 B 列 |
+|基于 A 列的表分区 |在每个表分区中查找 B 列 |
 |----|----|
-|表分区 1：A < 10     |B=50, B=100, B=150 |
-|表分区 2：A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|表分区 3：A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|表分区 4：A >= 30     |B=50, B=100, B=150 |
+|表分区 1：A < 10   |B=50, B=100, B=150 |
+|表分区 2：A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|表分区 3：A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|表分区 4：A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳实践
 
 为提高访问来自大型已分区表和索引的大量数据的查询性能，我们建议采用以下最佳方法：
 
-* 跨越许多磁盘创建各个条带化分区。
+* 跨越许多磁盘创建各个条带化分区。 使用旋转型磁盘时，这一点尤为重要。
 * 尽可能使用具有足够主内存的服务器以便在内存中保留频繁访问的分区或所有分区，以减少 I/O 开销。
 * 如果内存容纳不下所查询的数据，请压缩表和索引。 这会减少 I/O 开销。
 * 使用具有快速处理器的服务器以及尽可能多的处理器核，以充分利用并行查询处理能力。
 * 确保服务器具有足够的 I/O 控制器带宽。 
 * 对每个大型已分区表创建聚集索引，以充分利用 B 树扫描优化。
-* 向已分区表中大容量加载数据时，请遵循白皮书 [Loading Bulk Data into a Partitioned Table（将数据大容量加载到已分区表中）](http://go.microsoft.com/fwlink/?LinkId=154561)中的最佳做法建议。
+* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](http://msdn.microsoft.com/en-us/library/dd425070.aspx)中的最佳做法建议操作。
 
 ### <a name="example"></a>示例
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
  [Showplan 逻辑运算符和物理运算符参考](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [扩展事件](../relational-databases/extended-events/extended-events.md)
+ [扩展事件](../relational-databases/extended-events/extended-events.md)  
+ [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)
 
