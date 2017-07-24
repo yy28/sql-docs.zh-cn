@@ -6,4 +6,5 @@
 # [配置](polybase-configuration.md)  
 # [T-SQL 对象](polybase-t-sql-objects.md)  
 # [查询](polybase-queries.md)  
-# [故障排除](polybase-troubleshooting.md)  
+# [故障排除](polybase-troubleshooting.md) 
+## [PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)   
