@@ -29,9 +29,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="whats-new-in-sql-server-2016" class="xliff"></a>
-
-# SQL Server 2016 中的新增功能
+# <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
  SQL Server 2016 - 使用可缩放的混合数据库平台生成任务关键型智能应用程序，该平台内置从内存中性能和高级安全性到数据库内分析的一切功能。
  
  此页提供指向详细的 SQL Server 2016 各个组件新增功能信息的链接。   
@@ -42,16 +40,14 @@ ms.lasthandoff: 06/29/2017
  
     
  **立即试用 SQL Server！**    
- - 下载免费的 SQL Server 2016 Developer Edition！[](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
+ - 下载免费的 [**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
 [![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
  [![从评估中心下载](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx)下载最新版 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。   
 
     
-<a id="whats-new-in-sql-server" class="xliff"></a>
-
- ## SQL Server 中有什么新增功能？
+ ## <a name="whats-new-in-sql-server"></a>SQL Server 中有什么新增功能？
 各个主题的链接：
  
  - [SQL Server 安装程序](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -72,9 +68,7 @@ ms.lasthandoff: 06/29/2017
       
   
     
-<a id="more-links" class="xliff"></a>
-
-## 其他链接   
+## <a name="more-links"></a>其他链接   
  +   [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。 
 + [SQL Server 2016 数据表](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [SQL Server各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)
