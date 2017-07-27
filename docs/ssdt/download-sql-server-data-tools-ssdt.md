@@ -23,9 +23,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="download-sql-server-data-tools-ssdt" class="xliff"></a>
-
-# 下载 SQL Server Data Tools (SSDT)
+# <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** 是一款可免费下载的现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Integration Services 包、Analysis Services 数据模型和 Reporting Services 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。 此版本支持 SQL Server 2005 至 SQL Server 2017 并提供用于添加 SQL Server 2016 中的新增功能的设计环境。  
     
@@ -34,9 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ![下载](../ssdt/media/download.png) [下载数据层应用程序框架 (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
 
-<a id="sql-server-data-tools" class="xliff"></a>
-
-## SQL Server Data Tools   
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **版本信息**  
   
 版本号：17.1  
@@ -88,23 +84,17 @@ SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法�
 [俄语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
 [西班牙语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
 
-<a id="download-visual-studio" class="xliff"></a>
-
-## 下载 Visual Studio
+## <a name="download-visual-studio"></a>下载 Visual Studio
 
 * [**下载 Visual Studio 社区 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
-<a id="installing-ssdt-without-visual-studio-pre-installed" class="xliff"></a>
-
-## 在未预安装 Visual Studio 的情况下安装 SSDT
+## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>在未预安装 Visual Studio 的情况下安装 SSDT
 
 如果未在计算机上安装 Visual Studio，安装适用于 Visual Studio 2015 的 SSDT 将同时安装 Visual Studio 2015 的最低“集成 Shell”版本。 此版本的 Visual Studio 可以在任意多台计算机上免费安装和使用。 它可提供所有 SQL Server 项目类型以及 SQL Server 对象资源管理器和其他 SQL 工具体验。
 
 如果计算机上已安装 [Visual Studio 2015 社区版（或更高版本）](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)，安装 SSDT 时将向现有的 Visual Studio 安装添加完整的 SQL Server 工具。 Visual Studio 包括你可能需要使用的多种功能，例如源代码控制集成和非 SQL 语言支持。 建议使用 Visual Studio 2015 社区版或更高版本，以在开发 T-SQL 时获得最佳体验。
 
-<a id="supported-sql-versions" class="xliff"></a>
-
-## 受支持的 SQL 版本
+## <a name="supported-sql-versions"></a>受支持的 SQL 版本
   
 |项目模板|支持的 SQL 平台|  
 |-------------------|--------------------|  
@@ -112,9 +102,7 @@ SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法�
   |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 – SQL Server 2017|
   |Integration Services 包| SQL Server 2012 – SQL Server 2017    |
   
-<a id="next-steps" class="xliff"></a>
-
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
 安装 SSDT 后，阅读这些教程，了解如何使用 SSDT 创建数据库、包、数据模型和报告：  
   
 -   [面向项目的脱机数据库开发](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
@@ -125,9 +113,7 @@ SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法�
   
 -   [创建基本表报表（SSRS 教程）](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-<a id="use-ssdt-in-visual-studio-2017" class="xliff"></a>
-
-## 在 Visual Studio 2017 中使用 SSDT 
+## <a name="use-ssdt-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 SSDT 
 
 * [**下载 Visual Studio 2017**](https://www.visualstudio.com/)（[Visual Studio 2017 各版本的功能比较](https://www.visualstudio.com/vs/compare/)）
 
@@ -141,9 +127,7 @@ SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法�
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [Visual Studio 中的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 团队博客](http://blogs.msdn.com/b/ssdt/)  
