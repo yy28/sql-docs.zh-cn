@@ -18,10 +18,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase 安装
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/14/2017
   
 -   最小硬盘空间：2GB  
   
--   必须启用 TCP/IP 连接。 （请参阅 [启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。）默认情况下，使用 SQL Server Developer 版和 Express 版禁用 TCP/IP 连接。 这种情况下，必须手动启用才能使 Polybase 正常工作。
+-   必须启用 TCP/IP 才能使 Polybase 正常工作。 SQL Server 的所有版本均默认启用 TCP/IP，Developer 和 Express SQL Server 版本除外。 若要使 Polybase 在 Developer 和 Express 版本上正常工作，必须启用 TCP/IP 连接（请参阅[启用或禁用服务器网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)）。
   
  **说明**  
   

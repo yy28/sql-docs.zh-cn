@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
@@ -232,4 +232,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
 有关解决外部表的错误，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安装错误和可能的解决方案")。
+
+## <a name="see-also"></a>另请参阅
+[PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)
 

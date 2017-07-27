@@ -1,7 +1,7 @@
 ---
 title: "使用内存中 OLTP 优化 JSON 处理 | Microsoft Docs"
 ms.custom: 
-ms.date: 02/03/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/19/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用内存中 OLTP 优化 JSON 处理
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server 和 Azure SQL 数据库允许使用 JSON 格式的文本。 为了提高处理 JSON 数据的 OLTP 查询的性能，可以使用标准字符串列（NVARCHAR 类型）将 JSON 文档存储在内存优化表中。
+SQL Server 和 Azure SQL 数据库允许使用 JSON 格式的文本。 为了提高处理 JSON 数据的查询性能，可以使用标准字符串列（NVARCHAR 类型）将 JSON 文档存储在内存优化表中。 将 JSON 数据存储在内存优化表中可以利用无锁内存中数据访问来提高查询性能。
 
 ## <a name="store-json-in-memory-optimized-tables"></a>在内存优化表中存储 JSON
 下面的示例演示了包含两个 JSON 列（`Tags` 和 `Data`）的 `Product` 内存优化表：
@@ -42,17 +42,18 @@ CREATE TABLE xtp.Product(
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
-将 JSON 数据存储在内存优化表中可以利用无锁内存中数据访问来提高查询性能。
 
-## <a name="optimize-json-with-additional-in-memory-features"></a>使用其他内存中功能优化 JSON
-使用 SQL Server 和 Azure SQL 数据库中的新功能可将 JSON 功能与现有的内存中 OLTP 技术完全集成。 例如，可以执行以下操作：
- - 使用本机编译的 CHECK 约束验证内存优化表中存储的 JSON 文档的结构。
- - 使用计算列公开和强类型化 JSON 文档中存储的值。
- - 使用内存优化索引为 JSON 文档中的值编制索引。
- - 本机编译使用 JSON 文档中的值或者将结果设置为 JSON 文本格式的 SQL 查询。
+## <a name="optimize-json-processing-with-additional-in-memory-features"></a>使用其他内存中功能优化 JSON 处理
+使用 SQL Server 和 Azure SQL 数据库中的功能可将 JSON 功能与现有的内存中 OLTP 技术完全集成。 例如，可以执行以下操作：
+ - 使用本机编译的 CHECK 约束[验证内存优化表中存储的 JSON 文档的结构](#validate)。
+ - 使用计算列[公开和强类型化 JSON 文档中存储的值](#computedcol)。
+ - 使用内存优化索引[为 JSON 文档中的值编制索引](#index)。
+ - [本机编译使用 JSON 文档中的值或者将结果设置为 JSON 文本格式的 SQL 查询](#compile)。
 
-## <a name="validate-json-columns"></a>验证 JSON 列
-SQL Server 和 Azure SQL 数据库允许添加本机编译的 CHECK 约束，用于验证字符串列中存储的 JSON 文档的内容，如下面的示例中所示。
+## <a name="validate"></a>验证 JSON 列
+SQL Server 和 Azure SQL 数据库允许添加本机编译的 CHECK 约束，用于验证字符串列中存储的 JSON 文档的内容。 使用本机编译的 JSON CHECK 约束，可以确保内存优化表中存储的 JSON 文本的格式正确。
+
+下面的示例创建一个包含 JSON 列 `Tags` 的 `Product` 表。 `Tags` 列包含 CHECK 约束，其使用 `ISJSON` 函数验证列中的 JSON 文本。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -70,7 +71,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-可在包含 JSON 列的现有表中添加本机编译的 CHECK 约束：
+也可将本机编译的 CHECK 约束添加到包含 JSON 列的现有表中。
 
 ```sql
 ALTER TABLE xtp.Product
@@ -78,14 +79,14 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-使用本机编译的 JSON CHECK 约束，可以确保内存优化表中存储的 JSON 文本的格式正确。
-
-## <a name="expose-json-values-using-computed-columns"></a>使用计算列公开 JSON 值
-使用计算列可以公开 JSON 文本中的值和访问这些值，而无需重新计算从 JSON 文本中提取值的表达式，且无需重新分析 JSON 结构。 公开强类型化的、以物理方式持久保存在计算列中的值。 使用持久化计算列访问 JSON 值的速度比访问 JSON 文档中的值要快。
+## <a name="computedcol"></a>使用计算列公开 JSON 值
+使用计算列可以公开 JSON 文本中的值和访问这些值，而无需从 JSON 文本中重新提取值，且无需重新分析 JSON 结构。 使用此方式公开的值已强类型化并且以物理方式持久保存在计算列中。 使用持久化计算列访问 JSON 值的速度比直接访问 JSON 文档中的值要快。
 
 下面的示例演示如何公开 JSON `Data` 列中的以下两个值：
 -   制造产品的国家/地区。
 -   产品制造成本。
+
+在此示例中，每当 `Data` 列中存储的 JSON 文档发生更改时，计算列 `MadeIn` 和 `Cost` 就会更新。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -103,10 +104,14 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-每当 `MadeIn` 列中存储的 JSON 文档发生更改时，计算列 `Cost` 和 `Data` 就会更新。
+## <a name="index"></a>为 JSON 列中的值编制索引
+SQL Server 和 Azure SQL 数据库允许使用内存优化索引为 JSON 列中的值编制索引。 必须使用计算列公开和强类型化要编制索引的 JSON 值，如前面的示例中所述。
 
-## <a name="index-values-in-json-columns"></a>为 JSON 列中的值编制索引
-SQL Server 和 Azure SQL 数据库允许使用内存优化索引为 JSON 列中的值编制索引。 必须使用计算列公开和强类型化要编制索引的 JSON 值，如下面的示例中所示。
+可以使用标准 NONCLUSTERED 和 HASH 索引为 JSON 列中的值编制索引。
+-   NONCLUSTERED 索引可以优化按某个 JSON 值选择行范围或者按 JSON 值将结果排序的查询。
+-   HASH 索引通过指定要查找的精确值来优化选择单列或多列的查询。
+
+下面的示例通过使用两个计算列生成公开 JSON 值的表。 该示例将为一个 JSON 值创建 NONCLUSTERED 索引并为另一个 JSON 值创建 HASH 索引。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -129,12 +134,11 @@ ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
         WITH (BUCKET_COUNT=20000)
 ```
-可以使用标准 NONCLUSTERED 和 HASH 索引为 JSON 列中的值编制索引。
--   NONCLUSTERED 索引可以优化按某个 JSON 值选择行范围或者按 JSON 值将结果排序的查询。
--   通过指定要查找的确切值提取单个行或少量行时，HASH 索引可以提供最佳性能。
 
-## <a name="native-compilation-of-json-queries"></a>本机编译 JSON 查询
-最后，使用 JSON 函数本机编译包含查询的 Transact-SQL 过程、函数和触发器可以提高查询性能，减少执行这些过程所需的 CPU 周期。 下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程。
+## <a name="compile"></a>本机编译 JSON 查询
+如果过程、函数和触发器包含使用内置 JSON 函数的查询，则本机编译可以提高这些查询的性能，并减少运行这些查询所需的 CPU 周期。
+
+下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程。
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

@@ -2,7 +2,7 @@
 title: "在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,19 +15,19 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 3a11cee5097ed686d20d3bb8fcc7894138700841
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  若要维持对 **FOR JSON** 子句的输出的完全控制，请指定 **PATH** 选项。  
+若要维持对 **FOR JSON** 子句的输出的完全控制，请指定 **PATH** 选项。  
   
- 借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 结果的格式设置为 JSON 对象的数组。  
+借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 结果的格式设置为 JSON 对象的数组。  
   
 替代方法是使用 **AUTO** 选项根据 **SELECT** 语句的结构自动格式化输出。
  -   有关 **AUTO** 选项的详细信息，请参阅[在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/23/2017
 下面的一些示例展示了如何使用 **PATH** 选项指定 **FOR JSON** 子句。 使用以点分隔的列名称或使用嵌套查询来格式化嵌套结果，如下面的示例所示。 默认情况下，**FOR JSON** 输出中不包括 null 值。  
 
 ## <a name="example---dot-separated-column-names"></a>示例 - 以点分隔的列名称  
- 以下查询将 AdventureWorks Person 表的前五行格式化为 JSON。  
+以下查询将 AdventureWorks `Person` 表的前五行格式化为 JSON。  
 
-FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
+**FOR JSON PATH** 子句使用列别名或列名来确定 JSON 输出中的键名称。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
 
  **查询**  
   
@@ -58,7 +58,7 @@ SELECT TOP 5
 [{
     "Id": 1,
     "FirstName": "Ken",
-    "LastName": "Sánchez",
+    "LastName": "Sanchez",
     "Info": {
         "MiddleName": "J"
     }
@@ -89,7 +89,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>示例 - 多个表  
- 如果查询中引用了多个表，则 FOR JSON PATH 将使用列的别名嵌套每个列。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
+如果查询中引用了多个表，则 **FOR JSON PATH** 将使用列的别名嵌套每个列。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
   
  **查询**  
   

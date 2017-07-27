@@ -2,7 +2,7 @@
 title: "使用内置函数验证、查询和更改 JSON 数据 (SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,17 +18,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2b7d75694080b52e9c31e58ffd1e1f738b1035c
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  JSON 的内置支持包括本主题所述的下列内置函数。  
+JSON 的内置支持包括本主题简要介绍的下列内置函数。  
   
 -   [ISJSON](#ISJSON) 测试字符串是否包含有效 JSON。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="json-text-for-the-examples-on-this-page"></a>此页上的示例 JSON 文本
 此页上的示例使用以下包含复杂元素的 JSON 文本。
 
-```json  
+```sql 
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=N'{  
@@ -61,44 +61,44 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> 使用 ISJSON 函数验证 JSON 文本  
  **ISJSON** 函数测试字符串是否包含有效 JSON。  
   
- 如果列包含有效 JSON，则下面的示例将返回 JSON 文本。  
+下面的示例将返回其列 `json_col` 包含有效 JSON 的行。  
   
 ```sql  
-SELECT id,json_col
+SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col)>0 
+WHERE ISJSON(json_col) > 0 
 ```  
-  
- 有关详细信息，请参阅 [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)。  
+
+有关详细信息，请参阅 [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)。  
   
 ##  <a name="VALUE"></a> 使用 JSON_VALUE 函数从 JSON 文本中提取值  
- **JSON_VALUE** 函数从 JSON 字符串中提取标量值。  
+**JSON_VALUE** 函数从 JSON 字符串中提取标量值。  
   
- 下面的示例将 JSON 属性的值提取到本地变量。  
+下面的示例将嵌套的 JSON 属性 `town` 的值提取到本地变量。  
   
 ```sql  
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
+SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
 ```  
   
- 有关详细信息，请参阅 [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)。  
+有关详细信息，请参阅 [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)。  
   
 ##  <a name="QUERY"></a> 使用 JSON_QUERY 函数从 JSON 文本中提取对象或数组  
- **JSON_QUERY** 函数从 JSON 字符串中提取对象或数组。  
+**JSON_QUERY** 函数从 JSON 字符串中提取对象或数组。  
  
- 下面的示例演示了如何在查询结果中返回 JSON 片段。  
+下面的示例演示了如何在查询结果中返回 JSON 片段。  
   
 ```sql  
-SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
+SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
 ```  
   
- 有关详细信息，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。  
+有关详细信息，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。  
   
 ##  <a name="JSONCompare"></a> 对比 JSON_VALUE 与 JSON_QUERY  
- **JSON_VALUE** 和 **JSON_QUERY** 之间的主要区别在于 **JSON_VALUE** 返回标量值，而 **JSON_QUERY** 返回数组或对象。  
+**JSON_VALUE** 和 **JSON_QUERY** 之间的主要区别在于 **JSON_VALUE** 返回标量值，而 **JSON_QUERY** 返回数组或对象。  
   
- 请参考以下示例 JSON 文本。  
+请参考以下示例 JSON 文本。  
   
 ```json  
 {
@@ -108,9 +108,9 @@ ORDER BY LastName
 }  
 ```  
   
- 在此示例 JSON 文本中，数据成员“a”和“c”是字符串值，而数据成员“b”是数组。 **JSON_VALUE** 和 **JSON_QUERY** 返回以下结果：  
+在此示例 JSON 文本中，数据成员“a”和“c”是字符串值，而数据成员“b”是数组。 **JSON_VALUE** 和 **JSON_QUERY** 返回以下结果：  
   
-|Query|**JSON_VALUE** 返回|**JSON_QUERY** 返回|  
+|路径|**JSON_VALUE** 返回|**JSON_QUERY** 返回|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL 或错误|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 或错误|  
@@ -119,15 +119,15 @@ ORDER BY LastName
 |**$.c**|hi|NULL 或错误|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试 JSON_VALUE 和 JSON_QUERY  
- 通过使用包含 JSON 数据的 AdventureWorks 示例数据库运行以下示例，对本主题中所述的内置函数进行测试。 若要获取 AdventureWorks 示例数据库， [请单击此处](http://www.microsoft.com/en-us/download/details.aspx?id=49502)。  
+通过使用包含 JSON 数据的 AdventureWorks 示例数据库运行以下示例，对本主题中所述的内置函数进行测试。 若要获取 AdventureWorks 示例数据库， [请单击此处](http://www.microsoft.com/en-us/download/details.aspx?id=49502)。  
   
- 在下面的示例中，SalesOrder_json 表中的 Info 列包含了 JSON 文本。  
+在下面的示例中，`SalesOrder_json` 表中的 `Info` 列包含了 JSON 文本。  
   
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>示例 1 - 返回标准列和 JSON 数据  
- 下面的查询返回将返回标准关系列以及 JSON 列的值。  
+下面的查询返回将返回标准关系列以及 JSON 列的值。  
   
 ```sql  
-SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
+SELECT SalesOrderNumber, OrderDate, Status, ShipDate, Status, AccountNumber, TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
  JSON_VALUE(Info,'$.SalesPerson.Name') SalesPerson,
@@ -135,11 +135,11 @@ SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_VALUE(Info,'$.Customer.Name') Customer,
  JSON_QUERY(OrderItems,'$') OrderItems
 FROM Sales.SalesOrder_json
-WHERE ISJSON(Info)>0
+WHERE ISJSON(Info) > 0
 ```  
   
 ### <a name="example-2--aggregate-and-filter-json-values"></a>示例 2 - 聚合和筛选 JSON 值  
- 下面的查询将按客户名称（存储在 JSON 中）和状态（存储在普通列中）来汇总小计。 然后将按市/县（存储在 JSON 中）和 OrderDate（存储在普通列中）来筛选结果。  
+下面的查询将按客户名称（存储在 JSON 中）和状态（存储在普通列中）来汇总小计。 然后将按市/县（存储在 JSON 中）和 OrderDate（存储在普通列中）来筛选结果。  
   
 ```sql  
 DECLARE @territoryid INT;
@@ -149,22 +149,22 @@ SET @territoryid=3;
 
 SET @city=N'Seattle';
 
-SELECT JSON_VALUE(Info,'$.Customer.Name') AS Customer,Status,SUM(SubTotal) AS Total
+SELECT JSON_VALUE(Info, '$.Customer.Name') AS Customer, Status, SUM(SubTotal) AS Total
 FROM Sales.SalesOrder_json
 WHERE TerritoryID=@territoryid
- AND JSON_VALUE(Info,'$.ShippingInfo.City')=@city
- AND OrderDate>'1/1/2015'
-GROUP BY JSON_VALUE(Info,'$.Customer.Name'),Status
+ AND JSON_VALUE(Info, '$.ShippingInfo.City') = @city
+ AND OrderDate > '1/1/2015'
+GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
- **JSON_MODIFY**  函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
+JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
   
- 以下示例将更新包含 JSON 的变量中的属性的值。  
+以下示例将更新包含 JSON 的变量中的 JSON 属性的值。  
   
 ```sql  
-SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
+SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
  有关详细信息，请参阅 [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)。  

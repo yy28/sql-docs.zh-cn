@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以数据库功能的形式引入了对版本由系统控制的临时表的支持。临时表附带的内置支持可以提供有关任意时间点在表中存储的数据的信息，而不仅仅是有关在当前时刻正确的数据的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能，现在受 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持。  
+  SQL Server 2016 以数据库功能的形式引入了对经系统版本控制的时态表的支持。其附带的内置支持可以提供有关任意时间点在表中存储的数据的信息，而不仅仅是有关在当前时刻正确的数据的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能，现在受 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持。  
   
  **快速入门**  
   
@@ -155,7 +155,7 @@ SELECT * FROM Employee
 >  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（**SELECT \* FROM***\<table>* 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
- 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
+ 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

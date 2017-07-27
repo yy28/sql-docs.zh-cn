@@ -2,7 +2,7 @@
 title: "SQL Server 配置管理器 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 02/25/2016
+ms.date: 07/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -26,11 +26,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 54e170a54d3b4008a46b722734919769e2244ef1
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/23/2017
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (**mmc.exe**) 使用 **SQLServerManager\<version>.msc** 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 **SQLServerManager13.msc**）打开配置管理器。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  

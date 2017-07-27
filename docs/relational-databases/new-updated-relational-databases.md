@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
-
-# 新的和最近的更新： 关系数据库文档
+# <a name="new-and-recently-updated-relational-databases-docs"></a>新的和最近的更新： 关系数据库文档
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- 更新日期范围：&nbsp;从 2017-05-17&nbsp; 到 2017-06-30&nbsp;
+- 更新日期范围：&nbsp;从 2017-05-23&nbsp; 到 2017-07-17&nbsp;
 - *主题区域：* &nbsp; **关系数据库**。
 
 
@@ -44,9 +42,7 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## 最近创建的新文章
+## <a name="new-articles-created-recently"></a>最近创建的新文章
 
 单击以下链接可跳转到最近添加的新文章。
 
@@ -54,16 +50,28 @@ ms.lasthandoff: 07/03/2017
 1. [Server 2016 的 SQL Server 内存中 OLTP 内部组件](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [SQL 数据库中的自适应查询处理](performance/adaptive-query-processing.md)
 3. [增强隐私和使用 Microsoft SQL 平台解决 GDPR 要求的指南](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## 与摘录更新的文章
+## <a name="compact-list-of-articles-updated-recently"></a>Compact 的最近更新的文章的列表
+
+此紧凑列表提供了在摘要部分列出的所有更新文章的链接。
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>与摘录更新的文章
 
 此部分显示的摘自从最近出现了大规模更新的文章中收集的更新。
 
@@ -79,9 +87,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
-
-### 1.&nbsp; [更改内存优化表](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1.&nbsp; [更改内存优化表](in-memory-oltp/altering-memory-optimized-tables.md)
 
 更新日期：2017-06-23 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[下一篇](#TitleNum_2)）
 
@@ -126,9 +132,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
-
-### 2.&nbsp; [内存优化表中的表和行大小](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2.&nbsp; [内存优化表中的表和行大小](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 更新日期：2017-06-22 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_1) | [下一篇](#TitleNum_3)）
 
@@ -171,9 +175,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_3"/>
 
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
-
-### 3.&nbsp; [迁移后验证和优化指南](post-migration-validation-and-optimization-guide.md)
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3.&nbsp; [迁移后验证和优化指南](post-migration-validation-and-optimization-guide.md)
 
 更新日期：2017-06-21 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_2) | [下一篇](#TitleNum_4)）
 
@@ -210,11 +212,9 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_4"/>
 
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-更新日期：2017-06-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_3) | [下一篇](#TitleNum_5)）
+更新日期：2017-06-05 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_3)）
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -250,116 +250,45 @@ ms.lasthandoff: 07/03/2017
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
-
-<a name="TitleNum_5"/>
-
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
-
-### 5.&nbsp;[管理的系统版本控制临时表中历史数据保留期](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**使用临时历史记录保持期策略方法**
-
-> **注意：**使用临时历史记录保留策略方法适用于 [！包括 [sqldbesa.../../includes/sqldbesa-md.md)] 和 SQL Server 2017 从 CTP 1.3 开始。  
-
-可以是临时历史记录保持期的单个表级别配置，它允许用户创建灵活期限策略。 应用临时保留，这是简单： 它要求只有一个参数来在表创建或架构更改过程中设置。
-
-在定义保留策略后，Azure SQL 数据库启动定期检查是否启用自动数据清理符合条件的历史行。 标识匹配的行和历史记录表从其删除以透明方式，发生的后台任务来计划和运行系统。 才会检查表示一端的 SYSTEM_TIME 时间段的列上基于的历史记录表行的保留时间条件。 如果保持期内，例如，设置为六个月，适合清除表行满足以下条件：
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-在前面的示例中，我们已假设 ValidTo 列对应于 SYSTEM_TIME 时间段的末尾。
-**如何配置保留策略？**
-
-在配置的临时表的保留策略之前，请首先检查是否在数据库级别启用临时历史记录保持期：
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-数据库标志**is_temporal_history_retention_enabled**默认情况下，设置为 ON 但用户可以使用 ALTER DATABASE 语句更改它。 它还会自动在时间还原操作点后设置为 OFF。 若要启用你的数据库的临时历史记录保持期清除，请执行以下语句：
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact 的最近更新的文章的列表
-
-此 compact 列表提供了在上一节中列出的所有更新文章的链接。
-
-1. [更改内存优化表](#TitleNum_1)
-2. [内存优化表中的表和行大小](#TitleNum_2)
-3. [迁移后验证和优化指南](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [管理版本由系统控制的临时表中历史数据的保留期](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## 相关文章
+## <a name="similar-articles"></a>类似文章
 
 本节针对同一 GitHub.com 存储库 ([MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)) 中其他主题区域的最近更新的文章列出了非常相似的文章。
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### 主题区域具有新的或最近更新的文章
-
-- [新的和更新的文章 (12+2)：Advanced Analystics for SQL 文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新的和更新的文章 (0+2)：SQL 连接文档](../connect/new-updated-connect.md)
-- [新的和更新的文章 (3+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新的和更新的文章 (1+2)：Integration Services for SQL 文档](../integration-services/new-updated-integration-services.md)
-- [新的和更新的文章 (2+8)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新的和更新的文章 (4+4)：Advanced Analystics for SQL 文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新的和更新的文章 (2+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
+- [新的和更新的文章 (1+2)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新的和更新的文章 (6+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新的和更新的文章 (13+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
 - [新的和更新的文章 (1+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
-- [新的和更新的文章 (5+5)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新的和更新的文章 (2+0)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)
-- [新的和更新的文章 (0+4)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新的和更新的文章 (1+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
+- [新的和更新的文章 (8+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新的和更新的文章 (2+2)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
 - [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新的和更新的文章 (1+0)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 - [新的和更新的文章 (0+1)：Tools for SQL 文档](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### 没有新的或最近更新文章的主题区域
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
+- [新的和更新的文章 (0+0)：Integration Services for SQL 文档](../integration-services/new-updated-integration-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
-- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+0)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 
 
