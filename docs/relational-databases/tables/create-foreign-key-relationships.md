@@ -2,7 +2,7 @@
 title: "创建外键关系 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/18/2016
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Foreign Key Relationships](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx)（创建外键关系）。
 

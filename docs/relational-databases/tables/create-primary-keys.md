@@ -24,7 +24,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-primary-keys"></a>创建主键
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Primary Keys](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)（创建主键）。
 
