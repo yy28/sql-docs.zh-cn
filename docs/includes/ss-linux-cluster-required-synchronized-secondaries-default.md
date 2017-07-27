@@ -1,0 +1,2 @@
+>[!NOTE]
+>创建资源并在之后定期更新，Pacemaker 资源代理会根据可用性组的配置自动设置可用性组上的 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 值。 例如，如果可用性组具有三个同步副本，则代理将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 设置为 `1`。 有关详细信息和其他配置选项，请参阅[可用性组配置的高可用性和数据保护](..\linux\sql-server-linux-availability-group-ha.md)。 

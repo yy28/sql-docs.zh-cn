@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 2017 的新增功能 |Microsoft 文档"
+title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/19/2017
+ms.date: 07/12/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,133 +14,105 @@ caps.latest.revision: 71
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
-ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
-SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使 SQL Server 成为一个提供开发语言、数据类型、本地开发和云端开发，以及跨操作系统开发选项的平台。
+# <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
+SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题总结了最新的 SQL Server 2017 候选发布（RC1，2017 年 7 月）和社区技术预览 (CTP) 版中特定功能区域的新增功能。
 
-本主题概括了最新社区技术预览版 (CTP) 发行版中的新增功能，并提供了相关链接供详细了解特定功能领域的新增内容信息。
+**试用：** [下载 SQL Server 2017 候选发布 (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
-![info_tip](../sql-server/media/info-tip.png) 在 Linux 上运行 SQL Server！ 有关详细信息，请参阅：
--  [在 Linux 上的 SQL Server 2017 的新增功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
--  [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
+>[!TIP]
+>**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [Linux 适用的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)和 [Linux 适用的 SQL Server 2017 的新增功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)。
 
+## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>最新版本：SQL Server 2017 候选发布（RC1，2017 年 7 月）
 
-**进行试用：**    
-   -   [![从评估中心下载](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[下载 SQL Server 自 2017 年 1 社区技术预览版](http://go.microsoft.com/fwlink/?LinkID=829477)**
-
-## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>SQL Server 2017 CTP 2.1（2017 年 5 月）中的新增功能
-### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎  
-- 新 DMF， [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)，引入公开摘要级别的特性和事务日志文件的信息; 用于监视事务日志的运行状况。  
-- 此 CTP 包含对数据库引擎的 bug 修复和性能改进。
-- 有关自 2017 年 1 的详细列表 CTP 增强功能在以前的 CTP 版本，请参阅[What's New in SQL Server 2017 （数据库引擎）](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
-
-### <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-- SQL Server Reporting Services 不再可用于通过截至 CTP 2.1 的 SQL Server 安装程序安装。
-- 批注现可用于报表。 通过批注，可向报表中的内容添加透视图并与组织中的其他人进行协作。 还可在批注中包含附件。
-- 有关 SSRS 新增功能的详细信息（包括先前版本中的详细信息），请参阅 [Reporting Services 中的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。 
-- 有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
-
-### <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
-- 在此 CTP 中没有新机器学习服务功能。
-- 有关更详细的机器学习服务新增功能的新信息，包括从以前的 Ctp 详细信息请参阅[What's New in SQL Server 计算机学习 Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。  
-
-### <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS)
-- 此 CTP 中没有新的 SSAS 功能。  
-- 有关改进和 bug 修复，此版本中的更多详细信息，请参阅[What's New in SQL Server 自 2017 年 Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。  
+### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎    
+- 现在可以将 CLR 程序集添加到白名单中，作为 CTP 2.0 中描述的 `clr strict security` 功能的解决方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单。  
 
 ### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
--   你现在可以使用**Use32BitRuntime**参数。
--   日志记录的性能得到了改进。
-- 有关更多详细 SSIS 新增功能的新信息，包括从以前的 Ctp 详细信息请参阅[What's New in SQL Server 自 2017 年 Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。  
+- SSIS 中的新 Scale Out 功能在 RC1 中具有以下新功能和更改的功能。 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
+    -   Scale Out 主要角色现在支持高可用性。
+    -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。
+    -   存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
+    -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-## <a name="whats-new-in-sql-server-2017-ctp-20-april-2017"></a>SQL Server 2017 CTP 2.0（2017 年 4 月）中的新增功能
-### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
-- **可恢复的联机索引重新生成**。 通过可恢复的联机索引重新生成，可从发生故障后联机索引重新生成操作停止处恢复该操作。 例如，副本的故障转移或磁盘空间不足的情况。 还可暂停操作，随后再恢复联机索引重新生成操作。 例如，可能需要暂时释放系统资源，以便执行高优先级任务或在其他维护时段完成索引重新生成操作（如果可用的维护时段太短，不足以处理大型表格）。 最后一点，可恢复的联机索引重新生成操作不需要大量的日志空间，这允许在可恢复的重新生成操作运行时执行日志截断。 请参阅[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。
-- **ALTER DATABASE SCOPED CONFIGURATION IDENTITY_CACHE 选项**。 向 ALTER DATABASE SCOPED CONFIGURATION T-SQL 语句添加了新的选项 IDENTITY_CACHE。 此选项设置为“关”时，如果服务器意外重启或故障转移到辅助服务器，标识列的值中可避免出现空白。 请参阅[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。  
-- CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 CLR 程序集使用创建`PERMISSION_SET = SAFE`可能能够访问外部系统资源、 调用非托管的代码，并获取 sysadmin 权限。 开头[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]、`sp_configure`选项调用`clr strict security`引入的增强 CLR 程序集的安全性。 `clr strict security`默认情况下，启用并将`SAFE`和`EXTERNAL_ACCESS`程序集就像它们被标记`UNSAFE`。 `clr strict security`选项可禁用为了向后兼容，但不是建议这样做。 Microsoft 建议所有程序集进行签名的证书或非对称密钥与相应的登录名已被授予`UNSAFE ASSEMBLY`master 数据库中的权限。 有关详细信息，请参阅[CLR 严格的安全](../database-engine/configure-windows/clr-strict-security.md)。  
-- 用于多对多关系建模的图形数据库功能。 这包括新[CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)创建节点和边缘表，以及关键字的语法[匹配](../t-sql/queries/match-sql-graph.md)的查询。 有关详细信息，请参阅[图形处理与 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
-- 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解，它可以提出解决方案并自动解决已标识的问题。 自动优化[!INCLUDE[ssnoversion](../includes/ssnoversion.md)]，无论何时潜在的性能问题检测到，并使你能够应用的纠正措施，通知你，或允许[!INCLUDE[ssde](../includes/ssde-md.md)]自动修复性能问题。 有关详细信息，请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。  
--   用于改进计划质量的批处理模式自适应联接（数据库兼容级别为 140）。
--   用于改进计划质量的多语句 T-SQL TVF 交错执行（数据库兼容级别为 140）。
-- 查询存储现在还可以跟踪等待统计摘要信息。 跟踪等待统计信息类别，每个查询存储中的查询使性能疑难解答的体验，并提供更多深入了解工作负荷性能和其瓶颈，同时保留关键的 Query Store 优势的下一个级别。
-- 在属于可用性组的数据库（包括属于同一实例的数据库）中，针对所有跨数据库事务的 AlwaysOn 可用性组的 DTC 支持。 有关详细信息，请参阅[事务的 Alwayson 可用性组和数据库镜像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
-- 新建一列**modified_extent_page_count**中引入[sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)来跟踪中的数据库的每个数据库文件差异更改。
-- [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md)现在支持加载到的用户使用的默认文件组以外的文件组的表**ON**关键字。
-- SQL Server 安装程序支持最多指定初始 tempdb 文件大小**256 GB (262144 MB)**每个文件以及一条警告如果文件大小设置为值大于**1 GB**和如果 IFI 未启用。
-- 新的动态管理视图 (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)引入来跟踪每个数据库版本存储使用情况。
-- 新 DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)引入来公开类似于 DBCC LOGINFO VLF 信息。
-- 系统版本控制临时表现在支持级联删除和级联更新。
-- 此 CTP 包含对数据库引擎的 bug 修复。
-- 有关自 2017 年 1 的详细列表 CTP 增强功能在以前的 CTP 版本，请参阅[What's New in SQL Server 2017 （数据库引擎）](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。   
+## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎  
+SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
+- 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
+- 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”选项可使用户避免标识列值的差值。 请参阅[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
+- 自动数据库优化提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
+- 用于建模多对多关系的新图形数据库功能包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法和用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
+- 默认情况下，启用名为 `clr strict security` 的 sp_configure 选项，以增强 CLR 程序集的安全性。 请参阅 [CLR 严格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
+- 安装程序现在支持最多将每个文件的初始 tempdb 文件大小指定为 256 GB (262,144 MB)/文件；如果文件大小设置为大于 1 GB 且未启用 IFI，则会出现警告。 (CTP 2.0)
+- [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中的 **modified_extent_page_count** 列跟踪每个数据库文件中的差异更改，从而启用基于数据库中已更改页面百分比执行差异备份或完全备份的智能备份解决方案。 (CTP 2.0)
+- [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 语法现支持使用 ON 关键字将表加载到用户默认文件组以外的文件组。 (CTP 2.0)
+- 现在，在属于 AlwaysOn 可用性组的全部数据库（包括属于同一实例的数据库）中支持跨数据库事务。 请参阅 [事务 - AlwaysOn 可用性组和数据库镜像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
+- 新的“可用性组”功能包括无群集支持、最小副本提交可用性组设置和 Windows-Linux 跨操作系统迁移和测试。 (CTP 1.3)
+- 新的动态管理视图：
+    - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 公开摘要级别特性和有关事务日志文件的信息，这对于监视事务日志的运行状况很有用。 (CTP 2.1)
+    - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) 跟踪每个数据库的版本存储使用情况，有助于根据每个数据库的版本存储使用情况主动规划 tempdb 大小。 (CTP 2.0)
+    - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) 公开 VLF 信息以监视、警告和避免潜在的事务日志问题。 (CTP 2.0)
+    - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 是新的动态管理视图，用于检查统计信息。 (CTP 1.3)
+    - sys.dm_os_host_info 为 Windows 和 Linux 提供操作系统信息。 (CTP 1.0)
+- “数据库优化顾问”(DTA) 具有其他选项和改进的性能。 (CTP 1.2)
+- 内存中增强功能包括支持内存优化表中的计算列、完全支持本机编译的模块中的 JSON 函数，以及本机编译的模块中的 CROSS APPLY 运算符。 (CTP 1.1)
+- 新的字符串函数是 CONCAT_WS、TRANSLATE 和 TRIM，而 STRING_AGG 函数现在支持 WITHIN GROUP。 (CTP 1.1)
+- 对于 CSV 和 Azure Blob 文件，可使用新的批处理访问选项BULK INSERT 和 OPENROWSET(BULK...)）。 (CTP 1.1)
+- 内存优化对象增强功能包括 sp_spaceused、消除内存优化表的 8 个索引限制、内存优化表的 sp_rename 和本机编译的 T-SQL 模块，以及适用于本机编译的 T-SQL 模块的 CASE 和 TOP (N) WITH TIES。 现在可在 Azure 存储中存储、备份和还原内存优化文件组文件。 (CTP 1.0)
+- “DATABASE SCOPED CREDENTIAL”是一个新的安全对象类，支持 CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP 和 VIEW DEFINITION 权限。 现在，ADMINISTER DATABASE BULK OPERATIONS 在 sys.fn_builtin_permissions 中可见。 (CTP 1.0)
+- 已添加数据库 COMPATIBILITY_LEVEL 140。 (CTP 1.0)。  
 
-### <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
-- SQL Server R Services 有了一个新名称，用于反映对 CTP 2.0 中的 Python 语言的支持。 现可使用 SQL Server 机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本。 或者安装 Microsoft 机器学习服务器（独立），以部署和使用不需要 SQL Server 的 R 和 Python 模型。 
-- 这两个平台都包括用于分布式机器学习的 MicrosoftML 新算法以及 Microsoft R 的最新版本（版本 9.1.0）。
-- 有关详细信息，请参阅[机器学习的最近更新](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
+有关详细信息，请参阅 [SQL Server 2017 数据库引擎中的新增功能](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
+- SSIS 中的新 Scale Out 功能具有以下新功能和更改的功能。 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
+    -   Scale Out 主要角色现在支持高可用性。
+    -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。
+    -   存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
+    -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。
+- 在新“Scale Out for SSIS”功能中，现在可在触发执行时使用 Use32BitRuntime 参数。 (CTP 2.1)
+- SQL Server 2017 Integration Services (SSIS) 现在支持 Linux 适用的 SQL Server，并且新包允许在 Linux 上从命令行运行 SSIS 包。 有关详细信息，请参阅[宣布 SSIS 支持 Linux 的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
+- 新的“Scale Out for SSIS”功能使在多台计算机上运行 SSIS 更为轻松。 请参阅 [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md)。 (CTP 1.0)
+- OData 源和 OData 连接管理器现支持连接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 源。 (CTP 1.0)
 
-## <a name="whats-new-in-sql-server-2017-ctp-14-march-2017"></a>SQL Server 2017 CTP 1.4（2017 年 3 月）中的新增功能
-### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
-- 此 CTP 中没有新的数据库引擎功能。
-- 此 CTP 包含对数据库引擎的 bug 修复。
-- 有关自 2017 年 1 的详细列表 CTP 增强功能在以前的 CTP 版本，请参阅[What's New in SQL Server 2017 （数据库引擎）](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
+有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
 
-### <a name="sql-server-r-services"></a>SQL Server R Services
-- 此 CTP 中没有新的 R Services 功能。
-- 有关 R Services 新增功能的详细信息（包括以前的 CTP 中的详细信息），请参阅 [SQL Server R Services 中的新增功能](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)。  
+## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
+SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强功能。 其中包括：
+- 作为 Analysis Services 默认安装选项的表格模式。 (CTP 2.0)
+- 用于保护表格模型元数据的对象级安全性。 (CTP 2.0)
+- 可基于日期字段轻松创建关系的日期关系。 (CTP 2.0)
+- 新的“获取数据” (Power Query) 数据源，以及现有的 DirectQuery 数据源支持 M 查询。 (CTP 2.0) 
+- 用于 SSDT 的 DAX 编辑器。 (CTP 2.0)
+- 编码提示，一种用于优化大型内存中表格模型的数据刷新的高级功能。 (CTP 1.3)
+- 支持针对表格模型的 1400 兼容级别。 若要新建或将现有表格模型项目升级到 1400 兼容级别，请下载并安装 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
+- 1400 兼容级别的表格模型的新式获取数据体验。 请参阅 [Analysis Services 团队博客](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
+- Hide Members 属性可隐藏不规则层次结构中的空白成员。 (CTP 1.1)
+- 新的详细信息行最终用户操作可显示聚合信息的详细信息。 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 和 DETAILROWS 函数用于创建详细信息行表达式。 (CTP 1.1)
+- DAX IN 运算符可指定多个值。 (CTP 1.1)
 
-### <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-- 此 CTP 中没有新的 SSRS 功能。
-- 有关 SSRS 新增功能的详细信息（包括先前版本中的详细信息），请参阅 [Reporting Services 中的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。 
+有关详细信息，请参阅 [SQL Server Analysis Services 2017 中的新增功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
-### <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS)
-- 此 CTP 中没有新的 SSAS 功能。  
-- 有关详细信息，包括新的 Analysis Services 的 SSDT 和 SSMS，最新预览版本中的新增功能，请参阅[What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。  
+## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
+自 CTP 2.1 起，不可再通过 SQL Server 安装程序安装 SSRS。 转到 Microsoft 下载中心[下载 Power BI 报表服务器的 2017 年 5 月预览版和针对 Power BI 报表服务器进行优化的 Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=55253)。 有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+- 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。 (CTP 2.1)
+- 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
-### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-- 此 CTP 中没有新的 SSIS 功能。
-- 有关更多详细 SSIS 新增功能的新信息，包括从以前的 Ctp 详细信息请参阅[What's New in Integration Services 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。  
+有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
+SQL Server R 服务现在已重命名为 SQL Server机器学习服务，以反映对除了 R 语言之外的 Python 的新支持。 可以使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本，或者安装 Microsoft 机器学习服务器（独立）来部署和使用不需要 SQL Server 的 R 和 Python 模型。 这两个平台都包括用于分布式机器学习的 MicrosoftML 新算法以及 Microsoft R 的最新版本（版本 9.1.0）。 (CTP 2.0)
+- 与 Python 结合使用的机器学习包括了 revoscalepy 模块，该模块支持 RevoScaleR 中提供的分布式算法和计算上下文的子集。 
+- 可以通过使用新的 rxExecBy 函数从 R 并行创建多个模型。 支持的计算上下文包括 RxSpark 和 RxInSQLServer。 (CTP 2.0)
 
-## <a name="whats-new-in-sql-server-2017-ctp-13-february-2017"></a>SQL Server 2017 CTP 1.3（2017 年 2 月）中的新增功能
-### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
-- 间接检查点性能改进。
-- 新增了对“无群集可用性组”的支持。
-- 添加了“最小复制提交可用性组”设置。
-- 可用性组现可跨 Windows-Linux 工作，从而实现跨操作系统的迁移和测试。
-- 添加的临时表保留策略支持。 有关详细信息，请参阅[管理保留历史数据的系统版本控制的临时表中](../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#using-temporal-history-retention-policy-approach)。
-- New DMV SYS.DM_DB_STATS_HISTOGRAM
-- 新增了对联机非聚集列存储索引生成和重新生成的支持
-- 5 个新的动态管理视图，可返回有关 Linux 进程的信息。 有关详细信息，请参阅 [Linux 进程动态管理视图](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md)。   
-- 添加了[sys.dm_db_stats_histogram (TRANSACT-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) ，用于检查统计信息。
+有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-### <a name="sql-server-analysis-services-ssas-ctp-13"></a>SQL Server Analysis Services (SSAS) (CTP 1.3)
-- 编码提示 - 一种用于优化大型内存中表格模型处理（数据刷新）的高级功能。 若要了解详细信息，请参阅[What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。 
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 与 SQL Server 工程团队合作 
-- [堆栈溢出 (tag sql-server)](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有关 R 的一般讨论](https://www.reddit.com/r/SQLServer/)
-
-## <a name="see-also"></a>另请参阅    
-- ![发行说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) [SQL Server 自 2017 年 1 发行说明](../sql-server/sql-server-2017-release-notes.md)。 
-- [版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)
-- [硬件和软件安装要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-- [SQL Server 安装向导](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [安装 SQL Server 维护服务更新](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
- 
- ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+## <a name="next-steps"></a>后续步骤
+- 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。
+- 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
 

@@ -14,15 +14,15 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
-本主题介绍 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的限制和问题。 有关相关信息，请参阅以下：
+本主题介绍 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的限制和问题。 相关信息请参见以下内容：
 
 - [SQL Server 自 2017 年中的新增](../sql-server/what-s-new-in-sql-server-2017.md)。
 - [SQL Server 上 Linux 发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
@@ -31,6 +31,16 @@ ms.lasthandoff: 06/23/2017
  **进行试用：**    
    -   [![从评估中心下载](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  从 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 评估中心 **[下载](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候选发布（RC1 - 2017 年 7 月）
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS)（RC1 - 2017 年 7 月）
+- **问题和客户影响：**存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
+- **解决方法：**如果现有脚本在 Scale Out 中运行包，则必须将参数名称从 runincluster 更改为 runinscaleout，以使脚本在 RC1 中正常运行。
+
+- **问题和客户影响：**SQL Server Management Studio (SSMS) 17.1及更早版本无法在 RC1 的 Scale Out 中触发包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 SSMS 的版本 17.2 及更高版本支持 Scale Out 中的新参数名称和包执行。 
+- **解决方法：**SSMS 版本 17.2 可用之前，可以使用 SSMS 的现有版本生成包执行脚本，然后在脚本中将 runincluster 参数的名称更改为 runinscaleout，并运行该脚本。
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 自 2017 年 1 CTP 2.1 (2017 年 5 月)
 ### <a name="documentation-ctp-21"></a>文档 (CTP 2.1)
 - **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  特定于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文章内容将通过**适用于**标注。 
@@ -96,78 +106,10 @@ ms.lasthandoff: 06/23/2017
 
    托管次要副本的 SQL Server 实例即可恢复。
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>SQL Server 自 2017 年 1 CTP 1.4 (自 2017 年 3 月)
-
-### <a name="documentation-ctp-14"></a>文档 (CTP 1.4)
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  特定于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文章内容将通过**适用于**标注。 
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>SQL Server 自 2017 年 1 CTP 1.3 (自 2017 年 2 月)
-### <a name="supported-installation-scenarios-ctp-13"></a>支持的安装方案 (CTP 1.3)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 仅作为测试版本。  不支持生产部署。 建议在虚拟机上安装和测试 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 。
-
-### <a name="documentation-ctp-13"></a>文档 (CTP 1.3)
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  特定于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文章内容将通过**适用于**标注。 
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>此 CTP 版本不支持 CDC 组件
--   **问题和对客户的影响**：此 CTP 版本不支持 CDC 控制任务、CDC 源和 CDC 拆分器。
--   **解决方法：**没有解决方法。
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>SQL Server 自 2017 年 1 CTP 1.2 (2017 年 1 月)
-### <a name="supported-installation-scenarios-ctp-12"></a>支持的安装方案 (CTP 1.2)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 仅作为测试版本。  不支持生产部署。 建议在虚拟机上安装和测试 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 。
-
-### <a name="sql-server-database-engine-ctp-12"></a>SQL Server 数据库引擎 (CTP 1.2)
-- **问题和对客户的影响：** 在某些情况下，MSSQLSERVER 服务会一直处于“正在启动”状态。
-- **解决方法：** 要解决此问题：
-  -  需在 `mssqlserver` 服务和 `keyiso` 服务之间创建依赖关系。 执行此操作的一种方法是从提升的命令提示符下运行以下命令： `sc config mssqlserver depend= keyiso`
-  - 重新启动计算机。
-
-### <a name="documentation-ctp-12"></a>文档 (CTP 1.2)
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  特定于 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文章内容将通过**适用于：**标注。 
-- **问题和对客户的影响：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>如果安装了 SSIS Scale Out，删除 SSIS 目录可能会失败
-**问题和对客户的影响**：如果计算机上安装了 SSIS Scale Out 功能，删除 SSISDB 目录数据库可能会失败，错误如下：“无法删除登录名‘login’  ，因为此用户当前已登录”。
-   
-**解决方法**：
--   在 Scale Out Master 计算机上，运行命令“services.msc”，打开“服务”窗口。 停止 SQL Server Integration Services Cluster Master 服务。
--   在连接到主服务器的 Scale Out Worker 计算机上，运行命令“services.msc”，打开“服务”窗口。 停止 SQL Server Integration Services Cluster Worker 服务。
-
-现在可以删除 SSISDB 目录数据库。
-
-### <a name="sql-server-master-data-services-ctp-12"></a>SQL Server Master Data Services (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>当实体事务日志类型设置为属性时，事务可能无法正常运行
-**问题和对客户的影响：** 在 **中将实体事务日志类型设置为“属性”**[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] （默认值为“成员”） 时，以下方案会失败：
-
-* 网站中不显示实体更改的事务。
-* 无法打开网站上的“事务”  页并撤消事务。
-* 在网站中，无法使用事务批注更新实体。
-
-**解决方法：**没有解决方法。
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>将“仅复制提交的版本”  设置为 false 时，复制版本可能无法正常运行
--  **问题和对客户的影响：** 将“仅复制提交的版本”  设置设置为“否”  （默认值为“是” ）时，复制版本操作可能失败。 没有错误消息。
--  **解决方法：**没有解决方法。
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 与 SQL Server 工程团队合作 
 - [堆栈溢出（标记 sql-server）- 询问技术问题](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 论坛 - 询问技术问题](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有关 R 的一般讨论](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-
