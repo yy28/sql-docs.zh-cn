@@ -22,9 +22,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# 列存储索引 - 新增功能
+# <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   列存储功能汇总可用于各个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、最新版 Azure SQL 数据库 Premium Edition、Azure SQL 数据仓库和并行数据仓库。  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > 对于 Azure SQL 数据库，列存储索引仅在 Premium Edition 中可用。
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## 产品版本的功能摘要  
+## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了列存储索引的主要功能以及提供这些功能的产品。  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 将添加这些新功能。
 
-<a id="functional" class="xliff"></a>
-
-### 功能
+### <a name="functional"></a>功能
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引中不支持持久化列。无法创建关于具有计算列的列存储索引的非聚集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并启用实时运行分析。  
   
-<a id="functional" class="xliff"></a>
-
-### 功能  
+### <a name="functional"></a>功能  
   
 -   一个行存储表可以有一个可更新的非聚集列存储索引。 以前，非聚集列存储索引是只读的。  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   列存储索引有一个压缩延迟选项，该选项可以最大限度地减少事务工作负荷对实时运行分析的影响。  此选项允许通过频繁地更改行来保持稳定，然后再将这些行压缩到列存储中。 有关详细信息，请参阅[创建列存储索引 (Transact SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) 和[开始使用列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### 数据库兼容级别 120 或 130 的性能  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>数据库兼容级别 120 或 130 的性能  
   
 -   列存储索引支持读提交快照隔离级别 (RCSI) 和快照隔离 (SI)。 这样可以在无锁的情况下进行事务一致性分析查询。  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   谓词下推可加快查询在比较 [v]char 或 n[v]char 类型的字符串时的速度。 这适用于常用的比较运算符，包括 LIKE 这样的使用位图筛选器的运算符。 这适用于 SQL Server 支持的所有排序规则。  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### 数据库兼容级别 130 的性能  
+### <a name="performance-for-database-compatibility-level-130"></a>数据库兼容级别 130 的性能  
   
 -   对于使用任何下述操作的查询，新提供了批处理模式执行支持：  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   内存优化表查询可以有 SQL 互操作模式的并行计划，不管是按行存储索引方式还是按列存储索引方式访问数据  
   
-<a id="supportability" class="xliff"></a>
-
-### 可支持性  
+### <a name="supportability"></a>可支持性  
  以下系统视图是针对列存储的新视图：  
   
 -   [sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### 限制  
+### <a name="limitations"></a>限制  
   
 -   针对聚集列存储索引定义 b 树索引时，会禁用 MERGE。  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   对于内存中表，基于列存储索引的查询仅在互操作模式下运行，不在内存中本机模式下运行。 支持并行执行。  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014 引入了聚集列存储索引作为主存储格式。 这样就可以进行常规加载以及更新、删除和插入操作。  
   
 -   表可以使用聚集列存储索引作为主表存储。 不允许在表上使用其他索引，但可对聚集列存储索引进行更新，因此可执行常规加载并对各个行进行更改。  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   对于多线程查询来说，以下运算符以批处理模式运行：scan、filter、project、join、group by 和 union all。  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012 引入了非聚集列存储索引作为另一基于行存储表的索引类型，并为基于列存储数据的查询引入了批处理。  
   
 -   一个行存储表可以有一个非聚集列存储索引。  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   批处理的查询性能会翻倍，或者说批处理会改善查询性能，但这仅适用于并行执行查询的情况。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  列存储索引指南   
  列存储索引数据加载   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
