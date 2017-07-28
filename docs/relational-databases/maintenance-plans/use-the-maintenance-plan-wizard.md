@@ -1,6 +1,6 @@
 ---
 title: "使用维护计划向导 | Microsoft Docs"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
@@ -110,7 +110,7 @@ ms.lasthandoff: 04/11/2017
   
                 -   如果选择 **“每天”**，请在 **“执行间隔”** 框中输入重复作业计划的频率（天）。  
   
-                -   如果选择 **“每周”**，请在 **“执行间隔”** 框中输入重复作业计划的频率（周）。 选择运行作业计划的一周中的某天或某些天。  
+                -   如果选择 **“每周”**，请在 **“执行间隔”** 框中输入重复作业计划的频率（周）。 选择在其运行作业计划每周天数。  
   
                 -   如果选择 **“每月”**，可以选择 **“天”** 或 **“特定日期”**。  
   
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/11/2017
      将数据库精简为连续页，但不释放这些页，因此数据库文件不会收缩。 如果希望数据库再次扩大，但不希望重新分配空间，则使用此选项。 使用此选项时，数据库文件不会尽可能地收缩。 这将使用 NOTRUNCATE 选项。  
   
      **将释放的空间归还给操作系统**  
-     将数据库精简为连续页，并将这些页释放回操作系统，以供其他程序使用。 此数据库文件将尽可能地收缩。 这将使用 TRUNCATEONLY 选项。 这是默认选项。  
+     将数据库精简为连续页，并将这些页释放回操作系统，以供其他程序使用。 这将使用 TRUNCATEONLY 选项。 这是默认选项。  
   
 ## <a name="define-the-index-tasks"></a>定义索引任务  
   
@@ -262,7 +262,7 @@ ms.lasthandoff: 04/11/2017
     > **注意：** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      “MAXDOP”复选框  
-     对于 DBCC CHECKDB，替代 sp_configure 的最大并行度配置选项。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     对于 DBCC CHECKDB，替代 sp_configure 的最大并行度配置选项。 有关详细信息，请参阅 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### <a name="define-the-update-statistics-task"></a>定义更新统计信息任务  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 04/11/2017
      “为每个数据库创建子目录”复选框  
      在指定磁盘目录下创建一个子目录，指定的磁盘目录包含维护计划中要备份的每一个数据库的数据库备份。  
   
-    > **重要说明!!** 子目录将从父目录继承权限。 请限制相关权限，以避免未经授权的访问。  
+    > **重要说明！** 子目录将从父目录继承权限。 请限制相关权限，以避免未经授权的访问。  
   
      “文件夹”框  
      指定用来放置自动创建的数据库文件的文件夹。 如果选择 URL 作为备份目标，则禁用该选项。  
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/11/2017
      **SQL 凭据**  
      选择用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
-    > **重要说明!!** 单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 主题中的示例代码，使用 Transact-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”**和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
+    > **重要说明！** 单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 主题中的示例代码，使用 Transact-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”**和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
      **Azure 存储容器**  
      指定 Windows Azure 存储容器的名称  
