@@ -1,7 +1,7 @@
 ---
 title: "“重新组织索引”任务（维护计划）| Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: c07ca6e5a69f368d916c700dbc949726f198af50
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
@@ -62,12 +62,17 @@ ms.lasthandoff: 06/22/2017
   
  **压缩大型对象**  
  在可能的情况下，释放表和视图的空间。 此选项使用 `ALTER INDEX LOB_COMPACTION = ON`。  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
  **查看 T-SQL**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
 >  当受影响的对象很多时，可能需要相当长的时间才可显示。  
+
   
 ## <a name="new-connection-dialog-box"></a>“新建连接”对话框  
  **连接名称**  
