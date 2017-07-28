@@ -26,6 +26,7 @@
 ## [使用格式化文件批量导入数据](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [使用格式化文件跳过表列](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [使用格式化文件跳过数据字段](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [使用格式化文件将表列映射到数据文件字段](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [使用格式化文件将表列映射到数据文件字段](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [将 Excel 数据导入 SQL Server](import-data-from-excel-to-sql.md)  
 # [批量导入和导出 XML 文档的示例](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [批量访问 Azure Blob 存储中数据的示例](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  
