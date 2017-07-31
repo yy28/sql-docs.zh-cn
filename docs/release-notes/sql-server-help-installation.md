@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# SQL Server 的帮助查看器和脱机内容
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server 的帮助查看器和脱机内容
   
   
   
 本文向你介绍如何安装帮助查看器和脱机查看 SQL Server 文档。 本文包含用于 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 的文档 。 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## 安装帮助查看器
+## <a name="install-help-viewer"></a>安装帮助查看器
 下表根据使用的 SQL Server 版本，列出了安装帮助查看器的工具。 安装列出的一种工具来安装帮助查看器。
 
 
@@ -56,9 +52,7 @@ ms.lasthandoff: 06/28/2017
 > 可以使用帮助查看器 2.x 查看 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 的本地帮助，前提是已选择“从磁盘安装内容”。 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## SQL Server 2016 和 SQL Server 2017 脱机内容  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>SQL Server 2016 和 SQL Server 2017 脱机内容  
  
 **安装脱机内容**  
 1. 启动 SQL Server Management Studio 或 Visual Studio，然后在“帮助”菜单中单击“添加和删除帮助内容”，打开帮助查看器。  
@@ -85,9 +79,7 @@ ms.lasthandoff: 06/28/2017
    >[!IMPORTANT]
    > 如果显示了一条消息指出移动操作失败，请关闭消息框并关闭帮助查看器，然后重新打开帮助查看器。 现在，内容的新位置应会显示在“本地存储路径”中。   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 脱机内容 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 脱机内容 
  
   
 **安装脱机内容**  
@@ -118,9 +110,7 @@ ms.lasthandoff: 06/28/2017
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## 在帮助查看器中查看联机内容
+## <a name="view-online-content-in-help-viewer"></a>在帮助查看器中查看联机内容
 
 在帮助查看器 v2.x 中，可通过执行以下任一操作来查看联机内容。
 
@@ -140,17 +130,13 @@ ms.lasthandoff: 06/28/2017
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## F1 帮助和其他提示
+## <a name="f1-help-and-other-tips"></a>F1 帮助和其他提示
 
 按 F1 会在线显示相应的主题。 无法在本地帮助中显示该主题。
 
 此外，帮助查看器不支持代理设置，也不支持 ISO 格式。 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## 其他信息
+## <a name="additional-information"></a>其他信息
 [Microsoft 帮助查看器 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
