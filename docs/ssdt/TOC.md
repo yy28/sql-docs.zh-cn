@@ -1,21 +1,7 @@
-
-
 # [下载 SSDT](download-sql-server-data-tools-ssdt.md)
-
-
 # [新的和最近更新的文章](new-updated-ssdt.md)
-
-
 # [SSDT 更改日志](changelog-for-sql-server-data-tools-ssdt.md)
-
-
 # [数据层应用程序框架 - 许可条款](data-tier-application-framework-license-terms.md)
-
-
 # [以前版本的 SSDT 和 SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-
-
 # [SQL Server 工具](sql-server-tools.md)
-
-
 # [许可条款 - SSDT](sql-server-data-tools-license-terms.md)
