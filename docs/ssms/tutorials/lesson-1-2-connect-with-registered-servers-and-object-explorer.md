@@ -16,11 +16,11 @@ caps.latest.revision: 50
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: f5dc51dc1a49d66d6ea5194cb3357ecea6fb876f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>课程 1-2 - 连接已注册的服务器和对象资源管理器
