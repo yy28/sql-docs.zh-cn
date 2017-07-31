@@ -7,7 +7,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 在主 SQL Server 副本上，运行以下 TRANSACT-SQL 将添加一个名为数据库`db1`到可用性组调用`ag1`。
