@@ -7,7 +7,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
 ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -349,7 +349,7 @@ ms.lasthandoff: 07/20/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">计算机学习</h4>
                                                 <ul>
-                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server 计机器学习服务</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server 机器学习服务</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">机器学习服务器（独立）</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>

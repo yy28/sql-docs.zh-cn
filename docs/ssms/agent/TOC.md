@@ -3,7 +3,7 @@
 # [SQL Server 代理错误日志](sql-server-agent-error-log.md)
 ## [查看 SQL Server 代理错误日志 (SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md)
 ## [重命名 SQL Server 代理错误日志 (SSMS)](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)
-## [将执行跟踪消息写入到 SQL Server 代理错误日志 (SSMS)](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
+## [将执行跟踪消息写入到 SQL Server 代理错误日志中](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
 
 # [自动执行管理任务（SQL Server 代理）](automated-administration-tasks-sql-server-agent.md)
 ## [实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)
@@ -129,7 +129,7 @@
 ## [代理帐户属性 - 新建代理帐户（“常规”页）](proxy-account-properties-new-proxy-account-general-page.md)
 ## [代理帐户属性 - 新建代理帐户（“主体”选项卡）](proxy-account-properties-new-proxy-account-principals-tab.md)
 ## [代理编辑器 - 添加主体](proxy-editor-add-principal.md)
-## [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)
+## [从 SQL Server 代理主作业中删除步骤](remove-steps-from-a-sql-server-agent-master-job.md)
 ## [Resize the Job History Log](resize-the-job-history-log.md)
 ## [运行作业](run-jobs.md)
 ## [安排作业计划](schedule-a-job.md)

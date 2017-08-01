@@ -17,7 +17,7 @@
 ## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
 ## [SQL Server 发行说明](../release-notes/sql-server-release-notes.md)
 ## [SQL Server 2016 发行说明](sql-server-2016-release-notes.md)
-## [SQL Server 自 2017 年 1 发行说明](sql-server-2017-release-notes.md)
+## [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)
 
 ## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
 ## [SQL Server 2012 发行说明](../release-notes/sql-server-2012-release-notes.md)
@@ -36,7 +36,7 @@
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch 数据库](../sql-server/stretch-database/stretch-database.md)
-# [有关 SQL Server 的教程](tutorials-for-sql-server-2016.md)
+# [SQL Server 教程](tutorials-for-sql-server-2016.md)
 
 # 关于文档
 ## [SQL Server 资源](sql-server-resources.md)
