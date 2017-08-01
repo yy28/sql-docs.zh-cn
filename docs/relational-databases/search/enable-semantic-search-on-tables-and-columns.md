@@ -20,12 +20,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enable-semantic-search-on-tables-and-columns" class="xliff"></a>
-
-# 对表和列启用语义搜索
+# <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
   介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
@@ -59,9 +57,7 @@ ms.lasthandoff: 07/10/2017
 ##  <a name="HowToEnableCreate"></a> 在没有全文索引时创建语义索引  
  使用 **CREATE FULLTEXT INDEX** 语句创建新的全文索引时，可以通过指定关键字 **STATISTICAL_SEMANTICS** 作为列定义的一部分在列级别启用语义索引。 还可以在使用全文索引向导创建新的全文索引时启用语义索引。  
   
-<a id="create-a-new-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### 使用 Transact-SQL 创建新的语义索引  
+ ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 创建新的语义索引  
  
  为要创建语义索引的每个列调用 **CREATE FULLTEXT INDEX** 语句并指定 **STATISTICAL_SEMANTICS**。 有关此语句的所有选项的详细信息，请参阅 [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
   
@@ -121,17 +117,13 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO
 GO  
 ```  
   
-<a id="create-a-new-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### 使用 SQL Server Management Studio 创建新的语义索引  
+### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
  运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
   
-<a id="add-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
-### 使用 Transact-SQL 添加语义索引  
+### <a name="add-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 添加语义索引  
  为每个要添加语义索引的列使用以下所述的选项调用 **ALTER FULLTEXT INDEX** 语句。 有关此语句的所有选项的详细信息，请参阅 [ ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)。  
   
  除非你特别指定，否则在调用 **ALTER** 后，将重新填充全文索引和语义索引。  
@@ -154,14 +146,10 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-<a id="add-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### 使用 SQL Server Management Studio 添加语义索引  
+### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
  可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
-<a id="alter-a-semantic-index" class="xliff"></a>
-
-## 更改语义索引
+## <a name="alter-a-semantic-index"></a>更改语义索引
   
 ###  <a name="addreq"></a> 更改现有索引的要求和限制  
   
@@ -172,9 +160,7 @@ GO
 ##  <a name="dropping"></a> 删除语义索引  
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
-<a id="drop-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### 使用 Transact-SQL 删除语义索引  
+ ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
 若要仅从一个或多个列删除语义索引，请使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** **选项调用 ALTER FULLTEXT INDEX** 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```tsql  
@@ -199,23 +185,17 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-<a id="drop-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
- ### 使用 SQL Server Management Studio 删除语义索引  
+ ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
  可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
-###  <a name="dropreq"></a> 删除语义索引的要求和限制  
+###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
 -   保留语义索引时不能从列删除全文索引。 对于文档相似性结果，语义索引依赖于全文索引。  
   
 -   在从表中启用语义索引的最后一个列中删除语义索引时，不能指定 **NO POPULATION** 选项。 需要一个填充周期来删除以前编制索引的结果。  
   
-<a id="check-whether-semantic-search-is-enabled-on-database-objects" class="xliff"></a>
-
-## 检查是否在数据库对象上启用了语义搜索  
-<a id="is-semantic-search-enabled-for-a-database" class="xliff"></a>
-
-### 是否为数据库启用了语义搜索？
+## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
+### <a name="is-semantic-search-enabled-for-a-database"></a>是否为数据库启用了语义搜索？
   
  查询 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 元数据函数的 **IsFullTextEnabled** 属性。  
   
@@ -226,9 +206,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-table" class="xliff"></a>
-
-### 是否为表启用了语义搜索？  
+### <a name="is-semantic-search-enabled-for-a-table"></a>是否为表启用了语义搜索？  
  
  查询 [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
   
@@ -239,9 +217,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-column" class="xliff"></a>
-
- ### 是否为列启用了语义搜索？
+ ### <a name="is-semantic-search-enabled-for-a-column"></a>是否为列启用了语义搜索？
    
  若要确定是否为特定列启用了语义搜索：  
   
@@ -267,9 +243,7 @@ GO
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   
-<a id="determine-what-can-be-indexed-for-semantic-search" class="xliff"></a>
-
-## 确定可对哪些内容编制索引以进行语义搜索  
+## <a name="determine-what-can-be-indexed-for-semantic-search"></a>确定可对哪些内容编制索引以进行语义搜索  
   
 ###  <a name="HowToCheckLanguages"></a> 检查语义搜索支持的语言  
   
@@ -303,7 +277,7 @@ GO
   
  如果您要为其编制索引的文档类型不在所支持类型的列表中，则可能必须查找、下载和安装其他筛选器。 有关详细信息，请参阅 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳实践：考虑为全文索引和语义索引创建单独的文件组  
+##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
  如果磁盘空间分配成问题，请考虑为全文索引和语义索引创建单独的文件组。 在全文索引所在的文件组中创建语义索引。 完全填充的语义索引可能包含大量数据。  
  
 ##  <a name="IssueNoResults"></a> 问题：搜索特定列时未返回结果  

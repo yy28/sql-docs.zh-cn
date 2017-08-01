@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
@@ -220,7 +220,7 @@ ms.lasthandoff: 06/22/2017
     4.  **新容器：** 用于注册没有共享访问签名的现有容器。  请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
   
 > [!NOTE] 
-> “添加” ****单个媒体集支持多个备份文件和存储容器。
+>  “添加”单个媒体集支持多个备份文件和存储容器。
   
  选择 **URL** 作为目标后，将禁用“媒体选项”页中的某些选项。  以下主题详细介绍“备份数据库”对话框：  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 06/22/2017
  [创建凭据 - 向 Azure 存储进行身份验证](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
- 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)中的“定义备份任务”部分。  
+ 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 > [!NOTE]  
 >  若要使用共享访问令牌创建条带备份集、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
@@ -410,7 +410,7 @@ Write-Host $tSql
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 备份到 URL 最佳做法和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
   

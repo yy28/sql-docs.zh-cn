@@ -21,16 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-a-database-schema" class="xliff"></a>
-
-# 创建数据库架构
+# <a name="create-a-database-schema"></a>创建数据库架构
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建架构。  
   
  **本主题内容**  
@@ -65,9 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-##### 创建架构  
+##### <a name="to-create-a-schema"></a>创建架构  
   
 1.  在对象资源管理器中，展开 **“数据库”** 文件夹。  
   
@@ -81,9 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-<a id="additional-options" class="xliff"></a>
-
-### 其他选项  
+### <a name="additional-options"></a>其他选项  
  **“架构– 新建”** 对话框还在两个其他页上提供了选项： **“权限”** 和 **“扩展属性”**。  
   
 -   **“权限”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
@@ -92,9 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-#### 创建架构  
+#### <a name="to-create-a-schema"></a>创建架构  
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   

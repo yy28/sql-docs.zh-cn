@@ -36,16 +36,14 @@ caps.latest.revision: 74
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="configure-web-synchronization" class="xliff"></a>
-
-# 配置 Web 同步
+# <a name="configure-web-synchronization"></a>配置 Web 同步
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并复制的 Web 同步选项支持使用 HTTPS 协议跨 Internet 复制数据。 若要使用 Web 同步，首先需要执行以下配置操作：  
@@ -65,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  在之后的过程中，为简明起见，描述了一个使用本地帐户的简化安全配置。 这个简化的配置适用于 IIS 及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器和分发服务器同时运行在同一计算机上的安装情况，尽管您更可能对生产环境中的安装使用多服务器拓扑（也是建议做法）。 您可以在这些过程中用域帐户替代本地帐户。  
   
-<a id="creating-new-accounts-and-mapping-sql-server-logins" class="xliff"></a>
-
-## 创建新帐户并映射 SQL Server 登录名  
+## <a name="creating-new-accounts-and-mapping-sql-server-logins"></a>创建新帐户并映射 SQL Server 登录名  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器 (replisapi.dll) 通过模拟为复制网站所关联的应用程序池指定的帐户来连接发布服务器。  
   
  用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器的帐户必须具有 [Merge Agent Security](../../relational-databases/replication/merge-agent-security.md)中的“连接发布服务器或分发服务器”一节所述的权限。 总之，该帐户必须：  
@@ -84,9 +80,7 @@ ms.lasthandoff: 06/22/2017
   
  在配置 Web 同步前，建议您先阅读本主题中的“Web 同步的最佳安全配置”一节。 有关 Web 同步安全性的详细信息，请参阅 [Security Architecture for Web Synchronization](../../relational-databases/replication/security/security-architecture-for-web-synchronization.md)。  
   
-<a id="configuring-the-computer-that-is-running-iis" class="xliff"></a>
-
-## 配置正在运行 IIS 的计算机  
+## <a name="configuring-the-computer-that-is-running-iis"></a>配置正在运行 IIS 的计算机  
  Web 同步要求安装并配置 IIS。 在配置发布以使用 Web 同步之前，您需要了解复制网站的 URL。  
   
  从版本 5.0 开始，IIS 中支持 Web 同步。 IIS 版本 7.0 不支持配置 Web 同步向导。 从 SQL Server 2012 开始，要使用 IIS 服务器上的 Web 同步组件，我们建议用户随复制安装 SQL Server。 这可以是免费的 SQL Server Express 版本。  
@@ -100,18 +94,14 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[配置 IIS 7 以实现 Web 同步](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
-<a id="creating-a-web-garden" class="xliff"></a>
-
-## 创建 Web 园  
+## <a name="creating-a-web-garden"></a>创建 Web 园  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器支持每个线程处理两个并发同步操作。 超出此限制可能导致复制侦听器停止响应。 为 replisapi.dll 分配的线程数由应用程序池的 Maximum Worker Processes 属性来确定。 默认情况下，此属性设置为 1。  
   
  您可以通过增大 Maximum Worker Process 属性值来支持每个 CPU 处理更多的并发同步操作。 通过增大每个 CPU 的工作进程数进行扩展的方式被称为创建“Web 园”。  
   
  创建 Web 园将允许同时有两个以上的订阅服务器进行同步。 但这也会增加 replisapi.dll 对 CPU 的占用，从而给服务器总体性能带来负面影响。 所以在选择 Maximum Worker Processes 的值时务须权衡考虑以上两个方面。  
   
-<a id="to-increase-maximum-worker-processes-in-iis-7" class="xliff"></a>
-
-#### 在 IIS 7 中增加最大工作进程数  
+#### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>在 IIS 7 中增加最大工作进程数  
   
 1.  在 **“Internet 信息服务(IIS)管理器”**中，展开本地服务器节点，然后单击 **“应用程序池”** 节点。  
   
@@ -119,9 +109,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”**的行。 更改属性值，然后单击 **“确定”**。  
   
-<a id="configuring-the-publication" class="xliff"></a>
-
-## 配置发布  
+## <a name="configuring-the-publication"></a>配置发布  
  若要使用 Web 同步，需要创建一个发布（就像为标准合并拓扑创建发布一样）。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
  创建发布后，启用允许通过以下方法之一（ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或复制管理对象 (RMO)）进行 Web 同步的选项。 若要启用 Web 同步，需要为订阅服务器连接提供 Web 服务器地址。  
@@ -130,19 +118,13 @@ ms.lasthandoff: 06/22/2017
   
  **gen** 是 websync xml 文件中的一个保留字。 不要尝试发布包含名为 **gen**的列的表。  
   
-<a id="configuring-the-subscription" class="xliff"></a>
-
-## 配置订阅  
+## <a name="configuring-the-subscription"></a>配置订阅  
  启用发布并配置 IIS 后，创建请求订阅并指定该请求订阅应通过使用 IIS 进行同步。 （仅请求订阅支持 Web 同步。）  
   
-<a id="upgrading-from-an-earlier-version-of-sql-server" class="xliff"></a>
-
-## 升级 SQL Server 的早期版本  
+## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>升级 SQL Server 的早期版本  
  如果您现在配置有 Web 同步拓扑，并且要升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须将 Replisapi.dll 的最新版本复制到 Web 同步所用的虚拟目录。 默认情况下，Replisapi.dll 的最新版本位于 C:\Program Files\Microsoft SQL Server\\<nnn\>\COM 中。  
   
-<a id="replicating-large-volumes-of-data" class="xliff"></a>
-
-## 复制大量数据  
+## <a name="replicating-large-volumes-of-data"></a>复制大量数据  
  为避免订阅服务器计算机出现潜在的内存问题，Web 同步对用于传输更改的 XML 文件使用默认最大大小 100 MB。 可以通过设置以下注册表项来引发限制：  
   
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\Replication**  
@@ -161,9 +143,7 @@ ms.lasthandoff: 06/22/2017
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
-<a id="security-best-practices-for-web-synchronization" class="xliff"></a>
-
-## Web 同步的最佳安全配置  
+## <a name="security-best-practices-for-web-synchronization"></a>Web 同步的最佳安全配置  
  在 Web 同步中，有很多与安全相关的设置可供选择。 建议使用以下方法：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器和发布服务器可位于同一台计算机上（这是合并复制的典型安装）。 但是，IIS 应该安装在单独的计算机上。  
@@ -198,9 +178,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  打开防火墙的端口可能会使服务器受到恶意攻击。 请确保在打开端口之前了解防火墙系统。 有关详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并复制的 Web 同步](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

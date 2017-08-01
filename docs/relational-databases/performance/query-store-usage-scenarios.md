@@ -17,16 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="query-store-usage-scenarios" class="xliff"></a>
-
-# Query Store 使用方案
+# <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在需要跟踪工作负荷并确保其性能可预测的很多情况下，都可以使用 Query Store。 下面是可以考虑使用 Query Store 的一些示例：  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   识别并提高即席工作负荷  
   
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
-
-## 找出并解决使用计划选择回归的查询  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>找出并解决使用计划选择回归的查询  
  在常规查询执行过程中，查询优化器可以决定是否因下述重要输入变得不同而采取不同计划：数据基数已更改，索引已创建、更改或删除，统计信息已更新，等等。大多数情况下，其选取的新计划要优于以前使用的计划，或二者的效果差不多。 但有时候，新计划的效果要差很多 - 我们称这种情况为计划选择更改回归。 在 Query Store 出现之前，这是一个很难确定和解决的问题，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 没有针对已用过一段时间的执行计划为用户提供内置的可以查看的数据存储区。  
   
  使用查询存储，可快速执行以下操作：  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  有关方案的详细说明，请参阅 [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) （Query Store：数据库的网络流量数据记录器）博客。  
   
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
-
-## 识别并优化资源使用排名靠前的查询  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>识别并优化资源使用排名靠前的查询  
  虽然你的工作负荷可能会生成数千个查询，但通常情况下，使用大部分系统资源的实际上只是其中一部分查询，因此你只需要注意这部分查询。 通常情况下，在资源使用排名靠前的查询中，你会发现有些查询是回归性查询，有些查询则可在进一步优化后获得性能改善。  
   
  开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面分成三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
@@ -81,9 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  考虑重新编写成本高的查询。 例如，可以充分利用查询参数化，减少动态 SQL 的使用。 在读取数据时实施最佳逻辑（在数据库端而非应用程序端应用数据筛选）。  
   
-<a id="ab-testing" class="xliff"></a>
-
-## A/B 测试  
+## <a name="ab-testing"></a>A/B 测试  
  在计划引入应用程序更改之前和之后，使用 Query Store 来比较工作负荷性能。 在下表包含的多个示例中，你可以使用 Query Store 来评估环境或应用程序更改对工作负荷性能的影响：  
   
 -   推出新应用程序版本。  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  使用查询存储进行分析并解决回归问题：大多数情况下，新查询优化器更改会生成更好的计划。 不过，查询存储可以让你轻松识别计划选择回归并使用计划强制机制对其进行修复。  
   
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
-
-## 识别并提高即席工作负荷  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>识别并提高即席工作负荷  
  某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](https://msdn.microsoft.com/library/mt604821.aspx)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
   
  你可以通过“资源使用排名靠前的查询”视图，首先了解到工作负荷的即席性质：  
@@ -231,9 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

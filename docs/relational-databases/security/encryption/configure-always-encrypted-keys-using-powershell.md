@@ -14,11 +14,11 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 0d112912b35e05e5e96ec43cf6bc5f7caee21bf4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 配置 Always Encrypted 密钥
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/23/2017
 步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持此步骤。 若要从命令行完成此任务，请使用特定于所选密钥存储的工具。 |[创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 是     
 步骤 2.  启动 PowerShell 环境并导入 SqlServer PowerShell 模块。  |   [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    是    | 是         
 步骤 3.  连接到服务器和数据库。     |     [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    是     | 是         
-步骤 4.  创建 *SqlColumnMasterKeySettings* 对象，该对象中包含列主密钥的位置信息。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 使用特定于密钥存储的 cmdlet。   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   是      | 是         
+步骤 4.  创建 *SqlColumnMasterKeySettings* 对象，该对象中包含列主密钥的位置信息。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 使用特定于密钥存储的 cmdlet。   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   是      | “否”         
 步骤 5.  在数据库中创建有关列主密钥的元数据。      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建密钥元数据。|    是     |    是
 步骤 6.  如果列主密钥存储在 Azure 密钥保管库中，请对 Azure 进行身份验证。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  是   | 是         
 步骤 7.  生成新的列加密密钥，使用列主密钥对其加密，并在数据库中创建列加密密钥元数据。     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/en-us/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意：** 使用内部生成并加密列加密密钥的 cmdlet 的变体。<br><br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来创建密钥元数据。  | 是 | 是
@@ -195,7 +195,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库  
 ---------|---------|---------|---------
 步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer 模块不支持此步骤。 若要从命令行完成此任务，你需要使用特定于密钥存储类型的工具。     | [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    是    | 是 
-步骤 2.  启动 PowerShell 会话并导入 SqlServer 模块。      |     [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | 是 | 是         
+步骤 2.  启动 PowerShell 会话并导入 SqlServer 模块。      |     [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | “否” | 是         
 步骤 3.  创建 *SqlColumnMasterKeySettings* 对象，该对象中包含列主密钥的位置信息。 *SqlColumnMasterKeySettings* 是存在于内存中的对象（在 PowerShell 中）。 使用特定于密钥存储的 cmdlet。 |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | 是         | 是         
 步骤 4.  如果列主密钥存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |是|是         
 步骤 5.  生成列加密密钥，并使用列主密钥对其进行加密，以生成列加密密钥的加密值。     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    是    | 是        
@@ -207,10 +207,10 @@ DBA 使用其从安全管理员（上面的步骤 6）接收的信息在数据�
 
 任务  |项目  |访问纯文本密钥  |访问数据库   
 ---------|---------|---------|---------
-步骤 1.  从安全管理员处获取列主密钥的位置和列加密密钥的加密值。 |请参阅下面的示例。 | 是 | 是
+步骤 1.  从安全管理员处获取列主密钥的位置和列加密密钥的加密值。 |请参阅下面的示例。 | 是 | “否”
 步骤 2.  启动 PowerShell 环境并导入 SqlServer 模块。  | [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | 是 | 是
 步骤 3.  连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 是 | 是
-步骤 4.  创建 SqlColumnMasterKeySettings 对象，该对象中包含列主密钥的位置信息。 SqlColumnMasterKeySettings 是存在于内存中的对象。 | New-SqlColumnMasterKeySettings | 是 | 是
+步骤 4.  创建 SqlColumnMasterKeySettings 对象，该对象中包含列主密钥的位置信息。 SqlColumnMasterKeySettings 是存在于内存中的对象。 | New-SqlColumnMasterKeySettings | 是 | “否”
 步骤 5. 在数据库中创建有关列主密钥的元数据 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**注意：** 实际上，该 cmdlet 发布 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句来创建列主密钥元数据。 | 是 | 是
 步骤 6. 在数据库中创建列加密密钥元数据。 | New-SqlColumnEncryptionKey<br>**注意：** DBA 使用仅创建列加密密钥元数据的 cmdlet 的变体。<br>实际上，该 cmdlet 发布 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来创建列加密密钥元数据。 | 是 | 是
   

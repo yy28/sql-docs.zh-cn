@@ -14,11 +14,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
 ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
@@ -216,5 +216,5 @@ native_sp 的 DLL 可直接与 t1 的 DLL 以及内存中 OLTP 存储引擎交�
 
 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
 

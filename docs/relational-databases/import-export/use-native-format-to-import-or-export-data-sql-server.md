@@ -17,16 +17,14 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="use-native-format-to-import-or-export-data-sql-server" class="xliff"></a>
-
-# 使用本机格式导入或导出数据 (SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
 当使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用本机格式。  
 
 > [!NOTE]
@@ -97,7 +95,7 @@ ms.lasthandoff: 06/22/2017
 |OPENROWSET|N/A|必须使用格式化文件|
 
   
- \*若要将本机 (**-n**) 数据加载到与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式，请使用“-V”开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ \*若要将本机 (**-n**) 数据加载到与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端兼容的格式，请使用 **-V** 开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
 > [!NOTE]
 >  或者，您可以在格式化文件中为每个字段指定格式设置。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。
@@ -152,7 +150,7 @@ Notepad D:\BCP\myNative.fmt
 下面的示例使用上面创建的数据库和格式化文件。
 
 ### **使用 bcp 和本机格式导出数据**<a name="bcp_native_export"></a>
--n 开关和 OUT 命令。  请注意：此示例中创建的数据文件将用于所有后续示例中。  在命令提示符处输入以下命令：
+**-n** 切换和 **OUT** 命令。  请注意：此示例中创建的数据文件将用于所有后续示例中。  在命令提示符处输入以下命令：
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -161,7 +159,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **在不使用格式化文件的情况下使用 bcp 和本机格式导入数据**<a name="bcp_native_import"></a>
--n 开关和 IN 命令。  在命令提示符处输入以下命令：
+**-n** 切换和 **IN** 命令。  在命令提示符处输入以下命令：
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -174,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **在使用非 XML 格式化文件的情况下使用 bcp 和本机格式导入数据**<a name="bcp_native_import_fmt"></a>
--n 和  -f 开关以及 IN 命令。  在命令提示符处输入以下命令：
+**-n** 列之间传输的任何 **-f** 切换以及 **IN** 命令。  在命令提示符处输入以下命令：
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -240,9 +238,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

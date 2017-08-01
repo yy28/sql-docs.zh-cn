@@ -19,11 +19,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
 |CONCAT_NULL_YIELDS_NULL|OFF|是|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|是|  
 |CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> 是<br /><br /> 是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|是<br /><br /> “否”<br /><br /> 是|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|是|  
 |ENCRYPTION|OFF|是|  

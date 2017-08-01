@@ -17,16 +17,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-and-apply-the-snapshot" class="xliff"></a>
-
-# 创建并应用快照
+# <a name="create-and-apply-the-snapshot"></a>创建并应用快照
   快照由快照代理在创建发布后生成。 按以下方式生成：  
   
 -   立即。 默认情况下，在新建发布向导中创建合并发布后会立即生成此发布的快照。  
@@ -53,9 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 -   复制编程和 RMO 编程： [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用快照初始化订阅](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

@@ -20,23 +20,19 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
 ms.openlocfilehash: 736763496d78fff7ed70dee9a0518c428502024a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="tutorial-getting-started-with-the-database-engine" class="xliff"></a>
-
-# 教程：数据库引擎入门
+# <a name="tutorial-getting-started-with-the-database-engine"></a>教程：数据库引擎入门
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 欢迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 教程入门。 本教程适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的新手且已安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的用户。 本简明教程有助于您了解如何使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
-<a id="what-you-will-learn" class="xliff"></a>
-
-## 学习内容  
+## <a name="what-you-will-learn"></a>学习内容  
 本教程介绍了如何使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 从本地计算机或另外一台计算机上连接到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。  
   
 本教程分为两课：  
@@ -47,18 +43,14 @@ ms.lasthandoff: 06/22/2017
 [第 2 课：从其他计算机进行连接](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 在本课中，您将了解如何从第二台计算机连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，包括启用协议、配置端口和配置防火墙设置。  
   
-<a id="requirements" class="xliff"></a>
-
-## 要求  
+## <a name="requirements"></a>要求  
 本教程不需要事先具备其他知识。  
   
 若要使用本教程，您的系统必须安装以下组件：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要下载 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的用户。 若要下载 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

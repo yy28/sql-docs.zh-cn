@@ -19,15 +19,14 @@ caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
-ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# PolyBase T-SQL 对象
-<a id="polybase-t-sql-objects" class="xliff"></a>
+# <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 对象
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   若要使用 PolyBase，必须创建外部表来引用外部数据。  
@@ -45,12 +44,10 @@ ms.lasthandoff: 06/30/2017
 > [!NOTE]
 >  SQL Server 2016 中的 PolyBase 仅支持 Windows 用户。 如果尝试使用 SQL 用户查询 PolyBase 外部表，查询将失败。
 
-## 先决条件
-<a id="prerequisites" class="xliff"></a>  
+## <a name="prerequisites"></a>先决条件  
  配置 PolyBase。 请参阅 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
-## 为 Hadoop 创建外部表
-<a id="create-external-tables-for-hadoop" class="xliff"></a>  
+## <a name="create-external-tables-for-hadoop"></a>为 Hadoop 创建外部表  
  **1.创建数据库范围的凭据**  
   
  仅当为 Kerberos 保护的 Hadoop 群集时，才必须执行这一步操作。  
@@ -128,8 +125,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## 为 Azure blob 存储创建外部表
-<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
+## <a name="create-external-tables-for-azure-blob-storage"></a>为 Azure blob 存储创建外部表  
  **1.创建数据库范围的凭据**  
   
 ```sql  
@@ -204,8 +200,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## 为 Azure Data Lake Store 创建外部表
-<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
+## <a name="create-external-tables-for-azure-data-lake-store"></a>为 Azure Data Lake Store 创建外部表
 只有 SQL 数据仓库中的 PolyBase 支持 Azure Data Lake Store。
 有关 Azure SQL 数据仓库和 ADLS 的详细信息，请转到[使用 Azure Data Lake Store 加载](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
@@ -297,12 +292,10 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## 后续步骤
-<a id="next-steps" class="xliff"></a>  
+## <a name="next-steps"></a>后续步骤  
  有关查询示例，请参阅 [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)。  
   
-## 另请参阅
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另请参阅  
  [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
   

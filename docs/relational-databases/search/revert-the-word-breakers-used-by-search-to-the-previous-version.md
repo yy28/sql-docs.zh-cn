@@ -18,17 +18,15 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="revert-the-word-breakers-used-by-search-to-the-previous-version" class="xliff"></a>
-
-# 将搜索功能所使用的断字符还原到以前的版本
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 对于全文搜索支持的所有语言（朝鲜语除外），安装并启用一个版本的断字符和词干分析器。 本主题说明如何在这些组件的此版本和以前的版本间切换。  
   
  本主题不讨论以下语言：  
   
--   **英语**。 若要恢复或还原英语组件，请参阅 [更改用于美国英语和英国英语的断字符](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
+-   **英语**。 若要恢复或还原英语组件，请参阅 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
 -   **丹麦语、波兰语和土耳其语**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的先前版本附带的丹麦语、波兰语和土耳其语的第三方断字符已替换为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 组件。  
   
@@ -382,10 +380,8 @@ ms.lasthandoff: 07/10/2017
 |当前的 CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |当前文件名|MsWb70804.dll|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
- [更改用于美国英语和英国英语的断字符](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+## <a name="see-also"></a>另请参阅  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [对全文搜索的行为更改](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

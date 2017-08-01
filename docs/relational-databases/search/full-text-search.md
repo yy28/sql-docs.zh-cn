@@ -20,17 +20,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="full-text-search" class="xliff"></a>
-
-# 全文搜索
+# <a name="full-text-search"></a>全文搜索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。
   
-<a id="basic-tasks" class="xliff"></a>
-
-## 基本任务
+## <a name="basic-tasks"></a>基本任务
 本主题概述了全文搜索并介绍了其组件和体系结构。 如果你希望马上开始，可以使用下面的基本任务。
 -   [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [创建和管理全文索引目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -41,9 +37,7 @@ ms.lasthandoff: 07/10/2017
 > [!NOTE]
 > 全文搜索是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个可选组件。 如果你在安装 SQL Server 时没有选择全文搜索，请再次运行 SQL Server 安装程序来添加它。
 
-<a id="overview" class="xliff"></a>
-
-## 概述
+## <a name="overview"></a>概述
 全文索引包括表中一个或多个基于字符的列。 这些列可以具有以下任何数据类型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml** 或 **varbinary(max)** 和 **FILESTREAM**。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。  
   
  全文查询根据特定语言（例如，英语或日语）的规则对词和短语进行操作，从而依据全文索引中的文本数据执行语言搜索。 全文查询可以包括简单的词和短语，或者词或短语的多种形式。 全文查询返回包含至少一个匹配项（也称为“命中”）的所有文档。 当目标文档包含在全文查询中指定的所有字词，并符合任何其他搜索条件（如匹配的字词之间的距离）时，即发生匹配。    
@@ -152,9 +146,7 @@ ms.lasthandoff: 07/10/2017
 ###  <a name="querying"></a> 全文查询过程  
  查询处理器将查询的全文部分传递到全文引擎以进行处理。 全文引擎执行断字，此外，它还可以执行同义词库扩展、词干分析以及非索引字（干扰词）处理。 然后，查询的全文部分以 SQL 运算符的形式表示，主要作为流式表值函数 (STVF)。 在查询执行过程中，这些 STVF 访问倒排索引以检索正确结果。 此时会将结果返回给客户端，或者先将它们进一步处理，再将它们返回给客户端。  
 
-<a id="full-text-index-architecture" class="xliff"></a>
-
-## 全文索引体系结构
+## <a name="full-text-index-architecture"></a>全文索引体系结构
   全文引擎使用全文索引中的信息来编译可快速搜索表中的特定词或词组的全文查询。 全文索引将有关重要的词及其位置的信息存储在数据库表的一列或多列中。 全文索引是一种特殊类型的基于标记的功能性索引，它是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护的。 生成全文索引的过程不同于生成其他类型的索引。 全文引擎并非基于特定行中存储的值来构造 B 树结构，而是基于要编制索引的文本中的各个标记来生成倒排、堆积且压缩的索引结构。  全文索引大小仅受运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的可用内存资源限制。  
   
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，全文索引与数据库引擎集成在一起，而不是像 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本那样位于文件系统中。 对于新数据库，全文目录现在为不属于任何文件组的虚拟对象；它仅是一个表示一组全文索引的逻辑概念。 然而，请注意，在升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库（即包含数据文件的任意全文目录）的过程中，将创建一个新文件组。有关详细信息，请参阅 [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
@@ -240,9 +232,7 @@ ms.lasthandoff: 07/10/2017
 |Assembly|1|2|6|  
 |3|1|2|7|  
 
-<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
-
-### 全文索引和普通 SQL Server 索引之间的区别：  
+### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>全文索引和普通 SQL Server 索引之间的区别：  
   
 |全文索引|普通 SQL Server 索引|  
 |------------------------|--------------------------------|  
