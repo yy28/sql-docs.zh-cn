@@ -1,7 +1,7 @@
 # [教程：SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
 
 # 课程
-## [课程 1：SQL Server Management Studio 中的基本导航](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+## [第 1 课：SQL Server Management Studio 中的基本导航](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [课程 1-1 - 启动 SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
 ### [课程 1-2 - 与已注册的服务器和对象资源管理器连接](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 ### [课程 1-3 - 更改环境布局](lesson-1-3-change-the-environment-layout.md)  

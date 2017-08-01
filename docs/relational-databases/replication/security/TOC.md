@@ -5,7 +5,7 @@
 ## [管理复制中的登录名和密码](manage-logins-and-passwords-in-replication.md)  
 ## [安全开发](secure-development-replication.md)  
 ## [复制代理安全性模式](replication-agent-security-model.md)  
-## [复制的安全角色要求](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [复制安全最佳做法](replication-security-best-practices.md)  
 # [安全部署](secure-deployment-replication.md)  
 ## [保护分发服务器](secure-the-distributor.md)  

@@ -3,7 +3,7 @@
 # [FILESTREAM](filestream-sql-server.md)  
 ## [启用和配置 FILESTREAM](enable-and-configure-filestream.md)  
 ## [创建启用了 FILESTREAM 的数据库](create-a-filestream-enabled-database.md)  
-## [创建表用于存储 FILESTREAM 数据](create-a-table-for-storing-filestream-data.md)  
+## [创建表以存储 FILESTREAM 数据](create-a-table-for-storing-filestream-data.md)  
 ## [使用 Transact-SQL 访问 FILESTREAM 数据](access-filestream-data-with-transact-sql.md)  
 ## [为 FILESTREAM 数据创建客户端应用程序](create-client-applications-for-filestream-data.md)  
 ## [使用 OpenSqlFilestream 访问 FILESTREAM 数据](access-filestream-data-with-opensqlfilestream.md)  
