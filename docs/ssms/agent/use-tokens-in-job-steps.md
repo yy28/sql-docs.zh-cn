@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
@@ -70,8 +70,8 @@ ms.lasthandoff: 06/22/2017
 |**(A-ERR)**|错误号。 如果作业由某个警报运行，则在作业步骤中，错误号值将自动替换此标记。|  
 |**(A-SEV)**|错误严重性。 如果作业由某个警报运行，则在作业步骤中，错误严重性值将自动替换此标记。|  
 |**(A-MSG)**|消息正文。 如果作业由某个警报运行，则在作业步骤中，消息正文值将自动替换此标记。|  
-|**(AGENT_JOB_NAME)**|作业的名称。|  
-|**(AGENT_STEP_NAME)**|步骤的名称。|  
+|**(JOBNAME)**|作业的名称。|  
+|**(STEPNAME)**|步骤的名称。|  
 |**(DATE)**|当前日期（以 YYYYMMDD 格式表示）。|  
 |**(INST)**|实例名。 对于默认实例，此标记将具有默认实例名称：MSSQLSERVER。|  
 |**(JOBID)**|作业 ID。|  

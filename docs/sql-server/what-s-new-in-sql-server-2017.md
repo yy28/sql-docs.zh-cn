@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 07/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
+ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
+ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
@@ -41,10 +41,17 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
     -   存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
     -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。
 
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- 提升了从下列旧版 SQL Server 升级到 SQL Server 2017 Master Data Services 的升级体验和性能。
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
+
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎  
 SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
-- 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
-- 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”选项可使用户避免标识列值的差值。 请参阅[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
+- 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
+- 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”选项可使用户避免标识列值的差值。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
 - 自动数据库优化提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
 - 用于建模多对多关系的新图形数据库功能包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法和用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 默认情况下，启用名为 `clr strict security` 的 sp_configure 选项，以增强 CLR 程序集的安全性。 请参阅 [CLR 严格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
@@ -77,10 +84,16 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
     -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。
 - 在新“Scale Out for SSIS”功能中，现在可在触发执行时使用 Use32BitRuntime 参数。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) 现在支持 Linux 适用的 SQL Server，并且新包允许在 Linux 上从命令行运行 SSIS 包。 有关详细信息，请参阅[宣布 SSIS 支持 Linux 的博客文章](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)。 (CTP 2.1)
-- 新的“Scale Out for SSIS”功能使在多台计算机上运行 SSIS 更为轻松。 请参阅 [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md)。 (CTP 1.0)
+- 新的“Scale Out for SSIS”功能使在多台计算机上运行 SSIS 更为轻松。 请参阅 [Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)。 (CTP 1.0)
 - OData 源和 OData 连接管理器现支持连接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 源。 (CTP 1.0)
 
 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
+
+## <a name="master-data-services-mds"></a>Master Data Services (MDS)
+除了提升了升级到 SQL Server 2017 MDS 的升级性能和体验之外，还对 Master Data Services 进行了以下改进。
+- 现在可以在 Web 应用程序的“资源管理器”页中查看实体、集合和层次结构的排序列表。
+- 提升了使用暂存存储过程暂存数百万条记录时的性能。
+- 提升了在“管理组”页中展开“实体”文件夹以分配模型权限时的性能。 “管理组”页位于 Web 应用程序的“安全性”部分中。 若要详细了解性能提升，请访问 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 若要详细了解如何分配权限，请参阅[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
 
 ## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强功能。 其中包括：
@@ -99,7 +112,7 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 有关详细信息，请参阅 [SQL Server Analysis Services 2017 中的新增功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
 ## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
-自 CTP 2.1 起，不可再通过 SQL Server 安装程序安装 SSRS。 转到 Microsoft 下载中心[下载 Power BI 报表服务器的 2017 年 5 月预览版和针对 Power BI 报表服务器进行优化的 Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=55253)。 有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+自 CTP 2.1 起，不可再通过 SQL Server 安装程序安装 SSRS。 转到 Microsoft 下载中心，[下载 Microsoft SQL Server 2017 Reporting Services 候选发布](https://www.microsoft.com/download/details.aspx?id=55252)。 
 - 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。 (CTP 2.1)
 - 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 

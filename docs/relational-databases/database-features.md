@@ -1,7 +1,7 @@
 ---
-title: "数据库功能 | Microsoft Docs"
+title: "Microsoft SQL 关系数据库 - 指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/02/2017
+ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
-ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
+ms.translationtype: HT
+ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
+ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# <a name="database-features"></a>数据库功能  
+# <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL 关系数据库的使用指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  本节包含与数据库关联的功能和任务、数据库对象、数据类型和用于处理或管理数据的机制。 此信息普遍适用于 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)] 的大多数版本。 个别主题可能会指示某些功能仅限于某些平台。 有关特定平台的信息，请参阅以下链接： 
+  本部分介绍了与 Microsoft SQL 关系数据库相关的功能和任务、数据库对象、数据类型和数据处理或管理机制。 此信息普遍适用于 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)] 的大多数版本。 个别主题可能会指示某些功能仅限于某些平台。 有关特定平台的信息，请参阅以下链接： 
   
 - [本地 SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) 和 [SQL Server 配置](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  

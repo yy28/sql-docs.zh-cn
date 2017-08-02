@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 发行说明
@@ -28,12 +28,11 @@ ms.lasthandoff: 06/23/2017
   
 以下是此 SQL Server Management Studio 版本的问题和限制：  
 
-1. **还原数据库向导将生成为目标数据库文件的位置不正确的路径模式**
-    SSMS 连接到 Linux 服务器时，这是一个已知的问题。 虽然路径看起来不正确/奇数，则它在服务器端正确地处理，即未出现功能问题。
+1. **还原数据库向导为目标数据库文件位置生成的路径模式不正确**：这是连接到 Linux 服务器的 SSMS 存在的已知问题。 虽然路径看起来不正确/奇怪，但在服务器端可进行正确处理，即功能上不存在问题。
 
 2. **文件浏览器问题**
-    - 在使用基于 Windows 的 SQL Server 自 2017 年 1 CTP 2.0 实例，文件浏览器中 SSMS UI 可能无法打开如果服务器具有空的软盘驱动器或固定的磁盘安装的 Bitlocker 的保护。 
-    - 文件浏览器的 UI 不再支持的 SQL Server 自 2017 年在 CTP 2.0 之前的版本。
+    - 使用基于 Windows 的 SQL Server 2017 CTP 2.0 实例时，如果服务器有空的软盘驱动器或由安装的 Bitlocker 保护的固定磁盘，SSMS 中的文件浏览器 UI 可能无法打开。 
+    - 文件浏览器 UI 不再支持低于 CTP 2.0 的 SQL Server 2017 版本。
     
 
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 06/23/2017
     
     作为一种解决方法，你可以使用 SSMS 中提供的其他形式的身份验证 - Active Directory 密码身份验证、Active Directory 集成身份验证或 SQL Server 身份验证。
 
-5. **SSMS 只能连接到 SQL Server 2016 Integrated Services (SSIS 2016) 实例。**  
+5. **SSMS 17.x 只能连接到 SQL Server 2017 Integrated Services (SSIS 2017) 实例。**  
     SQL Server Integration Services 存在已知的兼容性限制，会阻止与早期版本的连接。
     
     作为此问题的一种解决方法，你可以使用 [匹配你的 SSIS 实例的 SSMS 版本](../ssms/previous-sql-server-management-studio-releases.md)连接到 SQL Server Integration Service 实例 
@@ -67,7 +66,7 @@ ms.lasthandoff: 06/23/2017
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server Management Studio 教程](../ssms/use-sql-server-management-studio.md)  
-[下载 SQL Server Management Studio &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+[下载 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [以前的 SQL Server Management Studio 版本](../ssms/previous-sql-server-management-studio-releases.md)  
 
   

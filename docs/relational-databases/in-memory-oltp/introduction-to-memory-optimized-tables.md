@@ -14,23 +14,23 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.translationtype: HT
+ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
+ms.openlocfilehash: d657ed0f95a167c8589551078302fac9aa8d462f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  内存优化表是使用 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 创建的表。  
+  内存优化表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 创建而成的表。  
   
- 默认情况下，内存优化的表是完全持久的，并且如同（传统的）基于磁盘的表上的事务一样，内存优化表上的完全持久的事务是完全原子、一致、隔离和持久 (ACID) 的。 内存优化的表和本机编译的存储过程支持 [!INCLUDE[tsql](../../includes/tsql-md.md)]的一个子集。
+ 默认情况下，内存优化表具有完全持久性。与（传统）基于磁盘的表上的事务一样，内存优化表上的事务具有完全原子性、一致性、隔离性和持久性 (ACID)。 内存优化表和本机编译的存储过程仅支持一部分 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能。
  
 自 SQL Server 2016 起以及在 Azure SQL 数据库中，内存中 OLTP 特定的 [排序规则或代码页](../../relational-databases/collations/collation-and-unicode-support.md) 没有任何限制。
   
- 内存优化表的主存储是主内存；内存优化表驻留在内存中。 从内存读取表中的行和将这些行写入内存。 整个表都驻留在内存中。 表数据的另一个副本维护在磁盘上，但仅用于持续性目的。 有关持久表的详细信息，请参阅 [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 。 在数据库恢复期间，内存优化的表中的数据只能从磁盘读取。 例如，在服务器重新启动后。  
+ 内存优化表的主存储器是主要内存。 从内存读取表中的行和将这些行写入内存。 表数据的另一个副本维护在磁盘上，但仅用于持续性目的。 有关持久表的详细信息，请参阅 [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 。 在数据库恢复期间（例如， 在服务器重启后），内存优化表中的数据只能从磁盘读取。  
   
  为了获得更大的性能提升，内存中 OLTP 支持事务持续性延迟的持久表。 延迟的持久事务在提交事务并将控制权归还客户端后不久即保存到磁盘。 作为提高性能的代价，在服务器崩溃或故障转移过程中将丢失已提交但未保存到磁盘的事务。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
 |性能<br /><br /> 资源（CPU、I/O、网络或内存）使用率较高。|CPU<br /> 本机编译的存储过程可大幅降低 CPU 使用率，因为此类存储过程执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所需的指令比解释型存储过程少得多。<br /><br /> 内存中 OLTP 可以帮助减少扩展工作负荷时的硬件投资，因为一台服务器可提供五到十台服务器的吞吐量。<br /><br /> I/O<br /> 如果在处理数据或索引页方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象。 此外，内存中 OLTP 对象的检查点编号是连续的，不会导致 I/O 操作突然增多。 但是，如果对性能至关重要的表的工作集不能容纳于内存中，则内存中 OLTP 不会提高性能，因为它需要数据驻留在内存中。 如果在日志记录方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象，因为它进行的日志记录操作较少。 如果将一个或多个内存优化的表配置为非持久的表，您可以消除数据的日志记录。<br /><br /> 内存<br /> 内存中 OLTP 不会提供任何性能优势。 内存中 OLTP 可能会对内存产生额外的压力，因为这些对象需要驻留在内存中。<br /><br /> 网络<br /> 内存中 OLTP 不会提供任何性能优势。 数据需要从数据层传输到应用层。|  
 |可伸缩性<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序中的大多数伸缩问题是由并发问题（如锁、闩锁和旋转锁中的争用）引起的。|闩锁争用<br /> 典型情况是按键顺序并发插入行时索引的最后一页上的争用。 由于内存中 OLTP 在访问数据时不采用闩锁，因此可完全消除与闩锁争用相关的可伸缩性问题。<br /><br /> 旋转锁争用<br /> 由于内存中 OLTP 在访问数据时不采用闩锁，因此可完全消除与旋转锁争用相关的可伸缩性问题。<br /><br /> 与锁定相关的争用<br /> 如果数据库应用程序遇到读操作与写操作之间的阻塞问题，则内存中 OLTP 可消除这些阻塞问题，因为它使用新的乐观并发控制形式来实现所有事务隔离级别。 内存中 OLTP 不使用 TempDB 来存储行版本。<br /><br /> 如果伸缩问题是由两个写操作之间的冲突（例如，两个并发事务尝试更新相同的行）引起的，则内存中 OLTP 会让其中一个事务成功，而让另一个事务失败。 必须显式或隐式重新提交失败的事务，从而重试该事物。 在任一情况下，您都需要对应用程序进行更改。<br /><br /> 如果应用程序遇到两个写操作之间的频繁冲突，则会减小乐观锁定的值。 该应用程序不适用于内存中 OLTP。 除非冲突是由锁升级引起的，否则大多数 OLTP 应用程序没有写冲突。|  
   
-##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
+##  <a name="rls"></a> 内存优化表中的行级安全性  
 
 内存优化表支持[行级安全性](../../relational-databases/security/row-level-security.md) 。 向内存优化表应用行级安全策略实际上与基于磁盘的表一样，只是作为安全谓词使用的内联表值函数必须是本机编译函数（使用 WITH NATIVE_COMPILATION 选项创建）。 有关详细信息，请参阅 [行级安全性](../../relational-databases/security/row-level-security.md#Limitations) 主题中的 [跨功能兼容性](../../relational-databases/security/row-level-security.md) 。  
   
