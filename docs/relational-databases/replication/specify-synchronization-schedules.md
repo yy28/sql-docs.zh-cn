@@ -19,11 +19,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d131e8e7aee66186245b0d69acb1b5c10285cf3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
@@ -199,29 +199,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>在创建事务发布的推送订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
   
-2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的以下一个或多个字段：  
+2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时要使用的频率类型（例如每日或每周）。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时所使用的频率类型（如每天或每周）。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 运行代理的星期日期。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 星期几运行代理。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 将代理计划为每月运行时，在给定月份运行代理的周次。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 计划每月运行代理的给定月份的星期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 每两次同步之间的频率类型单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同步之间发生的频率类型单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 以高于一天一次的频率运行代理时的频率单位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 一天内多次运行代理时的频率单位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 以高于一天一次的频率运行代理时，每两次运行之间的频率单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 一天内多次运行代理时运行之间的频率单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定的日期开始运行代理的最早时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定日期内代理运行开始的最早时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定的日期开始运行代理的最迟时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定日期内代理运行开始的最晚时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划生效的第一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划有效的起始日期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划生效的最后一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划有效的结束日期。  
   
     > [!NOTE]  
     >  如果未指定上述某个属性，将设置为默认值。  
@@ -230,29 +230,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>在创建事务发布的请求订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> 之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的以下一个或多个字段：  
+2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时要使用的频率类型（例如每日或每周）。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时所使用的频率类型（如每天或每周）。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 运行代理的星期日期。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 星期几运行代理。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 将代理计划为每月运行时，在给定月份运行代理的周次。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 计划每月运行代理的给定月份的星期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 每两次同步之间的频率类型单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同步之间发生的频率类型单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 以高于一天一次的频率运行代理时的频率单位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 一天内多次运行代理时的频率单位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 以高于一天一次的频率运行代理时，每两次运行之间的频率单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 一天内多次运行代理时运行之间的频率单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定的日期开始运行代理的最早时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定日期内代理运行开始的最早时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定的日期开始运行代理的最迟时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定日期内代理运行开始的最晚时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划生效的第一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划有效的起始日期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划生效的最后一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划有效的结束日期。  
   
     > [!NOTE]  
     >  如果未指定上述某个属性，将设置为默认值。  
@@ -261,29 +261,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>在创建合并发布的请求订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 类的实例。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A> 之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的以下一个或多个字段：  
+2.  在调用 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时要使用的频率类型（例如每日或每周）。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时所使用的频率类型（如每天或每周）。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 运行代理的星期日期。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 星期几运行代理。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 将代理计划为每月运行时，在给定月份运行代理的周次。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 计划每月运行代理的给定月份的星期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 每两次同步之间的频率类型单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同步之间发生的频率类型单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 以高于一天一次的频率运行代理时的频率单位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 一天内多次运行代理时的频率单位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 以高于一天一次的频率运行代理时，每两次运行之间的频率单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 一天内多次运行代理时运行之间的频率单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定的日期开始运行代理的最早时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定日期内代理运行开始的最早时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定的日期开始运行代理的最迟时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定日期内代理运行开始的最晚时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划生效的第一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划有效的起始日期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划生效的最后一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划有效的结束日期。  
   
     > [!NOTE]  
     >  如果未指定上述某个属性，将设置为默认值。  
@@ -292,29 +292,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>在创建合并发布的推送订阅时定义一个复制代理计划  
   
-1.  为要创建的订阅创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  为要创建的订阅创建一个 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。 有关详细信息，请参阅 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
   
-2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的以下一个或多个字段：  
+2.  在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>之前，设置 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 属性的下列一个或多个字段：  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时要使用的频率类型（例如每日或每周）。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 计划代理时所使用的频率类型（如每天或每周）。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 运行代理的星期日期。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 星期几运行代理。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 将代理计划为每月运行时，在给定月份运行代理的周次。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 计划每月运行代理的给定月份的星期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 每两次同步之间的频率类型单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 同步之间发生的频率类型单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 以高于一天一次的频率运行代理时的频率单位。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 一天内多次运行代理时的频率单位。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 以高于一天一次的频率运行代理时，每两次运行之间的频率单位数。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 一天内多次运行代理时运行之间的频率单位数值。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定的日期开始运行代理的最早时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 在给定日期内代理运行开始的最早时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定的日期开始运行代理的最迟时间。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> - 在给定日期内代理运行开始的最晚时间。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划生效的第一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 代理计划有效的起始日期。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划生效的最后一天。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 代理计划有效的结束日期。  
   
     > [!NOTE]  
     >  如果未指定上述某个属性，将设置为默认值。  

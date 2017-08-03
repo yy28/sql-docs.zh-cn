@@ -23,17 +23,17 @@ caps.latest.revision: 67
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 数据库的 **msdb** 表中进行了标识。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 数据库的 **suspect_pages** 表中进行了标识。  
   
  **本主题内容**  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  页网格用于标识要还原的页。 最初，此网格将从 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系统表填充。  若要从该网格添加或删除页，请单击 **“添加”**或“删除”。 有关详细信息，请参阅 [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)在  中还原页。  
   
-6.  **“备份集”** 网格将列出默认还原计划中的备份集。 或者，单击“验证”可验证备份是否可读取以及备份集是否完整而无需还原。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
+6.  **“备份集”** 网格将列出默认还原计划中的备份集。  或者，单击“验证”可验证备份是否可读取以及备份集是否完整而无需还原。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
      **页**  
   

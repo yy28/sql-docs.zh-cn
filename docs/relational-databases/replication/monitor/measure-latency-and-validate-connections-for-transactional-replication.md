@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
@@ -156,11 +156,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
   
-3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
+3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 3 中发布监视器的属性定义错误或此发布不存在。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 将返回的 <xref:System.Collections.ArrayList> 对象强制转换为 <xref:Microsoft.SqlServer.Replication.TracerToken> 对象的数组。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 将返回的 <xref:System.Collections.ArrayList> 对象转换为 <xref:Microsoft.SqlServer.Replication.TracerToken> 对象数组。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> 方法。 为步骤 5 中的跟踪令牌传递 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 的值。 这样会将所选跟踪令牌的滞后信息作为 <xref:System.Data.DataSet> 对象返回。 如果返回了所有跟踪令牌信息，则发布服务器与分发服务器之间的连接和分发服务器与订阅服务器之间的连接同时存在，并且复制拓扑工作正常。  
   
@@ -170,15 +170,15 @@ ms.lasthandoff: 06/22/2017
   
 2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
   
-3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、<xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
+3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 3 中发布监视器的属性定义错误或此发布不存在。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 将返回的 <xref:System.Collections.ArrayList> 对象强制转换为 <xref:Microsoft.SqlServer.Replication.TracerToken> 对象的数组。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 方法。 将返回的 <xref:System.Collections.ArrayList> 对象转换为 <xref:Microsoft.SqlServer.Replication.TracerToken> 对象数组。  
   
 6.  调用 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> 方法。 传递以下值之一：  
   
-    -   步骤 5 中跟踪令牌的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>。 这将删除选定令牌的信息。  
+    -   步骤 5 中跟踪令牌的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 。 这将删除选定令牌的信息。  
   
     -   <xref:System.DateTime> 对象。 这会删除早于指定日期和时间的所有令牌的信息。  
   

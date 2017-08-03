@@ -18,11 +18,11 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
@@ -43,13 +43,13 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="BestPractices"></a> 最佳实践  
   
--   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](http://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   安装必备软件。 在运行安装程序以安装或升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，请首先安装下列必备软件以缩短安装时间。 可以在每个故障转移群集节点上安装必备软件，然后在运行安装程序之前将这些节点重新启动一次。  
   
     -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 是安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 组件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果你的计算机上没有 Windows PowerShell，你可以按照 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) （Windows 管理框架）页上的说明启用它。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](http://go.microsoft.com/fwlink/?LinkId=296445)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][](http://go.microsoft.com/fwlink/?LinkId=296445)。  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update 包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重新启动计算机， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   

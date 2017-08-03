@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）检查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 属性以验证当前连接到的服务器是否为分发服务器。  
   
@@ -140,29 +140,29 @@ ms.lasthandoff: 06/22/2017
   
 5.  （可选）若要更改属性，请为一个或多个可在 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象上设置的分发服务器属性设置新值。  
   
-6.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
+6.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>查看和修改分发数据库属性  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性，并传递来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取来自服务器的属性。 如果此方法返回 **false**，则该服务器上不存在指定名称的数据库。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该服务器的属性。 如果此方法返回 **false**，则该服务器上不存在指定名称的数据库。  
   
 4.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 属性中的一个设置新值。  
   
-5.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
+5.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 对象的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性，并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 属性中的一个设置新值。  
   
-4.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
+4.  （可选）如果将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 对象的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 属性设置为 **true**，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法来提交对服务器的更改。  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>更改从发布服务器到分发服务器的管理连接的密码  
   

@@ -20,11 +20,11 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82a29880c3595f5c3df5814a65c163ddd02da6a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  您可以编写自己的自定义冲突解决程序以作为每个发布服务器上的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 在同步过程中，如果在注册了冲突解决程序的项目中遇到冲突，则将调用此存储过程，并且合并代理会将有关冲突行的信息传递到该存储过程的所需参数中。 基于存储过程的自定义冲突解决程序将始终在发布服务器上创建。  
   
 > [!NOTE]  
-> 调用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程冲突解决程序只是为了处理基于行更改的冲突。 它们不能用于处理其他类型的冲突，例如由于 PRIMARY KEY 冲突或唯一索引约束冲突而造成的插入失败。  
+>  调用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程冲突解决程序只是为了处理基于行更改的冲突。 它们不能用于处理其他类型的冲突，例如由于 PRIMARY KEY 冲突或唯一索引约束冲突而造成的插入失败。  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>创建基于存储过程的自定义冲突解决程序  
   

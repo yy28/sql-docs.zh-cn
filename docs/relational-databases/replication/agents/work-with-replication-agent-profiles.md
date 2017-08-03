@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
@@ -242,19 +242,19 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> - 配置文件的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> -<xref:Microsoft.SqlServer.Replication.AgentType> 值，该值指定要创建配置文件的复制代理的类型。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - 一个 <xref:Microsoft.SqlServer.Replication.AgentType> 值，该值指定要为其创建该配置文件的复制代理的类型。  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
+    -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 配置文件的说明。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果此 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理作业将在默认情况下使用该配置文件，请将这一属性设置为 **true**。  
+    -   （可选） <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果默认情况下此 **T:Microsoft.SqlServer.Replication.AgentType** 的所有新代理作业都将使用此配置文件，则将此属性设置为 <xref:Microsoft.SqlServer.Replication.AgentType> 。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建该配置文件。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法以在服务器上创建配置文件。  
   
 5.  在服务器上存在此配置文件后，可以通过添加、删除或更改复制代理参数的值来对该配置文件进行自定义。  
   
-6.  若要将该配置文件分配给现有的复制代理作业，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 为 *distributionDBName* 传递分发数据库的名称并为 *agentID*传递作业 ID。  
+6.  若要将此配置文件分配给现有的复制代理作业，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.AssignToAgent%2A> 方法。 为 *distributionDBName* 传递分发数据库的名称并为 *agentID*传递作业 ID。  
   
 ###  <a name="Modify_RMO"></a> 修改现有代理配置文件  
   
@@ -264,29 +264,29 @@ ms.lasthandoff: 06/22/2017
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 **false**，请验证分发服务器是否存在。  
   
-4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 方法。 传递 <xref:Microsoft.SqlServer.Replication.AgentType> 值以将返回的配置文件范围缩小至特定类型的复制代理。  
+4.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 方法。 传递一个 <xref:Microsoft.SqlServer.Replication.AgentType> 值以将返回的配置文件缩小至指定类型的复制代理。  
   
-5.  从返回的 <xref:System.Collections.ArrayList> 获取所需的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 对象，该对象的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 属性与配置文件名称相匹配。  
+5.  从返回的 <xref:Microsoft.SqlServer.Replication.AgentProfile> 中获取所需的 <xref:System.Collections.ArrayList>对象，其中此对象的 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 属性与配置文件名相匹配。  
   
-6.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile> 的以下某一方法来更改配置文件：  
+6.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile> 的以下方法之一更改配置文件：  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 将支持的参数添加到配置文件，其中 *name* 是复制代理参数的名称，*value* 是指定的值。 若要枚举给定代理类型的所有受支持代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法返回表示所有受支持参数的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 对象的 <xref:System.Collections.ArrayList>。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 向此配置文件添加支持的参数，其中 *name* 为复制代理参数的名称， *value* 为指定的值。 若要枚举给定代理类型的所有支持的代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法返回表示所有支持参数的一个 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 从配置文件删除现有参数，其中 *name* 是复制代理参数的名称。 若要枚举已为配置文件定义的所有当前代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法返回表示此配置文件现有参数的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 对象的 <xref:System.Collections.ArrayList>。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 删除配置文件中的某个现有参数，其中 *name* 为复制代理参数的名称。 若要枚举为配置文件定义的所有当前代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法返回一个 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，表示此配置文件的现有参数。  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 更改配置文件中现有参数的设置，其中 *name* 为代理参数的名称，*newValue* 为参数要更改到的值。 若要枚举已为配置文件定义的所有当前代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法返回表示此配置文件现有参数的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 对象的 <xref:System.Collections.ArrayList>。 若要枚举所有支持的代理参数设置，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法返回表示所有参数支持的值的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 对象的 <xref:System.Collections.ArrayList>。  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 更改配置文件中现有参数的设置，其中 *name* 为代理参数的名称， *newValue* 为更改参数时的目标值。 若要枚举为配置文件定义的所有当前代理参数，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 方法。 此方法返回一个 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> ，表示此配置文件的现有参数。 若要枚举所有支持的代理参数设置，请调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 方法。 此方法返回 <xref:System.Collections.ArrayList> 对象的 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> ，表示所有参数的支持值。  
   
 ###  <a name="Delete_RMO"></a> 删除代理配置文件  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例创建与分发服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 设置为来自步骤 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.AgentProfile> 类的实例。 将 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 设置为配置文件的名称，将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为从步骤 1 中获得的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 **false**，则指定的名称不正确或服务器上不存在该配置文件。  
   
-4.  验证 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 属性是否设置为 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>（指示一个客户配置文件）。 不应删除 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 值为 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的配置文件。  
+4.  验证 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 属性是否设置为指示某个客户配置文件的 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>。 您不应该删除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值为 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的配置文件。  
   
-5.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法以从服务器删除此对象表示的用户定义配置文件。  
+5.  调用 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 方法从服务器中删除此对象表示的用户定义的配置文件。  
   
 ##  <a name="FollowUp"></a> 跟进：在更改代理参数后  
  对代理参数所做的更改在下次启动代理时生效。 如果代理连续运行，则必须停止该代理，然后重新启动。  

@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **@host_name** - 当参数化筛选器由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 返回的值进行定义时。  
   
-2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>删除分区  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 06/22/2017
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
- 若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
+ 若要更好地管理具有参数化筛选器的发布，可以通过使用复制管理对象 (RMO) 以编程方式创建新的订阅服务器分区，枚举现有的订阅服务器分区以及删除订阅服务器分区。 有关如何创建订阅服务器分区的信息，请参阅 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。 可以获得有关现有分区的以下信息：  
   
 -   分区所基于的值和筛选函数。  
   
@@ -139,27 +139,27 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 方法，然后将结果传递至 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象数组。  
   
-5.  针对数组中的每个 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象，获取感兴趣的任何属性。  
+5.  对数组中的每个 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象，获取感兴趣的任何属性。  
   
 #### <a name="to-delete-existing-partitions"></a>删除现有分区  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法来获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
 4.  调用 <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 方法，然后将结果传递至 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象数组。  
   
-5.  针对数组中的每个 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象，确定是否应删除分区。 此决定通常基于 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> 属性或 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> 属性的值。  
+5.  对数组中的每个 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象，确定是否应删除分区。 此决定通常基于 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> 属性的值或 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> 属性的值。  
   
-6.  对步骤 2 中的 <xref:Microsoft.SqlServer.Replication.MergePublication> 对象调用 <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> 方法。 传递步骤 5 中的 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象。  
+6.  在步骤 2 中的 <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> 对象上调用 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 传递步骤 5 中的 <xref:Microsoft.SqlServer.Replication.MergePartition> 对象。  
   
 7.  对已删除的每个分区重复步骤 6。  
   

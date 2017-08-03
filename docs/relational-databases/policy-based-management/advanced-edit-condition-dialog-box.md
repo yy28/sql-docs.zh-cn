@@ -16,11 +16,11 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 |**BitwiseOr()**|Numeric BitwiseOr (Numeric expression1, Numeric expression2)|在两个指定的整数值之间执行“逻辑位或”运算。|expression1 和 expression2 – 整数数据类型类别的任意数据类型的任意有效表达式。|返回整数数据类型类别的值。|`BitwiseOr(Property1, Property2)`|  
 |**Concatenate()**|String Concatenate (String string1, String string2)|串联两个字符串。|string1 和 string2 - 要串联的两个字符串。 可以是任何有效的非空字符串。|串联的字符串，并且 *string1* 后跟有 *string2*。|`Concatenate("Hello", " World` `")` 返回“`Hello World`”。|  
 |**Count()**|Numeric Count (VarArgs)|返回参数列表中的项数。|VarArgs – 任意类型（**text**、**image** 和 **ntext** 除外）的表达式。|返回整数数据类型类别的值。|`Count(1.0, 2.0, 3.0, 4.0, 5.0)` 返回 `5` 。|  
-|**DateAdd()**|DateTime DateAdd (String datepart, Numeric number, DateTime date)|返回一个新 **datetime** 值，它是在指定日期的基础上加上一个时间间隔之后得到的结果。|datepart - 指定需要对日期中的哪一部分返回新值的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEADD (Transact-SQL)](../../t-sql/functions/dateadd-transact-sql.md)。<br /><br /> number - 用于增加 datepart 的值。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|新 **datetime** 值是在指定日期的基础上加上一个时间间隔之后得到的结果。|**Example:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` returns `'2007-08-27 14:21:50'` in this example.<br /><br /> 下列为此函数支持的 *dateparts* 和缩写形式：<br /><br /> **year**：yy、yyyy<br /><br /> **month**：mm、m<br /><br /> **dayofyear**：dy、y<br /><br /> **day**：dd、d<br /><br /> **week**：wk、ww<br /><br /> **weekday**：dw、w<br /><br /> **hour**：hh<br /><br /> **minute**：mi、n<br /><br /> **second**：ss、s<br /><br /> **millisecond**：ms|  
+|**DateAdd()**|DateTime DateAdd (String datepart, Numeric number, DateTime date)|返回一个新 **datetime** 值，它是在指定日期的基础上加上一个时间间隔之后得到的结果。|datepart - 指定需要对日期中的哪一部分返回新值的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEADD (Transact-SQL)](../../t-sql/functions/dateadd-transact-sql.md)。<br /><br /> number - 用于增加 datepart 的值。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|新 **datetime** 值是在指定日期的基础上加上一个时间间隔之后得到的结果。|**例如：** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` 返回 `'2007-08-27 14:21:50'` 。<br /><br /> 下列为此函数支持的 *dateparts* 和缩写形式：<br /><br /> **year**：yy、yyyy<br /><br /> **month**：mm、m<br /><br /> **dayofyear**：dy、y<br /><br /> **day**：dd、d<br /><br /> **week**：wk、ww<br /><br /> **weekday**：dw、w<br /><br /> **hour**：hh<br /><br /> **minute**：mi、n<br /><br /> **second**：ss、s<br /><br /> **millisecond**：ms|  
 |**DatePart()**|Numeric DatePart (String datepart, DateTime date)|返回表示指定日期的指定 *datepart* 的整数。|datepart -指定返回的日期部分的参数。 支持的一些类型有 year(yy, yyyy)、month(mm, m) 和 dayofyear(dy, y)。 有关详细信息，请参阅 [DATEPART (Transact-SQL)](../../t-sql/functions/datepart-transact-sql.md)。<br /><br /> date - 返回 **datetime** 值的表达式，或具有日期格式的字符串。|返回一个整数数据类型类别的值，表示指定日期的指定 *datepart* 。|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))` 返回 `8` 。|  
 |**DateTime()**|DateTime DateTime (String dateString)|根据字符串创建一个 datetime 值。|dateString - 字符串形式的 datetime 值。|返回一个根据输入字符串创建的 datatime 值。|`DateTime('3/12/2006')`|  
 |**Divide()**|Numeric Divide (Numeric expression_dividend, Numeric expression_divisor)|用一个数除以另一个数。|expression_dividend - 被除数的数值表达式。 被除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。<br /><br /> expression_divisor - 除数的数值表达式。 除数可以是具有数值数据类型类别中任一数据类型（ **datetime** 数据类型除外）的任何有效表达式。|返回优先级高的参数的数据类型。|**例如：** `Divide(Property1, 2)`<br /><br /> 注意：这是一个双精度运算。 若要进行整数比较，必须将结果与 `Round()`结合。 例如： `Round(Divide(10, 3), 0) = 3`。|  
