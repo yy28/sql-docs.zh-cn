@@ -2,4 +2,4 @@
 
 # [批处理方法](batching-methods.md)
 # [标识执行状态](identifying-execution-state.md)
-# [设置项 Namespace GetProperties 方法](setting-the-item-namespace-for-the-getproperties-method.md)
+# [为 GetProperties 方法设置项命名空间](setting-the-item-namespace-for-the-getproperties-method.md)

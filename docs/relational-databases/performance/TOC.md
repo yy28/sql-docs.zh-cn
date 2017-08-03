@@ -27,7 +27,7 @@
 ### [显示实际执行计划](display-an-actual-execution-plan.md)  
 ### [以 XML 格式保存执行计划](save-an-execution-plan-in-xml-format.md)  
 ## [实时查询统计信息](live-query-statistics.md)  
-## [使用查询存储监视性能](monitoring-performance-by-using-the-query-store.md)  
+## [使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)  
 ## [通过内存中 OLTP 使用查询存储](using-the-query-store-with-in-memory-oltp.md)  
 ## [Query Store 最佳做法](best-practice-with-the-query-store.md)  
 ## [Query Store 使用方案](query-store-usage-scenarios.md)  

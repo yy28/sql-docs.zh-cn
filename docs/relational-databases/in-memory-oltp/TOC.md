@@ -22,7 +22,7 @@
 # [针对内存中 OLTP 的标量用户定义函数](scalar-user-defined-functions-for-in-memory-oltp.md)  
 # [内存优化表的索引](indexes-for-memory-optimized-tables.md)  
 ## [内存优化表的哈希索引](hash-indexes-for-memory-optimized-tables.md)  
-# [本机编译的存储过程](natively-compiled-stored-procedures.md)  
+# [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
 ## [创建本机编译的存储过程](creating-natively-compiled-stored-procedures.md)  
 ## [更改本机编译的 T-SQL 模块](altering-natively-compiled-t-sql-modules.md)  
 ## [原子块](atomic-blocks-in-native-procedures.md)  

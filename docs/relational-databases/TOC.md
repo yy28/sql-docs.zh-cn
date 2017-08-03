@@ -7,7 +7,7 @@
 ## [内存管理体系结构](memory-management-architecture-guide.md)
 ### [读取页](reading-pages.md)  
 ### [写入页](writing-pages.md)
-## [页和区体系结构](pages-and-extents-architecture-guide.md)
+## [页和盘区体系结构](pages-and-extents-architecture-guide.md)
 ## [迁移后验证和优化](post-migration-validation-and-optimization-guide.md)
 ## [查询处理体系结构](query-processing-architecture-guide.md)
 ## [线程和任务体系结构](thread-and-task-architecture-guide.md)

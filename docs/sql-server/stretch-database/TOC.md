@@ -13,7 +13,7 @@
 ### [监视迁移](monitor-and-troubleshoot-data-migration-stretch-database.md)
 ### [暂停和恢复迁移](pause-and-resume-data-migration-stretch-database.md)  
 ### [管理和故障排除](manage-and-troubleshoot-stretch-database.md)  
-### [退后](backup-stretch-enabled-databases-stretch-database.md)  
+### [备份](backup-stretch-enabled-databases-stretch-database.md)  
 ### [还原](restore-stretch-enabled-databases-stretch-database.md)  
 ### [禁用并恢复数据](disable-stretch-database-and-bring-back-remote-data.md)
 ### [扩展事件](extended-events-for-stretch-database.md)  
