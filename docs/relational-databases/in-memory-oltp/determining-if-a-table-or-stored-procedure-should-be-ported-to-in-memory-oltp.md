@@ -2,7 +2,7 @@
 title: "确定表或存储过程是否应移植到内存中 OLTP | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>事务性能分析报表  
  通过右键单击数据库，然后依次选择“报表”、“标准报表”、“事务性能分析概述”，可以在“对象资源管理器”中生成事务性能分析报表。 数据库需要有活动的工作负载或最近运行的工作负载，才能生成有意义的分析报表。  
   
+### <a name="tables"></a>表
+  
  表的详细报告包含三个部分：  
   
 -   扫描统计信息部分  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   总访问次数百分比。 对此表的扫描和查询次数相对于整个数据库的活动的百分比。 这个比例越高，使用此表的频率相对于数据库中的其他表就越大。  
   
     -   查找统计数据/范围扫描统计数据。 此列记录在探查期间对表执行的点查询和范围扫描（索引扫描和表扫描）次数。 每事务的平均值为估计值。  
-  
-    -   互操作提升和本机提升。 这些列估计在将表转换为内存优化表时，点查询或范围扫描将会获得的性能优势量。  
-  
+    
 -   争用统计数据部分  
   
      本部分包含一个表，其中显示数据库表的争用。 有关数据库闩锁和锁的详细信息，请参阅“锁定体系结构”。 这些列如下所示：  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      本部分包含一个表，其中显示将此数据库表转换为内存优化表的困难程度。 难度等级越高，转换表的难度就越大。 要查看转换此数据库表的详细信息，请使用内存优化顾问。  
   
- 表扫描和争用统计信息详细报表从 sys.dm_db_index_operational_stats (Transact-SQL) 收集和聚合而成。  
-  
+表扫描和争用统计信息详细报表从 sys.dm_db_index_operational_stats (Transact-SQL) 收集和聚合而成。  
+
+### <a name="stored-procedures"></a>存储过程
+
  CPU 时间与占用时间的比值较高的存储过程适合迁移。 该报告显示所有表引用，因为本机编译的存储过程只能引用内存优化的表，这可能加大迁移成本。  
   
  存储过程的详细报告包含两个部分：  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  使用“生成内存中 OLTP 迁移清单”命令或使用 PowerShell，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中生成迁移清单。  
   
- **使用 UI 命令生成迁移清单**  
+**使用 UI 命令生成迁移清单**  
   
 1.  在“对象资源管理器”中，右键单击除系统数据库以外的数据库，单击“任务”，然后单击“生成内存中 OLTP 迁移清单”。  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  将这些报表与内存优化顾问工具和本机编译顾问工具生成的报表进行比较，验证这些报表的准确性。 有关详细信息，请参阅 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 和 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)。  
   
- **使用 SQL Server PowerShell 生成迁移清单**  
+**使用 SQL Server PowerShell 生成迁移清单**  
   
 1.  在“对象资源管理器” 中，单击数据库，然后单击“启动 PowerShell” 。 验证出现了下面的提示。  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   为数据库中的所有表和存储过程生成迁移清单报表，且报表位于 folder_path 指定的位置。  
   
- **使用 Windows PowerShell 生成迁移清单**  
+**使用 Windows PowerShell 生成迁移清单**  
   
 1.  启动提升的 Windows PowerShell 会话。  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
