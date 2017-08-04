@@ -1,49 +1,54 @@
 ---
-title: "SUBSTRING（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SUBSTRING 函数"
-  - "返回表达式的一部分 [Integration Services]"
+title: "SUBSTRING （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SUBSTRING function
+- part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SUBSTRING（SSIS 表达式）
+# <a name="substring-ssis-expression"></a>SUBSTRING（SSIS 表达式）
   返回字符表达式的一部分，该部分从指定位置开始并具有指定长度。 *position* 参数和 *length* 参数的取值必须为整数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 SUBSTRING(character_expression, position, length)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  是从中提取字符的字符表达式。  
   
  *position*  
  是一个指定子字符串开始位置的整数。  
   
- *长度*  
+ *length*  
  是一个用字符个数指定子字符串长度的整数。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
- SUBSTRING 使用从 1 开始的索引。 如果 *position* 为 1，则子字符串从 *character_expression* 的第一个字符开始。  
+## <a name="remarks"></a>注释  
+ SUBSTRING 使用从 1 开始的索引。 如果 *position* 为 1，则子字符串从 *character_expression*的第一个字符开始。  
   
  SUBSTRING 只能处理 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 SUBSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
@@ -53,7 +58,7 @@ SUBSTRING(character_expression, position, length)
   
  *length* 参数可以超过字符串长度。 在这种情况下，函数将返回字符串的剩余部分。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例从字符串文字的第 4 个字符开始返回两个字符。 返回结果为“ph”。  
   
 ```  
@@ -90,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

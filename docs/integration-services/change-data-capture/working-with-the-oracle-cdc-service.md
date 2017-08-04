@@ -1,22 +1,27 @@
 ---
-title: "使用 Oracle CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 Oracle CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 Oracle CDC 服务
+# <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
   
 -   [MSXDBCDC 数据库](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_MSXDBCDC)  
@@ -42,9 +47,9 @@ caps.handback.revision: 14
   
 -   作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中包含的 Oracle CDC 实例的注册表、处理各实例的 CDC 服务以及每个服务使用的配置版本。 此信息等效于 master 数据库的 **sys.databases** 表中的 **is_cdc_enabled** 列。 该 CDC 服务将定期扫描 **dbo.xdbcdc_databases** 表以便标识对 CDC 配置或捕获实例列表的更改。  
   
--   持有 **sysadmin** 所有的用于帮助创建和维护 CDC 实例的存储过程。 这些存储过程类似于用于实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 功能的系统过程。  
+-   持有 **sysadmin**所有的用于帮助创建和维护 CDC 实例的存储过程。 这些存储过程类似于用于实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 功能的系统过程。  
   
-### 创建 MSXDBCDC 数据库  
+### <a name="creating-the-msxdbcdc-database"></a>创建 MSXDBCDC 数据库  
  必须首先创建 MSXDBCDC 数据库，然后才能定义 Oracle CDC 服务。 在一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上只能创建一个 MSXDBCDC 数据库。 在您为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库时创建 MSXDBCDC 数据库。 此操作可通过使用 Oracle CDC 服务配置控制台或通过运行 CDC 服务配置控制台生成的创建脚本来完成。  
   
  此数据库的所有者是 Oracle CDC 服务管理员，该管理员控制在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下承载的所有 Oracle CDC 实例。  
@@ -53,7 +58,7 @@ caps.handback.revision: 14
   
  [如何为 CDC 准备 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
-### MSXDBCDC 数据库表  
+### <a name="the-msxdbcdc-database-tables"></a>MSXDBCDC 数据库表  
  本节介绍 MSXDBCDC 数据库中的以下表。  
   
 -   [dbo.xdbcdc_trace](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxdbcdc_trace)  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
 |项|Description|  
 |----------|-----------------|  
 |timestamp|写入跟踪日志时的准确 UTC 时间戳。|  
-|type|包含以下值之一。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
+|type|包含以下值之一。<br /><br /> error<br /><br /> INFO<br /><br /> 跟踪|  
 |节点|写入记录的节点的名称。|  
 |status|状态表使用的状态代码。|  
 |sub_status|状态表使用的子状态代码。|  
@@ -107,10 +112,10 @@ caps.handback.revision: 14
 |ref_count|此项对安装了同一个 Oracle CDC 服务的计算机的数目进行计数。 每增加一个同名的 Oracle CDC 服务，该计数就会递增，并且在删除此类服务时该计数将递减。 当该计数器达到零时，将删除此行。|  
 |active_service_node|当前正处理 CDC 服务的 Windows 节点的名称。 在该服务正确停止后，该列将设置为 Null，指示不再有处于活动状态的服务。|  
 |active_service_heartbeat|此项跟踪当前 CDC 服务以便确定该服务是否仍处于活动状态。<br /><br /> 此项将定期使用处于活动状态的 CDC 服务的当前数据库 UTC 时间戳进行更新。 默认时间间隔为 30 秒，但可以配置该时间间隔。<br /><br /> 在某一挂起的 CDC 服务检测到在经过了配置的时间间隔后检测信号未更新，则该挂起的服务将尝试接管处于活动状态的 CDC 服务角色。|  
-|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]** 的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 默认值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
+|选项|此项指定辅助选项，例如，跟踪或优化。 它是以 **name[=value][; ]**的形式编写的。 该选项字符串使用与 ODBC 连接字符串相同的语义。 如果该选项为布尔值（值为 yes/no），则该值只能包含名称。<br /><br /> 跟踪具有以下可能值。<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<类名称 > [，类名称 >]**<br /><br /> <br /><br /> 默认值是 **false**秒。<br /><br /> **service_heartbeat_interval** 是服务更新 active_service_heartbeat 列的时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服务检查配置更改的轮询时间间隔（秒）。 默认值为 **30**。 最大值为 **3600**。<br /><br /> **sql_command_timeout** 是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令超时值。 默认值是 **1**秒。 最大值为 **3600**。|  
 ||  
   
-### MSXDBCDC 数据库存储过程  
+### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 数据库存储过程  
  本节介绍 MSXDBCDC 数据库中的以下存储过程。  
   
 -   [dbo.xcbcdc_reset_db（数据库名称）](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_dboxcbcdc_reset_db)  
@@ -134,11 +139,11 @@ caps.handback.revision: 14
   
 -   停止 CDC 实例（如果处于活动状态）。  
   
--   截断更改表、**cdc_lsn_mapping** 表和 **cdc_ddl_history** 表。  
+-   截断更改表、 **cdc_lsn_mapping** 表和 **cdc_ddl_history** 表。  
   
 -   清除 **cdc_xdbcdc_state** 表。  
   
--   清除每一行 **cdc_change_table** 的 start_lsn 列。  
+-   清除每一行 **cdc_change_table**的 start_lsn 列。  
   
  若要使用 **dbo.xcbcdc_reset_db** 过程，用户必须是要命名的 CDC 实例数据库的 **db_owner** 数据库角色的成员，或者是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员。  
   
@@ -156,22 +161,22 @@ caps.handback.revision: 14
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 过程将一个条目添加到 **MSXDBCDC.xdbcdc_services** 表，并且以 1 为增量加到 **MSXDBCDC.xdbcdc_services** 表中该服务名称的 ref_count 列上。 当 **ref_count** 为 0 时，将删除该行。  
   
- 若要使用 **dbo.xcbcdc_add_service\<service name, username>** 过程，用户必须是要命名的 CDC 实例数据库的 **db_owner** 数据库角色的成员，或者是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员。  
+ 若要使用**dbo.xcbcdc_add_service\<服务名称、 用户名 >**过程中，用户必须是属于**db_owner**正在名为的 CDC 实例数据库的数据库角色或成员的**sysadmin**或**serveradmin**固定的服务器角色。  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 过程将一个开始请求发送到处理所选 CDC 实例的 CDC 服务，以便开始更改处理。  
   
- 若要使用 **dbo.xcdcdc_start** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 **sysadmin** 或 **serveradmin** 角色的成员。  
+ 若要使用 **dbo.xcdcdc_start** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 **实例的** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成员。  
   
 ###  <a name="BKMK_dboxdbcdc_stop"></a> dbo.xdbcdc_stop(dbname)  
  **dbo.xdbcdc_stop** 过程将一个停止请求发送到处理所选 CDC 实例的 CDC 服务，以便停止更改处理。  
   
- 若要使用 **dbo.xcdcdc_stop** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 **sysadmin** 或 **serveradmin** 角色的成员。  
+ 若要使用 **dbo.xcdcdc_stop** 过程，用户必须是 CDC 数据库的 **db_owner** 数据库角色的成员，或者是 **实例的** sysadmin **或** serveradmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的成员。  
   
 ##  <a name="BKMK_CDCdatabase"></a> CDC 数据库  
  在 CDC 服务中使用的每个 Oracle CDC 实例都与称作 CDC 数据库的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库在与 Oracle CDC 服务相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中承载。  
   
- 该 CDC 数据库包含特殊的 cdc 架构。 Oracle CDC 服务通过前缀为 **xdbcdc_** 的表名称使用此架构。 为安全和一致性目的使用此架构。  
+ 该 CDC 数据库包含特殊的 cdc 架构。 Oracle CDC 服务通过前缀为 **xdbcdc_**的表名称使用此架构。 为安全和一致性目的使用此架构。  
   
  Oracle CDC 实例和 CDC 数据库都是使用 Oracle CDC 设计器控制台创建的。 有关 CDC 数据库的详细信息，请参阅您安装的 Oracle CDC 设计器控制台随附的文档。  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 14
   
  [如何使用 CDC 服务命令行界面](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
-### 服务程序命令  
+### <a name="service-program-commands"></a>服务程序命令  
  本节介绍用于配置 CDC 服务的以下命令。  
   
 -   [Config](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_config)  
@@ -212,9 +217,9 @@ caps.handback.revision: 14
   
  **asym-key-password** 是要更新的密码。  
   
- **windows-account**、**windows-password** 是要更新的服务的 Windows 帐户凭据。  
+ **windows-account**、 **windows-password** 是要更新的服务的 Windows 帐户凭据。  
   
- **sql-username**、**sql-password** 是要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证凭据。 如果 sqlacct 具有空的用户名和空的密码，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **sql-username**、 **sql-password** 是要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证凭据。 如果 sqlacct 具有空的用户名和空的密码，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
@@ -238,9 +243,9 @@ caps.handback.revision: 14
   
  **asym-key-password** 是保护用于存储源数据库日志挖掘凭据的非对称密钥的密码。  
   
- **windows-account**、**windows-password** 是与要创建的 Oracle CDC 服务相关联的帐户名称和密码。  
+ **windows-account**、 **windows-password** 是与要创建的 Oracle CDC 服务相关联的帐户名称和密码。  
   
- **sql-username**、**sql-password** 是用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户名称和密码。 如果上述这些参数是空的，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **sql-username**、 **sql-password** 是用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户名称和密码。 如果上述这些参数是空的，则 Oracle CDC 服务将使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
@@ -259,7 +264,7 @@ caps.handback.revision: 14
   
  **注意**：包含空格或双引号的任何参数都必须用双引号 (") 括起来。 嵌入的双引号必须双重使用（例如，若要使用 **"A#B" D** 作为密码，应输入 **""A#B"" D"**）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何使用 CDC 服务命令行界面](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [如何为 CDC 准备 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

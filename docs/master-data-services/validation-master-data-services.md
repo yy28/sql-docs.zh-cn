@@ -1,25 +1,30 @@
 ---
-title: "验证 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "验证 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f442721e0e3d428b58e6bdd281af09193ebad867
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 验证 (Master Data Services)
+# <a name="validation-master-data-services"></a>验证 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，对数据进行验证以确保其准确性。 一些验证自动发生，而另一些验证则基于管理员创建的业务规则。  
   
-## 何时发生数据验证  
+## <a name="when-data-validation-occurs"></a>何时发生数据验证  
  验证发生在不同的时间，并以不同的方式显示在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序中。  
   
 |验证类型|标准确定者|发生条件|在 MasterData 管理器 Web UI 中显示为|在 Excel 外接程序中显示为|是否将数据保存到 MDS 存储库？|  
@@ -28,7 +33,7 @@ caps.handback.revision: 12
 |数据类型和内容验证|MDS 管理员，当创建模型对象（例如，属性的长度或数据类型）时|当用户添加或编辑数据时自动发生|输入错误|InputStatus|“否”|  
 |数据类型和内容验证|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|当用户添加或编辑数据时自动发生|输入错误|InputStatus|“否”|  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
 |根据业务规则验证数据的特定子集。 有权访问 **“资源管理器”** 功能区域的所有用户。|[针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |根据业务规则验证数据的特定子集。 有权访问 **“资源管理器”** 功能区域且使用 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的所有用户。|[应用业务规则（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

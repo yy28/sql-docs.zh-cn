@@ -1,33 +1,38 @@
 ---
-title: "单个表快速配置文件窗体（数据事件探查任务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
-helpviewer_keywords: 
-  - "数据事件探查任务编辑器"
+title: "单个表快速配置文件窗体 （数据事件探查任务） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 单个表快速配置文件窗体（数据事件探查任务）
+# <a name="single-table-quick-profile-form-data-profiling-task"></a>单个表快速配置文件窗体（数据事件探查任务）
   可以使用 **“单个表快速配置文件窗体”** 快速配置数据事件探查任务，以便使用默认配置对单个表或视图进行事件探查。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅[数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接**  
- 选择使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器连接到包含要进行探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
+ 选择使用 .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient) 的现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接管理器连接到包含要进行探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
  **表或视图**  
  选择所选连接管理器连接到的数据库中的现有的表或视图。  
@@ -50,8 +55,8 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  值包含配置文件类型在“单个表快速配置文件窗体”中不可用。  
   
-## 另请参阅  
- [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [数据事件探查任务编辑器 &#40;配置文件请求页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

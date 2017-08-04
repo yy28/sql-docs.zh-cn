@@ -1,25 +1,30 @@
 ---
-title: "教程：使用 OData 源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "教程： 使用 OData 源 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 教程：使用 OData 源
+# <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
   本教程介绍了从示例 **Northwind** OData 服务 (http://services.odata.org/V3/Northwind/Northwind.svc/) 提取 **Employees** 集合，然后将它加载到某一平面文件中的过程。  
   
-## 1.创建 Integration Services 项目  
+## <a name="1-create-an-integration-services-project"></a>1.创建 Integration Services 项目  
   
 1.  启动 **SQL Server Data Tools** 或 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  为项目输入 **“名称”** 并且选择 **“位置”** ，然后单击 **“确定”**。  
   
-## 2.配置 OData 源并将其添加到 SSIS 包  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2.配置 OData 源并将其添加到 SSIS 包  
   
 1.  将“数据流任务”从“SSIS 工具箱”拖放到 SSIS 包的控制流设计图面上。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. 单击 **“确定”** 关闭 **“OData 源编辑器”** 对话框。  
   
-## 3.添加平面文件目标并且测试解决方案  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3.添加平面文件目标并且测试解决方案  
   
 1.  现在，将“平面文件目标”从“SSIS 工具箱”拖放到“OData 源”组件下的数据流设计图面上。  
   

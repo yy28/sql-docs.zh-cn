@@ -1,31 +1,36 @@
 ---
-title: "指定跟踪文件的事件和数据列 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "添加事件"
-  - "跟踪 [SQL Server], 数据列"
-  - "删除事件"
-  - "删除事件"
-  - "跟踪 [SQL Server], 事件"
+title: "指定跟踪文件 （SQL Server 事件探查器） 的事件和数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding events
+- traces [SQL Server], data columns
+- deleting events
+- removing events
+- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 413a30657e348dba30d335a225ad243600a0ebbd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 指定跟踪文件的事件和数据列 (SQL Server Profiler)
+# <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]指定跟踪的事件类和数据列。  
   
-### 指定跟踪的事件和数据列  
+### <a name="to-specify-events-and-data-columns-for-a-trace"></a>指定跟踪的事件和数据列  
   
 1.  在 **“跟踪属性”** 或 **“跟踪模板属性”** 对话框中，单击 **“事件选择”** 选项卡。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 2.  或者，对跟踪应用筛选器。 有关详细信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

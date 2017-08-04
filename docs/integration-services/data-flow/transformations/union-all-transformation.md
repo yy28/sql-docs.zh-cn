@@ -1,32 +1,37 @@
 ---
-title: "Union All 转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.unionalltrans.f1"
-helpviewer_keywords: 
-  - "合并数据集 [Integration Services]"
-  - "组合数据集"
-  - "Union All 转换"
-  - "数据集 [Integration Services], 合并"
+title: "Union All 转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.unionalltrans.f1
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- combining datasets
+- Union All transformation
+- datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Union All 转换
+# <a name="union-all-transformation"></a>Union All 转换
   Union All 转换将多个输入组合到一个输出中。 例如，可将来自五个不同平面文件源的输出输入到 Union All 转换并将其组合到一个输出中。  
   
-## 输入和输出  
+## <a name="inputs-and-outputs"></a>输入和输出  
  转换输入是一个接一个地添加到转换输出中的；不对行进行重新排序。 如果包需要排序的输出，则应使用合并转换而不是 Union All 转换。  
   
  连接到 Union All 转换的第一个输入是转换从中创建转换输出的输入。 随后连接到转换的输入中的列将会被映射到转换输出中的列。  
@@ -37,18 +42,18 @@ caps.handback.revision: 39
   
  此转换具有多个输入和一个输出。 它不支持错误输出。  
   
-## Union All 转换的配置  
+## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“Union All 转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md)。  
   
- 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](../Topic/Common%20Properties.md)。  
+ 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [通过使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

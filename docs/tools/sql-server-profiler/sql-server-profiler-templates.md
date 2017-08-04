@@ -1,29 +1,34 @@
 ---
-title: "SQL Server Profiler 模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "默认的 SQL Server Profiler 模板"
-  - "模板 [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], 模板"
-  - "跟踪模板 [SQL Server]"
-  - "预定义模板 [SQL Server Profiler]"
-  - "SQL Server Profiler, 模板"
+title: "SQL Server Profiler 模板 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default SQL Server Profiler templates
+- templates [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler], templates
+- trace templates [SQL Server]
+- predefined templates [SQL Server Profiler]
+- SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e99e38422da3d3d6acafd3e6a1cbbfa49bd3741d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Profiler 模板
+# <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供了预定义的跟踪模板，使您可以轻松配置特定跟踪可能最需要的事件类。 例如，Standard 模板可帮助您创建通用跟踪，用于记录登录、注销、已完成的批处理和连接信息。 您可以使用此模板来运行跟踪而无需修改，也可以基于该模板创建具有不同事件配置的其他模板。  
@@ -33,8 +38,8 @@ caps.handback.revision: 35
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以跟踪各种服务器类型。 例如，您可以跟踪 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  但每种服务器可以包含的事件类会有所不同。 因此， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 为不同服务器保留不同的模板，并提供与所选服务器类型匹配的特定模板。  
   
-## 预定义模板  
- 除了 Standard（默认）模板以外，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]还包含几个可监视特定类型的事件的预定义模板。 下表列出了预定义模板、其用途以及其捕获何种事件类的信息。  
+## <a name="predefined-templates"></a>预定义模板  
+ 除了 Standard（默认）模板以外， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 还包含几个可监视特定类型的事件的预定义模板。 下表列出了预定义模板、其用途以及其捕获何种事件类的信息。  
   
 |模板名称|模板用途|事件类|  
 |-------------------|----------------------|-------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 35
   
  有关事件类的信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
-## 默认模板  
+## <a name="default-template"></a>默认模板  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 自动指定 **Standard** 模板作为应用于任何新跟踪的默认模板。 但是，您可以将默认模板更改为其他任何预定义模板或用户定义模板。 若要更改默认模板，请在使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡创建或编辑模板时，选中 **“用作所选服务器类型的默认模板”** 复选框。  
   
  若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”**，然后单击 **“新建模板”** 或 **“编辑模板”**。  
@@ -58,10 +63,10 @@ caps.handback.revision: 35
 > [!NOTE]  
 >  默认模板针对给定的服务器类型。 更改一个服务器类型的默认模板不会影响其他任何服务器类型的默认模板。 有关设置特定服务器的默认模板的详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  
   
-## 另请参阅  
- [创建跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [修改跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [导出跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建跟踪模板 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [修改跟踪模板 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [导出跟踪模板 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [导入跟踪模板 (SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

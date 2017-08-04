@@ -1,22 +1,27 @@
 ---
-title: "SQL Server 浏览器属性（“服务”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 浏览器属性 （服务选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2013060b53bfb3626d4623b80387904e8ccb15c3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 浏览器属性（“服务”选项卡）
+# <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
   
  使用 **“SQL Server 浏览器属性”** 对话框中的 **“服务”** 选项卡可以查看下列选项。 除了 **“启动模式”** 以外，其他所有属性都是只读的。  
@@ -31,7 +36,7 @@ caps.handback.revision: 16
  **退出代码**  
  当发生错误时，错误号显示在此信息框中。 您可以通过在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库中搜索该号码获取相关信息来排除故障，或将该错误号提供给技术支持人员以获得帮助。  
   
- **主机名**  
+ **Host Name**  
  显示运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的计算机或群集的名称。  
   
  **名称**  
@@ -52,7 +57,7 @@ caps.handback.revision: 16
   
 -   已禁用：此服务无法启动。  
   
- **状态**  
+ **State**  
  指示此服务是正在运行、已停止还是已禁用。 **“...”**指示状态更改被挂起。  
   
 ## <a name="see-also"></a>另请参阅  

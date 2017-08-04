@@ -1,22 +1,27 @@
 ---
-title: "XML 源自定义属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML 源的自定义属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 源自定义属性
+# <a name="xml-source-custom-properties"></a>XML 源自定义属性
   XML 源具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍 XML 源的自定义属性。 所有属性均可读/写。  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  有关详细信息，请参阅 [XML Source](../../integration-services/data-flow/xml-source.md)。  
   
-## 另请参阅  
- [通用属性](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>另请参阅  
+ [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "显示派生层次结构中的多对多关系 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "显示派生层次结构 (Master Data Services) 中的多对多关系 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 显示派生层次结构中的多对多关系 (Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
   派生层次结构 (DH) 不仅可显示一对多关系，现在还可以显示多对多关系。  
   
-## 多对多 (M2M) 关系  
+## <a name="many-to-many-m2m-relationships"></a>多对多 (M2M) 关系  
  两个实体之间的多对多 (M2M) 关系可通过使用第三实体进行建模，第三实体用于在这两个实体之间提供映射：  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -39,11 +44,11 @@ caps.handback.revision: 13
   
  请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
   
- 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）**。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
+ 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）**。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- 现在预览将显示按注册的定型类进行分组的员工。 由于这是一个 M2M 关系，因此每个子成员可以拥有多个父级。 在上面的示例中，员工 **6 {Hillman，Reinout N}** 在 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}** 这两个类中注册为了学生。  
+ 现在预览将显示按注册的定型类进行分组的员工。 由于这是一个 M2M 关系，因此每个子成员可以拥有多个父级。 在上面的示例中，员工 **6 {Hillman，Reinout N}** 在 **1 {Master Data Services 101}** 和 **4 {Career-Limiting Moves}**这两个类中注册为了学生。  
   
  此映射关系也可以反转显示，即按学生将类进行分组：  
   
@@ -70,16 +75,16 @@ caps.handback.revision: 13
  正如其他派生层次结构级别一样，也可以隐藏 M2M 级别。  
    
 ### <a name="M2MSample"></a> 示例模型中的 M2M 关系  
-有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
+有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
   
-如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如，![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
+如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**关联。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-有关部署 Customer 示例模型以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 附带的其他示例模型的说明，请参阅[部署示例模型和数据](../sql-server/media/master-data-services.png#deploySample)。   
+有关部署 Customer 示例模型以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的其他示例模型的说明，请参阅 [部署示例模型和数据](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)。   
   
-## 一对多关系  
- DH 的成员可以是许多子成员的父级，但它通常不能有多个父级（有关例外情况，请参阅[成员安全性](#bkmk_member_security)）。 例如，假设有两个实体：Employee 和 Department，其中每个员工各属于一个部门。 这种关系可通过向 Employee 实体添加基于域的属性 (DBA) 进行建模，该属性可以引用 Department 实体：  
+## <a name="one-many-relationship"></a>一对多关系  
+ DH 的成员可以是许多子成员的父级，但它通常不能有多个父级（有关例外情况，请参阅 [成员安全性](#bkmk_member_security)）。 例如，假设有两个实体：Employee 和 Department，其中每个员工各属于一个部门。 这种关系可通过向 Employee 实体添加基于域的属性 (DBA) 进行建模，该属性可以引用 Department 实体：  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -96,10 +101,11 @@ caps.handback.revision: 13
   
 -   具有 M2M 级别（子级可以映射到许多父级）的派生层次结构。  
   
-## 集合  
+## <a name="collections"></a>集合  
  已弃用集合和显式层次结构。 转换存储过程 (udpConvertCollectionAndConsolidatedMembersToLeaf) 可将集合成员转换为叶成员，并创建多对多派生层次结构以捕获集合成员信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

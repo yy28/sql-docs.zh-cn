@@ -1,28 +1,33 @@
 ---
-title: "为合并转换和合并联接转换排序数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "排序属性 [Integration Services]"
-  - "输出列 [Integration Services]"
+title: "对数据进行排序的合并和合并联接转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sort attributes [Integration Services]
+- output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a99a414a74e873e5c09d22c6469a13ac04a32d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 为合并转换和合并联接转换排序数据
+# <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
   
-## 对数据进行排序  
+## <a name="sorting-the-data"></a>对数据进行排序  
  可使用下列方法之一对此数据进行排序：  
   
 -   在源中，在用于加载数据的语句中使用 ORDER BY 子句。  
@@ -31,7 +36,7 @@ caps.handback.revision: 31
   
  如果数据是字符串数据，则合并转换和合并联接转换都需要使用 Windows 排序规则排过序的字符串值。 若要向合并转换和合并联接转换提供使用 Windows 排序规则排过序的字符串值，请使用以下过程。  
   
-#### 提供使用 Windows 排序规则排过序的字符串值  
+#### <a name="to-provide-string-values-that-are-sorted-by-using-windows-collation"></a>提供使用 Windows 排序规则排过序的字符串值  
   
 -   使用排序转换对数据进行排序。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 31
     > [!IMPORTANT]  
     >  由于 ORDER BY 子句使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则对字符串值进行排序，因此不能单独使用 ORDER BY 子句。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则可能产生与 Windows 排序规则不同的排序顺序，这会导致合并转换或合并联接转换生成意外的结果。  
   
-## 为数据设置排序选项  
+## <a name="setting-sort-options-on-the-data"></a>为数据设置排序选项  
  必须为向合并转换和合并联接转换提供数据的源或上游转换设置两个重要的排序属性：  
   
 -   输出的 **IsSorted** 属性，指示数据是否已排序。 此属性必须设置为 **True**。  
@@ -58,7 +63,7 @@ caps.handback.revision: 31
   
  但是，如果不使用排序转换对数据进行排序，则必须对源或上游转换手动设置这些排序属性。 若要对源或上游转换手动设置这些排序属性，请使用以下过程。  
   
-#### 对源或转换组件手动设置排序属性  
+#### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>对源或转换组件手动设置排序属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 31
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击“\<组件名称> 输出”，将 **IsSorted** 属性设置为 **True**。  
+6.  单击**\<组件名称 > 输出**，并设置**IsSorted**属性**True**。  
   
     > [!NOTE]  
     >  如果手动将输出的 **IsSorted** 属性设置为 **True** 且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
@@ -105,7 +110,7 @@ caps.handback.revision: 31
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [合并联接转换](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

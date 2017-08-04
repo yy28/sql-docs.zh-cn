@@ -1,33 +1,38 @@
 ---
-title: "系统变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "容器 [Integration Services]，变量"
-  - "任务 [Integration Services]，变量"
-  - "系统变量 [Integration Services]"
-  - "事件处理程序 [Integration Services]，变量"
-  - "变量 [Integration Services]，系统"
+title: "系统变量 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- containers [Integration Services], variables
+- tasks [Integration Services], variables
+- system variables [Integration Services]
+- event handlers [Integration Services], variables
+- variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 系统变量
+# <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
   
  可以在执行 SQL 任务用来将变量映射到参数的参数绑定中使用所有变量（系统和用户定义）。  
   
-## 包的系统变量  
+## <a name="system-variables-for-packages"></a>包的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为包提供的系统变量。  
   
 |系统变量|数据类型|Description|  
@@ -55,14 +60,14 @@ caps.handback.revision: 54
 |**VersionMajor**|Int32|包的主版本。|  
 |**VersionMinor**|Int32|包的次版本。|  
   
-## 容器的系统变量  
+## <a name="system-variables-for-containers"></a>容器的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为 For 循环、Foreach 循环和序列容器提供的系统变量。  
   
 |系统变量|数据类型|Description|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的区域设置。|For 循环容器<br /><br /> Foreach 循环容器<br /><br /> 序列容器|  
   
-## 任务的系统变量  
+## <a name="system-variables-for-tasks"></a>任务的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为任务提供的系统变量。  
   
 |系统变量|数据类型|Description|  
@@ -73,7 +78,7 @@ caps.handback.revision: 54
 |**TaskName**|字符串|任务实例的名称。|  
 |**TaskTransactionOption**|Int32|任务使用的事务选项。|  
   
-## 事件处理程序的系统变量  
+## <a name="system-variables-for-event-handlers"></a>事件处理程序的系统变量  
  下表介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为事件处理程序所提供的系统变量。 并非所有变量对所有事件处理程序都可用。  
   
 |系统变量|数据类型|Description|事件处理程序|  
@@ -95,14 +100,14 @@ caps.handback.revision: 54
 |**VariableDescription**|字符串|变量说明。|OnVariableValueChanged 事件处理程序|  
 |**VariableID**|字符串|变量的唯一标识符。|OnVariableValueChanged 事件处理程序|  
   
-## 参数绑定中的系统变量  
+## <a name="system-variables-in-parameter-bindings"></a>参数绑定中的系统变量  
  通常在包运行时，需要在表中保存系统变量的值。 例如，一个包动态创建一个表，并在表列中写入创建该表的包执行实例的 GUID。  
   
  如果在执行 SQL 任务所使用的 SQL 语句中使用系统变量来映射参数，那么重要的是要将每个参数绑定的数据类型设置为系统变量的数据类型。 否则，系统变量的值可能被错误转换。 例如，如果在具有 GUID 数据类型的参数绑定中使用 **ExecutionInstanceGUID** 系统变量，而该变量具有字符串数据类型，并包含表示包的执行实例的 GUID 的字符串，则包实例的 GUID 将被错误转换。  
   
  此规则也适用于用户定义的变量。 但是，由于无法更改系统变量的数据类型，并且必须调整对这些变量的使用以适应该数据类型，因此用户定义变量更为灵活。 在参数绑定中使用的用户定义变量通常是以与映射到它们的参数的数据类型兼容的数据类型来定义的。  
   
-## 相关任务  
- [在执行 SQL 任务中将查询参数映射到变量](../Topic/Map%20Query%20Parameters%20to%20Variables%20in%20an%20Execute%20SQL%20Task.md)  
+## <a name="related-tasks"></a>相关任务  
+ [在执行 SQL 任务中将查询参数映射到变量](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "值包含配置文件请求选项（数据事件探查任务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据事件探查任务编辑器"
+title: "值包含配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db75039979f7c0e4d6d17beeef4bf4457607290e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 值包含配置文件请求选项（数据事件探查任务）
+# <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“值包含配置文件请求”** 设置选项。 值包含配置文件计算两列或列集之间的值的重叠 因此，它可以确定一个列或列集是否适于用作两个选定表之间的外健。 此配置文件还有助于标识数据中的问题，如值无效。 例如，使用值包含配置文件对 Sales 表中的 ProductID 列进行事件探查。 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。  
   
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”**页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅[数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解 InclusionColumns 属性列的选择。  
+## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>了解 InclusionColumns 属性列的选择。  
  **“值包含配置文件请求”** 计算子集中的所有值是否在超集中显示。 超集通常是一个查找表或引用表。 例如，地址表中的州列是子集表。 此列中以两个字符表示的每个州代码也应在超集表（美国邮政服务州代码表）中找到。  
   
  当将通配符 (*) 用作子集列或超集列的值时，数据事件探查任务将该端的每个列与另一端上指定的列进行比较。  
@@ -34,7 +39,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  如果选择 (*)，则此选项可能会导致大量计算并降低任务性能。  
   
-## 了解阈值设置  
+## <a name="understanding-the-threshold-settings"></a>了解阈值设置  
  可以使用两个不同的阈值设置来优化值包含配置文件请求的输出。  
   
  当为 **InclusionThresholdSetting** 指定非 **None**的值时，该配置文件仅在以下条件之一报告超集中子集的包含强度：  
@@ -49,18 +54,18 @@ caps.handback.revision: 21
   
 -   当包含强度的值为 1.0，而 **SupersetColumnsKeyThreshold** 设置为 **Exact**时。  
   
-## 请求属性选项  
+## <a name="request-properties-options"></a>请求属性选项  
  对于 **“值包含配置文件请求”**， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **SubsetTableOrView**、 **SupersetTableOrView**和 **InclusionColumns** 选项  
   
 -   **常规**  
   
--   **选项**  
+-   **Options**  
   
-### Data 选项  
+### <a name="data-options"></a>Data 选项  
  **ConnectionManager**  
- 选择使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器连接到包含要进行事件探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
+ 选择使用 .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient) 的现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接管理器连接到包含要进行事件探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
  **SubsetTableOrView**  
  选择要进行事件探查的现有表或视图。  
@@ -77,14 +82,14 @@ caps.handback.revision: 21
   
  有关详细信息，请参阅本主题中的“了解 InclusionColumns 属性列的选择”和“InclusionColumns 选项”部分。  
   
-#### SubsetTableOrView 和 SupersetTableOrView 选项  
+#### <a name="subsettableorview-and-supersettableorview-options"></a>SubsetTableOrView 和 SupersetTableOrView 选项  
  **架构**  
  指定选定表所属的架构。 此选项是只读的。  
   
  **TableOrView**  
  显示所选表的名称。 此选项是只读的。  
   
-#### InclusionColumns 选项  
+#### <a name="inclusioncolumns-options"></a>InclusionColumns 选项  
  将针对在 **InclusionColumns**中进行探查的每个选定列集显示以下选项：  
   
  有关详细信息，请参阅本主题前面的“了解 InclusionColumns 属性列的选择”部分。  
@@ -116,12 +121,12 @@ caps.handback.revision: 21
 |**IgnoreKanaType**|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  
 |**IgnoreWidth**|指定比较是否区分字符的单字节形式和该字符的双字节形式。 如果设置了此选项，字符串比较将把同一字符的单字节形式和双字节形式视为相同。|  
   
-### 常规选项  
+### <a name="general-options"></a>常规选项  
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### 选项  
- **InclusionThresholdSetting**  
+### <a name="options"></a>选项  
+ **None**  
  选择阈值设置来优化配置文件的输出。 此属性的默认值为 **Specified**。 有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
 |“值”|Description|  
@@ -135,7 +140,7 @@ caps.handback.revision: 21
   
  有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
- **SupersetColumnsKeyThresholdSetting**  
+ **None**  
  指定超集阈值。 此属性的默认值为 **Specified**。 有关详细信息，请参阅本主题前面的“了解阈值设置”部分。  
   
 |“值”|Description|  
@@ -152,8 +157,8 @@ caps.handback.revision: 21
  **MaxNumberOfViolations**  
  指定要在输出中报告的最大包含冲突数。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **InclusionThresholdSetting**时，才会禁用该选项。  
   
-## 另请参阅  
- [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

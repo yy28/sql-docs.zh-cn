@@ -1,25 +1,30 @@
 ---
-title: "SQL Server 浏览器属性（“高级”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 浏览器属性 （高级选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f4c4d860ae086b8dd649bc74db8ed4ae3cf4fd1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 浏览器属性（“高级”选项卡）
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
+# <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server 浏览器属性（“高级”选项卡）
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
   
-## 选项  
+## <a name="options"></a>选项  
  **群集**  
  指示此服务是否作为群集服务器的资源进行安装。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 19
  **实例 ID**  
  指示使用此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 默认实例为 **MSSQL10_50.MSSQLSERVER**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server Browser 服务](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   

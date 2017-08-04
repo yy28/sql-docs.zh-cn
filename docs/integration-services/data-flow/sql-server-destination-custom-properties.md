@@ -1,22 +1,27 @@
 ---
-title: "SQL Server 目标自定义属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 目标自定义属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29337e20ed16ab60fc3ec55968a351dc527e2c6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server 目标自定义属性
+# <a name="sql-server-destination-custom-properties"></a>SQL Server 目标自定义属性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标具有自定义属性和所有数据流组件共有的属性。  
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标的自定义属性。 所有属性均可读/写。  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  有关详细信息，请参阅 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)。  
   
-## 另请参阅  
- [通用属性](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>另请参阅  
+ [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

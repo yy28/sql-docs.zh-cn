@@ -1,27 +1,32 @@
 ---
-title: "选择 Oracle 表和列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "selTabCol"
+title: "选择 Oracle 表和列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a32dc9416e79380cb9ce289960ad2ab0942e99fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 选择 Oracle 表和列
+# <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
   使用“选择 Oracle 表和列”页可以从捕获了更改的 Oracle 源数据库选择表。 该页具有以下元素：  
   
-## 选项  
+## <a name="options"></a>选项  
  **表列表**  
  此表列表具有三列：  
   
@@ -31,11 +36,11 @@ caps.handback.revision: 6
   
      如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>`。 捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。  
   
-     可单击此列的任意单元格对 **capture_instance** 进行手动编辑。  
+     可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
 -   **安全角色**：用于控制对更改数据的访问的数据库访问控制角色的名称。  
   
-     可单击此列的任意单元格对 **security_role** 进行手动编辑。  
+     可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
  单击“添加表”可打开“表选择”对话框，从中你可以[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)。  
@@ -48,7 +53,7 @@ caps.handback.revision: 6
   
  在使用正确的对话框[为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)或[对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)后，单击“下一步”以[生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [编辑表](../../integration-services/change-data-capture/edit-tables.md)   
  [将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   

@@ -1,33 +1,38 @@
 ---
-title: "SQL Server Compact Edition 连接管理器编辑器（“全部”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlmobileconnection.all.f1"
-helpviewer_keywords: 
-  - "SQL Server Compact 连接管理器编辑器"
+title: "SQL Server Compact Edition 连接管理器编辑器 （所有页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.all.f1
+helpviewer_keywords:
+- SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c55d48a878bfee46c823303ce662baca0d34bfbd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server Compact Edition 连接管理器编辑器（“全部”页）
+# <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
   可以使用 **“SQL Server Compact Edition 连接管理器”** 对话框，指定连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库时使用的属性。  
   
  若要了解有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **自动收缩阈值**  
- 指定运行自动收缩进程前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中允许使用的可用空间大小（以百分比表示）。  
+ 指定运行自动收缩进程前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中允许使用的可用空间大小（以百分比表示）。  
   
  **默认锁升级**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库在尝试升级锁之前获取的数据库锁的数量。  
@@ -71,8 +76,8 @@ caps.handback.revision: 26
  **密码**  
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [SQL Server Compact Edition 连接管理器编辑器 &#40;连接页 &#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "SMO 连接管理器编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smoconnection.f1"
-helpviewer_keywords: 
-  - "SMO 连接管理器编辑器"
+title: "SMO 连接管理器编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
+helpviewer_keywords:
+- SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1821b95dc528a4bb61f1efc92458f11f9b92340
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SMO 连接管理器编辑器
+# <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
   可以使用 **“SMO 连接管理器编辑器”** 配置各种传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的任务使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接。  
   
  若要了解有关 SMO 连接管理器的详细信息，请参阅 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **服务器名称**  
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，或者从列表中选择服务器名称。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 14
  **测试连接**  
  根据配置测试连接。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

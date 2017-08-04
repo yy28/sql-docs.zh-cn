@@ -1,28 +1,33 @@
 ---
-title: "“筛选器”对话框（用于 Excel 的 MDS 外接程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "筛选器对话框 （MDS 外接程序 excel） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “筛选器”对话框（用于 Excel 的 MDS 外接程序）
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，使用“筛选器”对话框可以先筛选 MDS 管理的数据列表，然后再将其加载到 Excel 中。  
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用“筛选器”  对话框可以先筛选 MDS 管理的数据列表，然后再将其加载到 Excel 中。  
   
  此对话框包含三个部分： **“列”**、 **“行”**和 **“摘要”**。  
   
-## 列  
- 使用“列”部分可以确定要在 Excel 中显示的属性（列）。  
+## <a name="columns"></a>“列”  
+ 使用“列”  部分可以确定要在 Excel 中显示的属性（列）。  
   
 |控件名称|Description|  
 |------------------|-----------------|  
@@ -33,8 +38,8 @@ caps.handback.revision: 8
 |全部清除|单击此选项可清除列表中显示的选定属性。<br /><br /> 您不能清除 **Name** 和 **Code**。|  
 |向上箭头/向下箭头|单击此选项可在列表中上下移动所选的属性。 从上到下的顺序对应于列在工作表中从左到右的显示顺序。|  
   
-## 行  
- 使用“行”部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
+## <a name="rows"></a>“行”  
+ 使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
   
 |控件名称|Description|  
 |------------------|-----------------|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |全部删除|从列表中删除所有筛选器。|  
 |删除|从列表中删除所选的筛选器。|  
   
-## “摘要”  
+## <a name="summary"></a>“摘要”  
  使用 **“摘要”** 部分可以在加载数据之前先查看有关要加载的数据的详细信息。  
   
 |控件名称|Description|  
@@ -55,9 +60,9 @@ caps.handback.revision: 8
 |版本|版本的名称。|  
 |实体|实体的名称。|  
 |“行”|基于在 **“行”** 部分中应用的筛选器要加载到 Excel 中的行数。|  
-|列|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  
+|“列”|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

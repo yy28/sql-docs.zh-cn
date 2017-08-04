@@ -1,27 +1,32 @@
 ---
-title: "XML 任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.f1"
-helpviewer_keywords: 
-  - "XML [Integration Services]"
-  - "XML 任务 [Integration Services]"
+title: "XML 任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.f1
+helpviewer_keywords:
+- XML [Integration Services]
+- XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 87e8a8a282e0d6973f1fd47157c9ea33b71a8c7f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 任务
+# <a name="xml-task"></a>XML Task
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
   
  此任务使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包能够在运行时动态修改 XML 文档。 可以将 XML 任务用于下列目的：  
@@ -36,7 +41,7 @@ caps.handback.revision: 59
   
  通过使用 XML 源从 XML 文档中提取值的方法，可以将 XML 数据包含在数据流中。 有关详细信息，请参阅 [XML Source](../../integration-services/data-flow/xml-source.md)。  
   
-## XML 操作  
+## <a name="xml-operations"></a>XML 操作  
  XML 任务首先执行的运算是检索特定的 XML 文档。 此运算内置于 XML 任务中并可自动执行。 检索后的 XML 文档可用作 XML 任务执行运算的数据源。  
   
  XML 的 Diff、Merge 和 Patch 运算需要两个操作数。 第一个操作数指定源 XML 文档。 第二个操作数也指定一个 XML 文档，其内容取决于运算的要求。 例如，Diff 运算要比较两个文档；因此第二个操作数指定另一个相似的 XML 文档，供源 XML 文档与之比较。  
@@ -49,7 +54,7 @@ caps.handback.revision: 59
   
  XML 任务可以设置为将运算结果保存到变量或文件。 如果要保存到文件中，XML 任务将使用文件连接管理器访问该文件。 您也可以将 Diff 运算生成的 Diffgram 结果保存到文件和变量中。  
   
-## 预定义的 XML 运算  
+## <a name="predefined-xml-operations"></a>预定义的 XML 运算  
  XML 任务包含一组用来处理 XML 文档的预定义运算。 下表介绍了这些运算。  
   
 |运算|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 59
 |XPath|执行 XPath 查询和计算。|  
 |XSLT|对 XML 文档执行 XSL 转换。|  
   
-### Diff 运算  
+### <a name="diff-operation"></a>Diff 运算  
  根据比较要求必须是快速还是精确，可以将 Diff 运算配置为使用不同的比较算法。 还可通过对 Diff 运算配置，使之可以根据当前比较文档的大小，自动选择使用快速比较或精确比较。  
   
  Diff 运算中包含一组用于自定义 XML 比较的选项。 下表对这些选项进行说明：  
@@ -77,10 +82,10 @@ caps.handback.revision: 59
 |**IgnoreProcessingInstructions**|该值用于指定是否比较处理指令。|  
 |**IgnoreDTD**|该值用于指定是否忽略 DTD。|  
   
-### Merge 运算  
+### <a name="merge-operation"></a>Merge 运算  
  使用 XPath 语句标识源文档中的合并位置时，此语句应返回一个节点。 如果该语句返回多个节点，则仅使用第一个节点。 第二个文档的内容在 XPath 查询返回的第一个节点下合并。  
   
-### XPath 运算  
+### <a name="xpath-operation"></a>XPath 运算  
  可将 XPath 运算配置为使用不同类型的 XPath 功能。  
   
 -   选择“计算”选项，以实现各种 XPath 函数，如 sum()。  
@@ -89,12 +94,12 @@ caps.handback.revision: 59
   
 -   选择“值”  选项，以返回所有选定节点的内部文本值，这些值串联为一个字符串。  
   
-### Validation 运算  
+### <a name="validation-operation"></a>Validation 运算  
  可以将 Validation 运算配置为使用文档类型定义 (DTD) 架构或 XML 架构定义 (XSD) 架构。  
   
  启用 **ValidationDetails** 以获取详细错误输出。 有关详细信息，请参阅 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。  
   
-## XML 文档编码  
+## <a name="xml-document-encoding"></a>XML 文档编码  
  XML 任务仅支持合并 Unicode 文档。 这表示 XML 任务只能对采用 Unicode 编码的文档应用 Merge 运算。 使用其他编码将导致 XML 任务失败。  
   
 > [!NOTE]  
@@ -106,37 +111,37 @@ caps.handback.revision: 59
   
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
-## XML 任务可用的自定义日志记录消息  
- 下表介绍了 XML 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 任务可用的自定义日志记录消息  
+ 下表介绍了 XML 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
 |**XMLOperation**|提供任务所执行的操作的相关信息|  
   
-## XML 任务的配置  
+## <a name="configuration-of-the-xml-task"></a>XML 任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [XML 任务编辑器（“常规”页）](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+-   [XML 任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
--   [使用 XML 任务验证 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [验证 XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中如何设置属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## XML 任务的编程配置  
+## <a name="programmatic-configuration-of-the-xml-task"></a>XML 任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## 相关任务  
- [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>相关任务  
+ [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   agilebi.com 上的博客文章 [XML 目标脚本组件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   

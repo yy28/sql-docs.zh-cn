@@ -1,27 +1,32 @@
 ---
-title: "设置全局跟踪选项 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "全局跟踪选项 [SQL Server]"
+title: "设置全局跟踪选项 （SQL Server 事件探查器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e243eb89d6006d82191e73577ed18dd9a5840bd9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 设置全局跟踪选项 (SQL Server Profiler)
+# <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
   本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  
   
-### 设置全局跟踪选项  
+### <a name="to-set-global-trace-options"></a>设置全局跟踪选项  
   
 1.  在“工具”  菜单上，单击“选项” 。  
   
@@ -65,8 +70,8 @@ caps.handback.revision: 24
         |**60**|默认值。 每分钟针对阻塞进程轮询一次。|  
         |**86400**|最大值。 每 **86400** 秒（一天）针对阻塞进程轮询一次。|  
   
-## 另请参阅  
- [设置跟踪显示默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [设置跟踪显示默认值 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

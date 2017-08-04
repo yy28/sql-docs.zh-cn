@@ -1,41 +1,46 @@
 ---
-title: "TOKENCOUNT（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKENCOUNT （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77faf8083207373dee5dba3721fb38f91eefc3f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKENCOUNT（SSIS 表达式）
+# <a name="tokencount-ssis-expression"></a>TOKENCOUNT（SSIS 表达式）
   返回包含指定分隔符分隔的标记的字符串中的标记数目。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 TOKENCOUNT(character_expression, delimiter_string)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  包含分隔符分隔的标记的字符串。  
   
  *delimiter_string*  
  包含分隔符字符的字符串。 例如，“; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## 注释  
+## <a name="remarks"></a>注释  
  下面的备注适用于 TOKEN 函数：  
   
 -   分隔符字符串可以包含一个或多个分隔符字符。  
@@ -48,7 +53,7 @@ TOKENCOUNT(character_expression, delimiter_string)
   
 -   您可以使用变量和列作为此表达式的参数。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  在下面的示例中，TOKENCOUNT 函数返回 3，因为该字符串包含三个标记：“01”、“12”、“2011”。  
   
 ```  
@@ -79,7 +84,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

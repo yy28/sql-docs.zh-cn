@@ -1,31 +1,36 @@
 ---
-title: "TOKEN（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKEN （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN（SSIS 表达式）
+# <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  包含分隔符分隔的标记的字符串。  
   
@@ -35,17 +40,17 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *occurrence*  
  指定要返回的标记的有符号或无符号整数。 例如，如果您指定 3 作为此参数的值，则返回字符串中的第三个标记。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
- 此函数将 <character_expression> 字符串拆分为一组由 <delimiter_string> 中指定的分隔符分隔的标记，然后返回第 N 个标记，其中 N 是 \<occurrence> 参数指定的标记出现的次数。 有关此函数的用法示例，请参阅“示例”部分。  
+## <a name="remarks"></a>注释  
+ 此函数将拆分为一组由 < delimiter_string > 中指定的分隔符分隔的标记的 < character_expression > 字符串并返回的第 n 个标记其中 N 是通过指定的令牌匹配项的数目\<匹配项 > 参数。 有关此函数的用法示例，请参阅“示例”部分。  
   
  下面的备注适用于 TOKEN 函数：  
   
 -   分隔符字符串可以包含一个或多个分隔符字符。  
   
--   如果 \<occurrence> 参数的值高于字符串中标记的总数，则该函数将返回 NULL。  
+-   如果值\<匹配项 > 参数高于的字符串中的令牌的总数目，则函数返回 NULL。  
   
 -   前导分隔符将被跳过。  
   
@@ -55,7 +60,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
   
 -   您可以使用变量和列作为表达式中所有参数的值。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  在下面的示例中，TOKEN 函数返回“a”。 字符串“a little white dog”具有由分隔符“ ”（空格字符）分隔的 4 个标记“a”、“little”、“white”、“dog”。 第二个参数（分隔符字符串）仅指定要将输入字符串拆分为多个标记的一个分隔符，即空格字符。 最后一个参数 1 指定要返回的第一个标记。 在此示例字符串中，第一个标记是“a”。  
   
 ```  
@@ -98,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

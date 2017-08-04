@@ -1,27 +1,32 @@
 ---
-title: "传输错误消息任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfererrormessagestask.f1"
-helpviewer_keywords: 
-  - "传输错误消息任务 [Integration Services]"
+title: "传输错误消息任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfererrormessagestask.f1
+helpviewer_keywords:
+- Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 传输错误消息任务
-  传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
+# <a name="transfer-error-messages-task"></a>传输错误消息任务
+  传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
   
  传输错误消息任务可以配置为传输所有错误消息，也可以配置为只传输指定的错误消息。 用户定义的错误消息可以多种不同的语言提供，该任务可以配置为只传输选定语言的消息。 对于使用代码页 1033 的 us_english 版本的消息来说，在可以将该消息的其他语言版本传输到目标服务器之前，此消息必须已存在于该服务器上。  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 31
   
  传输错误消息任务支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源和目标。 对于使用哪个版本作为源或目标，没有限制。  
   
-## 事件  
+## <a name="events"></a>事件  
  该任务引发一个报告已经传输的错误消息数的信息事件。  
   
  传输错误消息任务并不报告错误消息传输的进度，它仅报告 0% 和 100 % 完成。  
   
-## 执行值  
- 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的错误消息数。 通过将用户定义的变量分配给传输错误消息任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关错误消息传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../Topic/Use%20Variables%20in%20Packages.md)。  
+## <a name="execution-value"></a>执行值  
+ 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的错误消息数。 通过将用户定义的变量分配给传输错误消息任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关错误消息传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
-## 日志项  
+## <a name="log-entries"></a>日志项  
  传输错误消息任务包括下列自定义日志项：  
   
 -   TransferErrorMessagesTaskStartTransferringObjects    此日志项报告传输已经开始。 日志项包括开始时间。  
@@ -56,10 +61,10 @@ caps.handback.revision: 31
   
  此外， **OnInformation** 事件的日志项报告已传输的错误消息数， **OnWarning event** 的日志项是为目标服务器上被覆盖的每个错误消息写入的。  
   
-## 安全性和权限  
+## <a name="security-and-permissions"></a>安全性和权限  
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  
   
-## 配置传输错误消息任务  
+## <a name="configuration-of-the-transfer-error-messages-task"></a>配置传输错误消息任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
@@ -74,12 +79,12 @@ caps.handback.revision: 31
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

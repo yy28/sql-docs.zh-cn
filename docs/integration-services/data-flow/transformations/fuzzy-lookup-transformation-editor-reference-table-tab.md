@@ -1,26 +1,31 @@
 ---
-title: "模糊查找转换编辑器（“引用表”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptransformation.referencetable.f1"
-helpviewer_keywords: 
-  - "模糊查找转换编辑器"
+title: "模糊查找转换编辑器 （引用表选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+helpviewer_keywords:
+- Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 083e8bbb2791cf8ac72dfde6b11ab93570a5990b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊查找转换编辑器（“引用表”选项卡）
+# <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查找转换编辑器（“引用表”选项卡）
   使用 **“模糊查找转换编辑器”** 对话框的 **“引用表”** 选项卡可以指定用于查找的源表和索引。 引用数据源必须是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表。  
   
 > [!NOTE]  
@@ -31,8 +36,8 @@ caps.handback.revision: 35
   
  若要了解有关模糊查找转换的详细信息，请参阅 [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)。  
   
-## 选项  
- **OLE DB 连接管理器**  
+## <a name="options"></a>选项  
+ **“无缓存”**  
  从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
@@ -50,11 +55,11 @@ caps.handback.revision: 35
  **新索引名称**  
  如果已选择保存新的查找索引，请为其键入描述性名称。  
   
- **维护存储的索引**  
+ **“维护存储的索引”**  
  如果已选择保存新的查找索引，请指定是否还希望 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 维护该索引。  
   
 > [!NOTE]  
->  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md)。  
+>  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
 >  由于 **“维护存储的索引”** 选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的引用表时，此功能才能发挥作用。  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 35
  **现有索引的名称**  
  从列表中选择以前创建的查找索引。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [模糊查找转换编辑器（“列”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [模糊查找转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [模糊查找转换编辑器 &#40;列选项卡 &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [模糊查找转换编辑器 &#40;高级选项卡 &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

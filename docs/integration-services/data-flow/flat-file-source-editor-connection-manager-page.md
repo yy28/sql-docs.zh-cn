@@ -1,26 +1,31 @@
 ---
-title: "平面文件源编辑器（“连接管理器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
-helpviewer_keywords: 
-  - "平面文件源编辑器"
+title: "平面文件源编辑器 （连接管理器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1eabce2627126b883d0d246c0306a6efdfaa3b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 平面文件源编辑器（“连接管理器”页）
+# <a name="flat-file-source-editor-connection-manager-page"></a>平面文件源编辑器（“连接管理器”页）
   可以使用 **“平面文件源编辑器”** 对话框的 **“连接管理器”** 页，选择平面文件源将使用的连接管理器。 平面文件源从文本文件中读取数据，文本文件可以采用分隔符分隔、固定宽度或混合格式。  
   
  平面文件源可以使用下列类型的连接管理器之一：  
@@ -31,8 +36,8 @@ caps.handback.revision: 29
   
  若要了解有关平面文件源的详细信息，请参阅 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)。  
   
-## 选项  
- **平面文件连接管理器**  
+## <a name="options"></a>选项  
+ **Flat file connection manager**  
  从列表中选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
   
  **新建**  
@@ -44,10 +49,10 @@ caps.handback.revision: 29
  **预览**  
  通过使用“数据视图”对话框预览结果。 预览最多可以显示 200 行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [平面文件源编辑器（“列”页）](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
- [平面文件源编辑器（“错误输出”页）](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [平面文件源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [平面文件源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
  [平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

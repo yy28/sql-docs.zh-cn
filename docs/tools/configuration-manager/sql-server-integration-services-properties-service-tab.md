@@ -1,25 +1,30 @@
 ---
-title: "SQL Server Integration Services 属性（“服务”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Integration Services 属性 （服务选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53b926557561d244dbef987aaabe3fdcfeabbf70
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Integration Services 属性（“服务”选项卡）
+# <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
   使用“ **属性”对话框中的“服务”选项卡可以查看或指定下列选项** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  。  
   
-## 选项  
+## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 16
  显示 Windows 进程 ID。  
   
  **SQL 服务类型**  
- 显示用于调用进程的服务的类型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 显示用于调用进程的服务的类型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装有多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  

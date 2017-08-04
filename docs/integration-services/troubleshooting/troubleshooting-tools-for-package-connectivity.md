@@ -1,39 +1,44 @@
 ---
-title: "包连接故障排除工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Integration Services 包，故障排除"
-  - "SSIS 包，故障排除"
-  - "Integration Services, 故障排除"
-  - "连接 [Integration Services], 故障排除"
-  - "错误 [Integration Services], 故障排除"
-  - "包 [Integration Services]，故障排除"
+title: "包连接的故障排除工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 包连接故障排除工具
+# <a name="troubleshooting-tools-for-package-connectivity"></a>包连接故障排除工具
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些功能和工具，您可以利用它们对在包和包从其提取和加载数据的数据源之间的连接进行故障排除。  
   
-## 外部数据访问接口问题的故障排除  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>外部数据访问接口问题的故障排除  
  很多包在与外部数据访问接口交互时会失败。 但是，这些访问接口返回到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的消息经常无法提供足够的信息来对交互开始进行故障排除。 为了满足此故障排除的需要， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含日志记录消息，这些消息可用来对包与外部数据源的交互进行故障排除。  
   
 -   **启用日志记录并选择包的“诊断”事件可以看到故障排除消息**。 下列 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件能够在每次对外部数据访问接口的调用前后向日志写入消息：  
   
     -   OLE DB 连接管理器、OLE DB 源以及 OLE DB 目标  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器和 ADO NET 源  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接管理器和 ADO NET 源  
   
     -   执行 SQL 任务  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另請參閱  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [对包执行进行故障排除的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包执行的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

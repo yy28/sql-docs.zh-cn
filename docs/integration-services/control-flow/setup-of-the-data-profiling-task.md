@@ -1,32 +1,37 @@
 ---
-title: "设置数据事件探查任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据事件探查任务 [Integration Services]，配置"
+title: "安装程序的数据事件探查任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 设置数据事件探查任务
+# <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
   
-## 要求和限制  
+## <a name="requirements-and-limitations"></a>要求和限制  
  数据事件探查任务仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的数据。 它不适用于第三方或基于文件的数据源。  
   
  而且，若要运行包含数据事件探查任务的包，必须使用对 tempdb 数据库具有读/写权限（包括 CREATE TABLE 权限）的帐户。  
   
-## 包中的数据事件探查任务  
+## <a name="data-profiling-task-in-a-package"></a>包中的数据事件探查任务  
  数据事件探查任务只配置配置文件并创建包含所计算配置文件的输出文件。 若要查看此输出文件，必须使用数据配置文件查看器，它是一个独立的查看器程序。 因为必须独立查看输出，所以可以在不包含任何其他任务的包中使用数据事件探查任务。  
   
  但是，您不必将数据事件探查任务用作包中的唯一任务。 如果希望在更复杂的包中的工作流或数据流中执行数据事件探查，您有如下选择：  
@@ -35,17 +40,17 @@ caps.handback.revision: 34
   
 -   若要在加载并转换了数据流中的数据之后对该数据进行事件探查，则必须将更改后的数据暂时保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 然后，您可以对保存的数据进行事件探查。  
   
- 有关详细信息，请参阅[合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
+ 有关详细信息，请参阅 [合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
-## 设置任务输出  
+## <a name="setup-of-the-task-output"></a>设置任务输出  
  在将数据事件探查任务放置到包中之后，必须设置任务将计算的配置文件的输出。 若要设置配置文件的输出，可以使用数据事件探查任务编辑器的 **“常规”** 页。 除了指定输出的目标外， **“常规”** 页还提供了用于执行数据快速配置文件的功能。 选择 **“快速配置文件”**时，数据事件探查任务使用某些或所有具有默认设置的默认配置文件对表或视图进行事件探查。  
   
  有关详细信息，请参阅[数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)和[单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
 > [!IMPORTANT]  
->  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅[访问包使用的文件](../../integration-services/security/access-to-files-used-by-packages.md)。  
+>  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-## 选择和配置要计算的配置文件  
+## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>选择和配置要计算的配置文件  
  设置输出文件后，必须选择要计算的数据配置文件。 数据事件探查任务可以计算 8 个不同的数据配置文件。 其中的 5 个配置文件分析单列，其余的 3 个则分析多列或列和表之间的关系。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
   
  下表介绍其中的每个配置文件所计算的报告，以及配置文件对其有效的数据类型。  
@@ -89,7 +94,7 @@ caps.handback.revision: 34
   
 -   [值包含配置文件请求选项（数据事件探查任务）](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## 执行包含数据事件探查任务的包  
+## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>执行包含数据事件探查任务的包  
  设置数据事件探查任务后，可以运行此任务。 此任务随后将计算数据配置文件并以 XML 格式将此信息输出到一个文件或包变量中。 此 XML 结构符合 DataProfile.xsd 架构。 可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他架构编辑器、XML 编辑器或记事本等文本编辑器中打开该架构。 此数据质量信息架构可用于以下目的：  
   
 -   在单位内和跨单位交换数据质量信息。  
@@ -98,7 +103,7 @@ caps.handback.revision: 34
   
  目标命名空间在该架构内标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
   

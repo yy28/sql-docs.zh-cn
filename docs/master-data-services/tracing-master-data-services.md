@@ -1,22 +1,27 @@
 ---
-title: "跟踪 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "跟踪 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 跟踪 (Master Data Services)
+# <a name="tracing-master-data-services"></a>跟踪 (Master Data Services)
   Web.config 文件包含跟踪部分，如下所示。 此部分是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -63,7 +68,7 @@ caps.handback.revision: 7
     |级别|此跟踪条目的级别。|  
     |消息|跟踪的消息正文|  
   
-## 外部资源  
+## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](http://go.microsoft.com/fwlink/p/?LinkId=615377)。  
   
   

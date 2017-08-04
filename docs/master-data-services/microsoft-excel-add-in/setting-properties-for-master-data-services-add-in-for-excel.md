@@ -1,28 +1,33 @@
 ---
-title: "设置用于 Excel 的 Master Data Services 外接程序的属性 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "设置属性，为 Master Data Services 外接程序 excel |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b4715ce4acdc48f6425d2343cb45cd8311d982
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 设置用于 Excel 的 Master Data Services 外接程序的属性
+# <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>设置用于 Excel 的 Master Data Services 外接程序的属性
   用于 Excel 的 Master Data Services 外接程序设置确定将 MDS 中的数据加载到 Excel 外接程序的方式和将 Excel 外接程序中的数据发布到 MDS 的方式。  
   
  若要设置 Excel 外接程序，请打开“Excel”，单击“主数据”菜单，然后单击“设置”。 具有对 Excel 的访问权限的任何人都可以更改这些设置。 这些设置适用于打开了 Excel 的计算机。  
   
-## Excel 外接程序设置  
+## <a name="excel-add-in-settings"></a>Excel 外接程序设置  
   
 ||||  
 |-|-|-|  

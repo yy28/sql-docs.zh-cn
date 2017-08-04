@@ -1,27 +1,32 @@
 ---
-title: "使用 CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cdcServ"
+title: "使用 CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 CDC 服务
+# <a name="work-with-cdc-services"></a>使用 CDC 服务
   您可以使用 CDC 服务配置控制台创建新的 CDC 服务以及为 CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
-## 选项  
+## <a name="options"></a>选项  
  **准备 SQL Server**  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格中选择此选项。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 6
   
  “为 Oracle CDC 准备 SQL Server 实例”对话框随即将会打开。  
   
- 有关如何使用此对话框的信息，请参阅 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)。 有关如何为 CDC 启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的信息，请参阅[如何为 CDC 准备 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)。  
+ 有关如何使用此对话框的信息，请参阅 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)。 有关如何为 CDC 启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的信息，请参阅 [如何为 CDC 准备 SQL Server](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)。  
   
  **创建新的 CDC 服务**  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“新建服务”** 。  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  “新建 Oracle CDC 服务”对话框将打开。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何使用 CDC 服务](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [创建和编辑 Oracle CDC 服务](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

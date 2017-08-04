@@ -1,29 +1,34 @@
 ---
-title: "渐变维度列（渐变维度向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.scdsupport.f1"
+title: "渐变维度列 （渐变维度向导） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.loaddimwizard.scdsupport.f1
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0531f6420e00e284752be07dd44862ea117f1ffd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 渐变维度列（渐变维度向导）
+# <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>渐变维度列（渐变维度向导）
   可以使用 **“渐变维度列”** 对话框，为每个渐变维度列选择更改类型。  
   
  若要了解有关此向导的详细信息，请参阅 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **维度列**  
  从列表中选择维度列。  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 23
  **删除**  
  选择一个维度列，通过单击“删除”可以将其从映射列的列表中删除。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "用于实例创建的 SQL Server 连接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Connection for Instance Creation |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65f20b235b6a3c4bd22ce754467f36a9b03fdaab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 用于实例创建的 SQL Server 连接
+# <a name="sql-server-connection-for-instance-creation"></a>用于实例创建的 SQL Server 连接
   创建 Oracle CDC 实例时首先要执行的步骤之一是在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建 CDC 数据库。 将为 SQL Server CDC 启用该 CDC 数据库，并且此启用将要求作为 `sysadmin` 固定服务器角色的成员的登录名。  
   
  在启动“创建 Oracle CDC 实例”向导的用户不是 `sysadmin` 固定服务器角色的成员时，“连接到 SQL Server”对话框将打开，并且请求 `sysadmin` 角色成员的凭据以便执行“为 SQL Server CDC 启用数据库”任务。 在创建 CDC 数据库时， `sysadmin` 登录名将被放弃，并且使用在进入 Oracle 设计器控制台时使用的原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名继续工作。  
   
-## 任务列表  
+## <a name="task-list"></a>任务列表  
  在“连接到 SQL Server”对话框中输入以下信息。  
   
  **服务器名称**  
@@ -49,8 +54,8 @@ caps.handback.revision: 7
   
      有关“高级连接属性”对话框的信息，请参阅[高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 SQL Server 更改数据库](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [针对 CDC 设计器的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [针对 CDC 设计器 SQL Server 连接所需的权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

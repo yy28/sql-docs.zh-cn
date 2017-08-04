@@ -1,43 +1,48 @@
 ---
-title: "字词提取转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termextractiontrans.f1"
-helpviewer_keywords: 
-  - "词边界 [Integration Services]"
-  - "提取数据 [Integration Services]"
-  - "句子边界"
-  - "词提取 [Integration Services]"
-  - "字词提取转换"
-  - "标记单词"
-  - "规范化的数据 [Integration Services]"
-  - "对文本进行词汇切分 [Integration Services]"
-  - "词类 [Integration Services]"
-  - "文本提取 [Integration Services]"
-  - "字词提取 [Integration Services]"
-  - "提取词干 [Integration Services]"
+title: "字词提取转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termextractiontrans.f1
+helpviewer_keywords:
+- word boundaries [Integration Services]
+- extracting data [Integration Services]
+- sentence boundaries
+- word extractions [Integration Services]
+- Term Extraction transformation
+- tagging words
+- normalized data [Integration Services]
+- tokenizing text [Integration Services]
+- parts of speech [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 字词提取转换
+# <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
   
  可以用字词提取转换搜索数据集的内容。 例如，包含电子邮件的文本可能会提供关于产品有用的反馈信息，因此，作为分析反馈的一种方法，可以用字词提取转换提取邮件中的讨论主题。  
   
-## 提取的字词和数据类型  
- 字词提取转换可以仅提取名词、仅提取名词短语，或者同时提取名词和名词短语。 名词是单个名词；名词短语至少是两个词，其中一个为名词，另一个为名词或形容词。 例如，如果转换使用仅名词选项，则将提取如 *bicycle* 和 *landscape* 等字词；如果转换使用名词短语选项，则将提取如 *new blue bicycle*、*bicycle helmet* 和 *boxed bicycles* 等字词。  
+## <a name="extracted-terms-and-data-types"></a>提取的字词和数据类型  
+ 字词提取转换可以仅提取名词、仅提取名词短语，或者同时提取名词和名词短语。 名词是单个名词；名词短语至少是两个词，其中一个为名词，另一个为名词或形容词。 例如，如果转换使用仅名词选项，则将提取如 *bicycle* 和 *landscape*等字词；如果转换使用名词短语选项，则将提取如 *new blue bicycle*、 *bicycle helmet*和 *boxed bicycles*等字词。  
   
  冠词和代词不提取。 例如，字词提取转换将从文本 *the bicycle* 、 *my bicycle*和 *that bicycle*中提取字词 *bicycle*。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 61
   
  字词提取转换仅可用于 DT_WSTR 或 DT_NTEXT 数据类型的列中的文本。 如果列包含文本但其数据类型不是这些之一，则可使用数据转换向数据流添加 DT_WSTR 或 DT_NTEXT 数据类型的列并将该列值复制到新列。 然后，数据转换的输出可用作对字词提取转换的输入。 有关详细信息，请参阅 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-## 排除字词  
+## <a name="exclusion-terms"></a>排除字词  
  根据需要，字词提取转换还可以引用包含排除字词（表示转换从数据集中提取字词时应跳过的字词）的表中的列。 当一组字词在特定业务或行业中已标识为不重要（通常是由于该字词出现频率过高，以致其成为干扰词）时，这会很有用。 例如，从包含特定汽车品牌的客户支持信息的数据集中提取字词时，品牌本身由于过于频繁地被提到而变得毫无意义，因此可以排除。 因此，排除列表中的值必须按照正在使用中的数据集进行自定义。  
   
  如果将某一字词添加到排除列表中，则包含该字词的所有字词（不论是单词还是名词短语）也都将被排除。 例如，如果排除列表中包含单个单词 *data*，则包含该单词的所有字词（如 *data*、 *data mining*、 *data integrity*和 *data validation* ）也都将被排除。 如果只希望排除包含单词 *data*的复合词，则必须将这些复合字词显式添加到排除列表中。 例如，如果要提取 *data*，而排除 *data validation*，则需要将 *data validation* 添加到排除列表中，并确保将 *data* 从排除列表中删除。  
@@ -58,10 +63,10 @@ caps.handback.revision: 61
   
  字词提取转换在完全预缓存模式下工作。 在运行时，字词提取转换从引用表中读取排除字词并将这些字词存储在转换的专用内存中，然后才处理任何转换输入行。  
   
-## 从文本中提取字词  
+## <a name="extraction-of-terms-from-text"></a>从文本中提取字词  
  若要从文本中提取字词，字词提取转换要执行下列任务。  
   
-### 单词的标识  
+### <a name="identification-of-words"></a>单词的标识  
  首先，字词提取转换执行下列任务以标识单词：  
   
 -   使用英语中的空格、换行符和其他单词终止符将文本分隔为单词。 例如，标点符号（如 *?* 和 *:* 为断字符。  
@@ -70,13 +75,13 @@ caps.handback.revision: 61
   
 -   原封不动地保留包含句点的首字母缩略词。 例如， *A.B.C* Company 将词汇切分为 **ABC** 和 **Company**。  
   
--   拆分带有特殊字符的单词。 例如，单词 *date/time* 提取为 *date* 和 *time*，*(bicycle)* 提取为 *bicycle*，而 C# 则视为 C。特殊字符将被放弃且不能被编入词汇。  
+-   拆分带有特殊字符的单词。 例如，单词 *date/time* 提取为 *date* 和 *time*， *(bicycle)* 提取为 *bicycle*，而 C# 则视为 C。特殊字符将被放弃且不能被编入词汇。  
   
--   确认诸如撇号之类的特殊字符何时不应拆分单词。 例如，词 *bicycle's* 不会拆分为两个单词，而是生成一个词 *bicycle*（名词）。  
+-   确认诸如撇号之类的特殊字符何时不应拆分单词。 例如，词 *bicycle's* 不会拆分为两个单词，而是生成一个词 *bicycle* （名词）。  
   
 -   拆分时间表达式、货币表达式、电子邮件地址和邮寄地址。 例如，日期 *January 31, 2004* 可分隔为三个标记， *January*、 *31*和 *2004*。  
   
-### 带标记的单词  
+### <a name="tagged-words"></a>带标记的单词  
  第二，字词提取转换将单词标记为下列词类之一：  
   
 -   单数形式的名词。 例如， *bicycle* 和 *potato*。  
@@ -109,7 +114,7 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  提取的字词仍然受转换所使用的最大字词长度和频率阈值的限制。  
   
-### 词干字词  
+### <a name="stemmed-words"></a>词干字词  
  字词提取转换还可以提取名词词干，从而仅提取名词的单数形式。 例如，转换从 *men* 中提取 *man*，从 *mice* 中提取 *mouse*以及从 *bicycles* 中提取 *bicycle*。 转换使用其字典来提取名词词干。 其字典中的动名词将视为名词。  
   
  字词提取转换使用其内部字典，将单词的词干提取为其字典格式，如这些示例中所示。  
@@ -120,19 +125,19 @@ caps.handback.revision: 61
   
 -   从字典中检索不规则名词的单数形式。 例如， *geese* 变为 *goose*。  
   
-### 规范化的字词  
+### <a name="normalized-words"></a>规范化的字词  
  对仅因位于句首而大写的字词，字词提取转换一律采用其非首字母大写形式。 例如，在短语 *Dogs chase cats* 和 *Mountain paths are steep*中， *Dogs* 和 *Mountain* 将被规范为 *dog* 和 *mountain*。  
   
  字词提取转换对单词进行规范，从而不将大写和非大写单词视为不同的字词。 例如，在文本 *You see many bicycles in Seattle* 和 *Bicycles are blue*中， *bicycles* 和 *Bicycles* 识别为相同的字词并且转换仅保留 *bicycle*。 内部字典中未列出的专有名词和单词不进行规范。  
   
-### 区分大小写的规范  
+### <a name="case-sensitive-normalization"></a>区分大小写的规范  
  字词提取转换可以配置为将小写和大写单词视为不同的字词，或者相同字词的不同变体。  
   
 -   如果将转换配置为可识别大小写，则 *Method* 和 *method* 这样的字词将被提取为两个不同的字词。 对非句首词的大写单词从不进行规范，并将其标记为专有名词。  
   
 -   如果将转换配置为不区分大小写，则如 *Method* 和 *method* 这样的字词将被识别为单个字词的变体。 提取的字词列表可能包括 *Method* 或 *method*，这取决于哪个单词首先出现在输入数据集中。 如果 *Method* 仅因其是句首词而大写，则将以规范形式提取它。  
   
-## 句子和词边界  
+## <a name="sentence-and-word-boundaries"></a>句子和词边界  
  字词提取转换使用下列字符作为句子边界将文本分隔为多个句子：  
   
 -   ASCII 换行字符 0x0d（回车符）和 0x0a（换行符）。 若要使用此字符作为句子的边界，则每行中必须有两个或更多的换行字符。  
@@ -143,9 +148,9 @@ caps.handback.revision: 61
   
 -   小于等于 0x19 或大于等于 0x7b 的所有 Unicode 字符。  
   
--   数字、标点符号和字母字符的组合。 例如，*A23B#99* 返回字词 *A23B*。  
+-   数字、标点符号和字母字符的组合。 例如， *A23B#99* 返回字词 *A23B*。  
   
--   字符 %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、" 和 ‘。  
+-   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
   
     > [!NOTE]  
     >  包括一个或多个句点 (.) 的首字母缩略词不分隔为多个句子。  
@@ -163,7 +168,7 @@ caps.handback.revision: 61
     > [!NOTE]  
     >  如果缩写的单词中包含撇号，如 *we're* 或 *it's*，则在撇号处断词，否则，撇号后的字母将被剪裁掉。 例如， *we're* 拆分为 *we* 和 *'re*，而 *bicycle's* 则剪裁为 *bicycle*。  
   
-## 配置字词提取转换  
+## <a name="configuration-of-the-term-extraction-transformation"></a>配置字词提取转换  
  文本提取转换使用内部算法和统计模型来生成其结果。 可能需要多次运行字词提取转换并检查结果，以配置转换使其生成用于文本挖掘解决方案的结果类型。  
   
  字词提取转换有一个常规输入、一个输出和一个错误输出。  
@@ -180,10 +185,10 @@ caps.handback.revision: 61
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
   

@@ -1,37 +1,42 @@
 ---
-title: "设置包属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 包, 属性"
-  - "属性 [Integration Services]"
-  - "检查点 [Integration Services]"
-  - "执行属性 [Integration Services]"
-  - "包 [Integration Services], 属性"
-  - "标识属性 [Integration Services]"
-  - "密码 [Integration Services]"
-  - "SSIS 包, 属性"
-  - "事务属性 [Integration Services]"
-  - "更新包属性"
-  - "强制执行值属性 [Integration Services]"
-  - "安全属性 [Integration Services]"
-  - "版本属性 [Integration Services]"
-  - "SQL Server Integration Services 包, 属性"
+title: "设置包属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- checkpoints [Integration Services]
+- execution properties [Integration Services]
+- packages [Integration Services], properties
+- identification properties [Integration Services]
+- passwords [Integration Services]
+- SSIS packages, properties
+- transaction properties [Integration Services]
+- updating package properties
+- forced execution value properties [Integration Services]
+- security properties [Integration Services]
+- version properties [Integration Services]
+- SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 设置包属性
+# <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
   
  **“属性”** 窗口按分类和字母顺序排序列出了一系列属性列表。 若要按类别排列 **“属性”** 窗口，请单击“按分类顺序”图标。  
@@ -54,13 +59,13 @@ caps.handback.revision: 39
   
 -   [版本](#Version)  
   
- 有关不能在“属性”窗口中设置的其他包属性的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
+ 有关不能在中设置的其他包属性**属性**窗口中，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
-### 在“属性”窗口中设置包属性  
+### <a name="to-set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性  
   
--   [设置包的属性](../Topic/Set%20the%20Properties%20of%20a%20Package.md)  
+-   [设置包的属性](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
-## 按类别排列的属性  
+## <a name="properties-by-category"></a>按类别排列的属性  
  下表列出了按类别排列的包属性。  
   
 ###  <a name="Checkpoints"></a> 检查点  
@@ -107,17 +112,17 @@ caps.handback.revision: 39
 |**CreatorComputerName**|创建包的计算机的名称。|  
 |**CreatorName**|包创建者的姓名。|  
 |**Description**|包功能说明。|  
-|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成 **ID** 属性的新随机值，则在下拉列表中选择“\<生成新 ID>”。|  
+|**ID**|包 GUID，该属性是在创建包时分配的。 该属性为只读。 若要生成新的随机值**ID**属性中，选择**\<生成新的 ID\>** 下拉列表中。|  
 |**名称**|包的名称。|  
 |**PackageType**|包类型。 其值为： **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此属性的默认值为 **Default**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
 ###  <a name="Misc"></a> 杂项  
- 此类别中的属性用于访问包所使用的配置和表达式，以及提供有关包的区域设置和日志记录模式的信息。 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。  
+ 此类别中的属性用于访问包所使用的配置和表达式，以及提供有关包的区域设置和日志记录模式的信息。 有关详细信息，请参阅 [在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
 |属性|Description|  
 |--------------|-----------------|  
 |**配置**|包使用的配置集合。 单击浏览按钮 **(…)** 可以查看和配置包配置。|  
-|**表达式**|单击浏览按钮 **(…)** 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅[在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 **(…)** 可以修改和计算表达式。|  
+|**表达式**|单击浏览按钮 **(…)** 可以为包属性创建表达式。<br /><br /> 请注意，你可以为对象模型包含的所有包属性（而不仅仅是“属性”窗口中列出的属性）创建属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 **Expressions**。 单击表达式文本框中的浏览按钮 **(…)** 可以修改和计算表达式。|  
 |**ForceExecutionResult**|包的执行结果。 其值为： **None**、 **Success**、 **Failure**和 **Completion**。 此属性的默认值为 **None**。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |**LocaleId**|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |**LoggingMode**|指定包日志记录行为的值。 具体的值为 **Disabled**、 **Enabled**和 **UseParentSetting**。 此属性的默认值为 **UseParentSetting**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
@@ -126,7 +131,7 @@ caps.handback.revision: 39
 |**UpdateObjects**|指示当包所含对象的更新版本可用时，是否更新包以使用更新版本的对象。 例如，如果此属性设置为 **True**，则会更新包含大容量插入任务的包，以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的更新版本的大容量插入任务。 此属性的默认值为 **False**。|  
   
 ###  <a name="Security"></a> Security  
- 此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md)。  
+ 此类别中的属性用于设置包的保护级别。 有关详细信息，请参阅 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
   
 |属性|Description|  
 |--------------|-----------------|  
@@ -151,5 +156,19 @@ caps.handback.revision: 39
 |**VersionGUID**|包版本的 GUID。 该属性为只读。|  
 |**VersionMajor**|包的最新主版本。|  
 |**VersionMinor**|包的最新次版本。|  
+
+## <a name="set-package-properties-in-the-properties-window"></a>在属性窗口中设置包属性 
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
+2.  在“解决方案资源管理器”中双击此包，将其在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开，或者右键单击并选择“视图设计器”。  
+  
+3.  单击 **“控制流”** 选项卡，然后执行下列操作之一：  
+  
+    -   右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+  
+    -   在 **“视图”** 菜单上，单击 **“属性窗口”**。  
+  
+4.  在 **“属性”** 窗口中编辑包属性。  
+  
+5.  在 **“文件”** 菜单上单击 **“保存选定项”** ，保存已更新的包。  
   

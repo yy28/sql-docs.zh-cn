@@ -1,40 +1,45 @@
 ---
-title: "传输 SQL Server 对象任务编辑器（“对象”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "传输 SQL Server 对象任务编辑器"
+title: "传输 SQL Server 对象任务编辑器 （对象页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 传输 SQL Server 对象任务编辑器（“对象”页）
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>传输 SQL Server 对象任务编辑器（“对象”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“对象”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 可复制的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的几个示例包括表、视图、存储过程和用户定义函数。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)。  
   
 > [!NOTE]  
 >  创建传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务的用户必须具有对源服务器对象的足够权限以选择对象进行复制，还必须具有访问这些对象将传输到的目标服务器数据库的权限。  
   
-## 静态选项  
+## <a name="static-options"></a>静态选项  
  **SourceConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
   
  **SourceDatabase**  
  选择要从源服务器上的哪个数据库复制对象。  
   
  **DestinationConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
   
  **DestinationDatabase**  
  选择对象要复制到目标服务器上的哪个数据库。  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |**追加**|从源服务器复制的数据将追加到目标服务器上的现有数据中。|  
   
 > [!NOTE]  
->  只有在 **CopyData** 设置为 **True** 时，**ExistingData**选项才可用。  
+>  只有在 **CopyData** 设置为 **True** 时， **ExistingData**选项才可用。  
   
  **CopySchema**  
  选择在传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务过程中是否复制架构。  
@@ -78,7 +83,7 @@ caps.handback.revision: 30
  展开 **ObjectsToCopy** 以指定应从源数据库复制到目标数据库的对象。  
   
 > [!NOTE]  
-> **CopyAllObjects** 设置为 **False** 时， **ObjectsToCopy**选项才可用。  
+>  **CopyAllObjects** 设置为 **False** 时， **ObjectsToCopy**选项才可用。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持用于复制以下类型的对象的选项：  
   
@@ -126,9 +131,9 @@ caps.handback.revision: 30
  **GenerateScriptsInUnicode**  
  指定生成的传输脚本是否为 Unicode 格式。  
   
-## 动态选项  
+## <a name="dynamic-options"></a>动态选项  
   
-### CopyAllObjects = False  
+### <a name="copyallobjects--false"></a>CopyAllObjects = False  
  **CopyAllTables**  
  选择该任务是复制指定源数据库中的所有表还是仅复制所选表。  
   
@@ -207,11 +212,11 @@ caps.handback.revision: 30
  **XmlSchemaCollectionsList**  
  单击此项将打开“选择 XML 架构集合”对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [传输 SQL Server 对象任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
- [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [传输 SQL Server 对象任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [表达式页](../../integration-services/expressions/expressions-page.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

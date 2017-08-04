@@ -1,29 +1,34 @@
 ---
-title: "序列容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sequencecontainer.f1"
-helpviewer_keywords: 
-  - "序列容器"
-  - "对控制流进行分组"
-  - "容器 [Integration Services], 序列"
-  - "子集控制流 [Integration Services]"
+title: "序列容器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sequencecontainer.f1
+helpviewer_keywords:
+- Sequence container
+- grouping control flows
+- containers [Integration Services], Sequence
+- subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e5ab99da4957f614aff20aa7672f444abfadbee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 序列容器
+# <a name="sequence-container"></a>序列容器
   序列容器可定义作为包控制流子集的控制流。 序列容器将包分组到多个单独的控制流中，每个控制流包含一个或多个在整体包控制流中运行的任务和容器。  
   
  除包含其他容器外，序列容器还可以包含多个任务。 将任务和容器添加到序列容器的过程与将它们添加到包的过程相似，唯一不同是把任务和容器拖动到序列容器，而不是拖动到包容器。 如果序列容器包含多个任务或容器，可以使用优先约束连接它们，如同在包中的操作一样。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
@@ -46,17 +51,17 @@ caps.handback.revision: 48
   
      例如，如果序列容器包含两个相关任务（一个任务删除表中的数据，另一个将数据插入到表中），则可配置事务以确保插入操作失败时回滚删除操作。 有关详细信息，请参阅 [Integration Services 事务](../../integration-services/integration-services-transactions.md)。  
   
-## 序列容器的配置  
+## <a name="configuration-of-the-sequence-container"></a>序列容器的配置  
  序列容器没有自定义用户界面，您只能通过 **中的** “属性” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 窗口对其进行配置，或以编程方式配置。  
   
  有关以编程方式设置这些属性的详细信息，请参阅开发人员指南中针对 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 类的文档。  
   
-## 相关任务  
- 有关如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中设置组件属性的信息，请参阅[设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+## <a name="related-tasks"></a>相关任务  
+ 有关如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设置组件属性的信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用默认优先约束来连接任务和容器](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)   
+ [通过使用默认优先约束连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
   
   

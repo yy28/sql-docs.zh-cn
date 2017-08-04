@@ -1,22 +1,27 @@
 ---
-title: "对包执行进行故障排除的报告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "包执行的疑难解答报表 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 713868eea3eaee8597a63441b84a5c16ec676215
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 对包执行进行故障排除的报告
+# <a name="troubleshooting-reports-for-package-execution"></a>对包执行进行故障排除的报告
   在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，可帮助您监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包并排除其问题。 这些包报告中有两个报告尤其有助您查看包的执行状态，并确定执行失败的原因。  
   
 -   **Integration Services** 面板 - 此报告提供过去 24 小时内 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有包执行情况的概览。 该报告显示每个包的状态、操作类型、包名称之类的信息。  
@@ -33,11 +38,8 @@ caps.handback.revision: 12
   
 -   **“活动 - 所有执行”报告** – 此报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 执行的摘要。 摘要中显示每次执行的信息，如状态、开始时间和结束时间。 每个摘要条目都包含指向有关执行的详细信息的连接，包括在执行期间生成的消息和性能数据。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
-## 相关任务  
- [查看 Integration Services 服务器的报告](../../integration-services/performance/view-reports-for-the-integration-services-server.md)  
-  
-## 相关内容  
- [Integration Services 服务器的报告](../../integration-services/performance/reports-for-the-integration-services-server.md)  
+## <a name="related-content"></a>相关内容  
+ [Integration Services 服务器的报告](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  
   
  [对包执行进行故障排除的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

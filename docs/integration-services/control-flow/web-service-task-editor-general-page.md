@@ -1,33 +1,38 @@
 ---
-title: "Web 服务任务编辑器（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicestask.general.f1"
-helpviewer_keywords: 
-  - "Web 服务任务编辑器"
+title: "Web 服务任务编辑器 （常规页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicestask.general.f1
+helpviewer_keywords:
+- Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c65419846e21225c6b5fe41bc07cfbae6dffe01
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Web 服务任务编辑器（“常规”页）
+# <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
   
  有关此任务的详细信息，请参阅 [Web 服务任务](../../integration-services/control-flow/web-service-task.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中，选择连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -64,15 +69,15 @@ caps.handback.revision: 34
  **Description**  
  键入 Web 服务任务的说明。  
   
- **下载 WSDL 文件**  
+ **“下载 WSDL”**  
  下载 WSDL 文件。  
   
  当您在 **WSDLFile** 框中提供现有本地文件的名称后，该按钮才会启用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [Web 服务任务编辑器（“输入”页）](../../integration-services/control-flow/web-service-task-editor-input-page.md)   
- [Web 服务任务编辑器（“输出”页）](../../integration-services/control-flow/web-service-task-editor-output-page.md)   
+ [Web 服务任务编辑器 &#40; 输入页 &#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)   
+ [Web 服务任务编辑器 &#40; 输出页 &#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)   
  [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
   

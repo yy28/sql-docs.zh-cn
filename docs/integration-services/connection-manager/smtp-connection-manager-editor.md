@@ -1,31 +1,36 @@
 ---
-title: "SMTP 连接管理器编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smtpconnection.f1"
-helpviewer_keywords: 
-  - "SMTP 连接管理器编辑器"
+title: "SMTP 连接管理器编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
+helpviewer_keywords:
+- SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ef8edce1f187ac427463a0a0722c12666265d93
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SMTP 连接管理器编辑器
+# <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
   使用“SMTP 连接管理器编辑器”对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
   
  若要了解有关 SMTP 连接管理器的详细信息，请参阅 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **名称**  
  为连接管理器提供唯一的名称。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
  **启用安全套接字层 (SSL)**  
  如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

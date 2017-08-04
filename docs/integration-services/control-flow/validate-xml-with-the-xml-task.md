@@ -1,39 +1,44 @@
 ---
-title: "使用 XML 任务验证 XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML 验证"
-  - "XML, 验证"
+title: "验证 XML with the XML Task |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML validation
+- XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 XML 任务验证 XML
+# <a name="validate-xml-with-the-xml-task"></a>使用 XML 任务验证 XML
   通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。  
   
  下面的屏幕快照显示 **XML 任务编辑器** ，其中包含具有丰富错误输出的 XML 验证所需的设置。  
   
- ![XML task properties in the XML Task Editor](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
+ ![XML 任务属性在 XML 任务编辑器](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 任务属性在 XML 任务编辑器")  
   
  在可以使用 **ValidationDetails** 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 **ValidationDetails** 设置为 True 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。  
   
  XML 验证功能可轻松扩展以适应大型 XML 文档和大量错误。 由于输出文件本身采用 XML 格式，你可以查询和分析输出。 例如，如果输出中包含大量错误，你可以按本主题中所述，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对错误分组。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 中引入了 **ValidationDetails** 属性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 引入**ValidationDetails**中的属性[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
   
-## 有效的 XML 示例输出  
+## <a name="sample-output-for-xml-thats-valid"></a>有效的 XML 示例输出  
  下面是有效 XML 文件的示例输出文件（带有验证结果）。  
   
 ```xml  
@@ -52,8 +57,8 @@ caps.handback.revision: 9
 </root>  
 ```  
   
-## 无效的 XML 示例输出  
- 下面是包含少量错误的 XML 文件的示例输出文件（带有验证结果）。 为便于阅读，\<error> 元素的文本已换行。  
+## <a name="sample-output-for-xml-thats-not-valid"></a>无效的 XML 示例输出  
+ 下面是包含少量错误的 XML 文件的示例输出文件（带有验证结果）。 文本\<错误 > 元素具有已包装的可读性。  
   
 ```xml  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 9
 </root>  
 ```  
   
-## 使用 Transact-SQL 查询分析 XML 验证输出  
+## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>使用 Transact-SQL 查询分析 XML 验证输出  
  如果 XML 验证输出中包含大量错误，你可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中加载输出。 然后可以使用 T-SQL 语言的所有功能（包括 WHERE、GROUP BY、ORDER BY，JOIN 等）对错误列表进行分析。  
   
 ```tsql  
@@ -115,10 +120,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  下面是上述文本中第二个示例查询在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的结果。  
   
- ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![对在 Management Studio 中的 XML 错误进行分组的查询](../../integration-services/control-flow/media/queryforxmlerrors.jpg "对在 Management Studio 中的 XML 错误进行分组的查询")  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 任务](../../integration-services/control-flow/xml-task.md)   
- [XML 任务编辑器（“常规”页）](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+ [XML 任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   

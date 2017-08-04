@@ -1,25 +1,30 @@
 ---
-title: "SQL Server 属性（“高级”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 属性 （高级选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 属性（“高级”选项卡）
+# <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
   默认情况下， **“高级”** 选项卡中会显示下列属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
-## 选项  
+## <a name="options"></a>选项  
  **群集**  
  指示此服务是否作为群集服务器的资源进行安装。  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 19
  指示是否已对此服务启用服务质量监视。 有关客户反馈报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。  
   
  **数据路径**  
- 显示所安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 二进制文件路径。  
+ 显示所安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]二进制文件路径。  
   
  **转储目录**  
  显示发生错误时内存转储的存放位置。  
@@ -39,7 +44,7 @@ caps.handback.revision: 19
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的版本。  
   
  **安装路径**  
- 显示所安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 二进制文件路径。  
+ 显示所安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]二进制文件路径。  
   
  **实例 ID**  
  指示使用此服务的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -51,21 +56,21 @@ caps.handback.revision: 19
  显示此应用程序所使用的注册表项的位置。  
   
  **Service Pack 级别**  
- 显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Service Pack 级别。  
+ 显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 Service Pack 级别。  
   
  **SKU 名称**  
  显示产品的单品 (SKU)，有时称为产品版本。  
   
  **引导参数**  
- 列出此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的所有引导参数。 这些参数以分号分隔。 默认参数包括 master 数据库的数据文件 (`master.mdf`)、master 数据库的日志文件 (`mastlog.ldf`) 和错误日志文件的路径。 有关引导参数的语法，请在联机丛书中搜索主题“使用 SQL Server 服务启动选项”主题   
+ 列出此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的所有引导参数。 这些参数以分号分隔。 默认参数包括 master 数据库的数据文件 (`master.mdf`)、master 数据库的日志文件 (`mastlog.ldf`) 和错误日志文件的路径。 有关引导参数的语法，请在联机丛书中搜索主题“使用 SQL Server 服务启动选项”主题   
   
  **单品**  
  显示产品的单品 (SKU) 编号。  
   
  **版本**  
- 显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的版本号。  
+ 显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的版本号。  
   
  **虚拟服务器名称**  
-在群集服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后的 **虚拟服务器名称**。  
+ 在群集服务器上安装**后的** 虚拟服务器名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "WMI 连接管理器编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmiconnection.f1"
-helpviewer_keywords: 
-  - "WMI 连接管理器编辑器"
+title: "WMI 连接管理器编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
+helpviewer_keywords:
+- WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b39bf96634b93b366492c9551942e633e20e9b0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 连接管理器编辑器
+# <a name="wmi-connection-manager-editor"></a>WMI 连接管理器编辑器
   可以使用“WMI 连接管理器”对话框指定到服务器的 Microsoft Windows Management Instrumentation (WMI) 连接。  
   
  若要了解有关 WMI 连接管理器的详细信息，请参阅 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **名称**  
  为连接管理器提供唯一的名称。  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 28
  **测试**  
  测试连接管理器设置。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [用于配置管理的 WMI 提供程序的概念](../Topic/WMI%20Provider%20for%20Configuration%20Management%20Concepts.md)   
+ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

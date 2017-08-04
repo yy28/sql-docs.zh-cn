@@ -1,32 +1,37 @@
 ---
-title: "字词查找转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "提取数据 [Integration Services]"
-  - "匹配提取的字词 [Integration Services]"
-  - "文本提取 [Integration Services]"
-  - "字词提取 [Integration Services]"
-  - "查找 [Integration Services]"
-  - "对提取的项进行计数"
-  - "字词查找转换"
+title: "字词查找转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 字词查找转换
+# <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
   
  字词查找转换在执行查找之前，先使用与字词提取转换相同的方法从输入列的文本中提取词：  
@@ -39,7 +44,7 @@ caps.handback.revision: 56
   
  若要进一步自定义要匹配的字词，可以对字词查找转换进行配置，使其在查找匹配时区分大小写。  
   
-## 匹配  
+## <a name="matches"></a>匹配  
  字词查找使用下列规则执行查找并返回值：  
   
 -   如果转换被配置为在查找匹配项时区分大小写，那么它会放弃大小写不相符的匹配项。 例如， *student* 和 *STUDENT* 将视为不同的词。  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |引用字词|Windows、Windows 7 Professional|  
 |输出|Windows|  
   
- 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下：%、@、&、$、#、\*、:、;、.、**、**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“ 和 ‘。  
+ 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下所示: %，@，&、 $、 #、 \*，:，;，。， **，** ，！，？， \<，>，+，=，^，~，|， \\，/，（、）、 [、]、 {、}、"，和。  
   
-## 数据类型  
+## <a name="data-types"></a>数据类型  
  字词查找转换只能使用数据类型为 DT_WSTR 或 DT_NTEXT 的列。 如果列包含文本，但不具有这两种数据类型之一，则数据转换可以将数据类型为 DT_WSTR 或 DT_NTEXT 的列添加到数据流，并将列值复制到新列。 然后，数据转换的输出就可以用作字词查找转换的输入。 有关详细信息，请参阅 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-## 字词查找转换的配置  
+## <a name="configuration-the-term-lookup-transformation"></a>字词查找转换的配置  
  字词查找转换输入列包含 InputColumnType 属性，用于指示该列的用途。 InputColumnType 可能包含以下值：  
   
 -   值 0 指示将列仅传递到输出，而不在查找中使用。  
@@ -101,10 +106,10 @@ caps.handback.revision: 56
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "模糊分组转换编辑器（“高级”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "模糊分组转换编辑器"
+title: "模糊分组转换编辑器 （高级选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb40d25a2deef0cb95971bf73bb2af4d44cf3c2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊分组转换编辑器（“高级”选项卡）
+# <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  若要了解有关模糊分组转换的详细信息，请参阅 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **输入键列名**  
  指定包含每个输入行的唯一表示符的输出列名称。 **_key_in** 列包含的值可唯一标识每个行。  
   
@@ -44,8 +49,8 @@ caps.handback.revision: 28
  **标记分隔符**  
  转换提供了一组默认的分隔符用于对数据进行词汇切分，但是您可以根据需要通过编辑列表来添加或删除分隔符。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [使用模糊分组转换标识相似数据行](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [通过使用模糊分组转换标识相似数据行](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "为捕获更改选择 Oracle 表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "selOraTabDia"
+title: "为捕获更改选择 Oracle 表 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af36432c89c6ac031f3275eebcdf3f1a7b56e481
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 为捕获更改选择 Oracle 表
+# <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
   使用此对话框可选择在 CDC 实例中包含的表。 所选表将添加到新建实例向导的 **“选择表和列”** 页的列表中。 可以在此对话框中执行以下操作。  
   
  默认情况下，此对话框的表的列表中不包含任何表。 您可以选中复选框列顶部的复选框，以便选择所有表或搜索特定表。  
@@ -43,7 +48,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  如果您选择包含不支持的数据类型的表，将会看到一条错误消息，并且将不会包含该表。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [选择 Oracle 表和列](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

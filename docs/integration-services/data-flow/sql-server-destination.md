@@ -1,43 +1,48 @@
 ---
-title: "SQL Server 目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdest.f1"
-helpviewer_keywords: 
-  - "SQL Server 目标"
-  - "加载数据"
-  - "目标 [Integration Services], SQL Server"
-  - "插入数据"
-  - "大容量加载 [Integration Services]"
+title: "SQL Server 目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdest.f1
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server 目标
+# <a name="sql-server-destination"></a>SQL Server 目标
   SQL Server 目标连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，并将数据大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和视图中。 如果包访问远程服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则不能在包中使用 SQL Server 目标。 相反，包应使用 OLE DB 目标。 有关详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  如果用户所执行的包中包括 SQL Server 目标，则用户需要“创建全局对象”权限。 通过使用从 **“管理工具”** 菜单打开的本地安全策略工具，可以将此权限授予用户。 如果在执行使用 SQL Server 目标的包时收到错误消息，请确保运行包的帐户拥有“创建全局对象”权限。  
   
-## 大容量插入  
+## <a name="bulk-inserts"></a>大容量插入  
  如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，您将看到如下错误消息：已获得 OLE DB 记录。 源: “Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client” Hresult: 0x80040E14 说明:“由于无法打开 SSIS 文件映射对象 ‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
   
- 此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之前，对列数据应用转换。  
+ 此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中之前，对列数据应用转换。  
   
  为了将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，应考虑使用 SQL Server 目标而不是 OLE DB 目标。  
   
-### 大容量插入选项  
+### <a name="bulk-insert-options"></a>大容量插入选项  
  如果 SQL Server 目标使用快速加载数据访问模式，则可以指定下列快速加载选项：  
   
 -   保留导入数据文件的标识值，或使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配的唯一值。  
@@ -60,7 +65,7 @@ caps.handback.revision: 65
   
  有关大容量加载选项的详细信息，请参阅 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-#### 性能改进  
+#### <a name="performance-improvements"></a>性能改进  
  若要改善大容量插入的性能和在大容量插入操作过程中对表数据的访问，应对默认选项作如下更改：  
   
 -   在大容量导入操作过程中，不要验证目标表或视图上的约束。  
@@ -69,7 +74,7 @@ caps.handback.revision: 65
   
 -   不要对表应用锁。 这样，其他用户和应用程序在大容量插入操作过程中将可以一直使用该表。  
   
-## SQL Server 目标的配置  
+## <a name="configuration-of-the-sql-server-destination"></a>SQL Server 目标的配置  
  可以使用下列方式配置 SQL Server 目标：  
   
 -   指定要向其大容量加载数据的表或视图。  
@@ -98,7 +103,7 @@ caps.handback.revision: 65
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [SQL Server 目标自定义属性](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -108,21 +113,21 @@ caps.handback.revision: 65
   
 -   [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 -   [使用 SQL Server 目标大容量加载数据](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
 -   [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   support.microsoft.com 上的技术文章 [您可能会在支持 UAC 的系统上看到“无法准备 SSIS 大容量插入以插入数据”错误](http://go.microsoft.com/fwlink/?LinkId=199482)。  
   
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技术文章[使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
+-   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   

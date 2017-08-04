@@ -1,28 +1,33 @@
 ---
-title: "XML 源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "源 [Integration Services], XML"
-  - "XML 源 [集成服务]"
-  - "XML 源编辑器"
+title: "XML 源 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 源
+# <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
   
  XML 文件中的数据常常包含层次结构关系。 例如，XML 数据文件可以表示目录和目录中的项。 必须先确定 XML 数据文件中元素的关系，并且为文件中的每个元素都生成了一个输出，数据才能进入数据流。  
@@ -55,7 +60,7 @@ caps.handback.revision: 47
   
  从 XML 数据文件提取数据后，数据将转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 不过，XML 源不能将 XML 数据转换为 DT_TIME2 或 DT_DBTIMESTAMP2 数据类型，这是因为源不支持这些数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
- XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
+ XSD 或内联架构可能为元素指定了数据类型，但如果未指定，则“XML 源编辑器”  对话框将为输出中包含该元素的列指定 Unicode 字符串数据类型 (DT_WSTR)，并将列长度设置为 255 个字符。  
   
  如果该架构指定了元素的最大长度，则输出列的长度将设置为此值。 如果最大长度大于将元素转换为的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型所支持的长度，则数据将被截断为该数据类型的最大长度。 例如，如果一个字符串的长度为 5000，则该字符串将因为 DT_WSTR 数据类型的最大长度而截断为 4000 字符；类似地，字节数据将截断为 DT_BYTES 数据类型的最大长度 8000 字符。 如果架构未指定最大长度，则具有任何一种数据类型的列的默认长度都设置为 255。 对 XML 源中的数据截断的处理方式与其他数据流组件中截断的处理方式相同。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 源自定义属性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>相关任务  
  [使用 XML 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

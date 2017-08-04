@@ -1,22 +1,27 @@
 ---
-title: "SQL Server 属性（“登录”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 属性 （选项卡上的日志） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 属性（“登录”选项卡）
+# <a name="sql-server-properties-log-on-tab"></a>SQL Server 属性（“登录”选项卡）
   使用 **“SQL Server 属性”** 对话框中的 **“登录”** 选项卡，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用的帐户，更改帐户密码，还可以启动和停止该服务。 对帐户密码的更改立即生效。  
   
 > [!NOTE]  
@@ -24,7 +29,7 @@ caps.handback.revision: 25
 >   
 >  有关选择帐户以运行服务的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机帮助中的“设置 Windows 服务帐户”。  
   
-## 选项  
+## <a name="options"></a>选项  
  **内置帐户**  
  **Local System**  
  -   指定本地系统帐户。 该帐户不需要密码。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
@@ -60,9 +65,9 @@ caps.handback.revision: 25
  恢复暂停的服务。  
   
 > [!IMPORTANT]  
->  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅[如何授予用户管理 Windows Server 2003 中的服务的权限](http://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
+>  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](http://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
 > [!NOTE]  
->  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果出现包含短语“未实现 [0x80004001]”的 WMI 错误，则可能指示目标计算机上未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，如果出现包含短语“未实现 [0x80004001]”的 WMI 错误，则可能指示目标计算机上未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "!=（不等于）（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "不等于运算符 (!=)"
-  - "!=（不等于）"
+title: "！ = （不等于） （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unequal operator (!=)
+- '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 062024b2e222c0240852ce36646ecfd5b001deba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# !=（不等于）（SSIS 表达式）
+# <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  
   
  但是，某些数据类型要求表达式包括显式转换，才能成功进行计算。 有关数据类型之间的合法转换的详细信息，请参阅[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -32,21 +37,21 @@ expression1 != expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *expression1、expression2*  
  为任意有效的表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  
   
 -   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，此类型在表达式计算器隐式数值转换的有关规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **Character**：*expression1* 和 *expression2* 的计算结果必须为 DT_STR 或 DT_WSTR 数据类型。 两个表达式的计算结果可以为不同的字符串数据类型。  
+-   **Character** ： *expression1* 和 *expression2* 的计算结果必须为 DT_STR 或 DT_WSTR 数据类型。 两个表达式的计算结果可以为不同的字符串数据类型。  
   
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
@@ -76,15 +81,15 @@ expression1 != expression2
   
 -   **Logical**   *expression1* 和 *expression2* 的计算结果必须为布尔值。  
   
--   **GUID**：*expression1* 和 *expression2* 的计算结果必须为 DT_GUID 数据类型。  
+-   **GUID** ： *expression1* 和 *expression2* 的计算结果必须为 DT_GUID 数据类型。  
   
--   **Binary**：*expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
+-   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB**：*expression1* 和 *expression2* 的计算结果必须为同一 BLOB（二进制大型对象块）数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB** ： *expression1* 和 *expression2* 的计算结果必须为同一 BLOB（二进制大型对象块）数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  仅在当前日期不是 2003 年 7 月 4 日时，此示例的计算结果才为 TRUE。 有关详细信息，请参阅 [GETDATE（SSIS 表达式）](../../integration-services/expressions/getdate-ssis-expression.md)。  
   
 ```  
@@ -103,9 +108,9 @@ ListPrice != 500
 @LPrice != 500  
 ```  
   
-## 另请参阅  
- [==（等于）（SSIS 表达式）](../../integration-services/expressions/equal-ssis-expression.md)   
+## <a name="see-also"></a>另请参阅  
+ [= = &#40;等 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

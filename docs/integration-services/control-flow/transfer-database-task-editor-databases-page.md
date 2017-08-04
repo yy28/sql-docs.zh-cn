@@ -1,34 +1,39 @@
 ---
-title: "传输数据库任务编辑器（“数据库”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.database.f1"
-helpviewer_keywords: 
-  - "传输数据库任务编辑器"
+title: "传输数据库任务编辑器 （数据库页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.database.f1
+helpviewer_keywords:
+- Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b104103ab5fdde0084cfcadcc82897d71d9a5c11
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 传输数据库任务编辑器（“数据库”页）
-  使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅[传输数据库任务](../../integration-services/control-flow/transfer-database-task.md)。  
+# <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
+  使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅 [传输数据库任务](../../integration-services/control-flow/transfer-database-task.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与源服务器的新连接。  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择一个 SMO 连接管理器，或单击“\<新建连接...>”创建与目标服务器的新连接。  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -86,11 +91,11 @@ caps.handback.revision: 26
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [传输数据库任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
- [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [传输数据库任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
+ [表达式页](../../integration-services/expressions/expressions-page.md)   
  [SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "SQL Server 代理属性（“服务”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 代理属性 （服务选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac155a67f472ad7cf7dcee0f8c5650bb43b21732
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 代理属性（“服务”选项卡）
+# <a name="sql-server-agent-properties-service-tab"></a>SQL Server 代理属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
   
-## 选项  
+## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 22
  显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 进程 ID。  
   
  **SQL 服务类型**  
- 显示用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 显示用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  

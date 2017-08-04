@@ -1,33 +1,38 @@
 ---
-title: "渐变维度转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
-  - "渐变维度转换"
-  - "渐变维度"
-  - "SCD 转换"
-  - "更新渐变维度"
+title: "渐变维度转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- SCD transformation
+- updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 渐变维度转换
+# <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  
   
 > [!IMPORTANT]  
->  渐变维度向导仅支持与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的连接。  
+>  渐变维度向导仅支持与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的连接。  
   
  渐变维度转换提供用于管理渐变维度的以下功能：  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 55
   
  如果找到匹配项，渐变维度转换检测传入行是否包含更改。 如果该行包含更改，渐变维度转换标识每列的更新类型，并将该行定向到 **“变化的属性更新输出”**、 **“固定的属性输出”**、 **“历史属性插入输出”**或 **“推断成员更新输出”**。 如果该行未更改，渐变维度转换会将其定向到 **“不变的输出”**。  
   
-## 渐变维度转换输出  
+## <a name="slowly-changing-dimension-transformation-outputs"></a>渐变维度转换输出  
  渐变维度转换有一个输入和最多六个输出。 输出将行定向到与该行的更新和插入要求相对应的数据流的子集。 此转换不支持错误输出。  
   
  下表介绍转换输出和这些输出的后续数据流的要求。 这些要求介绍渐变维度向导创建的数据流。  
@@ -72,39 +77,39 @@ caps.handback.revision: 55
 |**“新输出”**|查找表不包含匹配行。 将行添加到维度表中。 此输出用于新行和对历史属性行的更改。|派生列转换设置当前行指示器，而 OLE DB 目标则插入该行。|  
 |**“不变的输出”**|查找表中的值与行值匹配。 此输出用于不变的行。|因为渐变维度转换未执行任何操作，所以没有创建默认数据流。 如果要捕获这些行，则应为此输出创建数据流。|  
   
-## 业务键  
+## <a name="business-keys"></a>业务键  
  渐变维度转换至少需要一个业务键列。  
   
  渐变维度转换不支持空业务键。 如果数据中包含业务键列为空的行，则应从数据流中删除这些行。 可使用有条件拆分转换筛选业务键列中包含空值的行。 有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
   
-## 优化“渐变维度”转换的性能  
- 有关如何提高渐变维度转换性能的建议，请参阅[数据流性能特点](../../../integration-services/data-flow/data-flow-performance-features.md)。  
+## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>优化“渐变维度”转换的性能  
+ 有关如何提高渐变维度转换性能的建议，请参阅 [数据流性能特点](../../../integration-services/data-flow/data-flow-performance-features.md)。  
   
-## 渐变维度转换故障排除  
- 您可以记录“渐变维度”转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除“渐变维度”转换执行的对外部数据源的连接、命令和查询中发生的故障。 若要记录“渐变维度”转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>渐变维度转换故障排除  
+ 您可以记录“渐变维度”转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除“渐变维度”转换执行的对外部数据源的连接、命令和查询中发生的故障。 若要记录“渐变维度”转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
-## 配置渐变维度转换  
+## <a name="configuring-the-slowly-changing-dimension-transformation"></a>配置渐变维度转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 配置渐变维度转换输出  
+## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>配置渐变维度转换输出  
  协调维度表中记录的更新和插入可以是一项复杂的任务，尤其是在同时使用了类型 1 和类型 2 更改的情况下。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器为配置对渐变维度的支持提供了以下两种方式：  
   
 -   **“高级编辑器”** 对话框，在其中可以选择连接，设置公共组件属性和自定义组件属性，选择输入列，以及设置六个输出上的列属性。 若要完成为渐变维度配置支持的任务，必须为渐变维度转换所使用的输出手动创建数据流。 有关详细信息，请参阅 [Data Flow](../../../integration-services/data-flow/data-flow.md)。  
   
--   加载维度向导，指导您完成配置渐变维度转换以及为转换输出生成数据流的步骤。 若要更改渐变维度的配置，请重新运行加载维度向导。 有关详细信息，请参阅[使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)。  
+-   加载维度向导，指导您完成配置渐变维度转换以及为转换输出生成数据流的步骤。 若要更改渐变维度的配置，请重新运行加载维度向导。 有关详细信息，请参阅 [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   blogs.msdn.com 上的博客文章 [优化渐变维度向导](http://go.microsoft.com/fwlink/?LinkId=199481)。  
   

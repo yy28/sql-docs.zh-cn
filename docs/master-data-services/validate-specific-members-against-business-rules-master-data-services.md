@@ -1,39 +1,44 @@
 ---
-title: "针对业务规则验证特定成员 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "应用业务规则 [Master Data Services]"
-  - "业务规则 [Master Data Services], 应用后即可选择成员"
+title: "针对业务规则 (Master Data Services) 验证特定成员 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applying business rules [Master Data Services]
+- business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ca1beaf471a1adfb91ec4fa66c32e0bde3c6514
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 针对业务规则验证特定成员 (Master Data Services)
+# <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您想要根据业务规则更新或验证成员的子级时，可以有选择地应用业务规则。  
   
 > [!NOTE]  
 >  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅[针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
   
 -   对于您要将业务规则应用于的模型对象，您必须至少具有 **“更新”** 权限。  
   
-### 有选择地应用业务规则  
+### <a name="to-apply-business-rules-selectively"></a>有选择地应用业务规则  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型”下拉列表中，选择某一模型。  
   
@@ -45,8 +50,8 @@ caps.handback.revision: 7
   
 5.  单击“应用规则”。  业务规则仅应用于在网格中显示的成员。  
   
-## 另请参阅  
- [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [针对业务规则 &#40; 验证版本Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

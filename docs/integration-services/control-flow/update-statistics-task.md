@@ -1,27 +1,32 @@
 ---
-title: "“更新统计信息”任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.updatestatisticstask.f1"
-helpviewer_keywords: 
-  - "更新统计信息"
-  - "“更新统计信息”任务 [Integration Services]"
+title: "更新统计信息任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.updatestatisticstask.f1
+helpviewer_keywords:
+- updating statistics
+- Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2bc31c420204eb13766ef54f63bb6852dfffe0fe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# “更新统计信息”任务
+# <a name="update-statistics-task"></a>“更新统计信息”任务
   “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  
   
  通过使用“更新统计信息”任务，包可以为单个数据库或多个数据库更新统计信息。 如果此任务仅更新单个数据库中的统计信息，则可以选择任务要为其更新统计信息的视图或表。 可以配置更新来更新所有统计信息、仅更新列统计信息或仅更新索引统计信息。  
@@ -41,19 +46,19 @@ caps.handback.revision: 45
 > [!IMPORTANT]  
 >  此任务创建它所运行的 Transact-SQL 语句花费的时间与它更新的统计信息数成正比。 如果配置此任务来更新具有大量索引的数据库中所有表和视图中的统计信息，或更新多个数据库中的统计信息，则任务将花费相当长的时间来生成 Transact-SQL 语句。  
   
-## “更新统计信息”任务的配置  
+## <a name="configuration-of-the-update-statistics-task"></a>“更新统计信息”任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。 此任务位于 **设计器中** “工具箱” **的** “维护计划中的任务” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 部分。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题：  
   
 -   [“更新统计信息”任务（维护计划）](../../relational-databases/maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

@@ -1,28 +1,33 @@
 ---
-title: "设置跟踪文件的最大文件大小 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "跟踪文件的最大文件大小"
-  - "大小 [SQL Server], 跟踪文件"
+title: "设置跟踪文件 （SQL Server 事件探查器） 的最大文件大小 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maximum file size for traces
+- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd660e6fde56cc13e709a0fea4500f84fbc087a2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 设置跟踪文件的最大文件大小 (SQL Server Profiler)
+# <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>设置跟踪文件的最大文件大小 (SQL Server Profiler)
   使用以下步骤可设置跟踪文件的最大文件大小。  
   
-### 设置跟踪文件的最大文件大小  
+### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>设置跟踪文件的最大文件大小  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，然后连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
     > [!NOTE]  
     >  FAT32 文件系统将文件大小限制为略微小于 4 GB。 当跟踪文件达到该大小时，跟踪将会失败，并出现错误“磁盘空间不足”。 若要创建更大的文件，请使用 NTFS 文件系统。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

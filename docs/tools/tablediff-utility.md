@@ -1,30 +1,35 @@
 ---
-title: "tablediff 实用工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "比较数据"
-  - "tablediff 实用工具"
-  - "表 [SQL Server 复制]"
-  - "表更改 [SQL Server]"
-  - "命令提示实用工具 [SQL Server], tablediff"
-  - "故障排除 [SQL Server 复制], 非收敛"
-  - "非收敛 [SQL Server]"
+title: "tablediff 实用工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- comparing data
+- tablediff utility
+- tables [SQL Server replication]
+- table comparisons [SQL Server]
+- command prompt utilities [SQL Server], tablediff
+- troubleshooting [SQL Server replication], non-convergence
+- non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# tablediff 实用工具
+# <a name="tablediff-utility"></a>tablediff 实用工具
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
   
 -   在充当复制发布服务器的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的源表与充当复制订阅服务器的一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的目标表之间进行逐行比较。  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
   
 -   将结果记录到输出文件或目标数据库的表中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -73,12 +78,12 @@ tablediff
 }  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  [ **-?** ]  
  返回支持参数的列表。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 源服务器的名称。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例的 *source_server_name*。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 *source_server_name***\\***instance_name*。  
+ 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-sourcedatabase** *source_database*  
  源数据库的名称。  
@@ -96,13 +101,13 @@ tablediff
 >  可能的话，请在运行时提供安全凭据。 如果必须在脚本文件中存储凭据，则应保护文件以防止未经授权的访问。  
   
  **-sourceuser** *source_login*  
- 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到源服务器时所使用的登录帐户。 如果未提供 *source_login*，则连接到源服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到源服务器时所使用的登录帐户。 如果未提供 *source_login* ，则连接到源服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 目标服务器的名称。 为默认实例指定 *destination_server_name*[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 命名实例的 *destination_server_name***\\***instance_name*。  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-destinationdatabase** *subscription_database*  
  目标数据库的名称。  
@@ -120,7 +125,7 @@ tablediff
 >  可能的话，请在运行时提供安全凭据。 如果必须在脚本文件中存储凭据，则应保护文件以防止未经授权的访问。  
   
  **-destinationuser** *destination_login*  
- 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户。 如果未提供 *destination_login*，则连接到该服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
+ 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到目标服务器时所使用的登录帐户。 如果未提供 *destination_login* ，则连接到该服务器时使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
@@ -129,19 +134,19 @@ tablediff
  大型对象数据类型列中要比较的字节数，这些数据类型包括：**text****ntext**、**image****varchar(max)****nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  *number_of_statements*  
- 使用 **-f** 选项时要写入到当前 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件中的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements* 时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
+ 使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
   
  **-c**  
  比较列级差异。  
   
  **-dt**  
- 删除 *table_name* 指定的结果表（如果该表已经存在）。  
+ 删除 *table_name*指定的结果表（如果该表已经存在）。  
   
  **-et** *table_name*  
- 指定要创建的结果表的名称。 如果该表已经存在，则必须使用**-DT**，否则操作将失败。  
+ 指定要创建的结果表的名称。 如果该表已经存在，则必须使用 **-DT** ，否则操作将失败。  
   
  **-f** [ *file_name* ]  
- 生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本，以使目标服务器中的表与源服务器中的表实现收敛。 （可选）可以指定生成的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件的名称和路径。 如果未指定 *file_name*，则会在运行实用工具的目录中生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
+ 生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本，以使目标服务器中的表与源服务器中的表实现收敛。 （可选）可以指定生成的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件的名称和路径。 如果未指定 *file_name* ，则会在运行实用工具的目录中生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
   
  **-o** *output_file_name*  
  输出文件的完整名称和路径。  
@@ -161,7 +166,7 @@ tablediff
  **-t** *connection_timeouts*  
  设置与源服务器和目标服务器连接时的连接超时时间（秒）。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -169,8 +174,8 @@ tablediff
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
-## 注释  
- **tablediff** 实用工具不能用于非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
+## <a name="remarks"></a>注释  
+ **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  
   
@@ -211,7 +216,7 @@ tablediff
   
 -   **图像**  
   
-## 权限  
+## <a name="permissions"></a>权限  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  
   
  若要使用 **-et** 选项，必须是 db_owner 固定数据库角色的成员，或者在订阅数据库中至少拥有 CREATE TABLE 权限，并且对目标服务器中的目标所有者架构拥有 ALTER 权限。  
@@ -220,7 +225,7 @@ tablediff
   
  若要使用 **-o** 或 **-f** 选项，必须对指定的文件目录位置拥有写入权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [比较所复制表的差异（复制编程）](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

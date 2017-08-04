@@ -1,33 +1,38 @@
 ---
-title: "Filter 运算符 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Filter 运算符 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95f2b4fea6effb3260648717a1e50c4e390ff3f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Filter 运算符 (Master Data Services)
+# <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
   筛选成员列表时，可以使用下列运算符。  
   
 > [!NOTE]  
 >  当您按多个条件进行筛选时，必须满足所有条件才能返回结果。 例如，SquareFeet = 2000 **AND** Division <> 123。  
   
-## Filter 运算符  
+## <a name="filter-operators"></a>Filter 运算符  
   
 |控件名称|Description|  
 |------------------|-----------------|  
-|**等于**|返回与指定条件完全相同的属性值。 例如，如果要针对 **Mountain-100** 进行筛选，则必须键入 **Mountain-100**。|  
-|**不等于**|返回与指定条件不完全相同的属性值。 筛选条件必须与您要在结果中忽略的属性值完全相同。 例如，如果要忽略与 **Mountain-100** 匹配的结果，则必须键入 **Mountain-100**。<br /><br /> <br /><br /> 注意：对某个属性应用带有“Is not equal”子句的筛选条件时，如果 SET ANSI_NULLS 在数据库设置中设置为 ON，则属性为 NULL 的成员将传递该筛选条件并作为结果返回。 若要停止此行为，请在数据库设置中将 SET ANSI_NULLS 设置为 OFF。 如果 SET ANSI_NULLS 设置为 OFF，则在数据值为 NULL 时，所有数据与 Null 值的比较求得的值为 TRUE，最终结果是该成员不会传递“Is not equal”子句。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  
+|**等于**|返回与指定条件完全相同的属性值。 例如，如果要针对 **Mountain-100**进行筛选，则必须键入 **Mountain-100**。|  
+|**不等于**|返回与指定条件不完全相同的属性值。 筛选条件必须与您要在结果中忽略的属性值完全相同。 例如，如果要忽略与 **Mountain-100**匹配的结果，则必须键入 **Mountain-100**。<br /><br /> <br /><br /> 注意：对某个属性应用带有“Is not equal”子句的筛选条件时，如果 SET ANSI_NULLS 在数据库设置中设置为 ON，则属性为 NULL 的成员将传递该筛选条件并作为结果返回。 若要停止此行为，请在数据库设置中将 SET ANSI_NULLS 设置为 OFF。 如果 SET ANSI_NULLS 设置为 OFF，则在数据值为 NULL 时，所有数据与 Null 值的比较求得的值为 TRUE，最终结果是该成员不会传递“Is not equal”子句。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  
 |**类似于**|使用 Transact-SQL 中的 LIKE 运算符来筛选结果。 有关详细信息，请参阅 SQL Server 联机丛书中的 [LIKE (Transact-SQL)](../t-sql/language-elements/like-transact-sql.md)。|  
 |**不类似于**|使用 Transact-SQL 中的 NOT 运算符来筛选结果。 有关详细信息，请参阅 SQL Server 联机丛书中的 [NOT (Transact-SQL)](../t-sql/language-elements/not-transact-sql.md)。|  
 |**大于**|返回大于指定条件的属性值。 例如，如果要返回以大于 **F**的字母开头的属性值，请键入 **F**。|  

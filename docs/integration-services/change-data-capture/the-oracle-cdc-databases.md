@@ -1,22 +1,27 @@
 ---
-title: "Oracle CDC 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle CDC 数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC 数据库
+# <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
   
  该 CDC 数据库使用 Oracle CDC 设计器控制台创建和配置并且包含以下元素：  
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  在创建 CDC 数据库和设置 CDC 源 Oracle 表时，CDC 数据库所有者可授予镜像表的 SELECT 权限并且定义 SQL Server CDC 访问控制角色以便控制谁可以访问更改数据。  
   
 ## <a name="mirror-tables"></a>镜像表  
- 对于 Oracle 源数据库中的每个捕获表 \<架构名称>.\<表名称>，都将在 CDC 数据库中使用相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc`（不区分大小写）的 Oracle 源表无法捕获，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `cdc` 架构是为 SQL Server CDC 保留的。  
+ 对于每个捕获的表，\<架构名称 >。\<表名 >，在 Oracle 源数据库中，在 CDC 数据库中，具有相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
   
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a>更改表 (_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]。[\<捕获实例 > _CT]**  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
  捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)。  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 表由 SQL Server CDC 组件生成。 它在 Oracle CDC 情况下的用法与其常规用法不同。  
   
  对于 Oracle CDC，在此表中存储的 LSN 值基于与更改相关联的 Oracle 系统更改号 (SCN) 值。 该 LSN 值的前 6 个字节是原始 Oracle SCN 号。  
   
  此外，在使用 Oracle CDC 时，时间列（`tran_begin_time` 和 `tran_end_time`）存储更改的 UTC 时间而非本地时间，就像它对待常规 SQL Server CDC 一样。 这可以确保夏时制时间更改不会影响存储在 lsn_time_mapping 中的数据。  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  此表包含 Oracle CDC 实例的配置数据。 它是使用 CDC 设计器控制台更新的。 该表仅具有一行。  
   
  下表介绍了 **cdc.xdbcdc_config** 表的各列。  
@@ -96,7 +101,7 @@ caps.handback.revision: 17
 |项|Description|  
 |----------|-----------------|  
 |version|它跟踪 CDC 实例配置的版本。 在每次更新表时，以及在每次添加新的捕获实例或删除现有捕获实例时，将更新该项。|  
-|connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>`（例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) ，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
+|connect_string|Oracle 连接字符串。 下面是一个基本示例：<br /><br /> `<server>:<port>/<instance>` （例如 `erp.contoso.com:1521/orcl`）。<br /><br /> 连接字符串还可以指定 Oracle Net 连接描述符，例如 `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目录服务器或 tnsnames，则连接字符串可以是连接的名称。<br /><br /> 有关 Oracle 连接字符串的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) ，其中介绍了针对 Oracle CDC 服务使用的 Oracle Instant Client 的 Oracle 数据库连接字符串的详细信息。|  
 |use_windows_authentication|可以取以下值的布尔值：<br /><br /> **0**：提供 Oracle 用户名和密码进行身份验证（默认值）<br /><br /> **1**：使用 Windows 身份验证连接到 Oracle 数据库。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。|  
 |username|日志挖掘 Oracle 数据库用户的名称。 **仅当 use_windows_authentication = 0**时，该值才是必填的。|  
 |password|日志挖掘 Oracle 数据库用户的密码。 **仅当 use_windows_authentication = 0**时，该值才是必填的。|  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布尔值。 **True** 指示当检测到中断的架构更改时停止。<br /><br /> **False** 指示删除镜像表和捕获实例。|  
 |source_oracle_home||-|-|False|可设置为 CDC 实例将用于连接到 Oracle 的特定 Oracle 主页路径或 Oracle 主页名称。|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  此表包含与 Oracle CDC 实例的持久化状态有关的信息。 该捕获状态用于恢复和故障转移情况以及用于运行状况监视。  
   
  下表介绍了 **cdc.xdbcdc_state** 表的各列。  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|从源 Oracle 事务日志读取的更改记录的数目。|  
 |staged_transactions|**cdc.xdbcdc_staged_transactions** 表中暂存的当前处于活动状态的事务数目。|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  此表包含与 CDC 实例的操作有关的信息。 此表中存储的信息包括错误记录、显著的状态更改和跟踪记录。 错误信息还写入 Windows 事件日志，以便确保在 **cdc.xcbcdc_trace** 表不可用时提供这些信息。  
   
  下表描述 cdc.xdbcdc_trace 表的各列。  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|状态表使用的状态消息。|  
 |数据|在错误或跟踪记录包含负载（例如，损坏的日志记录）时的附加数据。|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  此表存储在捕获事务提交或回滚事件前大型或长时间运行的事务的更改记录。 Oracle CDC 服务首先按事务提交时间、然后按各事务的时间顺序对捕获的日志记录进行排序。 在事务结束前同一事务的日志记录将存储在内存中，然后写入目标更改表或被放弃（在回滚时）。 因为只有有限的可用内存量，所以，大型事务将在事务完成前写入 **cdc.xdbcdc_staged_transactions** 表。 事务还会在长时间运行时写入临时表。 因此，在 Oracle CDC 实例重新启动时，无需从 Oracle 事务日志重新读取旧的更改。  
   
  下表介绍了 **cdc.xdbcdc_staged_transactions** 表的各列。  

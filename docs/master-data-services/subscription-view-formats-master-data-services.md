@@ -1,25 +1,30 @@
 ---
-title: "订阅视图格式 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "订阅视图格式 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cddce206adbbec42907f426fcd25d92a5e6d91b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 订阅视图格式 (Master Data Services)
+# <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
   基于您选择的实体或派生层次结构，为订阅视图提供以下格式。  
   
-## 订阅视图格式  
+## <a name="subscription-view-formats"></a>订阅视图格式  
   
 |名称|Description|  
 |----------|-----------------|  
@@ -38,7 +43,7 @@ caps.handback.revision: 9
 |**派生的父子（派生层次结构视图）**|包含派生层次结构，以父子格式显示。|  
 |**派生级别（派生层次结构视图）**|包含派生层次结构，以级别格式显示。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

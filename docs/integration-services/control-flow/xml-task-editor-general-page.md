@@ -1,31 +1,36 @@
 ---
-title: "XML 任务编辑器（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmltask.general.f1"
-helpviewer_keywords: 
-  - "XML 任务编辑器"
+title: "XML 任务编辑器 （常规页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmltask.general.f1
+helpviewer_keywords:
+- XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9dc1f49a7e2fcee8b87546585075d016f1f6ace
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 任务编辑器（“常规”页）
+# <a name="xml-task-editor-general-page"></a>XML 任务编辑器（“常规”页）
   可以使用 **“XML 任务编辑器”** 对话框的 **“常规节点”** ，指定操作类型以及配置操作。  
   
  若要了解有关此任务的详细信息，请参阅 [XML Task](../../integration-services/control-flow/xml-task.md) 和 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。 有关使用 XML 文档和数据的信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)”。  
   
-## 静态选项  
+## <a name="static-options"></a>静态选项  
  **OperationType**  
  从列表中选择操作类型。 此属性具有下表所列的选项。  
   
@@ -50,17 +55,17 @@ caps.handback.revision: 43
  **数据源**  
  如果将“源”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
   
- 如果将“源”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**源**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“源”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**源**设置为**变量**，选择一个现有的变量，或单击**\<新建变量...>**创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-## OperationType 动态选项  
+## <a name="operationtype-dynamic-options"></a>OperationType 动态选项  
   
-### OperationType = Validate  
+### <a name="operationtype--validate"></a>OperationType = Validate  
  指定验证操作的选项。  
   
  **SaveOperationResult**  
@@ -70,7 +75,7 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 选择现有文件连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
+ 选择一个现有的文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 43
  **ValidationDetails**  
  当此属性的值为 true 时会提供大量错误输出。 有关详细信息，请参阅 [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。  
   
-### ValidationType 动态选项  
+### <a name="validationtype-dynamic-options"></a>ValidationType 动态选项  
   
-#### ValidationType = XSD  
+#### <a name="validationtype--xsd"></a>ValidationType = XSD  
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
@@ -111,15 +116,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**XPathStringSourceType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-### OperationType = XSLT  
+### <a name="operationtype--xslt"></a>OperationType = XSLT  
  指定 XSLT 操作的选项。  
   
  **SaveOperationResult**  
@@ -129,13 +134,13 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**DestinationType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**DestinationType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -157,15 +162,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**XPathStringSourceType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
-### OperationType = XPATH  
+### <a name="operationtype--xpath"></a>OperationType = XPATH  
  指定 XPath 操作的选项。  
   
  **SaveOperationResult**  
@@ -175,13 +180,13 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**DestinationType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**DestinationType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -203,13 +208,13 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**XPathStringSourceType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **PutResultInOneNode**  
  指定是否将结果写入单个节点。  
@@ -223,7 +228,7 @@ caps.handback.revision: 43
 |**Node list**|将所选节点返回为 XML 片段。|  
 |**值**|返回所有所选节点的内部文本值，将其连接为字符串。|  
   
-### OperationType = Merge  
+### <a name="operationtype--merge"></a>OperationType = Merge  
  指定合并操作的选项。  
   
  **XPathStringSourceType**  
@@ -238,13 +243,13 @@ caps.handback.revision: 43
  **XPathStringSource**  
  如果将“XPathStringSourceType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
   
- 如果将“XPathStringSourceType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**XPathStringSourceType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**XPathStringSourceType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  使用 XPath 语句标识源文档中的合并位置时，此语句应返回一个节点。 如果该语句返回多个节点，则仅使用第一个节点。 第二个文档的内容在 XPath 查询返回的第一个节点下合并。  
   
@@ -255,13 +260,13 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**DestinationType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**DestinationType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -283,15 +288,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**SecondOperandType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = Diff  
+### <a name="operationtype--diff"></a>OperationType = Diff  
  指定 Diff 运算的选项。  
   
  **DiffAlgorithm**  
@@ -330,13 +335,13 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**DestinationType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**DestinationType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -358,15 +363,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**SecondOperandType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### OperationType = Patch  
+### <a name="operationtype--patch"></a>OperationType = Patch  
  指定修补操作的选项。  
   
  **SaveOperationResult**  
@@ -376,13 +381,13 @@ caps.handback.revision: 43
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**DestinationType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**DestinationType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -404,15 +409,15 @@ caps.handback.revision: 43
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮“(…)”，再使用“文档源编辑器”对话框提供 XML 代码。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击 \<“新建连接...”> 以创建新的连接管理器。  
+ 如果**SecondOperandType**设置为**文件连接**，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击 \<“新建变量...”> 以创建新的变量。  
+ 如果**SecondOperandType**设置为**变量**，选择一个现有的变量，或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   

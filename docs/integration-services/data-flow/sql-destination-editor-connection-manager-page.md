@@ -1,32 +1,37 @@
 ---
-title: "SQL 目标编辑器（“连接管理器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlserverdestadapter.connection.f1"
-helpviewer_keywords: 
-  - "SQL Server 目标编辑器"
+title: "SQL 目标编辑器 （连接管理器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+helpviewer_keywords:
+- SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb0665ca794b028e2cdb3fd16f6e9514fe9bd33e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL 目标编辑器（“连接管理器”页）
-  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表或视图中。  
+# <a name="sql-destination-editor-connection-manager-page"></a>SQL 目标编辑器（“连接管理器”页）
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表或视图中。  
   
  若要了解有关 SQL Server 目标的详细信息，请参阅 [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)。  
   
-## 选项  
- **OLE DB 连接管理器**  
+## <a name="options"></a>选项  
+ **“无缓存”**  
  从列表中选择现有连接，或通过单击“新建”创建一个新连接。  
   
  **新建**  
@@ -44,10 +49,10 @@ caps.handback.revision: 37
  **预览**  
  使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目标编辑器（“映射”页）](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
- [SQL 目标编辑器（“高级”页）](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)   
- [使用 SQL Server 目标大容量加载数据](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
+ [SQL 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)   
+ [SQL 目标编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)   
+ [通过使用 SQL Server 目标大容量加载数据](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

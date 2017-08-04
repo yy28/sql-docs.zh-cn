@@ -1,34 +1,39 @@
 ---
-title: "FINDSTRING（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FINDSTRING 函数"
+title: "FINDSTRING （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abadf6c9ce8d97a6aa1d1c4e649ccbdf69f4f8f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# FINDSTRING（SSIS 表达式）
+# <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
   返回一个字符串的指定出现在字符表达式中的位置。 返回结果是该出现的索引（索引从 1 开始）。 字符串参数的取值必须为字符表达式，而 occurrence 参数的取值必须为整数。 如果找不到字符串，则返回值是 0。 如果字符串的出现次数少于所指定的 occurrence 参数，则返回值为 0。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 FINDSTRING(character_expression, searchstring, occurrence)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  是要在其中进行搜索的字符串。  
   
@@ -38,11 +43,11 @@ FINDSTRING(character_expression, searchstring, occurrence)
  *occurrence*  
  有符号或无符号的整数，用以指定要报告的 *searchstring* 的匹配项。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## 注释  
- FINDSTRING 只能处理 DT_WSTR 数据类型。  如果 *character_expression* 和 *searchstring* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它们在 FINDSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
+## <a name="remarks"></a>注释  
+ FINDSTRING 只能处理 DT_WSTR 数据类型。  如果*character_expression* 和 *searchstring* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它们在 FINDSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果 *character_expression* 或 *searchstring* 为 null，则 FINDSTRING 返回 null。  
   
@@ -50,7 +55,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
   
  *occurrence* 必须为值大于 0 的整数。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例使用一个字符串文字。 它返回值 11。  
   
 ```  
@@ -75,8 +80,8 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## 另请参阅  
- [REPLACE（SSIS 表达式）](../../integration-services/expressions/replace-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [替换 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

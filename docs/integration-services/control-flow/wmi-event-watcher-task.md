@@ -1,27 +1,32 @@
 ---
-title: "WMI 事件观察器任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatchertask.f1"
-helpviewer_keywords: 
-  - "WQL [Integration Services]"
-  - "WMI 事件观察器任务 [Integration Services]"
+title: "WMI 事件观察器任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatchertask.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# WMI 事件观察器任务
+# <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
   WMI 事件观察器任务以使用 Management Instrumentation 查询语言 (WQL) 事件查询指定所关注事件的方式来监视 Windows Management Instrumentation (WMI) 事件。 可以将 WMI 事件观察器任务用于下列目的：  
   
 -   等待已将文件添加到文件夹的通知，然后开始处理文件。  
@@ -36,7 +41,7 @@ caps.handback.revision: 53
   
 -   [WMI 数据读取器任务](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## WQL 查询  
+## <a name="wql-queries"></a>WQL 查询  
  WQL 是 SQL 的方言，其扩展插件支持 WMI 事件通知和其他 WMI 特定功能。 有关 WQL 的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)中的 Windows Management Instrumentation 文档。  
   
 > [!NOTE]  
@@ -54,8 +59,8 @@ SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
 ```  
   
-## WMI 事件观察器任务可用的自定义日志记录消息  
- 下表列出了 WMI 事件观察器任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>WMI 事件观察器任务可用的自定义日志记录消息  
+ 下表列出了 WMI 事件观察器任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 |**WMIEventWatcherTimedout**|指示任务已超时。|  
 |**WMIEventWatcherWatchingForWMIEvents**|指示任务已开始执行 WQL 查询。 日志项包括查询。|  
   
-## WMI 事件观察器任务的配置  
+## <a name="configuration-of-the-wmi-event-watcher-task"></a>WMI 事件观察器任务的配置  
  可以通过以下方式配置 WMI 数据读取器任务：  
   
 -   指定要使用的 WMI 连接管理器。  
@@ -98,9 +103,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## WMI 事件观察器任务的编程配置  
+## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>WMI 事件观察器任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  

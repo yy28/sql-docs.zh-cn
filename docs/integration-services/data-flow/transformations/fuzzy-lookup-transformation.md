@@ -1,46 +1,51 @@
 ---
-title: "模糊查找转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzylookuptrans.f1"
-helpviewer_keywords: 
-  - "清除数据"
-  - "比较数据"
-  - "标记分隔符 [Integration Services]"
-  - "临时索引 [Integration Services]"
-  - "临时表 [Integration Services]"
-  - "模糊查找转换"
-  - "引用表 [Integration Services]"
-  - "匹配相似数据 [Integration Services]"
-  - "替换缺失的值"
-  - "更正数据 [Integration Services]"
-  - "缓存 [Integration Services]"
-  - "标准化数据 [Integration Services]"
-  - "查找 [Integration Services]"
-  - "置信度计分 [Integration Services]"
-  - "模糊匹配"
-  - "缺失的值已替换 [Integration Services]"
-  - "相似性阈值 [Integration Services]"
+title: "模糊查找转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzylookuptrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- temporary tables [Integration Services]
+- Fuzzy Lookup transformation
+- reference tables [Integration Services]
+- match similar data [Integration Services]
+- replacing missing values
+- correcting data [Integration Services]
+- cache [Integration Services]
+- standardizing data [Integration Services]
+- lookups [Integration Services]
+- confidence scores [Integration Services]
+- fuzzy matches
+- missing values replaced [Integration Services]
+- similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊查找转换
+# <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
   
 > [!NOTE]  
->  有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书：[Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
+>  有关模糊查找转换的详细信息（包括性能和内存限制），请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组）。  
   
  模糊查找转换与查找转换之间的不同之处在于：它使用了模糊匹配。 查找转换使用同等联接在引用表中查找匹配的记录。 它返回带有至少一个匹配记录的记录，并且返回没有匹配记录的记录。 与此相比较，模糊查找转换使用模糊匹配返回引用表中一个或多个接近的匹配项。  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 75
   
  此转换有一个输入和一个输出。  
   
- 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、**DT_NTEXT** 和 **DT_IMAGE** 之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS **DT_WSTR** 数据类型的列联接到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 数据类型的列，但是不能将具有 **int** 数据类型的列联接到具有 **DT_WSTR** 数据类型的列。  
+ 在模糊匹配中，只能使用具有 **DT_WSTR** 和 **DT_STR** 数据类型的输入列。 完全匹配可以使用除 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**之外的所有 DTS 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。 参与输入和引用表之间联接的列必须具有兼容的数据类型。 例如，可以将具有 DTS **DT_WSTR** 数据类型的列联接到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 数据类型的列，但是不能将具有 **DT_WSTR** 数据类型的列联接到具有 **DT_WSTR** 数据类型的列。  
   
  通过指定最大内存量、行比较算法以及对转换所用的索引和引用表进行缓存，可以自定义这种转换。  
   
  可以通过设置 MaxMemoryUsage 自定义属性来配置模糊查找转换所使用的内存数量。 可以指定内存量 (MB)；或使用值 0，让转换根据其需要和可用物理内存来使用动态内存量。 加载包时，可以通过属性表达式来更新 MaxMemoryUsage 自定义属性。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[在包中使用属性表达式](../../../integration-services/expressions/use-property-expressions-in-packages.md)和[转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
-## 控制模糊匹配的行为  
+## <a name="controlling-fuzzy-matching-behavior"></a>控制模糊匹配的行为  
  模糊查找转换包含以下三项可自定义所执行的查找的功能：每个输入行可返回的最大匹配项数、标记分隔符和相似性阈值。  
   
  这种转换返回零个或多个匹配项，匹配项的最大数量为所指定的匹配项数。 指定最大匹配项数并不保证转换会返回最大数量的匹配项；它只保证转换最多返回该数量的匹配项。 如果将最大匹配项数设置为大于 1 的值，则对于每次查找，转换的输出可能包括多行，而且其中一些行可能是重复的。  
@@ -79,7 +84,7 @@ caps.handback.revision: 75
   
  该转换使用与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的连接来创建模糊匹配算法所使用的临时表。  
   
-## 运行模糊查找转换  
+## <a name="running-the-fuzzy-lookup-transformation"></a>运行模糊查找转换  
  当包首次运行转换时，该转换将复制引用表，然后将具有整数数据类型的键添加到新表中，接着生成该键列的索引。 随后，该转换生成引用表的副本的索引，该索引称为匹配索引。 匹配索引存储转换输入列中的值的词汇切分结果，接着该转换在查找操作中使用这些标记。 匹配索引是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的一个表。  
   
  当包再次运行时，该转换可以使用现有的匹配索引，也可以创建新的索引。 如果引用表是静态的，对于数据清理的重复会话，包可以避免开销可能很大的重新生成索引的过程。 您可以选择使用现有索引，该索引是在包首次运行时创建的。 如果多个模糊查找转换使用同一引用表，则它们可以使用同一索引。 若要重用该索引，查找操作必须是相同的，而且查找必须使用相同的列。 您可以命名该索引，然后选择到保存该索引的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的连接。  
@@ -95,7 +100,7 @@ caps.handback.revision: 75
 |**GenerateNewIndex**|创建一个新的索引，但不保存它。|  
 |**ReuseExistingIndex**|重用现有索引。|  
   
-### 维护匹配索引表  
+### <a name="maintenance-of-the-match-index-table"></a>维护匹配索引表  
  **GenerateAndMaintainNewIndex** 选项在引用表上安装触发器，以保持匹配索引表和引用表同步。 如果必须删除已安装的触发器，则必须运行 **sp_FuzzyLookupTableMaintenanceUnInstall** 存储过程，然后将 MatchIndexName 属性中指定的名称提供为输入参数值。  
   
  在运行 **sp_FuzzyLookupTableMaintenanceUnInstall** 存储过程之前，不应该删除维护的匹配索引表。 如果删除了匹配索引表，引用表上的触发器将无法正确执行。 在手动删除引用表上的触发器之前，对引用表进行的所有后续更新都将失败。  
@@ -103,24 +108,24 @@ caps.handback.revision: 75
  SQL TRUNCATE TABLE 命令不调用 DELETE 触发器。 如果对引用表使用 TRUNCATE TABLE 命令，则引用表和匹配索引表将无法再同步，模糊查找转换将失败。 尽管维护匹配索引表的触发器安装在引用表上，您也应该使用 SQL DELETE 命令，而不是使用 TRUNCATE TABLE 命令。  
   
 > [!NOTE]  
->  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md)。  
+>  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
 >   
 >  由于“维护存储索引”选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 **实例上的引用表时，此功能才能发挥作用**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-## 行比较  
+## <a name="row-comparison"></a>行比较  
  配置模糊查找转换时，可以指定该转换在定位引用表中的匹配记录时所用的比较算法。 如果将 Exhaustive 属性设置为 **True**，则转换会将输入中的每一行与引用表中的每一行相比较。 这种比较算法可以生成更准确的结果，但是，除非引用表中的行数较少，否则很有可能使转换的执行速度变得很慢。 如果 Exhaustive 属性设置为 **True**，则整个引用表都会加载到内存中。 为了避免性能问题，最好只在包的开发过程中将 Exhaustive 属性设置为 **True**。  
   
- 如果将 Exhaustive 属性设置为 **False**，则模糊查找转换只返回与输入记录一样至少有一个索引令牌或子字符串（该子字符串称为 q-gram）的匹配项。 若要最大程度提高查找效率，请以模糊查找转换查找匹配项时所用的倒排索引结构仅对表内每行中的一个令牌子集建立索引。 当输入数据集很小时，可以将 Exhaustive 设置为 **True**，以避免遗漏索引表中不存在其公共令牌的匹配项。  
+ 如果将 Exhaustive 属性设置为 **False**，则模糊查找转换只返回与输入记录一样至少有一个索引令牌或子字符串（该子字符串称为 q-gram）的匹配项。 若要最大程度提高查找效率，请以模糊查找转换查找匹配项时所用的倒排索引结构仅对表内每行中的一个令牌子集建立索引。 当输入数据集很小时，可以将 Exhaustive 设置为 **True** ，以避免遗漏索引表中不存在其公共令牌的匹配项。  
   
-## 缓存索引和引用表  
+## <a name="caching-of-indexes-and-reference-tables"></a>缓存索引和引用表  
  在配置模糊查找转换时，可以指定转换在开始执行其工作之前，是否将部分索引和引用表缓存到内存中。 如果 WarmCaches 属性设置为 **True**，则索引和引用表将加载到内存中。 当输入具有很多行时，将 WarmCaches 属性设置为 **True** 可以提高转换的性能。 当输入行数很小时，将 WarmCaches 属性设置为 **False** 可以使重用大型索引的速度加快。  
   
-## 临时表和索引  
+## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊查找转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引。 这些临时表和索引的大小与引用表中的行数和标记数以及模糊查找转换所创建的标记数成比例；因此，它们有可能会占用相当大的磁盘空间。 该转换也会查询这些临时表。 因此，应该考虑将模糊查找转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  
   
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为 **GenerateAndMaintainNewIndex**），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
   
-## 配置模糊查找转换  
+## <a name="configuring-the-fuzzy-lookup-transformation"></a>配置模糊查找转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“模糊查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
@@ -133,14 +138,14 @@ caps.handback.revision: 75
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相关任务  
- 有关如何设置数据流组件属性的详细信息，请参阅[设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-tasks"></a>相关任务  
+ 有关如何设置数据流组件属性的详细信息，请参阅 [设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查找转换](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
