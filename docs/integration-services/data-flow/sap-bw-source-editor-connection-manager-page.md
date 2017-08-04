@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 源编辑器（“连接管理器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
+title: "SAP BW 源编辑器 （连接管理器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 源编辑器（“连接管理器”页）
+# <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md)。  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
 3.  在 **“SAP BW 源编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-## 静态选项  
+## <a name="static-options"></a>静态选项  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -70,14 +75,14 @@ caps.handback.revision: 11
   
  单击 **“预览”**的同时还会打开 **“请求日志”** 对话框。 您可使用此对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 有关详细信息，请参阅 [Request Log](../../integration-services/data-flow/request-log.md)。  
   
-## 执行模式动态选项  
+## <a name="execution-mode-dynamic-options"></a>执行模式动态选项  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
   
-### 执行模式 = P - 触发进程链  
+### <a name="execution-mode--p---trigger-process-chain"></a>执行模式 = P - 触发进程链  
   
-#### RFC 目标选项  
+#### <a name="rfc-destination-options"></a>RFC 目标选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 RFC 目标。 选定 RFC 目标后，组件会为这些选项输入合适的值。  
   
  **网关主机**  
@@ -89,21 +94,21 @@ caps.handback.revision: 11
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **查找**  
+ **“查找”**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
-#### 进程链选项  
+#### <a name="process-chain-options"></a>进程链选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的进程链。 选定进程链后，组件会为该选项输入合适的值。  
   
  **进程链**  
  输入由源触发的进程链的名称。  
   
- **查找**  
+ **“查找”**  
  使用“查找进程链”对话框查找进程链。 有关此对话框的详细信息，请参阅 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)。  
   
-### 执行模式 = W - 等待通知  
+### <a name="execution-mode--w---wait-for-notify"></a>执行模式 = W - 等待通知  
   
-#### RFC 目标选项  
+#### <a name="rfc-destination-options"></a>RFC 目标选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 RFC 目标。 选定 RFC 目标后，组件会为该选项输入合适的值。  
   
  **网关主机**  
@@ -115,17 +120,17 @@ caps.handback.revision: 11
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **查找**  
+ **“查找”**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
-### 执行模式 = E - 仅提取  
+### <a name="execution-mode--e---extract-only"></a>执行模式 = E - 仅提取  
  **请求 ID**  
  输入与提取关联的请求 ID。  
   
-## 另请参阅  
- [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [SAP BW 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 源编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

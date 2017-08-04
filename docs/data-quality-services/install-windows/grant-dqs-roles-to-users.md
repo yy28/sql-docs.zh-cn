@@ -1,31 +1,36 @@
 ---
-title: "将 DQS 角色授予用户 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DQS 角色授予用户 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 805020ab366ec0e993c8f4be54a4d18a22510911
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将 DQS 角色授予用户
+# <a name="grant-dqs-roles-to-users"></a>将 DQS 角色授予用户
   本主题介绍如何基于 Windows 主体创建 SQL 登录名，以及如何授予针对 DQS_MAIN 数据库的 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
   
--   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅[运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
+-   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
 -   若要创建 SQL 登录名以及授予他们 DQS 角色，您的 Windows 用户帐户必须是适当固定服务器角色的成员（例如 securityadmin、serveradmin 或 sysadmin）。  
   
-### 创建 SQL 登录名并授予 DQS 角色  
+### <a name="to-create-sql-login-and-grant-dqs-roles"></a>创建 SQL 登录名并授予 DQS 角色  
   
 1.  启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -44,10 +49,10 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  如果你向某一用户授予 **dqs_administrator** 角色，应用更改，然后重新选中用户权限，则其他两个 DQS 角色复选框（**dq_kb_editor** 和 **dqs_kb_operator**）也将被选中。  
   
-## 后续步骤  
- 尝试通过使用您刚刚为其创建了 SQL 登录名并授予了 DQS 角色的 Windows 用户帐户登录到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。  
+## <a name="next-steps"></a>后续步骤  
+ 尝试通过使用您刚刚为其创建了 SQL 登录名并授予了 DQS 角色的 Windows 用户帐户登录到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [创建一个登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   

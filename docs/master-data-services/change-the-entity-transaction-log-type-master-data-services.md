@@ -1,31 +1,36 @@
 ---
-title: "更改实体事务日志类型 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "更改实体事务日志类型 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3f5998073b5a4ddf596e241a52db6bbd49f3a2d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 更改实体事务日志类型 (Master Data Services)
+# <a name="change-the-entity-transaction-log-type-master-data-services"></a>更改实体事务日志类型 (Master Data Services)
   可以将实体的事务日志类型更改为属性、成员或无。  
   
 |事务日志类型|Description|  
 |--------------------------|-----------------|  
-|Attribute|在属性级别保存实体更改日志。<br /><br /> 保存事务日志，与 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的行为一致。|  
+|Attribute|在属性级别保存实体更改日志。<br /><br /> 保存事务日志，与 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的行为一致。|  
 |成员|在行级别保存实体更改日志。<br /><br /> 任何属性更改都将触发新的行修订。<br /><br /> 当使用行事务日志类型时，实体存储为缓慢更改维度类型 4。 支持类型 2 订阅视图和类型 4（历史记录）订阅视图。 有关详细信息，请参阅[订阅视图格式 (Master Data Services)](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> 提供较好的性能。|  
 |无|不保存任何更改日志。<br /><br /> 提供最好的性能。|  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   必须有权访问“系统管理”功能区域。有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  

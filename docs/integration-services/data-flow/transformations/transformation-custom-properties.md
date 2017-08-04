@@ -1,60 +1,65 @@
 ---
-title: "转换自定义属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "聚合转换 [Integration Services]"
-  - "渐变维度转换"
-  - "导入列转换 [Integration Services]"
-  - "排序转换"
-  - "逆透视转换"
-  - "合并联接转换"
-  - "数据挖掘查询转换"
-  - "模糊分组转换"
-  - "数据转换"
-  - "模糊查找转换"
-  - "字词提取转换"
-  - "行计数转换自定义属性 [Integration Services]"
-  - "转换 [Integration Services]，属性"
-  - "透视转换"
-  - "查找转换"
-  - "百分比抽样转换"
-  - "导出列转换 [Integration Services]"
-  - "行抽样转换"
-  - "有条件拆分转换自定义属性 [Integration Services]"
-  - "自定义属性 [Integration Services]"
-  - "审核转换"
-  - "字词查找转换"
-  - "脚本组件转换自定义属性 [Integration Services]"
-  - "派生列转换"
-  - "OLE DB 命令转换"
-  - "复制列转换自定义属性 [Integration Services]"
-  - "字符映射转换自定义属性 [Integration Services]"
+title: "转换自定义属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- Slowly Changing Dimension transformation
+- Import Column transformation [Integration Services]
+- Sort transformation
+- Unpivot transformation
+- Merge Join transformation
+- Data Mining Query transformation
+- Fuzzy Grouping transformation
+- Data Conversion transformation
+- Fuzzy Lookup transformation
+- Term Extraction transformation
+- Row Count transformation custom properties [Integration Services]
+- transformations [Integration Services], properties
+- Pivot transformation
+- Lookup transformation
+- Percentage Sampling transformation
+- Export Column transformation [Integration Services]
+- Row Sampling transformation
+- Conditional Split transformation custom properties [Integration Services]
+- custom properties [Integration Services]
+- Audit transformation
+- Term Lookup transformation
+- Script Component transformation custom properties [Integration Services]
+- Derived Column transformation
+- OLE DB Command transformation
+- Copy Column transformation custom properties [Integration Services]
+- Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 转换自定义属性
+# <a name="transformation-custom-properties"></a>转换自定义属性
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
   
- 本主题列出并描述了各种数据流转换的自定义属性。 有关对大多数数据流对象都通用的属性的信息，请参阅 [Common Properties](../Topic/Common%20Properties.md)。  
+ 本主题列出并描述了各种数据流转换的自定义属性。 有关对大多数数据流对象都通用的属性的信息，请参阅 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
- 某些转换属性可以使用属性表达式进行设置。 有关详细信息，请参阅[可以使用表达式设置的数据流属性](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md)。  
+ 某些转换属性可以使用属性表达式进行设置。 有关详细信息，请参阅 [可以使用表达式设置的数据流属性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)。  
   
-## 包含自定义属性的转换  
+## <a name="transformations-with-custom-properties"></a>包含自定义属性的转换  
   
 ||||  
 |-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 72
 |[数据挖掘查询](#dmquery)|[百分比抽样](#percent)|[逆透视](#unpivot)|  
 |[派生列](#derived)|[透视](#pivot)||  
   
-### 不包含自定义属性的转换  
+### <a name="transformations-without-custom-properties"></a>不包含自定义属性的转换  
  以下转换不包含组件级、输入级或输出级自定义属性： [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md)、 [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md)和 [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)。 这些转换仅使用对所有数据流组件均通用的属性。  
   
 ##  <a name="aggregate"></a> 聚合转换自定义属性  
@@ -140,7 +145,7 @@ caps.handback.revision: 72
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|该值用于指定作为输出列的源的输入列的 **LineageID** 。|  
-|MapFlags|Integer（枚举）|该值用于指定字符映射转换对列执行的字符串操作。 此属性可以具有下列值之一：<br /><br /> **字节反转** (2)<br /><br /> **全角** (6)<br /><br /> **半角** (5)<br /><br /> **平假名** (3)<br /><br /> **片假名** (4)<br /><br /> **语言中的大小写** (7)<br /><br /> **小写** (0)<br /><br /> **简体中文** (8)<br /><br /> **繁体中文** (9)<br /><br /> **大写** (1)|  
+|MapFlags|Integer（枚举）|该值用于指定字符映射转换对列执行的字符串操作。 此属性可以具有下列值之一：<br /><br /> **字节反转** (2)<br /><br /> **全角** (6)<br /><br /> **半角** (5)<br /><br /> **平假名** (3)<br /><br /> **片假名** (4)<br /><br /> **语言中的大小写** (7)<br /><br /> **小写** (0)<br /><br /> **简体中文** (8)<br /><br /> **繁体中文**(9)<br /><br /> **大写** (1)|  
   
  字符映射转换的输入、输入列和输出都不包含自定义属性。  
   
@@ -182,7 +187,7 @@ caps.handback.revision: 72
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](../Topic/Fast%20Parse.md) 和 [Standard Parse](../Topic/Standard%20Parse.md)。 。<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
+|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 **False**。 有关详细信息，请参阅 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 。<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |SourceInputColumnLineageId|Integer|作为输出列的源的输入列的 **LineageID** 。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  
@@ -259,7 +264,7 @@ caps.handback.revision: 72
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|Delimiters|字符串|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
+|Delimiters|字符串|转换所使用的标记分隔符。 默认分隔符包含以下字符： 空间 （）、 逗号 （，），句点 （.）、 分号 （;），冒号 （:），连字符 （-），双击直双引号 （"），单个的直引号 （'），& 符 (&)、 斜杠标记 （/），反斜杠 (\\)，at 符号 (@)，惊叹号 （！）、 问号 （？），左括号 （（） 右括号 （）），小于 (\<)、 大于号 (>)，打开方括号 ([]) 的右括号 (])，左大括号 （{}），关闭大括号 （}）、 管道 (&#124;)，数字符号 （#），星号 （*）、 脱字号 (^) 和百分号 （%）。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在“模糊分组转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MaxMemoryUsage|Integer|转换所使用的最大内存量。 此属性的默认值为 **0**，该值将启用动态内存使用。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性在“模糊分组转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MinSimilarity|双精度|转换用来标识重复值的相似性阈值，以 0 和 1 之间的值表示。  此属性的默认值为 0.8。|  
@@ -293,7 +298,7 @@ caps.handback.revision: 72
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|指定是否应为模糊查找索引结构和后续查找生成引用表副本。 此属性的默认值为 **True**。|  
-|Delimiters|字符串|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
+|Delimiters|字符串|转换用来标记列值的分隔符。 默认分隔符包含以下字符： 空间 （）、 逗号 （，）、 句点 （.） 分号 （;）、 冒号 （:） 连字符 （-），双击直双引号 （"），单个的直引号 （'），& 符 (&)、 斜杠标记 （/），反斜杠 (\\)，at 符号 (@)，惊叹号 （！）、 问号 （？）、 左括号 （（） 右括号 （）），小于 (\<)、 大于号 (>)，打开方括号 ([]) 的右括号 (])，左大括号 （{}），关闭大括号 （}）、 管道 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
 |DropExistingMatchIndex|Boolean|一个值，用于指定当 MatchIndexOptions 未设置为 ReuseExistingIndex 时是否删除 MatchIndexName 中指定的匹配索引。 此属性的默认值为 **True**。|  
 |Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 **True** 主要用于调试目的。 此属性的默认值为 **False**。<br /><br /> 注意：此属性在“模糊查找转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |MatchIndexName|字符串|匹配索引的名称。 匹配索引是转换在其中创建和保存所使用的索引的表。 如果重复使用匹配索引，MatchIndexName 将指定要重复使用的索引。 MatchIndexName 必须是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符名称。 例如，如果名称包含空格，则必须用方括号将名称括起来。|  
@@ -318,7 +323,7 @@ caps.handback.revision: 72
  下表介绍模糊查找转换的输出列的自定义属性。 所有属性均可读/写。  
   
 > [!NOTE]  
->  对于包含来自对应输入列的传递值的输出列，CopyFromReferenceColumn 为空，SourceInputColumnLineageID 包含对应输入列的 **LineageID**。 对于包含查找结果的输出列，CopyFromReferenceColumn 包含查找列的名称，SourceInputColumnLineageID 为空。  
+>  对于包含来自对应输入列的传递值的输出列，CopyFromReferenceColumn 为空，SourceInputColumnLineageID 包含对应输入列的 **LineageID** 。 对于包含查找结果的输出列，CopyFromReferenceColumn 包含查找列的名称，SourceInputColumnLineageID 为空。  
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
@@ -343,7 +348,7 @@ caps.handback.revision: 72
 |MaxMemoryUsage64|Integer|64 位计算机上的查找表的最大缓存大小。|  
 |NoMatchBehavior|Integer（枚举）|该值用于指定是否将引用数据集中不包含匹配项的行视为错误。<br /><br /> 如果将该属性设置为“将没有匹配项的行视为错误”(0)，则不包含匹配项的行将被视为错误。 使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页可以指定当发生此类错误时会发生什么情况。 有关详细信息，请参阅[查找转换编辑器（“错误输出”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。<br /><br /> 如果将该属性设置为“将没有匹配项的行发送至无匹配输出”(1)，则不会将行视为错误。<br /><br /> 默认值为“将没有匹配项的行视为错误”(0)。|  
 |ParameterMap|字符串|以分号分隔的沿袭 ID 列表，这些 ID 映射到 **SqlCommand** 语句中所使用的参数。|  
-|ReferenceMetaDataXML|字符串|转换复制到其输出的查找表中的列的元数据。|  
+|ReferenceMetadataXML|字符串|转换复制到其输出的查找表中的列的元数据。|  
 |SqlCommand|字符串|用于填充查找表的 SELECT 语句。|  
 |SqlCommandParam|字符串|用于填充查找表的参数化 SQL 语句。|  
   
@@ -395,7 +400,7 @@ caps.handback.revision: 72
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|Integer|SQL 命令在超时前可以运行的最大秒数。 值 **0** 表示不限制时间。 此属性的默认值为 **0**。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
-|SQLCommand|字符串|转换针对数据流中的每一行运行的 Transact-SQL 语句。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
+|SqlCommand|字符串|转换针对数据流中的每一行运行的 Transact-SQL 语句。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表介绍 OLE DB 命令转换的外部列的自定义属性。 所有属性均可读/写。  
   
@@ -445,7 +450,7 @@ caps.handback.revision: 72
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|字符串|列中由其 PivotUsage 属性的值标记为透视键的可能值之一。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
-|SourceColumn|Integer|包含透视值或 -1 的输入列的 **LineageID**。 值 -1 表示透视操作中未使用该列。|  
+|SourceColumn|Integer|包含透视值或 -1 的输入列的 **LineageID** 。 值 -1 表示透视操作中未使用该列。|  
   
  有关详细信息，请参阅 [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md)。  
   
@@ -515,7 +520,7 @@ caps.handback.revision: 72
 |FailOnLookupFailure|Boolean|该值用于指定当查找现有记录失败时转换是否失败。 此属性的默认值为 **False**。|  
 |IncomingRowChangeType|Integer|该值用于指定是否所有传入的行均为新行，或者转换是否应检测更改类型。|  
 |InferredMemberIndicator|字符串|推断成员的列名称。|  
-|SQLCommand|字符串|用于创建架构行集的 SQL 语句。|  
+|SqlCommand|字符串|用于创建架构行集的 SQL 语句。|  
 |UpdateChangingAttributeHistory|Boolean|该值用于指示是否将历史属性更新定向到转换输出，以用于更改属性更新。|  
   
  下表介绍渐变维度转换的输入列的自定义属性。 所有属性均可读/写。  
@@ -606,7 +611,7 @@ caps.handback.revision: 72
  逆透视转换仅包含在组件级别对所有数据流组件通用的属性。  
   
 > [!NOTE]  
->  本节围绕[逆透视转换](../../../integration-services/data-flow/transformations/unpivot-transformation.md)中所述的逆透视应用场景，举例说明此处介绍的各选项的用法。  
+>  本节围绕 [逆透视转换](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的逆透视应用场景，举例说明此处介绍的各选项的用法。  
   
  下表介绍逆透视转换的输入列的自定义属性。 所有属性均可读/写。  
   
@@ -625,10 +630,10 @@ caps.handback.revision: 72
   
  有关详细信息，请参阅 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [通用属性](../Topic/Common%20Properties.md)   
- [路径属性](../Topic/Path%20Properties.md)   
- [可以使用表达式设置的数据流属性](../Topic/Data%20Flow%20Properties%20that%20Can%20Be%20Set%20by%20Using%20Expressions.md)  
+ [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [路径属性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [可以通过使用表达式设置数据流属性](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

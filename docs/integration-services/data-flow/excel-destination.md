@@ -1,30 +1,35 @@
 ---
-title: "Excel 目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldest.f1"
-helpviewer_keywords: 
-  - "目标 [Integration Services], Excel"
-  - "Excel [Integration Services]"
+title: "Excel 目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Excel
+- Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 目标
+# <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
   
-## 访问模式  
+## <a name="access-modes"></a>访问模式  
  Excel 目标为数据加载提供了三种数据访问模式：  
   
 -   表或视图。  
@@ -36,7 +41,7 @@ caps.handback.revision: 49
 > [!IMPORTANT]  
 >  在 Excel 中，工作表或范围等同于表或视图。 Excel 源和目标编辑器中可用表的列表仅显示现有的工作表（以追加到电子表格名称之后的 $ 符号为标识，如 Sheet1$）和指定范围（以 $ 符号的缺失为标识，如 MyRange）。  
   
-## 使用注意事项  
+## <a name="usage-considerations"></a>使用注意事项  
  Excel 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支持的 Excel ISAM（索引顺序存取方法）驱动程序来连接 Excel 数据源，并在 Excel 数据源中进行数据读写操作。  
   
  许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关 Excel 驱动程序的使用及行为的一般信息，请参阅 [如何将 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据一起使用](http://support.microsoft.com/kb/257819)。  
@@ -71,7 +76,7 @@ caps.handback.revision: 49
   
     -   双精度 Excel 数值列与其他类型的数值列之间的转换。  
   
-## Excel 目标的配置  
+## <a name="configuration-of-the-excel-destination"></a>Excel 目标的配置  
  Excel 目标使用 Excel 连接管理器连接到数据源，而连接管理器指定要使用的工作簿文件。 有关详细信息，请参阅 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
  Excel 目标具有一个常规输入和一个错误输出。  
@@ -88,13 +93,13 @@ caps.handback.revision: 49
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自定义属性](../../integration-services/data-flow/excel-custom-properties.md)  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 -   [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 49
   
 -   [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 1 部分（共 3 部分）：连接和组件](http://go.microsoft.com/fwlink/?LinkId=217674)。  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 49
   
 -   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Excel 源](../../integration-services/data-flow/excel-source.md)   
- [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)   
- [使用脚本任务处理 Excel 文件](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

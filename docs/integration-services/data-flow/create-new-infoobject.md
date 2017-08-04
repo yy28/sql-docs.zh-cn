@@ -1,22 +1,27 @@
 ---
-title: "新建 InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建新的 InfoObject |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 新建 InfoObject
+# <a name="create-new-infoobject"></a>新建 InfoObject
   使用 **“新建 InfoObject”** 对话框在 SAP Netweaver BW 系统中创建新的 InfoObject。  
   
  从 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页可以打开 **“创建 InfoObject”**对话框。 若要了解有关 SAP BW 目标的详细信息，请参阅 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  您也可在 **“新建 InfoObject”** 对话框的 **“属性”** 部分中单击 **“新建”** 来打开 **“新建 InfoObject”** 对话框。  
   
-## 常规选项  
+## <a name="general-options"></a>常规选项  
  **特征**  
  创建一个表示维度数据的 InfoObject。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **保存并激活**  
  保存并激活新的 InfoObject。  
   
-## 数据类型选项  
+## <a name="data-type-options"></a>数据类型选项  
  **CHAR - 字符串**  
  指示 InfoObject 包含字符数据。  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **长度**  
  输入数据的长度。  
   
-## 文本选项  
+## <a name="text-options"></a>文本选项  
  **包含文本**  
  指示 InfoObject 包含文本。  
   
@@ -113,13 +118,13 @@ caps.handback.revision: 10
  **文本时间依赖**  
  指示文本依赖于时间。  
   
-## 属性部分  
+## <a name="attributes-section"></a>属性部分  
  **“属性”** 部分包含 InfoObject 的属性列表和用于在列表中添加和删除属性的选项。  
   
-### “属性”列表  
+### <a name="attributes-list"></a>“属性”列表  
  **“属性”** 列表显示所创建的 InfoObject 的属性。 **“属性”** 列表包含以下列标题：  
   
- **InfoObject**  
+ **“InfoObject”**  
  查看 InfoObject 的名称  
   
  **Description**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|单位|  
 |TIM|时间特征|  
   
-### 属性选项  
+### <a name="attributes-options"></a>属性选项  
  使用以下选项添加和删除所创建的 InfoObject 的属性：  
   
  **添加**  
@@ -143,7 +148,7 @@ caps.handback.revision: 10
   
  要添加现有 InfoObject，请单击“添加”，然后使用 **“查找 InfoObject”** 对话框查找 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)。  
   
- **新建**  
+ **“新建”**  
  添加新的 InfoObject 作为属性。  
   
  要创建和添加新的 InfoObject，请单击“新建”，然后使用 **“新建 InfoObject”** 对话框的一个新实例来创建新的 InfoObject。  
@@ -151,7 +156,7 @@ caps.handback.revision: 10
  **删除**  
  从“属性”列表删除选择的 InfoObject。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

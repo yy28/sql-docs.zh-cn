@@ -1,27 +1,32 @@
 ---
-title: "更改版本名称 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "版本 [Master Data Services], 更改名称"
+title: "更改版本名称 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c00530ff2b9938314e50cdde09e6f9fc33791fd8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 更改版本名称 (Master Data Services)
+# <a name="change-a-version-name-master-data-services"></a>更改版本名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，更改版本名称以便为您的组织对版本名称进行自定义。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
-### 更改版本名称  
+### <a name="to-change-the-version-name"></a>更改版本名称  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 7
   
 4.  按 Enter。  
   
-## 另请参阅  
- [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
- [提交版本 (Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   
- [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [针对业务规则 &#40; 验证版本Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [锁定版本 &#40;Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [提交版本 &#40;Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)   
+ [版本 &#40;Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
   

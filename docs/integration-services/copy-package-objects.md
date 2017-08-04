@@ -1,30 +1,35 @@
 ---
-title: "复制包对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制流 [Integration Services], 复制对象"
-  - "复制包对象 [Integration Services]"
-  - "数据流 [Integration Services], 复制对象"
-  - "连接管理器 [Integration Services], 复制"
+title: "复制包对象 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 复制包对象
+# <a name="copy-package-objects"></a>复制包对象
   此主题介绍如何在包内或包之间复制控制流项、数据流项和连接管理器。  
   
-### 复制控制和数据流项  
+### <a name="to-copy-control-and-data-flow-items"></a>复制控制和数据流项  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含要处理的包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 14
   
 7.  右键单击并单击“粘贴”。  
   
-### 复制连接管理器  
+### <a name="to-copy-connection-managers"></a>复制连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含要处理的包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
@@ -60,10 +65,10 @@ caps.handback.revision: 14
   
 6.  右键单击“连接管理器”区域，并单击“粘贴”。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [控制流](../integration-services/control-flow/control-flow.md)   
  [数据流](../integration-services/data-flow/data-flow.md)   
- [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [复制项目项](../Topic/Copy%20Project%20Items.md)  
+ [Integration Services &#40;SSIS &#41;连接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [复制项目项](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "平面文件连接管理器编辑器（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.general.f1"
-helpviewer_keywords: 
-  - "平面文件连接管理器编辑器"
+title: "平面文件连接管理器编辑器 （常规页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.general.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e94228deef3c278239cc9f24026677a175d3a65
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 平面文件连接管理器编辑器（“常规”页）
+# <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“常规”** 页选择文件和数据格式。 使用平面文件连接可以将包连接到文本文件。  
   
  若要了解有关平面文件连接管理器的详细信息，请参阅 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接管理器名称**  
  为工作流中的平面文件连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
@@ -82,10 +87,10 @@ caps.handback.revision: 24
  **第一个数据行中的列名称**  
  指示在第一个数据行中是否要求列名或提供列名。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
- [平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
- [平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
+ [平面文件连接管理器编辑器 &#40;列页 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)   
+ [平面文件连接管理器编辑器 &#40;高级页 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [平面文件连接管理器编辑器 &#40;预览页 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

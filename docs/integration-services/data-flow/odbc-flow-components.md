@@ -1,34 +1,39 @@
 ---
-title: "ODBC 流组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 流组件 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 流组件
+# <a name="odbc-flow-components"></a>ODBC 流组件
   本主题介绍使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可帮助 SSIS 开发人员轻松地创建从支持 ODBC 的数据库加载和卸载数据的包。  
   
- ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
+ ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
   
-## 优势  
+## <a name="benefits"></a>优势  
  用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 ODBC 源和 ODBC 目标在处理从支持 ODBC 的数据库加载数据或卸载数据方面为项目中的 SSIS 提供竞争力。  
   
  ODBC 源和 ODBC 目标实现了与支持 ODBC 的数据库的高性能数据集成。 这两个组件都可以配置为使用按行参数数组绑定来用于支持此模式的绑定的高性能 ODBC 访问接口，以及使用单行参数绑定来用于低性能的 ODBC 访问接口。  
   
-## ODBC 源和目标入门  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 源和目标入门  
  在您可以设置使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的包之前，必须确保以下项可用。  
   
 -   [ODBC 源](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  ODBC 目标编辑器（“错误输出”页）  
   
-## 操作方案  
+## <a name="operating-scenarios"></a>操作方案  
  本节描述了 ODBC 源和目标组件的一些主要用途。  
   
-### 将数据从 SQL Server 表大容量复制到支持 ODBC 的任何数据库表  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>将数据从 SQL Server 表大容量复制到支持 ODBC 的任何数据库表  
  可以使用组件将数据从一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中大容量复制到支持 ODBC 的单个数据库表中。  
   
  下面的示例显示如何创建一个 SSIS 数据流任务，该任务从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中提取数据并且将数据加载到 DB2 表中。  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
   
 -   将一个 ODBC 目标拖到设计图面，将源输出连接到该 ODBC 目标，然后对该目标进行配置以便将数据加载到具有您从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库提取的数据的 DB2 表中。 使用您以前创建的 ODBC 连接管理器。  
   
-### 将数据从支持 ODBC 的数据库表大容量复制到任何 SQL Server 表  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>将数据从支持 ODBC 的数据库表大容量复制到任何 SQL Server 表  
  您可以使用组件将数据从一个或多个支持 ODBC 的数据库表大容量复制到单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表中。  
   
  下面的示例显示如何创建一个 SSIS 数据流任务，该任务从 Sybase 数据库表中提取数据并且将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表中。  
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   将一个 OLE DB 目标拖到设计图面，将源输出连接到该 OLE DB 目标，然后对该目标进行配置以便将数据加载到具有您从 Sybase 数据库提取的数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 使用您以前创建的 OLE DB 连接管理器。  
   
-## 支持的数据类型  
+## <a name="supported-data-types"></a>支持的数据类型  
  ODBC 大容量 SSIS 组件支持所有内置的 ODBC 数据类型，包括支持大型对象（CLOB 和 BLOB）。  
   
 没有针对 ODBC 3.8 规范中所述的可扩展 C 类型的数据类型支持。下表介绍每个 ODBC SQL 类型使用的 SSIS 数据类型。 SSIS 开发人员可覆盖默认映射和为输入/输出列指定不同的 SSIS 数据类型，并且不会影响所需数据转换的性能。  
@@ -128,7 +133,7 @@ caps.handback.revision: 10
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |访问接口特定的数据类型|DT_BYTES<br /><br />DT_IMAGE|如果列长度小于或等于 8000，则使用 DT_BYTES。<br /><br />如果列长度为零或大于 8000，则使用 DT_IMAGE。|  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [ODBC 源](../../integration-services/data-flow/odbc-source.md)  
   

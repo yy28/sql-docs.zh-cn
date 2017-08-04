@@ -1,37 +1,42 @@
 ---
-title: "基于属性值更改启动操作 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "业务规则 [Master Data Services], 跟踪属性更改"
-  - "更改跟踪组 [Master Data Services], 启动操作"
+title: "基于属性值发生更改 (Master Data Services) 启动操作 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], tracking attribute changes
+- change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efc81991bc2cc84642740632a4f5b58515c19011
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 基于属性值更改启动操作 (Master Data Services)
+# <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>基于属性值更改启动操作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便基于对属性值的更改启动操作。 例如，在某个特定的属性值发生更改时，您可能需要更改值、发送通知或启动外部工作流。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   您的属性必须处于更改跟踪组中。 有关详细信息，请参阅[向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)。  
+-   您的属性必须处于更改跟踪组中。 有关详细信息，请参阅 [向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
   
-### 创建业务规则以便基于属性值更改启动操作  
+### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>创建业务规则以便基于属性值更改启动操作  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -78,16 +83,16 @@ caps.handback.revision: 8
   
 21. 在确认对话框中，单击 **“确定”**。 规则的状态将更改为 **“活动”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
     -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则 &#40; 验证版本Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [向更改跟踪组添加属性 (Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+ [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

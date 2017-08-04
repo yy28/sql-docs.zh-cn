@@ -1,31 +1,36 @@
 ---
-title: "缓存转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetrans.f1"
-helpviewer_keywords: 
-  - "缓存转换"
+title: "缓存转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetrans.f1
+helpviewer_keywords:
+- Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 缓存转换
+# <a name="cache-transform"></a>缓存转换
   “缓存转换”转换通过将所连接数据源中的数据写入流入缓存连接管理器的数据流，可以为查找转换生成一个引用数据集。 查找转换通过将所连接数据源输入列中的数据与引用数据库中的列进行联接来执行查找。  
   
  若想将查找转换配置为在完全缓存模式中运行，可使用缓存连接管理器。 在此模式下，在查找转换运行前，引用数据集会加载到缓存中。  
   
- 有关如何使用缓存连接管理器和“缓存转换”转换配置完全缓存模式下的查找转换的说明，请参阅[在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)。  
+ 有关如何使用缓存连接管理器和“缓存转换”转换配置完全缓存模式下的查找转换的说明，请参阅 [在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)。  
   
  有关缓存引用数据集的详细信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 30
   
  有关详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
   
-## 缓存转换的配置  
+## <a name="configuration-of-the-cache-transform"></a>缓存转换的配置  
  可以将缓存连接管理器配置为向缓存文件 (.caw) 中保存数据。  
   
  可以采用下列方法配置缓存转换：  
@@ -52,9 +57,9 @@ caps.handback.revision: 30
   
  可以通过 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 设计器来设置属性。 有关可在 **“高级编辑器”** 对话框中设置的属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)  
   

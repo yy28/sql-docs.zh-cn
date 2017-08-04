@@ -1,22 +1,27 @@
 ---
-title: "Microsoft Connector for SAP BW 组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft Connector for SAP BW 组件 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13877d29b192079361051d4775d09f1f4596c9d3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Microsoft Connector for SAP BW 组件
+# <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 组件
   此部分包含介绍 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 的三个组件的主题：  
   
 -   SAP BW 连接管理器  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [SAP BW 连接管理器](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  介绍 SAP BW 连接管理器。 该连接管理器将 SAP BW 源或 SAP BW 目标连接到 SAP Netweaver BW 版本 7 系统。  
   

@@ -1,25 +1,30 @@
 ---
-title: "dtexec 实用工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "dtexec 实用工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 0f9706a6faa2743091db5f65853a173a7215aaf7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# dtexec 实用工具
-   **dtexec** 命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 **dtexec** 实用工具，可以加载来自以下源的包： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
+# <a name="dtexec-utility"></a>dtexec 实用工具
+  **dtexec** 命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 **dtexec** 实用工具，可以加载来自以下源的包： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
   
-> **注意：**使用当前版本的 **dtexec** 实用工具来运行使用旧版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建的包时，该实用工具会临时将包升级到当前的包格式。 不过，你不能使用 **dtexec** 实用工具保存升级的包。 有关如何将包永久地升级到当前版本的详细信息，请参阅 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+> **注意：** 使用当前版本的 **dtexec** 实用工具来运行使用旧版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的包时，该实用工具会临时将包升级到当前的包格式。 不过，你不能使用 **dtexec** 实用工具保存升级的包。 有关如何将包永久地升级到当前版本的详细信息，请参阅 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
  本主题包含以下各节：  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 -   [示例](#example)  
   
 ##  <a name="server"></a> Integration Services 服务器和项目文件  
- 当你使用 **dtexec** 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上运行包时，**dtexec** 会调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)存储过程来创建执行、设置参数值并启动执行。 可以在服务器的相关视图中或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的标准报告来查看所有执行日志。 有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../integration-services/performance/reports-for-the-integration-services-server.md)。  
+ 当你使用 **dtexec** 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上运行包时，**dtexec** 会调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)和 [catalog.start_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)存储过程来创建执行、设置参数值并启动执行。 可以在服务器的相关视图中或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的标准报告来查看所有执行日志。 有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
  以下是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上执行包的一个示例。  
   
@@ -54,36 +59,36 @@ caps.handback.revision: 30
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- 使用 **dtexec** 从 .ispac 项目文件运行包时，相关选项 /Proj[ect] 和 /Pack[age] 用于指定项目路径和包流名称。 通过从 **运行** “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将项目转换为项目部署模型时，该向导生成一个 .ispac 项目文件。 有关详细信息，请参阅 [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md)。  
+ 使用 **dtexec** 从 .ispac 项目文件运行包时，相关选项 /Proj[ect] 和 /Pack[age] 用于指定项目路径和包流名称。 通过从 **运行** “Integration Services 项目转换向导” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将项目转换为项目部署模型时，该向导生成一个 .ispac 项目文件。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  你可以使用 **dtexec** 与第三方计划工具来计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。  
   
 ##  <a name="bit"></a> 64 位计算机上的安装注意事项  
- 在 64 位计算机上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将安装 64 位版本的 **dtexec** 实用工具 (dtexec.exe)。 如果需要以 32 位模式运行某些包，则必须安装 32 位版本的 **dtexec** 实用工具。 若要安装 32 位版本的 **dtexec** 实用工具，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+ 在 64 位计算机上， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将安装 64 位版本的 **dtexec** 实用工具 (dtexec.exe)。 如果需要以 32 位模式运行某些包，则必须安装 32 位版本的 **dtexec** 实用工具。 若要安装 32 位版本的 **dtexec** 实用工具，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
- 默认情况下，同时安装了 64 位和 32 位版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示实用工具的 64 位计算机将在命令提示符处运行 32 位版本。 运行 32 位版本的原因是：在 PATH 环境变量中，32 位版本的目录路径显示在 64 位版本的目录路径之前。 （通常，32 位目录路径是 *\<驱动器>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn，而 64 位目录路径是 *\<驱动器>*:\Program Files\Microsoft SQL Server\110\DTS\Binn。）  
+ 默认情况下，同时安装了 64 位和 32 位版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 命令提示实用工具的 64 位计算机将在命令提示符处运行 32 位版本。 运行 32 位版本的原因是：在 PATH 环境变量中，32 位版本的目录路径显示在 64 位版本的目录路径之前。 (通常，32 位目录路径是*\<驱动器 >*: \Program 文件 (x86) \Microsoft SQL Server\110\DTS\Binn，64 位目录路径时*\<驱动器 >*: files\microsoft SQL server\110\dts\binn。)  
   
-> **注意：**如果使用 SQL Server 代理来运行此实用工具，则 SQL Server 代理会自动使用 64 位版本的实用工具。 SQL Server 代理使用注册表（而非 PATH 环境变量）来找到此实用工具的正确可执行文件。  
+> **注意：** 如果使用 SQL Server 代理来运行此实用工具，则 SQL Server 代理会自动使用 64 位版本的实用工具。 SQL Server 代理使用注册表（而非 PATH 环境变量）来找到此实用工具的正确可执行文件。  
   
  若要确保在命令提示符处运行 64 位版本的实用工具，可以执行以下操作之一：  
   
--   打开命令提示符窗口，更改为包含 64 位版本的实用工具的目录 (*\<驱动器>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)，然后从该位置运行此实用工具。  
+-   打开命令提示符窗口，将更改为包含实用程序的 64 位版本的目录 (*\<驱动器 >*: files\microsoft SQL server\110\dts\binn 中)，然后从该位置运行该实用程序。  
   
--   在命令提示符处，通过输入 64 位版本的实用工具的完整路径 (*\<驱动器>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) 来运行此实用工具。  
+-   在命令提示符处，运行该实用程序通过输入完整路径 (*\<驱动器 >*: files\microsoft SQL server\110\dts\binn 中) 到 64 位版本的实用工具。  
   
--   通过将 64 位路径 (*\<驱动器>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) 置于 32 位路径 (*\<驱动器>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 之前，可永久更改 PATH 环境变量中路径的顺序。  
+-   永久放置的 64 位路径更改 PATH 环境变量中的路径的顺序 (*\<驱动器 >*: files\microsoft SQL server\110\dts\binn 中) 之前的 32 位路径 (*\<驱动器 >*: \程序文件 (x86) \Microsoft SQL Server\110\DTS\Binn） 变量中。  
   
 ##  <a name="side"></a> 有关使用并行安装的计算机的注意事项  
  当在已安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 或 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 的计算机上安装 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 时，安装多个版本的 **dtexec** 实用工具。  
   
- 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (*\<驱动器>*:\Program Files\Microsoft SQL Server\\<版本\>\DTS\Binn) 来运行此实用工具。  
+ 若要确保运行正确版本的工具，并在命令提示符处运行该实用程序通过输入完整路径 (*\<驱动器 >*: files\microsoft SQL Server\\< 版本\>\DTS\Binn)。  
   
 ##  <a name="phases"></a> 执行的阶段  
  该实用工具的执行过程经历四个阶段。 这些阶段如下所列：  
   
 1.  命令选项确定阶段：命令提示符读取选项列表和已指定的参数。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
   
-2.  包加载阶段：加载 **/SQL**、**/FILE** 或 **/DTS** 选项指定的包。  
+2.  包加载阶段：加载 **/SQL**、 **/FILE**或 **/DTS** 选项指定的包。  
   
 3.  配置阶段：按以下顺序处理各个选项：  
   
@@ -136,7 +141,7 @@ DECLARE @returncode int
 EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
 ```  
   
-> **重要说明!!** 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，新安装中将默认禁用 **xp_cmdshell** 选项。 运行 **sp_configure** 系统存储过程可以启用此选项。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+> **重要说明!!** 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安装中将默认禁用 **xp_cmdshell** 选项。 运行 **sp_configure** 系统存储过程可以启用此选项。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
 ##  <a name="syntax"></a> 语法  
   
@@ -154,7 +159,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/CheckF[ile]** *filespec*：（可选）。 将包的 **CheckpointFileName** 属性设置为 *filespec*中指定的路径和文件。 重新启动包时将使用此文件。 如果指定了该选项并且未提供文件名值，则包的 **CheckpointFileName** 将被设置为空字符串。 如果不指定该选项，则保留包中的值。  
   
--   **/CheckP[ointing]** *{on\off}*：（可选）。 设置一个值，用于确定包执行期间包是否使用检查点。 值 **on** 指定要重新运行失败的包。 重新运行失败的包时，运行时引擎将使用检查点文件，以便从失败点重新启动包。  
+-   **/CheckP[ointing]** *{on\off}* ：（可选）。 设置一个值，用于确定包执行期间包是否使用检查点。 值 **on** 指定要重新运行失败的包。 重新运行失败的包时，运行时引擎将使用检查点文件，以便从失败点重新启动包。  
   
      如果声明该选项时未提供值，则默认值为“on”。 如果值设置为“on”，但找不到检查点文件，则包执行将失败。 如果不指定该选项，则保留包中设置的值。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
@@ -170,11 +175,11 @@ dtexec /option [value] [/option [value]]...
   
      该选项要求同时指定两个参数：必须在 *id_or_name* 参数中提供连接管理器名称或 GUID，并且在 *connection_string* 参数中指定有效的连接字符串。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-     在运行时，可以使用 **/Connection** 选项从在设计时指定的位置之外的某个位置加载包配置。 这些配置的值随后将替换最初指定的值。 不过，可以将 **/Connection** 选项仅用于使用连接管理器的配置，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置。 若要了解如何应用包配置，请参阅[包配置](../../integration-services/packages/package-configurations.md)和 [SQL Server 2016 中 Integration Services 功能的行为更改](../Topic/Behavior%20Changes%20to%20Integration%20Services%20Features%20in%20SQL%20Server%202016.md)。  
+     在运行时，可以使用 **/Connection** 选项从在设计时指定的位置之外的某个位置加载包配置。 这些配置的值随后将替换最初指定的值。 不过，可以将 **/Connection** 选项仅用于使用连接管理器的配置，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置。 若要了解如何应用包配置，请参阅 [包配置](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]：（可选）。 在包执行过程中，在控制台显示指定的日志项。 如果省略该选项，则不会在控制台中显示日志项。 如果指定该选项时不带限制显示的参数，则会显示所有日志项。 若要限制控制台显示的日志项，可以使用 *displayoptions* 参数指定要显示的列，并使用 *list_options* 参数限制日志项类型。  
   
-    > **注意：**在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上使用 **/ISSERVER** 参数运行包时，控制台输出受限，大多数 **/Cons[oleLog]** 选项不适用。 可以在服务器的相关视图中或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的标准报告来查看所有执行日志。 有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../integration-services/performance/reports-for-the-integration-services-server.md)。  
+    > **注意：**  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上使用 **/ISSERVER** 参数运行包时，控制台输出受限，大多数 **/Cons[oleLog]** 选项不适用。 可以在服务器的相关视图中或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的标准报告来查看所有执行日志。 有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。  
   
      *displayoptions* 值包括：  
   
@@ -210,7 +215,7 @@ dtexec /option [value] [/option [value]]...
   
     -   如果命令行中存在包含列表，将对所有包含列表统一应用排除列表。  
   
-     有关 **/ConsoleLog** 选项的若干示例，请参阅**备注**部分。  
+     有关 **/ConsoleLog** 选项的若干示例，请参阅 **备注** 部分。  
   
 -   **/D[ts]** *package_path*：（可选）。 从 SSIS 包存储区加载包。 使用旧的包部署模型部署存储在 SSIS 包存储区中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
   
@@ -228,9 +233,9 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *error code*：默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 *\<驱动器>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
+     **/ 转储***错误代码*： 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将调试转储文件存储在文件夹中， *\<驱动器 >*: files\microsoft SQL Server\110\Shared\ErrorDumps。  
   
-    > **注意：**调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
+    > **注意：** 调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
   
      若要将此选项应用到 **dtexec** 实用工具运行的所有包，请将 **DumpOnCodes** REG_SZ 值添加到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS\Setup\DtsPath 注册表项。 **DumpOnCodes** 中的数据值指定将触发系统创建调试转储文件的错误代码或代码。 多个错误代码必须以分号 (;) 分隔。  
   
@@ -240,9 +245,9 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**：（可选）在包运行期间发生任意错误时，创建调试转储文件 .mdmp 和 .tmp。  
   
-     默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将调试转储文件存储在 *\<驱动器>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
+     默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将调试转储文件存储在文件夹中， *\<驱动器 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 文件夹。  
   
-    > **注意：**调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
+    > **注意：** 调试转储文件可能包含敏感信息。 使用访问控制列表 (ACL) 来限制对这些文件的访问，或将文件复制到具有受限访问权限的文件夹中。 例如，在将调试文件发送给 Microsoft 支持服务部门之前，建议您删除所有敏感信息或机密信息。  
   
      若要将此选项应用到 **dtexec** 实用工具运行的所有包，请将 **DumpOnError** REG_DWORD 值添加到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS\Setup\DtsPath 注册表项。 **DumpOnError** REG_DWORD 值决定了 **/DumpOnError** 选项是否需要与 **dtexec** 实用工具一起使用：  
   
@@ -278,7 +283,7 @@ dtexec /option [value] [/option [value]]...
   
      将 **/Server** 选项与 **/ISSERVER** 选项一起使用。 只有 Windows 身份验证可以在 SSIS 服务器上执行包。 当前 Windows 用户用于访问该包。 如果省略 /Server 选项，则假定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认本地实例。  
   
-     **/ISSERVER** 选项不能与 **/DTS**、**/SQL** 或 **/File** 选项一起使用。 如果指定多个选项，dtexec 将失败。  
+     **/ISSERVER** 选项不能与 **/DTS**、 **/SQL** 或 **/File** 选项一起使用。 如果指定多个选项，dtexec 将失败。  
   
      此参数由 SQL Server 代理使用。  
   
@@ -292,13 +297,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID：{59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置用户帐户 ：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]：  
   
         -   ProgID：DTS.LogProviderSQLProfiler.1  
   
         -   ClassID：{5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置用户帐户 ：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
   
         -   ProgID：DTS.LogProviderSQLServer.1  
   
@@ -370,7 +375,7 @@ dtexec /option [value] [/option [value]]...
   
      **V** 详细报告。  
   
-     V 和 N 参数与所有其他参数互相排斥，必须单独指定。 如果不指定 **/Reporting** 选项，则默认级别为 **E**（错误）、**W**（警告）和 **P**（进度）。  
+     V 和 N 参数与所有其他参数互相排斥，必须单独指定。 如果不指定 **/Reporting** 选项，则默认级别为 **E** （错误）、 **W** （警告）和 **P** （进度）。  
   
      所有事件前都有一个格式为“YY/MM/DD HH:MM:SS”的时间戳以及一个 GUID 或友好名称（如果可用）。  
   
@@ -388,9 +393,9 @@ dtexec /option [value] [/option [value]]...
   
      如果不指定值，则使用默认值 **force** 。  
   
--   **/Set** [$Sensitive::]*propertyPath;value*：（可选）。 覆盖包中参数、变量、属性、容器、日志提供程序、Foreach 枚举器或连接的配置。 使用该选项时，**/Set** 可将 *propertyPath* 参数更改为指定的值。 可以指定多个 **/Set** 选项。  
+-   **/Set** [$Sensitive::]*propertyPath;value*：（可选）。 覆盖包中参数、变量、属性、容器、日志提供程序、Foreach 枚举器或连接的配置。 使用该选项时， **/Set** 可将 *propertyPath* 参数更改为指定的值。 可以指定多个 **/Set** 选项。  
   
-     除了将 **/Set** 选项与 **/F[ile]** 选项一起使用之外，还可以将 **/Set** 选项与 **/ISServer** 选项或 **/Project** 选项一起使用。 将 **/Set** 与 **/Project** 一起使用时，**/Set** 用于设置参数值。 将 **/Set** 与 **/ISServer** 一起使用时，**/Set** 用于设置属性覆盖。 此外，将 **/Set** 与 **/ISServer** 一起使用时，可以使用可选的 $Sensitive 前缀指示应作为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上的敏感项处理该属性。  
+     除了将 **/Set** 选项与 **/F[ile]** 选项一起使用之外，还可以将 **/Set** 选项与 **/ISServer** 选项或 **/Project** 选项一起使用。 将 **/Set** 与 **/Project**一起使用时， **/Set** 用于设置参数值。 将 **/Set** 与 **/ISServer**一起使用时， **/Set** 用于设置属性覆盖。 此外，将 **/Set** 与 **/ISServer**一起使用时，可以使用可选的 $Sensitive 前缀指示应作为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上的敏感项处理该属性。  
   
      可以通过运行包配置向导确定 *propertyPath* 的值。 选定项的路径会显示在最后一个 **“完成向导”** 页中，可以进行复制和粘贴。 如果仅以此目的使用该向导，则可以在复制路径后取消它。  
   
@@ -402,17 +407,17 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     可以使用 **/Set** 选项更改自其加载包配置的位置。 但是，不能使用 **/Set** 选项覆盖设计时某个配置所指定的值。 若要了解如何应用包配置，请参阅[包配置](../../integration-services/packages/package-configurations.md)和 [SQL Server 2016 中 Integration Services 功能的行为更改](../Topic/Behavior%20Changes%20to%20Integration%20Services%20Features%20in%20SQL%20Server%202016.md)。  
+     可以使用 **/Set** 选项更改自其加载包配置的位置。 但是，不能使用 **/Set** 选项覆盖设计时某个配置所指定的值。 若要了解如何应用包配置，请参阅 [包配置](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行为更改](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 -   **/Ser[ver]** *server*：（可选）。 指定 **/SQL** 或 **/DTS** 选项后，此选项可以指定从中检索包的服务器的名称。 如果省略 **/Server** 选项但指定 **/SQL** 或 **/DTS** 选项，则尝试对本地服务器执行包。 *server_instance* 值可以用引号引起来。  
   
      指定 **/ISServer** 选项时，必须指定 **/Ser[ver]** 选项。  
   
--   **/SQ[L]** *package_path*：加载存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 **msdb** 数据库中的包。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+-   **/SQ[L]** *package_path*：加载存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 **msdb** 数据库中的包。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
   
      *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
-     你可以将 **/User**、**/Password** 和 **/Server** 选项与 **/SQL** 选项一起使用。  
+     你可以将 **/User**、 **/Password**和 **/Server** 选项与 **/SQL** 选项一起使用。  
   
      如果省略 **/User** 选项，则使用 Windows 身份验证来访问包。 如果使用 **/User** 选项，指定的 **/User** 登录名将与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证相关联。  
   
@@ -444,11 +449,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** *packageID*：（可选）。 通过将要执行的包的 GUID 与 *package_id* 参数中指定的值进行比较，来验证该 GUID。  
   
--   **/VerifyS[igned]**：（可选）。 导致 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 检查包的数字签名。 如果包未签名或签名无效，则包将失败。 有关详细信息，请参阅[使用数字签名标识包的源](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md)。  
+-   **/VerifyS[igned]**：（可选）。 导致 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 检查包的数字签名。 如果包未签名或签名无效，则包将失败。 有关详细信息，请参阅 [使用数字签名标识包的源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
     > **重要说明!!** 在配置为检查包签名时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 仅检查数字签名是否存在、是否有效以及是否来自可信来源。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不检查包是否已更改。  
   
-    > **注意：**可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
+    > **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
   
 -   **/VerifyV[ersionID]** *versionID*：（可选）。 通过将要执行的包的版本 GUID 与包验证阶段 *version_id* 参数中指定的值进行比较，来验证该 GUID。  
   
@@ -468,7 +473,7 @@ dtexec /option [value] [/option [value]]...
   
      此选项仅由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用。 如果在命令提示符下运行 **dtexec** 实用工具，则会忽略此选项。  
   
-##  <a name="remark"></a> 备注  
+##  <a name="remark"></a> 注释  
  命令选项的指定顺序可以影响包的执行方式：  
   
 -   选项的处理顺序与其在命令行中出现的顺序一致。 命令文件的读取顺序与其在命令行中出现的顺序一致。 命令文件中的命令的处理顺序也与其出现的顺序一致。  
@@ -628,10 +633,8 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ```  
   
-## 相关任务  
- [在 SQL Server Data Tools 中运行包](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
-  
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  www.mattmasson.com 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   
+

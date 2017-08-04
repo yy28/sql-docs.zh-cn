@@ -1,26 +1,31 @@
 ---
-title: "Web 服务任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "Web 服务任务 [集成服务]"
+title: "Web 服务任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Web 服务任务
+# <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
   
 -   将 Web 服务方法返回的值写入变量。 例如，可以从 Web 服务方法获取某天的最高气温，然后使用此值更新设置列值的表达式中使用的变量。  
@@ -50,7 +55,7 @@ caps.handback.revision: 57
  Web 服务方法的结果可以写入变量或文件。 使用文件连接管理器可以指定文件，也可以提供将结果写入的变量名称。 有关详细信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web 服务任务可用的自定义日志记录消息  
- 下表列出了可以为 Web 服务任务启用的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+ 下表列出了可以为 Web 服务任务启用的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
@@ -73,7 +78,7 @@ caps.handback.revision: 57
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Web 服务任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
@@ -82,3 +87,4 @@ caps.handback.revision: 57
   
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=259642)。  
+

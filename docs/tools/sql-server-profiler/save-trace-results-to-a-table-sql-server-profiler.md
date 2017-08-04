@@ -1,28 +1,33 @@
 ---
-title: "将跟踪结果保存到表 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "保存跟踪"
-  - "跟踪 [SQL Server], 保存"
+title: "将跟踪结果保存到表 （SQL Server 事件探查器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- saving traces
+- traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41505214d2ae9e53cc9cd45433183d3250650313
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将跟踪结果保存到表 (SQL Server Profiler)
+# <a name="save-trace-results-to-a-table-sql-server-profiler"></a>将跟踪结果保存到表 (SQL Server Profiler)
   本主题说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]将跟踪结果保存到数据库表。  
   
-### 将跟踪结果保存到表  
+### <a name="to-save-trace-results-to-a-table"></a>将跟踪结果保存到表  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 24
   
 7.  在“跟踪属性”对话框中，选中“设置最大行数(以千为单位)”复选框以指定要保存的最大行数。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Excel 连接管理器编辑器 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelconnection.f1"
-helpviewer_keywords: 
-  - "Excel 连接管理器编辑器"
+title: "Excel 连接管理器编辑器 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
+helpviewer_keywords:
+- Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c4060736f824becd05fecceba0b162b45f0fed4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 连接管理器编辑器
+# <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
   使用 **“Excel 连接管理器编辑器”** 对话框可以将连接添加到现有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作簿文件。  
   
  若要了解有关 Excel 连接管理器的详细信息，请参阅 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **Excel 文件路径**  
  键入一个现有或新的 Excel 工作簿文件 (.xls) 的路径和文件名。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 32
  **首行包含列名称**  
  指定所选工作表中的第一行数据是否包含列名称。 此选项的默认值为 **True**。  
   
-## Microsoft Excel 和 Access 文件的提供程序和驱动程序  
+## <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel 和 Access 文件的提供程序和驱动程序  
  你可能需要下载 Microsoft Office 文件的的 OLE DB 提供程序和驱动程序（如果它们尚未安装）。 更高版本的提供程序可以打开 Excel 的早期版本所创建的文件。  
   
  如果计算机有 32 位版本的 Office，则必须安装 32 位版本的驱动程序，并且你还必须确保运行向导或它在 32 位模式下创建的 Integration Services 包。  
@@ -57,8 +62,8 @@ caps.handback.revision: 32
 |2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|  
 |2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [循环遍历 Excel 文件和表使用 Foreach 循环容器](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

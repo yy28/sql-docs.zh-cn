@@ -1,38 +1,43 @@
 ---
-title: "删除派生层次结构 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除派生层次结构 [Master Data Services]"
-  - "派生层次结构, 删除"
+title: "删除派生层次结构 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting derived hierarchies [Master Data Services]
+- derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3b95bf71e1cc687ffd70fce617fd6629fede7d5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除派生层次结构 (Master Data Services)
+# <a name="delete-a-derived-hierarchy-master-data-services"></a>删除派生层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您确定不再需要某个派生层次结构时，可以将其删除。  
   
 > [!NOTE]  
 >  删除派生层次结构对于该层次结构所基于的属性关系没有影响。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 删除派生层次结构  
+### <a name="to-delete-a-derived-hierarchy"></a>删除派生层次结构  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -46,8 +51,8 @@ caps.handback.revision: 6
   
 6.  在确认对话框中，单击 **“确定”**。  
   
-## 另请参阅  
- [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建派生层次结构 &#40;Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [派生层次结构 &#40;Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

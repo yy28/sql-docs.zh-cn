@@ -1,35 +1,40 @@
 ---
-title: "删除成员或集合 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合 [Master Data Services]，删除"
-  - "叶成员 [Master Data Services]，删除"
-  - "删除成员 [Master Data Services]"
-  - "成员 [Master Data Services]，删除"
-  - "合并成员 [Master Data Services]，删除"
+title: "删除成员或集合 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], deleting
+- leaf members [Master Data Services], deleting
+- deleting members [Master Data Services]
+- members [Master Data Services], deleting
+- consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除成员或集合 (Master Data Services)
+# <a name="delete-a-member-or-collection-master-data-services"></a>删除成员或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当您不再需要某个成员或集合时，可以将其删除。 若要大批量删除成员，可以改用临时表。 有关详细信息，请参阅[导入表中数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 > [!NOTE]  
 >  如果某一成员用作另一个成员的基于域的属性值，则不能删除该成员。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
 -   对于集合，您必须对要删除的叶集合对象至少具有 **“更新”** 权限。  
   
-### 删除成员或集合  
+### <a name="to-delete-a-member-or-collection"></a>删除成员或集合  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 10
   
 8.  在确认对话框中，单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   
- [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
+ [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

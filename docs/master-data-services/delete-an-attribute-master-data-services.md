@@ -1,36 +1,41 @@
 ---
-title: "删除属性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性 [Master Data Services], 删除"
-  - "删除属性 [Master Data Services]"
+title: "删除属性 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], deleting
+- deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除属性 (Master Data Services)
+# <a name="delete-an-attribute-master-data-services"></a>删除属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望永久删除某个属性以及所有关联的属性值时，可以删除此属性。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 删除属性  
+### <a name="to-delete-an-attribute"></a>删除属性  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -57,10 +62,10 @@ caps.handback.revision: 6
   
 8.  在确认对话框中，单击 **“确定”**。  
   
-## 另请参阅  
- [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [属性 &#40;Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
+ [基于域的属性 &#40;Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [创建文本属性 &#40;Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [创建基于域的属性 &#40;Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

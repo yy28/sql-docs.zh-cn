@@ -1,29 +1,34 @@
 ---
-title: "+（连接）（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "连接 [Integration Services]"
-  - "+（连接运算符）"
-  - "连接运算符 (+)"
+title: "+ （连接）（SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- concatenation [Integration Services]
+- + (concatenate operator)
+- concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba1fcd0a00289d7c2f97fa344be196885c7e7451
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# +（连接）（SSIS 表达式）
+# <a name="-concatenate-ssis-expression"></a>+（连接）（SSIS 表达式）
   将两个表达式连接为一个表达式。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -31,14 +36,14 @@ character_expression1 + character_expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *expression1、expression2*  
  是任何有效的 DT_STR、DT_WSTR、DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
+## <a name="remarks"></a>注释  
  表达式可以使用 DT_STR 和 DT_WSTR 数据类型中的任一种或两者都使用。  
   
  DT_STR 和 DT_WSTR 数据类型的连接将返回 DT_WSTR 类型的结果。 字符串的长度是两个原始字符串长度的和（以字符计）。  
@@ -53,7 +58,7 @@ character_expression1 + character_expression2
   
  字符串文字必须用引号引起来。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例连接了 **FirstName** 和 **LastName** 列中的值，并在两个值之间插入一个空格。  
   
 ```  
@@ -66,8 +71,8 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

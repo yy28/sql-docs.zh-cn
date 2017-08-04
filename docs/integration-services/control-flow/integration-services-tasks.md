@@ -1,45 +1,50 @@
 ---
-title: "Integration Services 任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "脚本 [Integration Services], 任务"
-  - "文件 [Integration Services], 任务选项"
-  - "工作流任务 [Integration Services]"
-  - "Integration Services, 任务"
-  - "添加包任务"
-  - "任务 [Integration Services], 已列出"
-  - "SSIS 任务"
-  - "SSIS, 任务"
-  - "控制流 [Integration Services], 任务"
-  - "任务 [Integration Services]"
-  - "对任务进行分组"
-  - "任务 [Integration Services], 关于任务"
-  - "SQL Server Integration Services 任务"
-  - "数据准备任务 [Integration Services]"
-  - "目录操作 [Integration Services]"
+title: "Integration Services 任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Integration Services], tasks
+- files [Integration Services], task options
+- workflow tasks [Integration Services]
+- Integration Services, tasks
+- adding package tasks
+- tasks [Integration Services], listed
+- SSIS tasks
+- SSIS, tasks
+- control flow [Integration Services], tasks
+- tasks [Integration Services]
+- grouping tasks
+- tasks [Integration Services], about tasks
+- SQL Server Integration Services tasks
+- data preparation tasks [Integration Services]
+- directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00504d62d603f43b567394180b9e03dee34a1ed7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Integration Services 任务
-  任务是一些控制流元素，它定义包控制流中执行的工作单元。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  
+# <a name="integration-services-tasks"></a>Integration Services 任务
+  任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  
   
  您还可使用支持 COM 的编程语言（如 Visual Basic）或 .NET 编程语言（如 C#）编写自定义任务。  
   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中用于处理包的图形工具，可提供用于创建包控制流的设计界面，以及用于配置任务的自定义编辑器。 您还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型进行编程，以便通过编程方式创建包。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中用于处理包的图形工具，可提供用于创建包控制流的设计界面，以及用于配置任务的自定义编辑器。 您还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型进行编程，以便通过编程方式创建包。  
   
-## 任务的类型  
+## <a name="types-of-tasks"></a>任务的类型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包括下列类型的任务。  
   
  数据流任务  
@@ -64,23 +69,23 @@ caps.handback.revision: 51
  维护任务用于执行管理功能，如备份和收缩 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、重新生成和重新组织索引以及运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
  自定义任务  
- 此外，您还可以使用支持 COM 的编程语言（如 Visual Basic）或 .NET 编程语言（如 C#）编写自定义任务。 如果希望在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中访问自定义任务，那么你可以为该任务创建和注册一个用户接口。 有关详细信息，请参阅[开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
+ 此外，您还可以使用支持 COM 的编程语言（如 Visual Basic）或 .NET 编程语言（如 C#）编写自定义任务。 如果希望在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中访问自定义任务，那么你可以为该任务创建和注册一个用户接口。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
-## 任务的配置  
+## <a name="configuration-of-tasks"></a>任务的配置  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包可以只包含单个任务，如在包运行时删除数据库表中记录的执行 SQL 任务。 但是，包通常包含多个任务，而且每个任务都被设置为在包控制流上下文中运行。 事件处理程序是为响应运行时事件而运行的工作流，该程序中也可包含任务。  
   
- 有关使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器向包添加任务的详细信息，请参阅[在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
+ 有关使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器向包添加任务的详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
- 有关如何以编程方式向包中添加任务的详细信息，请参阅[以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
+ 有关如何以编程方式向包中添加任务的详细信息，请参阅 [以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
   
- 对于每个任务，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器为每个任务提供的自定义对话框单独配置，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包含的“属性”窗口进行配置。 一个包中可以包含多个相同类型的任务（如六个执行 SQL 任务），对每个任务可进行不同的配置。 有关详细信息，请参阅[设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+ 对于每个任务，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器为每个任务提供的自定义对话框单独配置，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包含的“属性”窗口进行配置。 一个包中可以包含多个相同类型的任务（如六个执行 SQL 任务），对每个任务可进行不同的配置。 有关详细信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
-## 任务连接和组  
+## <a name="tasks-connections-and-groups"></a>任务连接和组  
  如果连接和分组任务中包含多个任务，则它们将被按照优先约束在控制流中进行连接和排序。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
  任务可被分组到一起作为一个工作单元执行，也可在循环中重复执行。 有关详细信息，请参阅 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)、 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)和 [Sequence Container](../../integration-services/control-flow/sequence-container.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "“创建 Web 应用程序”对话框（Master Data Services 配置管理器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.createapp.f1"
+title: "创建 Web 应用程序对话框 （Master Data Services 配置管理器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fb6605ae951c83b70aa6bb0499be0d077b398c8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “创建 Web 应用程序”对话框（Master Data Services 配置管理器）
+# <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
   使用“创建 Web 应用程序”  对话框可以创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此 Web 应用程序在“Web 配置”  页上选择的网站中创建。  
   
-## Web 应用程序  
+## <a name="web-application"></a>Web 应用程序  
  Web 服务器从文件系统中的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 文件夹为此 Web 应用程序提供内容。 此位置在安装过程中指定，路径默认为驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication。  
   
 |控件名称|Description|  
@@ -29,7 +34,7 @@ caps.handback.revision: 9
 |虚拟路径|选择要在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的虚拟路径。 虚拟路径是用来访问 Web 应用程序的 URL 的一部分。<br /><br /> 对此列表进行筛选以便只显示可在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的应用程序虚拟路径。 不能在其他 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。|  
 |别名|为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序键入名称，或使用默认名称。 在 URL 中使用该名称从 Web 浏览器访问 Web 应用程序。|  
   
-## 应用程序池  
+## <a name="application-pool"></a>应用程序池  
   
 |控件名称|Description|  
 |------------------|-----------------|  
@@ -38,10 +43,9 @@ caps.handback.revision: 9
 |**密码**|键入指定用户帐户的密码。|  
 |**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“Web 配置”页（Master Data Services 配置管理器）](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services 入门 (SQL Server 2016)](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)   
- [Web 应用程序要求 (Master Data Services)](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [创建主数据管理器 Web 应用程序 (Master Data Services)](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+[Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md) [Web 应用程序要求 &#40;Master Data Services &#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+ [创建主数据管理器 Web 应用程序 &#40;Master Data Services &#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

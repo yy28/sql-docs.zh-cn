@@ -1,30 +1,35 @@
 ---
-title: "有条件拆分转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.conditionalsplittrans.f1"
-helpviewer_keywords: 
-  - "有条件拆分转换"
-  - "将行路由到不同输出 [Integration Services]"
+title: "有条件拆分转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.conditionalsplittrans.f1
+helpviewer_keywords:
+- Conditional Split transformation
+- route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 有条件拆分转换
+# <a name="conditional-split-transformation"></a>有条件拆分转换
   有条件拆分转换可以根据数据内容将数据行路由到不同的输出。 有条件拆分转换的实现类似于编程语言中的 CASE 决策结构。 此转换将计算表达式，并且根据结果将数据行定向到指定输出。 此转换还提供默认输出，因此如果某个行与任何表达式都不匹配，则它将被定向到默认输出。  
   
-## 有条件拆分转换的配置  
+## <a name="configuration-of-the-conditional-split-transformation"></a>有条件拆分转换的配置  
  可以按照下列方式配置有条件拆分转换：  
   
 -   提供一个表达式，此表达式将转换要测试的每个条件都计算为一个布尔值。  
@@ -45,7 +50,7 @@ caps.handback.revision: 51
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的函数和运算符可用于创建计算输入数据并定向输出数据的表达式。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- 有条件拆分转换包括 **FriendlyExpression** 自定义属性。 加载包时，可以通过属性表达式更新此属性。 有关详细信息，请参阅[在包中使用属性表达式](../../../integration-services/expressions/use-property-expressions-in-packages.md)和[转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 有条件拆分转换包括 **FriendlyExpression** 自定义属性。 加载包时，可以通过属性表达式更新此属性。 有关详细信息，请参阅 [在包中使用属性表达式](../../../integration-services/expressions/use-property-expressions-in-packages.md) 和 [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  此转换具有一个输入、一个或多个输出和一个错误输出。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 51
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -65,10 +70,10 @@ caps.handback.revision: 51
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [使用有条件拆分转换拆分数据集](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

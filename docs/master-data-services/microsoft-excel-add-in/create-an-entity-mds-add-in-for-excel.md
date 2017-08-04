@@ -1,25 +1,30 @@
 ---
-title: "创建实体（用于 Excel 的 MDS 外接程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建实体 （MDS 外接程序 excel） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建实体（用于 Excel 的 MDS 外接程序）
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以创建新的实体来存储数据。 当您创建实体时，应加载要存储的数据的至少一个抽样。  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>创建实体（用于 Excel 的 MDS 外接程序）
+  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，管理员可以创建新的实体来存储数据。 当您创建实体时，应加载要存储的数据的至少一个抽样。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -36,13 +41,13 @@ caps.handback.revision: 8
   
     -   您应该除了标题行之外还具有至少一行数据。 不是所有列都需要值，但数据应该代表将位于实体中的数据。  
   
-    -   如果你具有包含唯一标识符的列（在 MDS 中称作**代码**），则请确保这些值是唯一的。 如果没有包含标识符的列，则可以让这些列在您创建实体时自动生成。  
+    -   如果你具有包含唯一标识符的列（在 MDS 中称作 **代码**），则请确保这些值是唯一的。 如果没有包含标识符的列，则可以让这些列在您创建实体时自动生成。  
   
     -   请确保没有单元包含公式。  
   
     -   请确保没有单元包含时间值。 可以将日期值保存在 MDS 中，但不能保存时间值。  
   
-### 创建实体和加载数据  
+### <a name="to-create-an-entity-and-load-data"></a>创建实体和加载数据  
   
 1.  打开或创建包含您要加载的数据的 Excel 工作表。  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. 单击 **“确定”**。 在已成功创建该实体后，将显示一个新的标题行，单元将突出显示，并且工作表名称将更新以匹配该实体名称。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   若要查看发生的错误，请在 **“发布并验证”** 组中单击 **“显示状态”**。 将显示 ValidationStatus 和 InputStatus 列。 有关详细信息，请参阅[验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 -   确认属性以您期望的数据类型创建。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建基于域的属性（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

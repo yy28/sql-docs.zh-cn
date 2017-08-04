@@ -1,22 +1,27 @@
 ---
-title: "创建事务数据的 InfoSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建事务数据的 InfoSource |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 创建事务数据的 InfoSource
+# <a name="create-infosource-for-transaction-data"></a>创建事务数据的 InfoSource
   使用 **“创建事务数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoSource。  
   
  从 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页可以打开 **“创建事务数据的 InfoSource”**对话框。 若要了解有关 SAP BW 目标的详细信息，请参阅 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 5.  在 **“创建 InfoSource”** 对话框中，选择 **“事务数据”**，然后单击 **“确定”**。  
   
-## 常规选项  
+## <a name="general-options"></a>常规选项  
  **InfoSource 名称**  
  输入新 InfoSource 的名称。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 10
  **保存并激活**  
  保存并激活该新 InfoSource。  
   
-## InfoSource 传输结构选项  
+## <a name="infosource-transfer-structure-options"></a>InfoSource 传输结构选项  
  InfoSource 传输结构可供您将数据流列与 InfoSource 关联。  
   
  **PipelineElement**  
@@ -74,10 +79,10 @@ caps.handback.revision: 10
  **Iobject - 删除**  
  删除 InfoObject 与当前行的数据流列之间的关联。 若要删除此关联，请单击 **“删除”**。  
   
- **InfoObject**  
+ **“InfoObject”**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
- **类型**  
+ **“类型”**  
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
 |“值”|Description|  
@@ -90,8 +95,8 @@ caps.handback.revision: 10
  **单位字段**  
  指定 InfoObject 将使用的单位。  
   
-## 另请参阅  
- [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)   
+## <a name="see-also"></a>另请参阅  
+ [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "创建集合 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建集合 [Master Data Services]"
-  - "集合 [Master Data Services], 创建"
+title: "创建集合 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating collections [Master Data Services]
+- collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e2f56bff6ce32092113a15b552d0bd66d100b7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建集合 (Master Data Services)
+# <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
   
 -   对于实体的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
-### 创建集合  
+### <a name="to-create-a-collection"></a>创建集合  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 8
   
 9. 单击 **“确定”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   [将成员添加到集合 (Master Data Services)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)   
  [删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [创建显式层次结构 &#40;Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

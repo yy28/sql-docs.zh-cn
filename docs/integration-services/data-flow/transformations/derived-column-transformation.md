@@ -1,30 +1,35 @@
 ---
-title: "派生列转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntrans.f1"
-helpviewer_keywords: 
-  - "多个派生列"
-  - "表达式 [Integration Services], 派生列"
-  - "派生列"
-  - "列 [Integration Services], 派生"
-  - "派生列转换"
+title: "派生列转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntrans.f1
+helpviewer_keywords:
+- multiple derived columns
+- expressions [Integration Services], derived columns
+- derived columns
+- columns [Integration Services], derivations
+- Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51522b2df0c47048cbc62a6fb6997e40a484d7d6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 派生列转换
+# <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
   
  可以使用此转换执行下列任务：  
@@ -61,7 +66,7 @@ caps.handback.revision: 60
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -75,3 +80,4 @@ caps.handback.revision: 60
   
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+

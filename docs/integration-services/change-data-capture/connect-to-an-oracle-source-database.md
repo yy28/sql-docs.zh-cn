@@ -1,24 +1,29 @@
 ---
-title: "连接到 Oracle 源数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraDb"
+title: "连接到 Oracle 源数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 连接到 Oracle 源数据库
+# <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
   
  **Oracle 连接字符串**  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  
 >   
->  -   SELECT on \<any-captured-table>  
+>  -   选择\<any 捕获表 >  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  在此页上输入完信息后，单击 **“下一步”** 以便 [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [编辑实例属性](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

@@ -1,51 +1,56 @@
 ---
-title: "属性 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自由格式的属性 [Master Data Services]"
-  - "属性 [Master Data Services], 关于属性"
-  - "属性 [Master Data Services], 文件属性"
-  - "文件属性 [Master Data Services]"
-  - "属性 [Master Data Services], 自由格式的属性"
-  - "属性 [Master Data Services]"
+title: "属性 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- free-form attributes [Master Data Services]
+- attributes [Master Data Services], about attributes
+- attributes [Master Data Services], file attributes
+- file attributes [Master Data Services]
+- attributes [Master Data Services], free-form attributes
+- attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 属性 (Master Data Services)
+# <a name="attributes-master-data-services"></a>属性 (Master Data Services)
   属性是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实体中包含的对象。 属性值描述实体的成员。 属性可用于描述叶成员、合并成员或集合。  
   
-## 属性如何与其他模型对象关联  
+## <a name="how-attributes-relate-to-other-model-objects"></a>属性如何与其他模型对象关联  
  您可以将属性视作实体表中的列。 属性值是用于描述特定成员的值。  
   
- ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
+ ![Master Data Services 实体表示为表](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services 实体表示为表")  
   
- 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅[属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)。  
+ 创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅 [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)。  
   
-## 必需的属性  
+## <a name="required-attributes"></a>必需的属性  
  创建实体时，将自动创建 Name 和 Code 属性。 Code 需要一个值，并且必须在实体中是唯一的。 不能删除 Name 和 Code 属性。  
   
-## 属性类型  
+## <a name="attribute-types"></a>属性类型  
  有三种类型的属性：  
   
 -   自由格式的属性，允许针对文本、数字、日期或链接的自由格式的输入。  
   
--   基于域的属性，由实体填充。 有关详细信息，请参阅[基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)。  
+-   基于域的属性，由实体填充。 有关详细信息，请参阅 [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)。  
   
 -   文件属性，用于存储文件、文档或图像。 文件属性旨在通过要求文件具有特定的扩展名，帮助确保数据的一致性。 文件属性不一定能够防止恶意用户上载不同类型的文件。  
   
-### 数字自由格式属性  
+### <a name="numeric-free-form-attributes"></a>数字自由格式属性  
  数字自由格式属性值需要特殊处理，因为它们被限制为 **SqlDouble** 值类型。  
   
  默认情况下， **SqlDouble** 值包含 15 个小数位数的精度，尽管它在内部维护最大 17 位的精度。 浮点数的精度具有以下若干影响：  
@@ -56,10 +61,10 @@ caps.handback.revision: 12
   
 -   如果包含浮点数，值可能无法“往返转换”。 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
   
-## 属性示例  
+## <a name="attribute-examples"></a>属性示例  
  在下面的示例中，实体具有 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
+ ![Bike Product 实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product 实体表")  
   
  在下面的示例中，Product 实体包含：  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 12
   
  Subcategory 是用作 Product 的基于域的属性的实体。 Category 是用作 Subcategory 的基于域的属性的实体。 与 Product 实体一样，Category 和 Subcategory 实体各自包含默认 Name 和 Code 属性。  
   
- ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树结构")  
+ ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树状结构")  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 12
 |更改属性的顺序。|[更改属性的顺序](../master-data-services/change-the-order-of-attributes.md)|  
 |创建日期属性|[创建日期属性 (Master Data Services)](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -96,8 +101,5 @@ caps.handback.revision: 12
   
 -   [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
   
--   [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)  
-  
--   [合并的权限 (Master Data Services)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+-   [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)
   

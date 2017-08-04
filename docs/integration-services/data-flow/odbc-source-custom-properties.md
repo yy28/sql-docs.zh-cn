@@ -1,22 +1,27 @@
 ---
-title: "ODBC 源自定义属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 源的自定义属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 源自定义属性
+# <a name="odbc-source-custom-properties"></a>ODBC 源自定义属性
   下表介绍 ODBC 源的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
   
 |属性名称|数据类型|Description|  
@@ -35,8 +40,8 @@ caps.handback.revision: 7
 |LobChunckSize|Integer|针对 LOB 列的块大小分配。|  
 ||||  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 源](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

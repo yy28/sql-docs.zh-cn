@@ -1,25 +1,30 @@
 ---
-title: "模型对象权限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "权限 [Master Data Services]，模型对象"
-  - "模型 [Master Data Services]，对象权限"
+title: "模型对象权限 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], model objects
+- models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee6ede91067d2b358a403458e07af37b2f895ac3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 模型对象权限 (Master Data Services)
+# <a name="model-object-permissions-master-data-services"></a>模型对象权限 (Master Data Services)
   模型对象权限是必需的。 这些权限确定用户在用户界面的 **“资源管理器”** 功能区域中可以访问哪些属性。  
   
  例如，如果向某个用户分配对 Product 实体的 **“更新”** 权限，则该用户可以更新 Product 实体的所有属性。 如果分配对单个属性的 **“更新”** 权限，则该用户只能更新该属性。  
@@ -32,17 +37,17 @@ caps.handback.revision: 9
   
  你可以分配对模型对象的读取、创建、更新、删除或拒绝权限的组合。 如果没有在 **“模型”** 选项卡上分配任何权限，用户就不能在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中查看任何模型或数据。  
   
-## 最佳实践  
+## <a name="best-practice"></a>最佳实践  
  一般情况下，应分配对模型对象的“全部”  权限，然后显式分配对其下对象的权限。  
   
-## 外部资源  
+## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章 [安全性改进](http://go.microsoft.com/fwlink/p/?LinkId=615376)。  
   
-## 另请参阅  
- [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [模型权限 (Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
- [功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
- [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [分配模型对象权限 &#40;Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [模型权限 &#40;Master Data Services &#41;](../master-data-services/model-permissions-master-data-services.md)   
+ [功能区域权限 &#40;Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何确定权限 &#40;Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

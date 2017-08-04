@@ -1,40 +1,45 @@
 ---
-title: "多平面文件连接管理器编辑器（“列”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.columns.f1"
-helpviewer_keywords: 
-  - "多平面文件连接管理器编辑器"
+title: "多平面文件连接管理器编辑器 （列页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.columns.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f1f2dee040a886d66ffcd5bd3fa3a710a8552b7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 多平面文件连接管理器编辑器（“列”页）
+# <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“列”** 节点指定行和列的信息，以及预览选定的第一个文件。  
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   
-## 静态选项  
+## <a name="static-options"></a>静态选项  
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
  **Description**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
-## 平面文件格式动态选项  
+## <a name="flat-file-format-dynamic-options"></a>平面文件格式动态选项  
   
-### 格式 = 带分隔符  
+### <a name="format--delimited"></a>格式 = 带分隔符  
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 30
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
   
-### 格式 = 固定宽度  
+### <a name="format--fixed-width"></a>格式 = 固定宽度  
  **字体**  
  选择用于显示预览数据的字体。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 30
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
   
-### 格式 = 右边未对齐  
+### <a name="format--ragged-right"></a>格式 = 右边未对齐  
   
 > [!NOTE]  
 >  右边未对齐是指文件中除最后一列之外每一列的宽度都固定。 它由行分隔符分隔。  
@@ -107,10 +112,10 @@ caps.handback.revision: 30
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [多平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
- [多平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [多平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多个平面文件连接管理器编辑器 &#40;常规页&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [多个平面文件连接管理器编辑器 &#40;高级页 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [多个平面文件连接管理器编辑器 &#40;预览页&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

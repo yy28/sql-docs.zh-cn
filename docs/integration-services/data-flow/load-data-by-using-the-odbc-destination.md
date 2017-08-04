@@ -1,25 +1,30 @@
 ---
-title: "通过使用 ODBC 目标来加载数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "通过使用 ODBC 目标加载数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 通过使用 ODBC 目标来加载数据
+# <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  
   
-### 使用 ODBC 目标加载数据  
+### <a name="to-load-data-using-an-odbc-destination"></a>使用 ODBC 目标加载数据  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 9
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
- [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [ODBC 源编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>另请参阅  
+ [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [ODBC 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

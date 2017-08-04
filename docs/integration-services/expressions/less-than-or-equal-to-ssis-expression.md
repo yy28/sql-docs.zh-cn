@@ -1,25 +1,30 @@
 ---
-title: "&lt;=（小于或等于）（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "<=（小于或等于运算符）"
-  - "小于等于运算符 (<=)"
+title: "&lt;= （小于或等于） （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <= (less than or equal to operator)
+- less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 975fffa437744be85fc351ff075b41edb09df4ec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# &lt;=（小于或等于）（SSIS 表达式）
+# <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= （小于或等于） （SSIS 表达式）
   通过比较确定第一个表达式是否小于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
   
 > [!NOTE]  
@@ -30,7 +35,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  此运算符的两个字符之间没有空格。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,21 +43,21 @@ expression1 <= expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *expression1、expression2*  
  为任意有效的表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  
   
 -   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **Character**：*expression1* 和 *expression2* 的计算结果必须为 DT_STR 或 DT_WSTR 数据类型。 两个表达式的计算结果可以为不同的字符串数据类型。  
+-   **Character** ： *expression1* 和 *expression2* 的计算结果必须为 DT_STR 或 DT_WSTR 数据类型。 两个表达式的计算结果可以为不同的字符串数据类型。  
   
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
@@ -82,7 +87,7 @@ expression1 <= expression2
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  如果当前日期等于或晚于 2003 年 7 月 4 日，则此示例的计算结果为 TRUE。 有关详细信息，请参阅 [GETDATE（SSIS 表达式）](../../integration-services/expressions/getdate-ssis-expression.md)。  
   
 ```  
@@ -101,11 +106,11 @@ ListPrice <= 500
 @LPrice <= 500  
 ```  
   
-## 另请参阅  
- [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [>（小于）（SSIS 表达式）](../../integration-services/expressions/less-than-ssis-expression.md)   
- [>=（大于或等于）（SSIS 表达式）](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+## <a name="see-also"></a>另请参阅  
+ [&#62;&#40;大于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#60;&#40;小于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#62; = &#40;大于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 源编辑器（“错误输出”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetsource.erroroutput.f1"
+title: "ADO NET 源编辑器 （错误输出页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7889b092dae9abe613b3c4b2fe8d18500dea69f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 源编辑器（“错误输出”页）
+# <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“错误输出”** 页，选择错误处理选项以及设置错误输出列的属性。  
   
  若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
   
 3.  在 **“ADO NET 源编辑器”**中，单击 **“错误输出”**。  
   
-## 选项  
+## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 14
  **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## 另请参阅  
- [ADO NET 源编辑器（“连接管理器”页）](../../integration-services/data-flow/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 源编辑器（“列”页）](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [ADO NET 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
  [ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)  
   
   

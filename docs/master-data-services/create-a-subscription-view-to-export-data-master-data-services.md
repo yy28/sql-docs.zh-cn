@@ -1,36 +1,41 @@
 ---
-title: "创建订阅视图以导出数据 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "订阅视图 [Master Data Services], 创建"
-  - "创建订阅视图 [Master Data Services]"
+title: "创建订阅视图，以导出数据 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscription views [Master Data Services], creating
+- creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建订阅视图以导出数据 (Master Data Services)
+# <a name="create-a-subscription-view-to-export-data-master-data-services"></a>创建订阅视图以导出数据 (Master Data Services)
   创建订阅视图，以便将 Master Data Services 数据导出到订阅系统。 你打算在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建数据的视图。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅 [功能区域权限 & #40;Master Data Services & #41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅 [管理员和 #40;Master Data Services & #41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 创建和编辑订阅视图  
+### <a name="to-create-and-edit-a-subscription-view"></a>创建和编辑订阅视图  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“集成管理”**。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
 5.  从 **“模型”** 列表中，选择某一模型。  
   
-6.  选择 **包括软删除成员**, ，以包括在视图中的软删除的成员。  
+6.  选择“包括软删除成员” ，以在视图中包括软删除的成员。  
   
 7.  在“版本选项”  中选择“版本”  或“版本标志” 选项，然后从相应的列表中进行选择。  
   
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 11. 单击 **“保存”**。  
   
-## 查看信息  
+## <a name="view-information"></a>查看信息  
  对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表介绍了这些列。  
   
-|列|说明|  
+|列|Description|  
 |------------|-----------------|  
-|状态|视图状态。<br /><br /> 当您单击 **保存**, 、 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 图像显示，指示正在更新视图。<br /><br /> 如果有错误时创建或编辑视图， ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 图像显示。<br /><br /> 否则，该状态是确定和 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 图像显示。|  
+|状态|视图状态。<br /><br /> 当你单击**保存**、![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")图像，表示正在更新该视图。<br /><br /> 如果在创建或编辑视图时出错![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")图像显示。<br /><br /> 否则，状态为正常和![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")图像显示。|  
 |名称|订阅视图名称。|  
 |“模型”|模型名称。|  
 |版本|版本名称。|  
@@ -85,9 +90,9 @@ caps.handback.revision: 10
   
 -   “更新时间”：上次更新索引的日期和时间。  
   
-## 另请参阅  
- [概述︰ 导出数据和 #40;Master Data Services & #41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [删除订阅视图 & #40;Master Data Services & #41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [创建版本标志和 #40;Master Data Services & #41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [删除订阅视图 &#40;Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [创建版本标志 &#40;Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

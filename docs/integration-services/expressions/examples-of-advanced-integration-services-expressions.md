@@ -1,32 +1,37 @@
 ---
-title: "高级 Integration Services 表达式的示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "函数 [Integration Services]"
-  - "运算符 [Integration Services]"
-  - "表达式 [Integration Services], 示例"
-  - "示例 [Integration Services]"
+title: "示例的高级 Integration Services 表达式 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- functions [Integration Services]
+- operators [Integration Services]
+- expressions [Integration Services], examples
+- examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 高级 Integration Services 表达式的示例
+# <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
   本节提供合并多个运算符和函数的高级表达式示例。 如果表达式用于优先约束或有条件拆分转换中，则其计算结果必须为布尔值。 但是，这一限制并不适用于属性表达式、变量、派生列转换或 For 循环容器中使用的表达式。  
   
  下列示例使用了 **AdventureWorks** 和 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 每个示例都标识了其使用的表。  
   
-## 布尔表达式  
+## <a name="boolean-expressions"></a>布尔表达式  
   
 -   此示例使用 **Product** 表。 表达式计算 **SellStartDate** 列中的月份项，如果月份为六月或更晚，则返回 TRUE。  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 34
     UPPER(SUBSTRING(Name,1,1)) != "A"  
     ```  
   
-## 非布尔表达式  
+## <a name="non-boolean-expressions"></a>非布尔表达式  
  非布尔表达式用于派生列转换、属性表达式和 For 循环容器中。  
   
 -   此示例使用 **Contact** 表。 表达式删除 **FirstName**、 **MiddleName**和 **LastName** 列中的前导空格和尾随空格。 如果 **MiddleName** 列不为空，则提取其第一个字母，将该中间名首字母与 **FirstName** 和 **LastName**中的值连接，并在值之间插入适当的空格。  
@@ -98,10 +103,10 @@ caps.handback.revision: 34
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## 相关任务  
- [在数据流组件中使用表达式](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>相关任务  
+ [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   

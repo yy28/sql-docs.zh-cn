@@ -1,22 +1,27 @@
 ---
-title: "ADO NET 自定义属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO NET 自定义属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16ce0117e36cfd15f8f1cde1bb8c7ce9ac2df55
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 自定义属性
+# <a name="ado-net-custom-properties"></a>ADO NET 自定义属性
   **源自定义属性**  
   
  ADO NET 源具有自定义属性和所有数据流组件共有的属性。  
@@ -47,7 +52,7 @@ caps.handback.revision: 8
   
  有关详细信息，请参阅 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)。  
   
-## 另请参阅  
- [通用属性](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>另请参阅  
+ [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

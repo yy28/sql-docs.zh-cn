@@ -1,25 +1,30 @@
 ---
-title: "报表服务器属性（“服务”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "报表服务器属性 （服务选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 报表服务器属性（“服务”选项卡）
+# <a name="report-server-properties-service-tab"></a>报表服务器属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报表服务器服务。 如果属性值呈浅灰色，则不能使用此应用程序更改。  
   
-## 选项  
+## <a name="options"></a>选项  
  **二进制路径**  
  显示此服务所使用的程序文件的位置。  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 22
  显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 进程 ID。  
   
  **SQL 服务类型**  
- 用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装有多种服务。  
+ 用于调用进程的服务的类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装多种服务。  
   
  **启动模式**  
  对此服务设置以下选项：  
@@ -53,7 +58,7 @@ caps.handback.revision: 22
  **State**  
  指示此服务是正在运行、已停止还是已禁用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 服务](../../tools/configuration-manager/sql-server-services.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "创建日期属性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建日期属性 [Master Data Services]"
-  - "属性 [Master Data Services], 创建日期属性"
+title: "创建日期属性 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating date attributes [Master Data Services]
+- attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44b3b8c577dcb684a386e74df07095c17bc204a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建日期属性 (Master Data Services)
+# <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入日期作为属性值时创建日期属性。  
   
 > [!NOTE]  
 >  该属性称为 DateTime，但不支持时间值。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 -   您必须具有要为其创建属性的实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
-### 创建日期属性  
+### <a name="to-create-a-date-attribute"></a>创建日期属性  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 13. 单击 **“保存”**。  
   
-## 显示日期时间值的时间部分  
+## <a name="to-display-the-time-portion-of-a-datetime-value"></a>显示日期时间值的时间部分  
  若要使用户界面显示日期时间值的时间部分，您必须为该属性选择一个适当的输入掩码。 对于日期时间属性没有内置的此类掩码，但您可以添加一个新掩码以便显示时间。 为此，在存储内置掩码的 MDS 数据库的 mdm.tblList 表中添加一行。 此行应具有以下各值：  
   
 |||  
@@ -86,10 +91,10 @@ caps.handback.revision: 13
   
  输入掩码是一个自定义 .NET DateTime 格式字符串。 有关详细信息，请参阅 [自定义日期和时间格式字符串](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [更改属性名称和数据类型 (Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [更改的属性名称和数据类型 &#40;Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [创建基于域的属性 &#40;Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

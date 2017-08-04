@@ -1,28 +1,33 @@
 ---
-title: "配置 OLE DB 命令转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "参数 [Integration Services]"
-  - "OLE DB 命令转换"
+title: "配置 OLE DB 命令转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [Integration Services]
+- OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a93d0ab78a39f8e87fbd9863822a06522d542db0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 配置 OLE DB 命令转换
+# <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
   若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  
   
-### 配置 OLE DB 命令转换  
+### <a name="to-configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 11. 展开 **“OLE DB 命令输入”**，再展开 **“外部列”**。  
   
-12. 验证 **“外部列”** 是否为 SQL 语句中的每个参数列出了一列。 列的名称是 **Param_0**、**Param_1**，以此类推。  
+12. 验证 **“外部列”** 是否为 SQL 语句中的每个参数列出了一列。 列的名称是 **Param_0**、 **Param_1**，以此类推。  
   
      不应更改列名称。 如果更改列名称， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会生成有关 OLE DB 命令转换的验证错误。  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 24
   
     -   对 SQL 语句中的每一个参数，单击一次 **“添加列”** 。  
   
-    -   将列名更新为 **Param_0**、**Param_1**，以此类推。  
+    -   将列名更新为 **Param_0**、 **Param_1**，以此类推。  
   
     -   在 DBParamInfoFlags 属性中指定值。 该值必须与 OLE DB DBPARAMFLAGSENUM 枚举中的值相匹配。 有关详细信息，请参阅 OLE DB 参考文档。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 24
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 命令转换](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   

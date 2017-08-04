@@ -1,39 +1,44 @@
 ---
-title: "成员 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "叶成员 [Master Data Services]"
-  - "合并成员 [Master Data Services]"
-  - "合并成员 [Master Data Services], 关于合并成员"
-  - "成员 [Master Data Services], 关于成员"
-  - "叶成员 [Master Data Services], 关于叶成员"
-  - "成员 [Master Data Services]"
+title: "成员 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services]
+- consolidated members [Master Data Services]
+- consolidated members [Master Data Services], about consolidated members
+- members [Master Data Services], about members
+- leaf members [Master Data Services], about leaf members
+- members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 成员 (Master Data Services)
+# <a name="members-master-data-services"></a>成员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，成员是物理主数据。 例如，成员可以是 Product 实体中的 Road-150 自行车或 Customer 实体中的特定客户。  
   
-## 成员如何与其他模型对象关联  
+## <a name="how-members-relate-to-other-model-objects"></a>成员如何与其他模型对象关联  
  可以将成员看作一个表中的行。 相关成员包含在一个实体中，每个成员由属性值进行定义。  
   
  在此示例中，该表表示实体，表中的行表示成员，表中的列表示属性。 每个单元表示特定成员的属性值。  
   
- ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "表示为表的 Master Data Services 实体")  
+ ![Master Data Services 实体表示为表](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services 实体表示为表")  
   
-## 成员类型  
+## <a name="member-types"></a>成员类型  
  存在三种类型的成员：叶成员、合并成员和集合成员。  
   
  叶成员是实体中的默认成员。  
@@ -48,15 +53,15 @@ caps.handback.revision: 14
   
 -   在显式层次结构中，合并成员可以是层次结构中其他成员的父级，也可以是子级。  
   
-## 使用层次结构和集合组织成员  
- 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅[层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)。  
+## <a name="use-hierarchies-and-collections-to-organize-members"></a>使用层次结构和集合组织成员  
+ 层次结构和集合可用于分组成员便于报告或分析。 有关详细信息，请参阅 [层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md) 和 [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)。  
   
-## 成员示例  
+## <a name="member-example"></a>成员示例  
  在下面的示例中，每个成员均包含 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性值。  
   
- ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行车产品实体表")  
+ ![Bike Product 实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product 实体表")  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
@@ -65,10 +70,9 @@ caps.handback.revision: 14
 |删除现有成员或集合。|[删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |重新激活已删除的成员或集合。|[重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
 |更新成员的属性值。|[更改属性类型（用于 Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|在层次结构中移动成员。|[在层次结构中移动成员 (Master Data Services)](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)|  
-|解决合并冲突。|[合并冲突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md)|  
+
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
@@ -82,8 +86,7 @@ caps.handback.revision: 14
   
 -   [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)  
   
--   [合并的权限 (Master Data Services)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+ 
 -   [Filter 运算符 (Master Data Services)](../master-data-services/filter-operators-master-data-services.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Integration Services 用户界面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Integration Services, SSIS 设计器"
-  - "工具 [Integration Services], SSIS 设计器"
-  - "SSIS 设计器"
-  - "SSIS, SSIS 设计器"
-  - "Integration Services, SSIS 设计器"
+title: "Integration Services 用户界面 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services, SSIS Designer
+- tools [Integration Services], SSIS Designer
+- SSIS Designer
+- SSIS, SSIS Designer
+- Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Integration Services 用户界面
+# <a name="integration-services-user-interface"></a>Integration Services 用户界面
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  
   
 -   用于向包添加功能（如记录日志和配置）的对话框和窗口。  
@@ -33,7 +38,7 @@ caps.handback.revision: 54
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 还提供了用于配置环境和对包进行操作的窗口和对话框。  
   
-## 对话框和窗口  
+## <a name="dialog-boxes-and-windows"></a>对话框和窗口  
  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开包或创建新包后，便可使用下列对话框和窗口。  
   
  此表列出可从 **SSIS** 菜单和 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的设计图面访问的对话框。  
@@ -46,7 +51,7 @@ caps.handback.revision: 54
 |**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”**。<br /><br /> - 或 -<br /><br /> 右键单击“控制流”选项卡的设计图面上任意位置，再单击“数字签名”。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”。 若要对包设置断点，请右键单击“控制流”选项卡的设计图面上的任意位置，再单击“编辑断点”。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<驱动器>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中。 在 64 位计算机上，该文件位于 \<驱动器>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议你修改\<GettingStartedSamples > 元素值，该值指定 RSS 源 URL。 该文件位于*\<驱动器 >*: files\microsoft SQL server\110\dts\binn 中文件夹。 在 64 位计算机上，该文件位于*\<驱动器 >*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn 文件夹  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 54
 |**变量**|添加和管理自定义变量。|在 **SSIS** 菜单上单击 **“变量”**。<br /><br /> - 或 -<br /><br /> 右键单击“控制流”和“数据流”选项卡的设计图面上任意位置，再单击“变量”。<br /><br /> - 或 -<br /><br /> 在 **“视图”** 菜单上，指向 **“其他窗口”**，再单击 **“变量”**。|  
 |**日志事件**|在运行时查看日志项。|在 **SSIS** 菜单上单击 **“日志事件”**。<br /><br /> - 或 -<br /><br /> 右键单击“控制流”和“数据流”选项卡的设计图面上的任意位置，再单击“日志事件”。<br /><br /> - 或 -<br /><br /> 在 **“视图”** 菜单上指向 **“其他窗口”**，再单击 **“日志事件”**。|  
   
-## 自定义编辑器  
+## <a name="custom-editors"></a>自定义编辑器  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为大多数容器、任务、源、转换和目标提供了自定义对话框。  
   
  下表介绍如何访问自定义对话框。  
@@ -84,14 +89,14 @@ caps.handback.revision: 54
 |转换。 有关详细信息，请参阅 [Integration Services Transformations](../integration-services/data-flow/transformations/integration-services-transformations.md)。|在“数据流”选项卡的设计图面上，双击转换。|  
 |目标。|在“数据流”选项卡的设计图面上，双击目标。|  
   
-## “高级编辑器”  
+## <a name="advanced-editor"></a>“高级编辑器”  
  **“高级编辑器”** 对话框是用于配置数据流组件的用户界面。 它使用通用的布局反映组件的属性。 **“高级编辑器”** 对话框对具有多个输入的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 转换不可用。  
   
  若要打开此编辑器，请单击“属性”窗口中的“显示高级编辑器”，或右键单击数据流组件，再单击“显示高级编辑器”。  
   
  如果创建自定义源、转换或目标，但不想编写自定义用户界面，则可以使用 **“高级编辑器”** 。  
   
-## SQL Server Data Tools 功能  
+## <a name="sql-server-data-tools-features"></a>SQL Server Data Tools 功能  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行操作的窗口、对话框和菜单选项。  
   
  以下是可用窗口和菜单的摘要：  
@@ -112,10 +117,10 @@ caps.handback.revision: 54
   
  有关其他窗口和菜单的详细信息，请参阅 Visual Studio 文档。  
   
-## 相关任务  
- 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建包的信息，请参阅[在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)  
+## <a name="related-tasks"></a>相关任务  
+ 有关如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建包的信息，请参阅 [在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SSIS 设计器](../integration-services/ssis-designer.md)  
   
   

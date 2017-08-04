@@ -1,25 +1,30 @@
 ---
-title: "如何编辑 CDC 实例属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何编辑 CDC 实例属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09474650ff16a5b6a11ad9d02154d9f2a4261ea7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何编辑 CDC 实例属性
+# <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  
   
-### 编辑 CDC 实例的配置属性  
+### <a name="to-edit-the-cdc-instance-configuration-properties"></a>编辑 CDC 实例的配置属性  
   
 1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
   

@@ -1,27 +1,32 @@
 ---
-title: "如何创建和编辑 CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何创建和编辑 CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何创建和编辑 CDC 服务
+# <a name="how-to-create-and-edit-a-cdc-service"></a>如何创建和编辑 CDC 服务
   这些过程介绍如何从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
   
  此过程要求对配置了 Oracle CDC 服务的计算机具有管理员权限的 Windows 用户。  
   
-### 创建新的 CDC 服务  
+### <a name="to-create-a-new-cdc-service"></a>创建新的 CDC 服务  
   
 1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 7
   
 3.  在“新建 Oracle CDC 服务”对话框中键入或输入所需信息。 有关如何在“新建 Oracle CDC 服务”对话框中输入信息的信息，请参阅 [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) 。  
   
-     在“新建 Oracle CDC 服务”对话框中提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名由 Oracle CDC 服务在该服务运行时使用。 该登录名仅需是公共固定服务器角色的成员，无需其他权限。 在添加了新的 Oracle CDC 实例后，该登录名将接收对关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 **db_owner** 访问权限。  
+     在“新建 Oracle CDC 服务”对话框中提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名由 Oracle CDC 服务在该服务运行时使用。 该登录名仅需是公共固定服务器角色的成员，无需其他权限。 在添加了新的 Oracle CDC 实例后，该登录名将接收对关联的 **CDC 数据库的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限。  
   
 4.  在完成输入所需的信息后，单击 **“确定”**。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
 5.  单击 **“确定”** 关闭“新建 Oracle CDC 服务”对话框。  
   
-### 编辑 CDC 服务  
+### <a name="to-edit-a-cdc-service"></a>编辑 CDC 服务  
   
 1.  从 **“开始”** 菜单上，选择 **“Oracle CDC 服务配置”**。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 7
   
 5.  在“连接到 Oracle”对话框中单击 **“确定”** 。 这两个对话框将关闭，并且将更新并注册该服务。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [创建和编辑 Oracle CDC 服务](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

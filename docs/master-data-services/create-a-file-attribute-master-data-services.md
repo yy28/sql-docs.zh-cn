@@ -1,29 +1,34 @@
 ---
-title: "创建文件属性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "创建文件属性 [Master Data Services]"
-  - "属性 [Master Data Services]，创建文件属性"
+title: "创建文件属性 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating file attributes [Master Data Services]
+- attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建文件属性 (Master Data Services)
+# <a name="create-a-file-attribute-master-data-services"></a>创建文件属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建文件属性以便使用文件填充属性值。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
-## 属性信息  
+## <a name="attribute-information"></a>属性信息  
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
   
 |列|Description|  
 |------------|-----------------|  
-|状态|属性状态。<br /><br /> 单击“保存”后，系统显示 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 图像，表示属性正在更新。<br /><br /> 如果创建或编辑属性时出错，则显示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 图像。<br /><br /> 否则，如果状态为“正常”，则显示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 图像。|  
+|状态|属性状态。<br /><br /> 当你单击保存![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")图像，表示属性正在更新。<br /><br /> 如果在创建或编辑属性时出错![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")图像显示。<br /><br /> 否则，状态为正常和![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")图像显示。|  
 |名称|属性名称。|  
 |显示名称|属性显示名称。|  
 |Description|属性说明。|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **创建时间**：上次更新属性的日期和时间。  
   
-### 创建文件属性  
+### <a name="to-create-a-file-attribute"></a>创建文件属性  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 8
   
 12. 单击 **“保存”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [更改属性名称和数据类型 (Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [创建基于域的属性 (Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [更改的属性名称和数据类型 &#40;Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [创建基于域的属性 &#40;Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [创建文本属性 &#40;Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "+（加）(SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "+（加）"
-  - "加法运算符 (+)"
-  - "添加表达式"
+title: "+ （添加）(SSIS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- + (add)
+- add operator (+)
+- adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04596cf4762f2473da1555f4ce5f9cd210678986
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# +（加）(SSIS)
+# <a name="-add-ssis"></a>+（加）(SSIS)
   将两个数值表达式相加。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -31,17 +36,17 @@ numeric_expression1 + numeric_expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *numeric_expression1、numeric_expression2*  
  是数值数据类型的任意有效表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果任意一个操作数为 Null，则结果为 Null。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例将数值相加。  
   
 ```  
@@ -60,8 +65,8 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

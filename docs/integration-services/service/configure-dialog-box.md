@@ -1,26 +1,31 @@
 ---
-title: "配置对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.configure.f1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+title: "配置对话框 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.configure.f1
+- sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
+- sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9587abfb97ec048985ac28de0e7dc585e2bea61
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 配置对话框
+# <a name="configure-dialog-box"></a>配置对话框
   使用 **“配置”** 对话框可为包和项目配置参数、连接管理器和对环境的引用。  
   
  **您希望做什么？**  
@@ -89,7 +94,7 @@ caps.handback.revision: 11
  **打开**  
  单击可打开“环境属性”对话框。  
   
- **添加**  
+ **“添加”**  
  单击可添加对环境的引用。 在 **“浏览环境”** 对话框中，单击一个环境，然后单击 **“确定”**。  
   
  您可以选择 **“SSISDB”** 节点下的任何项目文件夹中包含的环境。  

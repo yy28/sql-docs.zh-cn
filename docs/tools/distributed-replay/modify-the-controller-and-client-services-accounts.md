@@ -1,31 +1,36 @@
 ---
-title: "修改控制器和客户端服务帐户 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改控制器和客户端服务帐户 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 修改控制器和客户端服务帐户
+# <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器和客户端服务帐户
   在本主题中，您将了解如何修改 Distributed Replay 控制器和客户端服务帐户，然后重新应用访问控制列表 (ACL)。  
   
-### 使用“计算机管理”启动或停止 Distributed Replay 服务  
+### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>使用“计算机管理”启动或停止 Distributed Replay 服务  
   
 1.  在安装有 Distributed Replay 服务的计算机上，在命令提示符下键入 **dcomcnfg**。  
   
-2.  双击“服务”，向下滚动并右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服务名称>”，然后单击“开始”或“停止”。  
+2.  双击**服务**，向下滚动并右键单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<服务名称 >**，然后单击**启动**或**停止**。  
   
-### 修改 Distributed Replay 控制器服务  
+### <a name="to-modify-the-distributed-replay-controller-service"></a>修改 Distributed Replay 控制器服务  
   
 1.  在控制器计算机上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器服务。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 29
   
 4.  启动 Distributed Replay 控制器服务。  
   
-### 修改 Distributed Replay 客户端服务  
+### <a name="to-modify-the-distributed-replay-client-service"></a>修改 Distributed Replay 客户端服务  
   
 1.  在修改 Distributed Replay 客户端服务之前，请确保在安装期间指定了您要更改的客户端服务帐户（在控制器计算机上的 CTLRUSERS 参数中）。 如果在安装期间未指定要更改的客户端服务帐户，必须先执行以下步骤：  
   

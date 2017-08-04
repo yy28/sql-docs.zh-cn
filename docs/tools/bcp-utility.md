@@ -1,62 +1,102 @@
 ---
-title: "bcp 实用工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bcp 实用工具 [SQL Server]"
-  - "导出数据"
-  - "行导出 [SQL Server]"
-  - "复制数据 [SQL Server], bcp 实用工具"
-  - "命令提示符实用工具 [SQL Server], bcp"
-  - "表 [SQL Server], 导入数据"
-  - "列导入 [SQL Server]"
-  - "bcp 实用工具 [SQL Server], 命令选项"
-  - "文件导出 [SQL Server]"
-  - "大容量复制 [SQL Server]"
-  - "bcp 实用工具 [SQL Server], 关于 bcp 实用工具"
-  - "表 [SQL Server], 导出数据"
-  - "行导入 [SQL Server]"
-  - "导入数据, bcp 实用工具"
-  - "文件导入 [SQL Server]"
-  - "列导出 [SQL Server]"
+title: "bcp 实用工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 09/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bcp utility [SQL Server]
+- exporting data
+- row exporting [SQL Server]
+- copying data [SQL Server], bcp utility
+- command prompt utilities [SQL Server], bcp
+- tables [SQL Server], importing data
+- column importing [SQL Server]
+- bcp utility [SQL Server], command options
+- file exporting [SQL Server]
+- bulk copy [SQL Server]
+- bcp utility [SQL Server], about bcp utility
+- tables [SQL Server], exporting data
+- row importing [SQL Server]
+- importing data, bcp utility
+- file importing [SQL Server]
+- column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 222
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 221
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0acf7ff593e09d2f866caf458def8385408c84ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# bcp 实用工具
+# <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  大容量复制程序实用工具 (**bcp**) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
+ > 与以前版本的 SQL Server 相关的内容，请参阅[bcp 实用工具](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
+
+
+  **B**ulk **c**复制**p**rogram 实用程序 (**bcp**) 的实例之间的数据大容量复制[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
   
- ![主题链接图标](../database-engine/configure-windows/media/topic-link.png "主题链接图标") 有关 **bcp** 语法中使用的语法约定，请参阅 [《Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;》](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)（Transact-SQL 语法约定 (Transact-SQL)）。  
+ ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")关于语法约定用于**bcp**语法，请参阅[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]
-> 如果使用 **bcp** 备份数据，请创建一个格式化文件来记录数据格式。 **bcp** 数据文件**不包括**任何架构或格式信息，因此如果已删除表或视图并且不具备格式化文件，则可能无法导入数据。  
+> 如果使用 **bcp** 备份数据，请创建一个格式化文件来记录数据格式。 **bcp** 数据文件 **不包括** 任何架构或格式信息，因此如果已删除表或视图并且不具备格式化文件，则可能无法导入数据。  
   
 <table><th>语法</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a> {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>} <a>                                                                                                         </a> [<a href="#a">-a packet_size</a>] [<a href="#b">-b batch_size</a>] [<a href="#c">-c</a>] [<a href="#C">-C { ACP | OEM | RAW | code_page } </a>] [<a href="#d">-d database_name</a>] [<a href="#e">-e err_file</a>] [<a href="#E">-E</a>] [<a href="#f">-f format_file</a>] [<a href="#F">-F first_row</a>] [<a href="#h">-h"hint [,...n]"</a>] [<a href="#i">-i input_file</a>] [<a href="#k">-k</a>] [<a href="#K">-K application_intent</a>] [<a href="#L">-L last_row</a>] [<a href="#m">-m max_errors</a>] [<a href="#n">-n</a>] [<a href="#N">-N</a>] [<a href="#o">-o output_file</a>] [<a href="#P">-P password</a>] [<a href="#q">-q</a>] [<a href="#r">-r row_term</a>] [<a href="#R">-R</a>] [<a href="#S">-S [server_name[\instance_name]</a>] [<a href="#t">-t field_term</a>] [<a href="#T">-T</a>] [<a href="#U">-U login_id</a>] [<a href="#v">-v</a>] [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>] [<a href="#w">-w</a>] [<a href="#x">-x</a>]
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+    {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
+<a>                                                                                                         </a>
+    [<a href="#a">-a packet_size</a>]
+    [<a href="#b">-b batch_size</a>]
+    [<a href="#c">-c</a>]
+    [<a href="#C">-C { ACP | OEM | RAW | code_page } </a>]
+    [<a href="#d">-d database_name</a>]
+    [<a href="#e">-e err_file</a>]
+    [<a href="#E">-E</a>]
+    [<a href="#f">-f format_file</a>]
+    [<a href="#F">-F first_row</a>]
+    [<a href="#h">-h"hint [,...n]"</a>]
+    [<a href="#i">-i input_file</a>]
+    [<a href="#k">-k</a>]
+    [<a href="#K">-K application_intent</a>]
+    [<a href="#L">-L last_row</a>]
+    [<a href="#m">-m max_errors</a>]
+    [<a href="#n">-n</a>]
+    [<a href="#N">-N</a>]
+    [<a href="#o">-o output_file</a>]
+    [<a href="#P">-P password</a>]
+    [<a href="#q">-q</a>]
+    [<a href="#r">-r row_term</a>]
+    [<a href="#R">-R</a>]
+    [<a href="#S">-S [server_name[\instance_name]</a>]
+    [<a href="#t">-t field_term</a>]
+    [<a href="#T">-T</a>]
+    [<a href="#U">-U login_id</a>]
+    [<a href="#v">-v</a>]
+    [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>]
+    [<a href="#w">-w</a>]
+    [<a href="#x">-x</a>]
 </pre></td></tr></table>  
   
-## 参数  
+## <a name="arguments"></a>参数  
  ***data_file***<a name="data_file"></a>  
  数据文件的完整路径。 将数据批量导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时，数据文件将包含要复制到指定的表或视图中的数据。 从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中批量导出数据时，数据文件将包含从表或视图中复制的数据。 路径可以有 1 到 255 个字符。 数据文件最多可包含 2^63 - 1 行。  
   
  ***database_name***<a name="db_name"></a>  
  指定的表或视图所在数据库的名称。 如果未指定，则使用用户的默认数据库。  
   
- 你也可以使用 **d-** 显式指定数据库名称。  
+ 你也可以使用 **d-**显式指定数据库名称。  
   
- **in** data_file | **out** data_file | **queryout** data_file | **format nul**  
+ **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  指定大容量复制的方向，具体如下：  
   
 -   **in**<a name="in"></a> 从文件复制到数据库表或视图。  
@@ -65,13 +105,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   **queryout**<a name="qry_out"></a> 从查询中复制，仅当从查询大容量复制数据时才必须指定此选项。  
   
--   **format**<a name="format"></a> 根据指定的选项（**-n**、**-c**、**-w** 或 **-N**）以及表或视图的分隔符创建格式化文件。 大容量复制数据时，**bcp** 命令可以引用一个格式化文件，从而避免以交互方式重复输入格式信息。 **format** 选项要求指定 **-f** 选项；创建 XML 格式化文件时还需要指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。 必须将 **nul** 指定为值 (**format nul**)。  
+-   **format**<a name="format"></a> 根据指定的选项（**-n**、 **-c**、 **-w**或 **-N**）以及表或视图的分隔符创建格式化文件。 大容量复制数据时， **bcp** 命令可以引用一个格式化文件，从而避免以交互方式重复输入格式信息。 **format** 选项要求指定 **-f** 选项；创建 XML 格式化文件时还需要指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。 必须将 **nul** 指定为值 (**format nul**)。  
   
  ***owner***<a name="schema"></a>  
  表或视图的所有者的名称。 如果执行该操作的用户拥有指定的表或视图，则*owner* 是可选的。 如果未指定 *owner*，并且执行该操作的用户不是指定的表或视图的所有者，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将返回错误消息，而且该操作将取消。  
   
-**"** query****** **"**<a name="query"></a>
- 是一个返回结果集的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询。 如果该查询返回多个结果集，则只将第一个结果集复制到数据文件，而忽略其余的结果集。 将查询用双引号括起来，将查询中嵌入的任何内容用单引号括起来。 从查询大容量复制数据时，也必须指定**queryout** 。  
+**"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. 如果该查询返回多个结果集，则只将第一个结果集复制到数据文件，而忽略其余的结果集。 将查询用双引号括起来，将查询中嵌入的任何内容用单引号括起来。 从查询大容量复制数据时，也必须指定**queryout** 。  
   
  只要在执行 bcp 语句之前存储过程内引用的所有表均存在，查询就可以引用该存储过程。 例如，如果存储过程生成一个临时表，则 **bcp** 语句便会失败，因为该临时表只在运行时可用，而在语句执行时不可用。 在这种情况下，应考虑将存储过程的结果插入表中，然后使用 **bcp** 将数据从表复制到数据文件中。  
   
@@ -87,17 +126,17 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  增大数据包可以提高大容量复制操作的性能。 如果无法得到请求的较大数据包，则使用默认值。 **bcp** 实用工具生成的性能统计信息可以显示所用的数据包大小。  
   
  **-b** ***batch_size***<a name="b"></a>  
- 指定每批导入数据的行数。 每个批次均作为一个单独的事务进行导入并记录，在提交之前会导入整批。 默认情况下，数据文件中的所有行均作为一个批次导入。 若要将行分为多个批次进行操作，请指定小于数据文件中的行数的 *batch_size*。 如果任何批次的事务失败，则将只回滚当前批次中的插入。 已经由已提交事务导入的批次不会受到将来失败的影响。  
+ 指定每批导入数据的行数。 每个批次均作为一个单独的事务进行导入并记录，在提交之前会导入整批。 默认情况下，数据文件中的所有行均作为一个批次导入。 若要将行分为多个批次进行操作，请指定小于数据文件中的行数的 *batch_size* 。 如果任何批次的事务失败，则将只回滚当前批次中的插入。 已经由已提交事务导入的批次不会受到将来失败的影响。  
   
- 不要将此选项与 **-h "**ROWS_PER_BATCH **=**bb**"** 选项一起使用。  
+ 不要将此选项与 **-h "**ROWS_PER_BATCH **=***bb***"** 选项一起使用。  
  
  **-c**<a name="c"></a>  
- 使用字符数据类型执行该操作。 此选项不提示输入每个字段；它使用 **char** 作为存储类型，没有前缀；使用 **\t**（制表符）作为字段分隔符，使用 **\r\n**（换行符）作为行终止符。 **-c** 与 **-w** 不兼容。  
+ 使用字符数据类型执行该操作。 此选项不提示输入每个字段；它使用 **char** 作为存储类型，没有前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\r\n** （换行符）作为行终止符。 **-c** 与 **-w** 不兼容。  
   
  有关详细信息，请参阅[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-C** { **ACP** | **OEM** | **RAW** | *code_page* }<a name="C"></a>   
- 指定该数据文件中数据的代码页。 仅当数据含有字符值大于 127 或小于 32 的 **char**、**varchar** 或 **text** 列时，*code_page* 才适用。  
+ 指定该数据文件中数据的代码页。 仅当数据含有字符值大于 127 或小于 32 的*code_page* 、 **code_page**, **varcode_page**列时， **code_page** columns with code_pageacter values greater than 127 or less than 32.  
   
 > [!NOTE]
 > 我们建议你为格式文件中的每个列指定一个排序规则名称，除非你希望 65001 选项优先于排序规则/代码页规范。
@@ -127,12 +166,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-f** ***format_file***<a name="f"></a>  
  指定格式化文件的完整路径。 此选项的含义取决于使用它的环境，具体如下：  
   
--   如果 **-f** 与 **format** 选项一起使用，则将为指定的表或视图创建指定的 *format_file*。 若要创建 XML 格式化文件，请同时指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。  
+-   如果 **-f** 与 **format** 选项一起使用，则将为指定的表或视图创建指定的 *format_file* 。 若要创建 XML 格式化文件，请同时指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
 -   如果与 **in** 或 **out** 选项一起使用，则 **-f** 需要一个现有的格式化文件。  
   
     > [!NOTE]
-    > 与 **in** 或 **out** 选项一起使用时，格式化文件是可选的。 如果没有 **-f** 选项，则在未指定 **-n**、**-c**、**-w** 或 -**N** 时，该命令将提示输入格式信息，并允许你将响应保存在格式化文件（默认文件名为 Bcp.fmt）中。
+    > 与 **in** 或 **out** 选项一起使用时，格式化文件是可选的。 如果没有 **-f** 选项，则在未指定 **-n**、 **-c**、 **-w**或 **-N** 时，该命令将提示输入格式信息，并允许你将响应保存在格式化文件（默认文件名为 Bcp.fmt）中。
   
  如果 *format_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-f** 与 *format_file* 值之间包含空格。  
   
@@ -143,10 +182,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a> 指定向表或视图中批量导入数据时要用到的提示（一个或多个）。  
   
-* **ORDER**(**column[ASC | DESC] [**,**...n**]**)**  
+* **ORDER**(***column*[ASC |DESC] [**,**...*n*]**)**  
 数据文件中的数据排序次序。 如果根据表中的聚集索引（如果有）对要导入的数据排序，则可提高批量导入的性能。 如果数据文件以不同的次序（即不同于聚集索引键的次序）排序，或者表中不存在任何聚集索引，则将忽略 ORDER 子句。 提供的列名必须是目标表中有效的列名。 默认情况下， **bcp** 假定数据文件没有排序。 对于经过优化的批量导入， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还将验证导入的数据是否已排序。  
   
-* **ROWS_PER_BATCH** **=** bb  
+* **ROWS_PER_BATCH** **=** ***bb***  
 每批数据的行数（即 *bb*）。 在未指定 **-b** 时使用，这将导致整个数据文件作为单个事务发送到服务器。 服务器根据 *bb*值优化大容量加载。 默认情况下，ROWS_PER_BATCH 是未知的。  
   
 * **KILOBYTES_PER_BATCH** **=** cc  
@@ -175,10 +214,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   > **-m** *max_errors* 开关不适用于约束检查。
   
 * **FIRE_TRIGGERS**  
-与 **in** 参数一同指定，在目标表中定义的任何插入触发器都将在大容量复制操作期间运行。 如果未指定 FIRE_TRIGGERS，将不运行任何插入触发器。 对于 **out**、**queryout** 和 **format** 参数，将忽略 FIRE_TRIGGERS。  
+与 **in** 参数一同指定，在目标表中定义的任何插入触发器都将在大容量复制操作期间运行。 如果未指定 FIRE_TRIGGERS，将不运行任何插入触发器。 对于 **out**、 **queryout**和 **format** 参数，将忽略 FIRE_TRIGGERS。  
   
  **-i** ***input_file***<a name="i"></a>  
- 指定响应文件的名称，其中包含在交互模式（未指定 **-n**、**-c**、**-w** 或 **-N**）下执行大容量复制时，对每个数据字段的命令提示问题所做出的响应。  
+ 指定响应文件的名称，其中包含在交互模式（未指定**-n**、 **-c**、 **-w**或 **-N** ）下执行大容量复制时，对每个数据字段的命令提示问题所做出的响应。  
   
  如果 *input_file* 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-i** 与 *input_file* 值之间包含空格。  
   
@@ -213,7 +252,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  通过使用 bcp.exe 和 **-N** 来导出数据后又将数据导入到同一表架构时，如果存在固定长度的非 Unicode 字符列（例如 **char(10)**），系统可能会显示截断警告。  
   
- 可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**。  
+ 可忽略该警告。 解决此警告的一个方法是使用 **-n** 来替代 **-N**知识。  
   
  **-o** ***output_file***<a name="o"></a>  
  指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
@@ -231,16 +270,16 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  如果 password 以连字符 (-) 或正斜杠 (/) 开头，则不要在 **-P** 与 password 值之间添加空格。  
   
  **-q**<a name="q"></a>  
- 在 **bcp** 实用工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间的连接中，执行 SET QUOTED_IDENTIFIERS ON 语句。 使用此选项可以指定包含空格或单引号的数据库、所有者、表或视图的名称。 将由三部分组成的整个表名或视图名用英文双引号 ("") 引起来。  
+ 在 **bcp** 实用工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例之间的连接中，执行 SET QUOTED_IDENTIFIERS ON 语句。 使用此选项可以指定包含空格或单引号的数据库、所有者、表或视图的名称。 将由三部分组成的整个表名或视图名用英文双引号 ("") 引起来。  
   
  若要指定包含空格或单引号的数据库名称，必须使用 **–q** 选项。  
   
- **-q** 不适用于传递到 **-d** 的值。  
+ **-q** 不适用于传递到 **-d**的值。  
   
- 有关详细信息，请参阅本主题后面的[备注](#remarks)。  
+ 有关详细信息，请参阅本主题后面的 [备注](#remarks)。  
   
  **-r** ***row_term***<a name="r"></a>  
- 指定行终止符。 默认的行终止符是 **\n**（换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定行终止符。 默认值是 **\n**  （换行符）。 使用此参数可替代默认行终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定行终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
   
@@ -249,11 +288,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中。 默认情况下，将忽略区域设置。  
   
- **-S** ***server_name*** [\\***instance_name***]<a name="S"></a>
- 指定要连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请指定 *server_name***\\***instance_name*。  
+ **-S** ***server_name*** [\\***instance_name***]<a name="S"> </a>指定的实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]来进行连接。 如果未指定服务器，则 **bcp** 实用工具将连接到本地计算机上的默认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 如果从网络或本地命名实例上的远程计算机中运行 **bcp** 命令，则必须使用此选项。 若要连接到服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例，请仅指定 *server_name*。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例，请指定 *server_name***\\***instance_name*。  
   
  **-t** ***field_term***<a name="t"></a>  
- 指定字段终止符。 默认的字段终止符是 **\t**（制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+ 指定字段终止符。 默认的字段终止符是 **\t** （制表符）。 使用此参数可以替代默认字段终止符。 有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中以十六进制表示法指定字段终止符，则该值将在 0x00 处截断。 例如，如果您指定 0x410041，则将使用 0x41。  
   
@@ -275,7 +313,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  报告 **bcp** 实用工具的版本号和版权信息。  
   
  **-V** (**80** | **90** | **100** | **110** | **120** | **130** )<a name="V"></a>  
- 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本中的数据类型执行大容量复制操作。 此选项并不提示输入每个字段，它将使用默认值。  
+ 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的数据类型执行大容量复制操作。 此选项并不提示输入每个字段，它将使用默认值。  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
   
@@ -289,22 +327,22 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
- 例如，若要为 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] 不支持、但是在较高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中引入的类型生成数据，请使用 -V80 选项。  
+ 例如，若要为 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]不支持、但是在较高版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中引入的类型生成数据，请使用 -V80 选项。  
   
- 有关详细信息，请参阅[导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  **-w**<a name="w"></a>  
- 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段；它使用 **nchar** 作为存储类型，不带前缀；使用 **\t**（制表符）作为字段分隔符，使用 **\n**（换行符）作为行终止符。 **-w** 与 **-c** 不兼容。  
+ 使用 Unicode 字符执行大容量复制操作。 此选项不提示输入每个字段；它使用 **nchar** 作为存储类型，不带前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\n** （换行符）作为行终止符。 **-w** 与 **-c**不兼容。  
   
- 有关详细信息，请参阅[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
+ 有关详细信息，请参阅 [使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-x**<a name="x"></a>  
  结合使用 **format** 和 **-f** format_file 选项，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。 在导入或导出数据时，**-x** 不起作用。 如果不与 **format** 和 **-f** format_file 一起使用，则将生成错误。  
   
-## 注释<a name="remarks"></a>
+## 备注<a name="remarks"></a>
  使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
  
-bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=526760)分开下载。  选择 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
+bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=52676)分开下载。  选择 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
 
   
  只有当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  
@@ -315,20 +353,20 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
  有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅[《Prerequisites for Minimal Logging in Bulk Import》](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
   
-## 本机数据文件支持  
+## <a name="native-data-file-support"></a>本机数据文件支持  
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， **bcp** 实用工具支持与 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]兼容的本机数据文件。  
   
-## 计算列和 timestamp 列  
- 数据文件中针对计算列或 **timestamp** 列导入的值将被忽略，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。 如果数据文件不包含表中的计算列或 **timestamp** 列的值，则可使用格式化文件指定应在导入数据时忽略表中的计算列或 **timestamp** 列；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。  
+## <a name="computed-columns-and-timestamp-columns"></a>计算列和 timestamp 列  
+ 数据文件中针对计算列或 **timestamp** 列导入的值将被忽略， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。 如果数据文件不包含表中的计算列或 **timestamp** 列的值，则可使用格式化文件指定应在导入数据时忽略表中的计算列或 **timestamp** 列； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动分配该列的值。  
   
  计算列和 **timestamp** 列会照常从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 大容量复制到数据文件中。  
   
-## 指定包含空格或引号的标识符  
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引号的标识符  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符可以包含嵌入的空格和引号等字符。 此类标识符必须按以下方式处理：  
   
 -   如果在命令指示符处指定的标识符或文件名包含空格或引号，则需用英文双引号 ("") 将该标识符引起来。  
   
-     例如，下面的 `bcp out` 命令创建了一个名为 `Currency Types.dat` 的数据文件：  
+     例如，下面的 `bcp out` 命令创建了一个名为 `Currency Types.dat`的数据文件：  
   
     ```  
     bcp AdventureWorks2012.Sales.Currency out "Currency Types.dat" -T -c  
@@ -342,7 +380,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
     -   将所有者、表或视图的名称括在方括号 ([]) 中，并用引号引起来。  
   
-## 数据验证  
+## <a name="data-validation"></a>数据验证  
  **bcp** 现在会强制执行数据验证和数据检查，这样，在对数据文件中的无效数据执行脚本时，可能会导致脚本失败。 例如， **bcp** 现在可以验证：  
   
 -   **float** 或 **real** 数据类型的本机表示形式是否有效。  
@@ -351,7 +389,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
  可以在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中批量导入的无效数据类型现在可能无法加载。在早期版本中，仅当客户端尝试访问无效数据时才出现失败。 在大容量加载后查询数据时，添加的验证可最大限度地减少警告。  
   
-## 批量导出或导入 SQLXML 文档  
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>批量导出或导入 SQLXML 文档  
  若要批量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一。  
   
 |数据类型|效果|  
@@ -360,7 +398,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 其效果和指定 **-w** 开关而不指定格式化文件相同。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  **bcp out** 操作要求对源表有 SELECT 权限。  
   
  **bcp in** 操作要求至少对目标表有 SELECT/INSERT 权限。 此外，如果下列任一条件成立，则要求拥有 ALTER TABLE 权限：  
@@ -380,7 +418,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 > [!NOTE]
 > 要求对目标表具有 ALTER TABLE 权限是 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 的新要求。 如果用户帐户不具有对目标表的 ALTER TABLE 权限，这项新要求有可能导致不强制使用触发器和约束检查的 **bcp** 脚本失败。
   
-## 字符模式 (-c) 和本机模式 (-n) 最佳做法  
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字符模式 (-c) 和本机模式 (-n) 最佳做法  
  本节提供与字符模式 (-c) 和本机模式 (-n) 有关的一些建议。  
   
 -   （管理员/用户）应尽可能使用本机格式 (-n) 以避免分隔符问题。 使用本机格式可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进行导出和导入。 如果数据将导入到非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库，则使用 -c 或 -w 选项从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导出数据。  
@@ -389,7 +427,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
   
 -   （用户）使用长且唯一的终止符（任意字节或字符序列）可以最大程度减少与实际字符串值冲突的可能性。 这可以通过使用 -t 和 -r 选项实现。  
   
-## 示例  
+## <a name="examples"></a>示例  
  本部分包含以下示例：  
  
 -   A. 标识 **bcp** 实用工具版本
@@ -411,8 +449,8 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 -   I. 使用格式化文件进行 **bcp**批量导入  
 
 
-### **示例测试条件**
-以下示例使用 SQL Server（从 2016 开始）和 Azure SQL 数据库的 `WideWorldImporters` 示例数据库。  `WideWorldImporters` 可以从 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 下载。  有关用于还原示例数据库的语法，请参阅 [RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)。  除了另行指定的位置，该示例假定你使用 Windows 身份验证，并且与运行 **bcp** 命令所针对的服务器实例之间具有可信连接。  会在许多示例中使用一个名为 `D:\BCP` 的目录。
+### <a name="example-test-conditions"></a>**示例测试条件**
+以下示例使用 SQL Server（从 2016 开始）和 Azure SQL 数据库的 `WideWorldImporters` 示例数据库。  `WideWorldImporters` 可以从 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)下载。  有关用于还原示例数据库的语法，请参阅 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除了另行指定的位置，该示例假定你使用 Windows 身份验证，并且与运行 **bcp** 命令所针对的服务器实例之间具有可信连接。  会在许多示例中使用一个名为 `D:\BCP` 的目录。
 
 下面的脚本创建 `WorlWideImporters.Warehouse.StockItemTransactions` 表的空副本，然后添加主键约束。  在 SQL Server Management Studio (SSMS) 中运行以下 T-SQL 脚本
 
@@ -439,17 +477,17 @@ END
 >
 > TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
 
-### A.  标识 **bcp** 实用工具版本
+### <a name="a--identify-bcp-utility-version"></a>A.  标识 **bcp** 实用工具版本
 在命令提示符处输入以下命令：
 ```
 bcp -v
 ```
   
-### B. 将表行复制到数据文件中（使用可信连接）  
-以下示例阐释了 `WorlWideImporters.Warehouse.StockItemTransactions` 表中的 **out** 选项。
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 将表行复制到数据文件中（使用可信连接）  
+以下示例阐释了 **表中的** out `WorlWideImporters.Warehouse.StockItemTransactions` 选项。
 
 - **基本**  
-此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用**字符**格式将表数据复制到该文件中。
+此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用 **字符** 格式将表数据复制到该文件中。
 
   在命令提示符处输入以下命令：
   ```
@@ -457,27 +495,27 @@ bcp -v
   ```
  
  - **扩展**  
-此示例创建一个名为 `StockItemTransactions_native.bcp` 的数据文件，并使用**本机**格式将表数据复制到该文件中。  此示例还指定最大语法错误数、一个错误文件和一个输出文件。
+此示例创建一个名为 `StockItemTransactions_native.bcp` 的数据文件，并使用 **本机** 格式将表数据复制到该文件中。  此示例还指定最大语法错误数、一个错误文件和一个输出文件。
 
     在命令提示符处输入以下命令：
     ```
     bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
-查看 `Error_out.log` 和 `Output_out.log`。  `Error_out.log` 应为空白。  比较 `StockItemTransactions_character.bcp` 与 `StockItemTransactions_native.bcp` 之间的文件大小。 
+查看 `Error_out.log` 和 `Output_out.log`。  `Error_out.log` 应为空白。  比较 `StockItemTransactions_character.bcp` 与 `StockItemTransactions_native.bcp`之间的文件大小。 
    
-### C. 将表行复制到数据文件中（使用混合模式身份验证）  
-以下示例阐释了 **表中的** out `WorlWideImporters.Warehouse.StockItemTransactions` 选项。  此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用**字符**格式将表数据复制到该文件中。  
+### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. 将表行复制到数据文件中（使用混合模式身份验证）  
+以下示例阐释了 **表中的** out `WorlWideImporters.Warehouse.StockItemTransactions` 选项。  此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用 **字符** 格式将表数据复制到该文件中。  
   
  该示例假定你使用混合模式身份验证，必须使用 **-U** 开关指定登录 ID。 并且，除非你连接到本地计算机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的默认实例，否则请使用 **-S** 开关指定系统名称和实例名称（可选）。  
 
-在命令提示符处，输入以下命令：\(系统将提示你输入密码。\)
+在命令提示符处，输入以下命令： \(系统将提示你输入密码。\)
 ```  
 bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
-### D. 将文件中的数据复制到表中  
-以下示例使用上面创建的文件说明 `WorlWideImporters.Warehouse.StockItemTransactions_bcp` 表中的 **in** 选项。
+### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 将文件中的数据复制到表中  
+以下示例使用上面创建的文件说明 **表中的** in `WorlWideImporters.Warehouse.StockItemTransactions_bcp` 选项。
   
 - **基本**  
 此示例使用以前创建的 `StockItemTransactions_character.bcp` 数据文件。
@@ -496,7 +534,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
   ```    
   查看 `Error_in.log` 和 `Output_in.log`。
    
-### E. 将特定的列复制到数据文件中  
+### <a name="e-copying-a-specific-column-into-a-data-file"></a>E. 将特定的列复制到数据文件中  
 若要复制特定列，可以使用 **queryout** 选项。  下面的示例仅将 `StockItemTransactionID` 表中的 `Warehouse.StockItemTransactions` 列复制到数据文件中。 
   
 在命令提示符处输入以下命令：
@@ -505,23 +543,23 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransa
 bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
-### F. 将特定的行复制到数据文件中  
-若要复制特定行，可以使用 **queryout** 选项。 以下示例仅将名为 `Amy Trefl` 的人员行从 `WorlWideImporters.Application.People` 表复制到数据文件 `Amy_Trefl_c.bcp` 中。  注意：**-d** 开关用于标识数据库。
+### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. 将特定的行复制到数据文件中  
+若要复制特定行，可以使用 **queryout** 选项。 以下示例仅将名为 `Amy Trefl` 的人员行从 `WorlWideImporters.Application.People` 表复制到数据文件 `Amy_Trefl_c.bcp`中。  注意： **-d** 开关用于标识数据库。
   
 在命令提示符处输入以下命令： 
 ```  
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
 ```  
   
-### G. 将查询中的数据复制到数据文件中  
-若要将 Transact-SQL 语句的结果集复制到数据文件中，请使用 **queryout** 选项。  下面的示例将 `WorlWideImporters.Application.People` 表中的姓名复制到 `People.txt` 数据文件中；这些姓名按全名排序。  注意：**-t** 开关用于创建逗号分隔文件。
+### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. 将查询中的数据复制到数据文件中  
+若要将 Transact-SQL 语句的结果集复制到数据文件中，请使用 **queryout** 选项。  下面的示例将 `WorlWideImporters.Application.People` 表中的姓名复制到 `People.txt` 数据文件中；这些姓名按全名排序。  注意： **-t** 开关用于创建逗号分隔文件。
   
 在命令提示符处输入以下命令：
 ```  
 bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
-### H. 创建格式化文件  
+### <a name="h-creating-format-files"></a>H. 创建格式化文件  
 下面的示例为 `Warehouse.StockItemTransactions` 数据库中的 `WorlWideImporters` 表创建三个不同格式文件。  查看创建的每个文件的内容。
   
 在命令提示符处输入以下命令：
@@ -543,8 +581,8 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stock
   
  有关详细信息，请参阅[非 XML 格式化文件 (SQL Server)](../relational-databases/import-export/non-xml-format-files-sql-server.md) 和[XML 格式化文件 (SQL Server)](../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
-### I. 使用格式化文件进行 bcp 批量导入  
-向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例中导入数据时，若要使用以前创建的格式化文件，请同时使用 **-f** 开关和 **in** 选项。  例如，以下命令通过使用以前创建的格式化文件 (`StockItemTransactions_c.xml`)，将数据文件 `StockItemTransactions_character.bcp` 的内容大容量复制到 `Warehouse.StockItemTransactions_bcp` 表的副本中。  注意：**-L** 开关用于仅导入前 100 个记录。
+### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. 使用格式化文件进行 bcp 批量导入  
+向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例中导入数据时，若要使用以前创建的格式化文件，请同时使用 **-f** 开关和 **in** 选项。  例如，以下命令通过使用以前创建的格式化文件 ( `StockItemTransactions_character.bcp`)，将数据文件 `Warehouse.StockItemTransactions_bcp` 的内容大容量复制到 `StockItemTransactions_c.xml`表的副本中。  注意： **-L** 开关用于仅导入前 100 个记录。
   
 在命令提示符处输入以下命令：
 ```  
@@ -552,9 +590,9 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTra
 ```  
   
 > [!NOTE]  
->  如果数据文件字段和表中的列不同（例如，在编号、排序或数据类型方面），则可使用格式化文件。 有关详细信息，请参阅[用于导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
+>  如果数据文件字段和表中的列不同（例如，在编号、排序或数据类型方面），则可使用格式化文件。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)知识。  
   
-### J. 指定代码页  
+### <a name="j-specifying-a-code-page"></a>J. 指定代码页  
  以下不完整的代码示例显示了指定代码页 65001 时使用的 bcp import 语句：  
   
 ```  
@@ -567,18 +605,19 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
   
-## 其他示例  
+## <a name="additional-examples"></a>其他示例  
 |以下主题包含有关使用 bcp的示例： |
 |---|
 |用于批量导入或导出的数据格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 本机格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定字段终止符和行终止符 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[批量导入数据时保留标识值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />用于导入或导出数据的格式化文件 (SQL Server)）<br />&emsp;&#9679;&emsp;[创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件批量导入数据 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过表列 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件跳过数据字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式化文件将表列映射到数据文件字段 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[批量导入和导出 XML 文档的示例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
-## 另请参阅  
- [准备用于批量导出或导入的数据 (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+## <a name="see-also"></a>另请参阅  
+ [准备用于大容量导出或导入 &#40; 的数据SQL server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
- [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [设置 QUOTED_IDENTIFIER &#40;Transact SQL &#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_tableoption &#40;Transact SQL &#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+

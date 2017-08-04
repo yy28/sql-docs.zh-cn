@@ -1,24 +1,29 @@
 ---
-title: "编辑 Oracle 数据库属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraProp"
+title: "编辑 Oracle 数据库属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 编辑 Oracle 数据库属性
+# <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
   
  下表对 **“Oracle”** 选项卡中的信息进行了说明。  
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
  您可以在查看器中查看 Oracle 数据库属性。 在使用查看器时，信息是只读的。 查看器还在表中包括捕获列的列表。 有关如何访问查看器的信息，请参阅 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何从 CDC 设计器控制台管理 CDC 服务](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [连接到 Oracle 源数据库](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [连接到 Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  

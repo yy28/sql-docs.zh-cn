@@ -1,24 +1,29 @@
 ---
-title: "实体依赖关系资源管理器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "master data services"
+title: "实体依赖关系资源管理器 |Microsoft 文档"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 实体依赖关系资源管理器
+# <a name="entity-dependencies-explorer"></a>实体依赖关系资源管理器
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 将添加一个新的资源管理器页，即“实体依赖关系”，它提供了另一种方法，可在模型中按其基于域的属性 (DBA) 值将实体成员的关系可视化，而不必首先定义一个派生层次结构。   
   
@@ -43,3 +48,5 @@ caps.handback.revision: 5
   
   
   
+
+

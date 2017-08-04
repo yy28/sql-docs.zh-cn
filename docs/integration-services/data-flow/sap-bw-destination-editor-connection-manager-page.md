@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 目标编辑器（“连接管理器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.connection.f1"
+title: "SAP BW 目标编辑器 （连接管理器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 目标编辑器（“连接管理器”页）
+# <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目标的详细信息，请参阅 [SAP BW 目标](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 3.  在 **“SAP BW 目标编辑器”**中单击 **“连接管理器”** ，以打开编辑器的 **“连接管理器”** 页。  
   
-## 选项  
+## <a name="options"></a>选项  
   
 > [!NOTE]  
 >  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -48,7 +53,7 @@ caps.handback.revision: 10
  **测试加载**  
  对要使用您选择的设置加载零行的加载进程进行测试。  
   
-### InfoPackage/InfoSource 选项  
+### <a name="infopackageinfosource-options"></a>InfoPackage/InfoSource 选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 InfoPackage。 选定 InfoPackage 后，组件会为这些选项输入合适的值。  
   
  **InfoPackage**  
@@ -70,10 +75,10 @@ caps.handback.revision: 10
  **逻辑系统**  
  输入 InfoPackage 关联的逻辑系统的名称。  
   
- **查找**  
+ **“查找”**  
  使用“查找 InfoPackage”对话框查找 InfoPackage。 有关此对话框的详细信息，请参阅 [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)。  
   
-### RFC 目标选项  
+### <a name="rfc-destination-options"></a>RFC 目标选项  
  您无需事先知道并输入这些值。 使用 **“查找”** 按钮查找和选择合适的 RFC 目标。 选定 RFC 目标后，组件会为这些选项输入合适的值。  
   
  **网关主机**  
@@ -85,10 +90,10 @@ caps.handback.revision: 10
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **查找**  
+ **“查找”**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
-### 创建 SAP BW 对象选项  
+### <a name="create-sap-bw-objects-options"></a>创建 SAP BW 对象选项  
  **选择 对象类型**  
  选择要创建的 SAP Netweaver BW 对象的类型。 可以选择下列其中一个类型：  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 10
 |**InfoSource**|使用 **“创建 InfoSource”** 对话框，然后使用 **“创建事务数据的 InfoSource”** 或 **“创建主数据的 InfoSource”** 对话框创建一个新的 InfoSource。 有关这些对话框的详细信息，请参阅 [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) 和 [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md)。|  
 |**InfoPackage**|使用 **“创建 InfoPackage”** 对话框创建新的 InfoPackage。 有关此对话框的详细信息，请参阅 [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md)。|  
   
-## 另请参阅  
- [SAP BW 目标编辑器（“映射”页）](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 目标编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 目标编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [SAP BW 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 目标编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

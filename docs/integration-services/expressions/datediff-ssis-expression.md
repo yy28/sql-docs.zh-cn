@@ -1,35 +1,40 @@
 ---
-title: "DATEDIFF（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF 语句"
-  - "日期 [Integration Services], DATEDIFF"
+title: "DATEDIFF （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF（SSIS 表达式）
+# <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
   返回两个指定日期之间所跨的日期和时间边界的数目。 *datepart* 参数标识要比较的日期和时间边界。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *datepart*  
  此参数指定对日期的哪一部分进行比较并为其返回值。  
   
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  此参数表示间隔的结束日期。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## 注释  
+## <a name="remarks"></a>注释  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。  
   
-|日期部分|缩写形式|  
+|datepart|缩写形式|  
 |--------------|-------------------|  
 |Year|yy、yyyy|  
 |季度|qq、q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  如果结束日期早于开始日期，则此函数返回负数。 如果开始日期等于结束日期或两者在同一间隔内，则此函数返回零。  
   
-## SSIS 表达式示例  
+## <a name="ssis-expression-examples"></a>SSIS 表达式示例  
  此示例计算两个日期文字之间的天数。 如果日期是“mm/dd/yyyy”格式，此函数返回 7。  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## 另请参阅  
- [DATEADD（SSIS 表达式）](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART（SSIS 表达式）](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY（SSIS 表达式）](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH（SSIS 表达式）](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR（SSIS 表达式）](../../integration-services/expressions/year-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [DATEADD &#40;SSIS 表达式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [日期部分 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [天 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [月 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [年 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

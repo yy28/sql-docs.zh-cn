@@ -1,26 +1,31 @@
 ---
-title: "平面文件源编辑器（“列”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.columns.f1"
-helpviewer_keywords: 
-  - "平面文件源编辑器"
+title: "平面文件源编辑器 （列页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a34e304d72b80412f5527dcb75f00b6dcb2fcbb2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 平面文件源编辑器（“列”页）
+# <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
   可以使用“平面文件源编辑器”对话框的“列”节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  若要了解有关平面文件源的详细信息，请参阅 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 28
  **输出列**  
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [平面文件源编辑器（“连接管理器”页）](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [平面文件源编辑器（“错误输出”页）](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [平面文件源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [平面文件源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
  [平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "组织跟踪中显示的列 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "组织显示的跟踪列 [SQL Server]"
-  - "排列显示的跟踪列"
-  - "跟踪 [SQL Server], 数据列"
+title: "组织跟踪 （SQL Server 事件探查器） 中显示的列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- organizing trace columns displayed [SQL Server]
+- arranging trace columns displayed
+- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 组织跟踪中显示的列 (SQL Server Profiler)
-  通过在跟踪表或 **“跟踪文件属性”** 对话框中选择 **“组织列”** ，或者在定义跟踪时，都可以将跟踪中的数据列分组。 将数据列分组可以更好地分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]跟踪输出。 有关详细信息，请参阅[使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
+# <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>组织跟踪中显示的列 (SQL Server Profiler)
+  通过在跟踪表或 **“跟踪文件属性”** 对话框中选择 **“组织列”** ，或者在定义跟踪时，都可以将跟踪中的数据列分组。 将数据列分组可以更好地分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪输出。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
   
  **“组织列”** 可用于将跟踪事件分组，或者按所选的数据列将跟踪事件分组和聚合。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 14
 |+ SQL:StmtCompleted (11)||||  
 |+ SQL:SmtStarting (21)||||  
   
-### 将跟踪中显示的数据列分组  
+### <a name="to-group-data-columns-displayed-in-a-trace"></a>将跟踪中显示的数据列分组  
   
 1.  打开现有的跟踪文件或表。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 14
   
 7.  若要对所显示的跟踪数据取消分组，请单击 **“视图”** 菜单上的 **“分组视图”** 来取消选择。 若要恢复为分组视图，请再次单击 **“视图”** 菜单上的 **“分组视图”** 来重新选择。  
   
-### 分组和聚合跟踪中的数据列  
+### <a name="to-group-and-aggregate-data-columns-in-a-trace"></a>分组和聚合跟踪中的数据列  
   
 1.  打开现有的跟踪文件或表。  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 14
   
 7.  若要使跟踪数据恢复为正常视图，请单击 **“视图”** 菜单上的 **“聚合视图”** 来取消选择。 如果要恢复为聚合视图，请再次单击 **“视图”** 菜单上的 **“聚合视图”** 来重新选择。 请注意，也可以单击 **“视图”** 菜单上的 **“分组视图”** 来显示分组的跟踪事件，而不折叠这些跟踪事件。  
   
-## 另请参阅  
- [创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建跟踪 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [打开跟踪表 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

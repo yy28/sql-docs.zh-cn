@@ -1,35 +1,40 @@
 ---
-title: "编辑实体 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "实体 [Master Data Services], 更改名称"
+title: "编辑实体 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 编辑实体 (Master Data Services)
+# <a name="edit-an-entity-master-data-services"></a>编辑实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以编辑实体。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 编辑实体  
+### <a name="to-edit-an-entity"></a>编辑实体  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -55,22 +60,22 @@ caps.handback.revision: 8
   
      有关详细信息，请参阅 [Data Compression](../relational-databases/data-compression/data-compression.md)  
   
-## 状态  
+## <a name="status"></a>状态  
  在网格的状态列中显示实体上所执行操作的状态。 单击“保存实体” 时，将显示下图，指示实体正在更新。  
   
- ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
+ ![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")  
   
  如果在创建或编辑实体时出错，将显示下面的图像。  
   
- ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")  
+ ![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")  
   
  如果状态为“正常”，则将显示下面的图像。  
   
- ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
+ ![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")  
   
-## 另请参阅  
+## <a name="see-also"></a>另請參閱  
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [删除实体 (Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)   
+ [删除实体 &#40;Master Data Services &#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

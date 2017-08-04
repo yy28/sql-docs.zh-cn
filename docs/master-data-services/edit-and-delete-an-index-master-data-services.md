@@ -1,26 +1,31 @@
 ---
-title: "编辑和删除索引 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "编辑和删除索引 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a724dd8d312d75ddb3325e61c7d32c12ef78c606
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 编辑和删除索引 (Master Data Services)
+# <a name="edit-and-delete-an-index-master-data-services"></a>编辑和删除索引 (Master Data Services)
   可以编辑和删除自己创建的有关属性的索引。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -59,7 +64,7 @@ caps.handback.revision: 5
   
 5.  在确认消息框中，单击“确定” 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建索引 (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   
  [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

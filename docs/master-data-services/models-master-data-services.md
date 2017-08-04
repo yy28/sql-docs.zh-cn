@@ -1,25 +1,30 @@
 ---
-title: "模型 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型 [Master Data Services], 关于模型"
-  - "模型 [Master Data Services]"
+title: "模型 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], about models
+- models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 模型 (Master Data Services)
+# <a name="models-master-data-services"></a>模型 (Master Data Services)
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高级别的数据组织。 模型定义了您的主数据管理解决方案中的数据结构。 模型包含以下对象：  
   
 -   实体  
@@ -38,7 +43,7 @@ caps.handback.revision: 8
   
  在测试环境中定义一个模型后，可以带或不带相应数据将它从测试环境部署到生产环境。 这样就不必在生产环境中重新创建您的模型。  
   
-## 模型如何与其他对象关联  
+## <a name="how-models-relate-to-other-objects"></a>模型如何与其他对象关联  
  模型包含实体。 实体包含属性、显式层次结构和集合。 属性可以包含在属性组中。 在某一实体用作其他实体的属性时，存在基于域的属性。  
   
  下图显示模型中对象之间的关系。  
@@ -46,16 +51,16 @@ caps.handback.revision: 8
  ![Master Data Services 模型中的对象](../master-data-services/media/mds-conc-model-circles.gif "Master Data Services 模型中的对象")  
   
 > [!NOTE]  
->  派生层次结构也是模型对象，但它们不显示在图像中。 派生层次结构从在实体之间存在的基于域的属性关系中派生。 请参阅 [派生层次结构 & #40;Master Data Services & #41;](../master-data-services/derived-hierarchies-master-data-services.md) 有关详细信息。  
+>  派生层次结构也是模型对象，但它们不显示在图像中。 派生层次结构从在实体之间存在的基于域的属性关系中派生。 请参阅[派生层次结构 &#40;Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)有关详细信息。  
   
  主数据是在模型对象中包含的数据。 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，主数据作为实体中的成员存储。  
   
  模型对象在 **用户界面的** “系统管理” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 功能区域中维护。  
   
-## 模型示例  
+## <a name="model-example"></a>模型示例  
  在下面的示例中，Product 模型中的对象以逻辑方式对与产品相关的数据进行分组。  
   
- ![产品模型主数据示例](../master-data-services/media/mds-conc-model.gif "产品模型主数据示例")  
+ ![产品模型主数据数据示例](../master-data-services/media/mds-conc-model.gif "产品模型主数据数据示例")  
   
  其他常见的模型有：  
   
@@ -65,24 +70,24 @@ caps.handback.revision: 8
   
 -   地理信息，它可能包含邮政编码、城市、县、州、省、区域、国家/地区和洲等实体。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建模型来组织您的主数据。|[创建一个模型和 #40;Master Data Services & #41;](../master-data-services/create-a-model-master-data-services.md)|  
-|更改现有模型的名称。|[编辑模型 & #40;Master Data Services & #41;](../master-data-services/edit-model-master-data-services.md)|  
-|删除现有模型。|[删除模型 & #40;Master Data Services & #41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|创建模型来组织您的主数据。|[创建一个模型 &#40;Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|更改现有模型的名称。|[编辑模型 &#40;Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)|  
+|删除现有模型。|[删除模型 &#40;Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
--   [Master Data Services 概述 & #40;MDS & #41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [实体 & #40;Master Data Services & #41;](../master-data-services/entities-master-data-services.md)  
+-   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [属性和 #40;Master Data Services & #41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [部署模型 & #40;Master Data Services & #41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [模型对象权限和 #40;Master Data Services & #41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [模型对象权限 &#40;Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

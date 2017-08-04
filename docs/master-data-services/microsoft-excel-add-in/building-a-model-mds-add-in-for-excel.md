@@ -1,33 +1,38 @@
 ---
-title: "生成模型（用于 Excel 的 MDS 外接程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "生成模型 （MDS 外接程序 excel） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 生成模型（用于 Excel 的 MDS 外接程序）
+# <a name="building-a-model-mds-add-in-for-excel"></a>生成模型（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员可以执行在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中提供的一部分管理功能。  
   
  管理员可以在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中执行的模型生成任务是：  
   
--   创建实体。 有关实体的详细信息，请参阅[实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)。  
+-   创建实体。 有关实体的详细信息，请参阅 [实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)。  
   
--   创建所有类型的属性，包括基于域的属性。 有关属性的详细信息，请参阅[属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md) 和[基于域的属性 (Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)。  
+-   创建所有类型的属性，包括基于域的属性。 有关属性的详细信息，请参阅 [属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md) 和 [基于域的属性 (Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)。  
   
- 作为管理员，您必须通过使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务来创建模型。 然后，您可以使用 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 在模型中创建实体和属性。 有关模型对象的详细信息，请参阅[模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)。  
+ 作为管理员，您必须通过使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务来创建模型。 然后，您可以使用 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 在模型中创建实体和属性。 有关模型对象的详细信息，请参阅 [模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  大多数管理任务仍必须在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中或通过使用 Web 服务完成。 下表显示管理员可用于在 MDS 中完成任务的工具。  
   
 |任务说明|工具|主题|  
@@ -43,15 +48,15 @@ caps.handback.revision: 5
 |创建数据版本。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序或 Web 服务|[锁定版本 (Master Data Services)](../../master-data-services/lock-a-version-master-data-services.md)|  
 |部署模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序、Web 服务或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 创建模型部署包](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   [模型 (Master Data Services)](../../master-data-services/models-master-data-services.md)  
   
 -   [实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)  
   
--   [属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [基于域的属性 (Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 &#40;Master Data Services &#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [属性组 (Master Data Services)](../../master-data-services/attribute-groups-master-data-services.md)  
   

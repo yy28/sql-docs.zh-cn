@@ -1,28 +1,33 @@
 ---
-title: "执行包任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "“执行包”任务 [Integration Services]"
-  - "子包"
-  - "父包 [Integration Services]"
+title: "执行包任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 执行包任务
+# <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
   
  可以将执行包任务用于下列用途：  
@@ -39,11 +44,11 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含执行工作流操作的任务，如执行可执行文件和批处理文件。 有关详细信息，请参阅 [Execute Process Task](../../integration-services/control-flow/execute-process-task.md)。  
   
-## 运行包  
+## <a name="running-packages"></a>运行包  
  “执行包”任务可运行与父包一起包含在同一个项目中的子包。 您可以通过将 **ReferenceType** 属性设置为 **“项目引用”**，然后设置 **PackageNameFromProjectReference** 属性，从项目中选择子包。  
   
 > [!NOTE]  
->  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 有关转换的详细信息，请参阅[将项目部署到 Integration Services 服务器](../../integration-services/packages/deploy-projects-to-integration-services-server.md)。  
+>  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  执行包任务也可以运行存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中的包和存储在文件系统中的包。 此任务使用 OLE DB 连接管理器连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或者使用文件连接管理器访问文件系统。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
   
@@ -55,15 +60,15 @@ caps.handback.revision: 63
   
  而有时您则希望父包和子包作为一个单元一起失败，或者您可能不希望引发其他进程的额外开销。 例如，如果子进程失败，而包的父进程中的后续处理取决于子进程的成功，则子包应当在父包的进程中运行。  
   
- 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **True**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将属性设置为 **True**，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅[安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)  
+ 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **True**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将属性设置为 **True**，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
-## 扩展事务  
- 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](../Topic/Inherited%20Transactions.md)。  
+## <a name="extending-transactions"></a>扩展事务  
+ 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)。  
   
-## 传播日志记录详细信息  
+## <a name="propagating-logging-details"></a>传播日志记录详细信息  
  执行包任务运行的子包可能配置为使用日志记录，也可能没有配置为使用日志记录，但子包将始终将日志详细信息转发给父包。 如果执行包任务配置为使用日志记录，则任务将记录来自子包的日志详细信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-## 将值传递给子包  
+## <a name="passing-values-to-child-packages"></a>将值传递给子包  
  子包经常使用调用它的其他包（通常是其父包）传递给它的值。 使用来自父包的值在如下情况下非常有用：  
   
 -   较大工作流的各部分分配给了不同的包。 例如，某个包每夜下载数据、汇总数据、将汇总数据值赋给变量，然后将这些值传递给其他包以进行其他数据处理。  
@@ -95,25 +100,25 @@ caps.handback.revision: 63
   
  父包变量可以在执行包任务作用域内或父容器（例如包）中定义。 如果有多个同名的变量可用，则使用在执行包任务作用域内定义的变量，或使用作用域内与该任务最近的变量。  
   
- 有关详细信息，请参阅[在子包中使用变量和参数的值](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
+ 有关详细信息，请参阅 [在子包中使用变量和参数的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
-### 访问父包变量  
+### <a name="accessing-parent-package-variables"></a>访问父包变量  
  子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”**页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
   
-## 配置执行包任务  
+## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [执行包任务编辑器](../../integration-services/control-flow/execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 以编程方式配置执行包任务  
+## <a name="configuring-the-execute-package-task-programmatically"></a>以编程方式配置执行包任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  

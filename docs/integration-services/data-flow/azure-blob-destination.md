@@ -1,33 +1,36 @@
 ---
-title: "Azure blob 目标 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpblobdest.f1"
-  - "sql14.dts.designer.afpblobdest.f1"
+title: "Azure Blob 目标 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpblobdest.f1
+- sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Azure blob 目标
-  “Azure blob 目标”  组件允许 SSIS 包将数据写入 Azure blob。 支持的文件格式：CSV 和 AVRO。 
-  
->   [!NOTE] 若要确保 Azure 存储连接管理器和使用它的组件（即 Blob 源、Blob 目标、Blob 上传任务和 Blob 下载任务）可以连接到常规用途的存储帐户和 Blob 存储帐户，请确保[在此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 有关这两种类型的存储帐户的详细信息，请参阅 [Microsoft Azure 存储空间简介](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts)。
-  
+# <a name="azure-blob-destination"></a>Azure blob 目标
+ “Azure blob 目标”  组件允许 SSIS 包将数据写入 Azure blob。 支持的文件格式：CSV 和 AVRO。 
+   
  将“Azure blob 目标”拖放到数据流设计器中，然后双击该组件打开编辑器。  
   
- “Azure blob 目标”是适用于 Azure for SQL Server 2016 的 SQL Server Integration Services (SSIS) 功能包组件。 从 [此处](http://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+ **Azure Blob 目标**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
   
 1.  对于“Azure 存储空间连接管理器”  字段，请指定一个现有的 Azure 存储空间连接管理器，或新建一个引用 Azure 存储空间帐户的连接管理器。  
   
@@ -42,3 +45,4 @@ caps.handback.revision: 10
 6.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。  
   
   
+

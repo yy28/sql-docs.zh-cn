@@ -1,26 +1,31 @@
 ---
-title: "FTP 任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "FTP 任务 [Integration Services]"
+title: "FTP 任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP 任务
+# <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
   
 -   在移动数据之前或之后，将目录和数据文件从一个目录复制到另一个目录，并对数据应用转换。  
@@ -44,7 +49,7 @@ caps.handback.revision: 52
   
  FTP 操作可以配置为在操作失败时停止文件系统任务，或以 ASCII 模式传输文件。 发送和接收文件副本的操作可以配置为覆盖目标文件和目录。  
   
-## 预定义的 FTP 操作  
+## <a name="predefined-ftp-operations"></a>预定义的 FTP 操作  
  FTP 任务包含一组预定义的操作。 下表介绍了这些运算。  
   
 |运算|Description|  
@@ -58,24 +63,24 @@ caps.handback.revision: 52
 |删除本地文件|删除本地计算机上的文件。|  
 |删除远程文件|删除 FTP 服务器上的文件。|  
   
-## FTP 任务可用的自定义日志项  
- 下表列出了 FTP 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 任务可用的自定义日志项  
+ 下表列出了 FTP 任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅[设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)。  
+ 有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
  有关如何以编程方式设置这些属性的详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [FTP 任务编辑器（“常规”页）](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP 任务编辑器（“文件传输”页）](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+ [FTP 任务编辑器 &#40;文件传输页 &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

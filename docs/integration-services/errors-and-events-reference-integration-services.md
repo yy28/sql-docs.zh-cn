@@ -1,27 +1,32 @@
 ---
-title: "错误和事件参考 (Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 包, 事件"
-  - "事件 [Integration Services]"
-  - "错误 [Integration Services]"
-  - "Integration Services, 错误"
+title: "错误和事件参考 (Integration Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 错误和事件参考 (Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  
   
  有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误消息的详细信息（包括大多数 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误及其说明的列表），请参阅 [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)。 但列表目前不包括故障排除信息。  
@@ -29,7 +34,7 @@ caps.handback.revision: 20
 > [!IMPORTANT]  
 >  使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 时可能看到的许多错误消息来自其他组件。 其中可能包括 OLE DB 访问接口、其他数据库组件（如 [!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ）或者其他服务或组件（如文件系统、SMTP 服务器或 Microsoft 消息队列）。 若要查找有关这些外部错误消息的信息，请参阅特定于组件的文档。  
   
-## 错误消息  
+## <a name="error-messages"></a>错误消息  
   
 |错误的符号名称|Description|  
 |----------------------------|-----------------|  
@@ -47,8 +52,8 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|指示在查找转换从内存中的缓存中读取数据的同时，“缓存转换”转换尝试将数据写入内存中的缓存中。|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|指示数据源中的列元数据与连接到数据源的源或目标组件中的列元数据不匹配。|  
   
-## 事件 (SQLISPackage)  
- 有关详细信息，请参阅[由 Integration Services 包记录的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
+## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
+ 有关详细信息，请参阅 [由 Integration Services 包记录的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
 |事件|Description|  
 |-----------|-----------------|  
@@ -61,8 +66,8 @@ caps.handback.revision: 20
 |SQLISPackage_12551|指示包未完成其工作即已停止。|  
 |SQLISPackage_12557|指示包已完成运行。|  
   
-## 事件 (SQLISService)  
- 有关详细信息，请参阅[由 Integration Services 服务记录的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
+## <a name="events-sqlisservice"></a>事件 (SQLISService)  
+ 有关详细信息，请参阅 [由 Integration Services 服务记录的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
 |事件|Description|  
 |-----------|-----------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|指示无法读取配置文件或配置文件无效。|  
 |SQLISService_274|指示包含配置文件位置的注册表项不存在或为空。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
   
   

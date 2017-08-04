@@ -1,36 +1,41 @@
 ---
-title: "数据配置文件查看器 (Data Profile Viewer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据配置文件查看器 [Integration Services]"
-  - "数据事件探查任务 [Integration Services], 输出查看器"
+title: "数据配置文件查看器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profile Viewer [Integration Services]
+- Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 8f02bbe73421c1fbb1f929cef397cfebf749c0d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据配置文件查看器 (Data Profile Viewer)
-  数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
+# <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
+  数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
   
 > [!IMPORTANT]  
->  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅[访问包使用的文件](../../integration-services/security/access-to-files-used-by-packages.md)。  
+>  输出文件可能包含有关数据库的敏感数据和数据库所包含的数据。 有关如何使此文件更加安全的建议，请参阅 [访问包使用的文件](../../integration-services/security/security-overview-integration-services.md#files)。  
   
-## 数据事件探查  
+## <a name="data-profiles"></a>数据事件探查  
  若要查看数据配置文件，请将数据事件探查任务配置为将其输出发送到文件，然后使用独立的数据配置文件查看器。 若要打开数据配置文件查看器，请执行以下操作之一。  
   
 -   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”任务，然后单击“编辑”。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”**。  
   
--   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe。  
+-   在文件夹中， *\<驱动器 >*: \Program Files (x86) |计划 Files\Microsoft SQL server\110\dts\binn 中，运行 DataProfileViewer.exe。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   

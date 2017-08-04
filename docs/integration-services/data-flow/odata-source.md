@@ -1,23 +1,28 @@
 ---
-title: "OData 源 | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
+title: "OData 源 |Microsoft 文档"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c52506dcfa582cc3e0992fe4fda772489d544247
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# OData 源
+# <a name="odata-source"></a>OData 源
   在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  
   
 -   对于 OData V3 协议，该组件支持 ATOM 和 JSON 数据格式。  
@@ -25,7 +30,7 @@ caps.handback.revision: 14
 -   对于 OData V4 协议，该组件支持 JSON 数据格式。  
   
 > [!NOTE]  
->  你还可以使用 OData 源读取 SharePoint 列表中的内容。 若要查看 SharePoint 服务器上的所有列表，请使用以下 URL：http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。  OData 源现支持 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 产品。
+>  你还可以使用 OData 源读取 SharePoint 列表中的内容。 若要查看在 SharePoint 服务器上的所有列表，请使用以下 URL: http://\<服务器 > / _vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。  OData 源现支持 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 产品。
   
 ## <a name="odata-format"></a>OData 格式  
  大多数 OData 服务采用多种格式返回结果。 可以使用 $format 查询选项指定结果集的格式。 JSON 和 JSON 轻型这类格式比 ATOM 或 XML 更高效，并且在传输大量数据时的性能更佳。 下表提供来自示例测试的结果。 可以看到，从 ATOM 切换至 JSON 后，性能提高 30-53%，从 ATOM 切换至新的 JSON 轻型格式（WCF Data Services 5.1 中提供）后，性能提高 67%。  

@@ -1,24 +1,29 @@
 ---
-title: "CDC 控制任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.f1"
+title: "CDC 控制任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdccontroltask.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a46ddda2d86f9e1c50c62966a275bf8e38534590
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 控制任务
+# <a name="cdc-control-task"></a>CDC 控制任务
   CDC 控制任务用于控制变更数据捕获 (CDC) 包的生命周期。 它处理 CDC 包与初始加载包的同步以及在运行 CDC 包时处理的日志序列号 (LSN) 范围的管理。 此外，CDC 控制任务还处理错误情况和恢复。  
   
  CDC 控制任务在 SSIS 包变量中维护 CDC 包的状态，并且还可以将其保存在某一数据库表中，以便跨多个包激活和在一起执行某一公共 CDC 进程的多个包之间（例如，一个任务可负责初始加载，而另一个任务则用于滴送处理更新）维护该状态。  
@@ -38,11 +43,11 @@ caps.handback.revision: 12
   
 |运算|Description|  
 |---------------|-----------------|  
-|GetProcessingRange|在调用使用 CDC 源数据流的数据流之前使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。<br /><br /> 有关存储的状态的详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。|  
+|GetProcessingRange|在调用使用 CDC 源数据流的数据流之前使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。<br /><br /> 有关存储的状态的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。|  
 |MarkProcessedRange|此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
   
-## 处理 CDC 状态持久性  
- 此 CDC 控制任务维护激活之间的持久性状态。 在 CDC 状态中存储的信息用于确定和维护 CDC 包的处理范围以及用于检测到错误条件。 该持久性状态以字符串的形式存储。 有关详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
+## <a name="handling-cdc-state-persistency"></a>处理 CDC 状态持久性  
+ 此 CDC 控制任务维护激活之间的持久性状态。 在 CDC 状态中存储的信息用于确定和维护 CDC 包的处理范围以及用于检测到错误条件。 该持久性状态以字符串的形式存储。 有关详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  CDC 控制任务支持两种类型的状态持久性  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 12
   
 -   自动状态持久性：CDC 状态存储在数据库中的表中。 该状态根据在 **“要用于存储状态的表”** 属性中命名的表中的 **StateName** 属性提供的名称存储，该表位于用于存储状态的所选连接管理器中。 默认管理器是源连接管理器，但通常的做法是使其成为目标连接管理器。 该 CDC 控制任务更新状态表中的状态值，并且该值作为环境事务的一部分提交。  
   
-## 错误处理  
+## <a name="error-handling"></a>错误处理  
  该 CDC 控制任务可在以下情况下报告错误：  
   
 -   它无法读取持久性的 CDC 状态或者在持久性状态更新失败时。  
@@ -63,19 +68,19 @@ caps.handback.revision: 12
   
  在未调用标记处理的范围的情况下在另一个获取处理范围操作后直接调用获取处理范围操作时，该 CDC 控制任务还可能会报告一个警告。 这指示以前的运行失败或其他 CDC 包可能正在使用相同的 CDC 状态名称运行。  
   
-## 配置 CDC 控制任务  
+## <a name="configuring-the-cdc-control-task"></a>配置 CDC 控制任务  
  可以通过 SSIS 设计器或以编程方式来设置属性。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
 -   [CDC 控制任务自定义属性](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   social.technet.microsoft.com 上的技术文章 [安装 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
   

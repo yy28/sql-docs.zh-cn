@@ -1,22 +1,27 @@
 ---
-title: "编辑实例属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "编辑实例属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 编辑实例属性
+# <a name="edit-instance-properties"></a>编辑实例属性
   使用属性编辑器可在您创建初始配置后对 CDC 实例进行更改。 您可以在属性编辑器中执行以下操作。  
   
 -   [编辑 Oracle 数据库属性](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
@@ -29,9 +34,9 @@ caps.handback.revision: 6
   
 -   [查看和生成补充日志记录脚本](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
--   [编辑高级属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
+-   [编辑高级的属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
-### 打开属性编辑器  
+### <a name="to-open-the-properties-editor"></a>打开属性编辑器  
   
 1.  从 CDC 设计器控制台的左窗格中，展开您正在使用的服务。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
      还可以在左窗格中右键单击该服务，然后选择“属性”。  
   
-### 或  
+### <a name="or"></a>或  
   
 1.  从 CDC 设计器控制台的左窗格中，选择您正在使用的服务。  
   

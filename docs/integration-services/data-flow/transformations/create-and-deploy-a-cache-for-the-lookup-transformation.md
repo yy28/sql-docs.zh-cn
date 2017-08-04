@@ -1,26 +1,31 @@
 ---
-title: "为查找转换创建和部署缓存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "为查找转换创建缓存文件"
-  - "为查找转换部署缓存文件"
-  - "查找转换缓存文件"
+title: "创建并部署为查找转换缓存 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 为查找转换创建和部署缓存
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
   
  查找转换通过将所连接数据源输入列中的数据和引用数据集中的列进行联接来执行查找。  
@@ -29,7 +34,7 @@ caps.handback.revision: 23
   
  若要了解查找转换和缓存文件的更多信息，请参阅 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-### 创建缓存文件  
+### <a name="to-create-a-cache-file"></a>创建缓存文件  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目，再打开该包。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
      运行包时，系统会创建该文件。  
   
     > [!NOTE]  
-    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../../../integration-services/security/access-to-files-used-by-packages.md)。  
+    >  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../../integration-services/security/security-overview-integration-services.md#files)。  
   
 6.  单击 **“列”** 选项卡，然后使用 **“索引位置”** 选项来指定哪些列是索引列。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 23
   
 8.  运行包。  
   
-### 部署缓存文件  
+### <a name="to-deploy-a-cache-file"></a>部署缓存文件  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目，再打开该包。  
   
-2.  创建包配置（可选）。 有关详细信息，请参阅[创建包配置](../../../integration-services/packages/create-package-configurations.md)。  
+2.  创建包配置（可选）。 有关详细信息，请参阅 [创建包配置](../../../integration-services/packages/create-package-configurations.md)。  
   
 3.  执行以下操作将缓存文件添加到项目：  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 23
   
 4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件。  
+     清单文件， \<*项目名称*>。SSISDeploymentManifest.xml，将创建一个列出的杂项文件项目、 包和包配置中。  
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建部署实用工具](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "合并包工作流中的数据事件探查任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据事件探查任务 [Integration Services], 使用工作流中的输出"
+title: "合并的数据事件探查任务在包工作流 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 合并包工作流中的数据事件探查任务
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
   
  不过，在确定了有关数据质量的条件之后，您可能希望对数据源自动执行定期的分析和清除。 请考虑下面的方案：  
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  具有可以将数据流任务合并到其中的工作流后，还需要了解添加此任务所需的步骤。 下一部分介绍合并数据流任务的一般过程。 最后两部分介绍如何将数据流任务直接连接到数据源或连接到从该数据流转换的数据。  
   
-## 为数据流任务定义常规工作流  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>为数据流任务定义常规工作流  
  下面的过程概述了在包的工作流中使用数据事件探查任务的输出的常规方法。  
   
-#### 在包中以编程的方式使用数据事件探查任务的输出  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>在包中以编程的方式使用数据事件探查任务的输出  
   
 1.  在包中添加和配置数据事件探查任务。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  以下各部分将应用此常规工作流，以对直接来自外部数据源的数据或从数据流任务转换而来的数据进行事件探查。 这些部分还说明如何处理数据流任务的输入和输出要求。  
   
-## 将数据事件探查任务直接连接到外部数据源  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>将数据事件探查任务直接连接到外部数据源  
  数据事件探查任务可以对直接来自数据源的数据进行事件探查。  为了举例说明此功能，下面的示例使用数据事件探查任务对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 Person.Address 表的列计算列 Null 比率配置文件。 然后，此示例使用脚本任务从输出文件检索结果，并填充可用来定位工作流的包变量。  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   配置优先约束，这些约束将根据数据事件探查任务的结果控制运行工作流中的哪些下游分支。  
   
-### 配置连接管理器  
+### <a name="configure-the-connection-managers"></a>配置连接管理器  
  在本例中，有两种连接管理器：  
   
 -   连接到 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 连接管理器。  
   
 -   文件连接管理器，该管理器将创建用于保存数据事件探查任务的结果的输出文件。  
   
-##### 配置连接管理器  
+##### <a name="to-configure-the-connection-managers"></a>配置连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建一个新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
 2.  向该包添加一个 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。 对此连接管理器进行配置，以使用 NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 并连接到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的可用实例。  
   
-     默认情况下，该连接管理器的名称为：\<服务器名称>.AdventureWorks1。  
+     默认情况下，连接管理器具有以下名称：\<服务器名称 >。AdventureWorks1。  
   
 3.  向该包添加一个文件连接管理器。 对此连接管理器进行配置，以便为数据事件探查任务创建输出文件。  
   
      此示例使用文件名 DataProfile1.xml。 默认情况下，该连接管理器与该文件具有相同的名称。  
   
-### 配置包变量  
+### <a name="configure-the-package-variables"></a>配置包变量  
  此示例使用两个包变量：  
   
 -   ProfileConnectionName 变量将文件连接管理器的名称传递给脚本任务。  
   
 -   AddressLine2NullRatio 变量将计算得出的此列的 Null 比率从脚本任务传递给包。  
   
-##### 对将保存配置文件结果的包变量进行配置  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>对将保存配置文件结果的包变量进行配置  
   
 -   在 **“变量”** 窗口中，添加并配置以下两个包变量：  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   为另一个变量输入名称 **AddressLine2NullRatio**，并将此变量的类型设置为 **Double**。  
   
-### 配置数据事件探查任务  
+### <a name="configure-the-data-profiling-task"></a>配置数据事件探查任务  
  在以下情况下，必须对数据事件探查任务进行配置：  
   
 -   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器提供的数据作为输入。  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   将配置文件结果保存到与文件连接管理器关联的文件中。  
   
-##### 配置数据事件探查任务  
+##### <a name="to-configure-the-data-profiling-task"></a>配置数据事件探查任务  
   
 1.  向控制流添加一个数据事件探查任务。  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  关闭数据事件探查任务编辑器。  
   
-### 配置脚本任务  
+### <a name="configure-the-script-task"></a>配置脚本任务  
  必须对脚本任务进行配置，以便从输出文件检索结果并填充前面配置的包变量。  
   
-##### 配置脚本任务  
+##### <a name="to-configure-the-script-task"></a>配置脚本任务  
   
 1.  向控制流添加一个脚本任务。  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  关闭脚本开发环境，然后关闭脚本任务编辑器。  
   
-#### 替代代码 - 从变量读取配置文件输出  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>替代代码 - 从变量读取配置文件输出  
  前面的过程显示如何从文件加载数据事件探查任务的输出。 不过，还有一种方法是从包变量加载此输出。 若要从变量加载输出，必须对示例代码进行以下更改：  
   
 -   调用 **LoadXml** 类的 **XmlDocument** 方法而不是 **Load** 方法。  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### 配置优先约束  
+### <a name="configure-the-precedence-constraints"></a>配置优先约束  
  必须对优先约束进行配置，以便根据数据事件探查任务的结果控制运行工作流中的哪些下游分支。  
   
-##### 配置优先约束  
+##### <a name="to-configure-the-precedence-constraints"></a>配置优先约束  
   
 -   在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
      例如，可以将优先约束的 **“求值运算”** 设置为 **“表达式和约束”**。 然后，可以使用 `@AddressLine2NullRatio < .90` 作为该表达式的值。 当前面的任务成功并且所选列的 Null 值的百分比小于 90% 时，这将使工作流遵循所选的路径。  
   
-## 将数据事件探查任务连接到从数据流转换的数据  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>将数据事件探查任务连接到从数据流转换的数据  
  您可以不对直接来自数据源的数据进行事件探查，而是对数据流中已加载并转换的数据进行事件探查。 不过，数据事件探查任务仅针对持久化数据而不针对内存中的数据进行操作。 因此，必须首先使用目标组件将已转换的数据保存到临时表中。  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  下面的过程介绍使用数据事件探查任务对已由数据流转换的数据进行事件探查的常规方法。 其中的很多步骤与前面介绍的对直接来自外部数据源的数据进行事件探查的步骤类似。 您可能需要查看前面的这些步骤，以便了解如何配置各种组件的更多信息。  
   
-#### 在数据流中使用数据事件探查任务  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>在数据流中使用数据事件探查任务  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建一个包。  
   
@@ -326,8 +331,8 @@ caps.handback.revision: 24
   
 7.  在将脚本任务连接到工作流下游分支的优先约束中，写入使用变量值定位工作流的表达式。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [数据配置文件查看器 (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)  
+ [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

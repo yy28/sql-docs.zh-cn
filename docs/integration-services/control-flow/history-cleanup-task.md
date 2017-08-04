@@ -1,27 +1,32 @@
 ---
-title: "“清除历史记录”任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.historycleanuptask.f1"
-helpviewer_keywords: 
-  - "历史记录表 [SQL Server]"
-  - "“清除历史记录”任务 [Integration Services]"
+title: "清除历史记录任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.historycleanuptask.f1
+helpviewer_keywords:
+- history tables [SQL Server]
+- History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 835d952dd745235ebddbf788a70b5776d7f2711f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# “清除历史记录”任务
+# <a name="history-cleanup-task"></a>“清除历史记录”任务
   “清除历史记录”任务删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中下列历史记录表中的条目：  
   
 -   backupfile  
@@ -44,7 +49,7 @@ caps.handback.revision: 43
   
  此任务封装 sp_delete_backuphistory 系统存储过程并将指定日期作为参数传递给该过程。 有关详细信息，请参阅 [sp_delete_backuphistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)。  
   
-## “清除历史记录”任务的配置  
+## <a name="configuration-of-the-history-cleanup-task"></a>“清除历史记录”任务的配置  
  此任务包含的一个属性用于指定要保留在历史记录表中的数据的最早日期。 您可以用从当天算起的天数、周数、月数或年数来指示日期，此任务可自动将该间隔转换为一个日期。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。 此任务位于 **设计器中** “工具箱” **的** “维护计划中的任务” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 部分。  
@@ -55,9 +60,9 @@ caps.handback.revision: 43
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

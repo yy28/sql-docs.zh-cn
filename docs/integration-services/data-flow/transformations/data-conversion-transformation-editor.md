@@ -1,26 +1,31 @@
 ---
-title: "数据转换编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataconversiontransformation.f1"
-helpviewer_keywords: 
-  - "数据转换编辑器"
+title: "数据转换编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataconversiontransformation.f1
+helpviewer_keywords:
+- Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 958e51a5e8b480f2c6c9f0e4b02dc1666140f090
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据转换编辑器
+# <a name="data-conversion-transformation-editor"></a>数据转换编辑器
   可以使用 **“数据转换编辑器”** 对话框，选择要转换的列和要将列转换成的数据类型以及设置转换属性。  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  若要了解有关数据转换的详细信息，请参阅 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **可用输入列**  
  使用复选框选择要转换的列。 选择后，会将输入列添加到下表中。  
   
@@ -54,10 +59,10 @@ caps.handback.revision: 28
  为 DT_STR 类型的列选择相应的代码页。  
   
  **配置错误输出**  
- 使用[配置错误输出](../Topic/Configure%20Error%20Output.md)对话框指定处理行级错误的方式。  
+ 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理行级错误的方式。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [使用数据转换将数据转换为其他数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
+ [通过使用数据转换将数据转换为不同的数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

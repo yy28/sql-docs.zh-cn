@@ -1,26 +1,31 @@
 ---
-title: "应用并更新变更集 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "应用并更新变更集 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bd1f16bf28951aa128d1ab218ef12e8affbe1aa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 应用并更新变更集 (Master Data Services)
+# <a name="apply-and-update-a-changeset-master-data-services"></a>应用并更新变更集 (Master Data Services)
   变更集是主数据的挂起更改的集合。 可以在本地应用变更集以查看、添加、更新和删除变更集中挂起的更改。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
   
 -    您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 10
   
 -   在变更集处于打开或拒绝状态时，你仅可以修改自己拥有的变更集。  
   
-## 应用并更新变更集  
+## <a name="to-apply-and-update-a-changeset"></a>应用并更新变更集  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页中，选择模型和版本，然后单击“资源管理器” 。  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 10
   
 5.  若要还原挂起的更改，右键单击“变更集”窗格中的网格，然后单击“还原”。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
  [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

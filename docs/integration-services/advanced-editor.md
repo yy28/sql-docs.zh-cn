@@ -1,28 +1,33 @@
 ---
-title: "高级编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.advancededitor.columnproperties.f1"
-  - "sql13.dts.designer.advancededitor.componentproperties.f1"
-  - "sql13.dts.designer.advancededitor.inputcolumns.f1"
-  - "sql13.dts.designer.advancededitor.connections.f1"
-  - "sql13.dts.designer.advancededitor.columnmappings.f1"
+title: "高级编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.advancededitor.columnproperties.f1
+- sql13.dts.designer.advancededitor.componentproperties.f1
+- sql13.dts.designer.advancededitor.inputcolumns.f1
+- sql13.dts.designer.advancededitor.connections.f1
+- sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 高级编辑器
+# <a name="advanced-editor"></a>高级编辑器
   使用 **“高级编辑器”** 对话框可为所选 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象配置属性。  
   
  对于具有可配置属性的大多数 **对象，** “高级编辑器” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 都是可用的。 对于未公开自定义用户界面的对象，它是唯一可用的编辑器。  
@@ -41,17 +46,17 @@ caps.handback.revision: 7
   
  所显示的属性因组件而异。 有关可能在 **“高级编辑器”**中显示的属性的详细信息，请参阅下列主题：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [路径属性](../Topic/Path%20Properties.md)  
+-   [路径属性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  有关您所编辑的特定组件的详细信息，请参阅 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象和概念文档的“数据流元素”部分中的组件说明。  
   
 -   [Integration Services 转换](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
   
   

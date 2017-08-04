@@ -1,29 +1,34 @@
 ---
-title: "属性表达式中的枚举常量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "枚举器 [Integration Services]"
-  - "包 [Integration Services], 表达式"
-  - "动态属性"
-  - "更新包属性"
-  - "枚举常量 [Integration Services]"
-  - "属性表达式 [Integration Services]"
+title: "枚举属性表达式中的常量 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 属性表达式中的枚举常量
+# <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置 **LoggingMode** 属性，则必须使用数值 2 而不是友好名称“Disabled”。  
   
  此主题只列出通常会在属性表达式中使用其成员的枚举器的友好名称的等价数值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型包括很多其他枚举器，在编写对象模型以便以编程方式生成包时，或为任务和数据流组件等自定义包元素编写代码时，需要使用这些枚举器。  
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Foreach 循环枚举器  
  Foreach 循环包括一组其属性可以由属性表达式设置的枚举器。  
   
-### Foreach ADO 枚举器  
+### <a name="foreach-ado-enumerator"></a>Foreach ADO 枚举器  
  **Type** 属性 - 通过使用 **ADOEnumerationType** 枚举中的值设置。  
   
 |ADOEnumerationType 中的友好名称|数值|  
@@ -116,7 +121,7 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Foreach Nodelist 枚举器  
+### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 枚举器  
  **SourceDocumentType**、 **InnerXPathStringSourceType**、 **OuterXPathStringSourceType** 属性 - 通过使用 **SourceType** 枚举中的值设置。  
   
 |SourceType 中的友好名称|数值|  
@@ -145,7 +150,7 @@ caps.handback.revision: 34
 ##  <a name="Tasks"></a> “任务”  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括许多其属性可以由属性表达式设置的任务。  
   
-### Analysis Services 执行 DDL 任务  
+### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务  
  **SourceType** 属性 - 通过使用 **DDLSourceType** 枚举中的值设置。  
   
 |DDLSourceType 中的友好名称|数值|  
@@ -154,7 +159,7 @@ caps.handback.revision: 34
 |文件连接|1|  
 |变量|2|  
   
-### 大容量插入任务  
+### <a name="bulk-insert-task"></a>大容量插入任务  
  **DataFileType** 属性 - 通过使用 **DTSBulkInsert_DataFileType** 枚举中的值设置。  
   
 |DTSBulkInsert_DataFileType 中的友好名称|数值|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### 执行 SQL 任务  
+### <a name="execute-sql-task"></a>执行 SQL 任务  
  **ResultSetType** 属性 - 通过使用 **ResultSetType** 枚举中的值设置。  
   
 |ResultSetType 中的友好名称|数值|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |文件连接|2|  
 |变量|3|  
   
-### 文件系统任务  
+### <a name="file-system-task"></a>文件系统任务  
  **Operation** 属性 - 通过使用 **DTSFileSystemOperation** 枚举中的值设置。  
   
 |DTSFileSystemOperation 中的友好名称|数值|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |ReadOnly|4|  
 |系统|8|  
   
-### FTP 任务  
+### <a name="ftp-task"></a>FTP 任务  
  **Operation** 属性 - 通过使用 **DTSFTPOp** 枚举中的值设置。  
   
 |DTSFTPOp 中的友好名称|数值|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### 消息队列任务  
+### <a name="message-queue-task"></a>消息队列任务  
  **MessageType** 属性 - 通过使用 **MQMessageType** 枚举中的值设置。  
   
 |MQMessageType 中的友好名称|数值|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### 发送邮件任务  
+### <a name="send-mail-task"></a>发送邮件任务  
  **MessageSourceType** 属性 - 通过使用 **SendMailMessageSourceType** 枚举中的值设置。  
   
 |SendMailMessageSourceType 中的友好名称|数值|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |Normal|3|  
 |Low|5|  
   
-### 传输数据库任务  
+### <a name="transfer-database-task"></a>传输数据库任务  
  **Action** 属性 - 通过使用 **TransferAction** 枚举中的值设置。  
   
 |TransferAction 中的友好名称|数值|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### 传输错误消息任务  
+### <a name="transfer-error-messages-task"></a>传输错误消息任务  
  **IfObjectExists** 属性 - 通过使用 **IfObjectExists** 枚举中的值设置。  
   
 |IfObjectExists 中的友好名称|数值|  
@@ -289,7 +294,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 传输作业任务  
+### <a name="transfer-jobs-task"></a>传输作业任务  
  **IfObjectExists** 属性 - 通过使用 **IfObjectExists** 枚举中的值设置。  
   
 |IfObjectExists 中的友好名称|数值|  
@@ -298,7 +303,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 传输登录名任务  
+### <a name="transfer-logins-task"></a>传输登录名任务  
  **IfObjectExists** 属性 - 通过使用 **IfObjectExists** 枚举中的值设置。  
   
 |IfObjectExists 中的友好名称|数值|  
@@ -315,7 +320,7 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### 传输主存储过程任务  
+### <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务  
  **IfObjectExists** 属性 - 通过使用 **IfObjectExists** 枚举中的值设置。  
   
 |IfObjectExists 中的友好名称|数值|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### 传输 SQL Server 对象任务  
+### <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务  
  **ExistingData** 属性 - 通过使用 **ExistingData** 枚举中的值设置。  
   
 |ExistingData 中的友好名称|数值|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |替换|0|  
 |追加|1|  
   
-### Web 服务任务  
+### <a name="web-service-task"></a>Web 服务任务  
  **OutputType** 属性 - 通过使用 **DTSOutputType** 枚举中的值设置。  
   
 |DTSOutputType 中的友好名称|数值|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |文件|0|  
 |变量|1|  
   
-### WMI 数据读取器任务  
+### <a name="wmi-data-reader-task"></a>WMI 数据读取器任务  
  **OverwriteDestination** 属性 - 通过使用 **OverwriteDestination** 枚举中的值设置。  
   
 |OverwriteDestination 中的友好名称|数值|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |变量|2|  
   
-### XML 任务  
+### <a name="xml-task"></a>XML 任务  
  **OperationType** 属性 - 通过使用 **DTSXMLOperation** 枚举中的值设置。  
   
 |DTSXMLOperation 中的友好名称|数值|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持通过编程来使用这些任务，而且编程参考文档不包括这些任务及其枚举器的 API 文档。  
   
-### 所有维护任务  
+### <a name="all-maintenance-tasks"></a>所有维护任务  
  所有维护任务均使用以下枚举来设置指定的属性。  
   
  **DatabaseSelectionType** 属性 - 通过使用 **DatabaseSelection** 枚举中的值设置。  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |视图|1|  
 |TableView|2|  
   
-### “备份数据库”任务  
+### <a name="back-up-database-task"></a>“备份数据库”任务  
  **DestinationCreationType** 属性 - 通过使用 **DestinationType** 枚举中的值设置。  
   
 |DestinationType 中的友好名称|数值|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### “清除维护”任务  
+### <a name="maintenance-cleanup-task"></a>“清除维护”任务  
  **FileTypeSelected** 属性 - 通过使用 **FileType** 枚举中的值设置。  
   
 |FileType 中的友好名称|数值|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |Year|3|  
   
-### “更新统计信息”任务  
- **UpdateType** 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)**StatisticsTarget** 枚举中的值设置。  
+### <a name="update-statistics-task"></a>“更新统计信息”任务  
+ **UpdateType** 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) **StatisticsTarget** 枚举中的值设置。  
   
 |StatisticsTarget 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |是否支持|1|  
 |必需|2|  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS &#41;包](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [优先约束](../../integration-services/control-flow/precedence-constraints.md)  

@@ -1,28 +1,33 @@
 ---
-title: "Analysis Services 执行 DDL 任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asexecuteddltask.f1"
-helpviewer_keywords: 
-  - "Analysis Services 执行 DDL 任务"
-  - "DDL"
+title: "Analysis Services 执行 DDL 任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asexecuteddltask.f1
+helpviewer_keywords:
+- Analysis Services Execute DDL task
+- DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Analysis Services 执行 DDL 任务
-  “[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务运行数据定义语言 (DDL) 语句，这些语句可以创建、删除或更改挖掘模型和多维对象，如多维数据集和维度。 例如，DDL 语句可在 **Adventure Works** 多维数据集中创建分区，或删除 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]（即 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库）中的维度。  
+# <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
+  “ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务运行数据定义语言 (DDL) 语句，这些语句可以创建、删除或更改挖掘模型和多维对象，如多维数据集和维度。 例如，DDL 语句可在 **Adventure Works** 多维数据集中创建分区，或删除 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]（即 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库）中的维度。  
   
  “ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 48
   
 -   [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## DDL 语句  
+## <a name="ddl-statements"></a>DDL 语句  
  DDL 语句表示为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 中的语句，并且嵌入 XML for Analysis (XMLA) 命令中。  
   
 -   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅 [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
@@ -45,7 +50,7 @@ caps.handback.revision: 48
   
  因为 DDL 语句可以包含密码和其他敏感信息，所以包含一个或多个“[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务的包应该使用包保护级别 **EncryptAllWithUserKey** 或 **EncryptAllWithPassword**。 有关详细信息，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。  
   
-### DDL 示例  
+### <a name="ddl-examples"></a>DDL 示例  
  以下三个 DDL 语句是通过对 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]（包含在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库）中的对象编写脚本而生成。  
   
  下面的 DDL 语句删除 **Promotion** 维度。  
@@ -212,7 +217,7 @@ caps.handback.revision: 48
   
 ```  
   
-## “Analysis Services 执行 DDL”任务的配置  
+## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>“Analysis Services 执行 DDL”任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
@@ -225,9 +230,9 @@ caps.handback.revision: 48
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击以下主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## “Analysis Services 执行 DDL”任务的编程配置  
+## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>“Analysis Services 执行 DDL”任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  

@@ -1,39 +1,44 @@
 ---
-title: "执行进程任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executeprocesstask.f1"
-helpviewer_keywords: 
-  - "执行进程任务 [Integration Services]"
+title: "执行进程任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executeprocesstask.f1
+helpviewer_keywords:
+- Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 执行进程任务
+# <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还包含一些执行工作流操作的其他任务（如执行包）。 有关详细信息，请参阅 [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)  
   
-## 执行进程任务可用的自定义日志项  
- 下表列出了执行进程任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-execute-process-task"></a>执行进程任务可用的自定义日志项  
+ 下表列出了执行进程任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|提供所配置任务要运行的进程的信息。<br /><br /> 写入两个日志条目。 一个日志条目包含有关任务所运行可执行文件的名称和位置的信息，另一个条目则记录从可执行文件退出的信息。|  
 |**ExecuteProcessVariableRouting**|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
   
-## 执行进程任务的配置  
+## <a name="configuration-of-the-execute-process-task"></a>执行进程任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
@@ -44,12 +49,12 @@ caps.handback.revision: 65
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### 属性设置  
+### <a name="property-settings"></a>属性设置  
  当执行进程任务运行自定义应用程序时，该任务将通过以下一种或两种方法为该应用程序提供输入：  
   
--   在 **StandardInputVariable** 属性设置中指定的变量。 有关变量的详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../Topic/Use%20Variables%20in%20Packages.md)。  
+-   在 **StandardInputVariable** 属性设置中指定的变量。 有关变量的详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 -   在 **Arguments** 属性设置中指定的参数。 （例如，如果该任务打开一个 Word 格式的文档，该参数就可指定该 .doc 文件的名称。）  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 65
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库中的 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)主题。  
+ 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -74,18 +79,18 @@ caps.handback.revision: 65
   
 -   如果使用 Microsoft Visual C# 编写应用程序，请使用 **Main** 方法。  
   
-     有关详细信息，请参阅 C# 编程指南中的[命令行参数（C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=129406)这一主题。  
+     有关详细信息，请参阅 C# 编程指南中的 [命令行参数（C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=129406)这一主题。  
   
  执行进程任务还包括 **StandardOutputVariable** 和 **StandardErrorVariable** 属性，用来分别指定使用该应用程序的标准输出和错误输出的变量。  
   
  另外，您还可以配置执行进程任务来指定工作目录、超时期限或表示可执行文件成功运行的值。 您还可以对该任务进行配置，使其在可执行文件的返回代码与指示成功的值不匹配时或者在指定位置找不到可执行文件时失败。  
   
-## 执行进程任务的编程配置  
+## <a name="programmatic-configuration-of-the-execute-process-task"></a>执行进程任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

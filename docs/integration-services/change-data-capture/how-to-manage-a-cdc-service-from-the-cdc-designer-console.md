@@ -1,25 +1,30 @@
 ---
-title: "如何从 CDC 设计器控制台管理 CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何从 CDC 设计器控制台管理 CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 如何从 CDC 设计器控制台管理 CDC 服务
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何从 CDC 设计器控制台管理 CDC 服务
   本过程介绍如何使用 CDC 设计器控制台来管理 CDC 服务。  
   
-### 从 CDC 设计器控制台管理 CDC 服务  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>从 CDC 设计器控制台管理 CDC 服务  
   
 1.  从 **“开始”** 菜单上，选择 **“CDC 设计器控制台”**。  
   
@@ -33,9 +38,9 @@ caps.handback.revision: 6
   
     -   创建 **新的 CDC 实例**  
   
-    -   **启动所有实例**（包括在选定的 CDC 服务中）  
+    -   **启动所有实例** （包括在选定的 CDC 服务中）  
   
-    -   **停止所有实例**（包括在选定的 CDC 服务中）  
+    -   **停止所有实例** （包括在选定的 CDC 服务中）  
   
      有关这些任务的信息，请参阅 [Manage a CDC Service](../../integration-services/change-data-capture/manage-a-cdc-service.md)。  
   

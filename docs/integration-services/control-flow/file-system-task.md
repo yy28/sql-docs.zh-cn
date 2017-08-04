@@ -1,33 +1,38 @@
 ---
-title: "文件系统任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-helpviewer_keywords: 
-  - "文件系统任务 [Integration Services]"
+title: "文件系统任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.f1
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0c10a9020fe4fd03e9d71df19a9b16223e3031ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 文件系统任务
+# <a name="file-system-task"></a>文件系统任务
   文件系统任务对文件系统中的文件和目录执行操作。 例如，通过使用文件系统任务，包可以创建、移动或删除目录和文件。 您还可以使用文件系统任务设置文件和目录的属性。 例如，文件系统任务可以让文件隐藏或只读。  
   
  所有文件系统任务操作都使用源，源可以是文件或目录。 例如，任务复制的文件或删除的目录都是源。 源可以通过使用指向目录或文件的文件连接管理器来指定，也可以通过提供包含源路径的变量的名称来指定。 有关详细信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
  复制和移动文件及目录的操作与重命名文件的操作都使用目标和源。 目标可以使用文件连接管理器或变量指定。 文件系统任务操作可以配置为允许覆盖目标文件和目录。 创建新目录的操作可以配置为使用具有指定名称的现有目录，而不是在目录已经存在时失败。  
   
-## 预定义的文件系统操作  
+## <a name="predefined-file-system-operations"></a>预定义的文件系统操作  
  文件系统任务包含一组预定义的操作。 下表介绍了这些运算。  
   
 |运算|Description|  
@@ -49,14 +54,14 @@ caps.handback.revision: 58
   
 -   **添加和配置文件系统任务** 将文件系统任务添加到 Foreach 循环容器。 在文件系统任务编辑器的 **“常规”** 页上，将 **“SourceVariable”** 或 **“DestinationVariable”** 属性设置为您在 Foreach 循环容器中定义的变量。  
   
-## 文件系统任务可用的自定义日志项  
- 下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-file-system-task"></a>文件系统任务可用的自定义日志项  
+ 下表介绍了文件系统任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|报告任务所执行的操作。 在文件系统操作开始时写入日志项，日志项包括有关源和目标的信息。|  
   
-## 配置文件系统任务  
+## <a name="configuring-the-file-system-task"></a>配置文件系统任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅以下主题：  
@@ -67,16 +72,16 @@ caps.handback.revision: 58
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅以下主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  有关如何以编程方式设置这些属性的详细信息，请参阅以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一个可下载和上载数据文件以及管理服务器上目录的任务。 有关详细信息，请参阅 [FTP Task](../../integration-services/control-flow/ftp-task.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

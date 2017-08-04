@@ -1,33 +1,38 @@
 ---
-title: "立即应用成员权限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "成员 [Master Data Services], 立即应用权限"
-  - "权限 [Master Data Services], 立即应用成员权限"
+title: "立即应用成员权限 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- members [Master Data Services], applying permissions immediately
+- permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1549958a5c84045eccbb52c5fac2f2f2b09d316e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 立即应用成员权限 (Master Data Services)
+# <a name="immediately-apply-member-permissions-master-data-services"></a>立即应用成员权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以立即应用成员权限，而不必等待定期应用的成员安全性。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须具有在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中执行 mdm.udpSecurityMemberProcessRebuildModel 存储过程的权限。 有关详细信息，请参阅[数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)。  
   
-### 立即应用层次结构成员权限  
+### <a name="to-immediately-apply-hierarchy-member-permissions"></a>立即应用层次结构成员权限  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例。  
   
@@ -47,8 +52,8 @@ caps.handback.revision: 6
   
 4.  运行查询。  
   
-## 另请参阅  
- [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [分配层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

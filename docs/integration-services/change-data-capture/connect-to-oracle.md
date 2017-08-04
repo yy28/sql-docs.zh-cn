@@ -1,24 +1,29 @@
 ---
-title: "连接到 Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "connOra"
+title: "连接到 Oracle |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1f8d78348d21f48a19ba05a55de836520a0afd6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 连接到 Oracle
+# <a name="connect-to-oracle"></a>连接到 Oracle
   在您首次添加或编辑在 CDC 实例中使用的表时，系统可能会请求您连接到 Oracle 数据库。 您应该输入可访问要捕获表的架构的 Oracle 用户的凭据。 在此对话框中输入以下信息：  
   
  **身份验证**  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
 -   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   

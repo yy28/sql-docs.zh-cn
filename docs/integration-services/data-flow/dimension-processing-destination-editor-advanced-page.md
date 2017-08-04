@@ -1,31 +1,36 @@
 ---
-title: "维度处理目标编辑器（“高级”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "维度处理目标编辑器"
+title: "维度处理目标编辑器 （高级页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81e97a5a5e653fb02f0e8a1ccc5741bb3e86acf1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 维度处理目标编辑器（“高级”页）
+# <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
   可以使用 **“维度处理目标编辑器”** 对话框中的 **“高级”** 页配置错误处理方式。  
   
  若要了解有关维度处理目标的详细信息，请参阅 [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **使用默认错误配置**  
  指定是否使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 **True**。  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 27
  **浏览(...)**  
  选择错误日志的路径。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [维度处理目标编辑器（“连接管理器”页）](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
- [维度处理目标编辑器（“映射”页）](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
+ [维度处理目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
+ [维度处理目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
   
   

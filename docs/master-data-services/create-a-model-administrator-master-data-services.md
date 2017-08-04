@@ -1,37 +1,42 @@
 ---
-title: "创建模型管理员 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "管理员 [Master Data Services], 创建"
+title: "创建模型管理员 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 637227399e0ecd6c1feb1f75b95e38d0b370d816
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建模型管理员 (Master Data Services)
+# <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当你希望某个组或用户对一个或多个模型中的所有对象具有所有权限时，可以创建模型管理员。  
   
 > [!TIP]  
 >  为了简化管理，请创建一个 Windows 组或本地组并将其配置为模型管理员。 然后，您可以从该组中添加和删除用户，而无需访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 创建模型管理员  
+### <a name="to-create-a-model-administrator"></a>创建模型管理员  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
   
@@ -53,11 +58,11 @@ caps.handback.revision: 6
   
 10. 单击 **“保存”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [分配模型对象权限 &#40;Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [分配层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [模型对象权限 &#40;Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

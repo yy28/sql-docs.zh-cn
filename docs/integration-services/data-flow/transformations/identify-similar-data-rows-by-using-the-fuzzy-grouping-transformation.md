@@ -1,30 +1,35 @@
 ---
-title: "使用模糊分组转换标识相似数据行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模糊分组转换"
-  - "匹配相似数据 [Integration Services]"
-  - "相似数据行 [Integration Services]"
-  - "模糊匹配"
+title: "通过使用模糊分组转换标识相似数据行 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Fuzzy Grouping transformation
+- match similar data [Integration Services]
+- similar data rows [Integration Services]
+- fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用模糊分组转换标识相似数据行
+# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
   若要添加和配置模糊分组转换，包必须已包含至少一个数据流任务和一个源。  
   
-### 在数据流中实现模糊分组转换  
+### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>在数据流中实现模糊分组转换  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 23
   
 20. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   

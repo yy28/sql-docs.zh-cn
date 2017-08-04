@@ -1,24 +1,29 @@
 ---
-title: "“连接到 Master Data Services 数据库”对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.srvconnect.f1"
+title: "连接到 Master Data Services 数据库对话框 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bbf60fd80d899d4c9887144fefcdb9ff8c1bc355
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “连接到 Master Data Services 数据库”对话框
+# <a name="connect-to-a-master-data-services-database-dialog-box"></a>“连接到 Master Data Services 数据库”对话框
   使用 **“连接到 Master Data Services 数据库”** 对话框可以选择 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
   
  在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中，可以从以下页面访问该对话框：  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
 -   在 **“Web 配置”** 页上的 **“将应用程序与数据库相关联”**下，单击 **“选择”** 可以选择要与您的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 网站或应用程序相关联的数据库。  
   
-## 选择数据库  
+## <a name="select-database"></a>选择数据库  
  指定用于连接到承载 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 数据库的本地或远程 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例的信息。 若要连接到某一远程实例，必须为远程连接启用该实例。  
   
 |控件名称|Description|  
@@ -37,10 +42,11 @@ caps.handback.revision: 9
 |**“用户名”**|指定将用于连接到指定的 SQL Server 实例的用户帐户的名称。 该帐户必须是指定的 **实例上** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 角色的成员：<br /><br /> “身份验证类型”为“当前用户 - 集成安全性”时，“用户名”框为只读，并且它显示登录到计算机的 Windows 用户帐户的名称。<br /><br /> 在 **“身份验证类型”** 为 **“SQL Server 帐户”**时， **“用户名”** 框将启用，并且您必须为指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帐户指定凭据。|  
 |**“密码”**|指定与用户帐户关联的密码：<br /><br /> “身份验证类型”为“当前用户 - 集成安全性”时，“密码”框为只读，并且使用指定 Windows 用户帐户的凭据进行连接。<br /><br /> 在 **“身份验证类型”** 为 **“SQL Server 帐户”**时， **“密码”** 框将启用，并且您必须指定与指定的用户帐户相关联的密码。|  
 |**Connect**|使用指定的凭据连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。|  
-|**“主数据服务数据库”**|基于以下条件显示指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库：<br /><br /> 当用户是此实例的 **sysadmin** 服务器角色的成员时，将显示此实例中的所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。<br /><br /> 当用户是此实例中任何 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的 **db_owner** 数据库角色的成员时，将显示这些 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。<br /><br/> 有关 SQL Server 角色的详细信息，请参阅[服务器级别角色](../relational-databases/security/authentication-access/server-level-roles.md)和[数据库级别角色](../relational-databases/security/authentication-access/database-level-roles.md)。|  
+|**“主数据服务数据库”**|基于以下条件显示指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库：<br /><br /> 当用户是此实例的 **sysadmin** 服务器角色的成员时，将显示此实例中的所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。<br /><br /> 当用户是此实例中任何 **数据库的** db_owner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库角色的成员时，将显示这些 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。<br /><br/> 有关 SQL Server 角色的详细信息，请参阅 [服务器级别角色](../relational-databases/security/authentication-access/server-level-roles.md) 和 [数据库级别角色](../relational-databases/security/authentication-access/database-level-roles.md)。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services 入门 (SQL Server 2016)](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)  
+
+[Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

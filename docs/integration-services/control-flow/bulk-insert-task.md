@@ -1,32 +1,37 @@
 ---
-title: "大容量插入任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.f1"
-helpviewer_keywords: 
-  - "大容量插入任务"
-  - "复制数据 [Integration Services]"
+title: "大容量插入任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.f1
+helpviewer_keywords:
+- Bulk Insert task
+- copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 大容量插入任务
+# <a name="bulk-insert-task"></a>大容量插入任务
   大容量插入任务为将大量的数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图提供了有效的方法。 例如，假定贵公司在大型主机系统上存储了数百万行的产品列表，但公司的电子商务系统却使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来填充网页。 您必须每晚都用大型机的主产品列表更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品表。 若要更新表，请以制表符分隔格式保存产品列表，并使用大容量插入任务将数据直接复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
   
  为确保高速数据复制，在从源文件向表或视图移动数据时，请不要对数据执行转换。  
   
-## 使用注意事项  
+## <a name="usage-considerations"></a>使用注意事项  
  在使用大容量插入任务之前，请注意以下事项：  
   
 -   大容量插入任务只能从文本文件将数据传输到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图中。 若要使用大容量插入任务从其他数据库管理系统 (DBMS) 传输数据，必须先将数据从源导出到文本文件，然后再将数据从文本文件导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图中。  
@@ -37,14 +42,14 @@ caps.handback.revision: 61
   
 -   只有 sysadmin 固定服务器角色的成员才能够运行包含大容量插入任务的包。  
   
-## 使用事务的大容量插入任务  
+## <a name="bulk-insert-task-with-transactions"></a>使用事务的大容量插入任务  
  如果没有设置批大小，则整个大容量复制操作将被视为一个事务。 批大小为 **0** 表示在一个批中将数据插入。 如果设置了批大小，则每个批代表一个事务，当批运行完成时，该事务也就被提交。  
   
  由于大容量插入任务与事务相关，所以其行为取决于任务是否加入了包事务。 如果大容量插入任务未加入包事务，则在尝试处理下一个批之前，将每个未出错的批作为一个单元提交。 如果大容量插入任务加入了包事务，则在任务结束时，未出错的批会保留在事务中。 这些批要受到包的提交或回滚操作的影响。  
   
  大容量插入任务中的失败不自动回滚已成功加载的批；同样，若任务成功，批也不会自动提交。 只有在响应包和工作流属性设置时，才会发生提交和回滚操作。  
   
-## 源和目标  
+## <a name="source-and-destination"></a>源和目标  
  指定文本源文件的位置时，请注意下列事项：  
   
 -   服务器必须具有访问文件和目标数据库的权限。  
@@ -53,15 +58,15 @@ caps.handback.revision: 61
   
 -   大容量插入任务加载的源文件可以和要向其插入数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库位于同一服务器上，也可以位于远程服务器上。 如果文件在远程服务器上，则必须在路径中使用通用命名约定 (UNC) 名称来指定该文件名。  
   
-## 性能优化  
+## <a name="performance-optimization"></a>性能优化  
  若要优化性能，请注意以下事项：  
   
 -   如果文本文件与要向其插入数据的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库位于同一计算机上，则复制操作可以更快的速度进行，因为数据不是在网络上移动的。  
   
 -   大容量插入任务不记录引发错误的行。 如果必须捕获此信息，请使用数据流组件的错误输出来将引发错误的行捕获到一个异常错误文件中。  
   
-## 大容量插入任务可用的自定义日志项  
- 下表列出了大容量插入任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。  
+## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>大容量插入任务可用的自定义日志项  
+ 下表列出了大容量插入任务的自定义日志项。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |日志项|Description|  
 |---------------|-----------------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 61
 |**BulkInsertTaskEnd**|指示大容量插入完成。|  
 |**BulkInsertTaskInfos**|提供有关任务的说明性信息。|  
   
-## 大容量插入任务配置  
+## <a name="bulk-insert-task-configuration"></a>大容量插入任务配置  
  可以按照下列方法来配置大容量插入任务：  
   
 -   指定 OLE DB 连接管理器，以便连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以及要向其插入数据的表或视图。 大容量插入任务仅支持目标数据库的 OLE DB 连接。  
@@ -98,22 +103,22 @@ caps.handback.revision: 61
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-### 大容量插入任务的编程配置  
+### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>大容量插入任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## 相关任务  
- [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>相关任务  
+ [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   support.microsoft.com 上的技术文章 [您可能会在支持 UAC 的系统上看到“无法准备 SSIS 大容量插入以插入数据”错误](http://go.microsoft.com/fwlink/?LinkId=233693)。  
   
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技术文章[使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
+-   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
   
   

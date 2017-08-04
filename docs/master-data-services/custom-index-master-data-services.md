@@ -1,25 +1,30 @@
 ---
-title: "自定义索引 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自定义索引 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 自定义索引 (Master Data Services)
-  自定义索引在实体中对某一特性（单个索引）或一系列特性（组合索引）创建非聚集索引。 通常索引可提高查询过程的性能。 有关 SQL Server 索引的详细信息，请参阅[索引](../relational-databases/indexes/indexes.md)。  
+# <a name="custom-index-master-data-services"></a>自定义索引 (Master Data Services)
+  自定义索引在实体中对某一特性（单个索引）或一系列特性（组合索引）创建非聚集索引。 通常索引可提高查询过程的性能。 有关 SQL Server 索引的详细信息，请参阅 [索引](../relational-databases/indexes/indexes.md)。  
   
-## 索引类型  
+## <a name="type-of-indexes"></a>索引类型  
  可以为每个实体创建以下类型的多个自定义索引。  
   
 -   唯一索引  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  唯一索引确保索引的列中不包含重复值。 对于组合唯一索引，索引确保所选特性列表中每个值的组合都是唯一的。 如果所选特性存在重复值，则不能创建唯一索引。  
   
-## 规则  
+## <a name="rules"></a>规则  
  以下规则适用于自定义索引，唯一和非唯一均可。  
   
 -   若要创建自定义索引，请确保至少选择一个特性。  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   不能更改自定义索引中包含的特性类型。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

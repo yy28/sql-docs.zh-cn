@@ -1,31 +1,36 @@
 ---
-title: "审核转换编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittransformation.f1"
-helpviewer_keywords: 
-  - "审核转换编辑器"
+title: "审核转换编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittransformation.f1
+helpviewer_keywords:
+- Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4c3cc4b661c58476a98e3528e5853cf80b9861d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 审核转换编辑器
+# <a name="audit-transformation-editor"></a>审核转换编辑器
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
   
  若要了解有关审核转换的详细信息，请参阅 [Audit Transformation](../../../integration-services/data-flow/transformations/audit-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **输出列的名称**  
  为包含审核信息的新输出列提供名称。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 13
 |**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
 |**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)  
   
   

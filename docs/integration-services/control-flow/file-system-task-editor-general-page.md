@@ -1,31 +1,36 @@
 ---
-title: "文件系统任务编辑器（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.general.f1"
-helpviewer_keywords: 
-  - "文件系统任务编辑器"
+title: "文件系统任务编辑器 （常规页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.general.f1
+helpviewer_keywords:
+- File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab4f38b627ab6fdc566e9ba452d3bf83f9630bb9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 文件系统任务编辑器（“常规”页）
+# <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
   可以使用 **“文件系统任务编辑器”** 对话框的 **“常规”** 页，配置任务执行的文件系统操作。  
   
  若要了解此任务，请参阅 [File System Task](../../integration-services/control-flow/file-system-task.md)。  
   
- 必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../Topic/Use%20Variables%20in%20Packages.md)。  
+ 必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 > [!NOTE]  
 >  若要覆盖为 **SourceConnection** 和 **DestinationConnection** 属性选择的变量，请为 **“源”** 和 **“目标”** 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”**页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
@@ -35,7 +40,7 @@ caps.handback.revision: 43
   
  您可以使用表达式来使用不同的变量  
   
-## 选项  
+## <a name="options"></a>选项  
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
@@ -80,37 +85,37 @@ caps.handback.revision: 43
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  
   
-## IsDestinationPathVariable 动态选项  
+## <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable 动态选项  
   
-### IsDestinationPathVariable = True  
+### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”创建新变量。  
+ 在列表中，选择的变量名称或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### IsDestinationPathVariable = False  
+### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-## IsSourcePathVariable 动态选项  
+## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 动态选项  
   
-### IsSourcePathVariable = True  
+### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”创建新变量。  
+ 在列表中，选择的变量名称或单击\<**新变量...**> 若要创建新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](../Topic/Add%20Variable.md)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### IsSourcePathVariable = False  
+### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
+ 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-## Operation 动态选项  
+## <a name="operation-dynamic-options"></a>Operation 动态选项  
   
-### Operation = 设置属性  
+### <a name="operation--set-attributes"></a>Operation = 设置属性  
  **Hidden**  
  指示文件或目录是否可见。  
   
@@ -123,11 +128,11 @@ caps.handback.revision: 43
  **系统**  
  指示文件是否是操作系统文件。  
   
-### Operation = 创建目录  
+### <a name="operation--create-directory"></a>Operation = 创建目录  
  **UseDirectoryIfExists**  
  指示“创建目录”操作是否使用具有指定名称的现有目录，而不创建新目录。  
   
-## 另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
  [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   

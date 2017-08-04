@@ -1,22 +1,27 @@
 ---
-title: "定义状态变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "定义状态变量 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 定义状态变量
+# <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
   
  该 CDC 状态变量由 CDC 控制任务加载、初始化和更新，并且由 CDC 源数据流组件用于确定针对更改记录的当前处理范围。 可对 CDC 控制任务和 CDC 源所共有的任何容器定义该 CDC 状态变量。 此操作可在包级别进行，但也可以对循环容器之类的其他容器进行。  
@@ -27,18 +32,18 @@ caps.handback.revision: 12
   
 |组件|Description|  
 |---------------|-----------------|  
-|**\<state-name>**|这是当前 CDC 状态的名称。|  
+|**\<状态名称 >**|这是当前 CDC 状态的名称。|  
 |**CS**|这标记当前处理范围开始点（当前开始）。|  
-|**\<cs-lsn>**|这是上一次 CDC 运行中处理的最后一个（日志序列号）LSN。|  
+|**\<cs lsn >**|这是上一次 CDC 运行中处理的最后一个（日志序列号）LSN。|  
 |**CE**|这标记当前处理范围结束点（当前结束）。 CDC 状态中的 CE 组分表示 CDC 包当前正在处理或 CDC 包在完全处理其 CDC 处理范围前失败。|  
-|**\<ce-lsn>**|这是当前运行的 CDC 中要处理的最后一个 LSN。 始终假定要处理的最后一个序列号为最大值 (0xFFF…)。|  
+|**\<ce lsn >**|这是当前运行的 CDC 中要处理的最后一个 LSN。 始终假定要处理的最后一个序列号为最大值 (0xFFF…)。|  
 |**IR**|这标记初始处理范围。|  
-|**\<ir-start>**|这是初始加载开始之前的最后一个更改 LSN。|  
-|**\<ir-end>**|这是初始加载结束之后的第一个更改 LSN。|  
+|**\<ir 开始 >**|这是初始加载开始之前的最后一个更改 LSN。|  
+|**\<ir 结束 >**|这是初始加载结束之后的第一个更改 LSN。|  
 |**TS**|这标记最后一个 CDC 状态更新的时间戳。|  
-|**\<timestamp>**|这是 64 位 System.DateTime.UtcNow 属性的十进制表示法。|  
+|**\<时间戳 >**|这是 64 位 System.DateTime.UtcNow 属性的十进制表示法。|  
 |**ER**|当最后一个操作失败且包括错误原因的简短说明时显示它。 如果存在该组分，则它始终最后一个显示。|  
-|**\<short-error-text>**|这是简短的错误说明。|  
+|**\<短错误文本 >**|这是简短的错误说明。|  
   
  LSN 和序列号每个都作为一个十六进制的字符串编码，该字符串最多包含 20 位数字，表示 Binary(10) 的 LSN 值。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 12
 |ILEND（初始加载已结束）|这是初始加载包已成功结束、 **MarkInitialLoadEnd** 操作调用 CDC 控制任务后时的状态。|  
 |ILUPDATE（初始加载更新）|这是在初始加载后仍在处理初始处理范围期间运行滴送更新包时的状态。 这是 **GetProcessingRange** 操作调用 CDC 控制任务后的状态。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
 |TFEND（滴送更新已结束）|这是常规 CDC 运行应该出现的状态。 它指示前一次运行已成功完成，可以开始具有新的处理范围的新一轮运行。|  
-|TFSTART|这是在非初始运行滴送更新包时、**GetProcessingRange**操作调用 CDC 控制任务后的状态。<br /><br /> 这指示已启动常规 CDC 运行，但运行未完成或未完全结束 (**MarkProcessedRange**)。|  
+|TFSTART|这是在非初始运行滴送更新包时、 **GetProcessingRange** 操作调用 CDC 控制任务后的状态。<br /><br /> 这指示已启动常规 CDC 运行，但运行未完成或未完全结束 (**MarkProcessedRange**)。|  
 |TFREDO（重新处理滴送更新）|这是在 TFSTART 之后执行 **GetProcessingRange** 时出现的状态。 这指示上次运行未成功完成。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
 |ERROR|CDC 组处于 ERROR 状态。|  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 12
   
 -   TFREDO/CS/0x0000030D000000AE0003/CE/0x0000159D1E0F01000000/TS/2011-08-09T05:30:59.5544900/  
   
-### 定义 CDC 状态变量  
+### <a name="to-define-a-cdc-state-variable"></a>定义 CDC 状态变量  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有您需要定义变量的 CDC 流的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 12
   
  如果您不将该 CDC 控制任务用于“自动状态持久化”，则必须从持久性存储区中加载该变量值，在该持久性存储区中，在上次包运行时保存了该变量值并且在当前处理范围完成后该变量值将写回持久性存储区。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDC 控制任务](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

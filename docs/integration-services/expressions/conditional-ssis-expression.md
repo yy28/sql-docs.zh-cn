@@ -1,29 +1,34 @@
 ---
-title: "? :（条件）（SSIS 表达式） | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "条件运算符 (?:)"
-  - "?:（条件运算符）"
+title: "? : （条件) （SSIS 表达式） |Microsoft 文档"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? :（条件）（SSIS 表达式）
+# <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *boolean_expression*  
  计算结果为 TRUE、FALSE 或 NULL 的任意有效表达式。  
   
@@ -41,10 +46,10 @@ boolean_expression?expression1:expression2
  *expression2*  
  为任意有效的表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  *expression1* 或 *expression2*的数据类型。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果 *boolean_expression* 的计算结果为 NULL，则表达式结果为 NULL。 如果选择的表达式（ *expression1* 或 *expression2* ）为 NULL，则结果为 NULL。 如果选择的表达式不为 NULL，但未选择的表达式为 NULL，则结果为所选表达式的值。  
   
  如果 *expression1* 和 *expression2* 的数据类型相同，则结果便为该数据类型。 对于结果类型适用于下列附加规则：  
@@ -84,7 +89,7 @@ boolean_expression?expression1:expression2
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例显示根据条件计算结果为 `savannah` 或 `unknown`的表达式。  
   
 ```  
@@ -97,8 +102,8 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

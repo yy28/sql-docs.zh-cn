@@ -1,26 +1,31 @@
 ---
-title: "重叠的用户和组权限（主数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用户 [Master Data Services], 解析权限"
-  - "权限 [Master Data Services], 用户和组重叠"
-  - "组 [Master Data Services], 解析权限"
+title: "重叠的用户和组权限 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- users [Master Data Services], resolving permissions
+- permissions [Master Data Services], user and group overlaps
+- groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a415162382d8162a336d722d4630f7091427ff2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重叠的用户和组权限（主数据服务）
+# <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
   用户的权限基于：  
   
 -   来自组成员身份的权限。  
@@ -38,7 +43,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  可以在用户界面中查看用户和组的重叠权限的解决方法。 “模型”和“层次结构成员”选项卡都具有下拉列表，可以从中选择“有效”，查看有效权限。  
   
-## 示例 1  
+## <a name="example-1"></a>示例 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
   
  用户同时属于组 1 和组 2。  
@@ -51,7 +56,7 @@ caps.handback.revision: 7
   
  结果：用户对 Product 实体的有效权限是 **“更新”** 。  
   
-## 示例 2  
+## <a name="example-2"></a>示例 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  用户同时属于组 1 和组 2。  
@@ -64,7 +69,7 @@ caps.handback.revision: 7
   
  结果：用户对 Product 实体的有效权限是 **“拒绝”** 。  
   
-## 示例 3  
+## <a name="example-3"></a>示例 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
   
  用户同时属于组 1 和组 2。  
@@ -77,8 +82,8 @@ caps.handback.revision: 7
   
  结果：用户对这些成员的有效权限是 **“更新”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [重叠的模型和成员权限 (Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [重叠的模型和成员权限 &#40;Master Data Services &#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

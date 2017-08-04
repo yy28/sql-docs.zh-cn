@@ -1,26 +1,31 @@
 ---
-title: "创建和执行实体同步关系（主数据服务） | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建和执行实体同步关系 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建和执行实体同步关系（主数据服务）
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  创建实体同步关系的先决条件：  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -81,7 +86,7 @@ caps.handback.revision: 6
   
  **执行实体同步关系**  
   
-1.  在“主数据管理器”中，单击“系统管理” 。  
+1.  在主数据管理器中，单击“系统管理” 。  
   
 2.  在“模型视图”  页上，从菜单栏中指向“管理”  ，然后单击“实体同步” 。  
   
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  单击 **“执行”**。  
   
-## 同步关系信息  
+## <a name="sync-relationship-information"></a>同步关系信息  
  对于创建的每个同步关系，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
 |列|Description|  
 |------------|-----------------|  
-|状态|同步关系状态。<br /><br /> 单击“保存”或执行同步关系后，系统会显示 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 图像，表示同步关系正在更新。<br /><br /> 如果在创建、编辑或执行同步关系时出错，系统会显示 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 图像。<br /><br /> 否则，如果状态为“正常”，则显示 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 图像。|  
+|状态|同步关系状态。<br /><br /> 当你单击**保存**或执行是同步关系，![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")图像，表示正在更新的同步关系。<br /><br /> 如果在创建、 编辑或执行同步关系时出错![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")图像显示。<br /><br /> 否则，状态为正常和![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")图像显示。|  
 |源模型|源模型名称。|  
 |源版本|源版本名称。|  
 |源实体|源实体名称。|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   “更新时间”：上次更新同步的日期和时间。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  [编辑和删除实体同步关系 (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

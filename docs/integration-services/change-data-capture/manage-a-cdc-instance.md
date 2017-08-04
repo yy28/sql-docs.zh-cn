@@ -1,24 +1,29 @@
 ---
-title: "管理 CDC 实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+title: "管理 CDC 实例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 管理 CDC 实例
+# <a name="manage-a-cdc-instance"></a>管理 CDC 实例
   您可以使用 CDC 设计器控制台查看与您创建的实例有关的信息，以及管理实例操作。  
   
  在左侧窗格中单击某一实例的名称可查看与该实例有关的信息。  
@@ -26,7 +31,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  如果您在左侧窗格中选择某一服务，则可用实例的列表也会显示在 CDC 设计器控制台的中央。 如果您在该部分中选择某一实例，则可以在右侧窗格中执行任务；但是，您将不能在属性选项卡中查看信息。  
   
-## 在显示 CDC 实例信息时您可以执行的操作  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>在显示 CDC 实例信息时您可以执行的操作  
  从右窗格中执行以下操作：  
   
  **开始**  
@@ -68,10 +73,10 @@ caps.handback.revision: 11
   
     |||  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置不当**：发生了需要手动干预的配置错误。<br /><br /> **要求提供密码**：没有为 Oracle CDC 实例设置密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**正在运行**：CDC 实例正在运行并且正在处理更改记录。 以下子状态可用：<br /><br /> **空闲**：所有更改记录都已处理并且存储在目标更改表中。 没有活动事务。<br /><br /> **正在处理**：存在正处理、但尚未写入更改表的更改记录。|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**已停止**：CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**已暂停**：CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**：无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**：存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**：记录器连接到 Oracle，但由于临时问题（例如，所需的事务日志不可用）无法读取 Oracle 事务日志。|  
+    |![错误](../../integration-services/change-data-capture/media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置不当**：发生了需要手动干预的配置错误。<br /><br /> **要求提供密码**：没有为 Oracle CDC 实例设置密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
+    |![好](../../integration-services/change-data-capture/media/okay.gif "好")|**正在运行**：CDC 实例正在运行并且正在处理更改记录。 以下子状态可用：<br /><br /> **空闲**：所有更改记录都已处理并且存储在目标更改表中。 没有活动事务。<br /><br /> **正在处理**：存在正处理、但尚未写入更改表的更改记录。|  
+    |![停止](../../integration-services/change-data-capture/media/stop.gif "停止")|**已停止**：CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
+    |![已暂停](../../integration-services/change-data-capture/media/paused.gif "已暂停")|**已暂停**：CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**：无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**：存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**：记录器连接到 Oracle，但由于临时问题（例如，所需的事务日志不可用）无法读取 Oracle 事务日志。|  
   
 -   **详细状态**：当前子状态。  
   
@@ -102,21 +107,21 @@ caps.handback.revision: 11
     -   **写入的更改数**：已写入 SQL Server 更改表的更改的数目。  
   
  **Oracle**  
- 显示与 CDC 实例及其与 Oracle 数据库的连接有关的信息。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”；或者在右侧窗格中单击“属性”以打开“\<实例>属性”对话框。  
+ 显示与 CDC 实例及其与 Oracle 数据库的连接有关的信息。 此选项卡为只读。 若要编辑这些属性，请右键单击左窗格中的实例，然后选择**属性**或单击**属性**在右窗格中打开\<实例 > 属性对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)。  
   
  **表**  
- 显示有关 CDC 实例中包含的表的信息。 在此处也提供列信息。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”；或者在右侧窗格中单击“属性”以打开“\<实例>属性”对话框。  
+ 显示有关 CDC 实例中包含的表的信息。 在此处也提供列信息。 此选项卡为只读。 若要编辑这些属性，请右键单击左窗格中的实例，然后选择**属性**或单击**属性**在右窗格中打开\<实例 > 属性对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)。  
   
  **高级**  
- 显示 CDC 实例的高级属性和属性值。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”；或者在右侧窗格中单击“属性”以打开“\<实例>属性”对话框。  
+ 显示 CDC 实例的高级属性和属性值。 此选项卡为只读。 若要编辑这些属性，请右键单击左窗格中的实例，然后选择**属性**或单击**属性**在右窗格中打开\<实例 > 属性对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何查看 CDC 实例属性](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [如何编辑 CDC 实例属性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

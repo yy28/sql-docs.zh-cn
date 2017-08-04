@@ -1,24 +1,29 @@
 ---
-title: "CDC 拆分器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsplitter.f1"
+title: "CDC 拆分器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2bee6609acacd6c9d441eae62d178818aea27a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 拆分器
+# <a name="cdc-splitter"></a>CDC 拆分器
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
   
 |操作的值|输出|Description|  
@@ -34,7 +39,7 @@ caps.handback.revision: 8
   
  此 CDC 拆分器转换有一个常规输入和一个错误输出。  
   
-## 错误处理  
+## <a name="error-handling"></a>错误处理  
  此 CDC 拆分器转换有一个错误输出。 具有 $operation 列的无效值的输入行被视为错误的，并且根据该输入的 **ErrorRowDisposition** 属性进行处理。  
   
  组件的错误输出包括以下输出列：  
@@ -45,7 +50,7 @@ caps.handback.revision: 8
   
 -   **错误行列**：导致了该错误的行的输入列。  
   
-## 配置 CDC 拆分器  
+## <a name="configuring-the-cdc-splitter"></a>配置 CDC 拆分器  
  没有用于 CDC 拆分器的可配置属性。  
   
  有关使用 CDC 拆分器的详细信息，请参阅 Microsoft SQL Server Integration Services 的 CDC 组件。  
@@ -56,7 +61,7 @@ caps.handback.revision: 8
   
 -   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”**。  
   
-## 另请参阅  
- [根据更改的类型定向 CDC 流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+## <a name="see-also"></a>另请参阅  
+ [定向 CDC 流根据更改的类型](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

@@ -1,47 +1,52 @@
 ---
-title: "REPLICATE（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "REPLICATE 函数"
+title: "REPLICATE （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# REPLICATE（SSIS 表达式）
+# <a name="replicate-ssis-expression"></a>REPLICATE（SSIS 表达式）
   返回多次复制后的字符表达式。 *times* 参数的计算结果必须为整数。  
   
 > [!NOTE]  
 >  REPLICATE 函数经常使用长字符串，因此更有可能受到对表达式长度 4000 个字符的限制。 如果某表达式的计算结果具有 Integration Services 数据类型 DT_WSTR 或 DT_STR，则该表达式将被在 4000 个字符处截断。 如果子表达式的结果类型为 DT_STR 或 DT_WSTR，则该子表达式将同样被截断为 4000 个字符，与总体表达式结果类型无关。 可以适当处理截断的结果，否则会导致警告或错误。 有关详细信息，请参阅[语法 (SSIS)](../../integration-services/expressions/syntax-ssis.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 REPLICATE(character_expression,times)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  要复制的字符表达式。  
   
  *times*  
  指定 character_expression 复制次数的整数表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果 times 为 0，则该函数返回零长度的字符串。  
   
  如果 *times* 为负数，则该函数返回一个错误。  
@@ -52,7 +57,7 @@ REPLICATE(character_expression,times)
   
  如果有一个参数为空，REPLICATE 将返回空结果。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例将一个字符串文字复制了三次。 返回结果为“Mountain BikeMountain BikeMountain Bike”。  
   
 ```  
@@ -71,7 +76,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

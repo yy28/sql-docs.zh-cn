@@ -1,31 +1,36 @@
 ---
-title: "大容量插入任务编辑器（“选项”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.options.f1"
-helpviewer_keywords: 
-  - "大容量插入任务编辑器"
+title: "大容量插入任务编辑器 （选项页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.options.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a714027caa6581a56d9f22da84c48d469e80cb1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 大容量插入任务编辑器（“选项”页）
+# <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
   使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务可以将大量的数据复制到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图中。  
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **CodePage**  
  指定数据文件中数据的代码页。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 31
  **FirstRow**  
  指定要开始复制的第一行。  
   
- **选项**  
+ **“大容量插入任务编辑器”**  
  |术语|定义|  
 |----------|----------------|  
 |**检查约束**|选择此项将检查表约束和列约束。|  
@@ -59,11 +64,11 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  大容量加载操作不能导入的每一行都被计为一个错误。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [大容量插入任务编辑器（“常规”页）](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
- [大容量插入任务编辑器（“连接”页）](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
- [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [大容量插入任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [大容量插入任务编辑器 &#40;连接页 &#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)   
+ [表达式页](../../integration-services/expressions/expressions-page.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   

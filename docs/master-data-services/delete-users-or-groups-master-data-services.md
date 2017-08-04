@@ -1,27 +1,32 @@
 ---
-title: "删除用户或组 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "删除组 [Master Data Services]"
-  - "组 [Master Data Services], 删除"
-  - "用户 [Master Data Services], 删除"
-  - "删除用户 [Master Data Services]"
+title: "删除用户或组 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting groups [Master Data Services]
+- groups [Master Data Services], deleting
+- users [Master Data Services], deleting
+- deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c0a5934afc97b24d884738aa1d6f8c2cc1c80cf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除用户或组 (Master Data Services)
+# <a name="delete-users-or-groups-master-data-services"></a>删除用户或组 (Master Data Services)
   在您不再希望用户或组访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]时删除它们。  
   
  在删除用户和组时请注意以下行为：  
@@ -32,12 +37,12 @@ caps.handback.revision: 7
   
 -   对安全性所做的更改在 20 分钟之内不会传播到 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
-### 删除用户或组  
+### <a name="to-delete-users-or-groups"></a>删除用户或组  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
 5.  在确认对话框中，单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

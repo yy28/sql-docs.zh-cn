@@ -1,24 +1,29 @@
 ---
-title: "创建 SQL Server 更改数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraIns"
+title: "创建 SQL Server 更改数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 创建 SQL Server 更改数据库
+# <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  
   
  在您创建新的 CDC 数据库时，将为 SQL Server CDC 启用该数据库，并且此启用将要求作为 `sysadmin` 固定服务器角色的成员的登录名。  
@@ -30,7 +35,7 @@ caps.handback.revision: 8
   
  有关在“连接到 SQL Server”对话框中输入数据的信息，请参阅 [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **Oracle CDC 实例**  
  键入与您正创建的 CDC 实例有关的以下信息。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
      创建数据库后，可以单击 **“下一步”** 以便 [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC 服务](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   

@@ -1,42 +1,47 @@
 ---
-title: "HEX（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "十六进制数据"
-  - "HEX 函数"
+title: "HEX （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX（SSIS 表达式）
+# <a name="hex-ssis-expression"></a>HEX（SSIS 表达式）
   返回一个表示整数的十六进制值的字符串。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *integer_expression*  
  有符号或无符号整数。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果 integer_expression 为 Null，则 HEX 返回 Null。  
   
  integer_expression 参数的计算结果必须为整数。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -55,7 +60,7 @@ HEX(integer_expression)
   
 -   DT_I8 和 DT_UI8 返回最大长度为 16 的字符串。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例使用了一个数值。 该函数将返回值 190。  
   
 ```  
@@ -74,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

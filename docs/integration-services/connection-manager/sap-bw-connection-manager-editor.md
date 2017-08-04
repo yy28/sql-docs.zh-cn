@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 连接管理器编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
+title: "SAP BW 连接管理器编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f07a79e630550d7d0599026a91ee53f5b05d05
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 连接管理器编辑器
+# <a name="sap-bw-connection-manager-editor"></a>SAP BW 连接管理器编辑器
   使用 **“SAP BW 连接管理器编辑器”** 指定用于连接 SAP Netweaver BW 版本 7 系统的属性。  
   
  SAP BW 连接管理器向 SAP BW 源或目标提供与 SAP Netweaver BW 7 系统的连接。 若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 连接管理器的详细信息，请参阅 [SAP BW 连接管理器](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
     -   右键单击 SAP BW 连接管理器，然后选择“编辑”。  
   
-## 选项  
+## <a name="options"></a>选项  
   
 > [!NOTE]  
 >  如果您不知道配置连接管理器所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -83,7 +88,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。  
   
- **分组**  
+ **组**  
  要连接一组负载平衡的服务器，请指定服务器组名称。  
   
 > [!NOTE]  
@@ -107,13 +112,13 @@ caps.handback.revision: 10
   
  如果不选择日志目录，则不启用日志记录功能。  
   
- **浏览**  
+ **“浏览”**  
  浏览以选择一个用作日志目录的文件夹。  
   
  **测试连接**  
  使用您提供的值来测试连接。 单击 **“测试连接”**后，将显示一个消息框，指示连接成功还是失败。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "重新激活成员或集合 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "集合 [Master Data Services], 重新激活"
-  - "合并成员 [Master Data Services], 重新激活"
-  - "重新激活成员 [Master Data Services]"
-  - "成员 [Master Data Services], 重新激活"
-  - "重新激活集合 [Master Data Services]"
-  - "叶成员 [Master Data Services], 重新激活"
+title: "重新激活成员或集合 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], reactivating
+- consolidated members [Master Data Services], reactivating
+- reactivating members [Master Data Services]
+- members [Master Data Services], reactivating
+- reactivating collections [Master Data Services]
+- leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc90708210730332fc2baafa0f6ab61ceadb6840
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重新激活成员或集合 (Master Data Services)
+# <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以重新激活以下成员：  
   
 -   这些成员已通过临时过程停用。  
@@ -38,14 +43,14 @@ caps.handback.revision: 11
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 重新激活成员或集合  
+### <a name="to-reactivate-a-member-or-collection"></a>重新激活成员或集合  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
   
@@ -61,9 +66,10 @@ caps.handback.revision: 11
   
 7.  在确认对话框中，单击 **“确定”**。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   
- [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
+ [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   
+

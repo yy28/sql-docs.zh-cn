@@ -1,35 +1,40 @@
 ---
-title: "创建函数以检索变更数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量加载 [Integration Services]，创建函数"
+title: "创建函数以检索变更数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 创建函数以检索变更数据
+# <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
   
 > [!NOTE]  
 >  在创建用于执行变更数据增量加载的包的过程中，第二步是创建用于检索数据的函数。 有关创建此包的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 变更数据捕获函数的设计注意事项  
+## <a name="design-considerations-for-change-data-capture-functions"></a>变更数据捕获函数的设计注意事项  
  为了检索变更数据，包数据流中的源组件将调用下面的变更数据捕获查询函数之中的一个：  
   
--   **cdc.fn_cdc_get_net_changes_<capture_instance>** 对于此查询，为各更新返回的单个行包含每个变更行的最终状态。 在大多数情况下，您只需要净更改查询返回的数据。 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md)。  
+-   **cdc.fn_cdc_get_net_changes_<capture_instance>** 对于此查询，为各更新返回的单个行包含每个变更行的最终状态。 在大多数情况下，您只需要净更改查询返回的数据。 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
--   **cdc.fn_cdc_get_all_changes_<capture_instance>** 此查询返回捕获间隔期间各行中发生的所有更改。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  (Transact-SQL)](../Topic/cdc.fn_cdc_get_all_changes_%3Ccapture_instance%3E%20%20\(Transact-SQL\).md)。  
+-   **cdc.fn_cdc_get_all_changes_<capture_instance>** 此查询返回捕获间隔期间各行中发生的所有更改。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)。  
   
  然后，源组件获取函数返回的结果并将这些结果传递到下游转换和目标，以将变更数据应用到最终目标。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 29
   
 -   可以使用本主题中的准则和示例编写自己的表值函数。  
   
-## 调用存储过程来创建表值函数  
+## <a name="calling-a-stored-procedure-to-create-the-table-valued-function"></a>调用存储过程来创建表值函数  
  创建所需表值函数最快速且简便的方法是调用 **sys.sp_cdc_generate_wrapper_function** 系统存储过程。 此存储过程生成用于创建包装函数的脚本，这些脚本是专为满足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源组件的需要而设计的。  
   
 > [!IMPORTANT]  
@@ -51,7 +56,7 @@ caps.handback.revision: 29
   
  若要了解如何使用此系统存储过程，您应该了解该过程的执行内容、该过程生成的脚本以及这些脚本创建的包装函数。  
   
-### 了解和使用存储过程  
+### <a name="understanding-and-using-the-stored-procedure"></a>了解和使用存储过程  
  **sys.sp_cdc_generate_wrapper_function** 系统存储过程生成脚本，这些脚本用于创建供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用的包装函数。  
   
  下面是存储过程定义的前几行：  
@@ -83,7 +88,7 @@ caps.handback.revision: 29
   
 -   包装函数的 CREATE 语句。  
   
-### 了解和使用存储过程创建的脚本  
+### <a name="understanding-and-using-the-scripts-created-by-the-stored-procedure"></a>了解和使用存储过程创建的脚本  
  通常，开发人员使用 INSERT...EXEC 语句调用 **sys.sp_cdc_generate_wrapper_function** 存储过程，并将该存储过程创建的脚本保存到临时表中。 然后，可以单独选择每个脚本，并运行该脚本以创建相应的包装函数。 但是，开发人员还可以使用一组 SQL 命令运行所有的 CREATE 脚本，如以下示例代码中所示：  
   
 ```  
@@ -106,7 +111,7 @@ close #hfunctions
 deallocate #hfunctions  
 ```  
   
-### 了解和使用存储过程创建的函数  
+### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>了解和使用存储过程创建的函数  
  为了系统地遍历捕获的变更数据的时间线，生成的包装函数要求一个时间间隔的 *@end_time* 参数作为下一个时间间隔的 *@start_time* 参数。 遵循此约定时，生成的包装函数可执行以下任务：  
   
 -   将日期/时间值映射为内部使用的 LSN 值。  
@@ -115,9 +120,9 @@ deallocate #hfunctions
   
  为了简化对更改表的所有行的查询，生成的包装函数还支持以下约定：  
   
--   如果 @start_time 参数为 Null，包装函数将使用捕获实例中最低的 LSN 值作为查询的下限。  
+-   如果@start_time参数为 null，包装器函数中使用的最小 LSN 值捕获实例中，作为查询的下限。  
   
--   如果 @end_time 参数为 Null，包装函数将使用捕获实例中最高的 LSN 值作为查询的上限。  
+-   如果@end_time参数为 null，包装器函数中使用的最高的 LSN 值捕获实例中，作为查询的上限。  
   
  大部分用户应该能够使用 **sys.sp_cdc_generate_wrapper_function** 系统存储过程创建的包装函数而无需进行修改。 但是，若要自定义包装函数，您必须自定义 CREATE 脚本，然后再运行该脚本。  
   
@@ -125,7 +130,7 @@ deallocate #hfunctions
   
 -   时间间隔的起始日期/时间值和结束日期/时间值。 包装函数使用日期/时间值作为查询间隔的端点，而变更数据捕获函数使用两个 LSN 值作为端点。  
   
--   行筛选器。 对于包装函数和变更数据捕获函数，*@row_filter_option* 参数是相同的。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](../Topic/cdc.fn_cdc_get_all_changes_%3Ccapture_instance%3E%20%20\(Transact-SQL\).md) 和 [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact SQL)](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md)。  
+-   行筛选器。 对于包装函数和变更数据捕获函数， *@row_filter_option* 参数是相同的。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 和 [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
  包装函数返回的结果集包含以下数据：  
   
@@ -137,7 +142,7 @@ deallocate #hfunctions
   
  如果你的包调用查询所有变更的包装函数，该包装函数还将返回列 __CDC_STARTLSN 和 \__CDC_SEQVAL。 这两列分别成为结果集的第一列和第二列。 包装函数还将基于这两列对结果集进行排序。  
   
-## 编写自己的表值函数  
+## <a name="writing-your-own-table-value-function"></a>编写自己的表值函数  
  还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编写自己的可调用变更数据捕获查询函数的表值包装函数，并将该表值包装函数存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 有关如何创建 Transact-SQL 函数的详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)。  
   
  下面的示例定义一个表值函数，该表值函数将检索 Customer 表在指定的变更间隔发生的变更。 此函数使用变更数据捕获函数将 **datetime** 值映射到变更表内部使用的二进制日志序列号 (LSN) 值。 此函数还可以处理以下几种特殊情况：  
@@ -148,7 +153,7 @@ deallocate #hfunctions
   
 -   如果开始的 LSN 与结束的 LSN 相等，则通常指示所选间隔不存在记录，此函数会退出。  
   
-### 查询变更数据的表值函数示例  
+### <a name="example-of-a-table-value-function-that-queries-for-change-data"></a>查询变更数据的表值函数示例  
   
 ```  
 CREATE function CDCSample.uf_Customer (  
@@ -202,7 +207,7 @@ go
   
 ```  
   
-### 检索带有变更数据的其他元数据  
+### <a name="retrieving-additional-metadata-with-the-change-data"></a>检索带有变更数据的其他元数据  
  尽管上述用户创建的表值函数仅使用 **__$operation** 列，**cdc.fn_cdc_get_net_changes_<capture_instance>** 函数将针对每个变更行返回四列元数据。 如果想要在数据流中使用这些值，可以从表值包装函数中将它们作为额外的列返回。  
   
 |列名|数据类型|Description|  
@@ -211,11 +216,11 @@ go
 |**__$seqval**|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
 |**__$operation**|**int**|与更改关联的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
 |**__$update_mask**|**varbinary(128)**|基于变更表的列序号的位掩码，用于标识那些发生了变更的列。 如果需要确定哪些列发生了更改，则可检查此值。|  
-|**\<已捕获的源表列>**|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
+|**\<捕获源表列 >**|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
   
- 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../Topic/cdc.fn_cdc_get_net_changes_%3Ccapture_instance%3E%20\(Transact-SQL\).md)。  
+ 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
  **下一个主题：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  

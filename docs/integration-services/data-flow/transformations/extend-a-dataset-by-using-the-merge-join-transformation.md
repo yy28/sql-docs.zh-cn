@@ -1,32 +1,37 @@
 ---
-title: "使用合并联接转换扩展数据集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "合并联接转换"
-  - "数据集 [Integration Services], 联接"
-  - "数据集 [Integration Services], 扩展"
-  - "联接数据集 [Integration Services]"
+title: "通过使用合并联接转换扩展数据集 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Join transformation
+- datasets [Integration Services], joining
+- datasets [Integration Services], extending
+- joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用合并联接转换扩展数据集
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
   若要添加和配置合并联接转换，则包中必须已包含至少一个数据流任务和为合并联接转换提供输入的两个数据流组件。  
   
- 合并联接转换需要两个已排序的输入。 有关详细信息，请参阅[为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
+ 合并联接转换需要两个已排序的输入。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
   
-### 扩展数据集  
+### <a name="to-extend-a-dataset"></a>扩展数据集  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 27
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并联接转换](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   

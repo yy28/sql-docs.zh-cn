@@ -1,22 +1,27 @@
 ---
-title: "安装 Distributed Replay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安装 Distributed 的 Replay |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 安装 Distributed Replay
+# <a name="install-distributed-replay"></a>安装 Distributed Replay
   可以采用以下三种方法之一安装 Distributed Replay：  
   
 -   [从安装向导安装 Distributed Replay](#bkmk_wizard)  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
 -   [使用配置文件安装 Distributed Replay](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> 从安装向导安装 Distributed Replay  
- 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
+ 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
   
 -   您可以将管理工具与 Distributed Replay 控制器安装在同一台计算机上，也可以安装在不同的计算机上。  
   
@@ -60,19 +65,19 @@ caps.handback.revision: 21
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]工具  
   
-     \- 或 -  
+     \- OR-  
   
-     \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
+     \<共享功能目录 > \Tools\\（用户提供的替代共享的功能目录）  
   
 -   在 64 位系统上：  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- 或 -  
+     \- OR-  
   
-     \<Share Feature Directory (x86)>\Tools\\（用户提供的替代共享功能 (x86) 目录）  
+     \<共享功能目录 (x86) > \Tools\\（用户提供的替代共享的功能 (x86) 目录）  
   
-#### 安装 Distributed Replay 功能  
+#### <a name="to-install-distributed-replay-features"></a>安装 Distributed Replay 功能  
   
 1.  若要开始安装任何 Distributed Replay 功能，请启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 21
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位计算机上，默认安装路径为 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  在 64 位计算机上默认安装路径是**C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. 在完成后，单击 **“下一步”**。  
   
@@ -127,28 +132,28 @@ caps.handback.revision: 21
 14. 在 **“准备安装程序”** 页上，单击 **“安装”**。  
   
     > [!IMPORTANT]  
-    >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅[完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+    >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
-### .NET Framework 安全性  
+### <a name="net-framework-security"></a>.NET Framework 安全性  
  您必须具有管理权限才能安装任何 Distributed Replay 功能。 只有拥有 sysadmin 权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名才可以将客户端服务帐户添加到测试服务器的 sysadmin 服务器角色中。 有关分布式重播的安全注意事项的详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
 ##  <a name="bkmk_command_prompt"></a> 从命令提示符安装 Distributed Replay  
- 通过从命令提示符安装 Distributed Replay 的新实例，您可以指定要安装的功能以及如何配置这些功能。 在命令提示符下安装支持对 Distributed Replay 组件进行安装、修复、升级和卸载。 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）。  
+ 通过从命令提示符安装 Distributed Replay 的新实例，您可以指定要安装的功能以及如何配置这些功能。 在命令提示符下安装支持对 Distributed Replay 组件进行安装、修复、升级和卸载。 通过命令提示符安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）。  
   
 > [!NOTE]  
 >  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
-### 安装参数  
- 顶级功能列表包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和工具。 工具功能将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和其他共享组件。 若要安装 Distributed Replay 组件，请指定以下参数：  
+### <a name="installation-parameters"></a>安装参数  
+ 顶级功能列表包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和工具。 工具功能将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]和其他共享组件。 若要安装 Distributed Replay 组件，请指定以下参数：  
   
 |组件|参数|  
 |---------------|---------------|  
-|Distributed Replay 控制器|**DREPLAY_CTLR**|  
-|Distributed Replay 客户端|**DREPLAY_CLT**|  
+|“Distributed Replay 控制器”|**DREPLAY_CTLR**|  
+|“Distributed Replay 客户端”|**DREPLAY_CLT**|  
 |管理工具|**工具**|  
   
 > [!IMPORTANT]  
->  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅[完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+>  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
  使用下表中的参数可开发用于安装的命令行脚本。  
   
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **可选**|Distributed Replay 客户端服务的工作目录。|有效的路径|  
 |/CLTRESULTDIR<br /><br /> **可选**|Distributed Replay 客户端服务的结果目录。|有效的路径|  
   
-### 示例语法：  
+### <a name="sample-syntax"></a>示例语法：  
  **安装 Distributed Replay 控制器组件**  
   
 ```  
@@ -187,18 +192,18 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   命令行的值覆盖配置文件中的值  
   
- 有关如何使用配置文件的详细信息，请参阅[使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
+ 有关如何使用配置文件的详细信息，请参阅 [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
   
 > [!IMPORTANT]  
->  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅[完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
+>  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
   
-#### 生成配置文件  
+#### <a name="to-generate-a-configuration-file"></a>生成配置文件  
   
 1.  按照安装向导的说明操作，直到出现 **“准备安装”** 页面。 配置文件的路径是在 **“准备安装”** 页的配置文件路径部分中指定的。  
   
 2.  取消安装并且不要真正完成安装，以便生成 INI 文件。  
   
-#### 使用配置文件安装 Distributed Replay  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>使用配置文件安装 Distributed Replay  
   
 -   通过命令提示符运行安装并使用 ConfigurationFile 参数提供 ConfigurationFile.ini。  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  您必须在命令行中指定这两个密码，因为您无法在配置文件中配置这些密码。  
   
-## 另请参阅  
- [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [ Distributed Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>另请参阅  
+ [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

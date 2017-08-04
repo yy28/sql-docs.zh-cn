@@ -1,24 +1,29 @@
 ---
-title: "业务规则扩展 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "业务规则扩展 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 业务规则扩展 (Master Data Services)
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，可以将用户定义的 SQL 脚本作为预定义条件和操作的扩展进行应用。  
+# <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以将用户定义的 SQL 脚本作为预定义条件和操作的扩展进行应用。  
   
 > [!NOTE]  
 >  所有脚本都必须在 [usr] 架构下定义。  
@@ -67,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。  
@@ -76,7 +81,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   用户定义脚本已添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
   
-## 创建业务规则，以将用户定义脚本用作条件或操作  
+## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>创建业务规则，以将用户定义脚本用作条件或操作  
   
 1.  在主数据管理器中，单击“系统管理” 。  
   
@@ -86,7 +91,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 4.  从“实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”下拉列表中，选择要应用业务规则的成员类型。  
+5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
 6.  单击 **“添加”**。  
   
@@ -110,9 +115,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  单击 **“保存”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [业务规则条件 (Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
- [业务规则操作 (Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  
+ [业务规则条件 &#40;Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [业务规则操作 &#40;Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

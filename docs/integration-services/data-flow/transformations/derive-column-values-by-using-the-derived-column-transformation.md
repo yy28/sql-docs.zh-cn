@@ -1,32 +1,37 @@
 ---
-title: "使用派生列转换派生列值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [Integration Services]"
-  - "派生列"
-  - "列 [Integration Services], 值"
-  - "派生列转换"
+title: "通过使用派生的列转换派生列值 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Integration Services]
+- derived columns
+- columns [Integration Services], values
+- Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用派生列转换派生列值
+# <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
   
  派生列转换使用表达式来更新现有值或向新列中添加值。 当您选择向新列中添加值时， **“派生列转换编辑器”** 对话框会对表达式求值并相应地定义列的元数据。 例如，如果一个表达式连接两列（每列的数据类型均为 DT_WSTR，长度均为 50），两列值之间有一个空格，则新列的数据类型为 DT_WSTR，长度为 101。 您可以更新新列的数据类型。 唯一的要求是数据类型与插入的数据兼容。 例如，当您将日期值分配给数据类型为整数的列时， **“派生列转换编辑器”** 对话框将生成验证错误。 根据所选数据类型，您可以指定列的长度、精度、小数位数和代码页。  
   
-### 派生列值  
+### <a name="to-derive-column-values"></a>派生列值  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 48
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在“派生列”列表中，选择“\<作为新列添加>”以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
+7.  在**派生列**列表中，选择**\<将添加为新的列 >**表达式的计算结果写入新的列，或选择要使用的计算结果更新现有列。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   
@@ -51,18 +56,18 @@ caps.handback.revision: 48
   
 9. 还可以在 **“派生列名称”** 列中修改这些值。  
   
-10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅[在数据流组件中配置错误输出](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 11. 单击 **“确定”**。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
- [派生列转换](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+## <a name="see-also"></a>另请参阅  
+ [派生的列转换](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS &#41;表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

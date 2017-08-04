@@ -1,36 +1,41 @@
 ---
-title: "创建和发布业务规则 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "业务规则 [Master Data Services]，创建"
-  - "创建业务规则 [Master Data Services]"
+title: "创建和发布业务规则 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], creating
+- creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建和发布业务规则 (Master Data Services)
+# <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 创建和发布业务规则  
+### <a name="to-create-and-publish-a-business-rule"></a>创建和发布业务规则  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 14
   
 4.  从“实体”下拉列表中选择一个实体。  
   
-5.  从“成员类型”下拉列表中，选择要应用业务规则的成员类型。  
+5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
 6.  单击 **“添加”**。  
   
@@ -96,29 +101,29 @@ caps.handback.revision: 14
   
 24. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“有效” 。  
   
-## 网格列  
+## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
 |名称|Description|  
 |----------|-----------------|  
-|状态|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“确定”，系统会显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|状态|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |名称|业务规则名称。|  
 |Description|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
     -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则 &#40; 验证版本Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [更改业务规则名称 (Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [更改业务规则名称 &#40;Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [将多个条件添加到业务规则 &#40;Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

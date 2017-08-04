@@ -1,27 +1,32 @@
 ---
-title: "Excel 源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelsource.f1"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
-  - "源 [Integration Services], Excel"
+title: "Excel 源 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelsource.f1
+helpviewer_keywords:
+- Excel [Integration Services]
+- sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9db81f159d831fe10aaf99a4b27a34aef0764fc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 源
+# <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
   
  Excel 源提供了四种提取数据的数据访问方式：  
@@ -41,7 +46,7 @@ caps.handback.revision: 60
   
  Excel 源有一个常规输出和一个错误输出。  
   
-## 使用注意事项  
+## <a name="usage-considerations"></a>使用注意事项  
  Excel 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 及其支持的 Excel ISAM（索引顺序存取方法）驱动程序来连接 Excel 数据源，并在 Excel 数据源中进行数据读写操作。  
   
  许多现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章都记录了该访问接口和驱动程序的行为。虽然这些文章并非专门介绍 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其前身 Data Transformation Services，但您仍可了解到一些可能导致意外结果的行为。 有关 Excel 驱动程序的使用及行为的一般信息，请参阅 [如何将 ADO 与来自 Visual Basic 或 VBA 的 Excel 数据一起使用](http://support.microsoft.com/kb/257819)。  
@@ -76,7 +81,7 @@ caps.handback.revision: 60
   
     -   双精度 Excel 数值列与其他类型的数值列之间的转换  
   
-## Excel 源配置  
+## <a name="excel-source-configuration"></a>Excel 源配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“Excel 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
@@ -89,13 +94,13 @@ caps.handback.revision: 60
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自定义属性](../../integration-services/data-flow/excel-custom-properties.md)  
   
- 有关循环遍历 Excel 文件中的某个组的信息，请参阅[使用 Foreach 循环容器，循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
+ 有关循环遍历 Excel 文件中的某个组的信息，请参阅 [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 -   [将查询参数映射到数据流组件中的变量](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -103,11 +108,11 @@ caps.handback.revision: 60
   
 -   [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [使用 Foreach 循环容器，循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
--   hrvoje.piasevoli.com 上的博客文章：[在 SSIS 中从 64 位 Excel 导入数据](http://go.microsoft.com/fwlink/?LinkId=217673)。  
+-   hrvoje.piasevoli.com 上的博客文章： [在 SSIS 中从 64 位 Excel 导入数据](http://go.microsoft.com/fwlink/?LinkId=217673)。  
   
 -   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 1 部分（共 3 部分）：连接和组件](http://go.microsoft.com/fwlink/?LinkId=217674)。  
   

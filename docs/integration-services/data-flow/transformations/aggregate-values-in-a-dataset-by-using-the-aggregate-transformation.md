@@ -1,29 +1,34 @@
 ---
-title: "使用聚合转换来聚合数据集中的值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚合转换 [Integration Services]"
-  - "聚合值 [Integration Services]"
-  - "数据集 [Integration Services], 聚合值"
+title: "通过使用聚合转换来聚合数据集中的值 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- aggregate values [Integration Services]
+- datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用聚合转换来聚合数据集中的值
+# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
   若要添加并配置聚合转换，则包必须已包含至少一个数据流任务和一个源。  
   
-### 聚合数据集中的值  
+### <a name="to-aggregate-values-in-a-dataset"></a>聚合数据集中的值  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 48
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合转换](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   

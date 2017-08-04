@@ -1,26 +1,31 @@
 ---
-title: "使用渐变维度向导配置输出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "渐变维度转换"
-  - "渐变维度"
-  - "渐变维度向导"
+title: "使用渐变维度向导配置输出 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用渐变维度向导配置输出
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  
   
  必须在维度表中选择至少一个业务键列，并将其映射到输入列。 业务键的值将源中的一条记录链接到维度表中的一条记录。 转换使用此映射在维度表中定位该记录，并确定某条记录是新的还是更改过的。 业务键通常是源中的主键。如果业务键唯一标识一条记录而且其值不改变，则它也可以作为备用键。 业务键还可以是由多列构成的组合键。 维度表中的主键通常是代理键，它表示标识列或自定义解决方案（如脚本）自动生成的数值。  
@@ -29,9 +34,9 @@ caps.handback.revision: 43
   
  若要在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中打开渐变维度向导，请双击渐变维度转换。  
   
-## 创建渐变维度输出  
+## <a name="creating-slowly-changing-dimension-outputs"></a>创建渐变维度输出  
   
-#### 创建渐变维度转换输出  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>创建渐变维度转换输出  
   
 1.  选择连接管理器，以便访问包含要更新的维度表的数据源。  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      下列关系图所示的示例数据流支持固定的属性更改、变化的属性更改以及历史属性更改、推断成员和对匹配记录的更改。  
   
-     ![渐变维度向导的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "渐变维度向导的数据流")  
+     ![渐变维度向导中的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "渐变维度向导从数据流")  
   
-## 更新渐变维度输出  
+## <a name="updating-slowly-changing-dimension-outputs"></a>更新渐变维度输出  
  更新渐变维度转换输出配置的最简单方法就是重新运行渐变维度向导并从向导页修改属性。 也可以使用 **“高级编辑器”** 对话框或以编程方式更新渐变维度转换。  
   
-## 另请参阅  
- [渐变维度转换](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>另请参阅  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

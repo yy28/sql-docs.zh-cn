@@ -1,29 +1,34 @@
 ---
-title: "创建属性组 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性组 [Master Data Services]，创建"
-  - "创建属性组 [Master Data Services]"
+title: "创建属性组 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], creating
+- creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建属性组 (Master Data Services)
+# <a name="create-an-attribute-group-master-data-services"></a>创建属性组 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要在 **“资源管理器”** 网格中的单独选项卡上显示属性时，创建属性组。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   必须至少存在一个属性。 有关详细信息，请参阅[创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)。  
   
-### 创建属性组  
+### <a name="to-create-an-attribute-group"></a>创建属性组  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -64,16 +69,17 @@ caps.handback.revision: 7
   
 12. 单击 **“保存”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使属性组对用户可见 (Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
- [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [更改属性组名称 (Master Data Services)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [删除属性组 (Master Data Services)](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [属性 &#40;Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
+ [更改属性组名称 &#40;Master Data Services &#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [删除属性组 &#40;Master Data Services &#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [叶权限 (Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md)   
- [合并的权限 (Master Data Services)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   
+

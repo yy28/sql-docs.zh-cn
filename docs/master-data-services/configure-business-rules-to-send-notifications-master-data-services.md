@@ -1,30 +1,35 @@
 ---
-title: "配置业务规则以发送通知 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "业务规则 [Master Data Services]，配置通知"
-  - "电子邮件 [Master Data Services]，配置业务规则"
-  - "通知 [Master Data Services]，配置业务规则"
+title: "配置业务规则以发送通知 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], configuring notifications
+- e-mail [Master Data Services], configuring business rules
+- notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29ff569439e245100befb8e0a515a128aac91f79
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置业务规则以发送通知 (Master Data Services)
+# <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“用户和组权限”** 功能区域。 如果您对 **“用户和组权限”** 功能区域没有权限，则无法查看要向其发送通知的用户和组的列表。  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 -   如果将邮件发送到组，则组中只有已访问了 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的成员才会获得电子邮件。  
   
-### 配置业务规则以发送通知  
+### <a name="to-configure-business-rules-to-send-notifications"></a>配置业务规则以发送通知  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 10
   
 10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值更改为“活动”  ，且“通知”  列显示想要向其发送通知的选中用户或组。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   通过以下过程之一将业务规则应用到数据：  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
     -   [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)   
  [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

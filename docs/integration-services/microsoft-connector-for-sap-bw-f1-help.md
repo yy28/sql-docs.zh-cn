@@ -1,44 +1,49 @@
 ---
-title: "Microsoft Connector for SAP BW F1 帮助 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.dts.designer.sapbw.f1"
+title: "Microsoft Connector for SAP BW F1 帮助 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Microsoft Connector for SAP BW F1 帮助
+# <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 帮助
   此部分包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 三个组件的 F1 帮助主题。 也可以按 F1 键或在向导页和对话框中单击“帮助”，从用户界面中查看这些主题。  
   
 > [!IMPORTANT]  
 >  针对 Microsoft Connector 1.1 for SAP BW 的文档假定您熟悉 SAP Netweaver BW 环境。 有关 SAP NetWeaver BW 的详细信息，或者有关如何配置 SAP Netweaver BW 对象和过程的信息，请参阅您的 SAP 文档。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
-### SAP BW 连接管理器 F1 帮助  
+### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 连接管理器 F1 帮助  
   
 -   [SAP BW 连接管理器编辑器](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
-### SAP BW 源 F1 帮助  
+### <a name="sap-bw-source-f1-help"></a>SAP BW 源 F1 帮助  
   
--   [SAP BW 源编辑器（“连接管理器”页）](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 源编辑器 &#40;连接管理器页 &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 源编辑器（“列”页）](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 源编辑器 &#40;列页 &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 源编辑器（“错误输出”页）](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 源编辑器 &#40;错误输出页 &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 源编辑器（“高级”页）](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 源编辑器 &#40;高级页 &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [查找 RFC 目标](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -48,23 +53,23 @@ caps.handback.revision: 9
   
 -   [预览](../integration-services/data-flow/preview.md)  
   
-### SAP BW 目标 F1 帮助  
+### <a name="sap-bw-destination-f1-help"></a>SAP BW 目标 F1 帮助  
   
--   [SAP BW 目标编辑器（“连接管理器”页）](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目标编辑器（“映射”页）](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目标编辑器 &#40;映射页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目标编辑器（“错误输出”页）](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目标编辑器 &#40;错误输出页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目标编辑器（“高级”页）](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目标编辑器 &#40;高级页 &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [查找 InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
+-   [查找 Infopackage](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [新建 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
+-   [创建新的 InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [创建事务数据的 InfoCube](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查找 InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
+-   [查找 Infoobject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [创建 InfoSource](../integration-services/data-flow/create-infosource.md)  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 9
   
 -   [创建 InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Connector for SAP BW 组件](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

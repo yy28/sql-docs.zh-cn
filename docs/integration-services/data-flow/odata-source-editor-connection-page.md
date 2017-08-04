@@ -1,26 +1,31 @@
 ---
-title: "OData 源编辑器（“连接”页） | Microsoft Docs"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.odatasource.connection.f1"
+title: "OData 源编辑器 （连接页） |Microsoft 文档"
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bb7a97ddbcae4868ee7b737358d4b30608e4df2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# OData 源编辑器（“连接”页）
+# <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“连接”** 页，为 OData 源选择 OData 连接管理器。 通过此页还可以指定集合或资源路径和任何查询选项以指示需要从 OData 源检索的数据。 若要了解有关 OData 源的详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
   
-## 静态选项  
+## <a name="static-options"></a>静态选项  
  **OData 连接管理器**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
@@ -46,19 +51,19 @@ caps.handback.revision: 8
  **预览**  
  通过使用“预览”对话框预览结果。 **“预览”** 最多可以显示 20 行。  
   
-## 动态选项  
+## <a name="dynamic-options"></a>动态选项  
   
-### 使用集合或资源路径 = 集合  
+### <a name="use-collection-or-resource-path--collection"></a>使用集合或资源路径 = 集合  
  **集合**  
  从下拉列表中选择集合。  
   
-### 使用集合或资源路径 = 资源路径  
- **资源路径**  
+### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或资源路径 = 资源路径  
+ **Resource path**  
  键入资源路径。 例如：Employees  
   
-## 另请参阅  
- [OData 源编辑器（“列”页）](../../integration-services/data-flow/odata-source-editor-columns-page.md)   
- [OData 源编辑器（“错误输出”页）](../../integration-services/data-flow/odata-source-editor-error-output-page.md)   
+## <a name="see-also"></a>另请参阅  
+ [OData 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/odata-source-editor-columns-page.md)   
+ [OData 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odata-source-editor-error-output-page.md)   
  [OData 连接管理器](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

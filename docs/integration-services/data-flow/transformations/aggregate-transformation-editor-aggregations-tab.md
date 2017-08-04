@@ -1,26 +1,31 @@
 ---
-title: "聚合转换编辑器（“聚合”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
-helpviewer_keywords: 
-  - "聚合转换编辑器"
+title: "聚合转换编辑器 （聚合选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+helpviewer_keywords:
+- Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e7bf78662f021ae3c6ff776635035feea985b12
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 聚合转换编辑器（“聚合”选项卡）
+# <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
   
 > [!NOTE]  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  若要了解有关聚合转换的详细信息，请参阅 [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **高级/基本**  
  显示或隐藏为多个输出配置多个聚合的选项。 默认情况下，隐藏“高级”选项。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 30
 |Medium|聚合可以写入大约 5,000,000 个键。|  
 |High|聚合可以写入 25,000,000 个以上的键。|  
   
- **键**  
+ **“键”**  
  在“高级”显示中，根据需要指定聚合可写入的键的精确数目。 如果同时指定了 **“键范围”** 和 **“键”** ，则 **“键”** 优先。  
   
  **可用输入列**  
@@ -78,7 +83,7 @@ caps.handback.revision: 30
  **比较标志**  
  如果选择“分组依据”，请使用复选框来控制转换如何执行比较。 有关字符串比较选项的信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。  
   
- **非重复键数范围**  
+ **Count Distinct Scale**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
   
 |“值”|Description|  
@@ -88,12 +93,12 @@ caps.handback.revision: 30
 |Medium|聚合可以写入大约 5,000,000 个非重复值。|  
 |High|聚合可以写入 25,000,000 个以上的非重复值。|  
   
- **非重复键计数**  
+ **Count Distinct Keys**  
  根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
- [聚合转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
- [使用聚合转换来聚合数据集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [聚合转换编辑器 &#40;高级选项卡 &#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)   
+ [通过使用聚合转换数据集中的聚合值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

@@ -1,33 +1,36 @@
 ---
-title: "Azure blob 上载任务 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpblobuptask.f1"
-  - "sql14.dts.designer.afpblobuptask.f1"
+title: "Azure Blob 上载任务 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpblobuptask.f1
+- sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cec51398ac521abc0345e90b3c6ed156b542b5f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Azure blob 上载任务
-  “Azure blob 上传任务”可让 SSIS 包将文件上传到 Azure blob 存储区中。
-  
->   [!NOTE] 若要确保 Azure 存储连接管理器和使用它的组件（即 Blob 源、Blob 目标、Blob 上传任务和 Blob 下载任务）可以连接到常规用途的存储帐户和 Blob 存储帐户，请确保[在此处](https://www.microsoft.com/download/details.aspx?id=49492)下载最新版本的 Azure 功能包。 有关这两种类型的存储帐户的详细信息，请参阅 [Microsoft Azure 存储空间简介](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts)。 
+# <a name="azure-blob-upload-task"></a>Azure blob 上载任务
+“Azure blob 上传任务”可让 SSIS 包将文件上传到 Azure blob 存储区中。
     
 若要添加“Azure blob 上传任务”，请将其拖放到“SSIS 设计器”中，双击或右键单击它，然后单击“编辑”调出下面的“Azure blob 上传任务编辑器”对话框。  
   
- “Azure blob 上传任务”是适用于 Azure for SQL Server 2016 的 SQL Server Integration Services (SSIS) 功能包的组成部分。 从 [此处](http://go.microsoft.com/fwlink/?LinkID=626967)下载功能包。  
+ **Azure Blob 上载任务**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。
   
  下表介绍了此对话框中的各个字段。  
   
@@ -35,10 +38,11 @@ caps.handback.revision: 12
 |-|-|  
 |**字段**|**Description**|  
 |AzureStorageConnection|选择一个现有的 Azure 存储连接管理器或创建一个新的连接管理器，用于引用指向在其中托管 blob 文件的 Azure 存储帐户。|  
-|BlobContainer|指定将上载的文件作为 blob 保留的 blob 容器的名称。|  
-|BlobDirectory|指定将上载的文件作为块 blob 存储的 blob 目录。 Blob 目录是虚拟的层次结构。 如果 blob 已存在，它会被替换。|  
+|BlobContainer|指定包含作为 blob 上载的文件的 blob 容器的名称。|  
+|BlobDirectory|指定作为块 blob 存储上载的文件的位置的 blob 目录。 Blob 目录是虚拟的层次结构。 如果 blob 已存在，则替换它。|  
 |LocalDirectory|指定包含要上载的文件的本地目录。|  
-|FileName|指定用于选择具有指定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 包括如 MySheet001.xls 和 MySheetABC.xlsx 等文件。|  
-|TimeRangeFrom/TimeRangeTo|指定时间范围筛选器。 包括介于 **TimeRangeFrom** 和 **TimeRangeTo** 之间修改的文件。|  
+|FileName|指定用于选择具有指定名称模式的文件的名称筛选器。 例如，`MySheet*.xls\*`包括文件，如`MySheet001.xls`和`MySheetABC.xlsx`。|  
+|TimeRangeFrom/TimeRangeTo|指定时间范围筛选器。 文件后，将修改**TimeRangeFrom**和之前**TimeRangeTo**包括。|  
   
   
+

@@ -1,25 +1,30 @@
 ---
-title: "弃用的 Master Data Services 功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "已弃用的 Master Data Services 功能 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 弃用的 Master Data Services 功能
+# <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
-## 显式层次结构、集合和相关组件  
+## <a name="explicit-hierarchies-collections-and-related-components"></a>显式层次结构、集合和相关组件  
  已弃用显式层次结构、集合和相关组件。 之前已建模为合并成员类型（显式层次结构父项）和集合成员类型的成员将被建模为派生层次结构中的叶成员。 以下新功能使派生层次结构能够代替显式层次结构。  
   
 -   现在可以使用递归派生层次结构来分配成员安全权限。  
@@ -42,15 +47,15 @@ caps.handback.revision: 18
   
 -   [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
   
-## 属性实体事务日志类型  
+## <a name="attribute-entity-transaction-log-type"></a>属性实体事务日志类型  
 “属性”实体事务日志类型已被弃用，请迁移至“成员”实体事务日志类型。 有关实体事务日志类型的信息，请参阅以下主题：
 * [更改实体事务日志类型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [成员修订历史记录](../master-data-services/member-revision-history-master-data-services.md)
   
-## 外部资源  
+## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章 [Deprecated: Explicit Hierarchies and Collections](http://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [废弃的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

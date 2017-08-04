@@ -1,33 +1,38 @@
 ---
-title: "合并冲突 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "合并冲突 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd232ee139207f8ee78b0a5c549c81a26ee1e5e1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 合并冲突 (Master Data Services)
+# <a name="merge-conflicts-master-data-services"></a>合并冲突 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果你尝试发布的数据已被另一个用户更改，则发布将失败并显示冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
   
 -   对于你要更新的实体的叶模型对象，你必须至少具有更新权限。  
   
-### 合并冲突  
+### <a name="to-merge-conflicts"></a>合并冲突  
   
 1.  在  “资源管理器”页上，更新成员属性。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 5
   
 4.  单击“应用” 后，可以进行其他更改，并再次发布。 或者，可以单击“取消”  以取消更新并从服务器重新加载最新的版本。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
   
   

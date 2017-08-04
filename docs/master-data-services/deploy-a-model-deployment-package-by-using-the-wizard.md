@@ -1,40 +1,45 @@
 ---
-title: "使用向导部署模型部署包 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部署包 [Master Data Services], 部署"
-  - "模型 [Master Data Services], 部署包"
+title: "使用向导部署模型部署包 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], deploying
+- models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba982c9e81e5f3ff0c6e5997806cc3d00f16fce4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用向导部署模型部署包
-  使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导部署只包含模型对象的包。 如果需要部署包含数据的包，请参阅[使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
+# <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
+  使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导部署只包含模型对象的包。 如果需要部署包含数据的包，请参阅 [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
   
--   模型部署包必须存在。 有关详细信息，请参阅[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
+-   模型部署包必须存在。 有关详细信息，请参阅 [使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
 -   您必须是部署模型的环境中的管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 仅部署模型对象的模型部署包  
+### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>仅部署模型对象的模型部署包  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -70,12 +75,12 @@ caps.handback.revision: 16
   
      在更新模型时，如果该过程在前三个步骤的任意步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## 另请参阅  
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

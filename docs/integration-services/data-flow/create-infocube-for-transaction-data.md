@@ -1,22 +1,27 @@
 ---
-title: "创建事务数据的 InfoCube | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建事务数据的 InfoCube |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 创建事务数据的 InfoCube
+# <a name="create-infocube-for-transaction-data"></a>创建事务数据的 InfoCube
   使用 **“创建事务数据的 InfoCube”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoCube。  
   
  从 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页可以打开 **“创建事务数据的 InfoCube”**对话框。 若要了解有关 SAP BW 目标的详细信息，请参阅 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)。  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 分组框，选择 **“InfoCube”**，然后单击 **“创建”**。  
   
-## 常规选项  
+## <a name="general-options"></a>常规选项  
  **InfoCube 名称**  
  输入新 InfoCube 的名称。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **保存并激活**  
  保存并激活新的 InfoCube。  
   
-## InfoCube 传输结构选项  
+## <a name="infocube-transfer-structure-options"></a>InfoCube 传输结构选项  
  InfoCube 传输结构部分可供您将数据流列与 InfoObject 关联。  
   
  **PipelineElement**  
@@ -56,7 +61,7 @@ caps.handback.revision: 10
  **InfoObject**  
  显示与数据流列相关联的 InfoObject 的名称。  
   
- **类型**  
+ **“类型”**  
  显示与数据流列相关联的 InfoObject 的类型。 下表列出了该类型的可能值。  
   
 |“值”|Description|  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - 删除**  
  删除 InfoObject 与当前行的数据流列之间的关联。 若要删除此关联，请单击 **“删除”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

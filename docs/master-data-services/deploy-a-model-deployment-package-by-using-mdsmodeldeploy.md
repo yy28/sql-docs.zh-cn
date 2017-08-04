@@ -1,23 +1,28 @@
 ---
-title: "使用 MDSModelDeploy 部署模型部署包 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 MDSModelDeploy 部署模型部署包 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a678aee3bb185cf8dd44cb69d3c0027c090a81d3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 MDSModelDeploy 部署模型部署包
+# <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来部署包含以下任一信息的包：  
   
 -   仅模型对象。  
@@ -29,7 +34,7 @@ caps.handback.revision: 16
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
   
 -   如果您正在更新包含数据的模型，则不能 **“锁定”** 或 **“提交”**正在部署到的版本。  
   
-### 部署模型部署包  
+### <a name="to-deploy-a-model-deployment-package"></a>部署模型部署包  
   
 1.  确定您是在部署一个新模型、部署模型的一个克隆副本，还是在更新先前克隆的模型。 有关详细信息，请参阅[模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
   
@@ -109,12 +114,12 @@ caps.handback.revision: 16
   
      在更新某一模型时，如果该过程在前三个步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。 如果该过程在步骤 4 中失败，则会更新可更新的成员。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  模型部署包中不包括文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## 另请参阅  
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

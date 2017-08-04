@@ -1,26 +1,31 @@
 ---
-title: "数据事件探查任务和查看器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据事件探查任务 [Integration Services], 关于数据事件探查"
-  - "数据事件探查"
-  - "数据事件探查"
+title: "数据事件探查任务和查看器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], about data profiling
+- data profiling
+- profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据事件探查任务和查看器
+# <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
   
 -   更有效地分析源数据  
@@ -32,7 +37,7 @@ caps.handback.revision: 33
 > [!IMPORTANT]  
 >  数据事件探查任务仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的数据。 它不适用于第三方或基于文件的数据源。  
   
-## 数据事件探查概述  
+## <a name="data-profiling-overview"></a>数据事件探查概述  
  数据质量对所有业务都至关重要。 由于企业将分析和业务智能系统建立在他们的事务系统之上，因此关键绩效指标和数据挖掘预测的可靠性完全取决于所依据的数据的有效性。 不过，尽管数据的有效性对于业务决策越来越重要，但如何确保该数据有效也越来越具有挑战性。 因为，数据在源源不断地从各种系统和源以及大量用户处流入企业。  
   
  数据质量的度量难以定义，原因是度量特定于域或应用程序。 一个常用的定义数据质量的方法就是数据事件探查。  
@@ -51,7 +56,7 @@ caps.handback.revision: 33
   
  数据配置文件提供的统计信息为您提供了所需信息，可以有效地最大限度降低使用源数据过程中可能出现的质量问题。  
   
-## Integration Services 和数据事件探查  
+## <a name="integration-services-and-data-profiling"></a>Integration Services 和数据事件探查  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，数据事件探查过程包括以下步骤：  
   
  **步骤 1：设置数据事件探查任务**  
@@ -64,10 +69,10 @@ caps.handback.revision: 33
   
  **有关详细信息，请参阅** [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)  
   
-### 向数据事件探查工作流添加条件逻辑  
- 数据事件探查任务不包含内置功能，即无法根据配置文件输出使用条件逻辑来将此任务连接到下游任务。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 例如，脚本任务可以对数据事件探查任务的输出文件执行 Xpath 查询。 该查询可以确定在特定列中 null 值的百分比是否超过特定的阈值。 如果该百分比超过阈值，则应中断包并解决源数据中的问题，然后再继续执行。 有关详细信息，请参阅[合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
+### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>向数据事件探查工作流添加条件逻辑  
+ 数据事件探查任务不包含内置功能，即无法根据配置文件输出使用条件逻辑来将此任务连接到下游任务。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 例如，脚本任务可以对数据事件探查任务的输出文件执行 Xpath 查询。 该查询可以确定在特定列中 null 值的百分比是否超过特定的阈值。 如果该百分比超过阈值，则应中断包并解决源数据中的问题，然后再继续执行。 有关详细信息，请参阅 [合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [数据探查器架构](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

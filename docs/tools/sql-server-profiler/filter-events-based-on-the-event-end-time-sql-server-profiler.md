@@ -1,30 +1,35 @@
 ---
-title: "基于事件结束时间筛选事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件结束时间 [SQL Server]"
-  - "筛选器 [SQL Server], 跟踪"
-  - "跟踪 [SQL Server], 筛选器"
-  - "跟踪 [SQL Server], 事件"
+title: "基于事件结束时间 （SQL Server 事件探查器） 筛选事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event end times [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
+- traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 650c9e7cd67a4e6ebdc6278bc4f6db491bb0e478
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 基于事件结束时间筛选事件 (SQL Server Profiler)
+# <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>基于事件结束时间筛选事件 (SQL Server Profiler)
   本主题介绍了如何通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来根据事件结束时间筛选跟踪事件。  
   
-### 根据事件结束时间筛选事件  
+### <a name="to-filter-events-based-on-the-event-end-time"></a>根据事件结束时间筛选事件  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
 6.  展开“大于”或“小于”，然后在比较运算符下显示的字段中输入 **datetime** 值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

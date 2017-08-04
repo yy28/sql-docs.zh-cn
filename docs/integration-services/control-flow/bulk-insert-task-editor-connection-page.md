@@ -1,33 +1,38 @@
 ---
-title: "大容量插入任务编辑器（“连接”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.bulkinserttask.connection.f1"
-helpviewer_keywords: 
-  - "大容量插入任务编辑器"
+title: "大容量插入任务编辑器 （连接页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.bulkinserttask.connection.f1
+helpviewer_keywords:
+- Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c837ff29b8f5158620629811352c398a39d30c2c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 大容量插入任务编辑器（“连接”页）
+# <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
   
  若要了解大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **连接**  
- 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”创建新的连接。  
+ 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
   
  **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 30
 |**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
   
  **文件**  
- 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”创建新的连接。  
+ 在列表中，选择文件或平面文件连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   
@@ -54,24 +59,24 @@ caps.handback.revision: 30
  **刷新表**  
  刷新表和视图的列表。  
   
-## Format 动态选项  
+## <a name="format-dynamic-options"></a>Format 动态选项  
   
-### Format = 使用文件  
+### <a name="format--use-file"></a>Format = 使用文件  
  **FormatFile**  
  键入格式化文件的路径，或单击省略号按钮 **(…)** 定位到该格式化文件。  
   
-### Format = 指定  
+### <a name="format--specify"></a>Format = 指定  
  **RowDelimiter**  
  指定源文件中的行分隔符。 默认值为 **{CR}{LF}**。  
   
  **ColumnDelimiter**  
  指定源文件中的列分隔符。 默认值为 **“制表符”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [大容量插入任务编辑器（“常规”页）](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
- [大容量插入任务编辑器（“选项”页）](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)   
- [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [大容量插入任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)   
+ [大容量插入任务编辑器 &#40; 选项页 &#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)   
+ [表达式页](../../integration-services/expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

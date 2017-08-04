@@ -1,45 +1,50 @@
 ---
-title: "GETDATE（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "当前日期"
-  - "GETDATE 函数"
-  - "日期 [Integration Services], GETDATE"
+title: "GETDATE （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current date
+- GETDATE function
+- dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# GETDATE（SSIS 表达式）
+# <a name="getdate-ssis-expression"></a>GETDATE（SSIS 表达式）
   以 DT_DBTIMESTAMP 格式返回系统的当前日期。 GETDATE 函数不使用参数。  
   
 > [!NOTE]  
 >  GETDATE 函数的返回结果的长度为 29 个字符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 GETDATE()  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  InclusionThresholdSetting  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_DBTIMESTAMP  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例返回当前日期的年份。  
   
 ```  
@@ -58,8 +63,8 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## 另请参阅  
- [GETUTCDATE（SSIS 表达式）](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [GETUTCDATE &#40;SSIS 表达式 &#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

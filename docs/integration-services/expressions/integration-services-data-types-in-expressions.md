@@ -1,36 +1,41 @@
 ---
-title: "表达式中的 Integration Services 数据类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表达式 [Integration Services], 数据类型"
-  - "数据类型 [Integration Services], 表达式"
+title: "Integration Services Data Types in Expressions |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], data types
+- data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 表达式中的 Integration Services 数据类型
+# <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  
   
-## 变量  
+## <a name="variables"></a>变量  
  表达式还可以使用变量。 变量具有 Variant 数据类型，表达式计算器在计算表达式前会将变量的数据类型从 Variant 子类型转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 变量只能使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的一个子集。 例如，变量不能使用二进制大型对象块 (BLOB) 数据类型。  
   
- 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 Variant 数据类型到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的映射的详细信息，请参阅[集成服务数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型和 Variant 数据类型到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的映射的详细信息，请参阅 [集成服务数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 文字  
- 此外，表达式还可以包含字符串、布尔值和数值。 有关将数值转换为数值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/literals-ssis.md)。  
+## <a name="literals"></a>文字  
+ 此外，表达式还可以包含字符串、布尔值和数值。 有关将数值转换为数值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
-## 字符串  
+## <a name="strings"></a>字符串  
  可以使用 DT_STR 或 DT_WSTR 作为表达式的返回类型。 但在表达式中，仅支持 DT_WSTR，而 DT_STR 值将转换为 DT_WSTR 值。 在写入表达式时，此行为具有多个含义。  
   
 -   在表达式中，使用 NULL(DT_WSTR, ...) 而非 NULL(DT_STR, ...)。 有关此函数的详细信息，请参阅 [NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)。  
@@ -39,7 +44,7 @@ caps.handback.revision: 57
   
  请考虑使用以下屏幕快照中的表达式。  
   
- ![String data types in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![字符串 SSIS 表达式中的数据类型](../../integration-services/expressions/media/stringsinssisexpressions.png "字符串 SSIS 表达式中的数据类型")  
   
 1.  第一个表达式运行时没有出错，因为 NULL(DT_STR, ...) 函数处于表达式的根级别。  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 57
   
  下面的示例演示转换的效果。  
   
- ![Casting strings in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![将字符串转换 SSIS 表达式中](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 表达式中转换字符串")  
   
 1.  在第一个表达式中，转换不在表达式的根级别进行。 表达式计算器以智能方式处理这种转换，并转换为 DT_WSTR，而非 DT_STR。 表达式返回 DT_WSTR。  
   
 2.  在第二个表达式中，转换在表达式的根级别进行。 表达式返回 DT_STR。  
   
-## 隐式数据转换  
+## <a name="implicit-data-conversion"></a>隐式数据转换  
  当表达式计算器自动将数据从一种数据类型转换为另一种数据类型时，将会发生数据类型的隐式转换。 例如，如果将 **smallint** 与 **int**比较，则 **smallint** 便会在执行比较前被隐式转换为 **int** 。  
   
  当参数和操作数具有不兼容的数据类型时，表达式计算器无法执行隐式数据转换。 此外，表达式计算器无法将任何值隐式转换为布尔值。 相反，参数和操作数必须借助于转换运算符显式转换。 有关详细信息，请参阅[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  以下关系图显示了 BINARY 运算的隐式转换的结果类型。 该表中列和行的交集为二元运算的结果类型，该运算中操作数的类型为左 (From) 和右 (To)。  
   
- ![数据类型之间的隐式数据类型转换](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "数据类型之间的隐式数据类型转换")  
+ ![隐式数据类型转换，则数据类型之间](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "隐式数据类型的数据类型之间的转换")  
   
  有符号整数和无符号整数的交集是可能大于这两者中任何一个的有符号整数。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 57
   
 -   [>=（大于或等于）（SSIS 表达式）](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)  
   
--   [\<=（小于或等于）（SSIS 表达式）](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)  
+-   [<=（小于或等于）（SSIS 表达式）](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)  
   
  使用单个参数的函数将返回与参数具有相同数据类型的结果，但下列情况除外：  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 57
   
  如果参数具有相同的数据类型，则结果即为该类型。 唯一的例外是，如果对两个 DT_DECIMAL 数据类型的值执行二进制操作，则它将返回 DT_NUMERIC 数据类型的结果。  
   
-## 表达式中的数据使用要求  
+## <a name="requirements-for-data-used-in-expressions"></a>表达式中的数据使用要求  
  表达式计算器支持所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 但是，根据运算或函数的不同，操作数和参数需要特定的数据类型。 表达式计算器对表达式中使用的数据规定了下列数据类型要求：  
   
 -   **“逻辑”** 运算中所用操作数的取值必须为布尔值。 例如，ColumnA > 1&&ColumnB < 2。  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
      `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30" != (DT_DBDATE)"1999-10-12"`  
   
-     系统将表达式 `(DT_DBDATE)"1999-10-12"` 转换为 DT_DBTIMESTAMPOFFSET。 此示例的计算结果为 TRUE，因为转换后的表达式变成 "1999-10-12 00:00:00.000 +00:00"，这与另一个表达式 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"` 的值不相等。  
+     系统将表达式 `(DT_DBDATE)"1999-10-12"`转换为 DT_DBTIMESTAMPOFFSET。 此示例的计算结果为 TRUE，因为转换后的表达式变成 "1999-10-12 00:00:00.000 +00:00"，这与另一个表达式 `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"`的值不相等。  
   
 -   传递给数学函数的参数的取值必须为数值数据类型。 根据函数或运算的不同，可能需要特定的数值数据类型。 例如，HEX 函数需要有符号或无符号整数。  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 57
   
  许多运算和函数的结果具有预设的数据类型。 该类型可能是参数的数据类型，也可能是表达式计算器将结果转换到的数据类型。 例如，逻辑或运算符 (||) 的计算结果始终为布尔值，ABS 函数的计算结果是参数的数值数据类型，乘法运算的结果是可完整保存结果的最小数值数据类型。 有关结果的数据类型的详细信息，请参阅[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。  
   
-## 相关任务  
- [在数据流组件中使用表达式](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>相关任务  
+ [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   

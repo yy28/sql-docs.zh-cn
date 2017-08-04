@@ -1,27 +1,32 @@
 ---
-title: "数据挖掘查询任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataminingquerytask.f1"
-helpviewer_keywords: 
-  - "预测查询 [Integration Services]"
-  - "数据挖掘查询任务 [Integration Services]"
+title: "数据挖掘查询任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataminingquerytask.f1
+helpviewer_keywords:
+- prediction queries [Integration Services]
+- Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据挖掘查询任务
+# <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供执行其他商业智能操作的任务，如运行数据定义语言 (DDL) 语句和处理分析对象。  
@@ -32,18 +37,18 @@ caps.handback.revision: 45
   
 -   [Analysis Services 处理任务](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
-## 预测查询  
+## <a name="prediction-queries"></a>预测查询  
  查询是数据挖掘扩展 (DMX) 语句。 DMX 语言是 SQL 语言的扩展，为对挖掘模型的操作提供支持。 有关如何使用 DMX 语言的详细信息，请参阅[数据挖掘扩展插件 (DMX) 引用](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
  该任务可以查询根据同一挖掘结构生成的多个挖掘模型。 挖掘模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的某种数据挖掘算法生成的。 数据挖掘查询任务引用的挖掘结构可能包含使用不同算法生成的多个挖掘模型。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)和[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
- 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息，请参阅[数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息，请参阅 [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
  查询结果将保存到表中。 如果数据挖掘查询任务指定名称的表已经存在，则任务可以在相同名称后追加数字来创建新表，也可以覆盖表内容。  
   
  如果结果包含嵌套，则在保存前将结果简化。 通过简化结果可将嵌套结果集更改为表。 例如，简化包含 **Customer** 列和 **Product** 嵌套列的嵌套结果时，将在 **Customer** 列中添加行，从而生成包含每个客户的产品数据的表。 例如，购买三个不同产品的客户将形成一个三行的表，每行都重复出现此客户，并在每行中包含不同的产品。 如果省略了 FLATTENED 关键字，则表将只包含 **Customer** 列，而且每个客户只占一行。 有关详细信息，请参阅 [SELECT (DMX)](../../dmx/select-dmx.md)。  
   
-## 配置数据挖掘查询任务  
+## <a name="configuration-of-the-data-mining-query-task"></a>配置数据挖掘查询任务  
  数据挖掘查询任务需要两个连接。 第一个连接是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或包含挖掘结构和挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 第二个连接是 OLE DB 连接管理器，连接到包含任务要向其写入的表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 和 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
@@ -61,9 +66,9 @@ caps.handback.revision: 45
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 以编程方式配置数据挖掘查询任务  
+## <a name="programmatic-configuration-of-data-mining-query-task"></a>以编程方式配置数据挖掘查询任务  
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  

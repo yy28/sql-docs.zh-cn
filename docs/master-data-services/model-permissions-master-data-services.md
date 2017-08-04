@@ -1,25 +1,30 @@
 ---
-title: "模型权限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型 [Master Data Services]，权限"
-  - "权限 [Master Data Services]，模型"
+title: "模型权限 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], permissions
+- permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e54b1bd5e60c600e2447f37bdcf77e6f811e869
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 模型权限 (Master Data Services)
+# <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
   
 > [!NOTE]  
@@ -36,10 +41,10 @@ caps.handback.revision: 6
   
  读取、创建、更新和删除权限可以彼此合并。 当分配创建、更新和删除权限时，将自动分配读取权限。  
   
-## 另请参阅  
- [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [实体权限 (Master Data Services)](../master-data-services/entity-permissions-master-data-services.md)   
- [集合权限 (Master Data Services)](../master-data-services/collection-permissions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [分配模型对象权限 &#40;Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [模型对象权限 &#40;Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [实体权限 &#40;Master Data Services &#41;](../master-data-services/entity-permissions-master-data-services.md)   
+ [集合权限 &#40;Master Data Services &#41;](../master-data-services/collection-permissions-master-data-services.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "多平面文件连接管理器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多平面文件连接管理器"
-  - "连接 [Integration Services], 平面文件"
-  - "平面文件"
-  - "平面文件连接 [Integration Services]"
-  - "连接管理器 [Integration Services], 多个平面文件"
-  - "多平面文件连接"
+title: "多平面文件连接管理器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Multiple Flat Files connection manager
+- connections [Integration Services], flat files
+- flat files
+- flat file connections [Integration Services]
+- connection managers [Integration Services], Multiple Flat Files
+- multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04900b28471f2dc4b0eb7d06fcc7f0c5acf69468
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 多平面文件连接管理器
+# <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
   
- 将多平面文件连接管理器添加到包时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析多平面文件连接的连接管理器，同时还会设置该多平面文件连接管理器的属性，并将该多平面文件连接管理器添加到包的 **Connections** 集合。  
+ 将多平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析多平面文件连接的连接管理器，同时还会设置该多平面文件连接管理器的属性，并将该多平面文件连接管理器添加到包的 **Connections** 集合。  
   
  该连接管理器的 **ConnectionManagerType** 属性设置为 **MULTIFLATFILE**。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 41
   
  当多平面文件连接管理器引用多个文件时，文件的路径由竖线 (|) 分隔。 连接管理器的 **ConnectionString** 属性的格式如下：  
   
- \<*路径*>|\<路径>  
+ \<*path*>|\<*path*>  
   
  也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\*.txt。  
   
@@ -56,24 +61,24 @@ caps.handback.revision: 41
   
  在已添加并配置了使用连接管理器的平面文件源之后，如果在多平面文件连接管理器中更新了列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
-## 多平面文件连接管理器的配置  
+## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>多平面文件连接管理器的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
 -   [多平面文件连接管理器编辑器（“常规”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)  
   
--   [多平面文件连接管理器编辑器（“列”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [多个平面文件连接管理器编辑器 &#40;列页 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [多平面文件连接管理器编辑器（“高级”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [多个平面文件连接管理器编辑器 &#40;高级页 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [多平面文件连接管理器编辑器（“预览”页）](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## 另请参阅  
- [平面文件源](../../integration-services/data-flow/flat-file-source.md)   
+## <a name="see-also"></a>另请参阅  
+ [“平面文件源”](../../integration-services/data-flow/flat-file-source.md)   
  [平面文件目标](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

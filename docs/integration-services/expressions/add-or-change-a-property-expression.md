@@ -1,32 +1,37 @@
 ---
-title: "添加或更改属性表达式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表达式 [Integration Services], 创建"
-  - "表达式 [Integration Services], 属性表达式"
+title: "添加或更改属性表达式 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], creating
+- expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 添加或更改属性表达式
+# <a name="add-or-change-a-property-expression"></a>添加或更改属性表达式
   可以为包、任务、Foreach 循环容器、For 循环容器、序列容器、事件处理程序、包和项目级别连接管理器以及日志提供程序创建属性表达式。  
   
  若要创建或更改属性表达式，您可以使用 **“属性表达式编辑器”** 或 **“表达式生成器”**。 可以从任务和容器使用的自定义编辑器中访问 **“属性表达式编辑器”** ，也可以从 **“属性”** 窗口中进行访问。 可以从**“属性表达式编辑器”** 内部访问 **“表达式生成器”**。 在 **“属性表达式编辑器”** 或 **“表达式生成器”**中编写表达式时， **“表达式生成器”** 提供一组图形工具，可以非常容易地生成复杂表达式。  
   
- 若要了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的语法、运算符和函数的详细信息，请参阅[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。 每个运算符或函数的主题都包括在表达式中使用该运算符或函数的示例。 有关更复杂的表达式示例，请参阅[在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
+ 若要了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的语法、运算符和函数的详细信息，请参阅[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。 每个运算符或函数的主题都包括在表达式中使用该运算符或函数的示例。 有关更复杂的表达式示例，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-### 创建或更改属性表达式  
+### <a name="to-create-or-change-a-property-expression"></a>创建或更改属性表达式  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的项目。  
   
@@ -63,14 +68,14 @@ caps.handback.revision: 28
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 另请参阅  
- [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>另请参阅  
+ [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS &#41;包](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services (SSIS) 事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;SSIS &#41;事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS &#41;日志记录](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

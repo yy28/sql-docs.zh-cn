@@ -1,24 +1,29 @@
 ---
-title: "ODBC 目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcdest.f1"
+title: "ODBC 目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 目标
+# <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
   
  ODBC 目标包括输入列和目标数据源中的列之间的映射。 您不必将输入列映射到所有目标列，但有时如果没有将输入列映射到目标列可能会出错，具体取决于目标列的属性。 例如，如果目标列不允许出现 Null 值，则必须将输入列映射到该列。 此外，可以映射不同类型的列，但是，如果输入数据与目标列类型不兼容，则在运行时会出现错误。 根据错误行为设置，将忽略该错误，并且导致失败，或者行将发送到错误输出。  
@@ -32,7 +37,7 @@ caps.handback.revision: 12
   
 -   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并且使用“SQL 执行”来一次一行地插入行。  
   
-## 错误处理  
+## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
   
 -   **错误代码**：与当前错误相对应的编号。 有关错误的列表，请参阅源数据库的文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
@@ -43,26 +48,26 @@ caps.handback.revision: 12
   
  根据错误行为设置，CDC 目标支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [ODBC 源编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)。  
   
-## 并行  
+## <a name="parallelism"></a>并行  
  对于可对同一台计算机或不同计算机（并非一般的全局会话限制）上的相同表或不同表并行运行的 ODBC 目标组件的数目没有限制。  
   
  但是，要使用的 ODBC 访问接口的限制可能会限制通过该访问接口的同时连接的数目。 这些限制将会限制 ODBC 目标可能支持的并行实例的数目。 SSIS 开发人员必须知道要使用的任何 ODBC 访问接口的限制并且在生成 SSIS 包时将这些限制元素考虑进去。  
   
  您还必须知道，同时加载到同一个表中可能会由于标准记录锁定而降低性能。 这取决于要加载的数据和表的组织结构。  
   
-## ODBC 目标故障排除  
+## <a name="troubleshooting-the-odbc-destination"></a>ODBC 目标故障排除  
  可以记录 ODBC 源对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除 ODBC 目标执行将数据保存到外部数据源的操作过程中发生的故障。 若要记录 ODBC 目标对外部数据访问接口进行的调用，请启用 ODBC 驱动程序管理器跟踪。 有关详细信息，请参阅 Microsoft 文档 *数据源管理员如何使用 ODBC 生成 ODBC 跟踪*。  
   
-## 配置 ODBC 目标  
+## <a name="configuring-the-odbc-destination"></a>配置 ODBC 目标  
  您可以通过编程方式或者通过 SSIS 设计器配置 ODBC 目标。  
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -72,15 +77,15 @@ caps.handback.revision: 12
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
--   [ODBC 目标编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [通过使用 ODBC 目标来加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [通过使用 ODBC 目标加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 目标自定义属性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   

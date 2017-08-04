@@ -1,29 +1,34 @@
 ---
-title: "每次重播一个事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件 [SQL Server], 每次重播一个事件"
-  - "跟踪 [SQL Server], 重播"
-  - "重播跟踪"
+title: "一次 （SQL Server 事件探查器） 重播一个事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [SQL Server], replaying single event at a time
+- traces [SQL Server], replaying
+- replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e6b9a2ebb13ee4e17e5eb329432818bff54818c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 每次重播一个事件 (SQL Server Profiler)
+# <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>每次重播一个事件 (SQL Server Profiler)
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]每次重播跟踪文件或表中的一个事件。  
   
-### 每次重播一个事件  
+### <a name="to-replay-a-single-event-at-a-time"></a>每次重播一个事件  
   
 1.  打开要重播的跟踪文件或跟踪表。 有关详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或[打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 21
   
 5.  若要重播后续事件，请在 **“重播”** 菜单上，单击 **“步骤”**，或按 F10。 对每个事件重复单击 **“步骤”** 或按 F10。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

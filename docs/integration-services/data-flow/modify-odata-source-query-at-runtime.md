@@ -1,34 +1,39 @@
 ---
-title: "在运行时修改 OData 源查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改在运行时的 OData 源查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e061fe6989d9629d655d9e0c08f2cd4c1d932540
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 在运行时修改 OData 源查询
+# <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
   可以通过向数据流任务的“[OData 源].[查询]”属性添加表达式，在运行时修改 OData 源查询。  
   
  请注意，列必须保持与设计时使用的内容相同；否则执行包时会出现错误。 请务必在使用 $select 查询选项时指定相同的列（采用相同顺序）。 使用 $select 选项的更安全替代方法是直接从源组件 UI 中取消选择不需要的列。  
   
  可通过几种不同的方式在运行时动态设置查询值。 下面是一些较常用的方法。  
   
-## 将查询公开为参数  
+## <a name="exposing-the-query-as-a-parameter"></a>将查询公开为参数  
  以下过程包含的步骤可将 OData 源组件使用的查询公开为包的参数。  
   
 1.  右键单击 **“数据流任务”** 并选择 **“参数化…”** 选项。  
   
-2.  在“参数化”对话框中，针对“属性”选择“[\<OData 源组件的名称>].[查询]”。  
+2.  在**参数化**对话框中，选择**[\<的 OData 源组件的名称 >]。 [查询]**为**属性**。  
   
 3.  选择是 **“创建新参数”** 还是 **“使用现有参数”**。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 5.  单击 **“确定”** 关闭对话框。  
   
-## 使用表达式  
+## <a name="using-an-expression"></a>使用表达式  
  当您要在运行时动态构造查询字符串时，可使用此方法。 在此示例中，MaxRows 变量将通过其他方法（脚本、参数等）进行设置。  
   
 1.  选择包含 **“OData 源”** 的 **“数据流任务”**。  

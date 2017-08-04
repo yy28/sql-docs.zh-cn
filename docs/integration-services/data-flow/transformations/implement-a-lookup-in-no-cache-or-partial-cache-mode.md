@@ -1,27 +1,32 @@
 ---
-title: "在不缓存模式或部分缓存模式下实现查找 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查找转换"
-  - "精确匹配 [Integration Services]"
-  - "查找 [Integration Services]"
-  - "精确匹配 [Integration Services]"
+title: "在不缓存或部分缓存模式下实现查找 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 在不缓存模式或部分缓存模式下实现查找
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
   可以将查找转换配置为使用部分缓存模式或不缓存模式：  
   
 -   部分缓存  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  不论选择部分缓存还是不缓存，均需要使用 OLE DB 连接管理器连接到引用数据集。 引用数据集是在执行查找转换过程中使用表、视图或 SQL 查询生成的。  
   
-### 在不缓存模式或部分缓存模式下实现查找转换  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找转换  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目，再打开该包。  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. 单击 **“确定”** 以保存对查找转换的更改，然后运行包。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

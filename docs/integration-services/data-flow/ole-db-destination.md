@@ -1,36 +1,41 @@
 ---
-title: "OLE DB 目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbdest.f1"
-helpviewer_keywords: 
-  - "快速加载数据访问模式 [Integration Services]"
-  - "OLE DB 目标 [Integration Services]"
-  - "快速加载选项 [Integration Services]"
-  - "快速加载选项 [Integration Services]"
-  - "目标 [Integration Services], OLE DB"
-  - "快速加载数据访问模式 [Integration Services]"
-  - "插入数据"
+title: "OLE DB 目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbdest.f1
+helpviewer_keywords:
+- fast-load data access mode [Integration Services]
+- OLE DB destination [Integration Services]
+- fast load options [Integration Services]
+- fast-load options [Integration Services]
+- destinations [Integration Services], OLE DB
+- fast load data access mode [Integration Services]
+- inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 目标
+# <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
   
 > [!NOTE]  
->  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅[连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
+>  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，则数据源需要一个不同于早期版本 Excel 的连接管理器。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
   
  OLE DB 目标为数据加载提供了五种数据访问模式：  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 79
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
- 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任意一种快速加载访问模式：“表或视图”–“快速加载”或“表名称或视图名称变量”–“快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象模型时，应将 AccessMode 属性设置为 **OpenRowset Using FastLoad** 或 **OpenRowset Using FastLoad From Variable**。  
+ 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任意一种快速加载访问模式：“表或视图”–“快速加载”或“表名称或视图名称变量”–“快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象模型时，应将 AccessMode 属性设置为 **OpenRowset Using FastLoad**或 **OpenRowset Using FastLoad From Variable**。  
   
 > [!NOTE]  
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
@@ -65,7 +70,7 @@ caps.handback.revision: 79
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 快速加载选项  
+## <a name="fast-load-options"></a>快速加载选项  
  如果 OLE DB 目标使用快速加载数据访问模式，则可以在用户界面“OLE DB 目标编辑器”中为目标指定以下快速加载选项：  
   
 -   保持导入数据文件的标识值或使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配的唯一值。  
@@ -87,18 +92,18 @@ caps.handback.revision: 79
   
 |快速加载选项|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 **KILOBYTES_PER_BATCH** = \<正整数值**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项具有窗体**KILOBYTES_PER_BATCH** = \<正整数值**>**。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
-|ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据排序，则性能可以得到提高。|  
+|ORDER|指定输入数据如何排序。 选项具有窗体顺序\<列名称 > ASC &#124; DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据排序，则性能可以得到提高。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字传统上采用大写字母键入，但并不区分大小写。  
   
  若要了解快速加载选项的详细信息，请参阅[BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-## OLE DB 目标故障排除  
- 可以记录 OLE DB 目标对外部数据访问接口所做的调用。 利用此日志记录功能，可以对 OLE DB 目标在执行将数据保存到外部数据源的操作进行故障排除。 若要记录 OLE DB 目标对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅[包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+## <a name="troubleshooting-the-ole-db-destination"></a>OLE DB 目标故障排除  
+ 可以记录 OLE DB 目标对外部数据访问接口所做的调用。 利用此日志记录功能，可以对 OLE DB 目标在执行将数据保存到外部数据源的操作进行故障排除。 若要记录 OLE DB 目标对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
-## 配置 OLE DB 目标  
+## <a name="configuring-the-ole-db-destination"></a>配置 OLE DB 目标  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 **“OLE DB 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
@@ -111,7 +116,7 @@ caps.handback.revision: 79
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 自定义属性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 79
   
 -   [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  [OLE DB 源](../../integration-services/data-flow/ole-db-source.md)  
   
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  

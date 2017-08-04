@@ -1,32 +1,37 @@
 ---
-title: "创建叶成员 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "叶成员 [Master Data Services]，创建"
-  - "创建叶成员 [Master Data Services]"
-  - "成员 [Master Data Services]，创建叶成员"
+title: "创建叶成员 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建叶成员 (Master Data Services)
+# <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，如果你想将主数据添加到系统中，请创建叶成员。 如果你想批量添加数据，请改用临时表。 有关详细信息，请参阅[导入表中数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  你也可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 导入数据。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
   
      有关详细信息，请参阅[安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
-### 创建叶成员  
+### <a name="to-create-a-leaf-member"></a>创建叶成员  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在  主页上，从“模型”列表中，选择模型。  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建合并成员 (Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
+ [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
   
   

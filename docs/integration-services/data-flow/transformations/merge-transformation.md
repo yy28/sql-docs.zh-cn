@@ -1,30 +1,35 @@
 ---
-title: "合并转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergetrans.f1"
-helpviewer_keywords: 
-  - "合并数据集 [Integration Services]"
-  - "合并数据 [Integration Services]"
-  - "合并转换"
-  - "组合数据集"
-  - "数据集 [Integration Services], 合并"
+title: "合并转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergetrans.f1
+helpviewer_keywords:
+- merging datasets [Integration Services]
+- merging data [Integration Services]
+- Merge transformation
+- combining datasets
+- datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 合并转换
+# <a name="merge-transformation"></a>合并转换
   合并转换将两个排序后的数据集合并为一个数据集。 根据每个数据集中的行的键列的值，将这些行插入到输出中。  
   
  通过将合并转换纳入数据流，可以执行下列任务：  
@@ -43,8 +48,8 @@ caps.handback.revision: 43
   
 -   转换的输入超过两个。  
   
-## 输入要求  
- 合并转换要求输入已排序的数据。 有关此重要要求的详细信息，请参阅[为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
+## <a name="input-requirements"></a>输入要求  
+ 合并转换要求输入已排序的数据。 有关此重要要求的详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
   
  合并转换还要求输入中的已合并列具有匹配的元数据。 例如，不能合并包含数值数据类型的列和包含字符数据类型的列。 如果数据为字符串数据类型，第二个输入中列的长度必须小于或等于被合并的第一个输入中列的长度。  
   
@@ -52,25 +57,25 @@ caps.handback.revision: 43
   
  此转换有两个输入和一个输出。 它不支持错误输出。  
   
-## 合并转换的配置  
+## <a name="configuration-of-the-merge-transformation"></a>合并转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“合并转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Merge Transformation Editor](../../../integration-services/data-flow/transformations/merge-transformation-editor.md)。  
   
  有关可以用编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  有关如何设置属性的详细信息，请参阅以下主题：  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [合并联接转换](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   

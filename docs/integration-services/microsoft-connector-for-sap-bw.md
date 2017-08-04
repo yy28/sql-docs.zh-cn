@@ -1,22 +1,27 @@
 ---
-title: "Microsoft Connector for SAP BW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft Connector for SAP BW |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9edd63d224f5d4053133cba28ad31a8fba93522
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Microsoft Connector for SAP BW
+# <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 由一组三个组件构成，可用于从 SAP Netweaver BW 版本 7 系统中提取数据以及向该系统中加载数据。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 是 SQL Server 2016 功能包的一个组件。 若要安装 Connector for SAP BW 及其文档，请从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载并运行安装程序。  
@@ -27,7 +32,7 @@ caps.handback.revision: 12
 > [!IMPORTANT]  
 >  从 SAP Netweaver BW 提取数据要求额外的 SAP 许可。 请向 SAP 核实以便确认这些要求。  
   
-## 组件  
+## <a name="components"></a>组件  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 包含以下组件：  
   
 -   **SAP BW 源**- SAP BW 源是一个数据流源组件，用于从 SAP Netweaver BW 版本 7 系统中提取数据。  
@@ -38,7 +43,7 @@ caps.handback.revision: 12
   
  有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](http://go.microsoft.com/fwlink/?LinkId=301897)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
-## 文档  
+## <a name="documentation"></a>文档  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 的此帮助文件包含以下主题和部分：  
   
  [安装 Microsoft Connector for SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  

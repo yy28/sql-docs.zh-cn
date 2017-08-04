@@ -1,37 +1,42 @@
 ---
-title: "聚合转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregatetrans.f1"
-helpviewer_keywords: 
-  - "IsBig 属性"
-  - "聚合函数 [Integration Services]"
-  - "聚合转换 [Integration Services]"
-  - "大型数据, SSIS 转换"
+title: "聚合转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregatetrans.f1
+helpviewer_keywords:
+- IsBig property
+- aggregate functions [Integration Services]
+- Aggregate transformation [Integration Services]
+- large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 聚合转换
+# <a name="aggregate-transformation"></a>聚合转换
   聚合转换将聚合函数（如 Average）应用于列值，并将结果复制到转换输出。 除聚合函数以外，转换还提供 GROUP BY 子句，用于指定所要聚合的组。  
   
-## 操作  
+## <a name="operations"></a>操作  
  聚合转换支持下列运算。  
   
 |运算|Description|  
 |---------------|-----------------|  
-|Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](../Topic/GROUP%20BY%20\(Transact-SQL\).md)。|  
+|Group by|将数据集划分为组。 任何数据类型的列都可用于分组。 有关详细信息，请参阅 [GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
 |Sum|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md)。|  
 |平均值|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 [AVG (Transact-SQL)](../../../t-sql/functions/avg-transact-sql.md)。|  
 |Count|返回组中的项数。 有关详细信息，请参阅 [COUNT (Transact-SQL)](../../../t-sql/functions/count-transact-sql.md)。|  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
 -   在 COUNT (*) 函数中，对所有行计数，包括含空值的行。  
   
-## 聚合中的大数  
+## <a name="big-numbers-in-aggregates"></a>聚合中的大数  
  列可能包含因数值庞大或精度要求高而需要特别考虑的数值。 聚合转换包含 IsBig 属性，你可以针对输出列设置它，以便调用对大数或高精度数字的特别处理。 如果列值可能超过 40 亿，或者需要超过 float 数据类型的精度，则应将 IsBig 设置为 1。  
   
  将 IsBig 属性设置为 1 将以下列方式影响聚合转换的输出：  
@@ -61,14 +66,14 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  在用于 GROUP BY、Maximum 或 Minimum 运算的列中，不能将 IsBig 设置为 1。  
   
-## 性能注意事项  
+## <a name="performance-considerations"></a>性能注意事项  
  聚合转换包含一组属性，对其进行设置可增强转换的性能。  
   
 -   执行 **Group by** 运算时，请设置组件的 Keys 或 KeysScale 属性和组件输出。 通过使用 Keys，可指定要求转换处理的精确键数。 （在此上下文中，Keys 指的是要求 **Group by** 运算产生的组数。）使用 KeysScale，可以指定大致的键数。 为 Keys 或 KeyScale 指定适当的值将会提高性能，原因是转换能够为转换缓存的数据分配足量的内存。  
   
 -   执行 **Distinct count** 运算时，请设置组件的 CountDistinctKeys 或 CountDistinctScale 属性。 使用 CountDistinctKeys 可指定要求转换处理的非重复计数运算的精确键数。 （在此上下文中，CountDistinctKeys 指的是要求 **Distinct count** 运算产生的非重复值数。）使用 CountDistinctScale，可指定非重复计数运算的大致键数。 为 CountDistinctKeys 或 CountDistinctScale 指定适当的值将会提高性能，原因是转换能够为转换缓存的数据分配足量的内存。  
   
-## 聚合转换配置  
+## <a name="aggregate-transformation-configuration"></a>聚合转换配置  
  在转换级、输出级和列级配置聚合转换。  
   
 -   在转换级，可以通过指定以下值配置聚合转换，以便提高性能：  
@@ -103,7 +108,7 @@ caps.handback.revision: 59
   
  也可将多个输出添加到聚合转换，并将每个聚合定向到不同输出。 例如，如果聚合转换应用 Sum 和 Average 函数，则可以将每个聚合定向到不同输出。  
   
- 可以对单个输入列应用多个聚合。 例如，如果需要名为 **Sales** 的输入列的和值与平均值，则可以配置转换，使其将 Sum 和 Average 函数都应用于 **Sales** 列。  
+ 可以对单个输入列应用多个聚合。 例如，如果需要名为 **Sales**的输入列的和值与平均值，则可以配置转换，使其将 Sum 和 Average 函数都应用于 **Sales** 列。  
   
  聚合转换具有一个输入和一个或多个输出。 它不支持错误输出。  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 59
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -129,10 +134,10 @@ caps.handback.revision: 59
   
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [使用聚合转换来聚合数据集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

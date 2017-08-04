@@ -1,24 +1,29 @@
 ---
-title: "CDC 控制任务编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdccontroltask.config.f1"
+title: "CDC 控制任务编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bcf6e5d0186e4b74c4ea8c3719193d1610c9bba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 控制任务编辑器
+# <a name="cdc-control-task-editor"></a>CDC 控制任务编辑器
   使用 **“CDC 控制任务编辑器”** 对话框可以配置 CDC 控制任务。 CDC 控制任务配置包括定义与 CDC 数据库的连接、CDC 任务操作和状态管理信息。  
   
  若要了解有关 CDC 控制任务的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
@@ -29,7 +34,7 @@ caps.handback.revision: 10
   
 2.  在“控制流”选项卡上，双击 CDC 控制任务。  
   
-## 选项  
+## <a name="options"></a>选项  
  **SQL Server CDC 数据库 ADO.NET 连接管理器**  
  从列表中选择现有连接管理器，或单击“新建”创建新的连接。 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 10
   
 -   **获取处理范围**：在调用使用 CDC 源数据流的数据流之前，在更改处理包中使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。  
   
-     有关存储的可能的 CDC 状态的详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
+     有关存储的可能的 CDC 状态的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
 -   **标记已处理的范围**：在 CDC 运行结束时（在 CDC 数据流成功完成后）在更改处理包中使用此操作，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 `GetProcessingRange` 时，此位置确定下一处理范围的起点。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 10
  **包含 CDC 状态的变量**  
  选择存储任务操作的状态信息的 SSIS 包变量。 在开始之前，应该先定义一个变量。 如果您选择 **“自动状态持久性”**，将自动加载和保存状态变量。  
   
- 有关定义状态变量的详细信息，请参阅[定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
+ 有关定义状态变量的详细信息，请参阅 [定义状态变量](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **启动 CDC 的 SQL Server LSN/快照名称：**  
  键入自其开始执行初始加载的当前源数据库 LSN 或快照数据库的名称，以确定 CDC 的起点。 仅当 **“CDC 控制操作”** 设置为 **“标记 CDC 开始”**时，此选项才可用。  
@@ -88,7 +93,7 @@ caps.handback.revision: 10
  **状态名称**  
  键入与持久 CDC 状态关联的名称。 使用相同 CDC 上下文的完整负载和 CDC 包将指定一个公共的状态名称。 此名称用于查找状态表中的状态行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDC 控制任务自定义属性](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
   

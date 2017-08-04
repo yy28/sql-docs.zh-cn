@@ -1,30 +1,35 @@
 ---
-title: "确定变更数据是否已准备就绪 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量加载 [Integration Services], 确定是否准备就绪"
+title: "确定变更数据是否准备就绪 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 确定变更数据是否已准备就绪
+# <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  
   
 > [!NOTE]  
 >  控制流的第一个任务是计算更改间隔的端点。 有关此任务的详细信息，请参阅[指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 了解解决方案的组件  
+## <a name="understanding-the-components-of-the-solution"></a>了解解决方案的组件  
  本主题中介绍的解决方案使用以下 4 个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件：  
   
 -   一个 For 循环容器，用于重复地计算执行 SQL 任务的输出。  
@@ -37,7 +42,7 @@ caps.handback.revision: 26
   
  这些组件设置或读取几个包变量的值，以控制循环内以及之后包中的执行流程。  
   
-#### 设置包变量  
+#### <a name="to-set-up-package-variables"></a>设置包变量  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，在 **“变量”** 窗口中创建以下变量：  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 26
   
          此示例使用变量名 IntervalID，并且仅检查 0 值以指示首次加载。  
   
-## 配置 For 循环容器  
+## <a name="configuring-a-for-loop-container"></a>配置 For 循环容器  
  根据上述变量集，For 循环容器是首先要添加的组件。  
   
-#### 将 For 循环容器配置为等待变更数据准备就绪  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>将 For 循环容器配置为等待变更数据准备就绪  
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，向控制流中添加 For 循环容器。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          如果此表达式的计算结果为 **False**，则执行将跳出循环，开始进行增量加载。  
   
-## 配置用于查询变更数据的执行 SQL 任务  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>配置用于查询变更数据的执行 SQL 任务  
  在 For 循环容器内，添加一个执行 SQL 任务。 此任务在数据库中查询变更数据捕获进程维护的表。 此查询的结果是一个指示变更数据是否已准备就绪的状态值。  
   
  在下表中，第一列显示 Transact-SQL 示例查询中从执行 SQL 任务返回的值。 第二列显示其他组件如何响应这些值。  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
 |3|指示所有可用的变更数据的首次加载。<br /><br /> 条件逻辑从仅用于此目的特殊包变量中获取此值。|执行将跳出 For 循环容器并且增量加载开始进行。|  
 |5|指示已达到 TimeoutCeiling。<br /><br /> 循环已对数据执行了指定次数的测试，数据仍不可用。 如果没有此测试或类似的测试，该包可能会无限期地运行。|执行过程通过记录超时的可选组件继续执行。|  
   
-#### 配置执行 SQL 任务，以查询变更数据是否已准备就绪  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>配置执行 SQL 任务，以查询变更数据是否已准备就绪  
   
 1.  在 For 循环容器内，添加一个执行 SQL 任务。  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”**页上，将 DataReady 结果映射到 DataReady 变量，并将 TimeoutCount 结果映射到 TimeoutCount 变量。  
   
-## 等到变更数据准备就绪  
+## <a name="waiting-until-the-change-data-is-ready"></a>等到变更数据准备就绪  
  当变更数据未准备就绪时，您可以使用多种方法中的一种来实现延迟。 下面的两个过程演示如何使用脚本任务或执行 SQL 任务来实现延迟。  
   
 > [!NOTE]  
 >  预编译的脚本产生的开销小于执行 SQL 任务。  
   
-#### 使用脚本任务实现延迟  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>使用脚本任务实现延迟  
   
 1.  在 For 循环容器内，添加一个脚本任务。  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
-#### 使用执行 SQL 任务实现延迟  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>使用执行 SQL 任务实现延迟  
   
 1.  在 For 循环容器内，添加一个执行 SQL 任务。  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  在编辑器的 **“参数映射”** 页上，将 DelaySeconds 字符串变量映射到参数 0。  
   
-## 处理错误情况  
+## <a name="handling-an-error-condition"></a>处理错误情况  
  您可以选择在循环内配置额外的组件以记录错误或超时情况：  
   
 -   当 DataReady 变量的值 = 1 时，此组件可以记录错误情况。 此值指示在所选间隔开始前没有可用的变更数据。  
   
 -   达到 TimeoutCeiling 变量的值时，此组件还可以记录超时情况。 此值指示循环已对数据执行了指定次数的测试，但数据仍不可用。 如果没有此测试或类似的测试，该包可能会无限期地运行。  
   
-#### 配置可选的脚本任务以记录错误情况  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>配置可选的脚本任务以记录错误情况  
   
-1.  如果想要通过将消息写入日志记录来报告错误或超时，请配置包的日志记录功能。 有关详细信息，请参阅[在 SQL Server Data Tools 中启用包日志记录](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)。  
+1.  如果想要通过将消息写入日志记录来报告错误或超时，请配置包的日志记录功能。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](../../integration-services/performance/integration-services-ssis-logging.md#ssdt)。  
   
 2.  在 For 循环容器内，添加一个脚本任务。  
   
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  在确定变更数据已准备就绪之后，下一步就是准备查询变更数据。  
   
  **下一主题：**[准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

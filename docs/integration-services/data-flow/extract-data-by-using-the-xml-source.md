@@ -1,29 +1,34 @@
 ---
-title: "使用 XML 源提取数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "提取数据 [Integration Services]"
-  - "源 [Integration Services], XML"
-  - "XML 源 [集成服务]"
+title: "使用 XML 源提取数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], XML
+- XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 XML 源提取数据
+# <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
   若要添加和配置 XML 源，包中必须已经包含至少一个数据流任务。  
   
-### 使用 XML 源提取数据  
+### <a name="to-extract-data-using-an-xml-source"></a>使用 XML 源提取数据  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 21
   
 8.  若要更新输出列的名称，请单击 **“列”** 并在 **“输出列”** 列表中编辑这些值。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅[在数据流组件中配置错误输出](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 10. 单击 **“确定”**。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 源](../../integration-services/data-flow/xml-source.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md)   

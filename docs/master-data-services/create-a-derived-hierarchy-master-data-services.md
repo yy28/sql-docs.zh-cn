@@ -1,38 +1,43 @@
 ---
-title: "创建派生层次结构 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "派生层次结构, 创建"
-  - "创建派生层次结构 [Master Data Services]"
+title: "创建派生层次结构 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- derived hierarchies, creating
+- creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65676239fa42e9e9f067dbd1973c005bd4198180
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建派生层次结构 (Master Data Services)
+# <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，在您需要确保成员存在于正确级别的基于级别的层次结构时，创建派生层次结构。 派生层次结构基于在模型中存在的基于域的属性关系。  
   
 > [!NOTE]  
 >  如果对于某一成员不存在基于域的属性值，则在派生层次结构中将不包括该成员。 若要获取针对所有成员的基于域的属性值，请参阅[要求属性值 (Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md)。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 创建派生层次结构  
+### <a name="to-create-a-derived-hierarchy"></a>创建派生层次结构  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
 5.  在 **“添加派生层次结构”** 页上的 **“派生层次结构名称”** 框中，键入层次结构的名称。  
   
     > [!TIP]  
-    >  使用在层次结构中描述级别的名称，例如，**Product to Subcategory to Category**。  
+    >  使用在层次结构中描述级别的名称，例如， **Product to Subcategory to Category**。  
   
 6.  单击 **“保存派生层次结构”**。  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 7
   
 9. 单击 **“上一步”**。  
   
-## 另请参阅  
- [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
- [具有显式顶端的派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [派生层次结构 &#40;Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [具有显式顶端 &#40; 派生层次结构Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [基于域的属性 &#40;Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
   

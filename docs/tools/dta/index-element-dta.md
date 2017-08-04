@@ -1,29 +1,34 @@
 ---
-title: "索引元素 (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "索引元素 (DTA)"
+title: "索引元素 (DTA) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 索引元素 (DTA)
+# <a name="index-element-dta"></a>索引元素 (DTA)
   包含为用户指定的配置创建或删除的索引的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 18
     </Index>  
 ```  
   
-## 元素属性  
+## <a name="element-attributes"></a>元素属性  
   
 |索引属性|数据类型|说明|  
 |---------------------|---------------|-----------------|  
@@ -52,7 +57,7 @@ caps.handback.revision: 18
 |**ANSI_WARNINGS**|**boolean**|可选。 对几种错误情况指定 ISO 标准行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。|  
 |**NUMERIC_ROUNDABORT**|**boolean**|可选。 指定当表达式中的舍入导致精度损失时生成的错误报告级别。 如果索引位于计算列或视图上，则必须禁用此属性。<br /><br /> 以下语法将启用此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。|  
   
-## 元素特征  
+## <a name="element-characteristics"></a>元素特征  
   
 |特征|说明|  
 |--------------------|-----------------|  
@@ -60,17 +65,17 @@ caps.handback.revision: 18
 |**默认值**|无。|  
 |**出现次数**|如果未使用 **Create** 或 **Drop** 元素指定其他物理设计结构，则每个 **Statistics** 或 **Heap** 元素均需出现一次。|  
   
-## 元素关系  
+## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[创建元素 (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
-|**子元素**|[索引的名称元素 (DTA)](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
+|**子元素**|[索引 & #40; DTA & #41; 的名称元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
   
-## 示例  
+## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[使用用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

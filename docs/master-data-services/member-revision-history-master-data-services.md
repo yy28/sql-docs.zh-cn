@@ -1,23 +1,28 @@
 ---
-title: "成员修订历史记录 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "成员修订历史记录 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8397d82b231588457a85a65d1d9f19aaec1431f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 成员修订历史记录 (Master Data Services)
+# <a name="member-revision-history-master-data-services"></a>成员修订历史记录 (Master Data Services)
   如果实体事务日志类型为成员，则每当成员发生变化时，系统都会记录成员修订历史记录。  
   
  有关事务日志类型的信息，请参阅[更改实体事务日志类型 (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)。  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   在层次结构或集合中移动成员  
   
-## 由实体查看和管理修订历史记录  
+## <a name="view-and-manage-revision-history-by-entity"></a>由实体查看和管理修订历史记录  
  在资源管理器功能区中，可以查看实体中所有成员的修订版本。 如果具有更新权限，可以将成员回退到之前的修订版本。  
   
  **查看和管理修订历史记录**  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 6.  如果具有更新权限，请单击“还原成员”  回退到所选版本。  
   
-## 由成员查看和管理修订历史记录  
+## <a name="view-and-manage-revision-history-by-member"></a>由成员查看和管理修订历史记录  
  如果具有成员的读取权限，就可以在资源管理器功能区中查看成员的修订版本。 如果具有更新权限，就可以将成员回退到之前的修订版本或为修订版本添加注释。  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，选择模型和版本，然后单击“资源管理器” 。  
@@ -58,17 +63,17 @@ caps.handback.revision: 7
   
 4.  在右窗格中，单击“查看历史记录”  。  
   
-## 日志保留设置  
+## <a name="log-retention-setting"></a>日志保留设置  
  可以通过设置 **数据库的系统设置中的“日志保留天数”**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 属性配置历史记录数据保留期，也可以通过在创建或编辑模型时设置“日志保留天数”  来配置。  
   
-## 相关任务  
+## <a name="related-task"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |回退成员修订历史记录|[回退成员修订历史记录 (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
- [系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
+ [系统设置 &#40;Master Data Services &#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

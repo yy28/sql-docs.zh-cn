@@ -1,32 +1,37 @@
 ---
-title: "行抽样转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rowsamplingtrans.f1"
-helpviewer_keywords: 
-  - "抽样种子 [Integration Services]"
-  - "随机种子"
-  - "随机抽样"
-  - "样本数据集 [Integration Services]"
-  - "行抽样转换"
-  - "包 [Integration Services], 样本"
-  - "数据集 [Integration Services], 样本"
+title: "行抽样转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rowsamplingtrans.f1
+helpviewer_keywords:
+- sampling seeds [Integration Services]
+- random seeds
+- random sampling
+- sample data sets [Integration Services]
+- Row Sampling transformation
+- packages [Integration Services], samples
+- datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 行抽样转换
+# <a name="row-sampling-transformation"></a>行抽样转换
   行抽样转换用于获取输入数据集的随机选择子集。 您可以指定输出样本的准确大小，并指定随机数生成器的种子。  
   
  随机抽样有许多应用场合。 例如，如果公司需要以抽彩给奖法随机选择 50 名雇员接受奖励，则可对雇员数据库使用行随机抽样转换来生成准确数目的获奖者。  
@@ -35,7 +40,7 @@ caps.handback.revision: 43
   
  此转换类似于百分比抽样转换，后者通过选择输入行的百分比来创建样本数据集。 请参阅 [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)。  
   
-## 配置行抽样转换  
+## <a name="configuring-the-row-sampling-transformation"></a>配置行抽样转换  
  行抽样转换通过选择指定数目的转换输入行来创建样本数据集。 因为从转换输入中选择的行是随机的，因此结果样本可以代表输入。 还可以指定随机数生成器使用的种子来影响转换选择行的方式。  
   
  在同一转换输入上使用相同的随机种子将始终创建相同的样本输出。 如果没有指定种子，转换将使用操作系统的时钟周期数来创建随机数。 因此，可使用测试期间使用的种子来验证包开发和测试期间的转换结果，然后在包进入生产阶段时改用随机种子。  
@@ -50,13 +55,13 @@ caps.handback.revision: 43
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
   

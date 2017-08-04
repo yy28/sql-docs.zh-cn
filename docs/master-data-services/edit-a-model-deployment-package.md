@@ -1,36 +1,41 @@
 ---
-title: "编辑模型部署包 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "编辑模型部署包 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bcf1d714605d3f1df2e713e3e8d0311ca1440210
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 编辑模型部署包
+# <a name="edit-a-model-deployment-package"></a>编辑模型部署包
   本主题介绍如何在 MDS 中部署模型的所选部分，而不是部署整个模型。 为此，您需使用模型包编辑器来编辑 MDS 模型包。  
   
  利用模型包编辑器向导，您可以在要包含在 MDS 包中的模型中选择特定实体、派生层次结构、订阅视图和业务规则，并在稍后进行部署。 您可以忽略不想部署的那部分模型。 当您选择一个实体时，还会自动选择该实体中的所有依赖对象。  
   
  可使用模型包编辑器选择通过 MDSModelDeploy 工具（用于创建包含对象和数据的包文件）或模型部署向导（用于创建仅包含模型结构的文件）创建的包文件中的模型的一部分。 在编辑包中的模型之后，可使用 MDSModelDeploy 工具部署对象和数据，或使用模型部署向导仅部署模型结构。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   您要编辑的模型包必须存在。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)和[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)或[使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-### 编辑模型部署包  
+### <a name="to-edit-a-model-deployment-package"></a>编辑模型部署包  
   
 1.  在 MDS 服务器上的 Windows 资源管理器中，移至驱动器:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
 7.  单击 **“完成”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使用向导部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

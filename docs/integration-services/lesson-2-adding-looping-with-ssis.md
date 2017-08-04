@@ -1,27 +1,32 @@
 ---
-title: "第 2 课：使用 SSIS 添加循环 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "第 2 课： 添加与 SSIS 循环 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 第 2 课：使用 SSIS 添加循环
-在[第 1 课：使用 SSIS 创建项目包和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到 **AdventureWorksDW2012** 示例数据库的 **FactCurrency** 事实数据表中。  
+# <a name="lesson-2-adding-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
+在 [第 1 课：使用 SSIS 创建项目包和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到 **AdventureWorksDW2012** 示例数据库的 **FactCurrency** 事实数据表中。  
   
-但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
+但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 为循环遍历包提供了两种容器类型：Foreach 循环容器和 For 循环容器。 Foreach 循环容器使用枚举器执行循环，而 For 循环容器则通常使用变量表达式。 本课使用 Foreach 循环容器。  
   
@@ -50,22 +55,23 @@ Foreach 循环容器使包能够对指定枚举器的每个成员重复执行控
 > [!IMPORTANT]  
 > 本教程需要 **AdventureWorksDW2012** 示例数据库。 有关如何安装和部署 **AdventureWorksDW2012**的详细信息，请参阅 [CodePlex 上的 Reporting Services 产品示例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
   
-## 课程任务  
+## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [步骤 1：复制 Lesson 1 包](../integration-services/step-1-copying-the-lesson-1-package.md)  
+-   [步骤 1：复制 Lesson 1 包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [步骤 2：添加和配置 Foreach 循环容器](../integration-services/step-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [步骤 2：添加和配置 Foreach 循环容器](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [步骤 3：修改平面文件连接管理器](../integration-services/step-3-modifying-the-flat-file-connection-manager.md)  
+-   [步骤 3：修改平面文件连接管理器](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [步骤 4：测试第 2 课教程包](../integration-services/step-4-testing-the-lesson-2-tutorial-package.md)  
+-   [步骤 4：测试第 2 课教程包](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## 开始课程  
-[步骤 1：复制 Lesson 1 包](../integration-services/step-1-copying-the-lesson-1-package.md)  
+## <a name="start-the-lesson"></a>开始课程  
+[步骤 1：复制 Lesson 1 包](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
 [For 循环容器](../integration-services/control-flow/for-loop-container.md)  
   
   
   
+

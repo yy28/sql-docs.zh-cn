@@ -1,28 +1,33 @@
 ---
-title: "*（乘）（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "*（乘运算符）"
-  - "乘运算符 (*)"
+title: "* （乘）（SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '* (multiply operator)'
+- multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb439e9221a1bcb169776eec1f6251b49ed4b861
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# *（乘）（SSIS 表达式）
+# <a name="-multiply-ssis-expression"></a>*（乘）（SSIS 表达式）
   将两个数值表达式相乘。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -30,17 +35,17 @@ numeric_expression1 * numeric_expression2
   
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *numeric_expression1、numeric_expression2*  
  是数值数据类型的任意有效表达式。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果任意一个操作数为 Null，则结果为 Null。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例将数值相乘。  
   
 ```  
@@ -59,8 +64,8 @@ ListPrice * .10
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

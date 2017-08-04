@@ -1,32 +1,37 @@
 ---
-title: "使用 MDSModelDeploy 创建模型部署包 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 MDSModelDeploy 创建模型部署包 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f983bc7fb8b25956a6edd61a6a9226384ffb8a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 MDSModelDeploy 创建模型部署包
+# <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来创建包。 根据您指定的命令，包可以包含：  
   
 -   仅模型对象。  
   
 -   模型对象和数据。  
   
- 如果需要部署仅包含模型对象的包，可改为在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中使用模型部署向导。 有关详细信息，请参阅[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
+ 如果需要部署仅包含模型对象的包，可改为在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中使用模型部署向导。 有关详细信息，请参阅 [使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 1.  运行 MDSModelDeploy 工具所需的基本权限如下所示：  
@@ -57,7 +62,7 @@ caps.handback.revision: 13
   
  有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 使用 MDSModelDeploy 创建模型部署包  
+### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 创建模型部署包  
   
 1.  打开一个管理员命令提示符。  
   
@@ -91,12 +96,12 @@ caps.handback.revision: 13
   
 6.  按 Enter 键。 成功创建包后，将显示一条消息“MDSModelDeploy 操作已成功完成”。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## 另请参阅  
- [模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)   
- [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [模型部署选项 &#40;Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -1,42 +1,47 @@
 ---
-title: "向版本分配标志 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "版本标志 [Master Data Services], 分配标志"
-  - "版本 [Master Data Services], 分配标志"
+title: "将标志分配给版本 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- version flags [Master Data Services], assigning flags
+- versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fe233f28ef0fd602e775f90b5fae083a96a1848
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 向版本分配标志 (Master Data Services)
+# <a name="assign-a-flag-to-a-version-master-data-services"></a>向版本分配标志 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，向版本分配标志以便指示用户或订阅系统应使用的版本。  
   
 > [!NOTE]  
 >  版本标志一次只能分配给一个版本。 如果您分配的标志已分配给另一个版本，则该标志将移到您选择的版本。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   您必须已创建要分配的版本标志。 有关详细信息，请参阅[创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)。  
+-   您必须已创建要分配的版本标志。 有关详细信息，请参阅 [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)。  
   
 -   你必须有权访问“版本管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
-### 向版本分配标志  
+### <a name="to-assign-a-flag-to-a-version"></a>向版本分配标志  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 7
   
 4.  按 Enter 以保存更改。  
   
-## 另请参阅  
- [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)   
- [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建版本标志 &#40;Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [版本 &#40;Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
   
   

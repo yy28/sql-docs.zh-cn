@@ -1,26 +1,31 @@
 ---
-title: "HTTP 连接管理器编辑器（“服务器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.server.f1"
-helpviewer_keywords: 
-  - "HTTP 连接管理器编辑器"
+title: "HTTP 连接管理器编辑器 （服务器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b11802c5d90948df8ce7e6ef41f3a3ef3ea2fed6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# HTTP 连接管理器编辑器（“服务器”页）
+# <a name="http-connection-manager-editor-server-page"></a>HTTP 连接管理器编辑器（“服务器”页）
   使用 **“HTTP 连接管理器编辑器”** 对话框的 **“服务器”** 选项卡，可以通过指定 URL 和安全凭据等属性来配置 HTTP 连接管理器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 配置 HTTP 连接管理器后，还可以测试该连接。  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
   
  若要了解有关 HTTP 连接管理器的详细信息，请参阅 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)。 若要了解有关 HTTP 连接管理器的常见使用方案的详细信息，请参阅 [Web Service Task](../../integration-services/control-flow/web-service-task.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **服务器 URL**  
  键入服务器的 URL。  
   
@@ -61,8 +66,8 @@ caps.handback.revision: 32
  **测试连接**  
  在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
+ [HTTP 连接管理器编辑器 &#40;代理页 &#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
   
   

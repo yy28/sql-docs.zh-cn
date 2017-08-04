@@ -1,32 +1,37 @@
 ---
-title: "Export Data to Excel from Master Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将数据导出到 Excel 中，从 Master Data Services |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2303d6a02bbed69b87e45120ee3de51f0278be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Export Data to Excel from Master Data Services
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，必须先从 MDS 存储库中加载数据，之后才能处理这些数据。  
+# <a name="export-data-to-excel-from-master-data-services"></a>Export Data to Excel from Master Data Services
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，必须先从 MDS 存储库中加载数据，之后才能处理这些数据。  
   
  如果想要在加载之前筛选数据集，请参阅[导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
   
-### 将数据从 MDS 导出到 Excel  
+### <a name="to-export-data-from-mds-into-excel"></a>将数据从 MDS 导出到 Excel  
   
 1.  打开 Excel，在 **“主数据”** 选项卡上连接到 MDS 存储库。 有关详细信息，请参阅[连接到 MDS 存储库（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 16
   
     -   如果 **“主数据资源管理器”** 窗格不可见，请在 **“连接并加载”** 组中，单击 **“显示资源管理器”**。  
   
-    -   如果“主数据资源管理器”窗格被禁用，则是因为现有工作表中已包含 MDS 管理的数据。 若要启用该窗格，请打开一个新工作表。  
+    -   如果 **“主数据资源管理器”** 窗格被禁用，则是因为现有工作表中已包含 MDS 管理的数据。 若要启用该窗格，请打开一个新工作表。  
   
 3.  在“主数据资源管理器”窗格的实体列表中，双击要加载的实体。  
   
@@ -47,12 +52,12 @@ caps.handback.revision: 16
     > [!NOTE]  
     >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”和“要发布的单元计数”属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”和“要发布的单元计数”的最大值设置。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  [将数据从 Excel 导入 Master Data Services（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [“筛选器”对话框（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [筛选器对话框 &#40;MDS add-in for Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

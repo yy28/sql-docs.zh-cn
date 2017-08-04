@@ -1,29 +1,34 @@
 ---
-title: "创建跟踪模板 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模板 [SQL Server], 跟踪"
-  - "跟踪模板 [SQL Server]"
-  - "保存跟踪模板"
+title: "创建跟踪模板 （SQL Server 事件探查器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [SQL Server], traces
+- trace templates [SQL Server]
+- saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4834d9022ec4ea6f1b97220a38a9b84f4634dbe5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建跟踪模板 (SQL Server Profiler)
+# <a name="create-a-trace-template-sql-server-profiler"></a>创建跟踪模板 (SQL Server Profiler)
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建新的跟踪模板。  
   
-### 创建跟踪模板  
+### <a name="to-create-a-trace-template"></a>创建跟踪模板  
   
 1.  在 **“文件”** 菜单上，指向 **“模板”**，然后单击 **“新建模板”**。  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 24
   
 8.  单击“保存”。  
   
-## 另请参阅  
- [指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [从正在运行的跟踪中派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>另请参阅  
+ [为跟踪文件 &#40; 指定的事件和数据列SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [从正在运行的跟踪 &#40; 派生模板SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [从跟踪文件或跟踪表 &#40; 派生模板SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

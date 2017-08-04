@@ -1,31 +1,36 @@
 ---
-title: "Excel 目标编辑器（“错误输出”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldestadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "Excel 目标编辑器"
+title: "Excel 目标编辑器 （错误输出页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldestadapter.erroroutput.f1
+helpviewer_keywords:
+- Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b826ecd93e7de8519b22f9001756fba6114bcf7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 目标编辑器（“错误输出”页）
+# <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“高级”** 页指定错误处理选项。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](../../integration-services/data-flow/excel-destination.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **输入或输出**  
  查看数据源的名称。  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 18
  **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
- [Excel 目标编辑器（“映射”页）](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
- [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Excel 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/excel-destination-editor-connection-manager-page.md)   
+ [Excel 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
+ [循环遍历 Excel 文件和表使用 Foreach 循环容器](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

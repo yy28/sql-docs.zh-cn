@@ -1,44 +1,49 @@
 ---
-title: "RIGHT（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT 函数"
+title: "RIGHT （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT（SSIS 表达式）
+# <a name="right-ssis-expression"></a>RIGHT（SSIS 表达式）
   返回从给定字符表达式最右侧开始的指定数量的字符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  是从中提取字符的字符表达式。  
   
  *integer_expression*  
  指示要返回的字符数的整数表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果 integer_expression 大于 character_expression 的长度，则该函数将返回 character_expression。  
   
  如果 integer_expression 为 0，则该函数返回零长度的字符串。  
@@ -51,7 +56,7 @@ RIGHT(character_expression,integer_expression)
   
  如果任一参数为 Null，则 RIGHT 返回的结果为 Null。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例使用字符串文字。 返回结果为 `"Bike"`。  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## 另请参阅  
- [LEFT（SSIS 表达式）](../../integration-services/expressions/left-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [左 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

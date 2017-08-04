@@ -1,22 +1,27 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity 系统体系结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Change Data Capture Service for Oracle by Attunity 系统体系结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Change Data Capture Service for Oracle by Attunity 系统体系结构
+# <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity 系统体系结构
   Oracle CDC 服务将对一个或多个源 Oracle 数据库中所选表的更改捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库中。 下面的关系图显示构成 Oracle CDC 服务的各组件。  
   
  ![服务体系结构](../../integration-services/change-data-capture/media/service-architecture.gif "服务体系结构")  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
 -   Oracle 数据库：可以是运行支持的 Oracle 数据库版本的任何计算机。 这包括运行 Windows、Linux 或所安装的 Oracle 数据库版本支持的任何其他操作系统的任何计算机。 请注意，该关系图以复数形式显示此平台，因为单个 Oracle CDC 服务可以从多个源 Oracle 数据库捕获更改。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的群集实例或使用 **AlwaysOn** 功能的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的镜像实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：可以是运行目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持的 SKU）的任何计算机。 一个 Oracle CDC 服务支持用于存储更改表和服务配置的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 平台还可以表示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的群集实例或使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AlwaysOn **功能的** 的镜像实例。  
   
 -   Oracle CDC 设计器：可以是能够访问源 Oracle 数据库和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任何支持的 Windows 计算机。  
   

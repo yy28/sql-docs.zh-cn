@@ -1,30 +1,35 @@
 ---
-title: "Master Data Services (MDS) 中的新增功能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "什么 &#39; s Master Data Services (MDS) 中的新增功能 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Master Data Services (MDS) 中的新增功能
+# <a name="what39s-new-in-master-data-services-mds"></a>什么 &#39; s Master Data Services (MDS) 中的新增功能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   本主题汇总了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中的更改和更新。 
   
- 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中组织数据的概述，请参阅 [Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)。 
+ 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)。 
   
- **若要安装 Master Data Services，请设置数据库和网站，然后部署示例模型，请参阅** [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
+ **若要安装 Master Data Services，请设置数据库和网站，然后部署示例模型，请参阅** [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)版本中的更改和更新。  
   
  **下载**  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 85
   
  改进了性能，可让你创建更大的模型，更有效地加载数据，并获得更好的整体性能。 这包括改进了 Microsoft Excel 外接程序的性能，可以缩短数据加载时间，并使外接程序能够处理更大的实体。  
   
- 有关用于 Microsoft Excel 的外接程序的详细信息，请参阅[用于 Microsoft Excel 的 Master Data Services 外接程序](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
+ 有关用于 Microsoft Excel 的外接程序的详细信息，请参阅 [用于 Microsoft Excel 的 Master Data Services 外接程序](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
   
  包括以下功能改进。  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,9 +82,9 @@ caps.handback.revision: 85
   
  现在，可以在模型级别显式为用户分配管理员权限。 这意味着，如果以后在模型子树（例如实体级别）中为该用户分配了权限，该用户不会失去此管理员权限。  
   
- 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
+ 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，我们通过引入以下新权限来提供等级更高的权限：“读取”、“创建”、“更新”和“删除”。 例如，只拥有“更新”权限的用户现在无需创建或删除数据，即可更新主数据。 当你向用户分配“创建”、“更新”或“删除”权限时，系统会自动为该用户分配“读取”权限。 你还可以组合“读取”、“创建”、“更新”和“删除”权限。  
   
- 升级到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 时，旧权限将转换为下表中所示的新权限。  
+ 升级到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，旧权限将转换为下表中所示的新权限。  
   
 |以前版本中的权限|新权限|  
 |------------------------------------|--------------------|  
@@ -200,7 +205,7 @@ caps.handback.revision: 85
   
  **合并冲突**  
   
- 如果你尝试发布已由另一个用户更改的数据，发布将会失败并出现冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。 有关详细信息，请参阅[合并冲突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和[合并冲突（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
+ 如果你尝试发布已由另一个用户更改的数据，发布将会失败并出现冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。 有关详细信息，请参阅 [合并冲突 (Master Data Services)](../master-data-services/merge-conflicts-master-data-services.md) 和 [合并冲突（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/merge-conflicts-mds-add-in-for-excel.md)。  
   
  **变更集**  
   
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  示例包已更新，可支持新的方案。 有关详细信息，请参阅 [SQL Server 示例：模型部署包 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 2016 各个版本支持的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master data services and data quality services features support.md)  
+ [SQL Server 2016 各个版本支持的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [弃用的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)   
  [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

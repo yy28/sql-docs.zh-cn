@@ -1,30 +1,35 @@
 ---
-title: "数据流任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "数据流任务 [Integration Services]"
-  - "性能 [Integration Services]"
-  - "数据流 [Integration Services], 性能"
-  - "数据流 [Integration Services], 数据流任务"
-  - "Integration Services, 性能"
+title: "数据流任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据流任务
+# <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
   
  数据流至少由一个数据流组件组成，但通常由一组已连接的数据流组件组成：提取数据的源；修改、路由或汇总数据的转换；加载数据的目标。  
@@ -33,7 +38,7 @@ caps.handback.revision: 75
   
  若要从文本文件向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库大容量插入数据，可以使用大容量插入任务代替数据流任务和数据流。 但是，大容量插入任务无法转换数据。 有关详细信息，请参阅 [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md)。  
   
-## 多个流  
+## <a name="multiple-flows"></a>多个流  
  数据流任务可以包含多个数据流。 如果任务复制多组数据，而且复制数据的顺序并不重要，则可以更方便地在数据流任务中包含多个数据流。 例如，可以创建五个数据流，每个数据流都将数据从平面文件复制到数据仓库星形架构中的不同维度表中。  
   
  但是，如果一个数据流任务中存在多个数据流，则由数据流引擎决定执行顺序。 因此，当顺序很重要时包应该使用多个数据流任务，每个任务包含一个数据流。 然后可以应用优先约束来控制任务的执行顺序。  
@@ -42,8 +47,8 @@ caps.handback.revision: 75
   
  ![数据流](../../integration-services/control-flow/media/mw-dts-09.gif "数据流")  
   
-## 日志项  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)和[日志记录的自定义消息](../../integration-services/performance/custom-messages-for-logging.md)。 数据流任务包括下列自定义日志项：  
+## <a name="log-entries"></a>日志项  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了可用于所有任务的一组日志事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供了可用于多个任务的自定义日志条目。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。 数据流任务包括下列自定义日志项：  
   
 |日志项|Description|  
 |---------------|-----------------|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [数据流性能特点](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### 来自数据流任务的示例消息  
+### <a name="sample-messages-from-a-data-flow-task"></a>来自数据流任务的示例消息  
  下表列出了非常简单的包的日志条目示例消息。 该包使用 OLE DB 源来从表中提取数据，使用排序转换来排序数据，并使用 OLE DB 目标将数据写入其他表。  
   
 |日志项|消息|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|排序转换的输入的 **Name** 属性值。|对输入进行排序|  
 |**RowsSent**|向排序转换的输入发送的行数。|76|  
   
-## 配置数据流任务  
+## <a name="configuration-of-the-data-flow-task"></a>配置数据流任务  
  可以在 **“属性”** 窗口中或以编程方式设置属性。  
   
  有关如何在 **“属性”** 窗口中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 数据流任务的编程配置  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>数据流任务的编程配置  
  有关以编程方式向包中添加数据流任务并设置数据流属性的详细信息，请单击下列主题：  
   
 -   [以编程方式添加数据流任务](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## 相关任务  
- [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>相关任务  
+ [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
   

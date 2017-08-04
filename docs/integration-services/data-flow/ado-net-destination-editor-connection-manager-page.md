@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 目标编辑器（“连接管理器”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetdest.connection.f1"
+title: "ADO NET 目标编辑器 （连接管理器页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 16ed4103735f389959531b92fad81884fc583a5b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 目标编辑器（“连接管理器”页）
+# <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目标编辑器（“连接管理器”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接。 使用此页还可以选择数据库中的表或视图。  
   
  若要了解有关 ADO NET 目标的详细信息，请参阅 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)。  
@@ -31,8 +36,8 @@ caps.handback.revision: 31
   
 3.  在 **“ADO NET 目标编辑器”**中，单击 **“连接管理器”**。  
   
-## 静态选项  
- **“ODBC 目标编辑器”**  
+## <a name="static-options"></a>静态选项  
+ **连接管理器**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
@@ -57,19 +62,24 @@ caps.handback.revision: 31
   
  可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关详细信息**错误**选项，请参阅[ADO NET 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标前后使用执行 SQL 任务来运行 SET IDENTITY_INSERT 语句。 标识列属性为列指定一个增量值。 SET IDENTITY_INSERT 语句启用要插入到标识列的显式值。 若要基于同一个数据库连接运行 CREATE TABLE 和 SET IDENTITY 语句，请将 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器的 **RetainSameConnection** 属性设置为 **True**。 此外，还要对执行 SQL 任务和 ADO NET 目标使用相同的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。  
+>  如果 SQL Server 或 Sybase 源表包含标识列，你必须使用执行 SQL 任务，来启用 IDENTITY_INSERT 在 ADO NET 目标之前和之后再次禁用。 （标识列属性指定的列的增量值。 集 IDENTITY_INSERT 语句允许源表中的显式值插入到目标表中的标识列）。  
 >   
->  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)。  
+>   若要运行的 SET IDENTITY_INSERT 语句和成功加载的数据，你必须执行以下操作。
+>       1. 针对执行 SQL 任务和 ADO.NET 目标，请使用相同的 ADO.NET 连接管理器。
+>       2. 在连接管理器中，将设置**RetainSameConnection**属性和**MultipleActiveResultSets**属性为 True。
+>       3. 在 ADO.NET 目标，将设置**UseBulkInsertWhenPossible**属性设置为 False。
+>
+>  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
-## 外部资源  
+## <a name="external-resources"></a>外部资源  
  sqlcat.com 上的技术文章 [快速将数据加载到 Windows Azure SQL Database 中](http://go.microsoft.com/fwlink/?LinkId=244333)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO NET 目标编辑器（“映射”页）](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)   
- [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
+ [ADO NET 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)   
  [执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md)  
   

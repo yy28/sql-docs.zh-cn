@@ -1,31 +1,36 @@
 ---
-title: "派生列转换编辑器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntransformation.f1"
-helpviewer_keywords: 
-  - "派生列转换编辑器"
+title: "派生列转换编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntransformation.f1
+helpviewer_keywords:
+- Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89b764a8ea3d4e60852092ef502eb82adcf77c91
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 派生列转换编辑器
+# <a name="derived-column-transformation-editor"></a>派生列转换编辑器
   可以使用 **“派生列转换编辑器”** 对话框，创建填充新列或替换列的表达式。  
   
  若要了解有关派生列转换的详细信息，请参阅 [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **变量和列**  
  通过将变量或输入列从可用变量和列的列表中拖到下面窗格中的现有表行，或者拖到列表底部的新行中，生成使用变量或输入列的表达式。  
   
@@ -61,9 +66,9 @@ caps.handback.revision: 33
  如果向新列中添加数据，“派生列转换编辑器”对话框将自动设置 DT_STR 数据类型的代码页。 可以更新 **“代码页”**。  
   
  **配置错误输出**  
- 使用[配置错误输出](../Topic/Configure%20Error%20Output.md)对话框指定处理错误的方式。  
+ 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理错误的方式。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
  [使用派生列转换派生列值](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

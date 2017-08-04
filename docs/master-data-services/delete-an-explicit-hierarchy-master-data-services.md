@@ -1,39 +1,44 @@
 ---
-title: "删除显式层次结构 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "显式层次结构, 删除"
-  - "删除显式层次结构 [Master Data Services]"
+title: "删除显式层次结构 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- explicit hierarchies, deleting
+- deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f645b7868c035d95fdc42c20828555e7c1a336e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除显式层次结构 (Master Data Services)
+# <a name="delete-an-explicit-hierarchy-master-data-services"></a>删除显式层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要显式层次结构时可将其删除。  
   
 > [!WARNING]  
 >  当删除显式层次结构时，还将删除该层次结构中的所有合并成员。 如果您删除某一实体的所有显式层次结构，则还将删除此实体的所有集合，并且不再为显式层次结构和集合启用此实体。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-### 删除显式层次结构  
+### <a name="to-delete-an-explicit-hierarchy"></a>删除显式层次结构  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 6
   
 7.  在确认对话框中，单击 **“确定”**。  
   
-## 另请参阅  
- [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [创建显式层次结构 &#40;Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [显式层次结构 &#40;Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

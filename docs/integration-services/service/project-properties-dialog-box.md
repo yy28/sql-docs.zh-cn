@@ -1,25 +1,30 @@
 ---
-title: "“项目属性”对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+title: "项目属性对话框中 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.general.f1
+- sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# “项目属性”对话框
+# <a name="project-properties-dialog-box"></a>“项目属性”对话框
   一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目就是一个部署单元。 每个项目都可以包含包、参数和环境引用。 项目是安全对象并且可为数据库主体定义权限。 在重新部署某一项目时，该项目的之前版本可以存储在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中。  
   
  项目参数和包参数可用于在执行时向包内的属性赋值。 某些参数要求首先具有值，之后才能运行包。 引用环境变量的参数值要求项目在执行前具有相应的环境引用。  

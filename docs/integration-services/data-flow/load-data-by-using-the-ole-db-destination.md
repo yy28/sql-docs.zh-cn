@@ -1,29 +1,34 @@
 ---
-title: "通过使用 OLE DB 目标来加载数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加载数据"
-  - "OLE DB 目标 [Integration Services]"
-  - "目标 [Integration Services], OLE DB"
+title: "通过使用 OLE DB 目标加载数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loading data
+- OLE DB destination [Integration Services]
+- destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 通过使用 OLE DB 目标来加载数据
+# <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
   若要添加和配置 OLE DB 目标，包中必须已包含至少一个数据流任务和一个源。  
   
-### 使用 OLE DB 目标加载数据  
+### <a name="to-load-data-using-an-ole-db-destination"></a>使用 OLE DB 目标加载数据  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  OLE DB 目标会自动映射同名的列。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅[在数据流组件中配置错误输出](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
 10. 单击 **“确定”**。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md)   

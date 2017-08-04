@@ -1,31 +1,36 @@
 ---
-title: "使用 SQL Server 目标大容量加载数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 目标"
-  - "加载数据"
-  - "目标 [Integration Services], SQL Server"
-  - "插入数据"
-  - "大容量加载 [Integration Services]"
+title: "通过使用 SQL Server 目标大容量加载数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 SQL Server 目标大容量加载数据
+# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
   若要添加并配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，则包必须已包含至少一个数据流任务和一个数据源。  
   
-### 使用 SQL Server 目标加载数据  
+### <a name="to-load-data-using-a-sql-server-destination"></a>使用 SQL Server 目标加载数据  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 30
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 目标](../../integration-services/data-flow/sql-server-destination.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md)   

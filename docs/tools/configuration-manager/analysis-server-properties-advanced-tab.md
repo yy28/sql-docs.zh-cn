@@ -1,25 +1,30 @@
 ---
-title: "分析服务器属性（“高级”选项卡） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "分析服务器属性 （高级选项卡） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 分析服务器属性（“高级”选项卡）
+# <a name="analysis-server-properties-advanced-tab"></a>分析服务器属性（“高级”选项卡）
   此服务为 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。  
   
-## 选项  
+## <a name="options"></a>选项  
  **群集**  
  指示是否将此服务安装为群集服务器的资源。  
   

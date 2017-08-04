@@ -1,29 +1,34 @@
 ---
-title: "数据流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "输出数据 [集成服务]"
-  - "数据流 [Integration Services], 元素"
-  - "输入数据 [集成服务]"
-  - "外部元数据 [集成服务]"
-  - "数据流 [Integration Services]"
-  - "错误 [Integration Services], 数据流输出"
+title: "数据流 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 数据流
+# <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  此外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供将一个组件的输出连接到另一个组件的输入的路径。 路径定义组件的序列，并允许您向数据流添加批注或查看列的源。  
   
- 您可以通过把源和目标的输出连接到转换和目标的输入来连接数据流组件。 在构造数据流的过程中，通常在将第二个以及后续组件添加到该数据流时连接这些组件。 连接组件后，输入列即可用在对该组件的配置中。 如果没有可用的输入列，则在组件连接到数据流后才能完成对该组件的配置。 有关详细信息，请参阅 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md) 和 [使用路径连接组件](../Topic/Connect%20Components%20with%20Paths.md)。  
+ 您可以通过把源和目标的输出连接到转换和目标的输入来连接数据流组件。 在构造数据流的过程中，通常在将第二个以及后续组件添加到该数据流时连接这些组件。 连接组件后，输入列即可用在对该组件的配置中。 如果没有可用的输入列，则在组件连接到数据流后才能完成对该组件的配置。 有关详细信息，请参阅 [Integration Services 路径](../../integration-services/data-flow/integration-services-paths.md) 和 [使用路径连接组件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
   
  以下关系图显示的数据流具有一个源、带有一个输入和一个输出的转换以及一个目标。 除了输入列、输出列和外部列之外，该关系图还包含输入、输出和错误输出。  
   
- ![数据流组件及其输入和输出](../../integration-services/data-flow/media/mw-dts-dataflow.gif "数据流组件及其输入和输出")  
+ ![数据流组件其输入和输出](../../integration-services/data-flow/media/mw-dts-dataflow.gif "数据流组件其输入和输出")  
   
 ## <a name="data-flow-implementation"></a>数据流实现  
  将数据流任务添加到包的控制流是在包中实现数据流的第一步。 包可以包含多个数据流任务，每个数据流任务有自己的数据流。 例如，如果包需要按指定顺序运行数据流，或需要在数据流之间执行其他任务，则必须对每个数据流使用单独的数据流任务。  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  有关如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="connection-managers"></a>连接管理器  
- 许多数据流组件都连接到数据源，因此，必须将组件所需的连接管理器添加到包，然后才能正确配置组件。 可以在构造数据流时或开始构造数据流之前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](../Topic/Create%20Connection%20Managers.md)。  
+ 许多数据流组件都连接到数据源，因此，必须将组件所需的连接管理器添加到包，然后才能正确配置组件。 可以在构造数据流时或开始构造数据流之前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
 ## <a name="external-metadata"></a>外部元数据  
  使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器在包中创建数据流时，源和目标的元数据被复制到源和目标的外部列，充当架构的快照。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证包时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器将此快照与源或目标的架构比较，并根据更改发布错误和警告。  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+

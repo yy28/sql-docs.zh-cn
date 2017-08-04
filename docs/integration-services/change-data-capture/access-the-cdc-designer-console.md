@@ -1,24 +1,29 @@
 ---
-title: "访问 CDC 设计器控制台 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "accMsDes"
+title: "访问 CDC 设计器控制台 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 访问 CDC 设计器控制台
+# <a name="access-the-cdc-designer-console"></a>访问 CDC 设计器控制台
   您可以从安装了 CDC 设计器控制台的计算机访问该控制台。 有关安装的详细信息，请参阅“安装”。  
   
  在您打开 CDC 设计器控制台时，“连接到 SQL Server”对话框将打开。  
@@ -27,10 +32,10 @@ caps.handback.revision: 9
   
  在“连接到 SQL Server”对话框中输入以下信息。  
   
-### 服务器名称  
+### <a name="server-name"></a>服务器名称  
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
   
-### 身份验证  
+### <a name="authentication"></a>身份验证  
  选择下列选项之一：  
   
 -   **Windows 身份验证**  
@@ -39,7 +44,7 @@ caps.handback.revision: 9
   
  该登录名必须具有允许访问 MSXCDCDB 数据库的数据库角色。 建议该登录名还具有访问要使用的任何其他数据库的权限，否则，该用户将无法查看这些数据库中的数据。  
   
-### 选项  
+### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
  **连接超时值**  
@@ -56,7 +61,7 @@ caps.handback.revision: 9
   
  有关“高级连接属性”对话框的信息，请参阅[高级连接属性](../../integration-services/change-data-capture/advanced-connection-properties.md)。  
   
-## 另请参阅  
- [针对 CDC 设计器的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a>另请参阅  
+ [针对 CDC 设计器 SQL Server 连接所需的权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "第 3 课：使用 dta 命令提示实用工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "数据库引擎 [SQL Server], 教程"
+title: "第 3 课： 使用命令提示符实用工具 dta |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b33b5d2a64fc88cbd53d6c76fd73165ade697eac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 第 3 课：使用 dta 命令提示实用工具
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
 **dta** 命令提示实用工具除了包含数据库引擎优化顾问提供的功能之外，还包含其他功能。  
   
 通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 该架构随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，可在 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd 中找到。  
   
-数据库引擎优化顾问 XML 架构也可通过[此 Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
+数据库引擎优化顾问 XML 架构也可通过 [此 Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
   
 数据库引擎优化顾问 XML 架构在设置优化选项时可提供更大的灵活性。 例如，可通过它执行“假设分析”。 “假设分析”包括：为要优化的数据库指定一组现有的假设物理设计结构，然后使用数据库引擎优化顾问对该数据库进行分析，以判定此假设物理设计是否能改善查询处理性能。 此类分析具有的优点是，在评估新配置时不会引起实际实施它的开销。 如果假设物理设计不能提供预期的性能改善，则可以方便地进行更改和重新分析，直到获得能够满足需要的配置为止。  
   
@@ -39,8 +44,9 @@ caps.handback.revision: 26
   
 -   启动 **dta** 命令提示实用工具并优化工作负荷  
   
-## 课程中的下一个任务  
-[启动 dta 命令提示实用工具并优化工作负荷](../../tools/dta/starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+## <a name="next-task-in-lesson"></a>课程中的下一个任务  
+[启动命令提示符实用工具 dta 和优化工作负荷](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   
+

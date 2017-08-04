@@ -1,26 +1,31 @@
 ---
-title: "自动生成 Code 属性值 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自动生成 Code 属性值 (Master Data Services) |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 469c1d37c52791d463986814ee1566fbc4cdaee4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 自动生成 Code 属性值 (Master Data Services)
+# <a name="automatically-generate-code-attribute-values-master-data-services"></a>自动生成 Code 属性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您希望在每次创建新成员时自动为 Code 值分配一个整数时，自动为实体的 Code 属性设置值。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
 -   实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
-### 自动生成 Code 值  
+### <a name="to-automatically-generate-code-values"></a>自动生成 Code 值  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -43,8 +48,8 @@ caps.handback.revision: 5
   
 6.  单击 **“保存”**。  
   
-## 另请参阅  
- [自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)   
- [自动生成 Code 之外的属性值 (Master Data Services)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [自动创建代码 &#40;Master Data Services &#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [自动生成 Code &#40; 之外的属性值Master Data Services &#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   
