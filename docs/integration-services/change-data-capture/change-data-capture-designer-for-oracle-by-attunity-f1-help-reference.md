@@ -1,27 +1,32 @@
 ---
-title: "Change Data Capture Designer for Oracle by Attunity F1 帮助参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "f1Help"
+title: "更改 Data Capture Designer for Oracle by Attunity F1 帮助参考 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Change Data Capture Designer for Oracle by Attunity F1 帮助参考
+# <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity F1 帮助参考
   Change Data Capture Designer for Oracle by Attunity 用于创建和管理 Oracle CDC 实例。 本节中的主题介绍如何在 CDC 设计器控制台中执行可用任务。  
   
-## 您希望做什么？  
+## <a name="what-do-you-want-to-do"></a>您希望做什么？  
   
 -   [访问 CDC 设计器控制台](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 7
   
 -   [管理 CDC 实例](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
--   [使用新建实例向导](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)（或直接转到以下任务之一）  
+-   [使用新建实例向导](../../integration-services/change-data-capture/use-the-new-instance-wizard.md) （或直接转到以下任务之一）  
   
     -   [创建 SQL Server 更改数据库](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
@@ -41,13 +46,13 @@ caps.handback.revision: 7
   
     -   [为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [对为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [为捕获更改选择的表进行更改](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
     -   [生成和运行补充日志记录脚本](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
     -   [生成镜像表和 CDC 捕获实例](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [完成](../../integration-services/change-data-capture/finish.md)  
+    -   [“完成”](../../integration-services/change-data-capture/finish.md)  
   
 -   [编辑实例属性](../../integration-services/change-data-capture/edit-instance-properties.md)（或直接转到以下任务之一）  
   
@@ -61,6 +66,6 @@ caps.handback.revision: 7
   
     -   [查看和生成补充日志记录脚本](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
-    -   [编辑高级属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
+    -   [编辑高级的属性](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   

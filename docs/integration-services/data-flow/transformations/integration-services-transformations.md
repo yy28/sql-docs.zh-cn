@@ -1,36 +1,41 @@
 ---
-title: "Integration Services 转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "转换 [Integration Services], 列出"
-  - "转换 [Integration Services], 类型"
-  - "转换 [Integration Services]"
-  - "数据流 [Integration Services], 转换"
-  - "商业智能转换 [Integration Services]"
-  - "联接转换"
-  - "拆分转换 [Integration Services]"
-  - "自定义转换 [Integration Services]"
-  - "行转换 [Integration Services]"
-  - "行集转换 [Integration Services]"
+title: "Integration Services 转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations [Integration Services], listed
+- transformations [Integration Services], types
+- transformations [Integration Services]
+- data flow [Integration Services], transformations
+- business intelligence transformations [Integration Services]
+- join transformations
+- split transformations [Integration Services]
+- custom transformations [Integration Services]
+- row transformations [Integration Services]
+- rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Integration Services 转换
+# <a name="integration-services-transformations"></a>Integration Services 转换
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 转换是包的数据流中对数据进行聚合、合并、分发和修改的组件。 转换还可以执行查找操作并生成样本数据集。 本节介绍 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包括的转换并说明它们是如何工作的。  
   
-## 商业智能转换  
+## <a name="business-intelligence-transformations"></a>商业智能转换  
  下列转换执行商业智能操作，例如清除数据、挖掘文本以及运行数据挖掘预测查询。  
   
 |转换|Description|  
@@ -43,7 +48,7 @@ caps.handback.revision: 56
 |[数据挖掘查询转换](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|运行数据挖掘预测查询的转换。|  
 |[DQS 清除转换](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)|通过应用为数据源创建的规则更正来自连接的数据源的数据的转换。|  
   
-## 行转换  
+## <a name="row-transformations"></a>行转换  
  下列转换更新列值并创建新列。 转换应用于转换输入中的每个行。  
   
 |转换|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 56
 |[脚本组件](../../../integration-services/data-flow/transformations/script-component.md)|使用脚本提取、转换或加载数据的转换。|  
 |[OLE DB 命令转换](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)|为数据流中的每个行运行 SQL 命令的转换。|  
   
-## 行集转换  
+## <a name="rowset-transformations"></a>行集转换  
  下列转换将创建新行集。 行集可以包括聚合值和已排序值、样本行集或者透视行集和逆透视行集。  
   
 |转换|Description|  
@@ -69,7 +74,7 @@ caps.handback.revision: 56
 |[透视转换](../../../integration-services/data-flow/transformations/pivot-transformation.md)|创建规范化表的不太规范化版本的转换。|  
 |[逆透视转换](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|创建非规范化表的较规范化版本的转换。|  
   
-## 拆分和联接转换  
+## <a name="split-and-join-transformations"></a>拆分和联接转换  
  以下转换将行分发到不同的输出，创建转换输入的副本，将多个输入联接成一个输出，并执行查找操作。  
   
 |转换|Description|  
@@ -83,7 +88,7 @@ caps.handback.revision: 56
 |[缓存转换](../../../integration-services/data-flow/transformations/cache-transform.md)|将数据流中已连接数据源的数据写入到缓存连接管理器（将数据保存到缓存文件中）的转换。 查找转换会对缓存文件中的数据执行查找。|  
 |[平衡的数据分发服务器转换](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|转换将传入行的缓冲区均匀分布到各个独立线程的输出上，以提升运行在多核和多处理器服务器上的 SSIS 包的性能。|  
   
-## 审核转换  
+## <a name="auditing-transformations"></a>审核转换  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括以下转换，用于添加审核信息和对行进行计数。  
   
 |转换|Description|  
@@ -91,7 +96,7 @@ caps.handback.revision: 56
 |[审核转换](../../../integration-services/data-flow/transformations/audit-transformation.md)|使环境信息可用于包中数据流的转换。|  
 |[行计数转换](../../../integration-services/data-flow/transformations/row-count-transformation.md)|对通过转换的行进行计数并将最终计数存储到变量中的转换。|  
   
-## 自定义转换  
- 还可以编写自定义转换。 有关详细信息，请参阅[开发具有同步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)和[开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
+## <a name="custom-transformations"></a>自定义转换  
+ 还可以编写自定义转换。 有关详细信息，请参阅 [开发具有同步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) 和 [开发具有异步输出的自定义转换组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)。  
   
   

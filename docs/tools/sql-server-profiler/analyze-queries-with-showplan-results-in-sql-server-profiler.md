@@ -1,26 +1,31 @@
 ---
-title: "在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "事件 [SQL Server], 显示计划"
-  - "事件探查器 [SQL Server Profiler], 显示计划结果"
-  - "SQL Server Profiler, 显示计划结果"
+title: "使用在 SQL Server Profiler SHOWPLAN 结果来分析查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [SQL Server], Showplan
+- Profiler [SQL Server Profiler], Showplan results
+- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
+# <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
   可以将导致 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中收集和显示查询计划信息的 Showplan 事件类添加到跟踪定义。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  
   
  可以用下列一种方法从跟踪中提取显示计划事件：  
@@ -31,7 +36,7 @@ caps.handback.revision: 30
   
 -   通过右键单击特定事件并选择“提取事件数据”，提取并保存单个事件。  
   
-## 显示计划事件  
+## <a name="showplan-events"></a>显示计划事件  
  下表中列出并说明了显示计划跟踪事件。  
   
 |事件名称|说明|  
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 |**Showplan XML For Query Compile**|编写完查询后，显示查询计划。 有关详细信息，请参阅 [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)。|  
 |**Showplan XML Statistics Profile**|显示查询计划，列出 XML 格式的完整运行时详细信息。 例如，此事件类捕获通过已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的每个运算符的行数。 有关详细信息，请参阅 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
-## 另请参阅  
- [Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [“性能”事件类别](../../relational-databases/event-classes/performance-event-category.md)  
   
   

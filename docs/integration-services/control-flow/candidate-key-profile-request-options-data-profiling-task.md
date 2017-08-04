@@ -1,32 +1,37 @@
 ---
-title: "候选键配置文件请求选项（数据事件探查任务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据事件探查任务编辑器"
+title: "候选键配置文件请求选项 （数据事件探查任务） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 候选键配置文件请求选项（数据事件探查任务）
+# <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“候选键配置文件请求”** 设置选项。 候选键配置文件报告某个列或列集对于选定的表是键还是近似键。 此配置文件还有助于标识数据中的问题，如潜在键列中存在重复值。  
   
 > [!NOTE]  
 >  本主题中介绍的选项显示在 **“数据事件探查任务编辑器”** 的 **“配置文件请求”**页中。 有关此编辑器页的详细信息，请参阅[数据事件探查任务编辑器（“配置文件请求”页）](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
- 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅[数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ 有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
-## 了解如何为 KeyColumns 属性选择列  
+## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>了解如何为 KeyColumns 属性选择列  
  每个 **“候选键配置文件请求”** 都会计算由单个列或多个列组成的单个候选键的键强度：  
   
 -   如果仅在 **KeyColumns**中选择了一个列，则该任务将计算那一个列的键强度。  
@@ -37,25 +42,25 @@ caps.handback.revision: 26
   
  例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns**中进行以下选择：  
   
--   在 **KeyColumns** 中选择 (\*) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns **中选择 (**) 和 列 C。 该任务将计算列 C 的键强度，然后计算组合候选键 (A, C) 和 (B, C) 的键强度。  
   
--   在 **KeyColumns** 中选择 (\*) 和 (\*)。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
+-   在\*KeyColumns\*中选择 ( **) 和 (**)。 该任务将计算单个列 A、B 和 C 的键强度，然后计算组合候选键 (A, B)、(A, C) 和 (B, C) 的键强度。  
   
 > [!NOTE]  
 >  如果选择 (*)，则此选项可能会导致大量计算并降低任务性能。 但是，如果任务找到满足键阈值的子集，则它不会再分析其他的组合。 例如，在上述示例表中，如果任务确定列 C 是一个键，则不会再继续分析组合候选键。  
   
-## 请求属性选项  
+## <a name="request-properties-options"></a>请求属性选项  
  对于 **“候选键配置文件请求”**， **“请求属性”** 窗格将显示以下选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **KeyColumns** 选项  
   
 -   **常规**  
   
--   **选项**  
+-   **Options**  
   
-### Data 选项  
+### <a name="data-options"></a>Data 选项  
  **ConnectionManager**  
- 选择使用 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 的现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器连接到包含要进行事件探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
+ 选择使用 .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient) 的现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接管理器连接到包含要进行事件探查的表或视图的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
  **TableOrView**  
  选择要进行事件探查的现有表或视图。  
@@ -67,14 +72,14 @@ caps.handback.revision: 26
   
  有关详细信息，请参阅本主题中的“了解如何为 KeyColumns 属性选择列”和“KeyColumns 选项”部分。  
   
-#### TableOrView 选项  
+#### <a name="tableorview-options"></a>TableOrView 选项  
  **架构**  
  指定选定表所属的架构。 此选项是只读的。  
   
  **表**  
  显示所选表的名称。 此选项是只读的。  
   
-#### KeyColumns 选项  
+#### <a name="keycolumns-options"></a>KeyColumns 选项  
  对于在 **KeyColumns**中选定进行分析的每个列或针对 **(\*)** 选项，将显示以下选项。  
   
  有关详细信息，请参阅本主题前面的“了解如何为 KeyColumns 属性选择列”部分。  
@@ -106,11 +111,11 @@ caps.handback.revision: 26
 |**IgnoreKanaType**|指定比较是否区分日语的两种假名字符类型：平假名和片假名。 如果设置了此选项，字符串比较会忽略假名类型。|  
 |**IgnoreWidth**|指定比较是否区分字符的单字节形式和该字符的双字节形式。 如果设置了此选项，字符串比较将把同一字符的单字节形式和双字节形式视为相同。|  
   
-### 常规选项  
+### <a name="general-options"></a>常规选项  
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### 选项  
+### <a name="options"></a>选项  
  **ThresholdSetting**  
  此属性具有下表所列的选项。 此属性的默认值为 **Specified**。  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 26
  **MaxNumberOfViolations**  
  指定要在输出中报告的候选键冲突的最大数量。 此属性的默认值为 100。 只有在选择 **Exact** 作为 **KeyStrengthThresholdSetting**时，才会禁用该选项。  
   
-## 另请参阅  
- [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据事件探查任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "处理插入、更新和删除 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量加载 [Integration Services], 处理数据"
+title: "过程插入、 更新和删除 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 处理插入、更新和删除
+# <a name="process-inserts-updates-and-deletes"></a>处理插入、更新和删除
   在用于执行变更数据的增量加载的 Integration Services 包的数据流中，第二个任务是分隔插入、更新和删除操作。 然后，可以使用相应的命令将它们应用到目标。  
   
 > [!NOTE]  
 >  为执行变更数据增量加载的包设计数据流的过程中，第一个任务是配置用于运行查询以检索变更数据的源组件。 有关此组件的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。 有关创建用于执行变更数据增量加载的包的完整过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 关联友好值以分隔插入、更新和删除操作  
+## <a name="associating-friendly-values-to-separate-inserts-updates-and-deletes"></a>关联友好值以分隔插入、更新和删除操作  
  在检索变更数据的示例查询中，**cdc.fn_cdc_get_net_changes_<capture_instance>** 函数仅返回名为 **__$operation** 的元数据列。 此元数据列包含一个序号值，该值指示哪个操作导致更改。  
   
 > [!NOTE]  
@@ -43,13 +48,13 @@ select
      end as CDC_OPERATION  
 ```  
   
-## 配置有条件拆分转换以定向插入、更新和删除操作  
+## <a name="configuring-a-conditional-split-transformation-to-direct-inserts-updates-and-deletes"></a>配置有条件拆分转换以定向插入、更新和删除操作  
  若要将变更数据行定向到三个输出中的一个输出，有条件拆分转换是理想的选择。 该转换只是检索各行中 **CDC_OPERATION** 列的值，并确定该变更是插入操作、更新操作还是删除操作。  
   
 > [!NOTE]  
 >  CDC_OPERATION 列包含一个从 **__$operation** 列中的数值派生的友好字符串值。  
   
-#### 使用有条件拆分转换拆分要进行处理的插入、更新和删除操作  
+#### <a name="to-split-inserts-updates-and-deletes-for-processing-by-using-a-conditional-split-transformation"></a>使用有条件拆分转换拆分要进行处理的插入、更新和删除操作  
   
 1.  在 **“数据流”** 选项卡上，添加一个有条件拆分转换。  
   
@@ -63,13 +68,13 @@ select
   
     3.  输入条件为 `CDC_OPERATION == "D"` 的行，以将已删除的行定向到删除操作的输出。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  在拆分要处理的行之后，下一步是将更改应用到目标中。  
   
  **下一主题：**[将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另請參閱  
  [有条件拆分转换](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [使用有条件拆分转换拆分数据集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [通过使用有条件拆分转换拆分数据集](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

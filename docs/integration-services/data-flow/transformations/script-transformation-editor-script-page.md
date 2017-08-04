@@ -1,31 +1,36 @@
 ---
-title: "脚本转换编辑器（“脚本”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scriptcomponent.script.f1"
-helpviewer_keywords: 
-  - "脚本转换编辑器"
+title: "脚本转换编辑器 （脚本页） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scriptcomponent.script.f1
+helpviewer_keywords:
+- Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce227c91ad8109f3f8f7686e01a219392146602e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 脚本转换编辑器（“脚本”页）
+# <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
   
  若要了解有关脚本组件的详细信息，请参阅 [Script Component](../../../integration-services/data-flow/transformations/script-component.md) 和 [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
-## 选项  
+## <a name="options"></a>选项  
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
@@ -38,17 +43,17 @@ caps.handback.revision: 38
 |**ReadOnlyVariables**|以逗号分隔的形式键入一列可供脚本转换只读访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ReadWriteVariables**|以逗号分隔的形式键入一列可供脚本转换读/写访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ScriptLanguage**|选择脚本组件要使用的脚本语言。<br /><br /> 若要设置脚本组件和脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。|  
-|**UserComponentTypeName**|指定支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基础结构的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 类和 **Microsoft.SqlServer.TxScript** 程序集。|  
+|**UserComponentTypeName**|指定支持 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> ScriptComponentHost **类和** Microsoft.SqlServer.TxScript [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程序集。|  
   
  **编辑脚本**  
  使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 创建或修改脚本。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
  [选择脚本组件类型](../../../integration-services/data-flow/transformations/select-script-component-type.md)   
- [脚本转换编辑器（“输入列”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)   
- [脚本转换编辑器（“输入和输出”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)   
- [脚本转换编辑器（“连接管理器”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)   
+ [脚本转换编辑器 &#40; 输入的列页 &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)   
+ [脚本转换编辑器 &#40;输入和输出页 &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)   
+ [脚本转换编辑器 &#40;连接管理器页 &#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)   
  [其他脚本组件示例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

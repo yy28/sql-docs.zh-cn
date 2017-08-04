@@ -1,32 +1,37 @@
 ---
-title: "使用 SSIS 部署包 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "部署教程 [Integration Services]"
-  - "部署包 [Integration Services]"
-  - "SSIS, 教程"
-  - "Integration Services, 教程"
-  - "部署程序包 [Integration Services], 安装"
-  - "SQL Server Integration Services, 教程"
-  - "演练 [Integration Services]"
-  - "部署实用工具 [Integration Services]"
-  - "部署程序包 [Integration Services], 配置"
+title: "部署包使用 SSIS |Microsoft 文档"
+ms.custom: 
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- deployment tutorial [Integration Services]
+- deploying packages [Integration Services]
+- SSIS, tutorials
+- Integration Services, tutorials
+- deploying packages [Integration Services], installing
+- SQL Server Integration Services, tutorials
+- walkthroughs [Integration Services]
+- deployment utility [Integration Services]
+- deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用 SSIS 部署包
+# <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。    
     
 首先，您将执行任务为部署做好准备。 您将在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建一个新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目，再将现有的包和数据文件添加到该项目。 不是从头开始创建任何新包，而是仅使用专为本教程创建的已完成包。 将不修改本教程中包的功能；但是，在将包添加到项目后，您可能会发现在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中打开包并查看每个包的内容是很有用的。 通过检查包，您将了解有关包依赖项（如日志文件）的信息和有关包的其他有趣功能的信息。    
@@ -47,14 +52,14 @@ caps.handback.revision: 27
 ## <a name="requirements"></a>要求    
 本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。 为了更好地理解将在本教程中使用的基本 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念，可能会发现先完成以下 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用： [SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
-**源计算机** 将在其上创建部署捆绑的计算机**必须安装下列组件：**
+**源计算机** 将在其上创建部署捆绑的计算机 **必须安装下列组件：**
 - SQL Server  
 - 示例数据、已完成的包、配置和自述文件。 如果下载了 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)（Adventure Works 2014 示例数据库），这些文件将一起安装。     
 > **注意！** 请确保具有在 AdventureWorks 或所用的其他数据中创建和删除表的权限。         
     
 -   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。    
     
-**目标计算机。** 向其部署包的计算机**必须安装下列组件：**    
+**目标计算机。** 向其部署包的计算机 **必须安装下列组件：**    
     
 - SQL Server
 - 示例数据、已完成的包、配置和自述文件。 如果下载了 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)（Adventure Works 2014 示例数据库），这些文件将一起安装。 
@@ -63,7 +68,7 @@ caps.handback.revision: 27
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。    
     
--   必须具有在 AdventureWorks 中创建和删除表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中运行包的权限。    
+-   必须具有在 AdventureWorks 中创建和删除表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中运行包的权限。    
     
 -   您必须具有对 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统数据库中 sysssispackages 表的读写权限。    
     
@@ -81,3 +86,5 @@ caps.handback.revision: 27
 [第 3 课：安装 SSIS 包](../integration-services/lesson-3-install-ssis-packages.md)    
 在本课中，将部署捆绑复制到目标计算机，安装包，再运行包。    
     
+
+

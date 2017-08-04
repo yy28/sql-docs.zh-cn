@@ -1,27 +1,32 @@
 ---
-title: "Analysis Services 处理任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.f1"
-helpviewer_keywords: 
-  - "Analysis Services 处理任务"
-  - "处理对象 [Integration Services]"
+title: "Analysis Services 处理任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.f1
+helpviewer_keywords:
+- Analysis Services Processing task
+- processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f607edcad955a4d0a22cc246a13d9d97a06fe24
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Analysis Services 处理任务
+# <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
   
  处理表格模型时，请记住以下事项：  
@@ -40,7 +45,7 @@ caps.handback.revision: 52
   
 -   [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## 对象处理  
+## <a name="object-processing"></a>对象处理  
  可以同时处理多个对象。 处理多个对象时，您需要定义处理批中所有对象时要应用的设置。  
   
  批中的对象可以按顺序处理或并行处理。 如果批中不包含必须按顺序处理的对象，则并行处理可加快处理的速度。 如果并行处理批中的对象，则可配置任务使其确定并行处理的对象数，也可以手动指定同时处理的对象数。 如果按顺序处理对象，则可通过将所有对象登记在一个事务中或对批中的每个对象使用单独的事务来设置批的事务属性。  
@@ -56,11 +61,11 @@ caps.handback.revision: 52
   
  此任务常与大容量插入任务或数据流任务结合使用，前者将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，后者实现将数据加载到表中的数据流。 例如，数据流任务可能具有数据流，该数据流从联机事务性数据库 (OLTP) 数据库中提取数据，并将数据加载到数据仓库中的事实数据表，然后调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务来处理根据数据仓库构建的多维数据集。  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)。  
   
-## 错误处理  
+## <a name="error-handling"></a>错误处理  
   
-## 配置 Analysis Services 处理任务  
+## <a name="configuration-of-the-analysis-services-processing-task"></a>配置 Analysis Services 处理任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
@@ -73,9 +78,9 @@ caps.handback.revision: 52
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击以下主题：  
   
--   [设置任务或容器的属性](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 以编程方式配置 Analysis Services 处理任务  
+## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>以编程方式配置 Analysis Services 处理任务  
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  

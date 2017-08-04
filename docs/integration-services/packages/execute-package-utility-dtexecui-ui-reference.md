@@ -1,36 +1,41 @@
 ---
-title: "执行包实用工具 (DtExecUI) UI 参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.dtexecui.setvalues.f1"
-  - "sql13.dts.dtexecui.reporting.f1"
-  - "sql13.dts.dtexecui.datasources.f1"
-  - "sql13.dts.dtexecui.commandfiles.f1"
-  - "sql13.dts.dtexecui.logging.f1"
-  - "sql13.dts.dtexecui.general.f1"
-  - "sql13.dts.dtexecui.verification.f1"
-  - "sql13.dts.dtexecui.executionoptions.f1"
-  - "sql13.dts.dtexecui.commandline.f1"
-  - "sql13.dts.dtexecui.configuration.f1"
-helpviewer_keywords: 
-  - "DTExecUI 实用工具"
+title: "执行包实用工具 (dtexecui) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.dtexecui.setvalues.f1
+- sql13.dts.dtexecui.reporting.f1
+- sql13.dts.dtexecui.datasources.f1
+- sql13.dts.dtexecui.commandfiles.f1
+- sql13.dts.dtexecui.logging.f1
+- sql13.dts.dtexecui.general.f1
+- sql13.dts.dtexecui.verification.f1
+- sql13.dts.dtexecui.executionoptions.f1
+- sql13.dts.dtexecui.commandline.f1
+- sql13.dts.dtexecui.configuration.f1
+helpviewer_keywords:
+- DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 执行包实用工具 (DtExecUI) UI 参考
-  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 **DTExec** 命令提示工具运行包的替代方法，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
+# <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
+  使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
   
  包与 **dtexecui.exe** 实用工具在同一个进程中执行。 由于此实用工具为 32 位工具，因此，在 64 位环境中使用 **dtexecui.exe** 运行的包是在 Windows on Win32 (WOW) 中运行的。 当在 64 位计算机上使用 dtexecui.exe 实用工具开发和测试命令时，应该首先在 64 位模式下使用 64 位版本的 **dtexec.exe** 测试该命令，然后在生产服务器中部署或安排这些命令。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 39
   
  “执行包实用工具”  还可用于汇集在直接运行 **DTExec** 时所用的命令行。  
   
-### 打开 SQL Server Management Studio 中的执行包实用工具  
+### <a name="to-open-execute-package-utility-in-sql-server-management-studio"></a>打开 SQL Server Management Studio 中的执行包实用工具  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“视图”** 菜单中，单击 **“对象资源管理器”**。  
   
@@ -48,25 +53,25 @@ caps.handback.revision: 39
   
 4.  展开“已存储的包”文件夹和子文件夹，右键单击要运行的包，然后单击“运行包”。  
   
-### 在命令提示符下打开执行包实用工具  
+### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>在命令提示符下打开执行包实用工具  
   
 -   在命令提示符窗口中，运行 **dtexecui**。  
   
  以下各节描述了 **“执行包实用工具”** 对话框的各页。  
   
-## “常规”页  
+## <a name="general-page"></a>“常规”页  
  使用 **“执行包实用工具”** 对话框的 **“常规”** 页，可以指定包的名称和位置。  
   
  执行包实用工具 (dtexecui.exe) 始终在本地计算机上运行包，即使包保存在远程服务器上也是如此。 如果远程包使用同样保存在远程服务器上的配置文件，那么执行包实用工具可能找不到配置，包将失败。 若要避免此问题，必须使用通用命名约定 (UNC) 共享名称（如 \\\myserver\myfile）引用配置。  
   
-### 静态选项  
+### <a name="static-options"></a>静态选项  
  **包源**  
  使用以下选项指定要运行的包的位置：  
   
 |||  
 |-|-|  
 |“值”|Description|  
-|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** *username* 和 **/PASSWORD** *password* 选项添加到命令提示符。|  
+|**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**文件系统**|当包驻留在文件系统时选择此选项。|  
 |**SSIS 包存储区**|当包驻留在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区时选择此选项。|  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-### 动态选项  
+### <a name="dynamic-options"></a>动态选项  
   
-#### 包源 = SQL Server  
+#### <a name="package-source--sql-server"></a>包源 = SQL Server  
  **Server**  
  输入包驻留的服务器的名称，或者从列表中选择服务器。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 39
  选择此选项，可以使用 Windows 身份验证，并使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户登录。  
   
  **使用 SQL Server 身份验证**  
- 选择此选项，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 当用户使用指定的登录名和密码从不可信连接进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。  
+ 选择此选项，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 当用户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
@@ -99,11 +104,11 @@ caps.handback.revision: 39
  **“包”**  
  键入包的名称或者单击省略号按钮 **(…)**，使用“选择 SSIS 包”对话框定位包。  
   
-#### 包源 = 文件系统  
+#### <a name="package-source--file-system"></a>包源 = 文件系统  
  **“包”**  
- 键入包的名称或者单击省略号按钮 **(…)**，使用“打开”对话框定位包。 默认情况下，该对话框仅列出扩展名为 .dtsx 的文件。  
+ 键入包的名称或者单击省略号按钮 **(…)** ，使用“打开”对话框定位包。 默认情况下，该对话框仅列出扩展名为 .dtsx 的文件。  
   
-#### 包源 = SSIS 包存储区  
+#### <a name="package-source--ssis-package-store"></a>包源 = SSIS 包存储区  
  **Server**  
  输入包驻留的计算机的名称，或者从列表中选择计算机。  
   
@@ -119,10 +124,10 @@ caps.handback.revision: 39
  **“包”**  
  键入包的名称或者单击省略号按钮 **(…)**，使用“选择 SSIS 包”对话框定位包。  
   
-## 配置页  
+## <a name="configurations-page"></a>配置页  
  可以使用 **“执行包实用工具”** 对话框的 **“配置”** 页，选择在运行时加载的配置文件并指定它们的加载顺序。  
   
-### 选项  
+### <a name="options"></a>选项  
  **配置文件**  
  列出包使用的配置。 每个配置文件都会向命令提示符中添加 **/CONFIGFILE filename** 选项。  
   
@@ -144,11 +149,11 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “命令文件”页  
+## <a name="command-files-page"></a>“命令文件”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令文件”** 页选择在运行时加载的命令文件。  
   
-### 选项  
- **命令文件**  
+### <a name="options"></a>选项  
+ **Command files**  
  列出包使用的命令文件。 一个包可以使用多个文件来设置命令行选项。  
   
  **箭头键**  
@@ -166,14 +171,14 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “连接管理器”页  
+## <a name="connection-managers-page"></a>“连接管理器”页  
  可以使用 **“执行包实用工具”** 对话框的 **“连接管理器”** 页，编辑包使用的连接管理器的连接字符串。  
   
-### 选项  
+### <a name="options"></a>选项  
  **连接管理器**  
  选中其复选框后，“连接字符串”列即会变为可编辑状态。  
   
- **Description**  
+ **说明**  
  查看每个连接管理器的说明。 无法编辑说明。  
   
  **连接字符串**  
@@ -185,10 +190,10 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “执行选项”页  
+## <a name="execution-options-page"></a>“执行选项”页  
  可以使用“执行包实用工具”对话框的“执行选项”页指定包的运行时选项。  
   
-### 选项  
+### <a name="options"></a>选项  
  **发生验证警告时包失败**  
  指示如果发生验证警告包是否失败。  
   
@@ -219,10 +224,10 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “报告”页  
+## <a name="reporting-page"></a>“报告”页  
  可以使用 **“执行包实用工具”** 对话框的 **“报告”** 页指定与包有关的事件和信息，以便在包运行时记录到控制台。  
   
-### 选项  
+### <a name="options"></a>选项  
  **控制台事件**  
  指示要报告的事件和消息类型。  
   
@@ -280,10 +285,10 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “日志记录”页  
+## <a name="logging-page"></a>“日志记录”页  
  可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 **/LOGGER***classid* 选项。  
   
-### 选项  
+### <a name="options"></a>选项  
  **日志提供程序**  
  从该列表中选择日志提供程序。  
   
@@ -299,10 +304,10 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “设置值”页  
+## <a name="set-values-page"></a>“设置值”页  
  可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 **/SET***propertypath;value* 选项。  
   
-### 选项  
+### <a name="options"></a>选项  
  **属性路径**  
  键入属性的路径。 在路径语法中，反斜杠 (\\) 用于指示其后面为容器项，句点 (.) 用于指示其后面为属性项，而括号用于指示集合成员。 成员可以通过其索引或其名称进行标识。 例如，包变量的属性路径可以是 \Package.Variables[MyVariable].Value。  
   
@@ -318,10 +323,10 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “验证”页  
+## <a name="verification-page"></a>“验证”页  
  可以使用 **“执行包”** 对话框的 **“验证”** 页设置对包进行验证的条件。  
   
-### 选项  
+### <a name="options"></a>选项  
  **仅执行已签名的包**  
  选择此项将仅执行已签名的包。  
   
@@ -349,17 +354,17 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## “命令行”页  
+## <a name="command-line-page"></a>“命令行”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令行”** 节点，编辑由不同对话框创建的选项生成的命令行。  
   
-### 选项  
+### <a name="options"></a>选项  
  **还原原始选项**  
  单击此项可将命令行还原为其原始状态。 如果你使用“手动编辑命令行”选项进行了修改，然后要还原原始命令行选项，则可以使用此选项。  
   
  **手动编辑命令行**  
  单击此项可在“命令行”文本框中编辑命令行。  
   
- **命令行**  
+ **Command line**  
  显示当前的命令行。 如果您选择了手动编辑命令行的选项，则可编辑该命令行。  
   
  **Execute**  
@@ -368,7 +373,7 @@ caps.handback.revision: 39
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)  
   
   

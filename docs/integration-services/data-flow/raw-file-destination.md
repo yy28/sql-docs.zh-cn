@@ -1,30 +1,35 @@
 ---
-title: "原始文件目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "追加选项 [Integration Services]"
-  - "目标 [Integration Services], 原始文件"
-  - "原始数据 [Integration Services]"
-  - "写入原始数据"
-  - "原始文件目标"
+title: "原始文件目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 原始文件目标
+# <a name="raw-file-destination"></a>原始文件目标
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
   
  除了将原始数据写入文件外，还可以使用原始文件目标生成仅包含列的空原始文件（仅元数据文件），而无需运行包。 使用原始文件源检索先前由目标写入的原始数据。 还可以将原始文件源指向仅元数据文件。  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  此源具有一个常规输入。 它不支持错误输出。  
   
-## 追加和新建文件选项  
+## <a name="append-and-new-file-options"></a>追加和新建文件选项  
  WriteOption 属性包含向现有文件中追加数据或创建新文件的选项。  
   
  下表介绍 WriteOption 属性的可用选项。  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  使用 RawFile2 替换 RawFile1。  
   
-### 在循环中使用原始文件目标  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>在循环中使用原始文件目标  
  如果使用原始文件目标的数据流位于循环中，您可能要创建一次文件，然后在循环重复时向该文件中追加数据。 若要向该文件中追加数据，要追加的数据必须与现有的文件格式匹配。  
   
  若要在循环的第一次迭代中创建文件，然后在循环的后续迭代中追加行，您需要在设计时执行下列操作：  
   
-1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways** 并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
+1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
 2.  将 WriteOption 属性重置为“追加”并将 ValidateExternalMetadata 属性设置为 **False**。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
-## 原始文件目标的配置  
+## <a name="configuration-of-the-raw-file-destination"></a>原始文件目标的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [原始文件自定义属性](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## 相关任务  
- 有关如何设置数据流组件属性的信息，请参阅[设置数据流组件属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-tasks"></a>相关任务  
+ 有关如何设置数据流组件属性的信息，请参阅 [设置数据流组件属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  sqlservercentral.com 上的博客文章： [原始文件令人生畏](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [原始文件源](../../integration-services/data-flow/raw-file-source.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   

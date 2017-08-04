@@ -1,33 +1,38 @@
 ---
-title: "分配功能区域权限 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "权限 [Master Data Services], 分配功能区域权限"
-  - "功能区域权限 [Master Data Services], 分配"
+title: "分配功能区域权限 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], assigning functional area permissions
+- functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c69ca8461607a43151b6d0dfe2b3988e5f905c90
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 分配功能区域权限 (Master Data Services)
+# <a name="assign-functional-area-permissions-master-data-services"></a>分配功能区域权限 (Master Data Services)
   分配功能区域权限以便授予用户或组对 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的功能区域的访问权限。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
-### 分配功能区域权限  
+### <a name="to-assign-functional-area-permissions"></a>分配功能区域权限  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“用户和组权限”**。  
   
@@ -43,12 +48,12 @@ caps.handback.revision: 6
   
 7.  完成后，单击 **“保存”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
--   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [分配模型对象权限 &#40;Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## 另请参阅  
- [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建模型管理员 &#40;Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

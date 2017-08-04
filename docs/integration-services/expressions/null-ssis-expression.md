@@ -1,42 +1,47 @@
 ---
-title: "NULL（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "NULL 函数"
-  - "Null 值 [Integration Services]"
+title: "NULL （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NULL function
+- null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# NULL（SSIS 表达式）
+# <a name="null-ssis-expression"></a>NULL（SSIS 表达式）
   返回请求的数据类型的 Null 值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 NULL(typespec)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *typespec*  
  有效的数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  任何包含 Null 值的有效数据类型。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果参数为 Null，则 NULL 返回的结果为 Null。  
   
  请求某些数据类型的 Null 值时需要提供参数。 下表列出了这些数据类型及其参数。  
@@ -50,7 +55,7 @@ NULL(typespec)
 |DT_NUMERIC|*精度*<br /><br /> *小数位数*|(DT_NUMERIC,10,3) 将数值转换为带 3 位小数且精度为 10 的 DT_NUMERIC 数据类型。|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例将返回下列数据类型的 Null 值：DT_STR、DT_DATE 和 DT_BOOL。  
   
 ```  
@@ -59,8 +64,8 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## 另请参阅  
- [ISNULL（SSIS 表达式）](../../integration-services/expressions/isnull-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [ISNULL &#40;SSIS 表达式 &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

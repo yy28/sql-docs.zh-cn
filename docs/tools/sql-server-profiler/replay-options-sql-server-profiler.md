@@ -1,27 +1,32 @@
 ---
-title: "重播选项 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "跟踪 [SQL Server], 重播"
-  - "重播跟踪"
-  - "Health Monitor [SQL Server]"
-  - "“重播配置”对话框"
+title: "重播选项 （SQL Server 事件探查器） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- replaying traces
+- health monitor [SQL Server]
+- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 重播选项 (SQL Server Profiler)
+# <a name="replay-options-sql-server-profiler"></a>重播选项 (SQL Server Profiler)
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播捕获的跟踪之前，请在 **“重播配置”** 对话框中指定重播选项。 若要启动此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开重播跟踪文件或表，然后在 **“重播”** 菜单上单击 **“开始”**。 有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)。  
   
  本主题介绍使用 **“重播配置”** 对话框指定的选项。  
@@ -29,12 +34,12 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  建议使用分布式重播实用工具重播密集型 OLTP 应用程序（具有大量活动并发连接或高吞吐量）。 分布式重播实用工具可以从多台计算机重播跟踪数据，并更好地模拟任务关键型工作负荷。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   
-## 基本重播选项  
+## <a name="basic-replay-options"></a>基本重播选项  
  **重播服务器**  
  此服务器是要对其重播跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此服务器必须遵循 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)中说明的重播要求。  
   
  **保存到文件**  
- 用于写入重播跟踪的结果以供将来查看的输出文件。 默认情况下，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]只在屏幕上显示重播跟踪的结果。  
+ 用于写入重播跟踪的结果以供将来查看的输出文件。 默认情况下， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 只在屏幕上显示重播跟踪的结果。  
   
  **保存到表**  
  用于写入重播跟踪的结果以供将来查看的数据库表。  
@@ -54,7 +59,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  为了获得最佳的重播性能，建议选择使用多线程重播事件，不要选择显示重播结果。  
   
-## 高级重播选项  
+## <a name="advanced-replay-options"></a>高级重播选项  
  **重播系统 SPID**  
  重播所有 SPID。 这是默认选项。  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 17
  **启用 SQL Server 阻塞的进程监视器**  
  设置阻塞进程监视器搜索已阻塞的进程或正在阻塞的进程的频率。  
   
-## 关于 Health Monitor  
+## <a name="about-the-health-monitor"></a>关于 Health Monitor  
  Health Monitor 是一个应用程序线程，用于监视重播跟踪过程中涉及的模拟进程，并结束在重播过程中阻塞的那些进程。 在“重播配置”对话框的“高级重播选项”选项卡中，可以指定 Health Monitor 在结束阻塞进程之前应等待的秒数（**Health Monitor 等待间隔**）。 如果将此间隔设置为 0，则在重播跟踪过程中，Health Monitor 永远不会结束模拟阻塞进程。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)   
  [重播要求](../../tools/sql-server-profiler/replay-requirements.md)   
- [重播跟踪的注意事项 (SQL Server Profiler)](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [重播跟踪 &#40; 的注意事项SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

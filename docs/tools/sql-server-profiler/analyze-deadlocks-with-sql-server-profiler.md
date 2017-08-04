@@ -1,31 +1,36 @@
 ---
-title: "使用 SQL Server Profiler 分析死锁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "进程节点 [SQL Server Profiler]"
-  - "Profiler [SQL Server Profiler], 死锁"
-  - "死锁 [SQL Server], 标识原因"
-  - "资源节点 [SQL Server Profiler]"
-  - "图形 [SQL Server Profiler]"
-  - "SQL Server Profiler, 死锁"
-  - "事件 [SQL Server], 死锁"
-  - "边缘 [SQL Server Profiler]"
+title: "使用 SQL Server Profiler 分析死锁 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process nodes [SQL Server Profiler]
+- Profiler [SQL Server Profiler], deadlocks
+- deadlocks [SQL Server], identifying cause
+- resource nodes [SQL Server Profiler]
+- graphs [SQL Server Profiler]
+- SQL Server Profiler, deadlocks
+- events [SQL Server], deadlocks
+- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 SQL Server Profiler 分析死锁
+# <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  
   
  若要跟踪死锁事件，请将 **Deadlock graph** 事件类添加到跟踪。 此事件类会在跟踪中的 **TextData** 数据列中填充有关死锁中涉及的进程和对象的 XML 数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可将 XML 文档提取到死锁 XML (.xdl) 文件，你稍后可在 SQL Server Management Studio 中查看该文件。 您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，将 **Deadlock graph** 事件提取到一个包含了所有 **Deadlock graph** 事件的文件中，或提取到多个单独的文件中。 可以通过下列任一方法进行提取：  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 -   通过右键单击特定事件并选择“提取事件数据”，也可以提取并保存各个事件。  
   
-## 死锁图形  
+## <a name="deadlock-graphs"></a>死锁图形  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死锁等待图形描述死锁。 此死锁等待图形中包含进程节点、资源节点以及表示进程和资源之间关系的边。 等待图形的组件的定义如下表所示：  
   
  进程节点  
@@ -48,7 +53,7 @@ caps.handback.revision: 13
  边  
  进程和资源之间的关系。 当进程等待资源时，将出现 **request** 边。 当资源等待进程时，将出现 **owner** 边。 边说明中包括了锁模式。 例如， **“模式: X”**。  
   
-## 死锁进程节点  
+## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  
   
 |组件|定义|  
@@ -63,7 +68,7 @@ caps.handback.revision: 13
 |输入缓冲区|当前进程的输入缓冲区。定义了事件的类型和正在执行的语句。 可能的值包括：<br /><br /> **语言**<br /><br /> **RPC**<br /><br /> **无**|  
 |声明专用纸|语句类型。 可能的值有：<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **Insert**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
-## 死锁资源节点  
+## <a name="deadlock-resource-node"></a>死锁资源节点  
  在死锁中，两个进程都在等待对方占用的资源。 在死锁图形中，资源显示为资源节点。  
   
   

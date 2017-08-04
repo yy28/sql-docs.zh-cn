@@ -1,28 +1,33 @@
 ---
-title: "Hadoop 连接管理器 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
+title: "Hadoop 连接管理器 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# Hadoop 连接管理器
+# <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
   Hadoop 连接管理器通过使用你为属性指定的值使 SSIS 包能够连接到 Hadoop 群集。  
   
-## 配置 Hadoop 连接管理器  
+## <a name="configure-the-hadoop-connection-manager"></a>配置 Hadoop 连接管理器  
   
 1.  在“添加 SSIS 连接管理器”  对话框中，选择 **Hadoop**，然后单击“添加” 。 此时将打开“Hadoop 连接管理器编辑器”  对话框。  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 7
   
     3.  选择访问 WebHCat 服务的  “身份验证”方法。 可用值有“基本”  和 **Kerberos**。  
   
-         ![Hadoop connection manager editor with basic authentication](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![通过基本身份验证的 Hadoop 连接管理器编辑器](../../integration-services/connection-manager/media/hadoop-cm-basic.png "通过基本身份验证的 Hadoop 连接管理器编辑器")  
   
-         ![Hadoop connection manager editor with Kerberos authentication](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![使用 Kerberos 身份验证的 Hadoop 连接管理器编辑器](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "使用 Kerberos 身份验证的 Hadoop 连接管理器编辑器")  
   
     4.  对于“WebHCat 用户” ，请输入有权访问 WebHCat 的“用户”  。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 6.  单击 **“确定”** 关闭对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Hadoop 配置单元任务](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Hadoop Pig 任务](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop 文件系统任务](../../integration-services/control-flow/hadoop-file-system-task.md)  
