@@ -1,13 +1,13 @@
-# [调试脚本](debugging-script.md)
-# [对包执行进行故障排除的工具](troubleshooting-tools-for-package-execution.md)
-# [通过在任务或容器上设置断点调试包](debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
-# [Integration Services (SSIS) 包故障排除](troubleshoot-integration-services-ssis-packages.md)
-# [对包执行进行故障排除的报告](troubleshooting-reports-for-package-execution.md)
-# [设置断点](set-breakpoints.md)
+# [概述](troubleshoot-integration-services-ssis-packages.md)
+
+# 对包开发进行故障排除和调试
+## [包开发的疑难解答工具](troubleshooting-tools-for-package-development.md)
+## [调试控制流](debugging-control-flow.md)
+## [调试脚本](debugging-script.md)
+## [调试数据流](debugging-data-flow.md)
+
+# [包连接的疑难解答工具](troubleshooting-tools-for-package-connectivity.md)
+# [包执行的疑难解答工具](troubleshooting-tools-for-package-execution.md)
+# [包执行的疑难解答报告](troubleshooting-reports-for-package-execution.md)
+
 # [生成包执行的转储文件](generating-dump-files-for-package-execution.md)
-# [将数据查看器添加到数据流](add-a-data-viewer-to-a-data-flow.md)
-# [调试控制流](debugging-control-flow.md)
-# [在数据流组件中配置错误输出](configure-an-error-output-in-a-data-flow-component.md)
-# [包开发的故障排除工具](troubleshooting-tools-for-package-development.md)
-# [调试数据流](debugging-data-flow.md)
-# [包连接故障排除工具](troubleshooting-tools-for-package-connectivity.md)

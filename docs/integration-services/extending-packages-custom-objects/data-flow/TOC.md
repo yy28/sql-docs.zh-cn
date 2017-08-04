@@ -1,0 +1,16 @@
+# [开发自定义数据流组件](developing-a-custom-data-flow-component.md)
+# [创建自定义数据流组件](creating-a-custom-data-flow-component.md)
+# [数据流组件的设计时方法](design-time-methods-of-a-data-flow-component.md)
+# [数据流组件的运行时方法](run-time-methods-of-a-data-flow-component.md)
+# [执行计划和缓冲区分配](execution-plan-and-buffer-allocation.md)
+# [在数据流中使用数据类型](working-with-data-types-in-the-data-flow.md)
+# [验证数据流组件](validating-a-data-flow-component.md)
+# [实现外部元数据](implementing-external-metadata.md)
+# [在数据流组件中引发和定义事件](raising-and-defining-events-in-a-data-flow-component.md)
+# [在数据流组件中记录和定义日志条目](logging-and-defining-log-entries-in-a-data-flow-component.md)
+# [在数据流组件中使用错误输出](using-error-outputs-in-a-data-flow-component.md)
+# [为数据流组件开发用户界面](developing-a-user-interface-for-a-data-flow-component.md)
+# [升级数据流组件的版本](upgrading-the-version-of-a-data-flow-component.md)
+
+# 文章子类别
+## [数据流类型](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)
