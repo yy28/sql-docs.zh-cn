@@ -1,5 +1,5 @@
 ---
-title: "在多个形状图表报表生成器的 SSRS 指定一致的颜色 |Microsoft 文档"
+title: "对多个形状图指定一致的颜色（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  右键单击形状图并选择“序列属性”。  
+4.  右键单击形状图，然后选择“序列属性”。  
   
-5.  在“填充”中，单击“表达式”(*fx*) 按钮可以编辑“颜色”属性的表达式。  
+5.  在“填充”中，单击“表达式”(fx) 按钮可以编辑“颜色”属性的表达式。  
   
 6.  键入以下表达式，其中“MyCategoryField”是在 **“类别组”** 区域中显示的字段：  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [向图表添加空点（报表生成器和 SSRS）](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: "服务器属性 （高级页）-Reporting Services |Microsoft 文档"
+title: "服务器属性（“高级”页）- Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为 **-1** ，则不会从执行日志表中删除项。 默认值是 **60**秒。  
  
 > [!NOTE] 
-> 设置值**0**将*删除*从执行日志的所有条目。 值为**-1**将保留执行日志的条目，并将不会删除。
+> 将值设置为“0”会从执行日志中删除所有条目。 将值设置为“-1”会保留执行日志的条目，而不删除。
   
  **SessionTimeout**  
  会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  

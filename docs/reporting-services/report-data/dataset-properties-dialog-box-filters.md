@@ -1,5 +1,5 @@
 ---
-title: "数据集属性对话框中，筛选器 |Microsoft 文档"
+title: "“数据集属性”对话框 ->“筛选器”| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  
   
- **“值”**  
+ **值**  
  键入在计算“表达式”框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
 ## <a name="see-also"></a>另请参阅  

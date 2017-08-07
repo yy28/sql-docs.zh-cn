@@ -1,5 +1,5 @@
 ---
-title: "设置图表 （报表生成器和 SSRS） 格式 |Microsoft 文档"
+title: "设置图表格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -56,11 +56,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc669d43fc5331a1ce161b0c1c2098a38c5224fb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>设置图表格式（报表生成器和 SSRS）

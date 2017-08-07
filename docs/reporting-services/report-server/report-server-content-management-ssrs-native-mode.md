@@ -1,5 +1,5 @@
 ---
-title: "报表服务器内容管理 （SSRS 本机模式） |Microsoft 文档"
+title: "报表服务器内容管理（SSRS 本机模式）| Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
 |---------------|------------------|-------------|  
 |（空格）|[ ]|Firstname Lastname 将变为 Firstname[ ]Lastname|  
 |\（反斜杠）|替换为一个空格字符|DomainName\Username 将变为 DomainName Username|  
-|@（@ 符号）|[at]|*用户名*@hotmail.com变得*用户名*[at]hotmail.com|  
+|@（@ 符号）|[at]|username@hotmail.com 将变为 username[at]hotmail.com|  
 |&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com|  
 |$（美元符号）|[dollar]|User $Name 将变为 User[ ][dollar]Name|  
   

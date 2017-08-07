@@ -26,17 +26,17 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  复制管理对象 (RMO) 是一个封装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制功能的托管代码程序集。 RMO 由 <xref:Microsoft.SqlServer.Replication> 命名空间实现。  
+  复制管理对象 (RMO) 是一个封装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制功能的托管代码程序集。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空间实现的。  
   
  以下几节中的主题介绍如何使用 RMO 以编程方式控制复制任务：  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
  本节中的主题介绍如何以编程方式监视复制拓扑。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 编程简介  
- RMO 专用于对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制的各个方面进行编程。 RMO 命名空间为 <xref:Microsoft.SqlServer.Replication>，由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 程序集 Microsoft.SqlServer.Rmo.dll 实现。 Microsoft.SqlServer.Replication.dll 程序集也属于 <xref:Microsoft.SqlServer.Replication> 命名空间，该程序集实现了用于编程多种复制代理（快照代理、分发代理和合并代理）的托管代码接口。 该程序集的类可以从 RMO 访问以同步订阅。 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间中的类由 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 程序集实现，这些类用于创建合并复制的自定义业务逻辑。 此程序集独立于 RMO。  
+ RMO 专用于对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制的各个方面进行编程。 RMO 的命名空间为 <xref:Microsoft.SqlServer.Replication>，它是由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 程序集 Microsoft.SqlServer.Rmo.dll 实现的。 Microsoft.SqlServer.Replication.dll 程序集也属于 <xref:Microsoft.SqlServer.Replication> 命名空间，该程序集实现了用于编程多种复制代理（快照代理、分发代理和合并代理）的托管代码接口。 该程序集的类可以从 RMO 访问以同步订阅。 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间中的类由 Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 程序集实现，这些类用于创建合并复制的自定义业务逻辑。 此程序集独立于 RMO。  
   
 ## <a name="deploying-applications-based-on-rmo"></a>部署基于 RMO 的应用程序  
  RMO 依赖于复制组件和客户端连接组件，这些组件包含在除 SQL Server Compact 之外的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中。 若要部署基于 RMO 的应用程序，必须在要运行该应用程序的计算机上安装包含复制组件和客户端连接组件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。  
@@ -150,9 +150,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="connecting-to-a-replication-server"></a>连接复制服务器  
  RMO 编程对象要求使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
--   为给定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义了连接的所有属性。  
+-   该连接的所有属性都对给定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义。  
   
--   与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每个实例的连接必须具有自身的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+-   与每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接必须有自己的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 -   将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象赋给正在创建的或正在服务器上访问的 RMO 编程对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext` 属性。  
   
@@ -162,11 +162,11 @@ ms.lasthandoff: 06/22/2017
   
 -   执行连接并成功登录服务器所需的所有验证信息由 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象提供。  
   
--   默认情况下使用 Windows 身份验证。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，必须将 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 设置为 **false**，将 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 设置为有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名和密码。 安全凭据必须始终以安全的方式存储和处理，并且尽可能在运行时才提供。  
+-   默认情况下使用 Windows 身份验证。 若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，<xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A> 必须设置为“False”，并且 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 和 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A> 必须设置为有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名和密码。 安全凭据必须始终以安全的方式存储和处理，并且尽可能在运行时才提供。  
   
--   对于多线程应用程序，应在每个线程中使用单独的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+-   对于多线程应用程序，每个线程应使用单独的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
- 对 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法可关闭 RMO 对象使用的活动服务器连接。  
+ 对 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 对象调用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法将关闭 RMO 对象所使用的活动的服务器连接。  
   
 ## <a name="setting-rmo-properties"></a>设置 RMO 属性  
  RMO 编程对象的属性表示服务器上这些复制对象的属性。 在服务器上创建新的复制对象时，RMO 属性用于定义这些对象。 对于现有对象，RMO 属性表示现有对象的属性，其中可修改的只有可写和可设置的属性。 对新对象或现有对象都可以设置属性。  
@@ -183,7 +183,7 @@ ms.lasthandoff: 06/22/2017
 >  多个 RMO 客户端或一个 RMO 编程对象的多个实例同时访问服务器上的同一个复制对象时，可根据服务器上该对象的当前状态，调用 RMO 对象的 **Refresh** 方法来更新属性。  
   
 ### <a name="caching-property-changes"></a>缓存属性更改  
- 如果 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 属性设置为 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql>，将捕获 RMO 生成的所有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，因此，可以使用以下执行方法之一在单个批中执行这些语句。 RMO 可以缓存属性更改并使用对象的 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 方法在一个批次内将这些更改一起提交。 若要缓存属性更改，对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 属性必须设置为 **true**。 在 RMO 中缓存属性更改时，<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象仍会控制将更改发送到服务器的时间。 有关缓存复制对象的属性更改的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
+ <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 属性设置为 <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> 时，RMO 生成的所有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句都会被捕获，因此可使用执行方法之一在一个批次内手动执行这些语句。 RMO 可以缓存属性更改并使用对象的 `M:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges` 方法在一个批次内将这些更改一起提交。 若要缓存属性更改，对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges` 属性必须设置为 **true**。 缓存 RMO 中的属性更改时，<xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象仍控制何时向服务器发送更改。 有关缓存复制对象的属性更改的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 > [!IMPORTANT]  
 >  虽然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类支持在设置属性时声明显式事务，但这样的事务会影响内部复制事务，可能产生难以预料的结果，因此不应在 RMO 中使用。  

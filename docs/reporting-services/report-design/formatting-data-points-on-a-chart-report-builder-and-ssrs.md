@@ -1,5 +1,5 @@
 ---
-title: "格式设置图表 （报表生成器和 SSRS） 上的数据点 |Microsoft 文档"
+title: "设置图表上数据点的格式（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅[图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
   
  序列由一个或多个数据点构成。 默认情况下，所有格式设置选项应用于序列中的所有数据点。 如果要指定单个数据点的属性，则可以在序列上指定在运行时基于数据集来设置单个数据点的格式的字段或表达式。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  `=Iif(Fields!MyField.Value >= Max(Fields!MyField.Value, "MyDataSet"), "Red", "Green")`  
   
- 在本示例中， `MyField` 的最高值的颜色将为 Red，而所有其他数据点的颜色将为 Green。 当在序列上使用 **“填充”** 属性来指定该序列的颜色时，图表将覆盖在调色板中指定的颜色。 有关详细信息，请参阅[设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+ 在本示例中， `MyField` 的最高值的颜色将为 Red，而所有其他数据点的颜色将为 Green。 当在序列上使用 **“填充”** 属性来指定该序列的颜色时，图表将覆盖在调色板中指定的颜色。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在图表上定位数据点标签  
  对于所有图表类型，右键单击图表并选择 **“显示数据标签”**后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
@@ -65,20 +65,20 @@ ms.lasthandoff: 06/22/2017
   
 |图表关键字|Description|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|InclusionThresholdSetting|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|InclusionThresholdSetting|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|InclusionThresholdSetting|  
+|#VALY|数据点的 Y 值。|全部|`=Fields!MyDataField.Value`|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|无|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|无|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|无|  
 |#SERIESNAME|序列名称。|全部|无|  
 |#LABEL|数据点标签。|全部|无|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|全部|InclusionThresholdSetting|  
-|#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
+|#INDEX|数据点索引。|全部|无|  
+|#PERCENT|数据点 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|序列中所有 Y 值的总计。|全部|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|对应于图例项文本的文本。|全部|无|  
-|#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
+|#AVG|序列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
+|#MAX|序列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|序列中所有 Y 值第一个值。|全部|`=First(Fields!MyDataField.Value)`|  
   
  若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
  有关将关键字添加到图表的详细信息，请参阅[在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)、[更改图例项的文本（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>提高具有多个数据点的图表的可读性  
- 如果图表中具有多个序列，则可能降低图表数据点的可读性。 向图表添加多个序列时，请考虑使用区分如何有效读取和了解图表中的每个序列的方法。 有关详细信息，请参阅[图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
+ 如果图表中具有多个序列，则可能降低图表数据点的可读性。 向图表添加多个序列时，请考虑使用区分如何有效读取和了解图表中的每个序列的方法。 有关详细信息，请参阅 [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
  为方便起见，当使用形状图时，请考虑仅添加一个数据字段和一个类别字段。 有关详细信息，请参阅[形状图（报表生成器和 SSRS）](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。 如果图表需要多个数据字段和类别字段，请考虑更改图表类型。 您可以右键单击该序列，然后选择 **“更改图表类型”**。  
   

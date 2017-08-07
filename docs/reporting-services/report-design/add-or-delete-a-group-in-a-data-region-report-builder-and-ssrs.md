@@ -1,5 +1,5 @@
 ---
-title: "添加或删除数据区域 （报表生成器和 SSRS） 中的组 |Microsoft 文档"
+title: "在数据区域中添加或删除组（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a28d250be3c4fe43b16825bf033e86836a036db0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在数据区域中添加或删除组（报表生成器和 SSRS）
-在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，如果你希望在显示或计算时根据特定值或表达式集来组织数据，可向数据区域添加组。 组具有标识该组所包含的数据集数据的名称和表达式。 有关组的详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
+在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，如果你希望在显示或计算时根据特定值或表达式集来组织数据，可向数据区域添加组。 组具有标识该组所包含的数据集数据的名称和表达式。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
  在 Tablix 数据区域中，单击表、矩阵或列表可以显示“分组”窗格。 将数据集字段拖到“行组”和“列组”窗格可以创建父组或子组。 右键单击现有组可以添加相邻组。 根据定义，详细信息组是最内部的组，并且只能作为子组添加。 右键单击现有组可以删除它。 显示组值的行和列是自动添加的。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)。  
   
  在图表数据区域中，单击图表以显示放置区。 通过将数据集字段拖到类别和序列放置区来创建组。 若要添加嵌套组，请向放置区添加多个字段。  
   
- 默认情况下，组不在仪表中定义。 仪表的默认行为是将指定字段中的所有值聚合为在仪表中显示的一个值。 有关详细信息，请参阅[仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+ 默认情况下，组不在仪表中定义。 仪表的默认行为是将指定字段中的所有值聚合为在仪表中显示的一个值。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在 **“名称”**中，键入组的名称。  
   
-3.  在“组表达式”中，键入一个表达式，或者单击表达式按钮 (**fx**) 以创建表达式。  
+3.  在“组表达式”中，键入表达式，或者单击表达式按钮 (fx)，创建表达式。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,19 +77,19 @@ ms.lasthandoff: 06/22/2017
   
 3.  在 **“名称”**中，键入组的名称。  
   
-4.  在“组表达式”中，键入或选择简单表达式，或者单击表达式 (**fx**) 按钮以创建组表达式。  
+4.  在“组表达式”中，键入或选择简单表达式，或者单击表达式 (fx) 按钮，创建组表达式。  
   
 5.  单击 **“添加”** 以创建其他表达式。 使用逻辑与组合指定的所有表达式，以便指定该组的数据。  
   
-6.  （可选）单击“分页符”以设置分页符选项。  
+6.  （可选）单击“分页符”设置分页符选项。  
   
-7.  （可选）单击“排序”以选择或键入指定组中的值的排序顺序的表达式。  
+7.  （可选）单击“排序”，选择或键入指定组中的值的排序顺序的表达式。  
   
-8.  （可选）单击“可见性”以选择该项的可见性选项。  
+8.  （可选）单击“可见性”，选择该项的可见性选项。  
   
-9. （可选）单击“筛选器”以设置该组的筛选器。  
+9. （可选）单击“筛选器”，设置该组的筛选器。  
   
-10. （可选）单击“变量”以定义以该组作为作用域、并且可以从任何子组访问的变量。  
+10. （可选）单击“变量”，定义以该组作为作用域、并且可以从任何子组访问的变量。  
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

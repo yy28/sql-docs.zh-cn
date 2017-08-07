@@ -1,5 +1,5 @@
 ---
-title: "订阅和传递 (Reporting Services) |Microsoft 文档"
+title: "订阅和传递 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>订阅和传递 (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  你可以为单个报表创建多个订阅，以便使用不同的订阅选项；例如，可以指定不同的参数值来生成三个报表版本，如西部地区销售报表、东部地区销售和全部销售。  
   
- ![示例 ssrs 订阅流](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "示例 ssrs 订阅流")  
+ ![示例 SSRS 订阅流](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "示例 SSRS 订阅流")  
   
  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供订阅。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [计划](../../reporting-services/subscriptions/schedules.md)   
+ [“计划”](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [监视 Reporting Services 订阅](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "数据集属性对话框中，查询 （报表生成器） |Microsoft 文档"
+title: "“数据集属性”对话框 ->“查询”（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>“数据集属性”对话框 -&gt;“查询”（报表生成器）
@@ -31,15 +31,15 @@ ms.lasthandoff: 06/22/2017
   
  与 **“数据集属性”** 对话框相关的主题还有：  
   
--   [“数据集属性”对话框 -&gt;“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
+-   [“数据集属性”对话框 ->“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [“数据集属性”对话框 -&gt;“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
+-   [“数据集属性”对话框 ->“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [“数据集属性”对话框 -&gt;“选项”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [“数据集属性”对话框 ->“选项”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [“数据集属性”对话框 -&gt;“筛选器”（报表生成器）](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
+-   [“数据集属性”对话框 ->“筛选器”（报表生成器）](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
- 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
  **名称**  

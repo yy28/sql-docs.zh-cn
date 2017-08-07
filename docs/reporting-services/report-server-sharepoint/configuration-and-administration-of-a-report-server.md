@@ -1,5 +1,5 @@
 ---
-title: "配置和管理报表服务器 |Microsoft 文档"
+title: "配置和管理报表服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,17 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d6afebe39f0d7c25df5d88ecd021c1d6dbc84d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
 # <a name="configuration-and-administration-of-a-report-server"></a>配置和管理报表服务器
 
-SQL Server Reporting Services 是基于服务器的报表平台，它提供全套准备就绪，可以使用的工具和服务以帮助你创建、 部署和管理报表的组织，以及使您能够扩展和自定义报告功能的编程功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。  
+SQL Server Reporting Services 是基于服务器的报表平台，提供了各种现成可用的工具和服务，帮助你创建、部署和管理组织的报表，并提供了使你能扩展和自定义报表功能的编程功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。  
   
 ## <a name="in-this-section"></a>在本节中  
  以下各节中的内容可以帮助您理解与将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境与 SharePoint 产品或技术相集成有关的概念、部署方案、过程等等：  
@@ -56,12 +56,12 @@ SQL Server Reporting Services 是基于服务器的报表平台，它提供全�
   
 -   [将 Reporting Services 内容类型添加到 SharePoint 库](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [本地模式与。连接模式报表对比（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   [报表查看器中的本地模式和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
 -   [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 有关更多常规信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 有关其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../../sql-server/sql-server-technical-documentation.md)。  
+ 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的一般信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。 有关其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../../sql-server/sql-server-technical-documentation.md)。  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "将数据添加到 Tablix 数据区域 （报表生成器和 SSRS） |Microsoft 文档"
+title: "向 Tablix 数据区域添加数据（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6f41b4d1b42db5ca020841f9363df3f4cf3eb99
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>向 Tablix 数据区域添加数据（报表生成器和 SSRS）
@@ -40,11 +40,11 @@ ms.lasthandoff: 06/22/2017
  表模板和列表模板提供详细信息行。 矩阵模板没有详细信息行。 如果 Tablix 数据区域没有详细信息行，通过定义详细信息组可以添加一个详细信息行。 有关详细信息，请参阅[添加详细信息组（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md)。  
   
 ## <a name="adding-grouped-data"></a>添加分组数据  
- 分组数据是在向数据集、数据区域和组应用筛选器之后由组表达式指定的所有详细信息数据。 若要组织组中的详细信息数据，请将相应字段从“报表数据”窗格拖至“分组”窗格。 添加组时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 自动将相关行或列添加到要在其中显示分组数据的 Tablix 数据区域。 这些行或列中的单元与分组数据关联。 有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
+ 分组数据是在向数据集、数据区域和组应用筛选器之后由组表达式指定的所有详细信息数据。 若要组织组中的详细信息数据，请将相应字段从“报表数据”窗格拖至“分组”窗格。 添加组时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 自动将相关行或列添加到要在其中显示分组数据的 Tablix 数据区域。 这些行或列中的单元与分组数据关联。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
- 默认情况下，将表示数字数据的数据集字段添加到组行或组列中的单元时，该单元的值是以该单元的最内部行组和列组成员身份为作用域的分组数据之和。 可以将默认聚合函数 Sum 更改为任何其他聚合函数，例如 Avg 或 Count。 您还可以更改聚合计算的默认作用域，以便用于计算某个值在行组中所占的百分比等目的。 有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 默认情况下，将表示数字数据的数据集字段添加到组行或组列中的单元时，该单元的值是以该单元的最内部行组和列组成员身份为作用域的分组数据之和。 可以将默认聚合函数 Sum 更改为任何其他聚合函数，例如 Avg 或 Count。 您还可以更改聚合计算的默认作用域，以便用于计算某个值在行组中所占的百分比等目的。 有关详细信息，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 默认情况下，所有分组数据都来自同一报表数据集。 在 Tablix 数据区域中，通过将另一数据集名称指定为作用域，可以将该数据集的聚合值包括进来。 可以在单个 Tablix 数据区域中指定来自多个数据集的多个聚合值。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 默认情况下，所有分组数据都来自同一报表数据集。 在 Tablix 数据区域中，通过将另一数据集名称指定为作用域，可以将该数据集的聚合值包括进来。 可以在单个 Tablix 数据区域中指定来自多个数据集的多个聚合值。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="adding-subtotals-and-totals"></a>添加小计和总计  
  若要为组添加小计和为数据区域添加总计，请在单元或“分组”窗格中使用快捷菜单上的“添加总计”功能。 显示总计的行和列是自动添加的。 小计和总计表达式默认使用 [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md) 聚合函数。 在添加表达式之后，可以更改默认函数。 有关详细信息，请参阅[向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  若要为组或数据区域添加标签，请在要标记的组之外添加一行或一列。 标签行和列类似于为显示总计而添加的行和列。 有关详细信息，请参阅[插入或删除行（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)或[插入或删除列（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>添加其他报表的现有 Tablix 数据区域  
- 可以复制其他报表中的数据区域，并将其粘贴到新报表或现有报表中。 粘贴相应数据区域之后，必须确保定义该数据区域使用的数据集，并确保相应数据集字段的名称和数据类型与其在原始报表中时相同。 您无法将数据集从一个报表复制到另一个报表，但是，如果您的报表使用共享数据源，则可以快速复制另一个报表中的数据集。 此外，您还可以导入用于检索数据集中数据的查询的查询文本，这样可以很容易地复制报表中的查询。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 可以复制其他报表中的数据区域，并将其粘贴到新报表或现有报表中。 粘贴相应数据区域之后，必须确保定义该数据区域使用的数据集，并确保相应数据集字段的名称和数据类型与其在原始报表中时相同。 您无法将数据集从一个报表复制到另一个报表，但是，如果您的报表使用共享数据源，则可以快速复制另一个报表中的数据集。 此外，您还可以导入用于检索数据集中数据的查询的查询文本，这样可以很容易地复制报表中的查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: "RsReportServer.config 配置文件 |Microsoft 文档"
+title: "RsReportServer.config 配置文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -15,15 +15,15 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 配置文件
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **RsReportServer.config**文件存储报表服务器 Web 服务所使用的设置和后台处理。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config 文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
 
 在 SharePoint 模式下，该配置文件中包含适用于在该计算机上运行的所有服务应用程序实例的那些设置。 SharePoint 配置数据库包含适用于特定服务应用程序的配置设置。 对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序，在配置数据库中存储并且通过 SharePoint 管理页进行管理的设置可能会有所不同。  
   
@@ -52,7 +52,7 @@ C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ### <a name="sharepoint-mode-report-server"></a>SharePoint 模式报表服务器
 
 > [!NOTE]
-> SharePoint 集成模式下不可用 2017 年 1 月 Power BI 技术预览中 SQL Server Reporting Services 的报表。
+> SQL Server Reporting Services 中 2017 年 1 月的 Power BI 技术预览版报表不支持 SharePoint 集成模式。
   
 ```  
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
@@ -70,10 +70,10 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
 |**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为 **Default** 和 **Impersonate**。 如果将报表服务器配置为使用**登录帐户或服务帐户连接至报表服务器数据库，则指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定**Impersonate** 。|否|  
-|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 有关报表服务器连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
-|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是**MSRS12***\<instancename >*。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
+|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值为“MSRS12”\<实例名>。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|否|  
-|**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置适用于报表服务器 Web 服务和 web 门户。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
+|**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和 Web 门户。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|否|  
 |**CleanupCycleMinutes**|指定多少分钟后从报告服务器数据库删除旧会话和过期快照。 有效值的范围为 0 到最大整数之间。 默认值为 10。 如果将值设置为 0，将禁止数据库清除进程。|N,S|  
 |**MaxActiveReqForOneUser**|指定一个用户可以同时处理的报表的最大数目。 达到此限制之后，将拒绝进一步的报表处理请求。 有效值介于 1 和最大整数之间。 默认值为 20。<br /><br /> 注意，大多数请求都处理得非常快，因此单个用户在任意给定时间都不太可能拥有 20 个以上的打开连接。 如果用户同时打开了 15 个以上的占用大量进程的报表，则最好增大此值。<br /><br /> 对于在 SharePoint 集成模式下运行的报表服务器，将忽略此设置。|N,S|  
@@ -83,7 +83,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**AlertingExecutionLogCleanup**Minutes|默认值为 10080。<br /><br /> 确定保留多长时间的警报执行日志值。 默认值为 7 天。|S|  
 |**AlertingMaxDataRetentionDays**|默认值为 180。<br /><br /> 确定为防止在警报数据尚未更改时出现重复的警报消息而保留多长时间的警报数据。|S|  
 |**RunningRequestsScavengerCycle**|指定取消孤立请求和过期请求的频率。 以秒为单位指定此值。 有效值的范围为 0 到最大整数之间。 默认值为 60。|N,S|  
-|**RunningRequestsDbCycle**|指定报表服务器评估到存在正在运行的作业信息中 web 门户的管理作业页上检查是否已超过了报表执行超时，并运行中作业的频率。 以秒为单位指定此值。 有效值的范围为 0 到 2147483647。 默认值为 60。|N,S|  
+|**RunningRequestsDbCycle**|指定报表服务器多长时间对正在运行的作业进行一次评估，以检查这些作业是否超出了报表执行超时值，以及何时在 Web 门户的“管理作业”页中显示正在运行的作业信息。 以秒为单位指定此值。 有效值的范围为 0 到 2147483647。 默认值为 60。|N,S|  
 |**RunningRequestsAge**|指定间隔多长时间后正在运行的作业的状态将从“新建”更改到“正在运行”（秒）。 有效值的范围为 0 到 2147483647。 默认值为 30。|N,S|  
 |**MaxScheduleWait**|指定在请求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “下次运行时间” **时报表服务器 Windows 服务等待** 代理服务更新计划的秒数。 有效值为 1 到 60。<br /><br /> 在默认配置文件中，MaxScheduleWait 设置为 **5**。<br /><br /> 如果报表服务器无法找到或读取该配置文件，则服务器默认为 MaxScheduleWait 设置为 1。|N,S|  
 |**DisplayErrorLink**|指示发生错误时是否显示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帮助和支持站点的链接。 此链接将显示在错误消息中。 用户单击此链接可以打开此站点上的更新的错误消息内容。 有效值包括 **True** （默认值）和 **False**。|N,S|  
@@ -93,7 +93,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**WatsonDumpExcludeIfContainsExceptions**|指定您希望不要在错误日志中报告的异常列表。 在诊断问题并且不希望服务器为特定异常创建转储时，此设置非常有用。|N,S|  
   
 ##  <a name="bkmk_URLReservations"></a> URLReservations（RSReportServer.config 文件）  
- **URLReservations**定义对报表服务器 Web 服务和当前实例的 web 门户 HTTP 访问权限。 URL 会在配置报表服务器时保留和存储在 HTTP.SYS 中。  
+ URLReservations 为当前实例定义报表服务器 Web 服务和 Web 门户的 HTTP 访问。 URL 会在配置报表服务器时保留和存储在 HTTP.SYS 中。  
   
 > [!WARNING]  
 >  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 保留项。 有关详细信息，请参阅 [配置备用访问映射 (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
@@ -170,20 +170,20 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|否|  
 |**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。 有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)。|N,S|  
 |**IsWebServiceEnabled**|指定报表服务器 Web 服务是否响应 SOAP 和 URL 访问请求。 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用服务时，设置此值。|N,S|  
-|**IsReportManagerEnabled**|从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 Web 门户将始终启用。|否|  
+|**IsReportManagerEnabled**|从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 将始终启用 Web 门户。|否|  
 |**FileShareStorageLocation**|指定文件系统中用于存储临时快照的单个文件夹。 尽管可以将文件夹路径指定为 UNC 路径，但不建议您这样做。 默认值为空。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|指定是否已启用报表定义自定义扩展插件 (RDCE)。 有效值为 **True** 和 **False**。|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI（RSReportServer.config 文件）  
- **UI**指定适用于 web 门户应用程序的配置设置。  
+ UI 指定应用于 Web 门户应用程序的配置设置。  
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
 |设置|Description|模式|  
 |-------------|-----------------|----------|  
-|**ReportServerUrl**|指定的 web 门户将连接到报表服务器的 URL。 如果你要配置 web 门户来连接到另一个实例中或远程计算机上的报表服务器，仅修改此值。|N,S|  
+|**ReportServerUrl**|指定 Web 门户连接到的报表服务器的 URL。 仅当将 Web 门户配置为连接到其他实例中或远程计算机上的报表服务器时，才修改此值。|N,S|  
 |**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以及更高版本中，报表生成器仅在 **FullTrust**下运行。 有关详细信息，请参阅 [配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md) 。 有关不再使用的部分信任模式的详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  
-|**PageCountMode**|对于仅限 web 门户，此设置指定呈现报表之前，或在查看报表，报表服务器是否计算页计数值。 有效值为 **Estimate** （默认值）和 **Actual**。 在用户查看报表时，使用 **Estimate** 计算页计数信息。 最初，页计数设置为 2（指当前页再加上一页），而当用户在报表中翻页时会上调。 如果您想在显示报表之前提前计算页计数，请使用 **Actual** 。 提供**Actual** 是为了向后兼容。 请注意，如果将 **PageCountMode** 设置为 **Actual**，则系统必须对整个报表进行处理后才能得到有效的页计数，这会增加报表显示之前所需等待的时间。|N,S|  
+|**PageCountMode**|仅用于 Web 门户，此设置指定在呈现报表之前或查看报表时报表服务器是否计算页计数值。 有效值为 **Estimate** （默认值）和 **Actual**。 在用户查看报表时，使用 **Estimate** 计算页计数信息。 最初，页计数设置为 2（指当前页再加上一页），而当用户在报表中翻页时会上调。 如果您想在显示报表之前提前计算页计数，请使用 **Actual** 。 提供**Actual** 是为了向后兼容。 请注意，如果将 **PageCountMode** 设置为 **Actual**，则系统必须对整个报表进行处理后才能得到有效的页计数，这会增加报表显示之前所需等待的时间。|N,S|  
   
 ##  <a name="bkmk_extensions"></a> 扩展插件（RSReportServer.config 文件）本机模式  
  **仅对于本机模式** 的报表服务器，“扩展插件”部分才显示在 rsreportserver.config 文件中。 SharePoint 模式的报表服务器的扩展插件信息存储在 SharePoint 配置数据库中，并针对每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序进行配置。  
@@ -254,7 +254,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPUseSSL**|指定一个布尔值，通过设置该值可以在通过网络发送 SMTP 消息时使用安全套接字层 (SSL)。 默认值为 0（或 False）。 当 **SendUsing** 元素设置为 2 时可以使用此设置。|  
 |**SendUsing**|指定发生消息所使用的方法。 有效值为<br /><br /> 1=通过本地 SMTP 服务拾取目录发送消息。<br /><br /> 2=通过网络 SMTP 服务发送消息。|  
 |**SMTPAuthenticate**|指定一个整数，表示通过 TCP/IP 连接向 SMTP 服务发送消息时使用的身份验证类型。 有效值为<br /><br /> 0=无身份验证。<br /><br /> 1=（不支持）。<br /><br /> 2= NTLM (NT LanMan) 身份验证。 使用报表服务器 Windows 服务的安全上下文连接到网络 SMTP 服务器。|  
-|**From**|指定从其报表格式发送电子邮件地址 *abc@host.xyz* 。 该地址显示在外发电子邮件的“发件人”行中。 如果使用远程 SMTP 服务器，则必须指定此值。 它应该是有权发送邮件的有效电子邮件帐户。|  
+|**From**|指定发送报表所使用的电子邮件地址，格式为 abc@host.xyz。 该地址显示在外发电子邮件的“发件人”行中。 如果使用远程 SMTP 服务器，则必须指定此值。 它应该是有权发送邮件的有效电子邮件帐户。|  
 |**EmbeddedRenderFormats，RenderingExtension**|指定在电子邮件正文中嵌入报表时所使用的呈现格式。 报表中的图像将随后嵌入报表中。 有效值为 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定当通过“管理所有订阅”任务启用订阅时，用户可以从中为报表订阅选择的呈现格式。 如果未设置此值，则可以使用所有未特意排除的呈现格式。|  
 |**ExcludedRenderFormats，RenderingExtension**|特意排除无法与给定的传递扩展插件协同工作的格式。 但不能排除同一个呈现扩展插件的多个实例。 如果排除多个实例，则在报表服务器读取配置文件时将出现错误。 默认情况下，排除将下列扩展插件用于电子邮件传递：<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
@@ -273,7 +273,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  NULL 传递提供程序用于为单个用户预生成的报表预加载缓存。 对于此传递扩展插件，没有相应的配置设置。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
 ###  <a name="bkmk_ui"></a> 传递 UI 扩展插件常规配置  
- 指定包含在 web 门户中定义单独的订阅时使用的订阅定义页中显示用户界面组件的传递扩展插件。 如果你创建和部署自定义传递扩展插件具有用户定义的选项和你想要使用 web 门户，你必须在此节中注册的传递扩展插件。 默认情况下，存在报表服务器电子邮件和报表服务器文件共享的配置设置。 仅用于数据驱动订阅或 SharePoint 应用程序页的传递扩展插件不具有此处的设置。  
+ 指定包含用户界面组件的传递扩展插件，在 Web 门户中定义单个订阅时，订阅定义页中显示这些用户界面组件。 如果需创建和部署具有用户定义选项的自定义传递扩展插件，并且要使用 Web 门户，则必须注册此处的传递扩展插件。 默认情况下，存在报表服务器电子邮件和报表服务器文件共享的配置设置。 仅用于数据驱动订阅或 SharePoint 应用程序页的传递扩展插件不具有此处的设置。  
   
 |设置|Description|  
 |-------------|-----------------|  
@@ -322,7 +322,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 -   [呈现扩展插件的设备信息设置 (Reporting Services)](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- 有关特性的信息的子**\<扩展 >**元素下的**\<呈现 >**，请参阅以下：  
+ 有关 \<Render> 下子 \<Extension> 元素属性的信息，请参阅以下主题：  
   
 -   [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -393,7 +393,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ##  <a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  
   
- **C:\Program Files\Microsoft SQL Server\MSRS13。MSSQLSERVER\Reporting Services\ReportServer**  
+ C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
   
 ```  
 <Configuration>
@@ -727,7 +727,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 ##  <a name="bkmk_sharepointdefaultfile"></a> SharePoint 模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  
   
- **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting**  
+ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
   
 ```  
 <Configuration>  
@@ -846,7 +846,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
 

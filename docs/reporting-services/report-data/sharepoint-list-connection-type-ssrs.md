@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 列表连接类型 (SSRS) |Microsoft 文档"
+title: "SharePoint 列表连接类型 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,20 +15,20 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-若要在报表中包含来自 Microsoft SharePoint 列表的数据，您必须添加或创建一个基于 Microsoft SharePoint 列表类型的报表数据源的数据集。 此内置数据源类型是基于 Microsoft SQL Server Reporting Services SharePoint 列表数据扩展插件。 使用此数据源类型可连接到并检索列表数据从 SharePoint 2013 及更高版本。
+若要在报表中包含来自 Microsoft SharePoint 列表的数据，您必须添加或创建一个基于 Microsoft SharePoint 列表类型的报表数据源的数据集。 此内置数据源类型是基于 Microsoft SQL Server Reporting Services SharePoint 列表数据扩展插件。 使用此数据源类型连接到 SharePoint 2013 及更高版本，并从中检索列表数据。
 
-使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)类型的报表数据源的数据集。  
+使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
 
 ##  <a name="Connection"></a> 连接字符串  
  SharePoint 列表的连接字符串是指向 SharePoint 站点或子站点（例如， `http://MySharePointWeb/MySharePointSite` 或 `http://MySharePointWeb/MySharePointSite/Subsite`）的 URL。  
@@ -185,13 +185,13 @@ ms.lasthandoff: 06/22/2017
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 部分。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
 
 ## <a name="see-also"></a>另请参阅
 
 [报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[筛选器、 组和数据进行排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[对数据进行筛选、分组和排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

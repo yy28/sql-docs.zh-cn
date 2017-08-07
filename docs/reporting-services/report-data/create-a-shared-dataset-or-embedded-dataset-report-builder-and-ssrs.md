@@ -1,5 +1,5 @@
 ---
-title: "创建共享数据集或嵌入数据集 （报表生成器和 SSRS） |Microsoft 文档"
+title: "创建共享数据集或嵌入数据集（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 25caf057e8d75fd3ed463f4165b3259331d18182
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  在查询设计器中，指定要包含在数据集中的字段。  
   
-5.  单击“运行”(**!**) 以运行查询。  
+5.  单击 **“运行”** (**!**) 以运行查询。  
   
 6.  在 **“报表生成器”** 按钮上，单击 **“保存”** 或 **“另存为”** 将共享数据集保存到报表服务器。  
   
@@ -75,20 +75,20 @@ ms.lasthandoff: 06/22/2017
   
 3.  浏览到报表服务器，为共享数据源选择文件夹。  
   
-4.  在“项类型”中，单击下拉列表中的“数据集(*.rsd)”。  
+4.  在 **“项类型”**的下拉列表中单击“数据集 (*.rsd)”。  
   
 5.  选中共享数据集，然后单击 **“打开”**。 将打开关联的查询设计器。  
   
 6.  在功能区上，单击 **“数据集属性”**。  
   
-7.  单击 **“参数”**。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”。 有关详细信息，请参阅[报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+7.  单击 **“参数”**。 在此页上，将默认值设置为一个常量或者一个表达式，将该参数标记为只读、可以为 null 或“从查询中省略”。 有关详细信息，请参阅 [报表参数](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
   
 ## <a name="to-create-a-dataset-from-a-sql-server-relational-database"></a>从 SQL Server 关系数据库创建数据集  
   
-1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击“添加数据集”。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
+1.  在“报表数据”窗格中，右键单击数据源的名称，然后单击 **“添加数据集”**。 此时将打开 **“数据集属性”** 对话框的 **“查询”** 页。  
   
 2.  在 **“名称”**中，键入数据集的名称，或接受默认名称。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
     -   选择 **StoredProcedure** 可以按名称运行存储过程。  
   
-5.  在 **“查询”**中，键入查询、存储过程或表名。 此外，也可以单击“查询设计器”打开图形查询设计器或基于文本的查询设计器工具，或单击“导入”从现有报表中导入查询。  
+5.  在 **“查询”**中，键入查询、存储过程或表名。 此外，也可以单击 **“查询设计器”** 打开图形查询设计器或基于文本的查询设计器工具，或单击 **“导入”** 从现有报表中导入查询。  
   
      在少数情况下，查询指定的字段集合只能通过在数据源中运行查询来确定。 例如，存储过程可能在结果集中返回可变字段集。 单击 **“刷新字段”** 可以在数据源中运行查询，并检索填充“报表数据”窗格中的数据集字段集合时所需的字段名称。 关闭 **“数据集属性”** 对话框后，将在数据集节点下显示字段集合。  
   

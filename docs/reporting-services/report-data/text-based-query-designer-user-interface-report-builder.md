@@ -1,5 +1,5 @@
 ---
-title: "基于文本的查询设计器用户界面 （报表生成器） |Microsoft 文档"
+title: "基于文本的查询设计器用户界面（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="command-type-text"></a>命令类型 Text  
  创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据集时，默认情况下，关系查询设计器将会打开。 若要切换为基于文本的查询设计器，请单击工具栏上的“编辑为文本”切换按钮。 基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 下图标出了每个窗格。  
   
- ![通用查询设计器中的，为关系数据查询](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "通用查询设计器中，为关系数据的查询")  
+ ![通用查询设计器，用于关系数据查询](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "通用查询设计器，用于关系数据查询")  
   
  下表介绍了每个窗格的功能。  
   
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  下图显示运行存储过程时的“查询”和“结果”窗格。 在此示例中，输入参数为常量。  
   
- ![基于文本的查询设计器中存储过程](../../reporting-services/report-data/media/rs-relational-text-sp.gif "基于文本的查询设计器中存储过程")  
+ ![基于文本的查询设计器中的存储过程](../../reporting-services/report-data/media/rs-relational-text-sp.gif "基于文本的查询设计器中的存储过程")  
   
  下表介绍了每个窗格的功能。  
   
@@ -100,7 +100,7 @@ uspGetWhereUsedProductID
  对于指定日期，结果集显示使用指定组件号的 13 个产品标识符列表。  
   
 ### <a name="command-type-tabledirect"></a>命令类型 TableDirect  
- 选择“Command typeTableDirect”，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
+ 选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。  
   
 #### <a name="example"></a>示例  
  对于数据源类型 OLE DB，以下数据集查询将为 AdventureWorks2014 数据库中的所有联系人类型返回结果集。  

@@ -1,5 +1,5 @@
 ---
-title: "安全 （报表生成器） |Microsoft 文档"
+title: "安全性（报表生成器）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）

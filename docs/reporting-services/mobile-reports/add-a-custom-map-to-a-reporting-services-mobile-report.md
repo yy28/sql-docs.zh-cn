@@ -1,5 +1,5 @@
 ---
-title: "将自定义地图添加到 Reporting Services 移动报表 |Microsoft 文档"
+title: "向 Reporting Services 移动报表添加自定义地图 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Add a custom map to a Reporting Services mobile report

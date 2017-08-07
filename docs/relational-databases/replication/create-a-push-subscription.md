@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 **false**，则表示步骤 2 中指定的属性不正确，或者服务器中不存在发布。  
   
-4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性与 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行按位逻辑 AND（在 Visual C# 中为 **&**，在 Visual Basic 中为 **And**）。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，请将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 与 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的按位逻辑 OR（在 Visual C# 中为 **|**，在 Visual Basic 中为 **Or**）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 启用推送订阅。  
+4.  在**&** 属性和 **And** 之间执行逻辑位与（在 Visual C# 中为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ，在 Visual Basic 中为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为**|** 属性和 **Or** 之间的逻辑位或（在 Visual C# 中为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ，将 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -175,37 +175,37 @@ ms.lasthandoff: 06/22/2017
   
 7.  设置下列订阅属性：  
   
-    -   将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 创建的发布服务器。  
+    -   在步骤 1 中为 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 创建的与发布服务器的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的订阅数据库的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>的订阅数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的订阅服务器的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>的订阅服务器的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的发布数据库的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>的发布数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的发布名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>的发布的名称。  
   
-    -   设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 字段，提供分发服务器上用于运行分发代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
+    -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > **注意：**当 **sysadmin** 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但我们建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 **true** 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
+    -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   
-    -   （可选）在使用“SQL Server 身份验证”连接到订阅服务器时设置 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 字段。  
+    -   （可选）在使用 SQL Server 身份验证连接到订阅服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 字段。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   
-    > **重要说明！**在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器。 在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应该对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    > 重要提示！！在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器。 在调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应该对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>创建合并发布的推送订阅  
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、<xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
+2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果该方法返回 **false**，则表示步骤 2 中指定的属性不正确，或者服务器中不存在发布。  
   
-4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性与 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行按位逻辑 AND（在 Visual C# 中为 **&**，在 Visual Basic 中为 **And**）。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，请将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 与 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的按位逻辑 OR（在 Visual C# 中为 **|**，在 Visual Basic 中为 **Or**）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 启用推送订阅。  
+4.  在**&** 属性和 **And** 之间执行逻辑位与（在 Visual C# 中为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ，在 Visual Basic 中为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为**|** 属性和 **Or** 之间的逻辑位或（在 Visual C# 中为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> ，将 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -213,25 +213,25 @@ ms.lasthandoff: 06/22/2017
   
 7.  设置下列订阅属性：  
   
-    -   将 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 设置为在步骤 1 中为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 创建的发布服务器。  
+    -   在步骤 1 中为 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 创建的与发布服务器的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 的订阅数据库的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>的订阅数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> 的订阅服务器的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>的订阅服务器的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> 的发布数据库的名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>的发布数据库的名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A> 的发布名称。  
+    -   用于 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>的发布的名称。  
   
-    -   设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 字段，提供分发服务器上用于运行合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
+    -   分发服务器中的分发代理运行时所使用的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，将 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 字段，用于提供分发代理在分发服务器中运行所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的凭据。 该帐户用于与分发服务器进行本地连接，同时还用于使用 Windows 身份验证进行远程连接。  
   
-        > **注意：**当 **sysadmin** 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但我们建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > 请注意：当 sysadmin 固定服务器角色的成员创建订阅时，不需要设置 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，尽管建议这样做。 在这种情况下，代理会模拟 SQL Server Agent 帐户。 有关详细信息，请参阅 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
-    -   （可选）<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 **true** 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
+    -   （可选） **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值（默认值），用于创建用来同步订阅的代理作业。 如果您指定了 **false**，则只能以编程的方式同步订阅。  
   
-    -   （可选）在使用“SQL Server 身份验证”连接到订阅服务器时设置 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 字段。  
+    -   （可选）在使用 SQL Server 身份验证连接到订阅服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 字段。  
   
-    -   （可选）在使用“SQL Server 身份验证”连接到发布服务器时设置 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 字段。  
+    -   （可选）在使用 SQL Server 身份验证连接到发布服务器时设置 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 或 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 字段。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   

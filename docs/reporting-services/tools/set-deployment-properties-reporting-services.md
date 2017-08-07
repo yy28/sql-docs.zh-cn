@@ -1,5 +1,5 @@
 ---
-title: "设置部署属性 (Reporting Services) |Microsoft 文档"
+title: "设置部署属性 (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
@@ -36,11 +36,11 @@ ms.lasthandoff: 06/22/2017
 >  请不要将此功能与 Reporting Services 配置管理器相混淆，后者用于在安装完成后配置 Reporting Services。 有关详细信息，请参阅[配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表” 。  
+>  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，从报表服务器项目或解决方案发布报表的操作称为“部署报表”。  
   
 ### <a name="to-set-deployment-properties"></a>设置部署属性  
   
-1.  右键单击报表项目，再单击“属性” 。  
+1.  右键单击报表项目，再单击“属性”。  
   
 2.  在项目的 **“属性页”** 对话框中，从 **“配置”** 列表中选择要编辑的配置。 常用的配置有 **DebugLocal**、 **Debug**和 **Release**。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  在 **OverwriteDataSources** 列表中，选择 **True** 以在每次发布共享数据源时覆盖服务器上的共享数据源，或选择 **False** 以保留服务器上的数据源。  
   
-7.  在“TargetServerVersion”  列表中，选择 SQL Server 2016 版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，或者选择“检测版本”  ，从而自动确定在由“TargetServer URL”  属性标识的服务器上安装的版本。 默认值为“SQL Server 2016 或更高版本” 。  
+7.  在“TargetServerVersion”列表中，选择 SQL Server 2016 版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或者选择“检测版本”，从而自动确定在由“TargetServer URL”属性标识的服务器上安装的版本。 默认值为“SQL Server 2016 或更高版本” 。  
   
      使用 **TargetServerVersion** 可以自定义生成的报表，这些报表位于在 OutputPath 中指定的路径下，对应于在 **TargetServer URL**中指定的报表服务器版本。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在该项目的 **“属性页”** 对话框中，单击 **“配置管理器”**。  
   
-3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前处于活动状态的配置显示为**Active (***\<配置 >***)**。  
+3.  在 **“配置管理器”** 对话框中，选择要编辑的配置。 当前有效的配置显示为“活动(\<配置>)”。  
   
 4.  在 **“项目上下文”**中，为解决方案中的每个项目选中或清除 **“生成”** 或 **“部署”**。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
  [发布数据源和报表](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [预览报表](../../reporting-services/reports/previewing-reports.md)   
  [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)   
- [用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [SharePoint 模式下的报表服务器上已发布报表项的 URL 示例 (SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [将报表发布到报表服务器](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   

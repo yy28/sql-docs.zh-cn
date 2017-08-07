@@ -1,5 +1,5 @@
 ---
-title: "表达式 （报表生成器和 SSRS） 中的数据类型 |Microsoft 文档"
+title: "表达式中的数据类型（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
   
 -   修改数据集查询，以添加含有已转换数据的新查询字段。 对于关系数据源或多维数据源，将使用数据源资源来执行转换。  
   
--   基于现有报表数据集字段创建计算字段，方法是编写一个表达式，将一个结果集列中的所有数据都转换到具有另一数据类型的新列。 例如，以下表达式将字段 Year 从整数值转换为字符串值：`=CStr(Fields!Year.Value)`。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
+-   基于现有报表数据集字段创建计算字段，方法是编写一个表达式，将一个结果集列中的所有数据都转换到具有另一数据类型的新列。 例如，以下表达式将字段 Year 从整数值转换为字符串值： `=CStr(Fields!Year.Value)`。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   
--   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+-   检查所使用的数据处理扩展插件是否包括用于检索预先设定格式的数据的元数据。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询包括 FORMATTED_VALUE 扩展属性，用于已在处理多维数据集时设置了格式的多维数据集值。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解参数数据类型  
  报表参数必须是下列五种数据类型之一：Boolean、DateTime、Integer、Float 或 Text（也称为 String）。 数据集查询包含查询参数时，将会自动创建报表参数，并将其链接到查询参数。 报表参数的默认数据类型是 String。 若要更改报表参数的默认数据类型，请在“报表参数属性”对话框的“常规”页上，从“数据类型”下拉列表中选择正确的值。  
@@ -100,9 +100,9 @@ ms.lasthandoff: 06/22/2017
  使用不对数据源中所有数据类型提供转换支持的数据访问接口连接到数据源时，不支持的数据源类型的默认数据类型为 String。 下面的示例提供针对作为字符串返回的特定数据类型的解决方案。  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>串联 String 和 CLR DateTimeOffset 数据类型  
- 对于大多数数据类型，CLR 提供默认转换，因此您可以使用 & 运算符将不同数据类型的值串联到一个字符串中。 例如，下面的表达式将文本“The date and time are: ”与数据集字段 StartDate（这是一个 <xref:System.DateTime> 值）相串联：`="The date and time are: " & Fields!StartDate.Value`。  
+ 对于大多数数据类型，CLR 提供默认转换，因此您可以使用 & 运算符将不同数据类型的值串联到一个字符串中。 例如，下面的表达式将文本“The date and time are: ”与数据集字段 StartDate（这是一个 <xref:System.DateTime> 值）相串联： `="The date and time are: " & Fields!StartDate.Value`。  
   
- 对于某些数据类型，可能需要包含 ToString 函数。 例如，以下表达式显示相同的示例中使用 CLR 数据类型<xref:System.DateTimeOffset>，其中包括日期、 时间和时区相对于 UTC 时区偏移量： `="The time is: " & Fields!StartDate.Value.ToString()`。  
+ 对于某些数据类型，可能需要包含 ToString 函数。 例如，下面的表达式使用 CLR 数据类型 <xref:System.DateTimeOffset>演示相同示例，该数据类型包括日期、时间和相对于 UTC 时区的时区偏移量： `="The time is: " & Fields!StartDate.Value.ToString()`。  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>将 String 数据类型转换为 CLR DateTime 数据类型  
  如果数据处理扩展插件不支持对某一数据源定义的所有数据类型，则其中的数据可能会作为文本来检索。 例如， **datetimeoffset(7)** 数据类型值可能会作为 String 数据类型来检索。 在澳大利亚的珀斯（Perth）市，2008 年 7 月 1 日上午 6:05:07.9999999 的字符串值 如下：  
@@ -145,7 +145,7 @@ ms.lasthandoff: 06/22/2017
   
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) 和 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)中的[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=120955)中的 [Analysis Services 中的数据类型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据类型的详细信息，请参阅 [SQL Server 联机丛书](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 中的 [SQL Server Books Onl中的e](http://go.microsoft.com/fwlink/?linkid=120955)。  
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

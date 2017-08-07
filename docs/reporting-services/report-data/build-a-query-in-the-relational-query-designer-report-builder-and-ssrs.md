@@ -1,5 +1,5 @@
 ---
-title: "构建在关系查询设计器 （报表生成器和 SSRS） 的查询 |Microsoft 文档"
+title: "在关系查询设计器中生成查询（报表生成器和 SSRS）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）

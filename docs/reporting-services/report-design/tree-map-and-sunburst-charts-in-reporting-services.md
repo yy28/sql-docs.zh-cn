@@ -1,5 +1,5 @@
 ---
-title: "树形图和旭日图 Reporting Services 中的 |Microsoft 文档"
+title: "Reporting Services 中的树形图和旭日图 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树形图和旭日图
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
-     选择树状图![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     选择树形图 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     有关详细信息，请参阅[在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
+     有关详细信息，请参阅 [在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)。  
   
 6.  将默认图表标题改为“根据区域划分的的销售”。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
-     选择旭日图![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
+     选择旭日图 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")。  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -179,8 +179,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [共享数据集设计视图（报表生成器）](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
- [教程︰Power BI 中的树形图](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [树形图︰Microsoft Research 面向 Office 的数据可视化应用](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+ [教程：Power BI 中的树形图](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
+ [树形图：面向 Office 的 Microsoft Research 数据可视化应用](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

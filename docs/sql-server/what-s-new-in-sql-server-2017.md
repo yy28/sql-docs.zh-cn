@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
+ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
+ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
@@ -26,20 +26,10 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
 
 **试用：** [下载 SQL Server 2017 候选发布 (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [Linux 适用的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)和 [Linux 适用的 SQL Server 2017 的新增功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)。
+>**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)（Linux 上的 SQL Server 文档）。
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>最新版本：SQL Server 2017 候选发布（RC1，2017 年 7 月）
-
-### <a name="sql-server-database-engine"></a>SQL Server 数据库引擎    
-- 现在可以将 CLR 程序集添加到白名单中，作为 CTP 2.0 中描述的 `clr strict security` 功能的解决方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单。  
-
-### <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
-- SSIS 中的新 Scale Out 功能在 RC1 中具有以下新功能和更改的功能。 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
-    -   Scale Out 主要角色现在支持高可用性。
-    -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。
-    -   存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。
-    -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。
+## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>最新版本：SQL Server 2017 候选发布（RC2，2017 年 8 月）
+此版本进行了 bug 修复和性能改进。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
 - 提升了从下列旧版 SQL Server 升级到 SQL Server 2017 Master Data Services 的升级体验和性能。
@@ -47,9 +37,9 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎  
 SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
+- 现在可以将 CLR 程序集添加到白名单，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单 (RC1)。  
 - 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”选项可使用户避免标识列值的差值。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
 - 自动数据库优化提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
@@ -119,13 +109,22 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
-SQL Server R 服务现在已重命名为 SQL Server机器学习服务，以反映对除了 R 语言之外的 Python 的新支持。 可以使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本，或者安装 Microsoft 机器学习服务器（独立）来部署和使用不需要 SQL Server 的 R 和 Python 模型。 这两个平台都包括用于分布式机器学习的 MicrosoftML 新算法以及 Microsoft R 的最新版本（版本 9.1.0）。 (CTP 2.0)
-- 与 Python 结合使用的机器学习包括了 revoscalepy 模块，该模块支持 RevoScaleR 中提供的分布式算法和计算上下文的子集。 
-- 可以通过使用新的 rxExecBy 函数从 R 并行创建多个模型。 支持的计算上下文包括 RxSpark 和 RxInSQLServer。 (CTP 2.0)
+SQL Server R 服务已重命名为 SQL Server 机器学习服务，以反映对除 R 语言外的 Python 的支持。 可使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本。 或者安装 Microsoft 机器学习服务器（独立），从而部署和使用不需要 SQL Server 的 R 和 Python 模型。 
+
+SQL Server 开发人员现在可访问开放源代码生态系统中提供的大量 Python ML 和 AI 库，以及 Microsoft 的最新创新： 
+
++ **revoscalepy** - 此 Pythonic 版本的 RevoScaleR 包含用于线性回归和逻辑回归、决策树、提升树和随机林的并行算法，以及一组丰富的用于数据转换和数据移动、远程计算上下文和数据源的 API。
+
++ **microsoftml**  - 这是一个先进的机器学习算法和 Python 绑定转换包，其中包含深层神经网络、快速决策树和决策树以及用于线性回归和逻辑回归的高度优化算法。 用户还可获得预定型模型，这些模型基于用于图像提取或情感分析的 ResNet 模型。
+
++ **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
+
++ **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
 ## <a name="next-steps"></a>后续步骤
 - 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。
+- 了解 [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)（Linux 上 SQL Server 2017 的新增功能）。
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
 
