@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>内存中 OLTP 不支持的 SQL Server 功能
@@ -38,9 +38,9 @@ ms.lasthandoff: 07/20/2017
 | 复制 | 对订阅服务器上内存优化表进行的事务复制之外的其他复制配置与引用内存优化表的表或视图不兼容。<br /><br />如果存在内存优化文件组，则不支持使用 sync_mode=’database snapshot’ 的复制。<br /><br />有关详细信息，请参阅 [复制到内存优化表订阅服务器](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
 |镜像|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持数据库镜像。 有关镜像的详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |重新生成日志|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持通过附加或 ALTER DATABASE 重新生成日志。|  
-|链接服务器|不能在与内存优化表相同的查询或事务中访问链接服务器。 有关详细信息，请参阅[链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
+|链接服务器|不能在与内存优化表相同的查询或事务中访问链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
 |大容量日志记录|无论数据库处于什么恢复模式，都将始终完整记录针对持久内存优化表的所有操作的日志。|  
-|最小日志记录|内存优化表不支持最小日志记录。 有关最小日志记录的详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[在大容量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
+|最小日志记录|内存优化表不支持最小日志记录。 有关最小日志记录的详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) 和[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
 |更改跟踪|可在包含内存中 OLTP 对象的数据库上启用更改跟踪。 但是，在内存优化表上的更改不会被跟踪。|  
 | DDL 触发器 | 内存中 OLTP 表或本机编译的模块不支持数据库级别和服务器级别的 DDL 触发器。 |  
 | 变更数据捕获 (CDC) | CDC 不能与具有内存优化表的数据库一起使用，因为它在内部使用 DROP TABLE 的 DDL 触发器。 |  
@@ -56,7 +56,7 @@ ms.lasthandoff: 07/20/2017
 
 |“数据库”|Allowed|Description|  
 |---------------|-------------|-----------------|  
-| 用户数据库、模型和 msdb。 | 是 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可供进行只读访问。 |
+| 用户数据库、模型和 msdb。 | 是 | 多数情况下，不支持跨数据库查询和事务。<br /><br />如果查询使用内存优化表或本机编译存储过程，则此查询无法访问其他数据库。 此限制适用于事务以及查询。<br /><br />tempdb 和 master 系统数据库除外。 此时，master 数据库可进行只读访问。 |
 | 资源数据库和 tempdb | 是 | 在涉及内存中 OLTP 对象的事务中，可以使用资源和 tempdb 系统数据库，而无需添加限制。
 
 

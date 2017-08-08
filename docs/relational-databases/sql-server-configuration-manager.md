@@ -30,14 +30,14 @@ ms.translationtype: HT
 ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
 ms.openlocfilehash: 8c9ab15a35c892a31b882797271629a5ec9ef1a0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 
- > 与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 配置管理器](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 配置管理器](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx)。
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (**mmc.exe**) 使用 **SQLServerManager\<version>.msc** 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 **SQLServerManager13.msc**）打开配置管理器。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (mmc.exe) 使用 SQLServerManager\<version>.msc 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 SQLServerManager13.msc）打开配置管理器。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
   
 |||  
 |-|-|
@@ -50,18 +50,18 @@ ms.lasthandoff: 07/14/2017
 >  因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  
 >   
 >  -   **Windows 10**：  
->          要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置” 。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏” 。  
+>          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置” 。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏” 。  
 > -   **Windows 8**：  
->          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 **SQLServerManager\<version>.msc**（例如 **SQLServerManager13.msc**），然后按“Enter”。  
+>          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如SQLServerManager13.msc），然后按“Enter”。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅[在 SQL Server 工具中将 WMI 配置为显示服务器状态](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅 [在 SQL Server 工具中将 WMI 配置为显示服务器状态](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)。  
   
- 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在另一台计算机上启动、停止、暂停、恢复或配置服务，请参阅[连接到其他计算机（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
+ 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在另一台计算机上启动、停止、暂停、恢复或配置服务，请参阅[连接到另一台计算机（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   
 ## <a name="managing-services"></a>管理服务  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以启动、暂停、恢复或停止服务，还可以查看或更改服务属性。  
   
- 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器通过启动参数启动[!INCLUDE[ssDE](../includes/ssde-md.md)]。  有关详细信息，请参阅[配置服务器启动选项（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
+ 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器通过启动参数启动 [!INCLUDE[ssDE](../includes/ssde-md.md)] 。  有关详细信息，请参阅[配置服务器启动选项（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
   
 ## <a name="changing-the-accounts-used-by-the-services"></a>更改服务使用的帐户  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器可以管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务。  

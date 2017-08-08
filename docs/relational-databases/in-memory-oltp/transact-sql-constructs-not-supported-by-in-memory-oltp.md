@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |功能|ON|内存优化的表不能放置在文件组或分区方案上。 从 **CREATE TABLE** 语句删除 ON 子句。<br /><br /> 所有的内存优化表都映射到内存优化文件组。|  
 |数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅 [内存中 OLTP 支持的数据类型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。|  
-|功能|计算列|内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。|  
+|功能|计算列|内存优化的表不支持计算列。 从 **CREATE TABLE** 语句删除计算列。<br/><br/>**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。|  
 |功能|复制|内存优化表不支持复制。|  
 |功能|FILESTREAM|内存优化的表列不支持 FILESTREAM 存储。 从列定义中删除 **FILESTREAM** 关键字。|  
 |功能|SPARSE|内存优化的表列不能定义为 SPARSE。 从列定义中删除 **SPARSE** 关键字。|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |运算|更新主键列|无法更新内存优化的表和表类型中的主键列。 如果需要更新主键，请删除旧的行并插入包含更新的主键的新行。|  
 |运算|CREATE INDEX|必须使用 **CREATE TABLE** 语句或 **ALTER TABLE** 语句以内联方式指定内存优化表的索引。|  
 |运算|CREATE FULLTEXT INDEX|内存优化的表不支持全文检索。|  
-|运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。<br/><br/>**适用于：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>开头[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]，支持 sp_rename。| 
+|运算|架构更改|内存优化表和本机编译存储过程不支持架构更改，例如， **sp_rename**。<br /><br /> 尝试更改某些架构将生成错误 12320。 内存优化表不支持要求对架构版本进行更改的操作，例如重命名。<br /><br /> 允许使用 ALTER TABLE 和 ALTER PROCEDURE 对架构进行某些更改。<br/><br/>**适用于：** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。<br/>支持以 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 开头的 sp_rename。| 
 |运算|TRUNCATE TABLE|内存优化的表不支持 TRUNCATE 操作。 若要从表中删除所有行，请使用 **DELETE FROM** table 删除所有行，或删除并重新创建该表。|  
 |运算|ALTER AUTHORIZATION|不支持更改现有内存优化的表或本机编译的存储过程的所有者。 请删除并重新创建该表或过程来更改所有权。|  
 |运算|ALTER SCHEMA|在架构之间传输安全对象。|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/23/2017
 |功能|筛选索引|内存优化的表不支持筛选的索引。 从索引定义中省略 **WHERE** 子句。|  
 |功能|包含列|指定包含列不是内存优化表所必需的。 内存优化表的所有列都隐式包含在每个内存优化索引中。|  
 |运算|DROP INDEX|不支持删除内存优化的表的索引。 可使用 ALTER TABLE 删除索引。<br /><br /> 有关详细信息，请参阅 [更改内存优化表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。|  
-|索引选项|*Index option*|仅支持一个索引选项 – BUCKET_COUNT for HASH 索引。|  
+|索引选项|*索引选项*|仅支持一个索引选项 – BUCKET_COUNT for HASH 索引。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非聚集哈希索引  
  下表列出可在涉及非聚集哈希索引的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
 |功能|COMPUTE|不支持 **COMPUTE** 子句。 从查询中删除它。|  
 |功能|SELECT INTO|**INTO** 语句不支持 **SELECT** 子句。 将查询重写为 **p INTO***Table***SELECT**。|  
 |功能|不完整的插入列列表|一般情况下，在 INSERT 语句中，必须为表中的所有列指定值。<br /><br /> 但是，我们支持内存优化表上的 DEFAULT 约束和 IDENTITY(1,1) 列。 可以将这些列（如果为 IDENTITY 列，则必须）从 INSERT 列列表中忽略。|  
-|功能|*Function*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|功能|*函数*|本机编译存储过程中不支持某些内置函数。 从存储过程中删除被拒绝的函数。 有关支持的内置函数的详细信息，请参阅<br />[本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |功能|CASE|本机编译的存储过程内的查询中不支持 **CASE** 语句。 创建每个情况的查询。 有关详细信息，请参阅 [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
 |功能|INSERT EXECUTE|删除引用。|  
 |功能|在运行 CREATE 语句前执行|仅支持执行本机编译存储过程和用户定义函数。|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |运算符|OFFSET|不支持此运算符。 从本机编译的存储过程中删除 **OFFSET** 。|  
 |运算符|INTERSECT|不支持此运算符。 从本机编译的存储过程中删除 **INTERSECT** 。 在某些情况下，可以使用 INNER JOIN 获得相同的结果。|  
 |运算符|EXCEPT|不支持此运算符。 从本机编译的存储过程中删除 **EXCEPT** 。|  
-|运算符|APPLY|不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。|  
+|运算符|APPLY|不支持此运算符。 从本机编译的存储过程中删除 **APPLY** 。<br/><br/>**适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。<br/>从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。|  
 |运算符|PIVOT|不支持此运算符。 从本机编译的存储过程中删除 **PIVOT** 。|  
 |运算符|UNPIVOT|不支持此运算符。 从本机编译的存储过程中删除 **UNPIVOT** 。|  
 |运算符|CONTAINS|不支持此运算符。 从本机编译的存储过程中删除 **CONTAINS** 。|  
@@ -157,12 +157,12 @@ ms.lasthandoff: 06/23/2017
 |选项|FOR XML|不支持此选项。 从本机编译的存储过程中删除 **FOR XML** 。|  
 |选项|FOR BROWSE|不支持此选项。 从本机编译的存储过程中删除 **FOR BROWSE** 。|  
 |联接提示|HASH、MERGE|本机编译的存储过程仅支持嵌套的循环联接。 不支持哈希和合并联接。 删除联接提示。|  
-|查询提示|*Query hint*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。|  
+|查询提示|*查询提示*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。|  
 |选项|PERCENT|**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **PERCENT** 。|  
 |选项|WITH TIES|**TOP** 子句不支持此选项。 从本机编译的存储过程中的查询删除 **WITH TIES** 。|  
-|聚合函数|*Aggregate function*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
-|排名函数|*Ranking function*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
-|函数|*Function*|不支持此函数。 从本机编译的存储过程中删除它。|  
+|聚合函数|*聚合函数*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|排名函数|*排名函数*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
+|函数|*函数*|不支持此函数。 从本机编译的存储过程中删除它。|  
 |。|*Statement*|不支持此语句。 从本机编译的存储过程中删除它。|  
 |功能|MIN 和 MAX 用于二进制和字符串|聚合函数 **MIN** 和 **MAX** 不能用于本机编译的存储过程中的字符和二进制字符串值。|  
 |功能|GROUP BY ALL|在本机编译的存储过程中，不能将 ALL 与 GROUP BY 子句一起使用。 从 GROUP BY 子句中删除 ALL。|  

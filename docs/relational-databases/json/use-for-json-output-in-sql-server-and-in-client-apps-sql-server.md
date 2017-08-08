@@ -18,20 +18,20 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 9383b62ac3413b0e4dc8780413bdde09bfc04af3
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1fa05e61c8c057141eceee65c5c1da39c5d4200e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>在 SQL Server 和客户端应用中使用 FOR JSON 输出 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-下面的示例演示了几种用于**FOR JSON**子句和其 JSON 输出中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或客户端应用中。  
+下面的示例演示了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或客户端应用中使用 FOR JSON 子句或其 JSON 输出的几种方式。  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>在 SQL Server 变量中使用 FOR JSON 输出  
-FOR JSON 子句的输出类型 nvarchar (MAX)，因此可以分配给任何变量，如下面的示例中所示。  
+FOR JSON 子句的输出类型为 NVARCHAR(MAX)，因此可以将它赋给任何变量，如下面的示例中所示。  
   
 ```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
@@ -65,7 +65,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>将父数据和子数据合并到单个表中  
-在下面的示例中，每个组子行将格式化为 JSON 数组。 JSON 数组将成为父表中的详细信息列的值。  
+下面的示例将每组子行格式化为 JSON 数组。 JSON 数组将成为父表中“详细信息”列的值。  
   
 ```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
@@ -78,7 +78,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>更新 JSON 列中的数据  
- 下面的示例演示你可以更新包含 JSON 文本的列的值。  
+ 下面的示例演示如何更新包含 JSON 文本的列的值。  
   
 ```sql  
 UPDATE SalesOrder  
@@ -90,7 +90,7 @@ SET Details =
 ```  
   
 ## <a name="use-for-json-output-in-a-c-client-app"></a>在 C# 客户端应用中使用 FOR JSON 输出  
- 下面的示例演示如何在 C# 客户端应用中将查询的 JSON 输出检索到 StringBuilder 对象中。 假定变量`queryWithForJson`包含带有 FOR JSON 子句的 SELECT 语句的文本。  
+ 下面的示例演示如何在 C# 客户端应用中将查询的 JSON 输出检索到 StringBuilder 对象中。 假设变量 `queryWithForJson` 包含带有 FOR JSON 子句的 SELECT 语句的文本。  
   
 ```csharp  
 var queryWithForJson = "SELECT ... FOR JSON";
@@ -112,8 +112,8 @@ else
 }
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
  
 ## <a name="see-also"></a>另请参阅  
  [借助 FOR JSON 将查询结果的格式设置为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

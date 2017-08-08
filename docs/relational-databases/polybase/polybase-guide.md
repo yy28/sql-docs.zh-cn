@@ -23,17 +23,17 @@ caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
 ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase 是一种技术，访问通过 t-sql 的语言数据库外部的数据。  在 SQL Server 2016 中，它允许你对 Hadoop 中的外部数据运行查询，或导入/导出从 Azure Blob 存储的数据。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，你可以导入/导出从 Azure Blob 存储的数据和 Azure 数据湖存储。
+  PolyBase 是一种可通过 t-sql 语言访问数据库外部数据的技术。  在 SQL Server 2016 中，可以对 Hadoop 中的外部数据运行查询或将数据导入/导出 Azure Blob 存储。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，可以将数据导入/导出 Azure Blob 存储和 Azure Data Lake Store。
   
   
  若要使用 Polybase，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
@@ -43,15 +43,15 @@ ms.lasthandoff: 06/23/2017
 ## <a name="why-use-polybase"></a>为什么要用 PolyBase？  
 若要作出正确决策，你需要同时分析关系数据和其他未构建到表中的数据 - 尤其是 Hadoop 数据。 除非有方法能够在不同数据存储类型之间传输数据，否则这将很难执行。 PolyBase 通过处理 SQL Server 外部的数据填补了这一差距。  
   
-为了简单起见，PolyBase 不需要你到 Hadoop 环境中安装其他软件。 查询外部数据使用与查询数据库表一样的语法。 所有的一切均透明发生。 PolyBase 句柄幕后的所有详细信息和有关 Hadoop 不知道需要最终用户查询外部表。 
+为了简单起见，PolyBase 不要求向 Hadoop 环境安装其他软件。 查询外部数据使用与查询数据库表一样的语法。 所有的一切均透明发生。 PolyBase 会在后台处理所有详细信息，并且最终用户不需要 Hadoop 的任何相关知识便可查询外部表。 
   
  PolyBase 能够：  
   
--   **查询从 SQL Server 或 PDW 的 Hadoop 中存储的数据。** 用户将数据存储在经济高效的分布式、可扩展系统中，例如 Hadoop。 PolyBase 使得使用 T-SQL 查询数据更加容易。  
+-   **通过 SQL Server 或 PDW 查询 Hadoop 中存储的数据。** 用户将数据存储在经济高效的分布式、可扩展系统中，例如 Hadoop。 PolyBase 使得使用 T-SQL 查询数据更加容易。  
   
--   **查询 Azure Blob 存储中存储的数据。** Azure blob 存储是一个方便存储供 Azure 服务使用的数据的位置。  PolyBase 使得使用 T-SQL 访问数据变得更加容易。  
+-   **查询存储在 Azure Blob 存储中的数据。** Azure blob 存储是一个方便存储供 Azure 服务使用的数据的位置。  PolyBase 使得使用 T-SQL 访问数据变得更加容易。  
   
--   **从 Hadoop、 Azure Blob 存储或 Azure 数据湖存储导入数据**充分利用 Microsoft SQL 的列存储技术和分析功能的速度将数据从 Hadoop、 Azure Blob 存储或 Azure 数据湖存储导入关系表。 不需要单独的 ETL 或导入工具。  
+-   **从 Hadoop、Azure Blob 存储或 Azure Data Lake Store 导入数据** 通过将数据从 Hadoop、Azure Blob 存储或 Azure Data Lake Store 导入到关系表中，利用 Microsoft SQL 的列存储技术和分析功能的速度。 不需要单独的 ETL 或导入工具。  
 
 -   **将数据导出到 Hadoop、Azure Blob 存储或 Azure Data Lake Store。** 将数据存档到 Hadoop、Azure Blob 存储或 Azure Data Lake Store，以获得经济高效的存储，并使数据保持联机以便于访问。  
   

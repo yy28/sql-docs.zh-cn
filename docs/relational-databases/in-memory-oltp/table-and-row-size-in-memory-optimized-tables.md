@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# 内存优化表中的表和行大小
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，内存优化表的行内数据大小不得长于 [8,060 字节](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)。 但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在 Azure SQL 数据库中，现在可以创建具有多个大型列（例如，多个 varbinary(8000) 列）和 LOB 列（即 varbinary(max)、 varchar(max) 和 nvarchar(max)）的内存优化表，并使用本机编译的 T-SQL 模块和表类型对其进行操作。 
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)（ 自 CTP3 以来，SQL Server 2016 中内存中 OLTP 的新增功能）博客文章进一步详述了其中的某些复杂问题。   
  
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -15,18 +15,18 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>临时表使用方案
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   临时表通常适用于需要跟踪数据更改历史记录的方案。    
-我们建议你考虑主要工作效率优势以下用例中的临时表。  
+建议在以下用例中考虑使用临时表以获得巨大的生产效率优势。  
   
 ## <a name="data-audit"></a>数据审核  
  对存储关键信息的表使用临时系统版本控制，你需要跟踪对这些信息所做的更改和更改发生的时间，以及在任何时间点进行数据取证。    
@@ -315,9 +315,9 @@ ALTER TABLE Product
 ALTER TABLE [Location]  
 ADD   
     SysStartTime datetime2 (2) GENERATED ALWAYS AS ROW START HIDDEN    
-        constraint DF_ValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
+        constraint DFValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
     , SysEndTime datetime2 (2)  GENERATED ALWAYS AS ROW END HIDDEN     
-        constraint DF_ValidTo DEFAULT '9999.12.31 23:59:59.99'  
+        constraint DFValidTo DEFAULT '9999.12.31 23:59:59.99'  
     , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);  
   
 ALTER TABLE [Location]    
@@ -591,7 +591,7 @@ UPDATE Employee
  [临时表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [临时表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [临时表安全性](../../relational-databases/tables/temporal-table-security.md)   
- [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [系统版本控制的临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   

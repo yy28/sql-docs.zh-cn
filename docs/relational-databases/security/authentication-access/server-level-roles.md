@@ -26,11 +26,11 @@ caps.latest.revision: 52
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
 ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="server-level-roles"></a>服务器级别角色
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/23/2017
   
  提供固定服务器角色是为了方便使用和向后兼容。 应尽可能分配更具体的权限。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九种固定服务器角色。 向固定的服务器角色授予的权限 (除**公共**) 不能更改。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以创建用户定义的服务器角色，并将服务器级权限添加到用户定义的服务器角色。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九种固定服务器角色。 无法更改授予固定服务器角色（public 角色除外）的权限。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以创建用户定义的服务器角色，并将服务器级权限添加到用户定义的服务器角色。  
   
  你可以将服务器级主体（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名、Windows 帐户和 Windows 组）添加到服务器级角色。 固定服务器角色的每个成员都可以将其他登录名添加到该同一角色。 用户定义的服务器角色的成员则无法将其他服务器主体添加到角色。  
 >  [!NOTE]
@@ -49,17 +49,17 @@ ms.lasthandoff: 06/23/2017
 ## <a name="fixed-server-level-roles"></a>服务器级的固定角色  
  下表显示了服务器级的固定角色及其权限。  
   
-|服务器级的固定角色|Description|  
+|服务器级的固定角色|说明|  
 |------------------------------|-----------------|  
-|**sysadmin**|成员**sysadmin**固定的服务器角色可以在服务器中执行任何活动。|  
+|**sysadmin**|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |**serveradmin**|**serveradmin** 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
-|**securityadmin**|**securityadmin** 固定服务器角色的成员可以管理登录名及其属性。 他们可以`GRANT`， `DENY`，和`REVOKE`服务器级权限。 他们还可以`GRANT`， `DENY`，和`REVOKE`数据库级别权限，如果它们有权访问数据库。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **重要说明：**授予访问权限的能力[!INCLUDE[ssDE](../../../includes/ssde-md.md)]并配置用户权限允许安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
-|**processadmin**|成员**processadmin**固定的服务器角色可以结束的实例中运行的进程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
-|**setupadmin**|成员**setupadmin**固定的服务器角色可以添加和删除链接的服务器使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。 (**sysadmin**成员身份时使用需要[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)|  
-|**bulkadmin**|成员**bulkadmin**固定的服务器角色可以运行`BULK INSERT`语句。|  
-|**diskadmin**|**Diskadmin**固定的服务器角色用于管理磁盘文件。|  
+|**securityadmin**|**securityadmin** 固定服务器角色的成员可以管理登录名及其属性。 他们可以 `GRANT`、`DENY` 和 `REVOKE` 服务器级权限。 他们还可以 `GRANT`、`DENY` 和 `REVOKE` 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **重要提示：**授予 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
+|**processadmin**|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中运行的进程。|  
+|**setupadmin**|setupadmin 固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 时需要 sysadmin 成员资格。）|  
+|**bulkadmin**|bulkadmin 固定服务器角色的成员可以运行 `BULK INSERT` 语句。|  
+|**diskadmin**|diskadmin 固定服务器角色用于管理磁盘文件。|  
 |**dbcreator**|**dbcreator** 固定服务器角色的成员可以创建、更改、删除和还原任何数据库。|  
-|**公共**|每个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录名都属于**公共**服务器角色。 如果未向某个服务器主体授予或拒绝对某个安全对象的特定权限，该用户将继承授予该对象的 public 角色的权限。 只有在希望所有用户都能使用对象时，才在对象上分配 Public 权限。 你无法更改具有 Public 角色的成员身份。<br /><br /> **注意：** **公共**实现不同于其他角色，并可以授予、 拒绝或撤消从公共的固定的服务器角色的权限。|  
+|**public**|每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名都属于 public 服务器角色。 如果未向某个服务器主体授予或拒绝对某个安全对象的特定权限，该用户将继承授予该对象的 public 角色的权限。 只有在希望所有用户都能使用对象时，才在对象上分配 Public 权限。 你无法更改具有 Public 角色的成员身份。<br /><br /> **注意：**public 与其他角色的实现方式不同，可通过 public 固定服务器角色授予、拒绝或调用权限。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定服务器角色的权限  
  每个固定服务器角色都被分配了特定的权限。 下图显示了分配给服务器角色的权限。   

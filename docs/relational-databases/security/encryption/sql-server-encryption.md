@@ -19,11 +19,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
 ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 >  有关传输级别安全 (TSL1.2) 的最新信息，请参阅 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)（对 Microsoft SQL Server 的 TLS 1.2 支持）。  
 
-您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 以下主题包含有关中的加密的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中为连接、数据和存储过程使用加密。 以下主题包含关于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的加密的详细信息。  
 
  [加密层次结构](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的加密层次结构的信息。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/23/2017
  说明如何使用证书来加密数据。  
   
 ## <a name="external-resources"></a>外部资源  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 安全和保护](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet：SQL Server 技术中心：SQL Server 2012 安全和保护](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  包含有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>另请参阅  

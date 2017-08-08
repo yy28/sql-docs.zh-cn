@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
 ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 受版本控制的功能摘要
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-可用的 SQL Server 产品和服务的 PolyBase 功能的摘要。  
+可用于 SQL Server 产品和服务的 PolyBase 功能摘要。  
   
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
  此表概述了 PolyBase 的主要功能以及提供这些功能的产品。  

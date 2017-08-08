@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
@@ -130,7 +130,7 @@ ms.lasthandoff: 06/23/2017
   
 -   使用以下任一数据类型的列： **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、别名、用户定义类型。  
 - FILESTREAM 列  
-- 具有标识属性的列  
+- 具有 IDENTITY 属性的列  
 - 具有 ROWGUIDCOL 属性的列  
 - 采用非 bin2 排序规则的字符串（varchar、char 等）  
 - 用作使用随机加密列作为键列的非聚集索引的键的列（可以是确定性加密列）  

@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server 开发人员指南
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/19/2017
 
 - **SQL Server Management Studio (SSMS)** 是一个免费的用于操作 SQL Server 的集成环境，几乎每月都发布更新的版本，因此请访问 [SSMS 下载页面](../ssms/download-sql-server-management-studio-ssms.md)来获取最新版本。
 
-- **SQL Server Data Tools (SSDT)** 也是免费的，并且最适合与 Visual Studio 配合使用。 若要获取最新版本，请访问 [SSDT 下载页面](../ssdt/download-sql-server-data-tools-ssdt.md)，还可以通过该页面获取 **[Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)** 的免费版本。
+- **SQL Server Data Tools (SSDT)** 也是免费的，并且最适合与 Visual Studio 配合使用。 若要获取最新版本，请访问 [SSDT 下载页面](../ssdt/download-sql-server-data-tools-ssdt.md)，还可以通过该页面获取 [Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs.aspx) 的免费版本。
 
   
 ### <a name="programmable-features-and-services"></a>可编程的功能和服务： 

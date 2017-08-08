@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
@@ -93,14 +93,14 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 
 可以通过暂时将数据库的恢复模式设置为大容量日志恢复模式或简单恢复模式，以在具有许多 CPU 的计算机上改进索引操作（如创建或重新创建索引）的性能。 这些索引操作可以生成重大的日志活动和日志争用，从而影响 SQL Server 所做的最佳并行度 (DOP) 选择。
 
-此外，考虑调整**最大并行度 (MAXDOP) 度**这些操作的服务器配置选项。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
+此外，请考虑调整这些操作的最大并行度 (MAXDOP) 服务器配置选项。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
 
 * 对于完整恢复模式，将最大并行度选项的值设置为 8 或更小。   
 * 对于大容量日志恢复模式或简单恢复模式，应考虑将最大并行度选项的值设置为大于 8。   
 * 对于配置了 NUMA 的服务器，最大并行度不应超过分配给每个 NUMA 节点的 CPU 数目。 这是因为查询更可能使用 1 个 NUMA 节点的本地内存，这可以缩短内存访问时间。  
-* 有关 狝竟超线程已启用并已在 2009年制造或 （在超线程的功能也已经过改进） 前，更早版本，MAXDOP 值不应超过的物理处理器，而不是逻辑处理器数。
+* 对于启用了超线程且在 2009 年或更早（改进超线程功能之前）制造的服务器，MAXDOP 值不应超过物理处理器（而不是逻辑处理器）的数目。
 
-Max degree of parallelism 选项有关的详细信息，请参阅[配置 max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+有关最大并行度选项的详细信息，请参阅[配置最大并行度服务器配置选项](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>设置最大工作线程数
 

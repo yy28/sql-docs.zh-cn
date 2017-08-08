@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
@@ -51,9 +51,9 @@ ms.lasthandoff: 06/23/2017
 
 支持以下查询构造：  
 
-CASE 表达式： 可以在任何语句或允许使用有效表达式的子句中使用大小写。
+CASE 表达式：CASE 可用于允许使用有效表达式的任意语句或子句。
    - **适用于：** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
-    开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，CASE 语句现在均支持本机编译的 T-SQL 模块。
+    从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，本机编译 T-SQL 模块已支持 CASE 语句。
 
 SELECT 子句：  
 
@@ -61,19 +61,19 @@ SELECT 子句：
 
 -   标量子查询
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持标量子查询。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持标量子查询。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译的模块中支持 DISTINCT 运算符。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 DISTINCT 运算符。
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 和 UNION ALL
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持 UNION 和 UNION ALL 运算符。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 UNION 和 UNION ALL 运算符。
 
 -   表分配  
 
@@ -85,20 +85,20 @@ FROM 子句：
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN 和 INNER JOIN。
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译模块中现在支持联接。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 JOINS。
 
 -   子查询 `[AS] table_alias`。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。 
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，本机编译的模块中现在支持子查询。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持子查询。
 
 WHERE 子句：  
 
 -   筛选器谓词 IS [NOT] NULL  
 
--   和之间  
--   OR、 NOT、 在中，EXISTS
+-   AND、BETWEEN  
+-   OR、NOT、IN、EXISTS
     - **适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      开头[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，OR/NOT/中/EXISTS 运算符现在支持在本机编译模块中。
+      从 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 开始，本机编译模块已支持 OR/NOT/IN/EXISTS 运算符。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句：
@@ -194,7 +194,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   按位运算符 ~、&、| 和 ^  
 
 -   APPLY 运算符
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 APPLY 运算符。
 
 ##  <a name="bfncsp"></a> 本机编译模块中的内置函数  
@@ -205,7 +205,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
 
 -   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING。  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
 -   恒等函数：SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
 
 -   JSON 函数  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，本机编译模块支持 JSON 函数。
 
 -   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- 该 8192 行限制仅适用于 `TOP N`，其中 `N` 是常量，如前面的示例中所示。  如果您需要 `N` 大于 8192，则可以将该值分配给一个变量并且将该变量用于 `TOP`。  
+ 该 8192 行限制仅适用于 `TOP N` ，其中 `N` 是常量，如前面的示例中所示。  如果您需要 `N` 大于 8192，则可以将该值分配给一个变量并且将该变量用于 `TOP`。  
 
  使用变量的示例：编译  
 

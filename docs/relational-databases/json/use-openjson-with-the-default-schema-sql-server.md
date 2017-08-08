@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 2aa30c8c5e0257a819d58688c90b24782d3fd153
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: ff76c19a4834cb583779b4ab33d1167780f44b0c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>使用具有默认架构的 OPENJSON (SQL Server)
@@ -107,8 +107,8 @@ CROSS APPLY OPENJSON(SalesReasons)
   
  在此示例中，OPENJSON 返回了销售原因表，将原因显示为值列。 CROSS APPLY 运算符将每个销售订单行与 OPENJSON 表值函数返回的行联接。  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另请参阅  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

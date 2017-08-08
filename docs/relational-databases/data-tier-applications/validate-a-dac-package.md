@@ -21,19 +21,19 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
   最好在生产中部署 DAC 包之前查看其内容，并且在升级现有 DAC 之前验证升级操作。 当部署的包并非您的组织开发时更需要这样做。  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **开始之前：**  [先决条件](#Prerequisites)  
   
-2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **若要升级 DAC，请使用：**  [查看 DAC 的内容](#ViewDACContents)、 [查看数据库更改](#ViewDBChanges)、 [查看升级操作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>查看升级操作示例 （PowerShell)  
  **查看升级操作示例 （PowerShell)**  
   
- 以下示例将报告将与升级 DAC MyApplication2017.dacpac 文件中定义的架构名为 myapplicaiton 的已运行的 TRANSACT-SQL 语句。  
+ 以下示例报告一些 Transact-SQL 语句，为了将名为 MyApplicaiton 的 DAC 升级到 MyApplication2017.dacpac 文件中定义的架构将运行这些语句。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

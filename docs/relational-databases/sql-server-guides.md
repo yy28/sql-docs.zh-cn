@@ -17,17 +17,17 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-可使用以下指南。 它们讨论一般概念，并将应用于所有版本的 SQL Server，除非相应指南中另有说明。 
+可使用以下指南。 这些指南介绍基本概念，适用于所有版本的 SQL Server（除非在相应指南中另有说明）。 
 
 [Always On 可用性组故障排除和监视指南](http://msdn.microsoft.com/library/dn135328)  
 [索引设计指南](../relational-databases/sql-server-index-design-guide.md)  

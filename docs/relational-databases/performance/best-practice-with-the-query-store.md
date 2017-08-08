@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -143,27 +143,27 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |回归查询|查明哪些查询的执行度量值最近进行了回归（即变得更糟）。 <br />使用此视图将应用程序中观察到的性能问题与需要进行修复或改进的实际查询关联起来。|  
 |总体资源消耗|针对任意执行度量值分析数据库的总资源消耗量。<br />使用此视图可以确定资源模式（白天工作负荷与夜间工作负荷的比较），并优化数据库的总体消耗。|  
 |资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
-|具有强制计划的查询|以前强制计划使用查询存储的列表。 <br />使用此视图可以快速访问所有当前强制的计划。|  
-|具有高的变体的查询|分析高执行变体的查询，因为它与任何可用的维度，例如所需的时间间隔内的持续时间、 CPU 时间、 IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
+|具有强制计划的查询|使用查询存储列出以前的强制计划。 <br />使用此视图快速访问当前的所有强制计划。|  
+|变化程度高的查询|分析执行变化程度较高的查询，因为此类查询与任何可用的维度相关，例如所需时间间隔内的持续时间、CPU 时间、IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
 |跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]  
 >  如需详细了解如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来确定资源使用排名靠前的查询并修复那些因计划选择变化而导致回归的查询，请参阅 [@Azure 博客中的查询存储](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
- 当你确定某个查询的性能不够理想时，你的操作取决于问题的性质。  
+ 如果确定某个查询的性能不够理想，则可根据问题性质进行操作。  
   
 -   如果所执行的查询具有多个计划，而最后一个计划明显不如前面的计划，则可通过计划强制机制来强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在今后执行查询时始终使用最佳计划。  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> 上面的图可能功能不同的形状，对于特定查询计划，其每个可能状态的含义如下：<br />  
+> 上面的图形针对特定的查询计划会显示不同的形状，以下是可能出现的每种形状的对应意义：<br />  
 > |形状|含义|  
 > |-------------------|-------------|
-> |Circle|查询已完成 （正则执行成功完成）|
-> |Square|取消 （启动的客户端已中止执行）|
-> |Triangle|失败 （中止的异常执行）|
-> 此外，形状的大小反映在指定的时间间隔内，使用更多的执行的大小在增加查询执行计数。  
+> |Circle|查询完成（常规执行成功完成）|
+> |Square|取消（客户端发起的执行中止）|
+> |Triangle|失败（由异常引起的执行中止）|
+> 此外，形状大小反映指定时间间隔内的查询执行计数，执行数量较大时形状也会随之增大。  
 
 -   你可以认为，你的查询因为缺少索引而无法达到最佳执行效果。 此信息显示在查询执行计划中。 使用 Query Store 创建缺失的索引并检查查询性能。  
   
@@ -175,7 +175,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   重写有问题的查询。 这样有很多好处，例如可以充分利用查询参数化或实现更优化的逻辑。  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> 确保查询存储持续收集查询数据  
  Query Store 可通过无提示方式更改操作模式。 你应该定期监视 Query Store 的状态以确保 Query Store 正常运行，并采取相应措施，避免那些本来可以避免的因素造成故障。 执行以下查询，以便确定操作模式并查看最相关的参数：  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 如果问题仍然存在，它表示的查询存储的数据会保留在磁盘的损坏。
+ 如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
  
- 可以通过执行恢复 query Store **sp_query_store_consistency_check**存储内受影响的数据库的过程。
+ 可通过在受影响数据库内部执行 sp_query_store_consistency_check 存储过程来恢复查询存储。
  
- 如果没有帮助的你可以尝试请求读写模式之前清除查询存储。  
+ 如果没有效果，可在请求读写模式之前尝试清除查询存储。  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

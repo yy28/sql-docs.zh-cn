@@ -19,13 +19,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 以数据库功能的形式引入了对经系统版本控制的时态表的支持。其附带的内置支持可以提供有关任意时间点在表中存储的数据的信息，而不仅仅是有关在当前时刻正确的数据的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能，现在受 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持。  
+  SQL Server 2016 以数据库功能的形式引入了对系统控制版本的临时表的支持。其附带的内置支持可以提供表中存储的数据在任意时间点的有关信息，而不仅仅是数据在当前时刻正确的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能，现在受 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的支持。  
   
  **快速入门**  
   
@@ -122,7 +122,7 @@ CREATE TABLE dbo.Employee
 >  系统 datetime2 列中记录的时间基于事务本身的开始时间。 例如，在单个事务中插入的所有行具有对应于 **SYSTEM_TIME** 的开始时间段列中记录的相同 UTC 时间。  
   
 ## <a name="how-do-i-query-temporal-data"></a>如何查询临时数据？  
- **SELECT** 语句 **FROM***\<table>* 子句提供新的 **FOR SYSTEM_TIME** 子句和五个特定于临时表的子子句，用于跨当前表和历史记录表查询数据。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。  
+ SELECT 语句 FROM\<table> 子句提供新的 FOR SYSTEM_TIME 子句和五个特定于临时表的子句，用于跨当前表和历史记录表查询数据。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。  
   
  ![临时表查询](../../relational-databases/tables/media/temporal-querying.PNG "临时表查询")  
   
@@ -136,26 +136,26 @@ SELECT * FROM Employee
 ```  
   
 > [!NOTE]  
->  **FOR SYSTEM_TIME** 筛选出具有持续时间为零的有效期 (**SysStartTime** = **SysEndTime**)。  
+>  FOR SYSTEM_TIME 筛选出持续时间为零的有效期 (SysStartTime = SysEndTime)。  
 > 如果你对同一事务中的同一个主键执行多项更新，将生成这些行。  
 > 在这种情况下，临时查询只会返回发生事务之前的行版本，以及发生事务之后实际生成的行版本。  
 > 如果需要在分析中包括这些行，请直接查询历史记录表。  
   
  在下表中，“符合条件的行”列中的 SysStartTime 表示正在查询的表中 **SysStartTime** 列的值， **SysEndTime** 表示正在查询的表中 **SysEndTime** 列的值。 有关完整语法和示例的信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md) 和 [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)的支持。  
   
-|表达式|符合条件的行|说明|  
+|表达式|符合条件的行|Description|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果以返回在 *<date_time>* 参数指定的时间点有效的行中的值。 如果 *system_start_time_column_name* 值小于或等于 *<date_time>* 参数值，且 *system_end_time_column_name* 值大于 *<date_time>* 参数值，则此行的值被视为有效。|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 *<start_date_time>* 参数之前开始活动，还是在 TO 自变量的 *<end_date_time>* 参数值之后停止活动。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 端点定义的下限时间停止活动的行将被排除，正好在 TO 端点定义的上限时间开始活动的记录也将被排除。|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|返回一个表，其行中包含过去指定时间点的实际（当前）值。 在内部，临时表及其历史记录表之间将进行联合，然后筛选结果以返回在 <date_time> 参数指定的时间点有效的行中的值。 如果 system_start_time_column_name 值小于或等于 <date_time> 参数值，并且 system_end_time_column_name 值大于 <date_time> 参数值，则此行的值视为有效。|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|返回一个表，其中包含在指定的时间范围内保持活动状态的所有行版本的值，不管这些版本是在 FROM 自变量的 <start_date_time> 参数之前开始活动，还是在 TO 自变量的 <end_date_time> 参数值之后停止活动。 在内部，将在临时表及其历史记录表之间进行联合，然后筛选结果，以返回在指定时间范围内任意时间保持活动状态的所有行版本的值。 正好在 FROM 终结点定义的下限时间停止活动的行将被排除，正好在 TO 终结点定义的上限时间开始活动的记录也将被排除。|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|与上面的 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> 描述相同，不过，返回的行表包括在 <end_date_time> 终结点定义的上限时间激活的行。|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|返回一个表，其中包含在 CONTAINED IN 参数的两个日期时间值定义的时间范围内打开和关闭的所有行版本的值。 正好在下限时间激活的记录，或者在上限时间停止活动的行将包括在内。|  
 |**ALL**|所有行|返回属于当前表和历史记录表的行的联合。|  
   
 > [!NOTE]  
->  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（**SELECT \* FROM***\<table>* 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
+>  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（SELECT \* FROM\<table> 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
- 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
+ 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

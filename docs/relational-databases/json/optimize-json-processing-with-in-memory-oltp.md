@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bb35a5255b35b93cd42e83bd17d9efdcf751bc84
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>使用内存中 OLTP 优化 JSON 处理
@@ -111,7 +111,7 @@ SQL Server 和 Azure SQL 数据库允许使用内存优化索引为 JSON 列中�
 -   NONCLUSTERED 索引可以优化按某个 JSON 值选择行范围或者按 JSON 值将结果排序的查询。
 -   HASH 索引通过指定要查找的精确值来优化选择单列或多列的查询。
 
-下面的示例通过使用两个计算列生成公开 JSON 值的表。 该示例将为一个 JSON 值创建 NONCLUSTERED 索引并为另一个 JSON 值创建 HASH 索引。
+下面的示例使用两个计算列生成公开 JSON 值的表。 该示例将为一个 JSON 值创建 NONCLUSTERED 索引并为另一个 JSON 值创建 HASH 索引。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -136,7 +136,7 @@ ALTER TABLE Product
 ```
 
 ## <a name="compile"></a>本机编译 JSON 查询
-如果过程、函数和触发器包含使用内置 JSON 函数的查询，则本机编译可以提高这些查询的性能，并减少运行这些查询所需的 CPU 周期。
+如果过程、函数和触发器包含使用内置 JSON 函数的查询，本机编译可以提高这些查询的性能，并减少运行这些查询所需的 CPU 周期。
 
 下面的示例演示使用多个 JSON 函数（JSON_VALUE、OPENJSON 和 JSON_MODIFY）的本机编译过程。
 
@@ -165,6 +165,6 @@ AS BEGIN
 END
 ```
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
 

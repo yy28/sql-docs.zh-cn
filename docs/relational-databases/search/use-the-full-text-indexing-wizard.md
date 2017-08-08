@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
@@ -102,9 +102,9 @@ ms.lasthandoff: 06/23/2017
      e. 选择值：  
       |“值”|说明|  
       |-----------|-----------------|
-      |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果已分区表或视图，使用主文件组|
+      |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
       |**PRIMARY**|选择此值可将主文件组用于新全文索引。|
-      *用户指定的默认文件组*|如果存在用户定义的默认非索引字，从要将该文件组用于新全文索引的列表中选择其名称。|   
+      *用户指定的默认文件组*|如果存在用户定义的默认非索引字表，请从列表选择其名称，以便将该文件组用于新全文检索。|   
   
      
  11. **选择全文非索引字表**  

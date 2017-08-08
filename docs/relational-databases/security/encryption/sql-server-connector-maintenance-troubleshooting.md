@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
@@ -166,12 +166,11 @@ ms.lasthandoff: 06/23/2017
  密钥保管库中的非对称密钥用于保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密密钥。 仅非对称密钥的公共部分会离开保管库，其私有部分绝不会由保管库导出。 使用非对称密钥的所有加密操作都委托给了 Azure 密钥保管库服务，并受到该服务的安全性的保护。  
   
  **什么是密钥 URI？**  
- Azure 密钥保管库中的所有密钥都有一个统一资源标识符 (URI)，你可以使用它在应用程序中引用密钥。 使用格式`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey`以获取最新版本，并使用格式`https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87`获取特定版本。  
+ Azure 密钥保管库中的所有密钥都有一个统一资源标识符 (URI)，你可以使用它在应用程序中引用密钥。 使用格式 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 可获取当前版本，使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 可获取特定的版本。  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>有关配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 连接器需要访问哪些终结点？** 
- 该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
+SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 06/23/2017
   
 -   若要创建非对称密钥，需要具备 `CREATE ASYMMETRIC KEY` 权限。  
 
-**如何更改我的默认 Active Directory，以便在与为 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 连接器创建的服务主体相同的订阅和 Active Directory 中创建我的 Key Vault？**
+**如何更改我的默认 Active Directory，以便在与为 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 连接器创建的服务主体相同的订阅和 Active Directory 中创建我的密钥保管库？**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ SQL Server 版本  |可再发行组件安装链接
 -   PowerShell [Azure 密钥保管库 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 参考  
   
 ## <a name="see-also"></a>另请参阅  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [使用 Azure 密钥保管库的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features（使用具有 SQL 加密功能的 SQL Server 连接器）](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled 服务器配置选项](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

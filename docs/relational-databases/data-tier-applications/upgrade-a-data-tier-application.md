@@ -28,11 +28,11 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  关闭用于读取 DAC 包文件的文件流。  
   
 ### <a name="example-powershell"></a>示例 (PowerShell)  
- 以下示例将升级的默认实例名为 MyApplication 的 DAC [!INCLUDE[ssDE](../../includes/ssde-md.md)]，使用新的 DAC 版本 MyApplication2017.dacpac 包中。  
+ 下面的示例使用 MyApplication2017.dacpac 包中的新 DAC 版本，升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例上名为 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

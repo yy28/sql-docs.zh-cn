@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 配置
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/12/2017
   
  必须使用 **sp_configure**配置 SQL Server，以连接到你的 Hadoop 版本或 Azure Blob 存储。 PolyBase 支持两种 Hadoop 分发：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。  有关受支持的外部数据源的完整列表的详细信息，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
  
- 请注意： PolyBase 不支持 Cloudera 加密区域。 
+ 请注意：PolyBase 不支持 Cloudera 加密的区域。 
   
 ### <a name="run-spconfigure"></a>运行 sp_configure  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 07/12/2017
     -   SQL Server PolyBase 引擎  
   
 ## <a name="pushdown-configuration"></a>下推配置  
- 若要提高查询性能，启用计算下推到 Hadoop 群集将需要提供一些特定于你 Hadoop 环境的配置参数的 SQL Server:  
+ 若要提高查询性能，请启用到 Hadoop 群集的下推计算。需要向 SQL Server 提供一些特定于 Hadoop 环境的配置参数：  
   
 1.  在 SQL Server 的安装路径中查找文件 **yarn-site.xml** 。 通常情况下，该路径为：  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 07/12/2017
 
 4. 对于所有 CDH 5.X 版本，你都需要将 **mapreduce.application.classpath** 配置参数添加到 **yarn.site.xml 文件**的末尾或添加到 **mapred-site.xml 文件**中。 HortonWorks 在 **yarn.application.classpath** 配置中包括了这些配置。
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>示例 yarn-site.xml 和 mapred-site.xml 文件 CDH 5.X 群集。
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 群集的示例 yarn-site.xml 和 mapred-site.xml 文件。
 
 
 
-Yarn-site.xml 利用 yarn.application.classpath 和 mapreduce.application.classpath 配置。
+包含 yarn.application.classpath 和 mapreduce.application.classpath 配置的 Yarn-site.xml。
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
