@@ -20,7 +20,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>课程 1-1 - 启动 SQL Server Management Studio
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/27/2017
 2.  在下一步中，使用 SSMS 的**对象资源管理器**组件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未显示“对象资源管理器”窗格，请在“视图”菜单上，单击“对象资源管理器”。 在“对象资源管理器”菜单上，单击“连接”按钮，再单击“数据库引擎”。 此时应显示“连接到服务器”对话框。 （如果之前已安装 SSMS，那么用户设置可能使“连接到服务器”对话框自动显示。）  
   
 3.  在“连接到服务器”对话框中，完成“服务器名称”框的输入。 可以连接到三种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的一个。 每种类型的“服务器名称”框的格式略有不同。 选择以下格式之一：  
-  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例：**在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例为默认实例（未命名实例）或命名实例。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，请插入计算机的名称。 例如，如果在名为 Accounting 的计算机上运行 SSMS，并且连接到在该计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，则在“服务器名称”框中键入“Accounting”。  
+  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例：在计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例指定为默认实例（未命名实例）或命名实例。 如果要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，请插入计算机的名称。 例如，如果在名为 Accounting 的计算机上运行 SSMS，并且连接到在该计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例，则在“服务器名称”框中键入“Accounting”。  
   -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的命名实例：在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间，可以指定实例的名称；例如，在名为“Accounting”的计算机上，可以指定名为“Receivables”的命名实例。 若要连接到命名实例，请在“服务器名称”框中键入计算机名反斜杠实例名；例如 **Accounting\Receivables**。  
   -  **Azure SQL 数据库：**SQL 数据库的服务器名称的格式为 SQL_Server_name.database.windows.net，例如 **mydb2.database.windows.net**。 如果在为服务器命名时遇到问题，请访问 Azure 门户以获取创建连接字符串的帮助。  
   

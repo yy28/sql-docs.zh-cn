@@ -1,5 +1,5 @@
 ---
-title: "有关 SQL Server 教程 |Microsoft 文档"
+title: "SQL Server 教程 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,24 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>有关 SQL Server 的教程
+# <a name="tutorials-for-sql-server"></a>SQL Server 教程
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]提供可帮助你了解新技术和功能的教程。 对于早期版本的教程通常用于较新版本。 后教程地址较新的功能，它们将指示要完成本教程的最小版本。  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 提供有助于了解新技术和功能的教程。 针对早期版本的教程通常也适用于较新版本。 教程中涉及到新功能时，将指示完成此教程所需的最低版本。  
      
--   如果教程，说明如何使用之一[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]数据库，你应下载并使用从 CodePlex 的最新版本。 有关详细信息，请参阅[AdventureWorks 数据库和 SQL Server 2016 CTP3 的脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    
+-   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    
 -   下载与 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 教程结合使用的 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 工作簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表，转至 [SQL Server 2012 的 Power View 示例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
 - 签出 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存储库中提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 示例。 
 
  
-## <a name="current-tutorials"></a>当前的教程  
+## <a name="current-tutorials"></a>最新教程  
   
 |技术|Description|  
 |--------------|---------------|  

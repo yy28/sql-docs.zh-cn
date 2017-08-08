@@ -14,72 +14,72 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
-此更改日志为[SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
+此更改日志适用于 [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-有关有关新增和更改的详细文章，请访问[SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+有关新增功能和更改的详细文章，请访问 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## <a name="ssdt-171"></a>SSDT 17.1
-内部版本号： 14.0.61705.170
+内部版本号：14.0.61705.170
 
 ### <a name="whats-new"></a>新增功能
 **AS 项目：**
-- 用户可以设置编码 1400年模型上的用户界面中的列上的提示
-- 模型无关 IntelliSense 现在是在脱机模式下可用
-- 表格模型资源管理器现在包含一个对应节点来表示整个模型 （1400 compat 级别表格模型） 提供的命名的 M 表达式
-- Azure Active Directory 的人员选取器类似于 Microsoft Azure 门户的 IAM 现已推出时设置在表格模型中的角色成员
+- 用户可以对 1400 模型上用户界面中的列设置编码提示
+- 现在可在脱机模式下使用非模型相关 IntelliSense
+- 表格模型资源管理器现在包含一个节点，用于表示可跨整个模型（1400 兼容级别表格模型）使用的命名 M 表达式
+- Azure Active Directory 人员选取器与 Microsoft Azure 门户的 IAM 相似，现可在设置表格模型中的角色成员时使用
 
 **数据库项目：**
-- 更新为 DacFx 17.1
+- 更新至 DacFx 17.1
 
 ### <a name="bug-fixes"></a>Bug 修复
-- 修复了其中的商业智能设计器组名称 VS2017 中的 Visual Studio 选项中未正确显示
-- 修复了的问题崩溃可能生成报表项目的解决方案代码图或作为项目的位置
-- 解决许多问题与 Analysis Services 1400 compat 级别表格模型的 PowerQuery 集成
-- 固定其中赋值运算符不能在单独一行定义度量值时的工具窗口的新的 DAX 编辑器中的问题
-- 修复了阻止表格的度量值显示更新重命名透视中的度量值时的问题
-- 更新 Analysis Services 集成的工作区引擎和修复导致在包含翻译上失败的 1200年表格项目的回归的表格对象模型将部署到 SQL Server 2016 Analysis Services 服务器
-- 修复了进行 creation\deletion 新 1400年表格数据源速度很慢的性能问题
-- 修复了问题其中多维模型中的数据源视图关系图可以停止呈现，如果更改快速之间不同 Dsv 的视图
+- 修复了 VS2017 Visual Studio 选项中商业智能设计器组名称显示不正确的问题
+- 修复了为具有报表项目和 AS 项目的解决方案生成代码图时可能出现崩溃的问题
+- 修复了 Analysis Services 1400 兼容级别表格模型的 PowerQuery 集成的大量相关问题
+- 修复了新 DAX 编辑器工具窗口中的问题：定义度量值时赋值运算符不能位于单独一行
+- 修复了重命名透视中的度量值时阻止表格度量值显示更新的问题
+- 更新了 Analysis Services 集成工作区引擎和表格对象模型，表格对象模型修复了导致包含转换的 1200 表格项目无法部署到 SQL Server 2016 Analysis Services 服务器的回归问题
+- 修复了导致创建/删除新 1400 表格数据源速度过慢的性能问题
+- 修复了在不同 DSV 之间快速切换视图时多维模型中的 DSV 图示可能停止呈现的问题
 
 ## <a name="dacfx-171"></a>DacFx 17.1
-- 修复了问题时加密具有内存优化表使用其他标识列的列
-- SQLDOM 支持用于创建数据库的 CATALOG_COLLATION 选项
+- 修复了加密某列时内存优化表具有其他标识列的问题
+- 提供用于创建数据库的 CATALOG_COLLATION 选项的 SQLDOM 支持
 
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
-- 使用 hsm 的非对称密钥使用 EKM 提供程序与数据库的问题的修复[Connect 项](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+- 修复了数据库具有由 HSM 使用 EKM 提供程序进行保护的非对称密钥的相关问题（[Connect 项目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)）
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 （支持到 SQL Server 自 2017 年）
-内部版本号： 14.0.61704.140
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0（最高支持 SQL Server 2017）
+内部版本号：14.0.61704.140
 
 ### <a name="whats-new"></a>新增功能
 **数据库项目：**
-- 修改视图的聚集的索引将不会再阻止部署
+- 在视图上修改聚集索引将不再阻止部署
 - 与列加密相关的架构比较字符串将使用恰当的名称，而非实例名称。   
-- 向 SqlPackage 添加了新的命令行选项：ModelFilePath。  这将提供高级用户指定用于导入、 发布和执行脚本操作的外部 model.xml 文件选项   
-- DacFx API 了扩展以支持 Azure AD 通用的身份验证和多因素身份验证 (MFA)
+- 向 SqlPackage 添加了新的命令行选项：ModelFilePath。  这为高级用户提供了一个选项，可用于指定外部 model.xml 文件来执行导入、发布和脚本编写操作   
+- 扩展了 DacFx API，用于支持 Azure AD 通用身份验证和多重身份验证 (MFA)
 
 **IS 项目：**
 - SSIS OData 源和 OData 连接管理器现支持连接到 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online 的 OData 源。
-- SSIS 项目现在支持"SQL Server 自 2017 年 1"的目标服务器的版本 
-- CDC 控制任务，CDC 拆分器和 CDC 源面向 SQL Server 2017 时支持。 
+- SSIS 项目现在支持“SQL Server 2017”的目标服务器版本 
+- 提供针对 SQL Server 2017 的 CDC 控制任务、CDC 拆分器和 CDC 源支持。 
 
 **AS 项目：**
-- Analysis Services PowerQuery 集成 （1400 compat 级别表格模型）：
-    - DirectQuery 不能用于 SQL Oracle 和 Teradata 如果用户已经安装了第三方驱动程序
-    - 通过在 PowerQuery 的示例中添加列
-    - 数据访问 1400年模型 （M 引擎使用的模型级别属性） 中的选项
-        - 启用快速合并 （默认值为 false-当设置为 true，混合应用程序引擎将忽略数据源的隐私级别合并数据时）
-        - 启用旧版将重定向 （当设置为 true，混合应用程序引擎将按照是可能不安全的 HTTP 重定向，默认值将为 false –。  例如，从 HTTPS 重定向到的 HTTP URI）  
-        - 返回为 Null 的错误值 （设置为级别错误的单元格为 true，将返回为 null 时，默认值将为 false –。 为 false 时，将引发异常是单元格包含错误)  
-    - 使用 PowerQuery 的其他数据源 （文件数据源）
+- Analysis Services PowerQuery 集成（1400 兼容级别表格模型）：
+    - 如果用户已安装第三方驱动程序，则 DirectQuery 适用于 SQL Oracle 和 Teradata
+    - 在 PowerQuery 中按示例添加列
+    - 1400 模型中的数据访问选项（M 引擎使用的模型级别属性）
+        - 启用快速合并（默认为 false - 设置为 true 时，糅合引擎将在合并数据时忽略数据源隐私级别）
+        - 启用旧版重定向（默认为 false - 设置为 true 时，糅合引擎将跟随可能不安全的 HTTP 重定向。  例如，从 HTTPS 到 HTTP URI 的重定向）  
+        - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误将返回 null。 如果设置为 false，单元格包含错误时将引发异常）  
+    - 使用 PowerQuery 的其他数据源（文件数据源）
         - Excel 
         - Text/CSV 
         - Xml 
@@ -89,8 +89,8 @@ ms.lasthandoff: 06/23/2017
         - Azure Blob 存储 
     - 本地化的 PowerQuery 用户界面
 - DAX 编辑器工具窗口
-    - 改进了的 DAX 编辑体验度量值、 计算的列和通过的视图，SSDT 中的其他窗口菜单提供的详细信息行表达式
-    - 对 DAX parser\Intellisense 的改进
+    - 改进了针对度量值、计算列和详细行表达式的 DAX 编辑体验，可通过 SSDT 中的“视图”和其他 Windows 菜单使用
+    - 改进了 DAX 分析程序\Intellisense
 
 
 **RS 项目：**
@@ -121,17 +121,17 @@ ms.lasthandoff: 06/23/2017
 - 解决了在某些情况下一些数据源（不支持初始目录）无法正常运行的问题 
 - 即使启用了保留分区的选项，部署向导也应向计算表分区应用更改
 - 解决了只有在重新选择现有 AS 连接的“高级属性”对话框后，才能看到完整列表的问题
-- 在某些本地化版本中出现的剪切 UI 字符串的固定一些问题
-- 解决了问题的与若干 PowerQuery 集成 1400 compat 级别中表格模型
-- 解决了与未显示正确的报表向导样式模板问题
-- 解决了与报表向导，请从 SQL 版本更改为 AS 时可能会导致不正确的数据源设置问题
-- 修复了从命令行 (devenv.com\exe) 导致 Analysis Services （表格） 项目生成失败的问题
-- 解决了与 DAX 度量值分析器以字母之前启动时显示突出显示和正确的文本颜色问题: =
-- 修复了触发 ObjectRefException，如果路径太长试图在集成的工作区模式下的表格项目的显示所有文件的问题
-- 修复了与数据源设计器出现不可用的 Compact 4.0 客户端数据提供程序
-- 修复了导致尝试浏览挖掘模型中 VS2017 作为错误的问题
-- 固定为 VS2017 DSV 关系图停止呈现更改视图之后，遇到异常时然后中的多维模型的中的问题
-- 修复了使用 AS 连接失败 VS2017 中预览报表的问题
+- 修复了某些本地化版本中显示截断的用户界面字符串的一些问题
+- 修复了 1400 兼容级别 AS 表格模型中 PowerQuery 集成的大量相关问题
+- 修复了报表向导样式模板未正确显示的问题
+- 修复了从 SQL 更改为 AS 时报表向导可能导致数据源设置错误的问题
+- 修复了导致 Analysis Services（表格）项目在命令行 (devenv.com\exe) 中生成失败的问题
+- 修复了 DAX 度量值分析器的问题：在 := 前以字母开头时，其显示突出显示的内容和正确的文本颜色
+- 修复了此问题：如果路径过长，尝试在集成工作区模式下对表格项目选择“显示所有文件”时，将触发 ObjectRefException
+- 修复了 Compact 4.0 客户端数据提供程序的数据源设计器不可用的问题
+- 修复了在 VS2017 中尝试浏览 AS 挖掘模型时导致出错的问题
+- 修复了 VS2017 中 AS 多维模型的相关问题：更改视图后，DSV 图示阻止呈现并引发异常
+- 修复了在 VS2017 中预览报表时 AS 连接失败的问题
  
 
 **RS 项目：**
@@ -147,7 +147,7 @@ ms.lasthandoff: 06/23/2017
 - 解决了包部件隐藏注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
 - 解决了包部件放弃数据流布局和注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - 解决了从 SQL 服务器导入项目时 SSDT 崩溃的问题。
-- 修复了问题 Hadoop 文件系统任务 TimeoutInMinutes 默认为 10 后打开已保存 SSIS 包并在运行时。
+- 修复了 Hadoop 文件系统任务 TimeoutInMinutes 的问题：打开已保存的 SSIS 包后和在运行时，其默认值为 10。
 
 **数据库项目：**
 - SSDT DACPAC 重新部署并添加 IgnoreColumnOrder 设置 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
@@ -158,7 +158,7 @@ ms.lasthandoff: 06/23/2017
 - Always Encrypted：联机加密无法禁用对取消项进行更改跟踪，并且如果在开始加密前尚未清除更改跟踪，联机加密也无法正常运行
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 （最多可 SQL Server 2016 的支持）
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5（最高支持 SQL Server 2016）
 发布日期：2016 年 10 月 20日
 
 内部版本号：14.0.61021.0

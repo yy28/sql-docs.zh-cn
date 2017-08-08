@@ -1,5 +1,5 @@
 ---
-title: "安装向导帮助 |Microsoft 文档"
+title: "安装向导帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 2017-04-21
 ms.prod: sql-server-2016
@@ -19,16 +19,16 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
-本主题介绍了一些中的配置页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 
+本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的一些配置页。 
 
 ## <a name="instance-configuration"></a>实例配置
 使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  
@@ -99,18 +99,18 @@ ms.lasthandoff: 06/23/2017
   
  共用同一实例名称的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都必须满足以下条件：  
   
--   **相同的版本**  
+-   版本相同  
   
--   **相同的版本**  
+-   版本类别相同  
   
--   **相同的语言设置**  
+-   语言设置相同  
   
--   **聚集的状态相同**  
+-   聚集状态相同  
   
     > [!NOTE]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不能识别群集。  
   
--   **相同的操作系统**  
+-   操作系统相同  
   
 ## <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services 配置 – 帐户设置
   使用此页可以设置服务器节点，并向要求对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行不受限访问的用户或服务授予管理权限。 安装程序不会自动将本地 Windows 组 BUILTIN\Administrators 添加到要安装的实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器管理员角色。 如果您想要将本地管理员组添加到服务器管理员角色，则必须显式指定该组。  
@@ -126,11 +126,10 @@ ms.lasthandoff: 06/23/2017
 >  用户帐户控制 (UAC) 是一个 Windows 安全功能，它要求在运行管理操作或应用程序之前，先由管理员专门审批。 由于 UAC 在默认情况下处于打开状态，因此系统将提示您允许需要提升权限的特定操作。 您可以配置 UAC 来更改默认行为，或针对特定程序自定义 UAC。 有关 UAC 和 UAC 配置的详细信息，请参阅 [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)（用户帐户控制分步指南）和 [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)（用户帐户控制 (Wikipedia)）。  
   
 ### <a name="see-also"></a>另请参阅  
- [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
- [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+ [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限被授予对本地管理员和的 SQLServerMSASUser$ 成员\<实例 > 是创建和设置在安装过程的安全组。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
@@ -163,18 +162,18 @@ ms.lasthandoff: 06/23/2017
  有关目录、文件位置和实例 ID 命名的详细信息，请参阅 [默认和已命名的 SQL Server 实例的文件位置](file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
 ## <a name="database-engine-configuration---data-directories"></a>数据库引擎配置 - 数据目录
-  使用此页指定的安装位置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]程序和数据文件。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
+  使用此页面可指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序和数据文件的安装位置。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
   
  若要将 SMB 文件共享指定为目录，您必须手动键入支持的 UNC 路径。 不支持浏览到 SMB 文件共享。 下面是 SMB 文件共享支持的 UNC 路径格式： \\\Servername\ShareName\\....  
   
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>独立实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例支持的存储类型和默认目录，用户可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中配置这些内容。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
 |说明|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|数据根目录|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中中断继承。|  
+|数据根目录|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
 |用户数据库目录|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data |用户数据目录的最佳实践取决于工作量和性能要求。|  
 |用户数据库日志目录|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
 |备份目录|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Backup|设置合适的权限以防止数据丢失，并确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
@@ -186,7 +185,7 @@ ms.lasthandoff: 06/23/2017
   
 |说明|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|数据根目录|共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中中断继承。|  
+|数据根目录|共享存储、SMB 文件服务器|\<驱动器:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
 |用户数据库目录|共享存储、SMB 文件服务器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。|  
 |用户数据库日志目录|共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|确保日志目录有足够的空间。|  
 |备份目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Backup<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|设置合适的权限以防止数据丢失，并确保 SQL Server 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
@@ -220,7 +219,7 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="see-also"></a>另请参阅  
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限被授予对本地管理员和的 SQLServerMSASUser$ 成员\<实例 > 是创建和设置在安装过程的安全组。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 #### <a name="uielement-list"></a>UIElement 列表  
   
@@ -253,7 +252,7 @@ ms.lasthandoff: 06/23/2017
  有关目录、文件位置和实例 ID 命名的详细信息，请参阅 [默认和已命名的 SQL Server 实例的文件位置](file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
     
- [共享和文件服务器上的 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [文件服务器上的共享权限和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 通过将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **二进制大型对象 (BLOB) 数据作为文件存储在 NTFS 文件系统中，将** 与该文件系统集成在一起。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
@@ -308,19 +307,19 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]切勿设置空密码或弱 sa 密码。  
   
- **混合模式 (Windows 身份验证或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证)**  
+ **混合模式（Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）**  
  允许用户使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。 通过 Windows 用户帐户进行连接的用户可以使用经过 Windows 验证的可信连接。  
   
  如果必须选择“混合模式身份验证”并且要求使用 SQL 登录名以适应早期应用程序，则必须为所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户设置强密码。  
   
 > [!NOTE]  
-> 提供  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证只是为了向后兼容。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **输入密码**  
  输入并确认系统管理员 (sa) 登录名。 密码是抵御入侵者的第一道防线，因此设置强密码对于系统安全是绝对必要的。 切勿设置空密码或弱 sa 密码。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]密码可包含 1 到 128 个字符，包括字母、 符号和数字的任意组合。 如果选择“混合模式身份验证”，则必须输入强 sa 密码才能进入安装向导的下一页。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码可包含 1 到 128 个字符，包括字母、符号和数字的任意组合。 如果选择“混合模式身份验证”，则必须输入强 sa 密码才能进入安装向导的下一页。  
   
  **强密码指南**  
  强密码不易被人猜出，也不易用计算机程序攻击。 强密码不能使用禁止的条件或字词，这些条件或字词包括：  
@@ -356,31 +355,31 @@ ms.lasthandoff: 06/23/2017
  此页上输入的密码必须符合强密码策略要求。 如果存在任何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的自动化过程，请确保该密码符合强密码策略要求。  
   
 ### <a name="related-content"></a>相关内容  
- 有关选择 Windows 身份验证和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，请参阅[Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)。  
+ 有关选择 Windows 身份验证和有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的信息，请参阅[选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
- 有关选择帐户以运行的详细信息[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
+ 若要深入了解如何选择帐户来运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
   
 ## <a name="database-engine-configuration---tempdb"></a>数据库引擎配置 - TempDB
-  使用此页可以指定**tempdb**数据和日志文件位置、 大小、 增长设置和文件数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
+  使用此页可指定 tempdb 数据和日志文件位置、大小、增长设置和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 的文件数量。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
   
  若要将 SMB 文件共享指定为目录，您必须手动键入支持的 UNC 路径。 不支持浏览到 SMB 文件共享。 下面是 SMB 文件共享支持的 UNC 路径格式： \\\Servername\ShareName\\....  
   
-### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>数据和日志目录的独立实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例的数据和日志目录  
  下表列出了用户可以在安装过程中配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例支持的存储类型和默认目录。  
   
 |说明|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**数据目录**|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中中断继承。<br /><br /> **temdb** 目录的最佳实践取决于工作量和性能要求。 指定多个文件夹/驱动器以在多个卷上分布数据文件。|  
+|**数据目录**|本地磁盘、SMB 文件服务器、共享存储* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。<br /><br /> **temdb** 目录的最佳实践取决于工作量和性能要求。 指定多个文件夹/驱动器以在多个卷上分布数据文件。|  
 |**日志目录**|本地磁盘、SMB 文件服务器、共享存储*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data|确保日志目录有足够的空间。|  
   
  *尽管支持共享磁盘，但不建议对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例采用这种做法。  
   
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>故障转移群集实例的数据和日志目录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的数据和日志目录  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的故障转移群集实例支持的存储类型和默认目录，用户可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中配置这些内容。  
   
 |说明|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** 数据目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序将配置 Acl[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录和配置过程中中断继承。<br /><br /> 确保指定的一个目录或多个目录（如果指定了多个文件）对于所有群集节点有效。 在故障转移期间，如果 **tempdb** 目录在故障转移目标节点上不可用，则 SQL Server 资源将无法联机。|  
+|**tempdb** 数据目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。<br /><br /> 确保指定的一个目录或多个目录（如果指定了多个文件）对于所有群集节点有效。 在故障转移期间，如果 **tempdb** 目录在故障转移目标节点上不可用，则 SQL Server 资源将无法联机。|  
 |**tempdb** 日志目录|本地磁盘、共享存储、SMB 文件服务器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQLnn.\<InstanceID>\MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”  页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。<br /><br /> 请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 **tempdb** 目录在故障转移目标节点上不可用，则 SQL Server 资源将无法联机。<br /><br /> 确保日志目录有足够的空间。|  
   
 ### <a name="uielement-list"></a>UIElement 列表  
@@ -388,11 +387,11 @@ ms.lasthandoff: 06/23/2017
   
 -   “文件数” 是 **tempdb**的数据文件总数。 默认值为 8 和安装程序检测到了逻辑内核数中的较小值。 一般而言，如果逻辑处理器数小于或等于 8，则使用的数据文件数与逻辑处理器数相同。 如果逻辑处理器数大于 8，则使用 8 个数据文件，如果仍然存在争用，则以 4 的倍数增加数据文件的数量（最多为逻辑处理器的数量），直到争用减少到可接受的级别或对工作负荷/代码进行更改。 
   
--   **初始大小 (MB)** 是每个 **tempdb** 数据文件的初始大小（以 MB 表示）。 默认值为 8 MB (或为 4 MB [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)])。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]引入了的最大的初始文件大小为 262144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]具有的最大的初始文件大小为 1024 MB。 所有 **tempdb** 数据文件初始大小相同。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用[数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+-   **初始大小 (MB)** 是每个 **tempdb** 数据文件的初始大小（以 MB 表示）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的最大初始文件大小为 1024 MB。 所有 **tempdb** 数据文件初始大小相同。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用[数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 -   **总初始大小 (MB)** 是所有 **tempdb** 数据文件的累积大小。  
   
--   **自动增长 (MB)** 是以 MB 为单位的空间量，是每个 **tempdb** 数据文件空间不足时将自动增长的空间量。 在[!INCLUDE[sssql15](../../includes/sssql15-md.md)]及更高版本按此设置中指定的量同时增长将所有数据文件。  
+-   **自动增长 (MB)** 是以 MB 为单位的空间量，是每个 **tempdb** 数据文件空间不足时将自动增长的空间量。 在 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 及更高版本中，所有数据文件都将按此设置中指定的量同时增长。  
   
 -   **总自动增长 (MB)** 是每个自动增长事件的累积大小。  
   
@@ -404,7 +403,7 @@ ms.lasthandoff: 06/23/2017
   
  “TempDB 日志文件” 是日志文件名称。 会自动创建该名称。 下列设置仅适用于 **tempdb** 日志文件：  
   
--   **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB (或为 4 MB [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)])。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]引入了的最大的初始文件大小为 262144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)]具有的最大的初始文件大小为 1024 MB。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用[数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+-   **初始大小 (MB)** 是 **tempdb** 日志文件的初始大小。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的最大初始文件大小为 1024 MB。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用[数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 -   **注意：Tempdb** 使用最小日志记录。 无法备份 **tempdb** 日志。 每次 SQL Server 启动或群集实例故障转移时，会对其进行重新创建。  
   
@@ -431,7 +430,7 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="see-also"></a>另请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [共享和文件服务器上的 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [文件服务器上的共享权限和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
 使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  
@@ -448,7 +447,7 @@ ms.lasthandoff: 06/23/2017
  将用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中  
  默认情况下不启用此选项。 若要将当前安装用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员角色中，请选中此复选框。  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]只有在连接到时，到 sysadmin 固定的服务器角色不会自动添加这些 BUILTIN\Administrators 成员的用户[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 只有已显式添加到服务器级管理员角色中的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户才能管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 组的任一成员都可连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例，但他们仅拥有执行数据库任务的有限权限。 因此，对于从先前 Windows 版本中的 BUILTIN\Administrators 和 Built-In\Users 继承 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特权的用户，必须在运行于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]实例中为其显式授予管理特权。  
+ 作为 BUILTIN\Administrators 成员的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户在连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 时，不会自动添加到 sysadmin 固定服务器角色中。 只有已显式添加到服务器级管理员角色中的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 用户才能管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 组的任一成员都可连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例，但他们仅拥有执行数据库任务的有限权限。 因此，对于从先前 Windows 版本中的 BUILTIN\Administrators 和 Built-In\Users 继承 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 特权的用户，必须在运行于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]实例中为其显式授予管理特权。  
   
  若要在此安装程序完成后对用户角色进行任何更改，请使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 外围应用配置器工具 (SQLSAC.exe)。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统管理员角色中的用户列表，请单击 **“添加新管理员”** 链接。  
   
