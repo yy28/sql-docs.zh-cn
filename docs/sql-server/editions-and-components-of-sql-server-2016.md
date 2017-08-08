@@ -42,14 +42,14 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 97080f5d124b25b12b1f9f019e42753c143174e7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-本主题提供 SQL Server 版本支持的功能的详细的信息。  此时没有对适用于 SQL Server 自 2017 年的版本支持的功能更改。  
+本主题详细介绍 SQL Server 各个版本支持的功能。  目前，SQL Server 2017 各个版本支持的功能没有任何更改。  
   
 根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
 
@@ -58,14 +58,14 @@ ms.lasthandoff: 07/17/2017
 有关最新的发布说明和新增功能的信息，请参阅以下内容：
 - [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)
 - [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)
-- [什么是 SQL Server 自 2017 年中的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)
 
-### <a name="try-sql-server"></a>尝试 SQL 服务器 ！    
+### <a name="try-sql-server"></a>试用 SQL Server！    
     
-> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![从评估中心下载](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[从评估中心下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)**[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
+> ![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)[启动已安装 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)   
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个版本。 
@@ -120,7 +120,7 @@ ms.lasthandoff: 07/17/2017
 有关开发人员版和评估版支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 功能。
 有关已添加到 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 开发人员版的功能的列表，请参阅 [SQL Server 2016 SP1 版本](https://aka.ms/uw6cw4)。  
 
-开发人员版继续支持适用于只有一个客户端[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)。 
+开发人员版仍仅继续支持适用于 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 的一个客户端。 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 07/17/2017
 |加密备份|是|是|“否”|“否”|是|
 |Microsoft Azure 的混合备份（URL 的备份）|是|是|“否”|“否”|是|  
   
- <sup>1</sup>在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
+ <sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 
 <sup>2</sup> 有关基本可用性组的详细信息，请参阅 [基本可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
 
@@ -179,7 +179,7 @@ ms.lasthandoff: 07/17/2017
 |表和索引分区|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|  
 |数据压缩|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
 |资源调控器|是|“否”|“否”|“否”|是|  
-|分区表并行度|是|“否”|“否”|“否”|是|
+|已分区表并行度|是|“否”|“否”|“否”|是|
 |多个 Filestream 容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
 |NUMA 感知、大型页内存和缓冲区数组分配|是|“否”|“否”|“否”|是|
 |缓冲池扩展|是|是|“否”|“否”|是|
@@ -199,7 +199,7 @@ ms.lasthandoff: 07/17/2017
 |始终加密|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
 |动态数据屏蔽|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|   
 |基本审核|是|是|是|是|是| 
-|细化审核|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
+|精细审核|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
 |透明数据库加密|是|“否”|“否”|“否”|是|   
 |可扩展的密钥管理|是|“否”|“否”|“否”|是| 
 |用户定义的角色|是|是|是|是|是| 
@@ -311,7 +311,7 @@ ms.lasthandoff: 07/17/2017
 有关 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 各个版本支持的 Integration Services (SSIS) 功能的信息，请参阅 [SQL Server 各个版本支持的 Integration Services 功能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)。
 
 ##  <a name="MDS"></a> Master Data Services  
- 璝惠[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 Data Quality Services 功能的各个版本支持[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Master Data Services 和 SQL server 版本支持的数据质量服务功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
+ 有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
 
   
 ##  <a name="DW"></a> Data Warehouse  
@@ -329,31 +329,31 @@ ms.lasthandoff: 07/17/2017
 <sup>1</sup> 适用于 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1。  
 ##  <a name="SSAS"></a> Analysis Services  
   
-有关支持的版本的 Analysis Services 功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 Analysis Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-有关支持的版本的 Analysis Services 功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 Analysis Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-有关支持的版本的 Analysis Services 功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 Analysis Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-有关 Power Pivot for SharePoint 功能的各个版本支持[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 Power Pivot for SharePoint 功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="DM"></a> Data Mining  
   
-璝惠的各个版本支持的数据挖掘功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的数据挖掘功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-有关支持的版本的 Reporting Services 功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Reporting Services 支持的功能版本 SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的 Reporting Services 功能的信息，请参阅 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 ##  <a name="BIC"></a> Business Intelligence 客户端  
 
-璝惠的各个版本支持的业务智能客户端功能[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)]，请参阅[Analysis Services 支持的功能版本 SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或[Reporting Services 支持的功能版本 SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+有关 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 各个版本支持的商业智能客户端功能的信息，请参阅 [SQL Server 各个版本支持的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或 [SQL Server 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   

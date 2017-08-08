@@ -50,11 +50,11 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
 ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/23/2017
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 如需相关信息，请参阅 [Linux 上的 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]](../../linux/sql-server-linux-overview.md)。 
 
-> 本主题适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 与以前版本的 SQL Server 相关的内容，请参阅[Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
+> 本主题适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014 的硬件和软件要求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
   
 **进行试用：**  
   

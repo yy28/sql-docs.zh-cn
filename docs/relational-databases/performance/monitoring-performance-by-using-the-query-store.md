@@ -1,5 +1,5 @@
 ---
-title: "使用 Query Store 监视性能 | Microsoft Docs"
+title: "使用查询存储监视性能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 11/28/2016
@@ -18,28 +18,24 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# 使用查询存储监视性能
+# <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询存储功能让你可以探查查询计划选项和性能。 它可帮助你快速找到查询计划更改所造成的性能差异，从而简化了性能疑难解答。 查询存储将自动捕获查询、计划和运行时统计信息的历史记录，并保留它们以供查阅。 它按时间窗口将数据分割开来，使你可以查看数据库使用模式并了解服务器上何时发生了查询计划更改。 可以使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 
   
  有关在 Azure SQL 数据库中运行查询存储的信息，请参阅 [在 Azure SQL 数据库中运行查询存储](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
   
-##  <a name="Enabling"></a> Enabling the Query Store  
+##  <a name="Enabling"></a> 启用查询存储  
  默认情况下，新数据库的查询存储处于非活动状态。  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### 使用 Management Studio 中的查询存储页  
+#### <a name="use-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查询存储页  
   
 1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  在  “操作模式（按请求）”对话框中，选择 “开”。  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### 使用 Transact-SQL 语句  
+#### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句  
   
 1.  使用 **ALTER DATABASE** 语句来启用查询存储。 例如：  
   
@@ -78,7 +72,7 @@ ms.lasthandoff: 06/28/2017
   
 -   确定在给定时间窗口中查询执行的次数，从而帮助 DBA 对性能资源问题进行故障排除。  
   
--   标识过去 x 小时内的前 n 个查询（以执行时间、内存占用情况等为依据）。  
+-   标识过去 *n* 小时内的前 *n* 个查询（按执行时间、内存占用等）。  
   
 -   审核给定查询的查询计划历史记录。  
   
@@ -104,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> 使用回归查询功能  
  在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
   
  ![对象资源管理器中的 Query Store 树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "对象资源管理器中的 Query Store 树")  
@@ -129,7 +123,7 @@ JOIN sys.query_store_query_text AS Txt
 |每个数据库的高 LCK_M_X 等待|特定查询在查询存储中的高锁定等待|检查受影响查询的查询文本，并确定目标实体。 在查询存储中查找修改同一实体的其他查询，该实体频繁执行和/或具有较高持续时间。 确定这些查询后，请考虑更改应用程序逻辑，以提高并发性，或使用限制性较弱的隔离级别。|
 |每个数据库的高 PAGEIOLATCH_SH 等待|特定查询在查询存储中的高缓冲 IO 等待|在查询存储中查找读取数越高的查询。 如果它们与含较高 IO 等待的查询匹配，执行执行搜索而不是扫描时，请考虑引入关于基础实体的索引，以便减少查询的 IO 开销。|
 |每个数据库的高 SOS_SCHEDULER_YIELD 等待|特定查询在查询存储中的高 CPU 等待|查找查询存储中前几个使用 CPU 最多的查询。 其中，请确定其高 CPU 趋势与受影响查询的高 CPU 等待关联的查询。 重点优化这些查询 – 可能存在计划回归，或缺失的索引。| 
-##  <a name="Options"></a> Configuration Options 
+##  <a name="Options"></a> 配置选项 
 
 以下选项可用于配置查询存储参数。
 
@@ -158,22 +152,20 @@ JOIN sys.query_store_query_text AS Txt
  一个整数，表示为每个查询保留的最大计划数。 默认值为 200。  
  
  `WAIT_STATS_CAPTURE_MODE`  
- 如果查询存储捕获的控件等待统计信息。 可以将关闭 = 0 或上 = 1 （默认值）  
+ 控制查询存储是否捕获等待统计信息。 可能为 OFF = 0 或 ON = 1（默认值）  
  
  查询 **sys.database_query_store_options** 视图以确定查询存储的当前选项。 有关值的详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
  若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。  
   
-##  <a name="Related"></a> Related Views, Functions, and Procedures  
+##  <a name="Related"></a> 相关视图、功能和过程  
  通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用以下视图和过程来查看和管理查询存储。  
 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### 查询存储目录视图  
+### <a name="query-store-catalog-views"></a>查询存储目录视图  
  目录视图提供了查询存储的相关信息。  
 
 ||| 
@@ -181,11 +173,9 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### 查询存储存储过程  
+### <a name="query-store-stored-procedures"></a>查询存储存储过程  
  存储过程配置了查询存储。  
 
 ||| 
@@ -196,7 +186,7 @@ JOIN sys.query_store_query_text AS Txt
  
 ##  <a name="Scenarios"></a>键使用方案  
   
-###  <a name="OptionMgmt"></a> Option Management  
+###  <a name="OptionMgmt"></a> 选项管理  
  本部分提供一些有关如何管理查询存储功能本身的准则。  
   
  **查询存储当前是否处于活动状态？**  
@@ -321,7 +311,7 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_remove_plan** – 删除单个计划。  
  
   
-###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
+###  <a name="Peformance"></a> 性能审核和疑难解答  
  查询存储将保存整个查询过程中的编译历史记录和运行时度量，使你能询问有关工作负载的问题。  
   
  **在数据库上执行的最后 n 个查询？**  
@@ -459,8 +449,8 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  如果你向查看所有性能回归（而不仅是计划选择更改造成的回归），只需从先前查询中删除条件 `AND p1.plan_id <> p2.plan_id` 。  
 
- 等待时间最多的查询？****
- 此查询将返回等待最多的前 10 个查询。 
+ **等待时间最长的查询？**
+此查询将返回等待最多的前 10 个查询。 
  
  ```tsql 
   SELECT TOP 10
@@ -560,7 +550,7 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="Stability"></a> Maintaining Query Performance Stability  
+###  <a name="Stability"></a> 维护查询性能稳定性  
  对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，可以检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来的查询执行强制执行此最优计划。  
   
  你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划，为更大范围的用户方案保留可预测的性能。  
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询存储最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md)   
