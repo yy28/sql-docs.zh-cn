@@ -122,7 +122,7 @@ ms.lasthandoff: 08/03/2017
 3.  右键单击该数据库，指向 **“任务”**，再指向 **“还原”**，然后单击 **“页”** ，这将打开“还原页”对话框。  
   
      **还原**  
-     此部分执行的功能与 **还原数据库（常规页）** 上的“还原到” [](../../relational-databases/backup-restore/restore-database-general-page.md)的功能相同。  
+     此部分执行的功能与 [还原数据库（常规页）](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **“还原到”** 的功能相同。  
   
      **数据库**  
      指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
