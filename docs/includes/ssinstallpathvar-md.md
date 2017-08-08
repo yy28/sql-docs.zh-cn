@@ -1,2 +1,2 @@
-  \<*驱动器*>:\Program Files\Microsoft SQL Server\130\
+  \<驱动器>:\Program Files\Microsoft SQL Server\130\
    

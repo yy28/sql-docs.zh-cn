@@ -1,1 +1,1 @@
- SQL Server 自 2017 年 1 数据库引擎 
+ SQL Server 2017 数据库引擎 
