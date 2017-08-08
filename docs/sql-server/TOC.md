@@ -37,7 +37,4 @@
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch 数据库](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 教程](tutorials-for-sql-server-2016.md)
-
-# 关于文档
-## [SQL Server 资源](sql-server-resources.md)
-## [帮助查看器](../release-notes/sql-server-help-installation.md)
+# [帮助查看器的本地内容](../release-notes/sql-server-help-installation.md)

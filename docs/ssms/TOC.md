@@ -2,10 +2,9 @@
 # [什么是 SSMS？](sql-server-management-studio-ssms.md)
 
 # 新增功能
-## [SSMS 更改日志](sql-server-management-studio-changelog-ssms.md)
-## [发行说明](sql-server-management-studio-release-notes.md)
+## [SSMS 更改日志和以前的版本](sql-server-management-studio-changelog-ssms.md)
+## [发行说明](download-sql-server-management-studio-ssms.md#release-notes)
 ## [新的和最近更新的文章](new-updated-ssms.md)
-## [SSMS 的早期版本](previous-sql-server-management-studio-releases.md)
 
 # [下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)
 
