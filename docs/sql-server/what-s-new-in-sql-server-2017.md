@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
@@ -123,8 +123,13 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 与 SQL Server 工程团队合作 
+- [堆栈溢出（标记 sql-server）- 询问技术问题](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN 论坛 - 询问技术问题](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - 有关 SQL Server 的一般讨论](https://www.reddit.com/r/SQLServer/)
+
 ## <a name="next-steps"></a>后续步骤
 - 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。
 - 了解 [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)（Linux 上 SQL Server 2017 的新增功能）。
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
-
