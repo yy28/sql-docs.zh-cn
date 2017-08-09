@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 数据警报设计器
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>数据警报设计器
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ ms.lasthandoff: 07/03/2017
  ![在警报设计器用户界面的区域](../reporting-services/media/rs-alertdesigner.gif "在警报设计器用户界面的区域")  
   
   
-### 警报数据
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>警报数据  
  在打开数据警报设计器时，它将从报表生成所有数据馈送并使它们变得可用，并且“报表数据名称”下拉列表将包含各个馈送的名称。 在您创建警报定义时数据馈送将缓存在内存中，并且当您在数据馈送之间切换以便浏览报表数据时将快速填充显示数据馈送数据的表。  
   
  创建数据警报定义的第一步是选择包含您希望监视警报的数据的报表数据馈送。 报表可以有零个或多个数据馈送。 如果某个报表没有数据馈送，则无法对其创建警报。 数据馈送可由任何数据区域生成，包括所有类型的图表、仪表、指示器以及表、矩阵和列表。  
@@ -82,14 +80,12 @@ ms.lasthandoff: 07/03/2017
   
  某些报表具有数百万行数据。 该表仅显示数据馈送中的前 100 行数据。  
   
-### 警报名称
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>警报名称  
  默认情况下，警报定义具有与报表相同的名称。 您可以将此警报名称更改为更有意义的名称。 这便于您管理警报，以及确定要用于更新、删除等操作的警报。  
   
  您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅 [向管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在数据警报管理器中管理我的数据警报](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   
-### 规则和子句
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  
   
 -   **任何数据具有**— 数据中至少一个值符合该条件指定的规则。  
@@ -160,8 +156,7 @@ ms.lasthandoff: 07/03/2017
   
  数据警报消息中包含规则和子句。  
   
-### 计划设置
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>计划设置  
  您为数据警报定义的计划将定义用于发送数据警报消息的重复执行模式以及何时开始和停止发送警报消息。 该模式为：一次、每分钟、每天和每周。 尽管一个警报只有一个计划，但您可以通过使用这些时间间隔创建满足大多数业务需要的复杂的重复执行模式。 下面是在计划中常用的重复执行模式的示例：  
   
 -   **每天，每隔 10 天** - 将警报一天发送一次，每隔 10 天。  
@@ -179,8 +174,7 @@ ms.lasthandoff: 07/03/2017
 > [!IMPORTANT]  
 >  建议您不要以高于每天一次的频率使用重复执行模式，除非有重要的业务原因需要这么做。 不支持实时处理数据警报定义。 过于频繁地处理数据警报定义会影响报表服务器和总体 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 部署的性能。  
   
-### 电子邮件设置
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>电子邮件设置  
  在“收件人”选项中，指定通过电子邮件接收数据警报消息的收件人的电子邮件地址。 多个电子邮件地址由分号分隔，与在 Microsoft Office Outlook 电子邮件中的操作方式相同。 还可以指定分发组作为收件人，以便更容易和更有效地管理收件人列表。 如果在您创建警报定义时 SharePoint 可以确定您的电子邮件地址，则您的电子邮件地址将自动添加到收件人列表中；否则，您需要显式将您自己作为收件人添加。  
   
  电子邮件的默认使用者是**数据警报的\<警报名称 >**。 您可以更改主题以适合您的需要。  
@@ -223,8 +217,7 @@ ms.lasthandoff: 07/03/2017
   
 -   [在数据警报设计器中创建数据警报](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## 另请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>另请参阅
 
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)   
 [管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

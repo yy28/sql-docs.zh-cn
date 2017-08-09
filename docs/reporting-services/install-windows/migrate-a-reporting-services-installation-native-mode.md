@@ -1,5 +1,5 @@
 ---
-title: "迁移 Reporting Services 安装（本机模式）| Microsoft Docs"
+title: "迁移 Reporting Services 安装 （本机模式） |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -23,11 +23,11 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b1e79ca61f1de78ca82cb65aadccd9ea214090a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/03/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
-本主题提供有关将以下支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署版本之一迁移到新的 SQL Server Reporting Services 实例的分步说明：  
+本主题提供有关迁移的分步说明以下支持的版本之一[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式部署到新的 SQL Server Reporting Services 实例：  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 
 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的信息，请参阅 [迁移 Reporting Services 安装（SharePoint 模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
   
- 迁移是指将应用程序数据文件移到新的 SQL Server 实例。 下面是必须迁移您的安装的常见原因：  
+ 迁移被指将应用程序数据文件移到新的 SQL Server 实例。 下面是必须迁移您的安装的常见原因：  
   
 -   您具有大规模部署或正常运行时间要求。  
   
@@ -63,12 +63,12 @@ ms.lasthandoff: 08/03/2017
   
 -   备份加密密钥。  
   
--   安装 SQL Server 的新实例。 如果使用相同硬件，且现有安装是受支持的版本之一，则可以并行安装 SQL Server。  
+-   安装 SQL Server 的新实例。 如果使用相同的硬件，你可以对你的现有安装安装 SQL Server 并行，如果它是受支持版本之一。  
   
     > [!TIP]  
-    >  并行安装可能需要将 SQL Server 作为命名实例安装。  
+    >  通过并行安装可能需要作为命名实例安装 SQL Server。  
   
--   将报表服务器数据库和其他应用程序文件从现有安装移到新的 SQL Server 安装中。  
+-   将报表服务器数据库和其他应用程序文件从现有安装移到新的 SQL Server 安装。  
   
 -   将任何自定义应用程序文件移到新安装中。  
   
@@ -96,9 +96,9 @@ ms.lasthandoff: 08/03/2017
 -   如果仅有少量项，则可以将报表、报表模型以及共享数据源从报表设计器、模型设计器和报表生成器重新发布到新的报表服务器。 必须重新创建角色分配、订阅、共享计划、报表快照计划、对报表或其他项设置的自定义属性、模型项安全性以及对报表服务器设置的属性。 您将丢失报表历史记录和报表执行日志数据。  
   
 ##  <a name="bkmk_before_you_start"></a> 开始之前  
- 即使要迁移（而不是升级）安装，也要考虑针对现有的安装运行升级顾问以帮助确定可能会影响迁移的任何问题。 如果要迁移尚未安装或配置的报表服务器，则该步骤尤其有用。 通过运行升级顾问，可以查明新 SQL Server 安装可能不支持的自定义设置。  
+ 即使要迁移（而不是升级）安装，也要考虑针对现有的安装运行升级顾问以帮助确定可能会影响迁移的任何问题。 如果要迁移尚未安装或配置的报表服务器，则该步骤尤其有用。 通过运行升级顾问，你可以了解有关信息可能不支持在新的 SQL Server 安装中的自定义设置。  
   
- 此外，应当注意 SQL Server Reporting Services 中进行了多项将影响安装迁移方式的重要改动：
+ 此外，你应注意的一些重要更改 SQL Server Reporting Services 中，将影响安装迁移方式：
  
 - 新的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 替代了报表管理器。
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/03/2017
   
 - 如果在报表环境中使用自定义级联样式表，则这些样式表不会被迁移。 必须在迁移后对它们进行手动移动。  
   
-有关 SQL Server Reporting Services 中的更改的详细信息，请参阅升级顾问文档和 [Reporting Services 中的新增功能](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。  
+有关 SQL Server Reporting Services 中的更改的详细信息，请参阅升级顾问文档和[What's New in Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
 ## <a name="bkmk_backup"></a> 备份文件和数据
 
@@ -140,7 +140,7 @@ ms.lasthandoff: 08/03/2017
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  针对报表服务器 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序的 Web.config。  
+    6.  为报表服务器的 Web.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]应用程序。  
   
     7.  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 的 Machine.config（如果您为报表服务器操作修改过它）。  
 
@@ -162,7 +162,7 @@ ms.lasthandoff: 08/03/2017
   
  若要移动报表服务器数据库，请执行以下操作：  
   
-1.  选择要使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 SQL Server Reporting Services 要求你使用以下版本之一承载报表服务器数据库：  
+1.  选择要使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 SQL Server Reporting Services 将要求你使用以下版本之一承载报表服务器数据库：  
   
     -   SQL Server 2016  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-3.  如果 **从未承载过报表服务器数据库，请在系统数据库中创建** RSExecRole [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 有关详细信息，请参阅 [创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
+3.  如果 **从未承载过报表服务器数据库，请在系统数据库中创建** RSExecRole [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 有关详细信息，请参阅[创建 RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)。  
   
 4.  遵循[将报表服务器数据库移至其他计算机（SSRS 本机模式）](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)中的说明。  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 08/03/2017
   
     -   其他自定义程序集应当不需要重新编译。  
   
-2.  将这些程序集移到新的报表服务器 \bin 文件夹中。 在 SQL Server 中，报表服务器二进制文件位于默认报表服务器实例的以下位置：  
+2.  将程序集移到新的报表服务器 \bin 文件夹中。 在 SQL Server 报表服务器二进制文件位于默认报表服务器实例的以下位置：  
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -218,9 +218,9 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="bkmk_configure_reportserver"></a> 配置报表服务器
 
- 为报表服务器 Web 服务和 Web 门户配置 URL，并配置与报表服务器数据库的连接。  
+ 为报表服务器 Web 服务和 web 门户中，配置 Url，并配置与报表服务器数据库的连接。  
   
- 如果要迁移扩展部署，则应使所有报表服务器节点脱机并按照一次迁移一个服务器的方式迁移各个服务器。 一旦迁移了第一个报表服务器并且其成功连接到报表服务器数据库，则该报表服务器数据库版本将自动升级到 SQL Server 数据库版本。  
+ 如果要迁移扩展部署，则应使所有报表服务器节点脱机并按照一次迁移一个服务器的方式迁移各个服务器。 一旦迁移的第一个报表服务器，并且其成功连接到报表服务器数据库，报表服务器数据库版本将自动升级到 SQL Server 数据库版本中。  
   
 > [!IMPORTANT]  
 >  如果扩展部署中的所有报表服务器均联机并且尚未被迁移，则它们可能会遇到 rsInvalidReportServerDatabase 异常，因为它们在连接到升级的报表服务器数据库之后使用的仍是旧版架构。  
@@ -234,38 +234,38 @@ ms.lasthandoff: 08/03/2017
   
 1.  启动 Reporting Services 配置管理器，然后连接到刚安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  为报表服务器和 Web 门户配置 URL。 有关详细信息，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
+2.  为报表服务器和 web 门户中配置 Url。 有关详细信息，请参阅[配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)。  
   
-3.  配置报表服务器数据库，并从以前的安装中选择现有的报表服务器数据库。 成功配置之后，报表服务器服务将重新启动，并且一旦将其与报表服务器数据库建立了连接，该数据库将自动升级到 SQL Server Reporting Services。 有关如何运行“更改服务器向导”（该向导可用来创建或选择报表服务器数据库）的详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
+3.  配置报表服务器数据库，并从以前的安装中选择现有的报表服务器数据库。 成功配置后，报表服务器服务将重新启动，并连接到报表服务器数据库后，该数据库将自动升级到 SQL Server Reporting Services。 有关如何运行更改数据库向导用于创建或选择报表服务器数据库的详细信息，请参阅[创建本机模式报表服务器数据库](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
 4.  还原加密密钥。 在针对报表服务器数据库中预先存在的连接字符串和凭据启用可逆加密时，此步骤是必不可少的。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
 5.  如果报表服务器安装在新计算机上，并且您使用的是 Windows 防火墙，请确保该报表服务器侦听的 TCP 端口处于打开状态。 默认情况下，此端口为 80。 有关详细信息，请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
-6.  若要在本地管理本机模式报表服务器，需要配置操作系统以允许使用 Web 门户进行本地管理。 有关详细信息，请参阅[为本地管理配置本机模式报表服务器](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+6.  如果你想要管理本机模式报表服务器本地，你需要配置操作系统以允许进行本地管理使用 web 门户。 有关详细信息，请参阅[为本地管理配置本机模式报表服务器](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
 
 ## <a name="bkmk_copy_custom_config"></a> 将自定义配置设置复制到 RSReportServer.config 文件
 
-如果对先前安装中的 RSReportServer.config 文件或 RSWebApplication.config 文件进行过修改，则应当在新的 RSReportServer.config 文件中进行同样的修改。 下面的列表概述了修改先前配置文件的某些原因，并提供了一些指向其他信息的链接，这些信息介绍如何在 SQL Server 2016 中配置同样的设置。  
+如果对先前安装中的 RSReportServer.config 文件或 RSWebApplication.config 文件进行过修改，则应当在新的 RSReportServer.config 文件中进行同样的修改。 以下列表总结了一些原因，你可能修改先前配置文件并提供指向有关如何配置 SQL Server 2016 中的相同设置的其他信息。  
   
 |自定义|信息|  
 |-------------------|-----------------|  
-|具有自定义设置的报表服务器电子邮件传递|[电子邮件设置 - Reporting Services 本机模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
+|具有自定义设置的报表服务器电子邮件传递|[电子邮件设置-Reporting Services 本机模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |设备信息设置|[在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 服务组与安全 ACL
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中存在一个服务组，即 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服务组。可使用该组为与 SQL Server Reporting Services 一起安装的所有注册表项、文件和文件夹创建安全 ACL。 此 Windows 组的名称以 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 格式显示。  
+ 在[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，没有一个服务组， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服务组，用于进行的所有注册表项、 文件和与 SQL Server Reporting Services 安装的文件夹创建安全 Acl。 此 Windows 组名称出现在格式 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>。  
 
 ## <a name="bkmk_verify"></a> 验证部署
 
 1.  打开浏览器，并在 URL 地址中键入报表服务器虚拟目录和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 虚拟目录，对这些目录进行测试。 有关详细信息，请参阅 [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
-2.  测试报表，并验证它们是否包含所需的数据。 检查数据源信息，查看是否仍指定了数据源连接信息。 报表服务器在处理和呈现报表时使用报表对象模型，但是该服务器不将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 构造替换为新的报表定义语言元素。 若要了解有关如何在新版本的报表服务器上运行现有报表的详细信息，请参阅[升级报表](../../reporting-services/install-windows/upgrade-reports.md)。  
+2.  测试报表，并验证它们是否包含所需的数据。 检查数据源信息，查看是否仍指定了数据源连接信息。 报表服务器使用的报表对象模型时处理和呈现报表，但它不会替换[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，或[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]构造替换为新报表定义语言元素。 若要了解有关如何将现有报表的更多的新版本的报表服务器上运行，请参阅[Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
 
 ## <a name="bkmk_remove_unused"></a> 删除未使用的程序和文件
 
-一旦成功将报表服务器迁移到新实例，则可能需要执行以下步骤以删除不再需要的程序和文件。  
+一旦成功迁移报表服务器到的新实例，你可能想要执行以下步骤以删除程序和不再需要的文件。  
   
 1.  如果不再需要早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则将其卸载。 此步骤不会删除下列项，但是，如果不再需要这些项，则可以手动将其删除：  
   
@@ -288,7 +288,7 @@ ms.lasthandoff: 08/03/2017
 [迁移 Reporting Services 安装](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
 [报表服务器数据库](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Reporting Services 的向后兼容性](../../reporting-services/reporting-services-backward-compatibility.md)   
+[Reporting Services 向后兼容性](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

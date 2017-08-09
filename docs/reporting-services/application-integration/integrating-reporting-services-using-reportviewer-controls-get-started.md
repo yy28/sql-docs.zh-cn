@@ -23,13 +23,11 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
-# 将集成 Reporting Services 使用 ReportViewer 控件-入门
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>将集成 Reporting Services 使用 ReportViewer 控件-入门
 
 了解如何开发人员可以将分页的报表嵌入在 ASP.Net web 站点和 Windows 窗体应用程序，通过 Reporting Services 2016 ReportViewer 控件中。 你可以将控件添加到新项目，或更新现有项目。
 
-<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
-## 将 ReportViewer 控件添加到新的 web 项目
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>将 ReportViewer 控件添加到新的 web 项目
 
 1. 创建一个新**ASP.NET 空网站**或打开现有的 ASP.NET 项目。
 
@@ -82,13 +80,11 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
-## 更新现有项目以使用 ReportViewer 控件
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>更新现有项目以使用 ReportViewer 控件
 
 要使用的现有项目中的 ReportViewer 2016 控件、 添加通过 Nuget 控件和更新版本的程序集引用*14.0.0.0*。 这将包括更新项目的 web.config 和所有引用 ReportViewer 控件的.aspx 页。
 
-<a id="sample-webconfig-changes" class="xliff"></a>
-### 示例 web.config 更改
+### <a name="sample-webconfig-changes"></a>示例 web.config 更改
 
 ```
 <?xml version="1.0"?>
@@ -135,8 +131,7 @@ ms.lasthandoff: 06/22/2017
 </configuration>
 ```
 
-<a id="sample-aspx" class="xliff"></a>
-### 示例.aspx
+### <a name="sample-aspx"></a>示例.aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -147,8 +142,7 @@ ms.lasthandoff: 06/22/2017
 <!DOCTYPE html>
 ```
 
-<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
-## 将 ReportViewer 控件添加到新的 Windows 窗体项目
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>将 ReportViewer 控件添加到新的 Windows 窗体项目
 
 1. 创建一个新**Windows 窗体应用程序**或打开现有项目。
 
@@ -183,15 +177,13 @@ ms.lasthandoff: 06/22/2017
     }
     ```
 
-<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
-## 如何在报表查看器 2016年控件上设置 100%高度
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>如何在报表查看器 2016年控件上设置 100%高度
 
 新的报表查看器 2016年控件针对 HTML5 标准模式页进行了优化，并可用于所有现代浏览器。 在过去，与旧的 RVC 控件，当你设置 100 %height 属性，它的工作即使无上级具有指定的高度。 此行为已更改 html5 格式。 当新 RVC 控件上设置此属性时，它将正常工作的父元素有一个定义的高度才，即不是值的自动或所有祖先构成的 RVC 太具有 100%的高度。
 
 以下是两个示例，以执行此操作。
 
-<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
-### 通过将所有父的高度设置为 100%的元素
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>通过将所有父的高度设置为 100%的元素
 
 ```
 <!DOCTYPE html>
@@ -217,8 +209,7 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
-### 通过在 reportviewer 控件的父类上设置样式高度属性
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>通过在 reportviewer 控件的父类上设置样式高度属性
 
 视区百分比长度有关的详细信息，请参阅[视区百分比长度](https://www.w3.org/TR/css3-values/#viewport-relative-lengths)。
 
@@ -241,8 +232,7 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
-## 将控件添加到 Visual Studio 工具栏
+## <a name="adding-control-to-visual-studio-toolbar"></a>将控件添加到 Visual Studio 工具栏
 
 报表查看器控件现在提供作为 NuGet 程序包。 因此，你将不看到默认情况下显示在 Visual Studio 工具箱报表查看器控件。 通过执行以下，可以将控件添加到工具箱。
 
@@ -269,16 +259,14 @@ ms.lasthandoff: 06/22/2017
 
     ![ssRS 工具箱 rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-<a id="things-to-be-aware-of" class="xliff"></a>
-### 需要注意的事项
+### <a name="things-to-be-aware-of"></a>需要注意的事项
 
 - 这将添加到当前项目中已安装的 NuGet 程序包的引用。 工具箱中的项将保存到其他项目。 在新的解决方案/项目中安装 NuGet 包时，工具箱项可能引用较旧版本。 
 
 - 控件将保留在工具箱中，即使该程序集不再不可用。 如果已删除该项目，Visual Studio 将引发错误，如果你尝试并从工具箱中添加控件。 若要更正此错误，从工具箱中删除控件，然后重新添加使用上述步骤。
 
 
-<a id="common-issues" class="xliff"></a>
-## 常见问题
+## <a name="common-issues"></a>常见问题
     
 - ReportViewer 2016 控件设计用于现代浏览器。 如果浏览器呈现在 IE 兼容性模式下的网页，该控件可能不正常。 Intranet 站点可能需要一个元标记可替代设置的鼓励呈现在兼容模式下的 intranet 页。
 
@@ -286,13 +274,11 @@ ms.lasthandoff: 06/22/2017
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-<a id="providing-feedback" class="xliff"></a>
-## 提供反馈
+## <a name="providing-feedback"></a>提供反馈
 
 让团队了解有关你遇到与该控件的问题[Reporting Services MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)或通过电子邮件在[ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com)。
 
-<a id="see-also" class="xliff"></a>
-## 另请参阅
+## <a name="see-also"></a>另请参阅
 
 [2016 ReportingViewer 控件中的数据收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

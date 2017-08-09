@@ -22,12 +22,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 6348d05b8dbe6c8ab1a682388b4e69ce438e6a12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SQL Server 2016 的 SQL Server Reporting Services 中的重大更改
-<a id="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 的 SQL Server Reporting Services 中的重大更改
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -35,18 +34,15 @@ ms.lasthandoff: 07/03/2017
 
 本主题介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 您在升级时，或在自定义脚本或报表中可能会遇到这些问题。
 
-## 安全扩展插件
-<a id="security-extensions" class="xliff"></a>
+## <a name="security-extensions"></a>安全扩展插件
 
 自定义安全扩展插件需要进行某些修改，才可使用新 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 安全扩展插件需要使用 IAuthenticationExtension2 接口。
 
-## WMI 提供程序
-<a id="wmi-provider" class="xliff"></a>
+## <a name="wmi-provider"></a>WMI 提供程序
 
 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 应用程序名称从 "ReportManager" 更改为 "ReportServerWebApp"。
 
-## 后续步骤
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>后续步骤
 
 [SQL Server 2016 中的 SQL Server Reporting Services 的行为更改](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Reporting Services (SSRS) 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   

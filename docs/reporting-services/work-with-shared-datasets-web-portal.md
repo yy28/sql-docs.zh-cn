@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 使用共享数据集的 web 门户
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>使用共享数据集的 web 门户
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ ms.lasthandoff: 07/03/2017
 
 你可以查看和管理 Web 门户中共享数据集的属性。 Web 门户可以将你启动到报表生成器中，以创建或编辑共享数据集。
 
-## 创建共享数据集
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>创建共享数据集
   
 若要创建新的共享数据集，你可以执行以下操作。  
   
@@ -49,8 +47,7 @@ ms.lasthandoff: 07/03/2017
   
 6.  生成数据集，然后选择左上方的“保存”图标将数据集保存回报表服务器。  
   
-## 管理现有共享数据集
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>管理现有共享数据集
   
 若要管理现有共享数据集，你可以执行以下操作。  
   
@@ -65,15 +62,13 @@ ms.lasthandoff: 07/03/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## 属性
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>属性
   
 在属性屏幕中，你可以更改数据集的“名称”和“描述”。 也可以“删除”、“移动”、“在报表生成器中编辑”、“下载”或“替换”。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Caching
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Caching
   
 缓存数据集的数据时，你有多个选项。 只需进行简单选择即可开始操作。  
   
@@ -87,8 +82,7 @@ ms.lasthandoff: 07/03/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### 缓存过期
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>缓存过期  
   
 你可以控制是要在某段时间后针对共享数据集使缓存过期，还是希望按计划使缓存过期。 你可以使用共享计划。  
   
@@ -97,8 +91,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > 设置过期时间并不会刷新缓存。 如果没有缓存刷新计划，将在下次执行数据集时刷新数据。  
   
-### 缓存刷新计划
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>缓存刷新计划  
   
 可以使用“缓存刷新计划”创建使用共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 不能覆盖标记为只读的参数值。 可以创建和使用多个刷新计划。   
   

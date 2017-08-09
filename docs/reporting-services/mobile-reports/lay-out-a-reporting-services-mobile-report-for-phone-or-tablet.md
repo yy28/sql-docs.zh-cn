@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>为手机或平板电脑设计 Reporting Services 移动报表

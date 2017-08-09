@@ -1,5 +1,5 @@
 ---
-title: "教程：地图报表（报表生成器）| Microsoft Docs"
+title: "教程： 地图报表 （报表生成器） |Microsoft 文档"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
@@ -35,12 +35,12 @@ ms.lasthandoff: 08/03/2017
 在本教程中，将生成一个地图报表，该报表显示了纽约州各县内的商店位置。  
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：30 分钟。  
   
 ## <a name="requirements"></a>要求  
-对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
+对于本教程，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅[计划地图报表支持](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 有关其他要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
@@ -49,11 +49,11 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用地图向导在新报表中添加地图  
   
-1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
+1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -61,19 +61,19 @@ ms.lasthandoff: 08/03/2017
   
 4.  在“选择空间数据的来源”页上，确认已选中“地图库”。  
   
-6.  在“地图库”框中，展开“美国”下的“州/按县”，然后单击“纽约”。  
+6.  在“地图库”窗格中，展开“美国”下的“州/按县”，然后单击“纽约”。  
   
     此时，“地图预览”窗格将显示纽约的县地图。  
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“选择空间数据和地图视图选项”页上，接受默认值，然后按“下一步”。 
  
     默认情况下，来自地图库的地图元素会自动嵌入到报表定义中。  
   
-9. 在“选择地图可视化”页上，确认已选中“基本地图”，然后单击“下一步”。  
+9. 在“选择地图可视化”页上，确认已选中“基本图”，然后单击“下一步”。  
   
 11. 在“选择颜色主题和数据可视化”页上，选择“显示标签”选项。  
   
@@ -97,18 +97,18 @@ ms.lasthandoff: 08/03/2017
   
     此时，将向设计图面添加一个地图。  
   
-13. 选择“地图标题”文本并键入“商店销售额”，然后按 Enter。  
+13. 选择“地图标题”文本并键入 **Sales by Store**，然后按 Enter。  
 
-15. 双击地图，显示“地图层”窗格。 “地图层”窗格显示一个层类型为“嵌入”的多边形层 PolygonLayer1。 每个县都是该层上的一个嵌入地图元素。  
+15. 双击地图以显示“地图层窗格”。 “地图层”窗格显示一个层类型为“嵌入”的多边形层 PolygonLayer1。 每个县都是该层上的一个嵌入地图元素。  
   
     > [!NOTE]  
-    > 如果没有看到“地图层”窗格，则它可能在当前视图之外显示。 请使用位于“设计”视图窗口底部的滚动条来更改视图。 或者，在“视图”选项卡中，清除“报表数据”选项，提供更多的设计图面区域。   
+    > 如果没有看到“地图层”窗格，则它可能在当前视图之外显示。 请使用位于“设计”视图窗口底部的滚动条来更改视图。 或者，在“视图”选项卡中，清除“报表数据”选项以提供更多的设计图面区域。   
 
 15. 选择“PolygonLayer1”旁边的箭头，然后单击“多边形属性”。
 
 16. 在“字体”选项卡上，将颜色更改为“暗灰色”。
 
-17. 在“开始”选项卡上，单击“运行”预览报表。  
+17. 在“主文件夹”选项卡上，单击“运行”以预览报表。  
   
     ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
   
@@ -124,22 +124,22 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>基于 SQL Server 空间查询添加点层  
   
-1.  在“运行”选项卡上，单击“设计”切换回“设计”视图。  
+1.  在“运行”上单击“设计”以切换回“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**新建层向导**按钮![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”。  
   
-4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集” > “下一步”。  
+4.  上**选择具有 SQL Server 空间数据的数据集**页上，单击**添加具有 SQL Server 空间数据的新数据集** > **下一步**。  
   
-5.  在“选择与 SQL Server 空间数据源的连接”页上，选择现有数据源，或浏览到报表服务器并选择数据源。  
+5.  在“选择与 SQL Server 空间数据源的连接”页上，选择一个现有数据源，或浏览到报表服务器并选择一个数据源。  
 
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”**。  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 08/03/2017
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. 单击 **“下一步”**。  
+10. 单击“下一步” 。  
   
     此时，将会为您创建一个名为 DataSet1 的报表数据集。 在完成向导后，可以在“报表数据”窗格中看到它的字段集合。  
   
@@ -195,17 +195,17 @@ ms.lasthandoff: 08/03/2017
   
     地图视图显示圆圈，这些圆圈标记每个商店的位置。  
   
-12. 单击 **“下一步”**。  
+12. 单击“下一步” 。  
   
-13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记。 单击 **“下一步”**。  
+13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记。 单击“下一步” 。  
   
 14. 在“选择分析数据集”页上，单击“DataSet1”，然后单击“下一步”。 此数据集同时包含分析数据和空间数据，它将显示在新的点层上。   
   
 16. 在“选择颜色主题和数据可视化”页上，选择“使用气泡大小实现数据的可视化效果”。  
   
-17. 在“数据字段”中选择 `[Sum(SellingArea)]`，根据商店为展示产品而保留的区域的大小来改变气泡大小。  
+17. 在“数据字段”中，选择“`[Sum(SellingArea)]`”以根据商店为展示产品而保留的区域的大小来改变气泡大小。  
   
-18. 选择“显示标签”，然后在“数据字段”中选择 `[City]`。
+18. 选择“显示标签”，然后在“数据字段”中选择“`[City]`”。
 
 18. 单击 **“完成”**。  
   
@@ -213,9 +213,9 @@ ms.lasthandoff: 08/03/2017
   
  19. 双击地图以显示“地图层”窗格。 “地图层”窗格显示新层“PointLayer1”，以及空间数据源类型“DataRegion”。  
   
-19. 添加图例标题。 在图例中，选择文本“标题”，键入“显示区域（平方英尺）”，然后按 Enter。  
+19. 添加图例标题。 在图例中，选择文本“标题”，键入 **Display Area (sq. ft.)**，然后按 Enter。  
   
-21. 在“地图层”窗格中，单击“PointLayer1”旁边的箭头，然后单击“点属性”。  
+21. 在“地图层窗格”中，单击“PointLayer1”旁边的箭头，然后单击“点属性”。  
 
     ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
   
@@ -223,7 +223,7 @@ ms.lasthandoff: 08/03/2017
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. 在“常规”选项卡上，将“位置”选择为“底部”。
+23. 在“常规”选项卡上，为“位置”选择“底部”。
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -242,15 +242,15 @@ ms.lasthandoff: 08/03/2017
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“新建层向导”按钮 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**新建层向导**按钮![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")。  
   
 3.  在“选择空间数据的来源”页上，选择“SQL Server 空间查询”，然后单击“下一步”。  
   
 4.  在“选择具有 SQL Server 空间数据的数据集”页上，单击“添加具有 SQL Server 空间数据的新数据集”，然后单击“下一步”。  
   
-5.  在“选择与 SQL Server 空间数据源的连接”中，选择在第一步中使用的数据源。  
+5.  在“选择与 SQL Server 空间数据源的连接”中，选择在第一个过程中使用的数据源。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”**。 查询设计器切换到基于文本的模式。  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 08/03/2017
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
     此时，地图上将显示一条连接三个商店的路径。  
   
@@ -271,7 +271,7 @@ ms.lasthandoff: 08/03/2017
   
     地图视图显示一条从位于纽约州北部的商店到位于纽约州南部商店的路径。  
   
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 12. 在“选择地图可视化”页上，单击“基本线条图”，然后单击“下一步”。  
   
@@ -297,14 +297,14 @@ ms.lasthandoff: 08/03/2017
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“添加层” ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**添加层** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
 3.  从下拉列表中，单击“图块层”。  
   
     “地图层”窗格中的最后一层为“TileLayer1”。 默认情况下，图块层显示道路图样式。  
   
     > [!NOTE]  
-    > 在本向导中，还可以在“选择空间数据和地图视图选项”页上添加图块层。 若要执行此操作，请选择“为该地图视图添加必应地图背景”。 在呈现的报表中，图块背景为当前地图视区中心和缩放级别显示 Bing 地图图块。  
+    > 在本向导中，还可以在“选择空间数据和地图视图选项”页上添加图块层。 为此，请选择“为该地图视图添加 Bing 地图背景”。 在呈现的报表中，图块背景为当前地图视区中心和缩放级别显示 Bing 地图图块。  
   
 4.  单击“TileLayer1”旁边的箭头，然后单击“图块属性”。  
   
@@ -319,9 +319,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  双击地图以显示“地图层”窗格。  
   
-3.  单击“PolygonLayer1”旁边的箭头，然后单击“层数据”。 将打开“地图多边形层属性”对话框。  
+3.  单击“PolygonLayer1”旁边的箭头，然后单击“层数据”。 “地图多边形层属性”对话框将打开。  
   
-4.  在“可见性”选项卡的“透明度(百分比)”下，键入“30”。  
+4.  在“可见性”选项卡的“透明度(百分比)”下，键入 **30**。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -341,7 +341,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  双击地图以显示“地图层”窗格。  
   
-3.  单击“PolygonLayer1”旁边的箭头，然后单击“层数据”。 将打开“地图多边形层属性”对话框。  
+3.  单击“PolygonLayer1”旁边的箭头，然后单击“层数据”。 “地图多边形层属性”对话框将打开。  
   
 4.  在“分析数据”选项卡的“分析数据集”下，选择“DataSet1”。 此数据集是为县创建空间数据查询时由向导创建的。  
   
@@ -370,7 +370,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  切换到“设计”视图。  
   
-2.  单击“PolygonLayer1”旁边的箭头，然后单击“多边形颜色规则”。 将打开“地图颜色规则属性”对话框。 请注意，已选择“使用调色板实现数据的可视化效果”颜色规则选项。 此选项已由向导进行设置。  
+2.  单击“PolygonLayer1”旁边的箭头，然后单击“多边形颜色规则”。 “地图颜色规则属性”对话框将打开。 请注意，已选择“使用调色板实现数据的可视化效果”颜色规则选项。 此选项已由向导进行设置。  
   
 3.  选择“使用颜色范围实现数据的可视化效果”。 调色板选项被开始颜色、中间颜色和结束颜色选项取代。  
   
@@ -411,9 +411,9 @@ ms.lasthandoff: 08/03/2017
   
 1. 切换到“设计”视图。  
 
-2. 选择色阶。 在“开始”选项卡上，单击“数字”部分，然后单击“货币”。  
+2. 选择色阶。 在“主文件夹”选项卡上，单击“数字”部分，然后单击“货币”。  
   
-4.  继续在“数字”部分中单击两次“减少小数位数”按钮。  
+4.  继续在“数字”部分中单击“减少小数位数”按钮两次。  
   
     色阶对于每个范围用货币格式显示年销售额。  
   
@@ -444,7 +444,7 @@ ms.lasthandoff: 08/03/2017
 
      ![report-builder-map-polygon-layer-properties](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
 
-     将打开“地图多边形属性”对话框。 在应用基于规则的显示选项之前，此对话框中设置的显示选项将应用于层上的所有多边形。  
+     “地图多边形属性”对话框将打开。 在应用基于规则的显示选项之前，此对话框中设置的显示选项将应用于层上的所有多边形。  
   
 4.  在“填充”选项卡上，确认填充样式为“纯色”。 。渐变样式和图案样式应用于所有颜色。  
   
@@ -461,7 +461,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  切换到“设计”视图。  
   
-2.  双击地图以显示“地图层”窗格。 在工具栏上，单击“添加层”  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然后单击“点层”。  
+2.  双击地图以显示“地图层”窗格。 在工具栏上，单击**添加层**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")，然后单击**点层**。    
   
     将向地图添加一个新点层。 默认情况下，该点层的空间数据类型为“嵌入”。  
   
@@ -479,11 +479,11 @@ ms.lasthandoff: 08/03/2017
 
     ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  在“标记”选项卡上，将“标记类型”选择为“星形”。  
+8.  在“标记”选项卡上，对于“标记类型”，选择“星形”。  
 
 10. 将“标记大小”更改为“18 磅”。
   
-3.  在“标签”选项卡的“标签文本”中，键入“新商店”。  
+3.  在“标签”选项卡的“标签文本”中，键入 **New Store**。  
   
 5.  在“位置”中，单击“顶部”。  
 
@@ -526,7 +526,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **Sales in New York Stores** ，然后在文本框外部单击。  
+2.  键入 **Sales in New York Stores**，然后在文本框外部单击。  
   
 此标题将显示在报表的顶部。 当未定义页眉时，表体顶部的项等同于报表表头。  
   
@@ -534,7 +534,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  在“设计”视图或“预览”中，在“文件”菜单上单击“另存为”。
  
-3.  在“名称”中，键入“纽约的商店销售额”。  
+3.  在“名称”中，键入 **Store Sales in New York**。  
 
 3. 将其保存到本地计算机或 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 服务器。
   

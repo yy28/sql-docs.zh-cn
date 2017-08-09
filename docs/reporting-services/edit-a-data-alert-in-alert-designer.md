@@ -24,11 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 在警报设计器中编辑数据警报
-<a id="edit-a-data-alert-in-alert-designer" class="xliff"></a>
+# <a name="edit-a-data-alert-in-alert-designer"></a>在警报设计器中编辑数据警报
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +44,7 @@ ms.lasthandoff: 07/03/2017
   
  下面的过程包括打开警报定义以便从数据警报管理器的数据警报设计器中进行编辑的步骤。  
   
-### 在数据警报设计器中编辑数据警报定义
-<a id="to-edit-a-data-alert-definition-in-data-alert-designer" class="xliff"></a>  
+### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>在数据警报设计器中编辑数据警报定义  
   
 1.  在数据警报管理器中，右键单击要编辑的数据警报定义，然后单击“编辑”。  
   
@@ -62,8 +60,7 @@ ms.lasthandoff: 07/03/2017
     > [!NOTE]  
     >  如果报表已更改并且从该报表生成的数据馈送已更改，则警报定义将不再有效。 在发生以下情况之一时警报定义将不再有效：警报定义在其规则中引用的列从报表中删除、或更改了数据类型、或删除或移动了报表。 您可以打开无效的警报定义，但在其根据报表数据馈送所基于的当前版本变为有效之前无法重新保存。 若要了解有关如何从报表中生成数据馈送的详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
 
-## 另请参阅
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>另请参阅
 
 [管理员提出警报的数据警报管理器](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
