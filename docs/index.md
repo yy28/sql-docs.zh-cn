@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 文档 | Microsoft 文档"
 description: "了解 SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
-ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
+ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
+ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/01/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">设计</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-drivers">与客户端应用程序连接</a></li>
+                                                    <li><a href="/sql/connect/sql-connection-libraries">与客户端应用程序连接</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">关系数据库概念</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">工具</h4>
