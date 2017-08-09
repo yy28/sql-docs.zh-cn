@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,10 +76,10 @@ ms.lasthandoff: 06/23/2017
 |11|登录有效，但服务器访问失败。 导致此错误的一个可能原因是：Windows 用户作为本地管理员组的成员有权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 Windows 没有提供管理员凭据。 若要连接，请使用“以管理员身份运行”选项启动连接程序，然后将 Windows 用户作为特定的登录名添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |12|登录是有效的登录，但服务器访问失败。|  
 |18|必须更改密码。|  
-|38, 46|找不到请求的用户的数据库。|
+|38、46|找不到用户请求的数据库。|
 |102 - 111|AAD 失败。|
-|122 - 124|由于空的用户名或密码导致的失败。|
-|126|由用户请求的数据库不存在。|
+|122 - 124|由于用户名或密码为空导致的失败。|
+|126|用户请求的数据库不存在。|
 |132 - 133|AAD 失败。|
   
 存在其他错误状态，并表示一个意外的内部处理错误。  

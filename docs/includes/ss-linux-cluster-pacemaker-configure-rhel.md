@@ -1,11 +1,11 @@
-3. 在所有群集节点，打开 Pacemaker 防火墙端口。 若要使用 `firewalld` 打开这些端口，请运行以下命令：
+3. 在所有群集节点上，打开 Pacemaker 防火墙端口。 若要使用 `firewalld` 打开这些端口，请运行以下命令：
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
    sudo firewall-cmd --reload
    ```
 
-   > 如果防火墙没有内置高可用性配置，则为 Pacemaker 打开以下端口。
+   > 如果防火墙没有内置高可用性配置，请打开 Pacemaker 的以下端口。
    >
    > * TCP：端口 2224、3121、21064
    > * UDP：端口 5405
@@ -22,7 +22,7 @@
    sudo passwd hacluster
    ```
 
-3. 要在重新启动后允许节点重新加入群集，请启用并启动 `pcsd` 服务和 Pacemaker。 在所有节点上运行以下命令。
+3. 若要在重启后允许节点重新加入群集，请启用并启动 `pcsd` 服务和 Pacemaker。 在所有节点上运行以下命令。
 
    ```bash
    sudo systemctl enable pcsd

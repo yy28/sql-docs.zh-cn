@@ -1,4 +1,4 @@
-2. 在所有群集节点，创建一个文件来存储 SQL Server 用户名和 Pacemaker 登录名的密码。 以下命令创建并填充此文件：
+2. 在所有群集节点上，创建一个文件来存储用于登录 Pacemaker 的 SQL Server 用户名和密码。 以下命令创建并填充此文件：
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. 在所有群集节点，打开 Pacemaker 防火墙端口。 若要使用 `firewalld` 打开这些端口，请运行以下命令：
+3. 在所有群集节点上，打开 Pacemaker 防火墙端口。 若要使用 `firewalld` 打开这些端口，请运行以下命令：
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability

@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/23/2017
   
     -   调整进程的内存配额的权限 (SeIncreaseQuotaPrivilege)  
   
-    -   从网络 (SeNetworkLogonRight) 访问此计算机的权限  
+    -   通过网络访问此计算机的权限 (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > 如果帐户不具有支持代理帐户所需的权限，则只有 **sysadmin** 固定服务器角色的成员才可创建作业。  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="common-tasks"></a>常见任务  
 **指定 SQL Server 代理服务的启动帐户**  
   
--   [为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [为 SQL Server 代理设置服务启动帐户&#40;SQL Server 配置管理器&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **指定 SQL Server 代理的邮件配置文件**  
   

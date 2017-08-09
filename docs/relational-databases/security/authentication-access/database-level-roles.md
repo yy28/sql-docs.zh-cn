@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="fixed-database-roles"></a>固定数据库角色
   
- 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 除**公共**不能更改数据库角色，分配给固定数据库角色的权限。   
+ 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外。   
   
 |固定数据库角色名|Description|  
 |-------------------------------|-----------------|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="working-with-r-services"></a>使用 R Services  
 
-**Applies to:** SQL Server starting with [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**适用于：** SQL Server（从 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 安装 R Services 时，其他数据库角色可用于管理包。 有关详细信息，请参阅 [SQL Server 的 R 包管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 

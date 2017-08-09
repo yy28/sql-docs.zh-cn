@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 配置列加密
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 
 使用脱机方法时，目标表（以及任何与目标表相关的表，例如，目标表与其具有外键关系的任何表）不可用于在操作期间写入事务。 使用脱机方法时，外键约束（**CHECK** 或 **NOCHECK**）的语义会始终保留。
 
-使用联机方法 (需要 SqlServer PowerShell 模块版本 21.x 或更高版本)，以增量方式执行的操作复制和加密、 解密或加密的数据。 应用程序可在数据移动操作中将数据写入到目标表或从中读取数据，除了最后一个迭代，其持续时间受到 **MaxDownTimeInSeconds** 参数（可自行定义）的限制。 为了检测和处理应用程序在复制数据时可能会做的更改，cmdlet 会在目标数据库中启用[“更改跟踪”](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。 默认情况下，外键约束在使用 **NOCHECK** 选项的情况下重新创建以最大限度地降低对应用程序的影响。 你可以通过指定 **KeepCheckForeignKeyConstraints** 选项强制保留外键约束的语义。
+使用联机方法时（需要 21.x 版或更高版本的 SqlServer PowerShell 模块），对数据进行复制和加密、解密或重新加密的操作是以增量方式执行的。 应用程序可在数据移动操作中将数据写入到目标表或从中读取数据，除了最后一个迭代，其持续时间受到 **MaxDownTimeInSeconds** 参数（可自行定义）的限制。 为了检测和处理应用程序在复制数据时可能会做的更改，cmdlet 会在目标数据库中启用[“更改跟踪”](../../track-changes/enable-and-disable-change-tracking-sql-server.md)。 正因如此，与脱机方法相比，联机方法有可能在服务器端上消耗的资源会更多。 使用联机方法的操作耗时也可能会更长，尤其是对数据库运行大量写入工作负荷时。 联机方法可用于一次加密一个表，该表必须具有一个主键。 默认情况下，外键约束在使用 **NOCHECK** 选项的情况下重新创建以最大限度地降低对应用程序的影响。 你可以通过指定 **KeepCheckForeignKeyConstraints** 选项强制保留外键约束的语义。
 
 下面是在脱机和联机方法之间进行选择的指导原则：
 
@@ -59,10 +59,10 @@ ms.lasthandoff: 06/23/2017
 
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库   
 ---|---|---|---
-步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 是 | 是
-步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 是 | 是
-步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 是
-步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 是 | 是
+步骤 1. 启动 PowerShell 环境并导入 SqlServer 模块。 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | “否” | “否”
+步骤 2. 连接到服务器和数据库 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | “否” | 是
+步骤 3. 如果列主密钥（保护要轮换的列加密密钥）存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | “否”
+步骤 4. 构造一组 SqlColumnEncryptionSettings 对象，每个对象对应一个要加密、重新加密或解密的数据库列。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 它用于指定列的目标加密方案。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | “否” | “否”
 步骤 5. 设置所需加密配置，该配置在之前的步骤中创建的一组 SqlColumnMasterKeySettings 对象中指定。 根据指定的目标设置和列的当前加密配置，将加密、重新加密或解密列。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步骤可能需要较长时间。 你的应用程序将无法通过整个操作或部分操作访问表，具体取决于你所选择的方法（联机或脱机）。 | 是 | 是
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>使用脱机方法加密列 - 示例

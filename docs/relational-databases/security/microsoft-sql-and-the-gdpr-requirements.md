@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SQL 和 GDPR 要求 |Microsoft 文档"
+title: "Microsoft SQL 和 GDPR 要求 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>增强的隐私和指南寻址 GDPR 要求与 Microsoft SQL 平台
+# <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>增强隐私和使用 Microsoft SQL 平台应对 GDPR 要求的指南
 
 
 ## <a name="summary"></a>摘要
-在 5 月 25 2018年上欧洲隐私法律是由于设置隐私权限、 安全性和符合性的新全局条就会生效。 常规数据保护法规或 GDPR，是从根本上有关保护和启用的隐私权的个人，并建立严格的全局隐私要求管理和保护，同时遵循单独选择用于控制如何个人数据。 
+欧盟的一项隐私法律将于 2018 年 5 月 25 日生效，其中针对隐私权、安全性和合规性设定了新的全球禁令。 《一般数据保护条例》(GDPR) 主要用于保护个人隐私权和促进此权利的行使，其中设定了严格的全球隐私要求，旨在监管个人数据的管理和保护方式，同时尊重个人选择。 
 
-受到 GDPR，是否管理基于云的 Microsoft SQL 客户或本地数据库或是两者，将需要确保限定其数据库系统中的数据是恰当处理和保护根据 GDPR 原则。 这意味着，许多客户需要查看或修改它们的数据库管理和数据处理过程，尤其将重点放在 GDPR 中的规定的数据处理的安全性。
+Microsoft SQL 客户需遵守 GDPR，无论他们管理基于云的数据库还是本地数据库或两者兼有，都需要确保根据 GDPR 原则对其数据库系统中的合格数据进行合理处理和保护。 这意味着，许多客户将需要评审或修改其数据库管理和数据处理过程，尤其要重点关注 GDPR 中所规定的数据处理安全性。
 
-Microsoft 基于 SQL 的技术还提供许多可帮助降低对数据的风险和改进的保护和可管理性数据在数据库级别和更高版本的内置安全功能。 本白皮书检查这些功能，并共享一些使用 Microsoft SQL 来实现数据隐私目标的 GDPR Microsoft 自己的方法。
+基于 Microsoft SQL 的技术提供了许多内置安全功能，可帮助降低数据的风险，同时在数据库级别及更高级别改进对数据的保护和可管理性。 本指南将检验这些功能，并分享一些 Microsoft 自己的方法，使用 Microsoft SQL 实现 GDPR 的数据隐私目标。
    
   
-**编写器：** Ronit Reger
+**作者：**Ronit Reger
 
-**技术审阅人员：** Conor Cunningham;Joachim Hammer;Shai Kariv;Julie Koesmarno;Alice Kupcik;Ron Matchoro;Gilad Mittelman;Dan Rediske;来访 Weisberg 
+**技术审阅人员：**Conor Cunningham、Joachim Hammer、Shai Kariv、Julie Koesmarno、Alice Kupcik、Ron Matchoro、Gilad Mittelman、Dan Rediske、Tomer Weisberg 
   
-**发布日期：** 2017 年 5 月 1 日  
+**发布时间：**2017 年 5 月  
   
-**适用于：** SQL Server （所有版本）、 Azure SQL 数据库、 Azure SQL 数据仓库、 Analytics Platform System 
+**适用于：**SQL Server（所有版本）、Azure SQL 数据库、Azure SQL 数据仓库、Analytics Platform System 
   
-若要查看该文档，请下载[指南增强隐私和寻址 GDPR 要求与 Microsoft SQL 平台](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf)文档。   
+若要查看该文档，请下载[增强隐私和使用 Microsoft SQL 平台应对 GDPR 要求的指南](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf)文档。   
 

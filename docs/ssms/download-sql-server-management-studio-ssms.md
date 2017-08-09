@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dcb3ee622bac9c70a235e1ff124f7041549825c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
@@ -75,15 +75,15 @@ SSMS 17.1 是对 SQL Server Management Studio 的 17.X 一代的首次更新。 
   
 ## <a name="supported-operating-systems"></a>受支持的操作系统
   
-此版本的 SSMS 在与最新可用的 Service Pack 一起使用时支持以下平台：   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7 (SP1)
+与最新可用的服务包一起使用时，此版本的 SSMS 支持以下 64 位平台：
+- Windows 10（64 位）
+- Windows 8.1（64 位）
+- Windows 8（64 位）
+- Windows 7 (SP1)（64 位）
 - Windows Server 2016
-- Windows Server 2012（64 位） 
-- Windows Server 2012 R2（64 位） 
-- Windows Server 2008 R2（64 位）  
+- Windows Server 2012 R2（64 位）
+- Windows Server 2012（64 位）
+- Windows Server 2008 R2（64 位）
 
 >[!NOTE]
 >SSMS 17.X 基于 Windows Server 2016 之前发布的 Visual Studio 2015 独立 shell。 Microsoft 非常重视应用兼容性，确保已发布的应用程序能在 Windows 最新版本上继续运行。 若要尽量减少在 Windows Server 2016 上运行 SSMS 时出现的问题，请确保 SSMS 已应用所有最新更新。 如果遇到与 Windows Server 2016 版 SSMS 有关的任何问题，请联系支持人员。 支持团队将确定问题是与 SSMS、Visual Studio 还是与 Windows 兼容性相关。 然后，支持团队将问题交接给相应的团队进行进一步调查。
@@ -111,10 +111,10 @@ SSMS 17.1 是对 SQL Server Management Studio 的 17.X 一代的首次更新。 
 此版本的 SSMS 可以安装在以下语言中：
 
 SQL Server Management Studio 17.1：<br>
-[中文（中华人民共和国）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 SQL Server Management Studio 17.1 升级包（将 17.0 升级到 17.1）：<br>
-[中文（中华人民共和国）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
 
 ## <a name="previous-releases"></a>以前的版本  
 [旧版 SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  

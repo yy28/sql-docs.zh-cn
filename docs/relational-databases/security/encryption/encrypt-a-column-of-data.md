@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
 
-要使用下面的示例必须具有数据库主密钥。 如果你的数据库已没有数据库主密钥，创建一个通过执行以下语句提供你的密码：   
+要使用下面的示例，必须具有数据库主密钥。 如果数据库目前没有数据库主密钥，可通过执行以下语句并提供密码来创建主密钥：   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-始终备份你的数据库主密钥。 有关数据库主密钥的详细信息，请参阅[CREATE MASTER KEY &#40;Transact SQL &#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+请始终备份数据库主密钥。 有关数据库主密钥的详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md)。
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
   

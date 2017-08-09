@@ -16,31 +16,31 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 12dfc255364a410de1ad5c75f3abf38155d6d70f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>在 PATH 模式下格式化嵌套 JSON 输出 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-若要维持对 **FOR JSON** 子句的输出的完全控制，请指定 **PATH** 选项。  
+若要保持对 FOR JSON 子句输出的完全控制，请指定 PATH 选项。  
   
-借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 结果的格式设置为 JSON 对象的数组。  
+借助**PATH** 模式，你可以创建包装器对象，并嵌套复杂属性。 结果会格式化为 JSON 对象数组。  
   
-替代方法是使用 **AUTO** 选项根据 **SELECT** 语句的结构自动格式化输出。
- -   有关 **AUTO** 选项的详细信息，请参阅[在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
+替代方法是使用 AUTO 选项根据 SELECT 语句的结构自动格式化输出。
+ -   有关 AUTO 选项的详细信息，请参阅[在 AUTO 模式下自动格式化 JSON 输出](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
  -   有关这两个选项的概述，请参阅[使用 FOR JSON 将查询结果格式化为 JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。
  
-下面的一些示例展示了如何使用 **PATH** 选项指定 **FOR JSON** 子句。 使用以点分隔的列名称或使用嵌套查询来格式化嵌套结果，如下面的示例所示。 默认情况下，**FOR JSON** 输出中不包括 null 值。  
+下面的一些示例展示了如何使用 **PATH** 选项指定 **FOR JSON** 子句。 使用以点分隔的列名称或使用嵌套查询来格式化嵌套结果，如下面的示例所示。 默认情况下，FOR JSON 输出中不包括 null 值。  
 
 ## <a name="example---dot-separated-column-names"></a>示例 - 以点分隔的列名称  
 以下查询将 AdventureWorks `Person` 表的前五行格式化为 JSON。  
 
-**FOR JSON PATH** 子句使用列别名或列名来确定 JSON 输出中的键名称。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
+FOR JSON PATH 子句使用列别名或列名来确定 JSON 输出中的键名称。 如果别名中包含点，则 PATH 选项将创建嵌套对象。  
 
- **查询**  
+ **Query**  
   
 ```sql  
 SELECT TOP 5   
@@ -89,9 +89,9 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>示例 - 多个表  
-如果查询中引用了多个表，则 **FOR JSON PATH** 将使用列的别名嵌套每个列。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
+如果查询中引用了多个表，FOR JSON PATH 将使用列别名嵌套每个列。 以下查询将为查询中联接的每个（OrderHeader，OrderDetails）对创建一个 JSON 对象。 
   
- **查询**  
+ **Query**  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
@@ -126,8 +126,8 @@ FOR JSON PATH
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
 
 ## <a name="see-also"></a>另请参阅  
  [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)  

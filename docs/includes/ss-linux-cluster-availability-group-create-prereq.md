@@ -6,25 +6,25 @@
 - 安装 SQL Server
 
 >[!NOTE]
->在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关分发特别说明，创建群集并将可用性组添加为群集资源，请参阅下面的链接[下一步行动](#next-steps)。
+>在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关在各种分发中创建群集并将可用性组添加为群集资源的特定说明，请参阅[后续步骤](#next-steps)中的链接。
 
-1. **更新每个主机的计算机名称**
+1. **更新每个主机的计算机名**
 
    每个 SQL Server 名称必须：
    
    - 不超过 15 个字符
    - 在网络中唯一
    
-   若要设置计算机名称，请编辑`/etc/hostname`。 以下脚本，可以编辑`/etc/hostname`与`vi`。
+   若要设置计算机名，请编辑 `/etc/hostname`。 以下脚本可使用 `vi` 编辑 `/etc/hostname`。
 
    ```bash
    sudo vi /etc/hostname
    ```
 
-1. **配置的主机文件**
+1. **配置主机文件**
 
 >[!NOTE]
->如果在 DNS 服务器中使用主机 IP 注册主机名，则无需执行以下步骤。 验证将属于可用性组配置的所有节点是否可以彼此通信（Ping 主机名应使用对应的 IP 地址答复）。 此外，请确保 /etc/hosts 文件不包含节点主机名映射到本地主机 IP 地址 127.0.0.1 的记录。
+>如果在 DNS 服务器中使用主机 IP 注册主机名，则无需执行以下步骤。 验证将属于可用性组配置的所有节点是否可以互相通信（Ping 主机名应使用对应的 IP 地址答复）。 此外，请确保 /etc/hosts 文件不包含节点主机名映射到本地主机 IP 地址 127.0.0.1 的记录。
 
 
    每个服务器上的主机文件包含将加入可用性组的所有服务器的 IP 地址和名称。 
@@ -35,13 +35,13 @@
    sudo ip addr show
    ```
 
-   更新`/etc/hosts`。 以下脚本，可以编辑`/etc/hosts`与`vi`。
+   更新 `/etc/hosts`。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   下面的示例显示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3。 本文档中，node1 指托管主要副本的服务器。 node2 和 node3 指托管次要副本的服务器。
+   下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3。 本文档中，node1 指托管主要副本的服务器。 node2 和 node3 指托管次要副本的服务器。
 
 
    ```
@@ -64,7 +64,7 @@
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>启用 AlwaysOn 可用性组，然后重新启动 sqlserver
 
-在每个托管 SQL Server 实例的节点上启用 AlwaysOn 可用性组，然后重启 `mssql-server`。  运行以下脚本：
+在每个托管 SQL Server 实例的节点上启用 Always On 可用性组，然后重启 `mssql-server`。  运行以下脚本：
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -73,18 +73,18 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>启用 AlwaysOn_health 事件会话 
 
-可选择性地启用 AlwaysOn 可用性组的扩展事件，在故障排查可用性组时帮助诊断根本原因。 在每个 SQL Server 实例上运行以下命令。 
+可选择性地启用 Always On 可用性组的扩展事件，以便在对可用性组进行故障排除时帮助诊断根本原因。 在每个 SQL Server 实例上运行以下命令。 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-有关此 XE 会话的详细信息，请参阅[始终在扩展事件](http://msdn.microsoft.com/library/dn135324.aspx)。
+有关此 XE 会话的详细信息，请参阅 [Always On 扩展事件](http://msdn.microsoft.com/library/dn135324.aspx)。
 
 ## <a name="create-db-mirroring-endpoint-user"></a>创建数据库镜像终结点用户
 
-以下 TRANSACT-SQL 脚本创建一个登录名`dbm_login`，和一个名为用户`dbm_user`。 使用强密码更新脚本。 在所有 SQL Server 实例上运行以下命令，创建数据库镜像终结点用户。
+以下 Transact-SQL 脚本将创建名为 `dbm_login` 的登录名和名为 `dbm_user` 的用户。 使用强密码更新脚本。 在所有 SQL Server 实例上运行以下命令，创建数据库镜像终结点用户。
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -108,9 +108,9 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-此时你主 SQL Server 副本具有在证书`/var/opt/mssql/data/dbm_certificate.cer`和私有密钥 at `var/opt/mssql/data/dbm_certificate.pvk`。 将这两个文件复制到所有要托管可用性副本的服务器上的同一位置。 使用 mssql 用户或为 mssql 用户授予权限，访问这些文件。 
+现在主 SQL Server 副本的证书位于 `/var/opt/mssql/data/dbm_certificate.cer`，私钥位于 `var/opt/mssql/data/dbm_certificate.pvk`。 将这两个文件复制到所有要托管可用性副本的服务器上的同一位置。 使用 mssql 用户或为 mssql 用户授予权限，访问这些文件。 
 
-例如在源服务器上，以下命令将文件复制到目标计算机。 替换 **<node2>** 值替换为将承载副本的 SQL Server 实例的名称。 
+例如，在源服务器上，以下命令可将文件复制到目标计算机。 将 <node2> 值替换为要托管副本的 SQL Server 实例的名称。 
 
 ```bash
 cd /var/opt/mssql/data
@@ -143,12 +143,12 @@ CREATE CERTIFICATE dbm_certificate
 
 数据库镜像端点使用传输控制协议 (TCP) 在参与数据库镜像会话或承载可用性副本的服务器实例之间发送和接收消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。 
 
-以下 TRANSACT-SQL 创建名为的侦听终结点`Hadr_endpoint`为可用性组。 它启动终结点，并向创建的用户授予连接权限。 在运行该脚本之前，将之间的值`**< ... >**`。
+以下 Transact-SQL 将为可用性组创建名为 `Hadr_endpoint` 的侦听终结点。 它启动终结点，并向创建的用户授予连接权限。 在运行该脚本之前，替换 `**< ... >**` 之内的值。
 
 >[!NOTE]
 >对于此版本，请不要为侦听器 IP 使用不同的 IP 地址。 我们正在修复此问题，当前唯一可接受的值是“0.0.0.0”。
 
-更新所有 SQL Server 实例上有关您环境以下 TRANSACT-SQL: 
+为所有 SQL Server 实例上的环境更新以下 Transact-SQL： 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]

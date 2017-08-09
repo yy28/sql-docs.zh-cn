@@ -20,32 +20,32 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>使用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server)
+# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>用 OPENJSON (SQL Server) 将 JSON 数据转换为行和列
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** 行集函数可将 JSON 文本转换为一组行和列。 使用 OPENJSON 将 JSON 集合转换为行集后，可以在返回的数据上运行任意 SQL 查询或将其插入到 SQL Server 表中。 
   
 **OPENJSON** 函数采用单个 JSON 对象或 JSON 对象的集合，并将其转换为一行或多行。 OPENJSON 函数默认返回以下数据：
--   从 JSON 对象，该函数返回在第一个级别找到的所有“键:值”对。
--   从 JSON 数组，该函数返回该数组的所有元素及其索引。  
+-   从 JSON 对象中，该函数返回在第一个级别找到的所有“键:值”对。
+-   从 JSON 数组中，该函数返回数组的所有元素及其索引。  
 
 可以添加可选的 WITH 子句来提供显式定义输出结构的架构。  
   
 ## <a name="option-1---openjson-with-the-default-output"></a>选项 1 - 具有默认输出的 OPENJSON
-在不提供结果的显式架构的情况下使用 OPENJSON 函数时（即，在 OPENJSON 的后面不使用 WITH 子句），该函数将返回包含以下三列的表：
+在不提供结果的显式架构的情况下使用 OPENJSON 函数时（即，在 OPENJSON 之后不使用 WITH 子句），该函数将返回包含以下三列的表：
 1.  输入对象中属性的名称（或输入数组中元素的索引）。
 2.  属性或数组元素的值。
 3.  类型（例如，字符串、数字、布尔值、数组或对象）。
 
-OPENJSON 将 JSON 对象的每个属性或数组的每个元素作为单独的行返回。  
+OPENJSON 以单独的行返回 JSON 对象的每个属性或数组的每个元素。  
 
-下面是使用具有默认架构（即不包含可选的 WITH 子句）的 OPENJSON 的快捷示例，该示例为显示 JSON 对象的每个属性返回一行。  
+下面是使用具有默认架构（即不包含可选的 WITH 子句）的 OPENJSON 的快捷示例，该示例为 JSON 对象的每个属性返回一行。  
  
 **示例**
 ```sql  
@@ -136,7 +136,7 @@ WITH (
 
 有关语法和用法的信息，请参阅 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)下可用。
 
-## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON 需要兼容级别 130
+## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON 要求兼容性级别 130
 **OPENJSON** 函数仅在 **兼容级别 130**下可用。 如果数据库兼容级别低于 130，SQL Server 将无法找到并运行 OPENJSON 函数。 其他内置 JSON 函数在所有兼容级别均可用。
 
 可以在 `sys.databases` 视图或数据库属性中查看兼容级别。
@@ -144,8 +144,8 @@ WITH (
 可以使用以下命令更改数据库的兼容级别：   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另请参阅  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

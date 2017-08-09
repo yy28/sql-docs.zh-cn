@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在**对象资源管理器**，查找从中想要删除列，并展开公开的列名称的表。 
+2.  在“对象资源管理器”中，找到要从其中删除列的表，然后将其展开以公开列名称。 
 
-3.  右键单击你想要删除，并且选择的列**删除**。  
+3.  右键单击要删除的列，然后选择“删除”。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   

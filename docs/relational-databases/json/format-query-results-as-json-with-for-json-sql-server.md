@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 将查询结果格式化为 JSON (SQL Server)
@@ -33,13 +33,13 @@ ms.lasthandoff: 07/20/2017
   
  使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出。  
   
--   使用 FOR JSON PATH 来维护对 JSON 输出格式的完全控制。 你可以创建包装对象并嵌套复杂属性。  
+-   使用 FOR JSON PATH 来保持对 JSON 输出格式的完全控制。 你可以创建包装对象并嵌套复杂属性。  
   
 -   使用 FOR JSON AUTO 来根据 SELECT 语句的结构自动格式化 JSON 输出。  
   
 下面是带有 **FOR JSON** 子句的 **SELECT** 语句及其输出的示例。
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![对于 JSON](../../relational-databases/json/media/jsonslides2forjson.png "对于 JSON")  
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>选项 1 - 使用 FOR JSON PATH 控制输出
 在 **PATH** 模式下，可以使用点语法来设置嵌套的输出格式，例如 `'Item.Price'` 。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/20/2017
  ![FOR JSON 输出流的图示](../../relational-databases/json/media/forjson-example1.png "FOR JSON 输出流的图示")  
 
 ### <a name="more-info-about-for-json-path"></a>有关 FOR JSON PATH 的详细信息
-有关详细信息和示例，请参阅[使用 PATH 模式 &#40; 格式化嵌套 JSON 输出SQL server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+有关详细信息和示例，请参阅[在 PATH 模式下格式化嵌套的 JSON 输出 (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
 
 有关语法和用法的详细信息，请参阅 [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)。  
 
@@ -80,42 +80,42 @@ FOR JSON AUTO
 ```
  
 ### <a name="more-info-about-for-json-auto"></a>有关 FOR JSON AUTO 的详细信息
-有关详细信息和示例，请参阅[格式自动设置 JSON 输出使用 AUTO 模式 &#40;SQL server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
+有关详细信息和示例，请参阅[在 AUTO 模式下自动格式化 JSON 输出 (SQL Server)](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)。
 
 有关语法和用法的详细信息，请参阅 [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)。  
   
 ## <a name="control-other-json-output-options"></a>控制其他 JSON 输出选项  
-控制的输出**FOR JSON**子句通过使用以下附加选项。  
+使用以下附加选项控制 FOR JSON 子句的输出。  
   
--   **根**。 若要将单个顶层元素添加到 JSON 输出中，请指定 **ROOT** 选项。 如果未指定此选项，JSON 输出不会包括根元素。 有关详细信息，请参阅 [使用 ROOT 选项将根节点添加到 JSON 输出中 (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
+-   ROOT。 若要将单个顶层元素添加到 JSON 输出中，请指定 **ROOT** 选项。 如果没有指定此选项，JSON 输出不会包括根元素。 有关详细信息，请参阅 [使用 ROOT 选项将根节点添加到 JSON 输出中 (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
--   **INCLUDE_NULL_VALUES**。 若要在 JSON 输出中包含 null 值，请指定 **INCLUDE_NULL_VALUES** 选项。 如果未指定此选项，输出不包括在查询结果中的 NULL 值的 JSON 属性。 有关详细信息，请参阅[使用 INCLUDE_NULL_VALUES 选项 &#40; 的 JSON 输出中包括 Null 值SQL server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
+-   INCLUDE_NULL_VALUES。 若要在 JSON 输出中包含 null 值，请指定 **INCLUDE_NULL_VALUES** 选项。 如果没有指定此选项，输出不会在查询结果中包括 NULL 值的 JSON 属性。 有关详细信息，请参阅[使用 INCLUDE_NULL_VALUES 选项将 NULL 值包含在 JSON 输出中 (SQL Server)](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)。   
 
--   **WITHOUT_ARRAY_WRAPPER**。 若要删除默认括住 **FOR JSON** 子句的 JSON 输出的方括号，请指定 **WITHOUT_ARRAY_WRAPPER** 选项。 此选项用于作为从单行结果的输出中生成单个 JSON 对象。 如果未指定此选项，JSON 输出格式化为数组-即括在方括号中。 有关详细信息，请参阅 [使用 WITHOUT_ARRAY_WRAPPER 选项从 JSON 输出中删除方括号 (SQL Server)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。 
+-   WITHOUT_ARRAY_WRAPPER。 若要删除默认括住 **FOR JSON** 子句的 JSON 输出的方括号，请指定 **WITHOUT_ARRAY_WRAPPER** 选项。 使用此选项可以生成单个 JSON 对象作为单行结果中的输出。 如果不指定此选项，JSON 输出将格式化为数组 - 即括在方括号内。 有关详细信息，请参阅 [使用 WITHOUT_ARRAY_WRAPPER 选项从 JSON 输出中删除方括号 (SQL Server)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md)。 
    
 ## <a name="output-of-the-for-json-clause"></a>FOR JSON 子句的输出  
 FOR JSON 子句的输出具有以下特征：  
   
 1.  结果集包含单个列。
     -   一个小结果集可包含单个列。
-    -   一个大型结果集将长的 JSON 字符串拆分跨多行。
-        -   默认情况下，SQL Server Management Studio (SSMS) 连接结果为单个行的输出设置时**结果显示为网格**。 SSMS 状态栏会显示的实际行计数。
-        -   其他客户端应用程序可能需要代码通过串联多个行的内容来将较长的结果重新组合为单个有效的 JSON 字符串。 此代码在 C# 应用程序的示例，请参阅[在 C# 客户端应用中的使用 FOR JSON 输出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
+    -   一个大结果集可将长 JSON 字符串拆分到多行中。
+        -   默认情况下，输出设置为“以网格显示结果”时，SQL Server Management Studio (SSMS) 会将结果连接到单个行中。 SSMS 状态栏会显示实际行数。
+        -   其他客户端应用程序可能需要使用代码，通过串联多个行的内容来将较长的结果重新组合为单个有效的 JSON 字符串。 有关 C# 应用程序中此代码的示例，请参阅[在 C# 客户端应用中使用 FOR JSON 输出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
   
      ![FOR JSON 输出示例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 输出示例")  
   
-2.  结果的格式设置为 JSON 对象的数组。  
+2.  结果会格式化为 JSON 对象数组。  
   
-    -   （在应用 FOR JSON 子句） 之前的 JSON 数组中的元素数等于 SELECT 语句的结果中的行数。 
+    -   JSON 数组中的元素数量等于 SELECT 语句结果中的行数（应用 FOR JSON 子句前）。 
   
-    -   选择语句 （在应用 FOR JSON 子句） 之前的结果中的每一行将成为一个单独的 JSON 对象数组中。  
+    -   SELECT 语句结果中的每一行（应用 FOR JSON 子句前）将成为数组中的单独 JSON 对象。  
   
-    -   （在之前应用子句，FOR JSON) 的 SELECT 语句的结果中每个列将成为 JSON 对象的属性。  
+    -   SELECT 语句结果中的每一列（应用 FOR JSON 子句前）将成为 JSON 对象的属性。  
   
 3.  列的名称及其值都会根据 JSON 语法进行转义。 有关详细信息，请参阅 [FOR JSON 如何转义特殊字符和控制字符 (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)。
   
 ### <a name="example"></a>示例
-下面是一个示例，演示如何**FOR JSON**子句的 JSON 输出格式设置。  
+下面是演示 FOR JSON 子句如何格式化 JSON 输出的示例。  
   
 **查询结果**  
   
@@ -147,15 +147,15 @@ FOR JSON 子句的输出具有以下特征：
 }] 
 ```  
 
- 有关 **FOR JSON** 子句的输出内容的详细信息，请参阅以下主题。  
+ 有关 FOR JSON 子句的输出内容的详细信息，请参阅以下主题。  
 -   [FOR JSON 如何将 SQL Server 数据类型转换为 JSON 数据类型 (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
 **FOR JSON** 子句使用本主题中所述的规则在 JSON 输出中将 SQL 数据类型转换为 JSON 类型。  
 
 -   [FOR JSON 如何转义特殊字符和控制字符 (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
  **FOR JSON** 子句按照本主题所述的方式在 JSON 输出中转义特殊字符和表示控制字符。  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解有关内置 JSON 支持在 SQL Server 中的详细信息  
-对于大量的特定解决方案，使用情况和建议，请参阅[博客文章有关内置 JSON 支持](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)在 SQL Server 和 Azure SQL Database: Microsoft 项目经理 Jovan Popovic 中。
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
+若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
   
 ## <a name="see-also"></a>另请参阅  
  [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)   

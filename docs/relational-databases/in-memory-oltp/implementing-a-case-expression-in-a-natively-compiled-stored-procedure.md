@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 CASE 表达式
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-  本机编译存储过程支持 CASE 表达式。 下面的示例演示了如何在查询中使用 CASE 表达式。 将不再需要的本机编译模块中的 CASE 表达式描述的解决方法。
+  本机编译的存储过程中支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 将不再需要本机编译模块中针对 CASE 表达式所介绍的解决方法。
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.

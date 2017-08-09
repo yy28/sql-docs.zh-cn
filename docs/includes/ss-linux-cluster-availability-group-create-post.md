@@ -1,7 +1,7 @@
 
 ## <a name="add-a-database-to-the-availability-group"></a>将数据库添加到可用性组
 
-确保要添加到可用性组的数据库处于完全恢复模式，并具有有效的日志备份。 如果是测试数据库或新建的数据库，请执行数据库备份。 在主 SQL 服务器上，运行以下 TRANSACT-SQL 创建和调用将数据库备份`db1`。
+确保要添加到可用性组的数据库处于完全恢复模式，并具有有效的日志备份。 如果是测试数据库或新建的数据库，请执行数据库备份。 在主 SQL Server 上，运行以下 Transact-SQL，创建名为 `db1` 的数据库并进行备份。
 
 ```Transact-SQL
 CREATE DATABASE [db1];
@@ -10,7 +10,7 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-在主 SQL Server 副本上，运行以下 TRANSACT-SQL 将添加一个名为数据库`db1`到可用性组调用`ag1`。
+在主 SQL Server 副本上，运行以下 Transact-SQL，将名为 `db1` 的数据库添加到名为 `ag1` 的可用性组。
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
@@ -18,7 +18,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 ### <a name="verify-that-the-database-is-created-on-the-secondary-servers"></a>验证是否已在辅助服务器上创建了数据库
 
-在每个辅助 SQL Server 副本上，运行以下查询以查看是否`db1`数据库已创建，并且已同步。
+在每个次要 SQL Server 副本上，运行以下查询，查看是否已创建并同步 `db1` 数据库。
 
 ```Transact-SQL
 SELECT * FROM sys.databases WHERE name = 'db1';

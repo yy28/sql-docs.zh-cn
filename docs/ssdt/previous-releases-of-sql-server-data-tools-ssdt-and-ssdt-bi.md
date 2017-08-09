@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库
 SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](https://msdn.microsoft.com/library/mt204009.aspx) 来设计和部署在较早版本 SQL Server 上运行的数据库、模型、报表和包。  
   
 > [!NOTE]  
-> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只是添加了缺少的模板。  
+> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只会添加缺少的模板。  
 
 ## <a name="recent-downloads"></a>最近下载
 
@@ -41,7 +41,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](https:/
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
 |16.4.1|[SSDT for VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT for VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
-\* SSDT支持 Visual Studio 的两个最新版本。 随着 Visual Studio 2017 的发布，将不再更新 SSDT for VS2013。 有关其他信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分。
+\* SSDT支持两个最新版本的 Visual Studio。 随着 Visual Studio 2017 的发布，将不再更新 SSDT for VS2013。 有关其他信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分。
 
   
 ## <a name="links-to-download-pages"></a>下载页面的链接  
@@ -75,6 +75,6 @@ Business Intelligence Development Studio (BIDS) 通过 SQL Server 安装程序�
   
 ## <a name="see-also"></a>另请参阅  
 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[下载 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
   
 
