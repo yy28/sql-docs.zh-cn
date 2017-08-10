@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 处理任务编辑器 & #40;常规页 & #41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
+ [Analysis Services 处理任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
  [Analysis Services 执行 DDL 任务](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
   

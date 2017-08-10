@@ -70,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[创建元素 (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
-|**子元素**|[索引 & #40; DTA & #41; 的名称元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
+|**子元素**|[索引 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[使用用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  

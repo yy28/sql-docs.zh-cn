@@ -45,8 +45,8 @@ ms.lasthandoff: 08/02/2017
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有多个设置可以影响通知。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [通知 & #40;Master Data Services & #41;](../master-data-services/notifications-master-data-services.md)   
+ [通知 &#40;Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)   
  [电子邮件通知故障排除 (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
- [配置业务规则以发送通知 & #40;Master Data Services & #41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [配置业务规则以发送通知 &#40;Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   
