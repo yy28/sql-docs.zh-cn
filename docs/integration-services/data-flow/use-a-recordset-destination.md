@@ -1,25 +1,30 @@
 ---
-title: "使用记录集目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "记录集目标"
+title: "使用记录集目标 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 使用记录集目标
-  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 **Object** 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
+# <a name="use-a-recordset-destination"></a>使用记录集目标
+  记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **的** 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
   
  可以在很多不同情况下使用记录集目标。 下面是一些示例：  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  以下各节首先介绍使用记录集目标的一般过程，然后介绍如何使用目标的特定示例。  
   
-## 使用记录集目标的一般步骤  
+## <a name="general-steps-to-using-a-recordset-destination"></a>使用记录集目标的一般步骤  
  以下过程总结了将数据保存到记录集目标然后使用 Foreach 循环容器来处理每行所需的步骤。  
   
-#### 将数据保存到记录集目标，然后使用 Foreach 循环容器来处理每行  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>将数据保存到记录集目标，然后使用 Foreach 循环容器来处理每行  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，创建或打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
@@ -56,10 +61,10 @@ caps.handback.revision: 11
   
 8.  在 Foreach 循环容器中，添加并配置任务以通过从变量读取值来每次处理记录集的一行。  
   
-## 使用记录集目标的示例  
+## <a name="example-of-using-the-recordset-destination"></a>使用记录集目标的示例  
  在以下示例中，数据流任务将有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 雇员的信息从 Sales.SalesPerson 表加载到记录集目标中。 然后，Foreach 循环容器每次读取一行数据，并调用发送邮件任务。 发送邮件任务使用表达式将有关奖金额的自定义电子邮件发送给每位销售人员。  
   
-#### 创建项目和配置变量  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>创建项目和配置变量  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，创建新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          **Bonus** 变量保存销售人员的奖金额。  
   
-#### 配置连接管理器  
+#### <a name="to-configure-the-connection-managers"></a>配置连接管理器  
   
 1.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“连接管理器”区域中，添加并配置连接到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的新 OLE DB 连接管理器。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 11
   
      Foreach 循环容器中的发送邮件任务将使用此连接管理器来发送电子邮件。  
   
-#### 配置数据流和记录集目标  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>配置数据流和记录集目标  
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，将数据流任务添加到设计图面中。  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 11
         ```  
   
         > [!NOTE]  
-        >  必须先将 Bonus 列中 **currency** 值转换为 **float** 类型，然后才可以将该值加载到类型为 **Double** 的包变量中。  
+        >  必须先将 Bonus 列中 **currency** 值转换为 **float** 类型，然后才可以将该值加载到类型为 **Double**的包变量中。  
   
 4.  在 **“数据流”** 选项卡上，添加记录集目标，并在 OLE DB 源之后连接该目标。  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  在 **“输入列”** 选项卡上，选择所有三个可用列。  
   
-#### 配置 Foreach 循环容器并运行包  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>配置 Foreach 循环容器并运行包  
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，添加 Foreach 循环容器，并在数据流任务之后连接该容器。  
   
@@ -170,6 +175,6 @@ caps.handback.revision: 11
   
 7.  运行包。  
   
-     如果已经指定有效的 SMTP 服务器并提供了自己的电子邮件地址，则对于由发送邮件任务发送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中的虚构销售人员的邮件，您将收到关于无法投递的回执。  
+     如果已经指定有效的 SMTP 服务器并提供了自己的电子邮件地址，则对于由发送邮件任务发送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]中的虚构销售人员的邮件，您将收到关于无法投递的回执。  
   
   

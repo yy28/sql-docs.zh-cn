@@ -1,37 +1,42 @@
 ---
-title: "模糊分组转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtrans.f1"
-helpviewer_keywords: 
-  - "清除数据"
-  - "比较数据"
-  - "标记分隔符 [Integration Services]"
-  - "临时索引 [Integration Services]"
-  - "模糊分组转换"
-  - "临时表 [Integration Services]"
-  - "对数据进行分组"
-  - "标准化数据 [Integration Services]"
-  - "列 [Integration Services], 标准化"
-  - "相似性阈值 [Integration Services]"
-  - "数据清除 [Integration Services]"
-  - "重复的数据 [Integration Services]"
+title: "模糊分组转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- Fuzzy Grouping transformation
+- temporary tables [Integration Services]
+- grouping data
+- standardizing data [Integration Services]
+- columns [Integration Services], standardizing
+- similarity thresholds [Integration Services]
+- data cleaning [Integration Services]
+- duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 模糊分组转换
+# <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 58
   
 -   **_key_in**，唯一标识每行的列。  
   
--   **_key_out**，标识一组重复行的列。 在规范数据行中，**_key_out** 列的值就是 **_key_in** 列。 **_key_out** 中的值相同的行属于同一个组。 组的 **_key_out** 值对应于规范数据行中 **_key_in** 值。  
+-   **_key_out**，标识一组重复行的列。 在规范数据行中， **_key_out** 列的值就是 **_key_in** 列。 **_key_out** 中的值相同的行属于同一个组。 组的 **_key_out**值对应于规范数据行中 **_key_in** 值。  
   
 -   **_score**，一个介于 0 和 1 之间的值，指示输入行与规范行之间的相似性。  
   
@@ -67,17 +72,17 @@ caps.handback.revision: 58
   
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
-## 行比较  
- 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 Exhaustive 属性设置为 **true**，则该转换会将输入中的每一行与输入中所有其他行一一进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 为了避免性能问题，最好在包的开发过程中将 Exhaustive 属性设置为 **true**。  
+## <a name="row-comparison"></a>行比较  
+ 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 Exhaustive 属性设置为 **true**，则该转换会将输入中的每一行与输入中所有其他行一一进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 为了避免性能问题，最好在包的开发过程中将 Exhaustive 属性设置为 **true** 。  
   
-## 临时表和索引  
+## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊分组转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引，这些表和索引可能会非常大。 表和索引的大小与转换输入中的行数和模糊分组转换所创建的标记数成比例。  
   
- 该转换也会查询这些临时表。 因此，应该考虑将模糊分组转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  
+ 该转换也会查询这些临时表。 因此，应该考虑将模糊分组转换连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的非生产实例中，在生产服务器只有有限的可用磁盘空间时，尤其应该如此。  
   
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。  
   
-## 配置模糊分组转换  
+## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>配置模糊分组转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“模糊分组转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
@@ -90,18 +95,18 @@ caps.handback.revision: 58
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  有关如何设置此任务的属性的详细信息，请单击下列主题之一：  
   
 -   [使用模糊分组转换标识相似数据行](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

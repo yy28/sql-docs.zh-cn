@@ -1,29 +1,34 @@
 ---
-title: "在跟踪中筛选服务器进程 ID (SPID) (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "筛选器 [SQL Server], 跟踪"
-  - "筛选器 [SQL Server], SPID"
-  - "跟踪 [SQL Server], 筛选器"
+title: "在跟踪 （SQL Server 事件探查器） 中筛选服务器进程 Id (Spid) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], traces
+- filters [SQL Server], SPIDs
+- traces [SQL Server], filters
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33c0ad1e5302b48f1a77070f1f967f07d15b1fdb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在跟踪中筛选服务器进程 ID (SPID) (SQL Server Profiler)
+# <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>在跟踪中筛选服务器进程 ID (SPID) (SQL Server Profiler)
   本主题说明了如何通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中筛选服务器进程标识符 (SPID)。  
   
-### 在跟踪中筛选系统 ID  
+### <a name="to-filter-system-ids-in-a-trace"></a>在跟踪中筛选系统 ID  
   
 1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 25
   
 6.  在 **“编辑筛选器”** 对话框中，展开相应的比较运算符，输入 SPID 作为比较的值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
