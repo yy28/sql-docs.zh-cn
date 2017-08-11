@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools 中的部署和版本支持 (SSRS)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath 是一个生成属性，它标识用于存储在报表生成验证、部署和预览过程中使用的报表定义的文件夹路径。  
   
--   ErrorLevel 是一个生成属性，它标识报告为错误的生成问题的严重性。 严重级别小于或等于 ErrorLevel 的值的问题将报告为错误；否则，将问题报告为警告。 有关详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的“报表验证和错误级别”一节。  
+-   ErrorLevel 是一个生成属性，它标识报告为错误的生成问题的严重性。 严重级别小于或等于 ErrorLevel 的值的问题将报告为错误；否则，将问题报告为警告。 有关详细信息，请参阅中的"报表验证和错误级别"部分[设计报表使用报表设计器 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion 是一个部署属性，它标识安装在目标报表服务器（在 TargetServerURL 属性中指定）上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的预期版本。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表服务器项目，32 位开发环境不是在上运行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-基于计算机和上未安装[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-基于服务器。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
   
  下表说明了可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作和发布报表的支持版本。  
   

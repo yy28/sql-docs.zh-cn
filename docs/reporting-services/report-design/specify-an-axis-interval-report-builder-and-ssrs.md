@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
@@ -44,11 +44,11 @@ ms.lasthandoff: 06/22/2017
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  右键单击类别轴，然后单击“水平轴属性”。   
+1.  右键单击类别轴，然后单击**水平轴属性**。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“1”，以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
+2.  在**水平轴属性**对话框 >**轴选项**选项卡上，设置**间隔**到**1**以显示每个类别组标签。 若要在 x 轴上显示所有其他类别组标签，请键入 **2**。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
 
 1.  在报表设计视图中，单击图表，然后选择水平轴标签。
 
-3. 在“属性”窗格中，将 LabelInterval 设置为“1”。
+3. 在属性窗格中，设置为 LabelInterval **1**。
 
     ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
@@ -83,19 +83,19 @@ ms.lasthandoff: 06/22/2017
 
 默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将轴间隔设置为“自动”。 此过程说明如何将其设置回默认值。 
   
-1.  右键单击要更改的图表轴，然后单击“轴属性”。 
+1.  右键单击要更改的图表轴，然后单击 **“轴属性”**。 
   
-2.  在“水平轴属性”对话框 >“轴选项”选项卡中，将“间隔”设置为“自动”。 该图表将显示适合该轴的最佳类别标签数。  
+2.  在**水平轴属性**对话框 >**轴选项**选项卡上，设置**间隔**到**自动**。 该图表将显示适合该轴的最佳类别标签数。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式设置数据点上的图表 （报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [数据区域 （报表生成器和 SSRS） 中的数据进行排序](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [“轴属性”对话框 -&gt;“轴选项”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [指定对数刻度（报表生成器和 SSRS）](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [在辅助轴上绘制数据（报表生成器和 SSRS）](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [轴属性对话框中，轴选项 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [指定对数刻度 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [绘制辅助轴 &#40; 上的数据报表生成器和 SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

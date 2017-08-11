@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>图表效果的三维、 凹凸效果，和其他 （报表生成器）
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  可以将三维效果应用于单个图表，还可以在同一报表中同时显示二维和三维图表。  
   
- 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅 [向图表添加三维效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)。  
+ 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅[将三维效果添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  为图表增添视觉影响的另外一种方法是在条形图、柱形图、饼图和圆环图中添加凹凸效果、阳文和纹理样式。 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)。     
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  选择图表区时，您可以通过在“属性”窗格中 Area3Dstyle 下出现的 **“明暗度”** 属性，为三维图表添加突出显示样式。 简单的照明样式会对图表区元素应用相同的色调。 真实样式会根据指定的照明角度，更改图表区元素的色调。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [向图表添加三维效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [在图表 &#40; 的格式设置轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [将三维效果添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  若要以自由格式布局显示重复的文本，创建一个列表数据区域，然后将文本框置于其中。 如果想对多个值重复某窗体，例如为每个客户重复一次客户发票窗体，请使用列表。 阅读有关 [创建带有列表的发票和表单](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)的详细信息。  
   
- 如果想控制文本框布局和最后一个文本框下面的空白，请使用矩形容器。 有关详细信息，请参阅[矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)。  
+ 如果想控制文本框布局和最后一个文本框下面的空白，请使用矩形容器。 有关详细信息，请参阅[矩形和线条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  文本框中的表达式可以包含文字文本、指向数据库中的字段或用来计算数据。 所有表达式都显示为占位符文本，这样您就可以设置数字、颜色以及其他外观属性的格式。 您还可以在同一文本框中将占位符与文字文本合并在一起。  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [格式设置数字和日期 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

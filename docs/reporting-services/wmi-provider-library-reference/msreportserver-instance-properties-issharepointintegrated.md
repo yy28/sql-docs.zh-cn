@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4a86ce7dbb8336aaa70cb2f93debe5dd7f9f70f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="msreportserverinstance-properties---issharepointintegrated"></a>MSReportServer_Instance 属性-IsSharePointIntegrated
@@ -41,7 +41,7 @@ public Boolean IsSharePointIntegrated;
  一个 **Boolean** 值，指示报表服务器是否处于 SharePoint 集成模式。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_Instance 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)   

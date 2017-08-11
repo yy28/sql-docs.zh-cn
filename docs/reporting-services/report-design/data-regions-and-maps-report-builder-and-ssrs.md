@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>数据区域和地图（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>表  
- “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关向报表添加表的信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
+ “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关将表添加到报表的信息，请参阅[表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>矩阵  
  “矩阵”也称为交叉表。 矩阵数据区域包含动态列和行，它们都可以扩展以容纳数据。 矩阵可以具有动态列和行及静态列和行。 列或行可以包含其他列或行，并且可用于对数据进行分组。 阅读有关 [向报表添加矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)的详细信息。  
@@ -54,10 +54,10 @@ ms.lasthandoff: 06/22/2017
  您可以在报表中添加多个数据区域。 数据区域会扩大以容纳它们链接到的报表数据集数据。 例如，在显示每个产品的销售额的矩阵中，有一个按产品名的行组，和一个按年份的列组。 当您运行报表时，矩阵按每种产品纵向展开页面，按年份横向展开页面。 放置在报表设计图面上矩阵旁边的图表显示在呈现的报表中展开的矩阵的旁边。 数据区域在页面上的呈现方式遵循一组规则，这些规则基于报表的输出格式。 例如，若要帮助控制图表和矩阵在页面上的呈现方式，可以将矩形用作容器或在一个列表中同时嵌套两个数据区域。 有关详细信息，请参阅 [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)保存。  
   
 ## <a name="nested-data-regions"></a>嵌套的数据区域  
- 可以将数据区域嵌套在其他数据区域内。 例如，如果要在数据库中为每个销售人员创建一条销售记录，则可以使用文本框和图像创建一个列表，以显示雇员的有关信息，然后在列表中添加表和图表数据区域来显示该雇员的销售记录。 有关详细信息，请参阅[嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
+ 可以将数据区域嵌套在其他数据区域内。 例如，如果要在数据库中为每个销售人员创建一条销售记录，则可以使用文本框和图像创建一个列表，以显示雇员的有关信息，然后在列表中添加表和图表数据区域来显示该雇员的销售记录。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)。  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>链接到同一数据集的多个数据区域  
- 可以将多个数据区域链接到同一数据集以提供相同数据的不同视图。 例如，您可以在表和图表中显示相同的数据。 可以创作报表以在表中提供交互式排序按钮，这样，在对表进行排序时，图表也会自动进行排序。 有关详细信息，请参阅[将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+ 可以将多个数据区域链接到同一数据集以提供相同数据的不同视图。 例如，您可以在表和图表中显示相同的数据。 可以创作报表以在表中提供交互式排序按钮，这样，在对表进行排序时，图表也会自动进行排序。 有关详细信息，请参阅 [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
 ## <a name="data-for-a-data-region"></a>数据区域的数据  
  每个 Tablix、图表和仪表都设计为显示单个数据集中的数据。 地图显示来自相同或不同数据集的空间数据和分析数据。 还可以通过以下方式，包括未链接到数据区域的数据集中的值：  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [页面布局和呈现 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

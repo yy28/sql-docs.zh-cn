@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 4.  选择计划，并单击 **“暂停所选计划”** 或 **“运行所选计划”**。 如果计划当前已暂停， **“状态”** 列将包含 **“已暂停”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [“计划”](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [更改报表服务器上的时区和时钟设置](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [计划](../../reporting-services/subscriptions/schedules.md)   
+ [创建、 修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [更改时区和报表服务器上的时钟设置](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [管理正在运行的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

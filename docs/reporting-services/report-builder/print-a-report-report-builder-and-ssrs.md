@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  在设计模式或运行模式下不会显示打印边距。 报表的设计图面区域和打印区域之间没有任何关系。 若要在运行模式下查看打印边距，请在功能区的 **“运行”** 选项卡上单击“打印布局”。  
   
- 有关报表分页的详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ 有关报表分页的详细信息，请参阅[Reporting Services &#40; 中的分页方式报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,9 +49,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  在“主文件夹”选项卡上，单击 **“运行”**。  
   
-3.  （可选）单击“打印布局”以查看报表打印时的显示形式。  
+3.  （可选）单击**打印布局**若要查看报表的打印。  
   
-4.  （可选）单击“页面设置”以设置纸张、方向和边距。  
+4.  （可选）单击**页面设置**设置纸张、 方向和边距。  
   
     > [!NOTE]  
     >  以上各项的默认值均源自在“设计”视图中设置的报表属性。 此处您在 **“页面设置”** 对话框中所设置的值仅适用于此次会话。 当关闭此报表并将其重新打开时，它将再次恢复默认值。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-change-paper-size"></a>更改纸张大小  
   
-1.  右键单击表体外部区域，然后单击“报表属性”。  
+1.  右键单击报表主体外部，单击**报表属性**。  
   
 2.  在 **“页面设置”**中，从 **“纸张大小”** 列表选择一个值。 每一选项都会填充 **“宽度”** 和 **“高度”** 属性。 您也可以通过在 **“宽度”** 和 **“高度”** 框中键入数值，来指定自定义大小。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-set-page-margins-in-design-mode"></a>在设计模式下设置页边距  
   
--   右键单击设计图面周围的蓝色区域，单击“报表属性”，然后单击“页面设置”页。  
+-   右键单击设计图面周围的蓝色区域，单击**报表属性**，然后单击**页面设置**页。  
   
 ### <a name="to-set-page-margins-in-run-mode"></a>在运行模式下设置页边距  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [“报表属性”对话框, 页面设置（报表生成器）](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [报表属性对话框中、 页面设置和 #40;报表生成器 &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

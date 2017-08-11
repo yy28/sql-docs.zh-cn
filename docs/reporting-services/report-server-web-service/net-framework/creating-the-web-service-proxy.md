@@ -23,11 +23,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 067a0d370f8c857423af24b1cd52e6bc93d50a40
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="creating-the-web-service-proxy"></a>创建 Web 服务代理
@@ -138,6 +138,6 @@ using myNamespace.myReferenceName;
 ## <a name="see-also"></a>另请参阅  
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [技术参考 (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
+ [技术参考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

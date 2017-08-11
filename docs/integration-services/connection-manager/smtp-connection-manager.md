@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
@@ -52,4 +54,31 @@ ms.lasthandoff: 08/03/2017
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
+## <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
+  使用“SMTP 连接管理器编辑器”对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
   
+ 若要了解有关 SMTP 连接管理器的详细信息，请参阅 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为连接管理器提供唯一的名称。  
+  
+ **Description**  
+ 描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
+  
+ **SMTP 服务器**  
+ 提供 SMTP 服务器的名称。  
+  
+ **使用 Windows 身份验证**  
+ 如果选中此选项，在通过 SMTP 服务器发送邮件时将使用 Windows 身份验证来验证对服务器的访问权限。  
+  
+> [!IMPORTANT]  
+>  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
+  
+> [!NOTE]  
+>  使用 Microsoft Exchange 作为 SMTP 服务器时，可能需要将 **“使用 Windows 身份验证”** 设置为 **True**。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
+  
+ **启用安全套接字层 (SSL)**  
+ 如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  
+  
+

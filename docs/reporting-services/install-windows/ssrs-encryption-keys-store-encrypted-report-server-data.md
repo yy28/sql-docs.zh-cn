@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密密钥的存储加密的报表服务器数据
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  报表服务器中还存储有其他可能包含需保护的敏感信息的未加密数据。 具体来说，报表历史记录快照和报表执行快照包含的查询结果可能包括仅供授权用户使用的数据。 因此，对包含机密数据的报表使用快照功能时，需要注意，有权打开报表服务器数据库中的表的用户也能通过检查表的内容来查看所存储报表的部分内容。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 对于所用参数基于用户安全标识的报表，不支持缓存或报表历史记录。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不支持缓存或报表历史记录报表使用参数基于的安全标识的用户。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要缓存的项。  
   
-3.  将光标悬停在项之上，单击下拉列表，然后单击“管理”。  
+3.  将鼠标悬停在该项目，单击下拉列表中，，然后单击**管理**。  
   
 4.  单击 **“缓存刷新选项”** 选项卡。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  对于共享计划，单击 **“共享计划”**，然后选择要使用的计划的名称。  
   
-     对于自定义计划，单击“项特定的计划”，然后单击“配置”。  
+     有关自定义计划，请单击**项特定计划**，然后单击**配置**。  
   
 8.  配置计划  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要为其创建订阅的报表。  
   
-3.  单击该报表，单击“订阅”选项卡，再单击“新建数据驱动订阅”。  
+3.  单击报表，请单击**订阅**选项卡上，并依次**New Data-Driven 订阅**。  
   
 4.  可以根据需要键入订阅的说明。  
   
@@ -103,12 +103,12 @@ ms.lasthandoff: 06/22/2017
   
 12. 为订阅指定报表参数值，再单击 **“下一步”**。  
   
-13. 指定处理订阅的时间。 不要选择 **“在报表服务器上更新报表数据时”**。 该设置仅适用于快照。 如果要使用预先存在的计划，请选择“根据共享计划”。  
+13. 指定处理订阅的时间。 不要选择 **“在报表服务器上更新报表数据时”**。 该设置仅适用于快照。 如果想要使用的预先存在的计划，请选择**根据共享计划**。  
   
      若要创建自定义计划，请单击 **“根据为此订阅创建的计划”** ，再单击 **“下一步”**。 配置计划，再单击 **“完成”**。  
   
     > [!NOTE]  
-    >  为确保订阅服务器能接收到最新的报表，所配置的计划应与为订阅服务器定义的报表传递计划相一致。 有关详细信息，请参阅[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+    >  为确保订阅服务器能接收到最新的报表，所配置的计划应与为订阅服务器定义的报表传递计划相一致。 有关详细信息，请参阅[报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. 按照下面的步骤为报表配置执行选项。 在报表页上，单击 **“属性”** 选项卡。  
   
@@ -118,16 +118,16 @@ ms.lasthandoff: 06/22/2017
   
 17. 选择如下两个缓存选项之一并配置过期时间：  
   
-    -   若要使缓存的副本在特定的时间段后过期，请单击**“缓存报表的临时副本。在数分钟之后使报表副本过期”。** 键入报表过期所需的分钟数。  
+    -   若要使缓存的副本在特定的时间段后过期，请单击**“缓存报表的临时副本。使报表副本过期后的分钟数。** 键入报表过期所需的分钟数。  
   
-    -   若要按计划使缓存的副本过期，请单击“缓存报表的临时副本”**。按下列计划使报表副本过期。** 单击“配置”，或选择一个共享计划以设置报表过期计划。  
+    -   若要按计划过期的缓存的副本，请单击**缓存报表的临时副本。使根据以下计划的报表副本过期。** 单击**配置**，或选择要设置报表过期的日程安排的共享的计划。  
   
 18. 单击 **“应用”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [性能、快照、缓存 (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [性能、 快照、 缓存 &#40;Reporting Services &#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
  [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
   

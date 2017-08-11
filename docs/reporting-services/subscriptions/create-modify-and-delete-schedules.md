@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>创建、修改和删除计划
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  删除计划和使计划过期是有区别的。 过期日期用于停止计划，但不会删除计划。 因为计划用于自动执行许多功能，所以从不会自动进行删除。 通过过期计划，报表服务器管理员可以查明某个自动执行的过程突然停止的原因。 如果没有过期计划，报表服务器管理员可能会错误地诊断问题，或花费不必要的时间，对运行完全正常的过程进行故障排除。  
  
  ## <a name="when-you-delete-a-report-specific--schedule"></a>删除报表特定计划时  
-删除报表或订阅时或者选择不同的报表或订阅运行方式时，将删除报表特定计划和订阅特定计划。 例如，选择“始终用最新数据运行此报表”将删除所创建的将报表作为报表执行快照运行的报表特定计划。  
+删除报表或订阅时或者选择不同的报表或订阅运行方式时，将删除报表特定计划和订阅特定计划。 例如，选择**始终用最新数据运行此报表**将删除你创建作为报表执行快照运行报表的报表特定计划。  
 
 过期的报表特定计划仍会附加到报表。 您可以通过检查计划的结束日期来确定计划是否已过期。 过期的共享计划仍会保留在“共享计划”列表中。 “状态”字段指示计划是否已过期。 您可以通过延长结束日期来恢复计划，也可以在不再需要计划时删除计划引用。  
   
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
   
  如果您正在修改某个共享计划，可以在进行更改前将其暂停。 当您恢复该计划时，更改立即生效。  
 
-1.  在 Web 门户中，在工具栏中单击“设置”![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：** 如果“站点设置”不可用，则说明你没有访问站点设置的权限。
-2.  单击“站点设置”。  
+1.  在 Web 门户中，单击**设置** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)工具栏中。 **注意：**如果**站点设置**是不可用，您没有权限访问站点设置。
+2.  click **“网站设置”**。  
 3.  单击 **“计划”**。  
 4.  单击 **“新建计划”**。 若要修改现有计划，请单击计划的名称。  
 5.  为计划键入说明性名称。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>删除共享计划（Web 门户）  
   
-1.  在 Web 门户中，单击全局工具栏上的“站点设置”。     
+1.  在 Web 门户中，单击**站点设置**全局工具栏上。     
 2.  在该页的 **“其他”** 部分中，单击 **“管理共享计划”**。  
 3.  选中要删除的计划旁边的复选框，再单击 **“删除”**。  
   
@@ -91,26 +91,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  启动 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 并连接到报表服务器实例。  
 2.  在对象资源管理器中，展开报表服务器节点。  
-3.  右键单击“共享计划”文件夹，再单击“新建计划”。 将显示 **“新建共享计划”** 对话框的“常规”页。  
+3.  右键单击**共享计划**文件夹，，然后单击**新计划**。 将显示 **“新建共享计划”** 对话框的“常规”页。  
   
-     若要修改现有的共享计划，请展开“共享计划”文件夹，右键单击要修改的计划，再单击“属性”。  
+     若要修改现有的共享的计划，展开共享计划文件夹中，右键单击你想要修改，，然后单击的计划**属性**。  
   
 4.  为计划键入说明性名称。  
 5.  根据需要，可以选择开始计划的日期。 默认值为当天。  
 6.  根据需要，可以选择结束计划的日期。 计划将在此日期停止运行，但不会删除。  
 7.  若要配置重复执行的计划，请选择 **“小时”**、 **“天”**、 **“周”**或 **“月”**。 此时，将显示其他选项。 使用这些附加选项可以根据前面选择的小时、天、周或月来配置计划频率。  
   
-     或者，若要指定一次性（不重复执行）计划，请选择“一次”，然后指定“开始时间”。  
+     或者，若要指定一次性的 （非重复） 计划，选择**一次**，然后指定**开始时间**。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##### <a name="to-delete-a-shared-schedule-management-studio"></a>删除共享计划 (Management Studio)  
   
 1.  在对象资源管理器中，展开报表服务器节点。  
-2.  要验证共享计划当前未由报表使用，请展开“共享计划”文件夹，右键单击计划，然后单击“属性”。
-3. 单击“报表”选项卡以查看当前使用计划的报表的列表。
-单击“取消”
-4.  展开“共享计划”文件夹，右键单击要删除的计划，再单击“删除”。 将显示 **“删除目录项”** 对话框。  
+2.  若要验证该共享的计划当前未使用的报表，展开共享计划文件夹，右键单击该计划，单击**属性**。
+3. 单击**报表**选项卡以查看当前使用的计划的报表的列表。
+单击**取消**
+4.  展开共享计划文件夹中，右键单击你想要删除，然后单击的计划**删除**。 将显示 **“删除目录项”** 对话框。  
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  如果删除由多个报表和订阅使用的共享计划，报表服务器将为以前使用该共享计划的每个报表和订阅都创建一个计划。 每个新计划都将包含已在共享计划中指定的日期、时间和重复执行模式。
@@ -129,7 +129,7 @@ ms.lasthandoff: 06/22/2017
 3.  在 Reporting Services 部分中，单击 **“管理共享计划”**。  
 4.  单击 **“添加计划”** 以打开“计划属性”页。  
 5.  为计划输入描述性名称。 在用来处理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表的应用程序页中，此名称将显示在整个站点的计划定义页的下拉列表中。 避免使用冗长难读的名称。 请遵循将大多数说明信息放在名称开头的命名约定。  
-6.  选择频率。 根据选择的频率，该页中显示的计划选项可能会发生更改以支持该频率（例如，如果选择“月”，该页中将显示每个月的名称）。  
+6.  选择频率。 具体取决于频率选择，显示的页的计划选项可能会更改以支持该频率 (例如，如果你选择**月**，每个月的名称将显示页上)。  
 7.  定义计划。 在一个计划中无法支持所有形式的计划组合。  
 8.  设置开始和结束日期。  
 9. 单击 **“确定”**。  
@@ -146,8 +146,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [暂停和恢复共享计划](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [缓存报表（报表管理器）](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [缓存报表 &#40;报表管理器 &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [添加快照以报告历史记录 &#40;报表管理器 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

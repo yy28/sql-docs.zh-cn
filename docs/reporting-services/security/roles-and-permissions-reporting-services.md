@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea2b4cba953b6622811b80c7f6c60838ce0a6f91
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色和权限 (Reporting Services)
@@ -45,11 +45,11 @@ ms.lasthandoff: 06/22/2017
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
  介绍基于角色的授权模型，该模型提供对内容和操作的访问权限。  
   
- [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [授予对 SharePoint 站点上的报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  说明如何使用 SharePoint 组、权限级别和权限来控制对报表服务器的访问权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

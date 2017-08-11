@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   设置高级 URL 属性以定义其他 URL。  
   
- 有关如何存储和维护 URL 或有关互操作性问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[关于 URL 保留项和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 和 [并行安装 Reporting Services 和 Internet 信息服务（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
+ 有关如何存储和维护 Url 或互操作性问题的详细信息，请参阅[关于 URL 保留项和注册 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[安装 Reporting Services 和 Internet 信息服务的并行 &#40;SSRS 本机模式 &#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
 ## <a name="prerequisites"></a>先决条件  
  在创建或修改 URL 之前，请注意以下几点：  
@@ -116,7 +116,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具并连接到报表服务器实例。  
   
-2.  单击“Web 门户 URL”。  
+2.  单击**Web 门户 URL**。  
   
 3.  指定虚拟目录。 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 与报表服务器 Web 服务侦听相同的 IP 地址和端口。 如果将 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 配置为指向不同的报表服务器 Web 服务，则必须在 RSReportServer.config 文件中修改 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL 设置。  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>设置 URL 的高级属性  
   
-1.  在“Web 服务 URL”或“Web 门户 URL”页上，单击“高级”。  
+1.  在任何一个**Web 服务 URL**或**Web 门户 URL**页上，单击**高级**。  
   
 2.  单击 **“添加”**。  
   
@@ -199,6 +199,6 @@ ms.lasthandoff: 06/22/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Reporting Services 配置管理器 &#40;本机模式 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [配置报表服务器 Url &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

@@ -15,17 +15,17 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>报表生成器中的报表部件和数据集
   在报表生成器中，在报表中包含数据的最简单方式是从报表部件库添加报表部件。 报表部件包含它们所依赖的数据集，这些数据集称为 *相关数据集*。 相关数据集基于共享数据源，并且可以是嵌入数据集或共享数据集。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
- 在报表中包含数据的另一种简单的方式是使用一个共享数据集。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 在报表中包含数据的另一种简单的方式是使用一个共享数据集。 有关详细信息，请参阅[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,13 +56,13 @@ ms.lasthandoff: 06/22/2017
 2.  当您退出报表生成器或启动一个新报表时，系统将提示您保存您的报表。 如果您没有保存您的报表，则在下次打开此报表并发布报表项时，可能会发布相同数据集的新副本。 为了避免共享数据集的多个副本保存到报表服务器上，我们建议您保存该报表。  
   
 > [!IMPORTANT]  
->  为了确保您和他人能够继续成功地使用来自共享数据集的数据，您必须理解确保报表项的安全所基于的原理。 有关详细信息，请参阅 [保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
+>  为了确保您和他人能够继续成功地使用来自共享数据集的数据，您必须理解确保报表项的安全所基于的原理。 有关详细信息，请参阅[保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [安全性（报表生成器）](../../reporting-services/report-builder/security-report-builder.md)   
- [报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [报表设计视图 &#40;报表生成器 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [安全 &#40;报表生成器 &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [报表部件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52df1c4404f761f58189e5bfc05e23359f053808
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 **“插入”** 选项卡上，单击 **“表”** 或 **“矩阵”**，然后单击 **“表向导”** 或 **“矩阵向导”**。  
   
-2.  执行“新建表”或“新建矩阵”向导中的步骤。  
+2.  按照中的步骤**新表**或**新矩阵**向导。  
   
 3.  在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      随即显示一个选择控点和八个大小调整控点。  
   
-     对于嵌套数据区域，在该嵌套数据区域中右键单击，再单击“选择”，然后选择所需的报表项。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
+     对于嵌套的数据区域，右键单击在嵌套的数据区域中，单击**选择**，然后选择所需的报表项。 若要验证所选择的报表项，请使用“属性”窗格。 设计图面上所选项的名称显示在“属性”窗格的工具栏中。  
   
 ## <a name="to-move-a-data-region"></a>移动数据区域  
   
@@ -63,10 +63,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-delete-a-data-region"></a>删除数据区域  
   
--   选择数据区域，在该数据区域中右键单击，然后单击“删除”。  
+-   选择数据区域，在数据区域中，右键单击，然后单击**删除**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

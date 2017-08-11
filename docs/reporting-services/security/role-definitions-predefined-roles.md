@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义的预定义角色
@@ -215,9 +215,9 @@ ms.lasthandoff: 06/22/2017
  “系统用户”角色可用作对默认安全性的补充。   在用来向报表用户扩展报表服务器访问权限的新角色分配中，您可以加入此角色。 有关详细信息，请参阅 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [创建、 删除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [向报表服务器 &#40; 授予用户访问权限报表管理器 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或删除角色分配 &#40;报表管理器 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)  
   

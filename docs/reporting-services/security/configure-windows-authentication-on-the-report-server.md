@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  如果将报表服务器服务配置为在域用户帐户下运行，并且没有为该帐户注册服务主体名称 (SPN)，使用 **RSWindowsNegotiate** 将导致 Kerberos 身份验证错误。 有关详细信息，请参阅本主题中的 [连接到报表服务器时纠正 Kerberos 身份验证错误](#proxyfirewallRSWindowsNegotiate) 。  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 。 默认情况下，报表服务器 Web 服务的 Web.config 文件包括\<身份验证模式 ="Windows"> 设置。 如果你将其更改为\<身份验证模式 ="窗体">，Windows 身份验证用于[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将失败。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]必须配置为 Windows 身份验证。 默认情况下，报表服务器 Web 服务的 Web.config 文件包括\<身份验证模式 ="Windows"> 设置。 如果你将其更改为\<身份验证模式 ="窗体">，Windows 身份验证用于[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将失败。  
   
 -   Web.config 文件的报表服务器 Web 服务必须具有\<impersonate ="true"/ >。  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 06/22/2017
   
  若要更改报表服务器身份验证设置，需要在 RSReportServer.config 文件中编辑 XML 元素和值。 可以复制并粘贴本主题中的示例来实现特定的组合。  
   
- 如果所有客户端计算机和服务器计算机均位于相同的域或某个可信域中，并且报表服务器是针对企业防火墙之后的 Intranet 访问而部署的，则默认设置将达到最佳效果。 可信域和单个域是传递 Windows 凭据所必需的。 如果为服务器启用 Kerberos 版本 5 协议，则可以多次传递凭据。 否则，凭据在过期之前只能传递一次。 有关为多计算机连接配置凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 如果所有客户端计算机和服务器计算机均位于相同的域或某个可信域中，并且报表服务器是针对企业防火墙之后的 Intranet 访问而部署的，则默认设置将达到最佳效果。 可信域和单个域是传递 Windows 凭据所必需的。 如果为服务器启用 Kerberos 版本 5 协议，则可以多次传递凭据。 否则，凭据在过期之前只能传递一次。 有关为多计算机连接配置凭据的详细信息，请参阅[指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
  以下说明针对本机模式报表服务器。 如果在 SharePoint 集成模式下部署报表服务器，则必须使用指定 Windows 集成安全性的默认身份验证设置。 报表服务器使用默认 Windows 身份验证扩展插件中的内部功能支持 SharePoint 集成模式下的报表服务器。  
   
 ## <a name="extended-protection-for-authentication"></a>身份验证的扩展保护  
- 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置由 RSReportServer.config 文件中的设置确定。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
+ 自 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，提供了对针对验证的扩展保护的支持。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能支持使用渠道绑定和服务绑定来加强对身份验证的保护。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能需要用于支持扩展保护的操作系统。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]扩展保护配置由 RSReportServer.config 文件中的设置。 可以通过编辑此文件或使用 WMI API 来更新此文件。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>将报表服务器配置为使用 Windows 集成安全性  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
  如果启用了 Kerberos 日志记录，则可以检测到该错误。 另一错误症状是多次提示您输入凭据，然后您看到一个空的浏览器窗口。  
   
- 可以通过从配置文件中删除 <**RSWindowsNegotiate** /> 并重新尝试建立连接来确认你遇到了 Kerberos 身份验证错误。  
+ 你可以确认遇到 Kerberos 身份验证错误通过删除 < **RSWindowsNegotiate** / > 从你的配置文件和重试连接。  
   
  确认遇到该问题之后，可以采用下列方法解决它：  
   
@@ -212,12 +212,12 @@ ms.lasthandoff: 06/22/2017
 -   有关 Kerberos 和报表服务器的更多信息，请参阅 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)（通过 Kerberos 部署使用 SharePoint、Reporting Services 和 PerformancePoint Monitoring Server 的商业智能解决方案）。  
   
 ## <a name="see-also"></a>另请参阅  
- [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [在报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [在报表服务器上配置自定义身份验证或窗体身份验证](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+ [报表服务器上配置自定义或窗体身份验证](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [扩展的 Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
 

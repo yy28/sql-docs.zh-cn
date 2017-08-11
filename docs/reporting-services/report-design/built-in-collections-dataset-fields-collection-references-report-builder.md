@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合的数据集字段集合引用 （报表生成器）
@@ -93,7 +93,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
  扩展字段属性是由数据处理扩展插件为字段定义的其他属性，这些属性由数据集的数据源类型确定。 扩展字段属性可以是预定义的，也可以特定于某个数据源类型。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
- 如果指定了该字段不支持的属性，则表达式的计算结果为 **null**（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 **Nothing**）。 如果数据访问接口不支持扩展字段属性，或在执行查询时找不到该字段，则对于 **String** 和**Object** 类型的属性，属性值为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **（在** 中为 **Nothing**）；对于 **Integer**类型的属性，属性值为零 (0)。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
+ 如果指定了该字段不支持的属性，则表达式的计算结果为 **null** （在**中为** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]）。 如果数据访问接口不支持扩展字段属性，或在执行查询时找不到该字段，则对于 **String** 和**Object** 类型的属性，属性值为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **（在** 中为 **Nothing**）；对于 **Integer**类型的属性，属性值为零 (0)。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

@@ -23,11 +23,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  下面的图标表示报表管理器文件夹层次结构中的共享数据源：  
   
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
+ ![共享数据源图标](../../reporting-services/report-data/media/hlp-16datasource.png "共享数据源图标")  
 共享数据源图标  
   
  对于报表和数据驱动订阅，共享数据源是可选的，但对于报表模型，共享数据源是必需的。 如果计划将报表模型用于特别报告，则必须创建和维护一个共享数据源项才能为此模型提供连接信息。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 |----------|-----------------|  
 |名称|名称用于在报表服务器文件夹层次结构中标识该项。|  
 |Description|说明在您查看文件夹的内容时在报表管理器中与该项一起出现。|  
-|连接类型|与数据源一起使用的数据处理扩展插件。 您只能使用部署在报表服务器上的数据处理扩展插件。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的数据处理扩展插件的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
+|连接类型|与数据源一起使用的数据处理扩展插件。 您只能使用部署在报表服务器上的数据处理扩展插件。 有关中包含的数据处理扩展插件的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[支持的 Reporting Services &#40; 数据源SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |连接字符串|数据库的连接字符串。 有关详细信息和常用数据源的连接字符串示例，请参阅 [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |凭据类型|指定如何为连接获取凭据以及在建立连接后是否使用这些凭据。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
     -   如果希望提示用户输入登录名和密码，请单击 **“运行该报表的用户提供的凭据”**。 若要将用户输入的凭据作为 Windows 凭据，请单击 **“在与数据源建立连接时用作 Windows 凭据”**。 如果用户名和密码是数据库凭据，则不选择此选项。  
   
-    -   如果要将该数据源用作共享数据源以及使用由数据源所有者管理的已保存凭据，或者将该数据源用于支持订阅或其他计划操作（例如自动生成报表历史记录）的报表，请单击“安全存储在报表服务器中的凭据”。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
+    -   如果你想要使用数据源作为带有保存由数据源的所有者的凭据的共享的数据源或报表支持订阅或其他计划的操作 （例如自动的生成报表历史记录），请单击**凭据安全存储在报表服务器中**。 如果数据库服务器支持模拟或委托，则可以选择 **“与数据源建立连接之后模拟经过身份验证的用户”**。  
   
     -   如果希望报表服务器将访问报表的用户的凭据传递给承载外部数据源的服务器，请单击 **“Windows 集成安全性”**。 在这种情况下，系统不会提示用户键入用户名或密码。  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在报表管理器中，导航到“内容”页。  
   
-2.  导航到共享数据源项，悬停在该项上，单击下拉列表，然后从上下文菜单中单击“管理”。 **“属性”** 页将打开。  
+2.  导航到共享的数据源项，将鼠标悬停在该项目，单击下拉列表中，从上下文菜单中，单击**管理**。 **“属性”** 页将打开。  
   
 3.  修改数据源，再单击 **“应用”**。  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
     -   在 **“内容”** 页中，导航到要删除的数据源所在的文件夹。  
   
-         悬停在该项上，单击下拉列表，然后从上下文菜单中单击“删除”。  
+         将鼠标悬停在该项目，单击下拉列表中，然后从上下文菜单中，单击**删除**。  
   
          [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在解决方案资源管理器中，右键单击报表服务器项目中的“共享数据源”文件夹，然后单击“添加现有项”。 此时将打开 **“添加现有项”** 对话框。  
   
-2.  导航到一个现有报表定义共享数据源 (rds) 文件，然后单击“打开”。  
+2.  导航到现有报表定义共享数据源 (rds) 文件，然后单击**打开**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -195,9 +195,9 @@ ms.lasthandoff: 06/22/2017
   
     -   若要使用户在每次运行报表时都输入其凭据，请选择 **“凭据提示”** 。 若要为此报表计划订阅或数据处理，请不要选择此选项。  
   
-    -   若要使用一组凭据访问数据，请选择 **“已存储凭据”** 。 凭据在存储之前是加密的。 您可以选择用于确定如何对已存储凭据进行身份验证的选项。 如果已存储的凭据属于 Windows 用户帐户，请选择“用作 Windows 凭据”。 如果要设置数据库服务器的执行上下文，请选择 **“设置此帐户的执行上下文”** 。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，此选项将设置 SETUSER 函数。 有关详细信息，请参阅 [SETUSER (Transact-SQL)](../../t-sql/statements/setuser-transact-sql.md)。  
+    -   若要使用一组凭据访问数据，请选择 **“已存储凭据”** 。 凭据在存储之前是加密的。 您可以选择用于确定如何对已存储凭据进行身份验证的选项。 如果已存储的凭据属于 Windows 用户帐户，请选择“用作 Windows 凭据”。 如果要设置数据库服务器的执行上下文，请选择 **“设置此帐户的执行上下文”** 。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，此选项将设置 SETUSER 函数。 有关详细信息，请参阅[SETUSER &#40;Transact SQL &#41;](../../t-sql/statements/setuser-transact-sql.md).  
   
-    -   如果要在连接字符串中指定凭据，或者如果要使用在报表服务器上配置的最低特权帐户运行报表，请选择“不需要提供凭据”。 如果未在报表服务器上配置此帐户，系统将提示用户输入凭据，并且不会运行您为报表定义的任何计划操作。  
+    -   选择**不需要凭据**如果你想要在连接字符串中指定凭据，或如果你想要运行报表使用报表服务器配置的最小特权帐户。 如果未在报表服务器上配置此帐户，系统将提示用户输入凭据，并且不会运行您为报表定义的任何计划操作。  
   
 7.  如果您想要数据源处于活动状态，则选择 **“启用此数据源”** 。 如果配置了数据源但该数据源未处于活动状态，则在用户尝试基于该数据源使用某一报表时，系统将会显示错误消息。  
   
@@ -237,11 +237,11 @@ ms.lasthandoff: 06/22/2017
  [创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [“数据源”属性页（报表管理器）](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [数据源属性页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [创建、 删除或修改共享的数据源 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [配置的报表 &#40; 数据源属性报表管理器 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 59
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |从数据集中排除多个字段的特定值。|Tablix 中组的筛选器公式。 使用 **“Tablix 属性”**对话框 -&gt;“筛选器”。|`=[Color]`<br /><br /> `<>`<br /><br /> `Red`<br /><br /> `=[Color]`<br /><br /> `<>`<br /><br /> `Blue`|  
 |基于表中的现有字段指定排序顺序。|Tablix 中的排序表达式。 使用 **“Tablix 属性”**对话框 -&gt;“排序”。|`[SizeSortOrder]`|  
 |将查询参数链接到报表参数。|数据集中的参数集合。 使用 **“数据集属性”**对话框 -&gt;“参数”。|`[@Category]`<br /><br /> `[@Category]`|  
-|将参数从主报表传递到子报表。|子报表中的参数集合。 使用 **“子报表属性”**对话框 ->“参数”。|`[@Category]`<br /><br /> `[@Category]`|  
+|将参数从主报表传递到子报表。|子报表中的参数集合。 使用 **“子报表属性”**对话框 -&amp;amp;gt;“参数”。|`[@Category]`<br /><br /> `[@Category]`|  
   
 ##  <a name="Complex"></a> 使用复杂表达式  
  复杂表达式可包含多个内置引用、运算符和函数调用，它在设计图面上显示为 `<<Expr>>`。 若要查看或更改表达式文本，则必须打开 **“表达式”** 对话框或在“属性”窗格中直接键入一个表达式。 下表列出了复杂表达式的常见用法，可用于显示或组织数据、更改报表外观（包括要设置的属性、通常用于设置该属性的对话框以及属性的值）。 可以在对话框、设计图面或“属性”窗格中直接键入表达式。  
@@ -71,16 +71,16 @@ ms.lasthandoff: 06/22/2017
 |为不含其他组的 Tablix 中的每 20 行指定一个分页符。|Tablix 中组的组表达式。 使用 **“组属性”**对话框 -&gt;“分页符”。 选择选项 **“在组的各实例之间”**。|`=Ceiling(RowNumber(Nothing)/20)`|  
 |基于参数指定条件可见性。|Tablix 的 Hidden 属性。 使用 **“Tablix 属性”**对话框 ->“可见性”。|`=Not Parameters!<` *布尔参数* `>.Value`|  
 |指定针对特定区域性而设置格式的日期。|数据区域中的文本框中占位符的值。 使用 **“文本框属性”**对话框 -&gt;“常规”。|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
-|将字符串与格式为两位小数的百分比的数字串联。|数据区域中的文本框中占位符的值。 使用 **“文本框属性”**对话框 -&gt;“常规”。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
+|将字符串与格式为两位小数的百分比的数字串联。|数据区域中的文本框中占位符的值。 使用 **“文本框属性”**对话框 -&amp;amp;gt;“常规”。|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [隐藏项（报表生成器和 SSRS）](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [筛选器公式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [页眉和页脚 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [格式设置文本和占位符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [隐藏项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

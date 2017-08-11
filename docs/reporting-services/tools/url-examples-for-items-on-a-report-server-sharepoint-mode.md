@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>在报表服务器上-SharePoint 模式下的项的 URL 示例
@@ -141,8 +141,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [将报表发布到 SharePoint 库](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [将共享数据源发布到 SharePoint 库](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [将共享的数据源发布到 SharePoint 库](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [项目属性页对话框中](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形状图（报表生成器和 SSRS）
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
   
 -   形状图最有效的是以排序顺序显示成比例的百分比。 然而，为了保持一致性，图表默认情况下不会对数据集中的值进行排序。 请考虑从高到低对值排序，从而最准确地以漏斗图或棱锥图来表示数据。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
--   当计算比率时，Null 值、空值、负值和零值均无效。 因此，这些值不会显示在形状图中。 若要将这些值类型显示在图表中，需将图表类型更改为除形状图外的其他类型。 有关如何向非形状图添加空点的详细信息，请参阅[向图表添加空点（报表生成器和 SSRS）](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   当计算比率时，Null 值、空值、负值和零值均无效。 因此，这些值不会显示在形状图中。 若要将这些值类型显示在图表中，需将图表类型更改为除形状图外的其他类型。 有关如何将空点添加到非形状图的详细信息，请参阅[添加空点添加到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
--   若要使用自定义调色板在形状图上定义自己的颜色，请确保调色板中有足够的颜色，从而均用唯一的颜色突出显示各个数据点。 有关详细信息，请参阅[设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   若要使用自定义调色板在形状图上定义自己的颜色，请确保调色板中有足够的颜色，从而均用唯一的颜色突出显示各个数据点。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 -   与所有其他图表类型不同的是，形状图将在其图例中显示各个数据点，而不是单个序列。  
   
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/22/2017
   
 -   在相同的图表区域中，形状图不能与任何其他图表类型结合使用。 如果必须显示形状图数据与其他类型图表数据之间的比较结果，则需要添加第二个图表区域。  
   
--   您可以在饼图和圆环图中应用其他绘制样式以增加视觉效果。 有关详细信息，请参阅[设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   您可以在饼图和圆环图中应用其他绘制样式以增加视觉效果。 请参阅[格式设置图表 &#40; 上的序列颜色报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)有关详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [图表中的空白和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [图表 &#40; 中的空和 Null 数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [饼图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

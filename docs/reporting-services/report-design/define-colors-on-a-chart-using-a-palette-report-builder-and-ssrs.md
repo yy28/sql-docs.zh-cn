@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c244f75603ae96dad15c98411bffe223b2857b56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用调色板定义图表上的颜色（报表生成器和 SSRS）
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  在设计图面上，单击该图表。 图表对象的属性将显示在“属性”窗格中。  
   
-     对象名称（默认为**Chart1** ）将显示在“属性”窗格顶部的下拉列表中。  
+     对象名称（默认为 **Chart1**）将显示在“属性”窗格顶部的下拉列表中。  
   
 3.  在“图表”部分，从下拉列表中为 Palette 属性选择新的调色板。  
   
@@ -62,8 +62,8 @@ ms.lasthandoff: 08/03/2017
  如果使用自定义调色板，可更改颜色顺序以调整图表中不同序列的颜色。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [对多个形状图指定一致的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [在图表 &#40; 的格式设置序列颜色报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [跨多个形状图 &#40; 指定一致的颜色报表生成器和 SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   

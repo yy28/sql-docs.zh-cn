@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69b608f7c673ccd05826c32c173d5cde014937a3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-display-the-report-data-pane"></a>显示“报表数据”窗格  
   
--   在“设计”视图的“视图”菜单中，选择“报表数据”或使用 CTRL+ALT+D。
+-   在设计视图中，在**视图**菜单上，选择**报表数据**，或使用 CTRL + ALT + D。
   
 ### <a name="to-dock-the-report-data-pane"></a>停靠“报表数据”窗格  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>将“报表数据”窗格从停靠窗口更改为选项卡式窗口  
   
--   右键单击“报表数据”窗格的标题栏，然后单击“停靠为选项卡式文档”。  
+-   右键单击报表数据窗格的标题栏，然后单击**以选项卡式文档停靠**。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>将“报表数据”窗格从选项卡式窗口更改为停靠窗口  
   
--   右键单击“报表数据”选项卡，然后单击“停靠”。  
+-   右键单击报表数据选项卡，然后单击**停靠**。  
   
      若要在两种显示状态之间切换，请双击“报表数据”窗格的标题栏。  
   

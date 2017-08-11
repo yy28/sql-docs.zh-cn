@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/13/2017
   
  `</BODY>`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [从使用打印控件 &#40; 浏览器中打印报表报表生成器和 SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [打印报表 &#40;报表生成器和 SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [图像设备信息设置](../../../reporting-services/image-device-information-settings.md)  

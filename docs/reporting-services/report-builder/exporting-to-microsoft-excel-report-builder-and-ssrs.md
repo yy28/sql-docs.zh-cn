@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置。 有关详细信息，请参阅 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)。  
   
- 有关如何导出到 Excel 的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 请参阅[导出报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)有关如何将导出到 Excel 的详细信息。  
   
 > [!IMPORTANT]  
 >  定义 **String**类型的参数时，系统将向用户显示一个可以使用任何值的文本框。 如果报表参数未与查询参数关联，并且参数值包含在报表中，则报表用户可以在参数值中键入表达式语法、脚本或 URL，并将报表呈现为 Excel 格式。 如果其他用户查看报表并单击呈现的参数内容，则用户可能会无意中执行恶意脚本或链接。  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   报表生成器处于断开连接模式下，而您在报表生成器中预览报表。 因为 RSReportServer 配置文件驻留在报表服务器上，所以从中导出报表的工具或产品必须连接到报表服务器才能读取配置文件。  
   
--   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[报表查看器中的本地模式和连接模式报表对比（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   报表查看器 Web 部件处于本地模式，而 SharePoint 场未与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 有关详细信息，请参阅[本地模式与。报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  如果将 **Excel 2003** 菜单选项呈现器配置为可见，则 Excel 和 Excel 2003 选项可用于以下方案中：  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  图表、迷你图、数据条、地图、仪表和指示器导出为图片。 它们所描绘的数据（例如图表的值和成员标签）不随它们一起导出，并且在数据包括在报表内数据区域中的列或行中之前不可用于 Excel 工作簿中。  
   
- 如果您想要使用图表、迷你图、数据条、地图、仪表和指示器数据，请将报表导出到 .csv 文件中或者从报表生成与 Atom 兼容的数据馈送。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)和[基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+ 如果您想要使用图表、迷你图、数据条、地图、仪表和指示器数据，请将报表导出到 .csv 文件中或者从报表生成与 Atom 兼容的数据馈送。 有关详细信息，请参阅[将导出到 CSV 文件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)和[从报表 &#40; 生成数据馈送报表生成器和 SSRS &#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>确定页大小  
  Excel 呈现扩展插件采用页面高度和宽度设置来确定要在 Excel 工作表中定义哪些纸张设置。 Excel 会试图将 PageHeight 和 PageWidth 属性设置与最常用的一种纸张大小相匹配。  
@@ -273,11 +273,11 @@ ms.lasthandoff: 06/22/2017
  如果某个报表必须以多种格式呈现，并且不可能创建以您所需的所有格式呈现的报表布局，则可以考虑使用 RenderFormat 内置全局属性中的值，在运行时有条件地更改报表外观。 这样，您可以根据用于在每种格式中获取最佳结果的呈现器，隐藏或显示报表项。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [呈现报表项（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [不同报表呈现扩展 &#40; 的交互功能报表生成器和 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [呈现报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e4ffac2b4342d0f8b3c30a9d76cdc7b0ecf098c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [“创建数据驱动订阅”页（报表管理器）](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
- [预加载缓存（报表管理器）](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [创建数据驱动订阅页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [预加载缓存 &#40;报表管理器 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

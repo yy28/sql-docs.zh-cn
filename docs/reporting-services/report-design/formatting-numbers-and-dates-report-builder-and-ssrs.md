@@ -24,11 +24,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>设置数字和日期的格式（报表生成器和 SSRS）
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  图表数据区域通常显示沿类别 (x) 轴的日期，和沿值 (y) 轴的值。 若要指定图表中的格式设置，请右键单击某个轴并选择 **“轴属性”**。 在值轴上，只能为数字指定格式。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
- 若要指定仪表数据区域中的格式设置，请右键单击仪表的刻度，并选择“径向刻度属性”或“线性刻度属性”。  
+ 若要指定仪表数据区域中的格式设置，请右键单击仪表的刻度，并选择 **“径向刻度属性”** 或 **“线性刻度属性”**。  
   
 > [!NOTE]  
 >  如果要使用的某些格式设置选项显示为灰色，这表示这些格式设置选项与字段的数据类型（在数据源中设置）不兼容。 例如，如果该字段包含数值，但该字段的数据类型为 String，则无法应用数值数据格式设置选项（如货币或小数）。  
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [设置线条、颜色和图像的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式设置线条、 颜色和图像 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [为日期或货币 &#40; 的格式轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [在仪表 &#40; 的格式设置刻度报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

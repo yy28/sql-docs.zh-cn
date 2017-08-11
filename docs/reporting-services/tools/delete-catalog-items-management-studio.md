@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>删除目录项 (Management Studio)
@@ -50,8 +50,8 @@ ms.lasthandoff: 06/22/2017
  如果在删除项的过程中出现错误，则显示错误代码。  
   
 ## <a name="see-also"></a>另请参阅  
- [删除项 (Management Studio)](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [删除项 &#40;Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [创建、 修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
@@ -75,8 +75,8 @@ ms.lasthandoff: 06/22/2017
  文件名和扩展名  
  指定要在目标库中为报表显示的文件名和扩展名。 如果不指定文件扩展名，则报表服务器会根据报表输出格式创建一个扩展名。 此值是必需的。 文件名中不得包含下列字符：: \ / * ? " < > | # { } %  
   
- 标题  
- 为目标库中的报表指定可选的“标题”属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
+ Title  
+ 指定一个可选**标题**目标库中报表的属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
  指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如： `http://mySharePointWeb/MySite/MyDocLib`; 其中`http://mySharePointWeb`指示 Web 应用程序，"MySite"是 SharePoint 站点，而"MyDocLib"是该报告将传递 SharePoint 库。  
@@ -91,8 +91,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理 SharePoint 模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>表达式 （报表生成器） 中的内置集合
@@ -37,8 +37,8 @@ ms.lasthandoff: 06/22/2017
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**全局**|内置字段|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|表示对报表有用的全集变量，如报表名称或页码。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**用户**|内置字段|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|表示与运行报表的用户有关的数据的集合，如语言设置或用户 ID。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
-|**参数**|Parameters|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|表示报表参数的集合，每个参数都可为单值或多值参数。 直到处理初始化完成之后才可用。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
-|**Fields(** *\<Dataset>* **)**|字段|`=Fields!Sales.Value`|表示可用于报表的数据集的字段集合。 将数据从数据源检索到数据集中之后可用。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
+|**Parameters**|Parameters|`=Parameters("ReportMonth").Value`<br /><br /> - 或 -<br /><br /> `=Parameters!ReportYear.Value`|表示报表参数的集合，每个参数都可为单值或多值参数。 直到处理初始化完成之后才可用。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)。|  
+|**字段 (** *\<数据集 >* **)**|字段|`=Fields!Sales.Value`|表示可用于报表的数据集的字段集合。 将数据从数据源检索到数据集中之后可用。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。|  
 |**DataSets**|不显示|`=DataSets("TopEmployees").CommandText`|表示从报表定义的主体中引用的数据集的集合。 不包括仅在页眉或页脚中使用的数据源。 无法在本地预览中使用。 有关详细信息，请参阅 [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**DataSources**|不显示|`=DataSources("AdventureWorks2012").Type`|表示从报表的主体中引用的数据源集合。 不包括仅在页眉或页脚中使用的数据源。 无法在本地预览中使用。 有关详细信息，请参阅 [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)。|  
 |**变量**|`Variables`|`=Variables!CustomTimeStamp.Value`|表示报表变量和组变量的集合。 有关详细信息，请参阅[报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>另请参阅  
- [添加表达式（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [添加表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

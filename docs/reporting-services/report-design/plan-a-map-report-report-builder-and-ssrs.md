@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
  若要使用动态空间数据，空间数据源必须位于报表服务器上。 当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中设计报表时，可以将空间数据源添加到项目，并将其以及报表定义一起发布到报表服务器。 如果您使用报表生成器来设计报表，必须首先将空间数据上载到报表服务器，然后在向导或层属性中，为该地图层指定此空间数据源。  
   
 ## <a name="see-also"></a>另请参阅  
- [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)   
- [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [自定义的数据和显示的地图或地图层 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [教程： 映射报表 &#40;报表生成器 &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [报表故障排除： 地图报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  指定远程计算机名称，该计算机将承载加入报表服务器扩展部署的报表服务器实例。 请使用网络中标识该计算机的计算机名称。  
   
  **-n**  
- 指定远程计算机上报表服务器实例的名称。 此参数是可选的如果将报表服务器安装在默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例 (默认值为 **-n** 为 MSSQLSERVER)。 如果将报表服务器安装为命名实例，  **-n** 是必需的。  
+ 指定远程计算机上报表服务器实例的名称。 如果已在默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中安装了报表服务器，则此参数是可选的（ **-n** 的默认值为 MSSQLSERVER）。 如果已按命名实例的形式安装了报表服务器，则 **-n** 为必需项。  
   
  **-u**  *useraccount*  
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>文件位置  
- Rskeymgmt.exe 位于 ** \<*驱动器*>: files\microsoft SQL Server\110\Tools\Binn * * 或在* * \<*驱动器*>: \Program 文件 (x86) \Microsoft SQL Server\110\Tools\Binn**。 可以在文件系统的任何文件夹中运行此实用工具。  
+ Rskeymgmt.exe 位于  **\<*驱动器*>: files\microsoft SQL Server\110\Tools\Binn * * 或在  **\<*驱动器*>: \Program 文件 (x86) \Microsoft SQL Server\110\Tools\Binn**。 可以在文件系统的任何文件夹中运行此实用工具。  
   
 ## <a name="remarks"></a>注释  
  报表服务器对存储的凭据和连接信息进行加密。 公钥和对称密钥可用于对数据进行加密。 要运行报表服务器，报表服务器数据库必须具有有效的密钥。 你可以使用 **rskeymgmt** 来备份、删除或还原密钥。 如果无法还原密钥，此工具将为您提供一种方法，以删除不再使用的加密内容。  
@@ -181,8 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>另请参阅  
  [扩展部署 - Reporting Services 本机模式 (Configuration Manager)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services 报表服务器 &#40;本机模式 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [报表服务器命令提示实用工具 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

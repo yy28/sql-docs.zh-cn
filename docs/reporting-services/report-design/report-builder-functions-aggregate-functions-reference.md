@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f7f78e643a5ed5e8874cf2f8dda867c3edac70d0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>报表生成器函数的聚合函数引用
@@ -78,19 +78,19 @@ ms.lasthandoff: 06/22/2017
   
 |报表中的位置|字段|Parameters|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> 数据集|变量|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|页眉<br /><br /> 页脚|是|是|最多一个<br /><br /> 注释 1|是|是|是|是|  
-|正文|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|“否”|是|是|是|  
+|页眉<br /><br /> 页脚|是|是|最多一个<br /><br /> 注释 1|是|用户帐户控制|用户帐户控制|是|  
+|正文|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|“否”|用户帐户控制|用户帐户控制|是|  
 |报表参数|“否”|仅限列表中前面的参数<br /><br /> 注释 4|“否”|“否”|“否”|“否”|“否”|  
-|字段|是|是|“否”|“否”|“否”|“否”|“否”|  
-|查询参数|“否”|是|“否”|“否”|“否”|“否”|“否”|  
-|组表达式|是|是|“否”|是|是|“否”|“否”|  
-|排序表达式|是|是|“否”|是|是|是<br /><br /> 注释 5|“否”|  
-|筛选表达式|是|是|“否”|是|是|是<br /><br /> 注释 6|“否”|  
+|字段|是|用户帐户控制|是|“否”|“否”|“否”|“否”|  
+|查询参数|“否”|是|是|“否”|“否”|“否”|“否”|  
+|组表达式|是|用户帐户控制|是|“否”|是|是|“否”|  
+|排序表达式|是|用户帐户控制|是|“否”|用户帐户控制|是<br /><br /> 注释 5|“否”|  
+|筛选表达式|是|用户帐户控制|是|“否”|用户帐户控制|是<br /><br /> 注释 6|“否”|  
 |代码|“否”|是<br /><br /> 注释 7|“否”|“否”|“否”|“否”|“否”|  
-|报表语言|“否”|是|“否”|“否”|“否”|“否”|“否”|  
-|变量|是|是|“否”|是|是|当前作用域或包含作用域|“否”|  
-|聚合|是|是|仅在页眉/页脚中|仅在报表项聚合中|是|“否”|“否”|  
-|Lookup 函数|是|是|是|“否”|是|“否”|“否”|  
+|报表语言|“否”|是|是|“否”|“否”|“否”|“否”|  
+|变量|是|用户帐户控制|是|“否”|是|当前作用域或包含作用域|“否”|  
+|聚合|是|是|仅在页眉/页脚中|仅在报表项聚合中|是|是|“否”|  
+|Lookup 函数|是|用户帐户控制|用户帐户控制|“否”|是|是|“否”|  
   
 -   **注释 1。** ReportItems 必须存在于呈现的报表页中，否则其值为 Null。 如果报表项的可见性取决于计算结果为 False 的表达式，则该页不存在此报表项。  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 |Context|RunningValue|RowNumber|第一个<br /><br /> 上一次|Previous|Sum 和其他预排序函数|ReportItem 聚合|Lookup 函数|Aggregate 函数|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|运行值|“否”|“否”|“否”|是|是|“否”|是|“否”|  
-|第一个<br /><br /> 上一次|“否”|“否”|“否”|是|是|“否”|“否”|“否”|  
-|Previous|是|是|是|“否”|是|“否”|是|“否”|  
-|Sum 和其他预排序函数|“否”|“否”|“否”|是|是|“否”|是|“否”|  
+|运行值|“否”|“否”|“否”|“否”|是|“否”|是|“否”|  
+|第一个<br /><br /> 上一次|“否”|“否”|“否”|“否”|是|是|“否”|“否”|  
+|Previous|是|用户帐户控制|用户帐户控制|“否”|是|“否”|是|“否”|  
+|Sum 和其他预排序函数|“否”|“否”|“否”|“否”|是|“否”|是|“否”|  
 |ReportItem 聚合|“否”|“否”|“否”|“否”|“否”|“否”|“否”|“否”|  
 |Lookup 函数|是|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|“否”|“否”|  
 |Aggregate 函数|“否”|“否”|“否”|“否”|“否”|“否”|“否”|“否”|  
@@ -196,8 +196,8 @@ ms.lasthandoff: 06/22/2017
  ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")返回页首  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

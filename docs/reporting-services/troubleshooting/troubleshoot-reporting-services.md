@@ -15,17 +15,17 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>排除 Reporting Services 故障
   此部分的主题帮助确定并解决 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的问题。  
 
-![小文件文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**排查与 Reporting Services 的问题   **  
+![小文件文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**排查与 Reporting Services 的问题**   
 + [排查 Reporting Services 报表问题](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [对 Reporting Services 订阅和传递进行故障排除](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -41,12 +41,12 @@ ms.lasthandoff: 06/22/2017
 
 +  [Reporting Serivces 的服务器和数据库连接问题疑难解答](https://msdn.microsoft.com/library/mt650905.aspx)  
 
- ![较小的文件的文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**错误和事件参考   **  
- + [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ ![较小的文件的文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**错误和事件参考**   
+ + [错误和事件参考 &#40;Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Reporting Services 错误的原因和解决方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [打开 SharePoint 跟踪日志 &#40; 的 Reporting Services 事件ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

@@ -17,11 +17,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 111e6d65b6c74156b39e81a1b7d9af0cb45501d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 |**HTMLFragment**|指示是否创建一个 HTML 片段以取代完整 HTML 文档。 HTML 片段在 TABLE 语句中包含报表内容，并忽略 HTML 和 BODY 元素。 默认值是 **false**秒。 在使用 SOAP API 的 **M:ReportExecution2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@, ReportExecution2005.Warning[]@,System.String[]@)** 方法以 HTML 格式呈现时，若想呈现含有图像的报表，则需要将此设备信息设置为 **True** 。 当使用 SOAP 进行呈现（ **HTMLFragment** 属性设置为 **true** ）时，将创建包含可用于正确地请求图像的会话信息的 URL。 图像必须为报表服务器数据库中的已上载资源。|  
 |**ImageConsolidation**|指示是否将呈现的图表、地图、仪表和指示器图像合并为一个大图像。 当报表包含许多数据可视化项目时，图像合并有助于改善客户端浏览器中报表的性能。 对于大多数现今的浏览器，默认值均为 **true** 。|  
 |**JavaScript**|指示是否在所呈现报表中支持 JavaScript。 默认值为 **true**。|  
-|**LinkTarget**|报表中超链接的目标。 可以通过提供窗口的名称来确定窗口或框架的目标（如 **LinkTarget**=window_name），也可以使用 **LinkTarget**=_blank 确定新窗口的目标。 其他有效的目标名称包括 _self、_parent 和 _top。|  
+|**LinkTarget**|报表中超链接的目标。 可以通过提供的名称的窗口中，如目标窗口或框架**LinkTarget**=*window_name*，或可以确定新窗口中使用的目标**LinkTarget**= _blank。 其他有效的目标名称包括 _self、_parent 和 _top。|  
 |**OnlyVisibleStyles(\*)**|指示仅为当前呈现的页生成共享样式。|  
 |**OutlookCompat**|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 对于其他应用程序，默认值为 **false**。|  
 |**Parameters**|指示是显示还是隐藏工具栏的参数区域。 如果您将此参数设置为值 **true**，将显示工具栏的参数区域。 此参数的默认值为 **true**。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [将设备信息设置传递给呈现扩展插件](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [在 RSReportServer.Config 中自定义呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [技术参考 (SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [自定义在 RSReportServer.Config 中的呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [技术参考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

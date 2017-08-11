@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
 |属性|Description|  
 |--------------|-----------------|  
 |报告|SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 为了在设置其他属性时能够获得最佳结果，请在指定报表 URL 后单击“应用”。|  
-|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效值包括“_Top”、“_Blank”和“_Self”。 “_Top”使用当前窗口，“_Blank”在新浏览器窗口中加载文档，而“_Self”在当前框架内打开文档。 尽管“_Parent”是 HTML 中“目标”属性的有效值，但请勿对嵌入页面的报表查看器 Web 部件使用此值。|  
+|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效的值包括**_Top**， **_Blank**，和**_Self**。 **_Top**使用当前的窗口中， **_Blank**加载在新浏览器窗口中，文档和**_Self**打开当前帧中的文档。 尽管**_p**目标属性在 HTML 中，不要使用它在页中嵌入报表查看器 Web 部件是有效的值。|  
 |自动生成 Web 部件标题|生成的标题，包含报表查看器 Web 部件名称和报表名称，中间用短划线分隔。 如果报表没有标题，则使用报表的文件名。 将 Web 部件添加到页面时，即可看到此标题。 如果选中此复选框，则每次刷新页面时都会生成标题。|  
 |自动生成 Web 部件标题详细信息链接|生成的显示在 Web 部件之上的超链接。 单击此链接可以在新页面中以整页模式打开报表。|  
 |显示报表生成器菜单项。|显示或隐藏用于打开报表生成器的 **“操作”** 菜单选项。|  
@@ -98,6 +98,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [将报表查看器 Web 部件添加到 Web 页 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

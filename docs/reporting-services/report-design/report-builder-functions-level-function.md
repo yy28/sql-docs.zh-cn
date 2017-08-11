@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 171842909a300d0c98fca2a26bbf4567810e8e95
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---level-function"></a>报表生成器功能-Level 函数
@@ -40,7 +40,7 @@ Level(scope)
  (**String**)（可选）。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
 ## <a name="return-type"></a>返回类型  
- 返回 **Integer**。 如果 scope 指定数据集或数据区域，或指定非递归分组（即没有**父**元素的分组），则 **Level** 返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
+ 返回 **Integer**。 如果*作用域*指定数据集或数据区域中，或指定的非递归分组 (即，没有分组**父**元素)，**级别**返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
   
 ## <a name="remarks"></a>注释  
  **Level** 函数返回的值从 0 开始；即，层次结构中的第一级为 0。  
@@ -57,9 +57,9 @@ Level(scope)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [表达式 &#40; 中的数据类型报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

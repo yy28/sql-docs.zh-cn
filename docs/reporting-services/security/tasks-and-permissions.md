@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  只有当任务是角色的一部分并且该角色包含在角色分配中时，才能执行该任务。 因此，如果角色中不包括“查看模型”任务，或者角色分配中不包括该角色，则用户就不能查看报表模型。 下图显示了如何将权限组合到任务中，以及如何将任务组合到角色中以将角色用于特定的角色分配。  
   
- ![权限和任务关系图](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![权限和任务关系图](../../reporting-services/security/media/report-securityobjects.gif "权限和任务关系图")  
 权限和任务关系图  
   
 ## <a name="system-and-item-level-tasks"></a>系统级任务和项级任务  
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [角色定义](../../reporting-services/security/role-definitions.md)   
- [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [预定义的角色](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

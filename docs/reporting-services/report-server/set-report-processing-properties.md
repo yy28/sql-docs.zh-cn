@@ -22,17 +22,17 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 设置属性，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
+ 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 你还可以设置属性使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; 请参阅[处理选项属性页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="running-reports-on-demand-from-cache"></a>通过缓存按需运行报表  
  为提高性能，您可以指定在用户运行报表时暂时缓存报表（和数据）。 如果随后有其他用户访问同一个报表，就可以向他们提供缓存的副本。 使用此方法时，如果有十个用户打开报表，则只有第一个请求会导致报表处理。 随后即会缓存报表，这样，其余九个用户将查看缓存的报表。  
   
- 缓存的报表会按您指定的时间间隔从缓存中删除。 您可以指定时间间隔（分钟），也可以计划清空缓存的具体日期和时间。 有关详细信息，请参阅[缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)。  
+ 缓存的报表会按您指定的时间间隔从缓存中删除。 您可以指定时间间隔（分钟），也可以计划清空缓存的具体日期和时间。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
 ### <a name="running-reports-from-snapshots"></a>通过快照运行报表  
  报表快照是包含布局信息以及在特定时间点所检索到的数据的报表。 您可以按报表快照形式运行报表，以防止报表在任意时间运行（例如，在执行计划备份期间）。 报表快照通常按计划创建并在随后进行刷新，因此您可以精确地设定进行报表和数据处理的时间。 如果报表所基于的查询需要很长的运行时间，或查询使用的数据来自您需要在特定时间无人访问的数据源，则应以快照形式运行报表。  
@@ -58,13 +58,13 @@ ms.lasthandoff: 06/22/2017
   
 -   现有订阅配置使用的参数值与您为快照指定的默认参数值不同。  
   
- 如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
+ 如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>另请参阅  
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [配置报表的执行属性（报表管理器）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [如何： 向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

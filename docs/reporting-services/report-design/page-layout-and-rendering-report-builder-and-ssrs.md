@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
@@ -52,11 +52,11 @@ ms.lasthandoff: 06/22/2017
  报表可以跨越多个页，每个页上都可以有重复的页眉和页脚。 报表可包含图形元素，如图像和线条，并可具有多种基于表达式的字体、颜色和样式。  
   
 ##  <a name="ReportSections"></a> 报表区域  
- 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 报表的页眉和页脚不是独立的报表区域，而是由放置在表体的顶部和底部的报表项组成。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
+ 报表由三个主要区域组成：页眉（可选）、页脚（可选）和表体。 *报表*页眉和页脚不是单独的章节的报表，但而是包含在顶部和底部的表体放置报表项。 页眉和页脚会在报表每一页的顶部和底部重复相同的内容。 您可以在页眉和页脚中放置图像、文本框和线条。 可以在表体中放置任何类型的报表项。  
   
  您可以设置报表项的属性，以便一开始就在页中隐藏或显示该报表项。 可以设置数据区域的行、列或组的可见性属性，并提供切换按钮使用户能以交互方式显示或隐藏报表数据。 还可以使用表达式（包括基于报表参数的表达式）来设置可见性或初始可见性。  
   
- 处理报表时，会将报表数据与报表布局元素组合起来，并将组合的数据发送到报表呈现器。 呈现器会根据报表项扩展插件的预定义规则，确定每一页能够容纳的数据量。 若要设计对您要使用的呈现器而言最优的易读报表，您需要了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中用于控制分页的规则。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ 处理报表时，会将报表数据与报表布局元素组合起来，并将组合的数据发送到报表呈现器。 呈现器会根据报表项扩展插件的预定义规则，确定每一页能够容纳的数据量。 若要设计对您要使用的呈现器而言最优的易读报表，您需要了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 有关详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
 ##  <a name="RenderingExtensions"></a> 呈现器  
  Reporting Services 包括一组呈现器，也称为呈现扩展插件，可用来将报表导出为其他格式。 有三种类型的呈现器：  
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  使用 **软分页** 呈现扩展插件（如 HTML 呈现扩展插件）时，可能想知道报表打印后的外观以及使用硬分页呈现器（如 PDF）呈现此报表时可以达到哪种理想效果。 在创建或更新报表时，您可以在报表生成器和报表设计器中预览和导出此报表。  
   
- **硬分页**呈现器对于报表布局和实际页面大小的影响最大。 若要了解详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
+ **硬分页** 呈现器对于报表布局和实际页面大小的影响最大。 若要了解详细信息，请参阅 [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
    
 ##  <a name="HowTo"></a> 操作指南主题  
  本节列出的过程分步向您介绍如何在报表中使用分页。  

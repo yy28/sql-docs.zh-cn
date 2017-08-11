@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控件
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  创建一个新[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用 ASP.NET Web 站点[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)]或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。  
   
-     \-或者-  
+     \- 或者-  
   
      打开一个现有的 ASP.NET 网站并添加一个新的 Web 窗体。  
   

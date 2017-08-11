@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c78f99c32d37e36986c4ea8bac20c12f87d4d568
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>向地图添加自定义位置（报表生成器和 SSRS）
@@ -43,19 +43,19 @@ ms.lasthandoff: 06/22/2017
   
 2.  在工具栏中，单击 **“添加层”**。  
   
-3.  从下拉列表中，单击“添加点层”。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
+3.  从下拉列表中，单击**添加点层**。 将不包含点的点层添加到该地图。 默认情况下，为嵌入的点准备了点层。  
   
 ## <a name="to-add-a-custom-point"></a>添加自定义点  
   
 1.  在报表设计图面中，单击该地图以选择它并显示“地图”窗格。  
   
-2.  在“地图”窗格中，右键单击具有类型“嵌入”的点层，然后单击“添加点”。 光标将变为十字准线。  
+2.  在地图窗格中，右键单击具有类型的点层**嵌入**，然后单击**添加点**。 光标将变为十字准线。  
   
 3.  若要添加点，请单击地图上的某个位置。 在您单击的位置将嵌入的点添加到所选层中。  
   
 ## <a name="to-customize-the-display-for-an-embedded-point"></a>自定义嵌入点的显示方式  
   
-1.  右键单击该点，然后单击“点属性”。 将打开 **“地图嵌入点属性”** 对话框。  
+1.  右键单击的点，并依次**点属性**。 将打开 **“地图嵌入点属性”** 对话框。  
   
 2.  单击 **“覆盖此层的点选项”**。 将在左窗格中显示多个属性页。  
   

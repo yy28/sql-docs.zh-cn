@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>报表工具栏  
  报表工具栏为 HTML 呈现扩展插件中所呈现的报表提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。  
   
- 打印功能是可选的。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 在首次使用时，单击该打印机图标将下载必须安装的 ActiveX 控件。 在安装该控件后，单击打印机图标将打开“打印”对话框，以便从计算机所配置的打印机中进行选择。 是否可以打印取决于服务器设置和浏览器设置。 有关详细信息，请参阅[使用打印控件从浏览器中打印报表（报表生成器和 SSRS）](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)和[启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 打印功能是可选的。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 在首次使用时，单击该打印机图标将下载必须安装的 ActiveX 控件。 在安装该控件后，单击打印机图标将打开“打印”对话框，以便从计算机所配置的打印机中进行选择。 是否可以打印取决于服务器设置和浏览器设置。 有关详细信息，请参阅[从使用打印控件 &#40; 浏览器的打印报表报表生成器和 SSRS &#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)和[启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
  报表工具栏与下图中所显示的报表工具栏类似。 根据报表功能或可用的呈现选项的不同，您看到的报表工具栏可能会与该图有所不同。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |图标或控件||若要|  
 |------------------------------|-|--------|  
 |![页面导航控件](../reporting-services/media/htmlviewer-pagenav.gif "页面导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
-|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
+|![页面显示控件](../reporting-services/media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了基于百分比的更改，你可以选择**页面宽度**以适合在浏览器窗口中，报表页的水平长度或**整个页面**以适应垂直长度的浏览器窗口中的报表。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
 |![搜索字段](../reporting-services/media/htmlviewer-search.gif "搜索字段")|**搜索字段**|通过键入要查找的单词或短语（最长不超过 256 个字符）在报表中搜索内容。 搜索不区分大小写，将从当前选择的页或区域开始。 搜索操作中只包括可见内容。 若要搜索随后出现的相同值，请单击 **“下一个”**。|  
 |![导出格式](../reporting-services/media/htmlviewer-export.GIF "导出格式")|**导出格式**|打开一个新的浏览器窗口，并以所选的格式呈现报表。 可用的格式由报表服务器上安装的呈现扩展插件决定。 建议打印时采用 TIFF 格式。 单击 **“导出”** 可以按所选格式查看报表。|  
 |![文档结构图图标](../reporting-services/media/htmlviewer-docmap.GIF "文档结构图图标")|**文档结构图图标**|在包含文档结构图的报表中显示或隐藏文档结构图窗格。 文档结构图是一个类似于网站上的导航窗格的报表导航控件。 单击文档结构图中的项，即可导航到特定的组、页或子报表。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ||**显示图标和隐藏图标**|在包含参数的报表中显示或隐藏参数值字段及 **“查看报表”** 按钮。|  
 |![报表工具栏上的浏览器中刷新按钮](../reporting-services/media/htmlviewer-refresh.GIF "报表工具栏上的浏览器中刷新按钮")|**报表刷新图标**|刷新报表。 实时报表的数据将相应刷新。 缓存报表将从其存储位置重新加载。|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**数据馈送图标**|基于报表生成了数据馈送。|  
-|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**固定到 Power BI 仪表板**|将支持报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 如果按钮不可见，则报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]集成。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。|  
+|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**固定到 Power BI 仪表板**|将支持报表项固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 如果按钮不可见，则报表服务器尚未与 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]集成。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。|  
   
 ### <a name="about-export-formats"></a>关于导出格式  
  从报表工具栏中，可以选择以不同格式查看报表。 可用的格式由报表服务器上安装的呈现扩展插件决定。 如果您选择另一种格式，将使用与您所选的导出格式关联的查看器通过另一个浏览器窗口显示报表。 如果您所选的格式没有适用的查看器，可以选择其他格式。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [为报表数据源指定凭据和连接信息](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="what-comes-with-a-report-part"></a>报表部件所附带的内容  
  将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何对象依赖于一个数据集，即对某数据源的查询和连接。 它可能还具有一个或多个参数。 它所依赖的所有项是其“依赖项”，并且在您将某一报表部件添加到报表时，所有这些依赖项或者指向它们的指针都将与该报表部件一起包括。 数据集和参数将在您的报表的“报表数据”窗格中列出。  
   
- 报表部件的数据集可嵌入在报表部件中，或者可以是报表部件指向的单独的共享数据集。 如果该数据集嵌入在报表部件中，则可以对其进行修改。 如果该数据集是共享数据集，则它是您需要具有相应权限的单独对象。 有关共享数据集和嵌入数据集的详细信息，请参阅[报表数据库 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+ 报表部件的数据集可嵌入在报表部件中，或者可以是报表部件指向的单独的共享数据集。 如果该数据集嵌入在报表部件中，则可以对其进行修改。 如果该数据集是共享数据集，则它是您需要具有相应权限的单独对象。 有关共享和嵌入数据集的详细信息，请参阅[报表数据集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>解决命名冲突  
  在您添加某一报表部件时，报表生成器会解决所有名称冲突。 例如，如果您在报表中已具有 Chart1，并且添加一个名为 Chart1 的报表部件，则报表生成器会自动将这个新报表部件重命名为 Chart2。 如果您在报表中已具有 Dataset1，并且添加一个报表部件，该报表部件引用也名为 Dataset1 的其他数据集，则报表生成器会自动将这个新数据集重命名为 Dataset2 并且更新引用。  

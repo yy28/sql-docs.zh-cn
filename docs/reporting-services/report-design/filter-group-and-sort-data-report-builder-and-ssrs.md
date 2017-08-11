@@ -24,11 +24,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  若要根据若干数据集字段进行分组，请将每个字段添加到组表达式集合。 您还可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]中编写您自己的组表达式。 例如，您可以按照值范围进行分组，或者通过使用报表参数使用户能够选择对数据区域中的数据进行分组的方式。 有关详细信息，请参阅 [组表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)。  
   
- 在报表显示方面，可以在各组或组的每个实例前后添加分页符，以减少每页中的数据量，帮助管理报表呈现性能。 有关详细信息，请参阅[添加分页符（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)。  
+ 在报表显示方面，可以在各组或组的每个实例前后添加分页符，以减少每页中的数据量，帮助管理报表呈现性能。 有关详细信息，请参阅[添加分页符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  创建数据区域组是在报表中组织数据的方式之一。 可以通过多种方式组织数据，每种方式都具有自身的优势。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 06/22/2017
   
      如果您只拥有一个详细信息组，则可以在查询中对数据区域或详细信息组定义排序表达式以获得相同效果。  
   
--   **图表数据区域。** 为类别和序列组设置排序表达式，可控制数据点的排序顺序。 默认情况下，数据点的顺序也是图表图例中颜色的顺序。 有关详细信息，请参阅[设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   **图表数据区域。** 为类别和序列组设置排序表达式，可控制数据点的排序顺序。 默认情况下，数据点的顺序也是图表图例中颜色的顺序。 有关详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 -   **地图报表项。** 您通常不需要对地图数据区域的数据进行排序，因为地图组数据将在地图元素上显示。  
   
@@ -213,11 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [指示器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

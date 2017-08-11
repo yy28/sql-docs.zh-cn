@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7170699a3f0cbb26dd2376a8805978fe792223f0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>图表效果-添加三维效果 （报表生成器）
@@ -30,17 +30,17 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-apply-3d-effects-to-a-range-area-line-scatter-or-polar-chart"></a>将三维效果应用于范围图、面积图、折线图、散点图或极坐标图  
   
-1.  右键单击图表区域的任意位置，然后选择“三维效果”。 随即显示“图表区属性”对话框。   
+1.  在图表区的任意位置右键单击并选择**三维效果**。 随即显示“图表区属性”对话框。   
   
 2.  在 **“三维选项”**中，选择 **“启用三维”** 选项。  
   
-3.  （可选）在“三维选项”中，可以设置各种与三维角度和场景选项相关的属性。 有关这些属性的详细信息，请参阅 [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)。  
+3.  （可选）在**三维选项**，你可以设置多个与 3D 角度和场景选项相关的属性。 有关这些属性的详细信息，请参阅 [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)。  
   
 4.  单击 **“确定”**。  
   
 ## <a name="to-apply-3d-effects-to-a-funnel-chart"></a>将三维效果应用于漏斗图  
   
-1.  右键单击图表区域的任意位置，然后选择“三维效果”。 随即显示“图表区属性”对话框。   
+1.  在图表区的任意位置右键单击并选择**三维效果**。 随即显示“图表区属性”对话框。   
   
 2.  在 **“三维选项”**中，选择 **“启用三维”** 选项。 单击 **“确定”**。  
   
@@ -62,19 +62,19 @@ ms.lasthandoff: 06/22/2017
   
 2.  在 **“三维选项”**中，选择 **“启用三维”** 选项。 单击 **“确定”**。  
   
-3.  （可选）在“旋转”中，键入代表饼图水平旋转的整数值。  
+3.  （可选）在**旋转**，键入表示水平旋转饼图的整数值。  
   
-4.  （可选）在“倾角”中，键入代表饼图垂直倾斜旋转的整数值。  
+4.  （可选）在**倾角**，键入表示垂直倾斜旋转饼图的整数值。  
   
 5.  单击 **“确定”**。  
   
 ## <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>将三维效果应用于条形图或柱形图  
   
-1.  右键单击图表区域的任意位置，然后选择“三维效果”。 随即显示“图表区属性”对话框。   
+1.  在图表区的任意位置右键单击并选择**三维效果**。 随即显示“图表区属性”对话框。   
   
 2.  选择 **“启用三维”** 选项。 单击 **“确定”**。  
   
-3.  （可选）选择“启用序列聚类分析”选项。 如果图表包含多个条形图序列或柱形图序列，此选项会将该序列显示为聚集。 默认情况下，会并行显示多个条序列或列序列。  
+3.  （可选）选择**启用序列聚类分析**选项。 如果图表包含多个条形图序列或柱形图序列，此选项会将该序列显示为聚集。 默认情况下，会并行显示多个条序列或列序列。  
   
 4.  单击 **“确定”**。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

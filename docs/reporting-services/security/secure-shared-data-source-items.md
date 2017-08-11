@@ -19,11 +19,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-data-source-items"></a>保护共享数据源项
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [管理报表数据源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [保护文件夹](../../reporting-services/security/secure-folders.md)   
+ [安全的文件夹](../../reporting-services/security/secure-folders.md)   
  [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [在 Reporting Services 数据源中存储凭据](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

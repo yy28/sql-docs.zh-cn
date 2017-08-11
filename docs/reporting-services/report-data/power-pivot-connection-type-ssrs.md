@@ -15,19 +15,19 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅 [添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源必须发布在 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。  
   
  为了支持从报表生成器到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的连接，工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一起安装，但如果你在使用不具有此应用程序的计算机，则必须从 [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)下载和安装 ADOMD.NET。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的数据经过高度压缩；而从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中为报表检索的数据未经压缩。 使用查询设计器可指定筛选器和参数，以便将数据限制为仅是报表中所需的数据。  
   
- 与连接到 Analysis Services 多维数据集不同， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型没有层次结构。 为了向工作簿中的相关切片器提供类似功能，您必须在报表中创建级联参数。 有关详细信息，请参阅[向报表添加级联参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。  
+ 与连接到 Analysis Services 多维数据集不同， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型没有层次结构。 为了向工作簿中的相关切片器提供类似功能，您必须在报表中创建级联参数。 有关详细信息，请参阅 [向报表添加级联参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)中所创建的移动报表中使用。  
   
  在某些情况下，可能需要调整表达式，以容纳 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型中的基础数据值。 您可能需要修改表达式，以便将数据转换为正确的数据类型，或者添加或删除聚合函数。 例如，要将数据类型从 String 转换为 Integer，请使用 `=CInt`。 请始终在发布报表之前，验证报表从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型中的数据显示预期的值。  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services MDX 查询设计器用户界面（报表生成器）](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
@@ -60,8 +60,8 @@ ms.lasthandoff: 08/03/2017
  取消一个或多个作业。 作业会立即取消，并且不能恢复。 如果错误地取消了某个作业，则必须再次请求报表或订阅功能以启动新作业。  
   
 ## <a name="see-also"></a>另请参阅  
- [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [管理正在运行的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

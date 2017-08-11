@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
@@ -44,13 +44,13 @@ ms.lasthandoff: 06/22/2017
   
  上载到报表服务器数据库的文件将使用以下图标直观地显示在文件夹层次结构中：  
   
- ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
+ ![报表图标](../../reporting-services/report-server/media/hlp-16doc.gif "报表图标")  
 报表图标  
   
- ![模型图标](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
+ ![模型图标](../../reporting-services/report-server/media/model-icon.gif "模型图标")  
 报表模型图标  
   
- ![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
+ ![通用资源图标](../../reporting-services/report-server/media/hlp-16file.gif "通用资源图标")  
 通用资源图标  
   
  上载文件时，文件将始终放入当前所选的文件夹。 您可以首先定位到要包含项的文件夹，也可以先上载文件再将其移至最终位置。  
@@ -64,9 +64,9 @@ ms.lasthandoff: 06/22/2017
 |查看文件夹的内容|查看资源，查看报表|  
   
 ## <a name="see-also"></a>另请参阅  
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
- [上传文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [上载文件或报表 &#40;报表管理器 &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

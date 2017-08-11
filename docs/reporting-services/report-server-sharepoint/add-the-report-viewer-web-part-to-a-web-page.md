@@ -20,11 +20,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0fd8adf79a7eeccb66b5efd6fc90e1312020973a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>将报表查看器 Web 部件添加到网页
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  在查看器中，单击 **“单击此处打开工具窗格”**。  
   
-7.  通过单击“浏览”(**...**) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任一报表的 URL，请右键单击报表并选择“属性”。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果从“属性”对话框复制并粘贴 URL，请用空格替换“%20”URL 编码（例如，“Company%20Sales”应为“Company Sales”）。  
+7.  通过单击“浏览”(**...**) 按钮，从当前网站集合的任一库中选择报表。 也可以键入报表 URL。 若要确定任何报表的 URL，右键单击报表并选择**属性**。 请勿单击报表旁的向下箭头；报表项的“查看属性”页上未指出报表 URL。 如果你复制和粘贴的 URL**属性**对话框框中，将用空格的"%20"URL 编码 （例如，"公司 %20sales"应为"Company Sales"）。  
   
     > [!NOTE]  
     >  每个报表查看器 Web 部件都包含一个报表。 URL 必须是当前 SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 URL 必须能解析为包含报表的文档库或文档库内的文件夹。 报表 URL 必须包含 .rdl 文件扩展名。 如果报表依赖的是模型或共享数据源文件，则不必在 URL 中指定这些文件。 报表包含对所需文件的引用。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [在 SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
- [在 SharePoint 站点上授予对报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授予对 SharePoint 站点上的报表服务器项的权限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

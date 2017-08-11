@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>嵌入数据集和共享数据集（报表生成器和 SSRS）
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  在报表生成器中，您可以执行以下操作：  
   
-1.  若要创建共享数据集，请使用共享数据集设计视图。 您可以将其保存到报表服务器或 SharePoint 站点上，以便与其他报表共享。 此外，您还可以通过浏览报表服务器来编辑现有的共享数据集。 在此视图中，您可以生成查询和设置所有数据集选项。 有关详细信息，请参阅[共享数据集设计视图（报表生成器）](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)。  
+1.  若要创建共享数据集，请使用共享数据集设计视图。 您可以将其保存到报表服务器或 SharePoint 站点上，以便与其他报表共享。 此外，您还可以通过浏览报表服务器来编辑现有的共享数据集。 在此视图中，您可以生成查询和设置所有数据集选项。 有关详细信息，请参阅[共享数据集设计视图 &#40;报表生成器 &#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  若要在报表中添加共享数据集，请在“报表设计”视图中打开报表生成器。 从向导或“报表数据”窗格中，浏览到报表服务器，然后选择要添加到报表的共享数据集。 在此视图中，您除了可以添加字段外，不能更改查询。 您可以覆盖其他数据选项并添加筛选器， 但不能删除筛选器。  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [数据集字段集合 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [数据连接、 数据源和报表生成器中的连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

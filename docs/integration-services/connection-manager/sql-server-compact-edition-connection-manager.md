@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 连接管理器
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [SQL Server Compact Edition 连接管理器编辑器（“连接”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
-  
--   [SQL Server Compact Edition 连接管理器编辑器（“全部”页）](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
-  
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 连接管理器编辑器（“连接”页）
+  可以使用“SQL Server Compact Edition 连接管理器”对话框，指定连接到 **Compact 数据库时使用的属性。**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
+ 若要了解有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **输入数据库文件名和路径**  
+ 输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
+  
+ **浏览**  
+ 通过使用“选择 SQL Server Compact Edition 数据库”对话框找到所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库文件。  
+  
+ **输入数据库密码**  
+ 输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 连接管理器编辑器（“全部”页）
+  可以使用 **“SQL Server Compact Edition 连接管理器”** 对话框，指定连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库时使用的属性。  
+  
+ 若要了解有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **自动收缩阈值**  
+ 指定运行自动收缩进程前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中允许使用的可用空间大小（以百分比表示）。  
+  
+ **默认锁升级**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库在尝试升级锁之前获取的数据库锁的数量。  
+  
+ **默认锁超时值**  
+ 指定事务等待锁的默认时间间隔（毫秒）。  
+  
+ **刷新间隔**  
+ 指定提交的事务将数据刷新到磁盘的时间间隔（秒）。  
+  
+ **区域设置标识符**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的区域设置 ID (LCID)。  
+  
+ **最大缓冲区大小**  
+ 指定在将数据刷新到磁盘之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 使用的最大内存量 (KB)。  
+  
+ **最大数据库大小**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的最大大小 (MB)。  
+  
+ **模式**  
+ 指定打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的文件模式。 此属性的默认值为 **“读写”**。  
+  
+ “模式”选项包含四个值，如下表所述：  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**只读**|指定对数据库的只读访问。|  
+|**“读写”**|指定对数据库的读/写权限。|  
+|**排他**|指定对数据库的排他访问。|  
+|**共享读取**|指定其他用户可以同时读取该数据库。|  
+  
+ **持久性安全信息**  
+ 指定安全信息是否作为连接字符串的一部分返回。 此选项的默认值为 **False**。  
+  
+ **临时文件目录**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 临时数据库文件的位置。  
+  
+ **数据源**  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的名称。  
+  
+ **密码**  
+ 输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  
+  
+

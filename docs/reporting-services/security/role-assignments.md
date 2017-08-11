@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments"></a>角色分配
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  下图显示了一个角色分配，它将一个组和一个特定用户映射到文件夹 B 的“发布者”  角色：  
   
- ![角色分配关系图](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![角色分配关系图](../../reporting-services/security/media/report-securityarch.gif "角色分配关系图")  
 角色分配关系图  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>系统级和项级角色分配  
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  有关提供默认安全性的预定义角色分配的详细信息，请参阅 [预定义角色](../../reporting-services/security/role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [创建、 删除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [向报表服务器 &#40; 授予用户访问权限报表管理器 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或删除角色分配 &#40;报表管理器 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [在 SharePoint 站点 &#40; 上设置为报表服务器项的权限Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

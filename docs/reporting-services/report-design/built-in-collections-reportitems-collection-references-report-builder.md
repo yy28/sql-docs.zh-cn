@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>内置集合-ReportItems 集合引用 （报表生成器）
@@ -33,11 +33,11 @@ ms.lasthandoff: 06/22/2017
   
  例如：  
   
--   此表达式放置在文本框中时，显示名为 `Textbox1` 的 **ReportItem** 文本框的值：  
+-   此表达式放置在文本框中时，显示名为 **的** ReportItem `Textbox1`文本框的值：  
   
      `=ReportItems!Textbox1.Value`  
   
--   此表达式放置在 **ReportItem** 文本框的 Color 属性中，当值为 > 0 时以黑色显示文本；否则将以红色显示该值：  
+-   此表达式放置在**ReportItem**文本框颜色属性显示黑色文本的值时 > 0; 否则，将值显示为红色：  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
  例如，位于父组行的文本框不能包含引用子组行的文本框名称的表达式。 此类表达式不会解析报表中的值，因为子行文本框超出了作用域。 有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Reporting Services 中的分页（报表生成器和 SSRS）](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [表达式 &#40; 中的内置集合报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Reporting Services &#40; 中的分页报表生成器和 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

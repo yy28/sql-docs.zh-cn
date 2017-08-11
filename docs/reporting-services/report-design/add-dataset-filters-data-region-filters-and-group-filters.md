@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>值  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
   
- 若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”**下的 **“转换”**中列出的转换函数。 例如，对于字段`ListPrice`表示数据存储为**money**数据类型上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源的数据处理扩展插件返回形式的字段值<xref:System.Decimal>数据类型。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  
+ 若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”**下的 **“转换”**中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  
   
  此值还可以包括参数引用，以允许用户以交互方式选择作为筛选依据的值。  
   
  返回页首  
   
 ## <a name="see-also"></a>另请参阅  
- [在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [在报表 &#40; 中使用表达式报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

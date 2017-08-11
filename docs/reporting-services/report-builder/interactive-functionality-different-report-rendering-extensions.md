@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>交互式功能的不同报表呈现扩展插件
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|用户单击展开和折叠图标便可查看报表的区域。|  
 |PDF|报表服务器将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换|  
-|Excel|可切换的钻取链接和项在 Excel 中呈现为可折叠大纲。 您可以在 Excel 中展开和折叠报表的区域。 有关 Excel 强制限制的详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。|  
+|Excel|可切换的钻取链接和项在 Excel 中呈现为可折叠大纲。 您可以在 Excel 中展开和折叠报表的区域。 有关 Excel 施加限制的详细信息，请参阅[将导出到 Microsoft Excel &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|报表服务器将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换|  
 |其他|无法以 MHTML、XML 或 CSV 格式实现。 如果导出为图像格式，则报表服务器会将当前处于显示或隐藏状态的报表导出为 PDF。 不支持交互式切换。|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [交互式排序、 文档结构图和链接 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
@@ -41,19 +41,19 @@ ms.lasthandoff: 06/22/2017
   
 2.  在设计图面上，单击报表上的某个位置，然后拖动一个框调整到所需子报表大小。 也可以单击设计图面来创建默认大小的子报表。  
   
-3.  右键单击子报表，然后单击“子报表属性”。  
+3.  子报表中，右键单击，然后单击**子报表属性**。  
   
 4.  在 **“子报表属性”** 对话框的 **“名称”** 文本框中键入名称，或接受默认值。 该名称在报表中必须是唯一的。 默认情况下，会分配一个常规名称，例如 Subreport1 或 Subreport2。  
   
 5.  在 **“将此报表用作子报表”** 框中，单击 **“浏览”**，或者键入报表的名称。 应当优先单击 **“浏览”** ，因为将自动指定子报表的路径。 可以通过多种方式指定报表。 有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
-6.  （可选）为“去掉分页符上的边框”单击“是”，使得在子报表跨多个页时不在子报表中间呈现边框。  
+6.  （可选）单击**是**为**去掉分页符上的边框**以防止边框如果子报表跨多页呈现子报表的中间。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### <a name="to-specify-parameters-to-pass-to-a-subreport"></a>指定传递给子报表的参数  
   
-1.  在“设计”视图中，右键单击子报表，然后单击“子报表属性”。  
+1.  在设计视图中，右键单击子报表，然后单击**子报表属性**。  
   
 2.  在 **“子报表属性”** 对话框中，单击 **“参数”**。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 5.  在 **“值”** 列表框中，键入或选择要传递给子报表的值。 此值可以是静态文本、引用字段的表达式或主报表中的其他对象。  
   
     > [!NOTE]  
-    >  在报表生成器中，如果“参数”列表中缺少某参数并且子报表定义了默认值，将会正确处理子报表。  
+    >  在报表生成器中，如果参数是中缺少**参数**列表，并且子报表有定义的默认值，将会正确处理子报表。  
     >   
     >  在报表设计器中，子报表所需的所有参数都必须包括在 **“参数”** 列表中。 如果缺少必需的参数，子报表将不会在主报表中正确显示。  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [呈现行为（报表生成器和 SSRS）](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [呈现行为 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

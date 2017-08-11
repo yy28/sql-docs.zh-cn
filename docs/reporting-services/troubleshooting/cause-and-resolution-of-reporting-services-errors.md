@@ -19,11 +19,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 653001080c8ede72abf608c7b8b982558d55c46b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 错误的原因和解决方法
@@ -33,16 +33,16 @@ ms.lasthandoff: 06/22/2017
   
 |错误|消息|  
 |-----------|-------------|  
-|[rsAccessedDenied - Reporting Services 错误](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|为用户“mydomain\myAccount”授予的权限不足，无法执行此操作。 (rsAccessDenied) (ReportingServicesLibrary)。|  
-|[rsInternalError - Reporting Services 错误](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|报表服务器上出现内部错误。 有关详细信息，请参阅错误日志。|  
-|[rsModelGenerationError - Reporting Services 错误](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|生成模型时出错。 (rsModelGenerationError) (ReportingServicesLibrary) %1。|  
-|[rsProcessingError - Reporting Services 错误](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|处理报表时出错。|  
-|[rsServerConfigurationError - Reporting Services 错误](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|报表服务器遇到配置错误。|  
-|[rrRenderingError - Reporting Services 错误](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|呈现报表时出错。 (rrRenderingError) %1。|  
-|[报表服务器 Windows 服务 (MSSQLServer) 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|报表服务器 Windows 服务 (MSSQLSERVER) 无法与报表服务器数据库建立连接。|  
+|[rsAccessedDenied-Reporting Services 错误](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|为用户“mydomain\myAccount”授予的权限不足，无法执行此操作。 (rsAccessDenied) (ReportingServicesLibrary)。|  
+|[rsInternalError-Reporting Services 错误](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|报表服务器上出现内部错误。 有关详细信息，请参阅错误日志。|  
+|[rsModelGenerationError-Reporting Services 错误](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|生成模型时出错。 (rsModelGenerationError) (ReportingServicesLibrary) %1。|  
+|[rsProcessingError-Reporting Services 错误](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|处理报表时出错。|  
+|[rsServerConfigurationError-Reporting Services 错误](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|报表服务器遇到配置错误。|  
+|[rrRenderingError-Reporting Services 错误](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|呈现报表时出错。 (rrRenderingError) %1。|  
+|[报表服务器 Windows 服务 &#40;MSSQLServer &#41;107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|报表服务器 Windows 服务 (MSSQLSERVER) 无法与报表服务器数据库建立连接。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [错误和事件参考 &#40;Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

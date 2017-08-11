@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions"></a>角色定义
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](../../reporting-services/security/role-assignments.md)。  
   
 ## <a name="types-of-role-definitions"></a>角色定义的类型  
- 角色定义既可以是项级定义也可以是系统级定义。 “项级角色定义”说明了与在报表服务器上存储和管理的项（如报表、文件夹和模型）相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义”  包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
+ 角色定义既可以是项级定义也可以是系统级定义。 *项级角色定义*描述与存储和管理报表服务器，例如报表、 文件夹和模型上的项相关的任务。 可以包含在项级角色定义中的任务如：管理报表、查看文件夹和管理单独的订阅。 “系统角色定义”  包含应用于整个站点的任务。 可以包含在系统角色中的任务如：查看报表服务器属性。  
   
 ## <a name="predefined-roles"></a>预定义角色  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含与不同级别的用户交互所对应的预定义角色。 下面的列表包含可以使用的预定义角色：  
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [修改或删除角色分配（报表管理器）](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [创建、 删除或修改角色 &#40;Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [向报表服务器 &#40; 授予用户访问权限报表管理器 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [修改或删除角色分配 &#40;报表管理器 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

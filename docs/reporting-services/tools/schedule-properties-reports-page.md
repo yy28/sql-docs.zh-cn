@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d71a539f9a04942d10a3ab802b60376bf15c2864
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
@@ -32,11 +32,11 @@ ms.lasthandoff: 06/22/2017
  若要打开计划属性页：
  1. 启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  2. 连接到报表服务器。
- 3. 打开“共享计划”文件夹。
- 4. 右键单击共享计划，选择“属性”。
- 5. 单击“报表”。  
+ 3. 打开**共享计划**文件夹。
+ 4. 右键单击共享的计划，选择**属性**。
+ 5. 单击**报表**。  
   
-  你还可以从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户的“站点设置”管理共享计划。
+  你还可以管理共享的计划从**站点设置**的[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]Web 门户。
   
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -51,9 +51,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除计划](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [计划](../../reporting-services/subscriptions/schedules.md)   
- [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [配置报表的常规属性（报表管理器）](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [配置报表 （报表管理器） 的常规属性](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
 

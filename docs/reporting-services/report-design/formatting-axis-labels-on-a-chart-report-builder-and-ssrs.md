@@ -32,17 +32,17 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
   
- 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击要设置其格式的轴，然后单击“轴属性”可以更改轴文本的值，数值格式和日期格式，主要和次要刻度线，标签的自动调整方式以及轴线的粗细、颜色和样式。 若要更改轴标题的值，请右键单击轴标题，然后单击“轴标题属性”。  
+ 可以使用 **“轴属性”** 对话框或“属性”窗格来设置轴的格式。 右键单击你想要设置格式和单击的轴**轴属性**若要更改的数值的轴文本值和日期的格式、 主要和次要刻度线，自动调整的标签和粗细，颜色、 和轴线的样式。 若要更改轴标题的值，请右键单击该轴标题，然后单击**轴标题属性**。  
   
  轴标签标识图表上的主要间隔。 默认情况下，图表使用一种算法来确定标签应如何以最佳方式放置在轴上，以避免文本重叠。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  当您将一个字段从数据集拖放到图表表面上时，该图表会确定此字段是属于类别轴还是值轴。  
   
- 值轴通常是图表的垂直轴（或 y 轴）。 它用于显示要绘制的数值数据值。 拖放到数据字段区域中的字段将绘制在值轴上。 类别轴通常是图表的水平轴（或 x 轴）。 对于条形图中的这些轴，情况正好相反。 在条形图中，类别轴是垂直轴，而值轴是水平轴。 有关详细信息，请参阅[条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
+ 值轴通常是图表的垂直轴（或 y 轴）。 它用于显示要绘制的数值数据值。 拖放到数据字段区域中的字段将绘制在值轴上。 类别轴通常是图表的水平轴（或 x 轴）。 对于条形图中的这些轴，情况正好相反。 在条形图中，类别轴是垂直轴，而值轴是水平轴。 有关详细信息，请参阅 [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)。  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>图表如何计算轴标签间隔  
  在设置轴标签的格式之前，应先了解图表如何计算轴标签间隔。 这样，您就可以通过设置必需的属性来实现所需的轴标记行为。  
@@ -105,14 +105,14 @@ ms.lasthandoff: 06/22/2017
  图表计算大约 5 个轴标签间隔而不考虑图表的大小。 在更宽或更高的图表上，如果在一个轴上仅显示 5 个标签，则各个标签之间会出现较大的间隔。 这会使根据该轴来确定每个数据点的值变得更加困难。 若要避免在更宽或更高的图表上出现此情况，您可以设置可变轴间隔。 图表会根据相应轴的具体情况基于该图表的宽度或高度来计算能够在轴上显示的最佳标签数。 有关详细信息，请参阅 [指定轴间隔（报表生成器和 SSRS）](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 ## <a name="sorting-axis-values"></a>对轴值进行排序  
- 类别按它们在结果集中的出现顺序沿 x 轴显示。 通过向查询添加 SORT 命令或通过使用表达式对数据集进行排序，可以更改组顺序。 图表数据区域与其他数据区域的排序方式相同。 有关如何对数据进行排序的详细信息，请参阅[对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
+ 类别按它们在结果集中的出现顺序沿 x 轴显示。 通过向查询添加 SORT 命令或通过使用表达式对数据集进行排序，可以更改组顺序。 图表数据区域与其他数据区域的排序方式相同。 有关如何对数据进行排序的详细信息，请参阅[数据区域 &#40; 中的数据进行排序报表生成器和 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>指定类别轴上的标量值  
  默认情况下，图表只为数据集中包含有效值的数据点显示轴标签。 例如，如果类别轴上有值 1、2 和 6，图表将只显示类别 1、2 和 6。 若要维护类别值的刻度，可以指定图表使用标量轴。 在这种情况下，该图表将在它的 x 轴上为 1 到 6 显示标签，即使数据集不包含 3 到 5 的值。  
   
  有两种方法可用于设置标量轴：  
   
--   在 **“轴属性”** 对话框中选择 **“标量轴”** 选项。 这样会将数值或日期/时间值添加到没有数据分组值的轴。 有关详细信息，请参阅[“轴属性”对话框，“轴选项”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
+-   在 **“轴属性”** 对话框中选择 **“标量轴”** 选项。 这样会将数值或日期/时间值添加到没有数据分组值的轴。 有关详细信息，请参阅[轴属性对话框中，轴选项 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   在 **“序列属性”** 对话框的 **“类别字段”** 选项中选择一个字段或键入一个表达式。 图表将为您指定的类别字段中的所有值添加轴间隔。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [在图表 &#40; 的格式设置数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

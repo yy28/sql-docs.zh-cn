@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供用于生成 RDL 文件的多种工具。 有关详细信息，请参阅 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
- 从应用程序生成 RDL 的最简单方法之一是使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]类<xref:System.Xml>命名空间和<xref:System.Linq>命名空间。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关详细信息**XmlTextWriter**类和<xref:System.Xml>命名空间，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
+ 从应用程序生成 RDL 的最简单方法之一是使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]类<xref:System.Xml>命名空间和<xref:System.Linq>命名空间。 尤其是可以使用 **XmlTextWriter** 类编写 RDL。 使用 **XmlTextWriter**，可以在任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应用程序中从头到尾生成完整的报表定义。 开发人员还可以通过添加具有自定义属性的自定义报表项来扩展 RDL。 有关 **XmlTextWriter** 类和 <xref:System.Xml> 命名空间的更多信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 开发人员指南。 有关语言集成查询 (LINQ) 的详细信息，请在 MSDN 上搜索 "LINQ to XML"。  
   
  报表定义文件的标准文件扩展名为 .rdl。 还可以开发具有扩展名 .rdlc 的客户端报表定义文件。 两种扩展名的 MIME 类型都为 text/xml。 有关报表的详细信息，请参阅 [Reporting Services 报表 &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [与报表中使用自定义程序集](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [自定义报表项](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   

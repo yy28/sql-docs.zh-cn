@@ -20,11 +20,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37d44eeb29ad4e2acfd4f9618c755f2c5d8b9b28
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
  查看演示使用 Microsoft Power Query 查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件的简短视频。  
   
-[![观看演示 power query 和 ssrs 日志文件的视频](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx) [使用 Microsoft Power Query 查看 Reporting Services 日志文件](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
+[![观看演示 power query 和 ssrs 日志文件的视频](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [使用 Microsoft Power Query 查看 Reporting Services 日志文件](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
   
 ##  <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置  
  在配置文件中管理跟踪日志行为**ReportingServicesService.exe.config**。 可在以下文件夹路径中找到该配置文件：  
@@ -114,9 +114,9 @@ ms.lasthandoff: 06/22/2017
 + ReportServer_*\<时间戳 >*.log
 + ReportServerService_main_*\<时间戳 >*.log
   
-## <a name="see-also"></a>另请参阅  
- [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [错误和事件参考 &#40;Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
  更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
   
 

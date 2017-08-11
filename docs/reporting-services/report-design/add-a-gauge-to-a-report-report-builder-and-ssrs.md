@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>向报表添加仪表（报表生成器和 SSRS）
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  与图表不同的是，仪表只有两个类型：线性和径向。 **“选择仪表类型”** 对话框中的可用仪表是这两类仪表的模板。 因此，在将仪表添加到报表后不能更改仪表类型。 必须通过删除并重新添加仪表来更改仪表类型。  
   
-     如果报表没有数据源和数据集，则 **“数据源属性”** 对话框即会打开并引导您完成创建数据源和数据集的步骤。 有关详细信息，请参阅[添加和验证数据连接（报表生成器和 SSRS）](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+     如果报表没有数据源和数据集，则 **“数据源属性”** 对话框即会打开并引导您完成创建数据源和数据集的步骤。 有关详细信息，请参阅[添加并验证数据连接 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
      如果报表具有数据源但没有数据集，则 **“数据集属性”** 对话框即会打开并引导您完成创建一个数据集的步骤。 有关详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
@@ -44,10 +44,10 @@ ms.lasthandoff: 06/22/2017
   
 5.  将数据集中的一个字段添加到数据字段放置区。 您只能添加一个字段。 如果要显示多个字段，必须添加其他指针，每个字段一个指针。  
   
-     右键单击仪表刻度，然后选择“刻度属性”。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
+     右键单击仪表刻度，然后选择**刻度属性**。 为刻度的 **“最小值”** 和 **“最大值”** 分别键入一个值。 有关详细信息，请参阅[设置仪表的最小值或最大值（报表生成器和 SSRS）](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

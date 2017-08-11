@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
@@ -50,6 +52,23 @@ ms.lasthandoff: 08/03/2017
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
+## <a name="odbc-connection-manager-ui-reference"></a>ODBC 连接管理器用户界面参考
+  可以使用 **“配置 ODBC 连接管理器”** 对话框为 ODBC 数据源添加连接。  
+  
+ 若要了解有关 ODBC 连接管理器的详细信息，请参阅 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **数据连接**  
+ 从列表中选择现有的 ODBC 连接管理器。  
+  
+ **数据连接属性**  
+ 查看所选 ODBC 连接管理器的属性和值。  
+  
+ **新建**  
+ 使用“连接管理器”对话框创建 ODBC 连接管理器。 通过此对话框，您也可以在需要时创建新的 ODBC 数据源。  
+  
+ **删除**  
+ 选择某个连接，然后可以使用“删除”按钮将其删除。  
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

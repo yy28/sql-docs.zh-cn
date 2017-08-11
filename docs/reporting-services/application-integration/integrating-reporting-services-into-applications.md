@@ -23,11 +23,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>将 Reporting Services 集成到应用程序中
@@ -44,20 +44,20 @@ ms.lasthandoff: 06/22/2017
 ## <a name="url-access"></a>URL 访问  
  URL 访问是用于将报表查看集成到您的应用程序中的另一个选项（如果无法选择 ReportViewer 控件）。 此外，URL 访问还用于通过电子邮件将指向报表的链接发送给用户。  
   
-## <a name="in-this-section"></a>本节内容  
- [集成使用 SOAP 的 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+## <a name="in-this-section"></a>本節內容  
+ [使用 SOAP 集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  说明如何使用报表服务器 Web 服务将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航和管理集成到您的现有业务应用程序中。  
   
  [集成 Reporting Services 使用的 ReportViewer 控件](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  说明如何使用 ReportViewer 控件将报表查看集成到您的现有应用程序中。  
   
- [将使用 URL 访问的 Reporting Services 的集成](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [使用 URL 访问集成 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  说明如何使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航集成到您的现有业务应用程序中。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [URL 访问和 SOAP 之间进行选择](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [报表服务器 Web 服务](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

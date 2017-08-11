@@ -28,11 +28,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为管理报表发布提供项目配置。 此配置指定报表服务器的位置、在报表服务器上安装的 SQL Server Reporting Services 的版本、发布到报表服务器的数据源是否被覆盖等等。 例如，“Debug”配置可以发布到与“release”配置不同的服务器。 除了使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的配置之外，还可以创建其他配置。  
  
 ## <a name="requirements-to-publish"></a>发布要求
-权限是通过基于角色的安全性确定的，而安全性由报表服务器管理员定义。 发布操作通常由“发布者角色”授予。  
+权限是通过基于角色的安全性确定的，而安全性由报表服务器管理员定义。 发布操作通常通过授予**发布服务器角色**。  
   
 ## <a name="project-configurations"></a>项目配置  
  报告环境中可能安装了多个报表服务器和不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以创建多个配置，然后根据部署方案选择不同的配置。 项目配置包括用于生成报表的属性（如临时存储所生成的报表的文件夹）以及如何处理生成问题。 配置还具有用于指定报表服务器的位置和版本以及报表服务器上的文件夹的属性。  
@@ -66,16 +66,16 @@ ms.lasthandoff: 06/22/2017
 在解决方案资源管理器中，右键单击报表，然后单击 **“部署”**。 可以在“输出”窗口中查看发布过程的状态。  
   
  当您发布报表时，还必须部署报表使用的共享数据源。   
- 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 为此，请选择一种部署报表的配置（例如，Release 配置），然后右键单击相应的报表，再单击“部署”。  
+ 如果不希望发布项目中的所有报表，可以选择只发布单个报表。 若要执行此操作，选择将该报表 （例如，发布配置） 的配置，右键单击报表，，然后单击**部署**。  
   
- 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击该共享数据源，再单击“部署”。  
+ 如果报表使用共享数据源，您还需要部署共享数据源，否则，部署的报表将不会运行。 右键单击共享的数据源，然后单击**部署**。  
   
  必须指定报表服务器的目标服务器 URL，并且可能需要更改将报表和共享数据源部署到的默认文件夹。  
 
   
 ## <a name="see-also"></a>另请参阅  
  [“项目属性页”对话框](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [升级报表](../../reporting-services/install-windows/upgrade-reports.md)  
   
   

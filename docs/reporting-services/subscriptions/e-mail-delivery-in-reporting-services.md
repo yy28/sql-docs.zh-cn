@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会检查附件或邮件的大小。 如果附件或邮件的大小超出邮件服务器允许的最大限制，则无法传递报表。 如果是大型报表，请选择其他传递选项（例如 URL 或通知）。  
   
- 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果选择在订阅中“包括链接”，电子邮件将包含一个指向该报表的超链接。  
+ 在您创建订阅时，将设置确定报表传递方式的传递选项。 例如，如果你选择**包括链接**在订阅中，电子邮件中包含指向报表的超链接。  
   
 ## <a name="native-mode-role-based-e-mail-settings"></a>本机模式的基于角色的电子邮件设置  
  在本机模式的报表服务器环境中，所使用的电子邮件传递设置因角色是包含“管理单独的订阅”任务还是“管理所有订阅”任务而异。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
- [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [角色分配](../../reporting-services/security/role-assignments.md)  
   

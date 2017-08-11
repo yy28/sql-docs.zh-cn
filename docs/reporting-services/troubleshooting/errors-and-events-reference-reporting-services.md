@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a0738c8ac950a86ef877c26fd8b6a0f6a6b075f2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
 |117|错误|启动/关闭|报表服务器|报表服务器数据库版本无效。|  
 |118|警告|日志记录|报表服务器<br /><br /> 报表管理器|跟踪日志不在预期的目录位置；此时将在默认目录中创建新的跟踪日志。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |119|错误|激活|报表服务器<br /><br /> 计划和传递处理器|*\<源 >*尚未授予访问报表服务器数据库的内容。|  
-|120|错误|激活|报表服务器|无法解密对称密钥。 运行该服务所使用的帐户很可能已更改。 有关详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
+|120|错误|激活|报表服务器|无法解密对称密钥。 运行该服务所使用的帐户很可能已更改。 有关详细信息，请参阅[配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|错误|启动/关闭|报表服务器|远程过程调用 (RPC) 服务无法启动。|  
 |122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息，请参阅 [为电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。|  
 |123|警告|日志记录|报表服务器<br /><br /> 报表管理器|报表服务器无法对跟踪日志进行写入操作。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
-|124|信息|激活|报表服务器|报表服务器服务已初始化。 有关详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
-|125|信息|激活|报表服务器|用于加密数据的密钥已成功提取。 有关密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
-|126|信息|激活|报表服务器|用于加密数据的密钥已成功应用。 有关密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
-|127|信息|激活|报表服务器|加密内容已从报表服务器数据库中成功删除。 有关删除不可恢复的加密数据的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
+|124|信息|激活|报表服务器|报表服务器服务已初始化。 有关详细信息，请参阅[初始化报表服务器 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
+|125|信息|激活|报表服务器|用于加密数据的密钥已成功提取。 有关密钥的详细信息，请参阅[配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|126|信息|激活|报表服务器|用于加密数据的密钥已成功应用。 有关密钥的详细信息，请参阅[配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
+|127|信息|激活|报表服务器|加密内容已从报表服务器数据库中成功删除。 有关删除不可恢复的加密的数据的详细信息，请参阅[配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |128|错误|激活|报表服务器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
 |129|错误|管理|报表服务器<br /><br /> 计划和传递处理器|无法解密已加密的配置文件设置。|  
 |130|错误|管理|报表服务器<br /><br /> 计划和传递处理器|*\<源 >*找不到配置文件。 报表服务器要求有配置文件。|  

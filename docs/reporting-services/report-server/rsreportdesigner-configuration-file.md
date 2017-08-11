@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="editing-guidelines"></a>编辑指南  
  除非您要部署或删除自定义扩展插件、禁用预览过程中的缓存功能或在升级 Service Pack 后注册新的数据处理扩展插件，否则请不要修改此文件中的设置。  
   
- 若要自定义呈现扩展插件设置，则可使用编辑配置文件的特定说明。 有关详细信息，请参阅[在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
+ 若要自定义呈现扩展插件设置，则可使用编辑配置文件的特定说明。 有关详细信息，请参阅 [在 RSReportServer.Config 中自定义呈现扩展插件参数](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
- 有关如何编辑配置文件的常规说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+ 有关如何编辑配置文件的一般说明，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>示例配置文件  
  下面的示例说明了 RSReportDesigner.config 文件的格式。  

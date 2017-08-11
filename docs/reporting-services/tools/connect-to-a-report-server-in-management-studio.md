@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  单击 **“连接”**。 此时，相应的报表服务器将显示在对象资源管理器中。  
   
-6.  右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)。  
+6.  右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>连接到 SharePoint 集成模式的报表服务器  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  单击 **“连接”**。 此时，相应的报表服务器将显示在对象资源管理器中。  
   
-6.  右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)。  
+6.  右键单击服务器节点以设置系统属性和服务器默认值。 有关详细信息，请参阅[设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>注册报表服务器  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/13/2017
   
 2.  单击 Reporting Services 图标。  
   
-3.  右键单击 **Reporting Services**，指向“新建”，再单击“服务器注册”。 此时，将显示 **“新建服务器注册”** 对话框。  
+3.  右键单击**Reporting Services**，指向**新建**，然后单击**服务器注册**。 此时，将显示 **“新建服务器注册”** 对话框。  
   
 4.  在 **“服务器名称”**中，输入一个值。 您必须指定的值因服务器模式而异：  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [SQL Server Management Studio 中的 Reporting Services (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [SQL Server Management Studio &#40; 的 reporting ServicesSSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

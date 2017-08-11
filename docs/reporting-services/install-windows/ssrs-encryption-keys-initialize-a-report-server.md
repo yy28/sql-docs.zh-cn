@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密密钥-初始化报表服务器
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  报表服务器服务再次连接到报表服务器数据库，并将对称密钥添加到步骤 3 中存储的公钥和安装标识符值中。 在存储对称密钥之前，报表服务器服务使用其公钥对对称密钥进行加密。 存储对称密钥后，即可将报表服务器视为已初始化，并且可供使用。  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>针对扩展部署初始化报表服务器  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持在多个报表服务器实例中共享单个报表服务器数据库的扩展部署模型。 若要联接扩展部署，报表服务器必须在共享数据库中创建并存储其对称密钥副本。 尽管使用该数据库的服务器都使用同一个对称密钥，但是每个报表服务器都有自己的密钥副本。 每个副本各不相同，因为这些副本都使用其各自拥有的公钥进行了唯一加密。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持共享单个报表服务器数据库在多个报表服务器实例之间的横向扩展部署模型。 若要联接扩展部署，报表服务器必须在共享数据库中创建并存储其对称密钥副本。 尽管使用该数据库的服务器都使用同一个对称密钥，但是每个报表服务器都有自己的密钥副本。 每个副本各不相同，因为这些副本都使用其各自拥有的公钥进行了唯一加密。  
   
  针对扩展部署初始化报表服务器的开始步骤与描述初始化单个服务器和数据库组合的前三个步骤相同。  
   

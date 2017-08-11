@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15ed4177b267642f5b6ef7186b5e03e74fa39767
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smo-connection-manager"></a>SMO 连接管理器
@@ -43,7 +45,34 @@ ms.lasthandoff: 08/03/2017
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
+  可以使用 **“SMO 连接管理器编辑器”** 配置各种传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的任务使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接。  
+  
+ 若要了解有关 SMO 连接管理器的详细信息，请参阅 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **服务器名称**  
+ 键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，或者从列表中选择服务器名称。  
+  
+ **刷新**  
+ 刷新网络可检测到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用实例的列表。  
+  
+ **使用 Windows 身份验证**  
+ 使用 Windows 身份验证连接所选的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  
+ **使用 SQL Server 身份验证**  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接所选的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+  
+ **用户名**  
+ 如果选择了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，那么请输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名。  
+  
+ **密码**  
+ 如果选择了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，那么请输入密码。  
+  
+ **测试连接**  
+ 根据配置测试连接。  
+  
+## <a name="see-also"></a>另請參閱  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **要以何种格式显示报表？**  
   
-     可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web 门户等浏览器中联机呈现报表，也可以将它们导出为 Excel、Word 或 PDF 等其他格式。 报表采用的最终格式是需要考虑的重要因素，因为并非所有功能在所有导出格式中都可用。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
+     可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web 门户等浏览器中联机呈现报表，也可以将它们导出为 Excel、Word 或 PDF 等其他格式。 报表采用的最终格式是需要考虑的重要因素，因为并非所有功能在所有导出格式中都可用。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
 -   **希望在报表中用何种结构来呈现数据？**  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **希望读者看到哪些数据？应数据或格式筛选为不同受众？**  
   
-     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 -   **是否需要创建自己的计算？**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [报表创作概念 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [报表生成器教程](../../reporting-services/report-builder-tutorials.md)  
   
   

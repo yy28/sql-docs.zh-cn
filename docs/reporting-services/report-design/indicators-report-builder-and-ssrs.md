@@ -22,11 +22,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器  
  指示器的简单形状使其很适合在表和矩阵中使用。 指示器甚至在小尺寸下效果也很好。 这使它们可用于报表的详细信息行或组行中。  
   
- 下图显示具有一个表的报表，该表使用方向指示器集“四个箭头(彩色)”来指示销售额。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
+ 下图显示具有使用方向指示器集的表的报表**四向箭头 （彩色）**，以指示销售。 报表中的指示器图标配置为使用蓝色阴影来代替默认颜色：红色、黄色和绿色。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
  默认情况下，指示器配置为使用百分比作为度量单位，并且自动检测数据中的最小值和最大值。 指示器集中的每个图标都具有百分比范围。 百分比范围的数目依赖于图标集中图标的数目，但这些范围具有相同的大小和顺序。 例如，如果图标集具有五个图标，则有五个百分比范围，每个范围占总大小的 20%。 第一个范围以 0 开始、以 20 结束，第二个范围以 20 开始、以 40 结束，依此类推。 报表上的指示器使用的图标来自其百分比范围在指示器数据值处于的范围内的指示器集。 对于图标集中的每个图标，您可以更改百分比范围。 可以通过提供值或表达式来显式设置最小值和最大值。 您可以将度量单位更改为数值。 在此情况下，不要为数据指定最小值或最大值。 而是为指示器使用的每个图标仅提供开始值和结束值。 有关详细信息，请参阅 [设置和配置度量单位（报表生成器和 SSRS）](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
   
- 指示器通过同步指定作用域内的指示器数据值，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以通过根据报表的布局选择不同的作用域，更改指示器的同步。 指示器可以忽略同步。 有关详细信息，请参阅[设置同步作用域（报表生成器和 SSRS）](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
+ 指示器通过同步指定作用域内的指示器数据值，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以通过根据报表的布局选择不同的作用域，更改指示器的同步。 指示器可以忽略同步。 有关详细信息，请参阅 [设置同步作用域（报表生成器和 SSRS）](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)。  
   
  有关了解和设置报表作用域的常规信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="SizingIndicatators"></a> 调整指示器的大小以便提供最佳的视觉效果  
  除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。 假定某一报表使用指示器来显示客户对不同类型自行车的满意度。 指示器使用的图标可以根据客户满意度配置为不同的大小。 满意度越高，在报表中出现的图标就越大。 下图显示了自行车的销售报表以及反映销售额的图标大小。  
   
- 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅[使用表达式指定指示器的大小（报表生成器和 SSRS）](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
+ 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅 [使用表达式指定指示器的大小（报表生成器和 SSRS）](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
   
  若要了解有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 06/22/2017
   
  无论您是使用百分比还是数字状态度量单位，都可能会发生此情况。 在您使用数字度量单位时更有可能发生此情况，因为您为此度量值提供特定值。 在您对报表数据值进行四舍五入时也更有可能发生此情况，因为这往往会使数据更离散。  
   
- 下面的方案描述当在“3 个箭头(彩色)”方向指示器中更改由三个状态构成的序列时，将会如何影响数据的可视化。 默认情况下，该序列为：  
+ 下列方案说明了时会更改的序列中的三个状态如何影响数据的数据可视化**3 向箭头 （彩色）**方向指示器。 默认情况下，该序列为：  
   
 1.  红色向下箭头  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 06/22/2017
   
  下面的方案显示对于四个不同的状态序列及其值范围，这些序列是如何影响数据可视化的。  
   
- 在这些方案中，“3 个箭头(彩色)”指示器使用数字状态度量。  
+ 在这些情况下， **3 向箭头 （彩色）**指示器使用数字状态度量。  
   
 |状态序列|起始值|结束值|  
 |--------------------|-----------------|---------------|  
@@ -186,7 +186,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [更改指示器图标和指示器集（报表生成器和 SSRS）](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [设置和配置度量单位（报表生成器和 SSRS）](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [设置和配置度量单位 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [设置同步作用域（报表生成器和 SSRS）](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

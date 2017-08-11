@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>报表设计和报表部署的规划 | Reporting Services
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
  如果您将报表定义上载到报表服务器或者升级包含现有报表的报表服务器，报表服务器将保留原格式的报表定义。 **首次使用时**，报表服务器会将报表服务器数据库中的报表升级到二进制格式，并保留这种格式以便以后查看。 报表定义 (.rdl) 本身不升级。  
   
- 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，选择报表并单击“下载”。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
+ 可以从报表服务器提取报表定义文件 (.rdl) 的只读副本。 在本机模式报表服务器上，浏览到[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 选择报表，然后单击**下载**。 在 SharePoint 模式部署中，浏览到文档库，选择该报表并单击 **“下载副本”**。  
   
  若要升级报表定义，必须在报表创作环境（例如 SQL Server Data Tools 或报表生成器）中打开报表，然后保存它。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅  
  [报表、报表部件和报表定义（报表生成器和 SSRS）](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)   
- [报表定义语言 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [报表定义语言 &#40;SSRS &#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

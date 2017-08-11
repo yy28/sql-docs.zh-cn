@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>在报表管理器中的文件夹层次结构中导航  
  若要通过浏览查找要运行的报表，可以使用主页，当您启动报表管理器时以及当您打开文件夹层次结构中的任意文件夹时，此页会自动显示。 主页仅显示您有权查看的项。 文件夹路径会作为一行链接显示在主页的顶部。 文件夹名依次列出，根文件夹（主文件夹）排在最前面。 打开其他各个文件夹时，相应的文件夹名将添加到页面顶部的文件夹路径中。 下图中的**(1)** 。 打开报表时，相应的报表名称也将添加到文件夹路径中。  
   
- ![报表管理器功能区和导航](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![报表管理器功能区和导航](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "报表管理器功能区和导航")  
 报表管理器功能区  
   
  使用以下方法可以在整个文件夹层次结构中定位：  
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="opening-a-report"></a>打开报表  
  找到报表后，单击报表名称可打开该报表。 该报表会以 HTML 格式呈现，并显示在报表管理器中的“内容”页中。 报表始终由浏览器会话进行缓存，因此如果打开一个报表，通常可以通过单击 **“后退”** 按钮返回到该报表。 即使在要求您提供用户名和密码才能运行报表的情况下，也是如此。 只有关闭浏览器，您才能完全关闭已呈现的报表。  
   
- 并不是所有在文件夹层次结构中可见的报表都是可立即访问的。 有些报表可能会提示您输入用户名和密码，以确定您是否有权访问该报表的数据源。 有关在报表管理器中打开报表的详细信息，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
+ 并不是所有在文件夹层次结构中可见的报表都是可立即访问的。 有些报表可能会提示您输入用户名和密码，以确定您是否有权访问该报表的数据源。 有关在中打开报表管理器中的报表的详细信息，请参阅[打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  此外，您还可以通过报表生成器浏览到报表并从报表服务器直接打开报表。 有关详细信息，请参阅 [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)。  
   
@@ -61,6 +61,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

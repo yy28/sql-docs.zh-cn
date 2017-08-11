@@ -32,11 +32,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   各用户拥有的标准订阅。  
   
- 取消作业时，取消的仅仅是运行在报表服务器上的进程。 由于报表服务器不管理其他计算机上发生的数据处理，因此必须手动取消其他系统上后来孤立的查询进程。 可以考虑指定查询超时值以自动关闭执行时间过长的查询。 有关详细信息，请参阅[为报表和共享数据集处理设置超时值 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 有关临时暂停报表的详细信息，请参阅[禁用或暂停报表和订阅处理](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。  
+ 取消作业时，取消的仅仅是运行在报表服务器上的进程。 由于报表服务器不管理其他计算机上发生的数据处理，因此必须手动取消其他系统上后来孤立的查询进程。 可以考虑指定查询超时值以自动关闭执行时间过长的查询。 有关详细信息，请参阅[获得报表和共享数据集处理 &#40; 设置超时值SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). 有关临时暂停报表的详细信息，请参阅 [禁用或暂停报表和订阅处理](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)。  
   
 > [!NOTE]  
 >  在极少数情况下，可能需要重新启动服务器才能取消进程。 对于 SharePoint 模式，您可能需要重新启动承载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的应用程序池。 有关详细信息，请参阅 [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  打开 **“作业”** 文件夹。  
   
-3.  右键单击报表，再单击“取消作业”。  
+3.  右键单击报表，然后单击**取消作业**。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>如何取消数据驱动订阅  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  保存该文件。  
   
-5.  在报表管理器中，从报表的“订阅”选项卡或从“我的订阅”中删除数据驱动订阅。  
+5.  在报表管理器中，从订阅选项卡的报表或从删除数据驱动订阅**我的订阅**。  
   
 6.  删除订阅之后，在 RSReportServer.config 文件中查找 **IsNotificationService** ，并将其设置为 **True**。  
   
@@ -121,14 +121,14 @@ ms.lasthandoff: 06/22/2017
 5.  或单击您的作业的框，然后单击 **“删除”** 以取消作业。 删除作业并不会删除订阅。  
   
 ##  <a name="bkmk_programmatically"></a> 以编程方式管理作业  
- 您可以通过编程方式或使用脚本来管理作业。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ListJobs%2A>， <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
+ 您可以通过编程方式或使用脚本来管理作业。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListJobs%2A>、 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
 ## <a name="see-also"></a>另请参阅  
  [取消报表服务器作业 (Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [作业属性 (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
- [修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [作业属性 &#40;Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [修改 Reporting Services 配置文件 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [监视报表服务器性能](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

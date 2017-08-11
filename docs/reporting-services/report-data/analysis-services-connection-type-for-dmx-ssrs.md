@@ -23,11 +23,11 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4cb050e8f838eaab2bc215005b167c0dea258fc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>针对 DMX 的 Analysis Services 连接类型 (SSRS)
@@ -39,17 +39,17 @@ ms.lasthandoff: 06/22/2017
 ## <a name="design-mode"></a>设计模式  
  DMX 查询设计器将在设计模式下打开。 设计模式包含用于选择单个数据挖掘模型和输入表的图形设计图面，同时还包含用于指定预测查询的网格。 DMX 查询设计器还有其他两种模式：查询模式和结果模式。 在查询模式中，查询窗格取代了设计模式中的网格，您可以在查询窗格中键入 DMX 查询。 在结果模式中，由查询返回的结果集显示在数据网格中。  
   
- 若要更改 DMX 查询设计器的模式，请在查询设计图面上单击鼠标右键，并选择“设计”、“查询”或“结果”。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)和[从数据挖掘模型检索数据 (DMX)(SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)。  
+ 若要更改的 DMX 查询设计器的模式，右键单击查询设计图面并选择**设计**，**查询**，或**结果**。 有关详细信息，请参阅[Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)和[从数据挖掘模型 &#40; DMX #41; &#40; 检索数据SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
   
 ## <a name="designing-a-prediction-query"></a>设计预测查询  
- 设计模式的“查询设计”窗格中包含两个窗口： **“挖掘模型”** 和 **“选择输入表”**。 使用 **“挖掘模型”** 窗口可选择要在查询中使用的挖掘模型。 使用 **“选择输入表”** 窗口可选择预测所基于的表。 如果希望使用单独查询而不是输入表，请在“查询设计”窗格中单击鼠标右键，并选择“单独查询”。 **“单独查询输入”** 窗口将取代 **“选择输入表”** 窗口。  
+ 设计模式的“查询设计”窗格中包含两个窗口： **“挖掘模型”** 和 **“选择输入表”**。 使用 **“挖掘模型”** 窗口可选择要在查询中使用的挖掘模型。 使用 **“选择输入表”** 窗口可选择预测所基于的表。 如果你想要使用单独查询，而不是输入表，在查询设计窗格中右键单击并选择**单独查询**。 **“单独查询输入”** 窗口将取代 **“选择输入表”** 窗口。  
   
  在设计模式中，可以将 **“挖掘模型”** 窗口和 **“选择输入表”** 窗口中的字段拖至“网格”窗格中的 **“字段”** 列。 您还可以填充其余列来指定别名、在结果中显示字段、将字段组合在一起以及指定运算符根据给定条件或参数限制字段值。 如果使用的是查询模式，请通过将字段拖至“查询”窗格来生成 DMX 查询。  
   
 ## <a name="using-parameters"></a>使用参数  
  您可以将报表参数传递到 DMX 查询参数。 若要如此操作，必须向 DMX 查询添加一个参数，在 **“查询参数”** 对话框中定义相应的查询参数，再修改相关联的报表参数。 若要定义查询参数，请单击**查询参数**(![查询参数对话框中的图标](../../reporting-services/report-data/media/iconqueryparameter.gif "查询参数对话框中的图标")) 在工具栏上的按钮。 若要查看有关在 DMX 查询中定义参数的说明，请参阅[在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
- 有关如何管理报表参数与查询参数之间关系的详细信息，请参阅[将查询参数与报表参数关联（报表生成器和 SSR）](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)。 有关参数的详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 有关如何管理报表参数与查询参数之间的关系的详细信息，请参阅[将查询参数与报表参数 &#40; 相关联报表生成器和 SSRS &#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). 有关参数的详细信息，请参阅[报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   

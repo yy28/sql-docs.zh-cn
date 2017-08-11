@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>指定用于自定义数据处理扩展插件的连接
@@ -38,15 +38,15 @@ ms.lasthandoff: 06/22/2017
   
 -   自定义 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序（如果要访问 DB2.NET、Oracle、ODP.NET 或 Teradata 数据源中的数据，则可以使用自定义 .NET 数据提供程序）  
   
--   支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 的自定义数据处理扩展插件  
+-   支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>  
   
--   支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 的自定义数据处理扩展插件  
+-   支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>  
   
 > [!NOTE]  
 >  请联系第三方提供商以了解如何实现自定义数据处理扩展插件。  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>模拟和自定义数据处理扩展插件  
- 如果你自定义数据处理扩展插件连接到使用模拟的数据源，则必须使用 Open 方法上<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>或<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>接口，以使该请求。 或者，可以存储用户标识对象 (System.Security.Principal.WindowsIdentity)，然后在其他数据处理扩展插件 API 中重用该对象。  
+ 如果你的自定义数据处理扩展插件使用模拟功能连接到数据源，则必须在 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 或 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 接口上使用 Open 方法来发出请求。 或者，可以存储用户标识对象 (System.Security.Principal.WindowsIdentity)，然后在其他数据处理扩展插件 API 中重用该对象。  
   
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的早期版本中，所有自定义数据处理扩展插件都通过用户模拟进行调用。 在此版本中，只有 Open 方法将在模拟用户时进行调用。 如果你的现有数据处理扩展插件要求具有集成安全性，则必须修改代码以使用 Open 方法或存储用户标识对象。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 |无凭据|您可以将无凭据选项用于自定义 .NET 数据访问接口。 如果指定了无人参与的执行帐户，则连接字符串将确定使用的凭据。 报表服务器将模拟无人参与的执行帐户来建立连接。<br /><br /> 如果未定义无人参与的执行帐户，则报表服务器将无法进行连接。 有关定义此帐户的详细信息，请参阅 [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
   
 ## <a name="connections-for-idbconnection"></a>IDbConnection 连接  
- 如果你使用仅支持自定义数据处理扩展插件<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>，则必须按以下方式指定连接：  
+ 如果要使用仅支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>的自定义数据处理扩展插件，则必须按以下方式指定连接：  
   
 1.  配置无人参与的执行帐户。 使用 **IDbConnection**建立连接时，需要配置此帐户。 建立连接时，报表服务器将模拟此帐户。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  使用 **IDbConnection**时，不支持下列凭据类型：集成安全性、Windows 用户帐户以及数据库凭据。 如果数据源连接使用这些选项，则无法在报表服务器中进行连接。  
   
 ## <a name="connections-for-idbconnectionextension"></a>IDbConnectionExtension 连接  
- 如果你使用的自定义数据处理扩展和支持的功能， <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>，则可以通过以下方式指定连接：  
+ 如果要使用支持 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>的自定义数据处理扩展插件，则必须按以下方式指定连接：  
   
 |凭据|连接|  
 |-----------------|-----------------|  
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [创建、删除或修改共享数据源（报表管理器）](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [配置报表的数据源属性（报表管理器）](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [创建、 删除或修改共享的数据源 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [配置的报表 &#40; 数据源属性报表管理器 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解组（报表生成器和 SSRS）
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
      为数据区域创建组时，报表生成器和报表设计器会向该数据区域自动添加行或列，并使用这些行或列显示组数据。  
   
--   **递归层次结构组** ：递归层次结构组将包括多个级别的单个报表数据集中的数据组织起来。 例如，递归层次结构组可以显示组织层次结构，例如，向 [Employee] 报告的 [Employee]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的组属性和内置函数使你能够为这种报表数据创建组。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
+-   **递归层次结构组** ：递归层次结构组将包括多个级别的单个报表数据集中的数据组织起来。 例如，递归层次结构组可以显示组织层次结构，例如，向 [Employee] 报告的 [Employee]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的组属性和内置函数使您能够为这种报表数据创建组。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
  下面的列表总结了对每个数据区域使用组的方式：  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
  Tablix 数据区域的行或列中的单元可以属于多个行组和列组。 在使用聚合函数（例如 `=Sum(Fields!FieldName.Value`）的单元的文本框中定义表达式时，单元的默认组作用域是其所属的最内部的子组。 如果某个单元同时属于行组和列组，则作用域是两个最内部的组。 还可以编写表达式，用于相对于另一个数据集计算以某组为作用域的聚合小计。 例如，可以相对于列组或相对于数据区域的所有数据（例如 `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`）计算组的百分比。 有关详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [对数据区域中的数据进行排序（报表生成器和 SSRS）](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [深化操作（报表生成器和 SSRS）](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [添加或删除数据区域 &#40; 中的组报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [向组或 Tablix 数据区域 &#40; 添加总计报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [在数据区域 &#40; 中的数据进行排序报表生成器和 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [深化操作 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

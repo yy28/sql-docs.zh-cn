@@ -17,17 +17,17 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]环境，用于创建商业智能解决方案。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不包括与 SQL Server。 下载 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]环境，用于创建商业智能解决方案。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  本主题介绍用于 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]解决方案、项目、项目模板和配置，以及可在报表设计器中使用的视图、菜单、工具栏和快捷键。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_ReportServerProjects"></a> 报表服务器项目  
  安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]后，在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中可以使用下列项目模板：  
   
--   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是一个由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 安装的商业智能项目模板，可在 **“新建项目”** 对话框中找到它。 有关详细信息，请参阅[向报表项目中添加新报表或现有报表 (SSRS)](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)。报表服务器项目属性将应用于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目中的所有报表和共享数据源。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框，请在“项目”  菜单上单击 “属性” 。  
+-   **报表服务器项目。** 选择“报表服务器项目”时，将打开报表设计器。 报表服务器项目是一个由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 安装的商业智能项目模板，可在 **“新建项目”** 对话框中找到它。 有关详细信息，请参阅[将新的或现有报表添加到报表项目 &#40;SSRS &#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md).报表服务器项目属性适用于所有报表和所有共享数据源中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。 这些属性包括报表服务器的 URL 以及报表和共享数据源的文件夹名称。 使用 **“项目属性页”** 对话框可查看当前属性值。 若要打开此对话框，请在“项目”  菜单上单击 “属性” 。  
   
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **图像** 可作为报表中的图像报表项包括的图像的列表。  
   
- “报表数据”窗格中的数据源和数据集表示报表定义中的元素。 “报表数据”窗格是多个报表创作环境支持的功能。 在报表生成器中，它是唯一可用于管理数据源和数据集的窗格。 在报表设计器中，“报表数据”窗格使用解决方案资源管理器，该解决方案资源管理器将共享数据源和共享数据集作为文件列出。 “报表数据”窗格中的共享数据源和共享数据集必须指向解决方案资源管理器中的相应共享数据源和共享数据集。 然后，“报表数据”窗格元素将包含对解决方案资源管理器中的数据文件的引用。 项目属性确定共享数据源和共享数据集是否部署到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[转换数据源（报表生成器和 SSRS）](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md)。  
+ “报表数据”窗格中的数据源和数据集表示报表定义中的元素。 “报表数据”窗格是多个报表创作环境支持的功能。 在报表生成器中，它是唯一可用于管理数据源和数据集的窗格。 在报表设计器中，“报表数据”窗格使用解决方案资源管理器，该解决方案资源管理器将共享数据源和共享数据集作为文件列出。 “报表数据”窗格中的共享数据源和共享数据集必须指向解决方案资源管理器中的相应共享数据源和共享数据集。 然后，“报表数据”窗格元素将包含对解决方案资源管理器中的数据文件的引用。 项目属性确定共享数据源和共享数据集是否部署到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[转换数据源 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  如果看不到“报表数据”窗格，请单击设计区域，然后在“视图”  菜单上单击“报表数据” 。 如果“报表数据”窗格是浮动的，您可以对它进行定位。 有关详细信息，请参阅[在报表设计器中停靠“报表数据”窗格 (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 -   **高级。** 使用 **“高级”** 模式可显示所选 Tablix 数据区域的静态和动态行和列组成员。  必须使用组成员来设置控制与组或组成员关联的行和列可见性的属性，或者来设置呈现程序用于尝试使组保持在单个页面上的规则。 组成员将作为行组和列组区域中的单元显示在设计图面上。  
   
 > [!NOTE]  
->  若要在“默认”和“高级”模式之间切换，请右键单击“列组”图标右侧的向下箭头。  
+>  若要切换之间**默认**和**高级**模式下，右键单击右侧的向下箭头**列组**图标。  
   
  有关详细信息，请参阅 [Grouping Pane](../../reporting-services/tools/grouping-pane.md)。  
   
@@ -103,9 +103,9 @@ ms.lasthandoff: 06/22/2017
   
 -   为设计图面上的当前选定的项设置属性。 某些属性提供了值下拉列表。 您也可以直接在单元格中键入值。 某些属性包含值集合，该集合用值“(集合)”表示。 大多数属性可以接受表达式，则复杂表达式的值指示**\<表达式 >**。 单击**\<表达式 >**以打开**表达式**对话框。 有关详细信息，请参阅 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)。  
   
--   使用“属性”窗格工具栏按钮可将网格从类别视图更改为字母顺序视图。 在类别视图中，您可能需要展开类别才能看到它下面的所有属性。 若要打开某项的“属性”对话框，请单击工具栏上的“属性页”按钮，或者右键单击该项并单击“属性”。  
+-   使用“属性”窗格工具栏按钮可将网格从类别视图更改为字母顺序视图。 在类别视图中，您可能需要展开类别才能看到它下面的所有属性。 若要打开项目属性对话框中，单击**属性页**按钮在工具栏上或通过右键单击该项目，然后单击**属性**。  
   
--   为“分组”窗格中的当前所选组成员设置属性。 组成员属性可帮助控制对于每个组实例，静态组头和组尾行是否重复出现。 有关详细信息，请参阅[与组一起显示组头和组尾（报表生成器和 SSRS）](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)。  
+-   为“分组”窗格中的当前所选组成员设置属性。 组成员属性可帮助控制对于每个组实例，静态组头和组尾行是否重复出现。 有关详细信息，请参阅[显示页眉和页脚使用一组 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  若要显示“属性”窗格，请从 **“视图”** 菜单中单击 **“属性窗口”**。 您可以取消停靠此窗格，并将它移到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]窗口的其他区域，或者将它显示为设计图面上的选项卡式视图。  
   
@@ -248,13 +248,13 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。 使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
- 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置：  `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
+ 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
   
  还可以向报表向导添加自定义样式。  
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> 针对 SQL Server Data Tools 的命令行支持  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]基于[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]和基础 devenv.exe 应用程序。 必须先为以下两项设置有效值，才能使用这些选项：  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 和基础 devenv.exe 应用程序。 必须先为以下两项设置有效值，才能使用这些选项：  
   
 -   项目的 OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder 和 TargetServerURL 属性。  
   
@@ -319,4 +319,4 @@ ms.lasthandoff: 06/22/2017
 [报表定义语言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

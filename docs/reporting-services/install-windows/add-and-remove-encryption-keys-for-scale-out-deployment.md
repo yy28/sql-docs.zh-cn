@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>添加和删除扩展部署的加密密钥
-  通过将多个报表服务器配置为使用一个共享的报表服务器数据库，可以在扩展部署模型中运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 扩展部署中的成员身份是基于报表服务器是否将加密密钥存储在报表服务器数据库中。 通过为特定的报表服务器实例添加和删除加密密钥，可以控制扩展部署成员身份。 如果要从部署中删除节点，则可以按任意顺序进行删除。 如果要向部署中添加节点，则必须联接已作为部署的一部分的报表服务器中的所有新实例。  
+  通过将多个报表服务器配置为使用一个共享的报表服务器数据库，可以在扩展部署模型中运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 扩展部署中的成员身份是基于报表服务器是否将加密密钥存储在报表服务器数据库中。 通过为特定的报表服务器实例添加和删除加密密钥，可以控制扩展部署成员身份。 如果要从部署中删除节点，则可以按任意顺序进行删除。 如果要向部署中添加节点，则必须联接已作为部署的一部分的报表服务器中的所有新实例。  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>使用 Reporting Services 配置工具配置扩展部署  
  配置扩展部署的最简单方法是使用 Reporting Services 配置工具。 有关详细信息以及分步说明，请参阅 [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在特定计算机的本地运行 **rskeymgmt.exe** ，该计算机承载已经是报表服务器扩展部署成员的报表服务器。  
   
-2.  使用 **-j** 参数将报表服务器联接到报表服务器数据库。 使用**-m**和 **-n** 参数指定的远程报表服务器实例你想要添加到部署。 使用 **-u** 和 **-v** 参数指定远程计算机上的管理员帐户。 如果要使用同一台计算机中的多个报表服务器实例创建扩展部署，则使用的语法会稍有不同。 有关应使用的语法的详细信息，请参阅 [rskeymgmt 实用工具 (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)。  
+2.  使用 **-j** 参数将报表服务器联接到报表服务器数据库。 使用 **-m** 和 **-n** 参数指定要添加到部署中的远程报表服务器实例。 使用 **-u** 和 **-v** 参数指定远程计算机上的管理员帐户。 如果要使用同一台计算机中的多个报表服务器实例创建扩展部署，则使用的语法会稍有不同。 有关应使用的语法的详细信息，请参阅 [rskeymgmt 实用工具 (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)。  
   
      下面的示例说明了将远程报表服务器加入扩展部署时必须指定的参数（如果您对远程计算机拥有管理员权限，则可以忽略凭据）：  
   
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
  这些步骤从扩展部署中删除报表服务器，但不会卸载报表服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 从扩展部署中删除报表服务器之后，如果不再需要服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，则可以卸载该服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [初始化报表服务器 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

@@ -19,11 +19,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
  若要设置报表服务器系统属性，可以使用 Management Studio 或脚本：  
   
--   若要使用 Management Studio，请连接到报表服务器并使用“高级服务器属性”页将 **EnableReportDesignClientDownload** 设置为 **false**。 有关如何打开该页面的详细信息，请参阅[设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)。  
+-   若要使用 Management Studio，请连接到报表服务器并使用“高级服务器属性”页将 **EnableReportDesignClientDownload** 设置为 **false**。 有关如何打开此页的详细信息，请参阅[设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
--   若要查看设置报表服务器属性的示例脚本，请参阅[为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)。  
+-   若要查看设置报表服务器属性的示例脚本，请参阅 [为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)。  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>在本机模式报表服务器上授予报表生成器访问权的角色分配  
  在本机模式报表服务器上，创建包括使用报表生成器的任务的用户角色分配。 您必须是内容管理员和系统管理员，才能在项级和站点级创建或修改角色定义和角色分配。  
   
- 以下说明假定您使用的是预定义角色。 如果您修改了角色定义或者从 SQL Server 2000 进行了升级，则对角色进行检查以验证其是否包含必需的任务。 有关创建角色分配的详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
+ 以下说明假定您使用的是预定义角色。 如果您修改了角色定义或者从 SQL Server 2000 进行了升级，则对角色进行检查以验证其是否包含必需的任务。 有关创建角色分配的详细信息，请参阅[授予用户对报表服务器 &#40; 的访问权限报表管理器 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  创建角色分配之后，用户将拥有执行以下操作的权限：  
   
@@ -80,25 +80,25 @@ ms.lasthandoff: 06/22/2017
   
 3.  打开 **“系统角色”** 文件夹。  
   
-4.  右键单击“系统管理员”，然后选择“属性”。  
+4.  右键单击**系统管理员**，然后选择**属性**。  
   
 5.  选择 **“执行报表定义”** ，然后单击 **“确定”**。  
   
-6.  右键单击“系统用户”，然后选择“属性”。  
+6.  右键单击**系统用户**，然后选择**属性**。  
   
 7.  选择 **“执行报表定义”** ，然后单击 **“确定”**。  
   
 8.  打开 **“角色”** 文件夹。  
   
-9. 右键单击“浏览器”，然后选择“属性”。  
+9. 右键单击**浏览器**，然后选择**属性**。  
   
 10. 选择 **“查看模型”** ，然后单击 **“确定”**。  
   
-11. 右键单击“内容管理器”，然后选择“属性”。  
+11. 右键单击**内容管理器**，然后选择**属性**。  
   
 12. 依次选择 **“查看模型”**， **“管理模型”**， **“使用报表”**，然后单击 **“确定”**。  
   
-13. 右键单击“发布服务器”，然后选择“属性”。  
+13. 右键单击**发布服务器**，然后选择**属性**。  
   
 14. 选择 **“管理模型”** ，然后单击 **“确定”**。  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
     1.  打开 **“安全性”** 文件夹。  
   
-    2.  右键单击“角色”选择“新建角色”。  
+    2.  右键单击**角色**，然后选择**新角色**。  
   
     3.  在“名称”中，键入 **报表生成者**。  
   
@@ -164,15 +164,15 @@ ms.lasthandoff: 06/22/2017
 |---------------------------------------|--------------------------------------------------------------------|  
 |协商（默认值）<br /><br /> NTLM（默认值）|使用 Windows 集成安全性，发自 ClickOnce 和报表生成器的经过身份验证的请求在以下情况下通常会成功：将客户端和服务器部署在同一个域中，用户使用具有报表生成器访问权的域帐户登录到客户端计算机，并且将报表服务器配置为使用 Windows 身份验证。<br /><br /> 请求成功的原因在于 ClickOnce 和浏览器与报表服务器的连接具有相同的用户标识。<br /><br /> 如果用户通过“运行身份”和指定的非默认凭据打开 Internet Explorer，则请求将失败。 如果报表服务器上的用户会话是使用特定的帐户建立的，并且 ClickOnce 在其他帐户下运行，则该报表服务器将拒绝对文件的访问。|  
 |Kerberos|使用报表生成器时必需的 Internet Explorer 不直接支持 Kerberos。|  
-|基本身份验证|ClickOnce 不支持基本身份验证。 它不会表述在身份验证标头中指定基本身份验证的请求。 它不会传递凭据或提示用户提供凭据。 可以通过启用对报表生成器应用程序文件的匿名访问来解决这些问题。<br /><br /> 由于报表服务器会忽略身份验证标头，如果启用对报表生成器应用程序文件的匿名访问，则请求将成功。 有关如何启用对报表生成器的匿名访问的详细信息，请参阅 [在报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> ClickOnce 检索应用程序文件后，报表生成器将打开与报表服务器的单独连接。 用户必须重新键入其凭据以使报表生成器连接到报表服务器。 报表生成器不会从 Internet Explorer 或 ClickOnce 收集凭据。<br /><br /> 如果将报表服务器配置为使用基本身份验证，并且未启用对报表生成器程序文件的匿名访问，则请求将失败。 请求失败的原因在于 ClickOnce 在其请求中指定了 Windows 集成安全性。 如果将报表服务器配置为使用基本身份验证，则该服务器将拒绝请求，原因是它指定的是无效的安全包以及缺少该报表服务器预期的凭据。<br /><br /> 此外，如果将报表服务器配置为使用 SharePoint 集成模式，SharePoint 站点使用基本身份验证，则当用户试图使用 ClickOnce 在客户端计算机上安装报表生成器时，将遇到 401 错误。 发生这种情况是因为 SharePoint 使用 cookie 保持用户在会话期间通过身份验证，但 ClickOnce 不支持 cookie。 用户启动 ClickOnce 应用程序（如报表生成器）时，该应用程序不会将 cookie 传递给 SharePoint，因此 SharePoint 拒绝访问并返回 401 错误。<br /><br /> 您可以尝试下列选项之一来解决此问题：<br /><br /> - 提供用户凭据时，选择“记住我的密码”选项。<br /><br /> - 启用对 SharePoint 站点集的匿名访问。<br /><br /> - 对环境进行配置以使用户不用提供凭据。 例如，在 Intranet 环境中，可将 SharePoint 服务器配置为属于一个工作组，然后在本地计算机上创建用户帐户。|  
+|基本身份验证|ClickOnce 不支持基本身份验证。 它不会表述在身份验证标头中指定基本身份验证的请求。 它不会传递凭据或提示用户提供凭据。 可以通过启用对报表生成器应用程序文件的匿名访问来解决这些问题。<br /><br /> 由于报表服务器会忽略身份验证标头，如果启用对报表生成器应用程序文件的匿名访问，则请求将成功。 有关如何启用对报表生成器的匿名访问的详细信息，请参阅 [在报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> ClickOnce 检索应用程序文件后，报表生成器将打开与报表服务器的单独连接。 用户必须重新键入其凭据以使报表生成器连接到报表服务器。 报表生成器不会从 Internet Explorer 或 ClickOnce 收集凭据。<br /><br /> 如果将报表服务器配置为使用基本身份验证，并且未启用对报表生成器程序文件的匿名访问，则请求将失败。 请求失败的原因在于 ClickOnce 在其请求中指定了 Windows 集成安全性。 如果将报表服务器配置为使用基本身份验证，则该服务器将拒绝请求，原因是它指定的是无效的安全包以及缺少该报表服务器预期的凭据。<br /><br /> 此外，如果将报表服务器配置为使用 SharePoint 集成模式，SharePoint 站点使用基本身份验证，则当用户试图使用 ClickOnce 在客户端计算机上安装报表生成器时，将遇到 401 错误。 发生这种情况是因为 SharePoint 使用 cookie 保持用户在会话期间通过身份验证，但 ClickOnce 不支持 cookie。 用户启动 ClickOnce 应用程序（如报表生成器）时，该应用程序不会将 cookie 传递给 SharePoint，因此 SharePoint 拒绝访问并返回 401 错误。<br /><br /> 您可以尝试下列选项之一来解决此问题：<br /><br /> -选择**记住我的密码**选项时提供你的用户凭据。<br /><br /> - 启用对 SharePoint 站点集的匿名访问。<br /><br /> - 对环境进行配置以使用户不用提供凭据。 例如，在 Intranet 环境中，可将 SharePoint 服务器配置为属于一个工作组，然后在本地计算机上创建用户帐户。|  
 |自定义|将报表服务器配置为使用自定义身份验证时，会在报表服务器上启用匿名访问并且在不进行身份验证检查的情况下接受请求。<br /><br /> ClickOnce 检索应用程序文件后，报表生成器将打开与报表服务器的单独连接。 用户必须重新键入其凭据以使报表生成器连接到报表服务器。 报表生成器不会从 Internet Explorer 或 ClickOnce 收集凭据。|  
   
 ## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [报表服务器系统属性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查询设计器中定义参数
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  在**参数**列中，单击**\<输入参数 >**，然后键入参数的名称。  
   
-5.  在“ **维度** ”列中，从下拉列表中选择一个值。  
+5.  在“**维度**”列中，从下拉列表中选择一个值。  
   
 6.  在“ **层次结构** ”列中，从下拉列表中选择一个值。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      若要查看为报表参数提供可用值的数据集，请右键单击“报表数据”窗格中的任意空白区域，然后单击“ **显示隐藏的数据集**”。 此时“报表数据”窗格将显示报表中的所有数据集。  
   
 ## <a name="see-also"></a>另请参阅  
- [针对 MDX 的 Analysis Services 连接类型&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [针对 MDX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
@@ -49,8 +49,8 @@ ms.lasthandoff: 06/22/2017
  如果正在更新的资源包含某个报表中所使用的图像，则需要刷新该报表，才可以看到更新后的图像。  
   
 ## <a name="see-also"></a>另请参阅  
- [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [内容页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [上载文件页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
  [报表管理器的 F1 帮助](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   

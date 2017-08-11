@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 729aad553e15f0169f8144f21809c828a8058d56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-report-server-properties-management-studio"></a>设置报表服务器属性 (Management Studio)
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 2.  右键单击报表服务器节点，然后选择“属性”。 单击 **“高级”** 以打开属性页。 有关各属性的说明，请参阅[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [报表服务器系统属性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

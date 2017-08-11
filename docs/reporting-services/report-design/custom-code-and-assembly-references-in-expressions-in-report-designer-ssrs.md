@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  在本地模式下预览具有对自定义程序集的引用的报表。  
   
 ##  <a name="Common"></a> 包括对常用函数的引用  
- 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括类从[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Math>和<xref:System.Convert>命名空间和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]运行时库函数。 为方便起见，您可以在 **“表达式”** 对话框中查看最常用的函数，这些函数按以下类别排列：文本、日期和时间、数学函数、检查函数、程序流函数、聚合函数、财务函数、转换函数和杂项函数。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
+ 使用 **“表达式”** 对话框查看内置到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的常见函数分类列表。 展开 **“常见函数”** 并单击一个类别时， **“项”** 窗格显示表达式中包括的函数的列表。 常见函数包括 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空间和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数的类。 为方便起见，您可以在 **“表达式”** 对话框中查看最常用的函数，这些函数按以下类别排列：文本、日期和时间、数学函数、检查函数、程序流函数、聚合函数、财务函数、转换函数和杂项函数。 不太常用的函数未显示在列表中，但仍然可以用在表达式中。  
   
  若要使用内置函数，请双击“项”窗格中的函数名称。 “说明”窗格中显示该函数的说明，“示例”窗格中显示函数调用的示例。 在“代码”窗格中，在左圆括号 **(**后键入函数名称时，IntelliSense 将帮助显示函数调用的各项有效语法。 例如，若要计算表中一个名为 `Quantity` 的字段的最大值，首先将简单表达式 `=Max(` 添加到“代码”窗格，然后使用智能标记查看该函数调用的所有可能的有效语法。 若要完成本示例，请键入 `=Max(Fields!Quantity.Value)`。  
   
- 有关每个函数的详细信息，请参阅<xref:System.Math>， <xref:System.Convert>，和[Visual Basic 运行时库成员](http://go.microsoft.com/fwlink/?LinkId=198941)MSDN 上。  
+ 有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
 ##  <a name="NotCommon"></a> 包括对不太常用函数的引用  
- 若要包含对其他较常用的 CLR 命名空间的引用，必须使用完全限定的引用，例如， <xref:System.Text.StringBuilder>。 对于这些不太常用的函数， **“表达式”** 对话框的“代码”窗格不支持 IntelliSense。  
+ 若要包括一个对不太常用的 CLR 命名空间的引用，必须使用完全限定引用，例如 <xref:System.Text.StringBuilder>。 对于这些不太常用的函数， **“表达式”** 对话框的“代码”窗格不支持 IntelliSense。  
   
  有关详细信息，请参阅 [Visual Basic Runtime Library Members](http://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
@@ -196,11 +196,11 @@ End Function
  因为 *Fields* 和 *ReportItems* 集合的内容可在运行时动态更改，所以不应阻止它们对自定义程序集的调用（例如，在成员变量中）。 同样的建议通常应用于所有内置集合。  
   
 ## <a name="see-also"></a>另请参阅  
- [向报表添加代码 (SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [将代码添加到报表 &#40;SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [与报表中使用自定义程序集](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [添加到报表 &#40; 程序集引用SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services 教程 &#40;SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [报表示例（报表生成器和 SSRS）](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

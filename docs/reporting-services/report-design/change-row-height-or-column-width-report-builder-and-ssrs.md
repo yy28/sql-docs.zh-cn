@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix 数据区域单元、行和列（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd220511.aspx)   
- [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩阵（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd207149.aspx)   
- [列表（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd239330.aspx)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩阵 （报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd207149.aspx)   
+ [列表 （报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [表、 矩阵和列表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

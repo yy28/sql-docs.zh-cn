@@ -4,16 +4,16 @@ description: "本主题包含的发行说明，并支持在 Linux 上运行的 S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
@@ -152,6 +152,8 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
       sudo systemctl restart mssql-server
       ```
 
+- 使用内存中 OLTP 的 Windows 上的 SQL Server 2014 数据库无法还原在 Linux 上的 SQL Server 2017 上。 若要还原使用内存中 OLTP 的 SQL Server 2014 数据库，首先将数据库升级到 SQL Server 2016 或 Windows 上的 SQL Server 2017 之前将其移动到 SQL Server 在 Linux 上通过备份/还原或分离/附加。
+
 #### <a name="remote-database-files"></a>远程数据库文件
 
 - 在此版本中不支持托管 NFS 服务器上的数据库文件。 这包括使用 NFS 共享的磁盘故障转移群集以及数据库在非群集实例上。 我们正在开发启用即将发布的版本中的 NFS 服务器支持。
@@ -267,6 +269,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
+| &nbsp; | 机器学习服务 |
 | &nbsp; | 系统扩展的存储过程（XP_CMDSHELL 等） |
 | &nbsp; | Filetable |
 | &nbsp; | 带有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集 |
@@ -856,7 +859,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
     - 变更数据捕获
 
 #### <a name="in-memory-oltp"></a>内存中 OLTP
-- 仅在 /var/opt/mssql 目录中创建内存中 OLTP 数据库。 有关详细信息，请访问[内存中 OLTP 主题](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。  
+- 仅在 /var/opt/mssql 目录中创建内存中 OLTP 数据库。 有关详细信息，请访问[内存中 OLTP 主题](sql-server-linux-performance-get-started.md#use-in-memory-oltp)。
 
 #### <a name="sqlpackage"></a>SqlPackage
 - 使用 SqlPackage 要求指定文件的绝对路径。 使用相对路径将映射"/ tmp/sqlpackage 下文件。\<代码 \> /系统/system32"文件夹。 

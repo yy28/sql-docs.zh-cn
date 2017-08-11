@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>数据集字段集合（报表生成器和 SSRS）
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
     |**DateTimeTZ**|**DateTimeOffset**|带有时区偏移量的日期和时间|  
     |**DateTime2**|**DateTime**|带有毫秒小数部分的日期和时间|  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型的详细信息，请参阅[数据类型（数据库引擎）](http://go.microsoft.com/fwlink/?linkid=98362)和[日期和时间数据类型及函数 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型的详细信息，请参阅 [数据类型（数据库引擎）](http://go.microsoft.com/fwlink/?linkid=98362) 和 [日期和时间数据类型及函数 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)。  
   
  有关在表达式中包括对数据集字段的引用的详细信息，请参阅[表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
@@ -112,9 +112,9 @@ ms.lasthandoff: 06/22/2017
  处理报表时，数据集的结果集可能会由于数据源中不再存在指定的所有列而不包含这些列的值。 可以使用字段属性 IsMissing 检测在运行时是否返回了某个字段的值。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  
   
   
-## <a name="see-also"></a>另请参阅  
- [“数据集属性”对话框 -&gt;“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>另請參閱  
+ [“数据集属性”对话框 ->“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [报表部件和报表生成器中的数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表嵌入数据集和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

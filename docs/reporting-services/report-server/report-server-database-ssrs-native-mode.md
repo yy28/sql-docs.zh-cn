@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
  可以从以前的安装或包含其他报表服务器实例的不同实例中导入或重用现有的报表服务器数据库。 报表服务器数据库的架构必须与报表服务器实例兼容。 如果数据库为较早的格式，则系统将提示您将其升级到当前格式。 新版本不能降级为旧版本。 如果您有一个较新的报表服务器数据库，则无法将其与更早版本的报表服务器实例一起使用。 有关如何将报表服务器数据库升级到较新格式的详细信息，请参阅 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)。  
   
 > [!IMPORTANT]  
->  数据库的表结构已经针对服务器操作进行了优化，因此不应对其进行修改或调整。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会将表结构从一个版本更改为下一个版本。 如果修改或扩展数据库，可能会限制或阻止执行将来执行升级或应用 Service Pack 的能力。 还可能会引入破坏报表服务器操作的更改。 例如，如果在 ReportServer 数据库上启用 READ_COMMITTED_SNAPSHOT，将中断交互式排序功能。  
+>  数据库的表结构已经针对服务器操作进行了优化，因此不应对其进行修改或调整。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]可能的表结构从一个版本更改为下一步。 如果修改或扩展数据库，可能会限制或阻止执行将来执行升级或应用 Service Pack 的能力。 还可能会引入破坏报表服务器操作的更改。 例如，如果在 ReportServer 数据库上启用 READ_COMMITTED_SNAPSHOT，将中断交互式排序功能。  
   
  必须通过报表服务器处理所有对报表服务器数据库的访问。 若要访问报表服务器数据库中的内容，可以使用报表服务器管理工具（例如报表管理器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]），或者使用编程接口，例如 URL 访问、报表服务器 Web 服务或 Windows Management Instrumentation (WMI) 提供程序。  
   
@@ -70,11 +70,11 @@ ms.lasthandoff: 06/22/2017
  如果在备份临时数据库后执行了恢复操作，则应删除其内容。 通常，在任何时候删除临时数据库的内容都是安全的。 但是，删除内容后必须重新启动报表服务器 Windows 服务。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 SQL Server 故障转移群集中承载报表服务器数据库](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [承载 SQL Server 故障转移群集中的报表服务器数据库](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [存储加密的报表服务器数据 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [管理报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
+ [管理报表服务器数据库 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [创建报表服务器数据库 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [备份和还原 Reporting Services 的操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
@@ -115,18 +115,18 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |任务说明|链接|  
 |-----------------------|-----------|  
-|访问报表服务器项，例如报表、共享数据源和资源。|[使用 URL 访问报表服务器项](../reporting-services/access-report-server-items-using-url-access.md)|  
-|将报表参数传递到报表。|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|设置 URL 访问字符串中报表参数的区域设置，它定义日期、货币等特定于区域设置的解释。|[设置 URL 中的报表语言参数](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|访问报表服务器项，例如报表、共享数据源和资源。|[访问报表服务器项使用 URL 访问](../reporting-services/access-report-server-items-using-url-access.md)|  
+|将报表参数传递到报表。|[传递 URL 中的报表参数](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|设置 URL 访问字符串中报表参数的区域设置，它定义日期、货币等特定于区域设置的解释。|[将语言设置为在 URL 中的报表参数](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |发送自定义报表呈现方式的报表扩展插件特定的设置。|[在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|将报表直接导出到某一文件格式而无需在浏览器中查看它。|[使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)|  
-|打开报表并且直接导航到某一字符串位置。|[使用 URL 访问搜索报表](../reporting-services/search-a-report-using-url-access.md)|  
-|呈现特定的报表历史记录快照。|[使用 URL 访问呈现报表历史记录快照](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|将报表直接导出到某一文件格式而无需在浏览器中查看它。|[导出报表使用 URL 访问](../reporting-services/export-a-report-using-url-access.md)|  
+|打开报表并且直接导航到某一字符串位置。|[使用 URL 访问报表中搜索](../reporting-services/search-a-report-using-url-access.md)|  
+|呈现特定的报表历史记录快照。|[呈现报表历史记录快照使用 URL 访问](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
+ [传递 URL 中的报表参数](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)   
- [使用 URL 访问集成 Reporting Services](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [查找、查看和管理报表（报表生成器和 SSRS）](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [将使用 URL 访问的 Reporting Services 的集成](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

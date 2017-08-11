@@ -21,18 +21,18 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
   “我的报表”功能为使用报表提供了一个由用户管理的工作区。 为了发挥“我的报表”文件夹应有的作用，该文件夹与其他普通文件夹相比，需要限制条件较少的权限。 只有在其他文件夹中查看和运行报表的权限的用户可能需要一组扩展的权限来管理其“我的报表”文件夹及其所拥有的内容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供专用于此用途的角色分配和角色定义。  
   
 > [!NOTE]  
->  “我的报表”只适用于报表管理器。 该文件夹在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中不可用。  
+>  “我的报表”只适用于报表管理器。 不可在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 ## <a name="role-assignment-for-my-reports"></a>“我的报表”的角色分配  
  “我的报表”的角色分配中的元素都是预先设置好的，对于激活“我的报表”文件夹的每个用户，将自动为其创建角色分配。 对于广泛使用“我的报表”的单位而言，让报表服务器自动分配安全性尤其有用，因为管理员不必为每一个“我的报表”用户授予访问权限。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [保护报表和资源](../../reporting-services/security/secure-reports-and-resources.md)   
- [保护文件夹](../../reporting-services/security/secure-folders.md)   
+ [安全的文件夹](../../reporting-services/security/secure-folders.md)   
  [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

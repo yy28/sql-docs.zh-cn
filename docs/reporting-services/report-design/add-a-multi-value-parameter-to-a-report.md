@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  在报表生成器中，打开您希望将多值参数添加到其中的报表。  
   
-2.  右键单击报表数据集，然后单击“数据集属性”  
+2.  右键单击报表数据集，并依次**数据集属性**  
   
 3.  通过在 **“查询”** 框中编辑查询文本或通过使用查询设计器添加筛选器，将变量添加到数据集查询中。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -49,21 +49,21 @@ ms.lasthandoff: 06/22/2017
   
     自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
-4.  在“报表数据”窗格中展开“参数”节点，右键单击为数据集参数自动创建的报表参数，然后单击“参数属性”。  
+4.  在**报表数据**窗格中，展开**参数**节点，右键单击已为数据集参数自动创建的报表参数，再单击**参数属性**。  
   
 5.  在 **“常规”** 选项卡中，选择 **“允许多个值”** 以允许用户为参数选择多个值。  
   
-6.  （可选）在“可用”值选项卡中，指定要显示给用户的可用值的列表。  
+6.  （可选）在**可用**值选项卡上，指定要向用户显示的可用值的列表。  
   
      可用值列表将限制用户只能选择参数的有效值。 对于多值参数，列表的顶部具有一个 **“全选”** 功能，因此用户只需一次单击即可选中或取消选中所有值。 如果您选择从数据集查询中获取报表参数的可用值，请确保选择不包含与同一报表参数关联的查询变量的数据集。  
   
-     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
+     有关详细信息，请参阅[添加、 更改或删除报表参数 &#40; 的可用值报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>添加多值参数  
   
 1.  在报表生成器中，打开您希望将多值参数添加到其中的报表。  
   
-2.  右键单击报表数据集，然后单击“数据集属性”  
+2.  右键单击报表数据集，并依次**数据集属性**  
   
 3.  通过在 **“查询”** 框中编辑查询文本或通过使用查询设计器添加筛选器，将变量添加到数据集查询中。 有关详细信息，请参阅[在关系查询设计器中生成查询（报表生成器和 SSRS）](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
@@ -79,17 +79,17 @@ ms.lasthandoff: 06/22/2017
       
     自动为查询变量创建嵌入数据集或共享数据集的数据集参数。 自动为数据集参数创建报表参数。  
   
-4.  在“报表数据”窗格中展开“参数”节点，右键单击为数据集参数自动创建的报表参数，然后单击“参数属性”。  
+4.  在**报表数据**窗格中，展开**参数**节点，右键单击已为数据集参数自动创建的报表参数，再单击**参数属性**。  
   
 5.  在 **“常规”** 选项卡中，选择 **“允许多个值”** 以允许用户为参数选择多个值。  
   
-6.  （可选）在“可用”值选项卡中，指定要显示给用户的可用值的列表。  
+6.  （可选）在**可用**值选项卡上，指定要向用户显示的可用值的列表。  
   
      可用值列表将限制用户只能选择参数的有效值。 对于多值参数，列表的顶部具有一个 **“全选”** 功能，因此用户只需一次单击即可选中或取消选中所有值。 如果您选择从数据集查询中获取报表参数的可用值，请确保选择不包含与同一报表参数关联的查询变量的数据集。  
   
-     有关详细信息，请参阅[为报表参数添加、更改或删除可用值（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)。  
+     有关详细信息，请参阅[添加、 更改或删除报表参数 &#40; 的可用值报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [向报表添加级联参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [添加、更改或删除报表参数（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

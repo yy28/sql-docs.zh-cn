@@ -20,11 +20,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0604356dc5bb7bd964679ef2da4f891900183b78
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 站点上的报表查看器 Web 部件
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  **“操作”** 菜单上的 **“导出”** 显示与报表服务器上所部署的呈现扩展插件相关联的应用程序格式。 若要确定特定格式的可用性，可以在报表服务器上添加或删除呈现扩展插件，也可以修改配置设置以删除列表中的特定导出格式。 还可以在报表服务器上指定配置设置以控制哪些格式可用。 通过添加和修改某一特定呈现扩展插件的配置设置，可以修改相应格式的默认行为。  
   
 ### <a name="print-action-on-the-report-toolbar"></a>报表工具栏上的打印操作  
- **“操作”** 菜单上的 **“打印”** 是通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的自定义打印功能。 单击“打印”时，ActiveX 客户端打印控件将下载到客户端计算机。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 可以使用 SharePoint 管理中心启用或禁用客户端打印控件的下载。  
+ **“操作”** 菜单上的 **“打印”** 是通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的自定义打印功能。 当你单击**打印**，ActiveX 客户端打印控件下载到客户端计算机。 大多数情况下，单击 **“打印”** 的用户必须拥有本地计算机的管理员权限。 常见的做法是仅允许拥有管理员权限的用户下载 ActiveX 控件。 可以使用 SharePoint 管理中心启用或禁用客户端打印控件的下载。  
   
 ### <a name="find-action-on-the-report-toolbar"></a>报表工具栏上的查找操作  
  **“操作”** 菜单上的 **“查找”** 提供移动到报表中的目标位置的方法。 可以通过键入要查找的词或短语搜索报表内容。 搜索项的最大值为 256 个字符。 搜索在报表中查找匹配值时，焦点将移动到包含该值的报表部分。  
@@ -75,6 +75,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [将报表查看器 Web 部件添加到 Web 页 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>订阅设置和文件共享帐户（配置管理器）
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 >  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>审核文件共享帐户的使用情况的 PowerShell 示例  
- 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**的**订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
+ 运行以下的 Windows PowerShell 脚本，以列出所有[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置为使用的订阅**文件共享帐户**。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
   
 ```  
 # get all file share subscriptions using the default file share account  

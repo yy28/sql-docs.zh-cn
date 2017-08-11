@@ -17,11 +17,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio 中报表服务器的 F1 帮助
@@ -33,29 +33,29 @@ ms.lasthandoff: 06/22/2017
   
 -   [删除目录项](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
   
--   [“作业属性”页](../../reporting-services/tools/job-properties-management-studio.md)  
+-   [作业属性页](../../reporting-services/tools/job-properties-management-studio.md)  
   
--   [新建共享计划](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
+-   [新建共享的计划](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
--   [新建系统角色](../../reporting-services/tools/new-system-role-management-studio.md)  
+-   [新的系统角色](../../reporting-services/tools/new-system-role-management-studio.md)  
   
--   [新建用户角色](../../reporting-services/tools/new-user-role-management-studio.md)  
+-   [新用户角色](../../reporting-services/tools/new-user-role-management-studio.md)  
   
--   [计划属性（“常规”页）](../../reporting-services/tools/schedule-properties-general-page.md)  
+-   [计划属性 （常规页）](../../reporting-services/tools/schedule-properties-general-page.md)  
   
--   [计划属性（“报表”页）](../../reporting-services/tools/schedule-properties-reports-page.md)  
+-   [计划属性 （报表页）](../../reporting-services/tools/schedule-properties-reports-page.md)  
   
--   [服务器属性（“常规”页）](../../reporting-services/tools/report-server-properties-general-page.md)  
+-   [服务器属性 （常规页）](../../reporting-services/tools/report-server-properties-general-page.md)  
   
--   [服务器属性（“执行”页）](../../reporting-services/tools/server-properties-execution-page.md)  
+-   [服务器属性 （执行页）](../../reporting-services/tools/server-properties-execution-page.md)  
   
--   [服务器属性（“历史记录”页）](../../reporting-services/tools/server-properties-history-page.md)  
+-   [服务器属性 （历史记录页）](../../reporting-services/tools/server-properties-history-page.md)  
   
--   [服务器属性（“日志记录”页）](../../reporting-services/tools/server-properties-logging-page.md)  
+-   [服务器属性 （日志记录页）](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [服务器属性（“安全性”页）](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [服务器属性 （安全页）](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
--   [服务器属性（“高级”页）](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
+-   [服务器属性 （高级页）](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   
 -   [系统角色属性](../../reporting-services/tools/system-role-properties-management-studio.md)  
   

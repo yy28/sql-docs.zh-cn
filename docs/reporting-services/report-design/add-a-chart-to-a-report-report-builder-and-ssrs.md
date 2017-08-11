@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>向报表添加图表  
   
-1.  创建一个报表，并定义一个数据集。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+1.  创建一个报表，并定义一个数据集。 有关详细信息，请参阅[报表数据集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  在 **“插入”** 选项卡上，单击 **“图表”**，然后单击 **“插入图表”**。  
   
@@ -63,21 +63,21 @@ ms.lasthandoff: 06/22/2017
   
 7.  向 **“类别组”** 区域添加分组字段。 将此字段添加到 **“类别组”** 区域时，将自动创建一个分组字段。 每个组都表示序列中的一个数据点。  
   
-8.  若要按类别汇总数据，请右键单击数据字段，然后单击“序列属性”。 在“类别”框中，从下拉列表中选择类别字段。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+8.  若要按类别汇总数据，请右键单击数据字段，然后单击**序列属性**。 在**类别**框中，从下拉列表中选择类别字段。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. 在 **“主文件夹”** 选项卡上，单击 **“运行”** ，以查看所呈现的报表。  
   
 10. 在 **“运行”** 选项卡上，单击 **“设计”** 以继续处理报表。  
   
- 在具有轴的图表（如条形图和柱形图）中，类别轴可能不会显示所有的类别标签。 有关如何更改轴标签的详细信息，请参阅[指定轴间隔（报表生成器和 SSRS）](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)。  
+ 在具有轴的图表（如条形图和柱形图）中，类别轴可能不会显示所有的类别标签。 有关如何更改轴标签的详细信息，请参阅[指定轴间隔 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>另请参阅  
- [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [图表中的空白和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教程：向报表添加条形图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：向报表添加条形图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [教程：向报表添加饼图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [教程：向报表添加饼图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [图表 &#40; 中的空和 Null 数据点报表生成器和 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [教程： 将条形图添加到报表 （报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程： 将条形图添加到报表 （报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教程： 将饼形图添加到报表 （报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教程： 将饼形图添加到报表 （报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

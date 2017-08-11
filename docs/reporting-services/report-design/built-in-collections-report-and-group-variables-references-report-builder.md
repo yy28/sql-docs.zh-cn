@@ -24,11 +24,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合的报表和组变量引用 （报表生成器）
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **读写使用** ：设置值一次并在报表会话中序列化该值。 变量的读写选项提供了一个比在报表定义的代码块中使用静态变量更好的选择。  
   
-     如果你清除了某一变量的“只读”选项，则该变量的 Writable 属性将设置为 **true**。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
+     如果清除**只读**选项的变量，可写属性，该变量设置为**true**。 若要从某一表达式更新值，请使用 SetValue 方法，例如 `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您不能控制报表处理器何时初始化一个变量或何时对更新变量的表达式进行计算。 变量初始化的执行顺序未定义。  
@@ -77,8 +77,8 @@ ms.lasthandoff: 06/22/2017
  若要引用表达式中的变量，请使用全局集合语法，例如 `=Variables!GroupDescription.Value`。 在设计图面上，文本框中的值显示为 `<<Expr>>`。  
   
 ## <a name="see-also"></a>另请参阅  
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [表达式 &#40; 中的内置集合报表生成器和 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [表达式示例 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

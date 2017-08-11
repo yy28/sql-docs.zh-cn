@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   报表模型  
   
- 如果你有想要使用数据驱动订阅中一个自定义数据处理扩展，它必须实现<xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>和<xref:Microsoft.ReportingServices.DataProcessing.IDataReader>接口。 数据处理扩展插件必须支持仅限架构的查询执行。 此查询用于在设计时检索列元数据，以使用户可以将列映射到订阅定义中的传递选项和报表参数。 仅限架构的查询执行发生在用户定义订阅的初期阶段。  
+ 如果你有要在数据驱动订阅中使用的自定义数据处理扩展插件，则它必须实现 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 接口。 数据处理扩展插件必须支持仅限架构的查询执行。 此查询用于在设计时检索列元数据，以使用户可以将列映射到订阅定义中的传递选项和报表参数。 仅限架构的查询执行发生在用户定义订阅的初期阶段。  
   
 ## <a name="query-requirements"></a>查询要求  
  创建用于检索订阅数据的查询时，请牢记以下要点：  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>将参数值从订阅服务器数据库传递到报表  
  如果要为参数化报表创建数据驱动订阅，则可以使用变量参数值来自定义每个报表的输出。 例如，订阅服务器数据库可能包含雇员标识号、雇用日期、职务和办公地点信息，这些信息可用来筛选报表数据。 如果报表接受基于这些数据或其他可用列数据的参数，则可以将参数映射到相应的列。  
   
- 将订阅方字段映射到报表参数时，请确保数据类型和列长度相符。 如果数据类型不匹配，则在订阅处理过程中将会出现错误。 若要了解有关使用参数化报表中订阅方数据的详细信息，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。  
+ 将订阅方字段映射到报表参数时，请确保数据类型和列长度相符。 如果数据类型不匹配，则在订阅处理过程中将会出现错误。 若要了解有关使用参数化报表中订阅服务器数据的详细信息，请参阅[创建数据驱动订阅 &#40;SSRS 教程 &#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>修改订阅方数据源  
  对订阅方数据源进行以下修改将会阻止订阅运行：  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除数据驱动订阅](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

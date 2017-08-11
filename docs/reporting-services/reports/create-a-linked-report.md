@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
@@ -39,20 +39,20 @@ ms.lasthandoff: 06/22/2017
   
 2.  键入新链接报表的名称。 根据需要，可以键入说明。  
   
-3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
+3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]如果不选择其他文件夹，（其中存储它所基于的报表） 的当前文件夹中创建链接的报表。  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 将打开链接报表。  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]链接的报表将打开。  
   
      链接报表的图标与报表服务器管理的其他项不同。 下面的图标表示链接报表：  
   
      ![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.gif "链接报表图标")  
   
 ## <a name="see-also"></a>另请参阅  
- [打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [“新建链接报表”页（报表管理器）](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [“选择项位置”页（报表管理器）](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [报表的“常规”属性页（报表管理器）](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [新链接的报表页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [选择项位置页 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [属性常规页、 报表 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

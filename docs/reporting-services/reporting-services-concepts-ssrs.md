@@ -15,17 +15,17 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 522c9f0c5cec7b6966d80c45a890a5be90e60b07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> 报表服务器概念  
  报表服务器是安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 实例的计算机。 报表服务器在内部存储各种项，例如分页和移动报表、报表相关项和资源、计划以及订阅。 报表服务器可以配置为单个独立的服务器，也可以配置为扩展场，或者可与 SharePoint 服务器相集成。 您通过 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 服务、WMI 提供程序、URL 访问或者以编程方式通过脚本与报表服务器项交互。 您与报表服务器交互的方式依赖于部署拓扑和配置。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  与 SharePoint 集成的报表服务器具有两个可能的配置。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作为 SharePoint 共享服务与 SharePoint Server 一起安装。 在早期版本中，通过安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 外接程序，报表服务器与 SharePoint Server 相集成。 在这两种情况下，您通过在 SharePoint 站点上使用应用程序页，与报表服务器、报表和报表相关项交互。 您可以使用 SharePoint 文档库以及为存储与报表相关的内容类型而创建的其他库。 有关详细信息，请参阅 [Reporting Services 报表服务器（SharePoint 模式）](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="report-server-items"></a>报表服务器项 
- 报表服务器项包括你可以发布、上传或保存到报表服务器的分页和移动报表、KPI、共享数据源、共享数据集和其他项。 在本机报表服务器上的报表服务器分层文件夹结构中对项进行组织，或者在 SharePoint 站点上的 SharePoint 内容库中对项进行组织。 有关详细信息，请参阅[报表服务器内容管理（SSRS 本机模式）](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
+ 报表服务器项包括你可以发布、上传或保存到报表服务器的分页和移动报表、KPI、共享数据源、共享数据集和其他项。 在本机报表服务器上的报表服务器分层文件夹结构中对项进行组织，或者在 SharePoint 站点上的 SharePoint 内容库中对项进行组织。 有关详细信息，请参阅[报表服务器内容管理 &#40;SSRS 本机模式 &#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>文件夹
  在本机报表服务器上，文件夹提供了报表服务器中存储的所有可寻址项的分层形式的导航结构和路径。 您使用文件夹层次结构以及站点和文件夹权限来帮助控制对报表服务器项的访问（通称为 *“项级安全性”*）。 默认情况下，您为特定文件夹定义的角色分配由文件夹层次结构中的子文件夹继承。 如果您将特定的角色分配给某一文件夹，则继承规则将不再适用。 文件夹结构由名为 **“主文件夹”**的根节点和支持可选的 **“我的报表”** 功能的保留文件夹组成。 在浏览器中，根节点是的名称的报表服务器虚拟目录，例如， `http://myreportserver/reports`。 有关更多信息，请参见 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
@@ -56,10 +56,10 @@ ms.lasthandoff: 06/22/2017
  订阅是一种持续存在的请求，它在特定的时间或为响应某个事件以订阅中指定的应用程序文件格式传递报表。 订阅提供了一种可替代按需运行报表的方法。 按需运行报表要求您在每次要查看报表时主动选择报表。 相比之下，订阅可以用于对报表的传递进行计划并使其自动完成。 您可以将报表传递到电子邮件收件箱或文件共享位置。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ### <a name="extensions"></a>扩展项
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一种可用于自定义报表解决方案的可扩展体系结构。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。 有关详细信息，请参阅 [Reporting Services 扩展 (SSRS)](../reporting-services/extensions-ssrs.md)。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一种可用于自定义报表解决方案的可扩展体系结构。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。 有关详细信息，请参阅[Reporting Services 扩展插件 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="report-access"></a>报表访问 
- 通过按需访问，用户可以从报表查看工具中选择报表。 根据报表服务器配置，可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、[!INCLUDE[msCoName](../includes/msconame-md.md)]SharePoint 2.0 Web 部件、SharePoint 库（在 SharePoint 集成模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时）、嵌入式 ReportViewer 控件或使用 URL 访问的浏览器。 有关按需访问报表的详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 通过按需访问，用户可以从报表查看工具中选择报表。 根据报表服务器配置，可以使用 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 部件、SharePoint 库（在 SharePoint 集成模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时）、嵌入式 ReportViewer 控件或使用 URL 访问的浏览器。 有关按需访问报表的详细信息，请参阅[查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  订阅提供了一种可替代按需运行报表的方法。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
--   **仪表。** 仪表显示某个范围之内的数据，并且带有一个指向该范围内的某个特定值的指示器。 仪表用于显示关键绩效指标 (KPI) 和其他指标。 仪表包括线性仪表和圆形仪表等。 有关详细信息，请参阅[仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
+-   **仪表。** 仪表显示某个范围之内的数据，并且带有一个指向该范围内的某个特定值的指示器。 仪表用于显示关键绩效指标 (KPI) 和其他指标。 仪表包括线性仪表和圆形仪表等。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 -   **地图。** 地图用于在地理背景下显示数据。 地图数据可以是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询、ESRI 形状文件或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Bing 地图图块中的空间数据。 空间数据由一组坐标组成，这些坐标定义用于表示形状或区域的多边形、表示路线或路径的线条以及由标记表示的点。 您可以将聚合数据与地图元素关联，以自动改变其颜色和大小。 例如，您可以基于销售额改变商店的标记类型，也可以基于速度限制改变公路的颜色。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
@@ -159,12 +159,12 @@ ms.lasthandoff: 06/22/2017
  明细报表是一种布局设计，它最初隐藏复杂性，令用户可以切换按条件隐藏报表项，以控制其希望看到的数据量。 明细报表必须检索可在报表中显示的所有可能数据。 对于使用大量数据的报表，请考虑改为使用钻取报表。 有关详细信息，请参阅[深化操作（报表生成器和 SSRS）](../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
 ### <a name="subreports"></a>子报表
- 子报表是作为布局元素添加到报表的报表项。 子报表指向不同的报表并且在主报表的正文内显示为一个子报表实例。 子报表可以使用与主报表不同的数据源。 尽管可以使用参数筛选子报表每个实例的数据，以在数据区域内重复子报表，但子报表通常与主报表一起使用，作为摘要簿或作为相关报表集合的容器。 每个子报表实例都在主报表和子报表之间切换用于报表处理的上下文。 对于使用多个子报表实例的报表，请考虑改为使用钻取报表。 有关详细信息，请参阅[子报表（报表生成器和 SSRS）](../reporting-services/report-design/subreports-report-builder-and-ssrs.md)。  
+ 子报表是作为布局元素添加到报表的报表项。 子报表指向不同的报表并且在主报表的正文内显示为一个子报表实例。 子报表可以使用与主报表不同的数据源。 尽管可以使用参数筛选子报表每个实例的数据，以在数据区域内重复子报表，但子报表通常与主报表一起使用，作为摘要簿或作为相关报表集合的容器。 每个子报表实例都在主报表和子报表之间切换用于报表处理的上下文。 对于使用多个子报表实例的报表，请考虑改为使用钻取报表。 有关详细信息，请参阅[子报表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
  ### <a name="maindetail-reports-and-drillthrough-reports"></a>主/详细信息报表和钻取报表
  主/详细信息报表解决方案包含一个显示摘要信息的主报表，以及指向显示详细信息的一个或多个报表的超链接。  只有在报表读者单击指向该报表的链接时，详细信息报表才运行。 钻取报表脱离主报表单独打开。 可对具有 Action 属性的任何报表项（例如文本框、占位符文本或图表系列）定义超链接。 有关详细信息，请参阅[钻取报表（报表生成器和 SSRS）](../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
   
-### <a name="linked-reports"></a>链接报表 
+### <a name="linked-reports"></a>“链接报表” 
  链接报表是一种报表服务器项，它包含指向报表定义的指针，但具有自己的一组报表属性和设置。 这些属性和设置包括安全性、参数、位置、订阅和计划。 因为在服务器上对参数实行单独管理，所以重新发布使用新的参数设置的主报表不会覆盖主报表或链接报表的现有参数设置。  
   
  有关详细信息，请参阅 [创建链接报表](../reporting-services/reports/create-a-linked-report.md)。  
@@ -173,9 +173,9 @@ ms.lasthandoff: 06/22/2017
  报表历史记录是报表快照的集合。 您可以使用报表历史记录来维护一段时间以来的报表记录。 报表历史记录不适用于包含机密数据或个人数据的报表。 因此，报表历史记录只能包含使用单组凭据查询数据源的那些报表。 或者，您可以通过定义计划和订阅以便将采用导出的文件格式的报表传递到文件共享区，创建报表的历史记录。 有关详细信息，请参阅[性能、快照、缓存 (Reporting Services)](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
   
 ### <a name="cached-reports"></a>缓存报表 
- 缓存报表是已编译报表和报表数据的保存的副本。 缓存报表用于通过减少对报表处理器的处理请求的数目并减少检索大型报表数据集所需的时间来提高性能。 这些报表有一个强制过期期限，通常以分钟为单位。 有关如何使用缓存报表的详细信息，请参阅[缓存报表 (SSRS)](../reporting-services/report-server/caching-reports-ssrs.md)。  
+ 缓存报表是已编译报表和报表数据的保存的副本。 缓存报表用于通过减少对报表处理器的处理请求的数目并减少检索大型报表数据集所需的时间来提高性能。 这些报表有一个强制过期期限，通常以分钟为单位。 有关如何使用缓存的报表的详细信息，请参阅[缓存报表 &#40;SSRS &#41;](../reporting-services/report-server/caching-reports-ssrs.md).  
   
- 也可以缓存共享数据集的查询结果。 有关详细信息，请参阅[缓存共享数据集 (SSRS)](../reporting-services/report-server/cache-shared-datasets-ssrs.md)。  
+ 也可以缓存共享数据集的查询结果。 有关详细信息，请参阅[缓存共享数据集 &#40;SSRS &#41;](../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="snapshots"></a>快照
  报表快照是包含在特定时间点检索到的布局信息以及查询结果的报表。 与在查看报表时获取最新查询结果的按需报表不同，报表服务器将检索已编译的报表以及在创建快照时对于报表而言是最新的数据。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[性能、快照、缓存 (Reporting Services)](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)。  
@@ -193,7 +193,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_StagesofReports"></a> Reporting Services 分页报表的阶段  
  报表定义可以创建、发布或保存、编译、处理、缓存、呈现、查看、导出和另存为历史记录。 在您运行报表时，报表服务器将分三个步骤处理报表：报表处理、数据处理和呈现。 数据和报表处理根据报表定义执行；结果将用内部中间格式存储。 中间格式的报表随后将呈现为特定的查看格式。 下图显示了报表处理的阶段和元素。  
   
- ![report processing diagram](../reporting-services/media/report-execution.gif "report processing diagram")  
+ ![报表处理关系图](../reporting-services/media/report-execution.gif "报表处理关系图")  
 报表处理关系图  
   
 ### <a name="report-definition"></a>报表定义  
@@ -209,15 +209,15 @@ ms.lasthandoff: 06/22/2017
  包含数据和布局信息的完全处理的报表。  
   
 ### <a name="rendered-report"></a>呈现的报表
- 完全处理的报表将发送到报表呈现器，以便合并每页目标呈现格式上的数据和布局。 呈现扩展插件是可定制和可扩展的。 报表的默认呈现格式为 HTML 4.0。 有关详细信息，请参阅[页面布局和呈现方式（报表生成器和 SSRS）](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)和[扩展插件 (SSRS)](../reporting-services/extensions-ssrs.md)。  
+ 完全处理的报表将发送到报表呈现器，以便合并每页目标呈现格式上的数据和布局。 呈现扩展插件是可定制和可扩展的。 报表的默认呈现格式为 HTML 4.0。 有关详细信息，请参阅[页面布局和呈现 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)和[扩展 &#40;SSRS &#41;](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="exported-report"></a>导出的报表
  导出的报表是以特定文件格式保存的完全分页的报表。 导出格式取决于已安装的呈现扩展插件，并可以进行自定义。 默认情况下，导出格式包括 Excel、Word、XML、PDF、TIFF 和 CSV。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services 功能和任务 (SSRS)](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [技术参考 (SSRS)](../reporting-services/technical-reference-ssrs.md)   
+ [技术参考 &#40;SSRS &#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

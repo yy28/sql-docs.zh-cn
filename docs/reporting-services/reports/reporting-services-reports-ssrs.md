@@ -17,11 +17,11 @@ caps.latest.revision: 54
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **导出（可选）。** 将报表导出为不同的文件格式。  
   
- 有关详细信息，请参阅 [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md) 中的[报表的阶段](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports)。  
+ 有关详细信息，请参阅[报表的阶段](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports)中[Reporting Services 概念 &#40;SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
 ## <a name="create-paginated-reports"></a>创建分页报表  
  创建分页报表：  
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **选择查询的类型。** 确定是使用一般形式的共享数据集查询，还是使用特定于你的一组报表的数据集查询。 具有一般形式的查询的共享数据集易于维护以便多个报表使用，但每个报表设计者必须根据需要为其特定的报表组筛选数据。 有关详细信息，请参阅[报表数据 (SSRS)](../../reporting-services/report-data/report-data-ssrs.md)。  
   
--   **计划相关数据的视图。** 计划报表读者的查看体验。 能够深化到详细数据的汇总报表是用于处理大量数据的很有用的方法。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+-   **计划相关数据的视图。** 计划报表读者的查看体验。 能够深化到详细数据的汇总报表是用于处理大量数据的很有用的方法。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 -   **配置权限。** 为授予正确的权限级别计划策略。 一个常见策略就是在报表服务器上创建文件夹结构，并且基于角色和文件夹安全性授予对报表和报表相关项的访问权限。 有关详细信息，请参阅 [保护报表](#bkmk_SecureReportsSummary)。  
   
@@ -86,31 +86,31 @@ ms.lasthandoff: 06/22/2017
   
     -   **选择数据可视化。** 对于每个数据集，选择要用于显示数据的数据区域。 从表、图表、仪表和地图的列表中进行选择。 有关详细信息，请参阅以下主题：  
   
-        -   [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+        -   [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
-        -   [指示器（报表生成器和 SSRS）](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+        -   [指示器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-        -   [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+        -   [地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
-        -   [仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+        -   [仪表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
     -   **自定义数据和布局。** 设计报表布局。 报表定义具有表体、数据源、数据集、数据区域、文本框、线条和图像。 矩形用作布局以及可视元素的容器。 通过撰写表达式以便控制对数据的筛选、分组、排序、格式设置和显示，对每个数据区域进行自定义。 添加报表名称、位置以及可帮助管理几十或数百个报表的其他标识信息。 添加可视元素和容器以便组织页面上的布局元素。 有关详细信息，请参阅以下主题：  
   
-        -   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
-        -   [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+        -   [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
-        -   [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+        -   [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
-        -   [设置报表项的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+        -   [格式设置报表项 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
-        -   [图像、文本框、矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+        -   [图像、 文本框、 矩形和行和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [页面布局和呈现方式（报表生成器和 SSRS）](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [页面布局和呈现 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **配置交互功能。** 为你的报表访问者添加交互功能。 例如，添加排序按钮或切换项以便查看查询。 有关详细信息，请参阅[交互式排序、文档结构图和链接（报表生成器和 SSRS）](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
@@ -121,10 +121,10 @@ ms.lasthandoff: 06/22/2017
 -   **考虑可重复使用的组件。**  确定是否可共享任何数据源或数据集查询以便重复使用。 如果可共享，则在报表服务器或 SharePoint 站点上，创建共享数据源和共享数据集。 确定数据区域是否适合于重复作为报表部件使用。 有关详细详细信息，请参阅[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ## <a name="preview-reports"></a>预览报表  
- 每种报表创作工具都支持预览报表。 有关详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的[预览](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)一节和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 每种报表创作工具都支持预览报表。 有关详细信息，请参阅[预览](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)部分[设计报表使用报表设计器 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)，和[报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="save-or-publish-reports"></a>保存或发布报表  
- 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[使用报表设计器设计报表 (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) 中的[保存和部署](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)一节和[保存报表（报表生成器）](../../reporting-services/report-builder/saving-reports-report-builder.md)。  
+ 每种创作工具都支持在本地保存报表，或者支持将报表发布到报表服务器或 SharePoint 站点。 有关详细信息，请参阅[保存和部署](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)部分[设计报表使用报表设计器 &#40;SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)，和[保存报表 &#40;报表生成器 &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## <a name="view-reports"></a>查看报表  
  除了预览在本地保存的报表或发布到报表服务器的报表之外，您还可为报表读者提供多种查看体验。 查看报表：  
@@ -182,7 +182,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
- [扩展插件 (SSRS)](../../reporting-services/extensions-ssrs.md)   
+ [扩展 &#40;SSRS &#41;](../../reporting-services/extensions-ssrs.md)   
  [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   

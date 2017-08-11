@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9737d90041d9916bf4a1fae892391d2255cc55ab
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-connection-manager"></a>文件连接管理器
@@ -63,6 +65,33 @@ ms.lasthandoff: 08/03/2017
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。  
   
- 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)的值。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+  
+## <a name="file-connection-manager-editor"></a>文件连接管理器编辑器
+  可以使用 **“文件连接管理器编辑器”** 对话框指定用于连接文件或文件夹的属性。  
+  
+> [!NOTE]  
+>  通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的“属性”窗口中指定表达式，可以设置文件连接管理器的 ConnectionString 属性。 但为了避免在使用表达式指定文件或文件夹时出现验证错误，请在“文件连接管理器编辑器”中，为“文件/文件夹”添加文件或文件夹路径。  
+  
+ 若要了解有关文件连接管理器的详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **使用类型**  
+ 指定“文件连接管理器”是连接到现有文件或文件夹，还是创建新的文件或文件夹。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|创建文件|在运行时创建新文件。|  
+|现有文件|使用现有文件。|  
+|创建文件夹|在运行时创建新文件夹。|  
+|现有文件夹|使用现有文件夹。|  
+  
+ **文件/文件夹**  
+ 对于“文件”，请指定要使用的文件。  
+  
+ 对于 **“文件夹”**，请指定要使用的文件夹。  
+  
+ **浏览**  
+ 通过使用“选择文件”或“查找文件夹”对话框选择文件或文件夹。  
   
   

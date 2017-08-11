@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d9f1b75bc40693248526282a6565db340930601b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-ca"></a>激活报表服务器 File Sync Feature in SharePoint CA
@@ -45,9 +45,9 @@ ms.lasthandoff: 06/22/2017
 4.  单击 **“激活”**。  
   
 > [!NOTE]  
->  若要停用报表服务器文件同步功能，可以使用相同的过程，但单击“停用”。  
+>  若要停用报表服务器文件同步功能，您可以使用相同的过程，但单击**停用**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [在 SharePoint 中激活报表服务器和 Power View 集成功能](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
  [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

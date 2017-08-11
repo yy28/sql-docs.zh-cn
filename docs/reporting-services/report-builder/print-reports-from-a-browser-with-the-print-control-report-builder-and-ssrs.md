@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用打印控件从浏览器中打印报表（报表生成器和 SSRS）
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  若要预览报表，请在 **“打印”** 对话框中，单击 **“预览”** 按钮。 单击“预览”将在单独的预览窗口中打开报表的首页。 如果报表已呈现在报表服务器上，则可以预览其他页。 预览的报表以 EMF 格式呈现。 在到达最后一页（此时会禁用 **“下一页”** 按钮）之前，您可以导航到上一页或下一页。  
   
 ### <a name="adjusting-print-margins"></a>调整打印边距  
- 您可以在打印报表之前，修改所呈现的 EMF 报表的打印边距。 为此，请在 **“打印”** 对话框中，单击 **“预览”** 按钮。 在预览页的顶部，单击 **“边距”** 按钮。 此时，将显示“边距”对话框。 根据需要，配置上、下、左、右边距。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 此时，该对话框将关闭，并且修改后的设置会存储下来，以用于呈现预览和打印。  
+ 您可以在打印报表之前，修改所呈现的 EMF 报表的打印边距。 为此，请在 **“打印”** 对话框中，单击 **“预览”** 按钮。 在预览页的顶部，单击 **“边距”** 按钮。 此时，将显示“边距”对话框。 根据需要，配置上、下、左、右边距。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]关闭该对话框和这些设置将存储用于呈现预览和打印。  
   
 ## <a name="see-also"></a>另请参阅  
- [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [打印报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [打印报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

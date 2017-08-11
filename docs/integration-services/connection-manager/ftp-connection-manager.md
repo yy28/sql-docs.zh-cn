@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
@@ -61,7 +63,43 @@ ms.lasthandoff: 08/03/2017
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="ftp-connection-manager-editor"></a>FTP 连接管理器编辑器
+  使用 **“FTP 连接管理器编辑器”** 对话框可以指定用于连接到 FTP 服务器的属性。  
+  
+> [!IMPORTANT]  
+>  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
+  
+ 若要了解有关 FTP 连接管理器的详细信息，请参阅 [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **服务器名称**  
+ 提供 FTP 服务器的名称。  
+  
+ **服务器端口**  
+ 指定用来连接的 FTP 服务器的端口号。 此属性的默认值为 **21**。  
+  
+ **用户名**  
+ 提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。   
+  
+ **密码**  
+ 提供用于访问 FTP 服务器的密码。  
+  
+ **超时值(秒)**  
+ 指定任务超时之前经过的秒数。 如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
+  
+ **使用被动模式**  
+ 指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
+  
+ **重试次数**  
+ 指定任务尝试连接的次数。 如果值为 **0** ，则表示不限制尝试次数。  
+  
+ **块区大小(KB)**  
+ 提供传输数据的块区大小 (KB)。  
+  
+ **测试连接**  
+ 在配置 FTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
+  
+## <a name="see-also"></a>另請參閱  
  [FTP 任务](../../integration-services/control-flow/ftp-task.md)   
  [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

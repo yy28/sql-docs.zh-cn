@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_Restrictions"></a> 限制和局限  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前 **不** 备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序可以部分备份和还原使用 SharePoint 备份和还原功能。 **需要执行其他步骤** ，本主题中介绍了这些步骤。 备份过程当前 **不** 备份无人参与的执行帐户 (UEA) 或对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库的 Windows 身份验证的加密密钥和凭据。  
   
 ###  <a name="bkmk_recommendations"></a> 建议  
   

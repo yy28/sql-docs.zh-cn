@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-properties-general-page"></a>报表服务器属性 （常规页）
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
  **若要打开此页，请执行以下操作：**
  1) 开始 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) 连接到报表服务器实例。
- 3) 右键单击报表服务器名称，然后选择“属性”。  
+ 3) 右键单击报表服务器名称，然后再选择**属性**。  
   
  服务器模式决定可以设置哪些服务器属性。 如果要管理配置为 SharePoint 集成模式的报表服务器，则不能启用“我的报表”，也不能为 Web 门户设置标题。  
   
@@ -58,10 +58,10 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="see-also"></a>另请参阅  
- [设置报表服务器属性 (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [启用和禁用我的报表](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [保护“我的报表”](../../reporting-services/security/secure-my-reports.md)  
   
   

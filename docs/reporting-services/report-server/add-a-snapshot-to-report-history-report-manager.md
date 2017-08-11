@@ -21,11 +21,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>向报表历史记录添加快照（报表管理器）
@@ -35,9 +35,9 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-manually-add-snapshots-to-report-history"></a>向报表历史记录中手动添加快照  
   
-1.  在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。  
+1.  在报表管理器中，导航到**内容**页上，并将鼠标悬停在你想要查看历史记录，然后单击下拉箭头的项。  
   
-2.  在下拉菜单中，单击“查看报表历史记录”。  
+2.  在下拉菜单中，单击 **“查看报表历史记录”**。  
   
 3.  单击 **“新建快照”**。 将在 **“运行时间”** 列中创建一个新快照。  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 06/22/2017
   
 1.  对于已配置为作为报表执行快照运行的报表，可以设置其他属性以在每次刷新该快照时将该快照的副本保存到报表历史记录。  
   
-2.  在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。  
+2.  在报表管理器中，导航到**内容**页上，将鼠标悬停在你想要查看历史记录，然后单击下拉箭头的项。  
   
-3.  在下拉菜单中，单击“管理”。  
+3.  在下拉菜单中，单击 **“管理”**。  
   
 4.  单击 **“快照选项”**。  
   
@@ -62,15 +62,15 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>基于计划自动向报表历史记录中添加快照  
   
-1.  在报表管理器中，导航到“目录”页，将鼠标悬停在要查看其历史记录的项之上，然后单击下拉箭头。  
+1.  在报表管理器中，导航到**内容**页上，并将鼠标悬停在你想要查看历史记录，然后单击下拉箭头的项。  
   
-2.  在下拉菜单中，单击“管理”。  
+2.  在下拉菜单中，单击 **“管理”**。  
   
 3.  单击 **“快照选项”**。  
   
 4.  选中 **“使用以下计划将快照添加到报表历史记录中”**复选框。 执行下列操作之一：  
   
-    -   选择“报表特定计划”。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”**。  
+    -   选择**报表特定计划**。 填入计划详细信息，选择计划的开始日期和结束日期，再单击 **“确定”**。  
   
     -   选择 **“共享计划”**。 从列表中选择首选计划。  
   
@@ -78,9 +78,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表的执行属性（报表管理器）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [限制报表历史记录（报表管理器）](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [限制报表历史记录 &#40;报表管理器 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [计划](../../reporting-services/subscriptions/schedules.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [报表管理器 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

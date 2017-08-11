@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要设置缓存属性的报表，悬停在该项上，然后单击下拉箭头。  
   
-3.  在下拉菜单中，单击“管理”。  
+3.  在下拉菜单中，单击 **“管理”**。  
   
 4.  在左框架中，单击 **“处理选项”**。  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  选择以下两个缓存选项之一，并配置过期时间：  
   
-    -   若要将缓存副本配置为在特定时间段后过期，请单击“缓存报表的临时副本。**在数分钟之后使报表副本过期**。 键入报表过期所需的分钟数。  
+    -   若要将缓存副本配置为在特定时间段后过期，请单击**“缓存报表的临时副本。使报表副本过期的分钟数之后**。 键入报表过期所需的分钟数。  
   
-    -   若要将缓存副本配置为按计划过期，请单击“缓存报表的临时副本”。**按下列计划使报表副本过期。** 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
+    -   若要配置为按计划过期的缓存的副本，请单击**缓存报表的临时副本。使根据以下计划的报表副本过期。** 单击 **“配置”**，或选择一个共享计划以控制报表过期时间。  
   
 7.  单击 **“应用”**。  
   

@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
   
- 第三方数据提供程序不一定提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供的所有功能。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解扩展 .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序的功能，请参阅 [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
+ 第三方数据提供程序不一定提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供的所有功能。 有关详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。 若要了解有关扩展的功能。[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序的功能，请参阅 [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)。  
   
  安装和注册数据访问接口需要管理员凭据。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     |Attribute|Description|  
     |---------------|-----------------|  
     |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
-    |**类型**|输入以逗号分隔的列表，其中包括实现的类的完全限定的命名空间<xref:System.Data.IDbConnection>接口，跟的名称[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据提供程序程序集 （不包括.dll 文件扩展名）。|  
+    |**类型**|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到报表服务器的 bin 目录中的 DLL，该条目应如下所示：  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/22/2017
     |Attribute|Description|  
     |---------------|-----------------|  
     |**名称**|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
-    |**类型**|输入以逗号分隔的列表，其中包括实现的类的完全限定的命名空间<xref:System.Data.IDbConnection>接口，跟的名称[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]数据提供程序程序集 （不包括.dll 文件扩展名）。|  
+    |**类型**|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
   
      例如，对于部署到 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 的 PrivateAssemblies 目录中的 DLL，该条目应如下所示：  
   
@@ -201,12 +201,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="platform-considerations"></a>平台注意事项  
  在 64 位 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在 32 位 WOW 模式下运行。 在 x64 平台上创作报表时，需要在报表创作客户端上安装 32 位数据访问接口，以便预览报表。 如果在同一系统上发布报表，则需要 x64 数据访问接口，以便使用报表管理器查看报表。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不受基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的平台支持。  
+ 对于基于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的平台，不支持 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]。  
   
  必须在每个平台上对随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装的数据处理扩展插件进行本机编译，然后将其安装在正确位置。 如果注册自定义数据访问接口或标准 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口，则需要在对应平台上对其进行本机编译，然后将其安装在相应位置。 如果在 32 位平台上运行，则必须为此 32 位平台编译数据访问接口。 如果在 64 位平台上运行，则必须为此 64 位平台编译数据访问接口。 不能在 64 位平台上使用采用 64 位接口包装的 32 位数据访问接口。 有关数据访问接口是否可在所安装平台上工作的信息，请查看您的第三方软件。 有关数据提供程序和平台支持的详细信息，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [配置和管理报表服务器 &#40;SSRS 本机模式 &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services 中的代码访问安全性](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3824222b71269de1bf500926b44ca55dd438a010
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
@@ -54,20 +54,20 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>在所选数据区域的组中插入行  
   
--   在要插入行的 Tablix 数据区域的行组区中，右键单击插入位置的行组单元，再单击“插入行”，然后单击“上方 – 组外部”、“上方 – 组内部”、“下方 – 组内部”或“下方 – 组外部”。  
+-   右键单击行组单元格在 tablix 数据区域，你想要插入行的行组区域，单击**插入行**，然后单击**上面的外部组**，**上面的内部组**， **-内部组下**，或**-外部组下**。  
   
      此时将在您单击过的行组单元所表示的组的内部或外部添加一行。  
   
 ## <a name="to-delete-a-row-from-a-group-in-a-selected-data-region"></a>删除所选数据区域的组中的行  
   
--   右键单击要删除的行所在的 Tablix 数据区域的行组区中的行组单元，然后单击“删除行”。  
+-   右键单击你想要删除某一行，，然后单击 tablix 数据区域行组区域中的行组单元格**删除行**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
- [表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [列表（报表生成器和 SSRS）](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)     
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [了解组 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [矩阵 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)     
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

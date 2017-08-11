@@ -20,17 +20,17 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e11b155e7a0f800ea4d62859c9c2c95fa10550e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将组件信息存储在注册表和配置文件中，其中配置文件会在安装过程中复制到文件系统。 配置文件包含仅供内部使用的值和用户定义的值的组合。 可以通过安装程序、配置工具、命令行实用工具以及手动编辑配置文件的方式来指定用户定义的值。  
   
- 仅在添加或配置高级设置时，才需要修改配置文件。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。 有关如何修改配置文件的详细信息或了解报表服务器如何读取新的和更新后的配置设置的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+ 仅在添加或配置高级设置时，才需要修改配置文件。 将配置设置指定为 XML 元素或属性。 如果您了解 XML 和配置文件，则可以使用文本编辑器或代码编辑器来修改可以由用户定义的设置。 有关如何修改配置文件，或若要了解有关报表服务器如何读取新的和更新配置设置的详细信息的详细信息，请参阅[修改 Reporting Services 配置文件 &#40;RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
 >  在早期版本中，报表管理器具有其自己的名为 RSWebApplication.config 的配置文件。 现在，该文件已过时。 如果从以前的安装进行了升级，则不会删除该文件，但报表服务器不会读取其中的任何设置。 如果您的计算机上存在该文件，则应将其删除。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，所有报表管理器配置设置都存储在 RSReportServer.config 文件中并从该文件中读取。 若要查看已删除或移动的设置列表，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中的重大更改](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
@@ -80,7 +80,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 扩展插件](../../reporting-services/extensions/reporting-services-extensions.md)   
- [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+ [rsconfig 实用工具 &#40;SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
  [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

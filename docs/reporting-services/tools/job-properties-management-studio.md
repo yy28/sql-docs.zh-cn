@@ -1,5 +1,5 @@
 ---
-title: "作业属性 (Management Studio) |Microsoft 文档"
+title: "作业属性 (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  对于报表，此列显示正在处理哪些报表执行进程。 此值始终为 **“呈现”**。  
   
  **作业说明**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认情况下不提供作业说明。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认情况下不提供作业说明。  
   
  **服务器名称**  
  显示正在处理该作业的报表服务器的名称。 如果您配置了扩展部署，则此值将表明哪台服务器正在处理该作业。  
@@ -73,8 +73,8 @@ ms.lasthandoff: 06/22/2017
  对于由用户启动的进程，此列显示用户名。 对于系统作业，这是报表服务器的名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [Management Studio 中报表服务器的 F1 帮助](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Management Studio F1 帮助中的报表服务器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [连接到在 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [管理正在运行的进程](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

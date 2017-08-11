@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>“设计”视图
@@ -61,8 +61,8 @@ ms.lasthandoff: 06/22/2017
  使用“属性”窗格可以查看设计图面上当前所选的报表项或“分组”窗格中的当前所选组。 另外，也可以右键单击所选报表项或组，然后单击“属性”打开报表项或组的相应“属性”对话框。  
   
 ## <a name="see-also"></a>另请参阅  
- [页眉和页脚（报表生成器和 SSRS）](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [报表设计提示（报表生成器和 SSRS）](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [页眉和页脚 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [报表设计提示 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

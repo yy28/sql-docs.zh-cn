@@ -22,11 +22,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
@@ -50,14 +50,14 @@ ms.lasthandoff: 06/22/2017
   
 -   将 **“报表数据”** 窗格中的字段拖放到文本框中。 如果将表达式拖放到表体的任意其他位置，则将创建包含占位符的新文本框。 该占位符的值将为与已删除字段对应的字段表达式。  
   
--   右键单击文本框中的任意位置，并选择“插入占位符”。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
+-   在文本框中的任意位置右键单击并选择**插入占位符**。 在 **“占位符属性”** 对话框中，可以将表达式指定为占位符的值。 有关详细信息，请参阅 [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)。  
   
 -   在文本框中键入任何简单或复杂表达式。 例如，如果在文本框中键入 **Name: [Name]** ，则 **[Name]** 文本将作为表示 `=Fields!Name.Value`表达式的占位符显示。  
   
--   在空文本框中键入以等号 (=) 作为开头的表达式。 将焦点更改到文本框之外时，生成的表达式则转换为可编辑的占位符。 如果文本框不为空，或者在文本框中的任何其他位置插入等号而不作为第一个字符，则将等号视为字符串文字，并且不会创建占位符。 有关定义简单和复杂表达式的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)。  
+-   在空文本框中键入以等号 (=) 作为开头的表达式。 将焦点更改到文本框之外时，生成的表达式则转换为可编辑的占位符。 如果文本框不为空，或者在文本框中的任何其他位置插入等号而不作为第一个字符，则将等号视为字符串文字，并且不会创建占位符。 有关定义简单和复杂表达式的详细信息，请参阅[表达式使用在报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>在文本框中设置占位符和静态文本的格式  
- 使用 **“占位符属性”** 对话框可以设置占位符的格式。 只能设置整个占位符的格式，而不能设置部分占位符的格式。 如果要查看基础表达式，则可以将指针停留在占位符上。 通过双击该占位符，或者右键单击该占位符并选择“占位符属性”，可以更改基础表达式。 还可以使用 **“占位符属性”** 对话框 **“常规”** 中的 **“标签”** 属性来指定用户界面标签。 该标签是在设计时显示的占位符的文本。  
+ 使用 **“占位符属性”** 对话框可以设置占位符的格式。 只能设置整个占位符的格式，而不能设置部分占位符的格式。 如果要查看基础表达式，则可以将指针停留在占位符上。 您可以通过双击占位符或右键单击占位符并选择更改基础表达式**占位符属性**。 还可以使用 **“占位符属性”** 对话框 **“常规”** 中的 **“标签”** 属性来指定用户界面标签。 该标签是在设计时显示的占位符的文本。  
   
  ![rs_MixedTextnPlaceholder](../../reporting-services/report-design/media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
@@ -70,18 +70,18 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  对文本框定义的操作的优先级高于为文本框中各文本定义的操作的优先级。  
   
- 有关已混合格式的详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
+ 有关混合格式设置的详细信息，请参阅[格式化文本框 &#40; 中的文本报表生成器和 SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>使用“常规”对齐水平文本  
  在 **“文本框属性”** 对话框的 **“对齐”** 中，可以指定文本的水平对齐方式。 如果未为对齐指定值，则使用对齐的默认值 **“默认”**。 这表示将根据占位符值的字段类型对齐文本。 如果指定的表达式的计算结果为非字符串值（即，非数字），则文本为右对齐。 如果表达式的计算结果为字符串值（如数字），则文本为左对齐。  
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [设置仪表上刻度的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [“占位符属性”对话框，“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [导出到 Microsoft Excel（报表生成器和 SSRS）](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [在图表 &#40; 的格式设置轴标签报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [在仪表 &#40; 的格式设置刻度报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [表、 矩阵和列表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [占位符属性对话框，常规 &#40;报表生成器和 SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [将导出到 Microsoft Excel &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [文本框 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

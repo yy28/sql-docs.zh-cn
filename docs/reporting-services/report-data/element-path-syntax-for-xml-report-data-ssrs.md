@@ -1,5 +1,5 @@
 ---
-title: "用于 XML 报表数据 (SSRS) 的元素路径语法 |Microsoft 文档"
+title: "用于 XML 报表数据的元素路径语法 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |----------------|--------------|  
 |**粗体**|必须完全按原样键入的文本。|  
 ||（垂直条）|分隔语法项。 只能选择其中一项。|  
-|`[ ]`（括号）|可选语法项。 不要键入方括号。|  
+|`[ ]`（方括号）|可选语法项。 不要键入方括号。|  
 |**{ }** （大括号）|分隔语法项的参数。|  
 |[**,**...*n*]|指示上一项可以重复 *n* 次数。 各项之间以逗号分隔。|  
   
@@ -80,13 +80,13 @@ XMLLocalName :: =
 |术语|定义|  
 |----------|----------------|  
 |Element path|定义为了使用 XML 数据源检索数据集的字段数据而要在 XML 文档中遍历的节点序列。|  
-|**ElementNode**|XML 文档中的 XML 节点。 节点由标记指定，并与其他节点之间存在层次结构关系。 例如，\<客户 > 是根元素节点。 \<客户 > 是的子元素\<客户 >。|  
+|**ElementNode**|XML 文档中的 XML 节点。 节点由标记指定，并与其他节点之间存在层次结构关系。 例如，\<Customers> 是根元素节点。 \<Customer> 是 \<Customers> 的子元素。|  
 |**XMLName**|节点的名称。 例如，Customers 节点的名称为 Customers。 **XMLName** 可以使用命名空间标识符作为前缀，以唯一命名每个节点。|  
 |**编码**|指示此元素的 **Value** 是编码的 XML，它需要解码并作为此元素的子元素。|  
 |**字段列表**|定义要用于检索数据的元素和属性集。<br /><br /> 如果未指定，则所有属性和子元素都将用作字段。 如果指定了空字段列表 (**{}**)，则不使用来自该节点的任何字段。<br /><br /> **FieldList** 不可以同时包含 **Value** 以及 **Element** 或 **ElementNode**。|  
 |**字段**|指定作为数据集字段检索的数据。|  
-|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点\<客户 ID ="1">， **ID**是一个属性和 **@ID（整数）**返回"1"为整数类型中对应的数据字段**ID**。|  
-|**值**|元素的值。 **Value** 只能在元素路径的最后一个 **ElementNode** 中使用。 例如，因为\<返回 > 是叶节点时，如果包括在元素路径，值的末尾**返回 {@}**是**负责人**。|  
+|**Attribute**|**ElementNode**中的“名称/值”对。 例如，在元素节点 \<Customer ID="1"> 中，ID 是属性，并且 @ID(Integer) 将返回“1”表示对应数据字段 ID 中的整数类型。|  
+|**值**|元素的值。 **Value** 只能在元素路径的最后一个 **ElementNode** 中使用。 例如，由于 \<Return> 是一个叶节点，因此如果将其包含于元素路径的结尾处，则 Return {@} 的值将为 Chair。|  
 |**Element**|命名子元素的值。 例如，Customers {}/Customer {}/LastName 仅检索 LastName 元素的值。|  
 |**类型**|用于从此元素创建的字段的可选数据类型。|  
 |**NamespacePrefix**|**NamespacePrefix** 在 XML 查询元素中定义。 如果不存在 XML 查询元素，则将忽略 XML **ElementPath** 中的命名空间。 如果存在 XML 查询元素，则 XML **ElementPath** 具有可选属性 **IgnoreNamespaces**。 如果 IgnoreNamespaces 为 **true**，XML **ElementPath** 和 XML 文档中的命名空间将被忽略。 有关详细信息，请参阅[用于 XML 报表数据的 XML 查询语法 (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。|  
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [XML 连接类型 &#40;SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Reporting Services 教程 &#40;SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [添加、 编辑和刷新报表数据窗格 &#40; 中的字段报表生成器和 SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

@@ -22,11 +22,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>验证 Reporting Services 安装
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="reporting-services-samples"></a>Reporting Services 示例  
   
-1.  完成 Reporting Services 教程之一。 有关详细信息，请参阅 [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)。  
+1.  完成 Reporting Services 教程之一。 有关详细信息，请参阅[Reporting Services 教程 &#40;SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  从 CodePlex 下载 Adventure Works 示例数据库和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报告。 有关详细信息，请参阅 [AdventureWorks 报表示例](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home)。  
   
@@ -87,11 +87,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具，然后连接到您刚安装的报表服务器实例。 “Web 服务 URL”页包括指向报表服务器 Web 服务的链接。 单击该链接可验证您是否可以访问该服务器。 如果未配置报表服务器数据库，请先进行配置，再单击该链接。  
   
-2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看报表服务器服务的状态，请单击“开始”，指向“控制面板”，双击“管理工具”，再双击“服务”。 出现服务列表后，滚动到“报表服务器 (MSSQLSERVER)”。 该服务的状态应为 **“已启动”**。  
+2.  打开“服务”控制台应用程序并验证报表服务器服务是否正在运行。 若要查看的报表服务器服务的状态，请单击**启动**，指向**控制面板**，双击**管理工具**，然后双击**服务**。 显示的服务列表，滚动到**报表服务器 (MSSQLSERVER)**。 该服务的状态应为 **“已启动”**。  
   
-3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 你可以使用以下 URL 验证报表服务器安装： http://*\<计算机名称 >*/ReportServer*\<_ 实例名称 >*。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果你是 Windows Vista 或 Windows Server 2008 上的本地管理员，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+3.  打开浏览器，在地址栏中键入报表服务器的 URL。 该地址由安装过程中为报表服务器指定的服务器名称和虚拟目录名组成。 默认情况下，报表服务器虚拟目录的名称为 **ReportServer**。 你可以使用以下 URL 验证报表服务器安装： http://*\<计算机名称 >*/ReportServer*\<_ 实例名称 >*。 如果将报表服务器安装为命名实例，URL 将有所不同。 有关 URL 格式的详细信息，请参阅[配置报表服务器 Url &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). 如果你是 Windows Vista 或 Windows Server 2008 上的本地管理员，请参阅[为本地管理 &#40; 配置本机模式报表服务器SSRS &#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  运行报表以测试报表服务器的操作。 对于此步骤，您可以从教程创建一个示例报表。 有关详细信息，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
+4.  运行报表以测试报表服务器的操作。 对于此步骤，您可以从教程创建一个示例报表。 有关详细信息，请参阅[创建基本表报表 &#40;SSRS 教程 &#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>验证 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 已安装并正常运行  
   
@@ -101,17 +101,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 创建新文件夹或上载文件，以测试定义是否传回报表服务器数据库。 如果上述操作成功，则表明连接正常。  
   
-     有关详细信息，请参阅 [Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
+     有关详细信息，请参阅[Web 门户 &#40;SSRS 本机模式 &#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>验证报表设计器已安装并正常运行  
   
-1.  打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后创建基于报表服务器项目类型的新项目。 有关使用报表服务器项目向导的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
+1.  打开 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后创建基于报表服务器项目类型的新项目。 有关使用报表服务器项目向导的详细信息，请参阅[中 SQL Server Data Tools &#40; Reporting ServicesSSDT &#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) SQL Server 联机丛书中。  
   
 2.  如果安装了报表示例，请打开示例报表项目文件并将报表发布到报表服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [排除 Reporting Services 安装故障](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Reporting Services 错误的原因和解决方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [原因和解决方法的 Reporting Services 错误](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
 

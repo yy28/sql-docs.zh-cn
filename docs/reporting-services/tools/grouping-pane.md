@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>“分组”窗格
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)如果未显示分组窗格中，在**报表**菜单上，单击**分组**。
   
- 行组和列组区域中的单元可以是组的静态或动态成员。 静态成员每个组重复一次，并且通常包含标签或总计。 动态成员则每个组实例重复一次，并且通常包含组表达式的唯一值。 在行组区域或列组区域中选择 Tablix 单元时，将在“行组”或“列组”窗格中选择相应的组成员。 反之，如果在“分组”窗格中选择某些组，则将在设计图面上选择与相应组成员关联的相应单元。 有关 Tablix 行和列组区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ 行组和列组区域中的单元可以是组的静态或动态成员。 静态成员每个组重复一次，并且通常包含标签或总计。 动态成员则每个组实例重复一次，并且通常包含组表达式的唯一值。 在行组区域或列组区域中选择 Tablix 单元时，将在“行组”或“列组”窗格中选择相应的组成员。 反之，如果在“分组”窗格中选择某些组，则将在设计图面上选择与相应组成员关联的相应单元。 有关 Tablix 行和列组区域的详细信息，请参阅[Tablix 数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  “分组”窗格支持以下模式：  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
 在大多数情况下，在创建组或添加总计时，将自动设置用于控制静态和动态组行及组列的显示的属性。 
 
-若要编辑默认值，必须在“行组”或“列组”窗格中选择组成员，然后在“属性”窗口中更改属性值。 如果属性窗格不可见，请单击“视图”菜单中的“属性”，或按 **F4**。  以下属性可用：  
+若要编辑默认值，必须在“行组”或“列组”窗格中选择组成员，然后在“属性”窗口中更改属性值。 如果属性窗格不可见，请在**视图**菜单上，单击**属性**或按**F4**。  以下属性可用：  
   
 -   **FixedData**。 布尔值。 适用于外部行标题和列标题。 在诸如 HTML 这样的呈现器中，当垂直滚动时冻结行组区域，或在水平滚动时冻结列组区域。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **ToggleItem。** 字符串。 向其添加切换图像的文本框的名称。 该文本框必须在相同的组作用域或包含作用域中。  
   
- 有关如何在 Tablix 数据区域上控制此行为的详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 有关如何在 Tablix 数据区域上控制此行为的详细信息，请参阅[控制 Tablix 数据区域显示在报表页 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  并非每个静态成员都有对应于设计图面上的单元的标题。 在“分组”窗格中，以下约定指示静态成员是否没有标题：  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>另请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [表达式 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [筛选器、 组中，以及对数据进行排序和 #40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

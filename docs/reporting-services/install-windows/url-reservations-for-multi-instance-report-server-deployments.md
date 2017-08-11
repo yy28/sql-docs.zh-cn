@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 保留项
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  在 URL 注册（发生在服务启动时）过程中会检测 URL 是否重复。 如果您创建的 URL 保留项不唯一，那么，直到启动服务时，才会检测到名称冲突。 因此，请确保遵循命名约定或规则以确保所有的值保持唯一。  
   
 ## <a name="default-naming-conventions"></a>默认的命名约定  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例中。 当您在命名实例中安装或配置报表服务器时，实例名称会自动包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的默认 URL 保留项中的虚拟目录中。 下表显示了默认实例和命名实例的 URL 保留项。  
+ 可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例中。 当您在命名实例中安装或配置报表服务器时，实例名称会自动包括在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供的默认 URL 保留项中的虚拟目录中。 下表显示了默认实例和命名实例的 URL 保留项。  
   
 |SQL Server 实例|默认 URL 保留项|  
 |-------------------------|-----------------------------|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基础技术对于唯一名称施加了一定的要求。 HTTP.SYS 要求其存储库中的所有 URL 保持唯一。 您可以通过改变端口、主机名或虚拟目录名称来创建唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求同一个进程内的应用程序标识保持唯一。 此要求会影响虚拟目录名称。 它规定您不能在同一个报表服务器实例中复制虚拟目录名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [配置报表服务器 Url &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置 URL &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 
