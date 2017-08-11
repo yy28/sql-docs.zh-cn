@@ -17,7 +17,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7265597c2376d62b6d3e42c55c8d87e45f6d869e
 ms.contentlocale: zh-cn
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
  内部错误不常见。 如果出现此错误，可以查看报表服务器跟踪日志以了解详细信息。 此外，如果是以本地管理员的身份在出现错误的计算机上运行，则可以查看调用堆栈以了解详细信息。  
   
-## <a name="user-action"></a>用户操作  
+## <a name="user-action"></a>使用者動作  
  若要确定此消息的具体原因，请查看位于 \Microsoft SQL Server\MSRS12 报表服务器日志文件。\<instancename > \Reporting Services\LogFiles。 有关详细信息，请参阅 [Reporting Services 日志文件和源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
  若要查看调用堆栈，请右键单击出现错误的页，然后指向“查看源”。 必须在出现该错误的同一计算机上具有管理员权限，才可查看调用堆栈。  

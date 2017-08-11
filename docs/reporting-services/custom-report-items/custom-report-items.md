@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>自定义报表项
@@ -51,13 +51,13 @@ ms.lasthandoff: 06/22/2017
  [创建自定义报表项设计时组件](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  描述如何创建自定义报表项设计时组件。  
   
- [如何部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [如何︰ 部署自定义报表项](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  描述如何部署自定义报表项。  
   
  [自定义报表项类库](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  描述自定义报表项基础结构类和中的托管的包装类**Microsoft.ReportDesigner**命名空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
+ [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

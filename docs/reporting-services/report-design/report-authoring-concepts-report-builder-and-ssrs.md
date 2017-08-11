@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: zh-cn
@@ -31,14 +31,14 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>本节内容  
- [报表、报表部件和报表定义（报表生成器和 SSRS）](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+## <a name="in-this-section"></a>本節內容  
+ [报表、 报表部件和报表定义 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  介绍用于描述不同状态的报表（包括初始定义、发布的报表以及显示给用户的所查看报表）的各种术语。  
   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  说明创建、存储和管理嵌入数据集和共享数据集之间的差异。  
   
- [数据区域和地图（报表生成器和 SSRS）](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [数据区域和地图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  介绍可以添加到报表布局中的数据区域的类型。 数据区域决定报表的外观：表格、矩阵、列表或图表。  
   
  [报表参数概念（报表生成器和 SSRS）](https://msdn.microsoft.com/library/ee240844.aspx)  

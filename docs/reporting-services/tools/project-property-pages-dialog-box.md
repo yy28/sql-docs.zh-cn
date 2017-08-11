@@ -19,7 +19,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: zh-cn
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
  选择 **True** 可在发布报表时使用项目中的数据源覆盖服务器上的数据源。 选择 **False** 可保留服务器上的现有数据源。  
   
  **TargetServerVersion**  
- 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值是**SQL Server 2016**。  
+ 选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的适当版本，或者选择“检测版本”以自动确定安装在由 **TargetServer URL** 属性标识的服务器上的版本。 默认值为 **SQL Server 2016**。  
   
  **TargetDataSourceFolder**  
  要在其中存储已发布共享数据源的文件夹的名称。 如果您没有指定文件夹，那么数据源将发布到与报表所在文件夹相同的文件夹。 如果报表服务器上没有该文件夹，则报表设计器将在发布报表时创建该文件夹。  
@@ -86,13 +86,13 @@ ms.lasthandoff: 08/09/2017
  发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如： 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`的行上面。  
++ `http:\\<servername>\<site>\<subsite>`中创建已分区表或索引。  
 
 ## <a name="next-steps"></a>后续步骤
 
 [发布报表](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [将报表发布到 SharePoint 库](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[设置部署属性 &#40;Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [报表设计器的 F1 帮助](../../reporting-services/tools/report-designer-f1-help.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

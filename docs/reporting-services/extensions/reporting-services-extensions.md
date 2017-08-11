@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 扩展插件
@@ -39,17 +39,17 @@ ms.lasthandoff: 06/22/2017
   
  另一个报表服务器扩展插件报表定义自定义扩展插件 (RDCE) 可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。 您可以基于用户或语言之类的因素自定义报表。 例如，您可能要为不同用户（例如经理或部门成员）实现不同的视图，或者可能要自定义某一报表以便在以法语或阿拉伯语呈现时具有不同的布局。  
   
-## <a name="in-this-section"></a>本节内容  
- [有关扩展的安全注意事项](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+## <a name="in-this-section"></a>本節內容  
+ [扩展插件的安全注意事项](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  介绍与开发和部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展插件相关的安全问题。  
   
  [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  介绍用于实现 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的要求和步骤。  
   
- [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [实现传递扩展插件](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  介绍用于实现 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 传递扩展插件的要求和步骤。  
   
- [实现的呈现扩展插件](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [实现呈现扩展插件](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  介绍如何开发呈现扩展插件。  
   
  [实现安全扩展插件](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  

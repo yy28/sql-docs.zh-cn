@@ -29,7 +29,7 @@ caps.latest.revision: 93
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ef2c94d2ee518262825d3e34bfb181ddb921690d
 ms.contentlocale: zh-cn
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  SQL Server Reporting Services 中不能切换到另一种模式下从报表服务器。 如果要更改您的环境使用的报表服务器类型，则必须安装所需的报表服务器模式，然后将报表项或报表服务器数据库从旧版本的报表服务器复制或移到新的报表服务器。 此过程通常称为“迁移”。 迁移所需的步骤取决于您要迁移到的模式和迁移前所在的版本。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-##  <a name="bkmk_featuresupport"></a>SharePoint 模式和本机模式的功能比较  
+##  <a name="bkmk_featuresupport"></a> Feature comparison of SharePoint and native mode  
   
 |功能或组件|本机模式|SharePoint 模式|  
 |--------------------------|-----------------|---------------------|  
@@ -169,8 +169,8 @@ ms.lasthandoff: 08/09/2017
 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
 [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
 [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[实现安全扩展插件](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [实现数据处理扩展插件](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Reporting Services &#40; 支持的数据源SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

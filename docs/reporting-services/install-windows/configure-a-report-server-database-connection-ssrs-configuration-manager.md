@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: zh-cn
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   配置报表服务器以使用不同的报表服务器数据库。  
   
--   更改数据库连接所使用的用户帐户或密码。 当帐户信息存储在 RSReportServer.config 文件中时，您只需要更新数据库连接。 如果使用服务帐户进行连接（该帐户使用 Windows 集成安全性作为凭据类型），则不会存储密码，从而无需更新连接信息。 有关更改帐户的详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+-   更改数据库连接所使用的用户帐户或密码。 当帐户信息存储在 RSReportServer.config 文件中时，您只需要更新数据库连接。 如果使用服务帐户进行连接（该帐户使用 Windows 集成安全性作为凭据类型），则不会存储密码，从而无需更新连接信息。 有关更改帐户的详细信息，请参阅[配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 -   配置报表服务器扩展部署。 配置扩展部署时，您需要创建多个到报表服务器数据库的连接。 有关如何执行此多步操作的详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 -   承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
   
--   报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅 [创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
+-   报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅[创建报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)。  
   
 -   凭据类型。 可以使用服务帐户、Windows 域帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ##### <a name="using-service-accounts-and-integrated-security"></a>使用服务帐户和集成安全性  
  可以使用 Windows 集成安全性通过报表服务器服务帐户进行连接。 已为此帐户授予了登录报表服务器数据库的权限。 如果以默认配置安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，这将是安装程序选择的默认凭据类型。  
   
- 此服务帐户为可信帐户，此帐户提供一种低维护方法来管理报表服务器数据库连接。 由于此服务帐户使用 Windows 集成安全性来建立连接，因此无需存储凭据。 但是，如果以后要更改服务帐户密码或标识（例如从内置帐户切换到域帐户），请确保使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具进行更改。 该工具会将数据库权限自动更新为使用修改后的帐户信息。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+ 此服务帐户为可信帐户，此帐户提供一种低维护方法来管理报表服务器数据库连接。 由于此服务帐户使用 Windows 集成安全性来建立连接，因此无需存储凭据。 但是，如果以后要更改服务帐户密码或标识（例如从内置帐户切换到域帐户），请确保使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具进行更改。 该工具会将数据库权限自动更新为使用修改后的帐户信息。 有关详细信息，请参阅[配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
  将数据库连接配置为使用服务帐户时，如果报表服务器数据库位于远程计算机上，则帐户必须拥有网络权限。 如果报表服务器数据库位于不同的域中，并且位于防火墙之后，或者您使用的是工作组安全性而非域安全性，则不要使用服务帐户。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户。  
   

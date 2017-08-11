@@ -19,14 +19,14 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: 43
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 33dfc4da9781e537c222bd9aed593b694d734ba0
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ae7f1a99b09e4c8fc5f2483e9aa360cce83da2df
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 属性的报表服务器项属性
@@ -41,14 +41,14 @@ ms.lasthandoff: 06/13/2017
 |--------------|-----------------|  
 |**创建者**|最初将项添加到报表服务器数据库的用户的名称。|  
 |**CreationDate**|将项添加到报表服务器数据库的日期和时间。|  
-|**说明**|项的说明。|  
+|**描述**|项的说明。|  
 |**Hidden**|一个值，指示项对于用户是否可见以及是否可供用户使用。|  
 |**ID**|报表服务器数据库中项的 ID。|  
 |**ModifiedBy**|最后对报表服务器数据库中的项进行修改的用户的名称。|  
 |**ModifiedDate**|用户最后修改该项的日期和时间。|  
 |**名称**|报表服务器数据库中项的名称。|  
 |**路径**|项的完整路径名称。 报表服务器数据库中任何项的路径都具有最大字符长度 260。|  
-|**Size**|报表服务器数据库中项的大小，以字节为单位。|  
+|**大小**|报表服务器数据库中项的大小，以字节为单位。|  
 |**类型**|报表服务器数据库中项的类型。|  
 |**VirtualPath**|指向报表服务器数据库中项的虚拟路径。 <xref:ReportService2010.CatalogItem.VirtualPath%2A> 属性的值是用户在其下应看到该项的路径。 例如，名为 report1 的报表位于用户的个人“我的报表”文件夹中，它具有虚拟路径 /My Reports。 该项的实际路径是 /Users/username/My Reports。|  
   
@@ -65,13 +65,13 @@ ms.lasthandoff: 06/13/2017
 |属性|Description|  
 |--------------|-----------------|  
 |**语言**|在报表中使用的语言。 该值是在 Internet 工程任务组 (IETF) RFC1766 规范中定义的语言代码。 第一部分由两个字符构成，指定基本语言。 第二部分由连字符分隔，指定语言的变化形式或变体。 如果未在与报表定义中的 **Body** 元素相关联的 **Style** 元素中指定某一值，则默认值是该报表服务器的语言。|  
-|**ReportProcessingTimeout**|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间报表不会超时。 如果值为 **null**，则系统属性 **ReportProcessingTimeout** 的值用于报表处理超时。 默认值为 **null**。 有关详细信息，请参阅[报表服务器系统属性](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。|  
+|**ReportProcessingTimeout**|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为**-1**，报表将在处理期间不会超时。 如果值为**null**，系统属性的值**ReportProcessingTimeout**用于报表处理超时时间。 默认值是**null**。 有关详细信息，请参阅[报表服务器系统属性](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。|  
 |**ExecutionDate**|为报表最后创建报表快照的日期和时间。|  
-|**CanRunUnattended**|一个值，指示报表是否可按照时间表以无人参与的方式运行。 如果该属性设置为 **true**，则定义报表参数的默认值，并且数据源凭据将与报表一起存储，或者凭据检索选项设置为 **None**。 如果该属性设置为 **false**，则未满足以无人参与的方式运行报表的先决条件。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
-|**HasParameterDefaultValues**|一个值，指示报表是否为所有报表参数都设置了有效的默认值。 如果某一报表没有报表参数，该值也是 **true**。 如果该属性设置为 **false**，则一个或多个报表参数没有有效的默认值。|  
+|**CanRunUnattended**|一个值，指示报表是否可按照时间表以无人参与的方式运行。 如果此属性设置为**true**、 的报表参数的默认值定义和使用报表存储数据源凭据或凭据检索选项设置为**无**。 如果此属性设置为**false**，不满足运行无人参与的报表的先决条件。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
+|**HasParameterDefaultValues**|一个值，指示报表是否为所有报表参数都设置了有效的默认值。 值也是**true**如果报表没有报表参数。 如果该属性设置为 **false**，则一个或多个报表参数没有有效的默认值。|  
 |**HasDataSourceCredentials**|一个值，指示为与报表相关联的所有数据源设置的凭据检索选项是 **None** 或 **Store**。 如果该属性设置为 **false**，则为与报表相关联的某一数据源设置的凭据检索选项是 **Integrated** 或 **Prompt**。|  
 |**IsSnapshotExecution**|一个值，用于指示报表是否为快照。|  
-|**HasScheduleReadyDataSources**|一个值，指示是否将报表的数据源配置为支持计划的执行。 如果该属性设置为 **false**，则用户无法订阅该报表。|  
+|**HasScheduleReadyDataSources**|一个值，指示是否将报表的数据源配置为支持计划的执行。 如果此属性设置为**false**，用户不能订阅的报表。|  
   
 ## <a name="resource-properties"></a>资源属性  
  除了前面列出的项属性外，以下属性应用于报表服务器数据库中的资源。  

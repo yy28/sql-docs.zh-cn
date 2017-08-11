@@ -23,14 +23,14 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: zh-cn
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
   
 > [!NOTE]  
@@ -62,13 +62,13 @@ rs {-?}
  **-i** *input_file*  
  （必需）指定要执行的 .rss 文件。 此值可以是指向 .rss 文件的相对路径或完全限定路径。  
   
- **-s** serverURL  
+ **-s** *serverURL*  
  （必需）指定执行文件的 Web 服务器的名称和报表服务器的虚拟目录名。 以下是报表服务器 URL 的一个示例： `http://examplewebserver/reportserver`。 服务器名称开头处的前缀 http:// 或 https:// 是可选的。 如果省略前缀，报表服务器脚本主机将先尝试使用 https，并在 https 无效时使用 http。  
   
- **-u** [域\\]用户名  
- （可选）指定用于连接到报表服务器的用户帐户。 如果省略 **-u** 和 **-p**，则使用当前的 Windows 用户帐户。  
+ **-u** [*域*\\]*用户名*  
+ （可选）指定用于连接到报表服务器的用户帐户。 如果省略 **-u** 和 **-p** ，则使用当前的 Windows 用户帐户。  
   
- **-p** password  
+ **-p** *密码*  
  （指定了 **-u** 时为必需）指定与 **-u** 参数一起使用的密码。 此值区分大小写。  
   
  **-e**  
@@ -90,7 +90,7 @@ rs {-?}
  **-b**  
  （可选）指定脚本文件中的命令以批处理方式运行。 如有任何命令失败，则回滚批处理。 某些命令无法以批处理方式运行，这些命令将按常规方式运行。 仅当脚本中产生异常并且未在脚本中得到处理时，才会导致回滚。 如果脚本处理了异常，并从 **Main**正常返回，则将提交批处理。 如果省略此参数，则命令将不以批处理方式运行。 有关详细信息，请参阅 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
- **-v** globalvar  
+ **-v** *globalvar*  
  （可选）指定脚本中使用的全局变量。 如果脚本使用全局变量，则必须指定此参数。 指定的值必须对 .rss 文件中定义的全局变量有效。 必须为每个 **–v** 参数指定一个全局变量。  
   
  **-v** 参数在命令行上指定，可用来为运行时在脚本中定义的全局变量设置值。 例如，如果脚本中包含一个名为 *parentFolder*的变量，则可以在命令行上为该文件夹指定一个名称：  
@@ -128,8 +128,8 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
 ## <a name="see-also"></a>另请参阅  
 - [运行 Reporting Services 脚本文件](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [脚本部署和管理任务](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [使用 rs.exe 实用工具和 Web 服务的脚本](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [报表服务器命令提示实用工具 &#40;SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [使用 rs.exe 实用工具和 Web 服务编写脚本](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [报表服务器命令提示实用工具 (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

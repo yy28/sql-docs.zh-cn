@@ -18,7 +18,7 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6a1efe67725037c9d47f20209c2831db3faef65e
 ms.contentlocale: zh-cn
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  在“报表数据”窗格中，右键单击数据集，再单击“数据集属性”，然后单击“参数”。  
   
-    > **注意：**如果“报表数据”窗格不可见，请单击“视图”菜单上的“报表数据”。  
+    > **注意：**如果报表数据窗格不可见，请单击**报表数据**上**视图**菜单。  
   
 2.  在 **“参数名称”**列中，查找查询参数的名称。 将基于查询自动填充参数名称。 每次更改查询时，都会检查查询是否有新的查询参数。 手动创建的查询参数不会随着查询的更改而变化。  
   

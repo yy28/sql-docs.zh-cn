@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 传递扩展插件设置
@@ -48,9 +48,9 @@ ms.lasthandoff: 06/13/2017
 |设置|“值”|  
 |-------------|-----------|  
 |**自**|将出现在电子邮件地址**到**封电子邮件行。 多个电子邮件地址之间用分号分隔。 必需的。|  
-|**抄送**|将出现在电子邮件地址**Cc**封电子邮件行。 多个电子邮件地址之间用分号分隔。 可选。|  
-|**密件抄送**|将出现在电子邮件地址**密件抄送**封电子邮件行。 多个电子邮件地址之间用分号分隔。 可选。|  
-|**ReplyTo**|将出现在电子邮件地址**答复到**电子邮件消息标头。 该值必须为单个电子邮件地址。 可选。|  
+|**抄送**|将出现在电子邮件地址**Cc**封电子邮件行。 多个电子邮件地址之间用分号分隔。 選擇性。|  
+|**密件抄送**|将出现在电子邮件地址**密件抄送**封电子邮件行。 多个电子邮件地址之间用分号分隔。 選擇性。|  
+|**ReplyTo**|将出现在电子邮件地址**答复到**电子邮件消息标头。 该值必须为单个电子邮件地址。 選擇性。|  
 |**IncludeReport**|指示是否在电子邮件传递中包括报表的值。 值为**true**指示电子邮件的正文中传递报表。|  
 |**RenderFormat**|要用于生成呈现的报表的呈现扩展插件的名称。 该名称必须与在报表服务器上安装的可见呈现扩展插件之一相符。 此值是必需的如果**IncludeReport**设置的值为**true**。|  
 |**Priority**|电子邮件按其发送的优先级。 有效值为**低**，**正常**，和**高**。 默认值是**正常**。|  

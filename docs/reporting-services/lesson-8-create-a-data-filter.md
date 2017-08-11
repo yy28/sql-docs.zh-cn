@@ -16,7 +16,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
 ms.contentlocale: zh-cn
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 -   向子报表中的 tablix 添加一个筛选表达式。  
   
--   创建一个函数，用于从“PurchaseOrderDetail”表中选择未筛选的数据。  
+-   创建一个函数，选择未筛选的数据从**PurchaseOrderDetail**表。  
   
 -   添加一个事件处理程序，用于将 **PurchaseOrderDetail** DataTable 绑定到子报表。  
   
@@ -41,17 +41,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  打开子报表。  
   
-2.  选择 tablix 中的某个列标题，右键单击在该列标题上方显示的灰色单元，然后选择“Tablix 属性”。  
+2.  Tablix 中选择一个列标题，右键单击列标题，上面显示的灰色单元，然后选择**Tablix 属性**。  
   
-3.  选择“筛选器”页，然后选择“添加”。  
+3.  选择**筛选器**页上，然后选择**添加**。  
   
-4.  在“表达式”字段中，从下拉列表中选择“ProductID”。 筛选器即应用于此列。  
+4.  在**表达式**字段，选择**ProductID**从下拉列表。 筛选器即应用于此列。  
   
-5.  在“运算符”下拉列表中选择等号 (**=**) 运算符。  
+5.  选择相等 (**=**) 中的运算符**运算符**下拉列表。  
   
-6.  选择“值”字段旁的表达式按钮，在“类别”区域中选择“参数”，然后在“值”区域中双击“productid”。 “为以下项设置表达式: 值”字段现在应包含类似于 **=Parameters!productid.Value** 的表达式。  
+6.  选择表达式按钮旁边**值**字段中，选择**参数**中**类别**区域中，，然后双击**productid**中**值**区域。 **设置表达式： 值**字段现在应包含表达式类似于**= 参数 ！ productid。值**。  
   
-7.  选择“确定”，然后在“Tablix 属性”对话框中再次选择“确定”。  
+7.  选择**确定，**和**确定**再次在**Tablix 属性**对话框。  
   
 8.  保存 .rdlc 文件。  
   
@@ -111,11 +111,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击“ReportViewer”控件，然后选择“属性”。  
+2.  右键单击 ReportViewer 控件，然后选择**属性**。  
   
-3.  在“属性”页上，选择“事件”图标。  
+3.  上**属性**页上，选择**事件**图标。  
   
-4.  双击“钻取”事件。  
+4.  双击**钻取**事件。  
   
     随后将在代码中添加一个事件处理程序部分，类似于下面这个代码块。  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="query-filter"></a>查询筛选器  
 需要完成以下任务才能实现查询筛选器。  
   
--   创建一个函数，用于从“PurchaseOrderDetail”表中选择经过筛选的数据。  
+-   创建所选筛选的数据从一个函数**PurchaseOrderDetail**表。  
   
 -   添加一个事件处理程序，用于检索参数值并将 **PurchaseOrdeDetail** DataTable 绑定到子报表。  
   
@@ -227,11 +227,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  在设计器视图中打开 Default.aspx。  
   
-2.  右键单击“ReportViewer”控件，然后选择“属性”。  
+2.  右键单击 ReportViewer 控件，然后选择**属性**。  
   
-3.  在“属性”窗格上，选择“事件”图标。  
+3.  上**属性**窗格中，选择**事件**图标。  
   
-4.  双击“钻取”事件。  
+4.  双击**钻取**事件。  
   
     随后将在代码中添加一个事件处理程序部分，类似于以下内容。  
   

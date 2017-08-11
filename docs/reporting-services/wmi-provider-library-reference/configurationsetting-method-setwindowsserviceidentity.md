@@ -22,7 +22,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
 ms.contentlocale: zh-cn
@@ -60,17 +60,17 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>注释  
- UseBuiltInAccount 参数设置为 **true** 并且报表服务器在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户。  
+## <a name="remarks"></a>備註  
+ 当*UseBuiltInAccount*参数设置为**true**和报表服务器运行在 Microsoft 上[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]或 Windows XP 中，值*名称*，*域*，和*密码*参数将被忽略，并且使用本地系统帐户。  
   
- UseBuiltInAccount 参数设置为 **true** 并且报表服务器在 Windows Server 2003 上运行时，将忽略 Domain 和 Password 属性，并且名称字段必须包含“Builtin\NetworkService”、“Builtin\System”或“Builtin\LocalService”。  
+ 当*UseBuiltInAccount*参数设置为**true**和报表服务器正在运行 Windows Server 2003 上*域*和*密码*属性将被忽略，并且名称字段必须包含"Builtin\NetworkService"或"Builtin\System"或"Builtin\LocalService"。  
   
  SetWindowsServiceIdentity 方法可对报表服务器安装目录中的文件和文件夹设置文件权限。  
   
  *Account* 参数中指定的帐户要求 Windows 中的 **LogonAsService** 权限。 该方法可将此权限授予指定的帐户。  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

@@ -16,7 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: zh-cn
@@ -36,11 +36,11 @@ ms.lasthandoff: 08/09/2017
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
 ## <a name="Chart"></a>1.使用图表向导创建图表报表  
@@ -51,24 +51,24 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-chart-report"></a>创建图表报表  
   
-1.  通过计算机、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户或 SharePoint 集成模式[启动报表生成器](../reporting-services/report-builder/start-report-builder.md)。  
+1.  通过计算机、[Web 门户或 SharePoint 集成模式](../reporting-services/report-builder/start-report-builder.md) 启动报表生成器 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 。  
   
     将打开“新建报表或数据集”对话框。  
   
-    如果未出现“新建报表或数据集”对话框，请在“文件”菜单下转至“新建”。  
+    如果未出现“新建报表或数据集”对话框，请通过“文件”菜单转至“新建”。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
-3.  在右窗格中，单击“图表向导”。  
+3.  在右窗格中，单击**图表向导**。  
   
-4.  在“选择数据集”页上，单击“创建数据集”，然后单击“下一步”。  
+4.  上**选择数据集页**，单击**创建数据集**，然后单击**下一步**。  
   
-5.  在“选择数据源的连接”页中，选择现有数据源或浏览到报表服务器并选择一个数据源，然后单击“下一步”。 您可能需要输入用户名和密码。  
+5.  上**选择数据源的连接**页上，选择现有的数据源或浏览到报表服务器并选择数据源，，然后单击**下一步**。 您可能需要输入用户名和密码。  
   
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  在“设计查询”页中，单击“编辑为文本”。  
+6.  在“设计查询”页上，单击“编辑为文本”。  
   
 7.  将以下查询粘贴到查询窗格中：  
   
@@ -100,11 +100,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-add-a-column-chart"></a>添加柱形图  
   
-1.  在“选择图表类型”页上，柱形图为默认图表类型。 单击“下一步” 。  
+1.  上**选择图表类型**页上，柱形图是默认图表类型。 单击“下一步” 。  
   
-2.  在“排列图表字段”页上，将 SalesDate 字段拖到“类别”中。 “类别”显示在水平轴上。  
+2.  上**排列图表字段**页上，销售日期将字段拖动到**类别**。 “类别”显示在水平轴上。  
   
-3.  将 Sales 字段拖到“值”中。 “值”框显示 Sum(Sales)，因为销售总计值之和是对每个日期的合计。 “值”显示在垂直轴上。  
+3.  销售将字段拖动到**值**。 **值**框显示 sum （sales），因为销售的总计值的总和聚合的每个日期。 “值”显示在垂直轴上。  
   
 4.  单击“下一步” 。  
  
@@ -127,15 +127,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  右键单击水平轴 > 单击“水平轴属性”。  
+2.  右键单击水平轴 >**水平轴属性**。  
   
-3.  在“数字”选项卡的“类别”中选择“日期”。  
+3.  上**数**选项卡上，在**类别**，选择**日期**。  
   
-5.  在“类型”框中，选择“2000 年 1 月 31 日”。  
+5.  在**类型**框中，选择**31 年 1 月 2000年**。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  在“主文件夹”选项卡上，单击“运行”以预览报表。  
+7.  在主页选项卡上，单击**运行**以预览报表。  
   
 日期会以您选择的日期格式显示。 图表仍不会在水平轴上显示每个类别的标签。 
 
@@ -143,17 +143,17 @@ ms.lasthandoff: 08/09/2017
   
 通过旋转标签和指定间隔，可以自定义标签显示方式。  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.在水平轴上旋转轴标签  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4.旋转水平轴上的轴标签  
   
 1.  切换到报表设计视图。  
   
-2.  右键单击水平轴标题，然后单击“显示轴标题”以删除标题。 因为水平轴显示日期，所以不需要标题。  
+2.  右键单击水平轴标题，然后单击**显示轴标题**以删除标题。 因为水平轴显示日期，所以不需要标题。  
   
-3.  右键单击水平轴 > 单击“水平轴属性”。  
+3.  右键单击水平轴 >**水平轴属性**。  
   
-5.  在“标签”选项卡的“更改轴标签自动调整选项”下，选择“禁用自动调整”。  
+5.  上**标签**选项卡上，在**更改轴标签自动调整选项**，选择**禁用自动调整**。  
   
-7.  在“标签旋转角度”中，选择 **-90**。  
+7.  在**标签旋转角度**，选择**-90**。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -172,15 +172,15 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  右键单击图表上的图例 > 单击“图例属性”。  
+2.  右键单击图表上的图例 >**图例属性**。  
   
-3.  “布局和位置”，请选择其他位置。 例如，选择底部中间选项。  
+3.  下**布局和位置**，选择一个不同的位置。 例如，选择底部中间选项。  
   
-    如果将图例置于图表的顶部或底部，则图例的布局将会从垂直改为水平。 可以在“布局”框中选择不同的布局。  
+    如果将图例置于图表的顶部或底部，则图例的布局将会从垂直改为水平。 你可以选择一个不同的布局中**布局**框。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  （可选）因为本教程中只有一个类别，所以图表不需要图例。 若要删除图例，右键单击“图例” > 单击“删除图例”。  
+5.  （可选）因为本教程中只有一个类别，所以图表不需要图例。 若要删除它，右键单击图例 >**删除图例**。  
   
 6.  单击 **“运行”** 以预览报表。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/09/2017
     
 1.  切换到报表设计视图。  
   
-2.  选择图表顶部的词语“图表标题”，然后键入 **Store Sales Order Totals**。  
+2.  选择的单词**图表标题**在图表的顶部，然后键入**应用商店销售订单合计**。  
   
 3.  单击 **“运行”** 以预览报表。  
   
@@ -199,23 +199,23 @@ ms.lasthandoff: 08/09/2017
   
 2. 单击图表左侧垂直轴上的标签以选择它们。  
   
-3.  在“主文件夹”选项卡 > “数字”组上，单击“货币”按钮。 轴标签将更改以显示货币格式。  
+3.  上**主页**选项卡 >**数**组中，单击**货币**按钮。 轴标签将更改以显示货币格式。  
   
-4.  单击两次“减少小数位数”按钮，以显示舍入为最接近的美元金额。  
+4.  单击**减少小数位数**按钮两次，以显示数字舍入为最接近美元。  
   
-5.  右键单击垂直轴 > 单击“垂直轴属性”。  
+5.  右键单击垂直轴 >**垂直轴属性**。  
   
-6.  在“数字”选项卡中，注意已在“类别”框中选择了“货币”，并且“小数位数”已经为 **0**（零）。  
+6.  上**数**选项卡上，请注意，**货币**中已选择**类别**框中，和**小数位数**已**0** （零）。  
   
-7.  检查“值的显示位置”。 已选中“千位”。  
+7.  检查**值的显示位置**。 **千位**已被选中。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 右键单击垂直轴 > 单击“显示轴标题”。 
+9. 右键单击垂直轴 >**显示轴标题**。 
 
-10. 右键单击垂直轴标题 > 单击“轴标题属性”。  
+10. 右键单击垂直轴标题 >**轴标题属性**。  
   
-10. 将“标题文本”字段中的文本替换为**Sales Total (in Thousands)**。 还可以指定与如何设置标题格式相关的多种选项。  
+10. 替换中的文本**标题文本**字段**总 （以千为单位） 上的销售**。 还可以指定与如何设置标题格式相关的多种选项。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -223,7 +223,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.在水平 (x) 轴上显示所有标签
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8.水平 (x) 轴上显示所有标签
 
 你会注意到 x 轴上仅显示了部分标签。 在本部分中，可在“属性”窗格设置属性以显示所有标签。
 
@@ -249,17 +249,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  切换到报表设计视图。  
   
-2.  双击图表以显示“图表数据”窗格。  
+2.  双击图表以显示**图表数据**窗格。  
   
-3.  右键单击“值”区域中的“[Sum(Sales)]”字段，然后单击“添加计算序列”。  
+3.  右键单击**[sum （sales)]**字段**值**区域中，然后单击**添加计算系列**。  
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  在“公式”中，验证是否已选中“移动平均线”。  
+4.  在**公式**，验证**移动平均线**选择。  
   
-5.  在“设置公式参数”中，针对“期间”，选择“4”。  
+5.  在**设置公式参数**，为**段**，选择**4**。  
   
-6.  在“边框”选项卡的“线条宽度”中，选择 **3pt**。  
+6.  上**边框**选项卡上，在**线条宽度**，选择**3pt**。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -283,9 +283,9 @@ ms.lasthandoff: 08/09/2017
   
 4.  选择“Sales Chart”，然后转至“主文件夹”选项卡 > “字体”部分 > “粗体”。  
   
-5.  选择“January to December 2015”，并在“主文件夹”选项卡 > “字体”部分，将字号设置为 **10**。  
+5.  选择**到 2015 年 12 月的 1 月**，然后在**主页**选项卡 >**字体**部分 > 将字体大小设置为**10**。  
   
-6.  （可选）可能需要使“标题”文本框更高一些，以容纳两行文本。 单击下边缘中间，显示双向箭头时下拉。 并且可能需要拖动图表的顶部，使标题不重叠。  
+6.  （可选）你可能需要进行**标题**高度以适应行文本的两行的文本框。 单击下边缘中间，显示双向箭头时下拉。 并且可能需要拖动图表的顶部，使标题不重叠。  
   
     此标题将出现在报表的顶部。 未定义页标头时，报表体顶部的项就等同于报表标头。  
   
@@ -301,14 +301,14 @@ ms.lasthandoff: 08/09/2017
 
     可将其保存到计算机或报表服务器中。
   
-3.  在“名称”中，键入 **Sales Order Column Chart**。  
+3.  在**名称**，类型**销售订单柱形图**。  
   
 4.  单击 **“保存”**。  
   
 ## <a name="next-steps"></a>后续步骤  
-您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条 &#40;报表生成器和 SSRS &#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
 -    [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

@@ -19,7 +19,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
 ms.contentlocale: zh-cn
@@ -69,9 +69,9 @@ ms.lasthandoff: 08/09/2017
 
 2. 单击“注册 Power BI”。
 
-3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登录对话框中，键入用于登录 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 的凭据。
+3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登录对话框中，键入用于登录 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的凭据。
 
-4. 注册完成后，“Power BI 注册详细信息”部分将记下 Azure 租户 ID 和重定向 URL。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
+4. 完成注册后**Power BI 注册详细信息**部分将记下 Azure 租户 ID 和重定向 URL。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
 
 5. ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")选择**复制**按钮**结果**窗口将注册详细信息复制到 Windows 剪贴板，以便你可以将它们保存以供将来参考。
 
@@ -91,13 +91,13 @@ ms.lasthandoff: 08/09/2017
 
 ##  <a name="bkmk_updateregistration"></a> 更新注册
 
-如果你的报表服务器的配置已更改，请使用“更新注册”  。 例如，如果你想要添加或删除用户用于浏览 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL。
+如果你的报表服务器的配置已更改，请使用“更新注册”  。 例如，如果你想要添加或删除用户用于浏览 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]的 URL。
 
-- 请在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中，选择“Web 门户 URL”
+- 在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，选择**Web 门户 URL**
 
-     选择“高级”。
+     选择**高级**。
 
-- 选择“添加” 为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 添加新 HTTP 标识 ，然后选择“确定”。
+- 选择**添加**若要添加的新 HTTP 标识[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]，然后选择**确定**。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 图标将发生更改以指示已更改服务器配置。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 

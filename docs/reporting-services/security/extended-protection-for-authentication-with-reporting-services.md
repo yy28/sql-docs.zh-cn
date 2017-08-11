@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
 ms.contentlocale: zh-cn
@@ -172,11 +172,11 @@ SSRS 支持和实行已在操作系统中启用的扩展的保护。 如果操�
 ## <a name="next-steps"></a>后续步骤
 
 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[扩展的保护身份验证概述](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[具有扩展保护的集成的 Windows 身份验证](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 安全公告： 身份验证的扩展的保护](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[针对验证的扩展保护概述](http://go.microsoft.com/fwlink/?LinkID=177943)   
+[Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](http://go.microsoft.com/fwlink/?LinkId=179922)   
+[Microsoft 安全建议：针对验证的扩展保护](http://go.microsoft.com/fwlink/?LinkId=179923)   
 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+[SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

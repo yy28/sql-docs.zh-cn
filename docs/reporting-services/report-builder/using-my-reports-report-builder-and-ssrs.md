@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: zh-cn
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd255286.aspx)。  
   
- 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>使用“我的报表”文件夹的方法  
  在您添加报表、文件夹和其他项之前，“我的报表”为空文件夹。 下面是向“我的报表”文件夹中添加内容的一些方法：  
   
--   创建个人的链接报表，并将其存储在“我的报表”文件夹中。 并非所有的报表都适合链接。 有关详细信息，请参阅 [创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
+-   创建个人的链接报表，并将其存储在“我的报表”文件夹中。 并非所有的报表都适合链接。 有关详细信息，请参阅[创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   上载报表定义 (.rdl) 文件、报表模型 (.smdl) 文件或文件系统中的其他文件。 您可以上载任何文件，但报表服务器只处理扩展名为 .rdl 或 .smdl 的报表文件。 有关详细信息，请参阅 SQL Server 联机丛书 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的“报表定义”和[文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  当您搜索报表服务器数据库时，您的“我的报表”文件夹中的内容也在搜索之列，而其他用户的“我的报表”文件夹中的内容则被排除在外。 搜索结果中将只列出您可以访问的报表。  
   
 ## <a name="see-also"></a>另请参阅  
- [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

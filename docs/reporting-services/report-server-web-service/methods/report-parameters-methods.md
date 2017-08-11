@@ -17,14 +17,14 @@ helpviewer_keywords:
 - parameters [Reporting Services], methods
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 caps.latest.revision: 38
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5361537839279c5ce9efb33ab7eea0016c9a9091
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1613e1aae458d38e383b6acf54abf19361822336
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-parameters-methods"></a>报表参数方法
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/13/2017
 |<xref:ReportService2010.ReportingService2010.ListParameterTypes%2A>|返回支持的参数类型的列表。|  
 |<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|设置指定项的参数属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [报表服务器 Web 服务方法](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

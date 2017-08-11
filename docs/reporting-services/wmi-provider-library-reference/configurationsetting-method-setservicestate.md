@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: zh-cn
@@ -56,7 +56,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  指示所需的报表管理器状态的 **Boolean** 值。
  
  > [!NOTE] 
- > 从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 Web 门户将始终启用。 将忽略的值。
+ > 从 SQL Server 2016 Reporting Services 累积更新 2 开始已弃用此设置。 将始终启用 Web 门户。 将忽略的值。
   
  *HRESULT*  
  [out] 指示调用是成功还是失败的值。  
@@ -67,7 +67,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>注释  
   
 ## <a name="requirements"></a>要求  
- **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MSReportServer_ConfigurationSetting 成员](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

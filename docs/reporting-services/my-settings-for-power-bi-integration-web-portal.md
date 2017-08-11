@@ -17,7 +17,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91be669329ea6d822dcc489584d649e5a01ce018
 ms.contentlocale: zh-cn
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
-单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，如果需要进行手动登录或者需要注销，可以使用“我的设置”页。  如果“我的设置”  菜单选项不可见，则报表服务器未与  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]集成。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)。  
+单个用户使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的“我的设置”页来管理其 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 登录。 当执行步骤以将报表项固定时，将自动提示你登录。  但是，你可以使用**我的设置**页上，如果需要进行手动登录或者需要注销。  如果**我的设置**菜单选项不可见，请不与集成报表服务器[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  有关详细信息，请参阅 [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)相集成。  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
    
  ![ssRS_WebPortal_PowerBI_Notification](../reporting-services/media/ssrs-webportal-powerbi-notification.png)    
    
-通过“我的设置”页再次登录后，[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板中的磁贴才会刷新。  
+在磁贴[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]直到通过再次登录，将不会刷新仪表板**MySettings**。  
   
 ![ssRS_WebPortal_PowerBI_SignIn_Again](../reporting-services/media/ssrs-webportal-powerbi-signin-again.png)  
   

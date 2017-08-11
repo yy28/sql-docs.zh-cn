@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3824222b71269de1bf500926b44ca55dd438a010
 ms.contentlocale: zh-cn
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 -   右键单击你想要删除某一行，，然后单击 tablix 数据区域行组区域中的行组单元格**删除行**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [了解组 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
  [表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

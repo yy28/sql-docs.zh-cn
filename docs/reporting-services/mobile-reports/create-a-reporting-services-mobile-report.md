@@ -14,7 +14,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
 ms.contentlocale: zh-cn
@@ -36,11 +36,11 @@ ms.lasthandoff: 08/09/2017
   
    ![SSMRP_ResizeChart](../../reporting-services/mobile-reports/media/ssmrp-resizechart.png)  
   
-   在“主”  设计网格中创建报表中的所需元素。 然后，便可以[在平板电脑或手机中设计报表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
+   在“主”  设计网格中创建报表中的所需元素。 然后，便可以 [在平板电脑或手机中设计报表](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)。     
      
    在设计网格下方的“可视属性”  中，查看你可以设置的各种属性。  
      
-4. 在左上角选择“数据”选项卡，将看到该图表已关联模拟数据。   
+4. 选择**数据**的左上角，和你的选项卡，请参阅图表已具有模拟与之关联的数据。   
   
    ![SSMRP_SimTable](../../reporting-services/mobile-reports/media/ssmrp-simtable.png)  
   

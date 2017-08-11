@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
 ms.contentlocale: zh-cn
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。 通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
-  在以下情形中使用扩展部署：  
+  在以下情形中使用“扩展部署”  ：  
   
 -   作为对服务器群集中的多个报表服务器进行负载平衡的必备条件。 在可以对多个报表服务器进行负载平衡之前，必须首先将它们配置为共享同一报表服务器数据库。  
   
@@ -106,25 +106,25 @@ An error occurred within the report server database.  This may be due to a conne
   
 3.  将报表服务器连接到用于第一个报表服务器实例的数据库：  
   
-    1.  选择“数据库”打开“数据库”页。  
+    1.  选择**数据库**以打开数据库页。  
   
-    2.  选择“更改数据库”。  
+    2.  选择**更改数据库**。  
   
-    3.  选择“选择现有报表服务器数据库”。  
+    3.  选择**选择现有的报表服务器数据库**。  
   
     4.  键入承载您要使用的报表服务器数据库的 SQL Server 数据库引擎实例的服务器名称。 此服务器必须是上述说明中连接到的服务器。  
   
-    5.  选择“测试连接”，再选择“下一步”。  
+    5.  选择**测试连接**，然后选择**下一步**。  
   
-    6.  在“报表服务器数据库”中，选择为第一个报表服务器创建的数据库，然后选择“下一步”。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
+    6.  在**报表服务器数据库**，选择你创建的第一个报表服务器的数据库，然后选择**下一步**。 默认名称为 ReportServer。 请勿选择 ReportServerTempDB；它仅用于在处理报表时存储临时数据。 如果数据库列表为空，请重复前四个步骤以建立服务器连接。  
   
     7.  在“凭据”页中，选择报表服务器将用于连接到报表服务器数据库的帐户类型和凭据。 可以使用与第一个报表服务器实例相同的凭据，也可以使用其他凭据。 选择“下一步” 。  
   
-    8.  选择“摘要”，然后选择“完成”。  
+    8.  选择**摘要**，然后选择**完成**。  
   
-4.  配置报表服务器“Web 服务 URL”。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
+4.  配置报表服务器**Web 服务 URL**。 先不要测试该 URL。 在报表服务器联接到扩展部署后，该 URL 才会解析。  
   
-5.  配置“Web 门户 URL”。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
+5.  配置**Web 门户 URL**。 先不要测试 URL，也不要试图验证部署。 报表服务器在联接到扩展部署后才可用。  
   
 ## <a name="to-join-the-second-report-server-instance-to-the-scale-out-deployment"></a>将第二个报表服务器实例联接到扩展部署  
   
@@ -137,11 +137,11 @@ An error occurred within the report server database.  This may be due to a conne
 3.  在“扩展部署”页上，选择等待联接部署的报表服务器实例，然后选择“添加服务器”。  
   
     > [!NOTE]  
-    >  **问题：**尝试将一个 Reporting Services 报表服务器实例联接到扩展部署时，你可能遇到类似“拒绝访问”的错误消息。  
+    >  **问题：** 尝试将一个 Reporting Services 报表服务器实例联接到扩展部署时，你可能遇到类似“拒绝访问”的错误消息。  
     >   
     >  **解决方法：** 从第一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例备份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥并将该密钥还原到第二个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 然后将第二个服务器联接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署。  
   
-4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器，然后单击“Web 服务 URL”或“Web 门户 URL”。  
+4.  现在应能验证两个报表服务器实例是否都正常运行。 若要验证第二个实例，可以使用 Reporting Services 配置工具连接到报表服务器并单击**Web 服务 URL**或**Web 门户 URL**。  
   
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
 

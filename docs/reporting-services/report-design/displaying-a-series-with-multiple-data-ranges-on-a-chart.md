@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
 ms.contentlocale: zh-cn
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **启用刻度分隔线**。 如果数据分成了两个或更多数据区域组，则可以使用刻度分隔线来删除各数据区域之间的空白。 刻度分隔线是在绘图区绘制的一个条带，表示序列中高值和低值之间的中断。  
   
--   **筛选出不需要的值**。 如果您具有的数据点使重要数据区域在图表中显示时变得模糊，则可以使用报表筛选器删除不需要的数据点。 有关如何在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向图表添加筛选器的详细信息，请参阅[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
+-   **筛选出不需要的值**。 如果您具有的数据点使重要数据区域在图表中显示时变得模糊，则可以使用报表筛选器删除不需要的数据点。 有关如何向图表中添加筛选器信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[添加数据集筛选器、 数据区域筛选器和组筛选器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 -   **将每个数据区域绘制为不同的序列，以便进行多序列比较**。 如果具有两个以上数据区域，可以考虑将数据区域分隔为不同的序列。 有关详细信息，请参阅 [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  您不能指定在图表中放置刻度分隔线的位置。 但是，可以修改刻度分隔线的计算方式，这将在本主题的后面部分进行介绍。  
   
- 如果启用了刻度分隔线，但是它并未显示（即使数据区域之间有足够的分隔空间），则可以将 CollapsibleSpaceThreshold 属性设置为小于 25 的值。 CollapsibleSpaceThreshold 可指定数据区域间所需的可折叠空间的百分比。 有关详细信息，请参阅[向图表添加刻度分隔线（报表生成器和 SSRS）](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)。  
+ 如果启用了刻度分隔线，但是它并未显示（即使数据区域之间有足够的分隔空间），则可以将 CollapsibleSpaceThreshold 属性设置为小于 25 的值。 CollapsibleSpaceThreshold 可指定数据区域间所需的可折叠空间的百分比。 有关详细信息，请参阅[添加刻度分隔线到图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
  图表支持每个图表中最多包含 5 条刻度分隔线；但是，显示多条刻度分隔线会使报表不可读。 如果有两个以上数据区域，可以考虑使用不同方法显示此数据。 有关详细信息，请参阅 [图表中的多个序列（报表生成器和 SSRS）](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 -   图表类型为极坐标图、雷达图、饼图、圆环图、漏斗图、棱锥图或堆积图。  
   
- 具有刻度分隔线的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 具有刻度分隔线的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: zh-cn
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  然而，如果遇到以下任何情况，都需要手动 **迁移** 报表服务器安装：  
   
--   您想要更改部署中使用的报表服务器的类型。 例如，不能将本机模式报表服务器升级或转换到 SharePoint 模式。 有关详细信息，请参阅[从本机迁移到 SharePoint (SSRS)](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md)。  
+-   您想要更改部署中使用的报表服务器的类型。 例如，不能将本机模式报表服务器升级或转换到 SharePoint 模式。 有关详细信息，请参阅[本机到 SharePoint 迁移 &#40;SSRS &#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   您需要在升级过程中最大限度地减少报表服务器的脱机时间。 在您将内容数据复制到新报表服务器实例，并在不改变现有报表服务器安装状态的情况下测试该安装时，当前安装将保持联机状态。  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> 升级 Reporting Services 本机模式扩展部署  
  下面概述了如何升级扩展为多个报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署。 此过程需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署停机：  
   
-1.  备份报表服务器数据库和加密密钥。 有关详细信息，请参阅 [Reporting Services 的备份和还原操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[添加和删除扩展部署（SSRS 配置管理器）的加密密钥](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)。  
+1.  备份报表服务器数据库和加密密钥。 有关详细信息，请参阅[备份和还原 Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)和[添加和删除扩展部署 &#40; 的加密密钥SSRS 配置管理器 &#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，从扩展部署中删除所有报表服务器。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品的外接程序。 有关详细信息，请参阅 [安装或卸载适用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
- 有关迁移 SharePoint 模式安装的详细步骤，请参阅[迁移 Reporting Services 安装（SharePoint 模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
+ 有关迁移 SharePoint 模式安装的详细步骤，请参阅[迁移 Reporting Services 安装 &#40;SharePoint 模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  由于需要升级不同技术，下面的某些方案将需要将 SharePoint 环境停止运行。 如果您的情况不允许停机，则需要完成迁移，而非就地升级。  
@@ -179,7 +179,7 @@ ms.lasthandoff: 08/09/2017
      如果您具有与 SharePoint 2010 相集成的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装，则不能就地升级 SharePoint 服务器。 不过，可以将内容数据库和服务应用程序数据库从 SharePoint 2010 场迁移到 SharePoint 2013/2016 场。  
   
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到 SQL Server Reporting Services  
- **Starting environment:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
+ **起始环境：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
  **结束环境：** SQL Server Reporting Services，SharePoint 2013 或 SharePoint 2016。   
   

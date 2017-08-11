@@ -21,7 +21,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
 ms.contentlocale: zh-cn
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供了用于验证用户和针对报表服务器的客户端应用程序的多个可配置选项。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。
   
  请求对报表服务器内容或操作进行访问的所有用户或应用程序都必须首先进行身份验证，然后才允许访问。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 |身份验证方法|解释|  
 |---------------------------|-----------------|  
 |匿名|报表服务器将不接受来自匿名用户的未经身份验证的请求，但包含自定义身份验证扩展插件的那些部署除外。<br /><br /> 如果对配置为使用基本身份验证的报表服务器启用报表生成器访问，则报表生成器将接受未经身份验证的请求。<br /><br /> 对于所有其他情况，在匿名请求到达 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]前将拒绝该请求，同时生成 HTTP 状态 401 拒绝访问错误。 客户端收到 401 拒绝访问错误后必须使用有效的身份验证类型重新表述该请求。|  
-|单一登录技术 (SSO)|在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中不提供对单一登录技术的本机支持。 如果希望使用单一登录技术，则必须创建自定义身份验证扩展插件。<br /><br /> 报表服务器宿主环境不支持 ISAPI 筛选器。 如果您使用的 SSO 技术以 ISAPI 筛选器形式实现，请考虑使用 RSASecueID 或 RADIUS 协议的 ISA Server 内置支持。 另外，还可以创建 ISA Server ISAPI 或 RS 的 HTTPModule，但是建议您直接使用 ISA Server。|  
+|单一登录技术 (SSO)|在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中不提供对单一登录技术的本机支持。 如果希望使用单一登录技术，则必须创建自定义身份验证扩展插件。<br /><br /> 报表服务器宿主环境不支持 ISAPI 筛选器。 如果您使用的 SSO 技术以 ISAPI 筛选器形式实现，请考虑使用 RSASecueID 或 RADIUS 协议的 ISA Server 内置支持。 另外，还可以创建 ISA Server ISAPI 或 RS 的 HTTPModule，但是建议您直接使用 ISA Server。|  
 |Passport|不支持 SQL Server Reporting Services。|  
 |摘要|不支持 SQL Server Reporting Services。|  
   
@@ -68,18 +68,18 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [在报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
 -   [报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [在报表服务器上配置自定义身份验证或窗体身份验证](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [报表服务器上配置自定义或窗体身份验证](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>相关任务  
   
 |任务说明|链接|  
 |-----------------------|-----------|  
-|配置 Windows 集成身份验证类型。|[在报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
-|配置基本身份验证类型。|[在报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
+|配置 Windows 集成身份验证类型。|[报表服务器上配置 Windows 身份验证](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
+|配置基本身份验证类型。|[报表服务器上配置基本身份验证](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |配置窗体身份验证或自定义身份验证类型。|[在报表服务器上配置自定义身份验证或窗体身份验证](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |启用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 来处理自定义的身份验证方案。|[配置 Web 门户以传递自定义身份验证 Cookie](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
@@ -88,10 +88,10 @@ ms.lasthandoff: 08/09/2017
 [授予对本机模式报表服务器的权限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[指定凭据和报表数据源的连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[实现安全扩展插件](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [在本机模式报表服务器上配置 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md)   
+[配置报表生成器访问权](../../reporting-services/report-server/configure-report-builder-access.md)   
 [安全扩展插件概述](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Reporting Services 中的身份验证](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Reporting Services 中的授权](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

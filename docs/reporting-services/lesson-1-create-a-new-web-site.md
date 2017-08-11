@@ -16,7 +16,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c679c81a0db86c7d4894a7ed1eb1544b42fd4b9
 ms.contentlocale: zh-cn
@@ -30,13 +30,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  打开 Microsoft Visual Studio 2015。  
   
-2.  在“文件”菜单上，指向“新建”，然后选择“网站”。  
+2.  上**文件**菜单上，指向**新建**，然后选择**网站**。  
   
-3.  在“新建网站”对话框的“已安装的模板”窗格中，选择“Visual C#”，然后选择“ASP.NET 报表网站”。  
+3.  在**新网站**对话框中，在**已安装的模板**窗格中，选择**Visual C#** ，然后选择**ASP.NET Reports 网站**。  
   
-4.  在“位置”框中，指定一个项目目录，然后选择“确定”。  
+4.  在**位置**框中，指定项目目录，然后选择**确定**。  
   
-打开网站项目，然后启动“报表向导”。 选择“取消”出数据源和报表向导，因为将在下一步中创建自定义数据集。  
+网站项目将打开，然后将启动**报表向导**。 **取消**out 的数据源和报表向导中，我们将在下一步中创建自定义数据集。  
   
 ## <a name="next-task"></a>下一个任务  
 您已成功地创建了一个新的网站项目。 接下来，将创建用于父报表的数据连接和数据表。 请参阅 [第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。

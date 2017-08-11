@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca5f80521b142435210737f2e6c971c8d6853510
 ms.contentlocale: zh-cn
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 3.  若要更改线条属性，请在设计图面上选择线条，然后在 **“主文件夹”** 选项卡的 **“边框”** 部分编辑该线条的属性。    
     
     > [!NOTE]    
-    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
+    >  如果的线条样式设置为**Double**和线条宽度是 1 1/2 pt 或较窄，行可能不会出现双精度报表生成器中，报表设计器中运行报表时或[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]web 门户。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 36
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 87609ab5b118eaa696f7152b25cf7e984e7f6e7f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>在 RDL 文件中引用程序集
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 </CodeModules>  
 ```  
   
- 而不是调用<xref:System.Reflection.Assembly.Load%2A>任一手动添加，自定义代码，从注册你的自定义程序集**CodeModule**元素为 RDL 文件或通过使用**引用**选项卡**报表属性**对话框。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 而不是调用<xref:System.Reflection.Assembly.Load%2A>任一手动添加，自定义代码，从注册你的自定义程序集**CodeModule**元素为 RDL 文件或通过使用**引用**选项卡**报表属性**对话框。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  **类**元素支持报表定义中使用的实例成员。 **类**是顶级元素，它包含对类名称和实例名称的引用。 支持使用实例成员的报表定义中的一个条目可能如下所示：  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  有关详细信息，请参阅[通过表达式访问自定义程序集](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [与报表中使用自定义程序集](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+## <a name="see-also"></a>另請參閱  
+ [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

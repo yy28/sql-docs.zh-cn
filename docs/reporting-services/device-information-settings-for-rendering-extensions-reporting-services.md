@@ -16,7 +16,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: zh-cn
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 |[PPTX 设备信息设置](../reporting-services/pptx-device-information-settings.md)|介绍与 PPTX 呈现输出相关的设备信息设置。|  
   
 ## <a name="see-also"></a>另请参阅  
- [在 RSReportServer.Config 中自定义呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [自定义在 RSReportServer.Config 中的呈现扩展插件参数](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
 

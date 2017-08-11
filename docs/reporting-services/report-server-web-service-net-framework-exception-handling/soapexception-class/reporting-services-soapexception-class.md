@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b19743906654dfcbfe6289181ae62b43a2df143
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: e24a518bee7b192505fc93ad26d4345f9d710143
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 类
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
 |**HelpLink**|指向与错误相关联的帮助文件的 URL 或 URN。 该值通常由 Web 服务设置并且它设置指向 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 帮助和支持的 URL。 因为[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]支持多个帮助链接是否有错误发生，报表服务器设置帮助链接信息作为的一部分**详细信息**属性。 有关详细信息，请参阅[HelpLink 元素](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md)。|  
 |**消息**|描述错误的描述性的本地化消息。 此文本可能出现在应用程序用户界面中。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [引入了 Reporting Services 中的异常处理](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [SoapException 错误表](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   

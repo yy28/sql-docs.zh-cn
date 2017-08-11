@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f2359ac68758ba2846c4a9065f6cb1c9c96a7e01
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="detail-property"></a>Detail 属性
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  产品的名称。 默认值是**Microsoft SQL Server Reporting Services**。  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本。 最大长度为 15 个字符。 版本号的格式应如下所示：8.00.0xxx.00。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的版本。 最大长度为 15 个字符。 版本号的格式应如下所示：8.00.0xxx.00。  
   
  **ProductLocaleId**  
  应用程序的 INTL DLL 的区域设置 ID 或语言 ID（例如，0x41A）。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
  **详细信息**  
  一个 XML 字符串，其中包含在运行方法时出现的嵌套异常。  
   
- **数据源**  
+ **源**  
  子元素**的详细信息**。 错误根源。  
   
  **消息**  

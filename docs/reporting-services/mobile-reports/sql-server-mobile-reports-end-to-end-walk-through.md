@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: zh-cn
@@ -37,8 +37,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="before-we-start"></a>准备工作  
 若要继续，需要准备这些产品：  
   
-* 要创建数据源和 KPI、发布数据集和移动报表，需要[!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)][以本机模式访问报表服务器](https://msdn.microsoft.com/library/ms143711.aspx)。  
-* 要[创建共享数据集](#shared-dataset)，需[安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)。  
+* 若要创建数据源和 Kpi，并将数据集和移动报表发布，你需要访问[!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)][处于本机模式报表服务器](https://msdn.microsoft.com/library/ms143711.aspx)。  
+* 要 [创建共享数据集](#shared-dataset)，需 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)。  
 * 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks 示例数据库和脚本](http://msftdbprodsamples.codeplex.com/)。  
 *  或：World Wide Importers 示例数据库，请参阅 [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) （Microsoft SQL Server 示例）。
@@ -49,16 +49,16 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
   
-可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源列表](https://msdn.microsoft.com/library/ms159219.aspx)。  
+可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅 [支持的数据源列表](https://msdn.microsoft.com/library/ms159219.aspx)。  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”。  
+1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **数据源**。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 输入你的数据源信息，然后单击“确定”。  
+3. 输入你的数据源信息 >**确定**。  
   
     默认情况下，数据源不会显示在门户中。    
    
-5. 若要查看数据源，请单击“显示” > “数据源”。  
+5. 若要查看数据源，请单击**显示** > **数据源**。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。   
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
+1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **分页报表**启动[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. 单击“新数据集” 。  
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
-1. 在 Web 门户右上角，单击“新建” > “新建 KPI”。   
+1. 在 web 门户右上角，单击**新建** > **新的 KPI**。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
@@ -146,7 +146,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="start-with-the-visuals"></a>从视觉对象开始  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
+1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **移动报表**启动[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -235,9 +235,9 @@ ms.lasthandoff: 08/09/2017
   
 在母版布局上创建视觉对象后，接下来可以创建一个移动报表，并专门针对你的手机用户布局进行优化。    
   
-1. 单击右上角的画布图标，再单击“手机”。  
+1. 在右上角，单击画布图标 > **Phone**。  
   
-2. 在“控制实例”下的布局选项卡上，你会看到已创建的两个图表。   
+2. 在“控制实例” 下的布局选项卡上，你会看到已创建的两个图表。   
   
 3. 将树形图拖动到手机画布，使其为四列宽，三行高。  
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 08/09/2017
   
 3. 在服务器上，浏览到要保存移动报表的文件夹。  
   
-4. 单击“选择文件夹” > “保存”。  
+4. 单击**选择文件夹** > **保存**。  
   
    你会收到一条确认报表已保存的消息。  
     

@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
 ms.contentlocale: zh-cn
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
   可以将安装中使用的报表服务器数据库移至其他计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
  移动数据库不会影响当前为报表服务器项定义的计划操作。  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 您不必将作业移到新计算机上，不过您可能需要删除计算机上不再使用的作业。  
   
--   订阅、缓存报表和快照将保留在移动的数据库中。 如果在数据库移动之后快照不选取刷新的数据，则在报表管理器中清除快照选项，单击“应用”保存更改，重新创建计划，然后再次单击“应用”保存所做的更改。  
+-   订阅、缓存报表和快照将保留在移动的数据库中。 如果快照不选取刷新的数据移动该数据库后，清除快照选项在报表管理器中，单击**应用**若要保存所做的更改，请重新创建计划，然后单击**应用**再次以保存所做的更改。  
   
 -   移动数据库时，会保留 reportservertempdb 中存储的临时报表和用户会话数据。  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并打开与承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
-4.  右键单击该报表服务器数据库，指向“任务”，并单击“分离”。 对报表服务器临时数据库重复此步骤。  
+4.  右键单击报表服务器数据库，指向任务，然后单击**分离**。 对报表服务器临时数据库重复此步骤。  
   
 5.  将 .mdf 和 .ldf 文件复制或移至要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Data 文件夹中。 由于要移动两个数据库，因此请确保移动或复制所有四个文件。  
   
 6.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，打开与将承载报表服务器数据库的新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
-7.  右键单击“数据库”节点，然后单击“附加”。  
+7.  右键单击数据库节点，然后单击**附加**。  
   
 8.  单击 **“添加”** 以选择要附加的报表服务器数据库 .mdf 和 .ldf 文件。 对报表服务器临时数据库重复此步骤。  
   

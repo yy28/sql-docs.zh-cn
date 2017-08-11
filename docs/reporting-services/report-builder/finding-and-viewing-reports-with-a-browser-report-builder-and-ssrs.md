@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: zh-cn
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  如果不知道某一报表的 Web 地址，则可以打开相应报表服务器的 Web 地址，然后浏览报表服务器文件夹层次结构以选择要查看的报表。 下图显示了在浏览器窗口中显示的文件夹层次结构。  
   
- ![浏览器中的文件夹](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![在浏览器中的文件夹](../../reporting-services/report-builder/media/rs-browserfolder.GIF "在浏览器中的文件夹")  
 浏览器中的文件夹  
   
 > [!NOTE]  

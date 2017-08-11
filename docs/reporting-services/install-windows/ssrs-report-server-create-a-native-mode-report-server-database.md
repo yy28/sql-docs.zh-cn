@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
 ms.contentlocale: zh-cn
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
  **确定报表服务器凭据**  
  确定报表服务器与报表服务器数据库的连接方式。 凭据类型包括域用户帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户或报表服务器服务帐户。  
   
- 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 这些凭据经过加密并存储在 RSReportServer.config 文件中。 报表服务器将这些凭据用于与报表服务器数据库进行的连接。 如果您要使用 Windows 用户帐户或数据库用户帐户，请确保指定已经存在的帐户。 尽管 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将创建登录名并设置必要的权限，但不会为您创建帐户。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
   
  **确定报表服务器语言**  
  选择要为报表服务器指定的语言。 当用户使用不同语言版本的浏览器连接到服务器时，预定义的角色名称、说明和“我的报表”文件夹不会以不同的语言显示。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  选择数据库实例。  
   
-5.  右键单击“TCP/IP”，并选择“启用”。  
+5.  右键单击**TCP/IP**和选择**已启用**。  
   
 6.  重新启动服务。  
   
@@ -81,17 +81,17 @@ ms.lasthandoff: 08/09/2017
   
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在“数据库”页上，选择“更改数据库”。  
+2.  在数据库页中，选择**更改数据库**。  
   
-3.  选择“创建新的报表服务器数据库”，然后选择“下一步”。  
+3.  选择**创建新的报表服务器数据库**，然后选择**下一步**。  
   
-4.  连接到您将用于创建和承载报表服务器数据库的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例：  
+4.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
     1.  键入要使用的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。 向导将显示作为默认实例（如果可用）运行的本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 否则，您必须键入要使用的服务器和实例。 此格式指定命名的实例： \<servername >\\< instancename\>。  
   
     2.  输入用于一次性连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的凭据以创建报表服务器数据库。 有关如何使用这些凭据的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) 。  
   
-    3.  选择“测试连接”以验证与服务器的连接。  
+    3.  选择**测试连接**以验证到服务器的连接。  
   
     4.  选择“下一步” 。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/09/2017
   
     2.  选择“下一步” 。  
   
-7.  检查“摘要”页上的信息以确保设置正确，然后选择“下一步”。  
+7.  检查以确保设置正确无误，然后选择摘要页上的信息**下一步**。  
   
 8.  选择“报表服务器 URL”页或“报表管理器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，您会在浏览器窗口中看到报表服务器文件夹层次结构或报表管理器。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
@@ -127,13 +127,13 @@ ms.lasthandoff: 08/09/2017
 
 1.  启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到要为其创建数据库的报表服务器实例。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
-2.  在“数据库”页上，选择“更改凭据”。 
+2.  在数据库页中，选择**更改凭据**。 
 
-3.  连接到您将用于创建和承载报表服务器数据库的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例：  
+3.  连接到您将用于创建和承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例：  
   
     1.  输入用于一次性连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的凭据以创建报表服务器数据库。 有关如何使用这些凭据的详细信息，请参阅本主题中的 [开始之前](#rsdbrequirements) 。  
   
-    2.  选择“测试连接”以验证与服务器的连接。  
+    2.  选择**测试连接**以验证到服务器的连接。  
   
     3.  选择“下一步” 。  
 
@@ -149,7 +149,7 @@ ms.lasthandoff: 08/09/2017
   
     2.  选择“下一步” 。 
 
-5. 查看设置，然后选择“下一步”。
+5. 查看设置，然后选择**下一步**。
 
 6. 更改完成后，选择“完成”。
 
@@ -159,4 +159,4 @@ ms.lasthandoff: 08/09/2017
 [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

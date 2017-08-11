@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: zh-cn
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 web 门户是用于查看报表、 管理报表服务器内容，以及授予对本机模式报表服务器的用户访问权限的 Web 前端应用程序。 安装与同一个报表服务器实例中的报表服务器 Web 服务和有选择地配置如果您选择 web 门户**安装在默认本机模式配置**安装程序中的选项。 作为安装后任务，你还可以配置 web 门户。 本主题提供有关以下信息的 web 门户配置方案：
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 若要使用 web 门户，必须满足以下先决条件：
 

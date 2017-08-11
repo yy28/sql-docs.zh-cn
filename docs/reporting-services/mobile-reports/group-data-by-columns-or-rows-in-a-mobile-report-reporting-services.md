@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
 ms.contentlocale: zh-cn
@@ -30,19 +30,19 @@ ms.lasthandoff: 08/09/2017
 
 以下步骤在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 中使用具有模拟数据的比较总计表来演示在图表中按行或按列来构建数据结构之间的差异。  
 
-1. 将**比较总计图**从“布局”选项卡拖动到设计图面并扩大它。
+1. 拖动**比较总计图**从**布局**tab 键移动到设计图面并使其更大。
 
-2. 选择“数据”选项卡。 你会看到 SimulatedTable 表包含一系列的列，即 **Metric1** 到 **Metric5**，以及 **Comparison1** 到 **Comparison5**。 
+2. 选择**数据**选项卡。 你会看到 SimulatedTable 表包含一系列的列，即 **Metric1** 到 **Metric5** ，以及 **Comparison1** 到 **Comparison5**。 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. 在“数据属性”窗格中，“主系列”是 **SimulatedTable**。 选择“主系列”旁的框中的箭头，会看到 **Metric1** 到 **Metric5** 处于选择状态。
+3. 在**数据属性**窗格中，**主系列**是**SimulatedTable**。 旁边的框中选择箭头**主系列**，并且你看到**Metric1**通过**Metric5**选。
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    “比较系列”也是同样情况   -- **Comparison1** 到 **Comparison5** 处于选择状态。
    
-4. 选择“预览”。
+4. 选择**预览**。
 
    ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
@@ -50,17 +50,17 @@ ms.lasthandoff: 08/09/2017
 
 5. 选择左上角的向后箭头以离开预览模式。
 
-6. 在“布局”选项卡上的“视觉属性”窗格中，将“数据结构”从“按列”更改为“按行”。  
+6. 上**布局**选项卡上，在**Visual 属性**窗格中更改**数据结构**从**列**到**行**。  
 
-7. 选择“数据”选项卡。 现在 SimulatedTable 表具有一个“类别”列以及“度量”和“比较”列（类别 A 到 E）。 
+7. 选择**数据**选项卡。 现在 SimulatedTable 表具有**类别**连同列**指标**和**比较**包含类别 A 到 E 的列 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
-8.  在“数据属性”窗格中，现在有一个“类别列”框，其中列出了 SimulatedTable 中的“类别”列。 在“主系列”中，可以选取要用于值的列。 默认情况下， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 会为“主系列”选择 Metric5 到 Metric1，为“比较系列”选择 Comparison1 到 Comparison5。 
+8.  在**数据属性**窗格中，现在有了类别列中，其中列出了从 SimulatedTable 类别列。 在“主系列”中，可以选取要用于值的列。 默认情况下， [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 会为“主系列”选择 Metric5 到 Metric1，为“比较系列”选择 Comparison1 到 Comparison5。 
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. 选择“预览”。
+9. 选择**预览**。
 
    ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 

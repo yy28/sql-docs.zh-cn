@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: zh-cn
@@ -32,14 +32,14 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-sample-subscriber-database"></a>创建示例订阅服务器数据库  
   
-1.  启动 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，打开到 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)] 实例的连接。  
+1.  启动 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，打开到 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]实例的连接。  
   
-2.  右键单击“数据库”，再选择“新建数据库...”。  
+2.  右键单击数据库，选择**新数据库...**.  
   
-3.  在“新建数据库”对话框的“数据库名称”中，键入 Subscribers。 
+3.  在新数据库对话框中，在**数据库名称**，类型*订阅服务器*。 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  在工具栏中，单击“新建查询”按钮。  
+5.  单击**新查询**工具栏上的按钮。  
   
 6.  将下列 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句复制到空查询中：  
   

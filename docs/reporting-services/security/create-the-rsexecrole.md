@@ -17,7 +17,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
 ms.contentlocale: zh-cn
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  打开 **“角色”**。  
   
-7.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
+7.  右键单击**数据库角色**，然后选择**新的数据库角色**。 将显示“常规”页。  
   
 8.  在 **“角色名称”**中，键入 **RSExecRole**。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  打开 **“角色”**。  
   
-5.  右键单击“数据库角色”，然后选择“新建数据库角色”。 将显示“常规”页。  
+5.  右键单击**数据库角色**，然后选择**新的数据库角色**。 将显示“常规”页。  
   
 6.  在“角色名称”中，键入 **RSExecRole**。  
   

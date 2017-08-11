@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 664bf6ff099454060779ff19dd4e07b48acf6d2c
 ms.contentlocale: zh-cn
@@ -76,10 +76,10 @@ ms.lasthandoff: 08/09/2017
  此步骤在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器以及用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 根据已在您的计算机上安装的项，您可能不会看到在下面的步骤中介绍的某些安装页。  
  
  > [!IMPORTANT]
- > 对于 SharePoint 2016，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将要安装在其上的 SharePoint 服务器需要具有“自定义”服务器角色。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将于不在“自定义”角色中的 SharePoint 服务器中成功部署，但在下个 SharePoint 维护时段期间，MinRole 将停止 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，因为它检测到 SharePoint 集成模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不指示对其他任何 SharePoint 服务器角色的支持。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序仅支持“自定义”角色。
+ > 对于 SharePoint 2016，SharePoint 服务器，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]将安装上都需要有**自定义**服务器角色。 部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]不在的 SharePoint 服务器上将会成功**自定义**角色，但在下一步 SharePoint 维护时段，MinRole 将停止[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务，因为它检测到[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 集成模式下不表示对任何其他 SharePoint 服务器角色的支持。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序仅支持**自定义**角色。
  
  > [!NOTE]
- > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 Power Pivot 服务无法安装在处于“自定义”角色中的 SharePoint 服务器上。 这将避免进行多次角色切换。
+ > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 无法在中的 SharePoint 服务器上安装 Power Pivot 服务**自定义**角色。 这将避免进行多次角色切换。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>将“自定义”服务器角色应用于 SharePoint 2016 服务器
  
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/09/2017
  
  2. 以管理员身份启动 **SharePoint 2016 命令行管理程序** 。 
   
-    可以右键单击“SharePoint 2016 命令行管理程序 ”，然后选择“以管理员身份运行”。
+    您可以右键单击**SharePoint 2016 Management Shell**和选择**以管理员身份运行**。
 
 3. 在 PowerShell 命令提示符中，运行以下命令。
 
@@ -105,13 +105,13 @@ ms.lasthandoff: 08/09/2017
 
         Get-SPServer SERVERNAME 
  
- 6. “角色”应列出“自定义”。
+ 6. **角色**应列出**自定义**。
  
  ### <a name="install-reporting-services"></a>安装 Reporting Services
   
 1.  运行 SQL Server 安装向导 (Setup.exe)。  
   
-2.  在向导的左侧单选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”。  
+2.  选择**安装**的向导，然后选择左侧**新的 SQL Server 独立安装或向现有安装添加功能**。  
 
 3.  如果您看到 **“产品密钥”** 页，则键入密钥或接受 Enterprise Evaluation Edition 的默认密钥。  
   
@@ -121,17 +121,17 @@ ms.lasthandoff: 08/09/2017
   
      选择“下一步” 。  
 
-5.  建议选择“使用 Microsoft 更新检查更新(推荐)”。 此为可选项。
+5.  我们建议你选择**使用 Microsoft Update 检查更新 （推荐）**。 此为可选项。
   
      选择“下一步” 。   
   
-6.  在“安装程序文件”页上，根据已在你的计算机上安装的项，你可能会看到以下消息：  
+6.  上**安装安装程序文件**页上，具体取决于已安装在计算机上，你可能会看到以下消息：  
   
     -   “一个或多个受影响的文件具有挂起的操作。 安装过程完成后，必须重新启动计算机。”  
   
     -   选择“下一步” 。  
   
-7.  如果看到“安装规则”页。 查看任何警告或妨碍安装的问题。 然后选择“下一步”。
+7.  如果你看到**安装规则**页。 查看任何警告或妨碍安装的问题。 然后选择**下一步**。
  
 8. 在 **“功能选择”** 页中，选择以下选项：  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **用于 SharePoint 产品的 Reporting Services 外接程序**。  
   
-    -   还可以选择“数据库引擎服务”以提供完整的环境，但是你应有托管 SharePoint 数据库的 SQL Server 数据库引擎实例。  
+    -   你还可以选择**数据库引擎服务**对于完整的环境，但是应具有 SQL Server 数据库引擎实例承载 SharePoint 数据库。  
   
      选择“下一步” 。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 08/09/2017
   
      选择“下一步” 。  
   
-11. 如果选择了“数据库引擎服务”，你将看到“数据库引擎配置”页，请将相应的帐户添加到 SQL 管理员列表，然后选择“下一步”。  
+11. 如果您已选择数据库引擎服务，你将看到**数据库引擎配置**页上，将相应的帐户添加到 SQL 管理员列表中，选择**下一步**。  
   
 12. 在 **“Reporting Services 配置”** 页上，您应该看到 **“仅安装”** 选项处于选中状态。 此选项将安装报表服务器文件，但不会为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置 SharePoint 环境。  
   
@@ -162,9 +162,9 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
-13. 审阅任何警告，然后在“功能配置规则”页上选择“下一步”（如果你停在该页的话）。  
+13. 查看所有警告，然后选择**下一步**上**功能配置规则**页上，如果停止此页上。  
   
-14. 在“准备安装”页上，审阅安装摘要。 该摘要将包含一个 **“Reporting Services SharePoint 模式”** 子节点，该节点将显示 **SharePointFilesOnlyMode**的值。 选择“安装”。  
+14. 上**已准备好安装**页上，查看安装摘要。 该摘要将包含一个 **“Reporting Services SharePoint 模式”** 子节点，该节点将显示 **SharePointFilesOnlyMode**的值。 选择“安装”。  
   
 15. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
@@ -184,14 +184,14 @@ ms.lasthandoff: 08/09/2017
   
  以下步骤将指导你完成打开 SharePoint 命令行管理程序并运行 PowerShell cmdlet：  
   
-1.  选择“开始”按钮  
+1.  选择**启动**按钮  
   
-2.  选择“Microsoft SharePoint 2016 产品”或“Microsoft SharePoint 2013 产品”组。  
+2.  选择**Microsoft SharePoint 2016 产品**或**Microsoft SharePoint 2013 产品**组。  
   
-3.  右键单击“SharePoint 2016 命令行管理程序”或“SharePoint 2013 命令行管理程序”，选择“以管理员身份运行”。 
+3.  右键单击**SharePoint 2016 Management Shell**，或**SharePoint 2013 Management Shell**，选择**以管理员身份运行**。 
 
     > [!NOTE]
-    > 在标准 Windows PowerShell 窗口中无法识别 SharePoint 命令。 使用“SharePoint 命令行管理程序”。  
+    > 在标准 Windows PowerShell 窗口中无法识别 SharePoint 命令。 使用**SharePoint Management Shell**。  
   
 4.  运行以下 PowerShell 命令安装 Reporting Services SharePoint 服务。 命令成功完成后会在 Management Shell 中显示一个新行。 当命令成功完成时，**不会向 Management Shell 返回任何消息** ：  
   
@@ -232,14 +232,14 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_create_serrviceapplication"></a> 步骤 3：创建 Reporting Services 服务应用程序  
  本节提供您在查看现有服务应用程序的情况下，用于创建服务应用程序的步骤和属性说明。  
   
-1.  在 SharePoint 管理中心的“应用程序管理”组中，选择“管理服务应用程序”。  
+1.  在 SharePoint 管理中心内，在**应用程序管理**组中，选择**管理服务应用程序**。  
   
-2.  在 SharePoint 功能区中，选择“新建”按钮。  
+2.  在 SharePoint 功能区中，选择**新建**按钮。  
   
-3.  在“新建”菜单中，选择“SQL Server Reporting Services 服务应用程序”。  
+3.  在新的菜单中，选择**SQL Server Reporting Services 服务应用程序。**。  
   
     > [!IMPORTANT]  
-    >  如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 选项没有出现在列表中，则**表明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务尚未安装**。 查看上一节，了解如何使用 PowerShell cmdlt 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
+    >  如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]选项未出现在列表中，它是**指示，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]未安装共享的服务**。 查看上一节，了解如何使用 PowerShell cmdlt 安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务。  
   
 4.  在 **“创建 SQL Server Reporting Services 服务应用程序”** 页中，输入应用程序的名称。 如果您要创建多个 Reporting Services 服务应用程序，则一个描述性名称或命名约定将帮助您组织管理操作。  
   
@@ -281,11 +281,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  选择“网站设置”。  
   
-4.  在“网站集管理”组中，选择“网站集功能”。  
+4.  在**网站集管理**组中，选择**网站集功能**。  
   
 5.  在列表中找到 **“Power View 集成功能”** 。  
   
-6.  选择“激活”。 功能状态将更改为 **“活动”**。  
+6.  选择**激活**。 功能状态将更改为 **“活动”**。  
   
  将对每个网站集完成此过程。 有关详细信息，请参阅 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)。  
   
@@ -412,7 +412,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅和数据警报功能可能要求配置 SQL Server 代理权限。 如果您看到指示“需要 SQL Server 代理”的错误消息，而您已验证 SQL Server 代理正在运行，则应更新权限。 您可以在“创建服务应用程序成功”页上单击链接 **“设置订阅和警报”** ，以便转到其他页来设置 SQL Server 代理。 如果你的部署是跨计算机边界的部署（例如，当 SQL Server 数据库实例位于其他计算机上时），会需要此设置步骤。 有关详细信息，请参阅 [](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>为 SSRS 服务应用程序配置电子邮件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，您可能需要配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果您计划将电子邮件传递扩展插件用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2013 和 SharePoint 2016）](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f) 
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报功能会在电子邮件中发送警报。 若要发送电子邮件，您可能需要配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序，并可能需要修改该服务应用程序的电子邮件传递扩展插件。 如果您计划将电子邮件传递扩展插件用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则需要进行电子邮件设置。 有关详细信息，请参阅[为 Reporting Services 服务应用程序 &#40; 配置电子邮件SharePoint 2013 和 SharePoint 2016 &#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>将 Reporting Services 内容类型添加到内容库  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”**和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  

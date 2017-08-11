@@ -16,7 +16,7 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d0667dec1b59d5560ca24176634dddc5d6d8d18
 ms.contentlocale: zh-cn
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  确保已选中“嵌入连接”。  
   
-4.  在“类型”中，选择 **Microsoft SQL Server**。  
+4.  在**类型**，选择**Microsoft SQL Server**。  
   
-5.  在“连接字符串”中，键入以下文本：  
+5.  在**连接字符串**，键入以下命令：  
   
     ```  
     Data source=localhost; initial catalog=AdventureWorks2014  
@@ -62,9 +62,9 @@ ms.lasthandoff: 08/09/2017
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]数据源**AdventureWorks2014**添加到**报表数据**窗格。  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>下一个任务  
-已成功定义了到 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：为表报表定义数据集 (Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
+已成功定义了到 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课： 定义数据集的表报表 &#40;Reporting Services &#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
 [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6e87cb6c8daa8744b676d5ed78ed8339705f28e
 ms.contentlocale: zh-cn
@@ -42,6 +42,6 @@ ms.lasthandoff: 08/09/2017
     >  如果超过 10 小时未对已更改的报表进行保存，则该报表将断开与服务器的连接，而且未保存。 如果发生这种情况，请在右下角的状态栏中单击“断开连接”，然后单击“连接”。 最近的服务器将位于可用服务器列表中。 选择该服务器，并且报表将重新连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

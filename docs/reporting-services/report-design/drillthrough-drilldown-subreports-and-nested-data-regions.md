@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: zh-cn
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 |检索数据|与主报表同时检索数据|通过一个钻取报表一次性检索数据|始终与主报表同时检索数据|  
 |处理和呈现方式|与主报表一起|单击链接时|与主报表一起。|  
 |执行速度|较慢（但与主报表一起检索所有数据）|较快（但不与主报表一起检索所有数据）|较快（且与主报表一起检索所有数据）|  
-|是否使用参数|是|是|“否”|  
+|是否使用参数|是|用户帐户控制|“否”|  
 |可以重复使用|作为其他报表中的报表、子报表或钻取报表|作为其他报表中的报表、子报表或钻取报表|不能重复使用。|  
 |位置|位于主报表外部，与主报表位于相同或不同的报表服务器|位于主报表外部，与主报表位于相同的报表服务器|位于主报表内部|  
 |显示位置|主报表中|其他报表中|主报表中|  
@@ -85,22 +85,22 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> 本节内容  
- [钻取报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [钻取报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  介绍在用户单击主报表中的链接时打开的报表。  
   
- [子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [子报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  介绍在主报表的表体中显示的报表。  
   
- [嵌套数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [嵌套的数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  介绍在一个数据区域中嵌套另一个数据区域，如在矩阵中嵌套图表。  
   
- [深化操作（报表生成器和 SSRS）](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [深化操作 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  介绍使用深化操作来隐藏和显示报表项。  
   
- [指定外部项的路径（报表生成器和 SSRS）](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [指定外部项 &#40; 的路径报表生成器和 SSRS &#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  介绍如何引用报表定义文件外部的项。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

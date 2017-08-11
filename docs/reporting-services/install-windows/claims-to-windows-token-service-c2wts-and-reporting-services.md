@@ -19,7 +19,7 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ab5f4b5d2774d9dc944ad17bb55063388b70a6d
 ms.contentlocale: zh-cn
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
     1.  右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。  
   
         > [!NOTE]  
-        >  请注意，只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 c2WTS 不要求在 c2WTS 帐户上具有 SPN；但如果没有 SPN，“委派”选项卡将不可见。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。  
+        >  请注意，只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 c2WTS 不要求在 c2WTS 帐户上的 SPN 但是，如果没有 SPN，**委派**选项卡将不可见。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。  
   
     2.  “委派”选项卡上的主要配置选项如下：  
   
@@ -116,6 +116,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>后续步骤
 
 [Claims to Windows Token Service (c2WTS) 概述](http://msdn.microsoft.com/library/ee517278.aspx)   
-[规划 SharePoint 2013 中的 Kerberos 身份验证](http://technet.microsoft.com/library/ee806870.aspx)  
+[在 SharePoint 2013 中规划 Kerberos 身份验证](http://technet.microsoft.com/library/ee806870.aspx)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -25,11 +25,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
+ms.translationtype: HT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-web-service"></a>报表服务器 Web 服务
@@ -44,14 +44,14 @@ ms.lasthandoff: 06/13/2017
 -   使用任何支持 SOAP 的开发工具集开发应用程序。 有关详细信息，请参阅[The Role of SOAP in Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)。  
   
 ## <a name="programming-diagram"></a>编程关系图  
- ![报表服务器 Web 服务开发选项](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
+ ![报表服务器 Web 服务开发选项](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "报表服务器 Web 服务开发选项")  
 Reporting Services 可用 Web 服务开发选项  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [报表服务器 Web 服务方法](../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)  
  介绍每个报表服务器 Web 服务的功能和方法。  
   
- [Reporting Services 中的 SOAP 的角色](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)  
+ [SOAP 在 Reporting Services 中的作用](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)  
  概述 SOAP 以及如何在报表服务器 Web 服务中使用 SOAP。  
   
  [访问 SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
@@ -63,7 +63,7 @@ Reporting Services 可用 Web 服务开发选项
  [使用 rs.exe 实用工具和 Web 服务的脚本](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  概要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本编写环境。  
   
- [技术参考 (SSRS)](../../reporting-services/technical-reference-ssrs.md)  
+ [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
  包含特定于报表服务器 Web 服务方法以及相应复杂类型的参考材料。  
   
 ## <a name="user-requirements-for-web-service-development"></a>针对 Web 服务开发的用户要求  

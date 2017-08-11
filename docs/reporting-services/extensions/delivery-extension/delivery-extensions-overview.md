@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>传递扩展插件概述
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |报表服务器电子邮件|使用 SMTP 服务器通过电子邮件将报表发送到单独用户或组。|  
 |报表服务器文件共享|用于将组织内的报表分发到网络文件共享。 提供了按指定的计划自动将报表复制到文件共享的功能。|  
   
- ![Reporting Services 传递扩展体系结构](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Services 传递扩展体系结构](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 传递扩展体系结构")  
 Reporting Services 传递扩展插件体系结构  
   
  传递扩展插件可以与订阅配对。 创建订阅后，用户可以选择可用的传递扩展插件之一来确定传递报表的方式。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，订阅位于报表服务器数据库中。 发生事件时，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 根据报表服务器数据库中包含的订阅匹配事件。 对于与此事件关联的每个订阅，报表服务器都将创建一个通知。 对于数据驱动订阅，将为每个收件人创建一个通知。 一旦创建了通知，报表服务器就调用特定的传递扩展插件，并为在通知中指定的扩展插件设置传递值。 此传递扩展插件按照所选传递扩展插件指定的方式将通知发送给用户。  
@@ -62,7 +62,7 @@ Reporting Services 传递扩展插件体系结构
   
 -   中的开发体验[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]如语言[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C# 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

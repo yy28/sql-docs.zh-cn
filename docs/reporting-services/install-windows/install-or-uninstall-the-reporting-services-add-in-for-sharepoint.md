@@ -14,7 +14,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
 ms.contentlocale: zh-cn
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **安装向导：** ![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")SQL Server 2016 的新建外, 接程序可以安装通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导。 在向导的“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”。  
   
--   **rsSharepoint.msi：**外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     > [!NOTE]  
     >  如果你将 **/q** 开关用于无提示命令行安装，将不显示最终用户许可协议。 对此软件的使用受到许可协议控制并且由您负责遵守该许可协议，而与安装方法无关。  
@@ -110,7 +110,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**。  
   
-         该文件应位于：**\Users\\<你的姓名\>\AppData\Local\Temp**  
+         该文件应位于： **\Users\\< 您的姓名\>\AppData\Local\Temp**  
   
     2.  键入下列命令。 完成该配置步骤需要几分钟时间。 在此过程中，将重新启动 W3SVC 服务。 在程序复制文件、注册组件和运行 SharePoint 产品配置向导时，将显示若干状态消息。  
   
@@ -164,7 +164,7 @@ Rssharepoint.msi /?
   
 1.  在控制面板的 **“程序”**中，选择 **“卸载程序”**。  
   
-2.  选择“用于 SharePoint 的 Microsoft SQL Server RS 外接程序”。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
+2.  选择**Microsoft SQL Server RS 外接程序为 SharePoint**。 还可以从命令提示符运行不带开关的 **rssharepoint.msi** 来启动卸载向导。  
   
 3.  单击 **“删除”**。  
   
@@ -277,6 +277,6 @@ Rssharepoint.msi /?
 ## <a name="see-also"></a>另请参阅
 
 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
-[Reporting Services 报表服务器 &#40;SharePoint 模式 &#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+[Reporting Services 报表服务器（SharePoint 模式）](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

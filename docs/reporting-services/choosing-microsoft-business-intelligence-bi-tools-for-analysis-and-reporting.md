@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: zh-cn
@@ -37,13 +37,13 @@ ms.lasthandoff: 08/09/2017
 |创建强大的数据模型||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](http://msdn.microsoft.com/library/dn282385.aspx) （支持 Excel 2016）|  
 |可视化和浏览数据||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [三维地图](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|使用自然语言查询提问|||||[问答](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
+|使用自然语言查询提问|||||[问题解答](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
 |使用移动设备访问报告||||[HTML 5（支持查看 10MB 以内的文件）](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5（支持查看 1GB 以内的文件）](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [用于移动设备的 Power BI 应用](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>（使用适用于移动设备的 Power BI 应用）|  
-|协作和共享|||[SharePoint 网站](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 团队网站](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
+|协作和共享|||[SharePoint 站点](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 团队网站](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**公司 BI**|IT 专业人员||||||  
 |创建多维/表格公司模型||||||[Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  
-|创建即席数据可视化|||[Power View for SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
-|创建面板|||[SharePoint 面板](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服务](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
+|创建即席数据可视化|||[For SharePoint 的 power View](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
+|创建面板|||[SharePoint 仪表板](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服务](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |创建操作报表||||||*[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  
 |创建自定义和嵌入式报表|||||[Power BI 已嵌入](https://azure.microsoft.com/services/power-bi-embedded/)|*[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  
 |**高级分析**|数据科学家||||||  

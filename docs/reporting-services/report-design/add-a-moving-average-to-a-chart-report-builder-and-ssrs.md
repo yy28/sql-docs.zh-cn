@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f838e4a7e9518587e91dddec6c2cab61c1061232
 ms.contentlocale: zh-cn
@@ -49,9 +49,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  期间是用来计算移动平均值的天数。 如果未在 X 轴上指定日期／时间值，该期间将由用于计算移动平均值的数据点的数量来表示。 如果只有一个数据点，移动平均值公式将不会进行计算。 移动平均值从第二个点处开始计算。 如果您指定 **“从第一点开始”** 选项，则图表将从第一个点处的移动平均值开始。 如果只有一个数据点，则计算出的移动平均值中的点将与原始序列中的第一个点一致。  
   
-## <a name="see-also"></a>另请参阅  
-* [教程： 将一个柱形图添加到报表 （报表生成器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>另請參閱  
+* [教程：向报表添加柱形图（报表生成器）](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+*  [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [图表&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [向图表添加空点&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   

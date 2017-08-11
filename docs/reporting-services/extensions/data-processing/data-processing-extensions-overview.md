@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  您可为自己的数据源开发数据处理扩展插件，或者可以使用接口向公共数据库基础结构添加用于数据处理的附加层。 您可以部署自定义数据处理扩展插件，实现数据与组织中的现有报表服务器的无缝集成。 还可以将它们用作提供给您的使用者的自定义报表套件的一部分。  
   
- ![数据处理扩展体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![数据处理扩展体系结构](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "数据处理扩展体系结构")  
 Reporting Services 数据处理扩展插件体系结构  
   
  实现自定义 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的好处包括：  
@@ -61,7 +61,7 @@ Reporting Services 数据处理扩展插件体系结构
 ## <a name="data-extension-process-flow"></a>数据扩展插件处理流程  
  在开发自定义数据扩展插件前，您应该理解报表服务器是如何使用数据扩展插件处理数据的。 还应理解报表服务器调用的构造函数和方法。  
   
- ![数据处理扩展插件的处理流程](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![处理的数据处理扩展插件流](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "处理流数据处理扩展插件")  
 报表服务器调用的数据扩展插件的分步处理流程  
   
  该图说明下列事件序列：  

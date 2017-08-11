@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: zh-cn
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   System32 文件夹中必须存在 Authz.dll。  
   
- 安装程序不再检查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]需要 MDAC 2.0 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]版本 2.0;如果尚未安装，安装程序将安装这些。  
+ 安装程序不再检查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安装这些组件，则安装程序将会安装它们。  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> 排除 SharePoint 模式安装问题  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[故障排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>在 SharePoint 模式下安装 SQL Server 2016 SSRS 后没有看到 SharePoint 管理中心中的 SQL Server Reporting Services 服务  
+###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安装 SQL Server 2016 SSRS 后，在 SharePoint 管理中心看不到 SQL Server Reporting Services 服务  
  **描述：**如果已成功安装后 SQL Server 2016 Reporting Services SharePoint 模式和 SQL Server 2016 Reporting Services 外接程序中的 SharePoint 2013/2016年，你在看不到"SQL Server Reporting Services"下面的两个菜单，然后[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]尚未注册服务：  
   
 -   SharePoint 2013/2016 管理中心 ->“应用程序管理” ->“管理服务器上的服务”页  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet 不可用，并且命令无法识别  
  **说明：** 当您尝试运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 时，您会看到如下的错误消息：  
   
--   术语“Install-SPRSServiceInstall-SPRSService”**无法识别**作为 cmdlet、函数、脚本文件或可操作程序的名称。 请检查该名称的拼写是否正确，或者如果包含路径，则确认该路径正确并重试。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   术语“Install-SPRSServiceInstall-SPRSService” **无法识别** 作为 cmdlet、函数、脚本文件或可操作程序的名称。 请检查该名称的拼写是否正确，或者如果包含路径，则确认该路径正确并重试。At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
  **解决方法：** 完成以下操作之一：  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  打开命令窗口，然后在提示符下键入以下命令：  
   
-    -   **运行\< ** *.NET 4.0 Framework 目录* **> \InstallUtil.exe \< ** *报表服务器 Bin 目录* **> \ReportingServicesLibrary.dll**  
+    -   **运行\<**  *.NET 4.0 Framework 目录* **> \InstallUtil.exe \<**  *报表服务器 Bin 目录* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  替换\< *.NET 4.0 Framework 目录*> 与.NET Framework 4.0 的物理路径文件，并替换\<*报表服务器 Bin 目录*> 与报表服务器 bin 文件的物理路径。  
@@ -248,10 +248,10 @@ ms.lasthandoff: 08/09/2017
  修复 64 位实例或手动重新添加注册表项之后，可以使用性能监视器来配置要监视的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能对象。  
   
 ###  <a name="ConfigPropsMissing"></a> 从 SQL Server 2005 升级后，未配置 ReportServerExternalURL 和 PassThroughCookies 配置属性  
- 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关 **ReportServerExternalURL** 的详细信息，请参阅[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关详细信息**PassThroughCookies**，请参阅[配置 Web 门户来传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+ 当你从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]时，升级过程不会配置 **ReportServerExternalURL** 和 **PassThroughCookies** 配置属性。 **ReportServerExternalURL** 是一个可选属性，并且仅在以下情况下才应对其进行设置：如果你使用的是 SharePoint 2.0 Web 部件，并且希望用户能够检索报表并在新的浏览器窗口中打开。 有关详细信息**ReportServerExternalURL**，请参阅[配置文件 &#40; 中的 UrlSSRS 配置管理器 &#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). 仅当使用自定义身份验证方法时，才需要**PassThroughCookies** 。 有关详细信息**PassThroughCookies**，请参阅[配置 Web 门户来传递自定义身份验证 Cookie](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 > [!NOTE]  
->  使用自定义身份验证时，建议您迁移安装而不是执行升级。 有关迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细信息，请参阅[迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
+>  使用自定义身份验证时，建议您迁移安装而不是执行升级。 有关迁移的详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[迁移 Reporting Services 安装 &#40;本机模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  默认情况下， [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 配置中不存在这些属性。 如果在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中配置了这些属性且继续需要这些属性提供的功能，则在升级过程后，必须手动将它们添加到 **RSReportServer.config** 文件中。 有关详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
 

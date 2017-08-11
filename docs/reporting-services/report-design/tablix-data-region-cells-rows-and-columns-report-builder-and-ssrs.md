@@ -20,7 +20,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: zh-cn
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
-  若要控制 tablix 数据区域的行和列如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[列表](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+  若要控制 tablix 数据区域的行和列如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)，[矩阵](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)，或[列出](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
   
  tablix 数据区域在详细信息行和详细信息列中显示详细信息数据，在组行和组列中显示分组数据。 向 tablix 数据区域添加行组和列组时，将自动添加显示数据的行和列。 可以手动添加和删除行和列，以便自定义 tablix 数据区域，并控制数据在报表中的显示方式。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
  如果具有详细信息组，每个详细信息行则位于详细信息组内部。 该行针对数据集查询结果集中的每个值重复一次。  
   
- 有关组层次结构的详细信息，请参阅[了解组（报表生成器和 SSRS）](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
+ 有关组层次结构的详细信息，请参阅[了解组 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  下图显示一个 tablix 数据区域，其中包含嵌套行组和详细信息组。  
   
@@ -99,10 +99,10 @@ ms.lasthandoff: 08/09/2017
   
  若要删除与组关联的行和列，可以删除该组。 删除组时，可以选择仅删除组定义，也可以选择删除组及其所有关联的行和列。 通过仅删除组，您可以在数据区域中保留行和列布局。 删除组及其关联的行和列时，您删除的是与该组关联的所有静态行和列（包括组头和组尾）以及动态行和列（包括组实例）。  
   
- 有关添加或删除行和列的分步说明，请参阅[插入或删除行（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)和[插入或删除列（报表生成器和 SSRS）](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)。  
+ 有关添加或删除行和列的分步说明，请参阅[插入或删除行 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md)和[插入或删除列 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>了解 Tablix 单元  
- tablix 单元属于以下四个 tablix 区域之一：tablix 正文区、tablix 行组区、tablix 列组区或 tablix 角部区。 虽然每个单元可能会显示数据集中的任何值，但是每个单元的默认功能是由其位置确定的。 有关 tablix 区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
+ tablix 单元属于以下四个 tablix 区域之一：tablix 正文区、tablix 行组区、tablix 列组区或 tablix 角部区。 虽然每个单元可能会显示数据集中的任何值，但是每个单元的默认功能是由其位置确定的。 有关 tablix 区域的详细信息，请参阅[Tablix 数据区域 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  默认情况下，tablix 行组区和列组区中的单元表示组成员。 组成员在报表定义中组织到多个树结构中。 行组层次结构水平扩展。 列组层次结构垂直扩展。 当创建组时将自动添加这些单元，并在运行时显示组的唯一值。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
  当 tablix 正文区中的单元位于详细信息行或列中时，该单元可以显示详细信息数据；该单元位于组行或组列中时，则显示聚合组数据。 单元中数据的作用域是该单元所属的最内部行组和最内部列组的交集。  
   
 > [!NOTE]  
->  每个单元显示的实际数据是该单元所含报表项的计算后的表达式，它通常为文本框。 在属于详细信息行或列的单元中，表达式默认为详细信息数据（例如， **[LineTotal]**。） 在不属于详细信息行或列的单元中，表达式默认为聚合函数（例如， **Sum[LineTotal]**。） 如果表达式未指定聚合函数（即使该单元属于组行或组列），则显示组中的第一个值。 有关聚合的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+>  每个单元显示的实际数据是该单元所含报表项的计算后的表达式，它通常为文本框。 在属于详细信息行或列的单元中，表达式默认为详细信息数据（例如， **[LineTotal]**。） 在不属于详细信息行或列的单元中，表达式默认为聚合函数（例如， **Sum[LineTotal]**。） 如果表达式未指定聚合函数（即使该单元属于组行或组列），则显示组中的第一个值。 有关聚合的详细信息，请参阅[获得总计、 聚合和内置集合 &#40; 的表达式作用域报表生成器和 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>合并和拆分单元  
  在 tablix 区域内，可以将多个相邻单元合并在一起。 例如，可以为跨越多个列或行的标签创建单元。  

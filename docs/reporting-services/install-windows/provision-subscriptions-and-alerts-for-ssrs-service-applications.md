@@ -20,7 +20,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
 ms.contentlocale: zh-cn
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  在 **“开始”** 菜单上，单击 **“所有程序”**。  
   
-3.  展开“Microsoft SharePoint 2016 产品”，然后单击“SharePoint 2016 Management Shell”。
+3.  展开**Microsoft SharePoint 2016 产品**单击**SharePoint 2016 Management Shell**。
   
 4.  通过替换报表服务器数据库的名称、应用程序池帐户和语句路径来更新下面的 PowerShell cmdlet。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中加载 Transact-SQL 脚本  
   
-1.  若要打开 SQL Server Management Studio，请在“开始”  菜单上单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ，然后单击“SQL Server Management Studio” 。  
+1.  若要打开 SQL Server Management Studio，在**启动**菜单上，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]单击**SQL Server Management Studio**。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   

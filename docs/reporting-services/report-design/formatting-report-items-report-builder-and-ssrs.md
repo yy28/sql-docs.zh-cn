@@ -17,7 +17,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: zh-cn
@@ -43,22 +43,22 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本节内容  
- [设置文本和占位符的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [格式设置文本和占位符 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  介绍如何设置文本的格式以及如何自定义文本框中不同文本块的格式选项。  
   
- [将 HTML 导入报表（报表生成器和 SSRS）](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [将 HTML 导入报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  介绍如何在报表中插入和使用 HTML。  
   
- [设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持的标准和自定义格式设置字符串。  
+ [格式设置数字和日期 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ 介绍如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的标准和自定义格式设置字符串。  
   
- [设置线条、颜色和图像的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [格式设置线条、 颜色和图像 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  介绍如何设置报表项和数据区域中的线条、网格线、颜色和图像的格式。  
   
- [设置报表或文本框的区域设置 (Reporting Services)](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [报表或文本框 &#40; 设置的区域设置Reporting Services &#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  描述如何更改按语言和区域而不同的数据显示格式的设置，例如日期、货币和数值。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [格式设置图表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

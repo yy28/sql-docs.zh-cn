@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>为传递扩展插件实现 IDeliveryExtension 接口
   传递扩展插件类用于根据报表通知的内容将通知传递给用户。 传递扩展插件类还提供了基础结构，用于验证传递到传递扩展插件的用户设置。 此外，传递扩展插件类应包含特定的属性，客户端可以使用这些属性获得有关扩展插件的名称、扩展插件支持的设置以及可用于传递扩展插件的呈现格式的信息。  
   
- ![IDeliveryExtension 接口过程](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![IDeliveryExtension 接口过程](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension 接口过程")  
 IDeliveryExtension 接口允许对用户数据进行验证，以及使客户端能够了解所需的传递设置  
   
  若要创建传递扩展插件类，应实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 和 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 **IDeliveryExtension**接口使你的传递扩展插件，将使用的报表通知传递<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A>方法和验证使用的传入扩展设置<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>方法。 **IExtension**接口使你传递扩展插件以实现本地化的扩展名，并以处理特定于扩展的配置信息存储在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置文件。 通过实现**IExtension**，传递扩展插件包含<xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>属性。 强烈建议[!INCLUDE[ssRS](../../../includes/ssrs-md.md)]传递扩展插件支持**LocalizedName**属性，以便用户遇到的熟悉用户界面，如报表管理器中的扩展名称。  
@@ -42,7 +42,7 @@ IDeliveryExtension 接口允许对用户数据进行验证，以及使客户端�
   
  有关示例**IDeliveryExtension**类实现，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 caps.latest.revision: 35
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3c024efb9f8531ed9b87b0e2b7d7b22489a76dcf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: cf8ee5462bd75ab82ea4296a5b71136cb2eb9ee9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用具有强名称的自定义程序集
@@ -50,6 +50,6 @@ ms.lasthandoff: 06/22/2017
 >  当**AllowPartiallyTrustedCallersAttribute**存在，则默认值**FullTrustLinkDemand**安全检查，则可以避免、 使程序集可从任何其他调用部分受信任的程序集。 所有安全检查（包括类级别或方法级别的声明性安全属性）都必须显式声明。  
   
 ## <a name="see-also"></a>另请参阅  
- [与报表中使用自定义程序集](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [将自定义程序集用于报表](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

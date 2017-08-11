@@ -17,7 +17,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 067a0b9d4f33e20625fb796fa98f7b4ec6184f3e
 ms.contentlocale: zh-cn
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  
   
 > [!NOTE]  
->  如果要通过编程的方式使用这些任务，则必须使用支持项级任务的方法。 有关详细信息，请参阅<xref:ReportService2010.ReportingService2010.ListTasks%2A>和<xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
+>  如果要通过编程的方式使用这些任务，则必须使用支持项级任务的方法。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
   
 ## <a name="permissions-in-item-level-tasks"></a>项级任务中的权限  
  下表列出了项级任务、每个任务所包括的权限以及应用权限的项。 所列出的权限供您参考，仅用于为每个任务的可用功能提供更确切的说明。  

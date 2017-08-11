@@ -14,7 +14,7 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
 ms.contentlocale: zh-cn
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      如果看不到的现有服务器列表中的报表服务器，关闭**打开报表**对话框中，然后单击**连接**底部[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]以连接到服务器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   
  [卸载报表生成器](../../reporting-services/install-windows/uninstall-report-builder.md)  
   

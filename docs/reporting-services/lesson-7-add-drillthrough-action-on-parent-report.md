@@ -16,7 +16,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
 ms.contentlocale: zh-cn
@@ -30,22 +30,22 @@ ms.lasthandoff: 08/09/2017
   
 1.  转到父报表。  
   
-2.  选择包含“名称”值的文本框。  
+2.  选择包含的值文本框中**名称**。  
   
-3.  右键单击该文本框，然后选择“文本框属性”。  
+3.  文本框中，右键单击，然后选择**文本框属性**。  
   
-4.  转到“操作”选项卡，然后选择“转到报表”选项。  
+4.  转到**操作**选项卡上，然后选择**转到报表**选项。  
   
-5.  在“指定报表”部分中输入子报表的名称。  
+5.  输入中的子报表的名称**指定报表**部分。  
   
     > [!NOTE]
     > 请勿包括报表名称的文件扩展名。  
   
-6.  在“使用这些参数运行报表”部分下，单击“添加”。  
+6.  选择**添加**下**使用这些参数运行报表**部分。  
   
-7.  在“名称”框中键入“productid”，然后在“值”下拉列表中选择“ProductID”。  
+7.  类型**productid**中**名称**框中，，然后选择**ProductID**中**值**下拉列表。  
   
-8.  单击“确定”完成操作。  
+8.  选择**确定**完成。  
   
 ## <a name="next-task"></a>下一个任务  
 您已成功地在父报表上添加了钻取操作。 接下来，将创建一个数据筛选器，用于为子报表定义的数据表。 请参阅 [第 8 课：创建数据筛选器](../reporting-services/lesson-8-create-a-data-filter.md)。  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 00c18a33dc186c5724c6812451153539571cd96c
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f993204ae0c9140a5fba51c125ce1d57d0e3a125
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="integrating-reporting-services-using-soap"></a>使用 SOAP 集成 Reporting Services
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  执行功能通过 <xref:ReportExecution2005> 端点公开，当将报表服务器配置为本机模式或 SharePoint 集成模式时使用它。 以下主题说明如何使用这些端点在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows、SharePoint 和 Web 应用程序中开发报表解决方案。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [在 Windows 应用程序中使用 SOAP API](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
  介绍如何使用 SOAP API 将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到 Windows 环境中。  
   

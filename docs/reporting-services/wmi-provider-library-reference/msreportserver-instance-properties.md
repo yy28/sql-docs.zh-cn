@@ -22,7 +22,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
 ms.contentlocale: zh-cn
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[EditionID 属性 (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|返回报表服务器的版本类别。|  
-|[EditionName 属性 (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|返回报表服务器版本类别的可读名称。|  
+|[EditionID 属性 &#40;WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|返回报表服务器的版本类别。|  
+|[EditionName 属性 &#40;WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|返回报表服务器版本类别的可读名称。|  
 |[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|此对象支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基础结构，但不能通过代码直接使用。|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|返回特定计算机上报表服务器实例的名称。 只读。|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|指示是否将报表服务器配置为 SharePoint 集成模式。|  

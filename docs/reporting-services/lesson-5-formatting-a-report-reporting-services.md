@@ -16,7 +16,7 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
 ms.contentlocale: zh-cn
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  右键单击带有 `[Date]` 字段表达式的单元格，然后单击“文本框属性”。  
   
-3.  单击“数字”，然后在“类别”字段中，单击“日期”。  
+3.  单击**数**，然后在**类别**字段中，单击**日期**。  
   
 4.  在 **“类型”** 框中，选择 **“2000 年 1 月 31 日”**。  
   
@@ -50,7 +50,7 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
   
 1.  右键单击带有 `[LineTotal]` 字段表达式的单元格，然后单击“文本框属性”。  
   
-2.  单击“数字”，在“类别”字段中，选择“货币”。  
+2.  单击**数**，然后在**类别**字段中，单击**货币**。  
   
 3.  如果区域设置为“英语(美国)”，则默认设置应为：  
   
@@ -90,7 +90,7 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
 ## <a name="next-steps"></a>后续步骤  
 您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
 [设置数字和日期格式（报表生成器和 SSRS）](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
 [呈现行为（报表生成器和 SSRS）](../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

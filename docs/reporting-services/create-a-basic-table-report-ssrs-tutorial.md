@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: zh-cn
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 
 当你完成本教程，你将创建报表项目、 设置连接信息、 定义的查询、 添加表数据区域、 组和总一些字段，并预览报表。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
 若要使用本教程，您的系统必须安装以下组件：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server 数据库引擎。  
@@ -66,4 +66,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services 教程](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

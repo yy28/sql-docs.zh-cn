@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: zh-cn
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   使用报表生成器中的参数创建分页报表时，可以自定义参数窗格。 在报表设计视图中，可以将参数拖到参数窗格中的特定列和行。 你可以通过添加和删除列来更改窗格的布局。  
   
- 将参数拖到窗格中的新列和新行时，“报表数据”窗格中的参数顺序也会发生变化。 更改“报表数据”窗格中参数顺序时，窗格中参数的位置会发生变化。 有关参数顺序的重要性的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)。  
+ 当将参数拖到新列和行在窗格中时，参数顺序发生更改，在**报表数据**窗格。 当你更改中的参数的顺序**报表数据**更改窗格中，在窗格中的参数的位置。 参数顺序非常重要的原因的详细信息，请参阅[更改报表参数 &#40; 的顺序报表生成器和 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>自定义参数窗格的步骤  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  若要将参数移动到参数窗格中的新位置，请将参数拖到窗格中的不同单元格。  
   
-     更改窗格中参数的位置时，“报表数据”窗格的“参数”列表中的参数顺序将自动发生变化。 有关参数顺序的影响的详细信息，请参阅[更改报表参数的顺序（报表生成器和 SSRS）](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+     当你更改在窗格中中的参数的顺序的参数的位置**参数**列入**报表数据**窗格中会自动更改。 参数顺序影响的详细信息，请参阅[更改报表参数 &#40; 的顺序报表生成器和 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  若要访问参数的属性，请执行以下操作之一。  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 08/09/2017
     -   右键单击“报表数据”窗格中的参数，然后单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [报表参数 &#40;报表生成器和报表设计器 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

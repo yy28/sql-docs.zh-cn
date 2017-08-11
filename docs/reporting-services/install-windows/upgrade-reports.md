@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: zh-cn
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的报表设计器中打开某个 .rdl 文件时，如果报表是针对先前命名空间创建的，报表设计器会自动创建一个备份文件，并将该报表升级到当前命名空间。 这是升级报表定义文件的唯一方法。  
   
- 您设置的部署属性可以影响保存报表定义文件的架构。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
+ 您设置的部署属性可以影响保存报表定义文件的架构。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
  你可以在的早期版本中创建的.rdl 文件上载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第一次使用自动升级到新的版本和它。 报表服务器将以原始格式存储报表定义文件。 报表将在第一次被查看时自动升级，但是存储的报表定义文件仍保持不变。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      有关详细信息，请参阅本主题后面的 [在报表设计器中打开报表](#OpeningaReport) 。  
   
- 有关为报表服务器、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或报表标识当前 RDL 命名空间的信息，请参阅[查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
+ 有关如何确定报表服务器的当前 RDL 命名空间信息[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或报表，请参阅[查找报表定义架构版本 &#40;SSRS &#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>升级报表服务器上的报表  
  当 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表第一次在已升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server、 the report is automatically upgraded to the current report definition namespace supported by the report server. 该报表可能在升级之前已存在于报表服务器上，或该报表可能已通过报表管理器上传，或从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的报表设计器发布到报表服务器。  
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
 |第三方 CRI|不执行升级。<br /><br /> 由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器进行处理。|  
   
 ###  <a name="OpeningaReport"></a> 在报表设计器中使用 CRI 打开报表  
- 当你打开[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，或[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表的报表设计器中的 Cri [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，报表将升级到新的报表定义架构。 根据报表中包含的 CRI，将执行下列操作之一：  
+ 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 the report will be upgraded to the new report definition schema. 根据报表中包含的 CRI，将执行下列操作之一：  
   
 -   检测到第三方 CRI。 如果安装在报表创作计算机上的 CRI 的版本与新的 RDL 架构不兼容，则设计图面将显示带有红色 X 的文本框。您必须与系统管理员联系，以便从与新的 RDL 架构兼容的第三方供应商那里安装新版本的 CRI。  
   
@@ -147,9 +147,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>后续步骤
 
 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 中的 SQL Server Reporting Services 中的重大更改](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016 中的 SQL Server Reporting Services 的行为更改](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[到 SQL Server 2016 中的 SQL Server Reporting Services 停止使用的功能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016 的 SQL Server Reporting Services 中的重大更改](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 中 SQL Server Reporting Services 的行为更改](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [自定义报表项](../../reporting-services/custom-report-items/custom-report-items.md)   
 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 

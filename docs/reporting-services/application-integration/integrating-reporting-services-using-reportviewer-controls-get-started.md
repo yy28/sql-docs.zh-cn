@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a6a0bbee9141df565966df3e90f396e33c9b96a7
+ms.translationtype: HT
+ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
+ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>将集成 Reporting Services 使用 ReportViewer 控件-入门
@@ -266,7 +266,7 @@ ms.lasthandoff: 06/22/2017
 - 控件将保留在工具箱中，即使该程序集不再不可用。 如果已删除该项目，Visual Studio 将引发错误，如果你尝试并从工具箱中添加控件。 若要更正此错误，从工具箱中删除控件，然后重新添加使用上述步骤。
 
 
-## <a name="common-issues"></a>常见问题
+## <a name="common-issues"></a>常见的问题
     
 - ReportViewer 2016 控件设计用于现代浏览器。 如果浏览器呈现在 IE 兼容性模式下的网页，该控件可能不正常。 Intranet 站点可能需要一个元标记可替代设置的鼓励呈现在兼容模式下的 intranet 页。
 

@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
 ms.contentlocale: zh-cn
@@ -60,11 +60,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>呈现扩展插件  
  呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
--   **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[呈现到 HTML（报表生成器和 SSRS）](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)和 [Reporting Services 和 Power View 的浏览器支持](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
+-   **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[呈现为 HTML &#40;报表生成器和 SSRS &#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)和[Reporting Services 和 Power View 的浏览器支持](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 -   **Excel 呈现扩展插件** Excel 呈现扩展插件呈现可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更高版本中查看和修改的报表。 此呈现扩展插件会创建二进制交换文件格式 (BIFF) 的文件。 BIFF 是 Excel 数据的本机文件格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中呈现的报表支持适用于任何电子表格的所有功能。 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
--   “CSV 呈现扩展插件” 逗号分隔值 (CSV) 呈现扩展插件通过不带任何格式的以逗号分隔的纯文本文件形式呈现报表。 用户随后可使用电子表格应用程序（如 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]）或任何其他可读取文本文件的程序打开这些文件。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
+-   **CSV 呈现扩展插件**The Comma-Separated 值 (CSV) 呈现扩展插件呈现不带任何格式以逗号分隔的纯文本文件中的报表。 用户随后可使用电子表格应用程序（如 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]）或任何其他可读取文本文件的程序打开这些文件。 有关详细信息，请参阅[导出到 CSV 文件（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)。  
   
 -   **XML 呈现扩展插件** XML 呈现扩展插件以 XML 文件形式呈现报表。 随后可通过其他程序存储或读取这些 XML 文件。 您还可以使用 XSLT 转换将报表转换为另一种 XML 架构，供其他应用程序使用。 XML 呈现扩展插件生成的 XML 文件是 UTF-8 编码文件。 有关详细信息，请参阅[导出到 XML（报表生成器和 SSRS）](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)。  
   

@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6c0fdf9d1b694f2f6d49389e913d1c156ba77838
 ms.contentlocale: zh-cn
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  在“ **标签数据** ”选项中键入 **#PERCENT** 。  
   
-5.  （可选）若要指定多少小数放置标签显示，请键入"#PERCENT {P*n*}"其中 *n* 是要显示的小数数字。 例如，若不显示小数位数，请键入“#PERCENT{P0}”。  
+5.  （可选）若要指定标签显示的小数位数，请键入“#PERCENT{P*n*}”，其中 *n* 为要显示的小数位数。 例如，若不显示小数位数，请键入“#PERCENT{P0}”。  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>在饼图的图例中显示百分比值  
   
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/09/2017
 2.  在“ **图例**”的“ **自定义图例文本** ”属性中键入 **#PERCENT** 。  
   
 ## <a name="see-also"></a>另请参阅  
-* [教程： 将饼形图添加到报表 （报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+* [教程：向报表添加饼图（报表生成器）](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+*  [饼图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [设置图表上图例的格式&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [在饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  

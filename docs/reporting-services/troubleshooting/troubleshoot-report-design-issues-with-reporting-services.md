@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
 ms.contentlocale: zh-cn
@@ -45,7 +45,7 @@ PageNumber 和 TotalPages 仅在页眉和页脚中有效。
   
 内置字段 [&PageNumber] 和 [&TotalPages] 仅在页眉和页脚中有效。   
   
-若要向报表中添加 [&PageNumber] 或 [&TotalPages]，必须首先添加页眉或页脚。 有关详细信息，请参阅[添加或删除页眉](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
+若要向报表中添加 [&PageNumber] 或 [&TotalPages]，必须首先添加页眉或页脚。 有关详细信息，请参阅 [添加或删除页眉](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 > 在页眉或页脚中包含 [&TotalPages] 可能会对报表处理有影响。 有关详细信息，请参阅“报表故障排除：以特定文件格式导出的报表”。  

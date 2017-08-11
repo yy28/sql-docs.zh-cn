@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fd0b6d58eb740f9398bd358429f91071b38eefaf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 属性的报表服务器系统属性
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/13/2017
 |EnableExecutionLogging|指示报表执行日志记录是否处于启用状态。 默认值为 **true**。|  
 |ExecutionLogDaysKept|在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **0** 到 **2**、**147**、**483**和**647**。 如果值为 **0** ，则不从执行日志表中删除项。 默认值是 **60**秒。|  
 |SnapshotCompression|定义如何压缩快照。 默认值是 **SQL**秒。 有效值如下：<br /><br /> **SQL** = 当报表服务器数据库中存储时压缩快照。 这是当前的行为。<br /><br /> **None** = 不压缩快照。<br /><br /> **所有**= 对于所有存储选项，包括报表服务器数据库或文件系统压缩快照。|  
-|EnableClientPrinting|确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效值为 **true** 和 **false**。 默认值为 **true**。 有关此控件所需的其他设置的详细信息，请参阅[启用和禁用 Reporting Services 的客户端打印](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
+|EnableClientPrinting|确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效值为 **true** 和 **false**。 默认值为 **true**。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
 |EnableIntegratedSecurity|确定报表数据源连接是否支持集成安全性。 默认值为 **True**。 有效值如下：<br /><br /> **True** = 集成已启用安全性。<br /><br /> **False** = 集成未启用安全。 将不运行配置为使用集成安全性的报表数据源。|  
 |EnableRemoteErrors|包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。|  
   

@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: zh-cn
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-转换单元格后，必须通过从“类别”列表中依次选择这些单元格或整列 >“上下文”菜单 >“设置单元格格式” > “日期”来将其格式设置为日期。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
+已转换的单元格后，你必须将它们设置为日期，通过选择它们，或整个列 >**上下文**菜单 >**设置单元格格式** > **日期**从**类别**列表。 还可以使用 Excel 文本分列向导将文本单元格转换为格式正确的日期。  
   
 ## <a name="unsupported"></a>不支持  
   

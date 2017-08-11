@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: zh-cn
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |数据库|示例名称||  
 |--------------|------------------|-|  
-|目录数据库|ReportingService_[服务应用程序 GUID] **(\*)**|用户迁移。|  
-|Temp 数据库|ReportingService_[服务应用程序 GUID]TempDB **(\*)**|用户迁移。|  
+|目录数据库|ReportingService_ [服务应用程序 GUID] **(\*)**|用户迁移。|  
+|Temp 数据库|ReportingService_ [服务应用程序 GUID] TempDB **(\*)**|用户迁移。|  
 |警报数据库|ReportingService_[服务应用程序 GUID]_Alerting|在创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序时创建。|  
   
- **(\*)**该表中所示的示例名称遵循在你创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
+ **(\*)**表所示的示例名称遵循在创建新的 SSRS 服务应用程序时 SSRS 使用的命名约定。 如果您在从不同的服务器进行迁移，则您的目录和 tempDB 将具有来自原始安装的名称。  
   
 ####  <a name="bkmk_backup_operations"></a> 备份操作  
  本节介绍迁移所需的信息的类型以及用于完成备份的工具或过程。  

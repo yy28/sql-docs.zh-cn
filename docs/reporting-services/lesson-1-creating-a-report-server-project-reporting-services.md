@@ -14,7 +14,7 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
 ms.contentlocale: zh-cn
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 1.  打开 [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]。  
   
-2.  在“文件”菜单上，转到“新建” > “项目”。  
+2.  上**文件**菜单 >**新建** > **项目**。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  在“已安装” > “模板” > “商业智能”下，单击 **Reporting Services**。
+3.  下**已安装** > **模板** > **Business Intelligence**，单击**Reporting Services**。
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
@@ -63,13 +63,13 @@ ms.lasthandoff: 08/09/2017
   
 1.  在**解决方案资源管理器**窗格中，右键单击**报表** > **添加** > **新项**。 
 
-    >**提示**：如果看不到“解决方案资源管理器”窗格，请单击“视图”菜单上的“解决方案资源管理器”。 
+    >**提示**：如果看不到“解决方案资源管理器”  窗格，请单击“视图”  菜单上的“解决方案资源管理器” 。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
-2.  在“添加新项”窗口中，单击“报表”![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)。  
+2.  在**添加新项**窗口中，单击**报表** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)。  
   
-3.  在“名称”中，键入 **Sales Orders.rdl**，再单击“添加”。  
+3.  在“名称” 中，键入 **Sales Orders.rdl** ，再单击“添加” 。  
   
     此时报表设计器将打开，并在“设计”视图中显示新的 .rdl 文件。  
     
@@ -80,9 +80,9 @@ ms.lasthandoff: 08/09/2017
     在“报表数据”  窗格中定义数据。 在“设计”  视图中定义报表布局。 可以在“预览”  视图中运行报表并查看其外观。  
   
 ## <a name="next-lesson"></a>下一课  
-您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息 (Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。  
+您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课： 指定连接信息 &#40;Reporting Services &#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 

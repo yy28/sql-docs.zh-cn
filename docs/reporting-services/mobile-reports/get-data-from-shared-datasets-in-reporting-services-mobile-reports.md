@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
 ms.contentlocale: zh-cn
@@ -52,9 +52,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="add-edit-or-remove-a-report-server"></a>添加、编辑或删除报表服务器  
   
-如果已连接到报表服务器，在“数据”选项卡上选择“添加数据”后，将看不到用于添加另一个报表服务器的选项。 这时应执行以下步骤：  
+如果你在已连接到报表服务器上，当你选择**添加数据**数据选项卡上看不到用于添加另一台报表服务器的选项。 这时应执行以下步骤：  
   
-1. 选择左上角的“连接”。  
+1. 在左上角中，选择**连接**。  
   
    ![SSMRP_AddConnectionIcon](../../reporting-services/mobile-reports/media/ssmrp-addconnectionicon.png)  
      
@@ -65,8 +65,8 @@ ms.lasthandoff: 08/09/2017
 2. 添加新的服务器连接，或者编辑或删除现有的连接。  
   
 ### <a name="see-also"></a>另请参阅  
-- [使用 SQL Server 移动报表发布服务创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Web 门户 （SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
+- [使用 SQL Server Mobile Report Publisher 创建和发布移动报表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+-  [Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  [在 iPad 应用中查看 SQL Server 移动报表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
 -  [View SQL Server mobile reports and KPIs in the iPhone app (Power BI for iOS)（在 iPhone 应用 (Power BI for iOS) 中查看 SQL Server 移动报表和 KPI）](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
   

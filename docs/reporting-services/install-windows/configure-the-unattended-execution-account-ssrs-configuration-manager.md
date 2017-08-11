@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: zh-cn
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **rsconfig-e-u\<域/用户名 >-p\<密码 >**  
   
- **rsconfig -e** 支持其他参数。 若要获取有关语法的详细信息和查看命令示例，请参阅 SQL Server 联机丛书中的 [rsconfig 实用工具 (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)。  
+ **rsconfig -e** 支持其他参数。 有关语法和查看命令示例的详细信息，请参阅[rsconfig 实用工具 &#40;SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) SQL Server 联机丛书中。  
   
 ### <a name="how-account-information-is-stored"></a>帐户信息的存储方式  
  设置帐户后，将在本地或远程报表服务器实例上的 RSreportserver.config 文件中以加密值的形式指定以下设置：  
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>无人参与的报表处理帐户的使用方法  
  若要检索图像文件，报表服务器将自动使用该帐户，您不需要执行任何具体操作。 若要使用此帐户连接到为报表提供数据的外部数据源，则必须在报表数据源或共享数据源的“数据源属性”页中指定 **“凭据类型”** 选项：  
   
--   在 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或 SharePoint 站点中，选择“不需要凭据”选项。  
+-   在[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]或在 SharePoint 站点上，选择**不需要凭据**选项。  
   
  无人参与的报表处理帐户主要用于连接到外部服务器，而不是用作数据库服务器的登录名。 如果要使用此帐户凭据登录到数据库，则必须在连接字符串中指定凭据。 如果数据库服务器支持 Windows 集成安全性，并且用于无人参与报表处理的帐户拥有数据库读取权限，则可以指定 **Integrated Security=SSPI** 。 否则，必须在连接字符串中输入用户名和密码，该字符串对拥有数据源连接属性编辑权限的任何用户均显示为明文形式。  
   

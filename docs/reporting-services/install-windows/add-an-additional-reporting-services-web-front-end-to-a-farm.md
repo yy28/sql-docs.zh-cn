@@ -14,7 +14,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a17e4965637841339d34d7842b0df1bea5f7757f
 ms.contentlocale: zh-cn
@@ -54,8 +54,8 @@ ms.lasthandoff: 08/09/2017
 |步骤|说明和链接|  
 |----------|--------------------------|  
 |将 SharePoint 服务器添加到场。|你需要安装 SharePoint 以部署其他 Reporting Services 应用程序。<br/><br/>有关 SharePoint 2013 的详细信息，请参阅 [在 SharePoint 2013 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)。<br/><br/>有关 SharePoint 2016 的详细信息，请参阅 [在 SharePoint 2016 中将 SharePoint 服务器添加到场](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)。|  
-|安装 SQL Server Reporting Services 外接程序用于 SharePoint 2016 产品。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1） 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”页上，选择“SQL Server 功能安装”<br /><br /> 3) 在“功能选择”页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”<br /><br /> 4) 单击随后几页上的“下一步”，完成安装选项。<br /><br/>有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
-|验证新服务器是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
+|安装 SQL Server Reporting Services 外接程序用于 SharePoint 2016 产品。|有几种方法可安装外接程序。 以下步骤使用 SQL Server 安装向导。 有关安装该外接程序的详细信息，请参阅 [安装或卸载用于 SharePoint 的 Reporting Services 外接程序](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1） 运行 SQL Server 安装。<br /><br /> 2) 在“安装角色”页上，选择“SQL Server 功能安装”<br /><br /> 3） 在**功能选择**页上，选择**Reporting Services 外接程序用于 SharePoint 产品**<br /><br /> 4） 单击**下一步**下一步的多个页面以完成安装选项上。<br /><br/>有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅 [在 SharePoint 模式下安装第一个报表服务器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
+|验证新服务器是否正常运行。|1） 在 SharePoint 管理中心内，单击**管理此场中的服务器**中**系统设置**组。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
 |更新您的 NLB 解决方案。|如果需要，更新您的硬件或软件的 NLB 环境，以便包括新的服务器。|  
 
 ## <a name="next-steps"></a>后续步骤

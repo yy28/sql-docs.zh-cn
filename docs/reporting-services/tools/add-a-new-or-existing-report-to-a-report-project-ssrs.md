@@ -17,7 +17,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: zh-cn
@@ -30,11 +30,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  若要使用现有数据源预览报表，您必须有权从报表创作客户端访问此数据源。 有关详细信息，请参阅 [数据连接、数据源和连接字符串](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
- 添加报表后，您可以定义数据源和数据集，并且可以设计报表布局。 开始使用，请参阅[创建基本表报表（SSRS 教程）](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)或[表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)。  
+ 添加报表后，您可以定义数据源和数据集，并且可以设计报表布局。 若要开始，请参阅[创建基本表报表 &#40;SSRS 教程 &#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)或[表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>使用报表向导添加新报表  
   
-1.  在解决方案资源管理器中，右键单击“报表”文件夹，然后单击“添加新报表”。 将打开 **“报表向导”** 对话框。  
+1.  在解决方案资源管理器，右键单击报表文件夹，然后单击**添加新报表**。 将打开 **“报表向导”** 对话框。  
   
      向导将指导你完成创建数据源、 使用查询创建数据集，定义组，指定布局和创建报表。 这些步骤包括：  
   

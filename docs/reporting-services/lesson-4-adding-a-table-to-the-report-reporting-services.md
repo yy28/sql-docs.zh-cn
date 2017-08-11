@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: zh-cn
@@ -26,24 +26,24 @@ ms.lasthandoff: 08/09/2017
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
 定义数据集后，您可以开始定义报表。 将要纳入报表的数据区域、文本框、图像和其他项拖放到设计图面上来创建报表布局。  
   
-包含基础数据集中重复数据行的项称为“数据区域”。 基本报表将只有一个数据区域，但是对于要将图表添加到表格报表等情况，则可以添加多个数据区域。 添加数据区域之后，可以向该数据区域添加字段。  
+包含重复从基础数据集的数据行的项称为*数据区域*。 基本报表将只有一个数据区域，但是对于要将图表添加到表格报表等情况，则可以添加多个数据区域。 添加数据区域之后，可以向该数据区域添加字段。  
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>向报表布局中添加表数据区域和字段  
   
-1.  在“工具箱”中，单击“表”，然后单击设计图面并拖动鼠标。 报表设计器将在设计图面中心绘制一个具有三列的数据区域。 “工具箱”可能显示为“报表数据”窗格左侧的一个选项卡。 若要打开“工具箱”，请将指针移到“工具箱”选项卡上。 如果“工具箱”不可见，请单击“视图”菜单上的“工具箱”。
+1.  在**工具箱**，单击**表**，然后在设计图面上单击并拖动鼠标。 报表设计器将在设计图面中心绘制一个具有三列的数据区域。 **工具箱**可能显示的左侧选项卡为**报表数据**窗格。 若要打开**工具箱**，将指针移**工具箱**选项卡。 如果**工具箱**不可见，请从**视图**菜单上，单击**工具箱**。
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
-  你还可以从设计图面向报表添加表。  在设计图面上单击右键，单击“插入”，然后单击“表”。
-2.  在“报表数据”窗格中，展开 **AdventureWorksDataset** 数据集以显示字段。  
+  你还可以从设计图面向报表添加表。  右键单击设计图面上，单击**插入**，然后单击**表**。
+2.  在**报表数据**窗格中，展开数据集**AdventureWorksDataset**显示字段。  
   
-3.  将 Date 字段从“报表数据”窗格拖到表的第一列中。  
+3.  拖动*日期*字段从**报表数据**到表中的第一列的窗格。  
   
-    将字段拖到第一列中时，会发生两件事。 首先，数据单元将在方括号中显示字段名称，也称为“字段表达式”：`[Date]`。 其次，列标题值自动添加到紧邻字段表达式上面的标题行。 默认情况下，该列是字段的名称。 您可以选中标题行文本，然后键入一个新名称。  
+    将字段拖到第一列中时，会发生两件事。 首先，该数据单元格将显示的字段名称，称为*字段表达式*，括号中： `[Date]`。 其次，列标题值自动添加到紧邻字段表达式上面的标题行。 默认情况下，该列是字段的名称。 您可以选中标题行文本，然后键入一个新名称。  
   
-4.  将 Order 字段从“报表数据”窗格拖到表的第二列中。  
+4.  拖动*顺序*字段从**报表数据**到表中的第二个列的窗格。  
   
-5.  将 Product 字段从“报表数据”窗格拖到表的第三列中。  
+5.  拖动*产品*字段从**报表数据**到表中的第三个列的窗格。  
   
 6.  将 Qty 字段拖到第三列的右边缘，直到显示一个垂直光标且鼠标指针带有加号 [+] 为止。 释放鼠标按钮后，将为 `[Qty]`创建第四列。  
 ![ssrs_tutorial_addcolumn](../reporting-services/media/ssrs-tutorial-addcolumn.png)  
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/09/2017
 > 在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>后续步骤  
-您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
+您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课： 格式设置报表 &#40;Reporting Services &#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
 [表（报表生成器和 SSRS）](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [数据集字段集合（报表生成器和 SSRS）](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
 
