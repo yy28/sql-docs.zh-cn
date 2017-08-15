@@ -1,31 +1,36 @@
 ---
-title: "性能计数器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志 [Integration Services], 性能计数器"
-  - "性能计数器 [Integration Services]"
-  - "数据流 [Integration Services], 性能"
-  - "计数器 [Integration Services]"
-  - "数据流引擎 [Integration Services]"
+title: "性能计数器 |Microsoft 文档"
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Integration Services], performance counters
+- performance counters [Integration Services]
+- data flow [Integration Services], performance
+- counters [Integration Services]
+- data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 性能计数器
+# <a name="performance-counters"></a>性能计数器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
   
-> **注意：**如果在运行 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 的计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，然后将该计算机升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，则升级过程会从该计算机删除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器。 若要还原计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器，请在修复模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
+> **注意：** 如果在运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的计算机上安装 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然后将该计算机升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，则升级过程会从该计算机删除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器。 若要还原计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器，请在修复模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
   
  下表介绍了这些性能计数器：  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 63
   
  您可以使用 Microsoft 管理控制台 (MMC) 管理单元“性能”来创建一个捕获性能计数器的日志。  
   
- 有关如何提高性能的信息，请参阅[数据流性能特点](../../integration-services/data-flow/data-flow-performance-features.md)。  
+ 有关如何提高性能的信息，请参阅 [数据流性能特点](../../integration-services/data-flow/data-flow-performance-features.md)。  
   
-## 获取性能计数器统计信息  
- 对于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，你可以通过使用 [dm_execution_performance_counters （SSISDB 数据库）](../Topic/dm_execution_performance_counters%20\(SSISDB%20Database\).md)函数获取性能计数器统计信息。  
+## <a name="obtain-performance-counter-statistics"></a>获取性能计数器统计信息  
+ 对于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，你可以通过使用 [dm_execution_performance_counters （SSISDB 数据库）](../../integration-services/functions-dm-execution-performance-counters.md)函数获取性能计数器统计信息。  
   
  在下面的示例中，该函数将返回 ID 为 34 的正在运行的执行的统计信息。  
   
@@ -66,15 +71,55 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 > **重要说明!!** 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   codeplex.com 上的工具 [Business Intelligence Development Studio 的 SSIS 性能可视化（CodePlex 项目）](http://go.microsoft.com/fwlink/?LinkId=146626)。  
   
--   msdn.microsoft.com 上的视频[测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=150497)。  
+-   msdn.microsoft.com 上的视频 [测量和了解 SSIS 包在企业中的性能（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=150497)。  
   
 -   support.microsoft.com 上的支持文章 [升级到 Windows Server 2008 后性能监视器中不再提供 SSIS 性能计数器](http://go.microsoft.com/fwlink/?LinkId=235319)。  
+
+## <a name="add-a-log-for-data-flow-performance-counters"></a>添加数据流性能计数器的日志
+  本过程介绍如何为数据流引擎提供的性能计数器添加日志。  
   
-## 另请参阅  
- [项目和包的执行](https://msdn.microsoft.com/library/ms141708.aspx)  
+> [!NOTE]  
+>  如果在运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的计算机上安装 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然后将该计算机升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，则升级过程会从该计算机删除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器。 若要还原计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器，请在修复模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
   
+### <a name="to-add-logging-of-performance-counters"></a>添加性能计数器的日志记录  
   
+1.  在 **“控制面板”**中，如果您使用的是经典视图，请单击 **“管理工具”**。 如果使用的是分类视图，请单击 **“性能和维护”** ，再单击 **“管理工具”**。  
+  
+2.  单击 **“性能”**。  
+  
+3.  在“性能”对话框中，展开“性能日志和警报”，右键单击“计数器日志”，再单击“新建日志设置”。 键入日志的名称。 例如，键入 **MyLog**。  
+  
+4.  单击 **“确定”**。  
+  
+5.  在 **MyLog** 对话框中，单击 **“添加计数器”**。  
+  
+6.  单击 **“使用本地计算机计数器”** 记录本地计算机上性能计数器的日志，或者单击 **“从计算机选择计数器”** ，然后从列表中选择计算机，以记录该指定的计算机的性能计数器的日志。  
+  
+7.  在 **“添加计数器”** 对话框中，选择 **“性能对象”** 列表中的 **“SQL Server:SSIS 管道”** 。  
+  
+8.  若要选择性能计数器，请执行下列操作之一：  
+  
+    -   选择 **“所有计数器”** 以记录所有性能计数器的日志。  
+  
+    -   选择 **“选择列表中的计数器”** ，然后选择要使用的性能计数器。  
+  
+9. 单击 **“添加”**。  
+  
+10. 单击 **“关闭”**。  
+  
+11. 在 **MyLog** 对话框中，检查 **“计数器”** 列表中记录日志的性能计数器的列表。  
+  
+12. 若要添加其他计数器，请重复步骤 5 到步骤 10。  
+  
+13. 单击 **“确定”**。  
+  
+    > [!NOTE]  
+    >  必须使用属于 Administrators 组成员的本地帐户或域帐户启动性能日志和警报服务。  
+
+## <a name="see-also"></a>另请参阅  
+ [项目和包的执行](https://msdn.microsoft.com/library/ms141708.aspx)[由 Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+
