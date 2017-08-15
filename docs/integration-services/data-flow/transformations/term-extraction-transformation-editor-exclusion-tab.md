@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
  在表或视图中选择包含排除字词的列。  
   
  **配置错误输出**  
- 使用“配置错误输出” [](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式。  
+ 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
