@@ -186,8 +186,9 @@ ms.lasthandoff: 08/02/2017
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a>Docker
@@ -263,3 +264,4 @@ brew install mssql-tools
 - [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
 
 有关如何使用的示例**bcp**若要大容量导入和导出数据，请参阅[大容量复制数据到 Linux 上的 SQL Server](sql-server-linux-migrate-bcp.md)。
+
