@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,18 +13,68 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 此更改日志适用于 [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
-有关新增功能和更改的详细文章，请访问 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+
+## <a name="ssdt-172"></a>SSDT 17.2
+内部版本号：14.0.61707.300
+
+### <a name="whats-new"></a>新增功能
+
+
+**AS 项目：**
+- 现在可以在“角色”对话框中配置“对象级安全性”，以便在 1400 个兼容级别表格模型中实现高级安全性。
+- 用于在适用于 VS2017 的 SSDT AS 项目中的 AS Azure 模型中无电子邮件地址用户的新的 AAD 角色成员选择。
+- SSDT AS 表格项目中新的 AS Azure“始终提示”项目属性，用于自定义 ADAL 凭据缓存的行为。
+
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规**
+- 更新了适用于 SQL Server 2017 的品牌引用。
+
+**AS 项目**
+- 为增强提交 DAX 测量更改和其他模型编辑时的体验进行了显著的性能修复。
+- 修复了使用 1400-兼容级别表格模型的 Analysis Services 项目中的 PowerQuery 集成的大量相关问题。
+- 修复了在 VS2017 多维度项目中“设计聚合”设计器可能无法加载的问题。
+- 修复了在 Analysis Services 多维度 DSV 图中拖动项可能导致 VS 2017 崩溃的问题。
+- 修复了 AS 项目中“部署”对话框没有始终处于 Visual Studio 前台的问题。
+- 删除了从作为数据源的数据市场导入 Analysis Services，因为该服务已停用。
+- 修复了通过表格模型资源管理器从现有数据源“导入新表”后导致表设计器禁用的问题。
+- 修复了可能导致“模型”菜单项从数据源/添加数据源导入以保持隐藏在错误的上下文中的问题。
+- 改进了从表格模型资源管理器创建度量值时的体验，避免焦点切换回用于创建度量值的列。
+- 从 AS 表格项目中的集成工作区切换到显式工作区服务器时，现在将清除旧的数据库文件。
+- 修复了 AS 表格 1400 模型项目中的一个问题，该问题会导致“行级别安全性”复选框 UI 状态最初显示为未选中，而不管实际的基础对象状态如何。
+- 修复了当使用 Power Query 和已引发的未经处理的异常将文本文件或 Excel 文件导入 1400 兼容模式表格模型时可能会发生的崩溃。
+- 修复了 AS 表格模型设计器中 DAX 公式编辑控件中的滚动条缩略图可能出现的问题。
+- 修复了当包含用户名/密码身份验证时阻止修改 PowerQuery 糅合数据源的问题。
+- 修复了在连接字符串中设置其他属性时可能会阻止数据源连接的问题。
+- 修复了当多个 AS 表格模型项目加载和关闭次要模型设计器而未与设计器中的任何内容交互时，可能会导致 VS 崩溃的问题。
+- 修复了在某些情况下对 KPI 格式的编辑没有持续存在的问题。
+- 修复了 PowerQuery UI 在不论公式栏是否显示的情况下都显示错误的菜单已检查状态的问题。
+- 修复了具有 PowerQuery 数据源的 AS 表格 1400 兼容级别项目当从表格模型资源管理器中选择“更改数据源”菜单时，可能会导致 VS 崩溃的问题。
+- 修复了导致加载 1400 表格模型可能会显示错误“未能加载文件或程序集‘Microsoft.ProBI.MashupLibrary’”的间歇性问题。
+
+**RS 项目**
+- RS“标尺”和“参数”框设置选择状态的用户首选项在会话中会被正确记住。
+
+**IS 项目**
+- 修复了 ADO/ADO.NET ForEachLoop 容器未正确显示的问题
+- 修复了某些任务/组件/向导未本地化的问题
+- 将最新 TargetServerVersion 从“SQL Server vNext”更改为“SQL Server 2017”
+
 
 ## <a name="ssdt-171"></a>SSDT 17.1
 内部版本号：14.0.61705.170
@@ -34,7 +84,7 @@ ms.lasthandoff: 07/31/2017
 - 用户可以对 1400 模型上用户界面中的列设置编码提示
 - 现在可在脱机模式下使用非模型相关 IntelliSense
 - 表格模型资源管理器现在包含一个节点，用于表示可跨整个模型（1400 兼容级别表格模型）使用的命名 M 表达式
-- Azure Active Directory 人员选取器与 Microsoft Azure 门户的 IAM 相似，现可在设置表格模型中的角色成员时使用
+- Azure Active Directory 人员选取器与 Microsoft Azure 门户的标识和访问管理相似，现可在设置表格模型中的角色成员时使用
 
 **数据库项目：**
 - 更新至 DacFx 17.1
@@ -108,7 +158,7 @@ ms.lasthandoff: 07/31/2017
 - 表格：解决了尽管不支持，但仍能在 32 位计算机上允许集成工作区模式的问题。
 - 表格：解决了在准选择模式下单击任何内容（例如键入 DAX 表达式，但单击一个度量值）可能导致崩溃的问题。
 - 表格：解决了部署向导将模型的 .Name 属性重置为“模型”的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- 表格：解决了在 TME 中选择层次结构时，即使未选择关系图视图也应显示属性的问题。
+- 表格：修复了在 TME 中选择层次结构时，即使未选择关系图视图也应显示属性的问题。
 - 表格：解决了从某些应用程序中粘贴时，粘贴到 DAX 公式栏的操作将粘贴图像或其他内容（而非文本）的问题。
 - 表格：解决了由于存在具有特定定义的度量值，无法打开 1103 中某些旧模型的问题。
 - 表格：解决了无法删除 XEvent 会话的问题。
@@ -326,7 +376,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
         - 修复了以下问题：根据 DAX 表达式的提交方式，该表达式会导致不一致的行为。
         - 修复了创建 KPI 时 VS 崩溃的问题。
         - 修复了针对 SQL Server 2008 R2、2012 和 2014 生成无效报告的问题。
-        - 修复了以下问题：层次结构顺序导致 .dwpro 项目发生无限循环错误。
+        - 修复了导致 .dwpro 项目发生无限循环错误的层次结构顺序问题。
         - 修复了一个 RS RDL 问题：降级 RDL 要求完全重新生成，使用户感到迷惑。
         - 修复了一个 KPI 问题：“从客户端工具中隐藏”不起作用。
         
@@ -358,7 +408,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
  * **Analysis Services 和 Reporting Services：**
     * 修复了 MSOLAP OLEDB 提供程序的一个 SxS 问题：只安装 32 位提供程序，从而影响 64 位 Excel 2016 连接到 SQL Server 2014（在 Office365 中执行 ClickOnce 安装不会出现此问题，只有执行 MSI Excel 安装时才出现）。
-    * 修复了相关问题，使以下极端情况变得更可靠：将包含粘贴表的 AS 模型从 1103 升级到 1200 兼容级别时，可能出现错误“关系使用无效的列 ID”。
+    * 修复了将包含粘贴表的 AS 模型从 1103 升级到 1200 兼容级别时，可能出现错误“关系使用无效的列 ID”的问题，使该极端情况变得更可靠。
     * 修复了一个 SxS 问题：卸载 SSDT 2015（装入共享注册表设置）后，同一台计算机上的 SSDT BI 2013 不再能够导入 AS 模型中的数据。
     * 改进了可靠性，解决了当与 AS 引擎的连接断开（例如，SSDT 保持打开一整夜、AS 服务器被回收，或者暂时断开连接的其他情况）时发生的问题/崩溃。 
     * 修复了在多监视器方案中，对话框在非 VS 的屏幕上打开的问题。 
@@ -383,135 +433,10 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQL Server 2016 RTM 最新更新的支持，并修复了多个 bug。 有关详细信息，请参阅 [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)（SQL Server Data Tools GA 2016 年 6 月更新）。
 
-      
-
-## <a name="ssdt-april-for-sql-server-2016-rc3"></a>SSDT 4 月版（适用于 SQL Server 2016 RC3）  
-发布日期：2016 年 4 月 15日  
-  
-内部版本号：14.0.60413.0  
-  
-**SQL Server 数据库**  
-* **Always Encrypted 支持：**对于包含 Always Encrypted 列的数据库，SSDT 和 DacFx 允许查看和编辑这些数据库，以及从数据库项目发布到这些数据库。 请注意，将来的发行版会支持更改已启用列加密的列。  
-* **连接对话框和 SQL Server 对象资源管理器：**多项修复和改进。  
-    * 列出高级连接属性的“详细信息”页经过全新设计，可在多行框中显示完整的连接字符串，以及改进对 DPI 计算机的支持。  
-    * 我们重新引入了包含详细连接错误信息的传统错误对话框。 此对话框提供更明确的错误消息和堆栈跟踪，可帮助诊断登录问题，使 DBA 或 CSS 能够获得所需的信息来诊断问题。  
-    * 针对拥有最低权限的用户，我们修复了有关在连接对话框中和 SQL Server 对象资源管理器中列出数据库、查看“安全”文件夹等方面的多个问题。  
-    * 展开数据库节点以列出所有数据库时，Azure SQL 数据库的性能得到了改进。  
-* **SSDT 安装程序：**  
-    * 修复了卸载时下载 .Net 的问题。  
-    * 在高 DPI 计算机上，现在会正确设置安装程序大小。  
-    * 取消版本检查。存在更新的 SQL Server 版本时，版本检查会阻止安装 SSDT。  
-    * 架构比较：修复了以下性能问题：在 Visual Studio 中选中/取消选中多个项需要很长时间。  
-    * 支持在 x86 计算机上使用 LocalDB 2014，因为 SQL Server 2016 没有 x86 版本。  
-* **生成和部署：**  
-    * 修复了临时表不支持计算列的问题。  
-    * 部署到 Azure V12 时，将忽略“在单用户模式下执行部署脚本”选项，因为云方案不支持此选项。  
   
   
-## <a name="ssdt-hotfix-for-sql-server-2016-rc2"></a>SSDT 修补程序（适用于 SQL Server 2016 RC2）  
-发布日期：2016 年 4 月 5日  
+## <a name="additional-resources"></a>其他资源
   
-内部版本号：14.0.60329.0  
-  
-此内部版本包含提供 SQL Server Integration Services 功能的 SSDT 版本的修补程序。 也可以针对 SQL Server 2016 中的 Analysis Services 和 Reporting Services 使用内部版本 14.0.60316.0。   
-  
-若要获取此修补程序，请使用[此博客文章中的下载链接](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)。  
-  
-报告开发人员使用此版 SSDT 生成新报告时，请[阅读已知问题和解决方法](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/)，了解只会在此修补程序中出现的 SSRS 报告中的暂时性问题。  
-  
-## <a name="ssdt-hotfix-for-sql-server-2016-rc0"></a>SSDT 修补程序（适用于 SQL Server 2016 RC0）  
-发布日期：2016 年 3 月 18 日  
-  
-内部版本号：14.0.60316.0  
-  
-此内部版本包含提供 SQL Server 2016 RC0 功能的 SSDT 版本的修补程序。 目前不提供 RC1 版本的 SSDT。 可以针对 RC0 或 RC1 版本的 SQL Server 2016 使用内部版本 14.0.60316.0。  
-      
-## <a name="ssdt-february-2016-preview-for-sql-server-2016-rc0"></a>SSDT 2016 年 2 月预览版（适用于 SQL Server 2016 RC0）  
-发布日期：2016 年 3 月 7 日  
-  
-内部版本号：14.0.60305.0  
-  
--   **SQL Server 项目模板**  
-  
-    没有此 SSDT 预览版本的通知。 请参阅[数据库引擎中的新增功能](https://msdn.microsoft.com/library/bb510411.aspx)了解有关此发行版中的其他功能。  
-  
--   **SSIS 包项目模板**  
-  
-    SSIS 设计器为 SQL Server 2016、2014 或 2012 创建和维护包。 重命名为部件的新模板。 SSIS Hadoop 连接器支持 ORC 格式。 请参阅 [Integration Services 中的新增功能](https://msdn.microsoft.com/library/bb522534.aspx)了解详细信息。  
-  
--   **SSAS 项目模板（表格模型项目）**  
-  
-    本月 Analysis Services 的更新提供对表格模型和创建的任何模型的显示文件夹，SSIS 包现在支持新的 SQL Server 2016 兼容级别。 有关详细信息， 请参阅 [Analysis Services 中的新增功能（博客文章](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx)。  
-  
--   **SSRS 报告项目模板**  
-  
-    没有此 SSDT 预览版本的通知。 请参阅 [Reporting Services 中的新增功能](https://msdn.microsoft.com/library/ms170438.aspx)了解有关此发行版中的其他功能。  
-  
-## <a name="ssdt-january-2016-preview"></a>SSMS 2016 年 1 月预览版  
-发布日期：2016 年 2 月 4 日  
-  
-内部版本号：14.0.60203.0  
-  
--   **SQL Server 项目模板**  
-  
-    没有此 SSDT 预览版本的通知。 请参阅[数据库引擎中的新增功能](https://msdn.microsoft.com/library/bb510411.aspx)了解有关此 CTP 中的其他功能。  
-  
--   **SSIS 包项目模板**  
-  
-    添加了对 ODBC 源和目标组件、CDC 控制任务、  
-      CDC 源和拆分器组件、Microsoft Connector for SAP BW 和用于 Azure 的 Integration Services 功能包的支持。 请参阅 [Integration Services 中的新增功能](https://msdn.microsoft.com/library/bb522534.aspx)了解详细信息。  
-  
--   **SSAS 项目模板**  
-  
-    包括改进 1200 兼容性级别的表格模型、DirectQuery 模式下模型的计算列和行级别的安全性、模型元数据的翻译、SSIS Analysis Services 执行 DDL 任务中的 TMSL 脚本执行并修复了多处 Bug。  
-    请参阅 [Analysis Services 中的新增功能 (msdn)](https://msdn.microsoft.com/library/bb522628.aspx) 或 [Analysis Services 中的新增功能（博客文章）](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx)了解详细信息。  
-  
--   **SSRS 报告项目模板**  
-  
-    没有此 SSDT 预览版本的通知。 请参阅 [Reporting Services 中的新增功能](https://msdn.microsoft.com/library/ms170438.aspx)了解有关此 CTP 中的其他功能。  
-  
-## <a name="ssdt-december-2015-preview"></a>SSDT 2015 年 12 月预览版  
-  
--   **SQL Server 项目模板**包括针对“连接”对话框、最近的历史列表，以及在加载数据库列表时正确使用连接属性中设置的身份验证上下文的 Bug 修补程序。  
-  
-    -   将测试连接超时值更改为 15 秒。  
-  
-    -   如果在加载数据库列表时未注册客户端 IP，则创建 Azure SQL 数据库服务器防火墙规则。  
-  
-    -   SQL Server 2016 CTP3.2 功能可编程性支持。  
-  
--   **SSAS 项目模板**添加了对基于 DAX 表达式和模型中已定义的其他对象创建计算表的支持。  
-  
--   **SSIS 包项目模板**附加件包括 Avro 文件格式和 Kerberos 身份验证的 SSIS Hadoop 连接器支持。   
-    请注意，此更新中尚未包含 SSIS 设计器对 SSIS 2012 和 2014 的支持。  
-  
-## <a name="ssdt-november-2015-preview"></a>SSDT 2015 年 11 月预览版  
-  
--   **SQL Server 项目模板**。 SQL Server 和 Azure SQL 数据库改进的连接体验预览。  
-  
--   **SSIS 包项目模板**。 SSIS 目录性能改进：针对非 SSIS 管理员用户的大多数 SSIS 目录视图的性能都得到了改进。  
-  
--   **SSAS 项目模板**包括对 Analysis Services 中表格模型项目的增强功能。 可以使用“查看代码”命令查看 JSON 中的模型定义。 如果你现在使用的不是完整功能版的 Visual Studio 2015，那么你将需要这个版本来获得 JSON 编辑器。 可以免费下载 [Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)。  
-  
-## <a name="ssdt-october-2015-preview"></a>SSDT 2015 年 10 月预览版  
-  
--   用于 BI 的新项目模板（Analysis Services 模型、Reporting Services 报表和 Integration Services 包）。 所有 SQL Server 项目模板现在都位于一个 SSDT 中。  
-  
--   新的 SSIS 功能，包括 Hadoop 连接器、控制流模板，以及放宽的数据流任务最大缓冲区大小。  
-  
--   对关系数据库项目的 SQL Server 2016 CTP 3.0 功能支持。  
-  
--   SSIS 中的各种 Bug 修补程序以及对 Windows 7 OS 的支持。  
-  
-## <a name="ssdt-september-2015-preview"></a>SSDT 2015 年 9 月预览版  
-  
--   此预览版中新增了多语言支持。  
-  
-## <a name="ssdt-august-2015-preview"></a>SSDT 2015 年 8 月预览版  
-  
--   用于安装 SSDT 的新的独立 Setup.exe 程序。  你不再需要使用 SQL Server 安装程序的修改版本。 此 SSDT 版本包括用于生成部署到 SQL Server 或 Azure SQL 数据库的关系数据库的项目模板。  
-  
-## <a name="see-also"></a>另请参阅  
 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [数据库引擎中的新增功能](https://msdn.microsoft.com/library/bb510411.aspx)  

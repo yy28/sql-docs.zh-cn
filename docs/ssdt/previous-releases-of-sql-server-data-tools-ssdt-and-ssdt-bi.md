@@ -1,7 +1,7 @@
 ---
 title: "以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）| Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,16 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
+
 SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库、Analysis Services 模型、Reporting Services 报表和 Integration Services 包）提供项目模板和设计图面。  
   
 它基于 Visual Studio shell，并随 SQL Server 一起发布。 新版本的 SSDT 将集成 SQL Server 的最新功能。 较早的版本包括该版本当时的模板和设计环境。  
@@ -33,18 +34,18 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](https:/
 
 ## <a name="recent-downloads"></a>最近下载
 
-所提供的最后 3 个近期下载针对的是不太可能在 [最新版本](https://msdn.microsoft.com/library/mt204009.aspx)中遇到的问题。 
+所提供的最后 3 个近期下载针对的是不太可能在 [最新版本](download-sql-server-data-tools-ssdt.md)中遇到的问题。 
 
 |发行版本| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* 不适用|
 |17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* 不适用|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
-|16.4.1|[SSDT for VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT for VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
 \* SSDT支持两个最新版本的 Visual Studio。 随着 Visual Studio 2017 的发布，将不再更新 SSDT for VS2013。 有关其他信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分。
 
   
-## <a name="links-to-download-pages"></a>下载页面的链接  
+## <a name="links-to-download-pages"></a>下载页面的链接 
 **SQL 关系数据库引擎**  
   
 提供模板，用于为 RDBMS 和 Azure SQL 数据库生成关系数据库。 对于设计关系数据库，SSDT 与版本无关。 你可以将 Visual Studio 2012 或 2013 与任意版本的 SQL Server 数据库引擎或 Azure SQL 数据库一起使用。  
@@ -76,5 +77,5 @@ Business Intelligence Development Studio (BIDS) 通过 SQL Server 安装程序�
 ## <a name="see-also"></a>另请参阅  
 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [下载 SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
-  
+[SQL 工具和实用工具](../tools/overview-sql-tools.md)
 

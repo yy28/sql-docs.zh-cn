@@ -1,7 +1,7 @@
 ---
 title: "下载 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/18/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,74 +15,76 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 7aaa4c48419bf24357b2bef95c40d721d1ab2f2a
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** 是一款可免费下载的现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Integration Services 包、Analysis Services 数据模型和 Reporting Services 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。 此版本支持 SQL Server 2005 至 SQL Server 2017 并提供用于添加 SQL Server 2016 中的新增功能的设计环境。  
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** 是一款可免费下载的现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Integration Services 包、Analysis Services 数据模型和 Reporting Services 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。 此版本支持 SQL Server 2005 至 SQL Server 2017 并提供用于添加 SQL Server 中的新增功能的设计环境。  
     
     
-![下载](../ssdt/media/download.png) [下载适用于 Visual Studio 2015 的 SQL Server Data Tools 17.1](https://go.microsoft.com/fwlink/?linkid=849393)
+![下载](../ssdt/media/download.png) [下载适用于 Visual Studio 2015 的 SQL Server Data Tools 17.2](https://go.microsoft.com/fwlink/?linkid=852922)
 
-![下载](../ssdt/media/download.png) [下载数据层应用程序框架 (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
+![下载](../ssdt/media/download.png) [下载数据层应用程序框架 (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
 ## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **版本信息**  
   
-版本号：17.1  
-此版本的内部版本号为：14.0.61705.170
+版本号：17.2  
+此版本的内部版本号为：14.0.61707.300
   
- **新增功能**
- - 对 AS 非模型相关 IntelliSense 的脱机支持（例如突出显示、语句完成和参数信息）
- - 对表格模型资源管理器新增了功能，可显示 M 表达式
- - 用于在表格模型中配置角色成员的 Azure Active Directory 人员选取器
- - 支持在定义 1400 模型时在 UI 中编码提示
- - 若干 AS项目 bug 修复
- - 若干 DacFx bug 修复
+**新增功能**
 
- **已知问题**
- - 在 1400 兼容级别的 AS 模型中创建新的数据源时，如果选择基于文件的数据源并在创建数据源之前取消按下“取消”，则表格编辑器 (Model.bim) 将变为只读。 只需关闭表格编辑器并从解决方案资源管理器重新打开它，即可解决此问题。
+**AS**
 
-可用更改的完整列表可在[更改日志](changelog-for-sql-server-data-tools-ssdt.md)中获取
+- 现在可以在“角色”对话框中配置“对象级安全性”，以便在 1400 个兼容级别表格模型中实现高级安全性。
+- 用于在适用于 VS2017 的 SSDT AS 项目中的 AS Azure 模型中无电子邮件地址用户的新的 AAD 角色成员选择。
+- SSDT AS 表格项目中新的 AS Azure“始终提示”项目属性，用于自定义 ADAL 凭据缓存的行为。
 
- > 若要使用 Visual Studio 2017 中的 SQL Server Data Tools，请参阅下面的[这一](#use-ssdt-in-visual-studio-2017)部分
+
+**已知问题**
+
+- 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
+- 若要报告问题，请访问 [SSDT Connect 反馈](https://connect.microsoft.com/SQLServer/Feedback)网站。
+
+> [!NOTE]
+> 若要使用 Visual Studio 2017 中的 SQL Server Data Tools，请参阅下面的[这一](#use-ssdt-in-visual-studio-2017)部分
 
   **支持的语言**  
   
  此版本的 SSDT 可安装在以下语言中：  
-[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x804) | 
-[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x404) | 
-[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x409) | 
-[法语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x407) | 
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x410) | 
-[日语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x411) | 
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x412) | 
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x416) | 
-[俄语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x419) | 
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40a)  
+[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
+[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
+[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
+[法语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
+[日语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
+[俄语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
 **ISO 映像**
 
 SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法。 该 ISO 是一个自包含文件，包含 SSDT 所需的所有组件并且可使用可续传的下载管理器进行下载，适用于网络带宽有限或网络不稳定的情形。 下载之后，该 ISO 即可作为驱动器安装或刻录到 DVD 上。
 
-[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x804) |
-[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x404) |
-[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x409) |
-[法语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x407) |
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x410) |
-[日语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x411) |
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x412) |
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x416) |
-[俄语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
+[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
+[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
+[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
+[法语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
+[日语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
+[俄语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
 ## <a name="download-visual-studio"></a>下载 Visual Studio
 
