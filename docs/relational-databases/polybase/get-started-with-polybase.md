@@ -25,10 +25,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 入门
@@ -90,10 +90,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux 上的 Cloudera CDH 4.3  
   
--   Linux 上的 Cloudera CDH 5.1 - 5.5、5.9 - 5.11  
+-   Linux 上的 Cloudera CDH 5.1 – 5.5、5.9 - 5.12  
   
 -   Azure Blob 存储  
-  
+ 
+Hadoop 遵循其新版本的“Major.Minor.Version”模式。 支持的主要和次要版本中的所有版本均受支持。
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store 连接仅在 Azure SQL 数据仓库中受支持。
   

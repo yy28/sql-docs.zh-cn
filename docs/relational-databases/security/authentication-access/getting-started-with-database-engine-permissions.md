@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  有关显示 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 主体与服务器和数据库对象之间关系的图形，请参阅[权限层次结构（数据库引擎）](../../../relational-databases/security/permissions-hierarchy-database-engine.md)。  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>权限与固定服务器和固定数据库角色  
- 固定服务器角色和固定数据库角色的权限很相似，但与细粒度的权限并不完全相同。 例如， `sysadmin` 固定服务器角色的成员在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例上具有所有权限，如同使用 `CONTROL SERVER` 权限登录一样。 但是授予 `CONTROL SERVER` 权限不会使登录名成为 sysadmin 固定服务器角色的成员，将登录名添加到  `sysadmin` 固定服务器角色不会显式授予登录名  `CONTROL SERVER` 权限。 有时存储过程将通过检查固定角色而不检查细粒度的权限来检查权限。 例如，分离数据库需要具有 `db_owner` 固定数据库角色中的成员身份。 等效的 `CONTROL DATABASE` 权限并不够。 这两个系统并行运行，但彼此很少进行交互。 Microsoft 建议尽可能使用更新的细粒度权限系统，而不是使用固定角色。  
+ 固定服务器角色和固定数据库角色的权限很相似，但与细粒度的权限并不完全相同。 例如， `sysadmin` 固定服务器角色的成员在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例上具有所有权限，如同使用 `CONTROL SERVER` 权限登录一样。 但是授予 `CONTROL SERVER` 权限不会使登录名成为 sysadmin 固定服务器角色的成员，将登录名添加到  `sysadmin` 固定服务器角色不会显式授予登录名  `CONTROL SERVER` 权限。 有时存储过程将通过检查固定角色而不检查细粒度的权限来检查权限。 例如，分离数据库需要具有 `db_owner` 固定数据库角色中的成员身份。 等效的 `CONTROL DATABASE` 权限并不够。 这两个系统并行运行，但彼此很少进行交互。 Microsoft 建议尽可能使用更新的细粒度权限系统，而不是使用固定角色。
   
 ## <a name="monitoring-permissions"></a>监视权限  
  以下视图返回安全信息。  

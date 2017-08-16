@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
@@ -217,7 +217,7 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 ## <a name="additional-reading"></a>其他阅读主题  
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
- [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   

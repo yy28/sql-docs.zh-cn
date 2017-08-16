@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 审核记录 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,30 +16,30 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.translationtype: HT
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: ef3a6055836ea2b54d68f162b07b16eb3357a3dd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 审核记录
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 审核由零个或多个审核操作项组成，这些操作项会记录到审核“ 目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素。  
+ 审核由零个或多个审核操作项组成，这些操作项会记录到审核“ 目标”。 审核目标可以是二进制文件、Windows 应用程序事件日志或 Windows 安全事件日志。 发送到目标的记录可以包含下表中介绍的元素：  
   
 |列名|说明|类型|始终可用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|**datetime2**|是|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|**int**|是|  
 |**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|是|  
-|**succeeded**|指示触发事件的操作是否成功|**bit** – 1 = Success, 0 = Fail|是|  
+|**succeeded**|指示触发审核事件的操作的权限检查是否成功或失败。 |**bit**<br /> – 1 = 成功， <br />0 = 失败|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|**bigint**|是|  
-|**is_column_permission**|指示列级别权限的标志|**bit** – 1 = True, 0 = False|是|  
+|**is_column_permission**|指示列级别权限的标志|**bit** <br />– 1 = True, <br />0 = False|是|  
 |**session_id**|发生该事件的会话的 ID。|**int**|是|  
 |**server_principal_id**|在其中执行操作的登录上下文 ID。|**int**|是|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|**int**|是|  
-|**object_ id**|发生审核的实体的主 ID。 这包括：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|是|  
+|**object_ id**|发生审核的实体的主 ID。 此 ID 可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|**int**|是|  
 |**target_server_principal_id**|可审核操作适用的服务器主体。|**int**|是|  
 |**target_database_principal_id**|可审核操作适用的数据库主体。|**int**|是|  
 |**class_type**|发生审核的可审核实体的类型。|**varchar(2)**|是|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 |**server_instance_name**|发生审核的服务器实例的名称。 使用标准计算机\实例格式。|**nvarchar(120)**|是|  
 |**database_name**|发生此操作的数据库上下文。|**sysname**|是|  
 |**schema_name**|发生此操作的架构上下文。|**sysname**|是|  
-|**object_name**|发生审核的实体的名称。 这包括：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象<br /><br /> TSQL 语句（如果有）|**sysname**|是|  
+|**object_name**|发生审核的实体的名称。 此名称可以是：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象<br /><br /> TSQL 语句（如果有）|**sysname**|是|  
 |**语句**|TSQL 语句（如果有）|**nvarchar(4000)**|是|  
 |**additional_information**|有关此事件的其他任何信息，存储为 XML。|**nvarchar(4000)**|是|  
   
@@ -114,3 +114,4 @@ ms.lasthandoff: 06/22/2017
  [sys.dm_audit_class_type_map (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

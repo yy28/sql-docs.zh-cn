@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹适用于 SQL Server 2016、SQL 数据库 V12 高级版和 SQL 数据仓库    
     
 ### <a name="aggregate-pushdown"></a>聚合下推    
- 聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。  尽管这提供了良好的性能，但使用 SQL Server 2016，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件    
-    
--   支持的聚合运算符是 MIN、MAX、SUM、COUNT、AVG    
-    
--   支持 < = 64 位的任何数据类型。  例如，支持 bigint，因为其大小是 8 个字节，但不支持 decimal (38,6)，因为其大小为 17 个字节。 此外，不支持任何字符串类型    
-    
--   聚合运算符必须基于 SCAN 节点或包含 group by 的 SCAN 节点    
+ 聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。  尽管这提供了良好的性能，但使用 SQL Server 2016，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件 
+ 
+-    聚合为 MIN、MAX、SUM、COUNT 和 COUNT(*)。 
+-  聚合运算符必须基于 SCAN 节点或包含 group by 的 SCAN 节点。
+-  此聚合不是非重复聚合。
+-  聚合列不是字符串列。
+-  聚合列不是虚拟列。 
+-  输入和输出数据类型必须是以下类型之一，并且必须适合 64 位。
+    -  tiny int、int、big int、small int、bit
+    -  small money、money、decimal 和 numeric（精度 <= 18）
+    -  small date、date、datetime、datetime2、time
     
  通过在对缓存友好的执行中对压缩/编码数据进行高效聚合并利用 SIMD 可进一步加快聚合下推速度    
     
@@ -164,7 +168,7 @@ FROM FactResellerSalesXL_CCI
  列存储索引数据加载     
  列存储索引版本的功能摘要     
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
- [开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
+ [开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  针对数据仓库的列存储索引     
  [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     

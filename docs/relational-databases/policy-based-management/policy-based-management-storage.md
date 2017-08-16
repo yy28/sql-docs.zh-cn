@@ -1,7 +1,7 @@
 ---
 title: "基于策略的管理存储 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,18 +16,18 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0426d583d1ada35c7ad3e36d4fe1a621e9754360
+ms.translationtype: HT
+ms.sourcegitcommit: e59b30393d9bb917fc48511d7e621c14e9a01c9c
+ms.openlocfilehash: fa8ad7ecca05b2fe7b4ef6b955f5b24fadb0e23b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="policy-based-management-storage"></a>基于策略的管理存储
   策略存储在 msdb 数据库中。 在更改策略或条件后，应对 msdb 进行备份。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
 ## <a name="storing-policies"></a>存储策略  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)]中未安装这些策略；不过，可以从默认安装位置 C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下， [!INCLUDE[ssDE](../../includes/ssde-md.md)]中未安装这些策略；不过，可以从默认安装位置 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies\DatabaseEngine\1033 导入这些策略。  
   
  可以使用“文件/新建”菜单直接创建策略，然后将这些策略保存到文件中。 这样，在未连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的情况下也可以创建策略。  
   
