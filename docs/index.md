@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 文档 | Microsoft 文档"
 description: "了解 SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
-ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
@@ -239,8 +239,13 @@ ms.lasthandoff: 08/09/2017
                                                 <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">迁移数据库</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">下载迁移工具</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">升级 SQL Server 数据库</h4>
                                                 <ul>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">数据库实验助手</a></li> 
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">迁移工具和服务</h4>
+                                                <ul>
+                                                    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure 数据库迁移服务（个人预览版）</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">数据迁移助手</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">适用于 Access 的 SSMA</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">适用于 DB2 的 SSMA</a></li>
@@ -248,10 +253,10 @@ ms.lasthandoff: 08/09/2017
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">适用于 Oracle 的 SSMA</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">适用于 SAP ASE 的 SSMA</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">将你的 SQL Server 数据库迁移</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">将数据库迁移到 Azure</h4>
                                                 <ul>
-                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">到 Azure SQL Database</a></li>
-                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">到 Azure SQL 数据仓库</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">迁移到 Azure SQL 数据库</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">迁移到 Azure SQL 数据仓库</a></li>
                                                 </ul>
                                             </div>
                                         </div>
