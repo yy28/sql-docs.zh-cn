@@ -1,29 +1,34 @@
 ---
-title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "PolyBase 连接配置 (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: b57b1e802969995f87d5663e5e7dbdc92700a9b5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/04/2017
+
 ---
-# PolyBase Connectivity Configuration (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   显示或更改 PolyBase Hadoop 和 Azure blob 存储连接的全局配置设置。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.png "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,31 +75,31 @@ RECONFIGURE
   
 -   选项 5：Linux 上的 Hortonworks HDP 2.0  
   
--   选项 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5 和 5.9  
+-   选项 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11 和 5.12  
   
--   选项 7：Linux 上的 Hortonworks 2.1、2.2、2.3、2.4 和 2.5  
+-   选项 7：Linux 上的 Hortonworks 2.1、2.2、2.3、2.4、2.5 和 2.6  
   
 -   选项 7：Windows Server 上的 Hortonworks 2.1、2.2 和 2.3  
   
 -   选项 7：Azure blob 存储 (WASB[S])  
   
  **RECONFIGURE**  
- 更新运行值 (run_value) 以匹配配置值 (config_value)。 请参阅[结果集](#ResultSets)以了解 run_value 和 config_value 的定义。 在 RECONFIGURE 语句设置运行值之前，由 sp_configure 设置的新配置值不会生效。  
+ 更新运行值 (run_value) 以匹配配置值 (config_value)。 请参阅 [结果集](#ResultSets) 以了解 run_value 和 config_value 的定义。 在 RECONFIGURE 语句设置运行值之前，由 sp_configure 设置的新配置值不会生效。  
   
  运行 RECONFIGURE 之后，必须停止并重启 SQL Server 服务。 请注意，停止 SQL Server 服务时，另外两个 PolyBase 引擎和数据移动服务将自动停止。 重启 SQL Server 引擎服务之后，再次重启这两项服务（它们不会自动启动）。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a>结果集  
- 在不使用参数执行时，**sp_configure** 会返回五列的结果集。  
+##  <a name="ResultSets"></a> 结果集  
+ 在不使用参数执行时， **sp_configure** 会返回五列的结果集。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
-|**config_value**|**int**|使用 **sp_configure** 设置的值。|  
+|**config_value**|**int**|使用 **sp_configure**设置的值。|  
 |**run_value**|**int**|PolyBase 正在使用当前值。 此值通过运行 RECONFIGURE 进行设置。<br /><br /> **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。<br /><br /> 如果正在进行重新配置，则可能需要重启计算机，运行值才会准确。|  
   
 ## <a name="general-remarks"></a>一般备注  
@@ -105,7 +110,7 @@ RECONFIGURE
  不允许在显式或隐式事务中使用 RECONFIGURE。  
   
 ## <a name="permissions"></a>Permissions  
- 所有的用户都可以不使用参数或者使用 @configname 参数执行 **sp_configure**。  
+ 所有的用户都可以不使用参数或者使用 **参数执行** sp_configure @configname 。  
   
  需要 **ALTER SETTINGS** 服务器级别权限或 **sysadmin** 中固定服务器角色的成员资格，才能更改配置值或运行 RECONFIGURE。  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+
