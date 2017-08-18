@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1fd890f8a6c63bd6da3d92896c6e7d481d0a110d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
-默认情况下，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)使用等号（同等联接）联接表，等号会对两个联接列中的值进行匹配。 如果需要，您可以更改用于对联接列中的值进行比较的运算符。  
+默认情况下， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 使用等号（同等联接）联接表，等号会对两个联接列中的值进行匹配。 如果需要，您可以更改用于对联接列中的值进行比较的运算符。  
   
 ### <a name="to-modify-join-operators"></a>修改联接运算符  
   

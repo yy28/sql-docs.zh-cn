@@ -19,15 +19,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f617973f041218de7b77b64350b8953dbaa0d149
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新结果的规则 (Visual Database Tools)
-在许多情况下，都可以更新显示在[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
+在许多情况下，都可以更新显示在 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的结果集。 不过，在某些情况下却不能这样做。  
   
 一般而言，若要更新结果， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 必须具备足够的信息来唯一标识表中的行。 例如，查询在输出列表中包括主键。 此外，您还必须有足够的权限才能更新数据库。  
   

@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="projects-sql-server-management-studio"></a>项目 (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **MDX、DMX 和 XMLA 脚本**。 用户的常用 MDX 脚本。 双击项目中的 .mdx 文件将会使编辑器打开所选脚本。  
   
--   **杂项**。 该文件夹可用于不完全适合于任何其他默认节点类型的文件，如包含项目目标的文本文件。  
+-   **杂项**。该文件夹可用于不完全适合于任何其他默认节点类型的文件，如包含项目目标的文本文件。  
   
 项目还可以集成到源代码管理系统中。  
   

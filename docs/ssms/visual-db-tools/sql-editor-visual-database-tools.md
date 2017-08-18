@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
@@ -50,7 +50,7 @@ SQL 编辑器提供了许多有用的 SQL 文本编辑功能，包括：
 > [!NOTE]  
 > SQL 编辑器没有 IntelliSense 提示。  
   
-在编辑 SQL 语句时，某些 Transact-SQL 语句包含在由细线环绕的框中。 这有助于从视觉上将 SQL 代码分为不同的命令部分，并标识出可以使用查询设计器以图形方式设计的 SQL 语句块。 有关使用查询设计器的详细信息，请参阅[设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)。  
+在编辑 SQL 语句时，某些 Transact-SQL 语句包含在由细线环绕的框中。 这有助于从视觉上将 SQL 代码分为不同的命令部分，并标识出可以使用查询设计器以图形方式设计的 SQL 语句块。 有关使用查询设计器的详细信息，请参阅 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

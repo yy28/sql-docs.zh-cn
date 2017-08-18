@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82c974b0a34c99af677eb783b12809e6d185072b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |------------|------------------|  
 |**表**|联接中涉及的表或表值对象的名称。 不能在此处更改表名 — 此信息仅作为信息显示。|  
 |**列**|用于联接表的列的名称。 运算符列表中的运算符指定了这些列中数据之间的关系。 不能在此处更改列名 — 此信息仅作为信息显示。|  
-|**运算符**|指定用于使联接列相关的运算符。 若要指定等号 (=) 以外的运算符，请从列表中进行选择。 关闭该属性页后，您选择的运算符将显示在联接线的菱形图中，如下所示：<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|  
+|**运算符**|指定用于使联接列相关的运算符。 若要指定等号 (=) 以外的运算符，请从列表中进行选择。 关闭该属性页后，您选择的运算符将显示在联接线的菱形图中，如下所示：<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 图标")|  
 |**所有行 <table1>**|指定即使右表中没有相应的匹配行，左表中的所有行也都显示在输出中。 右表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 LEFT OUTER JOIN。|  
 |**所有行 <table2>**|指定即使左表中没有相应的匹配行，右表中的所有行也都显示在输出中。 左表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 RIGHT OUTER JOIN。|  
   

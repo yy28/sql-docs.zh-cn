@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>打印查询结果 (Visual Database Tools)
-若要打印查询结果，可以将[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)中的内容复制到另一 Windows 程序中，例如字处理程序，然后在其中设置格式并进行打印。  
+若要打印查询结果，可以将 [“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 中的内容复制到另一 Windows 程序中，例如字处理程序，然后在其中设置格式并进行打印。  
   
 查询和视图设计器在将查询结果放入剪贴板时，使用制表符作为列之间的分隔符，使用回车符和换行符作为行之间的分隔符。  
   

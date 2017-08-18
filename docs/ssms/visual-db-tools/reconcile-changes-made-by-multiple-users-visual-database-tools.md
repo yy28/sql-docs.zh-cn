@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
 在多用户环境中，多个用户可以同时对同一个对象进行更改。 当您在表或数据库关系图设计器中处理对象的结构时，可能会出现这种情况；对于查询和视图设计器的“结果”窗格内所返回结果中的值，也会出现这种情况。 这可能导致您需要解决的冲突。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>表设计器或数据库关系图设计器中的冲突  
-例如，当您在表设计器中处理某个表时，另一个用户可能会删除或重命名同一个表或相关的表。 尝试保存表时， [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 会通知你，在打开该表之后数据库已经更新。  
+例如，当您在表设计器中处理某个表时，另一个用户可能会删除或重命名同一个表或相关的表。 尝试保存表时， [“检测到数据库更改”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 会通知你，在打开该表之后数据库已经更新。  
   
 该对话框还会显示一个列表，列出在您保存表时将受到影响的数据库对象。 此时，您可以执行以下操作之一：  
   

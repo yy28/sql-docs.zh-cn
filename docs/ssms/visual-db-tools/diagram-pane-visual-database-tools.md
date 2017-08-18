@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>关系图窗格 (Visual Database Tools)
@@ -69,8 +69,8 @@ ms.lasthandoff: 06/22/2017
   
 |复选框或符号|Description|  
 |-----------------------|---------------|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|指定某个数据列是否出现在查询结果集内（“选择”查询），或者是否用于“更新”、“插入源”、“生成表”或“插入到”查询中。 选择要添加到结果中的列。 如果选择“(所有列)”，则所有数据列都将出现在输出中。<br /><br />与复选框一起使用的图标会根据要创建的查询类型而更改。 在创建“删除”查询时，不能选择单个列。|  
-|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|表示数据列用于对查询结果进行排序（是 ORDER BY 子句的一部分）。 如果排序顺序为升序，则图标显示为 A-Z；如果排序顺序为降序，则图标显示为 Z-A。|  
+|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 图标")|指定某个数据列是否出现在查询结果集内（“选择”查询），或者是否用于“更新”、“插入源”、“生成表”或“插入到”查询中。 选择要添加到结果中的列。 如果选择“(所有列)”，则所有数据列都将出现在输出中。<br /><br />与复选框一起使用的图标会根据要创建的查询类型而更改。 在创建“删除”查询时，不能选择单个列。|  
+|![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 图标")<br /><br />![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 图标")|表示数据列用于对查询结果进行排序（是 ORDER BY 子句的一部分）。 如果排序顺序为升序，则图标显示为 A-Z；如果排序顺序为降序，则图标显示为 Z-A。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools 图标")|表示数据列用于在聚合查询中创建分组结果集（是 GROUP BY 子句的一部分）。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools 图标")|表示数据列包含在查询的搜索条件中（是 WHERE 或 HAVING 子句的一部分）。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools 图标")|表示数据列的内容将进行汇总以便输出（包含在 SUM、AVG 或其他聚合函数中）。|  

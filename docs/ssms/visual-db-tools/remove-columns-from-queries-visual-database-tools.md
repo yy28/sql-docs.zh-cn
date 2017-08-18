@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5514062abfeecd1a3f5f6ba67c8ba0789983cdc5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
   
 -   在“条件”窗格中，选择包含要移除的列的网格行，然后按 Delete。  
   
-    - 或 -  
+    -或 -  
   
 -   在 [“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中移除对该列的所有引用。  
   
