@@ -89,10 +89,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 458c1eba94f31cc9577a82eb429749b1b22fc21f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c30ab95ac8b543071c0136369b276442c0f81cfc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
@@ -846,6 +846,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||AdvancedAnalytics|安装 R Services（数据库中）。|  
 |AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
+|RS_SHP||安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
+|RS_SHPWFE||安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。 |  
 |DQC||安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。|  
 |IS||安装所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。|  
 |MDS||安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。|  

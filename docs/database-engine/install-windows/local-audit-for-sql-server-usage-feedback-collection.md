@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关于计算机或设备的信息（“标准计算机信息”）并发送到 Microsoft。 [SQL Server 使用反馈收集](http://support.microsoft.com/kb/3153756) 的本地审核组件将服务收集的数据写入指定文件夹（表示将发送给 Microsoft 的数据（日志））。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。  
 
-从 SQL Server 2016 CU2 开始，本地审核可在实例级别针对 SQL Server 数据库引擎和 Analysis Services (SSAS) 进行配置。 SQL Server Integration Services (SSIS) 的本地审核可使用数据库引擎进行配置。 在安装过程中安装的其他 SQL Server 组件以及在安装之后下载或安装的 SQL Server Tools 没有使用反馈收集的本地审核功能。 
+从 SQL Server 2016 CU2 开始，本地审核可在实例级别针对 SQL Server 数据库引擎和 Analysis Services (SSAS) 进行配置。 在 SQL Server 2016 CU4 和 SQL Server 2016 SP1 中，也为 SQL Server Integration Services (SSIS) 启用了本地审核功能。 在安装过程中安装的其他 SQL Server 组件以及在安装之后下载或安装的 SQL Server Tools 没有使用反馈收集的本地审核功能。 
 
 ## <a name="prerequisites"></a>先决条件 
 
@@ -61,7 +61,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集关�
  
 1. 启动“服务”— 单击“Windows”按钮，然后输入 services.msc。 
 
-2. 导航到相应的服务。 例如，对于数据库引擎，找到 SQL Server CEIP 服务实例名。 对于 Analysis Services，找到 SQL Server Analysis Services CEIP 实例名。 
+2. 导航到相应的服务。 例如，对于数据库引擎，找到 SQL Server CEIP 服务实例名**\<\>**。 对于 Analysis Services，找到 SQL Server Analysis Services CEIP 实例名**\<\>**。 若要获取 Integration Services，请查找 SQL Server Integration Services CEIP Service 13。
 
 3. 右键单击服务，然后选择“属性”。 
 
