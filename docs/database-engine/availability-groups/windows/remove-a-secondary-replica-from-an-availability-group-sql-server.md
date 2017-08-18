@@ -1,28 +1,33 @@
 ---
-title: "从可用性组中删除辅助副本 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removesecondaryar.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 配置"
+title: "从可用性组中删除次要副本 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removesecondaryar.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c0faf42e9f7ad186523fc6f0b704b9a2e3c15e10
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 从可用性组中删除辅助副本 (SQL Server)
-  本主题说明了如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 从 AlwaysOn 可用性组中删除次要副本。  
+# <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>从可用性组中删除辅助副本 (SQL Server)
+  本主题说明了如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除次要副本。  
   
 -   **开始之前：**  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 38
   
 4.  此步骤取决于您是要删除多个副本，还是只删除一个副本，如下所示：  
   
-    -   若要删除多个副本，请使用 **“对象资源管理器详细信息”** 窗格查看并选择所有要删除的副本。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)。  
+    -   若要删除多个副本，请使用 **“对象资源管理器详细信息”** 窗格查看并选择所有要删除的副本。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要删除单个副本，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中此副本。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 38
   
 2.  使用 **Remove-SqlAvailabilityReplica** cmdlet。  
   
-     例如，下面的命令从名为 `MyReplica` 的可用性组中删除服务器 `MyAg` 上的可用性副本。  此命令必须在承载可用性组的主副本的服务器实例上运行。  
+     例如，下面的命令从名为 `MyReplica` 的可用性组中删除服务器 `MyAg`上的可用性副本。  此命令必须在承载可用性组的主副本的服务器实例上运行。  
   
     ```  
     Remove-SqlAvailabilityReplica `   
@@ -110,7 +115,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -121,9 +126,10 @@ caps.handback.revision: 38
   
  删除副本会导致它停止接收数据。 在某个辅助副本确认其已从全局存储中删除之后，该副本将从其数据库（在本地服务器实例上保留为 RECOVERING 状态）中删除可用性组设置。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
+ [将次要副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [删除可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
+

@@ -1,32 +1,37 @@
 ---
-title: "数据库镜像监视器（状态页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.status.f1"
+title: "数据库镜像监视器（“状态”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: faa2f672bccc678270d6a7387d27b40e73688425
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像监视器（状态页）
+# <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
   该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 选项  
- **状态**  
+## <a name="options"></a>选项  
+ **“状态”**  
  显示包含每个主体和镜像服务器实例的最新高级镜像状态的网格。 **“状态”** 网格行的排列顺序如下：  
   
 -   主体服务器实例  
@@ -43,8 +48,8 @@ caps.handback.revision: 36
 |**见证服务器连接**|见证服务器的连接状态，前面有状态图标 **“未知”**、 **“已连接”**或 **“已断开连接”**。|  
 |**历史记录**|单击以显示服务器实例上的镜像历史记录。 这将打开 **“数据库镜像历史记录”** 对话框，其中显示给定服务器实例中镜像状态的历史记录和镜像数据库的统计信息。<br /><br /> 如果监视器未与服务器实例建立连接， **“历史记录”** 按钮将呈灰色。|  
   
- “主体日志(*\<time>*)”  
- 主体服务器实例上的日志状态，以服务器实例所在的当地时间为准，由 *\<time>* 指示。 将显示以下参数：  
+ 主体日志 (\<time>)  
+ 主体服务器实例上的日志状态，以服务器实例所在的当地时间为准，由 \<time> 指示。 将显示以下参数：  
   
  **未发送日志**  
  在发送队列中等待的日志量（以 KB 计）。  
@@ -61,8 +66,8 @@ caps.handback.revision: 36
  **新事务的当前速率**  
  传入事务进入主体日志的速率（以 KB/秒计）。 若要确定镜像是落后、保持同步、还是正在追赶，请将该值与 **“发送日志所需的时间(估计值)”** 值进行比较。  
   
- “镜像日志(*\<time>*)”  
- 镜像服务器实例上的日志状态，以服务器实例所在的当地时间为准，由 *\<time>* 指示。 将显示以下参数：  
+ 镜像日志(\<time>)  
+ 镜像服务器实例上的日志状态，以服务器实例所在的当地时间为准，由 \<time> 指示。 将显示以下参数：  
   
  **未还原日志**  
  在重做队列中等待的日志量（以 KB 计）。  
@@ -91,14 +96,14 @@ caps.handback.revision: 36
   
 -   **带自动故障转移功能的高安全(同步)**  
   
-## 注释  
- **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业” 来定期更新状态表。 若要了解所显示的状态的保留时间，用户可以在“主体日志 (*\<time>*)”和“镜像日志 (*\<time>*)”标签上查看时间。  
+## <a name="remarks"></a>注释  
+ **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业” 来定期更新状态表。 若要了解所显示的状态的保留时间，用户可以在“主体日志 (\<time>)”和“镜像日志 (\<time>)”标签上查看时间。  
   
  如果该作业不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，状态将变得越来越陈旧，并且可能不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能分享相同的角色 - 主体或镜像。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

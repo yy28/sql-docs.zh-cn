@@ -1,34 +1,39 @@
 ---
 title: "Reporting Services 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, AlwaysOn 可用性组"
-  - "可用性组 [SQL Server], 互操作性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
+# <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] (AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
+  本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
   
  将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源的一个重要好处是利用可读的辅助副本作为报表数据源，同时辅助副本为主数据库提供故障转移功能。  
   
- 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的常规信息，请参阅 [SQL Server 2012 的 AlwaysOn 常见问题 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的常规信息，请参阅 [SQL Server 2012 的 AlwaysOn 常见问题 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
   
  **本主题内容：**  
   
@@ -59,10 +64,10 @@ caps.handback.revision: 22
   
  有关所需修补程序的详细信息，请参阅[将 SQL Server 2012 中对 AlwaysOn 功能的支持引入 .NET Framework 3.5 SP1 的 KB 2654347A 修补程序](http://go.microsoft.com/fwlink/?LinkId=242896)。  
   
- 有关其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 要求的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+ 有关其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 要求的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 **RSreportserver.config** ），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 RSreportserver.config），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
   
 ##  <a name="bkmk_reportdatasources"></a> 报表数据源和可用性组  
  基于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 数据源行为会根据管理员配置 AG 环境的方式不同而变化。  
@@ -75,9 +80,9 @@ caps.handback.revision: 22
   
  连接字符串还可以包含新的 AlwaysOn 连接属性，这些属性配置报表查询请求以将次要副本用于只读报表。 将辅助副本用于报表请求将减少读-写主副本上的负载。 下图显示包含三个副本 AG 配置的示例，其中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源连接字符串已使用 ApplicationIntent=ReadOnly 配置。 在此示例中，将报表查询请求发送到辅助副本而非主副本。  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
- 以下是示例连接字符串，其中 [AvailabilityGroupListenerName] 为创建副本时配置的**侦听器 DNS 名称**：  
+ 以下是示例连接字符串，其中 [AvailabilityGroupListenerName] 为创建副本时配置的 **侦听器 DNS 名称** ：  
   
  `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2016; ApplicationIntent=ReadOnly`  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 22
   
 -   ReportServerTempDB  
   
- 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)。  
+ 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的详细信息，请参阅 [为 SharePoint 服务器配置和管理 SQL Server 可用性组 (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)。  
   
 > [!NOTE]  
 >  SharePoint 模式的报表服务器使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序数据库和 SharePoint 内容数据库之间的同步过程。 将报表服务器数据库和内容数据库一起维护很重要。 您应考虑在同一可用性组中配置它们以便它们作为一个整体进行故障转移和恢复。 请考虑下列方案：  
@@ -157,13 +162,13 @@ caps.handback.revision: 22
   
 -   创建可用性组并配置“侦听器 DNS 名称” 。  
   
--   **主副本：** 将报表服务器数据库配置为单个可用性组的一部分并创建包含所有报表服务器数据库的主副本。  
+-   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分，并创建包含所有报表服务器数据库的主要副本。  
   
 -   **辅助副本：** 创建一个或多个辅助副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 -   **报表服务器凭据：** 您需要在针对主副本创建的辅助副本上创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   更新数据库连接以使用侦听器 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序更改**数据库服务器名称**。  
+-   更新数据库连接以使用侦听器 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> 完成报表服务器数据库的灾难恢复所需的步骤  
  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到辅助副本后，需要完成以下步骤：  
@@ -191,7 +196,7 @@ caps.handback.revision: 22
   
 -   数据库故障转移完成且报表服务器服务重新启动后，将自动重新创建 SQL Server 代理作业。 在重新创建 SQL 代理作业前，将不处理与 SQL Server 代理作业关联的所有后台执行任务。 这包括 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 订阅、计划和快照。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组入门 (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
@@ -200,3 +205,5 @@ caps.handback.revision: 22
  [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+
+

@@ -1,53 +1,46 @@
 ---
 title: "AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 关于"
-  - "辅助副本，请参阅可用性组 [SQL Server]"
-  - "可用性 [SQL Server]"
-  - "AlwaysOn [SQL Server]，请参阅可用性组 [SQL Server]"
-  - "可用性组 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- secondary replicas, see Availability Groups [SQL Server]
+- availability [SQL Server]
+- AlwaysOn [SQL Server], see Availability Groups [SQL Server]
+- Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# AlwaysOn 可用性组 (SQL Server)
+# <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
   
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
-  
- **本主题内容：**  
-  
--   [优点](#Benefits)  
-  
--   [术语和定义](#TermsAndDefinitions)  
-  
--   [与其他数据库引擎功能的互操作性和共存](#Interoperability)  
-  
--   [相关任务](#RelatedTasks)  
-  
--   [相关内容](#RelatedContent)  
   
 ##  <a name="Benefits"></a> 优点  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组丰富的选项来提高数据库的可用性并改进资源使用情况。 主要组件如下：  
   
--   支持最多九个可用性副本。 “可用性副本”  是可用性组的实例化，此可用性组由特定的 SQL Server 实例承载，该实例维护属于此可用性组的每个可用性数据库的本地副本。 每个可用性组都支持一个主副本和最多八个辅助副本。 有关详细信息，请参阅：[AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+-   支持最多九个可用性副本。 “可用性副本”  是可用性组的实例化，此可用性组由特定的 SQL Server 实例承载，该实例维护属于此可用性组的每个可用性数据库的本地副本。 每个可用性组都支持一个主副本和最多八个辅助副本。 有关详细信息，请参阅： [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
     > [!IMPORTANT]  
-    >  每个可用性副本都必须驻留在单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点中。 有关可用性组的先决条件、限制和建议的详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+    >  每个可用性副本都必须驻留在单个 Windows Server 故障转移群集 (WSFC) 群集的不同节点中。 有关可用性组的先决条件、限制和建议的详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 -   支持替代可用性模式，如下所示：  
   
@@ -67,7 +60,7 @@ caps.handback.revision: 34
   
      通过使用活动辅助功能，可更好地利用辅助硬件资源，从而提高 IT 效率并降低成本。 此外，通过将读意向应用程序和备份作业转移到辅助副本，有助于提高针对主副本的性能。  
   
--   支持每个可用性组的可用性组侦听器。 “可用性组侦听程序”是一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。 侦听器在可用性组故障转移后提供快速应用程序故障转移。 有关详细信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)。  
+-   支持每个可用性组的可用性组侦听器。 “可用性组侦听程序”是一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。 侦听器在可用性组故障转移后提供快速应用程序故障转移。 有关详细信息，请参阅[可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
 -   支持灵活的故障转移策略以便更好地控制可用性组故障转移。 有关详细信息，请参阅[故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。  
   
@@ -77,13 +70,13 @@ caps.handback.revision: 34
   
 -   提供了一组集成的工具来简化部署和管理可用性组，这些工具包括：  
   
-    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] DDL 语句。 有关详细信息，请参阅 [AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)。  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] DDL 语句。 有关详细信息，请参阅： [AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)。  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 工具，如下所示：  
   
         -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 创建和配置可用性组。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)。  
   
-        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 向现有可用性组添加一个或多个主数据库。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用“将数据库添加到可用性组向导”(SQL Server)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 向现有可用性组添加一个或多个主数据库。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅 [使用“将数据库添加到可用性组向导”(SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)。  
   
         -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 向现有可用性组添加一个或多个辅助副本。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
   
@@ -91,9 +84,9 @@ caps.handback.revision: 34
   
     -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 监视 AlwaysOn 可用性组、可用性副本和可用性数据库，并且评估 AlwaysOn 策略的结果。 有关详细信息，请参阅[使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)。  
   
-    -   “对象资源管理器详细信息”窗格显示有关现有可用性组的基本信息。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)。  
+    -   “对象资源管理器详细信息”窗格显示有关现有可用性组的基本信息。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
   
-    -   PowerShell cmdlet。 有关详细信息，请参阅 [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
+    -   PowerShell cmdlet。 有关详细信息，请参阅： [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  可用性组 (availability group)  
@@ -111,7 +104,7 @@ caps.handback.revision: 34
  可用性副本  
  可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，并维护属于该可用性组的每个可用性数据库的本地副本。 存在两种类型的可用性副本：一个 *主副本* 和一至八个 *辅助副本*。  
   
- 主副本 (primary replica)  
+ 主副本  
  使主数据库可用于来自客户端的读写连接并用于将每个主数据库的事务日志记录发送到每个辅助副本的可用性副本。  
   
  辅助副本 (secondary replica)  
@@ -121,7 +114,7 @@ caps.handback.revision: 34
  一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。  
   
 > [!NOTE]  
->  有关详细信息，请参阅：[AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+>  有关详细信息，请参阅： [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="Interoperability"></a> 与其他数据库引擎功能的互操作性和共存  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可与以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能和组件一起使用：  
@@ -148,7 +141,7 @@ caps.handback.revision: 34
   
 -   [Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server 代理](../../../ssms/agent/sql-server-agent.md)  
+-   [SQL Server 代理](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
   
 -   [Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
@@ -163,7 +156,7 @@ caps.handback.revision: 34
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
   
@@ -181,9 +174,9 @@ caps.handback.revision: 34
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [为 AlwaysOn 可用性组配置服务器实例 (SQL Server)](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [管理可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
@@ -192,3 +185,4 @@ caps.handback.revision: 34
  [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,24 +1,29 @@
 ---
 title: "使用“添加 Azure 副本向导”(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用“添加 Azure 副本向导”(SQL Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Windows Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
   
 -   **开始之前：**  
@@ -27,24 +32,24 @@ caps.handback.revision: 12
   
      [安全性](#Security)  
   
--   **若要添加副本，请使用：**[添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 如果你从未向可用性组添加过任何可用性副本，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md) 中的“服务器实例”与“可用性组和副本”部分。  
+ 如果你从未向可用性组添加过任何可用性副本，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的“服务器实例”与“可用性组和副本”部分。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
--   您必须有混合 IT 环境，其中的本地子网有 Windows Azure 站点到站点 VPN。 有关详细信息，请参阅[在管理门户中配置站点到站点 VPN](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create)。  
+-   您必须有混合 IT 环境，其中的本地子网有 Windows Azure 站点到站点 VPN。 有关详细信息，请参阅 [在管理门户中配置站点到站点 VPN](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create)。  
   
 -   可用性组必须包含本地可用性副本。  
   
 -   到可用性组侦听器的客户端必须具有 Internet 连接，才能在可用性组故障转移到 Windows Azure 副本时保持与侦听器的连接。  
   
--   **使用完全初始数据同步的先决条件** 为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动[!INCLUDE[ssDE](../../../includes/ssde-md.md)]的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
+-   **使用完全初始数据同步的先决条件** 为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中创建和配置 AlwaysOn 可用性组。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 12
   
 1.  首先，为您的 Windows Azure 订阅下载管理证书。 单击“下载”打开登录页面。  
   
-2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903)和[组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
+2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
   
-3.  然后单击 **“连接”**连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如“虚拟网络”和“虚拟网络子网”。  
+3.  然后单击 **“连接”**连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如 **“虚拟网络”** 和 **“虚拟网络子网”**。  
   
 4.  为将承载新辅助副本的 Windows Azure 虚拟机指定设置：  
   
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

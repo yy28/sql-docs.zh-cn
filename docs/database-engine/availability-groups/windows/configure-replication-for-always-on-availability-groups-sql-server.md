@@ -1,25 +1,30 @@
 ---
 title: "为 AlwaysOn 可用性组配置复制 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 互操作性"
-  - "复制 [SQL Server], AlwaysOn 可用性组"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b1c8cbe1c3b1682b6994859d134bd2a4de432fd6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 为 AlwaysOn 可用性组配置复制 (SQL Server)
+# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
@@ -65,7 +70,7 @@ caps.handback.revision: 17
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 *@security_mode* 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 **sp_adddistpublisher**。 @security_mode 参数可用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前主要副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为 0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和 *@password* 值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  
@@ -137,7 +142,7 @@ SELECT @installed;
  如果 *@installed* 设置为 0，则必须将复制功能添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中。  
   
 ##  <a name="step4"></a> 4.将辅助副本主机配置为复制发布服务器  
- 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果使用存储过程来配置分发，请使用 **sp_adddistpublisher** 将远程发布服务器与分发服务器关联起来。 如果对原始发布服务器使用了 *@login* 和 *@password* ，则在您添加辅助副本主机作为发布服务器时为每个辅助副本主机指定相同的值。  
+ 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果使用存储过程来配置分发，请使用 **sp_adddistpublisher** 将远程发布服务器与分发服务器关联起来。 如果 *@login* 和 *@password* ，则在您添加辅助副本主机作为发布服务器时为每个辅助副本主机指定相同的值。  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -148,7 +153,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 **sp_adddistributor** 时所使用的密码。 如果要使用存储过程来配置分发，请使用 **sp_adddistributor** 的 *@password* 参数来指定密码。  
+ 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 **sp_adddistributor** 时所使用的密码。 如果要使用存储过程来配置分发，请使用 *@password* 的 **sp_adddistributor** 参数来指定密码。  
   
 ```  
 EXEC sp_adddistributor   
@@ -188,10 +193,10 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 **sp_validate_replica_hosts_as_publishers**，以查询有关可用性组的信息。 与 **sp_validate_redirected_publisher** 不同，它将使用调用方的凭据，且不会使用保留在 msdb.dbo.MSdistpublishers 中的登录名来连接可用性组副本。  
+ 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 **sp_validate_replica_hosts_as_publishers** ，以查询有关可用性组的信息。 与 **sp_validate_redirected_publisher**不同，它将使用调用方的凭据，且不会使用保留在 msdb.dbo.MSdistpublishers 中的登录名来连接可用性组副本。  
   
 > [!NOTE]  
-> 在验证不允许读取访问或要求指定读取意图的次要副本主机时， **sp_validate_replica_hosts_as_publishers** 将失败，并显示以下错误。  
+>  在验证不允许读取访问或要求指定读取意图的次要副本主机时，**sp_validate_replica_hosts_as_publishers** 将失败，并显示以下错误。  
 >   
 >  消息 21899，级别 11，状态 1，过程 **sp_hadr_verify_subscribers_at_publisher**，第 109 行  
 >   
@@ -209,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [维护 AlwaysOn 发布数据库 (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -223,9 +228,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [创建可用性组 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -235,10 +240,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## 另请参阅  
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

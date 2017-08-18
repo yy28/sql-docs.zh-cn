@@ -1,24 +1,29 @@
 ---
 title: "管理可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 管理"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c71b0db60e8d35d14d615f953d5f9bc11439dc8a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 管理可用性组 (SQL Server)
+# <a name="administration-of-an-availability-group-sql-server"></a>管理可用性组 (SQL Server)
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理现有 AlwaysOn 可用性组涉及以下一个或多个任务：  
   
 -   更改现有可用性副本的属性以便更改客户端连接访问（用于配置可读的辅助副本）等，更改其故障转移模式、可用性模式或会话超时设置。  
@@ -33,9 +38,9 @@ caps.handback.revision: 20
   
 -   创建和配置可用性组侦听器。  
   
--   为某一给定可用性组管理[可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。 这涉及在以辅助角色运行时将一个或多个副本配置为只读访问以及配置只读路由。  
+-   为某一给定可用性组管理 [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 。 这涉及在以辅助角色运行时将一个或多个副本配置为只读访问以及配置只读路由。  
   
--   为某一给定可用性组管理[次要副本上的备份](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。 这涉及配置您希望运行备份作业的位置，然后编写备份作业脚本，以便实现您的备份首选项。 在承载可用性副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上，对于可用性组中的每个数据库，您都需要为备份作业编写脚本。  
+-   为某一给定可用性组管理 [次要副本上的备份](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 。 这涉及配置您希望运行备份作业的位置，然后编写备份作业脚本，以便实现您的备份首选项。 在承载可用性副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上，对于可用性组中的每个数据库，您都需要为备份作业编写脚本。  
   
 -   删除可用性组。  
   
@@ -48,13 +53,13 @@ caps.handback.revision: 20
   
 -   [将次要副本从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-database-to-an-availability-group-sql-server.md)  
+-   [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
 -   [将辅助数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
 -   [将主数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
--   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/configure flexible automatic failover policy.md)  
+-   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
  **管理可用性组**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 20
   
  **管理可用性数据库**  
   
--   [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-database-to-an-availability-group-sql-server.md)  
+-   [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 20
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
   
@@ -130,18 +135,19 @@ caps.handback.revision: 20
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [为 AlwaysOn 可用性组配置服务器实例 (SQL Server)](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+ [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：次要副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
    
+

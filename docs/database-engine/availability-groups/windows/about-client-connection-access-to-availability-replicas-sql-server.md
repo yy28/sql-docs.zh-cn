@@ -1,37 +1,42 @@
 ---
 title: "关于对可用性副本的客户端连接访问 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 可读辅助副本"
-  - "活动辅助副本 [SQL Server], 只读访问"
-  - "可用性组 [SQL Server], 配置"
-  - "可用性组 [SQL Server], 客户端连接"
-  - "可用性组 [SQL Server], 活动辅助副本"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 关于对可用性副本的客户端连接访问 (SQL Server)
+# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
   在 AlwaysOn 可用性组中，你可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为次要副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
   
- 为了便于客户端访问给定可用性组的主数据库或辅助数据库，您应该定义可用性组侦听器。 默认情况下，可用性组侦听器将传入连接定向到主副本。 不过，您可以对可用性组进行配置以便支持只读路由，这使其可用性组侦听器能够将读意向应用程序的连接请求重定向到可读取的辅助副本。 有关详细信息，请参阅[为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
+ 为了便于客户端访问给定可用性组的主数据库或辅助数据库，您应该定义可用性组侦听器。 默认情况下，可用性组侦听器将传入连接定向到主副本。 不过，您可以对可用性组进行配置以便支持只读路由，这使其可用性组侦听器能够将读意向应用程序的连接请求重定向到可读取的辅助副本。 有关详细信息，请参阅 [为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。  
   
  在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 在故障转移过程中，所有到主副本或辅助副本的客户端连接都将终止。 故障转移之后，在将客户端重新连接到可用性组侦听器时，侦听器将客户端重新连接到新的主副本，只有读意向连接请求除外。 如果在承载新的主副本以及至少一个可读取辅助副本的客户端和服务器实例上配置了只读路由，则读意向连接请求将被重新路由到支持客户端要求的连接访问类型的辅助副本。 若要确保在故障转移之后获得良好的客户端体验，务必为每个可用性副本的辅助角色和主角色配置连接访问。  
   
 > [!NOTE]  
->  有关处理客户端连接请求的可用性组侦听程序的信息，请参阅[可用性组侦听程序、客户端连接以及应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)。  
+>  有关处理客户端连接请求的可用性组侦听程序的信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
  **本主题内容：**  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
  允许任何只读连接  
  辅助数据库全部可用于读访问连接。 此选项允许较低版本的客户端进行连接。  
   
- 有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+ 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 ##  <a name="ConnectAccessForPrimary"></a> 主角色支持的连接访问类型  
  主角色对于客户端连接支持两种备选方式，如下所示：  
@@ -72,7 +77,7 @@ caps.handback.revision: 15
   
  有关此连接属性的信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+ 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 ##  <a name="HowConnectionAccessAffectsConnectivity"></a> 连接访问配置如何影响客户端连接  
  副本的连接访问设置决定连接尝试是失败还是成功。 下表简要说明对于每个连接访问设置，给定连接尝试是失败还是成功。  
@@ -87,9 +92,9 @@ caps.handback.revision: 15
 |主|读写|仅限读意向|失败|  
 |主|读写|指定了读写意向或未指定连接意向|成功|  
   
- 有关配置可用性组接受到其副本的客户端连接的信息，请参阅，[可用性组侦听程序、客户端连接以及应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)。  
+ 有关配置可用性组接受到其副本的客户端连接的信息，请参阅， [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
   
-### 连接访问配置示例  
+### <a name="example-connection-access-configuration"></a>连接访问配置示例  
  根据将不同可用性副本配置为进行连接访问的方式，在可用性组故障转移之后，对于客户端连接的支持可能会有所变化。 例如，请考虑要在远程异步提交辅助副本上对其执行报告的一个可用性组。 此可用性组中数据库的所有只读应用程序都会将其**应用程序意向**连接属性设置为“ReadOnly”以使所有只读连接为读意向连接。  
   
  在本例中，可用性组在主计算中心具有两个同步提交副本，在附属站点拥有两个异步提交副本。 对于主角色，所有副本都配置为允许读写访问，这样，在所有情况下可防止与主副本进行读意向连接。 同步提交辅助角色使用默认连接访问配置（“无”），这样可以防止在辅助角色下进行的所有客户端连接。  与此相反，异步提交副本配置为允许在辅助角色下进行读意向连接。 下表概述了该示例配置：  
@@ -119,11 +124,12 @@ caps.handback.revision: 15
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
   
   
+

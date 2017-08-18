@@ -1,26 +1,31 @@
 ---
 title: "in-doubt xact resolution 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分布式事务 [SQL Server], 未解析的事务"
-  - "未解析的事务"
-  - "in-doubt xact resolution 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- distributed transactions [SQL Server], unresolved transactions
+- unresolved transactions
+- in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c3676d0c6b240bce2c7523cb2dceba90813fa3c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# in-doubt xact resolution 服务器配置选项
+# <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用 **in-doubt xact resolution** 选项可以控制 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 无法解决的默认事务结果。 事务无法解决可能与 MS DTC 停止工作或恢复时的未知事务结果有关。  
@@ -73,14 +78,15 @@ GO
   
 ```  
   
- **in-doubt xact resolution** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才可以更改 **in-doubt xact resolution**。 该设置将立即生效，无需重新启动服务器。  
+ **in-doubt xact resolution** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才可以更改 **in-doubt xact resolution** 。 该设置将立即生效，无需重新启动服务器。  
   
 > [!NOTE]  
 >  在任何分布式事务所涉及的所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，使此选项的配置始终保持一致，有助于避免数据的不一致。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

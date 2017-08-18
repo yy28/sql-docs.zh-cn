@@ -1,25 +1,30 @@
 ---
 title: "维护 AlwaysOn 发布数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 互操作性"
-  - "复制 [SQL Server], AlwaysOn 可用性组"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 12c030081ec4015cb20702c0f674f870f8cb829d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 维护 AlwaysOn 发布数据库 (SQL Server)
+# <a name="maintaining-an-always-on-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题将探讨使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
@@ -39,17 +44,17 @@ caps.handback.revision: 9
   
 -   复制监视器将始终在原始发布服务器下显示发布信息。 但是，通过将原始发布服务器添加为服务器，可以使用复制监视器从任意副本查看此信息。  
   
--   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 **PUBLISHINGSERVERNAME** 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果你在发生故障转移后在次要副本上使用存储过程配置复制，而且你希望对在不同副本上启用的发布数据库使用请求订阅，则必须将原始发布服务器的名称（而非当前发布服务器的名称）指定为 **sp_addpullsubscription** 或 **sp_addmergepulllsubscription** 的 *@publisher* 参数。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在此情况下，您应对 *@publisher* 参数使用当前主副本的主机名称。  
+-   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 **PUBLISHINGSERVERNAME** 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果你在发生故障转移后在次要副本上使用存储过程配置复制，而且你希望对在不同副本上启用的发布数据库使用请求订阅，则必须将原始发布服务器的名称（而非当前发布服务器的名称）指定为 *@publisher* 或 **sp_addmergepulllsubscription** 的 **@publisher**参数。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在此情况下，您应对 *@publisher* 参数使用当前主副本的主机名称。  
   
     > [!NOTE]  
-    >  对于一些过程（如 **sp_addpublication**），只支持对不属于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的发布服务器使用 *@publisher* 参数；在此情况下，该参数与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 无关。  
+    >  对于一些过程（如 **sp_addpublication**），只支持对不属于 *@publisher* @publisher [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]参数；在此情况下，该参数与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 无关。  
   
 -   若要在故障转移后在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中同步订阅，应将来自订阅服务器的请求订阅与来自活动发布服务器的推送订阅进行同步。  
   
 ##  <a name="RemovePublDb"></a> 从可用性组中删除已发布的数据库  
  如果从可用性组中删除了已发布的数据库，或者删除了包含已发布的成员数据库的可用性组，则应考虑以下问题。  
   
--   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，则必须运行 **sp_redirect_publisher**，但不要指定 *@redirected_publisher* 参数的值，这样便可以删除发布服务器/数据库对的重定向。  
+-   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，则必须运行 **sp_redirect_publisher** ，但不要指定 *@redirected_publisher* 参数的值，这样便可以删除发布服务器/数据库对的重定向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -111,16 +116,17 @@ caps.handback.revision: 9
   
 -   [为 AlwaysOn 可用性组配置复制 (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
--   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [管理（复制）](../../../relational-databases/replication/administration/administration-replication.md)  
   
 -   [复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
-## 另请参阅  
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

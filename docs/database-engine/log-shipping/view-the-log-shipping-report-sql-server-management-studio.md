@@ -1,27 +1,32 @@
 ---
 title: "查看日志传送报告 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查看作业传送报告"
-  - "显示作业传送报告"
-  - "日志传送 [SQL Server], 监视"
-  - "日志传送 [SQL Server], 查看报表"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing log shipping reports
+- displaying log shipping reports
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 查看日志传送报告 (SQL Server Management Studio)
+# <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看事务日志传送状态报告。 您可以在监视服务器、主服务器或辅助服务器中运行状态报告。 若要查看有关日志传送配置的最完整的信息，请在监视服务器实例上查看此报告。  
   
  该报告显示所有其状态可从您连接到的服务器实例获得的日志传送活动的状态。 如果该服务器实例涉及不同角色（例如，用作一个数据库的监视服务器，同时用作另一个数据库的辅助服务器）的多种配置，则显示的结果包含每个角色的各项配置信息。 如果存储过程能够针对给定的日志传送配置连接到监视服务器实例，则报告将显示此配置的其他状态。  
@@ -38,7 +43,7 @@ caps.handback.revision: 18
   
  此报告调用 **sp_help_log_shipping_monitor** 来获取数据。 有关所需权限的信息，请参阅 [sp_help_log_shipping_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)。  
   
-### 显示服务器实例上的事务日志传送状态报告  
+### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>显示服务器实例上的事务日志传送状态报告  
   
 1.  连接到监视服务器、主服务器或辅助服务器。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 18
   
 3.  单击 **“事务日志传送状态”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视日志传送 (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

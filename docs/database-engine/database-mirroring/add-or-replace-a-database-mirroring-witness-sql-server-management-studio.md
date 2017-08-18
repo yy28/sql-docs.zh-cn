@@ -1,31 +1,36 @@
 ---
 title: "添加或替换数据库镜像见证服务器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "见证服务器 [SQL Server], 建立"
-  - "数据库镜像 [SQL Server], 见证服务器"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 004b19ca2fe75f3a34f21eac1fa531e7f72d258b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
+# <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
   如果数据库镜像端点使用 Windows 身份验证，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 添加或替换见证服务器。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中添加见证服务器还会将运行模式更改为具有自动故障转移功能的高安全性模式。  
   
 > [!NOTE]  
 >  我们极力建议将见证服务器置于独立于每个伙伴的单独计算机中。 见证服务器所用服务帐户必须位于主体服务器实例和镜像服务器实例所用服务帐户所在的域中，或者必须位于可信域中。  
   
-### 添加或替换见证服务器  
+### <a name="to-add-or-replace-a-witness"></a>添加或替换见证服务器  
   
 1.  连接到主体服务器实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 16
   
 6.  在 **“包括见证服务器”** 对话框中，单击 **“是”**，再单击 **“下一步”**。  
   
-7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步” 。  
+7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击 **“下一步”**。  
   
-8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步” 。  
+8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击 **“下一步”**。  
   
 9. 在 **“见证服务器实例”** 对话框中，单击 **“连接”**。  
   
 10. 在“连接到服务器”对话框的“服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击 **“连接”**。  
   
-11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步” 。  
+11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击 **“下一步”**。  
   
 12. **“服务帐户”** 对话框包含主体服务器实例、镜像服务器实例和见证服务器实例的域服务帐户字段。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 16
   
          域名必须大写。  
   
-     单击“下一步” 。  
+     单击 **“下一步”**。  
   
 13. 在 **“完成该向导”** 摘要屏幕中，检查见证服务器配置（可选），再单击 **“完成”**。  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 16
   
      若要启用见证服务器并将会话更改为具有自动故障转移功能的高安全性模式，请单击“确定”。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)   
+ [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

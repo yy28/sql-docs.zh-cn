@@ -1,27 +1,32 @@
 ---
-title: "服务器属性（“数据库设置”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+title: "服务器属性（“数据库设置”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 服务器属性（“数据库设置”页）
+# <a name="server-properties---database-settings-page"></a>服务器属性 -“数据库设置”页
   使用此页可以查看或修改数据库设置。  
   
-## 选项  
+## <a name="options"></a>选项  
  **默认索引填充因子**  
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用现有数据创建新索引时对每一页的填充程度。 由于在页填充时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须花时间来拆分页，因此填充因子会影响性能。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 32
  指定如果需要备份磁带但它却不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将超时。  
   
  **尝试的分钟数**  
- 指定如果备份磁带在指定的时间内不可用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将超时。  
+ 指定如果备份磁带在指定的时间内不可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将超时。  
   
  **默认备份介质保持期(天)**  
  提供一个系统范围默认值，指示在用于数据库备份或事务日志备份后每一个备份介质的保留时间。 此选项可以防止在指定的日期前覆盖备份。  
@@ -56,7 +61,7 @@ caps.handback.revision: 32
  有关详细信息，请参阅[查看或配置“backup compression default”服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)和[备份压缩 (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md)。  
   
  **恢复间隔(分钟)**  
- 设置每个数据库恢复时所需的最大分钟数。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
+ 设置每个数据库恢复时所需的最大分钟数。 默认值为 0，指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动配置。 实际上，这表示每个数据库的恢复时间不超过 1 分钟，对于活动的数据库大约每 1 分钟有一个检查点。 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。  
   
  **数据**  
  指定数据文件的默认位置。 单击“浏览”按钮导航到新的默认位置。 直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，更改才会生效。  
@@ -67,10 +72,10 @@ caps.handback.revision: 32
  **配置值**  
  显示此窗格上选项的配置值。 如果更改了这些值，请单击 **“运行值”** 以查看更改是否已生效。 如果尚未生效，则必须首先重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
- **运行值**  
+ **“运行值”**  
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

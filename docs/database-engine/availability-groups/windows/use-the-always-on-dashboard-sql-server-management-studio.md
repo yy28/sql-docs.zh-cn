@@ -1,30 +1,35 @@
 ---
-title: "使用 AlwaysOn 面板 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 策略"
-  - "可用性组 [SQL Server], 面板"
+title: "使用 AlwaysOn 可用性组仪表板 (SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 AlwaysOn 面板 (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  数据库管理员使用 AlwaysOn 面板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 AlwaysOn 可用性组及其可用性副本和数据库的运行状况。 AlwaysOn 面板的一些典型用法如下：  
+  数据库管理员使用 AlwaysOn 可用性组仪表板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的可用性组及其可用性副本和数据库的运行状况。 可用性组仪表板的一些典型用法如下：  
   
 -   选择要手动故障转移的副本。  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   评估同步提交辅助副本对性能的影响  
   
- AlwaysOn 面板提供关键的可用性组状态和性能指示器，支持你使用以下几类信息轻松做出关于高可用性的可行性决策。  
+ 仪表板提供关键的可用性组状态和性能指示器，支持使用以下几类信息轻松做出关于高可用性的可行性决策。  
   
 -   副本汇总状态  
   
@@ -49,34 +54,6 @@ caps.handback.revision: 30
 -   同步模式和状态  
   
 -   还原日志所需的时间  
-  
- **本主题内容：**  
-  
--   **开始之前：**  
-  
-     [先决条件](#Prerequisites)  
-  
-     [安全性](#Security)  
-  
-     [权限](#Permissions)  
-  
--   **入门：**  
-  
-     [AlwaysOn 面板](#SSMSProcedure)  
-  
-     [更改 AlwaysOn 面板选项](#DashboardOptions)  
-  
--   **面板窗格：**  
-  
-     [可用性组摘要](#AvGroupsView)  
-  
-     [可用性组详细信息](#AvGroupDetails)  
-  
-     [可用性副本详细信息](#AvReplicaDetails)  
-  
-     [对可用性组信息分组](#AvDbDetails)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **手动**。 指示没有副本处于自动故障转移模式。  
   
  **问题**  
- 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 单击“问题”链接可打开针对某一问题的故障排除文档。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  单击列标题可按可用性组的名称、主实例、故障转移模式或问题对可用性组信息进行排序。  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **可用性组状态**  
  显示可用性组的运行状况。  
   
- **主实例**  
+ **Primary instance**  
  正在承载可用性组的主副本的服务器实例的名称。  
   
- **故障转移模式**  
+ **Failover mode**  
  显示为副本配置的故障转移模式。 可能的故障转移模式值包括：  
   
 -   **自动**。 指示一个或多个副本处于自动故障转移模式。  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**。 未知状态。 当本地服务器实例无法与 WSFC 故障转移群集通信（即本地节点不是 WSFC 仲裁的一部分）时，出现此值。  
   
  **问题**  
- 列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 列出问题名称。 默认情况下显示此值。 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
  指示您为每个可用性副本分别设置的副本属性。 默认情况下隐藏此值。 可能的值有：  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **可用性数据库**  
   
--   **同步状态**  
+-   **Synchronization state**  
   
 -   **故障转移就绪**  
   
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  当数据库处于 INITIALIZING 状态时，强制故障转移到辅助副本将使数据库始终处于不能启动的状态。  
   
- **故障转移就绪**  
+ **Failover Readiness**  
  指示哪些可用性副本可以进行故障转移（有/无数据丢失）。 默认情况下显示此列。 可能的值有：  
   
 -   **数据丢失**  
@@ -304,7 +281,7 @@ caps.handback.revision: 30
   
 -   **严重**。 单击此选项可显示严重问题。  
   
- 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+ 有关所有 AlwaysOn 策略问题的列表，请参阅[针对 Always On 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已挂起**  
  指示数据库“已挂起”还是“已恢复”。 默认情况下隐藏此值。  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

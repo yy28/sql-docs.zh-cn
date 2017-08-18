@@ -1,34 +1,39 @@
 ---
-title: "可用性副本属性（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilityreplicaproperties.general.f1"
+title: "可用性副本属性（“常规”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3720e9230366bb59290d78212ee5ba94fe4d1c71
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性副本属性（“常规”页）
+# <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
   使用此对话框可以查看可用性副本的属性。  
   
-## 任务列表  
+## <a name="task-list"></a>任务列表  
  **查看可用性副本属性**  
   
 -   [查看可用性副本属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **可用性组名称**  
  可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 14
  **同步提交**  
  主副本等待提交给定的事务，直到辅助副本将事务写入磁盘。  
   
- 有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+ 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
- **故障转移模式**  
+ **Failover mode**  
  副本的故障转移模式，可为下列值之一：  
   
  **自动**  
@@ -86,7 +91,7 @@ caps.handback.revision: 14
  **是**  
  允许与此副本的辅助数据库的所有连接，但仅限读访问。 辅助数据库全都可用于读访问。  
   
- 有关详细信息，请参阅[活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
   
  **会话超时(秒)**  
  超时期限（秒）。 超时期限是指副本接收来自其他副本的消息而等待的最长时间，超过此时间，将主副本和辅助副本之间的连接视为已失败。 会话超时检测辅助副本是否与主副本相连接。 在检测到与辅助副本的连接失败时，主副本将辅助副本视为 NOT_SYNCHRONIZED。 在检测到与辅助副本的连接失败时，辅助副本只会尝试重新连接。  
@@ -95,9 +100,10 @@ caps.handback.revision: 14
 >  会话超时不会导致自动故障转移。  
   
  **端点 URL**  
- 用户指定的数据库镜像端点的字符串表示形式，该数据库镜像端点由用于数据同步的主副本和辅助副本之间的连接使用。 有关这些端点 URL 语法的信息，请参阅[在添加或修改可用性副本时指定端点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)。  
+ 用户指定的数据库镜像端点的字符串表示形式，该数据库镜像端点由用于数据同步的主副本和辅助副本之间的连接使用。 有关这些端点 URL 语法的信息，请参阅[在添加或修改可用性副本时指定端点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

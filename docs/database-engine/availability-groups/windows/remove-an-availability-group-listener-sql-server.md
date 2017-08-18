@@ -1,27 +1,32 @@
 ---
-title: "删除可用性组侦听器 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 监听器"
+title: "删除可用性组侦听程序 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeaglistener.default.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], listeners
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7c1751fec54325b1f882e4a16d17cb1a01c42d42
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除可用性组侦听器 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 从 Always On 可用性组中删除可用性组侦听器。  
+# <a name="remove-an-availability-group-listener-sql-server"></a>删除可用性组侦听器 (SQL Server)
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 Always On 可用性组中删除可用性组侦听器。  
   
 -   **开始之前：**  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 14
   
 3.  展开可用性组节点，然后展开 **“可用性组侦听器”** 节点。  
   
-4.  右键单击要删除的侦听器，然后选择“删除”命令。  
+4.  右键单击要删除的侦听器，然后选择 **“删除”** 命令。  
   
 5.  这将打开 **“从可用性组中删除侦听器”** 对话框。 有关详细信息，请参阅本主题后面的 [从可用性组中删除侦听器](#AgListenerPropertiesDialog)。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 14
  要删除的侦听器的名称。  
   
  **结果**  
- 将显示一个链接，提示“成功”或“错误”，可单击该链接查看详细信息。  
+ 将显示一个链接，提示 **“成功”** 或 **“错误”**，可单击该链接查看详细信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **删除可用性组侦听器**  
@@ -80,9 +85,9 @@ caps.handback.revision: 14
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
   
-     ALTER AVAILABILITY GROUP group_name REMOVE LISTENER **‘**dns_name**’**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **‘***dns_name***’**  
   
-     其中，group_name 是可用性组的名称，dns_name 是可用性组侦听器的 DNS 名称。  
+     其中， *group_name* 是可用性组的名称， *dns_name* 是可用性组侦听器的 DNS 名称。  
   
      下面的示例将删除 `AccountsAG` 可用性组的侦听器。 DNS 名称为 AccountsAG_Listener。  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 14
   
 1.  将默认值 (**cd**) 设置为托管主副本的服务器实例。  
   
-2.  使用内置的 **Remove-Item** cmdlet 来删除侦听器。 例如，以下命令从名为 `MyListener` 的可用性组中删除名为 `MyAg` 的侦听器。  
+2.  使用内置的 **Remove-Item** cmdlet 来删除侦听器。 例如，以下命令从名为 `MyListener` 的可用性组中删除名为 `MyAg`的侦听器。  
   
     ```  
     Remove-Item `   
@@ -103,7 +108,7 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -111,8 +116,9 @@ caps.handback.revision: 14
   
 -   [查看可用性组侦听程序属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)  
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
+

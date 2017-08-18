@@ -1,24 +1,29 @@
 ---
 title: "配置 scan for startup procs 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "scan for startup procs 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c876b9cf1013174d9f276cabf898cf1466760ddb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 scan for startup procs 服务器配置选项
+# <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>配置 scan for startup procs 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 使用 **scan for startup procs** 选项扫描在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时自动执行的存储过程。 如果将此选项设置为 1，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将扫描服务器上定义的所有自动运行的存储过程，并运行这些过程。 **scan for startup procs** 的默认值为 0（不扫描）。  
@@ -37,7 +42,7 @@ caps.handback.revision: 27
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在配置 scan for startup procs 选项之后](#FollowUp)  
+-   **跟进：**  [在配置 scan for startup procs 选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 27
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
   
--   此选项的值可以使用 **sp_configure** 进行设置；但是，如果使用 **sp_procoption**（用于标记或取消标记自动执行的存储过程），则会自动进行设置。 使用 **sp_procoption** 将第一个存储过程标记为自动执行过程后，此选项的值自动设置为 1。 使用 **sp_procoption** 将最后一个存储过程标记为自动执行过程后，此选项的值自动设置为 0。 如果使用 **sp_procoption** 标记或取消标记自动执行过程，并且始终在删除自动执行过程之前进行取消标记，则无需手动设置此选项。  
+-   此选项的值可以使用 **sp_configure**进行设置；但是，如果使用 **sp_procoption**（用于标记或取消标记自动执行的存储过程），则会自动进行设置。 使用 **sp_procoption** 将第一个存储过程标记为自动执行过程后，此选项的值自动设置为 1。 使用 **sp_procoption** 将最后一个存储过程标记为自动执行过程后，此选项的值自动设置为 0。 如果使用 **sp_procoption** 标记或取消标记自动执行过程，并且始终在删除自动执行过程之前进行取消标记，则无需手动设置此选项。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 scan for startup procs 选项  
+#### <a name="to-configure-the-scan-for-startup-procs-option"></a>配置 scan for startup procs 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 scan for startup procs 选项  
+#### <a name="to-configure-the-scan-for-startup-procs-option"></a>配置 scan for startup procs 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -89,10 +94,11 @@ GO
 ##  <a name="FollowUp"></a> 跟进：在配置 scan for startup procs 选项之后  
  必须重新启动服务器，设置才会生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_procoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)  
   
   
+

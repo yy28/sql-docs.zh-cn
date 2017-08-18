@@ -1,25 +1,30 @@
 ---
-title: "配置远程过程事务服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "远程过程事务选项"
-  - "分布式事务 [SQL Server], 增强"
+title: "配置 remote proc trans 服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote proc trans option
+- distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ca15d71c0353fa2a6e0e0240a59bf54da9fea3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置远程过程事务服务器配置选项
+# <a name="configure-the-remote-proc-trans-server-configuration-option"></a>配置远程过程事务服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote proc trans** 选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务，帮助保护服务器到服务器过程的操作。  
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 ###  <a name="Recommendations"></a> 建议  
   
--   提供该选项是为了与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容，以支持使用远程存储过程的应用程序。 不发出远程存储过程调用，而是使用引用链接服务器的分布式查询，这些服务器是使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 定义的。  
+-   提供该选项是为了与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容，以支持使用远程存储过程的应用程序。 不发出远程存储过程调用，而是使用引用链接服务器的分布式查询，这些服务器是使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)定义的。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 remote proc trans 选项  
+#### <a name="to-configure-the-remote-proc-trans-option"></a>配置 remote proc trans 选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“连接”** 节点。  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 remote proc trans 选项  
+#### <a name="to-configure-the-remote-proc-trans-option"></a>配置 remote proc trans 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -92,14 +97,15 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 remote proc trans 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

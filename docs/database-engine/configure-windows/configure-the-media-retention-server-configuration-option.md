@@ -1,26 +1,31 @@
 ---
-title: "配置 media retention 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份保持期 [SQL Server]"
-  - "备份集 [SQL Server], 保持期"
-  - "media retention 选项"
+title: "配置“介质保持期”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup retention duration [SQL Server]
+- backup sets [SQL Server], retention duration
+- media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b9456777c44ade52f6f9dc0121027202e7d319c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 media retention 服务器配置选项
+# <a name="configure-the-media-retention-server-configuration-option"></a>配置 media retention 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **media retention** 选项指定保留每个备份集的时间长度。 此选项可以防止在指定的天数前覆盖备份。 配置了 **media retention** 选项后，无需在每次进行备份时都指定系统备份的保持时间。 默认值为 0 天，最大值为 365 天。  
@@ -62,17 +67,17 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 media retention 选项  
+#### <a name="to-configure-the-media-retention-option"></a>配置 media retention 选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“数据库设置”** 节点。  
   
-3.  在**“备份/还原”**下的**“默认备份媒体保持期”**框中，键入或选择一个 0 到 365 之间的值，以设置备份媒体在数据库或事务日志备份后保留的天数。  
+3.  在 **“备份/还原”**下的 **“默认备份媒体保持期”** 框中，键入或选择一个 0 到 365 之间的值，以设置备份媒体在数据库或事务日志备份后保留的天数。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 media retention 选项  
+#### <a name="to-configure-the-media-retention-option"></a>配置 media retention 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -94,12 +99,12 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 media retention 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -107,3 +112,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

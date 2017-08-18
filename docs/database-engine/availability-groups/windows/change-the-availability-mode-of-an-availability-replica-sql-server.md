@@ -1,27 +1,32 @@
 ---
 title: "更改可用性副本的可用性模式 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 部署"
-  - "可用性组 [SQL Server], 配置"
-  - "可用性组 [SQL Server], 可用性模式"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3a0d0596dea739f34b9ff94b2f0691e6ae70dc70
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 更改可用性副本的可用性模式 (SQL Server)
-  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 来更改 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为*强制故障转移*。 *同步提交模式*更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
+# <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>更改可用性副本的可用性模式 (SQL Server)
+  本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的可用性模式。 可用性模式是一个副本属性，用于控制以异步还是同步方式提交副本。 异步提交模式可使性能最大化，但要牺牲高可用性；它仅支持强制手动故障转移（有可能丢失数据），该故障转移一般称为*强制故障转移*。 *同步提交模式* 更多地强调高可用性而不是性能，并且一旦同步次要副本，即支持手动故障转移（也可以支持自动故障转移）。  
   
 -   **开始之前：**  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 36
   
      } )  
   
-     其中，*group_name* 为可用性组的名称，*server_name* 为承载要修改的副本的服务器实例的名称。  
+     其中， *group_name* 为可用性组的名称， *server_name* 为承载要修改的副本的服务器实例的名称。  
   
     > [!NOTE]  
     >  仅在你还指定了 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 的情况下，才支持 FAILOVER_MODE = AUTOMATIC。  
@@ -108,15 +113,16 @@ caps.handback.revision: 36
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
   
   
+

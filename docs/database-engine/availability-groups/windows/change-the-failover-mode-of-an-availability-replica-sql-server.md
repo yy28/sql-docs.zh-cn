@@ -1,28 +1,33 @@
 ---
 title: "更改可用性副本的故障转移模式 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "故障转移模式 [SQL Server]"
-  - "可用性组 [SQL Server], 部署"
-  - "可用性组 [SQL Server], 故障转移模式"
-  - "可用性组 [SQL Server], 配置"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover modes [SQL Server]
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], failover modes
+- Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6afdf6c384af21bd5b871dd79427c60c1ae980c8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 更改可用性副本的故障转移模式 (SQL Server)
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 更改 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中 Always On 可用性组的可用性副本的故障转移模式。 故障转移模式是一个副本属性，用于确定在同步提交可用性模式下运行的副本的故障转移模式。 有关详细信息，请参阅[故障转移和故障转移模式（Always On 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)和[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+# <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>更改可用性副本的故障转移模式 (SQL Server)
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 更改 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 Always On 可用性组的可用性副本的故障转移模式。 故障转移模式是一个副本属性，用于确定在同步提交可用性模式下运行的副本的故障转移模式。 有关详细信息，请参阅 [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 和 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
 -   **开始之前：**  
   
@@ -69,38 +74,25 @@ caps.handback.revision: 27
   
 1.  连接到承载主副本的服务器实例。  
   
-2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
+2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：
+
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      WITH ( {  
+           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+            }  )
+   ```
+
+   在以上脚本中：
+
+      - 其中，*group_name* 是可用性组的名称。  
   
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      - server_name 是计算机名或故障转移群集网络名称。 对于命名实例，添加“\instance_name”。 使用托管想要修改的副本的名称。
   
-     WITH ( {  
+   有关这些参数的详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
   
-     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
-  
-     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
-  
-     }  )  
-  
-     其中  
-  
-    -   其中，*group_name* 是可用性组的名称。  
-  
-    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
-  
-         指定承载要更改的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的地址。 此地址由以下部分组成：  
-  
-         *system_name*  
-         为独立服务器实例所在的计算机系统的 NetBIOS 名称。  
-  
-         *FCI_network_name*  
-         为用于访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的网络名称，在此群集中目标服务器实例为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴 (FCI)。  
-  
-         *instance_name*  
-         为承载目标可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 对于默认服务器实例，*instance_name* 是可选的。  
-  
-     有关这些参数的详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
-  
-     以下示例（在 *MyAG* 可用性组的主要副本上输入）在可用性副本上（位于名为 *COMPUTER01*的计算机的默认服务器实例上）将故障转移模式更改为自动故障转移。  
+   以下示例（在 *MyAG* 可用性组的主要副本上输入）在可用性副本上（位于名为 *COMPUTER01*的计算机的默认服务器实例上）将故障转移模式更改为自动故障转移。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
@@ -122,15 +114,16 @@ caps.handback.revision: 27
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [故障转移和故障转移模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)  
   
   
+

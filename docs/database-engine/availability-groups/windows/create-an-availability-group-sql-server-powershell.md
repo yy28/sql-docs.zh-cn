@@ -1,28 +1,33 @@
 ---
 title: "创建可用性组 (SQL Server PowerShell) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 创建"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a76ee0a40eab0d72f1db4bfe8d2817179063ea4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建可用性组 (SQL Server PowerShell)
+# <a name="create-an-availability-group-sql-server-powershell"></a>创建可用性组 (SQL Server PowerShell)
   本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
   
 > [!NOTE]  
->  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../Topic/Overview%20of%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)。  
+>  有关可用性组的简介，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 -   **开始之前：**  
   
@@ -43,14 +48,14 @@ caps.handback.revision: 40
 -   [相关内容](#RelatedContent)  
   
 > [!NOTE]  
->  除了使用 PowerShell cmdlet 之外，您还可以使用“创建可用性组”向导或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 有关详细信息，请参阅[使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或[创建可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)。  
+>  除了使用 PowerShell cmdlet 之外，您还可以使用“创建可用性组”向导或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 有关详细信息，请参阅 [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 或 [创建可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
 ###  <a name="PrerequisitesRestrictions"></a> 先决条件、限制和建议  
   
--   创建可用性组之前，请先验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机实例分别位于单个 WSFC 故障转移群集的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证您的服务器实例满足其他服务器实例先决条件，并且其他所有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]要求都得到满足且您知道有关建议。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../Topic/Prerequisites,%20Restrictions,%20and%20Recommendations%20for%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)。  
+-   创建可用性组之前，请先验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机实例分别位于单个 WSFC 故障转移群集的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证您的服务器实例满足其他服务器实例先决条件，并且其他所有 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]要求都得到满足且您知道有关建议。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 40
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell 创建和配置可用性组  
   
 > [!NOTE]  
->  若要查看给定 cmdlet 的语法和示例，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中的 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+>  若要查看给定 cmdlet 的语法和示例，请使用 **PowerShell 环境中的** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
 1.  将目录 (**cd**) 更改为承载主要副本的服务器实例。  
   
@@ -92,11 +97,11 @@ caps.handback.revision: 40
     > [!NOTE]  
     >  可用性组名称的最大长度为 128 个字符。  
   
-5.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅[将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+5.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 6.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。  
   
-7.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+7.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)中通过 PowerShell 创建和配置 AlwaysOn 可用性组。  
   
 8.  或者，使用 Windows **dir** 命令可以验证新的可用性组的内容。  
   
@@ -108,13 +113,13 @@ caps.handback.revision: 40
   
 1.  备份 `MyDatabase` 及其事务日志。  
   
-2.  使用 **-NoRecovery** 选项还原 `MyDatabase` 及其事务日志。  
+2.  使用 `MyDatabase` -NoRecovery **选项还原** 及其事务日志。  
   
 3.  创建主副本的内存中表示形式，它将由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地实例（名为 `PrimaryComputer\Instance`）承载。  
   
 4.  创建辅助副本的内存中表示形式，它将由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本地实例（名为 `SecondaryComputer\Instance`）承载。  
   
-5.  创建名为 `MyAG` 的可用性组。  
+5.  创建名为 `MyAG`的可用性组。  
   
 6.  将辅助副本联接到该可用性组。  
   
@@ -182,9 +187,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
 ##  <a name="RelatedTasks"></a> 相关任务  
  **为 AlwaysOn 可用性组配置服务器实例**  
   
--   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](../Topic/Enable%20and%20Disable%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)  
+-   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](../Topic/Create%20a%20Database%20Mirroring%20Endpoint%20for%20Always On%20Availability%20Groups%20\(SQL%20Server%20PowerShell\).md)  
+-   [为 AlwaysOn 可用性组创建数据库镜像终结点 (SQL Server PowerShell)](~/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
  **配置可用性组和副本属性**  
   
@@ -194,9 +199,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](../Topic/Configure%20the%20Flexible%20Failover%20Policy%20to%20Control%20Conditions%20for%20Automatic%20Failover%20\(Always On%20Availability%20Groups\).md)  
+-   [配置灵活的故障转移策略以控制自动故障转移的条件（AlwaysOn 可用性组）](~/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -226,9 +231,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
  **解决 AlwaysOn 可用性组配置问题**  
   
--   [AlwaysOn 可用性组配置故障排除 (SQL Server)](../Topic/Troubleshoot%20Always On%20Availability%20Groups%20Configuration%20\(SQL%20Server\).md)  
+-   [AlwaysOn 可用性组配置故障排除 (SQL Server)](~/database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../Topic/Troubleshoot%20a%20Failed%20Add-File%20Operation%20\(Always On%20Availability%20Groups\).md)  
+-   [添加文件操作失败的故障排除（AlwaysOn 可用性组）](~/database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
@@ -236,9 +241,9 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [使用 SQL Server PowerShell 配置 AlwaysOn](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/03/configuring-Always%20On-with-sql-server-powershell.aspx)  
+     [使用 SQL Server PowerShell 配置 AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/configuring-alwayson-with-sql-server-powershell/)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwayOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
   
@@ -256,8 +261,16 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [AlwaysOn 可用性组概述 (SQL Server)](../Topic/Overview%20of%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)  
+ [AlwaysOn 可用性组概述 (SQL Server)](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+
+
+
+
+
+
+
+

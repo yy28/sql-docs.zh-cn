@@ -1,27 +1,32 @@
 ---
 title: "示例：使用证书设置数据库镜像 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 部署"
-  - "证书 [SQL Server], 数据库镜像"
-  - "身份验证 [SQL Server], 数据库镜像"
-  - "数据库镜像 [SQL Server], 安全性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 示例：使用证书设置数据库镜像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>示例：使用证书设置数据库镜像 (Transact-SQL)
   此示例演示了使用基于证书的身份验证创建数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
   
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  为出站连接配置 Host_B。  
   
-     有关设置数据库镜像的本阶段信息，请参阅[允许数据库镜像终结点将证书用于出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)。  
+     有关设置数据库镜像的本阶段信息，请参阅 [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  [配置入站连接](#ConfigureInboundConnections)  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 50
   
     2.  为入站连接配置 Host_B。  
   
-     有关设置数据库镜像的本阶段信息，请参阅[允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)。  
+     有关设置数据库镜像的本阶段信息，请参阅 [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
 3.  创建镜像数据库  
   
-     有关如何创建镜像数据库的信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     有关如何创建镜像数据库的信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 4.  [配置镜像伙伴](#ConfigureMirroringPartners)  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  使用任一安全的复制方法，将 C:\HOST_B_cert.cer 复制到 HOST_A。  
   
- 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)。  
+ 有关详细信息，请参阅 [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
  [[示例顶部]](#ExampleH2)  
   
@@ -223,16 +228,16 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  如果打算在具有自动故障转移功能的高安全性模式下运行，则必须重复相同的设置步骤为出站连接和入站连接配置见证服务器。 设置入站连接时，如果涉及到见证服务器，则需要为两个伙伴的见证服务器和见证服务器的两个伙伴设置登录名和用户。  
   
- 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)。  
+ 有关详细信息，请参阅 [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)。  
   
  [[示例顶部]](#ExampleH2)  
   
-### 创建镜像数据库  
- 有关如何创建镜像数据库的信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+### <a name="creating-the-mirror-database"></a>创建镜像数据库  
+ 有关如何创建镜像数据库的信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
 ###  <a name="ConfigureMirroringPartners"></a> 配置镜像伙伴  
   
-1.  在 HOST_B 的镜像服务器实例上，将 HOST_A 上的服务器实例设置为伙伴（使其成为初始主体服务器实例）。 将 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024` 替换为有效的网络地址。 有关详细信息，请参阅[指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+1.  在 HOST_B 的镜像服务器实例上，将 HOST_A 上的服务器实例设置为伙伴（使其成为初始主体服务器实例）。 将 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`替换为有效的网络地址。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
     ```  
     --At HOST_B, set server instance on HOST_A as partner (principal server):  
@@ -241,7 +246,7 @@ caps.handback.revision: 50
     GO  
     ```  
   
-2.  在 HOST_A 的主体服务器实例上，将 HOST_B 上的服务器实例设置为伙伴（使其成为初始镜像服务器实例）。 将 `TCP://HOST_B.Mydomain.Corp.Adventure-Works.com:7024` 替换为有效的网络地址。  
+2.  在 HOST_A 的主体服务器实例上，将 HOST_B 上的服务器实例设置为伙伴（使其成为初始镜像服务器实例）。 将 `TCP://HOST_B.Mydomain.Corp.Adventure-Works.com:7024`替换为有效的网络地址。  
   
     ```  
     --At HOST_A, set server instance on HOST_B as partner (mirror server).  
@@ -260,7 +265,7 @@ caps.handback.revision: 50
     ```  
   
     > [!NOTE]  
-    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER**'***partner_server***'** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER **'***partner_server***'** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
  [[示例顶部]](#ExampleH2)  
   
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [数据库镜像配置故障排除 (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## 另请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

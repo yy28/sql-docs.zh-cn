@@ -1,24 +1,29 @@
 ---
-title: "配置 max text repl size 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "max text repl size 选项"
+title: "配置“最大文本 REPL 大小”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3bb392a22a4954fd536a1f366c4b94a9d4cac1f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 max text repl size 服务器配置选项
+# <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **max text repl size** 选项指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text****ntext****varchar(max)****nvarchar(max)****varbinary(max)****xml** 和 **image** 数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
@@ -52,7 +57,7 @@ caps.handback.revision: 35
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 max text repl size 选项  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>配置 max text repl size 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 max text repl size 选项  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>配置 max text repl size 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -83,12 +88,12 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 max text repl size 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制功能和任务](../../relational-databases/replication/replication-features-and-tasks.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -99,3 +104,4 @@ GO
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   
+

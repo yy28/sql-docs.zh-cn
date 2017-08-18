@@ -1,26 +1,31 @@
 ---
 title: "手动故障转移数据库镜像会话 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "故障转移 [SQL Server], 数据库镜像"
-  - "手动故障转移 [SQL Server]"
-  - "数据库镜像 [SQL Server], 故障转移"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover [SQL Server], database mirroring
+- manual failover [SQL Server]
+- database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 435dc6a75dc991d618d6dcec6ea072f889d0a0ce
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 手动故障转移数据库镜像会话 (SQL Server Management Studio)
+# <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手动故障转移数据库镜像会话 (SQL Server Management Studio)
   同步镜像数据库时（即数据库处于 SYNCHRONIZED 状态时），数据库所有者可以启动到镜像服务器的手动故障转移。  
   
  在手动故障转移过程中，将交换发生故障转移的数据库的主体服务器和镜像服务器的角色。 镜像数据库变成主体数据库，而主体数据库变成镜像数据库。 例如，下表显示了手动故障转移如何交换下面两个镜像伙伴的角色： `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`。  
@@ -32,7 +37,7 @@ caps.handback.revision: 32
   
  注意，其他数据库镜像会话的服务器角色不会受到影响。 有关详细信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
-### 对数据库镜像进行手动故障转移  
+### <a name="to-manually-fail-over-database-mirroring"></a>对数据库镜像进行手动故障转移  
   
 1.  连接至主体服务器实例，在 **对象资源管理器** 窗格中，单击服务器名称以展开服务器树。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 32
   
      对话框将自动关闭。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [手动故障转移数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

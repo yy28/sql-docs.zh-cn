@@ -1,31 +1,36 @@
 ---
 title: "配置 user connections 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "同时连接 [SQL Server]"
-  - "user connections 选项 [SQL Server]"
-  - "用户 [SQL Server], 同时连接"
-  - "同时建立的最大用户连接数"
-  - "连接 [SQL Server], 同时"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- simultaneous connections [SQL Server]
+- user connections option [SQL Server]
+- users [SQL Server], simultaneous connections
+- maximum number of simultaneous user connections
+- connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64d4e5e4e8cf6a2c278c9c7dc51443a28eaeedcf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 user connections 服务器配置选项
+# <a name="configure-the-user-connections-server-configuration-option"></a>配置 user connections 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user connections** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上允许同时建立的最大用户连接数。 实际允许的用户连接数还取决于正使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及应用程序和硬件的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的最大用户连接数为 32767。 由于 **user connections** 是动态（自动配置）选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据需要自动调整最大用户连接数，最大不超过允许的最大值。 例如，如果仅有 10 个用户登录，则要分配 10 个用户连接对象。 在大多数情况下，没有必要更改此选项的值。 默认值为 0，表示允许的最多用户连接数为 (32,767) 。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user connections** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上允许同时建立的最大用户连接数。 实际允许的用户连接数还取决于正使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及应用程序和硬件的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的最大用户连接数为 32767。 由于 **user connections** 是动态（自动配置）选项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据需要自动调整最大用户连接数，最大不超过允许的最大值。 例如，如果仅有 10 个用户登录，则要分配 10 个用户连接对象。 在大多数情况下，没有必要更改此选项的值。 默认值为 0，表示允许的最多用户连接数为 (32,767) 。  
   
  若要确定系统允许的最大用户连接数，可以执行 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 或查询 [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图。  
   
@@ -63,9 +68,9 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 user connections 选项  
+#### <a name="to-configure-the-user-connections-option"></a>配置 user connections 选项  
   
-1.  在对象资源浏览器中，右键单击某个服务器，然后单击“属性”。  
+1.  在对象资源浏览器中，右键单击某个服务器，然后单击 **“属性”**。  
   
 2.  单击 **“连接”** 节点。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 user connections 选项  
+#### <a name="to-configure-the-user-connections-option"></a>配置 user connections 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -97,14 +102,15 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 user connections 选项之后  
  必须重新启动服务器，设置才会生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

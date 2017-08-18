@@ -1,30 +1,35 @@
 ---
 title: "配置 remote query timeout 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "远程查询的时间限制 [SQL Server]"
-  - "remote query timeout 选项"
+ms.custom: 
+ms.date: 03/08/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time limit for remote queries [SQL Server]
+- remote query timeout option
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: da0d06eb8882d9b0bee31f7fe87818b4262a3579
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 remote query timeout 服务器配置选项
+# <a name="configure-the-remote-query-timeout-server-configuration-option"></a>配置 remote query timeout 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote query timeout** 选项指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以持续的时间（秒）。 此选项的默认值是 600，即允许等待 10 分钟。 此值将应用到由作为远程查询的[!INCLUDE[ssDE](../../includes/ssde-md.md)]发起的发送连接。 此值不会对[!INCLUDE[ssDE](../../includes/ssde-md.md)]接收的查询产生任何影响。 若要禁用该超时，请将此值设置为 0。 查询将一直等待，直到被取消。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote query timeout** 选项指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以持续的时间（秒）。 此选项的默认值是 600，即允许等待 10 分钟。 此值将应用到由作为远程查询的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 发起的发送连接。 此值不会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]接收的查询产生任何影响。 若要禁用该超时，请将此值设置为 0。 查询将一直等待，直到完成。  
   
- 对于异类查询，**remote query timeout** 指定远程访问接口在查询超时前应等待结果集的秒数（由命令对象使用 DBPROP_COMMANDTIMEOUT 行集属性进行初始化）。 如果远程提供程序支持该值，则该值还用于设置 DBPROP_GENERALTIMEOUT。 这将导致任何其他操作在指定的秒数后超时。  
+ 对于异类查询， **remote query timeout** 指定远程访问接口在查询超时前应等待结果集的秒数（由命令对象使用 DBPROP_COMMANDTIMEOUT 行集属性进行初始化）。 如果远程提供程序支持该值，则该值还用于设置 DBPROP_GENERALTIMEOUT。 这将导致任何其他操作在指定的秒数后超时。  
   
  对于远程存储过程， **remote query timeout** 指定在发送一个远程 `EXEC` 语句之后，在远程存储过程超时前必须等待的秒数。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 remote query timeout 选项  
+#### <a name="to-configure-the-remote-query-timeout-option"></a>配置 remote query timeout 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 remote query timeout 选项  
+#### <a name="to-configure-the-remote-query-timeout-option"></a>配置 remote query timeout 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -85,15 +90,16 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 remote query timeout 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [行集属性和行为](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

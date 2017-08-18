@@ -1,30 +1,35 @@
 ---
 title: "blocked process threshold 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "阈值 [SQL Server]"
-  - "blocked process threshold 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- thresholds [SQL Server]
+- blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc3692c3d943095996c67e20481e0d47b3c2e7c0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# blocked process threshold 服务器配置选项
+# <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **blocked process threshold** 选项用于指定阈值（以秒为单位），超过该阈值将生成阻塞的进程报告。 该阈值可介于 0 到 86,400 之间。 默认情况下，不生成阻塞的进程报告。 对于系统任务或正在等待未生成可检测死锁的资源的任务，不生成该事件。  
   
- 可以定义一个生成该事件时执行的 [警报](../../ssms/agent/alerts.md) 。 例如，可以选择通知管理员采取相应的操作来处理阻塞情况。  
+ 可以定义一个生成该事件时执行的 [警报](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef) 。 例如，可以选择通知管理员采取相应的操作来处理阻塞情况。  
   
  阻塞的进程阈值使用死锁监视器后台线程监视等待时间大于（或数倍于）配置的阈值的任务列表。 每个报告间隔中，为每个阻塞的任务生成一次事件。  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 20
   
  该设置立即生效，无需停止并重新启动服务器。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面的示例将 `blocked process threshold` 设置为 `20` 秒，超过该阈值将为阻塞的每个任务生成阻塞的进程报告。  
   
 ```  
@@ -46,8 +51,9 @@ RECONFIGURE ;
 GO  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Blocked Process Report 事件类](../../relational-databases/event-classes/blocked-process-report-event-class.md)  
   
   
+

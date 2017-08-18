@@ -1,31 +1,36 @@
 ---
 title: "SQL Server 2016 中数据库引擎功能的重大更改 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库引擎 [SQL Server], 新增功能"
-  - "重大更改 [SQL Server]"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Engine [SQL Server], what's new
+- breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 caps.latest.revision: 144
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 144
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f45be24e7164076948dbfa28702311dd9641eae7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 2016 中数据库引擎功能的重大更改
+# <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中数据库引擎功能的重大更改
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题介绍了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
+  本主题介绍了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。  
   
-##  <a name="a-namesql15a-breaking-changes-in-includesssql15tokensssql15mdmd"></a><a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
+##  <a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中的重大更改  
   
 -   sys.dm_io_virtual_file_stats 的 sample_ms 列已从 **int** 扩展到 **bigint** 数据类型。  
   
@@ -48,6 +53,7 @@ caps.handback.revision: 144
  [SQL Server 2016 中不推荐使用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server 数据库引擎的向后兼容性](../database-engine/sql-server-database-engine-backward-compatibility.md)   
- [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)  
+ [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
+

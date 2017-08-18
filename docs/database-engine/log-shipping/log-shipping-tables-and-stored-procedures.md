@@ -1,31 +1,36 @@
 ---
 title: "日志传送表和存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "辅助服务器 [SQL Server]"
-  - "监视服务器 [SQL Server]"
-  - "日志传送 [SQL Server], 系统表"
-  - "日志传送 [SQL Server], 存储过程"
-  - "主服务器 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 日志传送表和存储过程
+# <a name="log-shipping-tables-and-stored-procedures"></a>日志传送表和存储过程
   本主题介绍与日志传送配置关联的所有表和存储过程。 所有日志传送表都存储在每个服务器的 **msdb** 中。 下表介绍在日志传送配置中，哪些服务器上使用的是哪些表和存储过程。  
   
-## 主服务器表  
+## <a name="primary-server-tables"></a>主服务器表  
   
 |表|说明|  
 |-----------|-----------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|包含指定服务器上主数据库的配置信息。 每个主数据库存储一行。|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|将主数据库映射到辅助数据库。|  
   
-## 主服务器存储过程  
+## <a name="primary-server-stored-procedures"></a>主服务器存储过程  
   
 |存储过程|说明|  
 |----------------------|-----------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 20
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|检索主数据库的辅助数据库名称。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|利用指定的日志传送代理的最新信息刷新监视器。|  
   
-## 辅助服务器表  
+## <a name="secondary-server-tables"></a>辅助服务器表  
   
 |表|说明|  
 |-----------|-----------------|  
@@ -64,7 +69,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  与指定主数据库位于同一个辅助服务器上的辅助数据库共享 **log_shipping_secondary** 表中的设置。 如果一个辅助数据库更改了共享设置，所有辅助数据库的设置都将更改。  
   
-## 辅助服务器存储过程  
+## <a name="secondary-server-stored-procedures"></a>辅助服务器存储过程  
   
 |存储过程|说明|  
 |----------------------|-----------------|  
@@ -75,11 +80,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|根据保持期清除本地历史记录及监视器上的历史记录。|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|删除辅助数据库、本地历史记录和远程历史记录。|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|从辅助服务器上删除有关指定的主服务器的信息。|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|从 **log_shipping_secondary**、**log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 表中检索辅助数据库设置。|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|从 **log_shipping_secondary**、 **log_shipping_secondary_databases**和 **log_shipping_monitor_secondary** 表中检索辅助数据库设置。|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|此存储过程将在辅助服务器上检索给定的主数据库的设置。|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|利用指定的日志传送代理的最新信息刷新监视器。|  
   
-## 监视服务器表  
+## <a name="monitor-server-tables"></a>监视服务器表  
   
 |表|说明|  
 |-----------|-----------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 20
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|存储与此监视服务器关联的主数据库的监视记录。每个主数据库存储一条监视记录。|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|存储与此监视服务器关联的辅助数据库的监视记录。每个辅助数据库存储一条监视记录。|  
   
-## 监视服务器存储过程  
+## <a name="monitor-server-stored-procedures"></a>监视服务器存储过程  
   
 |存储过程|说明|  
 |----------------------|-----------------|  

@@ -1,29 +1,34 @@
 ---
 title: "具有 AlwaysOn 可用性组的加密数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "透明数据加密, AlwaysOn 可用性组"
-  - "TDE, AlwaysOn 可用性组"
-  - "可用性组 [SQL Server], 互操作性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, AlwaysOn Availability Groups
+- TDE, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4601711ddce9e54a2bcabf9e07597074c1a70000
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 具有 AlwaysOn 可用性组的加密数据库 (SQL Server)
+# <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>具有 AlwaysOn 可用性组的加密数据库 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题包含有关在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中将当前加密或最近解密的数据库与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 一起使用的信息。  
+  本主题包含有关在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中将当前加密或最近解密的数据库与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]一起使用的信息。  
   
  **本主题内容：**  
   
@@ -53,10 +58,11 @@ caps.handback.revision: 10
   
 -   [使用可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
   
   
+

@@ -1,30 +1,35 @@
 ---
 title: "软件 NUMA (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NUMA"
-  - "soft-NUMA"
-helpviewer_keywords: 
-  - "NUMA"
-  - "非一致性内存访问"
-  - "软件 NUMA"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NUMA
+- soft-NUMA
+helpviewer_keywords:
+- NUMA
+- non-uniform memory access
+- soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 53
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 软件 NUMA (SQL Server)
+# <a name="soft-numa-sql-server"></a>软件 NUMA (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   当今的处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。  借助每个插槽包含 10 个或更多内核的处理器，使用软件 NUMA 拆分硬件 NUMA 节点通常可以提高可伸缩性和性能。 在 SQL Server 2014 SP2 之前，基于软件的 NUMA (soft-NUMA) 需要编辑注册表才能添加节点配置关联掩码，并且针对每台计算机而不是每个实例进行配置。  使用 SQL Server 2014 SP2 和 SQL Server 2016，当 SQL Server 服务启动时会在数据库实例级别自动配置 soft-NUMA。  
@@ -52,12 +57,14 @@ caps.handback.revision: 52
 ## <a name="manual-soft-numa"></a>手动软件 NUMA  
  通过禁用自动 soft_NUMA 并编辑注册表，可手动配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来使用软件 NUMA，以添加节点配置关联掩码。 借助这种方法，软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置头 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值。 （在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值。）修改注册表后，必须重启 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，soft-NUMA 配置才会生效。  
   
-> [!TIP] CPU 从 0 开始编号。  
+> [!TIP]
+> CPU 从 0 开始编号。  
 
-> [!WARNING] [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+> [!WARNING]
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
  请参考如下示例。 计算机有八个 CPU，但没有硬件 NUMA。 配置了三个软件 NUMA 节点。   
-将            [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例 A 配置为使用第 0 个到第 3 个 CPU。 安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的第二个实例并将其配置为使用第 5 个到第 8 个 CPU。 该示例可以直观表示为：  
+            将[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例 A 配置为使用第 0 个到第 3 个 CPU。 安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的第二个实例并将其配置为使用第 5 个到第 8 个 CPU。 该示例可以直观表示为：  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -70,7 +77,8 @@ caps.handback.revision: 52
  惰性编写器线程与物理 NUMA 内存节点的 SQL 操作系统视图有关。 因此，不管存在什么硬件，物理 NUMA 节点将等于创建的惰性编写器线程数。 有关详细信息，请参阅   
             [Soft NUMA、I/O 完成线程、惰性编写器工作线程和内存节点的工作机制](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
   
-> [!NOTE] 升级 [!INCLUDE[ssNoVersion] (../Token/ssNoVersion_md.md)] 的实例时，不复制 **Soft-NUMA** 注册表项。  
+> [!NOTE]
+> 升级 **的实例时，不复制** Soft-NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册表项。  
   
 ### <a name="set-the-cpu-affinity-mask"></a>设置 CPU 关联掩码  
  在实例 A 中运行下面的语句，通过设置 CPU 关联掩码将它配置为使用 CPU 0、CPU 1、CPU 2 和 CPU 3：  
@@ -90,7 +98,8 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ### <a name="map-soft-numa-nodes-to-cpus"></a>将软件 NUMA 节点映射到 CPU  
  使用注册表编辑器程序 (regedit.exe) 添加以下注册表项，从而将软件 NUMA 节点 0 映射到 CPU 0 和 CPU 1、将软件 NUMA 节点 1 映射到 CPU 2 和 CPU 3，以及将软件 NUMA 节点 2 映射到 CPU 4、 CPU 5、CPU 6 和 CPU 7。  
   
-> [!TIP] 若要指定 CPU 60 到 63，请使用 QWORD 值 F000000000000000 或 BINARY 值 1111000000000000000000000000000000000000000000000000000000000000。  
+> [!TIP]
+> 若要指定 CPU 60 到 63，请使用 QWORD 值 F000000000000000 或 BINARY 值 1111000000000000000000000000000000000000000000000000000000000000。  
   
  在以下示例中，假定你有 DL580 G9 服务器，每个套接字（共 4 个套接字）具有 18 个核并且每个套接字都位于其自己的 K 组中。 你可能创建的 Soft-NUMA 配置将如下所示。 （每个节点 6 个核，每组 3 个节点，共 4 组）。  
   
@@ -130,7 +139,8 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)：softnuma 和 softnuma_desc 列将显示配置值。  
   
-> [!NOTE] 虽然可以使用 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 来查看自动软件 NUMA 的运行值，但不能使用 **sp_configure** 更改其值。 必须使用带有 SET SOFTNUMA 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句。  
+> [!NOTE]
+> 虽然可以使用 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 来查看自动软件 NUMA 的运行值，但不能使用 **sp_configure** 更改其值。 必须使用带有 SET SOFTNUMA 参数的 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) 语句。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 TCP IP 端口映射到 NUMA 节点 (SQL Server)](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
@@ -138,3 +148,5 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+
+

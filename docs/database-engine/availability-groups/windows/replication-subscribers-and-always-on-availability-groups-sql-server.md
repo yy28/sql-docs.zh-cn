@@ -1,31 +1,36 @@
 ---
 title: "复制订阅服务器和 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "使用 AlwaysOn 故障转移订阅服务器"
-  - "可用性组 [SQL Server], 互操作性"
-  - "复制 [SQL Server], AlwaysOn 可用性组"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务订阅服务器，如果订阅使用的是订阅服务器的可用性组侦听器的名称，则分发代理会自动继续复制。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
   
-## 支持的操作  
+## <a name="what-is-supported"></a>支持的操作  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持订阅服务器的自动故障转移、事务订阅服务器的自动故障转移以及合并订阅服务器的手动故障转移。 不支持可用性数据库上分发服务器的故障转移。 AlwaysOn 不能与 Websync 和 ssNoVersion Compact 方案结合使用。  
   
  **合并请求订阅的故障转移**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  进行可用性组故障转移时推送订阅失败，因为推送代理无法连接到原始订阅服务器上的原始订阅数据库。  
   
-## 如何在 AlwaysOn 环境中创建事务订阅  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>如何在 AlwaysOn 环境中创建事务订阅  
  对于事务复制，请执行以下步骤配置订阅服务器可用性组并对其进行故障转移：  
   
 1.  在创建订阅之前，请将订阅服务器数据库添加到合适的 AlwaysOn 可用性组。  
@@ -46,7 +51,7 @@ caps.handback.revision: 19
 3.  使用下列 **创建事务复制推送订阅** 部分中的脚本，并使用订阅服务器的可用性组侦听器的名称创建订阅。 在进行故障转移后，侦听器名称将始终有效，并且订阅服务器的实际服务器名称将取决于成为新的主节点的实际节点。  
   
     > [!NOTE]  
-    >  订阅必须通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本创建，不能使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 创建。  
+    >  订阅必须通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本创建，不能使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]创建。  
   
 4.  如果创建请求订阅：  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  如果按照这些步骤创建订阅，则无需在故障转移后执行任何操作。  
   
-## 创建事务复制推送订阅  
+## <a name="creating-a-transactional-replication-push-subscription"></a>创建事务复制推送订阅  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,7 +84,7 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## 在订阅服务器可用性组发生故障转移后恢复合并代理  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>在订阅服务器可用性组发生故障转移后恢复合并代理  
  进行合并复制时，复制管理员必须手动重新配置订阅服务器，步骤如下：  
   
 1.  执行 **sp_subscription_cleanup** 以删除订阅服务器上旧的订阅。 在新的主副本（以前为辅助副本）上执行此操作。  
@@ -90,3 +95,4 @@ GO
 >  当前过程对于合并复制订阅服务器是不方便的，不过，合并复制的主要应用场景是断开连接的用户（台式机、笔记本电脑、手机设备），它们不使用订阅服务器上的 AlwaysOn 可用性组。  
   
   
+

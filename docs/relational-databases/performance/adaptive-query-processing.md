@@ -2,7 +2,7 @@
 title: "Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs"
 description: "自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。"
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ WHERE   [fo].[Quantity] = 360;
 ![查询生成 336 行](./media/4_AQPStats336Rows.png)
 
 在计划中，将看到以下信息：
-- 我们具有用于为哈希联接生成阶段提供行的列存储索引扫描。
-- 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。  对于该示例，阈值为 78 行。  包含 &gt;= 78 行的任何示例均将使用哈希联接。  如果小于阈值，将使用嵌套循环联接。
-- 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
-- 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
+1. 我们具有用于为哈希联接生成阶段提供行的列存储索引扫描。
+1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。  对于该示例，阈值为 78 行。  包含 &gt;= 78 行的任何示例均将使用哈希联接。  如果小于阈值，将使用嵌套循环联接。
+1. 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
+1. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
  让我们将计划与同一查询进行对比，但此次针对表格中只有一行的的数量值：
  
 ```sql

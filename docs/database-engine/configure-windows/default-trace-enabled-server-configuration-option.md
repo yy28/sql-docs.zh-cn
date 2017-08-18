@@ -1,26 +1,31 @@
 ---
 title: "default trace enabled 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志 [SQL Server], 跟踪"
-  - "跟踪 [SQL Server], 日志"
-  - "default trace enabled 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], traces
+- traces [SQL Server], logs
+- default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: acc8dc56f6e4cc1a3b963fb5bf1bd6faf6058527
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# default trace enabled 服务器配置选项
+# <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用 **default trace enabled** 选项可启用或禁用默认跟踪日志文件。 默认跟踪功能提供了丰富持久的活动日志，并主要根据配置选项进行更改。  
@@ -28,15 +33,15 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件。  
   
-## 用途  
+## <a name="purpose"></a>用途  
  默认跟踪可确保数据库管理员在问题首次出现时即具有诊断该问题所需的日志数据，从而为数据库管理员提供了故障排除帮助。  
   
-## 查看  
+## <a name="viewing"></a>查看  
  默认跟踪日志可以通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开和检查，或者通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 `fn_trace_gettable` 系统函数来查询。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可以像打开正常跟踪输出文件一样打开默认跟踪日志文件。 默认情况下，默认跟踪日志以滚动更新跟踪文件的形式存储在 `\MSSQL\LOG` 目录中。 默认跟踪日志文件的基本文件名是 `log.trc`。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的典型安装中，默认跟踪启用并因而成为 TraceID 1。 如果在安装和创建其他跟踪后启用，该 TraceID 可以变成更大的数字。  
   
  有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器查看此跟踪文件的详细信息，请参阅[打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)。  
   
-### 例如：  
+### <a name="example"></a>例如：  
  以下语句将打开默认位置中的默认跟踪日志：  
   
 ```  
@@ -47,14 +52,15 @@ GO
   
 ```  
   
-## 配置  
+## <a name="configuring"></a>配置  
  如果将 **default trace enabled** 选项设置为 1，可启用“默认跟踪” 。 此选项的默认设置为 1 (ON)。 值为 0 时将关闭跟踪。  
   
  **default trace enabled** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当 **show advanced options** 设置为 1 时才能更改 **default trace enabled** 选项。 该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

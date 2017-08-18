@@ -1,24 +1,29 @@
 ---
 title: "配置 locks 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "locks 选项 [SQL Server]"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e604d8fdd52824c11657b52b2baa3a7b528370d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 locks 服务器配置选项
+# <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **locks** 选项设置可用锁的最大数目，以限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据不断变化的系统要求动态地分配和释放锁结构。  
@@ -63,7 +68,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 locks 选项  
+#### <a name="to-configure-the-locks-option"></a>配置 locks 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 locks 选项  
+#### <a name="to-configure-the-locks-option"></a>配置 locks 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -96,14 +101,15 @@ RECONFIGURE;
 GO  
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 locks 选项之后  
  必须重新启动服务器，设置才会生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

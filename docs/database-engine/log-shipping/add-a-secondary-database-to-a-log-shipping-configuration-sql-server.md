@@ -1,27 +1,32 @@
 ---
 title: "向日志传送配置添加辅助数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "添加辅助数据库"
-  - "辅助数据库 [SQL Server], 在日志传送中"
-  - "辅助数据文件 [SQL Server], 添加"
-  - "日志传送 [SQL Server], 辅助数据库"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 向日志传送配置添加辅助数据库 (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>向日志传送配置添加辅助数据库 (SQL Server)
   此主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向现有的日志传送配置添加辅助数据库。  
   
  **本主题内容**  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 添加日志传送辅助数据库  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
 1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击“属性”。  
   
@@ -75,15 +80,15 @@ caps.handback.revision: 20
   
 13. 请注意 **“还原作业”** 下 **“计划”**框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-14. 单击“确定” 。  
+14. 单击 **“确定”**中向现有的日志传送配置添加辅助数据库。  
   
 15. 在“数据库属性”对话框上单击 **“确定”** ，以开始配置过程。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 添加日志传送辅助数据库  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>添加日志传送辅助数据库  
   
-1.  在辅助服务器上，执行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)，提供主服务器和数据库的详细信息。 此存储过程返回辅助 ID 以及复制和还原作业 ID。  
+1.  在辅助服务器上，执行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) ，提供主服务器和数据库的详细信息。 此存储过程返回辅助 ID 以及复制和还原作业 ID。  
   
 2.  在辅助服务器上，执行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) 以设置复制和还原作业的计划。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 4.  在主服务器上，执行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) 向主服务器添加有关新辅助数据库的必需信息。  
   
-5.  在辅助服务器上，启用复制和还原作业。 有关详细信息，请参阅 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+5.  在辅助服务器上，启用复制和还原作业。 有关详细信息，请参阅 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 20
   
 -   [故障转移到日志传送辅助服务器 (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [日志传送表和存储过程](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

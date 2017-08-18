@@ -1,26 +1,31 @@
 ---
 title: "删除日志传送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志传送 [SQL Server], 删除"
-  - "删除日志传送"
-  - "删除日志传送"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], removing
+- removing log shipping
+- deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除日志传送 (SQL Server)
+# <a name="remove-log-shipping-sql-server"></a>删除日志传送 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除日志传送。  
   
  **本主题内容**  
@@ -46,7 +51,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除日志传送  
+#### <a name="to-remove-log-shipping"></a>删除日志传送  
   
 1.  连接到当前是日志传送主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并展开该实例。  
   
@@ -60,18 +65,18 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除日志传送  
+#### <a name="to-remove-log-shipping"></a>删除日志传送  
   
 1.  在日志传送主服务器上，执行 [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) 从主服务器上删除有关辅助数据库的信息。  
   
 2.  在日志传送辅助服务器上，执行 [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md) 以删除辅助数据库。  
   
     > [!NOTE]  
-    >  如果不存在具有相同辅助 ID 的其他辅助数据库，则从 **sp_delete_log_shipping_secondary_database** 调用 **sp_delete_log_shipping_secondary_primary**，以删除该辅助 ID 的项并删除复制和还原作业。  
+    >  如果不存在具有相同辅助 ID 的其他辅助数据库，则从 **sp_delete_log_shipping_secondary_database** 调用 **sp_delete_log_shipping_secondary_primary** ，以删除该辅助 ID 的项并删除复制和还原作业。  
   
 3.  在日志传送主服务器上，执行 **sp_delete_log_shipping_primary_database** 以删除有关主服务器的日志传送配置的信息。 此操作还将删除备份作业。  
   
-4.  在日志传送主服务器上，禁用备份作业。 有关详细信息，请参阅 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+4.  在日志传送主服务器上，禁用备份作业。 有关详细信息，请参阅 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 5.  在日志传送辅助服务器上，禁用复制和还原作业。  
   
@@ -91,9 +96,9 @@ caps.handback.revision: 18
   
 -   [故障转移到日志传送辅助服务器 (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [启用或禁用作业](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [日志传送表和存储过程](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,31 +1,38 @@
 ---
-title: "SQL Server 2016 中不推荐使用的数据库引擎功能 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "不推荐使用的功能 [SQL Server]"
-  - "数据库引擎 [SQL Server], 向后兼容性"
-  - "弃用 [SQL Server], 功能列表"
+title: "SQL Server 2016 中弃用的数据库引擎功能 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/12/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [SQL Server]
+- Database Engine [SQL Server], backward compatibility
+- deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 215
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 2016 中不推荐使用的数据库引擎功能
+# <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
-  
+  本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+
+对于 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]，请参阅 [SQL Server 2017 中弃用的数据库引擎功能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)。
+
  可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object 性能计数器监视不推荐使用的功能的使用情况并跟踪事件。 有关详细信息，请参阅 [使用 SQL Server 对象](../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
  这些计数器的值也可通过执行以下语句而得：  
@@ -41,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|无。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|兼容级别|从版本 110（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|只有最后两个版本的兼容级别可用。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。|数据库兼容性级别 100|108|  
+|兼容级别|从版本 110（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|只有最后两个版本的兼容级别可用。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 100|108|  
 |数据库对象|从触发器返回结果集的功能|无|从触发器返回结果|12|  
 |加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|  
 |远程服务器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|用链接服务器替代远程服务器。 sp_addserver 仅可与本地选项一起使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -56,7 +63,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|兼容级别|sp_dbcmptlevel|更改数据库… SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。|sp_dbcmptlevel|80|  
+|兼容级别|sp_dbcmptlevel|更改数据库… SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
 |兼容级别|数据库兼容性级别 110 和 120。|计划为未来版本升级数据库和应用程序。|数据库兼容性级别 110<br /><br /> 数据库兼容性级别 120||  
 |XML|内联 XDR 架构生成|不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。|XMLDATA|181|  
 |备份和还原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 或 LOG TO TAPE|235|  
@@ -124,10 +131,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SET 选项|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。|SET FMTONLY|250|  
 |服务器配置选项|c2 审核选项<br /><br /> default trace enabled 选项|[启用了通用准则合规性的服务器配置选项](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [扩展事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 类|**Microsoft.SQLServer.Management.Smo.Information** 类<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** 类<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** 属性|**Microsoft.SqlServer.Management.Smo.Server** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** 类<br /><br /> 无|无|无|  
-|SQL Server 代理|**net send** 通知<br /><br /> 寻呼通知|电子邮件通知<br /><br /> 电子邮件通知 |无|InclusionThresholdSetting|  
+|SQL Server 代理|**net send** 通知<br /><br /> 寻呼通知|电子邮件通知<br /><br /> 电子邮件通知 |无|无|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|解决方案资源管理器集成到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||无|无|  
 |系统存储过程|sp_db_increased_partitions|无。 默认情况下， [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]提供了对增加的分区的支持。|sp_db_increased_partitions|253|  
-|系统表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|兼容性视图。 有关详细信息，请参阅[兼容性视图 (Transact-SQL)](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)。<br /><br /> **\*\*重要提示 \*\*** 兼容性视图不显示 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中新增功能的元数据。 建议将应用程序升级为使用目录视图。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 无<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|系统表|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|兼容性视图。 有关详细信息，请参阅[兼容性视图 (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)。<br /><br /> **\*\*重要提示 \*\*** 兼容性视图不显示 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中新增功能的元数据。 建议将应用程序升级为使用目录视图。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 无<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |系统表|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|无|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |系统函数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |系统视图|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
@@ -139,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointers|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|无|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Textpointers|TEXTPTR()<br /><br /> TEXTVALID()|无|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函数调用序列|替换为 SELECT *column_list* FROM sys.\<*function_name*>()。<br /><br /> 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|“::”函数调用语法|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 函数调用序列|替换为 SELECT *column_list* FROM sys.\<*function_name*>()。<br /><br /> 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。|“::”函数调用语法|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|由三部分和四部分组成的列引用。|由两部分组成的名称是符合标准的行为。|两个以上的部分构成的列名称|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|用引号引起来的字符串用作 SELECT 列表中表达式的列别名：<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|字符串文字作为列别名|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|编号过程|无。 请勿使用。|ProcNums|160|  
@@ -149,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL 在 DML 语句中用作列名。|请使用 $rowguid。|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL 在 DML 语句中用作列名。|请使用 $identity。|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将 #、## 用作临时表和临时存储过程名称。|请至少使用一个其他字符。|“#”和“##”作为临时表和存储过程的名称|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|将 @, @@, 或 @@ 用作 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符。|请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。|'@' 和以 '@@' 开头的名称作为 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|将 @、@@ 或 @@ 用作 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符。|请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。|“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../includes/tsql-md.md)] 标识符|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将 DEFAULT 关键字用作默认值。|不要将单词 DEFAULT 用作默认值。|DEFAULT 关键字作为默认值|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|将空格用作表提示之间的分隔符。|使用逗号分隔各个表提示。|没有逗号的多个表提示|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|聚集索引视图的选择列表在 90 兼容模式下必须包含 COUNT_BIG (*)|请使用 COUNT_BIG (*)。|不包含 COUNT_BIG(*) 的索引视图选择列表|2|  
@@ -168,3 +175,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
+

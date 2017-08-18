@@ -1,22 +1,27 @@
 ---
 title: "调整可用性组的压缩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 调整可用性组的压缩
+# <a name="tune-compression-for-availability-group"></a>调整可用性组的压缩
 
 默认情况下，SQL Server 将在适用时压缩可用性组的数据流。 压缩会减少网络流量，增加 CPU 负载，还可能导致延迟。 必须是 sysadmin 固定服务器角色的成员才能启用压缩。 下表显示 SQL Server 何时对可用性组日志流使用压缩：
 
@@ -26,7 +31,7 @@ caps.handback.revision: 12
 | 异步提交副本 | Compressed
 | 自动种子设定过程中 | 未压缩
 
-## 可用性组压缩的跟踪标志 
+## <a name="trace-flags-for-availability-group-compression"></a>可用性组压缩的跟踪标志 
 
 在大多数情况下，Microsoft 不建议更改这些设置。 可使用全局跟踪标志来测试更改这些设置。 SQL Server 将全局跟踪标志应用到整个实例。 实例中的所有可用性组都将受这些设置的影响。  
 
@@ -39,7 +44,7 @@ caps.handback.revision: 12
 9592          | 对包含同步副本的可用性组启用日志流压缩。 默认情况下，对同步副本禁用此功能，因为压缩为增加延迟。 默认情况下，对异步副本启用日志流压缩。
 
 
-## Resources
+## <a name="resources"></a>Resources
 
 
 [数据库引擎启动选项](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ caps.handback.revision: 12
 [自动种子设定](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [AlwaysOn 先决条件](https://msdn.microsoft.com/library/ff878487.aspx) 
+

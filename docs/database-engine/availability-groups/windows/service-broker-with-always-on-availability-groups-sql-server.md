@@ -1,25 +1,30 @@
 ---
-title: "Service Broker 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Service Broker, AlwaysOn 可用性组"
-  - "可用性组 [SQL Server], 互操作性"
+title: "含 AlwaysOn 可用性组的 Service Broker (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Service Broker, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e57858f580d34c2ba830f9e1732e555f677338a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Service Broker 与 AlwaysOn 可用性组 (SQL Server)
+# <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题包含有关配置 Service Broker 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的信息。  
@@ -34,7 +39,7 @@ caps.handback.revision: 13
   
 1.  **确保可用性组拥有侦听器。**  
   
-     有关详细信息，请参阅[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+     有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
 2.  **确保 Service Broker 端点存在并已正确配置。**  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 13
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)。  
+     有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)的信息。  
   
 3.  **授予针对端点的 CONNECT 权限。**  
   
@@ -68,14 +73,14 @@ caps.handback.revision: 13
     GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
     ```  
   
-     有关详细信息，请参阅 [GRANT (Transact-SQL)](../../../t-sql/statements/grant-transact-sql.md)。  
+     有关详细信息，请参阅 [GRANT (Transact-SQL)](../../../t-sql/statements/grant-transact-sql.md)的信息。  
   
 4.  **确保 msdb 包含 AutoCreatedLocal 路由或指向特定服务的路由。**  
   
     > [!NOTE]  
     >  默认情况下，每个用户数据库（包括 **msdb**）都包含路由 **AutoCreatedLocal**。 此路由匹配任何的服务名称和 Broker 实例，并指定消息应在当前实例中传递。 相比显式指定与远程实例通信的特定服务的路由，**AutoCreatedLocal** 的优先级较低。  
   
-     有关创建路由的信息，请参阅 [Service Broker 路由示例](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx)（在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版的联机丛书中）和 [CREATE ROUTE (Transact-SQL)](../../../t-sql/statements/create-route-transact-sql.md)。  
+     有关创建路由的信息，请参阅 [Service Broker 路由示例](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) （在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版的联机丛书中）和 [CREATE ROUTE (Transact SQL)](../../../t-sql/statements/create-route-transact-sql.md)的信息。  
   
 ##  <a name="SendRemoteMessages"></a> 向可用性组中的远程服务发送消息的要求  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 13
   
     ```  
   
-     有关详细信息，请参阅 [CREATE ROUTE (Transact-SQL)](../../../t-sql/statements/create-route-transact-sql.md)。  
+     有关详细信息，请参阅 [CREATE ROUTE (Transact SQL)](../../../t-sql/statements/create-route-transact-sql.md)的信息。  
   
-2.  **确保 msdb 包含 AutoCreatedLocal 路由或指向特定服务的路由。** （有关详细信息，请参阅本主题前面的[可用性组中的服务接收远程消息的要求](#ReceiveRemoteMessages)。）  
+2.  **确保 msdb 包含 AutoCreatedLocal 路由或指向特定服务的路由。** （有关详细信息，请参阅本主题前面的 [可用性组中的服务接收远程消息的要求](#ReceiveRemoteMessages)。）  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -112,11 +117,12 @@ caps.handback.revision: 13
   
 -   [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../../database-engine/database-mirroring/set up login accounts - database mirroring always on availability.md)  
+-   [设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

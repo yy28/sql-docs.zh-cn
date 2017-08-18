@@ -1,25 +1,30 @@
 ---
-title: "配置 max worker threads 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工作线程 [SQL Server]"
-  - "max worker threads 选项"
+title: "配置“最大工作线程数”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- worker threads [SQL Server]
+- max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fb31141506ab6391c25afde71e1433935e32718
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 max worker threads 服务器配置选项
+# <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用  或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中配置 max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **max worker threads** 选项配置可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的工作线程数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用操作系统的本机线程服务，以便使一个或多个线程支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同时支持的每一个网络，另一个线程处理数据库检查点，而线程池则处理所有用户。 **max worker threads** 的默认值为 0。 这使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时自动配置工作线程数。 默认设置对于大多数系统为最佳设置。 不过，根据您的系统配置，有时将 **max worker threads** 设置为特定值会提高性能。  
@@ -70,9 +75,9 @@ caps.handback.revision: 36
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不再能够安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。   我们建议对于 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，最大工作线程数为 1024。  
   
     > [!NOTE]  
-    >  有关使用 64 个以上的 CPU 的建议，请参考[在具有超过 64 个 CPU 的计算机上运行 SQL Server 的最佳做法](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)。  
+    >  有关使用 64 个以上的 CPU 的建议，请参考 [在具有超过 64 个 CPU 的计算机上运行 SQL Server 的最佳做法](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)。  
   
--   如果所有工作线程因为长时间运行的查询而处于活动状态，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能停止响应，直到一个工作线程完成并变成可用。 虽然这不是缺点，但有时用户可能并不希望如此。 如果进程显示为停止响应并且不再处理新查询，则将使用专用管理员连接 (DAC) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并关闭此进程。 为避免此种情况发生，请增大最大工作线程数。  
+-   如果所有工作线程因为长时间运行的查询而处于活动状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能停止响应，直到一个工作线程完成并变成可用。 虽然这不是缺点，但有时用户可能并不希望如此。 如果进程显示为停止响应并且不再处理新查询，则将使用专用管理员连接 (DAC) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并关闭此进程。 为避免此种情况发生，请增大最大工作线程数。  
   
  **max worker threads** 服务器配置选项不考虑所有系统任务（例如可用性组、Service Broker、锁管理器等）所需的线程。  如果超过了配置的线程数目，下列查询将提供有关生成了附加线程的系统任务的信息。  
   
@@ -108,7 +113,7 @@ WHERE s.is_user_process = 0;
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 max worker threads 选项  
+#### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -120,7 +125,7 @@ WHERE s.is_user_process = 0;
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 max worker threads 选项  
+#### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -142,15 +147,16 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 max worker threads 选项之后  
- 此更改将立即生效，而无需重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ 此更改将立即生效，而无需重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "创建或配置可用性组侦听器 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.newaglistener.general.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 监听器"
-  - "可用性组 [SQL Server], 客户端连接"
+title: "创建或配置可用性组侦听程序 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.newaglistener.general.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], listeners
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 52
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 85130cfb53873de6e378c26b68b9b4d601695614
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 创建或配置可用性组侦听器 (SQL Server)
+# <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
   本主题介绍了如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 为 AlwaysOn 可用性组创建或配置单个“可用性组侦听程序”。  
   
 > [!IMPORTANT]  
@@ -77,11 +82,11 @@ caps.handback.revision: 51
 -   [查看可用性组侦听程序属性 (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
 > [!NOTE]  
->  如果某个侦听程序已存在并且你想要创建附加的侦听程序，请参阅本文后面的[为可用性组创建其他侦听程序（可选）](#CreateAdditionalListener)。  
+>  如果某个侦听程序已存在并且你想要创建附加的侦听程序，请参阅本文后面的 [为可用性组创建其他侦听程序（可选）](#CreateAdditionalListener)。  
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   您只能通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]为每个可用性组创建一个侦听器。 通常情况下，每个可用性组只需要一个侦听器。 但是，某些用户群体要求一个可用性组多个侦听器。   通过 SQL Server 创建一个侦听器之后，您可以将 Windows PowerShell 用于故障转移群集或使用 WSFC 故障转移群集管理器来创建其他侦听器。 有关详细信息，请参阅本主题后面的[为可用性组创建其他侦听程序（可选）](#CreateAdditionalListener)。  
+-   您只能通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]为每个可用性组创建一个侦听器。 通常情况下，每个可用性组只需要一个侦听器。 但是，某些用户群体要求一个可用性组多个侦听器。   通过 SQL Server 创建一个侦听器之后，您可以将 Windows PowerShell 用于故障转移群集或使用 WSFC 故障转移群集管理器来创建其他侦听器。 有关详细信息，请参阅本主题后面的 [为可用性组创建其他侦听程序（可选）](#CreateAdditionalListener)。  
   
 ###  <a name="Recommendations"></a> 建议  
  建议对于多子网配置使用静态 IP 地址，尽管不是必需的。  
@@ -98,7 +103,7 @@ caps.handback.revision: 51
 ###  <a name="DNSnameReqs"></a> 可用性组侦听器的 DNS 名称的要求  
  每个可用性组侦听器都需要一个 DNS 主机名，该名称在域和 NetBIOS 中是唯一的。 DNS 名称为字符串值。 该名称只能包含字母数字字符、破折号 (-) 和连字符 (_)，顺序不分先后。 DNS 主机名不区分大小写。 最大长度为 63 个字符，但是，在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，您可以指定的最大长度为 15 个字符。  
   
- 我们建议您指定一个有意义的字符串。 例如，对于名为 `AG1` 的可用性组，有意义的 DNS 主机名将是 `ag1-listener`。  
+ 我们建议您指定一个有意义的字符串。 例如，对于名为 `AG1`的可用性组，有意义的 DNS 主机名将是 `ag1-listener`。  
   
 > [!IMPORTANT]  
 >  NetBIOS 只识别 dns_name 中的前 15 个字符。 如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)。  
@@ -123,7 +128,7 @@ caps.handback.revision: 51
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!TIP]  
->  “新建可用性组”向导[](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md "Use the New Availability Group Dialog Box (SQL Server Management Studio)")支持为新可用性组创建侦听程序。  
+>  “新建可用性组”向导 [](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 支持为新可用性组创建侦听程序。  
   
  **创建和配置可用性组侦听器**  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 51
   
  有关详细信息，请参阅本主题前面的 [可用性组侦听器的 DNS 名称的要求](#DNSnameReqs)。  
   
- **端口**  
+ **“端口”**  
  该侦听器使用的 TPC 端口。  
   
  **网络模式**  
@@ -168,13 +173,13 @@ caps.handback.revision: 51
  **IP 地址**  
  显示给定子网的 IP 地址。  对于给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。  
   
- **添加**  
+ **“添加”**  
  单击“添加”可将静态 IP 地址添加到所选子网，或添加到该侦听器的其他子网。 这将打开 **“添加 IP 地址”** 对话框。 有关详细信息，请参阅[添加 IP 地址对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md) 帮助主题。  
   
  **删除**  
  单击此项可以从侦听器中移除所选子网。  
   
- **确定**  
+ **“确定”**  
  单击此选项可创建指定的可用性组侦听器。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -203,7 +208,7 @@ caps.handback.revision: 51
      **New-SqlAvailabilityGroupListener**  
      创建一个新的可用性组侦听器，并将其附加到一个现有可用性组。  
   
-     例如，下列 **New-SqlAvailabilityGroupListener** 命令为可用性组 `MyAg` 创建名为 `MyListener` 的可用性组侦听程序。 此侦听程序将使用传递到 **-StaticIp** 参数的 IPv4 地址作为其虚拟 IP 地址。  
+     例如，下列 **New-SqlAvailabilityGroupListener** 命令为可用性组 `MyListener` 创建名为 `MyAg`的可用性组侦听程序。 此侦听程序将使用传递到 **-StaticIp** 参数的 IPv4 地址作为其虚拟 IP 地址。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -226,7 +231,7 @@ caps.handback.revision: 51
      **Add-SqlAGListenerstaticIp**  
      将一个静态 IP 地址添加到现有的可用性组侦听器配置。 此 IP 地址可以是带子网的 IPv4 地址或 IPv6 地址。  
   
-     例如，下列 **Add-SqlAGListenerstaticIp** 命令将一个静态 IPv4 地址添加到可用性组 `MyAg` 上的可用性组侦听程序 `MyListener`。 此 IPv6 地址用作子网 `255.255.252.0` 上侦听器的虚拟 IP 地址。 如果可用性组跨多个子网，则应将针对每个子网的静态 IP 地址添加到侦听器。  
+     例如，下列 **Add-SqlAGListenerstaticIp** 命令将一个静态 IPv4 地址添加到可用性组 `MyListener` 上的可用性组侦听程序 `MyAg`。 此 IPv6 地址用作子网 `255.255.252.0`上侦听器的虚拟 IP 地址。 如果可用性组跨多个子网，则应将针对每个子网的静态 IP 地址添加到侦听器。  
   
     ```  
     $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
@@ -235,13 +240,13 @@ caps.handback.revision: 51
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## 故障排除  
+## <a name="troubleshooting"></a>故障排除  
   
 ###  <a name="ADQuotas"></a> 因 Active Directory 配额未能创建可用性组侦听器  
  新的可用性组侦听器可能在创建时失败，因为您已经达到参与群集节点计算机帐户的 Active Directory 配额。  有关详细信息，请参阅以下文章：  
@@ -267,7 +272,7 @@ caps.handback.revision: 51
   
  **NET Framework 3.5 或 OLEDB 不支持 MultiSubnetFailover=True**  
   
- **问题：**如果你的可用性组或故障转移群集实例具有取决于不同子网中多个 IP 地址的侦听程序名称（在 WSFC 群集管理器中称为网络名称或客户端接入点），并且你将 ADO.NET 用于 .NET Framework 3.5 SP1 或 SQL Native Client 11.0 OLEDB，则在你对可用性组侦听程序发出的客户端连接请求中可能有 50% 请求发生连接超时。  
+ **问题：** 如果你的可用性组或故障转移群集实例具有取决于不同子网中多个 IP 地址的侦听程序名称（在 WSFC 群集管理器中称为网络名称或客户端接入点），并且你将 ADO.NET 用于 .NET Framework 3.5 SP1 或 SQL Native Client 11.0 OLEDB，则在你对可用性组侦听程序发出的客户端连接请求中可能有 50% 请求发生连接超时。  
   
  **解决方法：** 我们建议您执行以下任务之一。  
   
@@ -279,21 +284,21 @@ caps.handback.revision: 51
   
 -   如果您有权操作群集资源，则强烈建议您将可用性组侦听器的网络名称设置为 `RegisterAllProvidersIP=0`。 有关详细信息，请参阅本节后面的“RegisterAllProvidersIP 设置”。  
   
-     **优点：**你无需增加客户端连接超时值。  
+     **优点：** 你无需增加客户端连接超时值。  
   
-     **缺点：**如果发生跨子网故障转移，则客户端恢复时间可能为 15 分钟或更长，具体取决于 **HostRecordTTL** 设置以及你的跨站点 DNS/AD 复制计划的设置。  
+     **缺点：** 如果发生跨子网故障转移，则客户端恢复时间可能为 15 分钟或更长，具体取决于 **HostRecordTTL** 设置以及你的跨站点 DNS/AD 复制计划的设置。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 设置  
- 在使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 创建可用性组侦听程序时，将在 WSFC 中创建客户端访问点，其 **RegisterAllProvidersIP** 属性设为 1 (true)。 此属性值的影响取决于客户端连接字符串，如下所示：  
+ 在使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 创建可用性组侦听程序时，将在 WSFC 中创建客户端访问点，其 **RegisterAllProvidersIP** 属性设为 1 (true)。 此属性值的影响取决于客户端连接字符串，如下所示：  
   
 -   将 **MultiSubnetFailover** 设置为 true 的连接字符串  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可将 **RegisterAllProvidersIP** 属性设置为 1，从而缩短其客户端连接字符串按照建议指定 `MultiSubnetFailover = True` 的客户端在故障转移后的重新连接时间。 请注意，为了利用侦听程序多子网功能，你的客户端可能会需要支持 **MultiSubnetFailover** 关键字的数据提供程序。 有关针对多子网故障转移的驱动程序支持的信息，请参阅[ AlwaysOn 客户连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可将  **RegisterAllProvidersIP** 属性设置为 1，从而缩短其客户端连接字符串按照建议指定 `MultiSubnetFailover = True`的客户端在故障转移后的重新连接时间。 请注意，为了利用侦听程序多子网功能，你的客户端可能会需要支持 **MultiSubnetFailover** 关键字的数据提供程序。 有关针对多子网故障转移的驱动程序支持的信息，请参阅[ AlwaysOn 客户连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
      有关多子网群集的信息，请参阅 [SQL Server 多子网群集 (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
   
     > [!TIP]  
-    >  在 `RegisterAllProvidersIP = 1` 时，如果您在 WSFC 群集上运行 WSFC 验证配置向导，该向导将生成以下警告消息：  
+    >  在 `RegisterAllProvidersIP = 1`时，如果您在 WSFC 群集上运行 WSFC 验证配置向导，该向导将生成以下警告消息：  
     >   
     >  “网络名称 ‘Name:<network_name>’ 的 RegisterAllProviderIP 属性设为 1。对于当前群集配置，该值应设为 0。”  
     >   
@@ -304,7 +309,7 @@ caps.handback.revision: 51
      在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 **RegisterAllProvidersIP** 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果您具有需要连接到某一可用性组侦听器并且不能使用 **MultiSubnetFailover** 属性的旧客户端，我们建议您将 **RegisterAllProvidersIP** 更改为 0。  
   
     > [!IMPORTANT]  
-    >  在你通过 WSFC 群集（故障转移群集管理器 GUI）创建可用性组侦听程序时，**RegisterAllProvidersIP** 默认情况下将为 0 (false)。  
+    >  在你通过 WSFC 群集（故障转移群集管理器 GUI）创建可用性组侦听程序时， **RegisterAllProvidersIP** 默认情况下将为 0 (false)。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL 设置  
  默认情况下，客户端缓存 20 分钟的群集 DNS 记录。  通过缩短缓存记录的 **HostRecordTTL**（生存时间 (TTL)），旧客户端重新连接速度可能更快。  但是，减小 **HostRecordTTL** 设置还可能导致到 DN 服务器的流量增加。  
@@ -344,7 +349,7 @@ Start-ClusterResource yourListenerName
   
         3.  向 WSFC 可用性组资源添加一个依赖项。  
   
-         有关故障转移群集管理器的对话框和选项卡的信息，请参阅[用户界面：故障转移群集管理器管理单元](http://technet.microsoft.com/library/cc772502.aspx)。  
+         有关故障转移群集管理器的对话框和选项卡的信息，请参阅 [用户界面：故障转移群集管理器管理单元](http://technet.microsoft.com/library/cc772502.aspx)。  
   
     -   **将 Windows PowerShell 用于故障转移群集：**  
   
@@ -356,9 +361,9 @@ Start-ClusterResource yourListenerName
   
          有关将 Windows PowerShell 用于故障转移群集的信息，请参阅 [服务器管理器命令概述](http://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)。  
   
-2.  在新的侦听器上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 侦听。 在创建其他侦听器之后，可连接到承载可用性组主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，并使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 修改侦听器端口。  
+2.  在新的侦听器上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 侦听。 在创建其他侦听器之后，可连接到承载可用性组主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，并使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 修改侦听器端口。  
   
- 有关详细信息，请参阅[如何为相同的可用性组创建多个侦听程序](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)（SQL Server AlwaysOn 团队博客）。  
+ 有关详细信息，请参阅 [如何为相同的可用性组创建多个侦听程序](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) （SQL Server AlwaysOn 团队博客）。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -368,13 +373,14 @@ Start-ClusterResource yourListenerName
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [如何为同一可用性组创建多个侦听器](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
+-   [如何为相同的可用性组创建多个侦听程序](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server 多子网群集 (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   
+

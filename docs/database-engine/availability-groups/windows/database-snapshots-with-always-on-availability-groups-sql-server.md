@@ -1,25 +1,30 @@
 ---
-title: "含有 Always On 可用性组的数据库快照 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库快照 [SQL Server], AlwaysOn 可用性组"
-  - "可用性组 [SQL Server], 互操作性"
+title: "含有 AlwaysOn 可用性组的数据库快照 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a490cf9ff2ed4b847525056411cc58923e03e97f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 含有 Always On 可用性组的数据库快照 (SQL Server)
+# <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>含有 Always On 可用性组的数据库快照 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   您可在可用性组中的主数据库或辅助数据库上创建数据库快照。 副本角色必须是 PRIMARY 或 SECONDARY，且不处于 RESOLVING 状态。  
@@ -36,8 +41,9 @@ caps.handback.revision: 7
   
  如果承载数据库快照的可用性副本故障转移，则该数据库快照将保留在创建了这些快照的服务器实例上。 用户可以在故障转移后继续使用快照。如果性能是您的环境中的关注点，我们建议您仅在配置为手动故障转移模式的辅助副本承载的辅助数据库上创建数据库快照。  如果您曾经将可用性组手动故障转移到此辅助副本，则可以在其他辅助副本上创建一组新的数据库快照，将客户端重定向到这些新的数据库快照，并且从新的主数据库上删除所有数据库快照。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [数据库快照 (SQL Server)](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+

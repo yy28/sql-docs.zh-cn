@@ -1,25 +1,30 @@
 ---
 title: "配置日志传送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志传送 [SQL Server], 启用"
-  - "日志传送 [SQL Server], 配置"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置日志传送 (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置日志传送。  
   
 > [!NOTE]  
@@ -56,7 +61,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置日志传送  
+#### <a name="to-configure-log-shipping"></a>配置日志传送  
   
 1.  右键单击要在日志传送配置中用作主数据库的数据库，然后单击 **“属性”**。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 42
   
 9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”**、 **“压缩备份”**或 **“不压缩备份”**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
-10. 单击“确定” 。  
+10. 单击 **“确定”**中配置日志传送。  
   
 11. 在 **“辅助服务器实例和数据库”**下，单击 **“添加”**。  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 42
   
 21. 请注意 **“还原作业”** 下 **“计划”**框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-22. 单击“确定” 。  
+22. 单击 **“确定”**中配置日志传送。  
   
 23. 在 **“监视服务器实例”**下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
   
@@ -119,25 +124,25 @@ caps.handback.revision: 42
   
 26. 在 **“历史记录保持期”**下，选择想要保留日志传送历史记录的时间长度。  
   
-27. 单击“确定” 。  
+27. 单击 **“确定”**中配置日志传送。  
   
 28. 在 **“数据库属性”** 对话框中，单击 **“确定”** 开始配置进程。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置日志传送  
+#### <a name="to-configure-log-shipping"></a>配置日志传送  
   
 1.  通过在辅助服务器上还原主数据库的完整备份，初始化辅助数据库。  
   
 2.  在主服务器上，执行 [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md) 以添加主数据库。 存储过程将返回备份作业 ID 和主 ID。  
   
-3.  在主服务器上执行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)，以为备份作业添加计划。  
+3.  在主服务器上执行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) ，以为备份作业添加计划。  
   
 4.  在监视服务器上，执行 [sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md) 以添加警报作业。  
   
 5.  在主服务器上，启用备份作业。  
   
-6.  在辅助服务器上，执行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)，提供主服务器和数据库的详细信息。 此存储过程返回辅助 ID 以及复制和还原作业 ID。  
+6.  在辅助服务器上，执行 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) ，提供主服务器和数据库的详细信息。 此存储过程返回辅助 ID 以及复制和还原作业 ID。  
   
 7.  在辅助服务器上，执行 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) 以设置复制和还原作业的计划。  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. 在主服务器上，执行 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) 向主服务器添加有关新辅助数据库的必需信息。  
   
-10. 在辅助服务器上，启用复制和还原作业。 有关详细信息，请参阅 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)。  
+10. 在辅助服务器上，启用复制和还原作业。 有关详细信息，请参阅 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [故障转移到日志传送辅助服务器 (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [日志传送表和存储过程](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

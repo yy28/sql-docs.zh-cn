@@ -1,30 +1,35 @@
 ---
 title: "配置 remote login timeout 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "remote login timeout 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9581ea300b05cd811cfddd73d04e24e9cac65bf4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 remote login timeout 服务器配置选项
+# <a name="configure-the-remote-login-timeout-server-configuration-option"></a>配置 remote login timeout 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote login timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote login timeout** 选项指定从登录远程服务器失败返回前等待的秒数。 例如，如果您尝试登录到一个远程服务器而该服务器已关闭， **remote login timeout** 帮助确保您在计算机停止登录尝试前不必无限期地等待下去。 此选项的默认值为 10 秒。 如果该值为 0，则允许无限期等待。  
   
 > [!NOTE]  
->  此选项的默认值在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中为 20 秒。  
+>  此选项的默认值在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中为 20 秒。  
   
  **本主题内容**  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 remote login timeout 选项  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>配置 remote login timeout 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 remote login timeout 选项  
+#### <a name="to-configure-the-remote-login-timeout-option"></a>配置 remote login timeout 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -85,14 +90,15 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 remote login timeout 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

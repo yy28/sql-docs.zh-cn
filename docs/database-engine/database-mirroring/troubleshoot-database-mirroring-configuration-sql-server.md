@@ -1,35 +1,40 @@
 ---
 title: "数据库镜像配置故障排除 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 部署"
-  - "端点 [SQL Server], 数据库镜像"
-  - "数据库镜像 [SQL Server], 故障排除"
-  - "故障排除 [SQL Server], 数据库镜像"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- endpoints [SQL Server], database mirroring
+- database mirroring [SQL Server], troubleshooting
+- troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c06d67efd16f0ceb894516bcdd3c47e1ff520284
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像配置故障排除 (SQL Server)
+# <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
   本主题提供有关信息以帮助您解决设置数据库镜像会话时遇到的问题。  
   
 > [!NOTE]  
->  请确保满足所有[数据库镜像的先决条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
+>  请确保满足所有 [数据库镜像的先决条件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
 |问题|摘要|  
 |-----------|-------------|  
-|错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 有关详细信息，请参阅 [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md) 主题。|  
+|错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 |  
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|  
 |[端点](#Endpoints)|介绍了正确配置每个服务器实例的数据库镜像端点的要求。|  
 |[SystemAddress](#SystemAddress)|概述了在数据库镜像配置中指定服务器实例的系统名称的备选方法。|  
@@ -39,16 +44,16 @@ caps.handback.revision: 69
 |[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句所需的顺序。|  
 |[跨数据库事务](#CrossDbTxns)|自动故障转移可能导致自动不正确地解决有疑问的事务。 因此，数据库镜像不支持跨数据库事务。|  
   
-##  <a name="Accounts"></a> Accounts  
+##  <a name="Accounts"></a> 帐户  
  必须正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户。  
   
 1.  帐户是否具有正确的权限？  
   
     1.  如果这些帐户在相同的域帐户中运行，则会减少配置错误的几率。  
   
-    2.  如果这些帐户在不同的域中运行或不属于域帐户，则必须在其他计算机的 **master** 中创建一个登录帐户，并且必须授予该登录帐户端点的 CONNECT 权限。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md)。 这包括网络服务帐户。  
+    2.  如果这些帐户在不同的域中运行或不属于域帐户，则必须在其他计算机的 **master** 中创建一个登录帐户，并且必须授予该登录帐户端点的 CONNECT 权限。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。 这包括网络服务帐户。  
   
-2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+2.  如果使用本地系统帐户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为服务运行，则必须使用证书进行身份验证。 有关详细信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
 ##  <a name="Endpoints"></a> 端点  
  必须正确配置端点。  
@@ -59,7 +64,7 @@ caps.handback.revision: 69
   
      若要标识当前与服务器实例的数据库镜像终结点关联的端口，请使用 [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 和 [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 目录视图。  
   
-3.  对于难以解释的数据库镜像设置问题，建议您检查每个服务器实例以确定它是否正在侦听相应的端口。 有关验证端口可用性的信息，请参阅 [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md)。  
+3.  对于难以解释的数据库镜像设置问题，建议您检查每个服务器实例以确定它是否正在侦听相应的端口。   
   
 4.  确保已启动端点 (STATE = STARTED)。 对于各个服务器实例，使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
@@ -108,12 +113,12 @@ caps.handback.revision: 69
     ```  
   
 ##  <a name="SystemAddress"></a> 系统地址  
- 对于数据库镜像配置中服务器实例的系统名称，可以使用明确标识系统的任何名称。 服务器地址可以是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址（最好是静态 IP 地址）。 保证使用完全限定域名的有效性。 有关详细信息，请参阅[指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+ 对于数据库镜像配置中服务器实例的系统名称，可以使用明确标识系统的任何名称。 服务器地址可以是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址（最好是静态 IP 地址）。 保证使用完全限定域名的有效性。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-##  <a name="NetworkAccess"></a> 网络访问  
+##  <a name="NetworkAccess"></a> Network Access  
  必须允许每个服务器实例都能通过 TCP 访问其他一个或多个服务器实例的端口。 当服务器实例位于相互不信任的不同域（不可信的域）中时，这尤为重要。 这会限制服务器实例之间大部分的通信。  
   
-##  <a name="MirrorDbPrep"></a> 镜像数据库准备  
+##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
  无论是首次开始镜像还是在删除镜像后再次开始镜像，都要验证镜像数据库是否可以进行镜像。  
   
  在镜像服务器上创建镜像数据库时，请确保指定相同数据库名称 WITH NORECOVERY 来还原主体数据库备份。 此外，还必须再次使用 WITH NORECOVERY 应用进行该备份之后创建的所有日志备份。  
@@ -125,9 +130,9 @@ caps.handback.revision: 69
   
  如果数据库镜像已经停止，则必须将对主体数据库执行的所有后续日志备份应用到镜像数据库中，然后才可以重新启动镜像。  
   
- 有关详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+ 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).的每个版本都提供数据库镜像。  
   
-##  <a name="FailedCreateFileOp"></a> 失败的创建文件操作  
+##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  在不影响镜像会话的情况下添加文件要求该文件路径同时存在于两个服务器上。 因此，如果在创建镜像数据库时移动了数据库文件，则随后在镜像数据库上的添加文件操作可能会失败，并可能会导致镜像挂起。  
   
  修复此问题：  
@@ -138,7 +143,7 @@ caps.handback.revision: 69
   
 3.  若要准备数据库以进行新的镜像会话，数据库所有者还必须使用 WITH NO RECOVERY 选项还原主体服务器上所有其他未完成的日志备份。  
   
- 有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)。  
+ 有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 开始镜像  
  发出 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 语句的顺序非常关键。  
@@ -150,21 +155,24 @@ caps.handback.revision: 69
  有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 > [!NOTE]  
->  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动镜像的信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)。  
+>  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动镜像的信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="CrossDbTxns"></a> 跨数据库事务  
  在具有自动故障转移功能的高安全性模式下镜像数据库时，自动故障转移可能会导致自动解析并且可能错误解析有疑问的事务。 如果提交跨数据库事务时在任一数据库中进行自动故障转移，则数据库之间可能发生逻辑上的不一致。  
   
  自动故障转移可能影响的跨数据库事务类型包括：  
   
--   正在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中更新多个数据库的事务。  
+-   正在同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中更新多个数据库的事务。  
   
 -   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 的事务。  
   
- 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)。  
+ 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)  
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
+
+
+

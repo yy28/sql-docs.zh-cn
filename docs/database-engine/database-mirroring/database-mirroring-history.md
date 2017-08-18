@@ -1,31 +1,36 @@
 ---
 title: "数据库镜像历史记录 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像历史记录
+# <a name="database-mirroring-history"></a>数据库镜像历史记录
   使用该对话框可以查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 选项  
+## <a name="options"></a>选项  
  **服务器实例**  
  从中报告历史记录的服务器实例的名称。  
   
@@ -80,9 +85,9 @@ caps.handback.revision: 25
 |**还原速率**|将事务还原到镜像数据库的速率（以 KB/秒计）。|  
 |**镜像提交开销**|每个事务平均延迟的毫秒数（仅在同步模式下）。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

@@ -1,28 +1,33 @@
 ---
 title: "数据库镜像端点 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 部署"
-  - "数据库镜像 [SQL Server], 端点"
-  - "端点 [SQL Server], AlwaysOn 可用性组"
-  - "端点 [SQL Server], 数据库镜像"
-  - "可用性组 [SQL Server], 端点"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], AlwaysOn Availability Groups
+- endpoints [SQL Server], database mirroring
+- Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 47
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ac4059e145e2421c76a3ba55629c40e1c8e74405
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像端点 (SQL Server)
+# <a name="the-database-mirroring-endpoint-sql-server"></a>数据库镜像端点 (SQL Server)
   若要参与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像，服务器实例需要有自己专用的“数据库镜像端点” 。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。 在某一给定服务器实例上，与任何其他服务器实例的每个 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像连接都使用单个数据库镜像端点。  
   
  数据库镜像端点使用传输控制协议 (TCP) 在参与数据库镜像会话或承载可用性副本的服务器实例之间发送和接收消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。  
@@ -31,7 +36,7 @@ caps.handback.revision: 47
 >  客户端与主体服务器或主副本的连接不使用数据库镜像端点。  
   
 > [!NOTE]  
->  后续版本的 Microsoft SQL Server 将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用数据库镜像的应用程序，以便改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
+>  后续版本的 Microsoft SQL Server 将删除数据库镜像功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用数据库镜像的应用程序，以便改用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 。  
   
   
 ##  <a name="ServerNetworkAddress"></a> 服务器网络地址  
@@ -46,7 +51,7 @@ caps.handback.revision: 47
 > [!IMPORTANT]  
 >  如果运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机具有防火墙，则防火墙配置必须允许端点中指定的端口的传入和发送连接。  
   
- 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在端点配置。 有关详细信息，请参阅[针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)。  
+ 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在端点配置。 有关详细信息，请参阅 [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
   
 > [!IMPORTANT]  
 >  请勿重新配置正在使用的数据库镜像端点。 服务器实例使用彼此的端点来了解其他系统的状态。 如果重新配置端点，则可能会重新启动此端点，从而导致其他服务器实例出现错误。 这对于自动故障转移模式尤为重要，在此模式下，在伙伴上重新配置端点可能会导致故障转移。  
@@ -57,16 +62,16 @@ caps.handback.revision: 47
   
 -   如果每个服务器实例都在某一域服务帐户下运行，则您可以将 Windows 身份验证用于您的数据库镜像端点。 如果所有服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 **master** 数据库中。 这样可简化可用性数据库的安全配置并建议这样做。  
   
-     如果为某一可用性组托管可用性副本的任何服务器实例以不同的帐户身份运行，则必须在其他服务器实例上的 **master** 中创建每个登录帐户。 然后，必须向该登录名授予 CONNECT 权限，以便连接到该服务器实例的数据库镜像端点。 有关详细信息，请参阅[设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set up login accounts - database mirroring always on availability.md)。  
+     如果为某一可用性组托管可用性副本的任何服务器实例以不同的帐户身份运行，则必须在其他服务器实例上的 **master** 中创建每个登录帐户。 然后，必须向该登录名授予 CONNECT 权限，以便连接到该服务器实例的数据库镜像端点。 有关详细信息，请参阅 [设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)。  
   
      如果您的服务器实例使用 Windows 身份验证，则您可以通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]、PowerShell 或新建可用性组向导创建数据库镜像端点。  
   
     > [!NOTE]  
-    >  如果要承载可用性副本的服务器实例缺少数据库镜像端点，则新建可用性组向导可以自动创建使用 Windows 身份验证的数据库镜像端点。 有关详细信息，请参阅[使用可用性组向导 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
+    >  如果要承载可用性副本的服务器实例缺少数据库镜像端点，则新建可用性组向导可以自动创建使用 Windows 身份验证的数据库镜像端点。 有关详细信息，请参阅 [使用可用性组向导 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
 -   如果任何服务器实例正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，则您必须使用证书来进行端点身份验证。 如果您正在使用证书来用于您的数据库镜像端点，则您的系统管理员必须配置每个服务器实例，以在出站连接和进站连接中使用证书。  
   
-     没有使用证书来配置数据库镜像安全性的任何自动方法。 你将需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或 **New-SqlHadrEndpoint** PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。 有关在服务器实例上启用证书身份验证的信息，请参阅[使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+     没有使用证书来配置数据库镜像安全性的任何自动方法。 你将需要使用 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或 **New-SqlHadrEndpoint** PowerShell cmdlet。 有关详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)。 有关在服务器实例上启用证书身份验证的信息，请参阅 [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -74,15 +79,15 @@ caps.handback.revision: 47
   
 -   [创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [使用数据库镜像终结点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [允许数据库镜像端点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+    -   [允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [允许数据库镜像端点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+    -   [允许数据库镜像端点将证书用于入站连接 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [在添加或修改可用性副本时指定端点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [在添加或修改可用性副本时指定端点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -91,10 +96,10 @@ caps.handback.revision: 47
 -   [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
   
-## 另请参阅  
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [数据库镜像配置故障排除 (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)   
- [sys.dm_db_mirroring_connections (Transact-SQL)](../Topic/sys.dm_db_mirroring_connections%20\(Transact-SQL\).md)  
+ [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)  
   
   

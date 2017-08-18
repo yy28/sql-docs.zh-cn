@@ -1,29 +1,34 @@
 ---
-title: "将辅助副本联接到可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joinreplica.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 联接"
-  - "可用性组 [SQL Server], 配置"
+title: "将次要副本联接到可用性组 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joinreplica.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3910ccc8cffbfb261846cf604617bc73f11040e8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将辅助副本联接到可用性组 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 来将辅助副本联接到 Always On 可用性组。 在将某一辅助副本添加到一个 Always On 可用性组后，这个辅助副本必须联接到该可用性组。 该联接副本操作必须在承载辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行。  
+# <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本联接到可用性组 (SQL Server)
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来将辅助副本联接到 Always On 可用性组。 在将某一辅助副本添加到一个 Always On 可用性组后，这个辅助副本必须联接到该可用性组。 该联接副本操作必须在承载辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行。  
   
 -   **开始之前：**  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 41
   
      ALTER AVAILABILITY GROUP *group_name* JOIN  
   
-     其中，*group_name* 是可用性组的名称。  
+     其中， *group_name* 是可用性组的名称。  
   
      下面的示例将辅助副本联接到 `MyAG` 可用性组。  
   
@@ -103,14 +108,14 @@ caps.handback.revision: 41
   
 2.  通过使用可用性组的名称执行 **Join-SqlAvailabilityGroup** cmdlet，将辅助副本联接到可用性组。  
   
-     例如，以下命令将由位于指定路径的服务器实例承载的辅助副本联接到名为 `MyAg` 的可用性组。  此服务器实例必须承载此可用性组中的辅助副本。  
+     例如，以下命令将由位于指定路径的服务器实例承载的辅助副本联接到名为 `MyAg`的可用性组。  此服务器实例必须承载此可用性组中的辅助副本。  
   
     ```  
     Join-SqlAvailabilityGroup -Path SQLSERVER:\SQL\SecondaryServer\InstanceName -Name 'MyAg'  
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -123,9 +128,10 @@ caps.handback.revision: 41
   
 2.  将每个辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组配置故障排除 (SQL Server)](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

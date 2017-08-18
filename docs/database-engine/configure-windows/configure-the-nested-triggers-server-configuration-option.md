@@ -1,27 +1,32 @@
 ---
-title: "配置 nested triggers 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "nested triggers 选项"
+title: "配置“嵌套触发器”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28dc19f9d28cc2556ac948c857298dfc29eebb1b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 nested triggers 服务器配置选项
+# <a name="configure-the-nested-triggers-server-configuration-option"></a>配置 nested triggers 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **nested triggers** 选项控制 AFTER 触发器是否可以级联。 即执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 如果 **nested triggers** 设置为 0，AFTER 触发器不能级联。 如果**嵌套触发器**设置为 1（默认值），AFTER 触发器最多能级联 32 级。 不管此选项如何设置，INSTEAD OF 触发器都可以嵌套。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **nested triggers** 选项控制 AFTER 触发器是否可以级联。 即执行某项操作将启动另一个触发器，而该触发器又将启动另外一个，依此类推。 如果 **nested triggers** 设置为 0，AFTER 触发器不能级联。 如果 **嵌套触发器** 设置为 1（默认值），AFTER 触发器最多能级联 32 级。 不管此选项如何设置，INSTEAD OF 触发器都可以嵌套。  
   
  **本主题内容**  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 nested triggers 选项  
+#### <a name="to-configure-the-nested-triggers-option"></a>配置 nested triggers 选项  
   
 1.  在“对象资源管理器”中，右键单击服务器，然后选择“属性”。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 nested triggers 选项  
+#### <a name="to-configure-the-nested-triggers-option"></a>配置 nested triggers 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -76,15 +81,16 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 nested triggers 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建嵌套触发器](../../relational-databases/triggers/create-nested-triggers.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

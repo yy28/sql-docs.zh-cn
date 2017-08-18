@@ -1,27 +1,32 @@
 ---
 title: "启用和禁用 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 服务器实例"
-  - "可用性组 [SQL Server], 部署"
-  - "可用性组 [SQL Server], 禁用"
-  - "可用性组 [SQL Server], 启用"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], server instance
+- Availability Groups [SQL Server], deploying
+- Availability Groups [SQL Server], disabling
+- Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: de6fef9bc4ccda44bd805d281dc0a3780aaa96c8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 启用和禁用 AlwaysOn 可用性组 (SQL Server)
+# <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>启用和禁用 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是服务器实例使用可用性组的先决条件。 在创建和配置任何可用性组之前，必须在将承载一个或多个可用性组的可用性副本的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
@@ -49,14 +54,14 @@ caps.handback.revision: 60
   
 -   该服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  
   
--   该服务器实例必须正在运行支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 SQL Server 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   该服务器实例必须正在运行支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的 SQL Server 版本。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   一次仅在一个服务器实例上启用 AlwaysOn 可用性组。 在启用 AlwaysOn 可用性组之后，一直等待直到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务已重启，然后才继续在另一个服务器实例上进行操作。  
   
- 有关用于创建和配置可用性组的其他先决条件的详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+ 有关用于创建和配置可用性组的其他先决条件的详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Security"></a> 安全性  
- 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上启用 AlwaysOn 可用性组时，服务器实例具有对 WSFC 群集的完全控制权限。  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上启用 AlwaysOn 可用性组时，服务器实例具有对 WSFC 群集的完全控制权限。  
   
 ####  <a name="Permissions"></a> 权限  
  要求本地计算机上 **Administrator** 组中的成员身份以及对 WSFC 群集的完全控制。 使用 PowerShell 启用 AlwaysOn 时，使用“以管理员身份运行”选项打开命令提示符窗口。  
@@ -98,7 +103,7 @@ caps.handback.revision: 60
     -   如果 **IsHadrEnabled** = 0，将禁用 AlwaysOn 可用性组。  
   
     > [!NOTE]  
-    >  有关 **IsHadrEnabled** 服务器属性的详细信息，请参阅 [SERVERPROPERTY (Transact-SQL)](../../../t-sql/functions/serverproperty-transact-sql.md)。  
+    >  有关 **IsHadrEnabled** 服务器属性的详细信息，请参阅 [SERVERPROPERTY (Transact-SQL)](../../../t-sql/functions/serverproperty-transact-sql.md)的 SQL Server 版本。  
   
 ###  <a name="PowerShell1Procedure"></a> 使用 PowerShell  
  **确定是否已启用 AlwaysOn 可用性组**  
@@ -112,7 +117,7 @@ caps.handback.revision: 60
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 60
   
 2.  使用 **Enable-SqlAlways On** cmdlet 启用 AlwaysOn 可用性组。  
   
-     若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+     若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
     > [!NOTE]  
     >  有关如何控制 **Enable-SqlAlways On** cmdlet 是否重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
@@ -159,7 +164,7 @@ caps.handback.revision: 60
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ####  <a name="ExmplEnable-SqlHadrServic"></a> 示例：Enable-SqlAlways On  
- 以下 PowerShell 命令在 SQL Server 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]（*计算机*\\*实例*）。  
+ 以下 PowerShell 命令在 SQL Server 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] （*计算机*\\*实例*）。  
   
 ```  
 Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
@@ -202,7 +207,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器保存您的更改并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务重启时，将禁用 AlwaysOn 且 **IsHadrEnabled** 服务器属性将设置为 0，以指示已禁用 AlwaysOn 可用性组。  
   
-5.  我们建议你查看本主题后面的[跟进：在禁用 AlwaysOn 之后](#FollowUp)中的信息。  
+5.  我们建议你查看本主题后面的 [跟进：在禁用 AlwaysOn 之后](#FollowUp)中的信息。  
   
 ###  <a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **禁用 AlwaysOn**  
@@ -220,7 +225,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  有关如何控制 **Disable-SqlAlways On** cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
   
-     若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+     若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -252,13 +257,15 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 |指定了 -NoServiceRestart 参数|指定了 -Force 参数|重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务？|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|是|是|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例“<instance_name>”的 SQL Server 服务。 是否继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
+|是|是|默认情况。 但是 cmdlet 提示您以下信息：<br /><br /> **若要完成此操作，必须重新启动服务器实例“<instance_name>”的 SQL Server 服务。是否继续？**<br /><br /> **[Y] 是 [N] 否 [S] 挂起 [?] 帮助（默认值为“Y”）：**<br /><br /> 如果指定 **N** 或 **S**，则不重新启动该服务。|  
 |是|是|重新启动服务。|  
 |是|是|不重新启动服务。|  
 |是|是|不重新启动服务。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY (Transact-SQL)](../../../t-sql/functions/serverproperty-transact-sql.md)  
   
   
+
+

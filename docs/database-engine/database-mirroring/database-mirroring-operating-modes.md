@@ -1,40 +1,34 @@
 ---
 title: "数据库镜像运行模式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 运行模式"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像运行模式
+# <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  
   
 > [!NOTE]  
->  有关数据库镜像的介绍，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+>  有关数据库镜像的介绍，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- **本主题内容：**  
-  
--   [术语和定义](#TermsAndDefinitions)  
-  
--   [异步数据库镜像（高性能模式）](#async)  
-  
--   [同步数据库镜像（高安全性模式）](#Sync)  
-  
--   [Transact-SQL 设置和数据库镜像运行模式](#TsqlSettingsAndOpModes)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  此节介绍了几个术语，它们是本主题的核心。  
@@ -51,11 +45,11 @@ caps.handback.revision: 21
  Witness  
  仅用于高安全性模式，SQL Server 的一个可选实例，它能使镜像服务器识别是否要启动自动故障转移。 与这两个故障转移伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
   
-## 异步数据库镜像（高性能模式）  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>异步数据库镜像（高性能模式）  
  此节介绍异步数据库镜像的工作原理，何时适合使用高性能模式以及在主体服务器发生故障时如何响应。  
   
 > [!NOTE]  
->  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)中的“高可用性 (AlwaysOn)”。  
+>  大多数 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本仅支持同步数据库镜像（“仅支持‘完全’安全级别”）。 有关完全支持数据库镜像的版本的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)中的“高可用性 (AlwaysOn)”。
   
  将事务安全设置为 OFF 时，数据库镜像会话便会异步运行。 异步操作仅支持一种操作模式 - 高性能模式。 此模式可增强性能，但要牺牲高可用性。 高性能模式仅使用主体服务器和镜像服务器。 镜像服务器上出现的问题不会影响主体服务器。 在丢失主体服务器的情况下，镜像数据库将标记为 DISCONNECTED，但仍可以作为备用数据库。  
   
@@ -156,12 +150,12 @@ caps.handback.revision: 21
   
  ![不使用见证服务器的伙伴通信](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "不使用见证服务器的伙伴通信")  
   
- 当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+ 当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自动故障转移的高安全性模式  
  自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器 ”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
   
- ![会话的见证服务器和伙伴双方](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "会话的见证服务器和伙伴双方")  
+ ![会话的见证服务器和两个伙伴](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "会话的见证服务器和两个伙伴")  
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
@@ -190,7 +184,7 @@ caps.handback.revision: 21
  此节从 ALTER DATABASE 设置和镜像数据库状态以及见证服务器（如果有）状态的角度介绍数据库镜像会话。 它针对主要或专门使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]（而不是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]）管理数据库镜像的用户。  
   
 > [!TIP]  
->  除了可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]以外，还可以使用 **“数据库属性”** 对话框的 **“镜像”** 页在对象资源管理器中控制会话的运行模式。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)。  
+>  除了可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]以外，还可以使用 **“数据库属性”** 对话框的 **“镜像”** 页在对象资源管理器中控制会话的运行模式。 有关详细信息，请参阅本主题后面的 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
  **本节内容：**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **本节内容：**  
   
--   [事务安全](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [见证服务器状态](#WitnessState)  
   
-####  <a name="TxnSafety"></a> 事务安全  
+####  <a name="TxnSafety"></a> Transaction Safety  
  事务安全是镜像特定的数据库属性，用于确定数据库镜像会话是同步运行还是异步运行。 有两种安全级别：FULL 和 OFF。  
   
 -   SAFETY FULL  
@@ -218,11 +212,11 @@ caps.handback.revision: 21
   
      使用 ALTER DATABASE 语句建立会话时，会话将在 SAFETY 属性设置为 FULL 的情况下开始；即会话将在高安全性模式下开始。 会话开始之后，便可添加见证服务器。  
   
-     有关详细信息，请参阅本主题前面的[同步数据库镜像（高安全性模式）](#Sync)。  
+     有关详细信息，请参阅本主题前面的 [同步数据库镜像（高安全性模式）](#Sync)。  
   
 -   SAFETY OFF  
   
-     关闭事务安全可使会话在异步高性能模式下运行。 如果 SAFETY 属性设置为 OFF，则 WITNESS 属性也应该设置为 OFF（默认值）。 有关高性能模式下见证服务器的影响的信息，请参阅本主题后面的[见证服务器状态](#WitnessState)。 有关在关闭事务安全性的情况下运行的详细信息，请参阅本主题前面的[异步数据库镜像（高性能模式）](#async)。  
+     关闭事务安全可使会话在异步高性能模式下运行。 如果 SAFETY 属性设置为 OFF，则 WITNESS 属性也应该设置为 OFF（默认值）。 有关高性能模式下见证服务器的影响的信息，请参阅本主题后面的 [见证服务器状态](#WitnessState)。 有关在关闭事务安全性的情况下运行的详细信息，请参阅本主题前面的 [异步数据库镜像（高性能模式）](#asynchronous-database-mirroring-high-performance-mode)。  
   
  数据库的事务安全性设置记录在每个伙伴的 **sys.database_mirroring** 目录视图中的 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 列内。 有关详细信息，请参阅 [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)。  
   
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [更改数据库镜像会话中的事务安全 (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

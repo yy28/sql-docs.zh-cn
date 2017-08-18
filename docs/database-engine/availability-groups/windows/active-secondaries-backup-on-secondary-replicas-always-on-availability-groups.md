@@ -1,33 +1,38 @@
 ---
-title: "活动次要副本：次要副本备份（AlwaysOn 可用性组） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份优先级"
-  - "备份辅助副本"
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 对辅助副本的备份"
-  - "活动辅助副本 [SQL Server], 备份"
-  - "自动备份首选项"
-  - "可用性组 [SQL Server], 活动辅助副本"
+title: "次要副本上的活动次要副本备份 - AlwaysOn 可用性组 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup priority
+- backup on secondary replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], backup on secondary replicas
+- active secondary replicas [SQL Server], backup on
+- automated backup preference
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 活动次要副本：次要副本备份（AlwaysOn 可用性组）
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>活动次要副本：次要副本备份（AlwaysOn 可用性组）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]活动辅助功能包括支持在辅助副本上执行备份操作。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持在辅助副本上执行备份操作。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
   
 > [!NOTE]  
 >  在可用性组的主数据库或辅助数据库上不允许 RESTORE 语句。  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
   
 1.  配置可用性组以便指定要对其执行备份的可用性副本。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md) 中的 AUTOMATED_BACKUP_PREFERENCE 和 BACKUP_PRIORITY 参数。  
   
-2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅[配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 的“跟进：配置次要副本备份之后”部分。  
+2.  为承载作为执行备份候选的可用性副本的每个服务器实例上的每个可用性数据库都创建编写了脚本的备份作业。 有关详细信息，请参阅 [配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **配置辅助副本备份**  
@@ -70,12 +75,13 @@ caps.handback.revision: 34
   
 -   [使用维护计划向导](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
--   [执行作业](../../../ssms/agent/implement-jobs.md)  
+-   [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [仅复制备份 (SQL Server)](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

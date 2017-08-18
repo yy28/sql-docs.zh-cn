@@ -1,26 +1,31 @@
 ---
 title: "数据库镜像：互操作性和共存 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "高可用性 [SQL Server], 互操作性和共存"
-  - "数据库引擎 [SQL Server], 高可用性"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high availability [SQL Server], interoperability and coexistence
+- Database Engine [SQL Server], high availability
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5e35b0184fd4a6d22a0feaf2373050b964eb3d86
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像：互操作性和共存 (SQL Server)
-  数据库镜像可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下列功能或组件一起使用：  
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>数据库镜像：互操作性和共存 (SQL Server)
+  数据库镜像可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的下列功能或组件一起使用：  
   
 -   [AlwaysOn 故障转移群集实例（SQL Server 故障转移群集）](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
@@ -38,11 +43,12 @@ caps.handback.revision: 16
   
 -   跨数据库事务/分布式事务  
   
-     有关为何不支持此类事务的信息，请参阅[用于 Always On 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)。  
+     有关为何不支持此类事务的信息，请参阅[用于 Always On 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
+

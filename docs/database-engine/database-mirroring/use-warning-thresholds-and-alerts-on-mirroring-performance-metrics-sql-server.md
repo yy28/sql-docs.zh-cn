@@ -1,30 +1,35 @@
 ---
-title: "使用镜像性能度量的警告阈值和警报 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "监视数据库镜像 [SQL Server]"
-  - "阈值 [SQL Server]"
-  - "数据库镜像 [SQL Server], 在 SQL Server Management Studio 中管理"
-  - "警报 [SQL Server], 数据库镜像"
-  - "数据库镜像 [SQL Server], 监视"
-  - "警告 [数据库镜像]"
+title: "使用镜像性能度量的警告阈值和警报 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring database mirroring [SQL Server]
+- thresholds [SQL Server]
+- database mirroring [SQL Server], managing in SQL Server Management Studio
+- alerts [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
+- warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用镜像性能度量的警告阈值和警报 (SQL Server)
-  本主题包含有关一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的信息，可以为这些事件配置和管理用于数据库镜像的警告阈值。 可以使用数据库镜像监视器或 **sp_dbmmonitorchangealert**、**sp_dbmmonitorhelpalert** 和 **sp_dbmmonitordropalert** 存储过程。 本主题还包含有关对数据库镜像事件配置警报的信息。  
+# <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
+  本主题包含有关一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的信息，可以为这些事件配置和管理用于数据库镜像的警告阈值。 可以使用数据库镜像监视器或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**和 **sp_dbmmonitordropalert** 存储过程。 本主题还包含有关对数据库镜像事件配置警报的信息。  
   
  针对镜像数据库建立监视之后，系统管理员可以为多个关键绩效指标配置警告阈值。 同时，管理员还可以为这些数据库镜像事件和其他数据库镜像事件配置警报。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
 |性能指标|警告阈值|数据库镜像监视器标签|  
 |------------------------|-----------------------|--------------------------------------|  
 |未发送日志|指定未发送日志达到多少 KB 后，在主体服务器实例上生成一个警告。 此警告有助于根据 KB 度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果未发送日志超出了阈值，则发出警告**|  
-|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅[估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
+|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
 |最早的未发送事务|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 此警告有助于根据时间度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|  
 |镜像提交开销|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|**如果镜像提交开销超过了阈值则发出警告**|  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 40
   
      在数据库镜像监视器中，管理员可以通过选择 **“警告”** 选项卡式页面，同时查看主体服务器实例和镜像服务器实例上选定数据库的当前警告配置。 在此页上，管理员可以打开 **“设置警告阈值”** 对话框以启用和配置一个或多个警告阈值。  
   
-     有关数据库镜像监视器界面的介绍，请参阅 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)。 有关启动数据库镜像监视器的信息，请参阅[启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)。  
+     有关数据库镜像监视器界面的介绍，请参阅 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)。 有关启动数据库镜像监视器的信息，请参阅 [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)。  
   
 -   系统存储过程  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 40
     |[sp_dbmmonitorhelpalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|返回若干个关键数据库镜像监视器性能指标中的一个或所有指标的警告阈值信息。|  
     |[sp_dbmmonitordropalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|删除指定性能指标的警告。|  
   
-## 发送到 Windows 事件日志的性能阈值事件  
+## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>发送到 Windows 事件日志的性能阈值事件  
  如果为性能指标定义了警告阈值，则在更新状态表时，将针对阈值计算最新的值。 如果已达到阈值，则更新过程 **sp_dbmmonitorupdate** 会针对指标生成一个信息性事件（“性能阈值事件”），然后将此事件写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志。 下表列出性能阈值事件的 ID。  
   
 |性能指标|事件 ID|  
@@ -112,9 +117,9 @@ caps.handback.revision: 40
 ##  <a name="RelatedTasks"></a> 相关任务  
  **使用 SQL Server Management Studio 创建警报**  
   
--   [使用错误号创建警报](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [使用错误号创建警报](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [创建 WMI 事件警报](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [创建 WMI 事件警报](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
  **监视数据库镜像**  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 40
   
 -   [sp_dbmmonitorupdate (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

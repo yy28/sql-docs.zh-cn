@@ -1,30 +1,35 @@
 ---
 title: "监视日志传送 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "日志传送 [SQL Server], 状态"
-  - "历史记录表 [SQL Server]"
-  - "历史信息 [SQL Server], 日志传送"
-  - "日志传送 [SQL Server], 监视"
-  - "警报 [SQL Server], 日志传送"
-  - "状态信息 [SQL Server], 日志传送"
-  - "监视日志传送 [SQL Server]"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], status
+- history tables [SQL Server]
+- historical information [SQL Server], log shipping
+- log shipping [SQL Server], monitoring
+- alerts [SQL Server], log shipping
+- status information [SQL Server], log shipping
+- monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dad074bfa7a777690f625fa175f631332f94e58b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 监视日志传送 (Transact-SQL)
+# <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
   配置日志传送后，就可以监视有关所有日志传送服务器状态的信息。 日志传送操作的历史记录和状态始终由日志传送作业保存在本地。 备份操作的历史记录和状态存储在主服务器上，复制和还原操作的历史记录和状态存储在辅助服务器上。 如果使用了远程监视服务器，此信息还将存储在监视服务器上。  
   
  您可以配置警报，当日志传送操作无法按计划发生时激发该警报。 监视备份和还原操作状态的警报作业将引发错误。 您可以定义警报，以便在引发这些错误时通知操作员。 如果配置了监视服务器，该监视服务器上将运行一个警报作业，它可以引发日志传送配置中所有操作的错误。 如果未指定监视服务器，警报作业将在主服务器实例上运行，以便监视备份操作。 警报作业还将在每个辅助服务器实例上运行，以便监视本地复制和还原操作。  
@@ -32,7 +37,7 @@ caps.handback.revision: 29
 > [!IMPORTANT]  
 >  若要监视日志传送配置，在启用日志传送时必须添加监视服务器。 如果之后添加监视服务器，则必须首先删除日志传送配置，然后将其替换为包含监视服务器的新配置。 有关详细信息，请参阅[配置日志传送 (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)。 此外，在配置了监视服务器之后，只有首先删除日志传送才能对其进行更改。  
   
-## 包含监视信息的历史记录表  
+## <a name="history-tables-containing-monitoring-information"></a>包含监视信息的历史记录表  
  监视历史记录表包含监视服务器上存储的元数据。 与给定的主服务器或辅助服务器相关的信息副本也存储在本地。  
   
  可以查询这些表，以监视日志传送会话的状态。 例如，了解日志传送的状态，查看备份作业、复制作业和还原作业的状态和历史记录。 通过查询下列监视表，可以查看特定的日志传送历史记录和错误详细信息。  
@@ -45,7 +50,7 @@ caps.handback.revision: 29
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|在每个日志传送配置中对主数据库存储一条监视记录，包括有关对监视有用的最新备份文件和最新还原文件的信息。|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|对每个辅助数据库存储一条监视记录，包括有关对监视有用的最新备份文件和最新还原文件的信息。|  
   
-## 监视日志传送的存储过程  
+## <a name="stored-procedures-for-monitoring-log-shipping"></a>监视日志传送的存储过程  
  监视和历史记录信息存储在 **msdb**的表中，可以通过日志传送存储过程来访问它。 请在下表中指定的服务器上运行下列存储过程。  
   
 |存储过程|说明|运行存储过程的服务器|  
@@ -55,10 +60,10 @@ caps.handback.revision: 29
 |[sp_help_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)|返回警报作业的作业 ID。|监视服务器或主/辅助服务器（如果未定义监视服务器）|  
 |[sp_help_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)|检索主数据库设置并显示 **log_shipping_primary_databases** 和 **log_shipping_monitor_primary** 表中的值。|主服务器|  
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|检索主数据库的辅助数据库名称。|主服务器|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|从 **log_shipping_secondary**、**log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 表中检索辅助数据库设置。|辅助服务器|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|从 **log_shipping_secondary**、 **log_shipping_secondary_databases** 和 **log_shipping_monitor_secondary** 表中检索辅助数据库设置。|辅助服务器|  
 |[sp_help_log_shipping_secondary_primary (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|此存储过程将在辅助服务器上检索给定的主数据库的设置。|辅助服务器|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查看日志传送报告 (SQL Server Management Studio)](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [日志传送存储过程和表](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

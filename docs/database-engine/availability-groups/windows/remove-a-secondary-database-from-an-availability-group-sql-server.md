@@ -1,29 +1,34 @@
 ---
 title: "从可用性组中删除辅助数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.unjoindb.f1"
-helpviewer_keywords: 
-  - "辅助数据库 [SQL Server], 在可用性组中"
-  - "可用性组 [SQL Server], 删除"
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.unjoindb.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], databases
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9fedf070d4d37ce7f7780f099700757c552bd402
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 从可用性组中删除辅助数据库 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
+# <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
   
 -   **开始之前：**  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 23
   
 4.  此步骤取决于您是要删除多个数据库组，还是只删除一个数据库，如下所示：  
   
-    -   若要删除多个数据库，请使用 **“对象资源管理器详细信息”** 窗格查看并选择所有要删除的数据库。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)。  
+    -   若要删除多个数据库，请使用 **“对象资源管理器详细信息”** 窗格查看并选择所有要删除的数据库。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要删除单个数据库，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选中该数据库。  
   
@@ -77,11 +82,11 @@ caps.handback.revision: 23
   
 1.  连接到承载辅助副本的服务器实例。  
   
-2.  使用 [ALTER DATABASE 语句的 SET HADR 子句](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) ，如下所述：  
+2.  使用 [ALTER DATABASE 语句的 SET HADR 子句](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) ，如下所述：  
   
      ALTER DATABASE *database_name* SET HADR OFF  
   
-     其中，*database_name* 为要从其所属的可用性组中删除的辅助数据库的名称。  
+     其中， *database_name* 为要从其所属的可用性组中删除的辅助数据库的名称。  
   
      下面的示例将本地辅助数据库 *MyDb2* 从其可用性组中删除。  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 23
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -127,8 +132,9 @@ caps.handback.revision: 23
   
      有关详细信息，请参阅[恢复数据库而不还原数据 (Transact-SQL)](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [将主数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
+

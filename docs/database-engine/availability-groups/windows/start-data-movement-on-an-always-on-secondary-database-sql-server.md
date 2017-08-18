@@ -1,30 +1,35 @@
 ---
 title: "启动 AlwaysOn 辅助数据库的数据移动 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 842e500bc9579b31601aa1f6814593024cdaaeb7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)
+# <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本主题包含有关如何在将数据库添加到 AlwaysOn 可用性组后启动数据同步的信息。 对于每个新的主副本，必须在承载辅助副本的服务器实例上准备辅助数据库。 然后，必须将这些辅助数据库手动添加到可用性组。  
   
 > [!NOTE]  
->  如果文件路径在每个承载可用性组的可用性副本的服务器实例上完全相同，则[新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、[将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[将数据库添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)可为你自动启动数据同步。  
+>  如果文件路径在每个承载可用性组的可用性副本的服务器实例上完全相同，则 [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、 [将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [将数据库添加到可用性组向导](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md) 可为你自动启动数据同步。  
   
  若要手动启动数据同步，需要依次连接到每个承载可用性组的辅助副本的服务器实例并完成以下步骤：  
   
@@ -41,15 +46,15 @@ caps.handback.revision: 17
         > [!NOTE]  
         >  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，将需要重新配置该可用性组的自动备份首选项。  
   
-         **详细信息：  **  
+         **详细信息：**  
   
-         [从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+         [从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [配置可用性副本备份 (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 2.  尽快将每个新准备的辅助数据库加入可用性组。  
   
-     **详细信息：  **  
+     **详细信息：**  
   
      [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -59,9 +64,10 @@ caps.handback.revision: 17
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
 title: "将数据库引擎配置为侦听多个 TCP 端口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "端口 [SQL Server], 多个"
-  - "TDS"
-  - "侦听多个端口"
-  - "端点 [SQL Server], TDS"
-  - "添加端口"
-  - "表格格式数据流"
-  - "多个端口"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multiple
+- TDS
+- listen on multiple ports
+- endpoints [SQL Server], TDS
+- adding ports
+- tabular data stream
+- multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ba9063f05af2d7e021244bca5e14b75a8a510b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将数据库引擎配置为侦听多个 TCP 端口
-  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用 TCP/IP 后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
+  本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
   
  创建第二个 TDS 端点的可能原因包括：  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 26
   
 -   指定所选 IP 地址的 TCP 端口号。  
   
- 有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+ 有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### 创建 TDS 端点  
+#### <a name="to-create-a-tds-endpoint"></a>创建 TDS 端点  
   
 -   发出以下语句，为服务器上所有可用的 TCP 地址的端口 1500 创建名为 **CustomConnection** 的端点。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 26
   
  创建新的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点时，将撤消默认 TDS 端点的 **public** 连接权限。 如果默认端点需要访问 **public** 组，请使用 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` 语句重新应用此权限。  
   
-#### 授予对端点的访问权限  
+#### <a name="to-grant-access-to-the-endpoint"></a>授予对端点的访问权限  
   
 -   发出以下语句，对 corp 域中的 SQLSupport 组授予对 **CustomConnection** 端点的访问权限。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-#### 将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
   
 1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击 *<instance_name>* 的“协议”。  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 26
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]重新启动后，错误日志将列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要侦听的端口。  
   
-#### 连接到新端点  
+#### <a name="to-connect-to-the-new-endpoint"></a>连接到新端点  
   
 -   发出以下语句，以使用可信连接并假定用户为 [corp\SQLSupport] 组的成员，连接到名为 ACCT 的服务器上的 SQL Server 默认实例的 **CustomConnection** 端点。  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 26
     sqlcmd -SACCT,1500  
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT (Transact SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

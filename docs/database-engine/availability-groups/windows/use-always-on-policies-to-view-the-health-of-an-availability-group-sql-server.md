@@ -1,27 +1,32 @@
 ---
-title: "使用 Always On 策略查看可用性组的运行状况 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 策略"
+title: "使用 AlwaysOn 策略查看可用性组的运行状况 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 401214465aadc17a4a8633801c170194f0623611
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 Always On 策略查看可用性组的运行状况 (SQL Server)
+# <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 Always On 策略查看可用性组的运行状况 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 Always On 策略或使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell 确定 Always On 可用性组的运行状况。 有关 AlwaysOn 基于策略管理，请参阅[针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)。  
+  本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 Always On 策略或使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 确定 Always On 可用性组的运行状况。 有关 AlwaysOn 基于策略管理，请参阅 [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)中的 PowerShell 确定 Always On 可用性组的运行状况。  
   
 > [!IMPORTANT]  
 >  对于 Always On 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，任何时候都不应修改 Always On 类别的名称。  
@@ -54,10 +59,10 @@ caps.handback.revision: 16
   
 4.  选择 **“显示面板”** 命令。  
   
- 有关如何使用 AlwaysOn 面板的信息，请参阅[使用 AlwaysOn 面板 (SQL Server Management Studio)](../Topic/Use%20the%20Always On%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)。  
+ 有关如何使用 AlwaysOn 面板的信息，请参阅[使用 AlwaysOn 面板 (SQL Server Management Studio)](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **使用 Always On 策略查看可用性组的运行状况**  
+ **Use Always On policies to view the health of an availability group**  
   
 1.  将默认值 (**cd**) 设置为托管其中一个可用性副本的服务器实例。 若要查看有关可用性组中所有可用性副本的信息，请使用承载主副本的服务器实例。  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 16
     |**路径**|指向可用性组、一个或多个可用性副本或可用性数据库的数据库副本群集状态的路径（具体取决于正在使用的 cmdlet）。 这是一个可选参数。 如果未指定，此参数的值默认为当前的工作位置。|  
     |**ShowPolicyDetails**|显示由 cmdlet 执行的每个策略评估的结果。 对于每个策略评估，cmdlet 都输出一个对象，该对象具有用于描述评估结果的字段（是否传递了策略、策略名称和类别等等）。|  
   
-     例如，以下 **Test-SqlAvailabilityGroup** 命令指定 **-ShowPolicyDetails** 参数，以为在名为 `MyAg` 的可用性组上执行的每个基于策略的管理 (PBM) 策略显示此 cmdlet 执行的每个策略评估的结果。  
+     例如，以下 **Test-SqlAvailabilityGroup** 命令指定 **-ShowPolicyDetails** 参数，以为在名为 `MyAg`的可用性组上执行的每个基于策略的管理 (PBM) 策略显示此 cmdlet 执行的每个策略评估的结果。  
   
     ```  
     Test-SqlAvailabilityGroup `   
@@ -113,29 +118,32 @@ caps.handback.revision: 16
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
  **SQL Server Always On 团队博客 — 使用 PowerShell 监视 Always On 运行状况：**  
   
--   [第一部分：基本 Cmdlet 概述](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/13/monitoring-Always%20On-health-with-powershell-part-1.aspx)  
+-   [第一部分：基本 Cmdlet 概述](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   
--   [第二部分：高级 Cmdlet 用法](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/13/monitoring-Always%20On-health-with-powershell-part-2.aspx)  
+-   [第二部分：高级 Cmdlet 用法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [第三部分：简单的监视应用程序](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/15/monitoring-Always%20On-health-with-powershell-part-3.aspx)  
+-   [第三部分：简单的监视应用程序](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [第四部分：与 SQL Server 代理集成](http://blogs.msdn.com/b/sqlAlways%20On/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [第四部分：与 SQL Server 代理集成](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
-## 另请参阅  
- [AlwaysOn 可用性组概述 (SQL Server)](../Topic/Overview%20of%20Always On%20Availability%20Groups%20\(SQL%20Server\).md)   
+## <a name="see-also"></a>另请参阅  
+ [AlwaysOn 可用性组概述 (SQL Server)](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [管理可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [监视可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+ [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+
+
+

@@ -1,27 +1,32 @@
 ---
-title: "服务器属性（“杂项服务器设置”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "服务器属性（“杂项服务器设置”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 服务器属性（“杂项服务器设置”页）
+# <a name="server-properties---misc-server-settings-page"></a>服务器属性 -“杂项服务器设置”页
   使用此页可以查看或修改服务器设置。  
   
-## 选项  
+## <a name="options"></a>选项  
  **用户的默认语言**  
  指定所有新建登录名的默认语言。  
   
@@ -34,15 +39,15 @@ caps.handback.revision: 22
  **将两位数的年份解释为介于**  
  指定 100 年的日期范围，用于解释针两位数年份值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将两位数日期值解释为指定范围内以这两位数值结尾的年份。  
   
- 在右侧的框中设置结束年份。 保存结束年份时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动在左侧的框中填充起始年份。  
+ 在右侧的框中设置结束年份。 保存结束年份时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动在左侧的框中填充起始年份。  
   
  **配置值**  
  显示此窗格上选项的配置值。 如果更改了这些值，请单击 **“运行值”** 以查看更改是否已生效。 如果更改未生效，则必须首先重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
- **运行值**  
+ **“运行值”**  
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

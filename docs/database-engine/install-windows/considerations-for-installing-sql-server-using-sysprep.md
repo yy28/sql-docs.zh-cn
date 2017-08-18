@@ -1,23 +1,28 @@
 ---
 title: "使用 SysPrep 安装 SQL Server 的注意事项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ebab112323b9c9ad8b5c8fdba8e3b7e10f69b808
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 使用 SysPrep 安装 SQL Server 的注意事项
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 SysPrep，你可以在计算机上准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例，以后再完成配置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 提供一个两步过程来得到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已配置独立实例。 这些步骤包括以下内容：  
+# <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安装 SQL Server 的注意事项
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 SysPrep，你可以在计算机上准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例，以后再完成配置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 提供一个两步过程来得到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已配置独立实例。 这些步骤包括以下内容：  
   
 -   [准备映像](#BKMK_PrepareImage)  
   
@@ -25,11 +30,11 @@ caps.handback.revision: 22
   
 -   [完成映像](#BKMK_CompleteImage)  
   
-     此步骤允许您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例的配置。 在此步骤中，您可以提供计算机、网络和帐户特定的信息。  
+     此步骤允许您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例的配置。 在此步骤中，您可以提供计算机、网络和帐户特定的信息。  
   
- 有关如何使用 SysPrep 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [使用 SysPrep 安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-sysprep.md)。  
+ 有关如何使用 SysPrep 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [使用 SysPrep 安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-sysprep.md)。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常见用途  
+## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的常见用途  
  可以通过以下任意方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 功能：  
   
 -   通过使用“准备映像”步骤，可以在同一台计算机上准备一个或多个未配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 可以在同一台计算机上使用“完成映像”步骤配置这些已准备实例。  
@@ -40,10 +45,10 @@ caps.handback.revision: 22
   
      Windows SysPrep 工具用于准备 Windows 操作系统映像。 它用于捕获操作系统的自定义映像，以便在整个组织中部署。 有关 SysPrep 及其用法的详细信息，请参阅的 [什么是 SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)。  
   
-## 安装介质注意事项  
+## <a name="installation-media-considerations"></a>安装介质注意事项  
  如果您使用的是完整版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请注意以下事项：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Express 以外的版本：  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Express 以外的版本：  
   
     -   “准备映像”步骤使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evaluation 版本来安装产品二进制文件。 在完成该实例后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本依赖于在“完成映像”步骤中提供的产品 ID。  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 22
   
     -   不能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本的已准备实例指定产品 ID。  
   
-## 支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 SysPrep 支持所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的工具。  
+## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 SysPrep 支持所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工具。  
   
  您可以为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或早期版本的并行安装准备多个实例。 这些实例的功能必须支持 SysPrep。  
   
@@ -64,13 +69,13 @@ caps.handback.revision: 22
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 在您准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例时自动准备。 它们在使用“完成映像”步骤完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时完成。  
   
- 有关支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 有关支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- 您可以在配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例时执行版本升级。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本，不支持此选项。  
+ 您可以在配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例时执行版本升级。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本，不支持此选项。  
   
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 支持从命令行进行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装。  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
+## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 限制  
  不支持修复已准备实例。 如果在“准备映像”或“完成映像”步骤中安装程序失败，您必须运行卸载。  
   
 ##  <a name="BKMK_PrepareImage"></a> 准备映像  
@@ -91,7 +96,8 @@ caps.handback.revision: 22
   
 -   访问“安装中心”的“高级”页上的“已准备独立实例的映像完成”步骤。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)  
   
   
+

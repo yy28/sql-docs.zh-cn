@@ -1,26 +1,31 @@
 ---
-title: "将辅助副本添加到可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 配置"
+title: "将次要副本添加到可用性组 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9c742da9a223f3cf8d54911eb841c69ad2d200a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将辅助副本添加到可用性组 (SQL Server)
-  本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
+# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本添加到可用性组 (SQL Server)
+  本主题描述了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
   
 -   **开始之前：**  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 38
   
 -   **跟进：**[在添加次要副本之后](#FollowUp)  
   
-## 开始之前  
+## <a name="before-you-begin"></a>开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
 ##  <a name="PrerequisitesRestrictions"></a> 先决条件和限制  
   
 -   您必须连接到承载主副本的服务器实例。  
   
- 有关详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。  
+ 有关详细信息，请参阅 [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)配置服务器实例时遇到的典型问题。  
   
 ##  <a name="Security"></a> 安全性  
   
@@ -76,9 +81,9 @@ caps.handback.revision: 38
   
 1.  连接到承载主副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
-2.  通过使用 ALTER AVAILABILITY GROUP 语句的 ADD REPLICA ON 子句将新辅助副本添加到可用性组。 在 ADD REPLICA ON 子句中，ENDPOINT_URL、AVAILABILITY_MODE 和 FAILOVER_MODE 选项是必需的。 其他副本选项（BACKUP_PRIORITY、SECONDARY_ROLE、PRIMARY_ROLE 和 SESSION_TIMEOUT）是可选的。 有关详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)。  
+2.  通过使用 ALTER AVAILABILITY GROUP 语句的 ADD REPLICA ON 子句将新辅助副本添加到可用性组。 在 ADD REPLICA ON 子句中，ENDPOINT_URL、AVAILABILITY_MODE 和 FAILOVER_MODE 选项是必需的。 其他副本选项（BACKUP_PRIORITY、SECONDARY_ROLE、PRIMARY_ROLE 和 SESSION_TIMEOUT）是可选的。 有关详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
   
-     例如，下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将在 `MyAG` 承载的默认服务器实例（其端点 URL 为 `COMPUTER04`）上创建名为 `TCP://COMPUTER04.Adventure-Works.com:5022'` 的可用性组的新副本。 此副本支持手动故障转移和异步提交可用性模式。  
+     例如，下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将在 `MyAG` 承载的默认服务器实例（其端点 URL 为 `COMPUTER04`）上创建名为 `TCP://COMPUTER04.Adventure-Works.com:5022'`的可用性组的新副本。 此副本支持手动故障转移和异步提交可用性模式。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG ADD REPLICA ON 'COMPUTER04'   
@@ -96,7 +101,7 @@ caps.handback.revision: 38
   
 2.  使用 **New-SqlAvailabilityReplica** cmdlet。  
   
-     例如，下面的命令将可用性副本添加到名为 `MyAg` 的现有可用性组中。 此副本支持手动故障转移和异步提交可用性模式。 在辅助角色中，此副本将支持读访问连接，使您可以将只读处理转移到此副本。  
+     例如，下面的命令将可用性副本添加到名为 `MyAg`的现有可用性组中。 此副本支持手动故障转移和异步提交可用性模式。 在辅助角色中，此副本将支持读访问连接，使您可以将只读处理转移到此副本。  
   
     ```  
     $agPath = "SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -114,7 +119,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -125,11 +130,11 @@ caps.handback.revision: 38
   
 1.  连接到将要承载新辅助副本的服务器实例。  
   
-2.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅[将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+2.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
   
 3.  对于可用性组中的每个数据库，在承载辅助副本的服务器实例上创建辅助数据库。 有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-4.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+4.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **管理可用性副本**  
@@ -148,11 +153,12 @@ caps.handback.revision: 38
   
 -   [更改可用性副本的会话超时期限 (SQL Server)](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 AlwaysOn 仪表板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [监视可用性组 (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
+

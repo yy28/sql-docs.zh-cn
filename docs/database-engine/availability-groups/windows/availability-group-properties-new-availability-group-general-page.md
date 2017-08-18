@@ -1,24 +1,29 @@
 ---
-title: "可用性组属性：新建可用性组（“常规”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.general.f1"
+title: "可用性组属性：新建可用性组（“常规”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性组属性：新建可用性组（“常规”页）
+# <a name="availability-group-properties-new-availability-group-general-page"></a>可用性组属性：新建可用性组（“常规”页）
   本主题同时适用于 **“新建可用性组”** 对话框和 **“可用性组属性”** 对话框的 **“常规”** 选项卡。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
   
  **查看可用性组属性**  
@@ -27,11 +32,11 @@ caps.handback.revision: 15
   
 -   [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **可用性组名称**  
  可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。  
   
-## 可用性数据库  
+## <a name="availability-databases"></a>可用性数据库  
  **数据库名称**  
  已添加到可用性组中的数据库的名称。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 15
  **删除**  
  单击此选项可从可用性组中删除所选数据库。  
   
-## 可用性副本  
+## <a name="availability-replicas"></a>可用性副本  
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
  **同步提交**  
  主副本等待提交给定的事务，直到辅助副本将事务写入磁盘。  
   
- 有关详细信息，请参阅[可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
+ 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
  **故障转移模式**  
  副本的故障转移模式，可为下列值之一：  
@@ -100,15 +105,16 @@ caps.handback.revision: 15
  此副本上会话超时期限的秒数。  
   
  **端点 URL**  
- 端点的 URL。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)。  
+ 端点的 URL。 有关这些 URL 格式的信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- **添加**  
+ **“添加”**  
  单击此选项可将辅助副本添加到可用性组。  
   
  **删除**  
  单击此选项可从可用性组中删除辅助副本。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

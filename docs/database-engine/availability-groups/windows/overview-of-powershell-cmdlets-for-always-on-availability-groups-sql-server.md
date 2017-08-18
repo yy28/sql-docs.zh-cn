@@ -1,26 +1,31 @@
 ---
-title: "Always On 可用性组的 PowerShell Cmdlet 概述 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], PowerShell cmdlets"
-  - "可用性组 [SQL Server], 关于"
-  - "PowerShell [SQL Server], cmdlet"
+title: "AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], PowerShell cmdlets
+- Availability Groups [SQL Server], about
+- PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 85c4fe763b9f8fdbff001c516f23c2e5109120e1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
+# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是专门设计用于系统管理的基于任务的命令行 Shell 和脚本语言。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一组 PowerShell cmdlet，支持您部署、管理和监视可用性组、可用性副本和可用性数据库。  
@@ -45,27 +50,27 @@ caps.handback.revision: 36
 -   [监视可用性组的运行状况](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 的“相关任务”一节。  
+>  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 任务的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的“相关任务”一节。  
   
-##  <a name="ConfiguringServerInstance"></a> 为 Always On 可用性组配置服务器实例  
+##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlways On**|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 **Path**、 **InputObject**或 **Name** 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 版本。)|  
-|**Enable-SqlAlways On**|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支持的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 版本。|  
+|**Disable-SqlAlways On**|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 **Path**、 **InputObject**或 **Name** 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。)|  
+|**Enable-SqlAlways On**|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的支持的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |**New-SqlHadrEndPoint**|在服务器实例上创建新的数据库镜像端点。 在主数据库和辅数据库之间移动数据时需要此端点。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**Set-SqlHadrEndpoint**|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
   
-##  <a name="BnRcmdlets"></a> 备份和还原数据库和事务日志  
+##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |**Backup-SqlDatabase**|创建数据或日志备份。|任何联机数据库（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载主副本的服务器实例上的数据库）|  
-|**Restore-SqlDatabase**|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **\*\*重要说明\*\*** 当准备辅助数据库时，必须在每个 **Restore-SqlDatabase** 命令中使用 **-NoRecovery** 参数。|  
+|**Restore-SqlDatabase**|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **\*\* 重要说明 \*\*** 当准备辅助数据库时，必须在每个 **Restore-SqlDatabase** 命令中使用 **-NoRecovery** 参数。|  
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-##  <a name="DeployManageAGs"></a> 创建和管理可用性组  
+##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -74,7 +79,7 @@ caps.handback.revision: 36
 |**Set-SqlAvailabilityGroup**|设置可用性组的属性；使可用性组联机/脱机|承载主副本的服务器实例|  
 |**Switch-SqlAvailabilityGroup**|启动下列形式之一的故障转移：<br /><br /> 可用性组的强制故障转移（可能会丢失数据）。<br /><br /> 可用性组的手动故障转移。|承载目标辅助副本的服务器实例|  
   
-##  <a name="AGlisteners"></a> 创建和管理可用性组侦听器  
+##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |Cmdlet|说明|支持平台|  
 |------------|-----------------|------------------|  
@@ -82,7 +87,7 @@ caps.handback.revision: 36
 |**Set-SqlAvailabilityGroupListener**|修改现有可用性组侦听器的端口设置。|承载主副本的服务器实例|  
 |**Add-SqlAvailabilityGroupListenerStaticIp**|将一个静态 IP 地址添加到现有的可用性组侦听器配置。 此 IP 地址可以是带子网的 IPv4 地址或 IPv6 地址。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageARs"></a> 创建和管理可用性副本  
+##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 36
 |**Remove-SqlAvailabilityReplica**|删除可用性副本。|承载主副本的服务器实例|  
 |**Set-SqlAvailabilityReplica**|设置可用性副本的属性。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageDbs"></a> 添加和管理可用性数据库  
+##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
@@ -100,7 +105,7 @@ caps.handback.revision: 36
 |**Resume-SqlAvailabilityDatabase**|恢复已挂起的可用性数据库的数据移动。|已挂起数据库所在的服务器实例。|  
 |**Suspend-SqlAvailabilityDatabase**|挂起可用性数据库的数据移动。|承载可用性副本的任何服务器实例。|  
   
-##  <a name="MonitorTblshtAGs"></a> 监视可用性组的运行状况  
+##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet 支持您监视可用性组及其副本和数据库的运行状况。  
   
 > [!IMPORTANT]  
@@ -116,8 +121,9 @@ caps.handback.revision: 36
   
  有关详细信息，请参阅[使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [获取 SQL Server PowerShell 帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
   
+

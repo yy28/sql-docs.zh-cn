@@ -1,26 +1,31 @@
 ---
 title: "在系统管理员被锁定时连接到 SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sa 帐户"
-  - "在锁定时连接 [SQL Server]"
-  - "锁定 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- connecting when locked out [SQL Server]
+- locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f14625038501a21d4321f45471a4391d29efec9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在系统管理员被锁定时连接到 SQL Server
+# <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
   
 -   作为 sysadmin 固定服务器角色成员的所有登录名都已经被误删除。  
@@ -33,21 +38,21 @@ caps.handback.revision: 15
   
  可以让您重新获得访问权限的一种方法是重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并将所有数据库附加到新实例。 这种解决方案很耗时，并且若要恢复登录名，可能还需要从备份中还原 master 数据库。 如果 master 数据库的备份较旧，则它可能未包含所有信息。 如果 master 数据库的备份较新，则它可能与前一个实例具有同样的登录名；因此管理员仍将被锁定。  
   
-## 解决方法  
- 使用 **-m** 或 **-f** 选项在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 计算机的本地 Administrators 组的任何成员都可以随后作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+## <a name="resolution"></a>解决方法  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -m **或** -f **选项在单用户模式下启动** 的实例。 计算机的本地 Administrators 组的任何成员都可以随后作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!NOTE]  
->  在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 否则，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可能会首先连接，并阻止您作为第二个用户连接。  
+>  在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请首先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可能会首先连接，并阻止您作为第二个用户连接。  
   
- 当你将 **-m** 选项与 **sqlcmd** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 结合使用时，可以将连接限制为指定的客户端应用程序。 例如，**-m"sqlcmd"** 将连接限制为单个连接，并且该连接必须将自身标识为 **sqlcmd** 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
+ 当你将 **-m** 选项与 **sqlcmd** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]结合使用时，可以将连接限制为指定的客户端应用程序。 例如， **-m"sqlcmd"** 将连接限制为单个连接，并且该连接必须将自身标识为 **sqlcmd** 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
   
 > [!IMPORTANT]  
 >  不要将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。  
   
- 有关如何在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的分步说明，请参阅 [配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/configure-server-startup-options-sql-server-configuration-manager.md)。  
+ 有关如何在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的分步说明，请参阅 [配置服务器启动选项（SQL Server 配置管理器）](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)。  
   
-## 分步说明  
- 下面的说明介绍了如何连接到 Windows 8 或更高版本上运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 对于早期的 SQL Server 或 Windows 版本略有调整。 在作为本地管理员组的成员登录到 Windows 时必须按这些说明操作，假定在计算机上安装了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+## <a name="step-by-step-instructions"></a>分步说明  
+ 下面的说明介绍了如何连接到 Windows 8 或更高版本上运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 对于早期的 SQL Server 或 Windows 版本略有调整。 在作为本地管理员组的成员登录到 Windows 时必须按这些说明操作，假定在计算机上安装了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 1.  从“开始”页启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在“视图”  菜单上，选择“已注册的服务器” 。 （如果尚未注册你的服务器，请右键单击“本地服务器组”，指向“任务”，然后单击“注册本地服务器”。）  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 15
   
  现在您应能与以下帐户之一正常连接：它们是 **sysadmin** 固定服务器角色的成员。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

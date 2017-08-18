@@ -1,28 +1,33 @@
 ---
-title: "“验证”页（AlwaysOn 可用性组向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.validation.f1"
-  - "sql13.swb.adddatabasewizard.validation.f1"
-  - "sql13.swb.newagwizard.validation.f1"
-helpviewer_keywords: 
-  - ", 侦听器"
+title: "“验证”页（AlwaysOn 可用性组向导）| Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.validation.f1
+- sql13.swb.adddatabasewizard.validation.f1
+- sql13.swb.newagwizard.validation.f1
+helpviewer_keywords:
+- ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6f8c43c0c8a698fb38f67f7ba6ba0ad897692f00
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “验证”页（AlwaysOn 可用性组向导）
+# <a name="validation-page-always-on-availability-group-wizards"></a>“验证”页（AlwaysOn 可用性组向导）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   
@@ -55,10 +60,11 @@ caps.handback.revision: 16
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

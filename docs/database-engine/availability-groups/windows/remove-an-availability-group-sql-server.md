@@ -1,28 +1,33 @@
 ---
 title: "删除可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.deleteag.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 删除"
-  - "可用性组 [SQL Server], 删除"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.deleteag.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 393f088ea977236aa7feba6107828eb64e646b64
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除可用性组 (SQL Server)
-  本主题说明了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中删除 AlwaysOn 可用性组。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
+# <a name="remove-an-availability-group-sql-server"></a>删除可用性组 (SQL Server)
+  本主题说明了如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中删除 AlwaysOn 可用性组。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，将删除任何关联的可用性组侦听器。  
   
  请注意，如果需要，您可以从拥有某一可用性组的正确安全凭据的任何 Windows Server 故障转移群集 (WSFC) 节点删除该可用性组。 因此，在某一可用性组未保留任何可用性副本时，您可以删除该可用性组。  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 48
   
 -   如果 Windows Server 故障转移群集 (WSFC) 群集没有仲裁，则避免删除可用性组。 如果在群集缺少仲裁时必须删除可用性组，则不删除群集中存储的元数据可用性组。 在群集重新获得仲裁后，将需要再次删除此可用性组以便将其从 WSFC 群集中删除。  
   
--   在辅助副本上，DROP AVAILABILITY GROUP 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果您从辅助副本中删除该可用性组，则主副本无法确定出现 OFFLINE 状态是因为仲裁丢失、强制故障转移还是 DROP AVAILABILITY GROUP 命令。 主副本将转换为 RESTORING 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅[工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）。  
+-   在辅助副本上，DROP AVAILABILITY GROUP 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果您从辅助副本中删除该可用性组，则主副本无法确定出现 OFFLINE 状态是因为仲裁丢失、强制故障转移还是 DROP AVAILABILITY GROUP 命令。 主副本将转换为 RESTORING 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 48
   
 3.  此步骤取决于您是要删除多个可用性组还是只删除一个可用性组，如下所示：  
   
-    -   若要删除多个可用性组（其主要副本位于连接的服务器实例上），请使用“对象资源管理器详细信息”窗格查看和选择要删除的所有可用性组。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)。  
+    -   若要删除多个可用性组（其主要副本位于连接的服务器实例上），请使用“对象资源管理器详细信息”窗格查看和选择要删除的所有可用性组。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   若要删除单个可用性组，请在 **“对象资源管理器”** 窗格或 **“对象资源管理器详细信息”** 窗格中选择它。  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 48
   
      DROP AVAILABILITY GROUP *group_name*  
   
-     其中，*group_name* 是要删除的可用性组的名称。  
+     其中， *group_name* 是要删除的可用性组的名称。  
   
      下面的示例将删除 `MyAG` 可用性组。  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 48
   
 2.  使用 **Remove-SqlAvailabilityGroup** cmdlet。  
   
-     例如，下面的命令删除名为 `MyAg` 的可用性组。 可以对承载可用性组的可用性副本的任何服务器实例执行此命令。  
+     例如，下面的命令删除名为 `MyAg`的可用性组。 可以对承载可用性组的可用性副本的任何服务器实例执行此命令。  
   
     ```  
     Remove-SqlAvailabilityGroup `   
@@ -113,7 +118,7 @@ caps.handback.revision: 48
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -121,10 +126,11 @@ caps.handback.revision: 48
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)（CSS SQL Server 工程师博客）  
+-   [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
   
+

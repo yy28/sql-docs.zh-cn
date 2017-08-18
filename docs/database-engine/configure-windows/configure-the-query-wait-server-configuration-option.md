@@ -1,29 +1,34 @@
 ---
-title: "配置查询等待值服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查询 [SQL Server], 超时"
-  - "时间 [SQL Server], 查询等待时间"
-  - "query wait 选项 [SQL Server]"
+title: "配置 query wait 服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], timing out
+- time [SQL Server], query wait time
+- query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01ad4ae8b2d274dcb7f510f4f91b9830aa478a0f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置查询等待值服务器配置选项
+# <a name="configure-the-query-wait-server-configuration-option"></a>配置查询等待值服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询等待值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当没有足够的内存来运行查询时，大量占用内存的查询（如那些涉及排序和哈希操作的查询）将排队等待。 “查询等待值”选项指定一个查询在超时前等待所需资源的时间（以秒为单位，范围从 0 到 2147483647）。 该选项的默认值为 -1。 这意味着超时值计算为估计的查询开销的 25 倍。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询等待值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当没有足够的内存来运行查询时，大量占用内存的查询（如那些涉及排序和哈希操作的查询）将排队等待。 **“查询等待值”** 选项指定一个查询在超时前等待所需资源的时间（以秒为单位，范围从 0 到 2147483647）。 该选项的默认值为 -1。 这意味着超时值计算为估计的查询开销的 25 倍。  
   
 > [!IMPORTANT]  
 >  包含等待查询的事务在查询等待内存时可能会持有锁。 在极个别的情况下，可能会发生无法检测到的死锁。 减少查询等待时间可降低这类死锁的概率。 最终，等待的查询将被终止并且事务锁将被释放。 但是，增加最大等待时间将增大该类查询被终止的时间。 不建议改变该选项。  
@@ -57,9 +62,9 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 query wait 选项  
+#### <a name="to-configure-the-query-wait-option"></a>配置 query wait 选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“高级”** 节点。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 26
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 query wait 选项  
+#### <a name="to-configure-the-query-wait-option"></a>配置 query wait 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -89,14 +94,15 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置查询等待值选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

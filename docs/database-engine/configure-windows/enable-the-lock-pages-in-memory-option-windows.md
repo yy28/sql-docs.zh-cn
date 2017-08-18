@@ -1,32 +1,37 @@
 ---
 title: "启用“锁定内存页”选项 (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "“锁定内存页”选项"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 启用“锁定内存页”选项 (Windows)
+# <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
   此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
   
 > [!NOTE]  
 >  当预计会将内存分页到磁盘时，锁定内存中的页可以大大提高性能。  
   
- 使用 Windows 组策略工具 (gpedit.msc)，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的帐户启用此策略。 必须是系统管理员才能更改此策略。  
+ 使用 Windows 组策略工具 (gpedit.msc)，可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的帐户启用此策略。 必须是系统管理员才能更改此策略。  
   
-### 启用“锁定内存页”选项  
+### <a name="to-enable-the-lock-pages-in-memory-option"></a>启用“锁定内存页”选项  
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。 在“打开”  框中，键入 **gpedit.msc**  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
 8.  注销后重新登录，此更改才生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

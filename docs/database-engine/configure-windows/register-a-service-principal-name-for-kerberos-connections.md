@@ -1,28 +1,33 @@
 ---
 title: "为 Kerberos 连接注册服务主体名称 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "连接 [SQL Server], SPN"
-  - "网络连接 [SQL Server], SPN"
-  - "注册 SPN"
-  - "服务主体名称"
-  - "SPN [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [SQL Server], SPNs
+- network connections [SQL Server], SPNs
+- registering SPNs
+- Server Principal Names
+- SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b8ceebad6ec1dfaf4427864b97cd8c2076e1a2f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 为 Kerberos 连接注册服务主体名称
+# <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
   若要将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则以下两个条件都必须得到满足：  
   
 -   客户端计算机和服务器计算机必须属于同一 Windows 域或在可信域中。  
@@ -56,7 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Windows 身份验证是向 SQL Server 验证用户身份的首选方法。 使用 Windows 身份验证的客户端通过 NTLM 或 Kerberos 进行身份验证。 在 Active Directory 环境中，始终首先尝试 Kerberos 身份验证。 Kerberos 身份验证不可用于使用命名管道的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 客户端。  
   
 ##  <a name="Permissions"></a> 权限  
- 当启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务时，它将尝试注册服务主体名称 (SPN)。 如果启动 SQL Server 的帐户没有在 Active Directory 域服务中注册 SPN 的权限，则此调用将失败，并将在应用程序事件日志以及 SQL Server 错误日志中记录一条警告消息。 若要注册 SPN，必须在内置帐户（如 Local System（建议不要使用）或 NETWORK SERVICE）或有权注册 SPN 的帐户（如域管理员帐户）下运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[win7](../../includes/win7-md.md)] 操作系统上运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 时，可以使用虚拟帐户或托管服务帐户 (MSA) 运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 虚拟帐户和 MSA 都可以注册 SPN。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不在上述任一帐户下运行，则启动时不会注册 SPN，此时，域管理员必须手动注册 SPN。  
+ 当启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务时，它将尝试注册服务主体名称 (SPN)。 如果启动 SQL Server 的帐户没有在 Active Directory 域服务中注册 SPN 的权限，则此调用将失败，并将在应用程序事件日志以及 SQL Server 错误日志中记录一条警告消息。 若要注册 SPN，必须在内置帐户（如 Local System（建议不要使用）或 NETWORK SERVICE）或有权注册 SPN 的帐户（如域管理员帐户）下运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或  [!INCLUDE[win7](../../includes/win7-md.md)] 操作系统上运行  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 时，可以使用虚拟帐户或托管服务帐户 (MSA) 运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 虚拟帐户和 MSA 都可以注册 SPN。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不在上述任一帐户下运行，则启动时不会注册 SPN，此时，域管理员必须手动注册 SPN。  
   
 > [!NOTE]  
 >  将 Windows 域配置为在低于 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 功能级别的级别上运行时，托管服务帐户将不具有注册 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务的 SPN 所需的权限。 如果需要进行 Kerberos 身份验证，域管理员应手动在托管服务帐户上注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN。  
@@ -66,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
   
 ##  <a name="Formats"></a> SPN 格式  
- 自 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，SPN 格式已发生更改，目的是为了支持对 TCP/IP、Named Pipes 和 Shared Memory 进行 Kerberos 身份验证。 所支持的命名实例和默认实例的 SPN 格式如下所示。  
+ 自 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，SPN 格式已发生更改，目的是为了支持对 TCP/IP、Named Pipes 和 Shared Memory 进行 Kerberos 身份验证。 所支持的命名实例和默认实例的 SPN 格式如下所示。  
   
  **命名实例**  
   
@@ -102,9 +107,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn/InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例名称。|  
   
 ##  <a name="Auto"></a> 自动注册 SPN  
- 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 *MSSQLSvc/\<FQDN>*:*\<tcpport>*。命名实例和默认实例均将注册为 *MSSQLSvc*，可根据 *\<tcpport>* 值来区分这些实例。  
+ 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>:\<tcpport>。命名实例和默认实例均将注册为 MSSQLSvc，可根据 \<tcpport> 值来区分这些实例。  
   
- 对于支持 Kerberos 的其他连接，为命名实例注册 SPN 时使用的格式为 *MSSQLSvc/\<FQDN>*/*\<instancename>*。 注册默认实例的格式为 *MSSQLSvc/\<FQDN>*。  
+ 对于支持 Kerberos 的其他连接，为命名实例注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>/\<实例名>。 注册默认实例的格式为 MSSQLSvc/\<FQDN>。  
   
  如果服务帐户缺少执行这些操作所需的权限，在注册或取消注册 SPN 时可能需要进行手动干预。  
   
@@ -140,9 +145,9 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname
   
  可将服务帐户用作 SPN。 可以通过 Kerberos 身份验证的连接属性指定服务帐户，并采用以下格式：  
   
--   **username@domain** 或 **domain\username**（适用于域用户帐户）  
+-   **username@domain** 操作系统上运行 **domain\username** （适用于域用户帐户）  
   
--   **machine$@domain** 或 **host\FQDN**（适用于计算机域帐户，如 Local System 或 NETWORK SERVICES）。  
+-   machine$@domain 或 host\FQDN（适用于计算机域帐户，如 Local System 或 NETWORK SERVICES）。  
   
  若要确定连接的身份验证方法，请执行下面的查询。  
   
@@ -172,7 +177,7 @@ WHERE session_id = @@SPID;
   
  如果在关闭时 SPN 取消注册失败，将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中记录此失败，而关闭过程将继续进行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [客户端连接中的服务主体名称 (SPN) 支持](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [客户端连接中的服务主体名称 (SPN) (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [客户端连接中的服务主体名称 (SPN) (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

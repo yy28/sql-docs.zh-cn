@@ -1,39 +1,44 @@
 ---
 title: "启用或禁用服务器网络协议 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "网络协议 [SQL Server], 禁用"
-  - "远程连接 [SQL Server], 使用配置管理器启用"
-  - "协议 [SQL Server], 使用配置管理器启用"
-  - "协议 [SQL Server], 使用配置管理器禁用"
-  - "禁用网络协议, 配置管理器"
-  - "网络协议 [SQL Server], 启用"
-  - "启用网络协议, 配置管理器"
-  - "外围应用配置 [SQL Server], 连接协议"
-  - "连接 [SQL Server], 使用配置管理器启用远程"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- network protocols [SQL Server], disabling
+- remote connections [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], enabling using Configuration Manager
+- protocols [SQL Server], disabling using Configuration Manager
+- disabling network protocols, Configuration Manager
+- network protocols [SQL Server], enabling
+- enabling network protocols, Configuration Manager
+- surface area configuration [SQL Server], connection protocols
+- connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bb0a9abeba4730bd2d5d4e57cd7b02b2b93b55c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
 # 启用或禁用服务器网络协议
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]，更改才能生效。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所有网络协议都是由  安装程序安装的，可以启用也可以禁用这些网络协议。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 本主题介绍如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或 PowerShell，在  中启用或禁用服务器网络协议。 必须停止并重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，更改才能生效。  
   
 > [!IMPORTANT]  
->  在安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 过程中，为 BUILTIN\Users 组添加一个登录名。 这可以使计算机的所有通过身份验证的用户作为 public 角色成员访问 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例。 可以安全地删除 BUILTIN\Users 登录名，以限制[!INCLUDE[ssDE](../../includes/ssde-md.md)]对具有单独登录名或为使用此登录名的其他 Windows 组成员的计算机用户的访问。  
+>  在安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 过程中，为 BUILTIN\Users 组添加一个登录名。 这可以使计算机的所有通过身份验证的用户作为 public 角色成员访问 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 实例。 可以安全地删除 BUILTIN\Users 登录名，以限制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对具有单独登录名或为使用此登录名的其他 Windows 组成员的计算机用户的访问。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据提供程序支持 TLS 1.0 和 SSL 3.0。 如果通过在操作系统 SChannel 层中进行更改来强制使用不同的协议（例如 TLS 1.1 或 TLS 1.2），你可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供程序支持 TLS 1.0 和 SSL 3.0。 如果通过在操作系统 SChannel 层中进行更改来强制使用不同的协议（例如 TLS 1.1 或 TLS 1.2），你可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **本主题内容**  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 29
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 配置管理器的控制台窗格中，展开“SQL Server 网络配置”。  
   
-2.  在控制台窗格中，单击“*\<实例名称>* 的协议”。  
+2.  在控制台窗格中，单击“\<实例名称> 的协议”。  
   
-3.  在细节窗格中，右键单击要更改的协议，再单击“启用”或“禁用”。  
+3.  在细节窗格中，右键单击要更改的协议，再单击“启用”  或“禁用” 。  
   
 4.  在控制台窗格中，单击“SQL Server 服务”。  
   
-5.  在细节窗格中，右键单击“SQL Server (\<实例名称>)”********，然后单击“重启”停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+5.  在细节窗格中，右键单击“SQL Server (\<实例名称>)”，然后单击“重启”停止并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
 2.  可以从任务栏启动 Windows PowerShell，也可以通过依次单击“开始”、“所有程序”、“附件”、“Windows PowerShell”、“Windows PowerShell”来启动。  
   
-3.  通过输入 **Import-Module “sqlps”** 导入 **sqlps** 模块。  
+3.  通过输入 **sqlps** 导入 **Import-Module “sqlps”**模块。  
   
 4.  执行以下语句以启用 TCP 和 Named Pipes 协议。 `<computer_name>` 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为运行  的计算机的名称。 `MSSQLSERVER` 如果您在配置命名实例，请将  替换为该实例的名称。  
   

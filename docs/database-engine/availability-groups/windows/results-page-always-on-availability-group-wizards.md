@@ -1,27 +1,32 @@
 ---
-title: "“结果”页（AlwaysOn 可用性组向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.failoverwizard.results.f1"
-  - "sql13.swb.newagwizard.results.f1"
-  - "sql13.swb.addreplicawizard.results.f1"
-  - "sql13.swb.adddatabasewizard.results.f1"
+title: "“结果”页（AlwaysOn 可用性组向导）| Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.failoverwizard.results.f1
+- sql13.swb.newagwizard.results.f1
+- sql13.swb.addreplicawizard.results.f1
+- sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2d5e0af523fbe56e4b3715e6e157436d80ee268c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “结果”页（AlwaysOn 可用性组向导）
+# <a name="results-page-always-on-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可查看该向导的结果。  
@@ -46,11 +51,12 @@ caps.handback.revision: 9
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 -   [使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

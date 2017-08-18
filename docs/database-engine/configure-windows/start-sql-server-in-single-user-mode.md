@@ -1,28 +1,33 @@
 ---
 title: "在单用户模式下启动 SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "启动 SQL Server, 单用户模式"
-  - "单用户模式 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- starting SQL Server, single-user mode
+- single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68b8a10ce5ecc12ee43bdbc7349d76c25a0f3be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 在单用户模式下启动 SQL Server
-  在某些情况下，可能必须使用 **startup option -m** 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 例如，您可能要更改服务器配置选项或恢复已破坏的 master 数据库或其他系统数据库。 这两个操作都需要在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
+# <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
+  在某些情况下，可能必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup option -m **在单用户模式下启动**实例。 例如，您可能要更改服务器配置选项或恢复已破坏的 master 数据库或其他系统数据库。 这两个操作都需要在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
- 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使计算机本地 Administrators 组的任何成员作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
+ 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使计算机本地 Administrators 组的任何成员作为 sysadmin 固定服务器角色的成员连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
   
  在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，请注意下列事项：  
   
@@ -33,14 +38,14 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  在单用户模式下连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之前，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务；否则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务将使用该连接，从而使其阻塞。  
   
- 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的对象资源管理器可能会失败，因为在某些操作中它需要使用多个连接。 若要在单用户模式下管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（仅通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器连接）或者使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+ 在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的对象资源管理器可能会失败，因为在某些操作中它需要使用多个连接。 若要在单用户模式下管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（仅通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器连接）或者使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
- 当你将 **-m** 选项与 **sqlcmd** 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 结合使用时，可以将连接限制为指定的客户端应用程序。 例如，**-m"sqlcmd"** 将连接限制为单个连接，并且该连接必须将自身标识为 **sqlcmd** 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
+ 当你将 **-m** 选项与 **sqlcmd** 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]结合使用时，可以将连接限制为指定的客户端应用程序。 例如， **-m"sqlcmd"** 将连接限制为单个连接，并且该连接必须将自身标识为 **sqlcmd** 客户端程序。 当您正在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并且未知的客户端应用程序正在占用这个唯一的可用连接时，使用此选项。 若要通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的查询编辑器进行连接，请使用 **-m"Microsoft SQL Server Management Studio - Query"**。  
   
 > [!IMPORTANT]  
 >  不要将此选项作为安全功能使用。 客户端应用程序提供客户端应用程序名称，并且提供假名称来作为连接字符串的一部分。  
   
-## 针对群集安装的说明  
+## <a name="note-for-clustered-installations"></a>针对群集安装的说明  
  对于群集环境中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，群集资源 dll 将占用可用连接，因此阻塞与服务器的任何其他连接。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处于此状态下时，如果您尝试使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理资源处于联机状态，则在该资源配置为对组产生影响时，它可能会将 SQL 资源故障转移到其他节点。  
   
  为解决此问题，请执行以下过程：  
@@ -58,8 +63,8 @@ caps.handback.revision: 36
   
 6.  一旦完成该操作后，关闭命令提示符并且通过群集管理器使 SQL 和其他资源返回联机状态。  
   
-## 另请参阅  
- [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
+## <a name="see-also"></a>另请参阅  
+ [启动、停止或暂停 SQL Server 代理服务](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
  [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   

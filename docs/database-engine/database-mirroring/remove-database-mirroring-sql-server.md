@@ -1,25 +1,30 @@
 ---
 title: "删除数据库镜像 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 删除"
-  - "删除数据库镜像 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], removing
+- removing database mirroring [SQL Server]
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 00206868e245fce59e3121e52a9a2c855b7f26f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 删除数据库镜像 (SQL Server)
+# <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库删除数据库镜像。  数据库所有者可以随时通过从数据库中删除镜像来手动停止数据库镜像会话。  
   
  **本主题内容**  
@@ -47,7 +52,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除数据库镜像  
+#### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
   
 1.  在数据库镜像会话期间，连接到主体服务器实例，然后在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 42
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要删除数据库镜像，请使用 **“数据库属性”**， 即使用 **“数据库属性”** 对话框的 **“镜像”** 页。  
   
-#### 删除数据库镜像  
+#### <a name="to-remove-database-mirroring"></a>删除数据库镜像  
   
 1.  为任一镜像伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -108,15 +113,16 @@ caps.handback.revision: 42
   
 -   [从数据库镜像会话删除见证服务器 (SQL Server)](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [示例：使用证书设置数据库镜像 (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,40 +1,36 @@
 ---
-title: "指定服务器网络地址（数据库镜像） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 部署"
-  - "数据库镜像 [SQL Server], 终结点"
-  - "端点 [SQL Server], 数据库镜像"
-  - "服务器网络地址 [SQL Server]"
+title: "指定服务器网络地址（数据库镜像）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 指定服务器网络地址（数据库镜像）
+# <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
   设置数据库镜像会话要求每个服务器实例都有一个服务器网络地址。 服务器实例的服务器网络地址必须通过提供系统地址和实例侦听的端口号来明确标识该实例。  
   
- 在服务器网络地址中指定一个端口之前，服务器实例上必须具有数据库镜像端点。 有关详细信息，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+ 在服务器网络地址中指定一个端口之前，服务器实例上必须具有数据库镜像端点。 有关详细信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
- **本主题内容：**  
-  
--   [服务器网络地址的语法](#Syntax)  
-  
--   [查找完全限定域名](#FindFqDn)  
-  
--   [示例](#Examples)  
-  
--   [相关任务](#RelatedTasks)  
   
 ##  <a name="Syntax"></a> 服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
@@ -43,9 +39,9 @@ caps.handback.revision: 59
   
  其中  
   
--   \<system-address>* 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   \<system-address> 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
-    -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如，`SYSTEM46`。  
+    -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如， `SYSTEM46`。  
   
     -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：**[***<IPv6_address>***]**。  
   
@@ -53,16 +49,16 @@ caps.handback.revision: 59
   
     -   保证完全限定域名的有效性。 它是在不同位置具有不同形式的本地定义的地址字符串。 通常（但并不总是），完全限定域名是一个复合名称，包含计算机名称和一系列句点分隔的域段，其格式为：  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         *computer_name* **。** *domain_segment*[...**.***domain_segment*]  
   
-         其中，*computer_name* 是运行服务器实例的计算机的网络名称，*domain_segment*[...**.***domain_segment*] 是服务器的其余域信息；例如：`localinfo.corp.Adventure-Works.com`。  
+         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[...**.***domain_segment*] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 如果您不知道服务器的完全限定域名，请与系统管理员联系。  
   
         > [!NOTE]  
         >  有关如何查找完全限定域名的信息，请参阅本主题后面的“查找完全限定域名”。  
   
--   *\<port>* 是合作伙伴服务器实例的镜像终结点所使用的端口号。 有关指定终结点的信息，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   \<port> 是合作伙伴服务器实例的镜像终结点所使用的端口号。 有关指定终结点的信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 计算机系统上的每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，设置数据库镜像会话时在服务器网络地址中指定的端口会始终将会话定向到其端点与该端口关联的服务器实例。  
   
@@ -78,37 +74,37 @@ caps.handback.revision: 59
   
      找到 **type_desc** 值为“DATABASE_MIRRORING”的行，然后使用对应的端口号。  
   
-### 示例  
+### <a name="examples"></a>示例  
   
-#### A. 使用系统名称  
+#### <a name="a-using-a-system-name"></a>A. 使用系统名称  
  以下服务器网络地址指定系统名称 `SYSTEM46`和端口 `7022`。  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### B. 使用完全限定域名  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. 使用完全限定域名  
  以下服务器网络地址指定完全限定域名 `DBSERVER8.manufacturing.Adventure-Works.com`和端口 `7024`。  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### C. 使用 IPv4   
+#### <a name="c-using-ipv4"></a>C. 使用 IPv4  
  以下服务器网络地址指定 IPv4 地址 `10.193.9.134`和端口 `7023`。  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### D. 使用 IPv6  
+#### <a name="d-using-ipv6"></a>D. 使用 IPv6  
  以下服务器网络地址包含 IPv6 地址 `2001:4898:23:1002:20f:1fff:feff:b3a3`和端口 `7022`。  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022';  
 ```  
   
-## 查找完全限定域名  
+## <a name="finding-the-fully-qualified-domain-name"></a>查找完全限定域名  
  若要查找系统的完全限定域名，请在该系统的 Windows 命令提示符下，输入：  
   
  **IPCONFIG /ALL**  
@@ -140,7 +136,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

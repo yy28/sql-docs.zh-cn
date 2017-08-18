@@ -1,37 +1,42 @@
 ---
 title: "数据库镜像会话期间的角色切换 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "角色切换 [SQL Server]"
-  - "镜像伙伴 [SQL Server]"
-  - "故障转移 [SQL Server]"
-  - "故障转移伙伴 [SQL Server]"
-  - "数据库镜像 [SQL Server], 伙伴"
-  - "数据库镜像会话中的伙伴 [SQL Server]"
-  - "故障转移 [SQL Server], 数据库镜像"
-  - "数据库镜像 [SQL Server], 故障转移"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role switching [SQL Server]
+- mirroring partners [SQL Server]
+- failover [SQL Server]
+- failover partners [SQL Server]
+- database mirroring [SQL Server], partners
+- partners in database mirroring sessions [SQL Server]
+- failover [SQL Server], database mirroring
+- database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像会话期间的角色切换 (SQL Server)
+# <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
   在数据库镜像会话上下文中，通常可以使用一个称为“角色切换” 的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
   
 > [!NOTE]  
 >  本主题假定您熟悉数据库镜像运行模式。 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
- 下图显示了镜像伙伴（**Partner_A** 和 **Partner_B**）在一系列自动或手动故障转移间切换主体和镜像角色。  
+ 下图显示了镜像伙伴（ **Partner_A** 和 **Partner_B**）在一系列自动或手动故障转移间切换主体和镜像角色。  
   
  ![切换两次角色的伙伴](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "切换两次角色的伙伴")  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 50
  有三种角色切换类型：自动故障转移、手动故障转移和强制服务（可能造成数据丢失）。 对每种形式的支持取决于会话的运行模式。  
   
 > [!NOTE]  
->  如果不熟悉这些运行模式，请参阅[数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
+>  如果不熟悉这些运行模式，请参阅 [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
 -   **手动故障转移**  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  建议您在高性能模式下，将 WITNESS 属性设置为 OFF。 否则，若要使数据库联机，镜像服务器必须连接到见证服务器。  
   
-     有关详细信息，请参阅本主题后面的[强制服务（可能造成数据丢失）](#ForcedService)。  
+     有关详细信息，请参阅本主题后面的 [强制服务（可能造成数据丢失）](#ForcedService)。  
   
  下表概述了在每种运行模式下支持的故障转移形式。  
   
@@ -72,9 +77,9 @@ caps.handback.revision: 50
   
  在角色切换之后，某些元数据必须存在于伙伴双方上，以确保所有的数据库用户均可访问新的主体数据库。 此外，必须对新的主体服务器创建备份作业，以确保数据库继续进行定期备份。 有关详细信息，请参阅[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
- 在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。 有关详细信息，请参阅[估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。  
+ 在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。  
   
-##  <a name="ManualFailover"></a> 手动故障转移  
+##  <a name="ManualFailover"></a> Manual Failover  
  手动故障转移断开客户端与数据库的连接，并反转伙伴的角色。 仅高安全性模式支持手动故障转移。  
   
  **本节内容：**  
@@ -122,7 +127,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  新的镜像服务器重新同步数据库后，就可以再次执行故障转移，但按反向执行。  
   
- 执行故障转移后，客户端必须重新连接到当前的主体数据库。 有关详细信息，请参阅[将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 执行故障转移后，客户端必须重新连接到当前的主体数据库。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
  **启动手动故障转移**  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 50
   
 -   [手动故障转移数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
   
-##  <a name="AutomaticFailover"></a> 自动故障转移  
+##  <a name="AutomaticFailover"></a> Automatic Failover  
  只有在高安全性模式（*具有自动故障转移功能的高安全性模式*）下运行并且具有见证服务器的数据库镜像会话支持自动故障转移。 在具有自动故障转移功能的高安全性模式下，同步数据库后，如果主体数据库变得不可用，则会发生自动故障转移。 自动故障转移将导致镜像服务器接管主体服务器的角色，并使其数据库的副本联机以作为主体数据库。 因为每个在主体数据库中提交的事务同时也在镜像数据库中提交，所以需要使数据库保持同步以防止在故障转移过程中丢失数据。  
   
 > [!IMPORTANT]  
@@ -182,9 +187,9 @@ caps.handback.revision: 50
   
  ![自动故障转移](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自动故障转移")  
   
- 最初，所有三个服务器都已连接（会话具有完全仲裁）。 **Partner_A** 为主体服务器，**Partner_B** 为镜像服务器。 **Partner_A**（或 **Partner_A** 上的主体数据库）变得不可用。 见证服务器和 **Partner_B ** 都将认定主体服务器不可用，会话保留仲裁。 **Partner_B** 变为主体服务器，并将其数据库的副本用作新的主体数据库。 最后，**Partner_A** 重新连接到会话并发现 **Partner_B** 现在拥有主体角色。 **Partner_A** 接下来将接管镜像角色。  
+ 最初，所有三个服务器都已连接（会话具有完全仲裁）。 **Partner_A** 为主体服务器， **Partner_B** 为镜像服务器。 **Partner_A** （或 **Partner_A**上的主体数据库）变得不可用。 见证服务器和 **Partner_B** 都将认定主体服务器不可用，会话保留仲裁。 **Partner_B** 变为主体服务器，并将其数据库的副本用作新的主体数据库。 最后， **Partner_A** 重新连接到会话并发现 **Partner_B** 现在拥有主体角色。 **Partner_A** 接下来将接管镜像角色。  
   
- 执行故障转移后，客户端必须重新连接到当前的主体数据库。 有关详细信息，请参阅[将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 执行故障转移后，客户端必须重新连接到当前的主体数据库。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 > [!NOTE]  
 >  当发生故障转移时，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器准备就绪但尚未提交的事务被认为在数据库故障转移后已中止。  
@@ -210,7 +215,7 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  关闭见证服务器而保留完整事务安全，会将会话置于不带自动故障转移功能的高安全性模式中。  
   
-##  <a name="ForcedService"></a> 强制服务（可能造成数据丢失）  
+##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
  数据库镜像提供强制服务（可能造成数据丢失）作为灾难恢复方法，以允许将镜像服务器用作温备用服务器。 仅当主体服务器在镜像会话中与镜像服务器断开连接时，才能强制服务运行。 因为强制服务运行存在数据丢失的风险，所以应该谨慎使用。  
   
  是否支持强制服务取决于会话的运行模式和状态，如下所示：  
@@ -241,9 +246,9 @@ caps.handback.revision: 50
   
  ![可能会丢失数据的强制服务](../../database-engine/database-mirroring/media/dbm-forced-service.gif "可能会丢失数据的强制服务")  
   
- 在图中，原始主体服务器 **Partner_A** 不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开（也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
+ 在图中，原始主体服务器 **Partner_A**不可用于镜像服务器 **Partner_B**，从而导致镜像数据库断开连接。 确定 **Partner_A** 不可用于客户端之后，数据库管理员对 **Partner_B** 进行强制服务，这可能会造成数据丢失。 **Partner_B** 变为主体服务器，并在数据库公开（也就是未镜像）的情况下运行。 此时，客户端可以重新连接到 **Partner_B**。  
   
- 当 **Partner_A** 变得可用时，它会重新连接到新的主体服务器，从而重新加入会话并担当镜像角色。 镜像会话便会立即挂起，而尚未同步新的镜像数据库。 会话挂起之后，数据库管理员可以确定是恢复会话，还是在极特殊情况下删除镜像并尝试对以前主体数据库中的数据进行补救。 在此事例中，数据库管理员选择恢复镜像。 此时，**Partner_A** 接管镜像服务器的角色并将以前的主体数据库回滚到上次成功同步事务的时间点；如果在强制服务之前，未将所有提交的事务写入镜像服务器上的磁盘，则这些事务将丢失。 然后，**Partner_A** 通过应用自以前镜像服务器变为新主体服务器以来对新主体数据库所做的所有更改，前滚新的镜像数据库。  
+ 当 **Partner_A** 变得可用时，它会重新连接到新的主体服务器，从而重新加入会话并担当镜像角色。 镜像会话便会立即挂起，而尚未同步新的镜像数据库。 会话挂起之后，数据库管理员可以确定是恢复会话，还是在极特殊情况下删除镜像并尝试对以前主体数据库中的数据进行补救。 在此事例中，数据库管理员选择恢复镜像。 此时， **Partner_A** 接管镜像服务器的角色并将以前的主体数据库回滚到上次成功同步事务的时间点；如果在强制服务之前，未将所有提交的事务写入镜像服务器上的磁盘，则这些事务将丢失。 然后，**Partner_A** 通过应用自以前镜像服务器变为新主体服务器以来对新主体数据库所做的所有更改，前滚新的镜像数据库。  
   
 > [!NOTE]  
 >  虽然高性能模式不需要见证服务器，但如果配置了一个见证服务器，则仅当见证服务器当前连接到镜像服务器时，才可以强制服务运行。  
@@ -264,7 +269,7 @@ caps.handback.revision: 50
 ###  <a name="ManageDataLoss"></a> 管理潜在的数据丢失  
  强制服务之后，如果以前的主体服务器可用，并假设其数据库没有损坏，则可以尝试管理潜在的数据丢失。 管理潜在数据丢失的可用方法取决于原始主体服务器是否已重新连接到其伙伴并重新加入镜像会话。 假设原始主体服务器可以访问新的主体实例，则会自动透明地进行重新连接。  
   
-#### 已重新连接原始主体服务器  
+#### <a name="the-original-principal-server-has-reconnected"></a>已重新连接原始主体服务器  
  通常，出现故障后，原始主体服务器在重新启动时便会迅速重新连接到其伙伴。 重新连接后，原始主体服务器变为镜像服务器。 其数据库变为镜像数据库，并且在会话挂起之前进入恢复状态。 除非恢复镜像，否则不回滚镜像数据库。  
   
  但是，无法访问恢复数据库；因此，不能对其进行检查以确定恢复镜像时可能丢失的数据。 因此，确定是恢复镜像还是删除镜像取决于您是否能够完全接受数据丢失。  
@@ -277,7 +282,7 @@ caps.handback.revision: 50
   
      恢复镜像会导致新的镜像数据库如同步数据库第一步所述那样回滚。 如果出现故障时日志记录在发送队列中等待，则相应的事务将会丢失，即使已提交这些事务也会如此。  
   
-#### 尚未重新连接原始主体服务器  
+#### <a name="the-original-principal-server-has-not-reconnected"></a>尚未重新连接原始主体服务器  
  如果可以暂时阻止原始主体服务器通过网络重新连接到新的主体服务器，则可以检查原始主体数据库以确定恢复镜像时可能丢失的数据。  
   
 -   如果潜在的数据丢失可以接受  
@@ -307,9 +312,9 @@ caps.handback.revision: 50
   
 -   [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [数据库镜像期间可能出现的故障](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   

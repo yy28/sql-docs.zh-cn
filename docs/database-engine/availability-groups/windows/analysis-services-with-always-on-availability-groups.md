@@ -1,22 +1,27 @@
 ---
 title: "含有 AlwaysOn 可用性组的 Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 含有 AlwaysOn 可用性组的 Analysis Services
+# <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   AlwaysOn 可用性组是预定义的 SQL Server 关系数据库集合；当有条件触发任一个数据库进行故障转移时，这些数据库将执行集体故障转移，使请求重定向到同一可用性组中其他实例上的镜像数据库。 如果将可用性组用作高可用性解决方案，您可以将该组中的数据库用作 Analysis Services 表格或多维解决方案中的数据源。 使用可用性数据库时，以下所有 Analysis Services 操作都能按预期工作：处理或导入数据、直接查询关系数据（使用 ROLAP 存储或 DirectQuery 模式）以及写回。  
@@ -50,7 +55,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  以下步骤假定存在 AlwaysOn 可用性组和数据库。 如果要配置新组，请使用“新建可用性组向导”创建该组并联接数据库。 该向导检查先决条件，为每一步提供指导，并执行初始同步。 有关详细信息，请参阅[使用可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
-#### 第 1 步：配置对可用性副本的访问  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>第 1 步：配置对可用性副本的访问  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
@@ -73,14 +78,14 @@ caps.handback.revision: 12
   
          计划的故障转移也需要该属性。 如果出于测试目的要执行计划的手动故障转移，请将主副本和辅助副本的 **“可用性模式”** 同时设置为 **“同步提交”** 。  
   
-#### 第 2 步：配置只读路由  
+#### <a name="step-2-configure-read-only-routing"></a>第 2 步：配置只读路由  
   
 1.  连接到主副本。  
   
     > [!NOTE]  
     >  这些步骤来自 [为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)，为执行此任务提供了其他信息和说明。  
   
-2.  打开一个查询窗口，在其中粘贴以下脚本。 此脚本执行三项操作：启用对辅助副本的可读连接（默认禁用该连接）、设置只读路由 URL，以及创建确定连接请求的定向先后顺序的路由列表。  如果已经在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中设置了属性，则第一个语句（用于允许可读连接）是多余的，但为完整起见仍包括在该脚本中。  
+2.  打开一个查询窗口，在其中粘贴以下脚本。 此脚本执行三项操作：启用对辅助副本的可读连接（默认禁用该连接）、设置只读路由 URL，以及创建确定连接请求的定向先后顺序的路由列表。  如果已经在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中设置了属性，则第一个语句（用于允许可读连接）是多余的，但为完整起见仍包括在该脚本中。  
   
     ```  
     ALTER AVAILABILITY GROUP [AG1]  
@@ -140,9 +145,7 @@ caps.handback.revision: 12
   
      可用性组侦听器将客户端连接重定向到主副本以处理读写请求，或重定向到辅助副本（如果在连接字符串中指定了读意向）。 由于副本角色将在故障转移期间改变（此时主副本将变为辅助副本，辅助副本将变为主副本），所以您应该始终指定该侦听器，这样才能相应地重定向客户端连接。  
   
-     要确定可用性组侦听程序的名称，可以询问数据库管理员，或连接到可用性组中的某个实例并查看其 AlwaysOn 可用性配置。 在下面的屏幕截图中，可用性组侦听器为 **AdventureWorks2**。  
-  
-     ![](../Image/SSAS_Always OnInfoInSSMS.png)  
+     要确定可用性组侦听程序的名称，可以询问数据库管理员，或连接到可用性组中的某个实例并查看其 AlwaysOn 可用性配置。   
   
 4.  还是在连接管理器中，单击左侧导航窗格中的 **“全部”** ，查看数据访问接口的属性网格。  
   
@@ -154,7 +157,7 @@ caps.handback.revision: 12
   
      完成数据源设置并关闭数据源向导。  
   
-6.  向连接字符串添加 **MultiSubnetFailover=Yes**，以便更快地检测和连接到活动服务器。 有关此属性的详细信息，请参阅 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+6.  向连接字符串添加 **MultiSubnetFailover=Yes** ，以便更快地检测和连接到活动服务器。 有关此属性的详细信息，请参阅 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
      此属性不显示在属性网格中。 要添加该属性，请右键单击数据源并选择“查看代码”。 将 `MultiSubnetFailover=Yes` 添加到连接字符串。  
   
@@ -163,7 +166,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_test"></a> 测试配置  
  在 Analysis Services 中配置了辅助副本并创建了数据源连接后，您可以确认处理和查询命令是否重定向到辅助副本。 还可以执行计划的手动故障转移，以验证适用于此应用场景的恢复计划。  
   
-#### 第 1 步：确认数据源连接重定向到辅助副本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>第 1 步：确认数据源连接重定向到辅助副本  
   
 1.  启动 SQL Server Profiler 并连接到承载辅助副本的 SQL Server 实例。  
   
@@ -179,7 +182,7 @@ caps.handback.revision: 12
   
      在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services**的事件。 应能看到从承载辅助副本的服务器实例上的数据库中检索数据的 **SELECT** 语句，证明是通过该侦听器连接到辅助副本。  
   
-#### 第 2 步：执行计划的故障转移以测试配置  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>第 2 步：执行计划的故障转移以测试配置  
   
 1.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，检查主副本和辅助副本，确保两个副本均配置为同步提交模式并且当前保持同步。  
   
@@ -202,7 +205,7 @@ caps.handback.revision: 12
   
 7.  确认故障转移已成功：  
   
-    -   在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，展开可用性组以查看所指定的主副本和辅助副本。 以前充当主副本的实例现在应该变为辅助副本。  
+    -   在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中，展开可用性组以查看所指定的主副本和辅助副本。 以前充当主副本的实例现在应该变为辅助副本。  
   
     -   查看面板，确定是否检测到任何运行状况问题。 右键单击可用性组，然后选择“显示面板”。  
   
@@ -228,11 +231,12 @@ caps.handback.revision: 12
   
  为此，应该在 Analysis Services 模型中另外创建一个数据源，以便支持读写连接。 创建另一个数据源时，请使用你在只读连接中指定的相同的侦听器名称和数据库，但应保留支持 READWRITE 连接的默认设置，而不要修改“应用程序意向”。 您现在可以向基于读写数据源的数据源视图添加新的事实表或维度表，然后针对新表启用写回功能。  
   
-## 另请参阅  
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
- [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+## <a name="see-also"></a>另请参阅  
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [创建数据源（SSAS 多维）](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [启用维度写回](../../../analysis-services/multidimensional-models/enable-dimension-writeback.md)  
+ [启用维度写回](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

@@ -1,43 +1,48 @@
 ---
-title: "服务器属性（“高级”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.advanced.f1"
+title: "服务器属性（“高级”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 服务器属性（“高级”页）
+# <a name="server-properties---advanced-page"></a>服务器属性 -“高级”页
   使用此页可以查看或修改高级服务器设置。  
   
  **查看“服务器属性”页**  
   
 -   [查看或更改服务器属性 (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## 包含  
+## <a name="containment"></a>包含  
  启用包含的数据库  
  指示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否允许包含数据库。 如果为 **True**，则可以创建、还原或附加包含数据库。 如果为 **False**，则包含数据库不能创建、还原或附加到此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 更改包含属性可能会对数据库的安全性造成影响。 启用包含数据库将使数据库所有者授予对此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的访问权限。 禁用包含数据库可以阻止用户进行连接。 若要了解包含属性的影响，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md) 和 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 访问级别**  
- 显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上支持的 FILESTREAM 的当前级别。 若要更改访问级别，请选择以下值之一：  
+ 显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上支持的 FILESTREAM 的当前级别。 若要更改访问级别，请选择以下值之一：  
   
  **禁用**  
  无法将二进制大型对象 (BLOB) 数据存储在文件系统中。 这是默认值。  
   
  **已启用 Transact-SQL 访问**  
- 可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问 FILESTREAM 数据，但不能通过文件系统进行访问。  
+ 可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]访问 FILESTREAM 数据，但不能通过文件系统进行访问。  
   
  **已启用完全访问**  
  FILESTREAM 数据可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以及通过文件系统进行访问。  
@@ -47,12 +52,12 @@ caps.handback.revision: 65
  **FILESTREAM 共享名称**  
  显示在安装过程中选择的 FILESTREAM 共享的只读名称。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
-## 杂项  
+## <a name="miscellaneous"></a>杂项  
  **允许触发器激发其他触发器**  
  允许触发器激发其他触发器。 触发器最多可以嵌套 32 级。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md) 中的“嵌套触发器”部分。  
   
  **阻塞的进程阈值**  
- 生成阻塞的进程报告时使用的阈值（以秒为单位）。 该阈值可介于 0 到 86,400 之间。 默认情况下，不生成阻塞的进程报告。 有关详细信息，请参阅[阻塞的进程阈值服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
+ 生成阻塞的进程报告时使用的阈值（以秒为单位）。 该阈值可介于 0 到 86,400 之间。 默认情况下，不生成阻塞的进程报告。 有关详细信息，请参阅 [阻塞的进程阈值服务器配置选项](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)。  
   
  **游标阈值**  
  指定游标集中的行数，超过此行数，将异步生成游标键集。 当游标为结果集生成键集时，查询优化器会估算将为该结果集返回的行数。 如果查询优化器估算出的返回行数大于此阈值，则将异步生成游标，使用户能够在继续填充游标的同时从该游标中提取行。 否则，同步生成游标，查询将一直等待到返回所有行。  
@@ -66,12 +71,12 @@ caps.handback.revision: 65
  所有新登录名的默认语言，除非另行指定。  
   
  **全文升级选项**  
- 控制在从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级数据库时迁移全文检索的方式。 此属性适用于以下升级方式：附加数据库、还原数据库备份、还原文件备份或使用复制数据库向导复制数据库。  
+ 控制在从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级数据库时迁移全文检索的方式。 此属性适用于以下升级方式：附加数据库、还原数据库备份、还原文件备份或使用复制数据库向导复制数据库。  
   
  可以选择的选项如下：  
   
  **导入**  
- 导入全文目录。 该操作的执行速度比 **“重新生成”**的执行速度快很多。 不过，导入的全文目录不能使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新的和增强的断字符。 因此，最终可能还是要重新生成全文目录。  
+ 导入全文目录。 该操作的执行速度比 **“重新生成”**的执行速度快很多。 不过，导入的全文目录不能使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中引入的新的和增强的断字符。 因此，最终可能还是要重新生成全文目录。  
   
  如果全文目录不可用，则会重新生成关联的全文检索。 此选项仅对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库可用。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 65
  **重置**  
  重置全文目录。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 将删除全文目录文件，但会保留全文目录和全文索引的元数据。 在进行升级后，所有全文检索将禁用更改跟踪，并且不会自动启动爬网。 在升级完成后，目录将保留为空，直至手动执行完全填充。  
   
- 有关如何选择全文升级选项的信息，请参阅[升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
+ 有关如何选择全文升级选项的信息，请参阅 [升级全文搜索](../../relational-databases/search/upgrade-full-text-search.md)。  
   
 > [!NOTE]  
 >  也可以使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option 操作来设置全文升级选项。  
@@ -89,19 +94,19 @@ caps.handback.revision: 65
  将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  **最大文本复制大小**  
- 指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text**、**ntext**、**varchar(max)**、**nvarchar(max)**、**xml** 和 **image** 数据的最大大小（以字节为单位）。 对设置的更改将立即生效。 有关详细信息，请参阅 [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
+ 指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text**、 **ntext**、 **varchar(max)**、 **nvarchar(max)**、 **xml**和 **image** 数据的最大大小（以字节为单位）。 对设置的更改将立即生效。 有关详细信息，请参阅 [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
  **启动时扫描存储过程**  
- 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在启动时扫描并自动执行存储过程。 如果设置为 **True**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将扫描并自动运行服务器上定义的所有存储过程。 如果设置为 **False**（默认值），则不执行扫描。 有关详细信息，请参阅 [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)。  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在启动时扫描并自动执行存储过程。 如果设置为 **True**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将扫描并自动运行服务器上定义的所有存储过程。 如果设置为 **False** （默认值），则不执行扫描。 有关详细信息，请参阅 [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)。  
   
  **两位数年份截止**  
  指示可作为两位数年份输入的最高年数。 可将所列年份及其之前的 99 年作为两位数年份输入。 所有其他年份必须作为四位数年份输入。  
   
  例如，2049 的默认设置表明：作为 '3/14/49' 输入的日期将被解释为 2049 年 3 月 14 日，而作为 '3/14/50' 输入的日期则将被解释为 1950 年 3 月 14 日。 有关详细信息，请参阅 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
-## Network  
+## <a name="network"></a>Network  
  **网络数据包大小**  
- 设置整个网络使用的数据包大小（字节）。 默认数据包大小为 4096 个字节。 应用程序进行批量复制操作，或者发送或接收大量 **text**或 **image** 数据时，数据包大小大于默认值可以提高效率，因为这样可以减少网络读写操作。 如果应用程序发送和接收的信息量很小，可以将数据包的大小设置为 512 个字节，这对于大多数数据传输来说已经足够了。 有关详细信息，请参阅 [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)。  
+ 设置整个网络使用的数据包大小（字节）。 默认数据包大小为 4096 个字节。 应用程序进行批量复制操作，或者发送或接收大量 **text** 或 **image** 数据时，数据包大小大于默认值可以提高效率，因为这样可以减少网络读写操作。 如果应用程序发送和接收的信息量很小，可以将数据包的大小设置为 512 个字节，这对于大多数数据传输来说已经足够了。 有关详细信息，请参阅 [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)。  
   
 > [!NOTE]  
 >  除非您确信能够提高性能，否则不要更改数据包的大小。 对于大多数应用程序而言，默认数据包大小为最佳数值。  
@@ -111,9 +116,9 @@ caps.handback.revision: 65
   
  对设置的更改将立即生效。  
   
-## 并行：  
+## <a name="parallelism"></a>并行：  
  **并行的开销阈值**  
- 指定阈值，在高于该阈值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建并运行查询并行计划。 开销指的是在特定硬件配置中运行串行计划估计需要花费的时间（秒）。 只能为对称多处理器设置此选项。 有关详细信息，请参阅 [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。  
+ 指定阈值，在高于该阈值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建并运行查询并行计划。 开销指的是在特定硬件配置中运行串行计划估计需要花费的时间（秒）。 只能为对称多处理器设置此选项。 有关详细信息，请参阅 [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)。  
   
  **锁**  
  设置可用锁的最大数目，以限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据不断变化的系统要求动态地分配和释放锁。  
@@ -126,7 +131,7 @@ caps.handback.revision: 65
  **查询等待值**  
  指定在超时之前查询等待资源的秒数（0 到 2147483647）。 如果使用默认值 -1，则按估计查询开销的 25 倍计算超时值。 有关详细信息，请参阅 [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

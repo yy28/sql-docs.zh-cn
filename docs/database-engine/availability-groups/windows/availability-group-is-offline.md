@@ -1,28 +1,33 @@
 ---
 title: "可用性组处于脱机状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 策略"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c64ddb1c8c152594a359c1b10e0cb621e25bc11e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 可用性组处于脱机状态
+# <a name="availability-group-is-offline"></a>可用性组处于脱机状态
     
-## 简介  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  
@@ -31,15 +36,15 @@ caps.handback.revision: 14
 |**类别**|**严重**|  
 |**方面**|可用性组|  
   
-## 说明  
+## <a name="description"></a>说明  
  此策略检查可用性组的联机或脱机状态。 当可用性组的群集资源处于脱机状态或可用性组不具有主副本时，此策略处于不正常状态并引发警报。  
   
  当可用性组的群集资源处于联机状态并且可用性组具有主副本时，此策略处于正常状态。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的[可用性组处于脱机状态](http://go.microsoft.com/fwlink/p/?LinkId=220850)中。  
+>  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性组处于脱机状态](http://go.microsoft.com/fwlink/p/?LinkId=220850) 中。  
   
-## 可能的原因  
+## <a name="possible-causes"></a>可能的原因  
  此问题可能由承载主副本的服务器实例中的失败或 Windows Server 故障转移群集 (WSFC) 可用性组资源脱机引起。 可用性组脱机可能有以下原因：  
   
 -   可用性组未配置为自动故障转移模式。 主副本变为不可用且可用性组中所有副本的角色变为 RESOLVING。  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 -   对可用性组存在正在进行的自动、手动或强制故障转移。  
   
-## 可能的解决方法  
+## <a name="possible-solutions"></a>可能的解决方法  
  以下是此问题的可能解决方法：  
   
 -   如果主副本的 SQL Server 实例关闭，请重新启动服务器，然后验证可用性组恢复到正常状态。  
@@ -71,8 +76,9 @@ caps.handback.revision: 14
   
 -   如果正在进行故障转移，请等待故障转移完成。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [使用 AlwaysOn 面板 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

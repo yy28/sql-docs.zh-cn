@@ -1,25 +1,30 @@
 ---
 title: "数据库镜像和日志传送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 互操作性"
-  - "日志传送 [SQL Server], 数据库镜像"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像和日志传送 (SQL Server)
+# <a name="database-mirroring-and-log-shipping-sql-server"></a>数据库镜像和日志传送 (SQL Server)
   可以镜像或使用日志传送给定的数据库；也可以同时镜像并使用日志传送该数据库。 若要选择使用的方法，请考虑下列事项：  
   
 -   需要多少个目标服务器？  
@@ -35,20 +40,20 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  有关这些技术的介绍，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md) 和 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## 组合使用日志传送和数据库镜像  
+## <a name="combining-log-shipping-and-database-mirroring"></a>组合使用日志传送和数据库镜像  
  当日志传送备份共享保持不变时，镜像会话中的主体数据库也可以担当日志传送配置中的主数据库，反之亦然。 数据库镜像会话可以在任何操作模式下运行，同步（将事务安全性设置为 FULL）或异步（将事务安全性设置为 OFF）模式均可。  
   
 > [!NOTE]  
 >  若要在数据库中使用数据库镜像，始终需要完整恢复模式。  
   
- 通常，组合使用日志传送和数据库镜像时，会先建立镜像会话，然后再建立日志传送（尽管这并不是必需的）。 然后，当前主体数据库将被配置为日志传送主数据库（*主体/主数据库*），并与一个或多个远程辅助数据库一起使用。 而且，镜像数据库也必须被配置为日志传送主数据库（*镜像/主数据库*）。 日志传送辅助数据库应该位于非主体/主服务器或非镜像/主服务器的服务器实例上。  
+ 通常，组合使用日志传送和数据库镜像时，会先建立镜像会话，然后再建立日志传送（尽管这并不是必需的）。 然后，当前主体数据库将被配置为日志传送主数据库（ *主体/主数据库*），并与一个或多个远程辅助数据库一起使用。 而且，镜像数据库也必须被配置为日志传送主数据库（ *镜像/主数据库*）。 日志传送辅助数据库应该位于非主体/主服务器或非镜像/主服务器的服务器实例上。  
   
 > [!NOTE]  
 >  日志传送中所涉及的服务器的区分大小写设置应当匹配。  
   
  在日志传送会话期间，主数据库上的备份作业将在备份文件夹中创建日志备份。 辅助服务器的复制作业将从该位置复制备份。 若要使备份作业和复制作业成功，它们必须都能访问日志传送备份文件夹。 若要使主服务器达到最大可用性，我们建议在独立主机上的共享备份位置建立备份文件夹。 确保所有日志传送服务器（包括镜像/主服务器）都能访问共享备份位置（称为“备份共享”）。  
   
- 若要使日志传送在数据库镜像故障转移后仍能继续进行，还必须使用主体数据库上用于主服务器的配置将镜像服务器配置为主服务器。 镜像数据库处于还原状态，这样可以防止备份作业备份镜像数据库中的日志。 这将确保镜像/主数据库不会影响主体/主数据库，后者的日志备份当前正被辅助服务器复制。 为了防止虚假警报，在镜像/主数据库上执行备份作业之后，备份作业将向 **log_shipping_monitor_history_detail** 表中记录一条消息，然后代理作业将返回成功状态。  
+ 若要使日志传送在数据库镜像故障转移后仍能继续进行，还必须使用主体数据库上用于主服务器的配置将镜像服务器配置为主服务器。 镜像数据库处于还原状态，这样可以防止备份作业备份镜像数据库中的日志。 这将确保镜像/主数据库不会影响主体/主数据库，后者的日志备份当前正被辅助服务器复制。 为了防止虚假警报，在镜像/主数据库上执行备份作业之后，备份作业将向**log_shipping_monitor_history_detail** 表中记录一条消息，然后代理作业将返回成功状态。  
   
  镜像/主数据库在日志传送会话中处于非活动状态。 但是，如果镜像进行故障转移，则以前的镜像数据库将作为主体数据库联机。 此时，该数据库也将作为日志传送主数据库变为活动状态。 以前无法在该数据库中传送日志的日志传送备份作业也将开始传送日志。 相反，故障转移将使以前的主体/主数据库成为新的镜像/主数据库并进入还原状态，同时该数据库上的备份作业也将停止备份日志。  
   
@@ -59,24 +64,24 @@ caps.handback.revision: 36
   
  使用本地日志传送监视器时，此方案没有特别的注意事项。 有关如何对此方案使用远程监视实例的信息，请参阅本主题后面介绍的“数据库镜像对远程监视实例的影响”。  
   
-## 从主体数据库向镜像数据库进行故障转移  
- 下图显示了镜像在具有自动故障转移功能的高安全性模式下运行时日志传送和数据库镜像如何一起工作。 开始时，**Server_A** 既是用于镜像的主体服务器，也是日志传送的主服务器。 **Server_B** 既是镜像服务器，也被配置为主服务器（当前处于非活动状态）。 **Server_C** 和 **Server_D** 为日志传送辅助服务器。 为了使日志传送会话达到最大可用性，备份位置位于独立主机上的共享目录中。  
+## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>从主体数据库向镜像数据库进行故障转移  
+ 下图显示了镜像在具有自动故障转移功能的高安全性模式下运行时日志传送和数据库镜像如何一起工作。 开始时， **Server_A** 既是用于镜像的主体服务器，也是日志传送的主服务器。 **Server_B** 既是镜像服务器，也被配置为主服务器（当前处于非活动状态）。 **Server_C** 和 **Server_D** 为日志传送辅助服务器。 为了使日志传送会话达到最大可用性，备份位置位于独立主机上的共享目录中。  
   
  ![日志传送和数据库镜像](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "日志传送和数据库镜像")  
   
  完成镜像故障转移之后，辅助服务器上定义的主服务器名称保持不变。 。  
   
-## 数据库镜像对远程监视实例的影响  
+## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>数据库镜像对远程监视实例的影响  
  当日志传送与远程监视实例一起使用时，组合使用日志传送会话和数据库镜像会影响监视器表中的信息。 有关主服务器的信息是在主体/主服务器上配置的监视器与在每个辅助服务器上配置的监视器的组合。  
   
  若要尽可能地保持无缝监视，在使用远程监视器时，我们建议您在辅助服务器上配置主服务器时指定原来的主服务器名称。 此方法也可以使更改 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中的日志传送配置变得更加方便。 有关监视的详细信息，请参阅[监视日志传送 (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)。  
   
-## 同时设置镜像和日志传送  
+## <a name="setting-up-mirroring-and-log-shipping-together"></a>同时设置镜像和日志传送  
  若要同时设置数据库镜像和日志传送，需要执行下列步骤：  
   
 1.  使用 NORECOVERY 将主体/主数据库的备份还原到其他服务器实例，从而在以后作为经过数据库镜像实现的主体/主数据库的镜像数据库使用。 有关详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
-2.  设置数据库镜像。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) 或 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+2.  设置数据库镜像。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 或 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
   
 3.  将主体/主数据库的备份还原到其他服务器实例，后者以后将用作主数据库的日志传送辅助数据库。  
   

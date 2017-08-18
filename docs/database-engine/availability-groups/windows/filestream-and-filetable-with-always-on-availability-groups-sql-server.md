@@ -1,29 +1,34 @@
 ---
-title: "FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 可用性组"
-  - "FILESTREAM [SQL Server], 可用性组"
-  - "可用性组 [SQL Server], 互操作性"
+title: "含 AlwaysOn 可用性组的 FILESTREAM 和 FileTable (SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], Availability Groups
+- FILESTREAM [SQL Server], Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cdd5119460d5b982c30c3e04e924e9a6b501f559
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)
+# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  本主题包含将 FILESTREAM 和 FileTable 功能与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 一起使用有关的信息。  
+  本主题包含将 FILESTREAM 和 FileTable 功能与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]一起使用有关的信息。  
   
  支持所有 FILESTREAM 功能。 故障转移后，FILESTREAM 数据在可读辅助副本和新的主副本上均可访问。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 15
 -   在将使用 FILESTREAM 的数据库（具有或不具有 FileTable）添加到某一可用性组之前，请确保在承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。 有关详细信息，请参阅 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)。  
   
 ##  <a name="vnn"></a> 为 FILESTREAM 和 FileTable 访问使用虚拟网络名称 (VNN)  
- 当您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上启用 FILESTREAM 时，将创建实例级别共享以便提供对 FILESTREAM 数据的访问。 可通过按以下格式使用计算机名称来访问此共享：  
+ 当您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上启用 FILESTREAM 时，将创建实例级别共享以便提供对 FILESTREAM 数据的访问。 可通过按以下格式使用计算机名称来访问此共享：  
   
  `\\<computer_name>\<filestream_share_name>`  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 15
   
  在发生以下事件之一时将创建 VNN 范围的共享。  
   
--   你将包含 FILESTREAM 数据的数据库添加到主要副本上的 AlwaysOn 可用性组。 在此情况下，共享 `\\<computer_name>\<filestream_share_name>` 已存在。 创建共享 `\\<VNN>\<filestream_share_name>`。  
+-   你将包含 FILESTREAM 数据的数据库添加到主要副本上的 AlwaysOn 可用性组。 在此情况下，共享 `\\<computer_name>\<filestream_share_name>` 已存在。 创建共享 `\\<VNN>\<filestream_share_name>` 。  
   
 -   您对具有可用性组的主副本上的文件 i/o 流访问启用 FILESTREAM。 创建以下共享：  
   
@@ -78,14 +83,15 @@ caps.handback.revision: 15
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [启用 FileTable 的先决条件](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
  无。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

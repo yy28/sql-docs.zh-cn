@@ -1,28 +1,33 @@
 ---
 title: "更改服务器实例的 HADR 群集上下文 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], WSFC 群集"
-  - "可用性副本 [SQL Server], 更改 WSFC 群集上下文"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 更改服务器实例的 HADR 群集上下文 (SQL Server)
-  本主题介绍如何通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，切换 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文*用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
+# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>更改服务器实例的 HADR 群集上下文 (SQL Server)
+  本主题介绍如何通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，切换 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文* 用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
   
- 仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 有关详细信息，请参阅[针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 仅在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的过程中切换 HADR 群集上下文。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨群集迁移支持用最短的可用性组停机时间将操作系统升级到 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 。 有关详细信息，请参阅 [针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移](http://msdn.microsoft.com/library/jj873730.aspx)。  
   
 -   **开始之前：**  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 31
   
 ###  <a name="Recommendations"></a> 建议  
   
--   我们建议您指定完整的域名。 这是因为为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 名称解析。 在某些情况下，根据 DNS 搜索顺序，使用短名称可能会导致混淆。 例如，考虑以下命令，该命令在 `abc` 域 (`node1.abc.com`) 中的节点上执行。 意向的目标群集是 `CLUS01` 域 (`xyz`) 中的 `clus01.xyz.com` 群集。 但是，本地域主机还承载名为 `CLUS01` (`clus01.abc.com`) 的一个群集。  
+-   我们建议您指定完整的域名。 这是因为为了找到短名称的目标 IP 地址，ALTER SERVER CONFIGURATION 使用 DNS 名称解析。 在某些情况下，根据 DNS 搜索顺序，使用短名称可能会导致混淆。 例如，考虑以下命令，该命令在 `abc` 域 (`node1.abc.com`) 中的节点上执行。 意向的目标群集是 `CLUS01` 域 ( `xyz` ) 中的`clus01.xyz.com`群集。 但是，本地域主机还承载名为 `CLUS01` (`clus01.abc.com`) 的一个群集。  
   
-     如果已指定目标群集 `CLUS01` 的短名称，则 DNS 名称解析可能会返回错误群集 `clus01.abc.com` 的 IP 地址。 为了避免此类混淆，请指定目标群集的完整名称，如下例中所示：  
+     如果已指定目标群集 `CLUS01`的短名称，则 DNS 名称解析可能会返回错误群集 `clus01.abc.com`的 IP 地址。 为了避免此类混淆，请指定目标群集的完整名称，如下例中所示：  
   
     ```  
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
@@ -115,7 +120,7 @@ caps.handback.revision: 31
      LOCAL  
      本地 WSFC 群集。  
   
-### 示例  
+### <a name="examples"></a>示例  
  下面的示例将 HADR 群集上下文更改为其他群集。 若要标识目标 WSFC 群集 ( `clus01`)，本示例指定完整的群集对象名称 ( `clus01.xyz.com`)。  
   
 ```  
@@ -163,11 +168,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技术文章](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

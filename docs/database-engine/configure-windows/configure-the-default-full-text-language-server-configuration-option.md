@@ -1,28 +1,33 @@
 ---
-title: "配置 default full-text language 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "语言 [全文搜索]"
-  - "default full-text language 选项"
+title: "配置“默认全文语言”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- languages [full-text search]
+- default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e910e8adf908fefc54f40b939bce107b3a32009b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 default full-text language 服务器配置选项
+# <a name="configure-the-default-full-text-language-server-configuration-option"></a>配置 default full-text language 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置“默认全文语言”服务器配置选项。 “默认全文语言”选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把“默认全文语言”选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，“默认全文语言”选项为“英语”。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置“默认全文语言”服务器配置选项。 **default full-text language** 选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将把 **default full-text language** 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的非本地化版本， **或** 选项为“英语”。  
   
  **本主题内容**  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 23
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   当没有通过 CREATE FULLTEXT INDEX 或 ALTER FULLTEXT INDEX 语句中的“language_term”选项为列指定任何语言时，则在全文索引中使用“默认全文语言”选项的值。 如果不支持默认全文语言，或者语言分析包不可用，则 CREATE 或 ALTER 操作将失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回说明指定语言无效的错误消息。  
+-   当没有通过 CREATE FULLTEXT INDEX 或 ALTER FULLTEXT INDEX 语句中的 **language_term** 选项为列指定任何语言时，则在全文索引中使用 **default full-text language** 选项的值。 如果不支持默认全文语言，或者语言分析包不可用，则 CREATE 或 ALTER 操作将失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回说明指定语言无效的错误消息。  
   
 ###  <a name="Recommendations"></a> 建议  
   
@@ -61,19 +66,19 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 default full-text language 选项  
+#### <a name="to-configure-the-default-full-text-language-option"></a>配置 default full-text language 选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“高级”** 节点。  
   
-3.  在“杂项”下，使用“默认全文语言”指定全文索引列的默认语言值。  
+3.  在“杂项”下，使用 **“默认全文语言”** 指定全文索引列的默认语言值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 default full-text language 选项  
+#### <a name="to-configure-the-default-full-text-language-option"></a>配置 default full-text language 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -93,12 +98,12 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 default full-text language 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -107,3 +112,4 @@ GO
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   
+

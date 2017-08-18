@@ -1,24 +1,29 @@
 ---
-title: "配置 cursor threshold 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cursor threshold 选项"
+title: "配置“游标阈值”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b17a4177e481059db1fa71b5e727590aca377b75
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 cursor threshold 服务器配置选项
+# <a name="configure-the-cursor-threshold-server-configuration-option"></a>配置 cursor threshold 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cursor threshold** 选项指定游标集中的行数，超过此行数，将异步生成游标键集。 当游标为结果集生成键集时，查询优化器会估算将为该结果集返回的行数。 如果查询优化器估算出的返回行数大于此阈值，则将异步生成游标，使用户能够在继续填充游标的同时从该游标中提取行。 否则，同步生成游标，查询将一直等待到返回所有行。  
@@ -53,7 +58,7 @@ caps.handback.revision: 28
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
   
--   如果将**游标阙值**设置为 -1，则所有游标键集将同步生成，这对于小游标集很有用。 如果将 **cursor threshold** 设置为 0，则所有游标键集将异步生成。 如果 **cursor threshold**为其他值，则查询优化器将比较该值与游标集中的所需行数，如果后者大于前者，则将异步生成键集。 不要将 **cursor threshold** 的值设置得过低，因为最好以同步方式创建小结果集。  
+-   如果将 **游标阙值** 设置为 -1，则所有游标键集将同步生成，这对于小游标集很有用。 如果将 **cursor threshold** 设置为 0，则所有游标键集将异步生成。 如果 **cursor threshold**为其他值，则查询优化器将比较该值与游标集中的所需行数，如果后者大于前者，则将异步生成键集。 不要将 **cursor threshold** 的值设置得过低，因为最好以同步方式创建小结果集。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 cursor threshold 选项  
+#### <a name="to-configure-the-cursor-threshold-option"></a>配置 cursor threshold 选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -72,13 +77,13 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 cursor threshold 选项  
+#### <a name="to-configure-the-cursor-threshold-option"></a>配置 cursor threshold 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `cursor threshold` 选项设置为 `0`，以便异步生成游标键集。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `cursor threshold` 选项设置为 `0` ，以便异步生成游标键集。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -94,12 +99,12 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 cursor threshold 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [@@CURSOR_ROWS (Transact-SQL)](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -107,3 +112,4 @@ GO
  [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   
+

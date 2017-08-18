@@ -1,24 +1,29 @@
 ---
-title: "配置远程访问服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "远程服务器 [SQL Server]，存储过程执行"
+title: "配置 remote access 服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9c974f6546e7065015dfa7313de0b29cfdd22c3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置远程访问服务器配置选项
+# <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题提供有关“远程访问”功能的信息。 这是一个模糊不清的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的通信功能，不推荐使用，而且你可能不应当使用它。 如果你由于无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而访问此页，请参阅以下主题之一：  
@@ -31,9 +36,9 @@ caps.handback.revision: 31
   
 -   [连接到已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)  
   
--   [从 SQL Server Management Studio 连接到任何 SQL Server 组件](../../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
+-   [从 SQL Server Management Studio 连接到任何 SQL Server 组件](http://msdn.microsoft.com/library/5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e)  
   
--   [使用 sqlcmd 连接到数据库引擎](../../relational-databases/scripting/connect-to-the-database-engine-with-sqlcmd.md)  
+-   [使用 sqlcmd 连接到数据库引擎](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
 -   [如何排除连接到 SQL Server 数据库引擎时的故障](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 31
  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “远程访问” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“远程访问”** 选项从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地或远程服务器上控制存储过程的执行。 该选项的默认值为 1。 这将授权允许从远程服务器执行本地存储过程或从本地服务器执行远程存储过程。 若要阻止本地存储过程在远程服务器上执行或远程存储过程在本地服务器上执行，请将此选项设置为 0。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
   
  **本主题内容**  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置远程访问选项  
+#### <a name="to-configure-the-remote-access-option"></a>配置远程访问选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置远程访问选项  
+#### <a name="to-configure-the-remote-access-option"></a>配置远程访问选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -107,14 +112,15 @@ GO
   
 ```  
   
- 有关详细信息，请参阅 [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)（服务器配置选项 (SQL Server)）。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置远程访问选项之后  
  此设置将在重启 SQL Server 之后生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

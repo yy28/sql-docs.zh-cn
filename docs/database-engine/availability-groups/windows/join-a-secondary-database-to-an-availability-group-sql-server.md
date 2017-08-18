@@ -1,31 +1,36 @@
 ---
 title: "将辅助数据库联接到可用性组 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.joindbs.f1"
-helpviewer_keywords: 
-  - "辅助数据库 [SQL Server], 在可用性组中"
-  - "辅助数据库 [SQL Server]"
-  - "可用性组 [SQL Server], 联接"
-  - "可用性组 [SQL Server], 配置"
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.joindbs.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- secondary databases [SQL Server]
+- Availability Groups [SQL Server], joining
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8a5afad01e18568d315f1602ad8908786f130400
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 将辅助数据库联接到可用性组 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将辅助数据库联接到 Always On 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
+# <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>将辅助数据库联接到可用性组 (SQL Server)
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 将辅助数据库联接到 Always On 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
   
 -   **开始之前：**  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 39
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  有关在辅助数据库联接到该组后所发生的情况的信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+>  有关在辅助数据库联接到该组后所发生的情况的信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 39
   
 -   您必须连接到承载辅助副本的服务器实例。  
   
--   该辅助副本必须已联接到可用性组。 有关详细信息，请参阅[将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+-   该辅助副本必须已联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
--   辅助数据库必须已在最近进行了准备。 有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+-   辅助数据库必须已在最近进行了准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -77,11 +82,11 @@ caps.handback.revision: 39
   
 1.  连接到承载辅助副本的服务器实例。  
   
-2.  使用 [ALTER DATABASE 语句的 SET HADR 子句](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md) ，如下所述：  
+2.  使用 [ALTER DATABASE 语句的 SET HADR 子句](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) ，如下所述：  
   
      ALTER DATABASE *database_name* SET HADR AVAILABILITY GROUP = *group_name*  
   
-     其中 *database_name* 是要联接的数据库名，*group_name* 是可用性组名。  
+     其中 *database_name* 是要联接的数据库名， *group_name* 是可用性组名。  
   
      下面的示例将辅助数据库 `Db1` 联接到 `MyAG` 可用性组的本地辅助副本。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 39
   
 2.  使用 **Add-SqlAvailabilityDatabase** cmdlet 将一个或多个辅助数据库联接到可用性组。  
   
-     例如，以下命令将辅助数据库 `Db1` 联接到一个承载辅助副本的服务器实例上的可用性组 `MyAG`。  
+     例如，以下命令将辅助数据库 `Db1`联接到一个承载辅助副本的服务器实例上的可用性组 `MyAG` 。  
   
     ```  
     Add-SqlAvailabilityDatabase `   
@@ -108,7 +113,7 @@ caps.handback.revision: 39
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -120,9 +125,10 @@ caps.handback.revision: 39
   
 -   [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组配置故障排除 (SQL Server)](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

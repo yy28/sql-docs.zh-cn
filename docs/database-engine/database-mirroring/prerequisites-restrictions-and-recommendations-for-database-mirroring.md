@@ -1,54 +1,47 @@
 ---
-title: "数据库镜像的前提条件、限制和建议 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 部署"
-  - "伙伴 [SQL Server]"
-  - "数据库镜像 [SQL Server], 前提条件"
-  - "数据库镜像 [SQL Server], 建议"
-  - "数据库镜像 [SQL Server], 限制"
-  - "数据库镜像 [SQL Server], 规划"
-  - "数据库镜像 [SQL Server], 关于数据库镜像"
+title: "数据库镜像的先决条件、限制和建议 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像的前提条件、限制和建议
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>数据库镜像的前提条件、限制和建议
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改为使用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
   
- 本主题说明了设置数据库镜像的前提条件和建议。 有关数据库镜像的介绍，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 本主题说明了设置数据库镜像的前提条件和建议。 有关数据库镜像的介绍，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- **本主题内容：**  
-  
--   [数据库镜像支持](#DbmSupport)  
-  
--   [先决条件](#Prerequisites)  
-  
--   [限制](#Restrictions)  
-  
--   [配置伙伴服务器的建议](#RecommendationsForPartners)  
-  
--   [部署数据库镜像的建议](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> 数据库镜像支持  
- 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
- 请注意，数据库镜像可使用任意支持的数据库兼容级别。 有关支持的兼容级别的信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)。  
+ 请注意，数据库镜像可使用任意支持的数据库兼容级别。 有关支持的兼容级别的信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  如果数据库镜像已经停止，则必须将对主体数据库执行的所有后续日志备份应用到镜像数据库中，然后才可以重新启动镜像。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="Restrictions"></a> 限制  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   数据库镜像不支持 FILESTREAM。 不能在主体服务器上创建 FILESTREAM 文件组。 不能为包含 FILESTREAM 文件组的数据库配置数据库镜像。  
   
--   跨数据库事务和分布式事务均不支持数据库镜像。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)。  
+-   跨数据库事务和分布式事务均不支持数据库镜像。 有关详细信息，请参阅[用于 AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> 配置伙伴服务器的建议  
   
@@ -105,7 +96,6 @@ caps.handback.revision: 54
   
 -   关于广域网 (WAN) 对高安全性模式下的数据库镜像是否足够可靠，我们没有任何建议。 如果您决定在 WAN 上使用高安全性模式，则应注意将见证服务器添加至会话的方式，因为可能会发生意外的自动故障转移。 有关详细信息，请参阅本主题稍后部分中的 [部署数据库镜像的建议](#RecommendationsForDeploying)。  
   
- [[返回页首]](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> 部署数据库镜像的建议  
  使用异步操作可获得最佳的数据库镜像性能。 如果镜像会话使用同步操作，则当该会话的工作负荷生成大量事务日志数据时，可能会降低性能。  
@@ -123,14 +113,14 @@ caps.handback.revision: 54
   
 2.  在确信异步操作符合您的业务需要之后，您可能希望尝试同步操作来提高数据保护能力。 当测试同步镜像在您环境中的工作方式时，建议首先测试不带自动故障转移功能的高安全性模式。 此测试的主要目的是了解同步操作如何影响数据库的性能。 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
-3.  等到确信不带自动故障转移功能的高安全性模式满足您的业务需要并且网络错误不会导致故障时再启用自动故障转移。 有关详细信息，请参阅[数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+3.  等到确信不带自动故障转移功能的高安全性模式满足您的业务需要并且网络错误不会导致故障时再启用自动故障转移。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
   
- [[返回页首]](#Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [数据库镜像配置故障排除 (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

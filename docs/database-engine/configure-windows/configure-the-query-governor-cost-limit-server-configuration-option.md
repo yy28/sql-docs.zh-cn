@@ -1,26 +1,31 @@
 ---
-title: "配置查询调控器开销限制服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查询 [SQL Server], 执行的时间"
-  - "query governor cost limit 选项 [SQL Server]"
-  - "时间 [SQL Server], 查询运行时间"
+title: "配置“查询调控器开销限制”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], time to execute
+- query governor cost limit option [SQL Server]
+- time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c37c6564ace5110c3035003cecad2ab3b52461ac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置查询调控器开销限制服务器配置选项
+# <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>配置查询调控器开销限制服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询调控器开销限制” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 查询调控器开销限制选项指定查询可以运行的时间段上限。 查询开销是指在特定硬件配置中完成查询所需的估计占用时间（秒）。 此选项的默认值为 0，将设置为关闭查询调控器。 这将允许所有查询在没有任何时间限制下运行。 如果为该选项指定一个非零、非负的数值，则查询调控器将不允许执行估计开销超过该值的查询。  
@@ -47,7 +52,7 @@ caps.handback.revision: 28
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
   
--   若要在每个连接基础上更改查询调控器开销限制值，请使用 [SET QUERY_GOVERNOR_COST_LIMIT ](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md) 语句。  
+-   若要在每个连接基础上更改查询调控器开销限制值，请使用 [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md) 语句。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置查询调控器开销限制选项  
+#### <a name="to-configure-the-query-governor-cost-limit-option"></a>配置查询调控器开销限制选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置查询调控器开销限制选项  
+#### <a name="to-configure-the-query-governor-cost-limit-option"></a>配置查询调控器开销限制选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -90,15 +95,16 @@ GO
   
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置查询调控器开销限制选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

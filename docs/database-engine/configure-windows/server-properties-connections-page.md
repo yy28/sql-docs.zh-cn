@@ -1,35 +1,40 @@
 ---
-title: "服务器属性（“连接”页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.connections.f1"
+title: "服务器属性（“连接”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73d0b32c2688c912c282c7c4acab0bd9ecb5633f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 服务器属性（“连接”页）
+# <a name="server-properties---connections-page"></a>服务器属性 -“连接”页
   使用此页可以查看或修改连接选项。  
   
-## Connections  
+## <a name="connections"></a>Connections  
  **最大并发连接数(0 = 无限制)**  
  如果设置为非零值，则将限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的连接数。  
   
 > [!CAUTION]  
 >  如果将此值设置为较小的值（如 1 或 2），则可能会阻止管理员进行连接以管理该服务器；但是“专用管理员连接”始终可以连接。  
   
-## 默认连接选项  
- **默认连接选项**  
+## <a name="default-connection-options"></a>默认连接选项  
+ **Default connection options**  
  指定默认连接选项，如下表所述：  
   
 |配置选项|说明|  
@@ -52,9 +57,9 @@ caps.handback.revision: 27
   
  有关连接选项的详细信息，请搜索联机丛书中的特定选项内容。  
   
-## 远程服务器连接  
+## <a name="remote-server-connections"></a>远程服务器连接  
  **允许远程连接到此服务器**  
- 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的远程服务器控制存储过程的执行。 选中此复选框与将 **sp_configureremote access** 选项设置为 1 具有相同的作用。 清除此复选框可阻止从远程服务器执行存储过程。  
+ 从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的远程服务器控制存储过程的执行。 选中此复选框与将 **sp_configureremote access** 选项设置为 1 具有相同的作用。 清除此复选框可阻止从远程服务器执行存储过程。  
   
  **远程查询超时值(秒，0 = 无超时)**  
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以执行的时间（秒）。 默认为 600 秒，或等待 10 分钟。  
@@ -62,15 +67,15 @@ caps.handback.revision: 27
  **需要将分布式事务用于服务器到服务器的通信**  
  通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器过程的操作。 有关详细信息，请参阅 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
   
-## 属性页显示选项  
+## <a name="property-page-display-options"></a>属性页显示选项  
  **配置值**  
  显示此窗格上选项的配置值。 如果更改了这些值，请单击 **“运行值”** 以查看更改是否已生效。 如果尚未生效，则必须首先重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
- **运行值**  
+ **“运行值”**  
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
-## 另请参阅  
- [选项（查询执行：SQL Server：高级页）](../Topic/Options%20\(Query%20Execution:%20SQL%20Server:%20Advanced%20Page\).md)   
+## <a name="see-also"></a>另请参阅  
+ [选项（查询执行：SQL Server：高级页）](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

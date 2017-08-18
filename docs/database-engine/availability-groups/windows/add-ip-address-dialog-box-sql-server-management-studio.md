@@ -1,27 +1,32 @@
 ---
 title: "“添加 IP 地址”对话框 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# “添加 IP 地址”对话框 (SQL Server Management Studio)
+# <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>“添加 IP 地址”对话框 (SQL Server Management Studio)
   本 F1 帮助主题介绍 **“添加 IP 地址”** 对话框中的选项。 可通过 **“新的可用性组侦听器”** 对话框和   或 **的** “指定副本” [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 页的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] “侦听器” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]选项卡访问此对话框。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  开始向可用性组侦听器添加子网之前，确保了解每个子网的 IP 地址以及子网掩码（对于 IPv4 地址）。  
   
 ##  <a name="PageOptions"></a> 添加 IP 地址选项  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
  **IPv6 地址**  
  如果您选择了子网的 IPv6 子网地址，请在此输入有效的 IPv6 静态地址。  
   
- **确定**  
+ **“确定”**  
  单击以添加已选定其地址的子网，同时添加您指定的静态 IP 地址。 包含这些值的行将添加到 **“新的可用性组侦听器”** 或 **“指定副本”** 对话框的子网网格中。  
   
 > [!IMPORTANT]  
@@ -59,9 +64,10 @@ caps.handback.revision: 10
   
 -   [使用“将副本添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
+

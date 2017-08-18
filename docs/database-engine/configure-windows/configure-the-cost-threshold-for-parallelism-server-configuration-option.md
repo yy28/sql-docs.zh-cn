@@ -1,27 +1,32 @@
 ---
-title: "配置并行的开销阈值服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "并行的开销阈值选项"
+title: "配置“并行的开销阈值”服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b26280bb3b17cef25a8f578322889a08502a305
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置并行的开销阈值服务器配置选项
+# <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “并行的开销阈值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cost threshold for parallelism** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建和运行并行查询计划的阈值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “并行的开销阈值” 或。 成本指的是在特定硬件配置中运行串行计划估计需要花费的成本，而不是时间单位。 **“并行的开销阈值”** 选项可设置为 0 到 32767 之间的任何值。 默认值为 5。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “并行的开销阈值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **cost threshold for parallelism** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建和运行并行查询计划的阈值。 仅当运行同一查询的串行计划的估计开销高于在“并行的开销阈值”中设置的值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 才创建和运行该查询的并行计划。 成本指的是在特定硬件配置中运行串行计划估计需要花费的成本，而不是时间单位。 **“并行的开销阈值”** 选项可设置为 0 到 32767 之间的任何值。 默认值为 5。  
   
  **本主题内容**  
   
@@ -76,9 +81,9 @@ FROM sys.dm_os_sys_info
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置并行的开销阈值选项  
+#### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>配置并行的开销阈值选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“高级”** 节点。  
   
@@ -86,7 +91,7 @@ FROM sys.dm_os_sys_info
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置并行的开销阈值选项  
+#### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>配置并行的开销阈值选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -107,14 +112,14 @@ RECONFIGURE
 GO  
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置并行的开销阈值选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)   
+ [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [affinity mask 服务器配置选项](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -122,3 +127,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

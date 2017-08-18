@@ -1,25 +1,30 @@
 ---
-title: "Select Databases Page (New Availability Group Wizard and Add Database Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.adddatabasewizard.selectdatabases.f1"
-  - "sql13.swb.newagwizard.selectdatabases.f1"
+title: "“选择数据库”页（新建可用性组向导和添加数据库向导）| Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.adddatabasewizard.selectdatabases.f1
+- sql13.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a082f863c17e8de989ab40231c57b93e5d629f87
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Select Databases Page (New Availability Group Wizard and Add Database Wizard)
+# <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Select Databases Page (New Availability Group Wizard and Add Database Wizard)
   本帮助主题说明 **“指定数据库”** 页的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ##  <a name="PageOptions"></a> 选择数据库选项  
@@ -27,7 +32,7 @@ caps.handback.revision: 16
   
  **名称**  
  显示本地用户数据库的名称。  
-  
+
  **Size**  
  显示数据库大小（如果在该向导中提供）。  
   
@@ -39,17 +44,18 @@ caps.handback.revision: 16
  **密码**  
  如果数据库包含数据库主密钥，则请输入数据库主密钥的密码。  
   
- **刷新**  
+ **“刷新”**  
  单击以刷新该网格。 对数据库采取操作以满足先决条件后，这样做非常有用。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用“将数据库添加到可用性组向导”(SQL Server Management Studio)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+ [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

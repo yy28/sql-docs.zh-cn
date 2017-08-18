@@ -1,29 +1,34 @@
 ---
 title: "配置 user options 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "适用于所有用户的全局默认值 [SQL Server]"
-  - "用户 [SQL Server], 全局默认值"
-  - "user options 选项 [SQL Server]"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 user options 服务器配置选项
+# <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 “user options”选项允许你更改 SET 选项的默认值（如果服务器的默认设置不合适）。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 **user options** 选项允许您更改 SET 选项的默认值（如果服务器的默认设置不合适）。  
   
  用户可以使用 SET 语句覆盖这些默认值。 可以为新登录名动态配置 **user options** 。 更改 **user options**的设置后，新的登录名会话将使用新的设置，当前登录名会话受不影响。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 25
     |8192|NUMERIC_ROUNDABORT|表达式中出现精度降低时生成错误。|  
     |16384|XACT_ABORT|如果 Transact-SQL 语句引发运行时错误，则回滚事务。|  
   
--   **user options** 中位的位置与 @@OPTIONS 中位的位置相同。 每个连接都有自己的 @@OPTIONS 函数，该函数表示配置环境。 登录到 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，用户会收到将当前“user options”值指定为 @@OPTIONS 的默认环境。 对 **user options** 执行 SET 语句会影响会话的 @@OPTIONS 函数的相应值。 在此设置更改后创建的所有连接都将收到新值。  
+-   **user options** 中位的位置与 @@OPTIONS 中位的位置相同。 每个连接都有自己的 @@OPTIONS 函数，该函数表示配置环境。 登录到 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，用户会收到将当前 **user options** 值指定为 @@OPTIONS 的默认环境。 对 **user options** 执行 SET 语句会影响会话的 @@OPTIONS 函数的相应值。 在此设置更改后创建的所有连接都将收到新值。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -76,19 +81,19 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 user options 配置选项  
+#### <a name="to-configure-the-user-options-configuration-option"></a>配置 user options 配置选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“连接”** 节点。  
   
-3.  在“默认连接选项”框中，选择一个或多个属性以便为所有已连接的用户配置默认查询处理选项。  
+3.  在 **“默认连接选项”** 框中，选择一个或多个属性以便为所有已连接的用户配置默认查询处理选项。  
   
      默认情况下，不配置用户选项。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 user options 配置选项  
+#### <a name="to-configure-the-user-options-configuration-option"></a>配置 user options 配置选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -109,10 +114,11 @@ GO
 ##  <a name="FollowUp"></a> 跟进：在配置 user options 配置选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

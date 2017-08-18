@@ -1,39 +1,44 @@
 ---
 title: "affinity mask 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "默认 affinity mask 选项"
-  - "重新加载处理器缓存"
-  - "处理器缓存 [SQL Server]"
-  - "CPU [SQL Server]，授权"
-  - "延迟进程调用"
-  - "affinity mask 选项"
-  - "处理器关联 [SQL Server]"
-  - "SMP"
-  - "DPC"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# affinity mask 服务器配置选项
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 转为使用 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 改为使用 [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)。  
   
- 为了执行多任务，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要以及减少处理器之间的线程迁移（因而减少上下文切换），可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  
+ 为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，这种活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要以及减少处理器之间的线程迁移（因而减少上下文切换），可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下两个关联掩码选项来支持处理器关联：affinity mask（也称为 **CPU affinity mask**）和 affinity I/O mask。 有关 affinity I/O maskoption 的详细信息，请参阅 [affinity I/O mask 服务器配置选项](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)。 对具有 33 至 64 个处理器的服务器的 CPU 和 I/O 关联支持还要求分别使用 [affinity64 mask 服务器配置选项](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) 和 [affinity64 I/O mask 服务器配置选项](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  请不要在 Windows 操作系统中配置 CPU 关联后，还在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置关联掩码。 这些设置实现的效果相同，如果配置不一致，则可能会得到意外的结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最好使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 sp_configure 选项配置 CPU 关联。  
   
-## 示例  
+## <a name="example"></a>示例  
  例如，设置关联掩码选项时，如果选择处理器 1、2 和 5 作为可用的处理器，并将位 1、2 和 5 设置为 1，位 0、3、4、6 和 7 设置为 0，则将指定十六进制值 0x26 或等于 `38` 的十进制值。 从右至左对位进行编号。 关联掩码选项按从 0 到 31 的方式来计算处理器，这样在以下示例中，计数器 `1` 表示服务器上的第二个处理器。  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时，才可以更改 **affinity mask**。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-## 非一致性内存访问 (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>非一致性内存访问 (NUMA)  
  当使用基于硬件的非一致性内存访问 (NUMA) 并设置了关联掩码时，节点中的每个计划程序都将关联到它自己的 CPU。 未设置关联掩码时，每个计划程序都关联到 NUMA 节点内的 CPU 组，映射到 NUMA 节点 N1 的计划程序可对节点中的任何 CPU 计划工作，但是不能对与其他节点关联的 CPU 计划工作。  
   
  针对单个 NUMA 节点执行的任何操作都只能使用该节点中的缓冲区页。 当针对多个节点上的 CPU 以并行方式执行操作时，可以使用所涉及的任何节点中的内存。  
   
-## 许可问题  
+## <a name="licensing-issues"></a>许可问题  
  动态关联受 CPU 许可的严格约束。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许对关联掩码选项进行任何违反许可策略的配置。  
   
-### 启动  
+### <a name="startup"></a>启动  
  如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间或在数据库附加期间，指定的关联掩码违反了许可策略，则引擎层将会完成启动进程或数据库附加/还原操作，然后将关联掩码的 sp_configure 运行值重置为零，并向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志发出一条错误消息。  
   
-### 重新配置  
+### <a name="reconfigure"></a>重新配置  
  如果在运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令时，指定的关联掩码违反了许可策略，则系统将向客户端会话和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志报告错误消息，要求数据库管理员重新配置关联掩码。 在这种情况下，不接受任何 RECONFIGURE WITH OVERRIDE 命令。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "配置填充因子服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "填充因子选项 [SQL Server]"
+title: "配置 fill factor 服务器配置选项 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc5db00110b3cb6c8d465befde945ff1044efc09
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置填充因子服务器配置选项
+# <a name="configure-the-fill-factor-server-configuration-option"></a>配置填充因子服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “填充因子” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 提供填充因子是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便保留一些剩余空间作为以后扩展索引的可用空间。 有关详细信息，请参阅[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “填充因子” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 提供填充因子是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便保留一些剩余空间作为以后扩展索引的可用空间。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  **本主题内容**  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置填充因子选项  
+#### <a name="to-configure-the-fill-factor-option"></a>配置填充因子选项  
   
 1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置填充因子选项  
+#### <a name="to-configure-the-fill-factor-option"></a>配置填充因子选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -83,12 +88,12 @@ RECONFIGURE;
 GO  
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置填充因子选项之后  
  必须重新启动服务器，设置才会生效。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
@@ -98,3 +103,4 @@ GO
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

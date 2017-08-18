@@ -1,26 +1,31 @@
 ---
 title: "为镜像准备镜像数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据库镜像 [SQL Server], 准备进行镜像"
-  - "登录名 [SQL Server], 数据库镜像"
-  - "镜像数据库 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], preparing for mirroring
+- logins [SQL Server], database mirroring
+- mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 为镜像准备镜像数据库 (SQL Server)
+# <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
   在数据库镜像会话开始之前，数据库所有者或系统管理员必须确保已创建镜像数据库并可进行镜像。 创建新镜像数据库的最低要求是：执行主体数据库的完整备份和一个后续日志备份，并使用 WITH NORECOVERY 将这两个备份还原到镜像服务器实例上。  
   
  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中准备镜像数据库。  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
 -   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 尽管镜像服务器可以具有更高版本的 SQL Server，但仅在仔细计划的升级过程中建议此配置。 在此类配置中，会面临自动故障转移的风险，数据移动在其中会被自动挂起，因为数据不能移到更低版本的 SQL Server。 有关详细信息，请参阅 [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
   
--   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中数据库镜像支持的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+-   主体服务器和镜像服务器实例必须运行在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中数据库镜像支持的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 -   数据库必须使用完整恢复模式。  
   
@@ -85,9 +90,9 @@ caps.handback.revision: 43
 -   对于生产数据库，始终备份到单独的设备。  
   
 ###  <a name="Security"></a> 安全性  
- 备份数据库时，TRUSTWORTHY 设置为 OFF。 因此，在新的镜像数据库中，TRUSTWORTHY 始终为 OFF。 如果数据库在故障转移之后需要得到信任，则必须执行其他设置步骤。 有关详细信息，请参阅[设置镜像数据库以使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
+ 备份数据库时，TRUSTWORTHY 设置为 OFF。 因此，在新的镜像数据库中，TRUSTWORTHY 始终为 OFF。 如果数据库在故障转移之后需要得到信任，则必须执行其他设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
- 有关启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
+ 有关启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
 ####  <a name="Permissions"></a> 权限  
  数据库所有者或系统管理员。  
@@ -95,15 +100,15 @@ caps.handback.revision: 43
 ##  <a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
  如果已删除镜像，并且该镜像数据库仍处于 RECOVERING 状态，则可以重新启动镜像。  
   
-1.  至少进行主体数据库的一个日志备份。 有关详细信息，请参阅[备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
+1.  至少进行主体数据库的一个日志备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中准备镜像数据库。  
   
-2.  在镜像数据库中，使用 RESTORE WITH NORECOVERY 还原删除镜像后在主体数据库中执行的所有日志备份。 有关详细信息，请参阅[还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)。  
+2.  在镜像数据库中，使用 RESTORE WITH NORECOVERY 还原删除镜像后在主体数据库中执行的所有日志备份。 有关详细信息，请参阅 [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)中准备镜像数据库。  
   
 ##  <a name="CombinedProcedure"></a> 准备新的镜像数据库  
  **准备镜像数据库**  
   
 > [!NOTE]  
->  有关此过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  连接到主体服务器实例。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 43
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) 和 [RESTORE 参数 (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)。  
+    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)中准备镜像数据库。  
   
 7.  使用 RESTORE WITH NORECOVERY，将所有未完成的日志备份应用到镜像数据库。  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 43
     > [!NOTE]  
     >  对于生产数据库，应始终备份到单独的设备。  
   
-     在主体服务器实例 (`PARTNERHOST1`) 上，创建主体数据库的完整备份，如下所示：  
+     在主体服务器实例 ( `PARTNERHOST1`) 上，创建主体数据库的完整备份，如下所示：  
   
     ```  
     BACKUP DATABASE AdventureWorks   
@@ -169,7 +174,7 @@ caps.handback.revision: 43
   
     -   **如果路径相同：**  
   
-         在 `PARTNERHOST5` 的镜像服务器实例上，还原完整备份，如下所示：  
+         在 `PARTNERHOST5`的镜像服务器实例上，还原完整备份，如下所示：  
   
         ```  
         RESTORE DATABASE AdventureWorks   
@@ -232,17 +237,17 @@ caps.handback.revision: 43
     GO  
     ```  
   
- 有关设置数据库镜像、显示安全设置、准备镜像数据库、设置合作伙伴以及添加见证服务器的完整示例的信息，请参阅[设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
+ 有关设置数据库镜像、显示安全设置、准备镜像数据库、设置合作伙伴以及添加见证服务器的完整示例的信息，请参阅 [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)中准备镜像数据库。  
   
 ##  <a name="FollowUp"></a> 跟进：在准备镜像数据库之后  
   
 1.  如果在最近的 RESTORE LOG 操作之后已执行了任何其他日志备份，则还必须使用 RESTORE WITH NORECOVERY 手动应用其他每个日志备份。  
   
-2.  开始镜像会话。 有关详细信息，请参阅[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) 或[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
+2.  开始镜像会话。 有关详细信息，请参阅 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 在 [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)中准备镜像数据库。  
   
 3.  如果您在主体数据库上禁用了备份作业，则重新启用该作业。  
   
-4.  如果数据库在故障转移后需要得到信任，则必须在镜像开始后执行额外的设置步骤。 有关详细信息，请参阅[设置镜像数据库以使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)。  
+4.  如果数据库在故障转移后需要得到信任，则必须在镜像开始后执行额外的设置步骤。 有关详细信息，请参阅 [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)中准备镜像数据库。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -250,23 +255,25 @@ caps.handback.revision: 43
   
 -   [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [设置数据库镜像 (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [数据库镜像和全文目录 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [数据库镜像和复制 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE 参数 (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+
+

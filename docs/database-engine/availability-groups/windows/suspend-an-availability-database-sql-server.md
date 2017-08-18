@@ -1,36 +1,41 @@
 ---
 title: "挂起可用性数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.suspenddatamove.f1"
-helpviewer_keywords: 
-  - "辅助数据库 [SQL Server], 在可用性组中"
-  - "主数据库 [SQL Server], 在可用性组中"
-  - "可用性组 [SQL Server], 挂起数据库"
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.suspenddatamove.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], suspending a database
+- Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 23d68367d77f5346dfb2873203b6c96c912fd5c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 挂起可用性数据库 (SQL Server)
+# <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
   
  挂起命令的效果取决于您挂起的是辅助数据库还是主数据库，如下所示：  
   
 |挂起的数据库|挂起命令的效果|  
 |------------------------|-------------------------------|  
-|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> **\*\*重要提示\*\*** 当挂起辅助数据库时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
+|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> **\*\* 重要提示 \*\*** 当挂起辅助数据库时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
 |主数据库|主数据库将停止数据移动到每个连接的辅助数据库。 主数据库将继续在公开模式下运行。 主数据库仍然保持对客户端可用，可读取辅助数据库上的现有连接保持可用并且可以建立新连接。|  
   
 > [!NOTE]  
@@ -99,7 +104,7 @@ caps.handback.revision: 51
   
 1.  连接到承载要挂起数据库的副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
-2.  通过使用以下 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)语句，挂起数据库：  
+2.  通过使用以下 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)语句，挂起数据库：  
   
      ALTER DATABASE *database_name* SET HADR SUSPEND  
   
@@ -118,20 +123,20 @@ caps.handback.revision: 51
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：避免出现已满事务日志  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  通常，在数据库上执行自动检查点操作时，事务日志将在下一个日志备份后截断到该检查点。 但是，当挂起辅助数据库时，当前的所有日志记录在主数据库上都保持活动状态。 如果填满该事务日志（因为它达到其最大大小或服务器实例耗尽空间），则数据库将无法再执行任何更新。  
   
  若要避免此问题，应执行以下操作之一：  
   
 -   为主数据库添加更多日志空间。  
   
--   在日志填满之前恢复辅助数据库。 有关详细信息，请参阅[恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)。  
+-   在日志填满之前恢复辅助数据库。 有关详细信息，请参阅本主题后面的 [恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)中挂起可用性数据库。  
   
 -   删除辅助数据库。 有关详细信息，请参阅[从可用性组中删除辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)。  
   
@@ -143,8 +148,9 @@ caps.handback.revision: 51
   
 -   [恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [恢复可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   
+

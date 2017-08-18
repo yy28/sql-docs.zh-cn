@@ -1,58 +1,46 @@
 ---
 title: "为可用性组手动准备辅助数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.preparedbs.f1"
-  - "sql13.swb.availabilitygroup.configsecondarydbs.f1"
-helpviewer_keywords: 
-  - "辅助数据库 [SQL Server], 在可用性组中"
-  - "辅助数据库 [SQL Server]"
-  - "可用性组 [SQL Server], 配置"
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.preparedbs.f1
+- sql13.swb.availabilitygroup.configsecondarydbs.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- secondary databases [SQL Server]
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 47
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 为可用性组手动准备辅助数据库 (SQL Server)
-  本主题介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备辅助数据库需要两个步骤：(1) 使用 RESTORE WITH NORECOVERY 将主数据库的最近数据库备份和后续的日志备份还原到承载辅助副本的每个服务器实例；(2) 将还原的数据库联接到可用性组。  
+# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>为可用性组手动准备数据库 (SQL Server)
+本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
+
+1. 使用 RESTORE WITH NORECOVERY，将主数据库的最近数据库备份和后续日志备份还原到托管次要副本的每个服务器实例
+2. 将还原的辅助数据库联接到可用性组。  
   
 > [!TIP]  
->  如果你具有现有的日志传送配置，则可能能够将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和一个或多个 AlwaysOn 辅助数据库。 有关详细信息，请参阅[从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)。  
-  
--   **开始之前：**  
-  
-     [先决条件和限制](#Prerequisites)  
-  
-     [建议](#Recommendations)  
-  
-     [安全性](#Security)  
-  
--   **若要准备辅助数据库，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [相关备份和还原任务](#RelatedTasks)  
-  
--   **跟进：** [准备辅助数据库之后](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> 开始之前  
-  
-###  <a name="Prerequisites"></a> 先决条件和限制  
+>  如果有现有的日志传送配置，则能够将日志传送主数据库与一个或多个辅助数据库一起转换为可用性组主要副本和一个或多个次要副本。 有关详细信息，请参阅[从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+
+##  <a name="Prerequisites"></a>先决条件和限制  
   
 -   确保计划放置数据库的系统的磁盘驱动器空间足以存储辅助数据库。  
   
@@ -66,9 +54,9 @@ caps.handback.revision: 47
   
 -   还原数据库后，必须还原 (WITH NORECOVERY) 自上次还原的数据备份之后创建的各个日志备份。  
   
-###  <a name="Recommendations"></a> 建议  
+##  <a name="Recommendations"></a> 建议  
   
--   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例上，我们建议，如有可能，给定辅助数据库的文件路径（包括驱动器号）应该与相应的主数据库的路径相同。 这是因为，如果在创建辅助数据库时移动了数据库文件，则随后在辅助数据库上执行的添加文件操作可能会失败，并导致该辅助数据库挂起。  
+-   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立实例上，我们建议，如有可能，给定辅助数据库的文件路径（包括驱动器号）应该与相应的主数据库的路径相同。 这是因为，如果在创建辅助数据库时移动了数据库文件，则随后在辅助数据库上执行的添加文件操作可能会失败，并导致该辅助数据库挂起。  
   
 -   准备辅助数据库之前，我们强烈建议您挂起针对可用性组中数据库的计划日志备份，直到完成辅助副本的初始化。  
   
@@ -78,29 +66,32 @@ caps.handback.revision: 47
 ####  <a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
   
- 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)。  
+ 如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)备份。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  如果备份和还原文件路径在承载主要副本的服务器实例和承载次要副本的每个实例之间完全相同，则应该能够通过使用[新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、[将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[将数据库添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md)创建辅助数据库。  
+>  如果托管主要副本的服务器实例和托管次要副本的每个实例之间的备份和还原文件路径完全相同，则应该能够通过使用[新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、[将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[将数据库添加到可用性组向导](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)创建次要副本数据库。  
   
  **准备辅助数据库**  
   
 1.  除非您已经有了主数据库的最近数据库备份，否则需要创建新的完全或差异数据库备份。 最好将此备份和任何后续的日志备份放到推荐的网络共享上。  
   
-2.  至少为主数据库创建一个新日志备份。  
+2.  至少为主数据库创建一个新日志备份。
+
+   >[!NOTE]
+   >如果之前未在主要副本的数据库上捕获事务日志备份，则可能不需要事务日志备份。 Microsoft 建议每次将新数据库联接到可用性组时都进行事务日志备份。 
   
 3.  在承载辅助副本的服务器实例上，依次还原主数据库的完整数据库备份（还可以选择还原差异备份）以及所有后续的日志备份。  
   
-     在“RESTORE DATABASEOptions”页上，选择**“不对数据库执行任何操作，不回退未提交的事务”。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**。  
+     在“RESTORE DATABASE 选项”页上，选择“不对数据库执行任何操作，不回滚未提交的事务”**。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**。  
   
      如果主数据库与辅助数据库的文件路径不同，例如，如果主数据库位于驱动器“F:”，但承载辅助副本的服务器实例缺少 F: 驱动器，请在 WITH 语句中包括 MOVE 选项。  
   
 4.  若要完成辅助数据库的配置，您需要将辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  有关如何执行这些备份和还原操作的信息，请参阅本节后面的[相关备份和还原任务](#RelatedTasks)。  
+>  有关如何执行这些备份和还原操作的信息，请参阅本节后面的 [相关备份和还原任务](#RelatedTasks)。  
   
 ###  <a name="RelatedTasks"></a> 相关备份和还原任务  
  **创建数据库备份**  
@@ -127,7 +118,7 @@ caps.handback.revision: 47
  **准备辅助数据库**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本主题前面的[示例 (Transact-SQL)](#ExampleTsql)。  
+>  有关此过程的示例，请参阅本主题前面的 [示例 (Transact-SQL)](#ExampleTsql)。  
   
 1.  除非您已经有了主数据库的最近完整备份，否则请连接到承载主副本的服务器实例并创建完整数据库备份。 最好将此备份和任何后续的日志备份放到推荐的网络共享上。  
   
@@ -143,7 +134,7 @@ caps.handback.revision: 47
 4.  若要完成辅助数据库的配置，您需要将辅助数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  有关如何执行这些备份和还原操作的信息，请参阅本主题后面的[相关备份和还原任务](#RelatedTasks)。  
+>  有关如何执行这些备份和还原操作的信息，请参阅本主题后面的 [相关备份和还原任务](#RelatedTasks)。  
   
 ###  <a name="ExampleTsql"></a> Transact-SQL 示例  
  下面的示例准备一个辅助数据库。 此示例使用了 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 示例数据库，默认情况下，该数据库使用简单恢复模式。  
@@ -194,7 +185,7 @@ caps.handback.revision: 47
         > [!IMPORTANT]  
         >  如果主数据库与辅助数据库的路径名称不同，则无法添加文件。 原因是在接收添加文件操作所需的日志时，承载辅助副本的服务器实例会尝试将新文件放在主数据库所用的路径中。  
   
-         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移入名为 (*Always On1*) 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 远程实例（托管另一个群集节点上的次要副本）的数据目录。 在该处，数据和日志文件还原到 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
+         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移入名为 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1*) 的*远程实例（托管另一个群集节点上的次要副本）的数据目录。 在该处，数据和日志文件还原到 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -207,7 +198,7 @@ caps.handback.revision: 47
         GO  
         ```  
   
-5.  还原完整备份之后，必须在主数据库中创建日志备份。 例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将日志备份到名为 *E:\MyDB1_log.bak* 的备份文件：  
+5.  还原完整备份之后，必须在主数据库中创建日志备份。 例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将日志备份到名为 *E:\MyDB1_log.bak*的备份文件：  
   
     ```  
     BACKUP LOG MyDB1   
@@ -217,7 +208,7 @@ caps.handback.revision: 47
   
 6.  在将数据库联接到辅助副本之前，必须应用必要的日志备份（以及所有后续日志备份）。  
   
-     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *C:\MyDB1.bak* 中的第一个日志：  
+     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *C:\MyDB1.bak*中的第一个日志：  
   
     ```  
     RESTORE LOG MyDB1   
@@ -228,7 +219,7 @@ caps.handback.revision: 47
   
 7.  如果在数据库联接到辅助副本之前进行了任何其他日志备份，则还必须使用 RESTORE WITH NORECOVERY 按顺序将所有这些日志备份还原到承载辅助副本的服务器实例上。  
   
-     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *E:\MyDB1_log.bak* 中的其他两个日志：  
+     例如，以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句还原 *E:\MyDB1_log.bak*中的其他两个日志：  
   
     ```  
     RESTORE LOG MyDB1   
@@ -253,7 +244,7 @@ caps.handback.revision: 47
 4.  若要还原数据库以及每个主数据库的日志备份，请使用 **restore-SqlDatabase** cmdlet，从而指定 **NoRecovery** 还原参数。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 **RelocateFile** 还原参数。  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
 5.  若要完成辅助数据库的配置，您需要将其联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
@@ -261,7 +252,7 @@ caps.handback.revision: 47
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> 备份和还原脚本和命令的示例  
+###  <a name="ExamplePSscript"></a>示例备份和还原脚本及命令  
  下面的 PowerShell 命令将完整的数据库备份和事务日志备份到网络共享，并自该共享位置还原这些备份。 此示例假定数据库还原到的文件路径与数据库备份到的文件路径相同。  
   
 ```  
@@ -276,14 +267,15 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> 跟进：准备辅助数据库之后  
- 若要完成辅助数据库的配置，您需要将新还原的数据库联接到可用性组。 有关详细信息，请参阅[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+##  <a name="FollowUp"></a>后续步骤  
+ 若要完成辅助数据库的配置，您需要将新还原的数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE 参数 (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE 参数 (Transact-SQL)](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)   
  [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
   
+

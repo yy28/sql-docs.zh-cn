@@ -1,28 +1,33 @@
 ---
 title: "暂停或恢复数据库镜像会话 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "恢复数据库镜像"
-  - "数据库镜像 [SQL Server], 会话"
-  - "数据库镜像 [SQL Server], 暂停"
-  - "数据库镜像 [SQL Server], 恢复"
-  - "暂停数据库镜像"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 暂停或恢复数据库镜像会话 (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暂停或恢复数据库镜像会话 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中暂停或恢复数据库镜像。  
   
  **本主题内容**  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  若要暂停或恢复数据库镜像会话，请使用 **“数据库属性镜像”** 页。  
   
-#### 暂停或恢复数据库镜像  
+#### <a name="to-pause-or-resume-database-mirroring"></a>暂停或恢复数据库镜像  
   
 1.  在数据库镜像会话期间，连接到主体服务器实例，然后在对象资源管理器中，单击服务器名称以展开服务器树。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 暂停数据库镜像  
+#### <a name="to-pause-database-mirroring"></a>暂停数据库镜像  
   
 1.  为任一伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 34
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### 恢复数据库镜像  
+##### <a name="to-resume-database-mirroring"></a>恢复数据库镜像  
   
 1.  为任一伙伴连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **暂停数据库镜像之后**  
   
-     在主数据库上采取预防措施以避免填满事务日志。 有关详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+     在主数据库上采取预防措施以避免填满事务日志。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 -   **恢复数据库镜像之后**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

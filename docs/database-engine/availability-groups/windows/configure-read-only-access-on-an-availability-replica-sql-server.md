@@ -1,31 +1,36 @@
 ---
 title: "配置对可用性副本的只读访问 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对可用性副本的连接访问"
-  - "可用性组 [SQL Server], 可读辅助副本"
-  - "活动辅助副本 [SQL Server], 只读访问"
-  - "可用性组 [SQL Server], 只读路由"
-  - "可用性组 [SQL Server], 客户端连接"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], read-only routing
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad04708d680bc716c971fa5e24c304b5516d56a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置对可用性副本的只读访问 (SQL Server)
-  默认情况下，允许对主要副本进行读写和读意向访问，不允许连接到 AlwaysOn 可用性组的次要副本。 本主题说明了如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 来配置 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中 AlwaysOn 可用性组的可用性副本的连接访问。  
+# <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
+  默认情况下，允许对主要副本进行读写和读意向访问，不允许连接到 AlwaysOn 可用性组的次要副本。 本主题说明了如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来配置 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的连接访问。  
   
- 有关对辅助副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 有关对辅助副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅 [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 和 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **开始之前：**  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 35
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
->  有关此过程的示例，请参阅本节后面的[示例 (Transact-SQL)](#TsqlExample)。  
+>  有关此过程的示例，请参阅本节后面的 [示例 (Transact-SQL)](#TsqlExample)。  
   
 1.  连接到承载主副本的服务器实例。  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 35
   
          其中：  
   
-         NO  
+         是  
          不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
          READ_ONLY  
@@ -132,7 +137,7 @@ caps.handback.revision: 35
      主副本中的数据库允许所有连接。 这是默认设置。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE* 被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
+ 下面的示例将辅助副本添加到名为 *AG2*的可用性组。 一个独立服务器实例 *COMPUTER03\HADR_INSTANCE*被指定为承载新的可用性副本。 将此副本配置为对主角色允许读写连接，对辅助角色仅允许读意向连接。  
   
 ```  
 ALTER AVAILABILITY GROUP AG2   
@@ -150,7 +155,7 @@ GO
  **配置对可用性副本的访问**  
   
 > [!NOTE]  
->  有关代码示例，请参阅本节后面的[示例 (PowerShell)](#PSExample)。  
+>  有关代码示例，请参阅本节后面的 [示例 (PowerShell)](#PSExample)。  
   
 1.  将目录 (**cd**) 更改为托管主副本的服务器实例。  
   
@@ -162,12 +167,12 @@ GO
          不允许直接连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。  
   
          **AllowReadIntentConnectionsOnly**  
-         只允许连接应用程序意向属性设置为 **ReadOnly** 的辅助副本中的数据库。 有关此属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+         只允许连接应用程序意向属性设置为 **ReadOnly**的辅助副本中的数据库。 有关此属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
          **AllowAllConnections**  
          允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
-    -   若要配置主要角色的连接访问，请指定 **ConnectionModeInPrimaryRole***primary_role_keyword* 参数，其中 *primary_role_keyword* 等于以下值之一：  
+    -   若要配置主要角色的连接访问，请指定 **ConnectionModeInPrimaryRole***primary_role_keyword*参数，其中 *primary_role_keyword* 等于以下值之一：  
   
          **AllowReadWriteConnections**  
          不允许 Application Intent 连接属性设置为 ReadOnly 的连接。 在 Application Intent 属性设置为 ReadWrite 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
@@ -176,7 +181,7 @@ GO
          主副本中的数据库允许所有连接。 这是默认设置。  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -198,14 +203,14 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> 跟进：为可用性副本配置只读访问后  
  **对可读取辅助副本的只读访问**  
   
--   使用 [bcp 实用工具](../../../tools/bcp-utility.md)或 [sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，你可以通过指定 **-K ReadOnly** 开关来对允许只读访问的任意次要副本指定只读访问。  
+-   使用 [bcp 实用工具](../../../tools/bcp-utility.md) 或 [sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，你可以通过指定 **-K ReadOnly** 开关来对允许只读访问的任意次要副本指定只读访问。  
   
 -   使客户端应用程序能够连接到可读取辅助副本：  
   
     ||前提条件|链接|  
     |-|------------------|----------|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保可用性组具有侦听器。|[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为可用性组配置只读路由。|[为可用性组配置只读路由 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **在故障转移后可能会影响触发器和作业的因素**  
   
@@ -245,9 +250,10 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [Always On: Readable Secondary and data latency（AlwaysOn：可读次要副本和数据延迟）](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+

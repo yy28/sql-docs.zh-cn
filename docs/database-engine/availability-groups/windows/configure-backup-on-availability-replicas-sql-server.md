@@ -1,34 +1,39 @@
 ---
 title: "配置可用性副本备份 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "备份优先级"
-  - "备份辅助副本"
-  - "可用性组 [SQL Server], 可用性副本"
-  - "可用性组 [SQL Server], 对辅助副本的备份"
-  - "活动辅助副本 [SQL Server], 备份"
-  - "自动备份首选项"
-  - "可用性组 [SQL Server], 活动辅助副本"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup priority
+- backup on secondary replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], backup on secondary replicas
+- active secondary replicas [SQL Server], backup on
+- automated backup preference
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6e4b5b176c1974dd0bfe628b1fde91913dcd0309
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置可用性副本备份 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
+# <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
+  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
   
 > [!NOTE]  
->  有关辅助副本备份的介绍，请参阅[活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  有关辅助副本备份的介绍，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
   
 -   **开始之前：**  
   
@@ -172,13 +177,13 @@ caps.handback.revision: 31
     ```  
   
 > [!NOTE]  
->  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+>  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [获取 SQL Server PowerShell 帮助](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> 跟进：配置辅助副本备份之后  
  若要为某一给定可用性组考虑使用自动备份首选项，则对于承载备份优先级大于零 (>0) 的可用性副本的每个服务器实例，您需要为该可用性组中的数据库的备份作业编写脚本。 若要确定当前副本是否为首选备份副本，请在备份脚本中使用 [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函数。 如果当前服务器实例承载的可用性副本是用于备份的首选副本，则此函数将返回 1。 否则，该函数返回 0。 通过对查询此函数的每个可用性副本运行简单的脚本，可以确定哪个副本应运行给定的备份作业。 例如，备份作业脚本的典型代码段如下所示：  
@@ -206,16 +211,17 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 |[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|当前副本是否为首选备份副本？|不适用。|  
 |[sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)|自动备份首选项|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)|给定可用性副本的备份优先级|**backup_priority**|  
-|[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)|是否为服务器实例的本地副本？<br /><br /> 当前角色<br /><br /> 操作状态<br /><br /> 连接状态<br /><br /> 可用性副本的同步运行状况|**is_local**<br /><br /> **role**、**role_desc**<br /><br /> **operational_state**、**operational_state_desc**<br /><br /> **connected_state**、**connected_state_desc**<br /><br /> **synchronization_health**、**synchronization_health_desc**|  
+|[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)|是否为服务器实例的本地副本？<br /><br /> 当前角色<br /><br /> 操作状态<br /><br /> 连接状态<br /><br /> 可用性副本的同步运行状况|**is_local**<br /><br /> **role**、 **role_desc**<br /><br /> **operational_state**、 **operational_state_desc**<br /><br /> **connected_state**、 **connected_state_desc**<br /><br /> **synchronization_health**、 **synchronization_health_desc**|  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动次要副本：次要副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

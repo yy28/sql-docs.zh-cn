@@ -1,30 +1,35 @@
 ---
 title: "数据库镜像见证服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "见证服务器 [SQL Server], 关于见证服务器"
-  - "见证服务器 [SQL Server]"
-  - "数据库镜像 [SQL Server], 见证服务器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], about witness
+- witness [SQL Server]
+- database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 72
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 72
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2ee20ba03743ce6778e487fb14a6f03e793ae6ac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像见证服务器
+# <a name="database-mirroring-witness"></a>数据库镜像见证服务器
   若要支持自动故障转移，必须在高安全性模式下配置数据库镜像会话，并且还要具有第三个服务器实例（也称为“见证服务器”）。 见证服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可选实例，它能使高安全性模式会话中的镜像服务器识别出是否要启动自动故障转移。 与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
   
 > [!NOTE]  
->  在高性能模式下，见证服务器对可用性会有不利影响。 如果见证服务器是针对数据库镜像会话而配置，则主体服务器必须至少连接到一个其他服务器实例，即镜像服务器或见证服务器，或者是连接到这两个服务器。 否则，将无法使用数据库，并且不能进行强制服务（可能丢失数据）。 因此，对于高性能模式，我们极力建议您始终将见证服务器设置为 OFF。 有关见证服务器对高性能模式影响的信息，请参阅[数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
+>  在高性能模式下，见证服务器对可用性会有不利影响。 如果见证服务器是针对数据库镜像会话而配置，则主体服务器必须至少连接到一个其他服务器实例，即镜像服务器或见证服务器，或者是连接到这两个服务器。 否则，将无法使用数据库，并且不能进行强制服务（可能丢失数据）。 因此，对于高性能模式，我们极力建议您始终将见证服务器设置为 OFF。 有关见证服务器对高性能模式影响的信息，请参阅 [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
  下图显示了使用见证服务器的高安全性模式会话。  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 72
 ##  <a name="SwHwRecommendations"></a> 关于软件和硬件的建议  
  我们极力建议将见证服务器置于独立于伙伴的单独计算机中。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持数据库镜像伙伴。 相反， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 也支持见证服务器。 除了从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升级期间之外，镜像会话中的服务器实例必须都运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 镜像配置升级时支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 见证服务器，但是不能添加到现有或新的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或更高版本的镜像配置中。  
   
- 见证服务器可以在支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的这些版本之一的任意可靠计算机系统上运行。 然而，我们建议用作见证服务器的每个服务器实例都符合所运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版本所需的最低配置。 有关这些要求的详细信息，请参阅[安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)。  
+ 见证服务器可以在支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的这些版本之一的任意可靠计算机系统上运行。 然而，我们建议用作见证服务器的每个服务器实例都符合所运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版本所需的最低配置。 有关这些要求的详细信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ##  <a name="InAutoFo"></a> 自动故障转移中见证服务器的角色  
  在整个数据库镜像会话过程中，所有服务器实例都会监视它们的连接状态。 如果伙伴相互之间断开，它们会依赖见证服务器来确保它们当中只有一个正在操作数据库。 如果有同步镜像服务器断开了与主体服务器的连接，但仍与见证服务器保持连接，镜像服务器就会联系见证服务器，以确定见证服务器是否已与主体服务器断开连接：  
@@ -61,7 +66,7 @@ caps.handback.revision: 72
   
 -   如果镜像服务器与见证服务器和主体服务器都断开连接，则不论主体服务器状态如何都无法进行自动故障转移。  
   
- 至少要连接到两个服务器实例的要求称为“仲裁 ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作原理以及它对会话的影响的详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少要连接到两个服务器实例的要求称为“仲裁 ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作原理以及它对会话的影响的详细信息，请参阅 [仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 添加或删除见证服务器  
  **添加见证服务器**  
@@ -74,7 +79,7 @@ caps.handback.revision: 72
   
 -   [从数据库镜像会话删除见证服务器 (SQL Server)](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [数据库镜像运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [仲裁：见证服务器如何影响数据库可用性（数据库镜像）](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   

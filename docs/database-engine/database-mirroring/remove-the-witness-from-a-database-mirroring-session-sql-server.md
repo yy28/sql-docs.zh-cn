@@ -1,26 +1,31 @@
 ---
 title: "从数据库镜像会话删除见证服务器 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "见证服务器 [SQL Server], 关闭"
-  - "见证服务器 [SQL Server], 删除"
-  - "数据库镜像 [SQL Server], 见证服务器"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], turning off
+- witness [SQL Server], removing
+- database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f46a7668500b1a17b531c241e1e023cfb91d7f3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 从数据库镜像会话删除见证服务器 (SQL Server)
+# <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>从数据库镜像会话删除见证服务器 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从数据库镜像会话中删除见证服务器。 在数据库镜像会话期间的任何时候，数据库所有者都可以关闭数据库镜像会话的见证服务器。  
   
  **本主题内容**  
@@ -46,7 +51,7 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 删除见证服务器  
+#### <a name="to-remove-the-witness"></a>删除见证服务器  
   
 1.  连接至主体服务器实例，在 **对象资源管理器** 窗格中，单击服务器名称以展开服务器树。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 39
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 删除见证服务器  
+#### <a name="to-remove-the-witness"></a>删除见证服务器  
   
 1.  连接到任一伙伴服务器实例上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
@@ -69,9 +74,9 @@ caps.handback.revision: 39
   
 3.  发出以下语句：  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
   
-     其中，*database_name* 为镜像数据库的名称。  
+     其中， *database_name* 为镜像数据库的名称。  
   
      以下示例从 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中删除见证服务器。  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 39
     ```  
   
 ##  <a name="FollowUp"></a> 跟进：删除见证服务器之后  
- 关闭见证服务器将根据事务安全设置更改[运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)：  
+ 关闭见证服务器将根据事务安全设置更改 [运行模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)：  
   
 -   如果事务安全设置为 FULL（默认值），则会话将使用不带自动故障转移的高安全同步模式。  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 39
   
 -   [添加或替换数据库镜像见证服务器 (SQL Server Management Studio)](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## 另请参阅  
- [ALTER DATABASE 数据库镜像 (Transact-SQL)](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>另请参阅  
+ [ALTER DATABASE 数据库镜像 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [更改数据库镜像会话中的事务安全 (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  

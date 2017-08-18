@@ -1,36 +1,41 @@
 ---
 title: "见证服务器实例（配置数据库镜像安全向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6b73051639099ca66c3991a4b4faaef2d2ef60ec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 见证服务器实例（配置数据库镜像安全向导）
+# <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>见证服务器实例（配置数据库镜像安全向导）
   对于作为会话的见证服务器的服务器实例，使用此页可以指定有关该服务器实例的信息。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均未提供见证服务器实例。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  **使用 SQL Server Management Studio 配置数据库镜像**  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## 选项  
+## <a name="options"></a>选项  
  **见证服务器实例**  
  如果已指定见证服务器实例（在“数据库属性”对话框的“镜像”页中），则将显示该实例（有关详细信息，请参阅[数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)）。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 41
   
  若要禁用加密，请清除此复选框。 若要重新启用加密，请选中此复选框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
@@ -71,3 +76,4 @@ caps.handback.revision: 41
  [数据库镜像见证服务器](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

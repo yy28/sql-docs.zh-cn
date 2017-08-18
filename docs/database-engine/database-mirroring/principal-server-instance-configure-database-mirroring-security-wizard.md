@@ -1,33 +1,38 @@
 ---
-title: "主体服务器实例（配置数据库镜像安全向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.principalsrvr.f1"
+title: "主题服务器实例（配置数据库镜像安全向导）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.principalsrvr.f1
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7a053755d64b0a00ab46967a8da75d596d250113
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 主体服务器实例（配置数据库镜像安全向导）
+# <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主体服务器实例（配置数据库镜像安全向导）
   使用此页可以指定有关主体数据库的服务器实例的信息。 主体数据库是开始镜像会话的数据库的副本。 会话开始后，主体数据库是接受用户更改的数据库副本。 （当发生故障转移时，主体和镜像角色交换；因此，初始的主体数据库可能不再是主体数据库。）  
   
  **使用 SQL Server Management Studio 配置数据库镜像**  
   
--   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## 选项  
+## <a name="options"></a>选项  
  **主体服务器实例**  
  因为 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的数据库镜像总是从主体服务器配置，所以当前的服务器实例总是为主体服务器实例。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 36
   
  若要禁用加密，请清除此复选框。 若要重新启用加密，请选中此复选框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库镜像终结点 (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [数据库属性（“镜像”页）](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

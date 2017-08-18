@@ -1,38 +1,43 @@
 ---
-title: "数据库镜像监视器（警告页） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.warningsandalerts.f1"
+title: "数据库镜像监视器（“警告”页）| Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c67c02e3e06ccf7617ebd33356290d2c2f632d36
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 数据库镜像监视器（警告页）
+# <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
   显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 列  
+## <a name="columns"></a>列  
  **警告**  
  可以定义阈值的警告包括：  
   
 |警告|阈值|  
 |-------------|---------------|  
 |**如果未发送日志超出了阈值，则发出警告**|指定未发送日志达到多少 KB 后，会在主体服务器实例上生成一个警告。 该警告有助于测量数据丢失的可能性（以 KB 计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
-|**如果未还原日志超出了阈值，则发出警告**|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 该警告可用于测量故障转移时间（以 KB 计）。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅[估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|  
+|**如果未还原日志超出了阈值，则发出警告**|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 该警告可用于测量故障转移时间（以 KB 计）。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|  
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 该警告有助于测量数据丢失的可能性（以时间计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
 |**如果镜像提交开销超过了阈值则发出警告**|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
  有关详细信息，请参阅本主题后面的“备注”。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则在每个单元格中，网格都将根据实例是默认实例还是命名实例来显示“未连接到*<SYSTEM_NAME>*”或“未连接到 *<SYSTEM_NAME>***\\***<instance_name>*”。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
@@ -67,14 +72,14 @@ caps.handback.revision: 31
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|最早的未发送事务|32044|  
 |**如果镜像提交开销超过了阈值则发出警告**|镜像提交开销|32045|  
   
-## 权限  
+## <a name="permissions"></a>权限  
  若要拥有完全访问权限，需要具有 **sysadmin** 固定服务器角色的成员身份。 只有 **sysadmin** 的成员才可以配置和查看关键绩效指标的警告阈值。  
   
  如果是 **dbm_monitor** 角色中的成员，则只能查看“警告”页上最新的状态行。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [启动配置数据库镜像安全向导 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

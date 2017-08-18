@@ -1,34 +1,37 @@
 ---
 title: "配置 max degree of parallelism 服务器配置选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "并行查询 [SQL Server]"
-  - "处理器 [SQL Server], 并行查询"
-  - "用于并行查询的处理器数"
-  - "max degree of parallelism 选项"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: 'sql-server-2016 '
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parallel queries [SQL Server]
+- processors [SQL Server], parallel queries
+- number of processors for parallel queries
+- max degree of parallelism option
+- MaxDop
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 285a6643daa5be75a2d41214de823098713ec6e7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 配置 max degree of parallelism 服务器配置选项
+# <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 **max degree of parallelism (MAXDOP)** 服务器配置选项。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，它将为每个并行计划的执行检测最佳并行度（即运行一个语句所使用的处理器数）。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
- 
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max degree of parallelism (MAXDOP) [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在具有多个微处理器或 CPU 的计算机上运行时，它将为每个并行计划的执行检测最佳并行度（即运行一个语句所使用的处理器数）。 您可以使用 **max degree of parallelism** 选项来限制并行计划执行时所用的处理器数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考虑为查询、索引数据定义语言 (DDL) 操作、并行插入、联机更改列、并行统计信息集合以及静态的和由键集驱动的游标填充实施并行执行计划。
 
-  
-  
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
@@ -41,11 +44,21 @@ caps.handback.revision: 33
   
 -   若要使服务器能够确定最大并行度，请将此选项设置为默认值 0。 若将 maximum degree of parallelism 设置为 0， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将能够使用至多 64 个可用的处理器。 若要取消生成并行计划，请将 **max degree of parallelism** 设置为 1。 将该值设置为 1 到 32,767 之间的数值来指定执行单个查询所使用的最大处理器核数。 如果指定的值比可用的处理器数大，则使用实际可用数量的处理器。 如果计算机只有一个处理器，将忽略 **max degree of parallelism** 值。  
   
--   您可以通过在查询语句中指定 MAXDOP 查询提示来覆盖查询中的 max degree of parallelism 值。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)。  
+-   您可以通过在查询语句中指定 MAXDOP 查询提示来覆盖查询中的 max degree of parallelism 值。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
--   索引操作（如创建或重新生成索引、或删除聚集索引）可能会大量占用资源。 您可以通过在索引语句中指定 MAXDOP 索引选项来覆盖索引操作的 max degree of parallelism 值。 MAXDOP 值在执行时应用于语句，但不存储在索引元数据中。 有关详细信息，请参阅[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+-   索引操作（如创建或重新生成索引、或删除聚集索引）可能会大量占用资源。 您可以通过在索引语句中指定 MAXDOP 索引选项来覆盖索引操作的 max degree of parallelism 值。 MAXDOP 值在执行时应用于语句，但不存储在索引元数据中。 有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
--   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md)。  
+-   除了查询和索引操作之外，此选项还控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的并行。 使用跟踪标志 2528，可以禁用为这些语句所做的并行执行计划。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+
+###  <a name="Guidelines"></a> 准则  
+请使用以下准则配置 max degree of parallelism 服务器配置值：
+
+||||
+|----------------|-----------------|-----------------|
+|具有单个 NUMA 节点的服务器|少于 8 个 逻辑处理器|将 MAXDOP 保持为小于或等于逻辑处理器的数量|
+|具有单个 NUMA 节点的服务器|大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
+|具有多个 NUMA 节点的服务器|每个 NUMA 节点少于 8 个逻辑处理器|将 MAXDOP 保持为小于或等于每个 NUMA 节点的逻辑处理器的数量|
+|具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 8 个逻辑处理器|将 MAXDOP 保持为 8 个|
   
 ###  <a name="Security"></a> 安全性  
   
@@ -54,7 +67,7 @@ caps.handback.revision: 33
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### 配置 max degree of parallelism 选项  
+#### <a name="to-configure-the-max-degree-of-parallelism-option"></a>配置 max degree of parallelism 选项  
   
 1.  在“对象资源管理器”中，右键单击服务器并选择“属性”。  
   
@@ -64,7 +77,7 @@ caps.handback.revision: 33
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### 配置 max degree of parallelism 选项  
+#### <a name="to-configure-the-max-degree-of-parallelism-option"></a>配置 max degree of parallelism 选项  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -85,24 +98,24 @@ RECONFIGURE WITH OVERRIDE;
 GO  
 ```  
   
- 有关详细信息，请参阅[服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)服务器配置选项。  
   
 ##  <a name="FollowUp"></a> 跟进：在配置 max degree of parallelism 选项之后  
  该设置将立即生效，无需重新启动服务器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [affinity mask 服务器配置选项](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKFILEGROUP (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)   
- [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md) 
- [查询提示 (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md)    
- [设置索引选项](../../relational-databases/indexes/set-index-options.md)  
+ [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)   
+ [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md) [设置索引选项](../../relational-databases/indexes/set-index-options.md)  
+ [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](http://support.microsoft.com/help/2806535)（适用于 SQL Server 中的“max degree of parallelism”配置选项的建议和指南）
   
   
+

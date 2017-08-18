@@ -1,28 +1,35 @@
 ---
 title: "升级 Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 升级 Data Quality Services
-  本主题的信息介绍如何将现有 Data Quality Services (DQS) 安装升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 在将 DQS 中的数据质量服务器升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，您还必须升级 DQS 数据库架构。  
+# <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
+本主题的信息介绍如何升级现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) 安装。 升级 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的过程中，还必须升级 DQS 数据库架构。  
   
 > [!IMPORTANT]  
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
-> -   通过使用当前或早期版本的数据质量客户端或 Integration Services 中的 [DQS 清除转换](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，你可以连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版数据质量服务器，执行你的数据质量任务。  
-> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都将不再适用。 你可以从[此处](http://go.microsoft.com/fwlink/?LinkID=506665)下载用于 Excel 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本 Master Data Services 外接程序。  
+> -   通过使用当前或早期版本的 Data Quality Client 或 Integration Services 中的 [DQS 清除转换](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，可以连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 执行数据质量任务。  
+> -   升级 Data Quality Services 和 Master Data Services 后，用于 Excel 的 Master Data Services 加载项的任何早期版本都将不再适用。 你可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 此处 [下载用于 Excel 的](http://go.microsoft.com/fwlink/?LinkID=506665)版本 Master Data Services 外接程序。  
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
@@ -35,27 +42,32 @@ caps.handback.revision: 12
   
 1.  首先备份 DQS 数据库，然后再启动升级过程。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
   
-2.  将安装 DQS 的 SQL 实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+2.  升级安装 DQS 的 SQL Server 实例。  
   
-    1.  运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
+    1.  运行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装向导。  
   
     2.  在左窗格中，单击 **“安装”**。  
   
-    3.  在右窗格中，单击“从 SQL Server 2008、SQL Server 2008 R2、SQL Server 2012 或 SQL Server 2014 升级” 。  
+    3.  在右窗格中，单击“升级版本...”从 SQL Server 早期版本升级。  
   
     4.  完成安装向导。  
   
         > [!NOTE]  
-        >  这会将您的 SQL Server 实例升级为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，而且如果此计算机以前安装过数据质量客户端，还会安装最新的数据质量客户端。 如果您在其他计算机上安装了数据质量客户端，您必须在那些计算机上运行步骤 2 的这些分步骤，安装最新版的数据质量客户端。 安装向导会安装与现有的数据质量客户端并存的当前版本数据质量客户端。 升级完 DQS 数据架构后，通过使用当前或早期版本的数据质量客户端，您可以连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版数据质量服务器。  
+        >  这会将您的 SQL Server 实例升级为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ，而且如果此计算机以前安装过数据质量客户端，还会安装最新的数据质量客户端。 如果您在其他计算机上安装了数据质量客户端，您必须在那些计算机上运行步骤 2 的这些分步骤，安装最新版的数据质量客户端。 安装向导会安装与现有的数据质量客户端并存的当前版本数据质量客户端。 升级完 DQS 数据架构后，通过使用当前或早期版本的数据质量客户端，您可以连接 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版数据质量服务器。  
   
 3.  升级 DQS 数据库架构。  
   
     1.  作为管理员启动命令提示符。  
   
-    2.  在命令提示符下，将目录更改为 DQSInstaller.exe 出现的位置。 对于 SQL Server 的默认实例，DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn 下：  
-  
+    2.  在命令提示符下，将目录更改为 DQSInstaller.exe 出现的位置。 对于 SQL Server 的默认实例，可在 C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn 获取 DQSInstaller.exe 文件：  
+
+      >[!NOTE]
+      >在文件夹路径中，将 [nn] 替换为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的版本号。
+      >- SQL Server 2016：13
+      >- SQL Server 2017：14
+
         ```  
-        cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn  
+        cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  在命令提示符下，键入以下命令，再按 Enter：  
@@ -87,9 +99,9 @@ caps.handback.revision: 12
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)   
- [升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [删除 Data Quality Server 对象](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

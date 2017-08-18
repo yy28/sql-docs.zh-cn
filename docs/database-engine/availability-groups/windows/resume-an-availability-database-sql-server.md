@@ -1,29 +1,34 @@
 ---
 title: "恢复可用性数据库 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "可用性组 [SQL Server], 恢复数据库"
-  - "辅助数据库 [SQL Server], 在可用性组中"
-  - "主数据库 [SQL Server], 在可用性组中"
-  - "可用性组 [SQL Server], 数据库"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 恢复可用性数据库 (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中恢复已挂起的可用性数据库。 恢复挂起的数据库会将数据库置于 SYNCHRONIZING 状态。 恢复主数据库还将恢复挂起主数据库时导致挂起的任何辅助数据库。 如果任何辅助数据库是从承载辅助副本的服务器实例中本地挂起的，则该辅助数据库必须进行本地恢复。 一旦给定的辅助数据库和相应的主数据库处于 SYNCHRONIZING 状态，则在辅助数据库上将恢复数据同步。  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-### 限制和局限  
+### <a name="limitations-and-restrictions"></a>限制和局限  
  RESUME 命令只要被承载目标数据库的副本接受后就返回，但是实际上继续数据库以异步方式发生。  
   
 ###  <a name="Prerequisites"></a> 先决条件  
@@ -86,7 +91,7 @@ caps.handback.revision: 38
   
 1.  连接到承载想要恢复其数据库的辅助副本的服务器实例。  
   
-2.  通过使用下面的 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)语句恢复辅助数据库：  
+2.  通过使用下面的 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)语句恢复辅助数据库：  
   
      ALTER DATABASE *database_name* SET HADR RESUME  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 38
   
 2.  使用 **Resume-SqlAvailabilityDatabase** cmdlet 恢复可用性组。  
   
-     例如，下面的命令针对可用性组 `MyDb3` 中的可用性数据库 `MyAg` 恢复数据同步。  
+     例如，下面的命令针对可用性组 `MyDb3` 中的可用性数据库 `MyAg`恢复数据同步。  
   
     ```  
     Resume-SqlAvailabilityDatabase `   
@@ -105,7 +110,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境中使用 **Get-Help** cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -115,7 +120,8 @@ caps.handback.revision: 38
   
 -   [挂起可用性数据库 (SQL Server)](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

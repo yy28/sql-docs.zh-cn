@@ -1,38 +1,43 @@
 ---
 title: "关于日志传送 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "辅助服务器 [SQL Server]"
-  - "日志传送 [SQL Server], 作业"
-  - "复制作业 [SQL Server]"
-  - "主数据库 [SQL Server]"
-  - "日志传送 [SQL Server], 监视"
-  - "日志传送 (SQL Server), 关于日志传送"
-  - "警报作业 [SQL Server]"
-  - "可用性 [SQL Server]"
-  - "作业 [SQL Server], 日志传送"
-  - "监视服务器 [SQL Server]"
-  - "还原作业 [SQL Server]"
-  - "日志传送 [SQL Server]"
-  - "备份作业 [SQL Server]"
-  - "主服务器 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 关于日志传送 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用日志传送，您可以自动将“主服务器  ”实例上“主数据库  ”内的事务日志备份发送到单独“辅助服务器  ”实例上的一个或多个“辅助数据库  ”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+# <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器 ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 65
   
 ##  <a name="Benefits"></a> 优点  
   
--   为单个主数据库以及一个或多个辅助数据库（每个数据库都位于单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上）提供灾难恢复解决方案。  
+-   为单个主数据库以及一个或多个辅助数据库（每个数据库都位于单独的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上）提供灾难恢复解决方案。  
   
 -   支持对辅助数据库的受限的只读访问权限（在还原作业之间的间隔期间）。  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  此外，可以针对日志传送配置来配置警报。  
   
-### 典型日志传送配置  
+### <a name="a-typical-log-shipping-configuration"></a>典型日志传送配置  
  下图显示了具有主服务器实例、三个辅助服务器实例和一个监视服务器实例的日志传送配置。 此图阐释了备份作业、复制作业以及还原作业所执行步骤，如下所示：  
   
 1.  主服务器实例执行备份作业以在主数据库上备份事务日志。 然后，该服务器实例将日志备份放入主日志备份文件（此文件将被发送到备份文件夹中）。  在此图中，备份文件夹位于共享目录（“备份共享 ”）下。  
@@ -125,9 +130,9 @@ caps.handback.revision: 65
  ![显示备份、复制和还原作业的配置](../../database-engine/log-shipping/media/ls-typical-configuration.gif "显示备份、复制和还原作业的配置")  
   
 ##  <a name="Interoperability"></a> 互操作性  
- 日志传送功能可以与下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能或组件一起使用：  
+ 日志传送功能可以与下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能或组件一起使用：  
   
--   [从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [数据库镜像和日志传送 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

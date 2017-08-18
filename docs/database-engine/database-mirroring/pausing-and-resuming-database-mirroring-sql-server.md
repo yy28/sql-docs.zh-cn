@@ -1,28 +1,33 @@
 ---
 title: "暂停和恢复数据库镜像 (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "会话 [SQL Server], 数据库镜像"
-  - "恢复数据库镜像"
-  - "数据库镜像 [SQL Server], 暂停"
-  - "数据库镜像 [SQL Server], 恢复"
-  - "暂停数据库镜像"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sessions [SQL Server], database mirroring
+- resuming database mirroring
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 暂停和恢复数据库镜像 (SQL Server)
+# <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暂停和恢复数据库镜像 (SQL Server)
   数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  
   
  会话暂停后，主体数据库仍然可用。 暂停操作将镜像会话的状态设置为 SUSPENDED，并且镜像数据库不再与主体数据库保持一致，从而导致主体数据库公开运行。  
@@ -55,7 +60,7 @@ caps.handback.revision: 32
   
 -   通过删除镜像来停止数据库镜像会话。  
   
-     和暂停会话不同，删除镜像将删除有关镜像会话的所有信息。 每个伙伴服务器实例将保留其自己的数据库副本。 如果前一个镜像副本已恢复，则它将与前一个主体副本分离，且滞后时间等于此会话暂停的时间。 有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
+     和暂停会话不同，删除镜像将删除有关镜像会话的所有信息。 每个伙伴服务器实例将保留其自己的数据库副本。 如果前一个镜像副本已恢复，则它将与前一个主体副本分离，且滞后时间等于此会话暂停的时间。 有关详细信息，请参阅 [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **暂停或恢复数据库镜像**  
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
