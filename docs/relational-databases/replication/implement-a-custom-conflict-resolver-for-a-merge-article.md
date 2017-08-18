@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或基于 COM 的自定义冲突解决程序 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)中为合并项目实现自定义冲突解决程序。  
+  本主题说明如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或基于 COM 的自定义冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) 在中为合并项目实现自定义冲突解决程序。  
   
  **本主题内容**  
   
