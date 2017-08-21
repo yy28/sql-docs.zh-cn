@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: cd57edcb06ea6d9baced3ce5765743769caba04e
+ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
+ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
@@ -120,3 +120,4 @@ ms.lasthandoff: 08/04/2017
 - [机器学习服务的已知问题](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+

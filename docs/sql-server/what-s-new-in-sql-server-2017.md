@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,29 +15,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
-SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题总结了最新的 SQL Server 2017 候选发布（RC1，2017 年 7 月）和社区技术预览 (CTP) 版中特定功能区域的新增功能。
+SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题总结了最新的 SQL Server 2017 候选发布（RC2，2017 年 8 月）和社区技术预览 (CTP) 版中特定功能区域的新增功能。
 
-**试用：** [下载 SQL Server 2017 候选发布 (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
+**试用：**[下载 SQL Server 2017 最新版本：RC2，发布于 2017 年 8 月](http://go.microsoft.com/fwlink/?LinkID=829477)
+此版本进行了 bug 修复和性能改进。
 
 >**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)（Linux 上的 SQL Server 文档）。
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>最新版本：SQL Server 2017 候选发布（RC2，2017 年 8 月）
-此版本进行了 bug 修复和性能改进。
-
-### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- 提升了从下列旧版 SQL Server 升级到 SQL Server 2017 Master Data Services 的升级体验和性能。
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 数据库引擎  
 SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
 - 现在可以将 CLR 程序集添加到白名单，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单 (RC1)。  
 - 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
@@ -66,7 +58,7 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 
 有关详细信息，请参阅 [SQL Server 2017 数据库引擎中的新增功能](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
 
-## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
+## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - SSIS 中的新 Scale Out 功能具有以下新功能和更改的功能。 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。 (RC1)
     -   Scale Out 主要角色现在支持高可用性。
     -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。
@@ -79,13 +71,13 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 
 有关详细信息，请参阅 [SQL Server 2017 Integration Services 中的新增功能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)。
 
-## <a name="master-data-services-mds"></a>Master Data Services (MDS)
-除了提升了升级到 SQL Server 2017 MDS 的升级性能和体验之外，还对 Master Data Services 进行了以下改进。
+## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 Master Data Services (MDS)
+- 从 SQL Server 2012、SQL Server 2014 和 SQL Server 2016 升级到 SQL Server 2017 Master Data Services 时，体验和性能有所改进。 
 - 现在可以在 Web 应用程序的“资源管理器”页中查看实体、集合和层次结构的排序列表。
 - 提升了使用暂存存储过程暂存数百万条记录时的性能。
 - 提升了在“管理组”页中展开“实体”文件夹以分配模型权限时的性能。 “管理组”页位于 Web 应用程序的“安全性”部分中。 若要详细了解性能提升，请访问 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 若要详细了解如何分配权限，请参阅[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
 
-## <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS) 
+## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强功能。 其中包括：
 - 作为 Analysis Services 默认安装选项的表格模式。 (CTP 2.0)
 - 用于保护表格模型元数据的对象级安全性。 (CTP 2.0)
@@ -101,25 +93,22 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 
 有关详细信息，请参阅 [SQL Server Analysis Services 2017 中的新增功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
 
-## <a name="sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)
+## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 自 CTP 2.1 起，不可再通过 SQL Server 安装程序安装 SSRS。 转到 Microsoft 下载中心，[下载 Microsoft SQL Server 2017 Reporting Services 候选发布](https://www.microsoft.com/download/details.aspx?id=55252)。 
 - 注释现在可用于报表，以增加视角并与他人协作。 还可包含带有批注的附件。 (CTP 2.1)
 - 在最新版本的报表生成器和 SQL Server Data Tools 中，通过在查询设计器中拖放所需的字段，可针对支持的 SQL Server Analysis Services 表格数据模型创建本机 DAX 查询。 请参阅 [Reporting Services 博客](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
 有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
-## <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
-SQL Server R 服务已重命名为 SQL Server 机器学习服务，以反映对除 R 语言外的 Python 的支持。 可使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本。 或者安装 Microsoft 机器学习服务器（独立），从而部署和使用不需要 SQL Server 的 R 和 Python 模型。 
+## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 机器学习服务
+SQL Server R 服务已重命名为 SQL Server 机器学习服务，以反映对除 R 语言外的 Python 的支持。 可以使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本，或者安装 Microsoft 机器学习服务器（独立）来部署和使用不需要 SQL Server 的 R 和 Python 模型。 
 
 SQL Server 开发人员现在可访问开放源代码生态系统中提供的大量 Python ML 和 AI 库，以及 Microsoft 的最新创新： 
 
-+ **revoscalepy** - 此 Pythonic 版本的 RevoScaleR 包含用于线性回归和逻辑回归、决策树、提升树和随机林的并行算法，以及一组丰富的用于数据转换和数据移动、远程计算上下文和数据源的 API。
-
-+ **microsoftml**  - 这是一个先进的机器学习算法和 Python 绑定转换包，其中包含深层神经网络、快速决策树和决策树以及用于线性回归和逻辑回归的高度优化算法。 用户还可获得预定型模型，这些模型基于用于图像提取或情感分析的 ResNet 模型。
-
-+ **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
-
-+ **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
+- **revoscalepy** - 此 Pythonic 版本的 RevoScaleR 包含用于线性回归和逻辑回归、决策树、提升树和随机林的并行算法，以及一组丰富的用于数据转换和数据移动、远程计算上下文和数据源的 API。
+- **microsoftml** - 这是一个先进的机器学习算法和 Python 绑定转换包，其中包含深层神经网络、快速决策树和决策树以及用于线性回归和逻辑回归的优化算法。 用户还可获得预定型模型，这些模型基于用于图像提取或情感分析的 ResNet 模型。
+- **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
+- **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 

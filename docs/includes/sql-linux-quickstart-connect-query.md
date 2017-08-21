@@ -113,7 +113,7 @@ Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操�
 
 |||
 |---|---|
-| [升级](../linux/sql-server-linux-setup.md#upgrade) | 了解如何升级 Linux 上的 SQL Server 现有安装 |
+| [升级](../linux/sql-server-linux-setup.md#upgrade) | 了解如何升级 Linux 版 SQL Server 的现有安装 |
 | [卸载](../linux/sql-server-linux-setup.md#uninstall) | 在 Linux 上卸载 SQL Server |
 | [无人参与安装](../linux/sql-server-linux-setup.md#unattended) | 了解如何编写无提示安装脚本 |
 | [脱机安装](../linux/sql-server-linux-setup.md#offline) | 了解如何手动下载脱机安装程序包 |

@@ -1,7 +1,7 @@
 ---
 title: "连接到服务器（“连接属性”页）（数据库引擎）| Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,26 +17,25 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
 使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
-## <a name="options"></a>选项  
 **连接到数据库**  
-从列表中选择要连接到的数据库。 如果选择 **<default>**，则将连接到服务器的默认数据库。 如果选择 **<Browse server>**，则可以浏览要连接的数据库的服务器。  
+从列表中选择要连接到的数据库。 如果选择“<default>”，则将连接到服务器的默认数据库。 如果选择 **<Browse server>**，则可以浏览要连接的数据库的服务器。  
   
 在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。 请确保选中“加密连接”复选框。  
   
-默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
+默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将连接到 **master**。 连接到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 时，如果指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
 **网络协议**  
-从该列表中选择某个协议。 可用的客户端协议是您使用“计算机管理”中的“客户端网络配置”所配置的那些协议。  
+从该列表中选择某个协议。 可用客户端协议是你通过“计算机管理”中的“客户端网络配置”配置的协议。  
   
 **网络数据包大小**  
 输入要发送的网络数据包的大小。 默认值为 4096 字节。  
@@ -59,6 +58,9 @@ ms.lasthandoff: 06/22/2017
   
 -   依次单击“文件”菜单上的“新建”和“数据库引擎查询”后，在“连接到服务器”对话框中指定的颜色即应用于此查询编辑器窗口。  
   
+**AD 域名或租户 ID**  
+通过“Active Directory - 含 MFA 支持的通用身份验证”连接时，请指定身份验证的域。 仅当使用 SSMS 17.2 或更高版本时，此选项才可用。 
+
 **全部重置**  
 将所有手动输入的连接属性值替换为默认值。  
   
