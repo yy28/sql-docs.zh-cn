@@ -1,5 +1,5 @@
 ---
-title: "创建由系统控制版本的临时表 | Microsoft Docs"
+title: "创建由系统控制版本的时态表 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/24/2016
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 -   使用事先创建的用户定义的历史记录表创建临时表：创建最满足你的需求的历史记录表，然后在临时表创建过程中引用该表。  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>使用匿名历史记录表创建临时表  
- 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建临时表的最简单方法，因为它不需要在 **SYSTEM_VERSIONING** 子句中指定任何参数。 在下面的示例中，将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
+ 使用“匿名”历史记录表创建临时表是一个可快速创建对象的方便选项，特别是在原型环境和测试环境中。 它也是创建临时表的最简单方法，因为它不需要在 **SYSTEM_VERSIONING** 子句中指定任何参数。 下面的示例将在不定义历史记录表名称的情况下，创建启用了系统版本控制的新表。  
   
 ```  
 CREATE TABLE Department   
@@ -55,7 +55,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   由系统版本的临时表必须已定义主键，并且已定义且只定义了一个 **PERIOD FOR SYSTEM_TIME** （其中包含两个 datetime2 列，声明为 **GENERATED ALWAYS AS ROW START / END**）  
   
--   **PERIOD** 列始终被认为不可为 null，即使未指定是否为 null，也是如此。 如果将  **PERIOD** 列显式定义为可为 null，则 **CREATE TABLE** 语句将失败。  
+-   **PERIOD** 列始终不可为 null，即使未指定是否为 null，也是如此。 如果将  **PERIOD** 列显式定义为可为 null，则 **CREATE TABLE** 语句将失败。  
   
 -   历史记录表必须在列数、列名、排序和数据类型方面始终与当前表或临时表架构一致。  
   
@@ -67,7 +67,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   将为历史记录表（名称自动生成，格式为 *IX_<history_table_name>*）创建一个默认聚集索引。 聚集索引包含 **PERIOD** 列（结束、开始）。  
   
--   若要将当前表创建为内存优化表，请参阅 [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
+-   若要将当前表创建为内存优化表，请参阅[系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)。  
   
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>使用默认历史记录表创建临时表  
  如果想要控制命名并仍依赖于系统创建具有默认配置的历史记录表，使用默认历史记录表创建临时表是一个方便的选项。 在下面的示例中，将在显式定义历史记录表的名称的情况下，创建启用了系统版本控制的新表。  
@@ -134,14 +134,14 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 ### <a name="important-remarks"></a>重要提示  
   
--   如果你打算对历史数据运行使用聚合或窗口函数的分析查询，则创建聚集列存储作为主索引是强烈建议的选项，因为这样会有非常好的数据压缩和查询性能。  
+-   如果打算对历史数据运行使用聚合或窗口函数的分析查询，则强烈建议创建聚集列存储作为主索引，因为这样会有非常好的数据压缩和查询性能。  
   
 -   如果主要用例是数据审核（即从当前表中搜索单个行的历史更改），则创建具有聚集索引的行存储历史记录表是个不错的选择  
   
 -   历史记录表不能具有一个主键、外键、唯一索引、表约束或触发器。 不能配置它以进行更改数据捕获、更改跟踪、事务复制或合并复制。  
   
 ## <a name="alter-non-temporal-table-to-be-system-versioned-temporal-table"></a>将非临时表更改为由系统控制版本的临时表  
- 当你需要使用现有表启用系统版本控制时，如当你希望将自定义的临时解决方案迁移到内置支持时。   
+ 当你需要使用现有表启用系统版本控制时（例如当你希望将自定义的时态解决方案迁移到内置支持时），适合使用此方法。   
 例如，你可能有一组表使用触发器实现了版本控制。 使用临时系统版本控制并不太复杂，并提供了其他好处，包括：  
   
 -   不可变的历史记录  
@@ -175,7 +175,9 @@ ALTER TABLE InsurancePolicy
   
 #### <a name="important-remarks"></a>重要提示  
   
--   将具有默认值的非 null 列添加到一张包含数据的现有表对 SQL Server Enterprise Edition（对其是一种元数据操作）以外的所有版本是一种数据大小操作。 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表来说，添加非 null 列会是代价高昂的操作。  
+-   对 SQL Server Enterprise Edition 以外的所有版本而言，将具有默认值的非 null 列添加到一张包含数据的现有表是一种关于数据大小的操作（对 Enterprise Edition 是一种元数据操作）。
+ 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表而言，添加非 null 列代价高昂。
+  
   
 -   必须小心选择期间开始和期间结束列的约束：  
   
