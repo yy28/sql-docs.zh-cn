@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  
   
 **(最前面)**  
-指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n 行。 默认情况下，查询将在结果集中返回前 10 行。  
+指定查询将包括 TOP 子句，该子句只返回结果集中的前 *n* 行或前百分之 *n* 行。 默认情况下，查询将在结果集中返回前 10 行。  
   
 使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或更高版本。）  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
 指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **百分比**  
-指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将只返回结果集中的前百分之 *n* 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
   
 **With Ties**  
 指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
