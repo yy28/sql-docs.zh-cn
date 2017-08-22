@@ -1,7 +1,7 @@
 ---
 title: "确定性函数和不确定性函数 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>从函数中调用扩展存储过程  
- 由于扩展存储过程会对数据库产生副面影响，因此调用扩展存储过程的函数为不确定性函数。 负面影响为对数据库全局状态的更改，如更新表、更新文件或网络等外部资源；例如，修改文件或发送电子邮件。 从用户定义函数中执行扩展存储过程时，不应该依靠返回一致的结果集。 建议不要使用对数据库产生负面影响的用户定义函数。  
+ 由于扩展存储过程会对数据库产生副面影响，因此调用扩展存储过程的函数为不确定性函数。 负面影响为对数据库全局状态的更改，如更新表、更新文件或网络等外部资源；例如，修改文件或发送电子邮件。 从用户定义函数中执行扩展存储过程时，不要依赖于返回一致的结果集。 建议不要使用对数据库产生负面影响的用户定义函数。  
   
- 从函数内部调用扩展存储过程时，该扩展存储过程不能向客户端返回结果集。 任何向客户端返回结果集的开放式数据服务 API 将产生返回代码 FAIL。  
+ 从函数内部调用扩展存储过程时，该扩展存储过程不能向客户端返回结果集。 任何向客户端返回结果集的开放式数据服务 API 都具有返回代码 FAIL。  
   
  扩展存储过程可以连接回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，该过程不能与调用扩展存储过程的原始函数联接同一事务。  
   
- 类似于从批处理或存储过程中调用，扩展存储过程在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 安全帐户的上下文中执行。 扩展存储过程的所有者在授予其他用户执行该过程的权限时应该考虑此问题。  
+ 类似于从批处理或存储过程中调用，扩展存储过程在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 安全帐户的上下文中执行。 扩展存储过程的所有者在授予其他用户执行该过程的权限时，应该考虑此安全性上下文的权限。  
   
   
 

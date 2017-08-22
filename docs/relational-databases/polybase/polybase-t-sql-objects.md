@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL 对象 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 对象
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>先决条件  
  配置 PolyBase。 请参阅 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)。  
   
-## <a name="create-external-tables-for-hadoop"></a>为 Hadoop 创建外部表  
+## <a name="create-external-tables-for-hadoop"></a>为 Hadoop 创建外部表
+适用于：SQL Server（从 2016 版开始）、并行数据仓库
+  
  **1.创建数据库范围的凭据**  
   
  仅当为 Kerberos 保护的 Hadoop 群集时，才必须执行这一步操作。  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>为 Azure blob 存储创建外部表  
+适用于：SQL Server（从 2016 版开始）、Azure SQL 数据仓库、并行数据仓库
+
  **1.创建数据库范围的凭据**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>为 Azure Data Lake Store 创建外部表
-只有 SQL 数据仓库中的 PolyBase 支持 Azure Data Lake Store。
-有关 Azure SQL 数据仓库和 ADLS 的详细信息，请转到[使用 Azure Data Lake Store 加载](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+适用于：Azure SQL 数据仓库
+
+有关详细信息，请参阅[使用 Azure Data Lake Store 加载](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
- **1.创建数据库范围的凭据**  
-  
+ **1.创建数据库范围的凭据**   
 
 ```sql
 -- Create a Database Master Key.

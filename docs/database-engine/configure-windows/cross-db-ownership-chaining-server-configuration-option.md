@@ -1,7 +1,7 @@
 ---
 title: "cross db ownership chaining 服务器配置选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 服务器配置选项
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   可以使用 ALTER DATABASE 语句的 SET 子句为各个数据库设置跨数据库所有权链接。 如果正在创建新的数据库，则可以使用 CREATE DATABASE 语句设置新数据库的跨数据库所有权链接选项。  
   
      建议不要将 **cross db ownership chaining** 设置为 1，除非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所驻留的所有数据库都必须参与跨数据库所有权链接，并且你了解此设置隐含的安全问题。  
-  
+
+若要确定跨数据库所有权链接的当前状态，请执行以下查询：  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+结果为 1 指示启用了“跨数据库所有权链接”。
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>控制跨数据库所有权链接  
  在打开或关闭跨数据库所有权链接之前，请注意下列事项：  
   

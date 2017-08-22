@@ -1,7 +1,7 @@
 ---
 title: "配置 remote access 服务器配置选项 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,16 +17,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9c974f6546e7065015dfa7313de0b29cfdd22c3
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题提供有关“远程访问”功能的信息。 这是一个模糊不清的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的通信功能，不推荐使用，而且你可能不应当使用它。 如果你由于无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而访问此页，请参阅以下主题之一：  
+  本主题提供有关“远程访问”功能的信息。 此配置选项是一个模糊不清的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的通信功能，该功能已弃用，而且你可能不应当使用它。 如果你由于无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而访问此页，请参阅以下主题之一：  
   
 -   [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
  本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “远程访问” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“远程访问”** 选项从运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地或远程服务器上控制存储过程的执行。 该选项的默认值为 1。 这将授权允许从远程服务器执行本地存储过程或从本地服务器执行远程存储过程。 若要阻止本地存储过程在远程服务器上执行或远程存储过程在本地服务器上执行，请将此选项设置为 0。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 改用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。 <br />当未启用远程访问时，如果使用四部分命名（如语法 `EXEC SQL01.TestDB.dbo.proc_test;`），则在链接服务器上执行存储过程会失败。 改为使用 `EXECUTE ... AT` 语法，如 `EXEC(N'TestDB.dbo.proc_test') AT [SQL01];`。
   
  **本主题内容**  
   

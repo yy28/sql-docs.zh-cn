@@ -1,7 +1,7 @@
 ---
 title: "数据库实例文件初始化 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 940f322fb3afe4b7bfff35f0b25b7b7605452a27
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 -   创建数据库。  
   
--   向现有数据库中添加文件、日志或数据。  
+-   向现有数据库添加数据或日志文件。  
   
 -   增大现有文件的大小（包括自动增长操作）。  
   
@@ -40,14 +40,14 @@ ms.lasthandoff: 06/22/2017
  文件初始化会导致这些操作花费更多时间。 但是，首次将数据写入文件后，操作系统就不必用零来填充文件。  
   
 ## <a name="instant-file-initialization"></a>即时文件初始化  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以在瞬间对数据文件进行初始化。 这样可以快速执行上述文件操作。 即时文件初始化功能将回收使用的磁盘空间，而无需使用零填充空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以在瞬间对数据文件进行初始化。 即时文件初始化可以快速执行上述文件操作。 即时文件初始化功能将回收使用的磁盘空间，而无需使用零填充空间。 相反，新数据写入文件时会覆盖磁盘内容。 日志文件不能立即初始化。  
   
 > [!NOTE]  
 >  只有在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更高版本中才可以使用即时文件初始化功能。  
   
  即时文件初始化功能仅在向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) 服务帐户授予了 SE_MANAGE_VOLUME_NAME 之后才可用。 Windows Administrator 组的成员拥有此权限，并可以通过将其他用户添加到 **执行卷维护任务** 安全策略中来为其授予此权限。 有关分配用户权限的详细信息，请参阅 Windows 文档。  
   
- 当启用 TDE 时，即时文件初始化功能不可用。  
+某些条件（如 TDE）可以防止即时文件初始化。  
   
  要向一个帐户授予 `Perform volume maintenance tasks` 权限：  
   
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/22/2017
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+
