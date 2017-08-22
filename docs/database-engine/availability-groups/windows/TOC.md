@@ -14,7 +14,6 @@
 ## [侦听器](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # 概念
-## [自动种子设定](automatically-initialize-always-on-availability-group.md)  
 ## [次要副本的自动种子设定](automatic-seeding-secondary-replicas.md)
 ## [可用性组策略](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [可用性模式](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## 配置可用性组 
 ### [更改副本可用性](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [更改副本故障转移模式](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [配置自动种子设定](automatically-initialize-always-on-availability-group.md)  
 ### [配置副本备份](configure-backup-on-availability-replicas-sql-server.md)  
 ### [配置灵活故障转移策略](configure-flexible-automatic-failover-policy.md)  
 ### [配置副本备份](configure-backup-on-availability-replicas-sql-server.md)  
