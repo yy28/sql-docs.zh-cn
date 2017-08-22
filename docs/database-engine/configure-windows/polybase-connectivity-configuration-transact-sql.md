@@ -24,7 +24,7 @@ ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   显示或更改 PolyBase Hadoop 和 Azure blob 存储连接的全局配置设置。  
   
