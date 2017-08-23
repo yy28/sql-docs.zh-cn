@@ -45,7 +45,7 @@
 # [平面文件自定义属性](flat-file-custom-properties.md)  
 # [OData 源](odata-source.md)  
 ## [教程：使用 OData 源](tutorial-using-the-odata-source.md)  
-## [在运行时修改 OData 源查询](modify-odata-source-query-at-runtime.md)  
+## [在运行时提供 OData 源查询](modify-odata-source-query-at-runtime.md)  
 ## [OData 源属性](odata-source-properties.md)  
 # [ODBC 流组件](odbc-flow-components.md)  
 ## [ODBC 目标](odbc-destination.md)  
