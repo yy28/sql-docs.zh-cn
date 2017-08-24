@@ -17,7 +17,8 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>数据库邮件和 Linux 上的 SQL 代理的电子邮件警报
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 以下步骤演示如何设置数据库邮件并将其用于 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 
 

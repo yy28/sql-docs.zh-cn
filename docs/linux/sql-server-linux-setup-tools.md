@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 通过下列步骤安装命令行工具、Microsoft ODBC 驱动程序及其依赖项。 **Mssql 工具**包包含：
 
 - **sqlcmd**： 命令行查询实用程序。

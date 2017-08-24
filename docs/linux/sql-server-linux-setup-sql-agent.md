@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 以下步骤安装 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 [SQL Server 代理](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)运行计划的 SQL Server 作业。 对于此版本的 SQL Server 代理支持的功能的信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 > [!NOTE]

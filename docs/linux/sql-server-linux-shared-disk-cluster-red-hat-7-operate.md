@@ -16,8 +16,9 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 本文档介绍如何在 Red Hat Enterprise Linux 的共享磁盘故障转移群集上为 SQL Server 执行以下任务。
 

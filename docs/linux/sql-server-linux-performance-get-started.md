@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
+
 如果你是刚接触 SQL Server 的 Linux 用户，以下任务会指导你完成某些性能任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
 
 > [!NOTE]

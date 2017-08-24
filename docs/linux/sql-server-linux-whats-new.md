@@ -16,8 +16,9 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 本主题介绍在 Linux 上运行的 SQL Server 2017 的新增功能。
 

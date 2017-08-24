@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>Linux 上的 SQL Server 的业务连续性和数据恢复
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 组织可以使用 Linux 上的 SQL Server 实现各种各样的服务级协议目标，满足各种业务需求。
 
 这些解决方案超级简单，通过利用虚拟化技术就可实现主机级故障的恢复能力、硬件故障的容错能力，并且高度灵活，使资源得到最大化利用。 这些系统在本地、私有云、公有云或混合环境中均可运行。 灾难恢复和保护最简单的形式是数据库备份。 在 SQL Server 自 2017 年 1 RC2 中可用的简单解决方案包括：

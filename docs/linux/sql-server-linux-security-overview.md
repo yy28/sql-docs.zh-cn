@@ -18,7 +18,9 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上 SQL Server 的安全限制
 
-Linux 上的 SQL Server 当前具有以下限制： 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
+Linux 上的 SQL Server 当前具有以下限制：
 
 * 提供了标准密码策略。 MUST_CHANGE 是可以配置的唯一选项。  
 * 不支持可扩展密钥管理。 

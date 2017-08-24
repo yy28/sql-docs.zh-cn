@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>适用于 Microsoft SQL Server 的连接库和框架
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 签出我们[入门教程](http://aka.ms/sqldev)快速开始使用编程语言，例如 C#、 Java、 Node.js、 PHP 和 Python 和生成在 macOS 上使用 Linux 或 Windows 或 Docker 上的 SQL Server 的应用程序。
 
 下表列出了连接库或*驱动程序*客户端应用程序可以使用不同的语言来连接到并使用 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 以及 Azure SQL 数据库和 Azure SQL 数据仓库。 

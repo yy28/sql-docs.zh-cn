@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 你可以将你的数据库和数据迁移到运行在 Linux 上的 SQL Server 自 2017 年 1 RC2。 选用的方法取决于源数据和特定方案。 以下部分提供多种迁移方案的最佳做法。
 
 ## <a name="migrate-from-sql-server-on-windows"></a>从 Windows 上的 SQL Server 迁移

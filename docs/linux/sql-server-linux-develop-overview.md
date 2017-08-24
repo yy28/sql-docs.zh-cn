@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年 1 RC2。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
 > [!TIP]

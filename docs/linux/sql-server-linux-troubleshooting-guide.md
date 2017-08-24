@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 对 Linux 上的 SQL Server 进行故障排除时，请记住此专用预览版本的限制。 你可以找到其中在列表[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a id="connection"></a>解决连接失败

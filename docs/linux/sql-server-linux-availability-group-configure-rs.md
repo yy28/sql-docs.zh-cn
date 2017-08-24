@@ -16,8 +16,9 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 配置读取的横向扩展可用性组
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 你可以在 Linux 上的 SQL server 配置读取的横向扩展可用性组。 可用性组有两种体系结构。 A*高可用性*体系结构使用群集管理器提供改进的业务连续性。 此体系结构还可以包括读取的横向扩展副本。 若要创建的高可用性体系结构，请参阅[配置 Alwayson 可用性组在 Linux 上的 SQL Server 的](sql-server-linux-availability-group-configure-ha.md)。
 
