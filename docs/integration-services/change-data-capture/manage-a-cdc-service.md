@@ -1,24 +1,29 @@
 ---
-title: "管理 CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manSer"
+title: "管理 CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 管理 CDC 服务
+# <a name="manage-a-cdc-service"></a>管理 CDC 服务
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  
   
  在左侧窗格中单击服务的名称可显示与该服务有关的信息并且对其进行管理。  
@@ -26,7 +31,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  您必须首先使用 CDC 服务配置控制台创建一个服务以便向该列表中添加服务。 有关如何创建服务的信息，请参阅随 CDC 服务配置控制台一起提供的联机帮助。  
   
-## 在显示 CDC 服务信息时您可以执行的操作  
+## <a name="what-you-can-do-when-you-display-the-cdc-service-information"></a>在显示 CDC 服务信息时您可以执行的操作  
  在显示与服务有关的信息时您可以执行以下操作：  
   
  **为所选服务创建一个新的 CDC 实例**  
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
  单击 **“停止所有实例”** 可停止服务中所有实例的变更数据捕获。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建 SQL Server 更改数据库实例](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何从 CDC 设计器控制台管理 CDC 服务](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [使用新建实例向导](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  

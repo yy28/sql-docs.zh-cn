@@ -1,49 +1,54 @@
 ---
-title: "LOWER（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "将大写转换为小写"
-  - "LOWER 函数"
-  - "大写字符 [Integration Services]"
-  - "小写字符"
+title: "LOWER （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting uppercase to lowercase
+- LOWER function
+- uppercase characters [Integration Services]
+- lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d8887035d26ba829dae2153e4e9261836ada70d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# LOWER（SSIS 表达式）
+# <a name="lower-ssis-expression"></a>LOWER（SSIS 表达式）
   返回将大写字符转换为小写字符后得到的字符表达式。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 LOWER(character_expression)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *character_expression*  
  是要转换为小写字符的字符表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## 注释  
+## <a name="remarks"></a>注释  
  LOWER 只可用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 LOWER 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果该参数为空，则 LOWER 返回的结果为空。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  此示例将字符串文字转换为小写字符。 返回结果为“new york”。  
   
 ```  
@@ -62,8 +67,8 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## 另请参阅  
- [UPPER（SSIS 表达式）](../../integration-services/expressions/upper-ssis-expression.md)   
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [上限 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/upper-ssis-expression.md)   
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

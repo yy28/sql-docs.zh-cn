@@ -1,31 +1,36 @@
 ---
-title: "准备查询变更数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量加载 [Integration Services], 准备查询"
+title: "准备查询变更数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 准备查询变更数据
+# <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
   
 > [!NOTE]  
 >  控制流的第二个任务是确保所选间隔的变更数据已准备就绪。 有关此任务的详细信息，请参阅[确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)。 有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)。  
   
-## 设计注意事项  
- 为了检索变更数据，您将调用 Transact-SQL 表值函数，该函数将间隔的端点接受为输入参数并返回指定间隔的变更数据。 数据流中的源组件调用此函数。 有关此源组件的信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。  
+## <a name="design-considerations"></a>设计注意事项  
+ 为了检索变更数据，您将调用 Transact-SQL 表值函数，该函数将间隔的端点接受为输入参数并返回指定间隔的变更数据。 数据流中的源组件调用此函数。 有关此源组件的信息，请参阅 [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。  
   
  最常用的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源组件（包括 OLE DB 源、ADO 源和 ADO NET 源）无法为表值函数派生参数信息。 因此，大多数源不能直接调用参数化的函数。  
   
@@ -40,10 +45,10 @@ caps.handback.revision: 26
   
  本主题使用第一个设计选项，即将参数化查询组合为字符串。  
   
-## 准备查询  
+## <a name="preparing-the-query"></a>准备查询  
  将输入参数的值连接到单个查询字符串中之前，必须设置查询所需的包变量。  
   
-#### 设置包变量  
+#### <a name="to-set-up-package-variables"></a>设置包变量  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 **“变量”** 窗口中，创建一个数据类型为 string 的变量以保存执行 SQL 任务返回的查询字符串。  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 26
   
  创建包变量后，可以使用脚本任务或执行 SQL 任务连接输入参数的值。 下面的两个过程介绍如何配置这些组件。  
   
-#### 使用脚本任务连接查询字符串  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>使用脚本任务连接查询字符串  
   
 1.  在 **“控制流”** 选项卡上，在包中的 For 循环容器后添加一个脚本任务，然后将 For 循环容器连接到该任务。  
   
     > [!NOTE]  
-    >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅[执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
+    >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 2.  在 **“脚本任务编辑器”**中的 **“脚本”** 页上，选择以下选项：  
   
@@ -127,12 +132,12 @@ caps.handback.revision: 26
   
 6.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
   
-#### 使用执行 SQL 任务连接查询字符串  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用执行 SQL 任务连接查询字符串  
   
 1.  在 **“控制流”** 选项卡上，在 For 循环容器之后向包添加一个执行 SQL 任务，然后将 For 循环容器连接到该任务。  
   
     > [!NOTE]  
-    >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅[执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
+    >  此过程假定包从一个表中执行增量加载。 如果包从多个表加载并且具有包含多个子包的父包，则将该任务作为第一个组件添加到各子包中。 有关详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  
   
 2.  在 **“执行 SQL 任务编辑器”**中的 **“常规”** 页上，选择以下选项：  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## 添加数据流任务  
+## <a name="adding-a-data-flow-task"></a>添加数据流任务  
  设计包的控制流的最后一步是添加数据流任务。  
   
-#### 添加数据流任务和完成控制流  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>添加数据流任务和完成控制流  
   
 -   在 **“控制流”** 选项卡上，添加一个数据流任务，并连接用于连接查询字符串的任务。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  在准备查询字符串和配置数据流任务之后，下一步就是创建用于从数据库检索变更数据的表值函数。  
   
  **下一个主题：**[创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

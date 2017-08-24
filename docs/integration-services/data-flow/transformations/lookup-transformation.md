@@ -1,31 +1,36 @@
 ---
-title: "查找转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "查找转换"
-  - "联接列 [Integration Services]"
-  - "缓存 [Integration Services]"
-  - "精确匹配 [Integration Services]"
-  - "查找 [Integration Services]"
-  - "精确匹配 [Integration Services]"
+title: "查找转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 查找转换
+# <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
   
  引用数据集可以是缓存文件、现有的表或视图、新表或 SQL 查询的结果。 查找转换使用 OLE DB 连接管理器或缓存连接管理器来连接到引用数据集。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
@@ -74,16 +79,16 @@ caps.handback.revision: 106
   
 -   错误输出。  
   
-## 缓存引用数据集  
+## <a name="caching-the-reference-dataset"></a>缓存引用数据集  
  内存缓存存储引用数据集以及为数据创建索引的哈希表。 缓存保留在内存中，直到包执行完成。 您可以将缓存保留到缓存文件中 (.caw)。  
   
  将缓存保留到文件中时，系统加载缓存的速度会更快。 这可以提高查找转换和包的性能。 请注意，使用缓存文件时，您使用的数据不如数据库中的数据新。  
   
  下面是将缓存保留到文件中的其他好处：  
   
--   ***在多个包中共享缓存文件。有关详细信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)***。***  
+-   ***在多个包中共享缓存文件。有关详细信息，请参阅***[在完全缓存模式下使用缓存连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***。***  
   
--   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅[为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
+-   使用包部署缓存文件。 ***随后即可在多台计算机上使用该数据。*** 有关详细信息，请参阅 [为查找转换创建和部署缓存](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)。  
   
 -   使用原始文件源从缓存文件中读取数据。 随后即可使用其他数据流组件来转换或移动数据。 有关详细信息，请参阅 [Raw File Source](../../../integration-services/data-flow/raw-file-source.md)。  
   
@@ -112,18 +117,18 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在比较字符串时所用的方式不同。 如果查找转换配置为在查找转换运行之前将引用数据集加载到缓存中，则 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 将在缓存中执行查找比较。 否则，查找操作将使用参数化 SQL 语句并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将执行查找比较。 这意味着，根据缓存类型的不同，查找转换可能会从同一查找表中返回不同数量的匹配项。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关详细信息，请参阅以下主题：  
   
 -   [在不缓存模式或部分缓存模式下实现查找](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [在完全缓存模式下使用缓存连接管理器实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 -   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
@@ -135,7 +140,7 @@ caps.handback.revision: 106
   
      有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   

@@ -1,25 +1,30 @@
 ---
-title: "关系临时表 (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "关系临时表 [Master Data Services]"
-  - "数据库 [Master Data Services], 关系表"
+title: "关系临时表 (Master Data Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b2a6a4d1bd4e62c5c8edb3a5149dab402e0b897
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 关系临时表 (Master Data Services)
+# <a name="relationship-staging-table-master-data-services"></a>关系临时表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的关系临时表 (stg.name_Relationship) 基于成员之间的相互关系更改显式层次结构中的成员位置。  
   
 ##  <a name="TableColumns"></a> 表列  
@@ -36,11 +41,12 @@ caps.handback.revision: 8
 |**ParentCode**|必需<br /><br /> 对于父-子关系，是将为子叶成员或合并成员的父级的合并成员代码。<br /><br /> 对于同级关系，为以下同级之一的代码。||  
 |**ChildCode**|必需<br /><br /> 对于父-子关系，是将为子级的合并成员或叶成员的代码。<br /><br /> 对于同级关系，为以下同级之一的代码。||  
 |**排序顺序**|可选<br /><br /> 一个整数，表示该成员相对于父级下其他成员的成员顺序。 每个子成员应具有唯一标识符。||  
-|**ErrorCode**|显示错误代码。 有关 **ImportStatus_ID** 为 **2** 的所有记录，请参阅[临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)。||  
+|**ErrorCode**|显示错误代码。 有关 **ImportStatus_ID** 为 **2**的所有记录，请参阅 [临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)。||  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
+ [临时过程错误 &#40;Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

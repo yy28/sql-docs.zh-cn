@@ -1,23 +1,28 @@
 ---
-title: "用于 Microsoft Excel 的 Master Data Services 外接程序 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Master Data Services 外接程序 Microsoft excel |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# 用于 Microsoft Excel 的 Master Data Services 外接程序
+# <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
   通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将筛选过的数据列表从 MDS 加载到 Excel 中，从中按照处理任何其他数据的方式来处理加载的数据。 处理完成后，您可以将数据发布回 MDS，这是集中存储数据的位置。 可通过安全权限来确定你可以查看和更新的数据。  
   
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 如果您是管理员，则可以使用 来创建实体和属性，并向其中加载数据。 这样就不必使用任何其他工具将数据加载到模型中。  
@@ -25,8 +30,8 @@ caps.handback.revision: 30
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以先使用 Data Quality Services (DQS) 来匹配数据，然后再将其加载到 MDS 中。 这有助于防止 MDS 中的数据重复。  
 
 ## <a name="downloads"></a>下载 
->*  从[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836866)下载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1。
->* 从[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836867)下载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server vNext CTP1。
+>*  Master Data Services 外接下载 for Excel，对于从 SQL Server 2016 SP1[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836866)。 
+>* 下载[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]为从 SQL Server 自 2017 年 CTP1[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836867)。 此外接程序也适用于 SQL Server 自 2017 年 1 RC1。
 
  
   
@@ -83,3 +88,4 @@ caps.handback.revision: 30
 -   [安全性 (Master Data Services)](../../master-data-services/security-master-data-services.md)  
   
   
+

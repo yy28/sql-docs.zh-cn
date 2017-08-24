@@ -1,32 +1,37 @@
 ---
-title: "将查询参数映射到数据流组件中的变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查询 [Integration Services], 参数映射"
-  - "参数 [Integration Services]"
-  - "将查询参数映射到变量 [Integration Services]"
-  - "变量 [Integration Services], 将参数映射到"
+title: "将查询参数映射到数据流组件中的变量 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [Integration Services], parameter mapping
+- parameters [Integration Services]
+- mapping query parameters to variables [Integration Services]
+- variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 将查询参数映射到数据流组件中的变量
+# <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
   当配置 OLE DB 源以使用参数化查询时，可以将参数映射到变量。  
   
  当 OLE DB 源连接到数据源时，OLE DB 源使用参数化查询来筛选数据。  
   
-### 将查询参数映射到变量  
+### <a name="to-map-a-query-parameter-to-a-variable"></a>将查询参数映射到变量  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 34
   
 7.  单击 **“参数”**。  
   
-8.  在“设置查询参数”对话框中，将“参数”列表中的每个参数映射到“变量”列表中的某个变量，或通过单击“\<新建变量>”创建新的变量。 单击 **“确定”**。  
+8.  在**设置查询参数**对话框框中，映射中的每个参数**参数**到中的变量的列表**变量**列表，或通过单击创建新变量**\<新变量 >**。 单击 **“确定”**。  
   
     > [!NOTE]  
     >  只有在包作用域内的系统变量和用户定义变量，诸如 Foreach 循环容器这样的父容器或者包含数据流组件的数据流任务，才用于映射。 变量的数据类型必须与参数所分配的 WHERE 子句的列兼容。  
@@ -51,7 +56,7 @@ caps.handback.revision: 34
   
 10. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 源](../../integration-services/data-flow/ole-db-source.md)   
  [查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "preprocess 选项（分布式重播管理工具） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Preprocess 选项 （分布式的重播管理工具） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# preprocess 选项（分布式重播管理工具）
+# <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是一个命令行工具，可与分布式重播控制器一起用来进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
   
  **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.png "主题链接图标") 有关与此管理工具语法结合使用的语法约定的详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标")与管理工具语法结合使用的语法约定的详细信息，请参阅[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## 语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -31,8 +36,8 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### Parameters  
- **-m** *控制器*  
+#### <a name="parameters"></a>Parameters  
+ **-m** *controller*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
@@ -68,16 +73,16 @@ dreplay preprocess [-m controller] -i input_trace_file
  **-f** *status_interval*  
  指定显示状态消息的频率（以秒为单位）。  
   
- 如果未指定 **-f**，则默认间隔为 30 秒。  
+ 如果未指定 **-f** ，则默认间隔为 30 秒。  
   
-## 示例  
+## <a name="examples"></a>示例  
  在本示例中，预处理阶段采用所有默认设置启动。 值 `localhost` 表示控制器服务与管理工具在同一计算机上运行。 *Input_trace_file* 参数指定输入跟踪数据的位置 `c:\mytrace.trc`。 由于不涉及跟踪文件筛选，因此必须指定 **-c** 参数。  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- 在本示例中，启动了预处理阶段并指定了修改过的预处理配置文件。 与前面的示例不同，**-c** 参数用于指向修改过的配置文件（如果你将该文件存储在其他位置）。 例如：  
+ 在本示例中，启动了预处理阶段并指定了修改过的预处理配置文件。 与前面的示例不同， **-c** 参数用于指向修改过的配置文件（如果你将该文件存储在其他位置）。 例如：  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
@@ -97,14 +102,14 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## 权限  
+## <a name="permissions"></a>权限  
  您必须作为交互用户、本地用户或域用户帐户运行管理工具。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。  
   
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
-## 另请参阅  
- [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
+## <a name="see-also"></a>另请参阅  
+ [准备输入的跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
