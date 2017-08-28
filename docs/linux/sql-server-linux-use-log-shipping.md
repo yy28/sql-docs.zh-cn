@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器复制到一个或多个辅助服务器上。 简单地说，可将源数据库的备份还原到辅助服务器上。 随后，主服务器会定期创建事务日志备份，辅助服务器会还原备份，同时更新数据库的辅助副本。 
 

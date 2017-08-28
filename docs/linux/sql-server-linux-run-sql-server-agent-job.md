@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列。 本主题提供使用 Transact-SQL 和 SQL Server Management Studio (SSMS) 在 Linux 上创建 SQL Server 代理作业的示例。
 

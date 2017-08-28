@@ -129,7 +129,7 @@ ms.lasthandoff: 07/31/2017
  [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
  ## <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予本地管理员和安装过程中创建并预配的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 ### <a name="uielement-list"></a>UIElement 列表  
   
@@ -219,7 +219,7 @@ ms.lasthandoff: 07/31/2017
   
 ### <a name="see-also"></a>另请参阅  
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
-  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
+  下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予本地管理员和安装过程中创建并预配的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 #### <a name="uielement-list"></a>UIElement 列表  
   
@@ -355,7 +355,7 @@ ms.lasthandoff: 07/31/2017
  此页上输入的密码必须符合强密码策略要求。 如果存在任何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的自动化过程，请确保该密码符合强密码策略要求。  
   
 ### <a name="related-content"></a>相关内容  
- 有关选择 Windows 身份验证和有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的信息，请参阅[选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
+ 有关选择 Windows 身份验证和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的信息，请参阅[选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
  若要深入了解如何选择帐户来运行 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
   

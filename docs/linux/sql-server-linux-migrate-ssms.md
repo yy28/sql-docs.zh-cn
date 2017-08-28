@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>导出和导入与 SSMS 或 Windows 上的 SqlPackage.exe Linux 上的数据库
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主题演示如何使用[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)和[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)导出和导入在 Linux 上的 SQL Server 自 2017 年 1 RC2 上的数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此使用此方法，当你有一台 Windows 计算机可以连接到 Linux 上的远程 SQL Server 实例。
 

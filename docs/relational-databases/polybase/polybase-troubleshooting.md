@@ -224,9 +224,9 @@ ms.lasthandoff: 07/31/2017
  ## <a name="known-limitations"></a>已知的限制
  
  PolyBase 具有以下限制： 
- - 最大可能行大小（包括可变长度列的总长度）不能超过 1 MB。 
+ - 最大行大小（包括可变长度列的全长）不能超过 1 MB。 
  - PolyBase 不支持 Hive 0.12+ 数据类型（即 Char()、VarChar()）   
- - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
+ - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于 Java 内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
 - [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案

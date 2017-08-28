@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文档介绍 Linux 上的 SQL Server 虚拟设备接口 (VDI) 客户端 SDK 所提供的接口。 独立软件供应商 (ISV) 可以使用虚拟备份设备应用程序编程接口 (API) 将 SQL Server 集成到产品中。 通常，Linux 上的 VDI 的行为与 Windows 上的 VDI 行为类似，但进了以下更改：
 

@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  若要确定使用 **身份验证的** 本地实例中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中是否存在包，可使用以下语法：  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [运行 Integration Services (SSIS) 包](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+

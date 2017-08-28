@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 自 2017 年 1 RC2 的数据库的备份。 在 Linux 服务器上，你可以使用`sqlcmd`连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](http://msdn.microsoft.com/library/dn435916.aspx)。 
 

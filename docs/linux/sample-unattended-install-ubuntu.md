@@ -17,7 +17,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例： 适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 此示例 Bash 脚本上 Ubuntu 16.04 中安装 SQL Server 自 2017 年 1 RC2，而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 

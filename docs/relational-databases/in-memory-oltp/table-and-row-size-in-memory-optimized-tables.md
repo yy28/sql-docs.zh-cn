@@ -42,7 +42,7 @@ ms.lasthandoff: 07/31/2017
 
   内存优化表由行和索引的集合组成，其中包含行的指针。 下图是一个包含索引和行的表，因而也就有行标题和正文：  
   
- ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![内存优化表。](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "内存优化表。")  
 内存优化表，由索引和行组成。  
 
 ##  <a name="bkmk_TableSize"></a> 计算表的大小

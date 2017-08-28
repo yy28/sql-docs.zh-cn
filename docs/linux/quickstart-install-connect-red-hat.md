@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 在此快速入门教程中，你首先安装 SQL Server 自 2017 年 1 RC2 上 Red Hat Enterprise Linux (RHEL) 7.3。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
 

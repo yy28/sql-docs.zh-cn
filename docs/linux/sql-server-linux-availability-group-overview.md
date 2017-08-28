@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>适用于 Linux 上的 SQL Server 的可用性组
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server AlwaysOn 可用性组是一种高可用性 (HA)、灾难恢复 (DR) 和横向扩展的解决方案。 它在直接附加的存储上为数据库组提供高可用性。 它支持多个辅助以实现集成的高可用性和灾难恢复、自动故障检测、快速透明故障转移和读取负载均衡。 凭借此一系列广泛的功能，可以实现工作负荷的最佳可用性 SLA。
 

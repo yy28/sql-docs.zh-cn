@@ -37,7 +37,7 @@ ms.lasthandoff: 07/31/2017
  **答案。** 请使用 FOR JSON PATH。 尽管 JSON 输出没有任何区别，但 AUTO 模式采用一些其他的逻辑，可检查是否应嵌套列。 请将 PATH 作为默认选项。  
 
 ### <a name="create-a-nested-json-structure"></a>创建一个嵌套的 JSON 结构  
- **问题。** 我希望在同一级别上生成具有多个数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
+ **问题。** 我希望生成具有多个同级别数组的复杂 JSON。 FOR JSON PATH 可以使用路径创建嵌套对象，FOR JSON AUTO 为每个表创建其他的嵌套级别。 这两个选项都不能够让我生成所需的输出。 我如何才能自定义现有选项不直接支持的 JSON 格式？  
   
  **答案。** 通过将 FOR JSON 查询添加为返回 JSON 文本的列表达式，可创建任何数据结构。 还可以使用 JSON_QUERY 函数手动创建 JSON。 下面的示例演示了这些方法。  
   
@@ -69,7 +69,7 @@ FOR JSON PATH
   
  我如何才能防止此行为？ 我想让 `{"day":23}` 作为 JSON 对象而不是转义文本返回。  
   
- **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将此列作为参数传递给 JSON_QUERY 函数，如下例所示。  
+ **答案。** 存储在文本列中的 JSON 或文字被当做文本处理。 也就是说，它会括在双引号内并进行转义。 如果想返回未转义的 JSON 对象，请将 JSON 列作为参数传递给 JSON_QUERY 函数，如下例所示。  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
