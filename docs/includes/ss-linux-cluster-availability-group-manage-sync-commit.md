@@ -17,7 +17,7 @@ SQL Server 2017 CTP 1.4 在 `sys.availability_groups` 中添加了 `sequence_num
 
 在以下情况下，可用性组仍可能容易发生数据丢失。 在包含五个节点的群集中，如果某个可用性组的副本位于 SQL Server 的三个实例上，则主副本和一个辅助副本可能会出现在其他辅助副本的前面。 如果是这样，`sys.availability_groups` 中的 `sequence_number` 将高于其他副本。 在此情况下，如果两个副本与群集中的其余节点断开连接，Pacemaker 可以看到仲裁形式的剩余三个节点，并允许落后的副本将其自身升级为主副本。 在这种情况下，有可能会丢失数据。
 
-sql2017 引入了一项新功能，可在主副本上提交任何事务之前，强制要求特定数目的次要副本可用。 使用 `REQUIRED_COPIES_TO_COMMIT` 可以设置在继续事务之前，必须提交到辅助副本数据库事务日志的副本数。 可以结合 `CREATE AVAILABILITY GROUP` 或 `ALTER AVAILABILITY GROUP` 使用此选项。 请参阅 [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx)。
+sql2017 引入了一项新功能，可在允许向主副本提交任何事务之前，强制要求特定数目的次要副本可用。 使用 `REQUIRED_COPIES_TO_COMMIT` 可以设置在继续事务之前，必须提交到辅助副本数据库事务日志的副本数。 可以结合 `CREATE AVAILABILITY GROUP` 或 `ALTER AVAILABILITY GROUP` 使用此选项。 请参阅 [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx)。
 
 若要避免上面所述的数据丢失的可能性，请将 `REQUIRED_COPIES_TO_COMMIT` 设置为已同步副本的最大数目。 以后的版本将采用内置逻辑来自动处理 `REQUIRED_COPIES_TO_COMMIT` 的设置。
 设置 `REQUIRED_COPIES_TO_COMMIT` 后，主副本数据库中的事务将等待在所需数目的同步辅助副本数据库事务日志中提交事务。 如果足够数目的同步辅助副本未联机，事务将会停止，直到与足够数目的辅助副本的通信恢复。

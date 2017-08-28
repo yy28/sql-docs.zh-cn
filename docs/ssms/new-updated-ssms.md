@@ -28,14 +28,14 @@ ms.lasthandoff: 07/31/2017
 
 Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文档网站上的一些现有文章。 本文显示从最近更新的文章中摘录的内容。 可能还会列出新文章的链接。
 
-本文由定期重新运行的程序生成。 有时摘录内容可能以并不适合的格式显示，还可能以源文的 markdown 格式显示。 此处不会显示任何图像。
+本文由定期重新运行的程序生成。 摘录内容偶尔会有格式问题，还可能以源文的 markdown 格式显示。 此处不会显示任何图像。
 
-根据以下日期范围和主题报告最新更新：
+最新的更新报告涵盖以下日期范围和主题：
 
 
 
 - 更新日期范围：&nbsp;从 2017-05-23&nbsp; 到 2017-07-17&nbsp;
-- 主题区域： &nbsp; **SQL Server Management Studio (SSMS)**。
+- 主题领域： &nbsp; **SQL Server Management Studio (SSMS)**。
 
 
 
@@ -105,11 +105,11 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>具有摘录的已更新文章
+## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
 
 此部分显示从最近大幅更新的文章中收集到的更新的摘录内容。
 
-此处显示的摘录与其对应的语义上下文分开显示。 此外，有时摘录会与实际文章中与此摘录相关的重要 markdown 语法存在差异。 因此，这些摘录仅可用于一般指导。 摘录只是让你了解，是否有必要为了兴趣来花时间点击并访问实际文章。
+此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
 
 鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
 
@@ -145,9 +145,9 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - Analysis Service 用户可以从数据源上的上下文菜单中针对 1200 TM 模型及更高版本刷新其数据源的凭据
 - 内置 SSIS 报表现在可显示 CTP 2.1 中 SSIS 扩展执行的日志
 - SSIS 扩展管理应用程序
-  - 查看扩展主要角色的相关基本信息。
+  - 查看扩展主要角色的基本信息。
   - 轻松向扩展部署添加辅助角色。
-  - 查看所有扩展辅助角色及其相关基本信息，还可将它们轻松启用或禁用。
+  - 查看所有扩展辅助角色及其基本信息，还可将它们轻松启用或禁用。
 
 **Bug 修复**
 
@@ -160,7 +160,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
   - 修复了 SSMS 17.0 中断 Visual Studio 2013 上的 SSDT 的问题 [Connect 项目 3133479]
   - 修复了安装结束时单击“重启”不会重启计算机的问题
 - 脚本：通过禁用选项，暂时阻止了 SSMS 尝试编写删除脚本时误删 Azure 数据库对象的问题。  即将发布的 SSMS 版本中将提供正式修复。
-- 对象资源管理器：修复了使用“AS COPY”将“数据库”节点连接到创建的 Azure 数据库时此节点无法展开的问题
+- 对象资源管理器：修复了将“数据库”节点连接到使用“AS COPY”创建的 Azure 数据库时此节点无法展开的问题
 
 
 
@@ -173,11 +173,11 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 ## <a name="similar-articles"></a>类似文章
 
-本节针对同一 GitHub.com 存储库 ([MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)) 中其他主题区域的最近更新的文章列出了非常相似的文章。
+本节针对同一 GitHub.com 存储库 ([MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)) 中其他主题领域的最近更新的文章列出了非常相似的文章。
 
 <!--  20170717-1101  -->
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题领域具有新的或最近更新的文章
 
 - [新文章和已更新的文章 (4+4)：Advanced Analystics for SQL 文档](../advanced-analytics/new-updated-advanced-analytics.md)
 - [新文章和已更新的文章 (2+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
@@ -193,7 +193,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新文章和已更新的文章 (1+0)：Tools for SQL 文档](../tools/new-updated-tools.md)
 
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题领域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)

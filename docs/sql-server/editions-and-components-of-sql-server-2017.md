@@ -131,7 +131,7 @@ ms.lasthandoff: 07/31/2017
 **开发人员版和评估版**  
 有关开发人员版和评估版支持的功能，请参阅下表中列出的 SQL Server Enterprise Edition 功能。
 
-开发人员版仍仅继续支持适用于 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 的一个客户端。 
+开发人员版仍然仅支持一个 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) 客户端。 
   
 ##  <a name="Cross-BoxScaleLimits"></a>规模限制  
   
@@ -303,7 +303,7 @@ ms.lasthandoff: 07/31/2017
 |Polybase 头节点|是|“否”|“否”|“否”|是| 
 |JSON|是|是|是|是|是|   
 |查询存储|是|是|是|是|是|   
-|临时|是|是|是|是|是|   
+|时态|是|是|是|是|是|   
 |公共语言运行时 (CLR) 集成|是|是|是|是|是|   
 |本机 XML 支持|是|是|是|是|是| 
 |XML 索引|是|是|是|是|是| 

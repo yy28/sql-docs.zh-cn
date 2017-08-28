@@ -6,7 +6,7 @@
 - 安装 SQL Server
 
 >[!NOTE]
->在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关在各种分发中创建群集并将可用性组添加为群集资源的特定说明，请参阅[后续步骤](#next-steps)中的链接。
+>在Linux上，必须先创建可用性组，然后再将其添加为群集管理的群集资源。 本文档举例说明了如何创建可用性组。 有关在各种发行版中创建群集并将可用性组添加为群集资源的特定说明，请参阅[后续步骤](#next-steps)中的链接。
 
 1. **更新每个主机的计算机名**
 
@@ -126,7 +126,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>在辅助服务器上创建证书
 
-以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会为用户授予访问证书的权限。 使用强密码更新脚本。 解密密码与上一步中创建 .pvk 文件使用的密码相同。 在所有辅助服务器上运行以下脚本创建证书。
+以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会为用户授予访问证书的权限。 使用强密码更新脚本。 解密密码与在此前的步骤中创建 .pvk 文件使用的密码相同。 在所有辅助服务器上运行以下脚本创建证书。
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';

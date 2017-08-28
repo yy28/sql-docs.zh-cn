@@ -29,7 +29,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 将查询结果格式化为 JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过委托从应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 JSON 输出格式来简化客户端应用程序。
+通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序。
   
  使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出。  
   

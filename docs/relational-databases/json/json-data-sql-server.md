@@ -173,7 +173,7 @@ FOR JSON PATH
 ## <a name="combine-relational-and-json-data"></a>合并关系数据和 JSON 数据
  SQL Server 提供混合模型，用于通过标准 Transact-SQL 语言存储和处理关系数据与 JSON 数据。 可以将 JSON 文档的集合组织到表中，在它们之间建立关系，将表中存储的强类型标量列与 JSON 列中存储的灵活键/值对合并，以及使用完整 Transact SQL 查询一个或多个表中的标量值和 JSON 值。
  
-JSON 文本通常存储在 varchar 或 nvarchar 列中，并编制了纯文本形式的索引。 任何支持文本的 SQL Server 功能或组件均支持 JSON，因此 JSON 和其他 SQL Server 功能之间的交互几乎没有任何约束。 你可以将 JSON 存储在内存中或临时表中、对 JSON 文本应用行级别安全性谓词等。
+JSON 文本通常存储在 varchar 或 nvarchar 列中，并编制了纯文本形式的索引。 任何支持文本的 SQL Server 功能或组件均支持 JSON，因此 JSON 和其他 SQL Server 功能之间的交互几乎没有任何约束。 你可以将 JSON 存储在内存中或时态表中、对 JSON 文本应用行级别安全性谓词等。
 
 如果在单纯的 JSON 工作负载中，你想要使用专用于处理 JSON 文档的自定义查询语言，可以考虑 Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/)。  
   

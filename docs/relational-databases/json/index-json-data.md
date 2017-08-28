@@ -39,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 此示例假定 AdventureWorks `SalesOrderHeader` 表包含 `Info` 列，此列包含关于销售订单的采用 JSON 格式的各种信息。 例如，包含客户、销售人员、装运和帐单地址等相关信息。 假设要使用 `Info` 列的值来筛选某个客户的销售订单。
 
 ### <a name="query-to-optimize"></a>要优化的查询
-下面是可使用索引进行优化的查询的类型。  
+以下示例说明可使用索引进行优化的查询类型。  
   
 ```sql  
 SELECT SalesOrderNumber,

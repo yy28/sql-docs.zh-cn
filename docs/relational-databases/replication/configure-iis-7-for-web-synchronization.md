@@ -27,7 +27,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  本主题介绍手动配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本的完整过程，以便与用于合并复制的 Web 同步一起使用。 
+  本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
   
  配置 IIS 7 或更高版本是启用 Web 同步所需的三个步骤中的第一步。  
   
