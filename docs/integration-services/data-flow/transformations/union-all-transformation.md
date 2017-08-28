@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
+- sql13.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - combining datasets
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="union-all-transformation"></a>Union All 转换
@@ -45,13 +46,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“Union All 转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md)。  
-  
  有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="union-all-transformation-editor"></a>Union All 转换编辑器
+  可以使用 **“Union All 转换编辑器”** 对话框，将多个输入行集合并到单个输出行集中。 通过在数据流中包含 Union All 转换，可以从多个数据流合并数据、通过嵌套 Union All 转换来创建复杂数据集、以及在更正数据中的错误之后重新合并行。  
+  
+### <a name="options"></a>选项  
+ **输出列的名称**  
+ 为每一列键入一个别名。 默认值为第一个（引用）输入中输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ **Union All 输入 1**  
+ 从第一个（引用）输入中可用输入列的列表中选择。 映射的列的元数据必须匹配。  
+  
+ **Union All 输入 n**  
+ 从第二个或其他输入中可用输入列的列表中选择。 映射的列的元数据必须匹配。  
   
 ## <a name="related-tasks"></a>相关任务  
  [通过使用 Union All 转换来合并数据](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

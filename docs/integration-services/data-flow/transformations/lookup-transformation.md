@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
+- sql13.dts.designer.lookuptransformation.general.f1
+- sql13.dts.designer.lookuptransformation.referencetable.f1
+- sql13.dts.designer.lookuptransformation.columns.f1
+- sql13.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup transformation
 - joining columns [Integration Services]
@@ -24,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee0c7e667e933c98bdbc228244a9dea1cf2c9bdd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="lookup-transformation"></a>查找转换
@@ -59,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
  查找转换试图在转换输入的值和引用数据集的值之间执行同等联接。 （同等联接意味着转换输入中的每一行都至少要与引用数据集中的一行匹配。）如果无法实现同等联接，则查找转换会执行下列操作之一：  
   
--   如果引用数据集中没有匹配项，则不会发生联接。 默认情况下，查找转换将没有匹配项的行视为错误。 但是，您可以将查找转换配置为将这些行重定向到无匹配输出。 有关详细信息，请参阅[查找转换编辑器（“常规”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)和[查找转换编辑器（“错误输出”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)。  
+-   如果引用数据集中没有匹配项，则不会发生联接。 默认情况下，查找转换将没有匹配项的行视为错误。 但是，您可以将查找转换配置为将这些行重定向到无匹配输出。  
   
 -   如果引用表中有多个匹配项，则查找转换只返回查找查询返回的第一个匹配项。 如果发现多个匹配项，则仅当转换被配置为将所有引用数据集加载到缓存中时查找转换才生成错误或警告。 在这种情况下，如果查找转换在填充缓存时检测到多个匹配项，则该查找转换将生成警告。  
   
@@ -139,6 +143,139 @@ ms.lasthandoff: 08/03/2017
 -   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   
      有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
+  
+## <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
+  可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  
+  
+### <a name="options"></a>选项  
+ **完全缓存**  
+ 在执行查找转换前，生成引用数据集并将其加载到缓存中。  
+  
+ **部分缓存**  
+ 在执行查找转换的过程中生成引用数据集。 将在引用数据集内有匹配项的行加载到缓存中，并将数据集内没有匹配项的行加载到缓存中。  
+  
+ **不缓存**  
+ 在执行查找转换的过程中生成引用数据集。 不向缓存中加载任何数据。  
+  
+ **缓存连接管理器**  
+ 将查找转换功能配置为使用缓存连接管理器。 只有当选择了“完全缓存”选项时，此选项才可用。  
+  
+ **OLE DB 连接管理器**  
+ 将查找转换功能配置为使用 OLE DB 连接管理器。  
+  
+ **指定如何处理无匹配项的行**  
+ 选择一个选项来处理在引用数据集内没有任何匹配项的行。  
+  
+ 如果选中 **“将行重定向到无匹配输出”**，则行将重定向到无匹配输出，并且将不作为错误处理。 **“查找转换编辑器”** 对话框的 **“错误输出”** 页上的 **“错误”** 选项不可用。  
+  
+ 如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 **“错误输出”** 页上的 **“错误”** 选项不可用。  
+  
+### <a name="external-resources"></a>外部资源  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+  
+## <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
+  可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
+  
+### <a name="options"></a>选项  
+ 在 **“查找转换编辑器”** 对话框的“常规”页上选择 **“完全缓存”** 和 **“缓存连接管理器”** 时，下列选项可用：  
+  
+ **缓存连接管理器**  
+ 从列表中选择现有的缓存连接管理器，或单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 使用“缓存连接管理器编辑器”对话框创建新的连接。  
+  
+ 在 **“查找转换编辑器”**对话框的“常规”页上选择 **“完全缓存”**、 **“部分缓存”**或 **“无缓存”**以及 **“OLE DB 连接管理器”** 时，下列选项可用：  
+  
+ **“无缓存”**  
+ 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+  
+ **使用表或视图**  
+ 从列表中选择现有表或视图，或单击“新建”创建新表。  
+  
+> [!NOTE]  
+>  在此处选择的表名将由在 **“查找转换编辑器”** 的 **“高级”**页上指定的 SQL 语句覆盖和替换。 有关详细信息，请参阅 [查找转换编辑器（“高级”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)。  
+  
+ **新建**  
+ 通过使用“创建表”对话框创建一个新表。  
+  
+ **使用 SQL 查询的结果**  
+ 选择该选项后，可以通过浏览找到预先存在的查询、生成一个新查询、检查查询语法，然后预览查询结果。  
+  
+ **生成查询**  
+ 通过使用“查询生成器”可以创建要运行的 Transact-SQL 语句，查询生成器是一个用于通过浏览数据来创建查询的图形工具。  
+  
+ **浏览**  
+ 使用此选项可以找到保存为文件的预先存在的查询。  
+  
+ **分析查询**  
+ 检查查询的语法。  
+  
+ **预览**  
+ 使用“预览查询结果”对话框预览结果。 此选项最多可以显示 200 行。  
+  
+### <a name="external-resources"></a>外部资源  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+  
+## <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
+  可以使用 **“查找转换编辑器”** 对话框的 **“列”** 页，指定源表与引用表之间的联接以及从引用表中选择查找列。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 查看可用输入列的列表。 输入列是所连接源的数据流中的列。 输入列和查找列必须具有相互匹配的数据类型。  
+  
+ 使用拖放操作将可用输入列映射到查找列。  
+  
+ 还可以用键盘通过以下方法将输入列映射到查找列：突出显示 **“可用输入列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
+  
+ **可用查找列**  
+ 查看查找列的列表。 查找列是包含在引用表中并可在其中查找与输入列相匹配的值的列。  
+  
+ 使用拖放操作将可用查找列映射到输入列。  
+  
+ 使用这些复选框可以在引用表中选择要对其执行查找操作的列。  
+  
+ 还可以用键盘通过以下方法将查找列映射到输入列：突出显示 **“可用查找列”** 表中的某一列，按应用程序键，然后单击 **“编辑映射”**。  
+  
+ **查找列**  
+ 查看所选的查找列。 通过选中 **“可用查找列”** 表中的复选框即可选择查找列。  
+  
+ **查找操作**  
+ 从列表中选择要对查找列执行的查找操作。  
+  
+ **输出别名**  
+ 为每个查找列的输出键入一个别名。 默认值为查找列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+## <a name="lookup-transformation-editor-advanced-page"></a>查找转换编辑器（“高级”页）
+  可以使用 **“查找转换编辑器”** 对话框的 **“高级”** 页，配置部分缓存以及修改查找转换的 SQL 语句。  
+  
+### <a name="options"></a>选项  
+ **缓存大小(32 位)**  
+ 调整 32 位计算机的缓存大小 (MB)。 默认值为 5 MB。  
+  
+ **缓存大小(64 位)**  
+ 调整 64 位计算机的缓存大小 (MB)。 默认值为 5 MB。  
+  
+ **为无匹配项的行启用缓存**  
+ 缓存在引用数据集内没有匹配项的行。  
+  
+ **缓存的分配额**  
+ 指定要针对在引用数据集内没有匹配项的行分配的缓存所占的百分比。  
+  
+ **修改 SQL 语句**  
+ 修改用来生成引用数据集的 SQL 语句。  
+  
+> [!NOTE]  
+>  在此页上指定的可选 SQL 语句将覆盖并替换在 **“查找转换编辑器”** 的 **“高级”**页上指定的表名。 有关详细信息，请参阅 [查找转换编辑器（“连接”页）](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)。  
+  
+ **设置参数**  
+ 使用“设置查询参数”对话框将输入列映射到参数。  
+  
+### <a name="external-resources"></a>外部资源  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

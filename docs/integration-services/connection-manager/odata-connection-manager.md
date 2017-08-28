@@ -17,26 +17,26 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: b23a158bff546fd6ffb4208638c039d690379ce1
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: f54562b59e8c61f723c17e2812ca39cb2e95f273
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
-  使用 OData 连接管理器连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 有关详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
+ 连接到 OData 数据源与 OData 连接管理器。 OData 源组件使用 OData 连接管理器连接到 OData 数据源和使用从服务的数据。 有关详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加 OData 连接管理器  
- 可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
+ 可以将新的 OData 连接管理器添加到 SSIS 包通过三种方式：  
   
 -   单击 **“OData 源编辑器”** 中的 **“新建…”**  
   
 -   在“解决方案资源管理器”  中，右键单击“连接管理器” 文件夹，然后单击“新建连接管理器” 。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
--   右键单击包设计器底部的“连接管理器”  窗格，然后选择“新建连接…” 。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
+-   在中右击**连接管理器**在包设计器中，，然后选择底部窗格中**新连接**。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
 ## <a name="connection-manager-authentication"></a>连接管理器身份验证  
- OData 连接管理器支持 5 种身份验证模式。  
+ OData 连接管理器支持身份验证的五种的模式。  
   
 -   Windows 身份验证  
   
@@ -48,26 +48,28 @@ ms.lasthandoff: 08/09/2017
   
 -   Microsoft Online Services（使用用户名和密码）  
   
- 对于匿名访问，请选择“Windows 身份验证”选项。  
+对于匿名访问，请选择“Windows 身份验证”选项。  
+
+若要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM online，你不能使用**Microsoft Online Services**身份验证选项。 你还不能使用多因素身份验证配置任何选项。
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
  如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
   
- 有几种方法来参数化用户名和密码值或将其存储在包外。 例如，可以使用参数或在使用 SQL Server Management Studio 运行包时通过直接设置连接管理器属性来执行此操作。  
+ 有几种方法来参数化用户名和密码值或将其存储在包外。 例如，你可以使用参数，或从 SQL Server Management Studio 运行包时直接设置连接管理器属性。  
   
 ## <a name="odata-connection-manager-properties"></a>OData 连接管理器属性  
- 下面的列表介绍 OData 连接管理器的属性。  
+ 以下列表介绍 OData 连接管理器的属性。  
   
 |||  
 |-|-|  
 |属性|Description|  
 |Url|服务文档的 URL。|  
-|UserName|要用于基本身份验证的用户名。|  
-|密码|要用于基本身份验证的密码。|  
-|ConnectionString|反映连接管理器的其他属性。|  
+|UserName|要用于身份验证，如果所需的用户名。|  
+|密码|要用于身份验证，如果所需的密码。|  
+|SubQueries|包括连接管理器的其他属性。|  
   
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
-  使用 **“OData 连接管理器编辑器”** 对话框可以添加与 OData 源的连接或者编辑现有连接。  
+  使用**OData 连接管理器编辑器**对话框以添加连接或编辑现有连接到 OData 数据源。  
   
 ### <a name="options"></a>选项  
  **连接管理器名称**  
@@ -77,14 +79,17 @@ ms.lasthandoff: 08/09/2017
  OData 服务的 URL。 例如：http://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **身份验证**  
- 为“基本身份验证”  选择“Windows 身份验证”  或使用 **此用户名和密码**。 如果选择第二个选项，请输入 **“用户名”** 和 **“密码”**。 
- 
- 现另外推出 3 种选项。 为 Dynamics AX Online 选择“Microsoft Dynamics AX Online”  ，为 Dynamics CRM Online 选择“Microsoft Dynamics CRM Online”  ，并为 Microsoft Online Services 选择“Microsoft Online Services”  。 如果选择这三种选项之一，请输入 **用户名** 和 **密码**。
-  
+选择以下选项之一：
+-   **Windows 身份验证**。 对于匿名访问，请选择此选项。
+-   **基本身份验证** 
+-   **Microsoft Dynamics AX 联机**为 Dynamics AX 联机
+-   **Microsoft Dynamics CRM Online**为 Dynamics CRM Online
+-   **Microsoft Online Services** Microsoft Online services
+
+如果你选择 Windows 身份验证之外的一个选项，输入**用户名**和**密码**。 
+
+若要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM online，你不能使用**Microsoft Online Services**身份验证选项。 你还不能使用多因素身份验证配置任何选项。
+
  **测试连接**  
  单击此按钮可测试与 OData 源的连接。  
-  
-## <a name="see-also"></a>另请参阅  
- [OData 连接管理器编辑器](../../integration-services/connection-manager/odata-connection-manager-editor.md)  
-  
-  
+

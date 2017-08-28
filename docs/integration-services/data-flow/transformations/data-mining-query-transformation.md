@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytrans.f1
+- sql13.dts.designer.dmquerytransformation.miningmodel.f1
+- sql13.dts.designer.dmquerytransformation.query.f1
 helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 544f0aaf11e83b9ba2fc0ae5150b85e537998c25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7ec5d0d1168e49fb38ce8b58eaa75d6c0d6c51b5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-mining-query-transformation"></a>数据挖掘查询转换
@@ -38,12 +40,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“数据挖掘查询转换编辑器”** 对话框中设置的属性的详细信息，请单击以下主题之一：  
-  
--   [数据挖掘查询转换编辑器（“挖掘模型”选项卡）](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [数据挖掘查询转换编辑器（“挖掘模型”选项卡）](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -52,4 +48,30 @@ ms.lasthandoff: 08/03/2017
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>数据挖掘查询转换编辑器（“挖掘模型”选项卡）
+  可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“挖掘模型”** 选项卡选择数据挖掘结构及其挖掘模型。  
   
+### <a name="options"></a>选项  
+ **连接**  
+ 使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”按钮创建新的连接。  
+  
+ **新建**  
+ 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+  
+ **挖掘结构**  
+ 从可用挖掘模型结构的列表中进行选择。  
+  
+ **挖掘模型**  
+ 查看与所选数据挖掘结构关联的挖掘模型的列表。  
+  
+## <a name="data-mining-query-transformation-editor-query-tab"></a>数据挖掘查询转换编辑器（“查询”选项卡）
+  可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“查询”** 选项卡创建预测查询。  
+  
+### <a name="options"></a>选项  
+ **数据挖掘查询**  
+ 将数据挖掘扩展插件 (DMX) 查询直接键入文本框中。  
+  
+ **生成新查询**  
+ 单击“生成新查询”可以通过使用图形查询生成器来创建数据挖掘扩展插件 (DMX) 查询。  
+  
+

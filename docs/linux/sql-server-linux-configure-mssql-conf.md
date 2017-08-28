@@ -4,19 +4,21 @@ description: "本主题介绍如何使用 mssql conf 工具在 Linux 上配置 S
 author: luisbosquez
 ms.author: lbosq
 manager: jhubbard
-ms.date: 06/16/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 **mssql conf**是将与 SQL Server 自 2017 年 1 RC2 为 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
 
@@ -37,13 +39,16 @@ ms.lasthandoff: 08/02/2017
 | [TLS](#tls) | 配置传输级安全。 |
 | [跟踪标志](#traceflags) | 设置服务要使用这些跟踪标志。 |
 
-在下面各部分中，举例说明了如何针对以上各种情况使用 mssql-conf。
-
 > [!TIP]
-> 运行 mssql-conf 通过这些示例指定完整路径： **/opt/mssql/bin/mssql-conf**。 如果你选择请改为导航到该路径，在当前目录的上下文中运行 mssql conf: **。 / mssql conf**。
-
-> [!NOTE]
 > 其中某些设置还可以使用环境变量配置。 有关详细信息，请参阅[与环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
+
+## <a name="usage-tips"></a>使用提示
+
+* 有关 Alwayson 可用性组和共享的磁盘群集，始终在每个节点上进行相同的配置更改。
+
+* 对于共享的磁盘群集方案，请不要尝试重新启动**mssql server**服务以应用更改。 SQL Server 正在运行为应用程序。 相反，使资源脱机再然后恢复联机。
+
+* 运行 mssql-conf 通过这些示例指定完整路径： **/opt/mssql/bin/mssql-conf**。 如果你选择请改为导航到该路径，在当前目录的上下文中运行 mssql conf: **。 / mssql conf**。
 
 ## <a id="collation"></a>更改 SQL Server 排序规则
 
@@ -190,7 +195,7 @@ ms.lasthandoff: 08/02/2017
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    默认值： **true**
+    默认值： **false**
 
 1. 指定的转储文件的类型**coredump.coredumptype**设置。
 
@@ -314,11 +319,11 @@ sudo systemctl restart mssql-server
 
 |选项 |Description |
 |--- |--- |
-|**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
-|**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/certs/mssql.pem`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
-|**network.tlskey** |私钥的绝对路径文件[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/private/mssql.key`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
-|**network.tlsprotocols** |哪些 TLS 协议都允许 SQL Server 的逗号分隔的列表。 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]始终尝试协商允许的最高协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]拒绝连接尝试。  为了实现兼容，默认情况下，（1.2、 1.1、 1.0） 允许所有支持的协议。  如果你的客户端支持 TLS 1.2，Microsoft 建议允许仅 TLS 1.2。 |
-|**network.tlsciphers** |指定允许哪些密码[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]tls。 此字符串的格式必须设置每个[OpenSSL 的密码的列表格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)。 一般情况下，你应该不需要更改此选项。 <br /> 默认情况下，允许以下密码： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
+|**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/certs/mssql.pem`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlskey** |私钥的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/private/mssql.key`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlsprotocols** |哪些 TLS 协议都允许 SQL Server 的逗号分隔的列表。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]始终尝试协商允许的最高协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]拒绝连接尝试。  为了实现兼容，默认情况下，（1.2、 1.1、 1.0） 允许所有支持的协议。  如果你的客户端支持 TLS 1.2，Microsoft 建议允许仅 TLS 1.2。 |
+|**network.tlsciphers** |指定允许哪些密码[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tls。 此字符串的格式必须设置每个[OpenSSL 的密码的列表格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)。 一般情况下，你应该不需要更改此选项。 <br /> 默认情况下，允许以下密码： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 文件路径 |
 
 使用 TLS 设置的示例，请参阅[Encrypting connections to Linux 上的 SQL Server 连接](sql-server-linux-encrypted-connections.md)。
@@ -351,15 +356,83 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+## <a name="remove-a-setting"></a>删除该设置
+
+使用的任何设置进行以取消设置`mssql-conf set`，调用**mssql conf**与`unset`选项和设置的名称。 这将清除该设置，有效地将其返回到其默认值。
+
+1. 下面的示例清除**network.tcpport**选项。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf unset network.tcpport
+   ```
+
+1. 重新启动 SQL Server 服务。
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 ## <a name="view-current-settings"></a>查看当前设置
 
-若要查看你使用显式配置任何设置**mssql conf**，运行以下命令：
+若要查看任何配置设置，请运行以下命令以输出的内容**mssql.conf**文件：
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-请注意，未在此文件中显示的所有设置均使用其默认值。
+请注意，未在此文件中显示的所有设置均使用其默认值。 下一节提供一个示例**mssql.conf**文件。
+
+## <a name="mssqlconf-format"></a>mssql.conf 格式
+
+以下**/var/opt/mssql/mssql.conf**文件提供了为每个设置的一个示例。 可以使用此格式可以手动更改到**mssql.conf**文件根据需要。 如果你手动更改此文件，必须重新启动 SQL Server，才能将应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[保存数据](sql-server-linux-configure-docker.md)。 第一次添加整个**mssql.conf**到你的主机目录文件，然后运行容器。 没有在此示例[客户反馈](sql-server-linux-customer-feedback.md)。
+
+```ini
+[EULA]
+accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
 
 ## <a name="next-steps"></a>后续步骤
 

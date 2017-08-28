@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>缓存转换
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  在单个包中，只有一个缓存转换可以将数据写入同一缓存连接管理器。 如果某个包中包含多个缓存转换，则该包在运行时所调用的第一个缓存转换会将数据写入连接管理器。 后续缓存转换将无法执行写入操作。  
   
- 有关详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 和 [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md)。  
+ 有关详细信息，请参阅[缓存连接管理器](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
 ## <a name="configuration-of-the-cache-transform"></a>缓存转换的配置  
  可以将缓存连接管理器配置为向缓存文件 (.caw) 中保存数据。  
@@ -58,6 +60,21 @@ ms.lasthandoff: 08/03/2017
  可以通过 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 设计器来设置属性。 有关可在 **“高级编辑器”** 对话框中设置的属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="cache-transformation-editor-connection-manager-page"></a>缓存转换编辑器（“连接管理器”页）
+  可以使用 **“缓存转换编辑器”** 对话框的 **“连接管理器”** 页，选择现有缓存连接管理器或创建新的缓存连接管理器。  
+  
+ 若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **“完全缓存”**  
+ 使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
+  
+ **新建**  
+ 使用“缓存连接管理器编辑器”对话框创建新的连接。  
+  
+ **编辑**  
+ 修改现有连接  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

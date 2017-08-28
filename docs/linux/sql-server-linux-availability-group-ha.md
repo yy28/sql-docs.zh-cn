@@ -14,19 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文介绍了在 Linux 服务器上的 SQL Server Always On 可用性组的受支持的部署配置。 一个可用性组支持高可用性和数据保护。 自动故障检测、 自动故障转移和故障转移后的透明重新连接提供高可用性。 同步的副本提供数据保护。 
 
 >[!NOTE]
->除了高可用性和数据保护，可用性组可以提供灾难恢复、 跨平台迁移和读取横向扩展。 本文主要讨论了实现高可用性和数据保护。 
+>除了高可用性和数据保护，可用性组可以提供灾难恢复、 跨平台迁移和读取横向扩展。本文主要讨论了实现高可用性和数据保护。 
 
 使用 Windows Server 故障转移群集，常见的配置高可用性使用两个同步副本和[文件共享见证服务器](http://technet.microsoft.com/library/cc731739.aspx)。 文件共享见证服务器验证可用性组配置的状态的同步和副本角色，例如。 此配置可确保辅助副本选择，因为故障转移目标具有的最新数据和可用性组配置更改。 
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="two-synchronous-replicas"></a>两个同步副本
 
-此配置，实现数据保护。 如其他可用性组配置，它可以启用读取的横向扩展。 两个同步副本配置不提供自动高可用性。 
+此配置，实现数据保护。 如其他可用性组配置，它可以启用读取的横向扩展。两个同步副本配置不提供自动高可用性。 
 
 ![两个同步副本][1]
 
@@ -114,7 +115,7 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 在此方案中，两个副本必须等待故障转移触发作出响应。 主副本中断后的成功自动故障转移，这两个辅助副本需要最新和响应预升级通知。 如果它们已联机并且同步，则它们具有相同的序列号。 可用性组提升其中之一。 如果只有一个辅助副本响应预升级操作，资源代理不能保证响应辅助副本具有最高 sequence_number，因此，故障转移，则不触发。
 
 >[!IMPORTANT]
->当`required_synchronized_secondaries_to_commit`是 0 没有数据丢失的风险。 期间的主副本中断，资源代理不会自动触发故障转移。 您可以等待主若要恢复，或者手动故障转移使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
+>`required_synchronized_secondaries_to_commit` 为 0 时有数据丢失风险。 期间的主副本中断，资源代理不会自动触发故障转移。 您可以等待主若要恢复，或者手动故障转移使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
 
 你可以选择重写默认行为，并防止设置可用性组资源`required_synchronized_secondaries_to_commit`自动。
 

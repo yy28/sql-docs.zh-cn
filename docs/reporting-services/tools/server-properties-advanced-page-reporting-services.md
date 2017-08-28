@@ -18,10 +18,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 5baf0e5c9dcc3b9c70fce06024e5bba957c48f65
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值为 **true**。  
 
 **ExternalImagesTimeout**  
-确定在连接超时之前，必须对外部映像文件检索的时间长度。 默认值为 **600** 秒。  
+确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值为 **600** 秒。  
 
 **SnapshotCompression**  
 定义如何压缩快照。 默认值是 **SQL**秒。 有效值如下：
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
 
 **EditSessionTimeout**  
-指定报表编辑会话超时之前的秒数。 默认值为 7200 秒（2 小时）。  
+指定报表编辑会话超时之前的秒数。默认值为 7200 秒（2 小时）。  
 
 **EnableCustomVisuals** ***(Power BI 报表服务器)***  
 PowerBI ReportServer 应启用 PowerBI 自定义视觉对象的显示。 值为 True，则返回 False。  默认值为 True。  
@@ -125,7 +125,20 @@ PowerBI ReportServer 应启用从 PowerBI 可视化效果的数据的导出。 �
 **EnableTestConnectionDetailedErrors**  
 指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值为 **true**。 如果此选项设置为 **false**，则只发送一般错误消息。
 
-## <a name="see-also"></a>另请参阅
+**AccessControlAllowCredentials**  
+指示是否可以公开对客户端请求的响应，当凭据标志设置为 true。 默认值是 **false**秒。
+
+**AccessControlAllowHeaders**服务器允许当客户端发出请求的标头的以逗号分隔列表。 此属性可以是空字符串，指定 * 将允许所有标头。
+
+**AccessControlAllowMethods**服务器允许当客户端发出请求的 HTTP 方法的逗号分隔列表。 默认值为 (GET、 PUT、 POST、 PATCH、 DELETE)，指定 * 将允许所有方法。
+
+**AccessControlAllowOrigin**服务器允许当客户端发出请求的来源的逗号分隔列表。 默认值为空以防止所有请求，指定 * 未设置凭据; 时，将允许所有来源如果必须指定来源的显式列表指定凭据。
+
+**AccessControlExposeHeaders**服务器将向客户端公开的标头的以逗号分隔列表。 默认值为空。
+
+**AccessControlMaxAge**指定的预检请求的结果可以缓存的秒数。 默认值为 600 （10 分钟）。
+
+## <a name="see-also"></a>另請參閱
 
 [设置报表服务器属性 &#40;Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [在 Management Studio 中连接到报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

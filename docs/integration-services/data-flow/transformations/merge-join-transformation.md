@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - datasets [Integration Services]
 - Merge Join transformation
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-join-transformation"></a>合并联接转换
@@ -63,10 +64,33 @@ ms.lasthandoff: 08/03/2017
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [合并和合并联接转换对数据进行排序](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-join-transformation-editor"></a>合并联接转换编辑器
+  可以使用 **“合并联接转换编辑器”** 对话框指定联接类型、联接列和输出列，以合并通过联接组合的两个输入。  
+  
+> [!IMPORTANT]  
+>  合并联接转换要求输入已排序的数据。 有关此重要要求的详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。  
+  
+### <a name="options"></a>选项  
+ **联接类型**  
+ 指定要使用内部联接、左外部联接还是完全联接。  
+  
+ **交换输入**  
+ 通过使用“交换输入”按钮来交换输入的顺序。 对于左外部联接选项，此选项可能有用。  
+  
+ **输入**  
+ 对于要在合并的输出中包含的每个列，请首先从可用输入列表中相应地进行选择。  
+  
+ 输入显示在两个单独的表中。 请选择要包含在输出中的列。 通过拖动列可以在表之间创建联接。 若要删除某个联接，请选定该联接，再按 Delete 键。  
+  
+ **输入列**  
+ 从所选输入的可用列的列表中选择要包含在合并的输出中的列。  
+  
+ **输出别名**  
+ 为每个输出列键入一个别名。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [合并联接转换编辑器](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
  [合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

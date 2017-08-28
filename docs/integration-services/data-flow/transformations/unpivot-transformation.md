@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
+- sql13.dts.designer.unpivottransformation.f1
 helpviewer_keywords:
 - Unpivot transformation
 - more normalized data set [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d491bb19b4eb86bd0fe75a7b8ca8e7b6e5d226b5
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
@@ -48,10 +49,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“逆透视转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [“逆透视转换编辑器”](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -59,5 +56,47 @@ ms.lasthandoff: 08/03/2017
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="unpivot-transformation-editor"></a>“逆透视转换编辑器”
+  可以使用 **“逆透视转换编辑器”** 对话框，选择要透视到行中的列以及指定数据列和新的透视值输出列。  
+  
+> [!NOTE]  
+>  本主题围绕 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的“逆透视”应用场景，举例说明各选项的使用方法。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 使用复选框指定要透视到行中的列。  
+  
+ **名称**  
+ 查看可用输入列的名称。  
+  
+ **传递**  
+ 指示是否在逆透视的输出中包括该列。  
+  
+ **输入列**  
+ 从每行的可用输入列的列表中选择。 通过选中 **“可用输入列”** 表中的复选框来选择列。  
+  
+ 在 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)所述的“逆透视”应用场景中，输入列为 **Ham**, **Soda**, **Milk**, **Beer**和 **Chips** 列。  
+  
+ **目标列**  
+ 提供数据列的名称。  
+  
+ 在 [逆透视转换](../../../integration-services/data-flow/transformations/unpivot-transformation.md)所述的“逆透视”应用场景中，目标列为数量 (**Qty**) 列。  
+  
+ **透视键值**  
+ 提供透视值的名称。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ 此属性的值可以使用属性表达式来指定。  
+  
+ 在 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)所述的“逆透视”应用场景中，透视值将显示为由 **“透视键值列名”** 选项指定的新 Product 列中的文本值，即 **Ham**, **Soda**, **Milk**, **Beer**和 **Chips**。  
+  
+ **“透视键值列名”**  
+ 提供透视值列的名称。 默认名称为“Pivot Key Value”；不过，您也可以任选一个唯一的描述性名称。  
+  
+ 在 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)所述的“逆透视”应用场景中，“透视键值列名”为 **Product** ，并指定新的 **Product** 列， **Ham**, **Soda**, **Milk**, **Beer**和 **Chips** 列将逆向透视到该列。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [透视转换](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>导出列转换
@@ -65,8 +67,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在“导出列转换编辑器”对话框中设置的属性的详细信息，请参阅[导出列转换编辑器（“列”页）](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -74,5 +74,49 @@ ms.lasthandoff: 08/03/2017
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>导出列转换编辑器（“列”页）
+  可以使用 **“导出列转换编辑器”** 对话框的 **“列”** 页，指定数据流中要提取到文件的列。 可以指定导出列转换是将数据追加到文件还是覆盖现有文件。  
+  
+### <a name="options"></a>选项  
+ **提取列**  
+ 从包含文本数据或图像数据的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”**的定义。  
+  
+ **“文件路径列”**  
+ 从包含文件路径和文件名的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”**的定义。  
+  
+ **允许追加**  
+ 指定转换是否将数据追加到现有文件。 默认值为 **false**。  
+  
+ **强制截断**  
+ 指定转换在写入数据之前是否删除现有文件的内容。 默认值为 **false**。  
+  
+ **写入 BOM**  
+ 指定是否将字节顺序标记 (BOM) 写入文件。 只有在数据具有 **DT_NTEXT** 或 DT_WSTR 数据类型，并且未将数据追加到现有数据文件时，才会写入 BOM。  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
+  可以使用 **“导出列转换编辑器”** 对话框的 **“错误输出”** 页指定错误的处理方式。  
+  
+### <a name="options"></a>选项  
+ **输入/输出**  
+ 查看输出的名称。 单击名称可以展开视图以包括列。  
+  
+ **列**  
+ 查看在“导出列转换编辑器”对话框的“列”页中选择的输出列。  
+  
+ **错误**  
+ 指定发生错误时要执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **截断**  
+ 指定发生截断时要执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **Description**  
+ 查看操作的说明。  
+  
+ **将此值设置到选定的单元格**  
+ 指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **应用**  
+ 将错误处理选项应用到选定的单元格。  
   
   

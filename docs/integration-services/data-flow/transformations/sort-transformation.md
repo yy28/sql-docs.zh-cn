@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>排序转换
@@ -47,8 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-sort-transformation"></a>排序转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“排序转换编辑器”** 对话框中设置的属性的信息，请参阅 [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -61,7 +60,38 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-content"></a>相关内容  
  codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](http://go.microsoft.com/fwlink/?LinkId=220821)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="sort-transformation-editor"></a>排序转换编辑器
+  可以使用 **“排序转换编辑器”** 对话框，选择要排序的列，设置排序顺序以及指定是否删除重复项。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 使用此复选框可以指定要排序的列。  
+  
+ **名称**  
+ 查看每个可用输入列的名称。  
+  
+ **传递**  
+ 指示是否在排序输出中包含相应列。  
+  
+ **输入列**  
+ 从每行的可用输入列的列表中选择。 通过选中 **“可用输入列”** 表中的复选框来选择列。  
+  
+ **输出别名**  
+ 为每个输出列键入一个别名。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ **排序类型**  
+ 指示按升序还是按降序排序。  
+  
+ **排序顺序**  
+ 指示列的排序顺序。 必须对每列手动设置此选项。  
+  
+ **比较标志**  
+ 有关字符串比较选项的信息，请参阅 [比较字符串数据](../../../integration-services/data-flow/comparing-string-data.md)。  
+  
+ **删除具有重复排序值的行**  
+ 根据指定的字符串比较选项，指示转换是将重复行复制到转换输出，还是为所有重复项创建单个条目。  
+  
+## <a name="see-also"></a>另請參閱  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

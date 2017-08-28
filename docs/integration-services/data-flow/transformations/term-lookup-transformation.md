@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
@@ -96,14 +99,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“字词查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [字词查找转换编辑器（“引用表”选项卡）](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [字词查找转换编辑器（“字词查找”选项卡）](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [字词查找转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -112,4 +107,53 @@ ms.lasthandoff: 08/03/2017
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>字词查找转换编辑器（“字词查找”选项卡）
+  可以使用 **“字词查找转换编辑器”** 对话框的 **“字词查找”** 选项卡，将输入列映射到引用表中的查找列，以及为每个输出列提供别名。  
   
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 使用复选框选择要传递给未更改输出的输入列。 将输入列拖动到 **“可用引用列”** 列表可以将其映射到引用表中的查找列。 输入列和查找列必须具有支持的匹配数据类型（DT_NTEXT 或 DT_WSTR）。 选择一个映射行，再右键单击可在 [创建关系](../../../integration-services/data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
+  
+ **“可用引用列”**  
+ 查看引用表中可用的列。 选择包含要匹配的字词列表的列。  
+  
+ **传递列**  
+ 从可用输入列的列表中进行选择。 通过选中 **“可用输入列”** 表中的复选框来选择列。  
+  
+ **输出列别名**  
+ 为每个输出列键入一个别名。 默认值为列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ **配置错误输出**  
+ 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式选项。  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
+  可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
+  
+### <a name="options"></a>选项  
+ **“无缓存”**  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+  
+ **引用表的名称**  
+ 通过从该列表中选择项，可以从数据库中选择查找表或视图。 查找表或视图应包含具有现有字词列表的列，以便源列中的文本可以与这些字词进行比较。  
+  
+ **配置错误输出**  
+ 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式选项。  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>字词查找转换编辑器（“高级”选项卡）
+  可以使用“字词查找转换编辑器”对话框的“高级”选项卡指定查找是否区分大小写。  
+  
+### <a name="options"></a>选项  
+ **使用区分大小写的字词查找**  
+ 指示查找是否区分大小写。 默认值为 **False**。  
+  
+ **配置错误输出**  
+ 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式选项。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [字词提取转换](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

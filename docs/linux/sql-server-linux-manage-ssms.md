@@ -4,33 +4,36 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 SQL Server Management Studio 管理 SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主题介绍[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)并指导您完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)是 Microsoft 提供的免费的开发和管理需求的 SQL 工具套件的一部分。 SSMS 是一个集成环境，用于访问、配置、管理和开发 SQL Server（在本地或云中、Linux、Windows 或 macOS Docker 以及在 Azure SQL 数据库和 Azure SQL 数据仓库上运行）的所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
 
 SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以下任务的工具：
+
 - 配置、 监视和管理一个或多个 SQL Server 实例
 - 部署、 监视和升级数据层组件，如数据库和数据仓库
 - 备份和还原数据库
 - 生成并执行 T-SQL 查询和脚本，请参阅结果
 - 生成数据库对象的 T-SQL 脚本
 - 查看和编辑数据库中的数据
-- 以直观方式设计 T-SQL 查询和数据库对象，例如视图、表和存储过程
+- 以可视方式设计 T-SQL 查询和数据库对象，如视图、 表和存储的过程
 
 请参阅[使用 SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)有关详细信息。
 

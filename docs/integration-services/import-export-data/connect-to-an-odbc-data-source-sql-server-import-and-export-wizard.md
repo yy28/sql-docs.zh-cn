@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源 （SQL Server 导入和导出向导）
@@ -39,6 +39,8 @@ ms.lasthandoff: 08/03/2017
 
 > [!TIP]
 > 如果您知道驱动程序的安装，并且你未看到它在 64 位控制面板小程序中，查找在 32 位控制面板小程序相反。 这还将告知你是否可以运行的 64 位或 32 位 SQL Server 导入和导出向导。
+>
+> 若要使用 64 位版本的 SQL Server 导入和导出向导，你必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序，仅安装 32 位文件，包括 32 位版本的向导。
     
 ## <a name="step-1---select-the-data-source"></a>步骤 1-选择数据源
 在计算机上安装的 ODBC 驱动程序未列出在下拉列表中的数据源。 若要连接使用 ODBC 驱动程序，首先要选择**适用于 ODBC 的.NET Framework 数据提供程序**上的数据源作为**选择数据源**或**选择目标**向导页。 此提供程序充当 ODBC 驱动程序周围的包装器。
@@ -70,7 +72,7 @@ ms.lasthandoff: 08/03/2017
 
     ![ODBC 管理器控制面板小程序](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
     
-3.  如果你想要**使用现有 DSN**对于数据源时，你可以使用你在看到任何 DSN**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。 请检查名称，然后返回到向导中输入它**Dsn**字段上**选择数据源**或**选择目标**页。 跳过此页的其余部分并继续在向导的下一步。
+3.  如果你想要**使用现有 DSN**对于数据源时，你可以使用你在看到任何 DSN**用户 DSN**，**系统 DSN**，或**文件 DSN**选项卡。请检查名称，然后返回到向导中输入它**Dsn**字段上**选择数据源**或**选择目标**页。 跳过此页的其余部分并继续在向导的下一步。
 4.  如果你想要**创建的新 DSN**、 决定是否希望其成为可见仅对你 (用户 DSN) 对计算机的所有用户可见包括 Windows 服务 （系统 DSN），或保存在文件 (File DSN)。 此示例将创建新的系统 DSN。
 5. 上**系统 DSN**选项卡上，单击**添加**。
 

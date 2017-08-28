@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>配置模糊分组转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“模糊分组转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [模糊分组转换编辑器（“连接管理器”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [模糊分组转换编辑器（“列”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [模糊分组转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -105,6 +100,85 @@ ms.lasthandoff: 08/03/2017
 -   [使用模糊分组转换标识相似数据行](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>模糊分组转换编辑器（“连接管理器”选项卡）
+  使用 **“模糊分组转换编辑器”** 对话框的 **“连接管理器”** 选项卡可以选择现有连接或创建新的连接。  
+  
+> [!NOTE]  
+>  连接指定的服务器必须正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 模糊分组转换会在 tempdb 中创建临时数据对象，这些对象的大小可能与为此转换输入的所有内容完全一致。 在执行转换时，该转换将对这些临时对象发出服务器查询。 这会影响服务器的总体性能。  
+  
+### <a name="options"></a>选项  
+ **“无缓存”**  
+ 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。  
+  
+ **新建**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
+  可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 从此列表中选择用于对带有重复值的行进行分组的输入列。  
+  
+ **名称**  
+ 查看可用输入列的名称。  
+  
+ **传递**  
+ 选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
+  
+ **输入列**  
+ 选择先前在“可用输入列”列表中选中的一个输入列。  
+  
+ **输出别名**  
+ 为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  
+  
+ **组输出别名**  
+ 为包含分组重复项的规范值的列输入一个描述性名称。 此输出列的默认名称是在输入列名称后面追加 _clean。  
+  
+ **匹配类型**  
+ 选择模糊匹配或完全匹配。 在指定了模糊匹配类型的所有列中，如果某些行足够相似，则会将这些行视为重复。 如果还对某些列指定了完全匹配，则只会将在完全匹配列中包含相同值的行视为可能重复。 因此，如果知道特定列中没有错误或不存在不一致的情况，则可以对该列指定完全匹配以提高其他列模糊匹配的准确性。  
+  
+ **最低相似性**  
+ 使用滑块在联接级别设置相似性阈值。 该值越接近 1，查找值与源值的相似性必须越接近，才能视为匹配。 由于需要考虑的候选记录更少，因此增加阈值可以提高匹配的速度。  
+  
+ **相似性输出别名**  
+ 为包含所选联接相似性得分的新输出列指定名称。 如果将该值保留为空，将不会创建输出列。  
+  
+ **数字**  
+ 指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**Neither**|前导数字和尾随数字都不重要。|  
+|**Leading**|只有前导数字重要。|  
+|**Trailing**|只有尾随数字重要。|  
+|**LeadingAndTrailing**|前导数字和尾随数字都重要。|  
+  
+ **比较标志**  
+ 有关字符串比较选项的信息，请参阅 [比较字符串数据](../../../integration-services/data-flow/comparing-string-data.md)。  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
+  可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
+  
+> [!NOTE]  
+>  模糊分组转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊分组转换编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
+  
+### <a name="options"></a>选项  
+ **输入键列名**  
+ 指定包含每个输入行的唯一表示符的输出列名称。 **_key_in** 列包含的值可唯一标识每个行。  
+  
+ **输出键列名**  
+ 对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 **_key_out** 列对应于规范数据行的 **_key_in** 值。  
+  
+ **相似性计分列名**  
+ 指定包含相似性得分的列的名称。 相似性得分是介于 0 和 1 之间的值，用于指示输入行与规范行的相似性。 得分越接近 1，行与规范行的匹配程度越高。  
+  
+ **相似性阈值**  
+ 使用滑块设置相似性阈值。 阈值越接近于 1，则行必须越近似，才能被认定为重复。 增大阈值可以提高匹配的速度，因为需要考虑的候选记录更少。  
+  
+ **标记分隔符**  
+ 转换提供了一组默认的分隔符用于对数据进行词汇切分，但是您可以根据需要通过编辑列表来添加或删除分隔符。  
   
 ## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
@@ -175,14 +178,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“字词提取转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [字词提取转换编辑器（“字词提取”选项卡）](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [字词提取转换编辑器（“排除”选项卡）](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [字词提取转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -191,4 +186,77 @@ ms.lasthandoff: 08/03/2017
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
+  可以使用 **“字词提取转换编辑器”** 对话框的 **“字词提取”** 选项卡，指定包含要提取的文本的文本列。  
   
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 通过使用复选框，选择要用于字词提取的单个文本列。  
+  
+ **术语**  
+ 为将包含所提取的字词的输出列提供名称。  
+  
+ **分数**  
+ 为将包含每个所提取字词的分数的输出列提供名称。  
+  
+ **配置错误输出**  
+ 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>字词提取转换编辑器（“排除”选项卡）
+  可以使用 **“字词提取转换编辑器”** 对话框的 **“排除”** 选项卡，建立与排除表的连接并指定包含排除字词的列。  
+  
+### <a name="options"></a>选项  
+ **使用排除字词**  
+ 指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
+  
+ **OLE DB 连接管理器**  
+ 选择现有的 OLE DB 连接管理器，或通过单击“新建”创建新的连接。  
+  
+ **“新建”**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建与数据库的新连接。  
+  
+ **表或视图**  
+ 选择包含排除字词的表或视图。  
+  
+ **列**  
+ 在表或视图中选择包含排除字词的列。  
+  
+ **配置错误输出**  
+ 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
+  可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
+  
+### <a name="options"></a>选项  
+ **名词**  
+ 指定转换仅提取各个名词。  
+  
+ **名词短语**  
+ 指定转换仅提取名词短语。  
+  
+ **名词和名词短语**  
+ 指定转换既提取名词也提取名词短语。  
+  
+ **频率**  
+ 指定分数为字词的频率。  
+  
+ **TFIDF**  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )  
+  
+ **频率阈值**  
+ 指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  
+  
+ **字词的最大长度**  
+ 指定短语的最大长度（字）。 此选项仅影响名词短语。 默认值为 12。  
+  
+ **使用区分大小写的字词提取**  
+ 指定是否将提取设置为区分大小写。 默认值为 **False**。  
+  
+ **配置错误输出**  
+ 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为导致错误的行指定错误处理方式。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Integration Services 错误和消息引用](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [字词查找转换](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+

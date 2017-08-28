@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>要开始使用导入和导出向导的此简单示例
@@ -44,6 +44,8 @@ ms.lasthandoff: 08/03/2017
 
 > [!NOTE]
 > 对于此示例，你将选取 32 位向导，因为您必须安装 Microsoft Office 的 32 位版本。 因此，你必须使用 32 位数据提供程序连接到 Excel。 对于许多其他数据源，您通常可以选取 64 位向导。
+>
+> 若要使用 64 位版本的 SQL Server 导入和导出向导，你必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序，仅安装 32 位文件，包括 32 位版本的向导。
 
 有关详细信息，请参阅 [启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
@@ -58,9 +60,6 @@ ms.lasthandoff: 08/03/2017
 在下一页上，**选择数据源**，作为数据源中选取 Microsoft Excel。 然后，你浏览以选择 Excel 文件。 最后，可以指定用于创建文件的 Excel 版本。
 
 ![选择 Excel 数据源](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> 通常指定 Microsoft Excel 2016 的版本，并下载用于连接到 Excel 2016 和访问 2016年的文件。 但是，如果你有 Microsoft Office 365 订阅，则无法安装 Office 2016 运行时。 只能使用桌面版本的 Microsoft Office 安装的数据提供程序访问 2016年和 Excel 2016。 因此，你只需指定早期版本的 Excel，Excel 2013。 如有必要，你将下载用于连接到 Excel 2013 和 Access 2013 的文件。 中提到了 Office 2016 运行时的这一局限性[这篇博客文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
 
 有关连接到 Excel 的详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。 有关向导的此页的详细信息，请参阅[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 

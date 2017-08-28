@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
+- sql13.dts.designer.aggregationtransformation.aggregations.f1
+- sql13.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - IsBig property
 - aggregate functions [Integration Services]
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="aggregate-transformation"></a>聚合转换
@@ -114,12 +116,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“聚合转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [聚合转换编辑器（“聚合”选项卡）](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [聚合转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -135,9 +131,116 @@ ms.lasthandoff: 08/03/2017
 -   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>相关任务  
- [使用聚合转换来聚合数据集中的值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [通过使用聚合转换数据集中的聚合值](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
+  可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
+  
+> [!NOTE]  
+>  对于键计数、键范围、非重复键计数和非重复键范围的选项来说，如果是在“高级”选项卡中指定的，则会应用于组件级；如果是在“聚合”选项卡的高级显示部分中指定的，则会应用于输出级；而如果是在“聚合”选项卡底部的列列表中指定的，则会应用于列级。  
+>   
+>  在聚合转换中， **“键”** 和 **“键范围”** 是指期望 **“分组依据”** 操作产生的组数。 **“非重复键计数”** 和 **“非重复键数范围”** 是指期望 **“非重复计数”** 操作产生的非重复值的数量。  
+  
+### <a name="options"></a>选项  
+ **高级/基本**  
+ 显示或隐藏为多个输出配置多个聚合的选项。 默认情况下，隐藏“高级”选项。  
+  
+ **聚合名**  
+ 在“高级”显示中，键入聚合的友好名称。  
+  
+ **按列分组**  
+ 在“高级”显示中，通过使用下面描述的“可用输入列”列表，选择用于分组的列。  
+  
+ **键范围**  
+ 在“高级”显示中，根据需要指定聚合可写入的键的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时设置了 **“键范围”** 和 **“键”** 属性，则 **“键”** 的值优先。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|“未指定”|不使用“键范围”属性。|  
+|Low|聚合可以写入大约 500,000 个键。|  
+|Medium|聚合可以写入大约 5,000,000 个键。|  
+|High|聚合可以写入 25,000,000 个以上的键。|  
+  
+ **“键”**  
+ 在“高级”显示中，根据需要指定聚合可写入的键的精确数目。 如果同时指定了 **“键范围”** 和 **“键”** ，则 **“键”** 优先。  
+  
+ **可用输入列**  
+ 通过使用此表中的复选框，从可用输入列列表中选择。  
+  
+ **输入列**  
+ 从可用输入列的列表中进行选择。  
+  
+ **输出别名**  
+ 为每一列键入一个别名。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ **运算**  
+ 参照下表，从可用操作列表中选择。  
+  
+|运算|Description|  
+|---------------|-----------------|  
+|**GroupBy**|将数据集划分为组。 可以将任何数据类型的列用于分组。 有关详细信息，请参阅 GROUP BY。|  
+|**Sum**|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 SUM。|  
+|**平均值**|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 AVG。|  
+|**Count**|返回组中的项数。 有关详细信息，请参阅 COUNT。|  
+|**CountDistinct**|返回组中的唯一非空值的数量。 有关详细信息，请参阅 COUNT 和 DISTINCT。|  
+|**最低要求**|返回组中的最小值。 只限于数值数据类型。|  
+|**最大值**|返回组中的最大值。 只限于数值数据类型。|  
+  
+ **比较标志**  
+ 如果选择“分组依据”，请使用复选框来控制转换如何执行比较。 有关字符串比较选项的信息，请参阅 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)。  
+  
+ **Count Distinct Scale**  
+ 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|“未指定”|不使用 **CountDistinctScale** 属性。|  
+|Low|聚合可以写入大约 500,000 个非重复值。|  
+|Medium|聚合可以写入大约 5,000,000 个非重复值。|  
+|High|聚合可以写入 25,000,000 个以上的非重复值。|  
+  
+ **Count Distinct Keys**  
+ 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时指定 **CountDistinctScale** 和 **CountDistinctKeys** ，则 **CountDistinctKeys** 优先。  
+  
+## <a name="aggregate-transformation-editor-advanced-tab"></a>聚合转换编辑器（“高级”选项卡）
+  可以使用 **“聚合转换编辑器”** 对话框的 **“高级”** 选项卡设置组件属性，指定聚合以及设置输入和输出列的属性。  
+  
+> [!NOTE]  
+>  对于键计数、键范围、非重复键计数和非重复键范围的选项来说，如果是在“高级”选项卡中指定的，则会应用于组件级；如果是在“聚合”选项卡的高级显示部分中指定的，则会应用于输出级；而如果是在“聚合”选项卡底部的列列表中指定的，则会应用于列级。  
+>   
+>  在聚合转换中， **“键”** 和 **“键范围”** 是指期望 **“分组依据”** 操作产生的组数。 **“非重复键计数”** 和 **“非重复键数范围”** 是指期望 **“非重复计数”** 操作产生的非重复值的数量。  
+  
+### <a name="options"></a>选项  
+ **“键范围”**  
+ 根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|“未指定”|不使用 **“键范围”** 属性。|  
+|Low|聚合可以写入大约 500,000 个键。|  
+|Medium|聚合可以写入大约 5,000,000 个键。|  
+|High|聚合可以写入 25,000,000 个以上的键。|  
+  
+ **“键数”**  
+ 根据需要，可以指定聚合所需的键的精确数目。 转换将使用此信息优化其初始缓存大小。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
+  
+ **“非重复键数范围”**  
+ 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|“未指定”|不使用 CountDistinctScale 属性。|  
+|Low|聚合可以写入大约 500,000 个非重复值。|  
+|Medium|聚合可以写入大约 5,000,000 个非重复值。|  
+|High|聚合可以写入 25,000,000 个以上的非重复值。|  
+  
+ **“非重复键计数”**  
+ 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
+  
+ **自动扩展系数**  
+ 使用一个 1 到 100 之间的值指定在聚合过程中内存可扩展的百分比。 默认情况下，此选项的值为 **25%**。  
+  
+## <a name="see-also"></a>另請參閱  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

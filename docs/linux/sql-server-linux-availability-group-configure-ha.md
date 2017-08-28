@@ -10,18 +10,19 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>为在 Linux 上的 SQL Server 中配置 Alwayson 可用性组
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本文介绍如何创建 SQL 服务器始终在 Linux 上的高可用性的可用性组上。 有两种配置类型为可用性组。 A*高可用性*配置使用群集管理器提供业务连续性。 此配置还可以包括读取的横向扩展副本。 本文档说明如何创建可用性组实现高可用性配置。
 
-你还可以创建*读取的横向扩展*不带群集管理器的可用性组。 此配置仅提供性能向外扩展的只读副本。 它不提供高可用性。 若要创建一个读取的横向扩展可用性组，请参阅[在 Linux 上的 SQL server 读取横向扩展可用性组的配置](sql-server-linux-availability-group-configure-rs.md)。
+你还可以创建*读取的横向扩展*不带群集管理器的可用性组。 此配置仅提供性能向外扩展的只读副本。它不提供高可用性。 若要创建一个读取的横向扩展可用性组，请参阅[在 Linux 上的 SQL server 读取横向扩展可用性组的配置](sql-server-linux-availability-group-configure-rs.md)。
 
 保证高可用性和数据保护的配置需要两个或三个同步提交副本。 具有三个同步副本的可用性组可自动恢复即使一个服务器不可用。 有关详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 
 

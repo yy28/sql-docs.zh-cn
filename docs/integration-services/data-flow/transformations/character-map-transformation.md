@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>字符映射表转换
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“字符映射表转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Character Map Transformation Editor](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -86,6 +85,46 @@ ms.lasthandoff: 08/03/2017
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [为合并转换和合并联接转换排序数据](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [合并和合并联接转换对数据进行排序](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
+  可以使用“字符映射表转换编辑器”对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 使用该复选框可以选择通过字符串函数转换的列。 您的选择将显示在下表中。  
+  
+ **输入列**  
+ 查看从上表中选择的输入列。 您也可使用可用输入列的列表更改或删除选项。  
+  
+ **目标**  
+ 指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|新列|将数据保存在新列中。 在 **“输出别名”**下分配列名。|  
+|就地更改|将已修改的数据保存在现有的列中。|  
+  
+ **运算**  
+ 从列表中选择要应用于列数据的字符串函数。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|Lowercase|转换为小写字母。|  
+|大写|转换为大写字母。|  
+|Byte reversal|通过反转字节顺序进行转换。|  
+|Hiragana|将日语的片假名字符转换为平假名字符。|  
+|Katakana|将日语的平假名字符转换为片假名字符。|  
+|Half width|将全角字符转换为半角字符。|  
+|Full width|将半角字符转换为全角字符。|  
+|Linguistic casing|应用大小写语言规则（为土耳其语和其他区域语言设置的 Unicode 简单大小写映射）而不是系统规则。|  
+|简体中文|将繁体中文字符转换为简体中文字符。|  
+|繁体中文|将简体中文字符转换为繁体中文字符。|  
+  
+ **“输出别名”**  
+ 为每个输出列键入一个别名。 默认为 **Copy of** 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
+  
+ **配置错误输出**  
+ 使用 “[配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9)” 对话框可以为此转换指定错误处理选项。  
   
   

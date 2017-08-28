@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>配置模糊查找转换  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“模糊查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [模糊查找转换编辑器（“引用表”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [模糊查找转换编辑器（“列”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [模糊查找转换编辑器（“高级”选项卡）](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -145,7 +140,84 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相关任务  
  有关如何设置数据流组件属性的详细信息，请参阅 [设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查找转换编辑器（“引用表”选项卡）
+  使用 **“模糊查找转换编辑器”** 对话框的 **“引用表”** 选项卡可以指定用于查找的源表和索引。 引用数据源必须是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的表。  
+  
+> [!NOTE]  
+>  模糊查找转换将创建引用表的工作副本。 下面描述的索引是通过使用特殊的表对此工作表创建的，它们不是普通的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 索引。 除非选择了 **“维护存储的索引”**，否则转换不会修改现有的源表。 在这种情况下，转换将对引用表创建一个触发器，此触发器将基于对引用表所做的更改来更新工作表和查找索引表。  
+  
+> [!NOTE]  
+>  模糊查找转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊查找转换编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 此外，大于 100 的 **MaxOutputMatchesPerInput** 值只能在 **“高级编辑器”**中指定。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
+  
+### <a name="options"></a>选项  
+ **“无缓存”**  
+ 从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+  
+ **生成新索引**  
+ 指定转换应创建新的索引以用于查找。  
+  
+ **引用表的名称**  
+ 选择要用作引用（查找）表的现有表。  
+  
+ **存储新索引**  
+ 如果希望保存新的查找索引，请选择此选项。  
+  
+ **新索引名称**  
+ 如果已选择保存新的查找索引，请为其键入描述性名称。  
+  
+ **“维护存储的索引”**  
+ 如果已选择保存新的查找索引，请指定是否还希望 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 维护该索引。  
+  
+> [!NOTE]  
+>  如果在 **“模糊查找转换编辑器”** 的 **“引用表”** 选项卡中选择 **“维护存储的索引”**，则转换将使用托管存储过程维护索引。 这些托管存储过程使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的公共语言运行时 (CLR) 集成功能。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 集成。 若要使用 **“维护存储的索引”** 功能，必须启用 CLR 集成。 有关详细信息，请参阅 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)。  
+>   
+>  由于 **“维护存储的索引”** 选项需要 CLR 集成，所以只有在选择已启用 CLR 集成的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的引用表时，此功能才能发挥作用。  
+  
+ **使用现有索引**  
+ 指定转换应使用现有索引来执行查找。  
+  
+ **现有索引的名称**  
+ 从列表中选择以前创建的查找索引。  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查找转换编辑器（“列”选项卡）
+  可以使用 **“模糊查找转换编辑器”** 对话框的 **“列”** 选项卡，为输入和输出列设置属性。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 拖动输入列以将其连接到可用查找列。 这些列必须具有所支持的相互匹配的数据类型。 选择一个映射行，再右键单击可在 [创建关系](../../../integration-services/data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
+  
+ **名称**  
+ 查看可用输入列的名称。  
+  
+ **传递**  
+ 指定是否在转换的输出中包含输入列。  
+  
+ **可用查找列**  
+ 使用这些复选框可以选择要对其执行模糊查找操作的列。  
+  
+ **查找列**  
+ 从引用表的可用列的列表中选择查找列。 通过选中 **“可用查找列”** 表中的相应复选框即可选择查找列。 选择 **“可用查找列”** 表中的某个列将创建一个输出列，其中包含返回的对应于每个匹配行的引用表列值。  
+  
+ **输出别名**  
+ 为每个查找列的输出键入一个别名。 默认值为查找列的名称，并追加一个数字索引值；不过，您也可以任选一个唯一的描述性名称。  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查找转换编辑器（“高级”选项卡）
+  可以使用 **“模糊查找转换编辑器”** 对话框的 **“高级”** 选项卡设置模糊查找的参数。  
+  
+### <a name="options"></a>选项  
+ **每次查找输出的最大匹配数**  
+ 指定为每个输入行返回的最大匹配转换数。 默认值为 **1**。  
+  
+ **相似性阈值**  
+ 使用滑块在组件级别设置相似性阈值。 该值越接近 1，查找值与源值的相似性必须越接近，才能视为匹配。 由于需要考虑的候选记录更少，因此增加阈值可以提高匹配的速度。  
+  
+ **标记分隔符**  
+ 指定转换用来对列值进行词汇切分的分隔符。  
+  
+## <a name="see-also"></a>另請參閱  
  [查找转换](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

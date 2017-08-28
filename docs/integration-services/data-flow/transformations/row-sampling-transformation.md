@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rowsamplingtrans.f1
+- sql13.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1
+- sql13.dts.designer.rowsamplingtransformation.f1
 helpviewer_keywords:
 - sampling seeds [Integration Services]
 - random seeds
@@ -25,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 74bc28f5ce476bf86ad91258877fe3c45e44c8df
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="row-sampling-transformation"></a>行抽样转换
@@ -51,8 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在“百分比抽样转换编辑器”对话框中设置的属性的详细信息，请参阅[行抽样转换编辑器（“抽样”页）](../../../integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +60,24 @@ ms.lasthandoff: 08/03/2017
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅  
+  
+## <a name="row-sampling-transformation-editor-sampling-page"></a>行抽样转换编辑器（“抽样”页）
+  可以使用 **“行抽样转换编辑器”** 对话框，使用指定行数将部分输入拆分成样本。 此转换将输入分成两个单独的输出。  
+  
+### <a name="options"></a>选项  
+ **行数**  
+ 指定输入中要用作样本的行数。  
+  
+ 此属性的值可以使用属性表达式来指定。  
+  
+ **样本的输出名称**  
+ 为包含抽样行的输出提供唯一名称。 所提供的名称将在 SSIS 设计器中显示。  
+  
+ **未选中部分的输出名称**  
+ 为包含非抽样行的输出提供唯一名称。 所提供的名称将在 SSIS 设计器中显示。  
+  
+ **使用以下随机种子**  
+ 指定随机数生成器的抽样种子，转换将使用该种子来创建样本。 建议只在开发和测试过程中使用此选项。 如果未指定随机种子，则转换将使用 Microsoft Windows 的时钟周期计数作为种子。  
   
 ## <a name="related-tasks"></a>相关任务  
  [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  

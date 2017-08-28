@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f87c28e4d2ba7689d422ccf2f1a903765a39f27a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主题说明如何配置和使用[mssql server linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。
 
@@ -75,7 +77,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
     ```
 
     > [!TIP]
-    > 无需始终指定完整的容器 ID。 只需要指定足够的字符，能够唯一标识它即可。 在此示例中，它可能是足够用于`e6`或`e69`而不是完整的 id。
+    > 无需始终指定完整的容器 ID。只需要指定足够的字符，能够唯一标识它即可。 在此示例中，它可能是足够用于`e6`或`e69`而不是完整的 id。
 
 2. 一旦位于容器内部，使用 sqlcmd 进行本地连接。 请注意， 默认情况下，sqlcmd 不在路径之中，因此需要指定完整的路径。
 

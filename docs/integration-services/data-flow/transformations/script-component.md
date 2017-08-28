@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>脚本组件
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>配置设计器中的脚本组件  
- 有关可在 **“脚本转换编辑器”** 对话框中设置的属性的详细信息，请单击以下主题之一：  
-  
--   [脚本转换编辑器（“输入列”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [脚本转换编辑器（“输入和输出”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [脚本转换编辑器（“脚本”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [脚本转换编辑器（“连接管理器”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
 -   [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>选择脚本组件类型
+  可以使用 **“选择脚本组件类型”** 对话框，指定是否创建预配置为源、转换或目标的脚本转换。  
+  
+ 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+  
+### <a name="options"></a>选项  
+ 选择 **“源”**、 **“目标”**或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
+  可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  
+  
+ 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+  
+### <a name="options"></a>选项  
+ **Connection managers**  
+ 查看脚本可使用的连接列表。  
+  
+ **名称**  
+ 为连接键入唯一的描述性名称。  
+  
+ **连接管理器**  
+ 从可用的连接管理器中，列表中选择或选择**\<新连接 >**以打开**添加 SSIS 连接管理器**对话框。  
+  
+ **Description**  
+ 输入连接的说明。  
+  
+ **添加**  
+ 向“连接管理器”列表中添加另外一个连接。  
+  
+ **删除**  
+ 从“连接管理器”列表中删除所选连接。  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>脚本转换编辑器（“输入列”页）
+  可以使用 **“脚本转换编辑器”** 对话框的 **“输入列”** 页设置输入列的属性。  
+  
+> [!NOTE]  
+>  由于源组件只有输出而没有输入，因此对于源组件不能显示“输入列”页。  
+  
+ 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+  
+### <a name="options"></a>选项  
+ **输入名称**  
+ 从可用输入的列表中选择。  
+  
+ **可用输入列**  
+ 使用复选框指定脚本转换要使用的列。  
+  
+ **输入列**  
+ 从每行的可用输入列的列表中选择。 通过选中“可用输入列”表中的复选框来选择列。  
+  
+ **输出别名**  
+ 为每个输出列键入一个别名。 默认值为输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
+  
+ **使用类型**  
+ 指定脚本转换是将每个列视为 **ReadOnly** 还是 **ReadWrite**。  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>脚本转换编辑器（“输入和输出”页）
+  可以使用 **“脚本转换编辑器”** 对话框的 **“输入和输出”** 页，添加、删除和配置脚本转换的输入和输出。  
+  
+> [!NOTE]  
+>  源组件有输出但没有输入，而目标组件有输入但没有输出。 转换既有输入，也有输出。  
+  
+ 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+  
+### <a name="options"></a>选项  
+ **Inputs and outputs**  
+ 在左侧选择输入或输出即可在右侧的表中查看其属性。 选择不同的输入或输出，可编辑的属性也有所不同。 显示的许多属性是只读的。 有关各个属性的详细信息，请参阅以下主题：  
+  
+ [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **添加输出**  
+ 将其他输出添加到列表中。  
+  
+ **添加列**  
+ 选择用于放置新输出列的文件夹，再单击“添加列”来添加该列。  
+  
+ **删除输出**  
+ 选择某个输出，再单击“删除输出”即可将其删除。  
+  
+ **删除列**  
+ 选择某个列，然后单击“删除列”来删除该列。  
+  
+## <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
+  可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
+  
+ 若要了解有关脚本组件的详细信息，请参阅[配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+  
+### <a name="options"></a>选项  
+ **属性**  
+ 查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**Description**|说明脚本转换的用途。|  
+|**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
+|**名称**|为组件键入说明性名称。|  
+|**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 如果值为 **false** ，则会将验证延迟到执行时。|  
+|**ReadOnlyVariables**|以逗号分隔的形式键入一列可供脚本转换只读访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
+|**ReadWriteVariables**|以逗号分隔的形式键入一列可供脚本转换读/写访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
+|**ScriptLanguage**|选择脚本组件要使用的脚本语言。<br /><br /> 若要设置脚本组件和脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。|  
+|**UserComponentTypeName**|指定支持 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> ScriptComponentHost **类和** Microsoft.SqlServer.TxScript [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程序集。|  
+  
+ **编辑脚本**  
+ 使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 创建或修改脚本。  
   
 ## <a name="related-content"></a>相关内容  
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

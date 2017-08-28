@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
+- sql13.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="audit-transformation"></a>审核转换
@@ -51,8 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“审核转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,5 +59,27 @@ ms.lasthandoff: 08/03/2017
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="audit-transformation-editor"></a>审核转换编辑器
+  通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
+  
+### <a name="options"></a>选项  
+ **输出列的名称**  
+ 为包含审核信息的新输出列提供名称。  
+  
+ **审核类型**  
+ 选择用于提供审核信息的可用系统变量。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
+|**包 ID**|插入唯一标识包的 GUID。|  
+|**包名称**|插入包名称。|  
+|**版本 ID**|插入唯一标识包版本的 GUID。|  
+|**执行开始时间**|插入包执行的开始时间。|  
+|**计算机名称**|插入启动包的计算机的名称。|  
+|**用户名**|插入启动包的用户的登录名。|  
+|**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
+|**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  
   
   

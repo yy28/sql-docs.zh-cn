@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什么 &#39; s SQL Server 2016 中 Integration Services 中的新增功能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- 本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中新增或更新的功能。  
+ 本主题介绍已添加或更新 SQL Server 2016 中的功能[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   
 ## <a name="improvements-grouped-by-category"></a>按类别分组的改进  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> 支持 SSIS 目录中的 AlwaysOn  
  AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组支持的故障转移环境适用于一组可以共同进行故障转移的离散用户数据库（称为可用性数据库）。 有关详细信息，请参阅 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510230.aspx)。  
   
- SSIS 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中引入了新功能，你可以轻松地将其部署到集中式 SSIS 目录（即 SSISDB 用户数据库）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
+ 在 SQL Server 2016 SSIS 引入了新功能，允许您轻松地将其部署到集中式的 SSIS 目录 （即 SSISDB 用户数据库中）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
   
  有关详细的概述，以及用于启用 Always On ssisdb 的分步说明，请参阅[SSIS 目录](../integration-services/service/ssis-catalog.md)。  
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
  SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。  可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目录中的全新自定义日志记录级别  
- 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 增加了“运行时沿袭”  日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
+ 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 将添加**运行时沿袭**日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
 
 ####  <a name="ErrorColumn"></a> 数据流中错误对应的列名称  
  当您将重定向的数据流中包含到错误输出的错误的行时，输出会包括顺序错误发生，但不会显示的列的名称的列的数值标识符。 现在可以通过多种方式来查找和显示发生了错误的列的名称。  
@@ -289,7 +289,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="expanded-connectivity-to-the-cloud"></a>扩展了到云的连接
 
 ####  <a name="AFP2016"></a> 适用于 SSIS 的 Azure 功能包已发布（针对 SQL Server 2016）  
- 用于 Integration Services 的 Azure 功能包已发布（针对 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]）。 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ Azure Feature Pack for Integration Services 已为 SQL Server 2016 已发布。 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
 
 #### <a name="dynamics"></a> 支持在 Service Pack 1 中发布的 Microsoft Dynamics Online 资源
 

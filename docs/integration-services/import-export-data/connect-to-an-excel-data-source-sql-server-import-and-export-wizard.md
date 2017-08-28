@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d744e84aa2b4ae0462a5d5a1e4453a9e86abb890
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b4411fdd2337d93f15b149febf845fb7b0762c40
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>连接到 Excel 数据源 （SQL Server 导入和导出向导）
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/03/2017
 选择源工作簿使用的 Excel 版本。
 
 > [!IMPORTANT]
-> 可能需要下载并安装其他文件，才能连接到所选 Excel 版本。 请参阅[获取所需连接到 Excel 文件](#officeDownloads)本页了解详细信息。
-
-如果您指定了版本时遇到问题，请尝试指定不同的版本，甚至早期版本。 例如，你可能无法安装 Office 2016 数据提供程序，因为你有 Microsoft Office 365 订阅。 只能使用桌面版本的 Microsoft Office 安装的数据提供程序访问 2016年和 Excel 2016。 在这种情况下，你可以指定 Excel 2013，而不是 Excel 2016。 两个版本的提供程序在功能上等效。 中提到了 Office 2016 运行时的这一局限性[这篇博客文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+> 你可能需要下载并安装其他要连接到 Excel 文件的文件。 请参阅[获取所需连接到 Excel 文件](#officeDownloads)本页了解详细信息。
 
 **首行包含列名称**  
 指示数据的第一行是否包含列名称。
@@ -64,19 +62,19 @@ ms.lasthandoff: 08/03/2017
 ## <a name="i-dont-see-excel-in-the-list-of-data-sources"></a>我看不到 Excel 中的数据源列表
 如果你看不到 Excel 中的数据源列表，你在运行 64 位向导？ 有关 Excel 和 Access 的提供程序是通常是 32 位和 64 位向导中不可见。 请改为运行 32 位向导。
 
+> [!NOTE]
+> 若要使用 64 位版本的 SQL Server 导入和导出向导，你必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序，仅安装 32 位文件，包括 32 位版本的向导。
+
 ## <a name="officeDownloads"></a>获取所需连接到 Excel 文件  
-你可能需要下载 Microsoft Office 数据源，包括 Excel 和访问权限，如果它们尚未安装连接组件。
+你可能需要下载 Microsoft Office 数据源，包括 Excel 和访问权限，如果它们尚未安装连接组件。 下载最新版本的 Excel 和 Access 文件此处连接组件： [Microsoft Access 数据库引擎 2016年可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
+  
+组件的最新版本可以打开的 Excel 的早期版本创建的文件。
 
-更高版本的组件可以打开早期版本的程序所创建的文件。 在某些情况下，早期版本的组件也可以打开程序的更高版本所创建的文件。 例如，如果你不能安装 Office 2016 组件，请改用 Office 2013 组件。 两个版本的提供程序在功能上等效。 中提到了 Office 2016 运行时的这一局限性[这篇博客文章](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)。
+如果计算机具有 32 位版本的 Office，那么您需要安装 32 位版本的组件，并还需要确保在 32 位模式下运行包。
 
-如果计算机具有 Office 的 32 位版本-这是正常现象，即使在 64 位计算机-然后你必须安装 32 位版本的组件。 你还必须确保在运行 32 位向导中，或运行该向导在 32 位模式下创建的 SQL Server Integration Services 包。 
- 
-|Microsoft Office 版本|下载|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System Driver: Data Connectivity Components（Office 2007 系统驱动程序：数据连接组件）](https://www.microsoft.com/download/details.aspx?id=23734)|  
+如果你有 Office 365 订阅，请确保你下载访问数据库引擎 2016年可再发行组件和不是 Microsoft 访问 2016年运行时。 运行安装程序时，可能会看到一条错误消息，您无法下载通过并行安装 Office 单击以运行组件。 要绕过此错误消息，请运行安装程序在静默模式下打开命令提示符窗口并运行。使用下载的 EXE 文件`/quiet`切换。 例如：
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

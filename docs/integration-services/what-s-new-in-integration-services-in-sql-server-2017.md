@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56d4ea145a34048c8619ff88112021f163e26900
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>什么 &#39; s 在 SQL Server 自 2017 年中的 Integration Services 中的新增功能
@@ -26,6 +26,24 @@ ms.lasthandoff: 08/03/2017
 
 >   [!NOTE]
 > SQL Server 2017 还包括 SQL Server 2016 的功能以及 SQL Server 2016 更新中新增的功能。 若要了解 SQL Server 2016 中的新 SSIS 功能，请参阅 [SQL Server 2016 Integration Services 中的新增功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)。
+
+## <a name="highlights-of-this-release"></a>此版本的要点
+
+以下是 SQL Server 自 2017 年的 Integration Services 中的最重要的新功能。
+
+-   **向外扩展**。将 SSIS 包执行更轻松地分配给多个辅助计算机，和从一台主计算机管理执行和辅助角色。 有关详细信息，请参阅[集成服务向外扩展](../integration-services/scale-out/integration-services-ssis-scale-out.md)。
+
+-   **在 Linux 上的 integration Services**。 在 Linux 计算机上运行 SSIS 包。 有关详细信息，请参阅[提取、 转换和加载数据使用 SSIS 的 Linux 上](../linux/sql-server-linux-migrate-ssis.md)。
+
+-   **连接改进**。 连接到的 Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online OData 数据源与更新的 OData 组件。 
+
+## <a name="new-in-the-azure-feature-pack"></a>Azure 功能包中的新增功能
+
+除了 SQL Server 中的连接改进，用于 Azure 的 Integration Services 功能包添加了对 Azure 数据湖存储支持。 有关详细信息，请参阅[Azure Feature Pack 为 Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)。
+
+## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的新增功能
+
+现在，你可以开发 SSIS 项目和面向通过 2017 在 Visual Studio 2017 或 Visual Studio 2015 中的 SQL Server 版本 2012年的包。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>在 SQL Server 自 2017 年 1 RC1 SSIS 中的新增功能
 
@@ -35,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 -   改进了 Scale Out 辅助角色中执行日志的故障转移处理。 执行日志保存到本地磁盘中，以防缩放出工作进程意外停止。 更高版本，辅助角色重新启动时，它将重新加载持久化的日志，并继续将它们保存到 SSISDB。
 -   存储过程 [catalog].[create_execution] 的参数 runincluster 重命名为 runinscaleout，以保持一致性和可读性。 此更改参数名称产生下列影响：
     -   如果你有现有的脚本以在向外扩展运行包，则必须更改中的参数名称*runincluster*到*runinscaleout*若要使脚本在 RC1 中工作。
-    -   SQL Server Management Studio (SSMS) 17.1 和更早版本，无法触发中向外扩展 RC1 中的包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 版本 17.2 及更高版本的 SSMS 中向外扩展支持新的参数名称和包执行。 SSMS 版本 17.2 可用，一种解决方法之前，你可以使用现有版本的 SSMS 生成包执行脚本，然后更改的名称*runincluster*参数*runinscaleout*脚本，并运行的脚本中。
+    -   SQL Server Management Studio (SSMS) 17.1 和更早版本，无法触发中向外扩展 RC1 中的包执行。 错误消息为：“@runincluster 不是过程 create_execution 的参数。” SSMS 的下一个版本，即版本 17.2 中修复了此问题。 版本 17.2 及更高版本的 SSMS 中向外扩展支持新的参数名称和包执行。SSMS 版本 17.2 可用，一种解决方法之前，你可以使用现有版本的 SSMS 生成包执行脚本，然后更改的名称*runincluster*参数*runinscaleout*脚本，并运行的脚本中。
 -   SSIS 目录具有新的全局属性，用于指定执行 SSIS 包的默认模式。 在调用时应用此新属性**[目录]。 [create_execution]**存储过程，并*runinscaleout*参数设置为 null。 此模式也适用于 SSIS SQL 代理作业。 你可以在 SSMS 中，或使用以下命令的 SSISDB 节点的属性对话框中设置新的全局属性：
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
@@ -47,7 +65,7 @@ ms.lasthandoff: 08/03/2017
 
 -   你现在可以使用**Use32BitRuntime**参数时触发执行中向外扩展。
 -   Scale Out 中用于包执行的 SSISDB 日志记录性能得到了改进。 事件消息和消息上下文日志现批量写入 SSISDB 中，而不是逐一写入。 以下是有关此改进的一些其他说明：        
-    - 在当前版本的 SQL Server Management Studio (SSMS) 中，某些报表目前不显示要在 Scale Out 中执行的日志。 预计将在下一版本的 SSMS 中支持它们。 受影响的报表包括*所有连接*报表，*错误上下文*报表，与*连接信息*的集成服务仪表板的部分。
+    - 在当前版本的 SQL Server Management Studio (SSMS) 中，某些报表目前不显示要在 Scale Out 中执行的日志。预计将在下一版本的 SSMS 中支持它们。 受影响的报表包括*所有连接*报表，*错误上下文*报表，与*连接信息*的集成服务仪表板的部分。
     - 新建一列**event_message_guid**已添加。 使用此列联接 [目录]。视图 [event_message_context] 和 [目录]。[event_messages] 查看而不是使用**event_message_id**在查询中向外扩展执行这些日志。
 -   若要获取用于 SSIS 向外扩展，管理应用程序[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 或更高版本。
 

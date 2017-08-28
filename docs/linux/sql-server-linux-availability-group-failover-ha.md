@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6f060f110121bc744687b09a15e142112f48c86c
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>对 Linux 上的 SQL Server 运行 HA 可用性组
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>可用性组故障转移
 
@@ -175,9 +176,6 @@ ms.lasthandoff: 08/02/2017
 
 以下各节说明如何使用可用性组在 Linux 上执行滚动升级 SQL Server 实例。 
 
->[!WARNING]
->在 Linux 上，滚动升级到 SQL Server 自 2017 年 1 RC2 不支持。 升级辅助副本之后，它将断开连接从主副本中，直至升级主要副本。 Microsoft 规划以解决此问题在未来版本。 
-
 ### <a name="upgrade-steps-on-linux"></a>在 Linux 上的升级步骤
 
 在 Linux 中的 SQL Server 实例上可用性组副本时，可用性组的群集类型是`EXTERNAL`或`NONE`。 除了 Windows Server 故障转移群集 (WSFC) 是之外，由群集管理器管理的可用性组`EXTERNAL`。 Pacemaker 使用 Corosync 是外部的群集管理器的示例。 具有未群集管理器的可用性组具有群集类型`NONE`此处所述的升级步骤是特定于可用性组的群集类型`EXTERNAL`或`NONE`。
@@ -191,6 +189,15 @@ ms.lasthandoff: 08/02/2017
 
    >[!NOTE]
    >如果某一可用性组仅有异步副本-为了避免丢失任何数据更改为同步的一个副本，并等待，直到它已同步。 然后升级此副本。
+   
+   b.1。 在承载辅助副本针对升级的节点上停止资源
+   
+   在运行升级命令之前停止资源，以便群集将不监视它并不必要地将其故障。 下面的示例添加要停止对资源将导致的节点上的位置约束。 更新`ag_cluster-master`在资源名称和`nodeName1`与承载副本针对升级的节点。
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b.2。 升级辅助副本上的 SQL Server
 
    下面的示例将升级`mssql-server`和`mssql-server-ha`包。
 
@@ -198,11 +205,18 @@ ms.lasthandoff: 08/02/2017
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b.3。 删除位置约束
+
+   在运行升级命令之前停止资源，以便群集将不监视它并不必要地将其故障。 下面的示例添加要停止对资源将导致的节点上的位置约束。 更新`ag_cluster-master`在资源名称和`nodeName1`与承载副本针对升级的节点。
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   最佳做法是，确保启动资源 (使用`pcs status`命令) 和辅助副本连接和升级后同步状态。
 
 1. 升级所有辅助副本后，手动故障转移到其中一个同步的辅助副本。
 
    具有的可用性组`EXTERNAL`群集类型，请使用群集管理工具进行故障转移; 与可用性组`NONE`群集类型应使用 TRANSACT-SQL 来故障转移。 
-
    下面的示例故障转移群集管理工具具有的可用性组。 替换`<targetReplicaName>`替换将变为主数据库的同步辅助副本的名称：
 
    ```bash
@@ -211,7 +225,6 @@ ms.lasthandoff: 08/02/2017
    
    >[!IMPORTANT]
    >以下步骤仅适用于不具有群集管理器的可用性组。  
-
    可用性组群集类型是否为`NONE`、 手动故障转移。 请按顺序完成下列步骤：
 
       a. 下面的命令设置到了辅助站点的主副本。 替换`AG1`替换为你的可用性组的名称。 在承载主副本的 SQL Server 的实例上运行 TRANSACT-SQL 命令。
@@ -226,13 +239,27 @@ ms.lasthandoff: 08/02/2017
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. 故障转移后，旧的主副本上升级 SQL Server。 
+1. 故障转移后，SQL Server 上升级旧的主副本通过重复步骤 b.1 b.3 上面所述的相同过程。
 
    下面的示例将升级`mssql-server`和`mssql-server-ha`包。
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. 对于可用性组使用的外部群集管理器-群集在其中键入是外部，清理而引起的手动故障转移的位置约束。 

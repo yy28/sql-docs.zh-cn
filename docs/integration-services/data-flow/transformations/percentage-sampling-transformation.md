@@ -1,32 +1,38 @@
 ---
-title: "百分比抽样转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.percentagesamplingtrans.f1"
-helpviewer_keywords: 
-  - "测试挖掘模型"
-  - "抽样种子 [Integration Services]"
-  - "数据挖掘 [Analysis Services], 样本数据集"
-  - "百分比抽样转换"
-  - "样本数据集 [Integration Services]"
-  - "数据集 [Integration Services], 样本"
-  - "为挖掘模型定型"
+title: "百分比抽样转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.percentagesamplingtrans.f1
+- sql13.dts.designer.percentagesamplingtransformation.f1
+helpviewer_keywords:
+- testing mining models
+- sampling seeds [Integration Services]
+- data mining [Analysis Services], sample data sets
+- Percentage Sampling transformation
+- sample data sets [Integration Services]
+- datasets [Integration Services], sample
+- training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/19/2017
+
 ---
-# 百分比抽样转换
+# <a name="percentage-sampling-transformation"></a>百分比抽样转换
   百分比抽样转换通过选择转换输入行的百分比来创建样本数据集。 样本数据集是从转换输入中随机选择的行，这使得结果样本可以代表输入。  
   
 > [!NOTE]  
@@ -36,7 +42,7 @@ caps.handback.revision: 46
   
  百分比抽样转换对于创建用于包开发的样本数据集也很有用。 通过对数据流应用百分比抽样转换，可以在保持数据集的数据特性的同时均匀地缩减数据集的大小。 然后，测试包就可以更快地运行，因为它使用小但具有代表性的数据集。  
   
-## 百分比抽样转换的配置  
+## <a name="configuration-the-percentage-sampling-transformation"></a>百分比抽样转换的配置  
  可以通过指定抽样种子来修改随机数生成器（转换通过随机数生成器来选择行）的行为。 如果使用相同的抽样种子，转换将始终创建相同的样本输出。 如果没有指定种子，转换将使用操作系统的时钟周期数来创建随机数。 因此，在包的开发和测试期间，需要验证转换结果时可选择使用标准种子，然后在包正式投入生产后再改为使用随机种子。  
   
  此转换类似于行抽样转换，后者通过选择指定数量的输入行来创建样本数据集。 有关详细信息，请参阅 [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)。  
@@ -47,14 +53,30 @@ caps.handback.revision: 46
   
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“百分比抽样转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Percentage Sampling Transformation Editor](../../../integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md)。  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- 有关如何设置属性的详细信息，请参阅[设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+ 有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="percentage-sampling-transformation-editor"></a>百分比抽样转换编辑器
+  可以使用 **“百分比抽样转换编辑器”** 对话框，使用指定的行百分比将部分输入拆分成样本。 此转换将输入分成两个单独的输出。  
+  
+### <a name="options"></a>选项  
+ **行百分比**  
+ 指定输入中要用作样本的行百分比。  
+  
+ 此属性的值可以使用属性表达式来指定。  
+  
+ **样本的输出名称**  
+ 为包含抽样行的输出提供唯一名称。 所提供的名称将显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中。  
+  
+ **未选中部分的输出名称**  
+ 为包含非抽样行的输出提供唯一名称。 所提供的名称将显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中。  
+  
+ **使用以下随机种子**  
+ 指定随机数生成器的抽样种子，转换将使用该种子来创建样本。 建议只在开发和测试过程中使用此选项。 如果未指定随机种子，转换将使用 Microsoft Windows 的时钟周期计数。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "修改在运行时的 OData 源查询 |Microsoft 文档"
+title: "提供在运行时的 OData 源查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e061fe6989d9629d655d9e0c08f2cd4c1d932540
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
-  可以通过向数据流任务的“[OData 源].[查询]”属性添加表达式，在运行时修改 OData 源查询。  
+# <a name="provide-an-odata-source-query-at-runtime"></a>提供在运行时的 OData 源查询
+ 你可以通过添加修改在运行时的 OData 源查询*表达式*到**[OData Source]。 [查询]**数据流任务的属性。  
   
- 请注意，列必须保持与设计时使用的内容相同；否则执行包时会出现错误。 请务必在使用 $select 查询选项时指定相同的列（采用相同顺序）。 使用 $select 选项的更安全替代方法是直接从源组件 UI 中取消选择不需要的列。  
+ 返回的列一定要在设计时; 返回的相同列否则，执行包时收到错误。 请务必在使用 $select 查询选项时指定相同的列（采用相同顺序）。 使用 $select 选项的更安全替代方法是直接从源组件 UI 中取消选择不需要的列。  
   
- 可通过几种不同的方式在运行时动态设置查询值。 下面是一些较常用的方法。  
+ 可通过几种不同的方式在运行时动态设置查询值。 以下是一些较常用的方法。  
   
-## <a name="exposing-the-query-as-a-parameter"></a>将查询公开为参数  
- 以下过程包含的步骤可将 OData 源组件使用的查询公开为包的参数。  
+## <a name="provide-the-query-as-a-parameter"></a>作为参数提供查询  
+ 以下过程演示如何公开 OData 源组件用作包的参数的查询。  
   
 1.  右键单击 **“数据流任务”** 并选择 **“参数化…”** 选项。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  选择是 **“创建新参数”** 还是 **“使用现有参数”**。  
   
-4.  如果选择 **“创建新参数”**，请执行以下操作：  
+4.  如果你选择**创建新参数**:  
   
     1.  为参数输入 **“名称”** 和 **“说明”** 。  
   
@@ -49,24 +49,24 @@ ms.lasthandoff: 08/03/2017
   
 5.  单击 **“确定”** 关闭对话框。  
   
-## <a name="using-an-expression"></a>使用表达式  
- 当您要在运行时动态构造查询字符串时，可使用此方法。 在此示例中，MaxRows 变量将通过其他方法（脚本、参数等）进行设置。  
+## <a name="provide-the-query-with-an-expression"></a>使用的表达式提供查询
+ 当你想要动态构造查询字符串在运行时，此方法很有用。
   
-1.  选择包含 **“OData 源”** 的 **“数据流任务”**。  
+1.  选择**数据流任务**，其中包含你**OData 源**。  
   
 2.  在 **“属性”** 窗口中，突出显示 **“表达式”** 属性。  
   
-3.  单击 ... （省略号）按钮以显示“属性表达式编辑器”。  
+3.  单击 ... （省略号） 按钮以打开**属性表达式编辑器**。  
   
 4.  选择“[OData 源].[查询]”属性。  
   
-5.  单击 ... （省略号）按钮（针对“表达式”）。  
+5.  单击 ... （省略号） 按钮**表达式**。  
   
 6.  输入 **“表达式”**。  
   
 7.  单击 **“确定”**。  
   
-> [!WARNING]  
->  请注意，当使用此方法时，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  
+> [!NOTE]  
+> 当你使用此方法时，你必须确保你设置的值正确进行 URL 编码。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  
   
   

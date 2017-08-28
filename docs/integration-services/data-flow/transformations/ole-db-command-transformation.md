@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 35cad22ea543204b457cd8b9674540f24e482a6c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 99d34e8dd153c5ca1793d14cc9638aab6529a643
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令转换
@@ -51,7 +51,58 @@ ms.lasthandoff: 08/03/2017
  可以记录 OLE DB 命令转换对外部数据访问接口所做的调用。 利用此日志记录功能，可以排除 OLE DB 命令转换对外部数据源执行的连接和命令中发生的故障。 若要记录 OLE DB 命令转换对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="related-tasks"></a>相关任务  
- 可通过使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或对象模型配置转换。 有关使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器配置转换的详细信息，请参阅  [配置 OLE DB 命令转换](../../../integration-services/data-flow/transformations/configure-the-ole-db-command-transformation.md)。 有关以编程方式配置此转换的详细信息，请参阅开发人员指南。  
+ 可通过使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或对象模型配置转换。 有关以编程方式配置此转换的详细信息，请参阅开发人员指南。  
+  
+## <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
+  若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  
+  
+#### <a name="to-configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 项目。  
+  
+2.  在解决方案资源管理器中，双击该包将其打开。  
+  
+3.  单击 **“数据流”** 选项卡，然后从 **“工具箱”**中将 OLE DB 命令转换拖动到设计图面。  
+  
+4.  将连接线（绿色或红色箭头）从数据源或前一个转换拖动到 OLE DB 命令转换，从而将 OLE DB 命令转换连接到数据流。  
+  
+5.  右键单击组件，并选择“编辑高级编辑器”或“显示高级编辑器”。  
+  
+6.  在 **“连接管理器”** 选项卡上，从 **“连接管理器”** 列表中选择 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+  
+7.  单击“组件属性”选项卡，并单击 **SqlCommand** 框中的省略号按钮 **(…)**。  
+  
+8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。  
+  
+9. 单击 **“刷新”**。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。  
+  
+10. 单击 **“输入属性和输出属性”** 选项卡。  
+  
+11. 展开 **“OLE DB 命令输入”**，再展开 **“外部列”**。  
+  
+12. 验证 **“外部列”** 是否为 SQL 语句中的每个参数列出了一列。 列的名称是 **Param_0**、 **Param_1**，以此类推。  
+  
+     不应更改列名称。 如果更改列名称， [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会生成有关 OLE DB 命令转换的验证错误。  
+  
+     此外，不应更改数据类型。 每列的 DataType 属性均设置为正确的数据类型。  
+  
+13. 如果 **“外部列”** 没有列出任何列，则您必须手动添加这些列。  
+  
+    -   对 SQL 语句中的每一个参数，单击一次 **“添加列”** 。  
+  
+    -   将列名更新为 **Param_0**、 **Param_1**，以此类推。  
+  
+    -   在 DBParamInfoFlags 属性中指定值。 该值必须与 OLE DB DBPARAMFLAGSENUM 枚举中的值相匹配。 有关详细信息，请参阅 OLE DB 参考文档。  
+  
+    -   指定列的数据类型，并根据该数据类型指定列的代码页、长度、精度和小数位数。  
+  
+    -   若要删除未使用的参数，请选择 **“外部列”**中的参数，再单击 **“删除列”**。  
+  
+    -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
+  
+14. 单击 **“确定”**。  
+  
+15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   
