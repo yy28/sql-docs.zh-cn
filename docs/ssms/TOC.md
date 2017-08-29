@@ -32,6 +32,7 @@
 # [SSMS 环境](the-sql-server-management-studio-environment.md)
 # [SSMS 中的“属性”页](property-pages-in-sql-server-management-studio.md)
 # [SSMS 中的“属性”窗口](properties-window-management-studio.md)
+# [SSMS 中的输出窗口](output-window.md)
 
 # [“关于”对话框](about-dialog-box.md)
 # [SSMS Web 浏览器](sql-server-management-studio-web-browser.md)
