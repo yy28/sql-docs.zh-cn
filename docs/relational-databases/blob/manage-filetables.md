@@ -1,7 +1,7 @@
 ---
 title: "管理 FileTable | Microsoft Docs"
 ms.custom: 
-ms.date: 06/02/2016
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: f804ca956ac8287fad529f4bc5c31965d01f1c72
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="manage-filetables"></a>管理 FileTable
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)（检查 **is_filetable** 列的值。）  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -44,10 +44,9 @@ GO
   
  若要获取在创建关联的 FileTable 时创建的系统定义对象的列表，请查询目录视图 [sys.filetable_system_defined_objects (Transact-SQL) ](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
-    FROM sys.filetable_system_defined_objects  
-    WHERE object_id = filetable_object_id;  
+FROM sys.filetable_system_defined_objects;  
 GO  
 ```  
   
@@ -89,24 +88,24 @@ GO
  **禁用完全非事务性访问权限**  
  调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS 的值设置** 为 **READ_ONLY** 或 **OFF**。  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
 GO  
   
 -- Disable non-transactional access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
 GO  
 ```  
   
  **重新启用完全非事务性访问权限**  
  调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS** 的值设置为 **FULL**。  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
 ```  
   
@@ -146,16 +145,16 @@ GO
  使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 选项调用 ALTER TABLE 语句。  
   
  **禁用 FileTable 命名空间**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    DISABLE FILETABLE_NAMESPACE;  
+DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **重新启用 FileTable 命名空间**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    ENABLE FILETABLE_NAMESPACE;  
+ENABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
@@ -168,7 +167,7 @@ GO
 ###  <a name="HowToListOpen"></a> 如何获取与 FileTable 关联的打开的文件句柄的列表  
  查询目录视图 [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -176,7 +175,7 @@ GO
 ###  <a name="HowToKill"></a> 如何终止与 FileTable 关联的打开的文件句柄  
  使用相应参数调用存储过程 [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 以终止数据库或 FileTable 中所有打开的文件句柄或终止特定句柄。  
   
-```  
+```sql  
 USE database_name;  
   
 -- Kill all open handles in all the filetables in the database.  
@@ -198,11 +197,11 @@ GO
  **确定打开的文件和关联锁**  
  将动态管理视图 [sys.dm_tran_locks (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 中的 **request_owner_id** 字段与 [sys.dm_filestream_non_transacted_handles (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的 **fcb_id** 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
-    FROM sys.dm_filestream_non_transacted_handles  
-    WHERE fcb_id IN  
-        ( SELECT request_owner_id FROM sys.dm_tran_locks );  
+FROM sys.dm_filestream_non_transacted_handles  
+WHERE fcb_id IN  
+    ( SELECT request_owner_id FROM sys.dm_tran_locks );  
 GO  
 ```  
   
@@ -238,6 +237,4 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [FileTable 与其他 SQL Server 功能的兼容性](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL、函数、存储过程和视图](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
-  
-  
 
