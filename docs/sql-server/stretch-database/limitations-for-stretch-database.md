@@ -62,8 +62,8 @@ ms.lasthandoff: 07/29/2017
   
 -   内存优化表  
   
- ### <a name="data-types"></a>数据类型  
- -   ntext、text 和 image  
+### <a name="data-types"></a>数据类型  
+-   ntext、text 和 image  
   
 -   timestamp  
   
