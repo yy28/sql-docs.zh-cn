@@ -22,7 +22,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
+# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>创建 Reporting Services 移动报表时先从设计或数据开始
   
 借助 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建移动报表，这些报表可轻松缩放至任何屏幕大小。   
   
