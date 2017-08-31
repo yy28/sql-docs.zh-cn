@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   引发事件：ManageWeb  
   
- 有关详细信息，请参阅 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
+ 有关详细信息，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
 ### <a name="script-usage"></a>脚本使用情况  
  **创建脚本文件 (.ps1)**  
