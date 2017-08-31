@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
-此更改日志适用于 [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx)。  
+此更改日志适用于 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT for Visual Studio 2017（15.3.0 预览版）
+内部版本号：14.0.16121.0
+  
+### <a name="whats-new"></a>新增功能
+
+此预览版是 SSDT for Visual Studio 2017 的第一个版本。 此版本为 Visual Studio 2017 15.3 及以上版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目引入了独立的 Web 安装体验。
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**已知问题**
+
+- 安装程序尚未本地化。
+- SSIS 尚未本地化。
+- 当 ExecuteOutofProcess 设置为 True 时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
+- 若要报告问题，请访问 [SSDT Connect 反馈](https://connect.microsoft.com/SQLServer/Feedback)网站。
+- 不可将包含第三方扩展的 SSIS 包切换为面向其他服务器版本。
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 for Visual Studio 2015
 内部版本号：14.0.61707.300
 
 ### <a name="whats-new"></a>新增功能
@@ -76,7 +92,7 @@ ms.lasthandoff: 08/08/2017
 - 将最新 TargetServerVersion 从“SQL Server vNext”更改为“SQL Server 2017”
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 for Visual Studio 2015
 内部版本号：14.0.61705.170
 
 ### <a name="whats-new"></a>新增功能
@@ -106,7 +122,7 @@ ms.lasthandoff: 08/08/2017
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - 修复了数据库具有由 HSM 使用 EKM 提供程序进行保护的非对称密钥的相关问题（[Connect 项目](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)）
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0（最高支持 SQL Server 2017）
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 for Visual Studio 2015（支持 SQL Server 2017 及以下版本）
 内部版本号：14.0.61704.140
 
 ### <a name="whats-new"></a>新增功能
@@ -208,7 +224,7 @@ ms.lasthandoff: 08/08/2017
 - Always Encrypted：联机加密无法禁用对取消项进行更改跟踪，并且如果在开始加密前尚未清除更改跟踪，联机加密也无法正常运行
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5（最高支持 SQL Server 2016）
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 for Visual Studio 2015（支持 SQL Server 2016 及以下版本）
 发布日期：2016 年 10 月 20日
 
 内部版本号：14.0.61021.0
@@ -303,7 +319,7 @@ Console.WriteLine(result.DeploymentReport);
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4（适用于 SQL Server 2016）
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 for Visual Studio 2015（SQL Server 2016）
 发布日期：2016 年 9 月 20日
 
 内部版本号：14.0.60918
@@ -343,7 +359,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3（适用于 SQL Server 2016）
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 for Visual Studio 2015（SQL Server 2016）
 发布日期：2016 年 8 月 15日
 
 内部版本号：14.0.60812.0  
@@ -351,7 +367,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 **新增功能**
 
 - **发行版本控制和编号：**现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
-- **Analysis Services – 表格模型资源管理器：**使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。 表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
+- **Analysis Services – 表格模型资源管理器：**使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
 - **数据库工具 – Always Encrypted**：此发行版提供新的[“Always Encrypted 密钥管理”](https://msdn.microsoft.com/library/mt708953.aspx) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
     - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
     - 如果尝试加密某个表中包含 SQL Server 对象资源管理器中数据的列，该操作可能会失败。 此功能目前仅在 SSDT 数据库项目和 SSMS 中受支持。 以后的发行版将会实现对 SQL Server 对象资源管理器的支持。
@@ -383,7 +399,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT 7 月版（适用于 SQL Server 2016）  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>SSDT July for Visual Studio 2015（SQL Server 2016）  
 发布日期：2016 年 6 月 30 日  
   
 内部版本号：14.0.60629.0  
@@ -426,7 +442,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
     * 修复了为列类型使用默认格式，以便能够从 UI 更改格式类型时，1200 兼容级别模型计算表中存在的问题。 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT 6 月版（适用于 SQL Server 2016）  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>SSDT June for Visual Studio 2015（SQL Server 2016）  
 发布日期：2016 年 6 月 1 日  
   
 内部版本号：14.0.60525.0 

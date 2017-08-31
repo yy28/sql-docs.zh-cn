@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 发行说明 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 本主题介绍 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]的限制和问题。 若要了解相关信息，请参阅：
 - [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 - [Linux 版 SQL Server 的发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
-  
-[![从评估中心下载。](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  从[评估中心](http://go.microsoft.com/fwlink/?LinkID=829477)下载 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+
+[![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)试用：[下载 SQL Server 2017 最新版本：RC2，发布于 2017 年 8 月](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候选发布（RC2 - 2017 年 8 月）
 此版本没有 Windows 版 SQL Server 发行声明。 请参阅 [Linux 版 SQL Server 的发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
@@ -109,11 +109,12 @@ ms.lasthandoff: 08/15/2017
 
    托管次要副本的 SQL Server 实例即可恢复。
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) 与 SQL Server 工程团队合作 
-- [堆栈溢出（标记 sql-server）- 询问技术问题](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 获取帮助 
+- [堆栈溢出（标记 sql-server）- 询问 SQL 开发问题](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 论坛 - 询问技术问题](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - 有关 SQL Server 的一般讨论](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>详细信息
 - [SQL Server Reporting Services 发行说明](../reporting-services/reporting-services-release-notes.md)的限制和问题。

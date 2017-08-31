@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
@@ -199,7 +199,8 @@ ms.lasthandoff: 07/31/2017
 |延迟持续性|是|是|是|是|是|
 |自动优化|是|“否”|“否”|“否”|是|
 |批处理模式自适应联接|是|“否”|“否”|“否”|是|
-|批处理内存授予反馈|是|“否”|“否”|“否”|是|
+|批处理模式内存授予反馈|是|“否”|“否”|“否”|是|
+|多语句表值函数的交错执行|是|是|是|是|是|
 |大容量插入改进|是|是|是|是|是|
 
 
@@ -303,7 +304,7 @@ ms.lasthandoff: 07/31/2017
 |Polybase 头节点|是|“否”|“否”|“否”|是| 
 |JSON|是|是|是|是|是|   
 |查询存储|是|是|是|是|是|   
-|时态|是|是|是|是|是|   
+|临时|是|是|是|是|是|   
 |公共语言运行时 (CLR) 集成|是|是|是|是|是|   
 |本机 XML 支持|是|是|是|是|是| 
 |XML 索引|是|是|是|是|是| 

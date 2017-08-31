@@ -2,8 +2,10 @@
 title: "安装 SQL Server 2016 的硬件和软件要求 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,17 +53,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
-ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 
 本主题列出了在 Windows 操作系统上安装和运行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 至少需要满足的硬件和软件要求。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 如需相关信息，请参阅 [Linux 上的 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]](../../linux/sql-server-linux-overview.md)。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
 
 > 本主题适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014 的硬件和软件要求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
   
