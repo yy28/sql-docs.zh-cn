@@ -79,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  键入查询在多长时间后超时（秒）。 默认值为 30 秒。 **“超时值”** 的值必须为空或大于零。 如果该值为空，则查询将不会超时。  
   
  **刷新字段**  
- 运行查询命令来更新“数据集属性”对话框 -&gt;“字段” [](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 页中的字段列表。  
+ 运行查询命令来更新[“数据集属性”对话框 -&gt;“字段”](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 页中的字段列表。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
