@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure 的 SQL Server 托管备份
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  对于数据库，如果现有完整数据库备份作业正在运行，则 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 将等待当前作业完毕，然后对该数据库进行另一次完整数据库备份。 同样，给定时间只能运行一个事务日志备份。 但是，完整数据库备份和事务日志备份可以同时运行。 失败会记录为扩展事件。  
   
  如果安排了超过 10 个并发的完整数据库备份，则会通过扩展事件的调试渠道发出一个警告。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 随后针对其余需要备份的数据库保留一个优先级队列，直到安排并完成所有备份。  
+
+> [!NOTE]
+> 代理服务器不支持 SQL Server 托管备份。
+>
   
 ##  <a name="support_limits"></a> 可支持性  
  以下内容支持特定于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的限制和注意事项：  

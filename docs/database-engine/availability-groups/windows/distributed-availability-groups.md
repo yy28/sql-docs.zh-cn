@@ -1,7 +1,7 @@
 ---
 title: "分布式可用性组 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: e390d6efa26dcb628da636bc9bcf7c8fac54af65
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/11/2017
 
 下图显示了分布式可用性组的高级视图，该分布式可用性组跨两个可用性组（AG 1 和 AG 2），这两个可用性组配置在各自的 WSFC 群集上。 分布式可用性组总共有四个副本，每个可用性组中两个。 每个可用性组可以支持最大副本数，因此，基于标准版的分布式可用性组最多可以具有 4 个副本，而基于企业版的分布式可用性组最多可以具有 18 个副本。
 
-<a name="fig1"></a> ![分布式可用性组的高级视图][1]
+<a name="fig1"></a>
+![分布式可用性组的高级视图][1]
 
 可以在分布式可用性组中将数据移动配置为同步或异步。 但是，与传统可用性组相比，分布式可用性组中的数据移动略有不同。 尽管每个可用性组都具有主要副本，但只有一个数据库副本加入可以接受插入、更新和删除的分布式可用性组。 如下图所示，AG 1 为主要可用性组。 其主要副本将事务发送到 AG 1 的次要副本和 AG 2 的主要副本。 然后，AG 2 的主要副本将更新 AG 2 的次要副本。 
 
@@ -119,7 +120,7 @@ ms.lasthandoff: 08/11/2017
 
 在保留相同 SQL Server 版本时更改或升级基础操作系统，迁移功能尤其有用。 尽管 Windows Server 2016 允许在相同硬件上从 Windows Server 2012 R2 滚动升级，但大多数用户都选择部署新的硬件或虚拟机。 
 
-若要完成迁移到新的配置，在此过程末尾，停止指向原始可用性组的所有数据流量，并将分布式可用性组更改为同步数据移动。 此操作可确保第二个可用性组的主要副本完全同步，以免出现数据丢失。 验证同步后，将分布式可用性组故障转移到[故障转移到次要可用性组](https://msdn.microsoft.com/en-US/library/mt651673.aspx)部分中的第二个可用性组。
+若要完成迁移到新的配置，在此过程末尾，停止指向原始可用性组的所有数据流量，并将分布式可用性组更改为同步数据移动。 此操作可确保第二个可用性组的主要副本完全同步，以免出现数据丢失。 验证同步后，将分布式可用性组故障转移到次要可用性组。 有关详细信息，请参阅 [故障转移到次要可用性组](configure-distributed-availability-groups.md#failover)。
 
 迁移后，第二个可用性组成为了新的主要可用性组，可能需要执行以下任一操作：
 
@@ -174,75 +175,101 @@ ms.lasthandoff: 08/11/2017
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG1                             DENNIS                Online Available Storage               GLEN                  Offline Cluster Group                   JY                    Online New_RoR                         DENNIS                Online Old_RoR                         DENNIS                Online SeedingAG                       DENNIS                Online
+AG1                             DENNIS                Online
+Available Storage               GLEN                  Offline
+Cluster Group                   JY                    Online
+New_RoR                         DENNIS                Online
+Old_RoR                         DENNIS                Online
+SeedingAG                       DENNIS                Online
 
 
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG2                             TOMMY                 Online Available Storage               JC                    Offline Cluster Group                   JC                    Online
+AG2                             TOMMY                 Online
+Available Storage               JC                    Offline
+Cluster Group                   JC                    Online
 ```
 
-All detailed information about a distributed availability group is in SQL Server, specifically in the availability-group dynamic management views. Currently, the only information shown in SQL Server Management Studio for a distributed availability group is on the primary replica for the availability groups. As shown in the following figure, under the Availability Groups folder, SQL Server Management Studio shows that there is a distributed availability group. The figure shows AG1 as a primary replica for an individual availability group that's local to that instance, not for a distributed availability group.
+有关分布式可用性组的所有详细信息均在 SQL Server 中，具体而言，是在可用性组动态管理视图中。 目前，SQL Server Management Studio 中所示的分布式可用性组的唯一信息关于是可用性组的主副本的。 如下图中所示，在可用性组文件夹中，SQL Server Management Studio 将显示存在分布式可用性组。 该图显示 AG1 是位于该实例本地的单个可用性组（而不是分布式可用性组）的主副本。
 
-![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
+![在分布式可用性组的第一个 WSFC 群集上的主副本的 SQL Server Management Studio 中查看][8]
 
 
-However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
+然而，如果右键单击分布式可用性组，则无选项可用（如下图所示），而展开的可用性数据库、可用性组侦听器和可用性副本文件夹均为空。 SQL Server Management Studio 16 将显示此结果，但它可能在 SQL Server Management Studio 的将来版本中发生更改。
 
-![No options available for action][9]
+![没有可用于操作的选项][9]
 
-As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+如下图中所示，次要副本在 SQL Server Management Studio 中不显示任何与分布式可用性组相关的内容。 这些可用性组名称将映射到上一个 [CLUSTER_A WSFC 群集](#fig7)映像中显示的角色。
 
-![View in SQL Server Management Studio of a secondary replica][10]
+![次要副本的 SQL Server Management Studio 中的视图][10]
 
-The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
+使用动态管理视图时，这些概念仍然适用。 使用以下查询，可查看所有可用性组（常规和分布式）及参与其中的节点。 仅当查询参与分布式可用性组的 WSFC 群集中的主副本时，才显示此结果。 在名为 `is_distributed` 的动态管理视图 `sys.availability_groups` 中有一个新列，它在可用性组为分布式可用性组时为 1。 若要查看此列：
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name' FROM    sys.availability_groups ag, sys.availability_replicas ar       
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
+FROM    sys.availability_groups ag, 
+    sys.availability_replicas ar       
 WHERE   ag.group_id = ar.group_id
 ```
 
-An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
+参与分布式可用性组的另一个 WSFC 群集的输出实例如下图所示。 SPAG1 由两个副本组成：DENNIS 和 JY。 但是，名为 SPDistAG 的分布式可用性组包含两个参与的可用性组的名称（SPAG1 和 SPAG2），而不是像传统可用性组那样包含实例的名称。 
 
-![Example output of the preceding query][11]
+![前置查询的示例输出][11]
 
-In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
+在 SQL Server Management Studio 中，仪表板和其他区域中显示的任何状态都仅用于该可用性组内的本地同步。 若要显示分布式可用性组的运行状况，请查询动态管理视图。 下面的示例查询可扩展和优化前面的查询：
 
-```
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status' FROM    sys.availability_groups ag, sys.availability_replicas ar,       
+```sql
+SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
+FROM    sys.availability_groups ag, 
+sys.availability_replicas ar,       
 sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id and     ag.group_id = ar.group_id and ag.is_distributed = 1
+WHERE   ar.replica_id = ars.replica_id
+and     ag.group_id = ar.group_id 
+and ag.is_distributed = 1
 ```
        
        
-![Distributed availability group status][12]
+![分布式可用性组状态][12]
 
 
-To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
+若要进一步扩展前面的查询，还可以通过在 `sys.dm_hadr_database_replicas_states` 中添加内容，通过动态管理视图查看基础性能。 动态管理视图当前仅存储第二个可用性组的相关信息。 下面的示例查询针对主要可用性组运行，可产生如下所示的示例输出：
 
 ```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate FROM    sys.databases dbs, sys.availability_groups ag, sys.availablity_replicas ar, sys.dm_hadr_availability_replica_states ars, sys.dm_hadr_database_replica_states drs WHERE   drs.group_id = ag.group_id and ar.replica_id = ars.replica_id and ars.replica_id = drs.replica_id and dbs.database_id = drs.database_id and ag.is_distributed = 1
+SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+FROM    sys.databases dbs,
+    sys.availability_groups ag,
+    sys.availability_replicas ar,
+    sys.dm_hadr_availability_replica_states ars,
+    sys.dm_hadr_database_replica_states drs
+WHERE   drs.group_id = ag.group_id
+and ar.replica_id = ars.replica_id
+and ars.replica_id = drs.replica_id
+and dbs.database_id = drs.database_id
+and ag.is_distributed = 1
 ```
 
-![Performance information for a distributed availability group][13]
+![分布式可用性组的性能信息][13]
 
 
-### Next steps 
+### <a name="next-steps"></a>后续步骤 
 
-* [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+* [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
-* [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+* [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
-* [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+* [使用 Transact-SQL 创建可用性组](create-an-availability-group-transact-sql.md)
 
-This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+本文内容由 Microsoft 最有价值专家 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) 编写。
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

@@ -1,7 +1,7 @@
 ---
 title: "配置分布式可用性组（AlwaysOn 可用性组）| Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 97c42036e08fa8d1d8e7152b7fb89908472efe6b
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
 
-若要创建分布式可用性组，必须在每个 Windows Server 故障转移群集 (WSFC) 上创建可用性组和侦听程序。 然后将这些合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听程序的所有详细信息，相反，它着重于突出显示关键要求。 
+若要创建分布式可用性组，必须在每个 Windows Server 故障转移群集 (WSFC) 上创建可用性组和侦听程序。 然后将这些可用性组合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听程序的所有详细信息，相反，它着重于突出显示关键要求。 
 
 有关分布式可用性组的技术概述，请参阅[分布式可用性组](distributed-availability-groups.md)。   
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 例如，以下脚本可在 TCP 端口 5022 上创建侦听所有 IP 地址的侦听程序终结点。  
 
-```tsql
+```sql
 CREATE ENDPOINT [aodns-hadr] 
     STATE=STARTED
     AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -53,7 +53,7 @@ GO
 
 例如，以下脚本可更改侦听程序终结点以侦听所有 IP 地址。  
 
-```tsql
+```sql
 ALTER ENDPOINT [aodns-hadr] 
     AS TCP (LISTENER_IP = ALL)
 GO
@@ -64,7 +64,7 @@ GO
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
 在第一个 WSFC 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。      
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag1]   
 FOR DATABASE db1   
 REPLICA ON N'server1' WITH (ENDPOINT_URL = N'TCP://server1.contoso.com:5022',  
@@ -83,26 +83,32 @@ GO
   
 ```  
   
-请注意，本示例使用直接的种子设定，其中 **SEEDING_MODE** 设置为 **AUTOMATIC** ，用于副本和分布式可用性组。 这意味着一旦建立后，次要副本和次要可用性组将自动填充，而无需手动备份和还原主要数据库。  
+>[!NOTE]
+>上述示例使用直接的种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>将次要副本联接到主要可用性组  
-任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 因为在此示例中使用了直接的种子设定，因此也必须调用具有  **GRANT CREATE ANY DATABASE** 选项的 **ALTER AVAILABILITY GROUP** 。 这允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
+任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 因为在此示例中使用了直接的种子设定，因此也必须调用具有  **GRANT CREATE ANY DATABASE** 选项的 **ALTER AVAILABILITY GROUP** 。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
   
 在此示例中，在次要副本 `server2`上运行以下命令，以联接 `ag1` 可用性组。 允许可用性组在次要副本上创建数据库。  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag1] JOIN   
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE  
 GO  
 ```  
+
+>[!NOTE]
+>当可用性组在辅助副本上创建数据库时，它将数据库所有者设置为运行 `ALTER AVAILABILITY GROUP` 语句的帐户以授予创建任意数据库的权限。 有关详细信息，请参阅[授予可用性组在复制副本上创建数据库的权限](automatic-seeding-secondary-replicas.md#grantCreate)。
   
 ### <a name="create-a-listener-for-the-primary-availability-group"></a>为主要可用性组创建侦听程序  
 
 接下来，在第一个 WSFC 上为主要可用性组添加侦听器。 在此示例中，侦听器名为 `ag1-listener`。 有关创建侦听程序的详细说明，请参阅[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP [ag1]    
-    ADD LISTENER 'ag1-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
+    ADD LISTENER 'ag1-listener' ( 
+        WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , 
+        PORT = 60173);    
 GO  
 ```  
   
@@ -110,7 +116,7 @@ GO
 ## <a name="create-second-availability-group"></a>创建第二个可用性组  
  然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag2]   
 FOR   
 REPLICA ON N'server3' WITH (ENDPOINT_URL = N'TCP://server3.contoso.com:5022',   
@@ -129,12 +135,12 @@ GO
 ```  
   
 > [!NOTE]  
->  请注意，该次要可用性组必须使用相同的数据库镜像终结点（此示例中为端口 5022）。 否则，在本地故障转移后，副本会停止。  
+> 该次要可用性组必须使用相同的数据库镜像终结点（此示例中为端口 5022）。 否则，在本地故障转移后，副本会停止。  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>将次要副本联接到次要可用性组  
  在此示例中，在次要副本 `server4`上运行以下命令，以联接 `ag2` 可用性组。 允许可用性组在次要副本上创建数据库以支持直接的种子设定。  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
 ALTER AVAILABILITY GROUP [ag2] GRANT CREATE ANY DATABASE  
 GO  
@@ -150,9 +156,9 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 **AVAILABILITY GROUP ON** 参数指定了成员可用性组、 `ag1` 和 `ag2`。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -179,7 +185,7 @@ GO
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>在第二个群集上联接分布式可用性组  
  然后，在第二个 WSFC 上联接分布式可用性组。  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
    AVAILABILITY GROUP ON  
@@ -201,17 +207,17 @@ GO
 ```  
 
   
-## <a name="failover-to-a-secondary-availability-group"></a>故障转移到次要可用性组  
-此时仅支持手动故障转移。 以下 Transact-SQL 语句在名为 `distributedag`的分布式可用性组上强制执行故障转移：  
+## <a name="failover"></a>故障转移到次要可用性组  
+此时仅支持手动故障转移。 以下 Transact-SQL 语句将故障转移名为 `distributedag` 的分布式可用性组：  
 
 
 1. 将次要可用性组的可用性模式设置为同步提交。 
     
-      ```tsql  
+      ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
       MODIFY 
       AVAILABILITY GROUP ON
-      'ag1' WITH  
+      'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
           AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
@@ -230,7 +236,7 @@ GO
   
 1. 等分布式可用性组的状态变为 `SYNCHRONIZED`。 在托管主要可用性组的主要副本的 SQL Server 上运行以下查询。 
     
-      ```tsql  
+      ```sql  
       SELECT ag.name
              , drs.database_id
              , drs.group_id
@@ -246,40 +252,40 @@ GO
 
 1. 在托管主要可用性组的主要副本的 SQL Server 上，将分布式可用性组角色设置为 `SECONDARY`。 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
+    ```  
 
-   >[注意！] 此时，分布式可用性组不可用。
+    此时，分布式可用性组不可用。
 
 1. 测试故障转移就绪。 运行以下查询：
 
-      ```tsql
-      SELECT ag.name, 
-             drs.database_id, 
-             drs.group_id, 
-             drs.replica_id, 
-             drs.synchronization_state_desc, 
-             drs.end_of_log_lsn 
-      FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-      WHERE drs.group_id = ag.group_id; 
-      ```  
-    当 **synchronization_state_desc** 为 `SYNCHRONIZED` 且两个可用性组的 **end_of_log_lsn** 相同时，可用性组即可进行故障转移。 
+    ```sql
+    SELECT ag.name, 
+        drs.database_id, 
+        drs.group_id, 
+        drs.replica_id, 
+        drs.synchronization_state_desc, 
+        drs.end_of_log_lsn 
+    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
+    WHERE drs.group_id = ag.group_id; 
+    ```  
+    当 synchronization_state_desc 为 `SYNCHRONIZED` 且两个可用性组的 **end_of_log_lsn** 相同时，可用性组即可进行故障转移。 
 
 1. 从主要可用性组故障转移到次要可用性组。 在托管次要可用性组的主要副本的 SQL Server 上运行以下命令。 
 
-      ```tsql
-      ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```  
 
-   >[注意！] 执行此步骤后，分布式可用性组将变为可用。
+    执行此步骤后，分布式可用性组将变为可用。
       
-完成上述步骤后，分布式可用性组将进行故障转移，且不会丢失任何数据。 如果可用性组位于不同的地理位置，导致延迟，Microsoft 建议将可用性模式改回为 ASYNCHRONOUS_COMMIT。 
+完成上述步骤后，分布式可用性组将进行故障转移，且不会丢失任何数据。 如果可用性组位于不同的地理位置，导致延迟，请将可用性模式改回为 ASYNCHRONOUS_COMMIT。 
   
 ## <a name="remove-a-distributed-availability-group"></a>删除分布式可用性组  
  以下 Transact-SQL 语句删除了名为 `distributedag`的分布式可用性组：  
   
-```tsql  
+```sql  
 DROP AVAILABILITY GROUP [distributedag]  
 ```  
 
@@ -293,7 +299,7 @@ DROP AVAILABILITY GROUP [distributedag]
  
  以下 DDL 将创建此分布式可用性组。 
 
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [SQLFCIDAG]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -313,13 +319,13 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
       );   
 ```  
 
->[注意！] 侦听程序 URL 是主要 FCI 实例的 VNN。
+侦听程序 URL 是主要 FCI 实例的 VNN。
 
 ## <a name="manually-fail-over-fci-in-distributed-availability-group"></a>在分布式可用性组中手动故障转移 FCI
 
 若要手动故障转移 FCI 可用性组，请更新分布式可用性组，以反映侦听程序 URL 的更改。 例如，在 SQLFCIAG 的主要可用性组和次要可用性组上运行以下 DDL：
 
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  
    MODIFY AVAILABILITY GROUP ON  
  'SQLFCIAG' WITH    

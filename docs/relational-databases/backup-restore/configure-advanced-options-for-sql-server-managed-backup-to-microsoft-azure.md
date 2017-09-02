@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 SQL Server Managed Backup to Microsoft Azure 的高级选项
   以下教程介绍了如何设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的高级选项。 仅当你需要提供的这些功能时，才需要这些步骤。 否则，可以启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 并依赖于默认行为。  
   
- 在每个方案中，使用 `database_name` 参数指定备份。 当 `database_name` 为 NUL 或 * 时，这些更改会影响实例级别的默认设置。 实例级别的设置也会影响在更改后创建的新数据库。  
+ 在每个方案中，使用 `database_name` 参数指定备份。 当 `database_name` 为 NULL 或 * 时，这些更改会影响实例级别的默认设置。 实例级别的设置也会影响在更改后创建的新数据库。  
   
  指定这些设置后，便可以使用系统存储过程 [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md) 为数据库或实例启用托管备份。 有关详细信息，请参阅 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **确定在星期几进行每周备份：** 如果是每周备份，请选择在星期几进行完整备份。  
   
-4.  **确定备份的开始时间：** 使用 24 小时表示法，选择开始备份的时间。  
+4.  确定备份的开始时间：使用 24 小时表示法，选择开始备份的时间。  
   
 5.  **确定允许备份的时间长度：** 这将指定必须完成备份的时间。  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

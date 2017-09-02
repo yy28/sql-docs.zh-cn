@@ -1,7 +1,8 @@
 ---
 title: "SQL Server 管理对象对内存中 OLTP 的支持 | Microsoft Docs"
+description: "介绍 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 08/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,57 +16,35 @@ author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server 管理对象支持
 
-本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中针对内存中 OLTP 的更改。  
-  
-以下类型和成员支持内存中 OLTP：  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>**（枚举）
+本主题介绍 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>**（属性）
+## <a name="smo-types-and-members"></a>SMO 的类型和成员
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>**（构造函数）
+以下类型和成员位于命名空间 Microsoft.SqlServer.Management.Smo 中，且它们支持内存中 OLTP：
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>**（枚举）
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>**（枚举）
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>**（属性）
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>**（构造函数）
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>**（枚举）
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>**（属性）
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>**（枚举成员）
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>**（属性）
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>**（属性）
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>**（属性）
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>**（属性）
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>**（属性）
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>**（属性）
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>**（属性）
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>**（枚举成员）
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>**（属性）
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>**（属性）
-
-## <a name="code-sample"></a>代码示例
-
-#### <a name="actions-taken-in-the-code-example"></a>代码示例中执行的操作
-  
--   使用内存优化文件组和内存优化文件创建数据库。  
-  
--   使用主键、非聚集索引和非聚集哈希索引创建持久内存优化表。  
-  
--   创建列和索引。  
-  
--   创建用户定义的内存优化表类型。  
-  
--   创建本机编译的存储过程。
+## <a name="c-code-example"></a>C# 代码示例
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>由编译的代码示例引用的程序集
 
@@ -73,6 +52,14 @@ ms.lasthandoff: 08/17/2017
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="actions-taken-in-the-code-example"></a>代码示例中执行的操作
+
+1. 使用内存优化文件组和内存优化文件创建数据库。  
+2. 使用主键、非聚集索引和非聚集哈希索引创建持久内存优化表。  
+3. 创建列和索引。  
+4. 创建用户定义的内存优化表类型。  
+5. 创建本机编译的存储过程。
 
 #### <a name="source-code"></a>源代码
   
@@ -180,5 +167,6 @@ public class A {
   
 ## <a name="see-also"></a>另请参阅  
 
-[SQL Server 对内存中 OLTP 的支持](sql-server-support-for-in-memory-oltp.md)
+- [SQL Server 对内存中 OLTP 的支持](sql-server-support-for-in-memory-oltp.md)
+- [SMO 概述](../server-management-objects-smo/overview-smo.md)
 

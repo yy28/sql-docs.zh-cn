@@ -1,7 +1,7 @@
 ---
 title: "启用和配置 FILESTREAM | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
 13. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
   
-##  <a name="best"></a> 最佳实践  
+##  <a name="best"></a>最佳做法  
   
-###  <a name="config"></a> 物理配置和维护  
+###  <a name="config"></a>物理配置和维护  
  设置 FILESTREAM 存储卷时，请考虑下列准则：  
   
 -   禁用 FILESTREAM 计算机系统中的短文件名。 创建短文件名需要花费相当长的时间。 若要禁用短文件名，请使用 Windows **fsutil** 实用工具。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   使用 64-KB NTFS 簇。 压缩卷必须设置为 4-KB NTFS 簇。  
   
--   对 FILESTREAM 卷禁用索引并设置 **disablelastaccess** 若要设置 **disablelastaccess**，请使用 Windows **fsutil** 实用工具。  
+-   在 FILESTREAM 卷上禁用索引并设置 disablelastaccess。 若要设置 disablelastaccess，请使用 Windows fsutil 实用程序。  
   
 -   除非必要，否则请禁止对 FILESTREAM 卷进行防病毒扫描。 如果需要进行防病毒扫描，请避免设置将自动删除有问题文件的策略。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
   
   
-###  <a name="database"></a> 物理数据库设计  
+###  <a name="database"></a>物理数据库设计  
  设计 FILESTREAM 数据库时，应考虑下列准则：  
   
 -   FILESTREAM 列必须附带相应的 **uniqueidentifier**ROWGUID 列。 这些类型的表还必须附带唯一索引。 此索引通常不是聚集索引。 如果数据库业务逻辑需要聚集索引，则必须确保该索引中存储的值不是随机的。 随机值将导致每次向表中添加行或从表中删除行时，索引都会重新排序。  
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   FILESTREAM 不直接支持空间管理和策略。 但是，您可以通过将每个 FILESTREAM 文件组分配到独立的卷并使用该卷的管理功能来间接地管理空间和应用策略。  
   
   
+

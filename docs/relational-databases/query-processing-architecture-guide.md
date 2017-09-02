@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
@@ -37,7 +37,7 @@ ms.lasthandoff: 07/31/2017
 
 `SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 语句期间查询优化器的输入和输出如下图中所示： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示： ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 语句只定义以下内容：  
 * 结果集的格式。 它通常在选择列表中指定。 然而，其他子句（如 `ORDER BY` 和 `GROUP BY` ）也会影响结果集的最终格式。
@@ -210,19 +210,19 @@ WHERE TableA.ColZ = TableB.Colz;
 > [!NOTE] 
 > 在此上下文中，不管当前事务隔离级别如何， `READCOMMITTED` 和 `READCOMMITTEDLOCK` 提示始终被认为是不同的提示。
  
-除 `SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 不必在查询中指定其他内容即可使用索引视图。
+除 `SET` 选项和表提示的要求外，查询优化器也使用上述规则确定表索引是否包含查询。 不必在查询中指定其他内容即可使用索引视图。
 
-查询不必在 `FROM` clause for the Query Optimizer to use the indexed view. 如果查询所引用的基表中的列也同时存在于索引视图中，并且，查询优化器估计使用索引视图将提供最低成本的访问机制，则查询优化器会选择索引视图，其方式类似于当查询中不直接引用基表索引时选择基表索引。 当视图中包含非查询所引用的列时，只要视图提供包含一个或多个查询中所指定列的最低成本选项，查询优化器即可能选择该视图。
+查询不必在 `FROM` 子句中显式引用索引视图，查询优化器即可使用该索引视图。 如果查询所引用的基表中的列也同时存在于索引视图中，并且，查询优化器估计使用索引视图将提供最低成本的访问机制，则查询优化器会选择索引视图，其方式类似于当查询中不直接引用基表索引时选择基表索引。 当视图中包含非查询所引用的列时，只要视图提供包含一个或多个查询中所指定列的最低成本选项，查询优化器即可能选择该视图。
 
-The Query Optimizer treats an indexed view referenced in the `FROM` 子句中引用的索引视图视为标准视图。 查询优化器在优化进程开始时将视图的定义展开至查询中。 然后，执行索引视图匹配。 可以将索引视图用于查询优化器选择的最终执行计划中，或该计划可以通过访问视图引用的基表来具体化视图中的必要数据。 查询优化器会选择成本最低的方式。
+查询优化器将 `FROM` 子句中引用的索引视图视为标准视图。 查询优化器在优化进程开始时将视图的定义展开至查询中。 然后，执行索引视图匹配。 可以将索引视图用于查询优化器选择的最终执行计划中，或该计划可以通过访问视图引用的基表来具体化视图中的必要数据。 查询优化器会选择成本最低的方式。
 
 #### <a name="using-hints-with-indexed-views"></a>将提示用于索引视图
 
 可以通过使用 `EXPAND VIEWS` 查询提示防止将视图索引用于查询，也可以使用 `NOEXPAND` 表提示强制将索引用于查询的 `FROM` 子句指定的索引视图。 但应该让查询优化器动态确定用于每个查询的最佳访问方法。 只在经测试证实 `EXPAND` 和 `NOEXPAND` 可显著提高性能的特定情形中使用它们。
 
-`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+`EXPAND VIEWS` 选项指定对于整个查询，查询优化器不应使用任何视图索引。 
 
-当为视图指定了 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. 通过可选的`NOEXPAND` 子句指定的 `INDEX()` clause forces the Query Optimizer to use the specified indexes. 只能为索引视图指定`NOEXPAND` ，而不能为还未创建索引的视图指定。
+当为视图指定了 `NOEXPAND` 时，查询优化器将考虑使用为视图定义的任何索引。 通过可选的`NOEXPAND` 子句指定的 `INDEX()` ，可强制查询优化器使用指定索引。 只能为索引视图指定`NOEXPAND` ，而不能为还未创建索引的视图指定。
 
 如果在包含视图的查询中既未指定 `NOEXPAND` 也未指定 `EXPAND VIEWS` ，则展开该视图以访问基础表。 如果组成视图的查询包含表提示，则这些提示将传播到基础表。 （“视图解析”中详细说明了此过程。）只要视图的基础表中的提示集彼此相同，查询就可以与索引视图进行匹配。 在大部分情况下，这些提示彼此匹配，因为它们直接从视图继承而来。 但是，如果查询引用表而不是引用视图，且直接应用于这些表的提示并不相同，则这类查询就无法与索引视图进行匹配。 如果在视图展开后， `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`或 `XLOCK` 提示应用于查询中引用的表，则查询不适用于索引视图匹配。
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 处理复杂的 SQL 语句时，关系引擎可能很难确定哪些表达式可以参数化。 若要提高关系引擎将复杂的 SQL 语句与现有的、未使用的执行计划相匹配的能力，请使用 sp_executesql 或参数标记显式指定参数。 
 
 > [!NOTE]
-> 当使用 +、-、*、/ 或 % 算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将应用特定规则，计算表达式结果的类型和精准率。 但这些规则各不相同，取决于查询是否被参数化。 因此，在某些情况下，查询中的相似表达式可能会产生不同的结果。
+> 当使用 +、-、\*、/ 或 % 算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将应用特定规则，计算表达式结果的类型和精准率。 但这些规则各不相同，取决于查询是否被参数化。 因此，在某些情况下，查询中的相似表达式可能会产生不同的结果。
 
 在简单参数化的默认行为下，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只对相对较少的一些查询进行参数化。 但是，可以通过将 `PARAMETERIZATION` 命令的 `ALTER DATABASE` 选项设置为 `FORCED`，来指定对数据库中的所有查询都进行参数化（但受到某些限制）。 对于存在大量并发查询的数据库，这样做可以减少查询编译的频率，从而提高数据库的性能。
 
@@ -503,7 +503,7 @@ WHERE ProductSubcategoryID = 4;
 * `CONVERT` 子句的样式参数。
 * `IDENTITY` 子句中的整数常量。
 * 使用 ODBC 扩展语法指定的常量。
-* 可折叠常量表达式，它们是 +、-、*、/ 和 % 运算符的参数。 在考虑是否能够强制参数化时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为满足下列条件之一的表达式是可折叠常量表达式：  
+* 可折叠常量表达式，它们是 +、-、\*、/ 和 % 运算符的参数。 在考虑是否能够强制参数化时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将认为满足下列条件之一的表达式是可折叠常量表达式：  
   * 表达式中没有列、变量、或子查询。  
   * 表达式包含 `CASE` 子句。  
 * 查询提示子句的参数。 这些参数包括 `number_of_rows` 查询提示的 `FAST` 参数、 `number_of_processors` 查询提示的 `MAXDOP` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
@@ -517,7 +517,7 @@ WHERE ProductSubcategoryID = 4;
 
 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 参数化文本时，参数将转换为下列数据类型：
 
-* 其大小适合 int 数据类型的整数文本将参数化为 int。 对于较大的整数文本，如果它是包含任意比较运算符（包括 <、\<=、=、!=、>、>=、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`）的谓词的组成部分，则将这些文本参数化为 numeric(38,0)。 如果它不是包含比较运算符的谓词的组成部分，则此类文本将参数化为数字，其精度仅够表示其大小，并且没有小数位。
+* 其大小适合 int 数据类型的整数文本将参数化为 int。对于较大的整数文本，如果它是包含任意比较运算符（包括 <、\<=、=、!=、>、>=、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN` 和 `IN`）的谓词的组成部分，则将这些文本参数化为 numeric(38,0)。 如果它不是包含比较运算符的谓词的组成部分，则此类文本将参数化为数字，其精度仅够表示其大小，并且没有小数位。
 * 如果定点数值是包含比较运算符的谓词的组成部分，则此类数值将参数化为数字，其精度为 38，并且小数位数仅够表示其大小。 如果定点数值不是包含比较运算符的谓词的组成部分，则此类数值将参数化为数字，其精度和小数位数仅够表示其大小。
 * 浮点数值将参数化为 float(53)。
 * 如果非 Unicode 字符串文本在 8,000 个字符以内，将参数化为 varchar(8000)，如果多于 8,000 个字符，则参数化为 varchar(max)。

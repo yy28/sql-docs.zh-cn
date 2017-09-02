@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 受版本控制的功能摘要
@@ -35,6 +35,7 @@ ms.lasthandoff: 07/31/2017
 |查询 Hadoop 数据和 [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
 |从 Hadoop 导入数据|是|否|否|是|
 |导出数据到 Hadoop  |是|否|否| 是|
+|查询、从 HDInsights 导入、导出自 HDInsight |否|否|否|否
 |将查询计算下推到 Hadoop|是|否|否|是|  
 |从 Azure blob 存储导入数据|是|否|是|是| 
 |导出数据到 Azure blob 存储|是|否|是|是|  

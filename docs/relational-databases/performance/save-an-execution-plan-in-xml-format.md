@@ -1,7 +1,7 @@
 ---
 title: "以 XML 格式保存执行计划 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，打开查询编辑器并连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  使用以下语句打开 SHOWPLAN_XML：  
+2.  使用以下语句打开 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)：  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     若要打开 STATISTICS XML，请使用以下语句：  
+     若要打开 [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，请使用以下语句：  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML 将会为查询生成编译时查询执行计划信息，但是不会执行查询。 STATISTICS XML 将会为查询生成运行时查询执行计划信息，而且会执行查询。  
+     > [!NOTE] 
+     > SHOWPLAN_XML 将会为查询生成编译时查询执行计划信息，但是不会执行查询。 这也称为估计的执行计划。 STATISTICS XML 将会为查询生成运行时查询执行计划信息，而且会执行查询。 这也称为实际的执行计划。  
   
 3.  执行查询。 例如：  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
-1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]生成估计的执行计划或实际的执行计划。 有关详细信息，请参阅[显示估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)或[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
+1.  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]生成估计的执行计划或实际的执行计划。 有关详细信息，请参阅[显示估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)和[显示实际的执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。  
   
 2.  在“结果”窗格的“执行计划”选项卡上，右键单击图形执行计划，然后选择“将执行计划另存为”。  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML (Transact-SQL)](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+

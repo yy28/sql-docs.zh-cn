@@ -1,8 +1,10 @@
 ---
 title: "自动初始化 AlwaysOn 可用性组 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/14/2016
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,21 +17,22 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b30513c845d486875840eabd66506497182eb692
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 6184d0cfedb90d16f1a7c1af109003908e481a89
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自动初始化 Always On 可用性组
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+SQL Server 2016 推出了可用性组的自动种子设定。 创建具有自动种子设定的可用性组时，SQL Server 将自动为该组中每个数据库创建次要副本。 你不再需要手动备份和还原次要副本。 若要启用自动种子设定，请使用 T-SQL 创建可用性组，或使用最新版的 SQL Server Management Studio。
 
- SQL Server 2016 推出了可用性组的自动种子设定。 创建具有自动种子设定的可用性组时，SQL Server 将自动为该组中每个数据库创建次要副本。 使用自动种子设定，你不再需要手动备份和还原次要副本。 若要启用自动种子设定，请使用 T-SQL 创建可用性组。
+有关背景信息，请参阅[次要副本的自动种子设定](automatic-seeding-secondary-replicas.md)。
  
 ## <a name="prerequisites"></a>先决条件
 
-自动种子设定要求数据和日志文件路径在参与可用性组的每个 SQL Server 实例上均相同。 
+在 SQL Server 2016 中，自动种子设定要求数据和日志文件路径在参与可用性组的每个 SQL Server 实例上均相同。 在 SQL Server 2017 中，你可以使用不同的路径，但是 Microsoft 建议，当所有副本都承载于相同的平台（例如 Windows 或 Linux）时，使用相同的路径。 跨平台可用性组针对副本具有不同的路径。 有关详细信息，请参阅[磁盘布局](automatic-seeding-secondary-replicas.md#disklayout)。
 
 可用性组种子设定通过数据库镜像端点进行通信。 打开每台服务器上镜像终结点端口的入站防火墙规则。
 
@@ -41,44 +44,44 @@ ms.lasthandoff: 08/02/2017
 
 下面的示例将在两个节点的 Windows Server 故障转移群集上创建一个可用性组。 运行脚本前，请先更新环境的值。
 
-1. 创建终结点。 每个服务器需要一个终结点。 以下脚本创建将 TCP 端口 5022 用于侦听器的终结点。 设置 `<endpoint_name>` 和 `LISTENER_PORT` 以匹配你的环境并运行脚本：
+1. 创建终结点。 每台服务器需要一个终结点。 以下脚本创建将 TCP 端口 5022 用于侦听器的终结点。 设置 `<endpoint_name>` 和 `LISTENER_PORT` 以匹配你的环境并在两个服务器上运行该脚本：
 
-    ```
-    --Create the endpoint on both servers
-    -- Run this script twice, once on each server. 
+    ```sql
     CREATE ENDPOINT [<endpoint_name>] 
-    STATE=STARTED
-    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-    FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        STATE=STARTED
+        AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+        FOR DATA_MIRRORING (
+            ROLE = ALL, 
+            AUTHENTICATION = WINDOWS NEGOTIATE, 
+            ENCRYPTION = REQUIRED ALGORITHM AES
+            )
     GO
     ```
 
-1. 创建可用性组。 下面的脚本将创建可用性组。 更新组名称、服务器名称和域名的值并在 SQL Server 的主实例上运行它。  
+1. 创建可用性组。 下面的脚本将创建可用性组。 为组名称、服务器名称和域名更新尖括号 `<>` 中的值并在 SQL Server 的主实例上运行它。  
 
-    ```
-    ---Run On Primary
+    ```sql
     CREATE AVAILABILITY GROUP [<availability_group_name>]
-    FOR DATABASE db1
-    REPLICA ON'<*primary_server*>'
-    WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC),
-    N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC);
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
     GO
     ``` 
 
-1. 将辅助服务器联接到可用性组，并向可用性组授予创建数据库的权限。 在 SQL Server 辅助实例上运行以下脚本： 
+1. 将辅助服务器实例联接到可用性组，并向可用性组授予创建数据库的权限。 更新以下脚本，为环境替换尖括号 `<>` 中的值，并在 SQL Server 的次要副本实例上运行它： 
  
-    ```
-    --Run on Secondary Replica to join to the availability group
+    ```sql
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
     GO  
     ALTER AVAILABILITY GROUP [<availability_group_name>] GRANT CREATE ANY DATABASE
@@ -87,53 +90,57 @@ ms.lasthandoff: 08/02/2017
 
 SQL Server 将在辅助服务器上自动创建数据库副本。 如果数据库较大，则可能需要一些时间才能完成数据库同步。 如果数据库在为自动种子设定配置的可用性组中，你可以查询 `sys.dm_hadr_automatic_seeding` 系统视图来监视种子设定进度。 对于处于为自动种子设定配置的可用性组中的每个数据库，以下查询都返回一行。
 
-```
- SELECT start_time,
-       ag.name,
-       db.database_name,
-       current_state,
-       performed_seeding,
-       failure_state,
-       failure_state_desc
- FROM sys.dm_hadr_automatic_seeding autos 
-    JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
-    JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
+```sql 
+SELECT start_time,
+    ag.name,
+    db.database_name,
+    current_state,
+    performed_seeding,
+    failure_state,
+    failure_state_desc
+FROM sys.dm_hadr_automatic_seeding autos 
+    JOIN sys.availability_databases_cluster db 
+        ON autos.ag_db_id = db.group_database_id
+    JOIN sys.availability_groups ag 
+        ON autos.ag_id = ag.group_id
 ```
 
 ## <a name="prevent-automatic-seeding-after-an-availability-group"></a>阻止可用性组后的自动种子设定
 
 若要暂时阻止主副本将更多的数据库种子设定到次要副本，你可拒绝可用性组创建数据库的权限。 若要拒绝可用性组创建副本数据库的权限，请在托管次要副本的实例上运行以下查询。
 
-```
-ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [<availability_group_name>] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
 
 ## <a name="enable-automatic-seeding-on-an-existing-availability-group"></a>在现有可用性组上启用自动种子设定
 
-你可在现有数据库中设置自动种子设定。 下面的命令将更改一个要使用自动种子设定的可用性组。 
+你可在现有数据库中设置自动种子设定。 下面的命令可将可用性组更改为使用自动种子设定。 在主副本上运行以下命令。
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-MODIFY REPLICA ON '<primary_node>' WITH (SEEDING_MODE = AUTOMATIC)
+    MODIFY REPLICA ON '<secondary_node>' 
+    WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
 
-这将强制数据库在必要时重启种子设定。 例如，如果种子设定因次要副本磁盘空间不足而失败，你可在添加可用空间后运行 `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` 来重启种子设定。
+如有必要，前一个命令将强制数据库重启种子设定。 例如，如果种子设定因次要副本磁盘空间不足而失败，请在添加可用空间后运行 `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` 来重启种子设定。
 
 ## <a name="stop-automatic-seeding"></a>停止自动种子设定
 
-若要停止可用性组的自动种子设定，请在托管主要副本的实例上运行以下脚本：
+若要停止可用性组的自动种子设定，请在主要副本上运行以下脚本：
 
-```
+```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>'   
+    MODIFY REPLICA ON '<secondary_node>'   
     WITH (SEEDING_MODE = MANUAL)
 GO
 ```
 
-这将取消当前正在进行种子设定的任何副本，并阻止 SQL Server 自动初始化此可用性组中的任何副本。 这不会停止任何已初始化的副本的同步。 
+上述脚本将取消当前正在进行种子设定的任何副本，并阻止 SQL Server 自动初始化此可用性组中的任何副本。 这不会停止任何已初始化的副本的同步。 
 
 
 ## <a name="monitor-automatic-seeding-availability-group"></a>监视可用性组的自动种子设定
@@ -146,13 +153,13 @@ GO
 
 在主要副本上，查询 `sys.dm_hadr_automatic_seeding` 以检查自动种子设定过程的状态。 对于每个种子设定过程，该视图都将返回一行。 例如：
 
-``` 
+```sql
 SELECT start_time, 
-        completion_time
-        is_source,
-        current_state,
-        failure_state,
-        failure_state_desc
+    completion_time
+    is_source,
+    current_state,
+    failure_state,
+    failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
  
@@ -160,7 +167,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 在主要副本上，查询 `sys.dm_hadr_physical_seeding_stats` DMV 以查看当前运行的每个种子设定过程的物理统计信息。 种子设定正在运行时，以下查询将返回多行：
 
-```
+```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
@@ -174,7 +181,7 @@ SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 
 例如，此脚本会创建用于捕获自动种子设定相关事件的扩展事件会话： 
 
-```
+```sql
 CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -186,8 +193,20 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+            max_file_size=(5),
+            max_rollover_files=(4)
+        )
+WITH (
+    MAX_MEMORY=4096 KB,
+    EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+    MAX_DISPATCH_LATENCY=30 SECONDS,
+    MAX_EVENT_SIZE=0 KB,
+    MEMORY_PARTITION_MODE=NONE,
+    TRACK_CAUSALITY=OFF,
+    STARTUP_STATE=ON
+    )
 GO 
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START
@@ -216,22 +235,22 @@ GO
 
 ### <a name="other-troubleshooting-considerations"></a>其他故障排除注意事项
 
-**监视将完成自动种子设定的时间**
+监视自动种子设定
 
 对当前正在运行的自动种子设定过程查询 `sys.dm_hadr_physical_seeding_stats` 。 对于每个数据库，该视图都将返回一行。 例如：
 
-```
+```sql
 SELECT local_database_name, 
-       role_desc, 
-       internal_state_desc, 
-       transfer_rate_bytes_per_second, 
-       transferred_size_bytes, 
-       database_size_bytes, 
-       start_time_utc, 
-       end_time_utc, estimate_time_complete_utc, 
-       total_disk_io_wait_time_ms, 
-       total_network_wait_time_ms, 
-       is_compression_enabled 
+    role_desc, 
+    internal_state_desc, 
+    transfer_rate_bytes_per_second, 
+    transferred_size_bytes, 
+    database_size_bytes, 
+    start_time_utc, 
+    end_time_utc, estimate_time_complete_utc, 
+    total_disk_io_wait_time_ms, 
+    total_network_wait_time_ms, 
+    is_compression_enabled 
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
@@ -240,14 +259,14 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 如果数据库未能作为启用了自动种子设定的可用性组的一部分出现，那么自动种子设定可能失败。 这可防止在主要副本和次要副本上将数据库添加到可用性组中。 对主要副本和次要副本查询 `sys.dm_hadr_automatic_seeding` 。 例如，运行以下查询以确定自动种子设定的失败状态。
 
-```
+```sql
 SELECT start_time, 
-       completion_time, 
-       is_source, 
-       current_state, 
-       failure_state, 
-       failure_state_desc, 
-       error_code 
+    completion_time, 
+    is_source, 
+    current_state, 
+    failure_state, 
+    failure_state_desc, 
+    error_code 
 FROM sys.dm_hadr_automatic_seeding
 ```
 

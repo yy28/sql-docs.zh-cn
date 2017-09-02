@@ -1,7 +1,7 @@
 ---
 title: "描述的聚集索引和非聚集索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   从非聚集索引中的索引行指向数据行的指针称为行定位器。 行定位器的结构取决于数据页是存储在堆中还是聚集表中。 对于堆，行定位器是指向行的指针。 对于聚集表，行定位器是聚集索引键。  
   
-    -   您可以向非聚集索引的叶级添加非键列以跳过现有的索引键限制（900 字节和 16 键列），并执行完整范围内的索引查询。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
+    -   可以向非聚集索引的叶级添加非键列以跳过现有的索引键限制，并执行完整范围内的索引查询。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 若要了解索引键限制的详细信息，请参阅 [SQL Server 的最大容量规范](../../sql-server/maximum-capacity-specifications-for-sql-server.md)。 
   
  聚集索引和非聚集索引都可以是唯一的。 这意味着任何两行都不能有相同的索引键值。 另外，索引也可以不是唯一的，即多行可以共享同一键值。 有关详细信息，请参阅 [创建唯一索引](../../relational-databases/indexes/create-unique-indexes.md)。  
   
