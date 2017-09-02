@@ -27,13 +27,13 @@ ms.lasthandoff: 08/02/2017
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>设置登录帐户 - 数据库镜像 AlwaysOn 可用性
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) 为了使两个服务器实例能够连接到彼此的数据库镜像端点，每个实例的登录帐户都要具有访问另一实例的权限。 每个登录帐户还要具有可以连接到另一实例的数据库镜像端点的权限。  
+  为了使两个服务器实例能够连接到彼此的[数据库镜像端点](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)，每个实例的登录帐户都要具有访问另一实例的权限。 每个登录帐户还要具有可以连接到另一实例的数据库镜像端点的权限。  
   
  此要求的影响取决于服务器实例是否使用相同的域用户帐户运行：  
   
 -    如果服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 master 数据库中。 这样可简化数据库镜像和 AlwaysOn 可用性组的安全性配置。  
   
--   如果服务器实例使用不同的用户帐户运行，则在承载镜像服务器的服务器实例上或承载辅助副本的每个服务器实例上都必须手动复制承载主体服务器或主要副本的服务器实例上的用户登录名。 [](#CreateLogin) 有关详细信息，请参阅本主题后面的 [为不同帐户创建登录名](#GrantConnect)和授予连接权限。  
+-   如果服务器实例使用不同的用户帐户运行，则在承载镜像服务器的服务器实例上或承载辅助副本的每个服务器实例上都必须手动复制承载主体服务器或主要副本的服务器实例上的用户登录名。 有关详细信息，请参阅本主题后面的[为不同帐户创建登录名](#CreateLogin)和[授予连接权限](#GrantConnect)。  
   
     > [!IMPORTANT]  
     >  要创建更安全的环境，请考虑为每个服务器实例使用单独的域帐户。  

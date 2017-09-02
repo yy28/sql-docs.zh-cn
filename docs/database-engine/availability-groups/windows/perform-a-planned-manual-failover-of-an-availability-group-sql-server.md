@@ -70,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 -   目标辅助副本当前必须与主副本同步。 这要求此辅助副本上的所有辅助数据库必须已加入到可用性组，并与其对应的主数据库同步（即本地辅助数据库必须为 SYNCHRONIZED）。  
   
     > [!TIP]  
-    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的“is_failover_ready”列，或查看“AlwaysOn 组面板”[](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”列。  
+    >  若要确定次要副本的故障转移就绪状态，请查询 [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 动态管理视图中的“is_failover_ready”列，或查看[“AlwaysOn 组面板”](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)的“故障转移就绪”列。  
   
 -   只有目标辅助副本支持该任务。 您必须连接到承载目标辅助副本的服务器实例。  
   
