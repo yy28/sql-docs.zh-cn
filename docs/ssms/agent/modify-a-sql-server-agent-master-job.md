@@ -28,13 +28,13 @@ ms.lasthandoff: 08/18/2017
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server 代理主作业
 下面的主题介绍了如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理主作业。  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[更改 SQL Server 代理主作业计划的详细信息](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
-[Add Steps to a SQL Server Agent Master Job](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
+[向 SQL Server 代理主作业添加步骤](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[更改 SQL Server 代理主作业的步骤](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
-[Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
+[从 SQL Server 代理主作业中删除步骤](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
 [修改与 SQL Server 代理主作业关联的目标服务器](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
