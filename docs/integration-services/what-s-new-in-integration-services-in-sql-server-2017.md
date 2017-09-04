@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>什么 &#39; s 在 SQL Server 自 2017 年中的 Integration Services 中的新增功能
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/23/2017
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure 功能包中的新增功能
 
-除了 SQL Server 中的连接改进，用于 Azure 的 Integration Services 功能包添加了对 Azure 数据湖存储支持。 有关详细信息，请参阅[Azure Feature Pack 为 Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)。
+除了 SQL Server 中的连接改进，用于 Azure 的 Integration Services 功能包添加了对 Azure 数据湖存储支持。 有关详细信息，请参阅博客文章[新 Azure 功能包版本增强 ADLS 连接](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/)。 另请参阅[Azure Feature Pack 为 Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)。
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的新增功能
 
