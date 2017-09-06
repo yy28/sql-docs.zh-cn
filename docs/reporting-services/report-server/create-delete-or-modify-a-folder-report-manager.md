@@ -22,7 +22,7 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
 ms.contentlocale: zh-cn
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
      此时，将打开 **“新建文件夹”** 页。  
   
-3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * < > |。 : @ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
+3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : @ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
   
 4.  根据需要，可以键入说明。  
   
