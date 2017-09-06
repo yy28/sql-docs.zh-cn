@@ -122,7 +122,7 @@ WHERE
 ```  
   
 ## <a name="how-multiple-and-and-or-clauses-are-represented-in-the-criteria-pane"></a>在“条件”窗格中如何表示多个 AND 和 OR 子句  
-查询和视图设计器可以在“条件”窗格 [](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中显示搜索条件。 但是，在需要用 AND 和 OR 链接多个子句的某些情况下，“条件”窗格中的表示形式可能会与预期形式不一样。 另外，如果在“条件”窗格或 [“关系图”](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)窗格中修改查询，你可能会发现生成的 SQL 语句与输入的语句不同。  
+查询和视图设计器可以在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中显示搜索条件。 但是，在需要用 AND 和 OR 链接多个子句的某些情况下，“条件”窗格中的表示形式可能会与预期形式不一样。 另外，如果在“条件”窗格或 [“关系图”](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)窗格中修改查询，你可能会发现生成的 SQL 语句与输入的语句不同。  
   
 一般情况下，以下规则将决定 AND 和 OR 子句在“条件”窗格中的显示方式：  
   
