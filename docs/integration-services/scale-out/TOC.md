@@ -4,6 +4,7 @@
 # [演练：设置 Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
 # [Scale Out Master](integration-services-ssis-scale-out-master.md)
 # [Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+# [Scale Out Manager](integration-services-ssis-scale-out-manager.md)
 # [在 Scale Out 中运行包](run-packages-in-integration-services-ssis-scale-out.md)
 # [更改 Scale Out 日志记录的帐户](change-logdb-account.md)
 # [处理 Scale Out 中的证书](deal-with-certificates-in-ssis-scale-out.md)
