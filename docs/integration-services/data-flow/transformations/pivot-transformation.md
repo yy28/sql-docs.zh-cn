@@ -1,30 +1,35 @@
 ---
-title: "透视转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.pivottrans.f1"
-helpviewer_keywords: 
-  - "透视转换"
-  - "规范化的数据 [Integration Services]"
-  - "PivotUsage 属性"
-  - "数据集 [Integration Services], 规范化的数据"
-  - "不太规范化的数据集 [Integration Services]"
+title: "透视转换 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
+helpviewer_keywords:
+- Pivot transformation
+- normalized data [Integration Services]
+- PivotUsage property
+- datasets [Integration Services], normalized data
+- less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79a12bf64f2ec27306a5ca8776b33acdb79ca82d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# 透视转换
+# <a name="pivot-transformation"></a>透视转换
   通过透视列值的输入数据，透视转换将规范的数据集转变成规范程度稍低、但更为简洁的版本。 例如，在列有客户名称、产品和购买数量的规范的 **Orders** 数据集中，任何购买多种产品的客户都有多行，每一行显示一种产品的详细订购信息。 此时，如果对产品列透视数据集，透视转换可以输出每个客户只有一行的数据集。 这一行列出该客户购买的所有产品，产品名称显示为列名，而数量则显示为产品列的值。 并非每个客户都购买所有产品，所以很多列可能包含空值。  
   
  透视数据集时，输入列在透视过程中扮演不同的角色。 列可以按以下方式参与：  
@@ -39,7 +44,7 @@ caps.handback.revision: 55
   
  此转换有一个输入、一个常规输出和一个错误输出。  
   
-## 排序和复制行  
+## <a name="sort-and-duplicate-rows"></a>排序和复制行  
  若要高效地透视数据，即在输出数据集中创建尽可能少的记录，就必须对透视列的输入数据进行排序。 如果数据未经排序，那么透视转换就可能为设置键（即定义集成员关系的列）中的每个值生成多个记录。 例如，如果对 **名称** 列透视数据集，但是没有对名称排序，则每个客户在输出数据集中可能有多行，因为 **名称** 中的值每次更改都会发生透视。  
   
  输入数据可能包含重复行，这会导致透视转换失败。 “重复行”表示在设置键列和透视列中具有相同值的行。 为了避免失败，可以将转换配置为将错误行重定向到错误输出或预先聚合值，以确保不存在重复行。  
@@ -87,7 +92,7 @@ caps.handback.revision: 55
   
  输出列显示在 **“现有的透视输出列”** 框中。  
   
- **现有的透视输出列**  
+ **“现有的透视输出列”**  
  列出透视键值的输出列。  
   
  下表显示对 **年** 列透视数据前的数据集。  
@@ -120,19 +125,19 @@ caps.handback.revision: 55
   
      [2002],[2003],[2004]  
   
-## 透视转换的配置  
+## <a name="configuration-of-the-pivot-transformation"></a>透视转换的配置  
  可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../Topic/Common%20Properties.md)  
+-   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 相关内容  
- 有关如何设置数据流组件属性的信息，请参阅[设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+## <a name="related-content"></a>相关内容  
+ 有关如何设置数据流组件属性的信息，请参阅 [设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [逆透视转换](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

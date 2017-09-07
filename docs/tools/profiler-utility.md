@@ -1,34 +1,39 @@
 ---
-title: "Profiler 实用工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "命令提示符实用工具 [SQL Server]，profiler90 实用工具"
-  - "profiler90 实用工具"
-  - "Profiler [SQL Server Profiler]，启动"
-  - "SQL Server Profiler, 启动"
-  - "启动 SQL Server Profiler"
+title: "事件探查器实用工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- command prompt utilities [SQL Server], profiler90 utility
+- profiler90 utility
+- Profiler [SQL Server Profiler], starting
+- SQL Server Profiler, starting
+- starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/02/2017
+
 ---
-# Profiler 实用工具
+# <a name="profiler-utility"></a>Profiler 实用工具
   **Profiler** 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
   
 > [!NOTE]  
 >  **Profiler** 实用工具不适用于脚本跟踪。 有关详细信息，请参阅 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -51,7 +56,7 @@ profiler
 ]  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  **/?**  
  显示 **Profiler** 自变量的语法摘要。  
   
@@ -67,10 +72,10 @@ profiler
  **/E**  
  指定使用当前用户的凭据与 Windows 身份验证连接。  
   
- **/S** *sql_server_name*  
- 指定一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请使用 **/S** *sql_server_name*\\*instance_name*。  
+ **/S**  *sql_server_name*  
+ 指定一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例，请使用 **/S** *sql_server_name*\\*instance_name*。  
   
- **/A** *analysis_services_server_name*  
+ **/A**  *analysis_services_server_name*  
  指定一个 Analysis Services 实例。 Profiler 会使用在 **/U** 和 **/P** 开关或 **/E** 开关中指定的身份验证信息，自动连接到指定的服务器。 若要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例，请使用 **/A** *analysis_services_server_name\instance_name*。  
   
  **/D** *database*  
@@ -80,17 +85,17 @@ profiler
  指定要在事件探查器启动时加载的跟踪表。 必须指定数据库、用户或架构以及表。  
   
  **/T"** *template_name* **"**  
- 指定要加载以便配置跟踪的模板。 模板名称必须括在引号中。 模板名称必须位于系统模板目录或用户模板目录下。 如果这两个目录中同时存在同名的两个模板，则将加载系统目录下的模板。 如果不存在具有指定名称的模板，则将加载标准模板。 请注意，模板的文件扩展名 (.tdf) 不能指定为 *template_name* 的一部分。 例如：  
+ 指定要加载以便配置跟踪的模板。 模板名称必须括在引号中。 模板名称必须位于系统模板目录或用户模板目录下。 如果这两个目录中同时存在同名的两个模板，则将加载系统目录下的模板。 如果不存在具有指定名称的模板，则将加载标准模板。 请注意，模板的文件扩展名 (.tdf) 不能指定为 *template_name*的一部分。 例如：  
   
 ```  
 /T "standard"  
 ```  
   
  **/F"** *filename* **"**  
- 指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O** 一起使用。  
+ 指定要在事件探查器启动时加载的跟踪文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/O**一起使用。  
   
  **/O "** *filename*  **"**  
- 指定应在其中写入跟踪结果的文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/F.** 一起使用。  
+ 指定应在其中写入跟踪结果的文件的路径和文件名。 整个路径和文件名必须置于引号中。 此选项不能与 **/F.**一起使用。  
   
  **/L** *locale_ID*  
  不可用。  
@@ -104,7 +109,7 @@ profiler
 |DD|两位数日期|  
 |YY|两位数年份|  
 |hh|24 小时制的两位数小时|  
-|mm|两位数分钟|  
+|MM|两位数分钟|  
 |ss|两位数秒数|  
   
 > [!NOTE]  
@@ -113,17 +118,17 @@ profiler
  **/R**  
  启用跟踪文件滚动。  
   
- **/Z** *file_size*  
+ **/Z**  *file_size*  
  指定跟踪文件的大小（以兆字节 (MB) 为单位）。 默认大小是 5 MB。 若启用了滚动功能，则所有滚动文件的大小将被限制为此参数所指定的值。  
   
-## 注释  
+## <a name="remarks"></a>注释  
  若要使用特定的模板启动跟踪，请同时使用 **/S** 和 **/T** 选项。 例如，若要使用 MyServer\MyInstance 上的 Standard 模板启动跟踪，请在命令提示符处输入以下内容：  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令提示实用工具参考（数据库引擎）](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,45 +1,50 @@
 ---
-title: "POWER（SSIS 表达式） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "POWER 函数"
+title: "POWER （SSIS 表达式） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0f4c9e1509dd69af6bc12c6d00c17585fe23552
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/03/2017
+
 ---
-# POWER（SSIS 表达式）
+# <a name="power-ssis-expression"></a>POWER（SSIS 表达式）
   返回对数值表达式进行幂运算的结果。 Power 参数的计算结果必须为整数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 POWER(numeric_expression,power)  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *numeric_expression*  
  有效的数值表达式。  
   
  *power*  
  有效的数值表达式。  
   
-## 结果类型  
+## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## 注释  
- 执行幂运算前，*numeric_expression* 和 *power* 参数会转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+## <a name="remarks"></a>注释  
+ 执行幂运算前， *numeric_expression* 和 *power* 参数会转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为零，并且 *power* 为负，则表达式计算器将返回错误，并将返回结果设置为 Null。  
   
@@ -47,7 +52,7 @@ POWER(numeric_expression,power)
   
  *power* 参数可以是小数。 例如，可以使用 0.5 作为幂值。  
   
-## 表达式示例  
+## <a name="expression-examples"></a>表达式示例  
  以下示例使用了一个数值。 该函数计算 4 的 3 次幂，返回 64。  
   
 ```  
@@ -60,7 +65,7 @@ POWER(4,3)
 POWER(Length, @DimensionCount)   
 ```  
   
-## 另请参阅  
- [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>另请参阅  
+ [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
