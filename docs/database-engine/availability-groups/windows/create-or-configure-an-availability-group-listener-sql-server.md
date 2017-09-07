@@ -128,7 +128,7 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!TIP]  
->  “新建可用性组”向导 [](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 支持为新可用性组创建侦听程序。  
+>  [“新建可用性组”向导](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 支持为新可用性组创建侦听程序。  
   
  **创建和配置可用性组侦听器**  
   
