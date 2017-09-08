@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
+- sql13.dts.designer.asprocessingtask.general.f1
+- sql13.dts.designer.asprocessingtask.as.f1
 helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f607edcad955a4d0a22cc246a13d9d97a06fe24
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
@@ -68,11 +70,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-processing-task"></a>配置 Analysis Services 处理任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [Analysis Services 处理任务编辑器（“常规”页）](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)  
-  
--   [Analysis Services 处理任务编辑器（Analysis Services 页）](../../integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -81,8 +79,76 @@ ms.lasthandoff: 08/03/2017
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>以编程方式配置 Analysis Services 处理任务  
- 有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
+ 有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
+## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
+  可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明。  
   
+### <a name="options"></a>选项  
+ **名称**  
+ 为 Analysis Services 处理任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入 Analysis Services 处理任务的说明。  
+  
+## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
+  可以使用 **“Analysis Services 处理任务编辑器”** 对话框的 **Analysis Services** 页指定 Analysis Services 连接管理器，选择要处理的分析对象，以及设置处理选项和错误处理选项。  
+  
+ 处理表格模型时，请记住以下事项：  
+  
+1.  不能对表格模型执行影响分析。  
+  
+2.  不公开表格模型的一些处理选项，如“处理碎片整理”和“处理重新计算”。 您可以使用执行 DDL 任务来执行这些功能。  
+  
+3.  提供的一些处理选项（如处理索引）不适用于表格模型，不应使用它们。  
+  
+4.  对表格模型忽略批处理设置。  
+  
+### <a name="options"></a>选项  
+ **Analysis Services 连接管理器**  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
+  
+ **新建**  
+ 创建新的 Analysis Services 连接管理器。  
+  
+ **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **对象列表**  
+ |属性|Description|  
+|--------------|-----------------|  
+|**Object Name**|列出指定对象的名称。|  
+|**类型**|列出指定对象的类型。|  
+|**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**“设置”**|列出指定对象的处理设置。|  
+  
+ **添加**  
+ 将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象添加到列表中。  
+  
+ **删除**  
+ 选择对象，再单击“删除”。  
+  
+ **影响分析**  
+ 对所选对象进行影响分析。  
+  
+ **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+  
+ **批设置摘要**  
+ |属性|Description|  
+|--------------|-----------------|  
+|**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
+|**事务模式**|指定按顺序处理时的事务模式。|  
+|**维度错误**|指定在发生错误时的任务行为。|  
+|**维度键错误日志路径**|指定记录错误的文件的路径。|  
+|**处理受影响的对象**|指示是否还处理依赖对象或受影响的对象。|  
+  
+ **更改设置**  
+ 更改处理选项以及对维度键中错误的处理方式。  
+  
+ **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+  
+

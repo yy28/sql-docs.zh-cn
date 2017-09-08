@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
+- sql13.dts.designer.dimprocessingtransformation.connection.f1
+- sql13.dts.designer.dimprocessingtransformation.mappings.f1
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Dimension Processing destination
 - loading dimensions
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32a1d596ff1395a693f8316d7a6ee1f0d8aa918
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: ff1dbbe04c9ef1b23662bfaa420b939fff21980d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
@@ -48,21 +51,125 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“维度处理目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [维度处理目标编辑器（“连接管理器”页）](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)  
-  
--   [维度处理目标编辑器（“映射”页）](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
-  
--   [维度处理目标编辑器（“高级”页）](../../integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
+  可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之间的连接。  
+  
+### <a name="options"></a>选项  
+ **连接管理器**  
+ 从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
+  
+ **新建**  
+ 通过使用“添加 Analysis Services 连接管理器”对话框创建一个新连接。  
+  
+ **可用维度列表**  
+ 选择要处理的维度。  
+  
+ **处理方法**  
+ 选择要应用于列表中选定维度的处理方法。 此选项的默认值为 **“完全”**。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**添加(增量式)**|对维度执行增量处理。|  
+|**“完全”**|对维度执行完全处理。|  
+|**Update**|对维度执行更新处理。|  
+  
+## <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
+  可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
+  
+ **可用目标列**  
+ 查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
+  
+ **输入列**  
+ 查看从上表中选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。  
+  
+ **目标列**  
+ 查看每个可用目标列，而不管是否已对其进行映射。  
+  
+## <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
+  可以使用 **“维度处理目标编辑器”** 对话框中的 **“高级”** 页配置错误处理方式。  
+  
+### <a name="options"></a>选项  
+ **使用默认错误配置**  
+ 指定是否使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 **True**。  
+  
+ **键错误操作**  
+ 指定如何处理包含不可接受的键值的记录。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**ConvertToUnknown**|将不适用的键值转换为 **UnknownMember** 值。|  
+|**DiscardRecord**|放弃记录。|  
+  
+ **忽略错误**  
+ 指定将忽略错误。  
+  
+ **出错时停止**  
+ 指定在出现错误时应停止处理。  
+  
+ **错误数**  
+ 指定应停止处理的错误阈值（如果选择了“出错时停止”）。  
+  
+ **出错时要执行的操作**  
+ 指定在达到错误阈值时执行的操作（如果选择了“出错时停止”）。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**StopProcessing**|停止处理。|  
+|**StopLogging**|停止记录错误。|  
+  
+ **找不到键**  
+ 指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略错误并继续处理。|  
+|**ReportAndContinue**|报告错误并继续处理。|  
+|**ReportAndStop**|报告错误并停止处理。|  
+  
+ **重复键**  
+ 指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略错误并继续处理。|  
+|**ReportAndContinue**|报告错误并继续处理。|  
+|**ReportAndStop**|报告错误并停止处理。|  
+  
+ **空键转换为未知键**  
+ 指定在将空键转换为 **UnknownMember** 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略错误并继续处理。|  
+|**ReportAndContinue**|报告错误并继续处理。|  
+|**ReportAndStop**|报告错误并停止处理。|  
+  
+ **不允许空键**  
+ 指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**IgnoreError**|忽略错误并继续处理。|  
+|**ReportAndContinue**|报告错误并继续处理。|  
+|**ReportAndStop**|报告错误并停止处理。|  
+  
+ **错误日志路径**  
+ 键入错误日志的路径，或单击“浏览 (...)”按钮以选择目标。  
+  
+ **浏览(...)**  
+ 选择错误日志的路径。  
+  
+## <a name="see-also"></a>另請參閱  
  [数据流](../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

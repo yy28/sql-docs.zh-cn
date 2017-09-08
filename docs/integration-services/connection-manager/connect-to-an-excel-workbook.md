@@ -16,29 +16,31 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b36b92c9beb840f6a2ea66250a5a025aa587acef
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="connect-to-an-excel-workbook"></a>连接到 Excel 工作簿
   若要将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包连接到 Microsoft Office Excel 工作簿，需要 Excel 连接管理器。  
   
  您可以从 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“连接管理器”区域或从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，创建这些连接管理器。  
+ 
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel 和 Access 文件的连接组件
   
- **Microsoft Excel 和 Access 文件的提供程序和驱动程序**  
+你可能需要下载 Microsoft Office 文件的连接组件，如果它们尚未安装。 下载最新版本的 Excel 和 Access 文件此处连接组件： [Microsoft Access 数据库引擎 2016年可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
- 你可能需要下载 Microsoft Office 文件的的 OLE DB 提供程序和驱动程序（如果它们尚未安装）。 更高版本的提供程序可以打开 Excel 的早期版本所创建的文件。  
-  
- 如果计算机有 32 位版本的 Office，则必须安装 32 位版本的驱动程序，并且你还必须确保运行向导或它在 32 位模式下创建的 Integration Services 包。  
-  
-|Microsoft Office 版本|下载|  
-|------------------------------|--------------|  
-|2007|[2007 Office System Driver: Data Connectivity Components（Office 2007 系统驱动程序：数据连接组件）](https://www.microsoft.com/en-us/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/en-us/download/details.aspx?id=39358)|  
-  
+组件的最新版本可以打开的 Excel 的早期版本创建的文件。
+
+如果计算机具有 32 位版本的 Office，那么您需要安装 32 位版本的组件，并还需要确保在 32 位模式下运行包。
+
+如果你有 Office 365 订阅，请确保你下载访问数据库引擎 2016年可再发行组件和不是 Microsoft 访问 2016年运行时。 运行安装程序时，可能会看到一条错误消息，您无法下载通过并行安装 Office 单击以运行组件。 要跳过此错误消息，并已成功安装组件，运行安装程序在静默模式下打开命令提示符窗口并运行。使用下载的 EXE 文件`/quiet`切换。 例如：
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+
+## <a name="create-an-excel-connection-manager"></a>创建 Excel 连接管理器
+
 ### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>从“连接管理器”区域创建 Excel 连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开该包。  

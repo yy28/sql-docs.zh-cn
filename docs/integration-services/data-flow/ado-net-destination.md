@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
+- sql13.dts.designer.adonetdest.connection.f1
+- sql13.dts.designer.adonetdest.mappings.f1
+- sql13.dts.designer.adonetdest.erroroutput.f1
 helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dc271dee6898d253f51be7c49efe7f0aaa5e7a
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
@@ -49,14 +52,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“ADO NET 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [ADO NET 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)  
-  
--   [ADO NET 目标编辑器（“映射”页）](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
-  
--   [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -64,5 +59,116 @@ ms.lasthandoff: 08/03/2017
 -   [ADO NET 自定义属性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目标编辑器（“连接管理器”页）
+  可以使用 **“ADO NET 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接。 使用此页还可以选择数据库中的表或视图。  
+  
+ **打开“连接管理器”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
+  
+3.  在 **“ADO NET 目标编辑器”**中，单击 **“连接管理器”**。  
+  
+### <a name="static-options"></a>静态选项  
+ **连接管理器**  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 使用“配置 ADO.NET 连接管理器”对话框创建新的连接管理器。  
+  
+ **使用表或视图**  
+ 从列表中选择现有表或视图，或单击“新建”创建新表。  
+  
+ **新建**  
+ 使用“创建表”对话框创建新表或视图。  
+  
+> [!NOTE]  
+>  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+  
+ **预览**  
+ 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
+  
+ **可用时使用大容量插入**  
+ 指定是否使用 <xref:System.Data.SqlClient.SqlBulkCopy> 接口来提高大容量插入操作的性能。  
+  
+ 只有可返回 <xref:System.Data.SqlClient.SqlConnection> 对象的 ADO.NET 提供程序才支持使用 <xref:System.Data.SqlClient.SqlBulkCopy> 接口。 SQL Server 的 .NET 数据提供程序 (SqlClient) 可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象，而自定义提供程序可以返回 <xref:System.Data.SqlClient.SqlConnection> 对象。  
+  
+ 可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+  
+ 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关详细信息**错误**选项，请参阅[ADO NET 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+  
+> [!NOTE]  
+>  如果 SQL Server 或 Sybase 源表包含标识列，你必须使用执行 SQL 任务，来启用 IDENTITY_INSERT 在 ADO NET 目标之前和之后再次禁用。 （标识列属性指定的列的增量值。 集 IDENTITY_INSERT 语句允许源表中的显式值插入到目标表中的标识列）。  
+>   
+>   若要运行的 SET IDENTITY_INSERT 语句和成功加载的数据，你必须执行以下操作。
+>       1. 针对执行 SQL 任务和 ADO.NET 目标，请使用相同的 ADO.NET 连接管理器。
+>       2. 在连接管理器中，将设置**RetainSameConnection**属性和**MultipleActiveResultSets**属性为 True。
+>       3. 在 ADO.NET 目标，将设置**UseBulkInsertWhenPossible**属性设置为 False。
+>
+>  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
+  
+## <a name="external-resources"></a>外部资源  
+ sqlcat.com 上的技术文章 [快速将数据加载到 Windows Azure SQL Database 中](http://go.microsoft.com/fwlink/?LinkId=244333)。  
+  
+## <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
+  可以使用 **“ADO NET 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
+  
+ **打开“映射”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
+  
+3.  在 **“ADO NET 目标编辑器”**中，单击 **“映射”**。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
+  
+ **可用目标列**  
+ 查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
+  
+ **输入列**  
+ 查看选定的输入列。 你可以通过选择移除映射**\<忽略 >**输出中排除列。  
+  
+ **目标列**  
+ 查看每个可用目标列，而不管是否已对其进行映射。  
+  
+## <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目标编辑器（“错误输出”页）
+  可以使用 **“ADO NET 目标编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  
+  
+ **打开“错误输出”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
+  
+3.  在 **“ADO NET 目标编辑器”**中，单击 **“错误输出”**。  
+  
+### <a name="options"></a>选项  
+ **输入或输出**  
+ 查看输入的名称。  
+  
+ **列**  
+ 未使用。  
+  
+ **错误**  
+ 指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截断**  
+ 未使用。  
+  
+ **Description**  
+ 查看操作的说明。  
+  
+ **将此值设置到选定的单元格**  
+ 指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **应用**  
+ 将错误处理选项应用到选定的单元格。  
   
   

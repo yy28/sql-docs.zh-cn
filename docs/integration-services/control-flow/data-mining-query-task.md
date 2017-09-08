@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
+- sql13.dts.designer.dmquerytask.miningmodel.f1
+- sql13.dts.designer.dmquerytask.query.f1
+- sql13.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b171b2ce21054b6cca5f2de64fa1d04f4fa00c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
@@ -53,14 +56,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [数据挖掘查询任务编辑器（“挖掘模型”选项卡）](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [数据挖掘查询任务编辑器（“查询”选项卡）](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [数据挖掘查询任务编辑器（“输出”选项卡）](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  数据挖掘查询编辑器没有“表达式”页。 它使用 **“属性”** 窗口来访问工具，以便创建和管理数据挖掘查询任务的属性的属性表达式。  
   
@@ -73,4 +68,120 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
+  可以使用 **“数据挖掘查询任务”** 对话框的 **“挖掘模型”** 选项卡指定要使用的挖掘结构和挖掘模型。  
   
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+  
+### <a name="general-options"></a>常规选项  
+ **名称**  
+ 为数据挖掘查询任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入数据挖掘查询任务的说明。  
+  
+### <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
+ **连接**  
+ 从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
+  
+ **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **新建**  
+ 创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器。  
+  
+ **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **挖掘结构**  
+ 从列表中选择挖掘结构。  
+  
+ **挖掘模型**  
+ 选择建立在所选挖掘结构上的挖掘模型。  
+
+## <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
+  可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  
+  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+  
+### <a name="general-options"></a>常规选项  
+ **名称**  
+ 为数据挖掘查询任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入数据挖掘查询任务的说明。  
+  
+### <a name="build-query-tab-options"></a>“生成查询”选项卡选项  
+ **数据挖掘查询**  
+ 键入数据挖掘查询。  
+  
+ **相关主题：**[数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **生成新查询**  
+ 使用图形工具创建数据挖掘查询。  
+  
+ **相关主题：** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### <a name="parameter-mapping-tab-options"></a>“参数映射”选项卡选项  
+ **参数名称**  
+ 根据需要更新参数名称。 通过在 **“变量名称”** 列表中选择变量，将参数映射到变量。  
+  
+ **“变量名称”**  
+ 在列表中选择变量以将其映射到参数。  
+  
+ **添加**  
+ 将参数添加到列表。  
+  
+ **删除**  
+ 选择一个参数，再单击“删除”。  
+  
+### <a name="result-set-tab-options"></a>“结果集”选项卡选项  
+ **结果名称**  
+ 根据需要更新结果集的名称。 通过在 **“变量名称”** 列表中选择变量，将结果映射到变量。  
+  
+ 通过单击 **“添加”**添加结果之后，为该结果提供唯一的名称。  
+  
+ **“变量名称”**  
+ 在列表中选择变量以将其映射到结果集。  
+  
+ **结果类型**  
+ 指示是返回单行还是返回完整结果集。  
+  
+ **添加**  
+ 向列表中添加结果集。  
+  
+ **删除**  
+ 选择一个结果，再单击“删除”。  
+## <a name="data-mining-query-task-editor-output-tab"></a>数据挖掘查询任务编辑器（“输出”选项卡）
+  可以使用 **“数据挖掘查询任务编辑器”** 对话框的 **“输出”** 选项卡指定预测查询的目标。  
+  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+  
+### <a name="general-options"></a>常规选项  
+ **名称**  
+ 为数据挖掘查询任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入数据挖掘查询任务的说明。  
+  
+### <a name="output-tab-options"></a>“输出”选项卡选项  
+ **连接**  
+ 从列表中选择连接管理器，或单击“新建”以创建新的连接管理器。  
+  
+ **新建**  
+ 创建新的连接管理器。 只能使用 ADO.NET 和 OLE DB 连接管理器类型。  
+  
+ **输出表**  
+ 指定预测查询要将其结果写入的表。  
+  
+ **删除并重新创建该输出表**  
+ 指示预测查询是否应通过删除表后再重新创建表来覆盖目标表中的内容。  
+  
+

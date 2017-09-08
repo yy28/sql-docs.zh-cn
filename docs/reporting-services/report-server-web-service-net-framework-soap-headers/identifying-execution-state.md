@@ -22,11 +22,11 @@ caps.latest.revision: 46
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  您还可以使用 URL 访问命令管理报表会话。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [技术参考 &#40;SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
  [使用 Reporting Services SOAP 标头](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

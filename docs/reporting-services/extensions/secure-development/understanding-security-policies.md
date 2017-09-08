@@ -28,11 +28,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 4c8fa977e2b9cdd596e3029be4954daea7fe239d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="understanding-security-policies"></a>了解安全策略
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  在某些情况下，您可能需要执行某个要求报表表达式中具有特定代码权限的操作。 通常，这意味着报表表达式需要调用受保护的 CLR 库方法（如用来访问文件或系统注册表的方法）。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 文档介绍了发出此安全调用所需的代码权限；若要执行此调用，必须向调用代码授予这些特定的安全权限。 如果你从发起呼叫的报表表达式或**代码**元素，表达式宿主程序集必须为授予适当的权限。 但是，在向表达式宿主授予相应的权限之后，在任何报表中的任何表达式中运行的所有代码现在都将被授予此特定权限。 从自定义程序集发出调用，并向该自定义程序集授予特定权限的操作要安全得多。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Reporting Services 中的代码访问安全性](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [安全开发 &#40;Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

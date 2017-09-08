@@ -23,11 +23,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>将 Reporting Services 使用 URL 访问的 Windows 应用程序集成
@@ -120,7 +120,7 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [将 Reporting Services 集成到应用程序](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [将使用 URL 访问的 Reporting Services 的集成](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [集成使用 SOAP 的 Reporting Services](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   

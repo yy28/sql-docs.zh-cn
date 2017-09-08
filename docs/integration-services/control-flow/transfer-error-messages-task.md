@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
+- sql13.dts.designer.transfererrormessagestask.general.f1
+- sql13.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f13e3e6e22e2b4f3b74c80a249a098d93ad5b9f
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e23bd95e7511274fdf7da62834775c565fdee372
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
@@ -67,11 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>配置传输错误消息任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [传输错误消息任务编辑器（“常规”页）](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [传输错误消息任务编辑器（“消息”页）](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -83,6 +81,54 @@ ms.lasthandoff: 08/03/2017
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-error-messages-task-editor-general-page"></a>传输错误消息任务编辑器（“常规”页）
+  可以使用 **“传输错误消息任务编辑器”** 对话框的 **“常规”** 页，对传输错误消息任务进行命名和说明。 传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。   
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为传输错误消息任务键入唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入传输错误消息任务的说明。  
+  
+## <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
+  可以使用“传输错误消息任务编辑器”对话框的“消息”页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
+  
+### <a name="options"></a>选项  
+ **SourceConnection**  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+  
+ **DestinationConnection**  
+ 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+  
+ **IfObjectExists**  
+ 选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  
+  
+ **TransferAllErrorMessages**  
+ 选择该任务应将全部用户定义消息还是只有指定的用户定义消息从源服务器复制到目标服务器。  
+  
+ 此属性具有下表所列的选项：  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**True**|复制所有用户定义消息。|  
+|**False**|仅复制指定的用户定义消息。|  
+  
+ **ErrorMessagesList**  
+ 单击浏览按钮 **(…)** 可选择要复制的错误消息。  
+  
+> [!NOTE]  
+>  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
+  
+ **ErrorMessageLanguagesList**  
+ 单击浏览按钮 **(…)** 可选择要将哪些语言的用户定义错误消息复制到目标服务器。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
+  
+> [!NOTE]  
+>  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
+- sql13.dts.designer.adonetsource.connection.f1
+- sql13.dts.designer.adonetsource.columns.f1
+- sql13.dts.designer.adonetsource.erroroutput.f1
 helpviewer_keywords:
 - ADO.NET source
 - sources [Integration Services], ADO.NET
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78aaa7fb855184f1a13e79cf19a2466c83eeee8e
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="ado-net-source"></a>ADO NET 源
@@ -88,6 +91,116 @@ ms.lasthandoff: 08/03/2017
 -   [ADO NET 自定义属性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 源编辑器（“连接管理器”页）
+  可以使用 **“ADO NET 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。 使用此页还可以选择数据库中的表或视图。  
+  
+ 若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。  
+  
+ **打开“连接管理器”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 源。  
+  
+3.  在 **“ADO NET 源编辑器”**中，单击 **“连接管理器”**。  
+  
+### <a name="static-options"></a>静态选项  
+ **ADO.NET 连接管理器**  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 使用“配置 ADO.NET 连接管理器”对话框创建新的连接管理器。  
+  
+ **数据访问模式**  
+ 指定从源选择数据的方法。  
+  
+|选项|Description|  
+|------------|-----------------|  
+|表或视图|从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中的表或视图中检索数据。|  
+|SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 数据源中检索数据。|  
+  
+ **预览**  
+ 通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
+  
+> [!NOTE]  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 改为值\<值太大，无法显示 > 或 System.Byte [] 显示。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+  
+### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
+  
+#### <a name="data-access-mode--table-or-view"></a>数据访问模式 = 表或视图  
+ **表或视图的名称**  
+ 从数据源的可用表列表或视图列表中选择表或视图的名称。  
+  
+#### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
+ **SQL 命令文本**  
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
+  
+ **生成查询**  
+ 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+  
+ **浏览**  
+ 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+  
+## <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
+  可以使用“ADO NET 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  
+ 若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。  
+  
+ **打开“列”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 源。  
+  
+3.  在 **“ADO NET 源编辑器”**中，单击 **“列”**。  
+  
+### <a name="options"></a>选项  
+ **可用外部列**  
+ 查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
+  
+ **“外部列”**  
+ 按照外部（源）列在您配置使用此源中数据的组件时的显示顺序，查看外部（源）列。  
+  
+ **输出列**  
+ 为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将显示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中。  
+  
+## <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
+  可以使用 **“ADO NET 源编辑器”** 对话框的 **“错误输出”** 页，选择错误处理选项以及设置错误输出列的属性。  
+  
+ 若要了解有关 ADO NET 源的详细信息，请参阅 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)。  
+  
+ **打开“错误输出”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ADO NET 源。  
+  
+3.  在 **“ADO NET 源编辑器”**中，单击 **“错误输出”**。  
+  
+### <a name="options"></a>选项  
+ **输入/输出**  
+ 查看数据源的名称。  
+  
+ **列**  
+ 查看在“ADO NET 源编辑器”对话框的“连接管理器”页上选择的外部（源）列。  
+  
+ **错误**  
+ 指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截断**  
+ 指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **Description**  
+ 查看对错误的说明。  
+  
+ **将此值设置到选定的单元格**  
+ 指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **应用**  
+ 将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>另请参阅  
  [DataReader 目标](../../integration-services/data-flow/datareader-destination.md)   

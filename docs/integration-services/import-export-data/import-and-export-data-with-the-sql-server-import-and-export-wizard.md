@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7b9fae76cd6ffaee5679bc2d0ba7fa7b44f9aa65
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/03/2017
 |-------------|-----------------------------------------|
 |**企业数据库**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle、 DB2，及其他类型。|SQL Server 或 SQL Server Data Tools (SSDT) 安装文件，你需要连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但 SSDT 不安装需要连接到其他企业数据库，例如 Oracle 或 IBM DB2 的所有文件。<br/><br/>若要连接到企业数据库，你通常需要具有以下两项操作：<br/><br/>1.**客户端软件**。 如果已经为企业数据库系统安装了客户端软件，则通常会有建立连接所需的文件。 如果尚未安装客户端软件，请询问数据库管理员如何安装获得许可的副本。<br/><br/>2.**驱动程序或提供程序**。 Microsoft 安装驱动程序和提供程序连接到 Oracle。 要连接到 IBM DB2，获取 Microsoft® OLEDB Provider for DB2 5.0 版 for Microsoft SQL Server 从[Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|
 |**文本文件**（平面文件）|无需任何其他文件。|
-|**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取以下下载 — [Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
+|**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取以下下载- [Microsoft Access 数据库引擎 2016年可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
 |**Azure 数据源**<br/>目前仅限 Azure Blob 存储。|SQL Server Data Tools 不安装你需要连接到 Azure Blob 存储作为数据源的文件。 获取以下下载 — [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>有关详细信息，请参阅[连接到 Azure Blog 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
 |**打开源数据库**<br/>PostgreSQL、 MySql 和其他人。|必须下载其他文件才能连接到这些数据源。<br/><br/>-为**PostgreSQL**，请参阅[连接 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>-为**MySql**，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
 |**为其任何其他数据源驱动程序或提供商时可用**|通常必须下载其他文件才能连接到以下类型的数据源。<br/><br/>- 提供 **ODBC 驱动程序** 的任何源。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 提供 **.Net Framework 数据提供程序** 的任何源。<br/>- 提供 **OLE DB 提供程序** 的任何源。<br/><br/>对于其他数据源提供源和目标的功能的第三方组件是有时销售作为附加产品的 SQL Server Integration Services (SSIS)。|
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/03/2017
  启动向导。 有关详细信息，请参阅 [启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另请参阅
-[要开始使用导入和导出向导的此简单示例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 
 

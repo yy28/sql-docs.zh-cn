@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>XML 源
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 **“XML 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [XML 源编辑器（“连接管理器”页）](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [XML 源编辑器（“列”页）](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [XML 源编辑器（“错误输出”页）](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -94,6 +89,88 @@ ms.lasthandoff: 08/03/2017
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
 -   [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
+  可以使用 **“XML 源编辑器”** 的 **“连接管理器”** 页指定 XML 文件和转换 XML 数据的 XSD。  
+  
+### <a name="static-options"></a>静态选项  
+ **数据访问模式**  
+ 指定从源选择数据的方法。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|XML 文件位置|从 XML 文件检索数据。|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|来自变量的 XML 数据|从变量检索 XML 数据。|  
+  
+ **使用内联架构**  
+ 指定 XML 源数据本身是否包含 XSD 架构（用于定义和验证 XML 源数据的结构和数据）。  
+  
+ **XSD 位置**  
+ 键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”定位该文件。  
+  
+ **浏览**  
+ 使用“打开”对话框定位到 XSD 架构文件。  
+  
+ **生成 XSD**  
+ 使用“另存为”对话框可以为自动生成的 XSD 架构文件选择位置。 编辑器将根据 XML 数据的结构来推断架构。  
+  
+### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
+  
+#### <a name="data-access-mode--xml-file-location"></a>数据访问模式 = XML 文件位置  
+ **XML 位置**  
+ 键入 XML 数据文件的路径和文件名，或者通过单击“浏览”查找文件。  
+  
+ **浏览**  
+ 使用“打开”对话框定位到 XML 数据文件。  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  
+ **变量名称**  
+ 选择包含 XML 文件的路径和文件名的变量。  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>数据访问模式 = 来自变量的 XML 数据  
+ **变量名称**  
+ 选择包含 XML 数据的变量。  
+  
+## <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
+  可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。  
+  
+### <a name="options"></a>选项  
+ **可用外部列**  
+ 查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
+  
+ **“外部列”**  
+ 按任务读取外部（源）列的顺序查看这些列。 首先在编辑器中显示的表中清除所选择的列，然后以不同的顺序从列表中选择外部列，即可更改顺序。  
+  
+ **输出列**  
+ 为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
+  
+## <a name="xml-source-editor-error-output-page"></a>XML 源编辑器（“错误输出”页）
+  可以使用 **“XML 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
+  
+### <a name="options"></a>选项  
+ **输入/输出**  
+ 查看数据源的名称。  
+  
+ **列**  
+ 查看在“XML 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+  
+ **错误**  
+ 指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截断**  
+ 指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **Description**  
+ 查看对错误的说明。  
+  
+ **将此值设置到选定的单元格**  
+ 指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **应用**  
+ 将错误处理选项应用到选定的单元格。  
   
 ## <a name="related-tasks"></a>相关任务  
  [使用 XML 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

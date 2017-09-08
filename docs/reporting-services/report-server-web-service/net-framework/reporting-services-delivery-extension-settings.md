@@ -29,11 +29,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 传递扩展插件设置
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
 |**密码**|访问网络资源或磁盘所需的密码。|  
 |**WRITEMODE**|访问磁盘时要使用的写入模式。 有效值为**无**，**覆盖**，和**AutoIncrement**。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [技术参考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   

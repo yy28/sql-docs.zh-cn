@@ -11,6 +11,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
+- sql13.dts.designer.msgqueuetask.general.f1
+- sql13.dts.designer.msgqueuetask.send.f1
+- sql13.dts.designer.msgqueuetask.receive.f1
+- sql13.dts.designer.selectvariables.f1
 helpviewer_keywords:
 - Message Queue task [Integration Services]
 - receiving messages
@@ -22,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="message-queue-task"></a>消息队列任务
@@ -90,13 +94,7 @@ ms.lasthandoff: 08/03/2017
 |**MSMQTaskTimeOut**|指示任务已超时。|  
   
 ## <a name="configuration-of-the-message-queue-task"></a>消息队列任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
-  
--   [消息队列任务编辑器（“常规”页）](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
-  
--   [消息队列任务编辑器（“接收”页）](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)  
-  
--   [消息队列任务编辑器（“发送”页）](../../integration-services/control-flow/message-queue-task-editor-send-page.md)  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -105,7 +103,203 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>相关任务  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
+  可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为消息队列任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对消息队列任务的说明。  
+  
+ **Use2000Format**  
+ 指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 **False**。  
+  
+ **MSMQConnection**  
+ 选择一个现有的 MSMQ 连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+  
+ **消息**  
+ 指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  
+  
+## <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
+  可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包发送消息。  
+  
+### <a name="options"></a>选项  
+ **UseEncryption**  
+ 指示是否对消息进行加密。 默认值为 **False**。  
+  
+ **EncryptionAlgorithm**  
+ 如果选择使用加密，请指定要使用的加密算法的名称。 消息队列任务可以使用 RC2 和 RC4 算法。 默认值为 **RC2**。  
+  
+> [!NOTE]  
+>  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前版本中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
+  
+> [!IMPORTANT]  
+>  这些算法是消息队列（也称为 MSMQ）技术支持的加密算法。 与较新的算法相比，这两种加密算法都被视为加密性很弱的算法，但消息队列尚不支持新的算法。 因此，在使用消息队列任务发送消息时，应考虑您的加密需要。  
+  
+ **MessageType**  
+ 选择消息类型。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
+|**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
+|**字符串消息**|消息存储在消息队列任务中。 选择该值将显示动态选项 **StringMessage**。|  
+  
+### <a name="messagetype-dynamic-options"></a>MessageType 动态选项  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
+ **DataFileMessage**  
+ 键入数据文件的路径，或单击省略号 **(…)** 后再定位到相应的文件。  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
+ **VariableMessage**  
+ 键入变量名称，或单击省略号 **(…)** 后再选择相应的变量。 各变量之间用逗号分隔。  
+  
+ **相关主题：** 选择变量  
+  
+#### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
+ **StringMessage**  
+ 键入字符串消息，或单击省略号 **(…)**后在“输入字符串消息”对话框中键入消息。  
+  
+## <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
+  可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
+  
+### <a name="options"></a>选项  
+ **RemoveFromMessageQueue**  
+ 指示在接收后是否从队列中删除消息。 默认情况下，此值设置为 **False**。  
+  
+ **ErrorIfMessageTimeOut**  
+ 指示当消息超时时任务是否失败，并显示错误消息。 默认值为 **False**。  
+  
+ **TimeoutAfter**  
+ 如果选择任务失败时显示错误消息，则请指定显示超时消息之前等待的秒数。  
+  
+ **MessageType**  
+ 选择消息类型。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
+|**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  
+|**字符串消息**|消息存储在消息队列任务中。 选择该值将显示动态选项 **StringMessage**。|  
+|**变量的字符串消息**|消息<br /><br /> 选择该值将显示动态选项 **StringMessage**。|  
+  
+### <a name="messagetype-dynamic-options"></a>MessageType 动态选项  
+  
+#### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
+ **SaveFileAs**  
+ 键入要使用的文件的路径，或单击省略号按钮 **(…)** ，然后查找该文件。  
+  
+ **Overwrite**  
+ 指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 **False**。  
+  
+ **筛选**  
+ 指定是否对消息应用筛选器。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
+|**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
+  
+#### <a name="filter-dynamic-options"></a>Filter 动态选项  
+  
+##### <a name="filter--no-filter"></a>Filter = 无筛选器  
+ **IdentifierReadOnly**  
+ 此选项是只读的。 如果以前设置了 Filter 属性，此选项可能为空或包含包的 GUID。  
+  
+##### <a name="filter--from-package"></a>Filter = 来源包  
+ **Identifier**  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 **(…)** ，再指定包。  
+  
+ **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
+ **筛选**  
+ 指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**无筛选器**|该任务不筛选消息。 选择该值将显示动态选项 **IdentifierReadOnly**。|  
+|**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
+  
+ **变量**  
+ 键入变量的名称，或单击\<**新变量...**>，然后配置一个新的变量。  
+  
+ **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+#### <a name="filter-dynamic-options"></a>Filter 动态选项  
+  
+##### <a name="filter--no-filter"></a>Filter = 无筛选器  
+ **IdentifierReadOnly**  
+ 此选项为空白。  
+  
+##### <a name="filter--from-package"></a>Filter = 来源包  
+ **Identifier**  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 **(…)** ，再指定包。  
+  
+ **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
+  
+#### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
+ **比较**  
+ 指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**InclusionThresholdSetting**|不对消息进行比较。|  
+|**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
+|**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
+|**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
+  
+ **CompareString**  
+ 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+  
+#### <a name="messagetype--string-message-to-variable"></a>MessageType = 变量的字符串消息  
+ **比较**  
+ 指定是否将筛选器应用到消息。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**InclusionThresholdSetting**|不对消息进行比较。|  
+|**Exact match**|消息必须与 **CompareString** 选项中的字符串完全匹配。|  
+|**忽略大小写**|消息必须与 **CompareString** 选项中的字符串匹配，但在比较时不区分大小写。|  
+|**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
+  
+ **CompareString**  
+ 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+  
+ **变量**  
+ 键入要保存对收到的消息，或单击的变量名称\<**新变量...**>，然后配置一个新的变量。  
+  
+ **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="select-variables"></a>选择变量
+  可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量。 该任务使用 **“所选变量”** 列表中的变量。  
+  
+### <a name="options"></a>选项  
+ **可用变量**  
+ 选择一个或多个变量。  
+  
+ **“所选变量”**  
+ 选择一个或多个变量。  
+  
+ **右箭头**  
+ 将所选变量移动到“所选变量”列表。  
+  
+ **左箭头**  
+ 将所选变量移回“可用变量”列表。  
+  
+ **新建变量**  
+ 创建新变量。  
+  
+ **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+## <a name="see-also"></a>另請參閱  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   

@@ -24,11 +24,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>报表服务器 Web 服务方法
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/03/2017
 |[订阅和传递方法](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|介绍可用来创建和管理订阅和报表传递的方法。|  
 |[链接报表方法](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|介绍可用来创建和管理链接报表的方法。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [访问 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

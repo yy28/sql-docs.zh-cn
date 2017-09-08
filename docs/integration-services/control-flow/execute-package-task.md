@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executepackagetask.f1
+- sql13.dts.designer.executepackagetask.package.f1
+- sql13.dts.designer.executepackagetask.parameter.F1
+- sql13.dts.designer.executepackagetask.general.f1
 helpviewer_keywords:
 - Execution Package task [Integration Services]
 - child packages
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-package-task"></a>执行包任务
@@ -106,11 +109,9 @@ ms.lasthandoff: 08/03/2017
  子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”**页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -122,5 +123,105 @@ ms.lasthandoff: 08/03/2017
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  
+  
+## <a name="execute-package-task-editor"></a>执行包任务编辑器
+  可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
+  
+ **您希望做什么？**  
+  
+-   [打开执行包任务编辑器](#open)  
+  
+-   [设置“常规”页上的选项](#general)  
+  
+-   [设置“包”页上的选项](#package)  
+  
+-   [设置“参数绑定”页上的选项](#parameter)  
+  
+###  <a name="open"></a> 打开执行包任务编辑器  
+  
+1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，打开包含执行包任务的 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目。  
+  
+2.  在 SSIS 设计器中右键单击该任务，然后单击“编辑”。  
+  
+###  <a name="general"></a> 设置“常规”页上的选项  
+ **名称**  
+ 为执行包任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对执行包任务的说明。  
+  
+###  <a name="package"></a> 设置“包”页上的选项  
+ **ReferenceType**  
+ 为项目中的子包选择“项目引用”。 为位于包外部的子包选择 **“外部引用”** 。  
+  
+> [!NOTE]  
+>  “ReferenceType”选项是只读的，如果包含包的项目尚未转换为项目部署模型，则该选项将设置为“外部引用”。 [部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+  
+ **密码**  
+ 如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
+  
+ **ExecuteOutOfProcess**  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **true**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将该属性设置为 **ture**，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
+  
+#### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
+  
+##### <a name="referencetype--external-reference"></a>ReferenceType = 外部引用  
+ **位置**  
+ 选择子包的位置。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  
+|**文件系统**|将位置设置为文件系统。|  
+  
+ **连接**  
+ 选择子包的存储位置的类型。  
+  
+ **PackageNameReadOnly**  
+ 显示包的名称。  
+  
+##### <a name="referencetype--project-reference"></a>ReferenceType = 项目引用  
+ **PackageNameFromProjectReference**  
+ 选择项目中包含的要成为子包的包。  
+  
+#### <a name="location-dynamic-options"></a>位置动态选项  
+  
+##### <a name="location--sql-server"></a>位置 = SQL Server  
+ **连接**  
+ 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **PackageName**  
+ 键入子包的名称，或单击省略号 (…) 再定位到包。  
+  
+##### <a name="location--file-system"></a>位置 = 文件系统  
+ **连接**  
+ 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+ **PackageNameReadOnly**  
+ 显示包的名称。  
+  
+###  <a name="parameter"></a> 设置“参数绑定”页上的选项  
+ 您可以将父包或项目中的值传递到子包。 项目必须使用项目部署模型，并且子包必须包含在父包所在的同一项目中。  
+  
+ 有关将项目转换为项目部署模型的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+  
+ **子包参数**  
+ 输入或选择子包参数的名称。  
+  
+ **绑定参数或变量**  
+ 选择包含要传递到子包的值的参数或变量。  
+  
+ **添加**  
+ 单击此选项可将参数或变量映射到子包参数。  
+  
+ **删除**  
+ 单击此选项可删除参数或变量与子包参数之间的映射。  
   
   

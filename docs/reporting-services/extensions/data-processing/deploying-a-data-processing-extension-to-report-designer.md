@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: e5e309ee7092bdc64efa89fa27579e9e8944da14
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>部署数据处理扩展插件以报表设计器
@@ -85,7 +85,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="verifying-the-deployment"></a>验证部署  
  必须先关闭本地计算机上的所有 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 实例，然后才能验证部署。 结束所有当前会话之后，可以在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中创建一个新报表项目，以验证数据处理扩展插件是否已成功部署到报表设计器。 为报表创建新的数据集时，您的扩展插件应当包括在可用数据源类型列表中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [部署数据处理扩展插件](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Reporting Services 扩展插件](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [实现数据处理扩展插件](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

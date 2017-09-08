@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
+- sql13.ssis.designer.odbcsource.connection.f1
+- sql13.ssis.designer.odbcsource.columns.f1
+- sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-source"></a>ODBC 源
@@ -72,14 +75,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-odbc-source"></a>配置 ODBC 源  
  您可以通过编程方式或者通过 SSIS 设计器配置 ODBC 源。  
   
- 有关详细信息，请参阅下列主题之一：  
-  
--   [ODBC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
-  
--   [ODBC 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
-  
--   [ODBC 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
  打开 **“高级编辑器”** 对话框：  
@@ -88,16 +83,116 @@ ms.lasthandoff: 08/03/2017
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本节内容  
-  
--   [ODBC 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
--   [ODBC 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
-  
--   [ODBC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+## <a name="in-this-section"></a>本節內容  
   
 -   [使用 ODBC 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [ODBC 源的自定义属性](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+  
+## <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
+  可以使用 **“ODBC 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
+  
+### <a name="task-list"></a>任务列表  
+ **打开“ODBC 源编辑器”的“连接管理器”页**  
+  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
+  
+-   在“数据流”选项卡上，双击 ODBC 源。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="connection-manager"></a>“ODBC 源编辑器”  
+ 从列表中选择现有 ODBC 连接管理器，或单击 **“新建”** 创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
+  
+#### <a name="new"></a>新建  
+ 单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的 ODBC 连接管理器。  
+  
+#### <a name="data-access-mode"></a>数据访问模式  
+ 选择从源选择数据的方法。 选项显示在下表中：  
+  
+|选项|Description|  
+|------------|-----------------|  
+|表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
+||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
+||该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
+|SQL 命令|使用 SQL 查询从 ODBC 数据源中检索数据。 您应该采用正在使用的源数据库的语法编写查询。 选择此选项后，请采用以下方法之一输入查询：|  
+||在 **“SQL 命令文本”** 字段中，输入 SQL 查询的文本。|  
+||单击 **“浏览”** 从文本文件加载 SQL 查询。|  
+||单击 **“分析查询”** 验证查询文本的语法。|  
+  
+#### <a name="preview"></a>预览  
+ 单击 **“预览”** ，查看从选定的表或视图中提取的最多前 200 行数据。  
+  
+## <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
+  可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  
+### <a name="task-list"></a>任务列表  
+ **打开“ODBC 源编辑器”的“列”页**  
+  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
+  
+2.  在“数据流”选项卡上，双击 ODBC 源。  
+  
+3.  在 **“ODBC 源编辑器”**中，单击 **“列”**。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="available-external-columns"></a>可用外部列  
+ 数据源中的可用外部列的列表。 无法使用此表添加或删除列。 从源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  
+  
+ 选中 **“全选”** 复选框可以选择所有列。  
+  
+#### <a name="external-column"></a>“外部列”  
+ 外部（源）列的视图，该视图按照您在配置使用 ODBC 源中数据的组件时所看到的列顺序显示。  
+  
+#### <a name="output-column"></a>输出列  
+ 输入每个输出列的唯一名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 输入的名称显示在 SSIS 设计器中。  
+  
+## <a name="odbc-source-editor-error-output-page"></a>ODBC 源编辑器（“错误输出”页）
+  可以使用 **“ODBC 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
+  
+### <a name="task-list"></a>任务列表  
+ **打开“ODBC 源编辑器”的“错误输出”页**  
+  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开具有 ODBC 源的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
+  
+-   在“数据流”选项卡上，双击 ODBC 源。  
+  
+-   在 **“ODBC 源编辑器”**中，单击 **“错误输出”**。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="inputoutput"></a>输入/输出  
+ 查看数据源的名称。  
+  
+#### <a name="column"></a>列  
+ 未使用。  
+  
+#### <a name="error"></a>错误  
+ 选择 ODBC 源应该如何处理流中的错误：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="truncation"></a>截断  
+ 选择 ODBC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="description"></a>Description  
+ 未使用。  
+  
+#### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  
+ 选择发生错误或截断时 ODBC 源应如何处理所有选定的单元格：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="apply"></a>应用  
+ 将错误处理选项应用到选定的单元格。  
+  
+### <a name="error-handling-options"></a>错误处理选项  
+ 使用下列选项来配置 ODBC 源处理错误和截断的方式。  
+  
+#### <a name="fail-component"></a>组件失败  
+ 发生错误或截断时数据流任务失败。 这是默认行为。  
+  
+#### <a name="ignore-failure"></a>忽略失败  
+ 忽略错误或截断。  
+  
+#### <a name="redirect-flow"></a>重定向流  
+ 将引起错误或截断的行定向到 ODBC 源的错误输出。  
   
   

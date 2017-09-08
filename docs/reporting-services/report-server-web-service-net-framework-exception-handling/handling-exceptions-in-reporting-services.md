@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 7e1472c11575ba8bed99992ec9630e408c347291
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>在 Reporting Services 中处理异常
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="soap-faults-and-the-net-framework"></a>SOAP 错误和 .NET Framework  
  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，如果对 Web 服务客户端请求中发生错误，报表服务器进行通信，客户端调用的代码，Web 服务通过引发的错误**SoapException**对象。 **SoapException**包装 SOAP 错误中包含的信息。 **详细信息**属性**SoapException**映射到**详细信息**SOAP 错误中的元素。 应用程序应捕获**SoapException**对象使用 try/catch 块，并使用**详细信息**属性**SoapException**以采取相应的操作。 有关详细信息**SoapException**类和**详细信息**中的属性[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[Reporting Services SoapException 类](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)。 有关详细信息**SoapException**类，请参阅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文档。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [详细信息属性](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
  [引入了 Reporting Services 中的异常处理](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 类](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  

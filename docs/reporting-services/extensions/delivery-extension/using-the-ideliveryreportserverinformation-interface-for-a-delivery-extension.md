@@ -20,11 +20,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: caebc70ede4475cef103d0d76598ea3125231252
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>将 IDeliveryReportServerInformation 接口用于传递扩展插件
@@ -55,7 +55,7 @@ foreach (Microsoft.ReportingServices.Interfaces.Extension e in ReportServerInfor
   
  有关详细信息<xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation>接口，请参阅[使用用于传递扩展插件的 IDeliveryReportServerInformation 界面](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  

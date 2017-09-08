@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>ODBC 目标
@@ -77,16 +80,109 @@ ms.lasthandoff: 08/03/2017
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本节内容  
-  
--   [ODBC 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+## <a name="in-this-section"></a>本節內容  
   
 -   [通过使用 ODBC 目标加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 目标自定义属性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目标编辑器（“连接管理器”页）
+  可以使用 **“ODBC 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
   
+ **打开“ODBC 目标编辑器”的“连接管理器”页**  
+  
+### <a name="task-list"></a>任务列表  
+  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
+  
+-   在“数据流”选项卡上，双击 ODBC 目标。  
+  
+-   在 **“ODBC 目标编辑器”**中，单击 **“连接管理器”**。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="connection-manager"></a>“ODBC 目标编辑器”  
+ 从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
+  
+#### <a name="new"></a>新建  
+ 单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
+  
+#### <a name="data-access-mode"></a>数据访问模式  
+ 选择将数据加载到目标的方法。 选项显示在下表中：  
+  
+|选项|Description|  
+|------------|-----------------|  
+|表名 - 批处理|选择此选项可将 ODBC 目标配置为在批处理模式下工作。 选择此选项后，以下选项可用：|  
+||**表或视图的名称**：从列表中选择可用的表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果你的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (\*) 通配符输入名称的任何部分以便显示要使用的表。<br /><br /> **批大小**：键入用于大容量加载的批处理的大小。 这是作为一批加载的行数。|  
+|表名 - 逐行|选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项后，以下选项可用：|  
+||**表或视图的名称**：从列表中选择数据库中的可用表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
+  
+#### <a name="preview"></a>预览  
+ 单击 **“预览”** 可以查看所选表的最多 200 行数据。  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
+  可以使用 **“ODBC 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="available-input-columns"></a>可用输入列  
+ 可用输入列的列表。 将输入列拖放到某一可用目标列以映射这些列。  
+  
+#### <a name="available-destination-columns"></a>可用目标列  
+ 可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
+  
+#### <a name="input-column"></a>输入列  
+ 查看选定的输入列。 你可以通过选择移除映射**\<忽略 >**输出中排除列。  
+  
+#### <a name="destination-column"></a>目标列  
+ 查看所有可用目标列（包括映射和未映射的列）。  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>ODBC 目标编辑器（“错误输出”页）
+  可以使用 **“ODBC 目标编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
+  
+ **打开 ODBC 目标编辑器的“错误输出”页**  
+  
+### <a name="task-list"></a>任务列表  
+  
+-   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开包含 ODBC 目标的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包。  
+  
+-   在“数据流”选项卡上，双击 ODBC 目标。  
+  
+-   在 **“ODBC 目标编辑器”**中，单击 **“错误输出”**。  
+  
+### <a name="options"></a>选项  
+  
+#### <a name="inputoutput"></a>输入/输出  
+ 查看数据源的名称。  
+  
+#### <a name="column"></a>列  
+ 未使用。  
+  
+#### <a name="error"></a>错误  
+ 选择 ODBC 目标应该如何处理流中的错误：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="truncation"></a>截断  
+ 选择 ODBC 目标应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="description"></a>Description  
+ 查看错误说明。  
+  
+#### <a name="set-this-value-to-selected-cells"></a>将此值设置到选定的单元格  
+ 选择发生错误或截断时 ODBC 目标应如何处理所有选定的单元格：忽略失败、重定向行或使组件失败。  
+  
+#### <a name="apply"></a>应用  
+ 将错误处理选项应用到选定的单元格。  
+  
+### <a name="error-handling-options"></a>错误处理选项  
+ 使用下列选项来配置 ODBC 目标处理错误和截断的方式。  
+  
+#### <a name="fail-component"></a>组件失败  
+ 发生错误或截断时数据流任务失败。 这是默认行为。  
+  
+#### <a name="ignore-failure"></a>忽略失败  
+ 忽略错误或截断。  
+  
+#### <a name="redirect-flow"></a>重定向流  
+ 将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
+  
+

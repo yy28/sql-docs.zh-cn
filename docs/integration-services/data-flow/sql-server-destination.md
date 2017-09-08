@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关在 **“SQL Server 目标编辑器”** 对话框中可以设置的属性的详细信息，请单击下列主题之一：  
-  
--   [SQL 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [SQL 目标编辑器（“映射”页）](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [SQL 目标编辑器（“高级”页）](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -126,6 +121,87 @@ ms.lasthandoff: 08/03/2017
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
   
 -   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>SQL 目标编辑器（“连接管理器”页）
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表或视图中。  
+  
+### <a name="options"></a>选项  
+ **“无缓存”**  
+ 从列表中选择现有连接，或通过单击“新建”创建一个新连接。  
+  
+ **新建**  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+  
+ **使用表或视图**  
+ 从列表中选择现有的表或视图，或单击“新建”创建新的连接。  
+  
+ **新建**  
+ 通过使用“创建表”对话框创建一个新表。  
+  
+> [!NOTE]  
+>  单击 **“新建”**时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+  
+ **预览**  
+ 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
+  
+## <a name="sql-destination-editor-mappings-page"></a>SQL 目标编辑器（“映射”页）
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
+  
+### <a name="options"></a>选项  
+ **可用输入列**  
+ 查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
+  
+ **可用目标列**  
+ 查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
+  
+ **输入列**  
+ 查看从上表中选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。  
+  
+ **目标列**  
+ 查看每个可用的目标列，包括已映射或未映射的目标列。  
+  
+## <a name="sql-destination-editor-advanced-page"></a>SQL 目标编辑器（“高级”页）
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“高级”** 页指定大容量插入高级选项。  
+  
+### <a name="options"></a>选项  
+ **保留标识**  
+ 指定任务是否应在标识列中插入值。 此属性的默认值为 **False**。  
+  
+ **保留 Null**  
+ 指定任务是否应保留空值。 此属性的默认值为 **False**。  
+  
+ **表锁**  
+ 指定在加载数据时是否锁定表。 此属性的默认值为 **True**。  
+  
+ **检查约束**  
+ 指定任务是否应检查约束。 此属性的默认值为 **True**。  
+  
+ **激发触发器**  
+ 指定大容量插入任务是否应对表激发触发器。 此属性的默认值为 **False**。  
+  
+ **首行**  
+ 指定要插入的第一行。 此属性的默认值为 **-1**，表示尚未分配值。  
+  
+> [!NOTE]  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+  
+ **末行**  
+ 指定要插入的最后一行。 此属性的默认值为 **-1**，表示尚未分配值。  
+  
+> [!NOTE]  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+  
+ **最大错误数**  
+ 指定在大容量插入任务停止之前可以发生的错误数量。 此属性的默认值为 **–1**，表示尚未分配值。  
+  
+> [!NOTE]  
+>  如果在 **“SQL 目标编辑器”** 中清空此文本框，则表示不希望为此属性分配值。 请在“属性”窗口、“高级编辑器”和对象模型中使用 -1。  
+  
+ **超时**  
+ 指定在大容量插入任务因超时而停止之前等待的秒数。  
+  
+ **设置列顺序**  
+ 键入排序列的名称。 每一列都可以按升序或降序排序。 如果您使用多个排序列，请用逗号分隔列表。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../integration-services/data-flow/data-flow.md)  

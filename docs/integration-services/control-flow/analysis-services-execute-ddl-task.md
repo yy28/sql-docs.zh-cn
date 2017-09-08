@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>“Analysis Services 执行 DDL”任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [Analysis Services 执行 DDL 任务编辑器（“常规”页）](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Analysis Services 执行 DDL 任务编辑器（DDL 页）](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 执行 DDL 任务编辑器（“常规”页）
+  可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的“常规”页命名和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务。  
   
+### <a name="options"></a>选项  
+ **名称**  
+ 为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL 任务的说明。  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 执行 DDL 任务编辑器（DDL 页）
+  可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的 **DDL** 页指定与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接，以及提供有关数据定义语言 (DDL) 语句的源的信息。  
+  
+### <a name="static-options"></a>静态选项  
+ **连接**  
+ 选择[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]连接管理器中的列表或单击\<**新的连接...**> 并使用**添加 Analysis Services 连接管理器**对话框中，若要创建新的连接。  
+  
+ **相关主题：**[“添加 Analysis Services 连接管理器”对话框 UI 参考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ 指定 DDL 语句的源类型。 此属性具有下表所列的选项：  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**直接输入**|将源设置为 **SourceDirect** 文本框中存储的 DDL 语句。 选择此值将显示以下部分中的动态选项。|  
+|**文件连接**|将源设置为包含 DDL 语句的文件。 选择此值将显示以下部分中的动态选项。|  
+|**变量**|将源设置为变量。 选择此值将显示以下部分中的动态选项。|  
+  
+### <a name="dynamic-options"></a>动态选项  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = 直接输入  
+ **数据源**  
+ 键入 DDL 语句，或单击省略号 **(…)**，然后在“DDL 语句”对话框中键入语句。  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = 文件连接  
+ **数据源**  
+ 在列表中，选择一个文件连接或单击\<**新的连接...**> 并使用**文件连接管理器**对话框中，若要创建新的连接。  
+  
+ **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = 变量  
+ **数据源**  
+ 在列表中，选择变量，或单击\<**新变量...**> 并使用**添加变量**对话框中，若要创建新变量。  
+  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)  
+  
+

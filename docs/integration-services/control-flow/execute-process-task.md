@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
+- sql13.dts.designer.executeprocesstask.general.f1
+- sql13.dts.designer.executeprocesstask.process.f1
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 86c260189b858f01ef37d736f02e636bd2a9873c
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="execute-process-task"></a>执行进程任务
@@ -40,12 +42,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="configuration-of-the-execute-process-task"></a>执行进程任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
-  
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [执行进程任务编辑器（“常规”页）](../../integration-services/control-flow/execute-process-task-editor-general-page.md)  
-  
--   [执行进程任务编辑器（“进程”页）](../../integration-services/control-flow/execute-process-task-editor-process-page.md)  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -89,6 +85,61 @@ ms.lasthandoff: 08/03/2017
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
+  
+## <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
+  可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为执行进程任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对执行进程任务的说明。  
+  
+## <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
+  可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
+  
+### <a name="options"></a>选项  
+ **RequireFullFileName**  
+ 指示在指定位置未找到可执行文件时该任务是否应失败。  
+  
+ **可执行文件**  
+ 键入要运行的可执行文件的名称。  
+  
+ **参数**  
+ 提供命令提示符参数。  
+  
+ **WorkingDirectory**  
+ 键入包含可执行文件的文件夹的路径，或单击浏览 **(…)** 按钮定位到该文件夹。  
+  
+ **StandardInputVariable**  
+ 选择一个变量来提供输入到进程，或单击\<**新变量...**> 若要创建新变量：  
+  
+ **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+ **StandardOutputVariable**  
+ 选择要捕获的输出的过程中，或单击变量\<**新变量...**> 若要创建新变量。  
+  
+ **StandardErrorVariable**  
+ 选择要捕获的错误输出的处理器，或单击变量\<**新变量...**> 若要创建新变量。  
+  
+ **FailTaskIfReturnCodeIsNotSuccessValue**  
+ 指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  
+  
+ **SuccessValue**  
+ 指定可执行文件返回的用来指示进程成功的值。 默认情况下，此值设置为 **0**。  
+  
+ **TimeOut**  
+ 指定进程可以运行的秒数。 如果值为 **0** ，则表示不使用超时值，进程一直运行到处理完毕或出错为止。  
+  
+ **TerminateProcessAfterTimeOut**  
+ 指示在 **TimeOut** 选项指定的超时期限过后是否强制结束进程。 只有在 **TimeOut** 不为 **0**时，此选项才可用。  
+  
+ **WindowStyle**  
+ 指定用于运行进程的窗口样式。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

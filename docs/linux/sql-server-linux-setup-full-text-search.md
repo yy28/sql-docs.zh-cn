@@ -10,13 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8dd5d857efc47a0dc181a0fc9bf1537cb8b08441
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 以下步骤安装[SQL Server 全文搜索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql server fts**) 在 Linux 上。 全文搜索提供了对 SQL Server 表中基于字符的数据运行全文查询的功能。 对于此版本的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
@@ -270,7 +272,7 @@ sudo zypper update mssql-server-fts
 3. 将数据库和日志文件移到 Linux SQL Server 计算机。
 
     > [!TIP]
-    > 有关如何将文件从 Windows 到 Linux 上的指南，请参阅[将文件传输到 Linux](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux)。
+    > 有关如何将文件从 Windows 到 Linux 上的指南，请参阅[将文件传输到 Linux](sql-server-linux-migrate-restore-database.md#scp)。
 
 4. 在 Linux SQL Server 实例上运行下列 Transact-SQL 命令，附加语言统计信息数据库。
 

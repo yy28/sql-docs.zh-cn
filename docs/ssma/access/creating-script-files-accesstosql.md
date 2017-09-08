@@ -2,7 +2,7 @@
 title: "创建脚本文件 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,14 +14,14 @@ applies_to:
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>创建脚本文件 (AccessToSQL)
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/02/2017
   
 例如，典型的数据迁移的 Access 数据库中的特定表遵循的层次结构： 数据库-&gt;表。  
   
-已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[变量值文件](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08)或变量值的脚本文件中的单独部分中。  
+已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[变量值文件](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08)或变量值的脚本文件中的单独部分中。  
   
 **示例：**  
   
@@ -397,7 +397,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="script-file-validation"></a>脚本文件验证  
 用户可以轻松地验证他/她脚本文件的架构定义文件对照**A2SSConsoleScriptSchema.xsd**架构文件夹中可用。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>下一步
 操作控制台的下一步是[创建变量的值文件 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>另请参阅  

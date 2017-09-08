@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>Web 服务任务
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>Web 服务任务的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [Web 服务任务编辑器（“常规”页）](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Web 服务任务编辑器（“输入”页）](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Web 服务任务编辑器（“输出”页）](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
+  使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
+  
+### <a name="options"></a>选项  
+ **HTTPConnection**  
+ 在列表中，选择连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+> [!IMPORTANT]  
+>  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
+  
+ **相关主题：**[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ 键入计算机本地上 WSDL 文件的完全限定路径，或单击浏览按钮 **(…)** 找到此文件。  
+  
+ 如果您已经将该 WSDL 文件手动下载到计算机，请选择此文件。 但是，如果尚未下载该 WSDL 文件，请执行以下步骤：  
+  
+-   创建文件扩展名为“.wsdl”的空文件。  
+  
+-   为 **WSDLFile** 选项选择此空文件。  
+  
+-   将 **OverwriteWSDLFile** 的值设置为 **True** ，以便用实际 WSDL 文件覆盖该空文件。  
+  
+-   单击 **“下载 WSDL”** 下载实际 WSDL 文件，并覆盖空文件。  
+  
+    > [!NOTE]  
+    >  在“WSDLFile”框中提供现有本地文件的名称后，才会启用“下载 WSDL”选项。  
+  
+ **OverwriteWSDLFile**  
+ 指示是否可以覆盖 Web 服务任务的 WSDL 文件。  
+  
+ 如果想使用 **“下载 WSDL”** 按钮下载 WSDL 文件，请将此值设置为 **True**。  
+  
+ **名称**  
+ 为 Web 服务任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入 Web 服务任务的说明。  
+  
+ **“下载 WSDL”**  
+ 下载 WSDL 文件。  
+  
+ 当您在 **WSDLFile** 框中提供现有本地文件的名称后，该按钮才会启用。  
+  
+## <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
+  可以使用 **“Web 服务任务编辑器”** 对话框的 **“输入”** 页，指定 Web 服务、Web 方法和作为输入提供给 Web 方法的值。 可通过直接在“值”列中键入字符串或在“值”列中选择变量来提供这些值。  
+  
+### <a name="options"></a>选项  
+ **服务**  
+ 从列表中选择用来执行 Web 方法的 Web 服务。  
+  
+ **方法**  
+ 从列表中为要执行的任务选择 Web 方法。  
+  
+ **WebMethodDocumentation**  
+ 键入对 Web 方法的说明，或单击浏览按钮 **(…)**，再在“Web 方法文档”对话框中键入说明。  
+  
+ **名称**  
+ 列出为 Web 方法提供的输入名称。  
+  
+ **类型**  
+ 列出输入的数据类型。  
+  
+> [!NOTE]  
+>  Web 服务任务仅支持以下数据类型的参数：Primitive 类型（如 integer 和 string）、Primitive 类型的数组和序列，以及枚举。  
+  
+ **变量**  
+ 选中该复选框以使用变量来提供输入。  
+  
+ **“值”**  
+ 如果选中了“变量”复选框，则请在列表中选择要提供输入的变量；否则，请键入要在输入中使用的值。  
+  
+## <a name="web-service-task-editor-output-page"></a>Web 服务任务编辑器（“输出”页）
+  可以使用 **“Web 服务任务编辑器”** 对话框的 **“输出”** 页，指定 Web 方法返回的结果的存储位置。  
+  
+### <a name="static-options"></a>静态选项  
+ **OutputType**  
+ 选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
+|**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  
+  
+### <a name="outputtype-dynamic-options"></a>OutputType 动态选项  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
+ **文件**  
+ 选择列表中的文件连接管理器或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = 变量  
+ **变量**  
+ 在列表中选择变量，或单击\<**新变量...**> 若要创建新变量。  
+  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=259642)。  

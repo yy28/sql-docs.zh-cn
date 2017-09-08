@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
+- sql13.dts.designer.bulkinserttask.connection.f1
+- sql13.dts.designer.bulkinserttask.general.f1
+- sql13.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
@@ -20,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 81b72c67ee8d968a2452e7ede94fe8c390c53a9b
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
@@ -91,13 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [大容量插入任务编辑器（“常规”页）](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [大容量插入任务编辑器（“连接”页）](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [大容量插入任务编辑器（“选项”页）](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -121,4 +118,103 @@ ms.lasthandoff: 08/03/2017
   
 -   simple-talk.com 上的技术文章 [使用 SQL Server Integration Services 大容量加载数据](http://go.microsoft.com/fwlink/?LinkId=233701)。  
   
+## <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
+  可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
   
+ 若要了解大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
+  
+### <a name="options"></a>选项  
+ **连接**  
+ 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
+  
+ **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **DestinationTable**  
+ 键入目标表或视图的名称，或在列表中选择表或视图。  
+  
+ **格式**  
+ 选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
+|**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
+  
+ **文件**  
+ 在列表中，选择文件或平面文件连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
+  
+ 文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
+  
+ 如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
+  
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)，[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **刷新表**  
+ 刷新表和视图的列表。  
+  
+### <a name="format-dynamic-options"></a>Format 动态选项  
+  
+#### <a name="format--use-file"></a>Format = 使用文件  
+ **FormatFile**  
+ 键入格式化文件的路径，或单击省略号按钮 **(…)** 定位到该格式化文件。  
+  
+#### <a name="format--specify"></a>Format = 指定  
+ **RowDelimiter**  
+ 指定源文件中的行分隔符。 默认值为 **{CR}{LF}**。  
+  
+ **ColumnDelimiter**  
+ 指定源文件中的列分隔符。 默认值为 **“制表符”**。  
+  
+## <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
+  可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为大容量插入任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对大容量插入任务的说明。  
+ 
+## <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
+  使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务可以将大量的数据复制到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图中。  
+  
+ 若要了解如何使用大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
+  
+### <a name="options"></a>选项  
+ **CodePage**  
+ 指定数据文件中数据的代码页。  
+  
+ **DataFileType**  
+ 指定在加载操作中要使用的数据类型值。  
+  
+ **BatchSize**  
+ 指定每批中的行数。 默认设置为整个数据文件。 如果将 **BatchSize** 设置为零，则数据是在一批中加载的。  
+  
+ **LastRow**  
+ 指定要复制的最后一行。  
+  
+ **FirstRow**  
+ 指定要开始复制的第一行。  
+  
+ **“大容量插入任务编辑器”**  
+ |术语|定义|  
+|----------|----------------|  
+|**检查约束**|选择此项将检查表约束和列约束。|  
+|**保留 Null**|选择此项将在大容量插入操作期间保留 Null 值，而不是为空列插入任意默认值。|  
+|**启用标识插入**|选择此项可将现有值插入到标识列中。|  
+|**表锁**|选择此项将在大容量插入期间锁定表。|  
+|**激发触发器**|选择此项将激发对表上的触发器的任意插入、更新或删除操作。|  
+  
+ **SortedData**  
+ 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认值为 **false**。 这意味着 ORDER BY 子句将不对数据进行排序。  
+  
+ **MaxErrors**  
+ 指定在取消大容量插入操作之前可以发生的最大错误数量。 如果值为 0，则指示对错误的数量没有限制。  
+  
+> [!NOTE]  
+>  大容量加载操作不能导入的每一行都被计为一个错误。  
+  
+

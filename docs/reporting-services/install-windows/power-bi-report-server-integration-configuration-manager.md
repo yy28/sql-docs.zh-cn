@@ -2,7 +2,7 @@
 title: "Power BI 报表服务器集成 （配置管理器） |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/25/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“Power BI 集成”页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 
 - **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅 [什么是 Azure Active Directory？](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)
 
-- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  在你的组织第一次订阅 Azure 服务（例如 Office 365 和 Microsoft Intune）时，便会自动创建托管租户。   目前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
+- **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  在你的组织第一次订阅 Azure 服务（例如 Office 365 和 Microsoft Intune）时，便会自动创建托管租户。   当前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
 
 - 执行 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成的用户需要是 Azure AD 租户的成员、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系统管理员和 ReportServer 目录数据库的系统管理员。
 

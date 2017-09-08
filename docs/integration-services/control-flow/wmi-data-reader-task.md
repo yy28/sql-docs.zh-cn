@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 9edd5e03a79fde1aa580a47c3df294e59957e896
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-data-reader-task"></a>WMI 数据读取器任务
@@ -86,9 +88,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="configuration-of-the-wmi-data-reader-task"></a>配置 WMI 数据读取器任务  
  可以采用编程方式或通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器来设置属性。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题之一：  
-  
--   [WMI 数据读取器任务编辑器（“WMI 选项”页）](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ 有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题：  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   
@@ -100,6 +100,87 @@ Select * FROM Win32_QuickFixEngineering
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="wmi-data-reader-task-editor-general-page"></a>WMI 数据读取器任务编辑器（“常规”页）
+  可以使用 **“WMI 数据读取器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 数据读取器任务进行命名和说明。  
+  
+  有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+  
+### <a name="options"></a>选项  
+ **名称**  
+ 为 WMI 数据读取器任务提供唯一的名称。 此名称用作任务图标中的标签。  
+  
+> [!NOTE]  
+>  任务名称在一个包内必须是唯一的。  
+  
+ **Description**  
+ 键入对 WMI 数据读取器任务的说明。  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 数据读取器任务编辑器（“WMI 选项”页）
+  可以使用“WMI 数据读取器任务编辑器”对话框的“WMI 选项”页，指定 Windows Management Instrumentation 查询语言 (WQL) 查询的源和查询结果的目标。  
+  
+ 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+  
+### <a name="static-options"></a>静态选项  
+ **WMIConnectionName**  
+ 在列表中，选择 WMI 连接管理器，或单击\<**新的 WMI 连接...**> 创建新的连接管理器。  
+  
+ **相关主题：**[WMI 连接管理器](../../integration-services/connection-manager/wmi-connection-manager.md)和 [WMI 连接管理器编辑器](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ 选择任务运行的 WQL 查询的源类型。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**直接输入**|为 WQL 查询设置源。 选择此值将显示动态选项 **WQLQuerySourceType**。|  
+|**文件连接**|选择包含 WQL 查询的文件。 选择此值将显示动态选项 **WQLQuerySourceType**。|  
+|**变量**|将源设置为定义 WQL 查询的变量。 选择此值将显示动态选项 **WQLQuerySourceType**。|  
+  
+ **OutputType**  
+ 指定输出是数据表、属性值还是属性名称和值。  
+  
+ **OverwriteDestination**  
+ 指定是保留、覆盖还是追加到目标文件或变量中的原始数据。  
+  
+ **目标类型**  
+ 选择任务运行的 WQL 查询的目标类型。 此属性具有下表所列的选项。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**文件连接**|选择用于保存 WQL 查询结果的文件。 选择此值将显示动态选项 **DestinationType**。|  
+|**变量**|设置用于存储 WQL 查询结果的变量。 选择此值将显示动态选项 **DestinationType**。|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>WQLQuerySourceType 动态选项  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = 直接输入  
+ **WQLQuerySource**  
+ 提供查询，或单击省略号 (…)，然后使用“WQL 查询”对话框输入查询。  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = 文件连接  
+ **WQLQuerySource**  
+ 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 变量  
+ **WQLQuerySource**  
+ 在列表中，选择变量，或单击\<**新变量...**> 若要创建新变量。  
+  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>DestinationType 动态选项  
+  
+#### <a name="destinationtype--file-connection"></a>DestinationType = 文件连接  
+ **目标**  
+ 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+  
+ **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>DestinationType = 变量  
+ **目标**  
+ 在列表中，选择变量，或单击\<**新变量...**> 若要创建新变量。  
+  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   

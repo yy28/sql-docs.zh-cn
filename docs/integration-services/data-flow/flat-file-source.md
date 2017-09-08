@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], Flat File
 - text file reading [Integration Services]
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d3dd55338815b6b99ce0a1002a174af11984
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-source"></a>平面文件源
@@ -57,14 +60,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-source"></a>平面文件源的配置  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关可在 **“平面文件源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
-  
--   [平面文件源编辑器（“连接管理器”页）](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)  
-  
--   [平面文件源编辑器（“列”页）](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)  
-  
--   [平面文件源编辑器（“错误输出”页）](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)  
-  
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
 -   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,6 +68,71 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>相关任务  
  有关如何设置数据流组件属性的详细信息，请参阅 [设置数据流组件属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
+  
+## <a name="flat-file-source-editor-connection-manager-page"></a>平面文件源编辑器（“连接管理器”页）
+  可以使用 **“平面文件源编辑器”** 对话框的 **“连接管理器”** 页，选择平面文件源将使用的连接管理器。 平面文件源从文本文件中读取数据，文本文件可以采用分隔符分隔、固定宽度或混合格式。  
+  
+ 平面文件源可以使用下列类型的连接管理器之一：  
+  
+-   如果源是单个平面文件，则使用平面文件连接管理器。 有关详细信息，请参阅 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
+  
+-   如果源是多平面文件并且数据流任务在循环容器（例如 For 循环容器）内，则使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。 有关详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
+  
+### <a name="options"></a>选项  
+ **Flat file connection manager**  
+ 从列表中选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
+  
+ **新建**  
+ 通过使用“平面文件连接管理器编辑器”对话框创建新的连接管理器。  
+  
+ **在数据流中保留源中的空值**  
+ 指定提取数据时是否保留空值。 此属性的默认值为 **false**。 当此值为 F**alse**时，平面文件源使用每列的相应默认值替换源数据中的空值，例如，对于字符串列使用空字符串，对于数值列使用零。  
+  
+ **预览**  
+ 通过使用“数据视图”对话框预览结果。 预览最多可以显示 200 行。  
+  
+## <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
+  可以使用“平面文件源编辑器”对话框的“列”节点，将输出列映射到每个外部（源）列。  
+  
+> [!NOTE]  
+>  平面文件源的 **FileNameColumnName** 属性及其输出列的 **FastParse** 属性未在 **“平面文件源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
+  
+### <a name="options"></a>选项  
+ **可用外部列**  
+ 查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
+  
+ **“外部列”**  
+ 按任务读取外部（源）列的顺序查看这些列。 首先清除表中所选的列，然后以不同的顺序从列表中选择外部列，即可更改顺序。  
+  
+ **输出列**  
+ 为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
+  
+## <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
+  可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  
+  
+### <a name="options"></a>选项  
+ **输入/输出**  
+ 查看数据源的名称。  
+  
+ **列**  
+ 查看在“平面文件源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+  
+ **错误**  
+ 指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **截断**  
+ 指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **Description**  
+ 查看对错误的说明。  
+  
+ **将此值设置到选定的单元格**  
+ 指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
+  
+ **应用**  
+ 将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>另请参阅  
  [平面文件目标](../../integration-services/data-flow/flat-file-destination.md)   
