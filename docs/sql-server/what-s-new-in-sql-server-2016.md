@@ -111,4 +111,4 @@ SQL Server 2016 Analysis Services 提升了兼容性级别为 1200 的表格模�
 - [安装程序和安装服务](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 - [新建 SQL PowerShell 模块](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
