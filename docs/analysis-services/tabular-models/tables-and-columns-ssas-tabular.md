@@ -1,24 +1,29 @@
 ---
-title: "表和列（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "表和列 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 表和列（SSAS 表格）
+# <a name="tables-and-columns-ssas-tabular"></a>表和列（SSAS 表格）
   在您通过使用表导入向导将表和数据添加到某一模型后，可通过添加新的数据列、创建表之间的关系、定义对数据进行扩展的计算以及对表中的数据进行筛选和排序以便于查看，开始使用这些表。  
   
  本主题的内容：  
@@ -50,7 +55,7 @@ caps.handback.revision: 13
   
 -   关系数据和表格 (HTML) 数据的组合复制并粘贴到表中。  
   
- 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”**将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据（SSAS 表格）](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)。  
+ 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”**将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据（SSAS 表格）](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
  在添加了所需的数据后，可以创建各表之间的其他关系，查找或引用其他表中的相关值，或者通过添加新的计算列创建派生值。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
 |[重命名表或列（SSAS 表格）](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|介绍如何重命名表或列以使其在您的模型中更易于标识。|  
 |[设置列的数据类型（SSAS 表格）](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|介绍如何更改列的数据类型。 数据类型定义列中的数据是如何存储和展示的。|  
 |[隐藏或冻结列（SSAS 表格）](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|介绍如何隐藏您不想显示的列，以及如何通过冻结（锁定）一个区域中的特定列，在滚动到模型的其他区域时使模型的某一区域可见。|  
-|[计算列（SSAS 表格）](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)|本节中的主题介绍了如何使用计算列向您的模型添加聚合数据。|  
-|[对数据进行筛选和排序（SSAS 表格）](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
+|[计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)|本节中的主题介绍了如何使用计算列向您的模型添加聚合数据。|  
+|[对数据进行筛选和排序（SSAS 表格）](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
   
   

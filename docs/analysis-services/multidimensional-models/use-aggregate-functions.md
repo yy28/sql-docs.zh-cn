@@ -1,29 +1,34 @@
 ---
-title: "使用聚合函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚合函数 [Analysis Services]"
+title: "使用聚合函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用聚合函数
+# <a name="use-aggregate-functions"></a>使用聚合函数
   使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 **Sum**。 度量值的值的总和将根据活动的层次结构的级别而异。  
   
- 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括 **Sum**、 **Min**、 **Max**、 **Count**、 **Distinct Count**以及几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md)。  
+ 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括 **Sum**、 **Min**、 **Max**、 **Count**、 **Distinct Count**以及几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](../../mdx/mdx-data-definition-create-member.md)。  
   
  对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是 **Sum**，假设源列包含数字数据。 在不考虑源列的数据类型的情况下分配**Sum** 。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 **Sum**的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
   
@@ -51,14 +56,14 @@ caps.handback.revision: 28
 |**Max**|半累加性|检索所有子成员的最高值。|  
 |**DistinctCount**|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) 。|  
 |**InclusionThresholdSetting**|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
-|**ByAccount**|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，则视为 **None** 聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅[创建父子类型维度的财务帐户](../../analysis-services/multidimensional-models/create-a-finance-account-of-parent-child-type-dimension.md)。|  
+|**ByAccount**|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，则视为 **None** 聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
 |**AverageOfChildren**|半累加性|计算所有非空子成员的平均值。|  
 |**FirstChild**|半累加性|检索第一个子成员的值。|  
 |**LastChild**|半累加性|检索最后一个子成员的值。|  
 |**FirstNonEmpty**|半累加性|检索第一个非空子成员的值。|  
 |**LastNonEmpty**|半累加性|检索最后一个非空子成员的值。|  
   
-##  <a name="bkmk_distinct"></a> 有关非重复计数度量值  
+##  <a name="bkmk_distinct"></a> About Distinct Count Measures  
  “聚合函数”  属性值为 **Distinct Count** 的度量值称为非重复计数度量值。 非重复计数度量值可以用于对维度的最低级别成员在事实数据表中的出现次数进行计数。 由于计数具有非重复性，因此，如果某个成员出现多次，则仅对此成员进行一次计数。 非重复计数度量值始终位于专用的度量值组中。 将非重复计数度量值放入其自己的度量值组是内置到设计器中作为性能优化技术的最佳做法。  
   
  非重复计数度量值通常用于确定对于某个维度的每个成员，另一维度有多少不同的最低级别成员共享事实数据表中的。 例如，在“销售额”多维数据集中，对于每个客户和客户组，购买了多少不同的产品？ （即，对于“客户”维度的每个成员，“产品”维度有多少不同的最低级别成员共享事实数据表中的行？）或者，例如在“Internet 站点访问”多维数据集中，对于每个站点访问者和站点访问者组，访问了 Internet 站点上有多少不同的页？ （即，对于“站点访问者”维度的每个成员，“页”维度有多少不同的最低级别成员共享事实数据表中的行？）在上述每个示例中，第二个维度的最低级别成员由非重复计数度量值进行计数。  
@@ -67,9 +72,9 @@ caps.handback.revision: 28
   
  对成员进行计数的非重复计数度量值基于事实数据表中的外键列。 （即，度量值的“源列”属性标识此列。）此列联接标识由非重复计数度量值进行计数的成员的维度表列。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 函数引用 (MDX)](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用 &#40;MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
  [“选择增强功能”](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "钻取查询（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AllowDrillThrough 属性"
-  - "钻取 [Analysis Services]"
-  - "钻取 [DMX]"
+title: "钻取查询 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AllowDrillThrough property
+- drillthrough [Analysis Services]
+- drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 钻取查询（数据挖掘）
+# <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
   “钻取查询”  让您通过将查询发送到挖掘模型，检索基础事例或结构数据中的详细信息。 如果您希望查看用来为模型定型的事例以及用来测试模型的事例，或者如果您希望查看事例数据的详细信息，则钻取会非常有用。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘提供了两种不同的钻取选项：  
@@ -60,16 +65,16 @@ caps.handback.revision: 25
   
 ##  <a name="bkmk_Considerations"></a> 使用钻取功能时的注意事项  
   
--   如果使用数据挖掘向导，则用以对模型事例启用钻取的选项位于向导的最后一页。 默认情况下，钻取功能处于禁用状态。 有关详细信息，请参阅[完成向导（数据挖掘向导）](../Topic/Completing%20the%20Wizard%20\(Data%20Mining%20Wizard\).md)。  
+-   如果使用数据挖掘向导，则用以对模型事例启用钻取的选项位于向导的最后一页。 默认情况下，钻取功能处于禁用状态。 有关详细信息，请参阅[完成向导（数据挖掘向导）](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)。  
   
 -   您可以向现有的挖掘模型中添加钻取功能，但是，如果这样做，必须重新处理该模型，才能钻取到所需的数据。  
   
--   钻取就是检索在处理挖掘结构时缓存的定型事例的相关信息。 因此，如果在结构处理完毕后，通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **ClearAfterProcessing**，清除了缓存的数据，则钻取功能将无法正常工作。 若要对结构列启用钻取，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **KeepTrainingCases**，然后重新处理结构。  
+-   钻取就是检索在处理挖掘结构时缓存的定型事例的相关信息。 因此，如果在结构处理完毕后，通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **ClearAfterProcessing**，清除了缓存的数据，则钻取功能将无法正常工作。 若要对结构列启用钻取，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **KeepTrainingCases** ，然后重新处理结构。  
   
 -   如果挖掘结构不允许进行钻取，但是挖掘模型允许进行钻取，则只能查看模型事例中的信息，而不能查看挖掘结构中的信息。  
   
 ###  <a name="bkmk_Security"></a> 钻取的安全问题  
- 如果您希望从模型钻取到结构事例，则必须确认挖掘结构和挖掘模型的 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 属性均设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。 有关如何创建角色的信息，请参阅[角色设计器（Analysis Services - 多维数据）](../Topic/Role%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)。 请参阅。  
+ 如果您希望从模型钻取到结构事例，则必须确认挖掘结构和挖掘模型的 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 属性均设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。 有关如何创建角色的信息，请参阅[角色设计器（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)。 请参阅。  
   
  挖掘结构和挖掘模型的钻取权限是分开设置的。 即使不具有结构的钻取权限，模型的钻取权限也会允许您从模型进行钻取。 如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md) 函数，将结构列包含到模型钻取查询中。  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 25
 |Microsoft 神经网络算法|不提供支持。 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 逻辑回归算法|不提供支持。 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 线性回归算法|支持。 但是，由于该模型创建一个节点 ( **All**)，因此钻取时会返回该模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
-|Microsoft 时序算法|支持。 但是，不能通过使用数据挖掘设计器的 **“挖掘模型查看器”** 来钻取到结构或事例数据， 而必须创建一个 DMX 查询。<br /><br /> 同样，不能钻取到特定节点，也不能编写一个 DMX 查询来检索时序模型内特定节点中的事例。 可以通过使用其他条件（如日期或属性值）来从模型或结构中检索事例数据。<br /><br /> 还可使用 [Lag (DMX)](../../dmx/lag-dmx.md) 函数，从模型中的事例返回日期。<br /><br /> 如果希望查看由 Microsoft 时序算法创建的 ARTXP 和 ARIMA 节点的详细信息，则可使用 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。|  
+|Microsoft 时序算法|支持。 但是，不能通过使用数据挖掘设计器的 **“挖掘模型查看器”** 来钻取到结构或事例数据， 而必须创建一个 DMX 查询。<br /><br /> 同样，不能钻取到特定节点，也不能编写一个 DMX 查询来检索时序模型内特定节点中的事例。 可以通过使用其他条件（如日期或属性值）来从模型或结构中检索事例数据。<br /><br /> 还可使用 [Lag (DMX)](../../dmx/lag-dmx.md) 函数，从模型中的事例返回日期。<br /><br /> 如果希望查看由 Microsoft 时序算法创建的 ARTXP 和 ARIMA 节点的详细信息，则可使用 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。|  
   
 ##  <a name="bkmk_Tasks"></a> 相关任务  
  通过以下链接在特定方案中使用钻取。  
@@ -98,7 +103,7 @@ caps.handback.revision: 25
 |使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

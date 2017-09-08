@@ -1,30 +1,35 @@
 ---
-title: "重命名 Analysis Services 实例 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 实例, 重命名"
-  - "重命名 Analysis Services 实例"
-  - "名称 [Analysis Services], 重命名实例"
-  - "名称 [Analysis Services]"
+title: "重命名 Analysis Services 实例 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 重命名 Analysis Services 实例
+# <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
   可以使用随 Management Studio （Web 安装）一起安装的“重命名实例”工具，重命名 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的现有实例。  
   
 > [!IMPORTANT]  
@@ -35,7 +40,7 @@ caps.handback.revision: 53
 > [!NOTE]  
 >  群集环境中不支持 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具。  
   
-### 重命名 Analysis Services 的实例  
+### <a name="to-rename-an-instance-of-analysis-services"></a>重命名 Analysis Services 的实例  
   
 1.  从 C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio 启动“实例重命名”工具 **asinstancerename.exe**。  
   
@@ -47,9 +52,9 @@ caps.handback.revision: 53
   
      在名称更改过程中，Analysis Services 实例将会停止并重新启动。  
   
-### 重命名之后的核对清单  
+### <a name="post-rename-checklist"></a>重命名之后的核对清单  
   
-1.  若要恢复对重命名的实例上运行的数据库的访问，您将需要在 Excel 或其他客户端应用程序中手动更新数据连接。 还需要检查所有预定义的连接，如可能引用您刚重命名的实例的 Reporting Services 共享数据源、Excel ODC 文件或 BI 语义模型连接文件。 有关详细信息，请参阅[连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)。  
+1.  若要恢复对重命名的实例上运行的数据库的访问，您将需要在 Excel 或其他客户端应用程序中手动更新数据连接。 还需要检查所有预定义的连接，如可能引用您刚重命名的实例的 Reporting Services 共享数据源、Excel ODC 文件或 BI 语义模型连接文件。 有关详细信息，请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)。  
   
 2.  更新定期用于备份、同步或处理数据库的 PowerShell 脚本或 AMO 脚本。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      下例对此进行了说明。 假定您使用默认虚拟帐户将表格模式服务器安装为名为“Tabular”的实例，这将生成以下配置：  
   
-    1.  实例名称 = \<服务器>\TABULAR  
+    1.  实例名称 =\<服务器 > \TABULAR  
   
     2.  服务名称 = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      现在假定您将该实例重命名为“TAB2”。 更改名称后将生成如下配置：  
   
-    1.  实例名称 = \<服务器>\TAB2  
+    1.  实例名称 =\<服务器 > \TAB2  
   
     2.  服务名称 = MSOLAP$TAB2  
   

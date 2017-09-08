@@ -1,30 +1,35 @@
 ---
-title: "测试和验证任务和操作指南（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘准确性图表 [Analysis Services]"
-  - "预测建模 [Analysis Services]"
-  - "挖掘结构 [Analysis Services], 预测建模"
-  - "挖掘准确性图表 [Analysis Services], 操作指南主题"
-  - "挖掘模型 [Analysis Services], 预测建模"
-  - "预测准确性 [数据挖掘]"
+title: "测试和验证任务和操作指南 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services]
+- predictive modeling [Analysis Services]
+- mining structures [Analysis Services], predictive modeling
+- Mining Accuracy Chart [Analysis Services], how-to topics
+- mining models [Analysis Services], predictive modeling
+- predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 测试和验证任务和操作指南（数据挖掘）
+# <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>测试和验证任务和操作指南（数据挖掘）
   可以使用 **中的数据挖掘设计器的** “挖掘准确性图表” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，比较挖掘结构中的挖掘模型的预测准确性。  
   
  可以创建四种图表：  
@@ -39,11 +44,11 @@ caps.handback.revision: 41
   
  前三个图表使用 **“输入选择”** 选项卡来定义用于生成该图表的数据。  
   
- 通过使用“交叉验证”选项卡可用的其他输入，创建交叉验证图表。 有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。  
+ 通过使用“交叉验证”选项卡可用的其他输入，创建交叉验证图表。有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。  
   
  有关如何使用挖掘准确性图表的详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [创建提升图、利润图或分类矩阵](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

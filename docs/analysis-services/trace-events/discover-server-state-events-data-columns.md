@@ -1,24 +1,29 @@
 ---
-title: "发现服务器状态事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“发现服务器状态”事件类别"
+title: "发现服务器状态事件数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 发现服务器状态事件数据列
+# <a name="discover-server-state-events-data-columns"></a>发现服务器状态事件数据列
   “发现服务器状态”事件类别具有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -29,13 +34,13 @@ caps.handback.revision: 32
   
  下表列出了其中每个事件类的数据列。  
   
-## 服务器状态发现开始类 - 数据列  
+## <a name="server-state-discover-begin-classdata-columns"></a>服务器状态发现开始类 - 数据列  
   
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2：**DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含服务器状态发现事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |ConnectionID|25|1|包含与服务器状态发现事件关联的唯一连接 ID。|  
@@ -50,13 +55,13 @@ caps.handback.revision: 32
 |ServerName|43|8|包含发生服务器状态发现事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
 |RequestProperties|45|9|包含当前 XMLA 请求的属性。|  
   
-## 服务器状态发现数据类 - 数据列  
+## <a name="server-state-discover-data-classdata-columns"></a>服务器状态发现数据类 - 数据列  
   
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2：**DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含服务器状态发现事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |ConnectionID|25|1|包含与服务器状态发现事件关联的唯一连接 ID。|  
@@ -65,13 +70,13 @@ caps.handback.revision: 32
 |TextData|42|9|包含与服务器对发现请求的响应关联的文本数据。|  
 |ServerName|43|8|包含发生服务器状态发现事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 服务器状态发现结束类 - 数据列  
+## <a name="server-state-discover-end-classdata-columns"></a>服务器状态发现结束类 - 数据列  
   
 |||||  
 |-|-|-|-|  
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：**DISCOVER_CONNECTIONS**<br /><br /> 2：**DISCOVER_SESSIONS**<br /><br /> 3：**DISCOVER_TRANSACTIONS**<br /><br /> 6：**DISCOVER_DB_CONNECTIONS**<br /><br /> 7：**DISCOVER_JOBS**<br /><br /> 8：**DISCOVER_LOCKS**<br /><br /> 12：**DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13：**DISCOVER_MEMORYUSAGE**<br /><br /> 14：**DISCOVER_JOB_PROGRESS**<br /><br /> 15：**DISCOVER_MEMORYGRANT**|  
+|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1： **DISCOVER_CONNECTIONS**<br /><br /> 2： **DISCOVER_SESSIONS**<br /><br /> 3： **DISCOVER_TRANSACTIONS**<br /><br /> 6： **DISCOVER_DB_CONNECTIONS**<br /><br /> 7： **DISCOVER_JOBS**<br /><br /> 8： **DISCOVER_LOCKS**<br /><br /> 12： **DISCOVER_PERFORMANCE_COUNTERS**<br /><br /> 13： **DISCOVER_MEMORYUSAGE**<br /><br /> 14： **DISCOVER_JOB_PROGRESS**<br /><br /> 15： **DISCOVER_MEMORYGRANT**|  
 |CurrentTime|2|5|包含服务器状态发现事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|包含事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|包含与服务器对发现请求的响应关联的文本数据。|  
 |ServerName|43|8|包含发生服务器状态发现事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 另请参阅  
- [发现服务器状态事件类别](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

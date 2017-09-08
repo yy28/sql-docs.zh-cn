@@ -1,27 +1,32 @@
 ---
-title: "Naive Bayes 模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes 模型 [Analysis Services]"
-  - "naive bayes 算法 [Analysis Services]"
-  - "内容查询 [DMX]"
+title: "Naive Bayes 模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Naive Bayes 模型查询示例
+# <a name="naive-bayes-model-query-examples"></a>Naive Bayes 模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 您还可以通过使用针对数据挖掘架构行集的查询来检索元数据。 本节说明如何创建针对基于 Microsoft Naive Bayes 算法的模型的查询。  
   
  **内容查询**  
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
  [预测关联](#bkmk_Query7)  
   
-## 查找有关 Naive Bayes 模型的信息  
+## <a name="finding-information-about-a-naive-bayes-model"></a>查找有关 Naive Bayes 模型的信息  
  Naive Bayes 模型的模型内容可提供有关定型数据中值分布的聚合信息。 您还可以通过创建针对数据挖掘架构行集的查询来检索有关模型的元数据的信息。  
   
 ###  <a name="bkmk_Query1"></a> 示例查询 1：使用 DMX 获取模型元数据  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- 此示例所使用的模型基于您在 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)中创建的 Naive Bayes 模型，但进行了修改，添加了第二个可预测属性，并对定型数据应用了筛选器。  
+ 此示例所使用的模型基于您在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的 Naive Bayes 模型，但进行了修改，添加了第二个可预测属性，并对定型数据应用了筛选器。  
   
 ###  <a name="bkmk_Query2"></a> 示例查询 2：检索定型数据的摘要  
  在 Naive Bayes 模型中，有关定型数据中值分布的聚合信息存储在边际统计节点中。 该摘要获取方便，您不必创建针对定型数据的 SQL 查询，就可找到该摘要。  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  有关 Analysis Services 系统存储过程的详细信息，请参阅[数据挖掘存储过程（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)。  
   
-## 使用 Naive Bayes 模型进行预测  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>使用 Naive Bayes 模型进行预测  
  和用于浏览输入属性与可预测属性之间的关系相比，Microsoft Naive Bayes 算法通常较少用于预测。 但模型支持使用预测函数进行预测和关联。  
   
 ###  <a name="bkmk_Query5"></a> 示例查询 5：使用单独查询预测结果  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  表的最后一行显示对支持和概率的缺失值调整。 方差和标准偏差值始终为 0，因为 Naive Bayes 模型无法对连续值建立模型。  
   
 ###  <a name="bkmk_Query7"></a> 示例查询 7：预测关联  
- 如果挖掘结构包含以可预测属性作为键的嵌套表，则不可将 Microsoft Naive Bayes 算法用于关联分析。 例如，可以通过使用在数据挖掘教程的[第 3 课：生成市场篮方案（数据挖掘中级教程）](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)中创建的挖掘结构来生成 Naive Bayes 模型。 此示例中使用的模型经过修改，目的是向事例表中添加收入和客户区域。  
+ 如果挖掘结构包含以可预测属性作为键的嵌套表，则不可将 Microsoft Naive Bayes 算法用于关联分析。 例如，可以通过使用在数据挖掘教程的[第 3 课：生成市场篮方案（数据挖掘中级教程）](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)中创建的挖掘结构来生成 Naive Bayes 模型。 此示例中使用的模型经过修改，目的是向事例表中添加收入和客户区域。  
   
  下面的查询示例给出了一个单独查询，该查询预测购买产品 `'Road Tire Tube'`时还可能会购买产品。 您可使用这些信息，向特定类型的客户推荐产品。  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## 函数列表  
+## <a name="function-list"></a>函数列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 此外， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法还额外支持下表中列出的函数。  
   
 |||  
@@ -254,9 +259,9 @@ AS t
   
  若要查看特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数参考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft Naive Bayes 算法技术参考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft Naive Bayes 算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

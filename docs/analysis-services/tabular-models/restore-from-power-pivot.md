@@ -1,30 +1,35 @@
 ---
-title: "从 Power Pivot 还原 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql11.asvs.ssmsimbi.RestoreFromPP.f1"
+title: "从 Power Pivot 还原 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27541f0f58b11367994d2131eb95b63cbf55a4af
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 从 Power Pivot 还原
+# <a name="restore-from-power-pivot"></a>从 Power Pivot 还原
   你可以使用 SQL Server Management Studio 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”功能针对 Analysis Services 实例（在表格模式下运行）创建新的表格模型数据库，或从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿 (.xlsx) 还原到现有数据库。  
   
 > [!NOTE]  
->  SQL Server Data Tools 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板提供了类似功能。 有关详细信息，请参阅[从 PowerPivot 导入（SSAS 表格）](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)。  
+>  SQL Server Data Tools 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板提供了类似功能。 有关详细信息，请参阅 [从 PowerPivot 导入（SSAS 表格）](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)。  
   
  使用“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]还原”时，请注意下列问题：  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型中的数据将复制到该 Analysis Services 实例上的现有或新的表格模型数据库中。 如果你的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿包含链接表，则将以不带数据源的表形式来重新创建表，该表与使用“粘贴到新表中”创建的表类似。  
   
-### 从 Power Pivot 还原  
+### <a name="to-restore-from-power-pivot"></a>从 Power Pivot 还原  
   
 1.  在 SSMS 中要还原到的 Active Directory 实例中，右键单击“数据库”，然后单击“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 还原”。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 5.  在 **“选项”**中，选中 **“包括安全信息”** 。 在从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿还原时，此设置不适用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [表格模型数据库（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [从 PowerPivot 导入（SSAS 表格）](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   

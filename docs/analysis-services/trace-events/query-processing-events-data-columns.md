@@ -1,22 +1,27 @@
 ---
-title: "查询处理事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "查询处理事件的数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查询处理事件数据列
+# <a name="query-processing-events-data-columns"></a>查询处理事件数据列
   “查询处理事件”事件类别具有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  下表列出了其中每个事件类的数据列。  
   
-## 查询多维数据集开始  
+## <a name="query-cube-begin"></a>查询多维数据集开始  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 查询多维数据集结束  
+## <a name="query-cube-end"></a>查询多维数据集结束  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 计算非空开始  
+## <a name="calculate-non-empty-begin"></a>计算非空开始  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 计算非空当前  
+## <a name="calculate-non-empty-current"></a>计算非空当前  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 计算非空结束  
+## <a name="calculate-non-empty-end"></a>计算非空结束  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 序列化结果开始  
+## <a name="serialize-results-begin"></a>序列化结果开始  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 序列化结果当前  
+## <a name="serialize-results-current"></a>序列化结果当前  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 序列化结果结束  
+## <a name="serialize-results-end"></a>序列化结果结束  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 执行 MDX 脚本开始  
-  
-|**列名**|**列 ID**|**列类型**|**列说明**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
-|CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|Duration|5|2|事件占用的时间（毫秒）。|  
-|CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
-|ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
-|DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
-|NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
-|TextData|42|9|与事件关联的文本数据。|  
-|ServerName|43|8|生成事件的服务器的名称。|  
-  
-## 执行 MDX 脚本当前  
-  
-|**列名**|**列 ID**|**列类型**|**列说明**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1|事件类用于将事件分类。|  
-|CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
-|Duration|5|2|事件占用的时间（毫秒）。|  
-|CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
-|ProgressTotal|9|1|总进度。|  
-|IntegerData|10|1|整型数据。|  
-|ObjectType|12|1|对象类型。|  
-|ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
-|ConnectionID|25|1|唯一的连接 ID。|  
-|DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
-|NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
-|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
-|TextData|42|9|与事件关联的文本数据。|  
-|ServerName|43|8|生成事件的服务器的名称。|  
-  
-## 执行 MDX 脚本结束  
+## <a name="execute-mdx-script-begin"></a>执行 MDX 脚本开始  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 查询维度  
+## <a name="execute-mdx-script-current"></a>执行 MDX 脚本当前  
+  
+|**列名**|**列 ID**|**列类型**|**列说明**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|事件类用于将事件分类。|  
+|CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|Duration|5|2|事件占用的时间（毫秒）。|  
+|CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
+|ProgressTotal|9|1|总进度。|  
+|IntegerData|10|1|整型数据。|  
+|ObjectType|12|1|对象类型。|  
+|ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
+|ConnectionID|25|1|唯一的连接 ID。|  
+|DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
+|NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
+|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|TextData|42|9|与事件关联的文本数据。|  
+|ServerName|43|8|生成事件的服务器的名称。|  
+  
+## <a name="execute-mdx-script-end"></a>执行 MDX 脚本结束  
+  
+|**列名**|**列 ID**|**列类型**|**列说明**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1|事件类用于将事件分类。|  
+|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息：<br /><br /> 1：MDX 脚本<br /><br /> 2：MDX 脚本命令|  
+|CurrentTime|2|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|StartTime|3|5|事件开始的时间（如果可用）。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|EndTime|4|5|事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
+|Duration|5|2|事件占用的时间（毫秒）。|  
+|CPUTime|6|2|事件所用的 CPU 时间（毫秒）。|  
+|ProgressTotal|9|1|总进度。|  
+|IntegerData|10|1|整型数据。|  
+|ObjectType|12|1|对象类型。|  
+|ObjectPath|14|8|对象路径。 逗号分隔的父级列表，以对象的父级开头。|  
+|ConnectionID|25|1|唯一的连接 ID。|  
+|DatabaseName|28|8|正在运行用户语句的数据库的名称。|  
+|NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
+|SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
+|TextData|42|9|与事件关联的文本数据。|  
+|ServerName|43|8|生成事件的服务器的名称。|  
+  
+## <a name="query-dimension"></a>查询维度  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 查询子多维数据集  
+## <a name="query-subcube"></a>查询子多维数据集  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 查询子多维数据集详情  
+## <a name="query-subcube-verbose"></a>查询子多维数据集详情  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 从聚合获取数据  
+## <a name="get-data-from-aggregation"></a>从聚合获取数据  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 从缓存获取数据  
+## <a name="get-data-from-cache"></a>从缓存获取数据  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## VertiPaq SE 查询开始  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE 查询开始  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## VertiPaq SE 查询结束  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE 查询结束  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 资源使用情况  
+## <a name="resource-usage"></a>资源使用情况  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## VertiPaq SE 查询缓存匹配  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE 查询缓存匹配  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 直接查询开始  
+## <a name="direct-query-begin"></a>直接查询开始  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 直接查询结束  
+## <a name="direct-query-end"></a>直接查询结束  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询处理事件类别](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "会话事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“会话事件”事件类别"
+title: "Session Events Data Columns |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 会话事件数据列
+# <a name="session-events-data-columns"></a>会话事件数据列
   “会话事件”事件类别具有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  下表列出了此事件类的数据列。  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 现有会话  
+## <a name="existing-session"></a>现有会话  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|生成事件的服务器的名称。|  
 |RequestProperties|45|9|XMLA 请求属性。|  
   
-## 会话初始化  
+## <a name="session-initialize"></a>会话初始化  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|生成事件的服务器的名称。|  
 |RequestProperties|45|9|XMLA 请求属性。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“安全审核”事件类别](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

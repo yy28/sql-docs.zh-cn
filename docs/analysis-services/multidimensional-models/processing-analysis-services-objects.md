@@ -1,27 +1,32 @@
 ---
-title: "处理 Analysis Services 对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLAP 对象 [Analysis Services], 处理"
-  - "OLAP 对象 [Analysis Services]"
+title: "处理 Analysis Services 对象 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 处理 Analysis Services 对象
+# <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
   处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  应注意处理行为的后果以减少负面影响。 例如，完全处理某个维度会将所有依赖于此维度的分区自动设置为未处理状态。 这将使受影响的多维数据集在依赖分区得到处理之前变得无法查询。  
@@ -73,7 +78,7 @@ caps.handback.revision: 44
   
  维度处理不能创建或更新在多维数据集级别定义的计算成员。 更新多维数据集定义时会影响计算成员。 而且，维度处理不会创建或更新聚合。 但是，维度处理会导致聚合被删除。 只有在处理分区期间才能创建或更新聚合。  
   
- 处理某个维度时，应该明白该维度可能用于好几个多维数据集中。 处理该维度时，这些多维数据集被标记为未处理并且变得无法查询。 若要同时处理维度及相关的多维数据集，请使用批处理设置。 有关详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
+ 处理某个维度时，应该明白该维度可能用于好几个多维数据集中。 处理该维度时，这些多维数据集被标记为未处理并且变得无法查询。 若要同时处理维度及相关的多维数据集，请使用批处理设置。 有关详细信息，请参阅 [批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
 ##  <a name="bkmk_procmeasure"></a> 处理度量值组  
  处理某个度量值组时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会一并处理该度量值组内的某些或全部分区和所有参与该度量值组的未处理维度。 处理作业的细节取决于所选择的处理选项。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以处理一个或多个度量值组而不影响多维数据集中的其他度量值组。  
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  有关处理挖掘结构和模型的详细信息，请参阅[处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于处理的工具和方法 (Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [批处理 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

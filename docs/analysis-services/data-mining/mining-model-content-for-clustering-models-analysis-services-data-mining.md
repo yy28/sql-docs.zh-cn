@@ -1,41 +1,46 @@
 ---
-title: "聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "最近相邻点 [数据挖掘]"
-  - "聚类分析 [数据挖掘]"
-  - "挖掘模型内容, 聚类分析模型"
-  - "聚类分析算法 [Analysis Services]"
+title: "聚类分析模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- nearest neighbor [Data Mining]
+- clustering [Data Mining]
+- mining model content, clustering models
+- clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98ce20c3306de8d62a552df44684dd0c6cfebabc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
-  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+# <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
+  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-## 了解聚类分析模型的结构  
+## <a name="understanding-the-structure-of-a-clustering-model"></a>了解聚类分析模型的结构  
  聚类分析模型的结构很简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有分类的平面列表 (NODE_TYPE = 5)。 下图显示了此组织。  
   
- ![聚类分析的模型内容结构](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "聚类分析的模型内容结构")  
+ ![结构的聚类分析模型内容](../../analysis-services/data-mining/media/modelcontentstructure-clust.gif "的聚类分析模型内容的结构")  
   
  每个子节点均表示一个分类，并包含有关该分类中事例属性的详细统计信息。 这包含该分类中事例数的计数以及将该分类与其他分类区分开来的值的分布。  
   
 > [!NOTE]  
 >  您无需遍历节点来获取分类的计数或说明，该模型父节点也会对分类进行计数并列出分类。  
   
- 父节点包含有用的统计信息，用于描述所有定型事例的实际分布。 可在嵌套表列 NODE_DISTRIBUTION 中找到这些统计信息。 例如，下表显示了 NODE_DISTRIBUTION 表中的若干行，这些行描述了你在[数据挖掘基础教程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中创建的聚类分析模型 `TM_Clustering` 的客户人口统计信息的分布：  
+ 父节点包含有用的统计信息，用于描述所有定型事例的实际分布。 可在嵌套表列 NODE_DISTRIBUTION 中找到这些统计信息。 例如，下表显示了 NODE_DISTRIBUTION 表中的若干行，这些行描述了你在 `TM_Clustering`数据挖掘基础教程 [中创建的聚类分析模型](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)的客户人口统计信息的分布：  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -52,10 +57,10 @@ caps.handback.revision: 15
   
  请注意，对于每个属性，都有一个 **Missing** 值类型，可告诉您有多少个事例没有该属性的数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
-## 聚类分析模型的模型内容  
+## <a name="model-content-for-a-clustering-model"></a>聚类分析模型的模型内容  
  本节仅针对与聚类分析模型有关的挖掘模型内容中的这些列给出详细信息和示例。  
   
- 有关架构行集中通用列（例如 MODEL_CATALOG 和 MODEL_NAME）的信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 有关架构行集中通用列（例如 MODEL_CATALOG 和 MODEL_NAME）的信息，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -133,7 +138,7 @@ caps.handback.revision: 15
   
  **群集节点** 指示将分类的大小作为事例数。  
   
- **注意**：如果模型使用 K-Means 聚类分析，则每个事例只能属于一个群集。 但是，如果模型使用 EM 聚类分析，则每个事例可以属于不同的分类，而且对于事例所属的每个分类，该事例都将分配有一个加权距离。 因此，对于 EM 模型来说，对单个分类支持的和将大于对整个模型的支持。  
+ **注意** ：如果模型使用 K-Means 聚类分析，则每个事例只能属于一个群集。 但是，如果模型使用 EM 聚类分析，则每个事例可以属于不同的分类，而且对于事例所属的每个分类，该事例都将分配有一个加权距离。 因此，对于 EM 模型来说，对单个分类支持的和将大于对整个模型的支持。  
   
  MSOLAP_MODEL_COLUMN  
  不用于聚类分析模型。  
@@ -141,7 +146,7 @@ caps.handback.revision: 15
  MSOLAP_NODE_SCORE  
  显示与此节点关联的分数。  
   
- **父节点**：聚类分析模型的 Bayesian 信息标准 ( BIC) 分数。  
+ **父节点** ：聚类分析模型的 Bayesian 信息标准 ( BIC) 分数。  
   
  **群集节点** 始终为 0。  
   
@@ -152,13 +157,13 @@ caps.handback.revision: 15
   
  **群集节点** 分类的名称。 示例：分类 1。  
   
-## 注释  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅[查询用于创建挖掘模型的参数](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)。  
+## <a name="remarks"></a>注释  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)。  
   
 > [!NOTE]  
 >  无论使用哪一个聚类分析方法或参数，模型的结构和内容都保持不变。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   

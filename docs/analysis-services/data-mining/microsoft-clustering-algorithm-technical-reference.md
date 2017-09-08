@@ -1,36 +1,41 @@
 ---
-title: "Microsoft 聚类分析算法技术参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚类分析 [数据挖掘]"
-  - "MAXIMUM_INPUT_ATTRIBUTES 参数"
-  - "CLUSTER_SEED 参数"
-  - "MODELLING_CARDINALITY 参数"
-  - "MINIMUM_SUPPORT 参数"
-  - "STOPPING_TOLERANCE 参数"
-  - "MAXIMUM_STATES 参数"
-  - "SAMPLE_SIZE 参数"
-  - "CLUSTERING_METHOD 参数"
-  - "软聚类分析 [数据挖掘]"
-  - "聚类分析算法 [Analysis Services]"
-  - "CLUSTER_COUNT 参数"
+title: "Microsoft 聚类分析算法技术参考 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- CLUSTER_SEED parameter
+- MODELLING_CARDINALITY parameter
+- MINIMUM_SUPPORT parameter
+- STOPPING_TOLERANCE parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- CLUSTERING_METHOD parameter
+- soft clustering [Data Mining]
+- clustering algorithms [Analysis Services]
+- CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0c63e2966073fc045401febb16b1a350e94552c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 聚类分析算法技术参考
+# <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
   本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  
   
  有关如何使用聚类分析模型的其他信息，请参阅下列主题：  
@@ -39,12 +44,12 @@ caps.handback.revision: 21
   
 -   [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
-## Microsoft 聚类分析算法的实现  
+## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 聚类分析算法的实现  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法提供两种创建分类并为分类分配数据点的方法。 第一种方法是 *K-means* 算法，这是一种较难的聚类分析方法。 这意味着一个数据点只能属于一个分类，并会为该分类中的每个数据点的成员身份计算一个概率。 第二种方法是期望值最大化 (EM) 方法，这是软聚类分析方法。 这意味着一个数据点总是属于多个分类，并会为每个数据点和分类的组合计算一个概率。  
   
  可以通过设置 *CLUSTERING_METHOD* 参数来选择要使用的算法。 聚类分析的默认方法是可缩放的 EM。  
   
-### EM 聚类分析  
+### <a name="em-clustering"></a>EM 聚类分析  
  在 EM 聚类分析中，此算法反复优化初始分类模型以适合数据，并确定数据点存在于某个分类中的概率。 当概率模型适合于数据时，此算法终止这一过程。 用于确定是否适合的函数是数据适合模型的对数可能性。  
   
  如果在此过程中生成空分类，或者一个或多个分类的成员身份低于给定的阈值，则具有低填充率的分类会以新数据点重设种子，并且 EM 算法重新运行。  
@@ -65,12 +70,12 @@ caps.handback.revision: 21
   
  有关介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法中的 EM 的实现的技术报告，请参阅 [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)（针对大数据库对 EM (Expectation Maximization) 聚类分析进行扩展）。  
   
-### k-means 聚类分析  
+### <a name="k-means-clustering"></a>k-means 聚类分析  
  k-means 聚类分析是一种广为人知的方法，它通过尽量缩小一个分类中的项之间的差异，同时尽量拉大分类之间的距离，来分配分类成员身份。 k-means 中的 "means" 指的是分类的“中点”，它是任意选定的一个数据点，之后反复优化，直到真正代表该分类中的所有数据点的平均值。 "k" 指的是用于为聚类分析过程设种子的任意数目的点。 k-means 算法计算一个分类中的数据记录之间的欧几里得距离的平方，以及表示分类平均值的矢量，并在和达到最小值时在最后一组 k 分类上收敛。  
   
  k-means 算法仅仅将每个数据点分配给一个分类，并且不允许成员身份存在不确定性。 分类中的成员身份表示为与中点的距离。  
   
- 通常，k-means 算法用于创建连续属性的分类，在这种情况下，计算与平均值的距离非常简单。 但是，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 实现通过使用概率针对分类离散属性对 k-means 方法进行改编。  对于离散属性，数据点与特定分类的距离按如下公式计算：  
+ 通常，k-means 算法用于创建连续属性的分类，在这种情况下，计算与平均值的距离非常简单。 但是， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实现通过使用概率针对分类离散属性对 k-means 方法进行改编。  对于离散属性，数据点与特定分类的距离按如下公式计算：  
   
  1 - P(数据点, 分类)  
   
@@ -79,16 +84,16 @@ caps.handback.revision: 21
   
  k-means 算法提供两种对数据集进行抽样的方法：不可缩放的 K-means 和可缩放的 k-means，前者加载整个数据集并创建一个聚类分析阶段，后者使用前 50,000 个事例，并仅仅在需要更多数据才能使模型很好地适合数据时读取更多事例。  
   
-### 在 SQL Server 2008 中对 Microsoft 聚类分析算法的更新  
- 在 SQL Server 2008 中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的默认配置已更改为使用内部参数 NORMALIZATION = 1。 使用 z-score 统计信息执行规范化，并且假定正态分布。 默认行为中的这一更改旨在尽量减小可能具有很大量度和许多离群值的属性的影响。 但是，z-score 规范化可能会更改针对并非正态的分布（例如均匀分布）的聚类分析结果。 为了避免规范化和获取与 SQL Server 2005 中的 K-means 聚类分析算法相同的行为，可以使用“参数设置”对话框添加自定义参数 NORMALIZATION 并将其值设置为 0。  
+### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>在 SQL Server 2008 中对 Microsoft 聚类分析算法的更新  
+ 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的默认配置已更改为使用内部参数 NORMALIZATION = 1。 使用 z-score 统计信息执行规范化，并且假定正态分布。 默认行为中的这一更改旨在尽量减小可能具有很大量度和许多离群值的属性的影响。 但是，z-score 规范化可能会更改针对并非正态的分布（例如均匀分布）的聚类分析结果。 为了避免规范化和获取与 SQL Server 2005 中的 K-means 聚类分析算法相同的行为，可以使用“参数设置”对话框添加自定义参数 NORMALIZATION 并将其值设置为 0。  
   
 > [!NOTE]  
 >  NORMALIZATION 参数是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的内部属性并且不受支持。 通常，建议在聚类分析模型中使用规范化以便改进模型结果。  
   
-## 自定义 Microsoft 聚类分析算法  
+## <a name="customizing-the-microsoft-clustering-algorithm"></a>自定义 Microsoft 聚类分析算法  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持几个参数，这些参数会影响所生成的挖掘模型的行为、性能和准确性。  
   
-### 设置算法参数  
+### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法一起使用的参数。 这些参数影响生成的挖掘模型的性能和准确性。  
   
  CLUSTERING_METHOD  
@@ -156,7 +161,7 @@ caps.handback.revision: 21
   
  默认值为 100。  
   
-### 建模标志  
+### <a name="modeling-flags"></a>建模标志  
  此算法支持下列建模标志。 在创建挖掘结构或挖掘模型时会定义建模标志。 建模标志指定在分析过程中如何处理每一列中的值。  
   
 |建模标志|Description|  
@@ -164,10 +169,10 @@ caps.handback.revision: 21
 |MODEL_EXISTENCE_ONLY|该列将被视为具有两个可能状态：“缺失”和“现有”。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|此列中不能包含 Null 值。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
   
-## 要求  
+## <a name="requirements"></a>要求  
  聚类分析模型必须包含一个键列和若干输入列。 还可以将输入列定义为可预测列。 设置为 **Predict Only** 的列不用来生成分类。 在生成分类后，将计算这些值在分类中的分布。  
   
-### 输入列和可预测列  
+### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
 |列|内容类型|  
@@ -178,7 +183,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
  [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  

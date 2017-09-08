@@ -1,26 +1,31 @@
 ---
-title: "手动处理数据（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "手动处理数据 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 手动处理数据（SSAS 表格）
+# <a name="manually-process-data-ssas-tabular"></a>手动处理数据（SSAS 表格）
   本主题说明如何手动处理 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的工作区数据。  
   
  如果您创作表格模型时使用了外部数据，则可以使用“处理”命令手动刷新这些数据。 您可以处理单个表、模型中的所有表或一个或多个分区。 只要处理数据，就还可能需要重新计算数据。  处理数据意味着从外部源中获取最新的数据。 “重新计算”意味着更新使用数据的任何公式的结果。  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> 手动处理数据  
   
-#### 处理模型中单个表或者所有表的数据  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>处理模型中单个表或者所有表的数据  
   
 1.  在模型设计器中，单击要处理的表。  
   
 2.  单击 **“模型”** 菜单，然后单击 **“处理”**，再单击 **“处理”** 或 **“全部处理”**。  
   
-#### 处理使用相同连接的所有表的数据  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>处理使用相同连接的所有表的数据  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
   
 2.  在 **“现有连接”** 对话框中，选择某一连接，然后单击 **“处理”**。  
   
-#### 处理一个或多个分区的数据  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>处理一个或多个分区的数据  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后指向 **“处理”**，再单击 **“处理分区”**。  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **停止刷新**  
  单击此选项可以暂停处理操作。 如果操作用时过长或出现太多错误，则此选项很有用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [数据处理故障排除（SSAS 表格）](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

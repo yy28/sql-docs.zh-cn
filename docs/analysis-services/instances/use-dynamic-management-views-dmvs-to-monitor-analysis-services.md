@@ -1,24 +1,29 @@
 ---
-title: "使用动态管理视图 (DMV) 监视 Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft 文档"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用动态管理视图 (DMV) 监视 Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
   
  对于大多数 DMV 查询，你会使用 **SELECT** 语句以及具有 XML/A 架构行集的 **$System** 架构。  
@@ -49,7 +54,7 @@ SELECT * FROM $System.<schemaRowset>
 ##  <a name="bkmk_ex"></a> 示例和应用场景  
  DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 本节提供了最常使用 DMV 查询的应用场景示例。 您也可以查看 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ，了解使用 DMV 查询监视服务器实例的其他内情。  
   
- `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅[新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
+ `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
   
  `Select * from $System.discover_object_memory_usage` /** 此查询按对象报告内存使用情况。  
   
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不可用于某一给定行集，服务器将返回以下错误：“服务器未能识别 \<schemarowset> 请求类型。” 所有其他错误均与语法问题有关。  
+>  如果 DMV 不可用为给定行集，服务器将返回以下错误:" \<schemarowset > 请求类型无法识别服务器"。 所有其他错误均与语法问题有关。  
   
 |行集|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES 行集](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|返回可用类别的列表。|  
 |[DISCOVER_TRACES 行集](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|返回正在当前连接上主动运行的跟踪的列表。|  
 |[DISCOVER_TRANSACTIONS 行集](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|返回正在当前连接上主动运行的事务的列表。|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION 行集](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|返回正在当前连接上主动运行的 xevent 跟踪的列表。|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION 行集](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|返回正在当前连接上主动运行的 xevent 跟踪的列表。|  
 |[DMSCHEMA_MINING_COLUMNS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|列出在当前连接上可用的所有挖掘模型的单独列。|  
 |[DMSCHEMA_MINING_FUNCTIONS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|返回服务器上的数据挖掘算法支持的函数的列表。|  
 |[DMSCHEMA_MINING_MODEL_CONTENT 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|返回由描述当前模型的列组成的行集。|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|返回每个属性的完全限定名，以及属性类型、数据类型和其他元数据。|  
 |[MDSCHEMA_SETS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|返回当前连接中定义的集合的列表。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [新的 SYSTEMRESTRICTEDSCHEMA 函数，适用于受限行集和 DMV](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [新 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+ [受限制的行集和 Dmv 的新 SYSTEMRESTRICTEDSCHEMA 函数](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

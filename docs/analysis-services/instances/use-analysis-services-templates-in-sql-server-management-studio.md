@@ -1,24 +1,29 @@
 ---
-title: "在 SQL Server Management Studio 中使用 Analysis Services 模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 SQL Server Management Studio 中使用 Analysis Services 模板 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 SQL Server Management Studio 中使用 Analysis Services 模板
+# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
   
  本主题包括多维模型和表格模型的模板列表，并且提供如何通过使用元数据资源管理器和模板资源管理器生成 MDX 查询和 XMLA 语句的示例。  
@@ -35,14 +40,14 @@ caps.handback.revision: 12
   
  [Analysis Services 模板参考](#bkmk_Ref)  
   
- 本主题不涉及 DMX 模板。 有关如何使用模板创建数据挖掘查询的示例，请参阅[在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)或[通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
+ 本主题不涉及 DMX 模板。 有关如何使用模板创建数据挖掘查询的示例，请参阅 [在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md) 或 [通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
   
 ##  <a name="bkmk_usingTE"></a> 打开 Analysis Services 模板  
  用于数据库引擎查询以及 Analysis Services 查询和命令的所有模板均在模板资源管理器中提供。  
   
  若要打开 **“模板资源管理器”**，请从 **“视图”** 菜单中选择它。 接下来，单击多维数据集图标可以查看可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模板的列表。  
   
- ![模板资源管理器，为 Analysis Services 筛选](../../analysis-services/instances/media/ssas-templateexplorer.gif "模板资源管理器，为 Analysis Services 筛选")  
+ ![筛选出模板资源管理器的 Analysis Services](../../analysis-services/instances/media/ssas-templateexplorer.gif "模板资源管理器，筛选出的 Analysis Services")  
   
  若要打开某一模板，请右键单击该模板名称，然后选择“打开”，或者将模板拖到已经打开的查询窗口中。 在查询窗口打开后，您可以使用工具栏或“查询”菜单上的命令来帮助您生成语句：  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 12
  此实例说明如何在 SQL Server Management Studio 中创建 MDX 查询，并且使用表格模型数据库作为数据源。 若要在您的计算机上重复此示例，您可以 [下载 Adventureworks 表格模型示例项目](http://go.microsoft.com/fwlink/?LinkId=231183)。  
   
 > [!WARNING]  
->  不能对已在直接查询模式下部署的表格模型使用 MDX 查询。 但是，可以通过将 DAX 表查询用于 EVALUATE 命令来发送等效的查询。 有关详细信息，请参阅 [DAX 查询参数](http://msdn.microsoft.com/zh-cn/c5841b4e-3395-4237-815b-9822a691e544)。  
+>  不能对已在直接查询模式下部署的表格模型使用 MDX 查询。 但是，可以通过将 DAX 表查询用于 EVALUATE 命令来发送等效的查询。 有关详细信息，请参阅 [DAX 查询参数](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544)。  
   
-#### 从模板创建 MDX 查询  
+#### <a name="create-an-mdx-query-from-a-template"></a>从模板创建 MDX 查询  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的表格模型的实例。 右键单击数据库图标，选择“新建查询”，然后选择“MDX”。  
   
@@ -70,13 +75,13 @@ caps.handback.revision: 12
   
 3.  使用 **“元数据资源管理器”**，将下列字段和度量值拖到查询模板：  
   
-    1.  使用 **[产品类别].[产品类别名称]** 替换 \<row_axis, mdx_set>。  
+    1.  替换\<row_axis，mdx_set > 与**[产品类别]。 [Product Category Name]**。  
   
-    2.  使用 **[日期].[日历年].[日历年]** 替换 \<column_axis, mdx_set>。  
+    2.  替换\<column_axis，mdx_set > 与**[Date]。 [Calendar Year]。[Calendar Year]**.  
   
-    3.  使用 **[Internet 销售额]** 替换 \<from_clause, mdx_name>。  
+    3.  替换\<from_clause，mdx_name > 与**[Internet Sales]**。  
   
-    4.  使用 **[度量值].[Internet 总销售额]** 替换 \<where_clause, mdx_set>。  
+    4.  替换\<where_clause，mdx_set > 与**[度量值]。 [Internet Total Sales]**。  
   
 4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，在 **[Product Category].[Product Category Name]** 后输入 **.members**。 有关详细信息，请参阅 [Using Member Expressions](../../mdx/using-member-expressions.md)。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 12
   
 -   监视服务器状态，包括作业、连接、事务、内存和性能计数器  
   
-#### 从模板创建备份命令脚本  
+#### <a name="create-a-backup-command-script-from-a-template"></a>从模板创建备份命令脚本  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”，然后选择“XMLA”。  
   
@@ -102,11 +107,11 @@ caps.handback.revision: 12
   
 2.  将 **“备份”** 模板拖到一个空的查询窗口中。  
   
-3.  双击 \<DatabaseID> 元素内的脚本。  
+3.  双击内的文本\<DatabaseID > 元素。  
   
 4.  在对象资源管理器中，选择要备份的数据库，然后将该数据库拖放到 DatabaseID 元素的括号之间。  
   
-5.  双击 \<File> 元素内的脚本。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+5.  双击内的文本\<文件 > 元素。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ##  <a name="bkmk_schemarowset"></a> 使用 XMLA 模板生成架构行集查询  
  **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)。  
@@ -135,7 +140,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 </Discover>  
 ```  
   
-#### 使用架构行集查询获取表格模型的数据源的列表  
+#### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>使用架构行集查询获取表格模型的数据源的列表  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的数据库的实例。 右键单击数据库图标，选择“新建查询”，然后选择“XMLA”。  
   
@@ -144,7 +149,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”**拖入空白查询窗口中。  
   
-3.  在该模板中，使用以下文本替换 [RequestType 元素 (XMLA)](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在模板中，替换[RequestType 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素与以下文本：`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  单击 **“执行”**。  
   
@@ -168,12 +173,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |类别|项模板|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\模型内容|内容查询|展示了如何使用 DMX SELECT FROM \<模型>.CONTENT 语句，检索指定挖掘模型的挖掘模型架构行集内容。|  
-||连续列值|展示了如何结合使用 DMX SELECT DISTINCT FROM \<模型> 语句与 DMX **RangeMin** 和 **RangeMax** 函数，从指定挖掘模型中的连续列检索指定范围内的一组值。|  
-||离散列值|展示了如何使用 DMX SELECT DISTINCT FROM \<模型> 语句，从指定挖掘模型中的离散列检索完整的一组值。|  
+|DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<模型 >*。要检索指定的挖掘模型的挖掘模型架构行集内容的内容语句。|  
+||连续列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* DMX 语句**RangeMin**和**RangeMax**函数来检索的一组从指定的挖掘模型中的连续列指定范围中的值。|  
+||离散列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >*语句从指定的挖掘模型中的离散列中检索一组完整的值。|  
 ||钻取查询|演示如何将 DMX SELECT * FROM Model.CASES 语句与 DMX IsInNode 函数一起使用来执行钻取查询|  
 ||模型属性|演示如何使用 DMX System.GetModelAttributes 函数返回模型所用属性的列表。|  
-||PMML 内容|展示了如何使用 DMX SELECT \* FROM \<模型>.PMML 语句，为支持此功能的算法检索挖掘模型的预测性模型标记语言 (PMML) 表现形式。|  
+||PMML 内容|演示如何使用 DMX 选择\*FROM *\<模型 >*。若要检索的挖掘模型，支持此功能的算法的预测模型标记语言 (PMML) 表示的 PMML 语句。|  
 |DMX\模型管理|添加模型|演示如何使用 DMX ALTER MINING MODEL STRUCTURE 语句添加挖掘模型|  
 ||清除模型|演示如何使用 DMX DELETE * FROM MINING MODEL 语句删除指定挖掘模型的内容。|  
 ||清除结构事例|演示如何使用 DMX DELETE FROM MINING STRUCTURE 语句清除挖掘模型结构事例|  
@@ -191,22 +196,22 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||定型模型|演示如何使用 DMX INSERT INTO MINING MODEL 语句在先前定型的结构内部定型挖掘模型。|  
 ||定型嵌套结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 SHAPE 源数据查询组合使用来定型这样的挖掘模型，该挖掘模型包含嵌套列，而嵌套列中的数据包含使用查询从现有数据源检索到的嵌套表。|  
 ||定型结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 OPENQUERY 源数据查询组合使用来定型挖掘结构。|  
-|DMX\预测查询|基准预测|展示了如何结合使用 DMX SELECT FROM \<模型> PREDICTION JOIN 语句和 OPENQUERY 源数据查询，并使用从现有数据源通过查询检索到的数据对挖掘模型执行预测查询。|  
-||嵌套预测|展示了如何结合使用 DMX SELECT FROM \<模型> PREDICTION JOIN 语句与 SHAPE 和 OPENQUERY 源数据查询，并使用从现有数据源通过查询检索到的包含嵌套表的数据对挖掘模型执行预测查询。|  
-||嵌套单独预测|展示了如何使用 DMX SELECT FROM \<模型> NATURAL PREDICTION JOIN 子句，并使用在预测查询中显式指定的一个值对挖掘模型执行预测查询。其中，该值所在列的名称与挖掘模型中的某列一致，而且该列包含使用 UNION 语句创建的嵌套表中的一组值。同时，这些值所在列的名称也与挖掘模型中的嵌套列一致。|  
-||单独预测|演示如何使用 DMX SELECT FROM \<模型> NATURAL PREDICTION JOIN 语句来针对这样的挖掘模型执行预测查询，该挖掘模型使用了在预测查询的某个列中显式指定的一个值，该列的名称与挖掘模型中的某个列相匹配。|  
+|DMX\预测查询|基准预测|演示如何组合使用 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 语句和 OPENQUERY 源数据查询，以执行针对使用数据，从使用查询中，检索挖掘模型的预测查询现有数据源。|  
+||嵌套预测|演示如何组合使用 DMX SELECT FROM *\<模型 >*使用形状和 OPENQUERY 源数据查询执行预测查询针对使用包含嵌套的数据挖掘模型的 PREDICTION JOIN 语句检索的表，使用查询中，从现有数据源。|  
+||嵌套单独预测|演示如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句，以执行针对使用单个值，在预测查询中，列中显式指定的挖掘模型的预测查询其名称与挖掘模型中的列相匹配，它包含的一组嵌套表创建使用 UNION 语句名称也匹配到挖掘模型中的嵌套列中的值。|  
+||单独预测|演示如何使用 DMX SELECT FROM\<模型 > 要执行针对使用单个值，在其名称匹配中的列的列中的预测查询中显式指定的挖掘模型的预测查询 NATURAL PREDICTION JOIN 语句挖掘模型中。|  
 ||存储过程调用|演示如何使用 DMX CALL 语句调用存储过程|  
 |MDX\表达式|变动平均值 - 固定|演示如何使用 MDX **ParallelPeriod** 和 **CurrentMember** 函数及自然排序集生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个固定数量时间段上的变动平均值。|  
 ||变动平均值 - 可变|演示如何在 **CASE** 函数内使用 MDX **Avg** 语句来生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个可变数量时间段上的变动平均值。|  
 ||本期截止到现在|演示如何在计算成员内使用 MDX **PeriodsToDate** 函数。|  
 ||父级比率|演示如何使用 MDX **Parent** 函数来创建一个计算度量值，以便表示指定层次结构中父成员的每个子成员的度量值的百分率。|  
 ||总计比率|演示如何使用“全部”成员来创建一个计算度量值，以便表示指定层次结构中每个成员的度量值的百分率。|  
-|MDX\查询|基本查询|演示一个可从其构造 MDX 查询的基本 MDX SELECT 语句。|  
+|MDX\查询|“基本查询”|演示一个可从其构造 MDX 查询的基本 MDX SELECT 语句。|  
 ||KPI 查询|演示如何在 MDX 查询中使用 MDX **KPIValue** 和 **KPIGoal** 函数来检索关键绩效指标 (KPI) 信息。|  
 ||嵌套 Select 查询|演示如何创建一个从由另一个 SELECT 语句定义的子多维数据集中检索信息的 MDX SELECT 语句。|  
 ||使用计算成员|演示如何在 SELECT 语句中使用 MDX WITH 子句来为 MDX 查询定义计算成员。|  
 ||使用命名集|演示如何在 SELECT 语句中使用 MDX WITH 子句来为 MDX 查询定义命名集。|  
-|XMLA\管理|备份|演示如何使用 XMLA **“备份”** 命令将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到文件。|  
+|XMLA\管理|“备份”|演示如何使用 XMLA **“备份”** 命令将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到文件。|  
 ||取消|演示如何使用 XMLA **Cancel** 命令取消针对当前会话（用于用户而不是管理员或服务器管理员）、数据库（用于管理员）或实例（用于服务器管理员）运行的所有操作。|  
 ||创建远程分区数据库|演示如何使用 XMLA **Create** 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 数据库元素来创建用于存储远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和数据源。|  
 ||删除|演示如何使用 XMLA **删除** 命令删除现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
@@ -225,10 +230,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||跟踪|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRACES 架构行集的内容。|  
 ||中的|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

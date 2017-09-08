@@ -1,28 +1,33 @@
 ---
-title: "多维模型解决方案部署 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 部署, 规划"
-  - "部署 [Analysis Services]"
-  - "部署 [Analysis Services], 规划"
+title: "多维模型解决方案部署 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, planning
+- deploying [Analysis Services]
+- deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多维模型解决方案部署
+# <a name="multidimensional-model-solution-deployment"></a>多维模型解决方案部署
   在完成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的开发后，可以将数据库部署到 Analysis Services 服务器。 Analysis Services 提供六个可能的部署方法，可用于将该数据库移到测试服务器或生产服务器。 此处按优势大小顺序列出这些方法：AMO 自动化、XMLA、部署向导、部署实用工具、同步向导、备份和还原。  
   
  本主题包含以下各节：  
@@ -52,7 +57,7 @@ caps.handback.revision: 39
 |此解决方案需要哪些硬件和软件资源？|[Analysis Services 部署的要求和注意事项](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |如何部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目范围之外的相关对象（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包、报表或关系数据库架构）？||  
 |如何在已部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中加载和更新数据？<br /><br /> 如何在已部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中更新元数据（如计算）？|本主题中的[部署方法](#bkmk_meth) 。|  
-|是否要向用户提供通过 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据的权限？|[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)|  
+|是否要向用户提供通过 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据的权限？|[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |是否要提供对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据的连续查询访问权限？|[Analysis Services 部署的要求和注意事项](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |是否要使用链接的对象或远程分区在分布式环境中部署对象？|[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)、[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) 和[链接度量值组](../../analysis-services/multidimensional-models/linked-measure-groups.md)。|  
 |如何确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据的安全？|[授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  

@@ -1,31 +1,36 @@
 ---
-title: "模型筛选器语法和示例（Analysis Services – 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型筛选器 [数据挖掘]"
-  - "筛选器语法 [数据挖掘]"
-  - "筛选器 [数据挖掘]"
-  - "筛选器 [Analysis Services]"
+title: "模型筛选器语法和示例 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filter syntax [data mining]
+- filters [data mining]
+- filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c24c6ad5bbfba2f93039bd53609ddd86010e10ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 模型筛选器语法和示例（Analysis Services – 数据挖掘）
+# <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
   本节提供有关模型筛选器语法的详细信息以及示例表达式。  
   
- [筛选器语法](#bkmk_syntax)  
+ [筛选器语法](#bkmk_Syntax)  
   
  [事例属性的筛选器](#bkmk_Ex1)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 17
   
  [日期筛选器](#bkmk_Ex8)  
   
-##  <a name="bkmk_Syntax"></a> 筛选器语法  
+##  <a name="bkmk_Syntax"></a> Filter Syntax  
  筛选表达式通常等同于 WHERE 子句的内容。 您可以使用逻辑运算符 **AND**、 **OR**和 **NOT**连接多个条件。  
   
  在嵌套表中，您还可以使用 **EXISTS** 和 **NOT EXISTS** 运算符。 如果子查询至少返回一行，则 **EXISTS** 条件的计算结果为 **true** 。 当您要将模型限制为包含嵌套表中的特殊值的事例时，这将非常有用。例如，客户至少购买过一次某种物品。  
@@ -73,29 +78,29 @@ caps.handback.revision: 17
  挖掘结构列的名称。  
   
  逻辑运算符  
- **AND**、**OR**、**NOT**  
+ **AND**、 **OR**、 **NOT**  
   
  *avPredicate*  
  只能应用到标量挖掘结构列的筛选表达式。 *avPredicate* 表达式既可用于模型筛选器中，也可用于嵌套表筛选器中。  
   
  使用以下任何运算符的表达式只能应用到连续列中。 设置用户帐户 ：  
   
--   **\<**（小于）  
+-   **\<** （小于）  
   
--   **>**（大于）  
+-   **>** （大于）  
   
--   **>=**（大于或等于）  
+-   **>=** （大于或等于）  
   
--   **\<=**（小于或等于）  
+-   **\<=** （小于或等于）  
   
 > [!NOTE]  
->  无论是什么数据类型，这些运算符都不能应用到类型为 **Discrete**、**Discretized** 或 **Key** 的列。  
+>  无论是什么数据类型，这些运算符都不能应用到类型为 **Discrete**、 **Discretized**或 **Key**的列。  
   
  使用以下任何运算符的表达式可以应用到连续、离散、离散化或键列中：  
   
--   **=**（等于）  
+-   **=** （等于）  
   
--   **!=**（不等于）  
+-   **!=** （不等于）  
   
 -   **为 NULL**  
   
@@ -103,19 +108,19 @@ caps.handback.revision: 17
   
  换句话说，你没有将条件定义为 `AgeDisc = ’25-35’`，而是计算并使用该区间的值。  
   
- 例如，`AgeDisc = 27` 表示与 27 位于同一区间的任何值，在本例中为 25-35。  
+ 例如，  `AgeDisc = 27`  表示与 27 位于同一区间的任何值，在本例中为 25-35。  
   
  *nestedTablePredicate*  
  应用到嵌套表中的筛选表达式。 只能用于模型筛选器中。  
   
- 参数的子查询参数 *nestedTablePredicate* 能应用到表挖掘结构列中  
+ 参数的子查询参数 *nestedTablePredicate*能应用到表挖掘结构列中  
   
  子查询  
  后面跟随有效的谓词或谓词列表的 SELECT 语句。  
   
  所有谓词必须为 *avPredicates*中描述的类型。 而且，谓词只能是由 *columnName*参数标识的当前嵌套表中包含的列。  
   
-### 筛选器语法限制  
+### <a name="limitations-on-filter-syntax"></a>筛选器语法限制  
  下面的限制适用于筛选器：  
   
 -   筛选器只能包含简单的谓词。 其中包括数学运算符、标量和列名称。  
@@ -124,7 +129,7 @@ caps.handback.revision: 17
   
 -   筛选器语法中不支持非布尔运算符，如加号或减号。  
   
-## 筛选器示例  
+## <a name="examples-of-filters"></a>筛选器示例  
  下面的示例演示应用到挖掘模型中的筛选器的用法。 如果使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在筛选器对话框的 **“属性”** 窗口和 **“表达式”** 窗格创建筛选表达式，您将只能看到显示在 WITH FILTER 关键字之后的字符串。 此处包括挖掘结构的定义，从而更易于理解列类型和用法。  
   
 ###  <a name="bkmk_Ex1"></a> 示例 1：典型的事例级筛选  
@@ -141,7 +146,6 @@ MaritalStatus PREDICT
 WITH FILTER (Age > 30 AND Occupation=’Architect’)  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex2"></a> 示例 2：使用嵌套表属性的事例级筛选  
  如果您的挖掘结构包含嵌套表，则您可以对嵌套表中某个值的存在性进行筛选，还可以对包含特定值的嵌套表行进行筛选。 下面的示例将模型所用的事例限制为年龄在 30 岁以上并且至少购买过一次包含牛奶在内的产品的客户。  
@@ -161,7 +165,6 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex3"></a> 示例 3：对多个嵌套表属性的事例级筛选  
  下面的示例显示一个由三个条件构成的筛选器：第一个条件应用到事例表，第二个条件应用到嵌套表中的一个属性，第三个条件应用到嵌套表列中某一列的特定值。  
@@ -187,7 +190,6 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
 )  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex4"></a> 示例 4：对嵌套表属性缺失的事例级筛选  
  下面的示例显示如何通过对嵌套表中属性的缺失进行筛选将事例限制为没有购买过特定物品的客户。 在下面的示例中，使用年龄在 30 岁以上并且从未购买过牛奶的客户对模型进行定型。  
@@ -207,7 +209,6 @@ ProductName
 FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex5"></a> 示例 5：对多个嵌套表值进行筛选  
  下面的示例的目的旨在显示嵌套表筛选。 嵌套表筛选器是在事例筛选器之后应用的，并且仅用于限制嵌套表行。  
@@ -230,7 +231,6 @@ Quantity
 WITH DRILLTHROUGH  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex6"></a> 示例 6：对嵌套表属性和 EXISTS 的筛选  
  在下面的示例中，嵌套表上的筛选器将行限制为包含牛奶或瓶装水的行。 然后，使用 **EXISTS** 语句对模型中的事例进行限制。 这样即可保证嵌套表不为空。  
@@ -251,12 +251,11 @@ Quantity
 FILTER (EXISTS (Products))  
 ```  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex7"></a> 示例 7：复杂的筛选器组合  
- 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套表 **ProductsOnSale** 的筛选器条件 `(OnSale)` 意味着对于 **ProductName** 中列出的产品，**OnSale** 的值必须为 **true**。 此处 **OnSale** 是一个结构列。  
+ 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套表 **ProductsOnSale**的筛选器条件 `(OnSale)` 意味着对于 **ProductName** 中列出的产品， **OnSale** 的值必须为 **true**。 此处 **OnSale** 是一个结构列。  
   
- **ProductsNotOnSale** 的筛选器的第二部分具有相同的语法，但是它是针对其 **OnSale** 的值为 **not true**`(!OnSale)` 的产品进行筛选的。  
+ **ProductsNotOnSale**的筛选器的第二部分具有相同的语法，但是它是针对其 **OnSale** 的值为 **not true**`(!OnSale)`的产品进行筛选的。  
   
  最后，这些条件将组合在一起，同时另一个限制将添加到事例表中。 结果是可以对年龄在 25 岁以上的所有客户根据在 **ProductsOnSale** 列表中包含的事例预测其在 **ProductsNotOnSale** 列表中的产品的购买情况。  
   
@@ -294,7 +293,6 @@ FILTER (EXISTS (Products))
   
  `FILTER (EXISTS (ProductsOnSale) AND EXISTS(ProductsNotOnSale) AND Age > 25)`  
   
- [返回页首](#bkmk_Syntax)  
   
 ###  <a name="bkmk_Ex8"></a> 示例 8：对日期进行筛选  
  您可以像对任何其他数据一样，按日期筛选输入列。 在日期/时间类型的列中包含的日期是连续值；因此，您可以通过使用大于号 (>) 或小于号 (<) 之类的运算符指定日期范围。 如果您的数据源不是按连续数据类型表示日期的，而是将日期表示为离散值或文本值，则不能对日期范围进行筛选，而必须指定单独的离散值。  
@@ -317,9 +315,8 @@ FILTER (EXISTS (Products))
   
  例如，如果要筛选呼叫中心结果以便只显示周末，则可以在数据源视图中创建一个表达式，该表达式提取每个日期的工作日名称，然后将该工作日名称值用作输入或者在筛选中用作离散值。 只需记住的是，重复值可能会影响模型，因此，您应该只使用某一列，而不是日期列加上派生值。  
   
- [返回页首](#bkmk_Syntax)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   

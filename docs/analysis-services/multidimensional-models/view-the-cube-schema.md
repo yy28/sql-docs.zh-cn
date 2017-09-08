@@ -1,24 +1,29 @@
 ---
-title: "查看多维数据集架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "查看多维数据集架构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查看多维数据集架构
+# <a name="view-the-cube-schema"></a>查看多维数据集架构
   在 **“多维数据集设计器”** 的 **“多维数据集结构”** 选项卡的 **“数据源视图”** 窗格中显示多维数据集架构。 架构是从中派生多维数据集的度量值和维度的表的集合。 每个多维数据集架构包含多维数据集中的度量值和维度基于的一个或多个事实表以及一个或多个维度表。  
   
  **“多维数据集结构”** 选项卡的 **“数据源视图”** 窗格显示多维数据集所基于的数据源视图的关系图。 此关系图是数据源视图主关系图的一个子集。 您可以在 **“数据源视图”** 窗格中隐藏和显示表并查看任何现有的关系图。 但是，您不能更改（例如添加新关系或命名查询）基础架构。 若要更改该架构，请使用数据源视图设计器。  

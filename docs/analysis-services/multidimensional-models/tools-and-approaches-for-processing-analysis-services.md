@@ -1,27 +1,32 @@
 ---
-title: "用于处理的工具和方法 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "处理 [Analysis Services]"
-  - "处理 [Analysis Services]"
+title: "用于处理 (Analysis Services) 工具和方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 用于处理的工具和方法 (Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
   
  作为 Analysis Services 系统管理员，您可以使用以下方法执行并监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的处理：  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 和[处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
-### 在 SQL Server Management Studio 中处理对象  
+### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中处理对象  
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   
-### 在 SQL Server Data Tools 中处理对象  
+### <a name="processing-objects-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中处理对象  
   
 1.  启动 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 并打开已部署的项目。  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
 3.  单击 **“影响分析”**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为与选定要处理的对象相关的对象扫描模型并报告重新处理要求。  
   
-### 使用 XMLA 处理对象  
+### <a name="processing-objects-using-xmla"></a>使用 XMLA 处理对象  
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 34
   
 7.  在菜单栏中，单击 **“查询”**，然后单击 **“执行”**。  
   
-### 使用 PowerShell 处理对象  
+### <a name="processing-objects-using-powershell"></a>使用 PowerShell 处理对象  
   
 1.  从本版本的 SQL Server 开始，您可以使用 Analysis Services PowerShell cmdlet 来处理对象。 可以通过交互方式或在脚本中运行以下 cmdlet：  
   
@@ -129,9 +134,9 @@ caps.handback.revision: 34
   
     -   [Invoke-ProcessPartition cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
-    -   [Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md) 可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
+    -   [Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
   
-### 使用 SQL Server Profiler 监视对象处理  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 监视对象处理  
   
 1.  在 SQL Server Profiler 中，连接到 Analysis Services 实例。  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 34
   
     -   或者，如果您在诊断与处理相关的性能问题，则可以添加锁事件  
   
-### 使用 Integration Services 处理 Analysis Services 对象  
+### <a name="process-analysis-services-objects-using-integration-services"></a>使用 Integration Services 处理 Analysis Services 对象  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，创建一个使用 Analysis Services 处理任务的包，以便在对源关系数据库进行定期更新时使用新数据自动填充对象。  
   
@@ -157,7 +162,7 @@ caps.handback.revision: 34
   
 3.  编辑该任务，指定与数据库的连接、处理哪些对象以及处理选项。 有关如何执行此任务的详细信息，请参阅 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -1,0 +1,139 @@
+---
+title: "RESTORE FILELISTONLY (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- RESTORE FILELISTONLY
+- RESTORE_FILELISTONLY_TSQL
+- FILELISTONLY
+- FILELISTONLY_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- backups [SQL Server], file lists
+- RESTORE FILELISTONLY statement
+- listing backed up files
+ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
+caps.latest.revision: 83
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: bdae49bd22b5398d120530db150bc9628e34d92a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="restore-statements---filelistonly-transact-sql"></a>还原语句的 FILELISTONLY (Transact SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  返回由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的备份集内包含的数据库和日志文件列表组成的结果集。  
+  
+> [!NOTE]  
+>  自变量的说明，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+RESTORE FILELISTONLY   
+FROM <backup_device>   
+[ WITH   
+ {  
+--Backup Set Options  
+   FILE = { backup_set_file_number | @backup_set_file_number }   
+ | PASSWORD = { password | @password_variable }   
+  
+--Media Set Options  
+ | MEDIANAME = { media_name | @media_name_variable }   
+ | MEDIAPASSWORD = { mediapassword | @mediapassword_variable }  
+  
+--Error Management Options  
+ | { CHECKSUM | NO_CHECKSUM }   
+ | { STOP_ON_ERROR | CONTINUE_AFTER_ERROR }  
+  
+--Tape Options  
+ | { REWIND | NOREWIND }   
+ | { UNLOAD | NOUNLOAD }    
+ } [ ,...n ]  
+]  
+[;]  
+  
+<backup_device> ::=  
+{   
+   { logical_backup_device_name |  
+      @logical_backup_device_name_var }  
+   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+       @physical_backup_device_name_var }   
+}  
+  
+```  
+  
+## <a name="arguments"></a>参数  
+ RESTORE FILELISTONLY 自变量的说明，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  
+## <a name="result-sets"></a>结果集  
+ 客户端可以使用 RESTORE FILELISTONLY 获得备份集中所含文件的列表。 此信息以结果集的形式返回，在结果集中每个文件占一行。  
+  
+|列名|数据类型|Description|  
+|-|-|-|  
+|LogicalName|**nvarchar （128)**|文件逻辑名称。|  
+|PhysicalName|**nvarchar(260)**|文件的物理名称或操作系统名称。|  
+|类型|**char （1)**|文件的类型，其中包括：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据文件<br /><br /> **F** = 全文目录<br /><br /> **S** = FileStream、 FileTable，或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
+|FileGroupName|**nvarchar （128)**|包含文件的文件组的名称。|  
+|Size|**numeric(20,0)**|当前大小（以字节为单位）。|  
+|MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
+|FileID|**bigint**|文件标识符，在数据库中唯一。|  
+|CreateLSN|**numeric(25,0)**|创建文件时的日志序列号。|  
+|DropLSN|**numeric(25,0)** NULL|该文件已删除的日志序列号。 如果文件尚未删除，该值为 NULL。|  
+|UniqueID|**uniqueidentifier**|文件的全局唯一标识符。|  
+|ReadOnlyLSN|**numeric(25,0) NULL**|包含该文件的文件组从读写属性更改为只读属性（最新更改）时的日志序列号。|  
+|ReadWriteLSN|**numeric(25,0)** NULL|包含该文件的文件组从只读属性更改为读写属性（最新更改）时的日志序列号。|  
+|BackupSizeInBytes|**bigint**|此文件的备份的大小（字节）。|  
+|SourceBlockSize|**int**|包含文件的物理设备（并非备份设备）的块大小（以字节为单位）。|  
+|FileGroupID|**int**|文件组的 ID。|  
+|LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|差异备份，更改日志序列号大于或等于**DifferentialBaseLSN**纳入差异。<br /><br /> 对于其他备份类型，该值为 NULL。|  
+|DifferentialBaseGUID|**uniqueidentifier**|对于差异备份，该值是差异基准的唯一标识符。<br /><br /> 对于其他备份类型，该值为 NULL。|  
+|IsReadOnly|**bit**|**1** = 文件是只读的。|  
+|IsPresent|**bit**|**1** = 的文件是否存在备份中。|  
+|TDEThumbprint|**varbinary(32)**|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|SnapshotURL|**nvarchar(360)**|对于 Azure 快照 FILE_SNAPSHOT 备份中包含的数据库文件的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
+  
+## <a name="security"></a>安全性  
+ 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码防止未经授权的还原操作，并且未授权的媒体使用的备份集追加[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
+  
+> [!IMPORTANT]  
+>  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是将备份磁带存储在安全的位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
+  
+### <a name="permissions"></a>Permissions  
+ 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，获取有关备份集或备份设备的信息需要具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
+  
+## <a name="examples"></a>示例  
+ 下面的示例从名为 `AdventureWorksBackups` 的备份设备中返回信息。 该示例使用 `FILE` 选项指定设备中的第二个备份集。  
+  
+```  
+RESTORE FILELISTONLY FROM AdventureWorksBackups   
+   WITH FILE=2;  
+GO  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
+ [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+  
+  

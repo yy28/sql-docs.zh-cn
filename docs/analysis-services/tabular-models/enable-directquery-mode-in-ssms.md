@@ -1,33 +1,41 @@
 ---
-title: "在 SSMS 中启用 DirectQuery 模式 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "启用在 SSMS 中的 DirectQuery 模式 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 SSMS 中启用 DirectQuery 模式
+# <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中启用 DirectQuery 模式
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   你可以更改已部署表格模型的数据访问属性，启用针对后端关系数据源（而不是缓存数据驻留在其中的内存）执行查询的 DirectQuery 模式。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，DirectQuery 配置步骤取决于模型的兼容级别。 下面是适用于所有兼容级别的步骤。  
   
- 本主题假定你已创建并验证兼容级别为 1200 的内存中表格模型，且只需启用 DirectQuery 访问并更新连接字符串。 若从较低的兼容级别开始，则首先需要手动升级。 有关步骤，请参阅[升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)。  
+ 本主题假定你已创建并验证在兼容性级别为 1200年或更高版本，并仅需要启用 DirectQuery 访问并更新连接字符串的内存中表格模型。 若从较低的兼容级别开始，则首先需要手动升级。 有关步骤，请参阅 [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
   
 > [!IMPORTANT]  
->  建议使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 而非 Management Studio 来切换数据存储模式。 当你使用  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 来更改模型，然后又进行部署到服务器的操作时，该模型与数据库将保持同步。 此外，在模型中更改存储模式后，你就可以查看已发生的验证错误。 按本文说明使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，不报告验证错误。  
+>  建议使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 而非 Management Studio 来切换数据存储模式。 当你使用  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 来更改模型，然后又进行部署到服务器的操作时，该模型与数据库将保持同步。此外，在模型中更改存储模式后，你就可以查看已发生的验证错误。 按本文说明使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，不报告验证错误。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  在表格模型中启用 DirectQuery 模式是一个多步骤过程：  
   
 -   确保模型的功能不会在 DirectQuery 模式中导致验证错误，然后将模型中的数据存储模式从内存中更改为 DirectQuery。  
@@ -44,7 +52,7 @@ caps.handback.revision: 18
   
 -   最后一步是通过执行查询来确认 DirectQuery 模式是可以操作的。  
   
-## 步骤 1：查看兼容级别  
+## <a name="step-1-check-the-compatibility-level"></a>步骤 1：查看兼容级别  
  用于定义数据访问权限的属性在不同兼容级别是不同的。 预备步骤是查看数据库属于什么兼容级别。  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到具有表格模型的实例。  
@@ -55,7 +63,7 @@ caps.handback.revision: 18
   
  将表格模型更改为 DirectQuery 模式时，新的数据存储模式会立即生效。  
   
-## 步骤 2a：将表格 1200 数据库切换成 DirectQuery 模式  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步骤 2a：将表格 1200 数据库切换成 DirectQuery 模式  
   
 1.  在对象资源管理器中，右键单击数据库 >“属性” > “模型” > “默认模式”。  
   
@@ -67,7 +75,7 @@ caps.handback.revision: 18
     |**DirectQuery**|将针对后端关系数据库来执行查询，使用的数据源连接是为模型定义的。<br /><br /> 系统会将对模型进行的查询转换为本机数据库查询，并将其重定向到数据源。<br /><br /> 处理已设置为 DirectQuery 模式的模型时，仅编译和部署元数据。 数据本身是在模型外部，位于操作性数据源的数据库文件中。|  
     |**导入**|将按 MDX 或 DAX 格式针对表格数据库来执行查询。<br /><br /> 处理已设置为“导入”模式的模型时，将从后端数据源检索数据并将其存储在磁盘上。 加载数据库时，会将数据整个复制到内存中进行极快速的表扫描和查询。<br /><br /> 这是表格模型的默认模式，是某些（非关系）数据源的唯一模式。|  
   
-## 步骤 2b：将表格 1100-1103 数据库切换成 DirectQuery 模式  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步骤 2b：将表格 1100-1103 数据库切换成 DirectQuery 模式  
   
 1.  在对象资源管理器中，右键单击数据库 >“属性” > “数据库” > “DirectQueryMode”。  
   
@@ -91,16 +99,16 @@ caps.handback.revision: 18
   
 -   你可以将缓存上的分区配置为从不处理用于 DirectQuery 模式的主分区，并且主分区必须始终引用关系数据源。 有许多方法可以使用分区来优化模型设计和报表体验。 有关详细信息，请参阅[在 DirectQuery 模型中定义分区（SSAS 表格）](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)。  
   
--   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](../Topic/Set%20or%20Change%20the%20Preferred%20Connection%20Method%20for%20DirectQuery.md)。  
+-   在部署了模型后，您可以更改首选连接方法。 例如，您可以使用混合模式来进行测试，并且仅在全面测试了使用该模型的所有报表或查询后，才将模型切换到“仅限 DirectQuery”  模式。 有关详细信息，请参阅[设置或更改 DirectQuery 的首选连接方法](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)。  
   
-## 步骤 3：查看数据库的连接属性  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>步骤 3：查看数据库的连接属性  
  切换为 DirectQuery 可能会更改连接的安全上下文，具体取决于数据源连接的设置情况。 更改数据访问模式时，请查看模拟和连接字符串属性，确保登录名可以用于连接到后端数据库。  
   
  查看 **Configure Analysis Services for Kerberos constrained delegation** 中的 [配置 Analysis Services 以实现可信委托](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 部分，了解针对 DirectQuery 方案委派用户身份时的背景信息。  
   
 1.  在对象资源管理器中，展开“连接”，然后双击某个连接以查看其属性。  
   
-     使用 DirectQuery 模型时，只应为数据库定义一个连接，数据源必须是关系数据源，且类型必须是支持的数据库类型。 请参阅[支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
+     使用 DirectQuery 模型时，只应为数据库定义一个连接，数据源必须是关系数据源，且类型必须是支持的数据库类型。 有关步骤，请参阅 [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)中记录了一系列功能限制。  
   
 2.  **连接字符串** ：应指定在 DirectQuery 操作中使用的服务器、数据库名称和身份验证方法。 如果使用 SQL Server 身份验证，则可在此处指定数据库登录名。  
   
@@ -114,7 +122,7 @@ caps.handback.revision: 18
   
  当模型仅用于内存中时，不能使用模拟。 **ImpersonateCurrentUser**设置无效，除非模型正在使用 DirectQuery 模式。  
   
-## 步骤 4：验证 DirectQuery 访问  
+## <a name="step-4-validate-directquery-access"></a>步骤 4：验证 DirectQuery 访问  
   
 1.  在连接到 SQL Server 上的关系数据库的 Management Studio 中使用 SQL Server Profiler 或 xEvents 启动一个跟踪。  
   
@@ -124,7 +132,7 @@ caps.handback.revision: 18
   
 3.  在跟踪中，你会看到针对关系数据库执行查询的证据。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

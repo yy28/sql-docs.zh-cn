@@ -1,0 +1,107 @@
+---
+title: "HASHBYTES (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 07/29/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- HASHBYTES_TSQL
+- HASHBYTES
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- hash input
+- HASHBYTES
+ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
+caps.latest.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4826936736685a46e8df8604339a7d4a878981ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  返回其在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的输入的 MD2、MD4、MD5、SHA、SHA1 或 SHA2 哈希值。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+HASHBYTES ( '<algorithm>', { @input | 'input' } )  
+  
+<algorithm>::= MD2 | MD4 | MD5 | SHA | SHA1 | SHA2_256 | SHA2_512   
+```  
+  
+## <a name="arguments"></a>参数  
+ \<算法 >  
+ 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，SHA2_256 和 SHA2_512 以外的所有算法已都弃用。 较旧算法 （不推荐） 将继续工作，但它们将引发 deprecation 事件。  
+  
+ **@input**  
+ 指定包含要对其执行哈希操作的数据的变量。 **@input**是**varchar**， **nvarchar**，或**varbinary**。  
+  
+  *输入*   
+ 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
+  
+ 输出符合算法标准：MD2、MD4 和 MD5 为 128 位（即 16 个字节）；SHA 和 SHA1 为 160 位（即 20 个字节）；SHA2_256 为 256 位（即 32 个字节），SHA2_512 为 512 位（即 64 个字节）。  
+  
+**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  
+ 有关[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更早版本，允许的输入的值为限制为 8000 个字节。  
+  
+## <a name="return-value"></a>返回值  
+ **varbinary** （最大 8000 个字节）  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-return-the-hash-of-a-variable"></a>答： 返回变量的哈希  
+ 下面的示例返回`SHA1`的哈希**nvarchar**变量中存储数据`@HashThis`。  
+  
+```  
+DECLARE @HashThis nvarchar(4000);  
+SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
+SELECT HASHBYTES('SHA1', @HashThis);  
+  
+```  
+  
+### <a name="b-return-the-hash-of-a-table-column"></a>B： 返回的表列的哈希  
+ 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA1 哈希。  
+  
+```  
+CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
+INSERT dbo.Test1 VALUES ('This is a test.');  
+INSERT dbo.Test1 VALUES ('This is test 2.');  
+SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
+  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+  
+-------------------------------------------  
+0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
+0xF643A82F948DEFB922B12E50B950CEE130A934D6  
+  
+(2 row(s) affected)  
+  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+  
+  
+

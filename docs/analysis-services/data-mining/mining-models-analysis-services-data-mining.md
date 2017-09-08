@@ -1,30 +1,35 @@
 ---
-title: "挖掘模型（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "算法 [数据挖掘]"
-  - "挖掘模型 [Analysis Services]"
-  - "逻辑体系结构 [Analysis Services 多维数据]"
-  - "属性 [Analysis Services]"
-  - "挖掘模型 [Analysis Services], 关于数据挖掘模型"
-  - "体系结构 [Analysis Services]"
+title: "挖掘模型 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 挖掘模型（Analysis Services - 数据挖掘）
+# <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
   “挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  
   
  本节解释什么是数据挖掘模型以及它可用于的对象：模型和结构的基本体系结构、挖掘模型的属性以及创建和使用挖掘模型的方式。  
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
  在处理并分析挖掘结构所提供的数据之前，挖掘模型一直为空。 在处理挖掘模型之后，该模型将包含元数据、结果和指回到挖掘结构的绑定。  
   
- ![模型包含元数据、模式和绑定](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "模型包含元数据、模式和绑定")  
+ ![模型包含元数据、 模式和绑定](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "模型包含元数据、 模式和绑定")  
   
  元数据指定模型的名称和存储模型的服务器以及模型的定义，包括生成模型时所使用的挖掘结构中的列、处理模型时应用的任何筛选器的定义以及用于分析数据的算法。 所有这些选择（数据列及其数据类型、筛选器和算法）会极大地影响分析结果。  
   
@@ -88,9 +93,9 @@ caps.handback.revision: 37
   
  每个挖掘模型还具有派生自挖掘结构且说明该模型使用的数据列的属性。 如果模型使用的任何列为嵌套表，则该列还可以应用单独的筛选器。  
   
- 此外，每个挖掘模型还包含两个特殊属性：<xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
+ 此外，每个挖掘模型还包含两个特殊属性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包括的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 **Algorithm** 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。  
+-   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关附带的算法的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). **Algorithm** 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。  
   
 -   **Usage 属性** 定义模型使用每个列的方式。 您可以将列用法定义为 **Input**、 **Predict**、 **Predict Only**或 **Key**。 **Usage** 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 **Ignore**。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 37
   
  还可以针对挖掘模型创建查询以进行预测或检索由模型创建的模型元数据或模式。 使用数据挖掘扩展插件 (DMX) 创建查询。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
   
 |主题|链接|  
 |------------|-----------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 37
 |了解如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的自定义数据挖掘查看器。|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |查看可针对数据挖掘模型使用的不同查询类型的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  使用下面的链接可以获取有关使用数据挖掘模型的更具体信息  
   
 |任务|链接|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |使用数据填充模型，或更新模型中的数据|[处理挖掘模型](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |使用 OLAP 模型|[创建数据挖掘维度](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

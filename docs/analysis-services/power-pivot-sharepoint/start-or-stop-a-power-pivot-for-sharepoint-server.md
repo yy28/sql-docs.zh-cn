@@ -1,24 +1,29 @@
 ---
-title: "启动或停止 Power Pivot for SharePoint Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "启动或停止 Power Pivot for SharePoint Server |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 启动或停止 Power Pivot for SharePoint Server
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>启动或停止 Power Pivot for SharePoint Server
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例在同一台本地应用程序服务器上一起运行，以支持 SharePoint 场内协调一致的请求和数据处理。  
   
  本主题包含以下各节：  
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
  不能同时启动或停止场内的所有物理服务。 必须选择每个服务器，然后启动或停止特定服务。  
   
- 不能启动、暂停或停止特定 Web 应用程序的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务，但可以从默认连接列表中删除服务，使其不可用。 有关详细信息，请参阅[将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md)。  
+ 不能启动、暂停或停止特定 Web 应用程序的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务，但可以从默认连接列表中删除服务，使其不可用。 有关详细信息，请参阅 [将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
 1.  在管理中心的 **“系统设置”**中，单击 **“管理服务器上的服务”**。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |新的查询或数据刷新请求|如果要停止场中唯一的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器，新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据请求将不会被处理，并且数据请求将导致“找不到数据”的错误。<br /><br /> 如果有其他 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器，请求将转到其中一个可用的服务器。|  
 |使用情况数据|服务停止时将不会收集使用情况数据。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

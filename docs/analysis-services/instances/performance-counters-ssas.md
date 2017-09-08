@@ -1,27 +1,32 @@
 ---
-title: "性能计数器 (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "性能计数器 (SSAS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 性能计数器 (SSAS)
+# <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
   使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
   
- 性能监视器是用于跟踪资源使用情况的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制 (MMC) 管理单元。 可以通过以下方式启动此 MMC 管理单元：在命令提示符下键入 **PerfMon**，或从“控制面板”依次单击“管理工具”和“性能监视器”。 性能监视器使您可以通过使用预定义对象和计数器来跟踪服务器和进程的性能和活动，以及通过使用用户定义的计数器来监视事件。 性能监视器收集有关事件的计数而非数据，例如，内存使用量、活动事务数或 CPU 活动。 您还可以对特定计数器设置阈值以生成通知操作员的警报。  
+ 性能监视器是用于跟踪资源使用情况的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制 (MMC) 管理单元。 您可以通过以下方式启动此 MMC 管理单元：在命令提示符下键入 **PerfMon** ，或从“控制面板”依次单击 **“管理工具”**和 **“性能监视器”**。 性能监视器使您可以通过使用预定义对象和计数器来跟踪服务器和进程的性能和活动，以及通过使用用户定义的计数器来监视事件。 性能监视器收集有关事件的计数而非数据，例如，内存使用量、活动事务数或 CPU 活动。 您还可以对特定计数器设置阈值以生成通知操作员的警报。  
   
  性能监视器可以监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的远程和本地实例。 有关详细信息，请参阅 [使用性能监视器](http://technet.microsoft.com/library/cc749115.aspx)。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 14
   
  计数器分为若干组，以便您可以更轻松地找到相关计数器。  
   
-## 按组划分的计数器  
+## <a name="counters-by-groups"></a>按组划分的计数器  
   
 |分组|Description|  
 |-----------|-----------------|  
@@ -180,8 +185,8 @@ caps.handback.revision: 14
 |Filestore Page Faults/sec|文件存储页错误率。|  
 |Filestore Reads/sec|每秒读取的文件存储页数。|  
 |Filestore KB Reads/sec|每秒读取的文件存储 KB。|  
-|Filestore Writes/sec|每秒写入的文件存储页数。  写入是异步的。|  
-|Filestore KB Write/sec|每秒写入的文件存储 KB。  写入是异步的。|  
+|Filestore Writes/sec|每秒写入的文件存储页数。写入是异步的。|  
+|Filestore KB Write/sec|每秒写入的文件存储 KB。写入是异步的。|  
 |Filestore IO Errors/sec|文件存储 IO 错误率。|  
 |Filestore IO Errors|文件存储 IO 错误总计。|  
 |Filestore Clock Pages Examined/sec|后台清除器出于逐出目的而检查页的速率。|  

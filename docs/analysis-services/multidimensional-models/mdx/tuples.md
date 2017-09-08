@@ -1,28 +1,33 @@
 ---
-title: "元组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "元组 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bdd0f236112d8c08e1bdc6356ac381d10d6b29b6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 元组
+# <a name="tuples"></a>元组
   一个元组唯一标识多维数据集中数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  
   
-## 元组中的隐式或默认属性成员  
- 在 MDX 查询或表达式中定义元组时，不必显式包含每个属性层次结构中的属性成员。 如果属性层次结构中的成员未显式包含在查询或表达式中，则该属性层次结构的默认成员为隐式包含在元组中的属性成员。 除非在多维数据集中进行显式定义，否则每个属性层次结构的默认成员均为“(全部)”成员（如果存在“(全部)”成员）。 如果属性层次结构中不存在“(全部)”成员，则默认成员为属性层次结构中的顶级成员。 除非显式定义了默认度量值，否则默认度量值为多维数据集中指定的第一个度量值。 有关详细信息，请参阅[定义默认成员](../../../analysis-services/multidimensional-models/define-a-default-member.md)和 [DefaultMember (MDX)](../../../mdx/defaultmember-mdx.md)。  
+## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>元组中的隐式或默认属性成员  
+ 在 MDX 查询或表达式中定义元组时，不必显式包含每个属性层次结构中的属性成员。 如果属性层次结构中的成员未显式包含在查询或表达式中，则该属性层次结构的默认成员为隐式包含在元组中的属性成员。 除非在多维数据集中进行显式定义，否则每个属性层次结构的默认成员均为“(全部)”成员（如果存在“(全部)”成员）。 如果属性层次结构中不存在“(全部)”成员，则默认成员为属性层次结构中的顶级成员。 除非显式定义了默认度量值，否则默认度量值为多维数据集中指定的第一个度量值。 有关详细信息，请参阅[定义默认成员](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)和 [DefaultMember (MDX)](../../../mdx/defaultmember-mdx.md)。  
   
  例如，以下元组通过仅显式定义 Measures 维度的一个成员来标识 Adventure Works 数据库中的一个单元。  
   
@@ -44,12 +49,12 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md)。  
+>  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)。  
   
-### 作为值或成员引用的元组  
+### <a name="tuples-as-values-or-member-references"></a>作为值或成员引用的元组  
  如前面的示例所示，您可以在查询中使用元组返回该元组所引用的单元的值。 或者您也可以在表达式中使用元组显式引用该元组中指定的成员。 查询或表达式可使用返回元组或获取元组的函数。 元组可用来引用它所指定的单元的值，或者用来指定成员组合（当元组用在函数中时）。  
   
-### 元组维数  
+### <a name="tuple-dimensionality"></a>元组维数  
  元组的  “维数”指元组中成员的序列或顺序。 由于隐式成员总是以相同的顺序出现，因此维数通常是针对元组的显式定义成员而言。 定义元组集时，元组成员的顺序非常重要。 以下示例在列轴上的一个元组中包含了两个成员。  
   
 ```  
@@ -66,10 +71,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  属性成员可以按成员名称或成员键引用。 在前面的示例中，您可以将对 [CY 2004] 的引用替换为对 &[2004] 的引用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成员、元组和集 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [使用成员、 元组，和集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

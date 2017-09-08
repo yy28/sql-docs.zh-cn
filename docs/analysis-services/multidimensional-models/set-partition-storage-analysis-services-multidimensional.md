@@ -1,44 +1,49 @@
 ---
-title: "设置分区存储（Analysis Services - 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "低滞后时间 MOLAP"
-  - "标准存储 [Analysis Services]"
-  - "混合 OLAP"
-  - "自动 MOLAP"
-  - "关系 OLAP"
-  - "多维 OLAP"
-  - "预定的 MOLAP [Analysis Services]"
-  - "分区 [Analysis Services], 存储"
-  - "HOLAP"
-  - "MOLAP"
-  - "实时 ROLAP"
-  - "实时 HOLAP"
-  - "ROLAP"
-  - "中等滞后时间 MOLAP"
+title: "设置分区存储 (Analysis Services-多维) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- low latency MOLAP
+- standard storage [Analysis Services]
+- hybrid OLAP
+- automatic MOLAP
+- relational OLAP
+- multidimensional OLAP
+- scheduled MOLAP [Analysis Services]
+- partitions [Analysis Services], storage
+- HOLAP
+- MOLAP
+- real time ROLAP
+- real time HOLAP
+- ROLAP
+- medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 设置分区存储（Analysis Services - 多维）
+# <a name="set-partition-storage-analysis-services---multidimensional"></a>设置分区存储（Analysis Services - 多维）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为存储模式和缓存选项提供了几种标准存储配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中多维数据集的“分区”选项卡中或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的分区属性页面指定分区存储。  
   
-## 选择存储模式的准则  
+## <a name="guidelines-for-choosing-a-storage-mode"></a>选择存储模式的准则  
  对于大型度量值组来说，为不同的分区配置不同的存储是常见的方法。 请考虑以下原则：  
   
 -   为不断发生更新的当前数据使用实时 ROLAP。  
@@ -53,7 +58,7 @@ caps.handback.revision: 31
   
  这些只是常规指南，您可能需要进行仔细的分析和测试来为您的数据开发最佳存储方案。 如果没有一种存储配置满足您的要求，您还可以手动为分区配置存储设置。  
   
-## 存储设置说明  
+## <a name="storage-settings-descriptions"></a>存储设置说明  
   
 |标准存储设置|Description|  
 |------------------------------|-----------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 31
 |预定的 MOLAP|详细信息数据和聚合以多维格式存储。 如果数据发生更改，服务器将不会收到通知。 处理每隔 24 小时自动进行一次。<br /><br /> 通常将此设置用于只需要每天更新的数据源。 查询总是针对 MOLAP 缓存中的数据进行的，在新的缓存生成及其对象被处理之前，这些数据不会被放弃。|  
 |MOLAP|不启用主动缓存。 详细信息数据和聚合均以多维格式存储。 如果数据发生更改，服务器将不会收到通知。 必须对处理进行预定，或者手动执行它。<br /><br /> 如果数据源中的定期更新对客户端程序来说不是必要的但高性能对其来说很关键，则通常为数据源使用此设置。<br /><br /> 如果应用程序不需要最新的数据，则不使用主动缓存的 MOLAP 会提供最佳性能。 尽管可以通过在临时服务器上更新和处理多维数据集及使用数据库同步将更新的和已处理的 MOLAP 对象复制到生产服务器上等方法来最大限度地减少停机时间，但是它的确需要停机时间来处理更新的对象。|  
   
-## 自定义存储选项  
+## <a name="custom-storage-options"></a>自定义存储选项  
  您可以手动配置存储和主动缓存，而不是使用某个标准存储设置。 创建自定义存储设置之前，可能需要首先单击 **“标准设置”** 选项，然后将滑块移动到与要使用的配置最相匹配的标准设置。 然后，若要创建自定义配置，请单击 **“自定义设置”** 选项并单击 **“选项”**。  
   
 -   可以指定数据源中的更改是否触发对缓存的更新。 若要允许可接受级别的偏差，可以指定更新数据源后的一个最小静默间隔。 还可以指定一个静默间隔覆盖，如果对数据源进行的更改之间的间隔从未达到最小值，则它将在指定期限之后更新缓存。  
@@ -78,7 +83,7 @@ caps.handback.revision: 31
   
  如果选中 **“对维度应用设置”** 复选框，则同一存储设置还将应用到与该度量值组相关的维度。 维度值最初与分区值相同。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的分区](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

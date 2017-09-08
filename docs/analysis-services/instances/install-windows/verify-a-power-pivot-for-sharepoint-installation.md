@@ -1,27 +1,32 @@
 ---
-title: "验证 Power Pivot for SharePoint 安装 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verify a Power Pivot for SharePoint 安装 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 验证 Power Pivot for SharePoint 安装
+# <a name="verify-a-power-pivot-for-sharepoint-installation"></a>验证 Power Pivot for SharePoint 安装
   在 SharePoint 场中安装的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 实例可通过 SharePoint 管理中心进行管理。 至少，你可以检查管理中心和 SharePoint 网站上的页面以便确认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器组件和功能可用。 但是，若要完全验证某一安装，你必须具有可发布到 SharePoint 并从库中访问的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。 出于测试目的，你可以发布已包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 | SharePoint 2013|  
   
 ##  <a name="verifyinstall"></a> 验证管理中心集成  
  若要验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] integration 与管理中心的集成，请执行以下操作：  
@@ -57,14 +62,14 @@ caps.handback.revision: 15
   
 7.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
-8.  单击“默认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”**以便为此应用程序打开 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理仪表板。 第一次使用时，面板要花几分钟的加载时间。  
+8.  单击**默认[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]服务应用程序**以打开[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]为此应用程序的管理仪表板。 第一次使用时，面板要花几分钟的加载时间。  
   
-     或者，单击“默认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”**旁的空白区域以选择该行，然后单击“属性”以查看此服务应用程序的配置设置。 您可以修改配置设置和应用程序属性以更改服务器配置。 有关详细信息，请参阅 [在管理中心中创建和配置 PowerPivot 服务应用程序](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+     或者，单击空白区域旁边**默认[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]服务应用程序**来选择行，然后单击**属性**若要查看此服务应用程序的配置设置。 您可以修改配置设置和应用程序属性以更改服务器配置。 有关详细信息，请参阅 [在管理中心中创建和配置 PowerPivot 服务应用程序](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
-## 验证网站级别的集成  
+## <a name="verify-integration-at-the-site-level"></a>验证网站级别的集成  
  若要验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用了默认值，则可以在 URL 地址中指定 http://\<your computer name>。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果你使用默认值，则可以指定 http://\<您的计算机名称 > 在 URL 地址。  
   
 2.  验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据访问和处理功能在应用程序中是否可用。 你可以通过验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 提供的库模板是否存在来验证此可用性：  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 15
   
     2.  在应用列表中，你应当可以看到“数据馈送库”和“[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库”。 这些库模板由 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能提供，并且在正确集成了该功能的情况下在“库”列表中将可见。  
   
-## 验证服务器上的数据访问。  
+## <a name="verify-data-access-on-the-server"></a>验证服务器上的数据访问。  
  若要验证服务器上的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据访问，请执行以下操作：  
   
 1.  [下载](http://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教程附带的“野餐”数据示例。 你将使用此下载中的示例工作簿来验证 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据访问。 提取文件。  
@@ -91,7 +96,7 @@ caps.handback.revision: 15
   
 7.  在“服务器类型”中，选择 **“Analysis Services”**。  
   
-8.  在“服务器名称”中，键入 **\<server-name>\powerpivot**，其中，**\<server-name>** 是具有 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装的计算机的名称。  
+8.  在服务器名称，输入**\<服务器名称 > \powerpivot**，其中**\<服务器名称 >**是具有计算机的名称[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint安装。  
   
 9. 单击 **“连接”**。 这将验证 Analysis Services 服务器是否可用。  
   

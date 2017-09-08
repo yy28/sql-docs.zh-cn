@@ -1,0 +1,84 @@
+---
+title: "xml_schema_namespace (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 07/27/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- xml_schema_namespace_TSQL
+- xml_schema_namespace
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- XML schema collections [SQL Server], reconstructing schemas
+- xml_schema_namespace function
+- reconstructing schemas
+- schemas [SQL Server], XML
+- schema collections [SQL Server], reconstructing schemas
+ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
+caps.latest.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 449e545672192baa9d16204afe1fb23497959094
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="xmlschemanamespace"></a>xml_schema_namespace
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  重新构造指定 XML 架构集合中的所有架构或特定架构。 此函数返回 **xml** 数据类型实例。  
+  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
+```  
+  
+## <a name="arguments"></a>参数  
+ *Relational_schema*  
+ 关系架构名称。 *Relational_schema*是**sysname**。  
+  
+ *XML_schema_collection_name*  
+ 要重新构造的 XML 架构集合的名称。 *XML_schema_collection_name*是**sysname**。  
+  
+ *Namespace*  
+ 要重新构造的 XML 架构的命名空间 URI。 它最多包含 1,000 个字符。 如果未提供命名空间 URI，则重新构造整个 XML 架构集合。 *Namespace*是**nvarchar （4000)**。  
+  
+## <a name="return-types"></a>返回类型  
+ **xml**  
+  
+## <a name="remarks"></a>注释  
+ 当使用导入数据库中的 XML 架构组件[CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)或[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)，保留的用于验证的架构方面。 因此，重新构建的架构在用词上与原始架构文档可能有所不同。 特别是，注释、空格和批注将会丢失；并且隐式类型的信息将变成显式的。 例如， \<xs:element 名称 ="e1"/ > 将成为\<xs:element 名称 ="e1"type ="xs: anytype"/ >。 此外，不保留命名空间前缀。  
+  
+ 如果指定了命名空间参数，则生成的架构文档将包含该命名空间中所有架构组件的定义，即使在不同的架构文档和/或 DDL 步骤中添加了这些组件也是如此。  
+  
+ 不能使用此函数来构造从 XML 架构文档**sys.sys** XML 架构集合。  
+  
+## <a name="examples"></a>示例  
+ 以下示例从 `ProductDescriptionSchemaCollection` 数据库中的产品关系架构中检索 XML 架构集合 `AdventureWorks2012`。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
+GO  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
+ [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
+  
+  
+

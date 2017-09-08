@@ -1,36 +1,41 @@
 ---
-title: "安全属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "安全性 [Analysis Services], 属性"
-  - "SecurityPackageList 属性"
-  - "BuiltinAdminsAreServerAdmins 属性"
-  - "DisableClientImpersonation 属性"
-  - "ErrorMessageMode 属性"
-  - "RequiredProtectionLevel 属性"
-  - "ServiceAccountIsServerAdmin 属性"
-  - "RequireClientAuthentication 属性"
+title: "安全属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- security [Analysis Services], properties
+- SecurityPackageList property
+- BuiltinAdminsAreServerAdmins property
+- DisableClientImpersonation property
+- ErrorMessageMode property
+- RequiredProtectionLevel property
+- ServiceAccountIsServerAdmin property
+- RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0233cd9c2e9eff5cc776b921e092206524546a52
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全属性
+# <a name="security-properties"></a>安全属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的安全服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式  
   
-## 属性  
+## <a name="properties"></a>属性  
  **RequireClientAuthentication**  
  一个布尔值属性，指示是否需要客户端身份验证。  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 15
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

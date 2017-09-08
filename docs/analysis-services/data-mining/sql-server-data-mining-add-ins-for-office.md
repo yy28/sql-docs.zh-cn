@@ -1,23 +1,28 @@
 ---
-title: "SQL Server Office 数据挖掘外接程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Office 数据挖掘外接程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# SQL Server Office 数据挖掘外接程序
+# <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
   
  该外接程序中的向导和数据管理工具为以下这些常用的数据挖掘任务提供了分步说明：  
@@ -46,16 +51,16 @@ caps.handback.revision: 10
   
 -   **浏览和展现。** 数据挖掘不是可完全自动进行的活动 - 需要探索并理解结果才能采取有意义的措施。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
   
--   **部署和集成。** 创建有用的模型后，通过使用管理工具将该模型从试验服务器导出到另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，将该模型投入生产。  
+-   **部署和集成。** 创建有用的模型后，通过使用管理工具将该模型从试验服务器导出到另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，将该模型投入生产。  
   
      您还可以将模型保留在服务器上创建它时的位置，但使用 Integration Services 或 DMX 脚本刷新定型数据并运行预测。  
   
      高级用户一定会感激 **“跟踪”** 功能，通过该功能，可看到发送到服务器的 XMLA 和 DMX 语句。  
   
-## 入门  
+## <a name="getting-started"></a>入门  
  有关详细信息，请参阅 [Office 数据挖掘外接程序中包含的功能](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
-## 支持和要求  
+## <a name="support-and-requirements"></a>支持和要求  
  可免费下载 SQL Server Office 数据挖掘外接程序。 必须已安装以下某个 Office 版本才能使用这些工具：  
   
 -   Office 2010（32 位或 64 位版）  
@@ -73,8 +78,8 @@ caps.handback.revision: 10
   
 -   Standard  
   
- 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅 [SQL Server 2016 各个版本支持的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
- 有关针对安装的其他帮助，请参阅下载中心上的此页：[http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 有关针对安装的其他帮助，请参阅下载中心上的此页： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

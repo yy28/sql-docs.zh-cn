@@ -1,29 +1,34 @@
 ---
-title: "移动 Analysis Services 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "移动数据库 [Anlysis Services]"
-  - "移动数据库"
-  - "操作 [Analysis Services - 多维数据]"
+title: "移动 Analysis Services 数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving databases [Anlysis Services]
+- moving databases
+- operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 移动 Analysis Services 数据库
-  很多情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将多维或表格模型数据库移到另一个位置。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。  
+# <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
+  很多情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将多维或表格模型数据库移到另一个位置。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。  
   
  可以通过多种方式来移动数据库。 本文档介绍下列常见方案：  
   
@@ -38,9 +43,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  在不向数据库分配密码的情况下分离数据库会使该数据库处于不安全状态。 我们建议您为数据库分配密码以保护机密信息。 还要向数据库文件夹、子文件夹和文件应用相应的访问安全性以防止对它们进行未经授权的访问。  
   
-## 过程  
+## <a name="procedures"></a>过程  
   
-#### 使用 SSMS 以交互方式移动数据库  
+#### <a name="moving-a-database-interactively-using-ssms"></a>使用 SSMS 以交互方式移动数据库  
   
 1.  在 SSMS 的左窗格或右窗格中找到要移动的数据库。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 9. 键入步骤 3 中使用的密码，然后单击 **“确定”** 执行附加命令。  
   
-#### 使用 AMO 以编程方式移动数据库  
+#### <a name="moving-a-database-programmatically-using-amo"></a>使用 AMO 以编程方式移动数据库  
   
 1.  在 C# 应用程序中，修改以下示例代码并完成所指示的任务。  
   
@@ -98,11 +103,11 @@ caps.handback.revision: 14
   
  `}`  
   
-1.  在 C# 应用程序中，用必要的参数调用 `MoveDb()`。  
+1.  在 C# 应用程序中，用必要的参数调用 `MoveDb()` 。  
   
 2.  编译和执行您的代码以移动该数据库。  
   
-#### 使用 XMLA 借助于脚本移动数据库  
+#### <a name="moving-a-database-by-script-using-xmla"></a>使用 XMLA 借助于脚本移动数据库  
   
 1.  在 SSMS 中打开一个新的 XMLA 选项卡。  
   
@@ -136,16 +141,16 @@ caps.handback.revision: 14
   
  `</Attach>`  
   
-1.  将 `%dbFolder%` 替换为数据库文件夹的完整 UNC 路径，将 `%ReadOnlyMode%` 替换为相应值（**ReadOnly** 或 **ReadWrite**），并将 `%password%` 替换为你的密码。 % 字符是模板的一部分，必须将其删除。  
+1.  将 `%dbFolder%` 替换为数据库文件夹的完整 UNC 路径，将 `%ReadOnlyMode%` 替换为相应值（ **ReadOnly** 或 **ReadWrite**），并将 `%password%` 替换为你的密码。 % 字符是模板的一部分，必须将其删除。  
   
 2.  执行 XMLA 命令。  
   
-## 另请参阅  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+## <a name="see-also"></a>另请参阅  
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [数据库存储位置](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [数据库 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [数据库 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [ReadWriteMode 元素](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   

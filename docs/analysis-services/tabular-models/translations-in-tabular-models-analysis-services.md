@@ -1,24 +1,29 @@
 ---
-title: "表格模型 (Analysis Services) 中的翻译 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "表格模型 (Analysis Services) 中的翻译 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 表格模型 (Analysis Services) 中的翻译
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 为在 1200 兼容级别上创建的表格模型添加了翻译字符串支持。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
+# <a name="translations-in-tabular-models-analysis-services"></a>表格模型 (Analysis Services) 中的翻译
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]将添加翻译字符串支持的表格模型。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
   
  已翻译的字符串仅适用于出现在客户端工具（如 Excel 数据透视表列表）中的对象元数据（表和列的名称及说明）。  若要使用已翻译的字符串，客户端连接需指定区域性。 在“在 Excel 中分析”功能中，可以从下拉列表中选择语言。 对于其他工具，可能需要在连接字符串中指定区域性。  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 -   使用允许在连接字符串上使用 LCID 的客户端应用程序连接到模型  
   
-## 创建一个空的翻译文件  
+## <a name="create-an-empty-translation-file"></a>创建一个空的翻译文件  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 添加翻译。  
   
 1.  单击“模型” > “翻译” > “管理翻译”。  
@@ -49,9 +54,9 @@ caps.handback.revision: 13
   
 4.  单击“导出语言文件” 。  提供文件名和文件位置。  
   
- ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
+ ![ssas-表格-转换-导出](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-表格-转换-导出")  
   
-## 添加翻译  
+## <a name="add-translations"></a>添加翻译  
  空的 JSON 翻译文件包括特定语言翻译的元数据。 在模型定义末尾的 **Culture** 部分指定了对象名称和说明的翻译占位符。 可为以下各项添加翻译：  
   
 |||  
@@ -65,12 +70,12 @@ caps.handback.revision: 13
   
  以下示例显示了 **DimProduct** 表和 **DimCustomer** 表的已翻译标题和说明。  
   
- ![ssas-tabular-translate-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-tabular-translate-json")  
+ ![ssas-表格-转换-json](../../analysis-services/tabular-models/media/ssas-tabular-translate-json.png "ssas-表格-转换-json")  
   
 > [!TIP]  
 >  可以使用任何 JSON 编辑器打开文件，但是建议你使用 Visual Studio 中的 JSON 编辑器，以便你能使用解决方案资源管理器中的“查看代码”命令来查看 SSDT 中的表格模型定义。 若要获取 JSON 编辑器，需 [安装 Visual Studio 2015 的完整版本](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)。 免费的社区版包括 JSON 编辑器。  
   
-## 导入翻译文件  
+## <a name="import-a-translation-file"></a>导入翻译文件  
  导入的翻译字符串会成为模型定义的永久部分。 导入这些字符串后，将不再引用翻译文件。  
   
 1.  单击“模型” > “翻译” > “导入翻译”。  
@@ -83,7 +88,7 @@ caps.handback.revision: 13
     |-|-|  
     |覆盖现有翻译|导入文件的过程中，将替换同一语言的所有现有标题或说明。|  
     |忽略无效对象|指定应忽略元数据偏差还是标记为错误。|  
-    |将导入结果写入日志文件|默认情况下，系统会将日志文件保存到项目文件夹。 导入结束后，系统将提供文件的确切路径。 日志文件名为 SSDT_Translations_Log_\<timestamp>。|  
+    |将导入结果写入日志文件|默认情况下，系统会将日志文件保存到项目文件夹。 导入结束后，系统将提供文件的确切路径。 日志文件名称是 SSDT_Translations_Log_\<时间戳 >。|  
     |导入前，将翻译备份到 JSON 文件|备份与要导入的字符串的区域性一致的现有翻译。  如果模型中不存在要导入的区域性，则备份将为空。<br /><br /> 如果以后需要还原此文件，可以将 model.bim 的内容替换为此 JSON 文件。|  
   
 4.  单击“导入” 。  
@@ -96,7 +101,7 @@ caps.handback.revision: 13
   
     -   搜索“区域性”或特定的已翻译字符串，以验证希望看到的字符串实际存在。  
   
-## 使用区域设置标识符进行连接  
+## <a name="connect-using-a-locale-identifier"></a>使用区域设置标识符进行连接  
  本部分介绍了一种用于验证是否已从模型中返回正确字符串的方法。  
   
 1.  在 Excel 中，连接到表格模型。 此步骤假定已部署该模型。 如果该模型仅存在于工作区中，则将其部署到 Analysis Services 实例以完成验证检查。  
@@ -105,11 +110,11 @@ caps.handback.revision: 13
   
 2.  在 Excel 连接对话框中，为模型中存在的字符串翻译选择区域性。 Excel 检测模型中定义的区域性，并相应填充下拉列表。  
   
-     ![ssas-tabular-translations-excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-tabular-translations-excel")  
+     ![ssas-表格的翻译的 excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas-表格的翻译的 excel")  
   
      创建数据透视表时，将看到已翻译的表和列名称。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

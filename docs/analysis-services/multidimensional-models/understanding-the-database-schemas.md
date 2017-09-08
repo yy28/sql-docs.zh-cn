@@ -1,34 +1,39 @@
 ---
-title: "了解数据库架构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "架构生成向导, 数据库架构"
-  - "数据库架构 [Analysis Services]"
-  - "关系架构 [Analysis Services], 数据库架构"
-  - "主题区域架构选项 [Analysis Services]"
-  - "临时架构选项 [Analysis Services]"
-  - "非规范化架构"
+title: "了解数据库架构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Schema Generation Wizard, database schema
+- database schema [Analysis Services]
+- relational schema [Analysis Services], database schema
+- subject area schema options [Analysis Services]
+- staging area schema options [Analysis Services]
+- denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 了解数据库架构
+# <a name="understanding-the-database-schemas"></a>了解数据库架构
   架构生成向导为基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的维度和度量值组的主题区域数据库生成一个非规范化的关系架构。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
   
-## 验证  
+## <a name="validation"></a>验证  
  在架构生成向导开始生成基础关系架构之前，它会验证 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度。 如果该向导检测到错误，它便会停止并将错误报告到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“任务列表”窗口。 阻止生成的错误示例包括：  
   
 -   具有多个键属性的维度。  
@@ -41,11 +46,11 @@ caps.handback.revision: 28
   
 -   未正确配置的代理键，如使用 **ScdOriginalID** 属性类型的多个属性，或使用未用整数数据类型绑定到列的 **ScdOriginalID** 的属性。  
   
-## 维度表  
+## <a name="dimension-tables"></a>维度表  
  对于每个维度，架构生成向导都会生成一个要包含在主题区域数据库中的维度表。 维度表的结构取决于在设计它所基于的维度时所做的选择。  
   
  列  
- 向导将为与维度表所基于的维度中的每个特性关联的绑定（例如，每个特性的 **KeyColumns**、**NameColumn**、**ValueColumn**、**CustomRollupColumn**、**CustomRollupPropertiesColumn** 和 **UnaryOperatorColumn** 属性的绑定）生成一列。  
+ 向导将为与维度表所基于的维度中的每个特性关联的绑定（例如，每个特性的 **KeyColumns**、 **NameColumn**、 **ValueColumn**、 **CustomRollupColumn**、 **CustomRollupPropertiesColumn**和 **UnaryOperatorColumn** 属性的绑定）生成一列。  
   
  关系  
  向导将生成每个父属性的列与维度表的主键之间的关系。  
@@ -61,7 +66,7 @@ caps.handback.revision: 28
  翻译  
  向导会生成一个单独的表以保存需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
-## 事实数据表  
+## <a name="fact-tables"></a>事实数据表  
  对于多维数据集中的每个度量值组，架构生成向导都会生成一个要包含在主题区域数据库中的事实数据表。 事实数据表的结构取决于在设计它所基于的度量值组时所做的选择，以及在度量值组和任何包含的维度之间建立的关系。  
   
  列  
@@ -82,7 +87,7 @@ caps.handback.revision: 28
  翻译  
  向导会生成一个单独的表以保存度量值组中需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
-## 数据类型转换和默认长度  
+## <a name="data-type-conversion-and-default-lengths"></a>数据类型转换和默认长度  
  除了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** 数据类型的列以外，架构生成向导会在所有情况下忽略数据类型。 **wchar** 数据大小直接翻译为 **nvarchar** 数据类型。 但是，如果使用 **wchar** 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
   
  如果数据项（如属性的绑定）没有指定的长度，则针对该列使用下表中列出的默认长度。  
@@ -95,8 +100,8 @@ caps.handback.revision: 28
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [管理对数据源视图和数据源所做的更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [管理对数据源视图和数据源更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

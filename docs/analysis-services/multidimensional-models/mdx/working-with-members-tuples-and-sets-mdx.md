@@ -1,44 +1,49 @@
 ---
-title: "使用成员、元组和集 (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MDX [Analysis Services], 元组"
-  - "成员键 [MDX]"
-  - "MDX [Analysis Services], 集"
-  - "计算成员 [MDX]"
-  - "成员 [MDX]"
-  - "多维表达式 [Analysis Services], 成员"
-  - "命名集 [MDX]"
-  - "多维表达式 [Analysis Services], 元组"
-  - "成员函数 [MDX]"
-  - "集 [MDX]"
-  - "MDX [Analysis Services], 成员"
-  - "成员名称 [MDX]"
-  - "多维表达式 [Analysis Services], 集"
-  - "元组函数"
-  - "元组"
-  - "集函数 [MDX]"
+title: "使用成员、 元组和集 (MDX) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MDX [Analysis Services], tuples
+- member keys [MDX]
+- MDX [Analysis Services], sets
+- calculated members [MDX]
+- members [MDX]
+- Multidimensional Expressions [Analysis Services], members
+- named sets [MDX]
+- Multidimensional Expressions [Analysis Services], tuples
+- member functions [MDX]
+- sets [MDX]
+- MDX [Analysis Services], members
+- member names [MDX]
+- Multidimensional Expressions [Analysis Services], sets
+- tuple functions
+- tuples
+- set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5929d1c9d926005cd919d4e939e46c950723b64
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用成员、元组和集 (MDX)
+# <a name="working-with-members-tuples-and-sets-mdx"></a>使用成员、元组和集 (MDX)
   MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
   
-## 成员函数  
+## <a name="member-functions"></a>成员函数  
  MDX 提供多个用于从其他 MDX 实体（如从维度、级别、集或元组）检索成员的函数。 例如， [FirstChild](../../../mdx/firstchild-mdx.md) 函数是一个对成员进行操作的函数，该函数返回一个成员。  
   
  若要获得时间维度的第一个子成员，可以显式标示该成员，如下面的示例所示。  
@@ -59,7 +64,7 @@ FROM [Adventure Works]
   
  有关 MDX 成员函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 元组函数  
+## <a name="tuple-functions"></a>元组函数  
  MDX 提供多个返回元组的函数，它们可在任何接受元组的地方使用。 例如，[Item (Tuple) (MDX)](../../../mdx/item-tuple-mdx.md) 函数可用于从集中提取第一个元组，当你知道某个集是由单个元组组成，并且要向需要元组的函数提供该元组时，此函数非常有用。  
   
  下面的示例返回列轴上元组集中的第一个元组。  
@@ -79,7 +84,7 @@ FROM [Adventure Works]
   
  有关元组函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 集函数  
+## <a name="set-functions"></a>集函数  
  MDX 提供多个返回集的函数。 显式键入元组并将它们括在大括号内并不是检索集的唯一方法。 有关返回集的成员函数的详细信息，请参阅 [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 还有很多其他集函数。  
   
  冒号运算符允许您使用成员的自然顺序创建集。 例如，下面的示例中显示的集包含 2002 日历年第一季度到第四季度的元组。  
@@ -108,27 +113,27 @@ FROM [Adventure Works]
   
  有关集函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 数组函数  
+## <a name="array-functions"></a>数组函数  
  数组函数对集进行操作并返回一个数组。 有关数组函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 层次结构函数  
+## <a name="hierarchy-functions"></a>层次结构函数  
  通过对成员、级别、层次结构或字符串进行操作，层次结构函数返回一个层次结构。 有关层次结构函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 级别函数  
+## <a name="level-functions"></a>级别函数  
  通过对成员、级别或字符串进行操作，级别函数返回一个级别。 有关级别函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 逻辑函数  
+## <a name="logical-functions"></a>逻辑函数  
  逻辑函数对 MDX 表达式进行操作，返回表达式中有关元组、成员或集的信息。 例如，[IsEmpty (MDX)](../../../mdx/isempty-mdx.md) 函数评估表达式是否返回了空单元值。 有关逻辑函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 数值函数  
+## <a name="numeric-functions"></a>数值函数  
  数值函数对 MDX 表达式进行操作，返回一个标量值。 例如，[Aggregate (MDX)](../../../mdx/aggregate-mdx.md) 函数返回一个标量值，该值由对指定集中元组的度量值聚合而得。 有关数值函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 字符串函数  
+## <a name="string-functions"></a>字符串函数  
  字符串函数对 MDX 表达式进行操作，返回一个字符串。 例如，[UniqueName (MDX)](../../../mdx/uniquename-mdx.md) 函数返回一个字符串值，该字符串包含维度、层次结构、级别或成员的唯一名称。 有关字符串函数的详细信息，请参阅 [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 函数引用 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

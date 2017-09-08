@@ -1,23 +1,28 @@
 ---
-title: "数据挖掘解决方案的相关项目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "数据挖掘解决方案的相关项目 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘解决方案的相关项目
+# <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
   数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
   
 -   准备和选择数据和变量。 这一过程包括数据清除、元数据管理和多个数据源的集成，以及数据的转换、合并和数据到数据仓库的上载。  
@@ -113,7 +118,7 @@ caps.handback.revision: 12
  有关将 Reporting Services 用作数据源的表示层的详细信息，请参阅 [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)。  
   
 ##  <a name="bkmk_DQSetc"></a> Data Quality Services  
- Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的新增功能。 由于数据问题会导致无法进行数据挖掘，因此执行重复分析或在具有复杂数据源的大型组织中工作的数据挖掘人员应会发现，使用 DQS 的规划良好的数据项目是一种支持数据挖掘的解决方案，它比使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他脚本的即席数据清除更为可靠。  
+ Data Quality Services (DQS) 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的新增功能。 由于数据问题会导致无法进行数据挖掘，因此执行重复分析或在具有复杂数据源的大型组织中工作的数据挖掘人员应会发现，使用 DQS 的规划良好的数据项目是一种支持数据挖掘的解决方案，它比使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他脚本的即席数据清除更为可靠。  
   
  应考虑将以下 DQS 功能用于数据挖掘解决方案中的数据准备和数据集成。  
   
@@ -153,17 +158,17 @@ caps.handback.revision: 12
   
  由于全文查询是 SQL Server 引擎所提供的一项功能，因此，您可对文本数据源使用全文搜索来创建参数化查询、生成自定义数据集或字词向量，并在数据挖掘中使用这些源。  
   
- 有关如何将全文查询用于全文检索的详细信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
+ 有关如何将全文查询用于全文检索的详细信息，请参阅 [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
  使用 SQL Server 全文搜索功能的好处是，您可利用所有 SQL Server 语言附带的断字符和词干分析器中包含的语言智能。 通过使用提供的断字符和词干分析器，您可确保使用适用于每种语言的字符分隔字词，并且不会忽略基于标注字符或拼字变体（如日语中的多种数字格式）的同义词。  
   
  除了控制词边界的语言智能之外，每种语言的词干分析器还可基于对应语言中的语态和拼字变体规则的知识，将词的变体减少至单个字词。 每种语言的语言分析规则各不相同，这些规则是根据对实际公司所做的大量调研来制定的。  
   
- 有关详细信息，请参阅[配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
+ 有关详细信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
  全文检索后存储的词的版本是一个压缩格式的标记。 对全文检索进行的后续查询将基于相应的语言规则生成特定词的多种变形形式，以确保生成所有可能的匹配项。 例如，即使存储的标记可能为“run”，查询引擎也会查询词“running”、“ran”和“runner”，因为这些词都是根词“run”正常派生的语形学变体。  
   
- 还可以创建和生成用户同义词库以存储同义词并获得更佳搜索结果，或对字词进行分类。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 有关详细信息，请参阅[为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
+ 还可以创建和生成用户同义词库以存储同义词并获得更佳搜索结果，或对字词进行分类。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 有关详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
  使用全文搜索的要求包括：  
   
@@ -186,9 +191,9 @@ caps.handback.revision: 12
   
 -   返回相似性得分和影响得分的词语。  
   
- 有关详细信息，请参阅[使用语义搜索在文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)和[使用语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 有关详细信息，请参阅 [使用语义搜索在文档中查找关键短语](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 和 [使用语义搜索查找相似和相关文档](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
- 有关支持语义索引的数据库对象的详细信息，请参阅[对表和列启用语义搜索](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)。  
+ 有关支持语义索引的数据库对象的详细信息，请参阅 [对表和列启用语义搜索](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)。  
   
  使用语义搜索的要求包括：  
   
@@ -200,7 +205,7 @@ caps.handback.revision: 12
   
 -   不是所有的全文语言都支持语义索引。 有关支持的语言的列表，请参阅 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型解决方案 (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [表格模型解决方案（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   

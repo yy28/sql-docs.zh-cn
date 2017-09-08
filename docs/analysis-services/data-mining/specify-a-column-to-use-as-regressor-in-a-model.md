@@ -1,30 +1,35 @@
 ---
-title: "在模型中指定用作回归量的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将使用某个列指定模型中的回归量 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在模型中指定用作回归量的列
+# <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
   线性回归模型将可预测属性的值表示为结合了各种输入的公式的结果，这样，数据将尽可能接近地适合于估计的回归线。 该算法只接受数值作为输入，并且自动检测提供最佳调整的输入。  
   
  不过，您可以通过将 FORCE_REGRESSOR 参数添加到该模型并指定要使用的回归量，指定要作为回归量包括的列。 您最好在属性有意义的情况下（甚至在结果太小以致模型无法检测到时）或者您要确保属性包括在公式中时执行此操作。  
   
- 下面的过程介绍的是如何使用 [神经网络教程](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)使用的示例数据创建简单线形回归模型。 该模型不一定强健，但演示了如何使用数据挖掘设计器自定义线性回归模型。  
+ 下面的过程介绍的是如何使用 [神经网络教程](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)使用的示例数据创建简单线形回归模型。 该模型不一定强健，但演示了如何使用数据挖掘设计器自定义线性回归模型。  
   
-### 如何创建简单线性回归模型  
+### <a name="how-to-create-a-simple-linear-regression-model"></a>如何创建简单线性回归模型  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 **解决方案资源管理器**中，展开 **“挖掘结构”**。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 6
   
      在查看器中，该模型将表示为包含递归公式的单个节点。 您可以在 **“挖掘图例”**中查看该公式，或者可以通过使用查询提取公式的系数。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

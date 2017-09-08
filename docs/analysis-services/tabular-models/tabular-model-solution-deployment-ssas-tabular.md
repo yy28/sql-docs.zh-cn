@@ -1,24 +1,29 @@
 ---
-title: "表格模型解决方案部署（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "表格模型解决方案部署 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 表格模型解决方案部署（SSAS 表格）
+# <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
   在创作某一表格模型项目后，您必须部署此项目，以便用户通过使用报表客户端应用程序浏览该模型。 本主题介绍在您的环境中部署表格模型解决方案时可使用的各种属性和方法。  
   
  本主题的内容：  
@@ -36,7 +41,7 @@ caps.handback.revision: 22
 -   [相关任务](#bkmk_rt)  
   
 ##  <a name="bkmk_benefits"></a> 优势  
- 部署表格模型将在测试、临时或生产环境中创建模型数据库。 然后，用户可以通过 Sharepoint 中的 .bism 连接文件或通过直接使用来自报表客户端应用程序（例如 Microsoft Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]或自定义应用程序）的数据连接，来连接到已部署的模型。 你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建新的表格模型项目时创建并用于创作模型的模型工作区数据库将保留在工作区服务器实例上，这允许你对该模型项目进行更改，然后在需要时重新部署到测试、临时或生产环境中。  
+ 部署表格模型将在测试、临时或生产环境中创建模型数据库。 然后，用户可以通过 Sharepoint 中的 .bism 连接文件或通过直接使用来自报表客户端应用程序（例如 Microsoft Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]或自定义应用程序）的数据连接，来连接到已部署的模型。 你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时创建并用于创作模型的模型工作区数据库将保留在工作区服务器实例上，这允许你对该模型项目进行更改，然后在需要时重新部署到测试、临时或生产环境中。  
   
 ##  <a name="bkmk_deploying_bism"></a> 从 SQL Server Data Tools (SSDT) 部署表格模型  
  部署是一个较为简单的过程；但是，必须执行某些步骤，以便确保您的模型部署到正确的 Analysis Services 实例上并且具有正确的配置选项。  
@@ -46,7 +51,7 @@ caps.handback.revision: 22
 ##  <a name="bkmk_deploy_props"></a> 部署属性  
  项目的“部署选项”和“部署服务器”属性指定将模型部署到临时或生产 Analysis Services 环境的方式和位置。 在根据您的特定部署要求为所有模型项目定义默认属性设置时，可为每个项目更改这些属性设置。 有关设置默认部署属性的详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-### 部署选项属性  
+### <a name="deployment-options-properties"></a>部署选项属性  
  部署选项属性包括以下项：  
   
 |属性|默认设置|Description|  
@@ -55,22 +60,22 @@ caps.handback.revision: 22
 |**事务性部署**|**False**|此属性指定部署是否为事务性的。 默认情况下，在处理这些已部署的对象时，所有对象或已更改对象的部署并不是事务性部署。 即使在处理失败时，部署也会成功并且一直保留。 您可以将此默认设置更改为在单个事务中合并部署和处理。|  
 |**查询模式**|**内存中**|此属性指定从其返回查询结果的源是在内存中（缓存）模式下运行还是在 DirectQuery 模式下运行。 此属性具有以下选项：<br /><br /> **DirectQuery** – 此设置指定模型的所有查询都应该仅使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
   
-### 部署服务器属性  
+### <a name="deployment-server-properties"></a>部署服务器属性  
  部署服务器属性包括以下项：  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**“服务器”**<br /><br /> 在创建项目时设置。|**localhost**|此属性（在创建项目时设置）按名称指定模型将部署到的 Analysis Services 实例。 默认情况下，模型将部署到本地计算机上 Analysis Services 的默认实例。 但是，您可以更改此设置以便指定本地计算机上的命名实例，或指定您有权创建 Analysis Services 对象的任何远程计算机上的任何实例。|  
 |**版本**|与工作区服务器所在是实例的版本相同。|此属性指定模型将部署到的 Analysis Services 服务器的版本。 该服务器版本定义可纳入项目中的不同功能。 默认情况下，该版本将为本地 Analysis Services 服务器。 如果您指定其他 Analysis Services 服务器，例如生产 Analysis Services 服务器，则请确保指定该 Analysis Services 服务器的版本。|  
-|**数据库**|**\<projectname>**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果你打开一个名为 **TestDB** 的解决方案并且使用默认的模型数据库名称 Model 部署你的解决方案，然后修改该解决方案并且将模型数据库重命名为 **Sales**，则这些解决方案部署到的 Analysis Services 实例将显示两个单独的数据库，分别命名为 Model 和 Sales。|  
+|**数据库**|**\<项目名称 >**|此属性指定在部署时将实例化的模型对象所处的 Analysis Services 数据库的名称。 该名称也将在报表客户端数据连接或 .bism 数据连接文件中指定。<br /><br /> 您可以在创作模型时随时更改该名称。 如果您在部署了模型后更改该名称，则在部署后进行的更改将不会影响以前已部署的模型。 例如，如果你打开一个名为 **TestDB** 的解决方案并且使用默认的模型数据库名称 Model 部署你的解决方案，然后修改该解决方案并且将模型数据库重命名为 **Sales**，则这些解决方案部署到的 Analysis Services 实例将显示两个单独的数据库，分别命名为 Model 和 Sales。|  
 |**多维数据集名称**|**Model**|此属性指定在客户端工具（如 Excel）和 AMO（分析管理对象）中显示的多维数据集名称。|  
   
-### DirectQuery 选项属性  
+### <a name="directquery-options-properties"></a>DirectQuery 选项属性  
  部署选项属性包括以下项：  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
-|**模拟设置**|**“默认”**|此设置指定在 DirectQuery 模式下运行的模型连接到数据源时使用的模拟设置。 在查询内存中缓存时，将不使用模拟凭据。 此属性设置具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将使用在通过使用表导入向导创建数据源连接时在模拟信息页上指定的选项。<br /><br /> **ImpersonateCurrentUser** – 此设置指定在连接到所有数据源时当前登录的用户将使用的用户帐户。|  
+|**模拟设置**|**默认**|此设置指定在 DirectQuery 模式下运行的模型连接到数据源时使用的模拟设置。 在查询内存中缓存时，将不使用模拟凭据。 此属性设置具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将使用在通过使用表导入向导创建数据源连接时在模拟信息页上指定的选项。<br /><br /> **ImpersonateCurrentUser** – 此设置指定在连接到所有数据源时当前登录的用户将使用的用户帐户。|  
   
 ##  <a name="bkmk_meth"></a> 部署方法  
  可使用多种方法来部署表格模型项目。 可用于其他 Analysis Services 项目（如多维）的大多数部署方法也可用于部署表格模型项目。  
@@ -100,7 +105,7 @@ caps.handback.revision: 22
 |[使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|说明如何使用 XMLA 部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格和多维解决方案。|  
 |[同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|说明如何使用同步数据库向导同步任意两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格或多维数据库之间的元数据和数据。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接到表格模型数据库 (SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

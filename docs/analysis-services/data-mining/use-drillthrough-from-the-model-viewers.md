@@ -1,28 +1,33 @@
 ---
-title: "从模型查看器使用钻取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用从模型查看器的钻取 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 从模型查看器使用钻取
+# <a name="use-drillthrough-from-the-model-viewers"></a>从模型查看器使用钻取
   根据模型类型，您可以从数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上的浏览查看器中使用钻取功能，以便浏览在挖掘模型中使用的事例或查看挖掘结构中的其他列。 尽管因为模型中的模式无法直接链接到特定事例，导致许多模型类型不支持钻取功能，但以下模型类型是支持钻取功能的。  
   
  请注意，必须对模型启用钻取，并且您必须拥有适当的权限。 如果模型处于未处理状态，钻取选项也可能会被禁用；而与模型是否以前已处理和具有内容无关。 若要通过使用钻取功能检索模型事例数据，结构和模型的缓存必须是当前的。  
   
-### 在 Microsoft 树查看器中使用钻取  
+### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>在 Microsoft 树查看器中使用钻取  
   
 1.  在数据挖掘设计器中，选择某一决策树模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 树查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 6
   
 5.  右键单击结果中的任何地方，然后选择“全部复制”以便将结果保存到剪贴板。  
   
-### 在 Microsoft 分类查看器中使用钻取  
+### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>在 Microsoft 分类查看器中使用钻取  
   
 1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
 5.  右键单击结果中的任何地方，然后选择“全部复制”以便将结果保存到剪贴板。  
   
-### 在 Microsoft 关联规则查看器中使用钻取  
+### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>在 Microsoft 关联规则查看器中使用钻取  
   
 1.  在数据挖掘设计器中，选择某一关联模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 关联规则查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
 5.  右键单击结果中的任何地方，然后选择“全部复制”以便将完整事例结果保存到剪贴板。 您还可以选择 **“复制”** 以便只复制所选事例。 如果模型包含嵌套表列，则只粘贴嵌套表列的名称；若要检索每个事例的嵌套表列内的数据值，您必须对模型内容创建查询。  
   
-### 在 Microsoft 序列分类查看器中使用钻取  
+### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>在 Microsoft 序列分类查看器中使用钻取  
   
 1.  在数据挖掘设计器中，选择某一聚类分析模型，并且选择 **“浏览模型”** 以便在 **“Microsoft 分类查看器”**中打开该模型。 在 SQL Server Management Studio 中，右键单击该模型，然后选择“浏览”。  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 5.  右键单击结果中的任何地方，然后选择“全部复制”以便将结果保存到剪贴板。 如果模型包含嵌套表列，则只粘贴嵌套表列的名称；若要检索每个事例的嵌套表列内的数据值，您必须对模型内容创建查询。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
+ [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [对挖掘结构的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

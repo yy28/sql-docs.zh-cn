@@ -1,24 +1,29 @@
 ---
-title: "Power Pivot for SharePoint (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot for SharePoint (SSAS) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 108c36ae7730a9622f5b8797b3dbb20cf0e96df3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot for SharePoint (SSAS)
+# <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
   处于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器在 SharePoint 场中为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据提供服务器托管服务。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据是使用以下工具之一生成的分析数据模型：  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For Excel 2010 外接程序  
@@ -31,16 +36,16 @@ caps.handback.revision: 32
   
  若要对这些数据进行服务器托管，必须安装 SharePoint、Excel Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。 数据会在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 实例上加载，在其上可以使用服务器为 Excel 2010 工作簿提供的或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 为 Excel 2013 和 2016 工作簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新功能定期刷新数据。  
   
-## Power Pivot for SharePoint 2016  
+## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot for SharePoint 2016  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 和 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 使用包含数据模型和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 报表的 Excel 工作簿。  
   
- [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 中的 Excel 包括数据模型功能，用于在浏览器中实现与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的交互。 你无需在场中部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 外接程序。 只需在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器并使用 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 注册该服务器。  
+ [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] 中的 Excel 包括数据模型功能，用于在浏览器中实现与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的交互。 你无需在场中部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 外接程序。 只需在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式下安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器并使用 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]注册该服务器。  
   
  通过部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 外接程序，你可以在 SharePoint 场中启用附加功能和特性。 这些附加功能包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和计划数据刷新。  
   
- ![SSAS Power Pivot Mode 3 Server with Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot Mode 3 Server with Office Online Server")  
+ ![SSAS Power Pivot 模式 3 服务器与 Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot 模式 3 服务器与 Office Online Server")  
   
-## Power Pivot for SharePoint 2013  
+## <a name="power-pivot-for-sharepoint-2013"></a>Power Pivot for SharePoint 2013  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services 使用包含数据模型和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 报表的 Excel 工作簿。  
   
  SharePoint 2013 中的 Excel Services 包括数据模型功能，用于在浏览器中实现与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的交互。 无需在场中部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 外接程序。 您只需在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，并且在 Excel Services 的 **“数据模型”** 设置中注册该服务器。  
@@ -62,7 +67,7 @@ caps.handback.revision: 32
   
  [Power Pivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot 库](../Topic/Power%20Pivot%20Gallery.md)  
+ [PowerPivot 库](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
  [Power Pivot 数据访问](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)  
   
@@ -74,17 +79,17 @@ caps.handback.revision: 32
   
  **其他部分**  
   
-## 其他主题  
+## <a name="additional-topics"></a>其他主题  
  [升级 Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [在 Power Pivot 模式下安装 Analysis Services。](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [针对 Power Pivot for SharePoint 的 PowerShell 参考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
- [针对 SQL Server 2016 商业智能的许可证拓扑和成本示例](../Topic/Example%20License%20Topologies%20and%20Costs%20%20for%20SQL%20Server%202016%20Business%20Intelligence.md)  
+ [针对 SQL Server 2016 商业智能的许可证拓扑和成本示例](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Power Pivot 规划和部署](http://go.microsoft.com/fwlink/?linkID=220972)   
- [PowerPivot for SharePoint 灾难恢复](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [针对 Power Pivot for SharePoint 灾难恢复](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
