@@ -1,34 +1,39 @@
 ---
-title: "授予对象元数据的读取定义权限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "元数据 [Analysis Services]"
-  - "权限 [Analysis Services], 读取元数据"
-  - "读取元数据权限"
+title: "授予读取定义权限对象元数据 (Analysis Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- permissions [Analysis Services], read metadata
+- read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授予对象元数据的读取定义权限 (Analysis Services)
+# <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授予对象元数据的读取定义权限 (Analysis Services)
   读取所选对象的对象定义或元数据的权限使得管理员能够授予查看对象信息的权限，而不用同时授予修改对象定义、修改对象结构或查看对象的实际数据的权限。  “读取定义”权限可在数据库、数据源、维度、挖掘结构和挖掘模型级别授予。 如果需要多维数据集的“读取定义”  权限，则必须对数据库启用“读取定义”  。请记住权限是可以累加的。 例如，一个角色授予读取多维数据集的元数据的权限，同时，另一个角色向同一个用户授予读取维度元数据的权限。 两个不同角色的权限合并授予用户在该数据库内的读取多维数据集元数据和维度元数据的权限。  
   
 > [!NOTE]  
 >  读取数据库元数据的权限是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 连接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]数据库时所需的最低权限。 可读取元数据的用户还可以使用 DISCOVER_XML_METADATA 架构行集来查询对象并查看其元数据。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
   
-## 设置数据库的读取定义权限  
+## <a name="set-read-definition-permissions-on-a-database"></a>设置数据库的读取定义权限  
  授予读取数据库元数据的权限便同时授予了读取数据库中所有对象的元数据的权限。  
   
  我们建议在为专用处理设置角色时，包括数据库级别的“读取定义”  权限。 拥有“读取定义”权限使得非管理员可以查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的模型对象层次结构并导航至单个对象进行后续处理。  
@@ -41,7 +46,7 @@ caps.handback.revision: 32
   
 4.  单击“确定”  ，完成角色创建。  
   
-## 设置单个对象的读取定义权限  
+## <a name="set-read-definition-permissions-on-individual-objects"></a>设置单个对象的读取定义权限  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，打开“数据库”文件夹，选择一个数据库，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建新的数据库角色）。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 32
   
 5.  单击“确定”  ，完成角色创建。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

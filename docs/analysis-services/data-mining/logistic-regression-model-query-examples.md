@@ -1,26 +1,31 @@
 ---
-title: "逻辑回归模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "逻辑回归 [Analysis Services]"
-  - "内容查询 [DMX]"
+title: "逻辑回归模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logistic regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b329e0883ef165a01577cd536a8030640c99d2e7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 逻辑回归模型查询示例
+# <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
   
  本节介绍如何为基于 Microsoft 逻辑回归算法的模型创建查询。  
@@ -38,11 +43,11 @@ caps.handback.revision: 22
  [对离散值进行预测](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> 获取有关逻辑回归模型的信息  
- 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for logistic regression models.md)。  
+ 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
- 若要继续探讨查询方案，可以按“数据挖掘中级教程”中的下一节所述，创建逻辑回归模型：[第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)。  
+ 若要继续探讨查询方案，可以按“数据挖掘中级教程”中的下一节所述，创建逻辑回归模型： [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)。  
   
- 此外，还可以使用[数据挖掘基础教程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中的挖掘结构 Targeted Mailing。  
+ 此外，还可以使用 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中的挖掘结构 Targeted Mailing。  
   
 ```  
 ALTER MINING STRUCTURE [Targeted Mailing]  
@@ -99,12 +104,12 @@ FROM [TM_Logistic Regression].CONTENT
 |上下班路程|缺少|0|0|0|1|  
 |上下班路程|5-10 英里|3033|0.173472889|0|4|  
   
- 实际查询会返回多得多的行；但是此示例演示了所提供的有关输入的信息类型。 对于离散输入，每个可能值都列在表中。 对于“年龄”之类的连续值输入，全部列出是不可能的，所以输入被离散化为均值。 有关如何使用边际统计信息节点中的信息的详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for logistic regression models.md)。  
+ 实际查询会返回多得多的行；但是此示例演示了所提供的有关输入的信息类型。 对于离散输入，每个可能值都列在表中。 对于“年龄”之类的连续值输入，全部列出是不可能的，所以输入被离散化为均值。 有关如何使用边际统计信息节点中的信息的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 > [!NOTE]  
 >  为便于查看，结果是平展的，但是，如果您的访问接口支持分层行集，则可在单个列中返回嵌套表。  
   
-## 针对逻辑回归模型的预测查询  
+## <a name="prediction-queries-on-a-logistic-regression-model"></a>针对逻辑回归模型的预测查询  
  对每种挖掘模型都可以使用 [Predict (DMX)](../../dmx/predict-dmx.md) 函数向模型提供新数据并基于新值进行预测。 还可以使用函数返回有关预测的其他信息，例如，预测正确性的概率。 本节提供针对逻辑回归模型的预测查询的一些示例。  
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：对连续值进行预测  
@@ -130,7 +135,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for logistic regression models.md)。  
+ 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：对离散值进行预测  
  要分析产生二进制结果的因素时通常使用逻辑回归。 尽管教程中使用的模型预测的是连续值 **ServiceGrade**，但实际生活中你可能还是希望设置该模型来预测服务等级是否符合特定的离散化目标值。 或者，您可以使用连续值来输出预测，但之后将这些预测结果分组到 **较好**、 **一般**或 **较差**这几个等级中。  
@@ -139,7 +144,7 @@ NATURAL PREDICTION JOIN
   
  以下过程介绍如何更改呼叫中心数据中的 Service Grade 值的分组。  
   
-##### 创建 Call Center 挖掘结构和模型的离散化版本  
+##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>创建 Call Center 挖掘结构和模型的离散化版本  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，展开 **“挖掘结构”**。  
   
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  请注意，预测结果已分组到指定的三个类别中；但是，这些分组基于数据中实际值的分类，而不是基于您可能设置为业务目标的任意值。  
   
-## 预测函数的列表  
+## <a name="list-of-prediction-functions"></a>预测函数的列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法还额外支持下表中列出的函数。  
   
 |||  
@@ -203,11 +208,11 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  对于神经网络模型和逻辑回归模型，[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md) 函数将返回表示整个模型的定型集大小的单个值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for logistic regression models.md)   
- [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [第 5 课： 生成神经网络和逻辑回归模型 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

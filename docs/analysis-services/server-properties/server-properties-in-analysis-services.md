@@ -1,30 +1,35 @@
 ---
-title: "Analysis Services 中的服务器属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, 配置属性"
-  - "Analysis Services, 配置属性"
-  - "SQL Server Analysis Services, 配置属性"
-  - "配置选项 [Analysis Services]"
-  - "服务器属性 [Analysis Services]"
-  - "属性 [Analysis Services], 配置"
-  - "属性 [Analysis Services]"
+title: "Analysis Services 中的服务器属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 中的服务器属性
+# <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要配置服务器，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
@@ -34,7 +39,7 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
 > [!NOTE]  
 >  在默认安装中，msmdsrv.ini 可能位于 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 文件夹中。
 > 
-> 其他影响服务器配置的属性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署配置属性。 有关这些属性的详细信息，请参阅[为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)。
+> 其他影响服务器配置的属性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署配置属性。 有关这些属性的详细信息，请参阅 [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
 ##  <a name="bkmk_config"></a> 在 Management Studio 中配置属性 
   
@@ -85,8 +90,8 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
 |[安全属性](../../analysis-services/server-properties/security-properties.md)|安全部分包含定义访问权限的基本属性和高级属性。 其中包括与管理员和用户有关的设置。|  
 |[线程池属性](../../analysis-services/server-properties/thread-pool-properties.md)|线程池属性控制服务器创建多少线程。 这些属性主要是高级属性。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 实例管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

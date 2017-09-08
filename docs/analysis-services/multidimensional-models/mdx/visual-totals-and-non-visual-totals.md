@@ -1,25 +1,30 @@
 ---
-title: "直观合计和非直观合计 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "直观合计和非直观合计 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ee15de7e61b6ebf53fdbd6cb8f1fb3920c010134
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 直观合计和非直观合计
-  直观合计是位于列尾或行尾的合计，它将列或行中可见的所有项相加。 这是大多数表在显示时的默认行为。 但有一些情况，用户想要只显示表中的某些列，但保留针对整个行的合计，包括那些未显示的行。 这称作**非直观总计**，因为合计来自可见值以及非可见值。  
+# <a name="visual-totals-and-non-visual-totals"></a>直观合计和非直观合计
+  直观合计是位于列尾或行尾的合计，它将列或行中可见的所有项相加。 这是大多数表在显示时的默认行为。 但有一些情况，用户想要只显示表中的某些列，但保留针对整个行的合计，包括那些未显示的行。 这称作 **非直观总计**，因为合计来自可见值以及非可见值。  
   
  下面的应用场景对非直观合计的行为进行了演示。 第一步显示直观合计的默认行为。  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 6
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
-## 针对行和列的非直观合计  
+## <a name="non-visual-on-rows-and-columns"></a>针对行和列的非直观合计  
  要生成一个仅具有“附件”和“服装”产品、“增值分销商”和“仓库分销商”数据的表，但仍保留总合计，则使用 NON VISUAL 编写如下语句：  
   
  `select [Category].members on 0,`  
@@ -67,7 +72,7 @@ caps.handback.revision: 6
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
-## 针对行的非直观合计  
+## <a name="non-visual-on-rows"></a>针对行的非直观合计  
  要生成一个表，其中列是进行直观加和，对于行总数则是所有 [类别] 的实际总和，应发出以下查询：  
   
  `select [Category].members on 0,`  
@@ -97,13 +102,13 @@ caps.handback.revision: 6
   
  与上述结果比较时，您可以观察到 [All Resellers] 行现在是将 [Value Added Reseller] 和 [Warehouse] 仓库的显示值相加，但 [All Products] 列会显示所有产品的总值，包括那些未显示的值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [使用成员、元组和集 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md)   
- [用查询轴和切片器轴限定查询 (MDX)](../Topic/Restricting%20the%20Query%20with%20Query%20and%20Slicer%20Axes%20\(MDX\).md)   
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [基本 MDX 查询 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [限制查询中的使用查询和切片器轴 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
  [在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
   

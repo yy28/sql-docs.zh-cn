@@ -1,32 +1,37 @@
 ---
-title: "顺序分析和聚类分析模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "顺序分析和聚类分析算法 [Analysis Services]"
-  - "内容查询 [DMX]"
-  - "顺序 [Analysis Services]"
+title: "序列聚类分析模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 顺序分析和聚类分析模型查询示例
+# <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
   
  针对顺序分析和聚类分析模型的预测查询通常是基于序列和转换、基于模型中包含的非序列属性或基于序列属性和非序列属性的组合来提出建议。  
   
- 本节说明如何为基于 Microsoft 顺序分析和聚类分析算法的模型创建查询。 有关创建查询的常规信息，请参阅[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
+ 本节说明如何为基于 Microsoft 顺序分析和聚类分析算法的模型创建查询。 有关创建查询的常规信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
  **内容查询**  
   
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [预测后面的一种或多种状态](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> 查找有关顺序分析和聚类分析模型的信息  
- 若要对挖掘模型的内容创建有意义的查询，您必须了解模型内容的结构以及哪些节点类型存储哪类信息。 有关详细信息，请参阅[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for sequence clustering models.md)。  
+ 若要对挖掘模型的内容创建有意义的查询，您必须了解模型内容的结构以及哪些节点类型存储哪类信息。 有关详细信息，请参阅 [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
   
 ###  <a name="bkmk_Query1"></a> 示例查询 1：使用数据挖掘架构行集返回模型参数  
  通过查询数据挖掘架构行集，您可以找到关于模型的各类信息，包括基本元数据、模型的创建日期和时间、上次处理模型的日期和时间、模型所基于的挖掘结构的名称以及用作可预测属性的列。  
   
- 下面的查询返回用于生成模型 `[Sequence Clustering]`和为其定型的参数。 您可以在 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)的第 5 课中创建此模型。  
+ 下面的查询返回用于生成模型 `[Sequence Clustering]`和为其定型的参数。 您可以在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)的第 5 课中创建此模型。  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  本节提供了如何使用系统存储过程来创建针对顺序分析和聚类分析模型的查询的一些示例：  
   
-#### 分类剖面图和样本事例  
+#### <a name="cluster-profiles-and-sample-cases"></a>分类剖面图和样本事例  
  “分类剖面图”选项卡显示了一个列表，列出模型中的分类、每个分类的大小以及指示该分类中包含的状态的直方图。 您可在查询中使用两个系统存储过程来检索类似信息：  
   
 -   `GetClusterProfile` 返回分类的特征以及在分类的 NODE_DISTRIBUTION 表中找到的所有信息。  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- 有关详细信息，请参阅 [SELECT FROM \<模型>.SAMPLE_CASES (DMX)](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md)。  
+ 有关详细信息，请参阅 [SELECT FROM <模型>.SAMPLE_CASES (DMX)](../../dmx/select-from-model-sample-cases-dmx.md)。  
   
-#### 分类特征和分类对比  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>分类特征和分类对比  
  **“分类特征”** 选项卡汇总了每个分类的主属性，按概率进行排序。 您可以查看属于一个分类的事例数，以及该分类中的事例分布情况：每个特征都有一定的支持。 若要查看特定分类的特征，您必须知道该分类的 ID。  
   
  以下示例使用系统存储过程 `GetClusterCharacteristics`返回概率值超过指定阈值 0.0005 的 Cluster 12 的所有特征。  
@@ -206,13 +211,13 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  如果您要使用 DMX 编写您自己的查询来比较两个分类，或将一个分类与其补进行比较，您必须首先检索一组特征，再检索您感兴趣的特定分类的特征，然后比较这两组特征。 这种情况更为复杂，通常需要某些客户端处理。  
   
-#### 状态和转换  
+#### <a name="states-and-transitions"></a>状态和转换  
  Microsoft 顺序分析和聚类分析的 **“状态转换”** 选项卡会在后端执行复杂的查询以检索并比较不同分类的统计信息。 重新生成这些结果需要更复杂的查询和一些客户端处理。  
   
  但是，可以使用 [内容查询](#bkmk_ContentQueries)部分的示例 2 中介绍的 DMX 查询来检索序列或各个转换的概率和状态。  
   
-## 使用模型进行预测  
- 针对顺序分析和聚类分析模型的预测查询可使用许多适用于其他聚类分析模型的预测函数。 此外，还可以使用特殊预测函数 [PredictSequence (DMX) ](../../dmx/predictsequence-dmx.md) 建议或推测下一状态。  
+## <a name="using-the-model-to-make-predictions"></a>使用模型进行预测  
+ 针对顺序分析和聚类分析模型的预测查询可使用许多适用于其他聚类分析模型的预测函数。 此外，还可以使用特殊预测函数 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)建议或推测下一状态。  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：预测后面的一种或多种状态  
  在给定值的情况下，可以使用 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数来预测下一个最可能的状态。 还可以预测多个下一状态：例如，可以返回客户可能购买的前三种产品，以提供一个建议列表。  
@@ -235,7 +240,7 @@ AS t
 |1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
-|4||Long-Sleeve logo Jersey|  
+|4||Long-Sleeve Logo Jersey|  
 |5||Half-Finger Gloves|  
 |6||All-Purpose Bike Stand|  
 |7||All-Purpose Bike Stand|  
@@ -248,7 +253,7 @@ AS t
   
  第 6 行和第 7 行中的值为占位符。 当您到达可能的转换的链末尾，而不是终止预测结果时，作为输入传递的值将添加到结果中。 例如，如果将预测数增加到 20，则第 6 行到第 20 行的值是一样的，全部为 All-Purpose Bike Stand。  
   
-## 函数列表  
+## <a name="function-list"></a>函数列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 此外， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法还额外支持下表中列出的函数。  
   
 |||  
@@ -271,10 +276,10 @@ AS t
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
- [Microsoft 顺序分析和聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft 顺序分析和聚类分析算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+ [Microsoft 顺序分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

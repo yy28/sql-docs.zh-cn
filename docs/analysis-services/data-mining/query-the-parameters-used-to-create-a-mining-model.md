@@ -1,30 +1,35 @@
 ---
-title: "查询用于创建挖掘模型的参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "内容查询 [DMX]"
+title: "查询用于创建挖掘模型的参数 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- content queries [DMX]
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9aa2f7973099f5cf05710206469eb4254293cca3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查询用于创建挖掘模型的参数
+# <a name="query-the-parameters-used-to-create-a-mining-model"></a>查询用于创建挖掘模型的参数
   挖掘模型的构成不仅受到定型事例的影响，还会受到在创建模型时设置的参数的影响。 因此，检索现有模型的参数设置以便更好地理解模型的行为可能会很有用。 在归档该模型的特定版本时检索参数可能也很有用。  
   
- 若要查找在创建模型时使用的参数，应针对某个挖掘模型架构行集创建查询。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 中，这些架构行集将作为可使用 Transact-SQL 语法轻松查询的一组系统视图公开。 下面的过程介绍如何创建返回用于创建指定挖掘模型的参数的查询。  
+ 若要查找在创建模型时使用的参数，应针对某个挖掘模型架构行集创建查询。 作为一组可以轻松地查询通过使用 TRANSACT-SQL 语法的系统视图公开这些架构行集。 下面的过程介绍如何创建返回用于创建指定挖掘模型的参数的查询。  
   
-### 打开架构行集查询的“查询”窗口  
+### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>打开架构行集查询的“查询”窗口  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开包含要查询的模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 3.  如果实例包含多个数据库，应从工具栏中的 **“可用数据库”** 列表中选择包含要查询的模型的数据库。  
   
-### 从现有挖掘模型中返回模型参数  
+### <a name="to-return-model-parameters-for-an-existing-mining-model"></a>从现有挖掘模型中返回模型参数  
   
 1.  在 DMX 查询窗格中，键入或粘贴以下文本：  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 13
   
 3.  按 F5，或单击 **“执行”**。  
   
-## 示例  
- 下面的代码返回用于创建在 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)中生成的挖掘模型的参数列表。 这些参数包括服务器上的提供程序中可用的挖掘服务所使用的任何默认参数的显式值。  
+## <a name="example"></a>示例  
+ 下面的代码返回用于创建在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中生成的挖掘模型的参数列表。 这些参数包括服务器上的提供程序中可用的挖掘服务所使用的任何默认参数的显式值。  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -66,7 +71,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询任务和操作指南](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

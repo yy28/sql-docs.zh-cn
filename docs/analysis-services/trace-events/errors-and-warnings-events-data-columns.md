@@ -1,31 +1,36 @@
 ---
-title: "错误和警告事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Errors and Warnings 事件类别 [SQL Server]"
+title: "错误和警告事件数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 错误和警告事件数据列
+# <a name="errors-and-warnings-events-data-columns"></a>错误和警告事件数据列
   “安全审核”事件类别具有以下事件类：  
   
 -   错误类  
   
  下表列出了此事件类的数据列。  
   
-## 错误事件类 - 数据列  
+## <a name="error-event-classdata-columns"></a>错误事件类 - 数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|包含与错误事件关联的文本数据。|  
 |ServerName|43|8|包含正在运行发生了错误事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器的名称。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“安全审核”事件类别](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

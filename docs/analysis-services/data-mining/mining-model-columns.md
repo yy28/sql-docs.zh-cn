@@ -1,38 +1,43 @@
 ---
-title: "挖掘模型列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [数据挖掘], 挖掘模型列"
-  - "列 [数据挖掘]"
-  - "REGRESSOR 列"
-  - "列 [数据挖掘], 建模标志"
-  - "建模标志 [数据挖掘]"
-  - "MODEL_EXISTENCE_ONLY 列"
-  - "用法属性 [数据挖掘]"
+title: "挖掘模型列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining model columns
+- columns [data mining]
+- REGRESSOR column
+- columns [data mining], modeling flags
+- modeling flags [data mining]
+- MODEL_EXISTENCE_ONLY column
+- usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2691f87c4ded8d2e9f00e4390681c936591bc83
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 挖掘模型列
+# <a name="mining-model-columns"></a>挖掘模型列
   数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 如挖掘结构一样，挖掘模型也包含列。 挖掘模型包含在挖掘结构之内，继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。  
   
  您还可以为挖掘模型列定义另外两条信息：用法和建模标志。  
   
 -   **用法** 是一个属性，它定义模型如何使用列。 列可用作输入列、键列或可预测列。  
   
--   **建模标志** 为算法提供有关事例表中定义的数据的附加信息，以便算法可以生成更精确的模型。 可以使用数据挖掘扩展插件 (DMX) 语言以编程的方式定义建模标志，也可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的**数据挖掘设计器**中定义建模标志。  
+-   **建模标志** 为算法提供有关事例表中定义的数据的附加信息，以便算法可以生成更精确的模型。 可以使用数据挖掘扩展插件 (DMX) 语言以编程的方式定义建模标志，也可以在 **的** 数据挖掘设计器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中定义建模标志。  
   
  下面介绍了可以为挖掘模型列定义的建模标志。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 38
   
  有关使用 DMX 以编程方式设置用法属性和定义建模标志的详细信息，请参阅 [CREATE MINING MODEL (DMX)](../../dmx/create-mining-model-dmx.md)。 有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中设置用法属性和定义建模标志的详细信息，请参阅[移动数据挖掘对象](../../analysis-services/data-mining/moving-data-mining-objects.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   

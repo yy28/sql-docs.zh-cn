@@ -1,32 +1,37 @@
 ---
-title: "线程池属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "PriorityRatio 属性"
-  - "线程 [Analysis Services]"
-  - "MinThreads 属性"
-  - "NumThreads 属性"
-  - "MaxThreads 属性"
-  - "Concurrency 属性"
+title: "线程池属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- PriorityRatio property
+- threads [Analysis Services]
+- MinThreads property
+- NumThreads property
+- MaxThreads property
+- Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b85d1c7727b699037711eb49f1be360c755f8dc3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 线程池属性
+# <a name="thread-pool-properties"></a>线程池属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程处理许多操作，通过并行运行多个作业提高总体服务器性能。 为了更高效地管理线程， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用线程池预分配线程并提高下一作业的线程可用性。  
   
- 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维护自己的一组线程池。 表格和多维实例使用线程池的方式存在差异。 例如，只有多维实例才使用 **IOProcess** 线程池。 因此，本主题中描述的 **PerNumaNode** 属性对表格实例没有意义。 在下面的[属性参考](#bkmk_propref)部分中，为每个属性列出了模式要求。
+ 每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例都维护自己的一组线程池。 表格和多维实例使用线程池的方式存在差异。 例如，只有多维实例才使用 **IOProcess** 线程池。 因此，本主题中描述的 **PerNumaNode** 属性对表格实例没有意义。 在下面的 [属性参考](#bkmk_propref) 部分中，为每个属性列出了模式要求。
   
  本主题包含以下各节：  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 30
 -   [关于 MSMDSRV.INI](#bkmk_msmdrsrvini)  
   
 > [!NOTE]  
->  NUMA 系统上的表格部署不在本主题讨论范围内。 虽然表格解决方案可以成功部署在 NUMA 系统上，但在高度纵向扩展的体系结构中，表格模型使用的内存中数据库技术的性能特性所展现出的优点可能有限。 有关详细信息，请参阅[ Analysis Services 案例研究：在大型商业解决方案中使用表格模型](http://msdn.microsoft.com/library/dn751533.aspx)和[调整表格解决方案大小的硬件](http://go.microsoft.com/fwlink/?LinkId=330359)。  
+>  NUMA 系统上的表格部署不在本主题讨论范围内。 虽然表格解决方案可以成功部署在 NUMA 系统上，但在高度纵向扩展的体系结构中，表格模型使用的内存中数据库技术的性能特性所展现出的优点可能有限。 有关详细信息，请参阅 [Analysis Services 案例研究：在大型商业解决方案中使用表格模型](http://msdn.microsoft.com/library/dn751533.aspx) 和 [调整表格解决方案大小的硬件](http://go.microsoft.com/fwlink/?LinkId=330359)。  
   
 ##  <a name="bkmk_threadarch"></a> Analysis Services 中的线程管理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程通过增加并行执行的任务数来充分利用可用的 CPU 资源。 存储引擎是多线程的。 例如，在存储引擎内执行的多线程作业包括并行处理对象或处理已推送到存储引擎的离散查询，或返回查询所请求的数据值。 由于公式引擎计算的串行特性，它将进行单线程处理。 每个查询主要在单线程中执行，发出请求后往往需要等待存储引擎返回数据。 查询线程的执行时间较长，仅当整个查询完成后才会将其释放。  
@@ -54,15 +59,15 @@ caps.handback.revision: 30
   
  使用大量处理器的一个副作用是，有时候您可能会遇到性能降级情况，因为查询和处理负荷被分散在大量处理器上，对共享数据结构的争用将会加剧。 这种情况主要发生在采用 NUMA 体系结构的高端系统上，但在同一硬件上运行多个需要处理大量数据的应用程序的非 NUMA 系统上也会出现这种情况。  
   
- 若要缓解此问题，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作类型和一组特定逻辑处理器之间设置关联。 使用 **GroupAffinity** 属性，可以创建自定义关联掩码，以指定对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理的每个线程池类型使用哪种系统资源。
+ 若要缓解此问题，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 操作类型和一组特定逻辑处理器之间设置关联。 使用 **GroupAffinity** 属性，可以创建自定义关联掩码，以指定对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理的每个线程池类型使用哪种系统资源。
  
-我们建议使用 SQL Server 2016 累积更新 1 (CU1) 或更高版本，以便在表格实例中设置 **GroupAffinity**。 
+我们建议使用 SQL Server 2016 累积更新 1 (CU1) 或更高版本，以便在表格实例中设置 **GroupAffinity** 。 
   
  **GroupAffinity** 是对于用于各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工作负载的任何线程池，都可以进行设置的属性：  
   
--   **ThreadPool \ Parsing \ Short** 是用于简短请求的分析池。 可容纳在单个网络消息内的请求被视为简短请求。 
+-   **ThreadPool \ Parsing \ Short**  是用于简短请求的分析池。 可容纳在单个网络消息内的请求被视为简短请求。 
   
--   **ThreadPool \ Parsing \ Long** 是用于无法容纳在单个网络消息内的所有其他请求的分析池。 
+-   **ThreadPool \ Parsing \ Long**  是用于无法容纳在单个网络消息内的所有其他请求的分析池。 
   
     > [!NOTE]  
     >  任一分析池中的线程都可用于执行查询。 诸如快速发现或取消请求等快速执行的查询有时会立即执行，而不是排队进入查询线程池。 
@@ -89,39 +94,39 @@ caps.handback.revision: 30
   
 |名称|类型|Description|默认|指导|  
 |----------|----------|-----------------|-------------|--------------|  
-|**IOProcess** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx)。<br /><br /> 仅适用于多维模型。|  
+|**IOProcess** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 仅适用于多维模型。|  
 |**IOProcess** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置 IOProcess 线程池中的线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。<br /><br /> 仅适用于多维模型。|  
 |**IOProcess** \ **MaxThreads**|int|有符号 32 位整数，用于指定线程池中要包含的最大线程数。|0|0 指示由服务器确定默认值。 默认情况下，服务器将此值设置为 64 或设置为逻辑处理器数的 10 倍，以较大者为准。 例如，在采用超线程的 4 核系统上，线程池最大值是 80 个线程。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果您已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 MaxThreads 设置为 -10，则线程池的上限将为 10 乘以 8（即 80 个线程）。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。<br /><br /> 仅适用于多维模型。|  
-|**IOProcess** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，服务器会将此值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。<br /><br /> 仅适用于多维模型。|  
+|**IOProcess** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。<br /><br /> 仅适用于多维模型。|  
 |**IOProcess** \ **PerNumaNode**|int|有符号 32 位整数，用于确定为 msmdsrv 进程创建的线程池数。|-1|有效值为 -1、0、1、2<br /><br /> -1 = 服务器根据 NUMA 节点数选择不同的 IO 线程池策略。 在 NUMA 节点数少于 4 个的系统上，服务器行为与值为 0 时的行为相同（为系统创建一个 IOProcess 线程池）。 在具有 4 个或更多个节点的系统中，行为与 1 相同（为每个节点创建 IOProcess 线程池）。<br /><br /> 0 = 禁用每节点 NUMA 多个线程池，以便 msmdsrv.exe 进程仅使用一个 IOProcess 线程池。<br /><br /> 1 = 为每个 NUMA 节点启用一个 IOProcess 线程池。<br /><br /> 2 = 每个逻辑处理器一个 IOProcess 线程池。 每个线程池中的线程数与逻辑处理器的 NUMA 节点关联，且理想处理器设置为逻辑处理器。<br /><br /> 有关详细信息，请参阅 [设置 PerNumaNode 以使 IO 线程与 NUMA 节点中的处理器关联](#bkmk_pernumanode) 。<br /><br /> 仅适用于多维模型。|  
 |**IOProcess** \ **PriorityRatio**|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|2|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 仅适用于多维模型。|  
 |**IOProcess** \ **StackSizeKB**|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 仅适用于多维模型。|  
-|**Parsing**  \ **Long** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx)。|  
+|**Parsing**  \ **Long** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Parsing**  \ **Long** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置分析线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。|  
-|**Parsing**  \ **Long** \ **NumThreads**|int|有符号 32 位整数属性，用于定义可为长命令创建的线程数。|0|0 指示由服务器确定默认值。 默认行为是将 **NumThreads** 设置为绝对值 4，或逻辑处理器数的两倍，取两者中的较大值。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于您之前定义的每个自定义关联掩码的可用处理器数。 例如，如果已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 NumThreads 设置为 -10，则线程池的上限将为 10 乘以 8，即 80 个线程。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。|  
-|**Parsing**  \ **Long** \ **PriorityRatio**|int|一种 32 位有符号整数，可用于确保即使高优先级队列不为空，有时也可以执行低优先级线程。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
+|**Parsing**  \ **Long** \ **NumThreads**|int|有符号 32 位整数属性，用于定义可为长命令创建的线程数。|0|0 指示由服务器确定默认值。 默认行为是将 **NumThreads** 设置为绝对值 4，或逻辑处理器数的两倍，取两者中的较大值。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 NumThreads 设置为 -10，则线程池的上限将为 10 乘以 8，即 80 个线程。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。|  
+|**Parsing**  \ **Long** \ **PriorityRatio**|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
 |**Parsing**  \ **Long** \ **StackSizeKB**|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
-|**Parsing**  \ **Short** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx)。|  
+|**Parsing**  \ **Short** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Parsing**  \ **Short** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置分析线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。|  
-|**Parsing**  \ **Short** \ **NumThreads**|int|有符号 32 位整数属性，用于定义可为短命令创建的线程数。|0|0 指示由服务器确定默认值。 默认行为是将 **NumThreads** 设置为绝对值 4，或逻辑处理器数的两倍，取两者中的较大值。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于您之前定义的每个自定义关联掩码的可用处理器数。 例如，如果已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 NumThreads 设置为 -10，则线程池的上限将为 10 乘以 8，即 80 个线程。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。|  
-|**Parsing**  \ **Short** \ **PriorityRatio**|int|一种 32 位有符号整数，可用于确保即使高优先级队列不为空，有时也可以执行低优先级线程。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
-|**Parsing**  \ **Short** \ **StackSizeKB**|int|有符号 32 位整数，可用于在线程执行期间调整内存分配。|64 * 逻辑处理器数|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
-|**Process** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx)。|  
+|**Parsing**  \ **Short** \ **NumThreads**|int|有符号 32 位整数属性，用于定义可为短命令创建的线程数。|0|0 指示由服务器确定默认值。 默认行为是将 **NumThreads** 设置为绝对值 4，或逻辑处理器数的两倍，取两者中的较大值。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 NumThreads 设置为 -10，则线程池的上限将为 10 乘以 8，即 80 个线程。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。|  
+|**Parsing**  \ **Short** \ **PriorityRatio**|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
+|**Parsing**  \ **Short** \ **StackSizeKB**|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|64 * 逻辑处理器数|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
+|**Process** \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Process** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置处理线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。|  
-|**Process** \ **MaxThreads**|int|有符号 32 位整数，用于指定线程池中要包含的最大线程数。|0|0 表示由服务器确定默认值。 默认情况下，服务器将此值设置为绝对值 64，或逻辑处理器数，取两者中的较大值。 例如，在启用超线程的 64 核系统上（一共 128 个逻辑处理器），线程池最大值是 128 个线程。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果您已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 MaxThreads 设置为 -10，则线程池的上限将为 10 乘以 8（即 80 个线程）。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
-|**Process** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，服务器会将此值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
+|**Process** \ **MaxThreads**|int|有符号 32 位整数，用于指定线程池中要包含的最大线程数。|0|0 指示由服务器确定默认值。 默认情况下，服务器将此值设置为绝对值 64，或逻辑处理器数，取两者中的较大值。 例如，在启用超线程的 64 核系统上（一共 128 个逻辑处理器），线程池最大值是 128 个线程。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果您已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 MaxThreads 设置为 -10，则线程池的上限将为 10 乘以 8（即 80 个线程）。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
+|**Process** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
 |**Process** \ **PriorityRatio**|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|2|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
 |**Process** \ **StackSizeKB**|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
-|**Query**  \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx)。|  
+|**Query**  \ **Concurrency**|double|一个双精度浮点值，确定用于设置可同时排队的线程数目标的算法。|2.0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。<br /><br /> 并发用于初始化线程池，这些线程池使用 Windows 中的 IO 完成端口来实施。 有关详细信息，请参阅 [I/O 完成端口](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Query** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置处理线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。|  
 |**Query**  \ **MaxThreads**|int|有符号 32 位整数，用于指定线程池中要包含的最大线程数。|0|0 指示由服务器确定默认值。 默认情况下，服务器将此值设置为绝对值 10 或逻辑处理器数的 2 倍，以较大者为准。 例如，在 4 核超线程系统上，最大线程数 16。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果您已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 MaxThreads 设置为 -10，则线程池的上限将为 10 乘以 8（即 80 个线程）。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
-|**Query** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，服务器会将此值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
+|**Query** \ **MinThreads**|int|一种 32 位有符号整数，用于指定为线程池预分配的最小线程数。|0|0 指示由服务器确定默认值。 默认情况下，最小值为 1。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。<br /><br /> 可在 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)中找到有关优化线程池设置的详细信息。|  
 |**Query** \ **PriorityRatio**|int|有符号 32 位整数，可用于确保即使高优先级队列不为空，有时也能执行低优先级线程。|2|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
 |**Query**  \ **StackSizeKB**|int|一种 32 位有符号整数，可用于调整线程执行期间的内存分配。|0|这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。|  
 |**VertiPaq** \ **CPUs**|int|一种 32 位有符号整数，用于指定要用于表格查询的最大处理器数。|0|0 指示由服务器确定默认值。 默认情况下，服务器将此值设置为绝对值 10 或逻辑处理器数的 2 倍，以较大者为准。 例如，在 4 核超线程系统上，最大线程数 16。<br /><br /> 如果将此值设置为负值，则服务器将该值乘以逻辑处理器数。 例如，当在具有 32 个逻辑处理器的服务器上设置为 -10 时，最大值是 320 个线程。<br /><br /> 最大值取决于按以前定义的任何自定义关联掩码可用的处理器数。 例如，如果您已将线程池关联设置为使用 32 个处理器中的 8 个，并且现在将 MaxThreads 设置为 -10，则线程池的上限将为 10 乘以 8（即 80 个线程）。<br /><br /> 服务启动时，此线程池属性所使用的实际值即会写入 msmdsrv log 文件。|  
   |**VertiPaq** \ **GroupAffinity**|string|一个十六进制值的数组，这些值与系统上的处理器组相对应，用于设置处理线程与每个处理器组中的逻辑处理器的关联。|none|可以使用此属性创建自定义关联。 该属性默认为空。<br /><br /> 有关详细信息，请参阅 [设置 GroupAffinity 以便将线程关联到处理器组中的处理器](#bkmk_groupaffinity) 。 仅适用于表格。| 
     
-##  <a name="bkmk_groupaffinity"></a> 设置 GroupAffinity 以将线程关联到处理器组中的处理器  
+##  <a name="bkmk_groupaffinity"></a> 设置 GroupAffinity 以便将线程关联到处理器组中的处理器  
  提供**GroupAffinity** 仅用于高级优化用途。 可以使用 **GroupAffinity** 属性在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 线程池和特定处理器之间设置关联；但是，对于大多数安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在它可以使用所有可用逻辑处理器时的性能最佳。 相应地，默认情况下不指定组关联。  
   
  如果性能测试表明需要进行 CPU 优化，则可以考虑高级方法，例如，使用 Windows Server Resource Manager 在逻辑处理器和服务器进程之间设置关联。 与定义个别线程池的自定义关联相比，这种方法可以简化实施和管理。  
@@ -129,9 +134,9 @@ caps.handback.revision: 30
  如果该方法还不够，则可以通过定义线程池的自定义关联来实现更高的精度。 自定义关联设置比较可能建议在大型多核系统（NUMA 或非 NUMA）上使用，由于线程池分布于范围过宽的一系列处理器上，可能导致这些系统出现性能下降。 尽管您可以在具有少于 64 个逻辑处理器的系统上设置 **GroupAffinity** ，但获得的好处可以忽略不计，甚至可能会降低性能。  
   
 > [!NOTE]  
->  **GroupAffinity** 受版本的约束，版本将会限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的内核数。 在启动时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用版本信息和 **GroupAffinity** 属性为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理的每个线程池计算关联掩码。 Standard 版本可使用最多 24 个内核。 如果在具有超过 24 个内核的大型多核系统上安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将仅使用其中的 24 个内核。 有关处理器最大值的详细信息，请参阅[SQL Server 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)中的转换箱规模限制。  
+>  **GroupAffinity** 受版本的约束，版本将会限制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用的内核数。 在启动时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用版本信息和 **GroupAffinity** 属性为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理的每个线程池计算关联掩码。 Standard 版本可使用最多 24 个内核。 如果在具有超过 24 个内核的大型多核系统上安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将仅使用其中的 24 个内核。 有关处理器最大值的详细信息，请参阅 [SQL Server 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)中的转换箱规模限制。  
   
-### 语法  
+### <a name="syntax"></a>语法  
  该值是每个处理器组对应的十六进制值，其中十六进制表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在为给定线程池分配线程时首先尝试使用的逻辑处理器。  
   
  **逻辑处理器的位掩码**  
@@ -144,7 +149,7 @@ caps.handback.revision: 30
   
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
-### 计算处理器关联掩码的步骤  
+### <a name="steps-for-computing-the-processor-affinity-mask"></a>计算处理器关联掩码的步骤  
  可以在 msmdsrv.ini 或 SQL Server Management Studio 的“服务器属性”页中设置 **GroupAffinity** 。  
   
 1.  **确定处理器和处理器组的数目**  
@@ -176,31 +181,31 @@ caps.handback.revision: 30
 > [!IMPORTANT]  
 >  设置 **GroupAffinity** 是一项涉及多个步骤的手动任务。 在计算 **GroupAffinity**时，请仔细检查计算方式。 尽管 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在整个掩码无效时返回错误，但有效和无效设置的组合会使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 忽略该属性。 例如，如果位掩码包含额外值，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 忽略该设置，并使用系统上的所有处理器。 进行此操作时没有错误或警告可提醒您，但您可检查 msmdsrv.log 文件以了解实际如何设置这些关联。  
   
-##  <a name="bkmk_pernumanode"></a> 设置 PerNumaNode 以将 IO 线程关联到 NUMA 节点中的处理器  
+##  <a name="bkmk_pernumanode"></a> 设置 PerNumaNode 以使 IO 线程与 NUMA 节点中的处理器关联  
  对于多维 Analysis Services 实例，您可以在 **IOProcess** 线程池上设置 **PerNumaNode** 以进一步优化线程安排和执行。 尽管 **GroupAffinity** 标识哪组逻辑处理器用于给定线程池，但 **PerNumaNode** 则更加精确，它通过指定是否创建多个线程池，来进一步关联到允许的逻辑处理器的某一部分。  
   
 > [!NOTE]  
->  在 Windows Server 2012 上，使用任务管理器查看计算机上的 NUMA 节点数。 在任务管理器中的“性能”选项卡上，选择“CPU”，然后右键单击图形区域以查看 NUMA 节点。 或者，从 Windows Sysinternals [下载](http://technet.microsoft.com/sysinternals/cc835722.aspx) Coreinfo 实用工具并运行 `coreinfo –n` 以返回 NUMA 节点和每个节点中的逻辑处理器。  
+>  在 Windows Server 2012 上，使用任务管理器查看计算机上的 NUMA 节点数。 在任务管理器中的“性能”选项卡上，选择 **“CPU”** ，然后右键单击图形区以查看 NUMA 节点。 或者，从 Windows Sysinternals [下载](http://technet.microsoft.com/sysinternals/cc835722.aspx) Coreinfo 实用工具，然后运行 `coreinfo –n` 以返回 NUMA 节点和每个节点中的逻辑处理器。  
   
- “PerNumaNode”的有效值为 -1、0、1、2，如本主题中[线程池属性参考](#bkmk_propref)一节所述。  
+ **PerNumaNode** 的有效值为 -1、0、1、2，如本主题中 [线程池属性参考](#bkmk_propref) 一节所述。  
   
-### 默认值（建议）  
+### <a name="default-recommended"></a>默认值（建议）  
  在具有 NUMA 节点的系统上，建议使用默认设置 PerNumaNode=-1，允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 基于节点计数调整线程池数及其线程关联。 如果系统的节点数不超过 4 个，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实现 **PerNumaNode**=0 所描述的行为，而 **PerNumaNode**=1 用在节点数不少于 4 个的系统上。  
   
-### 选择值  
+### <a name="choosing-a-value"></a>选择值  
  还可以覆盖默认值以使用其他有效值。  
   
  **设置 PerNumaNode=0**  
   
  忽略 NUMA 节点。 将只有一个 IOProcess 线程池，并将使该线程池中的所有线程与所有逻辑处理器关联。 默认情况下（其中 PerNumaNode=-1），如果计算机具有的 NUMA 节点少于 4 个，则这是合适的设置。  
   
- ![Numa、处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、处理器和线程池通信")  
+ ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 处理器和线程池 correspondance")  
   
  **设置 PerNumaNode=1**  
   
  为每个 NUMA 节点创建 IOProcess 线程池。 具有不同的线程池可改进对本地资源（如 NUMA 节点上的本地缓存）的协调访问。  
   
- ![Numa、处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、处理器和线程池通信")  
+ ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 处理器和线程池 correspondance")  
   
  **设置 PerNumaNode=2**  
   
@@ -208,7 +213,7 @@ caps.handback.revision: 30
   
  在以下示例中，在具有 4 个 NUMA 节点和 32 个逻辑处理器的系统上，将 **PerNumaNode** 设置为 2 会产生 32 个 IOProcess 线程池。 前 8 个线程池中的线程将关联到 NUMA 节点 0 中的所有逻辑处理器，但理想的处理器设置为 0、1、2 直到 7。 接下来的 8 个线程池将关联到 NUMA 节点 1 中的所有逻辑处理器，而理想的处理器设置为 8、9、10 直到 15，以此类推。  
   
- ![Numa、处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、处理器和线程池通信")  
+ ![Numa、 处理器和线程池 correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 处理器和线程池 correspondance")  
   
  在此关联水平上，计划程序始终会尝试先使用首选 NUMA 节点内的理想逻辑处理器。 如果逻辑处理器不可用，计划程序将选择同一节点内的另一个处理器，或在其他线程不可用时选择同一处理器组中的处理器。 有关详细信息和示例，请参阅 [Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)。  
   
@@ -252,7 +257,7 @@ caps.handback.revision: 30
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- 请记住，用于设置 **MinThread** 和 **MaxThread** 的算法包括系统配置，具体说就是处理器数目。 以下博客文章深入介绍了这些值的计算方式：[Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)。 请注意，这些设置和行为会在后续版本中做出调整。  
+ 请记住，用于设置 **MinThread** 和 **MaxThread** 的算法包括系统配置，具体说就是处理器数目。 以下博客文章深入介绍了这些值的计算方式： [Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)。 请注意，这些设置和行为会在后续版本中做出调整。  
   
  以下列表显示在处理器的不同组合下其他关联掩码设置的示例：  
   
@@ -276,13 +281,13 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  有关如何设置属性的说明，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [关于进程和线程](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [多个处理器](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [处理器组](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Analysis Services 线程池在 SQL Server 2012 中发生更改](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [支持具有 64 个以上处理器的系统](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [SQL Server 2012 中的 analysis Services 线程池更改](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 2012 配置设置 （Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [支持有超过 64 台处理器的系统](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Power Pivot 可用性和灾难恢复 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 可用性和灾难恢复 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot 可用性和灾难恢复
+# <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和灾难恢复
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和灾难恢复计划主要依赖于 SharePoint 场的设计、不同的组件可接受的停机时间量以及针对 SharePoint 可用性实现的工具和最佳实践。 本主题汇总了各种技术，并包含在为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署计划可用性和灾难恢复时要考虑的示例拓扑关系图。  
   
 ||  
@@ -40,7 +45,7 @@ caps.handback.revision: 15
   
  以下关系图说明了示例 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 部署。 此示例支持 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务的高可用性并假定数据库将定期备份。  
   
- ![2013 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013 中的 powerpivot 可用性")  
+ ![在 2013年的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
   
 -   **(1)** Web 前端服务器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序在每台服务器上安装数据提供程序。 有关详细信息，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 15
   
 -   **(3)** Excel Calculation Services 在每台应用程序服务器上运行，并允许服务应用程序跨多台应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态改，则 Excel Calculation Services 仍将可用。  
   
--   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 SharePoint 场的外部服务器上运行，这包括 Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 所有这些实例都注册到 Excel Services 中 **(3)**。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅[管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。  
+-   **(4)** 和 **(6)** SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 SharePoint 场的外部服务器上运行，这包括 Windows Service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**。 所有这些实例都注册到 Excel Services 中 **(3)**。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。  
   
 -   **(5)** 用于内容、配置和应用程序数据库的 SQL Server 数据库。 这包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。 您的 DR 计划应包括数据库层。 在此设计中，数据库在 **(4)** 某个 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例所在的服务器上运行。 **(4)** 和 **(5)** 还可以位于不同的服务器上。  
   
@@ -59,9 +64,9 @@ caps.handback.revision: 15
   
  以下关系图说明了示例 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 部署。 此示例支持 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务的高可用性并假定数据库将定期备份。  
   
- ![sharepoint 2010 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
+ ![在 sharepoint 2010 的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "在 sharepoint 2010 的 powerpivot 可用性")  
   
--   **(1)** Web 前端服务器。 在每台服务器上安装数据访问接口。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/zh-cn/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+-   **(1)** Web 前端服务器。 在每台服务器上安装数据访问接口。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 -   **(2)** 两个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共享服务和 **(4)** Windows 服务 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 都安装在 SharePoint 应用程序服务器上。  
   
@@ -91,12 +96,12 @@ caps.handback.revision: 15
   
  有关如何使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]计划冷备用方案的详细信息，请参阅 [PowerPivot 灾难恢复](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)。  
   
-## 验证  
- 有关在灾难恢复循环前后帮助你验证 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署的指导和脚本，请参阅[核对清单：使用 PowerShell 验证 PowerPivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。  
+## <a name="verification"></a>验证  
+ 有关在灾难恢复循环前后帮助你验证 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署的指导和脚本，请参阅 [核对清单：使用 PowerShell 验证 PowerPivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="bkmk_more_resources"></a> 详细信息链接  
   
--   [SharePoint 数据库的支持的高可用性和灾难恢复选项 (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [SharePoint 数据库支持的高可用性和灾难恢复选项 (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [规划灾难恢复 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
@@ -108,6 +113,4 @@ caps.handback.revision: 15
   
 -   [在 SharePoint 2013 上管理服务实例](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [备份数据库 SQL Server 脚本](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
-  
-  
+

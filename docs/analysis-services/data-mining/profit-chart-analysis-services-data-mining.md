@@ -1,39 +1,44 @@
 ---
-title: "利润图（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "准确性, 图表"
-  - "收入, 估计"
-  - "优点, 估计"
-  - "图表 [Analysis Services]"
-  - "利润图 [Analysis Services]"
+title: "利润图 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accuracy, charting
+- revenue, estimating
+- benefits, estimating
+- charts [Analysis Services]
+- profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 利润图（Analysis Services - 数据挖掘）
+# <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
   利润图显示与使用挖掘模型相关联的估计利润。 例如，假定您的模型预测在一个业务方案中一个公司应该联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
   
-## 构建利润图  
+## <a name="build-a-profit-chart"></a>构建利润图  
  利润图类似于提升图。 您从创建一个提升图开始，然后加入成本和利润信息。  
   
  若要构建利润图，必须具有现有模型。  
   
  对于此示例，我们使用了 Targeted Mailing 决策树模型。 该模型标识可能要购买自行车的客户。 您可以应用 **“利润图”** 来确定您的目标用户有多少，以便将您的利润最大化。  
   
- 如果您没有示例模型，则可以使用 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)创建它。  
+ 如果您没有示例模型，则可以使用 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)创建它。  
   
 1.  打开挖掘准确性图表生成器。  
   
@@ -70,12 +75,12 @@ caps.handback.revision: 23
   
 8.  该图表将更新以显示利润曲线。  
   
-## 了解利润图  
+## <a name="understanding-the-profit-chart"></a>了解利润图  
  下图显示基于这些参数的图表。 图表的 Y 轴表示利润，而 X 轴表示目标邮寄活动联系的客户的百分比。  
   
  如下所示，可以使用利润图比较多个模型，只要它们都预测同一离散属性。  
   
- ![与三种模型对比的利润图](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "与三种模型对比的利润图")  
+ ![利润图比较三种模型](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "利润图表比较三种模型")  
   
  请注意图表中的灰色竖线。 在您单击并拖动该竖线时，工具提示将显示在该点的曲线下包括的目标人口的百分比。  
   
@@ -83,21 +88,21 @@ caps.handback.revision: 23
   
  例如，如果您在使用该模型确定要将您的促销材料发送给谁，可以基于预测概率确定针对 25% 的人口。但是，在图表的利润曲线下的区域是最大的，介于 40% 到 70% 之间，指示通过邮寄给更多的人，可以令您的回报最大化，即使只有较小的整体百分比响应。  
   
-## 保存图表  
+## <a name="saving-charts"></a>保存图表  
  在您创建准确性图表或利润图时，在服务器上将不会创建任何对象。 而是对现有模型执行查询，并且结果将呈现在查看器中。 如果您需要保存结果，则必须将图表或结果保存到 Excel 或其他文件中。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  下列主题包含有关如何生成和使用准确性图表的详细信息。  
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](../Topic/Basic%20Data%20Mining%20Tutorial.md)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
 |说明相关的图表类型。|[提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |说明挖掘模型和挖掘结构的交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [测试提升图的准确性（数据挖掘基础教程）](../Topic/Testing%20Accuracy%20with%20Lift%20Charts%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [测试提升图的准确性（数据挖掘基础教程）](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

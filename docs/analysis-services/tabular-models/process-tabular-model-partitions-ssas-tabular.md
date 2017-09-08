@@ -1,24 +1,29 @@
 ---
-title: "处理表格模型分区（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "处理表格模型分区 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46fe768f2176501fc6b15a0f14f0d6bff808b065
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 处理表格模型分区（SSAS 表格）
+# <a name="process-tabular-model-partitions-ssas-tabular"></a>处理表格模型分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 本主题中的任务说明如何使用 **中的** “处理分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框在模型数据库中处理分区。  
   
 ###  <a name="bkmk_create_new"></a> 处理分区  
@@ -39,7 +44,7 @@ caps.handback.revision: 6
   
 4.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [创建和管理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

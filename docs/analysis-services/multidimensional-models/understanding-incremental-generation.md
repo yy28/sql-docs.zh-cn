@@ -1,28 +1,33 @@
 ---
-title: "了解增量生成 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "增量生成 [Analysis Services]"
-  - "架构生成向导, 增量生成"
-  - "关系架构 [Analysis Services], 增量生成"
+title: "了解增量生成 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental generation [Analysis Services]
+- Schema Generation Wizard, incremental generation
+- relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 了解增量生成
+# <a name="understanding-incremental-generation"></a>了解增量生成
   在生成初始架构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]更改多维数据集定义和维度定义，然后返回架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
   
 -   如果表由向导在先前生成，则会被覆盖。 通过将数据源视图中表的 **AllowChangesDuringGeneration** 属性更改为 **false**，可以防止覆盖由向导生成的表。 如果可对表进行控制，则该表与任何其他用户定义表的处理方式相同，并且在重新生成过程中不受影响。 从生成中删除表之后，您可以稍后将数据源视图中表的 **AllowChangesDuringGeneration** 属性更改为 **true** ，并重新打开该表以便向导对其进行更改。 有关详细信息，请参阅[在数据源视图中更改属性 (Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)。  
@@ -31,13 +36,13 @@ caps.handback.revision: 29
   
  当架构生成向导重新生成先前在主题区域数据库中生成的表时，您可以选择让向导保留这些表中的现有数据。  
   
-## 支持数据保留  
+## <a name="supporting-data-preservation"></a>支持数据保留  
  作为通用规则，架构生成向导会保留存储在由其生成的表中的数据。 此外，如果将列添加到向导生成的表中，则向导也会保留这些数据。 您可以使用这项功能添加或修改维度和多维数据集，然后重新生成基础对象而不必重新加载存储在基础表中的数据。  
   
 > [!NOTE]  
 >  如果要加载分隔的文本文件中的数据，则还可以选择架构生成向导在重新生成过程中是否覆盖这些文件及其包含的数据。 文本文件既可以完全覆盖，也可以根本不覆盖。 架构生成向导不会部分覆盖这些文件。 默认情况下，这些文件不被覆盖。  
   
-### 部分保留  
+### <a name="partial-preservation"></a>部分保留  
  在某些情况下，架构生成向导不会保留现有的数据。 下表提供了一些示例，用于说明在哪些情况下，向导不会在重新生成过程中保留基础表中的所有现有数据。  
   
 |数据类型更改|处理方式|  
@@ -48,7 +53,7 @@ caps.handback.revision: 29
   
  架构生成向导在删除任何数据之前会发出警告，以便您可以取消向导而不丢失任何数据。 但是，架构生成向导不能区别预料到的数据丢失和未预料到的数据丢失。 当您运行向导时，便会出现一个对话框，列出包含要删除的数据的表和列。 您既可以让向导继续运行并删除数据，也可以取消向导并修改对表和列所做的更改。  
   
-## 支持多维数据集和维度更改  
+## <a name="supporting-cube-and-dimension-changes"></a>支持多维数据集和维度更改  
  当您更改维度和多维数据集的属性时，架构生成向导会在基础主题区域数据库以及相关数据源视图中重新生成相应的对象，如下表中所述。  
   
  删除对象，如维度、多维数据集或属性。  
@@ -65,7 +70,7 @@ caps.handback.revision: 29
   
  如果架构生成向导因主题区域数据库中存在用户对象而无法进行所需的更改（因为数据库引擎返回错误），则架构生成向导会失败并显示由数据库引擎返回的错误。 例如，如果您在向导生成表后对该表创建主键约束或非聚集索引，则架构生成向导不会删除该表，因为向导并未创建约束或索引。  
   
-## 支持架构更改  
+## <a name="supporting-schema-changes"></a>支持架构更改  
  当您更改主题区域数据库或相关数据源视图中表或列的属性时，架构生成向导将按照下表所述处理更改。  
   
  删除由架构生成向导生成的表或列。  
@@ -77,14 +82,14 @@ caps.handback.revision: 29
  将列添加到由架构生成向导生成的表中，或者将表添加到主题区域数据库或临时区域数据库中。  
  如果您将列添加到由架构生成向导生成的表中，则该向导会在重新生成过程保留附加的列以及该列中存储的所有数据。 但是，如果您将表添加到主题区域数据库或临时区域数据库中，则架构生成向导不会合并新表。 已添加的列或已添加的表不会在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、DTS 包、数据源视图或者所生成架构中的任何其他位置上得以反映。  
   
-## 支持数据源和数据源视图更改  
+## <a name="supporting-data-source-and-data-source-view-changes"></a>支持数据源和数据源视图更改  
  在重新运行架构生成向导时，它重用初始生成使用的相同数据源和数据源视图。 如果您添加数据源或数据源视图，则向导不会使用该数据源或数据源视图。 如果您在初始生成后删除原始数据源或数据源视图，则必须从头运行向导。 向导中的所有先前设置也会被删除。 下次运行架构生成向导时，基础数据库中任何绑定到已删除数据源或数据源视图的现有对象都被视为用户创建的对象。  
   
  如果数据源视图并未反映基础数据库生成时的实际状态，则架构生成向导在生成主题区域数据库架构或临时区域数据库架构时可能会遇到错误。 例如，如果数据源视图指定将列的数据类型设置为 **int**，但该列的数据类型实际设置为 **string**，则架构生成向导会将外键的数据类型设置为 **int** 以便与数据源视图相匹配，而在创建关系时会失败，因为实际的数据类型为 **string**。  
   
  另一方面，如果您将数据源连接字符串更改为先前生成的其他数据库，则不会生成任何错误。 将会使用新的数据库，并且不会对先前数据库进行任何更改。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理对数据源视图和数据源所做的更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

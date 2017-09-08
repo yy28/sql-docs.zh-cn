@@ -1,24 +1,29 @@
 ---
-title: "安全审核数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit 事件类别 [SQL Server]"
+title: "Security Audit Data Columns |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全审核数据列
+# <a name="security-audit-data-columns"></a>安全审核数据列
   “安全审核”事件类别具有以下事件类：  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  下表列出了其中每个事件类的数据列。  
   
-## 审核登录  
+## <a name="audit-login"></a>审核登录  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 审核注销  
+## <a name="audit-logout"></a>审核注销  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|采用规范格式的用户名。 例如，engineering.microsoft.com/software/someone。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 审核服务器启动和停止  
+## <a name="audit-server-starts-and-stops"></a>审核服务器启动和停止  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 审核对象权限事件  
+## <a name="audit-object-permission-event"></a>审核对象权限事件  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,7 +114,7 @@ caps.handback.revision: 36
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 审核管理操作事件  
+## <a name="audit-admin-operations-event"></a>审核管理操作事件  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“安全审核”事件类别](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

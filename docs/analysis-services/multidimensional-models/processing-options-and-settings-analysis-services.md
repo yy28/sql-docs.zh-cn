@@ -1,35 +1,40 @@
 ---
-title: "处理选项和设置 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "处理数据选项 [Analysis Services]"
-  - "处理对象 [Analysis Services]"
-  - "不处理选项 [Analysis Services]"
-  - "处理全部选项 [Analysis Services]"
-  - "处理索引选项 [Analysis Services]"
-  - "处理结构选项 [Analysis Services]"
-  - "处理增量选项 [Analysis Services]"
-  - "处理更新选项 [Analysis Services]"
-  - "处理清除结构选项 [Analysis Services]"
-  - "处理默认值选择 [Analysis Services]"
+title: "处理选项和设置 (Analysis Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process data option [Analysis Services]
+- processing objects [Analysis Services]
+- unprocess option [Analysis Services]
+- process full option [Analysis Services]
+- process index option [Analysis Services]
+- process structure option [Analysis Services]
+- process incremental option [Analysis Services]
+- process update option [Analysis Services]
+- process clear structure option [Analysis Services]
+- process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 处理选项和设置 (Analysis Services)
+# <a name="processing-options-and-settings-analysis-services"></a>处理选项和设置 (Analysis Services)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中处理对象时，您可以选择处理选项以控制每个对象的处理类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果启用了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  
   
  通过处理设置可以控制要处理的对象以及用来处理这些对象的方法。 某些处理设置主要用于批处理作业。 有关批处理的详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
@@ -37,7 +42,7 @@ caps.handback.revision: 48
 > [!NOTE]  
 >  本主题适用于多维和数据挖掘解决方案。 有关表格解决方案的信息，请参阅[处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)。  
   
-## 处理选项  
+## <a name="processing-options"></a>处理选项  
  下表介绍了可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用的处理方法，并标识了支持每种方法的对象。  
   
 |模式|适用于|Description|  
@@ -52,7 +57,7 @@ caps.handback.revision: 48
 |**处理结构**|多维数据集和挖掘结构|如果未处理多维数据集，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在必要时处理该多维数据集的所有维度。 然后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将只创建多维数据集定义。 如果将此选项应用于挖掘结构，则它将使用源数据填充挖掘结构。 此选项与“处理完全”选项之间的区别在于此选项不在挖掘模型自身中向下迭代处理。|  
 |**处理清除结构**|挖掘结构|从挖掘结构中删除所有定型数据。|  
   
-## 处理设置  
+## <a name="processing-settings"></a>处理设置  
  下表说明在创建处理操作时可以使用的处理设置。  
   
 |处理选项|Description|选项值|  
@@ -66,7 +71,7 @@ caps.handback.revision: 48
 ||**处理错误限制**。 通过选择下列一个选项控制处理的错误数：|**忽略错误计数**。 这将使处理继续进行，而不管错误数是多少。<br /><br /> **出错时停止**。 使用此选项，您可以控制其他两项设置。 **“错误数”** 可以限制在出现特定错误数之后处理。 **“出错时要执行的操作”** 允许您确定达到 **“错误数”** 时的操作。 您可以选择 **“停止处理”**，这将使处理作业失败并回滚任何更改；也可以选择 **“停止日志记录”**，这将使处理继续进行，而不记录错误。 **“出错时停止”** 是默认设置，其中 **“错误数”** 设置为 **0** ， **“出错时要执行的操作”** 设置为 **“停止处理”**。|  
 ||以下是错误条件。 你可以设置选项值来控制特定的错误处理行为。<br /><br /> 选择“使用默认错误配置” 时，Analysis Services 将使用针对要处理的每个对象设置的错误配置。 如果将对象设置为使用默认的配置设置，则 Analysis Services 将使用为每个选项列出的默认设置。|**找不到键**。 当键值存在于分区中，但不存在于相应的维度中时发生。 默认设置是 **“报告并继续”**。 其他设置是 **“忽略错误”** 和 **“报告并停止”**。<br /><br /> **重复键**。 当维度中存在多个键值时发生。 默认设置是 **“忽略错误”**。 其他设置是 **“报告并继续”** 和 **“报告并停止”**。<br /><br /> **空键转换为未知键**。 当键值为空值且 **“键错误操作”** 设置为 **“转换为未知”**时发生。 默认设置是 **“忽略错误”**。 其他设置是 **“报告并继续”** 和 **“报告并停止”**。<br /><br /> **不允许空键**。 当 **“键错误操作”** 设置为 **“放弃记录”**时发生。 默认设置是 **“报告并继续”**。 其他设置是 **“忽略错误”** 和 **“报告并停止”**。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

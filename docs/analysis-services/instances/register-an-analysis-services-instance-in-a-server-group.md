@@ -1,27 +1,32 @@
 ---
-title: "在服务器组中注册 Analysis Services 实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "服务器组中注册 Analysis Services 实例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在服务器组中注册 Analysis Services 实例
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>在服务器组中注册 Analysis Services 实例
   如果有大量 Analysis Services 服务器实例，可以在 Management Studio 中创建服务器组来方便管理服务器。 服务器组的作用是在管理工作区内提供一组相关服务器的近似性。 例如，假定您负责管理 10 个单独的 Analysis Services 实例。 通过按服务器模式、运行时间条件或部门/区域将它们分组，您可以更易于查看并连接到共享相同特征的实例。 您还可以添加描述性信息，帮助您记住如何使用服务器。  
   
- ![包含成员服务器的“已注册服务器”窗格](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "包含成员服务器的“已注册服务器”窗格")  
+ ![与成员服务器的已注册服务器窗格](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "与成员服务器的已注册的服务器窗格")  
   
  可以在层次结构中创建服务器组。 本地服务器组是根节点。 它始终包含在本地计算机上运行的 Analysis Services 实例。 您可以将远程服务器添加到任何组，包括本地组。  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  为服务器定义的连接信息（包括服务器名称）通过服务器注册已持久化。 使用其他工具连接到服务器时，不能修改连接信息或使用注册的名称。  
   
-## 创建服务器组并添加已注册的服务器  
+## <a name="create-a-server-group-and-add-registered-servers"></a>创建服务器组并添加已注册的服务器  
   
 1.  在 Management Studio 中，单击“查看”菜单中的“已注册的服务器”以在工作区中打开“已注册的服务器”窗格。 默认情况下，已创建本地服务器组。 在本地服务器上运行的所有 Analysis Services 实例是其成员。  
   

@@ -1,24 +1,29 @@
 ---
-title: "进度报告数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“进度报告”事件类别"
+title: "进度报告的数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 进度报告数据列
+# <a name="progress-reports-data-columns"></a>进度报告数据列
   “进度报告”事件类别有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  下表列出了其中每个事件类的数据列。  
   
-## 进度报告开始–数据列  
+## <a name="progress-report-begindata-columns"></a>进度报告开始–数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -55,7 +60,7 @@ caps.handback.revision: 34
 |TextData|42|9|包含与所报告事件关联的文本数据。|  
 |ServerName|43|8|包含其上发生所报告事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 进度报告结束–数据列  
+## <a name="progress-report-enddata-columns"></a>进度报告结束–数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 34
 |TextData|42|9|包含与所报告事件关联的文本数据。|  
 |ServerName|43|8|包含其上发生所报告事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 进度报告当前–数据列  
+## <a name="progress-report-currentdata-columns"></a>进度报告当前–数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -112,7 +117,7 @@ caps.handback.revision: 34
 |TextData|42|9|包含与所报告事件关联的文本数据。|  
 |ServerName|43|8|包含其上发生所报告事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 进度报告错误–数据列  
+## <a name="progress-report-errordata-columns"></a>进度报告错误–数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -140,7 +145,7 @@ caps.handback.revision: 34
 |TextData|42|9|包含与所报告事件关联的文本数据。|  
 |ServerName|43|8|包含其上发生所报告事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 另请参阅  
- [“进度报告”事件类别](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

@@ -1,39 +1,44 @@
 ---
-title: "设置分区写回 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "已启用写操作的分区 [Analysis Services]"
-  - "分区 [Analysis Services], 写回"
-  - "分区 [Analysis Services], 已启用写入"
-  - "写回 [Analysis Services], 分区"
+title: "设置分区写回 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- write-enabled partitions [Analysis Services]
+- partitions [Analysis Services], writeback
+- partitions [Analysis Services], write-enabled
+- writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 设置分区写回
+# <a name="set-partition-writeback"></a>设置分区写回
   如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  
   
  可以浏览或删除写回数据。 还可以将写回数据转换为分区。 在已启用写操作的分区上，可使用多维数据集角色授予用户和用户组读/写权限，并限制对分区中特定单元或单元组的访问。  
   
- 有关写回的一个简短视频简介，请参阅 [向 Analysis Services 的 Excel 2010 写回](http://go.microsoft.com/fwlink/p/?LinkId=394951)。 关于此功能的更详细探讨，请参阅博客文章系列[使用 Analysis Services 生成写回应用程序（博客）](http://go.microsoft.com/fwlink/?LinkId=394977)。  
+ 有关写回的一个简短视频简介，请参阅 [向 Analysis Services 的 Excel 2010 写回](http://go.microsoft.com/fwlink/p/?LinkId=394951)。 关于此功能的更详细探讨，请参阅博客文章系列 [使用 Analysis Services 生成写回应用程序（博客）](http://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 > [!NOTE]  
 >  仅对 SQL Server 关系数据库和数据市场支持写回，并且写回仅适用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型。  
   
-## 如何对分区执行写启用  
+## <a name="how-to-write-enable-a-partition"></a>如何对分区执行写启用  
  通过在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的多维数据集设计器中对分区本身执行写启用操作，可以对分区的度量值组执行写启用。  
   
 -   在多维数据集设计器中的“分区”选项卡上，右键单击一个分区，然后选择“写回设置”。  
@@ -44,13 +49,13 @@ caps.handback.revision: 34
   
  启用分区的写功能时，请指定用于存储写回表的表名称和数据源。 度量值组的任何后续更改都将记录在此表中。  
   
-## 浏览分区中的写回数据  
+## <a name="browse-writeback-data-in-a-partition"></a>浏览分区中的写回数据  
  可以在“浏览数据”对话框中浏览多维数据集的写回表的内容，在多维数据集设计器的“分区”选项卡上右键单击启用了写操作的分区即可访问该对话框。  
   
-## 删除写回数据或禁用写回  
+## <a name="delete-writeback-data-or-disable-writeback"></a>删除写回数据或禁用写回  
  删除写回数据将清除写回缓存；在删除数据后，其他写回工作将立即在干净状态下执行。 禁用某个多维数据集分区的写回仅仅是关闭该分区的写回。  
   
-## 将写回数据转换到分区  
+## <a name="convert-writeback-data-to-a-partition"></a>将写回数据转换到分区  
  可以将分区写回表中的数据转换为分区。 此过程使得写回表成为新分区的事实数据表。  
   
 > [!CAUTION]  
@@ -60,9 +65,9 @@ caps.handback.revision: 34
   
  若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可写入的分区的写回表来访问该对话框。 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
   
-## 另请参阅  
- [可写入的分区](../Topic/Write-Enabled%20Partitions.md)   
- [在 Excel 2010 中启用以单元级别写回到 OLAP 多维数据集](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [启用 Analysis Services 写回并使用它保护数据项](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+## <a name="see-also"></a>另请参阅  
+ [可写入的分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [启用回写到 OLAP 多维数据集在 Excel 2010 中的单元格级别](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [启用和保护具有 Analysis Services 写回的数据项](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

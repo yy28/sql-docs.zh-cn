@@ -1,35 +1,40 @@
 ---
-title: "设置模拟选项（SSAS - 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-helpviewer_keywords: 
-  - "“模拟信息”对话框"
+title: "设置模拟选项 (SSAS-多维) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords:
+- Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 设置模拟选项（SSAS - 多维）
+# <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
   在 Analysis Services 模型中创建 **data source** 对象时，您必须配置的一个设置是模拟选项。 此选项确定 Analysis Services 在执行与连接相关的本地操作（如加载 OLE DB 数据访问接口或在支持漫游配置文件的环境中解析用户配置文件信息）时是否采用特定 Windows 用户帐户的标识。  
   
  对于使用 Windows 身份验证的连接，模拟选项还确定对外部数据源执行查询的用户标识。 例如，如果你将模拟选项设置为 **contoso\dbuser**，则在处理期间用于检索数据的查询将以数据库服务器上的 **contoso\dbuser** 身份执行。  
   
  本主题说明在配置数据源对象时如何在 **“模拟信息”** 对话框中设置模拟选项。  
   
-## 在 SQL Server Data Tools 中设置模拟选项  
+## <a name="set-impersonation-options-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置模拟选项  
   
 1.  在解决方案资源管理器中双击某一数据源以便打开数据源设计器。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 27
   
 3.  选择本主题的 [模拟选项](#bkmk_options) 中所述的一个选项。  
   
-## 在 Management Studio 中设置模拟选项  
+## <a name="set-impersonation-options-in-management-studio"></a>在 Management Studio 中设置模拟选项  
  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，通过针对这些对话框的以下属性单击省略号 (**...**) 按钮，打开“模拟信息”对话框：  
   
 -   **“数据库属性”** 对话框（通过“数据源模拟信息”属性）。  
@@ -50,7 +55,7 @@ caps.handback.revision: 27
  对话框中的所有选项都可用，但并非所有选项都适合每种情况。 使用以下信息来确定最适合于您的情况的选项。  
   
  **使用特定用户名和密码**  
- 选择此选项将使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象使用按以下格式指定的 Windows 用户帐户的安全凭据：\<域名>**\\**\<用户帐户名>。  
+ 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用此格式中指定的 Windows 用户帐户的安全凭据： *\<域名 >*  **\\**  *\<用户帐户名 >*。  
   
  选择此选项可使用一个专用的最小权限的 Windows 用户标识，该用户标识是您为数据访问目的而专门创建的。 例如，如果您定期创建用于检索在报表中使用的数据的通用帐户，则可以在此处指定该帐户。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 27
  **使用服务帐户**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象使用与管理该对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务相关联的安全凭据。 这是默认选项。 在以前的版本中，这是唯一可以使用的选项。 若要在服务级别而不是单独的用户帐户级别监视数据访问，您可能会愿意选择此选项。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，根据您使用的不同操作系统，服务帐户可能是 NetworkService 或为特定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例创建的内置虚拟帐户。 如果您为使用 Windows 身份验证的连接选择服务帐户，请记住要为此帐户创建数据库登录名并授予读取权限，因为它将用于在处理期间检索数据。 有关服务帐户的详细信息，请参阅 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，根据您使用的不同操作系统，服务帐户可能是 NetworkService 或为特定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例创建的内置虚拟帐户。 如果您为使用 Windows 身份验证的连接选择服务帐户，请记住要为此帐户创建数据库登录名并授予读取权限，因为它将用于在处理期间检索数据。 有关服务帐户的详细信息，请参阅 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 > [!NOTE]  
 >  使用数据库身份验证时，如果正在 Analysis Services 的专用虚拟帐户下运行服务，应选择 **“使用服务帐户”** 模拟选项。 此帐户将具有访问本地文件的权限。 如果服务以 NetworkService 身份运行，最好使用具有 **“允许在本地登录”** 权限的最小权限的 Windows 用户帐户。 根据您提供的帐户，您可能还需要授予对 Analysis Services 程序文件夹的文件访问权限。  
@@ -99,7 +104,7 @@ caps.handback.revision: 27
 
  对于多维数据库， **“默认值”** 意味着使用服务帐户，并将当前用户用于数据挖掘操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [设置数据源属性（SSAS 多维）](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

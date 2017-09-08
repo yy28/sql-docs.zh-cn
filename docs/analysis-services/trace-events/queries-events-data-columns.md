@@ -1,24 +1,29 @@
 ---
-title: "查询事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“查询事件”事件类别"
+title: "查询事件数据列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 查询事件数据列
+# <a name="queries-events-data-columns"></a>查询事件数据列
   “查询事件”事件类别具有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  下表列出了其中每个事件类的数据列。  
   
-## 查询开始类 — 数据列  
+## <a name="query-begin-classdata-columns"></a>查询开始类 — 数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|包含与查询事件相关联的参数化查询和命令的参数。|  
 |RequestProperties|45|9|包含 XMLA 请求的属性。|  
   
-## 查询结束类 — 数据列  
+## <a name="query-end-classdata-columns"></a>查询结束类 — 数据列  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|包含与查询事件相关联的文本数据。|  
 |ServerName|43|8|包含其上发生查询事件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [查询事件类别](../../analysis-services/trace-events/queries-events-category.md)  
   
   

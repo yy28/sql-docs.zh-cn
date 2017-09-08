@@ -1,26 +1,31 @@
 ---
-title: "“安全审核”事件类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit 事件类别 [SQL Server]"
-  - "事件类 [Analysis Services], 安全审核"
-  - "安全事件 [Analysis Services]"
+title: "Security Audit 事件类别 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [Analysis Services], security audit
+- security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb384601c49088675c25547b3ae7dc21b4510380
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# “安全审核”事件类别
+# <a name="security-audit-event-category"></a>“安全审核”事件类别
   “安全审核”事件类别具有下表中说明的事件类。  
   
 |Event Class|事件 ID|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 25
   
  有关与每个安全审核事件类关联的列的信息，请参阅 [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

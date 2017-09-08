@@ -1,24 +1,29 @@
 ---
-title: "模拟（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "模拟 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 模拟（SSAS 表格）
+# <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
   
  本文包含以下各节：  
@@ -68,12 +73,12 @@ caps.handback.revision: 20
   
 |选项|ImpersonationMode*|Description|  
 |------------|-------------------------|-----------------|  
-|**特定的 Windows 用户名和密码***\*|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 用户帐户的域和名称使用的格式如下：**\<Domain name>\\<User account name\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
+|**特定的 Windows 用户名和密码***\*|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
  *ImpersonationMode 指定数据源上的 [DataSourceImpersonationInfo 元素 (ASSL)](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) 属性。  
   
- \*\*在使用此选项时，如果由于重新引导或“工作区保持期”属性设置为“从内存卸载”或“从工作区中删除”而导致从内存中删除工作区数据库，并且关闭该模型项目，则在后续会话中，一旦你尝试处理表数据，系统就会提示你为每个数据源输入凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
+ \*\*使用此选项，如果工作区数据库删除从内存，由于重新启动时或**工作区保持期**属性设置为**从内存卸载**或**从删除工作区**，并将模型项目关闭，请在后续的会话中，如果你尝试处理表数据，则系统将提示输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
   
 ##  <a name="bkmk_impers_sec"></a> Security  
  用于模拟的凭据由与 Analysis Services 服务器相关联的 xVelocity 内存中分析引擎 (VertiPaq)™ 保持在内存中（该服务器管理工作区数据库或已部署的模型）。  任何时候都不要将凭据写入磁盘中。 如果在部署模型时工作区数据库不在内存中，则系统将提示用户输入用于连接到数据源和提取数据的凭据。  
@@ -82,7 +87,7 @@ caps.handback.revision: 20
 >  建议您为模拟凭据指定 Windows 用户帐户和密码。 可以将 Windows 用户帐户配置为连接到数据源和从数据源读取数据所需的最低权限。  
   
 ##  <a name="bkmk_imp_newmodel"></a> 导入模型时的模拟  
- 与可以使用若干不同的模拟模式支持进程外数据收集的表格模型不同，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 仅使用一个模式，即 ImpersonateCurrentUser。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 始终在进程中运行，所以，它使用当前登录的用户的凭据连接到数据源。 对于表格模型，当前登录的用户的凭据仅用于“表导入向导”中的 **“预览并筛选”** 功能以及在查看 **“表属性”**时。 在将数据导入或处理到工作区数据库中或者在将数据导入或处理到已部署的模型中时，使用模拟凭据。  
+ 与可以使用若干不同的模拟模式支持进程外数据收集的表格模型不同， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 仅使用一个模式，即 ImpersonateCurrentUser。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 始终在进程中运行，所以，它使用当前登录的用户的凭据连接到数据源。 对于表格模型，当前登录的用户的凭据仅用于“表导入向导”中的 **“预览并筛选”** 功能以及在查看 **“表属性”**时。 在将数据导入或处理到工作区数据库中或者在将数据导入或处理到已部署的模型中时，使用模拟凭据。  
   
  在通过导入现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿来创建新模型时，默认情况下，模型设计器将对模拟进行配置以便使用服务帐户 (ImpersonateServiceAccount)。 建议你将从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入的模型上的模拟凭据更改为 Windows 用户帐户。 在导入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或者在模型设计器中创建新模型后，你可以通过使用“现有连接”  对话框更改凭据。  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
  对于部署到 Analysis Services 服务器的模型，可在 SSMS 的“连接属性” > “模拟信息”中配置模拟信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [表格模型解决方案部署（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

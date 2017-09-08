@@ -1,28 +1,33 @@
 ---
-title: "使用嵌套表数据作为准确性图表的输入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘准确性图表 [Analysis Services], 嵌套表"
-  - "挖掘准确性图表 [Analysis Services], 输入表"
-  - "嵌套表"
-  - "添加嵌套表"
+title: "嵌套的表数据作为输入用于准确性图表 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], nested tables
+- Mining Accuracy Chart [Analysis Services], input tables
+- nested tables
+- adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6ebe50e260a7de9520c75e534548d342fa3b2b68
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用嵌套表数据作为准确性图表的输入
+# <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
   在使用外部数据测试挖掘模型的准确性时，如果挖掘模型包含嵌套表，则外部数据也必须包含一个事例表和一个关联的嵌套表。  
   
  本主题说明如何处理用于模型测试的嵌套表、如何在模型和外部数据中映射嵌套表和事例表，以及如何将筛选器应用到嵌套表。  
@@ -35,7 +40,7 @@ caps.handback.revision: 24
   
 -   只有指定了事例表，才可选择嵌套表。 此外，只有在挖掘模型也使用事例表和嵌套表结构时，才可以指定嵌套表作为输入。  
   
-### 使用嵌套表作为准确性图表的输入  
+### <a name="use-a-nested-table-as-input-to-an-accuracy-chart"></a>使用嵌套表作为准确性图表的输入  
   
 1.  双击挖掘结构以在数据挖掘设计器中将其打开。  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
      如果需要修改嵌套表与事例表之间的关系，请单击 **“修改联接”** 以打开 **“创建关系”** 对话框。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   

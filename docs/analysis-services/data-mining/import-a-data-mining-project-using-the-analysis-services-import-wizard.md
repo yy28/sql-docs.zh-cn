@@ -1,26 +1,31 @@
 ---
-title: "使用 Analysis Services 导入向导导入数据挖掘项目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "导入数据挖掘项目使用 Analysis Services 导入向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Analysis Services 导入向导导入数据挖掘项目
+# <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
   本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模板“从服务器导入（多维和数据挖掘）项目”从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  
   
-## 从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
+## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
  在使用模板“从服务器导入（多维和数据挖掘）项目”时，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 会创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  
   
 -   数据本身不会从源服务器复制到新数据挖掘项目 - 仅导入数据源和数据源视图的定义。 因此，在完成导入过程并创建对象后，您必须通过定型挖掘结构和依赖模型来用数据填充对象。 可以在数据挖掘设计器中使用命令 **“全部处理”** 来定型模型和结构。  
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
      如果无法更改默认部署数据库以使用在多维或数据挖掘模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，则可始终通过使用 **“项目属性”** 对话框来指定部署数据库。  
   
-#### 通过导入现有数据挖掘项目来创建新的数据挖掘项目  
+#### <a name="to-create-a-new-data-mining-project-by-importing-an-existing-data-mining-project"></a>通过导入现有数据挖掘项目来创建新的数据挖掘项目  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 6
   
      这将自动使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开新对象。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

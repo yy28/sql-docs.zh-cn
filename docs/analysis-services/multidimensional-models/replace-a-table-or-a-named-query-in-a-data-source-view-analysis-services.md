@@ -1,30 +1,35 @@
 ---
-title: "在数据源视图中替换表或命名查询 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "替换表"
-  - "数据源视图 [Analysis Services], 表"
-  - "命名查询 [Analysis Services], 替换表"
-  - "表 [Analysis Services], 数据源视图"
-  - "分区 [Analysis Services], 命名查询"
+title: "替换表或数据源视图 (Analysis Services) 中的命名的查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replacing tables
+- data source views [Analysis Services], tables
+- named queries [Analysis Services], replacing tables
+- tables [Analysis Services], data source views
+- partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在数据源视图中替换表或命名查询 (Analysis Services)
+# <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
   在数据源视图设计器中，可以将数据源视图 (DSV) 中的表、视图或命名查询替换为来自相同数据源或不同数据源的其他表或视图，或者替换为 DSV 中定义的命名查询。 替换表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有其他对象或引用了该表的项目将继续引用该表，因为 DSV 中表的对象 ID 不会发生更改。 任何仍然相关（基于名称和列类型匹配）的关系仍然保留。 与此不同的是，如果删除后再添加表，则将丢失引用和关系，因此必须重新创建引用和关系。  
   
  若要使用其他表替换表，必须在项目模式下与数据源视图设计器中的源数据建立活动连接。  
@@ -46,7 +51,7 @@ caps.handback.revision: 33
   
 5.  保存已修改的数据源视图。  
   
-## 使用表替换表或命名查询  
+## <a name="replace-a-table-or-named-query-with-a-table"></a>使用表替换表或命名查询  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中替换表或命名查询的数据源视图。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 33
   
 6.  保存已修改的数据源视图。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

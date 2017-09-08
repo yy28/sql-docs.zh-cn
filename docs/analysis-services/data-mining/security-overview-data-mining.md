@@ -1,25 +1,30 @@
 ---
-title: "安全性概述（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全性 [Analysis Services - 数据挖掘], 关于安全性"
+title: "安全性概述 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 安全性概述（数据挖掘）
+# <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
   可以在多个级别对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行保护。 您必须保护每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其数据源，以确保只有经过授权的用户具有所选维度、挖掘模型以及数据源的读或读/写权限。 您还必须保护基础数据源以防止未经授权的用户恶意破坏敏感商业信息。 以下主题说明了保护 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的过程。  
   
 ##  <a name="bkmk_Architecture"></a> 安全体系结构  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  如果使用 Integration Services 包清理数据、更新挖掘模型或进行预测，则必须确保 Integration Services 服务拥有存储有模型的数据库的相应权限，以及源数据的相应权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "SystemGetAccuracyResults（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "存储过程 [Analysis Services], 数据挖掘"
-  - "SystemGetAccuracyResults"
-  - "交叉验证 [数据挖掘]"
+title: "SystemGetAccuracyResults (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetAccuracyResults
+- cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetAccuracyResults（Analysis Services - 数据挖掘）
+# <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults（Analysis Services - 数据挖掘）
   返回挖掘结构和所有相关模型（不包括聚类分析模型）的交叉验证准确性指标。  
   
  此存储过程将为作为单个分区的整个数据集返回指标。 若要将数据集分区为交叉部分，并返回每个分区的度量值，请使用 [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
@@ -28,7 +33,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型不支持此存储过程。 此外，对于聚类分析模型，请使用单独的存储过程 [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetAccuracyResults(<mining structure>,
 [,<test list>])  
 ```  
   
-## 参数  
+## <a name="arguments"></a>参数  
  *挖掘结构 (mining structure)*  
  当前数据库中挖掘结构的名称。  
   
@@ -95,7 +100,7 @@ SystemGetAccuracyResults(<mining structure>,
   
  （可选）  
   
-## 返回类型  
+## <a name="return-type"></a>返回类型  
  返回的行集包含每个分区的分数以及所有模型的聚合。  
   
  下表列出了 **GetValidationResults**返回的列。  
@@ -106,13 +111,13 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|可预测列的名称。|  
 |AttributeState|可预测列中的目标值。<br /><br /> 如果此列包含一个值，则只针对指定的状态收集指标。<br /><br /> 如果未指定此值，或为 Null，则针对每个预测最有可能的状态计算指标。|  
 |PartitionIndex|表示结果适用的分区。<br /><br /> 对于此过程，始终为 0。|  
-|PartitionCases|指示事例集中行数的整数，基于 *\<data set>* 参数。|  
+|PartitionCases|一个整数，指示事例集，基于中的行数*\<数据集 >*参数。|  
 |测试|所执行测试的类型。|  
 |度量值|测试返回的度量值的名称。 每个模型的度量值取决于模型类型以及可预测值的类型。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
 |“值”|指定的度量值的值。|  
   
-## 注释  
- 下表提供了一些值的示例，您可以使用这些值指定用于交叉验证的挖掘结构中的数据。 如果要将测试事例用于交叉验证，挖掘结构必须已包含测试数据集。 有关如何在创建挖掘结构时定义测试数据集的信息，请参阅[定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
+## <a name="remarks"></a>注释  
+ 下表提供了一些值的示例，您可以使用这些值指定用于交叉验证的挖掘结构中的数据。 如果要将测试事例用于交叉验证，挖掘结构必须已包含测试数据集。 有关如何在创建挖掘结构时定义测试数据集的信息，请参阅 [定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
 |整数值|Description|  
 |-------------------|-----------------|  
@@ -126,7 +131,7 @@ SystemGetAccuracyResults(<mining structure>,
   
  有关可以在其中使用交叉验证的应用场景的详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
-## 示例  
+## <a name="examples"></a>示例  
  此示例返回单个决策树模型 `v Target Mail DT`的准确性度量值，该模型与 `vTargetMail` 挖掘结构关联。 第四行的代码指示结果应基于通过每个模型特定的筛选器为对应模型筛选的测试事例。  `[Bike Buyer]` 指定要预测的列，下一行的 1 指示仅针对特定值 1（表示“是，将要购买”）对模型进行评估。  
   
  代码的最后一行指定状态阈值为 0.5。 这意味着，计算准确性时，概率大于 50% 的预测就应视为“准确”的预测。  
@@ -154,13 +159,13 @@ CALL SystemGetAccuracyResults (
 |v Target Mail DT|Bike Buyer|1|0|1638|可能性|提升|0.0936717116894395|  
 |v Target Mail DT|Bike Buyer|1|0|1638|可能性|均方根误差|0.361630800104946|  
   
-## 要求  
- 从 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 开始，交叉验证仅在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中可用。  
+## <a name="requirements"></a>要求  
+ 从 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 开始，交叉验证仅在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中可用。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

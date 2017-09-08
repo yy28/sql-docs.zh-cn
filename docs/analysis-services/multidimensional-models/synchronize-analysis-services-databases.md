@@ -1,29 +1,34 @@
 ---
-title: "同步 Analysis Services 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 部署, 同步数据库向导"
-  - "部署 [Analysis Services], 同步数据库向导"
-  - "同步数据库向导"
-  - "同步 [Analysis Services]"
+title: "同步 Analysis Services 数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, Synchronize Database Wizard
+- deploying [Analysis Services], Synchronize Database Wizard
+- Synchronize Database Wizard
+- synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 同步 Analysis Services 数据库
+# <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
   
 -   将数据库从临时服务器部署到生产服务器。  
@@ -41,14 +46,14 @@ caps.handback.revision: 39
  若要同步数据库，请运行同步数据库向导以立即同步数据库，或使用该向导生成可以在以后运行的同步脚本。 任一方法都可以用于提高 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和多维数据集的可用性和可伸缩性。  
   
 > [!NOTE]  
->  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅[使用 Analysis Services 缩放查询](http://go.microsoft.com/fwlink/?LinkId=253136)和[使用只读数据库缩放 Analysis Services 查询](http://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 源服务器和目标服务器必须是相同版本。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 有关各个版本中功能的详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+ 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据也同步的以确保生成的兼容性的两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 有关每个版本中的功能的详细信息，请参阅[版本和 SQL Server 2016 的支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  每个服务器上的服务器配置模式都必须相同。 如果同步的数据库是多维数据库，则必须针对多维服务器模式配置源服务器和目标服务器。 有关部署模式的详细信息，请参阅 [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  要确定同步是不是合适的方法，数据库大小是要考虑的因素。 没有硬件要求，但是如果同步太慢，请考虑按以下技术文章所述并行同步多个服务器： [Analysis Services 同步最佳做法](http://go.microsoft.com/fwlink/?LinkID=253136)。  
   
-## 同步数据库向导  
+## <a name="synchronize-database-wizard"></a>同步数据库向导  
  使用同步数据库向导可执行从源数据库到目标数据库的单向同步，或生成用于指定数据库同步操作的脚本。 在同步过程中，可以同步本机和远程分区并选择是否包含角色。  
   
  同步数据库向导可指引您完成以下步骤：  
@@ -74,7 +79,7 @@ caps.handback.revision: 39
   
  默认情况下，向导同步除现有安全组中的成员身份以外的所有数据和元数据。 您还可以在同步数据和元数据时复制所有安全设置或忽略所有安全设置。  
   
-#### 运行向导  
+#### <a name="run-the-wizard"></a>运行向导  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到将运行目标数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 例如，如果要将数据库部署到生产服务器，则在生产服务器上运行该向导。  
   
@@ -136,13 +141,13 @@ caps.handback.revision: 39
     > [!NOTE]  
     >  对于某个位置，如果未选择此选项，将不会同步该位置中包含的远程分区。  
   
-     **源服务器**  
+     **“源服务器”**  
      显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。  
   
      **源文件夹**  
      显示包含远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的文件夹名称。 如果该列包含值“(Default)”，则“源服务器”中显示的实例的默认位置将包含远程分区。  
   
-     **目标服务器**  
+     **“目标服务器”**  
      显示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称，应在其中同步“源服务器”和“源文件夹”中指定的位置所存储的远程分区。  
   
      单击省略号 (**...**) 按钮可显示“连接管理器” 对话框，并指定应在其中同步所选位置中存储的远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -184,10 +189,10 @@ caps.handback.revision: 39
   
 8.  单击 **“完成”** 进行同步。 验证 **“完成向导”** 页上的选项后，再次单击 **“完成”** 。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Synchronize 元素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

@@ -1,27 +1,32 @@
 ---
-title: "属性（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "属性 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 属性（SSAS 表格）
+# <a name="properties-ssas-tabular"></a>属性（SSAS 表格）
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的表格模型项目具有不同的属性，这些属性定义项目、模型、报告和部署的行为。 属性设置以 XML 格式存储于 Model.bim 文件中，但是，本节中描述的所有属性都可以在 **的** “属性” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]窗口中配置。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |主题|Description|  
 |-----------|-----------------|  
