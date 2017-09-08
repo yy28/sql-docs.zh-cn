@@ -1,37 +1,42 @@
 ---
-title: "授予数据挖掘结构和模型的权限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.miningmodels.f1"
-helpviewer_keywords: 
-  - "数据挖掘 [Analysis Services], 安全性"
-  - "权限 [Analysis Services], 挖掘模型"
-  - "挖掘模型 [Analysis Services], 安全性"
-  - "挖掘结构 [Analysis Services], 安全性"
-  - "权限 [Analysis Services], 挖掘结构"
-  - "用户访问权限 [Analysis Services], 挖掘结构"
-  - "用户访问权限 [Analysis Services], 挖掘模型"
+title: "授予对数据挖掘结构和模型 (Analysis Services) 的权限 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.miningmodels.f1
+helpviewer_keywords:
+- data mining [Analysis Services], security
+- permissions [Analysis Services], mining models
+- mining models [Analysis Services], security
+- mining structures [Analysis Services], security
+- permissions [Analysis Services], mining structures
+- user access rights [Analysis Services], mining structures
+- user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授予数据挖掘结构和模型的权限 (Analysis Services)
+# <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授予数据挖掘结构和模型的权限 (Analysis Services)
   在默认情况下，仅 Analysis Services 服务器管理员有权限查看数据库中的数据挖掘结构或挖掘模型。 请遵循以下说明，以向非管理员用户授予权限。  
   
-## 设置访问挖掘结构的权限  
+## <a name="set-permissions-to-access-a-mining-structure"></a>设置访问挖掘结构的权限  
   
 1.  在 SSMS 中，连接到 Analysis Services。 如果需要此步骤的帮助，请参阅[从客户端应用程序进行连接 (Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 37
   
 7.  单击“确定”  ，完成角色创建。  
   
-## 设置访问挖掘模型的权限  
+## <a name="set-permissions-to-access-a-mining-model"></a>设置访问挖掘模型的权限  
  对于数据挖掘模型，角色可具有“读取”或“读/写”权限，以及允许查看和浏览基础数据的“钻取”和“读取定义”权限。  
   
  **注意** 如果对挖掘结构和挖掘模型都启用了钻取，作为拥有挖掘模型和挖掘结构钻取权限的角色成员的任何用户也可以查看挖掘结构中的列，即使那些列并未包括在挖掘模型中。 因此，若要保护敏感信息，应设置数据源视图来屏蔽个人信息，并且仅在需要时才允许对挖掘结构进行钻取访问。  
@@ -62,15 +67,15 @@ caps.handback.revision: 37
   
 4.  单击“确定”  ，完成角色创建。  
   
- 若要在使用数据挖掘扩展插件 (DMX) OPENQUERY 子句的钻取查询中使用数据源，则数据库角色还需要具有读/写相应的数据源对象的权限。 有关详细信息，请参阅[授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 和 [OPENQUERY (DMX)](../Topic/OPENQUERY%20\(DMX\).md)。  
+ 若要在使用数据挖掘扩展插件 (DMX) OPENQUERY 子句的钻取查询中使用数据源，则数据库角色还需要具有读/写相应的数据源对象的权限。 有关详细信息，请参阅[授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 和 [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md)。  
   
 > [!NOTE]  
 >  默认情况下，将禁用使用 OPENROWSET 提交 DMX 查询。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予维度数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

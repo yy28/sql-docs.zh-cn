@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 caps.latest.revision: 19
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7f46606c1a6ecb368ec92b0f5e3882d5fe9df533
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Getting Started with SSMA mysql (MySQLToSQL)
@@ -89,7 +89,7 @@ SQL Server 或 Azure SQL DB 元数据资源管理器显示的 SQL Server 或 Azu
   
 -   在 MySQL 元数据资源管理器中，你可能会改变类型映射，Charset 映射，SQL 模式。 若要转换的更改的类型映射或 Charset 映射或 SQL 模式，请在转换架构之前进行更改。  
   
--   在 SQL 服务器元数据资源管理器，你可能会改变的表选项卡上的表和索引属性。 若要查看这些更改 SQL Server 中的，进行这些更改之前架构加载到 SQL Server。  
+-   在 SQL 服务器元数据资源管理器，你可能会改变的表选项卡上的表和索引属性。若要查看这些更改 SQL Server 中的，进行这些更改之前架构加载到 SQL Server。  
   
 在元数据资源管理器所做的更改将反映在项目元数据，不在源或目标数据库中。  
   

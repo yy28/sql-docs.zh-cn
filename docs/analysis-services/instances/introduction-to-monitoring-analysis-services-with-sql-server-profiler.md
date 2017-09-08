@@ -1,30 +1,35 @@
 ---
-title: "通过 SQL Server Profiler 监视 Analysis Services 简介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Profiler，Analysis Services"
-  - "监视 Analysis Services [SQL Server]"
-  - "性能 [Analysis Services]"
-  - "性能 [Analysis Services]，SQL Server Profiler"
-  - "Profiler [SQL Server Profiler]，Analysis Services"
+title: "监视 Analysis Services 使用 SQL Server Profiler 简介 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services]
+- performance [Analysis Services], SQL Server Profiler
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b4073390d14a50948ad7cf023a394c3f1ef683
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 通过 SQL Server Profiler 监视 Analysis Services 简介
+# <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>通过 SQL Server Profiler 监视 Analysis Services 简介
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例生成的事件。 通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以执行以下操作：  
   
 -   监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的性能。  
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
 -   将有关已捕获事件的数据显示到屏幕，或将有关每个事件的数据捕获和保存到文件或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，供将来分析或重放。 重播数据时，可以使保存的事件按原来发生的情况重新运行，可以是实时运行，也可以是逐步运行。  
   
-## 使用 SQL Server Profiler  
+## <a name="using-sql-server-profiler"></a>使用 SQL Server Profiler  
  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 创建或重播跟踪，您必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员。 如果你是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员，则可以从“开始”菜单中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序组启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时，请注意以下事项：  
@@ -59,7 +64,7 @@ caps.handback.revision: 28
   
  为实现最佳性能，请仅使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视您最关注的那些事件。 如果监视太多的事件，会增加开销，并且可能导致跟踪文件或表变得很大，尤其是在很长时期内进行监视时。 此外，可通过筛选来限制收集的数据量，防止跟踪变得太大。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 跟踪事件](../../analysis-services/trace-events/analysis-services-trace-events.md)   
  [为重播创建事件探查器跟踪 (Analysis Services)](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   

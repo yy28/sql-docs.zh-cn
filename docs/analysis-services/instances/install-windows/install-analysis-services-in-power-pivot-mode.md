@@ -1,28 +1,33 @@
 ---
-title: "在 Power Pivot 模式下安装 Analysis Services。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 Power Pivot 模式下安装 Analysis Services |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 Power Pivot 模式下安装 Analysis Services。
+# <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
   本主题中的过程将指导你以适用于 SharePoint 部署的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式在单台服务器上安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 | SharePoint 2013|  
   
  **本主题内容：**  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 38
   
      **注意：** 本主题介绍 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和后端服务的安装。  
   
--   **中间层：增强 **SharePoint 中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 体验的功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理仪表板和数据提供程序。 有关安装和配置中间层的详细信息，请参阅下面的内容：  
+-   **中间层：增强** SharePoint 中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 体验的功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理仪表板和数据提供程序。 有关安装和配置中间层的详细信息，请参阅下面的内容：  
   
     -   [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -67,16 +72,16 @@ caps.handback.revision: 38
   
 3.  必须将计算机加入到与 Office Online Server (SharePoint 2016) 或 Excel Services (SharePoint 2013) 相同的 Active Directory 林中的域。  
   
-4.  必须提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称。 在你要在其上以 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 模式安装 Analysis Services 的计算机上，你无法拥有现有的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 命名实例。  
+4.  必须提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例名称。 在你要在其上以 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式安装 Analysis Services 的计算机上，你无法拥有现有的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 命名实例。  
   
      **请注意：** 实例名称必须为 POWERPIVOT。  
   
-5.  查看 [SharePoint 模式下的 Analysis Services 服务器的硬件和软件要求](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md)。  
+5.  查看 [SharePoint 模式下的 Analysis Services 服务器的硬件和软件要求](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)。  
   
 6.  请在 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)中查看发行说明。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server 版本要求  
- 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md) 和 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[Analysis Services 支持的功能的 SQL Server 2016 各个版本](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)和[Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 ##  <a name="InstallSQL"></a> 步骤 1：安装 Power Pivot for SharePoint  
  在此步骤中，你将运行 SQL Server 安装程序以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 在后续步骤中，将 Excel Services 配置为使用此服务器的工作簿数据模型。  
@@ -109,9 +114,9 @@ caps.handback.revision: 38
   
 12. 在“实例配置”  页上，选择“命名实例”  ，然后对实例名称键入“POWERPIVOT”  。单击“下一步” 。  
   
-     ![SQL Setup - Instance Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL Setup - Instance Configuration Landing Page")  
+     ![SQL 安装程序的登录页上的实例配置](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 安装程序的登录页上的实例配置")  
   
-13. 在 **“服务器配置”** 页上，为自动的 **启动类型**配置所有服务。 为 **SQL Server Analysis Services** 指定所需的域帐户和密码，即下图中的 **(1)**。  
+13. 在 **“服务器配置”** 页上，为自动的 **启动类型**配置所有服务。 为 **SQL Server Analysis Services**指定所需的域帐户和密码，即下图中的 **(1)** 。  
   
     -   对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，您可使用 **域用户** 帐户或 **NetworkService** 帐户。 请勿使用 LocalSystem 或 LocalService 帐户。  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 38
   
      选择“下一步” 。  
   
-     ![SQL Setup - Server Configuration landing page](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL Setup - Server Configuration landing page")  
+     ![SQL 安装程序-服务器配置登录页](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL 安装程序-服务器配置登录页")  
   
 14. 如果安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则将显示 **“数据库引擎配置”** 页。 在“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置”中，选择“添加当前用户”  以授予你的用户帐户对数据库引擎实例的管理员权限。  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 38
   
 15. 在“Analysis Services 配置”  页上，在“服务器模式”  下选择“PowerPivot 模式”   
   
-     ![SQL Setup - Analysis Services Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL Setup - Analysis Services Configuration Landing Page")  
+     ![SQL 安装程序的登录页上的 Analysis Services 配置](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL 安装程序的登录页上的 Analysis Services 配置")  
   
 16. 在“Analysis Services 配置”  页上，选择“添加当前用户”  以向你的用户帐户授予管理权限。 在完成安装程序后，您将需要管理权限以便对服务器进行配置。  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 38
   
 22. 如果您的环境中有防火墙，请阅读 SQL Server 联机丛书主题 [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-### 验证 SQL Server 安装  
+### <a name="verify-the-sql-server-installation"></a>验证 SQL Server 安装  
  验证 Analysis Services 服务是否正在运行。  
   
 1.  在 Microsoft Windows 中，单击“开始” ，选择“所有程序” 和“Microsoft SQL Server 2016”  组。  
@@ -164,23 +169,23 @@ caps.handback.revision: 38
 ##  <a name="bkmk_config"></a> 步骤 2：配置基本 Analysis Services SharePoint 集成  
  下列步骤介绍与 SharePoint 文档库中的 Excel 高级数据模型交互所需的配置更改。 在安装 SharePoint 和 SQL Server Analysis Services 之后完成这些步骤。  
   
-### SharePoint 2016  
+### <a name="sharepoint-2016"></a>SharePoint 2016  
  Excel Services 已从 SharePoint 2016 中删除，而使用了用于托管 Excel 的 Office Online Server。  
   
-#### 授予 Office Online Server 计算机帐户对 Analysis Services 的管理权限  
+#### <a name="grant-office-online-server-machine-account-administration-rights-on-analysis-services"></a>授予 Office Online Server 计算机帐户对 Analysis Services 的管理权限  
  如果在 Analysis Services 安装过程中，你已将 Office Online Server 计算机帐户添加为 Analysis Services 管理员，则无需完成此部分。  
   
 1.  在 Analysis Services 服务器上，启动 SQL Server Management Studio 并连接到 Analysis Services 实例，例如 `[MyServer]\POWERPIVOT`。  
   
 2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”。  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![查看 SSAS 服务器的属性](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 服务器的视图属性")  
   
 3.  在左窗格中，选择“安全性” 。 添加在其上安装 Office Online Server 的计算机账户。  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS 服务器的安全设置](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 服务器的安全设置")  
   
-#### 将 Analysis Services 服务器注册到 Office Online Server  
+#### <a name="register-analysis-services-server-with-office-online-server"></a>将 Analysis Services 服务器注册到 Office Online Server  
  你将希望在 Office Online Server 上执行这些步骤。  
   
 -   以管理员身份打开 PowerShell 命令窗口。  
@@ -193,22 +198,22 @@ caps.handback.revision: 38
   
      `New-OfficeWebAppsExcelBIServer -ServerId [MyServer]\POWERPIVOT]`  
   
-### SharePoint 2013  
+### <a name="sharepoint-2013"></a>SharePoint 2013  
   
-#### 授予对 Analysis Services 的 Excel Services 服务器管理权限  
+#### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>授予对 Analysis Services 的 Excel Services 服务器管理权限  
  如果在 Analysis Services 安装过程中，您将 Excel Services 应用程序服务帐户添加为 Analysis Services 管理员，则无需完成此部分。  
   
 1.  在 Analysis Services 服务器上，启动 SQL Server Management Studio 并连接到 Analysis Services 实例，例如 `[MyServer]\POWERPIVOT`。  
   
 2.  在“对象资源管理器”中，右键单击实例名称，然后选择“属性”。  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![查看 SSAS 服务器的属性](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 服务器的视图属性")  
   
 3.  在左窗格中，选择“安全性” 。 添加您在步骤 1 中为 Excel Services 应用程序配置的域登录名。  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS 服务器的安全设置](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 服务器的安全设置")  
   
-#### 为 Analysis Services 集成配置 Excel Services  
+#### <a name="configure-excel-services-for-analysis-services-integration"></a>为 Analysis Services 集成配置 Excel Services  
   
 1.  在 SharePoint 管理中心的“应用程序管理”组中，单击 **“管理服务应用程序”**。  
   
@@ -281,10 +286,10 @@ caps.handback.revision: 38
  使用主题 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 中的信息确定你是否需要在防火墙中取消阻止端口，以便允许对 Analysis Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 所必需的。 您可以采用本主题中提供的步骤来配置端口和防火墙设置。 实际上，您应该一起执行这些步骤以便能够访问您的 Analysis Services 服务器。  
   
 ##  <a name="bkmk_upgrade_workbook"></a> 升级工作簿和计划的数据刷新  
- 升级在以前版本的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中创建的工作簿所需的步骤取决于创建该工作簿的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 版本。 有关详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+ 升级在以前版本的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中创建的工作簿所需的步骤取决于创建该工作簿的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 版本。 有关详细信息，请参阅 [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_multiple_servers"></a> 单个服务器安装之外 - Power Pivot for Microsoft SharePoint  
- **Web 前端 (WFE)** 或**中间层**：若要在更大的 SharePoint 场中以 SharePoint 模式使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器，以及将其他 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能安装到场中，请在每个 SharePoint 服务器上运行安装程序包 **spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint 2013)**。 spPowerPivot16.msi 或 spPowerPivot.msi 安装所需的数据提供程序以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016（或 2013）配置工具。  
+ **Web 前端 (WFE)** 或 **中间层**：若要在更大的 SharePoint 场中以 SharePoint 模式使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器，以及将其他 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能安装到场中，请在每个 SharePoint 服务器上运行安装程序包 **spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint 2013)** 。 spPowerPivot16.msi 或 spPowerPivot.msi 安装所需的数据提供程序以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016（或 2013）配置工具。  
   
  有关安装和配置中间层的详细信息，请参阅下面的内容：  
   
@@ -302,11 +307,11 @@ caps.handback.revision: 38
   
 -   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))。  
   
- ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 设置") [通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将 Power Pivot 迁移到 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [升级工作簿和计划的数据刷新 &#40;SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

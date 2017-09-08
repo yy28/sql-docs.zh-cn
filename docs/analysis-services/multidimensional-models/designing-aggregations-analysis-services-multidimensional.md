@@ -1,27 +1,32 @@
 ---
-title: "设计聚合（Analysis Services - 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚合 [Analysis Services], 分区"
-  - "分区 [Analysis Services], 聚合"
+title: "设计聚合 (Analysis Services-多维) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregations [Analysis Services], partitions
+- partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7fef45841f28152dfed66aa95f670e8a21a3d903
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 设计聚合（Analysis Services - 多维）
+# <a name="designing-aggregations-analysis-services---multidimensional"></a>设计聚合（Analysis Services - 多维）
   聚合是预先计算的多维数据集数据的汇总，可帮助启用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速的查询响应。  
   
  若要为分区设置存储选项和设计聚合，请使用聚合设计向导。 由于向导每次可针对一个度量值组的一个分区进行操作，所以可以为每个分区选择不同的选项和设计。 向导将引导您完成为分区配置存储和设计聚合的各个步骤。 有关配置存储的详细信息，请参阅。  
@@ -42,7 +47,7 @@ caps.handback.revision: 33
   
  向导的最后一步允许处理或推迟处理。 处理创建使用向导设计的聚合，而推迟处理则保存所设计的聚合以供将来进行处理，从而使设计活动不必处理就可以继续。 根据分区大小的不同，处理过程可能会需要相当长的一段时间。 根据您的选择，可以中断对分区的处理。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

@@ -26,7 +26,7 @@
 ## [系统配置检查器的检查参数](check-parameters-for-the-system-configuration-checker.md)  
 ## [在服务器核心安装上配置 SQL Server](configure-sql-server-on-a-server-core-installation.md)  
 ## [在服务器核心上安装 SQL Server](install-sql-server-on-server-core.md)  
-## [使用安装向导安装 SQL Server（安装程序）](install-sql-server-from-the-installation-wizard-setup.md)  
+## [使用安装向导安装 SQL Server（安装程序）](install-sql-server-from-the-installation-wizard-setup.md)
 ## [从命令提示符安装 SQL Server](install-sql-server-2016-from-the-command-prompt.md)  
 ## [使用配置文件安装 SQL Server](install-sql-server-2016-using-a-configuration-file.md)  
 ## [使用 SysPrep 安装 SQL Server](install-sql-server-using-sysprep.md)  

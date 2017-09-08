@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>开始使用 SQL Server Migration Assistant for Access (AccessToSQL)
@@ -101,7 +101,7 @@ SSMA 包含两个元数据资源管理器可用于浏览和执行访问操作和
   
 -   在访问元数据资源管理器中，你可能会改变类型映射。 请确保进行这些更改之前创建的报表或转换架构。  
   
--   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器，你可以在更改表和索引属性**表**选项卡。 进行这些更改，在加载到架构之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关详细信息，请参阅[转换访问数据库对象](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
+-   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器，你可以在更改表和索引属性**表**选项卡。进行这些更改，在加载到架构之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关详细信息，请参阅[转换访问数据库对象](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
   
 ### <a name="toolbars"></a>工具栏  
 SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。  
@@ -114,7 +114,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 |按钮|函数|  
 |----------|------------|  
-|**转换、 加载和迁移**|转换访问数据库时，转换将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然后将迁移到的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，全部位于一个步骤。|  
+|**转换、加载和迁移**|转换访问数据库时，转换将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然后将迁移到的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，全部位于一个步骤。|  
 |**创建报表**|将转换到所选的访问架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 语法，然后创建一个报表来显示如何成功转换了。<br /><br />仅当访问元数据资源管理器中选择对象时，此命令时可用。|  
 |**转换架构**|将转换到所选的访问架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 架构。<br /><br />仅当访问元数据资源管理器中选择对象时，此命令时可用。|  
 |**迁移数据**|将数据迁移到 Access 数据库从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 在运行此命令之前，必须将转换到的访问架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 架构，然后加载到对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。<br /><br />仅当访问元数据资源管理器中选择对象时，此命令时可用。|  

@@ -1,0 +1,79 @@
+---
+title: "InstanceSelection 元素 (ASSL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: 
+ms.topic: reference
+apiname:
+- InstanceSelection Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+apitype: Schema
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- InstanceSelection element
+ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
+caps.latest.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4587536131aa3484846bc241a08be866a30d1da6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="instanceselection-element-assl"></a>InstanceSelection 元素 (ASSL)
+  提供对客户端应用程序建议如何的项列表的提示应显示，基于预期数量的列表中的项。  
+  
+## <a name="syntax"></a>语法  
+  
+```xml  
+  
+<DimensionAttribute>  
+   ...  
+   <InstanceSelection>...</InstanceSelection>  
+   ...  
+</DimensionAttribute>  
+```  
+  
+## <a name="element-characteristics"></a>元素特征  
+  
+|特征|说明|  
+|--------------------|-----------------|  
+|数据类型和长度|String（枚举）|  
+|默认值|*无*|  
+|基数|0-1：可出现一次且仅出现一次的可选元素。|  
+  
+## <a name="element-relationships"></a>元素关系  
+  
+|关系|元素|  
+|------------------|-------------|  
+|父元素|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
+|子元素|无|  
+  
+## <a name="remarks"></a>注释  
+ 此元素的值限定为下列字符串之一：  
+  
+|值|Description|  
+|-----------|-----------------|  
+|*无*|不显示选择列表。 允许用户直接输入值。|  
+|*下拉列表中*|项数很少，足以在下拉列表中显示。|  
+|*列表*|项数太多，不能在下拉列表中显示，但不需要进行筛选。|  
+|*FilteredList*|项数太多，需要用户进行筛选才能显示。|  
+|*MandatoryFilter*|项数太多，必须一直使用筛选才能显示。|  
+  
+ 对应于的允许值为枚举**InstanceSelection**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.InstanceSelection>。  
+  
+## <a name="see-also"></a>另请参阅  
+ [属性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+  
+  

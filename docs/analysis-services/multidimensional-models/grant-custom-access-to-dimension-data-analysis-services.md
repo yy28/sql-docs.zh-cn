@@ -1,40 +1,45 @@
 ---
-title: "授予对维度数据的自定义访问权限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.dimensiondata.f1"
-helpviewer_keywords: 
-  - "维度 [Analysis Services], 安全性"
-  - "AllowedSet 属性"
-  - "IsAllowed 属性"
-  - "DeniedSet 属性"
-  - "用户访问权限 [Analysis Services], 维度"
-  - "自定义维度数据权限 [Analysis Services]"
-  - "权限 [Analysis Services], 维度"
-  - "DefaultMember 属性"
-  - "VisualTotals 属性"
-  - "ApplyDenied 属性"
+title: "授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.dimensiondata.f1
+helpviewer_keywords:
+- dimensions [Analysis Services], security
+- AllowedSet property
+- IsAllowed property
+- DeniedSet property
+- user access rights [Analysis Services], dimensions
+- custom dimension data access [Analysis Services]
+- permissions [Analysis Services], dimensions
+- DefaultMember property
+- VisualTotals property
+- ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 40
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授予对维度数据的自定义访问权限 (Analysis Services)
+# <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
   启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
   
- ![包含和不包含维度成员的数据透视表](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "包含和不包含维度成员的数据透视表")  
+ ![数据透视表使用和不使用的维度成员](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
   
  默认情况下，如果可以读取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中的数据，则自动拥有对该多维数据集关联的所有度量值和维度成员的读取权限。 虽然这种行为可能足够应对许多方案，但有时安全要求需要一个更细化的授权策略，不同用户在同一维度的访问权限级别不同。  
   
@@ -43,14 +48,14 @@ caps.handback.revision: 40
  基本维度安全性最容易；只需选择要在角色中包括或去除的维度属性和属性层次结构即可。 高级安全性更复杂，要求擅长 MDX 脚本编写。 下面将介绍这两种方法。  
 
 > [!NOTE]  
->  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅[了解用于多维模型的 Power View](https://msdn.microsoft.com/library/jj969574.aspx)。
+>  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅 [了解用于多维模型的 Power View](https://msdn.microsoft.com/library/jj969574.aspx) 。
       
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
   
-1.  在 SQL Server Management Studio 中，右键单击多维数据集，然后依次选择“编写多维数据集脚本为” | “ALTER 到” | “新查询编辑器窗口”。  
+1.  在 SQL Server Management Studio，右键单击多维数据集，然后选择**脚本多维数据集作为** | **ALTER To** | **新查询编辑器窗口**。  
   
 2.  搜索 **DefaultMeasure**。 应发现一个针对多维数据集的度量值和一个针对每个透视的度量值。 定义维度安全性时，避免限制访问默认度量值。  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 40
   
 4.  最后，搜索 **DefaultMember**。 请记录用作属性的默认成员的任何属性。 设置维度安全性时，避免对这些属性施加限制。  
   
-## 基本维度安全性  
+## <a name="basic-dimension-security"></a>基本维度安全性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
@@ -77,20 +82,20 @@ caps.handback.revision: 40
     > [!NOTE]  
     >  应用剪裁维度成员的权限时，不会自动重新计算聚合合计。 假设在应用权限之前，属性层次结构的  “全部”成员返回一个值为 200 的计数。 应用拒绝访问某些成员的权限之后，即使对用户可见的成员值要少很多，  “全部”仍然会返回 200。 为了避免混淆多维数据集的使用者，可以将  “全部”成员配置为仅角色成员聚合，而非层次结构的所有成员聚合。 要调用此操作，可以在配置维度安全性时启用“高级” **Visual Totals** 选项卡上的  。 启用后，将在查询时间计算聚合，而不是从预先计算的聚合中检索。 这对查询性能有显著影响，因此仅在必要时使用。  
   
-## 隐藏度量值  
- 在[授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md) 中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
+## <a name="hiding-measures"></a>隐藏度量值  
+ 在 [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
   
-1.  在“维度数据” | “基本”上，向下滚动“维度”列表，直到到达多维数据集维度，然后选择“度量值维度”。  
+1.  上**维度数据** | **基本**，向下的滚动直到多维数据集维度，然后选择维度列表**度量值维度**。  
   
 2.  从度量值列表中，清除不应对通过该角色连接的用户显示的度量值复选框。  
   
 > [!NOTE]  
 >  检查先决条件，了解如何标识可能中断角色安全性的度量值。  
   
-## 高级维度安全性  
+## <a name="advanced-dimension-security"></a>高级维度安全性  
  如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 依次单击“创建角色” | “维度数据” | “高级”来提供脚本。  
   
- 可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](../Topic/MDX%20Builder%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)。 **“高级”** 选项卡包含以下选项：  
+ 可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)。 **“高级”** 选项卡包含以下选项：  
   
  **Attribute**  
  选择要管理成员安全性的属性。  
@@ -115,7 +120,7 @@ caps.handback.revision: 40
   
 -   如果数据库角色没有为特性定义默认成员，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用自己为该特性定义的默认成员。 除非另行指定，否则特性的默认成员为 **All** 成员（特性定义为不可聚合时除外）。  
   
- 例如，假设数据库角色指定 **Male** 为 **Gender** 属性的默认成员。 除非查询在显式包含 **Gender** 特性的同时又为此特性指定了其他成员，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将返回仅包含男性客户的数据集。 有关设置默认成员的详细信息，请参阅[定义默认成员](../../analysis-services/multidimensional-models/define-a-default-member.md)。  
+ 例如，假设数据库角色指定 **Male** 为 **Gender** 属性的默认成员。 除非查询在显式包含 **Gender** 特性的同时又为此特性指定了其他成员，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将返回仅包含男性客户的数据集。 有关设置默认成员的详细信息，请参阅 [定义默认成员](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)。  
   
  **启用直观合计**  
  VisualTotals 属性指示是根据所有单元值还是仅根据数据库角色可见的单元值来计算显示的聚合单元值。  
@@ -129,10 +134,10 @@ caps.handback.revision: 40
  **检查**  
  单击以测试此页面上定义的 MDX 语法。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予单元数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

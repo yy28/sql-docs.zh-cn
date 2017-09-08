@@ -1,55 +1,60 @@
 ---
-title: "常规属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout 属性"
-  - "InstanceVisible 属性"
-  - "TempDir 属性"
-  - "AdminTimeout 属性"
-  - "MinIdleSessionTimeout 属性"
-  - "MaxIdleSessionTimeout 属性"
-  - "IdleOrphanSessionTimeout 属性"
-  - "BackupDir 属性"
-  - "CommitTimeout 属性"
-  - "ExternalCommandTimeout 属性"
-  - "Enabled 属性"
-  - "ForceCommitTimeout 属性"
-  - "Port 属性"
-  - "CoordinatorShutdownMode 属性"
-  - "ServerTimeout 属性"
-  - "AllowedBrowsingFolders 属性"
-  - "CoordinatorCancelCount 属性"
-  - "DataDir 属性"
-  - "CoordinatorQueryMaxThreads 属性"
-  - "CoordinatorExecutionMode 属性"
-  - "ExternalConnectionTimeout 属性"
-  - "CollationName 属性"
-  - "EnableFast1033Locale 属性"
-  - "CoordinatorBuildMaxThreads 属性"
-  - "Language 属性"
-  - "StatisticsStoreSize 属性"
-  - "RepositoryConnectionString 属性"
+title: "常规属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 常规属性
+# <a name="general-properties"></a>常规属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式，除非另外说明。  
   
-## 非特定类别  
+## <a name="non-specific-category"></a>非特定类别  
  **AdminTimeout**  
  有符号 32 位整数属性，用于定义管理员超时值（秒）。 这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  有符号 32 位整数属性，用于定义为生成分区索引分配的最大线程数。 如果增加此值，则可加快分区索引速度，同时增加内存使用的开销。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorCancelCount**  
- 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
-  
- **CoordinatorCancelCount** 在表格服务器模式下将被忽略。  
+ 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。 在表格服务器模式下，将忽略此属性。  
   
  **CoordinatorExecutionMode**  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
-  
- **CoordinatorExecutionMode** 在表格服务器模式下将被忽略。  
-  
+
  此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorQueryMaxThreads**  
@@ -152,7 +153,7 @@ caps.handback.revision: 29
  字符串属性，用于标识包含服务器日志的目录的名称。 此属性仅适用于使用磁盘文件进行日志记录的情况，这一点与数据库表相反（默认行为）。  
   
  **MaxIdleSessionTimeout**  
- 一个整数属性，用于定义空闲会话最大超时值（秒）。 默认值为零 (0)，该值指示会话永远不会超时。 但是，如果服务器受到资源约束，空闲会话仍将被删除。  
+ 一个整数属性，用于定义空闲会话最大超时值（秒）。 默认值为零 (0)，该值指示会话永远不会超时。但是，如果服务器受到资源约束，空闲会话仍将被删除。  
   
  **MinIdleSessionTimeout**  
  一个整数属性，用于定义空闲会话最小超时值（秒）。 默认值为 2700 秒。 达到此时间后，服务器可以终止空闲会话，但只在需要释放内存时才这样做。  
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  一个字符串属性，指定用于存储在处理、还原和其他操作过程中使用的临时文件的位置。 此属性的默认值由安装程序确定。 如果未指定，则默认为 Data 目录。  
   
-## RequestPrioritization 类别  
+## <a name="requestprioritization-category"></a>RequestPrioritization 类别  
  **已启用**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
  **StatisticsStoreSize**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

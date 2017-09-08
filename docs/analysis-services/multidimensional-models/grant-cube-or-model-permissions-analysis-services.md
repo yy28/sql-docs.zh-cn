@@ -1,31 +1,36 @@
 ---
-title: "授予多维数据集或模型权限 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.cubes.f1"
-helpviewer_keywords: 
-  - "用户访问权限 [Analysis Services], 多维数据集"
-  - "多维数据集 [Analysis Services], 安全性"
-  - "读/写权限"
-  - "权限 [Analysis Services], 多维数据集"
+title: "授予多维数据集或模型权限 (Analysis Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.cubes.f1
+helpviewer_keywords:
+- user access rights [Analysis Services], cubes
+- cubes [Analysis Services], security
+- read/write permissions
+- permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbde1e75c0ff22e0d2c426c04f2f4e3756536923
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 授予多维数据集或模型权限 (Analysis Services)
+# <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
   多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
   
  默认情况下，无人（“服务器管理员”或“数据库管理员”除外）具有在数据库中查询多维数据集的权限。 非管理员访问多维数据集需要具备为包含此多维数据集的数据库创建的角色中的成员身份。 支持 Windows 用户或组帐户的成员身份，在 Active Directory 中或本地计算机上定义成员身份。 开始前，确定将向哪些帐户分配要创建的角色的成员身份。  
@@ -37,7 +42,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  只有具有“完全控制”权限的服务器管理员或数据库管理员可以将多维数据集从源文件部署到服务器，或创建角色和分配成员。 有关这些权限级别的详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
-#### 步骤 1：创建角色  
+#### <a name="step-1-create-the-role"></a>步骤 1：创建角色  
   
 1.  在 SSMS 中，连接到 Analysis Services。 如果需要此步骤的帮助，请参阅[从客户端应用程序进行连接 (Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -49,15 +54,15 @@ caps.handback.revision: 30
   
 5.  输入名称和（可选）描述后继续下一个步骤。  
   
-#### 步骤 2：分配成员身份  
+#### <a name="step-2-assign-membership"></a>步骤 2：分配成员身份  
   
 1.  在“成员身份”  窗格中，单击“添加”  以输入将使用此角色访问多维数据集的 Windows 用户或组帐户。 Analysis Services 仅支持 Windows 安全标识。 请注意，在此步骤中不创建数据库登录。 在 Analysis Services 中，用户通过 Windows 帐户进行连接。  
   
 2.  继续下一个步骤“设置多维数据集权限”。  
   
-     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关可能设置此权限的时间的详细信息，请参阅[授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)。  
+     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关这些权限级别的详细信息，请参阅 [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 。  
   
-#### 步骤 3：设置多维数据集权限  
+#### <a name="step-3-set-cube-permissions"></a>步骤 3：设置多维数据集权限  
   
 1.  在“多维数据集”窗格中，选择一个多维数据集，然后单击“读取”或“读/写”访问权限。  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 30
   
      最后，此窗格使你可以授予对该多维数据集的“处理数据库”  权限，从而给予此角色所有成员处理此多维数据集的能力。 由于处理通常是受限操作，我们建议将此任务交由管理员来完成，或为此任务专门定义单独的角色。 有关处理权限最佳做法的详细信息，请参阅[授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)。  
   
-#### 步骤 4：测试  
+#### <a name="step-4-test"></a>步骤 4：测试  
   
 1.  使用 Excel 测试多维数据集访问权限。 你也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，接着使用后述方法：作为非管理员用户运行应用程序。  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
      如果连接发生错误，请检查 Analysis Services 的端口配置并验证服务器接受远程连接。 有关端口配置的信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 。  
   
-#### 步骤 5：脚本角色定义和分配  
+#### <a name="step-5-script-role-definition-and-assignments"></a>步骤 5：脚本角色定义和分配  
   
 1.  作为最后一步，应生成一个捕捉刚才创建的角色定义的脚本。  
   
@@ -98,12 +103,12 @@ caps.handback.revision: 30
   
 4.  以 .xmla 文件扩展名保存文件。 要测试脚本，删除当前角色，在 SSMS 中打开文件，按 F5 执行该脚本。  
   
-## 下一步  
+## <a name="next-step"></a>下一步  
  你可以优化多维数据集权限来限制对单元或纬度数据的访问。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

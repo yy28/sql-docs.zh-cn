@@ -1,43 +1,36 @@
 ---
-title: "全球化提示和最佳实践 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "翻译 [Analysis Services], 客户端应用程序"
-  - "日期比较"
-  - "星期比较 [Analysis Services]"
-  - "时间 [Analysis Services]"
-  - "月份比较 [Analysis Services]"
+title: "全球化提示和最佳做法 (Analysis Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 全球化提示和最佳实践 (Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] 多维  
   
  这些提示和准则有助于提高你的商业智能解决方案的可移植性，并避免直接与语言和排序规则设置相关的错误。  
-  
--   [在整个堆栈中使用相似排序规则](#bkmk_sameColl)  
-  
--   [通用排序规则建议](#bkmk_recos)  
-  
--   [对象标识符区分大小写](#bkmk_objid)  
-  
--   [使用 Excel 和 SQL Server Profiler 进行区域设置测试](#bkmk_test)  
-  
--   [在包含翻译的解决方案中撰写 MDX 查询](#bkmk_mdx)  
-  
--   [撰写包含日期和时间值的 MDX 查询](#bkmk_datetime)  
   
 ##  <a name="bkmk_sameColl"></a> 在整个堆栈中使用相似排序规则  
  如果可能，请在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用与用于数据库引擎的排序规则设置相同的排序规则设置，尽量采用一致的全半角区分、大小写区分以及重音区分。  
@@ -57,7 +50,7 @@ caps.handback.revision: 32
   
  你应该考虑将此列表作为进一步调查的起点，而非排除其他选项的最终建议。 你可能会发现未专门建议使用的排序规则最适用于你的数据。 彻底的测试是验证是否正确排序或比较数据值的唯一方法。 与以前一样，测试排序规则时，务必运行处理和查询工作负荷。  
   
--   Latin1_General_100_AS 通常用于使用 [ISO 基本拉丁字母表](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet) 26 个字符的应用程序。  
+-   Latin1_General_100_AS 通常用于使用 [ISO 基本拉丁字母表](http://en.wikipedia.org/wiki/ISO_basic_Latin_alphabet)26 个字符的应用程序。  
   
 -   包含斯堪的纳维亚字母（如 ø）的北欧语言可使用 Finnish_Swedish_100。  
   
@@ -71,7 +64,7 @@ caps.handback.revision: 32
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   
--   对于日语，最常使用的排序规则是 Japanese_CI_AS。 Japanese_XJIS_100 用于支持 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213) 的安装。 Japanese_BIN2 的使用通常见于数据迁移项目，用于由非 Windows 平台或数据源而非 SQL Server 关系数据引擎发出的数据。  
+-   对于日语，最常使用的排序规则是 Japanese_CI_AS。 Japanese_XJIS_100 用于支持 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)的安装。 Japanese_BIN2 的使用通常见于数据迁移项目，用于由非 Windows 平台或数据源而非 SQL Server 关系数据引擎发出的数据。  
   
      Japanese_Bushu_Kakusu_100 很少见于运行 Analysis Services 工作负荷的服务器。  
   
@@ -90,7 +83,7 @@ caps.handback.revision: 32
  仅对象标识符（而非对象名）受限于表中描述的大小写行为。 如果你看到解决方案工作方式有所变化（之前和之后的比较 - 安装 SQL Server 2012 SP2 或更高版本之后），它将最可能是一个处理问题。 查询不受对象标识符影响。 对于两种查询语言（DAX 和 MDX），公式引擎会使用对象名（而非标识符）。  
   
 > [!NOTE]  
->  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 有关详细信息，请参阅 [SQL Server 2016 中 Analysis Services 功能的重大更改](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)。  
+>  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 有关详细信息，请参阅 [SQL Server 2016 中 Analysis Services 功能的重大更改](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) 。  
   
 ##  <a name="bkmk_test"></a> 使用 Excel、SQL Server Profiler 和 SQL Server Management Studio 进行区域设置测试  
  测试翻译时，连接必须指定翻译的 LCID。 如 [从 SSAS 获取不同语言到 Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)中所述，你可以使用 Excel 测试你的翻译。  
@@ -105,19 +98,19 @@ caps.handback.revision: 32
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
-     ![带有法语翻译的 Excel 数据透视表](../analysis-services/media/ssas-localetest-excel.png "带有法语翻译的 Excel 数据透视表")  
+     ![Excel 数据透视表及法语翻译](../analysis-services/media/ssas-localetest-excel.png "包含法语翻译的 Excel 数据透视表")  
   
  作为后续步骤，可以使用 Server Profiler 来确认区域设置。 单击一个 `Session Initialize` 事件，然后查看下方文本区域中的属性列表以找到 `<localeidentifier>1036</localeidentifier>`。  
   
  在 Management Studio 中，你可以指定服务器连接上的区域设置标识符。  
   
--   在对象资源管理器|“连接” | “Analysis Services” | “选项”中，单击“其他连接参数”选项卡。  
+-   在对象资源管理器|“连接”  |  | 中，单击“其他连接参数” **Additional ion Parameters** 选项卡。  
   
 -   输入 `Local Identifier=1036` ，然后单击 “连接”。  
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   
-     ![SSMS 中带法语翻译的 MDX 查询](../analysis-services/media/ssas-localetest-ssms.png "SSMS 中带法语翻译的 MDX 查询")  
+     ![使用 SSMS 中的法语翻译的 MDX 查询](../analysis-services/media/ssas-localetest-ssms.png "与在 SSMS 中的法语翻译的 MDX 查询")  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻译的解决方案中撰写 MDX 查询  
  翻译提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名称的显示信息，但是不翻译相同对象的标识符。 尽可能使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的标识符和键，而不使用翻译后的标题和名称。 例如，使用多维表达式 (MDX) 语句和脚本的成员键而不是成员名称以确保多种语言之间的可移植性。  
@@ -138,14 +131,13 @@ caps.handback.revision: 32
   
 3.  **使用 ISO 日期格式表示通用日期和时间信息**  
   
-     一个 [Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)提出了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
+     一个 [Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx) 提出了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
   
 4.  **使用 Format 函数强制使用特定格式，而不考虑区域语言设置**  
   
      以下 MDX 查询（借用自一个论坛帖子）演示了如何使用 Format 以指定格式返回日期，不管基础区域设置如何。  
   
-     请参阅 [SSAS 2012 generates invalid dates](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2)（SSAS 2012 生成无效日期）（Network Steve 上的论坛帖子）查看原始帖子内容。  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [编写国际化 Transact-SQL 语句](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

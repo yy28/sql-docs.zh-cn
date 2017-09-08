@@ -1,0 +1,136 @@
+---
+title: "INDEXPROPERTY (TRANSACT-SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- INDEXPROPERTY
+- INDEXPROPERTY_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- INDEXPROPERTY function
+- indexes [SQL Server], viewing
+- indexes [SQL Server], properties
+ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
+caps.latest.revision: 56
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: cbd10b32ee6b2d88a97222c3a970452a4a628b83
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  根据指定的表标识号、索引或统计信息名称以及属性名称，返回已命名的索引或统计信息属性值。 对于 XML 索引，返回 NULL。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
+```  
+  
+## <a name="arguments"></a>参数  
+ *object_ID*  
+ 一个表达式，包含要为其提供索引属性信息的表或索引视图的对象标识号。 *object_ID*是**int**。  
+  
+ *index_or_statistics_name*  
+ 一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 *index_or_statistics_name*是**nvarchar （128)**。  
+  
+ *属性*  
+ 一个表达式，包含要返回的数据库属性的名称。 *属性*是**varchar （128)**，并且可以为这些值之一。  
+  
+> [!NOTE]  
+>  除非另行说明，否则返回 NULL 时*属性*不是有效的属性名称， *object_ID*不是有效的对象 ID， *object_ID*是不支持的对象类型指定的属性或调用方没有权限查看对象的元数据。  
+  
+|属性|Description|值|  
+|--------------|-----------------|-----------|  
+|**IndexDepth**|索引的深度。|索引级别数。<br /><br /> NULL = XML 索引或输入无效。|  
+|**IndexFillFactor**|创建索引或最后重新生成索引时使用的填充因子值。|填充因子|  
+|**IndexID**|指定表或索引视图上索引的索引 ID。|索引 ID|  
+|**IsAutoStatistics**|统计信息是由 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项生成的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsClustered**|索引是聚集的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsDisabled**|索引被禁用。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
+|**IsFulltextKey**|索引是表的全文和语义索引键。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。<br /><br /> NULL = 输入无效。|  
+|**IsHypothetical**|索引是假设的，不能直接用作数据访问路径。 假设索引包含列级统计信息，由数据库引擎优化顾问维护和使用。|1 = True<br /><br /> 0 = False 或 XML 索引<br /><br /> NULL = 输入无效。|  
+|**IsPadIndex**|索引指定每个内部节点上将要保持空闲的空间。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsPageLockDisallowed**|通过 ALTER INDEX 的 ALLOW_PAGE_LOCKS 选项设置的页锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许页锁定。<br /><br /> 0 = 允许页锁定。<br /><br /> NULL = 输入无效。|  
+|**IsRowLockDisallowed**|通过 ALTER INDEX 的 ALLOW_ROW_LOCKS 选项设置的行锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许行锁定。<br /><br /> 0 = 允许行锁定。<br /><br /> NULL = 输入无效。|  
+|**IsStatistics**|*index_or_statistics_name*是由 CREATE STATISTICS 语句或 ALTER DATABASE AUTO_CREATE_STATISTICS 选项创建的统计信息。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**是唯一的**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsColumnstore**|索引为 xVelocity 内存优化的列存储索引。|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False|  
+  
+## <a name="return-types"></a>返回类型  
+ **int**  
+  
+## <a name="exceptions"></a>异常  
+ 出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
+  
+ 用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 INDEXPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+  
+## <a name="examples"></a>示例  
+ 下面的示例返回的值**IsClustered**， **IndexDepth**，和**IndexFillFactor**属性`PK`_`Employee` \_`BusinessEntityID`索引`Employee`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+  
+```  
+SELECT   
+    INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
+        'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
+    INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
+        'PK_Employee_BusinessEntityID','IndexDepth') AS [Index Depth],  
+    INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
+        'PK_Employee_BusinessEntityID','IndexFillFactor') AS [Fill Factor];  
+  
+```  
+  
+ 下面是结果集：  
+  
+```  
+Is Clustered Index Depth Fill Factor   
+------------ ----------- -----------   
+1            2           0  
+  
+(1 row(s) affected)  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下面的示例检查某一索引的属性上`FactResellerSales`表。  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT   
+INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),  
+    'ClusteredIndex_6d10fa223e5e4c1fbba087e29e16a7a2','IsClustered') AS [Is Clustered],  
+INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),  
+    'ClusteredIndex_6d10fa223e5e4c1fbba087e29e16a7a2','IsColumnstore') AS [Is Columnstore Index],  
+INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),  
+    'ClusteredIndex_6d10fa223e5e4c1fbba087e29e16a7a2','IndexFillFactor') AS [Fill Factor];  
+GO  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
+ [统计信息](../../relational-databases/statistics/statistics.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [sys.stats_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+  
+  
+
+

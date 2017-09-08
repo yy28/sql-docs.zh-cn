@@ -1,26 +1,31 @@
 ---
-title: "编辑现有数据源连接（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "编辑现有的数据源连接 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 编辑现有数据源连接（SSAS 表格）
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>编辑现有数据源连接（SSAS 表格）
   本主题介绍如何编辑表格模型中现有数据源连接的属性。  
   
  在创建与外部数据源的连接后，可以通过以下方式修改该连接：  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   可以更改从外部数据源获取的表、视图或列。  
   
-## 修改连接  
+## <a name="modify-a-connection"></a>修改连接  
  此过程介绍如何修改数据库的数据源连接。 使用数据源的某些选项将根据数据源类型而有所不同；但是，您应该能够轻松地标识这些差异。  
   
-#### 更改当前连接使用的外部数据源  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>更改当前连接使用的外部数据源  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  如果新数据源包含原始数据源中不存在的任何附加表，您必须重新打开已更改的连接并添加这些表。  
   
-## 编辑表和列映射（绑定）  
+## <a name="edit-table-and-column-mappings-bindings"></a>编辑表和列映射（绑定）  
  此过程说明如何在更改数据源之后编辑映射。  
   
-#### 在数据源发生更改时编辑列映射  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>在数据源发生更改时编辑列映射  
   
 1.  在模型设计器中，选择某个表。  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      在您保存当前的一组表属性时，可能会显示一条消息，指示您需要处理表。 单击 **“处理”** 可将更新的数据加载到模型中。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

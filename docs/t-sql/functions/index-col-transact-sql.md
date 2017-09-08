@@ -1,0 +1,105 @@
+---
+title: "INDEX_COL (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- INDEX_COL_TSQL
+- INDEX_COL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- displaying column names
+- INDEX_COL function
+- viewing column names
+- column names [SQL Server]
+- names [SQL Server], columns
+ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
+caps.latest.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a8881817780e8080e215be2d076baef2ae8badea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  返回索引列名称。 对于 XML 索引，返回 NULL。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
+    table_or_view_name', index_id , key_id )   
+```  
+  
+## <a name="arguments"></a>参数  
+ *database_name*  
+ 数据库的名称。  
+  
+ *schema_name*  
+ 该索引所属架构的名称。  
+  
+ *table_or_view_name*  
+ 是表或索引的视图的名称。 *table_or_view_name*必须由单引号分隔并可以完全限定的数据库名称和架构名称。  
+  
+ *index_id*  
+ 是索引的 ID。 *index_ID*是**int**。  
+  
+ *key_id*  
+ 索引键列的位置。 *key_ID*是**int**。  
+  
+## <a name="return-types"></a>返回类型  
+ **nvarchar (128** **)**  
+  
+## <a name="exceptions"></a>异常  
+ 出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
+  
+ 用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 INDEX_COL）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. 使用 INDEX_COL 返回一个索引列名  
+ 以下示例返回索引 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 中两个键列的列名。  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT   
+    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,1) AS  
+        [Index Column 1],   
+    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,2) AS  
+        [Index Column 2]  
+;  
+GO  
+```  
+  
+ 下面是结果集：  
+  
+```  
+Index Column 1      Index Column 2  
+-----------------------------------------------  
+SalesOrderID        SalesOrderDetailID  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
+  
+  

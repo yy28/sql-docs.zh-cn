@@ -1,35 +1,46 @@
 ---
-title: "Invoke-ProcessPartition cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "调用 ProcessPartition cmdlet |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b29970facb251e859e1e845c00d4c12587ca33c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Invoke-ProcessPartition cmdlet
+# <a name="invoke-processpartition-cmdlet"></a>Invoke-ProcessPartition cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   使用特定的处理类型变量处理分区。  
+
+>[!NOTE] 
+>这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
   
-## 语法  
+## <a name="syntax"></a>语法  
  `Invoke-ProcessPartition [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [-CubeName] <System.String> [-MeasureGroupName] <System.String> [<CommonParameters>]`  
   
  `Invoke-ProcessPartition –DatabasePartition <Microsoft.AnalysisServices.Partition> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Invoke-ProcessParition cmdlet 为给定的多维数据集和度量值组处理 Analysis Services 数据库的特定分区。 ProcessType 值将确定操作的作用域。 处理分区时，您必须指定处理类型。 有关详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
-## Parameters  
+## <a name="parameters"></a>Parameters  
   
-### -Name \<string>  
+### <a name="-name-string"></a>-名称\<字符串 >  
  指定要处理的分区。  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-数据库\<字符串 >  
  指定多维数据集属于的数据库。  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -CubeName \<string>  
+### <a name="-cubename-string"></a>-多维数据集名称\<字符串 >  
  指定度量值组所属的多维数据集。  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -MeasureGroupName \<string>  
+### <a name="-measuregroupname-string"></a>-MeasureGroupName\<字符串 >  
  指定分区所属的度量值组。  
   
 |||  
@@ -73,7 +84,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -DatabasePartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-databasepartition-microsoftanalysisservicespartition"></a>-DatabasePartition \<Microsoft.AnalysisServices.Partition >  
  指定要处理的分区。  
   
 |||  
@@ -84,7 +95,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -ProcessType \<Microsoft.AnalysisServices.ProcessType>  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
  指定处理类型：ProcessFull、ProcessAdd、ProcessUpdate、ProcessIndexes、ProcessData、ProcessDefault、ProcessClear、ProcessStructure、ProcessCelarStructureOnly、ProcessScriptCache、ProcessRecalc。  
   
 |||  
@@ -95,10 +106,10 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer 和 -OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
-## 输入和输出  
+## <a name="inputs-and-outputs"></a>输入和输出  
  输入类型是可以传送到 cmdlet 的对象的类型。 返回类型是 cmdlet 所返回的对象的类型。  
   
 |||  
@@ -106,18 +117,15 @@ caps.handback.revision: 9
 |输入|InclusionThresholdSetting|  
 |输出|InclusionThresholdSetting|  
   
-## 示例 1  
+## <a name="example-1"></a>示例 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\Sales Orders\Partitions\Total_Orders_2004 > Get-Item .| Invoke-ProcessPartition –ProcessType:ProcessDefault`  
   
  此命令通过管道传入要处理的分区的标识。  
   
-## 示例 2  
+## <a name="example-2"></a>示例 2  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups> Invoke-ProcessPartition –Name “Total_Orders_2003” –MeasureGroupname “Sales Order” –CubeName “Adventure Works” –database “AWTEST” –ProcessType “ProcessFull”`  
   
  此命令将在 AWTEST 数据库的 Sales Orders 度量值组中处理分区 Total_Orders_2003。  
   
-## 另请参阅  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [使用 PowerShell 管理表格模型](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "从 Power Pivot 导入（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.importfromppt.f1"
+title: "从 Power Pivot (SSAS 表格) 导入 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 从 Power Pivot 导入（SSAS 表格）
+# <a name="import-from-power-pivot-ssas-tabular"></a>从 Power Pivot 导入（SSAS 表格）
   本主题介绍如何通过使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中的“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]工作簿导入元数据和数据，来创建新的表格模型项目。  
   
-## 从 Power Pivot for Excel 文件创建新的表格模型  
+## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>从 Power Pivot for Excel 文件创建新的表格模型  
  在通过从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中导入来创建新的表格模型项目时，将使用定义工作簿结构的元数据来在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创建和定义表格模型项目的结构。 表、列、度量值和关系之类的对象将与它们处于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中一样保留并出现在表格模型项目中。 不对 .xlsx 工作簿文件进行任何更改。  
   
 > [!NOTE]  
@@ -37,7 +42,7 @@ caps.handback.revision: 25
   
  如果工作区数据库在远程 Analysis Services 实例中，则无法从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 工作簿导入数据。 您仍可以导入工作薄元数据；不过，这将导致脚本在远程 Analysis Services 实例中运行。 你应只从受信任的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作薄导入元数据。 必须从数据源连接所定义的源中导入数据。 必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的复制/粘贴的数据和链接表数据复制并粘贴到表格模型项目中。  
   
-#### 从 Power Pivot for Excel 文件创建新的表格模型项目  
+#### <a name="to-create-a-new-tabular-model-project-from-a-power-pivot-for-excel-file"></a>从 Power Pivot for Excel 文件创建新的表格模型项目  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
   
@@ -47,8 +52,8 @@ caps.handback.revision: 25
   
 4.  在 **“打开”** 对话框中，选择包含您要导入的模型元数据和数据的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 文件，然后单击 **“打开”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [工作区数据库（SSAS 表格）](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [复制并粘贴数据（SSAS 表格）](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)  
+ [复制和粘贴数据 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
