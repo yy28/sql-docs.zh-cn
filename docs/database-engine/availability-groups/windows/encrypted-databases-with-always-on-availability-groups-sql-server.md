@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4601711ddce9e54a2bcabf9e07597074c1a70000
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 448a46ee3d01b3d14a71b1889f201814f0ec5dd1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>具有 AlwaysOn 可用性组的加密数据库 (SQL Server)
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
 

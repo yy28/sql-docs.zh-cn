@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
@@ -40,9 +40,10 @@ ms.lasthandoff: 08/16/2017
 
 - 若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)![下载](../analysis-services/media/download.png "下载")。
 
-- 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
+- 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。
 
-![说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明")有关最新的发行说明，请参阅 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。
+> [!NOTE]
+> 有关最新发行说明，请参阅 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` 语法现可用于[过程](../t-sql/statements/create-procedure-transact-sql.md)、[视图](../t-sql/statements/create-view-transact-sql.md)[函数](../t-sql/statements/create-function-transact-sql.md)和[触发器](../t-sql/statements/create-trigger-transact-sql.md)。
@@ -250,7 +251,7 @@ ms.lasthandoff: 08/16/2017
 
 - [使用多个活动的结果集 &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 连接现在可以访问内存优化表和本机编译的存储过程。
 
-- [透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md) 支持。 如果为数据库配置了加密，则[内存优化文件组](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)中的文件现在也会加密。
+- [透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) 支持。 如果为数据库配置了加密，则[内存优化文件组](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)中的文件现在也会加密。
 
 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。
 

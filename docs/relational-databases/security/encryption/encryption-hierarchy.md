@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>加密层次结构
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  对称密钥是加密和解密都使用的一个密钥。 使用对称密钥进行加密和解密非常快，适用于对数据库中敏感数据的日常使用。  
   
 ### <a name="transparent-data-encryption"></a>透明数据加密  
- 透明数据加密 (TDE) 是使用对称密钥进行加密的一种特殊情况。 TDE 使用称为数据库加密密钥的对称密钥加密整个数据库。 数据库加密密钥受由数据库主密钥或存储在 EKM 模块中的非对称密钥保护的其他密钥或证书保护。 有关详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+ 透明数据加密 (TDE) 是使用对称密钥进行加密的一种特殊情况。 TDE 使用称为数据库加密密钥的对称密钥加密整个数据库。 数据库加密密钥受由数据库主密钥或存储在 EKM 模块中的非对称密钥保护的其他密钥或证书保护。 有关详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="related-content"></a>相关内容  
  [保护 SQL Server](../../../relational-databases/security/securing-sql-server.md)  

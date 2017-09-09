@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b742bd3be2754628c05349cd55315afd44eb3b8d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ff3d6bcd21c301e13d39f3ce22205e879af86b85
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
@@ -83,6 +83,6 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="see-also"></a>另请参阅  
  [sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)   
- [透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   

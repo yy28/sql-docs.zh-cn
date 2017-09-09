@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>获取安装介质
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的下载位置由版本决定：
-
-- “SQL Server Enterprise、Standard 和 Express Edition”已获授权，可供生产之用。 对于企业版和标准版，请联系软件供应商获取安装媒体。 你可以在 [Microsoft 采购网站](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx)上找到采购信息和 Microsoft 合作伙伴目录。 
-
-- 以下链接提供了“免费版本”：[SQL Server 下载](http://www.microsoft.com/sql-server/sql-server-downloads)。
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>如何安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  

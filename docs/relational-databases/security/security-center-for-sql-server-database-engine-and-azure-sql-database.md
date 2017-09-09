@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
-ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/31/2017
   
 |||  
 |-|-|  
-|**加密文件**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker 加密（驱动器级别）<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS 加密（文件夹级别）<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 透明数据加密（文件级别）<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 备份加密（文件级别）|[BitLocker（驱动器级别）](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS 加密（文件夹级别）](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [透明数据加密（文件级别）](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)<br /><br /> [备份加密（文件级别）](../../relational-databases/backup-restore/backup-encryption.md)|  
+|**加密文件**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker 加密（驱动器级别）<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS 加密（文件夹级别）<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 透明数据加密（文件级别）<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 备份加密（文件级别）|[BitLocker（驱动器级别）](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS 加密（文件夹级别）](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [透明数据加密（文件级别）](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [备份加密（文件级别）](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**加密源**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 可扩展密钥管理模块<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Azure Key Vault 中存储的密钥<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Always Encrypted|[可扩展密钥管理模块](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Azure 密钥保管库中存储的密钥](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [始终加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**列、数据和密钥加密**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用证书进行加密<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用对称密钥进行加密<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用非对称密钥进行加密<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 使用密码进行加密|[使用证书进行加密](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [使用非对称密钥进行加密](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [使用对称密钥进行加密](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [使用密码进行加密](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
@@ -101,6 +101,5 @@ ms.lasthandoff: 07/31/2017
  [TRUSTWORTHY 数据库属性](../../relational-databases/security/trustworthy-database-property.md)   
  [数据库引擎功能和任务](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [保护 SQL Server 知识产权](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  
   
 

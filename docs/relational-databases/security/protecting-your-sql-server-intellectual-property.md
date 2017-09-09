@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保护 SQL Server 知识产权
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 
 可以加密存储过程和数据，但无法隐藏数据结构。可将调试器附加到服务器进程的用户可在运行时从内存中检索已解密的过程和数据。
 
-如果客户端不是计算机上的管理员，则你可以阻止客户端的访问。 你可以使用[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)来加密数据文件、加密备份，以及审核所有用户的操作。 但是，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 管理员以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 计算机的管理员可以撤消这些操作。
+如果客户端不是计算机上的管理员，则你可以阻止客户端的访问。 你可以使用[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)来加密数据文件、加密备份，以及审核所有用户的操作。 但是，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 管理员以及 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 计算机的管理员可以撤消这些操作。
 
 ## <a name="solution"></a>解决方案
 在不将 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装在客户端计算机上的情况下，可通过多种方式配置客户端数据访问。 最简单的方法可能是使用 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]（也许可以结合 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)），使客户端不会成为管理员。 有关如何开始使用 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的详细信息，请参阅[什么是 SQL 数据库？SQL 数据库简介](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)。  

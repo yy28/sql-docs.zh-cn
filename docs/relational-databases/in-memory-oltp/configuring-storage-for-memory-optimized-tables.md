@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   如果你有偶数个主轴，则与 SQL Server 2014 中不同，检查点文件将跨所有主轴均匀分布。  
   
 ## <a name="encryption"></a>加密  
- 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，作为在数据库上启用 TDE 的操作的一部分，将对内存优化表的存储进行加密。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
+ 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，作为在数据库上启用 TDE 的操作的一部分，将对内存优化表的存储进行加密。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理用于内存优化的对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
