@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [排序规则](#collation) | 在 Linux 上，为 SQL Server 设置新的排序规则。 |
 | [客户反馈](#customerfeedback) | 选择 SQL Server 向 Microsoft 发送反馈。 |
+| [数据库邮件配置文件](#dbmail) | 设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件 |
 | [默认数据目录](#datadir) | 更改新的 SQL Server 数据库数据文件 (.mdf) 的默认目录。 |
 | [默认日志目录](#datadir) | 更改新的 SQL Server 数据库日志 (.ldf) 文件的默认目录。 |
 | [默认转储目录](#dumpdir) | 更改新内存转储和其他故障排除的文件的默认目录。 |
@@ -214,6 +215,13 @@ ms.lasthandoff: 08/28/2017
     | **筛选** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
     | **完整** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
 
+## <a id="dbmail"></a>设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件
+
+**Sqlpagent.databasemailprofile**可以设置电子邮件警报的默认数据库邮件配置文件。
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>高可用性
 
 **Hadr.hadrenabled**选项使您的 SQL Server 实例上的可用性组。 以下命令通过设置可使可用性组**hadr.hadrenabled**为 1。 必须重启 SQL Server，该设置才能生效。

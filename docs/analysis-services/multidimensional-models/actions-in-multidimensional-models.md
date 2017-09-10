@@ -1,29 +1,34 @@
 ---
-title: "多维模型中的操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "操作 [Analysis Services], 创建"
-  - "报表操作 [Analysis Services]"
-  - "钻取操作 [Analysis Services]"
-  - "多维数据集 [Analysis Services], 操作"
+title: "多维模型中的操作 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多维模型中的操作
+# <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
  使用多维数据集设计器的 **“操作”** 选项卡可以为多维数据集生成操作。 指定下列各项：  
@@ -77,12 +82,12 @@ caps.handback.revision: 20
 |**应用程序**|说明操作的应用程序。|  
 |**Description**|说明操作。|  
 |**Caption**|提供为操作显示的标题。 如果标题是 MDX，请将 **“标题是 MDX”** 指定为 **True**。|  
-|**指定为**|如果标题是 MDX，请指定 **True** ，如果不是，则指定 **False** 。|  
+|**True**|如果标题是 MDX，请指定 **True** ，如果不是，则指定 **False** 。|  
   
 > [!NOTE]  
 >  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](../../analysis-services/scripting/objects/action-element-assl.md)、[Type 元素 (Action) (ASSL)](../../analysis-services/scripting/properties/type-element-action-assl.md) 和 [AMO OLAP 高级对象的编程](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
   
-## 创建报表操作  
+## <a name="creating-a-reporting-action"></a>创建报表操作  
  报表服务器会对基于 URL 的报表请求作出响应。 若要创建报表操作，请在 **“多维数据集”** 菜单上单击 **“新建报表操作”**。 下面是特定于报表操作的选项。  
   
  **报表服务器**  
@@ -95,7 +100,7 @@ caps.handback.revision: 20
 |**报表格式**|HTML5、HTML3、Excel 或 PDF。|  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可在服务器名称属性中指定传输层安全性 (https:)。  
+>  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可在服务器名称属性中指定传输层安全性 (https:)。  
   
  **参数(可选)**  
  创建操作时，参数将作为 URL 字符串的一部分发送到服务器。 它们包括 **“参数名称”** 和 **“参数值”**，后者是 MDX 表达式。  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## 创建钻取操作  
+## <a name="creating-a-drillthrough-action"></a>创建钻取操作  
  钻取操作由行集操作定义，它将作为钻取语句返回到客户端应用程序。 操作目标是度量值组的成员。 若要创建新的钻取操作，请在 **“多维数据集”** 菜单上单击 **“新建钻取操作”**。 下面是特定于钻取操作的选项：  
   
  **钻取列**  
  选择一个或多个维度以及每个维度的、由该操作返回到客户端应用程序的钻取列。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的多维数据集](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

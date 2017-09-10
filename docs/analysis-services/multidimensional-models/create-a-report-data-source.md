@@ -1,29 +1,34 @@
 ---
-title: "创建报表数据源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建报表数据源 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建报表数据源
+# <a name="create-a-report-data-source"></a>创建报表数据源
   为了 Power View 可连接到多维模型，您必须在 SharePoint 库中创建一个共享的报表数据源定义（也称为 .rsds 文件）。 该 .rsds 文件指定用于连接到多维模型的 Analysis Services 服务器实例、连接类型、连接字符串以及凭据的名称。 当用户单击 .rsds 时，将在浏览器中打开新的空白 Power View 报表（.rdlx 文件）。  
   
  为了创建 .rsds 连接，您必须安装了 SQL Server 2012（或更高版本）Reporting Services 和用于 SharePoint 2010 或 SharePoint 2013 的 Reporting Services 外接程序。  
   
-## 创建到多维模型的报表数据源 (.rsds) 连接  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>创建到多维模型的报表数据源 (.rsds) 连接  
  在开始之前，您需要知道：  
   
 -   在多维模式下运行的 Analysis Services 服务器实例的名称。  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   （可选）区域设置标识符。  
   
-#### 创建共享报表数据源 (.rsds) 文件 (SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>创建共享报表数据源 (.rsds) 文件 (SharePoint 2010)  
   
 1.  在库功能区上单击 **“文档”** 选项卡。  
   

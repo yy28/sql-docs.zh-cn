@@ -1,25 +1,30 @@
 ---
-title: "通过模板创建单独预测查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "单独查询预测 [DMX]"
+title: "从模板创建单独预测查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 通过模板创建单独预测查询
+# <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
   如果您具有一个要用于预测的模型，但不希望将该模型映射到外部输入数据集或生成大容量预测，则单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
   
  例如，以下 DMX 查询表示对目标邮件模型 TM_Decision_Tree 的单独查询。  
@@ -33,13 +38,13 @@ AS [t]
   
  其后的过程介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的模板资源管理器来快速创建此查询。  
   
-### 在 SQL Server Management Studio 中打开 Analysis Services 模板  
+### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开 Analysis Services 模板  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“视图”** 菜单上，单击 **模板资源管理器**。  
   
 2.  单击多维数据集图标以打开 **Analysis Server**模板。  
   
-### 打开预测查询模板  
+### <a name="to-open-a-prediction-query-template"></a>打开预测查询模板  
   
 1.  在“模板资源管理器”的“Analysis Server”模板列表中，依次展开“DMX”和“预测查询”。  
   
@@ -51,7 +56,7 @@ AS [t]
   
 5.  模板在指定的数据库中打开，同时打开的还有挖掘模型对象浏览器，其中包含数据挖掘函数和数据挖掘结构以及相关模型的列表。  
   
-### 自定义单独查询模板  
+### <a name="to-customize-the-singleton-query-template"></a>自定义单独查询模板  
   
 1.  在模板中，单击“可用数据库”下拉列表，然后从列表中选择一个 Analysis Service 实例。  
   
@@ -92,7 +97,7 @@ AS [t]
   
 11. 单击 **“执行”**。  
   
-## 另请参阅  
- [创建预测（数据挖掘基础教程）](../Topic/Creating%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+## <a name="see-also"></a>另请参阅  
+ [创建预测（数据挖掘基础教程）](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

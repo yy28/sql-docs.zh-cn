@@ -1,30 +1,35 @@
 ---
-title: "创建新的 OLAP 挖掘结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘结构 [Analysis Services], OLAP"
-  - "挖掘结构 [Analysis Services], 创建"
-  - "OLAP [Analysis Services], 挖掘模型"
+title: "创建新的 OLAP 挖掘结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建新的 OLAP 挖掘结构
+# <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导来创建使用来自多维模型的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
   
-### 创建新的 OLAP 挖掘结构  
+### <a name="to-create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的“挖掘结构”文件夹，然后单击“新建挖掘结构”打开数据挖掘向导。  
   
@@ -42,13 +47,13 @@ caps.handback.revision: 32
   
      例如，如果你正在尝试标识客户分组，则可以选择“客户”维度；如果你正在尝试分析交易中的购买行为，则可以选择“Internet 销售订单详细信息”维度。 您不会被局限为仅使用此维度中的数据，但该维度应该包含要在分析中使用的重要属性。  
   
-     单击“下一步” 。  
+     单击 **“下一步”**。  
   
 6.  在 **“选择事例键”** 页的 **“属性”**下，选择将成为挖掘结构键的属性，然后单击 **“下一步”**。  
   
      通常，您用作挖掘架结构的键的属性也是用于维度的键并且将预先选择。  
   
-7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”**下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击“下一步” 。  
+7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”**下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击 **“下一步”**。  
   
 8.  在 **“指定挖掘模型列用法”** 页的 **“挖掘模型结构”**下，首先选择可预测列，然后选择要用作输入的列。  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 32
   
      请注意，已指定为键的列不能用于输入或预测。  
   
-     单击“下一步” 。  
+     单击 **“下一步”**。  
   
 9. 在 **“指定挖掘模型列用法”** 页上，您还可以使用 **“添加嵌套表”** 和 **“删除嵌套表”**，添加和删除挖掘模型中的嵌套表。  
   
@@ -107,9 +112,9 @@ caps.handback.revision: 32
   
     -   **参数**：忽略此复选框。 此对话框支持多个多维数据集筛选方案，并且此选项不针对生成挖掘结构。  
   
-     单击“下一步” 。  
+     单击 **“下一步”**。  
   
-12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击“下一步” 。  
+12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击 **“下一步”**。  
   
      如果指定两个值，则使用这两个限制值中的最小值。  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **使用挖掘模型维度创建多维数据集**：选中此复选框，并且为新的多维数据集提供名称。 在您使用此选项时，将创建一个新的多维数据集，该多维数据集包含在生成结构中使用的现有维度和包含模型结果的新数据挖掘维度。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

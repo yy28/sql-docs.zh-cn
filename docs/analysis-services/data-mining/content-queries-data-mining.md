@@ -1,23 +1,28 @@
 ---
-title: "内容查询（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "内容查询 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 内容查询（数据挖掘）
+# <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
   内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  
   
  本节提供有关可以使用内容查询检索的信息类型的常规信息，以及用于内容查询的一般 DMX 语法。  
@@ -164,7 +169,7 @@ ORDER BY NODE_SUPPORT DESC
   
  WHERE 子句指定 NODE_TYPE 的值应当为 8，这表示仅仅检索规则。  
   
- 有关更多示例，请参阅[关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)。  
+ 有关更多示例，请参阅 [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)。  
   
 ###  <a name="bkmk_DecTree"></a> 示例 2：针对决策树模型的内容查询  
  决策树模型可用于预测以及分类。  此示例假定您使用模型是为了预测结果，但同时也希望找出可以使用哪些因子或规则来对结果进行分类。  
@@ -188,14 +193,14 @@ FROM [<decision tree model name>]
 WHERE NODE_UNIQUE_NAME= '<node id>'  
 ```  
   
- 有关更多示例，请参阅[决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)。  
+ 有关更多示例，请参阅 [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)。  
   
 ##  <a name="bkmk_Results"></a> 使用查询结果  
  如示例中所示，内容查询主要返回表格行集，但还可以包含来自嵌套列的信息。 您可以平展返回的行集，但这样做可能会导致对结果的使用更复杂。 特别是 NODE_DISTRIBUTION 节点的内容是嵌套的，但包含了大量有关模型的有用信息。  
   
  有关如何使用分层行集的详细信息，请参阅 MSDN 上的 OLEDB 规范。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

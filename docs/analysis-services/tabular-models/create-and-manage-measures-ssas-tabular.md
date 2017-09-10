@@ -1,24 +1,29 @@
 ---
-title: "创建和管理度量值（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建和管理度量值 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建和管理度量值（SSAS 表格）
+# <a name="create-and-manage-measures-ssas-tabular"></a>创建和管理度量值（SSAS 表格）
   度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何使用表的度量值网格创建和管理度量值。  
   
  本主题包括以下任务：  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [删除度量值](#bkmk_delete)  
   
-## “任务”  
+## <a name="tasks"></a>“任务”  
  为了创建和管理度量值，您将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
   
 ###  <a name="bkmk_create_stand"></a> 使用标准聚合公式创建度量值  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   在度量值网格中，右键单击某一度量值，然后单击“删除”。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPI（SSAS 表格）](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [计算列（SSAS 表格）](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

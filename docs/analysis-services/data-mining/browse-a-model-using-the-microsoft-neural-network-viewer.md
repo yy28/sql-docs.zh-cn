@@ -1,31 +1,36 @@
 ---
-title: "使用 Microsoft 神经网络查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘模型内容, 查看"
-  - "分类挖掘模型 [Analysis Services]"
-  - "Microsoft 神经网络查看器"
-  - "回归算法 [Analysis Services]"
-  - "神经网络查看器 [Analysis Services]"
-  - "神经网络模型 [Analysis Services]"
+title: "使用 Microsoft 神经网络查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining model content, viewing
+- classification mining model [Analysis Services]
+- Microsoft Neural Network Viewer
+- regression algorithms [Analysis Services]
+- Neural Network Viewer [Analysis Services]
+- neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fea303682881b5cb660dbdc7b5c411dc0880ef4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 神经网络查看器浏览模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 神经网络查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)。  
+# <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 神经网络查看器浏览模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 神经网络查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器浏览某一模型时，通常会选择某个目标属性和状态，然后使用该查看器来查看输入属性是如何影响结果的。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 43
   
  通过将购买行为用作目标结果来生成一个神经网络模型，您可以浏览针对客户属性（例如高收入）的多个组合，并且发现哪一属性组合最有可能影响购买行为。 例如，您可能会发现决定因素是到工作单位的距离。  
   
- 如果您需要更详细的视图信息，例如表示已发现的每个模式的方程式，则可以切换视图并且使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+ 如果您需要更详细的视图信息，例如表示已发现的每个模式的方程式，则可以切换视图并且使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器提供以下用于浏览神经网络挖掘模型的选项卡：  
@@ -75,8 +80,8 @@ caps.handback.revision: 43
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## 另请参阅  
- [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   

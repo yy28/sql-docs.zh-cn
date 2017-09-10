@@ -1,29 +1,34 @@
 ---
-title: "关联模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "项集 [Analysis Services]"
-  - "关联算法 [Analysis Services]"
-  - "规则 [数据挖掘]"
-  - "关联规则"
-  - "内容查询 [DMX]"
+title: "关联模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- rules [Data Mining]
+- association rules
+- content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 关联模型查询示例
+# <a name="association-model-query-examples"></a>关联模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可创建预测查询。内容查询提供有关在分析过程中发现的规则和项集的详细信息，预测查询使用在数据中发现的关联来做出预测。 对于关联模型来说，预测通常基于规则且可用来给出建议，而内容查询通常用于浏览项集之间的关系。 此外，还可检索有关模型的元数据。  
   
  本节讲述如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则的算法的模型创建这些类型的查询。  
@@ -47,7 +52,7 @@ caps.handback.revision: 25
  [确定相关项集的置信度](#bkmk_Query7)  
   
 ##  <a name="bkmk_top2"></a> 查找有关模型的信息  
- 所有挖掘模型都公开算法根据标准化架构（即挖掘模型架构行集）所了解的内容。 可以使用建数据挖掘扩展插件 (DMX) 语句或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程来对挖掘模型架构行集创建查询。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，还可使用类似 SQL 的语法，直接将架构行集作为系统表来查询。  
+ 所有挖掘模型都公开算法根据标准化架构（即挖掘模型架构行集）所了解的内容。 可以使用建数据挖掘扩展插件 (DMX) 语句或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程来对挖掘模型架构行集创建查询。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，还可使用类似 SQL 的语法，直接将架构行集作为系统表来查询。  
   
 ###  <a name="bkmk_Query1"></a> 示例查询 1：使用 DMX 获取模型元数据  
  以下查询返回有关关联模型 `Association`的基本元数据，例如模型名称、存储模型的数据库以及模型中子节点的数目。 此查询使用 DMX 内容查询从模型的父节点中检索元数据：  
@@ -73,7 +78,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- 有关这些列在关联模型中含义的定义，请参阅[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
+ 有关这些列在关联模型中含义的定义，请参阅 [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top2)  
   
@@ -115,7 +120,7 @@ WHERE MODEL_NAME = 'Association'
   
  [返回页首](#bkmk_top2)  
   
-## 查找有关规则和项集的信息  
+## <a name="finding-information-about-rules-and-itemsets"></a>查找有关规则和项集的信息  
  关联模型有两个常见用途：查找有关常见项集的信息以及提取有关特定规则和项集的详细信息。 例如，您可能希望提取评为当前特别受关注的规则的列表，或创建最常见项集的列表。 您可以使用 DMX 内容查询来检索此类信息， 也可使用 **“Microsoft 关联查看器”**浏览该信息。  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：检索项集和产品列表  
@@ -160,13 +165,13 @@ WHERE NODE_TYPE = 7
   
  [返回页首](#bkmk_top2)  
   
-## 使用模型进行预测  
+## <a name="making-predictions-using-the-model"></a>使用模型进行预测  
  关联规则模型通常用于生成建议，这些建议基于在项集中发现的相关性。 因此，基于关联规则模型创建预测查询时，您通常使用模型中的规则基于新数据进行猜测。  [PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md) 是返回建议的函数，它包含几个可用于自定义查询结果的参数。  
   
  另一个说明对关联模型的查询非常有用的示例是返回各种规则和项集的置信度，以便可以比较不同跨区销售策略的有效性。 以下示例说明如何创建这些查询。  
   
 ###  <a name="bkmk_Query6"></a> 示例查询 6：预测关联项目  
- 此示例使用在[数据挖掘中级教程（Analysis Services - 数据挖掘）](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md)中创建的关联模型。 它演示如何创建一个预测查询，该查询告诉您应向已购买某种特定产品的客户推荐哪些产品。 此种类型的查询称为单独查询，在该查询中，使用 **SELECT…UNION** 语句向模型提供所需的值。 由于对应于新值的可预测模型列为嵌套表，因此必须使用某一 **SELECT** 子句将新值映射到嵌套表列 `[Model]`，再使用另一 **SELECT** 子句将嵌套表列映射到事例级别列 `[v Assoc Seq Line Items]`。 如果在该查询中添加 INCLUDE-STATISTICS 关键字，则可看到推荐的概率和支持。  
+ 此示例使用在[数据挖掘中级教程（Analysis Services - 数据挖掘）](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b)中创建的关联模型。 它演示如何创建一个预测查询，该查询告诉您应向已购买某种特定产品的客户推荐哪些产品。 此种类型的查询称为单独查询，在该查询中，使用 **SELECT…UNION** 语句向模型提供所需的值。 由于对应于新值的可预测模型列为嵌套表，因此必须使用某一 **SELECT** 子句将新值映射到嵌套表列 `[Model]`，再使用另一 **SELECT** 子句将嵌套表列映射到事例级别列 `[v Assoc Seq Line Items]`。 如果在该查询中添加 INCLUDE-STATISTICS 关键字，则可看到推荐的概率和支持。  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -219,7 +224,7 @@ ORDER BY NODE_SUPPORT DESC
   
  [返回页首](#bkmk_top2)  
   
-## 函数列表  
+## <a name="function-list"></a>函数列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法还支持下表中列出的函数。  
   
 |||  
@@ -235,7 +240,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
 |[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

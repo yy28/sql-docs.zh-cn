@@ -1,29 +1,34 @@
 ---
-title: "创建计算成员 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "计算成员 [Analysis Services]"
-  - "自定义度量值 [Analysis Services]"
-  - "成员 [Analysis Services], 计算"
-  - "计算 [Analysis Services], 计算成员"
+title: "创建计算的成员 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建计算成员
+# <a name="create-calculated-members"></a>创建计算成员
   可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
   
  计算成员的定义将存储起来，而它们的值则只存在于内存中。 在上面的示例中，虽然马克的值会显示给最终用户，但这些值并没有存储为多维数据集数据。  
@@ -60,7 +65,7 @@ caps.handback.revision: 26
 >  任何要在另一计算成员的值表达式中使用的计算成员都必须在创建将使用它的计算成员之前创建。  
   
  格式字符串  
- 指定基于计算成员的单元值的格式。 此属性与度量值的 **Display Format** 属性接受相同的值。 有关显示格式的详细信息，请参阅[配置度量值属性](../../analysis-services/multidimensional-models/configure-measure-properties.md)。  
+ 指定基于计算成员的单元值的格式。 此属性与度量值的 **Display Format** 属性接受相同的值。 有关显示格式的详细信息，请参阅 [配置度量值属性](../../analysis-services/multidimensional-models/configure-measure-properties.md)。  
   
  Visible  
  确定在检索多维数据集元数据时计算成员是可见还是隐藏。 如果计算成员处于隐藏状态，则仍然可以在 MDX 表达式、语句和脚本中使用它，但在客户端用户界面中它不会显示为可选择的对象。  
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  您可以将多维数据集组件从 **“计算工具”** 窗格的 **“元数据”** 选项卡拖动或复制到“计算表达式”窗格的 **“表达式”** 框中。 您可以将函数从 **“计算工具”** 窗格的 **“函数”** 选项卡拖动或复制到“计算表达式”窗格的 **“表达式”** 框中。  
   
-## 寻址计算成员  
+## <a name="addressing-calculated-members"></a>寻址计算成员  
  在 **“多维数据集设计器”** 的 **“计算”**选项卡中创建计算成员时，需要指定在其中存储计算成员的父层次结构。 父层次结构按以下规则确定如何为计算成员寻址：  
   
 -   如果计算成员是在度量值维度中创建的，则计算成员在该维度中是可寻址的。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

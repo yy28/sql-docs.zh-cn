@@ -1,24 +1,29 @@
 ---
-title: "命令事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“命令事件”事件类别"
+title: "命令 Events Data Columns |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 命令事件数据列
+# <a name="command-events-data-columns"></a>命令事件数据列
   下表列出 **Command Events** 事件类别中的每个事件类的数据列。  
   
  **Command Events** 事件类别包含下列事件类：  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|包含与命令事件关联的 Windows 域帐户。|  
 |ClientProcessID|包含与命令事件相关联的唯一客户端进程 ID。|  
   
-## 另请参阅  
- [“命令事件”事件类别](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

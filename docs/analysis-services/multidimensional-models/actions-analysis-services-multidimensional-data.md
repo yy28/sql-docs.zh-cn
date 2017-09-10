@@ -1,30 +1,35 @@
 ---
-title: "操作（Analysis Services - 多维数据） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "操作 [Analysis Services]"
-  - "操作 [Analysis Services], 关于操作"
-  - "MDX [Analysis Services], 操作"
-  - "多维数据集 [Analysis Services], 操作"
-  - "OLAP 对象 [Analysis Services], 操作"
+title: "操作 (Analysis Services-多维数据) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 操作（Analysis Services - 多维数据）
+# <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
   操作可以具有不同的类型，因而必须相应地进行创建。 操作可为：  
   
 -   钻取操作，对于在其上执行了该操作的多维数据，该操作将返回表示其所选单元的基础数据的行集。  
@@ -33,7 +38,7 @@ caps.handback.revision: 34
   
 -   标准操作，对于在其上执行了该操作的多维数据，该操作将返回与其所选部分关联的操作元素（URL、HTML、DataSet、RowSet 及其他元素）。  
   
- 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅[使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
  简单 <xref:Microsoft.AnalysisServices.Action> 对象由基本信息、操作目标、用于限制操作范围的条件以及类型组成。 基本信息包括操作名称、操作说明、操作的建议标题等。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 34
   
  条件是操作事件发生时计算的 **Boolean** MDX 表达式。 如果条件的计算结果为 **true**时，则将执行操作。 否则，不执行操作。  
   
- 类型是要执行的操作的类型。 <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类：<xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
+ 类型是要执行的操作的类型。 <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，操作指可提供给客户端应用程序并可由客户端应用程序使用的已存储 MDX 语句。 换言之，操作是指在服务器中定义并存储的客户端命令。 操作还包含了指定客户端应用程序应当何时以及如何显示和处理 MDX 语句的信息。 由操作指定的动作可以通过将操作中的信息用作参数来启动应用程序，也可以基于操作所提供的条件来检索信息。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  为使业务用户使用操作，业务用户所使用的客户端应用程序必须支持这些操作。  
   
-## 操作的类型  
+## <a name="types-of-actions"></a>操作的类型  
  下表列出了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中包含的操作类型：  
   
 |操作类型|Description|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |。|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示动态网页。|  
   
-## 解析并执行操作  
+## <a name="resolving-and-executing-actions"></a>解析并执行操作  
  当业务用户在访问已为其定义了命令对象的对象时，系统将自动解析与操作关联的语句，以使它对客户端应用程序可用，但操作不会自动执行。 操作只在业务用户执行启动它的客户端特定操作时才被执行。 例如，当业务用户右键单击特定的成员或单元时，客户端应用程序可能以弹出菜单的形式显示一组操作。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的操作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

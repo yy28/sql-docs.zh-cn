@@ -1,35 +1,40 @@
 ---
-title: "货币换算 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多种货币换算"
-  - "货币数据 [SQL Server]"
-  - "货币 [Analysis Services]"
-  - "转换货币"
-  - "一对多货币换算"
-  - "多对多货币换算 [Analysis Services]"
-  - "多对一货币换算 [Analysis Services]"
+title: "货币换算 (Analysis Services) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple currency conversions
+- monetary data [SQL Server]
+- currency [Analysis Services]
+- converting currency
+- one-to-many currency conversions
+- many-to-many currency conversions [Analysis Services]
+- many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54b50833ce40a8222925ac2b43591fa89617631
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 货币换算 (Analysis Services)
+# <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] 多维  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用一组由多维表达式 (MDX) 脚本引导的功能组合，在支持多种货币的多维数据集中提供货币换算支持。  
   
-## 货币换算术语  
+## <a name="currency-conversion-terminology"></a>货币换算术语  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用下列术语来说明货币换算功能：  
   
  先导货币  
@@ -80,13 +85,13 @@ caps.handback.revision: 18
   
 -   该维度的一个特性的 **Type** 属性被设置为 CurrencyDestination，并且绑定到该特性的列包含代表用于货币换算的报表货币的货币标识符。  
   
-## 定义货币换算  
+## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  
   
-### 先决条件  
+### <a name="prerequisites"></a>先决条件  
  您必须首先定义至少一个货币维度、至少一个时间维度和至少一个比率度量值组，然后才能使用商业智能向导在多维数据集中定义货币换算。 商业智能向导可以从这些对象中检索相应的数据和元数据，以用于构造提供货币换算功能所需的报表货币维度和 MDX 脚本。  
   
-### 决策  
+### <a name="decisions"></a>决策  
  您需要作出下列决策，商业智能向导才能构造提供货币换算功能所需的报表货币维度和 MDX 脚本：  
   
 -   汇率方向  
@@ -99,7 +104,7 @@ caps.handback.revision: 18
   
 -   报表货币  
   
-### 汇率方向  
+### <a name="exchange-rate-directions"></a>汇率方向  
  比率度量值组中包含代表本地货币和先导货币（通常称为公司货币）之间的关系的度量值。 汇率方向和换算类型的组合决定了使用商业智能向导生成的 MDX 脚本对待换算度量值所执行的操作。 下表说明了基于商业智能向导中可用的汇率方向选项和换算方向时，根据不同的汇率方向和换算类型执行的操作。  
   
 |||||  
@@ -108,9 +113,9 @@ caps.handback.revision: 18
 |**n 先导货币对 1 示例货币**|为将度量值换算为先导货币，需要将待换算度量值乘以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值除以报表货币的汇率度量值。|将待换算度量值乘以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值除以报表货币的汇率度量值来将其换算为报表货币。|  
 |**n 示例货币对 1 先导货币**|为将度量值换算为先导货币，需要将待换算度量值除以本地货币的汇率度量值。|为将度量值换算为报表货币，需要将待换算度量值乘以报表货币的汇率度量值。|将待换算度量值除以本地货币的汇率度量值来将其换算为先导货币，然后将该换算后的度量值乘以报表货币的汇率度量值来将其换算为报表货币。|  
   
- 您可以在商业智能向导的 **“设置货币换算选项”** 页上选择汇率方向。 有关设置换算方向的详细信息，请参阅[设置货币换算选项（商业智能向导）](../Topic/Set%20Currency%20Conversion%20Options%20\(Business%20Intelligence%20Wizard\).md)。  
+ 您可以在商业智能向导的 **“设置货币换算选项”** 页上选择汇率方向。 有关设置换算方向的详细信息，请参阅[设置货币换算选项（商业智能向导）](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d)。  
   
-### 待换算成员  
+### <a name="converted-members"></a>待换算成员  
  您可以使用商业智能向导来指定使用比率度量值组中的哪些度量值来为以下内容进行值换算：  
   
 -   其他度量值组中的度量值。  
@@ -119,9 +124,9 @@ caps.handback.revision: 18
   
 -   数据库维度中的帐户属性的属性层次结构的成员使用的帐户类型。  
   
- 商业智能向导将此信息用于由向导生成的 MDX 脚本中来确定货币换算计算的作用域。 有关为货币换算指定成员的详细信息，请参阅[选择成员（商业智能向导）](../Topic/Select%20Members%20\(Business%20Intelligence%20Wizard\).md)。  
+ 商业智能向导将此信息用于由向导生成的 MDX 脚本中来确定货币换算计算的作用域。 有关为货币换算指定成员的详细信息，请参阅[选择成员（商业智能向导）](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0)。  
   
-### 换算类型  
+### <a name="conversion-types"></a>换算类型  
  商业智能向导支持三种不同类型的货币换算：  
   
 -   **一对多**  
@@ -144,14 +149,14 @@ caps.handback.revision: 18
   
  指定换算类型将允许商业智能向导定义报表货币维度的命名查询和维度结构，还将允许其定义为货币换算定义的 MDX 脚本的结构。  
   
-### 本地货币  
+### <a name="local-currencies"></a>本地货币  
  如果您为自己的货币换算选择了多对多或多对一换算类型，则需要指定如何标识商业智能向导生成的 MDX 脚本执行货币换算计算时所使用的本地货币。 可以用下面的两种方法之一来标识事实数据表中交易的本地货币：  
   
 -   度量值组包含一个到货币维度的常规维度关系。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 示例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中，Internet Sales 度量值组有一个到 Currency 维度的常规维度关系。 该度量值组的事实数据表包含一个外键列，该外键列引用该维度的维度表中的货币标识符。 在这种情况下，您可以从由该度量值组引用的货币维度中选择此属性来为该度量值组标识事实数据表中交易的本地货币。 此种情况在银行应用程序中最常见，这类应用程序使用交易本身确定交易使用的货币。  
   
 -   度量值组通过另一个直接引用货币维度的维度包含一个到货币维度的被引用维度关系。 例如，在 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 示例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中，“财务报表”度量值组与“货币”维度之间通过“单位”维度建立了引用维度关系。 该度量值组的事实数据表包含一个外键列，该列引用了 Organization 维度的维度表中的成员。 反过来，“单位”维度的维度表也包含一个外键列，该外键列引用“货币”维度的维度表中的货币标识符。 这种情况在财务报表应用程序中最常见，此类应用程序使用交易的位置或子公司来确定交易的货币。 在这种情况下，可以从业务实体的维度中选择引用货币维度的属性。  
   
-### 报表货币  
+### <a name="reporting-currencies"></a>报表货币  
  如果您为自己的货币换算选择了多对多或一对多换算类型，则需要指定如何标识商业智能向导生成的 MDX 脚本执行货币换算计算时所使用的报表货币。 您可以指定与比率度量值组相关的货币维度的所有成员，也可以从该维度中选择单独的成员。  
   
  商业智能向导将基于使用选定的报表货币从货币维度的维度表中构造的命名查询来创建一个报表货币维度。  
@@ -161,10 +166,10 @@ caps.handback.revision: 18
   
  向导会为多维数据集中定义的每个货币换算分别定义一个报表货币维度。 完成创建后，可以对报表货币维度的名称进行更改，但是如果这样做，您还必须更新为该货币换算生成的 MDX 脚本以确保脚本命令在引用报表货币维度时使用正确的名称。  
   
-## 定义多个货币换算  
+## <a name="defining-multiple-currency-conversions"></a>定义多个货币换算  
  使用商业智能向导，您可以根据您的商业智能解决方案的需要定义尽可能多的货币换算。 您可以覆盖一个现有的货币换算，也可以将一个新的货币换算追加到多维数据集的 MDX 脚本中。 在具有复杂的报表要求的商业智能应用程序（例如支持国际报表的多个独立换算要求的财务报表应用程序）中，定义于单个多维数据集中的多个货币换算提供了很大的灵活性。  
   
-### 标识货币换算  
+### <a name="identifying-currency-conversions"></a>标识货币换算  
  商业智能向导通过将货币换算的脚本命令放置到下列注释框架中来标识各个货币换算。  
   
  `//<Currency conversion>`  
@@ -183,7 +188,7 @@ caps.handback.revision: 18
   
  若有必要，您可以更改包含在货币换算中的脚本命令。 如果您覆盖了该货币换算，则您的更改将丢失。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

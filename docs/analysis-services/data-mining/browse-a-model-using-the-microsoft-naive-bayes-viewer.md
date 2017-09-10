@@ -1,41 +1,46 @@
 ---
-title: "使用 Microsoft Naive Bayes 查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "对比 [Analysis Services]"
-  - "naive bayes 模型 [Analysis Services]"
-  - "Bayesian 分类器"
-  - "挖掘模型内容, 查看"
-  - "预测建模 [Analysis Services]"
-  - "Naive Bayes 查看器 [Analysis Services]"
-  - "数据挖掘 [Analysis Services], 预测模型"
-  - "Microsoft Naive Bayes 查看器"
-  - "直方图 [Analysis Services]"
-  - "挖掘模型 [Analysis Services], 预测模型"
-  - "依赖关系 [Analysis Services]"
+title: "使用 Microsoft Naive Bayes 查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- discrimination [Analysis Services]
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- mining model content, viewing
+- predictive modeling [Analysis Services]
+- Naive Bayes Viewer [Analysis Services]
+- data mining [Analysis Services], predictive modeling
+- Microsoft Naive Bayes Viewer
+- histograms [Analysis Services]
+- mining models [Analysis Services], predictive modeling
+- dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft Naive Bayes 查看器浏览模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
+# <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft Naive Bayes 查看器浏览模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
   
  由于 Naive Bayes 模型的主要用途之一是提供一种快速浏览数据集内数据的方法，因此， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器提供了多种方法来显示可预测属性与输入属性之间的交互。  
   
 > [!NOTE]  
->  如果您想要查看有关模型中使用的公式以及所发现的模式的详细信息，可切换到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  如果您想要查看有关模型中使用的公式以及所发现的模式的详细信息，可切换到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器提供了以下用于浏览数据的选项卡：  
@@ -74,22 +79,22 @@ caps.handback.revision: 39
 ##  <a name="BKMK_Discrimination"></a> 属性对比  
  若要使用 **“属性对比”** 选项卡，请从 **“属性”**、 **“值 1”**和 **“值 2”** 列表中选择一个可预测属性以及它的两个状态。 然后， **“属性对比”** 选项卡上的网格将在列中显示以下信息：  
   
- **Attribute**  
+ **“属性”**  
  列出数据集内的其他属性，这些属性包含一个高度倾向于可预测属性某个状态的状态。  
   
  **值**  
  显示“属性”列中某属性的值。  
   
- **倾向于 \<值 1>**  
+ **优先\<值为 1 >**  
  显示一个彩色条，以指示属性值倾向于“值 1”中显示的可预测属性值的程度。  
   
- **倾向于 \<值 2>**  
+ **优先\<值为 2 >**  
  显示一个彩色条，以指示属性值倾向于“值 2”中显示的可预测属性值的程度。  
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## 另请参阅  
- [Microsoft Naive Bayes 算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

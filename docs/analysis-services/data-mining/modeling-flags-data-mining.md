@@ -1,62 +1,67 @@
 ---
-title: "建模标志（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "属性 [数据挖掘]"
-  - "数据类型 [数据挖掘]"
-  - "REGRESSOR 标志"
-  - "MODEL_EXISTENCE_ONLY 标志"
-  - "REGRESSOR 列"
-  - "列 [数据挖掘], 建模标志"
-  - "NOT NULL 建模标志"
-  - "建模标志 [数据挖掘]"
-  - "Null 值 [Analysis Services]"
-  - "MODEL_EXISTENCE_ONLY 列"
-  - "编写代码 [数据挖掘]"
+title: "建模标志 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 建模标志（数据挖掘）
+# <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 **NOT NULL** 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   
 > [!NOTE]  
->  除了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
+>  除了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
-## 建模标志列表  
+## <a name="list-of-modeling-flags"></a>建模标志列表  
  下面的列表介绍了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中支持的建模标志。 有关特定算法支持的建模标志的信息，请参阅用于创建模型的算法的技术参考主题。  
   
  **NOT NULL**  
  指示属性列的值不应包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在模型定型过程中发现该属性列的值为 Null 值，则将出现错误。  
   
  **MODEL_EXISTENCE_ONLY**  
- 表示该列将被视为具有两种状态：**Missing** 和 **Existing** 如果该值为 **NULL**，将被视为 Missing。 MODEL_EXISTENCE_ONLY 标志将应用于可预测属性，并且大多数算法都支持该标志。  
+ 表示该列将被视为具有两种状态： **Missing** 和 **Existing** 如果该值为 **NULL**，将被视为 Missing。 MODEL_EXISTENCE_ONLY 标志将应用于可预测属性，并且大多数算法都支持该标志。  
   
- 实际上，将 MODEL_EXISTENCE_ONLY 标志设置为**True** 会更改值的表示形式，使其仅存在两种状态：**Missing** 和 **Existing**。 将所有非 Missing 状态合并为一个 **Existing** 值。  
+ 实际上，将 MODEL_EXISTENCE_ONLY 标志设置为 **True** 会更改值的表示形式，使其仅存在两种状态： **Missing** 和 **Existing**。 将所有非 Missing 状态合并为一个 **Existing** 值。  
   
- 此建模标志的典型用法是指示以下情况中的属性： **NULL** 状态具有隐含意义； **NOT NULL** 状态的显式值可能不与列中有任意值时一样重要。 例如，如果某个合同永远不会签署，则 [DateContractSigned] 列可能为 **NULL**，但如果该合同已签署，则该列为 **NOT NULL**。 因此，如果模型的目的是用于预测合同是否会签署，则可以使用 MODEL_EXISTENCE_ONLY 标志忽略 **NOT NULL** 事例中的准确日期值，而只区分合同为 **Missing** 或 **Existing** 的事例。  
+ 此建模标志的典型用法是指示以下情况中的属性： **NULL** 状态具有隐含意义； **NOT NULL** 状态的显式值可能不与列中有任意值时一样重要。 例如，如果某个合同永远不会签署，则 [DateContractSigned] 列可能为 **NULL** ，但如果该合同已签署，则该列为 **NOT NULL** 。 因此，如果模型的目的是用于预测合同是否会签署，则可以使用 MODEL_EXISTENCE_ONLY 标志忽略 **NOT NULL** 事例中的准确日期值，而只区分合同为 **Missing** 或 **Existing**的事例。  
   
 > [!NOTE]  
->  Missing 是算法所使用的一种特殊状态，不同于列中文本值 “Missing”。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
+>  Missing 是算法所使用的一种特殊状态，不同于列中文本值 “Missing”。 有关详细信息，请参阅 [缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
  **REGRESSOR**  
- 指示该列在处理期间适合用作回归量。 该标志是在挖掘模型列中定义的，只能将其应用于具有连续数值数据类型的列。 有关使用此标志的详细信息，请参阅本主题中的[使用 REGRESSOR 建模标志](#bkmk_UseRegressors)这一部分。  
+ 指示该列在处理期间适合用作回归量。 该标志是在挖掘模型列中定义的，只能将其应用于具有连续数值数据类型的列。 有关使用此标志的详细信息，请参阅本主题中的 [使用 REGRESSOR 建模标志](#bkmk_UseRegressors)这一部分。  
   
-## 查看和更改建模标志  
+## <a name="viewing-and-changing-modeling-flags"></a>查看和更改建模标志  
  通过查看结构或模型的属性，可以在数据挖掘设计器中查看与挖掘结构列或模型列关联的建模标志。  
   
  若要确定已应用于当前挖掘结构的建模标志，可使用与如下查询创建一个针对数据挖掘架构行集的查询，用于仅返回结构列的建模标志：  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **注意** 如果修改某个挖掘模型并将某列的内容类型从连续更改为离散，则必须手动更改该挖掘列上的标志，然后重新处理该模型。  
   
-### 线性回归模型中的回归量  
+### <a name="regressors-in-linear-regression-models"></a>线性回归模型中的回归量  
  线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 即使不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，任何决策树模型也都可以包含表示连续属性的回归的树或节点。  
   
  因此，在这些模型中，您无需指定连续列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会将数据集分区成具有有意义模式的区域。 其差异是：如果设置建模标志，此算法将尝试查找以下形式的回归等式，以适合树中节点的模式。  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  可以使用 FORCE_REGRESSOR 参数来保证该算法使用特定的回归量。 此参数可以与决策树算法和线性回归算法一起使用。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
  使用以下链接了解有关使用建模标志的详细信息。  
   
 |任务|主题|  

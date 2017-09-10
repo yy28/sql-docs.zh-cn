@@ -1,26 +1,31 @@
 ---
-title: "使用数据馈送库共享数据馈送 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据馈送 [带 SharePoint 的 Analysis Services]"
+title: "共享数据馈送使用数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用数据馈送库共享数据馈送 (Power Pivot for SharePoint)
+# <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (Power Pivot for SharePoint)
   数据馈送是从以 Atom 线路格式显示数据的服务或应用程序中生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，数据馈送的作用是使用识别 Atom 的应用程序或服务中的数据填充 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源。  
   
  如果您已使用识别 Atom 的应用程序组合，则可能始终不需要知道如何生成和使用馈送，因为数据传输是在应用程序之间无缝进行的。 但是，使用自定义解决方案发布 Atom 馈送的组织通常需要一种方法使信息工作者可以获得馈送。 一种方法是创建并共享数据服务文档 (.atomsvc) 文件，此类文件提供到生成馈送的联机源之间的连接。 一个名为数据馈送库的特殊用途库支持在 SharePoint Web 应用程序中创建和共享数据服务文档。  
@@ -38,10 +43,10 @@ caps.handback.revision: 26
  [下一步：使用数据服务文档](#usedsdoc)  
   
 > [!NOTE]  
->  虽然数据馈送用于将 Web 数据添加到你在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中创建的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源，但可以读取 Atom 馈送的任何客户端应用程序都可以处理数据服务文档。  
+>  虽然数据馈送用于将 Web 数据添加到你在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中创建的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]数据源，但可以读取 Atom 馈送的任何客户端应用程序都可以处理数据服务文档。  
   
 ##  <a name="prereq"></a> 先决条件  
- 必须具有将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询处理添加到 SharePoint 场的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的部署。 通过 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包可部署数据馈送支持。  
+ 必须具有将 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的部署。 通过 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包可部署数据馈送支持。  
   
  您必须具有支持数据服务文档内容类型的 SharePoint 库。 建议将默认数据馈送库用于此目的，但您可以手动将内容类型添加到任何库。 有关详细信息，请参阅[创建或自定义数据馈送库 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 26
   
 6.  保存文档。 此数据服务文档作为一个物理文件 (.atomsvc) 存储在为此内容类型配置的内容库中。  
   
- 若要使用数据服务文档，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中打开 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 工作簿，并在“导入数据”向导中选择 **“从数据馈送”** 选项。 当系统提示时，用户将指定数据服务文档的 SharePoint URL 以开始数据导入操作。 有关详细信息，请参阅[使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 若要使用数据服务文档，可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中打开 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 工作簿，并在“导入数据”向导中选择 **“从数据馈送”** 选项。 当系统提示时，用户将指定数据服务文档的 SharePoint URL 以开始数据导入操作。 有关详细信息，请参阅 [使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="securedsdoc"></a> 保护数据服务文档  
  数据服务文档继承包含它的库的权限。 对项设置的权限将确定用户是否可以打开、修改或删除数据服务文档。  
@@ -95,7 +100,7 @@ caps.handback.revision: 26
   
 |任务|SharePoint 权限要求|  
 |----------|----------------------------------------|  
-|将数据馈送导入到已启用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的工作簿。|针对库中数据服务文档库的查看权限。|  
+|将数据馈送导入到已启用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的工作簿。|针对库中数据服务文档库的查看权限。|  
 |在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序中，刷新以前通过馈送检索到的数据。|不适用。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序使用嵌入的 HTTP 连接信息，直接连接到提供馈送的数据服务和应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端应用程序不使用数据服务文档。|  
 |在 SharePoint 场中，作为计划的任务刷新数据，而无需任何用户输入。|不适用。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务使用嵌入的 HTTP 连接信息，直接连接到提供馈送的数据服务和应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务不使用数据服务文档。|  
 |删除库中的数据服务文档|对于库的“参与讨论”权限。|  
@@ -113,7 +118,7 @@ caps.handback.revision: 26
 ##  <a name="usedsdoc"></a> 下一步：使用数据服务文档  
  若要使用你在 SharePoint 库中创建的数据服务文档，可以使用 **数据源中的**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] “从数据馈送”导入选项。 有关说明，请参阅[使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

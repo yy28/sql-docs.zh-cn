@@ -1,36 +1,41 @@
 ---
-title: "数据挖掘架构行集 (SSA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "架构行集 [Analysis Services], 数据挖掘"
-  - "数据挖掘 [Analysis Services], 查询"
-  - "挖掘模型内容"
-  - "数据挖掘 [Analysis Services], 架构行集"
-  - "架构行集 [Analysis Services], 检索"
-  - "数据挖掘 [Analysis Services], 故障排除"
+title: "数据挖掘架构行集 (SSAs) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘架构行集 (SSA)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，许多现有 OLE DB 数据挖掘架构行集已作为可以使用数据挖掘扩展插件 (DMX) 语句轻松查询的一组系统表公开。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
+# <a name="data-mining-schema-rowsets-ssas"></a>数据挖掘架构行集 (SSA)
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，许多现有 OLE DB 数据挖掘架构行集已作为可以使用数据挖掘扩展插件 (DMX) 语句轻松查询的一组系统表公开。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
   
 > [!NOTE]  
->  还可以使用 XMLA 来查询数据挖掘架构行集。 有关如何在 SQL Server Management Studio 中执行此操作的详细信息，请参阅[使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
+>  还可以使用 XMLA 来查询数据挖掘架构行集。 有关如何在 SQL Server Management Studio 中执行此操作的详细信息，请参阅 [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
   
-## 数据挖掘架构行集列表  
+## <a name="list-of-data-mining-schema-rowsets"></a>数据挖掘架构行集列表  
  下表列出了可能对查询和监视有用的数据挖掘架构行集。  
   
 |行集名称|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  表中的列表不完整；它仅显示针对疑难解答可能最受关注的那些行集。  
   
-## 示例  
+## <a name="examples"></a>示例  
  下面的部分提供了一些针对数据挖掘架构行集的查询示例。  
   
-### 示例 1：列出数据挖掘服务  
+### <a name="example-1-list-data-mining-services"></a>示例 1：列出数据挖掘服务  
  以下查询返回在当前服务器上可用的挖掘服务（也就是启用的算法）列表。 为每个挖掘服务提供的列包括可由每个算法使用的建模标志和内容类型、每个服务的 GUID，以及可能已为每个服务添加的任何预测限制。  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### 示例 2：列出挖掘模型参数  
+### <a name="example-2-list-mining-model-parameters"></a>示例 2：列出挖掘模型参数  
  下面的示例返回创建指定挖掘模型时所使用的参数：  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### 示例 3：列出所有行集  
+### <a name="example-3-list-all-rowsets"></a>示例 3：列出所有行集  
  下面的示例返回在当前服务器上可用的行集的综合性列表：  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

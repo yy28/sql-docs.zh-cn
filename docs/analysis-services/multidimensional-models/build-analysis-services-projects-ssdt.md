@@ -1,30 +1,35 @@
 ---
-title: "生成 Analysis Services 项目 (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "项目 [Analysis Services], 生成"
-  - "Business Intelligence Development Studio, 项目生成 [Analysis Services]"
+title: "生成 Analysis Services 项目 (SSDT) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- projects [Analysis Services], building
+- Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 30763929d7f46a24b25d48967548274f694f1f87
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 生成 Analysis Services 项目 (SSDT)
+# <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
   可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，就像在 Visual Studio 中生成任何编程项目一样。 生成项目时，会在输出目录中创建一组 XML 文件。 这些 XML 文件使用 Analysis Services 脚本语言 (ASSL)，此脚本语言是 XML 方言，可供包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在内的客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行通信以创建或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。 这些 XML 文件用于将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-## 生成项目  
+## <a name="building-a-project"></a>生成项目  
  生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将在输出文件夹中生成一组完整的 XML 文件，其中包含生成此项目中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库对象所需的所有必要的 ASSL 命令。 如果项目先前已生成并针对活动配置指定了增量部署，则 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 还将生成一个 XML 文件，其中包含对已部署对象执行增量更新所用的 ASSL 命令。 此 XML 文件将写入项目的 ..\obj\\<active configuration\> 文件夹。 当部署和处理非常庞大的项目或数据库时，使用增量生成可以节省时间。  
   
 > [!NOTE]  
@@ -52,13 +57,13 @@ caps.handback.revision: 34
   
 |文件（在 obj 文件夹中）|Description|  
 |-----------------------------|-----------------|  
-|\<Configuration Name>\LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
+|\<配置名称 > \LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
   
- 这些 XML 文件不包含部署过程中构造的 \<Create> 标记和 \<Alter> 标记。  
+ 这些 XML 文件不包含\<创建 > 和\<Alter > 标记，在部署过程中构造。  
   
  还会将被引用程序集（不包括标准系统和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集）复制到输出目录。 引用解决方案中的其他项目时，首先使用相应的项目配置以及由项目引用建立的生成依赖项生成这些项目，然后将这些项目复制到项目输出文件夹。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

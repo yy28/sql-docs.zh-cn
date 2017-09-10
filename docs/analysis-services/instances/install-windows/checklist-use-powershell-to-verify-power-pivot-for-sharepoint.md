@@ -1,27 +1,32 @@
 ---
-title: "核对清单：使用 PowerShell 验证 Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "清单： 使用 PowerShell 验证 Power Pivot for SharePoint |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
   若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
   
 |||  
 |-|-|  
-|![PowerShell 相关内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 相关内容")|本主题下方包含了一个完整的 PowerShell 脚本。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。|  
+|![PowerShell 相关内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")|本主题下方包含了一个完整的 PowerShell 脚本。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。|  
   
 ||  
 |-|  
@@ -31,22 +36,22 @@ caps.handback.revision: 25
   
 |||  
 |-|-|  
-|[准备 PowerShell 环境](#bkmk_prerequisites)<br /><br /> [症状和建议操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服务](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 和 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot 服务应用程序和代理](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [数据库](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [计时器作业](#bkmk_timer_jobs)<br /><br /> [运行状况规则](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 日志](#bkmk_logs)<br /><br /> [MSOLAP 访问接口](#bkmk_msolap)<br /><br /> [ADOMD.Net 客户端库](#bkmk_adomd)<br /><br /> [运行状况数据收集规则](#bkmk_health_collection)<br /><br /> [解决方案](#bkmk_solutions)<br /><br /> [手动验证步骤](#bkmk_manual)<br /><br /> [更多资源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 脚本](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
+|[准备 PowerShell 环境](#bkmk_prerequisites)<br /><br /> [症状和建议操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服务](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 和 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot 服务应用程序和代理](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [“数据库”](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [计时器作业](#bkmk_timer_jobs)<br /><br /> [运行状况规则](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 日志](#bkmk_logs)<br /><br /> [MSOLAP 访问接口](#bkmk_msolap)<br /><br /> [ADOMD.Net 客户端库](#bkmk_adomd)<br /><br /> [运行状况数据收集规则](#bkmk_health_collection)<br /><br /> [解决方案](#bkmk_solutions)<br /><br /> [手动验证步骤](#bkmk_manual)<br /><br /> [更多资源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 脚本](#bkmk_full_script)|![powershell 验证 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell 验证 powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> 准备 PowerShell 环境  
  本章节的步骤旨在准备 PowerShell 环境。 这些不一定是必需步骤，具体视脚本环境的当前配置方式而定。  
   
  **PowerShell 权限**  
   
- 以**管理员权限**打开 Powershell 窗口或 PowerShell ISE（集成脚本环境）。 如果您不具备管理员权限，则在运行命令时，可能会显示类似以下内容的错误消息：  
+ 以 **管理员权限**打开 Powershell 窗口或 PowerShell ISE（集成脚本环境）。 如果您不具备管理员权限，则在运行命令时，可能会显示类似以下内容的错误消息：  
   
  Get-SPLogEvent：需要拥有计算机的**管理员权限**才能运行此 cmdlet。  
   
- **SharePoint 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] **模块  
+ **SharePoint 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 模块  
   
  在运行 SharePoint 相关 cmdlet 时，如果显示类似以下内容的错误消息，请运行 Add-PSSnapin 命令：  
   
- 无法将“Get-PowerPivotSystemService”术语识别为 cmdlet、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
+ 无法将“Get-PowerPivotSystemService”项 **识别为 cmdlet**、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包括路径，请验证路径是否正确并重试。  
   
 ```  
 Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
@@ -58,16 +63,16 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot in sharepoint general application set](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot in sharepoint general application set")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置” ，然后单击 **中的“管理面板”****[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![在 sharepoint 常规应用程序集中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序集中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置” ，然后单击 **中的“管理面板”****[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 症状和建议操作  
  下表列出了症状或问题，以及本主题的建议章节（旨在帮助您解决问题）。  
   
 |故障现象|参阅章节|  
 |-------------|-----------------|  
-|未运行数据刷新|请参阅[计时器作业](#bkmk_timer_jobs)章节，并验证 **联机 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据刷新计时器作业**是否处于联机状态。|  
+|未运行数据刷新|请参阅 [计时器作业](#bkmk_timer_jobs) 章节，并验证 **联机 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据刷新计时器作业** 是否处于联机状态。|  
 |管理面板数据陈旧|请参阅 [计时器作业](#bkmk_timer_jobs) 章节，并验证 **“管理面板处理计时器作业”** 是否处于联机状态。|  
-|管理面板的某些部分|如果你将 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装到具有管理中心拓扑但没有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 的场中，并且希望对 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板中的内置报表具有完全访问权限，则必须下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查询处理和场中服务器运行状况的报告数据。 请参阅 [ADOMD.Net 客户端库](#bkmk_adomd)章节和[在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/zh-cn/c2372180-e847-4cdb-b267-4befac3faf7e) 主题。|  
+|管理面板的某些部分|如果你将 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装到具有管理中心拓扑但没有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 的场中，并且希望对 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板中的内置报表具有完全访问权限，则必须下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查询处理和场中服务器运行状况的报告数据。 请参阅 [ADOMD.Net 客户端库](#bkmk_adomd) 章节和 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)主题。|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows 服务  
  本章节中的脚本用于验证 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式下的实例。 验证服务正在 **运行**。  
@@ -106,7 +111,7 @@ SQL Server PowerPivot Service Application Online {Default PowerPivot Service App
  **PowerPivotEngineSerivce**  
   
 > [!NOTE]  
-> 如果您使用的是 SharePoint 2013，请 **跳过该脚本** 。 PowerPivotEngineService 不是 SharePoint 2013 部署的一部分。 如果你在 SharePoint 2013 上运行 Get-PowerPivotEngineService cmdlet，那么你将看到类似以下内容的错误消息。 即使您已运行了本主题先决条件中说明的 Add-PSSnapin 命令，仍会返回该错误消息。  
+>  如果您使用的是 SharePoint 2013，请**跳过该脚本** 。 PowerPivotEngineService 不是 SharePoint 2013 部署的一部分。 如果你在 SharePoint 2013 上运行 Get-PowerPivotEngineService cmdlet，那么你将看到类似以下内容的错误消息。 即使您已运行了本主题先决条件中说明的 Add-PSSnapin 命令，仍会返回该错误消息。  
 >   
 >  无法将“Get-PowerPivotEngineService”项识别为 cmdlet 的名称  
   
@@ -177,7 +182,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![注释](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注释")也可在管理中心页面“管理服务应用程序”上验证应用程序池。 单击服务应用程序的名称，然后单击功能区中的 **“属性”** 。  
+ ![请注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")还可以在管理中心页上验证了应用程序池**管理服务应用程序**。 单击服务应用程序的名称，然后单击功能区中的 **“属性”** 。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 和 Excel Service 应用程序代理**  
   
@@ -258,7 +263,7 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> 运行状况规则  
- SharePoint 2013 部署中包含少量规则。 有关各个 SharePoint 环境规则的完整列表和规则使用方法的说明，请参阅[配置 Power Pivot 运行状况规则](../../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
+ SharePoint 2013 部署中包含少量规则。 有关各个 SharePoint 环境规则的完整列表和规则使用方法的说明，请参阅 [配置 Power Pivot 运行状况规则](../../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -281,11 +286,11 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 和 ULS 日志  
  **Windows 事件日志**  
   
- 下面的命令将在 Windows 事件日志中搜索与 SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例相关的事件。 有关禁用事件或更改事件级别的详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 (Power Pivot for SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)。  
-  
+ 下面的命令将在 Windows 事件日志中搜索与 SharePoint 模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例相关的事件。 有关禁用事件或更改的事件级别的信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 &#40;Power Pivot for SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 
  **服务名称：** MSOLAP$POWERPIVOT  
   
- **Windows 服务中的显示名称：**SQL Server Analysis Services (POWERPIVOT)  
+ **Windows 服务中的显示名称：** SQL Server Analysis Services (POWERPIVOT)  
   
 ```  
 Get-EventLog "application" | Where-Object {$_.source -like "msolap`$powerpivot*"}  |select timegenerated, entrytype , source, message | format-table -property * -autosize | out-default  
@@ -360,7 +365,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/zh-cn/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据提供程序](http://technet.microsoft.com/library/hh758436.aspx)。  
+ 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据提供程序](http://technet.microsoft.com/library/hh758436.aspx)。  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net 客户端库  
   
@@ -377,7 +382,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 有关详细信息，请参阅[在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/zh-cn/c2372180-e847-4cdb-b267-4befac3faf7e)。  
+ 有关详细信息，请参阅 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)。  
   
 ##  <a name="bkmk_health_collection"></a> 运行状况数据收集规则  
  验证 **“状态”** 是否联机，以及 **“已启用”** 是否为 True。  
@@ -425,12 +430,12 @@ powerpivotfarm.wsp   Online     True         GlobalDeployed {uesql11spoint2}
 powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}  
 ```  
   
- 有关如何部署 SharePoint 解决方案的详细信息，请参阅[部署解决方案包 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc262995\(v=office.14\).aspx)。  
+ 有关如何部署 SharePoint 解决方案的详细信息，请参阅 [部署解决方案包 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc262995\(v=office.14\).aspx)。  
   
 ##  <a name="bkmk_manual"></a> 手动验证步骤  
  本章节介绍无法借由 PowerShell cmdlet 完成的验证步骤。  
   
- **计划的数据刷新：** 将工作簿的刷新计划配置为 **“也尽快刷新”**。  有关详细信息，请参阅[计划数据刷新和不支持 Windows 身份验证的数据源 (Power Pivot for SharePoint)](../../../analysis-services/power-pivot-sharepoint/schedule data refresh and data sources - no windows authentication.md) 中的“验证数据刷新”部分。  
+ **计划的数据刷新：** 将工作簿的刷新计划配置为 **“也尽快刷新”**。  有关详细信息，请参阅[计划数据刷新和不支持 Windows 身份验证的数据源 (Power Pivot for SharePoint)](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md) 中的“验证数据刷新”部分。  
   
 ##  <a name="bkmk_more_resources"></a> 更多资源  
  [Windows PowerShell 中的 Web 服务器 (IIS) 管理 Cmdlet](http://technet.microsoft.com/library/ee790599.aspx)。  

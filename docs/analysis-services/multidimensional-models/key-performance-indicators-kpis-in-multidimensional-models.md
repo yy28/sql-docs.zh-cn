@@ -1,38 +1,43 @@
 ---
-title: "多维模型中的关键绩效指标 (KPI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "查看关键绩效指标"
-  - "关键绩效指标 (KPI) [Analysis Services]"
-  - "KPI [Analysis Services]"
-  - "OLAP 对象 [Analysis Services], 绩效指标"
-  - "权重 [Analysis Services]"
-  - "显示关键绩效指标 (KPI)"
-  - "父 KPI [Analysis Services]"
-  - "子 KPI"
+title: "密钥多维模型中的性能指标 (Kpi) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多维模型中的关键绩效指标 (KPI)
+# <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
   在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
- KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅[使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.Kpi> 对象由基本信息、目标、获取的实际值、状态值、走向值以及在其中查看 KPI 的文件夹组成。 基本信息包括 KPI 的名称和说明。 目标是计算结果为数字的 MDX 表达式。 实际值是计算结果为数字的 MDX 表达式。 状态值和走向值是计算结果为数字的 MDX 表达式。 文件夹是向客户端显示 KPI 时的推荐位置。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 43
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用 KPI 的一个主要优点为，它们是基于服务器的 KPI，可以由不同的客户端应用程序使用。 与来自个别客户端应用程序的个别真实版本相比较，基于服务器的 KPI 只提供单个真实版本。 此外，在服务器上而不是在每台客户端计算机上执行有时很复杂的计算可能对性能有好处。  
   
-## 常用 KPI 术语  
+## <a name="common-kpi-terms"></a>常用 KPI 术语  
  下表提供了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中常见 KPI 术语的定义。  
   
 |术语|定义|  
@@ -58,15 +63,15 @@ caps.handback.revision: 43
 |当前时间成员|一个返回标识 KPI 临时上下文的成员的 MDX 表达式。|  
 |Weight|一个为 KPI 分配相对重要性的 MDX 数值表达式。 如果将 KPI 分配给一个父级 KPI，则在计算父级 KPI 的值时，将使用权重按比例调整子级 KPI 值的结果。|  
   
-## 父级 KPI  
+## <a name="parent-kpis"></a>父级 KPI  
  一个单位可以跟踪不同级别的不同商务跃点。 例如，仅使用两个或三个 KPI 即可测定整个公司的业务绩效，但是这些公司范围内的 KPI 可能基于三个或四个由整个公司内的业务单元跟踪的其他 KPI。 同样，公司内的业务单元可以使用不同的统计信息来计算相同的 KPI，其结果汇总到公司范围内的 KPI 中。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可让你定义 KPI 之间的父子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
   
-## 权重  
+## <a name="weights"></a>权重  
  还可以将权重分配给子级 KPI。 当计算父级 KPI 的值时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用权重按比例调整子级 KPI 的结果。  
   
-## 检索和显示 KPI  
+## <a name="retrieving-and-displaying-kpis"></a>检索和显示 KPI  
  KPI 的显示内容依赖于客户端应用程序的实现。 例如，在多维数据集设计器的 **KPI** 选项卡上的工具栏上选择 **“浏览器视图”** 可说明一种可能的客户端实现，其中图形用于显示状态指示器和走向指示器，显示文件夹用于对 KPI 进行分组，并且子级 KPI 显示在父级 KPI 下。  
   
  您可以使用 MDX 函数检索 KPI 的各个部分（如值或目标）以便在 MDX 表达式、语句以及脚本中使用。  

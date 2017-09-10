@@ -1,32 +1,37 @@
 ---
-title: "创建数据源（SSAS 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.sqlserverstudio.impersonationinfo.f1"
-  - "sql13.asvs.connectionmanager.f1"
-  - "sql13.asvs.datasourcedesigner.f1"
-helpviewer_keywords: 
-  - "模拟 [Analysis Services]"
-  - "数据源 [Analysis Services], 创建"
-  - "安全性 [Analysis Services], 数据源连接"
+title: "创建数据源 (SSAS 多维) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+- sql13.asvs.connectionmanager.f1
+- sql13.asvs.datasourcedesigner.f1
+helpviewer_keywords:
+- impersonation [Analysis Services]
+- data sources [Analysis Services], creating
+- security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 61
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 61
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 715f23cb80c0de16697b3aa66a4fb07669ad169e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建数据源（SSAS 多维）
+# <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型中，数据源对象表示与您正从其处理（或导入）数据的数据源的连接。 一个多维模型必须包含至少一个数据源对象，但您可以添加更多对象以便合并来自若干数据仓库的数据。 使用本主题中的说明可为您的模型创建数据源对象。 有关在此对象上设置属性的详细信息，请参阅[设置数据源属性（SSAS 多维）](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)。  
   
  本主题包含以下各节：  
@@ -51,10 +56,10 @@ caps.handback.revision: 61
 ##  <a name="bkmk_impersonation"></a> 设置凭据和模拟选项  
  数据源连接有时可以使用 Windows 身份验证或数据库管理系统提供的身份验证服务，例如在连接到 SQL Azure 数据库时使用 SQL Server 身份验证。 您指定的帐户必须能够登录到远程数据库服务器并对外部数据库具有读取权限。  
   
-### Windows 身份验证  
+### <a name="windows-authentication"></a>Windows 身份验证  
  使用 Windows 身份验证的连接在数据源设计器的 **“模拟信息”** 选项卡上指定。 使用此选项卡选择在连接到外部数据源时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行所基于的帐户。 并非在所有情况下都可以使用所有选项。 有关这些选项以及何时使用它们的详细信息，请参阅[设置模拟选项（SSAS - 多维）](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
-### 数据库身份验证  
+### <a name="database-authentication"></a>数据库身份验证  
  作为对 Windows 身份验证的替代方法，您可以指定使用数据库管理系统提供的身份验证服务的连接。 在某些情况下，需要使用数据库身份验证。 要求使用数据库身份验证的情况包括使用 SQL Server 身份验证连接到 Windows Azure SQL Database，或访问在不同的操作系统上或不受信任的域中运行的关系数据源。  
   
  对于使用数据库身份验证的数据源，在连接字符串上指定数据库登录名的用户名和密码。 当您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模型中设置数据源连接时，如果您在连接管理器中输入某一用户名和密码，则凭据将添加到连接字符串中。 请记住，应指定对数据具有读取权限的用户标识。  
@@ -66,7 +71,7 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  默认情况下， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不会将密码与连接字符串一起保存。 如果未保存密码，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在需要密码时提示您输入密码。 如果选择保存密码，则密码以加密格式存储在数据连接字符串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用包含数据源的数据库的数据库加密密钥加密该数据源的密码信息。 对连接信息进行加密之后，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户或密码，否则无法恢复加密的信息。 有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。  
   
-### 为数据挖掘对象定义模拟信息  
+### <a name="defining-impersonation-information-for-data-mining-objects"></a>为数据挖掘对象定义模拟信息  
  数据挖掘查询可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务帐户的上下文中执行，但是还可以在提交此查询的用户的上下文中执行，也可以在指定用户的上下文中执行。 执行查询所在的上下文可能会影响查询结果。 对于数据挖掘 **OPENQUERY** 类型操作，你可能希望数据挖掘查询在当前用户的上下文中执行或在指定用户（无论此用户是否执行此查询）的上下文中执行，而不是在服务帐户的上下文中执行。 这使得查询使用受限安全凭据执行。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模拟当前用户或模拟指定用户，则请选择 **“使用特定用户名和密码”** 选项或 **“使用当前用户的凭据”** 选项。  
   
 ##  <a name="bkmk_steps"></a> 使用数据源向导创建数据源  
@@ -83,11 +88,11 @@ caps.handback.revision: 61
   
      新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
-     您可以选择一个不同的访问接口来访问其他数据源。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所支持的访问接口和关系数据库的列表，请参阅[支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+     您可以选择一个不同的访问接口来访问其他数据源。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的访问接口和关系数据库的列表，请参阅 [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
 5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”访问接口，请输入以下信息：  
   
-    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果将服务器安装为命名实例，则必须包括实例名称（例如，\<computername>\\<instancename\>）。  
+    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装，则必须包括实例名称 (例如， \<computername >\\< instancename\>)。  
   
     2.  **“登录到服务器”** 指定将对连接进行身份验证的方式。 **“使用 Windows 身份验证”** 使用 Windows 身份验证。 **“使用 SQL Server 身份验证”** 为支持混合模式身份验证的 Windows Azure SQL Database 或 SQL Server 实例指定数据库用户登录名。  
   
@@ -136,7 +141,7 @@ caps.handback.revision: 61
   
  **编辑连接字符串**  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的解决方案资源管理器中双击数据源对象。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的解决方案资源管理器中双击数据源对象。  
   
 2.  单击 **“编辑”**，然后在左侧的导航窗格中单击 **“所有”** 。  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 61
  您可以创建多个数据源对象，以便支持与其他数据源的连接。 每个数据源都必须具有可以用来创建关系的列。  
   
 > [!NOTE]  
->  如果定义了多个数据源，并且在单个查询中从多个源查询数据（例如对于雪花型维度），则必须定义支持使用 **OpenRowset** 的远程查询的数据源。 通常，此数据源将为 Microsoft SQL Server 数据源。  
+>  如果定义了多个数据源，并且在单个查询中从多个源查询数据（例如对于雪花型维度），则必须定义支持使用 **OpenRowset**的远程查询的数据源。 通常，此数据源将为 Microsoft SQL Server 数据源。  
   
  使用多个数据源的要求包括：  
   
@@ -172,7 +177,7 @@ caps.handback.revision: 61
   
 5.  查找并选择您所添加的表。 右键单击该表，然后选择“新建关系”。 选择包含匹配数据的源列和目标列。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [支持的数据源（SSAS - 多维）](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

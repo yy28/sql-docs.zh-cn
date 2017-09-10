@@ -1,58 +1,63 @@
 ---
-title: "Microsoft 时序算法技术参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ARTXP"
-  - "HISTORICAL_MODEL_GAP 参数"
-  - "AUTO_DETECT_PERIODICITY 参数"
-  - "时序算法 [Analysis Services]"
-  - "ARIMA"
-  - "INSTABILITY_SENSITIVITY 参数"
-  - "PERIODICITY_HINT 参数"
-  - "MAXIMUM_SERIES_VALUE 参数"
-  - "时序 [Analysis Services]"
-  - "MINIMUM_SUPPORT 参数"
-  - "HISTORIC_MODEL_COUNT 参数"
-  - "FORECAST_METHOD 参数"
-  - "MISSING_VALUE_SUBSTITUTION 参数"
-  - "MINIMUM_SERIES_VALUE 参数"
-  - "COMPLEXITY_PENALTY 参数"
-  - "PREDICTION_SMOOTHING 参数"
+title: "Microsoft Time Series Algorithm Technical Reference |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ARTXP
+- HISTORICAL_MODEL_GAP parameter
+- AUTO_DETECT_PERIODICITY parameter
+- time series algorithms [Analysis Services]
+- ARIMA
+- INSTABILITY_SENSITIVITY parameter
+- PERIODICITY_HINT parameter
+- MAXIMUM_SERIES_VALUE parameter
+- time series [Analysis Services]
+- MINIMUM_SUPPORT parameter
+- HISTORIC_MODEL_COUNT parameter
+- FORECAST_METHOD parameter
+- MISSING_VALUE_SUBSTITUTION parameter
+- MINIMUM_SERIES_VALUE parameter
+- COMPLEXITY_PENALTY parameter
+- PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 6d4e3cded028a4674ddb432c322b8fc18106db30
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 时序算法技术参考
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 时序算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：  
   
 -   ARTXP 算法是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的，针对预测序列中的下一个可能值进行了优化。  
   
 -   ARIMA 算法是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中添加的，用于提高长期预测的准确性。  
   
- 默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分别使用每个算法给模型定型，然后结合结果为数目可变的预测产生最佳预测。 也可以基于您的数据和预测要求选择仅使用其中的一个算法。 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 中，还可以自定义用于在预测过程中控制算法混合的截止点。  
+ 默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分别使用每个算法给模型定型，然后结合结果为数目可变的预测产生最佳预测。 也可以基于您的数据和预测要求选择仅使用其中的一个算法。 在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]中，还可以自定义用于在预测过程中控制算法混合的截止点。  
   
  本主题提供以下方面的附加信息：每个算法的实现原理，以及可以如何通过设置参数来微调分析和预测结果对算法进行自定义。  
   
-## Microsoft 时序算法的实现  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 研究院开发了在 SQL Server 2005 中使用的原始 ARTXP 算法，并且将该实现基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 因此，该 ARTXP 算法可描述为用于表示周期性时序数据的自动回归树模型。 此算法将数目可变的过去项与要预测的每个当前项相关。 名称 ARTXP 派生自以下事实，即自动回归树方法（一种 ART 算法）应用于多个未知的先前状态。 有关 ARTXP 算法的详细说明，请参阅[序分析的自动回归树模型](http://go.microsoft.com/fwlink/?LinkId=45966)。  
+## <a name="implementation-of-the-microsoft-time-series-algorithm"></a>Microsoft 时序算法的实现  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 研究院开发了在 SQL Server 2005 中使用的原始 ARTXP 算法，并且将该实现基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 因此，该 ARTXP 算法可描述为用于表示周期性时序数据的自动回归树模型。 此算法将数目可变的过去项与要预测的每个当前项相关。 名称 ARTXP 派生自以下事实，即自动回归树方法（一种 ART 算法）应用于多个未知的先前状态。 有关 ARTXP 算法的详细说明，请参阅 [序分析的自动回归树模型](http://go.microsoft.com/fwlink/?LinkId=45966)。  
   
  该 ARIMA 算法已添加到 SQL Server 2008 的 Microsoft 时序算法中，用于提高长期预测的准确性。 它是 Box 和 Jenkins 描述的用于计算自动回归集成变动平均值的过程的实现。 通过 ARIMA 方法，可以确定按时间顺序进行的观察中的依赖关系，并且可以将随机冲量作为模型的一部分纳入。 该 ARIMA 方法还支持倍乘季节性。 想要了解有关 ARIMA 算法的详细信息的读者最好阅读 Box 和 Jenkins 在论坛上发布的内容；本节旨在提供关于 ARIMA 算法如何在 Microsoft 时序算法中实施的特定详细信息。  
   
  默认情况下，Microsoft 时序算法通过使用 ARIMA 和 ARTXP 这两种算法并混合所得到的结果来改进预测准确性。 如果您想要仅使用特定的方法，则可以将算法参数设置为仅使用 ARTXP 或仅使用 ARIMA，或者控制对算法结果进行组合的方式。 请注意，ARTXP 算法支持交叉预测，但 ARIMA 算法不支持。 因此，只有在使用混合算法或将模型配置为仅使用 ARTXP 时，交叉预测才可用。  
   
-## 理解 ARIMA 差分阶数  
+## <a name="understanding-arima-difference-order"></a>理解 ARIMA 差分阶数  
   本节介绍理解 ARIMA 模型所需的一些术语，并且论述在 Microsoft 时序算法中的特定“差分”实现方式。 有关这些项和概念的完整解释，我们建议您参阅 Box 和 Jenkins 的著述。  
   
 -   项是数学方程式中的一个组成部分。 例如，多项式方程式中的项可以包括变量和常量的组合。  
@@ -75,19 +80,19 @@ caps.handback.revision: 36
   
  只要 ARIMA_AR_ORDER 的值大于 1，该算法就将时序乘以多项式项。 如果多项式公式的一个项解析为 1 的根或接近 1，则该算法将尝试通过删除该项并将差分阶数增加 1，保持该模型的稳定性。 如果差分阶数已是最大值，则该项将删除并且差分阶数不更改。  
   
- 例如，如果 AR 的值 = 2，则生成的 AR 多项式项可能如下：`1 – 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`。 请注意项 `(1- .9B)`，它具有大约 0.9 的根。 该算法从多项式公式中清除此项，但无法将差分阶数增加 1，因为该差分阶数已处于最大值 2。  
+ 例如，如果 AR 的值 = 2，则生成的 AR 多项式项可能如下： `1 – 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`。 请注意项 `(1- .9B)` ，它具有大约 0.9 的根。 该算法从多项式公式中清除此项，但无法将差分阶数增加 1，因为该差分阶数已处于最大值 2。  
   
- 务须注意的是：唯一能够**强制**更改差分阶数的方式就是使用不受支持的参数 ARIMA_DIFFERENCE_ORDER。 这个隐藏参数控制算法对时序执行差分的次数，可以通过键入自定义算法参数来设置该参数。 但是，我们不建议您更改此值，除非您已经做好试验的准备，并且熟悉会涉及到的计算。 还请注意，目前没有任何机制（包括隐藏参数）可供您控制触发差分阶数增加的阈值。  
+ 务须注意的是：唯一能够 **强制** 更改差分阶数的方式就是使用不受支持的参数 ARIMA_DIFFERENCE_ORDER。 这个隐藏参数控制算法对时序执行差分的次数，可以通过键入自定义算法参数来设置该参数。 但是，我们不建议您更改此值，除非您已经做好试验的准备，并且熟悉会涉及到的计算。 还请注意，目前没有任何机制（包括隐藏参数）可供您控制触发差分阶数增加的阈值。  
   
  最后要注意的是，上述公式为简化的情况，没有季节性提示。 如果提供季节性提示，则对于每个季节性提示，单独的 AR 多项式项将添加到方程式的左侧，并且将应用相同的策略以便消除可能导致差分序列不稳定的项。  
   
-## 自定义 Microsoft 时序算法  
+## <a name="customizing-the-microsoft-time-series-algorithm"></a>自定义 Microsoft 时序算法  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持以下参数，这些参数会影响所生成挖掘模型的行为、性能和精确性。  
   
 > [!NOTE]  
->  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 时序算法；但是，仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中才支持某些高级功能，包括用于自定义时序分析的参数。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 各个版本支持的功能](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)。  
+>  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 时序算法；但是，仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中才支持某些高级功能，包括用于自定义时序分析的参数。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 各个版本支持的功能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。  
   
-### 季节性检测  
+### <a name="detection-of-seasonality"></a>季节性检测  
  ARIMA 和 ARTXP 算法都支持季节性检测或周期检测。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在定型之前使用快速傅立叶变换检测季节性。 但是，您可以通过设置算法参数，影响季节性检测以及时序分析的结果。  
   
 -   通过更改 AUTODETECT_SEASONALITY 的值，可以影响生成的时间段的可能数目。  
@@ -97,7 +102,7 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  ARTXP 和 ARIMA 算法都对季节性提示非常敏感。 因此，提供错误提示可能会对结果产生不利影响。  
   
-### 选择算法和指定算法混合  
+### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>选择算法和指定算法混合  
  默认情况下，在选择 MIXED 选项时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将算法组合起来并向它们分配相等的权重。 不过，在 Enterprise Edition 中，可以指定特定的算法，或者可以通过设置参数来自定义结果中各算法的比例，该参数针对短期预测或长期预测为结果加权。 默认情况下，FORECAST_METHOD 参数将设置为 MIXED，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用这两个算法，并对其值加权以最大化每个算法的强度。  
   
 -   若要控制算法选择，可以设置 FORECAST_METHOD 参数。  
@@ -120,13 +125,13 @@ caps.handback.revision: 36
   
  下图演示当 PREDICTION_SMOOTHING 设置为默认值 0.5 时模型如何混合使用这两个算法。 ARIMA 和 ARTXP 开始时权重相等，但随着预测步骤数增加，ARIMA 的权重越来越大。  
   
- ![时序算法混合的默认曲线](../../analysis-services/data-mining/media/time-series-mixing-default.gif "时序算法混合的默认曲线")  
+ ![对于组合时序算法的默认曲线](../../analysis-services/data-mining/media/time-series-mixing-default.gif "多种时序算法的默认曲线")  
   
  而下图演示当 PREDICTION_SMOOTHING 设置为 0.2 时如何混合使用这两个算法。 对于步骤 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]，模型为 ARIMA 加的权重为 0.2，为 ARTXP 加的权重为 0.8。 此后，ARIMA 的权重将按指数规律增大，而 ARTXP 的权重将按指数规律减小。  
   
- ![时序模型混合的衰减曲线](../../analysis-services/data-mining/media/time-series-blending-curve.gif "时序模型混合的衰减曲线")  
+ ![有关时间系列模型混合 decay 曲线](../../analysis-services/data-mining/media/time-series-blending-curve.gif "时间系列模型混合 decay 曲线")  
   
-### 设置算法参数  
+### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的参数。  
   
 |参数|Description|  
@@ -144,7 +149,7 @@ caps.handback.revision: 36
 |*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 \{1\}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
 |*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5：默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
   
-### 建模标志  
+### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
   
 |建模标志|Description|  
@@ -152,10 +157,10 @@ caps.handback.revision: 36
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
 |MODEL_EXISTENCE_ONLY|表示该列将被视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
   
-## 要求  
+## <a name="requirements"></a>要求  
  时序模型中必须包含一个含有唯一值的 Key Time 列、输入列以及至少一个可预测列。  
   
-### 输入列和可预测列  
+### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持特定的输入列内容类型、可预测列内容类型和建模标志，如下表所列。  
   
 |列|内容类型|  
@@ -166,9 +171,9 @@ caps.handback.revision: 36
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

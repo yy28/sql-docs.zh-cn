@@ -1,31 +1,36 @@
 ---
-title: "配置磁盘空间使用情况 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置磁盘空间使用情况 (Power Pivot for SharePoint) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置磁盘空间使用情况 (Power Pivot for SharePoint)
+# <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>配置磁盘空间使用情况 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用主机上的磁盘空间来缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库以便更快地重新加载。 在内存中加载的每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
   
  本主题介绍了如何设置磁盘空间使用限制。  
   
  本主题并不指导如何对在内容数据库中存储的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库（嵌入在 Excel 工作簿中）进行磁盘空间管理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库可能会很大，因此对场的存储容量提出新要求。 此外，如果启用版本控制，您可能会很容易地在同一内容数据库中具有数据的多个副本，这进一步增加了内容存储所需的磁盘空间量。 尽管 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库是进行磁盘管理的重要考虑因素，但不能独立于在 SharePoint 场中存储的其他内容单独对该数据库进行管理。 当企业更频繁地使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时，需要更紧密地对磁盘空间进行监视。 还可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中跟踪 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿活动并且删除不再使用的工作簿。  
   
-## Power Pivot for SharePoint 如何管理缓存的数据库  
+## <a name="how-power-pivot-for-sharepoint-manages-cached-databases"></a>Power Pivot for SharePoint 如何管理缓存的数据库  
  为了管理缓存， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务将定期运行后台作业，以便清除内容库中具有更新版本的未使用或过期的数据库。 清除作业的目的是从内存卸载处于非活动状态的数据库，并从文件系统中删除未使用的缓存数据库。 该清除作业用于长期维护，确保数据库不会无限期保留在系统中。 在活动服务器上，数据库可能会由于服务器上的内存压力、SharePoint 中的数据库删除或内容库中数据库的更新的版本而更频繁地被删除。  
   
  尽管您不能计划该清除作业，但可以通过设置执行以下任务的服务器配置属性自定义缓存文件管理：  
@@ -34,7 +39,7 @@ caps.handback.revision: 19
   
 -   指定在达到最大磁盘空间时要删除多少数据。  
   
-## 如何检查磁盘空间使用情况  
+## <a name="how-to-check-disk-space-usage"></a>如何检查磁盘空间使用情况  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装在 SharePoint 场的应用程序服务器中。 每个安装都具有包含备份文件夹的数据字典。 备份文件夹包含 Analysis Services 实例在计算机上缓存的所有数据文件。 默认情况下，可在以下路径中找到该备份文件夹：  
   
  `%drive%:\Program Files\Microsoft SQL Server\MSAS10_50.PowerPivot\OLAP\Backup\Sandboxes\<serviceApplicationName>`  
@@ -43,7 +48,7 @@ caps.handback.revision: 19
   
  备份文件夹为在本地计算机的内存中加载的所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库提供公共的缓存存储区。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则这些应用程序都可以使用本地服务器来加载并随后缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 数据加载和缓存都是 Analysis Services 服务器操作。 同样，将在 Analysis Services 实例级别在备份文件夹上管理总磁盘空间使用量。 因此在 SharePoint 应用程序服务器上运行的单个 SQL Server Analysis Services 实例上设置限制磁盘空间使用的配置设置。  
   
- 缓存仅包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库旨在用作 Excel 工作簿的内部数据，所以数据库名称基于 GUID 而非说明性。 \<serviceApplicationName > 下的 GUID 文件夹是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库的父文件夹。 在多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
+ 缓存仅包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库旨在用作 Excel 工作簿的内部数据，所以数据库名称基于 GUID 而非说明性。 下的 GUID 文件夹 **\<serviceApplicationName >**是的父文件夹[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库。 在多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
   
  因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据可以加载到场中的任何 Analysis Services 实例上，所以也可以在场中的多个计算机上缓存相同的数据。 与磁盘空间使用情况相比，此行为更为看重性能，但如果数据已经可用于磁盘，用户可以更快地访问数据。  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 19
   
 -   [Setting low disk space alerts on Windows Server 2008（在 Windows Server 2008 上设置磁盘空间不足警报）](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
-## 如何限制用于存储缓存文件的磁盘空间量  
+## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务器上的服务”**。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 19
   
      默认值为 4 小时，这表示 4 小时或更长时间未处于活动状态的所有数据库都将从文件系统中删除。 处于非活动状态但仍在内存中的数据库将被卸载，然后从文件系统中删除。  
   
-## 如何限制数据库保留在缓存中的时间长度  
+## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>如何限制数据库保留在缓存中的时间长度  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
@@ -91,10 +96,10 @@ caps.handback.revision: 19
   
 5.  单击 **“确定”** 保存所做的更改。  
   
-## 后续步骤  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装提供运行状况规则，以便可以在服务器运行状况、配置或可用性中检测到问题时采取纠正措施。 其中某些规则使用配置设置来确定触发运行状况规则的条件。 如果您在主动优化服务器性能，则最好还要检查这些设置以便确保默认值最适合您的系统。 有关详细信息，请参阅[配置 PowerPivot 运行状况规则](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
+## <a name="next-steps"></a>后续步骤  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装提供运行状况规则，以便可以在服务器运行状况、配置或可用性中检测到问题时采取纠正措施。 其中某些规则使用配置设置来确定触发运行状况规则的条件。 如果您在主动优化服务器性能，则最好还要检查这些设置以便确保默认值最适合您的系统。 有关详细信息，请参阅 [配置 PowerPivot 运行状况规则](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

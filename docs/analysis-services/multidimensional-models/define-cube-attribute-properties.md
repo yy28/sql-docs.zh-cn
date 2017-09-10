@@ -1,26 +1,31 @@
 ---
-title: "定义多维数据集特性属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "多维数据集 [Analysis Services], 定义"
+title: "定义多维数据集特性属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 定义多维数据集特性属性
+# <a name="define-cube-attribute-properties"></a>定义多维数据集特性属性
   通过使用多维数据集特性属性，您可以为基于同一数据库维度的多维数据集维度中的维度特性指定唯一的设置。 下表介绍了多维数据集特性的属性。  
   
 |属性|Description|  
@@ -31,7 +36,7 @@ caps.handback.revision: 13
 |**AttributeHierarchyVisible**|指示属性层次结构在此多维数据集维度上是否可见。 这可以使属性层次结构在特定多维数据集或维度角色上可见。 如果基础属性层次结构不可见，则此设置不起作用。 默认值是 **True**秒。|  
 |**AttributeID**|包含属性的唯一标识符 (ID)。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义多维数据集维度属性](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [定义多维数据集层次结构属性](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

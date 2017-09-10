@@ -1,37 +1,42 @@
 ---
-title: "从模板创建多维数据集而无需使用数据源视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "从模板创建多维数据集，而不使用数据源视图 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 从模板创建多维数据集而无需使用数据源视图
+# <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
   在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
-## 选择生成方法  
+## <a name="selecting-the-build-method"></a>选择生成方法  
  在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 。 如果您不选择使用模板，则必须手动设置选项。  
   
  多维数据集模板包含预定义的度量值、度量值组、维度、层次结构和属性。 如果选择了某个模板，向导将基于模板中的对象定义来设置后续页面中的选项。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 预装了多个用于标准多维数据集的模板。 服务器管理员还可以添加专门为您的组织数据设计的多维数据集或维度模板。  
   
-## 选择维度  
+## <a name="selecting-dimensions"></a>选择维度  
  使用向导的 **“选择维度”** 页可以向多维数据集添加现有维度。 只有在项目或数据库中已存在不具有数据源的共享维度时，才会出现此页。 该页不会列出具有数据源的维度。  
   
  若要添加现有维度，请在“共享维度”列表中选择一个或多个维度，然后单击右箭头 (**>**) 按钮将这些维度移至“多维数据集维度”列表。 单击双箭头 (**>>**) 按钮可将所有维度移入该列表。  
   
-## 定义新度量值  
+## <a name="defining-new-measures"></a>定义新度量值  
  使用向导的 **“定义新度量值”** 页可以在新多维数据集中指定度量值和度量值组。 您在此处指定的度量值组将对应于生成的架构中的事实数据表。 您在此处指定的度量值将对应于表中的数值非键列。  
   
  如果使用模板创建多维数据集，该模板中的度量值将以网格格式列在 **“从模板中选择度量值”**之下。 列表中每个度量值旁边的复选框最初都处于选中状态。 如果您不希望在多维数据集中包含任何度量值，可以清除该度量值旁边的复选框。 若要添加或删除该列表中的所有度量值，请相应地选中或清除网格标题栏上的复选框。  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
 |**数据类型**|度量值的数据类型。 单击此值可更改数据类型。 创建度量值时，默认聚合类型为 **Single**。 此列设置度量值对象的 **DataType** 属性。|  
 |**聚合**|度量值的标准聚合。 单击此单元可为度量值指定标准聚合之一（或“无”）。 创建度量值时，默认聚合类型为 **Sum**。 此列设置度量值对象的 **AggregationFunction** 属性。|  
   
-## 定义新维度  
+## <a name="defining-new-dimensions"></a>定义新维度  
  使用向导的 **“定义新维度”** 页可指定新多维数据集中的维度。  
   
  如果使用模板创建多维数据集， **“从模板中选择维度”** 之下的网格将显示该模板中的维度。 您可以通过清除任何维度旁边的复选框，将该维度从多维数据集中删除。 清除网格标题栏上的复选框可以删除所有列出的维度。 如果您不使用模板，此网格则只列出“时间”维度。  
@@ -59,11 +64,11 @@ caps.handback.revision: 7
 |列|Description|  
 |------------|-----------------|  
 |**类型**|显示模板维度的维度类型。 单击此单元可更改维度的维度类型。 此列设置维度对象的 **Type** 属性。|  
-|**“添加新维度”**|显示维度名称。 单击此单元可以键入不同的名称。 此值设置维度对象的 **Name** 属性。|  
+|**Name**|显示维度名称。 单击此单元可以键入不同的名称。 此值设置维度对象的 **Name** 属性。|  
 |**SCD**|指定这是一个渐变维度 (SCD)。 选中此复选框可以向维度添加 SCD 开始日期、结束日期、原始 ID 和状态等属性。 如果使用模板创建多维数据集并且向导检测到模板维度中存在这四个属性类型，则默认情况下**SCD** 处于选中状态。|  
 |**属性**|显示要为该维度创建的属性。 列表中每个属性名称前都附有维度名称。 此列表是只读的。 完成向导操作后，可以使用维度设计器来编辑这些属性。|  
   
-## 定义时间段  
+## <a name="defining-time-periods"></a>定义时间段  
  使用向导的 **“定义时间段”** 页可以指定要包含在维度中的日期范围。 例如，您可以选择这样一个时间段：从您数据中最早年份的 1 月 1 日开始，并一直延伸到最新事务发生时间之后。 不在该范围内的事务或者不显示，或者显示为维度中的未知成员，具体取决于该维度的 **UnknownMemberVisible** 属性设置。 **UnknownMemberName** 属性指定未知成员的标题。 您也可以更改数据所使用的周的第一天（默认值为星期日）。  
   
 > [!NOTE]  
@@ -77,7 +82,7 @@ caps.handback.revision: 7
   
  所有的可用时间段均显示在维度设计器的“时间段”窗格中。 （对于基于维度表的维度，此窗格将取代“数据源视图”窗格显示。）你可以通过更改维度的“源”（时间绑定）属性设置来更改该维度的日期范围。 由于这是一个结构性的更改，所以您必须在浏览数据前重新处理该维度以及使用该维度的所有多维数据集。  
   
-## 指定其他日历  
+## <a name="specifying-additional-calendars"></a>指定其他日历  
  在向导的 **“指定其他日历”** 页中，选择维度中的层次结构要基于的日历。 您可以选择以下任意日历。  
   
 |日历|Description|  
@@ -91,10 +96,10 @@ caps.handback.revision: 7
   
  向导还会创建日历特定的层次结构，层次结构中包含为该日历创建的属性。 对于每个日历，每个层次结构中的每个级别都汇总到其上面的级别中。 例如，在标准 12 个月日历中，向导创建“年 - 周”层次结构或“年 - 月”层次结构。 但是在标准日历中，各个月中包含的周数并不平均，因此，没有“年 - 月 - 周”这类层次结构。 相反，报表日历或生产日历中的各个月中包含的周数非常平均，因此在这些日历中，周级别确实汇总到月级别中。  
   
-## 定义维度用法  
+## <a name="defining-dimension-usage"></a>定义维度用法  
  使用向导的 **“定义维度用法”** 页可以指定向导中的每个维度将对哪些多维数据集度量值进行聚合。 此页上的 **“维度用法”** 网格将维度列在行中，将度量值组列在列中。 为任意维度和度量值组的组合（其中，维度将对该度量值组中的度量值进行聚合）选中该复选框。  
   
-## 完成多维数据集向导  
+## <a name="completing-the-cube-wizard"></a>完成多维数据集向导  
  在 **“完成向导”** 页中，检查新的多维数据集的结构，并在 **“多维数据集名称”** 框中为其键入名称。 或者，选中 **“立即生成架构”** 复选框，启动架构生成向导。 在大多数情况下，如果计划创建其他对象，则不应选中该复选框。 还可以使用多维数据集设计器稍后再生成该框架。  
   
   

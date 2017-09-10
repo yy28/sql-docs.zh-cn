@@ -1,29 +1,34 @@
 ---
-title: "嵌套 select 和子多维数据集中的计算成员 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在嵌套 select 语句和子多维数据集中计算成员 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 嵌套 select 和子多维数据集中的计算成员
+# <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
   计算成员是在运行时从表达式计算其值的维度成员，可用在嵌套 select 语句和子多维数据集中，以便更精确地定义查询的 cubespace。  
   
-## 启用子空间中的计算成员  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 中的 **SubQueries** 连接字符串属性，或[支持的 XMLA 属性 (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 中的 **DBPROPMSMDSUBQUERIES** 属性定义嵌套 select 或子多维数据集上计算成员或计算集的行为或允许值。 在本文档的上下文中，如果没有特别指明，则嵌套 select 表示嵌套 select 和子多维数据集。  
+## <a name="enabling-calculated-members-in-the-subspace"></a>启用子空间中的计算成员  
+ **子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROPMSMDSUBQUERIES**中的属性[支持 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)在嵌套 select 语句中定义的行为或计算的成员或计算的集的宽限期或子多维数据集。 在本文档的上下文中，如果没有特别指明，则嵌套 select 表示嵌套 select 和子多维数据集。  
   
  SubQueries 属性允许以下值。  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  在上面的结果中，[All Geographies]、[United States]、[Oregon] 和 [Washington] 的聚合值来自对 &[Portland]&[OR] 和 &[Spokane]&[WA] 的后代执行的聚合。 没有任何内容来自计算成员。  
   
-### 注释  
+### <a name="remarks"></a>注释  
  在嵌套 select 或子多维数据集表达式中只允许全局或会话计算成员。 在对嵌套 select 或子多维数据集表达式执行计算时，如果在 MDX 表达式中具有查询计算成员，将引发错误。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [查询中的嵌套 select 语句](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [支持的 XMLA 属性 (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [在查询中的嵌套 select 语句](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
+ [支持的 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "添加表（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "添加表 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 添加表（SSAS 表格）
+# <a name="add-a-table-ssas-tabular"></a>添加表（SSAS 表格）
   本主题介绍如何从曾将其中数据导入模型的数据源中添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
   
-### 从现有数据源添加表  
+### <a name="to-add-a-table-from-an-existing-data-source"></a>从现有数据源添加表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
   
@@ -39,8 +44,8 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  从单个数据源同时导入多个表时，这些表在数据源中所具备的任何表间关系都将在模型中自动创建。 但如果稍后添加表，则可能需要在模型中手动创建新添加的表和以前导入的表之间的关系。  
   
-## 另请参阅  
- [导入数据（SSAS 表格）](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>另请参阅  
+ [导入数据（SSAS 表格）](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [删除表（SSAS 表格）](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

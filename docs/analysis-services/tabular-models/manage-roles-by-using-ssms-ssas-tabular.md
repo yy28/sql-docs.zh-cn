@@ -1,24 +1,29 @@
 ---
-title: "使用 SSMS 管理角色（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 SSMS （SSAS 表格） 来管理角色 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 SSMS 管理角色（SSAS 表格）
+# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色（SSAS 表格）
   对于部署的表格模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建、编辑和管理角色。  
   
  本主题中的任务：  
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 6.  在“成员身份设置”窗口中单击 **“添加”**，然后在 **“选择用户或组”** 对话框中，添加要作为成员添加的 Windows 用户或组。  
   
-7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，请在“选择页”的“角色属性 - \<角色名称>”对话框中，单击“行筛选器”。  
+7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，在**角色属性- \<rolename >**对话框中，在**选择页**，单击**行筛选器**。  
   
-8.  在“行筛选器”窗口中，选择一个表，单击“DAX 筛选器”字段，然后在“DAX 筛选器 - \<表名称>”字段中键入 DAX 公式。  
+8.  在行筛选器窗口中，选择一个表，然后单击**DAX 筛选器**字段，然后在**DAX 筛选器- \<tablename >**字段中，键入 DAX 公式。  
   
     > [!NOTE]  
-    >  “DAX 筛选器 - \<表名称>”字段不包含“自动完成”查询编辑器或插入函数功能。 若要在写入 DAX 公式时使用自动完成功能，必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式编辑器。  
+    >  DAX 筛选器- \<tablename > 字段不包含自动完成查询编辑器或插入函数功能。 若要在写入 DAX 公式时使用自动完成功能，必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式编辑器。  
   
 9. 单击 **“确定”** 保存角色。  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 10
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要编辑的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“属性”**。  
   
-     在“角色属性 \<角色名称>”对话框中，可以更改权限、添加或删除成员，以及添加/编辑行筛选器。  
+     在**角色属性** \<rolename > 对话框中，你可以更改权限、 添加或删除成员，和是添加/编辑行筛选器。  
   
 ###  <a name="bkmk_deletet_role"></a> 删除角色  
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要删除的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“删除”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [角色（SSAS 表格）](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

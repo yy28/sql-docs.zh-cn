@@ -1,23 +1,28 @@
 ---
-title: "预测查询（数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "预测查询 （数据挖掘） |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 预测查询（数据挖掘）
+# <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
   典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  
   
  就功能而言，SQL Server 中支持不同类型的预测查询，具体取决于查询的输入类型：  
@@ -82,9 +87,9 @@ caps.handback.revision: 14
  您在成功映射所有相关列之后，即可运行查询，而 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将基于模型中的模式对新数据中的每一行进行预测。 您可以将结果保存回包含外部数据的数据源视图中的新表，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制粘贴这些数据。  
   
 > [!WARNING]  
->  如果使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的设计器，则必须先将外部数据源定义为一个数据源视图。  
+>  如果使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的设计器，则必须先将外部数据源定义为一个数据源视图。  
   
- 如果使用 DMX 来创建预测联接，则可以通过使用 OPENQUERY、OPENROWSET 或 SHAPE 命令来指定外部数据源。 DMX 模板中的默认数据访问方法是 OPENQUERY。 有关这些方法的信息，请参阅 [\<数据挖掘源数据>](../Topic/%3Csource%20data%20query%3E.md)。  
+ 如果使用 DMX 来创建预测联接，则可以通过使用 OPENQUERY、OPENROWSET 或 SHAPE 命令来指定外部数据源。 DMX 模板中的默认数据访问方法是 OPENQUERY。 有关这些方法的信息，请参阅 [<数据挖掘源数据>](../../dmx/source-data-query.md)。  
   
 ###  <a name="bkmk_TSQuery"></a> 时序挖掘模型中的预测  
  时序模型不同于其他模型类型；您既可以按原样使用模型来创建预测，也可以向模型中提供新数据来更新模型，并基于最近的趋势创建预测。 如果添加新数据，您可以指定应使用新数据的方式。  
@@ -104,7 +109,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_WorkResults"></a> 处理预测查询的结果  
  您用于保存数据挖掘预测查询结果的选项取决于创建查询的方式。  
   
--   当您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用预测查询生成器生成查询时，可以将预测查询的结果保存到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源。 有关详细信息，请参阅[查看和保存预测查询的结果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)。  
+-   当您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用预测查询生成器生成查询时，可以将预测查询的结果保存到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源。 有关详细信息，请参阅 [查看和保存预测查询的结果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)。  
   
 -   当您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“查询”窗格使用 DMX 创建预测查询时，可以使用查询输出选项将结果保存到某一文件，或者作为文本保存到“查询结果”窗格或网格中。 有关详细信息，请参阅[查询和文本编辑器 (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)。  
   
@@ -147,7 +152,7 @@ FROM
   
  如果提供程序无法处理分层的行集，则可以通过在预测查询中使用 FLATTEN 关键字来对结果进行平展处理。 有关详细信息，包括平展行集的示例，请参阅 [SELECT (DMX)](../../dmx/select-dmx.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [数据定义查询（数据挖掘）](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

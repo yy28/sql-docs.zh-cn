@@ -1,35 +1,40 @@
 ---
-title: "内存属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit 属性"
-  - "MinimumAllocatedMemory 属性"
-  - "MidMemoryPrice 属性"
-  - "MemoryHeapType 属性"
-  - "内存 [Analysis Services]"
-  - "DefaultPagesCountToReuse 属性"
-  - "TotalMemoryLimit 属性"
-  - "SessionMemoryLimit 属性"
-  - "VirtualMemoryLimit 属性"
-  - "WaitCountIfHighMemory 属性"
-  - "HighMemoryPrice 属性"
-  - "HeapTypeForObjects 属性"
+title: "内存属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 内存属性
+# <a name="memory-properties"></a>内存属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可在启动时预分配适量内存，以便可立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
   
   通过指定配置设置，可以控制释放内存时的阈值。 例如， **HardMemoryLimit** 设置指定自行强制实施的内存不足条件（默认情况下，此阈值未启用），在此条件下会彻底拒绝新请求，直到有更多资源可用。
@@ -101,7 +106,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
 **-1** | （默认）Automatic。 该引擎将决定具体使用哪一个。
 **1** | Analysis Services HEAP。
 **2** | Windows LFH。
-**5** | 混合分配器。 此分配器将为不足 16 KB 的分配使用 Windows LFH，为超过 16 KB 的分配使用 AS 堆。 
+**5** | 混合分配器。 此分配器将使用为 Windows LFH \<= 16 KB 分配和为 AS 堆 > 16 KB 分配。 
 **6** | Intel TBB 分配器。 在 SQL Server 2016 SP1（及更高版本）的 Analysis Services 中可用。
   
   
@@ -141,3 +146,4 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

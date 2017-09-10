@@ -1,27 +1,32 @@
 ---
-title: "为预测查询选择和映射输入数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "表 [Analysis Services], 预测查询"
-  - "挖掘模型预测 [Analysis Services], 输入表"
+title: "选择和映射为预测查询的输入的数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 为预测查询选择和映射输入数据
-  在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅[多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
+  在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
  有时候，您所需的数据可能包含在一对多联接中的多个表内。 用于关联模型或顺序分析和聚类分析模型的数据便是这种情况，它们将使用链接到包含产品或事务详细信息的嵌套表的事例表。 如果您的模型使用事例嵌套表结构，则您用于预测的数据也必须具有事例嵌套表结构。  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 16
   
  下面的过程说明如何使用 **“指定嵌套联接”** 对话框修改在事例表和嵌套表之间创建的、用作预测查询输入的联接。  
   
-### 选择输入表  
+### <a name="select-an-input-table"></a>选择输入表  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据挖掘设计器中，单击“挖掘准确性图表”选项卡的“选择输入表”表上的“选择事例表”。  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 16
   
      挖掘结构中的列将自动映射到输入表中相同名称的列。  
   
-### 更改输入数据映射到模型的方式  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>更改输入数据映射到模型的方式  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的数据挖掘设计器中，选择 **“挖掘模型预测”** 选项卡。  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 16
   
      设计器中将显示新的列映射。  
   
-### 删除各输入表之间的关系  
+### <a name="remove-a-relationship-between-input-tables"></a>删除各输入表之间的关系  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据挖掘设计器中“挖掘模型预测”选项卡的“选择输入表”表上，单击“修改联接”。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      这样便可删除事例表和嵌套表之间的关系。  
   
-### 创建各输入表之间新的关系  
+### <a name="create-a-new-relationship-between-input-tables"></a>创建各输入表之间新的关系  
   
 1.  在数据挖掘设计器中“挖掘模型预测”选项卡的“选择输入表”表上，单击“修改联接”。  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      这样便在事例表和嵌套表之间创建了新的关系。  
   
-### 将嵌套表添加到预测查询的输入表  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>将嵌套表添加到预测查询的输入表  
   
 1.  在数据挖掘设计器的 **“挖掘模型预测”** 选项卡中，单击 **“选择事例表”** 打开 **“选择表”** 对话框。  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      如果已经存在关系，则挖掘模型中的列将自动映射到输入表中具有相同名称的列。 通过单击 **“修改联接”**以打开 **“创建关系”** 对话框，可以修改嵌套表与事例表之间的关系。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [预测查询（数据挖掘）](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "配置维度和分区的字符串存储 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "维度和分区的配置字符串存储空间 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置维度和分区的字符串存储
+# <a name="configure-string-storage-for-dimensions-and-partitions"></a>配置维度和分区的字符串存储
   可以重新配置字符串存储，以在维度属性或分区中容纳超过 4 GB 文件大小的字符串存储限制的极大字符串。 如果你的维度或分区包含此大小的字符串存储，则对于本地和链接（本地或远程）对象，你可以通过在维度或分区级别更改“StringStoresCompatibilityLevel”属性来解决文件大小限制。  
   
  请注意，你可以只在需要额外容量的对象上增加字符串存储空间。 在大多数的多维模型中，字符串数据与维度相关联。 但是，此设置对包含基于字符串的非重复计数度量值的分区也非常有用。 因为此设置针对字符串，所以数字数据不受影响。  
@@ -60,7 +65,7 @@ caps.handback.revision: 21
   
  维度和分区必须使用 MOLAP 存储。  
   
- 数据库的兼容级别必须设置为 1100。 如果你使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建了或部署了某一数据库，则该数据库的兼容级别已设置为 1100。 如果你将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 早期版本中创建的数据库移动到 ssSQL11 或更高版本，则必须更新兼容级别。 对于要移动而不是重新部署的数据库，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来设置兼容级别。 有关详细信息，请参阅[多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
+ 数据库的兼容级别必须设置为 1100。 如果你使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建了或部署了某一数据库，则该数据库的兼容级别已设置为 1100。 如果你将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 早期版本中创建的数据库移动到 ssSQL11 或更高版本，则必须更新兼容级别。 对于要移动而不是重新部署的数据库，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来设置兼容级别。 有关详细信息，请参阅 [多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
 ##  <a name="bkmk_step1"></a> 步骤 1：在 SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 21
   
  您必须对使用新字符串存储体系结构的每个对象都使用“处理全部”选项。 在处理前，请确保对维度运行影响分析，以便检查依赖对象是否也要求重新处理。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于处理的工具和方法 (Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [分区存储模式和处理](../Topic/Partition%20Storage%20Modes%20and%20Processing.md)   
- [维度存储](../Topic/Dimension%20Storage.md)  
+ [分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [维度存储](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

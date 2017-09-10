@@ -1,31 +1,36 @@
 ---
-title: "Power Pivot 数据访问 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 数据访问 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot 数据访问
+# <a name="power-pivot-data-access"></a>Power Pivot 数据访问
   本主题介绍从发布到 SharePoint 库的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据的方法。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据存储于 Excel 工作簿中。 连接字符串是指向 SharePoint 站点上的工作簿的 URL。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据最常由包含它的工作簿用作数据透视表和数据透视图背后蕴含的数据。 此外，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据也可以用作外部数据源，其中，工作簿、面板或报表连接到 SharePoint 中的单独 Excel (.xlsx) 文件并且检索数据以供以后使用。 通常使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的客户端工具是 Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、其他 Reporting Services 报表和 PerformancePoint。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据最常由包含它的工作簿用作数据透视表和数据透视图背后蕴含的数据。 此外， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据也可以用作外部数据源，其中，工作簿、面板或报表连接到 SharePoint 中的单独 Excel (.xlsx) 文件并且检索数据以供以后使用。 通常使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的客户端工具是 Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、其他 Reporting Services 报表和 PerformancePoint。  
   
- 在桌面上，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序使用 AMO 和 ADOMD.NET 来创建、处理和查询客户端工作区中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
+ 在桌面上， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 外接程序使用 AMO 和 ADOMD.NET 来创建、处理和查询客户端工作区中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
  在 SharePoint 场上，Excel Services 使用本地 MSOLAP OLE DB 访问接口来连接到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 该访问接口向场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器发出连接请求。 该服务器将加载数据，运行查询，并且返回结果集。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
  并不是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中的所有数据都由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 来处理。 Excel Services 处理工作表中的表格和单元格数据。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 仅处理与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据相对的数据透视表、数据透视图和切片器。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [表格模型数据访问](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

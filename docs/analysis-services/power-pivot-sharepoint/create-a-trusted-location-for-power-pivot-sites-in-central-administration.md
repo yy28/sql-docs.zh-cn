@@ -1,35 +1,33 @@
 ---
-title: "在管理中心中为 Power Pivot 站点创建受信任位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在管理中心中创建 Power Pivot 站点的受信任的位置 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在管理中心中为 Power Pivot 站点创建受信任位置
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心中为 Power Pivot 站点创建受信任位置
   通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而言，可以考虑为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的站点创建一个受信任位置，以便可以应用最适合进行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置，同时为场的剩余部分保留默认设置。  
   
- 本主题包含以下各节：  
   
- [先决条件](#prereq)  
-  
- [概述](#overview)  
-  
- [如何为 Power Pivot 数据访问创建受信任位置](#create)  
-  
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  您必须是场或服务管理员才能将某一 URL 指定为受信任位置。  
   
  必须知道包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取该地址，请打开包含库的站点，右键单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”，选择“属性”，然后复制包含服务器名称和站点路径的“地址 (URL)”的第一部分。  
@@ -68,8 +66,8 @@ caps.handback.revision: 7
   
 11. 单击 **“确定”**。  
   
-## 另请参阅  
- [PowerPivot 库](../Topic/Power%20Pivot%20Gallery.md)   
+## <a name="see-also"></a>另请参阅  
+ [PowerPivot 库](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [创建和自定义 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [使用 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   

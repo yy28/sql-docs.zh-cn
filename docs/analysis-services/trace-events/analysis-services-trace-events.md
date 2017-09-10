@@ -1,33 +1,38 @@
 ---
-title: "Analysis Services 跟踪事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler，Analysis Services"
-  - "监视 Analysis Services [SQL Server]"
-  - "性能 [Analysis Services]，SQL Server Profiler"
-  - "事件 [Analysis Services]"
-  - "事件类 [Analysis Services]，有关事件类"
-  - "Profiler [SQL Server Profiler]，Analysis Services"
-  - "事件类 [Analysis Services]"
+title: "Analysis Services 跟踪事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 跟踪事件
+# <a name="analysis-services-trace-events"></a>Analysis Services 跟踪事件
   您可以通过捕获然后分析实例生成的跟踪事件，执行 Microsoft SQL Server Analysis Services (SSAS) 实例的活动。  跟踪事件将会划分为若干组，以便您可以更轻松地找到相关跟踪事件。  每个跟踪事件都包含与该事件相关的一组数据；并不是所有数据片段都与所有事件相关。  
   
- 可以使用 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** 启动和捕获跟踪事件（请参阅[使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)），也可以通过 XMLA 命令作为 **SQL Server 扩展事件**启动跟踪事件，并在以后进行分析（请参阅[使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)）。  
+ 可以使用 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**启动和捕获跟踪事件（请参阅 [使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)），也可以通过 XMLA 命令作为 **SQL Server 扩展事件** 启动跟踪事件，并在以后进行分析（请参阅 [使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)）。  
   
  下表描述各事件类别以及该类别中的事件。 每个表都包含以下列：  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|现有会话|现有会话。|  
 |43|会话初始化|会话初始化。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

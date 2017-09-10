@@ -1,32 +1,37 @@
 ---
-title: "部署数据挖掘解决方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘模型 [Analysis Services], 部署"
-  - "部署 [Analysis Services], 生产环境"
-  - "部署 [Analysis Services - 数据挖掘]"
-  - "解决方案 [Analysis Services], 部署"
-  - "模型 [Analysis Services], 数据挖掘"
+title: "部署数据挖掘解决方案 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 部署数据挖掘解决方案
+# <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
   数据挖掘过程的最后一步是将模型部署到生产环境中。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  
   
--   使用这些模型创建预测并做出业务决策。 有关可用于创建查询的工具的信息，请参阅[数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+-   使用这些模型创建预测并做出业务决策。 有关可用于创建查询的工具的信息，请参阅 [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
 -   直接将数据挖掘功能嵌入到应用程序。 您可以包括分析管理对象 (AMO) 或一个包含一组对象（应用程序可使用这组对象创建、更改、处理以及删除挖掘结构和挖掘模型）的程序集。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [相关资源](#bkmk_Resources)  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [将数据挖掘解决方案部署到以前版本的 SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
  提供有关部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的常规信息，并介绍可作为项目配置的一部分设置的属性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

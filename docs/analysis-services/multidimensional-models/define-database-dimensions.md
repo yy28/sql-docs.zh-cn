@@ -1,26 +1,31 @@
 ---
-title: "定义数据库维度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "维度 [Analysis Services], 定义"
+title: "定义数据库维度 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 定义数据库维度
+# <a name="define-database-dimensions"></a>定义数据库维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
   
 -   配置维度级别属性。  
@@ -37,7 +42,7 @@ caps.handback.revision: 27
   
  修改维度、属性或层次结构后，必须处理该维度才能查看更改。 在项目模式下工作时，应在开始处理前部署对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的更改。  
   
- 有关如何在维度设计器中打开维度的详细信息，请参阅[在解决方案资源管理器中修改或删除数据库维度](../../analysis-services/multidimensional-models/modify-or-delete-a-database-dimension-in-solution-explorer.md)。  
+ 有关如何在维度设计器中打开维度的详细信息，请参阅 [在解决方案资源管理器中修改或删除数据库维度](../../analysis-services/multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md)。  
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 27
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  说明如何定义和配置维度属性。  
   
- [创建用户定义层次结构](../../analysis-services/multidimensional-models/create-user-defined-hierarchies.md)  
+ [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  说明如何定义和配置用户定义层次结构。  
   
- [定义属性关系](../../analysis-services/multidimensional-models/define-attribute-relationships.md)  
+ [定义属性关系](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  说明如何定义和配置属性关系。  
   
- [使用商业智能向导增强维度](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [使用商业智能向导增强维度](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  说明如何使用商业智能向导增强维度。  
   
   

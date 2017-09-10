@@ -1,33 +1,38 @@
 ---
-title: "数据挖掘向导（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "维 [Analysis Services], 数据挖掘"
-  - "OLAP [Analysis Services], 挖掘模型"
-  - "数据挖掘向导"
-  - "关系挖掘模型 [Analysis Services]"
+title: "数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- OLAP [Analysis Services], mining models
+- Data Mining Wizard
+- relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘向导（Analysis Services - 数据挖掘）
+# <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
   每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
   
  在该向导的最后阶段，您可以选择将数据划分为定型集和测试集，并启用钻取等功能。  
   
-## 开始之前要了解的内容  
+## <a name="what-to-know-before-you-start"></a>开始之前要了解的内容  
  启动向导之前需要了解以下内容。  
   
 -   是从关系数据库还是根据 OLAP 数据库中的现有多维数据集生成数据挖掘结构和模型？  
@@ -36,7 +41,7 @@ caps.handback.revision: 57
   
 -   您要将哪些列或属性用于预测？ 哪些列或属性适合用作分析的输入？  
   
--   应使用哪种算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
+-   应使用哪种算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 57
   
  接下来，您将创建挖掘结构和一个关联的数据挖掘模型。 您也可以只创建挖掘结构并在稍后添加模型，但先创建测试模型通常最为轻松。  
   
-###  <a name="BKMK_Relational"></a> 关系与OLAP 挖掘模型  
+###  <a name="BKMK_Relational"></a>关系 vs。OLAP 挖掘模型  
  为您提供的下一个重要选项可让您确定是使用关系数据源还是使模型基于多维 (OLAP) 数据。  
   
  此时，数据挖掘向导分为两个路径，具体取决于您的数据源是关系数据源还是位于多维数据集中。 除数据选择进程之外，所有内容（算法选择、用于添加维持数据集的功能等）都是相同的，但选择多维数据集数据比使用关系数据略为复杂一些。 （如果您基于多维数据集创建模型，则在最后还会获得一些其他选项。）  
@@ -67,19 +72,19 @@ caps.handback.revision: 57
 > [!NOTE]  
 >  无需拥有多维数据集或 OLAP 数据库即可进行数据挖掘。 除非数据已存储在多维数据集中，或者要挖掘 OLAP 维度或 OLAP 聚合或计算的结果，否则，我们建议您将关系表或数据源用于数据挖掘。  
   
-### 选择算法  
+### <a name="choosing-an-algorithm"></a>选择算法  
  接下来，您必须决定处理数据时要使用的算法。 此决定可能很难做出。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每种算法都有不同的功能并会产生不同的结果，因此，在确定最适合您的数据和业务问题的模型之前，您可以试用多种不同的模型。 请参阅以下主题以查看每种算法最适合的任务的说明：  
   
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  同样，可以使用不同的算法创建多个模型，也可以更改算法的参数来创建不同的模型。 您不应局限于所选的算法，最好的方法是对同一数据创建几个不同的模型。  
   
-### 定义用于建模的数据  
+### <a name="define-the-data-used-for-modeling"></a>定义用于建模的数据  
  除了从源选择数据之外，还必须指定数据源视图中包含 *事例数据*的表。 事例表将用于为数据挖掘模型定型，因此应包含要分析的实体，例如客户及其人口统计信息。 每个事例都必须唯一，且必须能被 *事例键*识别。  
   
  除了指定事例表之外，您还可以将 *嵌套表* 包含在数据中。 嵌套表通常包含有关事例表中实体的附加信息，如客户执行的交易或与实体具有多对一关系的属性。 例如，与 **Customers** 事例表联接的嵌套表可能包括每个客户所购买产品的列表。 在用于分析网站流量的模型中，嵌套表可能包含用户访问过的页面的顺序。 有关详细信息，请参阅[嵌套表（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
-### 其他功能  
+### <a name="additional-features"></a>其他功能  
  为了帮助您选择正确的数据和正确配置数据源，数据挖掘向导还提供了以下功能：  
   
 -   **自动检测数据类型**：该向导将检查列值的唯一性和分布情况，然后提供建议的最佳数据类型和数据使用类型。 您可以从列表中选择值来覆盖这些建议。  
@@ -90,7 +95,7 @@ caps.handback.revision: 57
   
 -   **自动多维数据集切片**：如果挖掘模型基于 OLAP 数据源，则会自动提供使用多维数据集属性对模型进行切片的功能。 这对于创建基于多维数据集数据子集的模型很适用。  
   
-### 完成向导  
+### <a name="completing-the-wizard"></a>完成向导  
  向导中的最后一步是对挖掘结构和关联的挖掘模型进行命名。 根据创建的模型类型，您还具有以下重要选项：  
   
 -   如果选择 **“允许钻取”**，则会在模型中启用 *钻取* 。 利用钻取，具有相应权限的用户可以浏览用于生成模型的源数据。  
@@ -101,7 +106,7 @@ caps.handback.revision: 57
   
  [返回页首](#BKMK_Using_DM_Wizard)  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  若要了解有关在创建数据挖掘模型时需做出的决策的详细信息，请参阅以下链接：  
   
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
  [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   

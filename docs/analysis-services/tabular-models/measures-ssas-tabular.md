@@ -1,37 +1,30 @@
 ---
-title: "度量值（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "度量值 |Microsoft 文档"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 度量值（SSAS 表格）
+# <a name="measures"></a>度量值组
   在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
-  
- 本主题的内容：  
-  
--   [优势](#bkmk_understanding)  
-  
--   [使用度量值网格定义度量值](#bkmk_def_mg)  
-  
--   [度量值属性](#bkmk_properties)  
-  
--   [在 KPI 中使用度量值](#bkmk_KPI)  
-  
--   [相关任务](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> 优势  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  
@@ -62,7 +55,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Tv and Video|$946,989,702.51|  
 |**总计**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> 使用度量值网格定义度量值  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
  通过使用模型设计器中的度量值网格在设计时创建度量值。 每个表各有一个度量值网格。 默认情况下，度量值网格在模型设计器中显示在每个表的下方。 也可以选择不查看度量值网格来查找特定表。 若要切换表的度量值网格显示，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
   
  在度量值网格中，您可以通过以下方式创建度量值：  
@@ -73,12 +66,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  默认情况下，使用“自动求和”时，按以下方式定义度量值的名称：相关列的名称后跟冒号和公式。 可以在编辑栏中更改该名称，也可以在“属性”窗口的 **“度量值名称”** 属性设置中更改它。 使用自定义公式创建度量值时，您可以在编辑栏中键入名称后跟冒号和公式，或者在“属性”窗口的 **“度量值名称”** 属性设置中键入名称。  
   
- 请小心命名度量值，这很重要。 度量值名称将随关联的表一起显示在报告客户端的字段列表中。 还将根据基础度量值命名 KPI。 度量值的名称不能与模型中任何表中的任何列的名称相同。  
+ 它仔细是重要命名度量值。 度量值名称将随关联的表一起显示在报告客户端的字段列表中。 还将根据基础度量值命名 KPI。 度量值的名称不能与模型中任何表中的任何列的名称相同。  
   
 > [!TIP]  
 >  可将多个表中的度量值组合到一个表中（通过创建一个空表，然后将多个表中的度量值移入该表中），也可以在表中创建新的度量值。 请记住，您在引用其他表中的列时可能需要在 DAX 公式中包含表名称。  
   
- 如果为模型定义了透视，不会自动将度量值添加到这些透视中。 您必须使用“透视”对话框手动将度量值添加到透视。 有关详细信息，请参阅[透视表（SSAS 表格）](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
+ 如果为模型定义了透视，不会自动将度量值添加到这些透视中。 您必须使用“透视”对话框手动将度量值添加到透视。 若要了解详细信息，请参阅[透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
   
 ##  <a name="bkmk_properties"></a> 度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
@@ -93,17 +86,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> 在 KPI 中使用度量值  
  KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比。 KPI 还包括以图形格式显示的“状态” ，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
   
- 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 有关详细信息，请参阅 [（SSAS 表格）](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
+ 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 若要了解详细信息，请参阅[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> 相关任务  
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建和管理度量值（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
+|[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
   
-## 另请参阅  
- [KPI（SSAS 表格）](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [创建和管理 KPI（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [计算列（SSAS 表格）](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+## <a name="see-also"></a>另请参阅  
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [创建和管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

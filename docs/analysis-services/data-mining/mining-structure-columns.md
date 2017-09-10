@@ -1,33 +1,38 @@
 ---
-title: "挖掘结构列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据挖掘 [Analysis Services], 结构"
-  - "挖掘结构 [Analysis Services], 列"
-  - "数据源 [Analysis Services], 挖掘结构列"
-  - "列 [数据挖掘], 挖掘结构列"
+title: "挖掘结构列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], columns
+- data sources [Analysis Services], mining structure columns
+- columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 挖掘结构列
+# <a name="mining-structure-columns"></a>挖掘结构列
   创建挖掘结构时，通过选择外部数据的列，然后指定如何将数据用于建模来定义挖掘结构中的列。 因此，挖掘结构列不仅仅是数据源的数据副本：它们定义挖掘模型要如何使用数据源的数据。 您可以分配确定数据如何离散化的属性以及说明数据值如何分布的属性。  
   
  挖掘结构列设计得很灵活且可扩展，这是因为用于生成挖掘模型的每种算法可以使用该结构中的不同列来解释数据。 不需要为每个模型提供一个数据集，您可以使用单个挖掘结构并使用其中的列来自定义每个模型的数据。  
   
-## 定义挖掘结构列  
+## <a name="defining-mining-structure-columns"></a>定义挖掘结构列  
  定义结构列的基本数据类型和内容类型是从用于创建该结构的数据源中派生的。 可以更改挖掘结构中的这些设置，还可以设置建模标志以及为连续列设置分发。  
   
  挖掘结构列的定义必须包含以下信息：  
@@ -48,9 +53,9 @@ caps.handback.revision: 41
   
  第三方算法还可以包含可以为挖掘结构列定义的自定义属性。  
   
- 有关数据挖掘结构和数据挖掘模型的详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
+ 有关数据挖掘结构和数据挖掘模型的详细信息，请参阅 [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
   
-## 相关内容  
+## <a name="related-content"></a>相关内容  
  有关如何定义和使用挖掘结构列的详细信息，请参阅下列主题：  
   
 |主题|链接|  
@@ -64,7 +69,7 @@ caps.handback.revision: 41
 |说明已分类列，可以使用这种特殊列类型将一个挖掘结构列与另一个挖掘结构列关联。|[已分类列（数据挖掘）](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |了解如何添加和修改挖掘结构列。|[挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)  
   

@@ -1,38 +1,43 @@
 ---
-title: "附加和分离 Analysis Services 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.AttachDatabase.f1"
-  - "sql13.asvs.ssms.attachdatabase.f1"
-  - "sql13.asvs.ssmsimbi.DetachDatabase.f1"
-  - "sql13.asvs.ssms.detachdatabase.f1"
-helpviewer_keywords: 
-  - "数据库 [Analysis Services], 附加"
-  - "数据库 [Analysis Services], 分离"
+title: "附加和分离 Analysis Services 数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.AttachDatabase.f1
+- sql13.asvs.ssms.attachdatabase.f1
+- sql13.asvs.ssmsimbi.DetachDatabase.f1
+- sql13.asvs.ssms.detachdatabase.f1
+helpviewer_keywords:
+- databases [Analysis Services], attach
+- databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 附加和分离 Analysis Services 数据库
-  在某些情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
+# <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
+  在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况，通过“附加”和“分离”命令，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地使数据库脱机和恢复联机。  
   
-## 附加和分离命令。  
+## <a name="attach-and-detach-commands"></a>附加和分离命令。  
  通过 **Attach** 命令可使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 **Detach** 命令可使数据库与服务器脱机。  
   
-## 附加和分离命令的用法  
+## <a name="attach-and-detach-usage"></a>附加和分离命令的用法  
  **Attach** 命令用于使现有数据库结构联机。 如果该数据库是在 **ReadWrite** 模式下附加的，则只能将其附加到服务器实例一次。 但是，如果此数据库是在 **ReadOnly** 模式下附加的，则可以将其多次附加到不同的服务器实例。 但是，不能将同一数据库多次附加到同一服务器实例。 即使已将数据复制到不同的文件夹中，在尝试多次附加同一数据库时也会引发错误。  
   
 > [!IMPORTANT]  
@@ -57,11 +62,11 @@ caps.handback.revision: 24
 > [!IMPORTANT]  
 >  执行“附加”命令需要服务器管理员权限。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [数据库 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [数据库 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   

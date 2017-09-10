@@ -1,35 +1,42 @@
 ---
-title: "DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 DirectQuery 模式下 (SSAS 2016) 的 DAX 公式兼容性 |Microsoft 文档"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d7c13126b258662572b5ad5a9b02bcf7921c2346
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2016)
-[!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] 中最重要的一些改进面向表格 1200 模型的 DirectQuery 模式功能。 早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 模式下的 DAX 公式兼容性 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+对于在 DirectQuery 模式下的表格 1200年和更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
 
 - DirectQuery 现在会生成更简单的查询，从而提供改进的性能。
-- DirectQuery 模式下的表格 1200 模型现在支持行级别安全性 (RLS)。
-- 在 DirectQuery 模式下，表格 1200 模型现在支持计算列。
+- 行级别安全性 (RLS) 现在支持在 DirectQuery 模式下。
+- 对于在 DirectQuery 模式下的表格模型现在支持计算的列。
 
-## DirectQuery 模式下的 DAX 函数
+## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 模式下的 DAX 函数
 
-简而言之，表格 1200 DirectQuery 模型支持所有 DAX 函数。 但是，并非所有公式类型支持所有函数，也并未针对表格 1200 DirectQuery 模型优化所有函数。 基本上，我们可以将 DAX 函数分为两大阵营：已优化和未优化。 我们先仔细了解一下已优化的函数。
+简单地说，所有的 DAX 函数支持 DirectQuery 模型。 但是，对于所有公式的类型，支持不是所有函数，并且不是所有函数均已针对 DirectQuery 模型都优化。 基本上，我们可以将 DAX 函数分为两大阵营：已优化和未优化。 我们先仔细了解一下已优化的函数。
 
 
-### 针对 DirectQuery 进行了优化
+### <a name="optimized-for-directquery"></a>针对 DirectQuery 进行了优化
 这些函数主要返回标量或聚合结果。 它们进一步划分为所有公式类型（度量值、查询、计算列、行级别安全性）支持的函数以及仅受度量值和查询公式支持的函数。 其中包括：    
 
 | 所有 DAX 公式支持                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 仅度量值和查询公式支持                                                                                                                                                                                                                                                                                                |
@@ -38,8 +45,8 @@ caps.handback.revision: 10
 
 
 
-### 未针对 DirectQuery 进行优化
-这些函数未针对表格 1200 模型中的 DirectQuery 进行优化。 它们在计算列和行级别安全性公式中完全*不*受支持。 但是，它们在度量值和查询公式中*受支持*，不过性能不确定。
+### <a name="non-optimized-for-directquery"></a>未针对 DirectQuery 进行优化
+这些函数不优化用于 DirectQuery。 它们在计算列和行级别安全性公式中完全 *不* 受支持。 但是，它们在度量值和查询公式中 *受支持* ，不过性能不确定。
 
  我们不会在这里列出所有函数。 基本上，只要不是上列已优化的函数之一，就是未针对 DirectQuery 优化的函数。
 
@@ -47,12 +54,12 @@ caps.handback.revision: 10
 
 若要了解所有 DAX 函数，请参阅 [DAX 函数参考].(https://msdn.microsoft.com/zh-cn/library/ee634396.aspx)
 
-## DirectQuery 模式下的 DAX 运算符
-DirectQuery 模式下的表格 1200 模型完全支持所有 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。
+## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 模式下的 DAX 运算符
+在 DirectQuery 模式下完全支持所有的 DAX 比较和算术运算符。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。
 
 
  
-## 内存中模式和 DirectQuery 模式之间的差异  
+## <a name="differences-between-in-memory-and-directquery-mode"></a>内存中模式和 DirectQuery 模式之间的差异  
 与内存中模式下部署的模型相比，DirectQuery 模式下部署的相同模型在查询时可能返回不同的结果。 这是因为在 DirectQuery 模式下，数据是从关系数据存储中直接查询的，并且公式所需的聚合是使用相关的关系引擎（SQL、Oracle、Teradata）来执行的，而不是使用 xVelocity 内存中分析引擎进行存储和计算。  
   
 例如，某些关系数据存储区在处理数值、日期、Null 等的方式上就存在差异。  
@@ -61,10 +68,10 @@ DirectQuery 模式下的表格 1200 模型完全支持所有 DAX 比较和算术
   
 此外，某些函数未针对 DirectQuery 模式进行优化，因为计算可能要求将当前上下文中的数据作为参数发送到关系数据源。 例如使用时间智能函数的度量值，这些函数引用日历表中的日期范围。 关系数据源可能没有日历表。  
   
-## 语义差异  
+## <a name="semantic-differences"></a>语义差异  
 本节列出您可以预期的语义差异类型，并介绍可能适用于函数使用或查询结果的任何限制。  
   
-### 比较  
+### <a name="comparisons"></a>比较  
 内存中模型中的 DAX 支持对两个解析为不同数据类型的标量值的表达式进行比较。 但是，在 DirectQuery 模式下部署的模型使用关系引擎的数据类型和比较运算符，因此可能返回不同的结果。  
   
 当在针对 DirectQuery 数据源的计算中使用以下比较时，将始终返回错误：  
@@ -80,34 +87,34 @@ DirectQuery 模式下的表格 1200 模型完全支持所有 DAX 比较和算术
 **字符串和数字的比较**  
 示例： `“2” < 3`  
   
-此公式比较文本字符串与数字。 对于 DirectQuery 模式和内存中模型，此表达式均为 **true**。  
+此公式比较文本字符串与数字。 对于 DirectQuery 模式和内存中模型，此表达式均为 **true** 。  
   
-在内存中模型中，结果为 **true**，因为作为字符串的数字将隐式转换为数值数据类型，以便与其他数字进行比较。 SQL 还隐式将作为比较所用数字的文本数字转换为数值数据类型。  
+在内存中模型中，结果为 **true** ，因为作为字符串的数字将隐式转换为数值数据类型，以便与其他数字进行比较。 SQL 还隐式将作为比较所用数字的文本数字转换为数值数据类型。  
   
-请注意，这表示在行为方面与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的第一个版本发生了变化，此时将返回 **false**，因为文本“2”始终被视为大于任何数字。  
+请注意，这表示在行为方面与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的第一个版本发生了变化，此时将返回 **false**，因为文本“2”始终被视为大于任何数字。  
   
 **文本与布尔值的比较**  
 示例： `“VERDADERO” = TRUE`  
   
-此表达式比较文本字符串与布尔值。 通常，对于 DirectQuery 或内存中模型，将字符串值与布尔值进行比较将导致错误。 此规则的唯一例外是当字符串包含字词 **true** 或 **false** 时；如果字符串包含 true 或 false 值之一，则将执行到布尔值的转换，此时将发生比较，并给出逻辑结果。  
+此表达式比较文本字符串与布尔值。 通常，对于 DirectQuery 或内存中模型，将字符串值与布尔值进行比较将导致错误。 此规则的唯一例外是当字符串包含字词 **true** 或 **false**时；如果字符串包含 true 或 false 值之一，则将执行到布尔值的转换，此时将发生比较，并给出逻辑结果。  
   
 **Null 值的比较**  
 示例： `EVALUATE ROW("X", BLANK() = BLANK())`  
   
-此公式比较 null 的 SQL 等效值与 null。 它在内存中模型和 DirectQuery 模型中返回 **true**；在 DirectQuery 模型中进行了预配，以保证与内存中模型相似的行为。  
+此公式比较 null 的 SQL 等效值与 null。 它在内存中模型和 DirectQuery 模型中返回 **true** ；在 DirectQuery 模型中进行了预配，以保证与内存中模型相似的行为。  
   
 请注意，在 Transact-SQL 中，null 值始终不等于 null。 但在 DAX 中，空白等于另一个空白。 这种行为对于所有内存中模型都是相同的。 务必注意，DirectQuery 模式使用大多数的 SQL Server 语义；但在此情况下，它对于 NULL 比较给出不同的新行为。  
   
-### 转换  
+### <a name="casts"></a>转换  
   
 在 DAX 中没有此类转换函数，但在许多比较和算术运算中会执行隐式转换。 它是确定结果的数据类型的比较或算术运算。 例如：  
   
 -   布尔值在算术运算中被当作数值（如 TRUE + 1 或应用于布尔值列的函数 MIN）。 NOT 运算也返回一个数值。  
   
--   在比较中以及在与 EXACT、AND、OR、&amp;&amp; 或 || 结合使用时，布尔值始终被当作逻辑值。  
+-   在比较中以及在与 EXACT、AND、OR、 &amp;&amp;或 || 结合使用时，布尔值始终被当作逻辑值。  
   
 **从字符串转换为布尔值**  
-在内存中模型和 DirectQuery 模型中，只允许从以下这些字符串转换为布尔值：**“”**（空字符串）、**“true”**、**“false”**；其中，空字符串转换为 false 值。  
+在内存中模型和 DirectQuery 模型中，只允许从以下这些字符串转换为布尔值： **“”** （空字符串）、 **“true”**、 **“false”**；其中，空字符串转换为 false 值。  
   
 将任何其他字符串转换为布尔数据类型会导致错误。  
   
@@ -117,25 +124,25 @@ DirectQuery 模式下的表格 1200 模型完全支持所有 DAX 比较和算术
 使用内存中数据存储区的模型所支持的日期文本格式范围比 SQL Server 支持的日期字符串格式的范围更加有限。 然而，DAX 支持自定义日期和时间格式。  
   
 **从字符串转换为非布尔值的其他类型**  
-当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/zh-cn/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允许从数字转换为字符串**  
 示例： `CONCATENATE(102,”,345”)`  
   
 在 SQL Server 中，不允许从数字转换为字符串。  
   
-此公式在表格模型和 DirectQuery 模式下返回一个错误；然而，此公式在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中将生成一个结果。  
+此公式在表格模型和 DirectQuery 模式下返回一个错误；然而，此公式在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中将生成一个结果。  
   
 **在 DirectQuery 中不支持两次尝试转换**  
 当第一次转换失败时，内存中模型常常尝试第二次转换。 这在 DirectQuery 模式下绝不会发生。  
   
 示例： `TODAY() + “13:14:15”`  
   
-在此表达式中，第一个参数具有类型 **datetime**；第二个参数具有类型 **string**。 但是，将以不同方式处理组合操作数时的转换。 DAX 将执行从 **string** 到 **double** 的隐式转换。 在内存中模型内，公式引擎尝试直接转换为 **double**；如果失败，它将尝试将字符串转换为 **datetime**。  
+在此表达式中，第一个参数具有类型 **datetime** ；第二个参数具有类型 **string**。 但是，将以不同方式处理组合操作数时的转换。 DAX 将执行从 **string** 到 **double**的隐式转换。 在内存中模型内，公式引擎尝试直接转换为 **double**；如果失败，它将尝试将字符串转换为 **datetime**。  
   
 在 DirectQuery 模式下，只适用从 **string** 到 **double** 的直接转换。 如果此转换失败，公式将返回错误。  
   
-### 数学函数和算术运算  
+### <a name="math-functions-and-arithmetic-operations"></a>数学函数和算术运算  
 在 DirectQuery 模式下，某些数学函数将返回不同的结果，因为基础数据类型或可应用于运算中的转换存在差异。 此外，上面介绍的有关允许的值范围的限制可能影响算术运算的结果。  
   
 **添加顺序**  
@@ -179,9 +186,9 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 `0/0`  
   
-表达式 `BLANK/BLANK` 是一种特殊情况，它在内存中模型和 DirectQuery 模式下同时返回 `BLANK`。  
+表达式 `BLANK/BLANK` 是一种特殊情况，它在内存中模型和 DirectQuery 模式下同时返回 `BLANK` 。  
   
-### 支持的数值和日期时间范围  
+### <a name="supported-numeric-and-date-time-ranges"></a>支持的数值和日期时间范围  
 就实数值和日期值所允许的最大值而言，内存中表格模型中的公式与 Excel 具有相同的限制。 但是，当从计算或查询中返回最大值时，或者当转换、强制转换、舍入或截断值时，将出现差异。  
   
 -   如果在 DirectQuery 模式下，类型 **Currency** 和 **Real** 的值相乘，并且结果大于可能的最大值，则不会引发错误，而返回 Null。  
@@ -204,7 +211,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
 **所含日期超出范围的 Datepart 函数**  
 仅当用作参数的日期在有效的日期范围内时，DirectQuery 模式下的结果才与内存中模型中的结果匹配。 如果未满足这些条件，则要么引发错误，要么公式在 DirectQuery 模式下将返回与在内存中模式下不同的结果。  
   
-示例：`MONTH(0)` 或 `YEAR(0)`  
+示例： `MONTH(0)` 或 `YEAR(0)`  
   
 在 DirectQuery 模式下，此表达式分别返回 12 和 1899。  
   
@@ -214,7 +221,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
   
 仅当作为参数提供的数据在有效的日期范围内时，此表达式的结果才匹配。  
   
-示例：`EOMONTH(blank(), blank())` 或 `EDATE(blank(), blank())`  
+示例： `EOMONTH(blank(), blank())` 或 `EDATE(blank(), blank())`  
   
 此表达式的结果在 DirectQuery 模式和内存中模式下应该是相同的。  
   
@@ -246,7 +253,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
   
 这种行为影响将日期列用作参数的所有函数。  
   
-### <a name="bkmk_Currency"></a>货币  
+### <a name="bkmk_Currency"></a>Currency  
 在 DirectQuery 模式下，如果算术运算的结果具有类型 **Currency**，则值必须在以下范围内：  
   
 -   最小值：-922337203685477.5808  
@@ -297,7 +304,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
   
 如果您使用 SEARCH 函数某个搜索字符串，并且目标字符串大于此内部包含的字符串，DirectQuery 模式将引发错误。  
   
-在内存中模型内，将返回所搜索的字符串，但其长度截断为 &lt;内含文本&gt; 的长度。  
+在内存中模型内，将返回所搜索的字符串，但其长度截断为 &lt;内含文本&gt;的长度。  
   
 示例： `EVALUATE ROW("X", REPLACE("CA", 3, 2, "California") )`  
   
@@ -341,8 +348,9 @@ DirectQuery 模式将 DAX TRIM 函数转换为 SQL 语句 `LTRIM(RTRIM(<column>)
 在内存中模型内，结果将在字符串的最后一个字符处终止，且没有填充。  
 
 
-## 另请参阅  
-[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/zh-cn/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>另请参阅  
+[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
+
 
 

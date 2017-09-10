@@ -1,0 +1,141 @@
+---
+title: "创建搜索属性列表 (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CREATE_SEARCH_PROPERTY_LIST_TSQL
+- CREATE SEARCH
+- CREATE_SEARCH_TSQL
+- CREATE_SEARCH_PROPERTY_TSQL
+- CREATE SEARCH PROPERTY
+- CREATE SEARCH PROPERTY LIST
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], creating
+- CREATE SEARCH PROPERTY LIST statement
+ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
+caps.latest.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b055be4f948b62553ddbabb40613971a0e5619d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+
+  创建新的搜索属性列表。 搜索属性列表用于指定要在全文检索中包括的一个或多个搜索属性。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+CREATE SEARCH PROPERTY LIST new_list_name  
+   [ FROM [ database_name. ] source_list_name ]  
+   [ AUTHORIZATION owner_name ]  
+;  
+```  
+  
+## <a name="arguments"></a>参数  
+ *new_list_name*  
+ 新搜索属性列表的名称。 *new_list_name*是最多为 128 个字符的标识符。 *new_list_name*必须在当前数据库中，所有属性列表中是唯一的并且符合标识符的规则。 *new_list_name*将创建全文索引时使用。  
+  
+ *database_name*  
+ 是其中的属性列表指定的数据库的名称*source_list_name*所在。 如果未指定， *database_name*默认为当前数据库。  
+  
+ *database_name*必须指定现有的数据库的名称。 当前连接的登录名必须与指定的数据库中的现有用户 ID 相关联*database_name*。 你还必须拥有必需[权限](#Permissions)数据库上。  
+  
+ *source_list_name*  
+ 指定新的属性列表创建通过复制现有属性列表从*database_name*。 如果*source_list_name*不存在创建搜索属性列表将会失败并出错。 中的搜索属性*source_list_name*由继承*new_list_name*。  
+  
+ 授权*owner_name*  
+ 指定要拥有属性列表的用户或角色的名称。 *owner_name*必须要么是的角色的当前用户是成员，或者当前用户必须具有 IMPERSONATE 权限的名称*owner_name*。 如果未指定，则所有权授予当前用户。  
+  
+> [!NOTE]  
+>  可以通过更改所有者[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
+  
+## <a name="remarks"></a>注释  
+  
+> [!NOTE]  
+>  有关信息属性列表一般情况下，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+  
+ 默认情况下，新的搜索属性列表为空，必须手动对其进行修改，以添加一个或多个搜索属性。 或者，您也可以复制现有的搜索属性列表。 在此情况下，新列表将继承其源的搜索属性，但您可以修改新列表，以添加或删除搜索属性。 在下一次完全填充时搜索属性列表中的所有属性都将包括在全文检索中。  
+  
+ 在以下任一情况下，CREATE SEARCH PROPERTY LIST 语句均会失败：  
+  
+-   如果通过指定的数据库*database_name*不存在。  
+  
+-   如果通过指定的列表*source_list_name*不存在。  
+  
+-   如果你没有正确的权限。  
+  
+ **若要添加或删除列表中的属性**  
+  
+-   [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
+  
+-   **若要删除的属性列表**  
+  
+-   [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
+  
+##  <a name="Permissions"></a> 权限  
+ 要求在当前数据库中拥有 CREATE FULLTEXT CATALOG 权限，并对从中复制源属性列表的任何数据库拥有 REFERENCES 权限。  
+  
+> [!NOTE]  
+>  若要将列表与全文检索关联，需要拥有 REFERENCE 权限。 若要添加和移除属性或删除列表，需要拥有 CONTROL 权限。 属性列表所有者可以授予对列表的 REFERENCE 或 CONTROL 权限。 拥有 CONTROL 权限的用户还可以向其他用户授予 REFERENCES 权限。  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 创建空属性列表并将其与索引关联  
+ 以下示例创建名为 `DocumentPropertyList` 的新搜索属性列表。 然后该示例使用[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)语句将新的属性列表相关联的全文索引`Production.Document`表中`AdventureWorks`数据库，而无需启动填充。  
+  
+> [!NOTE]  
+>  将多个预定义的、 众所周知的搜索属性添加到此搜索属性列表的示例，请参阅[ALTER SEARCH PROPERTY LIST &#40;Transact SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). 在向列表中添加搜索属性后，数据库管理员将需要使用另一个带有 START FULL POPULATION 子句的 ALTER FULLTEXT INDEX 语句。  
+  
+```  
+CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
+GO  
+USE AdventureWorks2012;  
+ALTER FULLTEXT INDEX ON Production.Document   
+   SET SEARCH PROPERTY LIST DocumentPropertyList  
+   WITH NO POPULATION;   
+GO   
+```  
+  
+### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 基于现有属性列表创建属性列表  
+ 以下示例基于示例 A 创建的列表 `JobCandidateProperties`（它与 `DocumentPropertyList` 数据库中的全文检索关联）创建一个新的搜索属性列表 `AdventureWorks2012`。 然后，该示例使用 ALTER FULLTEXT INDEX 语句将新属性列表与 `HumanResources.JobCandidate` 数据库中 `AdventureWorks2012` 表的全文检索关联。 此 ALTER FULLTEXT INDEX 语句启动完全填充，这是 SET SEARCH PROPERTY LIST 子句的默认行为。  
+  
+```  
+CREATE SEARCH PROPERTY LIST JobCandidateProperties 
+FROM AdventureWorks2012.DocumentPropertyList;  
+GO  
+ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
+   SET SEARCH PROPERTY LIST JobCandidateProperties;  
+GO  
+  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [删除搜索属性列表 &#40;Transact SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+  
+  
+

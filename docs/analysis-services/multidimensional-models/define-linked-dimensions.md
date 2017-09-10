@@ -1,27 +1,32 @@
 ---
-title: "定义链接维度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "维度 [Analysis Services], 链接"
-  - "链接维度 [Analysis Services]"
+title: "定义链接的维度 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 定义链接维度
+# <a name="define-linked-dimensions"></a>定义链接维度
   链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
   
  链接文档是只读的。 如果您想要修改维度或创建新关系，则必须更改源维度，然后删除后再重新创建链接的维度及其关系。 不能刷新某一链接的维度以便从源项目中提取更改。  
@@ -31,14 +36,14 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  因为刷新功能不可用，所以，大多数 Analysis Services 开发人员都是复制维度，而不是链接它们。 可以跨同一个解决方案中的多个项目复制维度。 有关详细信息，请参阅 [在 SSAS 中刷新链接的维度](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)。  
   
-## 先决条件  
- 提供维度的源数据库和使用维度的当前数据库必须处于相同的版本和兼容级别。 有关详细信息，请参阅[多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 提供维度的源数据库和使用维度的当前数据库必须处于相同的版本和兼容级别。 有关详细信息，请参阅 [多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
  源数据库必须已部署并且处于联机状态。 发布或恢复链接对象的服务器必须配置为允许该操作（见下文）。  
   
  您想要使用的维度本身不能是链接维度。  
   
-## 配置服务器以便允许链接对象  
+## <a name="configure-server-to-allow-linked-objects"></a>配置服务器以便允许链接对象  
   
 1.  在 SQL Server Management Studio 中，连接到 Analysis Services 服务器。 在对象资源管理器中，右键单击服务器名称，然后选择“方面”。  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
 3.  将 **LinkedObjectsLinksToOtherInstances** 设置为 **True** ，以便允许服务器请求链接到正在其他实例上运行的数据库的数据。  
   
-## 在 SQL Server Data Tools 中创建链接维度  
+## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建链接维度  
   
 1.  启动向导。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库或项目中的“维度”文件夹，然后单击“新建链接维度”。  
   
@@ -73,10 +78,10 @@ caps.handback.revision: 37
   
 7.  在“模拟信息”页中，单击 **“使用服务帐户”**。 单击 **“下一步”**，然后完成向导。 将在“链接对象”向导中选择您刚定义的连接。  
   
-## 后续步骤  
- 您不能更改链接维度的结构，因此无法使用维度设计器的 **“维度结构”** 选项卡来进行查看。 处理链接维度后，可以使用 **“浏览器”** 选项卡进行查看。 还可以更改维度的名称，并为该名称创建一个转换。  
+## <a name="next-steps"></a>后续步骤  
+ 您不能更改链接维度的结构，因此无法使用维度设计器的 **“维度结构”** 选项卡来进行查看。 处理链接维度后，可以使用 **“浏览器”** 选项卡进行查看。还可以更改维度的名称，并为该名称创建一个转换。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [链接度量值组](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

@@ -1,24 +1,29 @@
 ---
-title: "创建和自定义 Power Pivot 库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建和自定义 Power Pivot 库 |Microsoft 文档"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建和自定义 Power Pivot 库
+# <a name="create-and-customize-power-pivot-gallery"></a>创建和自定义 Power Pivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种特殊的 SharePoint 文档库，可为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
     > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档” 。    
     > 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
-    >  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客 [推陈出新，第 2 部分：告别 ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客 [推陈出新，第 2 部分：告别 ActiveX、VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   您必须是网站所有者才能创建库。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库不能在受限站点中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的父站点必须添加到可信站点或本地 Intranet 区域。  
   
--   必须已为应用程序部署了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 应用程序解决方案，并且必须已为网站集激活了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 有关详细信息，请参阅 [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 和[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md)。  
+-   必须已为应用程序部署了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 应用程序解决方案，并且必须已为网站集激活了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 有关详细信息，请参阅 [Deploy Power Pivot Solutions to SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) 和[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 -   若要查看或创建基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 Reporting Services 报表，工作簿和报表都必须处于同一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。 该报表必须使用包含嵌入数据的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，或者工作簿必须包含最多一个是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的外部数据源。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
     3.  在“库”下，单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”。  
   
-    1.  **SharePoint 2013**：单击设置图标 ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 设置")。 单击 **“网站内容”**。  
+    1.  **SharePoint 2013**： 单击设置图标![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。 单击 **“网站内容”**。  
   
     2.  单击 **“添加应用程序”**。  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
 3.  单击 **“创建”**。  
   
-4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中为 PowerPivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅 [在管理中心中为 PowerPivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
  当前网站的导航“快速启动”窗格中将出现指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的链接。  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 16
   
  您不能更改控制文档来源信息的设置。 所显示的有关各个文档的事实（例如添加工作簿或上次修改工作簿的用户）由一组无法修改的固定列决定。  
   
-#### 更改排序顺序、添加筛选器或限制文档数  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>更改排序顺序、添加筛选器或限制文档数  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库始终显示“上次修改时间”和“创建者”的值。 您不能禁用这些列， 也不能为库启用其他列。请使用下面的说明来更改排序顺序、添加筛选器或限制可见的文档数。  
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> 禁用或隐藏“刷新”按钮  
  您不能隐藏 **“管理数据刷新”** 按钮。 但是，如果用户没有足够权限，将禁用该按钮。  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  工作簿所有者或作者必须具有 **“参与讨论”** 权限才能计划针对工作簿的数据刷新。 具有“参与”权限的用户可以打开和编辑工作簿的数据刷新配置页，以便指定用于刷新数据的凭据和计划信息。  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |所有文档|这是文档库的标准布局。 您可以选择此视图，以管理单独的文档或以列表格式查看库内容。<br /><br /> 使用此视图可以编辑属性、删除或移动各个文档。<br /><br /> 如果您启用了版本控制，您必须使用此视图向库中签入文档或从库中签出文档。|  
 |影院视图和传送视图|这些是专用视图，如果您展示数量较少的相关文档，则其效果最佳。 缩略图的完全轮换包括库中所有文档的所有页。 如果您有大量的文档，则对于需要查找或打开特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的用户而言，这些视图可能不实用。<br /><br /> 影院视图：预览区域处于中心位置。 每个工作表的较小缩略图显示在页面任一侧的下方。<br /><br /> 传送视图：预览区域处于中心位置。 紧接在当前缩略图之前和之后的缩略图与预览区域相邻。|  
   
-### 切换到其他视图  
+### <a name="switch-to-a-different-view"></a>切换到其他视图  
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  在“管理视图”的“当前视图”中，从列表中选择您要使用的视图。 预先设计的视图包括图库视图、影院视图和传送视图。 或者，如果您要移动、删除或管理库中的文档，则可以选择“所有文档”。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Power Pivot for SharePoint 安装疑难解答](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [使用 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
- [在管理中心中为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 Power Pivot 库](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

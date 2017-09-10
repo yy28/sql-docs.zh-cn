@@ -1,29 +1,34 @@
 ---
-title: "挖掘模型属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘模型 [Analysis Services], 属性"
-  - "数据挖掘 [Analysis Services], 属性"
-  - "列 [数据挖掘], 属性"
-  - "数据挖掘设计器"
-  - "属性 [数据挖掘]"
+title: "挖掘模型属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 挖掘模型属性
+# <a name="mining-model-properties"></a>挖掘模型属性
   挖掘模型具有以下几种属性：  
   
 -   继承自挖掘结构的属性，这些属性定义了该模型使用的数据的数据类型和内容类型；  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  更改模型的任何属性时都必须重新处理该模型以使更改反映在模型中。 重新处理是必需的，即使更改只调用元数据（如添加列别名或说明）。  
   
-## 模型的属性  
+## <a name="properties-of-models"></a>模型的属性  
  下表介绍特定于挖掘模型的属性。 此外，您还可以对挖掘模型中的各个列设置属性  
   
 |属性|Description|  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |**名称**|设置挖掘模型的名称。|  
 |**AllowDrillThrough**|指定是否为挖掘模型启用钻取。|  
   
-## 模型列的属性  
+## <a name="properties-of-model-columns"></a>模型列的属性  
  可以为挖掘模型中的各个列设置以下特定于数据挖掘的属性。 针对挖掘模型中的各个列，可以将这些属性设置为不同的值。  
   
 |属性|Description|  
@@ -58,7 +63,7 @@ caps.handback.revision: 32
 |**SourceColumnID**|指示模型列所基于的挖掘结构列的名称。<br /><br /> 该属性为只读。|  
 |**用法**|设置挖掘模型如何使用列。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
  [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

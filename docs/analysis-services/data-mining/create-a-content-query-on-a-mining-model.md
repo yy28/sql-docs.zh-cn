@@ -1,34 +1,39 @@
 ---
-title: "针对挖掘模型创建内容查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "内容查询 [DMX]"
+title: "在挖掘模型上创建内容查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03b5c96e3a435a757fdb1bc8f83b2d1b093ed224
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 针对挖掘模型创建内容查询
+# <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
   使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
  下面的过程介绍如何使用 DMX 针对挖掘模型创建查询以及如何查询数据挖掘架构行集。  
   
- 有关如何使用 XML/A 创建类似查询的示例，请参阅[使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
+ 有关如何使用 XML/A 创建类似查询的示例，请参阅 [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
   
-## 使用 DMX 查询数据挖掘模型的内容  
+## <a name="querying-data-mining-model-content-by-using-dmx"></a>使用 DMX 查询数据挖掘模型的内容  
   
-#### 创建 DMX 模型内容查询  
+#### <a name="to-create-a-dmx-model-content-query"></a>创建 DMX 模型内容查询  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
   
@@ -40,21 +45,21 @@ caps.handback.revision: 17
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用模型。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
-5.  在 `FROM` [*\<mining model, name, MyModel>*]`.CONTENT` 行中输入挖掘模型的名称。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
+5.  在行中，输入的挖掘模型名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
   
      如果不希望键入名称，则可以在 **对象资源管理器** 中选择某个挖掘模型，并将其拖放到模板中。  
   
-6.  在 `SELECT`*\<select list, expr list, \*>* 行中，键入挖掘模型内容架构行集中的列的名称。  
+6.  在行中， `SELECT` *\<选择列表中，expr 列表\* >* ，键入在挖掘模型内容架构行集中的列的名称。  
   
-     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
 8.  单击 **“执行”**。  
   
-## 查询数据挖掘架构行集  
+## <a name="querying-the-data-mining-schema-rowsets"></a>查询数据挖掘架构行集  
   
-#### 对数据挖掘架构行集创建查询  
+#### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>对数据挖掘架构行集创建查询  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“新建查询”** 工具栏中，单击 **“Analysis Services DMX 查询”**或 **“Analysis Services MDX 查询”**。  
   
@@ -75,9 +80,9 @@ caps.handback.revision: 17
      “结果”窗格将显示模型的内容。  
   
     > [!NOTE]  
-    >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询：`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
+    >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   

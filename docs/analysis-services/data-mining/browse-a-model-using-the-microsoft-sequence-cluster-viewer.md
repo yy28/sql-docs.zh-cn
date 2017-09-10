@@ -1,40 +1,45 @@
 ---
-title: "使用 Microsoft 序列分类查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "序列分类查看器"
-  - "分类 [Analysis Services]"
-  - "数据挖掘 [Analysis Services], 序列"
-  - "对比 [Analysis Services]"
-  - "挖掘模型内容, 查看"
-  - "挖掘模型 [Analysis Services], 序列"
-  - "Microsoft 序列分类查看器"
-  - "顺序 [Analysis Services]"
-  - "转换 [Analysis Services]"
+title: "使用 Microsoft 序列分类查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Sequence Cluster Viewer
+- clusters [Analysis Services]
+- data mining [Analysis Services], sequences
+- discrimination [Analysis Services]
+- mining model content, viewing
+- mining models [Analysis Services], sequences
+- Microsoft Sequence Cluster Viewer
+- sequence [Analysis Services]
+- transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f8b6d83647639e8c2a807add3df680ff47b6b9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 序列分类查看器浏览模型
+# <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 序列分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是用于探析特定数据的顺序分析算法，这些数据所包含的事件可通过以下路径（又称“序列 ”）联系起来。 有关此算法的详细信息，请参阅 [Microsoft 顺序分析和聚类分析算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
->  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器提供了与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分类查看器类似的功能和选项。 有关详细信息，请参阅[使用 Microsoft 分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器提供了与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分类查看器类似的功能和选项。 有关详细信息，请参阅 [使用 Microsoft 分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 序列分类查看器提供了以下选项卡，用于浏览顺序分析和聚类分析挖掘模型：  
@@ -61,7 +66,7 @@ caps.handback.revision: 38
  [返回页首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> 分类剖面图  
- **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<attribute>.samples 行代表分类中不同的数据序列，\<attribute> 行对分类包含的全部项及其总体分布进行了说明。  
+ **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<属性 >.samples 行表示在群集中，存在的数据的不同序列和\<属性 > 行所说明群集包含的所有项和其总体分发。  
   
  通过“直方图条”  选项，可以控制直方图中可见的条数。 如果存在的图条数多于您选择显示的图条数，则会保留重要性最高的那些图条，其余图条则组合到一个灰色的存储桶内。  
   
@@ -90,10 +95,10 @@ caps.handback.revision: 38
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft 顺序分析和聚类分析算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [使用 Microsoft 分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  

@@ -1,23 +1,28 @@
 ---
-title: "创建 OLAP 挖掘结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建 OLAP 挖掘结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建 OLAP 挖掘结构
+# <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
   基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
   
  本主题介绍如何基于现有多维解决方案中的维度和相关度量值创建 OLAP 挖掘结构。  
@@ -39,7 +44,7 @@ caps.handback.revision: 12
   
  如果没有原始项目文件，或者不想更改它们，则可以使用 Visual Studio 中的选项“从服务器导入(多维或数据挖掘)”获取元数据和解决方案对象的副本。 然后，您可以修改部署目标，编辑数据源，并且在不影响现有对象的情况下使用多维数据集对象。  
   
- 有关详细信息，请参阅[使用 Analysis Services 导入向导导入数据挖掘项目](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 有关详细信息，请参阅 [使用 Analysis Services 导入向导导入数据挖掘项目](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ##  <a name="bkmk_Overview"></a> OLAP 数据挖掘过程的概述  
  通过在解决方案资源管理器中右键单击“挖掘结构”节点，然后选择“新建挖掘结构”来启动数据挖掘向导。 该向导可指导您通过以下步骤创建新挖掘结构和模型的结构：  
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |查找受关注的或异常的单元|标识随时间变化而呈典型趋势的商店销售额。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法|  
 |查找相关性|确定导致服务器停机的因素，包括区域、计算机类型、操作系或购买日期。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes 算法|  
   
-##  <a name="bkmk_Filters"></a> 对多维数据集进行切片与对模型进行筛选  
+##  <a name="bkmk_Filters"></a>进行切片多维数据集 vs。对模型进行筛选  
  在您生成模型时对多维数据集进行切片类似于在关系挖掘模型上创建筛选器。 在关系模型上，数据源上的筛选器将定义为 SQL 语句中的 WHERE 子句；在多维数据集中，使用编辑器来通过 MDX 创建筛选器语句。  
   
  例如，一个多维数据集可能包含与在全球购买产品有关的信息，但对于您的市场活动，您要基于在英国居住、年龄超过 30 岁的女性客户的分析创建一个模型。  
@@ -124,12 +129,12 @@ caps.handback.revision: 12
   
 -   对于第二个筛选器，将选择 Customer 维度，选择 Gender 属性，并且从属性值列表中选择“Female”。  
   
- 在已创建挖掘结构后，可以修改多维数据集数据和筛选条件的定义。 有关详细信息，请参阅 [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)。  
+ 在已创建挖掘结构后，可以修改多维数据集数据和筛选条件的定义。 有关详细信息，请参阅[挖掘模型的筛选器](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
  **“挖掘结构”** 选项卡和 **“挖掘模型”** 选项卡均提供通过单击 **“定义多维数据集切片”**向现有挖掘结构添加筛选器的选项。 **“多维数据集切片”** 对话框可帮助您通过从下拉列表中选择值来生成有效的 MDX 筛选表达式。  
   
 > [!WARNING]  
->  请注意，用于设计和浏览多维数据集的界面在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已更改。 有关详细信息，请参阅[浏览多维数据集中的数据和元数据](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)。  
+>  请注意，用于设计和浏览多维数据集的界面在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已更改。 有关详细信息，请参阅 [浏览多维数据集中的数据和元数据](../../analysis-services/multidimensional-models/browse-data-and-metadata-in-cube.md)。  
   
  您可以根据需要在多维数据集上添加任意多的筛选器以返回使用挖掘模型所需的数据。 还可以在各个多维数据集切片上定义切片。 例如，如果结构中包含两个基于产品的嵌套表，则可以将一个表切为 2004 年 3 月，将另一个表切为 2004 年 4 月。 然后，可以使用结果模型根据三月份的购物情况预测四月份的购物情况。  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  只有以下模型类型支持数据挖掘维度的创建：基于 Microsoft 聚类分析算法、Microsoft 决策树算法或 Microsoft 关联算法的模型。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
@@ -166,3 +171,4 @@ caps.handback.revision: 12
  [挖掘结构和结构列的属性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

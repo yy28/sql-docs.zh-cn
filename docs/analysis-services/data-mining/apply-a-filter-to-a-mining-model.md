@@ -1,28 +1,33 @@
 ---
-title: "对挖掘模型应用筛选器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型筛选器 [数据挖掘]"
-  - "筛选器 [数据挖掘]"
-  - "筛选输入行 [Analysis Services]"
-  - "筛选数据 [Analysis Services]"
+title: "对挖掘模型应用筛选器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 对挖掘模型应用筛选器
+# <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
   如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
   
  以下过程说明了如何创建两种筛选器：事例筛选器和嵌套表行筛选器。  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### 创建挖掘模型的事例筛选器  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>创建挖掘模型的事例筛选器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，单击包含要筛选的挖掘模型的挖掘结构。  
   
@@ -46,7 +51,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     -或-  
+     - 或 -  
   
      选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -70,7 +75,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. 单击网格中的下一行。  
   
-     您所创建的筛选条件自动添加到“表达式”文本框中。 例如： `[Income] > '30000'`  
+     您所创建的筛选条件自动添加到“表达式”文本框中。 例如，使用 IPv4 地址 `[Income] > '30000'`  
   
 10. 单击网格下一行中的“AND/OR”文本框，以添加条件。  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. “表达式”文本框中的筛选条件自动更新以包含新的条件。 完成的表达式如下： `[Income] > '30000'AND [Income] < '40000'`  
   
-### 向挖掘模型中的嵌套表添加筛选器  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>向挖掘模型中的嵌套表添加筛选器  
   
-1.  在“\<name>模型筛选器”对话框中，单击“挖掘结构列”下网格中的空行。  
+1.  在**\<名称 > 模型筛选器**对话框框中，单击下的网格中的空行**挖掘结构列**。  
   
 2.  从下拉列表中选择嵌套表的名称。  
   
@@ -98,7 +103,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  单击“值”框，然后单击 **(…)** 按钮以生成一个表达式。  
   
-     此时将打开“\<name> 筛选器”对话框。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
+     **\<名称 > 筛选器**对话框随即打开。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
   
 5.  单击 **“挖掘结构列”** 框并从嵌套表列下拉列表中选择一个列名。  
   
@@ -124,11 +129,10 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  如果手动更改筛选表达式的任意部分，则会禁用该网格，以后只能在文本编辑模式下编辑筛选表达式。 若要恢复网格编辑模式，必须清除筛选表达式并重新开始。  
   
-4.  
-  
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

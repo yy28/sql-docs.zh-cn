@@ -1,24 +1,29 @@
 ---
-title: "配置 Power Pivot 服务帐户 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置 Power Pivot 服务帐户 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置 Power Pivot 服务帐户
+# <a name="configure-power-pivot-service-accounts"></a>配置 Power Pivot 服务帐户
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 服务是一种 Windows 服务，它提供应用程序服务器上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
   
  必须为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序指定第二个帐户，这是在 SharePoint 场中基于应用程序池标识运行的共享 Web 服务。 在你使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]配置工具或 PowerShell 配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装时指定此帐户。  
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序池。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务相关联，它为场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询处理提供 SharePoint 集成和基础结构。 你为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序指定的应用程序池是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的服务标识。 在一个场中可有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 所创建的每个应用程序都应在自己的应用程序池中运行。  
   
-#### Analysis Services 服务帐户  
+#### <a name="analysis-services-service-account"></a>Analysis Services 服务帐户  
   
 |要求|Description|  
 |-----------------|-----------------|  
 |设置要求|在 SQL Server 安装程序使用安装向导中的“Analysis Services – 配置”页（或在命令行安装程序中使用 **ASSVCACCOUNT** 安装参数）的过程中，必须指定该帐户。<br /><br /> 你可以使用管理中心、PowerShell 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
 |域用户帐户要求|此帐户必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。 SQL Server 安装程序通过在指定计算机帐户时就阻止安装来强制执行域用户帐户要求。|  
-|权限要求|此帐户必须是本地计算机上 SQLServerMSASUser$\<服务器>$PowerPivot 安全组和 WSS_WPG 安全组的成员。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中的[手动授予 PowerPivot 服务帐户管理权限](#updatemanually)和[初始配置 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-cn/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
+|权限要求|此帐户必须属于 SQLServerMSASUser$\<服务器 > $PowerPivot 安全组和本地计算机上的 WSS_WPG 安全组。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中的 [手动授予 PowerPivot 服务帐户管理权限](#updatemanually) 和 [初始配置 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)。|  
 |扩展要求|如果你在场中安装多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器实例，则所有 Analysis Services 服务器实例都必须在同一域用户帐户下运行。 例如，如果你将第一个 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例配置为以 Contoso\ssas-srv01 身份运行，则随后在同一场中部署的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例也必须以 Contoso\ssas-srv01（或碰巧为当前帐户）身份运行。<br /><br /> 如果将所有服务实例配置为在同一帐户下运行，则 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务可以将查询处理或数据刷新作业分配到场中的任何 Analysis Services 服务实例。 此外，它还可将管理中心的“托管帐户”功能用于 Analysis Services 服务器实例。 通过对所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例使用同一帐户，您可以只更改帐户或密码一次，而所有使用这些凭据的服务实例都会自动更新。<br /><br /> SQL Server 安装程序强制执行使用同一帐户的要求。 在 SharePoint 场已安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 实例的扩展部署中，如果你指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 帐户与场中已使用的帐户不同，安装程序将阻止执行新的安装。|  
   
-#### Power Pivot 服务应用程序池  
+#### <a name="power-pivot-service-application-pool"></a>Power Pivot 服务应用程序池  
   
 |要求|Description|  
 |-----------------|-----------------|  
@@ -125,11 +130,11 @@ caps.handback.revision: 15
   
 3.  单击 **“立即运行”**。  
   
- 作为最后的手段，你可以通过向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序授予 Analysis Services 系统管理权限，然后明确将该服务应用程序标识添加到 SQLServerMSASUser$<servername>$PowerPivot Windows 安全组，从而确保正确的权限。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
+ 作为最后一招，您可以通过授予对 Analysis Services 系统管理权限来确保正确的权限[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序，然后专门将服务应用程序标识添加到 SQLServerMSASUser$\<servername > $PowerPivot Windows 安全组。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
   
  您必须是本地管理员才能更新 Windows 安全组。  
   
-1.  在 SQL Server Management Studio 中，以 \<服务器名称>\POWERPIVOT 身份连接到 Analysis Services 实例。  
+1.  在 SQL Server Management Studio，连接到 Analysis Services 实例作为\<服务器名称 > \POWERPIVOT。  
   
 2.  右键单击服务器名称并选择“属性”。  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  打开 **“组”**。  
   
-9. 双击 SQLServerMSASUser$\<服务器名称>$PowerPivot。  
+9. 双击 SQLServerMSASUser$\<servername > $PowerPivot。  
   
 10. 单击 **“添加”**。  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  键入密码，然后单击 **“确定”**。  
   
- 如果安装了 Reporting Services，可以使用 Reporting Services 配置管理器来更新报表服务器的密码和与报表服务器数据库的连接。 有关详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)。  
+ 如果安装了 Reporting Services，可以使用 Reporting Services 配置管理器来更新报表服务器的密码和与报表服务器数据库的连接。 有关详细信息，请参阅[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [启动或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/zh-cn/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [配置 Power Pivot 无人参与的数据刷新帐户 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

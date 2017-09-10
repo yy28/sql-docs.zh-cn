@@ -1,29 +1,34 @@
 ---
-title: "创建关系挖掘结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "维 [Analysis Services], 数据挖掘"
-  - "数据挖掘 [Analysis Services], 结构"
-  - "挖掘结构 [Analysis Services], 创建"
-  - "关系挖掘模型 [Analysis Services]"
-  - "OLAP 挖掘模型 [Analysis Services]"
+title: "创建关系挖掘结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建关系挖掘结构
+# <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
   大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
   
  关系挖掘结构可从不同源绘制数据。 只要原始数据可定义为数据源视图的一部分，就可以将该数据存储在表、文件或关系数据库系统中。 例如，如果数据位于 Excel、SQL Server 数据仓库或 SQL Server 报表数据库中，或位于通过 OLE DB 或 ODBC 访问接口访问的外部源中，则应使用关系挖掘结构。  
@@ -42,7 +47,7 @@ caps.handback.revision: 35
   
  [启用钻取的原因和方式](#BKMK_DrillThru)  
   
-## 要求  
+## <a name="requirements"></a>要求  
  首先，您必须具有现有数据源。 如果数据源尚不存在，则可使用数据源设计器设置一个数据源。 有关详细信息，请参阅[创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
   
  接下来，请使用数据源视图向导将所需数据汇集到单个数据源视图中。 有关如何使用数据源视图选择、转换、筛选或管理数据的详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -110,7 +115,7 @@ caps.handback.revision: 35
  在该向导即将结束时，您必须确定是否将数据分区为定型集和测试集。 用于设置随机抽样的部分数据以进行测试的功能非常方便，因为它确保对与新挖掘结构关联的所有挖掘模型使用一致的测试数据集。  
   
 > [!WARNING]  
->  请注意，此选项无法用于所有模型类型。 例如，如果您创建一个预测模型，则将无法使用维持，因为时序算法要求数据中没有空白。 有关支持维持数据集的模型类型的列表，请参阅[定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
+>  请注意，此选项无法用于所有模型类型。 例如，如果您创建一个预测模型，则将无法使用维持，因为时序算法要求数据中没有空白。 有关支持维持数据集的模型类型的列表，请参阅 [定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
  若要创建此维持数据集，您需要指定要用于测试的数据的百分比。 所有剩余数据将用于定型。 （可选）您可以设置用于测试的事例的最大数目，或设置用于启动随机选择过程的种子值。  
   
@@ -124,9 +129,9 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  若要使用钻取功能，您必须在创建挖掘结构时启用它。 以后，您可以通过对模型设置属性来对其启用钻取功能，但挖掘结构要求一开始就设置此选项。 有关详细信息，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   
- [数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [数据挖掘向导 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)   
  [挖掘结构和结构列的属性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

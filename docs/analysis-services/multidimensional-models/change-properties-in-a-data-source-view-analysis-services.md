@@ -1,31 +1,36 @@
 ---
-title: "在数据源视图中更改属性 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "友好名称 [Analysis Services]"
-  - "名称 [Analysis Services], 数据源视图"
-  - "查看表"
-  - "显示表"
-  - "数据源视图 [Analysis Services], 表"
-  - "表 [Analysis Services], 数据源视图"
+title: "更改数据源视图 (Analysis Services) 中的属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在数据源视图中更改属性 (Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
   在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  
   
 -   数据源视图匹配条件  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  还可以查看从数据源中检索的无法修改的对象元数据。  
   
-## 查看或更改数据源视图属性  
+## <a name="viewing-or-changing-data-source-view-properties"></a>查看或更改数据源视图属性  
  最初定义数据源视图时，数据源视图向导除了设置数据源视图说明之外，还会设置数据源视图属性。 下表列出并说明了数据源视图的属性。  
   
 > [!NOTE]  
@@ -53,12 +58,12 @@ caps.handback.revision: 34
 |RetrieveRelationships|指定是否从数据库中检索关系。 默认值为 True。|  
 |SchemaRestriction|指定对从数据源中检索的架构的限制（如果有）。 默认情况下，不存在架构限制。|  
   
-## 查看或更改 DataTable 属性  
+## <a name="viewing-or-changing-datatable-properties"></a>查看或更改 DataTable 属性  
  **DataTable** 属性是数据源视图中表、视图和命名查询的属性。 将上述任一对象添加到数据源视图时，便会设置这些属性。 下表列出并说明了数据源视图中 **DataTable** 对象的属性。  
   
 |属性|Description|  
 |--------------|-----------------|  
-|AllowChangesDuringGeneration|指定在重新生成过程中架构生成向导是否有权覆盖数据源视图表。 此属性仅存在于最初由架构生成向导生成的表中。 有关详细信息，请参阅[了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)。|  
+|AllowChangesDuringGeneration|指定在重新生成过程中架构生成向导是否有权覆盖数据源视图表。 此属性仅存在于最初由架构生成向导生成的表中。 有关详细信息，请参阅 [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)。|  
 |DataSource|为对象指定数据源。 您无法编辑此属性。|  
 |Description|为表、视图或命名查询指定说明。 如果基础数据库表或视图具有存储为扩展属性的说明，则会显示此值。 您可以编辑此属性。|  
 |FriendlyName|为表或视图指定更便于用户理解或与主题区域更相关的名称。 默认情况下，表或视图的 **FriendlyName** 属性与表或视图的 **“名称”** 属性相同。 基于表或视图定义对象名时，OLAP 和数据挖掘对象会使用 **FriendlyName** 属性。 您可以编辑此属性。|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |架构|指定适用于表、视图或命名查询的数据库架构。 此属性不可编辑。|  
 |TableType|为表、视图或命名查询指定表的类型。 此属性不可编辑。|  
   
-## 查看或更改 DataColumn 属性  
+## <a name="viewing-or-changing-datacolumn-properties"></a>查看或更改 DataColumn 属性  
  **DataColumn** 属性是数据源视图的表、视图和命名查询中列的属性。 将上述任一对象从基础表、视图或命名查询添加到数据源视图时，或者上述任一对象在由命名计算定义后添加到数据源视图时，便会设置这些属性。 下表列出并说明了数据源视图中 **DataColumn** 对象的属性。  
   
 |属性|Description|  
@@ -80,7 +85,7 @@ caps.handback.revision: 34
 |长度|基于基础表或视图的列中的数据指定列的最大长度。|  
 |名称|指定基础列的名称，或者指定命名计算的名称。 基于命名计算定义属性时，OLAP 和数据挖掘对象会使用 **“名称”** 属性。 只能针对命名计算编辑此属性。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [使用数据源视图设计器中的关系图 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

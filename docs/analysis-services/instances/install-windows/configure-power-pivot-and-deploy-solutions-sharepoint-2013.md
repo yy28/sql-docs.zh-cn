@@ -1,23 +1,28 @@
 ---
-title: "配置 Power Pivot 和部署解决方案 (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置 Power Pivot 和部署解决方案 (SharePoint 2013) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- power-view
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置 Power Pivot 和部署解决方案 (SharePoint 2013)
-  本主题介绍如何部署和配置 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具以便完成以下任务：  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
+  本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 14
   
     5.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中[配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/zh-cn/d61f49c5-efaa-4455-98f2-8c293fa50046)中的“用于配置服务器的输入值”部分。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个输入值的详细信息，请参阅本主题中 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 中的“用于配置服务器的输入值”部分。  
   
 6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”**，然后清除 **“在任务列表中包括此操作”**复选框。  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 14
   
 8.  单击 **“运行”** 来处理该任务列表中的所有操作。 请注意， **“运行”** 将在您验证操作之后才可用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。  
   
- 有关详细信息，请参阅[配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/zh-cn/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ 有关详细信息，请参阅 [配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
 ##  <a name="bkmk_verify_powerpivot"></a> 验证 Power Pivot 配置  
  **服务：**  
@@ -98,7 +103,7 @@ caps.handback.revision: 14
   
 1.  浏览到您通过使用配置工具创建的网站 URL。  
   
-     单击“设置”![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 设置")，然后单击“站点设置”。  
+     单击**设置**![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")，然后单击**站点设置**。  
   
      单击 **“网站集功能”**。  
   

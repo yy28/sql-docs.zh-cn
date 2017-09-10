@@ -1,26 +1,37 @@
 ---
-title: "针对 Power Pivot for SharePoint 的 PowerShell 参考 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Power Pivot for SharePoint 的 PowerShell 参考 |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 39567e2b212761ac2dd726a1f8f33893a83f245c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 针对 Power Pivot for SharePoint 的 PowerShell 参考
-  本节列出了用来配置或管理 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装的 PowerShell cmdlet。 有关启用 cmdlet 和查看内置帮助的详细信息，请参阅[使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+# <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>针对 Power Pivot for SharePoint 的 PowerShell 参考
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
+  本节列出了用来配置或管理 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装的 PowerShell cmdlet。 有关启用 cmdlet 和查看内置帮助的详细信息，请参阅 [使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
+
+>[!NOTE] 
+>这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
   
-## Cmdlet 列表  
+## <a name="cmdlet-list"></a>Cmdlet 列表  
  从 PowerShell 提示符处查看 cmdlet 列表：  
   
 1.  使用 **“以管理员身份运行”** 选项打开 SharePoint Management Shell。  
@@ -57,3 +68,4 @@ caps.handback.revision: 11
 -   Update-PowerPivotEngineService  
   
   
+

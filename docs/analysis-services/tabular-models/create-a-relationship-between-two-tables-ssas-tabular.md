@@ -1,37 +1,42 @@
 ---
-title: "创建两个表之间的关系（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
+title: "创建两个表 (SSAS 表格) 之间的关系 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.createrelatdb.f1
+- sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建两个表之间的关系（SSAS 表格）
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅[关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
+  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
-## 创建两个表之间的关系  
+## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   
-#### 在关系图视图中创建两个表之间的关系（单击并拖动）  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-click-and-drag"></a>在关系图视图中创建两个表之间的关系（单击并拖动）  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，依次单击 **“模型”** 菜单、 **“模型视图”**和 **“关系图视图”**。  
   
 2.  单击（并按住）表中的列，然后将光标拖到相关查找表中的相关查找列上，然后释放光标。 将自动按正确的顺序创建关系。  
   
-#### 在关系图视图中创建两个表之间的关系（右键单击）  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-right-click"></a>在关系图视图中创建两个表之间的关系（右键单击）  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，依次单击 **“模型”** 菜单、 **“模型视图”**和 **“关系图视图”**。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 7.  单击 **“创建”**。  
   
-#### 在数据视图中创建两个表之间的关系  
+#### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在数据视图中创建两个表之间的关系  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“表”** 菜单，再单击 **“创建关系”**。  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 16
   
 6.  单击 **“创建”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [删除关系（SSAS 表格）](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

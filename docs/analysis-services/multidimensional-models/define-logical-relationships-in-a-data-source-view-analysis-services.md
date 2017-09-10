@@ -1,28 +1,33 @@
 ---
-title: "在数据源视图中定义逻辑关系 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "添加关系"
-  - "关系 [Analysis Services], 数据源视图"
-  - "数据源视图 [Analysis Services], 关系"
+title: "数据源视图 (Analysis Services) 中定义逻辑关系 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding relationships
+- relationships [Analysis Services], data source views
+- data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08ca218747186a14224809c574a6dc524296cb1a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在数据源视图中定义逻辑关系 (Analysis Services)
+# <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑关系 (Analysis Services)
   数据源视图向导和数据源视图设计器自动定义添加到数据源视图 (DSV) 的表之间的关系，定义过程基于基础数据库关系或指定的名称匹配条件。  
   
  如果您在使用来自多个数据源的数据，则可能需要在 DSV 中手动定义逻辑关系，以便对自动定义的这些关系进行补充。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，需要使用关系来标识事实数据表和维度表，以构建用于从基础数据源检索数据和元数据的查询，以及利用高级业务智能功能。  
@@ -85,7 +90,7 @@ caps.handback.revision: 37
   
 3.  右键单击要修改的关系，然后单击“编辑关系”。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

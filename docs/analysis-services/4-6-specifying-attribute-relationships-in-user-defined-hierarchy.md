@@ -1,33 +1,38 @@
 ---
-title: "指定用户定义层次结构中属性之间的属性关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "4-6-指定用户定义层次结构中的属性关系 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d68e4caadf4e19582fb5ccd767535baee1001762
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 指定用户定义层次结构中属性之间的属性关系
+# <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-指定用户定义层次结构中的属性关系
 您已了解本教程中的内容，现在可以将属性层次结构组织到用户层次结构内的级别中，以便在多维数据集中为用户提供导航路径。 用户层次结构可以表示自然层次结构（如市/县、州/省/自治区和国家/地区），或者可以只表示导航路径（如雇员姓名、职务和部门名称）。 对于在层次结构中导航的用户而言，这两类用户层次结构应相同。  
   
-使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅[定义属性关系](../analysis-services/multidimensional-models/define-attribute-relationships.md)和[属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md) 和 [属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
-在定义属性关系时，可以指定此关系是弹性的还是刚性的。 如果您将关系定义为刚性，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会在更新维度时保留聚合。 如果实际过程更改了定义为刚性的关系，那么除非维度得到完全处理，否则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理过程中生成错误。 指定适当的关系和关系属性，可提高查询和处理性能。 有关详细信息，请参阅[定义属性关系](../analysis-services/multidimensional-models/define-attribute-relationships.md)和[用户层次结构属性](../Topic/User%20Hierarchy%20Properties.md)。  
+在定义属性关系时，可以指定此关系是弹性的还是刚性的。 如果您将关系定义为刚性，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会在更新维度时保留聚合。 如果实际过程更改了定义为刚性的关系，那么除非维度得到完全处理，否则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理过程中生成错误。 指定适当的关系和关系属性，可提高查询和处理性能。 有关详细信息，请参阅 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)和 [用户层次结构属性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
 在本主题的各个任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的自然用户层次结构中的属性定义属性关系。 这些层次结构包括“客户”维度中的“客户所在地域”层次结构、“销售区域”维度中的“销售区域”层次结构、“产品”维度中的“产品型号系列”层次结构，以及“日期”维度中的“会计日期”和“日历日期”层次结构。 这些用户层次结构全部是自然层次结构。  
   
-## 为“客户所在地域”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-customer-geography-hierarchy"></a>为“客户所在地域”层次结构中的属性定义属性关系  
   
 1.  切换到“客户”维度的维度设计器，然后单击“维度结构”选项卡。  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 18
   
 24. 在“文件”菜单上，单击“全部保存”。  
   
-## 为“销售区域”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>为“销售区域”层次结构中的属性定义属性关系  
   
 1.  打开“销售区域”维度的维度设计器，然后单击“属性关系”选项卡。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 18
   
     “销售区域组”现已链接到“销售区域所属国家”，而“销售区域所属国家”现已链接到“销售区域所属地区”。 因为一个国家/地区内的区域分组以及国家/地区的分组都可能会随着时间的推移而更改，所以每种关系的 **RelationshipType** 属性都设置为“柔性”。  
   
-## 为“产品型号系列”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>为“产品型号系列”层次结构中的属性定义属性关系  
   
 1.  打开“产品”维度的维度设计器，然后单击“属性关系”选项卡。  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 18
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## 为“会计日期”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-fiscal-date-hierarchy"></a>为“会计日期”层次结构中的属性定义属性关系  
   
 1.  切换到“日期”维度的维度设计器，然后单击“属性关系”选项卡。  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 18
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## 为“日历日期”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-calendar-date-hierarchy"></a>为“日历日期”层次结构中的属性定义属性关系  
   
 1.  在关系图中，右键单击“月份名称”属性，然后选择“新建属性关系”。  
   
@@ -151,7 +156,7 @@ caps.handback.revision: 18
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## 为“地域”层次结构中的属性定义属性关系  
+## <a name="defining-attribute-relationships-for-attributes-in-the-geography-hierarchy"></a>为“地域”层次结构中的属性定义属性关系  
   
 1.  打开“地域”维度的维度设计器，然后单击“属性关系”选项卡。  
   
@@ -181,12 +186,13 @@ caps.handback.revision: 18
   
 14. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
-## 课程中的下一个任务  
-[定义未知成员和 Null 处理属性](../analysis-services/defining-the-unknown-member-and-null-processing-properties.md)  
+## <a name="next-task-in-lesson"></a>课程中的下一个任务  
+[定义未知成员和 Null 处理属性](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## 另请参阅  
-[定义属性关系](../analysis-services/multidimensional-models/define-attribute-relationships.md)  
-[用户层次结构属性](../Topic/User%20Hierarchy%20Properties.md)  
+## <a name="see-also"></a>另请参阅  
+[定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
+[用户层次结构属性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   
   
+

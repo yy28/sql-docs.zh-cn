@@ -1,27 +1,32 @@
 ---
-title: "选择用于测试挖掘模型的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [数据挖掘], 可预测挖掘列"
-  - "挖掘准确性图表 [Analysis Services], 列"
-  - "可预测挖掘列 [Analysis Services]"
+title: "选择用于测试挖掘模型列 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], predictable mining columns
+- Mining Accuracy Chart [Analysis Services], columns
+- predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 选择用于测试挖掘模型的列
+# <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
   您必须决定要访问哪个结果才能度量挖掘模型的准确性。 大多数数据挖掘模型都要求您在创建模型时至少选择一列用作可预测属性。 因此，在测试模型准确性时，您一般必须选择要测试的属性。  
   
  下表介绍了选择在测试中使用的可预测属性时应注意的一些其他事项：  
@@ -36,11 +41,11 @@ caps.handback.revision: 35
   
 -   如果要在一个准确性图表中包含多个模型并对它们进行比较，则所有模型都必须使用相同的可预测列。  
   
--   在创建交叉验证报表时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动分析所有具有相同可预测属性的模型。  
+-   在创建交叉验证报表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动分析所有具有相同可预测属性的模型。  
   
 -   当选择了选项 **“同步预测列和值”**时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择具有相同名称和匹配的数据类型的可预测列。 如果您的列不满足这些条件，则可以关闭此选项并手动选择一个可预测列。 如果要使用具有与该模型不同的列的外部数据集测试该模型，则可能需要执行此操作。 但是，如果您选择的列的数据类型有误，则您将收到错误或错误的结果。  
   
-### 指定要预测的结果  
+### <a name="specify-the-outcome-to-predict"></a>指定要预测的结果  
   
 1.  双击挖掘结构以在数据挖掘设计器中将其打开。  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 35
   
 5.  如果希望确定模型的提升情况，则必须从 **“预测值”** 列表为该模型选择要度量的特定结果值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [选择准确性图表类型和设置图表选项](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

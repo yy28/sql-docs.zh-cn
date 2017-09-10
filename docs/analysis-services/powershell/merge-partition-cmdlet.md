@@ -1,30 +1,41 @@
 ---
-title: "Merge-Partition cmdlet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "合并分区 cmdlet |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4103154c133a430d3725aa30c073ab5e386f5c3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Merge-Partition cmdlet
+# <a name="merge-partition-cmdlet"></a>Merge-Partition cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   将一个或多个源分区的数据合并到目标分区中，然后删除源分区。  
+
+>[!NOTE] 
+>这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
   
-## 语法  
+## <a name="syntax"></a>语法  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Merge-Partition cmdlet 将一个或多个源分区的数据合并到目标分区中，然后删除源分区。 只有符合下列所有条件的分区才能合并：  
   
 -   这些分区位于同一度量值组中。  
@@ -33,9 +44,9 @@ caps.handback.revision: 9
   
 -   这些分区共享相同的存储模式（针对多维数据库的 MOLAP、HOLAP 和 ROLAP）。  
   
-## Parameters  
+## <a name="parameters"></a>Parameters  
   
-### -Name \<string>  
+### <a name="-name-string"></a>-名称\<字符串 >  
  指定源分区数据将合并到其中的目标分区。 此分区必须已存在。  
   
 |||  
@@ -46,7 +57,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -SourcePartition \<string>  
+### <a name="-sourcepartition-string"></a>-SourcePartition\<字符串 >  
  指定将合并到目标分区中的源分区。 可以创建要合并的分区的以逗号分隔的列表。 使用变量存储该列表。 例如，$Sources=“Sales_2008”、“Sales_2009”、“Sales_2010”。  
   
 |||  
@@ -57,7 +68,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -Database \<string>  
+### <a name="-database-string"></a>-数据库\<字符串 >  
  指定分区属于的数据库。  
   
 |||  
@@ -68,7 +79,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -Cube \<string>  
+### <a name="-cube-string"></a>-多维数据集\<字符串 >  
  指定分区属于的多维数据集。  
   
 |||  
@@ -79,7 +90,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -MeasureGroup \<string>  
+### <a name="-measuregroup-string"></a>-MeasureGroup\<字符串 >  
  指定分区所属的度量值组。  
   
 |||  
@@ -90,7 +101,7 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -Server \<string>  
+### <a name="-server-string"></a>服务器\<字符串 >  
  指定 cmdlet 要连接和执行的 Analysis Services 实例。 如果未提供服务器名称，将连接到本地主机。 对于默认实例，仅指定服务器名称。 对于命名实例，请使用格式 servername\instancename。 对于 HTTP 连接，请使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  
@@ -101,12 +112,12 @@ caps.handback.revision: 9
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### -Credential \<PSCredential>  
- 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅针对 HTTP 连接的[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)和 [Analysis Services 中的 PowerShell 脚本](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)。  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+ 对于您已经配置了 HTTP 访问的实例，此参数用于在使用 HTTP 连接到 Analysis Service 实例时传入用户名和密码。 有关详细信息，请参阅[配置 HTTP 访问 Analysis Services 上 Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)为 HTTP 连接。  
   
  如果指定此参数，将使用用户名和密码连接到指定的 Analysis Server 实例。 如果未指定凭据，将使用正在运行该工具的用户的默认 Windows 帐户。  
   
- 若要使用此参数，请首先使用 Get-Credential 创建一个 PSCredential 对象，以便指定用户名和密码（例如，`$Cred=Get-Credential “adventure-works\bobh”`。 然后，可以将此对象传送到 –Credential 参数 `(-Credential:$Cred`)。  
+ 若要使用此参数，请首先使用 Get-Credential 创建一个 PSCredential 对象，以便指定用户名和密码（例如， `$Cred=Get-Credential “adventure-works\bobh”`。 然后，可以将此对象传送到 –Credential 参数 `(-Credential:$Cred`)。  
   
 |||  
 |-|-|  
@@ -116,7 +127,7 @@ caps.handback.revision: 9
 |接受管道输入？|True (ByValue)|  
 |接受通配符？|false|  
   
-### -TargetPartition \<Microsoft.AnalysisServices.Partition>  
+### <a name="-targetpartition-microsoftanalysisservicespartition"></a>-TargetPartition \<Microsoft.AnalysisServices.Partition >  
  指定源分区数据将合并到其中的目标分区。  
   
 |||  
@@ -127,10 +138,10 @@ caps.handback.revision: 9
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### \<CommonParameters>  
+### <a name="commonparameters"></a>\<CommonParameters >  
  此 cmdlet 支持以下常用参数：-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer 和 -OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
-## 输入和输出  
+## <a name="inputs-and-outputs"></a>输入和输出  
  输入类型是可以传送到 cmdlet 的对象的类型。 返回类型是 cmdlet 所返回的对象的类型。  
   
 |||  
@@ -138,13 +149,10 @@ caps.handback.revision: 9
 |输入|System.string|  
 |输出|InclusionThresholdSetting|  
   
-## 示例 1  
+## <a name="example-1"></a>示例 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> $Source=”Total_Orders_2001”, “Total_Orders_2002”, “Total_Orders_2003”` `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> Merge-Partition –Name “Total_Orders_2004” –SourcePartitions:$Source –database “AWTEST” –cube “Adventure Works” –MeasureGroup “Sales Orders”`  
   
  此命令将 2001、2002 和 2003 年的分区合并到 2004 年的分区中，然后删除前几年的分区。  
   
-## 另请参阅  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [使用 PowerShell 管理表格模型](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+
   

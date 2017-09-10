@@ -1,27 +1,32 @@
 ---
-title: "在 Analysis Services 中合并分区（SSAS - 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "分区 [Analysis Services], 合并"
-  - "合并分区 [Analysis Services]"
+title: "在 Analysis Services (SSAS-多维) 中合并分区 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], merging
+- merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 Analysis Services 中合并分区（SSAS - 多维）
+# <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
   您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
   
  [常见情况](#bkmk_Scenario)  
@@ -95,13 +100,13 @@ caps.handback.revision: 34
   
  同样，从命名查询获取分段数据的分区也需要更新。 合并后的分区现在必须具有返回之前从不同命名查询获得的合并结果集的命名查询。  
   
-## 分区存储注意事项：MOLAP  
+## <a name="partition-storage-considerations-molap"></a>分区存储注意事项：MOLAP  
  合并 MOLAP 分区时，存储在分区的多维结构中的事实数据也将合并。 这将生成一个内部完整而一致的分区。 然而，存储在 MOLAP 分区中的事实数据是事实数据表中事实数据的副本。 在随后处理分区时，系统将删除多维结构中的事实数据（仅适用于完全和刷新），而且将从由分区的数据源和筛选器所指定的事实数据表复制数据。 如果源分区所使用的事实数据表与目标分区所使用的不同，则必须手动合并源分区的事实数据表和目标分区的事实数据表，以确保对所得分区进行处理时能有一套完整的数据集。 如果两个分区基于不同的命名查询，则同样需要执行这一操作。  
   
 > [!IMPORTANT]  
 >  在经过处理之前，带有不完整事实数据表的已合并 MOLAP 分区包含事实数据表数据的一个内部合并副本，而且此分区可以正常运行。  
   
-## 分区存储注意事项：HOLAP 和 ROLAP 分区  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>分区存储注意事项：HOLAP 和 ROLAP 分区  
  合并具有不同事实数据表的 HOLAP 或 ROLAP 分区时，不会自动合并事实数据表。 除非手动合并事实数据表，否则只有与目标分区关联的事实数据表才可用于所得分区。 与源分区关联的事实数据无法用于在所得分区中深化数据，并且处理分区时聚合不会从不可用的表中汇总数据。  
   
 > [!IMPORTANT]  
@@ -118,7 +123,7 @@ caps.handback.revision: 34
   
 1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”节点，展开“分区”，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
   
-2.  单击“合并分区”打开“合并分区 \<分区名称>”对话框。  
+2.  单击**合并分区**以打开**合并分区\<分区名称 >**对话框。  
   
 3.  在 **“源分区”**下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
   
@@ -132,13 +137,13 @@ caps.handback.revision: 34
 ##  <a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合并分区  
  有关信息，请参阅此主题[合并分区 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [处理 Analysis Services 对象](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [创建和管理远程分区 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [设置分区写回](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [可写入的分区](../Topic/Write-Enabled%20Partitions.md)   
- [配置维度和分区的字符串存储](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [可写入的分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [维度和分区的配置字符串存储](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

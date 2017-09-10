@@ -1,30 +1,35 @@
 ---
-title: "创建新的关系挖掘结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘结构 [Analysis Services], 关系"
-  - "挖掘结构 [Analysis Services], 创建"
-  - "关系挖掘模型 [Analysis Services]"
+title: "创建新的关系挖掘结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], relational
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建新的关系挖掘结构
+# <a name="create-a-new-relational-mining-structure"></a>创建新的关系挖掘结构
   通过数据挖掘向导使用相关数据库或其他源中的数据来创建新的挖掘结构，然后将该结构和任何相关模型保存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中。  
   
-## 创建关系挖掘结构  
+## <a name="to-create-a-relational-mining-structure"></a>创建关系挖掘结构  
   
 1.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的“挖掘结构”文件夹，再单击“新建挖掘结构”。  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 29
   
 5.  在 **“选择数据源视图”** 页中的 **“可用数据源视图”**下，单击要使用的数据源视图，再单击 **“下一步”**。  
   
-     有关创建数据源视图的详细信息，请参阅[多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+     有关创建数据源视图的详细信息，请参阅 [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 6.  在 **“指定表类型”** 页中的 **“输入表”**下，选择一个事例表和一个嵌套表。  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
   
 11. 在 **“完成向导”** 页中，为将要创建的挖掘结构和相关的初始挖掘模型提供一个名称，再单击 **“完成”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

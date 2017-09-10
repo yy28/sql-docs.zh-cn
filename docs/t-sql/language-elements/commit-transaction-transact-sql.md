@@ -1,0 +1,179 @@
+---
+title: "提交事务 (Transact SQL) |Microsoft 文档"
+ms.custom: 
+ms.date: 09/09/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COMMIT
+- COMMIT TRANSACTION
+- COMMIT_TSQL
+- COMMIT_TRANSACTION_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ending transactions [SQL Server]
+- user-defined transactions [SQL Server]
+- committed transactions
+- transactions [SQL Server], ending
+- marking end of transactions [SQL Server]
+- implicit transactions
+- distributed transactions [SQL Server], committed
+- transactions [SQL Server], committed
+- COMMIT TRANSACTION statement
+- rolling back transactions, COMMIT TRANSACTION
+ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
+caps.latest.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 84ca8221700d3eabd443b84d97dea4f698e9f945
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+
+  标志一个成功的隐性事务或显式事务的结束。 如果 @@TRANCOUNT为 1，所有的数据修改执行，因为事务的数据库的永久部分开始释放由事务和 @ 递减持有的资源的 COMMIT TRANSACTION 使@TRANCOUNT为 0。 如果 @@TRANCOUNT大于 1，COMMIT TRANSACTION 递减 @@TRANCOUNT只能由 1 和事务将保持活动状态。  
+  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+-- Applies to SQL Server (starting with 2008) and Azure SQL Database
+  
+COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
+[ ; ]  
+```  
+ 
+```  
+-- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
+  
+COMMIT [ TRAN | TRANSACTION ] 
+[ ; ]  
+``` 
+ 
+  
+## <a name="arguments"></a>参数  
+ *transaction_name*  
+ **适用于：** SQL Server 和 Azure SQL 数据库
+ 
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]忽略此参数。 *transaction_name*指定分配由先前的开始事务的事务名称。 *transaction_name*必须符合标识符规则，但不能超过 32 个字符。 *transaction_name*可以用作通过指示的程序员嵌套 BEGIN TRANSACTION 提交事务关联的可读性帮助。  
+  
+ *@tran_name_variable*  
+ **适用于：** SQL Server 和 Azure SQL 数据库  
+ 
+用户定义的、含有有效事务名称的变量的名称。 Char、 varchar、 nchar 或 nvarchar 数据类型必须声明变量。 如果传递给该变量的字符数超过 32，则只使用 32 个字符，其余的字符将被截断。  
+  
+ DELAYED_DURABILITY  
+ **适用于：** SQL Server 和 Azure SQL 数据库   
+
+ 请求将此事务与延迟持续性一起提交的选项。 如果已用 `DELAYED_DURABILITY = DISABLED` 或 `DELAYED_DURABILITY = FORCED` 更改了数据库，则忽略该请求。 请参阅主题[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)有关详细信息。  
+  
+## <a name="remarks"></a>注释  
+ 仅当事务引用的所有数据在逻辑上都正确时，[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序员才应发出 COMMIT TRANSACTION 命令。  
+  
+ 如果所提交的事务是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务，COMMIT TRANSACTION 将触发 MS DTC 使用两阶段提交协议，以便提交所有涉及该事务的服务器。 如果本地事务跨越同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例上的两个或多个数据库，则该实例将使用内部的两阶段提交来提交所有涉及该事务的数据库。  
+  
+ 当在嵌套事务中使用时，内部事务的提交并不释放资源或使其修改成为永久修改。 只有在提交了外部事务时，数据修改才具有永久性，而且资源才会被释放。 每个提交的事务时 @ 发出@TRANCOUNT大于 1 只需递减 @@TRANCOUNT 1。 当 @@TRANCOUNT是最后递减到 0，整个外部会提交事务。 因为*transaction_name*将被忽略[!INCLUDE[ssDE](../../includes/ssde-md.md)]，发出 COMMIT TRANSACTION 引用外部事务的名称，如果有未处理的内部事务 @ 唯一递减@TRANCOUNT1。  
+  
+ 发出一个提交事务时 @@TRANCOUNT是 0 导致错误; 没有对应的 BEGIN TRANSACTION。  
+  
+ 不能在发出一个 COMMIT TRANSACTION 语句之后回滚事务，因为数据修改已经成为数据库的一个永久部分。  
+  
+ 仅当事务计数在语句开始处为 0 时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]才会增加语句内的事务计数。  
+  
+## <a name="permissions"></a>Permissions  
+ 要求 **公共** 角色具有成员身份。  
+  
+## <a name="examples"></a>示例  
+  
+### <a name="a-committing-a-transaction"></a>A. 提交事务  
+**适用于：** SQL Server、 Azure SQL 数据库、 Azure SQL 数据仓库和并行数据仓库   
+
+以下示例删除候选作业。 它使用 AdventureWorks。 
+  
+```   
+BEGIN TRANSACTION;   
+DELETE FROM HumanResources.JobCandidate  
+    WHERE JobCandidateID = 13;   
+COMMIT TRANSACTION;   
+```  
+  
+### <a name="b-committing-a-nested-transaction"></a>B. 提交嵌套事务  
+**适用于：** SQL Server 和 Azure SQL 数据库    
+
+下面的示例创建一个表，生成三个级别的嵌套事务，然后提交嵌套的事务。 尽管每个`COMMIT TRANSACTION`语句具有*transaction_name*参数，之间没有关系`COMMIT TRANSACTION`和`BEGIN TRANSACTION`语句。 *Transaction_name*参数是只需可读性辅助工具以帮助确保提交的正确数量进行编码以减少程序员`@@TRANCOUNT`为 0，从而提交外层事务。 
+  
+```   
+IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
+    DROP TABLE TestTran;  
+GO  
+CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+GO  
+-- This statement sets @@TRANCOUNT to 1.  
+BEGIN TRANSACTION OuterTran;  
+  
+PRINT N'Transaction count after BEGIN OuterTran = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+ 
+INSERT INTO TestTran VALUES (1, 'aaa');  
+ 
+-- This statement sets @@TRANCOUNT to 2.  
+BEGIN TRANSACTION Inner1;  
+ 
+PRINT N'Transaction count after BEGIN Inner1 = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+  
+INSERT INTO TestTran VALUES (2, 'bbb');  
+  
+-- This statement sets @@TRANCOUNT to 3.  
+BEGIN TRANSACTION Inner2;  
+  
+PRINT N'Transaction count after BEGIN Inner2 = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+  
+INSERT INTO TestTran VALUES (3, 'ccc');  
+  
+-- This statement decrements @@TRANCOUNT to 2.  
+-- Nothing is committed.  
+COMMIT TRANSACTION Inner2;  
+ 
+PRINT N'Transaction count after COMMIT Inner2 = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+ 
+-- This statement decrements @@TRANCOUNT to 1.  
+-- Nothing is committed.  
+COMMIT TRANSACTION Inner1;  
+ 
+PRINT N'Transaction count after COMMIT Inner1 = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+  
+-- This statement decrements @@TRANCOUNT to 0 and  
+-- commits outer transaction OuterTran.  
+COMMIT TRANSACTION OuterTran;  
+  
+PRINT N'Transaction count after COMMIT OuterTran = '  
+    + CAST(@@TRANCOUNT AS nvarchar(10));  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
+ [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
+ [提交工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
+ [回滚工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)   
+ [@@TRANCOUNT (Transact-SQL)](../../t-sql/functions/trancount-transact-sql.md)  
+  
+  
+

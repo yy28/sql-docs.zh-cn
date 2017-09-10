@@ -1,31 +1,36 @@
 ---
-title: "在 SQL Server Management Studio 中创建一个 DMX 查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模板 [Analysis Services], 查询"
-  - "SQL Server Management Studio [Analysis Services], DMX 查询"
-  - "预测 [Analysis Services], DMX 预测查询"
-  - "预测 [DMX]"
-  - "预测查询 [DMX]"
-  - "查询 [DMX], 预测查询"
-  - "挖掘模型 [Analysis Services], DMX"
+title: "在 SQL Server Management Studio 中创建 DMX 查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services], queries
+- SQL Server Management Studio [Analysis Services], DMX queries
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- prediction queries [DMX]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在 SQL Server Management Studio 中创建一个 DMX 查询
+# <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 DMX 查询
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组功能，可帮助您创建针对挖掘模型和挖掘结构的预测查询、内容查询和数据定义查询。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都提供了图形预测查询生成器，旨在简化编写预测查询并将数据集映射到模型的过程。  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
  还可以为经常运行的查询或命令创建自定义模板。  
   
-## XMLA 查询模板  
+## <a name="xmla-query-templates"></a>XMLA 查询模板  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了 XMLA 查询模板。  
   
  可使用 XMLA 和 DMX 执行的查询类型之间存在某种重叠。 例如，可通过使用 DMX 或数据挖掘架构行集创建一些模型内容查询，但是架构行集有时包含不在 DMX 内容查询显示的信息。  
@@ -58,19 +63,19 @@ caps.handback.revision: 43
   
 ##  <a name="BKMK_Building_Queries"></a> 生成和运行 DMX 查询  
   
-#### 打开新的 DMX 查询窗口  
+#### <a name="open-a-new-dmx-query-window"></a>打开新的 DMX 查询窗口  
   
 1.  在 **中单击** “新建查询” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，再选择 **“新建 Analysis Server DMX 查询”**。  
   
 2.  出现 **“连接到服务器”** 对话框后，选择包含要使用的挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-#### 打开模板资源管理器  
+#### <a name="open-template-explorer"></a>打开模板资源管理器  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，在 **“视图”** 菜单上选择 **“模板资源管理器”**。  
   
 2.  单击 **Analysis Server** 可以查看应用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的模板的树视图。  
   
-#### 应用模板以生成查询  
+#### <a name="apply-a-template-to-build-a-query"></a>应用模板以生成查询  
   
 -   右键单击适当的查询类型，然后选择“打开”。  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 43
   
  [针对挖掘模型创建内容查询](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)  
   

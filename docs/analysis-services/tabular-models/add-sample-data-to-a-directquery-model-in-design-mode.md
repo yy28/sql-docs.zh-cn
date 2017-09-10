@@ -1,22 +1,30 @@
 ---
-title: "在设计模式下将示例数据添加到 DirectQuery 模型中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "将示例数据添加到设计模式中的 DirectQuery 模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在设计模式下将示例数据添加到 DirectQuery 模型中
+# <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在设计模式下将示例数据添加到 DirectQuery 模型中
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
  在 DirectQuery 模式下，表分区用于创建在模型设计过程中使用的示例数据子集或创建完整数据视图的替代。
  
  部署 DirectQuery 表格模型时，每个表只允许有一个分区，并且该分区必须是完整数据视图。 所有其他分区要么是完整数据视图的替代，要么是示例数据。 在本主题中，我们将介绍使用数据子集创建示例分区。
@@ -28,14 +36,14 @@ caps.handback.revision: 9
 > [!TIP]  
 >  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集。  
   
-## 创建示例分区
- 这些说明适用于在兼容级别 1200 上创建表格模型或将其升级到该级别。 较低兼容性级别的模型使用不同的属性来获取缓存数据。 有关属性说明，请参阅[在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)。  
+## <a name="create-a-sample-partition"></a>创建示例分区
+ 这些说明适用于在创建或升级到 1200年或更高的兼容性级别的表格模型。 较低兼容性级别的模型使用不同的属性来获取缓存数据。 有关属性说明，请参阅 [在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
   
 1.  在 SQL Server Data Tools 中，请在关系图或数据视图中单击事实数据表以打开其属性页。 事实数据表提供模型中聚合的数值数据和度量值。 你可以具有多个事实数据表。  
   
 2.  单击“表” > “属性”以打开“分区管理”对话框。  
   
-    请注意，默认分区是“(直接查询) \<表名>”。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
+    请注意默认分区是**（直接查询）\<表名 >**。 这是完整数据视图。 不要删除此分区。 部署模型时会使用此分区。  
   
 4.  选择分区，然后单击“复制”。  
 

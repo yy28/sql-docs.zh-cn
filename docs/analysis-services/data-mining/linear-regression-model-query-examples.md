@@ -1,27 +1,32 @@
 ---
-title: "线性回归模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "线性回归算法 [Analysis Services]"
-  - "线性回归 [Analysis Services]"
-  - "内容查询 [DMX]"
+title: "线性回归模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear regression algorithms [Analysis Services]
+- linear regression [Analysis Services]
+- content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36f1f595cd087ff05582250c205681b2b7794702
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 线性回归模型查询示例
+# <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
   
  本节介绍如何针对基于 Microsoft 线性回归算法的模型创建查询。  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
  [对回归模型使用预测函数](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> 查找有关线性回归模型的信息  
- 线性回归模型的结构极其简单：挖掘模型将数据表示为定义回归公式的单个节点。 有关详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining model content for logistic regression models.md)。  
+ 线性回归模型的结构极其简单：挖掘模型将数据表示为定义回归公式的单个节点。 有关详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
  [返回页首](#bkmk_top)  
   
@@ -64,12 +69,12 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 |COMPLEXITY_PENALTY=0.9,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MINIMUM_SUPPORT=10,<br /><br /> SCORE_METHOD=4,<br /><br /> SPLIT_METHOD=3,<br /><br /> FORCE_REGRESSOR=|  
   
 > [!NOTE]  
->  参数设置“`FORCE_REGRESSOR =`”指示参数 FORCE_REGRESSOR 的当前值为 Null。  
+>  参数设置“`FORCE_REGRESSOR =` ”指示参数 FORCE_REGRESSOR 的当前值为 Null。  
   
  [返回页首](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> 示例查询 2：检索模型的回归公式  
- 下面的查询返回一个线性回归模型的挖掘模型内容，该回归模型是通过使用 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)中使用的目标邮件数据源创建的。 此模型基于年龄预测客户收入。  
+ 下面的查询返回一个线性回归模型的挖掘模型内容，该回归模型是通过使用 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中使用的目标邮件数据源创建的。 此模型基于年龄预测客户收入。  
   
  查询返回包含回归公式的节点的内容。 所有变量和系数均存储在嵌套表 NODE_DISTRIBUTION 的单独行中。 如果要查看完整的回归公式，请使用 [Microsoft 树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)，单击“(全部)”节点，然后打开“挖掘图例”。  
   
@@ -112,7 +117,7 @@ FROM LR_PredictIncome.CONTENT
 |9（统计信息）|  
 |11（截距）|  
   
- 有关回归模型每个值类型含义的详细信息，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 有关回归模型每个值类型含义的详细信息，请参阅 [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top)  
   
@@ -137,11 +142,11 @@ FROM LR_PredictIncome.CONTENT
   
  [返回页首](#bkmk_top)  
   
-## 根据线性回归模型进行预测  
+## <a name="making-predictions-from-a-linear-regression-model"></a>根据线性回归模型进行预测  
  您可以使用数据挖掘设计器中的“挖掘模型预测”选项卡来生成针对线性回归模型的预测查询。 您可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用预测查询生成器。  
   
 > [!NOTE]  
->  此外，还可以通过使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Excel 数据挖掘外接插件或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Excel 数据挖掘外接插件来创建针对回归模型的查询。 即使 Excel 数据挖掘外接插件无法创建回归模型，您也可以浏览并查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中所存储的所有模型。  
+>  此外，还可以通过使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Excel 数据挖掘外接插件或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Excel 数据挖掘外接插件来创建针对回归模型的查询。 即使 Excel 数据挖掘外接插件无法创建回归模型，您也可以浏览并查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中所存储的所有模型。  
   
  [返回页首](#bkmk_top)  
   
@@ -184,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  [返回页首](#bkmk_top)  
   
-## 预测函数的列表  
+## <a name="list-of-prediction-functions"></a>预测函数的列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 此外， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法还额外支持下表中列出的函数。  
   
 |||  
@@ -200,7 +205,7 @@ NATURAL PREDICTION JOIN
   
  有关对所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都通用的函数列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 有关如何使用这些函数的详细信息，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

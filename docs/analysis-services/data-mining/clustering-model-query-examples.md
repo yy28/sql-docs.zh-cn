@@ -1,27 +1,32 @@
 ---
-title: "聚类分析模型查询示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聚类分析 [数据挖掘]"
-  - "内容查询 [DMX]"
-  - "聚类分析算法 [Analysis Services]"
+title: "聚类分析模型查询示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 聚类分析模型查询示例
+# <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的模型创建查询。  
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [返回页首](#bkmk_top2)  
   
-## 查找有关分类的信息  
+## <a name="finding-information-about-clusters"></a>查找有关分类的信息  
  聚类分析模型中最有用的内容查询通常返回与使用 **“分类查看器”**可浏览的信息同类的信息。 这包括分类配置文件、分类特征以及分类对比。 本节提供检索这些信息的查询示例。  
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：返回分类或分类列表  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   NODE_DESCRIPTION 列包含逗号分隔的属性列表。 请注意，为便于显示，可能对属性列表进行了缩略。  
   
--   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM <model>.CONTENT (DMX)](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md)。  
+-   NODE_DISTRIBUTION 列中的嵌套表包含分类的属性的完整列表。 如果您的客户端不支持分层行集，可以通过在 SELECT 列列表前添加 FLATTENED 关键字来返回嵌套表。 有关 FLATTENED 关键字的使用的详细信息，请参阅 [SELECT FROM <model>.CONTENT (DMX)](../../dmx/select-from-model-content-dmx.md)。  
   
  [返回页首](#bkmk_top2)  
   
@@ -156,7 +161,7 @@ WHERE NODE_TYPE = 5
  代码的第二行添加仅仅从嵌套表列返回某些列的嵌套 Select 语句。 此外，它将嵌套表中的行限定为与目标属性 `Number Cars Owned`有关的那些行。 为了简化显示，使用嵌套表的别名。  
   
 > [!NOTE]  
->  嵌套表列 `PROBABILITY` 必须括在括号中，因为它也是保留的 MDX 关键字的名称。  
+>  嵌套表列 `PROBABILITY`必须括在括号中，因为它也是保留的 MDX 关键字的名称。  
 >   
 >  示例结果：  
   
@@ -223,7 +228,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 |地区|Europe|-72.5041051379789|  
 |English Occupation|Manual|-69.6503163202722|  
   
- 这与当你从第一个下拉列表中选择分类 9，从第二个下拉列表中选择分类 7 时，**分类对比**查看器的图中所显示的信息相同。 若要将分类 9 与其补数进行比较，应在第二个参数中使用空字符串，如下面的示例所示：  
+ 这与当你从第一个下拉列表中选择分类 9，从第二个下拉列表中选择分类 7 时， **分类对比** 查看器的图中所显示的信息相同。 若要将分类 9 与其补数进行比较，应在第二个参数中使用空字符串，如下面的示例所示：  
   
 ```  
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDiscrimination('TM_Clustering','009','',0.0005,true)  
@@ -249,10 +254,10 @@ WHERE IsInNode('001')
   
  [返回页首](#bkmk_top2)  
   
-## 使用模型进行预测  
+## <a name="making-predictions-using-the-model"></a>使用模型进行预测  
  尽管聚类分析通常用于描述和了解数据，但是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 实现使您还可以对分类成员身份进行预测，并返回与预测关联的概率。 本节提供关于如何在聚类分析模型上创建预测查询的示例。 您可以通过指定表格格式数据源来针对多个事例进行预测，或者可以通过创建单独查询来一次提供一个新的值。 为清楚起见，本节中的示例均为单独查询。  
   
- 有关如何使用 DMX 创建预测查询的详细信息，请参阅[数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 有关如何使用 DMX 创建预测查询的详细信息，请参阅 [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
  [返回页首](#bkmk_top2)  
   
@@ -310,7 +315,7 @@ NATURAL PREDICTION JOIN
  [返回页首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query9"></a> 示例查询 9：确定分类成员身份  
- 本示例使用 [Cluster (DMX)](../../dmx/cluster-dmx.md) 函数来返回新事例最有可能属于的分类，并使用 [ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md) 函数来返回该分类中的成员身份的概率。  
+ 本示例使用 [分类 (DMX)](../../dmx/cluster-dmx.md) 函数来返回新事例最有可能属于的分类，并使用 [ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md) 函数来返回该分类中的成员身份的概率。  
   
 ```  
 SELECT Cluster(), ClusterProbability()  
@@ -333,7 +338,7 @@ NATURAL PREDICTION JOIN
  [返回页首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query10"></a> 示例查询 10：返回具有概率和距离的所有可能分类  
- 在上一个示例中，概率分数不是非常高。 若要确定是否存在更好的分类，可以将 [PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md) 函数与 [Cluster (DMX)](../../dmx/cluster-dmx.md) 函数一起使用，以返回包括所有可能的分类以及新事例属于每个分类的概率的嵌套表。 FLATTENED 关键字用于将分层行集改为平面表，以便于查看。  
+ 在上一个示例中，概率分数不是非常高。 若要确定是否存在更好的分类，可以将 [PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md) 函数与 [分类 (DMX)](../../dmx/cluster-dmx.md) 函数一起使用，以返回包括所有可能的分类以及新事例属于每个分类的概率的嵌套表。 FLATTENED 关键字用于将分层行集改为平面表，以便于查看。  
   
 ```  
 SELECT FLATTENED PredictHistogram(Cluster())  
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  默认情况下，结果按概率进行排序。 结果指出，尽管分类 2 的概率非常低，分类 2 仍然最适合于新数据点。  
   
- **注意** 额外的一列 `$DISTANCE`表示从数据点到分类的距离。 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法使用可缩放的 EM 聚类分析，此类分析为每个数据点分配多个分类，并对可能的分类进行排序。  但是，如果您使用 K-means 算法来创建聚类分析模型，则只能为每个数据点分配一个分类，并且此查询仅仅返回一行。 了解这些区别对于解释 [PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md) 函数的结果是非常必要的。 有关 EM 与 K-means 聚类分析之间的区别的详细信息，请参阅 [Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)。  
+ **注意** 额外的一列 `$DISTANCE`表示从数据点到分类的距离。 默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法使用可缩放的 EM 聚类分析，此类分析为每个数据点分配多个分类，并对可能的分类进行排序。  但是，如果您使用 K-means 算法来创建聚类分析模型，则只能为每个数据点分配一个分类，并且此查询仅仅返回一行。 了解这些区别对于解释 [PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md) 函数来包括基础结构中的列。 有关 EM 与 K-means 聚类分析之间的区别的详细信息，请参阅 [Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)。  
   
  [返回页首](#bkmk_top2)  
   
-## 函数列表  
+## <a name="function-list"></a>函数列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 不过，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法生成的模型还支持下表中列出的其他函数。  
   
 |||  
@@ -387,7 +392,7 @@ NATURAL PREDICTION JOIN
   
  有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

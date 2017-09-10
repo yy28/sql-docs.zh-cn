@@ -1,29 +1,34 @@
 ---
-title: "Analysis Services 支持的身份验证方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Analysis Services 支持的身份验证方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 支持的身份验证方法
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
   从客户端应用程序到 Analysis Services 实例的连接需要 Windows 身份验证（集成）。 您可以使用以下任意方法提供 Windows 用户标识：  
   
 -   NTLM  
   
--   Kerberos（请参阅[ Kerberos 约束委派配置 Analysis Services](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)）  
+-   Kerberos（请参阅 [Kerberos 约束委派配置 Analysis Services](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)）  
   
 -   连接字符串上的 EffectiveUserName  
   
@@ -71,17 +76,17 @@ caps.handback.revision: 8
   
  对于匿名身份验证，您可以将匿名用户标识设置为某一特定的 Windows 用户帐户（默认为 IUSR_GUEST）或者某一应用程序池标识。 该匿名用户帐户将用于 Analysis Services 连接，并且必须对 Analysis Services 实例具有数据访问权限。 使用此方法时，在连接上只使用与匿名帐户关联的用户标识。 如果您的应用程序要求额外标识管理，您需要选择其他方法或使用您提供的标识管理解决方案进行补充。  
   
- 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)。  
+ 只有在针对 HTTP 访问配置 Analysis Services，使用 IIS 和 msmdpump.dll 建立连接后，基本身份验证和匿名用户才可用。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
- **存储的凭据**  
+ **Stored Credentials**  
   
  大多数中间层应用程序服务包括存储用户名和密码的功能以便以后从下级数据存储区检索数据，例如 Analysis Services 或 SQL Server 关系引擎。 这样，存储的凭据就提供了检索数据的第五种方法。 此方法的不足之处在于引入了与保持用户名和密码最新关联的维护开销以及在连接上使用单个标识。 如果您的解决方案需要原始调用方的标识，存储的凭据将无法满足要求。  
   
  有关存储的凭据的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和[将 Excel Services 与 SharePoint Server 2013 中的 Secure Store Service 一起使用](http://go.microsoft.com/fwlink/?LinkID=309869)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [将模拟用于传输安全](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [针对 Kerberos 约束委派对 Analysis Services 进行配置](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [针对 Analysis Services 实例的 SPN 注册](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

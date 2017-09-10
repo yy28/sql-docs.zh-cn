@@ -1,34 +1,39 @@
 ---
-title: "创建或自定义数据馈送库 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据馈送库"
-  - "数据馈送 [带 SharePoint 的 Analysis Services]"
+title: "创建或自定义数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feed library
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建或自定义数据馈送库 (Power Pivot for SharePoint)
-  *数据馈送库*是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
+# <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
+  *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
   
 -   创建或编辑“数据服务文档” ，用于指定与特定馈送的 HTTP 连接。  
   
 -   在一个中心位置共享和管理数据服务文档。  
   
--   通过图标直观地标识数据服务文档，以便你可以轻松地从同一库中存储的其他文档中区分出服务文档： ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.png "GMNI_IconDataFeed")  
+-   直观地由一个图标来标识数据服务文档，以便你可以轻松区分从同一库中存储的其他文档出服务文档： ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  数据馈送库始终包含数据服务文档 (.atomsvc) 文件，并且永远不会包含数据馈送本身。 与由静态 XML 数据构成的数据馈送不同，数据服务文档指定根据请求生成馈送的服务或应用程序的 URL，并且为可重复的导入操作提供可重复使用的连接信息。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 22
  [向任何库添加数据馈送内容类型](#addtolib)  
   
 ##  <a name="prereq"></a> 先决条件  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md)。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅 [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
  您必须是网站所有者才能创建该库。  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 22
   
  当前网站的导航“快速启动”窗格中将显示指向数据馈送库的链接。  
   
- 创建库以后，可以使用它来创建数据服务文档。 有关详细信息，请参阅[使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 创建库以后，可以使用它来创建数据服务文档。 有关详细信息，请参阅 [使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="addtolib"></a> 向任何库添加数据馈送内容类型  
  如果您不想创建专用的数据馈送库，但仍想要创建和管理 SharePoint 网站中的数据服务文档，则可为将用于共享数据服务文档 (.atomsvc) 文件的任何库手动添加和配置数据服务文档内容类型。  
@@ -71,7 +76,7 @@ caps.handback.revision: 22
   
  对于要在其中创建或编辑数据馈送注册文档的每个库，都重复以下步骤。  
   
-#### 步骤 1：启用内容类型管理  
+#### <a name="step-1-enable-content-type-management"></a>步骤 1：启用内容类型管理  
   
 1.  打开要为其启用多种内容类型的文档库。  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 22
   
 7.  单击 **“确定”**。  
   
-#### 步骤 2：添加数据服务文档内容类型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>步骤 2：添加数据服务文档内容类型  
   
 1.  在“内容类型”部分中，单击 **“从现有网站内容类型添加”**。 如果您看不到此页，则返回网站，在“库工具”中单击 **“库”** ，然后单击 **“库设置”**。  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
 5.  单击 **“确定”**。  
   
-#### 步骤 3：验证数据服务文档配置  
+#### <a name="step-3-verify-data-service-document-configuration"></a>步骤 3：验证数据服务文档配置  
   
 1.  打开网站主页。  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 22
   
 4.  在“新建文档”上单击向下箭头，然后选择 **“数据服务文档”**。 此时应该显示“新建数据服务文档”页。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [删除 Power Pivot 数据馈送库](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [删除 Power Pivot 数据馈送的库](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [在管理中心中管理和配置 Power Pivot 服务器](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

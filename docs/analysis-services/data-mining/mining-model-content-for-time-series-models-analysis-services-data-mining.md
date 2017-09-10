@@ -1,34 +1,39 @@
 ---
-title: "时序模型的挖掘模型内容（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "时序算法 [Analysis Services]"
-  - "时序 [Analysis Services]"
-  - "挖掘模型内容, 时序模型"
+title: "时序模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time series algorithms [Analysis Services]
+- time series [Analysis Services]
+- mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
+# <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
   
- 有关适用于所有模型类型的一般挖掘模型内容的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 有关适用于所有模型类型的一般挖掘模型内容的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
- 查看本主题时，通过浏览时序模型的内容您可能会发现，遵从本主题的说明会很有帮助。 可以通过完成数据挖掘基础教程来创建时序模型。 在教程中创建的模型是混合模型，该模型同时使用 ARIMA 和 ARTXP 算法来定型数据。 有关如何查看挖掘模型内容的信息，请参阅[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)。  
+ 查看本主题时，通过浏览时序模型的内容您可能会发现，遵从本主题的说明会很有帮助。 可以通过完成数据挖掘基础教程来创建时序模型。 在教程中创建的模型是混合模型，该模型同时使用 ARIMA 和 ARTXP 算法来定型数据。 有关如何查看挖掘模型内容的信息，请参阅 [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)。  
   
-## 了解时序模型的结构  
+## <a name="understanding-the-structure-of-a-time-series-model"></a>了解时序模型的结构  
  时序模型具有表示该模型及其元数据的单一父节点。 根据用于创建该模型的算法的不同，在该父节点下面有一个或两个时序树。  
   
  如果创建混合模型，则两个单独的树会添加到该模型中，一个适用于 ARIMA 算法，另一个适用于 ARTXP 算法。 如果选择仅使用 ARTXP 算法和 ARIMA 算法中的一个，则将拥有对应于所选算法的单个树。 可以通过设置 FORECAST_METHOD 参数来指定要使用的算法。 有关是使用 ARTXP、ARIMA 还是使用混合模型的详细信息，请参阅 [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)。  
@@ -50,19 +55,19 @@ caps.handback.revision: 26
   
  以下各节说明了节点在这些模型类型中的排列方式。  
   
-### ARTXP 模型的结构  
- ARTXP 算法创建的模型与决策树模型相似。 它对可预测属性进行分组，并且只要发现显著差异就会拆分这些组。 因此，每个 ARTXP 模型均包含对应于每个可预测属性的单独分支。 例如，数据挖掘基础教程创建的模型可以预测几个不同地区的销售额。 在本例中，**[Amount]** 为可预测属性，并为每个地区创建一个单独的分支。 如果有两个可预测属性 **[Amount]** 和 **[Quantity]**，则将为每个属性和地区组合创建一个单独的分支。  
+### <a name="structure-of-an-artxp-model"></a>ARTXP 模型的结构  
+ ARTXP 算法创建的模型与决策树模型相似。 它对可预测属性进行分组，并且只要发现显著差异就会拆分这些组。 因此，每个 ARTXP 模型均包含对应于每个可预测属性的单独分支。 例如，数据挖掘基础教程创建的模型可以预测几个不同地区的销售额。 在本例中， **[Amount]** 为可预测属性，并为每个地区创建一个单独的分支。 如果有两个可预测属性 **[Amount]** 和 **[Quantity]**，则将为每个属性和地区组合创建一个单独的分支。  
   
  ARTXP 分支的顶端节点所含的信息与决策树根节点中所含的信息相同。 该信息包括该节点的子节点数目 (CHILDREN_CARDINALITY)、满足该节点条件的事例数 (NODE_SUPPORT) 和多种说明性统计信息 (NODE_DISTRIBUTION)。  
   
  如果该节点没有任何子节点，这就意味着未找到可证明将事例分为更多子组是正确做法的重要条件。 此分支止于该点，且该节点称为“ 叶节点”。 该叶节点包含 ARTXP 公式的构造块：属性、系数和值。  
   
- 某些分支可能具有类似于决策树模型的其他拆分。 例如，表示欧洲地区销售额的树的分支拆分为两个分支。 如果发现导致两个组之间存在显著差异的条件，则发生拆分。 父节点指出引起拆分的属性的名称，如 [Amount]，以及该父节点中包含的事例数。 叶节点提供更多详细信息：属性值（如 [Sales] >10,000 与 [Sales] \< 10,000）、支持每个条件的事例数和 ARTXP 公式。  
+ 某些分支可能具有类似于决策树模型的其他拆分。 例如，表示欧洲地区销售额的树的分支拆分为两个分支。 如果发现导致两个组之间存在显著差异的条件，则发生拆分。 父节点指出引起拆分的属性的名称，如 [Amount]，以及该父节点中包含的事例数。 叶节点提供更多详细信息：属性值（如 [Sales] >10,000 与 [Sales] < 10,000）、支持每个条件的事例数和 ARTXP 公式。  
   
 > [!NOTE]  
 >  如果希望查看公式，则可以在叶节点级别（而非中间节点或根节点级别）找到完整的回归公式。  
   
-### ARIMA 模型的结构  
+### <a name="structure-of-an-arima-model"></a>ARIMA 模型的结构  
  ARIMA 算法会为数据序列（如 **[Region]**）和可预测属性（如 **[Sales Amount]**）的每个组合均创建单个信息片段 — 说明可预测属性随时间变化的公式。  
   
  适用于每个序列的公式从多个组件派生，每个公式都与在数据中找到的每个周期性结构相对应。 例如，如果拥有按月收集的销售数据，则该算法可能会检测到按月、季度或年度的周期性结构。  
@@ -79,10 +84,10 @@ caps.handback.revision: 26
   
  “  差分阶数”是公式的重要组成部分，将在公式中表示出来。 有关如何使用差分阶数的详细信息，请参阅 [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
   
-## 时序模型内容  
+## <a name="model-content-for-time-series"></a>时序模型内容  
  本节提供的详细信息和示例仅针对挖掘模型内容中与时序模型有特殊关系的列。  
   
- 有关架构行集中通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息，或有关挖掘模型技术的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 有关架构行集中通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息，或有关挖掘模型技术的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -164,24 +169,24 @@ caps.handback.revision: 26
  NODE_RULE  
  当前节点中规则、拆分或公式的 XML 说明。  
   
- **ARTXP：**NODE_RULE 通常对应于 NODE_CAPTION。  
+ **ARTXP：** NODE_RULE 通常对应于 NODE_CAPTION。  
   
  **ARIMA：** 有关详细信息，请参阅 [了解 ARIMA 树](#bkmk_ARIMA_1)。  
   
  MARGINAL_RULE  
  该节点特定的拆分或内容的 XML 说明。  
   
- **ARTXP：**MARGINAL_RULE 通常对应于 NODE_DESCRIPTION。  
+ **ARTXP：** MARGINAL_RULE 通常对应于 NODE_DESCRIPTION。  
   
- **ARIMA：**始终为空，改用 NODE_RULE。  
+ **ARIMA：** 始终为空，改用 NODE_RULE。  
   
  NODE_PROBABILITY  
- **ARTXP：**对于树节点，始终为 1。 对于叶节点，表示从模型根节点到达该节点的概率。  
+ **ARTXP：** 对于树节点，始终为 1。 对于叶节点，表示从模型根节点到达该节点的概率。  
   
  **ARIMA：** 始终为 0。  
   
  MARGINAL_PROBABILITY  
- **ARTXP：**对于树节点，始终为 1。 对于叶节点，表示从其直接父节点到达该节点的概率。  
+ **ARTXP：** 对于树节点，始终为 1。 对于叶节点，表示从其直接父节点到达该节点的概率。  
   
  **ARIMA：** 始终为 0。  
   
@@ -216,16 +221,16 @@ caps.handback.revision: 26
  **ARIMA：**ARIMA 模型的 Bayesian 信息标准 (BIC) 分数。 对与该公式相关的所有 ARIMA 节点设置相同的分数。  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP：**与 NODE_DESCRIPTION 相同的信息。  
+ **ARTXP：**  与 NODE_DESCRIPTION 相同的信息。  
   
- **ARIMA：**与 NODE_CAPTION 相同的信息，即 ARIMA 公式的缩写。  
+ **ARIMA：** 与 NODE_CAPTION 相同的信息，即 ARIMA 公式的缩写。  
   
 ##  <a name="bkmk_ARTXP_1"></a> 了解 ARTXP 树  
  ARTXP 模型将线性数据区与根据某些其他因素进行拆分的数据区明确分隔开。 只要能够直接以独立变量的函数表示可预测属性的变化，就可以通过计算回归公式来表示该关系。  
   
  例如，如果大多数数据序列的时间和销售额直接相关，则每个序列将包含在一个时序树 (NODE_TYPE =16) 中，该树没有对应于每个数据序列的子节点，而只有对应于回归公式的子节点。 但是，如果为非线性关系，则 ARTXP 时序树可以根据条件拆分为子节点，正如决策树模型一样。 使用 **Microsoft 一般内容树查看器** 查看模型内容，可以看到发生拆分的位置以及拆分影响趋势线的方式。  
   
- 为了更好地了解这种行为，您可以查看在 [数据挖掘基础教程](../Topic/Basic%20Data%20Mining%20Tutorial.md)中创建的时序模型。 此模型基于 AdventureWorks 数据仓库，不会使用特别复杂的数据。 因此，ARTXP 树中的拆分并不多。 然而，甚至该相对简单的模型都将演示三种不同的拆分：  
+ 为了更好地了解这种行为，您可以查看在 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的时序模型。 此模型基于 AdventureWorks 数据仓库，不会使用特别复杂的数据。 因此，ARTXP 树中的拆分并不多。 然而，甚至该相对简单的模型都将演示三种不同的拆分：  
   
 -   太平洋地区的 [Amount] 趋势线基于时间键进行拆分。 基于时间键进行拆分是指在某个时间点，趋势发生了变化。 趋势线仅在到达某一时间点之前为线性，之后该曲线即呈现另一种形状。 例如，一个时序可能持续到 2002 年 8 月 6 日为止，该日期后即开始另一个时序。  
   
@@ -243,14 +248,14 @@ caps.handback.revision: 26
   
  总之，数据挖掘可用于提供关于发生潜在有价值现象的领域的提示，但要准确解释该信息在商业环境下的价值，商业用户须做进一步调查且具有相关的专业技能。  
   
-### ARTXP 时序公式的元素  
+### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP 时序公式的元素  
  若要查看 ARTXP 树或分支的完整公式，建议使用 **Microsoft 时序查看器** 的 [“挖掘图例”](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，其将以可读格式显示所有常量。  
   
 -   [查看时序模型的公式（数据挖掘）](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  下一节将给出示例公式并解释基本术语。  
   
-#### ARTXP 公式的挖掘图例  
+#### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 公式的挖掘图例  
  以下示例将给出模型的某个组成部分的 ARTXP 公式，如 **“挖掘图例”**中所示。 若要查看该公式，请在 Microsoft 时序查看器中打开在“数据挖掘基础教程”中创建的 [Forecasting] 模型，单击“模型”选项卡，选择对应于 R250: Europe 数据序列的树。  
   
  若要查看此示例使用的公式，请单击表示 2003 年 7 月 5 日当天或之后的数据序列的节点。  
@@ -261,12 +266,12 @@ caps.handback.revision: 26
   
  在本例中，值 21.322 表示对 Quantity 进行预测（作为公式的以下元素的一个函数）得到的预测值。  
   
- 例如，其中一个元素是 `Quantity(R250 North America,-7)`。 该表示法表示北美地区在 `t-7` 或当前时间段之前七个时间段的数量。 此数据序列的值乘以系数 -0.293。 各元素的系数在定型过程中导出，其基于数据中的趋势。  
+ 例如，其中一个元素是 `Quantity(R250 North America,-7)`。 该表示法表示北美地区在 `t-7`或当前时间段之前七个时间段的数量。 此数据序列的值乘以系数 -0.293。 各元素的系数在定型过程中导出，其基于数据中的趋势。  
   
  由于该模型已计算出欧洲地区的 R250 模型的数量由几个其他数据序列的值决定，因此该公式中有多个元素。  
   
-#### ARTXP 公式的模型内容  
- 下表使用 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)中所示的相关节点的内容，显示该公式的相同信息。  
+#### <a name="model-content-for-an-artxp-formula"></a>ARTXP 公式的模型内容  
+ 下表使用 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)中所示的相关节点的内容，显示该公式的相同信息。  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -282,7 +287,7 @@ caps.handback.revision: 26
   
  通过比较这些示例您可以看出，挖掘模型内容包含的信息与 **“挖掘图例”**中提供的信息相同，但还额外增加了 *variance* 和 *support*两列内容。 支持值指示支持该公式所述趋势的事例的计数。  
   
-### 使用 ARTXP 时序公式  
+### <a name="using-the-artxp-time-series-formula"></a>使用 ARTXP 时序公式  
  对于大多数商业用户来说，ARTXP 模型内容的值在于既提供数据的树视图又提供数据的线性表示。  
   
 -   如果可预测属性的变化可以表示为独立变量的线性函数，则算法将自动计算回归公式并在单独的节点中输出该序列。  
@@ -333,7 +338,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
 |Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
- 也可使用 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)浏览以上结果。根据这些结果，可以一眼判断出哪些序列是完全线性的，哪些序列具有多个周期性结构，以及所发现的周期是多少。  
+ 也可使用 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)浏览以上结果。根据这些结果，可以一眼判断出哪些序列是完全线性的，哪些序列具有多个周期性结构，以及所发现的周期是多少。  
   
  例如，M200 Europe 序列的 ARIMA 公式的缩写显示只检测到了默认周期或者说日周期。 NODE_CAPTION 列给出了公式的缩写形式。  
   
@@ -368,7 +373,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  以上示例说明深化到 ARIMA 树中的程度越高，发现的详细信息就越多，不过父节点中也同样组合并呈现重要信息。  
   
-### ARIMA 的时序公式  
+### <a name="time-series-formula-for-arima"></a>ARIMA 的时序公式  
  若要查看各个 ARIMA 节点的完整公式，建议使用 **Microsoft 时序查看器** 的 [“挖掘图例”](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，由此可以查看已采用一致格式构成的公式的自动回归阶数、移动平均值和其他元素。  
   
 -   [查看时序模型的公式（数据挖掘）](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
@@ -387,16 +392,16 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 > [!NOTE]  
 >  由 Analysis Services 计算得出的常量用于计算方差，但在用户界面中的任何位置均不显示该常量本身。 不过，如果选择 **“图表”** 视图中的 **“显示偏差”** ，则可以查看序列中任意一点的方差，该方差是此常量的函数。 各数据序列的工具提示显示特定预测点的方差。  
   
-#### ARIMA 公式的模型内容  
+#### <a name="model-content-for-arima-formula"></a>ARIMA 公式的模型内容  
  ARIMA 模型遵循标准结构，其不同类型的节点中包含不同的信息。 若要查看 ARIMA 模型的模型内容，请将查看器更改为 **Microsoft 一般内容树查看器**，然后展开含有属性名 **R250 Europe: Quantity**的节点。  
   
  数据序列的 ARIMA 模型包含四种不同格式的基本周期性公式，可根据不同的应用选用不同的公式。  
   
- **NODE_CAPTION：**显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 `{4,0,6}`，则节点表示一个带有 6 个系数的周期性结构。 如果缩写类似于 `{2,0,8} x {1,0,0}(4)`，则节点中包含两个周期性结构。  
+ **NODE_CAPTION：** 显示公式的缩写。 缩写指出表示的周期性结构的数目以及这些结构有多少系数。 例如，如果公式缩写为 `{4,0,6}`，则节点表示一个带有 6 个系数的周期性结构。 如果缩写类似于 `{2,0,8} x {1,0,0}(4)`，则节点中包含两个周期性结构。  
   
  **NODE DESCRIPTION：** 显示公式的长格式，这也是 **“挖掘图例”**中显示的公式的格式。 公式的长格式类似于公式的缩写，不同之处在于前者显示系数的实际值，而后者是进行计数。  
   
- **NODE_RULE：**显示公式的 XML 表示形式。 根据节点类型的不同，XML 表示形式可以包括单个或多个周期性结构。 下表中说明如何将 XML 节点上滚到 ARIMA 模型的较高级别。  
+ **NODE_RULE：** 显示公式的 XML 表示形式。 根据节点类型的不同，XML 表示形式可以包括单个或多个周期性结构。 下表中说明如何将 XML 节点上滚到 ARIMA 模型的较高级别。  
   
 |节点类型|XML 内容|  
 |---------------|-----------------|  
@@ -405,7 +410,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29（ARIMA 自动回归）|列出单个周期性结构的期限。|  
 |30（ARIMA 移动平均值）|列出单个周期性结构的系数。|  
   
- **NODE_DISTRIBUTION：**在嵌套表中显示公式中的各项，可查询该表获取特定的项。 节点分布表遵从与 XML 规则相同的层次结构。 亦即 ARIMA 序列的根节点 (NODE_TYPE = 27) 包含整个公式的截距值和周期，公式中可能包含多个周期，而该序列的子节点仅包含某个周期性结构或该周期性结构的子节点特有的信息。  
+ **NODE_DISTRIBUTION：** 在嵌套表中显示公式中的各项，可查询该表获取特定的项。 节点分布表遵从与 XML 规则相同的层次结构。 亦即 ARIMA 序列的根节点 (NODE_TYPE = 27) 包含整个公式的截距值和周期，公式中可能包含多个周期，而该序列的子节点仅包含某个周期性结构或该周期性结构的子节点特有的信息。  
   
 |节点类型|Attribute|值类型|  
 |---------------|---------------|----------------|  
@@ -422,7 +427,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  有关可能的值类型的枚举，请参阅 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>。  
   
-### 使用 ARIMA 树信息  
+### <a name="using-the-arima-tree-information"></a>使用 ARIMA 树信息  
  如果在企业解决方案中使用基于 ARIMA 算法的预测，则可能希望将公式粘贴到报表中以演示用于创建该预测的方法。 可以使用标题表示缩写格式的公式，也可以使用说明表示长格式的公式。  
   
  如果正在开发使用时序预测的应用程序，则可能会发现从模型内容中获取 ARIMA 公式，然后做出自己的预测会很有帮助。 若要获取用于任何特定输出的 ARIMA 公式，则可以直接在 ARIMA 根中查询该特定属性，如前面的示例中所示。  
@@ -433,13 +438,14 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML 表示形式：使用 XML 查询。  
   
-## 注释  
- 由于 ARTXP 树的每个拆分的信息均位于该树中的不同位置，因此可能很难从 ARTXP 树中检索信息。 因而对于 ARTXP 模型，必须获取公式的各个部分，然后进行些许处理来重组完整的公式。 相比之下，从 ARIMA 模型检索公式要容易一些，原因是从 ARIMA 树的任何位置均可获取该公式。 有关如何创建检索该信息的查询的信息，请参阅[时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
+## <a name="remarks"></a>注释  
+ 由于 ARTXP 树的每个拆分的信息均位于该树中的不同位置，因此可能很难从 ARTXP 树中检索信息。 因而对于 ARTXP 模型，必须获取公式的各个部分，然后进行些许处理来重组完整的公式。 相比之下，从 ARIMA 模型检索公式要容易一些，原因是从 ARIMA 树的任何位置均可获取该公式。 有关如何创建检索该信息的查询的信息，请参阅 [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 时序算法技术参考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
+

@@ -1,32 +1,37 @@
 ---
-title: "使用部署实用工具部署模型解决方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部署 [Analysis Services], 命令提示符"
-  - "命令提示实用工具 [SQL Server], Microsoft.AnalysisServices.Deployment"
-  - "Microsoft.AnalysisServices.Deployment 实用工具"
-  - "Analysis Services 部署, 命令提示符"
+title: "使用部署实用工具部署模型解决方案 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying [Analysis Services], command prompt
+- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
+- Microsoft.AnalysisServices.Deployment utility
+- Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用部署实用工具部署模型解决方案
+# <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署实用工具部署模型解决方案
   可以使用 **Microsoft.AnalysisServices.Deployment** 实用工具在命令提示符下启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 此实用工具使用的输入文件，是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中生成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目时生成的 XML 输出文件。 可以轻松修改输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -48,7 +53,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  在应答模式中运行此实用工具。 执行此实用工具向导部分产生的所有响应应写回输入文件，但不会实际更改部署目标。  
   
  **/o**  
- 以输出模式运行此实用工具。 此模式下将不进行部署，但是通常会将发送到部署目标的 XML for Analysis (XMLA) 脚本转而保存到指定的输出脚本文件。 如果未指定 *output_script_file*，则该实用工具将尝试使用在部署选项 (.deploymentoptions) 输入文件中所指定的输出脚本文件。 如果部署选项输入文件中未指定输出脚本文件，则将出现错误。  
+ 以输出模式运行此实用工具。 此模式下将不进行部署，但是通常会将发送到部署目标的 XML for Analysis (XMLA) 脚本转而保存到指定的输出脚本文件。 如果未指定 *output_script_file* ，则该实用工具将尝试使用在部署选项 (.deploymentoptions) 输入文件中所指定的输出脚本文件。 如果部署选项输入文件中未指定输出脚本文件，则将出现错误。  
   
  有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
   
@@ -61,8 +66,8 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  **/d** 参数只在输出模式下使用。 在应答模式或静默模式下，将忽略此参数。 有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
   
-## 注释  
- **Microsoft.AnalysisServices.Deployment** 实用工具将使用一组文件，这些文件可以提供对象定义、部署目标、部署选项和配置设置。同时，该实用工具将使用指定的部署选项和配置设置，尝试将对象定义部署到指定的部署目标。 如果在应答文件中或在输出模式下调用此实用工具，此工具可提供一个用户界面。 有关如何使用为此实用工具提供的用户界面创建应答文件的详细信息，请参阅[使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
+## <a name="remarks"></a>注释  
+ **Microsoft.AnalysisServices.Deployment** 实用工具将使用一组文件，这些文件可以提供对象定义、部署目标、部署选项和配置设置。同时，该实用工具将使用指定的部署选项和配置设置，尝试将对象定义部署到指定的部署目标。 如果在应答文件中或在输出模式下调用此实用工具，此工具可提供一个用户界面。 有关如何使用为此实用工具提供的用户界面创建应答文件的详细信息，请参阅 [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
   
  该实用工具位于 \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio 文件夹中。  
   
@@ -77,7 +82,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  [返回到参数](#Arguments)  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例演示了如何在静默模式下部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，并记录进度和错误消息供以后查看：  
   
  `Microsoft.AnalysisServices.Deployment.exe`  
@@ -86,7 +91,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

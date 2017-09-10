@@ -1,27 +1,32 @@
 ---
-title: "计算上下文 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "计算上下文 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 计算上下文
+# <a name="calculation-context"></a>计算上下文
   计算上下文是多维数据集的已知子空间，在其中，将对表达式进行计算，并且所有坐标或者是显式已知的，或者可以从表达式派生。  
   
-## 确定计算上下文  
+## <a name="determining-the-calculation-context"></a>确定计算上下文  
  每个集、成员、元组或数值函数均在整个 MDX 表达式或语句的上下文中执行。 当参数（例如元组）传递到函数时，仅显式提供多维数据集空间中的若干个坐标。 其他坐标根据当前计算上下文来获取。  
   
  按照以下顺序确定未指定的单元坐标和属性成员的计算上下文：  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
   
 5.  每个轴上的多维数据集或子多维数据集，消除了轴上的空元组并应用 HAVING 子句。  
   
-6.  有关详细信息，请参阅[在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
+6.  有关详细信息，请参阅 [在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
   
  在以下查询中，由 WHERE 子句中指定的 Country 属性成员和 Calendar Year 属性成员限制行轴的计算上下文。  
   
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  若要提高查询性能，应在解析过程中尽早地消除成员和元组。 通过这种方式，针对最终成员集的复杂查询时间计算涉及的单元最少。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

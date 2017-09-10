@@ -1,24 +1,29 @@
 ---
-title: "创建与表格模型数据库的 BI 语义模型连接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建 BI 语义模型连接到表格模型数据库 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建与表格模型数据库的 BI 语义模型连接
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>创建与表格模型数据库的 BI 语义模型连接
   使用本主题中的信息设置一个 BI 语义模型连接，该连接将重定向到在 SharePoint 场外的 Analysis Services 实例上运行的表格模型数据库。  
   
  在创建 BI 语义模型连接并配置 SharePoint Services 和 Analysis Services 权限后，可将其用作 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报告的数据源。  
@@ -40,9 +45,9 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> 检查必备条件  
  您必须具有“参与讨论”权限或更高权限以创建 BI 语义模型连接文件。  
   
- 您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)。  
+ 您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 您必须知道将为其设置 BI 语义模型连接的服务器和数据库名称。 必须为表格模式配置 Analysis Services。 服务器上运行的数据库必须是表格模型数据库。 有关如何检查服务器模式的说明，请参阅[确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+ 您必须知道将为其设置 BI 语义模型连接的服务器和数据库名称。 必须为表格模式配置 Analysis Services。 服务器上运行的数据库必须是表格模型数据库。 有关如何检查服务器模式的说明，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  在某些情况下，SharePoint 环境下的共享服务必须对 Analysis Services 实例具有管理权限。 这些服务包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序、Reporting Services 服务应用程序和 PerformancePoint 服务应用程序。 您必须首先知道这些服务应用程序的标识，然后才能授予管理权限。 您可以使用管理中心来确定标识。  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建模型时会定义角色（有时会定义角色成员身份）。 虽然无法使用 SQL Server Management Studio 创建角色，但可以使用它向已定义的角色中添加成员。 有关创建角色的详细信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
-#### 分配角色成员身份  
+#### <a name="assign-role-membership"></a>分配角色成员身份  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例，再在对象资源管理器中展开数据库，然后展开 **“角色”**。 您应看到已定义的角色。 如果角色不存在，请与模型作者联系并请求添加或角色。 必须先重新部署模型，然后角色才会显示在 Management Studio 中。  
   
@@ -141,9 +146,9 @@ caps.handback.revision: 16
 4.  单击 **“删除用户权限”**。  
   
 ##  <a name="bkmk_next"></a> 后续步骤  
- 创建了 BI 语义模型连接并且确保其安全后，可以将该连接指定为数据源。 有关详细信息，请参阅[在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
+ 创建了 BI 语义模型连接并且确保其安全后，可以将该连接指定为数据源。 有关详细信息，请参阅 [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [PowerPivot BI 语义模型连接 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [创建与 Power Pivot 工作簿的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

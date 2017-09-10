@@ -1,28 +1,33 @@
 ---
-title: "在数据源视图中定义命名计算 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "修改命名计算"
-  - "数据源视图 [Analysis Services], 命名计算"
-  - "命名计算 [Analysis Services]"
+title: "在数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying named calculations
+- data source views [Analysis Services], named calculations
+- named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在数据源视图中定义命名计算 (Analysis Services)
+# <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
   命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
   
 -   创建从事实表的多个列派生的单个命名计算（例如，通过将税率与销售价格相乘创建“税额”）。  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
 -   作为一种查询性能增强方式，在 DSV 中创建命名查询而非在多维数据集中创建计算成员。 命名计算在处理期间进行计算，而计算成员则在查询时进行计算。  
   
-## 创建命名计算  
+## <a name="creating-named-calculations"></a>创建命名计算  
   
 > [!NOTE]  
 >  您不能将命名计算添加到命名查询，也不能基于包含命名计算的表创建命名查询。  
@@ -56,7 +61,7 @@ FROM
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
 ```  
   
-## 添加或编辑命名计算  
+## <a name="add-or-edit-a-named-calculation"></a>添加或编辑命名计算  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中定义命名计算的数据源视图。  
   
@@ -64,7 +69,7 @@ FROM
   
 3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
   
-     ![“关系图”工作区的右键单击菜单的屏幕快照](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "“关系图”工作区的右键单击菜单的屏幕快照")  
+     ![屏幕快照的关系图工作区中，右键单击菜单](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
   
     > [!NOTE]  
     >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项。  
@@ -81,10 +86,10 @@ FROM
   
      命名计算列显示为数据源视图表的最后一列。 计算器符号指示该列包含命名计算。  
   
-## 删除命名计算  
+## <a name="delete-a-named-calculation"></a>删除命名计算  
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在数据源视图中定义命名查询 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

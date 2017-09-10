@@ -1,33 +1,38 @@
 ---
-title: "在数据源视图中定义命名查询 (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "命名查询 [Analysis Services], 创建"
-  - "修改命名查询"
-  - "数据源视图 [Analysis Services], 命名查询"
+title: "数据源视图 (Analysis Services) 中定义命名的查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named queries [Analysis Services], creating
+- modifying named queries
+- data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 在数据源视图中定义命名查询 (Analysis Services)
+# <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
   命名查询是以表的形式表示的 SQL 表达式。 在命名查询中，可以指定一个 SQL 表达式以选择从一个或多个数据源的一个或多个表返回的行和列。 命名查询基于一个表达式，除此之外，它在行和关系方面都与数据源视图 (DSV) 中的其他表相似。  
   
  命名查询允许您不修改基础数据源即可扩展 DSV 中现有表的关系架构。 例如，可以使用一系列命名查询将一个复杂的维度表分割为几个较小、较简单的维度表以便在数据库维度中使用。 命名查询还可以用来将来自一个或多个数据源的多个数据库表联接到单个数据源视图表。  
   
-## 创建命名查询  
+## <a name="creating-a-named-query"></a>创建命名查询  
   
 > [!NOTE]  
 >  您不能将命名计算添加到命名查询，也不能基于包含命名计算的表创建命名查询。  
@@ -38,7 +43,7 @@ caps.handback.revision: 31
   
  **请注意** 定义查询 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 数据源的命名查询时，包含相关子查询和 GROUP BY 子句的命名查询将失败。 有关详细信息，请参阅 [知识库中的](http://support.microsoft.com/kb/274729) Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY [!INCLUDE[msCoName](../../includes/msconame-md.md)] （有关包含相关子查询和 GROUP BY 的 SELECT 语句的内部错误）。  
   
-## 添加或编辑命名查询  
+## <a name="add-or-edit-a-named-query"></a>添加或编辑命名查询  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中添加命名查询的数据源视图。  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 31
     4.  在底部窗格中键入此查询，或者使用图形查询生成工具创建查询。  
   
     > [!NOTE]  
-    >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](../Topic/Create%20or%20Edit%20Named%20Query%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)。  
+    >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)。  
   
 5.  单击 **“确定”**。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

@@ -1,24 +1,29 @@
 ---
-title: "创建和管理层次结构（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "创建和管理层次结构 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63c10ca6e8486e67db96d7fe4d1e6afe76133ef8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建和管理层次结构（SSAS 表格）
+# <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
   可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
  本主题包括以下任务：  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
 ##  <a name="bkmk_create"></a> 创建层次结构  
  您可以通过使用列和表上下文菜单，创建层次结构。 创建层次结构时，一个新的父级别将与您作为子级别选择的列一起出现。  
   
-#### 从上下文菜单创建层次结构  
+#### <a name="to-create-a-hierarchy-from-the-context-menu"></a>从上下文菜单创建层次结构  
   
 1.  在模型设计器（关系图视图）的表窗口中，右键单击某一列，然后单击“创建层次结构”。  
   
@@ -50,13 +55,13 @@ caps.handback.revision: 10
 ##  <a name="bkmk_edit"></a> 编辑层次结构  
  您可以重命名层次结构，重命名子级别，更改子级别的顺序，添加附加列作为子级别，从层次结构中删除子级别，显示子级别的源名称（列名），以及在子级别与层次结构父级别同名的情况下隐藏子级别。  
   
-#### 更改层次结构或子级别的名称  
+#### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>更改层次结构或子级别的名称  
   
 1.  右键单击层次结构父级别或子级别，然后单击“重命名”。  
   
 2.  键入新名称或者编辑现有名称。  
   
-#### 更改层次结构中子级别的顺序  
+#### <a name="to-change-the-order-of-a-child-level-in-a-hierarchy"></a>更改层次结构中子级别的顺序  
   
 -   单击并将子级别拖入到层次结构上的新位置中。  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 10
   
 -   或者，右键单击某一子级别以便选择它，然后按下 Alt + 向上箭头以便上移该级别，或按下 Alt + 向上箭头以便在列表中下移该级别。  
   
-#### 向层次结构添加其他子级别  
+#### <a name="to-add-another-child-level-to-a-hierarchy"></a>向层次结构添加其他子级别  
   
 -   单击并将列拖到父级别或者层次结构的特定位置。 该列将作为层次结构中的子级别复制。  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  您可以将隐藏的列（从报表中隐藏的列）作为子级别添加到层次结构。 该子级别并不隐藏。  
   
-#### 从层次结构中删除子级别  
+#### <a name="to-remove-a-child-level-from-a-hierarchy"></a>从层次结构中删除子级别  
   
 -   右键单击子级别，然后单击“从层次结构中删除”。  
   
@@ -82,21 +87,21 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  如果您重命名某一层次结构子级别，则该子级别将不再与从其复制的列共享相同名称。 使用 **“显示源名称”** 命令可以看到子级别从其复制的列。  
   
-#### 显示源名称  
+#### <a name="to-show-a-source-name"></a>显示源名称  
   
 -   右键单击某一层次结构子级别，然后单击“显示源名称”。 此时将显示该子级别从其复制的列的名称。  
   
 ##  <a name="bkmk_delete"></a> 删除层次结构  
   
-#### 删除层次结构及其子级别  
+#### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>删除层次结构及其子级别  
   
 -   右键单击父层次结构级别，然后单击“删除层次结构”。  
   
 -   或者，单击父层次结构级别，然后按 Delete 键。 这也会删除其所有子级别。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [表格模型设计器 (SSAS)](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [层次结构（SSAS 表格）](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [层次结构 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

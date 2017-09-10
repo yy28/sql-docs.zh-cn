@@ -1,73 +1,80 @@
 ---
-title: "Analysis Services 中表格模型的兼容级别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.versioncompat.f1"
+title: "Analysis Services 中的表格模型的兼容性级别 |Microsoft 文档"
+ms.custom: 
+ms.date: 07/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58710676e09a49ecc1b49ad37c656e3589ee1257
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 中表格模型的兼容级别
-  模型或数据库的兼容级别是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎中一组特定于版本的行为。 可以在任何支持的兼容级别上创建模型，以获取特定版本的行为。 例如，DirectQuery 和表格对象元数据具有不同的实现，具体取决于兼容级别分配。  
+# <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格模型的兼容性级别
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  *兼容性级别*指的是特定于版本的 Analysis Services 引擎中的行为。 例如，DirectQuery 和表格对象元数据根据兼容性级别具有不同的实现。 在常规应选择你的服务器支持的最新兼容性级别。
+
+  **最新的兼容性级别为 1400** 
   
- **SQL Server 2016 RTM (1200)**（或简称为 1200 兼容级别）是 SQL Server 2016 中的新增部分，仅适用于表格模型。  1200 兼容级别的表格模型将仅在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 表格实例上运行。  
+1400 兼容级别中的主要功能包括：
+
+*  新的基础结构的数据连接和导入表格模型支持 TOM Api 和 TMSL 脚本。 这使对其他数据源，例如 Azure Blob 存储的支持。 其他数据源将包含在后续更新。
+*  数据转换，并通过使用获取数据和 M 表达式的数据混合应用程序功能。
+*  度量值现在支持具有 DAX 表达式中，启用 BI 工具 （如 Microsoft Excel) 深化到详细数据从聚合报表的详细信息行属性。 例如，当最终用户查看地区和月的总销售额，则可查看关联的订单详细信息。 
+*  表名和列名，除了在其中的数据的对象级别安全。
+*  不规则层次结构的增强的支持。
+*  性能和监视改进。
+
   
- 若要创建或升级表格模型，请使用 SQL Server Data Tools (SSDT)，并在创建项目时设置“兼容级别”属性，或于创建项目后在 **model.bim** 文件中设置。  
+## <a name="supported-compatibility-levels-by-version"></a>版本支持的兼容级别
   
-> [!NOTE]  
->  就兼容级别而言，多维模型遵照独立版本路径。 正如 1103 一样，数字碰巧相同只是一种巧合。 有关详细信息，请参阅[多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
+|||  
+|-|-|- 
+|**兼容级别**|**服务器版本**| 
+|1400|Azure Analysis Services （预览版），SQL Server 自 2017 年 1 |  
+|1200|Azure Analysis Services，SQL Server 自 2017 年，SQL Server 2016| 
+|1103|SQL Server 自 2017 年 1 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1|  
+|1100|SQL Server 自 2017 年 1 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1、 SQL Server 2012| 
+
+\*在 SQL Server 自 2017 年，1100年和 1103年兼容性级别已弃用。
   
-## 表格模型数据库支持的兼容级别  
- Analysis Services 支持以下兼容级别（适用于模型和数据库）。  用于创建模型的工具版本决定了更高的兼容级别是否可用。  
+## <a name="set-compatibility-level"></a>将兼容性级别设置 
+ 如果创建新的表格模型项目之后在 SQL Server Data Tools (SSDT)，你可以在指定的兼容性级别**表格模型设计器**对话框。 
   
-||||  
-|-|-|-|  
-|兼容级别|服务器版本|建模工具版本|  
-|1200|仅在 SQL Server 2016 实例上运行|[仅 Visual Studio 2015 适用的 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) 描述了此级别可用的功能。|  
-|1103|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1|[适用于 Visual Studio 2015 的 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>2</sup><br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)|  
-|1100|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1<br /><br /> SQL Server 2012|[适用于 Visual Studio 2015 的 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [SQL Server Data Tools for Business Intelligence (Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)<br /><br /> Business Intelligence Development Studio（在 Visual Studio 2010 Shell 中运行并通过 SQL Server 安装程序安装）|  
+ ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.png)  
   
- <sup>1</sup> 可以使用 SQL Server Data Tools for Visual Studio 2015 为早期版本的 Analysis Services 部署 1100 或 1103 表格模型。  
+ 如果你选择**不要再显示此消息**选项，所有后续项目都将使用默认值为指定的兼容性级别。 你可以更改在 SSDT 中的默认兼容级别**工具** > **选项**。  
   
- <sup>2</sup> 兼容级别 1100、1103 和 1200 对于适用于 Visual Studio 2015 的 SQL Server Data Tools 中的表格模型项目均有效，但只能在 Analysis Services 的 SQL Server 2016 实例上部署和运行 1200 模型。  
+ 若要升级在 SSDT 的表格模型项目，将设置**兼容性级别**模型中的属性**属性**窗口。 请记住，升级兼容性级别是不可逆。
   
-## 在 SSDT 中创建或升级表格时设置兼容级别  
- 在 SQL Server Data Tools (SSDT) 中创建新的表格模型项目时，可以在“新建表格项目选项”对话框中指定兼容级别：  
+## <a name="check-compatibility-level-for-a-database-in-ssms"></a>检查 SSMS 中数据库的兼容级别  
+ 在 SSMS 中，右键单击数据库名称 >**属性** > **兼容性级别**。  
   
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>检查 SSMS 中支持的服务器兼容级别  
+ 在 SSMS 中，右键单击服务器名称 >**属性** > **支持兼容性级别**。  
   
- 您还可以通过选择 **“不再显示此消息”** 选项指定默认的兼容级别。 所有后续项目都将使用您指定的兼容级别。 可以在 SSDT 的“工具” > “选项”中更改默认兼容级别。  
+ 此属性指定的数据库将在服务器运行的最高的兼容性级别。 支持的兼容级别为只读，无法更改。  
   
- 若要升级表格模型项目，可在模型“属性”窗口中将“兼容级别”属性设置为“SQL Server 2016 RTM (1200)”。  有关详细信息，请参阅 [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 。  
-  
-> [!NOTE]  
->  可以基于导入的 Power Pivot 工作簿创建表格模型。 默认情况下，Power BI Desktop 将自动在 1200 兼容级别创建表格模型。 但是，早期版本的 Power Pivot 工作簿可能是 1100 级别。 当使用旧版工作簿时，请记得要更改“兼容级别”  属性以便对其进行升级。  
-  
-## 检查 SSMS 中数据库的兼容级别  
- 在 SSMS 中，右键单击数据库名称，然后选择“属性” > “兼容级别”属性。  
-  
-## 检查 SSMS 中支持的服务器兼容级别  
- 在 SSMS 中，右键单击服务器名称，然后选择“属性” > “支持的兼容级别”。  
-  
- 此属性指定将在服务器上运行的数据库的最高兼容级别。  支持的兼容级别为只读，无法更改。  
-  
-## 另请参阅  
- [多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [Analysis Services 中的新增功能](../../analysis-services/what-s-new-in-analysis-services.md)   
- [从 PowerPivot 导入（SSAS 表格）](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [创建新的表格模型项目 (Analysis Services)](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [多维数据库的兼容级别](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [什么是 Analysis Services 中的新增功能](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [创建新的表格模型项目](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
   
   
+

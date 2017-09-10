@@ -1,34 +1,39 @@
 ---
-title: "使用 Microsoft 关联规则查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "项集 [Analysis Services]"
-  - "挖掘模型 [Analysis Services], 关联"
-  - "挖掘模型内容, 查看"
-  - "规则 [数据挖掘]"
-  - "关联规则查看器 [Analysis Services]"
-  - "市场篮分析 [Analysis Services]"
-  - "关联 [Analysis Services]"
-  - "Microsoft 关联规则查看器"
-  - "依赖关系 [Analysis Services]"
+title: "使用 Microsoft 关联规则查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- mining models [Analysis Services], associations
+- mining model content, viewing
+- rules [Data Mining]
+- Association Rules Viewer [Analysis Services]
+- market basket analysis [Analysis Services]
+- associations [Analysis Services]
+- Microsoft Association Rules Viewer
+- dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 关联规则查看器浏览模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是用于创建可用于市场篮分析的数据挖掘模型的关联算法。 有关此算法的详细信息，请参阅 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)。  
+# <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 关联规则查看器浏览模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 关联规则查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是用于创建可用于市场篮分析的数据挖掘模型的关联算法。 有关此算法的详细信息，请参阅 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法的主要原因：  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 39
 -   发现根据现有项预测事务中存在其他项的规则。  
   
 > [!NOTE]  
->  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
- 有关如何创建、浏览和使用关联挖掘模型的详细信息，请参阅[第 3 课：生成市场篮方案（数据挖掘中级教程）](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)。  
+ 有关如何创建、浏览和使用关联挖掘模型的详细信息，请参阅[第 3 课：生成市场篮方案（数据挖掘中级教程）](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则查看器包括以下选项卡：  
@@ -70,7 +75,7 @@ caps.handback.revision: 39
 ###  <a name="BKMK_Rules"></a> 规则  
  **“规则”** 选项卡显示关联算法发现的规则。 **“规则”** 选项卡包括的网格包含以下列： **“概率”**、 **“重要性”**和 **“规则”**。 概率说明出现规则结果的可能性。 重要性用于度量规则的用途。 尽管规则出现的概率可能很高，但规则自身的用途可能并不重要。 重要性列就是说明这一情况的。 例如，如果每个项集都包含属性的某个特定状态，那么，即使概率非常高，预测状态的规则也并不重要。 重要性越高，规则越重要。  
   
- 可以使用 **“最小概率”** 和 **“最低重要性”** 来筛选规则，此操作类似于可在 **“项集”** 选项卡中进行的筛选。 您也可以使用 **“筛选规则”** ，根据属性包含的状态来筛选规则。  
+ 可以使用 **“最小概率”** 和 **“最低重要性”** 来筛选规则，此操作类似于可在 **“项集”** 选项卡中进行的筛选。您也可以使用 **“筛选规则”** ，根据属性包含的状态来筛选规则。  
   
  通过单击列标题，可以对网格中的行进行排序。  
   
@@ -83,8 +88,8 @@ caps.handback.revision: 39
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## 另请参阅  
- [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   

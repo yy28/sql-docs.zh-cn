@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 通过此方法，还能共享和查看位于主机上、Docker 外的文件。
 
 > [!IMPORTANT]
-> 当前不支持 Mac 上的 Docker 与 Linux 映像上 SQL Server 的主机卷映射。 请改为使用数据卷容器。 此限制是特定于`/var/opt/msql`目录。 从已装载目录进行读取操作可正常运行。 例如，可在 Mac 上使用 –v 装载主机目录，并通过驻留在主机上的 .bak 文件还原备份。
+> 当前不支持 Mac 上的 Docker 与 Linux 映像上 SQL Server 的主机卷映射。 请改为使用数据卷容器。 此限制是特定于`/var/opt/mssql`目录。 从已装载目录进行读取操作可正常运行。 例如，可在 Mac 上使用 –v 装载主机目录，并通过驻留在主机上的 .bak 文件还原备份。
 
 ### <a name="use-data-volume-containers"></a>使用数据卷容器
 

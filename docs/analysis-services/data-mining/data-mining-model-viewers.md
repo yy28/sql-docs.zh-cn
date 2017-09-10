@@ -1,36 +1,41 @@
 ---
-title: "数据挖掘模型查看器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "显示数据挖掘模型"
-  - "挖掘模型 [Analysis Services], 查看"
-  - "数据挖掘 [Analysis Services], 模型"
-  - "查看数据挖掘模型"
-  - "挖掘模型内容"
-  - "支持 [数据挖掘]"
-  - "浏览数据挖掘模型 [Analysis Services]"
+title: "数据挖掘模型查看器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying data mining models
+- mining models [Analysis Services], viewing
+- data mining [Analysis Services], models
+- viewing data mining models
+- mining model content
+- support [data mining]
+- exploring data mining models [Analysis Services]
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1436a91678a48c64ee3ee8d35a78c5957d69e32d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘模型查看器
+# <a name="data-mining-model-viewers"></a>数据挖掘模型查看器
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中对数据挖掘模型进行定型后，可以浏览该模型以查找所关注的趋势。 由于挖掘模型的结果比较复杂并且原始格式的结果难以理解，因此以可视化方式调查数据通常是了解算法在该数据内部发现的规则和关系的最简单方法。  
   
  用于生成模型的每种算法将返回不同类型的结果。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为每种算法提供单独的查看器。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览挖掘模型时，该模型会使用模型的相应查看器，显示在数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。  
   
-## 如何使用模型查看器  
+## <a name="how-to-use-the-model-viewers"></a>如何使用模型查看器  
  首先选择挖掘模型，然后选择查看器。 每个模型始终提供两个查看器：自定义查看器，此查看器可以包括多个选项卡，以及一般查看器。  
   
  您将看到多种不同的模型浏览选项，具体取决于您选择的模型类型。 根据用于创建所选数据挖掘模型的算法，定制与每个模型类型关联的自定义查看器。 每个自定义查看器包含多种工具和对话框，有助于您浏览统计信息和模型中的模式、查看图表，或者以交互方式使用概率阈值或根据名称筛选项。  
@@ -45,16 +50,16 @@ caps.handback.revision: 41
   
      在左图中，一般查看器显示模型中节点的列表。 您可以单击一个节点在右侧窗格中查看其内容。  
   
- ![挖掘模型设计器概述](../../analysis-services/data-mining/media/generic-mining-model-tab1.gif "挖掘模型设计器概述")  
+ ![挖掘模型设计器概述](../../analysis-services/data-mining/media/generic-mining-model-tab1.gif "的挖掘模型设计器概述")  
   
-## 有关 Microsoft 一般内容树查看器的详细信息  
- 也可使用 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)查看每个模型。 此查看器根据标准的 HTML 表格格式显示挖掘模式的内容。 但是，节点的排列和每个节点的内容将会因生成结果所使用的算法而差别很大。  
+## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>有关 Microsoft 一般内容树查看器的详细信息  
+ 也可使用 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)查看每个模型。 此查看器根据标准的 HTML 表格格式显示挖掘模式的内容。 但是，节点的排列和每个节点的内容将会因生成结果所使用的算法而差别很大。  
   
  自定义查看器是专为浏览和了解模型而设计的，但是如果您已了解模型并希望从特定节点提取统计信息或规则，则一般查看器的作用更大。 例如，当您想要查看有关在分析期间 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 捕获的模式和统计的详细信息（如节点的概率或回归公式）时，应使用一般查看器。  
   
  还可以使用 DMX 编写“内容查询”  ，以获取从查看器中显示的所有信息。 有关详细信息，请参阅[内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  下面的主题详细描述了各个查看器以及如何解释这些查看器中的信息。  
   
  [使用 Microsoft 树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
@@ -81,7 +86,7 @@ caps.handback.revision: 41
  [使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  介绍所有数据挖掘模型的一般查看器中提供的详细信息，并举例说明如何解释每个算法的信息。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)  
   

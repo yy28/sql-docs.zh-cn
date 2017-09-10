@@ -1,26 +1,31 @@
 ---
-title: "使用预测查询生成器创建预测查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "预测查询 [Analysis Services]"
-  - "挖掘模型预测 [Analysis Services], 预测查询"
+title: "创建预测查询使用预测查询生成器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用预测查询生成器创建预测查询
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
   可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  
   
  “预测查询生成器”包含以下三种设计模式，可单击左上角的图标在这三种模式之间切换。  
@@ -60,7 +65,7 @@ caps.handback.revision: 30
   
  可结合使用可视工具和文本编辑器来设计数据挖掘查询。 如果在文本编辑器中键入对查询的更改，并切换回 **“设计”** 视图，则所有更改都将丢失，查询将恢复到预测查询生成器所创建的原始查询。本主题指导您使用图形查询生成器。  
   
-### 创建预测查询  
+### <a name="to-create-a-prediction-query"></a>创建预测查询  
   
 1.  在数据挖掘设计器中，单击 **“挖掘模型预测”** 选项卡。  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 30
   
 8.  单击 **“挖掘模型预测”** 选项卡的工具栏上的第一个按钮，以运行查询，再选择 **“结果”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [在数据挖掘设计器中创建单独查询](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

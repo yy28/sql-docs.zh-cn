@@ -1,24 +1,29 @@
 ---
-title: "配置设置参考 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置设置参考 (Power Pivot for SharePoint) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4f3b5a6b1a90d22889c4cd935abaf94f5172cfd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置设置参考 (Power Pivot for SharePoint)
+# <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>配置设置参考 (Power Pivot for SharePoint)
   本主题提供有关 SharePoint 场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
   
  配置设置是针对每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序进行设置的。 在场中，可以创建多个服务应用程序，从而配置同一物理服务实例的独立逻辑实例。 配置设置存储在为你配置的每个服务应用程序创建的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 应用程序数据库中。  
@@ -37,7 +42,7 @@ caps.handback.revision: 19
   
  [使用情况数据收集](#UsageData)  
   
- 有关如何创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的说明，请参阅[在管理中心中创建和配置 PowerPivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 有关如何创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的说明，请参阅 [在管理中心中创建和配置 PowerPivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ##  <a name="LoadingData"></a> 数据加载超时  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据由场中的 Analysis Services 服务器实例检索并加载。 可以从内容库或从本地文件缓存加载数据，具体取决于上次访问数据的方式和时间。 只要收到查询或处理请求，就会将数据加载到内存中。 若要最大限度地提高服务器的总体可用性，您可以设置一个超时值以指示服务器在分配的时间内无法完成加载时停止数据加载请求。  
@@ -77,25 +82,25 @@ caps.handback.revision: 19
 |----------|-------------|------------------|-----------------|  
 |开始时间|上午 04:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的下限。|  
 |结束时间|晚上 08:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的上限。|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户|InclusionThresholdSetting|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/zh-cn/81401eac-c619-4fad-ad3e-599e7a6f8493)。|  
-|允许用户输入自定义 Windows 凭据|已启用|Boolean|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/zh-cn/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 无人参与的数据刷新帐户|InclusionThresholdSetting|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅 [配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。|  
+|允许用户输入自定义 Windows 凭据|已启用|Boolean|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅 [为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。|  
 |最大处理历史记录长度|365|1 到 5000 天|确定数据刷新历史记录在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库中保留的时长。 有关详细信息，请参阅 [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。|  
   
 ##  <a name="UsageData"></a> 使用情况数据收集  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板中显示的使用情况报表可以提供有关如何使用启用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的工作簿的重要信息。 针对以后在使用情况或活动报表中显示的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件，以下配置设置控制使用情况数据收集的各个方面。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板中显示的使用情况报表可以提供有关如何使用启用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的工作簿的重要信息。 针对以后在使用情况或活动报表中显示的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件，以下配置设置控制使用情况数据收集的各个方面。  
   
 |名称|默认|有效值|Description|  
 |----------|-------------|------------------|-----------------|  
-|查询报告间隔|300（以秒为单位）|1 到 n 秒，其中 n 是任何有效的整数。|为了确保使用情况数据收集不消耗场的过多数据传输能力，将对每个连接收集查询统计信息并将其报告为单个事件。 “查询报告间隔”确定报告事件的频率。 默认情况下，每 5 分钟报告一次查询统计信息。<br /><br /> 因为只要发送请求就会立即关闭连接，所以，系统甚至会为访问单个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的单个用户生成大量的连接。 因此，将为每个用户与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源组合创建连接池，以便在创建连接后，相同数据的同一用户可以重复使用此连接。 按照通过此配置设置指定的间隔， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序定期报告连接池中每个连接的使用情况数据。<br /><br /> 增加生成报表的时间值将导致记录较少的事件。 但是，如果将值设置得过高，当服务器重新启动或连接关闭时，就存在丢失事件数据的风险。<br /><br /> 降低此值将导致以更高的频率记录更多的事件，同时将更多与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的使用情况数据添加到 SharePoint 使用情况数据库中的数据收集系统。<br /><br /> 一般而言，不要更改此配置设置，除非你试图解决特定问题（例如，如果使用情况数据库由于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用情况数据而增长过快）。|  
+|查询报告间隔|300（以秒为单位）|1 到 n 秒，其中 n 是任何有效的整数。|为了确保使用情况数据收集不消耗场的过多数据传输能力，将对每个连接收集查询统计信息并将其报告为单个事件。 “查询报告间隔”确定报告事件的频率。 默认情况下，每 5 分钟报告一次查询统计信息。<br /><br /> 因为只要发送请求就会立即关闭连接，所以，系统甚至会为访问单个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的单个用户生成大量的连接。 因此，将为每个用户与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源组合创建连接池，以便在创建连接后，相同数据的同一用户可以重复使用此连接。 按照通过此配置设置指定的间隔， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序定期报告连接池中每个连接的使用情况数据。<br /><br /> 增加生成报表的时间值将导致记录较少的事件。 但是，如果将值设置得过高，当服务器重新启动或连接关闭时，就存在丢失事件数据的风险。<br /><br /> 降低此值将导致以更高的频率记录更多的事件，同时将更多与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的使用情况数据添加到 SharePoint 使用情况数据库中的数据收集系统。<br /><br /> 一般而言，不要更改此配置设置，除非你试图解决特定问题（例如，如果使用情况数据库由于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用情况数据而增长过快）。|  
 |使用情况数据历史记录|365（以天为单位）|0 或 1 到 n 天，其中 n 是任何有效的整数。<br /><br /> 0 意味着始终保留而不会删除历史记录。|默认情况下，使用情况数据在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库中保存一年时间。 早于一年前的记录将从数据库中删除。<br /><br /> 每天以及当运行 Microsoft SharePoint Foundation 使用情况数据处理作业时，将检查过期的历史数据。 该计时器作业将读取此设置，并对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库中过期的历史记录触发数据删除命令。|  
 |一般响应上限|500（以毫秒为单位）|1 到 n 毫秒，其中 n 是任何有效的整数。|默认情况下，一般请求的阈值为半秒。<br /><br /> 一般请求包括服务器 ping、对元数据的请求和启动会话。|  
 |快速响应上限|1000（以毫秒为单位）|1 到 n 毫秒，其中 n 是任何有效的整数。|默认情况下，快速请求的阈值为一秒。<br /><br /> 快速请求指的是具有极小数据集的请求，或针对涵盖大型成员集的元数据的请求。|  
 |“预期响应上限”|3000（以毫秒为单位）|1 到 n 毫秒，其中 n 是任何有效的整数。|默认情况下，预期请求的阈值为三秒。<br /><br /> 此阈值设置预期查询时间的上限。|  
 |长时间响应上限|10000（以毫秒为单位）|1 到 n 毫秒，其中 n 是任何有效的整数。|默认情况下，长请求的阈值为十秒。<br /><br /> 这些请求的运行时间比预期时间要长，但仍在可接受的范围内。|  
   
-## 另请参阅  
- [在管理中心中创建和配置 Power Pivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/zh-cn/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+## <a name="see-also"></a>另请参阅  
+ [在管理中心中创建和配置 PowerPivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
+ [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

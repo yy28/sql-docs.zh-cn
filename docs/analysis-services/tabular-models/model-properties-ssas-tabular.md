@@ -1,27 +1,32 @@
 ---
-title: "模型属性（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.wspacedbconfig.f1"
-  - "sql13.asvs.bidtoolset.fileprop.f1"
+title: "模型属性 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.wspacedbconfig.f1
+- sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 模型属性（SSAS 表格）
+# <a name="model-properties-ssas-tabular"></a>模型属性（SSAS 表格）
   本主题介绍表格模型属性。 SQL Server 开发工具中的每个表格模型项目都具有模型属性，这些属性影响生成你正创作的模型的方式、备份模型的方式以及存储工作区数据库的方式。 此处所描述的模型属性并不适用于已部署的模型。  
   
  本主题的内容：  
@@ -44,13 +49,14 @@ caps.handback.revision: 30
 >  某些属性是在创建模型时自动设置的，不能更改。  
   
 > [!NOTE]  
->  在创建新模型项目时，“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改新模型的默认设置。 可以在“属性”窗口中为每个模型设置这些属性以及其他属性。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  在创建新模型项目时，“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改新模型的默认设置。 可以在“属性”窗口中为每个模型设置这些属性以及其他属性。 有关详细信息，请参阅 [配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**排序规则**|用于安装 Visual Studio 的计算机的默认排序规则。|模型的排序规则指示符。|  
 |**兼容级别**|默认值或在创建项目时选择的其他值。|适用于 SQL Server 2012 Analysis Services SP1 或更高版本。 指定可用于此模型的功能和设置。 有关详细信息，请参阅 [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
-|**数据备份**|不备份到磁盘|指定模型数据的备份是否将保留在备份文件中。 此属性设置具有以下选项：<br /><br /> **备份到磁盘** - 指定将模型数据的备份保留在磁盘上。 在保存模型时，数据也将保存到备份 (ABF) 文件中。 选择此选项可能导致保存和加载模型的速度变慢<br /><br /> **不备份到磁盘** - 指定不将模型数据的备份保留在磁盘上。 此选项将保存时间和模型加载时间降至最低。<br /><br /> <br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。|  
+|**数据备份**|不备份到磁盘|指定模型数据的备份是否将保留在备份文件中。 此属性设置具有以下选项：<br /><br /> **备份到磁盘** - 指定将模型数据的备份保留在磁盘上。 在保存模型时，数据也将保存到备份 (ABF) 文件中。 选择此选项可能导致保存和加载模型的速度变慢<br /><br /> **不备份到磁盘** - 指定不将模型数据的备份保留在磁盘上。 此选项将保存时间和模型加载时间降至最低。<br /><br /> <br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。| 
+|**默认筛选器方向**|单方向|确定新关系的默认筛选器方向。| 
 |**DirectQuery 模式**|Off|指定此模型是否在 DirectQuery 模式下操作。 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
 |**文件名**|Model.bim|指定 .bim 文件的名称。 该文件名不应更改。|  
 |**完整路径**|在创建项目时指定的路径。|Model.bim 文件位置。 不能在“属性”窗口中设置此属性。|  
@@ -65,7 +71,7 @@ caps.handback.revision: 30
   
 2.  在 **“属性”** 窗口中，单击某个属性，然后键入值或单击向下箭头选择设置选项。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   

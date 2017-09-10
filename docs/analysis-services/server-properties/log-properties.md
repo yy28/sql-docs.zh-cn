@@ -1,68 +1,73 @@
 ---
-title: "日志属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize 属性"
-  - "QueryLogTableName 属性"
-  - "TraceBackgroundDistributionPeriod 属性"
-  - "TraceMaxRowsetSize 属性"
-  - "NullKeyConvertedToUnknown 属性"
-  - "CrashReportsFolder 属性"
-  - "TraceDefinitionFile 属性"
-  - "SQLDumperFlagsOn 属性"
-  - "KeyErrorLimit 属性"
-  - "SnapshotDefinitionFile 属性"
-  - "MinidumpErrorList 属性"
-  - "ErrorLogFileName 属性"
-  - "KeyDuplicate 属性"
-  - "IgnoreDataTruncation 属性"
-  - "日志 [Analysis Services]"
-  - "Enabled 属性"
-  - "FileSizeMB 属性"
-  - "TraceFileWriteTrailerPeriod 属性"
-  - "TraceQueryResponseTextChunkSize 属性"
-  - "File 属性"
-  - "FileBufferSize 属性"
-  - "TraceRowsetBackgroundFlushPeriod 属性"
-  - "ErrorLogFileSize 属性"
-  - "TraceRequestParameters 属性"
-  - "KeyErrorLimitAction 属性"
-  - "CreateQueryLogTable 属性"
-  - "LogDir 属性"
-  - "TraceBackgroundFlushPeriod 属性"
-  - "TraceFileBufferSize 属性"
-  - "SQLDumperFlagsOff 属性"
-  - "QueryLogConnectionString 属性"
-  - "KeyNotFound 属性"
-  - "KeyErrorLogFile 属性"
-  - "TraceReportFQDN 属性"
-  - "KeyErrorAction 属性"
-  - "QueryLogFileName 属性"
-  - "MessageLogs 属性"
-  - "MiniDumpFlagsOn 属性"
-  - "SnapshotFrequencySec 属性"
-  - "QueryLogSampling 属性"
-  - "CreateAndSendCrashReports 属性"
-  - "LogDurationSec 属性"
+title: "登录属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 日志属性
+# <a name="log-properties"></a>日志属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的日志服务器属性 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
-## 常规  
+## <a name="general"></a>常规  
  **文件**  
  一个字符串属性，用于标识服务器日志文件的名称。 只有在使用磁盘文件进行日志记录时，此属性才适用，而在使用数据库表进行日志记录时（默认行为）并不适用。  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 错误日志  
- 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 有关详细信息，请参阅[多维数据集、分区和维度处理的错误配置（SSAS - 多维）](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md)和 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>。  
+## <a name="error-log"></a>错误日志  
+ 您可以在服务器实例级别设置这些属性以修改其他工具和设计器中显示的“错误配置”的默认值。 请参阅[获得多维数据集、 分区和维度处理 &#40; 的错误配置SSAS-多维 &#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>有关详细信息。  
   
  **ErrorLog\ErrorLogFileName**  
  在服务器执行处理操作期间使用的一个默认属性。  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  在服务器执行处理操作期间使用的一个默认属性。  
   
-## 异常  
+## <a name="exception"></a>异常  
  **Exception\CreateAndSendCrashReports**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 网络流量记录器  
+## <a name="flight-recorder"></a>网络流量记录器  
  **FlightRecorder\Enabled**  
  一个布尔值属性，它指示是否启用网络流量记录器功能。  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  此属性的默认值为空，表示默认文件名为 FlightRecorderTraceDef.xml。  
   
-## 查询日志  
+## <a name="query-log"></a>查询日志  
  **适用范围：** 仅限多维服务器模式  
   
  **QueryLog\QueryLogFileName**  
@@ -197,9 +202,9 @@ caps.handback.revision: 23
  此属性的默认值为 false，指示服务器不会自动创建日志表，并且不记录查询事件。  
   
 > [!NOTE]  
->  有关配置查询日志的详细信息，请参阅[配置 Analysis Services 查询日志](http://go.microsoft.com/fwlink/?LinkId=81890)。  
+>  有关配置查询日志的详细信息，请参阅 [配置 Analysis Services 查询日志](http://go.microsoft.com/fwlink/?LinkId=81890)。  
   
-## 跟踪  
+## <a name="trace"></a>跟踪  
  **Trace\TraceBackgroundDistributionPeriod**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

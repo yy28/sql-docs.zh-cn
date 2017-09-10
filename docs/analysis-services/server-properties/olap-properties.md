@@ -1,112 +1,117 @@
 ---
-title: "OLAP 属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog 属性"
-  - "DefaultPageSizeForProp 属性"
-  - "UseSinglePassForDimSecurityAutoExist 属性"
-  - "DeepCompressValue 属性"
-  - "CacheRowsetRows 属性"
-  - "Income 属性"
-  - "AggregationNewAlgo 属性"
-  - "MemoryAdjustFactor 属性"
-  - "DimensionLatencyAccuracy 属性"
-  - "InitialBonus 属性"
-  - "DefaultPageSizeForDataHeader 属性"
-  - "MaxCPUUsage 属性"
-  - "DistinctBuffer 属性"
-  - "PartitionLatencyAccuracy 属性"
-  - "MaxRetries 属性"
-  - "UseDataCacheRegistryMultiplyKey 属性"
-  - "ConvertDeletedToUnknown 属性"
-  - "DatabaseConnectionPoolMax 属性"
-  - "DataFileInitEnabled 属性"
-  - "DefaultPageSizeForHash 属性"
-  - "MaxRolapOrConditions 属性"
-  - "UseDataCacheFreeLastPageMemory 属性"
-  - "OLAP [Analysis Services], 属性"
-  - "MapHandleAlgorithm 属性"
-  - "IndexBuildEnabled 属性"
-  - "MaxObjectsInParallel 属性"
-  - "IgnoreNullRolapRows 属性"
-  - "DimensionPropertyCacheSize 属性"
-  - "DefaultRefreshInterval 属性"
-  - "CheckDistinctRecordSortOrder 属性"
-  - "BufferMemoryLimit 属性"
-  - "EnableTableGrouping 属性"
-  - "ExpressNonEmptyUseEnabled 属性"
-  - "CopyLinkedDataCacheAndRegistry 属性"
-  - "UseDataSlice 属性"
-  - "MemoryLimitErrorEnabled 属性"
-  - "Enabled 属性"
-  - "EnableRolapOptimization 属性"
-  - "DatabaseConnectionPoolTimeout 属性"
-  - "UseDataCacheRegistryHashTable 属性"
-  - "AggregationsBuildEnabled 属性"
-  - "Tax 属性"
-  - "DatabaseConnectionPoolGeneralTimeout 属性"
-  - "DefaultPageSizeForString 属性"
-  - "DatabaseConnectionPoolConnectTimeout 属性"
-  - "MinimumBalance 属性"
-  - "OptimizeSchema 属性"
-  - "UseCalculationCacheRegistry 属性"
-  - "MaxTableDepth 属性"
-  - "DataSliceInitEnabled 属性"
-  - "PrefetchLowerGranularities 属性"
-  - "UseVBANet 属性"
-  - "BufferRecordLimit 属性"
-  - "DefaultPageSizeForIndexHeader 属性"
-  - "MaximumBalance 属性"
-  - "CalculationCacheRegistryMaxIterations 属性"
-  - "DefaultDrillthroughMaxRows 属性"
-  - "IndexBuildThreshold 属性"
-  - "UseDataCacheRegistry 属性"
-  - "MemoryAdjustConst 属性"
-  - "ApplyIntersect 属性"
-  - "IndexFileInitEnabled 属性"
-  - "CacheRowsetToDisk 属性"
-  - "DataCacheRegistryMaxIterations 属性"
-  - "AllowSEFiltering 属性"
-  - "ForceMultiPass 属性"
-  - "ApplySubtract 属性"
-  - "IndexUseEnabled 属性"
-  - "AggregationsUseEnabled 属性"
-  - "DataPlacementOptimization 属性"
-  - "UseMaterializedIterators 属性"
-  - "CacheRecordLimit 属性"
-  - "ROLAPDimensionProcessingEffort 属性"
-  - "DefaultPageSizeForIndex 属性"
-  - "EnableRolapDimQueryTableGrouping 属性"
-  - "DimensionPropertyKeyCache 属性"
-  - "SleepIntervalSecs 属性"
-  - "DefaultPageSizeForData 属性"
-  - "MapFormatMask 属性"
-  - "CalculationEvaluationPolicy 属性"
-  - "AggregationMemoryLimitMin 属性"
-  - "RecordsReportGranularity 属性"
-  - "MemoryLimit 属性"
-  - "AggregationMemoryLimitMax 属性"
+title: "OLAP 属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP 属性
+# <a name="olap-properties"></a>OLAP 属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用范围：** 仅限多维服务器模式  
   
-## 内存  
+## <a name="memory"></a>内存  
  **DefaultPageSizeForData**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **已启用**  
  一个布尔值属性，指定是否启用迟缓聚合处理。  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  一个有符号 32 位整数属性，它定义在迟缓处理失败的事件中重试多少次后引发错误。  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 处理  
+## <a name="process"></a>处理  
  **AggregationMemoryLimitMax**  
  一个有符号 64 位双精度浮点数属性，它定义可用于聚合处理的最大内存量（以物理内存的百分比表示）。  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## Query  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  一个布尔值属性，定义在运行时是否使用存储聚合。 此属性允许在不更改聚合设计或不重新处理的情况下禁用聚合，用于基准确定，可供参考。  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 作业  
+## <a name="jobs"></a>作业  
  **ProcessAggregation\ MemoryModel\ Income**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
@@ -476,7 +481,7 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "删除关系（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "删除关系 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b71d8acb6016e425d62c49caa536fafaed8404c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 删除关系（SSAS 表格）
-  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的详细信息，请参阅[关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+# <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
+  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
-## 删除关系时的注意事项  
+## <a name="considerations-for-deleting-relationships"></a>删除关系时的注意事项  
  决定是否删除关系时要注意下列问题：  
   
 -   无法撤消删除关系。 您可以重新创建关系，但此操作要求完全重新计算模型中的公式。 因此，在删除在公式中使用的关系前，应始终首先进行检查。  
@@ -31,15 +36,15 @@ caps.handback.revision: 13
   
 -   除了更改数据透视表和公式的结果以外，创建和删除关系还将导致重新计算工作簿，这可能需要一些时间。  
   
-## 删除关系  
+## <a name="delete-relationships"></a>删除关系  
   
-#### 使用“关系图视图”删除关系  
+#### <a name="to-delete-a-relationship-by-using-diagram-view"></a>使用“关系图视图”删除关系  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
 2.  右键单击两个表之间的关系线，然后单击“删除”。  
   
-#### 使用“管理关系”对话框删除关系  
+#### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>使用“管理关系”对话框删除关系  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“表”** 菜单，然后单击 **“管理关系”**。  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 13
   
 4.  在 **“管理关系”** 对话框中，单击 **“关闭”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
  [创建两个表之间的关系（SSAS 表格）](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   

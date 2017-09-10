@@ -1,40 +1,45 @@
 ---
-title: "使用 Microsoft 树查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "树查看器 [Analysis Services]"
-  - "预测 [Analysis Services], 离散属性"
-  - "挖掘模型内容, 查看"
-  - "预测 [Analysis Services], 连续属性"
-  - "挖掘图例 [Analysis Services]"
-  - "离散属性 [Analysis Services]"
-  - "Microsoft 决策树算法 [Analysis Services]"
-  - "决策树算法 [Analysis Services]"
-  - "Microsoft 树查看器"
-  - "决策树 [Analysis Services]"
-  - "依赖关系 [Analysis Services]"
-  - "连续属性"
+title: "使用 Microsoft 树查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tree Viewer [Analysis Services]
+- predictions [Analysis Services], discrete attributes
+- mining model content, viewing
+- predictions [Analysis Services], continuous attributes
+- mining legend [Analysis Services]
+- discrete attributes [Analysis Services]
+- Microsoft Decision Trees algorithm [Analysis Services]
+- decision tree algorithms [Analysis Services]
+- Microsoft Tree Viewer
+- decision trees [Analysis Services]
+- dependencies [Analysis Services]
+- continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf93bd7a9be8f6de5e4f807730fcaa4bcb60ab5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 树查看器浏览模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
+# <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 树查看器浏览模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
   
 > [!NOTE]  
->  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_TabsPanes"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器包括以下选项卡和窗格：  
@@ -52,7 +57,7 @@ caps.handback.revision: 46
   
  您可以展开或折叠决策树中的各个节点，以显示或隐藏各节点后出现的拆分。 您还可以使用 **“决策树”** 选项卡上的选项来设置树的显示方式。 使用 **“显示级别”** 滑块，可以调整树中显示的级别数。 使用 **“默认扩展”** 可以设置模型中所有树的默认显示级别数。  
   
-#### 预测离散属性  
+#### <a name="predicting-discrete-attributes"></a>预测离散属性  
  如果树是使用离散可预测属性生成的，则查看器将在树的每个节点上显示以下信息：  
   
 -   导致拆分的条件。  
@@ -63,10 +68,10 @@ caps.handback.revision: 46
   
  如果使用 **“后台”** 选项选择了特定属性状态，则各个节点的背景色将表示处于所选状态的事例的密集程度。 可以使用此选项来突出显示包含所关注的特定目标的节点。  
   
-#### 预测连续属性  
+#### <a name="predicting-continuous-attributes"></a>预测连续属性  
  如果树是使用连续可预测属性生成的，则查看器为树中的每个节点显示一个菱形图，而不是直方图。 菱形图有一个表示属性范围的线条。 菱形位于节点的中间，其宽度表示该节点处属性的方差。 菱形越窄，说明该节点生成的预测更为精确。 查看器还显示用于确定节点中的拆分的回归公式。  
   
-#### 其他决策树显示选项  
+#### <a name="additional-decision-tree-display-options"></a>其他决策树显示选项  
  为决策树模型启用钻取后，即可访问支持某个节点的定型事例，方法是：右键单击树中的该节点，然后选择“钻取”。 可以在数据挖掘向导内启用钻取，也可以在 **“挖掘模型”** 选项卡中通过调整挖掘模型的钻取属性来启用钻取。  
   
  可以使用 **“决策树”** 选项卡上的缩放选项来放大或缩小某个树，也可以使用 **“调整为合适大小”** 将整个模型放入查看器的屏幕中。 如果某个树太大而无法将其调整为适合屏幕的大小，则可使用“导航” 选项在树中导航。 单击 **“导航”** 将打开一个单独的导航窗口，可通过它来选择要显示的模型部分。  
@@ -103,9 +108,9 @@ caps.handback.revision: 46
   
  [返回页首](#BKMK_TabsPanes)  
   
-## 另请参阅  
- [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [挖掘模型查看器（数据挖掘模型设计器）](../Topic/Mining%20Model%20Viewers%20\(Data%20Mining%20Model%20Designer\).md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [挖掘模型查看器 &#40; 数据挖掘模型设计器 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

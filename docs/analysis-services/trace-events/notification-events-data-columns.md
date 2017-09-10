@@ -1,24 +1,29 @@
 ---
-title: "通知事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "“通知事件”事件类别"
+title: "Notification Events Data Columns |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 通知事件数据列
+# <a name="notification-events-data-columns"></a>通知事件数据列
   通知事件指不是由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用户直接引发的事件。 例如，由于用户更新基础表以便进行主动缓存而发生通知。  
   
  “通知事件”事件类别具有以下事件类：  
@@ -30,12 +35,12 @@ caps.handback.revision: 30
   
  下表列出了事件类的数据列。  
   
-## 通知  
+## <a name="notification"></a>通知  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|事件类用于将事件分类。|  
-|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 下面是定义的“ 子类 ID：<br />                      **子类名** ”对：<br /><br /> 0：主动缓存开始<br /><br /> 1：主动缓存结束<br /><br /> 2：网络流量记录器已启动<br /><br /> 3：网络流量记录器已停止<br /><br /> 4：配置属性已更新<br /><br /> 5：SQL 跟踪<br /><br /> 6：对象已创建<br /><br /> 7：对象已删除<br /><br /> 8：对象已更改<br /><br /> 9：主动缓存轮询开始<br /><br /> 10：主动缓存轮询结束<br /><br /> 11：网络流量记录器快照开始<br /><br /> 12：网络流量记录器快照结束<br /><br /> 13：主动缓存：可通知对象已更新<br /><br /> 14：迟缓处理：开始处理<br /><br /> 15：迟缓处理：处理完成<br /><br /> 16：SessionOpened 事件开始<br /><br /> 17：SessionOpened 事件结束<br /><br /> 18：SessionClosing 事件开始<br /><br /> 19：SessionClosing 事件结束<br /><br /> 20：CubeOpened 事件开始<br /><br /> 21：CubeOpened 事件结束<br /><br /> 22：CubeClosing 事件开始<br /><br /> 23：CubeClosing 事件结束<br /><br /> 24：已请求事务中止|  
+|EventSubclass|1|1|事件子类提供有关每个事件类的附加信息。<br /><br /> 以下**子类 Id**:<br />                      **子类名** ”对：<br /><br /> 0：主动缓存开始<br /><br /> 1：主动缓存结束<br /><br /> 2：网络流量记录器已启动<br /><br /> 3：网络流量记录器已停止<br /><br /> 4：配置属性已更新<br /><br /> 5：SQL 跟踪<br /><br /> 6：对象已创建<br /><br /> 7：对象已删除<br /><br /> 8：对象已更改<br /><br /> 9：主动缓存轮询开始<br /><br /> 10：主动缓存轮询结束<br /><br /> 11：网络流量记录器快照开始<br /><br /> 12：网络流量记录器快照结束<br /><br /> 13：主动缓存：可通知对象已更新<br /><br /> 14：迟缓处理：开始处理<br /><br /> 15：迟缓处理：处理完成<br /><br /> 16：SessionOpened 事件开始<br /><br /> 17：SessionOpened 事件结束<br /><br /> 18：SessionClosing 事件开始<br /><br /> 19：SessionClosing 事件结束<br /><br /> 20：CubeOpened 事件开始<br /><br /> 21：CubeOpened 事件结束<br /><br /> 22：CubeClosing 事件开始<br /><br /> 23：CubeClosing 事件结束<br /><br /> 24：已请求事务中止|  
 |CurrentTime|2|5|包含通知事件（如果有）的当前时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |StartTime|3|5|包含事件（如果有）的开始时间。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
 |EndTime|4|5|包含事件结束的时间。 对指示事件开始的事件类（例如 SQL:BatchStarting 或 SP:Starting）将不填充此列。 为了便于筛选，采用的格式为“YYYY-MM-DD”和“YYYY-MM-DD HH:MM:SS”。|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|包含在其上发生通知事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
 |RequestProperties|45|9|包含 XMLA 请求的属性。|  
   
-## 用户定义  
+## <a name="user-defined"></a>用户定义  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|包含与通知事件相关联的文本数据。|  
 |ServerName|43|8|包含在其上发生通知事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
   
-## 另请参阅  
- [“通知事件”事件类别](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

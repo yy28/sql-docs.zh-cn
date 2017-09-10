@@ -1,47 +1,52 @@
 ---
-title: "数据源和绑定（SSAS 多维） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据源视图 [Analysis Services]，绑定"
-  - "DSO，绑定"
-  - "Analysis Services 脚本语言，数据源"
-  - "多维数据集 [Analysis Services]，绑定"
-  - "OLAP 挖掘模型 [Analysis Services 脚本语言]"
-  - "绑定 [Analysis Services 脚本语言]"
-  - "重新绑定 [Analysis Services 脚本语言]"
-  - "ASSL，绑定"
-  - "关系挖掘模型 [ASSL]"
-  - "数据源 [Analysis Services 脚本语言]"
-  - "ASSL，数据源"
-  - "维度 [Analysis Services]，绑定"
-  - "度量值 [Analysis Services]，绑定"
-  - "关系数据源 [Analysis Services 脚本语言]"
-  - "Analysis Services 脚本语言，绑定"
-  - "分成章节的行集"
-  - "粒度"
-  - "挖掘模型 [Analysis Services]，数据源"
-  - "内联绑定 [ASSL]"
-  - "外部绑定"
-  - "度量值组 [Analysis Services]，绑定"
-  - "分区 [Analysis Services]，绑定"
+title: "数据源和绑定 (SSAS 多维) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data source views [Analysis Services], bindings
+- DSO, bindings
+- Analysis Services Scripting Language, data sources
+- cubes [Analysis Services], bindings
+- OLAP mining models [Analysis Services Scripting Language]
+- bindings [Analysis Services Scripting Language]
+- rebindings [Analysis Services Scripting Language]
+- ASSL, bindings
+- relational mining models [ASSL]
+- data sources [Analysis Services Scripting Language]
+- ASSL, data sources
+- dimensions [Analysis Services], bindings
+- measures [Analysis Services], bindings
+- relational data sources [Analysis Services Scripting Language]
+- Analysis Services Scripting Language, bindings
+- chaptered rowsets
+- granularity
+- mining models [Analysis Services], data sources
+- inline bindings [ASSL]
+- out-of-line bindings
+- measure groups [Analysis Services], bindings
+- partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 40
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据源和绑定（SSAS 多维）
+# <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
   可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
   
 -   关系数据源。  
@@ -54,7 +59,7 @@ caps.handback.revision: 40
   
  每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象都有其自己绑定到数据源的方式。 此外，这些对象的数据绑定和数据源的定义既可以以内联方式随数据绑定对象（如维度）的定义一起提供，也可以作为单独的定义集以外部方式提供。  
   
-## Analysis Services 数据类型  
+## <a name="analysis-services-data-types"></a>Analysis Services 数据类型  
  在绑定中使用的数据类型必须与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的数据类型匹配。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中定义了下列数据类型：  
   
 |Analysis Services 数据类型|Description|  
@@ -75,13 +80,13 @@ caps.handback.revision: 40
   
  从数据源接收的所有数据都转换为绑定中指定的 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 类型（通常在处理过程中）。 如果无法执行转换（例如，从 String 转换到 Int），则会产生错误。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通常将绑定中的数据类型设置为与数据源中的源类型最匹配的数据类型。 例如，SQL types Date、DateTime、SmallDateTime、DateTime2、DateTimeOffset 映射到 [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date，SQL type Time 映射到 String。  
   
-## 维度的绑定  
+## <a name="bindings-for-dimensions"></a>维度的绑定  
  维度的每个属性都绑定到 DSV 中的某一列。 虽然一个维度的所有属性必须来自同一个数据源。 但这些属性却可绑定到不同表中的列。 各表之间的关系在 DSV 中定义。 如果同一表中同时存在多个关系集，则可能必须在 DSV 中引入一个命名查询，将其作为“别名”表使用。 在 DSV 中，可使用命名计算和命名查询来定义表达式和筛选器。  
   
-## 度量值组、度量值和分区的绑定  
+## <a name="bindings-for-measuregroups-measures-and-partitions"></a>度量值组、度量值和分区的绑定  
  所有度量值组都具有以下默认绑定：  
   
--   度量值组绑定到 DSV 中的表（例如，**MeasureGroup.Source**）。  
+-   度量值组绑定到 DSV 中的表（例如， **MeasureGroup.Source**）。  
   
 -   所有度量值都绑定到该表中的列（例如，**Measure.ValueColumn.Source**）。  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 40
   
  必须在 DSV 中定义默认数据源，以便提供包括关系的详细信息在内的架构信息。 在分区级别上指定的所有其他表或查询均无需在 DSV 中列出，但它们的架构必须与为该度量值组定义的默认表的架构相同，或者至少必须包含度量值或粒度属性所使用的所有列。 度量值和粒度属性无法在分区级别上重写，它们被假定为与度量值组定义的列相同。 因此，如果分区实际使用的数据源具有不同的架构，则为该分区定义的 **TableDefinition** 查询就必须使用与度量值组所用架构相同的架构。  
   
-### MeasureGroup 粒度属性  
+### <a name="measuregroup-granularity-attributes"></a>MeasureGroup 粒度属性  
  如果度量值组的粒度与数据库中的已知粒度匹配，并且事实数据表与维度表之间具有直接关系，则只需将粒度属性绑定到相应的外键列或事实数据表中的列。 例如，请看下面的事实数据表和维度表：  
   
  `Sales(RequestedDate, OrderedProductID, ReplacementProductID, Qty)`  
@@ -132,7 +137,7 @@ caps.handback.revision: 40
   
  在这种情况下，GranularityAttribute 类别将绑定到 SalesWithCategory.OrderedProductCategory。  
   
-### 从决策支持对象迁移  
+### <a name="migrating-from-decision-support-objects"></a>从决策支持对象迁移  
  决策支持对象 (DSO) 8.0 允许将 **PartitionMeasures** 重新绑定。 因此，这些情况下的迁移策略就是构造相应的查询。  
   
  同样，虽然 DSO 8.0 也支持重新绑定维度属性，但在分区内是无法进行此种重新绑定的。 这些情况下的迁移策略就是在 DSV 中定义必要的命名查询，以使 DSV 中存在的分区的表和列与维度所使用的表和列相同。 这些情况可能需要使用简单的迁移；在简单迁移中，From/Join/Filter 子句将映射到单个命名查询，而不是一组结构化的相关表。 由于即使分区使用同一数据源，DSO 8.0 也支持重新绑定 PartitionDimensions，因此迁移还可能需要同一数据源的多个 DSV。  
@@ -141,17 +146,17 @@ caps.handback.revision: 40
   
  此绑定方法甚至还可用于其所使用的数据源不包含维度表的分区，因为只会绑定到事实数据表中的外键列，而不会绑定到维度表的主键列。  
   
-## 挖掘模型的绑定  
+## <a name="bindings-for-mining-models"></a>挖掘模型的绑定  
  挖掘模型分为关系挖掘模型和 OLAP 挖掘模型。 关系挖掘模型的数据绑定与 OLAP 挖掘模型的绑定区别很大。  
   
-### 关系挖掘模型的绑定  
+### <a name="bindings-for-a-relational-mining-model"></a>关系挖掘模型的绑定  
  关系挖掘模型依靠 DSV 中定义的关系来解决列与数据源的绑定配对问题。 在关系挖掘模型中，数据绑定遵循以下规则：  
   
 -   每个非嵌套表列绑定到事例表中的列或与事例表有关的表中的列（遵循多对一或一对一关系）。 DSV 定义各表之间的关系。  
   
 -   所有嵌套表列绑定到源表。 然后，将嵌套表列所拥有的列绑定到该源表中的列或与该源表相关的表中的列。 （同样，此绑定也遵循多对一或一对一关系。）挖掘模型绑定不提供指向嵌套表的联接路径。 这些信息是由 DSV 中定义的关系提供的。  
   
-### OLAP 挖掘模型的绑定  
+### <a name="bindings-for-an-olap-mining-model"></a>OLAP 挖掘模型的绑定  
  OLAP 挖掘模型没有功能类似于 DSV 的视图。 因此，数据绑定必须明确确定列与数据源之间的绑定对应关系。 例如，挖掘模型可基于销售多维数据集，列可基于数量、金额和产品名称。 此外，挖掘模型还可基于产品，列还可基于产品名称、产品颜色和含有销售量的嵌套表。  
   
  在 OLAP 挖掘模型中，数据绑定遵循以下规则：  
@@ -160,7 +165,7 @@ caps.handback.revision: 40
   
 -   每个嵌套表列绑定到 **CubeDimension**。 也就是说，它定义如何从维度导航到相关多维数据集，或如何从多维数据集导航到该多维数据集的一个维度（在出现嵌套表的少数情况下）。  
   
-## 外部绑定  
+## <a name="out-of-line-bindings"></a>外部绑定  
  外部绑定使您可以临时更改命令持续时间的现有数据绑定。 外部绑定指命令中包含的但不会持久化的绑定。 外部绑定只可在执行特定命令时才能应用。 相比之下，内联绑定包含在 ASSL 对象定义中，会随对象定义在服务器元数据内持久保留。  
   
  ASSL 允许在 **Process** 命令（非批处理中的命令）或 **Batch** 命令中指定外部绑定。 如果在 **Batch** 命令中指定外部绑定，则 **Batch** 命令中指定的所有绑定将创建新的绑定上下文，批处理中的所有 **Process** 命令都将在该上下文中运行。 由于有 **Process** 命令，所以此新绑定上下文会包含间接处理的对象。  
@@ -177,10 +182,10 @@ caps.handback.revision: 40
   
  与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 **DataSource** 命令中的 **DataSourceView** 或 **Process** 的规范是可选的。 如果指定 **DataSource** 或 **DataSourceView** ，则将不对它们进行实例化，并且在 **Process** 命令完成后，不会保留它们。  
   
-### 外部绑定类型的定义  
- 在外部 **Bindings** 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 **Binding**。 每个 **Binding** 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象采用 **Process** 命令中 **Object** 元素的典型平面格式，不同之处在于其中没有 \<对象>\</对象> 标记。  
+### <a name="definition-of-the-out-of-line-binding-type"></a>外部绑定类型的定义  
+ 在外部 **Bindings** 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 **Binding**。 每个 **Binding** 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象的形式平面的典型**对象**中的元素**过程**命令，除非\<*对象*> \< */对象*> 标记不存在。  
   
- 为其指定绑定的所有对象都使用格式为 \<对象>ID（例如，**DimensionID**）的 XML 元素进行标识。 使用格式 \<对象>ID 尽可能明确地标识对象后，就可以标识正在为其指定绑定的元素，该元素通常为 **Source**。 有一个常见情况需要注意，即 **Source** 为 **DataItem**的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 **DataItem** 标记，而只需要简单地指定 **Source** 属性，就如同该属性直接位于要绑定的列上一样。  
+ 绑定指定为其每个对象由 XML 元素的窗体\<*对象*> ID (例如， **DimensionID**)。 确定该对象后尽可能具体处理该窗体\<*对象*> ID，则标识为其所指定的绑定，这通常是此元素**源**. 有一个常见情况需要注意，即 **Source** 为 **DataItem**的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 **DataItem** 标记，而只需要简单地指定 **Source** 属性，就如同该属性直接位于要绑定的列上一样。  
   
  **KeyColumns** 由它们在 **KeyColumns** 集合内的顺序标识。 无法只指定属性的第一个键列和第三个键列，因为没有办法指示跳过第二个键列。 所有键列都必须存在于维度属性的外部绑定中。  
   

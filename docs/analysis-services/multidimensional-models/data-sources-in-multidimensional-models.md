@@ -1,32 +1,37 @@
 ---
-title: "多维模型中的数据源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "元数据 [Analysis Services]"
-  - "Analysis Services 对象, 数据源"
-  - "存储数据 [Analysis Services], 数据源"
-  - "数据源 [Analysis Services], 关于数据源"
-  - "安全性 [Analysis Services], 数据源"
-  - "数据源 [Analysis Services]"
-  - "存储 [Analysis Services], 数据源"
+title: "多维模型中的数据源 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- Analysis Services objects, data sources
+- storing data [Analysis Services], data sources
+- data sources [Analysis Services], about data sources
+- security [Analysis Services], data sources
+- data sources [Analysis Services]
+- storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 45
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb419325bc8490fdfb62fb044cb81c81e111e6e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 多维模型中的数据源
+# <a name="data-sources-in-multidimensional-models"></a>多维模型中的数据源
   您导入或加载到多维模型中的所有数据都来自外部数据源。 通常源数据来自用于报告目的数据仓库，但它也可以来自可直接访问或通过媒介（如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包）间接访问的任意关系数据库。  
   
  **中的** “数据源” [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象指定与外部数据源的直接连接。 除了物理位置之外，数据源对象还指定连接字符串、数据访问接口、凭据和控制连接行为的其他属性。  
@@ -51,7 +56,7 @@ caps.handback.revision: 45
   
  可独立于您的模型中的其他对象来管理数据源对象。 创建一个数据源后，可在以后更改其属性，然后对模型进行预处理以确保正确地检索数据。  
   
-## 相关主题和任务  
+## <a name="related-topics-and-tasks"></a>相关主题和任务  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -61,10 +66,10 @@ caps.handback.revision: 45
 |[设置数据源属性（SSAS 多维）](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|描述每个属性，并说明如何设置每个属性。|  
 |[设置模拟选项（SSAS - 多维）](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|说明如何在“模拟信息”对话框中配置选项。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [逻辑体系结构（Analysis Services - 多维数据）](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+ [逻辑体系结构（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [数据源和绑定（SSAS 多维）](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [数据源和绑定 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

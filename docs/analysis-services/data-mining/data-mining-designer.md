@@ -1,29 +1,34 @@
 ---
-title: "数据挖掘设计器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据挖掘 [Analysis Services], 结构"
-  - "挖掘结构 [Analysis Services], 修改"
-  - "数据挖掘编辑器 [Analysis Services]"
-  - "数据挖掘设计器"
-  - "数据挖掘 [Analysis Services], 修改"
+title: "数据挖掘设计器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], modifying
+- data mining editor [Analysis Services]
+- Data Mining Designer
+- data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘设计器
+# <a name="data-mining-designer"></a>数据挖掘设计器
   数据挖掘设计器是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用挖掘模型的主要环境。 您可以通过选择一个现有挖掘结构或使用数据挖掘向导创建一个新的挖掘结构和挖掘模型来访问该设计器。 可以使用数据挖掘设计器执行以下任务：  
   
 -   修改最初由数据挖掘向导创建的挖掘结构和挖掘模型。  
@@ -36,14 +41,14 @@ caps.handback.revision: 35
   
 -   根据挖掘模型创建预测查询。  
   
-## “挖掘结构”选项卡  
+## <a name="mining-structure-tab"></a>“挖掘结构”选项卡  
  使用 **“挖掘结构”** 选项卡添加列和修改现有挖掘结构的属性。 下列任务和主题提供有关使用挖掘结构的详细信息：  
   
  [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
-## “挖掘模型”选项卡  
+## <a name="mining-models-tab"></a>“挖掘模型”选项卡  
  使用 **“挖掘模型”** 选项卡可管理现有的挖掘模型以及创建新模型。 挖掘模型始终基于现有挖掘结构。  
   
  在“挖掘模型”选项卡中，可以更改算法类型、添加或删除与模型结构关联的列、调整算法特定的列属性、指定挖掘模型列用法以及调整与挖掘模型关联的算法参数。 还可以将挖掘结构与所选模型或所有关联模型一起处理。  
@@ -54,7 +59,7 @@ caps.handback.revision: 35
   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
-## “挖掘模型查看器”选项卡  
+## <a name="mining-model-viewer-tab"></a>“挖掘模型查看器”选项卡  
  使用 **“挖掘模型查看器”** 选项卡以可视化方式浏览挖掘模型。 每个挖掘模型都与显示特定于该模型的内容的一个自定义查看器相关联。 还可以使用内容查看器查看挖掘模型内容。  
   
  有关使用数据挖掘查看器浏览挖掘模型的详细信息，请参阅下列主题：  
@@ -63,7 +68,7 @@ caps.handback.revision: 35
   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
-## “挖掘准确性图表”选项卡  
+## <a name="mining-accuracy-chart-tab"></a>“挖掘准确性图表”选项卡  
  使用 **“挖掘准确性图表”** 选项卡测试单个挖掘模型的预测准确性，或比较挖掘结构中包含的多个挖掘模型的效率。 该选项卡包含用于筛选数据、选择挖掘模型以及在提升图、利润图或分类矩阵中显示结果的工具。  
   
  有关测试和验证挖掘模型的详细信息，请参阅下列主题：  
@@ -72,7 +77,7 @@ caps.handback.revision: 35
   
  [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
-## “挖掘模型预测”选项卡  
+## <a name="mining-model-prediction-tab"></a>“挖掘模型预测”选项卡  
  “挖掘模型预测”选项卡包含预测查询生成器，可以使用此生成器创建数据挖掘扩展插件 (DMX) 预测查询。 该选项卡包含用于指定挖掘模型和输入表、将挖掘模型中的列映射到输入表中的列、向查询中添加函数以及为各个列指定条件的工具。  
   
  设计查询后，可以使用该选项卡中的不同视图来显示查询结果并手动修改查询。 还可以将查询结果保存到数据库中的表。  
@@ -83,7 +88,7 @@ caps.handback.revision: 35
   
  [数据挖掘查询任务和操作指南](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

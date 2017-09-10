@@ -1,24 +1,29 @@
 ---
-title: "清除 Analysis Services 缓存 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "清除 Analysis Services 缓存 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 清除 Analysis Services 缓存
+# <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
   Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
   
  **何时清除多维模型的缓存**  
@@ -33,11 +38,11 @@ caps.handback.revision: 11
   
  运行 ClearCache 也将清除 xVelocity 内存中分析引擎 (VertiPaq) 中的内存中缓存。 xVelocity 引擎保持着较小的一组缓存结果。 运行 ClearCache 将使 xVelocity 引擎中的这些缓存失效。  
   
- 最后，运行 ClearCache 还将删除为 **DirectQuery** 模式重新配置表格模型时残留在内存中的数据。 这在模型包含需要严格控制的敏感数据时尤为重要。 在这种情况下，运行 ClearCache 是一项预防措施，可确保敏感数据不会存放在不当位置。 如果正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型并更改查询模式，则必须手动清除缓存。 相反，若使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 对模型和分区指定 **DirectQuery**，则可以在将模型切换为使用该查询模式时自动清除缓存。  
+ 最后，运行 ClearCache 还将删除为 **DirectQuery** 模式重新配置表格模型时残留在内存中的数据。 这在模型包含需要严格控制的敏感数据时尤为重要。 在这种情况下，运行 ClearCache 是一项预防措施，可确保敏感数据不会存放在不当位置。 如果正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型并更改查询模式，则必须手动清除缓存。 相反，若使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 对模型和分区指定 **DirectQuery** ，则可以在将模型切换为使用该查询模式时自动清除缓存。  
   
  与清除性能测试期间的多维模型缓存的建议相比，清除表格模型缓存并没有更多的建议。 如果并未管理包含敏感数据的表格模型的部署，则不需要执行特定的管理任务来调用清除缓存操作。  
   
-## 清除 Analysis Services 模型的缓存  
+## <a name="clear-the-cache-for-analysis-services-models"></a>清除 Analysis Services 模型的缓存  
  若要清除缓存，请使用 XMLA 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您可以在数据库、多维数据集、维度/表或度量值组级别清除缓存。 以下用于在数据库级别清除缓存的步骤同时适用于多维模型和表格模型。  
   
 > [!NOTE]  
@@ -47,13 +52,13 @@ caps.handback.revision: 11
   
  清除缓存要求您向 XMLA 查询中的 **ClearCache** 语句提供对象标识符。 本主题中的第一步解释如何获取对象标识符。  
   
-#### 第 1 步：获取对象标识符  
+#### <a name="step-1-get-the-object-identifier"></a>第 1 步：获取对象标识符  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值。 这种方法适用于数据库、多维数据集、维度或表。  
   
 2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”。 选择 **“创建”** 或 **“更改”**，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
   
-#### 第 2 步：运行查询  
+#### <a name="step-2-run-the-query"></a>第 2 步：运行查询  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA。  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## 另请参阅  
- [在 Analysis Services 中编写管理任务脚本](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>另请参阅  
  [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

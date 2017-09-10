@@ -1,22 +1,27 @@
 ---
-title: "锁事件数据列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "锁定 Events Data Columns |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 锁事件数据列
+# <a name="lock-events-data-columns"></a>锁事件数据列
   “锁”事件类别具有以下事件类：  
   
 |**事件 ID**|**事件名称**|**事件说明**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  下表列出了此事件类的数据列。  
   
-## 死锁  
+## <a name="deadlock"></a>死锁  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 锁超时  
+## <a name="lock-timeout"></a>锁超时  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1|服务器进程 ID。 该 ID 将唯一标识一个用户会话， 并且直接于 XML/A 使用的会话 GUID 相对应。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 已获取锁  
+## <a name="lock-acquired"></a>已获取锁  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 已释放锁  
+## <a name="lock-released"></a>已释放锁  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 正在等待的锁  
+## <a name="lock-waiting"></a>正在等待的锁  
   
 |**列名**|**列 ID**|**列类型**|**列说明**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|与事件关联的文本数据。|  
 |ServerName|43|8|生成事件的服务器的名称。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [“锁定事件”类别](../../analysis-services/trace-events/lock-events-category.md)  
   
   

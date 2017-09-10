@@ -1,24 +1,29 @@
 ---
-title: "支持的数据源（SSAS 表格） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "支持的数据源 (SSAS 表格) |Microsoft 文档"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 支持的数据源（SSAS 表格）
+# <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  
   
 ##  <a name="bkmk_supported_ds"></a> 用于内存中模型的受支持的数据源  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
 |-|-|-|-|  
 |数据源|版本|文件类型|访问接口|  
 |Access 数据库|Microsoft Access 2010 及更高版本。|.accdb 或 .mdb|ACE 14 OLE DB 访问接口|  
-|SQL Server 关系数据库|Microsoft SQL Server 2008 及更高版本、Microsoft SQL Server 数据仓库 2008 及更高版本、Microsoft Azure SQL 数据库、Microsoft 分析平台系统 (AP)<br /><br /> <br /><br /> 请注意，Analytics Platform System (APS) 旧称为 SQL Server 并行仓库一体机 (PDW)。 最初，从 Analysis Services 连接到 PDW 需要特殊的数据提供程序。 在 SQL Server 2012 中，此提供程序进行了替换。 对于 SQL Server 2012 及更高版本，需要使用 SQL Server Native Client 连接到 PDW/APS。 有关 APS 的详细信息，请访问网站 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)。|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
+|SQL Server 关系数据库|SQL Server 2008 及更高版本、 SQL Server 数据仓库 2008年和更高版本，Azure SQL 数据库，Azure SQL 数据仓库，分析平台系统 (AP)<br /><br /> <br /><br /> 请注意，Analytics Platform System (APS) 旧称为 SQL Server 并行仓库一体机 (PDW)。 最初，从 Analysis Services 连接到 PDW 需要特殊的数据提供程序。 在 SQL Server 2012 中，此提供程序进行了替换。 对于 SQL Server 2012 及更高版本，需要使用 SQL Server Native Client 连接到 PDW/APS。 |（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |Oracle 关系数据库|Oracle 9i 及更高版本。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 关系数据库|Teradata V2R6 及更高版本|（不适用）|TDOLEDB OLE DB 访问接口<br /><br /> Teradata 的 .NET 数据访问接口|  
 |Informix 关系数据库||（不适用）|Informix OLE DB 访问接口|  
@@ -66,8 +71,9 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
   
 OLE DB 访问接口有时可为大型数据提供更快的性能。 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [导入数据（SSAS 表格）](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [导入数据（SSAS 表格）](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

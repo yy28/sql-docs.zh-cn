@@ -1,31 +1,36 @@
 ---
-title: "提升图（Analysis Services - 数据挖掘） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "测试数据挖掘模型"
-  - "准确性, 图表"
-  - "查看挖掘准确性"
-  - "提升图 [Analysis Services]"
-  - "利润图 [Analysis Services]"
-  - "准确性测试 [数据挖掘]"
+title: "提升图 (Analysis Services-数据挖掘) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 提升图（Analysis Services - 数据挖掘）
-  A * chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
+# <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
+  A  *chart* 以图形形式表示与随机推测相比挖掘模型带来的改进，并且根据“提升”  分数度量变化。 通过比较不同模型的提升分数，可以确定最佳的模型。 还可确定模型的预测作用开始变小的点。 例如，通过查看提升图，你可能认识到某种促销活动可能只对 30% 的客户有效，因而使用该数字以限制促销活动的作用域。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘中，提升图可比较多个具有相同预测属性的模型的准确性。 您还可为单个结果（可预测属性的单个值）或所有结果（指定属性的所有值）评估预测的准确性。  
   
@@ -48,12 +53,12 @@ caps.handback.revision: 55
   
  [返回页首](#bkmk_Top)  
   
-### 带有目标值的提升图  
- 下图显示了在 **Basic Data Mining Tutorial** 中创建的目标邮递 [](../Topic/Basic%20Data%20Mining%20Tutorial.md)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
+### <a name="lift-chart-with-target-value"></a>带有目标值的提升图  
+ 下图显示了在 **Basic Data Mining Tutorial** 中创建的目标邮递 [](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
   
  此图包含基于相同数据的多个模型。 这些模型之一已被自定义为目标特定客户。 您可以通过对用于定型的数据添加筛选器，自定义模型。 该筛选器将在定型和评估中使用的事例限制为年龄低于 30 的客户。 请注意，筛选的影响之一是基本模型和筛选后的模型将使用不同的数据集，因此用于在提升图中进行评估的事例数目也将不同。 解释预测结果和其他统计信息时应牢记这一点，这非常重要。  
   
- ![显示两个模型的提升图](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "显示两个模型的提升图")  
+ ![提升图表显示两个模型](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "提升图表显示两个模型")  
   
  该图表的 X 轴表示用于比较预测的测试数据集的百分比。 该图表的 Y 轴表示预测值的百分比。  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [返回页首](#bkmk_Top)  
   
-#### 解释结果  
+#### <a name="interpreting-the-results"></a>解释结果  
  从这些结果您可以看出，按照所有事例的 30% 来计算，常规模型 [向所有客户发送目标邮件] 可预测 47.40% 的目标总体的自行车购买行为。 换句话说，如果仅向数据库中 30% 的目标客户发送邮件，则可以收到略少于一半的目标用户答复。 如果使用筛选后的模型，所得的结果会稍好，则可以收到约 51% 的目标客户答复。  
   
  **“预测概率”** 的值表示包含“可能购买”事例中的客户所需的阈值。 对于每个事例，模型估计每个预测的准确性并存储该值，您可以使用该值筛选或锁定目标客户。 例如，若要通过基本模型标识可能购买自行车的客户，应使用查询检索“预测概率”至少为 61% 的事例。 若要获取筛选后的模型锁定的客户，则应创建用于检索符合下列所有条件的事例的查询：年龄和值至少为 46% 的 **PredictProbability** 。  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  **“分数”** 值可帮助您通过跨规范总体计算模型的有效性来比较模型。 分数越高，模型则越好，因此在本示例中，您可以确定虽然锁定 30 岁以下的客户具有较低的预测概率，但是该策略最有效。  
   
-#### 如何计算分数？  
+#### <a name="how-is-the-score-calculated"></a>如何计算分数？  
  以所有构成散点图的点的几何平均分数方式来计算分数，散点图中的 x 轴包含实际值，y 轴包含预测值，并且每个点都具有关联概率。  
   
  任何单个点分数的统计意义在于测量值在该点处的模型的预测提升。 所有点的平均值构成该模型的分数。  
   
  [返回页首](#bkmk_Top)  
   
-### 没有目标值的模型提升图  
+### <a name="lift-chart-for-model-with-no-target-value"></a>没有目标值的模型提升图  
  如果未指定可预测列的状态，则将创建下图所示的图表类型。 该图表显示如何针对可预测属性的所有状态执行模型。 例如，从此图表中，您可以看出模型对可能购买和不可能购买自行车的客户的预测性能。  
   
  x 轴与指定了可预测列的图表中的 x 轴相同，但 y 轴现在表示准确预测的百分比。 因此，理想线是一条对角线，用于显示在 50% 的数据中，模型准确预测 50% 的事例（即预计的最大值）。  
   
- ![显示正确预测的提升图](../../analysis-services/data-mining/media/lift1.gif "显示正确预测的提升图")  
+ ![提升图显示正确预测](../../analysis-services/data-mining/media/lift1.gif "显示正确预测的提升图")  
   
  在图表内部单击可以移动垂直灰条， **“挖掘图例”** 显示所有事例的百分比以及准确预测的事例的百分比。 例如，如果将灰色滑动条移至 50% 标记处， **“挖掘图例”** 显示下列准确性分数。 这些数字基于在数据挖掘基础教程中创建的 TM_Decision Tree 模型。  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 55
   
  [返回页首](#bkmk_Top)  
   
-### 针对提升图的限制  
+### <a name="restrictions-on-lift-charts"></a>针对提升图的限制  
  提升图要求可预测属性是离散值。 换言之，您无法使用提升图测量预测连续数值的模型的精确性。  
   
  可预测属性的所有离散值的预测准确性都显示在一条线中。 如果希望查看可预测属性任一值的预测准确性线，必须为每个目标值都创建一个单独的提升图。  
@@ -118,10 +123,11 @@ caps.handback.revision: 55
   
  不能在提升图或利润图中显示时序模型。 测量时序预测准确性的常见做法是保留一定比率的历史数据，并将这些数据与预测数据进行比较。 有关详细信息，请参阅 [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)。  
   
-### 相关内容  
+### <a name="related-content"></a>相关内容  
  [返回页首](#bkmk_Top)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

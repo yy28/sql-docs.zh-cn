@@ -1,46 +1,51 @@
 ---
-title: "Microsoft 神经网络算法技术参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO 参数"
-  - "MAXIMUM_INPUT_ATTRIBUTES 参数"
-  - "HOLDOUT_PERCENTAGE 参数"
-  - "神经网络算法 [Analysis Services]"
-  - "输出层 [数据挖掘]"
-  - "神经网络"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES 参数"
-  - "MAXIMUM_STATES 参数"
-  - "SAMPLE_SIZE 参数"
-  - "隐藏层"
-  - "隐藏神经元"
-  - "输入层 [数据挖掘]"
-  - "激活函数 [数据挖掘]"
-  - "反向传播 Delta 法则网络"
-  - "neural network model [Analysis Services]"
-  - "编写代码 [数据挖掘]"
-  - "HOLDOUT_SEED 参数"
+title: "Microsoft 神经网络算法技术参考 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDDEN_NODE_RATIO parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- neural networks
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- activation function [Data Mining]
+- Back-Propagated Delta Rule network
+- neural network model [Analysis Services]
+- coding [Data Mining]
+- HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 神经网络算法技术参考
+# <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器）组成的“多层感知器”网络（也称为“反向传播 Delta 法则”网络）。 这些层分别是输入层、可选隐藏层和输出层。  
   
  有关多层感知器神经网络的详细探讨不属于本文档的讨论范围。 本主题介绍该算法的基本实现，包括用于规范化输入值与输出值的方法以及用于缩减属性基数的功能选择方法。 本主题介绍可用于自定义该算法行为的参数和其他设置，并提供与查询该模型有关的其他信息的链接。  
   
-## Microsoft 神经网络算法的实现  
+## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Microsoft 神经网络算法的实现  
  在多层感知器神经网络中，每个神经元可接收一个或多个输入，并产生一个或多个相同的输出。 每个输出都是对神经元的输入之和的简单非线性函数。 输入将从输入层中的节点传递到隐藏层中的节点，然后再从隐藏层传递到输出层；同一层中的神经元之间没有连接。 如果像逻辑回归模型那样没有隐藏层，则输入将会直接从输入层中的节点传递到输出层中的节点。  
   
  在使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建的神经网络中，存在三种类型的神经元：  
@@ -49,7 +54,7 @@ caps.handback.revision: 26
   
  输入神经元提供数据挖掘模型的输入属性值。 对于离散的输入属性，输入神经元通常代表输入属性的单个状态。 如果定型数据包含输入属性的 Null 值，则缺失的值也包括在内。 具有两个以上状态的离散输入属性会为每个状态生成一个输入神经元，如果定型数据中存在 Null 值，还会为缺失的状态生成一个输入神经元。 一个连续的输入属性将生成两个输入神经元：一个用于缺失的状态，一个用于连续属性自身的值。 输入神经元可向一个或多个隐藏神经元提供输入。  
   
-**隐藏神经元**  
+**Hidden neurons**  
   
  隐藏神经元接收来自输入神经元的输入，并向输出神经元提供输出。  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 26
   
  每个神经元都分配有一个称为激活函数的简单非线性函数，用于说明特定神经元对于神经网络层的相关性或重要性。 隐藏神经元使用双曲正切函数 (tanh) 作为其激活函数，而输出神经元使用 sigmoid 函数作为其激活函数。 这两个函数都是非线性连续函数，允许神经网络在输入神经元和输出神经元之间建立非线性关系模型。  
   
-### 定型神经网络  
+### <a name="training-neural-networks"></a>定型神经网络  
  定型使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的数据挖掘模型时，会涉及到若干个步骤。 这些步骤与为算法参数指定的值紧密相关。  
   
  算法首先会进行评估并从数据源提取定型数据。 定型数据的百分比（称为“维持数据” ）会被保留，用于评估该网络的准确性。 在整个定型过程中，在每次迭代定型数据后，都会立即对网络进行评估。 准确性不再提高时，定型过程便会停止。  
@@ -81,7 +86,7 @@ caps.handback.revision: 26
   
  算法提供程序通过接受之前保留的定型数据集并将维持数据中的每个事例的实际已知值与网络的预测进行比较，即通过一个称为“批学习 ”的进程来同时迭代计算整个网络的所有输入的权重。 该算法处理了整个定型数据集后，将检查每个神经元的预测值和实际值。 该算法将计算错误程度（如果有错误），并调整与神经元输入关联的权重，并通过一个称为“回传” 的过程从输出神经元返回到输入神经元。 然后，该算法对整个定型数据集重复该过程。 该算法支持多个权重和输出神经元，因此这个共轭梯度算法用于引导定型过程来分配和计算输入权重。 有关共轭梯度算法的探讨不属于本文档的讨论范围。  
   
-### 功能选择  
+### <a name="feature-selection"></a>功能选择  
  如果输入属性数大于参数 MAXIMUM_INPUT_ATTRIBUTES 的值，或可预测属性数大于参数 MAXIMUM_OUTPUT_ATTRIBUTES 的值，则会使用功能选择算法来降低挖掘模型中包含的网络的复杂性。 功能选择可以将输入属性或可预测属性的数目减少到与该模型在统计上最相关的数目。  
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果以及减轻处理工作量。 神经网络模型中用于功能选择的方法取决于属性的数据类型。 下表列出了用于神经网络模型的功能选择方法，以及用于逻辑回归算法（基于神经网络算法）的功能选择方法，以供参考。  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
  控制神经网络模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES、MAXIMUM_OUTPUT_ATTRIBUTES 和 MAXIMUM_STATES。 您也可以通过设置 HIDDEN_NODE_RATIO 参数来控制隐藏层的数目。  
   
-### 计分方法  
+### <a name="scoring-methods"></a>计分方法  
  “计分” 是规范化的一种，在为神经网络模型定型的上下文中，计分表示将值（如离散文本标签）转换为可与其他输入类型进行比较且可在网络中计算权重的值。 例如，如果一个输入属性为 Gender，其可能的值为 Male 和 Female，另一个输入属性为 Income，其值范围可变，这两个属性的值不可直接比较，因此，必须编码到共同的范围，才能计算权重。 计分就是将这类输入规范化为数字值的过程：尤其是规范化为概率范围。 用于规范化的函数还有助于使输入值在统一尺度分布得更加均匀，从而避免极值扭曲分析结果。  
   
  神经网络的输出也会进行编码。 如果输出是单一目标（即预测），或者是仅用于预测而不用于输入的多个目标，模型将创建单一网络，似乎没有必要规范化输出值。 但是，如果有多个属性用于输入和预测，则模型必须创建多个网络；因此，所有值都必须规范化，输出也必须在退出网络时进行编码。  
@@ -116,10 +121,10 @@ caps.handback.revision: 26
   
  对输出的编码使用 Sigmoid 函数，其所具有的特性使其对预测非常有益。 其中一个特性是，无论原始值如何计量，也无论值为正为负，此函数的输出始终在 0 和 1 之间，正好适合于计算概率。 另一个非常有用的特性是，Sigmoid 函数有平滑的效果，值离转折点越远，值的概率会越趋近 0 或 1，但缓慢得多。  
   
-## 自定义神经网络算法  
+## <a name="customizing-the-neural-network-algorithm"></a>自定义神经网络算法  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。 您还可以通过对列设置建模标志来修改模型处理数据的方式，或者通过设置分布标志来指定列中值的处理方式。  
   
-### 设置算法参数  
+### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍可用于 Microsoft 神经网络算法的参数。  
   
  HIDDEN_NODE_RATIO  
@@ -161,7 +166,7 @@ caps.handback.revision: 26
   
  默认值为 10000。  
   
-### 建模标志  
+### <a name="modeling-flags"></a>建模标志  
  支持将以下建模标志与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法配合使用。  
   
  NOT NULL  
@@ -174,7 +179,7 @@ caps.handback.revision: 26
   
  适用于挖掘模型列。  
   
-### 分布标志  
+### <a name="distribution-flags"></a>分布标志  
  支持以下分布标志与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法配合使用。 这些标志仅用作对模型的提示；如果算法检测到不同的分布，算法将使用所发现的分布，而不使用提示中提供的分布。  
   
  Normal  
@@ -186,10 +191,10 @@ caps.handback.revision: 26
  Log Normal  
  指示应将列中的值视为按对数正态曲线分布，即值的对数为正态分布。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  神经网络模型必须包含至少一个输入列和一个输出列。  
   
-### 输入列和可预测列  
+### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
   
 |列|内容类型|  
@@ -200,9 +205,9 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
