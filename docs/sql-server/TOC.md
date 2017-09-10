@@ -14,17 +14,15 @@
 
 # 发行说明
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [SQL Server 发行说明](../release-notes/sql-server-release-notes.md)
+## [SQL Server 发行说明](sql-server-release-notes.md)
 ## [SQL Server 2016 发行说明](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [SQL Server 2012 发行说明](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP3 发行说明](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP3 发行说明](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 发行说明](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [数据库引擎](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
+# [数据迁移助手](../dma/dma-overview.md)
 # [Stretch 数据库](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 教程](tutorials-for-sql-server-2016.md)
-# [帮助查看器的本地内容](../release-notes/sql-server-help-installation.md)
+# [帮助查看器的本地内容](sql-server-help-installation.md)
