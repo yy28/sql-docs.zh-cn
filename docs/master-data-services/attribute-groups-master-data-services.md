@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: b5c90f2a2df358af81f563f5740450ba130d24e5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="attribute-groups-master-data-services"></a>属性组 (Master Data Services)
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  属性组在 **的** “系统管理” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中进行管理。  
   
 ## <a name="show-or-hide-attribute-groups"></a>显示或隐藏属性组  
- 创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅 [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)选项卡上。  
+ 创建属性组时，对除创建者之外的所有用户自动隐藏它。 有关使组可见的详细信息，请参阅 [使属性组对用户可见 &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)选项卡上。  
   
  如果要隐藏组中的特定属性，可以将 **“拒绝”** 权限分配给该属性。 有关详细信息，请参阅[叶权限 &#40;Master Data Services &#41;](../master-data-services/leaf-permissions-master-data-services.md).  
   
