@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 技术文档
@@ -85,13 +85,8 @@ ms.lasthandoff: 08/19/2017
 - [GitHub 上的 SQL Server 示例](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>详细信息   
-+ 若要脱机查看 SQL Server 文档，请参阅 [SQL Server 的帮助查看器和脱机内容](../release-notes/sql-server-help-installation.md)。
++ 若要脱机查看 SQL Server 文档，请参阅 [SQL Server 的帮助查看器和脱机内容](sql-server-help-installation.md)。
 + [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 获取帮助 
-- [堆栈溢出（标记 sql-server）- 询问 SQL 开发问题](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 论坛 - 询问技术问题](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有关 SQL Server 的一般讨论](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
