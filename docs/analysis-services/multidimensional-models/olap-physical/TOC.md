@@ -1,0 +1,8 @@
+# [Analysis Services 开发的客户端体系结构要求](client-architecture-requirements-for-analysis-services-development.md)
+# [Analysis Services 中的数据类型](data-types-in-analysis-services.md)
+# [本地多维数据集（Analysis Services - 多维数据）](local-cubes-analysis-services-multidimensional-data.md)
+# [最大容量规范 (Analysis Services)](maximum-capacity-specifications-analysis-services.md)
+# [对象命名规则 (Analysis Services)](object-naming-rules-analysis-services.md)
+# [OLAP 引擎服务器组件](olap-engine-server-components.md)
+# [了解 Microsoft OLAP 体系结构](understanding-microsoft-olap-architecture.md)
+# [了解 Microsoft OLAP 物理体系结构](understanding-microsoft-olap-physical-architecture.md)

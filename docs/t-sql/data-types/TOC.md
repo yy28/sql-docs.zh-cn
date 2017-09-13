@@ -1,0 +1,52 @@
+# [概述](data-types-transact-sql.md)  
+# [常量](constants-transact-sql.md)  
+# [转换](data-type-conversion-database-engine.md)  
+# [优先级](data-type-precedence-transact-sql.md)  
+# [同义词](data-type-synonyms-transact-sql.md)  
+# [精度、小数位数和长度](precision-scale-and-length-transact-sql.md)  
+# [bit](bit-transact-sql.md)  
+# [cursor](cursor-transact-sql.md)  
+# [日期和时间](date-and-time-types.md)  
+## [date](date-transact-sql.md)  
+## [datetime](datetime-transact-sql.md)  
+## [datetime2](datetime2-transact-sql.md)  
+## [datetimeoffset](datetimeoffset-transact-sql.md)  
+## [smalldatetime](smalldatetime-transact-sql.md)  
+## [time](time-transact-sql.md)  
+
+# [hierarchyid 方法](hierarchyid-data-type-method-reference.md)  
+## [GetAncestor（数据库引擎）](getancestor-database-engine.md)  
+## [GetDescendant（数据库引擎）](getdescendant-database-engine.md)  
+## [GetLevel（数据库引擎）](getlevel-database-engine.md)  
+## [GetRoot（数据库引擎）](getroot-database-engine.md)  
+## [IsDescendantOf（数据库引擎）](isdescendantof-database-engine.md)  
+## [Parse（数据库引擎）](parse-database-engine.md)  
+## [Read（数据库引擎）](read-database-engine.md)  
+## [GetReparentedValue（数据库引擎）](getreparentedvalue-database-engine.md)  
+## [ToString（数据库引擎）](tostring-database-engine.md)  
+## [Write（数据库引擎）](write-database-engine.md)  
+
+# [Numeric](numeric-types.md)  
+## [decimal 和 numeric](decimal-and-numeric-transact-sql.md)  
+## [float 和 real](float-and-real-transact-sql.md)  
+## [int、bigint、smallint 和 tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
+## [money 和 smallmoney](money-and-smallmoney-transact-sql.md)  
+
+# [rowversion](rowversion-transact-sql.md)  
+
+# [String 和 binary](string-and-binary-types.md)  
+## [binary 和 varbinary](binary-and-varbinary-transact-sql.md)  
+## [char 和 varchar](char-and-varchar-transact-sql.md)  
+## [nchar 和 nvarchar](nchar-and-nvarchar-transact-sql.md)  
+## [ntext、text 和 image](ntext-text-and-image-transact-sql.md)  
+
+# [空间地理](../../t-sql/spatial-geography/spatial-types-geography.md)
+# [空间几何](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+
+# [sql_variant](sql-variant-transact-sql.md)  
+
+# [表](table-transact-sql.md)  
+
+# [uniqueidentifier](uniqueidentifier-transact-sql.md)  
+
+# [XML](../../t-sql/xml/xml-transact-sql.md)

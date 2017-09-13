@@ -16,6 +16,7 @@
 ## [Azure HDInsight 创建群集任务](azure-hdinsight-create-cluster-task.md)  
 ## [Azure HDInsight 删除群集任务](azure-hdinsight-delete-cluster-task.md)  
 ## [Azure SQL DW 上传任务](azure-sql-dw-upload-task.md)  
+## [Azure Data Lake Store 文件系统任务](azure-data-lake-store-file-system-task.md) 
 ## [备份数据库任务](back-up-database-task.md)  
 ## [大容量插入任务](bulk-insert-task.md)  
 ## [CDC 控制任务](cdc-control-task.md)  
