@@ -1,0 +1,42 @@
+---
+title: "行状态数组 |Microsoft 文档"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- row status array [ODBC]
+- cursors [ODBC], block
+- result sets [ODBC], row status array
+- block cursors [ODBC]
+- result sets [ODBC], block cursors
+- rowset status [ODBC]
+ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
+caps.latest.revision: 5
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="row-status-array"></a>行状态数组
+除了数据之外， **SQLFetch**和**SQLFetchScroll**可以返回一个数组，在行集中的每个行的状态。 此数组是通过的 SQL_ATTR_ROW_STATUS_PTR 语句属性指定。 此数组由应用程序分配的和必须都由 SQL_ATTR_ROW_ARRAY_SIZE 语句特性指定的所有元素。 数组中的值设置**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 值描述的行和自上次提取后是否该状态已更改的状态。  
+  
+|行状态数组值|Description|  
+|----------------------------|-----------------|  
+|SQL_ROW_SUCCESS|行提取了成功，并且自上次提取后已不更改。|  
+|SQL_ROW_SUCCESS_WITH_INFO|行提取了成功，并且自上次提取后已不更改。 但是，有关行返回一条警告。|  
+|SQL_ROW_ERROR|提取行时出错。|  
+|SQL_ROW_UPDATED|行已成功提取和自从上次提取已更新。 如果再次提取或刷新由行**SQLSetPos**，其状态更改为新的状态。<br /><br /> 某些驱动程序无法检测到对数据的更改，因此无法返回此值。 若要确定驱动程序是否可以检测到对 refetched 行的更新，应用程序调用**SQLGetInfo** SQL_ROW_UPDATES 选项。|  
+|SQL_ROW_DELETED|已删除行，因为上次提取。|  
+|SQL_ROW_ADDED|插入行时发生**SQLBulkOperations**。 如果该行被再次提取，或通过刷新**SQLSetPos**，其状态为 SQL_ROW_SUCCESS。<br /><br /> 未设置此值**SQLFetch**或**SQLFetchScroll**。|  
+|SQL_ROW_NOROW|行集占用该结果集的末尾，并且会不返回任何行，对应于此元素的行状态数组。|

@@ -1,7 +1,7 @@
 ---
 title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>参数  
  *transaction_name*  
- 是为 BEGIN TRANSACTION 上的事务分配的名称。 *transaction_name*必须符合标识符规则，但使用只有事务名称的前 32 个字符。 当嵌套事务， *transaction_name*必须是从最外面的 BEGIN TRANSACTION 语句的名称。 *transaction_name*是始终案例敏感，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
+ 是为 BEGIN TRANSACTION 上的事务分配的名称。 *transaction_name*必须符合标识符规则，但使用只有事务名称的前 32 个字符。 当嵌套事务， *transaction_name*必须是从最外面的 BEGIN TRANSACTION 语句的名称。 *transaction_name*始终是区分大小写，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
   
  **@***tran_name_variable*  
  用户定义的、含有有效事务名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  不能引用 ROLLBACK TRANSACTION *savepoint_name*在分布式事务中显式使用开始分布式事务启动或从本地事务升级。  
   
- 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在这种情况下，也将回滚嵌套事务，即使您对它发出了 COMMIT TRANSACTION。  
+ 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在此情况下，将嵌套的事务将回滚，即使已为其发出 COMMIT TRANSACTION。  
   
  在事务内允许有重复的保存点名称，但如果 ROLLBACK TRANSACTION 使用重复的保存点名称，则只回滚到最近的使用该保存点名称的 SAVE TRANSACTION。  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   在批处理中，不执行所有位于激发触发器的语句之后的语句。  
   
- @@TRANCOUNT就会递增 1 时输入了触发器，即使是在自动提交模式。 （系统将触发器视为隐含的嵌套事务处理。）  
+@@TRANCOUNT就会递增 1 时输入了触发器，即使是在自动提交模式。 （系统将触发器视为隐含的嵌套事务处理。）  
   
- 在存储过程中，ROLLBACK TRANSACTION 语句不影响调用该过程的批处理中的后续语句；将执行批处理中的后续语句。 在触发器中，ROLLBACK TRANSACTION 语句终止包含激发触发器的语句的批处理；不执行批处理中的后续语句。  
+在存储过程中，ROLLBACK TRANSACTION 语句不影响调用该过程的批处理中的后续语句；将执行批处理中的后续语句。 在触发器中，ROLLBACK TRANSACTION 语句终止包含激发触发器的语句的批处理；不执行批处理中的后续语句。  
   
- ROLLBACK 对游标的影响由下面三个规则定义：  
+ROLLBACK 对游标的影响由下面三个规则定义：  
   
 1.  当 CURSOR_CLOSE_ON_COMMIT 设置为 ON 时，ROLLBACK 关闭但不释放所有打开的游标。  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示了回滚已命名事务的效果。  
+ 以下示例显示了回滚已命名事务的效果。 在创建表，以下语句将启动指定的事务，插入两行，并且然后回滚事务，在变量中名为@TransactionName。 在指定的事务之外的另一个语句中插入两行。 查询返回前面的语句的结果。   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>另请参阅  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

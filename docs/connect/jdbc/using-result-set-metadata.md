@@ -1,0 +1,38 @@
+---
+title: "使用结果设置元数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
+caps.latest.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 98d595320ae164690712f1a5541ec304488e0ca0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="using-result-set-metadata"></a>使用结果集元数据
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+  若要查询的结果集有关它包含的列信息[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]实现[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)类。 该类包含很多以单个值的形式返回信息的方法。  
+  
+ 若要创建 SQLServerResultSetMetaData 对象，可以使用[getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)类。  
+  
+ 在下面的示例中，与的开放连接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中传递给函数，SQLServerResultSet 类的 getMetaData 方法用于返回 SQLServerResultSetMetaData 对象，以及然后各种方法SQLServerResultSetMetaData 对象用于显示包含在结果集中的列的名称和数据类型有关的信息。  
+  
+ [!code[JDBC#UsingResultSetMetaData1](../../connect/jdbc/codesnippet/Java/using-result-set-metadata_1.java)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [处理元数据与 JDBC 驱动程序](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+  
+  

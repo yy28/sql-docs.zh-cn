@@ -1,7 +1,7 @@
 ---
 title: "SQL_VARIANT_PROPERTY (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cc3088c7025333c5cea3766cc65f56efdd45134
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: bd9b181c04a96ee90b0bbb54546a1d925761224f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
@@ -49,14 +47,14 @@ SQL_VARIANT_PROPERTY ( expression , property )
  类型的表达式**sql_variant**。  
   
  *属性*  
- 包含名称的**sql_variant**旨在提供信息的属性。 *属性*是**varchar (**128**)**，并且可以是以下值之一。  
+ 包含名称的**sql_variant**旨在提供信息的属性。 *属性*是**varchar (**128**)**，并且可以是以下值之一：  
   
 |值|Description|返回的 sql_variant 基类型|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **int**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 输入无效。|  
 |**精度**|数值基本数据类型的位数：<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **实际**= 24<br /><br /> **十进制**（p、 s） 和**数值**（p、 s） = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **位**= 1<br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
 |**小数位数**|数值基本数据类型的小数点后的位数：<br /><br /> **十进制**（p、 s） 和**数值**（p、 s） = s<br /><br /> **money**和**smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> 所有其他类型 = 0|**int**<br /><br /> NULL = 输入无效。|  
-|**TotalBytes**|同时容纳值的元数据和数据所需的字节数。 此信息可用于检查中的数据的最大端**sql_variant**列。 如果该值大于 900，则索引创建将失败。|**int**<br /><br /> NULL = 输入无效。|  
+|**TotalBytes**|同时容纳值的元数据和数据所需的字节数。 此信息可用于检查中的数据的最大端**sql_variant**列。 如果值大于 900，索引创建将失败。|**int**<br /><br /> NULL = 输入无效。|  
 |**排序规则**|表示特定的排序规则**sql_variant**值。|**sysname**<br /><br /> NULL = 输入无效。|  
 |**MaxLength**|最大数据类型长度（字节）。 例如， **MaxLength**的**nvarchar (**50**)**为 100， **MaxLength**的**int**为 4。|**int**<br /><br /> NULL = 输入无效。|  
   
@@ -64,9 +62,10 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant**  
   
 ## <a name="examples"></a>示例  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 表中使用 sql_variant  
  下面的示例检索`SQL_VARIANT_PROPERTY`有关的信息`colA`值`46279.1`其中`colB`  = `1689`，鉴于`tableA`具有`colA`类型`sql_variant`和`colB`.  
   
-```  
+```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
 INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
@@ -86,10 +85,10 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
  下面的示例检索`SQL_VARIANT_PROPERTY`有关名为变量的信息@v1。  
   
-```  
+```sql    
 DECLARE @v1 sql_variant;  
 SET @v1 = 'ABC';  
 SELECT @v1;  

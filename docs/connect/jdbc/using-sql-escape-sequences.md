@@ -1,0 +1,171 @@
+---
+title: "使用 SQL 转义序列 |Microsoft 文档"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
+caps.latest.revision: 25
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持的 SQL 转义序列，使用 JDBC API 定义的。 转义序列用于 SQL 语句内，以告诉驱动程序应以不同的方式处理 SQL 字符串的转义部分。 当 JDBC 驱动程序处理 SQL 字符串的转义部分时，它会将字符串的这一部分转换为 SQL Server 可以理解的 SQL 代码。  
+  
+ JDBC API 需要五种类型的转义序列，JDBC 驱动程序支持所有这些转义序列：  
+  
+-   如通配符文本  
+  
+-   函数处理  
+  
+-   日期和时间文本  
+  
+-   存储过程调用  
+  
+-   外部联接  
+  
+-   限制转义语法  
+  
+ JDBC 驱动程序使用的转义序列语法如下所示：  
+  
+ `{keyword ...parameters...}`  
+  
+> [!NOTE]  
+>  SQL 转义处理对于 JDBC 驱动程序始终是打开的。  
+  
+ 以下各部分介绍五种类型的转义序列以及 JDBC 驱动程序如何支持它们。  
+  
+## <a name="like-wildcard-literals"></a>LIKE 通配符文本  
+ JDBC 驱动程序支持`{escape 'escape character'}`使用如子句通配符作为文本的语法。 例如，以下代码将返回 col3 的值，其中 col2 的值实际上以下划线开始（而不是对其使用通配符）。  
+  
+```  
+ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
+LIKE '\\_%' {escape '\\'}");  
+```  
+  
+> [!NOTE]  
+>  转义序列必须位于 SQL 语句的结尾。 如果一个命令字符串中有多个 SQL 语句，则转义序列需要位于每个相关 SQL 语句的结尾。  
+  
+## <a name="function-handling"></a>函数处理  
+ JDBC 驱动程序使用以下语法在 SQL 语句中支持函数转义序列：  
+  
+```  
+{fn functionName}  
+```  
+  
+ 其中`functionName`是 JDBC 驱动程序支持的函数。 例如：  
+  
+```  
+SELECT {fn UCASE(Name)} FROM Employee  
+```  
+  
+ 下表列出当使用函数转义序列时，JDBC 驱动程序支持的各种函数：  
+  
+|字符串函数|数值函数|日期时间函数|系统函数|  
+|----------------------|-----------------------|------------------------|----------------------|  
+|ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> Insert<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE|ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE|CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR|DATABASE<br /><br /> IFNULL<br /><br /> User|  
+  
+> [!NOTE]  
+>  如果您试图使用数据库不支持的函数，则将发生错误。  
+  
+## <a name="date-and-time-literals"></a>日期和时间文本  
+ 用于日期、时间和时间戳文本的转义语法如下所示：  
+  
+```  
+{literal-type 'value'}  
+```  
+  
+ 其中`literal-type`是以下之一：  
+  
+|文本类型|Description|值格式|  
+|------------------|-----------------|------------------|  
+|d|日期|yyyy-mm-dd|  
+|t|Time|hh:mm:ss [1]|  
+|ts|TimeStamp|yyyy-mm-dd hh:mm:ss[.f...]|  
+  
+ 例如：  
+  
+```  
+UPDATE Orders SET OpenDate={d '2005-01-31'}   
+WHERE OrderID=1025  
+```  
+  
+## <a name="stored-procedure-calls"></a>存储过程调用  
+ JDBC 驱动程序支持`{? = call proc_name(?,...)}`和`{call proc_name(?,...)}`转义存储的过程调用，具体取决于是否需要处理的返回参数的语法。  
+  
+ 过程是存储在数据库中的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。 调用存储过程的转义序列语法如下所示：  
+  
+```  
+{[?=]call procedure-name[([parameter][,[parameter]]...)]}  
+```  
+  
+ 其中`procedure-name`指定存储过程的名称和`parameter`指定存储的过程参数。  
+  
+ 有关使用`call`转义序列的存储过程，请参阅[与存储过程的 Using 语句](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+  
+## <a name="outer-joins"></a>外部联接  
+ JDBC 驱动程序支持 SQL92 左联接、右联接和完全外部联接语法。 外部联接的转义序列如下所示：  
+  
+```  
+{oj outer-join}  
+```  
+  
+ 其中，外部联接为：  
+  
+```  
+table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
+{table-reference | outer-join} ON search-condition  
+```  
+  
+ 其中`table-reference`是一个表名和`search-condition`是你想要使用的表的联接条件。  
+  
+ 例如：  
+  
+```  
+SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
+   FROM {oj Customers LEFT OUTER JOIN   
+      Orders ON Customers.CustID=Orders.CustID}   
+   WHERE Orders.Status='OPEN'  
+```  
+  
+ JDBC 驱动程序支持以下外部联接转义序列：  
+  
+-   左外部联接  
+  
+-   右外部联接  
+  
+-   完全外部联接  
+  
+-   嵌套外部联接  
+  
+## <a name="limit-escape-syntax"></a>限制转义语法  
+  
+> [!NOTE]  
+>  限制转义语法仅支持通过 Microsoft JDBC Driver 4.2 （或更高版本） for SQL Server 时使用 JDBC 4.1 或更高版本。  
+  
+ LIMIT 的转义语法如下所示：  
+  
+```  
+LIMIT <rows> [OFFSET <row offset>]  
+```  
+  
+ 转义语法有两个部分： \<*行*> 是必需的它指定要返回的行数。 偏移量和\<*行偏移量*> 是可选的并且指定要在开始返回行之前跳过的行数。 JDBC 驱动程序通过将查询转换为使用 TOP 而不是 LIMIT，仅支持必需部分。 SQL Server 不支持 LIMIT 子句。 **JDBC 驱动程序不支持可选\<行偏移量 > 和驱动程序将引发异常，如果它使用**。  
+  
+## <a name="see-also"></a>另请参阅  
+ [语句使用 JDBC 驱动程序](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+  
+  
