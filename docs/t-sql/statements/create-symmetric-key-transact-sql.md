@@ -1,7 +1,7 @@
 ---
 title: "创建非对称密钥 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/11/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb573578b51b2e6bf4c5cbedf7ef5bc509523903
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: d3b1490b1ac07d0e6a3f0fc3ed1515dd0872d545
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
@@ -97,26 +97,28 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
- 在可扩展密钥管理设备上创建新的密钥。  如果密钥已存在于设备上，该语句将失败，并显示错误。  
+ CREATION_DISPOSITION ** = ** CREATE_NEW  
+ 在可扩展的密钥管理设备上创建新密钥。  如果密钥已存在于设备上，该语句将失败，并显示错误。  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
  将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对称密钥映射到现有的可扩展密钥管理密钥。 如果未提供 CREATION_DISPOSITION = OPEN_EXISTING，则此参数默认为 CREATE_NEW。  
   
  *certificate_name*  
  指定将用于对对称密钥进行加密的证书的名称。 该证书必须已存在于数据库中。  
   
   *密码*   
- 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 *密码*必须符合 Windows 密码策略要求的计算机的运行的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 应始终使用强密码。  
+ 指定一个密码，从该密码派生出用来保护对称密钥的 TRIPLE_DES 密钥。 *密码*必须符合 Windows 密码策略要求的计算机的运行的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 始终使用强密码。  
   
  *symmetric_key_name*  
- 指定将用于对要创建的密钥进行加密的对称密钥。 指定的密钥必须已存在于数据库中，并且必须打开。  
+ 指定对称密钥，使用正在创建的密钥进行加密。 指定的密钥必须已存在于数据库中，并且必须打开。  
   
  *asym_key_name*  
- 指定将用于对要创建的密钥进行加密的非对称密钥。 此非对称密钥必须已经存在于数据库中。  
+ 指定一个非对称密钥用于加密正在创建的密钥。 此非对称密钥必须已经存在于数据库中。  
   
  \<算法 >  
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
+指定的加密算法。   
+> [!WARNING]  
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都已过时。 若要使用较旧算法 （不推荐），必须设置数据库到数据库兼容性级别 120 或更低。  
   
 ## <a name="remarks"></a>注释  
  创建对称密钥时，必须至少使用以下项之一来对该对称密钥进行加密：证书、密码、对称密钥、非对称密钥或 PROVIDER。 可使用上述每种类型中的多项对密钥进行加密。 换言之，可以同时使用多个证书、密码、对称密钥以及非对称密钥对单个对称密钥进行加密。  
@@ -128,7 +130,7 @@ CREATE SYMMETRIC KEY key_name
   
  临时密钥由创建它们的用户所拥有。 临时密钥只对当前会话有效。  
   
- IDENTITY_VALUE 生成一个 GUID，使用该 GUID 来标记使用新对称密钥加密的数据。 该标记可用于将密钥与加密数据进行匹配。 由某个特定短语生成的 GUID 始终相同。 在使用短语生成了 GUID 之后，只要存在至少一个正在使用该短语的会话，就不能再次使用该短语。 IDENTITY_VALUE 是一个可选的子句；但是，我们建议在存储使用临时密钥加密的数据时使用该子句。  
+ IDENTITY_VALUE 生成一个 GUID，使用该 GUID 来标记使用新对称密钥加密的数据。 该标记可用于将密钥与加密数据进行匹配。 由特定短语生成的 GUID 始终是相同的。 在使用短语生成了 GUID 之后，只要存在至少一个正在使用该短语的会话，就不能再次使用该短语。 IDENTITY_VALUE 是一个可选的子句；但是，我们建议在存储使用临时密钥加密的数据时使用该子句。  
   
  没有默认的加密算法。  
   
@@ -142,14 +144,12 @@ CREATE SYMMETRIC KEY key_name
  **关于 DES 算法的说明：**  
   
 -   DESX 的命名不正确。 使用 ALGORITHM = DESX 创建的对称密钥实际上使用的是具有 192 位密钥的 TRIPLE DES 密码。 不提供 DESX 算法。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   使用 ALGORITHM = TRIPLE_DES_3KEY 创建的对称密钥使用的是具有 192 位密钥的 TRIPLE DES。  
-  
 -   使用 ALGORITHM = TRIPLE_DES 创建的对称密钥使用的是具有 128 位密钥的 TRIPLE DES。  
   
  **不是推荐使用 RC4 算法：**  
   
- 对不同数据块重复使用相同的 RC4 或 RC4_128 KEY_GUID 将导致产生相同的 RC4 密钥，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不自动提供 salt。 重复使用相同的 RC4 密钥是已知错误，将导致加密非常不可靠。 因此，不推荐使用 RC4 和 RC4_128 关键字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ 重复的使用相同的 RC4 或 RC4_128 KEY_GUID 上不同的数据，块导致在相同的 RC4 密钥，因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不自动提供 salt。 重复使用相同的 RC4 密钥是已知错误，将导致加密非常不可靠。 因此，不推荐使用 RC4 和 RC4_128 关键字。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以通过任何兼容级别对使用 RC4 或 RC4_128 加密的材料进行解密。  

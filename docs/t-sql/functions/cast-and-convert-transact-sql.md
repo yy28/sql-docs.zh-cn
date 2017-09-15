@@ -1,7 +1,7 @@
 ---
 title: "CAST 和 CONVERT (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: zh-cn
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-将一种数据类型的表达式转换为另一种数据类型的表达式。
+将一种数据类型的表达式转换为另一种数据类型的表达式。  
+例如，下面的示例将输入数据类型，更改为两个其他数据类型，具有不同级别的精度。
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|源语言   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > 许多[示例](#BKMK_examples)位于本主题底部。  
   
@@ -75,17 +87,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 指定目标数据类型长度的可选整数。 默认值为 30。
   
 *样式*  
-是一个整数表达式指定如何将转换 CONVERT 函数*表达式*。 如果 style为 NULL，则返回 NULL。 范围由*data_type*。 有关详细信息，请参见“备注”部分。
+是一个整数表达式指定如何将转换 CONVERT 函数*表达式*。 如果 style为 NULL，则返回 NULL。 范围由*data_type*。 
   
 ## <a name="return-types"></a>返回类型
 返回*表达式*转换为*data_type*。
 
-[在本主题末尾跳转到 15 示例](#BKMK_examples)
-  
-## <a name="remarks"></a>注释  
-  
 ## <a name="date-and-time-styles"></a>Date 和 Time 样式  
-当*表达式*是日期或时间数据类型，*样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。 实例时都提供 SQL Server 登录名。 开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 当从转换时，支持的唯一样式日期和时间类型**datetimeoffset**是 0 或 1。 所有其他转换样式均返回错误 9809。
+当*表达式*是日期或时间数据类型，*样式*可以是下表中显示的值之一。 其他值作为 0 进行处理。 开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 当从转换时，支持的唯一样式日期和时间类型**datetimeoffset**是 0 或 1。 所有其他转换样式均返回错误 9809。
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用科威特算法来支持阿拉伯样式的日期格式。
