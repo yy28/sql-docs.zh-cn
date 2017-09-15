@@ -22,15 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx)。
 
  从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 仅可用作 64 位应用程序。 以下是有关如何获取 SQL Server 以及如何安装 SQL Server 的重要详细信息。
 

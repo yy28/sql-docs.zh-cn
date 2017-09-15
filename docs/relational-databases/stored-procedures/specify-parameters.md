@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -89,7 +89,7 @@ GO
   
  如果没有合适的值可以指定为参数的默认值，则指定 NULL 为默认值。 如果在未提供参数值的情况下执行过程，最好让过程返回自定义的消息。  
   
- 下列示例创建带有一个输入参数 `usp_GetSalesYTD` 的 `@SalesPerson`过程。 NULL 被指定为该参数的默认值并在错误处理语句中使用，以便在未指定 `@SalesPerson` 参数值的情况下执行过程时返回自定义错误消息。  
+ 下列示例创建带有一个输入参数 `uspGetSalesYTD` 的 `@SalesPerson`过程。 NULL 被指定为该参数的默认值并在错误处理语句中使用，以便在未指定 `@SalesPerson` 参数值的情况下执行过程时返回自定义错误消息。  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,10 +123,10 @@ GO
   
 ```  
 -- Run the procedure without specifying an input value.  
-EXEC Sales.usp_GetSalesYTD;  
+EXEC Sales.uspGetSalesYTD;  
 GO  
 -- Run the procedure with an input value.  
-EXEC Sales.usp_GetSalesYTD N'Blythe';  
+EXEC Sales.uspGetSalesYTD N'Blythe';  
 GO  
 ```  
   
@@ -210,3 +210,4 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+
