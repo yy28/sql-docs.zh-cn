@@ -324,7 +324,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 在群集中不支持 DQS  
 **问题：** 在 SQL Server 群集安装中不支持 DQS。 如果你在安装 SQL Server 的某一群集实例，则不得在“ **功能选择** ”页上选中“ **Data Quality Services** ”和“ **数据质量客户端** ”复选框。 如果在群集实例安装过程中选中了这些复选框（并且通过运行 DQSInstaller.exe 文件完成了数据质量服务器安装），则 DQS 将安装在此节点上，但在将更多节点添加到群集时不可用于附加节点，因此在附加节点上将不起作用。  
   
-**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)(#http://support.microsoft.com/kb/2674817)。  
+**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，则 DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
