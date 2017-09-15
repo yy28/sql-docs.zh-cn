@@ -1,5 +1,5 @@
 ---
-title: "概述： 从 Excel （MDS 外接程序 excel） 导入数据 |Microsoft 文档"
+title: "概述：从 Excel 导入数据 (MDS Add-in for Excel) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,20 +12,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c84ecb3308a641a538bcb8aaf85ebcf728d15cb3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e6aa429d0435515189a28199ca4653a623c50a0f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概述：从 Excel（用于 Excel 的 MDS 外接程序）导入数据
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
   
- 当您发布数据时，您已经添加或更新的所有数据都发布到 MDS 存储库。 已删除的数据不会发布 — 您必须单独删除数据。 有关详细信息，请参阅[删除行（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
+ 当您发布数据时，您已经添加或更新的所有数据都发布到 MDS 存储库。 已删除的数据不会发布 — 您必须单独删除数据。 有关详细信息，请参阅 [删除行（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  发布不能用于创建新实体。 有关创建实体的详细信息，请参阅[创建实体（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 -   您可以查看其他用户对成员执行的事务。 您还可以查看您对成员执行的所有事务，即便您不再对特定属性拥有权限。 你不能查看与你的权限设置为拒绝的属性相关的事务。  
   
- 您可以查看对成员执行的所有事务。 有关详细信息，请参阅[查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
+ 您可以查看对成员执行的所有事务。 有关详细信息，请参阅 [查看成员的所有批注或事务（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)。  
   
 > [!IMPORTANT]  
 >  如果您输入的批注超过 500 个字符，该批注将被自动截断。  
@@ -66,6 +66,6 @@ ms.lasthandoff: 08/02/2017
   
 -   [刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 外接程序 Microsoft excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   

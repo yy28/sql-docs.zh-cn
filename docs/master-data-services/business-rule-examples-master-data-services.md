@@ -1,5 +1,5 @@
 ---
-title: "业务规则示例 (Master Data Services) |Microsoft 文档"
+title: "业务规则示例 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/05/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57ecfaefcf4ba428e05617b89423e72774a50a51
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-examples-master-data-services"></a>业务规则示例 (Master Data Services)
 本文演示 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的业务规则示例。 你会在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安装附带的示例模型中找到这些示例。   
   
-有关如何部署示例模型的说明，请参阅[主数据服务安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
+有关如何部署示例模型的说明，请参阅 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
   
 ## <a name="business-rule-examples"></a>业务规则示例  
@@ -152,7 +152,7 @@ Else
   
 **在示例模型中查看业务规则示例**  
 1. 导航在安装 MDS 之后设置的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 网站，然后单击“系统管理”框。   
-有关设置网站的说明，请参阅[主数据服务安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
+有关设置 Web 站点的说明，请参阅 [Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
 2. 单击包含业务规则的示例模型（如以上表所列），然后单击“实体”。  
 3. 单击应用规则的实体（如以下表所列），然后单击“业务规则”。  
 4. 单击要查看的业务规则的名称。 UI 将展开，以显示 **If**、 **Then** 和 **Else** 语句。  

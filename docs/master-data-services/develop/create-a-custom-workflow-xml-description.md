@@ -1,5 +1,5 @@
 ---
-title: "自定义工作流 XML 描述 (Master Data Services) |Microsoft 文档"
+title: "自定义工作流 XML 说明 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ca6f208bab4ed0b7932d3bd5f7e9a911b8b2c8af
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 704c66f3d7748e2a0b49fed2567a606dc507627d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-custom-workflow---xml-description"></a>创建自定义的工作流的 XML 描述
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当工作流启动时，<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法由 SQL Server MDS Workflow Integration Service 调用。 此方法将有关触发工作流业务规则的项的元数据和数据作为 XML 块接收。 有关示例代码实现工作流处理程序，请参阅[自定义工作流示例 &#40;Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+# <a name="create-a-custom-workflow---xml-description"></a>创建自定义工作流 - XML 说明
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当工作流启动时，<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法由 SQL Server MDS Workflow Integration Service 调用。 此方法将有关触发工作流业务规则的项的元数据和数据作为 XML 块接收。 有关实现工作流处理程序的代码示例，请参阅[自定义工作流示例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)。  
   
  下面的示例说明发送到工作流处理程序的 XML 可能类似以下形式：  
   
@@ -70,18 +70,18 @@ ms.lasthandoff: 08/02/2017
   
 |标记|Description|  
 |---------|-----------------|  
-|\<类型 >|在输入的文本**工作流类型**文本框中[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]来标识要加载哪些自定义工作流程序集。|  
-|\<SendData >|一个布尔值，由控制**消息中包括成员数据**中的复选框[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。 值为 1 意味着\<MemberData > 部分是发送; 否则为\<MemberData > 部分不会发送。|  
-|< Server_URL >|在输入的文本**工作流站点**文本框中[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
-|< Action_ID >|在输入的文本**工作流名称**文本框中[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|  
-|\<MemberData >|包含触发工作流操作的成员的数据。 仅当，这是包含的值\<SendData > 为 1。|  
-|\<输入*xxx*>|这组标记包含有关创建成员的元数据，例如，何时创建该成员或该成员的创建者。|  
+|\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集。|  
+|\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  
+|<Server_URL>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流站点”文本框中输入的文本。|  
+|<Action_ID>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“工作流名称”文本框中输入的文本。|  
+|\<MemberData>|包含触发工作流操作的成员的数据。 仅当 \<SendData> 的值为 1 时才包括此项。|  
+|\<Enter*xxx*>|这组标记包含有关创建成员的元数据，例如，何时创建该成员或该成员的创建者。|  
 |\<LastChg*xxx*>|这组标记包含有关对成员所作最后更改的元数据，例如，所作更改及更改者。|  
-|\<名称 >|已更改的成员的第一个属性。 此示例成员仅包含 Name 和 Code 属性。|  
-|\<代码 >|已更改的成员的下一个属性。 如果此示例成员包含更多属性，它们将遵循这一属性。|  
+|\<Name>|已更改的成员的第一个属性。 此示例成员仅包含 Name 和 Code 属性。|  
+|\<Code>|已更改的成员的下一个属性。 如果此示例成员包含更多属性，它们将遵循这一属性。|  
   
 ## <a name="see-also"></a>另请参阅  
- [创建自定义工作流 &#40;Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
- [自定义工作流示例 &#40;Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
+ [创建自定义工作流 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
+ [自定义工作流示例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "层次结构数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
@@ -247,7 +247,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- 请注意，层次结构是有效的结构，即使它在内部不一致。 Bahia 是唯一的州。 它作为城市 Brasilia 的对等方出现在层次结构中。 同样，McMurdo Station 没有父国家/地区。 用户必须确定此类型的层次结构是否适合于其用途。  
+ 请注意，层次结构具有有效的结构，即使其内部不一致。 Bahia 是唯一的州。 它作为城市 Brasilia 的对等方出现在层次结构中。 同样，McMurdo Station 没有父国家/地区。 用户必须确定此类型的层次结构是否适合于其用途。  
   
  添加另一行并选择结果。  
   
@@ -533,3 +533,4 @@ GO
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

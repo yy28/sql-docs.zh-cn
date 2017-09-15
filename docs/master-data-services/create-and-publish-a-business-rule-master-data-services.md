@@ -1,5 +1,5 @@
 ---
-title: "创建和发布业务规则 (Master Data Services) |Microsoft 文档"
+title: "创建和发布业务规则 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
@@ -107,7 +107,7 @@ ms.lasthandoff: 08/02/2017
 |名称|Description|  
 |----------|-----------------|  
 |状态|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|名称|业务规则名称。|  
+|Name|业务规则名称。|  
 |Description|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
@@ -119,11 +119,11 @@ ms.lasthandoff: 08/02/2017
   
     -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则 &#40; 验证版本Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [更改业务规则名称 &#40;Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [将多个条件添加到业务规则 &#40;Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [更改业务规则名称 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [向业务规则添加多个条件 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

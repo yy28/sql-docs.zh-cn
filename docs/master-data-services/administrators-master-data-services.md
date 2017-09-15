@@ -1,5 +1,5 @@
 ---
-title: "管理员 (Master Data Services) |Microsoft 文档"
+title: "管理员 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aa037c47b7ec276188e1f67d5a415bfba1da232
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c4944d4a47c7581c1273d21e5dbf3df59ae258a3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
   本文介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的管理员类型：模型管理员、实体管理员和超级用户。  
   
 ## <a name="model-administrators"></a>模型管理员  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型管理员是对“模型对象”选项卡上的顶级模型对象拥有“管理员”权限的用户。 当用户对特定模型具有管理员权限时，该模型“管理员”权限将超越模型子对象上的任何其他权限（模型对象权限和成员权限），会有效忽略这些权限。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型管理员是对“模型对象”选项卡上的顶级模型对象拥有“管理员”权限的用户。当用户对特定模型具有管理员权限时，该模型“管理员”权限将超越模型子对象上的任何其他权限（模型对象权限和成员权限），会有效忽略这些权限。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/02/2017
  可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或通过编程方式将用户配置为模型管理员。 有关详细信息，请参阅 [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="entity-administrators"></a>实体管理员  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型管理员是对“模型对象”选项卡上的实体对象具有“管理员”权限的用户。 当用户对实体具有管理员权限时，该管理员权限将取代实体子对象上的任何其他权限（模型对象权限和成员权限），这些权限将被忽略。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型管理员是对“模型对象”选项卡上的实体对象具有“管理员”权限的用户。当用户对实体具有管理员权限时，该管理员权限将取代实体子对象上的任何其他权限（模型对象权限和成员权限），这些权限将被忽略。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -77,6 +77,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
  [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [通知 &#40;Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+ [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
   

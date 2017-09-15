@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 概述 (MDS) |Microsoft 文档"
+title: "Master Data Services 概述 (MDS) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,39 +17,39 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]使您能够管理你组织的数据的主集。 你可以将数据组织成模型、 为更新的数据创建规则和控制谁将更新数据。 通过使用 Excel，你可以在你的组织中与其他人中共享主数据集。 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 帮助管理组织的主数据集。 可以将数据整理到模型中，创建更新数据的规则，并控制由谁更新数据。 通过使用 Excel 可以和组织中的其他用户共享主数据集。 
   
- >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
+ >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
    **有关如何安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、设置数据库和网站以及部署示例模型的说明，请参阅** [Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。 实体类似于表。  
   
  例如，你的在线产品模型可能包含多个实体（如 Product、Color 和 Style）。 Color 实体可以含有红色、银色和黑色成员。  
   
- ![颜色实体](../master-data-services/media/mds-productmodel-colorentity-composite.png "颜色实体")  
+ ![颜色实体](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color entity")  
   
  模型还包含实体中定义的属性。 属性包含可帮助描述实体成员的值。 存在自由格式的属性和基于域的属性。  基于域的属性包含实体成员填充的值，并且可用作其他实体的属性值。  
   
- 例如，Product 实体可能具有针对 Cost 和 Weight 的自由格式的属性。 并且没有颜色的基于域的属性![数 1](../master-data-services/media/mds-number1.png "数 1") ，它包含由 color 实体成员填充的值。 此颜色主列表用作 Product 实体属性值![数 2](../master-data-services/media/mds-number2.png "数 2")。  
+ 例如，Product 实体可能具有针对 Cost 和 Weight 的自由格式的属性。 并且，存在颜色![一号](../master-data-services/media/mds-number1.png "Number 1")的基于域的属性，该颜色包含 color 实体成员填充的值。 此颜色主列表将用作 Product 实体![二号](../master-data-services/media/mds-number2.png "Number 2")的属性值。  
   
- ![颜色基于域的属性](../master-data-services/media/mds-productentity-color-domainattribute.png "颜色基于域的属性")  
+ ![基于域的颜色属性](../master-data-services/media/mds-productentity-color-domainattribute.png "Domain-based attribute for color")  
   
- 派生的层次结构来自模型中各个实体之间的关系。 这些都是基于域的属性关系。 在产品模型例如，你可以具有的颜色派生层次结构![数 1](../master-data-services/media/mds-number1.png "数 1")之间颜色来自关系![数 2](../master-data-services/media/mds-number2.png "数 2")和产品![号 3](../master-data-services/media/mds-number3.png "号 3")实体。  
+ 派生的层次结构来自模型中各个实体之间的关系。 这些都是基于域的属性关系。 例如，在产品模型中，可以具有颜色派生层次结构![一号](../master-data-services/media/mds-number1.png "Number 1")，它来自于颜色![二号](../master-data-services/media/mds-number2.png "Number 2")和产品![三号](../master-data-services/media/mds-number3.png "Number 3")实体之间的关系。  
   
- ![颜色派生层次结构](../master-data-services/media/mds-derivedhierarchy.png "颜色派生层次结构")  
+ ![颜色派生层次结构](../master-data-services/media/mds-derivedhierarchy.png "Color derived hierarchy")  
   
  在定义了数据的基本结构后，可以开始使用导入功能来添加数据记录（成员）。 将数据加载到临时表、使用业务规则验证数据并将数据加载到 MDS 表。  业务规则还可用于设置属性值。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/02/2017
 |为您的主实体导入成员并应用业务规则|通过使用临时过程为您的主实体导入成员。 完成后，对版本进行验证，将业务规则应用于该模型版本中的所有成员。<br /><br /> 然后，您可以纠正任何业务规则验证问题。|[验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)<br /><br /> [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [验证存储过程 (Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)|  
 |创建派生层次结构|派生的层次结构可以随着你的业务需求的变化进行更新，并且确保所有成员都处于适当的级别。|[派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |如果需要，创建显式层次结构|如果您想要创建不是基于级别并且包括来自单个实体的成员的层次结构，则可以创建显式层次结构。|[显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|如果想要，创建集合|如果您想要查看不同的成员分组以便进行报告或分析并且不需要完整层次结构，则可以创建集合。<br /><br /> <br /><br /> 注意：如果用户至少对集合模型对象具有“更新” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]**权限并且有权访问“资源管理器”****功能区域，就可以在** 中创建成员。|[集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)<br /><br /> [创建集合 (Master Data Services)](../master-data-services/create-a-collection-master-data-services.md)|  
+|如果想要，创建集合|如果您想要查看不同的成员分组以便进行报告或分析并且不需要完整层次结构，则可以创建集合。<br /><br /> <br /><br /> 注意：如果用户至少对集合模型对象具有“更新” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]**权限并且有权访问“资源管理器”****功能区域，就可以在** 中创建成员。|[集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)<br /><br /> [创建集合 (Master Data Services)](../master-data-services/create-a-collection-master-data-services.md)|  
 |创建用户定义元数据|为了描述您的模型对象，请将用户定义元数据添加到您的模型中。 这些元数据可以包括对象的所有者或者数据源。||  
 |锁定模型版本和分配版本标志|锁定模型版本可以防止对成员进行的更改，但管理员除外。 在根据业务规则已成功对版本的数据进行了验证后，您可以提交该版本，这阻止所有用户对成员的更改。<br /><br /> 创建一个版本标志并将其分配给模型。 标志帮助用户和订阅系统确定要使用模型的哪个版本。|[版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)<br /><br /> [锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)<br /><br /> [创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |创建订阅视图|为使您的订阅系统可以使用您的主数据，创建订阅视图，这在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建标准视图。|[概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  

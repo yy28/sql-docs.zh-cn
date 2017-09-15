@@ -1,5 +1,5 @@
 ---
-title: "创建合并的成员 (Master Data Services) |Microsoft 文档"
+title: "创建合并成员 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a48fd41c90f01925b2cd884f33cf37bc0407d533
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
+# <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 如果你要批量添加数据，请改用临时表。 有关详细信息，请参阅[导入表中数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)  
   
 ## <a name="prerequisites"></a>先决条件  
@@ -59,10 +59,10 @@ ms.lasthandoff: 08/02/2017
 10. 单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建显式层次结构 &#40;Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [创建叶成员 &#40;Master Data Services &#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
- [显式层次结构 &#40;Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [创建叶成员 &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
 

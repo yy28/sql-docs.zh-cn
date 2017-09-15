@@ -1,5 +1,5 @@
 ---
-title: "什么 &#39; s Master Data Services (MDS) 中的新增功能 |Microsoft 文档"
+title: "Master Data Services (MDS) 中的新增功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/08/2016
@@ -12,17 +12,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 32a43f651f20ca257837de0440505b9ac4179708
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="what39s-new-in-master-data-services-mds"></a>什么 &#39; s Master Data Services (MDS) 中的新增功能
+# <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   本主题汇总了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中的更改和更新。 

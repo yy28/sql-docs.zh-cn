@@ -1,5 +1,5 @@
 ---
-title: "派生层次结构 (Master Data Services) |Microsoft 文档"
+title: "派生层次结构 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a960ab217ff83af957bbf3a738372dd0c83de98
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3c29bf064f8f7c07d7b053dc08f71b443dc75dc4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生层次结构 (Master Data Services)
@@ -60,40 +60,40 @@ ms.lasthandoff: 08/02/2017
   
  该层次结构显示如何对成员进行分组。 具有最多成员的实体位于底部。  
   
- ![从模型结构派生层次结构](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "从模型结构派生层次结构")  
+ ![从模型结构派生的层次结构](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Hierarchy Derived from Model Structure")  
   
  在派生层次结构中，可以突出显示 Product 和 Subcategory 之间的关系，然后突出显示 Subcategory 和 Category 之间的关系。 当您查看此层次结构中的成员时，在树的每个级别中包含同一实体中的成员。  
   
- ![山地自行车派生层次结构示例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "山地自行车派生层次结构示例")  
+ ![山地自行车派生层次结构示例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Mountain Bike Derived Hierarchy Example")  
   
  这种类型的层次结构防止将成员移到无效的级别。 例如，可以将 Road-650 自行车从子类别“公路自行车”移到另一个子类别“山地车”。 不能直接将 Road-650 移到某个类别下，如 1 {自行车}。 每次在层次结构树中移动成员时，将更改该成员基于域的属性值以反映移动。  
   
 ## <a name="notes"></a>说明  
  派生层次结构树中的所有成员都按代码排序。 不能更改排序顺序。  
   
- 如果成员基于域的属性为空且该属性用于派生层次结构，则该成员不会显示在层次结构中。 创建业务规则来要求填充属性。 有关详细信息，请参阅[需要属性值 &#40;Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md).  
+ 如果成员基于域的属性为空且该属性用于派生层次结构，则该成员不会显示在层次结构中。 创建业务规则来要求填充属性。 有关详细信息，请参阅[要求属性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新的派生层次结构。|[创建派生层次结构 &#40;Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构 &#40; 中的级别Master Data Services &#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|更改现有派生层次结构的名称。|[更改派生层次结构名称 &#40;Master Data Services &#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|删除现有派生层次结构。|[删除派生层次结构 &#40;Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|创建新的派生层次结构。|[创建派生层次结构 (Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|隐藏或删除现有派生层次结构中的级别。|[隐藏或删除派生层次结构中的级别 (Master Data Services)](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|更改现有派生层次结构的名称。|[更改派生层次结构名称 (Master Data Services)](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|删除现有派生层次结构。|[删除派生层次结构 (Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [基于域的属性 &#40;Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [显式层次结构 &#40;Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [递归层次结构 &#40;Master Data Services &#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [递归层次结构 (Master Data Services)](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [具有显式顶端 &#40; 派生层次结构Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [具有显式顶端的派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [在派生层次结构 &#40; 中显示多对多关系Master Data Services &#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [显示派生层次结构中的多对多关系 &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

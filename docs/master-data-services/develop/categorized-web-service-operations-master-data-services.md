@@ -1,5 +1,5 @@
 ---
-title: "分类 Web 服务操作 (Master Data Services) |Microsoft 文档"
+title: "分类的 Web 服务操作 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分类的 Web 服务操作 (Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>实体操作  
- 这些操作用于创建、更新和删除单个实体的成员。 有关详细信息，请参阅[实体 &#40;Master Data Services &#41;](../../master-data-services/entities-master-data-services.md)和[成员 &#40;Master Data Services &#41;](../../master-data-services/members-master-data-services.md).  
+ 这些操作用于创建、更新和删除单个实体的成员。 有关详细信息，请参阅[实体 &#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md) 和[成员 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>属性和层次结构操作  
- 这些操作用于获取属性和层次结构信息。 还可通过使用模型操作来修改属性和层次结构，如 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>。 有关详细信息，请参阅[属性 &#40;Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)和[层次结构 &#40;Master Data Services &#41;](../../master-data-services/hierarchies-master-data-services.md).  
+ 这些操作用于获取属性和层次结构信息。 还可通过使用模型操作来修改属性和层次结构，如 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>。 有关详细信息，请参阅[属性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) 和[层次结构 &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)。  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>批注操作  
- 这些操作用于创建、更新和删除批注。 有关详细信息，请参阅[批注 &#40;Master Data Services &#41;](../../master-data-services/annotations-master-data-services.md).  
+ 这些操作用于创建、更新和删除批注。 有关详细信息，请参阅[批注 &#40;Master Data Services&#41;](../../master-data-services/annotations-master-data-services.md)。  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>版本和验证操作  
- 这些操作用来复制和验证版本。 有关详细信息，请参阅[版本 &#40;Master Data Services &#41;](../../master-data-services/versions-master-data-services.md)和[验证 &#40;Master Data Services &#41;](../../master-data-services/validation-master-data-services.md).  
+ 这些操作用来复制和验证版本。 有关详细信息，请参阅[版本 &#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md) 和[验证 &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md)。  
   
 ||  
 |-|  

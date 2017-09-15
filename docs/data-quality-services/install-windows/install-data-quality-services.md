@@ -1,5 +1,5 @@
 ---
-title: "安装 Data Quality Services |Microsoft 文档"
+title: "安装 Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c5b6c77d5a7b08a7fd497278d4f858f34be776e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]可以安装在同一台计算机或不同的计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可安装在同一台计算机上，也可以安装在不同计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
 >   
 >  使用当前或以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 >   
@@ -118,12 +118,12 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
  [视频：安装和配置 DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [使用 DQSInstaller.exe 导出和导入 DQS Knowledge Bases](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [使用 DQSInstaller.exe 导出和导入 DQS 知识库](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
- [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [删除 Data Quality Server 对象](../../sql-server/install/remove-data-quality-server-objects.md)   
  [安装 SQL Server 2016 商业智能功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [卸载 SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [安装和在 DQS 中的配置问题疑难解答](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [解决 DQS 中的安装和配置问题](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

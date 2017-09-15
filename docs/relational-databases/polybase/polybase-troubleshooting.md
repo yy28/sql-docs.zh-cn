@@ -2,7 +2,7 @@
 title: "PolyBase 故障排除 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
@@ -224,11 +224,21 @@ ms.lasthandoff: 07/31/2017
  ## <a name="known-limitations"></a>已知的限制
  
  PolyBase 具有以下限制： 
- - 最大行大小（包括可变长度列的全长）不能超过 1 MB。 
+ - 最大可能行大小（包括可变长度列的总长度）不能超过 1 MB。 
  - PolyBase 不支持 Hive 0.12+ 数据类型（即 Char()、VarChar()）   
- - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于 Java 内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
-- [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
+ - 无法读取或写入 Hadoop 中的静态加密数据。 这包括 HDFS 加密区域或透明加密。
+ - 如果已启用 KNOX，则 PolyBase 无法连接 Hortonworks 实例。 
+ - 如果 hadoop.RPC.Protection 设置采用“身份验证”之外的任何设置，则 PolyBase 无法连接 Hadoop 实例。
+
+[向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Hadoop 名称节点高可用性
+当前 PolyBase 未通过接口连接到名称节点 HA 服务（如 Zookeeper 或 Knox）。 但是，有一个经过验证的解决方法可用于提供此功能。 
+
+解决方法：使用 DNS 名称重新路由与活动的名称节点的连接。 为完成此操作，需要确定外部数据源正在使用 DNS 名称与名称节点通信。 发生名称节点故障转移时，需要更改与外部数据源定义中使用的 DNS 名称相关联的 IP 地址。 此操作将所有新的连接重新路由到正确的名称节点。 故障转移发生时，现有连接将会失败。 若要自动化此过程，“检测信号”可以 ping 活动的名称节点。 如果检测信号失败，可以假设发生了故障转移，并且自动切换到辅助副本 IP 地址。
+
+
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
 有关解决外部表的错误，请参阅 Murshed Zaman 的博客 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 安装错误和可能的解决方案")。

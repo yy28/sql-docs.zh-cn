@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   PowerShell cmdlet。 有关详细信息，请参阅： [AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
- 可用性组 (availability group)  
+ 可用性组  
  一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”）。  
   
- 可用性数据库 (availability database)  
+ 可用性数据库  
  属于可用性组的数据库。 对于每个可用性数据库，可用性组将保留一个读写副本（“主数据库”）和一个到八个只读副本（“辅助数据库”）。  
   
- 主数据库 (primary database)  
+ 主数据库  
  可用性数据库的读写副本。  
   
- 辅助数据库 (secondary database)  
+ 辅助数据库  
  可用性数据库的只读副本。  
   
  可用性副本  
  可用性组的实例化，该可用性组由特定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载，并维护属于该可用性组的每个可用性数据库的本地副本。 存在两种类型的可用性副本：一个 *主副本* 和一至八个 *辅助副本*。  
   
- 主副本  
+ 主要副本  
  使主数据库可用于来自客户端的读写连接并用于将每个主数据库的事务日志记录发送到每个辅助副本的可用性副本。  
   
- 辅助副本 (secondary replica)  
+ 次要副本  
  维护各可用性数据库的辅助副本的可用性副本，充当可用性组的潜在故障转移目标。 或者，辅助副本可以支持对辅助数据库进行只读访问，并支持对辅助数据库创建备份。  
   
- 可用性组侦听器 (availability group listener)  
+ 可用性组侦听器  
  一个服务器名称，客户端可连接到此服务器以访问 AlwaysOn 可用性组的主要副本或次要副本中的数据库。 可用性组侦听器将传入连接定向到主副本或只读辅助副本。  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [包含的数据库](../../../relational-databases/databases/contained-databases.md)  
   
--   [数据库加密](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [数据库加密](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [数据库快照](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

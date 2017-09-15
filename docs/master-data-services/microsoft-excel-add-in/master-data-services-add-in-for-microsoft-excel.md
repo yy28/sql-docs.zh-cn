@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 外接程序 Microsoft excel |Microsoft 文档"
+title: "用于 Microsoft Excel 的 Master Data Services 外接程序 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以先使用 Data Quality Services (DQS) 来匹配数据，然后再将其加载到 MDS 中。 这有助于防止 MDS 中的数据重复。  
 
 ## <a name="downloads"></a>下载 
->*  Master Data Services 外接下载 for Excel，对于从 SQL Server 2016 SP1[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836866)。 
->* 下载[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]为从 SQL Server 自 2017 年 CTP1[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=836867)。 此外接程序也适用于 SQL Server 自 2017 年 1 RC1。
+>*  从[此 Microsoft 下载中心页面](https://go.microsoft.com/fwlink/?linkid=836866)下载适用于 SQL Server 2016 SP1 的用于 Excel 的 Master Data Services 外接程序。 
+>* 从[此 Microsoft 下载中心页面](https://go.microsoft.com/fwlink/?linkid=836867)下载适用于 SQL Server 2017 CTP1 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。 此外接程序还适用于 SQL Server 2017 RC1。
 
  
   

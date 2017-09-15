@@ -1,5 +1,5 @@
 ---
-title: "创建索引 (Master Data Services) |Microsoft 文档"
+title: "创建索引 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
  **创建索引**  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 08/02/2017
   
 |列名|Description|  
 |-----------------|-----------------|  
-|状态|索引状态。<br /><br /> 当你单击**保存**、![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")图像将显示指示更新索引。<br /><br /> 如果存在错误时创建或编辑索引，![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")图像显示。<br /><br /> 否则，状态为正常，与![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")图像显示。|  
-|名称|索引名称。|  
+|状态|索引状态。<br /><br /> 单击“保存”后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示索引正在更新。<br /><br /> 如果创建或编辑索引时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标 ](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
+|Name|索引名称。|  
 |是唯一的|指定索引是否是唯一的。|  
 |对应属性|显示在其上定义索引的属性的显示名称。|  
   

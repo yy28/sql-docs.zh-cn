@@ -1,7 +1,7 @@
 ---
 title: "配置 Oracle 发布服务器 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  使用提供的脚本在 Oracle 数据库中创建复制管理用户。  
   
-2.  对于将发布的表，直接（而不是通过角色）将对每个表的 SELECT 权限授予第一步创建的 Oracle 管理用户。  
+2.  对于发布的表，直接（而不是通过角色）将每个表的 SELECT 权限授予第一步创建的 Oracle 管理用户。  
   
 3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 访问接口，然后重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
   
 4.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库配置为发布服务器。  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持下列异类事务复制和快照复制方案：  
   
+-   将数据从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器。  
+
+-   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
+  | |2016 或更早版本 |2017 或更高版本 |
+  |-------|-------|--------|
+  |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
+  |复制到 Oracle |最高为 Oracle 12c |不支持 |
+
+ 不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
+
+
  有关 Oracle 发布服务器可以发布的对象的列表，请参阅 [Oracle 发布服务器的设计注意事项和限制](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
- 使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时会提示您输入此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
+ 使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时必须提供此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   
 ### <a name="creating-the-user-schema-manually"></a>手动创建用户架构  
  如果手动创建复制管理用户架构，必须通过数据库角色或直接为此架构授予下列权限。  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  安装和配置客户端网络软件的最直接的方法是使用 Oracle 客户端磁盘上的 Oracle Universal Installer 和 Net Configuration Assistant。  
   
- 在 Oracle Universal Installer 中，您需要提供以下信息：  
+ 在 Oracle Universal Installer 中，必须提供以下信息：  
   
 |信息|说明|  
 |-----------------|-----------------|  
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5235 | Microsoft Docs
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6ed08c7ffad0e723dea7ad4774439049de3d99
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 4374db61b2ae314fe9a11307d083588e4b15800c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
@@ -43,24 +43,25 @@ ms.lasthandoff: 06/22/2017
   
 |错误状态|定义|  
 |---------------|--------------|  
-|状态 0|该语句由于元数据损坏而终止。 出现此消息时伴随有错误 8930 的一个或多个实例。|  
-|状态 1|该语句由于内部检查失败而终止。 出现此消息时伴随有错误 8967 的一个或多个实例。|  
-|状态 2|核心存储引擎系统表的基本系统表检查失败。 出现此消息时伴随有错误 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 或 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) 的一个或多个实例。|  
-|状态 3|DBCC 紧急模式修复失败，因为重新生成事务日志后无法启动数据库。 出现此消息时伴随有错误 7909。|  
-|状态 4|执行命令时出现断言失败或访问冲突。|  
-|状态 5|出现意外终止了 DBCC 命令的未知故障。|  
+|状态 1|该语句由于元数据损坏而终止。 出现此消息时伴随有错误 8930 的一个或多个实例。|  
+|状态 2|该语句由于内部检查失败而终止。 出现此消息时伴随有错误 8967 的一个或多个实例。|  
+|状态 3|核心存储引擎系统表的基本系统表检查失败。 出现此消息时伴随有错误 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md)、7985、[7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md)、[7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 或 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md) 的一个或多个实例。|  
+|状态 4|DBCC 紧急模式修复失败，因为重新生成事务日志后无法启动数据库。 出现此消息时，同时出现错误 7909。|  
+|状态 5|执行命令时出现断言失败或访问冲突。|  
+|状态 6|出现意外终止了 DBCC 命令的未知故障。|  
+|状态 7|由于副本 (AlwaysOn) 错误出现的异常终止。|  
   
 ## <a name="user-action"></a>用户操作  
 下表提供了适用于指定错误状态的用户操作。  
   
 |错误状态|用户操作|  
 |---------------|---------------|  
-|状态 0|从备份还原。|  
-|状态 1|请联系 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务与支持部门 (CSS)。|  
-|状态 2|从备份还原。|  
+|状态 1|从备份还原。|  
+|状态 2|请联系 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务与支持部门 (CSS)。|  
 |状态 3|从备份还原。|  
+|状态 4|从备份还原。|  
 |状态 4|请与 CSS 联系。|  
-|状态 5|再次运行该命令。 如果问题仍然存在，请联系 CSS。|  
+|状态 6|再次运行该命令。 如果问题仍然存在，请联系 CSS。|  
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

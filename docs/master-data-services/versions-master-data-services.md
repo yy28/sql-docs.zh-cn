@@ -1,5 +1,5 @@
 ---
-title: "版本 (Master Data Services) |Microsoft 文档"
+title: "版本 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|更改现有版本的名称。|[更改版本名称 &#40;Master Data Services &#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|锁定版本，以便只有管理员才能编辑其数据。|[锁定版本 &#40;Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|取消锁定版本，以便用户可以编辑其数据。|[解锁版本 &#40;Master Data Services &#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|验证所有数据后，提交版本。|[提交版本 &#40;Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|创建新的标志来标记版本。|[创建版本标志 &#40;Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|更改现有版本标志的名称。|[更改版本标志名称 &#40;Master Data Services &#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|将现有标志分配给版本。|[向版本 &#40; 分配标志Master Data Services &#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|创建现有版本的新副本|[复制版本 &#40;Master Data Services &#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|更改现有版本的名称。|[更改版本名称 (Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)|  
+|锁定版本，以便只有管理员才能编辑其数据。|[锁定版本 (Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)|  
+|取消锁定版本，以便用户可以编辑其数据。|[取消锁定版本 (Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)|  
+|验证所有数据后，提交版本。|[提交版本 (Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)|  
+|创建新的标志来标记版本。|[创建版本标志 (Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|更改现有版本标志的名称。|[更改版本标志名称 (Master Data Services)](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|将现有标志分配给版本。|[向版本分配标志 (Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|创建现有版本的新副本|[复制版本 (Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)|  
 |删除现有版本。|[删除版本 (Master Data Services)](../master-data-services/delete-a-version-master-data-services.md)|  
 |从版本中清除软删除的成员|[清除版本成员 (Master Data Services)](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [反向事务 &#40;Master Data Services &#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [撤消事务 (Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知 &#40;Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
--   [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

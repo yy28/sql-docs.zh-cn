@@ -1,5 +1,5 @@
 ---
-title: "数据库登录名、 用户和角色 (Master Data Services) |Microsoft 文档"
+title: "数据库登录名、用户和角色 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87acd8344bdce17c711c317518d7b47845458e24
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: dc95616efefbe35dc835accc377743451556288e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/02/2017
 |**stg**|包含与临时过程有关的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库表、存储过程和视图。 不要删除任何这些对象。 有关临时过程的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库对象安全性 &#40;Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

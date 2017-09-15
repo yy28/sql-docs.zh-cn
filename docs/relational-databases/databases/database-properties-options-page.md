@@ -2,7 +2,7 @@
 title: "数据库属性（“选项”页）| Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  指定下列模式之一来恢复数据库：“完整”、“大容量日志”或“简单”。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容级别**  
- 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值有  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)**和 **SQL Server 2008 (100)**。 当 SQL Server 2005 数据库升级到 SQL Server 2014 时，该数据库的兼容级别将从 90 更改为 100。  在 SQL Server 2014 中不支持 90 兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
   
  **包含类型**  
  指定无或部分以便指定这是否为包含数据库。 有关包含的数据库的详细信息，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md)。 服务器属性 **“启用包含的数据库”** 必须首先设置为 **TRUE** ，然后才能将某个数据库配置为包含数据库。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  指定数据库是否自动更新过期的优化统计信息。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则将在优化过程中自动生成优化查询需要但已过期的所有统计信息。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
  **自动异步更新统计信息**  
- 如果设置为 **True**，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新。 后续查询将使用可用的已更新统计信息。  
+ 如果设置为“True”，则启动自动更新过期统计信息的查询在编译前不会等待统计信息被更新。 后续查询会在更新统计信息可用时使用。  
   
  如果设置为 **False**，则启动自动更新过期统计信息的查询将等待，直到更新的统计信息可在查询优化计划中使用。  
   
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
+允许快照隔离  
+启用此功能。  
+
  **ANSI NULL 默认值**  
  **CREATE TABLE** 或 **ALTER TABLE** 语句执行过程中，没有显式定义为 **NOT NULL** 的所有用户定义的数据类型或列都将默认为允许空值。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON (Transact-SQL)](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 和 [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)。  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  如果设置为 **True**，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护数据库中由 FOREIGN KEY 约束所链接并包含 **datetime** 列的任意两个表之间的相关统计信息。  
   
  如果设置为 **False**，则不维护相关统计信息。  
-  
+ 
+ 延迟持续性  
+ 启用此功能。  
+ 
+ 读提交快照处于打开状态  
+ 启用此功能。  
+ 
  **数值舍入中止**  
  指定数据库处理舍入错误的方式。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则当表达式出现精度降低的情况时生成错误。 如果设置为 **False**，则在精度降低时不生成错误消息，并按存储结果的列或变量的精度对结果进行四舍五入。 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **目标恢复时间（秒）**  
  指定在发生崩溃的情况下恢复指定数据库的最长时间（秒）。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
-  
+
+## <a name="service-broker"></a>Service Broker  
+启用 Broker  
+启用或禁用 Service Broker。  
+
+优先处理 Broker 优先级  
+只读的 Service Broker 属性。  
+
+Service Broker 标识符  
+只读的标识符。  
+
 ## <a name="state"></a>State  
  **数据库为只读**  
- 指定数据库是否为只读。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则用户只能读取数据库中的数据。 用户不能修改数据或数据库对象；不过，数据库本身可以通过使用 DROP DATABASE 语句自行删除。 在为 **“数据库为只读”** 选项指定新值时，数据库不能处于使用状态。 master 数据库是个例外，在设置该选项时，只有系统管理员才能使用 master 数据库。  
+ 指定数据库是否为只读。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则用户只能读取数据库中的数据。 用户不能修改数据或数据库对象；然而，数据库本身可以通过使用 `DROP DATABASE` 语句自行删除。 在为 **“数据库为只读”** 选项指定新值时，数据库不能处于使用状态。 master 数据库是个例外，在设置该选项时，只有系统管理员才能使用 master 数据库。  
   
  **数据库状态**  
  查看数据库的当前状态。 它是不可编辑的。 有关 **“数据库状态”**的详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
-  
+
+ **已启用加密**  
+ 设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+ 
  **限制访问**  
  指定哪些用户可以访问该数据库。 可能的值有：  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      只有 db_owner、dbcreator 或 sysadmin 角色的成员才能使用该数据库。  
   
- **已启用加密**  
- 设置为 **True**时，会对此数据库启用数据库加密。 加密时需要数据库加密密钥。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)。  
-  
+
+
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

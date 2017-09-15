@@ -1,8 +1,10 @@
 ---
-title: "安装 SQL Server，并使用 SMB 文件共享作为存储选项 | Microsoft Docs"
+title: "使用 SMB 文件共享存储安装 SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
-  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用户数据库时可以选择服务器消息块 (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
+从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用户数据库时可以选择服务器消息块 (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
   
 > [!NOTE]  
 >  当前 SMB 文件共享上不支持 Filestream。  
   
 ## <a name="installation-considerations"></a>安装注意事项  
   
-### <a name="smb-file-share-formats"></a>SMB 文件共享格式：  
+### <a name="smb-fileshare-formats"></a>SMB 文件共享格式：  
  在指定 SMB 文件共享时，下面是针对独立和 FCI 数据库的支持的通用命名约定 (UNC) 路径格式：  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- 有关通用命名约定的详细信息，请参阅 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)。  
+ 有关通用命名约定的详细信息，请参阅 [UNC](http://msdn.microsoft.com/library/gg465305.aspx)。  
   
  不支持环回 UNC 路径（其服务器名称为 localhost、127.0.0.1 或本地计算机名称的 UNC 路径）。 作为一种特殊情况，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的文件服务器群集承载在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所运行的同一节点上，则也不受支持。 若要防止出现这种情况，建议在单独的 Windows 群集中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与文件服务器群集。  
   
@@ -60,10 +62,6 @@ ms.lasthandoff: 08/02/2017
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### <a name="installation-options"></a>安装选项  
   
@@ -95,19 +93,19 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
   
-## <a name="security-considerations"></a>需要考虑的安全性因素  
+## <a name="security-considerations"></a>安全注意事项  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户应具有对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限。 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户可以是域帐户或系统帐户。 有关共享和 NTFS 权限的详细信息，请参阅 [文件服务器上的共享和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535)。  
   
     > [!NOTE]  
     >  对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限应被限制为： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户和具有管理服务器角色的 Windows 用户。  
   
-     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：<domain_name>**\\**<computer_name>**$**。  
+     建议将域帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 如果系统帐户用作服务帐户，则按以下格式为计算机帐户授予权限：\<domain_name>\\<computer_name>\*$*。  
   
     > [!NOTE]  
     >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，如果 SMB 文件共享指定为存储选项，则需要将域帐户指定为服务帐户。 对于 SMB 文件共享，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后系统帐户只能指定为服务帐户。  
     >   
-    >  虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 *<domain_name>***\\***<computer_name>***$** 格式设置计算机帐户。  
+    >  虚拟帐户无法通过身份验证，因而无法访问远程位置。 所有虚拟帐户均使用计算机帐户的权限。 以 \<domain_name>\\<computer_name>\*$* 格式设置计算机帐户。  
   
 -   用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应该对用作数据目录的 SMB 文件共享文件夹或群集安装过程中的任何其他数据文件夹（用户数据库目录、用户数据库日志目录、TempDB 目录、TempDB 日志目录、备份目录）具有 FULL CONTROL 权限。  
   

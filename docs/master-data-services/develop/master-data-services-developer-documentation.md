@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 开发人员文档 |Microsoft 文档"
+title: "Master Data Services 开发人员文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46b9d4302eb2ba1133fb1840c29112aaebad22b4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 开发人员文档
@@ -41,14 +41,14 @@ ms.lasthandoff: 08/02/2017
  [创建主数据管理器 Web 服务代理类](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  描述如何从[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]网站启用元数据发布，以及如何创建可用于以编程方式访问 Web 服务操作的代理类。  
   
- [已分类的 Web 服务操作 &#40;Master Data Services &#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [分类的 Web 服务操作 &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  <xref:Microsoft.MasterDataServices.ServiceClient> 类的 Web 服务操作的分类列表。  
   
 ## <a name="custom-workflows"></a>自定义工作流  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则来创建基本工作流解决方案。 您可以自动更新和验证数据，并可根据指定的条件发送电子邮件通知。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中的业务规则旨在管理最常见的工作流方案。 如果您的工作流需要更复杂的事件处理（如多层审核或复杂决策树），则可配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将数据发送到您创建的自定义程序集。 若要处理自定义工作流，您必须在 Web 应用程序计算机上配置并启动 SQL Server MDS Workflow Integration Service，并创建用于实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口的程序集。  
   
 ### <a name="custom-workflow-content"></a>自定义工作流内容  
- [创建自定义工作流 &#40;Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [创建自定义工作流 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  有关如何创建工作流处理程序程序集、如何配置和启动 SQL Server MDS Workflow Integration Service 以及如何在启动自定义工作流的[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中创建业务规则的说明。  
   
 ## <a name="web-server-namespaces"></a>Web 服务命名空间  

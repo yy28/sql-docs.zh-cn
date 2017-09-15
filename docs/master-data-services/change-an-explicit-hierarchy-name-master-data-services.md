@@ -1,5 +1,5 @@
 ---
-title: "更改显式层次结构名称 (Master Data Services) |Microsoft 文档"
+title: "更改显式层次结构名称 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 33418d852f5895f9cc160d80975f62137631f047
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: be3d09477f5253fea15704e42f4eba23a4ead6de
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>更改显式层次结构名称 (Master Data Services)
@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
 7.  单击 **“保存”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [显式层次结构 &#40;Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [创建显式层次结构 &#40;Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [删除显式层次结构 &#40;Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
+ [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [删除显式层次结构 (Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   

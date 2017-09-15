@@ -1,5 +1,5 @@
 ---
-title: "创建数据库邮件配置文件和帐户对话框 |Microsoft 文档"
+title: "“创建数据库邮件配置文件和帐户”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>“创建数据库邮件配置文件和帐户”对话框
@@ -41,10 +41,10 @@ ms.lasthandoff: 08/02/2017
   
 |控件名称|Description|  
 |------------------|-----------------|  
-|**电子邮件地址**|键入帐户电子邮件地址的名称。 这是发送该电子邮件的地址，该地址必须采用 *email_name*@*domain_name*的格式。 示例电子邮件地址sales@contoso.com。|  
+|**电子邮件地址**|键入帐户电子邮件地址的名称。 这是发送该电子邮件的地址，该地址必须采用 *email_name*@*domain_name*的格式。 电子邮件地址示例为 sales@contoso.com。|  
 |**显示名称**|可选设置。 键入由此帐户发送的电子邮件上显示的名称。 显示名称的一个例子是 Contoso Sales Group。|  
-|**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 示例答复电子邮件地址admin@contoso.com。|  
-|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例：**smtp.***<company_name>***.com**。 如需相关帮助，请询问您的邮件管理员。|  
+|**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 一个示例答复电子邮件地址为 admin@contoso.com。|  
+|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例：**smtp.***<company_name>***.com**。如需相关帮助，请询问您的邮件管理员。|  
 |**端口号**|键入此帐户的 SMTP 服务器的端口号。 默认 SMTP 端口为 25。|  
 |**此服务器要求安全连接(SSL)**|使用安全套接字层 (SSL) 加密通信。|  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另请参阅  
  [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)
+[Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)
   
   

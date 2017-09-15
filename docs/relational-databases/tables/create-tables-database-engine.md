@@ -15,22 +15,20 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新表，对该表进行命名，然后将其添加到现有数据库中。  
+  可通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建新表，对该表进行命名，然后将其添加到现有数据库中。  
   
-> **注意：** 如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](http://go.microsoft.com/fwlink/?LinkId=163948)。  
-   
- 
+
   
 ##  <a name="Permissions"></a> 首先检查你的权限！  
 此任务需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  在对象资源管理器中，右键单击数据库的“表”节点，然后单击“新建表”。  
   
-4.  键入列名，选择数据类型，并选择各个列是否允许空值，如下图所示。  
+4.  键入列名，选择数据类型，并选择各列是否允许为空值，如下图所示：  
   
      ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  若要将某个列指定为主键，请右键单击该列，然后选择“设置主键”。 有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
-7.  若要创建外键关系、CHECK 约束或索引，请在“表设计器”窗格中右键单击，然后从列表中选择一个对象，如下图中所示。  
+7.  若要创建外键关系、CHECK 约束或索引，请在“表设计器”窗格中单击右键，然后从列表中选择一个对象，如下图所示：  
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   

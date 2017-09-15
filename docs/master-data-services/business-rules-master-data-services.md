@@ -1,5 +1,5 @@
 ---
-title: "业务规则 (Master Data Services) |Microsoft 文档"
+title: "业务规则 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/18/2017
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则是您用于确保主数据的质量和准确性的规则。 可以使用业务规则自动更新数据、发送邮件或启用业务流程或工作流。  
   
- 若要查看的业务规则的示例，请参阅[业务规则示例 &#40;Master Data Services &#41;](../master-data-services/business-rule-examples-master-data-services.md).  
+ 若要查看业务规则示例，请参阅[业务规则示例 &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md)。  
   
 ## <a name="create-and-publish-business-rules"></a>创建和发布业务规则  
  业务规则是您在 **ssMDSmdm** 中创建的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]语句。 如果属性值符合指定条件，会执行操作，否则执行 Else 操作。 可能的操作包括设置默认值或更改值。 这些操作可与发送电子邮件通知这一操作结合使用。  
   
- 业务规则可以基于特定属性值（例如，如果 Color=Blue，则执行操作），或在属性值发生更改时（例如，如果 Color 属性的值发生更改，则执行操作）应用。 有关跟踪的非特定更改的详细信息，请参阅[更改跟踪 &#40;Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md).  
+ 业务规则可以基于特定属性值（例如，如果 Color=Blue，则执行操作），或在属性值发生更改时（例如，如果 Color 属性的值发生更改，则执行操作）应用。 有关跟踪非特定更改的详细信息，请参阅[更改跟踪 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)。  
   
  若要使用业务规则，您必须首先创建和发布规则，然后将已发布的规则应用于数据。 您可以通过验证某一版本，将规则应用于该版本的数据的子级或全部数据。 在所有属性都通过业务规则验证前，不能提交版本。  
   
@@ -77,26 +77,26 @@ ms.lasthandoff: 08/02/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建和发布新的业务规则。|[创建和发布业务规则 &#40;Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|向业务规则添加多个条件。|[将多个条件添加到业务规则 &#40;Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|创建业务规则来要求属性具有值。|[需要属性值 &#40;Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改 &#40; 启动操作Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|创建业务规则，将用户定义脚本用作条件|[业务规则扩展 &#40;Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|创建业务规则，将用户定义脚本用作操作|[业务规则扩展 &#40;Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|更改现有业务规则的名称。|[更改业务规则名称 &#40;Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 &#40;Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|将业务规则应用于特定成员。|[针对业务规则 &#40; 验证特定成员Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|排除业务规则以便不使用该规则。|[排除业务规则 &#40;Master Data Services &#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|删除现有业务规则。|[删除业务规则 &#40;Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|创建和发布新的业务规则。|[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|向业务规则添加多个条件。|[向业务规则添加多个条件 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|创建业务规则来要求属性具有值。|[要求属性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|创建业务规则以便基于对属性值的更改执行操作。|[基于属性值更改启动操作 (Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|创建业务规则，将用户定义脚本用作条件|[业务规则扩展 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|创建业务规则，将用户定义脚本用作操作|[业务规则扩展 &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|更改现有业务规则的名称。|[更改业务规则名称 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|将 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 配置为在应用业务规则时发送通知。|[配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|将业务规则应用于特定成员。|[针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|排除业务规则以便不使用该规则。|[排除业务规则 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|删除现有业务规则。|[删除业务规则 &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
 -   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [版本 &#40;Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
--   [验证 &#40;Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
--   [更改跟踪 &#40;Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [更改跟踪 &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

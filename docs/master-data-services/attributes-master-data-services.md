@@ -1,5 +1,5 @@
 ---
-title: "属性 (Master Data Services) |Microsoft 文档"
+title: "属性 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>属性如何与其他模型对象关联  
  您可以将属性视作实体表中的列。 属性值是用于描述特定成员的值。  
   
- ![Master Data Services 实体表示为表](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services 实体表示为表")  
+ ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
   
  创建包含很多属性的实体时，可以将属性组织为属性组。 有关详细信息，请参阅 [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>属性示例  
  在下面的示例中，实体具有 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 属性。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![Bike Product 实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product 实体表")  
+ ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   
  在下面的示例中，Product 实体包含：  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Subcategory 是用作 Product 的基于域的属性的实体。 Category 是用作 Subcategory 的基于域的属性的实体。 与 Product 实体一样，Category 和 Subcategory 实体各自包含默认 Name 和 Code 属性。  
   
- ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树状结构")  
+ ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
   
 ## <a name="related-tasks"></a>相关任务  
   

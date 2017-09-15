@@ -1,7 +1,7 @@
 ---
 title: "非 SQL Server 订阅服务器 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>非 SQL Server 订阅服务器
-  下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
+# <a name="non-sql-server-subscribers"></a>非 SQL Server 订阅服务器  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
   
  不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Oracle 支持的所有平台|Oracle OLE DB 访问接口（由 Oracle 提供）|  
 |IBM DB2|MVS、AS400、Unix、Linux、Windows（9.x 版除外）|Microsoft Host Integration Server (HIS) OLE DB 访问接口|  
+
+Oracle 版本信息：  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持下列异类事务复制和快照复制方案：  
   
- 有关创建 Oracle 和 IBM DB2, 订阅的信息，请参阅 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)的解决方案。  
+-   将数据从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器。  
+
+-   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
+  | |2016 或更早版本 |2017 或更高版本 |
+  |-------|-------|--------|
+  |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
+  |复制到 Oracle |最高为 Oracle 12c |不支持 |
+
+
+ 不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
+
+有关创建 Oracle 和 IBM DB2, 订阅的信息，请参阅 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)的解决方案。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>非 SQL Server 订阅服务器的注意事项  
  在复制到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器时，请牢记下列注意事项：  
@@ -55,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   在新建发布向导中创建发布，然后使用“发布属性”对话框为非 SQL Server 订阅服务器启用此发布时，不要为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器指定订阅数据库中所有对象的所有者，对于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，应设置为发布数据库中相应对象的所有者。  
   
--   如果发布中将包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，则必须在创建对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的任何订阅之前为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用发布。  
+-   如果发布中包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，则必须在创建对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的任何订阅之前为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用发布。  
   
--   默认情况下，由快照代理为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器生成的脚本在 CREATE TABLE 语法中使用不带引号的标识符。 因此，名为“test”的已发布表按“TEST”复制。 若要使用与发布数据库中的表相同的大小写，请使用分发代理的 **-QuotedIdentifier** 参数。 如果非 **订阅服务器中已发布的对象名称（如表、列和约束）包含空格或相应版本数据库中保留的字词，则还必须使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数。 有关此参数的详细信息，请参阅 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+-   默认情况下，由快照代理为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器生成的脚本在 `CREATE TABLE` 语法中使用不带引号的标识符。 因此，名为“test”的已发布表按“TEST”复制。 若要使用与发布数据库中的表相同的大小写，请使用分发代理的 **-QuotedIdentifier** 参数。 如果非 **订阅服务器中已发布的对象名称（如表、列和约束）包含空格或相应版本数据库中保留的字词，则还必须使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数。 有关此参数的详细信息，请参阅 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
 -   运行分发代理时使用的帐户必须对 OLE DB 访问接口的安装目录具有读权限。  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

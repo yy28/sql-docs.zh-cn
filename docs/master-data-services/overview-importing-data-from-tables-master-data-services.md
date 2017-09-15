@@ -1,5 +1,5 @@
 ---
-title: "概述： 从表 (Master Data Services) 导入数据 |Microsoft 文档"
+title: "概述：导入表中数据 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>概述：导入表中数据 (Master Data Services)
@@ -78,27 +78,27 @@ ms.lasthandoff: 08/02/2017
   
 -   [叶成员临时表 (Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合并的成员临时表 &#40;Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合并成员临时表 (Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [关系临时表 (Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  模型中的每个实体都有一个临时表。 表名称指示相应的实体以及实体类型，如叶成员。 下图显示货币、客户和产品实体的临时表。  
   
- ![在 MDS 数据库中的临时表](../master-data-services/media/mds-staging-tables.png "MDS 数据库中的临时表")  
+ ![MDS 数据库中的临时表](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
   
  该表的名称在创建实体时指定，且不可更改。 如果临时表的名称包含 _1 或其他数字，则在创建实体时已存在带此名称的其他表。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。  
   
--   stg.udp_\<名称 > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   stg.udp_\<名称 > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   stg.udp_\<名称 > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  对于模型中的每个实体，有三个对应于叶成员、合并成员和关系临时表的存储过程。  下图显示货币、客户和产品实体的临时存储过程。  
   
- ![临时存储的过程在 MDS 数据库](../master-data-services/media/mds-staging-storedprocedures.png "临时 MDS 数据库中的存储的过程")  
+ ![MDS 数据库中的临时存储过程](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
   
  有关存储过程的详细信息，请参阅[临时存储过程 (Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>相关内容  
   
--   [验证 &#40;Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
 -   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

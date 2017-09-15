@@ -1,5 +1,5 @@
 ---
-title: "安全性 (Master Data Services) |Microsoft 文档"
+title: "安全性 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a011cac6d34c73cffb9fba286ebe64ebb9e7103
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
@@ -57,18 +57,18 @@ ms.lasthandoff: 08/02/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建对模型具有完全权限的用户。|[创建模型管理员 &#40;Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]将 Active Directory 组添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；这是授予组权限以访问  Web 应用程序中的数据的第一步。|[添加一个组 &#40;Master Data Services &#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 分配对  Web 应用程序的功能区域的权限。|[分配功能区域权限 &#40;Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|通过将权限分配给模型对象来将权限分配给属性值。|[分配模型对象权限 &#40;Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|通过将权限分配给层次结构节点来将权限分配给成员值。|[分配层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|创建对模型具有完全权限的用户。|[创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]将 Active Directory 组添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；这是授予组权限以访问  Web 应用程序中的数据的第一步。|[添加组 (Master Data Services)](../master-data-services/add-a-group-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 分配对  Web 应用程序的功能区域的权限。|[分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|通过将权限分配给模型对象来将权限分配给属性值。|[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|通过将权限分配给层次结构节点来将权限分配给成员值。|[分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [管理员 &#40;Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)   
- [用户和组 &#40;Master Data Services &#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [功能区域权限 &#40;Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [模型对象权限 &#40;Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [层次结构成员权限 &#40;Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何确定权限 &#40;Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)   
+ [用户和组 &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

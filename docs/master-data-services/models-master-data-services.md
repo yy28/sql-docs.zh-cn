@@ -1,5 +1,5 @@
 ---
-title: "模型 (Master Data Services) |Microsoft 文档"
+title: "模型 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
   
  下图显示模型中对象之间的关系。  
   
- ![Master Data Services 模型中的对象](../master-data-services/media/mds-conc-model-circles.gif "Master Data Services 模型中的对象")  
+ ![Master Data Services 模型中的对象](../master-data-services/media/mds-conc-model-circles.gif "Objects in a Master Data Services Model")  
   
 > [!NOTE]  
->  派生层次结构也是模型对象，但它们不显示在图像中。 派生层次结构从在实体之间存在的基于域的属性关系中派生。 请参阅[派生层次结构 &#40;Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)有关详细信息。  
+>  派生层次结构也是模型对象，但它们不显示在图像中。 派生层次结构从在实体之间存在的基于域的属性关系中派生。 有关详细信息，请参阅[派生层次结构 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
  主数据是在模型对象中包含的数据。 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，主数据作为实体中的成员存储。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="model-example"></a>模型示例  
  在下面的示例中，Product 模型中的对象以逻辑方式对与产品相关的数据进行分组。  
   
- ![产品模型主数据数据示例](../master-data-services/media/mds-conc-model.gif "产品模型主数据数据示例")  
+ ![产品模型主数据示例](../master-data-services/media/mds-conc-model.gif "Product Model Master Data Example")  
   
  其他常见的模型有：  
   
@@ -74,9 +74,9 @@ ms.lasthandoff: 08/02/2017
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建模型来组织您的主数据。|[创建一个模型 &#40;Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|更改现有模型的名称。|[编辑模型 &#40;Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)|  
-|删除现有模型。|[删除模型 &#40;Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|创建模型来组织您的主数据。|[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
+|更改现有模型的名称。|[编辑模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|删除现有模型。|[删除模型 &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/02/2017
   
 -   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
--   [模型对象权限 &#40;Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

@@ -1,23 +1,28 @@
 ---
-title: "匹配相似数据（用于 Excel 的 MDS 外接程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "匹配相似数据 (MDS Add-in for Excel) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3bb995f72c56735a15861a5c515cc9e086d5c3f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
-# 匹配相似数据（用于 Excel 的 MDS 外接程序）
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，使用 Data Quality Services (DQS) 功能查找数据中的相似性。  
+# <a name="match-similar-data-mds-add-in-for-excel"></a>匹配相似数据（用于 Excel 的 MDS 外接程序）
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用 Data Quality Services (DQS) 功能查找数据中的相似性。  
   
  若要执行此过程，您可以：  
   
@@ -25,13 +30,13 @@ caps.handback.revision: 6
   
 -   创建您自己的自定义 DQS 知识库和匹配策略。 有关详细信息，请参阅 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
   
--   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅[从 Master Data Services 中将数据导出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)。  
+-   必须具有包含 MDS 管理的数据的工作表。 有关详细信息，请参阅 [从 Master Data Services 中将数据导出至 Excel](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)。  
   
 -   可选。 您可以在检查是否存在相似性之前将其他数据和 MDS 管理的数据合并在一起。 有关详细信息，请参阅[合并数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md)。  
   
-### 使用默认知识库查找相似性  
+### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>使用默认知识库查找相似性  
   
 1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 4.  在所有权重值的总和等于 100% 时，单击 **“确定”**。  
   
-### 使用自定义知识库查找相似性  
+### <a name="to-find-similarities-by-using-a-custom-knowledge-base"></a>使用自定义知识库查找相似性  
   
 1.  从包含 MDS 管理的数据的工作表中，在“数据质量”组中单击“匹配数据”。  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 6
   
 4.  在所有 DQS 域都映射到该工作表中的列后，单击 **“确定”**。  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
   
 -   查看其他信息以便确定哪些数据是类似的。 有关详细信息，请参阅[数据质量匹配列（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [用于 Excel 的 MDS 外接程序中的数据质量匹配](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [数据匹配](../../data-quality-services/data-matching.md)  
   

@@ -1,8 +1,10 @@
 ---
 title: "次要副本上的活动次要副本备份 - AlwaysOn 可用性组 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/01/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,17 +25,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c3645d6ab80136fc110c85315ba8dfc36e500eb3
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 2d54e433746548bcef8cb0780f8586ec2568d898
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>活动次要副本：次要副本备份（AlwaysOn 可用性组）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持在辅助副本上执行备份操作。 备份操作可能会给 I/O 和 CPU 带来很大的压力（使用备份压缩）。 将备份负荷转移到已同步或正在同步的辅助副本后，您可以使用承载第一层工作负荷的主副本的服务器实例上的资源。  
-  
+
 > [!NOTE]  
 >  在可用性组的主数据库或辅助数据库上不允许 RESTORE 语句。  
   
@@ -54,7 +56,9 @@ ms.lasthandoff: 08/02/2017
      对于在任何副本（主副本或辅助副本）上进行的日志备份之间，确保一致的日志链，而与其可用性模式（同步提交或异步提交无关）。  
   
 -   若要备份辅助数据库，辅助副本必须能够与主副本进行通信，并且状态必须为 **SYNCHRONIZED** 或 **SYNCHRONIZING**。  
-  
+
+在分布式可用性组中，可以对与活动主要副本相同的可用性组中的次要副本执行备份，或对任何次要可用性组的主要副本执行备份。 无法对次要可用性组中的次要副本执行备份，因为次要副本仅与其可用性组中的主要副本通信。 仅直接与全局主要副本通信的副本才能执行备份操作。
+
 ##  <a name="WhereBuJobsRun"></a> 配置运行备份作业的位置  
  在辅助副本上执行备份以减轻主生产服务器的备份工作负荷非常有好处。 但是，对辅助副本执行备份会显著增加用于确定应在何处运行备份作业的过程的复杂性。 要解决这个问题，请按如下所示配置备份作业运行的位置：  
   

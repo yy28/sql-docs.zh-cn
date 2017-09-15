@@ -1,8 +1,10 @@
 ---
 title: "在服务器核心安装上配置 SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,105 +20,103 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bb9b0fb0f2adaae8b399c4c72b3d3b94e4e8cf0d
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
-  本主题详细介绍如何在服务器核心安装上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+本主题详细介绍如何在服务器核心安装上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 ##  <a name="BKMK_ConfigureWindows"></a> 在 Windows Server 上配置和管理 Server Core  
- 本节提供帮助配置和管理 Server Core 安装的主题参考资料。  
+本节提供帮助配置和管理 Server Core 安装的主题参考资料。  
   
- 在 Server Core 模式下，部分 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能不受支持。  其中的一些功能可以安装在客户端计算机或未运行 Server Core 的另一服务器上，然后连接到在 Server Core 上安装的数据库引擎服务。  
+在 Server Core 模式下，部分 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 功能不受支持。  其中的一些功能可以安装在客户端计算机或未运行 Server Core 的另一服务器上，然后连接到在 Server Core 上安装的数据库引擎服务。  
   
- 有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
+有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
   
--   [安装服务器核心](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [安装服务器核心](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
--   [通过 Sconfig.cmd 配置 Windows Server 2016 的服务器核心安装](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)  
+- [通过 Sconfig.cmd 配置 Windows Server 2016 的服务器核心安装](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
--   [在运行 Windows Server 2008 R2 Server Core 安装的服务器上安装服务器角色：概述](http://go.microsoft.com/fwlink/?LinkId=245960)
+- [在服务器核心服务器 Windows Server 2012 R2 上安装服务器角色和功能](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
--   [在运行 Windows Server 2008 R2 Server Core 安装的服务器上安装 Windows 功能：概述](http://go.microsoft.com/fwlink/?LinkId=245961)
+- [管理 Server Core 安装：概述](http://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [管理 Server Core 安装：概述](http://go.microsoft.com/fwlink/?LinkId=245962)  
-  
--   [管理 Server Core 安装](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [管理 Server Core 安装](http://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
- 本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关在 Windows 服务器核心计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的详细信息，请参阅[在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关在 Windows 服务器核心计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的详细信息，请参阅[在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
- 以下是安装产品更新的两个方案：  
+以下是安装产品更新的两个方案：  
   
--   [在全新安装期间为 SQL Server 2016 安装更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_NewInstall)  
+- [在全新安装期间为 SQL Server 安装更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_NewInstall)  
   
--   [在已安装 SQL Server 2016 后为其安装更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
+- [在已安装 SQL Server 后为其安装更新](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
-###  <a name="bkmk_NewInstall"></a> 在全新安装期间为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装更新  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序在 Server Core 操作系统上仅支持命令提示符安装。 有关详细信息，请参阅 [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+###  <a name="bkmk_NewInstall"></a> 在全新安装期间为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装更新  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序在 Server Core 操作系统上仅支持命令提示符安装。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将最新的产品更新集成到主产品安装中，以便可以同时安装主产品及其适用的更新。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将最新的产品更新集成到主产品安装中，以便可以同时安装主产品及其适用的更新。  
   
- 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可请求累积更新、Service Pack 或者 Service Pack 连同累积更新。  
+在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可请求累积更新、Service Pack 或者 Service Pack 连同累积更新。  
   
- 指定 UpdateEnabled 和 UpdateSource 参数可以在主产品安装中包含最新的产品更新。 参考以下示例以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间允许产品更新：  
+指定 UpdateEnabled 和 UpdateSource 参数可以在主产品安装中包含最新的产品更新。 参考以下示例以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间允许产品更新：  
   
-```tsql  
+```  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="\<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="\<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-###  <a name="bkmk_alreadyInstall"></a> 在已安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后为其安装更新  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已安装实例上，我们建议您应用最新的安全更新和关键更新，包括常规分发发布 (GDR) 和 Service Pack (SP)。 单独的累积更新和安全更新应该根据需要逐案例采用。 评估更新；如果需要，则应用该更新。  
+###  <a name="bkmk_alreadyInstall"></a> 在已安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 后为其安装更新  
+在 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的已安装实例上，我们建议您应用最新的安全更新和关键更新，包括常规分发发布 (GDR) 和 Service Pack (SP)。 单独的累积更新和安全更新应该根据需要逐案例采用。 评估更新；如果需要，则应用该更新。  
   
- 在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称：  
+在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称：  
   
--   更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单个实例和所有共享组件。 您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。  
+- 更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单个实例和所有共享组件。 您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。  
   
     ```  
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance  
     ```  
   
--   仅更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件：  
+- 仅更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件：  
   
     ```  
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch  
     ```  
   
--   更新计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和所有共享组件：  
+- 更新计算机上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和所有共享组件：  
   
     ```  
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances  
     ```  
   
-##  <a name="BKMK_StartStopServices"></a> 启动/停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务  
- [sqlservr Application](../../tools/sqlservr-application.md) 应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
+## <a name="BKMK_StartStopServices"></a> 启动/停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务  
+[sqlservr Application](../../tools/sqlservr-application.md) 应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
- 您还可以使用 Net 服务启动和停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+您还可以使用 Net 服务启动和停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
-##  <a name="BKMK_EnableAlwaysON"></a> 启用 AlwaysOn 可用性组  
- 启用 AlwaysOn 可用性组是服务器实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。 有关管理 AlwaysOn 可用性组的详细信息，请参阅 [启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+## <a name="BKMK_EnableAlwaysON"></a> 启用 AlwaysOn 可用性组  
+启用 AlwaysOn 可用性组是服务器实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。 有关管理 AlwaysOn 可用性组的详细信息，请参阅 [启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>远程使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
- 这些步骤用于在运行 Windows 的客户端版的电脑上执行，或在安装了服务器图形 Shell 的 Windows Server 上运行。  
+这些步骤用于在运行 Windows 的客户端版的电脑上执行，或在安装了服务器图形 Shell 的 Windows Server 上运行。  
   
-1.  打开“计算机管理”。 要打开“计算机管理”，请单击“启动”，键入 `compmgmt.msc`，然后单击“确定”。    
+1. 打开“计算机管理”。 要打开“计算机管理”，请单击“启动”，键入 `compmgmt.msc`，然后单击“确定”。    
   
-2.  在控制台树中，右键单击“计算机管理”，再单击“连接到另一台计算机...”。  
+2. 在控制台树中，右键单击“计算机管理”，再单击“连接到另一台计算机...”。  
   
-3.  在“选择计算机”对话框中，键入想要管理的服务器核心计算机名称或单击“浏览”进行查找，然后单击“确定”。  
+3. 在“选择计算机”对话框中，键入想要管理的服务器核心计算机名称或单击“浏览”进行查找，然后单击“确定”。  
   
-4.  在控制台树中，单击服务器核心计算机的“计算机管理”下的“服务和应用程序”。  
+4. 在控制台树中，单击服务器核心计算机的“计算机管理”下的“服务和应用程序”。  
   
-5.  双击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”。  
+5. 双击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”。  
   
-6.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]”(\<instance name)，其中 \<instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
+6. 在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]”(\<instance name)，其中 \<instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
   
-7.  选择 **“AlwaysOn 高可用性”** 选项卡。  
+7. 选择 **“AlwaysOn 高可用性”** 选项卡。  
   
-8.  验证“Windows 故障转移群集名称”字段包含本地故障转移群集节点的名称。 如果此字段为空，则此服务器实例当前不支持 AlwaysOn 可用性组。 原因可能是本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持 AlwaysOn 可用性组。  
+8. 验证“Windows 故障转移群集名称”字段包含本地故障转移群集节点的名称。 如果此字段为空，则此服务器实例当前不支持 AlwaysOn 可用性组。 原因可能是本地计算机不是群集节点、WSFC 群集已关闭或此版本的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 不支持 AlwaysOn 可用性组。  
   
 9. 选中“启用 AlwaysOn 可用性组”复选框，然后单击“确定”。  
   
@@ -127,11 +127,11 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 > -   您正在管理的计算机名称显示在控制台树中的“计算机管理”旁边的括号中。  
   
 ### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>使用 PowerShell Cmdlet 启用 AlwaysOn 可用性组  
- PowerShell Cmdlet Enable-SqlAlwaysOn 用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上启用 AlwaysOn 可用性组。 如果当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务正在运行时启用 AlwaysOn 可用性组，则必须重新启动数据库引擎服务才能完成更改。 除非您指定 -Force 参数，否则，cmdlet 将询问您是否要重新启动服务；如果取消，将不会发生任何操作。  
+PowerShell Cmdlet Enable-SqlAlwaysOn 用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上启用 AlwaysOn 可用性组。 如果当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务正在运行时启用 AlwaysOn 可用性组，则必须重新启动数据库引擎服务才能完成更改。 除非您指定 -Force 参数，否则，cmdlet 将询问您是否要重新启动服务；如果取消，将不会发生任何操作。  
   
- 您必须拥有管理员权限才能执行此 cmdlet。  
+您必须拥有管理员权限才能执行此 cmdlet。  
   
- 可以使用以下语法之一来为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启用 AlwaysOn 可用性组：  
+可以使用以下语法之一来为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启用 AlwaysOn 可用性组：  
   
 ```  
 Enable-SqlAlwaysOn [-Path <string>] [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
@@ -145,14 +145,14 @@ Enable-SqlAlwaysOn -InputObject <Server> [-Credential <PSCredential>] [-Force] [
 Enable-SqlAlwaysOn [-ServerInstance <string>] [-Credential <PSCredential>] [-Force] [-NoServiceRestart] [-Confirm] [-WhatIf] [<Commom Parameters>]  
 ```  
   
- 以下 PowerShell 命令在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例 (Machine\Instance) 上启用 AlwaysOn 可用性组：  
+以下 PowerShell 命令在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例 (Machine\Instance) 上启用 AlwaysOn 可用性组：  
   
 ```  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance  
 ```  
   
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> 配置运行在 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的远程访问  
- 执行下述操作以配置运行在 Windows 服务器核心上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的远程访问。  
+ 执行下述操作以配置运行在 Windows 服务器核心上的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 实例的远程访问。  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的远程连接  
  若要启用远程连接，请在本地使用 SQLCMD.exe 并对 Server Core 实例执行以下语句：  
@@ -188,7 +188,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 4.  在 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口中，运行以下脚本以启用 TCP/IP 协议：  
   
-```  
+```powershell
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -221,9 +221,9 @@ $Tcp
 |[sqlagent90 应用程序](../../tools/sqlagent90-application.md)|用于在命令提示符下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<instance_name>\MSSQL\Binn|  
 |[sqlcmd Utility](../../tools/sqlcmd-utility.md)|您可以在命令提示符下输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 实用工具](../../tools/sqldiag-utility.md)|用于为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户服务和支持部门收集诊断信息。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint 实用工具](../../tools/sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的数据库维护计划。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 实用工具](../../tools/sqlmaint-utility.md)|用于执行在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中创建的数据库维护计划。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 实用工具](../../tools/sqlps-utility.md)|用于运行 PowerShell 命令和脚本。 加载和注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr Application](../../tools/sqlservr-application.md)|用于在命令提示符下启动和停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以进行故障排除。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr Application](../../tools/sqlservr-application.md)|用于在命令提示符下启动和停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以进行故障排除。|\<驱动器>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
@@ -231,7 +231,7 @@ $Tcp
  您可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具： [SQLdiag Utility](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Server Core 上安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
+ [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [安装操作指南主题](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "排除业务规则 (Master Data Services) |Microsoft 文档"
+title: "排除业务规则 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 264f58554df70d5531cecdaea9bbc94606086e9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6d6ae880dffcf2bf01e9a1f3444c9cc775994216
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除业务规则 (Master Data Services)
@@ -56,9 +56,9 @@ ms.lasthandoff: 08/02/2017
   
 10. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“已排除”状态  ，“已排除”  列为“是” 。  
   
-## <a name="see-also"></a>另請參閱  
- [删除业务规则 &#40;Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
- [创建和发布业务规则 &#40;Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [删除业务规则 (Master Data Services)](../master-data-services/delete-a-business-rule-master-data-services.md)   
+ [创建和发布业务规则 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)    
+ [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "快速入门 1：用于提高 Transact-SQL 性能的内存中 OLTP 技术 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
@@ -136,7 +136,7 @@ CREATE TABLE 语句上的 T-SQL 关键字 MEMORY_OPTIMIZED 是表格被创建的
   
 #### <a name="natively-compiled-modules"></a>本机编译模块  
   
-CREATE PROCEDURE 语句上的 T-SQL 关键字 NATIVE_COMPILATION 是本机进程的创建方式。 每次数据库联机循环中首次使用本机进程时，会将 T-SQL 语句编译为机器代码。 T-SQL 指令不再接受对每个指令的慢速解释。  
+CREATE PROCEDURE 语句上的 T-SQL 关键字 NATIVE_COMPILATION 是如何创建本地编译的存储过程。 每次数据库联机循环中首次使用本机进程时，会将 T-SQL 语句编译为机器代码。 T-SQL 指令不再接受对每个指令的慢速解释。  
   
 - 我们看到本机编译结果所需的持续时间是解释持续时间的 1/100。  
   
@@ -218,14 +218,12 @@ CREATE PROCEDURE 语句上的 T-SQL 关键字 NATIVE_COMPILATION 是本机进程
 在 Azure SQL 数据库中，无需且不能创建此类文件组。  
 
 下面的示例 T-SQL 脚本可为内存中 OLTP 启用数据库，并配置所有推荐设置。 它适用于 SQL Server 和 Azure SQL 数据库：[enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
-  
+
+请注意，具有 MEMORY_OPTIMIZED_DATA 文件组的数据库并非支持所有的 SQL Server 功能。 有关限制的详细信息，请参阅：[内存中 OLTP 不支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4.创建内存优化表  
-  
-  
-  
   
 重要的 Transact-SQL 关键字为关键字 MEMORY_OPTIMIZED。  
   
@@ -302,6 +300,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
   
 关键字 SCHEMABINDING 表示，除非先删除本机过程，否则不能删除本机过程中引用的表。 有关详细信息，请参阅[创建本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)。  
   
+请注意，无需创建本机编译存储过程即可访问内存优化表。 也可从传统的存储过程和即席批处理引用内存优化表。
   
 <a name="execute-the-native-proc-31e"></a>  
   

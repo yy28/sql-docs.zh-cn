@@ -1,7 +1,7 @@
 ---
 title: "Oracle 发布概述 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Oracle 发布概述
-  从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，可以在复制拓扑中加入 Oracle 发布服务器（自 Oracle 9i 版起）。 可在支持 Oracle 的任何硬件和操作系统上部署发布服务器。 该功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务性复制的坚实基础上，提供了相似的性能和可用性。  
+# <a name="oracle-publishing-overview"></a>Oracle 发布概述  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，可以在复制拓扑中加入 Oracle 发布服务器（自 Oracle 9i 版起）。 可在支持 Oracle 的任何硬件和操作系统上部署发布服务器。 该功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务性复制的坚实基础上，提供了相似的性能和可用性。  
   
- 不推荐使用 Oracle 发布。 不推荐异类复制到非 SQL Server 订阅服务器。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持下列异类事务复制和快照复制方案：  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   将数据从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器。  
+
+-   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
+  | |2016 或更早版本 |2017 或更高版本 |
+  |-------|-------|--------|
+  |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
+  |复制到 Oracle |最高为 Oracle 12c |不支持 |
+
+
+ 不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Oracle 的快照复制  
  Oracle 快照发布与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照发布在实现方式上类似。 对 Oracle 发布运行快照代理时，该代理将连接到 Oracle 发布服务器，并处理发布中的每个表。 处理每个表时，代理将检索表行并创建架构脚本，然后将该脚本存储在发布的快照共享中。 每次运行快照代理时都会创建整个数据集，因此在事务复制中出现更改跟踪触发器时，不会将它们添加到 Oracle 表中。 快照复制是迁移数据的一种便利方法，可以将对发布系统的影响降到最低。  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [异类数据库复制](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

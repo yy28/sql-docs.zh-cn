@@ -1,5 +1,5 @@
 ---
-title: "系统设置 (Master Data Services) |Microsoft 文档"
+title: "系统设置 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
@@ -108,11 +108,11 @@ ms.lasthandoff: 08/02/2017
   
 |配置管理器设置|系统设置|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**用于通知的主数据管理器 URL**|**MDMRootURL**|URL [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序，例如在电子邮件通知中，链接中使用`http://constoso/mds`。|  
+|**用于通知的主数据管理器 URL**|**MDMRootURL**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web 应用程序的 URL，在电子邮件通知的链接中使用，例如 `http://constoso/mds`。|  
 |**通知电子邮件间隔**|**NotificationInterval**|发送电子邮件通知的频率（以秒为单位）。 默认值为 **120** 秒（2 分钟）。|  
 |**单个电子邮件中的通知数**|**NotificationsPerEmail**|将在单个通知电子邮件中列出的验证问题的最大数目。 如果存在其他问题，则这些问题将不包括在该电子邮件中，但可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中进行查看。|  
 |**默认电子邮件格式**|**EmailFormat**|所有电子邮件通知的格式。 默认值为 **HTML** 或 **1**。 数据库设置 **2** 表示 **“文本”**。<br /><br /> 注意：可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中为单个用户替代此设置，只需在用户的“常规”  选项卡上更改和保存“电子邮件格式”  即可。|  
-|**用于电子邮件地址的正则表达式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，用于验证在用户的 **“常规”** 即可。 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [正则表达式语言元素](http://go.microsoft.com/fwlink/?LinkId=164401) 。|  
+|**用于电子邮件地址的正则表达式**|**EmailRegExPattern**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，用于验证在用户的 **“常规”** 即可。有关正则表达式的详细信息，请参阅 MSDN Library 中的 [正则表达式语言元素](http://go.microsoft.com/fwlink/?LinkId=164401) 。|  
 |**数据库邮件帐户**|**EmailProfilePrincipalAccount**|显示发送电子邮件通知时要使用的数据库邮件帐户。 默认配置文件为 **mds_email_user**。|  
 |**数据库邮件配置文件**|**DatabaseMailProfile**|发送电子邮件通知时要使用的数据库邮件配置文件。 默认值为空。|  
 ||**ValidationIssueHTML**|业务规则验证失败时电子邮件用户收到的 HTML 格式的文本。|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库对象安全性 &#40;Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

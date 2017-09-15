@@ -1,5 +1,5 @@
 ---
-title: "编辑模型 (Master Data Services) |Microsoft 文档"
+title: "编辑模型 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08291f09ed7bc172fe22534e82b79ecc47ce55e1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee796a4c002df4e0a843e7a663e60d4a7f24a398
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-model-master-data-services"></a>编辑模型 (Master Data Services)
@@ -56,11 +56,11 @@ ms.lasthandoff: 08/02/2017
   
 8.  单击 **“保存模型”**。  
   
- 网格的“状态”列中显示了对模型所执行操作的状态。  当你单击**保存模型**按钮，![更新](../master-data-services/media/mds-model-status-updating.png "更新")显示图像，它指示正在更新该模型。 如果在创建或编辑模型时出错![错误](../master-data-services/media/mds-model-status-error.png "错误")显示的图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
+ 网格的“状态”列中显示了对模型所执行操作的状态。  单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
   
-## <a name="see-also"></a>另請參閱  
- [创建一个模型 &#40;Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)   
- [删除模型 &#40;Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
+ [删除模型 &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)  
   
   

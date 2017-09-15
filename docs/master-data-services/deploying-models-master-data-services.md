@@ -1,5 +1,5 @@
 ---
-title: "部署模型 (Master Data Services) |Microsoft 文档"
+title: "部署模型 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，包是包含可部署模型结构以及来自模型的数据（可选）的 XML 文件。 使用模型包可以将模型的副本从一个 MDS 环境移到另一个环境，或者在现有的 MDS 环境中创建新模型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**MDSModelDeploy 工具**与中创建的包向后兼容[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]或更高版本。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] MDSModelDeploy 工具与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本中创建的包向后兼容。  
   
 ## <a name="tools-for-deploying-models"></a>用于部署模型的工具  
  若要使用模型包，您可以根据需要使用以下三个工具之一。  
@@ -74,13 +74,13 @@ ms.lasthandoff: 08/02/2017
 |任务说明|主题|  
 |----------------------|-----------|  
 |通过使用 MDSModelDeploy 工具创建模型对象和/或数据的新的部署包。|[使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|通过使用向导创建只包含模型对象的新的部署包。|[通过使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|通过使用向导创建只包含模型对象的新的部署包。|[使用向导创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
 |通过使用 MDSModelDeploy 工具部署包含模型对象和数据的包。|[使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |通过使用向导部署只包含模型对象的包。|[使用向导部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |编辑模型部署包，以部署选定的模型部分而不是整个模型。|[编辑模型部署包](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [模型部署选项 &#40;Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [模型部署选项 (Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

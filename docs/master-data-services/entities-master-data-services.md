@@ -1,5 +1,5 @@
 ---
-title: "实体 (Master Data Services) |Microsoft 文档"
+title: "实体 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>实体如何与其他模型对象关联  
  您可以将实体看作包含主数据的一个表，其中行表示成员，列表示属性。  
   
- ![Master Data Services 实体表示为表](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services 实体表示为表")  
+ ![表示为表的 Master Data Services 实体](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services Entity Represented as Table")  
   
  使用要管理的主数据的列表填充该实体。  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>实体示例  
  在下面的示例中，显示具有以下属性的实体：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
- ![Bike Product 实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product 实体表")  
+ ![自行车产品实体表](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   
  在下面的示例中，Product 实体是中心实体。 Subcategory 实体是 Product 实体的基于域的属性。 Category 实体是 Subcategory 实体的基于域的属性。 StandardCost 和 ListPrice 是 Product 实体的自由格式的属性，FilePhoto 是 Product 实体的文件属性。  
   
- ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "产品实体树状结构")  
+ ![产品实体树结构](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
   
 > [!NOTE]  
 >  这是基于 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的一个示例。 树状层次结构显示实体和基于域的属性之间的关系。 它旨在显示关系而不是表示重要性级别。  

@@ -1,5 +1,5 @@
 ---
-title: "事务 (Master Data Services) |Microsoft 文档"
+title: "事务 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  在 **“版本管理”** 功能区域中，管理员可以查看其有权访问的模型的所有用户的所有事务，并撤消这些事务中的任意事务。
  
 > [!NOTE]  
->  管理员可以查看所有用户的所有事务，只要它们没有级别应用中的只读权限**版本管理**功能区域。 例如，如果为管理员设置的只读权限和更新权限级别，管理员将无法查看其他用户事务，因为只读权限将优先于更新权限。
+>  管理员可以查看所有用户的所有事务，除非他们在“版本权限”功能区域应用了只读权限级别。 例如，如果为管理员设置了只读权限和更新权限级别，管理员将无法查看其他用户事务，因为只读权限将优先于更新权限。
   
  可以通过在 **数据库的系统设置中设置“日志保留期(以天为单位)”**[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 属性，也可以通过在创建或编辑模型时设置“日志保留期(以天为单位)”  来配置事务日志数据的保留期。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md) 和[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理员 &#40;Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)  
   
--   [批注 &#40;Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
   
 

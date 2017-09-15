@@ -1,8 +1,10 @@
 ---
 title: "使用安装向导安装 SQL Server 2016（安装程序）| Microsoft Docs"
 ms.custom: 
-ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.date: 09/06/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,31 +21,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc6e45c9947ec5601ff6fc54e0babbc5073ccb3a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[使用安装向导安装 SQL Server 2014（安装程序）](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx)。
+ > 本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。 有关与以前版本的 SQL Server 相关的内容，请参阅[使用安装向导安装 SQL Server 2014（安装程序）](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx)。
 
-  本主题提供了使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 有关可安装的不同组件的详细信息，请参阅 [安装 SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)。  有关如何分别安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的详细信息，请参阅 [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)。  
+本主题提供了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 有关如何分别安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的详细信息，请参阅[安装 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
  以下附加主题介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他安装方法：  
 
--   [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+-   [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
--   [使用配置文件安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+-   [使用配置文件安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
   
--   [使用 SysPrep 安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+-   [使用 SysPrep 安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
 -   [创建新的 SQL Server 故障转移群集（安装程序）](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
--   [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
+-   [使用安装向导升级 SQL Server（安装程序）](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
 
--   [直接从 Internet 安装 SQL Server 2016 免费版本](../../database-engine/install-windows/install-sql-server.md) 
+## <a name="get-the-installation-media"></a>获取安装介质
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## <a name="prerequisites"></a>先决条件  
  安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
@@ -53,31 +57,35 @@ ms.lasthandoff: 08/02/2017
  
  ###  <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求 
 
-Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件存在问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请按照 [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 中的说明来确定你的电脑是否需要 VC 运行时二进制文件的修补程序。 
+Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件存在问题，这些二进制文件是作为 SQL Server 系统必备进行安装的。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 可能会遇到稳定性问题。 在安装 SQL Server 之前，请按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明来确定你的电脑是否需要 VC 运行时二进制文件的修补程序。  
   
-## <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="to-install-includessnoversionincludesssnoversion-mdmd"></a>安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，请单击左侧导航区域中的“安装”，然后单击“全新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装或向现有安装添加功能”。  
-  
-3.  在“产品密钥”页上，选择某个选项以指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅 [SQL Server 2016 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+1.  安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要创建新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，请单击左侧导航区域中的“安装”，然后单击“全新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装或向现有安装添加功能”。  
+
+1.  在“产品密钥”页上，选择某个选项以指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
      若要继续，请单击 **“下一步”**。  
+
+1.  在“许可条款”页上查看许可协议，如果同意，请选中 **“我接受许可条款”** 复选框，然后单击 **“下一步”**。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
-4.  在“许可条款”页上查看许可协议，如果同意，请选中 **“我接受许可条款”** 复选框，然后单击 **“下一步”**。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+1.  在“全局规则”窗口中，如果没有规则错误，安装过程将自动前进到“产品更新”窗口。  
   
-5.  在“全局规则”窗口中，如果没有规则错误，安装过程将自动前进到“产品更新”窗口。  
+1.  如果未在“控制面板”\“所有控制面板项”\“Windows 更新”\“更改设置”中选中“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”复选框，则接下来将显示“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”页。 在“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”页中选中选项会将计算机设置更改为在您浏览 Windows 更新时包括最新更新。  
+
+1.  在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。  
+
+1.  在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。 如果未找到任何更新，安装程序将自动进行。 
   
-6.  如果未在“控制面板”\“所有控制面板项”\“Windows 更新”\“更改设置”中选中“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”复选框，则接下来将显示“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”页。 在“ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新”页中选中选项会将计算机设置更改为在您浏览 Windows 更新时包括最新更新。  
+1. 在安装规则上，SQL Server安装程序将进行检查以确定运行安装程序时可能出现的潜在问题。 如果出现故障，请单击“状态”列了解详细信息。 否则，单击“下一步”。 
+
+1. 在“安装类型”上，选择执行新安装，或向现有安装添加功能。 单击 **“下一步”**。 
   
-7.  在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。  
-  
-8.  在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。  
-  
-9. 在“设置角色”页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”**，然后单击 **“下一步”** 以继续进入“功能选择”页。  
-  
-10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2016 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和 [SQL Server 2016 的各个版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+1. 在“功能选择”页上，选择要安装的组件。 例如，若要安装 SQL Server 数据库引擎的新实例，请选中“数据库引擎服务”。
+
+    选择功能名称后， **“功能说明”** 窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2016 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和 [SQL Server 2016 的各个版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
   
      **“所选功能的必备组件”** 窗格中将显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -85,11 +93,11 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
   
      为共享组件指定的路径必须是绝对路径。 文件夹不能压缩或加密。 不支持映射的驱动器。  
   
-     如果正在 64 位操作系统上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您将看到以下选项：  
+     SQL Server 对共享功能使用两个目录：
   
-    1.  共享功能目录  
+     * 共享功能目录  
   
-    2.  共享功能目录 (x86)  
+     * 共享功能目录 (x86)  
   
      为以上每个选项指定的路径必须不同。  
   
@@ -100,11 +108,11 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
      **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请为“实例 ID”  文本框指定一个不同值。  
   
     > [!NOTE]  
-    >  典型的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]独立实例（无论是默认实例还是命名实例）不会对“实例 ID” 使用非默认值。  
+    >  典型的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]独立实例（无论是默认实例还是命名实例）不会对“实例 ID” 使用非默认值。  
   
      所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级都将应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的每个组件。  
   
-     **已安装的实例** — 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的命名实例。  
+     **已安装的实例** — 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的命名实例。  
   
      安装程序中的其余工作流取决于您指定要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   

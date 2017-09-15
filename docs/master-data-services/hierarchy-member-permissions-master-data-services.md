@@ -1,5 +1,5 @@
 ---
-title: "层次结构成员权限 (Master Data Services) |Microsoft 文档"
+title: "层次结构成员权限 (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5df8a0f0c01842c00c3698146e84ed78e6320683
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 831587a0a6a3c86491ea0b2e7fba1595664e8897
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
   层次结构成员权限是可选的，仅当您希望某个用户对特定成员具有受限的访问权限时才应使用。 如果您未在 **“层次结构成员”** 选项卡上分配权限，则用户的权限仅基于在 **“模型”** 选项卡上分配的权限。  
   
- 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的“层次结构成员”选项卡中的“用户和组权限”功能区域中分配层次结构成员权限。 这些权限确定用户在用户界面的 **“资源管理器”** 功能区域中可以访问哪些成员。  
+ 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的“层次结构成员”选项卡中的“用户和组权限”功能区域中分配层次结构成员权限。这些权限确定用户在用户界面的 **“资源管理器”** 功能区域中可以访问哪些成员。  
   
  在 **“层次结构成员”** 选项卡上，每个层次结构均表示为一个树形结构。 将权限分配给树中的节点时，所有子节点都将继承该权限，除非在更低级别显式分配权限。  
   
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>另请参阅  
  [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
- [层次结构 &#40;Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)   
- [立即应用成员权限 &#40;Master Data Services &#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [层次结构 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
+ [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

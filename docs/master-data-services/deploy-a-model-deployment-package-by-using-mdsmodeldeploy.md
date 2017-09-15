@@ -1,5 +1,5 @@
 ---
-title: "使用 MDSModelDeploy 部署模型部署包 |Microsoft 文档"
+title: "使用 MDSModelDeploy 部署模型部署包 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/14/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a678aee3bb185cf8dd44cb69d3c0027c090a81d3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: acf07e21b7d55db10f640ea1086501ed4deadd53
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
@@ -120,6 +120,6 @@ ms.lasthandoff: 08/02/2017
 -   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [部署模型 &#40;Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

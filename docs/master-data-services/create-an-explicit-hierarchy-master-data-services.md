@@ -1,5 +1,5 @@
 ---
-title: "创建显式层次结构 (Master Data Services) |Microsoft 文档"
+title: "创建显式层次结构 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 62f9ade96cdeeb658681abd16c81b48edbd84c1a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1bbc9d8a78915c3be4a5530c3d47909505dea599
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>创建显式层次结构 (Master Data Services)
@@ -62,8 +62,8 @@ ms.lasthandoff: 08/02/2017
   
 |名称|Description|  
 |----------|-----------------|  
-|状态|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")|  
-|名称|显式层次结构名称。|  
+|状态|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|Name|显式层次结构名称。|  
 |必需|指定显式层次结构是否必需。|  
 |创建者|创建显式层次结构的用户的用户名。|  
 |创建时间|创建显式层次结构的日期和时间。|  
@@ -77,9 +77,9 @@ ms.lasthandoff: 08/02/2017
   
   
 ## <a name="see-also"></a>另请参阅  
- [显式层次结构 &#40;Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [具有显式顶端 &#40; 派生层次结构Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [更改显式层次结构名称 &#40;Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [具有显式顶端的派生层次结构 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [更改显式层次结构名称 (Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
 

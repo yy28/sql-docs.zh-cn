@@ -1,5 +1,5 @@
 ---
-title: "创建和执行实体同步关系 (Master Data Services) |Microsoft 文档"
+title: "创建和执行实体同步关系 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |列|Description|  
 |------------|-----------------|  
-|状态|同步关系状态。<br /><br /> 当你单击**保存**或执行是同步关系，![更新状态的图标](../master-data-services/media/mds-statusicon-updating.png "更新状态的图标")图像，表示正在更新的同步关系。<br /><br /> 如果在创建、 编辑或执行同步关系时出错![错误状态的图标](../master-data-services/media/mds-statusicon-error.png "错误状态的图标")图像显示。<br /><br /> 否则，状态为正常和![正常状态的图标](../master-data-services/media/mds-statusicon-ok.png "正常状态的图标")图像显示。|  
+|状态|同步关系状态。<br /><br /> 单击“保存”或执行同步关系后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示同步关系正在更新。<br /><br /> 如果创建、编辑或执行同步关系时，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |源模型|源模型名称。|  
 |源版本|源版本名称。|  
 |源实体|源实体名称。|  

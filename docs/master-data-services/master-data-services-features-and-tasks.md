@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 功能和任务 |Microsoft 文档"
+title: "Master Data Services 功能和任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdf3bd232ff92759bee00d20ed26879d700ed59b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
@@ -30,35 +30,35 @@ ms.lasthandoff: 08/02/2017
   
 -   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [属性 &#40;Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [基于域的属性 &#40;Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [基于域的属性 (Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性组 &#40;Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>维护主数据  
   
--   [Master Data Services 外接程序 Microsoft excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [用于 Microsoft Excel 的 Master Data Services 外接程序](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [成员 &#40;Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
+-   [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)  
   
 -   [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
--   [批注 &#40;Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
--   [层次结构 &#40;Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>提高数据质量  
   
--   [业务规则 &#40;Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
--   [验证 &#40;Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
--   [版本 &#40;Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
--   [通知 &#40;Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
 -   [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   

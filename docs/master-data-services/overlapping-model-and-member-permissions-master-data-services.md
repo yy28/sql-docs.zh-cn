@@ -1,33 +1,38 @@
 ---
-title: "重叠的模型和成员权限（主数据服务） | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "模型 [Master Data Services], 有效权限"
-  - "权限 [Master Data Services], 模型和成员重叠"
-  - "成员 [Master Data Services], 有效权限"
+title: "重叠的模型和成员权限 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], effective permissions
+- permissions [Master Data Services], model and member overlaps
+- members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d5c748f2dc89e7b7217408971d70bd95a42af3a2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
-# 重叠的模型和成员权限（主数据服务）
+# <a name="overlapping-model-and-member-permissions-master-data-services"></a>重叠的模型和成员权限（主数据服务）
   分配给成员的权限可与分配给模型对象的权限重叠。 出现重叠时，限制性更强的权限将生效。  
   
  如果成员具有不同于其相应模型对象的权限，适用以下规则：  
   
 -   **“拒绝”** 覆盖所有其他权限。  
   
--   **管理员** 模型级别权限覆盖所有其他权限，并将更改为子级别上的所有 (CRUD) 访问权限。  
+-   模型级别的**“管理员”** 权限可覆盖所有其他权限，并将更改为子级别上的所有 (CRUD) 访问权限。  
   
 -   有效访问权限与成员和属性权限相交。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 7
   
  ![mds_conc_security_member_overlap_table](../master-data-services/media/mds-conc-security-member-overlap-table.gif "mds_conc_security_member_overlap_table")  
   
-## 示例 1  
+## <a name="example-1"></a>示例 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
  在 **“模型”** 选项卡上，Product 实体分配有 **“更新”** 权限。 该实体中的所有属性都继承该权限。  
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## 示例 2  
+## <a name="example-2"></a>示例 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  在 **“模型”** 选项卡上，Subcategory 属性分配有 **“更新”** 权限。  
@@ -59,7 +64,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 示例 3  
+## <a name="example-3"></a>示例 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
  在 **“模型”** 选项卡上，Subcategory 属性分配有 **“读取”** 权限。  
@@ -70,8 +75,8 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 另请参阅  
- [如何确定权限 & #40;Master Data Services & #41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [重叠的用户和组权限和 #40;Master Data Services & #41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [重叠的用户和组权限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

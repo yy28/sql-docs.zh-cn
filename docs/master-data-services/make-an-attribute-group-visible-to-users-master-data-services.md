@@ -1,37 +1,42 @@
 ---
 title: "使属性组对用户可见 (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e3922c3ad81de37e73f08bd840def40146c8bf12
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/07/2017
+
 ---
-# 使属性组对用户可见 (Master Data Services)
+# <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要用户在 **“资源管理器”** 功能区域中将选项卡置于网格上方时，使属性组对于用户或组是可见的。  
   
  创建属性组时，对除创建者之外的所有用户自动隐藏它。  
   
-## 先决条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
 -   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
--   必须至少存在一个属性组。 有关详细信息，请参阅[创建属性组 (Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)。  
+-   必须至少存在一个属性组。 有关详细信息，请参阅 [创建属性组 (Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)。  
   
-### 使属性组对用户可见  
+### <a name="to-make-an-attribute-group-visible-to-users"></a>使属性组对用户可见  
   
 1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 8.  单击 **“保存”**。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性组 (Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [创建属性组 (Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

@@ -1,7 +1,7 @@
 ---
-title: "安装 SQL Server | Microsoft Docs"
+title: "SQL Server 安装 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 09/06/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f3053d9238af0112dfb41be2eb0f2972f24a34ce
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 095a3d6d9fd7f16b337136f564fea18160b8636c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="installation-for-sql-server"></a>安装 SQL Server
+# <a name="sql-server-installation"></a>SQL Server 安装 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供一个功能树以用来安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件：  
   

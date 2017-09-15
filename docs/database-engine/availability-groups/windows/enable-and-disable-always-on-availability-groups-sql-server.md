@@ -1,7 +1,7 @@
 ---
 title: "启用和禁用 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de6fef9bc4ccda44bd805d281dc0a3780aaa96c8
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: b5e469b56253649e0e23de004b3ae6de54dfb3e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>启用和禁用 AlwaysOn 可用性组 (SQL Server)
@@ -152,22 +152,22 @@ ms.lasthandoff: 08/02/2017
   
 1.  将目录 (**cd**) 更改为你要为 AlwaysOn 可用性组启用的服务器实例。  
   
-2.  使用 **Enable-SqlAlways On** cmdlet 启用 AlwaysOn 可用性组。  
+2.  使用 Enable-SqlAlwaysOn cmdlet 启用 AlwaysOn 可用性组。  
   
      若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
     > [!NOTE]  
-    >  有关如何控制 **Enable-SqlAlways On** cmdlet 是否重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
+    >  有关如何控制 Enable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> 示例：Enable-SqlAlways On  
+####  <a name="ExmplEnable-SqlHadrServic"></a>示例：Enable-SqlAlwaysOn  
  以下 PowerShell 命令在 SQL Server 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] （*计算机*\\*实例*）。  
   
 ```  
-Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
 ##  <a name="DisableAOAG"></a> 禁用 AlwaysOn 可用性组  
@@ -214,16 +214,16 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  将目录 (**cd**) 更改为你要为 AlwaysOn 可用性组禁用的当前启用的服务器实例。  
   
-2.  使用 **Disable-SqlAlways On** cmdlet 启用 AlwaysOn 可用性组。  
+2.  使用 Disable-SqlAlwaysOn cmdlet 来启用 AlwaysOn 可用性组。  
   
      例如，以下命令在 SQL Server 的实例上禁用 AlwaysOn 可用性组 (*Computer*\\*Instance*)。  此命令需要重新启动实例，并将提示您确认此重新启动。  
   
     ```  
-    Disable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+    Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  有关如何控制 **Disable-SqlAlways On** cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
+    >  有关如何控制 Disable-SqlAlwaysOn cmdlet 是否重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的信息，请参阅本主题后面的 [Cmdlet 何时重新启动 SQL Server 服务？](#WhenCmdletRestartsSQL)。  
   
      若要查看 cmdlet 的语法，请在 **PowerShell 环境中使用** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)。  
   
@@ -232,7 +232,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 -   [SQL Server PowerShell 提供程序](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> 跟进：在禁用 AlwaysOn 之后  
- 禁用 AlwaysOn 可用性组后，必须重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 SQL 配置管理器将自动重新启动该服务器实例。 但是，如果你使用了 **Disable-SqlAlways On** cmdlet，将需要手动重启该服务器实例。 有关详细信息，请参阅 [sqlservr Application](../../../tools/sqlservr-application.md)。  
+ 禁用 AlwaysOn 可用性组后，必须重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 SQL 配置管理器将自动重新启动该服务器实例。 但是，如果使用了 Disable-SqlAlwaysOn cmdlet，则需要手动重新启动该服务器实例 。 有关详细信息，请参阅 [sqlservr Application](../../../tools/sqlservr-application.md)。  
   
  在重新启动的服务器实例上：  
   
@@ -253,7 +253,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 4.  辅助数据库将进入 RESTORING 状态。 您可以删除这些数据库，或者可通过使用 RESTORE WITH RECOVERY 还原它们。 但是，还原的数据库不再参与可用性组数据同步。  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> Cmdlet 何时重新启动 SQL Server 服务？  
- 在当前正在运行的服务器实例上，使用 **Enable-SqlAlways On** 或 **Disable-SqlAlways On** 更改当前 AlwaysOn 设置可能导致 SQL Server 服务重启。 重新启动行为取决于以下条件：  
+ 在当前正在运行的服务器实例上，使用 Enable-SqlAlwaysOn 或 Disable-SqlAlwaysOn 更改当前 AlwaysOn 设置可能导致 SQL Server 服务重新启动。 重新启动行为取决于以下条件：  
   
 |指定了 -NoServiceRestart 参数|指定了 -Force 参数|重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务？|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

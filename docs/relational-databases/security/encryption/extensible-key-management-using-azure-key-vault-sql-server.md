@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
@@ -36,8 +36,8 @@ ms.lasthandoff: 06/22/2017
   
  本主题介绍了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 有关其他信息，你可以参阅 [使用 Azure 密钥保管库的可扩展密钥管理的设置步骤](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)、 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)和 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)。  
   
-##  <a name="Uses"></a> 什么是可扩展密钥管理 (EKM) & 为什么要使用它？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了帮助保护敏感数据的几种加密类型，包括[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)、[列级加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[备份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在传统的密钥层次结构中，上述三种加密类型均使用对称数据加密密钥 (DEK) 对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 可替代这种模型的是 EKM 提供程序模型。 使用 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的外部加密提供程序中的非对称密钥来保护数据加密密钥。 该模型额外添加了一个安全层，将密钥和数据分开管理。  
+##  <a name="Uses"></a> 什么是可扩展密钥管理 (EKM)，为什么要使用它？  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了帮助保护敏感数据的几种加密类型，包括[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)、[列级加密](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE) 和[备份加密](../../../relational-databases/backup-restore/backup-encryption.md)。 在传统的密钥层次结构中，上述三种加密类型均使用对称数据加密密钥 (DEK) 对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 可替代这种模型的是 EKM 提供程序模型。 使用 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的外部加密提供程序中的非对称密钥来保护数据加密密钥。 该模型额外添加了一个安全层，将密钥和数据分开管理。  
    
  下图对传统服务管理密钥层次结构与 Azure 密钥保管库系统进行比较。  
   

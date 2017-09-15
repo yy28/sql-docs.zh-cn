@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 的安装任务 |Microsoft 文档"
+title: "Master Data Services 的安装任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f810e987b5cebe9f4b790e298725d1593499e7ee
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安装任务
-  本文概述了使用说明的链接安装任务。 有关安装和配置 Master Data Services 的演练，请参阅[主数据服务安装和配置](../../master-data-services/master-data-services-installation-and-configuration.md) 
+  本文概述了安装任务，随附说明链接。 有关安装和配置 Master Data Services 的演练，请参阅 [Master Data Services 的安装和配置](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
 -   [安装前任务](#preinstall)：在安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]前验证系统要求。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
-|打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 以便完成安装后操作|安装完成之后，打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上执行以下安装后操作：<br /><br /> 创建一个 Windows 组 **MDS_ServiceAccounts**，以便包含应用程序池的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服务帐户。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径下，创建 MDSTempDir 文件夹并为 **MDS_ServiceAccounts**分配权限。 此文件夹是为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序编译的临时编译文件所在的位置。<br /><br /> 在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]Web.config 文件，将配置**tempDirectory**属性**\<编译 >**具有 MDSTempDir 文件夹的路径元素。|[文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 配置参考 (Master Data Services)](../../master-data-services/web-configuration-reference-master-data-services.md)|  
+|打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 以便完成安装后操作|安装完成之后，打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上执行以下安装后操作：<br /><br /> 创建一个 Windows 组 **MDS_ServiceAccounts**，以便包含应用程序池的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服务帐户。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径下，创建 MDSTempDir 文件夹并为 **MDS_ServiceAccounts**分配权限。 此文件夹是为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序编译的临时编译文件所在的位置。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 文件中，使用 MDSTempDir 文件夹的路径配置 \<> 元素的 tempDirectory 属性。|[文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 配置参考 (Master Data Services)](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您的主数据创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。|[创建 Master Data Services 数据库](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |创建 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 创建和配置 Web 应用程序以承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|[创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库与 Web 应用程序关联|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 将 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序与您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。|[将 Master Data Services 数据库与 Web 应用程序关联](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  

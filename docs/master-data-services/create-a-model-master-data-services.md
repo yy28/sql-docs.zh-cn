@@ -1,5 +1,5 @@
 ---
-title: "创建模型 (Master Data Services) |Microsoft 文档"
+title: "创建模型 (Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1a32cc8f778496f5609d44c17b69623b75b8c240
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-model-master-data-services"></a>创建模型 (Master Data Services)
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
   
  对于创建的每个模型，系统都会在网格中添加一行（其中包含八列）。 八个列是：  
   
--   状态：模型状态。 当你单击**保存模型**按钮，![更新](../master-data-services/media/mds-model-status-updating.png "更新")显示图像，它指示正在更新该模型。 如果在创建或编辑模型时出错![错误](../master-data-services/media/mds-model-status-error.png "错误")显示的图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
+-   状态：模型状态。 单击“保存模型”按钮后，系统会显示![正在更新](../master-data-services/media/mds-model-status-updating.png "Updating")图像，表示模型正在更新。 如果创建或编辑模型时出现错误，系统会显示![错误](../master-data-services/media/mds-model-status-error.png "Error")图像。 否则，如果状态为“正常”，会显示 ![“确定”](../master-data-services/media/mds-model-status-ok.png "“确定”") 图像。  
   
 -   名称：模型名称。  
   
@@ -79,9 +79,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>另请参阅  
  [模型 (Master Data Services)](../master-data-services/models-master-data-services.md)   
- [实体 &#40;Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
- [删除模型 &#40;Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [编辑模型 &#40;Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
+ [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)   
+ [删除模型 &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [编辑模型 &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   
