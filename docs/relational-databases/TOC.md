@@ -45,7 +45,7 @@
 # [扩展事件](../relational-databases/extended-events/extended-events.md)
 # [关系图](../relational-databases/graphs/sql-graph-overview.md)
 # [分层数据](hierarchical-data-sql-server.md)  
-# [导入和导出](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [导入和导出](../relational-databases/import-export/overview-import-export.md)
 # [内存中 OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [索引](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
