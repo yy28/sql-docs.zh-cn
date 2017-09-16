@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
      [安全性](#Security)  
   
--   **若要使可用性组处于脱机状态，请使用：** [](#TsqlProcedure)  
+-   **若要使可用性组处于脱机状态，请使用：** [Transact-SQL](#TsqlProcedure)  
   
 -   **跟进：**[在可用性组处于脱机状态后](#FollowUp)  
   
