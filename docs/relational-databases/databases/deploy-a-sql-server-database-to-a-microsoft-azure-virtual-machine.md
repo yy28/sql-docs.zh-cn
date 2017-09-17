@@ -252,7 +252,7 @@ ms.lasthandoff: 09/14/2017
 在该字段中，指定可供 Microsoft Azure VM 服务访问的共享文件夹。  
   
 ##  <a name="Azure_sign-in"></a> Windows Azure 登录  
- 使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [问题疑难解答](https://technet.microsoft.com/dn197220)。  
+ 使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 patc@contoso.com。有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [问题疑难解答](https://technet.microsoft.com/dn197220)。  
   
 ##  <a name="Deployment_settings"></a> “部署设置”
  使用此页可以指定目标服务器并提供有关新数据库的详细信息。  
