@@ -1,0 +1,75 @@
+---
+title: "指示语句的准备语句执行 PDO_SQLSRV 驱动程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
+caps.latest.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 979a54ac3c6a381b89f150823489b793ef3e6af5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+
+本主题讨论如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性来指定直接语句执行而不是默认情况下，即已准备的语句执行。  当该驱动程序准备语句时，它可以导致更好的性能，如果将多个一次使用绑定的参数执行的语句。  
+  
+## <a name="remarks"></a>注释  
+如果你想要发送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接向服务器而无需由驱动程序的语句准备的语句，你可以设置与该 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驱动程序选项传递给[:: __Construct](../../connect/php/pdo-construct.md)) 或当调用[pdo:: prepare](../../connect/php/pdo-prepare.md)。 默认情况下，PDO::SQLSRV_ATTR_DIRECT_QUERY 的值为 False （准备的语句执行时使用）。  
+  
+如果你使用[pdo:: query](../../connect/php/pdo-query.md)，你可能想直接执行。 之前调用[pdo:: query](../../connect/php/pdo-query.md)，调用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)并且 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 True。  每次调用[pdo:: query](../../connect/php/pdo-query.md)为 PDO::SQLSRV_ATTR_DIRECT_QUERY 可以具有不同设置执行。  
+  
+如果你使用[pdo:: prepare](../../connect/php/pdo-prepare.md)和[pdostatement:: Execute](../../connect/php/pdostatement-execute.md)执行多次的查询使用绑定的参数，准备的语句执行将优化执行重复查询。  在这种情况下，调用[pdo:: prepare](../../connect/php/pdo-prepare.md)与 PDO::SQLSRV_ATTR_DIRECT_QUERY 驱动程序选项数组参数中设置为 False。 如有必要，你可以执行已准备的语句与 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 False。  
+  
+调用后[pdo:: prepare](../../connect/php/pdo-prepare.md)，PDO::SQLSRV_ATTR_DIRECT_QUERY 的值不能更改时执行已准备的查询。  
+  
+如果查询需要在前面的查询中所设置的上下文，你应执行您的查询与 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 True。 例如，如果在查询中使用临时表，PDO::SQLSRV_ATTR_DIRECT_QUERY 必须设置为 True。  
+  
+下面的示例演示了需要从上一条语句的上下文时，你需要将 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 True。  此示例使用临时表，直接执行查询时才可用于在程序中后面的语句。  
+  
+```  
+<?php  
+   $conn = new PDO('sqlsrv:Server=(local)', '', '');  
+   $conn->setAttribute(constant('PDO::SQLSRV_ATTR_DIRECT_QUERY'), true);  
+  
+   $stmt1 = $conn->query("DROP TABLE #php_test_table");  
+  
+   $stmt2 = $conn->query("CREATE TABLE #php_test_table ([c1_int] int, [c2_int] int)");  
+  
+   $v1 = 1;  
+   $v2 = 2;  
+  
+   $stmt3 = $conn->prepare("INSERT INTO #php_test_table (c1_int, c2_int) VALUES (:var1, :var2)");  
+  
+   if ($stmt3) {  
+      $stmt3->bindValue(1, $v1);  
+      $stmt3->bindValue(2, $v2);  
+  
+      if ($stmt3->execute())  
+         echo "Execution succeeded\n";       
+      else  
+         echo "Execution failed\n";  
+   }  
+   else  
+      var_dump($conn->errorInfo());  
+  
+   $stmt4 = $conn->query("DROP TABLE #php_test_table");  
+?>  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+[PHP SQL 驱动程序编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+  
+
