@@ -1,7 +1,7 @@
 ---
 title: "IsNull (geometry 数据类型) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/03/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9136a2caf43fea8d5cccd90d8dba85d815511afe
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 5e213bd847f2d5836802d93ade5fa46f3dc3d1a9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull（geometry 数据类型）
@@ -35,7 +35,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 .IsNull  
 ```  
   
@@ -49,10 +48,9 @@ ms.lasthandoff: 09/01/2017
   
  此方法主要供 SQL Server 基础结构使用；建议您不要使用 `IsNull` 来测试实例是否为 Null。  
   
-## <a name="examples"></a>示例  
-  
+
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

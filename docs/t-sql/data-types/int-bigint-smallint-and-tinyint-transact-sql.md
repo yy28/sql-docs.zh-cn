@@ -1,7 +1,7 @@
 ---
 title: "int、 bigint、 smallint 和 tinyint (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-使用整数数据的精确数字数据类型。
+使用整数数据的精确数字数据类型。 若要在数据库中节省空间，使用的最小的数据类型可以可靠地包含所有可能的值。 例如，tinyint 应该足够是人员年龄，因为没有人位于要超过 255 年。 但是 tinyint 都不会为建筑物年龄足够因为某个大厦可能超过 255 年。
   
 |数据类型|范围|存储器|  
 |---|---|---|
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 >   
 >  因此，查询中的类似表达式有时可能会生成不同的结果。 当查询不是 autoparameterized 时，常量值首先转换为**数值**，其精度是仅足以容纳之前将转换为指定的数据类型的常数的值。 例如，常量值 1 转换为**数字 （1，0）**，而 250 常量的值转换为**数字 （3，0）**。  
 >   
->  常量的值始终 autoparameterized 查询时，已转换为**数字 （10，0）**之前将转换为最终的数据类型。 如果涉及 / 运算符，则对于类似查询而言，不仅结果类型的精度可能不同，而且结果值也可能不同。 例如，包含表达式的 autoparameterized 查询的结果值`SELECT CAST (1.0 / 7 AS float)`将与不是 autoparameterized，同一查询的结果值不同，因为 autoparameterized 查询的结果将截断为适合大小到**数字 （10，0）**数据类型。  
+>  常量的值始终 autoparameterized 查询时，已转换为**数字 （10，0）**之前将转换为最终的数据类型。 如果涉及 / 运算符，则对于类似查询而言，不仅结果类型的精度可能不同，而且结果值也可能不同。 例如，包含表达式的 autoparameterized 查询的结果值`SELECT CAST (1.0 / 7 AS float)`，与不是 autoparameterized，同一查询的结果值不同，因为 autoparameterized 查询的结果将被截断，使其适合**数字 （10，0）**数据类型。  
   
 ## <a name="converting-integer-data"></a>将整数数据转换
 将整数隐式转换为字符数据类型时，如果整数太大而无法容纳到字符字段中，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会输入 ASCII 字符 42，即星号 (*)。

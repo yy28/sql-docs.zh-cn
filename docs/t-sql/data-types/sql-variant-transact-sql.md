@@ -1,7 +1,7 @@
 ---
 title: "sql_variant (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4eb946d5b6ed5a9c6d33789166327bd2dd25d7c1
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 一种数据类型，用于存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的各种数据类型的值。
-  
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +68,7 @@ ODBC 不完全支持**sql_variant**。 因此，查询的**sql_variant**列返�
   
 |数据类型层次结构|数据类型系列|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|日期和时间|  
 |**datetimeoffset**|日期和时间|  
 |**datetime**|日期和时间|  
@@ -93,7 +91,7 @@ ODBC 不完全支持**sql_variant**。 因此，查询的**sql_variant**列返�
 |**char**|Unicode|  
 |**varbinary**|二进制|  
 |**binary**|二进制|  
-|**uniqueidentifier**|**Uniqueidentifier**|  
+|**uniqueidentifier**|Uniqueidentifier |  
   
 以下规则适用于**sql_variant**比较：
 -   当**sql_variant**比较不同的基数据类型的值和位于不同的数据类型系列的基本数据类型，其数据类型系列较高层次结构图表中的值被视为两个值的更高版本。  
@@ -115,7 +113,44 @@ ODBC 不完全支持**sql_variant**。 因此，查询的**sql_variant**列返�
 |**sql_variant**|**地理**|  
 |**hierarchyid**|**geometry**|  
 |用户定义类型|**datetimeoffset**|  
+
+## <a name="examples"></a>示例  
+
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 表中使用 sql_variant  
+ 下面的示例中，创建了 sql_variant 数据类型的表。 然后该示例将检索`SQL_VARIANT_PROPERTY`有关的信息`colA`值`46279.1`其中`colB`  = `1689`，鉴于`tableA`具有`colA`类型`sql_variant`和`colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]请注意，其中每个三个值是**sql_variant**。  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
+ 以下示例中，创建使用 sql_variant 数据类型、 一个变量，然后检索`SQL_VARIANT_PROPERTY`有关名为变量的信息@v1。  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## <a name="see-also"></a>另请参阅
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

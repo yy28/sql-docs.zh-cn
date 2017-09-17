@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>将集成 Reporting Services 使用 ReportViewer 控件-入门
 
-了解如何开发人员可以将分页的报表嵌入在 ASP.Net web 站点和 Windows 窗体应用程序，通过 Reporting Services 2016 ReportViewer 控件中。 你可以将控件添加到新项目，或更新现有项目。
+了解如何开发人员可以将分页的报表嵌入在 ASP.NET web 站点和 Windows 窗体应用程序，通过 Reporting Services 2016 ReportViewer 控件中。 你可以将控件添加到新项目，或更新现有项目。
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>将 ReportViewer 控件添加到新的 web 项目
 
@@ -281,6 +281,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅
 
 [2016 ReportingViewer 控件中的数据收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 
