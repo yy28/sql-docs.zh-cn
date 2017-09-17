@@ -1,32 +1,37 @@
 ---
-title: "使用 Microsoft 时序查看器浏览模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "数据挖掘 [Analysis Services], 连续列"
-  - "挖掘模型内容, 查看"
-  - "Microsoft 时序查看器"
-  - "图表 [Analysis Services]"
-  - "时序查看器 [Analysis Services]"
-  - "连续列"
-  - "回归算法 [Analysis Services]"
+title: "使用 Microsoft 时序查看器浏览模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 使用 Microsoft 时序查看器浏览模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序查看器显示由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 时序查看器显示由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
   
 -   ARTxp 算法，针对短期预测进行了优化。  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 44
  有关这些算法的详细信息，请参阅 [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) 和 [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。  
   
 > [!NOTE]  
->  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)。  
+>  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
   
 ##  <a name="BKMK_ViewerTabs"></a> 查看器的选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序查看器包含下列选项卡：  
@@ -77,7 +82,7 @@ caps.handback.revision: 44
   
  如果挖掘模型包含多个时序，则可以选择在图表中显示一个或多个时序。 为此，只需单击查看器右边的列表，然后从该列表中选择所需的时序。 如果图表过于复杂，则可以通过选中或清除图例中的时序复选框来筛选显示的时序。  
   
- 该图表同时显示历史数据和未来数据。 未来数据带有底纹，以区别于历史数据。 历史数据的数据值显示为实线，预测数据的数据值显示为虚线。 可以通过设置 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性来更改用于每个序列的线的颜色。 有关详细信息，请参阅[更改数据挖掘查看器中使用的颜色](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)。  
+ 该图表同时显示历史数据和未来数据。 未来数据带有底纹，以区别于历史数据。 历史数据的数据值显示为实线，预测数据的数据值显示为虚线。 可以通过设置 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性来更改用于每个序列的线的颜色。 有关详细信息，请参阅 [更改数据挖掘查看器中使用的颜色](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)。  
   
  使用缩放选项可以调整显示的时间范围。 也可以通过以下方法查看特定的时间范围：单击图表，将时间选定范围拖到图表上，然后再次单击图表以放大选定的范围。  
   
@@ -85,10 +90,10 @@ caps.handback.revision: 44
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

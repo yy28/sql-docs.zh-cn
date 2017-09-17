@@ -1,24 +1,29 @@
 ---
-title: "配置最大文件上载大小 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置最大文件上载大小 (Power Pivot for SharePoint) |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置最大文件上载大小 (Power Pivot for SharePoint)
+# <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>配置最大文件上载大小 (Power Pivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿常常包含大量的数据，导致文件超出为 SharePoint 上载所允许的最大文件大小。 尝试上载超过该上限的文件时，SharePoint 会显示以下错误：  
   
 -   “指定的文件超过受支持的最大文件大小。”  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
  您必须是 SharePoint 管理员才能更改最大文件上载大小。  
   
-### 配置针对 Excel Services 的最大文件大小  
+### <a name="configure-maximum-file-size-for-excel-services"></a>配置针对 Excel Services 的最大文件大小  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 9
   
 7.  单击 **“确定”**。  
   
-### 为 SharePoint Web 应用程序配置最大文件大小  
+### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>为 SharePoint Web 应用程序配置最大文件大小  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
   

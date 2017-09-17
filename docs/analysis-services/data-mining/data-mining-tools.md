@@ -1,28 +1,33 @@
 ---
-title: "数据挖掘工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "工具 [Analysis Services]"
-  - "挖掘模型 [Analysis Services], 工具"
-  - "数据挖掘 [Analysis Services], 工具"
-  - "数据挖掘 [Analysis Services], 开发"
+title: "数据挖掘工具 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tools [Analysis Services]
+- mining models [Analysis Services], tools
+- data mining [Analysis Services], tools
+- data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebbfe4e003be235b2265c215bfd731f8f2c1562
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 数据挖掘工具
+# <a name="data-mining-tools"></a>数据挖掘工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了以下工具，可用于创建数据挖掘解决方案：  
   
 -   利用 **中的** 数据挖掘向导 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，可以使用关系数据源或多维数据集中的多维数据来轻松创建挖掘结构和挖掘模型。  
@@ -39,12 +44,12 @@ caps.handback.revision: 49
   
  下面详细地介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据挖掘工具。  
   
-## 中的  
+## <a name="data-mining-wizard"></a>中的  
  可使用数据挖掘向导开始创建数据挖掘解决方案。 该向导简单易用，可指导您完成创建数据挖掘结构和初始相关挖掘模型的过程，其中包括选择算法类型和数据源以及定义用于分析的事例数据等任务。  
   
  **有关详细信息：**[数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## 数据挖掘设计器  
+## <a name="data-mining-designer"></a>数据挖掘设计器  
  在使用数据挖掘向导创建挖掘结构和挖掘模型后，您可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用数据挖掘设计器来处理现有模型和结构。  
   
  该设计器包含用于执行以下任务的工具：  
@@ -61,12 +66,12 @@ caps.handback.revision: 49
   
 -   创建针对现有挖掘模型的预测和内容查询。 生成一次性查询，或设置用于为整个外部数据表生成预测的查询。  
   
-## SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在创建挖掘模型并将其部署到服务器之后，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理承载数据挖掘对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 也可以继续执行使用模型的任务，如浏览模型、处理新数据和创建预测。  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还包含查询编辑器，可用于设计和执行数据挖掘扩展插件 (DMX) 查询或用于通过使用 XMLA 来处理数据挖掘对象。  
   
-## Integration Services 数据挖掘任务和转换  
+## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 数据挖掘任务和转换  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了多个支持数据挖掘的组件。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的一些工具旨在帮助自动执行常见数据挖掘任务，包括预测、建模和处理。 例如：  
@@ -87,7 +92,7 @@ caps.handback.revision: 49
   
  **有关详细信息：**[数据挖掘解决方案的相关项目](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

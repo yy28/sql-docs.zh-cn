@@ -1,28 +1,33 @@
 ---
-title: "选择和映射模型测试数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "列 [数据挖掘], 挖掘准确性图表"
-  - "挖掘准确性图表 [Analysis Services], 列映射"
-  - "输入列映射 [Analysis Services]"
-  - "映射输入列 [Analysis Services]"
+title: "选择和映射模型测试数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 选择和映射模型测试数据
+# <a name="choose-and-map-model-testing-data"></a>选择和映射模型测试数据
   若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建准确性图表，您必须选择将用于测试模型的数据，并且将数据映射到模型。  
   
  默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用挖掘模型测试数据，只要在生成挖掘结构时创建了维持数据集。 创建维持测试集是测试基于相同挖掘结构的模型的最简单方式，因为列名和数据类型将始终与该模型匹配，并且您可以合理地确定数据分布是相似的。 此外，设计器将自动创建输入和模型列之间的关系。  
@@ -51,7 +56,7 @@ caps.handback.revision: 44
   
 ##  <a name="bkmk_SelectInputs"></a> 选择输入表以测试挖掘模型的准确性  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器中，双击包含要制作图表的模型的挖掘结构。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器中，双击包含要制作图表的模型的挖掘结构。  
   
 2.  选择 **“挖掘准确性图表”** 选项卡。  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 44
   
      **“指定列映射”** 对话框中将显示新的列映射。 通过选择列之间的连线，然后按 Delete 键，可以删除映射。 通过在“挖掘结构”表中选择列，然后将其拖到“选择输入表”表中的对应列，可以创建一个新连接。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

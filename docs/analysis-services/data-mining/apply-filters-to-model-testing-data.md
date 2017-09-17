@@ -1,27 +1,32 @@
 ---
-title: "将筛选器应用于模型测试数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "输入行筛选 [SQL Server]"
-  - "筛选输入行 [Analysis Services]"
-  - "挖掘准确性图表 [Analysis Services], 筛选输入行"
+title: "应用筛选器以测试数据创建模型 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 将筛选器应用于模型测试数据
+# <a name="apply-filters-to-model-testing-data"></a>将筛选器应用于模型测试数据
   在指定测试模型时使用的外部数据源时，可以选择应用筛选器以限制输入数据。 例如，您可能想要专门针对有关某一收入范围的客户的预测来测试模型。  
   
  例如，在 Adventure Works 目标邮件方案中，你可以对 ProspectiveBuyer（这是包含测试数据的表）创建一个如下的筛选表达式并按收入范围来限制测试事例：  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  有关可以应用的筛选器类型以及如何计算筛选表达式的详细信息，请参阅[模型筛选器语法和示例（Analysis Services – 数据挖掘）](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)。  
   
-### 创建针对外部测试数据的筛选器  
+### <a name="create-a-filter-on-external-testing-data"></a>创建针对外部测试数据的筛选器  
   
 1.  双击包含您要测试的模型的挖掘结构，以便打开数据挖掘设计器。  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 44
   
      筛选器条件将在创建准确性图表时应用到数据源。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [使用嵌套表数据作为准确性图表的输入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用嵌套表数据作为输入准确性图表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [选择准确性图表类型和设置图表选项](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

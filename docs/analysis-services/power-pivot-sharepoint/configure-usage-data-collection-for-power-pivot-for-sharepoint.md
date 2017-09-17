@@ -1,24 +1,29 @@
 ---
-title: "配置使用情况数据收集 (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "配置为使用情况数据收集 (Power Pivot for SharePoint |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 配置使用情况数据收集 (Power Pivot for SharePoint)
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
   使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
   
  有关 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板中使用情况数据的信息，请参阅 [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  单击 **“确定”** 保存所做的更改。  
   
-7.  或者，您可以指定是记录所有消息还是只记录错误。 有关如何限制事件消息的详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)。  
+7.  或者，您可以指定是记录所有消息还是只记录错误。 有关如何限制事件消息的详细信息，请参阅[配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
 ##  <a name="configdb"></a> 设置日志文件位置  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用情况数据最初存储在本地服务器上的使用情况日志文件中，然后定期移到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。 在管理中心中设置日志文件的位置。 默认位置是：  
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |设置|默认值|类型|有效范围|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用事件**（连接、加载、卸载、请求）|\<enabled>|Boolean|这些值可以启用或禁用。|  
+|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<启用 >|Boolean|这些值可以启用或禁用。|  
 |**查询报告间隔**|300（以秒为单位）|Integer|1 到任意正整数。 默认为 5 分钟。|  
-|**使用情况数据历史记录**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
+|**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  
 |快速响应上限|1000（以毫秒为单位）|Integer|设置定义快速请求-响应交换的上限。|  
 |预期响应上限|3000（以毫秒为单位）|Integer|设置定义预期请求-响应交换的上限。|  
 |长时间运行响应上限|10000（以毫秒为单位）|Integer|设置定义长时间运行的请求-响应交换的上限。 超出此上限的任何请求都属于“超出”类别，因此没有上限。|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置设置参考 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power Pivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

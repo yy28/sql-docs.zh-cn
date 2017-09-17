@@ -1,25 +1,30 @@
 ---
-title: "创建提升图、利润图或分类矩阵 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "挖掘准确性图表 [Analysis Services], 挖掘结构"
+title: "创建提升图、 利润图或分类矩阵 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 创建提升图、利润图或分类矩阵
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
   可以使用五个基本步骤为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘模型创建准确性图表：  
   
 -   选择包含要比较的挖掘模型的挖掘结构。  
@@ -32,9 +37,9 @@ caps.handback.revision: 20
   
 -   配置图表选项。  
   
- 对于提升图、利润图和分类矩阵而言，这些基本步骤是相同的。 下面的过程概述了为这些图表类型配置基本图表选项的步骤。 有关如何创建交叉验证报表的信息，请参阅[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
+ 对于提升图、利润图和分类矩阵而言，这些基本步骤是相同的。 下面的过程概述了为这些图表类型配置基本图表选项的步骤。 有关如何创建交叉验证报表的信息，请参阅 [交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  
   
-### 在准确性图表设计器中打开挖掘结构  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>在准确性图表设计器中打开挖掘结构  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开数据挖掘设计器。  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 20
   
 3.  单击 **“挖掘准确性图表”** 选项卡。  
   
-### 选择要包括在图表中的挖掘模型  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>选择要包括在图表中的挖掘模型  
   
 1.  在 **中的数据挖掘设计器的** “挖掘准确性图表” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡上，单击 **“输入选择”** 选项卡。  
   
@@ -59,9 +64,9 @@ caps.handback.revision: 20
   
 5.  单击 **“预测值”** 文本框，并从列表中选择一个值。 如果可预测列是连续数据类型，则必须在此文本框中键入一个值。  
   
-     有关详细信息，请参阅[选择用于测试挖掘模型的列](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)。  
+     有关详细信息，请参阅 [选择用于测试挖掘模型的列](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)。  
   
-### 选择测试数据  
+### <a name="select-testing-data"></a>选择测试数据  
   
 1.  在 **“挖掘准确性图表”** 选项卡的 **“输入选择”** 选项卡上，通过选择 **“选择要用于准确性图表的数据集”**组中的一个选项来指定将用来生成图表的数据源。  
   
@@ -71,20 +76,20 @@ caps.handback.revision: 20
   
     -   若要使用外部数据，请选择“指定其他数据集”选项。   数据集必须可用作数据源视图。   单击浏览 (**…**) 按钮可选择要用于准确性图表的数据表。 有关详细信息，请参阅 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)。  
   
-         如果您使用的是外部数据集，则可以选择筛选输入数据集。 有关详细信息，请参阅[将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)。  
+         如果您使用的是外部数据集，则可以选择筛选输入数据集。 有关详细信息，请参阅 [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)。  
   
 > [!NOTE]  
->  不能在 **“输入选择”** 选项卡上的模型测试事例或挖掘结构测试事例上创建筛选器。 若要在挖掘模型上创建筛选器，应修改该模型的“筛选器”属性。 有关详细信息，请参阅[对挖掘模型应用筛选器](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)。  
+>  不能在 **“输入选择”** 选项卡上的模型测试事例或挖掘结构测试事例上创建筛选器。若要在挖掘模型上创建筛选器，应修改该模型的“筛选器”属性。 有关详细信息，请参阅 [对挖掘模型应用筛选器](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)。  
   
-### 配置图表设置并生成图表  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>配置图表设置并生成图表  
   
 1.  在 **“挖掘准确性图表”** 选项卡中，单击要创建的图表的对应选项卡。  
   
-2.  对于提升图 ，请单击 **“提升图”** 选项卡。 图表将基于模型、可预测属性以及您刚选择的输入数据自动生成。  
+2.  对于提升图 ，请单击 **“提升图”** 选项卡。图表将基于模型、可预测属性以及您刚选择的输入数据自动生成。  
   
-3.  对于分类矩阵 ，请单击 **“分类矩阵”** 选项卡。 无需进一步的设置；图表将基于输入数据以及您选择的模型自动生成。  
+3.  对于分类矩阵 ，请单击 **“分类矩阵”** 选项卡。无需进一步的设置；图表将基于输入数据以及您选择的模型自动生成。  
   
-4.  对于利润图 ，请首先单击 **“提升图”** 选项卡。 然后，从“图表类型”下拉列表中选择“利润图”。  
+4.  对于利润图 ，请首先单击 **“提升图”** 选项卡。然后，从“图表类型”下拉列表中选择“利润图”。  
   
      在 **“利润图设置”** 对话框中输入以下设置。  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 20
      **单项收入**  
      与每个成功销售相关联的收入金额。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   

@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Autoexists |Microsoft 文档"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   “autoexists”  的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  
   
  例如，假定您在处理来自 Geography 维度的属性。 如果您有一个表达式返回 City 属性中的所有成员，另一个表达式将 Country 属性中的成员限定为欧洲的所有国家/地区，这样将使 City 成员限制为仅属于欧洲国家的城市。 其原因就在于 Analysis Services 的 autoexists 特性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度行的交集。  
   
-## 单元存在性  
+## <a name="cell-existence"></a>单元存在性  
  以下单元始终存在：  
   
 -   在与同一维度中其他层次结构的成员相交时，每个层次结构的“（全部）”成员。  
   
 -   在与其非计算同级相交或者与其非计算同级的父级或子级相交时的计算成员。  
   
-## 提供不存在的单元  
+## <a name="providing-non-existing-cells"></a>提供不存在的单元  
  不存在的单元是系统为响应请求在多维数据集中不存在的单元的查询或计算而提供的单元。 例如，如果某多维数据集具有 City 属性层次结构、属于 Geography 维度的 Country 属性层次结构和 Internet Sales Amount 度量值，则此多维数据集的空间仅包含那些共存的成员。 例如，如果 City 属性层次结构包含城市 New York、London、Paris、Tokyo 和 Melbourne，而 Country 属性层次结构包含国家（地区）United States、United Kingdom、France、Japan 和 Australia，则该多维数据集的空间不包含 Paris 和 United States 相交处的空间（单元）。  
   
  当查询单元不存在时，不存在的单元返回空，即它们无法包含计算结果，并且您不能定义写入此空间的计算。 例如，下面的语句包含不存在的单元。  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  请注意 0 用于表示列轴的名称，它是列轴“axis(0)”的简称。  
   
- 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 前面的查询还可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx.md) 函数新的 * 变量来编写。  
+ 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 前面的查询还可以使用 [* (Crossjoin) (MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 函数新的 * 变量来编写。  
   
 ```  
 SELECT   
@@ -87,9 +92,9 @@ WHERE (Measures.[Internet Sales Amount],
   
  虽然结果集中的元数据将不同，但返回的单元值将是相同的。 例如，在前面的查询中，Country 层次结构已移到切片器轴（在 WHERE 子句中），因此没有显式显示在结果集中。  
   
- 前面的这三个查询均阐释了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中自动共存行为所带来的影响。  
+ 前面的这三个查询均阐释了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自动共存行为所带来的影响。  
   
-## 深度和浅表 Autoexists  
+## <a name="deep-and-shallow-autoexists"></a>深度和浅表 Autoexists  
  Autoexists 可以深度或浅表的形式应用于表达式。 **Deep Autoexists** 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 **Shallow Autoexists** 意味着在将当前表达式和这些结果传递到当前表达式之前对外部表达式进行计算。 默认设置为深度 autoexists。  
   
  下面的应用场景和示例将帮助阐明不同类型的 Autoexists。 在下面的示例中，将创建两个集：一个作为计算表达式，另一个作为常量表达式。  
@@ -310,11 +315,11 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 在连接字符串中使用 AUTOEXISTS=[1|2|3] 参数可以修改 Autoexists 行为；有关参数的用法，请参阅[支持的 XMLA 属性 (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 和 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+ 可以使用 AUTOEXISTS 修改 Autoexists 的行为 = [1 | 2 | 3] 中的连接字符串; 参数请参阅[支持 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>对于参数用法。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [元组](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [使用成员、元组和集 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   

@@ -1,31 +1,36 @@
 ---
-title: "将数据挖掘解决方案部署到以前版本的 SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "向后兼容性 [Analysis Services]"
-  - "维持 [数据挖掘]"
-  - "部署 [Analysis Services]"
-  - "时序 [Analysis Services]"
-  - "部署 [Analysis Services - 数据挖掘]"
-  - "同步 [Analysis Services]"
-  - "部署 [Analysis Services]"
+title: "将数据挖掘解决方案部署到以前版本的 SQL Server |Microsoft 文档"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/01/2017
+
 ---
-# 将数据挖掘解决方案部署到以前版本的 SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>将数据挖掘解决方案部署到以前版本的 SQL Server
   尝试将在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 实例中创建的数据挖掘模型或数据挖掘结构部署到使用 SQL Server 2005 Analysis Services 的数据库，或者将在 SQL Server 2005 中创建的模型部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例中时，有可能会遇到兼容性问题。本节将讲述这些已知的兼容性问题。  
   
  不支持部署到 SQL Server 2000 Analysis Services 实例。  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  如果用于该模型数据源的访问接口是 SQL Client Data Provider 10，则还必须修改数据源定义以指定 SQL Server Native Client 的以前版本。 否则， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将生成一个错误，指出提供程序未注册。  
   
 ##  <a name="bkmk_Holdout"></a> 部署具有维持的模型  
- 如果使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 创建了包含一个维持部分（用于测试数据挖掘模型）的挖掘结构，则该挖掘结构可以部署到 SQL Server 2005 实例，但此维持部分的信息将丢失。  
+ 如果你创建包含维持分区用于测试数据挖掘模型的挖掘结构，挖掘结构可以部署到的 SQL Server 2005 实例，但分区信息将会丢失。  
   
  使用 SQL Server 2005 Analysis Services 打开该挖掘结构时， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将引发错误，然后重新生成该结构以删除维持部分。  
   
- 重新生成该结构后，“属性”窗口中该维持部分的大小将不再可用。但 ASSL 脚本文件中仍将存在值 (\<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent>)。  
+ 已重新生成结构后，维持分区的大小不再可用在属性窗口中;但是，值\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍会出现在 ASSL 脚本文件。  
   
 ##  <a name="bkmk_Filter"></a> 部署具有筛选器的模型  
- 如果使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 将某个筛选器应用于挖掘模型，则该模型可以部署到 SQL Server 2005 实例，但不会应用该筛选器。  
+ 如果对挖掘模型应用筛选器，该模型可以部署到的 SQL Server 2005 实例，但将不会应用筛选器。  
   
  打开该挖掘模型时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将引发错误，然后重新生成该模型以删除该筛选器。  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  如果尝试同步 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库，则服务器将返回错误，且数据库同步失败。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 向后兼容性](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   
