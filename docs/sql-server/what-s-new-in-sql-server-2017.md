@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
@@ -34,6 +34,7 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 - 现在可以将 CLR 程序集添加到白名单，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单 (RC1)。  
 - 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”选项可使用户避免标识列值的差值。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
+- 新一代的查询处理改进，将对应用程序工作负荷的运行时状况采用优化策略。 对于这款适应性查询处理功能系列初版，我们进行了 3 项新的改进：批处理模式自适应联接、批处理模式内存授予反馈，以及针对多语句表值函数的交错执行。  请参阅 [SQL 数据库中的自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)。
 - 自动数据库优化提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
 - 用于建模多对多关系的新图形数据库功能包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法和用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 默认情况下，启用名为 `clr strict security` 的 sp_configure 选项，以增强 CLR 程序集的安全性。 请参阅 [CLR 严格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
@@ -112,14 +113,9 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 获取帮助 
-- [堆栈溢出（标记 sql-server）- 询问 SQL 开发问题](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 论坛 - 询问技术问题](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 报告 bug 和请求功能](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - 有关 SQL Server 的一般讨论](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>后续步骤
 - 请参阅 [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)。
 - 了解 [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)（Linux 上 SQL Server 2017 的新增功能）。
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

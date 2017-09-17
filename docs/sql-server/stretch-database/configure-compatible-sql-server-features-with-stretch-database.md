@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84464c4553eab6d8e65c0bf6b476ae728e2a8463
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>配置与 Stretch Database 兼容的 SQL Server 功能
@@ -51,3 +51,5 @@ ms.lasthandoff: 04/11/2017
 如果使用临时表，则可以对历史记录表（但不能对当前表）启用 Stretch Database。
 -   有关将临时表与 Stretch Database 结合使用的指南，请参阅 [管理版本由系统控制的临时表中历史数据的保留期](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)。
 -   若要使用滑动窗口筛选要从历史记录表迁移的行，请参阅 [使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。
+-   如果表格是内存优化表，则无法在时态历史记录表上启用 Stretch Database。 不支持内存优化表。
+
