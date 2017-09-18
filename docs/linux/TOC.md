@@ -12,13 +12,14 @@
 ## [运行和连接 - Docker](quickstart-install-connect-docker.md)
 
 # 概念
-## 安装
+## Install
 ### [安装 SQL Server](sql-server-linux-setup.md)
 ### [安装 SQL Server 工具](sql-server-linux-setup-tools.md)
 ### [安装 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 ### [安装 SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
 ### [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [在 Azure 中预配 SQL VM](sql-server-linux-azure-virtual-machine.md)
+### [注册 GA 存储库](sql-server-linux-change-repo.md)
 
 ## 配置
 ### [使用 mssql conf 配置](sql-server-linux-configure-mssql-conf.md)
@@ -78,7 +79,7 @@
 ### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
-# 资源
+# Resources
 ## [故障排除](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 文档](../sql-server/sql-server-technical-documentation.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
