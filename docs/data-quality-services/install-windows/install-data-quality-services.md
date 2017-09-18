@@ -1,8 +1,10 @@
 ---
 title: "安装 Data Quality Services | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.date: 09/11/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c5b6c77d5a7b08a7fd497278d4f858f34be776e
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
   
 |DQS 组件|说明|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎的基础上安装，包括三个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 数据库引擎的基础上安装，包括三个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使你可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  
   
 > [!IMPORTANT]  
@@ -45,27 +47,27 @@ ms.lasthandoff: 09/01/2017
 -   [安装后任务](#PostInstallationTasks)：使用 SQL Server 安装程序完成安装 DQS 后执行这些任务。  
   
 > [!NOTE]  
->  本主题不包括有关从命令行运行安装程序的说明。 有关用于安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和客户端的命令行选项的信息，请参阅 [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#Feature) 中的 [功能参数](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+>  本主题不包括有关从命令行运行安装程序的说明。 若要了解用于安装[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和客户端的命令行选项，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 中的[功能参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ##  <a name="PreInstallationTasks"></a> 安装前任务  
  在安装 DQS 之前，确保您的计算机满足最低系统要求。 下表提供有关 DQS 组件的最低系统要求的信息：  
   
 |DQS 组件|最低系统要求|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：最小值：2 GB/建议：4 GB 或更多<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎。 有关详细信息，请参阅 [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：最小值：2 GB/建议：4 GB 或更多<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 数据库引擎。 有关详细信息，请参阅 [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可安装在同一台计算机上，也可以安装在不同计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
 >   
->  使用当前或以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
+>  使用当前或以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 >   
 >  尽管 Microsoft Excel 不是用于安装数据质量客户端的先决条件，但 Microsoft Excel 2003 或更高版本必须安装在数据质量客户端计算机上以在客户端应用程序中执行各种操作，例如从某一 Excel 文件导入域值，或者映射到 Excel 文件中的源数据以便进行知识发现、清理或匹配活动。  
   
- 有关安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低系统要求的详细信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 若要详细了解安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 所需满足的最低系统要求，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ##  <a name="DQSInstallation"></a> Data Quality Services 安装任务  
- 您必须使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序安装 DQS 组件。 运行 SQL Server 安装程序时，必须完成一系列的安装向导页面，以根据您的要求选择适当的选项。 下表仅列出了安装向导页面中供选择的选项将对 DQS 安装产生影响的那些页面：  
+ 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装程序安装 DQS 组件。 运行 SQL Server 安装程序时，必须完成一系列的安装向导页面，以根据您的要求选择适当的选项。 下表仅列出了安装向导页面中供选择的选项将对 DQS 安装产生影响的那些页面：  
   
 |第|操作|  
 |----------|------------|  
@@ -121,8 +123,8 @@ ms.lasthandoff: 09/01/2017
  [使用 DQSInstaller.exe 导出和导入 DQS 知识库](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [删除 Data Quality Server 对象](../../sql-server/install/remove-data-quality-server-objects.md)   
- [安装 SQL Server 2016 商业智能功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
- [卸载 SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)   
+ [安装 SQL Server Business Intelligence 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+ [卸载 SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [解决 DQS 中的安装和配置问题](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
