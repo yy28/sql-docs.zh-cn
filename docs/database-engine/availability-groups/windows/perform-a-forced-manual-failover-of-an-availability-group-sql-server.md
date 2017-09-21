@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [将可用性组返回到其原始拓扑](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> 响应主数据中心的灾难性故障  
  下图说明了为响应在主数据中心发生的灾难性故障而在远程数据中心执行的一系列操作。  
   
  ![主数据中心故障响应步骤](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "主数据中心故障响应步骤")  
