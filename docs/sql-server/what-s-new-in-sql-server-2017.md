@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,13 +15,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
+
 SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题总结了最新的 SQL Server 2017 候选发布（RC2，2017 年 8 月）和社区技术预览 (CTP) 版中特定功能区域的新增功能。
 
 [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)试用：[下载 SQL Server 2017 最新版本：RC2，发布于 2017 年 8 月](http://go.microsoft.com/fwlink/?LinkID=829477)。
@@ -29,7 +30,8 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
 
 >**在 Linux 上运行 SQL Server！** 有关详细信息，请参阅 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)（Linux 上的 SQL Server 文档）。
 
-## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 数据库引擎  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 数据库引擎
+
 SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
 - 现在可以将 CLR 程序集添加到白名单，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单 (RC1)。  
 - 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
@@ -101,15 +103,20 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 
 有关详细信息，请参阅 [SQL Server Reporting Services (SSRS) 中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
-## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 机器学习服务
+## <a name="machine-learning-in-sql-server-2017"></a>SQL Server 2017 中的机器学习 
+
 SQL Server R 服务已重命名为 SQL Server 机器学习服务，以反映对除 R 语言外的 Python 的支持。 可以使用机器学习服务（数据库内）在 SQL Server 中运行 R 或 Python 脚本，或者安装 Microsoft 机器学习服务器（独立）来部署和使用不需要 SQL Server 的 R 和 Python 模型。 
 
-SQL Server 开发人员现在可访问开放源代码生态系统中提供的大量 Python ML 和 AI 库，以及 Microsoft 的最新创新： 
+SQL Server 开发人员现在可访问开放源代码生态系统中提供的大量 Python ML 和 AI 库，以及 Microsoft 的最新创新：
 
-- **revoscalepy** - 此 Pythonic 版本的 RevoScaleR 包含用于线性回归和逻辑回归、决策树、提升树和随机林的并行算法，以及一组丰富的用于数据转换和数据移动、远程计算上下文和数据源的 API。
+- **revoscalepy** - 此等效于 RevoScaleR 的 Python 包含用于线性回归和逻辑回归、决策树、提升树和随机林的并行算法，以及一组丰富的用于数据转换和数据移动、远程计算上下文和数据源的 API。
 - **microsoftml** - 这是一个先进的机器学习算法和 Python 绑定转换包，其中包含深层神经网络、快速决策树和决策树以及用于线性回归和逻辑回归的优化算法。 用户还可获得预定型模型，这些模型基于用于图像提取或情感分析的 ResNet 模型。
 - **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
 - **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
+- **本机计分** - Transact-SQL 中的 PREDICT 函数可用于执行 SQL Server 2017 的任何实例中的计分（即使未安装 R）。 只需使用一个受支持的 RevoScaleR 和 revoscalepy 算法来训练该模型，并将该模型保存为 comact 二进制的全新格式。
+- **程序包管理** - T-SQL 现在支持 CREATE EXTERNAL LIBRARY 语句，使 DBA 更好地管理 R 程序包。 使用角色控制专用或共享程序包访问权限，在数据库中存储 R 程序包并在用户中进行共享。
+- **性能改进** - 存储过程 `sp_execute_external_script` 已经过优化，支持列存储数据的批处理模式执行。
+
 
 有关详细信息，请参阅 [SQL Server 机器学习服务中的新增功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
@@ -119,3 +126,4 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

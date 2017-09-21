@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
@@ -129,7 +129,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |字符输出的最大长度|-w|-MaxCharLength|  
 |二进制输出的最大长度|-w|-MaxBinaryLength|  
 |使用 SSL 加密机制进行连接|无参数|-EncryptConnection|  
-|显示错误|无参数|-OutputSqlErrors|  
+|显示错误|无参数|-OutputSqlErrors：需要布尔参数 $true 或 $false|  
 |将消息输出到 stderr|-r|无参数|  
 |使用客户端的区域设置|-r|无参数|  
 |运行指定的查询并保持运行状态|-S|无参数|  

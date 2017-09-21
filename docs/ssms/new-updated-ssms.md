@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 917198902baf85f2bae57c9ade9f8d3e29dea357
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新的和最近更新的文章：适用于 SQL Server 的 SQL Server Management Studio (SSMS)
@@ -34,8 +34,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：&nbsp;从 2017-05-23&nbsp; 到 2017-07-17&nbsp;
-- 主题领域： &nbsp; **SQL Server Management Studio (SSMS)**。
+- 更新日期范围：从 2017 年 7 月 18 日到 2017 年 9 月 11 日
+- 主题区域： &nbsp; **SQL Server Management Studio (SSMS)**。
 
 
 
@@ -47,48 +47,20 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [更改服务器的注册信息 (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [更改已注册的服务器或已注册的服务器组的名称](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [连接到已注册的服务器 (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [创建中央管理服务器和服务器组](register-servers/create-a-central-management-server-and-server-group.md)
-5. [创建新的已注册的服务器 (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [创建或编辑服务器组 (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [断开与已注册服务器的连接 (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [同时对多个服务器执行语句](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [导出已注册的服务器信息 (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [导入已注册的服务器信息 (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [移动已注册的服务器或已注册的服务器组](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [注册连接的服务器 (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
-13. [“已注册的服务器”组件的 F1 帮助](register-servers/registered-servers-f1-help.md)
-14. [注册服务器](register-servers/register-servers.md)
-15. [删除已注册的服务器 (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [删除服务器组 (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [查看 SQL Server Management Studio 中已注册的服务器](register-servers/view-registered-servers-in-sql-server-management-studio.md)
-18. [SQL Server Management Studio 键盘快捷键](sql-server-management-studio-keyboard-shortcuts.md)
-19. [Ssms 实用工具](ssms-utility.md)
-20. [课程 1-1 - 启动 SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-21. [课程 1-2 - 与已注册的服务器和对象资源管理器连接](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
-22. [课程 1-3 - 更改环境布局](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [课程 1-4 - 显示查询窗口](tutorials/lesson-1-4-display-the-query-window.md)
-24. [课程 1-5 - 显示“对象资源管理器详细信息”页](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
-25. [课程 1-6 - 选择键盘快捷键方案](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
-26. [课程 1-7 - 设置启动选项](tutorials/lesson-1-7-set-the-startup-options.md)
-27. [课程 1-8 - 还原默认的 SQL Server Management Studio 配置](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [课程 1-9 - 摘要 - 基本导航](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [第 1 课：SQL Server Management Studio 中的基本导航](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
-30. [课程 2-1 - 连接查询编辑器](tutorials/lesson-2-1-connecting-with-query-editor.md)
-31. [课程 2-2 - 添加缩进](tutorials/lesson-2-2-adding-indentation.md)
-32. [课程 2-3 - 最大化查询编辑器](tutorials/lesson-2-3-maximizing-query-editor.md)
-33. [课程 2-4 - 使用注释](tutorials/lesson-2-4-using-comments.md)
-34. [课程 2-5 - 查看代码窗口的其他方式](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [课程 2-6 - 编写表脚本](tutorials/lesson-2-6-script-a-table.md)
-36. [第 2 课：编写 Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
-37. [课程 3-1 - 使用模板创建脚本](tutorials/lesson-3-1-create-scripts-using-templates.md)
-38. [课程 3-2 - 创建自定义模板](tutorials/lesson-3-2-create-custom-templates.md)
-39. [课程 3-3 - 将脚本另存为项目或解决方案](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [课程 3-4 - 摘要 - 解决方案和脚本项目](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [第 3 课：使用模板、解决方案和脚本项目](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+1. [SQL Server Management Studio 中的输出窗口](output-window.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
+
+此部分摘录了最近大幅更新的文章中的更新内容。
+
+此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
+
+鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
+
 
 
 
@@ -99,19 +71,13 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 ## <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
 
-此紧凑列表提供“摘录”部分列出的所有已更新文章的链接。
+此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
+1. [下载 SQL Server Management Studio (SSMS)](#TitleNum_1)
+2. [连接到 SQL Server 或 Azure SQL 数据库](#TitleNum_2)
+3. [SQL Server Management Studio (SSMS) - 更改日志](#TitleNum_3)
+4. [创建和更新数据库表](#TitleNum_4)
 
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
-
-此部分显示从最近大幅更新的文章中收集到的更新的摘录内容。
-
-此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
-
-鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
 
 
 
@@ -121,93 +87,238 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1.&nbsp; [SQL Server Management Studio - 更改日志 (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1.&nbsp;[下载 SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
 
-更新日期：2017-06-08 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+更新日期：2017-08-07 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[下一篇](#TitleNum_2)）
+
+<!-- Source markdown line 63.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 23260f301f86651061b47065bee43d42c92a7be4 0c2178d96b621b96bfcd2fbb782f24792debb407  (PR=2775  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
+
+
+
+SSMS 17.2 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
+
+版本 17.2 包括：
+
+- 多重身份验证 (MFA)
+  - 用于含多重身份验证的通用身份验证的多用户 Azure AD 身份验证（具有 MFA 的 UA）
+  - 为含 MFA 的通用身份验证添加了新的用户凭据输入字段，以支持多用户身份验证。
+- 连接对话框现在支持以下 5 种身份验证方法：
+  - Windows 身份验证
+  - SQL Server 身份验证
+  - Active Directory - 含 MFA 支持的通用身份验证
+  - Active Directory - 密码
+  - Active Directory - 集成
+
+- DacFx 向导的数据库导入/导出现在可以使用含 MFA 的通用身份认证。
+- 有关 API 支持，请参阅 [IUniversalAuthProvider 接口](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)。
+- 具有 MFA 的 Azure AD 通用身份验证使用的 ADAL 托管库已升级到 3.13.9 版本。
+- 新 CLI 界面，支持用于 SQL 数据库和 SQL 数据仓库的 Azure AD 管理设置。
+
+ 有关 Active Directory 身份验证方法的详细信息，请参阅[使用 SQL 数据库和 SQL 数据仓库进行通用身份验证（MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)和[配置 SQL Server Management Studio 的 Azure SQL 数据库多重身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)。
+
+- 输出窗口具有在对象资源管理器节点扩展期间运行的查询条目
+- 为 Azure SQL 数据库启用了查看设计器
+- SSMS 中的对象资源管理器脚本对象的默认脚本选项已更改：
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-connect-to-a-sql-server-or-azure-sql-databaseobjectconnect-to-an-instance-from-object-explorermd"></a>2.&nbsp;[接到 SQL Server 或 Azure SQL 数据库](object/connect-to-an-instance-from-object-explorer.md)
+
+更新日期：2017-08-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_1) | [下一篇](#TitleNum_3)）
+
+<!-- Source markdown line 40.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 cfd72893c35c87df96dc8605807e542be28936e2 840981d3a115a15774a8e47ee2f6a0e5c4177b01  (PR=2961  ,  Filename=connect-to-an-instance-from-object-explorer.md  ,  Dirpath=docs\ssms\object\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+   ![firewall--../media/connect-to-server/new-firewall-rule.png)
+
+1. 要创建防火墙规则并连接到服务器，请单击“确定”。
+
+1. 成功连接后，服务器将出现在“对象资源管理器”中：
+
+   ![connected--../media/connect-to-server/connected.png)
+
+**后续步骤**
+
+
+[设计、创建和更新表--../visual-db-tools/design-tables-visual-database-tools.md)
+
+**另请参阅**
+
+
+[SQL Server Management Studio (SSMS)--../sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>3.&nbsp; [SQL Server Management Studio - 更改日志 (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
+更新日期：2017-08-07 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（[上一篇](#TitleNum_2) | [下一篇](#TitleNum_4)）
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1668cba64d4988192aedc6daf9362f288668682d 1733ce3c556db1e51cb27bf830429f2c42e8f97e  (PR=1975  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=470e6c83318eaf8eb579d053f65b5353862eb4c7) -->
+<!-- git diff --ignore-all-space --unified=0 1733ce3c556db1e51cb27bf830429f2c42e8f97e 2abb24fd6547e438181039d095cbad027473a57e  (PR=2775  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
 
 
 
-**SSMS 17.1 版本**
+本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载 [下面的 SSMS 早期版本--#previous-ssms-releases)。
 
-公开发布 | 内部版本号：14.0.17119.0
+**[SSMS 17.2--download-sql-server-management-studio-ssms.md)**
+
+
+公开发布 | 版本号：14.0.17177.0
 
 **增强功能**
 
 
-- 现可通过探查器：“帮助”>“关于”查看发行版本号（例如 17.1）
-- Analysis Service 用户可以从数据源上的上下文菜单中针对 1200 TM 模型及更高版本刷新其数据源的凭据
-- 内置 SSIS 报表现在可显示 CTP 2.1 中 SSIS 扩展执行的日志
-- SSIS 扩展管理应用程序
-  - 查看扩展主要角色的基本信息。
-  - 轻松向扩展部署添加辅助角色。
-  - 查看所有扩展辅助角色及其基本信息，还可将它们轻松启用或禁用。
+- 多重身份验证 (MFA)
+  - 用于含多重身份验证的通用身份验证的多用户 Azure AD 身份验证（具有 MFA 的 UA）
+  - 为含 MFA 的通用身份验证添加了新的用户凭据输入字段，以支持多用户身份验证。
+- 连接对话框现在支持以下 5 种身份验证方法：
+  - Windows 身份验证
+  - SQL Server 身份验证
+  - Active Directory - 含 MFA 支持的通用身份验证
+  - Active Directory - 密码
+  - Active Directory - 集成
 
-**Bug 修复**
+- DacFx 向导的数据库导出/导入使用含 MFA 的通用身份验证。
+- 有关 API 支持，请参阅 [IUniversalAuthProvider 接口](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)。
+- 具有 MFA 的 Azure AD 通用身份验证使用的 ADAL 托管库已升级到 3.13.9 版本。
+- 此外，加入了新 CLI 接口，支持用于 SQL 数据库和 SQL 数据仓库的 Azure AD 管理设置。
 
-- Always On：
-  - 修复了可用性副本的属性对于 WSFC AG 始终显示为“自动故障转移”模式的问题。
-  - 修复了更新可用性组时覆盖只读路由列表的问题
-- Always Encrypted：修复了生成的日志文件缺少 DacFx 生成的信息的问题。
-- 显示计划：修复了用户界面总是显示非自适应联接运算符的实际联接类型属性的问题。
-- 安装程序：
-  - 修复了 SSMS 17.0 中断 Visual Studio 2013 上的 SSDT 的问题 [Connect 项目 3133479]
-  - 修复了安装结束时单击“重启”不会重启计算机的问题
-- 脚本：通过禁用选项，暂时阻止了 SSMS 尝试编写删除脚本时误删 Azure 数据库对象的问题。  即将发布的 SSMS 版本中将提供正式修复。
-- 对象资源管理器：修复了将“数据库”节点连接到使用“AS COPY”创建的 Azure 数据库时此节点无法展开的问题
+ 有关 Active Directory 身份验证方法的详细信息，请参阅[使用 SQL 数据库和 SQL 数据仓库进行通用身份验证（MFA 的 SSMS 支持）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)和[配置 SQL Server Management Studio 的 Azure SQL 数据库多重身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)。
+
+- 输出窗口具有在对象资源管理器节点扩展期间运行的查询条目
 
 
-
-
-
-
-<a name="similars2"/>
 
 &nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-create-and-update-database-tablesvisual-db-toolsdesign-tables-visual-database-toolsmd"></a>4.&nbsp;[创建和更新数据库表](visual-db-tools/design-tables-visual-database-tools.md)
+
+更新日期：2017-08-25 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[上一篇](#TitleNum_3)）
+
+<!-- Source markdown line 30.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f63884ac2d04889e70c505cb5262c8dd81d73ee7 4b4c7aa5e8a0548405f02d11a66b722219fa78f0  (PR=2961  ,  Filename=design-tables-visual-database-tools.md  ,  Dirpath=docs\ssms\visual-db-tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+**创建表**
+
+
+1. 右键单击数据库中的“表”节点，然后选择“新建” > “表”：
+
+    ![New table--../media/design-tables/new-table.png)
+
+1. 将 [columns--column-properties-visual-database-tools.md) 添加到你的表：
+
+    ![design table--../media/design-tables/new-table2.png)
+
+1. 关闭设计器并保存更改。
+
+**更新表**
+
+
+1. 右键单击数据库的“表”节点下的表，并选择“设计”：
+
+   ![Update table--../media/design-tables/update-table.png)
+
+1. 更新所需的表设置：
+
+   ![--../media/design-tables/update-table2.png)
+
+1. 关闭设计器并保存更改。
+
+**另请参阅**
+
+
+[表](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f) [Table Properties &#40;Visual Database Tools&#41;--../../ssms/visual-db-tools/table-properties-visual-database-tools.md) [Column Properties--column-properties-visual-database-tools.md) [Add Columns to a Table--../../relational-databases/tables/add-columns-to-a-table-database-engine.md) [Primary and Foreign Keys--../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Indexes--../../relational-databases/indexes/indexes.md) [Data types (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md) [Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+
+
+
+
+
 
 ## <a name="similar-articles"></a>类似文章
 
-本节针对同一 GitHub.com 存储库 ([MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/)) 中其他主题领域的最近更新的文章列出了非常相似的文章。
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+本部分列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 中其他主题区域最近更新的非常相似文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题领域具有新的或最近更新的文章
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和已更新的文章 (4+4)：Advanced Analystics for SQL 文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和已更新的文章 (2+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和已更新的文章 (1+2)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和已更新的文章 (6+0)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和已更新的文章 (13+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和已更新的文章 (1+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
-- [新文章和已更新的文章 (1+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新文章和已更新的文章 (8+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和已更新的文章 (2+2)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和已更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和已更新的文章 (1+0)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
-- [新文章和已更新的文章 (1+0)：Tools for SQL 文档](../tools/new-updated-tools.md)
+- [新发布文章+最近更新的文章 (3+12)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新发布文章+最近更新的文章 (5+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
+- [新发布文章+最近更新的文章 (5+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新发布文章+最近更新的文章 (19+82)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新发布文章+最近更新的文章 (1+8)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新发布文章+最近更新的文章 (12+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新发布文章+最近更新的文章 (0+1)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新发布文章+最近更新的文章 (7+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新发布文章+最近更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新发布文章+最近更新的文章 (0+2)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
+- [新发布文章+最近更新的文章 (1+4)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新发布文章+最近更新的文章 (4+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+- [新发布文章+最近更新的文章 (0+1)：Tools for SQL 文档](../tools/new-updated-tools.md)
 
-
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题领域
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新发布文章+最近更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
-- [新文章和已更新的文章 (0+0)：Integration Services for SQL 文档](../integration-services/new-updated-integration-services.md)
+- [新发布文章+最近更新的文章 (0+0)：SQL Master Data Services (MDS) 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
+- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新文章和已更新的文章 (0+0)：Reporting Services for SQL 文档](../reporting-services/new-updated-reporting-services.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和已更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 
