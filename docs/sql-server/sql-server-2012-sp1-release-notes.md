@@ -122,7 +122,7 @@ ms.lasthandoff: 09/02/2017
   
 -   “连接字符串属性‘用户标识’不支持值‘SharePoint 主体’。”  
   
-**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=286266) 下载此功能包。  
+**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 在执行预定的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
 **问题**：在 PowerPivot for SharePoint 外接程序中，对包含 Power View 的工作簿使用“ **计划的数据刷新** ”将删除所有 Power View 工作表。  

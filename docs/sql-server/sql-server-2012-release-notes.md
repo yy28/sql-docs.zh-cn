@@ -508,9 +508,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
 |ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|是|  
 |Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|用户帐户控制|  
   
-**\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)(#http://support.microsoft.com/kb/2600211)。  
+**\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   
-**\&#42;\&#42;** 下载 ADO.NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)(#http://support.microsoft.com/kb/2654347)。  
+**\&#42;\&#42;** 下载 ADO.NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
   
 **MultiSubnetFailover 关键字和相关功能**  
   
@@ -608,10 +608,10 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
   
 3.  在主群集节点上安装包含 MDS 功能的 SQL Server 2012，然后在任何附加群集节点上安装包含 MDS 功能的 SQL Server 2012。  
   
-有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)(#http://support.microsoft.com/kb/2683467)。  
+有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)。  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 需要 Microsoft Silverlight 5  
-在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)(#http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
+在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
