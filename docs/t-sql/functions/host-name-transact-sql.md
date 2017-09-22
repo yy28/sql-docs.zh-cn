@@ -1,7 +1,7 @@
 ---
 title: "HOST_NAME (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 09/21/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   返回工作站名。  
   
@@ -73,3 +73,4 @@ GO
  [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
+
