@@ -60,7 +60,7 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
 - 限制对的访问`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - 将移动到系统 SSL 目录 （可选）  
