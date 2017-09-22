@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 95ed4009d425fbc3383812ba3689f4caff487cd7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -143,7 +143,7 @@ ms.lasthandoff: 08/09/2017
 |在 SharePoint 模式下安装和配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的详细步骤。|[安装 Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)和[将另一个报表服务器添加到服务器场 &#40;SSRS 扩展 &#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |通过添加其他报表服务器扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 部署。|[将另一个报表服务器添加到服务器场 &#40;SSRS 扩展 &#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和[SharePoint 中的 SQL Server BI 功能的部署拓扑](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  
 |添加安装了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件用于查看报表项的其他 SharePoint Web 前端。|[向场中添加另一个 Reporting Services Web 前端](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报和订阅功能配置电子邮件。|[为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](https://msdn.microsoft.com/library/hh231673.aspx)|  
+|为配置电子邮件 [！包括[ssRSnoversion](/sql-docs/docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application)|  
 |有关此版本的最新信息，位于 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkId=221297)。|  
 
 ## <a name="next-steps"></a>后续步骤
@@ -152,4 +152,4 @@ ms.lasthandoff: 08/09/2017
 [在 SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
 [小测验：针对 SharePoint 集成配置 SSRS 2012](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

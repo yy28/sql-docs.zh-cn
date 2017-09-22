@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>什么 &#39; SQL Server 自 2017 年 Analysis Services 中的新增功能
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>DAX 增强功能
-此版本包括 DAX 表达式的 `IN` 运算符。 这与经常用于在 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中指定多个值的 `WHERE` 运算符类似。
+此版本包括 DAX 表达式的 `IN` 运算符。 这与经常用于在 `WHERE` 子句中指定多个值的 [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) 运算符类似。
 
 以前，通常使用逻辑 `OR` 运算符指定多值筛选，如以下度量值表达式所示：
 

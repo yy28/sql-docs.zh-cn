@@ -14,11 +14,11 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3b9b3bea0adf69916e698b03df1601a7fd6a62d4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 
 5. 单击“报表服务器项目”![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)。 
 
-   >**请注意**： 如果看不到**Business Intelligence**或**报表服务器项目**选项，你需要使用商业智能模板更新 SSDT。 请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+   >**请注意**： 如果看不到**Business Intelligence**或**报表服务器项目**选项，你需要使用商业智能模板更新 SSDT。 请参阅 [下载 SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
 5.  在“名称” 中，键入 **Tutorial**。  
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-lesson"></a>下一课  
 您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课： 指定连接信息 &#40;Reporting Services &#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 

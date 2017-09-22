@@ -1,7 +1,7 @@
 ---
 title: "创建报表服务器数据库 （SSRS 配置管理器） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,26 +9,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], databases
-- report server database
-- databases [Reporting Services], creating
-ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 526abc46fe3b7fc3f923c29f4b4857b06f55a37c
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: aac0bcb0b004a0c8225b580313281c9668c1c882
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **本机模式** 使用两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库存储报表服务器元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例下，这两个数据库分别命名为 **reportserver** 和 **reportservertempdb**。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。
 
@@ -71,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- 若要在远程计算机上创建报表服务器数据库，则需要将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果决定使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请仔细考虑报表服务器应使用哪些凭据来连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 若要在远程计算机上创建报表服务器数据库，则需要将连接配置为使用域用户帐户或具有网络访问权限的服务帐户。 如果决定使用远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请仔细考虑报表服务器应使用哪些凭据来连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)中支持的版本。  
   
 > [!IMPORTANT]  
 >  报表服务器和用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可位于不同的域中。 对于 Internet 部署，通常的做法是使用防火墙后的服务器。 如果要配置用于 Internet 访问的报表服务器，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据连接到位于防火墙后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例并使用 IPSEC 保护连接的安全。  
@@ -83,4 +79,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services 配置管理器](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

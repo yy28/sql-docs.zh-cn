@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安装预先训练的机器学习模型上 SQL Server
@@ -37,8 +37,8 @@ ms.lasthandoff: 09/01/2017
 
 当前可用的模型都的观点分析和图像分类深层神经网络 (DNN) 模型。 所有四个预先训练的模型已接受有关 CNTK 的培训。 每个网络配置的基于以下的引用实现：
 
-+ Resnet-18
-+ Resnet 50
++ ResNet-18
++ ResNet 50
 + ResNet 101
 + AlexNet
 
@@ -133,3 +133,4 @@ ms.lasthandoff: 09/01/2017
 此示例演示预先训练的模型用于分类：
 
 [使用文本特征化器的观点分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

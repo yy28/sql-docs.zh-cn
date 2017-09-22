@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
@@ -64,7 +64,7 @@ SQL Server 受信任的快速启动板服务管理外部脚本和通信与 R、 
 - 跳过遍历检查 (SeChangeNotifyPrivilege)
 - 调整进程 (SeIncreaseQuotaSizePrivilege) 的内存配额
 
-有关这些用户权限的信息，请参阅中的"Windows 特权和权限"部分[配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504.aspx)。
+有关这些用户权限的信息，请参阅中的"Windows 特权和权限"部分[配置 Windows 服务帐户和权限](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。
 
 > [!TIP]
 > 如果你熟悉支持诊断平台 (SDP) 工具用于 SQL Server 诊断，你可以使用 SDP 来查看 MachineName_UserRights.txt 同名输出文件。

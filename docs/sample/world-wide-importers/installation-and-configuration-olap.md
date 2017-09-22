@@ -16,17 +16,17 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 729df20de5d57a664467a4b799312d066bb3ec63
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c4de8bcf161a8e4a5e33535769d3f8f7b5f7ad7a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安装和配置
 WideWorldImportersDW 数据库的安装和配置说明。
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 若要使用示例的完整版本，请使用 SQL Server 评估/开发人员/企业版。
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
 
 ## <a name="download"></a>下载
 

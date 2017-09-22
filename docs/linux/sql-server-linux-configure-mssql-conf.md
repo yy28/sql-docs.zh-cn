@@ -1,19 +1,19 @@
 ---
 title: "在 Linux 上配置 SQL Server 设置 |Microsoft 文档"
 description: "本主题介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。"
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>更改 SQL Server 排序规则
 
-**集排序规则**选项的排序规则值更改为任何支持的排序规则：
+**集排序规则**选项的排序规则值更改为任何支持的排序规则。
+
+1. 第一个[备份任何用户数据库](sql-server-linux-backup-and-restore-database.md)你的服务器上。
+
+1. 然后使用[sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)存储过程来分离用户数据库。
 
 1. 运行**集排序规则**选项并按照提示进行操作：
 
@@ -61,7 +65,9 @@ ms.lasthandoff: 09/05/2017
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. mssql-conf 实用工具将尝试使用指定的排序规则还原数据库并重新启动服务。 如果不存在任何错误，它将回滚排序规则到以前的值。
+1. Mssql conf 实用程序将尝试将更改为指定的排序规则值并重新启动服务。 如果不存在任何错误，它将回滚排序规则到以前的值。
+
+1. 还原用户数据库备份。
 
 支持的排序列表，请运行[sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)函数： `SELECT Name from sys.fn_helpcollations()`。
 

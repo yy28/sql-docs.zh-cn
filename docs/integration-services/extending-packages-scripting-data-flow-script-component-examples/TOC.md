@@ -1,0 +1,5 @@
+# [其他脚本组件示例](additional-script-component-examples.md)
+# [使用脚本组件创建 ODBC 目标](creating-an-odbc-destination-with-the-script-component.md)
+# [使用脚本组件增强错误输出](enhancing-an-error-output-with-the-script-component.md)
+# [使用脚本组件分析非标准文本文件格式](parsing-non-standard-text-file-formats-with-the-script-component.md)
+# [模拟脚本组件的错误输出](simulating-an-error-output-for-the-script-component.md)

@@ -1,0 +1,66 @@
+---
+title: "SQL Server 导入和导出向导中的步骤 |Microsoft 文档"
+ms.custom: 
+ms.date: 02/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
+caps.latest.revision: 15
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dcd4329c30108f85174e65bb5e9f9dc9d7296bd0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/21/2017
+
+---
+# <a name="steps-in-the-sql-server-import-and-export-wizard"></a>在 SQL Server 导入和导出向导中的步骤
+本主题介绍导入和导出数据与 SQL Server 导入和导出向导的步骤的序列。 它还包含指向描述每个页面的文档或在向导中看到的对话框中的各个页面。
+
+本主题仅介绍**步骤**向导中。 如果你正在寻找其他事情，请参阅[相关的任务和内容](#related)。
+
+## <a name="steps-for-importing-and-exporting-data"></a>导入和导出数据的步骤  
+ 下表列出了导入和导出数据的步骤以及向导的相应页面。 根据在向导中选择的选项，您通常不会看到所有这些页面。  
+
+快速查看你在典型的会话中看到多个屏幕，看一看这个简单的端到端示例在一页-[开始导入和导出向导的这个简单的示例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+
+|步骤|向导页面|  
+|----------|------------------|  
+|**欢迎**<br />不必在此页上执行任何操作。|[欢迎使用 SQL Server 导入和导出向导](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
+|**选择数据源**。|[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
+|**选择数据目标**。|[选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
+|**配置目标**。 （可选步骤）<br /><br /> -   创建新的目标数据库。<br />-   如果要将数据复制到文本文件，请配置附加设置。|[创建数据库](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
+|**指定要从中复制。**|[指定表复制或查询](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[选择源表和视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[提供源查询](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
+|**配置复制操作**。 （可选步骤）<br /><br /> -   创建新的目标表。<br />-决定要执行的操作如果该向导不知道如何将在源和所选的目标之间的数据类型映射。<br />-   查看源和目标之间的列映射。<br />-   处理转换源和目标之间的数据类型时发生的问题。<br />-   预览要复制的数据。|[Create Table SQL 语句](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[转换类型时不进行转换检查](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[查看数据类型映射](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[列转换详细信息对话框中](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[预览数据对话框](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
+|**复制数据。**<br /><br /> （可选） 将你的设置另存为 SQL Server Integration Services (SSIS) 包。|[保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[执行操作](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
+
+> [!TIP]
+> 从向导的任何页面或对话框中点击 F1 键，可查看当前页的相关文档。
+
+## <a name="related"></a>相关的任务和内容  
+以下是一些其他基本任务。
+-   **请参阅快速示例说明在向导的工作原理。**
+
+    -   **如果想要查看屏幕快照。** 在一页-看一看这个简单的端到端示例[开始导入和导出向导的这个简单的示例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+
+    -   **如果你更愿意观看视频。** 观看此四分钟的视频演示向导并清楚地说明的 YouTube、 只需如何将数据导出到 Excel-[使用 SQL Server 导入和导出向导导出到 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
+
+-   **了解有关该向导的工作原理的详细信息。**
+
+    -   **了解有关该向导的详细信息。** 如果正在寻找有关该向导的概述，请参阅 [使用 SQL Server 导入和导出向导来导入和导出数据](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+
+    -   **了解如何连接到数据源和目标。** 如果你正在寻找有关如何连接到你的数据的信息，从此处的列表中选择所需的页[连接到数据源的 SQL Server 导入和导出向导](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 没有单独的几个常用的数据源的每个文档的页面。 
+
+-   **启动向导。** 如果已准备好运行向导，并且只想知道如何启动向导，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
+
+-   **获取向导。** 如果你想要运行向导，但不会获得 [！包括[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+
+
+

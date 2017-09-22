@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 0f9706a6faa2743091db5f65853a173a7215aaf7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      有关 **/ConsoleLog** 选项的若干示例，请参阅 **备注** 部分。  
   
--   **/D[ts]** *package_path*：（可选）。 从 SSIS 包存储区加载包。 使用旧的包部署模型部署存储在 SSIS 包存储区中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+-   * * /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
      *package_path* 参数指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的相对路径，从 SSIS 包存储的根目录开始，包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的名称。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
@@ -263,7 +263,7 @@ dtexec /option [value] [/option [value]]...
   
      此参数由 SQL Server 代理使用。  
   
--   **/F[ile]** *filespec*：（可选）。 加载保存在文件系统中的包。 使用旧的包部署模型部署保存在文件系统中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+-   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
   
      *filespec* 参数指定包的路径和文件名。 可以将路径指定为通用命名约定 (UNC) 路径或本地路径。 如果 *filespec* 参数中指定的路径或文件名包含空格，则必须在 *filespec* 参数两侧加上引号。  
   
@@ -297,13 +297,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID：{59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置用户帐户 ：  
   
         -   ProgID：DTS.LogProviderSQLProfiler.1  
   
         -   ClassID：{5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置用户帐户 ：  
   
         -   ProgID：DTS.LogProviderSQLServer.1  
   
@@ -413,7 +413,7 @@ dtexec /option [value] [/option [value]]...
   
      指定 **/ISServer** 选项时，必须指定 **/Ser[ver]** 选项。  
   
--   **/SQ[L]** *package_path*：加载存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 **msdb** 数据库中的包。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+-   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
      *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   

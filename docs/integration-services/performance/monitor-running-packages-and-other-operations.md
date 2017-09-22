@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
   
  有关可用于查看正在运行的包列表的其他方法的信息，请参阅以下主题。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要查看正在服务器上运行的包的列表，请为其状态为 2 的包查询视图 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
@@ -105,7 +105,7 @@ ms.lasthandoff: 08/03/2017
   
  有关可用于停止正在运行的包的其他方法的信息，请参阅以下主题。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要停止正在服务器上运行的包，请调用存储过程 [catalog.stop_operation（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
@@ -116,14 +116,14 @@ ms.lasthandoff: 08/03/2017
   
  有关可用于查看正在运行的包的历史记录的其他方法的信息，请参阅以下主题。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  若要查看与已运行的包有关的信息，请查询视图 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
  请参阅<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间及其类。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  在当前版本中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，标准报表位于[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
+  在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
   
  在每个报告页的顶部，后退图标会将您转到查看过的上一页，刷新图标会刷新在该页上显示的信息，打印图标则可以打印当前页。  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  有关如何创建和添加自定义报告的说明，请参阅 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告
-  在当前版本中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，标准报表位于[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](#reports)。  
+  在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](#reports)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **所有连接**  
 
 ## <a name="see-also"></a>另请参阅  
- [项目和包的执行](https://msdn.microsoft.com/library/hh213290.aspx)   
- [包执行的疑难解答报告](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [项目和包的执行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [包执行的疑难解答报告](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

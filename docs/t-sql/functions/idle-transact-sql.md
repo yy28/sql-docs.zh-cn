@@ -1,7 +1,7 @@
 ---
 title: "@@IDLE (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 970997aa753194b6b50fb7889103449f4d6b9547
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: ab308bcb1fd3ffdda8e901b2238111abaddecb81
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="idle-transact-sql"></a>@@IDLE (Transact SQL)
+# <a name="x40x40idle-transact-sql"></a>& #x 40; & #x 40; 空闲 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后的空闲时间。 结果以 CPU 时间增量或“时钟周期”表示，并且是所有 CPU 的累积，因此该值可能超过实际经过的时间。 乘以@TIMETICKS将转换为微秒为单位。  
@@ -45,7 +45,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@IDLE  
 ```  
   
@@ -79,3 +78,4 @@ Idle microseconds  as of
  [系统统计函数 &#40;Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
  对于本机模式的报表服务器，电子邮件传递扩展插件通过本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器和编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置。 对于 SharePoint 模式的报表服务器，电子邮件传递扩展插件是在 SharePoint 管理页和 PowerShell 脚本中进行配置的。  
   
  
- 有关如何配置本机模式报表服务器的信息，请参阅 [电子邮件设置 — Reporting Services 本机模式（配置管理器）](https://msdn.microsoft.com/library/ms189342.aspx)
+ 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [任务和权限](../../reporting-services/security/tasks-and-permissions.md)   
- [订阅和传递 &#40;Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [角色分配](../../reporting-services/security/role-assignments.md)  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ddf82a6ef055d951c987c8bc156f025c1162f6c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用始终加密
@@ -152,7 +152,7 @@ catch (Exception e)
 - 程序打印的所有值都将以纯文本形式，如 Microsoft JDBC Driver for SQL Server 将以透明方式解密从 SSN 和 BirthDate 列中检索的数据。
 
 > [!NOTE]  
->  查询可以在列上执行相等比较（如果使用确定性加密对它们进行加密。 有关详细信息，请参阅**选择确定性或随机加密**部分[始终加密 （数据库引擎）](https://msdn.microsoft.com/library/mt163865.aspx)主题。  
+>  查询可以在列上执行相等比较（如果使用确定性加密对它们进行加密。 有关详细信息，请参阅**选择确定性或随机加密**部分[始终加密 （数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)主题。  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ catch (Exception e)
 
 ### <a name="unsupported-data-type-conversion-errors"></a>不支持的数据类型转换错误
 
-始终加密支持对加密数据类型进行若干种转换。 请参阅[始终加密 （数据库引擎）](https://msdn.microsoft.com/library/mt163865.aspx)有关受支持的类型转换的详细列表。 下面介绍可以执行哪些操作来避免数据类型转换错误，请确保：
+始终加密支持对加密数据类型进行若干种转换。 请参阅[始终加密 （数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)有关受支持的类型转换的详细列表。 下面介绍可以执行哪些操作来避免数据类型转换错误，请确保：
 
 - 面向加密的列的参数值，以便参数的 SQL Server 数据类型可以是完全相同将作为传递目标列或参数的 SQL Server 数据类型的转换的类型使用正确的 setter 方法到目标支持的列的类型。 请注意，新的 API 方法已添加到 SQLServerPreparedStatement、 SQLServerCallableStatement 和 SQLServerResultSet 类对应于特定的 SQL Server 数据类型的参数传递。 例如，如果未加密的列可以使用 setTimestamp() 方法将参数传递到 datetime2 或日期时间列。 但在加密列时将需要使用的具体方法表示数据库中的列的类型。 例如，使用 setTimestamp() 将值传递给加密的 datetime2 列并使用 setDateTime() 将值传递到加密的日期时间列。 请参阅[始终加密 API 参考 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)有关新的 Api 的完整列表。 
 - 对于面向列的 decimal 和 numeric SQL Server 数据类型的参数，其精度和小数位数与为目标列配置的精度和小数位数相同。 请注意，新的 API 方法已添加到 SQLServerPreparedStatement、 SQLServerCallableStatement 和 SQLServerResultSet 类，以接受精度和小数位数以及参数/列，表示 decimal 和 numeric 数据类型的数据值。 请参阅[始终加密 API 参考 JDBC 驱动程序](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)有关新/重载 Api 的完整列表。  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure activedirectory-库-为-java 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储区提供程序
-SQLServerColumnEncryptionCertificateStoreProvider 可以用于在 Windows 证书存储中存储列主密钥。 使用 SQL Server Management Studio (SSMS) 始终加密向导或其他支持的工具的列主密钥和列加密密钥定义在数据库中创建。 相同的向导可以用于在将 Windows 证书存储中生成自签名的证书用作列主密钥的始终加密的数据。 有关详细信息列主密钥和列加密密钥的 T-SQL 语法访问[CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx)和[CREATE COLUMN ENCRPTION KEY](https://msdn.microsoft.com/library/mt146372.aspx)分别。
+SQLServerColumnEncryptionCertificateStoreProvider 可以用于在 Windows 证书存储中存储列主密钥。 使用 SQL Server Management Studio (SSMS) 始终加密向导或其他支持的工具的列主密钥和列加密密钥定义在数据库中创建。 相同的向导可以用于在将 Windows 证书存储中生成自签名的证书用作列主密钥的始终加密的数据。 有关详细信息列主密钥和列加密密钥的 T-SQL 语法访问[CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)和[CREATE COLUMN ENCRPTION KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql)分别。
 
 SQLServerColumnEncryptionCertificateStoreProvider 名称是"MSSQL_CERTIFICATE_STORE"，并且可通过提供程序对象 getName() API 查询。 它自动注册由驱动程序，并可无缝而无需任何应用程序更改。
 
@@ -356,7 +356,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider 可以用于 JKS 或 PKCS12 keysto
 
 你还可以从 Windows 证书存储以.pfx 格式导出证书，然后，使用 SQLServerColumnEncryptionJavaKeyStoreProvider。 导出的证书可以还将导入 Java 密钥存储为 JKS keystore 类型。 
 
-创建 keytool 条目后你将需要在需要密钥存储提供程序名称和密钥路径的数据库中创建列主密钥元数据。 有关如何创建列主密钥元数据的详细信息，请访问[CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx)。 对于 SQLServerColumnEncryptionJavaKeyStoreProvider，注册表项路径是只需密钥的别名。 并且 SQLServerColumnEncryptionJavaKeyStoreProvider 名称为 MSSQL_JAVA_KEYSTORE。 你还可以查询使用 getName() 公共 API SQLServerColumnEncryptionJavaKeyStoreProvider 类的此名称。 
+创建 keytool 条目后你将需要在需要密钥存储提供程序名称和密钥路径的数据库中创建列主密钥元数据。 有关如何创建列主密钥元数据的详细信息，请访问[CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)。 对于 SQLServerColumnEncryptionJavaKeyStoreProvider，注册表项路径是只需密钥的别名。 并且 SQLServerColumnEncryptionJavaKeyStoreProvider 名称为 MSSQL_JAVA_KEYSTORE。 你还可以查询使用 getName() 公共 API SQLServerColumnEncryptionJavaKeyStoreProvider 类的此名称。 
 
 用于创建列主密钥的 T-SQL 语法是：
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>使用列主密钥存储提供程序进行编程密钥预配
 
-在访问加密的列时，Microsoft JDBC Driver for SQL Server 将以透明方式查找，并调用正确的列主密钥存储提供程序来解密列加密密钥。 通常情况下，普通的应用程序代码不会直接调用列主密钥存储提供程序。 不过，你可以显式实例化并调用一个提供程序，以编程方式预配和管理始终加密密钥：以便生成加密列加密密钥以及对列加密密钥解密（例如，在列主密钥轮替过程中）。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](https://msdn.microsoft.com/library/mt708953.aspx)。
+在访问加密的列时，Microsoft JDBC Driver for SQL Server 将以透明方式查找，并调用正确的列主密钥存储提供程序来解密列加密密钥。 通常情况下，普通的应用程序代码不会直接调用列主密钥存储提供程序。 不过，你可以显式实例化并调用一个提供程序，以编程方式预配和管理始终加密密钥：以便生成加密列加密密钥以及对列加密密钥解密（例如，在列主密钥轮替过程中）。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)。
 请注意，仅当使用自定义密钥存储提供程序时，才有可能需要实现你自己的密钥管理工具。 使用密钥存储在 Windows 证书存储或 Azure 密钥保管库中时，你可以使用现有工具，如 SQL Server Management Studio 或 PowerShell，管理和预配密钥。 使用 Java 密钥存储中存储的密钥时，你需要以编程方式预配密钥。 下面的示例，演示如何使用 SQLServerColumnEncryptionJavaKeyStoreProvider 类与 Java 密钥存储中存储的密钥的密钥进行加密。
 
 ```  
@@ -650,6 +650,6 @@ connection.close();
 注意： 这可能会导致损坏数据库，因为 Microsoft JDBC Driver for SQL Server 不会检查数据确实已加密，是否正确加密使用相同的加密指定 AllowEncryptedValueModifications 时要格外小心类型、 算法和密钥与目标列。
 
 ## <a name="see-also"></a>另请参阅  
- [始终加密（数据库引擎）](https://msdn.microsoft.com/library/mt163865.aspx)  
+ [始终加密（数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
   
   

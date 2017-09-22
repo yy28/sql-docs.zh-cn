@@ -44,10 +44,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 357b2d42e404c7bcbfcd8ba8edd4714187159f0b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ea93e3764e23cd34662abd693908c6218b30e977
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="restore-statements-transact-sql"></a>还原语句 (Transact SQL)
@@ -680,7 +680,7 @@ RESTORE DATABASE Sales
 ## <a name="much-more-information"></a>详细信息!!  
  - [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
- - [Restore a Database Backup Using SSMS](https://msdn.microsoft.com/library/ms177429.aspx)
+ - [Restore a Database Backup Using SSMS](/sql-docs/docs/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
  - [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

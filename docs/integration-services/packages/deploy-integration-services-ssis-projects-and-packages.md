@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
@@ -271,7 +271,7 @@ static void Main()
   
 2.  如果项目和所有包都通过了兼容测试，则单击 **“确定”** 以转换包。  
   
-> **注意：** 若要将项目转换为项目部署模型，请使用 **Integration Services 项目转换向导**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx)。  
+> **注意：** 若要将项目转换为项目部署模型，请使用 **Integration Services 项目转换向导**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
   **Integration Services 部署向导** 支持两种部署模型：
@@ -339,7 +339,7 @@ static void Main()
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的 **“服务器环境、服务器变量和服务器环境引用”** 一节。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 **SSIS Catalog** 中的“服务器环境、服务器变量和服务器环境引用” [](../../integration-services/service/ssis-catalog.md)一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -403,7 +403,7 @@ static void Main()
 14. 单击 **“确定”** 两次以保存所做的更改。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
-  在您配置一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
+  当你将磁盘配置 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
  您还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见”  部分中的主题。  
   
@@ -415,13 +415,13 @@ static void Main()
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 >   
 >      有关日志记录级别的详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
-> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
+> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 将包含包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索的二进制内容组成[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的项目部署文件 *@project_stream* 参数，使用 SELECT 语句使用 OPENROWSET 函数和大容量行集提供程序。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
+     若要检索 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，对于 *@project_stream* 参数，请将 SELECT 语句与 OPENROWSET 函数和 BULK 行集提供程序一起使用。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   
      在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 二进制数据从项目文件 (SSISPackage_ProjectDeployment.ispac) 读取并且存储于 varbinary(max) 类型的 *@ProjectBinary* 参数中。 将 *@ProjectBinary* 参数值赋给 *@project_stream* 参数。  
   

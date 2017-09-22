@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 1fc1445538e541926b4ea3e1d593c93c5ac9d5b7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c927eece547ccd7fc2fc2ca92bcdf443e0c38a9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清除转换
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="related-content"></a>相关内容  
   
--   [打开、解锁、重命名和删除数据质量项目](https://msdn.microsoft.com/library/hh510417.aspx)  
+-   [打开、解锁、重命名和删除数据质量项目](/sql-docs/docs/data-quality-services/open-unlock-rename-and-delete-a-data-quality-project)  
   
 -   social.technet.microsoft.com 上的文章： [使用复合域清理复杂数据](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   

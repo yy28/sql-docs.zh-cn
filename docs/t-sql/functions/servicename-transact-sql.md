@@ -1,7 +1,7 @@
 ---
 title: "@@SERVICENAME (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8e93602aed47f8b5147d39eaf41503488f57a855
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d800a7dc222b3ac25777cd83964b755185817a7a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="servicename-transact-sql"></a>@@SERVICENAME (Transact SQL)
+# <a name="x40x40servicename-transact-sql"></a>& #x 40; 和 #x 40;SERVICENAME (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在其下运行的注册表项的名称。 @@SERVICENAME返回 MSSQLSERVER，如果当前实例是默认实例; 如果当前实例是命名的实例，此函数将返回的实例名称。  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@SERVICENAME  
 ```  
   
@@ -70,3 +69,4 @@ MSSQLSERVER
  [管理数据库引擎服务](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
+

@@ -30,10 +30,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06975a1a487f4627e25f3028db2ec77ce7525f21
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 4ef09ff12c41b6bb5a7610134cb317a81caaf3cf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
  基本维度安全性最容易；只需选择要在角色中包括或去除的维度属性和属性层次结构即可。 高级安全性更复杂，要求擅长 MDX 脚本编写。 下面将介绍这两种方法。  
 
 > [!NOTE]  
->  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅 [了解用于多维模型的 Power View](https://msdn.microsoft.com/library/jj969574.aspx) 。
+>  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅[了解用于多维模型的 Power View](/sql-docs/docs/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models)。
       
 ## <a name="prerequisites"></a>先决条件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  

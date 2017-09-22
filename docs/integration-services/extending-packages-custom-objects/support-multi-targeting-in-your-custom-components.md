@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf7649b06354bfa621624ddfcf22bdea90bf0467
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持在自定义组件的多目标
- 你现在可以使用 SSIS 设计器在 SQL Server Data Tools (SSDT) 来创建、 维护和运行包，该目标 SQL Server 2016、 SQL Server 2014 或 SQL Server 2012。 若要获取 Visual Studio 2015 的 SSDT，请参阅[下载最新 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。 
+ 你现在可以使用 SSIS 设计器在 SQL Server Data Tools (SSDT) 来创建、 维护和运行包，该目标 SQL Server 2016、 SQL Server 2014 或 SQL Server 2012。 若要获取 Visual Studio 2015 的 SSDT，请参阅[下载最新 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    

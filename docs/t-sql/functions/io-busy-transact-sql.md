@@ -1,7 +1,7 @@
 ---
 title: "@@IO_BUSY (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -27,13 +27,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef13f65af269167eba7c8df53c35ecfd992df6e0
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 48e1bcd5a80825715ad6aed8649dad843e92c1ea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="iobusy-transact-sql"></a>@@IO_BUSY (Transact SQL)
+# <a name="x40x40iobusy-transact-sql"></a>& #x 40; & #x 40; IO_BUSY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最近一次启动以来，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已经用于执行输入和输出操作的时间。 其结果是 CPU 时间增量（时钟周期），并且是所有 CPU 的累积值，所以，它可能超过实际消逝的时间。 乘以@TIMETICKS将转换为微秒为单位。  
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@IO_BUSY  
 ```  
   
@@ -80,3 +79,4 @@ IO microseconds as of
  [系统统计函数 &#40;Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

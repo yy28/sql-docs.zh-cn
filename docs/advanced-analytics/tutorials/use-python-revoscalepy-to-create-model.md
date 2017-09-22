@@ -2,8 +2,8 @@
 title: "使用与 revoscalepy Python 创建模型 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用与 revoscalepy Python 创建模型
 
-此示例演示如何在 SQL Server，使用从算法创建逻辑回归模型**revoscalepy**包。
+此示例演示如何在 SQL Server，使用从算法创建线性回归模型**revoscalepy**包。
 
 **Revoscalepy**打包 Python 包含对象，转换，并为提供的算法类似于**RevoScaleR** R 语言包。 使用此库中，你可以创建计算上下文，移动之间的数据计算上下文、 转换数据，和使用受欢迎的算法，如逻辑和线性回归、 决策树，以及更多的预测模型定型。
 
-有关详细信息，请参阅[revoscalepy 是什么？](../python/what-is-revoscalepy.md)
+有关详细信息，请参阅[revoscalepy 是什么？](../python/what-is-revoscalepy.md)和[Python 函数引用](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -112,8 +112,8 @@ def test_linmod_sql():
 
 数据源是不同的计算上下文。 _数据源_定义在代码中使用的数据。 _计算上下文_定义才能执行的代码。
 
-1. 创建 Python 变量，如`sql_query`和`sql_connection_string`，定义在源和你想要使用的数据。 将这些变量传递到 RxSqlServerData 构造函数来实现**数据源对象**名为`data_source`。
-2. 通过创建计算上下文对象**RxInSqlServer**构造函数。 在此示例中，你将传递定义你将使用作为计算上下文的相同 SQL Server 实例上的数据是假定的更早版本，相同的连接字符串。 但是，数据源和计算上下文可能在不同服务器上。 生成**计算上下文对象**名为`sql_cc`。
+1. 创建 Python 变量，如`sql_query`和`sql_connection_string`，定义在源和你想要使用的数据。 将对这些变量传递[RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)构造函数来实现**数据源对象**名为`data_source`。
+2. 通过创建计算上下文对象[RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)构造函数。 在此示例中，你将传递定义你将使用作为计算上下文的相同 SQL Server 实例上的数据是假定的更早版本，相同的连接字符串。 但是，数据源和计算上下文可能在不同服务器上。 生成**计算上下文对象**名为`sql_cc`。
 3. 选择的主动计算上下文。 默认情况下，操作在本地运行，这意味着，如果没有指定不同的计算上下文、 将从数据源提取数据和模型调整将在你当前的 Python 环境中运行。
 
 ### <a name="changing-compute-contexts"></a>更改计算上下文
@@ -126,17 +126,15 @@ def test_linmod_sql():
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-你还可以使用该函数**rxsetcomputecontext**已定义的计算上下文之间进行切换。 
+你还可以使用该函数[rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context)已定义的计算上下文之间进行切换。
 
 ### <a name="setting-the-degree-of-parallelism"></a>设置并行度
 
-当你定义的计算上下文时，你还可以设置参数计算上下文中的数据的处理方式该控件。 这些参数与不同，具体取决于数据源类型。 
+当你定义的计算上下文时，你还可以设置参数计算上下文中的数据的处理方式该控件。 这些参数与不同，具体取决于数据源类型。
 
 对于 SQL Server 计算上下文，你可以设置批大小，或提供有关要在正在运行的任务中使用的并行度提示。
 
-该示例已具有四个处理器的计算机上运行，因此我们将设置*num_tasks*为 4 的参数。 如果此值设置为 0 时，SQL Server 将使用默认设置，即能够尽可能情况下，在服务器的当前 MAXDOP 设置并行运行多个任务。 但是，即使在处理器较多的服务器，可能会分配的任务的精确数目取决于许多其他因素，如服务器设置和运行其他作业。 
-
-有关详细信息，请参阅[RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)。
+该示例已具有四个处理器的计算机上运行，因此我们将设置*num_tasks*为 4 的参数。 如果此值设置为 0 时，SQL Server 将使用默认设置，即能够尽可能情况下，在服务器的当前 MAXDOP 设置并行运行多个任务。但是，即使在处理器较多的服务器，可能会分配的任务的精确数目取决于许多其他因素，如服务器设置和运行其他作业。
 
 ## <a name="related-samples"></a>相关的示例
 

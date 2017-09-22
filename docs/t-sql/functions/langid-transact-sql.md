@@ -1,7 +1,7 @@
 ---
 title: "@@LANGID (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e27e2678cd5c54f44711ecd3d5d1d75a85f1a16
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 39d66c56a3cb0b21d8955dfe56dc5083472ec372
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="langid-transact-sql"></a>@@LANGID (Transact SQL)
+# <a name="x40x40langid-transact-sql"></a>& #x 40; 和 #x 40;LANGID (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回当前使用的语言的本地语言标识符 (ID)。  
@@ -42,7 +42,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@LANGID  
 ```  
   
@@ -75,3 +74,4 @@ Language ID
  [sp_helplanguage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
+

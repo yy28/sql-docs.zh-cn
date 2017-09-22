@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -357,10 +357,10 @@ ms.lasthandoff: 08/03/2017
   
     ```  
   
-     有关如何使用 Windows PowerShell 的更多示例和<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间，请参阅博客文章[SSIS 和 SQL Server 2012 中的 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)，blogs.msdn.com 上的。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     有关如何使用 Windows PowerShell 的更多示例和<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间，请参阅博客文章[SSIS 和 SQL Server 2012 中的 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)，blogs.msdn.com 上的。有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](http://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
-  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。 SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
+  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
   
  您还可以在 catalog.catalog_property 视图中查看目录属性，并且通过使用 catalog.configure_catalog 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)和 [catalog.configure_catalog（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
@@ -394,7 +394,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>备份、 还原和移动 SSIS 目录
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
   
  **SSISDB** 目录存储您部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包。 有关该目录的详细信息，请参阅 [SSIS 目录](../../integration-services/service/ssis-catalog.md)。  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 08/03/2017
      ![查看 SSISDB 升级向导中的结果](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "查看 SSISDB 升级向导中的结果")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Alwayson 的 SSIS 目录 (SSISDB)
-  AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组针对一组离散的用户数据库（称为可用性数据库，它们共同实现故障转移）支持故障转移环境。 有关详细信息，请参阅 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510230.aspx)。  
+  AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组针对一组离散的用户数据库（称为可用性数据库，它们共同实现故障转移）支持故障转移环境。 有关详细信息，请参阅 [AlwaysOn 可用性组](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
   
  为了对 SSIS 目录 (SSISDB) 及其内容（项目、包、执行日志等）提供高可用性，可以将 SSISDB 数据库（与其他任何用户数据库相同）添加到 AlwaysOn 可用性组。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  在群集的每个节点上安装具有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
-3.  为每个 SQL Server 实例启用 Alwayson 可用性组。 有关详细信息，请参阅 [启用 AlwaysOn 可用性组](https://msdn.microsoft.com/library/ff878259.aspx) 。  
+3.  为每个 SQL Server 实例启用 Alwayson 可用性组。 有关详细信息，请参阅 [启用 AlwaysOn 可用性组](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) 。  
   
 ###  <a name="Firsttime"></a> 为 AlwaysOn 配置 SSIS 支持  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 08/03/2017
   
 3.  单击 **“启用 CLR 集成”**。 该目录使用 CLR 存储过程。  
   
-4.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) 存储过程在每次重启 SSIS 服务器后运行。 该存储过程对 SSISDB 目录的操作状态进行维护。 它可以修复当 SSIS 服务器实例出现故障时正在运行的任何包的状态。  
+4.  单击“在 SQL Server 启动时启用自动执行 Integration Services 存储过程”  ，使 [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) 存储过程在每次重启 SSIS 服务器后运行。 该存储过程对 SSISDB 目录的操作状态进行维护。 它可以修复当 SSIS 服务器实例出现故障时正在运行的任何包的状态。  
   
-5.  输入 **密码**，然后单击“确定” 。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [备份数据库主密钥](https://msdn.microsoft.com/library/aa337546.aspx)。  
+5.  输入 **密码**，然后单击“确定” 。 该密码保护用于对目录数据进行加密的数据库主密钥。 将该密码保存在安全的位置。 同时建议您也备份数据库主密钥。 有关详细信息，请参阅 [备份数据库主密钥](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key)。  
   
 ####  <a name="Step2"></a> 步骤 2：将 SSISDB 添加到 AlwaysOn 可用性组  
- 将 SSISDB 数据库添加到 AlwaysOn 可用性组的方法与将任何其他用户数据库添加到可用性组的方法几乎相同。 请参阅 [使用可用性组向导](https://msdn.microsoft.com/library/hh403415.aspx)。  
+ 将 SSISDB 数据库添加到 AlwaysOn 可用性组的方法与将任何其他用户数据库添加到可用性组的方法几乎相同。 请参阅 [使用可用性组向导](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)。  
   
  你需要提供在“新建可用性组”  向导的“选择数据库”  页面中创建 SSIS 目录时指定的密码。  
   

@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
@@ -96,13 +96,13 @@ Docker 支持在同一主机上运行多个 SQL Server 容器。 这就为要求
 下面的示例创建两个 SQL Server 容器，并将它们映射到端口**1401年**和**1402年**主机计算机上。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 现在，两个 SQL Server 实例在单独的容器内运行。 客户端可通过使用 Docker 主机的 IP 地址和容器的端口号连接每个 SQL Server 实例。
@@ -129,11 +129,11 @@ SQL Server 配置更改和数据库文件会保留容器，即使您重新启动
 第一种方法是在主机上装载目录，将其作为容器中的数据卷。 为此，请使用`docker run`命令`-v <host directory>:/var/opt/mssql`标志。 这允许在容器执行之间还原数据。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 通过此方法，还能共享和查看位于主机上、Docker 外的文件。
@@ -146,11 +146,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 第二个方法是使用数据卷容器。 可以通过指定卷名称而不是与主机目录中创建数据卷容器`-v`参数。 下面的示例创建名为的共享的数据卷**sqlvolume**。
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -170,6 +170,7 @@ docker volume ls
 > 如果你删除数据卷容器，容器中的任何 SQL Server 数据是*永久*删除。
 
 ### <a name="backup-and-restore"></a>备份和还原
+
 除这些容器技术外，还可使用 SQL Server 标准备份和还原技术。 可通过备份文件来保护数据，或将数据移动至其他 SQL Server 实例。 有关详细信息，请参阅[SQL Server 备份和还原数据库在 Linux 上](sql-server-linux-backup-and-restore-database.md)。
 
 > [!WARNING]
@@ -210,6 +211,8 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 ```PowerShell
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
+
+## <a name="copy-files-into-a-container"></a>将文件复制到容器
 
 要将文件复制到容器中，请使用下列命令：
 
@@ -313,11 +316,11 @@ sudo systemctl start docker
 - 如果你收到错误，例如**无法在网桥上创建终结点 CONTAINER_NAME。启动代理时出错： 侦听 tcp 0.0.0.0:1433 绑定： 已在使用的地址。**，然后尝试将容器端口 1433年映射到已在使用的端口。 在主机上本地运行 SQL Server 时可能发生此错误。 如果启动了两个 SQL Server 容器，并尝试将它们映射到同一主机端口，也可能发生此错误。 如果发生这种情况，使用`-p`参数映射到不同的主机的端口的容器端口 1433年。 例如： 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - 检查是否有任何来自容器的错误消息。
@@ -331,6 +334,14 @@ sudo systemctl start docker
 - 如果正在使用任何容器管理软件，请确保它支持以根身份运行的容器进程。 容器中的 sqlservr 进程以根身份运行。
 
 - 查看[SQL Server 安装程序和错误日志](#errorlogs)。
+
+### <a name="enable-dump-captures"></a>启用转储捕获
+
+如果 SQL Server 进程在容器内失败，则应创建具有的新容器**SYS_PTRACE**启用。 这将添加跟踪过程中，这是用于创建上一个异常的转储文件所必需的 Linux 功能。 支持可以使用该转储文件以帮助排查问题。 以下 docker run 命令启用此功能。
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+```
 
 ### <a name="sql-server-connection-failures"></a>SQL Server 连接故障
 

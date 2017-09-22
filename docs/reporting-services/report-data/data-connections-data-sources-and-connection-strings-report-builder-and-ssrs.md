@@ -1,7 +1,7 @@
 ---
 title: "数据连接、 数据源、 连接字符串报表生成器的 SSRS |Microsoft 文档"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,32 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [Reporting Services], data sources
-- reports [Reporting Services], data
-- expressions [Reporting Services], data sources
-- data sources [Reporting Services], connections
-- connection strings [Reporting Services]
-- shared data sources [Reporting Services]
-- Reporting Services, data sources
-- logins [Reporting Services]
-ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 118
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
+ms.translationtype: MT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: a0930e4f060379be894870fe6ac22b85cd225283
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)][!包括 [ssrs-appliesto-sharepoint-2013年-2016i].../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已分页的报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已分页的报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享数据集 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -176,4 +167,4 @@ ms.lasthandoff: 08/09/2017
 [设置部署属性](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

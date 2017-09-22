@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e5e277b421f98dbabedcb4df80ee902ea87fbd1
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="data-sources"></a>数据源
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 > **注意：** 只能将数据源添加到配置为使用包部署模型的项目。 如果将项目配置为使用项目部署模型，您使用在项目级别创建的连接管理器来共享连接，而不使用数据源。  
 >   
->  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)。  
+>  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据源的好处如下：  
   

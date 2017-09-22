@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2661e1b32d604f4bdda75d478af9d9ea48ea2d4d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 库和 R 数据类型
@@ -80,7 +80,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="data-types-not-supported-by-r"></a>R 不支持的数据类型
 
-在 [SQL Server 类型系统](https://msdn.microsoft.com/library/ms187752.aspx)支持的数据类型类别中，如果将以下类型传递给 R 代码，则有可能会造成问题：
+在 [SQL Server 类型系统](/sql-docs/docs/t-sql/data-types/data-types-transact-sql)支持的数据类型类别中，如果将以下类型传递给 R 代码，则有可能会造成问题：
 
 + 中列出的数据类型**其他**SQL 类型系统主题的部分：**光标**，**时间戳**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**表**
 + 所有空间类型
@@ -111,7 +111,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 
 从数据库检索要在 R 代码中使用的数据时，始终应该消除无法在 R 中使用的列以及不可用于分析的列，例如 GUID（唯一标识符）、时间戳和用于审核的其他列，或者 ETL 进程创建的沿袭信息。 
 
-请注意，包含不必要的列可以会极大降低 R 代码的性能，尤其是将高基数列用作因子时。 因此，我们建议使用 SQL Server 系统存储过程和信息视图来提前获取给定表的数据类型，并消除或转换不兼容的列。 有关详细信息，请参阅 [Information Schema Views in Transact-SQL](https://msdn.microsoft.com/library/ms186778.aspx)（Transact-SQL 中的信息架构视图）
+请注意，包含不必要的列可以会极大降低 R 代码的性能，尤其是将高基数列用作因子时。 因此，我们建议使用 SQL Server 系统存储过程和信息视图来提前获取给定表的数据类型，并消除或转换不兼容的列。 有关详细信息，请参阅 [Information Schema Views in Transact-SQL](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)（Transact-SQL 中的信息架构视图）
 
 如果某个特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不受 R 支持，但你需要在 R 脚本中使用数据列，我们建议在 R 脚本中使用这些数据之前，使用 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数确保数据类型转换按预期执行。  
 

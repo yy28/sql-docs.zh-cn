@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cc307b473ce31150de8a970a6d44e46dcdc04c3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件时，也会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务已启动，该服务的启动类型已设置为自动。 不过，若要使用该服务来管理已存储的和正在运行的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包，还必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
 > [!NOTE]
-> 若要直接连接到旧 Integration Services 服务的实例，则必须使用与正在运行 Integration Services 服务的 SQL Server 版本保持一致的 SQL Server Management Studio (SSMS) 版本。 例如，要连接到在 SQL Server 2016 的实例上运行的旧 Integration Services 服务，则必须使用 SQL Server 2016 的 SSMS 版本。 [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
+> 若要直接连接到旧 Integration Services 服务的实例，则必须使用与正在运行 Integration Services 服务的 SQL Server 版本保持一致的 SQL Server Management Studio (SSMS) 版本。 例如，要连接到在 SQL Server 2016 的实例上运行的旧 Integration Services 服务，则必须使用 SQL Server 2016 的 SSMS 版本。 [下载 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
 >
 >   在 SSMS 的“连接到服务器”对话框中，不能输入正在运行早期版本 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的服务器的名称。 但是，若要管理存储在某远程服务器上的包，则不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。   
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  在 **“SQL Server Integration Services 属性”** 对话框中，可以执行下列操作：  
   
-    -   单击 **“常规”** 选项卡。 若要启用该服务，请选择手动或自动启动类型。 若要禁用该服务，请选择 **“启动类型”** 框中的“禁用”。 选择“禁用”不会停止当前正在运行的服务。  
+    -   单击 **“常规”** 选项卡。若要启用该服务，请选择手动或自动启动类型。 若要禁用该服务，请选择 **“启动类型”** 框中的“禁用”。 选择“禁用”不会停止当前正在运行的服务。  
   
          如果该服务已经启用，则可以单击 **“停止”** 停止该服务，或单击 **“启动”** 启动该服务。  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 08/03/2017
  若要从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其他管理应用程序连接到远程服务器上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实例，应用程序的用户需要拥有服务器上的一组特定权限。  
   
 > [!IMPORTANT]
-> 若要直接连接到旧 Integration Services 服务的实例，则必须使用与正在运行 Integration Services 服务的 SQL Server 版本保持一致的 SQL Server Management Studio (SSMS) 版本。 例如，要连接到在 SQL Server 2016 的实例上运行的旧 Integration Services 服务，则必须使用 SQL Server 2016 的 SSMS 版本。 [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
+> 若要直接连接到旧 Integration Services 服务的实例，则必须使用与正在运行 Integration Services 服务的 SQL Server 版本保持一致的 SQL Server Management Studio (SSMS) 版本。 例如，要连接到在 SQL Server 2016 的实例上运行的旧 Integration Services 服务，则必须使用 SQL Server 2016 的 SSMS 版本。 [下载 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
 >
 >  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。
   

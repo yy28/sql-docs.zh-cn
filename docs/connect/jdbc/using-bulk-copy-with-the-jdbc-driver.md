@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
@@ -858,7 +858,7 @@ public class Program
  下面的应用程序演示了如何使用 SQLServerBulkCopy 类加载数据。 在此示例中，CSV 文件用于将从 SQL Server AdventureWorks 数据库中的 Production.Product 表导出的数据复制到数据库中的一个类似表。  
   
 > [!IMPORTANT]  
->  除非你已创建了工作表中所述，将不会运行此示例[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)。 还必须使用从 Production.Product 表中导出的数据创建 CSV 文件，并且可使用 SQL Server Management Studio (SSMS) 执行此操作。  如果你没有 SSMS，你可以访问[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)即可使用它。  
+>  除非你已创建了工作表中所述，将不会运行此示例[表设置](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)即可使用它。  
   
 1.  打开**SQL Server Management Studio**并连接到 SQL Server 使用 AdventureWorks 数据库。  
   

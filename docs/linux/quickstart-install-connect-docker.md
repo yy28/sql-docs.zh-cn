@@ -4,16 +4,16 @@ description: "此快速入门教程演示如何使用 Docker 运行 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 7fe6626cf8c5b9b348e95b956cee9ac67db16f97
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>使用 Docker 运行 SQL Server 2017 容器映像
@@ -73,13 +73,13 @@ ms.lasthandoff: 08/29/2017
 1. 若要使用 Docker 运行容器映像，可以使用以下命令从 bash shell (Linux/macOS):
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     如果你使用的用于 Windows 的 Docker，使用提升的 PowerShell 命令的提示符中的以下命令：
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]
@@ -92,9 +92,10 @@ ms.lasthandoff: 08/29/2017
     | **-e ACCEPT_EULA = Y** |  设置**ACCEPT_EULA**变量为任何值，以确认你接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
     | **-e MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定你自己的强密码至少 8 个字符并达到[SQL 服务器的密码要求](../relational-databases/security/password-policy.md)。 SQL Server 映像的必需设置。 |
     | **-e MSSQL_PID = 开发人员** | 指定的版本或产品密钥。 在此示例中，随意许可的开发人员版适用于非生产测试。 其他值，请参阅[与环境变量在 Linux 上配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。 |
-    | **-cap 添加 SYS_PTRACE** | 增加了 Linux 功能来跟踪进程。 这使 SQL Server 生成转储在出现异常。 |
     | **-p 1401:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听 TCP 1433 容器中，并且这公开给端口 1401，主机上。 |
+    | **-名称 sqlcontainer1** | 指定容器，而不是一个随机生成的自定义名称。 如果你运行多个容器，你无法重用此相同的名称。 |
     | **microsoft/mssql-服务器的 linux** | SQL Server Linux 容器映像。 除非另行指定，则默认为**最新**映像。 |
+
 
 1. 若要查看你的 Docker 容器，请使用`docker ps`命令。
 
@@ -108,7 +109,7 @@ ms.lasthandoff: 08/29/2017
 
 1. 如果**状态**列显示的状态**向上**，然后在容器中运行 SQL Server 且在侦听端口指定**端口**列。 如果**状态**你 SQL 服务器容器显示的列**Exited**，请参阅[故障排除部分中的配置指南](sql-server-linux-configure-docker.md#troubleshooting)。
 
-有两个有用`docker run`不使用在前面的示例为简单起见选项。 `-h` （主机名） 参数更改为自定义值的容器的内部名称。 这是你将看到以下 TRANSACT-SQL 查询中返回的名称：
+`-h` （主机名） 参数也非常有用，但不是使用在本教程中为简单起见，它。 这会容器的内部名称更改为自定义值。 这是你将看到以下 TRANSACT-SQL 查询中返回的名称：
 
 ```sql
 SELECT @@SERVERNAME,
@@ -117,7 +118,7 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-你还可能会发现`--name`有用命名你的容器，而不是拥有生成的容器名称的参数。 设置`-h`和`--name`为相同的值是一种好方法，可以轻松地识别目标容器。
+设置`-h`和`--name`为相同的值是一种好方法，可以轻松地识别目标容器。
 
 ## <a name="change-the-sa-password"></a>更改 SA 密码
 
@@ -125,24 +126,25 @@ SA 帐户是在安装过程中创建的 SQL Server 实例上的系统管理员�
 
 1. 选择要使用 SA 用户的强密码。
 
-1. 使用`docker exec`运行**sqlcmd**若要使用 TRANSACT-SQL 更改密码。 替换`<Old Password>`和`<New Password>`替换为您的密码值。
+1. 使用`docker exec`运行**sqlcmd**若要使用 TRANSACT-SQL 更改密码。 替换`<YourStrong!Passw0rd>`和`<YourNewStrong!Passw0rd>`与你自己的密码值。
 
-> ```bash
-> docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Old Password>' -Q 'ALTER LOGIN SA WITH PASSWORD="<New Password>";'
-> ```
+   ```bash
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+
+   ```PowerShell
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong!Passw0rd>" -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
 
 ## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
 下列步骤将使用 SQL Server 命令行工具， **sqlcmd**，要连接到 SQL Server 的容器内。
 
-1. 使用`docker exec -it`命令来启动交互式 bash shell 内你正在运行的容器。 在下面的示例`e69e056c702d`是容器 id。
+1. 使用`docker exec -it`命令来启动交互式 bash shell 内你正在运行的容器。 在下面的示例`sqlcontainer1`由指定名称`--name`参数创建容器时。
 
     ```bash
-    docker exec -it e69e056c702d "bash"
+    docker exec -it sqlcontainer1 "bash"
     ```
-
-    > [!TIP]
-    > 无需始终指定完整的容器 ID。只需要指定足够的字符，能够唯一标识它即可。 在此示例中，它可能是足够用于`e6`或`e69`而不是完整的 id。
 
 1. 一旦位于容器内部，使用 sqlcmd 进行本地连接。 Sqlcmd 不在默认情况下，路径因此你必须指定完整路径。
 

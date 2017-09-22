@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/01/2017
 -   [对于非聚集列存储索引的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 请转到方案：  
--   [列存储索引进行实时运行分析](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [针对数据仓库的列存储索引](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [列存储索引进行实时运行分析](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [针对数据仓库的列存储索引](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
   
 了解更多信息：  
--   [列存储索引指南](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [列存储索引功能摘要](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [列存储索引指南](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
+-   [列存储索引功能摘要](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ ON
 ##  <a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每个列必须是以下常见业务数据类型之一：** 
--   datetimeoffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
+-   datetimeoffset [( * n * )]  
+-   datetime2 [( * n * )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   时间 [(  *n*  )]  
--   float [(  *n*  )]  
--   实际 [(  *n*  )]  
+-   时间 [( * n * )]  
+-   float [( * n * )]  
+-   实际 [( * n * )]  
 -   十进制 [(*精度*[ *，缩放*] **)** ]
 -   数字 [(*精度*[ *，缩放*] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [( * n * )] 
 -   nvarchar (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [( * n * )]  
+-   varchar [( * n * )]  
 -   varchar （max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [( * n * )]  
+-   varbinary [( * n * )] 
 -   varbinary (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   二进制 [(  *n*  )]  
+-   二进制 [( * n * )]  
 -   uniqueidentifier (适用于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]及更高版本)
   
 如果基础表具有列存储索引不支持数据类型的列，则必须省略该列从非聚集列存储索引。  

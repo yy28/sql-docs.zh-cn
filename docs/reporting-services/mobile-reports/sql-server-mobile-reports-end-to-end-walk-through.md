@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表： 端到端演练
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="before-we-start"></a>准备工作  
 若要继续，需要准备这些产品：  
   
-* 若要创建数据源和 Kpi，并将数据集和移动报表发布，你需要访问[!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)][处于本机模式报表服务器](https://msdn.microsoft.com/library/ms143711.aspx)。  
-* 要 [创建共享数据集](#shared-dataset)，需 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)。  
+* 若要创建数据源和 Kpi，并将数据集和移动报表发布，你需要访问 [！包括[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server)。  
+* 到[创建共享数据集](/sql-docs/docs/reporting-services/install-windows/install-report-builder)。  
 * 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks 示例数据库和脚本](http://msftdbprodsamples.codeplex.com/)。  
-*  或：World Wide Importers 示例数据库，请参阅 [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) （Microsoft SQL Server 示例）。
+*  OR: World Wide Importers 示例数据库，可从[Microsoft SQL Server 示例](/sql-docs/docs/sample/microsoft-sql-server-samples)页。
 * 查看结果： 
   *   [注册 Power BI 服务](http://go.microsoft.com/fwlink/?LinkID=513879) 并
   *  [下载 Power BI 移动应用](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
   
-可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅 [支持的数据源列表](https://msdn.microsoft.com/library/ms159219.aspx)。  
+可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源的列表](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)。  
   
 1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **数据源**。  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 08/09/2017
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-阅读以深入了解 [Reporting Services 中的共享数据源](https://msdn.microsoft.com/library/ms155845.aspx)。  
+阅读以深入了解 [Reporting Services 中的共享数据源](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs)。  
    
 ## <a name="shared-dataset">创建共享数据集</a>  
   
-使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。   
+使用现有 [！包括[库](/sql-docs/docs/reporting-services/install-windows/install-report-builder)，或启动从 web 门户。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。   
   
 1. 从你[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]web 门户中，单击**新建** > **分页报表**启动[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   

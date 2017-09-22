@@ -1,7 +1,7 @@
 ---
 title: "Claims to Windows Token Service (c2WTS) 和 Reporting Services |Microsoft 文档"
-ms.custom: 
-ms.date: 08/17/2017
+ms.custom: The Claims to Windows Token Service (C2WTS) is used by SharePoint and needs to be configured for Kerberos constrained delegation to work with SQL Server Reporting Services properly.
+ms.date: 09/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,113 +9,98 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- c2wts.exe.config
-- SharePoint mode
-- C2WTS
-- WSS_WPG
-ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0190e9e7a7194f6d848b56a72953f81a0002f98
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/15/2017
 
 ---
-# <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (c2WTS) 和 Reporting Services
+# <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  如果你想要对 SharePoint 场外的数据源使用 Windows 身份验证，需要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下使用 SharePoint Claims to Windows Token Service (c2WTS)。 即使用户使用 Windows 身份验证访问数据源，上述要求也是成立的。其原因在于，Web 前端 (WFE) 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务之间的通信将始终是声明身份验证。  
-  
- 即使你的数据源与共享服务位于相同的计算机上，也需要 c2WTS。 但在此方案中，不需要约束委派。  
-  
- c2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以及配置选项“使用任何身份验证协议”。 如前所述，如果您的数据源与共享服务位于同一台计算机上，则不需要约束委派。  
-  
- 如果您的环境将使用 Kerberos 约束委派，则 SharePoint 服务器服务和外部数据源需要位于同一 Windows 域中。 依赖于 Claims to Windows Token Service (c2WTS) 的所有服务都必须使用 Kerberos **约束** 委派，以便允许 c2WTS 使用 Kerberos 协议转换将声明转换为 Windows 凭据。 这些规定适用于所有 SharePoint 共享服务。 有关详细信息，请参阅 [在 SharePoint 2013 中规划 Kerberos 身份验证](http://technet.microsoft.com/library/ee806870.aspx)。  
-  
- 本主题将概述此过程。
+如果你想要查看在本机模式报表，则需要 SharePoint Claims to Windows Token Service (C2WTS) [SQL Server Reporting Services 报表查看器 web 部件](../report-server-sharepoint/deploy-report-viewer-web-part.md)。
 
-## <a name="prerequisites"></a>先决条件
+如果你想要对 SharePoint 场之外的数据源使用 Windows 身份验证，则也与 SQL Server Reporting Services SharePoint 模式需要 C2WTS。 即使您的数据源与共享服务位于相同的计算机上，也需要 C2WTS。 但在此方案中，不需要约束委派。
 
 > [!NOTE]
->  请注意，某些配置步骤可能会更改，或者在某些场拓扑中不适用。 例如，单服务器安装并不支持 Windows Identity Foundation c2WTS 服务，因此，在该场配置中不可能实现 Claims to Windows Token 委派方案。
+> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
 
-> [!IMPORTANT]
-> 如果将 Power View 与 Power Pivot 工作簿配合工作，将需要为 [Office Online 服务器概述](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx)进行其他配置。 有关详细信息，请参阅以下白皮书。 
->
-> - [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
-> 
-> - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
-  
-### <a name="basic-steps-needed-to-configure-c2wts"></a>配置 c2WTS 所需的基本步骤  
-  
-1.  配置 c2WTS 服务帐户。 将该服务帐户添加到运行 c2WTS 的每个应用程序服务器上的本地管理员组。 此外，确认该帐户具有以下本地安全策略权限：  
-  
-    -   以操作系统方式操作  
-  
-    -   在身份验证后模拟客户端  
-  
-    -   作为服务登录  
-  
-2.  配置 c2WTS 服务帐户的委派。 该帐户需要具有协议转换的约束委派，并且需要相应权限以便委派给需要与之通信的服务（即 SQL Server 引擎、SQL Server Analysis Services）。 若要配置委派，你可以使用 Active Directory 用户和计算机管理单元。  
+## <a name="report-viewer-web-part-configuration"></a>报表查看器 web 部件配置
+
+可以使用报表查看器 web 部件嵌入 SharePoint 站点中的 SQL Server Reporting Services 本机模式报表。 此 web 部件是可用于 SharePoint 2013 和 SharePoint 2016。 SharePoint 2013 和 SharePoint 2016 使得使用的声明的身份验证。 默认情况下，SQL Server Reporting Services （本机模式） 使用 Windows 身份验证。 因此，C2WTS 需要正确配置以便正确呈现的报表。
+
+## <a name="sharepoint-mode-integaration"></a>SharePoint 模式 integaration
+
+**本部分仅适用到 SQL Server 2016 Reporting Services 及更早版本。**
+
+如果你想要对 SharePoint 场之外的数据源使用 Windows 身份验证 SharePoint Claims to Windows Token Service (C2WTS) 需要与 SQL Server Reporting Services SharePoint 模式。 即使用户访问使用 Windows 身份验证的数据源，因为之间的通信 web 前端 (WFE) 和 Reporting Services 共享的服务将始终为声明的身份验证，也是如此。
+
+## <a name="steps-needed-to-configure-c2wts"></a>配置 c2WTS 所需的步骤
+
+C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以及配置选项“使用任何身份验证协议”。 如前所述，如果您的数据源与共享服务位于同一台计算机上，则不需要约束委派。
+
+如果您的环境将使用 Kerberos 约束委派，则 SharePoint 服务器服务和外部数据源需要位于同一 Windows 域中。 依赖于 Claims to Windows Token Service (c2WTS) 的所有服务都必须使用 Kerberos **约束** 委派，以便允许 c2WTS 使用 Kerberos 协议转换将声明转换为 Windows 凭据。 这些规定适用于所有 SharePoint 共享服务。 有关详细信息，请参阅 [在 SharePoint 2013 中规划 Kerberos 身份验证](http://technet.microsoft.com/library/ee806870.aspx)。  
+
+1. 配置 C2WTS 服务帐户。 将服务帐户添加到 C2WTS，将会使用每个服务器上的本地管理员组。
+
+    有关**报表查看器 web 部件**，这将是 Web 前端 (WFE) 服务器。 有关**SharePoint 集成模式下**，这将是 Reporting Services 服务正在其中运行的应用程序服务器。
+
+2. 配置 C2WTS 服务帐户的委派。
+
+    该帐户需要具有协议转换和权限以便委派给它的所需进行通信 （即 SQL Server 数据库引擎，SQL Server Analysis Services） 的服务的约束委派。 若要配置委派你可以使用 Active Directory 用户和计算机管理单元中，并且将需要是域管理员。
 
     > [!IMPORTANT]
-    > 无论在委派选项卡上为 C2WTS 服务帐户配置何种设置，都需要与 Reporting Services 服务帐户相匹配。 例如，如果你允许将 C2WTS 服务帐户委派给 SQL 服务，则需要对 Reporting Services 服务帐户执行相同操作。
-  
-    1.  右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。  
-  
-        > [!NOTE]  
-        >  请注意，只有在对象具有分配给它的服务主体名 (SPN) 的情况下，“委派”选项卡才可见。 c2WTS 不要求在 c2WTS 帐户上的 SPN 但是，如果没有 SPN，**委派**选项卡将不可见。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。  
-  
-    2.  “委派”选项卡上的主要配置选项如下：  
-  
-        -   选择“仅信任此用户对指定服务的委派”  
-  
-        -   选择“使用任何身份验证协议”  
+    > 任何设置你配置 C2WTS 服务帐户，在委派选项卡上，需要匹配主服务所使用的帐户。 有关**报表查看器 web 部件**，这将是 SharePoint web 应用程序的服务帐户。 有关**SharePoint 集成模式下**，这将是 Reporting Services 服务帐户。
+    >
+    > 例如，如果你允许 C2WTS 服务帐户委派给 SQL 服务，你需要执行相同的在 SharePoint 集成模式下的 Reporting Services 服务帐户。
 
-    3. 选择“添加”以添加要委派的服务。
-    
-    4. 选择**用户或计算机...*** 并输入承载服务的帐户。 例如，如果名为的帐户下运行 SQL Server *sqlservice*，输入`sqlservice`。
-    
-    5. 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。
-    
-    6. 选择“确定”以退出对话框。
-  
-3.  配置 c2WTS“AllowedCallers”  
-  
-     c2WTS 需要在配置文件 **c2WTShost.exe.config**中显式列出的“调用方”标识。 c2WTS 不接受来自系统中所有验证了身份的用户的请求，除非配置为这样做。 在此情况下，“调用方”是 WSS_WPG Windows 组。 c2WTShost.exe.confi 文件保存在以下位置：  
-     
-     > [!NOTE]
-     > 在 SharePoint 管理中心为 C2WTS 服务更改服务帐户，会将该帐户添加到 WSS_WPG 组中。
-  
-     **\Program Files\Windows Identity Foundation\v3.5\c2WTShost.exe.config**  
-  
-     下面是该配置文件的示例：  
-  
-    ```  
-    <configuration>  
-      <windowsTokenService>  
+    * 右键单击各服务帐户并且打开“属性”对话框。 在该对话框中，单击 **“委派”** 选项卡。
+
+        委派选项卡才可见，如果该对象具有服务主体名称 (SPN) 分配给它。 C2WTS 不要求在 C2WTS 帐户上的 SPN 但是，如果没有 SPN，**委派**选项卡将不可见。 配置约束委派的另一个方法是使用 **ADSIEdit**之类的实用工具。
+
+    * “委派”选项卡上的主要配置选项如下：
+
+        * 选择**信任仅委派到指定服务的用户**
+        * 选择**使用任何身份验证协议**
+
+    * 选择“添加”以添加要委派的服务。
+
+    * 选择**用户或计算机...*** 并输入承载服务的帐户。 例如，如果名为的帐户下运行 SQL Server *sqlservice*，输入`sqlservice`。 
+
+    * 选择服务列表。 将显示该帐户可用的 SPN。 如果在该帐户上没有看到列出的服务，则它可能已丢失或放置在不同的帐户上。 可以使用 SetSPN 实用工具调整 SPN。
+
+    * 选择“确定”以退出对话框。
+
+3. 配置 C2WTS *AllowedCallers*。
+
+    C2WTS 需要调用方标识显式配置文件中列出**C2WTShost.exe.config**。C2WTS 不接受来自系统中所有验证了身份的用户的请求，除非配置为这样做。 在这种情况下，调用方是 WSS_WPG Windows 组。 C2WTShost.exe.confi 文件保存在以下位置：
+
+    在 SharePoint 管理中心为 C2WTS 服务更改服务帐户，会将该帐户添加到 WSS_WPG 组中。
+
+    **\Program Files\Windows Identity Foundation\v3.5\c2WTShost.exe.config**
+
+    下面是该配置文件的示例：
+
+    ```
+    <configuration>
+      <windowsTokenService>
         <!--  
             By default no callers are allowed to use the Windows Identity Foundation Claims To NT Token Service.  
             Add the identities you wish to allow below.  
-          -->  
-        <allowedCallers>  
-          <clear/>  
-          <add value="WSS_WPG" />  
-        </allowedCallers>  
-      </windowsTokenService>  
-    </configuration>  
-    ```    
-4.  启动 SharePoint“Claims to Windows Token Service”：通过 SharePoint 管理中心上的 **“管理服务器上的服务”** 页启动 Claims to Windows Token Service。 应在将执行操作的服务器上启动该服务。 例如，如果你有一个作为 WFE 的服务器，并且有另一个作为应用程序服务器的服务器（该服务器具有正在运行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务），则只需启动该应用程序服务器上的 c2WTS。 在 WFE 上不需要 c2WTS。
+          -->
+        <allowedCallers>
+          <clear/>
+          <add value="WSS_WPG" />
+        </allowedCallers>
+      </windowsTokenService>
+    </configuration>
+    ```
 
-## <a name="next-steps"></a>后续步骤
+4. 在上启动 Claims to Windows Token Service 通过 SharePoint 管理中心**管理服务器上的服务**页。 应在将执行操作的服务器上启动该服务。 例如，如果你有一台服务器，它是 WFE 服务器和另一台服务器是具有 SQL Server Reporting Services 共享的服务正在运行、 仅对你的应用程序服务器需要启动的应用程序服务器上的 C2WTS。 如果你正在运行的报表查看器 web 部件，C2WTS 仅需要在 WFE 服务器上。
 
-[Claims to Windows Token Service (c2WTS) 概述](http://msdn.microsoft.com/library/ee517278.aspx)   
-[在 SharePoint 2013 中规划 Kerberos 身份验证](http://technet.microsoft.com/library/ee806870.aspx)  
-
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

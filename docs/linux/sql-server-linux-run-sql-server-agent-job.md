@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
@@ -24,7 +24,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 
 有关与 SQL Server 代理在此版本中的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>必要條件 
+## <a name="prerequisites"></a>先决条件 
 若要创建和运行作业，必须首先安装 SQL Server 代理服务。 有关安装说明，请参阅[SQL Server 代理安装主题](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-job-with-transact-sql"></a>使用 Transact-SQL 创建作业
@@ -35,7 +35,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 > [!TIP]
 > 可以使用任何 T-SQL 客户端运行这些命令。 例如，在 Linux 上你可以使用[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。 在远程 Windows Server 中，还可以在 SQL Server Management Studio (SSMS) 中运行查询，或使用 UI 接口进行作业管理，下一部分将对此进行说明。
 
-1. **创建作业**。 下面的示例使用[sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx)创建一个名为作业`Daily AdventureWorks Backup`。
+1. **创建作业**。 下面的示例使用[sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql)创建一个名为作业`Daily AdventureWorks Backup`。
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 
     ```
 
-2. **添加一个或多个作业步骤**。 下面的 TRANSACT-SQL 脚本使用[sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx)创建可创建的备份的作业步骤`AdventureWlorks2014`数据库。
+2. **添加一个或多个作业步骤**。 下面的 TRANSACT-SQL 脚本使用[sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)创建可创建的备份的作业步骤`AdventureWlorks2014`数据库。
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
     GO
     ```
 
-3. **创建作业计划**。 此示例使用[sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx)若要创建的作业每日计划。
+3. **创建作业计划**。 此示例使用[sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql)若要创建的作业每日计划。
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
    GO
     ```
 
-4. **将作业计划附加到作业**。 使用[sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx)要附加到作业的作业计划。
+4. **将作业计划附加到作业**。 使用[sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)要附加到作业的作业计划。
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
     GO
     ```
 
-5. **将作业分配到目标服务器**。 将作业分配到目标服务器与[sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx)。 此示例中的目标是本地服务器。
+5. **将作业分配到目标服务器**。 将作业分配到目标服务器与[sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。 此示例中的目标是本地服务器。
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

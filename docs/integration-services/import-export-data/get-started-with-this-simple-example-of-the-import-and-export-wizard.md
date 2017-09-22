@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>要开始使用导入和导出向导的此简单示例
 了解 SQL Server 导入和导出向导中会逐步运行常见的方案-将数据从 Excel 电子表格导入到 SQL Server 数据库。 即使你计划使用不同的源和不同的目标，本主题说明大多数的你需要了解的有关运行向导。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>系统必备组件的是在计算机上安装向导？
-如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
+如果你想要运行向导，但不会获得 [！包括[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>下面是此示例的 Excel 源数据
 下面是你要复制的一个小型的两列表 WizardWalkthrough.xlsx Excel 工作簿中的 WizardWalkthrough 工作表中的源数据。

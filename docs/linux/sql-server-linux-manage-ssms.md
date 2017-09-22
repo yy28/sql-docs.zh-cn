@@ -11,19 +11,19 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dabdf1d6f179ad240b304e39fc355c14477841ad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 SQL Server Management Studio 管理 SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主题介绍[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)并指导您完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
+本主题介绍[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms)并指导您完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
 
-[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)是 Microsoft 提供的免费的开发和管理需求的 SQL 工具套件的一部分。 SSMS 是一个集成环境，用于访问、配置、管理和开发 SQL Server（在本地或云中、Linux、Windows 或 macOS Docker 以及在 Azure SQL 数据库和 Azure SQL 数据仓库上运行）的所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
+[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms)是 Microsoft 提供的免费的开发和管理需求的 SQL 工具套件的一部分。 SSMS 是一个集成环境，用于访问、配置、管理和开发 SQL Server（在本地或云中、Linux、Windows 或 macOS Docker 以及在 Azure SQL 数据库和 Azure SQL 数据仓库上运行）的所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
 
 SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以下任务的工具：
 
@@ -39,9 +39,9 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>安装最新版本的 SQL Server Management Studio (SSMS)
 
-使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
+使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
 
-## <a name="before-you-begin"></a>開始之前
+## <a name="before-you-begin"></a>开始之前
 - 请参阅[使用 SSMS 连接到 Linux 上的 SQL Server 的 Windows 上](sql-server-linux-develop-use-ssms.md)有关如何连接和查询使用 SSMS
 - 读取[已知问题](sql-server-linux-release-notes.md)for Linux 上的 SQL Server 自 2017 年 1 RC2
 
@@ -56,7 +56,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 3. 在*新数据库*对话框中，输入新数据库的名称，然后单击*确定*
 
-已成功在服务器中创建新数据库。 如果你希望在创建新的数据库使用 T-SQL 的那么请参阅[CREATE DATABASE (SQL Server TRANSACT-SQL)](https://msdn.microsoft.com/en-us/library/ms176061.aspx)。
+已成功在服务器中创建新数据库。 如果你希望在创建新的数据库使用 T-SQL 的那么请参阅[CREATE DATABASE (SQL Server TRANSACT-SQL)](/sql-docs/docs/t-sql/statements/create-database-sql-server-transact-sql)。
 
 ### <a name="drop-a-database"></a>删除数据库
 
@@ -68,11 +68,11 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 4. 在*删除对象*对话框中，选中*关闭现有连接*，然后单击*确定*
 
-已成功从服务器中删除数据库。 如果你希望删除使用 T-SQL 的数据库，那么请参阅[DROP DATABASE (SQL Server TRANSACT-SQL)](https://msdn.microsoft.com/en-us/library/ms178613.aspx)。
+已成功从服务器中删除数据库。 如果你希望删除使用 T-SQL 的数据库，那么请参阅[DROP DATABASE (SQL Server TRANSACT-SQL)](/sql-docs/docs/t-sql/statements/drop-database-transact-sql)。
 
 ## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>使用活动监视器查看有关 SQL Server 活动的信息
 
-[活动监视器](https://msdn.microsoft.com/en-us/library/hh212951.aspx)工具是内置到 SQL Server Management Studio (SSMS)，并显示有关 SQL Server 过程和了解这些进程如何影响当前的 SQL Server 实例的信息。
+[活动监视器](/sql-docs/docs/relational-databases/performance-monitor/activity-monitor)工具是内置到 SQL Server Management Studio (SSMS)，并显示有关 SQL Server 过程和了解这些进程如何影响当前的 SQL Server 实例的信息。
 
 1. 启动 SSMS 并连接到 Linux 上的 SQL Server 自 2017 年 1 RC2 中的服务器
 
@@ -92,6 +92,6 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 - [使用 SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [导出和导入具有 SSMS 的数据库](sql-server-linux-migrate-ssms.md)
 - [教程：SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
-- [教程：编写 Transact-SQL 语句](https://msdn.microsoft.com/en-us/library/ms365303.aspx)
-- [服务器性能和活动监视](https://msdn.microsoft.com/en-us/library/ms191511.aspx)
+- [教程：编写 Transact-SQL 语句](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)
+- [服务器性能和活动监视](/sql-docs/docs/relational-databases/performance/server-performance-and-activity-monitoring)
 

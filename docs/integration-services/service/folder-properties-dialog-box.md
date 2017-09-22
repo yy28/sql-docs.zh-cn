@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ac39c3aa4aea9c4c2d9ed65b7aadde7a27887b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 5.  单击 **“确定”** 以接受更改并关闭 **“文件夹属性”** 对话框。  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services &#40;SSIS &#41;服务器](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Integration Services &#40;SSIS &#41;服务器](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
  [catalog.grant_permission &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

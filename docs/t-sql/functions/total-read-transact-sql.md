@@ -1,7 +1,7 @@
 ---
 title: "@@TOTAL_READ (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,13 +26,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dc7a90f78005a076da54636a1b30f7fd9df73d05
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 7b4fa5a60334267f1c91674fecef44fe10c2b202
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="totalread-transact-sql"></a>@@TOTAL_READ (Transact SQL)
+# <a name="x40x40totalread-transact-sql"></a>& #x 40; 和 #x 40;TOTAL_READ (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行的磁盘读取（非缓存读取）的次数。  
@@ -73,3 +73,4 @@ Reads       Writes      As of
  [@@TOTAL_WRITE (Transact-SQL)](../../t-sql/functions/total-write-transact-sql.md)  
   
   
+

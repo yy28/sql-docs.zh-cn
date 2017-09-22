@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>生成包执行的转储文件
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
      调用此存储过程以暂停正在运行的包并创建转储文件。  
   
- 如果你正在使用包部署模型，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 和 [dtutil Utility](../../integration-services/dtutil-utility.md)。 有关包部署模型的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](https://msdn.microsoft.com/library/hh213290.aspx)以及[早期包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
+ 如果你正在使用包部署模型，则可以使用 **dtexec** 实用工具或 **dtutil** 实用工具在命令行下指定调试转储选项，来创建调试转储文件。 有关详细信息，请参阅[dtexec 实用工具](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)和[旧包部署 &#40;SSIS &#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>调试转储文件格式  
  指定调试转储选项时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建下列调试转储文件：  

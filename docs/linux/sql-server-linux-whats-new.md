@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
@@ -131,7 +131,7 @@ CTP 1.1 版本包含以下改进和修补程序：
 [从 Service Pack 1 的改进](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)此 CTP1.1 版本中：
 - 克隆为 CLR，Filestream/Filetable，内存中和查询存储对象的数据库。
 - **创建**或**ALTER**可编程性对象的运算符。
-- 新**使用提示**查询选项的查询处理器中提供提示。 此处详细了解：[查询提示](https://msdn.microsoft.com/en-us/library/ms181714.aspx)。
+- 新**使用提示**查询选项的查询处理器中提供提示。 此处详细了解：[查询提示](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)。
 - SQL 服务帐户现在能够以编程方式标识“启用锁定内存页”和“即时文件初始化”权限。
 - 对 TempDB 文件计数、文件大小和文件增长设置的支持。
 - 扩展了 showplan XML 中的诊断。

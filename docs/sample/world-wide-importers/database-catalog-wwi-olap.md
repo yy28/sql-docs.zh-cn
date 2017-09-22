@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>数据库目录
@@ -99,7 +99,7 @@ WideWorldImporters 用于不同用途，例如存储数据、 定义用户可以
 
 |表|Description|
 |-----------------------------|---------------------|
-|客户|客户 （组织或个人） 的主实体表|
+|Customers|客户 （组织或个人） 的主实体表|
 |CustomerCategories|客户 （即新奇存储、 超市等） 的类别|
 |BuyingGroups|客户组织可以是施加更高的购买能力的组的一部分|
 |CustomerTransactions|所有的财务交易记录客户相关 （发票付款）。|
@@ -181,7 +181,7 @@ WideWorldImporters 使用少量的架构，因此，很容易地了解数据库�
 
 ### <a name="integration-schema"></a>集成架构
 
-此架构中的存储的过程使用 ETL 过程。 获得所需的时间范围的各种表中所需的数据[ETL 包](https://msdn.microsoft.com/library/mt734218.aspx)。
+此架构中的存储的过程使用 ETL 过程。 获得所需的时间范围的各种表中所需的数据[ETL 包](/sql-docs/docs/sample/world-wide-importers/etl-workflow)。
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 架构
 

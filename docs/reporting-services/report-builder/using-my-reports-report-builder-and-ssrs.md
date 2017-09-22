@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用“我的报表”（报表生成器和 SSRS）
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
  从概念上说，“我的报表”文件夹类似于 Windows 文件系统中的“我的文档”文件夹。 尽管每个用户都有一个名为“我的报表”的文件夹，但用户都只能访问各自的相应文件夹。 除了报表服务器管理员之外，其他用户都无法访问您的“我的报表”文件夹中的内容。  
   
- “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd255286.aspx)。  
+ “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
- 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅[查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ways-to-use-my-reports"></a>使用“我的报表”文件夹的方法  
  在您添加报表、文件夹和其他项之前，“我的报表”为空文件夹。 下面是向“我的报表”文件夹中添加内容的一些方法：  
   
--   创建个人的链接报表，并将其存储在“我的报表”文件夹中。 并非所有的报表都适合链接。 有关详细信息，请参阅[创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
+-   创建个人的链接报表，并将其存储在“我的报表”文件夹中。 并非所有的报表都适合链接。 有关详细信息，请参阅 [创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
   
--   上载报表定义 (.rdl) 文件、报表模型 (.smdl) 文件或文件系统中的其他文件。 您可以上载任何文件，但报表服务器只处理扩展名为 .rdl 或 .smdl 的报表文件。 有关详细信息，请参阅 SQL Server 联机丛书 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的“报表定义”和[文件或报表（报表管理器）](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)。  
+-   上载报表定义 (.rdl) 文件、报表模型 (.smdl) 文件或文件系统中的其他文件。 您可以上载任何文件，但报表服务器只处理扩展名为 .rdl 或 .smdl 的报表文件。 有关详细信息，请参阅报表定义"中[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中和[上载文件或报表 &#40;报表管理器 &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   创建您自己的报表并将其发布到“我的报表”文件夹。 有关详细信息，请参阅[报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)。  
+-   创建您自己的报表并将其发布到“我的报表”文件夹。 有关详细信息，请参阅[报表设计视图 &#40;报表生成器 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  通常，“我的报表”的权限允许您自己管理该文件夹。 但是，最终还是由报表服务器管理员决定用户可以执行哪些任务。 如果您因权限不足而无法使用“我的报表”文件夹，请咨询报表服务器管理员。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  当您搜索报表服务器数据库时，您的“我的报表”文件夹中的内容也在搜索之列，而其他用户的“我的报表”文件夹中的内容则被排除在外。 搜索结果中将只列出您可以访问的报表。  
   
 ## <a name="see-also"></a>另请参阅  
- [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

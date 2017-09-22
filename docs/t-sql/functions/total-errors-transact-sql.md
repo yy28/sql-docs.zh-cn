@@ -1,7 +1,7 @@
 ---
 title: "@@TOTAL_ERRORS (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83d639209d35d6516bd9348f40f4eddfd30ddff5
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 65268d94ec7a12fd66587751ac9a93dc192be566
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="totalerrors-transact-sql"></a>@@TOTAL_ERRORS (Transact SQL)
+# <a name="x40x40totalerrors-transact-sql"></a>& #x 40; 和 #x 40;TOTAL_ERRORS (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回自上次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所遇到的磁盘写入错误数。  
@@ -44,7 +44,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 @@TOTAL_ERRORS  
 ```  
   
@@ -74,3 +73,4 @@ Errors      As of
  [系统统计函数 &#40;Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
+

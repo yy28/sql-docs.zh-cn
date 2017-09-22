@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a4fa8a4080a8483aba8494dd1195c7fbb1aec67a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 bcp 将数据批量复制到 Linux 上的 SQL Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主题演示如何使用[bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx)之间的 Linux 上的 SQL Server 自 2017 年 1 RC2 实例和用户指定的格式中的数据文件大容量复制数据的命令行实用工具。
+本主题演示如何使用[bcp](/sql-docs/docs/tools/bcp-utility)之间的 Linux 上的 SQL Server 自 2017 年 1 RC2 实例和用户指定的格式中的数据文件大容量复制数据的命令行实用工具。
 
 你可以使用`bcp`若要将大量行导入 SQL Server 表，或将数据从 SQL Server 表导出到数据文件。 除非与 queryout 选项一起使用`bcp`需要 TRANSACT-SQL 不知道。 `bcp`命令行实用工具的工作原理与 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 和 Azure SQL 数据库和 Azure SQL 数据仓库上。
 
@@ -136,8 +136,8 @@ cat ~/test_export.txt
 ```
 
 ## <a name="see-also"></a>另请参阅
-- [bcp 实用工具](https://msdn.microsoft.com/en-us/library/ms162802.aspx)
-- [有关兼容性时使用 bcp 数据格式](https://msdn.microsoft.com/en-us/library/ms190759.aspx)
-- [导入使用 BULK INSERT 大容量数据](https://msdn.microsoft.com/en-us/library/ms175915.aspx)
-- [大容量插入 (Transact SQL)](https://msdn.microsoft.com/en-us/library/ms188365.aspx)
+- [bcp 实用工具](/sql-docs/docs/tools/bcp-utility)
+- [有关兼容性时使用 bcp 数据格式](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
+- [导入使用 BULK INSERT 大容量数据](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
+- [大容量插入 (Transact SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
 

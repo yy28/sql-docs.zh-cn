@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 88c4fec1697c91daa3cb97fe61d76f75a67546f3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
@@ -133,7 +133,7 @@ ms.lasthandoff: 08/03/2017
     |**SSIS 目录**|存储在 SSISDB 数据库中的包。 部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中包含的包。|  
     |**SQL Server**|存储在 MSDB 数据库中的包。 可使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务来管理这些包。|  
     |**SSIS 包存储区**|存储在您计算机上默认文件夹中的包。 默认文件夹是*\<驱动器 >*: files\microsoft SQL Server\110\DTS\Packages。 可使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务来管理这些包。<br /><br /> 注意：可以通过修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的配置文件，指定文件系统中的一个不同文件夹或其他多个文件夹由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务进行管理。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。|  
-    |**文件系统**|存储在您本地计算机上任意文件夹中的包。|  
+    |**“文件系统”**|存储在您本地计算机上任意文件夹中的包。|  
   
      **以下各表说明可用于作业步骤的配置选项（具体选项取决于您所选的包源）。**  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 08/03/2017
     >  为计划命名时，请考虑使用唯一的描述性名称，以便与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划区分。  
 
 ## <a name="see-also"></a>另请参阅  
- [项目和包的执行](https://msdn.microsoft.com/library/hh213290.aspx)  
+ [项目和包的执行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
 
 ## <a name="external-resources"></a>外部资源  
   

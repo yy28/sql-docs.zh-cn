@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f4f58b682451b7dabf336241ec94797a4d1469e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
@@ -157,11 +157,11 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
 ### <a name="learn-more-about-in-memory-oltp"></a>了解有关内存中 OLTP 的详细信息
 有关内存中 OLTP 的详细信息，请参阅以下主题：
 
-- [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](https://msdn.microsoft.com/library/mt694156.aspx)
-- [迁移到内存中 OLTP](https://msdn.microsoft.com/library/dn247639.aspx)
-- [通过使用内存优化获得更快的临时表和表变量](https://msdn.microsoft.com/library/mt718711.aspx)
-- [内存使用情况的监视和故障排除](https://msdn.microsoft.com/library/dn465869.aspx)
-- [内存中 OLTP（内存中优化）](https://msdn.microsoft.com/library/dn133186.aspx)
+- [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [迁移到内存中 OLTP](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [通过使用内存优化获得更快的临时表和表变量](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [内存使用情况的监视和故障排除](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [内存中 OLTP（内存中优化）](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## <a name="use-query-store"></a>使用查询存储
 查询存储区收集有关查询、执行计划和运行时统计信息的详细性能信息。

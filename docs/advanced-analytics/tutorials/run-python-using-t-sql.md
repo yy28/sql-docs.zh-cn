@@ -1,8 +1,8 @@
 ---
 title: "运行 Python 使用 T-SQL |Microsoft 文档"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>运行 Python 使用 T-SQL
@@ -57,7 +57,7 @@ GO
 
 下面的代码加载 Python 可执行文件、 将传递的输入的数据，并输入数据的每一行，使用一个数字，表示一天的一周索引更新表中的天名称。
 
-记下的参数 *@RowsPerRead* 。 此参数指定 SQL Server 从传递给 Python 运行时的行的数。
+记下的参数* @RowsPerRead *。 此参数指定 SQL Server 从传递给 Python 运行时的行的数。
 
 Python 数据分析库，称为**pandas**，需要将数据传递到 SQL Server，并且包含默认情况下，使用机器学习服务。
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>步骤 3. 查看结果
 
-存储的过程返回的原始数据、 将应用该脚本中，然后返回中的已修改的数据**结果**Management Studio 或其他 SQL 查询工具窗格。
+存储的过程获取的原始数据、 将应用的 Python 脚本，然后返回中的已修改的数据**结果**Management Studio 或其他 SQL 查询工具窗格。
 
 
 |DayOfWeek （之前）| Amount|DayOfWeek （之后） |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ 消息输出包括用于执行脚本的工作目录。 在此示例中，MSSQLSERVER01 是指由 SQL Server 来管理该作业分配的工作帐户。 GUID 是执行脚本来存储数据和脚本项目期间创建的临时文件夹的名称。 这些临时文件夹保护的 SQL Server，并由 Windows 作业对象后清理脚本已终止。
++ **消息**输出包括用于执行脚本的工作目录。 在此示例中，MSSQLSERVER01 是指由 SQL Server 来管理该作业分配的工作帐户。 
 
-+ 包含消息"Hello World"的部分会将输出两次。 这是因为值 *@RowsPerRead* 已设置为 5 和表中有 10 行; 因此，需要两次调用 Python 以处理表中的所有行。
+    GUID 是执行脚本来存储数据和脚本项目期间创建的临时文件夹的名称。 这些临时文件夹保护的 SQL Server，并由 Windows 作业对象后清理脚本已终止。
+
++ 包含消息"Hello World"的部分会将输出两次。 这是因为值* @RowsPerRead *已设置为 5 和表中有 10 行; 因此，需要两次调用 Python 以处理表中的所有行。
 
     在生产运行过程中，我们建议使用不同的值来确定最大的应传递每个批中的行数进行试验。 最佳的行数与数据相关的而且受这两个的数据集中的列数和您传递的数据的类型。
 
@@ -189,4 +191,4 @@ ParamCharN=OUTPUT
 
 ## <a name="troubleshooting"></a>故障排除
 
-如果找不到存储的过程， `sp_execute_external_script`，这意味着你可能尚未完成的配置要支持外部运行时的实例。 运行 SQL Server 2017 安装程序并选择后 Python 作为机器学习语言，则必须还在显式启用功能使用`sp_configure`，然后重新启动实例。 有关详细信息，请参阅[使用 Python 的安装程序机器学习服务](../python/setup-python-machine-learning-services.md)。
+如果找不到存储的过程， `sp_execute_external_script`，这意味着你可能尚未完成的配置要支持外部脚本执行的实例。 运行 SQL Server 2017 安装程序并选择后 Python 作为机器学习语言，则必须还在显式启用功能使用`sp_configure`，然后重新启动实例。 有关详细信息，请参阅[使用 Python 的安装程序机器学习服务](../python/setup-python-machine-learning-services.md)。

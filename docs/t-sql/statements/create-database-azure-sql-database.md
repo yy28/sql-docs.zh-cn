@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
@@ -130,11 +130,11 @@ CREATE DATABASE database_name
 |150 GB|N/A|√|√|√|√|  
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
-|300 GB|N/A|√|√|√|√|  
-|400 GB|N/A|√|√|√|√|
-|500 GB|N/A|√|√|√ (D)|√|
-|750 GB|N/A|√|√|√|√|
-|1024 GB|N/A|√|√|√|√ (D)|
+|300 GB|N/A|N/A|√|√|√|  
+|400 GB|N/A|N/A|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|
+|750 GB|N/A|N/A|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|
 |从 1024 GB 达 4096 GB 的增量的 256 GB * |N/A|N/A|N/A|N/A|√|√|  
   
  \*P11 和 P15 允许 MAXSIZE 达 4 TB 1024 gb 正在默认大小。  P11 和 P15 可以使用 4 TB 的包含存储，并且不额外收费。 在高级层中，最大大小大于 1 TB 是当前在以下区域中提供： 美国 East2、 美国西部、 US Gov Virginia、 西欧、 德国中央、 南部亚洲东部、 日本东部、 澳大利亚东部、 加拿大中央和加拿大东部。 当前限制，请参阅[单一数据库](https://docs.microsoft.com/azure/sql-database-single-database-resources)。  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [sys.dm_database_copies &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE &#40;Azure SQL Database &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER DATABASE &#40;Azure SQL Database &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

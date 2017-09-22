@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什么 &#39; s SQL Server 2016 中 Integration Services 中的新增功能
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/21/2017
  有关详细信息，请参阅[SSIS 目录 &#40;SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> 支持 SSIS 目录中的 AlwaysOn  
- AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组支持的故障转移环境适用于一组可以共同进行故障转移的离散用户数据库（称为可用性数据库）。 有关详细信息，请参阅 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510230.aspx)。  
+ AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组支持的故障转移环境适用于一组可以共同进行故障转移的离散用户数据库（称为可用性数据库）。 有关详细信息，请参阅 [AlwaysOn 可用性组](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。  
   
  在 SQL Server 2016 SSIS 引入了新功能，允许您轻松地将其部署到集中式的 SSIS 目录 （即 SSISDB 用户数据库中）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="better-design-experience"></a>改进设计体验
 
 ####  <a name="OneDesigner"></a> SSIS 设计器中的多目标和多版本支持  
- 你现在可以在用于 Visual Studio 2015 的 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。 
+ 你现在可以在用于 Visual Studio 2015 的 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    

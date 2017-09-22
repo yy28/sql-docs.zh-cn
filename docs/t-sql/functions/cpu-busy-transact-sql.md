@@ -1,7 +1,7 @@
 ---
 title: "@@CPU_BUSY (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 165aef4dc063f9487c5ee581981fc013d6f40ff0
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: f01d73c9ec0a0aca7237603169f8a290af0ce225
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cpubusy-transact-sql"></a>@@CPU_BUSY (Transact SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; 和 #x 40;CPU_BUSY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后的工作时间。 其结果以 CPU 时间增量或“滴答数”表示，此值为所有 CPU 时间的累积，因此，可能会超出实际占用的时间。 乘以@TIMETICKS将转换为微秒为单位。
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 @@CPU_BUSY  
 ```  
   

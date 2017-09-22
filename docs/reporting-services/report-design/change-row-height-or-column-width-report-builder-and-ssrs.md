@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 3.  在“属性”窗格中，将 CanGrow 设置为 **False**。  
   
     > [!NOTE]  
-    >  如果没有看到“属性”窗格，请单击“视图”菜单上的“属性”。  
+    >  如果看不到属性窗格中，从**视图**菜单上，单击**属性**。  
   
 ### <a name="to-change-column-width"></a>更改列宽  
   
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  单击以抓住列边缘，然后向左或向右移动列边缘，从而调整列宽。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tablix 数据区域（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix 数据区域 （报表生成器和 SSRS）](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [矩阵 （报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd207149.aspx)   
- [列表 （报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [矩阵 （报表生成器和 SSRS）](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [列表 （报表生成器和 SSRS）](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [表、 矩阵和列表 （报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

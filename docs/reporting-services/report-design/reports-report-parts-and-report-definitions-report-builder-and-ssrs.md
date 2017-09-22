@@ -18,11 +18,11 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c5a2673c5e38d6bd216116cd14225f1ed064487
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1ad3eee80539ea31af3ccf9e117b2f39b4921846
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
  发布的报表是通过角色分配进行保护的，这种角色分配使用的是基于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色的安全模式。 通过 URL、SharePoint Web 部件或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户，即可访问发布的报表，也可以导航到发布的报表并在报表生成器中打开这些报表。  
   
 ### <a name="report-snapshots"></a>报表快照  
- 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[在报表管理器中查找和查看报表（报表生成器和 SSRS）](https://msdn.microsoft.com/library/dd255286.aspx)。  
+ 报表也可以作为包含自报表最初运行时起的布局信息和数据的快照进行发布。 报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 有关详细信息，请参阅[查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
 ## <a name="rendered-reports"></a>呈现的报表  
  呈现的报表是经过完全处理的报表，其中包含格式适于查看（例如 HTML）的数据和布局信息。 只有在报表以输出格式呈现之后，才能查看报表。 您可以通过执行以下操作之一来呈现报表：  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>另请参阅  
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [查找、 查看和管理报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

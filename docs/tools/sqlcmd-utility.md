@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -115,7 +115,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 到与专用的管理员连接 (DAC) 的 SQL Server 中的日志。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅[用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 时连接到 SQL 数据库使用-A，你必须是 SQL server 管理员联系。 DAC 不可用的 Azure Active Directory 管理员。
+ 到与专用的管理员连接 (DAC) 的 SQL Server 中的日志。 此类型连接用于排除服务器故障。 这只适用于支持 DAC 的服务器。 如果 DAC 不可用， **sqlcmd** 会生成错误消息，然后退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 时连接到 SQL 数据库使用-A，你必须是 SQL server 管理员联系。 DAC 不可用的 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
@@ -177,10 +177,10 @@ sqlcmd
 **-j** 将原始错误消息输出到银幕上。
   
  **-K** *application_intent*  
- 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅 [活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)  
+ 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)  
   
  **-M** *multisubnet_failover*  
- 始终指定**-M**连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听器时。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M**，则 **-M** 处于关闭状态。 有关 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)、[创建和配置可用性组 (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx，和 [活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx。  
+ 始终指定**-M**连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听器时。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息 [！包括[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)，[创建和配置可用性组 &#40;SQL server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 Alwayson 可用性组 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [活动辅助副本： 可读辅助副本 (Always On 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要连接到 SQL Server 的实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
   
- 指定*server_name*连接到 SQL Server 在该服务器计算机上的默认实例。 指定*server_name* [  **\\**  *instance_name* ] 若要连接到该服务器计算机上的 SQL Server 的命名实例。 如果指定服务器的计算机，则**sqlcmd**连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
+ 指定*server_name*连接到 SQL Server 在该服务器计算机上的默认实例。 指定*server_name* [ ** \\ ** *instance_name* ] 若要连接到该服务器计算机上的 SQL Server 的命名实例。 如果指定服务器的计算机，则**sqlcmd**连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。  
   
- 如果不指定*server_name* [  **\\**  *instance_name* ] 当启动**sqlcmd**，SQL Server 检查并使用 SQLCMDSERVER 环境变量。  
+ 如果不指定*server_name* [ ** \\ ** *instance_name* ] 当启动**sqlcmd**，SQL Server 检查并使用 SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
 >  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量；也就是说 **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰，并且旧式脚本可以继续使用。  
@@ -273,7 +273,7 @@ sqlcmd
   
  包含空格的文件路径必须用引号引起来。  
   
- 此选项可以使用多次：**-i***input_file* **-I***I input_file.*  
+ 此选项可以使用多次： **-i***input_file* **-I***I input_file.*  
   
  **-o** *output_file*  
  标识从 **sqlcmd**接收输出的文件。  
@@ -336,7 +336,7 @@ sqlcmd
  如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 **-b** 将在本主题后面部分进行介绍。  
   
  **-t** *query_timeout*  
- 指定命令（或 SQL 语句）超时的时间。 此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。 *query**time_out* 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
+ 指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。*query**time_out* 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
   
 > [!NOTE]  
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
@@ -685,7 +685,7 @@ sqlcmd
   
  **其他命令**  
   **:r \<** *filename***>**  
- 分析其他 TRANSACT-SQL 语句和**sqlcmd**从指定的文件的命令 **\<**  *filename***>**到语句缓存。  
+ 分析其他 TRANSACT-SQL 语句和**sqlcmd**从指定的文件的命令** \< ** *filename***>**到语句缓存。  
   
  如果该文件包含不跟的 TRANSACT-SQL 语句**转**，必须输入**转**后面的行上**: r**。  
   

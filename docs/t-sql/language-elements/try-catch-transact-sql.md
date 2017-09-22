@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>检索错误信息  
  在 CATCH 块的作用域内，可以使用以下系统函数来获取导致 CATCH 块执行的错误消息：  
   
--   ERROR_NUMBER() 返回错误号。  
+-   [Error_number （)](../../t-sql/functions/error-number-transact-sql.md)返回的错误数。  
   
--   ERROR_SEVERITY() 返回严重性。  
+-   [Error_severity （)](../../t-sql/functions/error-severity-transact-sql.md)返回严重性。  
   
--   ERROR_STATE() 返回错误状态号。  
+-   [Error_state （)](../../t-sql/functions/error-state-transact-sql.md)返回的错误状态号。  
   
--   ERROR_PROCEDURE() 返回出现错误的存储过程或触发器的名称。  
+-   [Error_procedure （)](../../t-sql/functions/error-procedure-transact-sql.md)返回发生错误的位置的存储的过程或触发器的名称。  
   
--   ERROR_LINE() 返回导致错误的例程中的行号。  
+-   [Error_line （)](../../t-sql/functions/error-line-transact-sql.md)返回导致错误的例程中的行号。  
   
--   ERROR_MESSAGE() 返回错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
+-   [Error_message （)](../../t-sql/functions/error-message-transact-sql.md)返回的错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
   
  如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY…CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 错误 * 函数也适用于`CATCH`内阻止[本机编译存储的过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 错误\_\*函数也适用于`CATCH`内阻止[本机编译存储的过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 构造影响的错误  
  TRY…CATCH 构造在下列情况下不捕获错误：  
@@ -162,7 +162,7 @@ END CATCH;
   
  以下示例显示在存储过程中执行相同的 `SELECT` 语句时，由 `TRY…CATCH` 语句生成的对象名解析错误是如何不被 `CATCH` 构造捕捉，却被 `SELECT` 块捕捉的。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  在存储过程内运行 `SELECT` 语句将导致错误在低于 `TRY` 块的级别上发生。 该错误将由 `TRY…CATCH` 构造处理。  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. 在事务内使用 TRY…CATCH  
  以下示例显示 `TRY…CATCH` 块在事务内的工作方式。 `TRY` 块内的语句会生成违反约束的错误。  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. 将 TRY…CATCH 与 XACT_STATE 配合使用  
  以下示例显示如何使用 `TRY…CATCH` 构造来处理事务内发生的错误。 `XACT_STATE` 函数确定应提交事务还是应回滚事务。 在本示例中，`SET XACT_ABORT` 状态为 `ON`。 在发生违反约束的错误时，这会使事务处于不可提交状态。  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

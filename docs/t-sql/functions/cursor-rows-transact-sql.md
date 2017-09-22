@@ -1,7 +1,7 @@
 ---
 title: "@@CURSOR_ROWS (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (Transact SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; 和 #x 40;CURSOR_ROWS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返回连接上打开的上一个游标中的当前限定行的数目。 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可异步填充大型键集和静态游标。 @@CURSOR_ROWS可以调用以确定在 @ 时检索限定对于游标的行数的@CURSOR_ROWS调用。
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

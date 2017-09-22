@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
-  表格模型设计器是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一部分（与 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成），它具有专用于开发专业表格模型解决方案的附加项目类型模板。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 作为免费 Web 下载内容安装。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) 。   
+  表格模型设计器是的一部分 [！包括[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)有关详细信息。   
   
 ##  <a name="bkmk_benefits"></a> 优势  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，用于创建表格模型的新项目模板将添加到可用项目类型中。 在使用这些模板之一创建了新的表格模型项目后，您可以通过使用表格模型设计器工具和向导开始创建模型。  

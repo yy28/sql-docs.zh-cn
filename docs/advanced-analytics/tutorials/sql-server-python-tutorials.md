@@ -2,7 +2,7 @@
 title: "SQL Server Python 教程 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b891cda72d5a69aafe461918674218fd3279c423
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 教程
@@ -47,10 +47,6 @@ ms.lasthandoff: 09/01/2017
 
    你将创建模型使用**rxLinMod**，从新建**revoscalepy**库。 将启动远程 Python 终端中的代码，但建模，会在 SQL Server 计算上下文中的进行。
 
-+ [构建预测模型使用 Python (GitHub)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
-
-  创建机器学习模型来预测需求 ski 租赁业务，并具有可操作性使用存储的过程的日常需预测该模型。 提供的所有代码和数据。
-
 + [SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)
 
   新！ 生成使用 T-SQL 存储过程的完整 Python 解决方案。 包含所有 Python 代码都。
@@ -67,7 +63,10 @@ ms.lasthandoff: 09/01/2017
 
   了解如何 ski 租赁业务可能使用机器学习来预测将来出租，它可帮助企业版计划和员工，以满足将来需求。
 
-+ [新增功能！执行客户群集使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
+  > [!TIP]
+  > 现在包括从 Python 模型的本机评分 ！
+
++ [执行客户群集使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     了解如何使用 Kmeans 算法来执行无人监督聚类分析的客户。
 
@@ -83,10 +82,10 @@ ms.lasthandoff: 09/01/2017
 
 运行 SQL Server 安装程序之后, 不要忘记以下重要步骤：
 
-+ 通过运行启用外部脚本执行功能`sp_configure 'external scripts enabled', 1`
-+ 重新启动服务器
-+ 请确保调用外部运行时服务的必需的权限
-+ 确保你的 SQL 登录名或 Windows 用户帐户具有所必需的权限连接到服务器，以读取数据，并创建此示例要求任何数据库对象
++ 通过运行启用外部脚本执行功能`sp_configure 'external scripts enabled', 1`。
++ 重新启动服务器。
++ 确保调用外部运行时的服务具有必要权限。
++ 确保你的 SQL 登录名或 Windows 用户帐户具有连接到服务器，以读取数据，并创建此示例要求任何数据库对象所必需的权限。
 
 如果你遇到问题，请参阅此文章了解遇到的一些常见问题：[疑难解答机器学习服务](../machine-learning-troubleshooting-faq.md)
 

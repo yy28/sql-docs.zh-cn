@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>用于 JDBC 驱动程序的 JDBC 4.1 法规遵从性
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |新功能|Description|  
 |-----------------|-----------------|  
-|新的转义函数<br /><br /> 限制返回行转义|部分支持<br /><br /> 转义语法： 限制\<行 > [偏移量 < row_offset >]<br /><br /> 转义语法有两个部分：必需部分“行”指定要返回的行数，可选部分“行偏移”指定在开始返回行之前要跳过的行数<br /><br /> 驱动程序通过将查询转换为使用“TOP”而不是 LIMIT（SQL Server 不支持“LIMIT”），仅支持必需部分。<br /><br /> 如果在 SQL Server 中未内置任何支持可选部分“行偏移”的构造函数时使用它，驱动程序将引发异常。<br /><br /> 有关详细信息，请参阅[使用 SQL 转义序列](https://msdn.microsoft.com/en-us/library/ms378045.aspx)。|  
+|新的转义函数<br /><br /> 限制返回行转义|部分支持<br /><br /> 转义语法： 限制\<行 >[偏移量 < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 支持 Java Database Connectivity API 4.1 规范，并带有以下数据类型映射。  
   

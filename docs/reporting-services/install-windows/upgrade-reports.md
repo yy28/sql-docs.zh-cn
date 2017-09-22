@@ -24,11 +24,11 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅 [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "向后兼容性 |Reporting Services")。  
   
- 有关新功能的相关详细信息[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，请参阅[What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx)。  
+ 有关新功能的相关详细信息 [！包括[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)。  
 
 ##  <a name="bkmk_versionsupported"></a> 能够升级的版本  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 早期的任一版本中创建的报表都可以升级。 包括下列版本：  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的报表设计器中打开某个 .rdl 文件时，如果报表是针对先前命名空间创建的，报表设计器会自动创建一个备份文件，并将该报表升级到当前命名空间。 这是升级报表定义文件的唯一方法。  
   
- 您设置的部署属性可以影响保存报表定义文件的架构。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
+ 您设置的部署属性可以影响保存报表定义文件的架构。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   
  你可以在的早期版本中创建的.rdl 文件上载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]第一次使用自动升级到新的版本和它。 报表服务器将以原始格式存储报表定义文件。 报表将在第一次被查看时自动升级，但是存储的报表定义文件仍保持不变。  
   
@@ -153,4 +153,4 @@ ms.lasthandoff: 08/09/2017
 [自定义报表项](../../reporting-services/custom-report-items/custom-report-items.md)   
 [升级报表服务器数据库](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74357e2741e01e44f0f9d504456fca10f29f78e7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6823b8a9cd3f92781d0fd3518f50b8866ba12d48
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上 SQL Server 的安全限制
@@ -27,7 +27,7 @@ Linux 上的 SQL Server 当前具有以下限制：
 * 不支持使用 Azure Key Vault 中存储的密钥。
 * SQL Server 生成自己的自签名证书，用于加密连接。 目前，无法将 SQL Server 配置为使用用户提供的用于 SSL 或 TLS 的证书。 
 
-有关 SQL Server 中提供的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](https://msdn.microsoft.com/library/bb510589.aspx)。
+有关 SQL Server 中提供的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)。
 
 ## <a name="next-steps"></a>后续步骤
 

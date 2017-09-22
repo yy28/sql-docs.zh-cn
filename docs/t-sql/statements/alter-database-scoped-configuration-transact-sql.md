@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917329cd5305aac791629300f5a90bf52d9d9ce4
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -44,11 +44,11 @@ ms.lasthandoff: 09/01/2017
   
 - 设置独立于数据库兼容级别的查询优化器基数估计模型。  
   
-- 在数据库级别启用或禁用参数探查。  
+- 在数据库级别启用或禁用参数探查。
   
-- 在数据库级别启用或禁用查询优化修补程序。  
+- 在数据库级别启用或禁用查询优化修补程序。
 
-- 启用或禁用在数据库级别标识缓存。  
+- 启用或禁用在数据库级别标识缓存。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,44 +80,54 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 指定 （所有辅助数据库必须具有相同的值） 的辅助数据库的设置。  
   
-MAXDOP  **=**  {\<值 > |主}  
+MAXDOP ** = ** {\<值 > |主}  
 **\<值 >**  
   
 指定 MAXDOP 设置应用于语句的默认。 0 是默认值，该值指示在将改为使用服务器配置。 （除非它已设置为 0），将重写在数据库范围内 MAXDOP**最大并行度**由 sp_configure 设置在服务器级别。 查询提示仍可以重写数据库范围 MAXDOP，以便优化需要不同的设置的特定查询。 所有这些设置的工作负荷组设置 MAXDOP 受限制。   
 
 您可以使用 max degree of parallelism 选项来限制并行计划执行时所用的处理器数。 SQL Server 将并行执行计划的查询、 索引数据定义语言 (DDL) 操作、 并行插入、 联机更改列、 并行统计信息 collectiion 和静态和键集驱动游标填充。
  
-若要在实例级别设置此选项，请参阅[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 若要实现此目的在查询级别，将添加**QUERYTRACEON** [查询提示](https://msdn.microsoft.com/library/ms181714.aspx)  
+若要在实例级别设置此选项，请参阅[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 
+
+> [!TIP] 
+> 若要实现此目的在查询级别，将添加**MAXDOP** [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 PRIMARY  
   
-只能设置为辅助数据库并指示配置将一组的主站点。 如果主更改，辅助的配置也将调整为相同的值。 **主**是辅助数据库的默认设置  
+只能设置为辅助数据库，对主要主机和中的数据库时，表示配置将一组的主站点。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本的值明确。 **主**是辅助数据库的默认设置。  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |主}  
+LEGACY_CARDINALITY_ESTIMATION ** = ** {ON |**OFF** |主}  
 
-使用此选项可设置为的 SQL Server 2012 和早期版本的查询优化器基数估计模型独立于数据库的兼容性级别。 默认值是**OFF**，查询优化器基数估计模型基于数据库的兼容性级别的设置。 此选项设置为**ON**等效于[跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)。 若要在实例级别设置，请参阅[跟踪标志 (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 若要实现此目的在查询级别，将添加**QUERYTRACEON** [查询提示](https://msdn.microsoft.com/library/ms181714.aspx)。  
+使用此选项可设置为的 SQL Server 2012 和早期版本的查询优化器基数估计模型独立于数据库的兼容性级别。 默认值是**OFF**，查询优化器基数估计模型基于数据库的兼容性级别的设置。 此选项设置为**ON**相当于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
+
+> [!TIP] 
+> 若要实现此目的在查询级别，将添加**QUERYTRACEON** [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，为实现此目的在查询级别中，添加**使用提示**[查询提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用跟踪标志。 
   
 PRIMARY  
   
-此值才有效辅助副本上，指定在所有辅助副本上的查询优化器基数估算模型设置将为主设置的值。 如果主服务器的查询优化器基数估计模型上的配置发生更改，将相应地更改辅助数据库上的值。 **主**是辅助数据库的默认设置。  
+此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的查询优化器基数估算模型设置将为主设置的值。 如果主服务器的查询优化器基数估计模型上的配置发生更改，将相应地更改辅助数据库上的值。 **主**是辅助数据库的默认设置。  
   
-PARAMETER_SNIFFING  **=**  { **ON** |关闭 |主}  
+PARAMETER_SNIFFING ** = ** { **ON** |关闭 |主}  
 
-启用或禁用参数探查。 默认值为 ON。 这与 [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653)是等效的。 若要在实例级别设置，请参阅[跟踪标志 (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 若要在查询级别设置，请参阅**OPTIMIZE FOR UNKNOWN** [查询提示](https://msdn.microsoft.com/library/ms181714.aspx)。  
+启用或禁用[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 默认值为 ON。 这与 [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)是等效的。   
+
+> [!TIP] 
+> 若要实现此目的在查询级别，请参阅**OPTIMIZE FOR UNKNOWN** [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，为实现此目的在查询级别**使用提示**[查询提示](../../t-sql/queries/hints-transact-sql-query.md)也是可用。 
   
 PRIMARY  
   
-此值才有效辅助副本上，指定在所有辅助副本上的此设置的值将是用于主设置的值。 如果将相应地更改主更改，辅助数据库上的值的配置。 这是辅助数据库的默认设置。  
+此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果使用主计算机上的配置[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)更改，在辅助副本上的值将更改相应地而无需设置辅助副本值明确。 这是辅助数据库的默认设置。  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主}  
+QUERY_OPTIMIZER_HOTFIXES ** = ** {ON |**OFF** |主}  
 
-启用或禁用查询优化修补程序，而不考虑数据库的兼容性级别。 默认值是**OFF**。 这与 [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006)是等效的。   
+启用或禁用查询优化修补程序，而不考虑数据库的兼容性级别。 默认值是**OFF**。 这相当于启用[Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 
-若要在实例级别设置，请参阅[跟踪标志 (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 若要实现此目的在查询级别，将添加**QUERYTRACEON** [查询提示](https://msdn.microsoft.com/library/ms181714.aspx)。  
+> [!TIP] 
+> 若要实现此目的在查询级别，将添加**QUERYTRACEON** [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，为实现此目的在查询级别中，添加使用提示[查询提示](../../t-sql/queries/hints-transact-sql-query.md)而不是使用跟踪标志。  
   
 PRIMARY  
   
-此值才有效辅助副本上，指定在所有辅助副本上的此设置的值将是用于主设置的值。 如果将相应地更改主更改，辅助数据库上的值的配置。 这是辅助数据库的默认设置。  
+此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本的值明确。 这是辅助数据库的默认设置。  
   
 清除 PROCEDURE_CACHE  
 
@@ -171,7 +181,7 @@ IDENTITY_CACHE = { **ON** |关闭}
   
  **DacFx**  
   
- 由于 ALTER DATABASE SCOPED CONFIGURATION 是会影响数据库架构的 SQL Server 2016 和 Azure SQL 数据库中的新功能，导出的架构 （带有或不包含数据） 将不能将其导入旧版本的 SQL Server 例如 SQL Server 2012 或 SQL Server 2014。   例如，导出到[DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)或[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)从 Azure SQL 数据库或 SQL Server 2016 使用此新功能的数据库将不能导入到的下级服务器。  
+ 由于 ALTER DATABASE SCOPED CONFIGURATION 是会影响数据库架构的 SQL Server 2016 和 Azure SQL 数据库中的新功能，导出的架构 （带有或不包含数据） 将不能导入到较旧版本的 SQL Server 例如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 <c2 1> [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 。 例如，导出到[DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)或[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)从[!INCLUDE[ssSDS](../../includes/sssds-md.md)]或[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]使用此新功能的数据库将不能导入到的下级服务器。  
   
 ## <a name="metadata"></a>元数据  
 
@@ -198,10 +208,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-此示例将 MAXDOP 设置为辅助数据库，因为它是用于在异地复制方案中其主数据库。  
+此示例将辅助数据库的 MAXDOP 会相同，因为它已设置为与其在异地复制方案中的主数据库设置。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### <a name="c-set-legacycardinalityestimation"></a>C. 设置 LEGACY_CARDINALITY_ESTIMATION  
@@ -209,15 +219,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 此示例会将 LEGACY_CARDINALITY_ESTIMATION 的异地复制方案中的辅助数据库设置为开中。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 此示例将 LEGACY_CARDINALITY_ESTIMATION 设置辅助数据库，因为它是用于在异地复制方案中其主数据库。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### <a name="d-set-parametersniffing"></a>D. 设置 PARAMETER_SNIFFING  
@@ -231,16 +239,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 此示例会将 PARAMETER_SNIFFING 的异地复制方案中的主数据库设置为 OFF 中。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 此示例将按原样主数据库上的辅助数据库设置 PARAMETER_SNIFFING   
 在异地复制方案。  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES  
@@ -276,8 +282,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [建议和 SQL Server 中的"max degree of parallelism"配置选项的指导原则](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源    
-* [基数估计 (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
-* [优化您的查询计划与 SQL Server 2014 基数估计器](https://msdn.microsoft.com/library/dn673537.aspx)
+* [基数估计 (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 资源    
 * ["我闻参数"！](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)

@@ -2,7 +2,7 @@
 title: "删除数据库 (Transact SQL) |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除一个或多个用户数据库或数据库快照。  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  删除数据库启用为 Stretch Database 不会删除远程数据。 如果你想要删除的远程数据，你必须手动删除。  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- 您必须连接到 master 数据库来删除数据库。  
+ 您必须连接到 master 数据库来删除数据库。
   
- DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能删除一个数据库。  
+ DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能删除一个数据库。
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ 您必须连接到 master 数据库来删除数据库。
+  
+ DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能删除一个数据库。
+
 ## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

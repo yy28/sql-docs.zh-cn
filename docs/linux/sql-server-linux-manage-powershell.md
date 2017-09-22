@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
@@ -24,9 +24,9 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>在 Windows 上安装最新版本的 SQL PowerShell
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)在 Windows 上是附带[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)。 使用 SQL Server 时，应始终使用最新版本的 SSMS 和 SQL PowerShell。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 在 Linux 上的自 2017 年 1 RC2。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)在 Windows 上是附带[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms)。 使用 SQL Server 时，应始终使用最新版本的 SSMS 和 SQL PowerShell。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 在 Linux 上的自 2017 年 1 RC2。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
 
-## <a name="before-you-begin"></a>開始之前
+## <a name="before-you-begin"></a>开始之前
 
 读取[已知问题](sql-server-linux-release-notes.md)for Linux 上的 SQL Server 自 2017 年 1 RC2。
 
@@ -71,7 +71,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - 创建的实例[服务器](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)对象
 - 连接到**服务器**和显示的几个属性
 
-请记住将 **\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 自 2017 年 1 RC2 实例的主机名。
+请记住将** \<your_server_instance\> **与 IP 地址或你在 Linux 上的 SQL Server 自 2017 年 1 RC2 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 - 使用**Get SqlErrorLog** cmdlet 来连接到 Linux 上的 SQL Server 2017 实例并检索错误日志以来**昨天**
 - 将输出发送到通过管道传递**Out-gridview** cmdlet
 
-请记住将 **\<your_server_instance\>** 与 IP 地址或你在 Linux 上的 SQL Server 自 2017 年 1 RC2 实例的主机名。
+请记住将** \<your_server_instance\> **与 IP 地址或你在 Linux 上的 SQL Server 自 2017 年 1 RC2 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>另请参阅
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

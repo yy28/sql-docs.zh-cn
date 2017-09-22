@@ -20,21 +20,21 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
 
-在本教程中，你使用报表设计器在 SQL Server Data Tools 中创建基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表基于的表与 **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** 数据库。 你还可以创建[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表使用报表生成器。 
+在本教程中，你使用报表设计器在 SQL Server Data Tools 中创建基本[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表基于的表与** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] **数据库。 你还可以创建[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]分页报表使用报表生成器。 
 
 当你完成本教程，你将创建报表项目、 设置连接信息、 定义的查询、 添加表数据区域、 组和总一些字段，并预览报表。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
 若要使用本教程，您的系统必须安装以下组件：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)]SQL Server 数据库引擎。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库。  有关详细信息，请参阅 [Adventure Works 2014 示例数据库](https://msftdbprodsamples.codeplex.com/releases/view/125550)。  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) 安装有“SQL Server Reporting Services”组件，因此具有报表设计器。    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)与安装了，因此具有报表设计器的"SQL Server Reporting Services"组件。    
   
 还必须具有从 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 数据库检索数据的只读权限。
 
@@ -66,4 +66,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services 教程](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

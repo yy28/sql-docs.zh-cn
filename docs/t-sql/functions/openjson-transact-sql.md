@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact SQL)
@@ -67,7 +67,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
   
 ![使用 OPENJSON TVF 中子句语法](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON 与语法")
 
-*with_clause*包含具有其类型的列的列表**OPENJSON**返回。 默认情况下， **OPENJSON**匹配中的键*jsonExpression*与中的列名称*with_clause*。 如果列名称与密钥名称不匹配，你可以提供一个可选*column_path*，即[JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md)引用内的键*jsonExpression*。 
+*with_clause*包含具有其类型的列的列表**OPENJSON**返回。 默认情况下， **OPENJSON**匹配中的键*jsonExpression*与中的列名称*with_clause* （在这种情况下，匹配键意味着它是区分大小写）。 如果列名称与密钥名称不匹配，你可以提供一个可选*column_path*，即[JSON 路径表达式](../../relational-databases/json/json-path-expressions-sql-server.md)引用内的键*jsonExpression*。 
 
 ## <a name="arguments"></a>参数  
 ### <a name="jsonexpression"></a>*jsonExpression*  

@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 174a686a069e4b68958a33bc881f8183c3a32798
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ef4a59f57f0bd99951297733e51bbc02b81e78ef
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>导出和导入与 SSMS 或 Windows 上的 SqlPackage.exe Linux 上的数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主题演示如何使用[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)和[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)导出和导入在 Linux 上的 SQL Server 自 2017 年 1 RC2 上的数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此使用此方法，当你有一台 Windows 计算机可以连接到 Linux 上的远程 SQL Server 实例。
+本主题演示如何使用[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)和[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)导出和导入在 Linux 上的 SQL Server 自 2017 年 1 RC2 上的数据库。 SSMS 和 SqlPackage.exe 是 Windows 应用程序，因此使用此方法，当你有一台 Windows 计算机可以连接到 Linux 上的远程 SQL Server 实例。
 
 应始终安装并使用最新版本的 SQL Server Management Studio (SSMS) 中所述[以连接到 Linux 上的 SQL Server 的 Windows 上使用 SSMS](sql-server-linux-develop-use-ssms.md)
 

@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe3ec4ebb7b62bd1bee9e6ba43c630bc17460dbb
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的更高版本。  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)。  
+2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步骤 1：生成 SSIS 项目并将其部署到 SSIS 目录  
  在此步骤中，创建一个从 SSIS 支持的数据源（在本示例中，我们使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）中提取数据并使用数据流目标组件输出数据的 SSIS 包。 然后，将生成 SSIS 项目并将其部署到 SSIS 目录。  

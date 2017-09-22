@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/17/2017
  利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，可轻松将数据从源复制到目标。 本概述介绍该向导可以将源和目标，用作数据源，以及你要运行该向导所需的权限。
 
 ## <a name="get-the-wizard"></a>获得向导
-如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
+如果你想要运行向导，但不会获得 [！包括[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>在运行向导时，会发生什么情况？
 -    **请参阅步骤的列表。** 有关向导中的步骤的说明，请参阅[的 SQL Server 导入和导出向导中的步骤](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 此外没有单独的页的向导的每一页的文档。  
