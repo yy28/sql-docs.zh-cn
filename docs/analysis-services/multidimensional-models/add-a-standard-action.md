@@ -78,7 +78,7 @@ ms.lasthandoff: 09/01/2017
         > [!NOTE]  
         >  专有操作将不返回到服务器，除非客户端应用程序显式将架构行级限制为仅返回与“应用程序”中指定的名称匹配的操作。  
   
-    -   在“操作内容”中，如果你在使用 URL 类型，则用引号括上 Internet 地址，例如 "http://www.adventure-works.com"。  
+    -   在“操作内容”中，如果你在使用 URL 类型，则用引号括上 Internet 地址，例如 "http://www.adventure-works.com" 。  
   
     -   在 **“说明”**中，键入操作的说明。  
   
