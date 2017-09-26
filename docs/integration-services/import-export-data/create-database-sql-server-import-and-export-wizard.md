@@ -1,38 +1,47 @@
 ---
-title: "创建数据库（SQL Server 导入和导出向导） | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.createdatabase.f1"
+title: "创建数据库 （SQL Server 导入和导出向导） |Microsoft 文档"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
----
-# 创建数据库（SQL Server 导入和导出向导）
-如果在“选择目标”页上选择“新建”以创建新 SQL Server 目标数据库，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“创建数据库”对话框。 在此页上，可以为新数据库提供名称。 （可选）还可以更改新数据库及其日志文件的初始大小和自动增长设置。 
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3f8c2b652515f4c84121dcf14371a9e86c8f86f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/26/2017
 
-> [!NOTE] 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“创建数据库”对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+---
+# <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
+如果在“选择目标”  页上选择“新建”  以创建新 SQL Server 目标数据库，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“创建数据库”  对话框。 在此页上，可以为新数据库提供名称。 （可选）还可以更改新数据库及其日志文件的初始大小和自动增长设置。 
+
+**Create Database**向导中的对话框提供了仅可用于创建新的 SQL Server 数据库的基本选项。 要查看并为新配置的所有选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来创建数据库，或配置数据库之后该向导将创建它。 
+
+> [!NOTE]
+> 如果在查找有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE DATABASE 语句的信息，而不是有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导的“创建数据库”对话框的信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>“创建数据库”页的屏幕截图  
-以下屏幕截图显示向导的“创建数据库”对话框。  
+以下屏幕截图显示向导的“创建数据库”  对话框。  
 
-向导中的此对话框仅提供可用于创建新 SQL Server 数据库的选项子集。 要查看和配置用于新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的所有选项，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建或配置数据库。 
-
-![Create database page of the Import and Export Wizard](../../integration-services/import-export-data/media/create-database.png "Create database page of the Import and Export Wizard")  
+![导入和导出向导创建数据库页](../../integration-services/import-export-data/media/create-database.png "导入和导出向导创建数据库页")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>提供新数据库的名称  
 **名称**  
- 为目标 SQL Server 数据库提供唯一的名称。 请确保对数据库命名时遵循 SQL Server 命名约定。  
+ 提供的目标 SQL Server 数据库的名称。
+ 
+### <a name="naming-requirements"></a>命名要求
+请确保对数据库命名时遵循 SQL Server 命名约定。  
   
 -   数据库名称必须在 SQL Server 的实例内是唯一的。  
   
@@ -40,19 +49,18 @@ caps.handback.revision: 52
   
 -   数据库名称必须符合 SQL Server 中的标识符规则。 以下是最重要的要求。  
   
-    -   第一个字符必须是字母、下划线 (_)、at 符号 (@), 或数字符号 (#)。  
+    -   第一个字符必须是字母、下划线 (_)、at 符号 (@) 或数字符号 (#)。  
   
     -   后续字符可以是字母、数字、at 符号、美元符号 ($)、数字符号或下划线。  
   
     -   不能使用空格或其他特殊字符。  
   
-有关这些要求的详细信息，请参阅[数据库标识符](../../relational-databases/databases/database-identifiers.md)。  
+有关这些要求的详细信息，请参阅 [数据库标识符](../../relational-databases/databases/database-identifiers.md)。  
 
 ## <a name="optionally-specify-data-file-and-log-file-options"></a>（可选）指定数据文件和日志文件选项
 
-> [!TIP] 必须在“名称”字段中为新数据库提供名称，但通常可以将用于文件大小和文件增长的其他设置保留为其默认值。
->
-> 有关在此页上看到的文件大小选项的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
+> [!TIP]
+> 必须在“名称”  字段中为新数据库提供名称，但通常可以将用于文件大小和文件增长的其他设置保留为其默认值。
 
 ### <a name="data-file-options"></a>数据文件选项  
  **初始大小**  
@@ -79,6 +87,11 @@ caps.handback.revision: 52
   
  **增长规模**  
  指定日志文件可以增长的大小 (MB)。  
-  
+
+### <a name="more-info"></a>详细信息
+有关在此页上看到的文件大小选项的详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 
+
 ## <a name="whats-next"></a>下一步是什么？  
- 为向导将创建的新数据库提供名称并单击“确定”之后，“创建数据库”对话框会使你返回到“选择目标”页。 有关详细信息，请参阅[选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
+ 为向导将创建的新数据库提供名称并单击“确定” 之后，“创建数据库”  对话框会使你返回到“选择目标”  页。 有关详细信息，请参阅 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。  
+
+

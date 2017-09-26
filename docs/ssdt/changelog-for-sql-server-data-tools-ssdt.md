@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
-ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
-此更改日志适用于 [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。  
+此更改日志适用于 [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
 
@@ -368,7 +368,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 - **发行版本控制和编号：**现在，发行版按编号顺序而不是按月份标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
 - **Analysis Services – 表格模型资源管理器：**使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
-- **数据库工具 – Always Encrypted**：此发行版提供新的[“Always Encrypted 密钥管理”](https://msdn.microsoft.com/library/mt708953.aspx) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
+- **数据库工具 – Always Encrypted**：此发行版提供新的[“Always Encrypted 密钥管理”](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
     - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
     - 如果尝试加密某个表中包含 SQL Server 对象资源管理器中数据的列，该操作可能会失败。 此功能目前仅在 SSDT 数据库项目和 SSMS 中受支持。 以后的发行版将会实现对 SQL Server 对象资源管理器的支持。
 
@@ -456,7 +456,7 @@ SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQ
 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [数据库引擎中的新增功能](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services 中的新增功能](https://msdn.microsoft.com/library/bb522628.aspx)  
-[Integration Services 中的新增功能](https://msdn.microsoft.com/library/bb522534.aspx)  
+[Analysis Services 中的新增功能](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
+[Integration Services 中的新增功能](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
   
 

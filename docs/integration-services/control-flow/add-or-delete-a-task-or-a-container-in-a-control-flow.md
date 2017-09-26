@@ -1,27 +1,32 @@
 ---
-title: "在控制流中添加或删除任务或容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "容器 [Integration Services], 添加"
-  - "添加任务"
-  - "添加容器"
-  - "任务 [Integration Services], 添加"
+title: "添加或删除任务或控制流中的容器 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- containers [Integration Services], adding
+- adding tasks
+- adding containers
+- tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/26/2017
+
 ---
-# 在控制流中添加或删除任务或容器
+# <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流中添加或删除任务或容器
   在控制流设计器中工作时， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的工具箱会列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 为在包中生成控制流而提供的任务。 有关这些工具箱的详细信息，请参阅 [SSIS Toolbox](../../integration-services/ssis-toolbox.md)。  
   
  包可以包含同一任务的多个实例。 任务的每个实例在包中都唯一标识，因此可以分别配置每个实例。  
@@ -30,7 +35,7 @@ caps.handback.revision: 45
   
  下面的过程介绍如何在包的控制流中添加或删除任务或容器。  
   
-### 将任务或容器添加到控制流  
+## <a name="add-a-task-or-a-container-to-a-control-flow"></a>将任务或容器添加到控制流  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 45
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-### 从控制流删除任务或容器  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>从控制流删除任务或容器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -59,8 +64,57 @@ caps.handback.revision: 45
     -   打开 **包资源管理器**。 在“可执行文件”文件夹上，右键单击要删除的任务或容器，然后单击“删除”。  
   
 3.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
+
+## <a name="set-the-properties-of-a-task-or-container"></a>设置任务或容器的属性
+可以使用 **“属性”** 窗口设置任务和容器的大多数属性。 但任务集合的属性以及因过于复杂而无法使用 **“属性”** 窗口设置的属性不在此列。 例如，不能在 **“属性”** 窗口中配置 Foreach 循环容器使用的枚举器。 您必须使用任务或容器编辑器来设置这些复杂的属性。 大多数任务和容器编辑器都有多个节点，而每个节点都包含相关属性。 节点的名称指出了节点所包含属性的主题。  
   
-## 另请参阅  
+ 下面的过程介绍如何使用 **“属性”** 窗口或者任务或容器编辑器来设置相应任务或容器的属性。  
+  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>设置任务或容器，其中包含属性窗口的属性  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+  
+2.  在解决方案资源管理器中，双击该包将其打开。  
+  
+3.  单击 **“控制流”** 选项卡。  
+  
+4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“属性”。  
+  
+5.  在 **“属性”** 窗口中，更新属性值。  
+  
+    > [!NOTE]  
+    >  大部分属性可以通过直接在文本框中键入值或者从列表中选择值的方式进行设置。 但是，某些属性比较复杂，并且具有自定义的属性编辑器。 若要设置属性，请在文本框中单击，然后单击生成按钮 ( **…** ) 打开自定义编辑器。  
+  
+6.  也可以创建属性表达式来动态更新任务或容器的属性。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+  
+7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
+  
+### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>设置任务或使用任务或容器编辑器的容器的属性  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
+  
+2.  在解决方案资源管理器中，双击该包将其打开。  
+  
+3.  单击 **“控制流”** 选项卡。  
+  
+4.  在“控制流”选项卡的设计图面上，右键单击任务或容器，然后单击“编辑”以打开相应的任务或容器编辑器。  
+  
+     有关如何配置 For 循环容器的信息，请参阅[配置 For 循环容器](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
+  
+     有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+  
+    > [!NOTE]  
+    >  序列容器没有自定义编辑器。  
+  
+5.  如果任务或容器编辑器具有多个节点，单击包含要设置的属性的节点。  
+  
+6.  根据需要，也可以单击 **“表达式”** ，并在 **“表达式”** 页上创建属性表达式，以动态更新任务或容器的属性。 有关详细信息，请参阅 [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+  
+7.  更新属性值。  
+  
+8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
+  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  

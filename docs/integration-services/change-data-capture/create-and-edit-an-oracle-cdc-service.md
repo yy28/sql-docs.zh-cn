@@ -1,24 +1,29 @@
 ---
-title: "创建和编辑 Oracle CDC 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "创建和编辑 Oracle CDC 服务 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/26/2017
+
 ---
-# 创建和编辑 Oracle CDC 服务
+# <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
   
  若要创建新的 Oracle CDC Windows 服务，请从左侧窗格中选择 **“本地 CDC 服务”** ，然后从 **“操作”** 窗格中单击 **“新建服务”** 。 还可以右键单击“本地 CDC 服务”，然后选择“新建服务”。 “新 Oracle CDC Windows 服务”对话框将打开。  
@@ -29,12 +34,11 @@ caps.handback.revision: 8
   
  在“新 Oracle CDC Windows 服务”对话框或“CDC 服务属性”对话框中输入以下信息。  
   
- 服务名称  
+* * 服务名称 * *  
  键入新的 Oracle CDC Windows 服务的名称。 如果可能，不应使用长名称。 在服务名称中不能使用字符 / 和 \。  
   
 > [!NOTE]  
-  
- 在编辑服务时，此选项不可用。 不能更改已存在的 Windows 服务的名称。  
+> 在编辑服务时，此选项不可用。 不能更改已存在的 Windows 服务的名称。  
   
  **Description**  
  键入有助于标识该服务的说明。  
@@ -56,7 +60,7 @@ caps.handback.revision: 8
   
      可以将本地或域 Windows 帐户用于该服务帐户。 在此情况下，必须为该帐户输入 **“密码”** 。 该帐户可以用于本地主机或域帐户。 请确保在 Windows 控制面板中使用本地服务更改帐户时更新密码。  
   
- **服务器名称**：选择要连接到的目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（例如 **\\\\<computer_name>\\<instance_name>**）。 默认情况下，显示上次连接到的服务器实例。  
+ **服务器名称**： 选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到实例 (例如， ** \\ \\< 计算机名 >\\< 实例名称 >**)。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
  选择下列选项之一：  
@@ -65,7 +69,7 @@ caps.handback.revision: 8
   
 -   **SQL Server 身份验证**：如果选择此选项，则必须为您要使用的 **登录名键入** “用户名” **和** “密码” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 Oracle CDC 服务在连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时使用这些凭据。  
   
- Oracle CDC 服务使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名仅需是公共固定服务器角色的成员，无需其他权限。 在添加了新的 Oracle CDC 实例后，该登录名将获取对关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库的 **db_owner** 访问权限。  
+ Oracle CDC 服务使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名仅需是公共固定服务器角色的成员，无需其他权限。 在添加了新的 Oracle CDC 实例后，该登录名将获取对关联的 **CDC 数据库的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限。  
   
  若要创建 Oracle CDC Windows 服务定义，程序需要对关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 MSXDBCDC 数据库具有更新访问权限。 在单击 **“确定”**后，将出现一个对话框，提示用户输入具有对 MSXDBCDC 数据库的更新访问权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 8
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
--   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。 默认值为 **15**。  
+-   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
--   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。 默认值为 **30**。  
+-   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
 -   **加密连接**：选择 **“加密连接”** 将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间的通信。  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 8
   
  在高可用性配置中，如果在群集中的其他节点上配置了相同服务的其他实例，则也必须使用相同的主密码。 如果您丢失或修改了该主密码，则必须使用 CDC 设计器控制台重新输入在 Oracle CDC 实例数据库中存储的所有日志挖掘密码。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何创建和编辑 CDC 服务](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

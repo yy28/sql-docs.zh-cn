@@ -1,36 +1,44 @@
 ---
-title: "Integration Services (SSIS) 查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.querybuilder.f1"
-helpviewer_keywords: 
-  - "查询生成器 [Integration Services]"
-  - "查询 [Integration Services]"
-  - "语句 [Integration Services]"
-  - "查询 [Integration Services], 关于包中的查询"
+title: "Integration Services (SSIS) 查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.querybuilder.f1
+helpviewer_keywords:
+- Query Builder [Integration Services]
+- queries [Integration Services]
+- statements [Integration Services]
+- queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services (SSIS) 查询
+# <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
   执行 SQL 任务、OLE DB 源、OLE DB 目标以及查找转换都可以使用 SQL 查询。 在执行 SQL 任务中，SQL 语句可以创建、更新和删除数据库对象与数据；运行存储过程以及执行 SELECT 语句。 在 OLE DB 源和查找转换中，SQL 语句通常为 SELECT 语句或 EXEC 语句。 后者经常用于运行可返回结果集的存储过程。  
   
- 可以对查询进行分析，以确定它是否有效。 如果分析的查询使用到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的连接，则在分析、执行该查询后，执行结果（成功或失败）将分配给分析结果。 如果该查询使用的是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之外的数据连接，则仅分析该语句。  
+ 可以对查询进行分析，以确定它是否有效。 如果分析的查询使用到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的连接，则在分析、执行该查询后，执行结果（成功或失败）将分配给分析结果。 如果该查询使用的是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之外的数据连接，则仅分析该语句。  
   
- SQL 语句可以通过直接在设计器中输入来定义，或通过指定文件连接或包含该语句的变量来定义。  
+你可以通过以下方式提供的 SQL 语句：
+1.   直接在设计器中输入它。
+2.   指定的文件连接包含的语句。
+3.   指定包含该语句的变量。  
   
-## 直接输入 SQL  
+## <a name="direct-input-sql"></a>直接输入 SQL  
  查询生成器可用于执行 SQL 任务的用户界面中、OLE DB 源、OLE DB 目标和查找转换中。 查询生成器提供下列优势：  
   
 -   以直观方式工作或使用 SQL 命令。  
@@ -53,12 +61,61 @@ caps.handback.revision: 57
   
  通过在任务流或数据流组件对话框中或“属性”窗口中键入查询，您还可以提供直接输入。  
   
- 有关详细信息，请参阅 [Query Builder](../Topic/Query%20Builder.md)。  
+ 有关详细信息，请参阅 [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)。  
   
-## 文件形式的 SQL  
+## <a name="sql-in-files"></a>文件形式的 SQL  
  执行 SQL 任务的 SQL 语句还可以驻留在单独的文件中。 例如，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的查询编辑器等工具来编写查询，将查询保存到文件，然后在运行包时从该文件读取查询。 该文件可以只包含要运行的 SQL 语句以及注释。 若要使用存储在文件中的 SQL 语句，您必须提供指定文件名和位置的文件连接。 有关详细信息，请参阅 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)。  
   
-## 变量形式的 SQL  
- 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](../Topic/Use%20Variables%20in%20Packages.md)。  
+## <a name="sql-in-variables"></a>变量形式的 SQL  
+ 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+
+## <a name="query-builder-dialog-box"></a>“查询生成器”对话框
+可以使用 **“查询生成器”** 对话框，创建在执行 SQL 任务、OLE DB 源和 OLE DB 目标以及查找转换中使用的查询。  
   
+ 可以使用查询生成器来执行下列任务：  
+  
+-   **使用查询的图形表示形式或 SQL 命令** 查询生成器包括以图形方式显示查询的窗格和以 SQL 文本方式显示查询的窗格。 您既可以在图形窗格中工作，也可以在文本窗格中工作。 查询生成器可以同步视图，使其始终保持为最新状态。  
+  
+-   **联接相关表** 如果将多个表添加到查询中，查询生成器将自动确定这些表之间的关系，并构造相应的联接命令。  
+  
+-   **查询或更新数据库** 可以使用查询生成器通过 Transact-SQL SELECT 语句来返回数据，还可使用它来创建查询以便更新、添加或删除数据库中的记录。  
+  
+-   **立即查看和编辑结果** 您可以运行查询，在可滚动和编辑数据库中各记录的网格中对记录集进行操作。  
+  
+ “查询生成器”对话框中的图形工具使你可以使用拖放操作来构造查询。 默认情况下，“查询生成器”对话框将生成 SELECT 查询，但也可以生成 INSERT、UPDATE 或 DELETE 查询。 还可以在 **“查询生成器”** 对话框中分析和运行所有类型的 SQL 语句。 有关包中 SQL 语句的详细信息，请参阅 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。  
+  
+ 若要了解关于 Transact-SQL 语言及其语法的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../t-sql/transact-sql-reference-database-engine.md)。  
+  
+ 还可以在查询中使用变量，以便为输入参数提供值、捕获输出参数的值并存储返回代码。 若要了解有关在包使用的查询中使用变量的详细信息，请参阅[执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md)， [OLE DB 源](../integration-services/data-flow/ole-db-source.md)，和[Integration Services &#40;SSIS &#41;查询](../integration-services/integration-services-ssis-queries.md)。 若要了解有关在执行 SQL 任务中使用变量的详细信息，请参阅 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [执行 SQL 任务中的结果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
+  
+ 查找转换和模糊查找转换也可以使用带有参数和返回代码和变量。 有关 OLE DB 源的信息也适用于上述两种转换。  
+  
+### <a name="options"></a>选项  
+ **工具栏**  
+ 使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
+  
+|“值”|Description|  
+|-----------|-----------------|  
+|**显示/隐藏关系图窗格**|显示或隐藏 **“关系图”** 窗格。|  
+|**显示/隐藏网格窗格**|显示或隐藏 **“网格”** 窗格。|  
+|**显示/隐藏 SQL 窗格**|显示或隐藏 **SQL** 窗格。|  
+|**显示/隐藏结果窗格中**|显示或隐藏 **“结果”** 窗格。|  
+|**运行**|运行查询。 结果将显示在结果窗格中。|  
+|**验证 SQL**|验证 SQL 语句是否有效。|  
+|**升序排序**|依据网格窗格中的所选列对输出行按升序排序。|  
+|**降序排序**|依据网格窗格中的所选列对输出行按降序排序。|  
+|**删除筛选器**|在网格窗格中选择列名，再单击 **“删除筛选器”** 可以删除列的排序条件。|  
+|**使用 Group By**|向查询中添加 GROUP BY 功能。|  
+|**添加表**|向查询中添加新表。|  
+  
+ **查询定义**  
+ 查询定义提供可用来定义和测试查询的工具栏和窗格。  
+  
+|窗格|Description|  
+|----------|-----------------|  
+|**“关系图”** 窗格|在关系图中显示查询。 关系图可显示查询中包含的表以及这些表的联接方式。 选中或清除表中某列旁边的复选框，即可在查询输出中添加或删除该列。<br /><br /> 当您向查询添加表时，查询生成器将根据表和表中的键在表之间创建联接。 若要添加联接，请将一个表中的字段拖到另一个表中的字段上。 若要管理联接，请右键单击该联接，再选择菜单选项。<br /><br /> 右键单击“关系图”窗格，可以添加或删除表，选择所有表，以及显示或隐藏窗格。|  
+|**“网格”** 窗格|在网格中显示查询。 使用此窗格可以在查询中添加和删除列，以及更改每个列的设置。|  
+|**SQL** 窗格|以 SQL 文本的形式显示查询。 在 **“关系图”** 窗格和 **“网格”** 窗格中所做的更改将显示在此窗格中，在此窗格中所做的更改也将显示在 **“关系图”** 窗格和 **“网格”** 窗格中。|  
+|**“结果”** 窗格|在您单击工具栏上的 **“运行”** 时显示查询的结果。| 
+
   
