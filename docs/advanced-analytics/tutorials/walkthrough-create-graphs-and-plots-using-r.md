@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ### <a name="create-a-histogram"></a>创建直方图
 
-1. 使用 rxHistogram [](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  RxHistogram 函数提供类似于在开放源 R 包的功能，但可以在远程执行上下文中运行。
+1. 使用 [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  RxHistogram 函数提供类似于在开放源 R 包的功能，但可以在远程执行上下文中运行。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
