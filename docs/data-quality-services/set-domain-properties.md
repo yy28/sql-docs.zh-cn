@@ -1,24 +1,29 @@
 ---
 title: "设置域属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.domainproperties.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 设置域属性
+# <a name="set-domain-properties"></a>设置域属性
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中设置域属性。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -33,14 +38,14 @@ caps.handback.revision: 22
   
 ##  <a name="Set"></a> 设置域属性  
   
-1.  通过在域管理活动中打开知识库对某一现有域设置属性 (请参阅 [打开知识库](../data-quality-services/open-a-knowledge-base.md))，然后选择相应的域中 **域** 列表。 默认情况下，将显示“域属性”页。  
+1.  通过在域管理活动中打开某一知识库（请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)），然后在 **“域”** 列表中选择适当的域，对某一现有域设置属性。 默认情况下，将显示“域属性”页。  
   
 2.  在按照 [Create a Domain](../data-quality-services/create-a-domain.md)中所述创建一个新域后设置其属性。  
   
-3.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)中所述。  
+3.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：设置域属性后  
- 在设置域属性后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在设置域属性后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Properties"></a> 域属性  
   
@@ -48,13 +53,13 @@ caps.handback.revision: 22
  一旦创建了一个域后，就可以更改该域名或说明。 对于知识库而言，域名必须唯一。 说明最多可以有 256 个字符。  
   
 ###  <a name="Type"></a> 数据类型  
- 当创建域时，以下数据类型的值的一个域中选择︰ **字符串** （默认值）， **日期**, ，**整数**, ，或 **十进制**。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 有关 DQS 中四个域数据类型的支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 在您选择域后，为域中的值选择以下数据类型之一： **String** （默认设置）、 **Date**、 **Integer**或 **Decimal**。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 有关 DQS 中四个域数据类型的支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前导值  
  选中此复选框可指定将输出一组同义词中的前导值，而非是其同义词的值。 取消选择 **“使用前导值”** 可指定每个同义词值以其正确或更正形式输出，并且不会被其组的前导值替换。  
   
 ###  <a name="Normalize"></a> 规范化字符串  
- 如果数据类型为 **字符串**, ，单击此项可忽略源数据进行数据质量处理 DQS 中的特殊字符。 DQS 会在数据加载到域中时在内部用 null 或空格替换特殊字符。 冒号、连字符、句点、双引号或分号将替换为空格。 单引号将替换为 null。 使用 null 可使字符串的两个部分成为一体。  
+ 如果数据类型为 **String**，则请单击以忽略源数据中的特殊字符，以便 DQS 进行数据质量处理。 DQS 会在数据加载到域中时在内部用 null 或空格替换特殊字符。 冒号、连字符、句点、双引号或分号将替换为空格。 单引号将替换为 null。 使用 null 可使字符串的两个部分成为一体。  
   
  忽略字符串值中的特殊字符可提高匹配精确性。 可以通过使用 null 或空格替换特殊字符来增加两个字符串之间的相似性分数。 标点符号或其他符号可以轻松地在不同字符串之间进行区分。 通过在内部替换特殊字符，可使分数能够超过 DQS 中的最低匹配阈值，导致尚未匹配的两个字符串最终匹配。 但是，您是否选择忽略特殊字符可能依赖于您对其执行匹配的数据类型。 例如，当您在英制度量系统中使用数据时，如果双引号表示英寸，单引号表示英尺，则忽略产品数据中的双引号和单引号可能会导致误报。  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 22
  英语为默认语言。 将 **“语言”** 属性设置为 **“其他”** 将为该域禁用拼写检查器。  
   
 > [!TIP]  
->  如果您的语言未列在 **语言** 下拉列表中，您必须选择 **其他**。 这可确保 DQS 根据域中可用的知识（域规则、域值、TBR、匹配规则），清理和消除未列出的语言数据的重复项。  
+>  如果您的语言未列在 **“语言”** 下拉列表中，则必须选择 **“其他”**。 这可确保 DQS 根据域中可用的知识（域规则、域值、TBR、匹配规则），清理和消除未列出的语言数据的重复项。  
   
 ###  <a name="Speller"></a> 启用拼写检查器  
  如果数据类型是 **String**，则单击可为该域启用 DQS 拼写检查器。 拼写检查器仅适用于数据类型为字符串的域。 **“启用拼写检查器”** 复选框使拼写检查器仅适用于与该复选框相关联的单一域。 该复选框不适用于复合域。  

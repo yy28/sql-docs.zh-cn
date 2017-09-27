@@ -1,22 +1,27 @@
 ---
 title: "从 .dqs 文件导入域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4adc315932a7632077913866b648cba4947a9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 从 .dqs 文件导入域
+# <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
   本主题说明如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域从 .dqs 文件导入到现有知识库。 通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序导出域或知识库可创建 .dqs 数据文件。 .dqs 数据文件已加密，因此无法查看。  
   
  通过使用 .dqs 数据文件从一个知识库中导出域，然后将域导入到另一个知识库，可以简化知识生成过程、节省时间并提高效率。 这样，您就可以与他人共享域及其知识，同时节省时间。 您可以导入一个单一域或一个复合域（包含多个单一域）。 包含单一域的 .dqs 文件包含所有域数据，其中包括域属性、值和规则数据，但映射的引用数据信息除外。 包含复合域的 .dqs 文件包含所有复合域数据，其中包含复合域中包含的各单一域的所有域数据，以及复合域属性、值关系和 CD 规则，但映射的引用数据除外。 将导入已发布和未发布的数据。  
@@ -33,15 +38,15 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> 权限  
  您必须具有 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入域。  
   
-##  <a name="Import"></a> 从 .dqs 文件导入域  
+##  <a name="Import"></a> Import a domain from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在域管理活动中打开知识库。  
   
 3.  单击 **“从数据文件导入域”** 图标。  
   
-4.  在 **从数据文件导入** 对话框中，转到您想要导入的文件，选择 （的 DQS 文件类型），该文件，然后单击该文件夹 **打开**。  
+4.  在 **“从数据文件导入”** 对话框中，转到要从中导入文件的文件夹，选中该文件（DQS 文件类型），然后单击 **“打开”**。  
   
 5.  在 **“导入域”** 对话框中，单击 **“确定”**。  
   
@@ -51,6 +56,6 @@ caps.handback.revision: 18
 6.  确认您导入的域显示在 **“域”** 列表中。 如果您导入复合域，请验证此复合域以及复合域中包含的单一域均出现在 **“域”** 列表中。  
   
 ##  <a name="FollowUp"></a> 跟进：从 .dqs 文件导入域后  
- 在从 .dqs 文件导入域之后，可以将知识添加到域中或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，[管理复合域](../data-quality-services/managing-a-composite-domain.md), ，[创建匹配策略](../data-quality-services/create-a-matching-policy.md), ，[数据清理](../data-quality-services/data-cleansing.md), ，或 [数据匹配](../data-quality-services/data-matching.md)。  
+ 在从 .dqs 文件导入域之后，可以将知识添加到域中或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
   

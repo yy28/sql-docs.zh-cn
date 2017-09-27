@@ -1,22 +1,27 @@
 ---
 title: "DQS 中的数据事件探查和通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 中的数据事件探查和通知
+# <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的数据事件探查和通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据事件探查是一个分析现有数据源中的数据并显示有关 DQS 活动中的数据统计信息的过程。 它为您提供了数据质量的自动测量。 DQS 事件探查已集成到 DQS 知识管理和数据质量项目中。 它是动态和可调的。 事件探查具有两个主要目的：第一，引导您完成数据质量过程和支持您做出决策；第二，评估过程的效用。 DQS 事件探查具有下列优点：  
   
 -   事件探查可让您深入了解源数据的质量，并帮助您确定数据质量问题。  
@@ -65,7 +70,7 @@ caps.handback.revision: 25
   
 -   [执行知识发现](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [清理数据使用 DQS & #40; 内部 & #41;知识](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [创建匹配策略](../data-quality-services/create-a-matching-policy.md)  
   
@@ -79,21 +84,21 @@ caps.handback.revision: 25
   
  DQS 通知用于提出您可能感兴趣的问题或解决潜在的问题。 您得到通知后是否采取措施取决于通知是否与您的目标有关。 例如，假设当完整性和准确性均为 100% 时，如果数据清理没有生成任何更正值或建议值，则 DQS 会发布一个通知。 此通知将表明可能不需要运行该活动。 是否选择运行此活动取决于您。  
   
- 通知由 **“事件探查”** 选项卡中带感叹号的工具提示指示。 与通知关联的统计信息会标为红色，以指示通知的统计理由。  
+ 通知由 **“事件探查”** 选项卡中带感叹号的工具提示指示。与通知关联的统计信息会标为红色，以指示通知的统计理由。  
   
- 您可以启用 （默认值） 或在中禁用通知 **常规设置** 的选项卡上 **管理** 数据质量客户端主页部分。 当禁用通知时，不显示工具提示且统计数字不会显示为红色。 禁用通知不会对性能有明显改善。 如果您禁用通知，事件探查仍会进行。  
+ 您可以在数据质量客户端主页中 **“管理”** 部分的 **“常规设置”** 选项卡上启用（默认）或禁用通知。 当禁用通知时，不显示工具提示且统计数字不会显示为红色。 禁用通知不会对性能有明显改善。 如果您禁用通知，事件探查仍会进行。  
   
  有关与活动通知相关联的特定条件，请参阅下列资源：  
   
 -   [执行知识发现](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [清理数据使用 DQS & #40; 内部 & #41;知识](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [创建匹配策略](../data-quality-services/create-a-matching-policy.md)  
   
 -   [运行匹配项目](../data-quality-services/run-a-matching-project.md)  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

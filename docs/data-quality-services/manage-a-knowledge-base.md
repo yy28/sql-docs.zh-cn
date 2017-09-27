@@ -1,22 +1,27 @@
 ---
 title: "管理知识库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 管理知识库
+# <a name="manage-a-knowledge-base"></a>管理知识库
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中对知识库执行管理功能。 您可以删除知识库、对知识库进行解锁、放弃对知识库所做的工作、重命名知识库以及显示其属性。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -31,7 +36,7 @@ caps.handback.revision: 9
   
 ##  <a name="Manage"></a> 管理知识库  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开知识库”**。  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 9
   
     3.  **放弃工作**：在知识库处于正被使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    4.  **重命名**︰ 单击此项可使表的知识库字段对于您右键单击该知识库可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
+    4.  **重命名**：单击可使表的“知识库”字段对于您右键单击的知识库而言可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
   
-    5.  **删除**︰ 单击此项可在 DQS_MAIN 数据库中删除该知识库 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
+    5.  **删除**：单击可从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS_MAIN 数据库中删除该知识库。  
   
-    6.  **属性**︰ 单击此项可显示数据库的属性的是只读的。  
+    6.  **属性**：单击可显示数据库的属性，这些属性是只读的。  
   
         1.  **源知识库**：此数据库所基于的知识库。 此为可选项。  
   

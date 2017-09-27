@@ -1,24 +1,29 @@
 ---
 title: "将清理项目值导入到域中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importprojectvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 将清理项目值导入到域中
+# <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -36,7 +41,7 @@ caps.handback.revision: 21
   
 ##  <a name="Import"></a> 导入清理项目值  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在域管理活动中打开知识库。  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 21
 4.  单击 **“域值”** 选项卡，在图标栏中单击 **“导入值”** 图标，然后单击 **“导入项目值”**。 此时将显示 **“导入项目值”** 对话框，其中包含使用该域进行清理的数据质量项目以及集成服务包的列表。  
   
     > [!NOTE]  
-    >  如果尚未创建任何项目使用的域或任何链接域，或者尚未完成该项目，请 **导入项目值** 选项将不可用。  
+    >  如果尚未使用域或其任何链接域创建项目，或者项目没有完成，则 **“导入项目值”** 选项将不可用。  
   
 5.  在 **“导入项目值”** 对话框中：  
   
-    -   选择 **所有** 中 **已导入** 下拉列表以显示所有项目，或 **否** 以都显示其值已不尚未导入的项目。  
+    -   在 **“已导入”** 下拉列表中选择 **“全部”** 以显示所有项目，或选择 **“否”** 仅显示尚未导入值的项目。  
   
     -   选择要从中导入值的项目。  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 21
 10. 单击 **“完成”**。  
   
     > [!NOTE]  
-    >  有关详细信息中的值使用 **域值** 选项卡上，请参阅 [更改域值](../data-quality-services/change-domain-values.md)。  
+    >  有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../data-quality-services/change-domain-values.md)。  
   
 ##  <a name="FollowUp"></a> 跟进：将项目值导入到域后  
- 将在清理过程中收集的数据质量知识导入到域中后，您可以对该域和值执行其他域管理任务。 有关详细信息，请参阅 [管理域](../data-quality-services/managing-a-domain.md)。  
+ 将在清理过程中收集的数据质量知识导入到域中后，您可以对该域和值执行其他域管理任务。 有关详细信息，请参阅[管理域](../data-quality-services/managing-a-domain.md)。  
   
 ##  <a name="Values"></a> 要导入的值  
  下面的值将从项目导入到域中：  
@@ -109,8 +114,8 @@ caps.handback.revision: 21
   
 -   仅当知识库处于工作状态且知识库由正在执行导入的用户锁定，才可从项目中导入值。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据清理](../data-quality-services/data-cleansing.md)   
- [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

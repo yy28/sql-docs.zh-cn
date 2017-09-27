@@ -1,22 +1,27 @@
 ---
 title: "备份和还原 DQS 数据库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 备份和还原 DQS 数据库
+# <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
   本主题说明如何备份和还原 DQS 数据库。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  在“对象资源管理器”中，展开 **“数据库”** 节点。  
   
-3.  备份 DQS_STAGING_DATA 数据库。 有关备份 SQL Server 数据库的分步说明，请参阅 [创建完整数据库备份和 #40;SQL Server 和 #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
+3.  备份 DQS_STAGING_DATA 数据库。 有关备份 SQL Server 数据库的分步说明，请参阅[创建完整数据库备份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
 4.  备份 DQS_PROJECTS 数据库。  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  断开与当前 SQL Server 实例的连接，然后连接到要还原这些数据库的 SQL Server 实例。  
   
-7.  还原 DQS_MAIN 数据库。 若要还原的 SQL Server 数据库的分步说明，请参阅 [还原数据库备份使用 SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
+7.  还原 DQS_MAIN 数据库。 有关还原 SQL Server 数据库的分步说明，请参阅[使用 SSMS 还原数据库备份](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。  
   
 8.  还原 DQS_PROJECTS 数据库。  
   
 9. 还原 DQS_STAGING_DATA 数据库。  
   
-10. 在对象资源管理器，右键单击该服务器，然后单击 **新查询**。  
+10. 在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”**。  
   
-11. 在查询编辑器窗口中，复制以下 SQL 语句，并替换 *\< 密码>* 使用数据库主密钥在 DQS 安装期间提供的密码︰  
+11. 在“查询编辑器”窗口中，复制以下 SQL 语句，然后将 \<PASSWORD> 替换为在 DQS 安装过程中为数据库主密钥提供的密码：  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. 按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  
   
   

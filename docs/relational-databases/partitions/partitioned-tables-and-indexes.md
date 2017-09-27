@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   索引键是唯一的，不包含表的分区依据列。  
   
 -   您希望基表与使用不同联接列的多个表一起参与并置联接。  
-  
- 分区排除  
- 查询优化器用来仅访问相关分区以便满足查询的筛选条件的过程。  
+
+ 分区排除：查询优化器用来仅访问相关分区以便满足查询的筛选条件的过程。  
   
 ## <a name="performance-guidelines"></a>性能准则  
  这个新的、更高的 15,000 个分区的限制将影响内存、分区的索引操作、DBCC 命令和查询。 本节介绍将分区数目增加到超过 1,000 个的性能影响并根据需要提供解决方法。 由于对分区最大数目的限制已增加到 15,000 个，因此您可以存储更长时间的数据。 不过，您应该仅保留所需时长的数据，并且在性能和分区数目之间保持平衡。  

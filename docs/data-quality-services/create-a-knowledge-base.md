@@ -1,25 +1,30 @@
 ---
 title: "创建知识库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.selectkb.f1"
-  - "sql13.dqs.kb.newkb.f1"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.selectkb.f1
+- sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f440bb34a0939653d6708fcc9c46735fc3cdf9a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 创建知识库
+# <a name="create-a-knowledge-base"></a>创建知识库
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -32,9 +37,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建知识库。  
   
-##  <a name="Createaknowledgebase"></a> 创建知识库  
+##  <a name="Createaknowledgebase"></a> Create a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“新建知识库”**。  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 20
   
     -   如果您不想基于现有知识库或数据文件来创建新知识库，则选择 **“无”** 。  
   
-    -   选择 **“现有知识库”** 可以基于已在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上创建的知识库或默认知识库来创建新知识库。 选择从知识库 **选择  醚畐 ゅ** 下拉列表中或单击 **浏览** 显示 **选择知识库** 对话框中，选择一个现有知识库基数为基准新知识库，然后单击 **确定**。 在您从 Tablet 中选择一个知识库时，将在该对话框的右侧窗格中显示知识库中的域和匹配规则。 您还可以选择 **DQS 数据** 知识库，这是默认知识库，其中包含常见的现成可用域和知识与美国公司、 地址和参与方数据相关。  
+    -   选择 **“现有知识库”** 可以基于已在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上创建的知识库或默认知识库来创建新知识库。 从 **“选择知识库”** 下拉列表中选择知识库，或者单击 **“浏览”** 以便显示 **“选择知识库”** 对话框，选择新知识库要基于的一个现有知识库，然后单击 **“确定”**。 在您从 Tablet 中选择一个知识库时，将在该对话框的右侧窗格中显示知识库中的域和匹配规则。 你还可以选择“DQS 数据”  知识库，这是默认的知识库，包含与美国公司、地址和有关方数据相关的通用全新域和知识。  
   
     -   选择 **“自 DQS 文件导入”** 将基于 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS 文件创建新的知识库。 单击 **“浏览”**，选择扩展名为 .dqs 的 DQS 数据文件，然后单击 **“确定”**。  
   
@@ -59,6 +64,6 @@ caps.handback.revision: 20
 6.  单击 **“创建”**。  
   
 ##  <a name="FollowUp"></a> 跟进：创建知识库后  
- 在创建一个知识库后，系统将会向您提供可用于执行知识发现的向导、可用于创建匹配策略的向导或者可用于执行域管理的若干页。 有关知识发现、 域管理或匹配策略的详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在创建一个知识库后，系统将会向您提供可用于执行知识发现的向导、可用于创建匹配策略的向导或者可用于执行域管理的若干页。 有关知识发现、域管理或匹配策略的详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

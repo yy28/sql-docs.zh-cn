@@ -1,22 +1,27 @@
 ---
 title: "DQS 知识库和域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 知识库和域
+# <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
   本主题介绍了 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库。 为了清理数据，您必须具有有关数据的知识。 为了准备数据质量项目的知识，您生成并维护一个 DQS 可用于标识不正确或无效数据的知识库 (KB)。 通过 DQS，您可以使用计算机辅助过程和交互式过程来创建、生成和更新知识库。 知识库中的知识在域中维护，每个域都是某个数据字段特有的。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  
   
  DQS 知识库有以下优点：  
@@ -31,11 +36,11 @@ caps.handback.revision: 32
   
 -   生成知识库和将知识库应用到数据更正过程是明显不同的过程，这样使您可以灵活决定如何生成和更新知识库。  
   
- 数据专员使用[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]应用程序来执行和控制计算机辅助的步骤以及执行交互式步骤。  
+ 数据专员使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序来执行和控制计算机辅助的步骤以及执行交互式步骤。  
   
  下图显示了 DQS 中知识库和域的各个组件：  
   
- ![DQS 中的知识库和域](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "DQS 中的知识库和域")  
+ ![DQS 中的知识库和域](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "Knowledge Base and Domains in DQS")  
   
 ##  <a name="How"></a> 如何创建和生成 DQS 知识库  
  生成 DQS 知识库涉及以下过程和组件：  
@@ -61,10 +66,10 @@ caps.handback.revision: 32
   
  不需要对执行数据更正的数据执行知识发现过程。 DQS 提供灵活的功能，支持从一组数据库字段创建知识并将其应用到另一组需要清理的相关数据。 数据专员可以从头创建一个全新的知识库或基于现有知识库创建新知识库，也可以从数据文件导入知识库。 您还可以对现有知识库重新运行知识发现。 您可以在单个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上维护多个知识库。 还可以将多个应用程序实例连接到同一知识库。 DQS 可以锁定知识库，使其仅供在知识管理会话中打开它的用户使用，从而防止并发冲突。  
   
-### DQS 中不区分大小写  
+### <a name="case-insensitivity-in-dqs"></a>DQS 中不区分大小写  
  DQS 中的值不区分大小写。 这意味着当 DQS 执行知识发现、域管理或匹配时，它不区分值的大小写。 如果您在值管理系统中添加的值仅与另一个值在大小写上不同，系统将认为这是同一个值，而非同义词。 如果仅在大小写上有区别的两个值在匹配过程中进行比较，系统将认为这是完全匹配。  
   
- 不过，您可以在清理结果中控制导出的值的大小写。 这样可以通过设置实现 **输出格式设置为** 域属性 (请参阅 [设置域属性](../data-quality-services/set-domain-properties.md)) 以及通过使用 **标准化输出** 复选框，当您导出清理结果 (请参阅 [使用 DQS 清理数据 & #40; 供内部使用 & #41;知识](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md))。  
+ 不过，您可以在清理结果中控制导出的值的大小写。 为此，需要设置“将输出格式设置为”域属性（请参阅[设置域属性](../data-quality-services/set-domain-properties.md)）或在导出清理结果时使用“标准化输出”复选框（请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)）。  
   
 ##  <a name="Domains"></a> 域管理  
  通过域管理，数据专员可以以交互方式更改和增加计算机辅助的知识发现活动生成的元数据。 您所做的每个更改针对某个知识库域。 在域管理活动中，可以执行以下操作：  
@@ -89,18 +94,18 @@ caps.handback.revision: 32
   
  完成域管理活动后，可以发布知识库以供在数据项目中使用。  
   
-### 设置域属性  
+### <a name="setting-domain-properties"></a>设置域属性  
  域属性定义和驱动将应用于相关值的处理。 您可以设置值的数据类型和语言，指定将用前导值清理源数据（如果未选中该选项，将用正确的字词而不是前导词来清理源数据），通过配置在输出域中的数据值时将应用的格式来确保数据标准化，以及定义将应用的算法（语法错误、拼写检查器和字符串规范化）。  
   
-### Reference Data Services  
+### <a name="reference-data-services"></a>Reference Data Services  
  在域管理过程中，您可以将在线引用数据附加到某个域。 这涉及您如何将域中的数据与引用数据访问接口所维护的数据进行比较。 必须首先通过 **应用程序的** “管理” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 部分中的 DQS 配置功能配置引用数据访问接口。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
   
-### 应用域规则  
+### <a name="applying-domain-rules"></a>应用域规则  
  您可以创建用于数据验证的域规则。 域规则确保数据的准确性，从基本约束（如字符串值可能接受的字词）到更复杂的正则表达式（如电子邮件地址的有效格式）均要符合验证规则的要求。  
   
  对于复合域，您可以创建一个 CD 规则，该规则指定一个域中的值与另一个域中的值之间的关系，这两个域都是复合域的一部分。  
   
-### 设置域值  
+### <a name="setting-domain-values"></a>设置域值  
  在生成知识库后，可以在知识库的每个域中填充并显示数据值。 执行知识发现后，DQS 将显示每个字词出现的次数、每个字词的状态以及建议进行的所有更正。 可以按以下方式管理此知识：  
   
 -   更改值的状态，使它正确、错误或无效  
@@ -115,21 +120,21 @@ caps.handback.revision: 32
   
  可以在域管理活动中设置域值，或在知识发现活动末尾的“管理域值”步骤中设置域值。 两个活动中的域值功能是相同的。  
   
-### 设置字词关系  
+### <a name="setting-term-relations"></a>设置字词关系  
  在域管理活动中，您可以为单一域指定基于词的关系，指定对单个值的更改。  
   
-### 复合域  
+### <a name="composite-domains"></a>复合域  
  复合域是包含两个或更多域的结构，其中每个域包含通用数据的知识。 以下是可以用复合域处理的数据示例：名称字段中的名字、中间名和姓氏，地址字段中的住宅编号和街道、城市、省/市/自治区、邮政编码和国家/地区。 将单个字段映射到复合域时，DQS 将一个字段的数据分析到构成复合域的多个域中。  
   
  有时单一域并不能完全表示字段数据。 通过将复合域中的两个或更多域分组，您可以更高效地表示数据。 使用复合域的优点如下：  
   
 -   分析构成复合域的不同单一域可能是更高效评估数据质量的一种方法。  
   
--   使用复合域时，还可以创建跨域规则，这使您可以验证多个域中的数据之间的关系是否合适。 例如，您可以验证城市域中的字符串“伦敦”对应于国家/地区域中的字符串“英国”。 请注意在域规则后考虑跨域规则。  
+-   使用复合域时，还可以创建跨域规则，这使您可以验证多个域中的数据之间的关系是否合适。 例如，您可以验证城市域中的字符串“伦敦”对应于国家/地区域中的字符串“英格兰”。 请注意在域规则后考虑跨域规则。  
   
 -   复合域中的数据可以附加到引用数据源，这种情况下会将复合域发送到引用数据访问接口。 通常对地址数据这样做。  
   
- 如何分析复合域所表示的数据由复合域属性决定。 可以通过分隔符、 域的顺序分析或根据在附加到复合域的域知识对数据 (通过选择 **使用基于知识的分析** 复合域中的属性)。 有关详细信息，请参阅 [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
+ 如何分析复合域所表示的数据由复合域属性决定。 可以通过分隔符、域的顺序或者基于附加到复合域的域中的知识（通过在复合域中选择 **“使用基于知识的分析”** 属性），对数据进行分析。 有关详细信息，请参阅 [Set Composite Domain Properties](../data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
   
  复合域的管理不同于单一域的管理。 不能管理复合域中的值，只能管理构成复合域的单一域的值。 但是，从域管理活动的域列表中，您可以查看复合域中不同值之间的关系以及应用到它们的统计信息。 例如，您可以查看包含相同五个字符串值的单个地址有多少个实例。 在知识发现活动的“发现”步骤中，在构成复合域的单一域上（而非在复合域上）执行事件探查。 但是，在交互式清理中，您是在复合域而非单一域中清理数据。  
   
@@ -138,9 +143,9 @@ caps.handback.revision: 32
 ##  <a name="Matching"></a> 数据匹配  
  除了通过域管理对知识库进行手动更改外，您还可以将匹配知识添加到知识库。 若要准备将 DQS 用于数据消除重复过程，您必须创建 DQS 将用于计算匹配概率的匹配策略。 该策略包含一个或多个匹配规则，数据专员创建这些规则来标识 DQS 应如何比较数据行。 数据专员确定应比较行中的哪些数据字段，以及在比较中每个字段的权重是多少。 数据专员也确定多高的概率应被视为匹配。 DQS 将匹配规则添加到知识库，以供在数据质量项目中执行匹配活动时使用。  
   
- 有关知识库和数据匹配的详细信息，请参阅 [数据匹配](../data-quality-services/data-matching.md)。  
+ 有关知识库和数据匹配的详细信息，请参阅 [数据匹配](../data-quality-services/data-matching.md)上维护多个知识库。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  您可以对知识库和它的域执行以下操作：  
   
 |||  

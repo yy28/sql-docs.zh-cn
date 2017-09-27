@@ -1,28 +1,33 @@
 ---
 title: "在知识发现中从 Excel 文件中导入域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 在知识发现中从 Excel 文件中导入域
-  本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现活动中从某一 Excel 文件导入一个或多个域。 该导入过程简化了知识生成过程，并且可以节省时间和精力。 借助这一方法，在 Excel 文件或文本文件中具有数据的人士能够创建包含这些数据的知识库。 (请参阅 [从 Excel 文件到域中导入值](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) 有关导入到现有知识库的域值的详细信息。)不支持导出到 Excel 文件。  
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知识发现中从 Excel 文件中导入域
+  本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现活动中从某一 Excel 文件导入一个或多个域。 该导入过程简化了知识生成过程，并且可以节省时间和精力。 借助这一方法，在 Excel 文件或文本文件中具有数据的人士能够创建包含这些数据的知识库。 （有关将值导入到现有知识库的域中的详细信息，请参阅[将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。）不支持导出到 Excel 文件。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 若要从 Excel 文件导入域，Excel 必须安装在计算机上的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 安装上; 您必须创建一个 Excel 文件使用域值 (请参阅 [导入的工作原理](#How)); 并且您必须创建并打开了知识库导入到域。  
+ 若要从 Excel 文件导入域，Excel 必须安装在装有 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的计算机上；您必须使用域值创建了一个 Excel 文件（请参阅 [How the import works](#How)）；并且必须创建并打开了要将域导入其中的知识库。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 24
   
 ##  <a name="Import"></a> 将域从 Excel 文件中导入到知识库中  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，执行以下操作之一：  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 24
   
 5.  在 **“选择 Excel 文件”** 对话框中，移到包含您要从其导入的 Excel 文件的文件夹，选择该 Excel 文件，然后单击 **“打开”**。  
   
-6.  从 **工作表** 下拉列表中，选择你想要从导入的 Excel 文件中的工作表。  
+6.  从 **“工作表”** 下拉列表中，选择您要从其导入的 Excel 文件中的工作表。  
   
-7.  如果您希望第一行作为数据标头，并且希望第一行中的值用作列名称，则选择 **“将第一行用作标头”** 。 取消选择 **将第一行用作标头** 如果您想要被视为一个数据值的第一行，在这种情况下 DQS 将使用 Excel 标头名称 （字母） 的列。  
+7.  如果您希望第一行作为数据标头，并且希望第一行中的值用作列名称，则选择 **“将第一行用作标头”** 。 如果您希望第一行作为数据值，则取消选择 **“将第一行用作标头”** ，在此情况下，DQS 将使用 Excel 标头名称（字母）用于列。  
   
 8.  选择某一列，然后或者将某个现有域映射到该列，或者创建一个新域，方法是单击 **“创建域”** 图标，在 **“创建域”** 对话框中创建一个域，然后将该域映射到该列。 该域的数据类型必须与该列的数据类型匹配。 为电子表格的所有列重复上述步骤。  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 24
 14. 验证知识库已发布，然后单击 **“确定”**。  
   
 ##  <a name="FollowUp"></a> 跟进：在从 Excel 文件导入域后  
- 在从 Excel 文件导入域之后，您可以将知识添加到域中，或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，[管理复合域](../data-quality-services/managing-a-composite-domain.md), ，[创建匹配策略](../data-quality-services/create-a-matching-policy.md), ，[数据清理](../data-quality-services/data-cleansing.md), ，或 [数据匹配](../data-quality-services/data-matching.md)。  
+ 在从 Excel 文件导入域之后，您可以将知识添加到域中，或在清理或匹配项目中使用域，具体取决于域的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
-##  <a name="How"></a> 导入的工作方式  
+##  <a name="How"></a> How the import works  
  在导入操作中，DQS 按如下所示解释 Excel 文件：  
   
 -   列表示域  

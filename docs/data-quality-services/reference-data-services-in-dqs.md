@@ -1,22 +1,27 @@
 ---
 title: "DQS 中的 Reference Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 201f30b4b5fd5ff6de06274a83fa62967498db2e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 中的 Reference Data Services
+# <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
   引用数据指的是可信公共域或高级商业内容提供程序中提供的一组准确和完整的相关或分类全局数据（超越企业的界限）。  
   
  通过 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 中的“引用数据服务”功能，您可以订阅第三方引用数据提供程序，通过对照其高质量数据进行验证以轻松地清理和丰富您的业务数据。 您可以使用 DQS 内领先的数据质量服务提供程序的服务在清理过程中对数据执行标准化、更正数据或使数据更为丰富。 例如，您可以使用区号或邮政编码列表对照引用数据来验证您的客户的地址。  
@@ -30,7 +35,7 @@ caps.handback.revision: 22
 -   支持使用来自 Windows Azure Marketplace 的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
 ##  <a name="Marketplace"></a> 使用来自 Windows Azure Marketplace 的引用数据  
- DQS 支持使用来自 Windows Azure Marketplace 的引用数据，使内容提供程序能够通过 Marketplace 提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅 [了解有关 Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291)。  
+ DQS 支持使用来自 Windows Azure Marketplace 的引用数据，使内容提供程序能够通过 Marketplace 提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅 [了解 Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291)。  
   
  Marketplace 和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、Marketplace 和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
   
@@ -60,16 +65,16 @@ caps.handback.revision: 22
   
      对于特定数据提供程序，在 DQS 中配置引用数据提供程序详细信息是一个一次性活动。 在 DQS 中，只有 DQS 管理员才能配置引用数据设置。  
   
-2.  **在知识库中的域/复合域映射到引用数据服务**︰ 将域/复合域映射到在步骤 1 中订阅/添加适当的引用数据服务。  
+2.  **将知识库中的域/复合域映射到引用数据服务**：将域/复合域映射到在步骤 1 中订阅/添加的相应引用数据服务。  
   
-3.  **使用数据质量项目中的清理活动映射域**︰ 在创建数据质量项目的 **清理** 活动中，选择包含映射的步骤 2 中的 reference data services 的域/复合域的知识库，并执行清理活动。  
+3.  **使用映射域在数据质量项目中进行清理活动**：在为 **“清理”** 活动创建数据质量项目时，选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |介绍如何配置 DQS 以使用来自 Marketplace 或直接第三方联机数据提供程序的引用数据服务。|[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |介绍如何将知识库中的域/复合域映射到引用数据服务。|[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|介绍如何使用引用数据服务清理数据。|[使用引用数据 & #40; 清理数据外部 & #41;知识](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|介绍如何使用引用数据服务清理数据。|[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

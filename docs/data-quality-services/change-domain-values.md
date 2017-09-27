@@ -1,24 +1,29 @@
 ---
 title: "更改域值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.values.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 更改域值
+# <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  
   
 -   将域值添加到值列表中，或者选择一个值并且从列表中删除它  
@@ -52,7 +57,7 @@ caps.handback.revision: 31
   
  若要更改值，请继续执行以下操作：  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -61,15 +66,15 @@ caps.handback.revision: 31
   
 3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要在其中更改值的域或创建一个新域。 如果您必须创建新域，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。 单击 **“域值”** 选项卡。  
   
-4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [如何显示适当的值](#Display) 。  
+4.  在 **“值”** 表中显示需要修改的值。 有关详细信息，请参阅下方的 [How to Display the Appropriate Values](#Display) 。  
   
 5.  若要更改某个值的状态，请继续执行以下操作：  
   
-    -   **将所选的域值设为已更正**︰ 从错误或无效的值的状态更改为正确，请选择该值，，然后单击 **集所选域值设为已更正** （检查） 从图标栏中的下箭头或从类型下拉列表。 如果有错误或无效的值与某一正确值组合在一起，则在该操作后删除该值。  
+    -   **将所选域值设为已更正**：若要将某个值的状态从“错误”或“无效”更改为“正确”，请选择该值，然后从图标栏中的向下箭头或从“类型”下拉列表中单击 **“将所选域值设为已更正”** （对勾）。 如果有错误或无效的值与某一正确值组合在一起，则在该操作后删除该值。  
   
-    -   **将所选的域值设为错误**︰ 要将从正确或无效的值的状态更改为错误中，选择的值，然后单击 **集所选域值设为错误** （叉号） 图标从图标栏中的下箭头或从类型下拉列表。 您可以在 **“更正为”** 列中输入更正值，或者将其保留为空白。  
+    -   **将所选域值设为错误**：若要将某个值的状态从“正确”或“无效”更改为“错误”，请选择该值，然后从图标栏中的向下箭头或从“类型”下拉列表中单击 **“将所选域值设为错误”** （叉号）图标。 您可以在 **“更正为”** 列中输入更正值，或者将其保留为空白。  
   
-    -   **将所选的域值设为无效**︰ 要将某个值的状态从正确或错误更改为无效，选择的值，然后单击 **集所选域值设为无效** （三角形） 图标从图标栏中的下箭头或从类型下拉列表。 您可以在 **“更正为”** 列中输入更正值，或者将其保留为空白。  
+    -   **将所选域值设为无效**：若要将某个值的状态从“正确”或“错误”更改为“无效”，请选择该值，然后从图标栏中的下拉列表或从“类型”下拉列表中单击 **“将所选域值设为无效”** （三角形）图标。 您可以在 **“更正为”** 列中输入更正值，或者将其保留为空白。  
   
     -   **更正为**：在将某个值设置为有错误或无效后，在 **“更正为”** 列中输入一个新值。 DQS 将为更换值添加一个新行，将其指定为正确，然后组合这两个值。 这个新值将显示为前导值，前导值为粗体，而有错误或无效值是缩进的。  
   
@@ -84,10 +89,10 @@ caps.handback.revision: 31
   
     -   **将所选域值设为其组的前导值**：若要更改该组的前导值，请在组中选择未指定为前导值的一个值，然后单击 **“将所选域值设为其组的前导值”** 按钮。 这会将前导值设置为另一个值的替代值。 只有将两个或更多属于组的值设置为同义词，并且您要更改 DQS 所指定的主导值时，此操作才有效。 请注意，前导值由蓝色行且值由粗体显示来指示。  
   
-7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为 （或仍保持为） 错误，并且更正将被添加到 **更正为** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
+7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
-    >  若要使用拼写检查器，可以启用在 **域属性** 页上，或如果中禁用了 **域属性** 页上，可以单击 **启用/禁用拼写检查器** 上的图标 **域值** 页后，可以在该页面上启用它。  
+    >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“域值”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
   
 8.  **添加新的域值**：单击以在行尾添加一行。 在输入值后，该行将以字母顺序重新定位，并将通过在前面加上星号字符定义为新条目。  
   
@@ -95,12 +100,12 @@ caps.handback.revision: 31
   
 10. **从 Excel 导入项目值**：若要从数据质量项目添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击 **“完成”**。 有关详细信息，请参阅“将项目值导入到域中”。  
   
-11. **删除所选的域值**︰ 要从域中删除一个或多个现有值，在值表中，选择值，然后单击 **删除所选域值** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
+11. **删除所选域值**：若要从域中删除一个或多个现有值，请在“值”表中选择值，然后单击 **“删除所选域值”** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   
-12. 单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)中所述。  
+12. 单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：更改域值后  
- 在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Meaning"></a> 正确、错误和无效值的含义  
  **“域值”** 页的 **“值”** 表中的每个值都将被分配 **“正确”** 、 **“错误”**或 **“无效”**的 **“类型”**设置。 值的类型最初由知识发现活动生成，并且您可以在适合时更改该值。 清理活动将基于知识发现和交互更改生成最终类型。 这些设置将具有以下含义：  
@@ -113,12 +118,12 @@ caps.handback.revision: 31
   
  您可以手动将某个值的类型更改为两个其他值之一。 DQS 对手动操作不强制有效性和错误语义。 您可以为无效值输入更正而不更改其状态。 即使某个值未通过域规则，您也可以将其指定为无效。 即使发现过程未指示某个值具有语法错误，您也可以将其指定为存在错误。 您也可以删除对错误值的更正（这将标记为正确），而不更改其状态。  
   
- 当您正在执行交互式数据清理 **管理和查看结果** 页 **清理** 活动，无效和有错误的值包含在 **无效** 选项卡上 **管理和查看结果** 页。  
+ 当您在 **“清理”** 活动的 **“管理和查看结果”** 页中执行交互式数据清理时，无效和有错误的值都将包含在 **“管理和查看结果”** 页的 **“无效”** 选项卡上。  
   
-##  <a name="Display"></a> 如何显示适当的值  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  您可以按如下所示修改显示：  
   
--   **筛选器** 在表中，所需的结果基于其状态，通过选择中的状态 **筛选器** 下拉列表。  
+-   通过在**“筛选器”** 下拉列表中选择状态，基于其状态筛选 **“筛选器”** 要处于表中的结果。  
   
 -   通过在**“查找”** 文本框中输入要搜索的一个或多个字母，查找 **“查找”** 要检查或修改的数据。 这将突出显示在显示的任何值中出现的那些字母。  
   
@@ -128,9 +133,9 @@ caps.handback.revision: 31
   
 -   单击 **“全部折叠”** 按钮可在展开当前状态时隐藏任何同义词组中除前导值之外的所有值。  
   
--   单击 **显示/隐藏域值更改历史记录面板** 按钮以显示预览弹出窗口，底部的值表，其中显示最新更改域值集合。  
+-   单击 **“显示/隐藏域值更改历史记录面板”** 按钮可在值表的底部显示一个预览弹出窗口，该窗口显示对域值集合的最近更改。  
   
 ##  <a name="Null"></a> 如何处理 Null 等效项  
- 每个值表中的 **域值** 选项卡包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
+ **“域值”** 选项卡中的每个值表都包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
   
   

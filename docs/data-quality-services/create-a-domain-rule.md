@@ -1,25 +1,30 @@
 ---
 title: "创建域规则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testdomainrule.f1"
-  - "sql13.dqs.dm.rules.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testdomainrule.f1
+- sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 创建域规则
+# <a name="create-a-domain-rule"></a>创建域规则
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -34,7 +39,7 @@ caps.handback.revision: 28
   
 ##  <a name="Build"></a> 生成域规则  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -47,9 +52,9 @@ caps.handback.revision: 28
   
 5.  单击 **“添加新的域规则”**，然后输入在知识库中唯一的名称并且为该规则输入说明。  
   
-6.  选择 **Active** 来指定该规则将运行 （默认值），或取消选中则可以阻止规则运行。  
+6.  选择 **“活动”** 可指定将运行该规则（默认设置），取消选中则可以阻止该规则运行。  
   
-7.  在 **生成规则** 窗格中，选择一个条件，从下拉列表中规则的条件框。  
+7.  在 **“生成规则”** 窗格中，从该规则的条件框的下拉列表中选择一个条件。  
   
 8.  如果该条件需要某个值，则在关联的文本框中输入该值。  
   
@@ -94,10 +99,10 @@ caps.handback.revision: 28
   
 2.  单击 **“放弃所有更改”** 可取消对域规则进行的所有更改，并且还原为以前应用的规则，具有在规则的上次应用不再适用后任何更改产生的结果。 域中每个规则的有效性将按照以前应用的规则而非放弃的更改进行更新。  
   
-3.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)中所述。  
+3.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：创建域规则后  
- 在创建域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在创建域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Conditions"></a> 域规则条件  
  下表介绍可在域规则中应用的条件，并且提供说明如何应用条件的示例。  
@@ -113,8 +118,8 @@ caps.handback.revision: 28
 |长度等于|只有包含由操作数指定的字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1<br /><br /> 无效值：AA|  
 |长度大于或等于|只有包含由操作数指定的字符数或更多字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 无效值：AA|  
 |长度小于或等于|只有包含由操作数指定的字符数或更少字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1、AA<br /><br /> 无效值：BBAA|  
-|值等于|只有与操作数完全相同的值才有效。|示例操作数：BB1<br /><br /> 有效值：BB1<br /><br /> 无效值︰ BB、 BB1#|  
-|值不等于|只有与操作数不完全相同的值才有效。|示例操作数：BB1<br /><br /> 有效值︰ BB、 BB1#<br /><br /> 无效值：BB1|  
+|值等于|只有与操作数完全相同的值才有效。|示例操作数：BB1<br /><br /> 有效值：BB1<br /><br /> 无效值：BB、BB1#|  
+|值不等于|只有与操作数不完全相同的值才有效。|示例操作数：BB1<br /><br /> 有效值：BB、BB1#<br /><br /> 无效值：BB1|  
 |值包含|只有其全部字符以任何顺序包含在操作数内的值才有效。|示例操作数：A1<br /><br /> 有效值：A1、AA1<br /><br /> 无效值：1A、AA|  
 |值不包含|只有不包含在操作数内的值才有效。|示例操作数：A1<br /><br /> 有效值：1A、AA<br /><br /> 无效值：A1、AA1|  
 |值开头为|只有以操作数中的字符开头的值才有效。|示例操作数：AA<br /><br /> 有效值：AA1<br /><br /> 无效值：1AAB|  
@@ -123,10 +128,10 @@ caps.handback.revision: 28
 |值为日期/时间|只有具有 SQL Server 日期/时间数据类型的值才有效。 这包括 datetime、time、date 等。|示例操作数：无<br /><br /> 有效值：1916-06-04；1916-06-04 18:24:24；March 21, 2001；5/18/2011；18:24:24<br /><br /> 无效值：March 213, 2006|  
 |值处于|只有在操作数集中的值才有效。<br /><br /> 若要在集中输入值，请单击操作数文本框，输入第一个值，按下 Enter，输入第二个值，对于要在集中输入的任何数目的值重复上述步骤，然后再次在操作数文本框中单击。 DQS 将在集中的各个值之间添加逗号。 如果您输入含逗号的单个字符串并且没有输入回车符（例如“A1, B1”），则 DQS 会将该字符串视作集中的单个值。|示例操作数：[A1, B1]<br /><br /> 有效值：A1、B1<br /><br /> 无效值：AA、11|  
 |值不处于|只有不在操作数集中的值才有效。|示例操作数：[A1, B1]<br /><br /> 有效值：AA、11<br /><br /> 无效值：A1、B1|  
-|值匹配模式|只有与操作数中的字符、数字和特殊字符的模式相匹配的值才有效。<br /><br /> 任何字母 (A…Z) 均可用作任何字母的模式；不区分大小写。 任何数字 (0…9) 均可用作任何数字的模式。 任何特殊字符（字母或数字除外）均可用作其自身的模式。 方括号 [] 定义可选匹配。|示例操作数︰ AA:000 (一种模式的 *任何* 两个字符后, 跟一个冒号 （:），再跟 *任何* 三位数字。<br /><br /> 有效值：AB:012、df:257<br /><br /> 无效值：abc:123、FJ-369<br /><br /> 有关 DQS 中的模式规则和示例的详细信息，请参阅 [DQS 域规则中的模式匹配](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)。|  
-|值不匹配模式|只有与操作数中的字符、数字和特殊字符的模式不匹配的值才有效。|示例操作数︰ A1 (值不得匹配的模式 *任何* 一个字符后跟 *任何* 有一个数字。)<br /><br /> 有效值：AB1、A、A:5<br /><br /> 无效值：B7、c9|  
-|值包含模式|只有包含操作数中的字符、数字和特殊字符的模式的值才有效。|示例操作数︰ aa-12 (值包含以下模式 *任何* 两个字符后跟再跟一个连字符 （-）， *任何* 两位数字。)<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 无效值：A7、AA-6、C-45、aa;98|  
-|值不包含模式|只有不包含操作数中字符模式的值才有效。|示例操作数︰ ab-12 (值不得包含的模式 *任何* 两个字符后跟再跟一个连字符 （-）， *任何* 两位数字。)<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 无效值：AAA-01、ab-975|  
+|值匹配模式|只有与操作数中的字符、数字和特殊字符的模式相匹配的值才有效。<br /><br /> 任何字母 (A…Z) 均可用作任何字母的模式；不区分大小写。 任何数字 (0…9) 均可用作任何数字的模式。 任何特殊字符（字母或数字除外）均可用作其自身的模式。 方括号 [] 定义可选匹配。|示例操作数：AA:000（“任意”  两个字符后加一个冒号 (:)，后面再跟“任何”  三个数字的模式）。<br /><br /> 有效值：AB:012、df:257<br /><br /> 无效值：abc:123、FJ-369<br /><br /> 有关 DQS 中的模式规则和示例的详细信息，请参阅 [DQS 域规则中的模式匹配](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)。|  
+|值不匹配模式|只有与操作数中的字符、数字和特殊字符的模式不匹配的值才有效。|示例操作数：A1（值不得与以下模式匹配：“任何”  一个字符后跟“任何”  一个数字。）<br /><br /> 有效值：AB1、A、A:5<br /><br /> 无效值：B7、c9|  
+|值包含模式|只有包含操作数中的字符、数字和特殊字符的模式的值才有效。|示例操作数：AA-12（值包含以下模式：“任何”  两个字符后加一个连字符 (-)，后面再跟“任何”  两个数字）。<br /><br /> 有效值：AAA-01、ab-975<br /><br /> 无效值：A7、AA-6、C-45、aa;98|  
+|值不包含模式|只有不包含操作数中字符模式的值才有效。|示例操作数：AB-12（值不得包含以下模式：“任何”  两个字符后加一个连字符 (-)，后面再跟“任何”  两个数字）。<br /><br /> 有效值：A7、AA-6、C-45、aa;98<br /><br /> 无效值：AAA-01、ab-975|  
 |值匹配正则表达式|只有等于操作数中正则表达式的值才被认为有效。<br /><br /> 不包含针对正则表达式的“^”定位点或“$”定位点，因为 DQS 自动将这些定位点添加到包含“值等于”正则表达式的子句。 （或者，您可以用小括号将包含“^”和“$”定位点的正则表达式括起来。）有关正则表达式的详细信息，请参阅 [正则表达式语言元素](http://go.microsoft.com/fwlink/?LinkId=225561)。|示例操作数：[1-5]+（每个字符必须是从 1 到 5 并且出现一次或多次的数字）<br /><br /> 有效值：123、12345、14352<br /><br /> 无效值：456、ABC|  
 |值不匹配正则表达式|只有不匹配操作数中正则表达式的值才被认为有效。|示例操作数：[1-5]+（字符串不得是仅限从 1 到 5 的数字）<br /><br /> 有效值：456、ABC<br /><br /> 无效值：123、123456、14352|  
   

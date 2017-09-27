@@ -1,24 +1,29 @@
 ---
 title: "创建基于字词的关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.kbtermsbased.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 创建基于字词的关系
+# <a name="create-term-based-relations"></a>创建基于字词的关系
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，你可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  
   
  若要使用基于字词的关系，你可以生成一个“值/更正为”对的列表，例如“Inc.” 和“Incorporated”或“Senior”和“Sr.”。 通过使用基于字词的关系，您可以在整个域中更改某一字词，而不必手动将单独的域值设置为同义词。 您也可以指定更正某个值，即使知识发现以前尚未发现该值。 如果基于字词的关系转换导致两个值完全相同，则 DQS 将在它们之间创建一个同义词关系（在知识发现中）、更正关系（在数据更正中）或精确匹配（在匹配中）。  
@@ -27,13 +32,13 @@ caps.handback.revision: 27
   
  **基于字词的关系和域管理**  
   
- 在域管理中应用基于字词的关系时，DQS 将应用知识发现、清理或匹配过程中的更改；但是，DQS 不更改域值本身以便遵从基于字词的关系。 换而言之，如果输入并接受中的基于字词的关系 **基于字词的关系** 的选项卡上 **域管理** 页上，做的更改将不会 **域值** 相同页的选项卡。 这使您可以随后更改 TBR。  
+ 在域管理中应用基于字词的关系时，DQS 将应用知识发现、清理或匹配过程中的更改；但是，DQS 不更改域值本身以便遵从基于字词的关系。 换句话说，如果在 **“域管理”** 页的 **“基于字词的关系”** 选项卡上输入并接受一个基于字词的关系，该更改不会在同一页的 **“域值”** 选项卡中执行。 这使您可以随后更改 TBR。  
   
  **基于字词的关系和数据清理**  
   
  在域中应用基于字词的关系并运行数据清理过程时，DQS 将在清理过程中应用更改，但是这些更改不会应用于知识库中的字词。  
   
--   如果基于字词的关系所更改的值是在域中，但不是同义词，将显示在 **更正为** 下的列 **已更正** 的选项卡上 **管理和查看结果** 页上，原因是设置为基于字词的关系。  
+-   如果基于字词的关系所更改的值在域中但不是同义词，它将显示在 **“更正为”** 列（位于 **“管理和查看结果”** 页的 **“已更正”** 选项卡下）中，且将“原因”设置为“基于字词的关系”。  
   
 -   如果基于字词的关系所更改的值不在域中且 DQS 找到了匹配值，则该值将更改为它且显示在“已更正”选项卡或“建议的”选项卡下（具体取决于置信度级别）。 如果找不到匹配值，该值将显示在“新建”下并带一个 TBR 更正项。 这么做是因为即使您更正了 TBR，也不表示该值是正确的。  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 27
   
 ##  <a name="Create"></a> 创建基于字词的关系  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 的主屏幕中，打开或创建一个知识库。 选择 **“域管理”** 作为活动，然后单击 **“打开”** 或 **“创建”**。 有关详细信息，请参阅 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 或 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 27
   
 3.  从 **“域管理”** 页上的 **“域列表”** 中，选择您要为其创建域规则的域，或者创建一个新的域。 如果您必须创建新域，请参阅 [Create a Domain](../data-quality-services/create-a-domain.md)。  
   
-4.  单击 **基于字词的关系** 选项卡。  
+4.  单击 **“基于字词的关系”** 选项卡。  
   
 5.  按如下所示创建基于字词的关系：  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 27
   
     3.  对于 **“更正为”** 列，输入您要将 **“值”** 列中的字词更改为的字词。  
   
-    4.  单击 **添加新关系** 再次以添加另一个基于字词的关系。  
+    4.  再次单击 **“添加新关系”** 可添加另一个基于字词的关系。  
   
     5.  单击 **“删除所选关系”** 可从“关系”表中删除一个或多个选定的行。 通过按下 Ctrl 键并单击未选定的行，可以选择多个行。  
   
@@ -92,13 +97,13 @@ caps.handback.revision: 27
     7.  **拼写检查器**：如果 **“值”** 或 **“更正为”** 列中的值有红色的波浪下划线，则表示拼写检查器建议对该值加以更正。 右键单击带下划线的值，然后选择由拼写检查器提供的建议值之一。 或者，您可以单击快捷菜单中的 **“添加”** ，以继续使用原始值。 有关详细信息，请参阅 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
-        >  若要使用拼写检查器，可以启用在 **域属性** 页上，或如果中禁用了 **域属性** 页上，可以单击 **启用/禁用拼写检查器** 上的图标 **基于字词的关系** 页后，可以在此页上启用它。  
+        >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“基于字词的关系”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
   
-6.  单击 **应用更改** 要应用于域的基于字词的关系。  
+6.  单击 **“应用更改”** 可将基于字词的关系应用于域。  
   
-7.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)中所述。  
+7.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：在创建基于字词的关系后  
- 在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在创建基于字词的关系后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

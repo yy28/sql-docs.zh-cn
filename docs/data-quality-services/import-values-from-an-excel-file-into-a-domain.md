@@ -1,27 +1,32 @@
 ---
 title: "将值从 Excel 文件导入到域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 将值从 Excel 文件导入到域
-  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 (请参阅 [知识发现中的 Excel 文件中的导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 有关导入到知识库的域的详细信息。)不支持导出到 Excel 文件。  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
+  本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入到知识库的详细信息，请参阅[在知识发现中从 Excel 文件中导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
   
  您可以通过两种方式导入数据值：  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 若要从 Excel 文件导入域，Excel 必须安装在计算机上的 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 以便导入域值或整个域上安装应用程序; 您必须创建了域值的 Excel 文件 (请参阅 [导入的工作原理](#How)); 并且您必须创建并打开了知识库导入到域。  
+ 若要从 Excel 文件导入域，Excel 必须安装在装有 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的计算机上，以便导入域值或整个域；您必须使用域值创建了一个 Excel 文件（请参阅 [How the import works](#How)）；并且必须创建并打开了要将域导入其中的知识库。  
   
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域值。  
   
-##  <a name="Import"></a> 将值从 Excel 文件导入到域  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [运行数据质量客户端应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，在域管理活动中打开知识库。  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  在 **“导入域值”** 对话框中，单击 **“浏览”**。  
   
-7.  在 **选择文件** 对话框中，转到包含您想要从中导入域值，选择 （具有.xlsx、.xls 或.csv 扩展名），该文件，然后单击该 Excel 文件的文件夹 **打开**。 该文件必须或者位于您从其运行 DQS 的客户端上，或者位于用户有权访问的共享文件中。  
+7.  在 **“选择文件”** 对话框中，移到包含您要从其导入域值的 Excel 文件，选择该文件（具有 .xlsx、.xls 或 .csv 扩展名），然后单击 **“打开”**。 该文件必须或者位于您从其运行 DQS 的客户端上，或者位于用户有权访问的共享文件中。  
   
-8.  从 **工作表** 下拉列表中，选择要从中导入的工作表。  
+8.  从 **“工作表”** 下拉列表中，选择您要从其导入的工作表。  
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. 单击 **“完成”** 将值添加到知识库。  
   
 ##  <a name="FollowUp"></a> 跟进：在将值从 Excel 文件导入到域后  
- 在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅 [执行知识发现](../data-quality-services/perform-knowledge-discovery.md), ，[管理域](../data-quality-services/managing-a-domain.md), ，或 [创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
+ 在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Synonyms"></a> 导入同义词  
  按如下所示导入同义词：  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   如果出于任何原因不能在应用程序中手动连接这些值，则这些值将不适用于导入操作。  
   
-##  <a name="How"></a> 导入的工作方式  
+##  <a name="How"></a> How the import works  
  此操作将导入下列值：  
   
  在导入操作中，DQS 按如下所示从 Excel 文件进行导入：  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   每一行都表示某个域值。  
   
--   第一行或者表示域名，或者是第一个数据值或记录，视 **“将第一行用作标题”** 复选框的设置而定。 如果您在使用 .xslx 或 .xls 文件时选择了 **“将第一行用作标头”** ，则为 null 的任何列名都将自动转换为 F*n*，并且任何重复列都将在其名称后追加一个编号。  
+-   第一行或者表示域名，或者是第一个数据值或记录，视 **“将第一行用作标题”** 复选框的设置而定。 如果您在使用 .xslx 或 .xls 文件时选择了 **Use First Row as header** ，则为 null 的任何列名都将自动转换为 F*n*，并且任何重复列都将在其名称后追加一个编号。  
   
 -   如果您在导入操作完成前取消该操作，则该操作将回滚，并且将不会导入任何数据。  
   
--   第一列中的值将导入到域中。 如果除了第一列中，将填充一个或多个其他列，则这些列中的值将作为同义词添加 (请参阅 [导入同义词](#Synonyms))。  
+-   第一列中的值将导入到域中。 如果除了第一列之外，还填充一个或多个其他列，则这些列中的值将作为同义词添加（请参阅 [导入同义词](#Synonyms)）。  
   
     -   预期的格式为：第一列将是前导值，第二列和以后的列将是同义词。  
   

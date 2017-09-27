@@ -1,8 +1,10 @@
 ---
 title: "重命名托管 SQL Server 独立实例的计算机 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -24,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f5fc3acde45aa4dab6738f0d88ec9d8005864b6
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重命名承载 SQL Server 独立实例的计算机
-  如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  
+如果更改了运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称，则会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动期间识别新名称。 不必再次运行安装程序以重置计算机名称。 只需使用以下步骤对存储在 sys.servers 中并由系统函数 @@SERVERNAME 报告的系统元数据进行更新。 更新系统元数据，以反映出使用 @@SERVERNAME 或从 sys.servers 中查询服务器名称的远程连接或应用程序的计算机名称的变化。  
   
- 不能通过以下步骤重命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 这些步骤只能用于重命名实例名中与计算机名称对应的部分。 例如，可以将承载名为 Instance1 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机称（名为 MB1）更改为其他名称，例如 MB2。 但是，名称中的实例部分 Instance1 将保持不变。 在此示例中， \\\\*ComputerName*\\*InstanceName* 将从 \\\MB1\Instance1 更改为 \\\MB2\Instance1。  
+不能通过以下步骤重命名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 这些步骤只能用于重命名实例名中与计算机名称对应的部分。 例如，可以将承载名为 Instance1 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机称（名为 MB1）更改为其他名称，例如 MB2。 但是，名称中的实例部分 Instance1 将保持不变。 在此示例中， \\\\*ComputerName*\\*InstanceName* 将从 \\\MB1\Instance1 更改为 \\\MB2\Instance1。  
   
  **开始之前**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，可使用新计算机名称连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 为确保 @@SERVERNAME 返回本地服务器实例更新后的名称，应根据自己的方案手动运行以下过程。 采用的过程取决于所更新的计算机承载的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是命名实例。  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>重命名托管独立实例的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>重命名托管 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立实例的计算机  
   
 -   对于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认实例的重命名计算机，请运行以下过程：  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   对于承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命名实例的重命名计算机，请运行以下过程：  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="after-the-renaming-operation"></a>重命名操作之后  
  重命名计算机后，所有使用旧计算机名称的连接都必须通过使用新名称进行连接。  
   
-#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>验证是否已成功完成重命名操作  
+## <a name="verify-renaming-operation"></a>验证重命名操作  
   
 -   通过 @@SERVERNAME 或 sys.servers 选择信息。 @@SERVERNAME 函数将返回新名称，sys.servers 表将显示该新名称。 以下示例演示了如何使用 @@SERVERNAME。  
   
@@ -93,18 +95,18 @@ ms.lasthandoff: 08/02/2017
   
  若要解决此错误，必须删除此服务器的远程登录。  
   
-#### <a name="to-drop-remote-logins"></a>删除远程登录  
+### <a name="drop-remote-logins"></a>删除远程登录  
   
 -   对于默认实例，请运行以下过程：  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   对于命名实例，请运行以下过程：  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
@@ -114,6 +116,6 @@ ms.lasthandoff: 08/02/2017
  **客户端别名** - 采用命名管道的客户端别名将受到计算机重命名操作的影响。 例如，如果创建了指向 SRVR1 的别名“PROD_SRVR”，而且该别名采用 Named Pipes 协议，则相应的管道名称将类似于 `\\SRVR1\pipe\sql\query`。 计算机重命名后，named pipe 的路径将不再有效。 有关 Named Pipes 的详细信息，请参阅 [使用 Named Pipes 创建有效的连接字符串](http://go.microsoft.com/fwlink/?LinkId=111063)。  
   
 ## <a name="see-also"></a>另请参阅  
- [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [安装 SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

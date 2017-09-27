@@ -1,22 +1,27 @@
 ---
 title: "数据匹配 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# 数据匹配
+# <a name="data-matching"></a>数据匹配
   借助 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据匹配过程，您可以减少数据源中的数据重复并改善数据准确性。 匹配可分析单个数据源的所有记录中的重复程度，同时返回所比较的每组记录之间的加权概率。 然后，您可以决定哪些记录匹配，并对源数据采取适当的措施。  
   
  DQS 过程具有下列优点：  
@@ -31,11 +36,11 @@ caps.handback.revision: 29
   
 -   您可以对从源复制到临时表的数据重新编制索引，也可以不重新编制索引，具体取决于匹配策略和源数据的状态。 不重新编制索引可以提高性能。  
   
- 您可以执行匹配过程以及其他数据清理过程来提高总体数据质量。 还可以使用 Master Data Services 中内置的 DQS 功能执行消除数据重复操作。 有关详细信息，请参阅 [Master Data Services 概述 & #40;MDS & #41;](../master-data-services/master-data-services-overview-mds.md)。  
+ 您可以执行匹配过程以及其他数据清理过程来提高总体数据质量。 还可以使用 Master Data Services 中内置的 DQS 功能执行消除数据重复操作。 有关详细信息，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
  下面的插图显示如何在 DQS 中执行数据匹配：  
   
- ![DQS 中的映射过程](../data-quality-services/media/dqs-matchingprocess.gif "DQS 中的映射过程")  
+ ![DQS 中的匹配过程](../data-quality-services/media/dqs-matchingprocess.gif "Matching Process in DQS")  
   
 ##  <a name="How"></a> 如何执行数据匹配  
  针对 DQS 中的其他数据质量过程，您可以通过建立知识库并在数据质量项目中执行匹配活动来执行匹配，步骤如下：  
@@ -67,7 +72,7 @@ caps.handback.revision: 29
   
  您可以将匹配过程的结果导出到 SQL Server 表或 .csv 文件。 您可以按两种格式导出匹配结果：第一，匹配记录和未匹配记录；或者第二，存活记录（只包括群集的存活记录和未匹配记录）。 在存活记录中，如果同一条记录被标识为多个群集的存活记录，则该记录只能导出一次。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  可以在 DQS 中执行以下与匹配相关的任务：  
   
 |||  

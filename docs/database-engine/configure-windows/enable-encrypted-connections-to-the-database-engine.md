@@ -1,7 +1,7 @@
 ---
 title: "启用数据库引擎的加密连接 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > 当在 Azure VM 上创建从 Azure Search 索引器到 SQL Server 的加密连接时，请参阅 [在 Azure VM 上配置从 Azure Search 索引器到 SQL Server 的连接](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> 在服务器中提供（安装）证书  
+##  <a name="Provision"></a> 在服务器中提供（安装）证书  
   
 1.  在“开始”  菜单上，单击“运行” ，并在“打开”  框中键入 **MMC** ，然后单击“确定” 。  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. 完成 **证书导入向导**，将证书添加到计算机中，然后关闭 MMC 控制台。 有关向计算机添加证书的详细信息，请参阅 Windows 文档。  
   
-###  <a name="Export"></a> 导出服务器证书  
+##  <a name="Export"></a> 导出服务器证书  
   
 1.  在“证书”管理单元中的“证书” / “个人”文件夹中找到证书，右键单击“证书”，指向“所有任务”，然后单击“导出”。  
   
 2.  完成 **“证书导出向导”**，将证书文件存储在方便的位置。  
   
-###  <a name="ConfigureServerConnections"></a> 将服务器配置为接受加密连接  
+##  <a name="ConfigureServerConnections"></a> 将服务器配置为接受加密连接  
   
 1.  在“SQL Server 配置管理器”中，展开“SQL Server 网络配置”右键单击“\<server instance> 的协议”，然后选择“属性”。  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  在 **“标志”** 选项卡的 **“ForceEncryption”** 框中，选择 **“是”**，然后单击 **“确定”** 关闭该对话框。  
   
 4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+
+### <a name="wildcard-certificates"></a>通配符证书  
+从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持通配符证书。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档。 无法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 选择通配符证书。 要使用通配符证书，必须编辑 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 注册表项，并为“证书”值输入证书的指纹（不留空格）。  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
+##  <a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
   
 1.  将原始证书或导出的证书文件复制到客户端计算机。  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  在 **“标志”** 选项卡的 **“强制协议加密”** 框中，单击 **“是”**。  
   
-###  <a name="EncryptConnection"></a> 通过 SQL Server Management Studio 加密连接  
+##  <a name="EncryptConnection"></a> 通过 SQL Server Management Studio 加密连接  
   
 1.  在对象资源管理器工具栏上，单击 **“连接”**，再单击 **“数据库引擎”**。  
   

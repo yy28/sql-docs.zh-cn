@@ -1,22 +1,27 @@
 ---
 title: "DQS 域支持的 SQL Server 和 SSIS 数据类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec7d426fd60890eb6b61da4441e9f497e4d58162
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 域支持的 SQL Server 和 SSIS 数据类型
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 域支持的 SQL Server 和 SSIS 数据类型
   SQL Server 和 SQL Server Integration Services (SSIS) 中有很多数据类型，但是只有四种数据类型用于 DQS 域：Date、Decimal、Integer 和 String。 并非所有 SQL Server 和 SSIS 数据类型在 DQS 中都受支持。 仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行数据质量活动。 本主题提供有关支持的可映射到 DQS 中四种域数据类型之一的 SQL Server 和 SSIS 数据类型信息。  
   
 > [!NOTE]  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
 |Integer|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
 |字符串|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
- 其余 SQL Server 数据类型在 DQS 中不受支持。 有关所有 SQL Server 数据类型的信息，请参阅 [数据类型和 #40;Transact SQL & #41;](../t-sql/data-types/data-types-transact-sql.md)。  
+ 其余 SQL Server 数据类型在 DQS 中不受支持。 有关所有 SQL Server 数据类型的信息，请参阅[数据类型 (Transact-SQL)](../t-sql/data-types/data-types-transact-sql.md)。  
   
 ##  <a name="SSIS"></a> 支持的 SSIS 数据类型  
  下表提供有关对于每种 DQS 域数据类型支持的 SSIS 数据类型的信息：  
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
  其余 SSIS 数据类型在 DQS 中不受支持。 有关所有 SSIS 数据类型的信息，请参阅 [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md)。  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理域](../data-quality-services/managing-a-domain.md)  
   
   
