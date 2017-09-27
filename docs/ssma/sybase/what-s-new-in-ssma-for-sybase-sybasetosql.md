@@ -1,7 +1,7 @@
 ---
-title: "什么 &#39; s SSMA for Sybase (SybaseToSQL) 中的新增功能 |Microsoft 文档"
+title: "什么 &#39; s SSMA for SAP ASE (SybaseToSQL) 中的新增功能 |Microsoft 文档"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 1054c9279039eda01320e1afd9745b6a53200b3f
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-sybase-sybasetosql"></a>什么 &#39; s SSMA for Sybase (SybaseToSQL) 中的新增功能
-本主题列出每个版本中的 Sybase 更改 SSMA。 
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>什么 &#39; s SSMA for SAP ASE (SybaseToSQL) 中的新增功能
+本主题列出每个版本中的 SAP ASE (以前称为 Sybase 的 SSMA) 更改了 SSMA。 
+
+## <a name="ssma-v75"></a>SSMA v7.5 还是
+SSMA for SAP ASE 的 v7.5 还是版本包含以下更改：
+-   增强了多项改进，以确保残障人士更大的可访问性。
+-   更新以创建或替换语法提供支持。
+
+> [!IMPORTANT]
+> .Net 4.5.2 是安装 SSMA v7.5 还是的先决条件。 此外，从 v7.4 开始，SSMA 的 32 位版本是要停止使用。  
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Sybase 的 SSMA v7.4 版包含以下更改：
@@ -189,5 +197,5 @@ Sybase 的 SSMA 2006 年 11 月版包含以下更改：
 ## <a name="july-2006"></a>2006 年 7 月  
 2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [用于 Sybase &#40; 入门 SSMASybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

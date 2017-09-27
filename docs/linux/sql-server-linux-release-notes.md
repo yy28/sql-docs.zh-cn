@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com)与[mssql 扩展](https://aka.ms/mssql-marketplace) | 最新 |
 
-### <a name="unsupported-features-and-services"></a>不支持的功能和服务
+### <a name="Unsupported"></a>不支持的功能和服务
 
 Linux 目前不支持以下功能和服务。 预览计划的每月更新中将逐步启用对这些功能的支持。
 
@@ -362,7 +362,7 @@ RC1 中群集资源代理设置的虚拟服务器名称，像在 Windows 上的�
 1. 删除通过手动资源移动添加该约束。 请参阅[手动故障转移群集](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual)。
 2. 如果需要，故障回复到原始主节点。 
 
-#### <a name="availability-group"></a>可用性组
+#### <a name="availability-group"></a>可用性组 (availability group)
 
 在 Linux 上，滚动升级的 SQL Server 自 2017 年 1 CTP 2.1 到 RC1 不支持。 升级辅助副本之后，它将断开连接从主副本中，直至升级主要副本。 Microsoft 规划以解决此问题在未来版本。
 
@@ -810,7 +810,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 
 - SQL Server 配置管理器无法连接到 Linux 上的 SQL Server。
 
-- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\>** 方法改为现在。 
+- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\> **方法改为现在。 
 
 #### <a name="databases"></a>“数据库”
 - 不能使用 mssql conf 实用工具移动系统数据库。
@@ -987,7 +987,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 
 - SQL Server 配置管理器无法连接到 Linux 上的 SQL Server。
 
-- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\>** 方法改为现在。 
+- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\> **方法改为现在。 
 
 #### <a name="databases"></a>“数据库”
 - 不支持更改 TempDB 数据和日志文件的位置。
@@ -1147,7 +1147,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 
 - SQL Server 配置管理器无法连接到 Linux 上的 SQL Server。
 
-- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\>** 方法改为现在。 
+- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\> **方法改为现在。 
 
 #### <a name="databases"></a>“数据库”
 - 不支持更改 TempDB 数据和日志文件的位置。
@@ -1292,7 +1292,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 
 - SQL Server 配置管理器无法连接到 Linux 上的 SQL Server。
 
-- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\>** 方法改为现在。 
+- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\> **方法改为现在。 
 
 #### <a name="databases"></a>“数据库”
 - 不支持更改 TempDB 数据和日志文件的位置。
@@ -1424,7 +1424,7 @@ Linux 目前不支持以下功能和服务。 预览计划的每月更新中将�
 
 - SQL Server 配置管理器无法连接到 Linux 上的 SQL Server。
 
-- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\>** 方法改为现在。
+- **CREATE ASSEMBLY**时尝试使用文件将无法工作。 使用**FROM \<bits\> **方法改为现在。
 
 #### <a name="databases"></a>“数据库”
 - 不支持更改 TempDB 数据和日志文件的位置。

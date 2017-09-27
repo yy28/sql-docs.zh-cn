@@ -2,7 +2,7 @@
 title: "什么 &#39; s SSMA for Oracle (OracleToSQL) 中的新增功能 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,14 +15,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 690d34e4391bcdbcbf7adfe1d80ed8c503d80895
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-oracle-oracletosql"></a>什么 &#39; s SSMA for Oracle (OracleToSQL) 中的新增功能
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>什么 &#39; s SSMA for Oracle (OracleToSQL) 中的新增功能
 本主题列出每个版本中的 Oracle 更改 SSMA。  
+
+## <a name="ssma-v75"></a>SSMA v7.5 还是
+适用于 Oracle 的 SSMA v7.5 还是版本包含以下更改：
+- 增强了多项改进，以确保残障人士更大的可访问性。
+- 更新以改进的质量和转换指标，目标修补程序，如改进数据在迁移期间，根据客户反馈的日期和 float 数据类型处理。
+
+> [!IMPORTANT]
+> .Net 4.5.2 是安装 SSMA v7.5 还是的先决条件。 此外，从 v7.4 开始，SSMA 的 32 位版本是要停止使用。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 适用于 Oracle 的 SSMA v7.4 版本包含以下更改：
@@ -65,7 +73,7 @@ ms.lasthandoff: 08/21/2017
 - 遥测功能增强以提供更好的数据点，以解决客户问题和改进 SSMA 的转换率。
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-SSMA for Access 的 v7.1 版本包含以下更改：
+适用于 Oracle 的 SSMA v7.1 版本包含以下更改：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 现在是一个用于迁移的支持的目标平台。 此功能是 technical preview 中，并且允许架构和数据移动到目标 SQL 服务器。
 - SSMA 现在支持自动更新，以下载最新版本的 SSMA，只要可用。
 - SSMA 可安装二进制文件现在被通过 Windows installer 包文件 (.msi)。
