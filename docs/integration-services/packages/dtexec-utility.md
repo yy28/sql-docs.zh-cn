@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      有关 **/ConsoleLog** 选项的若干示例，请参阅 **备注** 部分。  
   
--   * * /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+-   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
   
      *package_path* 参数指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的相对路径，从 SSIS 包存储的根目录开始，包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的名称。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
   
