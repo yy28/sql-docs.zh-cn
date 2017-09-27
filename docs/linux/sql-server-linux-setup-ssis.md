@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 1.  导入公共存储库 GPG 密钥。
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

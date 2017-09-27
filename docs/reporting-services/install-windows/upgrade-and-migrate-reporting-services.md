@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 46bb863944694292395b50621acaf87259a3260b
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 09/21/2017
   
     2.  升级到新版本的报表服务器配置工具和实用工具包括本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具、命令行实用工具（如 RS.exe）和报表生成器。  
   
-    3.  其他客户端工具如 [！包括[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。
+    3.  其他客户端工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ）是单独下载，需要单独升级。 有关详细信息，请参阅 [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Visual Studio 2015 中的 SQL Server Data Tools](https://msdn.microsoft.com/mt186501)。  
   
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/21/2017
 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)   
 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

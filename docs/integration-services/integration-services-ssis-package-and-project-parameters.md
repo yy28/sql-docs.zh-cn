@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
@@ -165,7 +165,7 @@ ms.lasthandoff: 09/21/2017
     > **警告!!!** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-**参数化**对话框，可以将新的或现有参数与任务的属性相关联。 通过右键单击任务或中的控制流选项卡中打开对话框 [！包括[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)。
+**参数化**对话框，可以将新的或现有参数与任务的属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
   
 ### <a name="options"></a>选项  
  **属性**  
@@ -183,13 +183,13 @@ ms.lasthandoff: 09/21/2017
  **名称**  
  指定要创建的参数的名称。  
   
- **Description**  
+ **描述**  
  指定参数的说明。  
   
  **值**  
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
- **范围**  
+ **作用域**  
  通过选择“项目”或“包”选项指定参数的范围。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
  **敏感**  
