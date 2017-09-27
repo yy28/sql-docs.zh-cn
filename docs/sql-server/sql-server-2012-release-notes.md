@@ -89,14 +89,14 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 -   不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上并行安装 Microsoft SQL Server 2012 和早期版本的 SQL Server。  
   
--   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)(#在-server-core-上安装-sql-server-2012)。  
+-   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)。  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 语义搜索要求您安装其他依赖项  
 **问题：** 统计语义搜索要求其他的必备组件，即语义语言统计数据库，而 SQL Server 安装程序并不安装此组件。  
   
 **解决方法：** 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下任务：  
   
-1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (#microsoft-下载中心) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
+1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
   
 2.  将数据库移到相应的数据文件夹。 如果您要使数据库保持在其默认位置，必须首先更改权限，然后才能成功附加该数据库。  
   
@@ -504,9 +504,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|是|是|是|“否”|是|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|是|是|是|是|是|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|是|是|是|是|是|  
+|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   
 **\&#42;** 下载 ADO.NET（结合使用 .NET Framework 4.0）的连接性修补程序： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   
