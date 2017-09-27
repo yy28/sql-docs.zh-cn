@@ -40,7 +40,7 @@ ms.lasthandoff: 08/17/2017
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 编写调用报表服务器 Web 服务 SOAP 方法的 Visual Basic 脚本，以便在各数据库之间复制数据。 使用 **RS.exe** 实用工具运行此脚本。 Rs.exe 随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。  
   
-    -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
+    -   [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 以下主题说明如何使用可从 CodePlex 下载的示例脚本。  
   
     -   CodePlex 上的示例 rss 脚本，可将一个报表服务器中的内容迁移到另一个中的 [Reporting Services RS.exe 脚本](http://azuresql.codeplex.com/releases/view/115207)  
   
