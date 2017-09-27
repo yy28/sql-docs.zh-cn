@@ -14,7 +14,8 @@
 ## [新的和最近更新的文章](new-updated-database-engine.md)
 
 # [安装](../database-engine/install-windows/installation-for-sql-server-2016.md)
-# [可用性组](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 # [配置](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
-# [数据库镜像](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
-# [日志传送](../database-engine/log-shipping/about-log-shipping-sql-server.md)
+# [高可用性](sql-server-business-continuity-dr.md)
+## [可用性组](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+## [数据库镜像](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+## [日志传送](../database-engine/log-shipping/about-log-shipping-sql-server.md)
