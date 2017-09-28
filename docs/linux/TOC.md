@@ -4,6 +4,7 @@
 ## [发行说明](sql-server-linux-release-notes.md)
 ## [此版本中有什么新增功能？](sql-server-linux-whats-new.md)
 ## [新的和最近更新的文章](new-updated-linux.md)
+## [版本和支持的功能](sql-server-linux-editions-and-components-2017.md)
 
 # 快速入门
 ## [安装和连接 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -12,7 +13,7 @@
 ## [运行和连接 - Docker](quickstart-install-connect-docker.md)
 
 # 概念
-## 安装
+## Install
 ### [安装 SQL Server](sql-server-linux-setup.md)
 ### [安装 SQL Server 工具](sql-server-linux-setup-tools.md)
 ### [安装 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
@@ -44,7 +45,10 @@
 ### [从 Windows 导出和导入 BACPAC](sql-server-linux-migrate-ssms.md)
 ### [使用 SQL Server 迁移助手进行迁移](sql-server-linux-migrate-ssma.md)
 ### [使用 bcp 批量复制](sql-server-linux-migrate-bcp.md)
-### [使用 SSIS 加载数据](sql-server-linux-migrate-ssis.md)
+
+## [提取、转换和加载](sql-server-linux-migrate-ssis.md)
+### [配置 SSIS](sql-server-linux-configure-ssis.md)
+### [计划 SSIS 包](sql-server-linux-schedule-ssis-packages.md)
 
 ## [配置业务连续性](sql-server-linux-business-continuity-dr.md)
 ### [备份和还原](sql-server-linux-backup-and-restore-database.md)
@@ -78,7 +82,7 @@
 ### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
-# 资源
+# Resources
 ## [故障排除](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 文档](../sql-server/sql-server-technical-documentation.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
