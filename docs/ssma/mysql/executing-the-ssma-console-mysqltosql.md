@@ -678,7 +678,7 @@ Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文�
   
 8.  `write-summary-report-to`指定将生成摘要报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 viz 进一步子类别的 2 的报表。。，：  
+    创建具有 viz 进一步子类别的 2 的报表..,:  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   

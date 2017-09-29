@@ -599,7 +599,7 @@ fail-script>" (optional)
   
 -   `write-summary-report-to`指定将生成摘要报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 2 viz 进一步子类别的摘要报表。。，：  
+    创建具有 2 viz 进一步子类别的摘要报表..,:  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   

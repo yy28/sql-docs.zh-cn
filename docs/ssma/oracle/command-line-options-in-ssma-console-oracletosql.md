@@ -92,7 +92,7 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
 此命令用于输出到控制台或 xml 文件以 xml 格式的命令输出消息。  
   
-有两个选项可用于 xmloutput，viz。。，：  
+有两个选项可用于 xmloutput，viz..,:  
   
 -   如果 filepath 提供 xmloutput 切换后输出重定向到文件。  
   

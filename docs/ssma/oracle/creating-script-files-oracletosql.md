@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
   
-脚本文件可分为三部分组成，viz。。，：  
+脚本文件可分为三部分组成，viz..,:  
   
 1.  **配置：**使用户能够设置控制台应用程序的配置参数。  
   

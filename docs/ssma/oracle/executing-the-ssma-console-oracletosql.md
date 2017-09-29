@@ -673,7 +673,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 -   `write-summary-report-to`指定将生成报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 viz 进一步子类别的 2 的报表。。，：  
+    创建具有 viz 进一步子类别的 2 的报表..,:  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   
