@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
  ![在分区窗格中的源列](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "在分区窗格中的源列")  
   
- 如果分区基于一个查询，则单击浏览 (**...**) 按钮来编辑该查询。 这将编辑分区的 **“源”** 属性。 有关详细信息，请参阅 [Change a partition source to use a different fact table](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
+ 如果分区基于一个查询，则单击浏览 (**...**) 按钮来编辑该查询。 这将编辑分区的 **“源”** 属性。 有关详细信息，请参阅 [更改分区源以使用不同的事实数据表](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)。  
   
  您可以指定数据源视图中与初始源表（在用于检索数据的外部数据源中）具有相同结构的表。 源可位于多维数据集数据库的任意数据源或数据源视图中。  
   

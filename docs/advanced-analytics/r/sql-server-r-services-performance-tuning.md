@@ -91,7 +91,7 @@ SQL server 以支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
 
 + [SQL Server 的硬件中的 R 性能调整](..\r\sql-server-configuration-r-services.md)
 
-    提供配置硬件的指南， [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ] ，以及用于配置要更好地支持外部脚本的 SQL Server 实例安装。 它很适合用于**数据库管理员**。
+    提供配置硬件的指南， [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ，以及用于配置要更好地支持外部脚本的 SQL Server 实例安装。 它很适合用于**数据库管理员**。
 
 + [SQL Server 的代码和数据中的 R 性能调整优化](..\r\r-and-data-optimization-r-services.md)
 

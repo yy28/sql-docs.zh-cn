@@ -27,7 +27,7 @@ ms.lasthandoff: 09/01/2017
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
   
 > [!NOTE]  
->  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+>  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  本主题包含以下各节：  
   

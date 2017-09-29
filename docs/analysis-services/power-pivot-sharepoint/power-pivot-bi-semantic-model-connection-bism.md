@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> 支持的数据库  
  BI 语义模型连接指向表格模型数据。 存在三种可用于此数据的数据源：  
   
--   以表格服务器模式在独立的 Analysis Services 实例上运行的表格模型数据库。 独立 Analysis Services 实例的部署位于场外部。 访问场外部的数据源要求附加权限，您可在本主题中阅读相关信息： [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
+-   以表格服务器模式在独立的 Analysis Services 实例上运行的表格模型数据库。 独立 Analysis Services 实例的部署位于场外部。 访问场外部的数据源要求附加权限，您可在本主题中阅读相关信息： [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 Excel 工作簿内嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库等效于在独立的 Analysis Services 表格模式服务器上运行的表格模型数据库。 如果你已经使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则可以定义指向 SharePoint 库中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 BI 语义模型连接，并且使用现有 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 数据生成 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 报表。  你可以使用在 SQL Server 2008 R2 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的工作簿。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [创建与 Power Pivot 工作簿的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

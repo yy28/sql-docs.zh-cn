@@ -124,7 +124,7 @@ DBCC CHECKTABLE
     
  MAXDOP  
  **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
- 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置资源调控器的值，数据库引擎所使用的资源调控器 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 重写**最大并行度**配置选项的**sp_configure**语句。 MAXDOP 可以超过 sp_configure 使用配置的值。 如果 MAXDOP 超过配置资源调控器的值，数据库引擎所使用的资源调控器 MAXDOP 值，ALTER WORKLOAD GROUP (TRANSACT-SQL) 中所述。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
     
  > [!CAUTION]  
  >  如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -170,7 +170,7 @@ DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的�
 例如，如果表包含**varbinary （max)**列的 FILESTREAM 属性，DBCC CHECKTABLE 将检查是否存在文件系统目录和文件和表行、 列和列之间的一对一映射值。 如果指定了 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKTABLE 便可修复损坏。 为了修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行，并将删除未映射到表行、表列或列值的任何目录和文件。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
-默认情况下，DBCC CHECKTABLE 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置方式与并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+默认情况下，DBCC CHECKTABLE 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置方式与并行查询相同。 若要限制可用于 DBCC 检查处理器的最大数目，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
     
 > [!NOTE]    

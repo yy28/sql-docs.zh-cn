@@ -47,10 +47,10 @@ ms.lasthandoff: 09/01/2017
 |语法|**时间**[(*小数秒精度*)]|  
 |用法|声明@MyTime **time(7)**<br /><br /> 创建表 Table1 (Column1 **time(7)** )|  
 |*秒的小数部分精度*|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认的小数精度是 7 (100ns)。|  
-|默认字符串文本格式<br /><br /> （用于下级客户端）|hh: mm: [.nnnnnnn] （hh: mm: [.nnn] 为 Informatica）<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
+|默认字符串文本格式<br /><br /> （用于下级客户端）|hh:mm:ss[.nnnnnnn] （hh:mm:ss[.nnn] 为 Informatica）<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |范围|00:00:00.0000000 通过 23:59:59.9999999 (通过 Informatica 的 23:59:59.999 00:00:00.000)|  
 |各元素的范围|hh 是表示小时的两位数字，范围为 0 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 0 到 59。<br /><br /> ss 是表示秒的两位数字，范围为 0 到 59。<br /><br /> n* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。 Informatica，为 n\*是从零到三个数字，范围从 0 到 999。|  
-|字符长度|8 位置为 16 最大 (hh:mm:ss.nnnnnnn) 的最小 （hh: mm:） 对于 Informatica，最大值是 12 (hh:mm:ss.nnn)。|  
+|字符长度|8 位置为 16 最大 (hh:mm:ss.nnnnnnn) 的最小 （hh: mm:ss） 对于 Informatica，最大值是 12 (hh:mm:ss.nnn)。|  
 |精度、小数位数<br /><br /> （用户只能指定小数位数）|请参阅下表。|  
 |存储大小|固定 5 个字节，是使用默认的 100ns 秒的小数部分精度时的默认存储大小。 在 Informatica，默认值是 4 个字节，固定的使用默认值 1 毫秒小数秒精度。|  
 |精确度|100 纳秒 （在 Informatica 1 毫秒）|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 09/01/2017
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
-|**datetimeoffset**|YYYY MM DD hh: mm: [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh: mm:ss[.nnnnnnn] [+&#124;-] hh:mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|String 或 SqString|  
   
 ## <a name="converting-date-and-time-data"></a>转换日期和时间数据  
  当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 CAST 和 CONVERT 函数中使用的日期和时间数据的信息，请参阅[CAST 和 CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

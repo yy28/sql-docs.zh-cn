@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>从 SQL Server Data Tools 进行部署
   使用本主题中的任务在 SSDT 中使用部署命令部署表格模型解决方案。  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> 配置“部署选项”和“部署服务器”属性  
  在您部署表格模型解决方案之前，必须首先指定“部署选项”属性和“部署服务器”属性。 有关部署属性和设置的详细信息，请参阅[表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
 #### <a name="to-configure-options-and-properties"></a>若要配置选项和属性  

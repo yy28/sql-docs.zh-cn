@@ -184,7 +184,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> 下一步  
  决定错误是停止处理还是被忽略。 请记住，忽略的只是错误。 不会忽略导致错误的记录；该记录会被弃用或转换为未知成员。 违反数据完整性规则的记录绝不会添加到数据库中。 默认情况下，处理在出现第一个错误时停止，但是您可以通过提高错误限制来更改此行为。 在多维数据集开发中，放宽错误配置规则可能十分有用，从而允许处理继续进行，以便可以使用数据进行测试。  
   
- 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
+ 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [定义未知成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [日志属性](../../analysis-services/server-properties/log-properties.md)   
