@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/31/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计各种用户界面的目的是方便用户对查询存储进行配置和使用收集的工作负荷数据。  
 单击[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
- 有关如何使用查询存储进行故障排除的快速说明，请参阅 [@Azure博客中的查询存储](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
+ 有关如何使用查询存储进行方案故障排除的快速说明，请参阅 [@Azure博客中的查询存储](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
 ##  <a name="Insight"></a>在 Azure SQL 数据库中使用 Query Performance Insight  
  如果你在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中运行 Query Store，则可使用 **Query Performance Insight** 来分析一定时段内的 DTU 消耗情况。  
@@ -144,7 +144,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |总体资源消耗|针对任意执行度量值分析数据库的总资源消耗量。<br />使用此视图可以确定资源模式（白天工作负荷与夜间工作负荷的比较），并优化数据库的总体消耗。|  
 |资源使用排名靠前的查询|选择所关注的执行度量值，确定在指定的时间间隔内哪些查询的值最极端。 <br />此视图可以帮助你关注最相关的查询，这些查询对数据库资源消耗的影响最大。|  
 |具有强制计划的查询|使用查询存储列出以前的强制计划。 <br />使用此视图快速访问当前的所有强制计划。|  
-|变化程度高的查询|分析执行变化程度较高的查询，此类变化可涉及任何可用的维度，例如所需时间间隔内的持续时间、CPU 时间、IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
+|变化程度高的查询|分析执行变化程度较高的查询，因为此类查询与任何可用的维度相关，例如所需时间间隔内的持续时间、CPU 时间、IO 和内存使用情况。<br />使用此视图可以标识性能有很大差异且可能会影响用户跨应用程序体验的查询。|  
 |跟踪的查询|实时跟踪最重要查询的执行情况。 通常情况下，使用此视图是因为你计划强制执行相关查询，因此需确保查询性能的稳定性。|
   
 > [!TIP]  
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  执行计划使用由三个部分组成的名称 `database.schema.object` 来引用对象。   
 
 如果重命名数据库，计划强制就会失败，导致在执行所有后续的查询时都需要重新编译。  
+
+##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志改善灾难恢复
+ 
+  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。
   
+  跟踪标志 7745 会阻止以下默认行为：在可关闭 SQL Server 之前，查询存储将数据写入磁盘。
+  
+  跟踪标志 7752 允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+
 ## <a name="see-also"></a>另请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

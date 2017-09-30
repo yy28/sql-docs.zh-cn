@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8b45a33dadae04400fbc0602f2aa4f6fc08d5df1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
@@ -59,9 +59,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 对于在兼容级别 120 设置的 SQL Server 数据库，[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 的激活强制系统使用 CE 版本 70。  
+ 对于在兼容级别 120 及以上设置的 SQL Server 数据库，激活 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 会强制系统使用 CE 版本 70。  
   
- 旧版 CE：对于在兼容级别 130 设置的 SQL Server 数据库，CE 版本 70 可通过在数据库级使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
+ 旧版 CE：对于在兼容级别 120 及以上设置的 SQL Server 数据库，CE 版本 70 可通过在数据库级别使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
   
 ```tsql  
 ALTER DATABASE
@@ -74,7 +74,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- 或者从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，[查询提示](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION` 开始。
+ 或者从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，[查询提示](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` 开始。
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  

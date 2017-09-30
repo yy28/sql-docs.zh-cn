@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ GO
         );  
        
       ```  
-  
+   >[!NOTE]
+   >与常规可用性组类似，分布式可用性组中的两个可用性组副本的同步状态取决于这两个副本的可用性模式。 例如，为进行同步提交，当前主要可用性组和辅助可用性组必须都配置为 synchronous_commit 可用性模式。  
+
+
 1. 等分布式可用性组的状态变为 `SYNCHRONIZED`。 在托管主要可用性组的主要副本的 SQL Server 上运行以下查询。 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

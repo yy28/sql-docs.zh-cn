@@ -1,7 +1,7 @@
 ---
 title: "将 SQL Server 审核事件写入安全日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志
-  在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
   
  将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器审核写入 Windows 安全日志有两个关键要求：  
   
 -   必须配置审核对象访问设置以捕获事件。 审核策略工具 (`auditpol.exe`) 公开了 **审核对象访问** 类别中的多种子策略设置。 若要允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核对象访问，请配置 **应用程序生成的** 设置。  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在其下运行的帐户必须拥有 **生成安全审核** 权限才能写入 Windows 安全日志。 默认情况下，LOCAL SERVICE 和 NETWORK SERVICE 帐户拥有此权限。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在其中一个帐户下运行，则不需要此步骤。  
+-   为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务帐户访问注册表配置单元`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`提供完整权限。  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- 将 Windows 审核策略配置为写入 Windows 安全日志时，可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，此时若该审核策略配置不正确，就可能导致事件丢失。 通常，将 Windows 安全日志设置为覆盖较旧的事件。 这样可保留最新的事件。 但如果 Windows 安全日志未设置为覆盖较旧的事件，则当安全日志已满时，系统将发出 Windows 事件 1104（日志已满）。 此时：  
-  
+将 Windows 审核策略配置为写入 Windows 安全日志时，可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，此时若该审核策略配置不正确，就可能导致事件丢失。 通常，将 Windows 安全日志设置为覆盖较旧的事件。 这样可保留最新的事件。 但如果 Windows 安全日志未设置为覆盖较旧的事件，则当安全日志已满时，系统将发出 Windows 事件 1104（日志已满）。 此时：  
 -   不再记录其他安全事件  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将无法检测系统是否能够在安全日志中记录事件，从而导致可能丢失审核事件  
-  
 -   Box 管理员修复安全日志后，日志记录行为将恢复正常。  
-  
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [安全性](#Security)  
-  
--   **若要将 SQL Server 审核事件写入安全日志，请使用：**  
-  
-     [在 Windows 中使用 auditpol 配置审核对象访问设置](#auditpolAccess)  
-  
-     [在 Windows 中使用 secpol 配置审核对象访问设置](#secpolAccess)  
-  
-     [使用 secpol 将生成安全审核权限授予帐户](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

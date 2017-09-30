@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ec8d27f68672ddbb93bbf22624345ecb59e9bb79
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 
 1. 确认 SQL Server 数据库引擎实例已安装并且正在运行。
     1.  登录到托管 SQL Server 实例的计算机。
-    2.  启动 SQL Server 配置管理器。 （安装 SQL Server 时，会自动在计算机上安装配置管理器。 SQL Server 和 Windows 版本的配置管理器启动说明略有不同。 有关启动配置管理器的帮助，请参阅 [SQL Server 配置管理器](https://msdn.microsoft.com/library/ms174212.aspx)。
+    2.  启动 SQL Server 配置管理器。 （安装 SQL Server 时，会自动在计算机上安装配置管理器。 SQL Server 和 Windows 版本的配置管理器启动说明略有不同。 有关启动配置管理器的帮助，请参阅 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)。
     3.  在配置管理器的左窗格中，选择“SQL Server 服务”。 在右窗格中，确认数据库引擎实例已存在并且正在运行。 名为 **SQL Server (MSSQLSERVER)** 的实例是默认（未命名）实例。 只能有一个默认实例。 其他（已命名）实例将用括号括住其名称。 SQL Server Express 使用名称 **SQL Server (SQLEXPRESS)** 作为实例名称，除非有人在安装过程中将其命名为其他名称。 请记下你尝试连接到的实例的名称。 另外，通过查找绿色箭头确认该实例正在运行。 如果该实例显示红色方块，则右键单击该实例，然后单击“启动”。 它应变为绿色。
      4. 如果你正在尝试连接到命名实例，请确保 SQL Server Browser 服务正在运行。
  
@@ -83,15 +83,15 @@ ms.lasthandoff: 08/02/2017
 使用 TCP/IP 连接到 SQL Server 时，要求 Windows 可以建立连接。 使用 `ping` 工具测试 TCP。
 1.  在“开始”菜单上，单击“运行”。 在“运行”窗口中键入 **cmd**，然后单击“确定”。 
 2.  在命令提示符窗口中，键入 `ping`，然后键入正在运行 SQL Server 的计算机的 IP 地址。 例如，使用 IPv4 地址 `ping 192.168.1.101` ，或使用 IPv6 地址 `ping fe80::d51d:5ab5:6f09:8f48%11` 。 （必须将 ping 后面的数字替换为之前在计算机上收集的 IP 地址。） 
-3.  如果网络配置正确，将收到一条响应，例如，“来自 \<IP 地址> 的回复”，后跟一些附加信息。 如果收到一个错误，例如“无法访问目标主机。” 或“请求超时。”， 则表示 TCP/IP 配置不正确。 （确保 IP 地址正确并且键入正确。）此时的错误可能表示客户端计算机、服务器计算机或某些网络相关设备（如路由器）出现了问题。 Internet 有许多可供排查 TCP/IP 问题的资源。 2006 年发布的 [如何排查基本 TCP/IP 问题](http://support.microsoft.com/kb/169790)一文是一个合理的起点。
+3.  如果网络配置正确，将收到一条响应，例如，“来自 \<IP 地址> 的回复”，后跟一些附加信息。 如果收到一个错误，例如“无法访问目标主机。” 或“请求超时。”，表示 TCP/IP 配置不正确。 （确保 IP 地址正确并且键入正确。）此时的错误可能表示客户端计算机、服务器计算机或某些网络相关设备（如路由器）出现了问题。 Internet 有许多可供排查 TCP/IP 问题的资源。 2006 年发布的 [如何排查基本 TCP/IP 问题](http://support.microsoft.com/kb/169790)一文是一个合理的起点。
 4.  接下来，如果使用 IP 地址成功进行了 ping 测试，请测试计算机名称能否解析为 TCP/IP 地址。 在客户端计算机上的命令提示符窗口中，键入 `ping` ，然后键入正在运行 SQL Server 的计算机的计算机名称。 例如，使用 IPv4 地址 `ping newofficepc` 
-5.  如果你本可以对 ipaddress 执行 ping 操作，而现在收到一个错误，如“无法访问目标主机。” 或“请求超时。”， 则表示你在客户端计算机上缓存的名称解析信息可能较旧（已过时）。 请键入 `ipconfig /flushdns` 以清除 DNS（动态名称解析）缓存。 然后再次使用名称 ping 计算机。 清除 DNS 缓存后，客户端计算机将检查服务器计算机的 IP 地址的最新相关信息。 
-6.  如果网络配置正确，将收到一条响应，例如，“来自 \<IP 地址> 的回复”，后跟一些附加信息。 如果你可以使用 IP 地址成功 ping 服务器计算机，但在使用计算机名称执行 ping 操作时收到一个错误，例如，“无法访问目标主机。” 或“请求超时。”， 则表示名称解析配置不正确。 （有关详细信息，请参阅之前引用的 2006 年发布的[如何排查基本 TCP/IP 问题](http://support.microsoft.com/kb/169790)一文。）连接到 SQL Server 不需要成功的名称解析，但如果计算机名称无法解析为 IP 地址，则必须通过指定 IP 地址来建立连接。 这并不是理想的解决方法，但稍后可以修复名称解析。
+5.  如果你本可以对 ipaddress 执行 ping 操作，而现在收到一个错误，如“无法访问目标主机。” 或“请求超时。”，表示客户端计算机上缓存的名称解析信息可能较旧（已过时）。 请键入 `ipconfig /flushdns` 以清除 DNS（动态名称解析）缓存。 然后再次使用名称 ping 计算机。 清除 DNS 缓存后，客户端计算机将检查服务器计算机的 IP 地址的最新相关信息。 
+6.  如果网络配置正确，将收到一条响应，例如，“来自 \<IP 地址> 的回复”，后跟一些附加信息。 如果你可以使用 IP 地址成功 ping 服务器计算机，但在使用计算机名称执行 ping 操作时收到一个错误，例如，“无法访问目标主机。” 或“请求超时。”，表示名称解析配置不正确。 （有关详细信息，请参阅之前引用的 2006 年发布的[如何排查基本 TCP/IP 问题](http://support.microsoft.com/kb/169790)一文。）连接到 SQL Server 不需要成功的名称解析，但如果计算机名称无法解析为 IP 地址，则必须通过指定 IP 地址来建立连接。 这并不是理想的解决方法，但稍后可以修复名称解析。
   
   
 ## <a name="testing-a-local-connection"></a>测试本地连接
 
-在从另一台计算机排查连接问题之前，首先测试你是否能够从运行 SQL Server 的计算机上安装的客户端应用程序进行连接。 （这将避免发生防火墙问题）。此过程使用 SQL Server Management Studio。 如果未安装 Management Studio，请参阅[下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)。 （如果无法安装 Management Studio，则可以使用随数据库引擎一起安装的 `sqlcmd.exe` 实用工具来测试连接。 有关 `sqlcmd.exe`的信息，请参阅 [sqlcmd 实用工具](https://msdn.microsoft.com/library/ms162773.aspx)。）
+在从另一台计算机排查连接问题之前，首先测试你是否能够从运行 SQL Server 的计算机上安装的客户端应用程序进行连接。 （这将避免发生防火墙问题）。此过程使用 SQL Server Management Studio。 如果未安装 Management Studio，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。 （如果无法安装 Management Studio，则可以使用随数据库引擎一起安装的 `sqlcmd.exe` 实用工具来测试连接。 有关 `sqlcmd.exe`的信息，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。）
 1.  使用有权访问 SQL Server 的登录名登录到安装了 SQL Server 的计算机。 （在安装期间，SQL Server 要求将至少一个登录名指定为 SQL Server 管理员。 如果不知道管理员，请参阅[在系统管理员被锁定时连接到 SQL Server](http://msdn.microsoft.com/library/dd207004.aspx)。
 2.   在“开始”页上键入 **SQL Server Management Studio**，或在旧版 Windows 的“开始”菜单上，指向“所有程序”，指向“Microsoft SQL Server”，然后单击“SQL Server Management Studio”。
 3.  在“连接到服务器”对话框的“服务器类型”框中，选择“数据库引擎”。 在“身份验证”框中，选择“Windows 身份验证”。 在“服务器名称”框中，键入以下项之一：

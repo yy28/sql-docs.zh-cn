@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
@@ -74,11 +74,9 @@ ms.lasthandoff: 06/22/2017
      在未启用自动策略时，基于策略的管理不会影响系统性能。  
   
 ## <a name="terms"></a>术语  
- **基于策略的管理目标** 
- 基于策略的管理所管理的实体，例如，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例、数据库、表或索引。 服务器实例中的所有目标构成了目标层次结构。 目标集是将一组目标筛选器应用于目标层次结构后得到的一组目标，例如，HumanResources 架构所拥有的数据库中的所有表。  
+ **基于策略的管理目标** 基于策略的管理所管理的实体，例如，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例、数据库、表或索引。 服务器实例中的所有目标构成了目标层次结构。 目标集是将一组目标筛选器应用于目标层次结构后得到的一组目标，例如，HumanResources 架构所拥有的数据库中的所有表。  
   
- **基于策略的管理方面**
- 一组逻辑属性，用于模拟某些类型的管理目标的行为或特征。 这些属性的数量和特征内置在方面中，只能由方面创建者添加或删除这些内容。 一种目标类型可以实现一个或多个管理方面，而一个管理方面可以由一种或多种目标类型进行实现。 方面的某些属性仅适用于特定版本。  
+ **基于策略的管理方面** 一组逻辑属性，用于模拟某些类型的管理目标的行为或特征。 这些属性的数量和特征内置在方面中，只能由方面创建者添加或删除这些内容。 一种目标类型可以实现一个或多个管理方面，而一个管理方面可以由一种或多种目标类型进行实现。 方面的某些属性仅适用于特定版本。  
   
  **基于策略的管理条件**  
  一个布尔表达式，用于针对管理方面指定基于策略的管理托管目标的一组允许状态。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在评估条件时尝试遵守排序规则。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则与 Windows 排序规则不完全匹配时，请测试您的条件，以确定该算法如何解决冲突。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="links-to-specific-tasks"></a>特定任务的链接 
 
- - [存储基于策略的管理策略。](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [存储基于策略的管理策略。](policy-based-management-storage.md)|  
  - [配置警报以通知策略管理员策略失败情况](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [创建新的基于策略的管理条件](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [删除基于策略的管理条件](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ ms.lasthandoff: 06/22/2017
 
   
  ## <a name="examples"></a>示例
- - [创建 Off By Default 策略](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [将服务器配置为运行 Off By Default 策略](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [创建 Off By Default 策略](lesson-1-1-create-the-off-by-default-policy.md)
+  - [将服务器配置为运行 Off By Default 策略](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

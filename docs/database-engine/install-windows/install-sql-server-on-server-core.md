@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
@@ -52,7 +52,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|是||  
 |客户端工具连接|是||  
-|Integration Services 服务器|是|有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新 Integration Services 服务器及其功能的详细信息，请参阅 [Integration Services (SSIS) 服务器](https://msdn.microsoft.com/library/bb522534.aspx)。|  
+|Integration Services 服务器|是|深入了解新的 Integration Services 服务器及其在 [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md) 中的功能。|  
 |客户端工具向后兼容性|是||  
 |客户端工具 SDK|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|是||  

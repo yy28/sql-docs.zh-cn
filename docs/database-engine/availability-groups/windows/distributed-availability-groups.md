@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/02/2017
 
 分布式可用性组要求基础可用性组具有侦听器。 在创建分布式可用性组时，通过 ENDPOINT_URL 参数为其指定已配置的侦听器，而不是像传统可用性组那样，为独立实例提供基础服务器名称（若是 SQL Server 故障转移群集实例 [FCI]，则提供与网络名称资源相关联的值）。 尽管分布式可用性组的每个基础可用性组都具有侦听器，但分布式可用性组不具有侦听器。
 
-下图显示了分布式可用性组的高级视图，该分布式可用性组跨两个可用性组（AG 1 和 AG 2），这两个可用性组配置在各自的 WSFC 群集上。 分布式可用性组总共有四个副本，每个可用性组中两个。 每个可用性组可以支持最大副本数，因此，基于标准版的分布式可用性组最多可以具有 4 个副本，而基于企业版的分布式可用性组最多可以具有 18 个副本。
+下图显示了分布式可用性组的高级视图，该分布式可用性组跨两个可用性组（AG 1 和 AG 2），这两个可用性组配置在各自的 WSFC 群集上。 分布式可用性组总共有四个副本，每个可用性组中两个。 每个可用性组可支持最大数量的副本，因此分布式可用性最多可有 18 个副本。
 
 <a name="fig1"></a>
 ![分布式可用性组的高级视图][1]
@@ -59,7 +59,7 @@ ms.lasthandoff: 09/02/2017
 分布式可用性组当前仅适用于通过相同的主要 SQL Server 版本创建的可用性组。 例如，当前必须使用 SQL Server 2016 创建加入分布式可用性组的所有可用性组。 因为 SQL Server 2012 或 2014 中不存在分布式可用性组功能，因此通过这些版本创建的可用性组不能加入分布式可用性组。 
 
 > [!NOTE]
-> 可通过标准版或企业版配置分布式可用性组，但不支持在分布式可用性组中混用这两个版本。
+> Standard Edition 或 Standard Edition 和 Enterprise Edition 的组合版本不能配置分布式可用性组。
 
 因为存在两个单独的可用性组，因此在加入分布式可用性组的副本上安装服务包或累积更新的过程与传统可用性组略有不同：
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [使用 Transact-SQL 创建可用性组](create-an-availability-group-transact-sql.md)
-
-本文内容由 Microsoft 最有价值专家 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) 编写。
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png
