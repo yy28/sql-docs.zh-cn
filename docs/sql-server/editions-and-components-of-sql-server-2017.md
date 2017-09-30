@@ -3,7 +3,7 @@ title: "SQL Server 2017 的各版本和支持的功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
@@ -57,8 +57,6 @@ ms.lasthandoff: 08/28/2017
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)。  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)。
 
->[!NOTE]
->本文中的所有信息可能会更改，因为这些信息适用于 SQL Server 2017 的预发行版。 
   
 根据应用程序的需要，安装要求会有所不同。 不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够满足单位和个人独特的性能、运行时以及价格要求。 安装哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件还取决于您的具体需要。 下面各节将帮助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的不同版本和可用组件中做出最佳选择。  
 
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/28/2017
 |Enterprise|作为高级版本， [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 版提供了全面的高端数据中心功能，性能极为快捷、虚拟化不受限制，还具有端到端的商业智能 - 可为关键任务工作负荷提供较高服务级别，支持最终用户访问深层数据。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版提供了基本数据管理和商业智能数据库，使部门和小型组织能够顺利运行其应用程序并支持将常用开发工具用于内部部署和云部署 - 有助于以最少的 IT 资源获得高效的数据库管理。|  
 |Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
-|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 和测试应用程序的人员的理想之选。|  
+|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
 |Express 版本|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是 Express 的一种轻型版本，该版本具备所有可编程性功能，但在用户模式下运行，并且具有快速的零配置安装和必备组件要求较少的特点。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于 Internet 服务器  
@@ -157,9 +155,9 @@ ms.lasthandoff: 08/28/2017
 |数据库镜像|是|是<br /><br /> 仅完全安全|仅见证服务器|仅见证服务器|仅见证服务器| 
 |备份压缩|是|是|“否”|“否”|是| 
 |数据库快照|是|是|是|是|是|
-|AlwaysOn 故障转移群集实例|是<br /><br /> 节点数是操作系统支持的最大值|是<br /><br /> 支持 2 个节点|是|“否”|是|  
-|AlwaysOn 可用性组|是<br /><br /> 支持最多 8 个次要副本，包括 2 个同步次要副本|是|“否”|“否”|是|
-|基本可用性组 <sup>2</sup>|是|是<br /><br /> 支持 2 个节点|是|“否”|是|
+|AlwaysOn 故障转移群集实例<sup>2</sup>|是|是|“否”|“否”|是|  
+|AlwaysOn 可用性组<sup>3</sup>|是|“否”|“否”|“否”|是|
+|基本可用性组<sup>4</sup>|是|是|“否”|“否”|是|
 |联机页面和文件还原|是|“否”|“否”|“否”|是|
 |联机索引|是|“否”|“否”|“否”|是|
 |可恢复的联机索引重新生成|是|“否”|“否”|“否”|是|
@@ -170,12 +168,18 @@ ms.lasthandoff: 08/28/2017
 |数据库恢复顾问|是|是|是|是|是|
 |加密备份|是|是|“否”|“否”|是|
 |Microsoft Azure 的混合备份（URL 的备份）|是|是|“否”|“否”|是|
-|无群集的可用性组|是|是|是|“否”|“否”|是|
+|无群集的可用性组|是|是|“否”|“否”|“否”|是|
 |最小副本提交可用性组|是|是|是|“否”|“否”|是|
   
- <sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 
-<sup>2</sup> 有关基本可用性组的详细信息，请参阅 [基本可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
+<sup>1</sup> 有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../database-engine/install-windows/install-sql-server-on-server-core.md)。 
+
+<sup>2</sup> 在 Enterprise 版本中，节点数是操作系统支持的最大值。 Standard 版本中支持两个节点。 
+
+<sup>3</sup> Enterprise 版本支持最多 8 个辅助副本，包括 2 个同步辅助副本。 
+
+<sup>4</sup> Standard 版本支持基本可用性组。 基本可用性组支持两个副本，一个数据库。 有关基本可用性组的详细信息，请参阅 [可用性组](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。  
+
 
 ##  <a name="RDBMSSP"></a>RDBMS 可伸缩性和性能  
   
@@ -263,8 +267,8 @@ ms.lasthandoff: 08/28/2017
 |用户实例|是|“否”|是|是|是| 
 |LocalDB|是|“否”|是|是|是| 
 |专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
-|PowerShell 脚本支持|是|是|是|是|是| 
 |SysPrep 支持 <sup>1</sup>|是|是|是|是|是| 
+|PowerShell 脚本支持<sup>2</sup>|是|是|是|是|是| 
 |支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是|是| 
 |策略自动执行（检查计划和更改）|是|是|是|“否”|是|   
 |性能数据收集器|是|是|是|“否”|是| 
@@ -282,6 +286,7 @@ ms.lasthandoff: 08/28/2017
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
  
+ <sup>2</sup>在 Linux 上，支持来自于 Windows 计算机、面向 Linux 上的 SQL Server 的 PowerShell 脚本。 
 ##  <a name="DevTools"></a>开发工具  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -393,7 +398,7 @@ ms.lasthandoff: 08/28/2017
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|是|是| 
 |StreamInsight HA|StreamInsight Premium Edition|是|“否”|“否”|是|   
   
-> [![下载 SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[下载 SQL Server Management Studio 的最新版本](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)[下载最新版 SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)    
   
 ## <a name="next-steps"></a>后续步骤 
  [SQL Server 的产品规格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
