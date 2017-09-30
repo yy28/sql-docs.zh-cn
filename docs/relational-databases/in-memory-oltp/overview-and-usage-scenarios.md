@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
@@ -63,8 +63,8 @@ ms.lasthandoff: 06/22/2017
 将内存优化表用于核心事务表，即包含性能要求最高的事务的表。 使用本机编译的存储过程来优化执行与商业事务关联的逻辑。 放入数据库中存储过程中的逻辑越多，则内存中 OLTP 带来的益处越大。
 
 在现有应用程序中开始使用：
-1. 使用 [事务性能分析报表](https://msdn.microsoft.com/library/dn205133.aspx) 来确定要迁移的对象， 
-2. 然后使用 [内存优化](https://msdn.microsoft.com/library/dn284308.aspx) 和 [本机编译](https://msdn.microsoft.com/library/dn358355.aspx) 顾问帮助进行迁移。
+1. 使用 [事务性能分析报表](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 来确定要迁移的对象， 
+2. 然后使用 [内存优化](memory-optimization-advisor.md) 和 [本机编译](native-compilation-advisor.md) 顾问帮助进行迁移。
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
 
 对数据引入使用内存优化表。 如果引入主要包括插入（而非更新），且需考虑到数据的内存中 OLTP 存储占用，则请
 
-- 使用执行 [的作业，通过](https://msdn.microsoft.com/library/gg492088.aspx)群集列存储索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`定期将数据批量卸载到基于磁盘的表中；或者
-- 使用 [临时内存优化表](https://msdn.microsoft.com/library/mt590207.aspx) 管理历史数据 – 在此模式下，历史数据则驻留在磁盘上，并且数据移动由系统管理。
+- 使用执行 [的作业，通过](../indexes/columnstore-indexes-overview.md)群集列存储索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`定期将数据批量卸载到基于磁盘的表中；或者
+- 使用 [临时内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 管理历史数据 – 在此模式下，历史数据则驻留在磁盘上，并且数据移动由系统管理。
 
 SQL Server 示例存储库包含一个智能网格应用程序，该应用程序使用临时内存优化表、内存优化表类型和本机编译的存储过程来提高数据引入速度，同时管理传感器数据的内存中 OLTP 存储占用： 
 
@@ -228,10 +228,10 @@ ETL 工作流通常包括将数据加载到临时表、转换数据和将数据�
 - 有关使用内存中 OLTP 的性能演示，请参见： [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) （介绍和演示内存中 OLTP 的 17 分钟视频）（演示在 8 分 25 秒处）
 - [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Main In-Memory OLTP documentation](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)
 - [Azure SQL 数据库中的内存中 OLTP 的性能和资源使用率优势](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [系统版本控制临时表与内存优化表](https://msdn.microsoft.com/library/mt590207.aspx)
+- [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [内存中 OLTP – 常见工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。 
 

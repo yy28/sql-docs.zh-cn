@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由配置选项“统计信息收集间隔”（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）或 `INTERVAL_LENGTH_MINUTES` 使用 [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 进行控制。|  
 |**sys.query_store_runtime_stats**|执行计划的聚合运行时统计信息。 所有捕获的度量值以 4 种统计函数形式表示：平均值、最小值、最大值和标准偏差。|  
   
- 有关查询存储视图的其他详细信息，请参阅 **使用查询存储来监视性能** 中的 [相关视图、函数和过程](https://msdn.microsoft.com/library/dn817826.aspx)部分。  
+ 有关查询存储视图的其他详细信息，请参阅 **使用查询存储来监视性能** 中的 [相关视图、函数和过程](monitoring-performance-by-using-the-query-store.md)部分。  
   
 ## <a name="query-processing"></a>查询处理  
  查询存储在以下关键点与查询处理管道进行交互：  

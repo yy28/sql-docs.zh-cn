@@ -20,11 +20,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 01023e32117aa004a7e65f42cd0336d76631ee45
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
@@ -185,8 +185,8 @@ FROM dbo.ufn_FindReports(1);
 ## <a name="more-examples"></a>更多示例  
  - [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 
-  - [更改函数 (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
- - [删除函数 (Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx)
+  - [更改函数 (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [删除函数 (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [删除分区函数 (Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [社区](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)中提供了更多示例
   

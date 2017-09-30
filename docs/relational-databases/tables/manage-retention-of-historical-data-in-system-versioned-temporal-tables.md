@@ -1,5 +1,5 @@
 ---
-title: "管理版本由系统控制的时态表中历史数据的保留期 | Microsoft Docs"
+title: "管理版本由系统控制的临时表中历史数据的保留期 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/18/2017
@@ -16,27 +16,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
-# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的时态表中历史数据的保留期
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的临时表中历史数据的保留期
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  对于版本由系统控制的时态表，历史记录表可能比常规表更容易增大数据库大小，尤其是在以下条件下：  
+  对于版本由系统控制的临时表，历史记录表可能比常规表更容易增大数据库大小，尤其是在以下条件下：  
   
 -   你长期保留历史数据  
   
 -   你采用频繁更新或删除的数据修改模式  
   
- 大型以及不断增长的历史记录表可能会成为一个问题，这不单单体现在存储成本的增加上，而且还会降低时态查询的性能。 因此，针对管理历史记录表中的数据制定一个数据保留策略，是规划和管理每个时态表的生命周期的一个重要方面。  
+ 大型以及不断增长的历史记录表可能会成为一个问题，这不单单体现在存储成本的增加上，而且还会降低临时查询的性能。 因此，针对管理历史记录表中的数据制定一个数据保留策略，是规划和管理每个临时表的生命周期的一个重要方面。  
   
 ## <a name="data-retention-management-for-history-table"></a>历史记录表的数据保留管理  
- 管理时态表数据的保留首先要确定每个时态表的所需保留期。 在大多数情况下，应该将保留策略视为使用时态表的应用程序的业务逻辑的一部分。 例如，数据审核和时空旅行方案中的应用程序在历史数据必须可供在线查询方面提出了严格的要求。  
+ 管理临时表数据的保留首先要确定每个临时表的所需保留期。 在大多数情况下，应该将保留策略视为使用临时表的应用程序的业务逻辑的一部分。 例如，数据审核和时空旅行方案中的应用程序在历史数据必须可供在线查询方面提出了严格的要求。  
   
- 确定数据保留期后，下一步就是制定一个计划，规定如何管理历史数据、将历史数据存储在何处，以及如何删除超过保留要求的历史数据。 可通过以下四种方法管理时态历史记录表中的历史数据：  
+ 确定数据保留期后，下一步就是制定一个计划，规定如何管理历史数据、将历史数据存储在何处，以及如何删除超过保留要求的历史数据。 可通过以下四种方法管理临时历史记录表中的历史数据：  
   
 -   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 07/31/2017
 
  使用其中每种方法时，迁移或清理历史记录数据的逻辑将基于对应于当前表期末时间的列。 每行的期末时间值确定行版本“结束”（即放入历史记录表）的时刻。 例如，条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 指定超过一个月的历史数据需要删除并从历史记录表中移出。  
   
-> **注意：**  本主题中的示例使用此 [时态表示例](https://msdn.microsoft.com/library/mt590957.aspx)。  
+> **注意：**  本主题中的示例使用此 [临时表示例](creating-a-system-versioned-temporal-table.md)。  
   
 ## <a name="using-stretch-database-approach"></a>使用 Stretch Database 方法  
   
@@ -56,25 +56,25 @@ ms.lasthandoff: 07/31/2017
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以透明方式将历史数据迁移到 Azure。 为了提高安全性，你可以使用 SQL Server 的 [始终加密](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 功能来加密动态数据。 此外，你可以使用 [行级别安全性](../../relational-databases/security/row-level-security.md) 和其他高级 SQL Server 安全功能以及 Temporal 和 Stretch Database 来保护数据。  
   
- 使用 Stretch Database 方法，可以将部分或所有时态历史记录表延伸到 Azure，而 SQL Server 以无提示方式将历史数据移到 Azure。 对历史记录表启用延伸不会更改你在修改数据和执行时态查询时与时态表的交互方式。  
+ 使用 Stretch Database 方法，可以将部分或所有临时历史记录表延伸到 Azure，而 SQL Server 以无提示方式将历史数据移到 Azure。 对历史记录表启用延伸不会更改你在修改数据和执行临时查询时与临时表的交互方式。  
   
--   **延伸整个历史记录表：** 如果你的主要方案是在环境中审核数据，并且数据更改较为频繁，而对历史数据的查询相对很少，则你可以为整个历史记录表配置 Stretch Database。  换而言之，如果时态查询的性能并不重要，则使用此方法。 在这种情况下，Azure 提供的成本效益可能极具吸引力。   
+-   **延伸整个历史记录表：** 如果你的主要方案是在环境中审核数据，并且数据更改较为频繁，而对历史数据的查询相对很少，则你可以为整个历史记录表配置 Stretch Database。  换而言之，如果临时查询的性能并不重要，则使用此方法。 在这种情况下，Azure 提供的成本效益可能极具吸引力。   
     在延伸整个历史记录表时，可以使用延伸向导或 Transact-SQL。 下面列出了两种方法的示例。  
   
--   **延伸一部分历史记录表：** 如果你的方案主要涉及到查询最近的历史数据，但你希望可以在需要时选择查询较旧的历史数据，同时以较低成本远程存储此数据，则可以仅为一部分历史记录表配置 Stretch Database以提高性能。 使用 Transact-SQL 可以实现此目的，方法是指定谓词函数来选择要从历史记录表中迁移的行而不是迁移所有行。  当你处理时态表时，通常有用的做法是基于时间条件（即，基于历史记录表中行版本的期限）移动数据。    
+-   **延伸一部分历史记录表：** 如果你的方案主要涉及到查询最近的历史数据，但你希望可以在需要时选择查询较旧的历史数据，同时以较低成本远程存储此数据，则可以仅为一部分历史记录表配置 Stretch Database以提高性能。 使用 Transact-SQL 可以实现此目的，方法是指定谓词函数来选择要从历史记录表中迁移的行而不是迁移所有行。  当你处理临时表时，通常有用的做法是基于时间条件（即，基于历史记录表中行版本的期限）移动数据。    
     使用确定性谓词函数可将一部分历史记录保留在包含当前数据的同一数据库中，其余部分将迁移到 Azure。    
-    有关示例和限制，请参阅 [使用筛选器函数选择要迁移的行 (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx)。 由于不确定性函数无效，如果你要滑动窗口的方式转移历史记录数据，需要定期更改内联谓词函数的定义，使本地保留的行窗口在期限内保持恒定。 滑动窗口可让你不断地将一个月以前的历史数据移到 Azure。 此方法的示例如下所示。  
+    有关示例和限制，请参阅 [使用筛选器函数选择要迁移的行 (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 由于不确定性函数无效，如果你要滑动窗口的方式转移历史记录数据，需要定期更改内联谓词函数的定义，使本地保留的行窗口在期限内保持恒定。 滑动窗口可让你不断地将一个月以前的历史数据移到 Azure。 此方法的示例如下所示。  
   
 > **注意：** Stretch Database 会将数据迁移到 Azure。 因此，你必须拥有 Azure 帐户，以及计费的订阅。 若要获取免费试用的 Azure 帐户，请单击[免费试用一个月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 你可以使用延伸向导或 Transact-SQL 来为延伸配置时态历史记录表，并且可以在版本由系统控制设置为“打开”时，为时态历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
+ 你可以使用延伸向导或 Transact-SQL 来为延伸配置临时历史记录表，并且可以在版本由系统控制设置为“打开”时，为临时历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延伸向导延伸整个历史记录表  
- 适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择时态历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的时态表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，你无法右键单击时态历史记录表本身和单击“延伸”。  
+ 适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。  
   
 1.  右键单击数据库，指向“任务”，指向“延伸”，然后单击“启用”以启动向导。  
   
-2.  在“选择表”窗口中，选择时态历史记录表的复选框，然后单击“下一步”。  
+2.  在“选择表”窗口中，选择临时历史记录表的复选框，然后单击“下一步”。  
   
      ![在“选择表”页上选择历史记录表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在“选择表”页上选择历史记录表")  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 07/31/2017
   
      ![Stretch Database 向导的“安全凭据”页](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 向导的“安全凭据”页")  
   
-5.  在“选择 IP 地址”窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”，然后单击“完成”以启用 Stretch Database 和延伸时态历史记录表。  
+5.  在“选择 IP 地址”窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”，然后单击“完成”以启用 Stretch Database 和延伸临时历史记录表。  
   
      ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 07/31/2017
 -   [为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>使用 Transact-SQL 来延伸整个历史记录表  
- 也可以使用 Transact-SQL 在本地启用延伸和 [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 然后，可以使用  [Transact-SQL 对表启用 Stretch Database](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)。 对于以前为 Stretch Database 启用的数据库，请执行下面的 Transact-SQL 脚本，以延伸版本由系统控制的现有的时态历史记录表：  
+ 也可以使用 Transact-SQL 在本地启用延伸和 [为数据库启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)。 然后，可以使用  [Transact-SQL 对表启用 Stretch Database](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)。 对于以前为 Stretch Database 启用的数据库，请执行下面的 Transact-SQL 脚本，以延伸版本由系统控制的现有的临时历史记录表：  
   
 ```  
 ALTER TABLE <history table name>   
@@ -111,7 +111,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>使用 Transact-SQL 来延伸部分历史记录表  
- 若仅延伸历史记录表的一部分，首先创建 [内联谓词函数](https://msdn.microsoft.com/library/mt613432.aspx)。 对于本示例，假设你最初在 2015 年 12 月 1 日配置了内联谓词函数，现在希望将 2015 年 11 月 1 日以前的所有历史记录数据延伸到 Azure。 若要完成此操作，首先创建以下函数：  
+ 若仅延伸历史记录表的一部分，首先创建 [内联谓词函数](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 对于本示例，假设你最初在 2015 年 12 月 1 日配置了内联谓词函数，现在希望将 2015 年 11 月 1 日以前的所有历史记录数据延伸到 Azure。 若要完成此操作，首先创建以下函数：  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -165,11 +165,11 @@ COMMIT ;
  使用 SQL Server 代理或某些其他计划机制，以确保始终使用有效的谓词函数定义。  
   
 ## <a name="using-table-partitioning-approach"></a>使用表分区方法  
- [表分区](https://msdn.microsoft.com/library/ms188730.aspx) 可以使大型表更易于管理并且更灵活。 借助表分区方法，可以使用历史记录表分区来根据时间条件实现自定义数据清理或脱机存档。 在使用分区消除查询数据历史记录子集中的时态表时，表分区还可带来性能优势。  
+ [表分区](../partitions/create-partitioned-tables-and-indexes.md) 可以使大型表更易于管理并且更灵活。 借助表分区方法，可以使用历史记录表分区来根据时间条件实现自定义数据清理或脱机存档。 在使用分区消除查询数据历史记录子集中的临时表时，表分区还可带来性能优势。  
   
  使用表分区，你可以实施滑动窗口方法，将最早的历史数据部分移出历史记录表，并使保留部分的大小在期限上保持恒定 - 根据所需的保留期来保留历史记录表中的数据。 当 SYSTEM_VERSIONING 为 ON 时，支持将数据换出历史记录表的操作，这意味着，你可以在不造成维护时段或阻碍常规工作负载的情况下清除一部分历史记录数据。  
   
-> **注意：** 若要执行分区切换，历史记录表中的聚集索引必须与分区架构相符（必须包含 SysEndTime）。 系统创建的默认历史记录表包含一个聚集索引，其中包括 SysEndTime 和 SysStartTime 列，并且最适合于用于分区、插入新历史记录数据和典型的时态查询。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
+> **注意：** 若要执行分区切换，历史记录表中的聚集索引必须与分区架构相符（必须包含 SysEndTime）。 系统创建的默认历史记录表包含一个聚集索引，其中包括 SysEndTime 和 SysStartTime 列，并且最适合于用于分区、插入新历史记录数据和典型的临时查询。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
  使用滑动窗口方法时需要执行两组任务：  
   
@@ -331,7 +331,7 @@ COMMIT TRANSACTION
   
 5.  在步骤 (7) 中，通过创建新上限来拆分分区函数：移出 10 月份的数据后为 `SPLIT RANGE (N'2016-04-30T23:59:59.999'` 。  
   
- 但是，最佳解决方案是定期运行一个通用 Transact-SQL 脚本，该脚本无需经过修改即可每月执行相应的操作。 可以通用化上述脚本，以便能够使用提供的参数（需要合并的下限，以及要使用分区拆分创建的新边界）运行。 为了避免每个月创建临时表，你可以事先创建一个临时表，然后通过更改 check 约束以匹配要切出的分区，来重复使用该表。 查看以下页面，获得有关如何使用 Transact-SQL 脚本 [完全自动化滑动窗口](https://msdn.microsoft.com/library/aa964122.aspx) 。  
+ 但是，最佳解决方案是定期运行一个通用 Transact-SQL 脚本，该脚本无需经过修改即可每月执行相应的操作。 可以通用化上述脚本，以便能够使用提供的参数（需要合并的下限，以及要使用分区拆分创建的新边界）运行。 为了避免每个月创建临时表，你可以事先创建一个临时表，然后通过更改 check 约束以匹配要切出的分区，来重复使用该表。查看以下页面，获得有关如何使用 Transact-SQL 脚本 [完全自动化滑动窗口](https://msdn.microsoft.com/library/aa964122.aspx) 。  
   
 ### <a name="performance-considerations-with-table-partitioning"></a>表分区的性能注意事项  
  必须执行 MERGE 和 SPLIT RANGE 操作以避免任何数据移动，因为数据移动可能会产生极高的性能开销。 有关详细信息，请参阅[修改分区函数](../../relational-databases/partitions/modify-a-partition-function.md)。当使用 [CREATE PARTITION FUNCTION (Transact SQL )](../../t-sql/statements/create-partition-function-transact-sql.md) 时，可以使用RANGE LEFT 而不是 RANGE RIGHT 来实现此目的。  
@@ -346,7 +346,7 @@ COMMIT TRANSACTION
   
 -   RANGE LEFT 用例：在 RANGE LEFT 用例中，最低分区边界属于分区 1，而该分区是空的（在换出分区后），因此执行 MERGE RANGE 不会发生任何数据移动。  
   
--   RANGE RIGHT 用例：在 RANGE RIGHT 用例中，最低分区边界属于分区 2，而该分区不是空的，因为我们假设分区 1 是通过换出清空的。 在这种情况下，执行 MERGE RANGE 将发生数据移动（分区 2 中的数据将移到分区 1）。 为了避免此问题，滑动窗口方案中的 RANGE RIGHT 需要一个始终为空的分区 1。 这意味着，如果我们使用 RANGE RIGHT，则应创建并维护一个与 RANGE LEFT 用例比较的附加分区。  
+-   RANGE RIGHT 用例：在 RANGE RIGHT 用例中，最低分区边界属于分区 2，而该分区不是空的，因为我们假设分区 1 是通过换出清空的。在这种情况下，执行 MERGE RANGE 将发生数据移动（分区 2 中的数据将移到分区 1）。 为了避免此问题，滑动窗口方案中的 RANGE RIGHT 需要一个始终为空的分区 1。 这意味着，如果我们使用 RANGE RIGHT，则应创建并维护一个与 RANGE LEFT 用例比较的附加分区。  
   
  结论：要进行分区管理和避免数据移动，在滑动分区中使用 RANGE LEFT 要方便得多。 但是，使用 RANGE RIGHT 定义分区要稍微简单一些，因为你无需处理日期时间的时钟周期问题。  
   
@@ -355,23 +355,23 @@ COMMIT TRANSACTION
   
  为了将对常规应用程序和用户查询的阻碍减到最小，请在事务中执行清理脚本时，以一定的延迟删除较小区块中的数据。 尽管在所有情况下要删除的每个数据区块的最佳大小并没有定论，但在单个事务中删除超过 10,000 行可能会造成严重的影响。  
   
- 清理逻辑对于每个时态表是相同的，因此，可以通过你计划的、要针对你要限制其数据历史记录的每个时态表定期运行的泛型存储过程，来相对轻松地自动化该逻辑。  
+ 清理逻辑对于每个临时表是相同的，因此，可以通过你计划的、要针对你要限制其数据历史记录的每个临时表定期运行的泛型存储过程，来相对轻松地自动化该逻辑。  
   
  下图演示了应该如何针对单个表组织你的清理逻辑，以降低对运行中工作负载的影响。  
   
  ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
   
- 下面是有关实施该过程的概要指导。 将清理逻辑计划为每天运行，并循环访问所有需要清理数据的时态表。 使用 SQL Server 代理或其他工具来计划此过程：  
+ 下面是有关实施该过程的概要指导。 将清理逻辑计划为每天运行，并循环访问所有需要清理数据的临时表。 使用 SQL Server 代理或其他工具来计划此过程：  
   
--   通过多次迭代删除较小区块中每个时态表的历史数据（从最早的行开始，到最新的行为止），并避免在单个事务中删除所有行，如上图所示。  
+-   通过多次迭代删除较小区块中每个临时表的历史数据（从最早的行开始，到最新的行为止），并避免在单个事务中删除所有行，如上图所示。  
   
 -   将每个迭代实现为泛型存储过程的调用，以便从历史记录表中删除一部分数据（参阅以下代码示例以了解此过程）。  
   
--   计算每次调用该过程时，需要在单个时态表中删除的行数。 根据该数字以及你想要使用的迭代数，动态确定每个过程调用的拆分点。  
+-   计算每次调用该过程时，需要在单个临时表中删除的行数。 根据该数字以及你想要使用的迭代数，动态确定每个过程调用的拆分点。  
   
--   计划针对单个表的迭代之间的延迟时段，以降低对访问时态表的应用程序的影响。  
+-   计划针对单个表的迭代之间的延迟时段，以降低对访问临时表的应用程序的影响。  
   
- 以下代码段中显示了一个用于删除单个时态表的数据的存储过程（请仔细研究此代码，并在将它应用到环境之前进行调整）：  
+ 以下代码段中显示了一个用于删除单个临时表的数据的存储过程（请仔细研究此代码，并在将它应用到环境之前进行调整）：  
   
 ```  
 DROP PROCEDURE IF EXISTS sp_CleanupHistoryData;  
@@ -428,7 +428,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>使用时态历史记录保持策略方法
+## <a name="using-temporal-history-retention-policy-approach"></a>使用临时历史记录保持策略方法
 > 注意：时态历史记录保留策略方法适用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017（从 CTP 1.3 开始）。  
 
 可在单个表级别配置时态历史记录保留，这使用户可以创建灵活的期限策略。 应用时态保留很简单：仅需要在创建表或更改架构期间设置一个参数。
@@ -497,17 +497,17 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 聚集列存储索引具有优秀的数据压缩和高效的保留清理能力，是工作负载快速生成大量历史数据时的最佳选择。 此模式尤其适用于密集型事务处理工作负载，此类工作负载使用时态表跟踪和审计更改、执行趋势分析或 IoT 数据引入。
 
-有关更多详细信息，请参阅[使用保留策略管理时态表中的历史数据](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)。
+有关更多详细信息，请参阅[使用保留策略管理临时表中的历史数据](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)。
 
 ## <a name="see-also"></a>另请参阅  
- [时态表](../../relational-databases/tables/temporal-tables.md)   
- [系统版本控制时态表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
- [时态表系统一致性检查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
- [时态表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
- [时态表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
- [时态表安全性](../../relational-databases/tables/temporal-table-security.md)   
- [系统版本控制的时态表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
- [时态表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
+ [临时表](../../relational-databases/tables/temporal-tables.md)   
+ [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [临时表系统一致性检查](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
+ [临时表分区](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
+ [临时表注意事项和限制](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
+ [临时表安全性](../../relational-databases/tables/temporal-table-security.md)   
+ [系统版本控制的临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [临时表元数据视图和函数](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
 

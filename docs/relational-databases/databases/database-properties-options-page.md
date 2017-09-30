@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  指定独立于数据库兼容级别的辅助查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)是等效的。  
   
  **Max DOP**  
- 指定应用于语句的主默认 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 设置。  
+ 指定应用于语句的主默认 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 设置。  
   
  **辅助 Max DOP**  
- 指定应用于语句的辅助默认 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 设置（如有）。  
+ 指定应用于语句的辅助默认 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 设置（如有）。  
   
  **参数截取**  
  启用或禁用主参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653)是等效的。  

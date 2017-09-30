@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   本主题阐释如何使用 SQL Server Management Studio 还原完整的数据库备份。    
        
 ### <a name="important"></a>重要说明！    
-在完整恢复模式或大容量日志恢复模式下，可能需要先备份活动事务日志（称为 [日志尾部](https://msdn.microsoft.com/library/ms179314.aspx)），然后才能还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)），然后才能还原数据库。  
+在完整恢复模式或大容量日志恢复模式下，可能需要先备份活动事务日志（称为 [日志尾部](tail-log-backups-sql-server.md)），然后才能还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)），然后才能还原数据库。  
 
 从其他实例还原数据库时，请考虑 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的信息。   
     

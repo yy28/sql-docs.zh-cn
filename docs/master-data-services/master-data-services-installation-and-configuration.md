@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/07/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx)。  
+     有关 Windows 排序规则的详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)。  
   
 5.  在“用户名”字段中，指定将成为 Master Data Services 默认超级用户的用户 Windows 帐户。 超级用户有权访问所有功能区域，并且可以添加、删除和更新所有模型。  
 

@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
@@ -438,7 +438,7 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 ###  <a name="Tools"></a> 工具增强功能
 
 ####  <a name="SSMS"></a> Management Studio
-下载最新的 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+下载最新的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支持正在开发的、用于连接到 Microsoft Azure 的 Active Directory 身份验证库 (ADAL)。 它取代了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中使用的基于证书的身份验证。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安装要求安装 .NET 4.6 作为先决条件。 安装 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时，安装程序将自动安装 .NET 4.6。

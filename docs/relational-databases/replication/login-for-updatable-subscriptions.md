@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a8e5888afba843d601f6dc85395c52b08b9b597
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8ec5dd80718de624c3e45ac81eceedc7dfaed2ad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  此选项需要使用您所定义的链接服务器或远程服务器。 有关详细信息，请参阅[链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)和[远程服务器](../../database-engine/configure-windows/remote-servers.md)。 请确保用于链接服务器或远程服务器的登录名具有强密码，并且仅具有本主题中描述的权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事务发布的可更新订阅](https://msdn.microsoft.com/library/ms152769.aspx)   
+ [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [事务发布的可更新订阅](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  

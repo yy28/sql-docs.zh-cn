@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>大容量导入和导出数据 (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[bcp 实用工具](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|大容量导出数据和大容量导入数据并生成格式化文件的命令行实用工具 (Bcp.exe)。|是|是|  
 |[BULK INSERT 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|将数据直接从数据文件导入数据库表或未分区视图的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|是|是|  
 |[INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|通过在 INSERT 语句中指定 OPENROWSET(BULK…) 函数来选择数据，从而使用 OPENROWSET 大容量行集提供程序将数据大容量导入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。|是|是| 
-|[SQL Server 导入和导出向导](https://msdn.microsoft.com/library/ms141209.aspx)|此向导可创建简单包，以便导入和导出介于多种常用数据格式（包括数据库、电子表格和文本文件）的数据。|是|是|  
+|[SQL Server 导入和导出向导](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|此向导可创建简单包，以便导入和导出介于多种常用数据格式（包括数据库、电子表格和文本文件）的数据。|是|是|  
   
 > [!IMPORTANT]
 > SQL Server 大容量导入操作不支持逗号分隔值 (CSV) 文件。 但是，在某些情况下，CSV 文件可在将数据批量导入 SQL Server 时用作数据文件。 请注意，CSV 文件的字段终止符不一定是逗号。 有关详细信息，请参阅 [准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。

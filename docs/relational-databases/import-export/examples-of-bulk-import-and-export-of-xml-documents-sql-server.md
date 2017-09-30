@@ -22,11 +22,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   - [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
    - [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
     - [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://support.microsoft.com/en-us/kb/316005)
-     - [XML 架构集合 (SQL Server)](https://msdn.microsoft.com/library/ms187856.aspx)
+     - [XML 架构集合 (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>示例  
  下列示例说明了以下操作内容：  

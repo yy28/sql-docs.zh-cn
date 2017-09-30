@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. 在“加密”部分中，使用“加密备份”复选框来决定是否对备份使用加密。 使用“算法”下拉列表选择一种加密算法。  使用“证书”或“非对称密钥”下拉列表选择现有证书或非对称密钥。 SQL Server 2014 或更高版本中支持加密。 有关加密选项的详细信息，请参阅 [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)。  
   
   
-你可以使用 [维护计划向导](https://msdn.microsoft.com/library/ms191002.aspx) 来创建数据库备份。 
+你可以使用 [维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md) 来创建数据库备份。 
 
 ### <a name="examples"></a>示例  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.完整备份到默认位置的磁盘**

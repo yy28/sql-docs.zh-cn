@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
@@ -233,7 +233,7 @@ ms.lasthandoff: 09/01/2017
  [创建凭据 - 向 Azure 存储进行身份验证](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
- 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅  [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 中的“定义备份任务”部分。  
+ 与之前介绍的备份任务类似，SQL Server Management Studio 中的维护计划向导包括 **URL** 作为一个目标选项，以及 SQL 凭据等备份到 Microsoft Azure 存储所需的其他支持对象。 它具有相同的功能。有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 > [!NOTE]  
 >  若要使用共享访问令牌创建条带备份集、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份或 SQL 凭据，则必须在维护计划向导中使用 Transact-SQL、Powershell 或 C#，而不是备份任务。  
@@ -273,7 +273,7 @@ ms.lasthandoff: 09/01/2017
 -   [使用 STOPAT 还原到时间点](#PITR)  
   
 > [!NOTE]  
->  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> 创建共享访问签名  
  以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 该示例需要 Microsoft Azure Powershell。 有关安装和使用 Azure Powershell 的信息，请参阅 [如何安装和配置 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
@@ -412,6 +412,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 备份到 URL 最佳实践和故障排除](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

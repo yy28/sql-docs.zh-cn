@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>配置远程访问服务器配置选项
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/11/2017
   
 -   [如何：在 ASP.NET 2.0 中使用 SQL 身份验证连接到 SQL Server](https://msdn.microsoft.com/library/ff648340.aspx)  
   
--   [连接到 SQL Server 实例](https://msdn.microsoft.com/library/ms162132.aspx)  
+-   [连接到 SQL Server 实例](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
 -   [如何：创建到 SQL Server 数据库的连接](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   

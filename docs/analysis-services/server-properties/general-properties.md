@@ -161,7 +161,7 @@ ms.lasthandoff: 09/01/2017
  **端口**  
  一个整数属性，用于定义服务器侦听客户端连接所在的端口号。 如果未设置，服务器将动态查找第一个未使用的端口。  
   
- 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 此属性的默认值为零 (0)，指示默认侦听端口 2383。 有关端口配置的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
  **ServerTimeout**  
  一个整数，用于定义查询的超时值（秒）。 默认值为 3600 秒（或 60 分钟）。 零 (0) 指定任何查询都不会超时。  

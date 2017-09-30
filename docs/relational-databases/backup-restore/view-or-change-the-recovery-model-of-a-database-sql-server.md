@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
   
-  有关 [恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)（SQL Server 恢复模式）！
+  有关 [恢复模式](recovery-models-sql-server.md)更深入的说明，请参阅由 [MSSQLTips](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 人员提供的 [SQL Server Recovery Models](https://www.mssqltips.com/)（SQL Server 恢复模式）！
   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 
--   在从[完整恢复模式或大容量日志恢复模式](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   在从[完整恢复模式或大容量日志恢复模式](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
 -   时点恢复在大容量日志模式下不可能进行。 在需要事务日志还原的大容量日志恢复模式下运行事务可能会导致事务丢失数据。 若要在灾难恢复方案中最大程度地恢复数据，则仅在以下条件下切换到大容量日志恢复模式：  
   

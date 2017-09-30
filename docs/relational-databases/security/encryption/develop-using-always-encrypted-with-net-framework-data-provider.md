@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
@@ -289,7 +289,7 @@ cmd.ExecuteNonQuery();
   
 你无需对应用程序代码进行任何更改便可使用这些提供程序，但请注意以下事项：
 
-- 你（或你的 DBA）需要确保列主密钥元数据中配置的提供程序名称正确，并且列主密钥路径符合对于给定提供程序有效的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) 语句时会自动生成有效的提供程序名称和密钥路径。 有关详细信息，请参阅 [使用 SQL Server Management Studio 配置始终加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 和 [使用 PowerShell 配置始终加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
+- 你（或你的 DBA）需要确保列主密钥元数据中配置的提供程序名称正确，并且列主密钥路径符合对于给定提供程序有效的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 语句时会自动生成有效的提供程序名称和密钥路径。 有关详细信息，请参阅 [使用 SQL Server Management Studio 配置始终加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 和 [使用 PowerShell 配置始终加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)。
 - 需要确保应用程序可以访问密钥存储中的密钥。 这可能涉及向应用程序授予对密钥和/或密钥存储的访问权限（具体取决于密钥存储），或执行其他特定于密钥存储的配置步骤。 例如，若要访问实现 CNG 或 CAPI 的密钥存储（例如硬件安全模块），需确保在应用程序计算机上安装用于为存储实现 CNG 或 CAPI 的库。 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序
@@ -373,7 +373,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制为了检索查询参数的元数据而往返的次数
 
-如果为连接启用了始终加密，默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) ，并将查询语句（不带任何参数值）传递到 SQL Server。 **sys.sp_describe_parameter_encryption** 会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个需要加密的参数返回加密相关信息，以便用于 SQL Server 的 .NET Framework 数据提供程序对参数值加密。 以上行为可确保实现针对客户端应用程序的高级别透明性。 应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需在 SqlParameter 对象中将面向加密列的值传递到用于 SQL Server 的 .NET Framework 数据提供程序即可。
+如果为连接启用了始终加密，默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) ，并将查询语句（不带任何参数值）传递到 SQL Server。 **sys.sp_describe_parameter_encryption** 会分析查询语句，以了解是否有任何参数需要加密；如果有，则会针对每个需要加密的参数返回加密相关信息，以便用于 SQL Server 的 .NET Framework 数据提供程序对参数值加密。 以上行为可确保实现针对客户端应用程序的高级别透明性。 应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需在 SqlParameter 对象中将面向加密列的值传递到用于 SQL Server 的 .NET Framework 数据提供程序即可。
 
 
 ### <a name="query-metadata-caching"></a>查询元数据缓存
@@ -392,7 +392,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 > [!NOTE]
 > 在查询级别上设置始终加密在 .NET 4.6.2 和更高版本中的性能优势比较有限，这些版本实现了参数加密元数据缓存。
 
-若要控制单个查询的始终加密行为，需使用  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 的此构造函数和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)。 下面是一些有用的指导原则：
+若要控制单个查询的始终加密行为，需使用 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 的此构造函数和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)。 下面是一些有用的指导原则：
 - 如果客户端应用程序通过数据库连接发送的大多数查询访问的是加密列，则可执行以下操作：
     - 将“列加密设置”连接字符串关键字设置为“已启用”。
     - 对于不访问任何加密列的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Disabled**。 这将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。

@@ -1,7 +1,7 @@
 ---
 title: "域独立可用性组 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 
 ![具有两个加入域的节点的工作组群集][2]
 
-域独立可用性组不仅仅用于多站点或灾难恢复方案。 它还可在单个数据中心部署，甚至可与[基本可用性组](https://msdn.microsoft.com/library/mt614935.aspx)（也称为标准版可用性组）配合使用，提供类似于以前使用数据库镜像和所示证书实现的体系结构。
+域独立可用性组不仅仅用于多站点或灾难恢复方案。 它还可在单个数据中心部署，甚至可与[基本可用性组](basic-availability-groups-always-on-availability-groups.md)（也称为标准版可用性组）配合使用，提供类似于以前使用数据库镜像和所示证书实现的体系结构。
 
 
 ![标准版 AG 的高级视图][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. 创建可用性组可在将为副本的实例上使用的终结点。 对于可用性组，终结点必须具有类型 DATABASE_MIRRORING。 终结点使用在步骤 4 中为该实例创建的证书进行身份验证。 使用证书创建终结点的示例语法如下所示。 使用合适的加密方法和其他与环境相关的选项。 有关可用选项的详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx)（创建终结点 (Transact-SQL)）。
+12. 创建可用性组可在将为副本的实例上使用的终结点。 对于可用性组，终结点必须具有类型 DATABASE_MIRRORING。 终结点使用在步骤 4 中为该实例创建的证书进行身份验证。 使用证书创建终结点的示例语法如下所示。 使用合适的加密方法和其他与环境相关的选项。 有关可用选项的详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)（创建终结点 (Transact-SQL)）。
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. 配置基础证书和终结点安全性后，使用你喜欢的方法创建可用性组。 建议手动备份、复制和还原用于初始化次要副本的备份，或使用[自动种子设定](https://msdn.microsoft.com/library/mt735149.aspx)。 使用向导初始化次要副本涉及使用服务器消息块 (SMB) 文件，在使用未加入域的工作组群集时该文件可能不起作用。
+14. 配置基础证书和终结点安全性后，使用你喜欢的方法创建可用性组。 建议手动备份、复制和还原用于初始化次要副本的备份，或使用[自动种子设定](automatically-initialize-always-on-availability-group.md)。 使用向导初始化次要副本涉及使用服务器消息块 (SMB) 文件，在使用未加入域的工作组群集时该文件可能不起作用。
 15. 创建侦听器时，请确保在 DNS 中注册其名称和 IP 地址。
 
 ### <a name="next-steps"></a>后续步骤 
@@ -151,8 +151,6 @@ GO
 - [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [使用 Transact-SQL 创建可用性组](create-an-availability-group-transact-sql.md)
-
->本文内容由 Microsoft 最有价值专家 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) 编写。
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中的数据库文件的文件快照备份
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  在建立事务日志备份链所需的初始完整备份（可以是文件快照备份）后，你只需执行事务日志备份，因为每个事务日志文件快照备份集均包含所有数据库文件的文件快照，并可用于执行数据库还原或日志还原。 在初始完整数据库备份之后，不需要执行其他完整或差异备份，因为 Azure Blob 存储服务可处理每个文件快照和每个数据库文件的基本 blob 的当前状态之间的差异。  
   
 > [!NOTE]  
->  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ### <a name="restore-using-file-snapshot-backups"></a>使用文件快照备份还原  
  由于每个文件快照备份集均包含每个数据库文件的文件快照，因此还原过程最多需要相邻的两个文件快照备份集。 无论备份集是来自完整数据库备份还是来自日志备份，都是如此。 在使用传统流备份文件执行还原过程时，这与还原过程大不相同。 使用传统流备份时，还原过程需要使用整个备份集链：完整备份、差异备份以及一个或多个事务日志备份。 无论还原是使用文件快照备份还是使用流备份集，还原过程的恢复部分将保持不变。  
@@ -184,7 +184,7 @@ GO
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>另请参阅  
- [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

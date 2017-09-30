@@ -17,11 +17,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 11edeb0ba81666ecf64adf189bd704de81af5a32
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  许多第三方存储解决方案供应商都开发了符合这些标准 API、在不同存储平台上支持 BLOB 存储的 RBS 提供程序。  
   
 ## <a name="rbs-requirements"></a>RBS 要求  
- 对于存储 BLOB 元数据的主数据库服务器，RBS 要求安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  但是，如果使用提供的 FILESTREAM 提供程序，则可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上存储 BLOB 本身。 若要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 要求对 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 至少使用 ODBC 驱动程序版本 11，对 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]至少使用 ODBC 驱动程序版本 13。 驱动程序可在 [下载 ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)中获得。   
+ - 对于存储 BLOB 元数据的主数据库服务器，RBS 要求安装有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  但是，如果使用提供的 FILESTREAM 提供程序，则可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上存储 BLOB 本身。 若要连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 要求对 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 至少使用 ODBC 驱动程序版本 11，对 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]至少使用 ODBC 驱动程序版本 13。 驱动程序可在 [下载 ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)中获得。    
   
  RBS 包括 FILESTREAM 提供程序，因此，您可以使用 RBS 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上存储 BLOB。 如果要使用 RBS 在其他存储解决方案中存储 BLOB，则必须使用为该存储解决方案开发的第三方 RBS 提供程序，或者使用 RBS API 开发自定义 RBS 提供程序。 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)上以学习资源的形式提供了在 NTFS 文件系统中存储 BLOB 的示例提供程序。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
  使用 RBS 时，应定期轮换凭据存储对称密钥。 这是一种常见的可满足组织安全策略的安全最佳实践。  轮换 RBS 凭据存储对称密钥的方法之一是使用 RBS 数据库中的 [以下脚本](#Key_rotation) 。  你也可以使用此脚本迁移到更强的加密强度属性，如算法或密钥长度。 在轮换密钥前，先备份数据库。  脚本结束时，它有一些验证步骤。  
 如果你的安全策略需要与所提供属性不同的密钥属性（例如，算法或密钥长度），可以将该脚本用作模板。 在以下两个位置修改密钥属性：1) 创建临时密钥的位置 2) 创建永久密钥的位置。  
   
-##  <a name="rbsresources"></a> RBS resources  
+##  <a name="rbsresources"></a> RBS 资源  
   
  **RBS 示例**  
  [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
  **RBS 博客**  
  [RBS 博客](http://go.microsoft.com/fwlink/?LinkId=210315) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
   
-##  <a name="Key_rotation"></a> Key rotation script  
+##  <a name="Key_rotation"></a> 密钥轮换脚本  
  此示例创建一个名为 `sp_rotate_rbs_symmetric_credential_key` 的存储过程，以将当前使用的 RBS 凭据存储对称密钥替换为  
 你所选的密钥。  如果安全策略要求定期轮换密钥   
 或者有特定的算法要求，你可能想要这样做。  

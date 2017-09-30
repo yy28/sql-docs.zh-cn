@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
@@ -48,10 +48,10 @@ ms.lasthandoff: 06/22/2017
 [教程：使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 本教程教授如何创建强制执行网站管理标准的策略。  
   
-[教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 本教程说明如何将 SQL Server 备份和还原到 Windows Azure Blob 存储服务。  
   
-[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>另请参阅  

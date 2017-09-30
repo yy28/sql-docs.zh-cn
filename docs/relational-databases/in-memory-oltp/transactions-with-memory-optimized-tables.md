@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>具有内存优化表的事务
@@ -84,18 +84,18 @@ SQL Server 提供以下事务启动模式：
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- Explicit transaction.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
                 dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 请注意，通过使用数据库选项 `WITH (SNAPSHOT)` ，可以不需要 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`提示。 如果将此选项设置为 `ON`，访问内存优化表时使用的较低隔离级别将自动提升到 SNAPSHOT 隔离。  
   
@@ -308,7 +308,7 @@ SQL Server 提供以下事务启动模式：
   
 - 本机过程的正文中不允许显式事务控制语句。 不允许 BEGIN TRANSACTION、ROLLBACK TRANSACTION，等等。  
   
-- 有关使用 ATOMIC 块控制事务的详细信息，请参阅 [ATOMIC 块](https://msdn.microsoft.com/library/dn452281.aspx)  
+- 有关使用 ATOMIC 块控制事务的详细信息，请参阅 [ATOMIC 块](atomic-blocks-in-native-procedures.md)  
   
 <a name="othertxnlinks44ni"/>  
   

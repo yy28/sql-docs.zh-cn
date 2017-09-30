@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
@@ -99,7 +99,7 @@ ms.lasthandoff: 07/31/2017
 内存优化顾问工具可生成脚本来帮助实现将基于磁盘的表转换为内存优化表。 作为 SQL Server Data Tools (SSDT) 的一部分，对此工具进行安装。
 
 - [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
+- [下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>.dacpac 文件

@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1167a74aff5a5cfa495bc5a00a6b52e30a5c2e7b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="supported-tools"></a>支持的工具
 
-可以使用 [SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) 和 [SqlServer PowerShell 模块](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 来配置“始终加密”功能和管理“始终加密”密钥。 有关这些工具支持的密钥存储的列表，请参阅：
+可以使用 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 和 [SqlServer PowerShell 模块](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 来配置“始终加密”功能和管理“始终加密”密钥。 有关这些工具支持的密钥存储的列表，请参阅：
 
 - [使用 SQL Server Management Studio 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [使用 PowerShell 配置 Always Encrypted](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

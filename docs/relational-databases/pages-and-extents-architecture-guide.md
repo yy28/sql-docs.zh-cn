@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
@@ -45,7 +45,7 @@ SQL Server 中数据存储的基本单位是页。 为数据库中的数据文�
 |-------|-------|
 |Data |当行中的文本设置为 ON 时，具有除 text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据以外的所有数据的数据行。 |
 |索引 |索引条目。 |
-|测试/图像 |大型对象数据类型：（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据） <br> 数据行超过 8 KB 时为可变长度数据类型列：（varchar、nvarchar、varbinary 和 sql_variant） |
+|Text/Image |大型对象数据类型：（text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max) 和 xml 数据） <br> 数据行超过 8 KB 时为可变长度数据类型列：（varchar、nvarchar、varbinary 和 sql_variant） |
 |Global Allocation Map、Shared Global Allocation Map |有关区是否分配的信息。 |
 |页可用空间 (PFS) |有关页分配和页的可用空间的信息。 |
 |索引分配映射 (Index Allocation Map) |有关每个分配单元中表或索引所使用的区的信息。 |

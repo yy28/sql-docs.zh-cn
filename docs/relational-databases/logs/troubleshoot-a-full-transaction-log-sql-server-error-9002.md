@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  若要在给定情况下查找阻止日志截断的原因，请使用 **sys.database** 目录视图的 **log_reuse_wait** 列和 **log_reuse_wait_desc** 列。 有关详细信息，请参阅 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。 有关延迟日志截断的因素的说明，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 > **重要说明!!**  
->  如果数据库在恢复过程中出现 9002 错误，则在解决此问题后，可使用 [ALTER DATABASE *database_name* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx) 恢复数据库。  
+>  如果数据库在恢复过程中出现 9002 错误，则在解决此问题后，可使用 [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 恢复数据库。  
   
  响应已满事务日志的备选方法包括：  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>完成或终止长时间运行的事务
 ### <a name="discovering-long-running-transactions"></a>发现长时间运行的事务
 很长时间运行的事务会导致事务日志填满。 若要查看长时间运行的事务，请使用下列方法之一：
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx)。**
-此动态管理视图返回有关数据库级事务的信息。 对于长时间运行的事务，最需要注意的列包括：第一条日志记录的时间 [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx)、事务的当前状态 [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)和事务日志中开始记录的 [日志序列号 (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx)。
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
+此动态管理视图返回有关数据库级事务的信息。 对于长时间运行的事务，最需要注意的列包括：第一条日志记录的时间 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、事务的当前状态 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)和事务日志中开始记录的 [日志序列号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx)。**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 通过此语句，您可以标识该事务所有者的用户 ID，因此可以隐性地跟踪该事务的源以得到更加有序的终止（将其提交而非回滚）。
 
 ### <a name="kill-a-transaction"></a>终止一个事务
-有时只是需要结束进程；此时可能需要使用 [KILL](https://msdn.microsoft.com/library/ms173730.aspx) 语句。 请谨慎使用此语句，特别是在运行不想终止的重要进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+有时只是需要结束进程；此时可能需要使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 语句。 请谨慎使用此语句，特别是在运行不想终止的重要进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另请参阅  
 [KB 支持文章 - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/en-us/kb/317375)（SQL Server 中的事务日志意外增大或已满）[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

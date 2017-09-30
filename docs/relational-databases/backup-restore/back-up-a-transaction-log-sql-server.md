@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>备份事务日志 (SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> 限制和局限  
   
--   不允许在显式或 [隐式](https://msdn.microsoft.com/library/ms187807.aspx) 事务中使用 BACKUP 语句。  显式事务就是可以显式地在其中定义事务的开始和结束的事务。
+-   不允许在显式或 [隐式](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 事务中使用 BACKUP 语句。  显式事务就是可以显式地在其中定义事务的开始和结束的事务。
   
 ##  <a name="Recommendations"></a> 建议  
   
--   如果数据库使用完整[恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)或大容量日志恢复模式，则必须足够频繁地备份事务日志，以保护数据和避免[事务日志变满](https://msdn.microsoft.com/library/ms175495.aspx)。 这将截断日志，并且支持将数据库还原到特定时间点。 
+-   如果数据库使用完整[恢复模式](recovery-models-sql-server.md)或大容量日志恢复模式，则必须足够频繁地备份事务日志，以保护数据和避免[事务日志变满](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。 这将截断日志，并且支持将数据库还原到特定时间点。 
   
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果频繁地备份日志，这些成功消息会迅速累积，从而产生巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   

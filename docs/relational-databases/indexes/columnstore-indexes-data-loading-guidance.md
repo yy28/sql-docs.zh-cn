@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="what-is-bulk-loading"></a>什么是大容量加载？
 *大容量加载*指的是将大量的行添加到数据存储的方式。 这是将数据移到列存储索引的最高效方法，因为它对成批的行进行操作。 大容量加载将行组填充到最大容量，并将它们直接压缩到列存储中。 只有在加载结束时未达到每行组至少 102,400 行的行才会进入增量存储。  
-若要执行大容量加载，可以使用 [bcp 实用工具](https://msdn.microsoft.com/library/ms162802.aspx)、[Integration Services](https://msdn.microsoft.com/library/ms141026.aspx)，或从临时表中选择行。
+若要执行大容量加载，可以使用 [bcp 实用工具](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或从临时表中选择行。
 
 ![加载到聚集列存储索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>什么是渗透插入？
 
-*渗透插入*指的是将单个行移到列存储索引的方式。 渗透插入使用 [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx) 语句。 使用渗透插入时，所有行将进入增量存储。 这适用于少量的行，但对于较大负载而言并不实用。
+*渗透插入*指的是将单个行移到列存储索引的方式。 渗透插入使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 语句。 使用渗透插入时，所有行将进入增量存储。 这适用于少量的行，但对于较大负载而言并不实用。
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

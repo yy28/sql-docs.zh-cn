@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
@@ -136,7 +136,7 @@ ms.lasthandoff: 09/01/2017
 5.  使用查询存储进行分析并解决回归问题：大多数情况下，新查询优化器更改会生成更好的计划。 不过，查询存储可以让你轻松识别计划选择回归并使用计划强制机制对其进行修复。  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>识别并提高即席工作负荷  
- 某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](https://msdn.microsoft.com/library/mt604821.aspx)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
+ 某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](best-practice-with-the-query-store.md)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
   
  你可以通过“资源使用排名靠前的查询”视图，首先了解到工作负荷的即席性质：  
   

@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
   使用 Transact-SQL 执行用户定义函数
   
 
-> **注意：** 有关用户定义函数的详细信息，请访问  [用户定义函数](https://msdn.microsoft.com/library/ms191007.aspx) 和 [CREATE FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms186755.aspx) 。 
+> **注意：** 有关用户定义函数的详细信息，请访问  [用户定义函数](user-defined-functions.md) 和 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 。 
   
  
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> 安全性  
   
- 运行 [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) 语句无需权限。 但是，EXECUTE 字符串内引用的安全对象上 **需要** 权限。 例如，如果字符串包含 [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) 语句，则 EXECUTE 语句的调用方必须具有对目标表的 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)  
+ 运行 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 语句无需权限。 但是，EXECUTE 字符串内引用的安全对象上 **需要** 权限。 例如，如果字符串包含 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，则 EXECUTE 语句的调用方必须具有对目标表的 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

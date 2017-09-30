@@ -3,7 +3,7 @@ title: "次要副本的自动种子设定 (SQL Server) | Microsoft Docs"
 description: "使用自动种子设定初始化次要副本。"
 services: data-lake-analytics
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/25/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: a472109765c0ac77e9064a385a7125877cee0423
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>次要副本的自动种子设定
@@ -273,11 +273,9 @@ GO
 
 [更改可用性组 (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)（创建可用性组 (Transact-SQL)）
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)（创建可用性组 (Transact-SQL)）
 
 [AlwaysOn 可用性组故障排除和监视指南](http://technet.microsoft.com/library/dn135328.aspx)
-
-> 本文内容由 Microsoft 最有价值专家 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt) 投稿。
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

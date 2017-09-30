@@ -34,4 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 -   时间文字，{t '*值*}，其中*valu*e 采用格式"hh: mm:"  
   
- 时间戳文本的 {ts*值*}，其中*valu*e 采用的形式"yyyy mm dd hh: mm: [。 f。...]"。
+ 时间戳文本的 {ts*值*}，其中*valu*e 采用的形式"yyyy mm dd hh: mm: [.f...]"。

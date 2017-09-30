@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd12e9e9a611a850b739522be29e79ff850ce3a2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 可用性组的群集 DTC
@@ -59,9 +59,9 @@ ms.lasthandoff: 08/02/2017
 
 [有关在可用性组上测试 DTC 的详细信息：](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
 
-[监视 AlwaysOn 可用性组系统视图](https://msdn.microsoft.com/library/ff878305.aspx)
+[监视 AlwaysOn 可用性组系统视图](monitor-availability-groups-transact-sql.md)
 
-[逐步创建可用性组](https://msdn.microsoft.com/library/ff878307.aspx)
+[逐步创建可用性组](create-an-availability-group-transact-sql.md)
 
 
 [SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)（可用性组中的 SQL Server 2016 DTC 支持） 

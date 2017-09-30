@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  本主题介绍一些概念和注意事项，这些内容对于在 Microsoft Azure 存储服务中存储 SQL Server 数据文件至关重要。  
   
- 有关如何使用这一新功能的实践体验，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 有关如何使用这一新功能的实践体验，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>为何在 Microsoft Azure 中使用 SQL Server 数据文件？ 
   
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
  使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 > https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)。  
+ 将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 管理对象支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -155,10 +155,10 @@ ON
     解决方法：尝试删除 Azure 存储中活动数据库文件仍在使用的凭据时，会看到此错误。 要删除凭据，必须先删除拥有此数据库文件的关联 Blob。 要删除具有活动租约的 Blob，必须先中断租约。  
   
 -   *未在容器上正确创建共享访问签名。*   
-     解决方案：确保已在容器上正确创建了共享访问签名。 在 [教程第二课中复习提供的说明：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](https://msdn.microsoft.com/library/dn466435.aspx)。  
+     解决方案：确保已在容器上正确创建了共享访问签名。 在 [教程第二课中复习提供的说明：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
   
 -   *尚未正确创建 SQL Server 凭据。*   
-    解决方案：确保已对 **Identity** 字段使用了“共享访问签名”，并正确创建了密钥。 复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466436.aspx)中第 3 课的说明。  
+    解决方案：确保已对 **Identity** 字段使用了“共享访问签名”，并正确创建了密钥。 复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-3-database-backup-to-url.md)中第 3 课的说明。  
   
  **租赁 Blob 错误：**  
   
@@ -167,10 +167,10 @@ ON
  **数据库错误**  
   
 1.  *创建数据库时出错*   
-    解决方法：复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466431.aspx)中第 4 课的说明。  
+    解决方法：复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../lesson-4-restore-database-to-virtual-machine-from-url.md)中第 4 课的说明。  
   
 2.  *运行 Alter 语句时出错*   
-    解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](https://msdn.microsoft.com/library/dn466438.aspx)中第 7 课的说明。  
+    解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 复习 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中第 7 课的说明。  
   
 3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d:“%ls”*   
     解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 *5120 无法打开物理文件 "%.\*ls".操作系统错误 %d：“%ls”*。  

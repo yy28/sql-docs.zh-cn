@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/31/2017
   
 
 ##  <a name="AddOrEnlarge"></a> 添加或扩大日志文件  
- 可以通过扩大现有日志文件（如果磁盘空间允许）或将日志文件添加至数据库（通常是其他磁盘上的数据库）来获得空间。  
+ 可以通过扩大现有日志文件（如果磁盘空间允许）或将日志文件添加至数据库（尤其是其他磁盘上的数据库）来获得空间。  
   
 -   若要将日志文件添加至数据库，请使用 ALTER DATABASE 语句的 ADD LOG FILE 子句。 添加日志文件可以使日志获得空间。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/31/2017
 -   若要更改当前文件大小（以 KB、MB、GB 和 TB 为单位），请使用 SIZE 选项。  
   -   若要更改增量，请使用 FILEGROWTH 选项。 如果值为 0，则表明自动增长已设置为关闭，且不允许增加空间。 日志文件的小幅度自动增长量可能降低性能。 因此，为了避免经常向日志文件中扩充内容，应该采用足够大的文件增量。 通常，采用 10% 的默认增量较为合适。  
 
-有关更改日志文件的文件增长属性的信息，请参阅 [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/ms174269.aspx)。  
+有关更改日志文件的文件增长属性的信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 -   若要控制日志文件的最大大小（以 KB、MB、GB 和 TB 为单位）或将增长设置为 UNLIMITED，请使用 MAXSIZE 选项。  
   

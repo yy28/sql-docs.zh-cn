@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
     -   如果 **allow_push** 的值为 **0**，则执行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 **allow_push** 指定为 **@property** ，将 **@value** 指定为 **@value**。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 Subscription 的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新 Subscription 的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   

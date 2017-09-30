@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本文介绍使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) 配置始终加密和管理使用始终加密的数据库时所需执行的任务。
+本文介绍使用 [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) 配置始终加密和管理使用始终加密的数据库时所需执行的任务。
 
 当你使用 SSMS 配置始终加密时，SSMS 会处理始终加密密钥和敏感数据，因此，这些密钥和数据会以纯文本形式显示在 SSMS 进程内。 因此，在安全的计算机上运行 SSMS 至关重要。 如果数据库托管在 SQL Server 中，请确保 SSMS 不是在托管 SQL Server 实例的计算机上运行，而是在另一台计算机上运行。 由于始终加密的主要目的是确保加密的敏感数据的安全（即使数据库系统遭到入侵），因此，在 SQL Server 计算机上执行 PowerShell 脚本来处理密钥或敏感数据会减少或抵消该功能带来的益处。 有关其他建议，请参阅 [密钥管理安全注意事项](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
@@ -89,7 +89,7 @@ SSMS 不支持管理数据库 (DBA) 的用户与管理加密密码并有权访�
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> 为数据库连接启用和禁用 Always Encrypted   
 
 为数据库连接启用 Always Encrypted 将指示用于 SQL Server 的 .NET Framework 数据提供程序（用于 SQL Server Management Studio）以透明方式尝试以下操作：   
 -   对从加密列中检索到的并在查询结果中返回的任何值进行解密。   
@@ -105,7 +105,7 @@ SSMS 不支持管理数据库 (DBA) 的用户与管理加密密码并有权访�
 >  4.   选中“其他属性”选项卡，然后键入 `Column Encryption Setting=Enabled` 以启用 Always Encrypted 行为或删除该设置以禁用 Always Encrypted 行为。   
 >  5.   单击 **“连接”**。   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Always Encrypted 参数化   
  
 Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，可自动将 Transact-SQL 变量转换为查询参数（[SqlParameter 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)的实例）。 （要求至少为 SSMS 版本 17.0。）这允许用于 SQL Server 的基础 .NET Framework 数据提供程序对针对加密列的数据进行检测，并在将数据发送到数据库之前对其进行加密。 
   

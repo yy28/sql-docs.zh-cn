@@ -1,23 +1,28 @@
 ---
 title: "数据质量项目 (DQS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/27/2017
+
 ---
-# 数据质量项目 (DQS)
-  中的数据质量项目 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 是一种使用知识库来通过执行来提高您的源数据的质量 *数据清理* 和 *数据匹配* 活动，然后将结果数据导出到 SQL Server 数据库或.csv 文件。 您可以将数据质量项目创建为一个清理项目或匹配项目，以执行相应的任务。 可以通过使用同一个知识库运行清理项目和匹配项目，因为用于数据清理和匹配的知识可以内置于同一个知识库中。  
+# <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
+  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据质量项目就是使用知识库，通过执行“数据清理”  和  “数据匹配”活动改进源数据的质量，然后将结果数据导出到 SQL Server 数据库或 .csv 文件。 您可以将数据质量项目创建为一个清理项目或匹配项目，以执行相应的任务。 可以通过使用同一个知识库运行清理项目和匹配项目，因为用于数据清理和匹配的知识可以内置于同一个知识库中。  
   
  数据质量项目具有以下优点：  
   
@@ -30,9 +35,9 @@ caps.handback.revision: 16
 ##  <a name="Cleansing"></a> 数据质量项目：清理活动  
  清理数据质量项目使您可以基于知识库清理您的源数据。 DQS 中的数据清理活动分为两个步骤：  
   
-1.  一个 *计算机辅助* 数据清理过程根据知识库中的知识分析源数据并提出更改建议。 DQS 对处理后的数据进行分类（建议、新建、无效、已更正和正确），然后向用户显示以供进一步处理。  
+1.  “计算机辅助”  数据清理过程，可以针对知识库中的知识分析源数据并提出更改建议。 DQS 对处理后的数据进行分类（建议、新建、无效、已更正和正确），然后向用户显示以供进一步处理。  
   
-2.   *交互式* 清除过程，从而使数据专员批准、 拒绝或修改计算机辅助数据清理过程建议的数据。  
+2.  “交互式”  清理过程，使数据专员可以批准、拒绝或修改计算机辅助数据清理过程建议的数据。  
   
  有关数据质量项目中的清理活动的详细信息，请参阅 [Data Cleansing](../data-quality-services/data-cleansing.md)。  
   
@@ -48,17 +53,17 @@ caps.handback.revision: 16
  有关数据质量项目中的匹配活动的详细信息，请参阅 [Data Matching](../data-quality-services/data-matching.md)。  
   
 ##  <a name="ProfilingNotification"></a> 数据事件探查和通知  
- 在数据质量项目中运行清理和匹配活动时，可查看与正由 DQS 处理的数据有关的实时统计信息和其他信息。 数据事件探查可帮助您评估清理或匹配过程的有效性，并且您可能能够确定数据清理或数据匹配在多大程度上可帮助您提高数据质量。 DQS 事件探查提供两种数据质量维度︰ *完整性* （数据是否存在的程度） 和 *准确性* （向其数据可用于目标用途的程度）。 此外，根据数据事件探查信息，对用户显示相关的通知，告知用户可以通过采取哪些措施来改善数据清理和数据匹配操作。 有关数据事件探查和通知的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+ 在数据质量项目中运行清理和匹配活动时，可查看与正由 DQS 处理的数据有关的实时统计信息和其他信息。 数据事件探查可帮助您评估清理或匹配过程的有效性，并且您可能能够确定数据清理或数据匹配在多大程度上可帮助您提高数据质量。 DQS 事件探查提供两种数据质量维度：“完整性”  （提供数据的范围）和“准确性”  （数据可用于目标用途的程度）。 此外，根据数据事件探查信息，对用户显示相关的通知，告知用户可以通过采取哪些措施来改善数据清理和数据匹配操作。 有关数据事件探查和通知的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
-## 相关任务  
+## <a name="related-tasks"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  
 |描述如何创建数据质量项目。|[创建数据质量项目](../data-quality-services/create-a-data-quality-project.md)|  
-|描述如何打开、 解锁、 重命名和删除数据质量项目。|[打开、 解锁、 重命名和删除数据质量项目](https://msdn.microsoft.com/library/hh510417.aspx)|  
-|描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中打开 Integration Services 项目。|[在数据质量客户端中打开 Integration Services 项目](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
+|描述如何打开、解锁、重命名和删除数据质量项目。|[打开、解锁、重命名和删除数据质量项目](open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中打开 Integration Services 项目。|[在 Data Quality Client 中打开 Integration Services 项目](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## 另请参阅  
+## <a name="see-also"></a>另请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

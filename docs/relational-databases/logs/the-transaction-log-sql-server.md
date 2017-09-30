@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 -  事务日志可以在几个文件上实现。 通过设置日志的 FILEGROWTH 值可以将这些文件定义为自动扩展。 这样可减少事务日志内空间不足的可能性，同时减少管理开销。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。
 -  重用日志文件中空间的机制速度快且对事务吞吐量影响最小。
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> 事务日志截断  
  日志截断将释放日志文件的空间，以便由事务日志重新使用。 必须定期截断事务日志，防止其占满分配的空间（绝对会！）。 几个因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
  
   日志截断可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的虚拟日志文件，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
@@ -119,11 +119,11 @@ ms.lasthandoff: 06/22/2017
 |14|OTHER_TRANSIENT|当前未使用此值。|  
   
 ##  <a name="MinimallyLogged"></a>可尽量减少日志量的操作  
- 最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+ 最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志[恢复模式](../backup-restore/recovery-models-sql-server.md)下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > **注意！！** 内存优化表不支持最小日志记录。  
   
-> **另请注意！** 在完整 [恢复模式](https://msdn.microsoft.com/library/ms189275.aspx)下，所有大容量操作都将被完整地记录下来。 但是，可以通过将数据库暂时切换到用于大容量操作的大容量日志恢复模式，最小化一组大容量操作的日志记录。 最小日志记录比完整日志记录更为有效，并在大容量事务期间，降低了大规模大容量操作填满可用的事务日志空间的可能性。 不过，如果在最小日志记录生效时数据库损坏或丢失，则无法将数据库恢复到故障点。  
+> **另请注意！** 在完整 [恢复模式](../backup-restore/recovery-models-sql-server.md)下，所有大容量操作都将被完整地记录下来。 但是，可以通过将数据库暂时切换到用于大容量操作的大容量日志恢复模式，最小化一组大容量操作的日志记录。 最小日志记录比完整日志记录更为有效，并在大容量事务期间，降低了大规模大容量操作填满可用的事务日志空间的可能性。 不过，如果在最小日志记录生效时数据库损坏或丢失，则无法将数据库恢复到故障点。  
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 06/22/2017
   
     -   DROP INDEX 新堆重新生成（如果适用）。 （ [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 操作期间将 **始终** 完整记录索引页的释放操作。）
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> 相关任务  
  **管理事务日志**  
   
 -   [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

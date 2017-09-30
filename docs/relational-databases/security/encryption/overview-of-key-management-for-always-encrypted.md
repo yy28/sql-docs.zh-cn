@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>管理“始终加密”密钥的工具
 
-可以使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx)管理“始终加密”密钥：
+可以使用 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)管理“始终加密”密钥：
 
 - **SQL Server Management Studio (SSMS)** – 通过对话框和向导合并涉及密钥存储访问和数据库访问的任务，因此 SSMS 不支持角色分离，但是它会让你的密钥配置很轻松。 有关使用 SSMS 管理密钥的详细信息，请参阅：
     - [预配列主密钥](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
