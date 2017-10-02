@@ -7,6 +7,8 @@
 ## [体系结构和概述](architecture-overview-machine-learning.md)
 ## [不同 SQL Server 版本中机器学习功能的差异](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+## [在 Azure SQL 数据库中使用 R](r/using-r-in-azure-sql-database.md)
+
 # [机器学习服务 - R](r/sql-server-r-services.md)
 
 ## [入门](r/getting-started-with-sql-server-r-services.md)

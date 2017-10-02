@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -109,7 +109,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修复了尝试打印查询结果（打印成文本）时的问题。  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - 修复了在 SQL Azure 数据库上脚本化删除这些对象时 SSMS 未正确删除表和其他对象的问题。
 - 修复了以下问题：SSMS 偶尔拒绝启动，出现错误“找不到一个或多个组件。 请重新安装应用程序”
-- 修复了 SSMS UI 中的 SPID 可能会过时和不同步的问题。 https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- 修复了 SSMS UI 中的 SPID 可能会过时以及不同步的问题。https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - 修复了 SSMS（无提示）安装中 /passive 参数被视为 /quiet 的问题。
 - 修复了 SSMS 偶尔在启动时引发“未将对象引用设置为对象的实例”错误的问题。 http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - 修复了“数据压缩向导”上导致 SSMS 在图形表上按“计算”会崩溃的问题
@@ -167,7 +167,7 @@ Integration Services (IS)
 - Analysis Service 用户可以从数据源上的上下文菜单中针对 1200 TM 模型及更高版本刷新其数据源的凭据
 - 内置 SSIS 报表现在可显示 CTP 2.1 中 SSIS 扩展执行的日志
 - SSIS 扩展管理应用程序
-  - 查看扩展主要角色的相关基本信息。
+  - 查看扩展主要角色的基本信息。
   - 轻松向扩展部署添加辅助角色。
   - 查看所有扩展辅助角色及其相关基本信息，还可将它们轻松启用或禁用。
 
@@ -355,7 +355,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 解决了 SSMS 16.5.2 中引入的问题，即当表具有多个稀疏列时，导致“表”节点扩展。
 
-* 用户可以部署包含 OData 连接管理器的 SSIS 包，这些包连接到 SSIS 目录的 Microsoft Dynamics AX / CRM Online 资源。 有关详细信息，请参阅 [OData 连接管理器](https://msdn.microsoft.com/library/dn584133.aspx)。
+* 用户可以部署包含 OData 连接管理器的 SSIS 包，这些包连接到 SSIS 目录的 Microsoft Dynamics AX / CRM Online 资源。 有关详细信息，请参阅 [OData 连接管理器](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager)。
 
 * 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接 ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [新身份验证选项**“Active Directory 通用身份验证”**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 这是一种由 Azure Active Directory 驱动的基于令牌的身份验证机制，支持多重身份验证、密码身份验证和集成身份验证机制。
 
-* 新扩展事件模板匹配 SQL Server Profiler 模板的功能 [（Microsoft Connect 项目 #2543925）。](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool)。 详细了解附带的 [SQL Server Profiler 模板](https://msdn.microsoft.com/library/ms190176.aspx)。
+* 新扩展事件模板匹配 SQL Server Profiler 模板的功能 [（Microsoft Connect 项目 #2543925）。](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates)。
 
 * Azure SQL 数据库的新的“创建数据库和数据库属性”对话框。
 
