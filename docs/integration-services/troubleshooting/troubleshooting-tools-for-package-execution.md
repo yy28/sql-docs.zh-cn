@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **使用事务帮助确保数据的完整性**。 有关详细信息，请参阅 [Integration Services 事务](../../integration-services/integration-services-transactions.md)。  
   
--   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件处理程序捕获和处理包错误  
  通过使用事件处理程序，您可以响应许多由包和包中的对象引发的事件。  
