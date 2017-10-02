@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- PAD_INDEX ** = ** {ON |**OFF** }  
+ PAD_INDEX  **=**  {ON |**OFF** }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定索引填充。 默认为 OFF。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  关闭或*fillfactor*未指定  
  考虑到中间级页上的键集，可以将中间级页几乎填满，但至少要为最大索引行留出足够空间。  
   
- 填充因子** = ***填充因子*  
+ 填充因子 **=** *填充因子*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 指定的值必须是 1 到 100 之间的整数。 默认值为 0。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  填充因子值 0 和 100 在所有方面都是相同的。  
   
- IGNORE_DUP_KEY ** = ** {ON |**OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON |**OFF** }  
  指定在插入操作尝试向唯一索引插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 选项不起作用时执行[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)， [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)，或[更新](../../t-sql/queries/update-transact-sql.md)。 默认为 OFF。  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  在向后兼容的语法中，WITH IGNORE_DUP_KEY 等效于 WITH IGNORE_DUP_KEY = ON。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |**OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON |**OFF** }  
  指定是否重新计算统计信息。 默认为 OFF。  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  启用统计信息自动更新功能。  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** |关闭}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** |关闭}  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否允许行锁。 默认值为 ON。  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** |关闭}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否允许使用页锁。 默认值为 ON。  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  不使用页锁。  
   
- SORT_IN_TEMPDB ** = ** {ON |**OFF** }  
+ SORT_IN_TEMPDB  **=**  {ON |**OFF** }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定是否存储中的排序结果**tempdb**。 默认为 OFF。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  中间排序结果与索引存储在同一数据库中。  
   
- 联机** = ** {ON |**OFF** }  
+ 联机 **=**  {ON |**OFF** }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。 REBUILD 可作为 ONLINE 操作执行。  
@@ -168,10 +168,10 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
  *max_degree_of_parallelism*可以是：  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
-在分区上**(** { \<partition_number_expression > |\<范围 >}[ **,**...* n * ] **)** **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+在分区上**(** { \<partition_number_expression > |\<范围 >}[ **,**... *n*  ] **)** **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定对其应用 DATA_COMPRESSION 设置的分区。 如果表未分区，ON PARTITIONS 自变量将生成错误。 如果未提供 ON PARTITIONS 子句，DATA_COMPRESSION 选项适用于已分区表的所有分区。  
   
