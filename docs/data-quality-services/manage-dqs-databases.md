@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   在 DQS 数据库之外有一些实体，这些实体必须存在 DQS 数据库才能像 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]一样正常工作，尤其是两个 SQL Server 登录名（##MS_dqs_db_owner_login## 和 ##MS_dqs_service_login##）以及 master 数据库中的一个初始化存储过程 (DQInitDQS_MAIN)。  
   
- 有关 SQL Server 中备份和还原的详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+ 有关 SQL Server 中备份和还原的详细信息，请参阅 [SQL Server 数据库的备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>DQS 数据库的默认自动增长大小和恢复模式  
  防止 DQS 数据库和事务日志无限增长以致有可能填满硬盘：  
