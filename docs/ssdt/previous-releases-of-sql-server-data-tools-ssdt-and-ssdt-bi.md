@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbd9bb9d0edbbeae81ebc074f28386476fd8635f
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
@@ -27,10 +27,10 @@ SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库
   
 它基于 Visual Studio shell，并随 SQL Server 一起发布。 新版本的 SSDT 将集成 SQL Server 的最新功能。 较早的版本包括该版本当时的模板和设计环境。  
   
-SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) 来设计和部署在较早版本 SQL Server 上运行的数据库、模型、报表和包。  
+SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 来设计和部署在较早版本 SQL Server 上运行的数据库、模型、报表和包。  
   
 > [!NOTE]  
-> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只会添加缺少的模板。  
+> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](download-sql-server-data-tools-ssdt.md)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只会添加缺少的模板。  
 
 ## <a name="recent-downloads"></a>最近下载
 

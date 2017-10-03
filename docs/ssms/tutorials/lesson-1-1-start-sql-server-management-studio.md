@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>课程 1-1 - 启动 SQL Server Management Studio
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/21/2017
   * 对于较旧版本的 Windows，在“开始”菜单上，指向“所有程序”，再指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后单击“SQL Server Management Studio”。 或者在“运行”对话框中，键入“SSMS.exe”，然后单击“确定”。  
   
     > [!NOTE]  
-    >  如果未显示 SSMS，则可能未成功安装 SSMS。 从 [下载中心](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)安装 SSMS。 SSMS 不会随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 自动安装。 使用最新版本访问所有功能。  
+    >  如果未显示 SSMS，则可能未成功安装 SSMS。 从 [下载中心](../download-sql-server-management-studio-ssms.md)安装 SSMS。 SSMS 不会随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 自动安装。 使用最新版本访问所有功能。  
   
 2.  在下一步中，使用 SSMS 的**对象资源管理器**组件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未显示“对象资源管理器”窗格，请在“视图”菜单上，单击“对象资源管理器”。 在“对象资源管理器”菜单上，单击“连接”按钮，再单击“数据库引擎”。 此时应显示“连接到服务器”对话框。 （如果之前已安装 SSMS，那么用户设置可能使“连接到服务器”对话框自动显示。）  
   

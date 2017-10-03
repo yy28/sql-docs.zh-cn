@@ -9,6 +9,11 @@
 ## [按 SQL Server 版本划分的计算能力限制](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [客户体验改善计划](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [配置 SQL Server 以向 Microsoft 发送反馈](sql-server-customer-feedback.md)
+### 伙伴
+#### [监视](partner-monitor-sql-server.md)
+#### [高可用性和灾难恢复](partner-hadr-sql-server.md)
+#### [管理](partner-management-sql-server.md)
+#### [开发](partner-dev-sql-server.md)
 
 # [SQL Server 的最近更新文章](sql-server-new-updated-sql-docs-pr.md)
 

@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: d9c156a1305606948daf277d7b4436372c291e53
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/21/2017
     
 [![Azure 虚拟机小](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
     
-[![下载 SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS：**若要获取最新版本的 SQL Server Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**。   
+[![下载 SSMS](../ssms/download-sql-server-management-studio-ssms.md) **SSMS：**若要获取最新版本的 SQL Server Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。   
     
  有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)（SQL Server 2016 的新增功能）。
     
@@ -115,11 +115,11 @@ ms.lasthandoff: 09/21/2017
 
 此外，定期执行下面的查询存储的存储过程，以清理运行时统计信息、特定查询或计划：
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> 产品文档 (GA) 

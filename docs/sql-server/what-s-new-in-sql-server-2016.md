@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/21/2017
 
  **立即试用 SQL Server！** 
 - 下载免费的 [SQL Server 2016 开发者版！](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
-- 下载最新版 [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 
+- 下载最新版 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 是否拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 数据库引擎
@@ -99,7 +99,7 @@ SQL Server 2016 Analysis Services 提升了兼容性级别为 1200 的表格模�
 - 重新设计了支持 HTML5 的报表呈现引擎 
 - 新增了树状图和旭日图图表类型 
 
-请参阅 [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)。
+请参阅 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
 
 ## <a name="next-steps"></a>后续步骤   
 - [SQL Server 安装程序](../database-engine/install-windows/installation-for-sql-server-2016.md)   
