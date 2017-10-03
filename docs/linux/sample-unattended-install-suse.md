@@ -4,34 +4,34 @@ description: "SQL Server 脚本示例的 SUSE Linux Enterprise Server 上的无�
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: de58e55b803eca22d3305f6e0a89f9e13883c627
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>适用于 SUSE Linux Enterprise Server 的示例： 无人参与的 SQL Server 安装脚本
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-此示例 Bash 脚本在不带交互式输入的 SUSE Linux 企业服务器 (SLES) v12 SP2 上安装 SQL Server 自 2017 年 1 RC2。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
+此示例 Bash 脚本在不带交互式输入的 SUSE Linux 企业服务器 (SLES) v12 SP2 上安装 SQL Server 自 2017 年。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 
 > [!TIP]
 > 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[SLES 的快速入门教程](quickstart-install-connect-suse.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 你需要至少 3.25 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 - 其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 
 > [!IMPORTANT]
-> SQL Server 自 2017 年 1 RC2 需要 libsss_nss_idmap0，没有提供的默认 SLES 存储库。 你可以从 SLES v12 SP2 SDK 安装它。
+> SQL Server 2017 需要 libsss_nss_idmap0，没有提供的默认 SLES 存储库。 你可以从 SLES v12 SP2 SDK 安装它。
 
 ## <a name="sample-script"></a>示例脚本
 

@@ -4,23 +4,23 @@ description: "此快速入门教程演示如何在 Red Hat Enterprise Linux 上�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在此快速入门教程中，你首先安装 SQL Server 自 2017 年 1 RC2 上 Red Hat Enterprise Linux (RHEL) 7.3。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在此快速入门教程中，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
@@ -37,11 +37,17 @@ ms.lasthandoff: 09/07/2017
 
 若要在 RHEL 上配置 SQL Server，在安装的终端运行以下命令**mssql server**包：
 
+> [!IMPORTANT]
+> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
+
 1. 下载 Microsoft SQL Server Red Hat 存储库配置文件：
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
+
+   > [!NOTE]
+   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[更改源存储库](sql-server-linux-setup.md#repositories)。
 
 1. 运行以下命令，安装 SQL Server：
 
@@ -56,14 +62,10 @@ ms.lasthandoff: 09/07/2017
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
+   > 如果你在本教程中尝试 SQL Server 自 2017 年，自由地授予许可的以下版本： 评估、 开发人员和快速。
 
-   > [!TIP]
-   > 在安装时 RC2，需要没有购买的许可证尝试的任何版本。 因为它是预发布版本，而不考虑你选择的版本将显示以下消息：
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > 此消息不会反映你选择的版本。 它与在预览期 for RC2。
+   > [!NOTE]
+   > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
 
 1. 配置完成后，请验证服务是否正在运行：
 

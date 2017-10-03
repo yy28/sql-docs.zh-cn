@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2cb08ab16291e87a25eb2596f75f4d01616a80db
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
@@ -189,7 +189,7 @@ ms.lasthandoff: 09/21/2017
     >  为计划命名时，请考虑使用唯一的描述性名称，以便与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划区分。  
 
 ## <a name="see-also"></a>另请参阅  
- [项目和包的执行](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
+ [项目和包的执行](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>外部资源  
   

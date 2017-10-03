@@ -1,6 +1,6 @@
 ---
 title: "提升和移动到云中的 SQL Server Integration Services 工作负荷 |Microsoft 文档"
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>提升和移动到云中的 SQL Server Integration Services 工作负荷
@@ -48,14 +48,20 @@ Azure 数据工厂承载在 Azure 上的 SSIS 包的运行时引擎。 运行时
 
 数据工厂还支持其他类型的集成运行时。 若要了解有关 SSIS IR 和集成运行时的其他类型的详细信息，请参阅[集成运行库在 Azure 数据工厂中的](/azure/data-factory/concepts-integration-runtime.md)。
 
-## <a name="package-features-on-azure"></a>在 Azure 上的包功能
+## <a name="prerequisites"></a>先决条件
+本主题中所述的功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更高版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 当将包部署到 Azure 时，包部署向导始终的包升级到最新的包格式。
+
+有关在 Azure 中的先决条件的详细信息，请参阅[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+
+## <a name="ssis-features-on-azure"></a>在 Azure 上的 SSIS 功能
+
 当设置要承载 SSISDB 的 SQL 数据库实例时，安装 Azure Feature Pack for SSIS 和访问可再发行。 这些组件提供连接到 Excel 和 Access 文件和各种 Azure 数据源。 在此时间，不能用于 SSIS 安装第三方组件。
 
-你继续设计和构建包本地在 SSDT 中，或在 Visual Studio 中使用 SSDT 安装。
+承载 SSISDB 的 SQL 数据库名称将成为由四部分构成的名称，部署和从 SSDT 和 SSMS 的管理包时要使用的第一部分`<sql_database_name>.database.windows.net`。
 
 必须将项目部署模型，不使用包部署模型，用于将部署到 Azure SQL 数据库上的 SSISDB 的项目。
 
-承载 SSISDB 的 SQL 数据库名称将成为由四部分构成的名称，部署和从 SSDT 和 SSMS 的管理包时要使用的第一部分`<sql_database_name>.database.windows.net`。
+你继续设计和构建包本地在 SSDT 中，或在 Visual Studio 中使用 SSDT 安装。
 
 有关如何从使用 Windows 身份验证云连接到本地数据源的信息，请参阅[连接到本地数据源使用 Windows 身份验证](ssis-azure-connect-with-windows-auth.md)。
 

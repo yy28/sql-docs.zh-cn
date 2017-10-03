@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -185,7 +185,7 @@ IDENTITY_CACHE = { **ON** |关闭}
   
 ## <a name="metadata"></a>元数据  
 
-[Sys.database_scoped_configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)系统视图提供有关在数据库中指定了作用域配置的信息。 数据库范围配置选项仅显示在 sys.database_scoped_configurations 因为它们是为服务器级默认设置的替代。 [Sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)系统视图只显示服务器范围的设置。  
+[Sys.database_scoped_configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)系统视图提供有关在数据库中指定了作用域配置的信息。 数据库范围配置选项仅显示在 sys.database_scoped_configurations 因为它们是为服务器级默认设置的替代。 [Sys.configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)系统视图只显示服务器范围的设置。  
   
 ## <a name="examples"></a>示例  
 这些示例演示使用 ALTER DATABASE SCOPED CONFIGURATION  
@@ -282,7 +282,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [建议和 SQL Server 中的"max degree of parallelism"配置选项的指导原则](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源    
-* [基数估计 (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [基数估计 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 资源    
@@ -292,12 +292,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [SQL Server 查询优化器修补程序跟踪标志 4199 维护服务模型](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>详细信息  
- [sys.database_scoped_configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [跟踪标志 &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [跟踪标志 & #40;Transact SQL & #41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
+ [sys.configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

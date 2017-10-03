@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>数据库目录
@@ -181,7 +181,7 @@ WideWorldImporters 使用少量的架构，因此，很容易地了解数据库�
 
 ### <a name="integration-schema"></a>集成架构
 
-此架构中的存储的过程使用 ETL 过程。 获得所需的时间范围的各种表中所需的数据[ETL 包](/sql-docs/docs/sample/world-wide-importers/etl-workflow)。
+此架构中的存储的过程使用 ETL 过程。 获得所需的时间范围的各种表中所需的数据[ETL 包](etl-workflow.md)。
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 架构
 

@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
@@ -57,14 +57,14 @@ ms.lasthandoff: 09/21/2017
 - 示例数据、已完成的包、配置和自述文件。 如果下载了 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)（Adventure Works 2014 示例数据库），这些文件将一起安装。     
 > **注意！** 请确保具有在 AdventureWorks 或所用的其他数据中创建和删除表的权限。         
     
--   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
     
 **目标计算机。** 向其部署包的计算机 **必须安装下列组件：**    
     
 - SQL Server
 - 示例数据、已完成的包、配置和自述文件。 如果下载了 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)（Adventure Works 2014 示例数据库），这些文件将一起安装。 
     
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。    
     

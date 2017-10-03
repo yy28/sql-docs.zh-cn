@@ -3,7 +3,7 @@ title: "ALTER DATABASE （Azure SQL 数据库） |Microsoft 文档"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/07/2017
+ms.date: 09/25/2017
 ms.prod: 
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe1ad8f6331d853b65ac10c64ae9d0349d962cfb
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
@@ -34,29 +34,27 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      -- Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 ALTER DATABASE { database_name }  
 {  
-    MODIFY NAME =new_database_name  
+    MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] )   
   | SET { <option_spec> [ ,... n ] }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
-      [WITH (\<add-secondary-option>::= [, ... n] ) ]  
+      [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-  
+[;] 
+
 <edition_options> ::=   
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
-    | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+    | SERVICE_OBJECTIVE = 
+                 {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
@@ -65,21 +63,22 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' |
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+                 {  <service-objective> 
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
                  }   
    }  
-  
- [;]  
+
+<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+
 ```  
   
-```  
-SET OPTIONS AVAILABLE FOR SQL Database  
-Full descriptions of the set options are available in the topic   
-ALTER DATABASE SET Options. The supported syntax is listed here.  
-  
+```
+-- SET OPTIONS AVAILABLE FOR SQL Database  
+-- Full descriptions of the set options are available in the topic   
+-- ALTER DATABASE SET Options. The supported syntax is listed here.  
+
 <optionspec> ::=   
 {  
     <auto_option>   
@@ -107,7 +106,7 @@ ALTER DATABASE SET Options. The supported syntax is listed here.
 }  
   
 <compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   
 <cursor_option> ::=   
 {  
@@ -191,15 +190,27 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  指定应更改当前使用的数据库。  
   
  修改名称 **=**  *new_database_name*  
- 重命名数据库名称指定为*new_database_name*。  
-  
+ 重命名数据库名称指定为*new_database_name*。 下面的示例更改数据库的名称`db1`到`db2`:   
+
+```  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+
  修改 (版本 **=**  [基本 |标准 |高级 |premiumrs'])    
- 更改数据库的服务层。  如果数据库的 MAXSIZE 属性设置为的值超出了该版本支持的有效范围，版本进行的更改将失败。  
+ 更改数据库的服务层。 下面的示例更改版本到`premium`:
   
+```  
+ALTER DATABASE current 
+    MODIFY (EDITION = 'premium');
+``` 
+
+如果数据库的 MAXSIZE 属性设置为的值超出了该版本支持的有效范围，版本进行的更改将失败。  
+
  修改 (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024...4096] GB)  
  指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。 下表列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务层支持的 MAXSIZE 值和默认值 (D)。  
   
-|**最大大小**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 和 PRS1 PRS6**| **P11 P15** 
+|**最大大小**|**基本**|**S0 S2**|**S3 S12**|**P1 P6 和 PRS1 PRS6**|**P11 P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -217,10 +228,10 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
 |300 GB|N/A|√|√|√|√|  
-|400 GB|N/A|√|√|√|√|
-|500 GB|N/A|√|√|√ (D)|√|
-|750 GB|N/A|√|√|√|√|
-|1024 GB|N/A|√|√|√|√ (D)|
+|400 GB|N/A|√|√|√|√|  
+|500 GB|N/A|√|√|√ (D)|√|  
+|750 GB|N/A|√|√|√|√|  
+|1024 GB|N/A|√|√|√|√ (D)|  
 |从 1024 GB 达 4096 GB 的增量的 256 GB *|N/A|N/A|N/A|N/A|√|√|  
   
  \*P11 和 P15 允许 MAXSIZE 达 4 TB 1024 gb 正在默认大小。  P11 和 P15 可以使用 4 TB 的包含存储，并且不额外收费。 在高级层中，最大大小大于 1 TB 是当前在以下区域中提供： 美国 East2、 美国西部、 US Gov Virginia、 西欧、 德国中央、 南部亚洲东部、 日本东部、 澳大利亚东部、 加拿大中央和加拿大东部。 当前限制，请参阅[单一数据库](https://docs.microsoft.com/azure/sql-database-single-database-resources)。  
@@ -233,11 +244,19 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 -   如果指定了 EDITION 但未指定 MAXSIZE，使用版本的默认值。 例如，如果 EDITION 设置为 Standard 并且未指定 MAXSIZE，则 MAXSIZE 将自动设置为 500 MB。  
   
 -   如果 MAXSIZE 和 EDITION 均未指定，则版本设置为标准 (S0)，并最大大小设置为 250 GB。  
+ 
+
+ 修改 (SERVICE_OBJECTIVE =\<服务目标 >)  
+ 指定性能级别。 下面的示例更改服务的高级数据库到目标`P6`:
+ 
+```  
+ALTER DATABASE current 
+    MODIFY (SERVICE_OBJECTIVE = 'P6');
+```  
+ 服务目标的可用值有： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`， `P15`， `PRS1`， `PRS2`， `PRS4`，和`PRS6`。 服务目标说明和有关大小、 版本，以及服务目标组合的详细信息，请参阅[Azure SQL 数据库服务层和性能级别](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支持指定的 SERVICE_OBJECTIVE，你将收到错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。  
   
- 修改 SERVICE_OBJECTIVE {S0 |S1 |S2 |S3"|S4 |S6 |S7 |S9 |S12 |P1 |P2 |P4 |P6 |P11 |P15 |PRS1 |PRS2 |PRS4 |PRS6 |  
- 指定性能级别。 服务目标说明和有关大小、 版本，以及服务目标组合的详细信息，请参阅[Azure SQL 数据库服务层和性能级别](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支持指定的 SERVICE_OBJECTIVE，你将收到错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。  
-  
-ELASTIC_POOL (名称 = \<elastic_pool_name >) 若要将现有数据库添加到弹性池，设置数据库的 SERVICE_OBJECTIVE 为 ELASTIC_POOL 并提供弹性池的名称。 你可以使用此选项以将数据库更改到同一服务器内的不同弹性池。 有关详细信息，请参阅[创建和管理 SQL 数据库弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要从弹性池删除数据库，请使用 ALTER DATABASE 设置 SERVICE_OBJECTIVE 到单个数据库的性能级别。  
+ 修改 (SERVICE_OBJECTIVE = 弹性\_池 (名称 = \<elastic_pool_name >)  
+ 若要将现有数据库添加到弹性池，设置数据库的 SERVICE_OBJECTIVE 为 ELASTIC_POOL 并提供弹性池的名称。 你可以使用此选项以将数据库更改到同一服务器内的不同弹性池。 有关详细信息，请参阅[创建和管理 SQL 数据库弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要从弹性池删除数据库，请使用 ALTER DATABASE 设置 SERVICE_OBJECTIVE 到单个数据库的性能级别。  
 
  添加辅助 ON SERVER \<partner_server_name >  
  具有相同名称在伙伴服务器上，使主，到异地复制的本地数据库创建异地复制辅助数据库并开始以异步方式将数据从主复制到新的辅助数据库。 如果辅助副本上已存在具有相同名称的数据库，该命令将失败。 在托管本地数据库成为主服务器上的主数据库上执行该命令。  
@@ -322,21 +341,17 @@ ELASTIC_POOL (名称 = \<elastic_pool_name >) 若要将现有数据库添加到�
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. 更改数据库的名称  
- 以下示例将 `db1` 数据库的名称更改为 `db2`。  
-  
-```  
-ALTER DATABASE db1  
-Modify Name = db2 ;  
-```    
-
-### <a name="b-changing-the-edition-size-and-service-objective-for-an-existing-database"></a>B. 更改现有数据库的版本、 大小和服务目标
+### <a name="a-check-the-edition-options-and-change-them"></a>A. 检查版本选项并将其更改：
 
 ```
+SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
+        ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
+        MaxSizeInBytes =  DATABASEPROPERTYEX('db1', 'MaxSizeInBytes');
+
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="c-moving-a-database-to-a-different-elastic-pool"></a>C. 将数据库移到不同的弹性池  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. 将数据库移到不同的弹性池  
  将现有数据库移到名为 pool1 池：  
   
 ```  
@@ -344,8 +359,8 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="d-add-a-geo-replication-secondary"></a>D. 添加异地复制辅助  
- 上的本地服务器上 db1 服务器 secondaryserver 创建不可读的辅助数据库 db1。  
+### <a name="c-add-a-geo-replication-secondary"></a>C. 添加异地复制辅助  
+ 在服务器上创建非可读辅助数据库 db1`secondaryserver`的本地服务器上 db1。  
   
 ```  
 ALTER DATABASE db1   
@@ -353,16 +368,16 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = NO )  
 ```  
   
-### <a name="e-remove-a-geo-replication-secondary"></a>E. 删除异地复制辅助数据库  
- 删除服务器 secondaryserver 的辅助数据库 db1。  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. 删除异地复制辅助数据库  
+ 删除服务器上的辅助数据库 db1 `secondaryserver`。  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="f-failover-to-a-geo-replication-secondary"></a>F. 故障转移到异地复制辅助数据库  
- 提升服务器 secondaryserver 成为新的主数据库时在服务器 secondaryserver 上执行的辅助数据库 db1。  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 故障转移到异地复制辅助数据库  
+ 将升级服务器上的辅助数据库 db1`secondaryserver`成为新的主数据库服务器上执行时`secondaryserver`。  
   
 ```  
 ALTER DATABASE db1 FAILOVER  

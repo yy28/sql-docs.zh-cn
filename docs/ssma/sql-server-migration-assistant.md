@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant |Microsoft 文档"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -31,13 +31,13 @@ Microsoft SQL Server 迁移助手 (SSMA) 是旨在自动数据库迁移到 SQL S
   
 -   [Access 的 SQL Server 迁移助手](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+-   [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
 -   [有关 MySQL 的 SQL Server Migration Assistant](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
 -   [适用于 Oracle 的 SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SAP ASE 的 SQL Server 迁移助手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [SAP ASE 的 SQL Server 迁移助手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>支持的源和目标版本
 有关支持的源，请查看 SSMA 下载下载中心上的信息。
@@ -77,7 +77,7 @@ SSMA 支持以下目标版本。
   
 -   顶级支持-如果你有一个顶级协定，则可以获取顶级支持上[Premier 在线门户](https://premier.microsoft.com/)。  
   
--   针对合作伙伴辅助迁移的咨询服务 – 请转到[合作伙伴门户](https://www.platformmodernization.org/Pages/default.aspx)。  
+-   咨询服务 – 合作伙伴辅助迁移，转到[合作伙伴门户](https://www.platformmodernization.org/Pages/default.aspx)。  
   
 ## <a name="legal-notice-ssma"></a>法律通告 (SSMA)  
 本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
@@ -88,7 +88,7 @@ SSMA 支持以下目标版本。
   
 Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2015 Microsoft Corporation。 保留所有权利。  
+© 2017 Microsoft Corporation。 保留所有权利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   
@@ -101,7 +101,7 @@ SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产�
   
 在某些情况下，特定功能不是客户应直接使用的功能，因此，未将其记录其中。 除非某种功能还在 Microsoft 发布的 SQL Server 文档中进行讨论，否则来自第三方书籍或网站的内容不受 Microsoft 客户支持的支持，并不应在生产数据库或应用程序中使用。  
   
-客户不得使用未记录的 API，其中包括但不限于：存储过程、扩展存储过程、函数、视图、表、列、属性或元数据。 Microsoft 客户支持将不支持利用或使用未记录的入口点的数据库或应用程序。  
+客户不得使用未记录的 API，其中包括但不限于：存储过程、扩展存储过程、函数、视图、表、列、属性或元数据。 Microsoft 客户支持不支持数据库或应用程序利用或使用未说明的入口点。  
   
 对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。  
   

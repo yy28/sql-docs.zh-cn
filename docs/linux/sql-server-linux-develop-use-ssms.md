@@ -4,29 +4,29 @@ description: "本教程演示如何在 Windows 上使用 SQL Server Management S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 SQL Server Management Studio (SSMS) 管理 Linux 上的 SQL Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本主题演示如何使用[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)连接到 Linux 上的 SQL Server 自 2017 年 1 RC2。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。 
+本主题演示如何使用[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)连接到 Linux 上的 SQL Server 2017。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
 
 成功连接后，请运行简单的 Transact - SQL (T-SQL) 查询，验证与数据库的通信。
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>安装最新版本的 SQL Server Management Studio
 
-使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
+使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
 
 ## <a name="connect-to-sql-server-on-linux"></a>连接到 Linux 上的 SQL Server
 
@@ -59,9 +59,9 @@ ms.lasthandoff: 09/21/2017
      
 ## <a name="run-sample-queries"></a>运行示例查询
 
-连接到服务器后，可以连接到数据库并运行示例查询。 如果你不熟悉如何编写查询，请参阅[编写 TRANSACT-SQL 语句](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)。
+连接到服务器后，可以连接到数据库并运行示例查询。 如果你不熟悉如何编写查询，请参阅[编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
-1. 标识要使用的数据库，再次运行查询。 这可能是您在创建新数据库[TRANSACT-SQL 教程](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)。 也可能是**AdventureWorks**示例数据库，您[下载并还原](sql-server-linux-migrate-restore-database.md)。
+1. 标识要使用的数据库，再次运行查询。 这可能是您在创建新数据库[TRANSACT-SQL 教程](../t-sql/tutorial-writing-transact-sql-statements.md)。 也可能是**AdventureWorks**示例数据库，您[下载并还原](sql-server-linux-migrate-restore-database.md)。
 2. 在**对象资源管理器**，导航到服务器上的目标数据库。
 2. 右键单击数据库，然后选择**新查询**:
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/21/2017
 
 除查询外，还可使用 T-SQL 语句创建和管理数据库。
 
-如果你不熟悉 T-SQL 的请参阅[教程： 编写 TRANSACT-SQL 语句](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)和[TRANSACT-SQL 参考 （数据库引擎）](https://msdn.microsoft.com/library/bb510741.aspx)。
+如果你不熟悉 T-SQL 的请参阅[教程： 编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)和[TRANSACT-SQL 参考 （数据库引擎）](https://msdn.microsoft.com/library/bb510741.aspx)。
 
 有关如何使用 SSMS 的详细信息，请参阅[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)。
 

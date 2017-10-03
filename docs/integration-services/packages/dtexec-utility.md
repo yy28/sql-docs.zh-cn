@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      有关 **/ConsoleLog** 选项的若干示例，请参阅 **备注** 部分。  
   
--   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+--   **/D [ts]** *package_path*: （可选）。 从 SSIS 包存储区加载包。 使用旧的包部署模型部署存储在 SSIS 包存储区中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
   
-     *package_path* 参数指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的相对路径，从 SSIS 包存储的根目录开始，包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的名称。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/DTS** 选项不能与 **/File** 或 **/SQL** 选项一起使用。 如果指定多个选项， **dtexec** 将失败。  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *password*：（可选）。 设置加载使用密码加密的包时所用的解密密码。  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      将 **/Env[Reference]** 选项与 **/ISServer** 和 **/Server** 选项一起使用。  
   
      此参数由 SQL Server 代理使用。  
-  
--   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     *filespec* 参数指定包的路径和文件名。 可以将路径指定为通用命名约定 (UNC) 路径或本地路径。 如果 *filespec* 参数中指定的路径或文件名包含空格，则必须在 *filespec* 参数两侧加上引号。  
+  --   **/F [ile]** *filespec*: （可选）。 加载保存在文件系统中的包。 使用旧的包部署模型部署保存在文件系统中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)。  
+
+  *filespec* 参数指定包的路径和文件名。 可以将路径指定为通用命名约定 (UNC) 路径或本地路径。 如果 *filespec* 参数中指定的路径或文件名包含空格，则必须在 *filespec* 参数两侧加上引号。  
   
      **/File** 选项不能与 **/DTS** 或 **/SQL** 选项一起使用。 如果指定多个选项， **dtexec** 将失败。  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      指定 **/ISServer** 选项时，必须指定 **/Ser[ver]** 选项。  
   
--   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+--   **/SQ [L]** *package_path*： 加载包存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**msdb**数据库。 使用包部署模型部署存储在 **msdb** 数据库中的包。 若要使用项目部署模型运行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，请使用 **/ISServer** 选项。 有关包和项目部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
   
-     *package_path* 参数指定要检索的包的名称。 如果文件夹包含在路径中，则文件夹将以反斜杠（“\\”）结束。 *package_path* 值可以用引号引起来。 如果 *package_path* 参数中指定的路径或文件名包含空格，则必须在 *package_path* 参数两侧加上引号。  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     你可以将 **/User**、 **/Password**和 **/Server** 选项与 **/SQL** 选项一起使用。  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     如果省略 **/User** 选项，则使用 Windows 身份验证来访问包。 如果使用 **/User** 选项，指定的 **/User** 登录名将与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证相关联。  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     **/Password** 选项仅与 **/User** 选项一起使用。 如果使用 **/Password** 选项，则使用提供的用户名和密码信息访问包。 如果省略 **/Password** 选项，则使用空密码。  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **重要说明!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     如果省略 **/Server** 选项，则假定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认本地实例。  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     **/SQL** 选项不能与 **/DTS** 或 **/File** 选项一起使用。 如果指定多个选项， **dtexec** 将失败。  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**：（可选）。 显示一个递增计数器，其中包含下一个组件将接收的行数。  
   

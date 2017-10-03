@@ -1,19 +1,19 @@
 ---
-title: "在 Linux 上的 SQL Server 自 2017 年 1 RC1 的新增功能 |Microsoft 文档"
+title: "在 Linux 上的 SQL Server 自 2017 年 1 的新增功能 |Microsoft 文档"
 description: "本主题重点介绍当前版本的 SQL Server 自 2017 年在 Linux 上的新增功能。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 本主题介绍在 Linux 上运行的 SQL Server 2017 的新增功能。
+
+## <a name="ga"></a>GA
+
+常规 Availaiblity (GA) 版本包含以下改进和修补程序：
+
+- 现在可以在 NFS 上承载数据库文件。 这会修复问题 NFS 共享磁盘方案，装载远程存储对于容器平台，并为用于 Windows 的 Docker 装载文件夹。
+- 其他其他大量 bug 修复和改进。
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ CTP 1.1 版本包含以下改进和修补程序：
 [从 Service Pack 1 的改进](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)此 CTP1.1 版本中：
 - 克隆为 CLR，Filestream/Filetable，内存中和查询存储对象的数据库。
 - **创建**或**ALTER**可编程性对象的运算符。
-- 新**使用提示**查询选项的查询处理器中提供提示。 此处详细了解：[查询提示](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)。
+- 新**使用提示**查询选项的查询处理器中提供提示。 此处详细了解：[查询提示](../t-sql/queries/hints-transact-sql-query.md)。
 - SQL 服务帐户现在能够以编程方式标识“启用锁定内存页”和“即时文件初始化”权限。
 - 对 TempDB 文件计数、文件大小和文件增长设置的支持。
 - 扩展了 showplan XML 中的诊断。

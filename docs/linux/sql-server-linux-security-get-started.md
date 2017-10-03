@@ -4,17 +4,17 @@ description: "本主题介绍典型的安全操作。"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9aaa786ec53296804f6300aad6add8c10b7fd699
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 254df7047188570cbf766efb29b486d77d095a98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ## <a name="create-a-login-and-a-database-user"></a>创建登录名和数据库用户 
 
-通过在 master 数据库中使用创建登录名授予其他人访问 SQL Server [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql)语句。 例如：
+通过在 master 数据库中使用创建登录名授予其他人访问 SQL Server [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)语句。 例如：
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -36,7 +36,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  务必使用强密码代替以上星号。
 
-登录名可连接到 SQL Server，且能（通过有限权限）访问 master 数据库。 若要连接到用户数据库，登录名需要数据库级别的相应标识，称为数据库用户。 用户特定于每个数据库，且必须在每个要向其授予访问权限的数据库中单独创建。 下面的示例到 AdventureWorks2014 数据库中，可使您移动，然后使用[CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql)语句以创建名为 Larry 都与名为 Larry 的登录名相关联的用户。 尽管该登录名和用户相关（相互映射），但它们是不同的对象。 登录名是服务器级主体。 用户是数据库级主体。
+登录名可连接到 SQL Server，且能（通过有限权限）访问 master 数据库。 若要连接到用户数据库，登录名需要数据库级别的相应标识，称为数据库用户。 用户特定于每个数据库，且必须在每个要向其授予访问权限的数据库中单独创建。 下面的示例到 AdventureWorks2014 数据库中，可使您移动，然后使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)语句以创建名为 Larry 都与名为 Larry 的登录名相关联的用户。 尽管该登录名和用户相关（相互映射），但它们是不同的对象。 登录名是服务器级主体。 用户是数据库级主体。
 
 ```
 USE AdventureWorks2014;
@@ -67,7 +67,7 @@ GO
 
 第一个连接到用户数据库的用户将是管理员和数据库所有者帐户。 但这些用户具有数据库的所有权限。 其权限要比大多数用户应该拥有的更多。 
 
-你刚开始时，你可以通过使用内置分配权限的一些常规类别*固定数据库角色的成员*。 例如，`db_datareader`固定的数据库角色可以读取所有表在数据库中，但不执行更改。 通过使用授予固定的数据库角色的成员身份[ALTER ROLE](/sql-docs/docs/t-sql/statements/alter-role-transact-sql)语句。 下面的示例将用户添加`Jerry`到`db_datareader`固定的数据库角色。   
+你刚开始时，你可以通过使用内置分配权限的一些常规类别*固定数据库角色的成员*。 例如，`db_datareader`固定的数据库角色可以读取所有表在数据库中，但不执行更改。 通过使用授予固定的数据库角色的成员身份[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)语句。 下面的示例将用户添加`Jerry`到`db_datareader`固定的数据库角色。   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,9 +76,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-固定的数据库角色的列表，请参阅[数据库级角色](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles)。
+固定的数据库角色的列表，请参阅[数据库级角色](../relational-databases/security/authentication-access/database-level-roles.md)。
 
-更高版本，当你准备好配置更精确地访问数据 （强烈建议），创建您自己使用的用户定义的数据库角色[创建角色](/sql-docs/docs/t-sql/statements/create-role-transact-sql)语句。 然后将特定精细权限分配给自定义角色。
+更高版本，当你准备好配置更精确地访问数据 （强烈建议），创建您自己使用的用户定义的数据库角色[创建角色](../t-sql/statements/create-role-transact-sql.md)语句。 然后将特定精细权限分配给自定义角色。
 
 例如，以下语句创建名为的数据库角色`Sales`，授予`Sales`组能够查看、 更新和删除行`Orders`表，并将用户`Jerry`到`Sales`角色。   
    
@@ -90,12 +90,12 @@ GRANT DELETE ON Object::Sales TO Orders;
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-有关权限系统的详细信息，请参阅[Getting Started with Database Engine Permissions](/sql-docs/docs/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)。
+有关权限系统的详细信息，请参阅[Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
 
 ## <a name="configure-row-level-security"></a>配置行级安全性  
 
-[行级别安全性](/sql-docs/docs/relational-databases/security/row-level-security)使您能够将访问限制为基于执行查询的用户数据库中的行。 在某些情况下（如确保客户只能访问自己的数据，或员工只能访问与其部门相关的数据）此功能很有用。   
+[行级别安全性](../relational-databases/security/row-level-security.md)使您能够将访问限制为基于执行查询的用户数据库中的行。 在某些情况下（如确保客户只能访问自己的数据，或员工只能访问与其部门相关的数据）此功能很有用。   
 
 以下演练设置两个用户不同步骤行级访问`Sales.SalesOrderHeader`表。 
 
@@ -165,7 +165,7 @@ WITH (STATE = OFF);
 
 ## <a name="enable-dynamic-data-masking"></a>启用动态数据掩码
 
-[动态数据屏蔽](/sql-docs/docs/relational-databases/security/dynamic-data-masking)使您能够限制敏感数据的公开应用程序的用户的完全或部分屏蔽某些列。 
+[动态数据屏蔽](../relational-databases/security/dynamic-data-masking.md)使您能够限制敏感数据的公开应用程序的用户的完全或部分屏蔽某些列。 
 
 使用`ALTER TABLE`语句来添加到了屏蔽函数`EmailAddress`中的列`Person.EmailAddress`表： 
  
@@ -248,9 +248,9 @@ SET ENCRYPTION ON;
 加密和解密操作由 SQL Server 安排在后台线程中执行。 您可以使用本主题后面部分显示的列表中的目录视图和动态管理视图查看这些操作的状态。   
 
 >  [!WARNING]
->  启用了 TDE 的数据库的备份文件也使用数据库加密密钥进行加密。 因此，当您还原这些备份时，用于保护数据库加密密钥的证书必须可用。 也就是说，除了备份数据库之外，您还要确保自己保留了服务器证书的备份以防数据丢失。 如果证书不再可用，将会导致数据丢失。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](/sql-docs/docs/relational-databases/security/sql-server-certificates-and-asymmetric-keys)。  
+>  启用了 TDE 的数据库的备份文件也使用数据库加密密钥进行加密。 因此，当您还原这些备份时，用于保护数据库加密密钥的证书必须可用。 也就是说，除了备份数据库之外，您还要确保自己保留了服务器证书的备份以防数据丢失。 如果证书不再可用，将会导致数据丢失。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
 
-有关 TDE 的详细信息，请参阅[透明数据加密 (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde)。   
+有关 TDE 的详细信息，请参阅[透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)。   
 
 
 ## <a name="configure-backup-encryption"></a>配置备份加密
@@ -280,10 +280,10 @@ WITH
 GO  
 ```
 
-有关详细信息，请参阅[备份加密](/sql-docs/docs/relational-databases/backup-restore/backup-encryption)。
+有关详细信息，请参阅[备份加密](../relational-databases/backup-restore/backup-encryption.md)。
 
 
 ## <a name="next-steps"></a>后续步骤
 
-SQL server 的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)。
+SQL server 的安全功能的详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
 

@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 105284d935888db46be8081bfca0c181eb920636
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2a3ad57f9cd898d4c059df725b380be28622035e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
@@ -43,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
@@ -59,7 +58,7 @@ OPENQUERY ( linked_server ,'query' )
   
  OPENQUERY 不能用于对链接服务器执行扩展存储过程。 但是，通过使用四部分名称，可以在链接服务器上执行扩展存储过程。 例如：  
   
-```  
+```t-sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +72,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. 执行 UPDATE 传递查询  
  以下示例针对示例 A 中创建的链接服务器使用 `UPDATE` 传递查询。  
   
-```  
+```t-sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +80,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. 执行 INSERT 传递查询  
  以下示例针对示例 A 中创建的链接服务器使用 `INSERT` 传递查询。  
   
-```  
+```t-sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,10 +88,17 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. 执行 DELETE 传递查询  
  以下示例使用 `DELETE` 传递查询删除示例 C 中插入的行。  
   
-```  
+```t-sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
+### <a name="d-executing-a-select-pass-through-query"></a>D. 执行 SELECT 传递查询  
+ 下面的示例使用传递`SELECT`查询，以便选择示例 C.中插入的行  
+  
+```t-sql  
+SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
+```  
+    
 ## <a name="see-also"></a>另请参阅  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
@@ -107,3 +113,4 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
  [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+

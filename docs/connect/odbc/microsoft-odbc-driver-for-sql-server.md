@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC 是适用于 SQL Server 编写的 C 和 c + + 应用程序的主本机数据访问 API。 没有大多数数据源的 ODBC 驱动程序。 其他语言，可以使用 ODBC 包括 COBOL、 Perl、 PHP 和 Python。 在数据集成方案中广泛使用 ODBC。
 
-ODBC 驱动程序附带了工具如[ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility)和[ **bcp**](/sql-docs/docs/tools/bcp-utility)。 **Sqlcmd**实用工具，可以运行 TRANSACT-SQL 语句、 系统过程和 SQL 脚本。 **Bcp**实用程序大容量复制的 Microsoft SQL Server 实例和数据文件之间的数据在你选择的格式。 你可以使用**bcp**将大量新行导入 SQL Server 表或表数据导出到数据文件。  
+ODBC 驱动程序附带了工具如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)和[ **bcp**](../../tools/bcp-utility.md)。 **Sqlcmd**实用工具，可以运行 TRANSACT-SQL 语句、 系统过程和 SQL 脚本。 **Bcp**实用程序大容量复制的 Microsoft SQL Server 实例和数据文件之间的数据在你选择的格式。 你可以使用**bcp**将大量新行导入 SQL Server 表或表数据导出到数据文件。  
 
 ## <a name="code-example-in-c"></a>C + + 中的代码示例
 

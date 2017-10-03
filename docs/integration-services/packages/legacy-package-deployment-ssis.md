@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="package-configurations"></a>包配置
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供可用于在运行时更新属性值的包配置。  
   
-> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使你能够部署 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。   
   
  配置是添加到已完成包中的属性/值对。 通常，在包开发期间您在包对象上创建包设置属性，然后将配置添加到包中。 当包运行时，它从配置中获取新的属性值。 例如，通过使用配置，您可以更改连接管理器的连接字符串，或者更新变量的值。  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **说明：**
 >还可以通过单击“配置”属性旁的省略号按钮，访问“包配置组织程序”。 “配置”选项出现在包的属性窗口中。  
   
->配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使你能够部署 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+>配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。    
   
 >在 **“包配置组织程序”** 对话框中，可以启用包以使用配置、添加和删除配置以及设置加载配置的首选顺序。 
  
@@ -256,7 +256,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>“包配置组织程序”
   可以使用 **“包配置组织程序”** 对话框启用包配置，查看当前包的配置列表以及指定加载这些配置的首选顺序。  
   
-> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使你能够部署 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。    
   
  如果多个配置更新同一属性，则在配置列表中排列靠后的配置的值将代替在列表中排列靠前的配置的值。 最后加载到属性中的值是在包运行时将要使用的值。 而且，如果包使用直接配置（例如 XML 配置文件）和间接配置（例如环境变量）的组合，那么指向直接配置的位置的间接配置必须在列表中处于靠前位置。  
   
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>包配置向导用户界面参考
   可以使用 **“包配置向导”** 创建在运行时更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包及其对象的属性的配置。 当您在 **“包配置组织程序”** 对话框中添加新配置或者修改现有配置时，将运行该向导。 若要打开 **“包配置组织程序”** 对话框，请在 **上的** SSIS **菜单中选择** “包配置” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅 [创建包配置](../../integration-services/packages/create-package-configurations.md)。  
   
-> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使你能够部署 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意：** 配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
   
  以下部分介绍了该向导中的各页。  
   

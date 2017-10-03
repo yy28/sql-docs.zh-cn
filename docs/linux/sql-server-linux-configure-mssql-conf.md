@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**mssql conf**是将与 SQL Server 自 2017 年 1 RC2 为 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
+**mssql conf**是将与 SQL Server 2017 为 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 安装的配置脚本。 可以使用此实用工具设置以下参数：
 
 |||
 |---|---|

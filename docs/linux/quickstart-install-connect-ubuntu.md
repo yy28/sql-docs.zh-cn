@@ -4,23 +4,23 @@ description: "此快速入门教程演示如何在 Ubuntu 上安装 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f530c1fb9f1d21054631598a2d2ff06d6e2c5f46
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安装 SQL Server，并在 Ubuntu 上创建数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-在此快速入门教程中，你首先将安装 SQL Server 自 2017 年 1 RC2 Ubuntu 16.04。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在此快速入门教程中，你首先将安装 SQL Server 2017 Ubuntu 16.04。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
@@ -37,6 +37,9 @@ ms.lasthandoff: 09/07/2017
 
 若要配置 SQL Server 在 Ubuntu 上，在安装终端中运行以下命令**mssql server**包。
 
+> [!IMPORTANT]
+> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
+
 1. 导入公共存储库 GPG 密钥：
 
    ```bash
@@ -46,8 +49,11 @@ ms.lasthandoff: 09/07/2017
 1. 注册 Microsoft SQL Server Ubuntu 存储库：
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
+
+   > [!NOTE]
+   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[更改源存储库](sql-server-linux-setup.md#repositories)。
 
 1. 运行以下命令，安装 SQL Server：
 
@@ -63,14 +69,10 @@ ms.lasthandoff: 09/07/2017
    ```
 
    > [!TIP]
-   > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
+   > 如果你在本教程中尝试 SQL Server 自 2017 年，自由地授予许可的以下版本： 评估、 开发人员和快速。
 
-   > [!TIP]
-   > 在安装时 RC2，需要没有购买的许可证尝试的任何版本。 因为它是预发布版本，而不考虑你选择的版本将显示以下消息：
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > 此消息不会反映你选择的版本。 它与在预览期 for RC2。
+   > [!NOTE]
+   > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
 
 1. 配置完成后，请验证服务是否正在运行：
 

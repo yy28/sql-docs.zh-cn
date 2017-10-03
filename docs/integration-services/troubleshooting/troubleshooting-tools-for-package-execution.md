@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **使用事务帮助确保数据的完整性**。 有关详细信息，请参阅 [Integration Services 事务](../../integration-services/integration-services-transactions.md)。  
   
--   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用检查点从故障点重新启动包**。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件处理程序捕获和处理包错误  
  通过使用事件处理程序，您可以响应许多由包和包中的对象引发的事件。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>使用日志记录对包执行进行故障排除  
  通过启用日志记录，您可以跟踪正在运行的包中所发生的大部分问题。 日志提供程序捕获有关指定事件的信息供以后分析，并且以数据库表、平面文件、XML 文件或支持的其他输出格式保存该信息。  
   
--   **启用日志记录**。 您可以只选择所要捕获的事件以及只选择所要捕获的信息项，以修改日志记录输出。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)。  
+-   **启用日志记录**。 您可以只选择所要捕获的事件以及只选择所要捕获的信息项，以修改日志记录输出。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)。  
   
--   **选择包的“诊断”事件对访问接口问题进行故障排除。** 一些日志记录消息可以帮助您对包与外部数据源的交互情况进行故障排除。 有关详细信息，请参阅 [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)。  
+-   **选择包的“诊断”事件对访问接口问题进行故障排除。** 一些日志记录消息可以帮助您对包与外部数据源的交互情况进行故障排除。 有关详细信息，请参阅 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)。  
   
 -   **增强默认日志记录输出**。 通常，每次该包运行时日志记录都会向日志记录目标中追加行。 虽然日志记录输出的每一行都使用包的名称和唯一标识符来标识包，也通过唯一的 ExecutionID 来标识包的执行，但单一列表中的大量日志记录输出会使分析变得困难。  
   

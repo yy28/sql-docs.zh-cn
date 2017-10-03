@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
   
- SORT_IN_TEMPDB、 MAXDOP 和 DATA_COMPRESSION 是可在重新生成单个分区时指定的选项 (分区 = * n *)。 不能在单个分区重新生成操作中指定 XML 索引。  
+ SORT_IN_TEMPDB、 MAXDOP 和 DATA_COMPRESSION 是可在重新生成单个分区时指定的选项 (分区 =  *n* )。 不能在单个分区重新生成操作中指定 XML 索引。  
   
  DISABLE  
  将索引标记为已禁用，从而不能由 [!INCLUDE[ssDE](../../includes/ssde-md.md)]使用。 可禁用任何索引。 已禁用的索引的索引定义保留在没有基础索引数据的系统目录中。 禁用聚集索引将阻止用户访问基础表数据。 若要启用索引，请使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING。 有关详细信息，请参阅[禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)和[Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
@@ -356,7 +356,7 @@ PAD_INDEX = { ON | OFF }
   
  有关详细信息，请参阅[SORT_IN_TEMPDB 选项为索引](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
- IGNORE_DUP_KEY ** = ** {ON |关闭}  
+ IGNORE_DUP_KEY  **=**  {ON |关闭}  
  指定在插入操作尝试向唯一索引插入重复键值时的错误响应。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 默认为 OFF。  
   
  ON  
@@ -371,7 +371,7 @@ PAD_INDEX = { ON | OFF }
   
  在向后兼容的语法中，WITH IGNORE_DUP_KEY 等效于 WITH IGNORE_DUP_KEY = ON。  
   
- STATISTICS_NORECOMPUTE ** = ** {ON |关闭}  
+ STATISTICS_NORECOMPUTE  **=**  {ON |关闭}  
  指定是否重新计算分布统计信息。 默认为 OFF。  
   
  ON  
@@ -407,7 +407,7 @@ PAD_INDEX = { ON | OFF }
  
 **适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。  
   
- 联机** = ** {ON |**OFF** }\<因为应用于 rebuild_index_option >  
+ 联机 **=**  {ON |**OFF** }\<因为应用于 rebuild_index_option >  
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。  
   
  对于 XML 索引或空间索引，仅支持 ONLINE = OFF。如果 ONLINE 设置为 ON，则会引发错误。  
@@ -433,7 +433,7 @@ PAD_INDEX = { ON | OFF }
 
 -  V12 之前, 的 SQL 数据库和 SQL Server 2012 之前的 SQL Server 不允许`ONLINE`选项的聚集的索引生成或重新生成操作，当基本表包含**varchar （max)**或**varbinary （max)**列。
 
-可恢复** = ** {ON |**OFF**}
+可恢复 **=**  {ON |**OFF**}
 
 **适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）  
 
@@ -443,13 +443,13 @@ PAD_INDEX = { ON | OFF }
 
  关闭索引操作不是可恢复的。
 
-MAX_DURATION ** = ** *时间*[**分钟**] 用于**RESUMABLE = ON** (需要**ONLINE = ON**).
+MAX_DURATION  **=**  *时间*[**分钟**] 用于**RESUMABLE = ON** (需要**ONLINE = ON**).
  
 **适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）  
 
 指示时间 （以分钟为单位指定的整数值） 可恢复联机索引操作正在暂停之前执行。 
 
-ALLOW_ROW_LOCKS ** = ** { **ON** |关闭}  
+ALLOW_ROW_LOCKS  **=**  { **ON** |关闭}  
  
 **适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS ** = ** { **ON** |关闭}
  OFF  
  不使用行锁。  
   
-ALLOW_PAGE_LOCKS ** = ** { **ON** |关闭}  
+ALLOW_PAGE_LOCKS  **=**  { **ON** |关闭}  
   
 **适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。
   
@@ -476,11 +476,11 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |关闭}
 > [!NOTE]
 >  ALLOW_PAGE_LOCKS 设置为 OFF 时，无法重新组织索引。  
   
- MAXDOP ** = ** max_degree_of_parallelism  
+ MAXDOP  **=**  max_degree_of_parallelism  
  
 **适用于**: SQL Server （从 SQL Server 2008 开始） 和 Azure SQL 数据库。  
   
- 重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+ 重写**最大并行度**索引操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]
 >  虽然所有 XML 索引在语法上都支持 MAXDOP 选项，但对于空间索引或主 XML 索引，ALTER INDEX 当前只使用一个处理器。  
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS ** = ** { **ON** |关闭}
 > [!NOTE]
 >  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- COMPRESSION_DELAY ** = ** { **0** |*持续时间 [分钟]* }  
+ COMPRESSION_DELAY  **=**  { **0** |*持续时间 [分钟]* }  
  此功能可从 SQL Server 2016 开始  
   
  对于基于磁盘的表，延迟指定的最小必须保持为增量行组处于关闭状态的分钟数增量行组之前中 SQL Server 可以将其压缩到压缩行组。 由于基于磁盘的表不跟踪插入和更新时间在上单个行，SQL Server 应用延迟到处于关闭状态的增量行组。  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- 联机** = ** {ON |**OFF** }\<因为应用于 single_partition_rebuild_index_option >  
+ 联机 **=**  {ON |**OFF** }\<因为应用于 single_partition_rebuild_index_option >  
  指定是否了索引或索引分区的基础表可以重新生成联机或脱机。 如果**重新生成**在线执行 (**ON**) 此表中的数据是可用于在索引操作期间的查询和数据修改。  默认值是**OFF**。  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **适用于**: SQL Server （从 SQL Server 2014 开始） 和 Azure SQL 数据库。
   
- 联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)。 
+ 联机索引重新生成必须等待对此表执行的阻塞操作。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
   
  MAX_DURATION =*时间*[**分钟**]  
   
@@ -618,7 +618,7 @@ MAX_DURATION 用于**RESUMABLE = ON**
   
 **适用于**： 开头 SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能）
   
- 要等待的时间对此表的阻止操作暂停后恢复联机索引重新生成。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)。 
+ 要等待的时间对此表的阻止操作暂停后恢复联机索引重新生成。 **WAIT_AT_LOW_PRIORITY**指示联机索引重新生成操作将等待低优先级锁，从而允许同时联机索引生成操作正在等待继续其他操作。 省略**等待在低优先级**选项等同于`WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。 有关详细信息，请参阅[WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)。 
 
 
 PAUSE

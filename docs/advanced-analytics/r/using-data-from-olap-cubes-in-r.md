@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8fe9d54e1d635b5c8f1dd6e00e33bd92136343b4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bdd86896b43d79b5d7cd00383476700735accff4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
@@ -81,7 +81,7 @@ OLAP 多维数据集是一个包含针对度量值的预计算聚合的多维数
 
 ### <a name="samples"></a>示例
 
-如果想要了解有关多维数据集的详细信息，可以参考 Analysis Services 教程第 4 课 [创建 OLAP 多维数据集](/sql-docs/docs/analysis-services/multidimensional-modeling-adventure-works-tutorial)，创建用在这些示例中的多维数据集
+如果想要了解有关多维数据集的详细信息，可以参考 Analysis Services 教程第 4 课 [创建 OLAP 多维数据集](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)，创建用在这些示例中的多维数据集
 
 还可将现有多维数据集作为备份下载，然后将其还原为 Analysis Services 的实例。 例如，可下载 [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)的完全处理多维数据集（压缩格式），并将其还原为 SSAS 实例。 有关详细信息，请参阅 [备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)或 [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 

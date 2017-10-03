@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>与组一起显示组头和组尾（报表生成器和 SSRS）
   您可以帮助控制是否在显示与 Tablix 数据区域中某个组相关联的动态行的同时显示静态行，如组头或组尾。  
   
- 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅[显示行标题和多个页 （报表生成器和 SSRS） 上的列标题](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs)。  
+ 若要在多个页上重复所有列标题或行标题，可以设置 Tablix 数据区域的属性。 有关详细信息，请参阅[显示行标题和多个页 （报表生成器和 SSRS） 上的列标题](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
   
  若要控制与嵌套组相关联的动态行和列的呈现行为，或者与标签或小计相关联的静态行和列的呈现行为，必须设置 Tablix 成员的属性。 一个 Tablix 成员表示一个静态或动态的行或列。 每个静态成员重复一次。 例如，总计行就是一个静态行。 一个动态成员针对每个组实例重复一次。 例如，一个与具有组表达式 [Territory] 的组相关联的行针对每个唯一地区值重复一次。 有关 tablix 成员的详细信息，请参阅[Tablix 数据区域单元、 行和列 &#40;报表生成器 &#41;和 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  （可选）预览报表。 如果可能，报表呈现器使该成员与指定列组成员一起显示。  
   
 ## <a name="see-also"></a>另请参阅  
- [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Tablix 数据区域单元、 行和列 （报表生成器） 和 SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

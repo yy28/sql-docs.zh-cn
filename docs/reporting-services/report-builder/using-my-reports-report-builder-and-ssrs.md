@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fc31861f7eef73a2ddb88faa4aa59b1bf289d2ea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用“我的报表”（报表生成器和 SSRS）
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
   
  从概念上说，“我的报表”文件夹类似于 Windows 文件系统中的“我的文档”文件夹。 尽管每个用户都有一个名为“我的报表”的文件夹，但用户都只能访问各自的相应文件夹。 除了报表服务器管理员之外，其他用户都无法访问您的“我的报表”文件夹中的内容。  
   
- “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
+ “我的报表”功能是可选的，报表服务器管理员可以禁用此功能。 如果启用此功能，您就会在主文件夹中看到“我的报表”文件夹，可以使用报表管理器或 Web 浏览器访问该文件夹。 有关详细信息，请参阅[查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  在配置为 SharePoint 集成模式的报表服务器上，没有与“我的报表”文件夹等同的项。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   

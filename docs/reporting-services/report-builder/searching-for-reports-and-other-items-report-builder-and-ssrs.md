@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 91286fbfea763ffd8058524ff2e5274179305d8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: e3c41db09cbe1387545b72fd2942e4b30e71d1fd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜索报表和其他项（报表生成器和 SSRS）
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/21/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs)   
+ [查找和查看报表在报表管理器 &#40;报表生成器和 SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
  [使用我的报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [打开和关闭报表 &#40;报表管理器 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  

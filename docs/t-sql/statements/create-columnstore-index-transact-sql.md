@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/21/2017
 -   [对于非聚集列存储索引的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 请转到方案：  
--   [列存储索引进行实时运行分析](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
--   [针对数据仓库的列存储索引](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
+-   [列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [针对数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 了解更多信息：  
--   [列存储索引指南](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
--   [列存储索引功能摘要](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
+-   [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [列存储索引功能摘要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -538,7 +538,7 @@ ON MyFactTable;
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重新生成整个聚集列存储索引进行碎片整理  
    适用于： SQL Server 2014  
   
- 有两种方法可以重新生成完整的聚集列存储索引。 你可以使用创建聚集列存储索引，或[ALTER INDEX &#40;Transact SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md)和重新生成选项。 这两种方法可以得到相同的结果。  
+ 有两种方法可以重新生成完整的聚集列存储索引。 你可以使用创建聚集列存储索引，或[ALTER INDEX & #40;Transact SQL & #41;](../../t-sql/statements/alter-index-transact-sql.md)和重新生成选项。 这两种方法可以得到相同的结果。  
   
 > [!NOTE]  
 >  从 SQL Server 2016 开始，使用 ALTER INDEX REORGANIZE 而不是重新生成与在此示例中所述的方法。  

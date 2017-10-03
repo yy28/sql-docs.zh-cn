@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 属性（“IP 地址”选项卡）
   使用“TCP/IP 属性(‘IP 地址’选项卡)”对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”**。  
   
- 更改在重启 SQL Server 后生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅[启动和停止 SQL Server Browser 服务](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services)。  
+ 更改在重启 SQL Server 后生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅[启动和停止 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 ## <a name="static-vs-dynamic-ports"></a>静态端口与动态端口  
  SQL Server 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="see-also"></a>另请参阅  
  [选择网络协议](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [创建使用 TCP IP 有效的连接字符串](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
+ [创建使用 TCP IP 有效的连接字符串](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 服务](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

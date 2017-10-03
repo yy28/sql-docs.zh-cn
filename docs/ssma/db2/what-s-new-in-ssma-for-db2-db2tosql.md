@@ -2,7 +2,7 @@
 title: "什么 &#39; s SSMA for DB2 中的新增功能 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 03a3de915ae5426f15f04b95c0148610ec917047
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 8246a40f5fd59ae4d8a28f1e0315ea1a015e8e7d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>什么 &#39; s SSMA for DB2 中的新增功能 (DB2ToSQL)
 本主题列出每个版本中的 DB2 更改 SSMA。  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SSMA for DB2 的 v7.6 版本已得到增强，具有提高质量和转换的度量值的目标修补程序和 SQL Server 2017 （公共预览版） 支持。 对于 Windows 和 Linux 上的 SQL Server 2017 支持是在公共预览版中并不用于生产迁移。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
 ## <a name="ssma-v75"></a>SSMA v7.5 还是
 SSMA for DB2 的 v7.5 都发布已得到增强几项改进，确保残障人士更大的可访问性。

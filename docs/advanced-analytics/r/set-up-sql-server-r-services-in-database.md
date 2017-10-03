@@ -1,7 +1,7 @@
 ---
 title: "设置 SQL Server 计算机学习 Services （数据库） |Microsoft 文档"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>设置 SQL Server 计算机学习 Services （数据库）
@@ -97,15 +97,15 @@ SQL Server 安装程序将提供用于安装机器学习的以下选项：
 
 6. 上**已准备好安装**页上，验证以下各项都包括在内，然后选择**安装**。
 
-   **SQL Server 2016**
-   - 数据库引擎服务
-   - R Services (数据库中)
-
    **SQL Server 2017**
    - 数据库引擎服务
    - 机器学习服务（数据库内）
    - R 和/或 Python
-    
+
+   **SQL Server 2016**
+   - 数据库引擎服务
+   - R Services (数据库中)
+
 7. 安装完成后，重新启动计算机。
 
 ##  <a name="bkmk_enableFeature"></a>步骤 2： 启用外部脚本服务
@@ -189,12 +189,15 @@ SQL Server 安装程序将提供用于安装机器学习的以下选项：
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性” ，右键单击“登录名” ，然后选择“新建登录名” 。
 2. 在**登录名-新建**对话框中，选择**搜索**。
-3. 选择**对象类型**和**组**复选框，并清除所有其他复选框。 
-4. 在**输入要选择的对象名称**，类型**SQLRUserGroup**，然后选择**检查名称**。  
-    与此实例的快速启动板服务关联的本地组的名称应解析为类似于*instancename\SQLRUserGroup*。 
-5. 选择“确定”。
-6. 默认情况下，将登录名分配到 **公共** 角色，且有权连接到数据库引擎。
-7. 选择“确定”。
+3. 选择**对象类型**和**组**复选框，并清除所有其他复选框。
+4. 单击**高级**，验证，要搜索的位置为当前计算机，然后单击**立即查找**。
+5. 直到找到一个开头的服务器上的组帐户的列表中滚动`SQLRUserGroup`。
+    
+    + 与的快速启动板服务关联组的名称_默认实例_只始终是**SQLRUserGroup**。 选择此帐户仅对于默认实例。
+    + 如果你使用_命名实例_，实例名称追加到默认名称， `SQLRUserGroup`。 因此，如果你的实例名为"MLTEST"，此实例的默认用户组名称将**SQLRUserGroupMLTest**。
+5. 单击**确定**以关闭高级的搜索对话框中，并验证你已选择正确的帐户的实例。 每个实例可以使用其自己的快速启动板服务和为该服务创建的组。
+6. 单击**确定**一次以关闭**选择用户或组**对话框。
+7. 在**登录名-新建**对话框中，单击**确定**。 默认情况下，将登录名分配到 **公共** 角色，且有权连接到数据库引擎。
 
 ### <a name="bkmk_AllowLogon"></a>向用户授予的权限来运行外部脚本
 

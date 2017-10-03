@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 07d44a56b531bc2e933480559a2f6d3d2457578e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a3d348ee8bfe53c20d66b5dc39f96b4a4be635c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
   使用 **“包属性”** 对话框可以查看在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上存储的包的属性。  
   
- 有关详细信息，请参阅 [Integration Services (SSIS) 服务器](/sql-docs/docs/integration-services/integration-services-ssis-packages)。  
+ 有关详细信息，请参阅 [Integration Services (SSIS) 服务器](../integration-services-ssis-packages.md)。  
   
  **您希望做什么？**  
   

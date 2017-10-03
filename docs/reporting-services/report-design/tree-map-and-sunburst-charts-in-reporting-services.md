@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树形图和旭日图
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  树形图将图表区划分为多个矩形，分别表示数据层次结构的不同级别和相对大小。 该图表类似于树上的分枝，从树干开始，接着划分为越来越小的分枝。 每个矩形被分成更小的矩形，表示层次结构中的下一级。 顶级树形图矩形表示为最大的矩形，位于图表左上角，最小的矩形位于右下角。  在一个矩形内，下一个更高级也用从左上角到右下角的矩形表示。  
   
- 例如，在以下示例树形图中，西南区域最大，德国最小。 在西南部，自行车路都比山地自行车路大。  
+ 例如，在以下示例树形图的图中，西南区域最大，德国是最小。 在西南部，自行车路都比山地自行车路大。  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>插入树形图与配置示例 Adventureworks 数据  
- **注意** ：在向报表添加图表前，请创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
+   
+[!NOTE] 向报表添加图表之前，创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>插入旭日图与配置示例 Adventureworks 数据  
- **注意** ：在向报表添加图表前，请创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
+ [!NOTE] 向报表添加图表之前，创建数据源和数据集。  有关示例数据和示例查询，请参阅本主题中的 [示例 AdventureWorks 数据](#bkmk_sample_data) 部分。  
   
 1.  在设计图面上单击右键，单击“插入”，然后单击“图表”。  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  将默认图表标题改为“出于销售原因根据区域划分的销售”。  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|若要将类别组的值作为标签添加到旭日图中，请设置标签属性 **Visible** = true 和 **UseValueAsLabel**=False。<br /><br /> 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值。  若要查看更多标签，请将 LineTotal 标签字体属性更改为 8 磅，而不是默认的 10 磅。|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|若要将类别组的值作为标签添加到旭日图中，请设置标签属性 **Visible** = true 和 **UseValueAsLabel**=False。<br /><br /> 字体的大小、整体图表区的大小和特定矩形的大小会影响显示的标签值。  若要查看更多标签，请将 LineTotal 标签字体属性更改为 8 磅，而不是默认的 10 磅。|
   
 7.  如果希望使用不同的颜色范围，请更改图表的“调色板”  属性。  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
@@ -171,7 +174,7 @@ ms.lasthandoff: 08/09/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   单击“确定” 。  
+    -   单击 **“确定”**。  
   
      有关创建数据集的详细信息，请参阅[创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   

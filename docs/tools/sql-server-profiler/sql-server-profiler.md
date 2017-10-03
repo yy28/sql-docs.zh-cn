@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server 事件探查器
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>在哪里可以启动探查器？
  
- 可以通过多种方式从 SSMS 内部启动探查器。 [下面是本主题列出启动探查器的方式。](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ 可以通过多种方式从 SSMS 内部启动探查器。 [下面是本主题列出启动探查器的方式。](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>捕获和重播跟踪数据 
 下表显示我们在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中推荐使用的用于捕获和重播跟踪数据的功能。
@@ -57,8 +57,8 @@ ms.lasthandoff: 09/21/2017
 ||||  
 |-|-|-|  
 |**功能 \ 目标工作负荷**|**关系引擎**|**Analysis Services**|  
-|**跟踪捕获**|SQL Server Management Studio 中的[扩展事件](/sql-docs/docs/relational-databases/extended-events/extended-events) 图形用户界面|SQL Server 事件探查器|  
-|**重播跟踪**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server 事件探查器|  
+|**跟踪捕获**|SQL Server Management Studio 中的[扩展事件](../../relational-databases/extended-events/extended-events.md) 图形用户界面|SQL Server 事件探查器|  
+|**重播跟踪**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server 事件探查器|  
   
 ## <a name="sql-server-profiler"></a>SQL Server 事件探查器  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 跟踪的图形用户界面，用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的实例。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以对生产环境进行监视，了解哪些存储过程由于执行速度太慢影响了性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]用于活动如：  

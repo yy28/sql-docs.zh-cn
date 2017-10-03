@@ -4,24 +4,24 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 7fcd3350796d88d02011f0d45e666851d69cfd78
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年 1 RC2。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
+你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
 > [!TIP]
 > 用户还可使用这些相同的开发选项面向其他平台上的 SQL Server。 应用程序可面向本地或云中、在 Linux、Windows 或 macOS 上的 Docker 中运行的 SQL Server。 也可面向 Azure SQL 数据库和 Azure SQL 数据仓库。
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 - 尝试代码示例。
 
 > [!TIP]
-> 如果你想要为 Docker 上的 SQL Server 自 2017 年 1 RC2 开发，看一看**macOS**教程。
+> 如果你想要为 Docker 上的 SQL Server 2017 开发，看一看**macOS**教程。
 
 ## <a name="create-new-applications"></a>创建新的应用程序
 
@@ -43,11 +43,11 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="use-existing-applications"></a>使用现有应用程序
 
-如果你有现有的数据库应用程序，你可以只需改为目标在 Linux 上的 SQL Server 自 2017 年 1 RC2 的其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)在 Linux 上的 SQL Server 自 2017 年 1 RC2。
+如果你有现有的数据库应用程序，你可以只需改为在 Linux 上的目标 SQL Server 自 2017 年的其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)在 Linux 上的 SQL Server 2017。
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>通过 Linux 上的 SQL Server 使用 Windows 上的现有 SQL 工具
 
-在如 SSMS、 SSDT 和 PowerShell，Windows 当前运行的工具还使用在 Linux 上的 SQL Server 自 2017 年 1 RC2。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
+在 Linux 上的 SQL Server 2017 还处理当前在如 SSMS、 SSDT 和 PowerShell，Windows 运行的工具。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
 
 有关详细信息，请参阅下列主题：
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/02/2017
 
 你可以使用新[mssql 扩展](https://aka.ms/mssql-marketplace)为[Visual Studio Code](https://code.visualstudio.com) Linux、 macOS 和 Windows 上。 相关分布演练请参阅下列教程：
 
-- [使用 Visual Studio 代码](sql-server-linux-develop-use-vscode.md)
+- [使用 Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 还可使用对 Linux 而言属于本机的新命令行工具。 这些工具包括：
 

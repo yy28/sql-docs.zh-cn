@@ -1,7 +1,7 @@
 ---
 title: "安装没有 internet 访问权限的机器学习组件 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/20/2017
+ms.date: 09/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 1facfc7a52aa9e98aacc6c6d059acf8823e86170
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41ff26c5ff2c41f600be5f45fd66dec31672b803
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>安装没有 internet 访问权限的机器学习组件
@@ -102,21 +102,16 @@ Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?Li
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Microsoft Python 打开     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
 Microsoft Python 服务器    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
-**SQL Server 自 2017 年 1 CTP 3.0** |
-Microsoft R Open     |无更改;使用 CTP 2.0|
-Microsoft R Server     |无更改;使用 CTP 2.0|
-Microsoft Python 打开     |无更改;使用 CTP 2.0|
-Microsoft Python 服务器    |无更改;使用 CTP 2.0|
-**SQL Server 自 2017 年 1 CTP 4.0** |
-Microsoft R Open     |无更改;使用 CTP 2.0|
-Microsoft R Server     |无更改;使用 CTP 2.0|
-Microsoft Python 打开     |无更改;使用 CTP 2.0|
-Microsoft Python 服务器    |无更改;使用 CTP 2.0|
-**SQL Server 自 2017 年 RTM** |
-Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 打开     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+**SQL Server 自 2017 年 1 RC1** |
+Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
+Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
+Microsoft Python 打开     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
+Microsoft Python 服务器    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+**SQL Server 自 2017 年 1 RC 2** |
+Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
+Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
+Microsoft Python 打开     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
+Microsoft Python 服务器    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016 的的下载
 

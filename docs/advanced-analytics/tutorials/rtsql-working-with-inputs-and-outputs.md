@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用输入和输出 (SQL 快速入门中的 R)
 
-如果你想要在 SQL Server 中运行 R 代码，则必须在系统存储过程中，在包装 R 脚本[sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 此存储过程用于在 SQL Server 的上下文中启动 R 运行时，然后，R 运行时将数据传递给 R、安全管理 R 用户会话，并向客户端返回任何结果。
+如果你想要在 SQL Server 中运行 R 代码，则必须在系统存储过程中，在包装 R 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此存储过程用于在 SQL Server 的上下文中启动 R 运行时，然后，R 运行时将数据传递给 R、安全管理 R 用户会话，并向客户端返回任何结果。
 
 ## <a name="bkmk_SSMSBasics"></a>创建一些简单的测试数据
 

@@ -25,10 +25,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/21/2017
   
  在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅 [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "向后兼容性 |Reporting Services")。  
   
- 有关新功能的相关详细信息 [！包括[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)。  
+ 有关新功能的相关详细信息 [！包括[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
 ##  <a name="bkmk_versionsupported"></a> 能够升级的版本  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 早期的任一版本中创建的报表都可以升级。 包括下列版本：  

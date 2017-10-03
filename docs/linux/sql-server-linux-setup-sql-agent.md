@@ -4,16 +4,16 @@ description: "本主题介绍如何在 Linux 上安装 SQL Server 代理。"
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1f6f741a87a13e5b5bc8ba83741e86b065378bad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 以下步骤安装 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 [SQL Server 代理](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)运行计划的 SQL Server 作业。 对于此版本的 SQL Server 代理支持的功能的信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 > [!NOTE]
-> 之前先安装 SQL Server 代理[安装 SQL Server RC2 +](sql-server-linux-setup.md#platforms)。 这会将配置的密钥和安装时使用的存储库**mssql server 代理**包。
+> 之前先安装 SQL Server 代理[安装 SQL Server 2017](sql-server-linux-setup.md#platforms)。 这会将配置的密钥和安装时使用的存储库**mssql server 代理**包。
 
 为以下平台安装 SQL Server 代理：
 

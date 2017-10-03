@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>什么 &#39; s SSMA for Access (AccessToSQL) 中的新增功能
 本主题列出每个版本中的访问权限更改 SSMA。  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SSMA for Access 的 v7.6 版本已得到增强，具有提高质量和转换的度量值的目标修补程序和 SQL Server 2017 （公共预览版） 支持。 对于 Windows 和 Linux 上的 SQL Server 2017 支持是在公共预览版中并不用于生产迁移。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
 ## <a name="ssma-v75"></a>SSMA v7.5 还是
 SSMA for Access 的 v7.5 还是版本已得到增强几项改进，确保残障人士更大的可访问性。

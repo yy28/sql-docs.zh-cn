@@ -1,7 +1,7 @@
 ---
 title: "事务 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8660d0ac8d6205a94fdab24f41e41bac40a8671e
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: c09104746dff6c34d94192217b8f2635cb0adc67
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="transactions-transact-sql"></a>事务 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   事务是单个工作单元。 如果某一事务成功，则在该事务中进行的所有数据修改均会提交，成为数据库中的永久组成部分。 如果事务遇到错误且必须取消或回滚，则所有数据修改均被清除。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以下列事务模式运行。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在以下的事务模式进行操作：  
   
  自动提交事务  
  每条单独的语句都是一个事务。  
@@ -49,19 +49,23 @@ ms.lasthandoff: 09/01/2017
   
  批处理级事务  
  只能应用于多个活动结果集 (MARS)，在 MARS 会话中启动的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 显式或隐式事务变为批处理级事务。 当批处理完成时没有提交或回滚的批处理级事务自动由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行回滚。  
-  
+
+> [!NOTE] 
+> 与数据仓库产品相关的特殊注意事项，请参阅[事务 （SQL 数据仓库）](transactions-sql-data-warehouse.md)。   
+
 ## <a name="in-this-section"></a>本节内容  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下事务语句。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了下列事务语句：  
   
 |||  
 |-|-|  
-|[开始分布式事务](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
-|[开始事务](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[回滚工作](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[提交事务](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[保存事务](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[提交工作](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+|[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
+|[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
+|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
+|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
  [设置 IMPLICIT_TRANSACTIONS &#40;Transact SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT (Transact-SQL)](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

@@ -2,7 +2,7 @@
 title: "什么 &#39; 机器学习服务中的新增功能 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>什么是 SQL Server 中的机器学习服务中的新增功能
@@ -30,16 +30,13 @@ SQL Server 2017 中添加了对常用 Python 语言的支持，机器学习变�
 
 捕获的最新的公告 ！ [在 SQL Server 2017 Python： 增强数据库中机器学习](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> 现在你可以在 Azure SQL 数据库中运行 R ！ 有关详细信息，请参阅[本文](r/using-r-in-azure-sql-database.md)，或 SQL Server 开发团队的此博客：[宣布预览的机器学习服务与 Azure SQL Database 中的 R 支持](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/)。
+
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 
 Microsoft SQL Server 中的机器学习 Server 现在提供用于生成和部署 R 或 Python 中的计算机学习解决方案的全面支持。 下面是此版本的要点：
 
-> [!IMPORTANT]
-> 
-> 在 Linux 上，或在 Azure SQL 数据库中运行 SQL Server 时，机器学习服务，包括使用 R 或 Python，当前不支持。 寻找更高版本中的更改。
-> 
-> Linux 版本目前支持本机评分使用预测函数。
- 
 ### <a name="in-database-python-integration"></a>数据库 Python 集成
 
 可以在存储过程中运行 Python，也可以执行 Python 远程作为计算上下文中使用 SQL Server 计算机。 此集成将打开新的途径为 Python 开发人员和数据科研人员要使用的 SQL Server 功能的大型社区。 
@@ -60,9 +57,13 @@ SQL Server 开发人员访问到广泛的 Python 库从开放源生态系统，�
 
 + 在 Microsoft 机器学习 Server （独立版） 中的 Python 支持
 
-    SQL Server 2017 包括 Microsoft 机器学习平台的独立版本安装的选项。 通过使用机器学习服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
+    SQL Server 2017 包括 Microsoft 机器学习 Server 的独立版本安装的选项。 通过使用机器学习服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
 
-    有关在 Microsoft 机器学习服务器中运行的 Python 的示例，请参阅[发布和使用的 Python 代码](python/publish-consume-python-code.md)。
+### <a name="linux-support"></a>Linux 支持
+
+在 Linux 上的 SQL Server 中，当前不支持使用 R 或 Python 数据库中的机器学习。 查看我们的更高版本中的通知。
+
+但是，在 Linux 上可以执行[本机评分](sql-native-scoring.md)使用 T-SQL 的预测函数。 本机评分，可以从预先训练的模型非常快，评分而无需调用或甚至需要的 R 运行时。 这意味着可以在 Linux 上使用 SQL Server 来生成预测非常快，以便为客户端应用程序提供服务。
 
 ### <a name="new-algorithms"></a>新的算法
 

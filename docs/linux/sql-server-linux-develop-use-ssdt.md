@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
@@ -37,7 +37,7 @@ SQL Server Data Tools (SSDT) 可将 Visual Studio 转变为一种强大的开发
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>将 SQL Server Data Tools 升级到 SSDT 17.0 RC 版本
 
-在 Linux 上的 SQL Server 自 2017 年 1 RC2 受 SSDT 版本 17.0 RC 或更高版本。
+在 Linux 上的 SQL Server 2017 受 SSDT 版本 17.0 RC 或更高版本。
 
 * [下载并安装 SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939)。
 

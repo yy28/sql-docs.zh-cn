@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 自 2017 年 1 RC2 的数据库的备份。 在 Linux 服务器上，你可以使用`sqlcmd`连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](http://msdn.microsoft.com/library/dn435916.aspx)。 
+使用相同的工具，作为其他平台，可能需要在 Linux 上的 SQL Server 2017 的数据库的备份。 在 Linux 服务器上，你可以使用`sqlcmd`连接到 SQL Server 并进行备份。 如果是 Windows，则可以在连接到 Linux 上的 SQL Server 后通过用户界面进行备份。 备份功能是相同的跨平台。 例如，你可以备份数据库，本地、 到远程驱动器或[Microsoft Azure Blob 存储服务](http://msdn.microsoft.com/library/dn435916.aspx)。 
 
 ## <a name="backup-with-sqlcmd"></a>使用 sqlcmd 备份
 
@@ -75,7 +75,7 @@ sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/m
 
 下列步骤将引导通过 SSMS 完成备份。 
 
-1. 启动 SSMS 并连接到 Linux 上的 SQL Server 自 2017 年 1 RC2 中的服务器。
+1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器。
 
 1. 在对象资源管理器，右键单击你的数据库，单击**任务**，然后单击**备份...**.
 

@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>使用始终加密的 ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-本文提供有关如何开发使用 ODBC 应用程序的信息[始终加密 （数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+本文提供有关如何开发使用 ODBC 应用程序的信息[始终加密 （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
-始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 始终加密启用驱动程序，如 ODBC Driver 13.1 for SQL Server，从而实现此目的以透明方式加密和解密在客户端应用程序中的敏感数据。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)。
+始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 始终加密启用驱动程序，如 ODBC Driver 13.1 for SQL Server，从而实现此目的以透明方式加密和解密在客户端应用程序中的敏感数据。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 ### <a name="prerequisites"></a>先决条件
 
@@ -240,7 +240,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>不支持的数据类型转换错误
 
-始终加密支持对加密数据类型进行若干种转换。 请参阅[始终加密 （数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)有关受支持的类型转换的详细列表。 若要避免数据类型转换错误，请确保与面向加密的列的参数一起使用 SQLBindParameter 时观察以下几点：
+始终加密支持对加密数据类型进行若干种转换。 请参阅[始终加密 （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)有关受支持的类型转换的详细列表。 若要避免数据类型转换错误，请确保与面向加密的列的参数一起使用 SQLBindParameter 时观察以下几点：
 
 - 支持从 SQL 类型转换为列的类型或参数的 SQL 类型也是完全与目标列的类型相同。
 
@@ -284,7 +284,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制以检索查询参数的元数据的往返
 
-如果为连接启用始终加密，ODBC Driver 13.1 将 SQL Server，默认情况下，调用[sys.sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql)每个参数化查询，将传递 （不带任何参数的查询语句值） 到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，则返回的每个参数，以允许要加密的驱动程序与加密相关的信息。 上述行为可确保的高级别透明性向客户端应用程序： 应用程序 （和应用程序开发人员） 不需要注意的哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
+如果为连接启用始终加密，ODBC Driver 13.1 将 SQL Server，默认情况下，调用[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)每个参数化查询，将传递 （不带任何参数的查询语句值） 到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，则返回的每个参数，以允许要加密的驱动程序与加密相关的信息。 上述行为可确保的高级别透明性向客户端应用程序： 应用程序 （和应用程序开发人员） 不需要注意的哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每个语句始终加密行为
 
@@ -344,7 +344,7 @@ ODBC Driver 13.1 for SQL Server 附带以下内置 keystore 提供程序：
 |Azure Key Vault |Azure 密钥保管库中存储 Cmk | `AZURE_KEY_VAULT` |Windows，macOS，Linux|
 |Windows 证书存储区|将 Cmk 本地存储在 Windows 密钥存储区| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- 你 （或你的 DBA） 需要确保列主密钥元数据中配置的提供程序名称正确，以及列主密钥路径符合对于给定的提供程序的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) 语句时会自动生成有效的提供程序名称和密钥路径。
+- 你 （或你的 DBA） 需要确保列主密钥元数据中配置的提供程序名称正确，以及列主密钥路径符合对于给定的提供程序的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句时会自动生成有效的提供程序名称和密钥路径。
 
 - 你需要确保你的应用程序可以访问该密钥在密钥存储区。 这可能涉及授予你的应用程序访问的键和/或密钥存储，具体取决于密钥存储区中，或执行其他特定于密钥存储区中的配置步骤。 例如，若要访问 Azure 密钥保管库，你需要提供到 keystore 正确的凭据。
 
@@ -514,10 +514,10 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>ODBC 驱动程序使用始终加密时的限制
 
 ### <a name="bulk-copy-function-usage"></a>大容量复制函数的用法
-利用[SQL 大容量复制函数](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc)使用始终加密使用 ODBC 驱动程序时，不支持。 不透明的加密/解密会对加密列与 SQL 大容量复制函数一起使用。
+利用[SQL 大容量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)使用始终加密使用 ODBC 驱动程序时，不支持。 不透明的加密/解密会对加密列与 SQL 大容量复制函数一起使用。
 
 ### <a name="asynchronous-operations"></a>异步操作
-虽然 ODBC 驱动程序将允许使用[异步操作](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel)使用始终加密，对性能有影响上没有操作时启用始终加密。 调用`sys.sp_describe_parameter_encryption`为该语句阻止和将导致驱动程序等待服务器在返回之前返回元数据确定加密元数据`SQL_STILL_EXECUTING`。
+虽然 ODBC 驱动程序将允许使用[异步操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)使用始终加密，对性能有影响上没有操作时启用始终加密。 调用`sys.sp_describe_parameter_encryption`为该语句阻止和将导致驱动程序等待服务器在返回之前返回元数据确定加密元数据`SQL_STILL_EXECUTING`。
 
 ## <a name="always-encrypted-api-summary"></a>始终加密 API 摘要
 
@@ -552,7 +552,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="see-also"></a>另请参阅
 
-- [始终加密（数据库引擎）](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
+- [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密博客](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>用于 JDBC 驱动程序的 JDBC 4.1 法规遵从性
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/21/2017
   
 |新功能|Description|  
 |-----------------|-----------------|  
-|新的转义函数<br /><br /> 限制返回行转义|部分支持<br /><br /> 转义语法： 限制\<行 >[偏移量 < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)。|  
+|新的转义函数<br /><br /> 限制返回行转义|部分支持<br /><br /> 转义语法： 限制\<行 >[偏移量 < row_offset >](using-sql-escape-sequences.md)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 支持 Java Database Connectivity API 4.1 规范，并带有以下数据类型映射。  
   

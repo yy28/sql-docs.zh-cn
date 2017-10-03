@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12ac0e3b42b647d90af01a96b8e9d2e8571447d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de48d6e15cdb165e865d13a00b6f956816e46e39
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>欢迎使用 SQL Server 导入和导出向导
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
 > 本主题仅介绍向导的 **第一页** 。 如果你正在寻找其他事情，请参阅[相关的任务和内容](#related)。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>系统必备组件的是在计算机上安装向导？
-如果你想要运行向导，但不会获得 [！包括[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+如果你想要运行向导，但不会获得 [！包括[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="screen-shot-of-the-welcome-page"></a>“欢迎”页的屏幕截图  
 下面的屏幕截图显示向导的 **欢迎使用 SQL Server 导入和导出向导** 页。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/21/2017
 
 -   **启动向导。** 如果已准备好运行向导，并且只想知道如何启动向导，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
--   **获取向导。** 如果你想要运行向导，但不会获得 [！包括[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)。
+-  **获取向导。**  如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
 
 

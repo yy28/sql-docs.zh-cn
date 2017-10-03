@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installation-and-configuration"></a>安装和配置
@@ -28,7 +28,7 @@ Wide World Importers OLTP 数据库安装和配置说明。
 ## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
 
 ## <a name="download"></a>下载
 

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: eb3ac975b6962a36e1aaa60a421e977fe42cda90
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 若要完成以下端到端方案需要两台计算机部署两个节点群集和另一台服务器配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 08/02/2017
    sudo ip addr show
    ```
 
-   在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 将计算机名称设置通过将其添加到`/etc/hosts`。 以下脚本，可以编辑`/etc/hosts`与`vi`。 
+   在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 将计算机名称设置通过将其添加到`/etc/hosts`。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -315,7 +315,7 @@ NFS 服务器上执行以下操作：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 外接程序具有 VMWare 和 KVM 防御代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 截至 RC2 时间范围内，有 HyperV 或云环境没有隔离代理。 如果运行这些配置，你需要禁用隔离。 \**这不建议在生产系统 ！**
+   > RHEL HA 外接程序具有 VMWare 和 KVM 防御代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 截至时间范围内，有 HyperV 或云环境没有隔离代理。 如果运行这些配置，你需要禁用隔离。 \**这不建议在生产系统 ！**
 
    以下命令禁用隔离代理。
 

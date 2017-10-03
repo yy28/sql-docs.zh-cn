@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 61b4ba948df071768380d4a6f2b4ddc4421692d8
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-你可以将你的数据库和数据迁移到运行在 Linux 上的 SQL Server 自 2017 年 1 RC2。 选用的方法取决于源数据和特定方案。 以下部分提供多种迁移方案的最佳做法。
+你可以将你的数据库和数据迁移到运行在 Linux 上的 SQL Server 2017。 选用的方法取决于源数据和特定方案。 以下部分提供多种迁移方案的最佳做法。
 
 ## <a name="migrate-from-sql-server-on-windows"></a>从 Windows 上的 SQL Server 迁移
 如果要将 Windows 上的 SQL Server 数据库迁移到 Linux 版 SQL Server 2017，建议的方法是使用 SQL Server 备份和还原。

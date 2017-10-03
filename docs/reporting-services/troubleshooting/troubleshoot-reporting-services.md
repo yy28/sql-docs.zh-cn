@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>排除 Reporting Services 故障
   此部分的主题帮助确定并解决 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的问题。  
 
-![小文件文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**排查与 Reporting Services 的问题   **  
+![小文件文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**排查与 Reporting Services 的问题**   
 + [排查 Reporting Services 报表问题](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [对 Reporting Services 订阅和传递进行故障排除](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,9 +39,9 @@ ms.lasthandoff: 09/21/2017
 
 +  [对在本机模式报表服务器上发布或查看报表进行故障排除](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [服务器和带 Reporting Serivces 的数据库连接问题疑难解答](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [服务器和带 Reporting Serivces 的数据库连接问题疑难解答](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![较小的文件的文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**错误和事件参考   **  
+ ![较小的文件的文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)**错误和事件参考**   
  + [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Reporting Services 错误的原因和解决方法](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  

@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  对于本机模式的报表服务器，电子邮件传递扩展插件通过本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器和编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置。 对于 SharePoint 模式的报表服务器，电子邮件传递扩展插件是在 SharePoint 管理页和 PowerShell 脚本中进行配置的。  
   
  
- 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ 有关如何配置本机模式报表服务器的信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  

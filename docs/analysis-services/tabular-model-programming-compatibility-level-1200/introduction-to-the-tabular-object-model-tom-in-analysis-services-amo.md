@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格对象模型 (TOM) 简介
@@ -55,11 +55,11 @@ TOM 是基础 AMO 基础结构，其中还可容纳多维和表格数据库兼�
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 
-在网络上 TOM 使用 XMLA 协议，与 Analysis Services 服务器进行通信并管理对象。 在管理非表格对象时，使用 TOM [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla)，XMLA Analysis Services 脚本语言扩展。 在管理表格对象时，TOM 使用 SSAS 表格协议，还 XMLA 的扩展。 请参阅[MS SSAS T SQL Server Analysis Services 表格协议文档](https://msdn.microsoft.com/library/mt719260.aspx)有关详细信息。
+在网络上 TOM 使用 XMLA 协议，与 Analysis Services 服务器进行通信并管理对象。 在管理非表格对象时，使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，XMLA Analysis Services 脚本语言扩展。 在管理表格对象时，TOM 使用 SSAS 表格协议，还 XMLA 的扩展。 请参阅[MS SSAS T SQL Server Analysis Services 表格协议文档](https://msdn.microsoft.com/library/mt719260.aspx)有关详细信息。
 
 ### <a name="tom-and-json"></a>TOM 和 JSON
 
-表格元数据，在结构上作为 JSON 文档，都有新命令和对象模型定义的语法通过表格模型脚本语言[TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference)。 脚本语言 JSON 用于请求和响应的正文。
+表格元数据，在结构上作为 JSON 文档，都有新命令和对象模型定义的语法通过表格模型脚本语言[TMSL](../tabular-model-scripting-language-tmsl-reference.md)。 脚本语言 JSON 用于请求和响应的正文。
 
 尽管 TMSL 和 TOM 公开相同的对象 (**表**，**列**，依此类推) 和相同的操作 (**创建**，**删除**， **刷新**)，TOM （它使用 MS SSAS 表格协议相反，按照前面的说明） 在网络上不使用 TMSL。
 

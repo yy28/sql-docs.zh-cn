@@ -4,27 +4,27 @@ description: "SQL Server 脚本示例-Ubuntu 上的无人参与安装"
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 191d39779fd38fcf342dcbeae1ee3a14632ab59a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例： 适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-此示例 Bash 脚本上 Ubuntu 16.04 中安装 SQL Server 自 2017 年 1 RC2，而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
+此示例 Bash 脚本上 Ubuntu 16.04 中安装 SQL Server 自 2017 年，而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 
 > [!TIP]
 > 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[适用于 Ubuntu 的快速入门教程](quickstart-install-connect-ubuntu.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 你需要至少 3.25 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。

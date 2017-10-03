@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>“参数”选项卡  
  Integration Services (SSIS) 参数可用于在包执行时向包内的属性赋值。 您可以在项目级别创建项目参数，在包级别创建包参数。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。 您可以利用此选项卡来管理包参数。  
   
- 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)。  
+ 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](integration-services-ssis-package-and-project-parameters.md)。  
   
 > **重要说明!!**  参数仅可用于为项目部署模型开发的项目。 因此，仅对于属于配置为使用项目部署模型的项目一部分的包，您才会看到“参数”选项卡。  
   

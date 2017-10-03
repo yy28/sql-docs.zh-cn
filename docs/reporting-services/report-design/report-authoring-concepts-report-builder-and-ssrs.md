@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>报表创作概念（报表生成器和 SSRS）
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [数据区域和地图（报表生成器和 SSRS）](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  介绍可以添加到报表布局中的数据区域的类型。 数据区域决定报表的外观：表格、矩阵、列表或图表。  
   
- [报表参数概念 （报表生成器和 SSRS）](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [报表参数概念 （报表生成器和 SSRS）](report-parameters-concepts-report-builder-and-ssrs.md)  
  介绍用于定义和使用报表参数的方法，以及如何从报表服务器上的报表定义独立地管理这些参数。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 对 Linux 上的 SQL Server 进行故障排除时，请记住此专用预览版本的限制。 你可以找到其中在列表[发行说明](sql-server-linux-release-notes.md)。
+本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 故障排除在 Linux 上的 SQL Server，请记得要检查的支持的功能和中的已知的限制[Linux 发行说明上的 SQL Server](sql-server-linux-release-notes.md)。
 
 ## <a id="connection"></a>解决连接失败
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。 
@@ -38,11 +38,11 @@ ms.lasthandoff: 08/02/2017
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > 但如果是 Azure VM ，此技术则不适用。 对于 Azure Vm， [VM 在 Azure 门户中找到的公共 IP](sql-server-linux-azure-virtual-machine.md#connect)。
+   > 但如果是 Azure VM ，此技术则不适用。 对于 Azure Vm， [VM 在 Azure 门户中找到的公共 IP](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)。
 
 - 如果适用，请检查你已打开防火墙上的 SQL Server 端口 （默认值为 1433年）。
 
-- 对于 Azure Vm，请检查您有[的默认 SQL Server 端口的网络安全组规则](sql-server-linux-azure-virtual-machine.md#remote)。
+- 对于 Azure Vm，请检查您有[的默认 SQL Server 端口的网络安全组规则](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)。
 
 - 验证用户名和密码是否存在任何拼写错误、多余的空格或错误的大小写。
 

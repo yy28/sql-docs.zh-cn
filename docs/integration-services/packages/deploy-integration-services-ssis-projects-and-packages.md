@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
@@ -271,7 +271,7 @@ static void Main()
   
 2.  如果项目和所有包都通过了兼容测试，则单击 **“确定”** 以转换包。  
   
-> **注意：** 若要将项目转换为项目部署模型，请使用 **Integration Services 项目转换向导**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+> **注意：** 若要将项目转换为项目部署模型，请使用 **Integration Services 项目转换向导**。 有关详细信息，请参阅 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署向导
   **Integration Services 部署向导** 支持两种部署模型：
@@ -403,7 +403,7 @@ static void Main()
 14. 单击 **“确定”** 两次以保存所做的更改。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
-  当你将磁盘配置 [！包括[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)。  
+  在您配置一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)。  
   
  您还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署项目和执行包。 有关详细信息，请参阅“另请参见”  部分中的主题。  
   

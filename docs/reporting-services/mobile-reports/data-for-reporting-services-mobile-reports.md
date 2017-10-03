@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
 * **本地 Excel 文件**：选择 Excel 文档，然后选择要导入的工作表。 导入后，数据将存储在移动报表定义中。 若要刷新原始的 Excel 文件中的数据，请使用**刷新数据**中右上角的命令上[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]**数据**选项卡。阅读更多有关[为 SSRS 移动报表准备 Excel 数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
-* **[!包括[库](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)。   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 共享数据集**：浏览服务器上已发布数据集的列表，然后选择要添加到移动报表中的数据集。 基于服务器数据的移动报表始终与原始服务器数据集标尺连接，并反映该服务器上的数据的最新状态。 请参阅 [支持的数据源列表](https://msdn.microsoft.com/library/ms159219.aspx)。   
   
   阅读有关 [从移动报表发布服务器中的共享数据集获取数据](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)的详细信息。  
   

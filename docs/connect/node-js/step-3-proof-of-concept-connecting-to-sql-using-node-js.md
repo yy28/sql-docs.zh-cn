@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 783e6bc2e9dd928aaef2b5ecfb71efe47588a9b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1d25bbbad2e6506e505125e2aa9de6212298b4b3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3： 连接到 SQL 使用 Node.js 的概念证明
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中，你将了解如何执行[插入](/sql-docs/docs/t-sql/statements/insert-transact-sql)语句安全地，传递参数，保护你的应用程序从该[SQL 注入](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints)值。    
+在此示例中，你将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句安全地，传递参数，保护你的应用程序从该[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```javascript  

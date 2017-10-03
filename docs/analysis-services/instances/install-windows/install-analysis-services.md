@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="get-tools-and-designers"></a>获取工具和设计器  
  SQL Server 安装程序不再安装模型设计器或用于解决方案设计或服务器管理的管理工具。 在此版本中，工具都是独立安装的，你可以从以下获得这些工具：  
   
--   [下载 SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-   [下载 SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [下载 SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [下载 SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  需同时具备 SSMS 和 SSDT，才可使用 Analysis Services 实例和数据。 可将工具安装在任何位置，但请确保先在服务器上配置端口，再尝试连接。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 。  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4edc1b7348e9b34c924236819f0122ea5277d3e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
@@ -858,7 +858,7 @@ public class Program
  下面的应用程序演示了如何使用 SQLServerBulkCopy 类加载数据。 在此示例中，CSV 文件用于将从 SQL Server AdventureWorks 数据库中的 Production.Product 表导出的数据复制到数据库中的一个类似表。  
   
 > [!IMPORTANT]  
->  除非你已创建了工作表中所述，将不会运行此示例[表设置](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)即可使用它。  
+>  除非你已创建了工作表中所述，将不会运行此示例[表设置](../../ssms/download-sql-server-management-studio-ssms.md)即可使用它。  
   
 1.  打开**SQL Server Management Studio**并连接到 SQL Server 使用 AdventureWorks 数据库。  
   
@@ -1113,6 +1113,6 @@ public class Program
 |Void setTimeWithTimezoneFormat(String timeFormat)|将用于分析来自文件的时间数据格式设置为 java.sql.Types.TIME_WITH_TIMEZONE。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

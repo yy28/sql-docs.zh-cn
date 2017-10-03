@@ -32,10 +32,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: d3e4af471573ffa2220eb9dfb1ee7a129899b5eb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
@@ -45,16 +45,16 @@ ms.lasthandoff: 09/21/2017
   
 -   [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40;Azure SQL Database &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database) 
+-   [ALTER DATABASE & #40;Azure SQL Database & #41;](alter-database-azure-sql-database.md) 
 
--   [ALTER DATABASE &#40;Azure SQL 数据仓库 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
+-   [ALTER DATABASE & #40;Azure SQL 数据仓库 & #41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
--   [ALTER DATABASE &#40;并行数据仓库 &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
+-   [ALTER DATABASE & #40;并行数据仓库 & #41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
-数据库镜像， [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，所兼容性级别`SET`选项但在单独主题中所述由于它们的长度。 有关详细信息，请参阅[ALTER DATABASE 数据库镜像 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)， [ALTER DATABASE SET HADR &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)，和[ALTER DATABASE 兼容级别 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+数据库镜像， [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，所兼容性级别`SET`选项但在单独主题中所述由于它们的长度。 有关详细信息，请参阅[ALTER DATABASE 数据库镜像 & #40;Transact SQL & #41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)， [ALTER DATABASE SET HADR & #40;Transact SQL & #41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)，和[ALTER DATABASE 兼容级别 & #40;Transact SQL & #41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  可以通过使用当前的会话配置许多数据库 set 选项[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md) ，并且在连接时通常配置应用程序。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。  
+>  可以通过使用当前的会话配置许多数据库 set 选项[SET 语句 & #40;Transact SQL & #41;](../../t-sql/statements/set-statements-transact-sql.md) ，并且在连接时通常配置应用程序。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -453,7 +453,7 @@ SET
  GLOBAL  
  如果指定了 GLOBAL，而创建游标时没有将其定义为 LOCAL，那么游标的作用域将是相应连接的全局范围。 在由此连接执行的任何存储过程或批处理中，都可以引用该游标名称。  
   
- 该游标仅在断开连接时才被隐式释放。 有关详细信息，请参阅[DECLARE CURSOR &#40;Transact SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 该游标仅在断开连接时才被隐式释放。 有关详细信息，请参阅[DECLARE CURSOR & #40;Transact SQL & #41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  可通过查看 sys.databases 目录视图中的 is_local_cursor_default 列或 DATABASEPROPERTYEX 函数的 IsLocalCursorsDefault 属性来确定此选项的状态。  
   
@@ -461,7 +461,7 @@ SET
   
  **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- 有关参数说明，请参阅[ALTER DATABASE 数据库镜像 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
+ 有关参数说明，请参阅[ALTER DATABASE 数据库镜像 & #40;Transact SQL & #41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
@@ -485,7 +485,7 @@ SET
  控制数据库加密状态。  
   
  ENCRYPTION {ON | OFF}  
- 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 有关数据库加密的详细信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)，和[借助 Azure SQL 数据库实现透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。  
+ 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 有关数据库加密的详细信息，请参阅[透明数据加密 & #40;TDE & #41;](../../relational-databases/security/encryption/transparent-data-encryption.md)，和[借助 Azure SQL 数据库实现透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。  
   
  在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 **READ ONLY**，则数据库加密操作将失败。  
   
@@ -621,7 +621,7 @@ MULTI_USER
  DEFAULT_LANGUAGE  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定所有新建登录名的默认语言。 可以通过提供本地 ID (lcid)、语言名称或语言别名来指定语言。 可接受的语言名称和别名的列表，请参阅[sys.syslanguages &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。  
+ 指定所有新建登录名的默认语言。 可以通过提供本地 ID (lcid)、语言名称或语言别名来指定语言。 可接受的语言名称和别名的列表，请参阅[sys.syslanguages & #40;Transact SQL & #41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). 仅在将 CONTAINMENT 设置为 PARTIAL 之后，才允许使用此选项。 如果将 CONTAINMENT 设置为 NONE，将发生错误。  
   
  NESTED_TRIGGERS  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -661,7 +661,7 @@ MULTI_USER
   
  **适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  在中不可用[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- 请参阅[ALTER DATABASE SET HADR &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
+ 请参阅[ALTER DATABASE SET HADR & #40;Transact SQL & #41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
  **\<mixed_page_allocation_option >:: =**  
   
@@ -756,7 +756,7 @@ OPERATION_MODE
  通过使用事务日志备份，在介质发生故障后提供完整恢复。 如果数据文件损坏，介质恢复可以还原所有已提交的事务。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  BULK_LOGGED  
- 在某些大规模或大容量操作中，可以提供最佳性能，占用的日志空间也最少，因此，在介质发生故障后，可以提供恢复。 有关可以按最小方式记录操作的信息，请参阅[事务日志 &#40;SQL server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). 在 BULK_LOGGED 恢复模式下，这些操作的日志记录最少。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 在某些大规模或大容量操作中，可以提供最佳性能，占用的日志空间也最少，因此，在介质发生故障后，可以提供恢复。 有关可以按最小方式记录操作的信息，请参阅[事务日志 & #40;SQL server& #41;](../../relational-databases/logs/the-transaction-log-sql-server.md). 在 BULK_LOGGED 恢复模式下，这些操作的日志记录最少。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  SIMPLE  
  系统将提供占用日志空间最小的简单备份策略。 服务器故障恢复不再需要的日志空间可被自动重用。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
@@ -764,7 +764,7 @@ OPERATION_MODE
 > [!IMPORTANT]  
 >  简单恢复模式比其他两种模式更容易管理，但代价是数据文件损坏时丢失数据的风险也较大。 最近的数据库备份或差异数据库备份之后的所有更改都将丢失，必须手动重新输入。  
   
- 默认恢复模式由 **model** 数据库的恢复模式决定。 有关选择合适恢复模式的详细信息，请参阅[恢复模式 &#40;SQL server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ 默认恢复模式由 **model** 数据库的恢复模式决定。 有关选择合适恢复模式的详细信息，请参阅[恢复模式 & #40;SQL server& #41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  可以通过检查来确定此选项的状态**recovery_model**和**recovery_model_desc** sys.databases 目录视图或 DATABASEPROPERTYEX 的恢复属性中的列函数。  
   
@@ -805,7 +805,7 @@ OPERATION_MODE
   
 -   CHECKSUM 与 TORN_PAGE_DETECTION 互相排斥。 不能同时启用这两个选项。  
   
- 检测到页撕裂或校验和失败时，如果失败仅限于索引页，则可通过还原数据进行恢复，可能还需要重建索引进行恢复。 如果要在校验和失败的情况下确定受影响的一个或多个数据库页面的类型，请运行 DBCC CHECKDB。 有关还原选项的详细信息，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). 虽然还原数据可解决数据损坏问题，但应尽快诊断并纠正根本原因（如磁盘硬件故障），以防止继续出错。  
+ 检测到页撕裂或校验和失败时，如果失败仅限于索引页，则可通过还原数据进行恢复，可能还需要重建索引进行恢复。 如果要在校验和失败的情况下确定受影响的一个或多个数据库页面的类型，请运行 DBCC CHECKDB。 有关还原选项的详细信息，请参阅[RESTORE 参数 & #40;Transact SQL & #41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md). 虽然还原数据可解决数据损坏问题，但应尽快诊断并纠正根本原因（如磁盘硬件故障），以防止继续出错。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对因校验和、页撕裂或其他 I/O 错误而失败的任何读取都重试四次。 如果在其中一次重试中读取成功，则会向错误日志中写入一条消息，且触发读取的命令将继续执行。 如果重试失败，则该命令失败，且显示错误消息 824。  
   
@@ -828,7 +828,7 @@ REMOTE_DATA_ARCHIVE = {ON (SERVER =\<服务器 _ 名称 >，{凭据 = \<db_scope
  指定 Azure 服务器的地址。 包括`.database.windows.net`名称的一部分。 例如， `MyStretchDatabaseServer.database.windows.net`。  
   
 凭据 = \<db_scoped_credential_name >  
- 指定数据库范围凭据的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于连接到 Azure 的服务器。 请确保在运行此命令之前不存在凭据。 有关详细信息，请参阅[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
+ 指定数据库范围凭据的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于连接到 Azure 的服务器。 请确保在运行此命令之前不存在凭据。 有关详细信息，请参阅[CREATE DATABASE SCOPED CREDENTIAL & #40;Transact SQL & #41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
 FEDERATED_SERVICE_ACCOUNT = ON |关闭  
  可以使用本地 SQL Server 的联合的服务帐户与远程 Azure 服务器通信，在以下条件都成立时。  
@@ -936,7 +936,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |关闭
   
  默认情况下，此选项为 OFF。  
   
- 此选项的当前设置可以确定通过检查**is_memory_optimized_elevate_to_snapshot_on**中的列[sys.databases &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
+ 此选项的当前设置可以确定通过检查**is_memory_optimized_elevate_to_snapshot_on**中的列[sys.databases & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
   
  **\<sql_option >:: =**  
   
@@ -951,7 +951,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |关闭
  OFF  
  默认值为 NOT NULL。  
   
- 连接级设置（使用 SET 语句设置）覆盖 ANSI_NULL_DEFAULT 的默认数据库级别设置。 默认情况下，当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_NULL_DEFAULT 设置为 ON。 有关详细信息，请参阅[SET ANSI_NULL_DFLT_ON &#40;Transact SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
+ 连接级设置（使用 SET 语句设置）覆盖 ANSI_NULL_DEFAULT 的默认数据库级别设置。 默认情况下，当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，ODBC 和 OLE DB 客户端发出连接级 SET 语句，将会话的 ANSI_NULL_DEFAULT 设置为 ON。 有关详细信息，请参阅[SET ANSI_NULL_DFLT_ON & #40;Transact SQL & #41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).  
   
  对于 ANSI 兼容性，数据库选项 ANSI_NULL_DEFAULT 设置为 ON 将使数据库默认设置改为 NULL。  
   
@@ -1092,7 +1092,7 @@ FEDERATED_SERVICE_ACCOUNT = ON |关闭
  MINUTES  
  指示 *target_recovery_time* 表示为分钟数。  
   
- 有关间接检查点的详细信息，请参阅[数据库检查点 &#40;SQL server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+ 有关间接检查点的详细信息，请参阅[数据库检查点 & #40;SQL server& #41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  **与\<终止 >:: =**  
   
@@ -1275,10 +1275,10 @@ SET QUERY_STORE = ON
  [启用和禁用更改跟踪 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
- [将事务隔离级别设置 &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [将事务隔离级别设置 & #40;Transact SQL & #41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   
 
