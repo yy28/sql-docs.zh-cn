@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8b56417b89b618598f716245e7562f5986a911b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5b9e63d4c7cdc57814b04b2e96e52bda17a25f5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  SQL Server Management Studio (SSMS) 是所有 SQL Server 功能，包括 Analysis Services 的主要管理工具。 SSMS 是更新每月的免费 web 下载。 
   
-**[下载 SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  SSMS 包括扩展的事件 (Xevent)，提供用于监视活动和 SQL Server 2016 和 Azure Analysis Services 服务器上的诊断问题的 SQL Server 事件探查器跟踪的轻量替代。 若要了解更多信息，请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 。  
   
