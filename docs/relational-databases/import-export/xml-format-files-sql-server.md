@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式化文件 (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a> \<FIELD> 元素的属性  
  本节介绍 \<FIELD> 元素的属性，现将其架构语法总结如下：  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a> \<COLUMN> 元素的属性  
  本节介绍 \<COLUMN> 元素的属性，现将其架构语法总结如下：  
   
- \<元素表列出了  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> 将 xsi:type 值放入数据集  
  当通过 XML 架构定义 (XSD) 语言验证 XML 文档时，xsi:type 值不放入数据集。 但是，通过将 XML 格式化文件加载到 XML 文档（如 `myDoc`）中，可以将 xsi:type 信息放入数据集。如下列代码段所示：  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  数据字段与表中的列一一对应。 在 `<ROW>` 元素中，格式化文件将 `Age` 列映射到第一个字段，将 `FirstName` 列映射到第二个字段，将 `LastName` 列映射到第三个字段。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  在 `<ROW>` 元素中，格式化文件将 `Age` 列映射到第一个字段，将 `FirstName` 列映射到第三个字段，将 `LastName` 列映射到第二个字段。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  在 `<ROW>` 元素中，格式化文件将 `Age` 列映射到第一个字段，将 `FirstName` 列映射到第三个字段，将 `LastName` 列映射到第四个字段。  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. 将 \<FIELD> xsi:type 映射到 \<COLUMN> xsi:type  
  下面的示例显示了各种类型的字段及其与列的映射。  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. 将 XML 数据映射到表  
  下面的示例创建了一个空的两列表 (`t_xml`)，表中的第一列映射到 `int` 数据类型，第二列映射到 `xml` 数据类型。  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  以下 XML 格式化文件将数据文件加载到表 `t_xml`中。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. 导入固定长度或固定宽度的字段  
  下面的示例分别介绍包含 `10` 个或 `6` 个字符的固定字段。 格式化文件将这些字段的长度/宽度分别表示为 `LENGTH="10"` 和 `LENGTH="6"`。 数据文件中的每行都以回车符-换行符组合 {CR}{LF} 结束，格式化文件将这表示为 `TERMINATOR="\r\n"`。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
