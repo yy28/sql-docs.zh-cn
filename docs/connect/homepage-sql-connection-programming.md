@@ -103,7 +103,7 @@ EF 有直接或间接关系具有以下技术：
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 语言语法增强功能，如** => ** C# 中的运算符。
+- 语言语法增强功能，如 **=>**  C# 中的运算符。
 - 便捷的程序，以便将映射到 SQL 数据库中的表的类生成源代码。 例如， [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
