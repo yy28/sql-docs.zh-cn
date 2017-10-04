@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>INSERT （SQL 图形）
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   添加一个或多个行`node`或`edge`表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 将插入到节点表的语法是相同的常规表。 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
