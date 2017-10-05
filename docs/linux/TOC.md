@@ -11,6 +11,7 @@
 ## [安装和连接 - SUSE](quickstart-install-connect-suse.md)
 ## [安装和连接 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [运行和连接 - Docker](quickstart-install-connect-docker.md)
+## [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 # 教程
 ## [1_从 Windows 迁移](sql-server-linux-migrate-restore-database.md)
@@ -31,7 +32,6 @@
 ### [安装 SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
 ### [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [注册 GA 存储库](sql-server-linux-change-repo.md)
-### [在 Azure 中预配 SQL VM](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## 配置
 ### [使用 mssql conf 配置](sql-server-linux-configure-mssql-conf.md)
