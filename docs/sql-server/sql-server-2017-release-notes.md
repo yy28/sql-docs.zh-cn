@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 发行说明 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
-本主题介绍 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]的限制和问题。 若要了解相关信息，请参阅：
-- [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)。
-- [Linux 版 SQL Server 的发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
+本主题介绍 SQL Server 2017 的限制和问题。 若要了解相关信息，请参阅：
+- [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server on Linux 发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)试用：[下载 SQL Server 2017 最新版本：RC2，发布于 2017 年 8 月](http://go.microsoft.com/fwlink/?LinkID=829477)。
+**试用 SQL Server！**
+- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [启动具有 SQL Server 2017 的虚拟机](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式发布版（2017 年 10 月）
+### <a name="database-engine"></a>数据库引擎
+
+- 问题及其对客户的影响：升级之后，现有的 FILESTREAM 网络共享可能不再可用。
+
+- 解决方法：首先，重启计算机并检查 FILESTREAM 网络共享是否可用。 如果该共享仍不可用，请执行以下操作：
+
+    1. 在 SQL Server 配置管理器中，右键单击 SQL Server 实例，然后单击“属性”。 
+    2. 在“FILESTREAM”选项卡上，清除“针对文件 I/O 流访问启用 FILESTREAM”，然后单击“应用”。
+    3. 再次对原始共享名称选中“针对文件 I/O 流访问启用 FILESTREAM”，然后单击“应用”。
+
+### <a name="master-data-services-mds"></a>Master Data Services (MDS)
+- 问题及其对客户的影响：在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
+
+- **解决方法：** 
+  - 向树视图中的子节点而非根级别授予权限。
+  - 或
+  - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+
+### <a name="analysis-services"></a>Analysis Services
+- 问题及其对客户的影响：对于 1400 兼容性级别的表格模型，使用 Get Data 时，一些数据源（如 Amazon Redshift、 IBM Netezza 和 Impala）的数据连接器尚不可用。
+- **解决方法：** 无。   
+
+- 问题及其对客户的影响：具有透视的 1400 兼容性级别的直接查询模型可能在查询和发现元数据时失败。
+- 解决方法：删除透视并重新部署。
+
+### <a name="tools"></a>工具
+- 问题及其对客户的影响：运行 DReplay 失败，出现以下消息：“DReplay 出现意外错误!”。
+- **解决方法：** 无。
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 候选发布（RC2 - 2017 年 8 月）
 此版本没有 Windows 版 SQL Server 发行声明。 请参阅 [Linux 版 SQL Server 的发行说明](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)。
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 候选发布（RC1 - 2017 年 7 月）
@@ -52,7 +87,7 @@ ms.lasthandoff: 08/28/2017
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
 - **问题和客户影响：**如果同一台计算机上同时安装了 SQL Server Reporting Services 和 Power BI 报表服务器，并卸载了其中之一，将无法通过报表服务器配置管理器连接到剩余的报表服务器。
-- **解决方法**：若要解决此问题，必须在卸载其中一个服务器后执行以下操作。
+- **解决方法**：要解决此问题，必须在卸载其中一个服务器后执行以下操作。
 
     1. 在管理员模式下启动命令提示符。
     2. 转到安装其余报表服务器的目录。
@@ -81,7 +116,7 @@ ms.lasthandoff: 08/28/2017
 
    此外，尝试重新安装 2016 版 TSqlLanguageService.msi 也会失败，并且会看到以下消息：无法安装 Microsoft SQL Server 2016 T-SQL 语言服务，因为计算机上已安装更高版本。
 
-- **解决方法**：若要解决此问题，并修复依赖 v13 版程序集的应用程序，请按照以下步骤操作：
+- **解决方法**：要解决此问题并修复依赖于 v13 版程序集的应用程序，请执行下列步骤：
 
    1. 转到“添加/删除程序”
    2. 找到 Microsoft SQL Server vNext T-SQL 语言服务 CTP2.1，右键单击它，然后选择“卸载”。

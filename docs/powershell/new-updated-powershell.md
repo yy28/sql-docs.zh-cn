@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: a5106430bbe73d9bc7cf8761961af451e93e7d0e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新的和最近更新的文章：PowerShell 文档
@@ -34,7 +34,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017 年 7 月 18 日到 2017 年 9 月 11 日
+- 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
 - 主题区域：&nbsp; PowerShell。
 
 
@@ -69,7 +69,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
@@ -93,35 +93,35 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
     Then run Run-533-*.BAT
 -->
 
-本部分列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 中其他主题区域最近更新的非常相似文章。
+本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新发布文章+最近更新的文章 (3+12)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新发布文章+最近更新的文章 (5+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新发布文章+最近更新的文章 (5+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新发布文章+最近更新的文章 (19+82)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新发布文章+最近更新的文章 (1+8)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新发布文章+最近更新的文章 (12+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新发布文章+最近更新的文章 (0+1)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新发布文章+最近更新的文章 (7+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新发布文章+最近更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新发布文章+最近更新的文章 (0+2)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新发布文章+最近更新的文章 (1+4)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新发布文章+最近更新的文章 (4+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
-- [新发布文章+最近更新的文章 (0+1)：Tools for SQL 文档](../tools/new-updated-tools.md)
+- [新文章和更新的文章 (0+1)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (4+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (17+0)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章 (3+0)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (1+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章 (2+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章 (0+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新发布文章+最近更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (0+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
-- [新发布文章+最近更新的文章 (0+0)：SQL Master Data Services (MDS) 文档](../master-data-services/new-updated-master-data-services.md)
+- [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新文章和更新的文章 (0+0)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
+- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 
 

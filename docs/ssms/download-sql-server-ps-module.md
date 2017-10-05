@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>下载 SQL Server PowerShell 模块
@@ -30,9 +30,35 @@ SQL Server PowerShell 模块是 17.0 版本 SQL Server Management Studio 的一�
 
 用于安装 SQL Server 模块的 PowerShell 命令为：
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+此命令将为计算机的所有用户安装该模块。 需要以管理员身份运行 PowerShell 进程。
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+此命令将为运行当前 PowerShell 进程的用户安装模块。 不需要以管理员权限运行 PowerShell 进程。
 
 如果计算机上存在以前版本的 SQL Server PowerShell 模块，可能需要提供“-AllowClobber”参数。  
 
-PowerShell 库随附的 SQL Server PowerShell 模块版本支持版本控制，并且要求 PowerShell 5.0 或更高版本。
+如果以管理员身份运行或者为计算机的所有用户安装模块
+
+> Install-Module -Name SqlServer -AllowClobber
+
+如果不能以管理员身份运行或者仅为当前用户安装
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+当 SqlServer 模块的更新版本可用时，你将能够使用 Update-Module 命令更新版本
+
+> Update-Module -Name SqlServer
+
+查看你可以使用的计算机上安装的模块版本
+
+> Get-Module SqlServer -ListAvailable
+
+在可以使用其导入的脚本中使用模块的特定版本
+
+> Import-Module SqlServer -Version 21.0.17178
+
+PowerShell 库随附的 SQL Server PowerShell 模块版本支持版本控制，并且要求 PowerShell 5.0 或更高版本。 你可以在 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver/)上找到 SqlServer 模块 
 
