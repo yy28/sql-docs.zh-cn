@@ -116,8 +116,10 @@ JOIN sys.dm_exec_connections AS conn
   
  如果会话 ID 或 UOW 回滚已完成时 KILL*会话 ID*|*UOW*执行 WITH STATUSONLY 语句，或如果没有会话 ID 或 UOW 正在回滚，KILL *会话 ID*|*UOW* WITH STATUSONLY 返回以下错误：  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  可以通过重复相同的 KILL 获取相同的状态报告*会话 ID*|*UOW*语句不使用 WITH STATUSONLY 选项; 但是，我们不建议执行此操作。 重复 KILL*会话 ID*语句可能会终止新进程，如果回滚已完成并运行新的 KILL 语句之前的会话 ID 已重新分配给新任务。 指定 WITH STATUSONLY 将防止这种情况发生。  
   

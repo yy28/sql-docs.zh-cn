@@ -94,11 +94,11 @@ WHERE EnglishCountryRegionName = 'Australia';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FNameLength  FirstName  LastName`  
-  
- `-----------  ---------  ---------------`  
-  
- `4            Lynn       Tsoflias`  
+ ```
+FNameLength  FirstName  LastName  
+-----------  ---------  ---------------  
+4            Lynn       Tsoflias
+```  
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

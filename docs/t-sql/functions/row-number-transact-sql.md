@@ -242,17 +242,14 @@ GROUP BY LastName, FirstName;
   
  以下为部分结果集。  
   
- `RowNumber  FirstName  LastName            SalesQuota`  
-  
- `---------  ---------  ------------------  -------------`  
-  
- `1          Jillian    Carson              12,198,000.00`  
-  
- `2          Linda      Mitchell            11,786,000.00`  
-  
- `3          Michael    Blythe              11,162,000.00`  
-  
- `4          Jae        Pak                 10,514,000.00`  
+ ```
+RowNumber  FirstName  LastName            SalesQuota
+---------  ---------  ------------------  -------------
+1          Jillian    Carson              12,198,000.00
+2          Linda      Mitchell            11,786,000.00
+3          Michael    Blythe              11,162,000.00
+4          Jae        Pak                 10,514,000.00
+ ```  
   
 ### <a name="f-using-rownumber-with-partition"></a>F. 将 ROW_NUMBER () 与 PARTITION 一起使用  
  以下示例显示了将 `ROW_NUMBER` 函数与 `PARTITION BY` 参数结合使用的情况。 这将导致`ROW_NUMBER`函数对行进行编号每个分区中。  
@@ -273,23 +270,17 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
   
  以下为部分结果集。  
   
- `RowNumber  LastName            Territory  SalesQuota`  
-  
- `---------  ------------------  ---------  -------------`  
-  
- `1          Campbell            1           4,025,000.00`  
-  
- `2          Ansman-Wolfe        1           3,551,000.00`  
-  
- `3          Mensa-Annan         1           2,275,000.00`  
-  
- `1          Blythe              2          11,162,000.00`  
-  
- `1          Carson              3          12,198,000.00`  
-  
- `1          Mitchell            4          11,786,000.00`  
-  
- `2          Ito                 4           7,804,000.00`  
+ ```
+RowNumber  LastName            Territory  SalesQuota
+---------  ------------------  ---------  -------------
+1          Campbell            1           4,025,000.00
+2          Ansman-Wolfe        1           3,551,000.00
+3          Mensa-Annan         1           2,275,000.00
+1          Blythe              2          11,162,000.00
+1          Carson              3          12,198,000.00
+1          Mitchell            4          11,786,000.00
+2          Ito                 4           7,804,000.00
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [级别 &#40;Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   

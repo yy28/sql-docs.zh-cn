@@ -137,21 +137,16 @@ ORDER BY Name;
   
  以下是在结果集中的前几行。  
   
- `Name                     ItemCode       FullItemCode`  
-  
- `------------------------ -------------- ---------------`  
-  
- `Adjustable Race          AR-5381        0000AR-5381`  
-  
- `All-Purpose Bike Stand   ST-1401        0000ST-1401`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `BB Ball Bearing          BE-2349        0000BE-2349`  
+ ```
+Name                     ItemCode       FullItemCode
+------------------------ -------------- ---------------
+Adjustable Race          AR-5381        0000AR-5381
+All-Purpose Bike Stand   ST-1401        0000ST-1401
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+BB Ball Bearing          BE-2349        0000BE-2349
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

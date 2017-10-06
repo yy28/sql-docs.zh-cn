@@ -213,9 +213,10 @@ GO
   
  结果集显示 `ufnGetProductDealerPrice` 是一个确定性函数。  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. 查找属于特定架构的对象  
  以下示例使用 `SchemaId` 属性返回属于架构 `Production` 的所有对象。  

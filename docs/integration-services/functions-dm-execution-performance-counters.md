@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -69,14 +69,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="example"></a>示例  
  在下面的示例中，该函数将返回 ID 为 34 的正在运行的执行的统计信息。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## <a name="example"></a>示例  
  在下面的示例中，该函数返回正在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上运行的所有执行的统计信息，具体取决于您的权限。  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

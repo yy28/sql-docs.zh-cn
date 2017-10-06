@@ -76,11 +76,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-isnull"></a>B. 使用 ISNULL  
  以下示例选择 `AdventureWorks2012` 中所有特价产品的说明、折扣百分比、最小量和最大量。 如果某个特殊特价产品的最大量为 NULL，则结果集中显示的 `MaxQty` 为 `0.00`。  

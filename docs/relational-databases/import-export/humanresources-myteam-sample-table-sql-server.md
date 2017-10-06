@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**标题**|**nvarchar(50)**|可以为 Null|我的工作组中雇员的职位。|  
 |**背景**|**nvarchar(50)**|非空|上次更新行的日期和时间。 （默认值）|  
   
- **创建 HumanResources.myTeam**  
+**创建 HumanResources.myTeam**  
   
 -   使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **填充 HumanResources.myTeam**  
+**填充 HumanResources.myTeam**  
   
 -   执行下列 `INSERT` 语句以在表中填充两行：  
   

@@ -72,9 +72,10 @@ SELECT TAN(.45);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------`  
-  
- `0.48`  
+ ```
+--------  
+0.48
+```  
   
 ## <a name="see-also"></a>另请参阅  
  [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

@@ -207,11 +207,11 @@ GO
   
  结果集显示基础对象（`Employee` 表）的基类型是用户表。  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>B. 返回属性值  
  以下示例返回指定表中的 UPDATE 触发器数。  

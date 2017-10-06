@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `398974.27         398450.57`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+398974.27         398450.57
+ ```  
   
 ### <a name="c-using-stdev-with-over"></a>C. STDEV 使用转移  
  下面的示例返回日历年中每个季度的销售配额值的标准偏差。 请注意，OVER 子句中的 ORDER BY 顺序 STDEV 和 ORDER BY 的 SELECT 语句进行排序的结果集。  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             34648.23`  
-  
- `2002  3         70000.0000             35921.21`  
-  
- `2002  4        154000.0000             39752.36`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             34648.23
+2002  3         70000.0000             35921.21
+2002  4        154000.0000             39752.36
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
