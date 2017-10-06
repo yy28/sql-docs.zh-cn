@@ -48,7 +48,7 @@ Microsoft ODBC Driver for SQL Server 可以用于创建新的应用程序。 你
 -   [使用始终加密的 ODBC 驱动程序](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [使用 ODBC 驱动程序的 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) 
 -   [使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>社区  
 - [Microsoft SQL Server ODBC 驱动程序团队博客](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server Data Access Forum（英文）](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
