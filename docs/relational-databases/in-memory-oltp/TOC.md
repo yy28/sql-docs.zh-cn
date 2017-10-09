@@ -1,5 +1,5 @@
 # [概述](in-memory-oltp-in-memory-optimization.md)  
-# [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](survey-of-initial-areas-in-in-memory-oltp.md)  
+# [可提高 Transact-SQL 性能的内存中 OLTP 技术清单](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [概述和使用方案](overview-and-usage-scenarios.md)
 # [SQL Server 2016 白皮书的内部机制](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [在 SQL Server 中计划内存中 OLTP 功能的应用](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  

@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **数据类型**  
      从列表框中选择基本数据类型。 该列表框显示除 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 和 **xml** 数据类型之外的所有数据类型。 不能编辑现有的用户定义数据类型的数据类型。  
   
-     **默认**  
-     （可选）选择要绑定到用户定义数据类型别名的规则或默认值。  
+     **Default**  
+     （可选）选择要绑定到用户定义数据类型别名的默认值。  
   
      **长度/精度**  
      相应地显示数据类型的长度或精度。 **长度** 适用于基于字符的用户定义数据类型； **精度** 仅适用于基于数字的用户定义数据类型。 该标签会根据先前所选的数据类型而相应地改变。 如果所选数据类型的长度或精度是固定的，则不能编辑此框。  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

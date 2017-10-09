@@ -1,8 +1,10 @@
 ---
 title: "Microsoft Azure 中的 SQL Server 数据文件 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.date: 10/02/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
@@ -26,7 +28,9 @@ ms.lasthandoff: 09/27/2017
   
  Microsoft Azure 中的 SQL Server 数据文件可为作为 Microsoft Azure Blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，你可以在本地或在 Microsoft Azure 中虚拟机上运行的 SQL Server 中创建数据库，而将数据存储在 Microsoft Azure Blob 存储中的专用存储位置。 此增强功能使用分离和附加操作，简化了计算机之间的数据库移动。 此外，它还允许你将数据库备份文件从 Microsoft Azure 存储空间还原或还原到 Microsoft Azure 存储空间，为数据库备份文件提供了备选存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。
  
-> [AZURE.IMPORTANT]不推荐且不支持 Azure blob 存储中的存储系统数据库。 
+> [!IMPORTANT]  
+>  不推荐且不支持 Azure blob 存储中的存储系统数据库。 
+
   
  本主题介绍一些概念和注意事项，这些内容对于在 Microsoft Azure 存储服务中存储 SQL Server 数据文件至关重要。  
   
@@ -49,12 +53,12 @@ ms.lasthandoff: 09/27/2017
 ### <a name="azure-storage-concepts"></a>Azure 存储概念  
  使用“Windows Azure 中的 SQL Server 数据文件”功能时，需要在 Windows Azure 中创建一个存储帐户和一个容器。 然后，需要创建一个 SQL Server 凭据，其中包括有关容器策略的信息以及访问容器所需的共享访问签名。  
   
- 在 [Windows Azure](https://azure.microsoft.com)中， [Azure 存储](https://azure.microsoft.com/services/storage/) 帐户代表用于访问 Blob 的命名空间的最高级别。 一个存储帐户可含有无限数量的容器，前提是总大小在 500 TB 以内。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)。 容器对 [Blob](https://azure.microsoft.com/documentation/articles/storage-introduction/#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 Blob。 Azure 存储中可存储两类 Blob：块 Blob 和页 Blob。 这一新功能使用页 Blob，页 Blob 最大可到 1 TB，当文件字节数经常修改时更为高效。 你可以使用以下 URL 格式访问 Blob： `http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+ 在 [Windows Azure](https://azure.microsoft.com)中， [Azure 存储](https://azure.microsoft.com/services/storage/) 帐户代表用于访问 Blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](http://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器对 [Blob](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 Blob。 Azure 存储中可存储两类 Blob：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 Blob： `http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="azure-billing-considerations"></a>Azure 计费注意事项  
- 在决策制定和规划过程中，估计使用 Azure 服务的成本是一项非常重要的工作。 在 Azure 存储中存储 SQL Server 数据文件时，需要支付与存储和事务相关的成本。 此外，要实现“Azure 存储中的 SQL Server 数据文件”功能，需要每 45 到 60 秒隐式进行一次 Blob 续租。 这也会对每个数据库文件（如 .mdf 或 .ldf）造成事务成本。 根据我们的估计，基于当前定价模型，两个数据库文件（.mdf 和 .ldf）的续租成本大约为每个月 2 美分。 建议使用 [Azure 定价](http://azure.microsoft.com/pricing/) 页面上的信息来帮助估计每月与使用 Azure 存储和 Azure 虚拟机相关的成本。  
+ 在决策制定和规划过程中，估计使用 Azure 服务的成本是一项非常重要的工作。 在 Azure 存储中存储 SQL Server 数据文件时，需要支付与存储和事务相关的成本。 此外，要实现“Azure 存储中的 SQL Server 数据文件”功能，需要每 45 到 60 秒隐式进行一次 Blob 续租。 这也会对每个数据库文件（如 .mdf 或 .ldf）造成事务成本。 使用 [Azure 定价](http://azure.microsoft.com/pricing/)页面上的信息来帮助估计每月与使用 Azure 存储和 Azure 虚拟机相关的成本。  
   
-### <a name="sql-server-concepts"></a>SQL 服务器概念  
+### <a name="sql-server-concepts"></a>SQL Server 概念  
  使用此新增强功能时，需要执行以下操作：  
   
 -   必须创建容器策略并生成共享访问签名 (SAS) 密钥。  
@@ -63,16 +67,13 @@ ms.lasthandoff: 09/27/2017
   
 -   必须在 SQL Server 凭据存储中存储有关 Azure 存储容器、其关联策略名称以及 SAS 密钥的信息。  
   
- 以下示例假定已经创建 Azure 存储容器，已经创建了针对读取、写入、列出权限的策略。 创建容器策略会生成一个 SAS 密钥，它以未加密状态安全存储在内存中，SQL Server 需要使用它来访问容器中的 Blob 文件。 在下面的代码段中，将 `'your SAS key'` 替换为类似于以下内容的项： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](http://azure.microsoft.com/en-us/documentation/articles/storage-manage-access-to-resources/)  
+ 以下示例假定已经创建 Azure 存储容器，已经创建了针对读取、写入、列出权限的策略。 创建容器策略会生成一个 SAS 密钥，它以未加密状态安全存储在内存中，SQL Server 需要使用它来访问容器中的 Blob 文件。 在下面的代码段中，将 `'<your SAS key>'` 替换为类似于以下内容的项： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
   
-```  
-  
--- Create a credential  
+```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
-SECRET = 'your SAS key'  
+SECRET = '<your SAS key>'  
   
--- Create database with data and log files in Windows Azure container.  
 CREATE DATABASE testdb   
 ON  
 ( NAME = testdb_dat,  
@@ -80,7 +81,6 @@ ON
  LOG ON  
 ( NAME = testdb_log,  
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
 ```  
   
  **重要说明：** 如果当前存在任何对容器中数据文件的引用，则尝试删除相应的 SQL Server 凭据会失败。  
@@ -94,12 +94,12 @@ ON
   
 -   此外，建议对数据库继续实施传统的本地安全做法。  
   
-### <a name="installation-prerequisites"></a>安装必备组件  
+### <a name="installation-prerequisites"></a>安装的先决条件  
  以下是在 Azure 中存储 SQL Server 数据文件时的安装先决条件。  
   
--   **本地 SQL Server：** SQL Server 2016 版本包括此功能。 要了解如何下载 SQL Server 2016，请参阅 [SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server)。  
+-   **本地 SQL Server：**SQL Server 2016 及更高版本包括此功能。 若要了解如何下载最新版本的 SQL Server，请参阅 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
   
--   在 Azure 虚拟机中运行的 SQL Server：如果要 [在 Azure 虚拟机上安装 SQL Server](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)，请安装 SQL Server 2016 或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
+-   在 Azure 虚拟机中运行的 SQL Server：如果要 [在 Azure 虚拟机上安装 SQL Server](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，请安装 SQL Server 2016 或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
 
   
 ###  <a name="bkmk_Limitations"></a> 限制  
@@ -112,13 +112,13 @@ ON
   
 -   使用“Azure 中的 SQL Server 数据文件”功能时，存储帐户不支持异地复制。 如果对存储帐户进行地理复制并发生地理故障转移，则可能出现数据库损坏。  
   
--   每个 Blob 最大可为 1 TB。 这就对可存储在 Azure 存储中的单个数据库的数据和日志文件设定了一个上限。  
+-   有关容量限制，请参阅 [Blob 存储简介](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
   
 -   无法使用“Azure 存储中的 SQL Server 数据文件”功能在 Azure Blob 中存储内存 OLTP 数据。 这是因为内存 OLTP 依赖于 **FileStream** ，并且，在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。  
   
 -   使用“Azure 中的 SQL Server 数据文件”功能时，SQL Server 使用 **master** 数据库中的排序规则集来执行所有 URL 或文件路径比较。  
   
--   只要不在主数据库中添加新数据库文件，就支持**Always On 可用性组** 。 如果某个数据库操作需要在主数据库中创建新文件，请首先在辅助节点上禁用 Always On 可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将数据库还原到辅助节点，并在辅助节点上启用 AlwaysOn 可用性组。 请注意，使用“Azure 中的 SQL Server 数据文件”功能时，不支持 AlwaysOn 故障转移群集实例。  
+-   只要不在主数据库中添加新数据库文件，就支持 AlwaysOn 可用性组。 如果某个数据库操作要求在主数据库中创建新文件，请首先在次要节点中禁用 AlwaysOn 可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将数据库还原到次要节点，并在次要节点中启用 AlwaysOn 可用性组。 请注意，使用“Azure 中的 SQL Server 数据文件”功能时，不支持 AlwaysOn 故障转移群集实例。  
   
 -   在正常操作期间，SQL Server 使用临时租约来保留用于存储的 Blob，并且每 45 到 60 秒续租每个 Blob。 如果服务器崩溃，启动另一个配置为使用相同 Blob 的 SQL Server 实例，则新实例将等待 60 秒，以待现有 Blob 租约过期。 如果要将数据库附加到另一个实例，又无法在 60 秒内等待租约过期，则可显式中断 Blob 租约，以免执行附加操作时发生任何故障。  
   
@@ -136,7 +136,7 @@ ON
  
  将其作为一些对话框窗口的“路径”，例如“新建数据库”、“附加数据库”和“还原数据库”。 有关详细信息，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-### <a name="sql-server-management-objects-support"></a>SQL Server 管理对象支持  
+### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理对象 (SMO) 支持  
  使用“Azure 中的 SQL Server 数据文件”功能时，支持所有 SQL Server 管理对象 (SMO)。 如果 SMO 对象需要文件路径，请使用 BLOB URL 格式而不是本地文件路径，如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 有关 SQL Server 管理对象的详细信息，请参阅 SQL Server 联机丛书中的 [SQL Server 管理对象 (SMO) 编程指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
   
 ### <a name="transact-sql-support"></a>Transact-SQL 支持  
@@ -185,6 +185,6 @@ ON
   
     4.  将数据库设置为联机状态。  
 
+## <a name="next-steps"></a>后续步骤  
   
-  
-
+[创建数据库](create-a-database.md)

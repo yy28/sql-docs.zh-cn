@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>临时表分区
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   可以单独在当前表和历史记录表上使用分区。 但是，分区不能用于更改数据无系统版本控制的数据内容。  
   
 > [!NOTE]  
->  分区是企业版功能。  
+>  分区是在 Service Pack 1 之前以及早期版本的 SQL Server 2016 中的 Enterprise Edition 功能。 在 SQL Server 2016 Service Pack 1 及更高版本的所有版本中都支持分区。
   
 -   **当前表：**  
   

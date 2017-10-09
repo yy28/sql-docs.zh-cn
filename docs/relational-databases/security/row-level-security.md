@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>行级安全性
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  对表中的行级数据的访问将受到定义为内联表值函数的安全谓词的限制。 随后调用该函数，并由安全策略进行实施。 对于筛选器谓词，不会向应用程序指示已从结果集筛选了行；如果筛选了所有行，则将返回空集。 对于阻止谓词，违反该谓词的任何操作将失败并出错。  
   
- 从基表中读取数据时会应用筛选器谓词，它会影响所有获取操作： **SELECT**， **DELETE** （即 用户无法删除筛选的行）和 **UPDATE** （即 用户无法更新筛选的行，尽管可以采用随后筛选行的这样一种方式来更新它们）。 阻止谓词影响所有写入操作。  
+ 从基表中读取数据时会应用筛选器谓词，它会影响所有的获取操作：SELECT、DELETE（即用户无法删除筛选的行）和 UPDATE（即尽管可以采用随后筛选行的这样一种方式来更新筛选的行，但用户无法更新它们）。 阻止谓词影响所有写入操作。  
   
 -   AFTER INSERT 和 AFTER UPDATE 谓词可以防止用户将行更新为违反该谓词的值。  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  筛选器和阻止谓词以及安全策略具有以下行为：  
   
--   你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果使用 `SCHEMABINDING = OFF`创建安全策略，则用户将需要针对这些附加表和函数的 **SELECT** 或 **EXECUTE** 权限，以便查询目标表。  
-  
-     你可以定义与另一个表联接和/或调用函数的谓词函数。 该联接/函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。  
+-   你可以定义与另一个表联接和/或调用函数的谓词函数。 如果使用 `SCHEMABINDING = ON`创建安全策略，则该联接或函数可以从查询进行访问并按预期方式工作而无需进行任何其他权限检查。 如果使用 `SCHEMABINDING = OFF`创建安全策略，则用户将需要针对这些附加表和函数的 **SELECT** 或 **EXECUTE** 权限，以便查询目标表。
   
 -   你可以针对已定义但禁用安全谓词的表发出查询。 不会影响已筛选或阻止的任何行。  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
  筛选器谓词具有以下行为：  
   
--   定义筛选表中的行的安全策略。 应用程序不知道针对 **SELECT**、 **UPDATE**和 **DELETE** 操作筛选了行（包括筛选出所有行的情况）。 应用程序可以对任何行执行 **INSERT** 操作（无论是否在任何其他操作过程中筛选这些行）。  
+-   定义筛选表中的行的安全策略。 应用程序不知道针对 **SELECT**、 **UPDATE**和 **DELETE** 操作筛选了行（包括筛选出所有行的情况）。应用程序可以对任何行执行 **INSERT** 操作（无论是否在任何其他操作过程中筛选这些行）。  
   
  阻止谓词具有以下行为：  
   

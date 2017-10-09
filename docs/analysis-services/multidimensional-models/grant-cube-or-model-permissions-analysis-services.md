@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Excel 打开时，使用“数据”选项卡连接到 Analysis Services。 由于你是作为不同的 Windows 用户运行 Excel，因此“使用 Windows 身份验证”  选项是测试角色时应使用的正确凭据类型。 如果需要此步骤的帮助，请参阅[从客户端应用程序进行连接 (Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)。  
   
-     如果连接发生错误，请检查 Analysis Services 的端口配置并验证服务器接受远程连接。 有关端口配置的信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 。  
+     如果连接发生错误，请检查 Analysis Services 的端口配置并验证服务器接受远程连接。 有关端口配置的信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 。  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>步骤 5：脚本角色定义和分配  
   

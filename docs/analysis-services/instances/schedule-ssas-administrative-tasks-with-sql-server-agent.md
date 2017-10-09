@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  默认情况下，作业在服务帐户下运行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server 代理的默认帐户是 NT Service\SQLAgent$\<实例名 >。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅 [向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
- 您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md)。  
+ 您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)。  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>示例 1：处理计划任务中的维度  
  此示例演示如何创建和计划处理维度的作业。  

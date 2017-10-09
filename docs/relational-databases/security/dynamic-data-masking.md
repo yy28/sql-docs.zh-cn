@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
@@ -30,10 +30,10 @@ ms.lasthandoff: 07/31/2017
 
 动态数据屏蔽允许用户在尽量减少对应用程序层的影响的情况下，指定需要披露的敏感数据，从而防止对敏感数据的非授权访问。 DDM 可以在数据库上进行配置，以隐藏对指定数据库字段进行查询时获得的结果集中的敏感数据，同时不会更改数据库中的数据。 可以轻松地对现有应用程序使用动态数据屏蔽，因为屏蔽规则是应用于查询结果。 许多应用程序可以屏蔽敏感数据，而无需修改现有查询。
 
-*  一个中央数据屏蔽策略直接对数据库中的敏感字段起作用。
-*  指定有权访问敏感数据的特权用户或角色。
-*  DDM 采用完全屏蔽和部分屏蔽功能，以及用于数值数据的随机屏蔽。
-*  简单 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令定义和管理掩码。
+* 一个中央数据掩码策略直接对数据库中的敏感字段起作用。
+* 指定有权访问敏感数据的特权用户或角色。
+* DDM 采用完全掩码和部分掩码功能，以及用于数值数据的随机掩码。
+* 简单的 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 命令定义和管理掩码。
 
 例如，呼叫中心支持人员通过身份证号或信用卡号的几个数字就可以辨识呼叫者，但系统不会将这些数据内容完全公开给该支持人员。 可以通过定义屏蔽规则来屏蔽查询结果集中身份证号或信用卡号最后四位数字以外的所有数字。 另一个例子就是，在需要进行故障排除时，开发人员可以通过对数据进行适当的数据屏蔽来保护个人身份信息 (PII) 数据，因此可以在不违反遵从性法规的情况下，对生产环境进行查询。
 

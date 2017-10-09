@@ -1,8 +1,10 @@
 ---
 title: "基本可用性组（AlwaysOn 可用性组）| Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本可用性组（AlwaysOn 可用性组）
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>限制  
  相比 SQL Server 2016 Enterprise Edition 上的高级可用性组，基本可用性组仅使用一部分功能。 基本可用性组包括以下限制：  
   
--   两个副本（主要和次要）的限制。  
+- 两个副本（主要和次要）的限制。  
   
--   对次要副本没有读取访问权限。  
+- 对次要副本没有读取访问权限。  
   
--   在次要副本上没有备份。  
-  
--   不支持在运行 SQL Server 2016 社区技术预览版 3 (CTP3) 之前的 SQL Server 版本的服务器上托管的副本。  
-  
--   不支持在现有基本可用性组中添加或删除副本。  
-  
--   支持一个可用性数据库。  
-  
--   基本可用性组不能升级到高级可用性组。 必须删除该组并重新添加到包含仅运行 SQL Server 2016 Enterprise Edition 的服务器的组中。  
-  
--   仅 Standard Edition 服务器支持基本可用性组。 
+- 在次要副本上没有备份。  
 
--   基本可用性组不能为分布式可用性组的一部分。 
+- 在次要副本上没有完整性检查。 
+
+- 不支持在运行 SQL Server 2016 社区技术预览版 3 (CTP3) 之前的 SQL Server 版本的服务器上托管的副本。  
+  
+- 不支持在现有基本可用性组中添加或删除副本。  
+  
+- 支持一个可用性数据库。  
+  
+- 基本可用性组不能升级到高级可用性组。 必须删除该组并重新添加到包含仅运行 SQL Server 2016 Enterprise Edition 的服务器的组中。  
+  
+- 仅 Standard Edition 服务器支持基本可用性组。 
+
+- 基本可用性组不能为分布式可用性组的一部分。 
   
 ## <a name="configuration"></a>配置  
  可以在任意两个 SQL Server 2016 Standard Edition 服务器上创建 AlwaysOn 基本可用性组。 当创建基本可用性组时，必须在创建期间指定两个副本。  

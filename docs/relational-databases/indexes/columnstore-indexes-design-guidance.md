@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
@@ -127,7 +127,7 @@ ms.lasthandoff: 09/06/2017
 
 ### <a name="use-fewer-partitions-for-a-columnstore-index"></a>对列存储索引使用更少的分区
 
-除非数据相当大，否则，列存储索引可以使用比行存储索引更少的分区实现最佳性能。 如果每个分区包含的行数不超过 100 万，大多数行可能会转到增量存储，在其中，这些行不会获得列存储压缩的性能优势。 例如，如果将 100 万行载入包含 10 个分区的表，每个分区包含 10 万行，则所有行将转到增量行组。 
+除非数据相当大，否则，可以为列存储索引使用比行存储索引所用更少的分区以实现最佳性能。 如果每个分区包含的行数不超过 100 万，大多数行可能会转到增量存储，在其中，这些行不会获得列存储压缩的性能优势。 例如，如果将 100 万行载入包含 10 个分区的表，每个分区包含 10 万行，则所有行将转到增量行组。 
 
 例如：
 * 将 100 万行载入一个分区或非分区表。 获取一个包含 100 万行的压缩行组。 这非常适合用于提高数据压缩率和查询性能。
@@ -166,7 +166,7 @@ ms.lasthandoff: 09/06/2017
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## <a name="related-tasks"></a>相关任务  

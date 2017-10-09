@@ -3,7 +3,7 @@ title: "SQL Server 数据库引擎和 Azure SQL Database 的安全中心 | Micro
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/28/2017
+ms.date: 09/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**谁进行身份验证？**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Windows 身份验证<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|谁进行身份验证？ （Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）<br /><br /> [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
+|**谁进行身份验证？**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows 身份验证<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|谁进行身份验证？ （Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）<br /><br /> [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [使用 Azure Active Directory 身份验证连接到 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**在哪里进行身份验证？**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在 master 数据库：登录名和 DB 用户<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 在用户数据库：包含的 DB 用户|在 master 数据库进行身份验证（登录名和数据库用户）<br /><br /> [创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [在 Azure SQL 数据库中管理数据库和登录名](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> 在用户数据库进行身份验证<br /><br /> [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**使用其他标识**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 凭据<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 以另一个登录名的身份执行<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 以另一个数据库用户的身份执行|[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [作为另一个登录名执行](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [作为另一个数据库用户执行](../../t-sql/statements/execute-as-transact-sql.md)|  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**自动审核**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核（服务器和 DB 级别）<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 审核（数据库级别）<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 威胁检测|[SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 数据库审核](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL 数据库威胁检测入门](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**自动审核**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核（服务器和 DB 级别）<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 审核（数据库级别）<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 威胁检测| <br /><br /> [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 数据库审核](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL 数据库威胁检测入门](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL 数据库漏洞评估](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**自定义审核**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 触发器|自定义审核实现：创建 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) 和 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**遵从性**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 符合性|SQL Server：<br />                        [通用准则](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL 数据库：<br />                        [Microsoft Azure 信任中心：合规性（按功能）](http://azure.microsoft.com/support/trust-center/services/)|  
   

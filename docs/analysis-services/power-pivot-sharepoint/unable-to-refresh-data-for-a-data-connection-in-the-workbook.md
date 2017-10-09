@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **应用场景 1：服务未启动**  
   
- SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 实例未启动。 到期的密码将导致服务停止运行。 有关更改密码的详细信息，请参阅 [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 和 [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
+ SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 实例未启动。 到期的密码将导致服务停止运行。 有关更改密码的详细信息，请参阅 [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 和 [启动或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
  **应用程序 2a：在服务器中打开早期版本的工作簿**  
   

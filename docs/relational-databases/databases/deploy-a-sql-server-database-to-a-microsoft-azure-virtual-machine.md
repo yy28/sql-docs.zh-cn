@@ -38,10 +38,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
@@ -183,7 +183,7 @@ ms.lasthandoff: 09/14/2017
   
             -   CleanupDisabled = False /> \<!-- 向导将不会删除中间文件和 Microsoft Azure 对象 (VM, CS, SA)。 -->  
   
-        -   <PublishProfile \<!-- 最后使用的发布配置文件信息。 -->  
+        -   \<PublishProfile \<!-- 最后使用的发布配置文件信息。 -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- 在向导中使用的证书。 -->  
   

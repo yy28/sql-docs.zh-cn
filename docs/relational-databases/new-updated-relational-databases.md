@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新文章和最近更新的文章：关系数据库文档
@@ -34,7 +34,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-07-18 到 2017-09-11
+- 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
 - 主题领域：&nbsp; 关系数据库。
 
 
@@ -47,18 +47,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [将 Excel 数据导入 SQL Server 或 Azure SQL 数据库](import-export/import-data-from-excel-to-sql.md)
-2. [PolyBase Kerberos 连接疑难解答](polybase/polybase-troubleshoot-connectivity.md)
-3. [透明数据加密 (TDE)](security/encryption/transparent-data-encryption.md)
-4. [用于 Azure SQL 数据库和数据仓库的透明数据加密](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [使用 Azure SQL 数据库和数据仓库的自带密钥支持进行透明数据加密](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell：使用 Azure Key Vault 中的自有密钥启用透明数据加密](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [使用 PowerShell 轮换透明数据加密 (TDE) 保护程序](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [使用 PowerShell 删除透明数据加密 (TDE) 保护程序](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SQL Server 共享管理对象 (SMO) 许可条款](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [在 SQL Server 和 Azure SQL 数据库中导入和导出数据](import-export/overview-import-export.md)
 
 
 
@@ -66,7 +55,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 ## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
 
-此部分显示从最近大幅更新的文章中收集到的更新的摘录内容。
+此部分摘录了最近大幅更新的文章中的更新内容。
 
 此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
 
@@ -80,11 +69,11 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
 
-此紧凑列表提供了在摘要部分列出的所有更新文章的链接。
+此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [自动优化](#TitleNum_1)
+1. [空间数据类型概述](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1.&nbsp;[自动优化](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1.&nbsp;[空间数据类型概述](spatial/spatial-data-types-overview.md)
 
-更新日期：2017-08-16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+更新日期：2017-09-26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**自动计划选择更正**
-
-
-每当检测到计划选择回归时，..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 可自动切换到最近一个已知的良好计划。
-
-![SQL plan choice correction--media/force-last-good-plan.png "SQL plan choice correction")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 自动检测任何潜在的计划选择回归，包括应使用的计划（而不是错误计划）。
-当 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 应用最近一个已知的良好计划时，会自动监视强制计划的性能。 如果强制计划不比回归计划更好，则取消强制使用新计划，且 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 会编译一个新计划。 如果 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 证实强制计划优于回归计划，则会在重新编译（如下一次统计信息或架构更改时）之前保留此优于回归计划的强制计划。
-
-**启用自动计划选择更正**
-
-
-可以针对每个数据库启用自动优化，并指定在每次检测到某些计划更改回归时强制使用最近一个良好计划。 使用以下命令启用自动优化：
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-启用此选项后，..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] 自动强制使用具有以下特征的任何建议：估计的 CPU 性能提升超过 10 秒、或新计划中的错误数多于建议计划中的错误数，且经验证强制计划优于当前计划。
-
-**替代项 - 手动计划选择更正**
-
-
-若不使用自动优化，用户必须定期监视系统并查找回归的查询。 如果回归了任何计划，用户应找到某些计划
+ -  有两种类型的空间数据。 **geometry** 数据类型支持平面或欧几里得（平面球）数据。 **geometry** 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
+ -
+ - 另外，..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] 支持 geography 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。
+ -
+ -> [!IMPORTANT]
+ -> 有关 ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)] 中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)（SQL Server Code-Named "Denali" 中的新空间功能）。
+ -
+ -##  <a name="objects"></a> 空间数据对象
+ - **geometry** 和 **geography** 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例的某些属性从其父级数据类型派生而来，使其在 **Points**中区分为 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、 **geometry** 或多个 **geography** 或 **GeometryCollection**实例。 **Geography** 类型具有附加实例类型 **FullGlobe**。
+ -
+ - 下图描述了 **geometry** 和 **geometry** 数据类型所基于的 **geography** 层次结构。 **geometry** 和 **geography** 的可实例化类型以蓝色表示。
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - 如图所示， **geometry** 和 **geography** 数据类型的十种可实例化类型为 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 数据类型有一个附加可实例化类型： **FullGlobe**。 只要特定实例的格式正确，即使未显式定义该实例， **geometry** 和 **geography** 类型也可识别该实例。 例如，如果你使用 STPointFromText() 方法显式定义了一个 **Point** 实例，只要方法输入的格式正确， **geometry** 和 **geography** 便将该实例识别为 **Point**。 如果你使用 `STGeomFromText()` 方法定义了相同的实例，则 **geometry** 和 **geography** 数据类型都将该实例识别为 **Point**。
 
 
 
@@ -151,24 +130,20 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+12)：SQL 高级分析 文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (5+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (5+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (19+82)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (1+8)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (12+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (0+1)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (7+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新文章和更新的文章 (1+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (0+2)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新文章和更新的文章 (1+4)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (4+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
-- [新文章和更新的文章 (0+1)：Tools for SQL 文档](../tools/new-updated-tools.md)
+- [新文章和更新的文章 (0+1)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (4+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (17+0)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章 (3+0)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (1+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章 (2+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章 (0+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新文章和更新的文章 (0+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
 - [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
 - [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新文章和更新的文章 (0+0)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
+- [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 
 
