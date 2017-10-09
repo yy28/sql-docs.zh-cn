@@ -76,32 +76,31 @@ SELECT @g.Reduce(.75).ToString();
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. 对 CircularString 使用具有不同公差级别的 Reduce()  
  下面的示例使用`Reduce()`具有三个容差级别上**CircularString**实例：  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)';`  
-  
- `SELECT @g.Reduce(5).ToString();`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
+ SELECT @g.Reduce(5).ToString(); 
+ SELECT @g.Reduce(15).ToString(); 
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  此示例生成以下输出：  
   
- `CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0)`  
-  
- `COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0))`  
-  
- `LINESTRING (0 0, 24 0)`  
+ ```
+ CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 
+ COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0)) 
+ LINESTRING (0 0, 24 0)
+ ```  
   
  返回的每个实例都包含端点 (0 0) 和 (24 0)。  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. 对 CompoundCurve 使用具有不同公差级别的 Reduce()  
  下面的示例使用`Reduce()`具有两个容差级别上**CompoundCurve**实例：  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
+ SELECT @g.Reduce(15).ToString();  
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  在此示例中请注意，第二个**选择**语句返回**LineString**实例： `LineString(0 0, 16 0)`。  
   

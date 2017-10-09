@@ -73,13 +73,12 @@ SELECT @g.STDifference(@h).ToString();
 ### <a name="b-using-a-fullglobe-with-stdifference"></a>B. 将 FullGlobe 与 STDifference() 结合使用  
  下面的示例使用 `FullGlobe` 实例。 第一个结果是一个空的 `GeometryCollection`，第二个结果是 `Polygon` 实例。 当 `STDifference()` 实例为参数时，`GeometryCollection` 返回一个空的 `FullGlobe`。 调用 `geography` 实例的每个点都包含在 `FullGlobe` 实例中。  
   
- `DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'FULLGLOBE';`  
-  
- `SELECT @g.STDifference(@h).ToString(),`  
-  
- `@h.STDifference(@g).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ DECLARE @h geography = 'FULLGLOBE';  
+ SELECT @g.STDifference(@h).ToString(),  
+ @h.STDifference(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

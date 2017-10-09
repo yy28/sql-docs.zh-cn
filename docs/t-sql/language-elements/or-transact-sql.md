@@ -76,13 +76,12 @@ WHERE Department = 'Quality Assurance'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName    LastName         Shift`  
-  
- `------------ ---------------- -------`  
-  
- `Andreas      Berglund         Evening`  
-  
- `Sootha       Charncherngkha   Night`  
+ ```
+ FirstName    LastName         Shift 
+ ------------ ---------------- ------- 
+ Andreas      Berglund         Evening 
+ Sootha       Charncherngkha   Night
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例检索可以获得雇员的姓名`BaseRate`少于 20 或具有`HireDate`2001 年 1 月 1 日或更高版本。  

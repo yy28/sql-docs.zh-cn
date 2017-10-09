@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  下面是结果集：  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  此时可能返回意外结果，因为从逻辑上讲，会先执行 TOP 子句，然后执行 ORDER BY 子句，这会对运算符（在这种情况下为 UNION ALL）的结果进行排序。 因此，前一个查询返回任何一辆红色汽车和任何一辆蓝色汽车，然后按价格对该联合的结果排序。 下面的示例显示了编写此查询以获得所需结果的正确方法。  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  下面是结果集：  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  在使用顶部的插入、 更新、 合并或删除，被引用的行不按任何顺序排列和 ORDER BY 子句不能直接指定这些语句中。 如果需要使用 TOP 来插入、删除或修改按有意义的时间顺序排列的行，您必须同时使用 TOP 和在嵌套 select 语句中指定的 ORDER BY 子句。 请参阅本主题后面的“示例”一节。  

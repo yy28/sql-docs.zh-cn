@@ -65,9 +65,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用 STCurveN()  
  以下示例返回 `CircularString` 实例中的第二条曲线：  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  本主题前面的示例返回：  
   
@@ -76,9 +77,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>B. 在具有一个 CircularString 实例的 CompoundCurve 实例上使用 STCurveN()  
  以下示例返回 `CompoundCurve` 实例中的第二条曲线：  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  本主题前面的示例返回：  
   
@@ -87,9 +89,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="c-using-stcurven-on-a-compoundcurve-instance-with-three-circularstring-instances"></a>C. 在具有三个 CircularString 实例的 CompoundCurve 实例上使用 STCurveN()  
  以下示例使用 `CompoundCurve` 实例，该实例将三个单独的 `CircularString` 实例合并为与上一示例相同的曲线序列：  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE (CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246), CIRCULARSTRING(3 6.3246, 0 7, -3 6.3246), CIRCULARSTRING(-3 6.3246, -1 2.1082, 0 0))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  本主题前面的示例返回：  
   
@@ -100,21 +103,16 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 在调用 STCurveN() 之前验证参数  
  下面的示例演示如何确保`@n`是否有效，然后才能调用`STCurveN()`方法：  
   
- `DECLARE @g geometry;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 3;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry;  
+ DECLARE @n int;  
+ SET @n = 3;  
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [STNumCurves &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   

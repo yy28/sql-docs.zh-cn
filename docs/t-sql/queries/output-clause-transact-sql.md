@@ -548,11 +548,11 @@ GO
   
  这是在 2004 年 4 月 12 日 ('`2004-04-12'`) 生成的结果集。 请注意，`ScrapReasonIDActual` 和 `ModifiedDate` 列反映由触发器操作生成的值而不是 `INSERT` 语句中提供的值。  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. 将 OUTPUT INTO 与标识列和计算列一起使用  
  下面的示例创建 `EmployeeSales` 表，然后使用 `INSERT` 语句向其中插入若干行，并使用 `SELECT` 语句从源表中检索数据。 `EmployeeSales` 表包含标识列 (`EmployeeID`) 和计算列 (`ProjectedSales`)。  

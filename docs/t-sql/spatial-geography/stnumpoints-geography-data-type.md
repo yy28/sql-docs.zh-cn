@@ -71,9 +71,10 @@ SELECT @g.STNumPoints();
 ### <a name="c-returning-the-number-of-points-in-a-compoundcurve"></a>C. 返回 CompoundCurve 中的点数  
  以下示例返回 CompoundCurve 实例中的点数。 由于 STNumPoints() 只对线段之间的连接点计数一次，因此查询将返回 5，而不是 6。  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'`  
-  
- `SELECT @g.STNumPoints();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'  
+ SELECT @g.STNumPoints();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

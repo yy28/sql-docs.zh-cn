@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  当创建本地或全局临时表时，CREATE TABLE 语法支持除 FOREIGN KEY 约束以外的其他所有约束定义。 如果临时表中指定了 FOREIGN KEY 约束，则该语句将返回一条表明已跳过此约束的警告消息。 此表仍将创建，但不使用 FOREIGN KEY 约束。 在 FOREIGN KEY 约束中不能引用临时表。  
   

@@ -61,15 +61,13 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="examples"></a>示例  
  下面的示例返回的一套凸包**geography**对象。  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE City LIKE ('Bothell')`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT geography::ConvexHullAggregate(SpatialLocation).ToString() AS SpatialLocation  
+ FROM Person.Address  
+ WHERE City LIKE ('Bothell')
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展静态 Geography 方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

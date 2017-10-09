@@ -62,11 +62,11 @@ SELECT @g.STArea();
 ### <a name="b-computing-the-area-of-a-curvepolygon-instance"></a>B. 计算 CurvePolygon 实例的面积  
  以下示例计算 `CurvePolygon` 实例的面积。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');`  
-  
- `SELECT @g.STArea() AS Area;`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');  
+ SELECT @g.STArea() AS Area;
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

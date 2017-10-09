@@ -54,20 +54,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. 在不相交的实例上调用 ShortestLineTo()  
  该示例确定 `CircularString` 和 `LineString` 实例之间的最短距离，并返回连接这两个点的 `LineString` 实例：  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>B. 在相交的实例上调用 ShortestLineTo()  
  该示例返回空 `LineString` 实例，因为 `LineString` 实例与 `CircularString` 实例相交：  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [ShortestLineTo &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  

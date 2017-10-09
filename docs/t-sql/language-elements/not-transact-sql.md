@@ -79,21 +79,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ProductID   Name                     Color         StandardCost`  
-  
- `---------   -------------------      ------      ------------`  
-  
- `984         Mountain-500 Silver, 40  Silver        308.2179`  
-  
- `985         Mountain-500 Silver, 42  Silver        308.2179`  
-  
- `986         Mountain-500 Silver, 44  Silver        308.2179`  
-  
- `987         Mountain-500 Silver, 48  Silver        308.2179`  
-  
- `988         Mountain-500 Silver, 52  Silver        308.2179`  
-  
- `(6 row(s) affected)`  
+ ```
+ ProductID   Name                     Color         StandardCost
+ ---------   -------------------      ------      ------------
+ 984         Mountain-500 Silver, 40  Silver        308.2179
+ 985         Mountain-500 Silver, 42  Silver        308.2179
+ 986         Mountain-500 Silver, 44  Silver        308.2179
+ 987         Mountain-500 Silver, 48  Silver        308.2179
+ 988         Mountain-500 Silver, 52  Silver        308.2179
+ (6 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例限制到的结果`SalesOrderNumber`为开头的值`SO6`和`ProductKeys`大于或等于 400。  

@@ -94,11 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------------------`  
+ ```
+ -------------------
   
- `5.00`  
+ 5.00
   
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
  以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  

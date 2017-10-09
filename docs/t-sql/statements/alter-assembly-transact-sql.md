@@ -201,10 +201,10 @@ Alter CLR 程序集所需的以下权限时`CLR strict security`启用：
 > [!NOTE]  
 >  可以通过运行 UserDefinedDataType 示例脚本创建程序集 `ComplexNumber`。 有关详细信息，请参阅[用户定义类型](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191)。  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 添加一个文件以与程序集关联  
  以下示例上载源代码文件 `Class1.cs`，使之与程序集 `MyClass` 关联。 该示例假设已在数据库中创建了程序集 `MyClass`。  
   

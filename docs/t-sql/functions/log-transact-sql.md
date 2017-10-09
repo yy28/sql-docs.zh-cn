@@ -117,9 +117,11 @@ SELECT LOG(10);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------`  
+ ```
+ ----------------`  
   
- `2.30`  
+ 2.30
+ ```  
   
 ### <a name="d-calculating-the-logarithm-of-the-exponent-of-a-number"></a>D. 计算一个数字的指数的对数  
  以下示例计算某数指数的 `LOG`。  

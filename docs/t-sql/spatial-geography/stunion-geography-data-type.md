@@ -77,20 +77,20 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-producing-a-fullglobe-result"></a>B. 生成 FullGlobe 结果  
  以下示例在 `FullGlobe` 合并两个 `STUnion()` 实例时生成 `Polygon`。  
   
- `DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';  
+ DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>C. 通过 CurvePolygon 和 Polygon 的并集生成一个三角形孔。  
  以下示例通过 `CurvePolygon` 和 `Polygon` 实例的并集生成一个三角形孔。  
   
- `DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';`  
-  
- `DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';  
+ DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

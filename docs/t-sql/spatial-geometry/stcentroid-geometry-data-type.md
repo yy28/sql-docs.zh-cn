@@ -64,9 +64,10 @@ SELECT @g.STCentroid().ToString();
 ### <a name="b-computing-the-centroid-of-a-curvepolygon-instance"></a>B. 计算 CurvePolygon 实例的形心  
  以下示例计算 `CurvePolygon` 实例的形心：  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';`  
-  
- `SELECT @g.STCentroid().ToString() AS Centroid`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';  
+ SELECT @g.STCentroid().ToString() AS Centroid
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

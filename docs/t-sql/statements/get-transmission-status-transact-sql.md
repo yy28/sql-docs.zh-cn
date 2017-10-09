@@ -75,11 +75,11 @@ SELECT Status =
   
  下面是示例结果集，由于行的长度原因而进行了编辑：  
   
- `Status`  
-  
- `-------------------------------`  
-  
- `The Service Broker protocol transport is disabled or not configured.`  
+ ```
+ Status  
+ ------------------------------- 
+ The Service Broker protocol transport is disabled or not configured.
+ ```  
   
  在这种情况下，没有将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为允许 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 通过网络进行通信。  
   

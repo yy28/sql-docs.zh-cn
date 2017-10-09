@@ -112,11 +112,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status 
   
- `-------------`  
+ ------------- 
   
- `1`  
+ 1
+ ```  
   
  指定一个不同的联系人编号，再执行一次该查询。  
   
@@ -129,11 +131,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status  
+ -------------  
   
- `-------------`  
-  
- `2`  
+ 2
+ ```  
   
  指定另一个联系人编号，再执行一次该查询。  
   
@@ -146,11 +149,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Return Status`  
+ ```
+ Return Status  
+ -------------  
   
- `-------------`  
-  
- `2`  
+ 2
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)   

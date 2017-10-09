@@ -68,11 +68,11 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>B. 计算 Polygon 实例与 CurvePolygon 实例的并集  
  以下示例返回一个包含圆弧段的 `GeometryCollection` 实例。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
  由于调用 `STUnion()` 的实例包含圆弧段，因此 `STUnion()` 返回包含圆弧段的结果。  
   

@@ -126,11 +126,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="examples"></a>示例  
  以下示例从用户 `EXECUTE` 中撤消对 XML 架构集合 `Invoices4` 的 `Wanida` 权限。 XML 架构集合 `Invoices4` 位于 `Sales` 数据库的 `AdventureWorks2012` 架构中。  
   
- `USE AdventureWorks2012;`  
-  
- `REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [授予 XML 架构集合权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   

@@ -68,9 +68,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. 在 CircularString 上使用 STCurveN()  
  下面的示例返回在第二个曲线**CircularString**实例：  
   
- `DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  该示例返回：  
   
@@ -79,9 +80,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. 在 CompoundCurve 上使用 STCurveN()  
  下面的示例返回在第二个曲线**CompoundCurve**实例：  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  该示例返回：  
   
@@ -90,9 +92,10 @@ ms.lasthandoff: 09/01/2017
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. 在包含三个 CircularString 的 CompoundCurve 实例上使用 STCurveN()  
  下面的示例使用**CompoundCurve**将合并三个单独的实例**CircularString**入同一实例曲线序列与前面的示例：  
   
- `DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STCurveN(2).ToString();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  该示例返回：  
   
@@ -103,21 +106,16 @@ ms.lasthandoff: 09/01/2017
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. 在调用 STCurve() 之前测试有效性  
  下面的示例演示如何确保 *n* 是否有效，然后才能调用 STCurveN() 方法：  
   
- `DECLARE @g geography;`  
-  
- `DECLARE @n int;`  
-  
- `SET @n = 2;`  
-  
- `SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `IF @n >= 1 AND @n <= @g.STNumCurves()`  
-  
- `BEGIN`  
-  
- `SELECT @g.STCurveN(@n).ToString();`  
-  
- `END`  
+```
+ DECLARE @g geography;  
+ DECLARE @n int;  
+ SET @n = 2;  
+ SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ IF @n >= 1 AND @n <= @g.STNumCurves()  
+ BEGIN  
+ SELECT @g.STCurveN(@n).ToString();  
+ END
+  ```  
   
 ## <a name="see-also"></a>另请参阅  
  [地域实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

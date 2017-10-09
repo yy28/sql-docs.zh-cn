@@ -58,27 +58,19 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="examples"></a>示例  
  以下示例为表变量列中的一组对象返回边界框。  
   
- `-- Setup table variable for EnvelopeAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform EnvelopeAggregate on @Geom.shape column`  
-  
- `SELECT geometry::EnvelopeAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for EnvelopeAggregate example 
+DECLARE @Geom TABLE 
+( 
+shape geometry, 
+shapeType nvarchar(50) 
+) 
+INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+-- Perform EnvelopeAggregate on @Geom.shape column 
+SELECT geometry::EnvelopeAggregate(shape).ToString() 
+FROM @Geom;
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展静态几何图形方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

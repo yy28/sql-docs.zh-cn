@@ -130,34 +130,28 @@ ORDER BY Place
 COLLATE Traditional_Spanish_ci_ai ASC;  
 GO  
 ```  
-  
+
  这里是第一个查询的结果。  
   
- `Place`  
-  
- `-------------`  
-  
- `California`  
-  
- `Chiapas`  
-  
- `Cinco Rios`  
-  
- `Colima`  
+ ```
+ Place 
+ ------------- 
+ California 
+ Chiapas 
+ Cinco Rios 
+ Colima
+ ```  
   
  这里是第二个查询的结果。  
   
- `Place`  
-  
- `-------------`  
-  
- `California`  
-  
- `Cinco Rios`  
-  
- `Colima`  
-  
- `Chiapas`  
+ ```
+ Place 
+ ------------- 
+ California 
+ Cinco Rios 
+ Colima 
+ Chiapas
+ ```  
   
 ### <a name="b-additional-examples"></a>B. 其他示例  
  有关使用的其他示例**COLLATE**，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)示例**G.创建数据库并指定排序规则名称和选项**，和[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)示例**V.更改列排序规则**。  

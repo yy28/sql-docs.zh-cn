@@ -68,11 +68,11 @@ SELECT @g.STIntersection(@h).ToString();
 ### <a name="b-using-stintersection-with-curvepolygon-instance"></a>B. 对 CurvePolygon 实例使用 STIntersection()  
  以下示例返回一个包含圆弧线段的实例。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `SELECT @h.STIntersection(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ SELECT @h.STIntersection(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

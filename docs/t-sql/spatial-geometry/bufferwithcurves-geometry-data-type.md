@@ -81,75 +81,81 @@ SQL Server 返回类型：**几何图形**
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. 使用 < 0 的参数值对一维 geometry 实例调用 BufferWithCurves()  
  以下示例返回一个空 `GeometryCollection` 实例：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(-1).ToString(); 
+ ```
   
 ### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>B. 使用 < 0 的参数值对二维 geometry 实例调用 BufferWithCurves()  
  以下示例返回一个具有负缓冲区的 `CurvePolygon` 实例：  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString()`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-1).ToString()
+ ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 使用 < 0 的参数值调用 BufferWithCurves()，它返回一个空 GeometryCollection  
  下面的示例演示所发生的情况时*距离*参数等于-2:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-2).ToString();
+ ```  
   
  这**选择**语句返回`GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
  下面的示例返回一份调用**几何图形**实例：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(0).ToString();
+ ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 使用极小的非零参数值调用 BufferWithCurves()  
  下面的示例也会返回一份调用**几何图形**实例：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.BufferWithCurves(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ DECLARE @distance float = 1e-20; 
+ SELECT @g.BufferWithCurves(@distance).ToString();
+ ```  
   
 ### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. 使用 > 0 的参数值调用 BufferWithCurves()  
  以下示例返回 `CurvePolygon` 实例：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(2).ToString();
+ ```  
   
 ### <a name="g-passing-a-valid-string-parameter"></a>G. 传递有效的字符串参数  
  以下示例返回与前面相同的 `CurvePolygon` 实例，但为方法传递一个字符串参数：  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves('2').ToString();
+ ```  
   
 ### <a name="h-passing-an-invalid-string-parameter"></a>H. 传递无效的字符串参数  
  以下示例将引发错误：  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'`  
-  
- `SELECT @g.BufferWithCurves('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)' 
+ SELECT @g.BufferWithCurves('a').ToString();
+ ```  
   
  请注意，前面的两个示例为 `BufferWithCurves()` 方法传递字符串文字。 第一个示例有效，因为可以将字符串文字转换为数值。 但第二个示例引发 `ArgumentException`。  
   
 ### <a name="i-calling-bufferwithcurves-on-multipoint-instance"></a>I. 对 MultiPoint 实例调用 BufferWithCurves()  
  以下示例返回两个 `GeometryCollection` 实例和一个 `CurvePolygon` 实例。  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.BufferWithCurves(1).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.5).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.BufferWithCurves(1).ToString(); 
+ SELECT @g.BufferWithCurves(1.5).ToString(); 
+ SELECT @g.BufferWithCurves(1.6).ToString();
+ ```  
   
  前两个**选择**语句返回`GeometryCollection`实例，因为参数*距离*小于或等于 1/2 到这两者之间的距离点 (1 1) 和 (1 4)。 第三个**选择**语句返回`CurvePolygon`实例，因为这两个缓冲的实例点 (1 1) 和 (1 4) 重叠。  
   

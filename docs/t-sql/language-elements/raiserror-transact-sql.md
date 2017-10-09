@@ -144,8 +144,10 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 15600, Level 15, State 1, Line 1`   
- `An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.`  
+ ```
+ Msg 15600, Level 15, State 1, Line 1   
+ An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
+ ```  
   
  *状态*  
  0 到 255 之间的整数。 负值默认为 1。 不应使用值大于 255。 

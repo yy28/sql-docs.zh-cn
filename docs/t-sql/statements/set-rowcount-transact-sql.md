@@ -84,13 +84,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Count`  
-  
- `-----------`  
-  
- `537`  
-  
- `(1 row(s) affected)`  
+ ```
+ Count 
+ ----------- 
+ 537 
+ 
+ (1 row(s) affected)
+ ```  
   
  现在，将 `ROWCOUNT` 设置为 `4` 并返回所有行，以演示仅返回 4 行。  
   
@@ -100,9 +100,9 @@ SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
-```  
   
- `(4 row(s) affected)`  
+(4 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT 在达到指定的行数后停止处理。 在下面的示例，请注意，20 个以上的行都满足的条件`AccountType = 'Assets'`。 但是，应用 SET ROWCOUNT 后，您可以看到并未返回所有行。  

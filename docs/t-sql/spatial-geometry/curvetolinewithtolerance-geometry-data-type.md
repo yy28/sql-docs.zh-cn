@@ -78,45 +78,46 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
  下面的示例演示如何设置容差影响`LineString`从返回的实例`CircularString`实例：  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+ ```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. 在包含一个 LineString 的 MultiLineString 实例上使用该方法  
  以下示例显示从仅包含一个 `MultiLineString` 实例的 `LineString` 实例中返回的内容：  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. 在包含多个 LineString 的 MultiLineString 实例上使用该方法  
  以下示例显示从包含多个 `MultiLineString` 实例的 `LineString` 实例中返回的内容：  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('MULTILINESTRING((1 3, 4 8, 6 9),(4 4, 9 18))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 对于调用 CurvePolygon 实例，将 relative 设置为 true  
  下面的示例使用`CurvePolygon`实例来调用`CurveToLineWithTolerance()`与*相对*设置为 true:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. 在 GeometryCollection 实例上使用该方法  
  以下示例在包含一个二维 `CurveToLineWithTolerance()` 实例和一个一维 `GeometryCollection` 实例的 `CurvePolygon` 上调用 `CircularString`。 `CurveToLineWithTolerance()` 将这两种圆弧线段类型转换为直线段类型，并以 `GeometryCollection` 类型返回它们。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('GEOMETRYCOLLECTION(CURVEPOLYGON( COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))), CIRCULARSTRING(4 4, 8 6, 9 5))'); 
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [CurveToLineWithTolerance &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   

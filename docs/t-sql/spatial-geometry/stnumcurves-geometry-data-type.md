@@ -50,20 +50,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. 对 CircularString 实例使用 STNumCurves()  
  下面的示例演示如何获取 `CircularString` 实例中的曲线数量：  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. 对 CompoundCurve 实例使用 STNumCurves()  
  下面的示例使用 `STNumCurves()` 返回 `CompoundCurve` 实例中的曲线数量。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)   

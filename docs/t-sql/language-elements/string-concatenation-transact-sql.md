@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. 使用多个字符串串联  
  以下示例串联多个字符串，形成一个长字符串，显示 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的副总裁的姓氏和名字的首字母。 逗号加在姓氏后，句点加在名字首字母后。  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. 使用串联的大型字符串
 下面的示例将多个字符串，以形成一个长字符串连接在一起，然后尝试计算最终的字符串的长度。 结果集中的最后一个长度为 16000，因为表达式计算将开始从左是， @x + @z + @y = > (@x + @z) + @y。 在本例中的结果 (@x + @z) 将被截断为 8000 个字节，然后@y添加到结果集中，这使得最终的字符串长度 16000。 由于@y为较大的值类型字符串时，不会发生截断。
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. 使用字符串串联  

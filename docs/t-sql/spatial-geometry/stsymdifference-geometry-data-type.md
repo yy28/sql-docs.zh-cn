@@ -68,20 +68,20 @@ SELECT @g.STSymDifference(@h).ToString();
 ### <a name="b-computing-the-symmetric-difference-between-a-curvepolygon-and-a-polygon-instance"></a>B. 计算 CurvePolygon 和 Polygon 实例之间的余集  
  下面的示例返回一个表示 `GeometryCollection` 和 `CurvePolygon` 之间余集的 `Polygon`。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `SELECT @h.STSymDifference(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ SELECT @h.STSymDifference(@g).ToString();
+ ```  
   
 ## <a name="c-using-stsymdifference-on-curvepolygon-instance-with-an-inscribed-polygon-instance"></a>C. 对 CurvePolygon 实例和内切的 Polygon 实例使用 STSymDifference()  
  下面的示例返回一个具有内部 `CurvePolygon` 环的 `Polygon` 实例，该实例表示比较的两个实例的余集。  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 2 -1, 2 1, 1 1, 1 -1))';`  
-  
- `SELECT @h.STSymDifference(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 2 -1, 2 1, 1 1, 1 -1))';  
+ SELECT @h.STSymDifference(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

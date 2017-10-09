@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>示例  
  以下示例授予用户 `EXECUTE` 对 XML 架构集合 `Invoices4` 的 `Wanida` 权限。 XML 架构集合 `Invoices4` 位于 `Sales` 数据库的 `AdventureWorks2012` 架构中。  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [拒绝 XML 架构集合权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   

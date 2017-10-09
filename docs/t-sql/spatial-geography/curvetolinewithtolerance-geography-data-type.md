@@ -65,36 +65,37 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
  下面的示例演示如何设置容差影响`LineString`从返回的实例`CircularString`实例：  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. 在包含一个 LineString 的 MultiLineString 实例上使用该方法  
  以下示例显示从仅包含一个 `MultiLineString` 实例的 `LineString` 实例中返回的内容：  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. 在包含多个 LineString 的 MultiLineString 实例上使用该方法  
  以下示例显示从包含多个 `MultiLineString` 实例的 `LineString` 实例中返回的内容：  
   
- `DECLARE @g geography;`  
-  
- `SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');`  
-  
- `SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();`  
+ ```
+ DECLARE @g geography;  
+ SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
+ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+ ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 对于调用 CurvePolygon 实例，将 relative 设置为 true  
  下面的示例使用`CurvePolygon`实例来调用`CurveToLineWithTolerance()`与*相对*设置为 true:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';`  
-  
- `SELECT @g.CurveToLineWithTolerance(.5,1).ToString();`  
+ ```
+ DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
+ SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  

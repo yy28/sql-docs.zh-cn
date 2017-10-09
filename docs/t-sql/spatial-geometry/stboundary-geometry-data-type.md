@@ -62,20 +62,20 @@ SELECT @g.STBoundary().ToString();
 ### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>B. 对具有相同终结点的 LineString 实例使用 STBoundary()  
  下面的示例创建一个具有相同终结点的有效 `LineString` 实例。 `STBoundary()` 将返回一个空的 `GeometryCollection`。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ### <a name="c-using-stboundary-on-a-curvepolygon-instance"></a>C. 对 CurvePolygon 实例使用 STBoundary()  
  下面的示例对 `STBoundary()` 实例使用 `CurvePolygon`。 `STBoundary()` 将返回一个 `CircularString` 实例。  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ## <a name="see-also"></a>另请参阅  
  [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
