@@ -58,7 +58,7 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 
-1. 从 Docker Hub 中拉出 SQL Server 自 2017 年 Linux 容器映像。
+1. 从 Docker Hub 中拉出 SQL Server 2017   Linux 容器映像。
 
     ```bash
     docker pull microsoft/mssql-server-linux:2017-latest
@@ -68,7 +68,7 @@ ms.lasthandoff: 10/02/2017
     > 对于 Linux，具体取决于您系统和用户的配置，你可能需要开头每`docker`命令`sudo`。
 
     > [!NOTE]
-    > 上面的命令中提取 SQL Server 自 2017 年 GA 容器映像。 如果你想要请求的特定映像，则添加冒号和标记名称 (例如， `microsoft/mssql-server-linux:rc1`)。 若要查看所有可用映像，请参阅[mssql server linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+    > 上面的命令中提取 SQL Server   2017   GA 容器映像。 如果你想要请求的特定映像，则添加冒号和标记名称 (例如， `microsoft/mssql-server-linux:rc1`)。 若要查看所有可用映像，请参阅[mssql server linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
 
 1. 若要使用 Docker 运行容器映像，可以使用以下命令从 bash shell (Linux/macOS):
 
@@ -91,10 +91,10 @@ ms.lasthandoff: 10/02/2017
     |-----|-----|
     | **-e ACCEPT_EULA = Y** |  设置**ACCEPT_EULA**变量为任何值，以确认你接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
     | **-e MSSQL_SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定你自己的强密码至少 8 个字符并达到[SQL 服务器的密码要求](../relational-databases/security/password-policy.md)。 SQL Server 映像的必需设置。 |
-    | **-e MSSQL_PID = 开发人员** | 指定的版本或产品密钥。 在此示例中，随意许可的开发人员版适用于非生产测试。 其他值，请参阅[与环境变量在 Linux 上配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。 |
+    | **-e MSSQL_PID = Developer** | 指定的版本或产品密钥。 在此示例中，随意许可的开发人员版适用于非生产测试。 其他值，请参阅[与环境变量在 Linux 上配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。 |
     | **-p 1401:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听 TCP 1433 容器中，并且这公开给端口 1401，主机上。 |
     | **-名称 sql1** | 指定容器，而不是一个随机生成的自定义名称。 如果你运行多个容器，你无法重用此相同的名称。 |
-    | **microsoft/mssql-服务器-linux:2017-最新** | SQL Server 自 2017 年 Linux 容器映像。 |
+    | **microsoft/mssql-server-linux:2017-latest** | SQL Server  2017   Linux 容器映像。 |
 
 
 1. 若要查看你的 Docker 容器，请使用`docker ps`命令。
