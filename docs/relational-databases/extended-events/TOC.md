@@ -8,6 +8,7 @@
 # [扩展事件引擎](sql-server-extended-events-engine.md)  
 # [扩展事件会话](sql-server-extended-events-sessions.md)  
 # [扩展事件工具](extended-events-tools.md)  
+## [使用 SSMS XEvent Profiler](use-the-ssms-xe-profiler.md)
 ## [使用 system_health 会话](use-the-system-health-session.md)  
 ## [对扩展事件使用 PowerShell 提供程序](use-the-powershell-provider-for-extended-events.md)  
 # [更改扩展事件会话](alter-an-extended-events-session.md)  

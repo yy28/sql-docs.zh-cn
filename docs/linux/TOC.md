@@ -57,6 +57,7 @@
 ### [使用 bcp 批量复制](sql-server-linux-migrate-bcp.md)
 
 ## [提取、转换和加载](sql-server-linux-migrate-ssis.md)
+### [限制和已知问题](sql-server-linux-ssis-known-issues.md)
 ### [配置 SSIS](sql-server-linux-configure-ssis.md)
 ### [计划 SSIS 包](sql-server-linux-schedule-ssis-packages.md)
 

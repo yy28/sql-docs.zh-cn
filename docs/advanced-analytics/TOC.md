@@ -104,15 +104,24 @@
 
 # [操作指南](r/sql-server-machine-learning-tasks.md)
 
-## [R 包管理](r/r-package-management-for-sql-server-r-services.md)
+## [SQL Server 的 R 包管理](r/r-package-management-for-sql-server-r-services.md)
+
+### [在 SQL Server 上安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
 
 ### [为 SQL Server 实例启用 R 包管理](r/r-package-how-to-enable-or-disable.md)
-### [从何处获取 R 包](r/installing-and-managing-r-packages.md)
-### [在 SQL Server 上安装其他机器学习包](r/install-additional-r-packages-on-sql-server.md)
-### [使用 miniCRAN 创建本地包存储库](r/create-a-local-package-repository-using-minicran.md)
+
 ### [确定要在 SQL Server 上安装的包](r/determine-which-packages-are-installed-on-sql-server.md)
-### [用户包库](r/packages-installed-in-user-libraries.md)
-### [同步 SQL Server 使用的 R 包](r/package-install-uninstall-and-sync.md)
+
+### [使用 RevoScaleR 函数在 SQL Server 上查找或安装 R 包](r/use-revoscaler-to-manage-r-packages.md)
+
+### [同步 SQL Server 上安装的 R 包](r/package-install-uninstall-and-sync.md)
+
+### [随 SQL Server 一起安装的 R 包](r/installing-and-managing-r-packages.md)
+
+### [使用 miniCRAN 创建本地包存储库](r/create-a-local-package-repository-using-minicran.md)
+
+### [避免用户 R 包库出错](r/packages-installed-in-user-libraries.md)
+
 
 ## 数据探索和建模
 
