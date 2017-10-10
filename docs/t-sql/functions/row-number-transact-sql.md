@@ -78,7 +78,7 @@ ROW_NUMBER ( )
 
 以下查询按字母顺序返回四个系统表。
 
-```
+```t-sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -97,7 +97,7 @@ ORDER BY name ASC;
 
 若要添加的每一行的前面行号列，添加具有的列`ROW_NUMBER`函数，在这种情况下名为`Row#`。 你必须将移动`ORDER BY`达子句`OVER`子句。
 
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -116,7 +116,7 @@ WHERE database_id < 5;
 
 添加`PARTITION BY`上的子句`recovery_model_desc`列中，将重新启动时的编号`recovery_model_desc`值更改。 
  
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -137,7 +137,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. 返回销售人员的行号  
  以下示例根据销售人员年初至今的销售额，计算 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 中销售人员的行号。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -171,7 +171,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. 返回行的子集  
  下面的示例按 `SalesOrderHeader` 的顺序计算 `OrderDate` 表中所有行的行号，并只返回行 `50` 到 `60`（含）。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -188,7 +188,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. 将 ROW_NUMBER () 与 PARTITION 一起使用  
  以下示例使用 `PARTITION BY` 参数按列 `TerritoryName` 对结果集进行分区。 在 `ORDER BY` 子句中指定的 `OVER` 子句按列 `SalesYTD` 对每个分区中的行进行排序。 `ORDER BY` 语句中的 `SELECT` 按 `TerritoryName` 子句对整个查询结果集进行排序。  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -226,7 +226,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 返回销售人员的行号  
  下面的示例返回`ROW_NUMBER`销售代表基于其分配的销售定额。  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -255,7 +255,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. 将 ROW_NUMBER () 与 PARTITION 一起使用  
  以下示例显示了将 `ROW_NUMBER` 函数与 `PARTITION BY` 参数结合使用的情况。 这将导致`ROW_NUMBER`函数对行进行编号每个分区中。  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 
