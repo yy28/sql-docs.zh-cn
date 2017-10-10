@@ -1,7 +1,7 @@
 ---
 title: "计算列 (SSAS 表格) |Microsoft 文档"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>计算列
   计算的列，在表格模型中，使你能够添加新数据与你的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
-  
-> [!NOTE]  
->  在 DirectQuery 模式下，表格模型不支持计算列。 有关详细信息，请参阅[DirectQuery 模式下](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> 优势  
@@ -78,7 +76,7 @@ ms.lasthandoff: 09/01/2017
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建计算的列](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
+|[创建计算列](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|本主题中的任务描述了如何向表中添加新的计算列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [表和列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [计算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

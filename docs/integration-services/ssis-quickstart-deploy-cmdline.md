@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>部署从 ISDeploymentWizard.exe 在命令提示符的 SSIS 项目
 此快速入门教程演示如何通过运行 Integration Services 部署向导，将部署从命令提示符的 SSIS 项目`ISDeploymentWizard.exe`。
 
-有关 Integration Services 部署向导的详细信息，请参阅[Integration Services 部署向导](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+有关 Integration Services 部署向导的详细信息，请参阅[Integration Services 部署向导](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
 1. 打开命令提示符窗口。

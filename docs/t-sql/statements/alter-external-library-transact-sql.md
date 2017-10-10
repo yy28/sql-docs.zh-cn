@@ -1,7 +1,7 @@
 ---
 title: "ALTER 外部库 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 541419770828e01cca82fb33ead1b22170f8e4f3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部库 (Transact SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-修改现有库内容。  
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+修改现有的外部包库的内容。
 
 ## <a name="syntax"></a>语法
 
@@ -77,6 +78,13 @@ WITH ( LANGUAGE = 'R' )
 
 指定包含库文件的位置的外部数据源的名称。 此位置应引用 Azure blob 存储路径。 若要创建外部数据源，使用[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](create-external-data-source-transact-sql.md)。
 
+> [!IMPORTANT] 
+> 目前，blob 不支持为 SQL Server 2017 版本中的数据源中。
+
+**library_bits**
+
+为十六进制文字，类似于程序集指定包的内容。 此选项允许用户创建一个要更改库，如果它们有所要求的权限，但不是能文件路径访问服务器可访问的任何文件夹的库。
+
 **平台 = WINDOWS**
 
 指定内容库的平台。 修改现有的库来添加不同的平台时，此值是必需的。 Windows 是唯一受支持的平台。
@@ -84,22 +92,29 @@ WITH ( LANGUAGE = 'R' )
 ## <a name="remarks"></a>注释
 
 对于 R 语言中，包必须准备与压缩的存档文件的形式。适用于 Windows 的 ZIP 扩展。 目前，支持仅 Windows 平台。  
+
 `ALTER EXTERNAL LIBRARY`语句仅将库 bits 上载到数据库。 已修改的库用户运行的外部脚本之后，通过执行之前未实际安装[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
 ## <a name="permissions"></a>Permissions
+
 需要`ALTER ANY EXTERNAL LIBRARY`权限。 创建外部库，用户可以更改该外部的库。
 
 ## <a name="examples"></a>示例
 
 下面的示例修改了名为 customPackage 外部库。
 
-```sql  
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用文件的库的内容替换
+
+下面的示例修改外部库调用 customPackage，使用包含的更新的位的压缩的文件。
+
+```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```  
-然后执行`sp_execute_external_script`过程中，若要安装的库。
+
+若要安装更新的库，请执行存储的过程`sp_execute_external_script`。
 
 ```sql   
 EXEC sp_execute_external_script 
@@ -107,15 +122,22 @@ EXEC sp_execute_external_script
 @script=N'
 # load customPackage
 library(customPackage)
-
 # call customPackageFunc
 OutputDataSet <- customPackageFunc()
 '
-with result sets (([result] int));    
+WITH RESULT SETS (([result] int));
 ```
 
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Alter 使用字节流的现有库
+
+下面的示例通过将新的 bits 传递为十六进制文本更改现有的库。
+
+```SQL
+ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+```
 
 ## <a name="see-also"></a>另请参阅  
+
 [创建外部库 (Transact SQL)](create-external-library-transact-sql.md)
 [删除外部库 (Transact SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

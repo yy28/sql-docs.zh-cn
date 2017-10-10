@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>查看和浏览使用 SQL （演练） 的数据
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    如果表中看不到任何数据，请参考上一主题中的 [疑难解答](/walkthrough-prepare-the-data.md) 部分。
+    如果表中看不到任何数据，请参考上一主题中的 [疑难解答](walkthrough-prepare-the-data.md) 部分。
 
 4. 此数据表已通过添加[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)针对基于集的计算进行了优化。 运行此语句，以生成对表的快速摘要。
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>下一课
 
-[使用 R 汇总数据](/walkthrough-view-and-summarize-data-using-r.md)
+[使用 R 汇总数据](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[准备使用 PowerShell 的数据](/walkthrough-prepare-the-data.md)
+[准备使用 PowerShell 的数据](walkthrough-prepare-the-data.md)
 

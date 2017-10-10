@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置 （类型映射） (SybaseToSQL)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 请参阅 Sybase 类型映射的默认 SSMA 下一节中的表。  
   
-**“添加”**  
+**添加**  
 单击此项可将数据类型添加到映射列表。  
   
 **编辑**  
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
 |**不同的 char [\*...8000]**|**varchar [\*]**|  
 |**不同的 char [8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\&# 42;]**|**varchar(max)**|  
+|**char [8001..\*;]**|**varchar(max)**|  
 |**字符**|**char**|  
 |**不同的字符**|**varchar**|  
 |**不同的字符 [\*...8000]**|**varchar [\*]**|  

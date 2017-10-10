@@ -19,11 +19,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -38,11 +38,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>支持的 SharePoint 与 Reporting Services 组件之间的组合
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>支持的 SharePoint 和 Reporting Services 组件的组合
 
  下表汇总了报表服务器、SharePoint 产品的 Reporting Services 外接程序和 SharePoint 产品之间支持的组合。 不支持下表中未列出的组合
 
-### <a name="supported-combinations"></a>支持的组合
+### <a name="supported-combinations"></a>受支持的组合
 
 ||报表服务器|外接程序|SharePoint 版本|
 |-|-------------------|-------------|------------------------|
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 
  有关外接程序下载页的链接，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
 
- **其他说明：**
+ **其他注意事项：**
 
 - 请确保升级，以升级场中所有的 SharePoint 服务器。 这包括应用和 Web 前端服务器。
 
@@ -86,4 +86,4 @@ ms.lasthandoff: 08/09/2017
  [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

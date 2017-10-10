@@ -1,7 +1,7 @@
 ---
-title: "启用和禁用 RDL 沙盒处理 |Microsoft 文档"
+title: "启用和禁用 RDL 沙盒处理的 Reporting Services SharePoint 集成模式下 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,27 +10,33 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a435c6f6b5dc2d9df676f504837393d448820a4
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
-  通过 RDL（报表定义语言）沙盒处理功能，您可以在多个用户使用报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的资源。 相关的示例是宿主服务方案，在此方案中，您可能维护多个用户（并且可能是不同的公司）使用的报表服务器的单个 Web 场。 作为报表服务器管理员，您可以启用此功能以帮助实现以下目标：  
+# <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>启用和禁用 RDL 沙盒处理的 Reporting Services SharePoint 集成模式下
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+RDL （报表定义语言） 沙盒处理功能允许你检测并限制特定类型的资源，通过使用报表服务器的单个 web 场的多个租户的环境中的单个租户的使用情况。 相关的示例是宿主服务方案，在此方案中，您可能维护多个用户（并且可能是不同的公司）使用的报表服务器的单个 Web 场。 作为报表服务器管理员，您可以启用此功能以帮助实现以下目标：  
   
 -   限制外部资源的大小。 外部资源包括图像、.xslt 文件和地图数据。  
   
 -   在报表发布时，限制在表达式文本中使用的类型和成员。  
   
--   在报表处理时，限制文本长度和表达式返回值的大小。  
-  
+-   在报表处理时，限制文本长度和表达式返回值的大小。
+
+> [!NOTE]
+> 与 SharePoint 的 reporting Services 集成 SQL Server 2016 之后将不再可用。
+
  在启用 RDL 沙盒处理时，禁用以下功能：  
   
 -   中的自定义代码**\<代码 >**报表定义的元素。  
@@ -41,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
  本主题介绍中的每个元素\< **RDLSandboxing**> RSReportServer.Config 文件中的元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-## <a name="example-configuration"></a>配置示例  
+## <a name="example-configuration"></a>示例配置
  下面的示例演示的设置和示例值\< **RDLSandboxing**> RSReportServer.Config 文件中的元素。  
   
 ```  
@@ -59,9 +65,10 @@ ms.lasthandoff: 08/09/2017
       <Deny>StrDup</Deny>  
    </Members>  
 </RDLSandboxing>  
-```  
-  
-## <a name="configuration-settings"></a>配置设置  
+```
+
+## <a name="configuration-settings"></a>配置设置
+
  下表提供了有关配置设置的信息。 将按设置在配置文件中的显示顺序依次列出：  
   
 |设置|Description|  
@@ -73,13 +80,14 @@ ms.lasthandoff: 08/09/2017
 |**类型**|在 RDL 表达式内允许的成员的列表。|  
 |**Allow**|RDL 表达式中允许的一个类型或一组类型。|  
 |**命名空间**|**Allow** 的属性，它是包含应用于 Value 的一个或多个类型的命名空间。 此属性不区分大小写。|  
-|**AllowNew**|有关的布尔值属性**允许**控制是否允许类型的新实例可以在 RDL 表达式中或在 RDL 创建**\<类 >**元素。<br /><br /> 注意：在启用 **RDLSandboxing** 时，无论 **AllowNew**的设置如何，都不能在 RDL 表达式中创建新数组。|  
-|**“值”**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
+|**AllowNew**|有关的布尔值属性**允许**控制是否允许类型的新实例可以在 RDL 表达式中或在 RDL 创建**\<类 >**元素。<br /><br /> 当**RDLSandboxing**启用时，不能在 RDL 表达式中，而不考虑的设置创建新的阵列**AllowNew**。|  
+|**值**|**Allow** 的值，作为在 RDL 表达式中要允许的类型的名称。 值 **\*** 指示命名空间中的所有类型都是允许的。 此属性不区分大小写。|  
 |**成员**|有关在中包含的类型的列表**\<类型 >**元素，不允许在 RDL 表达式中的成员名称的列表。|  
-|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 注意：在为某一成员指定了 **Deny** 后，不允许所有类型的具有此名称的所有成员。|  
+|**拒绝**|在 RDL 表达式中不允许的成员的名称。 此属性不区分大小写。<br /><br /> 当**拒绝**指定成员，则不允许具有此名称的所有类型的所有成员。|  
   
-## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>当启用 RDL 沙盒处理时使用表达式  
- 您可以修改 RDL 沙盒处理功能，以便通过以下方式管理表达式使用的资源：  
+## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>启用 RDL 沙盒处理时使用表达式
+
+您可以修改 RDL 沙盒处理功能，以便通过以下方式管理表达式使用的资源：  
   
 -   限制用于表达式的字符数。  
   
@@ -96,7 +104,8 @@ ms.lasthandoff: 08/09/2017
   
  在运行时验证 RDL 表达式结果。 在发布报表时在报表定义中验证 RDL 表达式。 监控报表服务器跟踪日志以发现冲突。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-### <a name="working-with-types"></a>使用类型  
+### <a name="working-with-types"></a>使用类型
+
  在您将某一类型添加到允许列表中时，即控制用于访问 RDL 表达式的以下入口点：  
   
 -   某一类型的静态成员。  
@@ -139,7 +148,8 @@ ms.lasthandoff: 08/09/2017
   
  将一个类型从某一自定义程序集添加到允许列表并不隐式授予对该程序集的执行权限。 您必须专门修改代码访问安全文件，并对您的程序集提供执行权限。 有关详细信息，请参阅 [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)。  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>维护\<拒绝 > 的成员的列表  
+#### <a name="maintaining-the-deny-list-of-members"></a>维护\<拒绝 > 的成员的列表
+
  在您将某一新类型添加到允许列表时，使用以下列表可以确定何时可能必须更新成员的阻止列表：  
   
 -   在您使用引入新类型的版本更新自定义程序集时。  
@@ -152,7 +162,8 @@ ms.lasthandoff: 08/09/2017
   
 -   在您更新报表服务器以处理更高版本的 RDL 架构时，因为新成员可能已添加到 RDL 类型中。  
   
-### <a name="working-with-operators-and-new"></a>使用运算符和 New  
+### <a name="working-with-operators-and-new"></a>使用运算符和 new
+
  默认情况下，始终允许 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] New **以外的所有**.NET Framework 语言运算符。 **新建**由控制运算符**AllowNew**属性**\<允许 >**元素。 始终允许其他语言运算符（如默认集合取值函数运算符 **!**） 和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework 转换宏（如 **CInt**）。  
   
  不支持将运算符添加到阻止列表（包括自定义运算符）。 要排除某一类型的运算符，必须执行以下操作：  
@@ -169,8 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   将该类添加到允许列表中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
-  
+
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

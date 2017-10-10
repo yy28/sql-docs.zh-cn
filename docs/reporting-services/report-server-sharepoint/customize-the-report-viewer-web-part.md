@@ -1,7 +1,7 @@
 ---
-title: "自定义报表查看器 Web 部件 |Microsoft 文档"
+title: "自定义报表查看器 web 部件 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,65 +10,71 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SharePoint integration [Reporting Services], viewing reports
-- Web Parts [Reporting Services]
-- Report Viewer Web Part [Reporting Services]
-ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 38f23cf5d75c47be55e1820a4421a507a73df54e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
-  可以使用报表查看器 Web 部件来查看配置为 SharePoint 集成模式的报表服务器上运行的报表。 可显示的报表包括报表定义 (.rdl) 文件和报表生成器报表。 报表在报表查看器 Web 部件的新页面中自动打开，但如果您希望始终在某现有网页中显示特定报表，也可以将报表查看器 Web 部件添加至该网页或站点。  
+# <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 web 部件
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+可以使用报表查看器 web 部件来查看配置为 SharePoint 集成的报表服务器运行的报表。 可显示的报表包括报表定义 (.rdl) 文件和报表生成器报表。 报表在报表查看器 web 部件中的新页面中会自动打开，但你还可以添加报表查看器 web 部件到现有的 web 页或站点如果你想要始终可以看到该页面上的特定报表。
+
+> [!NOTE]
+> 尽管它们具有相同的名称，报表查看器 web 部件，通过安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]添加中是不同的 RSWebParts.cab 文件中包含的报表查看器 web 部件。 本主题中的说明是专门用于通过安装报表查看器 web 部件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序。
+
+ 你可以通过以下方式自定义报表查看器 web 部件：  
   
- 您可以按如下方式自定义报表查看器 Web 部件：  
-  
--   通过设置属性更改 Web 部件的外观。  
+-   通过设置属性更改 web 部件的外观。  
   
 -   选择报表工具栏上可用的交互式报表功能。  
   
--   指定可用的视图区域。 报表查看器 Web 部件包含报表视图区域、参数区域和凭据区域。  
+-   指定可用的视图区域。 报表查看器 web 部件具有报表视图区域、 参数区域和凭据区域。  
   
- 您不能将报表查看器 Web 部件扩展为支持不同文件类型，并且不能用自定义工具栏替换报表工具栏或向现有工具栏添加新功能。 如果需要自定义标准功能，应创建自定义 Web 部件。  
+ 你无法扩展报表查看器 web 部件，以支持不同的文件类型，并且不能通过自定义工具栏替换报表工具栏或向现有工具栏添加新功能。 如果你需要的标准功能的自定义项，则应创建自定义 web 部件。  
+
+## <a name="setting-web-part-properties"></a>设置 web 部件属性
+
+ Web 部件具有用于配置特定功能的自定义属性。 Web 部件还具有针对所有 web 部件标准的常见属性。  
   
-## <a name="setting-web-part-properties"></a>设置 Web 部件属性  
- Web 部件具有用于配置特定功能的自定义属性。 Web 部件还具有针对所有 Web 部件的标准通用属性。  
-  
-### <a name="change-default-properties"></a>更改默认属性  
- 报表查看器 Web 部件的默认属性最适合按照需要从库或文件夹中打开报表。 默认情况下，工具栏上显示所有可用控件，并且将高度和宽度设置为可以使用网页上的所有可用空间。 如果您希望修改默认属性，可以通过 **“网站设置”**自定义 Web 部件。  
+### <a name="change-default-properties"></a>更改默认属性
+
+ 报表查看器 web 部件具有非常适用于打开报表按需从库或文件夹的默认属性。 默认情况下，所有可用控件显示的工具栏上，并高度和宽度设置为在网页上使用的所有可用空间。 如果你想要修改的默认属性，则可以自定义 web 部件通过**站点设置**。  
   
 1.  在 **“网站操作”** 菜单上，单击 **“网站设置”**。  
   
-2.  在“库”下，单击 **“Web 部件”**。  
+2.  在库下单击**web 部件**。  
   
 3.  单击 **ReportViewer.dwp**。  
   
 4.  打开工具窗格并设置要使用的属性。  
   
-### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>自定义网页中的嵌入式报表查看器  
- 您可以设置属性以使报表查看器恰好适合网页大小。 报表查看器可以使用与所在页面相同的样式与颜色。 您可以隐藏全部或部分工具栏、文档结构图和参数区域以使所分配空间内的报表视图区域最大化。 报表始终使用创建时为其定义的样式。在将报表发布至 SharePoint 库后，不能再自定义报表外观。  
+### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>自定义网页中嵌入的报表查看器
+
+ 你可以设置属性以使报表查看器恰好适合网页。 报表查看器可以使用与所在页面相同的样式与颜色。 您可以隐藏全部或部分工具栏、文档结构图和参数区域以使所分配空间内的报表视图区域最大化。 报表始终使用创建时为其定义的样式。在将报表发布至 SharePoint 库后，不能再自定义报表外观。  
   
- 如果要将报表查看器 Web 部件嵌入网页，应将 **Report URL** 属性设置为特定报表。 如果未设置，报表查看器将显示有关链接至报表的说明。 您不能自定义或删除这些说明。  
+ 如果您要在网页中嵌入报表查看器 web 部件，则应设置**报表 URL**到特定报表的属性。 如果未设置，报表查看器将显示有关链接至报表的说明。 您不能自定义或删除这些说明。  
   
-### <a name="custom-properties-of-the-report-viewer-web-part"></a>报表查看器 Web 部件的自定义属性  
- 设置自定义属性时请注意：某些属性仅在将报表查看器 Web 部件嵌入页面时才会用到。 例如，其中包括“标题”、“高度”、“宽度”、“部件版式类型”和“区域”等。 无论报表查看器是显示在页面内还是以整页模式打开报表，均可以使用其他属性（例如“工具栏”设置和“参数”设置）。  
+### <a name="custom-properties-of-the-report-viewer-web-part"></a>报表查看器 web 部件的自定义属性
+
+ 设置自定义属性时，请注意仅在报表查看器 web 部件嵌入页面时使用某些属性。 例如，其中包括“标题”、“高度”、“宽度”、“部件版式类型”和“区域”等。 无论报表查看器是显示在页面内还是以整页模式打开报表，均可以使用其他属性（例如“工具栏”设置和“参数”设置）。  
   
- 下面列出了报表查看器 Web 部件的自定义属性。  
+ 下面列出了报表查看器 web 部件的自定义属性。  
   
 |属性|Description|  
 |--------------|-----------------|  
 |报告|SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 为了在设置其他属性时能够获得最佳结果，请在指定报表 URL 后单击“应用”。|  
-|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效的值包括**_Top**， **_Blank**，和**_Self**。 **_Top**使用当前的窗口中， **_Blank**加载在新浏览器窗口中，文档和**_Self**打开当前帧中的文档。 尽管**_p**目标属性在 HTML 中，不要使用它在页中嵌入报表查看器 Web 部件是有效的值。|  
-|自动生成 Web 部件标题|生成的标题，包含报表查看器 Web 部件名称和报表名称，中间用短划线分隔。 如果报表没有标题，则使用报表的文件名。 将 Web 部件添加到页面时，即可看到此标题。 如果选中此复选框，则每次刷新页面时都会生成标题。|  
-|自动生成 Web 部件标题详细信息链接|生成的显示在 Web 部件之上的超链接。 单击此链接可以在新页面中以整页模式打开报表。|  
+|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效的值包括**_Top**， **_Blank**，和**_Self**。 **_Top**使用当前的窗口中， **_Blank**加载在新浏览器窗口中，文档和**_Self**打开当前帧中的文档。 尽管**_p**目标属性在 HTML 中，不要使用它在页中嵌入报表查看器 web 部件是有效的值。|  
+|自动生成 web 部件标题|生成的标题，包括报表查看器 web 部件的名称加上的报表，通过短划线分隔的名称。 如果报表没有标题，则使用报表的文件名。 当将 web 部件添加到页上，即可看到此标题。 如果选中此复选框，则每次刷新页面时都会生成标题。|  
+|自动生成 web 部件标题详细信息链接|显示 web 部件的上方生成超链接。 单击此链接可以在新页面中以整页模式打开报表。|  
 |显示报表生成器菜单项。|显示或隐藏用于打开报表生成器的 **“操作”** 菜单选项。|  
 |显示订阅菜单项|显示或隐藏用于为报表创建订阅的 **“操作”** 菜单选项。|  
 |显示打印菜单项|显示或隐藏用于打印报表的 **“操作”** 菜单选项。|  
@@ -82,22 +88,25 @@ ms.lasthandoff: 08/09/2017
 |工具栏位置|确定工具栏在报表查看器中的位置。 有效值包括 **Top** 和 **Bottom**。|  
 |提示区域|有效值包括 **Displayed**、 **Collapsed**和 **Hidden**。 **Displayed** 为包括参数化值的报表显示参数区域，这需要用户在运行报表之前进行输入。 如果已指定所有报表参数并且不希望用户看到参数区域，请使用 **Hidden** 。|  
 |参数区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
-|文档结构图|报表中定义的报表导航控件，用于提供对报表特定部分的一键式访问。 可在 HTML 报表中使用此控件。 文档结构图显示在报表视图区域旁的可折叠区域中。 有效值包括 **Displayed**、 **Collapsed**和 **Hidden**。 如果已为报表定义文档结构图，并且未在 Web 部件属性中将其选为隐藏或折叠，则默认情况下将展开此区域。 如果文档结构图处于折叠状态，可以单击箭头将其展开。|  
+|文档结构图|报表中定义的报表导航控件，用于提供对报表特定部分的一键式访问。 可在 HTML 报表中使用此控件。 文档结构图显示在报表视图区域旁的可折叠区域中。 有效值包括 **Displayed**、 **Collapsed**和 **Hidden**。 如果文档结构图为报表定义的除非标记为隐藏或折叠的 web 部件属性中，默认情况下将展开此区域。 如果文档结构图处于折叠状态，可以单击箭头将其展开。|  
 |文档结构图区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
-|加载参数|检索报表的参数属性。 并非所有报表都具有参数。 如果报表不具有参数，则不返回任何值。 如果为刚上载的报表设置属性，可能会收到错误信息，指明数据源连接已删除。 如果遇到这种情况，请重置连接并在指定连接后完成参数属性的设置。 有关如何设置连接的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。<br /><br /> 为了达到最佳效果，请在单击“加载参数”之前单击 **“应用”** 。<br /><br /> 加载参数属性之后，可以设置它们，方法与在报表的参数属性页上进行设置相同。 有关如何设置参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
-  
-## <a name="customizing-the-toolbar"></a>自定义工具栏  
+|加载参数|检索报表的参数属性。 并非所有报表都具有参数。 如果报表不具有参数，则不返回任何值。 如果为刚上载的报表设置属性，可能会收到错误信息，指明数据源连接已删除。 如果遇到这种情况，请重置连接并在指定连接后完成参数属性的设置。 有关如何设置连接的详细信息，请参阅[创建和管理共享数据源 &#40;Reporting Services SharePoint 集成模式 &#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> 为了达到最佳效果，请在单击“加载参数”之前单击 **“应用”** 。<br /><br /> 加载参数属性之后，可以设置它们，方法与在报表的参数属性页上进行设置相同。 有关如何设置参数的详细信息，请参阅[发布报表 &#40; 上设置的参数Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+
+## <a name="customizing-the-toolbar"></a>自定义工具栏
+
  工具栏显示在标题下方并在报表的顶部扩展。 工具栏上具有 **“操作”** 菜单，并可按页浏览分页报表、刷新和缩放。 它还包括适用于具有文档结构图的报表的文档结构图控件。 **“操作”** 菜单中包括用于导出报表、搜索报表中的文本或数字、打印报表以及在报表生成器中打开报表的命令。  
   
- 您不能向  **“操作”** 菜单添加新命令，但可以通过更改对用户可见的选项来对其进行自定义。 若要更改工具栏按钮和控件的可见性，您需要更改 Web 部件的 **“工具栏项可见性”** 部分中的选项。 此外，还可以通过使 **“打印”** 命令或特定导出格式在报表服务器上不可用，从而将这些功能删除。 页导航控件可用于具有分页符的报表；不具分页符的报表为长度可变的单页报表。 “刷新”功能可使用报表的当前参数重新处理报表。 若要在一行中显示所有控件，请将 Web 部件的总体宽度设为至少 400 像素。  
+ 您不能向  **“操作”** 菜单添加新命令，但可以通过更改对用户可见的选项来对其进行自定义。 若要更改工具栏按钮和控件的可见性，你可以更改中的选项**工具栏项可见性**web 部件的部分。 此外，还可以通过使 **“打印”** 命令或特定导出格式在报表服务器上不可用，从而将这些功能删除。 页导航控件可用于具有分页符的报表；不具分页符的报表为长度可变的单页报表。 **刷新**重新处理报表使用的是最新的报表的参数。 若要显示在一行上的所有控件，请将 web 部件的总体宽度设为至少 400 像素。  
+
+## <a name="customizing-the-viewing-area"></a>自定义查看区域
+
+ 视图区域用于显示报表。 使用参数区域和凭据区域时，它们还将与报表视图区域共存。 需要凭据时，凭据区域将显示在空报表视图区域的旁边。 在用户提供凭据并运行报表后，凭据区域将关闭。 若要自定义提示用户设置凭据的文本，请修改数据源连接属性。 有关详细信息，请参阅[创建和管理共享数据源 &#40;Reporting Services SharePoint 集成模式 &#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
-## <a name="customizing-the-viewing-area"></a>自定义视图区域  
- 视图区域用于显示报表。 使用参数区域和凭据区域时，它们还将与报表视图区域共存。 需要凭据时，凭据区域将显示在空报表视图区域的旁边。 在用户提供凭据并运行报表后，凭据区域将关闭。 若要自定义提示用户设置凭据的文本，请修改数据源连接属性。 有关详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 参数区域提供用于在运行报表之前输入值的字段。 仅在报表定义包括参数时才使用此区域。 当显示的参数或凭据区域时，报表视图被调整以使用 web 部件的其余宽度。 Web 部件上要自定义参数的宽度，可以设置属性。 也可以定义显示在页面上各个参数旁的标签。 有关如何修改参数标签的详细信息，请参阅[发布报表 &#40; 上设置的参数Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
- 参数区域提供用于在运行报表之前输入值的字段。 仅在报表定义包括参数时才使用此区域。 显示参数或凭据区域时，将调整报表视图以充分利用 Web 部件的其余部分。 可以通过设置 Web 部件的属性来自定义参数区域的宽度。 也可以定义显示在页面上各个参数旁的标签。 有关如何修改参数标签的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
-  
-## <a name="see-also"></a>另请参阅  
- [在 SharePoint 站点上的报表查看器 Web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [将报表查看器 Web 部件添加到 Web 页 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+ [在 SharePoint 站点上报表查看器 web 部件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [将报表查看器 web 部件添加到 web 页](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

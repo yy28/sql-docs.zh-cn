@@ -2,7 +2,7 @@
 title: "什么 &#39; 机器学习服务中的新增功能 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>什么是 SQL Server 中的机器学习服务中的新增功能
@@ -37,6 +37,16 @@ SQL Server 2017 中添加了对常用 Python 语言的支持，机器学习变�
 
 Microsoft SQL Server 中的机器学习 Server 现在提供用于生成和部署 R 或 Python 中的计算机学习解决方案的全面支持。 下面是此版本的要点：
 
+> [!IMPORTANT]
+> 
+> 在 Linux 上，或在 Azure SQL 数据库中运行 SQL Server 时，机器学习服务，包括使用 R 或 Python，当前不支持。 寻找更高版本中的更改。
+> 
+> Linux 版本目前支持本机评分使用预测函数。
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>什么是 SQL Server 自 2017 年的累积更新 1 中的新增功能
+
+你现在可以升级到机学习服务器 9.2.1 的你的 Python 和 R 组件。 此版本中很多增强功能的亮点**revoscalepy**和**RevoScaleR**，包括性能改进。
+ 
 ### <a name="in-database-python-integration"></a>数据库 Python 集成
 
 可以在存储过程中运行 Python，也可以执行 Python 远程作为计算上下文中使用 SQL Server 计算机。 此集成将打开新的途径为 Python 开发人员和数据科研人员要使用的 SQL Server 功能的大型社区。 

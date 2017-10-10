@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>计划在 Azure 上的 SSIS 包的执行
@@ -58,13 +58,13 @@ ms.lasthandoff: 09/25/2017
 
 ## <a name="elastic"></a>计划 SQL 数据库弹性作业的包
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](/azure/sql-database/sql-database-elastic-jobs-overview.md)。
+有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
 
 ### <a name="prerequisites"></a>先决条件
 
 你可以使用弹性作业计划的 Azure SQL 数据库服务器上的 SSISDB 目录数据库中存储的 SSIS 包之前，你必须执行以下操作：
 
-1.  安装和配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](/azure/sql-database/sql-database-elastic-jobs-service-installation.md)。
+1.  安装和配置弹性数据库作业组件。 有关详细信息，请参阅[安装弹性数据库作业概述](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)。
 
 2. 创建作业可用于将命令发送到 SSIS 目录数据库的数据库范围凭据。 有关详细信息，请参阅[CREATE DATABASE SCOPED CREDENTIAL (Transact SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
@@ -110,7 +110,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 3.  创建驱动器计划的一个输出数据集。
 4.  创建使用 SQL Server 存储过程活动来运行 SSIS 包的数据工厂管道。
 
-本部分概述了这些步骤。 完整的数据工厂教程不在本文的范围。 有关详细信息，请参阅[SQL Server 存储过程活动](/azure/data-factory/data-factory-stored-proc-activity.md)。
+本部分概述了这些步骤。 完整的数据工厂教程不在本文的范围。 有关详细信息，请参阅[SQL Server 存储过程活动](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)。
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>创建承载 SSISDB 的 SQL 数据库的链接的服务
 链接的服务，可以连接到 SSISDB 的数据工厂。
@@ -221,4 +221,4 @@ GO
 ## <a name="next-steps"></a>后续步骤
 有关 SQL Server 代理的详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
-有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](/azure/sql-database/sql-database-elastic-jobs-overview.md)。
+有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。

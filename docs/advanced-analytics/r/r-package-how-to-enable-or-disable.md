@@ -1,7 +1,7 @@
 ---
-title: "如何启用或禁用 R 包管理 | Microsoft Docs"
+title: "启用或禁用对 SQL Server 的 R 包管理 |Microsoft 文档"
 ms.custom: 
-ms.date: 12/21/2016
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,63 +15,89 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aac055d9a2337f1278d648fbcd17435afe1bd3b3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 88337da76b3a44b9dc797fd1d9f187bfda7396c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="r-package---how-to-enable-or-disable"></a>R 包 - 如何启用或禁用
+# <a name="enable-or-disable-r-package-management-for-sql-server"></a>启用或禁用对 SQL Server 的 R 包管理
 
-即使安装了 R Services，默认情况下，SQL Server 实例上也会禁用包管理。 若要启用此功能，需要两个步骤，整个过程必须由数据库管理员执行： 
+本文介绍了启用或禁用 SQL Server 自 2017 年中的新包管理功能的过程。 此功能允许数据库管理员控制的实例上的包安装。 功能依赖于新的数据库角色来向用户授予能够安装所需的 R 包或与其他用户共享包。
 
-1. 在 SQL Server 实例上启用包管理（每个 SQL Server 实例一次） 
-2. 在 SQL 数据库上启用包管理（每个 SQL Server 数据库一次） 
+默认情况下，禁用 SQL Server 的外部包管理功能，即使安装了机器学习功能。
 
+到[启用](#bkmk_enable)此功能有两个步骤，并且需要安装数据库管理员的一些帮助：
 
-如果禁用包管理功能，则反向执行此过程，删除数据库级的包和权限，然后从服务器删除角色：
- 
-1. 在每个数据库上禁用包管理（每个数据库一次） 
-2. 在 SQL Server 实例上禁用包管理（每个实例一次） 
+1.  在 SQL Server 实例上启用包管理（每个 SQL Server 实例一次）
 
-> [!IMPORTANT]
-> 此功能处于开发阶段。 请注意，更高版本中的语法或功能可能会发生改变。 
+2.  在 SQL 数据库上启用包管理（每个 SQL Server 数据库一次）
 
-### <a name="to-enable-package-management"></a>启用包管理
+到[禁用](#bkmk_disable)包管理功能，可回退该过程，以删除数据库级包和权限，，然后从服务器删除角色：
 
-若要启用或禁用包管理，需要命令行实用程序 **RegisterRExt.exe**，它包括在与 SQL Server R Services 一起安装的 **RevoScaleR** 包中。 默认位置是：
+1.  在每个数据库上禁用包管理（每个数据库一次）
 
-`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe` 
-    
-1. 打开提升的命令提示符，并使用以下命令：
+2.  在 SQL Server 实例上禁用包管理（每个实例一次）
+
+## <a name="bkmk_enable"></a>启用包管理
+
+若要启用或禁用管理包，需要命令行实用工具**RegisterRExt.exe**，包含在**RevoScaleR**包。
+
+1. 打开提升的命令提示符并导航到包含的实用工具，RegisterRExt.exe 的文件夹。 默认位置是`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
+
+2. 运行以下命令，提供你的环境的相应参数：
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    此命令在包管理所需的 SQL Server 计算机上创建实例级的项目。 
+    此命令所需的管理包的 SQL Server 计算机上创建实例级对象。 它还会重新启动实例快速启动板。
 
-2. 若要在数据库级别上添加包管理，针对每个必须安装包的数据库，请在提升的命令提示符下运行以下命令： 
+    如果未指定实例，则使用默认实例。
 
-    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+    如果未指定用户，则使用当前安全上下文。
 
-    此命令将创建一些数据库项目，包括控制用户权限所需的以下数据库角色： **rpkgs-users**、 **rpkgs-private**和 **rpkgs-shared** 
+2.  若要添加在数据库级别的管理包，请从提升的命令提示符运行以下命令：
 
-### <a name="to-disable-package-management"></a>禁用包管理 
+    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+   
+    此命令创建某些数据库项目，包括用于控制用户权限的以下数据库角色： `rpkgs-users`， `rpkgs-private`，和`rpkgs-shared`。
 
-1. 在提升的命令提示符下，运行以下命令以禁用数据库级别上的包管理：
+    如果未指定用户，则使用当前安全上下文。
 
-   `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]` 
+3. 必须为安装包的每个数据库重复执行该命令。
 
-    此命令将从指定数据库中删除与包管理相关的数据库项目。  此命令还将从 SQL Server 计算机的受保护文件系统位置中，删除每个数据库安装的所有包。
-    
-    必须在使用包管理的每个数据库上运行一次该命令。
- 
-2. （可选）若要从实例中完全删除包管理功能，使用前面的步骤清除所有数据库中的包之后，请在提升的命令提示符下运行以下命令：
+4.  要验证是否已成功创建新的角色，请在 SQL Server Management Studio，请单击数据库，展开**安全**，然后展开**数据库角色**。
+
+    此外可以在如下所示的 sys.database_principals 上运行查询：
+
+    ```SQL
+    SELECT pr.principal_id, pr.name, pr.type_desc,   
+        pr.authentication_type_desc, pe.state_desc,   
+        pe.permission_name, s.name + '.' + o.name AS ObjectName  
+    FROM sys.database_principals AS pr  
+    JOIN sys.database_permissions AS pe  
+        ON pe.grantee_principal_id = pr.principal_id  
+    JOIN sys.objects AS o  
+        ON pe.major_id = o.object_id  
+    JOIN sys.schemas AS s  
+        ON o.schema_id = s.schema_id;
+    ```
+
+4.  启用该功能后，可以使用具有适当权限的任何用户[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)T-SQL 添加包中的语句。 有关此工作原理的示例，请参阅[在 SQL Server 上安装其他软件包](install-additional-r-packages-on-sql-server.md)。
+
+## <a name="bkmk_disable"></a>禁用包管理
+
+1.  在提升的命令提示符下，运行以下命令以禁用数据库级别上的包管理：
+
+    `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+
+    其中使用管理包的情况下运行此命令一次为每个数据库。 此命令将删除与管理包从指定的数据库相关的数据库对象。 它还将删除从 SQL Server 计算机上的受保护的文件系统位置安装的所有包。
+
+2.  （可选）已清除所有数据库的使用上一步包后，请从提升的命令提示符运行以下命令：
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    此命令将从 SQL Server 实例中删除用于包管理的实例级项目。 
-
+    此命令从实例中删除包管理功能。
 
 ## <a name="see-also"></a>另请参阅
-[SQL Server R Services 的 R 包管理](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)
 
+[SQL Server 的 R 包管理](r-package-management-for-sql-server-r-services.md)

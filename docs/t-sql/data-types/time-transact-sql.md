@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |属性|值|  
 |--------------|-----------|  
-|语法|**时间**[(*小数秒精度*)]|  
+|语法|**时间**[(*小数部分的第二个刻度*)]|  
 |用法|声明@MyTime **time(7)**<br /><br /> 创建表 Table1 (Column1 **time(7)** )|  
-|*秒的小数部分精度*|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认的小数精度是 7 (100ns)。|  
+|*秒的小数部分缩放*|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数规模为 7 (100ns)。|  
 |默认字符串文本格式<br /><br /> （用于下级客户端）|hh:mm:ss[.nnnnnnn] （hh:mm:ss[.nnn] 为 Informatica）<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |范围|00:00:00.0000000 通过 23:59:59.9999999 (通过 Informatica 的 23:59:59.999 00:00:00.000)|  
-|各元素的范围|hh 是表示小时的两位数字，范围为 0 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 0 到 59。<br /><br /> ss 是表示秒的两位数字，范围为 0 到 59。<br /><br /> n* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。 Informatica，为 n\*是从零到三个数字，范围从 0 到 999。|  
+|各元素的范围|hh 是表示小时的两位数字，范围为 0 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 0 到 59。<br /><br /> ss 是表示秒的两位数字，范围为 0 到 59。<br /><br /> n\*是从零到七个数字，范围从 0 到 9999999，表示秒的小数部分。 Informatica，为 n\*是从零到三个数字，范围从 0 到 999。|  
 |字符长度|8 位置为 16 最大 (hh:mm:ss.nnnnnnn) 的最小 （hh: mm:ss） 对于 Informatica，最大值是 12 (hh:mm:ss.nnn)。|  
 |精度、小数位数<br /><br /> （用户只能指定小数位数）|请参阅下表。|  
 |存储大小|固定 5 个字节，是使用默认的 100ns 秒的小数部分精度时的默认存储大小。 在 Informatica，默认值是 4 个字节，固定的使用默认值 1 毫秒小数秒精度。|  

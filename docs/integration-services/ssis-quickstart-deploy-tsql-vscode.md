@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>部署 SSIS 项目从 Visual Studio 代码使用 TRANSACT-SQL
@@ -21,7 +21,7 @@ ms.lasthandoff: 09/22/2017
 > [!NOTE]
 > 连接到 VS Code 的 Azure SQL 数据库服务器时，本文中所述的方法不可用。 `catalog.deploy_project`存储的过程需要到路径`.ispac`（在本地） 本地文件系统中的文件。
 
-Visual Studio Code 是 Windows、 macOS，和支持的扩展，包括的 Linux 的代码编辑器`mssql`用于连接到 Microsoft SQL Server、 Azure SQL 数据库或 Azure SQL 数据仓库的扩展。 有关 VS Code 的详细信息，请参阅[Visual Studio Cod](https://code.visualstudio.com/)。
+Visual Studio Code 是 Windows、 macOS，和支持的扩展，包括的 Linux 的代码编辑器`mssql`用于连接到 Microsoft SQL Server、 Azure SQL 数据库或 Azure SQL 数据仓库的扩展。 有关 VS Code 的详细信息，请参阅[Visual Studio Code](https://code.visualstudio.com/)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -31,7 +31,7 @@ Visual Studio Code 是 Windows、 macOS，和支持的扩展，包括的 Linux �
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>将语言模式设置为在 VS Code 中的 SQL
 
-若要启用`mssql`命令和 T-SQL 的 IntelliSense，组的语言模式设置为**SQL**在 Visual Studio 代码中。
+若要启用`mssql`命令和 T-SQL 的 intellisense 功能，则将语言模式设置为**SQL**在 Visual Studio 代码中。
 
 1. 打开 Visual Studio 代码，然后打开一个新窗口。 
 

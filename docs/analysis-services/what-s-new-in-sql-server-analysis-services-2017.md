@@ -1,37 +1,34 @@
 ---
-title: "什么 &#39; SQL Server 自 2017 年 Analysis Services 中的新增功能 |Microsoft 文档"
-ms.custom: 
-ms.date: 09/21/2017
+title: "什么是 SQL Server 自 2017 年 Analysis Services 中的新增功能 |Microsoft 文档"
+ms.date: 10/03/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 
-# <a name="what39s-new-in-sql-server-2017-analysis-services"></a>什么 &#39; SQL Server 自 2017 年 Analysis Services 中的新增功能
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 自 2017 年 Analysis Services 将看到一些最重要的增强功能自 SQL Server 2012。 此版本生成的 （SQL Server 2012 Analysis Services 中首次引入） 的表格模式下，成功使表格模型比以往更为强大。
+SQL Server 自 2017 年 Analysis Services 将看到的最重要的增强功能的某些自 SQL Server 2012。 此版本生成的 （SQL Server 2012 Analysis Services 中首次引入） 的表格模式下，成功使表格模型比以往更为强大。
 
 多维模式和 Power Pivot for SharePoint 模式下是对许多 Analysis Services 部署装订。 在 Analysis Services 产品生命周期，这些模式是成熟的。 没有为此版本中这些模式的新功能。 但是，错误报告中将包含包含 bug 修复和性能改进。
 
-SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若要充分利用它们，你还必须使用的最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS 会更新每月的新增和改进功能，它通常 conincide 与 SQL Server 中的新功能。  
+SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若要充分利用它们，你还必须使用的最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS 使用通常与 SQL Server 中的新功能同时发生的新增和改进功能每月更新。  
 
-虽然很有趣，才能关闭所有新功能的包装，还有一点需要知道什么正在弃用，并停止使用在此版本和将来的版本。 请务必签出[向后兼容性 (SQL Server 自 2017 年 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
+务必了解所有新功能时，还有一点需要知道什么正在弃用，并停止使用在此版本和将来的版本。 请务必签出[向后兼容性 (SQL Server 自 2017 年 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
 
 在此版本中，让我们看一些重要的新增功能。
 
@@ -56,12 +53,12 @@ SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若�
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- 一个功能强大且直观的用户界面使选择你的数据和数据转换/混合功能比以前更容易。
+ 一个功能强大且直观的用户界面进行选取你的数据和数据转换/混合功能比以前更容易。
 
 ![高级混合应用程序](../analysis-services/media/as-get-data-advanced.png)
 
 
-现代的获取数据体验以及 M 混合应用程序功能不会应用于现有的表格模型 ugraded 从 1400年到 1200年兼容级别。 新体验仅适用于在 1400年兼容性级别创建的新模型。
+现代的获取数据体验以及 M 混合应用程序功能不会应用于现有的表格模型 upraded 从 1400年到 1200年兼容级别。 新体验仅适用于在 1400年兼容性级别创建的新模型。
 
 ## <a name="encoding-hints"></a>编码提示
 此版本引入了编码提示，这是一种用于优化大型内存中表格模型处理（数据刷新）的高级功能。 若要更好地了解编码，请参阅[性能优化的表格模型中 SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx)更好地了解编码的白皮书。
@@ -70,9 +67,9 @@ SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若�
 
 * 哈希编码首选用于“分组依据”列（通常为维度表值）和外键。 字符串列始终采用哈希编码。
 
-数值列可使用上述任一编码方法。 Analysis Services 开始处理表格时，如果表为空（有或没有分区）或正在执行全表处理操作，则会对每个数值列采用示例值，确定是要应用值编码还是哈希编码。 默认情况下，列中非重复值的示例足够大时会选择值编码，在其他情况下哈希编码通常会提供更好的压缩。 根据数据分布的进一步信息部分处理列后，Analysis Services 可更改编码方法，然后重启编码过程。 当然，这会增加处理时间且效率低下。 性能优化白皮书更详细地讨论了重新编码，并介绍了如何使用 SQL Server Profiler 检测它。
+数值列可使用上述任一编码方法。 Analysis Services 开始处理表格时，如果表为空（有或没有分区）或正在执行全表处理操作，则会对每个数值列采用示例值，确定是要应用值编码还是哈希编码。 默认情况下，值编码会选择在列中的非重复值的示例是足够大，– 否则哈希编码通常提供更好的压缩。 可以为 Analysis Services，若要更改的编码方法，基于数据分布的详细信息部分处理完列后，重启编码过程;但是，这会增加处理时间，并且是效率低下。 性能优化白皮书更详细地讨论了重新编码，并介绍了如何使用 SQL Server Profiler 检测它。
 
-编码提示允许建模者来指定给定事先了解从数据事件探查和/或重新编码跟踪事件的响应的编码方法首选项。 由于哈希编码列的聚合速度低于值编码列的聚合速度，因此可将值编码指定为针对此类列的提示。 不能保证该首选项会适用；这是一个提示，而不是设置。 若要指定编码提示，请在列上设置 EncodingHint 属性。 可能的值为“默认”、“值”和“哈希”。 Model.bim 文件中基于 JSON 的以下元数据片段为 Sales Amount 列指定值编码。
+编码提示允许建模者来指定给定事先了解从数据事件探查和/或重新编码跟踪事件的响应的编码方法首选项。 由于哈希编码列的聚合速度低于值编码列的聚合速度，因此可将值编码指定为针对此类列的提示。 不保证应用首选项。 它是一个提示而不是一种设置。 若要指定编码提示，请在列上设置 EncodingHint 属性。 可能的值为“默认”、“值”和“哈希”。 Model.bim 文件中基于 JSON 的以下元数据片段为 Sales Amount 列指定值编码。
 
 ```
 {
@@ -116,7 +113,7 @@ SQL Server 自 2017 年 Analysis Services 中包含此处描述的功能。 若�
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-“详细信息行表达式”中经常使用 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函数。 以下示例定义为示例 Adventure Works 表格模型中 Internet 销售表的行返回的列：
+[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函数通常用在详细信息行表达式。 以下示例定义为示例 Adventure Works 表格模型中 Internet 销售表的行返回的列：
 
 ```
 SELECTCOLUMNS(
@@ -133,7 +130,7 @@ SELECTCOLUMNS(
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>表的“默认详细信息行表达式”属性
-除了度量值，表还具有一个用于定义详细信息行表达式的属性。 “默认详细信息行表达式”  属性是表中所有度量值的默认值。 没有定义自己的表达式的度量值将继承表中的表达式，并显示为表定义的行集。 这允许重复使用表达式，并且以后添加到表中的新度量值会自动继承该表达式。
+除了度量值，表还具有一个用于定义详细信息行表达式的属性。 “默认详细信息行表达式”  属性是表中所有度量值的默认值。 不具有其自己定义的表达式的度量值从表继承表达式，显示的行集定义的表。 这使重用表达式，并且更高版本会自动添加到表的新度量值继承表达式。
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -244,7 +241,7 @@ Filtered Sales:=CALCULATE (
 * 在 Power BI 字段列表中的更加有用位置显示层次结构和列的重新使用。
 * 日期关系，基于日期字段轻松创建日期维度的关系。
 * Analysis Services 的默认安装选项现用于表格模式。
-* 新式数据获取 (Power Qery) 数据源。
+* 新获取的数据 (Power Query) 数据源。
 * 用于 SSDT 的 DAX 编辑器。
 * 现有 DirectQuery 数据源支持 M 查询。
 * SSMS 改进，例如对结构化数据源的查看、编辑和脚本编写支持。

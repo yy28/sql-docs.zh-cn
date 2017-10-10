@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上安装 SQL Server Integration Services |Microsoft 文档"
-description: "本主题介绍如何在 Linux 上安装 SQL Server Integration Services。"
+description: "本主题介绍如何在 Linux 上安装 SQL Server Integration Services (SSIS)。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -8,13 +8,12 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
-ms.assetid: 
+ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
@@ -31,37 +30,36 @@ ms.lasthandoff: 10/02/2017
 ## <a name="ubuntu"></a>在 Ubuntu 上安装 SSIS
 若要安装`mssql-server-is`打包在 Ubuntu 上，执行以下步骤：
 
-1.  导入公共存储库 GPG 密钥。
+1. 导入公共存储库 GPG 密钥。
 
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    ```
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
 
-2.  注册 Microsoft SQL Server Ubuntu 存储库。
+2. 注册 Microsoft SQL Server Ubuntu 存储库。
 
-    ```bash
-    curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
-    ```
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
 
-3.  运行以下命令以安装 SQL Server Integration Services。
+3. 运行以下命令以安装 SQL Server Integration Services。
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y mssql-server-is
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server-is
+   ```
 
+4. 安装 Integration Services 以后, 运行`ssis-conf`。 有关详细信息，请参阅[与 ssis conf Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
-4.  安装 Integration Services 以后, 运行`ssis-conf`。 有关详细信息，请参阅[与 ssis conf Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
+5. 完成配置后，设置的路径。
 
-5.  完成配置后，设置的路径。
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>更新 SSIS
 如果你已有`mssql-server-is`安装，你可以更新到最新版本使用以下命令：
@@ -79,47 +77,30 @@ sudo apt-get remove msssql-server-is
 ## <a name="RHEL"></a>在 RHEL 上安装 SSIS
 若要安装`mssql-server-is`打包在 RHEL 上，执行以下步骤：
 
+1. 下载 Microsoft SQL Server Red Hat 存储库配置文件。
 
-1.  进入超级用户模式。
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
 
-    ```bash
-    sudo su
-    ```
+1. 运行以下命令以安装 SQL Server Integration Services。
 
-
-2.  下载 Microsoft SQL Server Red Hat 存储库配置文件。
-
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-    ```
+   ```bash
+   sudo yum install -y mssql-server-is
+   ```
 
 
-3.  退出超级用户模式。
+1. 安装完成后，运行`ssis-conf`。 有关详细信息，请参阅[与 ssis conf Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
 
-    ```bash
-    exit
-    ```
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
+1. 完成配置后，将路径设置。
 
-4.  运行以下命令以安装 SQL Server Integration Services。
-
-    ```bash
-    sudo yum install -y mssql-server-is
-    ```
-
-
-5.  安装完成后，运行`ssis-conf`。 有关详细信息，请参阅[与 ssis conf Linux 上配置 SSIS](sql-server-linux-configure-ssis.md)。
-
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
-
-
-6.  完成配置后，将路径设置。
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>更新 SSIS
 如果你已有`mssql-server-is`安装，你可以更新到最新版本使用以下命令：

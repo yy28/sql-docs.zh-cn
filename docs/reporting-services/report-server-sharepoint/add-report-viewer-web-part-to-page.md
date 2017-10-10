@@ -1,7 +1,7 @@
 ---
-title: "将报表查看器 web 部件添加到 SharePoint 页 |Microsoft 文档"
-ms.custom: Add the Report Viewer web part to a page within your SharePoint site.
-ms.date: 09/15/2017
+title: "SQL Server Reporting Services 报表查看器 web 部件添加到 SharePoint 页 |Microsoft 文档"
+ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
+ms.date: 09/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 033d8092cab4e6aa0889f153d5e2e7d75ae31b03
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="add-report-viewer-web-part-to-a-sharepoint-page"></a>将报表查看器 web 部件添加到 SharePoint 页
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services 报表查看器 web 部件添加到 SharePoint 页
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -35,6 +35,8 @@ ms.lasthandoff: 09/15/2017
 
 * 必须将报表查看器 web 部件部署到你的 SharePoint 场。 有关如何部署报表查看器 web 部件解决方案项目的信息，请参阅[部署报表查看器 web 部件在 SharePoint 站点上的](deploy-report-viewer-web-part.md)。
 
+* 若要将 web 部件添加到网页上，必须在站点级别具有添加和自定义网页权限。 如果使用默认安全设置，此权限将授予拥有“完全控制”级权限的“所有者”  组的成员。
+
 ## <a name="add-web-part"></a>添加 web 部件
 
 1. 在 SharePoint 网站上，选择**齿轮**在左上角，选择图标**添加页**。
@@ -43,13 +45,13 @@ ms.lasthandoff: 09/15/2017
 
 2. 为你的页面，指定名称和选择**创建**。
 
-3. 在页设计器中，选择**插入**中功能区选项卡。 然后选择**Web 部件**内**部件**部分。
+3. 在页设计器中，选择**插入**中功能区选项卡。 然后选择**web 部件**内**部件**部分。
 
     ![从 office 功能区插入 web 部件。](media/sharepoint-insert-web-part.png)
 
 4. 下**类别**，选择 * * SQL Server Reporting Services （本机模式）。 下**部件**，选择**报表查看器**。 然后选择**添加**。
 
-    ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
+    ![添加报表查看器 web 部件。](media/sharepoint-report-viewer-web-part.png)
 
     出现错误，这可能最初会出现。 错误是因为默认报表服务器 URL 设置为*http://localhost*和在该位置可能不可用。
 
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/15/2017
 
 若要配置 web 部件指向特定报表，执行以下操作。
 
-1. 在编辑时的 SharePoint 页面，选择右上方的 web 部件的向下箭头，然后选择**编辑 Web 部件**。
+1. 在编辑时的 SharePoint 页面，选择右上方的 web 部件的向下箭头，然后选择**编辑 web 部件**。
 
     ![编辑 web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
@@ -78,6 +80,5 @@ ms.lasthandoff: 09/15/2017
 * 在 SharePoint 中的现代页上，不能使用报表查看器 web 部件。
 * Power BI 报表不能与报表查看器 web 部件使用。
 * 如果看不到报表查看器 web 部件，将添加到你的页面，请确保你具有[部署报表查看器 web 部件](deploy-report-viewer-web-part.md)。
-* 在 web 部件的顶部的链接将产生一个错误，并不导航你任意位置。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

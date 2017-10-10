@@ -1,6 +1,6 @@
 ---
 title: "提升和移动到云中的 SQL Server Integration Services 工作负荷 |Microsoft 文档"
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>提升和移动到云中的 SQL Server Integration Services 工作负荷
@@ -46,12 +46,15 @@ Azure 数据工厂承载在 Azure 上的 SSIS 包的运行时引擎。 运行时
 
 只需设置一次的 SSIS IR。 之后，您可以使用熟悉的工具，如 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 若要部署，配置、 运行、 监视、 计划和管理包。
 
-数据工厂还支持其他类型的集成运行时。 若要了解有关 SSIS IR 和集成运行时的其他类型的详细信息，请参阅[集成运行库在 Azure 数据工厂中的](/azure/data-factory/concepts-integration-runtime.md)。
+> [!NOTE]
+> 在此公共预览期间 Azure SSIS 集成运行时才可用在美国东部和欧洲北部区域中。
+
+数据工厂还支持其他类型的集成运行时。 若要了解有关 SSIS IR 和集成运行时的其他类型的详细信息，请参阅[集成运行库在 Azure 数据工厂中的](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime)。
 
 ## <a name="prerequisites"></a>先决条件
 本主题中所述的功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更高版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 当将包部署到 Azure 时，包部署向导始终的包升级到最新的包格式。
 
-有关在 Azure 中的先决条件的详细信息，请参阅[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+有关在 Azure 中的先决条件的详细信息，请参阅[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="ssis-features-on-azure"></a>在 Azure 上的 SSIS 功能
 
@@ -68,7 +71,7 @@ Azure 数据工厂承载在 Azure 上的 SSIS 包的运行时引擎。 运行时
 ## <a name="common-tasks"></a>常规任务
 
 ### <a name="provision"></a>预配
-可以部署，还可以在 Azure 中运行 SSIS 包之前，必须设置 SSISDB 目录数据库和 Azure SSIS 集成运行库。 按照在本文中的设置步骤：[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)。
+可以部署，还可以在 Azure 中运行 SSIS 包之前，必须设置 SSISDB 目录数据库和 Azure SSIS 集成运行库。 按照在本文中的设置步骤：[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ### <a name="deploy-and-run-packages"></a>部署和运行包
 若要将项目部署和 SQL 数据库上运行包，可以使用几种熟悉的工具和脚本选项之一：
@@ -92,6 +95,6 @@ Azure 数据工厂承载在 Azure 上的 SSIS 包的运行时引擎。 运行时
 
 ## <a name="next-steps"></a>后续步骤
 若要开始使用 Azure 上的 SSIS 工作负荷，请参阅以下文章：
--   [提起并移动到 Azure 的 SQL Server Integration Services (SSIS) 包](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [提起并移动到 Azure 的 SQL Server Integration Services (SSIS) 包](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [部署、 运行和监视在 Azure 上的 SSIS 包](ssis-azure-deploy-run-monitor-tutorial.md)
 

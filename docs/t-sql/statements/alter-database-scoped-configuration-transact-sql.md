@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -80,7 +79,7 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 指定 （所有辅助数据库必须具有相同的值） 的辅助数据库的设置。  
   
-MAXDOP ** = ** {\<值 > |主}  
+MAXDOP  **=**  {\<值 > |主}  
 **\<值 >**  
   
 指定 MAXDOP 设置应用于语句的默认。 0 是默认值，该值指示在将改为使用服务器配置。 （除非它已设置为 0），将重写在数据库范围内 MAXDOP**最大并行度**由 sp_configure 设置在服务器级别。 查询提示仍可以重写数据库范围 MAXDOP，以便优化需要不同的设置的特定查询。 所有这些设置的工作负荷组设置 MAXDOP 受限制。   
@@ -96,7 +95,7 @@ PRIMARY
   
 只能设置为辅助数据库，对主要主机和中的数据库时，表示配置将一组的主站点。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本的值明确。 **主**是辅助数据库的默认设置。  
   
-LEGACY_CARDINALITY_ESTIMATION ** = ** {ON |**OFF** |主}  
+LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |主}  
 
 使用此选项可设置为的 SQL Server 2012 和早期版本的查询优化器基数估计模型独立于数据库的兼容性级别。 默认值是**OFF**，查询优化器基数估计模型基于数据库的兼容性级别的设置。 此选项设置为**ON**相当于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
 
@@ -107,7 +106,7 @@ PRIMARY
   
 此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的查询优化器基数估算模型设置将为主设置的值。 如果主服务器的查询优化器基数估计模型上的配置发生更改，将相应地更改辅助数据库上的值。 **主**是辅助数据库的默认设置。  
   
-PARAMETER_SNIFFING ** = ** { **ON** |关闭 |主}  
+PARAMETER_SNIFFING  **=**  { **ON** |关闭 |主}  
 
 启用或禁用[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 默认值为 ON。 这与 [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)是等效的。   
 
@@ -118,7 +117,7 @@ PRIMARY
   
 此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果使用主计算机上的配置[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)更改，在辅助副本上的值将更改相应地而无需设置辅助副本值明确。 这是辅助数据库的默认设置。  
   
-QUERY_OPTIMIZER_HOTFIXES ** = ** {ON |**OFF** |主}  
+QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主}  
 
 启用或禁用查询优化修补程序，而不考虑数据库的兼容性级别。 默认值是**OFF**。 这相当于启用[Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 
@@ -131,13 +130,13 @@ PRIMARY
   
 清除 PROCEDURE_CACHE  
 
-清除过程缓存的数据库。 这可以同时在主和辅助数据库上执行。  
+清除该数据库的过程 （计划） 缓存。 这可以同时在主和辅助数据库上执行。  
 
-IDENTITY_CACHE = { **ON** |关闭}  
+IDENTITY_CACHE  **=**  { **ON** |关闭}  
 
-**适用于**: SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能） 
+**适用于**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]（功能处于公共预览版中） 
 
-启用或禁用在数据库级别的标识缓存。 默认值是**ON**。 标识缓存用于改进对具有标识列的表的插入性能。 若要避免的情况下服务器意外重新启动或故障转移到辅助服务器的位置中的标识列的值方面的差距，禁用 IDENTITY_CACHE 选项。 此选项等同于现有的 SQL Server 跟踪标志 272，只不过它可以在数据库级别而不是仅在服务器级别设置。   
+启用或禁用在数据库级别的标识缓存。 默认值是**ON**。 标识缓存用于改进对具有标识列的表的插入性能。 若要避免的情况下服务器意外重新启动或故障转移到辅助服务器的位置中的标识列的值方面的差距，禁用 IDENTITY_CACHE 选项。 此选项是类似于现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，只不过它可以在数据库级别而不是仅在服务器级别设置。   
 
 > [!NOTE] 
 > 仅可以为主设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。  
@@ -145,7 +144,7 @@ IDENTITY_CACHE = { **ON** |关闭}
 
 ##  <a name="Permissions"></a> 权限  
  需要更改任何数据库作用域配置   
-对数据库中。 可以通过具有数据库拥有 CONTROL 权限的用户授予此权限  
+对数据库中。 可以通过具有数据库拥有 CONTROL 权限的用户授予此权限。  
   
 ## <a name="general-remarks"></a>一般备注  
  虽然您可以配置辅助数据库能够从其主不同的作用域的配置设置，所有辅助数据库将使用相同的配置。 无法为单个辅助数据库配置不同的设置。  
@@ -185,7 +184,7 @@ IDENTITY_CACHE = { **ON** |关闭}
   
 ## <a name="metadata"></a>元数据  
 
-[Sys.database_scoped_configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)系统视图提供有关在数据库中指定了作用域配置的信息。 数据库范围配置选项仅显示在 sys.database_scoped_configurations 因为它们是为服务器级默认设置的替代。 [Sys.configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)系统视图只显示服务器范围的设置。  
+[Sys.database_scoped_configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)系统视图提供有关在数据库中指定了作用域配置的信息。 数据库范围配置选项仅显示在 sys.database_scoped_configurations 因为它们是为服务器级默认设置的替代。 [Sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)系统视图只显示服务器范围的设置。  
   
 ## <a name="examples"></a>示例  
 这些示例演示使用 ALTER DATABASE SCOPED CONFIGURATION  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>G. 设置 IDENTITY_CACHE
 
-**适用于**: SQL Server 2017 和 Azure SQL 数据库 （位于公共预览版中的功能） 
+**适用于**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]（功能处于公共预览版中） 
 
 此示例将禁用标识缓存。
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>其他资源
 
 ### <a name="maxdop-resources"></a>MAXDOP 资源 
+* [并行度](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [建议和 SQL Server 中的"max degree of parallelism"配置选项的指导原则](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 资源    
+* [参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["我闻参数"！](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 资源    
+* [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 查询优化器修补程序跟踪标志 4199 维护服务模型](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>详细信息  
- [sys.database_scoped_configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [跟踪标志 & #40;Transact SQL & #41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [sys.configurations & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

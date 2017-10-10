@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/17/2017
 了解如何在本机模式下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 这将提供对用于管理报表和其他项的 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的访问权限。
 
 > [!NOTE]
-> 查找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
+> 是否在寻找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器是默认的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式，可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装或从命令行安装。 在安装向导中，你可以选择安装文件并使用默认设置配置服务器或仅安装文件。  本主题讨论“本机模式默认配置”，其中，安装程序安装并配置报表服务器实例。 安装完成后，报表服务器便进入运行状态，可供基本的报表查看和管理。  其他功能（例如 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成和使用订阅处理电子邮件的发送）需要其他配置。  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
   
 9. 功能配置规则：验证通过的规则。 如果所有规则都通过，则安装向导将自动前进到“安装准备就绪”  。  针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，规则将验证报表服务器目录和临时目录数据库是否尚未存在。  
   
-10. ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")上**准备好安装**页上，记下配置文件的路径，因为可以在以后进行的服务器的初始总结内指[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括安装，组件的配置服务帐户和管理员。  
+10. 在“安装准备就绪”页上，记下配置文件的路径，以便你在稍后对服务器的初始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置（包括已安装的组件、服务帐户和管理员）进行总结时可用作参考。  
   
 11. 完成 SQL Server 安装向导后，使用以下基本步骤验证默认本机模式安装。  
   
@@ -188,8 +188,8 @@ ms.lasthandoff: 08/17/2017
 [配置报表服务器数据库连接](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [“仅文件”安装 (Reporting Services)](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [初始化报表服务器](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
-[在本机模式报表服务器上配置 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
 

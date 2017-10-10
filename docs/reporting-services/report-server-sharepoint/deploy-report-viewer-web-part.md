@@ -1,7 +1,7 @@
 ---
-title: "部署报表查看器 web 部件在 SharePoint 站点上的 |Microsoft 文档"
+title: "部署 SharePoint 站点上的 SQL Server Reporting Services 报表查看器 web 部件 |Microsoft 文档"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>部署 SharePoint 站点上的报表查看器 web 部件
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>部署 SharePoint 站点上的 SQL Server Reporting Services 报表查看器 web 部件
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-报表查看器 Web 部件是自定义 Web 部件，可以用于在 SharePoint 站点内查看 SQL Server Reporting Services （本机模式） 报表。 可以使用 Web 部件查看、 导航、 打印和导出的报表服务器上的报表。 报表查看器 Web 部件都与 SQL Server Reporting Services 报表服务器或 Power BI 报表服务器处理的报表定义 (.rdl) 文件关联。 此报表查看器 web 部件不能与托管在 Power BI 报表服务器中的 Power BI 报表中使用。
+报表查看器 web 部件是自定义 web 部件，可以用于在 SharePoint 站点内查看 SQL Server Reporting Services （本机模式） 报表。 可以使用 web 部件查看、 导航、 打印和导出的报表服务器上的报表。 报表查看器 web 部件是由 SQL Server Reporting Services 报表服务器或 Power BI 报表服务器处理的报表定义 (.rdl) 文件与相关联。 此报表查看器 web 部件不能与托管在 Power BI 报表服务器中的 Power BI 报表中使用。
 
 使用以下说明手动部署报表查看器 web 部件添加到 SharePoint Server 2013 或 SharePoint Server 2016 环境解决方案包。 部署解决方案是配置 web 部件所需的步骤。
 
 **报表查看器 web 部件是独立解决方案包，并且不是与用于 SQL Server Reporting Services SharePoint 集成模式相关联。**
 
 ## <a name="requirements"></a>要求
-
-**支持的操作系统：**  
-* Windows Server 2008 R2 SP1 和更高版本
 
 **支持 SharePoint Server 版本：**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/15/2017
 
 报表查看器 web 部件在 Microsoft 下载中心才可用。
 
-[下载报表查看器 web 部件解决方案包](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[下载报表查看器 web 部件解决方案包](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>部署场解决方案
 
@@ -84,15 +81,15 @@ ms.lasthandoff: 09/15/2017
 
     ![从齿轮图标的站点设置。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入访问 SharePoint 站点*http://<computer name> *以打开根网站集。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入访问 SharePoint 站点*http://<computer name>* 以打开根网站集。
 
 3. 在**网站集管理**，选择**网站集功能**。
 
-4. 向下页面，直至你找到滚动**报表查看器 Web 部件**功能。
+4. 向下页面，直至你找到滚动**报表查看器 web 部件**功能。
 
 5. 选择**激活**。
 
-    ![激活报表查看器 Web 部件功能](media/web-part-activiate-feature.png)
+    ![激活报表查看器 web 部件功能](media/web-part-activiate-feature.png)
 
 6. 对于其他网站集重复通过打开每个站点并单击站点操作。
 
@@ -124,9 +121,9 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![从齿轮图标的站点设置。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入访问 SharePoint 站点*http://<computer name> *以打开根网站集。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着，通常可以通过输入访问 SharePoint 站点*http://<computer name>* 以打开根网站集。
 
-2. 下**Web 设计器库**，选择**Web 部件**。
+2. 下**Web 设计器库**，选择**web 部件**。
 
 3. 选择**编辑图标**旁边**ReportViewerNativeMode.dwp**。 它可能不会在结果的第一页上列出。
 
@@ -134,7 +131,23 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![编辑和删除本机模式的报表查看器 web 部件](media/report-viewer-native-mode-edit-delete.png)
 
-可以通过使用 PowerShell，尝试删除的 web 部件但没有为其直接命令。 有关脚本示例，请参阅[如何从 Web 部件库中删除 Web 部件](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)。
+可以通过使用 PowerShell，尝试删除的 web 部件但没有为其直接命令。 有关脚本示例，请参阅[如何从 web 部件库中删除 web 部件](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f)。
+
+## <a name="supported-languages"></a>支持的语言
+
+包含 web 部件支持以下语言：
+
+* 英语 (en)
+* 德语 (de)
+* 西班牙语 (sp)
+* 法语 (fr)
+* 意大利语 （它）
+* 日语 （日本）
+* 朝鲜语 (ko)
+* 葡萄牙语 (pt)
+* 俄语 (ru)
+* 中文 （简体-中文 HANS 和 ZH-CHS）
+* 中文 （繁体-此不同和 ZH-CHT）
 
 ## <a name="next-steps"></a>后续步骤
 

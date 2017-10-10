@@ -2,7 +2,7 @@
 title: "在 Linux 上的 SQL 服务器的 active Directory 身份验证 |Microsoft 文档"
 description: "本教程提供有关在 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。"
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的 active Directory 身份验证
@@ -50,13 +50,15 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> 在此期间，数据库镜像终结点支持的唯一身份验证方法是证书。 将在未来版本中启用 WINDOWS 身份验证方法。
+> 限制：
+> - 在此期间，数据库镜像终结点支持的唯一身份验证方法是证书。 将在未来版本中启用 WINDOWS 身份验证方法。
+> - 不支持第三方 AD 工具 Centrify、 Powerbroker 等 Vintela 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 AD 域
 
 使用以下步骤以加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 Active Directory 域的主机：
 
-1. 使用** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) **加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
+1. 使用 **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
 
    ```bash
    # RHEL
@@ -206,7 +208,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 创建你在上一步中创建的 AD 用户的 keytab 文件。 为此，我们将使用** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出现提示时，输入该 AD 帐户的密码。
+2. 创建你在上一步中创建的 AD 用户的 keytab 文件。 为此，我们将使用 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出现提示时，输入该 AD 帐户的密码。
 
    ```bash
    sudo ktutil

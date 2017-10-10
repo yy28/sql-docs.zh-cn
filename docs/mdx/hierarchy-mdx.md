@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  返回级别的有效多维表达式 (MDX)。  
   
 ### <a name="examples"></a>示例  
- 下面的示例返回 AdventureWorks 多维数据集中 Data 维度的 Calendar 层次结构的名称。  
+ 下面的示例返回 AdventureWorks 多维数据集中日期维度中的日历层次结构的名称。  
   
  `WITH`  
   
@@ -65,7 +65,7 @@ Level_Expression.Hierarchy
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [MDX 函数引用 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 如果想要从转换**float**或**实际**为字符数据时，使用 STR 字符串函数是通常比强制转换 （） 更有用。 这是因为 STR 能够对格式进行更严格的控制。 有关详细信息，请参阅[STR &#40;Transact SQL &#41;](../../t-sql/functions/str-transact-sql.md)和[函数 &#40;Transact SQL &#41;](../../t-sql/functions/functions.md).
   
-转换**float**使用科学记数法到的值**十进制**或**数值**被限制为 17 位精度的值。 精度高于 17 的任何值都将舍入为零。
+转换**float**使用科学记数法到的值**十进制**或**数值**被限制为 17 位精度的值。 任何值 < 5E 18 将向舍入为 0。
   
 ## <a name="see-also"></a>另请参阅
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  

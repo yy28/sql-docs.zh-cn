@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>列模式信息配置文件请求选项（数据事件探查任务）
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **分隔符** 默认情况下，分隔符列表包含下列字符：空格、水平制表符 (\t)、换行符 (\n) 和回车符 (\r)。 可以指定其他分隔符，但不能删除默认分隔符。  
   
--   **符号**默认情况下，列表**符号**包含以下字符： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。 例如，如果符号为“`()-`”，则值“(425) 123-4567”将标记为 ["(", "425", ")", "123", "-", "4567", ")"]。  
+-   **符号**默认情况下，列表**符号**包含以下字符：`,.;:-"'~=&/@!?()<>[]{}|#*^%`以及刻度线。 例如，如果符号为“`()-`”，则值“(425) 123-4567”将标记为 ["(", "425", ")", "123", "-", "4567", ")"]。  
   
  一个字符不能同时作为分隔符和符号。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
  **“符号”**  
- 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“@”。 默认情况下，“符号”列表包含以下字符：`,.;:-"'`~=&/@!?()<>[]{}|#*^%`。  
+ 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“@”。 默认情况下，列表**符号**包含以下字符： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 09/08/2017
   
 ## <a name="see-also"></a>另请参阅  
  [数据事件探查任务编辑器（“常规”页）](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [单个表快速配置文件窗体 & #40; 数据事件探查任务 & #41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [单个表快速配置文件窗体 &#40; 数据事件探查任务 &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
 

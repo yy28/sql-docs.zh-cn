@@ -1,7 +1,7 @@
 ---
-title: "排除 Reporting Services 安装故障 |Microsoft 文档"
+title: "Reporting Services 安装故障排除 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 08/09/2017
   
  有关和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的其他错误和问题的信息，请参阅 [解决 SSRS 问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
- 查看 [联机发行说明](http://go.microsoft.com/fwlink/?linkid=236893) ，也许在发行说明中会论及您遇到的问题。  
+ 查看[联机发行说明](http://go.microsoft.com/fwlink/?linkid=236893)以防中的发行说明描述您遇到的问题。  
   
-##  <a name="bkmk_setuplogs"></a> 检查安装程序日志  
+##  <a name="bkmk_setuplogs"></a>检查安装程序日志  
  安装程序错误记录在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 文件夹内的日志文件中。 每次运行安装程序时都会创建一个子文件夹。 该子文件夹名称为您运行安装程序的时间和日期。 有关如何查看安装程序日志文件的说明，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 -   该日志文件包括文件集合。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   打开 *_RS\_\*_ComponentUpdateSetup.log 以查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装程序信息。  
   
-##  <a name="bkmk_prereq"></a> 检查系统必备条件  
+##  <a name="bkmk_prereq"></a>检查必备项  
  安装程序会自动检查系统必备条件。 不过，如果要排除安装中的问题，则了解安装程序将检查哪些条件非常有用。  
   
 -   运行安装程序的帐户要求包括本地 Administrators 组中的成员身份。 安装程序必须具有添加文件的权限、注册表设置权限、创建本地安全组权限和设置权限。 如果要在安装时采用默认配置，安装程序必须具有在所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建报表服务器数据库的权限。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  安装程序不再检查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安装这些组件，则安装程序将会安装它们。  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> 排除 SharePoint 模式安装问题  
+##  <a name="bkmk_tshoot_sharepoint"></a>排除 SharePoint 模式安装 oroblems  
   
 -   [Reporting Services 配置管理器不启动](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [您看到一条指示 PREPAREIMAGE 不支持 RS_SHP 的错误消息](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services 配置管理器不启动
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services 配置管理器未启动
 
  **描述：**此问题是设计使然在 SQL Server 2012 和更高版本。 为 SharePoint 服务体系结构构建 reporting Services。 在 SharePoint 模式下配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不再需要配置管理器。  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   从 SQL Server 安装介质安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。  
   
- **注意：** 如果在完成上述解决方法之一时 **SharePoint 2013/2016 命令行管理程序** 是打开的，则关闭后再重新打开该命令行管理程序。  
+ 如果**SharePoint 2013/2016年命令行管理程序**时完成上述解决方法之一，请关闭并重新打开命令行管理程序处于打开状态。  
   
  有关详细信息，请参见以下内容：  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![用于回顶部链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于回顶部链接的箭头图标")[故障排除 SharePoint 模式安装问题](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> 排除本机模式安装问题  
+##  <a name="bkmk_tshoot_native"></a>排除本机模式安装问题  
   
 ###  <a name="PerfCounters"></a> 升级到 Windows Vista 或 Windows Server 2008 后，性能计数器不可见  
  如果将运行 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 的计算机的操作系统升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，则升级后不会设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 性能计数器。  
