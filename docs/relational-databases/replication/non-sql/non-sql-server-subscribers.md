@@ -81,7 +81,7 @@ Oracle 版本信息：
   
     -   对于 Oracle，一个服务器最多只有一个数据库，因此不必指定数据库。  
   
-    -   对于 IBM DB2，在 DB2 连接字符串中指定数据库。 有关详细信息，请参阅 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+    -   对于 IBM DB2，在 DB2 连接字符串中指定数据库。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
 -   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器运行在 64 位平台上，必须使用相应 OLE DB 访问接口的 64 位版本。  
   
