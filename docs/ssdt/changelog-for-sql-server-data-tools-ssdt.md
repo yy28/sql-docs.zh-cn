@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 for Visual Studio 2015
+内部版本号：14.0.61709.290
+
+### <a name="whats-new"></a>新增功能
+
+**Analysis Services (AS)**
+
+- 在 1400 个模型中启用了 Cosmos DB 和 HDI Spark。
+- 表格数据源属性。
+- 现在支持“空白查询”选项，用于在查询编辑器中为 1400 兼容级别的模型创建新查询。
+- 1400 模式模型的查询编辑器现在支持保存查询，而系统不会自动处理新的表格。
+
+**Reporting Services (RS)**
+
+- 现在打开项目时会提示格式已升级，以支持使用 MSBuild 进行生成和部署。
+
+### <a name="known-issues"></a>已知问题
+
+**Analysis Services (AS)**
+
+- 具有透视的 1400 兼容级别的直接查询模型在查询和发现元数据时失败。
+
+**Reporting Services (RS)**
+
+- 新的报表项目格式不会保留源代码管理绑定，并会引发与以下消息类似的错误：
+
+   项目文件 C:\path 未绑定到源代码管理，但该解决方案包含其中的源代码管理绑定信息。
+ 
+   若要解决此问题，每当打开解决方案时，请单击“使用解决方案绑定”。
+
+- 将项目升级到新的 MSBuild 格式后，保存可能会失败，消息类似于以下内容：
+
+   “参数 "unevaluatedValue" 不得为 null。”
+
+   若要解决此问题，请更新“项目配置”并填写“平台”属性。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**Analysis Services (AS)**
+
+- 大幅提升了加载表格模型关系图视图时的性能。
+- 修复了大量问题，改进了 1400 兼容级别模型中 PowerQuery 的集成和体验。
+   - 修复了阻止授予文件源编辑权限的问题。
+   - 修复了不能更改文件源的源的问题。
+   - 修复了文件源的 UI 显示错误的问题。
+- 修复了在“加入日期”关系处于非活动状态的情况下，导致删除了 "JoinOnDate" 属性的问题。
+- 查询生成器中的“新建查询”选项现在允许创建一个新的空白查询。
+- 修复了导致对现有数据源查询的编辑不能在 1400 兼容级别下更新表格的模型定义的问题。
+- 修复了可能引起异常的自定义上下文表达式的相关问题。
+- 在 1400 表格模式中采用重复名称导入新的表格时，用户现在会收到通知，指示名称存在冲突，需要调整为唯一的名称。
+- 在导入模式中，当前用户模拟模式已从模型中删除，因为它不是受支持的方案。
+- PowerQuery 集成现支持用于其他数据源（OData.Feed、Odbc.DataSource、Access.Database、SapBusinessWarehouse.Cubes）的选项。
+- 数据源的 PowerQuery 选项字符串现将根据客户端区域设置正确显示本地化文本。
+- 关系图视图现在可以显示 1400 兼容级别模型中从 M 查询编辑器新建的列。
+- Power Query 编辑器现提供不导入数据的选项。
+- 修复了安装数据胶卷过程中的问题，该数据胶卷用于在 VS2017 的多维模型中从 Oracle 导入表格。
+- 修复了在极少数情况下，鼠标游标离开表格公式栏时可能会导致故障的问题。
+- 修改了“编辑表格属性”对话框中的一个问题，即更改表名会错误地更改源表名，进而导致发生意外错误。
+- 修复了在多维项目中尝试在角色设计器“单元格数据”选项卡设计器中调用测试多维数据集安全性时，VS2017 中可能发生的故障。
+- SSDT：对于表格数据源，属性是不可编辑的。
+- 修复了可能导致 MSBuild 和 DevEnv 版本在某些情况下无法使用解决方案文件正常工作的问题。
+- 大幅提升了在表格模型包含更大的元数据的情况下，提交模型更改（针对度量值、计算列的 DAX 编辑）时的性能
+- 修复了在 1400 兼容级别模型中使用 PowerQuery 导入数据的过程中出现的大量问题
+   - 单击“导入”后需要很长时间才能完成导入，而 UI 不会显示任何状态
+   - 尝试选择要导入的表时，导航器视图上一系列表格非常缓慢
+   - 在查询编辑器视图中使用 35 个查询的列表时，查询编辑器的性能低下（PBI 桌面中也会出现该问题）
+   - 导入多个表格会禁用工具栏，在某些情况下可能无法再完成该操作 
+   - 使用 PQ 导入表格后，模型设计器处于禁用状态，并且未显示任何数据
+   - 在 PQ UI 中取消选中“创建新表”，但仍会导致创建新表
+   - 文件夹数据源未提示输入凭据 
+   - 尝试对结构化数据源获取更新后的凭据时可能发生的未设置对象引用异常
+   - 使用 M 表达式打开分区管理器这一操作非常缓慢
+   - 在 PQ 编辑器中选择表格属性，这一操作未显示属性
+- 提高了在 Power Query UI 集成中捕获顶级异常并在“输出”窗口中显示的可靠性
+- 修复了结构数据源上的 ChangeSource 在上下文表达式中不会持续更改的问题
+- 修复了 M 表达式错误可能导致无法更新模型，而不显示错误消息的问题
+- 修复了关闭 SSDT 时显示“The build must be stopped before the solution can be closed”错误的问题
+- 修复了在 1400 兼容级别模型中设置了错误的模拟模式时，VS 可能出现挂起状态的问题 
+- 目前，详细信息行属性不为空时，只会序列化为 JSON（更改了默认设置）
+- Oracle OLEDB 驱动程序现可用于表格直接查询模式下的列表中
+- 在 1400 兼容表格模型中添加 M 表达式，这一操作现在会在表格模型资源管理器 (TME) 中显示\刷新
+- 修复了尝试在预先的 1400 兼容级别模型中使用“其他”数据源进行导入时，会导致 MSOLAP 提供程序不会出现在 VS2017 中的问题
+- 修复了通过 TME 添加转换可能会导致出现问题的问题 
+- 修复了对象级安全性接口中会导致选项卡在某些情况下不正确地显示\隐藏的问题
+- 修复了尝试使用“连接到数据库”对话框打开以前加载的多维模型的过程中可能发生故障的问题
+- 修复了将自定义程序集添加到多维模型时，会导致发生错误的问题
+
+**Reporting Services (RS)**
+
+- 修复了在 VS 2017 中编译和生成 RDLC 的过程中出现的问题
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT for Visual Studio 2017（15.3.0 预览版）
 内部版本号：14.0.16121.0
@@ -51,7 +142,7 @@ ms.lasthandoff: 09/27/2017
 
 
 **AS 项目：**
-- 现在可以在“角色”对话框中配置“对象级安全性”，以便在 1400 个兼容级别表格模型中实现高级安全性。
+- 现可在“角色”对话框中配置“对象级安全性”，便于在 1400 兼容级别表格模型中实现高级安全性。
 - 用于在适用于 VS2017 的 SSDT AS 项目中的 AS Azure 模型中无电子邮件地址用户的新的 AAD 角色成员选择。
 - SSDT AS 表格项目中新的 AS Azure“始终提示”项目属性，用于自定义 ADAL 凭据缓存的行为。
 
@@ -128,7 +219,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="whats-new"></a>新增功能
 **数据库项目：**
 - 在视图上修改聚集索引将不再阻止部署
-- 与列加密相关的架构比较字符串将使用恰当的名称，而非实例名称。   
+- 与列加密相关的架构比较字符串会使用恰当的名称，而非实例名称。   
 - 向 SqlPackage 添加了新的命令行选项：ModelFilePath。  这为高级用户提供了一个选项，可用于指定外部 model.xml 文件来执行导入、发布和脚本编写操作   
 - 扩展了 DacFx API，用于支持 Azure AD 通用身份验证和多重身份验证 (MFA)
 
@@ -142,9 +233,9 @@ ms.lasthandoff: 09/27/2017
     - 如果用户已安装第三方驱动程序，则 DirectQuery 适用于 SQL Oracle 和 Teradata
     - 在 PowerQuery 中按示例添加列
     - 1400 模型中的数据访问选项（M 引擎使用的模型级别属性）
-        - 启用快速合并（默认为 false - 设置为 true 时，糅合引擎将在合并数据时忽略数据源隐私级别）
-        - 启用旧版重定向（默认为 false - 设置为 true 时，糅合引擎将跟随可能不安全的 HTTP 重定向。  例如，从 HTTPS 到 HTTP URI 的重定向）  
-        - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误将返回 null。 如果设置为 false，单元格包含错误时将引发异常）  
+        - 启用快速合并（默认为 false - 设置为 true 时，糅合引擎会在合并数据时忽略数据源隐私级别）
+        - 启用旧版重定向（默认为 false - 设置为 true 时，糅合引擎会跟随可能不安全的 HTTP 重定向。  例如，从 HTTPS 到 HTTP URI 的重定向）  
+        - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误会返回 null。 如果设置为 false，单元格包含错误时会引发异常）  
     - 使用 PowerQuery 的其他数据源（文件数据源）
         - Excel 
         - Text/CSV 
@@ -169,7 +260,7 @@ ms.lasthandoff: 09/27/2017
 - 表格：针对 DAX 分析和公式栏的多种增强和性能修复。
 - 表格：如果没有打开 SSAS 表格项目，则不显示表格模型资源管理器。
 - 多维：解决了高 DPI 计算机上处理对话框不可用的问题。
-- 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - 表格：解决了在 1103 模式下层次结构未正确保存到 bim 文件的问题。[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 表格：解决了尽管不支持，但仍能在 32 位计算机上允许集成工作区模式的问题。
 - 表格：解决了在准选择模式下单击任何内容（例如键入 DAX 表达式，但单击一个度量值）可能导致崩溃的问题。
