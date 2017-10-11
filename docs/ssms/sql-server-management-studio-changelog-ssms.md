@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
-## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+正式发布版 | 内部版本号：14.0.17199.0
+
+### <a name="enhancements"></a>增强功能
+
+- 新添加的“导入平面文件”向导通过智能框架简化了 CSV 文件的导入体验，极大地减少了所需的用户干预或领域的专业知识。 有关详细信息，请参阅[将平面文件导入到 SQL 向导](../relational-databases/import-export/import-flat-file-wizard.md)。
+- “XEvent 探查器”节点已添加到对象资源管理器。 有关详细信息，请参阅[使用 SSMS XEvent 探查器](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+- 更新了性能仪表板历史等待报表中的等待过滤和分类。
+- 添加了“预测”函数的语法检查。
+- 添加了外部库管理查询的语法检查。
+- 添加了对外部库管理的 SMO 支持。
+- 添加了对“已注册服务器”窗口的“启动 PowerShell”支持（需要新的 SQL PowerShell 模块）。
+- AlwaysOn：已为可用性组添加[只读路由支持](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。
+- 添加了一个用于将跟踪详细信息发送到“Active Directory - 含 MFA 支持的通用身份验证”登录的输出窗口（默认为关闭状态；必须在“工具”>“选项”>“Azure 服务”>“Azure 云”>“ADAL 输出窗口跟踪级别”下的用户设置中开启）。 
+- 查询存储： 
+  - 即使 QDS 为关闭状态，只要 QDS 已记录任何数据，就可以访问查询存储 UI。
+  - 查询存储 UI 现在会在所有现有报表中公开等待分类。 这会让客户解锁顶级等待查询等方案。
+- 包含可选的脚本参数标头（默认为关闭状态；可在“工具”>“选项”>“SQL Server 对象资源管理器”>“脚本”>“包括脚本参数标头”下的用户设置中启用）- [连接项 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
+- 已删除“RC”商标。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+
+- XEvent： 
+   - 修复了 SSMS 仅打开 .xel 文件中的部分事件的问题。
+   - 改进了默认数据库不是“master”时的“查看实时数据”体验 - [连接项 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582)。
+- AlwaysOn：修复了“还原日志备份”可能出现故障的问题，其错误信息为“此备份集中的日志终止于 LSN x，该日志过早地应用到了数据库中”。
+- 作业活动监视器：修复了不一致的图标 - [连接项 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)。
+- 查询存储：修复了用户无法为查询存储报表选择“自定义”日期范围的问题。 链接到下面的连接项。
+   - [连接项 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [连接项 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- 修复了保存的信息具有命名的数据库和用户选择 <default> 时，连接对话框未“清除”最近使用的数据库的问题。
+- 对象脚本：
+    - 修复了用户在服务器上具有暂停的 DW 数据库，但选择了其他非 DW 数据库并尝试进行脚本编辑，在该情况下“生成数据库脚本”无法正常工作并引发了错误的问题。
+    - 修复了脚本化存储过程的标头与脚本设置不匹配，而导致生成误导性的脚本的问题 - [连接项 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)。
+    - 面向 SQL Azure 对象时，重新启用了“脚本”按钮。
+    - 修复了连接到 Azure SQL 数据库时，SSMS 不允许在某些对象（UDF、视图、SP、触发器）上为“更改”或“执行”编写脚本的问题 - [连接项 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)。
+- 查询编辑器：
+  - 改进了面向 Azure SQL 数据库时的智能功能。
+  - 修复了查询由于身份验证令牌（通用身份验证）过期而失败的问题。
+  - 改进了针对 Azure SQL 数据库工作时的智能功能（具体来说，连接到 Azure SQL 数据库时，会使用最新的 T-SQL 语法 (140)）。
+  - 修复了在服务器上使用指向非数据仓库数据库的连接打开查询窗口，这一操作会导致该服务器指向数据仓库数据库的所有后续查询窗口引发各种有关不受支持的类型/选项的错误的问题。
+- Always On：
+   - 向 AlwaysOn 仪表板和 AG 属性页添加了种子设定模式列。
+   - 修复了主系统为 Windows 时无法创建 Linux AG 的问题 - [连接项 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)。
+- 修复了运行查询时 SSMS 中出现的多个“内存不足”的问题 - [连接项 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)、[连接项 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)。
+- 探查器： 
+   - 修复了面向 SQL 2005 时探查器不工作的问题。
+   - 修复了探查器不遵循“信任服务器证书”连接选项的问题。
+- 活动监视器：修复了指向在 Linux 上运行的 SQL Server 时活动监视器不工作的问题。
+- 修复了 SMO 传输类的相关问题，即它不会传输外部数据源或外部文件格式对象，这些类型的对象现在应正确包含在传输中。
+- 已注册的服务器：
+   - 启用了 UA 服务器的多服务器查询（它会尝试在组中为每个 UA 服务器使用相同的令牌）。
+- AD 通用身份验证：
+   - 修复了不支持 Azure AD 身份验证的问题。
+   - 修复了表格/视图设计器不工作的问题。
+   - 修复了“选择前 1000 行”和“编辑前 200 行”不工作的问题。
+- 数据库还原：修复了将文件移动到另一个位置时，还原操作会忽略路径中最后一个文件夹的问题。
+- 压缩向导：
+   - 修复了索引的管理压缩向导的相关问题；修复了压缩数据向导在 SQL 2016 和更低版本中中断的问题。
+        https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - 向 Azure 表和索引添加了压缩向导。
+- Showplan： 
+   - 修复了未识别 PDW 运算符的问题。
+- 服务器属性：
+   - 修复了无法修改服务器处理器关联的问题。
+
+
+**Analysis Services (AS)**
+
+- 修复了有关部署向导的大量问题，以支持表格 1400 兼容级别模型和 Power Query 数据源。
+- 从命令行运行时，部署向导现可部署到 AS Azure 中。
+- 在 AS Azure 中使用 Windows 身份验证时，用户现在可在对象资源管理器中看到用户帐户的正确名称。
+
+
+### <a name="known-issues-in-this-173-release"></a>此 17.3 版本中的已知问题：
+
+**常规 SSMS**
+
+- 对于使用含 MFA 的 UA 的 Azure AD 身份验证，不支持以下 SSMS 功能：
+   - 对于 Azure AD 身份验证，不支持数据库引擎优化顾问；存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory,…”较为隐蔽， 而非按预期显示“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库。 (DTAClient)”。
+- 尝试在 DTA 中分析查询会导致发生错误：“对象必须实现 IConvertible。 (mscorlib)”。
+- 回归的查询缺少对象资源管理器中报表的查询存储列表。
+   - 解决方法：右键单击“查询存储”节点，然后选择“查看回归的查询”。
+
+**Integration Services (IS)**
+
+- 对于 Scale Out 中的包执行，[catalog].[event_messagea] 中的 [execution_path] 不正确。[execution_path] 以“\Package”开头，而不是以包可执行文件的对象名称开头。 在 SSMS 中查看包执行的概述报表时，执行概述中“执行路径”的链接不起作用。 解决方法是，在概述报表上单击“查看消息”，检查所有事件消息。
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 公开发布 | 版本号：14.0.17177.0
 
 ### <a name="enhancements"></a>增强功能
@@ -77,11 +172,11 @@ ms.lasthandoff: 09/27/2017
   - 使用 Ctrl+F
 
 
-### <a name="analysis-services-as"></a>Analysis Services (AS)
+**Analysis Services (AS)**
 
 - 用于在 SSMS 中的 AS Azure 模型中无电子邮件地址用户的新的 AAD 角色成员选择
 
-### <a name="integration-services-is"></a>Integration Services (IS)
+**Integration Services (IS)**
 
 - 向 SSIS 的执行报表添加了新列（“执行计数”）
 
@@ -100,7 +195,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - “已注册的服务器”组件不支持 Azure AD 身份验证。
   - “数据库引擎优化顾问”不支持 Azure AD 身份验证。 存在以下已知问题：向用户显示的错误消息“无法加载文件或程序集 Microsoft.IdentityModel.Clients.ActiveDirectory”无用， 而不是显示“数据库引擎优化顾问不支持 Microsoft Azure SQL 数据库 (DTAClient)”。
 
-**AS**
+**Analysis Services (AS)**
 
 - SSAS 中的对象资源管理器将不会在 AS Azure 连接属性中显示 Windows 身份验证用户名。
 
@@ -140,7 +235,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA：修复了当使用特定边界值评估分区功能时，DTAEngine.exe 因堆损坏终止的问题。
 
 
-Analysis Services (AS)
+**Analysis Services (AS)**
+
 - 修复了如果 DB 具有与 ID 不同的名称，AS 还原数据库将失败并出现错误的问题
 - 修复了导致 DAX 查询窗口忽略用于切换已启用 IntelliSense 功能的菜单选项的问题
 - 修复了阻止通过 msmdpump IIS http/https 地址连接到 SSAS 的问题
@@ -149,14 +245,9 @@ Analysis Services (AS)
 - 修复了一个非常罕见的问题，该问题可能导致删除数据库对话框在加载时出错
 - 修复了尝试在包含混合了 SQL 查询和 M 分区定义的 1400 兼容级别模型中查看分区时可能会出现的问题
 
-Integration Services (IS)
+**Integration Services (IS)**
 - 修复了无法显示 SSISDB 目录的执行信息报表的问题
 - 修复了 SSMS 中与大量项目/包性能不佳相关的问题
-
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![下载](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 公开发布 | 内部版本号：14.0.17119.0
@@ -544,7 +635,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 7 月 5 日编辑：改进了对“Analysis Services 进程”对话框和“Analysis Services 部署”向导中 SQL Server 2016（1200 兼容级别）表格数据库的支持。
 
-* 7 月 5 日编辑：SSMS“查询执行选项”对话框中的新选项，用来设置“XACT_ABORT”。 此选项在此版本的 SSMS 中默认启用，将指示 SQL Server 回滚整个事务，且如果出现运行时错误，则中止批处理。
+* 7 月 5 日编辑：SSMS“查询执行选项”对话框中的新选项，用来设置“XACT_ABORT”。 此选项在此版本的 SSMS 中默认启用，指示 SQL Server 回退整个事务，且如果出现运行时错误，则中止批处理。
 
 * 在 SSMS 中对 Azure SQL 数据仓库的支持。
 
@@ -554,7 +645,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 显著改善了到 Azure SQL 数据库的连接时间。
 
-* 新的“备份到 URL 对话框”，用于支持为 SQL Server 2016 数据库备份创建 Azure 存储凭据。 该对话框使得用户可在 Azure 存储帐户中更流畅地存储数据库备份。
+* 新的“备份到 URL”对话框，用于支持为 SQL Server 2016 数据库备份创建 Azure 存储凭据。 该对话框使得用户可在 Azure 存储帐户中更流畅地存储数据库备份。
  
 * 新的“还原”对话框，用来简化从 Microsoft Azure 存储服务还原 SQL Server 2016 数据库备份。
  
