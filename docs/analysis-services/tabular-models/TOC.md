@@ -20,6 +20,7 @@
 ### [支持的数据源](data-sources-supported-ssas-tabular.md)  
 ### [支持的数据类型](data-types-supported-ssas-tabular.md)  
 ### [模拟](impersonation-ssas-tabular.md)  
+### [使用本机查询导入数据](ssas-import-query.md)
 ### [导入数据 - 关系数据源](ssas-import-data-relational-data-source.md)  
 ### [导入数据 - 多维数据源](ssas-import-data-multidimensional-data-source.md)  
 ### [导入数据 - 数据馈送](ssas-import-data-data-feed.md)  
