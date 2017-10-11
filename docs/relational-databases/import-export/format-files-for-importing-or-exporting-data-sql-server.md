@@ -18,11 +18,11 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d0e3abc1c4ae024257be18f3e3ad3ba5f5566457
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>用来导入或导出数据的格式化文件 (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="a-using-a-non-xml-format-file"></a>A. 使用非 XML 格式化文件  
  下面的非 XML 格式化文件为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表使用 `HumanResources.myTeam` 本机数据格式。 此格式化文件是用下面的 `bcp` 命令创建的。  
   
-```  
+```cmd 
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
 The contents of this format file are as follows: 9.0  
 4  
@@ -62,13 +62,13 @@ The contents of this format file are as follows: 9.0
 ### <a name="b-using-an-xml-format-file"></a>B. 使用 XML 格式化文件  
  下面的 XML 格式化文件为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表使用 `HumanResources.myTeam` 本机数据格式。 此格式化文件是用下面的 `bcp` 命令创建的。  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
 ```  
   
  格式化文件包含：  
   
-```  
+```xml
  <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
-  
- **注意：** 有关详细信息，请参阅 
-  - [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://support.microsoft.com/en-us/kb/316005)
-     - [XML 架构集合 (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+有关详细信息，请参阅以下主题。
+- [使用 bcp 实用工具导入和导出大容量数据 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [使用 BULK INSERT 或 OPENROWSET(BULK...) 导入大容量数据 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [如何使用 XML 大容量加载组件将 XML 导入 SQL Server。](https://support.microsoft.com/en-us/kb/316005)
+- [XML 架构集合 (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>示例  
  下列示例说明了以下操作内容：  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>示例表  
  若要测试下方的示例 A，请创建示例表 `T`。  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>示例数据文件  
  在运行示例 A 之前，必须先创建一个 UTF-8 编码文件 (`C:\SampleFolder\SampleData3.txt`)，该文件应包含指定 `UTF-8` 编码方案的以下示例实例。  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>示例 A  
  此示例使用 `SINGLE_BLOB` 语句中的 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 选项从名为 `SampleData3.txt` 的文件中导入数据，并在包含单列的示例表 `T`中插入一个 XML 实例。  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>示例数据文件  
  示例 B 使用的是上例所使用 `SampleData3.txt` 示例数据文件的修改版本。 若要运行此示例，请按如下所示修改此文件的内容：  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>示例 B  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>示例数据文件  
  在测试此批量导入示例之前，需要先创建一个包含以下示例实例的文件 (`C:\temp\Dtdfile.xml`)：  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>示例表  
  示例 C 使用由以下 `T1` 语句创建的 `CREATE TABLE` 示例表：  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>示例 C  
  此示例使用 `OPENROWSET(BULK...)` ，并在 `CONVERT` 子句中指定了 `SELECT` 选项，从而将 XML 数据从 `Dtdfile.xml` 导入到了示例表 `T1`中。  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  此示例说明如何为 `xTable` 示例表使用此字段终止符。 若要创建此示例表，请使用下列 `CREATE TABLE` 语句：  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>示例 D  
  此示例在 `Xmltable.fmt` 语句中使用 `BULK INSERT` 格式化文件来导入 XML 数据文件 `Xmltable.dat`中的内容。  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> 大容量导出 XML 数据  
  下面的示例使用 `bcp` 命令和同一个 XML 格式化文件从上一示例所创建的表中大容量导出 XML 数据。 在下面的 `bcp` 命令中， `<server_name>` 和 `<instance_name>` 代表必须使用相应的值替换的占位符：  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   

@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 -   [bcp 实用工具](../../tools/bcp-utility.md)将 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 值作为字符格式数据文件导出时，该数据文件小数点后保留四位数字且不带诸如逗号分隔符之类的任何数字分组符号。 例如，包含值 1,234,567.123456 的 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 列将以字符串 1234567.1235 的形式批量导出到数据文件中。  
   
 ## 字符格式的命令选项<a name="command_options"></a>  
-可以使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ... 将字符格式数据导入表中SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。 对于 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句，你可以在语句中指定数据格式。  对于 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句，必须在格式化文件中指定数据格式。  
+可以使用 [bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [INSERT ... 将字符格式数据导入表中SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)。对于 [bcp](../../tools/bcp-utility.md) 命令或 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 语句，你可以在语句中指定数据格式。  对于 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 语句，必须在格式化文件中指定数据格式。  
   
 下列命令选项支持字符格式：  
   
@@ -81,7 +81,8 @@ ms.lasthandoff: 06/22/2017
 
 ### **示例表**<a name="sample_table"></a>
 以下脚本将创建测试数据库、名为 `myChar` 的表并用一些初始值填充表。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -108,7 +109,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ### **示例非 XML 格式化文件**<a name="nonxml_format_file"></a>
 SQL Server 支持两种类型的格式化文件：非 XML 格式和 XML 格式。  非 XML 格式是 SQL Server 早期版本支持的原始格式。  有关详细信息，请查看 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 。  下面的命令基于 [的架构使用](../../tools/bcp-utility.md) bcp 实用工具 `myChar.fmt`生成非 XML 格式化文件 `myChar`。  若要使用 [bcp](../../tools/bcp-utility.md) 命令创建格式化文件，请指定 **format** 参数，并使用 **nul** 而不是数据文件路径。  格式化选项还需要 **-f** 选项。  此外，对于本示例，限定符 **c** 用于指定字符数据， **T** 用于指定使用集成安全性的受信任连接。  在命令提示符处输入以下命令：
 
-```
+```cmd
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
 
 REM Review file
@@ -126,7 +127,8 @@ Notepad D:\BCP\myChar.fmt
 
 ### **使用 bcp 和字符格式导出数据**<a name="bcp_char_export"></a>
 **-c** 切换和 **OUT** 命令。  请注意：此示例中创建的数据文件将用于所有后续示例中。  在命令提示符处输入以下命令：
-```
+
+```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
 
 REM Review results
@@ -135,7 +137,8 @@ NOTEPAD D:\BCP\myChar.bcp
 
 ### **在不使用格式化文件的情况下使用 bcp 和字符格式导入数据**<a name="bcp_char_import"></a>
 **-c** 切换和 **IN** 命令。  在命令提示符处输入以下命令：
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -148,7 +151,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **在使用非 XML 格式化文件的情况下使用 bcp 和字符格式导入数据**<a name="bcp_char_import_fmt"></a>
 **-c** 和 **-f** 切换以及 **IN** 命令。  在命令提示符处输入以下命令：
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -161,7 +165,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **在不使用格式化文件的情况下使用 BULK INSERT 和字符格式**<a name="bulk_char"></a>
 **DATAFILETYPE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
     FROM 'D:\BCP\myChar.bcp'
@@ -175,7 +180,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **在使用非 XML 格式化文件的情况下使用 BULK INSERT 和字符格式**<a name="bulk_char_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
    FROM 'D:\BCP\myChar.bcp'
@@ -189,7 +195,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **在使用非 XML 格式化文件的情况下使用 OPENROWSET 和字符格式**<a name="openrowset_char_fmt"></a>
 **FORMATFILE** 参数。  在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中执行以下 Transact-SQL：
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
     SELECT *
