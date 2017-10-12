@@ -107,11 +107,11 @@ ms.lasthandoff: 09/26/2017
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
 
 ## <a name="common-properties-of-data-flow-components"></a>数据流组件通用的属性
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中的数据流对象在组件级、输入和输出级以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了数据流对象的通用属性。  
   
--   组件[](#components)  
+-   [组件](#components)  
   
 -   [输入](#inputs)  
   
