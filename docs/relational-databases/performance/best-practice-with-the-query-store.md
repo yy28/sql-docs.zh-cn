@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
@@ -323,11 +323,11 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志改善灾难恢复
  
-  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。
+  全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。 有关详细信息，请参考[跟踪标志](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   跟踪标志 7745 会阻止以下默认行为：在可关闭 SQL Server 之前，查询存储将数据写入磁盘。
   
-  跟踪标志 7752 允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+  跟踪标志 7752 能够异步加载查询存储，并且允许 SQL Server 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
 
 ## <a name="see-also"></a>另请参阅  
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

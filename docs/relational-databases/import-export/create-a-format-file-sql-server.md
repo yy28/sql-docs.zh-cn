@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  有关如何使用 Unicode 字符数据的详细信息，请参阅[使用 Unicode 字符格式导入或导出数据 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. 使用具有代码页选项的格式化文件  
- 如果使用 bcp 命令（例如使用“`bcp forma`t …”）创建格式化文件， 有关排序规则/代码页的信息将写入格式化文件中。   
+如果使用 bcp 命令（即使用 `bcp format`）创建格式化文件，排序规则/代码页的相关信息将写入格式化文件。   
 具有 5 列的表的以下示例格式化文件包括了排序规则。  
   
 ```  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 对于在兼容级别 120 及以上设置的 SQL Server 数据库，激活 [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 会强制系统使用 CE 版本 70。  
+ 对于在兼容级别 120 及以上设置的 SQL Server 数据库，激活[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 会强制系统使用 CE 版本 70。  
   
  旧版 CE：对于在兼容级别 120 及以上设置的 SQL Server 数据库，CE 版本 70 可通过在数据库级别使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **查询存储：**从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 开始，查询存储是用于检查查询性能的一种方便的工具。  在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe) 中数据库节点下的对象资源管理器中，当查询存储为“开”时，显示“查询存储”节点。  
+ 查询存储：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > 我们建议每个月安装 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) 的最新版本。  
+ > 建议安装最新版本的 [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 并且经常更新。  
   
- 跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。  以下 T-SQL 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。 它将 .xel 文件写入 C:\Temp\（尽管可以更改路径）。 在 SSMS 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
+ 跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。 以下 T-SQL 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。 它将 .xel 文件写入 C:\Temp\（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- 有关为 Azure SQL 数据库定制的扩展事件的信息，请参阅 [《Extended events in SQL Database》](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)（SQL 数据库中的扩展事件）。  
+ 有关为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 定制的扩展事件的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>评估 CE 版本的步骤  

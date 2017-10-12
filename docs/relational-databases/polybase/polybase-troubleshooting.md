@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
@@ -213,7 +213,7 @@ ms.lasthandoff: 09/13/2017
     ```  
   
 ## <a name="to-monitor-nodes-in-a-polybase-group"></a>在 PolyBase 组中监视节点  
- 在将一组计算机配置为 PolyBase 扩展组的一部分后，便可以监视计算机的状态。 有关创建扩展组的详细信息，请参阅 [PolyBase 扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
+ 在将一组计算机配置为 PolyBase 扩展组的一部分后，便可以监视计算机的状态。 有关创建横向扩展组的详细信息，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
   
 1.  连接到组的头节点上的 SQL Server。  
   
@@ -229,6 +229,8 @@ ms.lasthandoff: 09/13/2017
  - 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
  - 无法读取或写入 Hadoop 中的静态加密数据。 这包括 HDFS 加密区域或透明加密。
  - 如果已启用 KNOX，则 PolyBase 无法连接 Hortonworks 实例。 
+ - 如果使用事务为 true 的 Hive 表，PolyBase 将无法访问 Hive 表目录中的数据。 
+
 
 [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
