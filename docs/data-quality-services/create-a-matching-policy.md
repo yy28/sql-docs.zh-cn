@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  在 **“映射”**下，为 **“源列”**选择数据源中的一个字段，然后选择对应的域。 对匹配过程中使用的所有域重复此过程。 根据需要，通过单击 **“创建域”** 或 **“创建复合域”**来创建域。  
   
     > [!NOTE]  
-    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能在创建匹配策略时将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+    >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能在创建匹配策略时将源数据映射到 DQS 域。 有关 DQS 中支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 5.  单击 **加号 (+)** 控件可向映射表中添加行，单击 **减号 (–)** 控件可删除行。  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. 单击 **“取消”** 可终止“匹配策略”活动，不保存所做的工作，并返回到 DQS 主页。  
   
 ##  <a name="FollowUp"></a> 跟进：创建匹配策略之后  
- 在创建匹配策略后，可以基于包含匹配策略的知识库运行匹配项目。 有关详细信息，请参阅 [Run a Matching Project](../data-quality-services/run-a-matching-project.md)。  
+ 在创建匹配策略后，可以基于包含匹配策略的知识库运行匹配项目。 有关详细信息，请参阅 [运行匹配项目](../data-quality-services/run-a-matching-project.md)。  
   
 ##  <a name="Tabs"></a> “事件探查器”和“结果”选项卡  
  “事件探查器”和“结果”选项卡包含针对“匹配策略”页和“匹配结果”页的统计信息。  
