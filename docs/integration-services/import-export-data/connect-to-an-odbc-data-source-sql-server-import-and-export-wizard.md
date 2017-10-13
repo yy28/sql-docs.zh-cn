@@ -93,7 +93,9 @@ ms.lasthandoff: 08/28/2017
 
 此示例将使用以下连接字符串，连接到 Microsoft SQL Server。
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 输入中的连接字符串**ConnectionString**字段上**选择数据源**或**选择目标**页。 输入连接字符串后，向导将分析字符串，并在列表中显示的各个属性及其值。
 
@@ -138,20 +140,24 @@ ms.lasthandoff: 08/28/2017
 
 10. 使用记事本或其他文本编辑器中打开保存的文件。 以下是我们的 SQL Server 示例内容。
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. 复制并粘贴到用分号分隔的名称-值对的连接字符串的所需的值。
 
     从示例文件 DSN 组合所需值后，你将具有以下连接字符串。
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     您通常不需要创建通过 ODBC 数据源管理器创建的连接字符串的工作原理的 DSN 中的所有设置。  
     -   你始终必须指定的 ODBC 驱动程序。

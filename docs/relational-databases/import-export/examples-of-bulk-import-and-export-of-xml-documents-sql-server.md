@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
   
 -   **bcp** 实用工具  
- 还可以使用 **bcp** 实用工具将数据从可执行 SELECT 语句的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任意位置（包括分区视图）导出。  
+    还可以使用 **bcp** 实用工具将数据从可执行 SELECT 语句的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的任意位置（包括分区视图）导出。  
   
 -   BULK INSERT  
   

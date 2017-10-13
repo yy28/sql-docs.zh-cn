@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. 为 Unicode 本机数据创建非 XML 格式化文件  
  若要为 `HumanResources.Department` 表中的 Unicode 本机数据创建非 XML 格式化文件，请使用以下命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. 为 Unicode 字符数据创建非 XML 格式化文件  
  若要为 `HumanResources.Department` 表中使用默认终止符的 Unicode 字符数据创建非 XML 格式化文件，请使用以下命令：  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   
