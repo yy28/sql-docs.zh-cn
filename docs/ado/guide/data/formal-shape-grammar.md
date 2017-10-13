@@ -68,7 +68,7 @@ ms.lasthandoff: 09/09/2017
 |\<数量 >|数字 [...数字]|  
 |\<新 exp >|新\<字段类型 > [(\<数 > [，\<数 >])]|  
 |\<字段类型 >|OLE DB 或 ADO 数据类型。|  
-|\<字符串 >|unicode char [unicode char。..]|  
+|\<字符串 >|unicode char [unicode char...]|  
 |\<表达式 >|Visual Basic 应用程序表达式其操作数都是同一行中的其他非计算列。|  
   
 ## <a name="see-also"></a>另请参阅  
