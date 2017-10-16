@@ -60,7 +60,7 @@ Oracle 版本信息：
 
  不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  
 
-有关创建 Oracle 和 IBM DB2, 订阅的信息，请参阅 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)的解决方案。  
+有关创建 Oracle 和 IBM DB2, 订阅的信息，请参阅 [Oracle 订阅服务器](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 和 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)的解决方案。  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>非 SQL Server 订阅服务器的注意事项  
  在复制到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器时，请牢记下列注意事项：  
@@ -73,7 +73,7 @@ Oracle 版本信息：
   
 -   如果发布中包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，则必须在创建对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的任何订阅之前为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用发布。  
   
--   默认情况下，由快照代理为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器生成的脚本在 `CREATE TABLE` 语法中使用不带引号的标识符。 因此，名为“test”的已发布表按“TEST”复制。 若要使用与发布数据库中的表相同的大小写，请使用分发代理的 **-QuotedIdentifier** 参数。 如果非 **订阅服务器中已发布的对象名称（如表、列和约束）包含空格或相应版本数据库中保留的字词，则还必须使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数。 有关此参数的详细信息，请参阅 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
+-   默认情况下，由快照代理为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器生成的脚本在 `CREATE TABLE` 语法中使用不带引号的标识符。 因此，名为“test”的已发布表按“TEST”复制。 若要使用与发布数据库中的表相同的大小写，请使用分发代理的 **-QuotedIdentifier** 参数。 如果非 **订阅服务器中已发布的对象名称（如表、列和约束）包含空格或相应版本数据库中保留的字词，则还必须使用** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数。 有关此参数的详细信息，请参阅 [复制分发代理](../../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   
 -   运行分发代理时使用的帐户必须对 OLE DB 访问接口的安装目录具有读权限。  
   
@@ -93,7 +93,7 @@ Oracle 版本信息：
   
 -   不同的数据库处理 NULL 值的方式不同，这将影响空白值、空字符串和 NULL 的显示方式， 而显示方式又影响在定义了唯一约束的列中插入值的行为。 例如，Oracle 允许唯一列中有多个 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅允许唯一列中存在一个 NULL 值。  
   
-     另一个因素是当列被定义为 NOT NULL 时，如何处理 NULL 值、空字符串和空白值。 有关如何为 Oracle 订阅服务器解决此问题的信息，请参阅 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)。  
+     另一个因素是当列被定义为 NOT NULL 时，如何处理 NULL 值、空字符串和空白值。 有关如何为 Oracle 订阅服务器解决此问题的信息，请参阅 [Oracle 订阅服务器](../../../relational-databases/replication/non-sql/oracle-subscribers.md)。  
   
 -   删除该订阅时，不从非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器中删除与复制有关的元数据（事务序列表）。  
   
