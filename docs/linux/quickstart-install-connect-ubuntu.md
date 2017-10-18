@@ -27,7 +27,7 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="prerequisites"></a>先决条件
 
-你必须具有的 Ubuntu 机**至少 3.25 GB**的内存。
+你必须有一台**至少 3.25 GB**内存的装有 Ubuntu 的计算机。
 
 若要在您自己的计算机上安装 Ubuntu，请转到[http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)。 你还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 的 Azure cli](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
 
@@ -35,10 +35,10 @@ ms.lasthandoff: 10/02/2017
 
 ## <a id="install"></a>安装 SQL Server
 
-若要配置 SQL Server 在 Ubuntu 上，在安装终端中运行以下命令**mssql server**包。
+若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
 
 > [!IMPORTANT]
-> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
+> 如果你已经安装 CTP 或 RC 版本的 SQL Server 2017，你必须在注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -62,14 +62,14 @@ ms.lasthandoff: 10/02/2017
    sudo apt-get install -y mssql-server
    ```
 
-1. 运行包安装完成后**mssql conf 安装**并按照提示操作以设置 SA 密码，并选择你的版本。
+1. 软件包安装完成后，运行**mssql conf setup**命令并按照操作提示设置 SA 密码，并选择你的版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 如果你在本教程中尝试 SQL Server 自 2017 年，自由地授予许可的以下版本： 评估、 开发人员和快速。
+   > 如果你在本教程中尝试 SQL Server 2017，以下版本是免费许可的：Evaluation、Developer 和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -80,13 +80,13 @@ ms.lasthandoff: 10/02/2017
    systemctl status mssql-server
    ```
 
-1. 如果你计划远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433年）。
+1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
 
 此时，SQL Server 正在您 Ubuntu 的计算机上运行并且已准备好使用 ！
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，你需要使用一种工具，可以在 SQL Server 上运行 TRANSACT-SQL 语句进行连接。 以下步骤安装 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库，你需要使用一个可以在 SQL Server 上运行 TRANSACT-SQL 语句的工具来进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md) 的安装步骤。
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -107,7 +107,7 @@ ms.lasthandoff: 10/02/2017
    sudo apt-get install -y mssql-tools unixodbc-dev
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你**路径**环境变量。 这使您可以运行工具，而无需指定完整路径。 运行以下命令以修改**路径**登录会话和交互式/非-登录会话：
+1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**路径**环境变量。 这使你可以运行工具，而无需指定完整路径。 运行以下命令以修改登录会话和交互式/非登录会话的**路径**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -116,7 +116,7 @@ ms.lasthandoff: 10/02/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**是用于连接到 SQL Server 以运行查询并执行管理和开发任务只在一个工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
 
