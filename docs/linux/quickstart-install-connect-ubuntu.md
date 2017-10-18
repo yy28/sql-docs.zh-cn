@@ -38,7 +38,7 @@ ms.lasthandoff: 10/02/2017
 若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
 
 > [!IMPORTANT]
-> 如果你已经安装 CTP 或 RC 版本的 SQL Server 2017，你必须在注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
+> 如果你已经安装 CTP 或 RC 版本的 SQL Server 2017，你必须在注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 10/02/2017
    ```
 
    > [!TIP]
-   > 如果你在本教程中尝试 SQL Server 2017，以下版本是免费许可的： 评估、 开发人员和快速。
+   > 如果你在本教程中尝试 SQL Server 2017，以下版本是免费许可的：Evaluation、Developer 和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -107,7 +107,7 @@ ms.lasthandoff: 10/02/2017
    sudo apt-get install -y mssql-tools unixodbc-dev
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**环境变量。这使你可以运行工具，而无需指定完整路径。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
+1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**路径**环境变量。 这使你可以运行工具，而无需指定完整路径。 运行以下命令以修改登录会话和交互式/非登录会话的**路径**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
