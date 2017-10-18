@@ -2,7 +2,7 @@
 title: "Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs"
 description: "自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。"
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 10/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 
@@ -225,9 +225,10 @@ MSTVF 中简单的“SELECT*”不会获益于交错执行。
 
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)
 
 [演示自适应查询处理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 
 
