@@ -30,7 +30,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; 和 #x 40;错误 (Transact SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;错误 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回执行的上一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的错误号。  
@@ -53,11 +53,11 @@ ms.lasthandoff: 09/01/2017
   
  因为 @@ERROR处于未选中状态和上执行每个语句重置、 正在验证该语句后立即检查它或将其保存到本地变量更高版本可以进行检查。  
   
- 使用 TRY...CATCH 构造来处理错误。 重试...CATCH 构造还支持其他系统函数 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE），返回更多的错误信息比 @@ERROR。 TRY...CATCH 也支持 ERROR_NUMBER 函数，但不限制该函数在语句产生错误后立即在语句中返回错误号。 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)。  
+ 使用 TRY...CATCH 构造来处理错误。 重试...CATCH 构造还支持其他系统函数 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE），返回更多的错误信息比 @@ERROR 。 TRY...CATCH 也支持 ERROR_NUMBER 函数，但不限制该函数在语句产生错误后立即在语句中返回错误号。 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用@ERROR检测特定错误  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用 @@ERROR 检测特定错误  
  以下示例用 `@@ERROR` 在 `UPDATE` 语句中检测约束检查冲突（错误 #547）。  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用@ERROR有条件地退出过程  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有条件地退出过程  
  下面的示例使用`IF...ELSE`语句来测试`@@ERROR`后`INSERT`存储过程中的语句。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 使用@ERROR与 @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. 使用@ERROR与 @@ROWCOUNT   
  下面的示例将 `@@ERROR` 与 `@@ROWCOUNT` 一起使用来验证一条 `UPDATE` 语句的操作。 为任何可能出现的错误而检验 `@@ERROR` 的值，并且用 `@@ROWCOUNT` 保证更新已成功应用于表中的某行。  
   
 ```  
