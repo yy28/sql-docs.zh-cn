@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **行分隔符**。 在输出中的数据的每一行结尾回车符-换行符组合。
 -   **列分隔符**。 用逗号分隔的每个行中的数据列。
 
- ![导入和导出向导的配置平面文件页](../../integration-services/import-export-data/media/flat-file.png "导入和导出向导的配置平面文件页")  
+ ![配置平面文件导入和导出向导页面](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>选取源表
  **源表或源视图**  

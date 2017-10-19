@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 连接管理器
@@ -60,7 +60,8 @@ Azure 数据湖存储连接管理器是一个组件的[用于 Azure 的 SQL Serv
         4. 若要测试连接，请选择**测试连接**。  
   
 6.  选择**确定**关闭**Azure 数据湖存储连接管理器编辑器**对话框。  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>查看连接管理器的属性
 你可以看到你在“属性”  窗口中创建的连接管理器的属性。  
   
   

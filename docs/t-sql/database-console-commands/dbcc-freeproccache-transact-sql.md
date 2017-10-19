@@ -1,7 +1,7 @@
 ---
 title: "DBCC FREEPROCCACHE (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>参数  
  ({ *plan_handle* | *sql_handle* | *pool_name* })  
- *plan_handle*唯一标识一批，已执行，并且其计划位于计划缓存中的查询计划。 *plan_handle*是**varbinary(64)**并且可以从下列动态管理对象中获取该值：  
+*plan_handle*唯一标识一批，已执行，并且其计划位于计划缓存中的查询计划。 *plan_handle*是**varbinary(64)**并且可以从下列动态管理对象中获取该值：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *sql 句柄*批处理要清除的 SQL 句柄。 *sql 句柄*是**varbinary(64)**并且可以从下列动态管理对象中获取该值：  
+*sql 句柄*批处理要清除的 SQL 句柄。 *sql 句柄*是**varbinary(64)**并且可以从下列动态管理对象中获取该值：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *pool_name*是资源调控器资源池的名称。 *pool_name*是**sysname** ，并且可以通过查询获取[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)动态管理视图。  
+*pool_name*是资源调控器资源池的名称。 *pool_name*是**sysname** ，并且可以通过查询获取[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)动态管理视图。  
  若要将资源调控器工作负荷组关联的资源池，请查询[sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)动态管理视图。 有关适用于会话的工作负荷组，查询[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)动态管理视图。  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  从每个计算节点和管理节点，请清除查询计划缓存。  
-  
-## <a name="remarks"></a>注释  
-小心使用 DBCC FREEPROCCACHE 清除计划高速缓存。 例如，释放计划高速缓存将导致系统重新编译存储过程，而不重用高速缓存中的存储过程。 
 
-这会导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的高速缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 高速缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
+> [!NOTE]
+> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`以清除作用域中的数据库的过程 （计划） 缓存。
+
+## <a name="remarks"></a>注释  
+小心使用 DBCC FREEPROCCACHE 清除计划高速缓存。 清除过程 （计划） 缓存导致的所有计划被逐出和传入的查询执行将编译新的计划，而不重用任何以前缓存的计划。 
+
+这会导致为新编译增加数的查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的高速缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 高速缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
 以下重新配置操作也将清除过程缓存：
 -   访问检查缓存存储桶计数  
@@ -115,16 +118,15 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 如果未指定 WITH NO_INFOMSGS 子句，DBCC FREEPROCCACHE 返回:"DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”
   
 ## <a name="permissions"></a>Permissions  
-适用于： SQL Server，并行数据仓库 
-
+适用于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 需要对服务器的 ALTER SERVER STATE 权限。  
 
-适用于：Azure SQL 数据仓库
+适用于：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - 要求具有 DB_OWNER 固定的服务器角色的成员身份。  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>常规备注[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 可以同时运行多个 DBCC FREEPROCCACHE 命令。
-在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，清除查询计划缓存可能会导致临时降低查询性能重新编译查询时。 
+在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、 清除计划缓存可能导致临时降低查询性能，如传入的查询编译新的计划，而不是重用任何先前缓存计划。 
 
 DBCC FREEPROCCACHE （计算） 仅会导致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新编译查询，在运行时计算节点上。 它不会导致[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]重新编译控制节点上的并行查询计划的生成。
 可以在执行期间取消 DBCC FREEPROCCACHE。
@@ -135,11 +137,11 @@ DBCC FREEPROCCACHE （计算） 仅会导致[!INCLUDE[ssNoVersion](../../include
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>元数据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 运行 DBCC FREEPROCCACHE 时，会 sys.pdw_exec_requests 系统视图中添加新的一行。
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>示例：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. 从计划高速缓存中清除查询计划  
-以下示例通过指定查询计划句柄从计划高速缓存中清除查询计划。 为了确保示例查询在计划高速缓存中，首先执行该查询。 `sys.dm`_`exec` \_ `cached_plans`和`sys.dm` \_ `exec` \_ `sql` \_ `text`动态管理视图返回将会询问查询的计划句柄。 
+以下示例通过指定查询计划句柄从计划高速缓存中清除查询计划。 为了确保示例查询在计划高速缓存中，首先执行该查询。 `sys.dm_exec_cached_plans`和`sys.dm_exec_sql_text`动态管理视图查询以返回查询的计划句柄。 
 
 然后，将结果集中的计划句柄值插入 `DBCC FREEPROCACHE` 语句，以从计划高速缓存中仅删除该计划。
   
@@ -195,7 +197,7 @@ GO
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  下面的示例具有相同的结果与前面的示例中，只是信息性消息将显示在结果中。  
@@ -211,12 +213,14 @@ DBCC FREEPROCCACHE (COMPUTE);
 下面的示例提供的登录名 David 权运行 DBCC FREEPROCCACHE。  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[资源调控器](../../relational-databases/resource-governor/resource-governor.md)
+[资源调控器](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

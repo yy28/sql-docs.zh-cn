@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -71,57 +71,6 @@ SOUNDEX ( character_expression )
 -   包含使用 SOUNDEX 定义的持久化计算列的索引（包括索引视图）无法查询，直到通过运行语句 `ALTER INDEX ALL ON <object> REBUILD` 重新生成该索引。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示了 SOUNDEX 函数及相关的 DIFFERENCE 函数。 在第一个示例中，返回所有辅音字母的标准 `SOUNDEX` 值。 对 `SOUNDEX` 和 `Smith` 运行 `Smythe` 会返回相同的结果，因为不会包括所有元音字母、字母 `y`、双写字母和字母 `h`。  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- `DIFFERENCE` 函数用于比较 `SOUNDEX` 模式结果的差异。 以下示例显示两个仅元音字母不同的字符串。 返回的差异为 `4`（可能的最小差异）。  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- 在以下示例中，字符串的辅音字母不同；所以，返回的差异为 `2`，表示差异更大。  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例显示了 SOUNDEX 函数及相关的 DIFFERENCE 函数。 在第一个示例中，返回所有辅音字母的标准 `SOUNDEX` 值。 对 `SOUNDEX` 和 `Smith` 运行 `Smythe` 会返回相同的结果，因为不会包括所有元音字母、字母 `y`、双写字母和字母 `h`。  
   
 ```  

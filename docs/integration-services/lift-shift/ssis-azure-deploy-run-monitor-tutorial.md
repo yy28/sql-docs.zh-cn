@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、 运行和监视在 Azure 上的 SSIS 包
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/06/2017
 
 在开始之前，请确保您有 17.2 或更高版本的 SQL Server Management Studio 版本。 若要下载最新版本的 SSMS，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-此外请确保你已将 SSISDB 数据库设置并设置 Azure SSIS 集成运行库。 有关如何设置 Azure 上的 SSIS 的信息，请参阅[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure)。
+此外请确保你已将 SSISDB 数据库设置并设置 Azure SSIS 集成运行库。 有关如何设置 Azure 上的 SSIS 的信息，请参阅[提起并移动到 Azure 包 SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
 
@@ -115,5 +115,5 @@ Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryNa
 ```
 
 ## <a name="next-steps"></a>后续步骤
-- 了解逼包执行。 有关详细信息，请参阅[计划 SSIS 包在 Azure 上的执行](ssis-azure-schedule-packages.md)
+- 了解如何安排软件包执行。 有关详细信息，请参阅[计划 SSIS 包在 Azure 上的执行](ssis-azure-schedule-packages.md)
 

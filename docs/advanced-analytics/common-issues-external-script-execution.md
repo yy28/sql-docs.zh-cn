@@ -2,7 +2,7 @@
 title: "SQL Server 中的外部脚本执行的常见问题 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/20/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
@@ -92,7 +92,7 @@ SQL Server 受信任的快速启动板服务管理外部脚本和通信与 R、 
 > [!NOTE] 
 > 以后版本将消除此限制。 如果你遇到此问题，安装以下项之一：
 > * SQL Server 2016 SP1 和 CU1: [for SQL Server 的累积更新 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)。
-> * SQL Server 2016 RTM、 Service Pack 3，这[修补程序](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，即可以根据需要使用。
+> * SQL Server 2016 RTM、 累积更新 3 和这[修补程序](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)，即可以根据需要使用。
 
 #### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>快速启动板的用户组不能在本地登录
 
@@ -102,7 +102,7 @@ SQL Server 受信任的快速启动板服务管理外部脚本和通信与 R、 
 
 若要解决此问题，请确保组 **SQLRUserGroup** 拥有系统权限“允许本地登录”。
 
-有关详细信息，请参阅 [配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
+有关详细信息，请参阅[配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
 
 #### <a name="improper-setup-leading-to-mismatched-dlls"></a>从而导致不匹配的 Dll 不正确的安装程序
 
@@ -110,19 +110,19 @@ SQL Server 受信任的快速启动板服务管理外部脚本和通信与 R、 
 
 若要避免此问题，请务必与服务器实例安装在相同的修补程序级别的任何新功能。
 
-**升级的错误方法**:
+**升级的错误方法：**
 
 1. 安装不 R Services 的 SQL Server 2016。
 2. 升级 SQL Server 2016 累积更新 2。
 3. 通过使用 RTM 媒体中安装 R Services （数据库）。
 
-**若要升级的正确方法**:
+**升级的正确方法：**
 
 1. 安装不 R Services 的 SQL Server 2016。
 2. 升级到所需的修补程序级别的 SQL Server 2016。 例如，安装 Service Pack 1 和累积更新 2。
 3. 若要在正确的修补程序级别添加功能，请运行 SP1 和 CU2 重新，安装程序，然后选择 R Services （数据库）。 
 
-#### <a name="check-to-see-whether-a-user-has-rights-to-run-external-scripts"></a>检查以确定用户是否有权运行外部脚本
+#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>检查用户是否有权运行外部脚本
 
 即使快速启动板已正确配置，它将返回错误，如果用户没有权限来运行 R 或 Python 脚本。
 
@@ -131,8 +131,10 @@ SQL Server 受信任的快速启动板服务管理外部脚本和通信与 R、 
 若要解决此问题，在 SQL Server Management Studio，安全管理员可以修改的 SQL 登录名或 Windows 用户帐户通过运行以下脚本：
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+有关详细信息，请参阅[GRANT (Transact SQL](../t-sql/statements/grant-transact-sql.md)。
 
 ### <a name="common-launchpad-errors"></a>常见的快速启动板错误
 
@@ -212,17 +214,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT
 
 ## <a name="r-script-issues"></a>R 脚本问题
 
-本部分包含特定于执行 R 脚本和 R 脚本错误的一些常见的问题。 该列表不是全面，因为存在许多 R 程序包，并且错误可能会与不同版本之间的相同的 R 包。 我们建议你在上发布 R 脚本错误[Microsoft R Server 论坛](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)，它支持所有相关的产品： R Services （数据库）、 Python、 Microsoft R 客户端，与 Microsoft R Server 的计算机学习服务。
+本部分包含特定于执行 R 脚本和 R 脚本错误的一些常见的问题。 该列表不是全面，因为存在许多 R 程序包，并且错误可能会与不同版本之间的相同的 R 包。 我们建议你在上发布 R 脚本错误[Microsoft R Server 论坛](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)，它支持机器学习中 R Services （数据库中），机学习 Python、 Microsoft R 客户端，与 Microsoft R 服务使用的组件服务器。
 
 ### <a name="multiple-r-instances-on-the-same-computer"></a>同一台计算机上的多个 R 实例
 
-很容易在同一台计算机上安装 R 的多个分发或者安装了不同的版本相同的 R 包的多个副本。 例如，如果你安装机器学习 Server （独立） 和机器学习服务 （数据库），安装程序将创建单独的 R 库版本。 
+它可以轻松地在不同版本中发现自己与在同一计算机上的 R 的多种发行版本，以及相同的 R 包的多个副本。 例如，如果你安装机器学习 Server （独立） 和机器学习服务 （数据库），安装程序将创建单独的 R 库版本。 
 
-当您尝试从命令行运行脚本，并且你不确定你使用的库时，重复可能会令人困惑。 它还可令人困惑如果包安装到错误的库，并且当你尝试从 SQL Server 上运行它时找不到包。
+当您尝试从命令行运行脚本，并且你不确定你使用的库，实现这种复制将成为问题。 或者，可能会将程序包安装到错误的库，然后稍后想要知道为什么无法找到包从 SQL Server。
 
 + 避免直接使用的 R 库和安装的 SQL Server 实例，用于除在有限情况下，例如故障排除的工具或安装新包。 
-+ 如果你需要使用 R 命令行工具，则可以安装[Microsoft R 客户端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)。
-+ SQL Server 提供 R 包的数据库中的管理。 这是创建可以在用户之间共享的 R 包库的最简单方法。 有关详细信息，请参阅[安装和管理 R 包](r/installing-and-managing-r-packages.md)。
++ 如果你需要使用 R 命令行工具，则可以安装[Microsoft R 客户端](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)。 
++ SQL Server 提供 R 包的数据库中的管理。 这是创建可以在用户之间共享的 R 包库的最简单方法。 有关详细信息，请参阅[for SQL Server 的 R 包管理](r/r-package-management-for-sql-server-r-services.md)。
 
 ### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>避免当在 SQL 计算上下文中运行 R 时清除工作区
 
@@ -325,7 +327,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 ## <a name="next-steps"></a>后续步骤
 
-[机器学习疑难解答和已知问题](machine-learning-troubleshooting-faq.md)
+[机器学习服务疑难解答和已知的问题](machine-learning-troubleshooting-faq.md)
 
 [进行故障排除机器学习的数据收集](data-collection-ml-troubleshooting-process.md)
 

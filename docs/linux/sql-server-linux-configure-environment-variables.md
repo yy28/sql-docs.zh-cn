@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/02/2017
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
-| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： 评估、 开发人员、 快速、 Web、 标准、 Enterprise、 或 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式产品密钥。 |
+| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**速成版**</br>**Web**</br>**Standard**</br>**企业**</br>**产品密钥**</br></br>如果指定产品密钥，则它必须 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式。|
 | **MSSQL_LCID** | 设置要用于 SQL Server 的语言 ID。 例如 1036年为法语。 |
 | **MSSQL_COLLATION** | 设置 SQL Server 的默认排序规则。 此设置将替代对排序规则的语言 id (LCID) 的默认映射。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 设置最大 （以 mb 为单位） 可以使用 SQL Server 的内存量。 默认情况下它为总物理内存的 80%。 |
@@ -79,6 +79,9 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<Your
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
+
+> [!NOTE]
+> 在容器中运行生产版本的过程是略有不同。 有关详细信息，请参阅[运行容器映像的生产](sql-server-linux-configure-docker.md#production)。
 
 ## <a name="next-steps"></a>后续步骤
 

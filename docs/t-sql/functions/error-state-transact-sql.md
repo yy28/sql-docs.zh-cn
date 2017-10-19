@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98b5a1ecfbfd9efd84f8a5cc55454aaaec6f8423
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 2d5448d8dbd738177acbcd407448d7a10d835a23
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
@@ -105,21 +105,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block"></a>C. 在 CATCH 块中使用 ERROR_STATE  
- 下面的示例演示`SELECT`生成一个由零除错误的语句。 结果将返回错误状态。  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide by zero error  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_STATE() AS ErrorState;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>D. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
+### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
  下面的示例演示`SELECT`生成一个由零除错误的语句。 结果将与错误状态一起返回有关错误的信息。  
   
 ```  

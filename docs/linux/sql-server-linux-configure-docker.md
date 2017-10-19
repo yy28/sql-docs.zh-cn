@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bdfc7ef9eb8048f1009f3c7f1a61533b6b620f37
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
@@ -32,7 +32,47 @@ ms.lasthandoff: 10/02/2017
 
 - [使用 Docker 运行 SQL Server 2017 容器映像](quickstart-install-connect-docker.md)
 
-此配置主题提供了其他连接和下面的部分中的使用方案。
+此配置主题提供了下面的部分中的其他使用方案。
+
+## <a id="production"></a>运行容器映像的生产
+
+上一节中的快速入门教程从 Docker Hub 运行 SQL Server 的免费的开发人员版。 如果你想要运行容器映像，例如 Enterprise、 Standard、 或 Web edition 的生产，仍将应用的大部分信息。 但是，有一些区别此处所述。
+
+- 如果你具有有效的许可证，你只可以在生产环境中使用 SQL Server。 你可以获取免费的 SQL Server Express 生产许可证[此处](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 许可证均可通过[Microsoft 批量许可](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
+
+- 必须从请求生产 SQL Server 容器映像[Docker 存储](https://store.docker.com)。 如果你还没有一个 Docker 存储上创建帐户。
+
+- 开发人员容器映像 Docker 存储上的可以配置为运行的生产版本。 使用以下步骤运行生产版本：
+
+   1. 首先，登录到你的 docker id 从命令行。
+
+      ```bash
+      docker login
+      ```
+
+   1. 接下来，你需要获取免费的开发人员 Docker 存储上的容器映像。 转到[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，单击**结帐**，并按照说明操作。
+
+   1. 检查要求，然后运行过程[快速入门教程](quickstart-install-connect-docker.md)。 但有两个的差异。 你必须拉取映像**存储/microsoft/mssql-服务器-linux:\<标记名称\>** Docker 存储区中。 并且你必须指定与生产版本**MSSQL_PID**环境变量。 下面的示例演示如何为 Enterprise Edition 运行最新的 SQL Server 2017 容器映像：
+
+      ```bash
+      docker run --name sqlenterprise \
+         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+         -d store/microsoft/mssql-server-linux:2017-latest
+      ```
+
+      ```PowerShell
+      docker run --name sqlenterprise `
+         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "MSSQL_PID=Enterprise" -p 1433:1433 `
+         -d "store/microsoft/mssql-server-linux:2017-latest"
+      ```
+
+      > [!IMPORTANT]
+      > 通过将值传递**Y**到环境变量**ACCEPT_EULA**和版本值的**MSSQL_PID**，表示具有有效的和现有许可证版本和你想要使用的 SQL Server 版本。 你还同意你使用的 Docker 容器映像中运行的 SQL Server 软件将受你的 SQL Server 许可证的条款。
+
+      > [!NOTE]
+      > 有关可能值的完整列表**MSSQL_PID**，请参阅[与环境变量在 Linux 上配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
 
 ## <a name="connect-and-query"></a>连接和查询
 

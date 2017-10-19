@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
@@ -391,54 +391,44 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>C. 使用 CAST 进行连接  
-以下示例使用 `CAST` 连接非字符型非二进制表达式。
+下面的示例连接通过使用强制转换的非字符表达式。 使用 AdventureWorksDW。
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. 使用 CAST 生成可读性更高的文本  
-以下示例使用选择列表中的 `CAST` 将 `Name` 列转换为 `char(10)` 列。
+下面的示例使用强制转换选择列表中要转换`Name`列**char （10)**列。 使用 AdventureWorksDW。
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### <a name="e-using-cast-with-the-like-clause"></a>E. 将 CAST 与 LIKE 子句一起作用  
 以下示例将 `money` 列 `SalesYTD` 转换为 `int` 列，然后再转换为 `char(20)` 列，以便在 `LIKE` 子句中使用该列。
@@ -673,47 +663,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-to-concatenate"></a>L. 使用 CAST 进行连接  
-下面的示例连接通过使用强制转换的非字符表达式。 使用 AdventureWorksDW。
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### <a name="m-using-cast-to-produce-more-readable-text"></a>M. 使用 CAST 生成可读性更高的文本  
-下面的示例使用强制转换选择列表中要转换`Name`列**char （10)**列。 使用 AdventureWorksDW。
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### <a name="n-using-cast-with-the-like-clause"></a>N. 将 CAST 与 LIKE 子句一起作用  
+### <a name="l-using-cast-with-the-like-clause"></a>L. 将 CAST 与 LIKE 子句一起作用  
 以下示例将转换**money**列`ListPrice`到**int**类型然后**char(20)**类型，以便它可以用于 LIKE 子句。 使用 AdventureWorksDW。
   
 ```sql
@@ -722,7 +672,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. 对 datetime 数据使用 CAST 和 CONVERT  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. 对 datetime 数据使用 CAST 和 CONVERT  
 下面的示例显示当前日期和时间，使用强制转换，以将当前日期和时间更改为字符数据类型，并使用转换然后采用 ISO 8601 格式显示了的日期和时间。 使用 AdventureWorksDW。
   
 ```sql

@@ -1,7 +1,7 @@
 ---
 title: "从关系数据源 (SSAS 表格) 导入 |Microsoft 文档"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>导入数据的关系数据源
-  通过使用表导入向导，你可以从各种关系数据库导入数据。 该向导在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“模型”菜单中提供  。 若要连接到数据源，必须在计算机上安装适当的访问接口。 有关支持的数据源和提供程序的详细信息，请参阅 [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
-  
+  对于 1200 表格模型和较低的兼容性级别，你可以使用导入数据从各种关系数据库表导入向导。 该向导在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的“模型”菜单中提供  。 若要连接到数据源，必须在计算机上安装适当的访问接口。 有关支持的数据源和提供程序的详细信息，请参阅 [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。 
+ 
  “表导入向导”支持从以下数据源中导入数据：  
   
  **关系数据库**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [支持的数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

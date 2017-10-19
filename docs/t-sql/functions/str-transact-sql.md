@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27af210aca06130818fd00fea9d53eebcc8aa016
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 7cddf1af7eba56824e41ad1ebaedb9aecdc37074
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -100,55 +100,6 @@ GO
   
 ```  
 SELECT STR (FLOOR (123.45), 8, 3;)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---------  
- 123.000  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 以下示例将由五个数字和一个小数点组成的表达式转换为有六个位置的字符串。 数字的小数部分舍入为一个小数位。  
-  
-```  
-SELECT STR(123.45, 6, 1);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------  
- 123.5  
-  
-(1 row(s) affected)  
-```  
-  
- 当表达式超出指定长度时，字符串为指定长度返回 `**`。  
-  
-```  
-SELECT STR(123.45, 2, 2);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---  
-**  
-  
-(1 row(s) affected)  
-```  
-  
- 即使数字数据嵌套在 `STR` 内，结果也是带指定格式的字符数据。  
-  
-```  
-SELECT STR (FLOOR (123.45), 8, 3);  
 GO  
 ```  
   

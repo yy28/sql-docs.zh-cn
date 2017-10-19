@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ea034f7217d031c21cf22f6b5aaff9bf16355a9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 1868f902cf41eba9637138d7333ac908c72cb76e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -56,32 +56,6 @@ DIFFERENCE ( character_expression , character_expression )
  DIFFERENCE 和 SOUNDEX 区分排序规则。  
   
 ## <a name="examples"></a>示例  
- 在以下示例的第一部分，对两个非常相似的字符串的 `SOUNDEX` 值进行了比较。 对于 Latin1_General 排序规则`DIFFERENCE`返回的值`4`。 下面的示例中，第二部分`SOUNDEX`值进行比较两个非常不同的字符串，以及用于 Latin1_General 排序规则`DIFFERENCE`返回的值`0`。  
-  
-```  
--- Returns a DIFFERENCE value of 4, the least possible difference.  
-SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
-GO  
--- Returns a DIFFERENCE value of 0, the highest possible difference.  
-SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------ ----- -----------   
-G650  G650  4             
-  
-(1 row(s) affected)  
-  
------ ----- -----------   
-B432  G650  0             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  在以下示例的第一部分，对两个非常相似的字符串的 `SOUNDEX` 值进行了比较。 对于 Latin1_General 排序规则`DIFFERENCE`返回的值`4`。 下面的示例中，第二部分`SOUNDEX`值进行比较两个非常不同的字符串，以及用于 Latin1_General 排序规则`DIFFERENCE`返回的值`0`。  
   
 ```  

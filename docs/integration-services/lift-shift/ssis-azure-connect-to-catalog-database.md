@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>连接到 Azure 上的 SSISDB 目录数据库
@@ -48,6 +48,9 @@ ms.lasthandoff: 09/25/2017
    | **密码** | 你的服务器管理员帐户的密码 | 这是你在创建服务器时指定的密码。 |
 
 3. **连接到 SSISDB 数据库**。 选择**选项**以展开**连接到服务器**对话框。 在展开**连接到服务器**对话框中，选择**连接属性**选项卡。在**连接到数据库**字段中，选择或输入`SSISDB`。
+
+    > [!IMPORTANT]
+    > 如果你未选中`SSISDB`连接时，你可能看不到对象资源管理器中的 SSIS 目录。
 
 4. 然后选择**连接**。
 
