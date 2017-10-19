@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
@@ -349,7 +349,8 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) 现在允许执行多次更改列操作，同时保持表可用。
 - 全文索引 DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) 返回关键字在文档中的位置。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1 中也添加了此 DMV。
 - 新的查询提示 **NO_PERFORMANCE_SPOOL** 可以防止将后台打印运算符添加到查询计划。 在配合假脱机操作运行许多并发查询时，这可以提高性能。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)。
-- [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 语句已增强，可接受 msg_string 参数。非聚集索引的最大索引键大小已增加到 1700 字节。
+- [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 语句经过增强，可以接受 msg_string 参数。
+- 非聚集索引的最大索引键大小已增加到 1700 字节。
 - 为 AGGREGATE、ASSEMBLY、COLUMN、CONSTRAINT、DATABASE、DEFAULT、FUNCTION、INDEX、PROCEDURE、ROLE、RULE、SCHEMA、SECURITY POLICY、SEQUENCE、SYNONYM、TABLE、TRIGGER、TYPE、USER 和 VIEW 的相关删除语句添加了新的 DROP IF 语法。 请参阅有关语法的各个语法主题。
 - 向 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)、[DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 和 [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) 添加了 MAXDOP 选项，以指定并行度。
 - 现在可以设置 SESSION_CONTEXT。 包括 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) 函数、[CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) 函数和 [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 过程。

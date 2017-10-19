@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 将查询结果格式化为 JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序。
+通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过委托从应用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 JSON 输出格式来简化客户端应用程序。
   
  使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出。  
   
@@ -39,14 +39,14 @@ ms.lasthandoff: 07/31/2017
   
 下面是带有 **FOR JSON** 子句的 **SELECT** 语句及其输出的示例。
   
- ![对于 JSON](../../relational-databases/json/media/jsonslides2forjson.png "对于 JSON")  
+ ![对于 JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>选项 1 - 使用 FOR JSON PATH 控制输出
 在 **PATH** 模式下，可以使用点语法来设置嵌套的输出格式，例如 `'Item.Price'` 。  
 
 以下是一个使用带有 **FOR JSON** 子句的 **对于 JSON** 模式。 下面的示例使用 **ROOT** 选项指定一个已命名根元素。 
   
- ![FOR JSON 输出流的图示](../../relational-databases/json/media/forjson-example1.png "FOR JSON 输出流的图示")  
+ ![FOR JSON 输出流的关系图](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>有关 FOR JSON PATH 的详细信息
 有关详细信息和示例，请参阅[在 PATH 模式下格式化嵌套的 JSON 输出 (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)。
@@ -102,7 +102,7 @@ FOR JSON 子句的输出具有以下特征：
         -   默认情况下，输出设置为“以网格显示结果”时，SQL Server Management Studio (SSMS) 会将结果连接到单个行中。 SSMS 状态栏会显示实际行数。
         -   其他客户端应用程序可能需要使用代码，通过串联多个行的内容来将较长的结果重新组合为单个有效的 JSON 字符串。 有关 C# 应用程序中此代码的示例，请参阅[在 C# 客户端应用中使用 FOR JSON 输出](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)。
   
-     ![FOR JSON 输出示例](../../relational-databases/json/media/forjson-example2.png "FOR JSON 输出示例")  
+     ![FOR JSON 输出示例](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  结果会格式化为 JSON 对象数组。  
   
@@ -148,11 +148,12 @@ FOR JSON 子句的输出具有以下特征：
 ```  
 
  有关 FOR JSON 子句的输出内容的详细信息，请参阅以下主题。  
+
 -   [FOR JSON 如何将 SQL Server 数据类型转换为 JSON 数据类型 (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-**FOR JSON** 子句使用本主题中所述的规则在 JSON 输出中将 SQL 数据类型转换为 JSON 类型。  
+    **FOR JSON** 子句使用本主题中所述的规则在 JSON 输出中将 SQL 数据类型转换为 JSON 类型。  
 
 -   [FOR JSON 如何转义特殊字符和控制字符 (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- **FOR JSON** 子句按照本主题所述的方式在 JSON 输出中转义特殊字符和表示控制字符。  
+    **FOR JSON** 子句按照本主题所述的方式在 JSON 输出中转义特殊字符和表示控制字符。  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
 若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。

@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: 3d753f75344e4958d36d214fcc74957204579088
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
@@ -39,7 +39,7 @@ ms.lasthandoff: 09/12/2017
 - 新一代的查询处理改进，将对应用程序工作负荷的运行时状况采用优化策略。 对于这款适应性查询处理功能系列初版，我们进行了 3 项新的改进：批处理模式自适应联接、批处理模式内存授予反馈，以及针对多语句表值函数的交错执行。  请参阅 [SQL 数据库中的自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)。
 - 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] 中的自动优化功能会在检测到潜在性能问题时发出通知，并允许应用更正措施或 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自动解决性能问题。 有关详细信息，请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。
 - 针对内存优化表上的非群集索引生成的性能增强。 显著优化了数据库恢复期间 MEMORY_OPTIMIZED 表的 bwtree（非群集）索引重新生成的性能。 这一改进明显缩短了使用非群集索引时的数据库恢复时间。  
-- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三个新列：socket_count、cores_per_socket、numa_node_count。
+- [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三个新列：socket_count、cores_per_socket、numa_node_count。 这在 VM 中运行服务器时非常有用，因为超出 NUMA 会导致过度使用主机，这最终会转化为性能问题。
 - 在 [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引入了新列 modified_extent_page_count\,，用于跟踪数据库的每个数据库文件中的差异更改。 使用新列 modified_extent_page_count 可生成智能备份解决方案，如果数据库中发生更改的页面的百分比低于阈值（假设为 70-80%），此解决方案将执行差异备份；否则将执行完整数据库备份。
 - SELECT INTO… ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 现支持将表加载到文件组，使用 SELECT INTO TSQL 语法中添加的 ON 关键字的用户的默认文件组除外。
 - Tempdb 安装程序改进 - 此安装程序允许最多将初始 tempdb 文件大小指定为 256 GB (262,144 MB)/文件；如果文件大小设置为大于 1 GB 的值且未启用 IFI，客户会收到警告。 请务必了解不启用实例文件初始化 (IFI) 的影响，此时安装时间可能会呈指数增加，具体取决于指定的 tempdb 数据文件的初始大小。 IFI 不适用于事务日志大小，因此在安装期间启动 tempdb 时，指定较大的事务日志值始终会增加安装时间，这与 SQL Server 服务帐户的 IFI 设置无关。

@@ -1,7 +1,7 @@
 ---
 title: "Showplan 逻辑运算符和物理运算符参考 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/31/2017
+ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -140,10 +140,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: f9a7d0d8023cac77ef0a2d9e7308a419a4518931
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
@@ -232,7 +232,7 @@ ms.lasthandoff: 07/31/2017
 |![Insert（数据库引擎）运算符图标](../relational-databases/media/insert-32x.gif "Insert（数据库引擎）运算符图标")|**Insert**|**Insert** 逻辑运算符将每行从其输入插入 **Argument** 列内指定的对象中。 相应的物理运算符为 **Table Insert**、 **Index Insert**或 **Clustered Index Insert** 运算符。|  
 |![Inserted Scan 运算符图标](../relational-databases/media/inserted-scan-32x.gif "Inserted Scan 运算符图标")|**Inserted Scan**|**Inserted Scan** 运算符扫描 **插入的** 表。 **Inserted Scan** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Intrinsic 语言元素图标](../relational-databases/media/intrinsic-32x.gif "Intrinsic 语言元素图标")|**Intrinsic**|**Intrinsic** 运算符调用内部 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数。 **Intrinsic** 是一个语言元素。|  
-|![Iterator 通用运算符图标](../relational-databases/media/iterator-catch-all.gif "Iterator 通用运算符图标")|**迭代器**|生成图形显示计划的逻辑找不到 **Iterator** 的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言构造）。|  
+![Iterator 通用运算符图标](../relational-databases/media/iterator-catch-all.gif "Iterator 通用运算符图标")|**迭代器**|生成图形显示计划的逻辑找不到 **Iterator** 的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言构造）。|  
 |![Bookmark Lookup 运算符图标](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|**Key Lookup**|**Key Lookup** 运算符是在具有聚集索引的表上进行的书签查找。 **Argument** 列包含聚集索引的名称和用来在聚集索引中查找行的聚集键。 **Key Lookup** 通常带有 **Nested Loops** 运算符。 如果 **Argument** 列中出现 WITH PREFETCH 子句，则表示查询处理器已决定在聚集索引中查找书签时将使用异步预提取（预读）作为最佳选择。<br /><br /> 在查询计划中使用 **Key Lookup** 运算符表明该查询可能会从性能优化中获益。 例如，添加涵盖索引可能会提高查询性能。|  
 |![Keyset 游标运算符图标](../relational-databases/media/keyset-32x.gif "Keyset 游标运算符图标")|**Keyset**|**Keyset** 运算符使用的游标可用于查看其他用户所做的更新，而不能查看其他用户所做的插入。|  
 |![Language 元素通用图标](../relational-databases/media/language-construct-catch-all.gif "Language 元素通用图标")|**Language 元素**|生成图形显示计划的逻辑找不到 **Language Element** 的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言构造）。|  
@@ -251,7 +251,7 @@ ms.lasthandoff: 07/31/2017
 |![Nonclustered Index Spool 运算符图标](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 运算符图标")|**Index Spool**|**Index Spool** 物理运算符在 **Argument** 列中包含 SEEK:() 谓词。 **Index Spool** 运算符扫描其输入行，将每行的副本放置在隐藏的假脱机文件（存储在 **tempdb** 数据库中且只在查询的生存期内存在）中，并在这些行上生成非聚集索引。 这样可以使用索引的查找功能来仅输出那些满足 SEEK:() 谓词的行。 如果重绕该运算符（例如通过 **Nested Loops** 运算符重绕），但不需要任何重新绑定，则将使用假脱机数据，而不用重新扫描输入。|  
 |![Nonclustered Index Update 运算符图标](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 运算符图标")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理运算符用于更新 **Argument** 列内指定的非聚集索引中的输入行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 **Nonclustered Index Update** 是一个物理运算符。|  
 |![Online Index Insert 运算符图标](../relational-databases/media/online-index-32x.gif "Online Index Insert 运算符图标")|**Online Index Insert**|**Online Index Insert** 物理运算符指示索引创建、更改或删除操作是在线执行的。 也就是说，基础表数据在索引操作期间仍然对用户可用。|  
-|无|**Parallelism**|**Parallelism** 运算符执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。<br /><br /> <br /><br /> 注意：如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 **Parallelism** 运算符的 **RunTimeInformation** 元素。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
+|无|**Parallelism**|Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)。<br /><br />**注意：**如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
 |![Parameter Table Scan 运算符图标](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 运算符图标")|**Parameter Table Scan**|**Parameter Table Scan** 运算符扫描在当前查询中用作参数的表。 该运算符一般用于存储过程内的 INSERT 查询。 **Parameter Table Scan** 既是一个逻辑运算符，也是一个物理运算符。|  
 |无|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 **Hash Match** 是实现分区聚合的唯一一个物理运算符（迭代器）。 **Partial Aggregate** 是一个逻辑运算符。|  
 |![Population Query 游标运算符图标](../relational-databases/media/poulation-query-32x.gif "Population Query 游标运算符图标")|**Population Query**|**Population Query** 运算符在打开游标时填充游标的工作表。|  
@@ -263,7 +263,7 @@ ms.lasthandoff: 07/31/2017
 |![Remote Query 运算符图标](../relational-databases/media/remote-query-32x.gif "Remote Query 运算符图标")|**Remote Query**|**Remote Query** 运算符将查询提交给远程源。 发送给远程服务器的查询文本显示在 **Argument** 列中。 **Remote Query** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Remote Scan 运算符图标](../relational-databases/media/remote-scan-32x.gif "Remote Scan 运算符图标")|**Remote Scan**|**Remote Scan** 运算符扫描远程对象。 远程对象的名称显示在 **Argument** 列中。 **Remote Scan** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Remote Update 运算符图标](../relational-databases/media/remote-update-32x.gif "Remote Update 运算符图标")|**Remote Update**|**Remote Update** 运算符将更新远程对象中的输入行。 **Remote Update** 既是一个逻辑运算符，也是一个物理运算符。|  
-|![Repartition Streams 并行度运算符图标](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams 并行度运算符图标")|**Repartition Streams**|**Repartition Streams** 运算符使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，那么 **Argument** 列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，则 **Argument** 列包含一个 ORDER BY:() 谓词和已经排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。|  
+|![Repartition Streams 并行度运算符图标](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams 并行度运算符图标")|**Repartition Streams**|Repartition Streams 运算符（或交换迭代器）使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，那么 **Argument** 列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，则 **Argument** 列包含一个 ORDER BY:() 谓词和已经排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。| 
 |![Result 语言元素图标](../relational-databases/media/result-32x.gif "Result 语言元素图标")|**结果**|**Result** 运算符是查询计划结束时返回的数据。 它通常是显示计划的根元素。 **Result** 是一个语言元素。|  
 |![RID Lookup 运算符图标](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 运算符图标")|**RID Lookup**|**RID Lookup** 是使用提供的行标识符 (RID) 在堆上进行的书签查找。 **Argument** 列包含用于查找表中的行的书签标签和从中查找行的表的名称。 **RID Lookup** 通常带有 NESTED LOOP JOIN。 **RID Lookup** 是一个物理运算符。 有关书签查找的详细信息，请参阅 MSDN SQL Server 博客中的[Bookmark Lookup](http://go.microsoft.com/fwlink/?LinkId=132568)（书签查找）。|  
 |无|**Right Anti Semi Join**|当第一个（顶端）输入中不存在匹配行时， **Right Anti Semi Join** 运算符返回第二个（底端）输入中的每一行。 匹配行的定义是满足 **Argument** 列中的谓词的行（如果不存在谓词，则每行都是一个匹配行）。 **Right Anti Semi Join** 是一个逻辑运算符。|  
