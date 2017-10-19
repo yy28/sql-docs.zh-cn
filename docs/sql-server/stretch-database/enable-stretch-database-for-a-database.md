@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  若要在服务器上手动启用 Stretch Database，请运行 **sp_configure** 并打开 **remote data archive** 选项。 下列示例通过将 **remote data archive** 选项的值设置为 1 来启用它。  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
