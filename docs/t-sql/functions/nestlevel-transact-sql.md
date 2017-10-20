@@ -30,7 +30,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>& #x 40; 和 #x 40;NESTLEVEL (Transact SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; NESTLEVEL (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回在本地服务器上执行的当前存储过程的嵌套级别（初始值为 0）。  
@@ -49,11 +49,11 @@ ms.lasthandoff: 09/19/2017
 ## <a name="remarks"></a>注释  
  每次一个存储过程通过引用公共语言运行时 (CLR) 例程、类型或聚合来调用另一个存储过程或执行托管代码时，嵌套级别都会增加。 超过最大级数 32 时，事务即被终止。  
   
- 当 @@NESTLEVEL中执行[!INCLUDE[tsql](../../includes/tsql-md.md)]字符串，则返回值 1 + 当前嵌套级别。 当 @@NESTLEVEL执行动态通过使用 sp_executesql 返回的值是 2 + 的当前嵌套级别。  
+ 当 @@NESTLEVEL 中执行[!INCLUDE[tsql](../../includes/tsql-md.md)]字符串，则返回值 1 + 当前嵌套级别。 当 @@NESTLEVEL 执行动态通过使用 sp_executesql 返回的值是 2 + 的当前嵌套级别。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. 使用@NESTLEVEL在过程中  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. 使用 @@NESTLEVEL 在过程中  
  以下示例将创建两个过程：一个过程调用另一个过程，一个过程显示每个过程的 `@@NESTLEVEL` 设置。  
   
 ```  
@@ -88,7 +88,7 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>B. 调用@NESTLEVEL  
+### <a name="b-calling-nestlevel"></a>B. 调用 @@NESTLEVEL   
  以下示例显示 `SELECT`、`EXEC` 和 `sp`_`executesql` 调用 `@@NESTLEVEL` 时，它们返回的值的区别。  
   
 ```  

@@ -127,7 +127,7 @@ Sybase 的 SSMA 2014 年 4 月版包含以下更改：
 Sybase 的 SSMA 2012 年 1 月版包含以下更改：  
   
 -   添加了对回滚触发器转换的支持。  
--   为转换提供修复@ROWCOUNT和 @@ERROR在同一组语句。  
+-   为转换提供修复 @@ROWCOUNT 和 @@ERROR 在同一组语句。  
   
 ## <a name="july-2011"></a>2011 年 7 月  
 Sybase 的 SSMA 2011 年 7 月版包含以下更改：  
