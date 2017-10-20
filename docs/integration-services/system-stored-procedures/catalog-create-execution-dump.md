@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>语法  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -40,10 +40,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## <a name="example"></a>示例  
  在以下示例中，系统提示将为正在运行的执行 ID 为 88 的包创建转储文件。  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## <a name="return-codes"></a>返回代码  

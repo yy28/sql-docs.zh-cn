@@ -31,11 +31,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>语法  
   
 ```sql  
-set_execution_parameter_value [ @execution_id = execution_id  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -117,16 +116,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="example"></a>示例  
  以下示例指定 Integration Services 服务器在包执行期间出现任意错误时生成转储文件：  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## <a name="example"></a>示例  
  以下示例指定 Integration Services 服务器在包执行期间出现事件时生成转储文件，并指定导致该服务器生成这些文件的事件：  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   
