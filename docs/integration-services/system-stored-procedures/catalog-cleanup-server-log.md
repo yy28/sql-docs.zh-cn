@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>示例  
  下面的示例调用 cleanup_server_log 存储过程。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

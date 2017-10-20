@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>示例  
  下面的示例调用 cleanup_server_execution_keys 存储过程。  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

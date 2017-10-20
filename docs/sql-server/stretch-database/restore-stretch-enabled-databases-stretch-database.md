@@ -73,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
     -   指定是否复制远程数据的副本并连接到副本（推荐）。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

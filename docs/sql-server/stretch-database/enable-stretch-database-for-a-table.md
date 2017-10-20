@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  下面是迁移整个表并立即开始数据迁移的示例。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  下面是仅迁移由 `dbo.fn_stretchpredicate` 内联表值函数标识的行并推迟数据迁移的示例。 有关筛选器函数的详细信息，请参阅 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  下面是迁移整个表并立即开始数据迁移的示例。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  下面是仅迁移由 `dbo.fn_stretchpredicate` 内联表值函数标识的行并推迟数据迁移的示例。 有关筛选器函数的详细信息，请参阅 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 

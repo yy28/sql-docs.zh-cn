@@ -84,7 +84,7 @@ GO
   
 3.  若要为 SQL Server 数据库配置 Stretch Database，该数据库必须拥有数据库主密钥。 数据库主密钥能保护 Stretch Database 用来连接到远程数据库的凭据。 下面是创建一个新数据库主密钥的示例。  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         下面是创建一个新凭据的示例。
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  提供具有 CREDEMTIAL 参数的现有管理员凭据，或指定 FEDERATED_SERVICE_ACCOUNT = ON。 下面的示例提供现有的凭据。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

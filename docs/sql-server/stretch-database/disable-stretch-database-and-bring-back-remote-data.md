@@ -69,7 +69,7 @@ ms.lasthandoff: 07/29/2017
 
     此命令不能取消。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/29/2017
   
 -   要禁用表的“拉伸”并放弃远程数据，请运行以下命令。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>使用 Transact-SQL 禁用数据库的 Stretch Database  
  运行以下命令。  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

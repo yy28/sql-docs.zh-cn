@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 调用存储的过程 [目录]。[update_logdb_info] 使用作为参数的 Sql Server 名称和连接字符串。
 
 #### <a name="example"></a>示例
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString
