@@ -118,7 +118,7 @@ Azure 应用商店包含多个支持数据科学的虚拟机：
 + **R Server 仅 SQL Server 2016 Enterprise**虚拟机包括支持新的现代软件生命周期授权模型的 R Server 9.0.1 独立安装程序。
 
 > [!TIP]
-> 新[数据科学 VM 的 Windows Server 2016](http://aka.ms/dsvm/win2016)提供的常用深入学习框架，例如 CNTK GPU 版本。 预安装的工具包括 GPU NVIDIA 驱动程序、 CUDA 工具包 8.0 和 GPU 工作负荷的 NVIDIA cuDNN 库。 在只需几分钟，您可以有一个完整的环境，以便生成可以在 CPU 或 CPU 和 GPU 运行的深入学习模型。
+> 新[数据科学 VM 的 Windows Server 2016](http://aka.ms/dsvm/win2016)提供了常用深度学习框架，例如 CNTK GPU 版本。 预安装的工具包括 GPU NVIDIA 驱动程序、 CUDA 工具包 8.0 和 GPU 工作负荷的 NVIDIA cuDNN 库。 只需几分钟，您就可以有一个完整的环境，以便生成可以在 CPU 或 CPU 和 GPU 运行的深度学习模型。
 
 ## <a name="next-steps"></a>后续步骤
 
