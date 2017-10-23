@@ -34,7 +34,7 @@ ms.lasthandoff: 10/02/2017
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 安装](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)。
 
-用于帮助安装、配置和使用 SQL Server&2016; 的文档。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
+用于帮助安装、配置和使用 SQL Server 2016; 的文档。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
 
 **SQL Server 2017**
 
