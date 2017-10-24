@@ -105,9 +105,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS Security](../../data-quality-services/dqs-security.md)。  
+     默认情况下，如果您的用户帐户是 sysadmin 固定服务器角色的成员，则您可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登录到 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] ，即使在没有任何 DQS 角色授予您的用户帐户的情况下也是如此。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
   
-     有关详细信息，请参阅 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     有关详细信息，请参阅 [将 DQS 角色授予用户](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  这三个 DQS 角色不适用于 DQS_PROJECTS 和 DQS_STAGING_DATA 数据库。  
