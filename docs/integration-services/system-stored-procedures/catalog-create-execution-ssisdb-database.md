@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  包含要执行的包的文件夹名称。 *Folder_name*是**nvarchar （128)**。  
   
- [ @project_name =]*文件的内容*  
+ [@project_name =]*文件的内容*  
  包含要执行的包的项目的名称。 *文件的内容*是**nvarchar （128)**。  
   
- [ @package_name =]*包名称*  
+ [@package_name =]*包名称*  
  包含要执行的包的名称。 *Package_name*是**nvarchar(260)**。  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  环境引用的唯一标识符。 此参数可选。 *Reference_id*是**bigint**。  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用值为 1 来执行与 32 位运行时包，在 64 位操作系统上运行时。 使用值 0 表示在 64 位操作系统上运行时，使用 64 位运行时执行此包。 此参数可选。 *Use32bitruntime*是**位**。  
  
- [ @runinscaleout =] *runinscaleout*  
- 指示是否正在执行向外扩展。 使用值为 1 来向外扩展在执行包。 使用值为 0 来执行软件包，无需向外扩展。 此参数可选。 它设置为 DEFAULT_EXECUTION_MODE [SSISDB] 中。[目录]。[catalog_properties]，如果未指定。 *Runinscaleout*是**位**。 
+ [@runinscaleout =] *runinscaleout*  
+ 指示是否正在执行向外扩展。使用值为 1 来向外扩展在执行包。使用值为 0 来执行软件包，无需向外扩展。此参数可选。 如果未指定，则会将其值设置为 DEFAULT_EXECUTION_MODE [SSISDB] 中。[目录]。[catalog_properties]。 *Runinscaleout*是**位**。 
  
- [ @useanyworker =] *useanyworker*  
-  指示是否允许辅助出任何规模进行执行。 使用值为 1 来执行辅助出任何规模的包。 使用值 0 指示不所有横向扩展辅助进程都才能执行包。 此参数可选。 它是设置为 1，如果未指定。 *Useanyworker*是**位**。 
+ [@useanyworker =] *useanyworker*  
+  指示是否允许辅助出任何规模进行执行。 使用值为 1 来执行辅助出任何规模的包。 使用值 0 指示不所有横向扩展辅助进程都才能执行包。 此参数可选。 如果未指定，则将其值设置为 1。 *Useanyworker*是**位**。 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  返回执行实例的唯一标识符。 *Execution_id*是**bigint**。  
 
   
@@ -75,9 +75,9 @@ create_execution [ @folder_name = folder_name
  在执行中只能指定标记为入口点包的包。 如果指定的包不是入口点，则执行失败。  
   
 ## <a name="example"></a>示例  
- 下面的示例调用 catalog.create_execution 创建了不在向外扩展的 Child1.dtsx 包执行的实例。 Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
+ 下面的示例调用 catalog.create_execution 创建了不在向外扩展的 Child1.dtsx 包执行的实例。Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,16 +89,15 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 EXECUTE 权限，如果适用，则需要针对引用环境的 READ 权限  
@@ -132,7 +131,7 @@ GO
   
 -   环境引用，该环境中找不到引用的环境变量*reference_id*，指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [catalog.start_execution &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  

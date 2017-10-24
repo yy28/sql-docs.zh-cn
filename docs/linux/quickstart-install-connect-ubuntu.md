@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安装 SQL Server，并在 Ubuntu 上创建数据库
@@ -27,9 +27,12 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="prerequisites"></a>先决条件
 
-你必须具有的 Ubuntu 机**至少 3.25 GB**的内存。
+你必须具有的 Ubuntu 16.04 机**至少 3.25 GB**的内存。
 
 若要在您自己的计算机上安装 Ubuntu，请转到[http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)。 你还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 的 Azure cli](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+
+> [!NOTE]
+> 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
 
 其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/02/2017
 若要配置 SQL Server 在 Ubuntu 上，在安装终端中运行以下命令**mssql server**包。
 
 > [!IMPORTANT]
-> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)
+> 如果你已经安装 CTP 或 RC 版本的 SQL Server 自 2017 年，必须注册一个 GA 存储库之前先删除旧的存储库。 有关详细信息，请参阅[从预览存储库的存储库更改到 GA 存储库](sql-server-linux-change-repo.md)。
 
 1. 导入公共存储库 GPG 密钥：
 

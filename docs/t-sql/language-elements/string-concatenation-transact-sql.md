@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+（字符串串联）(Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>E. 使用字符串串联  
- 下面的示例创建列标题下的单个列`Name`从多个字符的列后, 跟一个逗号、 一个空格再联系人的名字的联系人姓氏。 结果集是按照姓氏，然后按照名字以字母顺序升序排列的。  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>F. 使用多个字符串串联  
+### <a name="e-using-multiple-string-concatenation"></a>E. 使用多个字符串串联  
  下面的示例将多个字符串，以形成一个长字符串以显示最后一个名称和副总裁示例数据库中的第一个初始连接在一起。 逗号加在姓氏后，句点加在名字首字母后。  
   
 ```  

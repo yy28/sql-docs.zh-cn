@@ -24,11 +24,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf23c40678950000b65a66dc29bdba8b4615c7b1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 5e6a0baf8fb2f060ab1819613cc1b417ff2c9802
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-equals-transact-sql"></a>=（等于）(Transact-SQL)
@@ -91,7 +92,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. 比较 NULL 值和非 NULL 值  
- 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI`_`NULLS` 设置的影响。  
+ 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还演示`IS NULL`不受`SET ANSI_NULLS`设置。  
   
 ```  
 -- Create table t1 and insert 3 rows.  

@@ -23,11 +23,12 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 71f9af15e8cfeaccabc87be787172fed44246967
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  若要跟踪死锁事件，请将 **Deadlock graph** 事件类添加到跟踪。 此事件类会在跟踪中的 **TextData** 数据列中填充有关死锁中涉及的进程和对象的 XML 数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可将 XML 文档提取到死锁 XML (.xdl) 文件，你稍后可在 SQL Server Management Studio 中查看该文件。 您可以配置 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，将 **Deadlock graph** 事件提取到一个包含了所有 **Deadlock graph** 事件的文件中，或提取到多个单独的文件中。 可以通过下列任一方法进行提取：  
   
--   在配置跟踪时，使用 **“事件提取设置”** 选项卡。 请注意，只有在 **“事件选择”** 选项卡上选择了 **Deadlock graph** 事件，才会出现此选项卡。  
+-   在配置跟踪时，使用 **“事件提取设置”** 选项卡。请注意，只有在 **“事件选择”** 选项卡上选择了 **Deadlock graph** 事件，才会出现此选项卡。  
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
@@ -72,3 +73,4 @@ ms.lasthandoff: 08/02/2017
  在死锁中，两个进程都在等待对方占用的资源。 在死锁图形中，资源显示为资源节点。  
   
   
+

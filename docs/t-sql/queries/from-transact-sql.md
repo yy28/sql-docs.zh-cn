@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. 使用简单 FROM 子句  
- 下面的示例检索`SalesTerritoryID`和`SalesTerritoryRegion`中的列`DimSalesTerritory`表。  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. 使用 INNER JOIN 语法  
+### <a name="n-using-the-inner-join-syntax"></a>N. 使用 INNER JOIN 语法  
  下面的示例返回`SalesOrderNumber`， `ProductKey`，和`EnglishProductName`中的列`FactInternetSales`和`DimProduct`表 where 联接键`ProductKey`，在这两个表中匹配项。 `SalesOrderNumber`和`EnglishProductName`每个列存在于其中一个表，因此不需要使用这些列中，指定表别名，如所示; 这些别名可供可读性。 Word **AS**之前别名名称不是必需的但建议以提高可读性并使其符合 ANSI 标准。  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. 使用左外部联接和 RIGHT OUTER JOIN 语法  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. 使用左外部联接和 RIGHT OUTER JOIN 语法  
  以下示例联接`FactInternetSales`和`DimProduct`表上`ProductKey`列。 左外部联接语法保留从左侧不匹配的行 (`FactInternetSales`) 表。 由于`FactInternetSales`表不包含任何`ProductKey`不匹配的值`DimProduct`表，此查询将返回第一个内部联接上面的示例中为相同的行。  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. 使用 FULL OUTER JOIN 语法  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. 使用 FULL OUTER JOIN 语法  
  下面的示例演示完全外部联接，它返回所有行从这两个联接的表，但另一个表不匹配的值都返回 NULL。  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. 使用 CROSS JOIN 语法  
+### <a name="q-using-the-cross-join-syntax"></a>Q. 使用 CROSS JOIN 语法  
  下面的示例返回的叉积`FactInternetSales`和`DimSalesTerritory`表。 所有可能组合列表`SalesOrderNumber`和`SalesTerritoryKey`返回。 注意到缺少`ON`交叉联接查询中的子句。  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. 使用派生表  
+### <a name="r-using-a-derived-table"></a>R. 使用派生表  
  下面的示例使用派生的表 (`SELECT`后的语句`FROM`子句) 返回`CustomerKey`和`LastName`列中的所有客户`DimCustomer`表与`BirthDate`晚于 1 月 1 日值1970 和姓氏 Smith。  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. 减少联接提示示例  
+### <a name="s-reduce-join-hint-example"></a>S. 减少联接提示示例  
  下面的示例使用`REDUCE`联接提示，更改在查询内派生表中的处理。 使用时`REDUCE`在此查询中，联接提示`fis.ProductKey`投影、 复制和进行不同的并且然后加入`DimProduct`期间的随机排布`DimProduct`上`ProductKey`。 在分布式生成派生的表`fis.ProductKey`。  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. 复制联接提示示例  
+### <a name="t-replicate-join-hint-example"></a>T. 复制联接提示示例  
  下一个示例演示与前面的示例，但同样的查询`REPLICATE`联接提示使用而不是`REDUCE`联接提示。 利用`REPLICATE`提示会导致中的值`ProductKey`（联接） 列从`FactInternetSales`表复制到所有节点。 `DimProduct`表联接到这些值的复制版本。  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. 使用 REDISTRIBUTE 提示要保证分发不兼容的联接随机排布移动邮箱  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. 使用 REDISTRIBUTE 提示要保证分发不兼容的联接随机排布移动邮箱  
  下面的查询上分发不兼容的联接使用 REDISTRIBUTE 查询提示。 这可确保查询优化器将在查询计划中使用随机排布移动。 这还可确保查询计划不会使用广播移动，后者将分布式的表移动到复制的表。  
   
  在下面的示例中，REDISTRIBUTE 提示强制 FactInternetSales 表上的随机排布移动，因为 ProductKey 是 DimProduct，分布列，而不是 FactInternetSales 分布列。  

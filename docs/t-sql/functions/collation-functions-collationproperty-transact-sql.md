@@ -22,11 +22,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94cbf96a25a84af1eddce9d94555be9c558c3470
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 166a85e5fe33a95cd8a36f221c2a774e4a0a9fb2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数-COLLATIONPROPERTY (Transact SQL)
@@ -51,10 +52,10 @@ COLLATIONPROPERTY( collation_name , property )
   
 |属性名称|Description|  
 |---|---|
-|**CodePage**|排序规则的非 Unicode 代码页。|  
-|**LCID**|排序规则的 Windows LCID。|  
-|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则，则返回 0。|  
-|**版本**|从排序规则 ID 的版本字段派生的排序规则版本。 返回 2、1 或 0。<br /><br /> 名称中含有“100”的排序规则返回 2。<br /><br /> 使用"90"名称中的排序规则） 返回 1。<br /><br /> 所有其他排序规则均返回 0。|  
+|**CodePage**|排序规则的非 Unicode 代码页。 请参阅[附录 G DBCS/Unicode 映射表](https://msdn.microsoft.com/en-us/library/cc194886.aspx)和[附录 H 代码页](https://msdn.microsoft.com/en-us/library/cc195051.aspx)转换这些值，并查看其字符映射。|  
+|**LCID**|排序规则的 Windows LCID。 请参阅[LCID 结构](https://msdn.microsoft.com/en-us/library/cc233968.aspx)转换这些值 (将需要将转换为`VARBINARY`第一个)。|  
+|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则，则返回 0 (同时`_BIN`和`_BIN2`) 以及当所有属性都是敏感。 位掩码值：<br /><br /> 忽略大小写： 1<br /><br /> 忽略重音： 2<br /><br /> 忽略假名： 65536<br /><br /> 忽略宽度： 131072|  
+|**版本**|从排序规则 ID 的版本字段派生的排序规则版本。 返回一个整数值 0 到 3 之间。<br /><br /> 使用"140"名称中的排序规则返回 3。<br /><br /> 排序规则与名称中的"100"返回 2。<br /><br /> 排序规则与名称中的"90"返回 1。<br /><br /> 所有其他排序规则均返回 0。|  
   
 ## <a name="return-types"></a>返回类型
 **sql_variant**

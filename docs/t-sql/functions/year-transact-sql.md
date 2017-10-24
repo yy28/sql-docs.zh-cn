@@ -26,11 +26,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee3f419d092f6e8b327dd5e4ac498afa4036ebbb
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 80a38599ae04209d0f8e479b8cbad16d39bef31a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
@@ -61,10 +62,10 @@ YEAR ( date )
  如果*日期*仅包含时间部分，则返回值是 1900 年基的年份。  
   
 ## <a name="examples"></a>示例  
- 下面的语句将返回 `2007`。 它是表示年份的数字。  
+ 下面的语句将返回 `2010`。 它是表示年份的数字。  
   
 ```  
-SELECT YEAR('2007-04-30T01:01:01.1234567-07:00');  
+SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  下面的语句将返回 `1900, 1, 1`。 自变量*日期*是数`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
@@ -74,12 +75,6 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的语句将返回 `2010`。 它是表示年份的数字。  
-  
-```  
-SELECT YEAR('2010-07-20T01:01:01.1234');  
-```  
-  
  下面的语句将返回 `1900, 1, 1`。 自变量*日期*是数`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  

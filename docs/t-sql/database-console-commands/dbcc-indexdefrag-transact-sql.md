@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1adc4da20dca615254f43c08282ee597b8dad17
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
@@ -117,7 +118,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>示例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 对索引进行碎片整理  
-下面的示例进行碎片整理的所有分区`PK_Product`_`ProductID`索引中`Production.Product`表中`AdventureWorks`数据库。
+下面的示例进行碎片整理的所有分区`PK_Product_ProductID`索引中`Production.Product`表中`AdventureWorks`数据库。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

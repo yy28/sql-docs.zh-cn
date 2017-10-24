@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project（SSISDB 数据库）
@@ -28,37 +28,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 项目将部署到其中的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [@folder_name =] *folder_name*  
+ 部署项目中的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
   
- [ @project_name =]*文件的内容*  
+ [@project_name =]*文件的内容*  
  文件夹中新的或更新的项目的名称。 *文件的内容*是**nvarchar （128)**。  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件（扩展名为.ispac）的二进制内容。  
   
  您可以使用带 OPENROWSET 函数的 SELECT 语句以及大容量行集提供程序来检索该文件的二进制内容。 有关示例，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关 OPENROWSET 的详细信息，请参阅[OPENROWSET &#40;Transact SQL &#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
  *Projectstream*是**varbinary （max)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  返回部署操作的唯一标识符。 *Operation_id*是**bigint**。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ 无  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   对文件夹具有 CREATE_OBJECTS 权限才能部署新项目；对项目具有 MODIFY 权限才能更新项目  
@@ -76,7 +76,7 @@ deploy_project [ @folder_name = ] folder_name
   
 -   用户不具备足够的权限  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  在项目部署或更新期间，存储过程不检查项目中各个包的保护级别。  
   
   

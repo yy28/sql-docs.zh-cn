@@ -23,11 +23,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d02995ee7093d311cbdc6f4b69430a8bc66a618c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4945bbe718bd8561100a3dd8e296a9f1faa9d93a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40; NESTLEVEL (Transact SQL)
@@ -89,7 +90,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. 调用 @@NESTLEVEL   
- 以下示例显示 `SELECT`、`EXEC` 和 `sp`_`executesql` 调用 `@@NESTLEVEL` 时，它们返回的值的区别。  
+ 下面的示例演示返回的值之间的差异`SELECT`， `EXEC`，和`sp_executesql`当每个调用`@@NESTLEVEL`。  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

@@ -28,11 +28,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1a9f471fd7db7bfbb7a64c856495decff692c40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 285803fe112cc0370b8af6049f48846c7ba55cab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
@@ -96,7 +97,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI`_`NULLS` 设置的影响。  
+ 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还演示`IS NULL`不受`SET ANSI_NULLS`设置。  
   
 ```  
 -- Create table t1 and insert values.  
@@ -178,3 +179,4 @@ DROP TABLE dbo.t1;
  [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)  
   
   
+

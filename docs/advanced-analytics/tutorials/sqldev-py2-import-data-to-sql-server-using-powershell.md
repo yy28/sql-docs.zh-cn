@@ -1,7 +1,7 @@
 ---
-title: "步骤 2：使用 PowerShell 将数据导入 SQL Server | Microsoft Docs"
+title: "步骤 2： 将数据导入到 SQL Server 使用 PowerShell |Microsoft 文档"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,23 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62a06d6c442428132f84b3f8e5a665e872a8d361
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-2-import-data-to-sql-server-using-powershell"></a>步骤 2：使用 PowerShell 将数据导入 SQL Server
+# <a name="step-2-import-data-to-sql-server-using-powershell"></a>步骤 2： 将数据导入到 SQL Server 使用 PowerShell
 
-此步骤将运行一个下载的脚本，创建演练所需的数据库对象。 该脚本还会创建大多数将使用的存储过程，并将示例数据上传到指定的数据库中的表。
+使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-## <a name="create-sql-objects-and-data"></a>创建 SQL 对象和数据
+在此步骤中，你运行下载的脚本，以创建所需的演练数据库对象之一。 该脚本还会创建多个存储的过程，并将示例数据上载到你指定的数据库中的表。
 
-在下载的文件中，可以看到一个 PowerShell 脚本。 运行此脚本，准备用于演练的环境。  该脚本执行以下操作：
+## <a name="create-database-objects-and-load-data"></a>创建数据库对象和加载数据
+
+在下载的文件之间，你应看到的 PowerShell 脚本， `RunSQL_SQL_Walkthrough.ps1`。 此脚本的目的是准备演练环境。
+
+该脚本执行以下操作：
 
 - 如果尚未安装，安装 SQL Native Client 和 SQL 命令行实用工具。 使用 **bcp**将数据大容量加载到数据库时需要这些实用程序。
 
@@ -40,66 +44,64 @@ ms.lasthandoff: 09/01/2017
 
 - 创建多个 SQL 函数和存储的过程。
 
-### <a name="run-the-script"></a>运行脚本
+如果遇到问题，可以作为引用使用脚本来手动执行的步骤。
 
-1. 以管理员身份打开 PowerShell 命令提示符并运行以下命令。
+1. 以管理员身份打开 PowerShell 命令提示符。 如果你尚不在上一步中创建的文件夹中，导航到文件夹，，，然后运行以下命令：
   
-    ```  
-    .\RunSQL_SQL_Walkthrough.ps1  
-    ```  
+    ```ps
+    .\RunSQL_SQL_Walkthrough.ps1
+    ```
 
-    系统将提示输入以下信息：
-    - 名称或地址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]机器学习 Python 服务安装位置的实例
-    - 实例上某帐户的用户名和密码。 使用的帐户必须能够创建数据库、创建表和存储过程，以及将数据上传到表。 如果未提供的用户名和密码，你的 Windows 标识用于登录到 SQL Server。
-    - 刚下载的示例数据文件的路径和文件名。 例如，使用 IPv4 地址 `C:\tempRSQL\nyctaxi1pct.csv`
+2. 该脚本将提示输入以下信息：
+
+    - 名称或地址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安装与 Python 的机器学习服务实例。
+    - 实例上某帐户的用户名和密码。 你使用的帐户必须具有创建数据库、 创建表和存储的过程和大容量加载到表的数据的能力。 
+    - 如果未提供的用户名和密码，你的 Windows 标识可用于登录到 SQL Server，并将提升到输入密码。
+    - 刚下载的示例数据文件的路径和文件名。 例如，使用 IPv4 地址 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
-    > 请确保你 xmlrw.dll 处于你 bcp.exe 所在的文件夹。 如果没有，请通过复制它。
+    > 若要成功加载数据，库 xmlrw.dll 必须是 bcp.exe 所在的文件夹。
 
-2.  在此步骤中，还需修改所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，以作为脚本输入提供的数据库名称和用户名替换占位符。
+3. 该脚本还会修改[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本之前，下载并替换占位符替换为数据库名称和用户名称提供。
   
-3. 花一些时间查看脚本创建的存储过程和函数。
-     
-    |**SQL 脚本文件名**|**函数**|
-    |------|------|
-    |create-db-tb-upload-data.sql|创建一个数据库和两个表：<br /><br />nyctaxi_sample：包含主 NYC Taxi 数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 将在此表中插入 1% 的 NYC Taxi 数据集示例。<br /><br />nyc_taxi_models：用于保留已定型的高级分析模型。|
-    |fnCalculateDistance.sql|创建标量值函数，用于计算搭乘位置和下车位置之间直接距离|
-    |fnEngineerFeatures.sql|创建表值函数，用于为模型定型创建新的数据功能|
-    |TrainingTestingSplit.sql|将 nyctaxi_sample 表中的数据拆分为两个部分： nyctaxi_sample_training 和 nyctaxi_sample_testing。|
-    |PredictTipSciKitPy.sql|创建调用经过训练的模型的存储的过程 (scikit-了解) 使用该模型创建预测。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。|
-    |PredictTipRxPy.sql|创建调用经过训练的模型 (revoscalepy) 使用该模型创建预测的存储的过程。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。|
-    |PredictTipSingleModeSciKitPy.sql|创建调用经过训练的模型的存储的过程 (scikit-了解) 使用该模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。|
-    |PredictTipSingleModeRxPy.sql|创建调用经过训练的模型 (revoscalepy) 使用该模型创建预测的存储的过程。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。|
-  
-4. 在本演练中的后半部分中，将创建一些附加的存储过程：
-    
-    |**SQL 脚本文件名**|**函数**|
-    |------|------|
-    |SerializePlots.sql|创建用于数据浏览的存储过程。 此存储的过程创建一个使用 Python 的图形，然后序列化的图形对象。|
-    |TrainTipPredictionModelSciKitPy.sql|创建训练逻辑回归模型的存储的过程 (scikit-了解)。 模型预测附属列的值，并使用随机选择的 60%的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。|
-    |TrainTipPredictionModelRxPy.sql|创建训练逻辑回归模型 (revoscalepy) 的存储的过程。 模型预测附属列的值，并使用随机选择的 60%的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。|
-  
-3. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和指定的登录名登录到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实例，验证是否可以看到创建的数据库、表、函数和存储过程。
+4. 完成脚本后，登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用指定的登录名你，以验证，该数据库，表、 函数和已创建的存储的过程。 下图显示中的对象[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 
     ![浏览在 SSMS 中的表](media/sqldev-python-browsetables1.png "在 SSMS 中查看表")
 
     > [!NOTE]
-    > 如果数据库对象已存在，则无法再次创建。 如果表已存在，则会追加数据，而不是将其覆盖。 因此，运行脚本之前请确保删除所有现有对象。
-    > 按照说明进行操作[此处](https://docs.microsoft.com/en-us/sql/advanced-analytics/r/set-up-sql-server-r-services-in-database#bkmk_enableFeature)以启用外部脚本服务。
-    
+    > 如果数据库对象已存在，无法再次创建它们。
+    > 
+    > 如果找到一个现有表的相同的名称和架构，将追加数据，不会被覆盖。 因此，请务必删除或运行该脚本之前截断现有表。
 
+## <a name="list-of-stored-procedures-and-functions"></a>存储的过程和函数的列表
+
+该脚本将创建以下 SQL Server 对象：
+
+|**SQL 脚本文件名**|**函数**|
+|------|------|
+|create-db-tb-upload-data.sql|创建一个数据库和两个表：<br /><br />nyctaxi_sample：包含主 NYC Taxi 数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 将在此表中插入 1% 的 NYC Taxi 数据集示例。<br /><br />nyc_taxi_models：用于保留已定型的高级分析模型。|
+|fnCalculateDistance.sql|创建标量值函数，用于计算搭乘位置和下车位置之间直接距离|
+|fnEngineerFeatures.sql|创建表值函数，用于为模型定型创建新的数据功能|
+|TrainingTestingSplit.sql|将 nyctaxi_sample 表中的数据拆分为两个部分： nyctaxi_sample_training 和 nyctaxi_sample_testing。|
+|PredictTipSciKitPy.sql|创建调用经过训练的模型的存储的过程 (scikit-了解) 使用该模型创建预测。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。|
+|PredictTipRxPy.sql|创建调用经过训练的模型 (revoscalepy) 使用该模型创建预测的存储的过程。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。|
+|PredictTipSingleModeSciKitPy.sql|创建调用经过训练的模型的存储的过程 (scikit-了解) 使用该模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。|
+|PredictTipSingleModeRxPy.sql|创建调用经过训练的模型 (revoscalepy) 使用该模型创建预测的存储的过程。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。|
+
+在本演练的后半部分，你将创建这些附加存储的过程：
+    
+|**SQL 脚本文件名**|**函数**|
+|------|------|
+|SerializePlots.sql|创建用于数据浏览的存储过程。 此存储的过程创建一个使用 Python 的图形，然后序列化的图形对象。|
+|TrainTipPredictionModelSciKitPy.sql|创建训练逻辑回归模型的存储的过程 (scikit-了解)。 模型预测附属列的值，并使用随机选择的 60%的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。|
+|TrainTipPredictionModelRxPy.sql|创建训练逻辑回归模型 (revoscalepy) 的存储的过程。 模型预测附属列的值，并使用随机选择的 60%的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。|
 
 ## <a name="next-step"></a>下一步
 
-[步骤 3：浏览和可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
+[步骤 3：浏览并可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
 
 ## <a name="previous-step"></a>上一步
 
 [步骤 1：下载示例数据](sqldev-py1-download-the-sample-data.md)
-
-## <a name="see-also"></a>另请参阅
-
-[机器学习服务与 Python](../python/sql-server-python-services.md)
-
 
 

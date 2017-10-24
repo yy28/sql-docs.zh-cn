@@ -26,11 +26,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2074ef0a9e434ac5c427c5438633c61ead0eb25a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 033442da3e10fd834963df30ea071a220464de6f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -76,7 +77,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- 在 `REVERT`_`usp` 内部定义的 `myproc` 语句会切换在模块内部设置的执行上下文，但不会影响在模块外部设置的执行上下文。 就是说，会话的执行上下文将仍然设置为 `login1`。  
+ `REVERT`内部定义的语句`usp_myproc`切换执行上下文设置内部模块，但不会影响设置外部模块的执行上下文。 就是说，会话的执行上下文将仍然设置为 `login1`。  
   
  指定为独立语句时，REVERT 将应用于在批或会话中定义的 EXECUTE AS 语句。 如果相应的 EXECUTE AS 语句包含 WITH NO REVERT 子句，则 REVERT 无效。 在这种情况下，执行上下文将保持有效状态，直到删除会话。  
   
