@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
@@ -38,3 +39,4 @@ boolean = recordset.Supports(CursorOptions )
  使用**支持**方法，你可以检查的能力**记录集**对象添加新记录、 使用书签，请使用**查找**方法，请使用滚动，使用**索引**属性，并执行批处理更新。 常量和它们的含义的完整列表，请参阅[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)。  
   
  尽管**支持**方法可能返回**True**对于给定的功能，它无法保障，该提供程序可以使该功能可在所有情况下。 **支持**方法只返回满足某些条件的下提供程序是否支持指定的功能。 例如，**支持**方法可能表明**记录集**对象支持更新，即使光标基于多个表联接，其中某些列不是可更新。
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d05a52614694bc9464c609ab4f4ed0965f3b81e
@@ -56,3 +57,4 @@ Dim obj As New Key
  [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [列集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [键集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+

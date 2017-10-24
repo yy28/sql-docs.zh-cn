@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74248756628e892ff8a00e0e6e206b5eb7639e05
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)|[执行方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
 |[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery 方法](../../../ado/reference/ado-api/requery-method.md)|
+

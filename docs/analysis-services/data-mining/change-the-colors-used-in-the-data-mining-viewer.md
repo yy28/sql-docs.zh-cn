@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/01/2017
     >  如果使用自定义颜色，则该颜色表示为一个颜色图标和该颜色的 RBG 值。 如果使用系统颜色或 Web 颜色，则该颜色表示为一个颜色图标和该颜色的名称。  
   
   
+

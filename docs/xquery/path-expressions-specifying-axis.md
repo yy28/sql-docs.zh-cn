@@ -27,6 +27,7 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c34c230f6df65610466e087da5707622c3911e42
@@ -245,3 +246,4 @@ WHERE ProductModelID=19
  请注意，在路径表达式中添加了谓词 `[1]`，这是为了确保返回单一值。  
   
   
+

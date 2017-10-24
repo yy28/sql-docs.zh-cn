@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   传递**命令**对象传递给**源**属性**记录集**为了获取数据。  
   
 -   传递**流**到提供程序支持它的包含命令 （例如，XML 命令） 的对象。
+

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  若要接收多个结果集意味着你将需要进行多次往返通过网络，另一个用于封装在每个数据集**记录集**对象。 对于缓慢或堵塞的网络，减少往返次数可能有助于提高应用程序的性能。 因此，某些提供商提供支持，以获得多个**记录集**在单个往返过程。 以下主题中讨论了这是：  
   
 -   [接收多个记录集](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

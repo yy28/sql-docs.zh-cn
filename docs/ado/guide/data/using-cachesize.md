@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  从缓存中检索的记录不能反映其他用户对源数据所做的并发更改。 若要强制执行更新的所有缓存的数据，使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法。  
   
  如果**CacheSize**设置为值大于 1，浏览方法 ([移动](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 可能会导致导航到已删除如果已检索的记录后，将发生删除，记录。 后初始提取，后续的删除将不会反映在你的数据缓存之前尝试访问从已删除的行的数据值。 但是，将设置**CacheSize**由于无法提取已删除的行，则为 1 消除此问题。
+

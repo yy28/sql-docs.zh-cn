@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8389d25750e59cce3ce00d6fe98c57744b40b994
@@ -121,3 +122,4 @@ End Sub
 ## <a name="see-also"></a>另请参阅  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [已准备好的属性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+

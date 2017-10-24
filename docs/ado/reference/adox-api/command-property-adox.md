@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b7a0d1d5102c824f95a450daa53eb8a3b887316
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [参数集合，命令属性示例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [视图集合，CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+

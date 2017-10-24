@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  但是，务必点的服务器端游标已-至少暂时-对于每个活动的客户端消耗宝贵的服务器资源。 你必须相应地规划以确保你的服务器硬件能够管理的所有服务器端游标的活动客户端请求。 此外，服务器端游标可能会很慢因为它提供仅单个行的访问权限-不没有可用的任何批处理光标。  
   
  服务器端游标时都很有用插入、 更新或删除记录。 使用服务器端游标时，你可以对相同的连接的多个活动语句。
+

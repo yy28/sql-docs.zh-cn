@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 91c3418fea062661ffba94feb791d700301ff097
@@ -99,3 +100,4 @@ Attribute VB_Name = "StatusField"
  [字段对象](../../../ado/reference/ado-api/field-object.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [状态属性 （ADO 字段）](../../../ado/reference/ado-api/status-property-ado-field.md)
+

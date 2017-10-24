@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 |**adAccessGrant**|1|组或用户至少多将具有请求的权限。|  
 |**adAccessRevoke**|4|组或用户的任何显式访问权限将被吊销。|  
 |**adAccessSet**|2|组或用户将拥有请求的权限。|
+

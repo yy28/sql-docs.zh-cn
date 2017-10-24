@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
@@ -153,3 +154,4 @@ ms.lasthandoff: 09/01/2017
  在 MDSCHEMA_KPIS 上，增加了作用域列。 作用域值如下：MDKPI_SCOPE_GLOBAL=1、MDKPI_SCOPE_SESSION=2。  
   
   
+

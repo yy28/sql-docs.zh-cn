@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
 3.  重新启动 SQL Server 实例的服务的重新配置。 这样将自动重新启动相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]以及服务。
 
 3. 如果有自定义安全配置，或者如果要使用 SQL Server 支持远程计算上下文，则可能需要执行其他步骤。 有关详细信息，请参阅[机器学习安装程序疑难解答](../machine-learning-troubleshooting-faq.md)。
+

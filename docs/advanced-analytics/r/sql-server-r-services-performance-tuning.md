@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ SQL server 以支持 R 脚本执行的 SQL Server 2016 中引入了 R Services �
 + [SQL Server 的方法和结果中的 R 性能调整](..\r\performance-case-study-r-services.md)
 
     总结了哪些数据是使用两个用例研究、 如何性能进行了测试，和优化如何影响结果。
+

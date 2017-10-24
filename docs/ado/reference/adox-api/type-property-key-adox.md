@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9f63f020a46b20c1657f073ea1590fa260d21a0
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [类型属性 （列） (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [类型属性 （表） (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+

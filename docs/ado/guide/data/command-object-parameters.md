@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  并非所有提供程序支持已准备的命令。 如果提供程序不支持命令准备，它会返回一个错误，此属性设置为时，就会立即**True**。 如果它不返回错误，它将忽略请求后，若要准备的命令和集**已准备**属性**false**。
+

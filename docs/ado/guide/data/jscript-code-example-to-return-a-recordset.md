@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  打开命令提示符并键入 cd 转到 JScript 文件 (rs.js) 保存的目录。  
   
 3.  类型`CScript rs.js`从命令提示符。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
@@ -54,3 +55,4 @@ ADO 和 ADO MD 是相关但独立的对象模型。 ADO 提供的对象用于连
  [多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用 ADO MD 编程](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [使用多维数据](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

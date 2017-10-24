@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
@@ -94,3 +95,4 @@ SQL Server 自 2017 年 1 CTP 2.0 及更高版本包括此功能，因此只能�
 5. 以继续配置**mrsdeploy**服务如下所述：[管理员配置](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. 有关详细信息，请参阅[mrsdeploy 函数](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)。
+

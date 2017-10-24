@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  关闭原始**记录集**不会关闭其副本，也不会关闭副本关闭原始对象或任何其他副本。  
   
  您可以克隆**记录集**仅对象是否支持书签。 书签值是可互换;即，从一个的书签引用**记录集**对象是指任何个克隆中的同一记录。
+

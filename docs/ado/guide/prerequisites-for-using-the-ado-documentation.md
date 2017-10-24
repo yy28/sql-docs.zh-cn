@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
  因为 ADO 用于从各种源访问数据，你还需要一些知识的关系数据库管理系统和联机分析处理 (OLAP) 和基本熟悉的 Internet 和 Internet 协议。  
   
  ADO 和相关的 OLE DB 技术基于 Microsoft 组件对象模型 (COM)，因为 COM 的知识将帮助你更好地了解在 ADO 的高级的概念。
+

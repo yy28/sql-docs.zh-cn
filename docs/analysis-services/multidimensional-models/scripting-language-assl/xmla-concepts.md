@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  XMLA 是采用统一维度模型 (UDM) 方法的商业智能应用程序所使用的协议  
   
   
+

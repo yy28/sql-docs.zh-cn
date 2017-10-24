@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
@@ -112,3 +113,4 @@ ms.lasthandoff: 09/01/2017
  可以通过右键单击“数据”窗格中的任意位置并单击“显示空单元格”，在数据网格中隐藏空单元格。  
   
   
+
