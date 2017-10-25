@@ -81,7 +81,7 @@ BOOL SQLGetTranslator(
  如果成功，则 FALSE 如果它出现故障，或者用户取消对话框中，该函数返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetTranslator**返回 FALSE，一个关联* \*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出* \*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLGetTranslator**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  

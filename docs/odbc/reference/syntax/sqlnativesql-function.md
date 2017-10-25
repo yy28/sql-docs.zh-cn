@@ -66,7 +66,7 @@ SQLRETURN SQLNativeSql(
  如果*OutStatementText*为 NULL， *TextLength2Ptr*仍将返回的字符 （不包括字符数据的 null 终止字符） 总数可用于返回在缓冲区中指向*OutStatementText*。  
   
  *BufferLength*  
- [输入]中的字符数\* *OutStatementText*缓冲区。 如果在返回的值* \*InStatementText*为 Unicode 字符串 (在调用时**SQLNativeSqlW**)，则*BufferLength*参数必须为偶数。  
+ [输入]中的字符数\* *OutStatementText*缓冲区。 如果在返回的值 *\*InStatementText*为 Unicode 字符串 (在调用时**SQLNativeSqlW**)，则*BufferLength*参数必须为偶数。  
   
  *TextLength2Ptr*  
  [输出]指向要返回的字符 （不包括 null 终止） 可用于返回在总数在其中的缓冲区指针\* *OutStatementText*。 可用于返回的字符数是否大于或等于*BufferLength*，则转换中的 SQL 字符串\* *OutStatementText*截断为*BufferLength*减 null 终止字符的长度。  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|通讯链接失败|在函数完成处理之前失败的驱动程序和驱动程序已连接到数据源之间的通信链接。|  
 |22007|无效的日期时间格式|**InStatementText*包含具有无效的日期、 时间戳值 escape 子句。|  
 |24000|无效的游标状态|光标在语句中称为所处早于开始日期的结果集或结果集的结尾之后。 具有本机的 DBMS 游标实现的驱动程序不会返回此错误。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY009|不允许使用 null 指针|(DM) **InStatementText*是空指针。|  
 |HY010|函数序列错误|(DM) 以异步方式执行的函数曾为*ConnectionHandle*和仍在执行时调用此函数。|  
