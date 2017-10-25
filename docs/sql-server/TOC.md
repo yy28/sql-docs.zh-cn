@@ -19,16 +19,15 @@
 
 # 发行说明
 
-## [SQL Server 发行说明](sql-server-release-notes.md)
-## [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)
-## [SQL Server 2016 发行说明](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 发行说明](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 发行说明](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 发行说明](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2017 说明](sql-server-2017-release-notes.md)
+## [SQL Server 2016 说明](sql-server-2016-release-notes.md)
+## [SQL Server 2014 说明](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP4 说明](sql-server-2012-sp4-release-notes.md)
+## [SQL Server 2012 SP3 说明](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 说明](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 说明](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 说明](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 说明](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [数据库引擎](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [数据迁移助手](../dma/dma-overview.md)
 # [Stretch 数据库](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 教程](tutorials-for-sql-server-2016.md)
-# [帮助查看器的本地内容](sql-server-help-installation.md)
+
+# Resources
+## 博客
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [SQL Server 数据库引擎](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server 安全性](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## 反馈和帮助
+### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [帮助查看器的本地内容](sql-server-help-installation.md)
