@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40253151a07fe393046c7a1b0e20d4e5e7ce1212
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 9160058a5e38ccc9e8e21e56c764b01eac610d2f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
@@ -84,9 +84,6 @@ ms.lasthandoff: 08/02/2017
   
  镜像数据库 (mirror database)  
  通常与主体数据库完全同步的数据库副本。  
-  
- 镜像服务器 (mirror server)  
- 在数据库镜像配置中，镜像数据库所在的服务器实例。  
   
  镜像服务器 (mirror server)  
  在数据库镜像配置中，镜像数据库所在的服务器实例。  
