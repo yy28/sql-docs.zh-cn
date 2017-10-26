@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fe8eea6f5252adcf17f4c1f350c23042b2aeba6
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **CommonIdentifierPosition**元素包含的通用标识符元素集合中的详细信息的位置。 默认值**false**指示没有要使用的公共标识符。  
   
   
+

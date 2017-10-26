@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/27/2017
 |PreparedStatement.setObject() 方法和 PreparedStatement.setNull() 方法现在支持新的数据类型映射。|1.新的 Java 到 JDBC 类型映射<br /><br /> (a) java.math.BigInteger 映射到 JDBC BIGINT<br /><br /> (b) java.util.Date 和 java.util.Calendar 映射到 JDBC TIMESTAMP<br /><br /> 2.新的数据类型转换：<br /><br /> (a) java.math.BigInteger 转换为 CHAR、VARCHAR、LONGVARCHAR 和 BIGINT<br /><br /> (b) java.util.Date and java.util.Calendar 转换为 CHAR、VARCHAR、LONGVARCHAR、DATE、TIME 和 TIMESTAMP<br /><br /> 有关详细信息，请参阅 JDBC 4.1 规范。|  
   
   
+

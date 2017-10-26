@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: HeidiSteen
 ms.author: heidist
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
@@ -52,3 +53,4 @@ MaxIntermediateRowsetSize | 1000000 | DAX 查询中返回的最大行数。 手�
 PredicateCheckSpoolCardinalityThreshold| 5000 | 这是一项高级属性，除非有 Microsoft 技术支持的指导，否则不应更改此属性。
 
 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。 
+

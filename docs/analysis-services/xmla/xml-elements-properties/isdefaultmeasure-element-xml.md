@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b7ec461cb8fea748a6bd6ad9521082e8c3c66547
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **IsDefaultMeasure**元素指示是否可以通过导航到另一端来获取此实体的默认度量值此关系。 默认值**false**指示要从中获取但没有默认度量值。  
   
   
+

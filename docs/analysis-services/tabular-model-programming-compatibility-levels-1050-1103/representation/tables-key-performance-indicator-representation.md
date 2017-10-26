@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
@@ -231,3 +232,4 @@ private void addStaticKPI(object sender, EventArgs e)
  若要了解对如何使用 AMO 来创建和操作关键绩效指标表示形式，请参阅 AMO 到表格示例; 的源代码具体查看以下源文件： AddKPIs.cs。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   
+

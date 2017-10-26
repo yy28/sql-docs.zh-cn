@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|提供有关默认建模和部署属性的说明和配置步骤。 默认属性将应用于新的表格模型项目。 在创建新项目之后，根据您的需求，可为特定模型项目更改这些属性。|  
   
   
+

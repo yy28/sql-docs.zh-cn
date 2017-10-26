@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
 ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
@@ -168,3 +169,4 @@ ms.lasthandoff: 10/21/2017
   
  有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一节中关于各 DAX 函数的单独主题。  
   
+

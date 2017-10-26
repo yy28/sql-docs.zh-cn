@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
@@ -143,3 +144,4 @@ ms.lasthandoff: 09/01/2017
  在计算模型中的表并对包含详细信息行（这些行应始终显示为单独项）的表设置表行为属性之后，您可以通过其他属性或设置来进一步优化模型。  
   
   
+

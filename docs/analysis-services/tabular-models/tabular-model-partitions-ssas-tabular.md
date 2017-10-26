@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
@@ -98,3 +99,4 @@ Analysis Services 包括对于包含两个或多个分区的表的并行处理�
 |[处理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中处理分区。|  
   
   
+

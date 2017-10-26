@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ed09bbccf5bb5aa399fbab0c9e6a58c7f58c7ecd
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **IsDefaultImage**元素指示可以通过导航到其他实例的末尾来获取此实体的默认图像关系。 默认值**false**指示没有要从中获取的默认图像。  
   
   
+

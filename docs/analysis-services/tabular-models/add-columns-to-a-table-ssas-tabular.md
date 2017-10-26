@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 170b1c7aceb4a642343f00faa6dc6ffbb3f6cbbb
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/01/2017
  [更改表、列或行筛选器映射（SSAS 表格）](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   
+
