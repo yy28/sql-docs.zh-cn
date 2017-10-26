@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab52b29d54416dca84d18cb0cd2b832da1b4d63
@@ -85,3 +86,4 @@ UPDATE alltypes
   
 ## <a name="remarks"></a>注释  
  有关转义序列的详细信息，请参阅[ODBC 中的转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中*ODBC 程序员参考*。
+

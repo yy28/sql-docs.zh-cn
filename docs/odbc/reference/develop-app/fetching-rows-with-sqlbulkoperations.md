@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 4.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_FETCH_BY_BOOKMARK。  
   
  没有此应用程序使用行操作数组以防止操作无需执行对某些列。 应用程序选择想要通过将仅书签的那些行复制到绑定的书签数组提取的行。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c648549b41ff607ad34175475c6a2b75603625f
@@ -31,3 +32,4 @@ ODBC 定义包含针对日期、 时间、 时间戳，和日期时间间隔文�
  若要确定是否驱动程序还支持针对日期、 时间、 时间戳，或日期时间间隔文本中的转义序列，应用程序调用**SQLGetTypeInfo**。 如果数据源支持日期、 时间、 时间戳或日期时间间隔数据类型，它还必须支持相应的转义序列。 若要确定是否支持的其他转义序列，应用程序调用**SQLGetInfo**。  
   
  有关详细信息，请参阅[ODBC 中的转义序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)，本部分中更高版本。
+

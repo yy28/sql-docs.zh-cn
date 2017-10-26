@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4b14b5374cedece38295bac840a72acae5895ca8
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  此时，很少使用**SQLGetInfo**来发现该驱动程序的功能。 有关详细信息，请参阅[考虑要使用的数据库功能](../../../odbc/reference/develop-app/considering-database-features-to-use.md)。  
   
  所有应用程序需要分配语句句柄与**SQLAllocHandle**，许多应用程序设置语句属性，例如游标类型和**SQLSetStmtAttr**。 有关详细信息，请参阅[分配语句处理](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)和[语句特性](../../../odbc/reference/develop-app/statement-attributes.md)。
+

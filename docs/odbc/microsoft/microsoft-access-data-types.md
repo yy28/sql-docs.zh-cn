@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cd0646f276d278b66427e3f44b661493e695
@@ -74,3 +75,4 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |NUMERIC|限制为 Microsoft 访问 4.0 的数据类型。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
+

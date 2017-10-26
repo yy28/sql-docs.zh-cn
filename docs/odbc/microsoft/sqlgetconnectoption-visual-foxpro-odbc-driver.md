@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd94e03f54eda8af1c7199bcf6d716e20af70a5b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|驱动程序允许仅 SQL_TXN_READ_COMMITTED。<br /><br /> 以下*vParam*s 不支持：<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
  有关详细信息，请参阅[SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md)中*ODBC 程序员参考*。
+

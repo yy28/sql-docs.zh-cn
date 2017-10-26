@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b36bd3b9743c8cdd351ac3c7ed6e2f0afafd7d7e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  关闭 Visual FoxPro ODBC 驱动程序并释放与该驱动程序相关联的所有内存。  
   
  有关详细信息，请参阅[SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)中*ODBC 程序员参考*。
+

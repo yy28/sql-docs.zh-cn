@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddcc26d47c640562b66fc321c6cd8424e955412a
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  通过 ODBC 桌面数据库驱动程序访问 dBASE ISAM 文件需要高数据库引擎的安装。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc4a28976342768f5c7b2d1cfe8a1d3be6544306
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft ODBC Driver for Oracle 是线程安全的;但是，Oracle 不允许在单个连接上多个并发的语句。 该驱动程序强制实施此限制。 换而言之，在多线程应用程序，尽管入适用于 Oracle ODBC 驱动程序中的任何线程可以调用任何时候，该驱动程序阻塞，从同一连接上的驱动程序的其他任何线程直到原始线程离开该驱动程序。  
   
  如果有两个不同的连接上的两个语句，该驱动程序不会阻止。 但是，如果没有与两个语句的单个连接，则潜在的阻塞。
+

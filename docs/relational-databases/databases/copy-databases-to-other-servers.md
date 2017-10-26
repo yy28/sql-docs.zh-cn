@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
      可以使用生成脚本向导将数据库从本地计算机传输到 Web 宿主提供程序。 有关详细信息，请参阅 [生成和发布脚本向导](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
   
   
+

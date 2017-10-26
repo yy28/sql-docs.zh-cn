@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8906d8672c44eaf6a2e8cc6fbfc63189a4dcbda2
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   仅适用于数据源[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)。 该驱动程序将返回错误"驱动程序不支持此函数"如果数据源是一个目录的[释放表](../../odbc/microsoft/visual-foxpro-terminology.md)。  
   
  有关详细信息，请参阅[SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md)中*ODBC 程序员参考*。
+

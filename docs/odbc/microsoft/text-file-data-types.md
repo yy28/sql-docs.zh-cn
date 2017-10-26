@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|理论上限制在 LONGCHAR 列的宽度固定长度或分隔的表为 65500 K。 文本 ISAM 是更倾向于提供最多约 32k 可靠的支持。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec**和**SQLGetDescRec**是简洁的函数，使用一次调用，设置或获取影响的数据类型和列或参数的数据的存储的多个描述符字段。 **SQLSetDescRec**是一种有效的方法来更改的一个步骤中的列或参数的数据绑定。  
   
  **SQLSetStmtAttr**和**SQLGetStmtAttr**用作简洁函数在某些情况下。 (请参阅[描述符字段](../../../odbc/reference/develop-app/descriptor-fields.md)。)
+

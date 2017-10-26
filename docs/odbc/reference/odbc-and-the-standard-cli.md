@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC 对齐具有以下规范和处理的调用级界面 (CLI) 标准。 （ODBC
 -   存储的过程支持，包括转义序列，输出参数绑定机制，以及目录函数  
   
 -   连接增强功能包括支持连接属性和属性浏览
+

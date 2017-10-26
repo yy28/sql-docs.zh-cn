@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f373fe012c2b791329fea35ca853021e70274eb
@@ -35,3 +36,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Driver Manager]Direction option out of range
 ```  
   
  在驱动程序管理器中出错，因为它添加前缀到诊断消息其供应商 ([Microsoft]) 以及其标识符 （[ODBC 驱动程序管理器]）。
+

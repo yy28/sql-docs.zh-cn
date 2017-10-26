@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ ODBC C 数据类型的字符的标识符都是：
   
 > [!NOTE]  
 >  应用程序开发人员我们建议您不要将字符 C 数据绑定到二进制的 SQL 数据类型。 此转换通常是效率低下，而且很慢。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaa110a6a62ca91535e790a267ef714675719bf4
@@ -50,3 +51,4 @@ ODBC 指定以下类型的标量函数，有关上述每种函数类型，在此
  ODBC 和 SQL 92 分类其标量函数以不同的方式。 ODBC 将分类自变量类型; 标量的函数SQL 92 对它们进行分类的返回值。 例如，EXTRACT 函数归类为 timedate 函数通过 ODBC，因为提取字段自变量是一个 datetime 关键字，提取源参数是日期时间或间隔的表达式。 Sql-92，另一方面，将提取分类为数值的标量函数，因为返回值是一个数字。  
   
  应用程序可以确定驱动程序还支持通过调用哪些标量函数**SQLGetInfo**。 信息类型是包含对于 ODBC 和标量函数的 SQL 92 分类。 因为这些分类不同，对于某些标量函数的支持可能会指出与 ODBC 和 SQL 92 并不对应的信息类型中。 SQL_TIMEDATE_FUNCTIONS 信息类型; 例如，指示用于 ODBC 中提取的支持另一方面，用于提取在 sql-92，支持由 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 信息类型表示。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a717f552c6c0f7aafc5968ebe8ffce5aaa14bd8
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  返回名称、 类型、 精度、 小数位数和给定的结果列的为空性。  
   
  有关详细信息，请参阅[SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)中*ODBC 程序员参考*。
+

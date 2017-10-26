@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e793309d25bb81eb4b65129f65276ab9ea9091ff
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   执行所有除 error 语句的语句。  
   
  在前两个情况下， **SQLExecute**和**SQLExecDirect**返回 SQL_ERROR。 在后一种的两个情况下，它们可能返回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS，具体取决于实现。 在所有情况下，进一步错误信息可以检索与**SQLGetDiagField**， **SQLGetDiagRec**，或**SQLError**。 但是的性质和深度此信息是数据源 – 特定。 此外，此信息不太准确地识别错误中的语句。
+

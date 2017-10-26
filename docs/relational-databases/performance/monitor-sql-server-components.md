@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      事件重播使您可以建立捕获数据时的数据库环境的测试副本，然后可以重复捕获的事件，就像最初在真实系统上捕获事件一样。 此功能仅适用于分布式重播实用工具或 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 可以按事件最初发生时的速度重播它们，尽可能快地重播（增加系统的压力），或者尽可能一次重播一步（每个事件发生后对系统进行分析）。 通过在测试环境中分析确切事件，可以防止对生产系统产生有害影响。 有关详细信息，请参阅 [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)。  
   
   
+

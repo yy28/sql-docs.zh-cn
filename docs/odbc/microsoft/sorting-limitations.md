@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f102ccec2b4a7c05ce75394526e39936db09e3fb
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sorting-limitations"></a>排序限制
 GROUP BY 子句、 ORDER BY 子句、 SELECT DISTINCT 语句或外部联接中的排序键的最大长度为 255 个字节;排序行中的所有排序键的最大长度为 65500 字节。
+

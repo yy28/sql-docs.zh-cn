@@ -1,7 +1,7 @@
 ---
 title: "通过使用本机查询 (Analysis Services) 导入数据 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用本机查询导入数据
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 对于表格 1400年模型中，Visual Studio 的 Analysis Services 项目中的新获取数据体验提供巨大的灵活性，可以混合应用程序如何在你的数据导入过程中。 本指南介绍了创建到数据源的连接，然后创建本机 SQL 查询，以便指定数据导入。
 

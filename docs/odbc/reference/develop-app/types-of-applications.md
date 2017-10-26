@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ODBC 应用程序可以进行分类，如下所示：
     -   仅在条件代码内 ODBC 的更高版本中使用的任何新功能。  
   
     -   具有有限的条件的代码来处理行为的更改或已将自己为早期版本的 ODBC 应用程序注册。
+

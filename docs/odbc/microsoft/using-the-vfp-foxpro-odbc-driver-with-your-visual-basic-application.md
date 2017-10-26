@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/09/2017
     ```  
   
 8.  运行该窗体，并使用数据控件从 Visual FoxPro TasTrade 示例数据库的客户 id 字段通过跳过。
+

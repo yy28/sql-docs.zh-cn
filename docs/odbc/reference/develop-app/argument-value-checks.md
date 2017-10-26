@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   列和参数号必须大于 0 或大于或等于 0，具体取决于该函数。 驱动程序必须检查这些基于当前结果集或 SQL 语句的参数值的上限。  
   
 -   长度/指示器参数和数据缓冲区的长度参数必须包含适当的值。 例如，自变量指定中的表名的长度**SQLColumns** (*NameLength3*) 必须是 sql_nts 以或值大于 0;*BufferLength*中**SQLDescribeCol**必须大于或等于 0。 该驱动程序可能还需要检查这些自变量。 例如，它可能会检查*NameLength3*小于或等于数据源中的表名称的最大长度。
+

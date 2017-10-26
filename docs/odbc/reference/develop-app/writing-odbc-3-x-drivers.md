@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/09/2017
  [5] 在某些情况下，驱动程序可能需要支持此函数。 有关详细信息，请参阅此函数的引用页。  
   
  [6] 上，驱动程序可以选择支持**SQLGetFunctions**如果的一套驱动程序支持的函数会连接到连接发生变化。
+

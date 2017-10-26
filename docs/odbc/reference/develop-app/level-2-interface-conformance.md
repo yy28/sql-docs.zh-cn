@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |209|设置为 SQL_CONCUR_READ_ONLY 以外的至少一个值的 SQL_ATTR_CONCURRENCY 语句属性。|  
 |210|超时登录请求和 SQL 查询 （SQL_ATTR_LOGIN_TIMEOUT 和 SQL_ATTR_QUERY_TIMEOUT） 的能力。|  
 |211|能够更改默认隔离级别;能够执行"可序列化"的隔离级别的事务。|
+

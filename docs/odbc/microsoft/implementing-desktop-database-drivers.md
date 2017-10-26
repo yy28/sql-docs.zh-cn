@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
 -   [桌面数据库驱动程序兼容性](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [桌面数据库驱动程序的性能问题](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
+

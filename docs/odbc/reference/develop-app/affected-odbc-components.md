@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  符合标准的应用程序 — 例如，应用程序已根据 Open Group 或 ISO CLI 标准写入-保证适用于 ODBC 3*.x*驱动程序通过 ODBC 3*.x*驱动程序管理器。 假定应用程序使用的功能是驱动程序中可用。 另外，还假设，符合标准的应用程序具有带 ODBC 3 中编译*.x*标头文件。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **错误处理**DBMS 向应用程序通过 SQL 通信区域，或 SQLCA 报告运行时错误。 在前面的代码示例中，第一个嵌入的 SQL 语句是包括 SQLCA。 这将告知预编译器在程序中包括 SQLCA 结构。 每当程序将处理返回的 DBMS 错误，这是必需的。 WHENEVER...GOTO 语句告知预编译器生成的分支到特定的标签错误发生的错误处理代码。  
   
 -   **单独选择**用于返回数据的语句是单独的 SELECT 语句; 也就是说，它返回单个行的数据。 因此，此代码示例不声明或不使用游标。
+

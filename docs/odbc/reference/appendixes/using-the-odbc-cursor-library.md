@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  若要从一个未绑定列，则应用程序调用中检索数据**SQLSetPos**以将光标置于所需的行。 然后，它调用**SQLGetData**检索的数据。  
   
  若要确定已从数据源中检索的行数，在应用程序调用**SQLRowCount**。
+

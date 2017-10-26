@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678f2f8f720823ef5658ba7ee1e1391bbebc1c50
@@ -46,3 +47,4 @@ ODBC 为 LIKE 子句使用转义序列。 此转义序列的语法如下所示�
  *ODBC esc 终止符*:: =}  
   
  若要确定驱动程序是否支持 LIKE 转义序列，应用程序可以调用**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 信息类型。
+

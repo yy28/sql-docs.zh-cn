@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ ODBC 基础 SQL 数据类型从到 ODBC 类型标识符的映射是近似值，�
 -   ODBC 未定义的在中使用的数据类型名称**CREATE TABLE**和**ALTER TABLE**语句。 相反，应用程序应使用在 TYPE_NAME 列中返回的结果集返回的名称**SQLGetTypeInfo**。 这样做的原因是，尽管大部分 SQL 不会跨 Dbms 的很多不同，数据类型名称有很大差异。 而不强制驱动程序以分析 SQL 语句和将标准数据类型名称替换为特定于 DBMS 的数据类型名称下 ODBC 需要应用程序首先使用特定于 DBMS 的名称。  
   
  请注意， **SQLGetTypeInfo**不一定描述所有应用程序可能会遇到的数据类型。 具体而言，结果集可能包含不直接支持的数据源的数据类型。 例如，由 ODBC 定义中由目录函数返回的结果集的列的数据类型和数据源可能不支持这些数据类型。 若要确定结果集中的数据类型的特征，应用程序调用**SQLColAttribute**。
+

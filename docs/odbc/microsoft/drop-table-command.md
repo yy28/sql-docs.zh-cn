@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f346bc3701df00cdddf5e6af77f500017570bd51
@@ -55,3 +56,4 @@ DROP TABLE TableName | FileName | ?
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE*基本表名称*|数据库 （.dbc 文件）|删除表*TableName*删除|  
 ||可用的表 （.dbf 文件） 的目录|擦除*dbfName*<br /><br /> 擦除*cdxName*<br /><br /> 擦除*fptName*|
+

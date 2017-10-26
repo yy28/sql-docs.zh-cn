@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{间隔"223.16"第二个}<br /><br /> {间隔"223"年}|由于前导精度是未指定，则默认为 2，这是太小，无法容纳指定的文本。|  
 |{间隔"22.1234567"第二个}|秒精度未指定，因此它默认为 6。 的文本具有小数点后的七个数字。|  
 |{间隔"163-13' YEAR(3) 到月份}<br /><br /> {间隔"163 65 到小时 DAY(3)}<br /><br /> {为分钟的间隔"163 62:39"DAY(3)}<br /><br /> {间隔"163 12:125:59.163"DAY(3) 到 SECOND(3)}<br /><br /> {间隔"163:144"为分钟 HOUR(3)}<br /><br /> {间隔"163:567:234.163"到 SECOND(4) HOUR(3)}<br /><br /> {间隔"163:591.163"到 SECOND(5) MINUTE(3)}|尾随的字段不会不符合的公历的规则。|
+

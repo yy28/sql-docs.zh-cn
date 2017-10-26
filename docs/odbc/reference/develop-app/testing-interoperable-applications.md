@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d36c443cb6bc4a189006a3d63e90deead3f11e66
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  高度可互操作的应用程序针对的所有驱动程序不能实际进行测试。 大多数应用程序开发人员可以执行操作的最佳是其完全针对少量的驱动程序和几个 cursorily 进行测试。 经过测试的驱动程序应为应用程序的市场; 中最受欢迎的 Dbms 包括最常用的驱动程序如果市场涵盖所有 Dbms，应测试台式机和服务器 Dbms 的驱动程序。  
   
  测试 ODBC 应用程序中的问题之一是涉及的组件数： 应用程序本身、 驱动程序管理器、 驱动程序、 DBMS，并可能是网络软件或网关。 应用程序可以更加轻松地通过发布通过 ODBC 函数返回的错误消息来跟踪错误**SQLGetDiagField**和**SQLGetDiagRec**。 这些消息标识的制造商和在其中发生错误的组件。 有关详细信息，请参阅[诊断](../../../odbc/reference/develop-app/diagnostics.md)。
+

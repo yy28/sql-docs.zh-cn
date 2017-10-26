@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|返回一个 32 位整数，指定在结果集中的当前行位置。 仅限; 获取无法设置。|  
 |SQL_ROWSET_SIZE|不能超过 4,294,967,296 行;但是，你必须在计算机来处理你的请求中具有足够的虚拟内存。|  
 |SQL_USE_BOOKMARKS|支持将 SQL_USE_BOOKMARKS 设置为 SQL_UB_ON，公开固定长度书签。|
+

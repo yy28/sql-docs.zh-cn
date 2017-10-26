@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**空间 (** *计数* **)** (ODBC 2.0)|返回一个包含的字符字符串*计数*空格。|  
 |**子字符串 (** *string_exp*，*启动*，长度**)** (ODBC 1.0)|返回派生自的字符字符串*string_exp*中由指定的字符位置开始，*启动*为*长度*字符。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|返回一个字符串等于，在*string_exp*，所有小写字符转换为大写形式。|
+

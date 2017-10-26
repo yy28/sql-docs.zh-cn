@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  应用程序在运行时构造 SQL 语句可以向用户提供更大的灵活性。 可以从前面的示例，甚至不支持诸如常见操作看到**其中**子句， **ORDER BY**子句或联接，在运行时构造 SQL 语句是极大地更复杂比硬编码的语句。 此外，测试此类应用程序会产生问题的因为它们可以构造任意数目的 SQL 语句。  
   
  在运行时构造 SQL 语句的潜在缺点是它需要更多的时间比使用硬编码语句构造的语句。 幸运的是，这很少是一个问题。 此类应用程序往往是一个用户界面大量和应用程序所花费的时间构造 SQL 语句是通常不大与用户所输入的条件花费的时间进行比较。
+

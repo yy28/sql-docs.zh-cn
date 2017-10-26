@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  例如，假设应用程序分配 50 个字节的二进制数据缓冲区。 如果该驱动程序有 10 个字节的二进制数据返回，则在缓冲区中返回这些 10 个字节。 数据的字节长度为 10，且缓冲区的字节长度为 50。 如果该驱动程序有 60 字节的二进制数据返回，它将截断到 50 个字节的数据，返回缓冲区中的这些字节并返回 SQL_SUCCESS_WITH_INFO。 数据的字节长度为 60 （之前截断的长度），且缓冲区的字节长度仍为 50。  
   
  为将被截断每一列中创建诊断记录。 因为它所需时间，为要创建这些记录的驱动程序和应用程序处理它们，截断会降低性能。 通常情况下，应用程序可以避免此问题通过分配足够大的缓冲区，但这可能不可能使用长数据时。 数据截断时，应用程序可以有时分配较大的缓冲区并重新提取数据;不能在所有情况下同时运行。 如果在使用调用获取数据时发生的截断**SQLGetData**，应用程序无需调用**SQLGetData**已返回的数据; 有关详细信息，请参阅[入门Long 数据](../../../odbc/reference/develop-app/getting-long-data.md)。
+

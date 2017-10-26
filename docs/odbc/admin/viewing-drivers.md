@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d79cc609be21c1fb2ad5cfc9a8b9ce6a335248f7
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="viewing-drivers"></a>查看驱动程序
 若要配置数据源，你必须具有至少一个驱动程序在系统上安装。 **驱动程序**选项卡中**ODBC 数据源管理器**对话框框中列出的所有驱动程序安装在计算机上，包括名称、 版本、 公司、 文件名和文件的每个驱动程序的创建日期。 必须使用驱动程序的安装程序以添加或删除驱动程序从你的系统。 有关修改驱动程序的详细信息，请参阅[管理数据源](../../odbc/admin/managing-data-sources.md)。
+

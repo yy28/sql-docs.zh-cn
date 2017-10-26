@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba6688643c16eef8b6f20ef8f7bb469941b6edb
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  将属性设置为 0 将禁用新的功能;将其设置为 1 启用了新功能。  
   
  此外可以使用 SQLSetConnectAttr() 设置该属性。 属性值为 65501，并设置为 SQLINTEGER 值为 1 或 0，如前面的表中所述。 则可以调用它之前或之后连接，但它是更好的做法由于在其中的驱动程序进程缓存连接属性和连接字符串的顺序连接后调用它。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  应用程序可以在任何时间，并已准备或执行的语句游标位于结果集已关闭后检索结果集元数据。 很少的应用程序需要准备该语句后，在执行之前，结果集元数据。 如果可能，应等待应用程序以检索元数据之前之后执行该语句，因为某些数据源不能返回元数据已准备的语句和模拟驱动程序中的此功能通常是慢速的过程。 例如，该驱动程序可能会生成一个零行结果集，通过替换**其中**子句**选择**带有子句的语句**WHERE 1 = 2**和执行生成的语句。  
   
  元数据通常是相当昂贵从数据源中检索的。 因此，驱动程序应缓存任何元数据，它们从服务器检索和保存为只要设置游标位于结果上处于打开状态。 此外，应用程序应请求仅它们绝对需要的元数据。
+

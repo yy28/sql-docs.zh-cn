@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ ODBC 桌面数据库驱动程序用于 Microsoft Jet 数据库引擎、 可安�
 |所使用的每个桌面数据库驱动程序文件|ODBC 驱动程序文件|  
 |所使用的每个桌面数据库驱动程序的 Microsoft Jet 文件|Microsoft Jet 文件|  
 |提供 Microsoft Jet 和其他数据库管理系统之间的数据访问权限的 IISAM 驱动程序文件|可安装 ISAM 驱动程序文件|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d0c98afd9479e1a7de4f7a14834909962f274f1e
@@ -39,3 +40,4 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="remarks"></a>注释  
  设置块大小的默认值为 64。 若要创建该文件后，为不同的值重置块大小，将其设置为新值，然后使用复制以创建新表。 新的表具有指定的块大小。
+

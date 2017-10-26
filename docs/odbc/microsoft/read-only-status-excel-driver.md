@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  当应用程序通过 Microsoft Excel 驱动程序的 Microsoft Excel 数据上执行的另存为命令时，应用程序应创建一个新表和插入数据以保存到新表。 插入导致追加到表。 可以对表不执行任何其他操作，直到关闭并重新打开。 一旦关闭表，可以不执行任何后续插入，因为表然后是只读的表。  
   
  可以更新值时使用 Microsoft Excel 驱动程序，但无法从基于 Microsoft Excel 电子表格，因此不正式支持的 Microsoft Excel 驱动程序考虑更新表中删除行。
+

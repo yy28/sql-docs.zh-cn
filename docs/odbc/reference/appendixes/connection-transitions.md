@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ ODBC 连接具有以下状态。
 |C0<br /><br /> 没有 Env。|C1<br /><br /> 未分配|C2<br /><br /> 分配|C3<br /><br /> 需要数据|C4<br /><br /> 已连接|C5<br /><br /> 。|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
+

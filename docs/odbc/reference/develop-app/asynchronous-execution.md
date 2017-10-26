@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b384bcb3ceee587edc89c6e5023a7caa4c882ed2
@@ -30,3 +31,4 @@ ODBC 支持对语句和连接操作的异步操作。 有两种方法来确定�
   
 ## <a name="see-also"></a>另请参阅  
  [执行语句 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+

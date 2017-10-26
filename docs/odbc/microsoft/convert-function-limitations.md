@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbe4a62045da6fd493c24fec81b863f504b73750
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 类型转换失败会导致受影响的列设置为 NULL。  
   
  日期和时间戳都不数据类型可以转换为另一个数据类型 （或本身） 中，通过 CONVERT 函数。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c08fab3b713e1f1a57d7a81f53ed29b1678893cd
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  本主题讨论使用**SQLSetEnvAttr**具有的是光标库函数。 有关常规信息**SQLSetEnvAttr**，请参阅[SQLSetEnvAttr 函数](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
  游标库不受 SQL_ATTR_ODBC_VERSION 环境属性，而不考虑应用程序版本或驱动程序版本的设置。
+

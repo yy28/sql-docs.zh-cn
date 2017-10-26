@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  如果与 ODBC 2 一起使用的是光标库。*x*驱动程序，偏移量 （按定义 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性） 的绑定不使用时**SQLFetch**调用。  
   
  应用程序加载的是光标库后，不能调用**SQLFetch**提取书签列。 游标库将传递到调用**SQLFetch**通过为该驱动程序，但该函数调用，启用书签和绑定书签列都会被截获由游标库。
+

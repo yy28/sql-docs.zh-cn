@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE 将返回可搜索的列中的字节，计数器、 双精度型、 单、 long 类型的值和短数据类型。 （如功能可以通过将值转换为使用 ODBC 规范的转换函数，然后执行比较的字符。）  
   
  当使用 Microsoft Excel 驱动程序时，返回 TYPE_NAME 列中返回的 ODBC 类型名称**SQLGetTypeInfo**。
+

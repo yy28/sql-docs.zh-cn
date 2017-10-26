@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  一个 ODBC 组件以外驱动程序管理器：  
   
 -   必须设置 SQLSTATE 基于本机错误。 对于基于文件的驱动程序和基于 DBMS 的驱动程序不使用网关，该驱动程序必须设置 SQLSTATE。 对于基于 DBMS 的驱动程序使用网关，驱动程序或支持 ODBC 的网关可以设置 SQLSTATE。
+

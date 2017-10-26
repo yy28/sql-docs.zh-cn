@@ -23,6 +23,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
@@ -88,3 +89,4 @@ EXEC sp_create_plan_guide
 >  TEMPLATE 计划指南使语句与在仅包含单个语句的批处理中提交的查询匹配。 多语句批处理中的语句通过 TEMPLATE 计划指南进行匹配是不合格的。  
   
   
+

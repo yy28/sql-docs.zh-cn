@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData**仅当满足以下条件时，才可以调用：**选择**语句生成的结果集;**选择**语句不包含联接， **联合**子句，或**GROUP BY**子句; 和使用一个别名或表达式选择列表中的任何列并未绑定与**SQLBindCol**。  
   
 -   游标库的驱动程序支持只有一个活动语句，如果提取的结果集在执行之前的其余部分**选择**语句和调用**SQLGetData**。
+

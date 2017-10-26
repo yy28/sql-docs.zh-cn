@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  字符数据必须由驱动程序以 null 结尾之前它将返回到应用程序，即使它已被截断。 Null 终止字符不包括在返回的字节长度，但需要绑定的缓冲区中的空间。 例如，假设应用程序使用字符串组成的 ASCII 字符集中的字符数据、 驱动程序包含 50 个字符的数据，若要返回，且应用程序的缓冲区是长度为 25 个字节。 在应用程序的缓冲区，该驱动程序返回 null 终止字符后跟第一次 24 个字符。 在长度/指示器缓冲区，该命令返回的字节长度为 50。  
   
  应用程序可以限制的结果集通过执行语句，以创建结果设置之前设置 SQL_ATTR_MAX_ROWS 语句属性中的行数。 例如，应用程序用于设置格式的报表中的预览模式需要仅数据不足，无法显示报表的第一页。 通过限制结果集的大小，这类功能将运行得更快。 此语句属性并不用于减少网络流量，并且可能不支持的所有驱动程序。
+

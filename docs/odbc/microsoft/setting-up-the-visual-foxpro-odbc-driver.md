@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   删除所有以前安装的组件。  
   
  你的系统上安装驱动程序后，安装程序将识别安装的驱动程序组件，并显示其他对话框，您可以更改驱动程序的配置。
+

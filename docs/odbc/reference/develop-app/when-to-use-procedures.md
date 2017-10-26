@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
  第二个缺点是，许多 Dbms 不支持过程。 同样，这是最有可能是垂直设计为使用大量的 Dbms 运行的应用程序的问题。 若要确定是否支持过程，应用程序调用**SQLGetInfo** SQL_PROCEDURES 选项。  
   
  第三个缺点，这是特别适用于应用程序开发环境，是 ODBC 未定义用于创建过程标准语法。 也就是说，尽管应用程序可以 interoperably 调用过程，但它们无法 interoperably 创建它们。
+

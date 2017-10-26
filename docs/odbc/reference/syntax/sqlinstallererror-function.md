@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  若要检索为函数调用的多个错误，应用程序调用**SQLInstallerError**多次。  
   
  当没有其他信息， **SQLInstallerError**返回 SQL_NO_DATA， *pfErrorCode*自变量是不确定， *pcbErrorMsg*参数等于 0，并*lpszErrorMsg*自变量包含单个 null 终止字符 (除非*cbErrorMsgMax*参数是否等于 0)。
+

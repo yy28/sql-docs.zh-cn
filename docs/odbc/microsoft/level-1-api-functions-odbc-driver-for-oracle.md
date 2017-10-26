@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|检索列的最佳唯一标识表中的行集。|  
 |**SQLStatistics**|检索有关单个表的索引或标记名称，与该表关联的统计信息列表。 驱动程序返回信息作为结果集。|  
 |**SQLTables**|返回由参数中指定的表名称的列表**SQLTables**语句。 如果未不指定任何参数，则返回当前的数据源中存储的表名称。 驱动程序返回信息作为结果集。<br /><br /> 枚举类型调用不会收到远程视图或本地的参数化的视图的结果集条目。 但是，对的调用**SQLTables**使用唯一表名称说明符将找到匹配项对于此类视图中，如果存在，具有该名称; 这样，要检查之前创建的新表的名称冲突的 API。<br /><br /> 公共同义词返回 TABLE_OWNER 值为""。<br /><br /> 视图归 SYS 或系统被标识为系统视图。|
+

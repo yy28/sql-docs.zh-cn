@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a4d5d0b2feb0a09aafeb441c6b33260e4f0738b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |MAXSCANROWS|要设置基于现有数据的列的数据类型时扫描的行数。<br /><br /> 可以为要扫描的行输入一个介于 1 到 16。 默认值为 8;如果设置为 0，将扫描所有行。 （限制以外的数字将返回错误。）<br /><br /> 这将设置为相同的选项**扫描的行数**在安装程序对话框中。|  
 |READONLY|若要使文件成为只读的;如果为 FALSE，以使文件不是只读的。<br /><br /> 这将设置为相同的选项**Read Only**在安装程序对话框中。|  
 |线程|要使用的引擎的后台线程数。 对于 Microsoft Access 驱动程序，此值默认为 3，但可以更改。 为 dBASE，MicrosoftExceldriver 此值为 3，而不能更改。<br /><br /> 这将设置为相同的选项**线程**在安装程序对话框中。|
+

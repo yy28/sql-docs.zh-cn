@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   如果该驱动程序支持只有一个活动语句，光标库提取的结果的其余部分设置，然后 refetches 从其缓存的当前行集之前执行的定位更新或删除语句。 如果应用程序然后调用一个返回结果集中的元数据函数 (例如， **SQLNumResultCols**或**SQLDescribeCol**)，游标库返回错误。  
   
 -   如果定位的更新或删除语句执行包含每次执行更新时不自动更新的时间戳列的表的列，则所有后续定位的 update 或 delete 语句将失败的时间戳列是否绑定。 这是因为搜索更新或删除的是光标库创建的语句将不会准确地识别要更新的行。 时间戳列的搜索语句中的值将不匹配的时间戳列自动更新后的值。
+

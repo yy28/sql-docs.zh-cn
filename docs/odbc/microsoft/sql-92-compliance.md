@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
@@ -49,3 +50,4 @@ ODBC 桌面数据库驱动程序和基础的 Microsoft Jet 引擎不符合 SQL 9
   
 > [!NOTE]  
 >  桌面数据库驱动程序支持标准的 ANSI 语法不支持对于 %（百分比） _ （下划线） * （星号） 和？ （问号）。
+

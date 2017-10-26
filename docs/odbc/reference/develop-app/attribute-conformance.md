@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  [2] 的第 2 级接口一致性的工具，该驱动程序必须支持 SQL_CONCUR_READ_ONLY 和至少一个其他值。  
   
  [3] 的第 1 级接口一致性的工具，该驱动程序必须支持 SQL_CURSOR_FORWARD_ONLY 和至少一个其他值。 为级别 2 接口一致性，驱动程序必须支持本文档中定义的所有值。
+

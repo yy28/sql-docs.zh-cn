@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x*驱动程序必须支持所有 ODBC 3*.x* *FieldIdentifiers*列出**SQLColAttribute**。  
   
  ODBC 3*.x*驱动程序必须支持 SQL_COLUMN_PRECISION 和 SQL_DESC_PRECISION、 SQL_COLUMN_SCALE 和 SQL_DESC_SCALE，和 SQL_COLUMN_LENGTH 和 SQL_DESC_LENGTH。 这些值会不同，因为精度、 小数位数和长度定义以不同方式在 ODBC 3*.x* ODBC 2 中相比。*x*。 有关详细信息，请参阅[列大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附录 d： 数据类型中。
+

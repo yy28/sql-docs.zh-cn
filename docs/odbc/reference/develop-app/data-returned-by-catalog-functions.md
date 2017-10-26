@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  目录函数基于在其中连接将进行基于用户名和密码，并仅为其用户具有权限的数据返回的类似 SQL 的授权模型。 密码保护的单个文件，不适合此模型，是驱动程序定义的。  
   
  目录函数返回结果集几乎从未可更新，并且应用程序不应期望能够通过更改中这些结果集的数据更改数据库的结构。
+

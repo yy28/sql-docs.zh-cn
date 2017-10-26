@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42da1bad914342a2f2973a63dc35f6e53f8b6c93
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  接下来，应用程序分配连接句柄与**SQLAllocHandle**并连接到数据源**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**。 有关详细信息，请参阅[分配连接处理](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)和[建立的连接](../../../odbc/reference/develop-app/establishing-a-connection.md)。  
   
  然后，应用程序设置的任何连接属性，例如是否手动提交的事务。 有关详细信息，请参阅[连接属性](../../../odbc/reference/develop-app/connection-attributes.md)。
+

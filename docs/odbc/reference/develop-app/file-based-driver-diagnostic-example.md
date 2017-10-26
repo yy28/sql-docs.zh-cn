@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 309bea8c888b7fd057e942dd348125c9b420afb7
@@ -47,3 +48,4 @@ Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"
 ```  
   
  因为此错误与数据源相关的该驱动程序会添加数据源 ([dBASE]) 的文件格式作为前缀到诊断消息中。 因为该驱动程序也是 interfaced 与数据源的组件，它为供应商 ([Microsoft]) 和驱动程序 ([ODBC dBASE 驱动程序]) 中添加前缀。
+

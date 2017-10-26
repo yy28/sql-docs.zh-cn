@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  设置在行集中的光标位置。 你可以使用**SQLSetPos**与[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)行集合中定位光标所在位置到特定行后从未绑定的列中检索行。  
   
  有关详细信息，请参阅[SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)中*ODBC 程序员参考*。
+

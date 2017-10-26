@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
@@ -58,3 +59,4 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>注释  
  如果日期、 时间和时间戳数据类型支持的数据源，支持的日期、 时间和时间戳文本的转义序列。 应用程序应调用**SQLGetTypeInfo**来确定是否支持这些数据类型。
+

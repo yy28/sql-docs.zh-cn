@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  应用程序，特别是基于屏幕的应用程序在其中在用户滚动的结果集和更新或删除行，必须小心地选择对解决此问题的代码。  
   
  若要确定数据源在提交或回滚事务时的行为，应用程序调用**SQLGetInfo**使用 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 选项。
+

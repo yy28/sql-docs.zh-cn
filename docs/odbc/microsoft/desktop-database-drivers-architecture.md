@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll 实现 ODBC 函数基于 Microsoft Jet API。 没有直接映射之间 ODBC 和 Microsoft Jet 函数，但是所示。 许多因素，如的游标模型和 SQL 映射，防止直接关联的函数。  
   
  Microsoft Jet 引擎和 ODBC 驱动程序管理器之间驻留的 ODBC 驱动程序。 为应用程序调用某些 ODBC 函数处理由驱动程序管理器中且不会传递给该驱动程序。 有关这些函数中，Microsoft Jet 永远看不见函数调用，因为它没有直接连接到的驱动程序管理器。
+

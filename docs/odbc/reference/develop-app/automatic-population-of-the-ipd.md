@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  支持并启用自动填充程序，该驱动程序将填充的字段的 IPD 包含参数标记的 SQL 语句已准备好通过调用之后**SQLPrepare**。 应用程序可以通过调用来检索此信息**SQLGetDescField**或**SQLGetDescRec**，或**SQLDescribeParam**。 若要将绑定参数的最适合应用程序缓冲区，或若要为其指定的数据转换，应用程序可以使用信息。  
   
  自动填充的 IPD 可能会产生对性能产生负面影响。 应用程序可以将其关闭由正在 SQL_ATTR_ENABLE_AUTO_IPD 语句属性重置为 SQL_FALSE （默认值）。
+

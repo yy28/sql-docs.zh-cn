@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07a0c8299fc4063e72353025465309c426a3a251
@@ -35,3 +36,4 @@ SELECT * FROM "Accounts Payable"
  标识符引起来的原因是要解析，因此该语句。 例如，如果 Accounts Payable 不带引号在上一条语句中，分析器将假定没有两个表，帐户和帐款，并返回它们不是一样的语法错误，以逗号分隔。 引号字符的标识符是特定于驱动程序，并且使用中的 SQL_IDENTIFIER_QUOTE_CHAR 选项中检索**SQLGetInfo**。 使用中的 SQL_SPECIAL_CHARACTERS 和 SQL_KEYWORDS 选项检索的特殊字符和的关键字的列表**SQLGetInfo**。  
   
  为安全起见，可互操作的应用程序通常 quote 除伪列，如行 ID 列在 Oracle 中的所有标识符。 **SQLSpecialColumns**返回伪列的列表。 此外，如果有特殊字符的对象名称中的显示位置的应用程序特定限制，最好是可互操作应用程序不是在这些位置中使用特殊字符。
+

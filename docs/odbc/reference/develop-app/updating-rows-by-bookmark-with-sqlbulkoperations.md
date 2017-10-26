@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 6.  调用**SQLBulkOperations**与*操作*参数设置为 SQL_UPDATE_BY_BOOKMARK。  
   
  对于发送到数据源作为更新每一行，应用程序缓冲区应具有有效的行数据。 如果应用程序缓冲区已填写的提取，如果已保留的行状态数组，并且行的状态值是 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW，无效的数据可能无意中发送到数据源中。
+

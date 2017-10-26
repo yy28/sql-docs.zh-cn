@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [级别 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)一致性提供核心级别接口功能也为其他功能，例如事务。  
   
 -   [级别 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)一致性提供级别 1 功能也为其他功能，例如书签、 动态参数和 ODBC 函数的异步执行。
+

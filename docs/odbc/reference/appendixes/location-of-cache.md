@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  如果从只读共享或光盘 （如 Microsoft 基础类库示例），运行应用程序时，游标库中 Microsoft® WindowsNT®/windows2000 本机尝试在当前目录上的临时文件中缓存数据 SQLSTATEHY000 （常规错误-无法创建文件缓冲区） 将返回。
+

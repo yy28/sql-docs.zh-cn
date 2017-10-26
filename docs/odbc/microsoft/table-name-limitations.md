@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  当使用 Microsoft Access 驱动程序时，表名称被限制为 64 个字符。  
   
  当使用 dBASE，Microsoft Excel 3.0 或 4.0，Paradox 或文本驱动程序时，特殊 MS-DOS 关键字 CON、 AUX、 LPT1，和 LPT2 应不用作表名。
+

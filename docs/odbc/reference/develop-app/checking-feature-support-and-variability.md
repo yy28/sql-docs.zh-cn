@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5528f451adf12d12fe5cdb1c51f5c5d0053c9145
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  应用程序可以确定是否通过调用支持一个语句或连接特性**SQLSetStmtAttr**或**SQLSetConnectAttr**与该属性。 如果该函数将返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，则支持该属性;如果它返回 SQL_ERROR 和 SQLSTATE HYC00 （可选未实现的功能），不支持属性。  
   
  应用程序还可以确定一个有限的信息，然后再连接到该驱动程序通过调用**SQLDrivers**。
+

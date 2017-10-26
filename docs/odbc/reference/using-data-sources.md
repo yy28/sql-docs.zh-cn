@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb3e6adb6f563e49429c2e04239ce3170d96b9a4
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  更高版本，应用程序调用驱动程序管理器，并将其传递机数据源的名称或包含文件数据源的文件的路径。 当传递机数据源名称，驱动程序管理器搜索系统以查找数据源使用的驱动程序。 然后，将加载驱动程序，并将数据源名称传递给它。 该驱动程序使用的数据源名称查找它需要连接到数据源的信息。 最后，它会连接到数据源，通常提示输入用户 ID 和密码，这通常不会存储的用户。  
   
  当传递文件数据源时，驱动程序管理器中打开的文件，并加载指定的驱动程序。 如果文件还包含连接字符串，它可以将此传递到该驱动程序。 该驱动程序连接字符串中使用的信息，连接到数据源。 如果不传递任何连接字符串，该驱动程序通常会提示用户输入所需的信息。
+

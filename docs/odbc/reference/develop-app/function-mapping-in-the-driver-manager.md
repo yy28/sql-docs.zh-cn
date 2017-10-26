@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  驱动程序管理器是已启用 Unicode 的内部。 因此，最佳的性能被获取的 Unicode 应用程序使用 Unicode 驱动程序，因为驱动程序管理器只是将 Unicode 函数，通过传递到驱动程序。 在 ANSI 应用程序使用 ANSI 驱动程序，驱动程序管理器必须将字符串转换从 ansi 标准转换为 Unicode 时处理某些函数中，如**SQLDriverConnect**。 在处理该函数之后, 驱动程序管理器必须然后将 Unicode 字符串转换为 ANSI 向 ANSI 驱动程序发送函数之前。  
   
  应用程序不应修改或读取及其绑定的参数缓冲区，该驱动程序返回 SQL_STILL_EXECUTING 或 SQL_NEED_DATA 时。 驱动程序管理器使绑定到 ANSI，直到该驱动程序返回 SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 的缓冲区。 多线程应用程序不应访问另一个线程在其执行 SQL 语句的任何绑定的参数值。 驱动程序管理器将数据从 Unicode 转换为 ANSI"就地"和另一个线程可能会看到这些缓冲区中的 ANSI 数据，而该驱动程序仍在处理 SQL 语句。 将 Unicode 数据绑定到 ANSI 驱动程序的应用程序必须绑定到相同的地址的两个不同的列。
+

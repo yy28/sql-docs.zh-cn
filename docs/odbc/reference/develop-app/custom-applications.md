@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  因此，自定义应用程序需要很少或没有互操作性。 应用程序开发人员可以为每个 DBMS 和直接向这些驱动程序的代码选择单独的驱动程序。 应用程序可以安全地包含特定于驱动程序的代码，来利用这些驱动程序的功能，并甚至可能会使对本机数据库 API 调用，以使用不支持 ODBC 的功能。  
   
  大多数自定义应用程序的主要互操作性问题是目标 Dbms 将在将来更改。 如果是这样，可以通过开始编写互操作性更代码简化此过程。 但是，此类更改的 Dbms 很少见，通常需要大量的工作。 因此，开发人员自定义应用程序的极少数情况下选择以提高互操作性，代价是牺牲这样的功能。它们通常选择在更改 Dbms 时重新编码该功能。
+

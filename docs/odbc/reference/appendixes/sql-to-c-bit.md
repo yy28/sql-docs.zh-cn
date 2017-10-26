@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5432e5f4a47dde5b3ad64059a8f2eb1de9ba1691
@@ -44,3 +45,4 @@ ODBC SQL 数据类型是位标识符：
  [b] 这是对应的 C 数据类型的大小。  
   
  当位 SQL 数据转换为字符 C 数据时，可能的值将为"0"和"1"。
+

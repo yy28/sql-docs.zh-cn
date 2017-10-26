@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f29b6e27866b5893c6875ee5c438d7c13a996e9
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTypeInfo** -若要检索的列表支持的数据类型  
   
  描述符的 SQL_DESC_CONCISE_TYPE 字段中存储数据类型的标识符。 描述符函数**SQLSetDescField**和**SQLSetDescRec**可以与相应的类型用于执行前面的列表中列出的任务。 有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。
+

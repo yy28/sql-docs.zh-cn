@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  用户选择数据源后，驱动程序管理器将构造一个连接字符串，指定该数据源，并将其传递到该驱动程序。 然后，该驱动程序可以提示用户输入它需要的任何其他信息。  
   
  由控制在其下驱动程序会提示用户的条件*DriverCompletion*标志; 有用于始终给出提示，如有必要，提示或永远不会要求的选项。 此标志的完整说明，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
+

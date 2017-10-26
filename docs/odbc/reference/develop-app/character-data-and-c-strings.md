@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  尽管应用程序和驱动程序通常使用 C 字符串 （以 null 结尾的字符数组） 来保存字符数据，但是没有无需执行此操作。 在 C 中，字符数据可以也被视为字符 （不带 null 终止） 的数组和长度/指示器缓冲区中单独传递其字节长度。  
   
  因为非 – null 结尾的数组中可容纳字符数据，而且其字节长度单独传递，则可以在字符数据中嵌入的空字符。 但是，ODBC 函数的行为在这种情况下是不确定，并且它是特定于驱动程序是否驱动程序处理这种情况正确。 因此，可互操作的应用程序应始终处理可以包含嵌入的 null 字符作为二进制数据的字符数据。
+

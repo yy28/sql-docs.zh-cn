@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
      新的数据源名称显示在 ODBC 数据源管理器对话框中的用户 DSN 选项卡中的用户数据源列表。  
   
 6.  单击确定以保存新的数据源并关闭 ODBC 数据源管理器对话框。
+

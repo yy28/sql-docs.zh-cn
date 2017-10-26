@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
@@ -63,3 +64,4 @@ ODBC 定义了两个集的数据类型： SQL 数据类型和 C 数据类型。 
 -   [将 C 中的数据转换为 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  ODBC 数据类型的说明，请参阅[ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。
+

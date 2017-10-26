@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ATTR_ROW_STATUS_PTR 语句属性指定行状态数组可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 或 SQL_ROW_ERROR 任何行。 对于，它返回 SQL_ROW_UPDATED、 SQL_ROW_DELETED 或 SQL_ROW_ADDED 更新、 删除或插入的光标，假设光标可以检测此类更改的行。  
   
  静态游标是通常实现通过锁定结果集中的行或使副本，或快照，结果的设置。 尽管锁定的行是相对较为容易，但它具有显著减少并发的缺点。 制作的副本允许更大的并发和允许光标能够跟踪其自己的更新、 删除和插入的对副本进行修改。 但是，副本是开销更大到进行数据更改其他人可以从基础数据发生偏离。
+

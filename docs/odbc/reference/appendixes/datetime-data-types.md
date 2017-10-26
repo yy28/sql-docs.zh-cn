@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ ODBC 3 中*.x*、 标识符的日期、 时间和时间戳 SQL 数据类型已�
  所有数据类型对的调用中的都请求时**SQLGetTypeInfo**，由该函数返回的结果集将包含 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP ODBC 3 中定义*.x*，和 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP ODBC 2 中定义。*x*。  
   
  由于如何 ODBC 3*.x*驱动程序管理器执行日期、 时间和时间戳数据类型映射，ODBC 3*.x*只能识别驱动程序，需要**#defines**的 91、 92，和有关日期、 时间和时间戳 C 数据类型的 93 进入*TargetType*的自变量**SQLBindCol**和**SQLGetData**或*ValueType*自变量**SQLBindParameter**，并仅需要识别**#defines**的 91，92 和 93、 日期时间、 和时间戳 SQL 数据类型进入*ParameterType*参数**SQLBindParameter**或*DataType*参数**SQLGetTypeInfo**。 有关详细信息，请参阅[Datetime 数据类型更改](../../../odbc/reference/develop-app/datetime-data-type-changes.md)。
+

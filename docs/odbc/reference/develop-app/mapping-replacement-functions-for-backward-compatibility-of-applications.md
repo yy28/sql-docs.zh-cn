@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
@@ -482,3 +483,4 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  当一个 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLSetStmtAttr**将 SQL_ATTR_USE_BOOKMARKS 属性设置为 SQL_UB_VARIABLE，驱动程序管理器将该属性设置在基础 ODBC 2 SQL_UB_ON。*x*驱动程序。
+

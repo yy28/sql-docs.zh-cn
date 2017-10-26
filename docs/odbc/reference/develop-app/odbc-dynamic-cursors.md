@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  此语句将创建第二个结果集，其中第一个行集是原始结果集中的下一步的行集-在此情况下，客户表中的行集。 光标返回到应用程序的下一个行集合。  
   
  有趣的是需要注意这种方式实现的动态游标实际创建多个结果集，这使得它能够检测到原始的结果集的更改。 应用程序永远不会了解这些辅助结果集; 存在它只需显示光标就像是能够检测到对原始结果集的更改。
+

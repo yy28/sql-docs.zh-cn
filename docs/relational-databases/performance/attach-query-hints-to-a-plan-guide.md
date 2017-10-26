@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  此外，您可以指定表提示 INDEX、FORCESCAN 和 FORCESEEK 作为查询提示。 指定为查询提示时，这些提示的行为类似于内联表提示或视图提示。 INDEX 提示强制查询优化器仅使用指定的索引来访问被引用表或视图中的数据。 FORCESEEK 提示强制优化器仅使用索引查找操作来访问被引用表或视图中的数据。 这些提示提供了附加的计划指南功能并允许用户更多地干预使用计划指南的查询的优化。  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**数据库 （)** (ODBC 1.0)|返回与连接句柄对应的数据库的名称。 (数据库的名称，也可以通过调用**SQLGetConnectOption**包含 SQL_CURRENT_QUALIFIER 连接选项。)|  
 |**IFNULL (** *exp*，*值***)** (ODBC 1.0)|如果*exp*为 null，*值*返回。 如果*exp*不为 null， *exp*返回。 可能的数据类型或类型的*值*必须与的数据类型兼容*exp*。|  
 |**用户 （)** (ODBC 1.0)|在 DBMS 中返回的用户名。 (用户名称也是可**SQLGetInfo**通过指定信息类型： SQL_USER_NAME。)这可以是不同的登录名。|
+

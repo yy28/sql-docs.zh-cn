@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   如果 APD SQL_DESC_OCTET_LENGTH_PTR 字段具有 null 值，并且参数是一个字符串，该驱动程序假定字符串是以 null 结尾。 对于输出动态参数，此字段中的 null 值阻止驱动程序中返回长度信息。 （如果 SQL_DESC_TYPE 字段不指示字符串参数，SQL_DESC_OCTET_LENGTH_PTR 字段则忽略。）  
   
  应用程序不得解除分配或放弃用于延迟的字段，它将它们关联与的字段的时间和驱动程序读取或写入它们的时间之间的变量。
+

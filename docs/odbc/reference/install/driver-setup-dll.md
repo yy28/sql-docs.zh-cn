@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**。 提示用户输入转换器名称和选项。 此函数将调用**ConfigTranslator**在转换程序安装程序 DLL。  
   
  驱动程序安装程序 DLL 是由驱动程序开发人员编写的。 也可以是驱动程序的一部分的 DLL 或单独的 DLL。
+

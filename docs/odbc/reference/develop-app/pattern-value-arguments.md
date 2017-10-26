@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2。*x*驱动程序不支持中的搜索模式*CatalogName*中的参数**SQLTables**。 ODBC 3*.x*驱动程序接受此参数中的搜索模式，如果 SQL_ATTR_ ODBC_VERSION 环境属性设置为 SQL_OV_ODBC3; 如果设置为 SQL_OV_ODBC2 不接受此参数中的搜索模式。  
   
  将 null 指针传递给搜索 pattern 参数不限制该自变量; 搜索它是空指针，并且搜索模式 %（任何字符） 是等效的。 但是，长度为零的搜索模式-即，指向长度为零的字符串的有效指针-匹配仅空字符串 ("")。
+

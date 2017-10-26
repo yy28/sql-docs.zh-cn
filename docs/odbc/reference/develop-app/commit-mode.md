@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0b385a95b8b228e00dedcdb8a078b2c9cadb85c
@@ -35,3 +36,4 @@ ODBC 中的事务可以采用两种模式之一： 自动提交模式或手动�
 -   [手动提交模式](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   
 -   [将提交模式设置](../../../odbc/reference/develop-app/setting-the-commit-mode.md)
+

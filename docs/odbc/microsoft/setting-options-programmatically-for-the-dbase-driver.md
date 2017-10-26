@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2760e0b08417121e765582904565461501eb0df6
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |只读|将数据库指定为只读的。|若要动态设置此选项，使用**READONLY**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |选择目录|显示一个对话框，你可以在其中选择包含你想要访问的文件的目录。<br /><br /> 在定义数据源目录时，指定您最常使用的文件所在的目录。 ODBC 驱动程序使用此目录作为默认目录。 将其他文件复制到此目录中，如果经常使用它们。 或者，可以限定在 SELECT 语句以目录名称的文件名称：<br /><br /> 选择\*从 C:\MYDIR\EMP<br /><br /> 或者，你可以通过指定新的默认目录**SQLSetConnectOption** SQL_CURRENT_QUALIFIER 选项的函数。|若要动态设置此选项，使用**DEFAULTDIR**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |显示已删除的行|指定是否可以检索或位于已标记为删除的行。 如果清除，则不会显示已删除的行;如果选中，将被视为已删除的行与非删除行相同。 默认情况下清除此复选框。|若要动态设置此选项，使用**已删除**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|
+
