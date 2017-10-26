@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/25/2017
 
 ---
 
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/27/2017
 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)   
 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
