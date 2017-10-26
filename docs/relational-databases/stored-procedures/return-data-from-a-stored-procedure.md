@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
@@ -111,7 +111,7 @@ GO
     >  关闭状态只有在返回时才有影响。 例如，可以在过程中关闭游标，稍后再打开游标，然后将该游标的结果集返回给调用批处理、过程或触发器。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>cursor 输出参数的示例  
- 在下面的示例中，创建了使用 `@currency`cursor`cursor` 数据类型指定输出参数 **_** 的过程。 然后在批处理中调用该过程。  
+ 下例创建使用 cursor 数据类型指定输出参数 `@currency_cursor` 的过程。 然后在批处理中调用该过程。  
   
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/23/2017
 > 当你使用此方法时，你必须确保你设置的值正确进行 URL 编码。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  
   
   
+

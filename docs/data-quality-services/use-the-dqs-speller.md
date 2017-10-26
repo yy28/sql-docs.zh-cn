@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  DQS 将在 **“值”** 表的 **“值”** 列和 **“更正为”** 列中的值提出建议。 当您在 **“值”** 列中选择一项建议时，值类型设置为 **“错误”**，并且建议复制到 **“更正为”** 列，就像是您手动插入的一样。 如果有现有的更正，它将成为一项建议。 在 **“清理”** 活动的 **“管理和查看结果”** 页中，当您在 **“更正为”** 列中选择一项建议时，DQS 将用所做选择替换当前选择的值，并且当前选择的值将成为一项建议。 在 **“清理”** 活动的 **“管理和查看结果”** 页中，在记录级别（下部网格）中将提供建议。  
   
   
+

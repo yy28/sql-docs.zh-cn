@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  **“域值”** 选项卡中的每个值表都包含一个 DQS_NULL 值。 在值表中，数据源中的 Null 将显示为 SQL_NULL。 您可以将一个或多个 null 等效值设置为 DQS_NULL 的同义词。 这样，所有 Null 和 Null 等效值都将处理为 DQS_NULL。  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/09/2017
  在创建数据质量项目后，将向您提供一个向导，可用于执行所选活动：清理或匹配。 有关清理和匹配活动的详细信息，请参阅[数据清理](../data-quality-services/data-cleansing.md)和[数据匹配](../data-quality-services/data-matching.md)。  
   
   
+

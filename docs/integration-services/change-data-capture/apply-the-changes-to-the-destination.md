@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
@@ -109,3 +110,4 @@ ms.lasthandoff: 08/03/2017
  在用于检索变更数据的 Transact-SQL 语句中，调用 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函数时可以将 all with merge 指定为 row_filter_option 参数的值。 当此变更数据捕获函数不需要执行用于区分插入操作和更新操作的额外处理时，它的操作效率会大大提高。 将 all with merge 指定为参数值时，对于删除操作来说，变更数据的 **__$operation** 值为 1，而对于插入操作或更新操作引起的变更来说，该值为 5。 有关用于检索变更数据的 Transact-SQL 函数的详细信息，请参阅[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)。使用 all with merge 参数值检索变更之后，可以应用删除操作，并将剩余行输出到临时表或中间临时表中。 然后，在下游执行 SQL 任务中，可以使用一个 MERGE 语句将所有插入操作或更新操作从中间临时表应用到目标中。  
   
   
+

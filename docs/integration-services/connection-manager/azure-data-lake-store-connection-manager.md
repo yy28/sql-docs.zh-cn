@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
@@ -65,3 +66,4 @@ Azure 数据湖存储连接管理器是一个组件的[用于 Azure 的 SQL Serv
 你可以看到你在“属性”  窗口中创建的连接管理器的属性。  
   
   
+

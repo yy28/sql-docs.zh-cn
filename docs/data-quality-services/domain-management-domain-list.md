@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  将域导出为 .dqs 文件。 此命令将显示 **“导出到数据文件”** 对话框。 页面顶部菜单栏的 **“导出”** 菜单中提供了此命令，也可通过右键单击域列表窗格来使用此命令。 有关详细信息，请参阅 [将域导出到 .dqs 文件](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
   
+

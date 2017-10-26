@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>指定参数
@@ -137,7 +137,7 @@ GO
   
  若要指定输出参数，必须在 CREATE PROCEDURE 语句的参数定义中指定 OUTPUT 关键字。 当过程退出时，它向调用程序返回输出参数的当前值。 执行过程时，调用程序也必须使用 OUTPUT 关键字，才能将该参数值保存到可以在调用程序中使用的变量中。  
   
- 下面的示例创建了 `Production.usp`_`GetList` 过程，该过程返回价格不超过指定金额的产品的列表。 此示例显示如何使用多个 SELECT 语句和多个 OUTPUT 参数。 使用 OUTPUT 参数，外部过程、批或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以访问在过程执行期间设置的值。  
+ 下例创建 `Production.usp_GetList` 过程，该过程返回价格不超过指定金额的产品的列表。 此示例显示如何使用多个 SELECT 语句和多个 OUTPUT 参数。 使用 OUTPUT 参数，外部过程、批或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以访问在过程执行期间设置的值。  
   
 ```  
 USE AdventureWorks2012;  

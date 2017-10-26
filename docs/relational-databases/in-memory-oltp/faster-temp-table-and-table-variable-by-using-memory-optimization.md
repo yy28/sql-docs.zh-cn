@@ -1,7 +1,7 @@
 ---
 title: "通过使用内存优化获得更快的临时表和表变量 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
@@ -65,6 +65,8 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. 场景：替换全局 tempdb &#x23;&#x23;表  
   
+将全局临时表替换为内存优化的 SCHEMA_ONLY 表非常简单。 最大的改变是在部署时（而不是运行时）创建该表。 由于采用了编译时优化，创建内存优化表会比创建传统表所用时间更长。 创建和删除联机工作负载中的内存优化表不仅会影响工作负载的性能，而且还会影响 AlwaysOn 辅助副本以及数据库恢复的重做性能。
+
 假设有以下全局临时表。  
   
   
@@ -102,13 +104,15 @@ ms.lasthandoff: 07/31/2017
   
   
 1. 一次性创建 **dbo.soGlobalB** 表，其方式与创建任意传统的磁盘表一样。  
-2. 在 Transact-SQL 中删除 **&#x23;&#x23;tempGlobalB** 表的创建。  
+2. 在 Transact-SQL 中删除 **&#x23;&#x23;tempGlobalB** 表的创建。  请务必在部署时（而不是在运行时）创建内存优化表，以避免创建表时附带的编译开销。
 3. 在 T-SQL 中将所有提到的 **&#x23;&#x23;tempGlobalB** 替换为 **dbo.soGlobalB**。  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 场景：替换会话 tempdb &#x23; 表  
   
 替换会话临时表的准备工作包含的 T-SQL 比之前的全局临时表场景要多。 值得庆幸的是额外的 T-SQL 并不意味着需要执行更多操作来完成转换。  
+
+和全局临时表方案一样，最大的改变就是在部署时（而不是运行时）创建表，从而避免编译开销。
   
 假设有以下会话临时表。  
   
@@ -184,7 +188,7 @@ ms.lasthandoff: 07/31/2017
 1. 将 Transact-SQL 语句中对临时表的所有引用替换为新的内存优化表：
     - _旧表名：_&#x23;tempSessionC  
     - _新表名：_ dbo.soSessionC  
-2. 将代码中的 `CREATE TABLE #tempSessionC` 语句替换为 `DELETE FROM dbo.soSessionC`，以确保会话不会公开到由具有同一 session_id 的以前会话插入的表内容。
+2. 将代码中的 `CREATE TABLE #tempSessionC` 语句替换为 `DELETE FROM dbo.soSessionC`，以确保会话不会公开到由具有同一 session_id 的以前会话插入的表内容。 请务必在部署时（而不是在运行时）创建内存优化表，以避免创建表时附带的编译开销。
 3. 从代码中删除 `DROP TABLE #tempSessionC` 语句 – 如果内存大小是一个潜在的忧患，则还可以插入一个 `DELETE FROM dbo.soSessionC` 语句
   
   

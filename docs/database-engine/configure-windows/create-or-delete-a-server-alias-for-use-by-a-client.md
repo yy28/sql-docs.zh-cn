@@ -19,6 +19,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 559cf56887726ec4410165de70ec380b44773e97
@@ -53,3 +54,4 @@ ms.lasthandoff: 08/02/2017
 2.  在“详细信息”窗格中，右键单击要删除的别名，然后单击“删除”。  
   
   
+

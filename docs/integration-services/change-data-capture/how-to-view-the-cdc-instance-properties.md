@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
      此选项卡显示在属性编辑器中定义的高级属性的列表。 有关此选项卡中显示的内容的信息，请参阅 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)。  
   
   
+

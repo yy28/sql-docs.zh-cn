@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC 服务及其子 Oracle CDC 实例只能与作为客户端的源 Oracle 数据库和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例通信。 它们不主动侦听任何网络和其他协议。 Oracle CDC 服务监视 CDC 数据库中是否有配置更改，并且基于更新的配置更新其操作。  
   
   
+
