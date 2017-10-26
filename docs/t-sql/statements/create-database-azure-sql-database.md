@@ -174,17 +174,17 @@ CREATE DATABASE database_name
   
 -   数据库快照  
   
- 有关参数的详细信息和`CREATE DATABASE`语句，请参阅[CREATE DATABASE & #40;SQL Server Transact SQL & #41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ 有关参数的详细信息和`CREATE DATABASE`语句，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="remarks"></a>注释  
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅中的值列表[DATABASEPROPERTYEX & #40;Transact SQL & #41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅中的值列表[DATABASEPROPERTYEX &#40;Transact SQL &#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE 提供限制数据库大小的功能。 如果数据库的大小达到其 MAXSIZE，您将收到错误代码 40544。 如果发生这种情况，您不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，您仍可以读取和删除数据、截断表、删除表和索引以及重新建立索引。 然后，您可以将 MAXSIZE 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。  
   
 > [!IMPORTANT]  
 >  `CREATE DATABASE` 语句必须是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的唯一语句。 
   
- 若要以后更改大小、 版本或服务目标值，使用[ALTER DATABASE & #40;Azure SQL Database & #41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
+ 若要以后更改大小、 版本或服务目标值，使用[ALTER DATABASE &#40;Azure SQL Database &#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
 
 创建数据库期间 CATALOG_COLLATION 参数才可用。 
   
@@ -289,9 +289,9 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
   
 ## <a name="see-also"></a>另请参阅  
 
--  [sys.dm_database_copies & #40;Azure SQL Database & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
+-  [sys.dm_database_copies &#40;Azure SQL Database &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE & #40;Azure SQL Database & #41;](alter-database-azure-sql-database.md)   
+-   [ALTER DATABASE &#40;Azure SQL Database &#41;](alter-database-azure-sql-database.md)   
     
   
 
