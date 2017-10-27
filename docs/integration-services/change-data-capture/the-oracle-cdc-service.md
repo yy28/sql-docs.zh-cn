@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  当使用 Oracle CDC 设计器控制台时，会自动检测到更改。 在使用 SQL 直接更新 Oracle CDC 配置时，应该为 Oracle CDC 服务调用以下过程以便通知配置更改：  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  通过具有使用以下命令自动创建的固定名称 `xdbcdc_asym_key` 的非对称密钥，以加密方式存储日志挖掘密码：  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

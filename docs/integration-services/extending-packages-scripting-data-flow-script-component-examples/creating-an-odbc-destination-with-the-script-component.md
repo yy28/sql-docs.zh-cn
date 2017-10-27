@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  通过在运行以下 TRANSACT-SQL 命令创建的目标表**AdventureWorks**数据库：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

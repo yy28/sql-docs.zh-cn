@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>使用此脚本可以确定问题并且在 SQL Server Management Studio 中复现这些问题  
  CDC 源操作受到在调用 CDC 源之前执行的 CDC 控制任务操作的约束。 CDC 控制任务准备 CDC 状态包变量的值以便包含开始和结束 LSN。 它执行与下面的脚本等效的函数：  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

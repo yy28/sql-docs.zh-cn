@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      例如，Customer 表的 UPDATE 语句可能具有以下语法：  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      例如，Customer 表的 DELETE 语句可能具有以下语法：  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

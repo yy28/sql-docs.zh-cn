@@ -118,7 +118,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  通过运行以下命令，创建的目标表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**数据库：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

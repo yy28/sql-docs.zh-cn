@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>使用 OLE DB Provider for SSIS 创建链接服务器  
  在 SQL Server Management Studio 中，通过运行以下查询来使用 OLE DB Provider for SSIS (SSISOLEDB) 创建链接服务器。  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  在创建视图之前，请在新查询窗口中键入并运行以下查询。 OPENQUERY 是 SQL Server 支持的行集函数。 它使用与链接服务器关联的 OLE DB 提供程序在指定的链接服务器上执行指定的传递查询。 OPENQUERY 可以在查询的 FROM 子句中引用，就好象它是一个表名。 有关详细信息，请参阅 [MSDN 库上的 OPENQUERY 文档](http://msdn.microsoft.com/library/ms188427.aspx) 。  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  通过运行以下查询，在数据库 **TestDB** 中为本演练创建一个视图。  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  通过运行以下查询来测试该视图。  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>OPENQUERY 函数  
  OPENQUERY 函数的语法是：  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

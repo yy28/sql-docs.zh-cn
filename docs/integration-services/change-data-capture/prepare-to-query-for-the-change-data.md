@@ -76,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
     -   如果使用 C# 进行编程，请输入下面的代码行：  
   
-        ```  
+        ```csharp 
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
     -   如果您是使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]进行编程，请输入下面的代码行：  
   
-        ```  
+        ```vb  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
-        ```  
+        ```sql
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  
