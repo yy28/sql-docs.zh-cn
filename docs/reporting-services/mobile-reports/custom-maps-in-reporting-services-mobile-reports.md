@@ -14,14 +14,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: zh-cn
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 移动报表中的自定义地图
 在 SQL Server 移动报表发布服务器中的地图中名为的格式定义*ESRI 形状文件*。  
   
 该格式最初由一家私营公司设计，现在这种半开放格式被广泛应用于大部分 GIS 应用程序。 根据此格式，移动报表发布服务器需要两个文件定义地图提供：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="technical-information"></a>技术信息  
   
 - 官方规范： [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- 维基百科形状文件文章： [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- 维基百科形状文件文章：[http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>创建和编辑地图几何图形  
   

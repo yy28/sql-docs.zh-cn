@@ -20,7 +20,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
 ms.contentlocale: zh-cn
@@ -66,3 +67,4 @@ ms.lasthandoff: 08/09/2017
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,6 +15,7 @@ applies_to:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 26e1da5a720aab965d014cada16f85086e0f70a0
@@ -62,3 +63,4 @@ ms.lasthandoff: 10/20/2017
 有关 SQL Server 自 2017 年 Reporting Services REST API 的信息，请参阅[Reporting Services REST api 开发](../developer/rest-api.md)。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

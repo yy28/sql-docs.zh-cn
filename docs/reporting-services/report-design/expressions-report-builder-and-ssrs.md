@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
 ms.contentlocale: zh-cn
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  默认情况下，表达式作为“简单表达式”  或“复杂表达式” 出现在报表设计图面上。  
   
--   **简单** ：包含对内置集合中单个项（例如，数据集字段、参数或内置字段）的引用的简单表达式。 在设计图面上，简单表达式将出现在括号中。 例如， `[FieldName]` 将对应于基础表达式 `=Fields!FieldName.Value`。 当您创建报表布局并且将项从“报表数据”窗格拖到设计图面时，系统将自动为您创建简单表达式。 有关表示不同内置集合的符号的详细信息，请参阅 [了解简单表达式中的前缀符号](#DisplayText)。  
+-   **简单**：包含对内置集合中单个项（例如，数据集字段、参数或内置字段）的引用的简单表达式。 在设计图面上，简单表达式将出现在括号中。 例如， `[FieldName]` 将对应于基础表达式 `=Fields!FieldName.Value`。 当您创建报表布局并且将项从“报表数据”窗格拖到设计图面时，系统将自动为您创建简单表达式。 有关表示不同内置集合的符号的详细信息，请参阅 [了解简单表达式中的前缀符号](#DisplayText)。  
   
 -   **复杂** ：复杂表达式包含对多个内置引用、运算符和函数调用的引用。 复杂表达式显示为 <\<Expr >> 当表达式值包括多个简单的引用。 若要查看表达式，请将鼠标指针悬停在表达式上并使用工具提示。 若要编辑表达式，请在 **“表达式”** 对话框中打开它。  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 08/09/2017
 |[运算符](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述可用于合并表达式中的引用的运算符。 例如， **&** 运算符用于串联字符串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[内置集合](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)|介绍可在表达式中包含的内置集合，例如 `Fields`、 `Parameters`和 `Variables`。|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[内置报表函数和聚合函数](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|介绍可从表达式中访问的内置函数，例如 `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
-|[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|介绍如何访问内置 CLR 类 <xref:System.Math> 和 <xref:System.Convert>、其他 CLR 类、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库函数或外部程序集中的方法。<br /><br /> 介绍如何访问嵌入在报表中的自定义代码或已编译成自定义程序集并安装在报表客户端和报表服务器上的自定义代码。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何访问的内置的 CLR 类<xref:System.Math>和<xref:System.Convert>，其他 CLR 类，[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]运行时库函数或从外部程序集的方法。<br /><br /> 介绍如何访问嵌入在报表中的自定义代码或已编译成自定义程序集并安装在报表客户端和报表服务器上的自定义代码。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> 验证表达式  
  创建用于特定报表项属性的表达式时，可包含在表达式中的引用取决于该报表项属性可接受的值以及对属性进行求值的作用域。 例如：  

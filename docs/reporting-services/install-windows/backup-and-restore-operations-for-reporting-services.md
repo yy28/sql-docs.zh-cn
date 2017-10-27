@@ -24,7 +24,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: zh-cn
@@ -36,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
   本主题概述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的所有数据文件，并介绍应在何时以及如何备份这些文件。 为报表服务器数据库文件制定备份和还原计划是恢复策略中最重要的一部分。 但是，更全面的恢复策略应包括备份加密密钥、自定义程序集或扩展插件、配置文件，以及报表和模型的源文件。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
   
  备份和还原操作通常用于移动所有或部分 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装：  
   
@@ -46,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [迁移 Reporting Services 安装 &#40;SharePoint 模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [迁移 Reporting Services 安装（SharePoint 模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [迁移 Reporting Services 安装 &#40;本机模式 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [迁移 Reporting Services 安装（本机模式）](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>备份和还原报表服务器数据库  
  由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份 **数据库的方法之一备份** reportserver **和** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 特定于报表服务器数据库的建议包括以下几项：  
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 -   报表服务器和报表管理器 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序的 Web.config  
   
--   Machine.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   针对 的 Machine.config [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>备份数据文件  
  备份在报表设计器和模型设计器中创建和维护的文件。 这些文件包括报表定义 (.rdl) 文件、报表模型 (.smdl) 文件、共享数据源 (.rds) 文件、数据视图 (.dv) 文件、数据源 (.ds) 文件、报表服务器项目 (.rptproj) 文件以及报表解决方案 (.sln) 文件。  
@@ -99,3 +100,4 @@ ms.lasthandoff: 08/09/2017
 [配置和管理加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   具有 CHECK 约束或启用的规则。  
   
- *column_list*  
+*column_list*  
  INTO 子句目标表上列名的可选列表。 它相当于中允许的列列表[插入](../../t-sql/statements/insert-transact-sql.md)语句。  
   
  *scalar_expression*  

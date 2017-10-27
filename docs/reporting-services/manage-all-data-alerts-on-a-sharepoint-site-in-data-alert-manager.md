@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
@@ -65,3 +66,4 @@ SharePoint 警报管理员可以查看由任何站点用户创建的数据警报
 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
 ms.contentlocale: zh-cn
@@ -29,16 +30,17 @@ ms.lasthandoff: 08/09/2017
     
 ## <a name="to-add-a-border-to-a-report"></a>向报表添加边框    
     
-1.  在标题中，任何项目外部标头中右键单击，然后单击**标头属性**。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。    
+1.  在表头中任何项外部的表头中右键单击，然后单击“表头属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、上边框和右边框。    
     
     > [!NOTE]    
-    >  如果报表没有任何标头，你可以添加边框只是报表正文中，或者可以添加标头的**插入**选项卡。    
+    >  如果没有在报表中使用表头，则可以仅围绕表体放置边框，也可以从“插入”选项卡中添加表头。    
     
-2.  右击设计图面上的任何项目外部正文中，单击**正文属性**。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。    
+2.  在设计图面上任何项外部的主体中右键单击，然后单击“主体属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框和右边框。    
     
-3.  在外部页脚中的任何项页脚中右键单击，然后单击**页脚属性**。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。    
+3.  在表尾中任何项外部的表尾中右键单击，然后单击“表尾属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
+

@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   对于共享数据集，您必须具有 ReadPolicy 和 UpdatePolicy 权限。  
   
- 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅[缓存刷新选项 &#40;报表管理器 &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ 缓存刷新计划同时应用于共享数据集和报表。 有关详细信息，请参阅[缓存刷新选项（报表管理器）](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>导致缓存过期的条件  
  以下条件可能导致共享数据集缓存失效。  
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/09/2017
  [管理共享数据集](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

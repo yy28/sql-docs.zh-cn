@@ -21,7 +21,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
 ms.contentlocale: zh-cn
@@ -67,11 +68,11 @@ ms.lasthandoff: 08/09/2017
   
     2.  连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的报表服务器实例。  
   
-    3.  右键单击报表服务器节点，并依次**属性**。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
+    3.  右键单击报表服务器节点，然后单击“属性”。 如果 **“属性”** 选项被禁用，请确认您是在使用管理权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
     4.  单击 **“高级”**。  
   
-    5.  选择 **EnableClientPrinting**中禁用了报表服务器的客户端打印功能。  
+    5.  选择“EnableClientPrinting” 。  
   
     6.  设置为“True”或“False”，然后单击“确定” 。  
   

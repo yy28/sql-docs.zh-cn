@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
@@ -76,3 +77,4 @@ ms.lasthandoff: 10/06/2017
 激活此功能后，可以继续进行服务器集成。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

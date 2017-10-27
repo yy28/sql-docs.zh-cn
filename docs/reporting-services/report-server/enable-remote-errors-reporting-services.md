@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: zh-cn
@@ -69,11 +70,11 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
-1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) 连接到 Management Studio 中的报表服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[连接到 Management Studio 中的报表服务器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
 2.  右键单击报表服务器节点，然后选择“属性”。  
   
-3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅[服务器属性 &#40;高级页 &#41;-Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+3.  单击 **“高级”** 以打开属性页。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[服务器属性（“高级”页）- Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)。  
   
 4.  在 **EnableRemoteErrors**中，选择 **True**。  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  您可以通过编辑报表服务器数据库中的 **ConfigurationInfo** 表将 **EnableRemoteErrors** 设置为 **True**，但是如果报表服务器正在使用中，则应使用 SQL Server Management Studio 或脚本来修改此设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
   
   
+

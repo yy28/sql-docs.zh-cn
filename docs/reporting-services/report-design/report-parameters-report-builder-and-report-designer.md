@@ -22,7 +22,8 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: zh-cn
@@ -55,13 +56,13 @@ ms.lasthandoff: 08/09/2017
   
 -   使用参数可将主报表关联到钻取报表、子报表和链接报表。 设计一组报表时，您可以将各个报表设计为回答某些特定的问题。 每个报表都可以为相关信息提供不同的视图或不同的详细程度。 若要提供一组相关报表，请为目标报表上的相关数据创建参数。  
   
-     有关详细信息，请参阅[钻取报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)，[子报表 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)，和[创建链接的报表](../../reporting-services/reports/create-a-linked-report.md)。  
+     有关详细信息，请参阅[钻取报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)、[子报表（报表生成器和 SSRS）](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)和[创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   为多个用户自定义参数集。 基于报表服务器上的销售报表创建两个链接报表。 一个链接报表使用销售人员的预定义参数值，而第二个链接报表使用销售经理的预定义参数值。 两个报表使用相同的报表定义。  
   
  **更改报表显示**  
   
--   通过 URL 请求向报表服务器发送命令，以自定义报表的呈现。 有关详细信息，请参阅[URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md)和[传递 URL 中的报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
+-   通过 URL 请求向报表服务器发送命令，以自定义报表的呈现。 有关详细信息，请参阅 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md) 和[在 URL 内传递报表参数](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
 -   允许用户指定值以帮助自定义报表的外观。 例如，提供一个布尔参数以指示是否展开或折叠表中所有的嵌套行组。  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 08/09/2017
  报表部件存储于报表服务器上，并且可供他人用于其报表中。 不能通过报表服务器对参数的报表部件进行管理。 可以在报表部件库中搜索参数，并在添加参数后，在报表中配置这些参数。 有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  对于具有相关数据集以及参数的数据区域，参数可以发布为单独的报表部件。 尽管参数作为报表部件列出，但您不能直接向报表添加报表部件参数。 而是应添加报表部件，此时，将从报表部件包含或引用的数据集查询中自动生成任何所需的报表参数。 有关报表部件的详细信息，请参阅[报表部件 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[报表部件在报表设计器 &#40;SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  对于具有相关数据集以及参数的数据区域，参数可以发布为单独的报表部件。 尽管参数作为报表部件列出，但您不能直接向报表添加报表部件参数。 而是应添加报表部件，此时，将从报表部件包含或引用的数据集查询中自动生成任何所需的报表参数。 有关报表部件的详细信息，请参阅[报表部件（报表生成器和 SSRS）](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)和[报表设计器中的报表部件 (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ### <a name="parameter-values"></a>参数值  
  以下是用于在报表中选择参数值的选项。  
@@ -164,7 +165,7 @@ ms.lasthandoff: 08/09/2017
   
  使用数据源的查询设计器来帮助生成参数化查询。  
   
--   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅主题中的特定的外部数据源类型[报表数据集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md). 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
+-   对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，不同的数据源支持不同的参数语法。 支持范围包括在查询中按位置或名称标识的参数。 有关详细信息，请参阅[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md) 中针对特定外部数据源类型的相关主题。 在关系查询设计器中，必须为筛选器选择参数选项，才能创建参数化查询。 有关详细信息，请参阅[关系查询设计器用户界面（报表生成器）](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
 -   对于基于多维数据源（例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase）的查询，可以指定是否创建基于查询设计器中您指定的筛选器的参数。 有关详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)中与数据扩展插件对应的查询设计器主题。  
   
@@ -175,15 +176,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **报表参数属性。** 直接在报表服务器上独立于报表定义更改报表参数值。  
   
--   **缓存的报表。** 若要为报表创建缓存计划，每个参数都必须具有默认值。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
+-   **缓存的报表。** 若要为报表创建缓存计划，每个参数都必须具有默认值。 有关详细信息，请参阅[缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)。  
   
--   **缓存共享数据集。** 若要为共享数据集创建缓存计划，每个参数都必须具有默认值。 有关详细信息，请参阅 [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
+-   **缓存共享数据集。** 若要为共享数据集创建缓存计划，每个参数都必须具有默认值。 有关详细信息，请参阅[缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)。  
   
 -   **链接报表。** 可以使用预设参数值为不同受众创建链接报表以筛选数据。 有关详细信息，请参阅 [创建链接报表](../../reporting-services/reports/create-a-linked-report.md)。  
   
 -   **报表订阅。** 可以指定参数值以筛选数据并通过订阅传递报表。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
--   **URL 访问。** 可以在指向报表的 URL 中指定参数值。 还可以使用 URL 访问运行报表并指定参数值。 有关详细信息，请参阅[URL 访问 &#40;SSRS &#41;](../../reporting-services/url-access-ssrs.md).  
+-   **URL 访问。** 可以在指向报表的 URL 中指定参数值。 还可以使用 URL 访问运行报表并指定参数值。 有关详细信息，请参阅 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)。  
   
  如果重新发布报表定义，通常会保留已发布报表的参数属性。 如果报表定义重新发布为同一报表，并且参数名和数据类型不变，则属性设置将保留不变。 如果添加或删除了报表定义中的参数，或是更改了现有参数的数据类型或名称，则您最好更改已发布报表中的参数属性。  
   

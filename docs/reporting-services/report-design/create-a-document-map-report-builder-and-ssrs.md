@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
 ms.contentlocale: zh-cn
@@ -116,9 +117,10 @@ ms.lasthandoff: 08/09/2017
 4.  将此 URL 粘贴到报表管理器中，然后按 Enter。 将运行报表，并隐藏文档结构图。  
   
 > [!NOTE]  
->  有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  有关下载示例报表的详细信息，请参阅[报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
 >  有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“URL 访问”。  
 
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

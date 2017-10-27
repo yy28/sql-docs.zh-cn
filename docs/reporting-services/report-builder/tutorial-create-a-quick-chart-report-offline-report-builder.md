@@ -19,7 +19,8 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: zh-cn
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  ![报表生成器快速饼图](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "报表生成器快速饼形图")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  不管你是使用 XML 数据或[!INCLUDE[tsql](../../includes/tsql-md.md)]查询，你需要有权访问报表生成器。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 用于完成本教程的两种方法  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  在“选择连接类型”  框中，单击“XML” 。  
   
-8.  单击**凭据**选项卡上，选择**使用当前 Windows 用户。可能是必需的 Kerberos 委派**，然后单击**确定**。  
+8.  单击“**凭据**”选项卡，选择“**使用当前 Windows 用户”。“可能需要 Kerberos 委托**”，然后单击“**确定**”。  
   
 9. 在 **“选择数据源的连接”** 页中，单击 **MyPieChart**，然后单击 **“下一步”**。  
   
@@ -179,7 +180,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  （可选）单击“运行”按钮 (**!**)，查看要用于图表的数据。  
   
-9. 单击“下一步” 。  
+9. 单击 **“下一步”**。  
   
 10. 在 **“选择图表类型”** 页中，单击 **“饼图”**，然后单击 **“下一步”**。  
   
@@ -228,17 +229,18 @@ ms.lasthandoff: 08/09/2017
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步是什么？  
- 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，您需要权限以使用访问数据源，例如数据库、*连接字符串*，这使你实际连接到数据源。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
+ 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，需要拥有通过“连接字符串” （它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
   
  若要通过其他教程，你需要的 SQL Server 凭据的实例的名称能够满足对任何数据库的只读访问权限。 系统管理员也可以为您设置该权限。  
   
  最后，若要将报表保存到报表服务器或与报表服务器集成的 SharePoint 站点，需要具有 URL 和相应权限。 可以直接从您的计算机运行您创建的任何报表，但如果从报表服务器或 SharePoint 站点运行报表，则报表会有更多功能。 您需要有一定权限才能运行您的报表或报表服务器或 SharePoint 站点上发布的其他报表。 请与系统管理员联系以获取访问权限。  
   
- 在入门之前，可能有必要了解一些概念和术语。 请参阅[报表创作概念 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). 而且，在创建第一个报表之前，应当花一些时间进行规划。 这将需要较长时间。 请参阅[规划报表&#40;报表生成器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
+ 在入门之前，可能有必要了解一些概念和术语。 请参阅[报表创作概念&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 而且，在创建第一个报表之前，应当花一些时间进行规划。 这将需要较长时间。 请参阅[规划报表&#40;报表生成器&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 
 [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-更多疑问？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

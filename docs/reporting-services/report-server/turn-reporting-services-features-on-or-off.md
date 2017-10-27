@@ -18,7 +18,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: zh-cn
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Web 门户
   
-在以前版本，您可以通过设置中禁用报表管理器**IsReportManagerEnabled**为 false。 **IsReportManagerEnabled**自 SQL Server 2016 Reporting Services 累积更新 2 起已弃用。 将始终启用 Web 门户。
+在以前版本，您可以通过设置中禁用报表管理器**IsReportManagerEnabled**为 false。 **IsReportManagerEnabled**自 SQL Server 2016 Reporting Services 累积更新 2 起已弃用。 Web 门户将始终启用。
   
 ##  <a name="ReportBuilder"></a> 报表生成器  
   

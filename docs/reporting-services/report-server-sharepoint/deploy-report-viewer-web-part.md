@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 在报表查看器 web 部件已部署和激活之后, 可以将 web 部件添加到 SharePoint 页中。 有关详细信息，请参阅[添加报表查看器 web 部件连接到 SharePoint 页](add-report-viewer-web-part-to-page.md)。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

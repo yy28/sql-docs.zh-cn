@@ -19,7 +19,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: zh-cn
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 
   报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  在发生以下任何事件时，必须还原加密密钥的备份副本：  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  单击**加密密钥**，然后选择**Back Up**。  
+2.  单击“加密密钥”，再单击“备份”。  
   
 3.  键入强密码。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  启动 Reporting Services 配置管理器，然后连接到要配置的报表服务器实例。  
   
-2.  在加密密钥页上，选择**还原**。  
+2.  在“加密密钥”页上，选择“还原”。  
   
 3.  选择包含备份副本的 .snk 文件。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [配置和管理加密密钥 &#40;SSRS 配置管理器 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

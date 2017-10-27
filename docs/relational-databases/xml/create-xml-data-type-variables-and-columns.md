@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
@@ -146,3 +147,4 @@ INSERT INTO T values(1,'<Product />')
 -   您不希望因为表中存在 XML 列而降低表扫描的速度。 无论该列是存储在行内还是行外，都会占用空间。  
   
   
+

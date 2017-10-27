@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
@@ -138,3 +139,4 @@ URL 保留项由前缀、主机名、端口和虚拟目录组成：
 若要创建报表使用 SQL Server Data Tools，[下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

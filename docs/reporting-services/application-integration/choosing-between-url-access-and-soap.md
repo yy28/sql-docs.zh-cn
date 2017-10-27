@@ -13,6 +13,7 @@ ms.topic: reference
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 1d9b4df388cd1d6bb96d88b64bf319f5fd9866e9
@@ -53,3 +54,4 @@ ms.lasthandoff: 10/20/2017
  URL 访问与 Web 服务以提供集成的报告的组合示例，请参阅[SQL Server Reporting Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=177889)。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
 ms.contentlocale: zh-cn
@@ -48,6 +49,7 @@ ms.lasthandoff: 08/09/2017
 4.  若要搜索随后出现的相同值，请单击 **“下一个”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [将报表查看器 Web 部件添加到 Web 页 &#40;Reporting Services SharePoint 集成模式 &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
+
