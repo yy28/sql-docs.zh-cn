@@ -22,6 +22,7 @@ caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d61da5ddef04a1edacf6f5b8bf98bb04b53fa5a
@@ -111,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
+

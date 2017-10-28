@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
@@ -137,3 +138,4 @@ SELECT
  键入 `SELECT`后，即使尚未执行脚本并且 **中尚不存在**，IntelliSense 也会列出 **“PrimaryKeyCol”**、 **“FirstNameCol”** 和 `MyTable` “LastNameCol” `MyTestDB`作为选择列表中的可能元素。  
   
   
+

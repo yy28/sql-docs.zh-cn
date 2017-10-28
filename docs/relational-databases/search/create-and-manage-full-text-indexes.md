@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 33ac4c4c97735b494db016df17405eaff9b848c6
@@ -204,3 +205,4 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 3.  在出现提示时，单击“确定”，确认是否要删除该全文索引。  
   
   
+

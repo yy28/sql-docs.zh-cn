@@ -1,7 +1,7 @@
 ---
 title: "WRITETEXT (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   允许最小日志记录、 交互式更新现有**文本**， **ntext**，或**映像**列。 WRITETEXT 将覆盖受其影响的列中的所有现有数据。 不能用于 WRITETEXT**文本**， **ntext**，和**映像**视图中的列。  
   

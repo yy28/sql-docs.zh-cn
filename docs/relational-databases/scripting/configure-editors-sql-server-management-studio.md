@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2df9024353df34fc5b7860bae2eaa5b633c06b9f
@@ -47,3 +48,4 @@ ms.lasthandoff: 06/22/2017
 |编辑器选项对话框的 F1 帮助页的位置。|[“查询选项”页的 F1 帮助](http://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   
+

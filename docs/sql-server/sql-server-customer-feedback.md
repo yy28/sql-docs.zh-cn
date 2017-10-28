@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
@@ -165,3 +166,4 @@ SSMS 不会收集其自身的故障转储。 与 SSMS 相关的任何故障转�
 可以将服务配置为不发送使用情况数据，如“在服务器上设置注册表子项”部分所述。 但是，执行此操作不会删除服务帐户。 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

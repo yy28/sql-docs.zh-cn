@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 802318d2ff9823b5ca0977083230ce625efdd13e
@@ -36,3 +37,4 @@ ms.lasthandoff: 07/31/2017
 -   在对象资源管理器中，右键单击服务器，然后单击“断开连接”，或者在对象资源管理器工具栏上单击“断开连接”图标。  
   
   
+

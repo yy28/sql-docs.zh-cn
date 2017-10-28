@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8cac116f89d0cf1fde83a00dfd42c02e1fc5e2f0
@@ -21,14 +22,12 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 06/22/2017
 
 ---
-# 为 Nearest Neighbor 查询空间数据
-<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
+# <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
   Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
   
  可以用多种有效查询格式编写 Nearest Neighbor 查询，但是要使 Nearest Neighbor 查询使用空间索引，则必须使用下面的语法。  
   
-## 语法
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>语法  
   
 ```  
 SELECT TOP ( number )  
@@ -56,8 +55,7 @@ SELECT TOP ( number )
   
 ```  
   
-## Nearest Neighbor 查询和空间索引
-<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
+## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Nearest Neighbor 查询和空间索引  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，使用 **TOP** 和 **ORDER BY** 子句对空间数据列执行 Nearest Neighbor 查询。 对于空间列数据类型， **ORDER BY** 子句包含对 `STDistance()` 方法的调用。 **TOP** 子句指示针对该查询要返回的对象数。  
   
  为了使 Nearest Neighbor 查询使用空间索引，必须满足以下要求：  
@@ -81,8 +79,7 @@ SELECT TOP ( number )
   
  建议将新的空间索引分割用于在 Nearest Neighbor 查询中使用的索引。 有关空间索引分割的详细信息，请参阅 [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
-## 示例
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>示例  
  下面的代码示例显示可以使用空间索引的 Nearest Neighbor 查询。 该示例使用 `Person.Address` 数据库中的 `AdventureWorks2012` 表。  
   
 ```tsql  
@@ -97,8 +94,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  在 SpatialLocation 列上创建一个空间索引，以便了解 Nearest Neighbor 查询如何使用空间索引。 有关创建空间索引的详细信息，请参阅 [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)。  
   
-## 示例
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>示例  
  下面的代码示例显示不能使用空间索引的 Nearest Neighbor 查询。  
   
 ```tsql  
@@ -112,8 +108,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  该查询缺少在语法部分中指定的窗体中使用 **的** WHERE `STDistance()` 子句，因此它无法使用空间索引。  
   
-## 另请参阅
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另请参阅  
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
