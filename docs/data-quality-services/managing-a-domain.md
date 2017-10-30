@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  还可以创建复合域，该域包含两个或更多单一域，而每个单一域包含有关共用数据的知识。 有关详细信息，请参阅[管理复合域](../data-quality-services/managing-a-composite-domain.md)。  
   
 ## <a name="domain-properties"></a>域属性  
- 当您创建域时，您具有以下有关如何从源数据填充域以及如何输出域值的选项。 有关详细信息，请参阅 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
+ 当您创建域时，您具有以下有关如何从源数据填充域以及如何输出域值的选项。 有关详细信息，请参阅 [设置域属性](../data-quality-services/set-domain-properties.md)。  
   
--   选择您用来填充域的数据的类型。 有关每个域数据类型的支持的数据类型的信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+-   选择您用来填充域的数据的类型。 有关每个域数据类型的支持的数据类型的信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 -   指定仅从域中输出前导值，而不输出它们的同义词。  
   
