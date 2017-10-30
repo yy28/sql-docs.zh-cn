@@ -57,7 +57,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
--   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)。  
+-   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
      **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。  
   
