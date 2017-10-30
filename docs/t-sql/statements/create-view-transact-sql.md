@@ -94,7 +94,7 @@ AS <select_statement>
   
 ## <a name="arguments"></a>参数
 或 ALTER  
- **适用于**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
+ **适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。   
   
  仅当它已存在，则有条件地更改视图。 
  
