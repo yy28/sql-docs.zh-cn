@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/26/2017
  此视图并不显示当前主体的完整权限视图。 用户还必须检查主体是否为已分配了权限的角色和组的成员。  
   
   
+

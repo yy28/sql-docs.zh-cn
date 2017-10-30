@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 668890ae464deb8dfa029eab38b608fee12af0ca
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/26/2017
 >  如果您对项目具有 READ 权限，则也对与该项目关联的所有包和环境引用具有 READ 权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
+

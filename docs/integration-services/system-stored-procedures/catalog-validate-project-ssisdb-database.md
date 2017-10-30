@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  完全验证确认在验证包含的引用环境中可以找到所有引用的环境变量。 完全验证结果列出了无效的环境引用和在验证中包含的任何引用环境中找不到的引用环境变量。  
   
   
+

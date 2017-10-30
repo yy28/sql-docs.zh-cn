@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
@@ -90,3 +91,4 @@ End WorkThread1
   
  因为提供给组件的缓冲区是可能包含其输入或输出列集合中具有的列多于组件，组件开发人员可以调用<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>方法来查找缓冲区中的列，通过指定其**LineageID**。  
   
+

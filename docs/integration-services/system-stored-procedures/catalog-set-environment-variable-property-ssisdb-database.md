@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 984628f717a46de8965a0d2e9fec3d722de197ad
@@ -84,3 +85,4 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  在这一版本中，仅可设置 `Description` 属性。 `Description` 属性的属性值不能超过 4000 个字符。  
   
   
+

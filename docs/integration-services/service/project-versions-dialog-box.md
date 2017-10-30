@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bdf9a0d6fa3ae9a022b720ff0bac003cd65c00db
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/03/2017
  若要还原项目的以前版本，请在 **“版本”** 表中选择该版本，然后单击 **“还原到所选版本”**。 项目将还原到所选版本，且该版本用 **“版本”** 表的 **“当前”** 列中的复选标记表示。  
   
   
+

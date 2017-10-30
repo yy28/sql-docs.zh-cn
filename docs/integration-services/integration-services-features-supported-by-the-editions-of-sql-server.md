@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的企�
 |字词提取和字词查找转换|是|||||  
 
 <sup>1</sup> by Attunity 的变更数据捕获组件需要 Enterprise edition。 Change Data Capture Service 和 Change Data Capture Designer，但是，不需要 Enterprise edition。 你可以使用设计器和服务的计算机上未安装 SSIS 其中。
+

@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ GO
 有关 SQL Server 代理的详细信息，请参阅[包的 SQL Server 代理作业](../packages/sql-server-agent-jobs-for-packages.md)。
 
 有关 SQL 数据库上的弹性作业的详细信息，请参阅[管理向外扩展的云数据库](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)。
+
