@@ -112,16 +112,16 @@ ms.lasthandoff: 09/27/2017
  有关如何确定报表服务器的当前 RDL 命名空间信息[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，或报表，请参阅[查找报表定义架构版本 &#40;SSRS &#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>升级报表服务器上的报表  
- 当 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表第一次在已升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server、 the report is automatically upgraded to the current report definition namespace supported by the report server. 该报表可能在升级之前已存在于报表服务器上，或该报表可能已通过报表管理器上传，或从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的报表设计器发布到报表服务器。  
+ 当 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表第一次在已升级到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器的报表服务器上运行时，该报表将自动升级到报表服务器支持的当前报表定义命名空间。 该报表可能在升级之前已存在于报表服务器上，或该报表可能已通过报表管理器上传，或从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的报表设计器发布到报表服务器。  
   
  下表列出由报表服务器为报表中特定类型的 CRI 执行的升级操作。  
   
 |CRI 类型|报表服务器升级操作|  
 |--------------|----------------------------------|  
-|第三方 CRI|不执行升级。<br /><br /> 由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器进行处理。|  
+|第三方 CRI|不执行升级。<br /><br /> 由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表处理器来处理。|  
   
 ###  <a name="OpeningaReport"></a> 在报表设计器中使用 CRI 打开报表  
- 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、 the report will be upgraded to the new report definition schema. 根据报表中包含的 CRI，将执行下列操作之一：  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  中使用报表设计器中的 CRI 打开 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表时，报表将升级到新的报表定义架构。 根据报表中包含的 CRI，将执行下列操作之一：  
   
 -   检测到第三方 CRI。 如果安装在报表创作计算机上的 CRI 的版本与新的 RDL 架构不兼容，则设计图面将显示带有红色 X 的文本框。您必须与系统管理员联系，以便从与新的 RDL 架构兼容的第三方供应商那里安装新版本的 CRI。  
   
