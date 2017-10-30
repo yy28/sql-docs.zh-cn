@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 599231a2b064e9b6c1185d3662f81f24cb7245db
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/07/2017
  msdn.com 上的博文 [Troubleshooting Logging Improvement（日志记录故障排除改进）](http://go.microsoft.com/fwlink/p/?LinkId=615377)。  
   
   
+

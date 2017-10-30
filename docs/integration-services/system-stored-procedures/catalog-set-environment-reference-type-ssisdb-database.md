@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  如果指定了相对的引用， *environment_folder_name*不使用参数值，并且环境文件夹名称将自动设置为**NULL**。 如果指定的绝对引用，则必须在提供环境文件夹名称*environment_folder_name*参数。  
   
   
+

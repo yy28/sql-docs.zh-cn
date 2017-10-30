@@ -24,6 +24,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/03/2017
  [开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  讨论如何对自定义数据流源、转换和目标进行编程。  
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 6a6639138b8ce1c737934310dd33c853927fe227
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/07/2017
  [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   
+

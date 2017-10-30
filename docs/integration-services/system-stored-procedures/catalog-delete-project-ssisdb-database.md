@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
@@ -67,3 +68,4 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  对应项目的所有对象和环境引用将与项目一起删除。 但是，直到下次运行操作清除作业之前，将保留项目版本和相关的操作记录。  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23074fc664591411666315036e3493e1b7b26134
@@ -78,3 +79,4 @@ catalog.restore_project [ @folder_name = ] folder_name
 >  在还原项目后，环境引用可能不再有效。  
   
   
+

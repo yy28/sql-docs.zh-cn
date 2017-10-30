@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7686512a05d243f1802d1dd5b0d27bd777210161
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/03/2017
 4.  展开 **SSISDB** 节点以显示一个或多个文件夹的列表。 每个文件夹包含 **“项目”** 文件夹中的一个或多个项目，而每个项目包含 **“包”** 文件夹中的一个或多个包。  
   
   
+

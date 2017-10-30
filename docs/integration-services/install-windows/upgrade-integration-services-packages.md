@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  在未安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的计算机上，可能不能升级或运行显式引用 ADODB.dll 的“脚本任务”和“脚本组件”脚本。 为了升级这些“脚本任务”或“脚本组件”脚本，建议你删除对 ADODB.dll 的依赖关系。  Ado.Net 是建议用于托管代码（如 VB 和 C# 脚本）的替代项。  
   
   
+

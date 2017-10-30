@@ -21,6 +21,7 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
@@ -119,3 +120,4 @@ ms.lasthandoff: 09/26/2017
 |**“结果”** 窗格|在您单击工具栏上的 **“运行”** 时显示查询的结果。| 
 
   
+

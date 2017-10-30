@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: bb522a011c1fc2e94e5b47a5e20cdad8b121c562
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/07/2017
  [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   
+

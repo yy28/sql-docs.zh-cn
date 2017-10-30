@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d2e74c467cc0f94d15bdd4a42a300a842012ecd5
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  选择此选项可使用存储在环境中的由项目或包引用的变量值。 若要向项目或包添加环境引用，请使用 **“配置”** 对话框。 有关详细信息，请参阅 [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md)。  
   
   
+

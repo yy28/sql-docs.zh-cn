@@ -17,6 +17,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3f836aa3e13623a42a3f2e8fe0d3907b45bde850
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/26/2017
  用户只可查看其自己的权限以及他们作为成员的角色的权限。  
   
   
+

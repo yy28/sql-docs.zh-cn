@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ GO
 
 ## <a name="run-package-in-sql-agent-job"></a>在 SQL 代理作业中运行包
 在 Sql 代理作业中，你可以选择一个步骤的作业以运行 SSIS 包。 若要运行包中向外扩展，你可以利用更高版本的默认执行模式。 设置默认执行模式为"横向扩展"后, 将在向外扩展中运行 Sql 代理作业中的包。
+

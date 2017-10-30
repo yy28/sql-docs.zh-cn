@@ -17,6 +17,7 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
@@ -88,3 +89,4 @@ ms.lasthandoff: 09/26/2017
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
+

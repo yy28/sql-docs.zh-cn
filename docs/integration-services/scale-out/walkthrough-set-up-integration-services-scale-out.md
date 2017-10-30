@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
 ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
@@ -156,3 +157,4 @@ GO
 ```
 ## <a name="next-steps"></a>后续步骤
 已完成 Scale Out 功能的设置。 你现在可以在向外扩展运行包。有关详细信息，请参阅[在 Integration Services (SSIS) Scale Out 中执行包](run-packages-in-integration-services-ssis-scale-out.md)。
+

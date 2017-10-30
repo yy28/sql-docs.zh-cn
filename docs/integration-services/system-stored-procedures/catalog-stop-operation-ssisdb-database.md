@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
@@ -64,3 +65,4 @@ catalog.stop_operation [ @operation_id = ] operation_id
  一次只能有一个用户应停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的操作。 如果多个用户试图停止操作，则存储过程在第一次尝试时将返回成功（值 `0`），但后续尝试将引发错误。  
   
   
+
