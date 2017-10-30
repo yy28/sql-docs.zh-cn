@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
@@ -84,7 +85,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>使用 Transact-SQL 查询分析 XML 验证输出  
  如果 XML 验证输出中包含大量错误，你可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中加载输出。 然后可以使用 T-SQL 语言的所有功能（包括 WHERE、GROUP BY、ORDER BY，JOIN 等）对错误列表进行分析。  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     
@@ -127,3 +128,4 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
  [XML 任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   
+

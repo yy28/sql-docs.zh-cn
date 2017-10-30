@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 45bb604f0226ac05eab0fd99bdbef41704cc8de8
@@ -43,9 +44,9 @@ ms.lasthandoff: 09/09/2017
   
  **更新***表名称*  
   
- **设置***列标识符* ** = ** {*表达式*&#124;**NULL**}  
+ **设置***列标识符*  **=**  {*表达式*&#124;**NULL**}  
   
- [**，** *列标识符* ** = ** {*表达式*&#124;**NULL**}]...  
+ [**，** *列标识符*  **=**  {*表达式*&#124;**NULL**}]...  
   
  **WHERE CURRENT OF** *游标名称*  
   
@@ -155,3 +156,4 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmtCust);  
 ```
+

@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
@@ -149,3 +150,4 @@ PowerBI ReportServer 应启用从 PowerBI 可视化效果的数据的导出。 �
 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

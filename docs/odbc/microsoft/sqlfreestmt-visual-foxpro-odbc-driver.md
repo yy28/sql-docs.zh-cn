@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  停止与特定关联的处理*hstmt*，关闭任何打开的游标与关联*hstmt*、 放弃挂起的结果，并根据需要释放与该语句关联的所有资源句柄。  
   
  有关详细信息，请参阅[SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)中*ODBC 程序员参考*。
+

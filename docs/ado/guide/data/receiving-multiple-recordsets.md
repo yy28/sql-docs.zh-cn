@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ab72906b1f36e22bba58b58ca7917b3399ebc458
@@ -38,3 +39,4 @@ SELECT ProductID, ProductName, UnitPrice
  你可以使用**Recordset.NextRecordset**方法来枚举两个对象。  
   
  有关详细信息，请参阅[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)。
+

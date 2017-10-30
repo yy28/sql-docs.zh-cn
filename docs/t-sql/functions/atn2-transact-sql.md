@@ -23,11 +23,12 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5070ec59ddd73d68167835a0c20dc4879d5b3b48
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 3c68b65c2bde2d8b4c5cd8f34452563b433c6a29
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
@@ -50,24 +51,6 @@ ATN2 ( float_expression , float_expression )
 **float**
   
 ## <a name="examples"></a>示例  
-以下示例计算指定的 `ATN2` 向量和 `x` 向量的 `y`。
-  
-```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The ATN2 of the angle is: 0.265345                         
-(1 row(s) affected)  
-```  
-  
-## <a name="examples"></a>示例：
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
 以下示例计算指定的 `ATN2` 向量和 `x` 向量的 `y`。
   
 ```sql

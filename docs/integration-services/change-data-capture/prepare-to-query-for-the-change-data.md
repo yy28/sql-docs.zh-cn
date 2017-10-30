@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
     -   如果使用 C# 进行编程，请输入下面的代码行：  
   
-        ```  
+        ```csharp 
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -101,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
     -   如果您是使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]进行编程，请输入下面的代码行：  
   
-        ```  
+        ```vb  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -149,7 +150,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
-        ```  
+        ```sql
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  
@@ -205,3 +206,4 @@ ms.lasthandoff: 08/03/2017
  **下一个主题：**[创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613ec65d838a525251b6682cca477c5c8d24a162
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  如果应用程序调用**SQLGetData**为了在 SQL_C_NUMERIC 结构返回的数据，使用了默认 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段。 如果默认值不是可接受的应用程序必须调用**SQLSetDescRec**或**SQLSetDescField**以设置字段，然后调用**SQLGetData**与*TargetType*的 SQL_ARD_TYPE 描述符字段中使用的值。  
   
  当**SQLPutData**是调用的调用使用 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 记录的字段的描述符对应于数据在执行参数或列中，这是对调用的 APD 字段**SQLExecute**或**SQLExecDirect**，或调用的 ARD 字段**SQLBulkOperations**或**SQLSetPos**。
+

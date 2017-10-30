@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff05f946dee8f6034d04c5d719ada475255ba643
@@ -36,3 +37,4 @@ SELECT CharCol, BinaryCol, IntegerCol FROM MyTable
  对于某些数据类型的文本需要特殊的前缀和后缀。 在前面的示例中，字符文本 (ABC) 要求单引号 （'） 作为前缀和后缀，二进制文本 (FFFF) 需要的字符 0x 作为前缀，整数文本 (10) 并不要求前缀或后缀。  
   
  对于除日期、 时间和时间戳的所有数据类型，可互操作的应用程序应使用在中创建的结果集的 LITERAL_PREFIX 和 LITERAL_SUFFIX 列中返回的值**SQLGetTypeInfo**。 对于日期、 时间、 时间戳，和日期时间间隔文本中，可互操作的应用程序应使用在上一节中讨论的转义序列。
+

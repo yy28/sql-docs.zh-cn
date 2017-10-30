@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **指定非 null 长度的二进制 C 数据的缓冲区。** 游标库分配中其缓存才长度缓冲区*StrLen_or_IndPtr*中的参数**SQLBindCol**为非 null。 当*TargetType*自变量是 SQL_C_BINARY，光标库需要要构造的二进制数据的长度**其中**子句从数据。 如果没有长度缓冲区 SQL_C_BINARY 列和应用程序调用**SQLGetData**或尝试执行的定位的更新或删除语句，光标库返回 SQL_ERROR 和 SQLSTATE SL014 （定位发出请求，并不是所有的列计数字段已缓冲处理）。  
   
 -   **指定非 null 长度缓冲区为 null 的列。** 游标库分配中其缓存才长度缓冲区*StrLen_or_IndPtr*中的参数**SQLBindCol**为非 null。 因为 SQL_NULL_DATA 存储长度缓冲区中，光标库假定没有长度对于指定缓冲区任何列是不可为 null。 如果可以为 null 的列指定没有长度列，则光标库构造**其中**使用列的数据值的子句。 此子句将无法正确标识行。
+

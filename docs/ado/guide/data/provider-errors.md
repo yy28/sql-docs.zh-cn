@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  **错误**与事件相关的错误发生时，也会使用对象。 你可以确定是否有错误发生的进程中通过检查引发 ADO 事件**错误**对象作为事件参数传递。  
   
  如果成功，结束中引发了事件的操作*adStatus*的事件处理程序的参数将设置为*adStatusOK*。 另一方面，如果引发事件的操作失败， *adStatus*参数设置为*adStatusErrorsOccurred*。 在这种情况下， *pError*参数将包含**错误**描述错误的对象。
+

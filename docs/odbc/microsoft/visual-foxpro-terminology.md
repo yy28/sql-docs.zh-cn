@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro，在记录存储在一个表。 表的每一行代表一记录，并且表的列表示记录的字段。 每个 Visual FoxPro 表都存储在其自己的文件扩展名.dbf。 Visual FoxPro 表可以与数据库相关联。  
   
  FoxPro 版本 2。*x*表不与数据库相关联。
+

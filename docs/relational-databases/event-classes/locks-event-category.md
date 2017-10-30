@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d1e11870107c27084efc54d0c9901f5f1be0f1a
@@ -46,3 +47,4 @@ ms.lasthandoff: 06/22/2017
 |[Lock:Timeout 事件类](../../relational-databases/event-classes/lock-timeout-event-class.md)|由于另一个事务持有所需资源的阻塞锁而使锁请求无法完成时，跟踪该锁请求。|  
   
   
+

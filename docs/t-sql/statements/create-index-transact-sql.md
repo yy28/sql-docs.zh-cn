@@ -57,6 +57,7 @@ caps.latest.revision: 223
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ce92f7f55f82a7245818cbe669da76900f76be89
@@ -481,7 +482,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 -   如果基础表包含 LOB 数据类型的聚集的索引：**映像**， **ntext**，**文本**，和空间类型。  
   
--   **varchar （max)**和**varbinary （max)**列不能为索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 并在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，当表包含**varchar （max)**或**varbinary （max)**列，包含其他列的聚集索引可以是生成或重新生成使用**联机**选项。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允许**联机**选项时基表包含**varchar （max)**或**varbinary （max)**列。  
+-   **varchar （max)**和**varbinary （max)**列不能为索引的一部分。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) 并在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，当表包含**varchar （max)**或**varbinary （max)**列，包含其他列的聚集索引可以是生成或重新生成使用**联机**选项。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]不允许**联机**选项时基表包含**varchar （max)**或**varbinary （max)**列。  
   
  有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   

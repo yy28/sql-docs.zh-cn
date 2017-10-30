@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   对的调用中**SQLDriverConnect**其中*InConnectionString*或者指定**DSN**= 默认值或指定与**DSN**关键字未包含在系统信息的数据源。  
   
  它是驱动程序定义的指定的默认数据源的方式。 这可能涉及到的管理操作，并可能依赖于用户。
+

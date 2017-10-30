@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -68,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 |\<数量 >|数字 [...数字]|  
 |\<新 exp >|新\<字段类型 > [(\<数 > [，\<数 >])]|  
 |\<字段类型 >|OLE DB 或 ADO 数据类型。|  
-|\<字符串 >|unicode char [unicode char。..]|  
+|\<字符串 >|unicode char [unicode char...]|  
 |\<表达式 >|Visual Basic 应用程序表达式其操作数都是同一行中的其他非计算列。|  
   
 ## <a name="see-also"></a>另请参阅  
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/09/2017
  [在常规的形状命令](../../../ado/guide/data/shape-commands-in-general.md)   
  [形状 COMPUTE 子句](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>消息  
  驱动程序安装程序例程可以发送短信，向应用程序中以 null 结尾的字符串*lpszMsg*缓冲区。 消息将被截断为*cbMsgMax*通过的 null 终止字符减去**ConfigDriver**函数是否大于或等于*cbMsgMax*字符。
+

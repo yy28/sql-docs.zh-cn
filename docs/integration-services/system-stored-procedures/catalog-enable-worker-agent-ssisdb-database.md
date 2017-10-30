@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b348939327efbacbb612e28c4c30fbb2d7cc0a17
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent （SSISDB 数据库）
@@ -28,15 +28,16 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>语法
 
-```tsql
-enable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>参数
-[ @WorkerAgentId =] *WorkerAgentId*的横向扩展辅助进程的辅助角色代理 id。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] *WorkerAgentId*辅助代理 ID 的横向扩展辅助。 *WorkerAgentId*是**uniqueidentifier**。
 
 ## <a name="example"></a>示例
 此示例将在 MachineA 上启用 Scale Out Worker。
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   成员资格**sysadmin**服务器角色 
 
 ## <a name="errors-and-warnings"></a>错误和警告
-如果辅助角色的代理 ID 不是有效，存储的过程会返回错误。
+如果辅助角色的代理 ID 不是有效的则存储的过程将返回错误。
 

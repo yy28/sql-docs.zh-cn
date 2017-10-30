@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 05cf8dde95111a9f5b530b37fd9a60356f4b77bf
@@ -37,3 +38,4 @@ SQLCloseCursor(hstmt);
 >  若要关闭游标，应用程序应调用**SQLCloseCursor**，而不**SQLCancel**。  
   
  游标保持打开状态直到被显式关闭，但当提交或回滚事务，在这种情况下某些数据源时关闭游标。 具体而言，结果结束设置，当**SQLFetch**返回 SQL_NO_DATA，不会关闭游标。 必须显式关闭甚至游标空结果集 （语句成功执行但其没有返回任何行时创建的结果集）。
+

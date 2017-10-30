@@ -16,11 +16,12 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 6edc4a6d0a4a72e8cec739b78419ce8ce3b4f6cc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
@@ -37,7 +38,7 @@ ms.lasthandoff: 06/22/2017
  还可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)来配置更改跟踪。  
   
  **保持期**  
- 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”的值为 **True** 时，才会删除数据。  
+ 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”的值为 True 时，才会删除数据。  
   
  默认值为 2。  
   

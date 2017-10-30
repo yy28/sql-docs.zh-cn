@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 54581e6bf4aceebc50a752ee460458671e8047bd
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  由于该驱动程序处理发送到 Oracle 服务器的 SQL 语句的方法，Oracle 内部返回以下错误消息:"ORA 00964： 表名称不是在从列表中。"
+

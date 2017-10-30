@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67bad57e201d10c5eb29aafb19fa9f513c43b172
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  szErrorMsg ="[Microsoft] [适用于 Oracle 的 ODBC 驱动程序] 语法错误或访问冲突"  
   
  对 Oracle OCI 函数 Odessp() 的调用在此方案中无法正常工作，但为实现默认参数是必需的。 基础的表权限被修改后，必须再次运行之前重新编译存储的过程。
+

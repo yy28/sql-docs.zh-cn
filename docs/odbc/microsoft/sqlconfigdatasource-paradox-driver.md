@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|密码。<br /><br /> 这是一个可选的关键字，将永远不会写入到文件由驱动程序。 对的调用中使用**SQLDriverConnect**针对密码保护 Paradox 文件。 每次打开表，所用的密码才有效。 如果没有密码传递连接字符串中，为该表不建立任何密码。 如果表具有不同的密码，多个不在同一会话中中, 打开，也可以将表联接。|  
 |READONLY|若要使文件成为只读的;如果为 FALSE，以使文件不是只读的。<br /><br /> 这将设置为相同的选项**Read Only**在安装程序对话框中。|  
 |线程|要使用的引擎的后台线程数。 此值为 3，并且不能更改。<br /><br /> 这将设置为相同的选项**线程**在安装程序对话框中。|
+

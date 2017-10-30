@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  请注意， **oRs.Open**采用连接字符串 (*sConn*)，代替了**连接**对象 (*oConn*)，作为其的值**ActiveConnection**参数。 也通过设置强制客户端游标类型**CursorLocation**属性**记录集**对象。 同样，相比之下与**HelloData**示例。
+

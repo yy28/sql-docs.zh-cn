@@ -32,11 +32,12 @@ caps.latest.revision: 73
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15ed174d3f16a70f63973c586a15759afad72565
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
@@ -270,57 +271,6 @@ GO
 ```  
   
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. 使用局部变量提供消息文本  
- 以下代码示例显示如何使用局部变量为 `RAISERROR` 语句提供消息文本。  
-  
-```  
-DECLARE @StringVariable NVARCHAR(50);  
-SET @StringVariable = N'<\<%7.3s>>';  
-  
-RAISERROR (@StringVariable, -- Message text.  
-           10, -- Severity,  
-           1, -- State,  
-           N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <<    abc>>.  
-GO  
-```  
-  
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-returning-error-information-from-a-catch-block"></a>D. 从 CATCH 块返回错误消息  
- 以下代码示例显示如何在 `RAISERROR` 块中使用 `TRY` 使执行跳至关联的 `CATCH` 块中。 它还显示如何使用 `RAISERROR` 返回有关调用 `CATCH` 块的错误的信息。  
-  
-> [!NOTE]  
->  RAISERROR 仅从 1 到 18 生成错误状态。 由于 PDW 引擎可能引发错误状态 0，我们建议你检查 ERROR_STATE 然后再将它作为值传递到 RAISERROR 的状态参数返回的错误状态。  
-  
-```  
-BEGIN TRY  
-    -- RAISERROR with severity 11-18 will cause execution to   
-    -- jump to the CATCH block.  
-    RAISERROR ('Error raised in TRY block.', -- Message text.  
-               16, -- Severity.  
-               1 -- State.  
-               );  
-END TRY  
-BEGIN CATCH  
-    DECLARE @ErrorMessage NVARCHAR(4000);  
-    DECLARE @ErrorSeverity INT;  
-    DECLARE @ErrorState INT;  
-  
-    SET @ErrorMessage = ERROR_MESSAGE();  
-    SET @ErrorSeverity = ERROR_SEVERITY();  
-    SET @ErrorState = ERROR_STATE();  
-  
-    -- Use RAISERROR inside the CATCH block to return error  
-    -- information about the original error that caused  
-    -- execution to jump to the CATCH block.  
-    RAISERROR (@ErrorMessage, -- Message text.  
-               @ErrorSeverity, -- Severity.  
-               @ErrorState -- State.  
-               );  
-END CATCH;  
-```  
-  
-### <a name="e-using-a-local-variable-to-supply-the-message-text"></a>E. 使用局部变量提供消息文本  
  以下代码示例显示如何使用局部变量为 `RAISERROR` 语句提供消息文本。  
   
 ```  

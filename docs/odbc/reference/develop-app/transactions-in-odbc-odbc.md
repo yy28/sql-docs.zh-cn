@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b3bc3d656d9083d4bcfc47365f294233bedc581
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [提交和回滚的事务](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)  
   
 -   [对游标和已准备的语句的事务的影响](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)
+

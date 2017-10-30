@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  游标库错误地返回 SQLSTATE 34000 （无效的临时表名称），如果游标名称无效定位的 update 或 delete 语句中传递中*InStatementText*参数**SQLNativeSql**. **SQLNativeSql**不是要返回语法错误，仅在语句准备或执行时返回。
+

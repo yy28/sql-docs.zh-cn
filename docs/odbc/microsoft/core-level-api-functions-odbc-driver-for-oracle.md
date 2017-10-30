@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|将游标名称相关联与活动语句句柄， *hstmt*。|  
 |**SQLSetParam**|替换为 SQLBindParameter ODBC 2 中。*x*。|  
 |**SQLTransact**|请求提交或回滚操作中，为对所有语句句柄 (hstmts) 与连接关联的所有活动操作或与环境句柄，关联的所有连接*henv*。 如果提交失败时在手动模式下，则事务会保持活动状态，则你可以选择回滚事务，或重试提交操作。 如果在自动事务模式下，提交操作失败，事务将自动回滚;事务不能为非活动状态。|
+

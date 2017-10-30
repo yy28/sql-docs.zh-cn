@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|返回的平方根*float_exp*。|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|返回的正切值*float_exp*，其中*float_exp*是以弧度表示的角度。|  
 |**截断 (** *numeric_exp*， *integer_exp***)** (ODBC 2.0)|返回*numeric_exp*截断为*integer_exp*放置小数点右侧。 如果*integer_exp*为负， *numeric_exp*截断为 &#124;*integer_exp*&#124; 小数点左侧的位数。|
+

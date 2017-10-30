@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
@@ -70,3 +71,4 @@ SQL Server Reporting Services SharePoint 中，启用报表创建和查看文档
  [适用于警报管理员的数据警报管理器](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

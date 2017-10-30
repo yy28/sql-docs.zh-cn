@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  应用程序可以调用**SQLNumResultCols**次后准备或执行该语句。 但是，因为某些数据源不能轻松地描述将创建的已准备的语句的结果集，性能将会降低如果**SQLNumResultCols**准备语句之后但在执行之前调用。  
   
  某些数据源还支持确定的 SQL 语句返回结果集中的行数。 为此，请在应用程序调用**SQLRowCount**。 完全行计数所表示的内容由 （具体取决于游标的类型） SQL_DYNAMIC_CURSOR_ATTRIBUTES2、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、 SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 选项的设置指示返回通过调用**SQLGetInfo**。 此位掩码指示了对于每种游标类型返回的行计数是否完全相同的、 近似，或根本不可用。 适用于静态行计数还是通过所做的更改会影响键集驱动游标**SQLBulkOperations**或**SQLSetPos**，或通过定位的 update 或 delete 语句，依赖于其他位返回前面列出的相同选项自变量。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
+

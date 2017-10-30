@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 78778dd3f43872fd6d97ae042cc337a68b6bab2c
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
@@ -42,7 +42,7 @@ ms.lasthandoff: 10/02/2017
 
 1. 打开 bash 终端在 Linux/Mac 上的或在 Windows 上提升的 PowerShell 会话。
 
-1. 从 Docker Hub 中拉出 SQL Server 自 2017 年 Linux 容器映像。
+1. 从 Docker Hub 中拉出 SQL Server 2017 Linux 容器映像。
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -59,17 +59,22 @@ ms.lasthandoff: 10/02/2017
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    此命令将创建具有的 SQL Server 2017 容器**开发人员**版本。 SQL Server 端口**1433年**端口的主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用来保留 SQL Server 创建的数据。
+    此命令与开发人员版 （默认值） 创建 SQL Server 2017 容器。 SQL Server 端口**1433年**端口的主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用来保留 SQL Server 创建的数据。
+
+   > [!NOTE]
+   > 在容器中运行生产 SQL Server 版本的过程是略有不同。 有关详细信息，请参阅[运行容器映像的生产](sql-server-linux-configure-docker.md#production)。 如果你使用相同的容器名称和端口，此演练的其余部分将仍适用于生产容器。
 
 1. 若要查看你的 Docker 容器，请使用`docker ps`命令。
 

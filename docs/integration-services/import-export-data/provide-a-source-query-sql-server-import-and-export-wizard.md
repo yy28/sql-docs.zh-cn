@@ -65,19 +65,19 @@ WHERE CommissionPct > 0.015
 可查询三种类型的 Excel 对象。
 -   **工作表。** 若要查询工作表，请将 $ 字符附加到表名称的末尾，并用分隔符包含字符串 - 例如， **[Sheet1$]**。
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **命名区域。** 若要查询命名区域，只需使用区域名称 - 例如， **MyDataRange**。
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **未命名区域。** 若要指定未命名的单元格区域，请将 $ 字符附加到表名称的末尾，添加区域说明，并用分隔符包围字符串 - 例如， **[Sheet1$ A1: B4]**。
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

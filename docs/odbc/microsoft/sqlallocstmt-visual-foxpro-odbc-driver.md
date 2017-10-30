@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  为语句句柄分配内存并将语句句柄与由指定的连接相关联*hdbc*。 驱动程序管理器将传递给驱动程序，后者将内存分配给此调用*hstmt*结构。  
   
  有关详细信息，请参阅[SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md)中*ODBC 程序员参考*。
+

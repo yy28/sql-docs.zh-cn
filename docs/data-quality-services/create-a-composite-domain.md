@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  当您使用基于知识的分析时，如果源数据中的值少于复合域中的域，则 DQS 将在缺失的域中放入 Null。 如果源数据中的值多于复合域中的域，则 DQS 将向其中一列添加额外的数据。 如果两个或多个域包含相同的值，数据源将被分析为第一个匹配的域。  
   
   
+

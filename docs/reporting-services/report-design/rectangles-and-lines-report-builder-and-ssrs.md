@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
 ms.contentlocale: zh-cn
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
  不能将矩形中的报表项作为报表部件发布。 当用户向报表添加该矩形时，他们将获取该矩形及其包含的项。  阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
   
 ##  <a name="RectangleAsContainer"></a> 将矩形用作容器  
- 可以将矩形用作其他项的容器。 移动矩形时，其中包含的项也将随之一起移动。 矩形中的项在其 **Parent** 属性中显示该矩形的名称。 有关将矩形用作容器的详细信息，请参阅[添加矩形或容器 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)和[在矩阵和图表 &#40; 上显示相同的数据报表生成器 &#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
+ 可以将矩形用作其他项的容器。 移动矩形时，其中包含的项也将随之一起移动。 矩形中的项在其 **Parent** 属性中显示该矩形的名称。 有关使用矩形作为容器的详细信息，请参阅[添加矩形或容器（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)和[在矩阵和图表中显示相同数据（报表生成器）](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。  
   
 > [!NOTE]  
 >  矩形是可在其中创建项或将项拖到其中的唯一容器。 如果您在设计图面上现有项的周围绘制一个矩形，则此矩形不会充当该项的容器。 矩形不会在项的 Parent 属性中列出。  
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/09/2017
  [添加矩形或容器（报表生成器和 SSRS）](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   
+

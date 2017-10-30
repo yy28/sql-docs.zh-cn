@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  当**SQLFreeHandle**调用，用于存储有关的环境信息结构的驱动程序版本。 请注意， **SQLFreeHandle**被释放该环境句柄上的所有连接句柄之后不能为环境句柄之前调用。  
   
  有关环境句柄的详细信息，请参阅[环境处理](../../../odbc/reference/develop-app/environment-handles.md)。
+

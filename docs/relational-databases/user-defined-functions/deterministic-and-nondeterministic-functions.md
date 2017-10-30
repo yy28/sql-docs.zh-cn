@@ -20,11 +20,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
@@ -72,19 +73,19 @@ ms.lasthandoff: 08/16/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS|GETDATE|  
-|@@CPU_BUSY|GETUTCDATE|  
-|@@DBTS|GET_TRANSMISSION_STATUS|  
-|@@IDLE|LAG|  
-|@@IO_BUSY|LAST_VALUE|  
-|@@MAX_CONNECTIONS|LEAD|  
-|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT|NEWID|  
-|@@PACKET_ERRORS|NEWSEQUENTIALID|  
-|@@TIMETICKS|NEXT VALUE FOR|  
-|@@TOTAL_ERRORS|NTILE|  
-|@@TOTAL_READ|PARSENAME|  
-|@@TOTAL_WRITE|PERCENTILE_CONT|  
+|@@CONNECTIONS |GETDATE|  
+|@@CPU_BUSY |GETUTCDATE|  
+|@@DBTS |GET_TRANSMISSION_STATUS|  
+|@@IDLE |LAG|  
+|@@IO_BUSY |LAST_VALUE|  
+|@@MAX_CONNECTIONS |LEAD|  
+|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT |NEWID|  
+|@@PACKET_ERRORS |NEWSEQUENTIALID|  
+|@@TIMETICKS |NEXT VALUE FOR|  
+|@@TOTAL_ERRORS |NTILE|  
+|@@TOTAL_READ |PARSENAME|  
+|@@TOTAL_WRITE |PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  

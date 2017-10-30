@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
@@ -84,3 +85,4 @@ oConn.Close
  此处使用事务处理以确保两个记录更新作为一个单元的操作，并且两个产品名称都是交换或根本不会更改。  
   
  有关详细的讨论的事务处理，请参阅[更新和保持数据](../../../ado/guide/data/updating-and-persisting-data.md)。
+

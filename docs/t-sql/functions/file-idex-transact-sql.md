@@ -26,24 +26,24 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df818b30ca850fbb3b7cb0df816aacb6afa12a76
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回当前数据库中的数据、日志或全文文件的指定逻辑文件名的文件标识 (ID) 号。  
+返回当前数据库中的数据、日志或全文文件的指定逻辑文件名的文件标识 (ID) 号。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -64,12 +64,12 @@ FILE_IDEX ( file_name )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. 检索指定文件的文件 ID  
- 以下示例返回 `AdventureWorks_Data` 文件的文件 ID。  
+以下示例返回 `AdventureWorks_Data` 文件的文件 ID。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -83,13 +83,12 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. 在文件名未知时检索文件 ID  
- 以下示例通过从文件类型等于 `AdventureWorks`（日志）的 `sys.database`_`files` 目录视图中选择逻辑文件名来返回 `1` 日志文件的文件 ID。  
+下面的示例返回的文件 ID`AdventureWorks`通过选择的逻辑文件名称的日志文件`sys.database_files`目录的视图文件类型不等同于`1`（日志）。  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX((SELECT TOP(1)name FROM sys.database_files   
-WHERE type = 1))AS 'File ID';  
+SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  
 ```  
   
@@ -102,7 +101,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. 检索全文目录文件的文件 ID  
- 以下示例通过从文件类型等于 `sys.database`（全文本）的 `files`_`4` 目录视图中选择逻辑文件名来返回全文本文件的文件 ID。 如果全文目录不存在，则此示例将返回 NULL。  
+下面的示例通过选择的逻辑文件名称返回全文索引文件的文件 ID`sys.database_files`目录的视图文件类型不等同于`4`（全文）。 如果全文目录不存在，则此示例将返回 NULL。  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -115,3 +114,4 @@ AS 'File_ID';
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

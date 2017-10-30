@@ -19,6 +19,7 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
@@ -70,12 +71,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  在 **“映射”** 表中，按如下所示将您要对其执行知识发现的每个源列映射到知识库中的某个域：  
   
-    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)。  
+    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [创建域规则](../data-quality-services/create-a-domain-rule.md) 或 [创建复合域](../data-quality-services/create-a-composite-domain.md)。  
   
     2.  为每个映射都重复前面的步骤。 若要更改表中的行数，请单击 **“添加列映射”**，或者选择一行，然后单击 **“删除所选列映射”**。 如果在选定某一填充行时单击 **“删除所选列映射”** ，即便存在未填充的行也会删除选定的行。  
   
         > [!NOTE]  
-        >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行知识发现。 有关支持的数据类型的详细信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+        >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行知识发现。 有关支持的数据类型的详细信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
     3.  单击 **“查看/选择复合域”** 可显示已定义的复合域。 如果没有已定义的复合域，则该控件将不可用。  
   
@@ -293,3 +294,4 @@ ms.lasthandoff: 09/09/2017
  有关事件探查的详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
   
+

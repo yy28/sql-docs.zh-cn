@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 525475b3e9d7cdeae9755208da1cb19e9c077fe8
@@ -39,3 +40,4 @@ ODBC 中使用以下的转义序列。 本部分中的语法使用中定义的�
 -   [过程调用转义序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)  
   
 -   [标量函数转义序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)
+

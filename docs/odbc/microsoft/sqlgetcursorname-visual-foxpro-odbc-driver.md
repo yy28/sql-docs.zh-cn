@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a44ce860b8cd09c89597c0fc8ed55a1ba643e4c3
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  返回的名称与关联的光标给定*hstmt*。 **SQLGetCursorName** Visual FoxPro ODBC 驱动程序 API 中包括，因为它是核心级别 API 功能的一部分; 它不能与使用其他 API 函数因为驱动程序不支持定位的更新。  
   
  有关详细信息，请参阅[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)中*ODBC 程序员参考*。
+

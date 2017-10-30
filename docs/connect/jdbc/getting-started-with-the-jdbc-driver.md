@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: afd76c4ecd2fa1d2d85cb659896b68e2bc139c16
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 * [步骤 1： 配置用于 Java 开发的开发环境](../../connect/jdbc/step-1-configure-development-environment-for-java-development.md)  
 * [步骤 2： 创建 SQL 数据库进行 Java 开发](../../connect/jdbc/step-2-create-a-sql-database-for-java-development.md)  
 * [步骤 3： 连接到 SQL 使用 Java 的概念证明](../../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md)
+

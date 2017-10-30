@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 013f19579815dfcac2fcfe78cbbe41919bff9c15
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  本主题提供 Excel 驱动程序相关的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  当使用 Microsoft Excel 驱动程序时，执行 INSERT 语句使用的参数将 NULL 插入 SQL_CHAR 列将返回 SQL_SUCCESS_WITH_INFO 与 SQLSTATE 01004，"数据截断。"
+

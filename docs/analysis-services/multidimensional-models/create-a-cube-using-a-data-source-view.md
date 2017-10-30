@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  在向导的 **“完成向导”** 页中，您可以查看新的多维数据集中的度量值组、度量值和维度。 在 **“多维数据集名称”** 框中，键入多维数据集的名称。 然后，如果您对该多维数据集满意，则单击 **“完成”**。 单击 **“返回”** 可返回向导的之前任何页并进行更改。  
   
   
+

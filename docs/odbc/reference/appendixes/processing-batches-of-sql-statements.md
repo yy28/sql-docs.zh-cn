@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1513b2c9576d994ea7eb505c4928fd609e9498c
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
  游标库不支持的 SQL 语句，其中包括 SQL_ATTR_PARAMSET_SIZE 语句属性大于 1 的 SQL 语句的批处理。 如果应用程序提交一批的 SQL 语句的是光标库，则结果是未定义。
+

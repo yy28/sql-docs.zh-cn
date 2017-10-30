@@ -28,12 +28,11 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-set_execution_property_override_value [ @execution_id = execution_id  
+```sql  
+catalog.set_execution_property_override_value [ @execution_id = execution_id  
     , [ @property_path = ] property_path  
     , [ @property_value = ] property_value  
     , [ @sensitive = ] sensitive  
-  
 ```  
   
 ## <a name="arguments"></a>参数  

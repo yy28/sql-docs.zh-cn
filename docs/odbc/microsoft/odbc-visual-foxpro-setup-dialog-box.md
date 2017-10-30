@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
@@ -81,3 +82,4 @@ DELETED=YES"
   
  **在后台提取数据**  
  确定是否将在后台 （渐进式提取） 提取记录或者你的应用程序将等待，直到提取中的结果集的所有记录。
+

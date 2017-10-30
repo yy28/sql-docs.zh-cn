@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c52f59e6e592be5d181a703236b08803d79303b
@@ -38,3 +39,4 @@ ms.lasthandoff: 08/02/2017
  仅在“强制协议加密” 设置为“是”  时，才可使用“信任服务器证书” 。  
   
   
+

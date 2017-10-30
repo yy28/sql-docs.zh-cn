@@ -18,11 +18,12 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/02/2017
   
  可以用下列一种方法从跟踪中提取显示计划事件：  
   
--   在配置跟踪时，使用 **“事件提取设置”** 选项卡。 注意，此选项卡只有在选择了 **“事件选择”** 选项卡上的一个显示计划事件后才会显示。  
+-   在配置跟踪时，使用 **“事件提取设置”** 选项卡。注意，此选项卡只有在选择了 **“事件选择”** 选项卡上的一个显示计划事件后才会显示。  
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
@@ -52,6 +53,7 @@ ms.lasthandoff: 08/02/2017
 |**Showplan XML Statistics Profile**|显示查询计划，列出 XML 格式的完整运行时详细信息。 例如，此事件类捕获通过已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的每个运算符的行数。 有关详细信息，请参阅 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“性能”事件类别](../../relational-databases/event-classes/performance-event-category.md)  
+ [Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md)  
   
   
+

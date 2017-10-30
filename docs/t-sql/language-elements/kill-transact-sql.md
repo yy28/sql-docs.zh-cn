@@ -37,6 +37,7 @@ caps.latest.revision: 61
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
 ms.openlocfilehash: 5a67eb7c7f3686dcb0735f6e1c4a1255ab8b59bd
@@ -107,7 +108,7 @@ JOIN sys.dm_exec_connections AS conn
   
  当特定的连接在数据库资源上有锁并阻塞其他连接的进程时，`blocking_session_id` 的 `sys.dm_exec_requests` 列或 `blk` 返回的 `sp_who` 列中将显示该阻塞连接的会话 ID。  
   
- KILL 命令可用于解决有疑问的分布式事务。 这些事务是未解决的分布式事务，它们是由于无计划地重新启动数据库服务器或 MS DTC 协调器而产生的。 中有疑问的事务有关的详细信息，请参阅中的"两阶段提交"一节[使用标记的事务一致恢复相关数据库 & #40;完整恢复模式 & #41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
+ KILL 命令可用于解决有疑问的分布式事务。 这些事务是未解决的分布式事务，它们是由于无计划地重新启动数据库服务器或 MS DTC 协调器而产生的。 中有疑问的事务有关的详细信息，请参阅中的"两阶段提交"一节[使用标记的事务一致恢复相关数据库 &#40;完整恢复模式 &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="using-with-statusonly"></a>使用 WITH STATUSONLY  
  KILL WITH STATUSONLY 生成一个报表，仅当会话 ID 或 UOW 当前正在回滚由于以前 KILL*会话 ID*|*UOW*语句。 进度报告指出已完成的回滚量（百分比）和估计的剩余时间（秒），格式如下：  
@@ -159,15 +160,15 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 
   
 ## <a name="see-also"></a>另请参阅  
- [KILL STATS JOB & #40;Transact SQL & #41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
- [终止查询通知订阅 & #40;Transact SQL & #41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL STATS JOB &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
+ [终止查询通知订阅 &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [关闭 & #40;Transact SQL & #41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
+ [关闭 &#40;Transact SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md)   
- [sys.dm_exec_requests & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_tran_locks & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [sp_lock & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sp_lock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

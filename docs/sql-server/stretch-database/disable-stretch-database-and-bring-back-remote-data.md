@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
 ms.openlocfilehash: dc5f97519cc9c2916f164b4905e164a273ef2d58
@@ -69,7 +70,7 @@ ms.lasthandoff: 07/29/2017
 
     此命令不能取消。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +83,7 @@ ms.lasthandoff: 07/29/2017
   
 -   要禁用表的“拉伸”并放弃远程数据，请运行以下命令。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +109,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>使用 Transact-SQL 禁用数据库的 Stretch Database  
  运行以下命令。  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

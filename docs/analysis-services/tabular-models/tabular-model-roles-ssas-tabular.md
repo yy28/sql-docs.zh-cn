@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b93ee4d0dcbf746c2df43ea4cf423368e118247f
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[使用 SSMS 管理角色（SSAS 表格）](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|说明如何创建角色、在角色中添加和删除成员、更改角色的权限以及如何使用 DAX 添加、编辑或删除行级筛选器。|  
   
   
+

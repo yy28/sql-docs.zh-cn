@@ -25,11 +25,12 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
@@ -37,7 +38,8 @@ ms.lasthandoff: 10/04/2017
 
   本主题概述了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 语句和 INSERT...SELECT * FROM OPENROWSET(BULK...) 语句将数据从某一数据文件大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 本主题还说明了使用 BULK INSERT 和 OPENROWSET(BULK...) 以及使用这些方法从远程数据源大容量导入数据的安全注意事项。  
   
-> **注意：** 在使用 BULK INSERT 或 OPENROWSET(BULK ) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理模拟的。 有关详细信息，请参阅本主题后面的“安全注意事项”。  
+> [!NOTE]
+> 在使用 BULK INSERT 或 OPENROWSET(BULK ) 时，请务必了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本是如何处理模拟的。 有关详细信息，请参阅本主题后面的“安全注意事项”。  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT 语句  
  BULK INSERT 将数据从数据文件加载到表中。 此功能与 **bcp** 命令的 **in** 选项提供的功能相似，但是数据文件将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程读取。 有关 BULK INSERT 语法的说明，请参阅 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
@@ -112,7 +114,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>从远程数据文件中批量导入  
  若要使用 BULK INSERT 或 INSERT...SELECT \* FROM OPENROWSET(BULK...) 从其他计算机中大容量导入数据，必须在两台计算机之间共享数据文件。 指定共享数据文件时，请使用它的通用命名约定 (UNC) 名称，其一般形式为 **\\\\***服务器名***\\***共享名***\\***路径***\\***文件名*。 此外，用来访问该数据文件的帐户必须具有读取远程磁盘上的文件所需的权限。  
   
- 例如，下面的 `BULK INSERT` 语句会将名为 `SalesOrderDetail` 的数据文件中的数据大容量导入到 `AdventureWorks` 数据库的 `newdata.txt`表。 此数据文件驻留在系统 `\dailyorders` 的 `salesforce` 网络共享目录下的 `computer2`共享文件夹中。  
+ 例如，下面的 `BULK INSERT` 语句会将名为 `SalesOrderDetail` 的数据文件中的数据大容量导入到 `AdventureWorks` 数据库的 `newdata.txt`表。 此数据文件驻留在系统 `\dailyorders` 的 `salesforce` 网络共享目录下的 `computer2` 共享文件夹中。  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +122,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **注意：** 此限制不适用于 **bcp** 实用工具，因为客户端独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]读取文件。  
+> [!NOTE]
+> 此限制不适用于 **bcp** 实用工具，因为客户端独立于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   

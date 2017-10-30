@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  在 ODBC 2。*x*，应用程序可以调用**SQLSetConnectOption**设置语句选项。 在驱动程序完成后，建立默认情况下的语句选项对于更高版本为该连接分配任何语句。 它是驱动程序定义的驱动程序是否将设置与指定连接关联的任何现有语句的语句选项。  
   
  此功能已弃用 ODBC 3 中*.x*。 ODBC 3*.x*驱动程序需要仅支持设置 ODBC 2。*x*语句属性在连接级别，如果他们想要使用 ODBC 2。*x*执行此操作的应用程序。 ODBC 3*.x*应用应永远不会将语句属性设置在连接级别。 ODBC 3*.x*语句属性不能在连接级别，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 属性，这是连接属性和语句特性，可以设置在连接级别或语句级上设置。
+

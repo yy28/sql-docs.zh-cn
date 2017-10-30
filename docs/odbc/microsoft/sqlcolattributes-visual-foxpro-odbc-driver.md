@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2f4fae186ea7880325f6e3a96aae29f1edef07e1
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_COLUMN_TABLE_NAME|始终返回空字符串。|  
   
  有关详细信息，请参阅[SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)中*ODBC 程序员参考*。
+

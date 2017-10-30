@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型
 |timestamp|当值插入时间戳列 Paradox 驱动程序，则随后从该列检索时，检索到的值可能不同于插入的值由多达 1 秒由于舍入。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。
+

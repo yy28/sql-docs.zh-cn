@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |107|使用 ODBC 函数而不是 SQL 语句，以便执行某些数据库操作： **SQLSetPos** SQL_POSITION 与 SQL_REFRESH。|  
 |108|获取访问权限由批处理和存储的过程，通过调用生成的多个结果集的内容**SQLMoreResults**。|  
 |109|分隔事务跨越几个 ODBC 函数中使用真正的原子性和能够指定在 SQL_ROLLBACK **SQLEndTran**。|
+

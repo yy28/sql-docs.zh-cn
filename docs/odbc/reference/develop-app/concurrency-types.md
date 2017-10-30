@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   **使用行版本的乐观并发访问和使用值的开放式并发**光标使用开放式并发： 它更新或删除行，仅当它们以来未更改了最后一个对其进行读取。 若要检测的更改，它将比较行版本或值。 就不能保证，光标将能够更新或删除行，但并发性比使用锁定时要高得多。 有关详细信息，请参阅以下部分：[开放式并发](../../../odbc/reference/develop-app/optimistic-concurrency.md)。  
   
  应用程序指定哪种类型的并发它想要将与 SQL_ATTR_CONCURRENCY 语句属性一起使用的光标。 若要确定支持哪些类型，它调用**SQLGetInfo** SQL_SCROLL_CONCURRENCY 选项。
+

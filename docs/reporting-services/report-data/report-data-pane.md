@@ -21,7 +21,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a832dfb9d5e5e3fc57519b8f694bd47fa755852e
 ms.contentlocale: zh-cn
@@ -47,8 +48,9 @@ ms.lasthandoff: 08/09/2017
  **数据集**  
  表示单个数据集。 数据集是查询指定的字段集合的父节点，包括所有计算字段。 Reporting Services 支持查询设计器，这将有助于您指定查询。 有关详细信息，请参阅[报表数据集 &#40;SSRS &#41;](../../reporting-services/report-data/report-datasets-ssrs.md)和[查询设计工具 &#40;SSRS &#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [“分组”窗格](../../reporting-services/tools/grouping-pane.md)  
   
   
+

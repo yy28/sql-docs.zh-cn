@@ -1,7 +1,7 @@
 ---
 title: "步骤 4：使用 T-SQL 创建数据功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>步骤 4：使用 T-SQL 创建数据功能
 
 数据浏览之后, 从这些数据中收集了一些见解，就可以转到*功能工程*。 从原始数据创建特征的此过程可能会在建模的高级分析中，一个关键步骤。
+
+使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
 本步骤中将学习如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数通过原始数据创建功能。 然后从存储过程调用该函数，创建包含该功能值的表。
 
@@ -121,14 +123,11 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-step"></a>下一步
 
-[步骤 5：使用 T-SQL 定型和保存模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[步骤 5： 训练和保存 Python 模型使用 T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一步
 
-[步骤 3：浏览和可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
+[步骤 3：浏览并可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>另请参阅
-
-[机器学习服务与 Python](../python/sql-server-python-services.md)
 
 

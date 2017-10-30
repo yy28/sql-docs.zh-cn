@@ -18,21 +18,22 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f23e4034bdfe2cb41161313ae577342ba3f3eda9
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>课程 1-2-查看优化建议
-此任务将用到[优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的优化会话。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。 以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
+此任务将用到 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的优化会话。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
   
 ### <a name="view-tuning-recommendations"></a>查看优化建议  
   
 1.  启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 请参阅 [启动数据库引擎优化顾问](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)。 请确保连接到在练习[优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中使用的同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-2.  在“会话监视器”窗格中双击“MySession”。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问从以前的优化会话中加载会话信息并显示**建议**选项卡。 请注意，因为你接受了所有优化选项默认值（其中包括选中“优化选项”选项卡上的“不分区”选项），因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问不生成任何“分区建议”。  
+2.  在“会话监视器”窗格中双击“MySession”。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问从以前的优化会话中加载会话信息并显示**建议**选项卡。请注意，因为你接受了所有优化选项默认值（其中包括选中“优化选项”选项卡上的“不分区”选项），因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问不生成任何“分区建议”。  
   
 3.  在“建议”选项卡上，使用选项卡式页面底部的滚动条可以查看所有“索引建议”列。 每一行代表[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问建议删除或创建的一个数据库对象（索引或索引视图）。 滚动到最右边的列，并单击“定义”。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问显示**SQL 脚本预览**窗口可以在其中查看[!INCLUDE[tsql](../../includes/tsql-md.md)]创建或删除该行上的数据库对象的脚本。 单击“关闭”按钮以关闭预览窗口。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/02/2017
   
 6.  如果“建议”选项卡上存在多个建议，请清除“索引建议”网格中列出数据库对象的某些行。  
   
-7.  在 **“操作”** 菜单上，单击 **“评估建议”**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将创建一个新的优化会话，从中可以评估 MySession 原有建议的子集。  
+7.  在 **“操作”** 菜单上，单击 **“评估建议”**。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问将创建一个新的优化会话，从中可以评估 MySession 原有建议的子集。  
   
 8.  输入新的“会话名称”**EvaluateMySession**，然后单击工具栏中的“开始分析”按钮。 可以对新的优化会话重复步骤 2 和步骤 3 以查看其建议。  
   

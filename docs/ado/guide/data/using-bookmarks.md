@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  [支持](../../../ado/reference/ado-api/supports-method.md)方法更高版本更详细地介绍。  
   
  除了克隆**记录集**，唯一的书签将变为**记录集**在其中创建了它们，即使使用相同的命令。 这意味着，不能使用**书签**从一个获取**记录集**一秒钟内将移到同一记录**记录集**使用相同的命令打开。
+

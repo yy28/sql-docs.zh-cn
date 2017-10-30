@@ -20,6 +20,7 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
@@ -128,3 +129,4 @@ ms.lasthandoff: 09/01/2017
  [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   
+

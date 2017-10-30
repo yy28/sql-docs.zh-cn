@@ -17,11 +17,12 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
@@ -66,8 +67,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> 事务日志物理体系结构  
  数据库中的事务日志映射在一个或多个物理文件上。 从概念上讲，日志文件是一系列日志记录。 从物理上讲，日志记录序列被有效地存储在实现事务日志的物理文件集中。 每个数据库必须至少有一个日志文件。  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部将每一物理日志文件分成多个虚拟日志文件。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部将每物理日志文件分成多个虚拟日志文件 (VLF)。 虚拟日志文件没有固定大小，且物理日志文件所包含的虚拟日志文件数不固定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在创建或扩展日志文件时动态选择虚拟日志文件的大小。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 尝试维护少量的虚拟文件。 在扩展日志文件后，虚拟文件的大小是现有日志大小和新文件增量大小之和。 管理员不能配置或设置虚拟日志文件的大小或数量。  
+
+> [!NOTE]
+> VLF 的创建采用以下方法：
+> - 如果下一次增长少于当前日志物理大小的 1/8，则创建 1 个 VLF，补偿此增长大小（从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 开始）
+> - 如果增长少于 64 MB，创建 4 个 VLF，补偿此增长大小（如增长 1 MB，创建四个 256KB 的 VLF）
+> - 如果增长在 64 MB 到 1GB 之间，创建 8 个 VLF，补偿此增长大小（如增长 512 MB，创建八个 64MB 的 VLF）
+> - 如果增长大于 1GB，创建 16 个 VLF，补偿此增长大小（如增长 8 GB，创建十六个 512MB VLF）
+
  只有当物理日志文件使用较小的 size 和 growth_increment 值定义时，虚拟日志文件才会影响系统性能。 size 值为日志文件的初始大小，growth_increment 值则为每次需要新空间时为文件增加的空间大小。 如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。 建议你为日志文件分配一个接近于最终所需大小的 size 值，并且还要分配一个相对较大的 growth_increment 值。 有关这些参数的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
  事务日志是一种回绕的文件。 例如，假设有一个数据库，它包含一个分成四个虚拟日志文件的物理日志文件。 当创建数据库时，逻辑日志文件从物理日志文件的始端开始。 新日志记录被添加到逻辑日志的末端，然后向物理日志的末端扩张。 日志截断将释放记录全部在最小恢复日志序列号 (MinLSN) 之前出现的所有虚拟日志。 MinLSN 是成功进行数据库范围内回滚所需的最早日志记录的日志序列号。 示例数据库中的事务日志的外观与下图所示相似。  
@@ -82,7 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 -   如果对日志启用了 FILEGROWTH 设置且磁盘上有可用空间，则文件就按 growth_increment 参数指定的数量增大，并且新的日志记录将添加到增大的空间中。 有关 FILEGROWTH 设置的详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
--   如果未启用 FILEGROWTH 设置，或保存日志文件的磁盘的可用空间比 growth_increment 中指定的数量少，则会出现 9002 错误。  
+-   如果未启用 FILEGROWTH 设置，或保存日志文件的磁盘的可用空间比 growth_increment 中指定的数量少，则会出现 9002 错误。 请参考[解决事务日志已满的问题](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)，了解详细信息。  
   
  如果日志包含多个物理日志文件，则逻辑日志在回绕到首个物理日志文件始端之前，将沿着所有物理日志文件移动。  
   
@@ -106,7 +114,7 @@ ms.lasthandoff: 08/09/2017
  日志截断会由于多种因素发生延迟。 如果日志截断延迟的时间较长，则事务日志可能会填满磁盘空间。 有关信息，请参阅[可能延迟日志截断的因素](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)和[解决事务日志已满的问题（SQL Server 错误 9002）](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)。  
   
 ##  <a name="WAL"></a> 预写事务日志  
- 本节说明预写事务日志在将数据修改记录到磁盘的过程中所起的作用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用预写日志 (WAL)，此日志确保在将关联的日志记录写入磁盘后再将数据修改写入磁盘。 这维护了事务的 ACID 属性。  
+ 本节说明预写事务日志在将数据修改记录到磁盘的过程中所起的作用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用预写日志 (WAL) 算法，此日志确保在将关联的日志记录写入磁盘后再将数据修改写入磁盘。 这维护了事务的 ACID 属性。  
   
  要了解预写日志的工作方式，了解如何将修改的数据写入磁盘很重要。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护一个缓冲区缓存，在必须检索数据时从其中读取数据页。 在缓冲区缓存中修改页后，不会将其立即写回磁盘；而是将其标记为“脏”。 在将数据页物理写入磁盘之前，可以将其逻辑写入多次。 对于每次逻辑写入，都会在记录修改的日志缓存中插入一条事务日志记录。 在将关联的脏页从缓冲区缓存中删除并写入磁盘之前，必须将这条些日志记录写入磁盘。 检查点进程定期在缓冲区高速缓存中扫描包含来自指定数据库的页的缓冲区，然后将所有脏页写入磁盘。 CHECKPOINT 可创建一个检查点，在该点保证全部脏页都已写入磁盘，从而在以后的恢复过程中节省时间。  
   
@@ -217,8 +225,11 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 ## <a name="additional-reading"></a>其他阅读主题  
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
- [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [管理事务日志文件的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [事务日志 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

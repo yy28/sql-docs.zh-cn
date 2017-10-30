@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  若要确定数据源和驱动程序支持的外部联接的类型，应用程序调用**SQLGetInfo**带有 SQL_OJ_CAPABILITIES 标志。 可能支持的外部联接的类型左、 右、 完整，或嵌套的外部联接;外部联接中的列名中**ON**子句不具有其各自的表名称中的顺序相同**OUTER JOIN**子句; 结合外部联接; 和外部联接使用内部联接任何 ODBC 比较运算符。 如果 SQL_OJ_CAPABILITIES 信息类型返回 0，则不支持任何外部联接子句。
+

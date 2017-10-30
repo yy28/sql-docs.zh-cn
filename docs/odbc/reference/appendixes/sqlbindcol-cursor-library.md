@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  游标库支持调用**SQLBindCol**可将书签列绑定。  
   
  当使用 ODBC 2。*x*驱动程序，光标库返回 SQLSTATE HY090 （无效字符串或缓冲区长度） 时**SQLBindCol**调用将书签列的缓冲区长度设置为值不等于 4。 使用 ODBC 3 时*.x*驱动程序，光标库允许要是任意大小的缓冲区。
+

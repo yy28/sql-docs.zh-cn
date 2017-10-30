@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13aae437ce3cbd930babed257b69d1ec70b3cfad
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|返回到目录的路径。|  
 |TABLE_OWNER|因为不支持所有者名称，将在此列中返回 NULL。|  
 |NULLABLE|SQL_NO_NULLS 针对参与的列返回中的主键或唯一索引。|
+

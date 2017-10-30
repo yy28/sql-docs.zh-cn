@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82bcebce57cc6034ad629256c1b8ce27038d6ae0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  对于表，创建一个结果集，后者指定的表或表的列列表。  
   
  有关详细信息，请参阅[SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md)中*ODBC 程序员参考*。
+

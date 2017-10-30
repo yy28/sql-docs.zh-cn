@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  管道字符 (&#124;) 不能在列名称，是否名称用引号括起来后与否。  
   
  当使用文本驱动程序时，该驱动程序将提供一个默认名称，如果未指定列名称。 例如，该驱动程序调用的第一列 F1，第二列 F2，依次类推。
+

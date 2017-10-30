@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>连接到平面文件数据源 （SQL Server 导入和导出向导）
-本主题演示如何连接到**平面文件**（文本文件） 数据源从**选择数据源**或**选择目标**页上的 SQL Server 导入和导出向导。 对于平面文件，在向导的这些两个页会显示组不同的选项，因此本主题单独说明的平面文件源和目标。
+本主题演示如何连接到**平面文件**（文本文件） 数据源从**选择数据源**或**选择目标**页上的 SQL Server 导入和导出向导。 对于平面文件，在向导的这些两个页会显示组不同的选项，因此本主题单独介绍平面文件源和平面文件目标。
+
+## <a name="an-alternative-for-simple-text-import"></a>简单文本导入的一种替代方法
+如果你需要将文本文件导入到 SQL Server，并且不需要在导入和导出向导中可用的所有配置选项，请考虑使用**导入平面文件向导**中 SQL Server Management Studio (SSMS)。 有关详细信息，请参阅下文：
+- [SQL Server Management Studio 17.3 中的新增功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [SSMS 17.3 中的新导入平面文件向导简介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>连接到平面文件源
  
@@ -202,10 +207,10 @@ ms.lasthandoff: 09/26/2017
   
 |属性|Description|  
 |--------------|-----------------|  
-|**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动创建名称，格式为“列 0”、“列 1”，依此类推。|
+|**名称**|提供说明性列名。 如果不输入一个名称，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]自动创建中的格式列 0，第一列和等的名称。|
 |**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 该属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定。 它由行分隔符分隔。|  
-|**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|
+|**InputColumnWidth**|指定要存储为字节; 数的值对于 Unicode 文件，此值是字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|
 |**DataPrecision**|指定数字数据的精度。 精度是指数字的位数。|
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。|
 |**DataType**|从可用数据类型的列表中进行选择。<br/>有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|
@@ -229,7 +234,7 @@ ms.lasthandoff: 09/26/2017
  
 单击“建议类型”可显示“提供列类型建议”对话框。 
 
-![平面文件连接 建议](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![平面文件连接建议类型对话框](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 选择中的选项后**提供列类型建议**对话框中，单击**确定**，向导可能会更改的某些列的数据类型。
 

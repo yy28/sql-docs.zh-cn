@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
@@ -38,3 +39,4 @@ Unicode 是一种软件字符编码的方法将所有字符视为有固定的宽
  当 ANSI 应用程序使用 ODBC 桌面数据库驱动程序 4.0 和访问 Microsoft 访问 4.0 或更高版本，该驱动程序的数据类型将作为公开 SQL_CHAR、 SQL_VARCHAR 或 SQL_LONGVARCHAR 即使 Jet 4.0 支持的宽版本。 较旧版本的 Jet 不支持 SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR。 在其中使用 Jet 4.0 数据库引擎使用的旧格式的情况下，此限制也适用。  
   
  有关 ODBC Unicode 问题的详细信息，请参阅[Unicode](../../odbc/reference/develop-app/unicode.md)中编程注意事项。
+

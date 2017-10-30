@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  创建和配置要求的第一个输出的目标组件**AddressID**和**城市**列，如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标，地址或示例目标组件所示[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 然后将连接的转换时，第一个输出**MyAddressOutput**，到目标组件。 你可以通过运行以下命令，创建的目标表[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**AdventureWorks**数据库：  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

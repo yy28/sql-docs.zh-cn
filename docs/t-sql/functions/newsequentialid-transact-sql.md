@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  如果涉及保密问题，则不要使用该函数。 因为有可能猜到下一个生成的 GUID 的值，从而访问与该 GUID 关联的数据。  
   
- NEWSEQUENTIALID 是通过 Windows 的包装器[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)函数。  
+ NEWSEQUENTIALID 是通过 Windows 的包装器[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)具有一些函数[字节随机排列应用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
   
 > [!WARNING]  
 >  UuidCreateSequential 函数具有硬件依赖关系。 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在数据库 （例如包含的数据库） 移到其他计算机时，可以开发群集的连续值。 在使用 Alwayson 时并且在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，如果数据库故障转移到另一台计算机，可以开发群集的连续值。  

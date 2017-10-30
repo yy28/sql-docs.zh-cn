@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>注释  
  此时，XML 流向客户端浏览器，并已准备好显示。 这可通过使用客户端 VBScript 以将 XML 文档绑定到的 DOM 和循环通过每个子节点以创建 HTML 中的产品的列表实例。
+

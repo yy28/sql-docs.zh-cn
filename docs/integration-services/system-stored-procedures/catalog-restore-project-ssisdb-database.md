@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-restore_project [ @folder_name = ] folder_name  
+```sql  
+catalog.restore_project [ @folder_name = ] folder_name  
     , [ @project_name = ] project _name  
     , [ @object_version_lsn = ] object_version_lsn  
   

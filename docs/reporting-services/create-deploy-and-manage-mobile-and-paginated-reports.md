@@ -22,7 +22,8 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: zh-cn
@@ -122,3 +123,4 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 * [在 Reporting Services 中的 power BI 报表](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

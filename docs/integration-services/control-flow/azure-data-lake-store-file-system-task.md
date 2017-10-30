@@ -15,11 +15,12 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 4cb0585acf73e734662847401c60686b54ae6410
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure 数据湖存储文件系统任务
@@ -37,6 +38,7 @@ Azure 数据湖存储文件系统任务是的一个组件[用于 Azure 的 SQL S
 - **CopyToADLS:**将文件上载到 ADLS。
 - **CopyFromADLS:**从 ADLS 下载文件。
 
+## <a name="configure-the-properties-for-the-operation"></a>配置该操作的属性
 对于任何操作，你必须指定一个 Azure 数据湖连接管理器。
 
 以下是特定于每个操作的属性：
@@ -52,3 +54,4 @@ Azure 数据湖存储文件系统任务是的一个组件[用于 Azure 的 SQL S
 - **AzureDataLakeDirectory:**指定包含要下载的文件的 ADLS 源目录。
 - **SearchRecursively:**指定是否搜索以递归方式中下载的文件的源目录。
 - **LocalDirectory:**指定要存储已下载的文件的目标目录。
+

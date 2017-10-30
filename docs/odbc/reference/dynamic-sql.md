@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 3.  程序可以使用 EXECUTE 语句重复，提供每次执行动态语句的不同的参数值。  
   
  准备好的执行仍不是静态 SQL 相同。 在静态 SQL 中，处理的 SQL 语句的前四个步骤发生在编译时。 在准备好的执行这些步骤仍发生在运行时，但它们只执行一次;执行计划仅在调用 EXECUTE 时才发生。 这有助于消除一些动态 SQL 的体系结构中的固有的性能缺点。 下图显示静态 SQL、 与立即执行的动态 SQL 和与已准备好执行动态 SQL 之间的差异。
+

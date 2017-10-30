@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7905a4abae2efdbbb8679e625afea917caebde35
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  列出数据源名称。  
   
  有关详细信息，请参阅[SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md)中*ODBC 程序员参考*。
+

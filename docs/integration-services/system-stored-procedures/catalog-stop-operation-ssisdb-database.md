@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-stop_operation [ @operation_id = ] operation_id  
+```sql  
+catalog.stop_operation [ @operation_id = ] operation_id  
 ```  
   
 ## <a name="arguments"></a>参数  

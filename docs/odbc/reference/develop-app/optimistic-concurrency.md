@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  如果应用程序本身实现开放式并发，它将 SQL_ATTR_CONCURRENCY 语句属性设置为 SQL_CONCUR_READ_ONLY 要读取一行。 如果它将对行版本进行比较，并不知道在行版本列，则会调用**SQLSpecialColumns** SQL_ROWVER 选项，来确定此列的名称。  
   
  应用程序更新或删除的行通过增加到 SQL_CONCUR_LOCK （若要获取对行的写入访问权限） 和执行的并发**更新**或**删除**语句**其中**时该应用程序读取它具有指定的版本或值的行的子句。 如果行已更改自那时起，该语句将失败。 如果**其中**子句不唯一标识行，该语句可能还更新或删除其他行; 行版本始终唯一标识行，但行值唯一标识行，仅当它们包括为主键。
+

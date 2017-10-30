@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f527aef051d304dc9cc89a953888c8b41090789d
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  从 **DiscretizationMethod** 旁边的下拉列表中，选择对成员分组时所用的方法。 有关 **DiscretizationMethod** 设置的详细信息，请参阅[对属性成员分组（离散化）](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)。  
   
   
+

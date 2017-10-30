@@ -14,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>保护 JDBC Driver 应用程序
@@ -36,9 +37,10 @@ ms.lasthandoff: 09/09/2017
 |[验证用户输入](../../connect/jdbc/validating-user-input.md)|描述验证用户输入的技术。|  
 |[应用程序安全性](../../connect/jdbc/application-security.md)|描述如何使用 Java 策略权限来帮助保护 JDBC Driver 应用程序。|  
 |[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)|描述如何建立具有的安全通信通道[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库使用安全套接字层 (SSL)。|  
-|[FIPS 模式下](../../connect/jdbc/fips-mode.md)|描述如何在 FIPS 原告模式下使用 JDBC 驱动程序。| 
+|[FIPS 模式](../../connect/jdbc/fips-mode.md)|描述如何在与 FIPS 兼容模式下使用 JDBC 驱动程序。| 
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

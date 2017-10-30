@@ -1,7 +1,7 @@
 ---
 title: "表格模型 (SSAS 表格) 中的 DAX |Microsoft 文档"
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,15 +16,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>表格模型 (SSAS 表格) 中的 DAX
-  数据分析表达式 (DAX) 是用于分析服务、 Power BI Desktop 中，和在 Excel 中的 Power Pivot 中创建自定义计算的公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
+  数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
   
  尽管 DAX Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中使用的则本主题更适用于 Analysis Services 表格模型项目创作 SQL Server Data Tools (SSDT) 中。  
   
@@ -202,6 +203,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学和三角函数  
  DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅 [数学和三角函数 (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f)。  
+ 
+### <a name="other-functions"></a>其他函数  
+ 这些函数执行不能由任何其他大多数函数所属的类别定义的唯一操作。 有关详细信息，请参阅[其他函数 (DAX)](https://msdn.microsoft.com/mt150101)。
   
 ### <a name="statistical-functions"></a>统计函数  
  DAX 提供执行聚合的统计函数。 除了求和与平均值或者查找最小值和最大值外，您还可以通过 DAX 在聚合之前筛选列或基于相关表创建聚合。 有关详细信息，请参阅 [统计函数 (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559)。  
@@ -400,3 +404,4 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

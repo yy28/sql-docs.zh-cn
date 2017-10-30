@@ -15,14 +15,15 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8cf203f17ac149825e0e4d79ed7f6f6041700ae4
 ms.contentlocale: zh-cn
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>创建 Reporting Services 移动报表时先从设计或数据开始
+# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
   
 借助 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建移动报表，这些报表可轻松缩放至任何屏幕大小。   
   

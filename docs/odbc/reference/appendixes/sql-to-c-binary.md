@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  应用程序开发人员从二进制 SQL 将数据绑定到字符 C 数据类型建议不要使用。 此转换通常是效率低下，而且很慢。
+

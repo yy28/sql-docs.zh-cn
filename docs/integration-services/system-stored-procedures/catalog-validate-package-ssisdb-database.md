@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  指示是否应使用 32 位运行时在 64 位操作系统上运行包。 使用的值`1`时要执行与 32 位运行时包在 64 位操作系统上运行。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 *Use32bitruntime*是**位**。  
   
  [ @environment_scope =] *environment_scope*  
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数是可选的字符`D`默认情况下将使用。 *Environment_scope*是**char （1)**。  
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 字符`D`默认情况下使用。 *Environment_scope*是**char （1)**。  
   
  [ @reference_id =] *reference_id*  
  环境引用的唯一 ID。 此参数是必需的仅当单个环境引用包含在验证中，当*environment_scope*是`S`。 *Reference_id*是**bigint**。  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   包参数中引用了变量，但验证中不包括任何引用的环境  
   
 ## <a name="remarks"></a>注释  
- 验证有助于识别将阻止包成功运行的问题。 使用[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)或[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图来验证状态的监视器。  
+ 验证可帮助识别可能会阻止包成功运行的问题。 使用[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)或[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图来验证状态的监视器。  
   
   

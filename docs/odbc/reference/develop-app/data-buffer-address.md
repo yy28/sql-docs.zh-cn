@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d57b8ec52324dd4bec320b6179507ab3102e629
@@ -37,3 +38,4 @@ SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &dsDate, 0, &DateInd);
  中所述[Allocating 和释放缓冲区](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)部分中，延迟的缓冲区的地址必须保持有效，直到缓冲区是未绑定。  
   
  除非专门禁止，数据缓冲区的地址可以是 null 指针。 对于将数据发送到该驱动程序所使用的缓冲，这会导致要忽略通常包含在缓冲区中的信息的驱动程序。 对于用来从驱动程序检索数据的缓冲区，这会导致驱动程序不返回值。 在这两种情况下，该驱动程序将忽略相应的数据缓冲区长度自变量。
+

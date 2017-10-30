@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  它可以调用**SQLColumns**为 orderid 列。  
   
  应用程序无法轻松确定参数元数据的唯一情况是当用户输入的参数化的语句。 在这种情况下，在应用程序调用**SQLPrepare**准备语句， **SQLNumParams**以确定多个参数，和**SQLDescribeParam**来描述每个参数。 但是，如前所述，大多数数据源不提供了驱动程序来发现参数元数据，因此**SQLDescribeParam**不受广泛支持。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
 ms.openlocfilehash: b57b1e802969995f87d5663e5e7dbdc92700a9b5
@@ -24,7 +25,7 @@ ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-pdw-md.md)]
 
   显示或更改 PolyBase Hadoop 和 Azure blob 存储连接的全局配置设置。  
   

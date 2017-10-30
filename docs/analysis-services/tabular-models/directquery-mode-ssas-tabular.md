@@ -17,6 +17,7 @@ caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e6434897c1a69ee12d6ce13d0ba4c5d7e5558261
@@ -98,3 +99,4 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
 
 [DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
   
+

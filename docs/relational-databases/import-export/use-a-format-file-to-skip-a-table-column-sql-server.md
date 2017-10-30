@@ -17,11 +17,12 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.workload: On Demand
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
@@ -30,7 +31,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>示例表和数据文件  
  下列示例需要在 `myTestSkipCol` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dbo **架构下存在一个名为** 的表。 此表的创建方式如下所示：  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +49,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  若要将数据从 `myTestSkipCol2.dat` 大容量导入 `myTestSkipCol` 表，则格式化文件必须将第一个数据字段映射到 `Col1`，并跳过 `Col3`将第二个字段映射到 `Col2`。  
@@ -59,7 +59,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>创建默认非 XML 格式化文件  
  本主题使用默认非 XML 格式化文件，此文件是使用以下 `myTestSkipCol` bcp **命令为** 示例表创建的：  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +109,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>使用 BULK INSERT  
  此例使用的是本主题先前的“用于修改非 XML 格式化文件的方法”中创建的两个已修改非 XML 格式化文件之一。 在此例中，修改过的格式化文件名为 `C:\myTestSkipCol2.fmt`。 若要使用 `BULK INSERT` 大容量导入 `myTestSkipCol2.dat` 数据文件，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中执行以下代码：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +130,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>创建默认 XML 格式化文件  
  修改过的格式化文件示例基于 `myTestSkipCol` 示例表和数据文件，它们是在本主题先前的“示例表和数据文件”中创建的。 下面的 **bcp** 命令创建 `myTestSkipCol` 表的默认 XML 格式化文件：  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  生成的默认非 XML 格式化文件说明了数据文件字段与表列之间的一一对应关系，如下所示：  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +158,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>示例  
  本节中的示例使用了在本主题先前的“示例表和数据文件”中创建的 `myTestSkipCol` 示例表和 `myTestSkipCol2.dat` 示例数据文件。 为将数据从 `myTestSkipCol2.dat` 导入 `myTestSkipCol` 表，示例使用以下修改过的 XML 格式化文件 `myTestSkipCol2-x.xml`。 这基于本主题先前的“创建默认 XML 格式化文件”中创建的格式化文件。  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +177,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行下列代码：  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +194,7 @@ GO
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中，执行下列代码：  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  

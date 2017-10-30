@@ -70,7 +70,7 @@ MODEL = @model | model_literal
 
 参数参数用于指定用于评分或预测的可选用户定义参数。
 
-每个参数的名称是特定于模型类型。 例如，在 RevoScaleR rxPredict 函数支持参数_@computeResiduals位_以支持剩余的计算，则在评分逻辑回归模型时。 你可以将传递到值参数名称和它`PREDICT`函数。
+每个参数的名称是特定于模型类型。 例如，在 RevoScaleR rxPredict 函数支持参数_@computeResiduals位_以支持剩余的计算，则在评分逻辑回归模型时。  你可以将传递到值参数名称和它`PREDICT`函数。
 
 > [注意]此选项中的 SQL Server 自 2017 年的预发行版不支持而且包含仅用于向前兼容性。
 

@@ -14,10 +14,10 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cc5c653fe454b45148583f2e17654657a85b0a5
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="walkthrough-set-up-integration-services-scale-out"></a>演练：设置 Integration Services Scale Out
@@ -144,7 +144,7 @@ Scale Out Worker 注册到 Scale Out Master 之后，将从 SSISDB 的 **[catalo
 
 #### <a name="example"></a>示例
 此示例将启用辅助计算机 a 上缩放出。
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -155,4 +155,4 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 ## <a name="next-steps"></a>后续步骤
-已完成 Scale Out 功能的设置。 你现在可以在向外扩展运行包。 有关详细信息，请参阅[在 Integration Services (SSIS) Scale Out 中执行包](run-packages-in-integration-services-ssis-scale-out.md)。
+已完成 Scale Out 功能的设置。 你现在可以在向外扩展运行包。有关详细信息，请参阅[在 Integration Services (SSIS) Scale Out 中执行包](run-packages-in-integration-services-ssis-scale-out.md)。

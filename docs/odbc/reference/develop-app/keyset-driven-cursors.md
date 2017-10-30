@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  键集驱动游标通常通过创建一个包含结果集中的每一行的键的临时表实现。 因为光标还必须确定此表是否已更新行时，通常还包含具有行版本控制信息的列。  
   
  若要通过原始结果集滚动，键集驱动游标，请打开的临时表上的静态游标。 若要检索原始结果集中的行，光标首先从临时表中检索相应的密钥，然后检索行的当前值。 如果使用块游标，光标必须检索多个键和行。
+

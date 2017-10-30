@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 35467656ca049a2d81e0322dd4f938f09ccea943
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **FolderPosition**元素包含集合中的文件夹的默认文件夹元素的位置。 默认值**false**指示没有要使用的默认文件夹。  
   
   
+

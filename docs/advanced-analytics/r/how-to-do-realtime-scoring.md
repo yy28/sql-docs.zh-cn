@@ -1,7 +1,7 @@
 ---
 title: "如何执行实时评分或在 SQL Server 中的本机评分 |Microsoft 文档"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -12,16 +12,17 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机评分
 
-本主题提供有关如何执行实时评分和 SQL Server 2016 和 SQL Server 自 2017 年中的本机评分功能说明和示例代码。 同时实时评分和本机评分的目标是提高在小的批处理计分操作的性能。
+本主题提供有关如何执行实时评分和 SQL Server 2017 和 SQL Server 2016 中的本机评分功能说明和示例代码。 同时实时评分和本机评分的目标是提高在小的批处理计分操作的性能。
 
 同时实时评分和本机评分旨在让你使用机器学习模型，而无需安装。你需要做是获取预先训练的模型的兼容格式，并将其保存在 SQL Server 数据库中。
 
@@ -30,11 +31,11 @@ ms.lasthandoff: 09/01/2017
 快速的批处理预测支持以下选项：
 
 + **本机评分**： 在 SQL Server 2017 T-SQL 的预测函数
-+ **实时评分**： 使用 sp_rxPredict 存储在 SQL Server 2016 或 SQL Server 自 2017 年中的过程。
++ **实时评分**： 使用 sp\_rxPredict 存储过程在 SQL Server 2016 或 SQL Server 自 2017 年。
 
 > [!NOTE]
 > 在 SQL Server 2017 中建议的预测函数的使用。
-> 若要使用 sp_rxPredict，需要启用 SQLCLR 集成。 在启用此选项之前，请考虑的安全隐患。
+> 若要使用 sp\_rxPredict 要求你启用 SQLCLR 集成。 在启用此选项之前，请考虑的安全隐患。
 
 准备模型，然后生成评分的整个过程是非常相似：
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 
 + 如果使用 sp\_rxPredict，执行一些其他步骤所需。 请参阅[启用实时评分](#bkmk_enableRtScoring)。
 
-+ 在撰写本文时，只有 RevoScaleR 和 MicrosoftML 可以创建兼容的模型。 在将来可能会提供其他模型类型。 当前支持的算法的列表，请参阅[实时评分](../real-time-scoring.md)。
++ 在此期间，只有 RevoScaleR 和 MicrosoftML 可以创建兼容的模型。 在将来可能会提供其他模型类型。 当前支持的算法的列表，请参阅[实时评分](../real-time-scoring.md)。
 
 ### <a name="serialization-and-storage"></a>序列化和存储
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="native-scoring-with-predict"></a>本机与预测评分
 
-在此示例中，你将创建一个模型，然后从 T-SQL 调用实时预测函数。
+在此示例中，你将创建一个模型，，然后从 T-SQL 调用实时预测函数。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步骤 1. 准备和保存模型
 
@@ -159,7 +160,7 @@ FROM ml_models;
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +182,7 @@ go
 必须启用此功能，你想要用于评分的每个数据库。 服务器管理员应运行的命令行实用工具，RegisterRExt.exe，包含在 RevoScaleR 包。
 
 > [!NOTE]
-> 为了使实时评分来工作，需要在该实例中启用 SQL CLR 功能和数据库需要将标记为可信。 运行脚本时，为你执行这些操作。 但是，你应该考虑执行此操作的其他安全隐患。
+> 为了使实时评分来工作，需要在该实例中启用 SQL CLR 功能和数据库需要将标记为可信。 运行脚本时，为你执行这些操作。 但是，你应该考虑的其他安全隐患。
 
 1. 打开提升的命令提示符，并导航到 RegisterRExt.exe 所在的文件夹。 默认安装中，可以使用以下路径：
     
@@ -209,12 +210,9 @@ go
 > 
 > 在 SQL Server 自 2017 年，附加的安全措施是到位以避免使用 CLR 集成的问题。 这些度量值会施加额外的使用限制以及此存储过程。
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>步骤 2. 准备和保存模型
 
-Sp 所需的二进制格式\_rxPredict 是相同的预测。
-
-因此，在 R 代码中，包括调用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，并且请务必指定_realtimeScoringOnly_ = TRUE，如此示例所示：
+Sp 所需的二进制格式\_rxPredict 是相同的预测。 因此，在 R 代码中，包括调用[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)，并且请务必指定_realtimeScoringOnly_ = TRUE，如此示例所示：
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +220,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>步骤 3. 调用 sp_rxPredict
 
-就像任何其他存储的过程调用 sp_rxPredict。 在当前版本中，该存储的过程将只有两个参数：  _@model_ 为二进制格式中的模型和 _@inputData_ 中评分，使用的数据定义为有效的 SQL 查询.
+Sp 调用\_rxPredict 作为你像对任何其他存储过程。 在当前版本中，该存储的过程将只有两个参数：  _@model_ 为二进制格式中的模型和 _@inputData_ 中评分，使用的数据定义为有效的 SQL 查询.
 
 由于二进制格式是相同的预测函数使用，你可以使用模型和数据从前面的示例表。
 
@@ -238,17 +236,23 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> 调用`sp_rxPredict`如果评分的输入的数据不包含匹配的模型的要求的列将失败。 目前，支持只能使用以下的.NET 数据类型： 双精度型、 float、 short、 ushort，long、 ulong 和字符串。
+> Sp 调用\_rxPredict 失败如果评分的输入的数据不包含匹配的模型的要求的列。 目前，支持只能使用以下的.NET 数据类型： 双精度型、 float、 short、 ushort，long、 ulong 和字符串。
 > 
 > 因此，你可能需要使用实时评分之前筛选出你输入的数据中不支持的类型。
 > 
 > 有关相应 SQL 类型的信息，请参阅[SQL CLR 类型映射](https://msdn.microsoft.com/library/bb386947.aspx)或[映射 CLR 参数数据](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
 
-### <a name="disable-realtime-scoring"></a>禁用实时评分
+## <a name="disable-realtime-scoring"></a>禁用实时评分
 
 若要禁用实时评分功能，打开提升的命令提示符，并运行以下命令：`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>Microsoft R Server 的计分方法的实时
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>在 Microsoft R Server 或机器学习 Server 评分的实时
 
-有关实时信息评分在分布式环境中基于 Microsoft R Server，请参阅[publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice)函数中提供[mrsDeploy 包](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)，支持作为新评分 R Server 上运行的 web 服务的实时的发布模型。
+机器学习服务器支持从作为 web 服务发布的模型评分的分布式的实时。 有关详细信息，请参阅以下文章：
+
++ [机器学习服务器中的 web 服务有哪些？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [什么是操作化？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [将 Python 模型部署为具有 azureml 模型管理 sdk 的 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [将 R 代码块或实时模型发布为新的 web 服务](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [mrsdeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 

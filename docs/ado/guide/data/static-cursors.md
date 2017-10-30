@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  [只进游标](../../../ado/guide/data/forward-only-cursors.md)   
  [键集游标](../../../ado/guide/data/keyset-cursors.md)   
  [动态游标](../../../ado/guide/data/dynamic-cursors.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ Microsoft Excel 或文本驱动程序不支持 DELETE 语句。 请注意文本�
  DBASE 驱动程序不支持装箱用于删除"删除"的值的表。  
   
  对于从表中删除的行可能是驱动程序，表必须具有唯一索引 （Paradox 主键）。
+

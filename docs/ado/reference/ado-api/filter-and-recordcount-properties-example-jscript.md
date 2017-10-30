@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b1601aae7a80146e4c3b878ea4a9f72541d0cc9d
@@ -156,3 +157,4 @@ BODY {
  [筛选器属性](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

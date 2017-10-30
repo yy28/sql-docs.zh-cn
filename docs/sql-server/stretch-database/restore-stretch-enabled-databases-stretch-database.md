@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
 ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
@@ -73,7 +74,7 @@ ms.lasthandoff: 09/01/2017
   
     -   指定是否复制远程数据的副本并连接到副本（推荐）。  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

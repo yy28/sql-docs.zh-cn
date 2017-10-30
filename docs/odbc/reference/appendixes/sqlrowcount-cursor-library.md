@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  在应用程序调用**SQLRowCount**定位的更新或删除语句与相关的语句，光标库返回语句所影响的行数。  
   
  在应用程序调用**SQLRowCount**后**选择**语句，光标库返回 – 1。
+

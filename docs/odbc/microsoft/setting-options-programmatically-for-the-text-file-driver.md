@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d5037ca7d41470a2e9f7ce342ab49b08a6af0d74
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 |只读|将数据库指定为只读的。|若要动态设置此选项，使用**READONLY**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |扫描的行数|要扫描以确定每个列的数据类型的行数。 考虑到的类型的发现数据的最大数目确定的数据类型。 如果遇到数据猜测的列的数据类型不匹配，则将为 NULL 值返回的数据类型。<br /><br /> 文本驱动程序，你可能输入一个介于 1 到 32767 之间的要扫描; 的行数但是，此值将始终默认为 25。 （限制以外的数字将返回错误。）|若要动态设置此选项，使用**MAXSCANROWS**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|  
 |选择目录|显示一个对话框，你可以在其中选择包含你想要访问的文件的目录。<br /><br /> 介绍了当定义数据源目录指定你最常用文件的目录。 ODBC 驱动程序使用此目录作为默认目录。 将其他文件复制到此目录中，如果经常使用它们。 或者，可以限定在 SELECT 语句以目录名称的文件名称：`SELECT * FROM C:\MYDIR\EMP`<br /><br /> 或者，你可以通过指定新的默认目录**SQLSetConnectOption** SQL_CURRENT_QUALIFIER 选项的函数。|若要动态设置此选项，使用**DEFAULTDIR**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)。|
+

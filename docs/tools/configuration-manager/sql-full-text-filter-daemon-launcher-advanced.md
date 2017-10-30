@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b426a9ed4fdfcbf49da990e8d0443b11c9e8dc7
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  默认情况下， **“高级”** 选项卡上不出现任何属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
   
+

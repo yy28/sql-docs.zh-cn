@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   发送到数据源执行的语句和已转换的参数值。  
   
     -   返回任何错误。 其中包括序列化或状态的诊断，例如 SQLSTATE 24000 （无效的游标状态）、 SQLSTATE 42000 （语法错误或访问冲突），如语法错误和语义错误如 SQLSTATE 42S02 （基础表或视图未找到）。
+

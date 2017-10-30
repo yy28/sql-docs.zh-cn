@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
@@ -43,3 +44,4 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  包含在默认的子项的默认驱动程序可以引用默认用户 DSN 或默认系统 DSN。 如果默认用户 DSN 和默认系统 DSN 已创建，因此它可能不是有效条目首先创建 DSN DSN 最后，创建由确定默认驱动程序。
+

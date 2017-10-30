@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3f6211095c5f2a1506b31ca45846c15deb619b2
@@ -503,3 +504,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="v"></a>V  
  **视图**  
  请看以下一个或多个表中的数据的一种替代方式。 通常为一个或多个表中的列子集创建视图。 ODBC 中, 视图是通常等效于表。
+

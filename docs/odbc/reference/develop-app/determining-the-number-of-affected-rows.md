@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b2f030be011864be17c8539d8ab94f6980f0f791
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  如果执行一批 SQL 语句，则受影响的行的计数可能是批处理中的所有语句的总数或个批处理中每个语句的计数。 有关详细信息，请参阅[SQL 语句的批处理](../../../odbc/reference/develop-app/batches-of-sql-statements.md)和[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
  在诊断与语句句柄关联的区域中的 SQL_DIAG_ROW_COUNT 诊断标头字段中还返回受影响的行数。 但是，此字段中的数据重置后每个函数调用上相同的语句句柄，而返回的值**SQLRowCount**之前调用中保持不变**SQLBulkOperations**， **SQLExecute**， **SQLExecDirect**， **SQLPrepare**，或**SQLSetPos**。
+

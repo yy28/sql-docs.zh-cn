@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   对于关闭游标的事务边界的数据源，游标库关闭游标，并删除缓存的连接上的所有语句。  
   
 -   对于删除已准备的语句在事务边界的数据源，应用程序必须 reprepare 之前 reexecuting 它们连接上的所有已准备的语句。
+

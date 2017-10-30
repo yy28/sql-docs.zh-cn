@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  转换选项是一个值，可以仅由特定转换 DLL 解释。 例如，如果转换 DLL 将转换之间不同的代码页中，选项可能会产生应用程序和数据源使用的代码页的数目。 没有为翻译 DLL 要求必须使用转换选项。  
   
  后指定 DLL 进行转换时，该驱动程序来加载它并调用它会将所有应用程序和数据源之间流动的数据转换。 这包括所有 SQL 语句和字符参数发送到数据源，以及从数据源中检索所有字符结果、 字符元数据，例如列名称，以及错误消息。 连接数据不会进行转换，因为后应用程序已连接到数据源不直到加载转换 DLL。
+

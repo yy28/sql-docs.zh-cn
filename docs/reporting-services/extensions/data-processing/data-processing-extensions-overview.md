@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
@@ -90,3 +91,4 @@ Reporting Services 数据处理扩展插件体系结构
  [Reporting Services 扩展库](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

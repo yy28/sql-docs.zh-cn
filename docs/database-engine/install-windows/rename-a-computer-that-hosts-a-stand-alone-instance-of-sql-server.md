@@ -82,7 +82,7 @@ ms.lasthandoff: 09/12/2017
   
 ## <a name="verify-renaming-operation"></a>验证重命名操作  
   
--   通过 @@SERVERNAME 或 sys.servers 选择信息。 @@SERVERNAME 函数将返回新名称，sys.servers 表将显示该新名称。 以下示例演示了如何使用 @@SERVERNAME。  
+-   通过 @@SERVERNAME 或 sys.servers 选择信息。 @@SERVERNAME 函数将返回新名称，sys.servers 表将显示该新名称。 以下示例演示了如何使用 @@SERVERNAME。   
   
     ```  
     SELECT @@SERVERNAME AS 'Server Name';  

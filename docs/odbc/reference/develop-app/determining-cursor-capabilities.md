@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 或 SQL_STATIC_CURSOR_ATTRIBUTES2 （具体取决于游标的类型）。 列出是否静态和键集驱动游标可以检测到其自己的更新、 删除和插入。  
   
  应用程序可以确定光标功能在运行时通过调用**SQLGetInfo**使用以下选项。 这通常是通过泛型应用程序。 光标功能还可以在过程中确定应用程序开发和使用硬编码到应用程序。 这种情况通常出现由垂直和自定义应用程序，但也可以如 ODBC 游标库使用的客户端游标实现的泛型应用程序。
+

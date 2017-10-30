@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  默认值的概念 IRD 字段无效。 只有在没有与之关联的已准备或执行语句时，应用程序可以获得对 IRD 的字段的访问。  
   
  仅在由驱动程序自动填充了 IPD 后定义 IPD 某些字段。 如果不是，它们是未定义。 这些字段是 SQL_DESC_CASE_SENSITIVE、 SQL_DESC_FIXED_PREC_SCALE、 SQL_DESC_TYPE_NAME、 SQL_DESC_UNSIGNED 和 SQL_DESC_LOCAL_TYPE_NAME。
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75659769b4d0318fa21494a3f2ca3262836c69eb
@@ -36,3 +37,4 @@ SQLNET.AUTHENTICATION_SERVICES = (none)
 ```  
   
  这将禁用安全网络服务，因此你可以使用匿名身份验证进行连接。
+

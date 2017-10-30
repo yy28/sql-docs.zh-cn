@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
@@ -72,3 +73,4 @@ TOM 是基础 AMO 基础结构，其中还可容纳多维和表格数据库兼�
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
+

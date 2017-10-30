@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ WideWorldImportersDW 具有任意增加数据大小，为了性能测试，例�
 大约所需的行数插入到`Fact.Sale`2012 年中的表。 该过程人为地限制为 50000 每天的行数。 这可能会更改，但存在是为了避免意外 overinflations 的表。
 
 此外，过程所适用聚集列存储索引，如果未已应用。
+

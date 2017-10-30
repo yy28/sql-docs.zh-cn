@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
@@ -97,7 +97,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 > [!IMPORTANT]
 > 仅支持 RTM、 RC2 和 RC1 之间此时进行降级。
 
-## <a id="repositories"></a>更改源存储库
+## <a id="repositories"></a>配置源存储库
 
 当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server。 请务必请注意，有两种主要类型的每个分布的存储库：
 
@@ -110,9 +110,9 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 > [!NOTE]
 > 更新从 CU 的 GDR 发行版的版本不支持。
 
-若要更改从 CU 存储库的 GDR 存储库，请使用以下步骤：
+若要配置的 CU 或 GDR 存储库，请使用以下步骤：
 
-1. 删除以前配置的预览存储库。
+1. 如有必要，删除以前配置的存储库。
 
    | 平台 | 存储库删除命令 |
    |-----|-----|

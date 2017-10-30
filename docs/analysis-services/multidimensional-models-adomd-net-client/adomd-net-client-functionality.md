@@ -20,11 +20,12 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b86b019de9a767402814afa4d2f6f2903c983b2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0a1047fbccf3e9437c3160891f502f9e2838c34a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 客户端功能
@@ -43,7 +44,7 @@ ms.lasthandoff: 09/01/2017
  **更改分析数据的结构**  
  ADOMD.NET 还可用于实际更改分析数据存储区的结构。 虽然这通常是通过分析管理对象 (AMO) 对象模型进行的，但您也可以使用 ADOMD.NET 来发送 Analysis Services 脚本语言 (ASSL) 命令，从而创建、更改或删除服务器中的对象。  
   
- 有关详细信息：[执行命令对分析数据源](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)，[使用分析管理对象 & #40; 进行开发AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [analysis Services 脚本语言 & #40;ASSL 为 XMLA & #41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 有关详细信息：[执行命令对分析数据源](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)，[使用分析管理对象 &#40; 进行开发AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  检索元数据、检索数据和更改数据结构均发生在典型 ADOMD.NET 应用程序的工作流中的特定点。  
   
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/01/2017
  [ADOMD.NET 客户端编程](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
+

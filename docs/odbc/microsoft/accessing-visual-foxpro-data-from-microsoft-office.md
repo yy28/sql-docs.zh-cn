@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |使用 Microsoft Access|[查询和更新 Visual FoxPro 数据的访问](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Visual FoxPro 数据导入 Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |使用 Microsoft Excel|[从 Microsoft Excel 访问 Visual FoxPro 数据源](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [将数据导入从 Visual FoxPro 数据库的 Microsoft Excel](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |使用 Microsoft Word|[创建邮件使用 Visual FoxPro 数据的 Microsoft Word 中的标签](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

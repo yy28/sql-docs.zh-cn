@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
@@ -127,7 +128,7 @@ Sybase 的 SSMA 2014 年 4 月版包含以下更改：
 Sybase 的 SSMA 2012 年 1 月版包含以下更改：  
   
 -   添加了对回滚触发器转换的支持。  
--   为转换提供修复@ROWCOUNT和 @@ERROR在同一组语句。  
+-   为转换提供修复 @@ROWCOUNT 和 @@ERROR 在同一组语句。  
   
 ## <a name="july-2011"></a>2011 年 7 月  
 Sybase 的 SSMA 2011 年 7 月版包含以下更改：  
@@ -207,3 +208,4 @@ Sybase 的 SSMA 2006 年 11 月版包含以下更改：
   
 ## <a name="see-also"></a>另请参阅  
 [用于 Sybase &#40; 入门 SSMASybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+

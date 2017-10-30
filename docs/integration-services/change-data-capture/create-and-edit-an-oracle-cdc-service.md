@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
@@ -60,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      可以将本地或域 Windows 帐户用于该服务帐户。 在此情况下，必须为该帐户输入 **“密码”** 。 该帐户可以用于本地主机或域帐户。 请确保在 Windows 控制面板中使用本地服务更改帐户时更新密码。  
   
- **服务器名称**： 选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到实例 (例如， ** \\ \\< 计算机名 >\\< 实例名称 >**)。 默认情况下，显示上次连接到的服务器实例。  
+ **服务器名称**： 选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到实例 (例如，  **\\ \\< 计算机名 >\\< 实例名称 >**)。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
  选择下列选项之一：  
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/26/2017
  [如何创建和编辑 CDC 服务](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ada17f95371246e3b43e1e9482ab9595f85a8db1
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  最大互操作性，应用程序应生成将通过执行更新与定位的 update 语句的结果集**选择更新**语句。 虽然游标库不需要它，但它仍需要由支持定位的更新语句的大多数数据源。  
   
  游标库忽略中的列**FOR UPDATE**子句**选择 FOR UPDATE**语句; 它会此子句删除然后再将该语句传递到驱动程序。 在光标库中，SQL_ATTR_CONCURRENCY 语句属性的以及在上一节中所述的限制，控件是否在结果中的列设置可以更新。
+

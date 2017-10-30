@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   因为该驱动程序不解释中的值*ParameterValuePtr*参数**SQLBindParameter**对于数据在执行参数，如果应用程序提供了指向数组中， **SQLParamData**不提取，返回到应用程序的此数组的元素。 相反，它将返回的标量值应用程序必须提供。 这意味着返回的值**SQLParamData**不是足够，若要为其指定参数应用程序需要发送数据; 应用程序还需要考虑的当前行号。  
   
      当只某些参数的数组的元素执行中的数据参数，应用程序必须传递一个数组中的地址*ParameterValuePtr*包含元素的所有参数。 此数组被解释通常不是执行中的数据参数的参数。 对于数据在执行参数，值的**SQLParamData**提供对应用程序，通常可以使用以确定该驱动程序正在请求在此情况下的数据，这始终是数组的地址。
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  执行该语句后，驱动程序绑定到这些参数的变量中存储的返回的值的输入/输出和输出参数。 这些返回值没有保证之后已提取过程返回的所有结果之前设置和**SQLMoreResults**已返回 SQL_NO_DATA。 如果执行的语句会导致出现错误，将不确定的输入/输出参数缓冲区或输出参数缓冲区的内容。  
   
  应用程序调用**SQLProcedure**以确定过程是否具有一个返回值。 它调用**SQLProcedureColumns**以确定每个过程参数的类型 （返回值，输入、 输入/输出，或输出）。
+

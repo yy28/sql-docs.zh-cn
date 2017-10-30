@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f37ab932ef230d29a5db23aec920230de0443e37
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  模块可以看作对象库链接到应用程序代码。 但是，完全过程和应用程序的其余部分如何链接是依赖于实现的。 例如，无法为对象代码编译过程，并将其直接链接到应用程序代码、 无法进行编译和存储上的 DBMS 和调用访问计划标识符放置在应用程序代码中，或无法在运行时对它们进行解释。  
   
  模块的主要优点是它们完全分隔的编程语言中的 SQL 语句。 从理论上讲，它应能更改而无需更改另一个，并只需将它们重新。
+

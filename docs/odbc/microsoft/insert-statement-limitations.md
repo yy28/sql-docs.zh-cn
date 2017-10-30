@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 ```  
   
  当使用文本驱动程序时，可以用前导空格填充所有列的值。 任何行的长度必须小于或等于 65,543 字节。
+

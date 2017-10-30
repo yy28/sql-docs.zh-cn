@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
@@ -113,3 +114,4 @@ ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使�
  本部分包含以下主题。  
   
 -   [块状游标可滚动游标，对于 ODBC 3.x 应用程序的向后兼容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
+

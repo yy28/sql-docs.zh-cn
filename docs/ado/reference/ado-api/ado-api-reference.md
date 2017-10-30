@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ ADO 文档的此部分包含有关每个 ADO 对象、 集合、 属性、 动�
  [使用 ADO 编程附录 c:](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)
+

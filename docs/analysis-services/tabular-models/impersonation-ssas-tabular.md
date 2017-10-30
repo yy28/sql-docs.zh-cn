@@ -1,7 +1,7 @@
 ---
-title: "模拟 (SSAS 表格) |Microsoft 文档"
+title: "Analysis Services 表格模型中的模拟 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/04/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,91 +16,84 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: aef09b5327408701f15e484bbcea1cab9d82622b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
-  本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
+# <a name="impersonation"></a>模拟 
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  本主题提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
+
+##  <a name="bkmk_conf_imp_info"></a>配置模拟  
+ 其中，和在什么上下文中存在的模型确定如何配置模拟信息。 创建新的模型项目时，模拟时连接到要导入数据的数据源配置 SQL Server Data Tools (SSDT) 中。 一旦部署某一模型，可以通过使用 SQL Server Management Studio (SSMS) 在模型数据库连接字符串属性中配置模拟。 对于 Azure Analysis Services 中的表格模型，你可以使用 SSMS 或**视为： 脚本**基于浏览器的设计器编辑 JSON 中的 Model.bim 文件中的模式。
   
- 本文包含以下各节：  
+##  <a name="bkmk_how_imper"></a>如何使用模拟  
+  “模拟”是服务器应用程序（例如 Analysis Services）模拟某一客户端应用程序的身份的能力。 可以执行 analysis Services 使用服务帐户运行，但是，当服务器建立了连接到数据源，它使用模拟以便访问检查数据导入和处理。  
   
--   [优势](#bkmk_how_imper)  
+ 用于模拟凭据不同于你当前在使用登录的凭据。 登录的用户凭据将用于特定客户端操作，在创作模型时。  
   
--   [选项](#bkmk_imp_info_options)  
-  
--   [Security](#bkmk_impers_sec)  
-  
--   [导入模型时的模拟](#bkmk_imp_newmodel)  
-  
--   [配置模拟](#bkmk_conf_imp_info)  
-  
-##  <a name="bkmk_how_imper"></a> 优势  
-  “模拟”是服务器应用程序（例如 Analysis Services）模拟某一客户端应用程序的身份的能力。 但在服务器建立与数据源的连接时，Analysis Services 使用服务帐户运行，它使用模拟以便可以执行针对数据导入和处理的访问检查。  
-  
- 用于模拟的凭据不同于当前登录的用户所采用的凭据。 在创作模型时，将登录的用户凭据用于特定的客户端操作。  
-  
- 理解指定和保护模拟凭据的方式以及当前登录用户的凭据和其他凭据所用于的上下文之间的差异是十分重要的。  
+ 务必要了解如何指定和保护，以及在哪些这两个登录的上下文之间的差异上模拟凭据使用用户凭据，并且使用其他模拟凭据时。  
   
  **理解服务器端凭据**  
-  
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，通过使用“表导入向导”中的 **“模拟信息”** 页，或者通过在 **“现有连接”** 对话框中编辑现有的数据源连接，为每个数据源指定凭据。  
-  
- 在导入或处理数据时，使用在 **“模拟信息”** 页中指定的凭据连接到数据源并提取数据。 这是在客户端应用程序的上下文中运行的“服务器端”  操作，因为承载工作区数据库的 Analysis Services 服务器连接到数据源并提取数据。  
+ 
+导入或处理数据时模拟凭据用于连接到数据源并提取数据。 这是*服务器端*因为承载工作区数据库的 Analysis Services 服务器连接到数据源并提取数据的客户端应用程序的上下文中运行的操作。  
   
  在您将某个模型部署到 Analysis Services 服务器时，如果在部署该模型时工作区数据库处于内存中，则凭据将传递到该模型部署到的 Analysis Services 服务器。 在任何时候用户凭据都不要存储在磁盘上。  
   
- 在某个已部署的模型处理来自某个数据源的数据时，在内存中数据库中保持的模拟凭据将用于连接到该数据源并提取数据。 因为此过程是由管理模型数据库的 Analysis Services 服务器处理的，所以这个操作也是服务器端操作。  
+ 当已部署的模型处理从数据源的数据时，保留在内存中数据库的模拟凭据用于连接到数据源并提取数据。 因为此过程由管理模型数据库的 Analysis Services 服务器处理，这是试服务器端操作。  
   
- **理解客户端凭据**  
+ **了解客户端凭据**  
   
- 当您创作一个新模型或者向现有模型添加数据源时，使用“表导入向导”连接到数据源并且选择要导入到模型中的表和视图。 在“表导入向导”的“选择表和视图”页中，可使用“预览并筛选”功能查看将导入的数据的示例（限制为 50 行）。 您还可以指定筛选器以便排除不需要包括在模型中的数据。  
+ 当创作一个新模型或将数据源添加到现有模型，您连接到数据源，并选择要导入到模型表和视图。 表导入向导或获取 Data\Query 设计器预览和筛选功能，请参阅你导入的数据的示例。 您还可以指定筛选器以便排除不需要包括在模型中的数据。  
   
- 同样，对于已创建的现有模型，您可以使用 **“编辑表属性”** 对话框预览并筛选导入到表中的数据。 此处的预览和筛选功能在功用上与“表导入向导”的 **“选择表和视图”** 页上的 **“预览并筛选”** 功能相同。  
+ 同样，对于已创建的现有模型，你使用**表属性**对话框预览并筛选导入到表的数据。  
   
- “预览并筛选”功能与“表属性”和“分区管理器”对话框均为进程中客户端操作；也就是说，在此操作过程中所做的工作不同于连接到数据源和从数据源提取数据的方式；后两种操作都是服务器端操作。 用于预览和筛选数据的凭据是用户当前登录所用的凭据。 客户端操作始终使用当前用户的 Windows 凭据来连接到数据源。  
+ 预览并筛选功能中，**表属性**，和**分区管理器**对话框处于进程内*客户端*操作; 即，已在此期间执行的操作操作与数据源连接到的方式不同，从数据源; 提取数据服务器端操作。 用于预览和筛选数据的凭据是用户当前登录所用的凭据。 事实上，你的凭据。 
   
- 由于在服务器端和客户端操作期间对凭据的使用是分隔开来的，因此，可能导致用户使用“预览并筛选”功能或“表属性”对话框所看到的内容（客户端操作）与导入或处理期间提取的数据（服务器端操作）出现不匹配。 如果当前登录的用户所用的凭据和指定的模拟凭据不同，则根据数据源所要求的凭据，在 **“预览并筛选”** 功能或 **“表属性”** 对话框中看到的数据与在导入或处理期间提取的数据可能会不同。  
+ 在服务器端期间使用的凭据分隔和客户端操作可能会导致中看到的内容以及哪些数据提取在导入或处理 （服务器端操作） 期间不匹配。 如果凭据您当前登录所使用模拟指定的凭据不同，数据会出现在预览并筛选功能或**表属性**对话框和导入过程中提取的数据或过程可能会不同，具体取决于所需的数据源的凭据。  
   
 > [!IMPORTANT]  
->  在创作模型时，请确保当前登录的用户所用的凭据和为模拟指定的凭据具有足够的权限来从数据源提取数据。  
+>  在创作模型时，确保在使用登录的凭据和为模拟指定的凭据具有足够的权限从数据源提取数据。  
   
 ##  <a name="bkmk_imp_info_options"></a> 选项  
- 配置模拟时，或者在 Analysis Services 中为现有数据源连接编辑属性时，您可以指定以下选项之一：  
+ 配置模拟时，或者编辑现有数据源连接属性时，指定以下选项之一：  
   
-|选项|ImpersonationMode*|Description|  
-|------------|-------------------------|-----------------|  
-|**特定的 Windows 用户名和密码***\*|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
-|**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
+**1400 和更高版本的表格模型**
+ 
+|选项|Description|  
+|------------|-----------------|  
+|**模拟帐户**|指定模型使用 Windows 用户帐户导入或处理从数据源的数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。|  
+|**模拟当前用户**|指定应从数据源使用的发送请求的用户的标识访问数据。 此模式下仅适用于直接查询模式。|  
+|**模拟标识**|指定一个用户名，以访问数据源，但并不需要指定该帐户的密码。 Kerberos 委派已启用并指定应使用 S4U 身份验证，仅适用于此模式。|  
+|**模拟服务帐户**|指定模型使用与管理该模型的 Analysis Services 服务实例关联的安全凭据。|  
+|**模拟无人参与的帐户**|指定 Analysis Services 引擎应使用预配置的无人参与的帐户来访问数据。|  
+
+
+**表格 1200年模型**
+ 
+|选项|Description|  
+|------------|-----------------|  
+|**特定 Windows 用户名和密码**|此选项指定模型使用 Windows 用户帐户导入或处理从数据源的数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
+|**服务帐户**|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
- *ImpersonationMode 指定数据源上的 [DataSourceImpersonationInfo 元素 (ASSL)](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) 属性。  
-  
- \*\*使用此选项，如果工作区数据库删除从内存，由于重新启动时或**工作区保持期**属性设置为**从内存卸载**或**从删除工作区**，并将模型项目关闭，请在后续的会话中，如果你尝试处理表数据，则系统将提示输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
-  
-##  <a name="bkmk_impers_sec"></a> Security  
- 用于模拟的凭据由与 Analysis Services 服务器相关联的 xVelocity 内存中分析引擎 (VertiPaq)™ 保持在内存中（该服务器管理工作区数据库或已部署的模型）。  任何时候都不要将凭据写入磁盘中。 如果在部署模型时工作区数据库不在内存中，则系统将提示用户输入用于连接到数据源和提取数据的凭据。  
+##  <a name="bkmk_impers_sec"></a> 安全性  
+ 与模拟一起使用的凭据是持久的内存中由 VertiPaq™ 引擎。 凭据永远不会写入到磁盘。 如果部署模型时，工作区数据库不是内存中，被提示用户输入用于连接到数据源并提取数据的凭据。  
   
 > [!NOTE]  
->  建议您为模拟凭据指定 Windows 用户帐户和密码。 可以将 Windows 用户帐户配置为连接到数据源和从数据源读取数据所需的最低权限。  
+>  建议您为模拟凭据指定 Windows 用户帐户和密码。 Windows 用户帐户可以配置为使用连接到和从数据源读取数据所需的最低权限。  
   
-##  <a name="bkmk_imp_newmodel"></a> 导入模型时的模拟  
- 与可以使用若干不同的模拟模式支持进程外数据收集的表格模型不同， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 仅使用一个模式，即 ImpersonateCurrentUser。 因为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 始终在进程中运行，所以，它使用当前登录的用户的凭据连接到数据源。 对于表格模型，当前登录的用户的凭据仅用于“表导入向导”中的 **“预览并筛选”** 功能以及在查看 **“表属性”**时。 在将数据导入或处理到工作区数据库中或者在将数据导入或处理到已部署的模型中时，使用模拟凭据。  
-  
- 在通过导入现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿来创建新模型时，默认情况下，模型设计器将对模拟进行配置以便使用服务帐户 (ImpersonateServiceAccount)。 建议你将从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入的模型上的模拟凭据更改为 Windows 用户帐户。 在导入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或者在模型设计器中创建新模型后，你可以通过使用“现有连接”  对话框更改凭据。  
-  
- 在通过从 Analysis Services 服务器上的现有模型导入来创建新模型时，模拟凭据将从现有模型数据库传递到新的模型工作区数据库。 如有必要，您可以使用 **“现有连接”** 对话框更改新模型上的凭据。  
-  
-##  <a name="bkmk_conf_imp_info"></a> 配置模拟  
- 模型所处的环境将确定配置模拟信息的方式。 对于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作的模型，您可以在“表导入向导”的 **“模拟信息”** 页中配置模拟信息，也可以通过在 **“现有连接”** 对话框上编辑数据源连接来配置模拟信息。 若要查看现有连接，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单中单击 **“现有连接”**。  
-  
- 对于部署到 Analysis Services 服务器的模型，可在 SSMS 的“连接属性” > “模拟信息”中配置模拟信息。  
+
   
 ## <a name="see-also"></a>另请参阅  
- [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [数据源（SSAS 表格）](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [表格模型解决方案部署（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [数据源](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
+ [表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
+

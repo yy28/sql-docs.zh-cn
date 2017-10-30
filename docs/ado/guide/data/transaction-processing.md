@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ A*事务*分隔的开头和末尾的数据访问操作通过连接执行一系�
   
 ## <a name="nested-transactions"></a>嵌套的事务  
  对于提供程序支持嵌套的事务，调用**BeginTrans**内打开的事务的方法会启动一个新的嵌套事务。 返回值指示的嵌套级别:"1"的返回值指示你已打开了顶级事务 （即，事务不嵌套在另一个事务），"2"指示打开第二个级别的事务 (事务嵌套在顶级事务），依次类推。 调用**CommitTrans**或**不**影响仅最新打开的事务; 你必须先关闭或之前可以解决任何更高级别的事务回滚当前事务。
+

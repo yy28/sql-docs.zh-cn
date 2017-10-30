@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  关键字 / 值对中**SQLDriverConnect**必须遵循某些语法规则。 关键字和它们的值不应包含**[] {} （)，;？\*= ！ @**字符。 值**DSN**关键字不能只包含空格，并且不包含前导空格。 由于注册表语法中，关键字和数据源名称不能包含反斜杠 (\\) 字符。 中的关键字 / 值对的等号两侧不允许有空格。  
   
  **FILEDSN**关键字可以在调用中使用**SQLDriverConnect**以指定包含数据源信息的文件的名称 (请参阅[连接使用的文件数据源](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)，本部分中更高版本)。 **SAVEFILE**关键字可用来指定在其中进行成功的连接的关键字 / 值对的.dsn 文件的名称通过调用**SQLDriverConnect**将保存。 有关文件数据源的详细信息，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。
+

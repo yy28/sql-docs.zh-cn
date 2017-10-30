@@ -33,6 +33,7 @@ caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
@@ -298,14 +299,14 @@ ON
 ##  <a name="LimitRest"></a> 限制和局限  
 
 **列存储索引中的每个列必须是以下常见业务数据类型之一：** 
--   datetimeoffset [( * n * )]  
--   datetime2 [( * n * )]  
+-   datetimeoffset [(  *n*  )]  
+-   datetime2 [(  *n*  )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   时间 [( * n * )]  
--   float [( * n * )]  
--   实际 [( * n * )]  
+-   时间 [(  *n*  )]  
+-   float [(  *n*  )]  
+-   实际 [(  *n*  )]  
 -   十进制 [(*精度*[ *，缩放*] **)** ]
 -   数字 [(*精度*[ *，缩放*] **)** ]    
 -   money  
@@ -315,15 +316,15 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [( * n * )] 
+-   nvarchar [(  *n*  )] 
 -   nvarchar (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)   
--   nchar [( * n * )]  
--   varchar [( * n * )]  
+-   nchar [(  *n*  )]  
+-   varchar [(  *n*  )]  
 -   varchar （max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   char [( * n * )]  
--   varbinary [( * n * )] 
+-   char [(  *n*  )]  
+-   varbinary [(  *n*  )] 
 -   varbinary (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   二进制 [( * n * )]  
+-   二进制 [(  *n*  )]  
 -   uniqueidentifier (适用于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]及更高版本)
   
 如果基础表具有列存储索引不支持数据类型的列，则必须省略该列从非聚集列存储索引。  
@@ -538,7 +539,7 @@ ON MyFactTable;
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重新生成整个聚集列存储索引进行碎片整理  
    适用于： SQL Server 2014  
   
- 有两种方法可以重新生成完整的聚集列存储索引。 你可以使用创建聚集列存储索引，或[ALTER INDEX & #40;Transact SQL & #41;](../../t-sql/statements/alter-index-transact-sql.md)和重新生成选项。 这两种方法可以得到相同的结果。  
+ 有两种方法可以重新生成完整的聚集列存储索引。 你可以使用创建聚集列存储索引，或[ALTER INDEX &#40;Transact SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md)和重新生成选项。 这两种方法可以得到相同的结果。  
   
 > [!NOTE]  
 >  从 SQL Server 2016 开始，使用 ALTER INDEX REORGANIZE 而不是重新生成与在此示例中所述的方法。  

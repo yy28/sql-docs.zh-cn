@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: dbe685552f38f7da644d4e57d63fe47a1c400da6
@@ -95,7 +96,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   
@@ -118,3 +119,4 @@ ms.lasthandoff: 08/03/2017
  [脚本任务](../../integration-services/control-flow/script-task.md)  
   
   
+

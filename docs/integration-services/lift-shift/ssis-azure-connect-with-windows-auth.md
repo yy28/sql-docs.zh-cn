@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 25113093ccd068a9afe661e160ae3319025b7534
+ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
+ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="connect-to-on-premises-data-sources-with-windows-authentication"></a>连接到本地数据源使用 Windows 身份验证
@@ -21,17 +21,34 @@ ms.lasthandoff: 09/25/2017
 提供当你按照本文中的步骤的域凭据应用到 SQL Database 实例上的所有包执行，直至你更改或删除凭据。
 
 ## <a name="prerequisite"></a>前提条件
-为 Windows 身份验证设置域凭据之前，请检查非加入域的计算机可以连接到你本地数据源中`runas`模式。 例如，若要检查你是否可以连接到本地 SQL Server，请执行以下操作：
+为 Windows 身份验证设置域凭据之前，请检查非加入域的计算机可以连接到你本地数据源中`runas`模式。
 
-1.  若要运行此测试，fFind 非加入域的计算机。
+### <a name="connecting-to-sql-server"></a>连接到 SQL Server
+若要检查你是否可以连接到本地 SQL Server，请执行以下操作：
+
+1.  若要运行此测试，查找非加入域的计算机。
 
 2.  在非加入域的计算机上，运行以下命令以启动 SQL Server Management Studio (SSMS) 具有你想要使用的域凭据：
 
-   ```cmd
-   runas.exe /netonly /user:<domain>\<username> SSMS.exe
-   ```
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> SSMS.exe
+    ```
 
 3.  从 SSMS 中，请检查你是否可以连接到你想要使用本地 SQL Server。
+
+### <a name="connecting-to-a-file-share"></a>连接到文件共享
+若要检查你是否能够连接到本地文件共享，请执行以下操作：
+
+1.  若要运行此测试，查找非加入域的计算机。
+
+2.  在非加入域的计算机上，运行以下命令。 此命令打开的命令 prommpt 与所需的域凭据，然后测试与文件共享连接通过获取目录列表。
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> cmd.exe
+    dir \\fileshare
+    ```
+
+3.  检查是否返回目录列表的本地文件你想要使用的共享。
 
 ## <a name="provide-domain-credentials"></a>提供域凭据
 若要提供让使用 Windows 身份验证连接到本地数据源的包的域凭据，请执行以下操作：
@@ -73,6 +90,21 @@ ms.lasthandoff: 09/25/2017
 
     ```sql
     catalog.set_execution_credential @user='', @domain='', @password=''
+    ```
+
+## <a name="connect-to-file-shares"></a>连接到文件共享
+你可以使用 Windows 身份验证连接到 Azure SSIS 集成运行库在本地和 Azure 虚拟机上的相同虚拟网络中的文件共享。
+
+若要连接到 Azure 的虚拟机上的文件共享，请执行以下操作：
+
+1.  使用 SQL Server Management Studio (SSMS) 或另一种工具，连接到 SQL 数据库承载 SSIS 目录数据库 (SSISDB)。
+
+2.  使用为当前数据库的 SSISDB，打开查询窗口。
+
+3.  运行以下存储的过程：
+
+    ```sql
+    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
 ## <a name="next-steps"></a>后续步骤

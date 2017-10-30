@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  你现在可以使用 Microsoft Access 操作导入 Visual FoxPro 表中的数据。 你导入的数据是在 Visual FoxPro; 中存储的数据的快照对导入数据所做的更改不发送回 Visual FoxPro 数据源中。  
   
  如果您希望更改可在 Microsoft Access，若要更改 Visual FoxPro 数据源上的数据，请参阅[查询和 Microsoft Access 更新 Visual FoxPro 数据](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)。
+

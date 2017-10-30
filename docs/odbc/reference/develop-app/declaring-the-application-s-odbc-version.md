@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  按照 ODBC 3 的应用程序。*x*规范必须使用条件代码以避免使用 ODBC 3 到新的功能。*x*使用 ODBC 2 时。*x*驱动程序。 ODBC 2。*x*驱动程序不支持 ODBC 3 到新的功能。*x*只是因为应用程序声明，它遵循 ODBC 3。*x*规范。 此外，ODBC 3。*x*驱动程序未执行停止支持 ODBC 3 到新的功能。*x*只是因为应用程序声明，它遵循 ODBC 2。*x*规范。
+

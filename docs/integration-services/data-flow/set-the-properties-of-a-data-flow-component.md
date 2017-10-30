@@ -16,6 +16,7 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
@@ -111,7 +112,7 @@ ms.lasthandoff: 09/26/2017
   
  本主题列出并描述了数据流对象的通用属性。  
   
--   组件[](#components)  
+-   [组件](#components)  
   
 -   [输入](#inputs)  
   
@@ -202,7 +203,7 @@ ms.lasthandoff: 09/26/2017
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|字符串|用于标识输出的字符串。|  
 |IsErrorOut|Boolean|指示输出是否为错误输出。|  
-|IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\*重要\* \* **的值设置**IsSorted**属性**True**数据不排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值为 **False**。<br /><br /> **\*\*重要\* \*** 的值设置**IsSorted**属性**True**数据不排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名称|字符串|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 **Fail component**、 **Ignore failure**和 **Redirect row**。|  

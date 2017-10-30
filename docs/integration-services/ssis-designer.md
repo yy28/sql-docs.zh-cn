@@ -1,5 +1,5 @@
 ---
-title: "SSIS 设计器 |Microsoft 文档"
+title: "SSIS 设计器 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  下面的关系图显示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器和 **“工具箱”** 窗口。  
   
- ![屏幕快照的 SSIS 设计器和工具箱](../integration-services/media/denali-designerandtoolbox.gif "屏幕截图的 SSIS 设计器和工具箱")  
+ ![SSIS 设计器和工具箱的屏幕快照](../integration-services/media/denali-designerandtoolbox.gif "SSIS 设计器和工具箱的屏幕快照")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还有其他一些用于将功能添加到包的对话框和窗口，而 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供用于配置开发环境及对包进行操作的窗口和对话框。 有关详细信息，请参阅 [Integration Services 用户界面](../integration-services/integration-services-user-interface.md)。  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 09/27/2017
  **删除**  
  选择一个事件处理程序，再通过单击“删除”将其从包中删除。  
   
- **单击此处创建\<事件处理程序名称\>的可执行文件\<可执行文件名称\>**  
+ 单击此处为可执行文件 \<可执行文件名称\> 创建 \<事件处理程序名称\>  
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  
@@ -170,7 +170,7 @@ ms.lasthandoff: 09/27/2017
   
  可以右键单击某个包元素，再单击“属性”，以在“属性”窗口中显示该元素的属性；或者，也可以右键单击某个包元素，再单击“删除”，以删除该元素。 
  
-## <a name="progress-tab"></a>进度选项卡
+## <a name="progress-tab"></a>“进度”选项卡
 在 **中运行** 包时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] “进度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]选项卡查看该包的执行进度。 **“进度”** 选项卡将列出以下内容：验证和执行该包及其可执行文件的开始时间、完成时间和已用时间；包的所有信息和警告；进度通知；包是否成功或失败以及在执行包的过程中生成的所有错误信息。  
   
  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  

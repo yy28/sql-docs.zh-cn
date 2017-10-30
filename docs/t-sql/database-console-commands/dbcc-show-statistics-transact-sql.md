@@ -36,11 +36,12 @@ caps.latest.revision: 75
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03651b89f8cc8b7694e9e07531804053e64568ac
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
@@ -190,10 +191,10 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 选项  
-下面的示例将为 `AK_Address_rowguid`索引显示的统计信息限制为 HISTOGRAM 数据。
+这就限制了显示 Customer_LastName 直方图数据的统计信息。
   
 ```t-sql
-DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
+DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
@@ -214,14 +215,6 @@ GO
 结果显示标头、 密度向量和直方图的一部分。
   
 ![DBCC SHOW_STATISTICS 结果](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS 结果")
-  
-### <a name="d-specifying-the-histogram-option"></a>D. 指定 HISTOGRAM 选项  
-这就限制了显示 Customer_LastName 直方图数据的统计信息。
-  
-```t-sql
-DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
-GO  
-```  
   
 ## <a name="see-also"></a>另请参阅  
 [统计信息](../../relational-databases/statistics/statistics.md)  

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
@@ -193,3 +194,4 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  选中代理对应的框，然后单击 **“确定”**。  
   
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

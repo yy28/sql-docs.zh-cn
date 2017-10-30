@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  游标库不支持更改 SQL_DESC_BIND_TYPE 中的字段 APD 或 ARD 打开游标时。 只有关闭光标之后，打开一个新的游标之前，可以更改 SQL_DESC_BIND_TYPE 字段。 游标库支持更改打开游标时唯一描述符字段是 SQL_DESC_ARRAY_STATUS_PTR、 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR、 SQL_DESC_OCTET_LENGTH_PTR，和 SQL_DESC_ROWS_PROCESSED_PTR。  
   
  游标库不支持修改后 ARD SQL_DESC_COUNT 字段**SQLExtendedFetch**或**SQLFetchScroll**已调用和之前关闭游标。
+

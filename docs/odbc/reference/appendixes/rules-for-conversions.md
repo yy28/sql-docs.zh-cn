@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
          （2） 该驱动程序将舍入到适当的比例 （它也可以是零） 中 Y 的字符串，并将结果写入到 CT.  
   
          （3） 该驱动程序既不截断，也将舍入，但只需将 Y 的第一个 LT 字符复制到 CT.
+

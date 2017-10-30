@@ -2,8 +2,8 @@
 title: "在 SQL Server 上安装预先训练的机器学习模型 |Microsoft 文档"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 10/18/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,34 +15,42 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安装预先训练的机器学习模型上 SQL Server
 
-本主题介绍如何将预先训练的模型添加到的 SQL Server 实例已具有 R Services 或机器学习服务安装。
+本指南介绍了如何将预先训练的模型添加到的 SQL Server 实例已具有 R Services 或机器学习服务安装。
 
-预先训练的模型与更新提供给 Microsoft R Server （或 Microsoft 机器学习 Server 的更新）。 有关如何升级你的实例和获取 Microsoft R 最新版本的信息，请参阅[升级 R Services 的实例中的 R 组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+安装 Microsoft R Server 时，或者使用独立安装程序的机器学习服务器作为一个选项提供了预先训练的模型。 你可以使用此安装程序来获取只需预先训练的模型，或者可以使用它来升级机器学习中的 SQL Server 2016 或 SQl Server 2017 实例的组件。
 
-仅运行单独的基于 Windows 的安装程序 R Server 可以安装这些模型。
-但是，有一些附加步骤以在 SQL Server 上安装模型时使用。 本主题描述的过程。
+运行安装程序下载预先训练的模型后，有一些附加步骤以使用 SQL Server 配置使用的模型。 本文描述的过程。
+
+有关详细信息，请参阅以下文章：
+
++ [预先训练的机器学习模型观点分析和映像检测](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [升级 R Services 的实例中的 R 组件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 ## <a name="benefits-of-using-pretrained-models"></a>使用预先训练的模型的好处
 
-进行了预先训练的模型可用于支持需要执行任务，如观点分析或图像特征化，但没有足够的资源，以获取大型数据集或复杂模型定型的客户。 使用预先训练的模型，可让你开始文本和图像最有效地处理。
+为帮助客户需要执行任务，如观点分析或图像特征化，但没有足够的资源，以获取大型数据集或复杂模型定型的人员来说，这些预先训练的模型而创建。 使用预先训练的模型，可让你开始文本和图像最有效地处理。
 
-当前可用的模型都的观点分析和图像分类深层神经网络 (DNN) 模型。 所有四个预先训练的模型已接受有关 CNTK 的培训。 每个网络配置的基于以下的引用实现：
+当前可用的模型都的观点分析和图像分类深层神经网络 (DNN) 模型。 所有预先训练的模型已使用 Microsoft 的定型[计算网络工具包](https://cntk.ai/Features/Index.html)，或**CNTK**。 
+
+每个网络配置的基于以下的引用实现：
 
 + ResNet-18
 + ResNet 50
 + ResNet 101
 + AlexNet
 
-有关深入残留网络以及使用 CNTK 其实现的详细信息，请参阅这些文章：
+有关深入学习网络以及使用 CNTK 其实现的详细信息，请参阅这些文章：
 
 + [Microsoft 研究人员算法设置 ImageNet 质询里程碑](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
@@ -50,60 +58,74 @@ ms.lasthandoff: 09/19/2017
 
 ## <a name="how-to-install-the-models-on-sql-server"></a>如何在 SQL Server 上安装模型
 
-   > [!NOTE]
-   > 
-   > 如果要安装 Microsoft R Server 或升级你的 SQL Server 实例使用单独的基于 Windows 的安装，安装程序提供了预先训练的模型。 请参阅[适用于 Windows 的安装 R Server](https://docs.microsoft.com/en-us/r-server/install/r-server-install-windows)。
-   > 
-   > 与 Microsoft R Server 一起使用的模型可能需要一些附加步骤。 有关详细信息，请参阅[如何安装和部署预先训练机器学习模型与 MicrosoftML](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)
+1. 运行单独的基于 Windows 的安装程序机器学习服务器。 有关下载位置，请参阅：
 
-1. 安装 SQL Server; 时，默认情况下未安装的预先训练的模型SQL Server 安装程序已完成后运行命令行安装实用程序，必须将它们添加。
+    + [安装机器学习适用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [适用于 Windows 安装 R Server 9.1](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
-2. 打开提升的命令提示符，并导航到安装程序启动文件夹中，对于 SQL Server，还包含 Microsoft R 安装。
+2. 要安装的功能的选择取决于您是在获取只的模型，还是在执行使用安装程序的其他更新。
+ 
+    + 如果这是新安装的计算机学习服务器，并且你不想要对 R 或 Python 组件，选择进行其他更改**仅**预先训练的模型选项。 接受所有其他提示，包括许可协议。
 
-    在 SQL Server 自 2017 年 1 RC 1 的默认实例，这将是：
+    + 若要同时升级的 R 或 Python 组件，选择你想要更新的语言 （R，或 Python，或两者），然后选择预先训练的模型选项。 选择要对其应用这些更改的一个或多个实例。
+
+    + 如果之前安装机器学习服务器并更新的 R 或 Python 组件使用的绑定选项，保留所有以前选择**原样**，并选择预先训练的模型选项。 不要删除任何以前选择的选项，或将被删除。
+
+3. 安装完成后，打开 Windows 命令提示符**以管理员身份**，并导航到安装程序启动文件夹中，对于 SQL Server，还包含 Microsoft R 安装。 在 SQL Server 自 2017 年的默认实例，应为文件夹：
     
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017RC1\x64\`
+    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-3. 指定要安装的组件和预先训练的模型应在将添加位置，通过使用以下参数的文件夹：
+4. 指定要安装的组件、 版本和使用 RSetup.exe 的自变量，如这些示例中所示包含模型源代码文件的文件夹：
 
-  + 若要使用与模型**R_SERVICES**
+  + 若要使用与模型**R_SERVICES**，使用以下语法和路径：
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-    例如，若要启用使用预先训练的模型使用的 SQL Server 自 2017 年的默认实例中的 R，将运行此语句：
+    例如，若要启用 R，在默认实例的 SQL Server 自 2017 年，预先训练的模型的最新版本的用于将运行此语句：
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + 若要使用与模型**PYTHON_SERVICES**
+    上的命名实例，该命令应为类似如下内容：
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-    例如，若要启用使用预先训练的模型使用 Python，对于默认实例的 SQL Server 自 2017 年，将运行此语句：
+  + 若要使用与模型**PYTHON_SERVICES**，使用以下语法和路径：
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-4. 对于版本参数中，支持以下值：
+    例如，若要启用预先训练的模型的最新版本的用于 Python，在默认实例的 SQL Server 自 2017 年，将运行此语句：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+    上的命名实例，该命令应为类似如下内容：
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+5. 对于版本参数中，支持以下值：
 
     + 候选发布版 0: **9.1.0.0**
     + 候选发布版 1: **9.2.0.22**
-    + （不释放） 的最终版本数： **9.2.0.100**
+    + RTM: **9.2.0.100**
+    + 累积更新 1: **9.2.0.24**
 
-5. 如果安装成功，应将以下模型添加到您的 R\_服务或 PYTHON\_SERVICES 文件夹：
+6. 如果安装成功，应将以下模型添加到您的 R\_服务或 PYTHON\_SERVICES 文件夹：
 
-    - AlexNet_Updated.model
-    - ImageNet1K_mean.xml
+    - AlexNet\_Updated.model
+    - ImageNet1K\_mean.xml
     - pretrained.model
-    - ResNet_101_Updated.model
-    - ResNet_18_Updated.model
-    - ResNet_50_Updated.model
+    - ResNet\_101\_Updated.model
+    - ResNet\_18\_Updated.model
+    - ResNet\_50\_Updated.model
 
 ## <a name="examples"></a>示例
 
-安装模型后，你可以通过调用它们 R 代码中使用这些模型。
+安装模型后，你可以使用这些模型通过在代码中调用它们。
 
 ### <a name="image-featurization-example"></a>图像特征化示例
 
-预先训练的模型的映像支持你所提供的映像的特征。 若要使用模型，请调用**featurizeImage**转换。
+预先训练的模型的映像支持你所提供的映像的特征。 此特定模型进行定型使用[CNTK](https://docs.microsoft.com/cognitive-toolkit/)。 
+
+若要使用模型，请调用**featurizeImage**转换。
 
 + [featurizeImage： 机器学习映像特征化转换](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
 
@@ -125,12 +147,12 @@ ms.lasthandoff: 09/19/2017
 ```
 
 > [!NOTE]
-> 
-> 不能读取或修改预先训练的模型本身。 此特定模型基于[CNTK](https://docs.microsoft.com/cognitive-toolkit/)模型，但已使用本机格式，出于性能原因被压缩。
+> 它不能读取或修改预先训练的模型，因为它们压缩的是使用本机格式，以提高性能。
+
 
 ### <a name="text-analysis-example"></a>文本分析示例
 
-此示例演示预先训练的模型用于分类：
+请参阅下面的示例演示如何使用文本分类预先训练的文本特征化模型：
 
 [使用文本特征化器的观点分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

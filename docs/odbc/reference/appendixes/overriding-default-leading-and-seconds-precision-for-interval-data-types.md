@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  如果应用程序调用**SQLGetData**为数据返回到日期时间或间隔 C 类型，使用默认时间间隔前导精度和时间间隔秒精度。 如果任一默认值是不可接受，应用程序必须调用**SQLSetDescField**设置其中一个描述符字段，或**SQLSetDescRec**设置 SQL_DESC_PRECISION。 调用**SQLGetData**应有*TargetType*的 SQL_ARD_TYPE 描述符字段中使用的值。  
   
  当**SQLPutData**称为，间隔前导精度和间隔秒精度从描述符记录对应的字段读取到的数据在执行参数或列，这是用于调用 APD 域到**SQLExecute**或**SQLExecDirect**，或调用的 ARD 字段**SQLBulkOperations**或**SQLSetPos**。
+

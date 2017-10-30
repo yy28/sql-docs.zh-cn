@@ -339,7 +339,7 @@ static void Main()
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 **SSIS Catalog** 中的“服务器环境、服务器变量和服务器环境引用” [](../../integration-services/service/ssis-catalog.md)一节。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的 **服务器环境、服务器变量和服务器环境引用**一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -359,7 +359,7 @@ static void Main()
   
     3.  输入环境变量的 **“值”** 。  
   
-         有关环境变量名称的规则的信息，请参阅 **SSIS Catalog** 中的“环境变量” [](../../integration-services/service/ssis-catalog.md)一节。  
+         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的 **环境变量**一节。  
   
     4.  通过选中或取消选中 **“敏感”** 复选框，指示该变量是否包含敏感值。  
   

@@ -31,7 +31,7 @@ ms.lasthandoff: 09/26/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|bigint|数据的唯一 ID。|  
-|Execution_id|bigint|执行实例的唯一 ID。<br /><br /> Catalog.executions 视图提供了有关执行的其他信息。 有关详细信息，请参阅[catalog.executions & #40;SSISDB 数据库 & #41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  
+|Execution_id|bigint|执行实例的唯一 ID。<br /><br /> Catalog.executions 视图提供了有关执行的其他信息。 有关详细信息，请参阅[catalog.executions &#40;SSISDB 数据库 &#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  
 |Executable_id|bigint|包组件的唯一 ID。<br /><br /> catalog.executables 视图提供了有关可执行文件的其他信息。 有关详细信息，请参阅[catalog.executables](../../integration-services/system-views/catalog-executables.md)。|  
 |Execution_path|nvarchar(max)|包组件的完整执行路径，包括组件的每次循环迭代。|  
 |Start_time|datetimeoffset(7)|可执行文件进入执行前阶段时的时间。|  

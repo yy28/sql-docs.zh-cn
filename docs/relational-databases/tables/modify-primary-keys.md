@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e3c601f497bd6abf4a27a6ce8dd5f0762687526
@@ -73,3 +74,4 @@ ms.lasthandoff: 06/22/2017
  若要使用 Transact-SQL 修改 PRIMARY KEY 约束，必须先删除现有的 PRIMARY KEY 约束，然后再用新定义重新创建该约束。 有关详细信息，请参阅 [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md) 和 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
 ###  <a name="TsqlExample"></a>  
+

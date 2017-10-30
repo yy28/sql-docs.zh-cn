@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|返回数据源中的过程的列表。 有关打包过程，过程名称列位于*packagename.procedurename*格式。<br /><br /> 因为 Oracle 不提供一种区分打包的过程从打包函数方法，该驱动程序返回 SQL_PT_UNKNOWN PROCEDURE_TYPE 列。|  
 |**SQLSetPos**|设置在行集中的光标位置。 你可以使用**SQLSetPos**与**SQLGetData**行集合中定位光标所在位置到特定行后从未绑定的列中检索行。 添加到使用的结果集中的行*fOption* SQL_ADD 添加结果集中的最后一行之后。|  
 |**SQLSetScrollOptions**|设置控制游标语句句柄，hstmt 与关联的行为的选项。 有关详细信息，请参阅[游标类型和并发组合](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)。|
+

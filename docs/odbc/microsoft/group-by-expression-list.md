@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7d50d2c9ac987a623d3f25968c6246a735fe4f41
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 表达式列表
 GROUP BY 支持的表达式列表，以及列名称。 具有 GROUP BY 子句的 SELECT 语句的选择列表只能包含 GROUP BY 子句中的表达式或 set 函数。
+

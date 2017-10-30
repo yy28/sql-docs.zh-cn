@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
 ms.contentlocale: zh-cn
@@ -36,6 +37,7 @@ ms.lasthandoff: 08/09/2017
     -   若要允许文本框基于其内容收缩，请选择 **“允许高度减小”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [文本框 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [文本框（报表生成器和 SSRS）](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
+

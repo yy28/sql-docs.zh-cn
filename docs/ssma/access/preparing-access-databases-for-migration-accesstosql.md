@@ -28,6 +28,7 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
 ms.openlocfilehash: 0d94578759156dcde898a23267fb91922fc98b03
@@ -85,3 +86,4 @@ SSMA 无法迁移使用工作组保护的数据库。 若要从 Access 数据库
 ## <a name="see-also"></a>另请参阅  
 [将访问数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [链接到 SQL Server 访问应用程序](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+

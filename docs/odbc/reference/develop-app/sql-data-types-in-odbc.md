@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56406282ea95471b0343de27bc2a1d194223d059
@@ -29,3 +30,4 @@ SQL 数据类型是数据存储在数据源的类型。
 -   [SQL 类型标识符](../../../odbc/reference/develop-app/sql-type-identifiers.md)  
   
 -   [检索 SQLGetTypeInfo 的数据类型信息](../../../odbc/reference/develop-app/retrieving-data-type-information-with-sqlgettypeinfo.md)
+

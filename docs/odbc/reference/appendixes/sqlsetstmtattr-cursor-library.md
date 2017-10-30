@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
  游标库支持设置的 SQL_ATTR_PARAM_BIND_OFFSET_PTR 或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性，以启用绑定偏移量。 绑定偏移量将不用于调用**SQLFetch** ODBC 2 使用的是光标库时。*x*驱动程序。  
   
  游标库支持 SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_VARIABLE。
+

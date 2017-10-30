@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ada446a96ecb6fd81d05380c8a29707eb41f8ee
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  自定义应用程序是尤其适合本机数据库 Api。 主要原因是，自定义应用程序通常使用单个 DBMS，无需进行互操作。 本机数据库 Api 可能会执行更好地于 ODBC 的公开特定 DBMS 的功能，并可能会公开不由 ODBC 公开的功能。 此外，因为自定义应用程序的开发人员熟悉通常其 DBMS 的本机数据库 API，存在很少需要了解 ODBC。 但是，值得注意的是，对于某些 Dbms ODBC 是本机数据库 API。  
   
  因此，哪些应用程序是否适用于 ODBC 的候选项？ 最佳候选项为使用多个 DBMS 应用程序。 这包括泛型和垂直的几乎所有应用程序。 它还包括大量的自定义应用程序。 使用多个不同 Dbms 的自定义应用程序是更轻松、 清理程序使用 ODBC 比使用多个本机 Api 编写的示例。 并且使用 ODBC 编写的自定义应用程序可以更轻松地迁移公司将其从一个 DBMS 移动到另一个，或部署针对不同 Dbms 对同一个应用程序。
+

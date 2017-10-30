@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e295cce9f15d1ea0dc12f4402807996e44b3fe09
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/01/2017
 |[创建和管理远程分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|说明如何创建和管理远程分区。|  
   
   
+

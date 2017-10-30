@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ ODBC SQL 数据类型是次标识符：
  [d] 这是对应的 C 数据类型的大小。  
   
  当时间 SQL 数据转换为字符 C 数据时，生成的字符串是在"*hh*:*mm*:*ss*"格式。 此格式不受 Windows® 国家/地区设置。
+

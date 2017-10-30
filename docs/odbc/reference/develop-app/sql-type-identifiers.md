@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 定义各种类型的 SQL 标识符。 但是，该驱动程序不需要使用所有这些标识符。 相反，它使用基础数据源仅这些它需要公开支持的 SQL 数据类型的标识符。 如果基础数据源支持到 SQL 数据类型的任何类型标识符对应，该驱动程序可以定义其他类型标识符。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
  SQL 类型标识符的完整说明，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 数据类型中。
+

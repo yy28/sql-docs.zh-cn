@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: befa7b0bd4a42391440d63ef4314337c91bedb88
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [类型属性 （密钥） (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [类型属性 （表） (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+

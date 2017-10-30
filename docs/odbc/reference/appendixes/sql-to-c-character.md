@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|数据值是一个有效*时间戳值或有效的时间值*; �
  [时间戳结构 g] 上，日期字段将设置为当前日期。  
   
  当字符 SQL 数据转换为数值时，将忽略日期、 时间、 时间戳或间隔 C 数据，前导空格和尾随空格。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d29ba5afddbdd1aa3f477a8311538dac59611685
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  [单元集对象 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item 属性 （ADO MD 单元集）](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [序号属性 （ADO MD 单元格）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)
+

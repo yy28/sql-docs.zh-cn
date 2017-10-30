@@ -26,7 +26,8 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
 ms.openlocfilehash: 31966275516c514ebfc8809090a0342be70f1d53
 ms.contentlocale: zh-cn
@@ -48,9 +49,10 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
 CatalogItem[] items = rs.ListChildren("/", true);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另請參閱  
  [使用 Web 服务和.NET Framework 构建应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [报表服务器 Web 服务](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [技术参考 &#40;SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
+

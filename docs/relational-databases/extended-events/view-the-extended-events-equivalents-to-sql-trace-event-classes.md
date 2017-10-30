@@ -19,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
@@ -71,20 +72,8 @@ ms.lasthandoff: 06/22/2017
   
 -   对于用户可配置 SQL 跟踪事件类（UserConfigurable:1 到 UserConfigurable:9），扩展事件使用单个事件来代替它们。 该事件名为 user_event。 该事件通过使用 sp_trace_generateevent 引发，与 SQL 跟踪所使用的相同的存储过程。 无论哪一事件 ID 传递到该存储过程，都会返回 user_event 事件。 但是，event_id 字段作为事件数据的一部分返回。 这使您可以生成基于事件 ID 的谓词。 例如，如果你在代码中使用 UserConfigurable:0（事件 ID = 82），则可以将 user_event 事件添加到会话，并且指定谓词“event_id = 82”。 因此，你不必更改代码，因为 sp_trace_generateevent 存储过程生成扩展事件 user_event 事件以及等效的 SQL 跟踪事件类。  
   
--   如果除“事件类”列之外的所有列都返回 NULL，则表示该事件类不是从 SQL 跟踪迁移的。  
-  
--   如果只有“扩展事件操作”列中的值为 NULL，则表示以下两个条件之一成立：  
-  
-    -   SQL 跟踪列映射到与扩展事件的事件相关联的数据字段之一。  
-  
-        > [!NOTE]  
-        >  每个扩展事件的事件都具有在结果集中自动包括的数据字段的默认集合。  
-  
-    -   操作列不具有等效的有意义的扩展事件。 与此有关的一个示例就是 SQL 跟踪中的“事件类”列。 该列不是扩展事件中所必需的，因为事件名称起到相同作用。  
-  
--   对于用户可配置 SQL 跟踪事件类（UserConfigurable:1 到 UserConfigurable:9），扩展事件使用单个事件来代替它们。 该事件名为 user_event。 该事件通过使用 sp_trace_generateevent 引发，与 SQL 跟踪所使用的相同的存储过程。 无论哪一事件 ID 传递到该存储过程，都会返回 user_event 事件。 但是，event_id 字段作为事件数据的一部分返回。 这使您可以生成基于事件 ID 的谓词。 例如，如果你在代码中使用 UserConfigurable:0（事件 ID = 82），则可以将 user_event 事件添加到会话，并且指定谓词“event_id = 82”。 因此，你不必更改代码，因为 sp_trace_generateevent 存储过程生成扩展事件 user_event 事件以及等效的 SQL 跟踪事件类。  
-  
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
+

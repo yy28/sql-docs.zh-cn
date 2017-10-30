@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 65c47ece213312b749dee0e83b76e8de89cf3dc9
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="drop-table-statement-limitations"></a>删除表语句的限制
 当使用 Microsoft Excel 5.0、 7.0 或 97 驱动程序时，DROP TABLE 语句将清除工作表，但不会删除工作表的名称。 因为工作表的名称仍存在于工作簿，不能具有相同名称创建另一个工作表。
+

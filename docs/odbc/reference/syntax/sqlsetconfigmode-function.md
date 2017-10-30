@@ -23,6 +23,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8919f758c486e6569b9620fcaa7bcf76f4dac0f
@@ -82,3 +83,4 @@ BOOL SQLSetConfigMode(
 |创建数据源|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |连接到使用连接字符串或对话框中的数据源|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |检索配置模式|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
+

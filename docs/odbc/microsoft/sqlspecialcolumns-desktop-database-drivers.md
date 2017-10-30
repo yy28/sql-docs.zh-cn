@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ddd78f90927378fd0a7f8dbd78a5c66abb01f4a
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  所有行 Id 都具有 SQL_SCOPE_CURROW 的作用域。  
   
  模式匹配为不支持*szTableQualifier*或*szTableName*自变量。
+

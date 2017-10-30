@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adFieldIntegrityViolation**|10|指示不能修改字段，因为它是计算或派生的实体。|  
 |**adFieldIsNull**|3|指示提供程序返回一个 null 值。|  
 |**adFieldOutOfSpace**|22|指示提供程序无法获取足够的存储空间来完成移动或复制操作。|
+

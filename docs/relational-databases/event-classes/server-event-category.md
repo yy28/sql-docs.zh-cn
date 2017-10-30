@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3a0473368712c32e1da8bfa8d87005961a34efc0
@@ -37,3 +38,4 @@ ms.lasthandoff: 06/22/2017
 |[Trace File Close 事件类](../../relational-databases/event-classes/trace-file-close-event-class.md)|指示跟踪文件已在跟踪文件滚动期间关闭。|  
   
   
+

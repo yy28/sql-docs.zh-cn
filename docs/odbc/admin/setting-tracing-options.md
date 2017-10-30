@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 >  Windows 8 （Visual Studio Analyzer 仅包含在较旧版本的 Visual Studio。） 从开始已删除的 Visual Studio Analyzer 的支持。 有关故障排除机制的替代方法，使用 BID 跟踪。  
   
  Visual Studio® 分析器跟踪提供性能和有关 ODBC 层的调试信息。 传出的所有事件将都激发顶级接口形式显示准确图片尽可能 ODBC 组件所用相关的时间。 Visual Studio Analyzer 跟踪需要时源设置注册任何事件源。 有关这种类型的跟踪的详细信息，请参阅 Visual Studio 文档。
+

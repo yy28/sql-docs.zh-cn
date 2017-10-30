@@ -1,5 +1,5 @@
 ---
-title: "Working with Excel Files with the Script Task |Microsoft 文档"
+title: "使用脚本任务处理 Excel 文件 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -29,7 +29,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="working-with-excel-files-with-the-script-task"></a>Working with Excel Files with the Script Task
+# <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
   
  [将包配置为测试示例](#configuring)  

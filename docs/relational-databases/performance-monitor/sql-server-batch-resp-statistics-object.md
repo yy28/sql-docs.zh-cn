@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
@@ -61,3 +62,4 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>另请参阅
 [SQL Server Plan Cache 对象](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0041199b1168bdd639f88d4c13663b73cb54efd7
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |驱动程序|所需的关键字|示例|  
 |------------|-----------------------|--------------|  
 |Microsoft Access|驱动程序 DBQ|驱动程序 = {Microsoft Access 驱动程序 (*.mdb)};DBQ = c:\\\temp\\\sample.mdb|
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   不能使用**上错误 goto\<标签 >** VBScript 中。  
   
 -   VBScript 支持某些内置的 Visual Basic 函数如**Msgbox**，**日期**，和**IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的一个子集，并非所有内置函数支持。 例如，VBScript 不支持**格式**函数和文件 I/O 函数。
+

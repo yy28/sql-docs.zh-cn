@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
@@ -56,3 +57,4 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  若要确定数据源支持的标量函数，应用程序调用**SQLGetInfo**与 SQL_CONVERT_FUNCTIONS、 SQL_NUMERIC_FUNCTIONS、 SQL_STRING_FUNCTIONS、 SQL_SYSTEM_FUNCTIONS 和 SQL_TIMEDATE_函数选项。 若要确定支持的转换操作**转换**函数，应用程序调用**SQLGetInfo**与任意开头 SQL_CONVERT 的选项。
+

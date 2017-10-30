@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  右键单击该服务器组，然后选择“新建服务器注册”。 输入本地或远程服务器的网络名称，包括实例名称（如果服务器作为命名实例安装）。 或者，您可以提供在“已注册的服务器”中显示的已注册的服务器名称。 此名称仅在“已注册的服务器”中使用。 您不能使用它来重命名服务器，也不能在连接字符串中使用它。 已注册的服务器名称可以比实际服务器名称更具描述性，或包括其他有助于区分此服务器与其他服务器的标识特征。  
   
   
+

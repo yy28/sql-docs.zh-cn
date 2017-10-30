@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   **警告**描述警告 （类 01） 的状态记录具有最低的排名。 如果两个或多个记录描述的相同的警告条件，警告打开组 CLI 规范所定义的 SQLSTATEs outrank ODBC 定义和驱动程序定义 SQLSTATEs。  
   
  如果有具有最高级别的两个或多个记录，它是未定义的记录是第一条记录。 所有其他记录的顺序是不确定的。 具体而言，可能在错误之前出现警告，因为应用程序时应该检查状态的所有记录的函数将返回 SQL_SUCCESS 以外的值。
+

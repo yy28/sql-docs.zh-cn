@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
@@ -55,3 +56,4 @@ Python 任务执行外部 SQL Server 过程中，以提供安全和更高版本�
 ## <a name="next-steps"></a>后续步骤
 
 [运行 Python 使用 T-SQL](../tutorials/run-python-using-t-sql.md)
+

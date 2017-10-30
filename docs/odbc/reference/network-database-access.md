@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   **进程间通信机制**进程间通信 (IPC) 机制是依据一个进程与另一个进行通信的过程。 示例包括命名的管道、 TCP/IP 套接字和 DECnet 套接字。 IPC 机制的选择的操作系统和网络正在使用受约束。  
   
 -   **网络协议**网络协议用于通过网络传输数据的流。 它可被视为联结支持用来实现数据的 IPC 机制流式传输协议，以及支持基本的网络操作，如文件传输和打印共享。 网络协议包括 NetBEUI、 TCP/IP、 DECnet 和 SPX/IPX 和特定于每个网络。
+

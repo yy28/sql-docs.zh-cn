@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 271e5d4e246a59d7adb97b6e4dc5db4c08875e1c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 涉及 ADO 对象的任何操作可以生成一个或多个提供程序错误。 每个错误发生时，一个或多个**错误**对象都将置于**错误**集合**连接**对象。 有关处理警告和 ADO 应用程序中的错误的详细信息，请参阅[错误处理](../../../ado/guide/data/error-handling.md)。  
   
  可以通过单独的机制会引发应用程序错误。 例如，在 Visual Basic 中， **Err**对象将包含应用程序级错误。
+

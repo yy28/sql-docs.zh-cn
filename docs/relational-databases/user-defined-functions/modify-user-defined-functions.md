@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
@@ -164,3 +165,4 @@ ms.lasthandoff: 06/22/2017
  有关详细信息，请参阅[ALTER FUNCTION (Transact-SQL)](../../t-sql/statements/alter-function-transact-sql.md)。  
   
   
+

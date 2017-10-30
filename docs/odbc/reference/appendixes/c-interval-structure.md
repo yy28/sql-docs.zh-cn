@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  *Interval_type* SQL_INTERVAL_STRUCT 字段指示应用程序在联合持有何种结构，还结构的哪些成员都是相关。 *Interval_sign*字段具有值 SQL_FALSE，如果前导字段的时间间隔是无符号; 如果它是 SQL_TRUE，前导字段为负。 前导字段自身中的值始终是无符号整数，而不考虑的值*interval_sign*。 *Interval_sign*域可用作符号位。
+

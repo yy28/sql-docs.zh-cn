@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  将游标名称相关联与活动语句句柄， *hstmt*。 **SQLSetCursorName** Visual FoxPro ODBC 驱动程序 API 中包括，因为它是核心级别 ODBC API 功能的一部分; 它不能与使用其他 API 函数因为驱动程序不支持定位的更新。  
   
  有关详细信息，请参阅[SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md)中*ODBC 程序员参考*。
+

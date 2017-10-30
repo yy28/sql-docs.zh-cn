@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef94712b2ee34979937968c0f5ef1008af2ebcc
@@ -37,3 +38,4 @@ ODBC 开发中的问题之一就是标准化的数据库访问体系结构的哪
 -   [标准数据库访问体系结构](../../odbc/reference/standard-database-access-architectures.md)  
   
 -   [ODBC 解决方案](../../odbc/reference/the-odbc-solution.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
@@ -104,3 +105,4 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  此示例命名 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务实例，但不对实例进行预配。 如果您没有提供名称，则改用默认名称 SQL Server Analysis Services 系统服务实例。 为该服务创建自定义名称是可选的。 您可以命名该服务以便支持测试方案；或者，如果您具有自定义工具或脚本，则可以在以后的步骤中设置该实例。  
   
   
+

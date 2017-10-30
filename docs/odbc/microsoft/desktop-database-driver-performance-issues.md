@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  当使用 Jet 3.5 数据库通过 Microsoft ODBC 桌面数据库驱动程序的应用程序升级到版本 4.0 时，可能发生某些性能下降和增加的工作集大小。 这是因为当版本 3。*x*使用新版本 4.0 驱动程序打开数据库，它将加载 Jet 4.0。 当 Jet 4.0 打开该数据库，看到数据库为 3。*x*版本，它将加载等效于加载 Jet 3.5 引擎也可安装 ISAM 驱动程序。 若要删除对性能和大小的影响，Jet 3。*x*数据库应压缩到 Jet 4.0 格式数据库。 这将消除加载两个 Jet 引擎，并最大程度减少对数据的代码路径。  
   
  此外，Jet 4.0 引擎是 Unicode 引擎。 存储和操作以 Unicode 的所有字符串。 ANSI 应用程序访问 Jet 3 时。*x*通过 Jet 4.0 引擎，数据的数据库转换从 ansi 标准转换为 Unicode，并返回到 ANSI。 如果数据库升级到版本 4.0 格式，将字符串转换为 Unicode，删除一个级别的字符串转换，以及通过只有一个 Jet 引擎将对数据的代码路径降至最低。
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/09/2017
  [1] 为此，ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序可以使用目录函数返回的结果集中返回的日期、 时间戳代码。  
   
  [2] 为此，ODBC 3。*x*应用程序使用 ODBC 3。*x*驱动程序可以使用目录函数返回的结果集中返回的日期、 时间戳代码。
+

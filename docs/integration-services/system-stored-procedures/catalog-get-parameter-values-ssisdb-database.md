@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-get_parameter_values [ @folder_name = ] folder_name  
+```sql  
+catalog.get_parameter_values [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @package_name = ] package_name  
   [  , [ @reference_id = ] reference_id  ]  

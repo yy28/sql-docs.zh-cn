@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: zh-cn
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
@@ -111,7 +111,7 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 - **microsoftml** - 这是一个先进的机器学习算法和 Python 绑定转换包，其中包含深层神经网络、快速决策树和决策树以及用于线性回归和逻辑回归的优化算法。 用户还可获得预定型模型，这些模型基于用于图像提取或情感分析的 ResNet 模型。
 - **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
 - **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
-- **本机计分** - Transact-SQL 中的 PREDICT 函数可用于执行 SQL Server 2017 的任何实例中的计分（即使未安装 R）。 只需使用一个受支持的 RevoScaleR 和 revoscalepy 算法来训练该模型，并将该模型保存为 comact 二进制的全新格式。
+- **本机计分** - Transact-SQL 中的 PREDICT 函数可用于执行 SQL Server 2017 的任何实例中的计分（即使未安装 R）。 只需使用一个受支持的 RevoScaleR 和 revoscalepy 算法训练该模型，并将该模型保存为全新的二进制紧凑格式。
 - **程序包管理** - T-SQL 现在支持 CREATE EXTERNAL LIBRARY 语句，使 DBA 更好地管理 R 程序包。 使用角色控制专用或共享程序包访问权限，在数据库中存储 R 程序包并在用户中进行共享。
 - **性能改进** - 存储过程 `sp_execute_external_script` 已经过优化，支持列存储数据的批处理模式执行。
 

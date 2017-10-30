@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  提交或回滚事务，通过显式调用**SQLEndTran**或通过在自动提交模式下操作时，会导致某些数据源，以关闭的连接上的所有语句上的所有游标。 有关详细信息，请参阅中的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 属性[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。
+

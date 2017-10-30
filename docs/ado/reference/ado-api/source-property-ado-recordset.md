@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  [源属性示例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [源属性 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [源属性 （ADO 记录）](../../../ado/reference/ado-api/source-property-ado-record.md)
+

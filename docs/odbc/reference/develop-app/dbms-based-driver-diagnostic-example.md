@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
@@ -48,3 +49,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  由于数据源中发生错误，该驱动程序将添加到诊断消息的数据源标识符 ([Rdb]) 的前缀。 由于该驱动程序 interfaced 与数据源的组件，但它会将其供应商 ([Microsoft]) 和标识符 （[ODBC Rdb 驱动程序]） 的前缀添加到诊断消息。
+

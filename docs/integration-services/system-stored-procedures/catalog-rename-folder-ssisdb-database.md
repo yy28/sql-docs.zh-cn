@@ -28,8 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name  
+```sql  
+catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name  
 ```  
   
 ## <a name="arguments"></a>参数  

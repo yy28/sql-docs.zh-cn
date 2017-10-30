@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b4579aa9873c23ad3490763ce5c5900dcc8158aa
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  有关**RelationshipEndVisualizationProperties**元素， **SortPropertiesPosition**元素包含集合中的详细信息的排序属性元素的位置。 默认值指示没有要使用的排序属性。  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
@@ -132,7 +133,7 @@ ms.lasthandoff: 10/05/2017
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   
  **“符号”**  
- 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“@”。 默认情况下，列表**符号**包含以下字符： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
+ 列出应保留为模式一部分的符号。 可能包含：日期中的“/”、时间中的“:”以及电子邮件地址中的“ @ ”。 默认情况下，列表**符号**包含以下字符： `,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  有关详细信息，请参阅本主题前面的“了解分隔符和符号的使用”。  
   

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e110747e53b5c64702b6103e47942c85858901aa
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 |**TransactionRollback**|当应用程序调用时，生成**SQLEndTran**回滚本地事务。|  
 |**JoinDTC**|当应用程序加入分布式事务处理协调器 (DTC) 生成。|  
 |**LeaveDTC**|生成应用程序退出分布式事务处理协调器 (DTC) 时。|
+

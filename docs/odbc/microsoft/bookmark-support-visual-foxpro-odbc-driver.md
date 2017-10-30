@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b8d192a0487a921e75a05145511441dc98b53b
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 Visual FoxPro ODBC 驱动程序支持简单的书签。 当调用[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)与 SQL_BOOKMARK_PERSISTENCE*信息类型*，则返回值是 SQL_BP_SCROLL。  
   
  有关书签的详细信息，请参阅[书签 (ODBC)](../../odbc/reference/develop-app/bookmarks-odbc.md)。
+

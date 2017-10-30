@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Integration Services 功能的 SQL Server 各个版本支持
@@ -53,7 +53,7 @@ Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的企�
 
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 导入和导出向导|是|用户帐户控制|用户帐户控制|用户帐户控制|是|  
+|SQL Server 导入和导出向导|是|是|是|是|是|  
 
 ## <a name="IS"></a> Integration Services  
   
@@ -70,8 +70,8 @@ Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的企�
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|By Attunity 的高性能 Oracle 目标|是|||||  
-|高性能 Teradata by Attunity 的目标|是|||||  
+|高性能 Oracle 源和 by Attunity 的目标|是|||||  
+|高性能 Teradata 源和 by Attunity 的目标|是|||||  
 |SAP BW 源和目标|是|||||  
 |数据挖掘模型定型目标|是|||||  
 |维度处理目标|是|||||  
@@ -81,7 +81,6 @@ Evaluation 和 Developer 版本支持的功能，请参阅下表中列出的企�
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|持久 （高性能） 查找|是|||||  
 |变更数据捕获组件 by Attunity <sup>1</sup>|是|||||  
 |数据挖掘查询转换|是|||||  
 |模糊分组和模糊查找转换|是|||||  

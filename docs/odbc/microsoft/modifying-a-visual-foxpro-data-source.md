@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 5.  单击确定以保存更改并关闭 ODBC 数据源管理器对话框。  
   
  所做的更改将从你的应用程序访问数据源的下一步时间生效。
+

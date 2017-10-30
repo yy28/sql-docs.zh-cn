@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>osql 实用工具
@@ -107,10 +108,10 @@ C:\>osql
  启动 *osql* 时发出一个 USE **db_name**语句。  
   
  **-l** *time_out*  
- 指定 **osql** 登录超时之前的秒数。 登录到 **osql** 的默认超时时间为 8 秒。  
+ 指定 **osql** 登录超时之前的秒数。登录到 **osql** 的默认超时时间为 8 秒。  
   
  **-t** *time_out*  
- 指定命令超时之前的秒数。 如果未指定 *time_out* 值，则命令将不会超时。  
+ 指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
  **-h** *headers*  
  指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用 -1，则在参数和设置之间一定不能有空格（可以是**-h-1**，不能是 **-h -1**）。  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  打印性能统计信息。  
   
  **-b**  
- 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并相应地处理错误。  
+ 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并正确地处理错误。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -193,9 +194,9 @@ osql -E -q "select name, object_id from %table%"
  同时还将 DOS ERRORLEVEL 的默认值设置为 -1。  
   
 > [!NOTE]  
->   **-n** ， **-O**和**-D**选项不再受**osql**。  
+>  使用 **-n**、 **-O** 和 **-D** 选项不再受 **osql**的未来版本中将删除此功能。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>注释  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
  如果启动 **osql**时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(***user***)** 或 **osqlserver=(***server***)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
@@ -339,7 +340,7 @@ GO
  此语句的结果为 `10.3496`，说明该值是原样按完整的小数位存储的。  
   
 ## <a name="see-also"></a>另请参阅  
- [注释 &#40;MDX &#41;](../mdx/comment-mdx.md)   
+ [注释 (MDX)](../mdx/comment-mdx.md)   
  [-&#40;注释 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [强制转换和转换 &#40;Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  

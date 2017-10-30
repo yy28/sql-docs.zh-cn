@@ -16,7 +16,8 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: zh-cn
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
 
 >[!NOTE]
->  是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+>  你是否需要将仪表板等 Kpi Datazen 服务器内容迁移到 SQL Server 2016[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 

@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ ms.lasthandoff: 09/09/2017
  如果没有最新记录时你使用**GetChunk**或**AppendChunk**方法**字段**对象时，发生错误 3021 （最新记录）。  
   
  有关使用这些方法用于处理二进制数据的示例，请参阅[AppendChunk 方法](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk 方法](../../../ado/reference/ado-api/getchunk-method-ado.md)中的示例*ADO 程序员参考*。
+

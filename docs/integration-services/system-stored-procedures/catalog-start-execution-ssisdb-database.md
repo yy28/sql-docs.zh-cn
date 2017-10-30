@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70359d539bc7b4fc6dd70de8bbb7e16be5d71208
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
@@ -28,19 +28,19 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
+```sql  
+catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  执行实例的唯一标识符。 *Execution_id*是**bigint**。
  
- [ @retry_count =] *retry_count*  
- 如果执行失败重试计数。 仅当执行在横向扩展设置将生效。此参数可选。 它是设置为 0，如果未指定。 *Retry_count*是**int**。
+ [@retry_count =] *retry_count*  
+ 如果执行失败重试计数。 仅当执行在横向扩展设置将生效。此参数可选。 如果未指定，则会将其值设置为 0。 *Retry_count*是**int**。
   
 ## <a name="remarks"></a>注释  
- 执行用于指定在包执行的单个实例期间将由包使用的参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在本例中，执行实例将引用过时的项目。 这将导致存储过程失败。  
+ 执行用于指定包在包执行的单个实例期间使用的参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在这种情况下，执行实例引用的项目已过时。 此无效的引用将导致失败的存储的过程。  
   
 > [!NOTE]  
 >  只能启动执行一次。 若要启动的执行实例，它必须在创建的状态 (值为`1`中**状态**列[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图)。  
@@ -48,7 +48,7 @@ start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_coun
 ## <a name="example"></a>示例  
  以下示例调用 catalog.create_execution 来创建 Child1.dtsx 包的执行实例。 Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
   
-```  
+```sql
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -60,7 +60,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>返回代码值  

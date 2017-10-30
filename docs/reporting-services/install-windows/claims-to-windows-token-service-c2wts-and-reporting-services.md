@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ C2WTS 创建的令牌将仅用于约束委派（对特定服务的约束）以�
 4. 在上启动 Claims to Windows Token Service 通过 SharePoint 管理中心**管理服务器上的服务**页。 应在将执行操作的服务器上启动该服务。 例如，如果你有一台服务器，它是 WFE 服务器和另一台服务器是具有 SQL Server Reporting Services 共享的服务正在运行、 仅对你的应用程序服务器需要启动的应用程序服务器上的 C2WTS。 如果你正在运行的报表查看器 web 部件，C2WTS 仅需要在 WFE 服务器上。
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

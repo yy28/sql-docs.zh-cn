@@ -19,6 +19,7 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
 ms.openlocfilehash: ece80f578fc797dcd721dfb3f831e9bf3937abd1
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/14/2017
  
 使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用 Azure 门户中的机密。 例如：  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -51,7 +52,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>访问引用 Azure Blob 存储位置的 CSV 文件中的数据   
 下面的示例使用指向名为 `newinvoices` 的 Azure 存储帐户的外部数据源。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -61,7 +62,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 然后，`OPENROWSET` 语句将容器名称 (`week3`) 添加到文件说明。 该文件命名为 `inv-2017-01-19.csv`。
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -70,7 +71,7 @@ SELECT * FROM OPENROWSET(
 
 使用 `BULK INSERT` 时，请使用容器和文件说明：
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -80,7 +81,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>访问引用 Azure Blob 存储位置中某个容器的 CSV 文件中的数据   
 
 下面的示例使用指向 Azure 存储帐户中某个容器（名为 `week3`）的外部数据源。   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -90,7 +91,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 `OPENROWSET` 语句不会在文件说明中包含该容器名称：
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -99,7 +100,7 @@ SELECT * FROM OPENROWSET(
 
 使用 `BULK INSERT` 时，请不要在文件说明中使用该容器名称： 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',

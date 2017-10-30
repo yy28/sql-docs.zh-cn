@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  选择目标数据库，并打开新查询窗口。 在该查询窗口中，执行以下脚本以创建目标表：  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  选择目标数据库，并打开新查询窗口。 在查询窗口中，执行以下用于创建目标表的脚本：  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

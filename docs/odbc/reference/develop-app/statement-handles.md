@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是�
  在大多数 ODBC 函数使用语句句柄。 值得注意的是，它们用于在函数中绑定参数和结果集列 (**SQLBindParameter**和**SQLBindCol**)、 准备和执行语句 (**SQLPrepare****SQLExecute**，和**SQLExecDirect**)，检索元数据 (**SQLColAttribute**和**SQLDescribeCol**)，提取结果 (**SQLFetch**)，并检索诊断 (**SQLGetDiagField**和**SQLGetDiagRec**)。 它们也用在目录函数 (**SQLColumns**， **SQLTables**，依次类推) 和许多其他功能。  
   
  语句句柄分配与**SQLAllocHandle**并释放与**SQLFreeHandle**。
+

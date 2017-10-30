@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
@@ -82,3 +83,4 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  还可以将 TEMPLATE 计划指南与 SQL 计划指南一起使用。 例如，可以创建 TEMPLATE 计划指南以确保参数化查询类。 然后，可以对该参数化形式的查询创建 SQL 计划指南。  
   
   
+

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable（SSISDB 数据库）
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  包含环境的文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  环境的名称。 *Environment_name*是**nvarchar （128)**。  
   
- [ @variable_name =] *variable_name*  
+ [@variable_name =] *variable_name*  
  环境变量的名称。 *Variable_name*是**nvarchar （128)**。  
   
- [ @data_type =] *data_type*  
+ [@data_type =] *data_type*  
  变量的数据类型。 支持环境变量数据类型包括**布尔**，**字节**， **DateTime**， **Double**， **Int16**， **Int32**， **Int64**，**单个**，**字符串**， **UInt32**，和**UInt64**。 不支持的环境变量数据类型包括**Char**， **DBNull**，**对象**，和**Sbyte**。 数据类型*data_type*参数是**nvarchar （128)**。  
   
- [ @sensitive =]*敏感*  
+ [@sensitive =]*敏感*  
  指示变量是否包含敏感值。 使用值 `1` 表示环境变量的值是敏感值，值为 `0` 表示该值不是敏感值。 存储敏感值时将对其加密。 一个值，不是敏感数据是以纯文本形式存储。*敏感*是**位**。  
   
- [ @value =]*值*  
+ [@value =]*值*  
  环境变量的值。 *值*是**sql_variant**。  
   
- [ @description =]*说明*  
+ [@description =]*说明*  
  环境变量的说明。 *值*是**nvarchar(1024)**。  
   
 ## <a name="return-code-value"></a>返回代码值  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  请考虑使用**Int16**中数据类型[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]而不是使用不受支持**Sbyte**数据类型。  
   
- 值传递给使用此存储过程*值*参数将转换从[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型设置为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据下表的数据类型：  
+ 值传递给使用此存储过程*值*参数转换从[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型设置为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据下表的数据类型：  
   
 |Integration Services 数据类型|SQL Server 数据类型|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Single**|精确数字：**十进制**，**数值**;近似数值： **float**，**实际**|  
 |**字符串**|**varchar**， **nvarchar**， **char**|  
-|**UInt32**|**int** (这是到最接近的可用映射**Uint32**。)|  
-|**UInt64**|**bigint** (这是到最接近的可用映射**Uint64**。)|  
+|**UInt32**|**int** (**int**最接近的可用映射到**Uint32**。)|  
+|**UInt64**|**bigint** (**int**最接近的可用映射到**Uint64**。)|  
   
   

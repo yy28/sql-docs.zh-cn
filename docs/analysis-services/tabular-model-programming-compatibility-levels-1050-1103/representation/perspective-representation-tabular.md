@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
@@ -140,3 +141,4 @@ private void updatePerspective_Click(
  不过，若要了解如何使用 AMO 创建和操作透视表示形式，请参阅“AMO 到表格”示例中的源代码。 可在 Codeplex 上找到该示例。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   
+

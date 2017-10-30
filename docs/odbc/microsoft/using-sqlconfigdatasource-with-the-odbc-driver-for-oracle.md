@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|转换选项。|  
 |TxnCap|2|""|A/N|事务支持。 如果为 0，驱动程序报告称它不支持事务。 如果为 1，该驱动程序报告它能够执行事务。|  
 |UID|30|""|A/N|用户名称。|
+

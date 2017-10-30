@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ Microsoft Excel 或文本驱动程序不支持 CREATE INDEX 语句。
  当使用 dBASE 驱动程序时，CREATE UNIQUE INDEX 语句创建的索引是实际是非唯一的并重复的值可以插入到索引的列。 只有一条记录从具有相同键值的一组可以添加到索引。  
   
  当使用 Paradox 驱动程序时，必须时连续中包括的第一列的表的列的子集定义唯一索引。 表不能通过 Paradox 驱动程序更新，如果对表或 Paradox 驱动程序使用不高数据库引擎的实现时，未定义唯一索引。
+

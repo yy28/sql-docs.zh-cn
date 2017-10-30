@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b7efa21691627c346b6d3798ade158e946071e6
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  在 ODBC 3.0 中， **SQLInstallTranslator**已被取代[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)。 调用**SQLInstallTranslator**将映射到**SQLInstallTranslatorEx**。 有关详细信息，请参阅**SQLInstallTranslatorEx**。  
   
  **SQLInstallTranslator**将返回 FALSE，如果在 ODBC 3 中的应用程序调用它*.x*驱动程序管理器与*lpszInfFile*参数设置为非 NULL 值。 ODBC 2 中使用的 Odbc.inf 文件。*x* ODBC 3 中不再支持*.x*、 甚至为了向后兼容。
+

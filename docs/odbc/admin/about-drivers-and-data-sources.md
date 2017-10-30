@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  用户和系统数据源统称为*机*数据源，因为它们是计算机的本地。  
   
  每个这些数据源有一个选项卡**ODBC 数据源管理器**对话框。 有关数据源的详细信息，请参阅 [数据源](../../odbc/reference/data-sources.md)。
+

@@ -71,7 +71,9 @@ Oracle 服务器的名称。
 ### <a name="connection-string-format"></a>连接字符串格式
 以下是典型的连接字符串的格式。
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>输入连接字符串
 输入中的连接字符串**ConnectionString**字段，或输入中的 DSN 名称**Dsn**字段中，**选择数据源**或**选择目标**页。 输入连接字符串后，向导将分析字符串，并在列表中显示的各个属性及其值。

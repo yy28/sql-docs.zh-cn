@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ac33a8370cbd76a3dde43df68c12c9417fc78e07
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  如果要删除的行集的所有行 (*RowNumber*等于 0)，应用程序可以阻止驱动程序用于更新操作的相同方式使用行操作数组中，都删除某些行**SQLSetPos**. (请参阅[SQLSetPos 使用更新的行集中的行](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。)  
   
  每个删除的行都应该是结果集中存在的行。 如果应用程序缓冲区已填写通过提取并保持了行状态数组，它在每个这些行位置的值不应为 SQL_ROW_DELETED、 SQL_ROW_ERROR 或 SQL_ROW_NOROW。
+

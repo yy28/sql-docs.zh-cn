@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  您可以定义架构生成向导在其 **“指定命名约定”** 页中的主题区域数据库内生成特定对象时使用的命名约定。 有关“指定命名约定”页上可用选项的详细信息，请参阅[指定命名约定（架构生成向导）（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)。  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22bbb28f42f7bd3c1ec32e01c3451944315861a0
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  当应用程序调用一个函数时，驱动程序管理器跟踪在驱动程序中调用函数或处理调用本身之前的 DLL 中调用跟踪函数。 每个 ODBC 函数有一个相应的跟踪函数 (前缀为*跟踪*) 与 ODBC 函数除名称外完全相同。 当调用跟踪函数时，跟踪 DLL 捕获的输入的参数和返回的返回代码。 因为跟踪 DLL 称为之前驱动程序管理器验证自变量，无效的函数调用跟踪，以便记录状态转换错误和无效自变量。  
   
  在调用之后跟踪函数跟踪 DLL 中，驱动程序管理器调用 ODBC 函数驱动程序中。 然后，它调用**TraceReturn**跟踪 DLL 中。 此函数采用两个参数： 跟踪 DLL 对于跟踪函数中，返回的值并返回由驱动程序到驱动程序管理器 ODBC 函数的返回代码 （或如果它处理了该函数返回由驱动程序管理器本身的值）。 该函数使用跟踪函数返回的值捕获的输入的参数值进行操作。 它将写入到日志文件 ODBC 函数返回的代码 （或动态，显示它，如果启用）。 它输出自变量指针取消引用和日志的输出参数值。
+

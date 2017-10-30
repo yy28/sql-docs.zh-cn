@@ -1,7 +1,7 @@
 ---
 title: "下载 SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2417dafd4e1410a32f988ea950008da1dbaaaaa9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 1f3f61e959e495126e59b634a397647799184973
 ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下载 SQL Server Data Tools (SSDT)
@@ -31,7 +31,7 @@ SSDT for Visual Studio 2017（15.3.0 预览版）的预览版本现已可用。 
 
 | SSDT for Visual Studio 2017（预览版） | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017（15.3.0 预览版）](https://go.microsoft.com/fwlink/?linkid=853836) | [![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![下载](../ssdt/media/download.png)下载 SSDT for Visual Studio 2017（15.3.0 预览版）](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png)下载 SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ SSDT for Visual Studio 2017（15.3.0 预览版）的预览版本现已可用。 
 > 
 
 
-SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.2：[下载数据层应用程序框架 (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.3：[下载数据层应用程序框架 (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
 
 
 
@@ -59,32 +59,39 @@ SSDT for Visual Studio 2017 与安装 VS 的系统要求相同，支持操作系
 
 
 
+
 ## <a name="ssdt-for-visual-studio-2015"></a>SSDT for Visual Studio 2015
 **版本信息**  
   
-版本号：17.2  
-此版本的内部版本号为：14.0.61707.300
+版本号：17.3
+
+此版本的内部版本号为：14.0.61709.290
   
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
 
 ### <a name="available-languages---ssdt-for-vs-2015"></a>支持的语言 - SSDT for VS 2015
   
  此版本的 SSDT 可安装在以下语言中：  
-[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
-[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
-[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
-[法语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
-[日语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
-[俄语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
+[中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
+[中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
+[英语（美国）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
+[法语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
+[日语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
+[俄语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
 
 ### <a name="iso-images---ssdt-for-vs-2015"></a>ISO 映像 - SSDT for VS 2015
 
 SSDT 的 ISO 映像可用作安装 SSDT 或设置管理安装点的替代方法。 该 ISO 是一个自包含文件，包含 SSDT 所需的所有组件并且可使用可续传的下载管理器进行下载，适用于网络带宽有限或网络不稳定的情形。 下载之后，该 ISO 即可作为驱动器安装或刻录到 DVD 上。
+
+> [!IMPORTANT]
+> 以下 ISO 链接会安装 SSDT for VS 2015 17.2。
+>
+> 很快便会提供用于 17.3 的 ISO 链接。
 
 [中文（中国大陆）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
 [中文（中国台湾）]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |

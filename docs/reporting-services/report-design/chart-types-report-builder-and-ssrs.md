@@ -17,7 +17,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: zh-cn
@@ -35,9 +36,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>选择图表类型  
  每种图表类型都有一些独特的特征有助于使数据集可视化。 可以使用任意图表类型来显示数据，但如果使用适合您的数据的图表类型，数据将更易于阅读，至于何种图表类型适合，则取决于您尝试在报表中显示的内容。 下表总结了影响图表对特定数据集的适宜性的图表功能。  
   
- 可在创建图表之后更改图表类型。 有关详细信息，请参阅[更改图表类型 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ 可在创建图表之后更改图表类型。 有关详细信息，请参阅[更改图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)。  
   
- 许多这些类型的图表示例都可用作示例报表。 有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 许多这些类型的图表示例都可用作示例报表。 有关下载示例报表的详细信息，请参阅[报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |图表类型|显示比率数据|显示股票数据|显示线性数据|显示多值数据|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +46,8 @@ ms.lasthandoff: 08/09/2017
 |[条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |[数据条](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |[柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
-|[折线图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
-|[饼图 &#40;报表生成器和 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
+|[折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
+|[饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
 |[极坐标图（报表生成器和 SSRS）](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||||  
 |[范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
 |[散点图（报表生成器和 SSRS）](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/09/2017
 [向报表添加图表](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
 更多问题？ [尝试的 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+

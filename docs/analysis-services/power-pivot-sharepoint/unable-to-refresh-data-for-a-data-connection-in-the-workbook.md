@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/01/2017
  一个或多个服务可能处于不一致的状态。 在某些情况下，运行 IISRESET 将会解决该问题。  
   
   
+

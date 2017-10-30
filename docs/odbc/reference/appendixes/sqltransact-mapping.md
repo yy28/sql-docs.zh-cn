@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 252339f7fcd2a3893f030c0ffbc4485ab5441152
@@ -48,3 +49,4 @@ SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);
  如果*ConnectionHandle*等于 SQL_NULL_HDBC。 *EnvironmentHandle*参数设置的值为*henv*。  
   
  在这两个前面的情况下， *CompletionType*参数设置为相同的值*fType*。
+

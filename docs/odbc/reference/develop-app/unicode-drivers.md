@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  驱动程序管理器在确定驱动程序类型时，将调用**SQLSetConnectAttr**并将 SQL_ATTR_ANSI_APP 属性设置在连接时。 SQL_ATTR_ANSI_APP 如果应用程序使用的 ANSI Api，将设置为 SQL_AA_TRUE，并且如果正在使用 Unicode，它将设置为 SQL_AA_FALSE 一个值。 使用此属性，以便该驱动程序会表现出不同的应用程序类型所基于的行为。 该属性不能直接，由应用程序设置和不支持通过**SQLGetConnectAttr**。 如果驱动程序的行为为 ANSI 和 Unicode 应用程序，则应为此属性返回 SQL_ERROR。 如果该驱动程序返回 SQL_SUCCESS，驱动程序管理器将使用连接池时分离 ANSI 和 Unicode 的连接。
+

@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  某些驱动程序不会强制这些限制。 可互操作的应用程序应要么假定它们存在，或者确定哪些限制通过调用不会强制执行**SQLGetInfo** SQL_GETDATA_EXTENSIONS 选项。  
   
  如果应用程序不需要的字符或二进制数据列中的所有数据，它可以通过在执行该语句前设置 SQL_ATTR_MAX_LENGTH 语句属性来减少基于 DBMS 的驱动程序中的网络流量。 这会限制将返回的任何字符或二进制列的数据的字节数。 例如，假设某列包含长文本文档。 浏览包含此列的表的应用程序可能需要显示仅每个文档的第一页。 尽管可以驱动程序中模拟此语句属性，但是没有无需执行此操作。 具体而言，如果应用程序想要截断字符或二进制数据，它应将一个较小缓冲区绑定到的列**SQLBindCol**并允许截断的数据的驱动程序。
+

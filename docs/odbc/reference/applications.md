@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
 -   正在从数据源断开连接。  
   
  因为大多数数据访问工作使用 SQL 来完成，为其应用程序使用 ODBC 的主要任务是提交 SQL 语句和检索这些语句所生成的结果 （如果有）。 为其应用程序使用 ODBC 的其他任务包括确定和调整到驱动程序功能和浏览数据库目录。
+

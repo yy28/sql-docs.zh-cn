@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07e94046370f8140fdacec2cf708de0a62311a27
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetch**|返回下一步的行集。 以下是实现详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句属性的值中检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性检索的行状态数组的地址。<br />-驱动程序检索的 SQL_ATTR_ROWS_FETCHED_PTR 语句属性中提取缓冲区的行的地址。<br />-应用程序可以混合使用之间的调用**SQLFetchScroll**和**SQLFetch**。<br />-   **SQLFetch**返回书签，如果第 0 列绑定。<br />-   **SQLFetch**可以调用以返回多个行。<br />-驱动程序不返回 SQLSTATE 01S01 （行中的错误） 以指示通过调用提取的行时出现了错误**SQLFetch**。|  
 |**SQLFetchScroll**|返回指定的行集。 以下是实现详细信息：<br /><br /> -驱动程序从 SQL_ATTR_ROW_ARRAY_SIZE 语句属性中检索行集大小。<br />-驱动程序从 SQL_ATTR_ROW_STATUS_PTR 语句属性检索的行状态数组的地址。<br />-驱动程序检索的 SQL_ATTR_ROWS_FETCHED_PTR 语句属性中提取缓冲区的行的地址。<br />-应用程序可以混合使用之间的调用**SQLFetchScroll**和**SQLFetch**。<br />-驱动程序不返回 SQLSTATE 01S01 （行中的错误） 以指示通过调用提取的行时出现了错误**SQLFetchScroll**。|  
 |**SQLSetPos**|执行各种定位的操作。 以下是实现详细信息：<br /><br /> -这可以语句状态 S6 或 S7 中调用。 有关更多详细信息，请参阅[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)附录 b: ODBC 状态转换表中。<br />-如果这在语句状态 S5 或 S6 中调用，该驱动程序从 SQL_ATTR_ROWS_FETCHED_PTR 语句属性和 SQL_ATTR_ROW_STATUS_PTR 语句属性中的行状态数组的地址中检索行集大小。<br />-驱动程序如果这称为语句状态 S7 中，从 SQL_ROWSET_SIZE 语句属性和地址中的行状态数组中检索行集大小*RowStatusArray*参数**SQLExtendedFetch**。<br />-驱动程序返回 SQLSTATE 01S01 （行中的错误） 只是为了指示调用提取的行时出现了错误**SQLSetPos**状态 S7 中调用函数时执行大容量操作。 若要保留向后兼容性，如果 SQLSTATE 01S01 （行中的错误） 返回的**SQLSetPos**，驱动程序管理器不会根据"序列的状态记录"中所述的规则错误队列中订购状态记录部分[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)。<br />-如果驱动程序应适用于 ODBC 2。*x*应用程序来调用**SQLSetPos**与*操作*SQL_ADD 自变量，该驱动程序必须支持**SQLSetPos**与*操作*SQL_ADD 自变量。|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 3.  如果语句是 SELECT 语句，应用程序将调用一个 CLI 函数来在应用程序缓冲区中返回结果。 通常情况下，此函数返回一行或一列数据一次。  
   
 4.  应用程序调用一个 CLI 函数来断开 DBMS。
+

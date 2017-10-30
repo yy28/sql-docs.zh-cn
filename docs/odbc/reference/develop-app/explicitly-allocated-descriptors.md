@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7a4679fa6c6d2185f6e474407882080fea6b7c8a
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 应用程序可以显式分配随时连接到数据库的连接上的应用程序描述符。 通过指定语句的属性处理使用该描述符句柄**SQLSetStmtAttr**，应用程序将使用该描述符以代替对应的驱动程序隐式分配应用程序描述符。 应用程序不能指定备用实现描述符。  
   
  应用程序可以将多个语句关联显式分配的描述符。 仅当应用程序实际连接到数据库时，才描述符可以是显式分配的描述符。 应用程序可以通过来释放此类描述符显式或隐式释放其连接。
+

@@ -17,11 +17,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 10658cfa7c181836aa823df7ff2fdb963ebdc795
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 86d7e6160ab17ecb7a12beb058d33172705342a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/25/2017
 
 ---
 # <a name="data-migration-settings-mysqltosql"></a>数据迁移设置 (MySQLToSQL)
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **取消:**单击**取消**之前进行的更改已还原存在的设置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
 [将 MySQL 数据迁移到 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   
 

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  因此为何需要的可序列化性？ 换而言之，为什么很重要，它显示该一个事务完成之前的下一个事务启动？ 请考虑以下问题。 一位销售人员正在分配器发出的帐单的同时进入订单。 假设推销商从 X 公司输入一个订单，但不提交它;推销商仍在与客户支持代表从公司 X 交谈。Clerk 请求的所有未结订单的列表和发现公司 X 的顺序并将它们发送帐单。 现在从 X 公司代表决定他们想要更改其顺序，因此在提交事务之前的推销商更改它。 公司 X 获取正确的帐单。  
   
  如果推销商的和分配器的事务可序列化，将永远不会发生此问题。 推销商的事务将所花费的时间启动的分配器的事务，出正确的帐单，已在此情况下发送 clerk 或之前推销商的事务启动，在这种情况下，将已完成的分配器的事务分配器将不发送帐单给公司 X 根本。
+

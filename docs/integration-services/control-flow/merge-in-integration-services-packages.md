@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Inventory 数据库具有一个 ProductsInventory 表，该表具有 ProductID 列和 StockOnHand 列。 具有 ProductID、CustomerID 和 Quantity 列的 Shipments 表跟踪对客户的产品发货情况。 ProductInventory 表应根据 Shipments 表中的信息每天更新。 根据发货情况，一个 MERGE 语句可以降低 ProductInventory 表中的库存。 如果某产品的库存已降低为 0，该 MERGE 语句还可以从 ProductInventory 表中删除该产品行。  
   
   
+

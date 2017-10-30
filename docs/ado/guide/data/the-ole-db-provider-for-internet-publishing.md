@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../.
 >  如果 Msdaipp.dso 显式指定的提供程序，使用值为*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 如前面所示相反，只需指定的 URL。  
   
  有关 Internet 发布提供程序的详细信息，请参阅[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或与与其源应用程序提供的提供程序文档 OLE DB Provider forInternet 发布已安装： Windows 2000、 Office 2000 或 Internet Explorer 5.0。
+

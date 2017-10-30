@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  如果通过中的书签*启动*相对于与此书签记录的自变量，移动是假定**记录集**对象支持书签。 使用获取书签[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性。 如果未指定，移动是相对于当前记录。  
   
  如果你使用**CacheSize**属性以在本地传递缓存提供程序，从记录*NumRecords*缓存记录的当前组之外记录的当前位置移的自变量强制 ADO 检索的记录，从目标记录开始新的组。 **CacheSize**属性确定新检索到的组中的大小和目标记录是检索的第一个记录。
+
